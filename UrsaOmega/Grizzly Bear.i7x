@@ -113,29 +113,29 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Grizzly Bear"; 
+	now name entry is "Grizzly Bear";
 	now attack entry is "[one of]The grizzly swipes at you with a huge paw![or]The grizzly hits you with a huge brown-furred shoulder slam.[or]The grizzly charges you with a powerful headbutt![at random]";
-	now defeated entry is "[beatthegrizzly]"; 
-	now victory entry is "[losetogrizzly]"; 
-	now desc entry is "[grizzlydesc]"; 
+	now defeated entry is "[beatthegrizzly]";
+	now victory entry is "[losetogrizzly]";
+	now desc entry is "[grizzlydesc]";
 	now face entry is "now the head of a grizzly bear, with a short muzzle tipped in a large, wet, black nose and a wide head topped by two round bearish ears"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a bipedal grizzly bear, thickly proportioned and muscled, with large ursine pawlike hands ending in sharp claws"; 
+	now body entry is "that of a bipedal grizzly bear, thickly proportioned and muscled, with large ursine pawlike hands ending in sharp claws";
 	now skin entry is "[one of]thick brown fur covered[or]grizzly furred[or]shaggy brown furred[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a short ursine tail that hangs over your ass."; [ Tail desc., written as a full sentence or left blank for none. ] 
-	now cock entry is "ursine"; 
+	now tail entry is "You have a short ursine tail that hangs over your ass."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "ursine";
 	now face change entry is "your head widens and your face pushes out. Your nose becomes large and wet as it migrates to the end of your new bearlike muzzle and your ears move to the top of your head, becoming rounded and ursine"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands become more paw-like"; 
-	now skin change entry is "thick shaggy brown bear fur spreads across your skin"; 
+	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands become more paw-like";
+	now skin change entry is "thick shaggy brown bear fur spreads across your skin";
 	now ass change entry is "your rump becomes thicker and more rounded and bearlike, with a short fuzzy tail growing over your new ursine ass"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "a furred sheath grows around it, holding it when it's not erect"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 20; 
-	now dex entry is 12; 
-	now sta entry is 22; 
+	now str entry is 20;
+	now dex entry is 12;
+	now sta entry is 22;
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 96; 
+	now hp entry is 96;
 	now lev entry is 14; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 18; [ Monster's average damage when attacking. ]
 	now area entry is "Zoo"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -154,9 +154,9 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]burly[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]ursine[or]grizzly[or]bearlike[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
-	now resbypass entry is false; 
-	now non-infectious entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 

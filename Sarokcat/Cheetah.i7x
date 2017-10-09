@@ -65,7 +65,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 40;  
+	now hp entry is 40;
 	now lev entry is 4;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 8;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Zoo";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -76,17 +76,17 @@ When Play begins:
 	now breast size entry is 0;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;  
-	now cunt width entry is 0;  
+	now cunt length entry is 0;
+	now cunt width entry is 0;
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "cheetah milk";  [ Loot monster drops, ]
 	now lootchance entry is 40;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]lithe[or]sleek[at random]";
 	now type entry is "feline";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  
+	now non-infectious entry is false;
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -136,7 +136,7 @@ to say cheetahwomanheatstart:
 		increase libido of player by 6;
 
 to say cheetahwomanheatend:
-	say "You release a soft mrowl as your heat passes, the ache in your [if cunts of player > 0]loins[otherwise]anus[end if] subsiding somewhat.";
+	say "You release a soft mrowl as your heat passes, the ache in your [if cunts of player > 0]loins[else]anus[end if] subsiding somewhat.";
 	now libido of player is ( libido of player * 9 ) / 10;
 	decrease slutfucked by 2;
 	if slutfucked < 0, now slutfucked is 0;
@@ -185,7 +185,7 @@ to say cheetahwomaninheat:
 			else:
 				say "As your feline heat courses through you, you sniff the air, trying to catch the scent of a nearby feline, but are unsuccessful[if cmonlist is empty]. Perhaps you'd best head somewhere you know there are more kitties to play with, your heat-filled mind decides[end if].";
 				increase slutfucked by 1;
-	otherwise if libido of player > 90:
+	else if libido of player > 90:
 		increase slutfucked by 1;
 		if heatform is 0:
 			say "[one of]You mewl softly as a fresh flow of heat juices run down your thighs[or]Stuffing some fingers between your legs, you try in vain to relieve the ache in your loins[or]You pant and moan as wave of need quiver through your cunny, your feline cunt wanting satisfaction[or]You yowl like a cat in heat - which you are, at least in part[or]You mrowl and squeeze your thighs together as the heat in your loins makes you hornier and hornier[or]The waves of hot lust filling your cunt make you moan as you try to focus[purely at random][one of]. You start to imagine yourself submitting to some of the well-hung felines you've been seeing[or]. You sniff the air, hoping to find some kitty to play with[or]. You want to head back out into the city right away and find some kitty to scratch your special itch[or]. Thoughts of bending over for the next feline you see becomes increasingly tempting[or]. The thought of getting some tom to fill you full of kittens is delightfully exciting[purely at random].";

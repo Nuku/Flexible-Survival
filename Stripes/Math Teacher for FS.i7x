@@ -80,7 +80,7 @@ to say beatthemathteacher:
 		say "     You give her a few final swats before sending her on her way. She grumbles something about unruly students and walks away as quickly as her sore ass will let her, heels clacking all the way.";
 
 to say mathteachsex1:
-	say "     Tossing aside her meter stick, you pull down her panties and climb atop of her. Getting your cock lined up with her pussy, you thrust into her[if cock length of player >= 16]. As you push your [cock size desc of player] [cock of player] penis into her, she moans in discomfort and rattles of various numbers and equations. At first, she seems very tight and it's difficult to penetrate her, but soon her cunt seems more roomy, as if she's used some mathematical trick to let your massive cock somehow fit into her[otherwise]. As you push your [cock size desc of player] [cock of player] penis into her juicy cunt[end if].";
+	say "     Tossing aside her meter stick, you pull down her panties and climb atop of her. Getting your cock lined up with her pussy, you thrust into her[if cock length of player >= 16]. As you push your [cock size desc of player] [cock of player] penis into her, she moans in discomfort and rattles of various numbers and equations. At first, she seems very tight and it's difficult to penetrate her, but soon her cunt seems more roomy, as if she's used some mathematical trick to let your massive cock somehow fit into her[else]. As you push your [cock size desc of player] [cock of player] penis into her juicy cunt[end if].";
 	say "     She tries to muffle her moans of pleasure at first, but soon she's eagerly getting into it despite her previously stern demeanor. You keep the fucking up until finally you push fully into her and pump your hot load into her. You pull your cock out and she drops to the floor. She dips her fingers into the growing puddle of cum that leaks out of her, using it to scribble numbers and equations on the floor. From the few bits you catch, it seems to be at least partially based on the recent fucking you gave her and the size and output of your cock. You leave her to her current mathematical obsession.";
 
 to say mathteachsex2:
@@ -88,15 +88,15 @@ to say mathteachsex2:
 
 
 Section 2 - Monster Insertion
- 
+
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
- 
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Math Teacher"; [Name of your new Monster]
-	now attack entry is "[one of]The teacher swats you painfully with her ruler![or]The professor bashes you with her textbook, making numbers swirl around in your eyes temporarily![or]The math teacher confuses you by asking you a math question that derails your brain. When you can't answer in time, she screams that you get an F and clubs you with her textbook![or]She runs her hands over her [if a random chance of 2 in 3 succeeds]D-cup breasts[otherwise]plump ass cheeks[end if] while making sexy comments about their area, volume, density, elasticity and other numerical attributes, ending by summarizing them as [if a random chance of 1 in 3 succeeds]a 10 out of 10[else if a random chance of 1 in 2 succeeds]an A+[otherwise]worth 10 bonus points[end if]. While unusual, this wanton display wears down your resistance to her advances![at random]";
+	now attack entry is "[one of]The teacher swats you painfully with her ruler![or]The professor bashes you with her textbook, making numbers swirl around in your eyes temporarily![or]The math teacher confuses you by asking you a math question that derails your brain. When you can't answer in time, she screams that you get an F and clubs you with her textbook![or]She runs her hands over her [if a random chance of 2 in 3 succeeds]D-cup breasts[else]plump ass cheeks[end if] while making sexy comments about their area, volume, density, elasticity and other numerical attributes, ending by summarizing them as [if a random chance of 1 in 3 succeeds]a 10 out of 10[else if a random chance of 1 in 2 succeeds]an A+[else]worth 10 bonus points[end if]. While unusual, this wanton display wears down your resistance to her advances![at random]";
 	now defeated entry is "[beatthemathteacher]";
 	now victory entry is  "[losetomathteacher]";
 	now desc entry is "[mathteacherdesc]";
@@ -118,7 +118,7 @@ When Play begins:
 	now cha entry is 14;
 	now sex entry is "Both";
 	now hp entry is 42; [ How many HP has the monster got?]
-	now lev entry is 7; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose] 
+	now lev entry is 7; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
 	now area entry is "Campus";
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -129,7 +129,7 @@ When Play begins:
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 8;
-	now cunt width entry is 4; 
+	now cunt width entry is 4;
 	now libido entry is 40; [ Amount player Libido will go up if defeated ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -146,5 +146,5 @@ When Play begins:
 Section 3 - Endings
 
 [to be added later]
- 
-Math Teacher for FS ends here. 
+
+Math Teacher for FS ends here.

@@ -20,9 +20,9 @@ pewterheadvar2 is a number that varies. [Indicates how many consorts are riding/
 pewtercockvar1 is a number that varies.
 pewtercockvar2 is a number that varies.
 pewtercuntvar1 is a number that varies.
-pewtercuntvar2 is a number that varies. 
+pewtercuntvar2 is a number that varies.
 pewterassvar1 is a number that varies.
-pewterassvar2 is a number that varies. 
+pewterassvar2 is a number that varies.
 scaledr is a number that varies. [Scale Diminishing Return, ensures larger players aren't completely overwhelmed]
 
 when play begins:
@@ -360,7 +360,7 @@ to pewtercapassess:
 		now pewtergenitalcap is 4;
 		now scaledr is 1;
 	if breast size of player is 0, now pewterbodycap is 1;
-		
+
 to pewteroccupyroll:
 	if pewterheadcap > pewterheadocc and a random chance of 1 in 3 succeeds:
 		pewterheadapply;
@@ -368,7 +368,7 @@ to pewteroccupyroll:
 		pewterbodyapply;
 	else if pewtergenitalcap > (pewtercockocc + pewtercuntocc + pewterassocc) and a random chance of 2 in 3 succeeds:
 		pewtergenitalapply;
-		
+
 to pewterheadapply:
 	If a random chance of 1 in 2 succeeds:
 		if pewterheadocc is 0:
@@ -680,7 +680,7 @@ to say pewtercharacterassess:
 				else:
 					say "your ass is being pounded by one of them";
 
-				
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -735,7 +735,7 @@ When Play begins:
 	now non-infectious entry is false;
 	blank out the nocturnal entry;
 	now altcombat entry is "default";
-	
+
 to say consortfacechange:
 	if consortinsight is 0:
 		say "the infection overtakes it. All facial features save for your mouth meld into it, ";

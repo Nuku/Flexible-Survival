@@ -18,7 +18,7 @@ Instead of resolving a Mournful Dog:
 		now hdog is 1;
 		if food is not owned:
 			say "     The dog, clearly reluctant to leave its master, has not been able to feed itself properly. Unfortunately, you have no food to spare. Perhaps you should try to find it again later when you have some to give it.";
-		if food is owned:		
+		if food is owned:
 			say "     The dog, clearly reluctant to leave its master, has not been able to feed itself properly. Do you offer it some food?";
 			if the player consents:
 				delete food;
@@ -45,7 +45,7 @@ Instead of resolving a Mournful Dog:
 		say "     Your passage through the halls finds you at the room with the dead patient and their pet dog. You pinch your nose and poke in again to check on the dog, finding it still there. It perks up a little as you arrive, but still won't approach. It seems in slightly better condition than when you were here last time, but is still quite malnourished.";
 		if food is not owned:
 			say "     Having no food to spare, you cannot give any to the dog. Perhaps you should find some and return later.";
-		if food is owned:		
+		if food is owned:
 			say "     The dog, clearly reluctant to leave its master, has not been able to feed itself properly. Do you offer it some food?";
 			if the player consents:
 				delete food;
@@ -142,7 +142,7 @@ an everyturn rule:
 				say "     Feeling worn out and aching from your injuries, you pause to take a short break. During this, [one of]Hobo pulls your [if medkit is owned]medkit[else]healing booster[end if] from your backpack with his muzzle and offers it to you[or]Hobo barks to get your attention, having dropped your [if medkit is owned]medkit[else]healing booster[end if] at your feet[or]you close your eyes for a moment, only to be started when something is dropped in your lap. There you find your [if medkit is owned]medkit[else]healing booster[end if] and the helper dog at your side[at random]. You pat the caring canine's head.";
 				now hobo-medical is turns;
 				now lastfuck of helper dog is turns;
-			else if medkit is not owned and healing booster is not owned and hobo-medical - turns >= 16 and hobo-medical-gift < 2: 
+			else if medkit is not owned and healing booster is not owned and hobo-medical - turns >= 16 and hobo-medical-gift < 2:
 				if hobo-medical-gift is 0:
 					say "     You stop and look around when you notice that your helper dog has disappeared from your side. You take a quick look around the area for him, only to eventually find him back where you started with a [bold type]medkit[roman type] at his feet. You pet the clever dog on the head as you take the medkit.";
 					increase carried of medkit by 1;

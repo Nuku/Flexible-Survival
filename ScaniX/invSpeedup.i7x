@@ -81,5 +81,5 @@ carry out OldInventorying:
 	if scenario is "Researcher" or nanitemeter > 0:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
 	stop stopwatch;
-		
+
 invSpeedup ends here.

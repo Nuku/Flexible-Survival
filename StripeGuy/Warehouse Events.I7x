@@ -24,7 +24,7 @@ Instead of Resolving a dock team:
 
 Section 2-  Hidden Fucknest
 
-Hidden Fucknest is a scavevent. 
+Hidden Fucknest is a scavevent.
 The sarea of Hidden Fucknest is "Warehouse".
 
 
@@ -88,7 +88,7 @@ Instead of Resolving a FreshFish:
 			say "You sidle up to the boat, cautiously engaging one of the less intimidating fishermen in a bit of light conversation. Carefully trying to diplomatically steer the conversation toward food and not sex, you make the classic blunder of cracking a joke at the wrong time. Desperately, you try to backpedal and exit the conversation, but one of the creature's fellow crew has blocked your escape. Fighting seems the only option to escape a thrashing!";
 			challenge "Tenrec";
 			challenge "Tenrec";
-			challenge "Tenrec"; 
+			challenge "Tenrec";
 	else:
 		say "Thinking on it, you would rather not risk the wrath of one tenrec, much less a crew of sturdy fishermen.";
 	Now FreshFish is resolved;

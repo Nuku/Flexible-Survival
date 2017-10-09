@@ -48,7 +48,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 16;
 	now sex entry is "Female";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 80;  
+	now hp entry is 80;
 	now lev entry is 7;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 10;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Tiger Den";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -59,17 +59,17 @@ When Play begins:
 	now breast size entry is 6;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 9;  
-	now cunt width entry is 4;  
+	now cunt length entry is 9;
+	now cunt width entry is 4;
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]exotic[at random]";
 	now type entry is "[one of]feline[or]tigrine[at random]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  
+	now non-infectious entry is false;
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -78,7 +78,7 @@ when play ends:
 		if humanity of player is less than 10:
 			if cunts of player is greater than 0:
 				say "Finally giving in completely to your new instincts, you find yourself returning automatically to the tiger den, when you return, you find several of the other tigers eyeing you hopefully, but you have eyes only for Chase, something deep within you burning hot with need at the sight of the tiger who changed you, his scent still marking your body as his. You find yourself stalking up to the surprised looking tiger male, he quickly gets the idea when you reach out and start stroking his cock as you rub your furred tiger body up against him. Soon he hauls you off to one of the small pallets in the room, and your lustful cries fill the den as he fulfills his role as your newly chosen mate, filling your eager body with his seed and marking you as his. Eventually sated, you lie next to your strong and handsome mate while he whispers words to you, he seems glad you decided to embrace your true nature and give yourself over to him and being his tigress, and he promises to take care of your needs and see you are always well bred and full of his little tiger cubs. While it is hard to make much sense of his words, you catch the gist of your mates comments, and rumble in happy satisfaction at being the chosen mate of such a big and strong tiger, and you look forward to giving him many big and strong cubs...";
-			otherwise if "MPreg" is listed in feats of player and lust of Chase > 0:
+			else if "MPreg" is listed in feats of player and lust of Chase > 0:
 				say "Finally giving in completely to your new instincts, you find yourself returning automatically to the tiger den, when you return, you find several of the other tigers eyeing you hopefully, but you have eyes only for Chase, something deep within you burning hot with need at the sight of the tiger who changed you, his scent still marking your body as his. You find yourself stalking up to the surprised looking tiger male, he quickly gets the idea when you reach out and start stroking his cock as you rub your furred tiger body up against him. Soon he hauls you off to one of the small pallets in the room, and your lustful cries fill the den as he fulfills his role as your newly chosen mate, filling your eager body with his seed and marking you as his.";
 				say "Eventually sated, you lie next to your strong and handsome mate while he whispers words to you, he seems glad you decided to embrace your true nature and give yourself over to him. And while not quite the tigress he'd hoped for, he finds you alluring as his tiger slut and is more than happy to breed cubs in your special womb. He promises to take care of your needs and see you are always well bred and full of his little tiger cubs. This pleases you greatly and you submit yourself to your feline stud repeatedly, much to the envy of several of the other tigers and tigresses who'd rather have you as theirs. You rumble in happy satisfaction at being the chosen mate of such a big and strong tiger, and you look forward to giving him many big and strong cubs...";
 			else:
@@ -86,7 +86,7 @@ when play ends:
 		else:
 			if cunts of player is greater than 0:
 				say "Finally rescued from the city by the military, you make sure to lead them to where the rest of the tigers are hiding in the den. The soldiers are completely surprised to find so many infected in one place that seem to be relatively sane, and even more surprised that they all seem to be tigers. They happily help you out of the city, where several of their scientists spend several weeks poking and prodding everyone to see what it is about being a tiger that makes you so resistant to the mental deterioration, finally they give up though and let all of you go, having bigger issues to deal with in the city. Glad to be free, you and the rest of the tigers from the den promise to keep in touch as you spread out to contact old friends and family members, and rebuild new lives. You yourself try several different things as you try to work your way back into society, but nothing seems to make you truly happy for long. Chase stays close to you though, providing companionship and is one of the few tigers that is around you at all times, finally you wake up one day and realize what he was waiting for, as your body burns with need and arousal, your heat shooting through you and making you desperate for companionship. Smelling your heat Chase soon has you underneath him teasing your body and making you beg in need for him to fill you again and again, which he does several times over the next few days and nights of your heat. His body claiming yours in the most primal of ways, you realize just what you were missing in your life, a strong dominant mate to take care of you and see to your carnal needs. When your heat is finally over, and you know his seed has caught, he finds it all too easy to convince you to move in with him, and become his mate on a more permanent basis. Soon you are happier than you ever thought possible, as you work hard to please your mate, and to prepare for the cubs that are sure to come soon, and hopefully many more of his strong tiger cubs after that...";
-			otherwise if "MPreg" is listed in feats of player and lust of Chase > 0:
+			else if "MPreg" is listed in feats of player and lust of Chase > 0:
 				say "Finally rescued from the city by the military, you make sure to lead them to where the rest of the tigers are hiding in the den. The soldiers are completely surprised to find so many infected in one place that seem to be relatively sane, and even more surprised that they all seem to be tigers. They happily help you out of the city, where several of their scientists spend several weeks poking and prodding everyone to see what it is about being a tiger that makes you so resistant to the mental deterioration, finally they give up though and let all of you go, having bigger issues to deal with in the city.";
 				say "Glad to be free, you and the rest of the tigers from the den promise to keep in touch as you spread out to contact old friends and family members, and rebuild new lives. You yourself try several different things as you try to work your way back into society, but nothing seems to make you truly happy for long. Chase stays close to you though, providing companionship and is one of the few tigers that is around you at all times, finally you wake up one day and realize what he was waiting for, as your body burns with need and arousal. Wanting to share yourself with your friend, you raise your tail and let the tiger mount you, drilling his cock into you and pumping his hot seed into your hidden womb to breed you. Excited by the virile male atop you, you beg in need for him to fill you again and again, which he does several times over the next few days and nights of your heat. His body claiming yours in the most primal of ways, you realize just what you were missing in your life, a strong dominant mate to take care of you and see to your carnal needs.";
 				say "When your belly starts to swell and you know his seed has caught, he finds it all too easy to convince you to move in with him, and become his tiger slut on a more permanent basis. Soon you are happier than you ever thought possible, as you work hard to please your mate, and to prepare for the cubs that are sure to come soon, and hopefully many more of his strong tiger cubs after that...";

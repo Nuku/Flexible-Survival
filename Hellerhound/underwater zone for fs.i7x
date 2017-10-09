@@ -41,7 +41,7 @@ after examining the player:
 		say "You have small gills on your neck, a result of eating strange fruit.";
 
 the scent of gill fruit is "The strange fruit has a faint, fishy scent.".
-	
+
 
 Section 2 - Underwater Beach
 
@@ -65,7 +65,7 @@ carry out swimtoing:
 	if a random number between 1 and 26 is greater than the perception of the player:[higher chance than normal]
 		swimmingfight;
 	else:
-		say "You travel to [the noun], avoiding trouble as best you can. The gills on your neck prove their worth, gathering air for you underwater as you move beneath the waves."; 
+		say "You travel to [the noun], avoiding trouble as best you can. The gills on your neck prove their worth, gathering air for you underwater as you move beneath the waves.";
 	move the player to the noun;
 	follow turnpass rule;
 
@@ -168,7 +168,7 @@ to say sea dragon cum use:
 		if a random chance of one in two succeeds and guy is not banned:
 			infect "Feral Sea Dragon";
 		else:
-			infect "Feral Sea Dragoness"; 
+			infect "Feral Sea Dragoness";
 
 sea dragon cum is a grab object. sea dragon cum is cum.
 sea dragon cum has a usedesc "[sea dragon cum use]".

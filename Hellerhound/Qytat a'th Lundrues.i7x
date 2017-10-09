@@ -3,7 +3,7 @@ Version 2 of Qytat a'th Lundrues by Hellerhound begins here.
 [Version 2.1 - Qytat Plaza made fasttravel upon arrival Stripes]
 
 Section 1 - Guard Gryphon Event
-	
+
 Guard Gryphon is a situation.
 findablestairs is a number that varies.
 when play begins:
@@ -61,11 +61,11 @@ to say brightflight:
 		say "There is nothing else interesting about it at the moment.";
 
 the scent of Red Apartment is "The area is smells faintly of those herm gryphons.".
-	
+
 the scent of Green Apartment is "The area is smells faintly of those herm gryphons.".
-	
+
 the scent of Bright Alley is "The area is smells faintly of those herm gryphons.".
-	
+
 
 Section 3 - The Moving Entrance
 

@@ -101,7 +101,7 @@ Instead of resolving a Rooftop Rumble:
 			LineBreak;
 			challenge "Human Gangmember";
 			if fightoutcome >= 20 and fightoutcome <= 29:[lost]
-				say "     Unable to hold off the thugs, you collapse on the ground in pain and are quickly set upon by the whole group. 'Hmph, what a pathetic show,' the leader jeers as he walks forward, brandishing a wicked knife. 'I'm tempted to just carve this one up into little pieces - but no, that'd be a waste. Might get us a good deal from that nut-job at the Hospital who's always looking for some new subjects. And he doesn't care if we have some fun beforehand either, as long as the bastard stays alive - hold [if cunts of player > 0 and cocks of player is 0]her[otherwise]him[end if] down good!'";
+				say "     Unable to hold off the thugs, you collapse on the ground in pain and are quickly set upon by the whole group. 'Hmph, what a pathetic show,' the leader jeers as he walks forward, brandishing a wicked knife. 'I'm tempted to just carve this one up into little pieces - but no, that'd be a waste. Might get us a good deal from that nut-job at the Hospital who's always looking for some new subjects. And he doesn't care if we have some fun beforehand either, as long as the bastard stays alive - hold [if cunts of player > 0 and cocks of player is 0]her[else]him[end if] down good!'";
 				say "     With all your effort you lash out kicking, squirming and even trying to bite your holders, but to no avail. As the blade draws down, you close your eyes to spare yourself the final sight of being cut open. You feel a pool of blood splash on your skin...";
 				WaitLineBreak;
 				say "     ...wait, that didn't hurt. You suddenly become aware of many different sounds, in addition to the restraining weights being lifted off of your body. Opening your eyes you try and stand up, but disorientation keeps you down and out of it. Man, that last blow to the head at the end of the fight really left an expression - your eyes cross and you have trouble focusing on anything. In the blurry haze before your eyes, you vaguely make out several of the goons moving about chaotically, while at the same time you clearly see a streak of blue bouncing about from one to another.";
@@ -116,7 +116,7 @@ Instead of resolving a Rooftop Rumble:
 				say "     One attacker falls before you, only to be instantly replaced by another.";
 				challenge "Human Gangmember";
 				if fightoutcome >= 20 and fightoutcome <= 29:[lost]
-					say "     Unable to hold off the thugs, you collapse on the ground in pain and are quickly set upon by the whole group. 'Hmph, what a pathetic show,' the leader jeers as he walks forward, brandishing a wicked knife. 'I'm tempted to just carve this one up into little pieces - but no, that'd be a waste. Might get us a good deal from that nut-job at the Hospital who's always looking for some new subjects. And he doesn't care if we have some fun beforehand either, as long as the bastard stays alive - hold [if cunts of player > 0 and cocks of player is 0]her[otherwise]him[end if] down good!'";
+					say "     Unable to hold off the thugs, you collapse on the ground in pain and are quickly set upon by the whole group. 'Hmph, what a pathetic show,' the leader jeers as he walks forward, brandishing a wicked knife. 'I'm tempted to just carve this one up into little pieces - but no, that'd be a waste. Might get us a good deal from that nut-job at the Hospital who's always looking for some new subjects. And he doesn't care if we have some fun beforehand either, as long as the bastard stays alive - hold [if cunts of player > 0 and cocks of player is 0]her[else]him[end if] down good!'";
 					say "     With all your effort you lash out kicking, squirming and even trying to bite your holders, but to no avail. As the blade draws down, you close your eyes to spare yourself the final sight of being cut open. You feel a pool of blood splash on your skin...";
 					WaitLineBreak;
 					say "     ...wait, that didn't hurt. You suddenly become aware of many different sounds, in addition to the restraining weights being lifted off of your body. Opening your eyes you try and stand up, but disorientation keeps you down and out of it. Man, that last blow to the head at the end of the fight really left an expression - your eyes cross and you have trouble focusing on anything. In the blurry haze before your eyes, you vaguely make out several of the goons moving about chaotically, while at the same time you clearly see a streak of blue bouncing about from one to another.";
@@ -226,7 +226,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 10;
 	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 50;                
+	now hp entry is 50;
 	now lev entry is 7;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6;               [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -239,15 +239,15 @@ When Play begins:
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;         [ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 50;            
+	now libido entry is 50;
 	now loot entry is "";                             [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;                   [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;                             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lithe";
 	now type entry is "human";
 	now magic entry is false;
-	now resbypass entry is false;             
-	now non-infectious entry is true;    
+	now resbypass entry is false;
+	now non-infectious entry is true;
 	blank out the nocturnal entry;           [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
 
@@ -279,7 +279,7 @@ When Play begins:
 	now int entry is 9;
 	now cha entry is 6;
 	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 95;                
+	now hp entry is 95;
 	now lev entry is 12;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 13;              [ Monster's average damage when attacking. ]
 	now area entry is "nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -292,15 +292,15 @@ When Play begins:
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;         [ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 70;            
+	now libido entry is 70;
 	now loot entry is "";                             [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;                   [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4;                             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]meaty[or]powerful[at random]";
 	now type entry is "[one of]oni[or]demonic[at random]";
 	now magic entry is false;
-	now resbypass entry is false;             
-	now non-infectious entry is true;    
+	now resbypass entry is false;
+	now non-infectious entry is true;
 	blank out the nocturnal entry;           [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
 
@@ -450,7 +450,7 @@ to say RaneTalk5:     [talk about Eric]
 			project the figure of RaneDefendingEric_icon;
 			WaitLineBreak;
 			say "     Bones are broken, one hellhound's neck snapped and the carcass thrown against a wall, the second quite literally gutted as Rane's clawed hand opens its belly in a long rip. Number three tries to flee, bowling you over as it dashes into the alley - only to have Rane go after it in a running jump, allowing him to catch the edge of a metal fire escape, swing off it and land on top of the creature, ramming its bleeding muzzle into the ground under one foot. The sound that follows reminds you of a melon being thrown out of a window - and even without looking closely at the gory mess, you're fairly sure that this demon won't be getting up again, ever.";
-			say "     Huffing and growling, the blue oni turns from his last opponent, his now faintly glowing eyes searching for something else to kill. This is as demonic as you've ever seen him, and for a second you wonder if he'll go for you next - but then the large man blinks and the murderous intent leaves his face, to be replaced by boundless worry. Rushing forward, Rane scoops up Eric's limp form, cradling him to his chest and parting his hair as gently as possible to check for injuries.[if perception of player > 10]You hear him murmur, 'I'm sorry. I'm sorry. I won't make you do anything ever again,' to the young man in his arms.[otherwise]You hear him murmur something to the young man in his arms, too low to make out quite what it was.[end if] A moment later, the oni gives a sigh in relief and calls to you, 'He's pretty groggy, but he opened his eyes and focused on me for a second before passing out again. No serious harm done, I think. Just needs some rest.'";
+			say "     Huffing and growling, the blue oni turns from his last opponent, his now faintly glowing eyes searching for something else to kill. This is as demonic as you've ever seen him, and for a second you wonder if he'll go for you next - but then the large man blinks and the murderous intent leaves his face, to be replaced by boundless worry. Rushing forward, Rane scoops up Eric's limp form, cradling him to his chest and parting his hair as gently as possible to check for injuries.[if perception of player > 10]You hear him murmur, 'I'm sorry. I'm sorry. I won't make you do anything ever again,' to the young man in his arms.[else]You hear him murmur something to the young man in his arms, too low to make out quite what it was.[end if] A moment later, the oni gives a sigh in relief and calls to you, 'He's pretty groggy, but he opened his eyes and focused on me for a second before passing out again. No serious harm done, I think. Just needs some rest.'";
 			WaitLineBreak;
 			project the figure of RaneSavingEric_icon;
 			WaitLineBreak;

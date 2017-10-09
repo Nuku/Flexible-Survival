@@ -169,10 +169,10 @@ instead of conversing the Dead Body:
 		say "     As you walk up to the dead body you let out a sigh. Something like this should have never happened. With a vow to bring the murderer to justice, you get on your knees and begin to examine the body.";
 		wait for any key;
 		say "[TylerBodyTalkMenu]";
-	
+
 to say TylerBodyTalkMenu:
 	say "[line break]";
-	say "What about the body do you want to examine?";	
+	say "What about the body do you want to examine?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -218,7 +218,7 @@ to say TylerBodyTalkMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 
 to say TylerBody1:
 	say "     You edge a little nearer to the rotting corpse and take a closer look. Upon examination of the cuts on the body you realize that they're actually clean cuts. There is almost no jaggedness to them. You muse and realize it implies that the murder weapon is a professional grade knife. If you think about it, wasn't one of the suspects the head chef of the Doggy Bowl? With a groan you move back, having examined everything that you can about the cuts. You should probably search the body for any clues.";
@@ -249,10 +249,10 @@ instead of conversing the Tawnya:
 		say "     You walk up to the female suspect and tell the wolverine guarding her that you want to interrogate Tawnya. The male nods and then unlocks the cell before taking Tawnya by the hand and leading both of you to the interrogation room.";
 		wait for any key;
 		say "[TawnyaTalkMenu]";
-	
+
 to say TawnyaTalkMenu:
 	say "[line break]";
-	say "What do you wish to talk about with the lizard girl?";	
+	say "What do you wish to talk about with the lizard girl?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -298,12 +298,12 @@ to say TawnyaTalkMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 
 to say TawnyaFurEvidence:
 	if TawnyaFurSuspicion is 0: [never talked about it]
 		say "     Moving your hand into your pocket, you pull out the patch of brown fur and show it to her. 'The hell you showing it to me, are you stupid?' She asks you, her tone belaying that she does believe you are dumb. You tell her that you found it on the body and thought that it might be hers. The look on her face now says that Tawnya thinks you're beyond idiocy right now. 'I'm a fucking lizard-morph. I ain't got no fur on any part of my body. Are you blind?' She snarks. You shake your head mentally at her insults as you do believe you should check every possibility.";
-		say "     [bold type]Believe her? She might not be pure lizard...[roman type][line break]";	
+		say "     [bold type]Believe her? She might not be pure lizard...[roman type][line break]";
 		say "     [line break]";
 		say "     ([link]Y[as]y[end link]) - Sure, she seems trustworthy.";
 		say "     ([link]N[as]n[end link]) - Nope, it's time to strip!";
@@ -313,12 +313,12 @@ to say TawnyaFurEvidence:
 			now TawnyaFurSuspicion is 1; [she said she has none]
 		else:
 			say "     [line break]";
-			say "     [bold type]How do you want to get to her fur?[roman type][line break]";	
+			say "     [bold type]How do you want to get to her fur?[roman type][line break]";
 			say "     [line break]";
 			say "     ([link]Y[as]y[end link]) - Sex her up";
 			say "     ([link]N[as]n[end link]) - Talk her into showing you everything";
 			if player consents:
-				say "     You offer to lick Tawnya's pussy in exchange for seeing her naked, which prompts a smile from the lizard girl. 'You really know how to convince a girl,' she says a toothy smile aimed towards you. Turning towards the guard, you ask him to leave the two of you alone, said male shrugging before doing so. Immeadiately after that Tawnya gets rid of her clothes, revealing her scaly legs and breasts, proving very much so far that she's all lizard. You hesitate worrying for a moment if she might try anything but you realise being in a locked room with a guard right outside the door there's little reason to be concerned. Following that thought, you move over to her , kneeling in front of her before she moves her musky pussy over your face. 'I'll appreciate it if you lick nice and deep.' Tawnya says almost moaning as lust starts affecting her."; 
+				say "     You offer to lick Tawnya's pussy in exchange for seeing her naked, which prompts a smile from the lizard girl. 'You really know how to convince a girl,' she says a toothy smile aimed towards you. Turning towards the guard, you ask him to leave the two of you alone, said male shrugging before doing so. Immeadiately after that Tawnya gets rid of her clothes, revealing her scaly legs and breasts, proving very much so far that she's all lizard. You hesitate worrying for a moment if she might try anything but you realise being in a locked room with a guard right outside the door there's little reason to be concerned. Following that thought, you move over to her , kneeling in front of her before she moves her musky pussy over your face. 'I'll appreciate it if you lick nice and deep.' Tawnya says almost moaning as lust starts affecting her.";
 				say "     You do as she asks and start moving your tounge inside her twat as the lizard girl squirms and releases a steady flow of nectar which you quickly lap up. Soon she starts releasing a steady stream of quiet moans obviously trying to suppress the sound she makes as you continue eat her out. Eventually after some time of stimulating her Tawnya pushes herself harder onto your face making it difficult to breathe while releasing a long rolling moan signalling her orgasm, you put pressure on her legs to try and get room to breathe and she finally starts standing up. 'You have a gift there, my friend.' She says, slowly getting dressed, briefly turning around to allow you to get a look of her back. Once that's done, you call the guard back in and have him escort the both of you back to lockup where you wonder what to do next.";
 				now TawnyaFurSuspicion is 3; [the player has seen her naked after sex and _knows_ she has none]
 			else:
@@ -333,7 +333,7 @@ to say TawnyaFurEvidence:
 					now TawnyaFurSuspicion is 1; [she said she has none]
 	else if TawnyaFurSuspicion is 1: [she said before she has no fur]
 		say "     'You're totally a fucking dumbass, I told you I DON'T HAVE FUR!' She says, yelling the last part into your face. Though she does back down when the wolverine gets into a pose that basically says that if she doesn't then he'll attack her. Instead, she just grumbles about idiots who don't know when to give up. However, while she's having her quiet monologue you realize you asked her again because you couldn't truly accept her earlier response at face value. Although.... then again she does seem trustworthy.";
-		say "     [bold type]Believe her? She might not be a pure lizard...[roman type][line break]";	
+		say "     [bold type]Believe her? She might not be a pure lizard...[roman type][line break]";
 		say "     [line break]";
 		say "     ([link]Y[as]y[end link]) - Sure, she seems trustworthy.";
 		say "     ([link]N[as]n[end link]) - Nope, it's time to strip!";
@@ -348,7 +348,7 @@ to say TawnyaFurEvidence:
 			say "     ([link]Y[as]y[end link]) - Sex her up";
 			say "     ([link]N[as]n[end link]) - Talk her into showing you everything";
 			if player consents:
-				say "     You offer to lick Tawnya's pussy in exchange for seeing her naked, which prompts a smile from the lizard girl. 'You really know how to convince a girl,' she says a toothy smile aimed towards you. Turning towards the guard, you ask him to leave the two of you alone, said male shrugging before doing so. Immeadiately after that Tawnya gets rid of her clothes, revealing her scaly legs and breasts, proving very much so far that she's all lizard. You hesitate worrying for a moment if she might try anything but you realise being in a locked room with a guard right outside the door there's little reason to be concerned. Following that thought, you move over to her , kneeling in front of her before she moves her musky pussy over your face. 'I'll appreciate it if you lick nice and deep.' Tawnya says almost moaning as lust starts affecting her."; 
+				say "     You offer to lick Tawnya's pussy in exchange for seeing her naked, which prompts a smile from the lizard girl. 'You really know how to convince a girl,' she says a toothy smile aimed towards you. Turning towards the guard, you ask him to leave the two of you alone, said male shrugging before doing so. Immeadiately after that Tawnya gets rid of her clothes, revealing her scaly legs and breasts, proving very much so far that she's all lizard. You hesitate worrying for a moment if she might try anything but you realise being in a locked room with a guard right outside the door there's little reason to be concerned. Following that thought, you move over to her , kneeling in front of her before she moves her musky pussy over your face. 'I'll appreciate it if you lick nice and deep.' Tawnya says almost moaning as lust starts affecting her.";
 				say "     You do as she asks and start moving your tounge inside her twat as the lizard girl squirms and releases a steady flow of nectar which you quickly lap up. Soon she starts releasing a steady stream of quiet moans obviously trying to suppress the sound she makes as you continue eat her out. Eventually after some time of stimulating her Tawnya pushes herself harder onto your face making it difficult to breathe while releasing a long rolling moan signalling her orgasm, you put pressure on her legs to try and get room to breathe and she finally starts standing up. 'You have a gift there, my friend.' She says, slowly getting dressed, briefly turning around to allow you to get a look of her back. Once that's done, you call the guard back in and have him escort the both of you back to lockup where you wonder what to do next.";
 				now TawnyaFurSuspicion is 3; [the player has seen her naked after sex and _knows_ she has none]
 			else:
@@ -363,12 +363,12 @@ to say TawnyaFurEvidence:
 					now TawnyaFurSuspicion is 1; [she said she has none]
 	else if TawnyaFurSuspicion is 2: [she showed before she has no fur]
 		say "     'You've already seen that I have no fur so what the hell are you asking about that for?' the lizard-morph asks you. ";
-		say "     [bold type]Get it on with her?[roman type][line break]";	
+		say "     [bold type]Get it on with her?[roman type][line break]";
 		say "     [line break]";
 		say "     ([link]Y[as]y[end link]) - Sex with murder suspects is exciting!";
 		say "     ([link]N[as]n[end link]) - Err, no - better not...";
 		if player consents:
-			say "     You offer to lick Tawnya's pussy in exchange for seeing her naked, which prompts a smile from the lizard girl. 'You really know how to convince a girl,' she says a toothy smile aimed towards you. Turning towards the guard, you ask him to leave the two of you alone, said male shrugging before doing so. Immeadiately after that Tawnya gets rid of her clothes, revealing her scaly legs and breasts, proving very much so far that she's all lizard. You hesitate worrying for a moment if she might try anything but you realise being in a locked room with a guard right outside the door there's little reason to be concerned. Following that thought, you move over to her , kneeling in front of her before she moves her musky pussy over your face. 'I'll appreciate it if you lick nice and deep.' Tawnya says almost moaning as lust starts affecting her."; 
+			say "     You offer to lick Tawnya's pussy in exchange for seeing her naked, which prompts a smile from the lizard girl. 'You really know how to convince a girl,' she says a toothy smile aimed towards you. Turning towards the guard, you ask him to leave the two of you alone, said male shrugging before doing so. Immeadiately after that Tawnya gets rid of her clothes, revealing her scaly legs and breasts, proving very much so far that she's all lizard. You hesitate worrying for a moment if she might try anything but you realise being in a locked room with a guard right outside the door there's little reason to be concerned. Following that thought, you move over to her , kneeling in front of her before she moves her musky pussy over your face. 'I'll appreciate it if you lick nice and deep.' Tawnya says almost moaning as lust starts affecting her.";
 			say "     You do as she asks and start moving your tounge inside her twat as the lizard girl squirms and releases a steady flow of nectar which you quickly lap up. Soon she starts releasing a steady stream of quiet moans obviously trying to suppress the sound she makes as you continue eat her out. Eventually after some time of stimulating her Tawnya pushes herself harder onto your face making it difficult to breathe while releasing a long rolling moan signalling her orgasm, you put pressure on her legs to try and get room to breathe and she finally starts standing up. 'You have a gift there, my friend.' She says, slowly getting dressed, briefly turning around to allow you to get a look of her back. Once that's done, you call the guard back in and have him escort the both of you back to lockup where you wonder what to do next.";
 			now TawnyaFurSuspicion is 3; [the player has seen her naked after sex and _knows_ she has none]
 		else:
@@ -404,10 +404,10 @@ instead of conversing the Cane:
 		say "     You walk up to the canine suspect and tell the guard that you wish to interrogate him. The wolverine nods and grabs Cane out of the cell and leads the two of you to the interrogation room.";
 		wait for any key;
 		say "[CaneTalkMenu]";
-	
+
 to say CaneTalkMenu:
 	say "[line break]";
-	say "What do you wish to talk about with the dog?";	
+	say "What do you wish to talk about with the dog?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -453,7 +453,7 @@ to say CaneTalkMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 
 to say CaneFurEvidence:
 	say "     Once the two of you are in the interrogation room you reach into your pocket and show him the patch of brown fur. He gives you an odd look, wondering why you'd show him that, he says as much too. 'What's that, a piece of trash you've found?' He asks. You shake your head and tell him that it was found in Tyler's hand at the scene of the crime. Following that, you make a move to bring the fur closer but suddenly Cane has a violent reaction to it. He begins to sneeze hard and bumps start to form on him. 'W-what the hell! That thing's doused in either cologne or perfume!' The dog shouts, moving as far as he can from the fur. You quickly put it away before asking him what he means. 'I'm allergic to cologne and perfume, so it can't be me. Though the other three wear cologne and perfume.' He admits. You nod, thank him, and then have the guard take the two of you back to lockup so that Cane can recover from his allergic reaction.";
@@ -486,10 +486,10 @@ instead of conversing the Barry:
 		say "     You walk up to the bear he gives you a big smile. He asks you if you're here to interrogate him, his voice holding no anger, only kindness. You nod and have the Wolverine Guard take you two to the interrogation room.";
 		wait for any key;
 		say "[BarryTalkMenu]";
-	
+
 to say BarryTalkMenu:
 	say "[line break]";
-	say "What do you wish to talk about with the bear?";	
+	say "What do you wish to talk about with the bear?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -538,7 +538,7 @@ to say BarryTalkMenu:
 
 to say BarryFurEvidence:
 	if BarryFurSuspicion is 0: [never talked about it]
-		say "     Once the two of you are situated in the interrogation room you pull out your only piece of physical evidence, the fur. Barry gives it a curious look, wondering why you brought that out. You mention that this was found in Tyler's dead hands and that since it doesn't match his, it was probably the killer's. The bear nods, following the conversation so far. 'So... what you want to know is if it's mine?' He asks you. You nod, saying that he got it right on the mark. 'Good, let me see it for a second.' Barry requests of you. It's odd but you shrug and hand it to him. The bear appears to feel it for a bit before laughing and setting it on the table."; 
+		say "     Once the two of you are situated in the interrogation room you pull out your only piece of physical evidence, the fur. Barry gives it a curious look, wondering why you brought that out. You mention that this was found in Tyler's dead hands and that since it doesn't match his, it was probably the killer's. The bear nods, following the conversation so far. 'So... what you want to know is if it's mine?' He asks you. You nod, saying that he got it right on the mark. 'Good, let me see it for a second.' Barry requests of you. It's odd but you shrug and hand it to him. The bear appears to feel it for a bit before laughing and setting it on the table.";
 		say "     'It's not mine, it's far too soft to be. Here, feel my fur.' The guy says, pulling you hand to his fur. As soon as you touch the big male's fur you immediately can tell that it's not him. Compared to the evidence, the bear's is slightly rough, but not enough to cause discomfort. The evidence on the other hand is extremely soft, as if it was silk. However, you notice that your hand is groping Barry's body a bit, and said man is grinning widely at you. 'Ohoho, do you want a closer look?' He grins lewdly at you, causing a warmth to pool down below.";
 		say "     [bold type]Do you want to frick frack with the big ol' bear?[roman type][line break]";
 		say "     [line break]";
@@ -553,7 +553,7 @@ to say BarryFurEvidence:
 			WaitLineBreak;
 			say "     The two of you lay there just cuddling and sharing chaste kisses, enjoying the post-coitus bliss. During this time, you wonder if possibly the bear is single before shaking your head, you have a murder you need to solve. Perhaps after the mystery is solved? The two of you then get up and slowly get dressed. Once you two are fully clothed, the bear pulls you into one last kiss before speaking. 'I loved our time together, perhaps you could find me after all this clears up?' He asks you. You tell him with a smile that you'll think about it before asking the guard to come in. The wolverine tells you that it was a good thing you called him when you did, as it was time for the suspects' lunch. You nod and follow the guard and Barry back to lockup where you wonder what to do next.";
 			now BarryFurSuspicion is 2;
-		otherwise:
+		else:
 			say "     You shake your head which causes the bear to give you a disappointed look. 'Well, if you change your mind, you know where to find me.' He says to you. You nod and then turn to the wolverine guard. Said male asks you what you want, so you tell him that you're done with Barry for now. The guy makes a humming noise before taking you two back to lockup where you wonder what you'll do next.";
 			now BarryFurSuspicion is 1;
 	if BarryFurSuspicion is 1:
@@ -571,7 +571,7 @@ to say BarryFurEvidence:
 			WaitLineBreak;
 			say "     The two of you lay there just cuddling and sharing chaste kisses, enjoying the post-coitus bliss. During this time, you wonder if possibly the bear is single before shaking your head, you have a murder you need to solve. Perhaps after the mystery is solved? The two of you then get up and slowly get dressed. Once you two are fully clothed, the bear pulls you into one last kiss before speaking. 'I loved our time together, perhaps you could find me after all this clears up?' He asks you. You tell him with a smile that you'll think about it before asking the guard to come in. The wolverine tells you that it was a good thing you called him when you did, as it was time for the suspects' lunch. You nod and follow the guard and Barry back to lockup where you wonder what to do next.";
 			now BarryFurSuspicion is 2;
-		otherwise:
+		else:
 			say "     You shake your head which causes the bear to give you a disappointed look. 'Well, if you change your mind, you know where to find me.' He says to you. You nod and then turn to the wolverine guard. Said male asks you what you want, so you tell him that you're done with Barry for now. The guy makes a humming noise before taking you two back to lockup where you wonder what you'll do next.";
 
 to say BarryMotive:

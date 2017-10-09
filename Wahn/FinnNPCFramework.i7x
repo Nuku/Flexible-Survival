@@ -10,7 +10,7 @@ Version 1 of Finn by Wahn begins here.
 [   5: Finn rescued, centaur fucked him                  ]
 [  99: Finn's dead                                       ]
 [ 100: Finn joined the stables                           ]
-	
+
 Finn is a man. The hp of Finn is usually 0.
 The description of Finn is "[FinnDesc]".
 The conversation of Finn is { "<This is nothing but a placeholder!>" }.
@@ -38,7 +38,7 @@ instead of conversing the Finn:
 		say "     <Talking with Finn - rescued, centaur-fucked>";
 	else if FinnTrackingProgress > 5: [as of yet undefined states]
 		say "     ERROR: Finn is in an undefined state. Please report to Wahn on the FS forum and quote this tracking number for easier bugfixing: [FinnTrackingProgress]";
-	
+
 instead of fucking the Finn:
 	if (lastfuck of Finn - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     <Reason why Finn doesn't feel like having sex right now. Exhaustion, duty, or otherwise>";
@@ -86,7 +86,7 @@ to say FinnSexMenu:
 	now sortorder entry is 5;
 	now description entry is "Offer sex to the hunky horseman";
 	[]
-	sort the table of fucking options in sortorder order;	
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";

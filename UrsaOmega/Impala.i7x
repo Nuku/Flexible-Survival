@@ -52,7 +52,7 @@ to say losetoimpalaguy:
 			say "The impala man smells you and frowns, then gives you a violent kick to the ground. 'Hrmph. You're no use to me if I can't put my fawn in you. Come back when you're ready for breeding.'";
 		else if player is impreg_now: [male and female, already pregnant]
 			say "The impala man moves on you with intent, but then notices your full belly. 'Come back when you're ready for breeding again, little ewe, so I can put a strong fawn in you...', he says with a pat on your rear and a wink.";
-			
+
 to say beattheimpala:
 	if impalamode is 0:
 		say "[beatimpalagirl]";
@@ -96,7 +96,7 @@ to say beatimpalaguy:
 			say "You choose not to dominate the impala, instead leaving him to his humiliation.";
 	else: [genderless + low libido]
 		say "You leave the impala to his humiliation.";
-		
+
 to say impaladesc:
 	choose row monster from the table of random critters;
 	now impalamode is a random number between 0 and 1;
@@ -112,7 +112,7 @@ to say impaladesc:
 		now impalamode is 1;
 	else if guy is warded and girl is warded:
 		now impalamode is a random number between 0 and 1;
-	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
+	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
 		if guy is warded and a random chance of 1 in 3 succeeds:
 			now impalamode is 0;
 		else if girl is warded and a random chance of 1 in 3 succeeds:
@@ -157,29 +157,29 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Impala"; 
+	now name entry is "Impala";
 	now attack entry is "[one of]The impala dashes at you, landing a well placed punch![or]The impala rushes you, hitting you with a full-bore headbutt![or]The impala lands a nasty kick from one of its powerful legs![at random]";
-	now defeated entry is "[beattheimpala]"; 
-	now victory entry is "[losetoimpala]"; 
-	now desc entry is "[impaladesc]"; 
+	now defeated entry is "[beattheimpala]";
+	now victory entry is "[losetoimpala]";
+	now desc entry is "[impaladesc]";
 	now face entry is "that of an impala, with a long graceful neck and deerlike muzzle, and topped with large alert ears[if cocks of player > 0]; large, twisty horns jut out of your forehead, displaying your virility[end if]"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "slender and deerlike"; 
+	now body entry is "slender and deerlike";
 	now skin entry is "reddish-brown furred"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Your furry impala-like tail hangs behind you."; [ Tail desc., written as a full sentence or left blank for none. ] 
-	now cock entry is "tapered"; 
+	now tail entry is "Your furry impala-like tail hangs behind you."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "tapered";
 	now face change entry is "your face pushes out into the deerlike muzzle of an impala, with your nose moving down to the end of it and your ears enlarging and moving to the top of your head to better hear incoming predators[if cocks of player > 0]. Your forehead feels strange as two twisty horns grow from your skull, curving outward to display your new impala virility[end if]"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "it becomes slender and graceful, ideal for outrunning predators"; 
-	now skin change entry is "it becomes covered in short reddish brown fur, with a white patch covering your belly"; 
+	now body change entry is "it becomes slender and graceful, ideal for outrunning predators";
+	now skin change entry is "it becomes covered in short reddish brown fur, with a white patch covering your belly";
 	now ass change entry is "it becomes tight and pert, with a fuzzy impala tail growing over it"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes more slender and tapered, retreating into its new fuzzy sheath"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 12; 
-	now dex entry is 18; 
-	now sta entry is 12; 
+	now str entry is 12;
+	now dex entry is 18;
+	now sta entry is 12;
 	now per entry is 16;
 	now int entry is 14;
 	now cha entry is 16;
 	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 45; 
+	now hp entry is 45;
 	now lev entry is 7; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
 	now area entry is "Plains"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -198,9 +198,9 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]lithe[or]graceful[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "deerlike"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
-	now resbypass entry is false; 
-	now non-infectious entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 

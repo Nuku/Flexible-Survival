@@ -52,7 +52,7 @@ instead of resolving a gryphons plot:
 							say "Standing back and not interfering, you watch as the three gryphons do several more bombardment runs before they switch tactics and land instead of just dropping their loads. Before the soldiers leaning away from the windows to not get hit realize what's going on, the blue-feathered attackers are right at the jeep, ripping open the doors to get at them. Some quick hand to clawed hand wrangling later, the humans - being the losers - are dragged out of the car, stripped and fucked. You leave the soldiers in a state of sexual frenzy and transformation, fucking and being fucked by the three gryphons while they themselves start sprouting blue fur.";
 							now milsave is -1;
 					else:
-						say "Standing back and not interfering, you watch as the three gryphons do several more bombardment runs before they switch tactics and land instead of just dropping their loads. Before the soldiers leaning away from the windows to not get hit realize what's going on, the blue-feathered attackers are right at the jeep, ripping open the doors to get at them. Some quick hand to clawed hand wrangling later, the humans - being the losers - are dragged out of the car, stripped and fucked."; 
+						say "Standing back and not interfering, you watch as the three gryphons do several more bombardment runs before they switch tactics and land instead of just dropping their loads. Before the soldiers leaning away from the windows to not get hit realize what's going on, the blue-feathered attackers are right at the jeep, ripping open the doors to get at them. Some quick hand to clawed hand wrangling later, the humans - being the losers - are dragged out of the car, stripped and fucked.";
 						say "Do you join the soldiers in their submission?";
 						if the player consents:
 							say "You run towards the small free-for-all orgy, removing any clothing on the go, and jump right in.";
@@ -72,11 +72,11 @@ instead of resolving a gryphons plot:
 			now gryphons plot is resolved;
 		else:
 			say "You think you hear a commotion in the distance, but are unable to place it.";
-[	
+[
 	else if milsave < 0:
 		say "     <Further plots the player is asked to help.>";
 	else if milsave > 0:
 		say "     <Further plots the player can foil.>";
 ]
-		
+
 Gryphons Plot for fs ends here.

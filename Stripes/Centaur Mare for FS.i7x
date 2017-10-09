@@ -66,7 +66,7 @@ When Play begins:
 	now cha entry is 14;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 32; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -77,7 +77,7 @@ When Play begins:
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 30;
-	now cunt width entry is 21; 
+	now cunt width entry is 21;
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
 	now loot entry is "centaur hair";
 	now lootchance entry is 33; [ Chance of loot dropping 0-100 ]
@@ -94,4 +94,4 @@ Section 3 - Endings
 
 [See Centaur Stallion for endings]
 
-Centaur Mare for FS ends here. 
+Centaur Mare for FS ends here.

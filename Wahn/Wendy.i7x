@@ -110,7 +110,7 @@ to say WendyGryphonAftermath:
 	move player to McDermott Farm Entrance;
 	move Wendy to McDermott Barn;
 	now Missing Cow is resolved;
-	
+
 Section 2 - NPC
 
 

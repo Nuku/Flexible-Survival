@@ -144,7 +144,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Female Husky"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The sex crazed husky manages to pin you against some debris as she gnaws at your shoulder. You're sure she means it as a come on, but it just hurts.[or]The husky howls in frustration and slices with her dull claws. It seems awkward, but it stings![or]She manages to get her hands on you and squeezes tightly, pressing her delightful assets to you even as she denies you breath in the tight embrace.[at random]"; 
+	now attack entry is "[one of]The sex crazed husky manages to pin you against some debris as she gnaws at your shoulder. You're sure she means it as a come on, but it just hurts.[or]The husky howls in frustration and slices with her dull claws. It seems awkward, but it stings![or]She manages to get her hands on you and squeezes tightly, pressing her delightful assets to you even as she denies you breath in the tight embrace.[at random]";
 	now defeated entry is "[fhuskybeaten]";
 	now victory entry is "[fhuskywinner]";
 	now desc entry is "[femalehuskydesc]";
@@ -158,14 +158,14 @@ When Play begins:
 	now skin change entry is "[if latexhuskymode is true]your skin flows, turning a glossy black and white, flowing around as it becomes a layer of latex in a husky pattern[else]your skin prickles from head to toes as fur begins to push through from underneath, soon covering you in a soft, almost comforting, layer of fluffy white fur[end if]";
 	now ass change entry is "[if latexhuskymode is true]a long, inflated tail balloons from your behind.  It curves and wags, perpetually raised to show off your groin and butt[else]a long tail pushes from your spine, uplifting in a stiff arc, it begins to sway slowly without your input[end if]";
 	now cock change entry is "[if latexhuskymode is true]your shaft becomes smooth, latex flesh.  It tapers to a point and gains a thick, doggy knot and a sheath of latex rubber to house it[else]your shaft tapers out, becoming slender, though a huge swelling comes into being towards the base, a knot. The skin turns reddish before the whole thing slowly withdraws into a sheath you didn't have a moment ago[end if]";
-	now str entry is 6; 
+	now str entry is 6;
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 6; [ These values may be used as part of alternate combat.]
 	now per entry is 6;
 	now int entry is 2;
 	now cha entry is 16;
 	now sex entry is "Female"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 15; 
+	now hp entry is 15;
 	now lev entry is 1; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 3; [ Monster's average damage when attacking. ]
 	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -184,7 +184,7 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if latexhuskymode is true][one of]quadrupedal[or]altered[or]animalistic[at random][else]girly[end if]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]canine[or]husky[at random]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

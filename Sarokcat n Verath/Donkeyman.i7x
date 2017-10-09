@@ -67,11 +67,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Donkeyman"; 
-	now attack entry is "[one of]The powerful donkey twists around and kicks out at you with one of his boot covered hooves![or]He charges forward swinging wildly![or]The powerful donkeyman grabs you and tries to pin you up against the wall![or]The strangely sexy donkey strokes his cock teasingly, the sight making you feel strangely aroused.[or]he charges forward, slamming his powerful donkey-like body right into you![or]He strikes at you powerfully, only to overbalance and trip, sending both of you sprawling to the ground![or]The donkey like brute swings his powerful fist right into your gut![at random]"; 
-	now defeated entry is "[Donkeyman loses]"; 
-	now victory entry is "[Donkeyman wins]"; 
-	now desc entry is "[mongendernum 3]     Wandering through the building you are tripped by a Donkeyman. Built like an amateur bodybuilder You can't help notice that he's more human than donkey. The only parts of him that are donkey is his head, ears, tail, rough gray fur, and genitals that look like they would be more at home on a Clydesdale than a donkey. His face and head is covered with a leather hood with holes for his eyes, ears, nose, and mouth. A leather harness wraps around his thick chest and the chaps he's wearing look painted on. Heavy engineers boots cover his feet. Looking down at you with a look that chills you to the bone, he says, 'I can't wait to see you all geared up and looking like a proper jack!'"; 
+	now name entry is "Donkeyman";
+	now attack entry is "[one of]The powerful donkey twists around and kicks out at you with one of his boot covered hooves![or]He charges forward swinging wildly![or]The powerful donkeyman grabs you and tries to pin you up against the wall![or]The strangely sexy donkey strokes his cock teasingly, the sight making you feel strangely aroused.[or]he charges forward, slamming his powerful donkey-like body right into you![or]He strikes at you powerfully, only to overbalance and trip, sending both of you sprawling to the ground![or]The donkey like brute swings his powerful fist right into your gut![at random]";
+	now defeated entry is "[Donkeyman loses]";
+	now victory entry is "[Donkeyman wins]";
+	now desc entry is "[mongendernum 3]     Wandering through the building you are tripped by a Donkeyman. Built like an amateur bodybuilder You can't help notice that he's more human than donkey. The only parts of him that are donkey is his head, ears, tail, rough gray fur, and genitals that look like they would be more at home on a Clydesdale than a donkey. His face and head is covered with a leather hood with holes for his eyes, ears, nose, and mouth. A leather harness wraps around his thick chest and the chaps he's wearing look painted on. Heavy engineers boots cover his feet. Looking down at you with a look that chills you to the bone, he says, 'I can't wait to see you all geared up and looking like a proper jack!'";
 	now face entry is "narrow donkey-like face, with a crudely made leather mask covering most of your muzzle, which only emphasizes your striking donkey-like eyes and expressive large equine ears which sit on top of your new face"; [You have a (your text) face."]
 	now body entry is "powerful and muscular, built much like a beast of burdens, you have broad shoulders and powerfully built legs, you have managed to find some boots somewhere to cover your rough mostly human feet, and have made a rough harness out of strips of leather and rope to help make you feel more comfortable";
 	now skin entry is "[one of]gray furred[or]coarse furred[or]rough gray[at random]";
@@ -79,8 +79,8 @@ When Play begins:
 	now cock entry is "[one of]thick[or]equine[or]donkey[at random]";
 	now face change entry is "it pushes out into a rather narrow equine muzzle, and your eyes blur as your ears lengthen and shift to the top of your head. Blinking you reach up to feel your changed donkey-like face, and as your eyes begin to focus again you realize that your face feels rather vulnerable and naked. Glancing around you quickly spot several bits of cloth and leather nearby, and after a little bit of work you soon feel much better with a rough leather mask wrapped around your equine snout"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it shifts and changes and begins to bulge with muscles, you groan as your shoulders broaden and your build becomes more suited to that of a working beast, your [skin of player] chest seemingly to advertise the fact that you could now likely pull a cart or load easily enough. Unfortunately your chest feels disturbingly bare without a harness of some kind over it, almost as if you should be hitched up to something, looking around however you fail to spot anything that could be used as a proper harness, and so end up making do with some rope from your pack. And while it does look rather interesting, it makes you feel much happier and sexier to have it on"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it tightens and stretches across your body, coarse gray and black fur pushing out of it as your new donkey-like hide"; 
-	now ass change entry is "your ass tightens and becomes more muscular, and the area above your ass is tickled by the soft strands of hair pushing out of them,  the soft strands of your new tail tickling your ass and legs slightly as it extends out behind you. The sensations making you shudder with each step as your tail brushes up against your thighs and ass, you look around for some way to keep it stable and out of the way, and spotting a bit of leather nearby, you gather the strands of your new donkey-like tail together and tie it with the leather, enjoying both the look and feel of the leather on your new appendage"; 
+	now skin change entry is "it tightens and stretches across your body, coarse gray and black fur pushing out of it as your new donkey-like hide";
+	now ass change entry is "your ass tightens and becomes more muscular, and the area above your ass is tickled by the soft strands of hair pushing out of them,  the soft strands of your new tail tickling your ass and legs slightly as it extends out behind you. The sensations making you shudder with each step as your tail brushes up against your thighs and ass, you look around for some way to keep it stable and out of the way, and spotting a bit of leather nearby, you gather the strands of your new donkey-like tail together and tie it with the leather, enjoying both the look and feel of the leather on your new appendage";
 	now cock change entry is "it draws up close to your body, its tip flattening as it flares out into a more equine shape as your skin bulges out to form a proper donkey-like sheath around it"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 16;
 	now dex entry is 16;
@@ -89,7 +89,7 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 16;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60; 
+	now hp entry is 60;
 	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 7; [Amount of Damage monster Does when attacking.]
 	now area entry is "Stable"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
@@ -108,9 +108,9 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]hard-working[at random]";
 	now type entry is "[one of]asinine[or]donkey-like[at random]";
-	now magic entry is false; 
-	now resbypass entry is false; 
-	now non-infectious entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 

@@ -21,7 +21,7 @@ Understand "nerd" as nerding.
 
 check nerding:
 	say "The nerd is a person, not an action. You could try looking at them?(look nerd)" instead;
-	
+
 Part - Change Topics
 
 Researchlist is an action applying to nothing.
@@ -37,7 +37,7 @@ carry out researchlist:
 		LineBreak;
 		say "[x]([progress of x]/[cost of x])[if x is indefinite](Level: [level of x])[end if][if current of nerd is x](Current Topic)[end if][no line break]";
 	say "To begin a new topic, type [bold type]research (topic)[roman type].";
-	
+
 Researching is an action applying to one thing.
 Understand "Research [research]" as researching.
 
@@ -54,8 +54,8 @@ Carry out researching:
 		say "You begin researching [noun].";
 	else:
 		say "Aborted.";
-		
-	
+
+
 Book - Define Research
 
 A Research is a kind of thing.
@@ -73,7 +73,7 @@ A research has a number called level.
 
 This is the nothing rule:
 	do nothing;
-	
+
 Definition: A Research (called J) is valid:
 	follow the validation of J;
 	if rule succeeded:
@@ -141,8 +141,8 @@ An everyturn rule(this is the SCIENCE rule):
 		now x is x / 2;
 		if x is less than 1, now x is 1;
 		increase science of tribe of player by x;
-		
-		
+
+
 
 Farming is a research.
 The description of it is "Farming the land can be a source of valuable food and/or trade goods. It takes far fewer people to farm food than it does to forage.".

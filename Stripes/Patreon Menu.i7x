@@ -24,18 +24,18 @@ carry out supersponsor:
 		if "Sanity Saver" is listed in feats of player, now sanitysave is 1;
 		say "[bold type]Patreon Cheats:[roman type][line break]";
 		say "- Improvements -[line break]";
-		say "[if level of player < 12][link](1) Jump to lvl 12[as]1[end link] - Available[otherwise](1) Jump to lvl 12 - Inactive[end if][line break]";
-		say "[if ssmb is true](2) Maintenance boost - Active[otherwise][link](2) Maintenance boost[as]2[end link] - Inactive[end if][line break]";
+		say "[if level of player < 12][link](1) Jump to lvl 12[as]1[end link] - Available[else](1) Jump to lvl 12 - Inactive[end if][line break]";
+		say "[if ssmb is true](2) Maintenance boost - Active[else][link](2) Maintenance boost[as]2[end link] - Inactive[end if][line break]";
 		say "[link](3) Pet trainer[as]3[end link] - Reusable[line break]";
-		say "[if ssxpa is true](4) Experience accelerator - Active[otherwise][link](4) Experience accelerator[as]4[end link] - Inactive[end if][line break]";
+		say "[if ssxpa is true](4) Experience accelerator - Active[else][link](4) Experience accelerator[as]4[end link] - Inactive[end if][line break]";
 		say "- Stuff -[line break]";
-		say "[link](5) Food/Drink stash[as]5[end link] - [if ssstash > 0]Available[otherwise]Empty[end if][line break]";
-		say "[if ssgbii is true](6) Grab bag - Taken[otherwise][link](6) Grab bag[as]6[end link] of infected items - Available[end if][line break]";
-		say "[if ssgpd is true](7) Purple dildo club - Taken[otherwise][link](7) Purple dildo club[as]7[end link] - Available[end if][line break]";
-		say "[if ssbpg is true](8) Banana peel gun - Taken[otherwise][link](8) Banana peel gun[as]8[end link] - Available[end if][line break]";
-		say "[if sshh is true](9) Hard hat - Taken[otherwise][link](9) Hard hat[as]9[end link] - Available[end if][line break]";
-		say "[if ssos is true](10) Orange shield - Taken[otherwise][link](10) Orange shield[as]10[end link] - Available[end if][line break]";
-		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][otherwise][link](11) Sanity Saver[as]11[end link] - Available[end if][line break]";
+		say "[link](5) Food/Drink stash[as]5[end link] - [if ssstash > 0]Available[else]Empty[end if][line break]";
+		say "[if ssgbii is true](6) Grab bag - Taken[else][link](6) Grab bag[as]6[end link] of infected items - Available[end if][line break]";
+		say "[if ssgpd is true](7) Purple dildo club - Taken[else][link](7) Purple dildo club[as]7[end link] - Available[end if][line break]";
+		say "[if ssbpg is true](8) Banana peel gun - Taken[else][link](8) Banana peel gun[as]8[end link] - Available[end if][line break]";
+		say "[if sshh is true](9) Hard hat - Taken[else][link](9) Hard hat[as]9[end link] - Available[end if][line break]";
+		say "[if ssos is true](10) Orange shield - Taken[else][link](10) Orange shield[as]10[end link] - Available[end if][line break]";
+		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][else][link](11) Sanity Saver[as]11[end link] - Available[end if][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-10)> ";
@@ -51,7 +51,7 @@ carry out supersponsor:
 				now ssmb is true;
 			else:
 				now ssmb is false;
-			say "     The maintenance boost improves the effectiveness of medkits and using the journal by 50%. It is now [if ssmb is true]active[otherwise]inactive[end if]";
+			say "     The maintenance boost improves the effectiveness of medkits and using the journal by 50%. It is now [if ssmb is true]active[else]inactive[end if]";
 		else if calcnumber is 3:
 			if companion of player is nullpet:
 				say "     'How do you expect to train one of your pets if you don't have them here with you?' Trixie asks.";
@@ -71,7 +71,7 @@ carry out supersponsor:
 				now ssxpa is true;
 			else:
 				now ssxpa is false;
-			say "     The experience accelerator increases XP gain from combat victory by 33%. It is now [if ssxpa is true]active[otherwise]inactive[end if]";
+			say "     The experience accelerator increases XP gain from combat victory by 33%. It is now [if ssxpa is true]active[else]inactive[end if]";
 		else if calcnumber is 5:
 			if ssstash > 0:
 				say "     Asking Trixie about some supplies, she nods and tells you about the head librarian's secret stash. Heading there, you open an old filing cabinet and push aside from papers to find a collection of food and drink. 'And since you've been such a nice person, you can use that an extra time for every odd level you reach.'";

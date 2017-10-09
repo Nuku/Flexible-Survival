@@ -73,7 +73,7 @@ When Play begins:
 	now int entry is 32;
 	now cha entry is 10;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60; 
+	now hp entry is 60;
 	now lev entry is 8; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking.]
 	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -87,12 +87,12 @@ When Play begins:
 	now cunt length entry is 36; [ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 24; [ Width of female sex  infection will try and give you ]
 	now libido entry is 80; [ Amount player Libido will go up if defeated ]
-	now loot entry is "psionic egg"; 
+	now loot entry is "psionic egg";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]hyper-sexualized[or]twisted[or]genital-covered[as decreasingly likely outcomes]";
 	now type entry is "mutant"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-sheftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

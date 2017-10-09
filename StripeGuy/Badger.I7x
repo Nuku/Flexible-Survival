@@ -38,10 +38,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Badger"; 
-	now attack entry is "[one of]The brock lunges forward, leaning his shoulder into a powerful tackle![or]The big mustelid rubs down his striped body, flexing thick musculature in sequence, milking out his thickly scented musk. He flings the liquid at you in a spray, dazing you![or]The broad badger bring his big paws to bear, swiping at you with his thick claws![or]With a deep growl the badger crouches down and shoots forward, open muzzle darting forward to bite![or]The gruff badger stud throws himself forward into a dropkick, slamming his stout legs into your chest![at random]"; 
-	now defeated entry is "[Badger loses]"; 
-	now victory entry is  "[Badger wins]"; 
+	now name entry is "Badger";
+	now attack entry is "[one of]The brock lunges forward, leaning his shoulder into a powerful tackle![or]The big mustelid rubs down his striped body, flexing thick musculature in sequence, milking out his thickly scented musk. He flings the liquid at you in a spray, dazing you![or]The broad badger bring his big paws to bear, swiping at you with his thick claws![or]With a deep growl the badger crouches down and shoots forward, open muzzle darting forward to bite![or]The gruff badger stud throws himself forward into a dropkick, slamming his stout legs into your chest![at random]";
+	now defeated entry is "[Badger loses]";
+	now victory entry is  "[Badger wins]";
 	now desc entry is "[mongendernum 3]     Wandering around the park and admiring the sights, your eyes are looking anywhere but down. This is a mistake, as you almost tumble headlong into a deep pit, barely catching your feet. The narrow pit leads into a tunnel, from which a burly anthro badger emerges! Splattered in rich clean earth, this rugged, muscular male is wearing naught but a battered crown-cum-helmet with a lantern on the front and a fancy monocle. '[one of]Cor! An invader, or immigrant to my kingdom?[or]You look like a dog's dinner. Let me bugger you better, love.[or]Cost of a gander is a bit of fagging, mate.[or]Now who's this now, looking so fit and fruity![or]No need to flog your arse, I'm easy.[or]Not enough badgers, in my mind. I'll get that sorted now.[or]No time to leg it, you're in for the duration.[or]Trying to nick my kit? You're off your trolley.[at random]' he growls out, before tightening his helmet strap and moving in to attack!";[ Description of the creature when you encounter it.]
 	now face entry is "a very acutely wedge-shaped face, long and tapered for powerful biting and burrowing. Your ears are small and round, black with stripes that roll forward across your eyes and snout. Anyone can see you have a badger";
 	now body entry is "broad and stocky, limbs rather short but incredibly strong. Slightly hunched over and tightly packed with powerful muscle, you present a compact and extremely dense collection of high-torque low upkeep tunneling capacity";
@@ -50,8 +50,8 @@ When Play begins:
 	now cock entry is "[one of]brock[or]ebony-hued badger[or]slightly tapered[at random]";
 	now face change entry is "you feel it stretch forward into a proper badger-like muzzle, your jaw reshaping into a powerful wedge and teeth blossoming into a razor-sharp array. Your ears and nose shrink into a streamlined shape better for burrowing, making your profile sleek. The pain subsides as white, black, and gray colors swirl over your face, forming the characteristic stripes of the European badger. Only the intelligent light in your eyes and oversized braincase keep you from being mistaken for an oversized feral"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your chest thickens and draws forward as your torso shifts, hunching over as your spine adapts for tunneling. Dense muscle bloats up on your chest, shoulders, and upper back, aching as your arms thicken and hands sprout long, tough claws. The ground comes even closer as your legs shorten, turning length into mass and powerful bulky cords of muscle. Tendons and ligaments connect, fusing together to put your entire frame under tension, anchoring the large muscles in your back and ass to the long claws tipping every digit"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "soft black and white striped fur slowly covers your body, your skin twitching and shuddering as it settles into place"; 
-	now ass change entry is "muscle is packed on, pelvis creaking as your hips widen to make more room. The dense and powerful muscle aches as it forms out the broad burrowing platform for your legs, overshadowing the sensation of your small spade-tail sprouting from the base of your spine. Rough guard hairs in white and shades of gray force themselves out of your skin, tingling powerfully"; 
+	now skin change entry is "soft black and white striped fur slowly covers your body, your skin twitching and shuddering as it settles into place";
+	now ass change entry is "muscle is packed on, pelvis creaking as your hips widen to make more room. The dense and powerful muscle aches as it forms out the broad burrowing platform for your legs, overshadowing the sensation of your small spade-tail sprouting from the base of your spine. Rough guard hairs in white and shades of gray force themselves out of your skin, tingling powerfully";
 	now cock change entry is "it darkens to a deep ebon colour, taking on a slightly tapered profile. Ridges and veins briefly surge from the surface before the shaft retracts into a well-shielded badger sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 19;
 	now dex entry is 19;
@@ -60,7 +60,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Male"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 75; 
+	now hp entry is 75;
 	now lev entry is 8; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 10; [Amount of Damage monster Does when attacking.]
 	now area entry is "Park"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
@@ -79,8 +79,8 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]stocky[or]compact[at random]";
 	now type entry is "[one of]badger[or]musteline[at random]";
-	now magic entry is false; 
-	now resbypass entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
 	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]

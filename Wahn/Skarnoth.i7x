@@ -25,7 +25,7 @@ Northwest of Grey Abbey Library is Half-Renovated Room.
 Half-Renovated Room is sleepsafe.
 The description of Half-Renovated Room is "[LibrarySideRoomDesc]";
 
-to say LibrarySideRoomDesc: 
+to say LibrarySideRoomDesc:
 	say "     This large room of the Grey Abbey Library seems to be where most of the furniture of the old abbey ended up when the building was converted to its new purpose. With its high ceiling, ample floor-space and even a big fireplace, it could have been a dining hall or something in the past. Now it is mostly filled with numerous pieces of furniture, some stacked quite high and partially covered in white sheets. The two still accessible walls are covered in scaffolding and show signs of recent work on them - looks like workers were in the progress of refurbishing the room for library use when the nanite outbreak began.";
 	if Skarnoth is in Half-Renovated Room:
 		say "     Since you brought the demon prince Skarnoth here and securely attached the long chain on his collar to the scaffolding, the imprisoned predator has done his best to improve his comfort of his prison. A soft (if somewhat threadbare and stained) couch has been dragged to stand against the back wall and shows signs of being used as a bed. He even found a high-backed armchair somewhere, which is now set up next to the fireplace. Sitting in it, the demon awaits you, wearing an arrogant expression as if he was a king awaiting supplicants.";
@@ -177,7 +177,7 @@ to say SkarnothSex2: [facefuck Skarnoth]
 		WaitLineBreak;
 		say "     Keeping his face tightly pressed against your crotch for a while as your orgasm goes on - with more and more semen being pumped into Skarnoth - he eventually has to push against your hips to show he's running out of air. With an amused huff through your nose, you pull back and allow him to gasp for air, splashing the demon's red-skinned face with several blasts of cum before the climax eventually tapers off. Meanwhile, the demon pushes himself to orgasm by tail-fucking his own ass, blasting long streaks of demon cum all over the floor between your legs";
 		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then wipes his face with a slow swipe of his clawed hand. Looking at the white cum sticking to his fingers, he gives you a wink and then sucks it off finger by finger before sauntering over to throw himself on his red leather chair.";
-	
+
 to say SkarnothSex3: [69 with Skarnoth]
 	say "     A";
 
@@ -186,7 +186,7 @@ to say SkarnothSex4: [player pussy fucked]
 
 to say SkarnothSex5: [player ass fucked]
 	say "     A";
-	
+
 to say SkarnothSex6: [Skarnoth's ass fucked]
 	say "     Hooking a hand behind Skarnoth's head, you pull the sexy demon up from his seat, right into a demanding kiss. Chuckling under his breath, he proceeds to tongue-wrestle with you and slides those strong arms of his around your body, clawed hands kneading the cheeks of your butt. As you pull back from the bout of making out a moment later, the demon says in a teasing tone, 'You need it bad, don't you. How about you - umphH!' That's how far he gets before you push two fingers into his mouth and grunt commandingly for him to suck on your invading digits. The inner glow of the demon prince's eyes flares up a little as he realizes that you're planning to dominate him in this sexual encounter, and you can feel his muscles start to tense - right until you run a finger along his neck, reminding him of the collar you put on him.";
 	say "     With a huff of hot air from his nostrils, Skarnoth starts sucking on your fingers and playing his tongue over them. It feels great to have this powerful being at your beck and call, holding him by the chin with your thumb while you pump two fingers in and out of his increasingly sloppy mouth. After enjoying the moment for a little bit, you command Skarnoth to undo your pants, which he does without hesitation. The hard shaft of your erection springs out as it is freed from the tight confines it was in, brushing against the hot pillar of Skarnoth's demonic prick in a quite pleasurable sensation. Shoving your pants down to drop to the floor, the muscular male gives a lusty grunt and closes a hand around both of your cocks - stroking them together.";
@@ -212,7 +212,7 @@ to say SkarnothSex6: [Skarnoth's ass fucked]
 		say "     Being taken like that quickly pushes the demon closer and closer to his limits, and before much longer he groans, 'Yeah! Just like... nnnnghhHHHH! FUCK!' With that, the bent-over shape of the demon prince starts trembling and twitching, as do his inner muscles around your prick, tensing up with every new spurt of cum he is blasting all over the leather upholstery of his high-backed chair. Feeling Skarnoth's insides almost milking your dick, you're not too far behind joining your partner in orgasm and slam hard against his ass. Almost as soon as your swinging balls hit his warm skin in one last satisfying slap, you start blasting away with spurt after spurt of thick and creamy cum, filling Skarnoth's asshole with your load. The two of you stay tightly pressed together for a while, bent over and with him bracing against the chair, you against his strong back. Only after your respective orgasms have tapered off and you've caught your breaths do you slowly withdraw your dick from between his cheeks.";
 		WaitLineBreak;
 		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then glances over at his high-backed chair. 'Made quite a mess though,' the demon adds and nods to the white, slightly glowing splashes of his cum on the red leather. With a wink, he then swipes off the creamy goop and brings the hand used for that to his face, slurping his cum off finger by finger.";
-		
+
 Section 4 - Events
 
 instead of going northwest from Grey Abbey Library while (hp of Skarnoth > 1):
@@ -220,7 +220,7 @@ instead of going northwest from Grey Abbey Library while (hp of Skarnoth > 1):
 	if debugactive is 1:
 		say "     DEBUG: SKARNOTH WALK-IN - HP OF SKARNOTH: [hp of Skarnoth], THIRST OF Skarnoth: [thirst of Skarnoth][line break]";
 	say "     .";
-	
+
 Section 5 - Infection for combat purposes
 
 Table of random critters (continued)
@@ -251,7 +251,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 22;
 	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 275;               
+	now hp entry is 275;
 	now lev entry is 20;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 35;              [ Monster's average damage when attacking. ]
 	now area entry is "nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -264,21 +264,21 @@ When Play begins:
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;         [ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 70;            
+	now libido entry is 70;
 	now loot entry is "";              [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;         [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]demonic[or]infernal[or]powerful[at random]";
 	now type entry is "[one of]demon[at random]";
 	now magic entry is false;
-	now resbypass entry is false;      
-	now non-infectious entry is true;  
+	now resbypass entry is false;
+	now non-infectious entry is true;
 	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
-	
+
 when play ends:
 	if bodyname of player is "Demon Slave":
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
 		stop the action;
-	
+
 Skarnoth ends here.

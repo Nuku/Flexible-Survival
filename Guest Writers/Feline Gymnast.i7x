@@ -226,10 +226,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Feline Gymnast"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The gymnast leaps at you, but instead of hitting you, she vaults over you, slashing at your back.[or]She slashes quickly at any part of you she can reach.[at random]"; 
+	now attack entry is "[one of]The gymnast leaps at you, but instead of hitting you, she vaults over you, slashing at your back.[or]She slashes quickly at any part of you she can reach.[at random]";
 	now defeated entry is "[beatthefelinegymnast]"; [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is "[losetofelinegymnast]"; [ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[felinegymnastdesc]"; 
+	now desc entry is "[felinegymnastdesc]";
 	now face entry is "very human, except for the furry pair of cat ears"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "very thin, but with [one of]smooth[or]toned[or]sleek[at random] muscles. Your hands and feet, while retaining their human shape, now have retractable claws where your fingernails were"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "[one of]rich[or]dark[or]luxurious[at random] blue fur. It feels soft against your"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
@@ -240,14 +240,14 @@ When Play begins:
 	now skin change entry is "luxurious blue fur begins growing over your body"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you feel your body shift forwards to accommodate for some added weight. Looking back you notice a long, cat-like tail growing, swaying to help you regain your lost balance."; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "small bumps form on it, protruding out into odd barbs. Its colour shifts to a brighter shade of pink as flesh grows around the base, forming a sheath that it eventually settles down into"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 15; 
+	now str entry is 15;
 	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 14; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 64; 
+	now hp entry is 64;
 	now lev entry is 12; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 10; [ Monster's average damage when attacking. ]
 	now area entry is "Campus"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -266,7 +266,7 @@ When Play begins:
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]thin[or]svelte[or]lithe[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

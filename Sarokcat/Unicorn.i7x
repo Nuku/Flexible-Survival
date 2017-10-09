@@ -50,7 +50,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 20;
 	now sex entry is "Female";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 20;  
+	now hp entry is 20;
 	now lev entry is 2;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "nowhere";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -61,17 +61,17 @@ When Play begins:
 	now breast size entry is 8;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 14;  
-	now cunt width entry is 6;  
+	now cunt length entry is 14;
+	now cunt width entry is 6;
 	now libido entry is 50;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slim[or]lithe[or]slender[or]perfect[at random]";
 	now type entry is "[one of]equine[or]unicorn[or]mythological[as decreasingly likely outcomes]";
-	now magic entry is true; 
+	now magic entry is true;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;  
+	now non-infectious entry is true;
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 

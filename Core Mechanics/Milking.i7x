@@ -118,5 +118,5 @@ Carry out milking:
 		now lastmilking is turns;
 	else:
 		say "Your milk wouldn't be that interesting.";
-		
+
 Milking ends here.

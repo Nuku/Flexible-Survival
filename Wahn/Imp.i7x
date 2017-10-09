@@ -5,7 +5,7 @@ Version 1 of Imp by Wahn begins here.
 
 when play begins:
 	add { "Imp" } to infections of guy;
-	
+
 LastImpMeeting is a number that varies.	LastImpMeeting is usually 999.
 ImpPlayerMarkingTurn is a number that varies.
 
@@ -36,7 +36,7 @@ to say Imp loses:
 	say "     With a screech and an aborted flutter of wings, the imp crashes down, face-planting onto the ground. A groan comes from his throat as the little demon lets his wings slacken, then pushes himself up enough to focus on you with his big, expressive eyes. 'Look, er... fighting you wasn't such a great idea, and... how about we call a do-over, hm? I'll just... be on my way, and you can do whatever you were doing before. No hard feelings, right?' he says and gives a somewhat desperate smile, showing a surprisingly wide mouthful of sharp, little teeth. Snorting at the new tone coming from the formerly so boisterous creature, you pluck him off the floor with one hand and start thinking about what to do with him. ";
 	LineBreak;
 	say "[Imp Sex Menu]";
-	
+
 to say Imp Sex Menu:
 	setmonster "Imp";
 	now sextablerun is 0;
@@ -108,7 +108,7 @@ to say Imp Sex Menu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-	
+
 to say ImpNoSex1:
 	say "     Snatching up some shreds of fabric from the ground - finding ripped and usually cum-stained clothing isn't hard, with everything that has been going on - you quickly tie the imp up into a compact little bundle. He grumbles something about Skarnoth sending out countless of his brothers and that one of them is gonna get you, then just mumbles as you gag him for good measure. You leave the annoying creature behind like that, weakly kicking and trying to wiggle out of his bindings as he dangles in a prominent place from a street-sign. No doubt, some other creature will soon find the little fucker and take care of him for you.";
 	if libido of Skarnoth is 0:
@@ -120,7 +120,7 @@ to say ImpNoSex1:
 		say "     Even though you've fought off yet another imp, something tells you that this 'Skarnoth' will just keep sending more to harass you. Seems he's quite determined to get his claws on you for some reason. One possible explanation is that you did rescue [bold type]Elijah[roman type] from demonic clutches and made an enemy that way. [bold type]Maybe you should give the angel's idea of a counterattack some thought after all.[roman type]";
 	else if libido of Skarnoth > 9: [player is already demon marked or completed the quest and should meet no more imps]
 		say "     <ERROR [libido of Skarnoth]: You should not have encountered an imp at this point of the quest. Please notify Wahn on the FS forum and give him the error code and details about your play-through.>";
-	
+
 to say ImpNoSex2:
 	say "     Taking hold of the slender little demon, you grab his head and give it a sharp twist, breaking his neck. He scowls at the pain, but then surprisingly gives a toothy smile. 'Can't kill a demon, you idiot. Skarnoth will just send me back...' he croaks out as the life fades from him. Then as the body goes still, it seems to melt between your fingers, becoming a puff of red smoke that is scattered by the wind.";
 	if libido of Skarnoth is 0:
@@ -132,7 +132,7 @@ to say ImpNoSex2:
 		say "     Even though you've fought off yet another imp, something tells you that this 'Skarnoth' will just keep sending more to harass you. Seems he's quite determined to get his claws on you for some reason. One possible explanation is that you did rescue [bold type]Elijah[roman type] from demonic clutches and made an enemy that way. [bold type]Maybe you should give the angel's idea of a counterattack some thought after all.[roman type]";
 	else if libido of Skarnoth > 9: [player is already demon marked or completed the quest and should meet no more imps]
 		say "     <ERROR [libido of Skarnoth]: You should not have encountered an imp at this point of the quest. Please notify Wahn on the FS forum and give him the error code and details about your play-through.>";
-	
+
 to say ImpSex1:
 	say "     A";
 
@@ -155,7 +155,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Imp"; 
+	now name entry is "Imp";
 	now attack entry is "[one of]Swinging his arm like a baseball pitcher, the imp sends a fire-ball flying your way. Thankfully it is pretty small, so you're just a little singed.[or]In a lightning-quick flying maneuver, the little demon swoops past your face and gives your nose a kick. Ouch, that smarts![or]Swooping down between your legs, the imp leaves thin bloody scratches near your ankles.[or]As he flutters straight towards your face, you deflect the imp with your hands, earning some bloody scratches in the process.[at random]";
 	now defeated entry is "[Imp loses]";
 	now victory entry is  "[Imp wins]";
@@ -165,7 +165,7 @@ When Play begins:
 	now skin entry is "red";
 	now tail entry is "You have a tight and compact butt with a long, slender tail attached. It is a classic devil tail: thin, red and ending in a spaded tip.";
 	now cock entry is "human-like";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into a demonic, if rather cute appearance, with large eyes and a mouth with sharp teeth. Small horns push out of the mop of black hair forming on your head"; 
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into a demonic, if rather cute appearance, with large eyes and a mouth with sharp teeth. Small horns push out of the mop of black hair forming on your head";
 	now body change entry is "it is reshaped into a pretty compact and small, but still slender form. You are soon distracted from this change by the strange feeling of your skin stretching and pressing out from your back. Looking over your shoulder, you stare in wonder as two bulges of flesh push out of your back, then popping open in an almost orgasmic release. You now have a pair of blood-red bat wings on your back";
 	now skin change entry is "your skin seems to smooth out and pull tight on your body, leaving you with a smooth and blemish less red skin";
 	now ass change entry is "it tightens up into a tight ass, above which a demonic tail with spaded tip sprouts from your lower back";
@@ -182,14 +182,14 @@ When Play begins:
 	now wdam entry is 5;
 	now area entry is "Nowhere";        [ Case sensitive]
 	now cocks entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
-	now cock length entry is 6; 
+	now cock length entry is 6;
 	now cock width entry is 2;          [ Size of balls ]
 	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
-	now cunt length entry is 0;         
-	now cunt width entry is 0;          
+	now cunt length entry is 0;
+	now cunt width entry is 0;
 	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 00;         [ Percentage chance of dropping loot, from 0-100. ]
@@ -197,8 +197,8 @@ When Play begins:
 	now body descriptor entry is "slender";      [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "demonic";        [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
-	now resbypass entry is false;       
-	now non-infectious entry is false;  
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
 
@@ -213,7 +213,7 @@ instead of navigating Red Light District while (level of player > 10 and hp of E
 	challenge "Imp";
 	now LastImpMeeting is turns;
 	move player to Red Light District;
-	
+
 instead of navigating Grey Abbey Library while (level of player > 10 and hp of Elijah > 2 and hp of Elijah < 99 and libido of Skarnoth < 10 and LastImpMeeting - turns > 8 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
@@ -223,7 +223,7 @@ instead of navigating Grey Abbey Library while (level of player > 10 and hp of E
 	challenge "Imp";
 	now LastImpMeeting is turns;
 	move player to Grey Abbey Library;
-		
+
 instead of navigating Smith Haven Mall Lot South while (level of player > 10 and hp of Elijah > 2 and hp of Elijah < 99 and libido of Skarnoth < 10 and LastImpMeeting - turns > 8 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Smith Haven Mall Lot South]";
 	if NavCheckReturn is false, stop the action;
@@ -233,7 +233,7 @@ instead of navigating Smith Haven Mall Lot South while (level of player > 10 and
 	challenge "Imp";
 	now LastImpMeeting is turns;
 	move player to Smith Haven Mall Lot South;
-	
+
 to say ImpEncounter:
 	let randomnumber be a random number from 1 to 3;
 	if randomnumber is:
@@ -247,7 +247,7 @@ to say ImpEncounter:
 			say "     As you make your way through the mostly lifeless streets, filled with abandoned cars and trash, you come upon a rather disconcerting sight. The street is splashed with dried, brown splotches of blood and splinters of bone crunch under your steps. Looks like something was torn to pieces, right here in the open. A few steps further, you see what - or rather who - it was... the ripped off head of a minotaur lies behind a car wreck, eyes still opened wide in horror and staring blankly at you. All around the grisly scene, there are paw-prints on the asphalt, or rather... indented into it, as if the black material partially melted at the point of contact. This does lead you to the conclusion that in all likelihood, a pack of hellhounds is responsible. Thankfully, the trails are cold as you crouch down and touch them, and the blood is dried all the way, so it didn't happen recently. With a cold shiver running down your spine, you hold your breath for a moment and silently listen for any sign that the pack might be coming back this way.";
 			say "     Silence stretches out around you, except for the wind blowing past the buildings. But just as you're starting to let out a relieved breath, you suddenly hear voices call to each other close to your position - just around the next corner you'd say. They are rather deep, so your guess would be that its males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Be happy that they get fresh mortal prey and don't try to chew on us instead.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
 	wait for any key;
-	
+
 An everyturn rule:   [hellhound bad end progress every turn]
 	if libido of Skarnoth is 10: [player got found and marked]
 		if ImpPlayerMarkingTurn - turns is 8:
@@ -272,8 +272,8 @@ An everyturn rule:   [hellhound bad end progress every turn]
 			now bodyname of player is "Demon Slave";
 			now cockname of player is "Demon Slave";
 			end the game saying "You're stuck in hell - there's no coming back from that!";
-			
-			
+
+
 Section 4 - Endings
 
 when play ends:
