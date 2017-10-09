@@ -70,7 +70,7 @@ When Play begins:
 	now type entry is "[one of]vulpine[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
-	now non-infectious entry is true;
+	now non-infectious entry is false;
 	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
 

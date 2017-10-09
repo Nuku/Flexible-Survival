@@ -893,7 +893,7 @@ to say fsdinheat:
 				now Beach Plaza is known;
 				now heatturnskipper is true;
 				follow the turnpass rule;
-			otherwise if location of player is Beach Plaza or location of player is Church Hall or location of player is Dirty Sheds or location of player is Overgrown Block:
+			otherwise if location of player is Beach Plaza or location of player is Church Hall or location of player is Dirty Sheds or location of player is Overgrown Area:
 				say "Catching the breeze of the sea in the air, your [if cunts of player > 0]puss[yfn] quiver[sfv][otherwise if cocks of player > 0]dick[smn] throb[smv][otherwise]body trembles[end if] with need and your heat-addled mind is distracted, drawn back to the beach in the hopes of satisfying its need to be fucked and bred.";
 				move the player to Beach Plaza;
 			otherwise if location of player is Public Beach:
@@ -904,7 +904,7 @@ to say fsdinheat:
 				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water, momentarily distracting you from your task here.  Perhaps its cool waters will soothe your heat.  Your [if cunts of player > 0]puss[yfn] quiver[sfv][otherwise if cocks of player > 0]dick[smn] throb[smv][otherwise]body trembles[end if] with each wave that rocks the inflatable castle, making you feel all the more like you belong out there.";
 				decrease humanity of player by 3;
 				increase libido of player by 2;
-			otherwise if location of player is Sloping Sand or location of player is Coral Ring or location of player is Sunken Ship:
+			otherwise if location of player is BeachEnd or location of player is Coral Ring or location of player is Sunken Ship:
 				say "Being out in the water feels so satisfying to your heat-addled body, helping to soothe your lustful urges somewhat.  Surely you are meant to stay here.  It feels so nice out in the water.  Now if you could only find some exotic undersea lover who's willing to breed your needy body.";
 				decrease humanity of player by 5;
 				decrease libido of player by 20;

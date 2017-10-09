@@ -4987,11 +4987,12 @@ Include Text Capture by Eric Eve.
 [Locations]
 Include Apocalypse Store by DrGryphon.
 Include Approaching the Capitol Building for FS by Guest Writers.
+Include Beach by Speedlover.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
 Include Camp Bravo by Wahn.
 Include Campus For Fs by Rikaeus.
-Include Church Of The Maternal Beast For Fs by Guest Writers.
+[Include Church Of The Maternal Beast For Fs by Guest Writers.]
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
 Include Equinoid Camp For FS by Stripes.
@@ -5055,6 +5056,7 @@ Include Forest Events by Aureas Gigas.
 Include Forest Events by Defth.
 Include Forest Gang Bang by Defth.
 Include giving in by Core Mechanics.
+Include HellHound by Speedlover.
 Include High Rise Events by Stripes.
 Include How High by Kaleem mcintyre.
 Include Hyena Bikers by Stripes.
