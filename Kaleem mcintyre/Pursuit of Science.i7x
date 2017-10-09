@@ -220,8 +220,8 @@ to say omioquest5:
 	say "Asking Omio about the woman you are supposed to be meeting up with you watch as the red head stares at you blankly. Sighing and then reminding her about your task you watch as the information almost literally crosses her eyes before it stops in her brain. 'OH!! Uhm, sorry, I...hehe.' she flusters and you silently count to five before breathing sighing. 'The woman you are looking for is a blonde with a scar over her nose wearing a white hoodie. She should be easy enough to spot since she's probably still very much human. Oh, and she's in the red light district.' Omio cheerfully says, but you get the feeling she may have totally forgotten about the assignment she just asked you to take on. What a scatter brain!";
 	now opcl is 1;
 	now omq is 6;
-	
-	
+
+
 to say omioquest6:
 	if omq is 6:
 		say "Remember, I need you to head for the [bold type]red light district[roman type] and pick up that [bold type]important[roman type] package for me, ok? Omio asks with a serious look on her face. It would seem that whatever this package is the red head needs it somewhat badly.";
@@ -607,4 +607,3 @@ instead of sniffing Organi Rod:
 
 
 Pursuit of Science ends here.
-

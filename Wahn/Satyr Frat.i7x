@@ -178,12 +178,12 @@ when play begins:
 
 Instead of resolving a Let's Party:
 	SatyrFratPartyVisit;
-	
+
 instead of going south from Greek Street while (SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99):
 	SatyrFratPartyVisit;
-	
+
 to SatyrFratPartyVisit:
-	if daytimer is day: 
+	if daytimer is day:
 		say "     When you make your way to Phi Alpha Nu you see a lot of passed out people in the yard. You realize that the party is on hold for now, as everyone is getting over their killer headaches. It might be best for you to return at night when everyone's alive and awake.";
 	else:
 		say "     Making your way back to the Phi Alpha Nu frat house, you find that the party is still going on - and it's wilder than ever. There is no trace of [if SatyrFratRichardRelationship > 97]the guy who was guarding the entrance before[else]Richard[end if], maybe he joined the crowd inside at some point. In a bit of a partying mood yourself as you think back to the support you gave to those friendly satyrs, you walk up to the large house, up the stairs and into the open entrance door. Inside, the frat party is in full swing, with handsome guys and gals moving to the beat of loud music, drinks in their hands as they have fun dancing and talking. You do notice a definite prevalence of goatees among the men... might be that type of beard is 'in' right now - or the result of smuggling in two satyrs with a whole barrel full of changing wine.";
@@ -435,7 +435,7 @@ to say SatyrFratSex4: [Bj for Richard]
 		WaitLineBreak;
 		say "     Breathlessly lying under the college age hunk that you just had very public sex with, you look down over yourself, [if cocks of player > 0]splattered all over chest with your own cum[else if cunts of player > 0]all sweaty and dripping femcum from your pussy[else]all sweaty as you are[end if], then up at the still panting and widely grinning Richard and finally at the crowd of people in the room. With the show being over now, they mostly turned back to dancing, although you can see several couples making out, as well as a blowjob between two guys going on over there in the corner. Mission accomplished, one could say...";
 		say "     Richard stays inside you for a while longer, enjoying the feeling of being so close to you and sharing a few kisses, then he eventually pulls out with a sigh and says, 'You were simply amazing, baby. Wow, really.' After proceeding to help you clean up by licking your chest clean, he later bids you farewell and goes upstairs to wash up himself too.";
-			
+
 to say SatyrFratSex5:
 	setmonster "Satyr";
 	if SatyrFratRichardRelationship < 4:
@@ -501,7 +501,7 @@ to say SatyrFratSex5:
 		LineBreak;
 		say "<<<<<Sadly, this is the end of Richard's content so far. Check in again at some future point and see what you can do with him then.>>>>>[line break]";
 		say "<<<<<This might include: Sexy Dancing, offering him your ass, bending Richard over the counter, getting Kerr and Talov involved, ... (we'll see what it will be).>>>>>";
-				
+
 to say SatyrFratSex6: [Fucking a satyress]
 	setmonster "Satyress";
 	say "     Letting your eyes wander over the crowd of partying students, you spot a bare-breasted sorority girl sporting a pair of cute little horns on her forehead. Looks like the satyress strain of the nanite infection you inadvertently helped create his spreading well. After snatching up two cups of satyr wine from the counter in front of Talov, you move closer to the laughing and dancing young woman, winding your way past several people who are making out and casually grind against one another. This gives you time to take in her curly [one of]blond[or]ginger[or]brown[or]auburn[at random]hair and check out the fur on two long hoofed legs and her shapely behind with its cute tail. That babe is definitively a looker. Before much longer, you're up close with her, holding out your alcoholic ice-breaker as you introduce yourself and chugging back a swallow from the second cup as she takes it.";
@@ -586,7 +586,7 @@ when play begins:
 [  2: gave Jaks a BJ                                        ]
 [  3: fucked by Jaks                                        ]
 
-JaksEncounters is a number that varies. 
+JaksEncounters is a number that varies.
 LastJaksEncounter is a number that varies. LastJaksEncounter is usually 2500.
 
 Instead of resolving a Divine Wine-Cellar:

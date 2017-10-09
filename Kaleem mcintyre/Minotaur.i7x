@@ -88,8 +88,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Minotaur"; 
-	now attack entry is "[one of]Minotaur stomps over and wildly swings at you![or]Charging into your direction the Minotaur smashes its bulky head into your chest![or]Hammering its large fists into you're the bullman strikes with an unforgiving blow to your head![or]Bellowing out a roar the Minotaur gouges at you with his ivory horns![or]Desperately charging in your direction the Minotaur tries to make a critical strike![at random]"; 
+	now name entry is "Minotaur";
+	now attack entry is "[one of]Minotaur stomps over and wildly swings at you![or]Charging into your direction the Minotaur smashes its bulky head into your chest![or]Hammering its large fists into you're the bullman strikes with an unforgiving blow to your head![or]Bellowing out a roar the Minotaur gouges at you with his ivory horns![or]Desperately charging in your direction the Minotaur tries to make a critical strike![at random]";
 	now defeated entry is "[beatthemino]";
 	now victory entry is "[losetomino]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[minodesc]";

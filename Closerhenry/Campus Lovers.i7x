@@ -15,11 +15,11 @@ The sarea of Campus Lovers is "Campus".
 when play begins:
 	add Campus Lovers to badspots of guy;
 	add Campus Lovers to badspots of furry;
-	
+
 instead of going north from College Campus Entrance while (Campus Lovers is not resolved and CampusLoversTrackingVariable is 1 and CampusLoversProgressTurn - turns > 3):
 	move player to College Fountain;
 	CampusLoversEvent;
-	
+
 instead of going east from College Walkway Northwest while (Campus Lovers is not resolved and CampusLoversTrackingVariable is 1 and CampusLoversProgressTurn - turns > 3):
 	move player to College Fountain;
 	CampusLoversEvent;
@@ -27,14 +27,14 @@ instead of going east from College Walkway Northwest while (Campus Lovers is not
 instead of going west from College Walkway Northeast while (Campus Lovers is not resolved and CampusLoversTrackingVariable is 1 and CampusLoversProgressTurn - turns > 3):
 	move player to College Fountain;
 	CampusLoversEvent;
-	
+
 instead of going northeast from College Walkway East while (Campus Lovers is not resolved and CampusLoversTrackingVariable is 2 and CampusLoversProgressTurn - turns > 3):
 	move player to Dorm Street;
 	CampusLoversEvent;
-	
+
 instead of resolving Campus Lovers:
 	CampusLoversEvent;
-	
+
 to CampusLoversEvent:
 	if CampusLoversTrackingVariable is 0:
 		say "     You are walking around the campus searching for anything interesting when you hear a yell. Thinking someone may be be in trouble, you turn in the direction to see a lithe feline running up to a tall dog morph. The sleek cat has a mixture of orange and black fur colors, surrounding the white fur on his belly. He looks young, maybe just short of twenty. Must have been one of the students here. He wears no clothes, allowing you to easily see his flaccid penis and golf-ball sized testes. The burly canine has scruffy, brown fur which highlights his chest, rippling with muscles. He wears an unzipped jacket with the college's logo on it, as well as some athletic shorts. The anthro student tries to embrace his older acquaintance, exclaiming 'Coach Weber!', but the canine softly pushes the cat away. 'Oh, Jadako! I, uh, don't think we should do that. I'm your teacher, and... well... you're naked...' he stutters sheepishly.";
@@ -50,7 +50,7 @@ to CampusLoversEvent:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] to watch, [link]2[end link] to leave or [link]3[end link] to avoid all further contact.";
-		if calcnumber is 1: 
+		if calcnumber is 1:
 			LineBreak;
 			say "      You sneak closer to the two and hide around a corner within earshot, slowly peeking your head out to see. 'I never thought I'd see you again after all of this, Coach!' the feline expresses with relief. Coach Weber nods his head. 'Well, I'm glad you found me. Question is, how did you recognize me? I don't exactly look the same as I used to, I'm a dog!' the canine chuckles, his solid chest shaking with each laugh. Jadako lets out a little laugh, pointing to the large man's jacket. 'It's kinda hard to mistake your jacket.' 'Hey, speaking of clothes, don't you think you should put something on?' the transformed teacher asks with concern, gesturing to the former student's exposed crotch. 'No way, I feel great like this! Here...' The cat places his hands around his teacher's waist, pulling down his athletic shorts. You're sure the hound's face would be blushing if he were still human as his former pupil disrobes him, although he seems to enjoy it. His un-erect member slowly twitches, as it begins to swell and push out of its sheath. His baseball-sized nuts hang low in a full sack, already churning with cum.";
 			say "      The transformed teen leans closer to the well-built anthro, running a hand down his chiseled, muscular chest. 'You know, sir, I always thought you were kind of... hot... With everything going on, we could always, you know...' he suggests, his own penis already at full erection. It looks much smaller than the dog's, only half as thick and a couple inches shorter, but still solid in it's own right. Coach Weber's throat rumbles, as he places a hand on the side of young man's face. 'You were always such a good student, Jadako... Why don't I give you a reward for all your hard work?' Tossing his jacket aside, the canine walks a few steps to where a nearby wall has a small decorative landing, sitting down on the low ledge and leaning back against the wall. With his muscular legs spread and his shaft standing proudly erect, the man pats the tops of his thighs invitingly. 'Come and get it, Jadako... Come and get your extra credit,' the dog commands, laughing a bit at his own joke.";
@@ -60,10 +60,10 @@ to CampusLoversEvent:
 			WaitLineBreak;
 			say "     Coach Weber keeps speeding up his movements, until finally he grits his teeth as he shoves the waiting feline all the way down, popping his knot into him. This pushes Jadako over the edge, and he lets out a wanton moan as his feline cock begins ejecting ropes of thick, white jizz. His entire body quakes as the burly canine let's out a loud growl as his balls quiver and churn. The coach's cock spasms inside the feline, painting Jadako's insides white with his load. The cat's body isn't able to contain all of it, and his teacher's cum slowly begins to drip out of his hole. The young man remains seated on his coach's cock, until he turns his head to face the his lover once again. The two caress each other and kiss sloppily as the horny teen's cock again begins to rise. Seeing they are going to go for another round, you take your opportunity and sneak away, worried that the commotion might attract other infected.";
 			now CampusLoversTrackingVariable is 1;
-		else if calcnumber is 2: 
+		else if calcnumber is 2:
 			LineBreak;
 			say "     Not wanting to risk these two unknown morphs, you slowly back away. After you get far enough away and it seems they haven't notice you, you take a slight jog to put a greater distance between you and them. As you look back to make sure they aren't following you, you see the two against the wall, the cat slowly sliding onto the dog's cock. At least they aren't after you.";
-		else: 
+		else:
 			LineBreak;
 			say "     Something just doesn't sit right with you about these two. You make sure to get away without being detected, before making a mental note to avoid all further contact with the two.";
 			now CampusCoupleRelationship is 100;
@@ -86,7 +86,7 @@ to CampusLoversEvent:
 		now CampusLoversTrackingVariable is 2; [second event done]
 	else if CampusLoversTrackingVariable is 2: [third time]
 		say "     Setting out on the campus in search of anything interesting, your ventures bring you close to the dorms of the college. Some of the rooms are probably abandoned, so it might not be to bad of an idea to peek through the windows for any supplies. Unfortunately, it seems most of the rooms have nothing of value. Just as you are about to give up, you hear the faint sound of someone moaning from one of the windows ahead of you. You sneak along the side of the building to where you heard the noise, and have a little peek. Inside, you see a familiar looking feline and canine going at it. The cat is on his back, legs sticking out on both sides, while the dog is between them, thrusting inside of Jadako. 'O-oh yeah! Take me harder, Coach!' the lithe anthro moans, as you pull your head away from the window.";
-		say "     [bold type]It looks pretty steamy in there. While you don't think you'll get anything out of it, do you want to stay and watch the action?[roman type][line break]";	
+		say "     [bold type]It looks pretty steamy in there. While you don't think you'll get anything out of it, do you want to stay and watch the action?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Watch the two lovers get each other off.";
 		say "     ([link]N[as]n[end link]) - Scram. It's a private moment!";

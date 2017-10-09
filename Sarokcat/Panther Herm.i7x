@@ -52,7 +52,7 @@ When Play begins:
 	now int entry is 15;
 	now cha entry is 20;
 	now sex entry is "Both";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 100;  
+	now hp entry is 100;
 	now lev entry is 10;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 20;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "None";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -63,17 +63,17 @@ When Play begins:
 	now breast size entry is 8;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;  
-	now cunt width entry is 6;  
+	now cunt length entry is 12;
+	now cunt width entry is 6;
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]powerful[or]sultry[at random]";
 	now type entry is "feline";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  
+	now non-infectious entry is false;
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -96,7 +96,7 @@ when play ends:
 						say ". You allow Sven to mount your wet pussy when you're in heat, breeding more snow leopard pets for your growing group of panther herms to enjoy. Sven and the other snowmeows enjoy their subservient role as the fucktoys of the powerful panther colony.";
 					else:
 						say ". You bring Sven a few female soldiers for him to mount and mate, turning them into more snow leopard pets and breeding them for your growing group to panther herms to enjoy. Sven and the other snowmeows enjoy their subservient role as the fucktoys of the powerful panther colony.";
-[				otherwise if hp of Sven >= 30 and hp of Sven < 50:
+[				else if hp of Sven >= 30 and hp of Sven < 50:
 					say "***Confident Sven addition.";		]
 			else:
 				if cunts of player is greater than 0:
@@ -109,8 +109,8 @@ when play ends:
 				else:
 					say "     When the military arrive, you and your fellow panthers are waiting for them peacefully right outside the zoo. While they seem somewhat surprised by your appearance, and somewhat wary of Midnight's feral feline form, you and Angie manage to convince the soldiers that you are all fully in control of your facilities. When you explain that Angie was a large cat trainer, several of them relax as they escort you back to the military base to be processed and evaluated. It is relatively easy for you to convince the soldiers and scientists that you aren't a threat, especially considering how much they still have to deal with inside the city. Once they let you go, the three of you still need to find something to do in the outside world, and hopefully some way to show people how wonderful being a lovely panther is. At your urging, the three of you decide to visit several nature preserves, particularly those containing panthers, using the excuse of trying to find Midnight a nice new home, and some friends to play with. Most of the preserves are more than happy to welcome your visit, and are often astonished and intrigued by your and Angie's unusual appearance. This makes it all too easy for the two of you to seduce and tease them into playing with the two of you, both of you teasing and playing with them until they are all too willing for Midnight to mount them and make them proper panthers themselves. You often enjoy playing with the large cats on the preserves as well, you and midnight often mating the females and spreading your lovely seed around, and teaching the male cats how to play with the newly changed staff members properly, the three of you making sure that each and every new fertile pantheress is well bred and doing their part to preserve the species before you move on to the next preserve. As you go from one nature preserve to the next, building up a lovely series of glowing recommendations from the places you have already visited, you can feel a feral grin spreading across your muzzle, as looking over to where your increasingly pregnant panther mates are lounging around, looking forward to a bright future with your mates, a future which you are sure will hold a lot more lovely and erotic large black felines.";
 				if hp of Sven > 7 and hp of Sven < 30:			[Sven the fucktoy]
-					say "     Sven accompanies you and the other pantherm herms on your journeys as your pet lover and companionship on the trip, using him to slake your lusts should any of you be alone while the others take care of matters. You make sure that your sexy pet gets his chance to enjoy the great cats as well, equally eager to mount the females as to be mounted by the feral cats. He sires several litters of snow leopard kittens and you make sure to reward him from time to time with someone to turn into another snowmeow pet for the panthers you leave in your wake. You all agree that having some snowmeow fucktoys for the panthers to enjoy is a good idea. Thinking of this, you [if cunts of player > 0]reach over and stroke your pet's cock, getting him hard[otherwise]roll your pet over and squeeze his ass, mounting him[end if] again for another romp to show him how much you enjoy having him take part in this erotic endeavour.";
-				otherwise if hp of Sven >= 30 and hp of Sven < 50:
+					say "     Sven accompanies you and the other pantherm herms on your journeys as your pet lover and companionship on the trip, using him to slake your lusts should any of you be alone while the others take care of matters. You make sure that your sexy pet gets his chance to enjoy the great cats as well, equally eager to mount the females as to be mounted by the feral cats. He sires several litters of snow leopard kittens and you make sure to reward him from time to time with someone to turn into another snowmeow pet for the panthers you leave in your wake. You all agree that having some snowmeow fucktoys for the panthers to enjoy is a good idea. Thinking of this, you [if cunts of player > 0]reach over and stroke your pet's cock, getting him hard[else]roll your pet over and squeeze his ass, mounting him[end if] again for another romp to show him how much you enjoy having him take part in this erotic endeavour.";
+				else if hp of Sven >= 30 and hp of Sven < 50:
 					say "***confident sven addition.";
 		else:
 			if humanity of player is less than 10:

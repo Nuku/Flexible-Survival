@@ -40,7 +40,7 @@ to say losetogiraffe:
 		else:
 			say "     With her tongue having prepared you, her large cock spears into you easily. Vigorous thrusting brings both you and the giraffe quickly to an orgasm. You feel her hot seed spreading throughout your womb, a gush of fluid from your cunt soaking your thighs. Her large output leaves your belly plump and rounded, as if already pregnant with the giraffe's well-hung offspring[if cocks of player > 0]. Your cock gives a twitch as it sprays the bedding beneath you with ropey streams of your own cum[end if]. Done with you, the giraffe pulls out, a gush of her seed flowing from your distended cunt as she strides off in search of more amusement, leaving you behind to recover as best you can.[impregchance]";
 	else if cocks of player > 0:
-		say "     You are pushed over onto your back and the tall, slender herm climbs atop you, grinding her curvy hips down into your lap. Her hefty cock and large balls weigh heavily across your body as she grinds down onto your cock, quickly getting you erect so she might ride your pole. As she sinks down onto your shaft, her [if cock length of player > 36]shapely body taking your [cock size desc of player] rod with ease and only a slight pause to adjust despite the clear outline your throbbing meat makes in her[else if cock length of player > 24]shapely body taking your [cock size desc of player] rod with surprising ease, stuffing it all into her without delay[otherwise]shapely body taking your [cock size desc of player] rod in without delay[end if]. As she rides you, she runs her hands over her throbbing, two foot long cock and heavy balls. Large spurts of her precum splatter across your body and face. With her pounding her hips down onto yours and her cunt squeezing down around your shaft, it's not long before you cum, pumping your hot load into her. And she's more than eager to return the favour, blasting her hot seed across your upper body and face, coating you in her sperm. Once she's drained you and emptied her balls all over you, she gets up and strides out, leaving you there, panting and bathed in her semen.";
+		say "     You are pushed over onto your back and the tall, slender herm climbs atop you, grinding her curvy hips down into your lap. Her hefty cock and large balls weigh heavily across your body as she grinds down onto your cock, quickly getting you erect so she might ride your pole. As she sinks down onto your shaft, her [if cock length of player > 36]shapely body taking your [cock size desc of player] rod with ease and only a slight pause to adjust despite the clear outline your throbbing meat makes in her[else if cock length of player > 24]shapely body taking your [cock size desc of player] rod with surprising ease, stuffing it all into her without delay[else]shapely body taking your [cock size desc of player] rod in without delay[end if]. As she rides you, she runs her hands over her throbbing, two foot long cock and heavy balls. Large spurts of her precum splatter across your body and face. With her pounding her hips down onto yours and her cunt squeezing down around your shaft, it's not long before you cum, pumping your hot load into her. And she's more than eager to return the favour, blasting her hot seed across your upper body and face, coating you in her sperm. Once she's drained you and emptied her balls all over you, she gets up and strides out, leaving you there, panting and bathed in her semen.";
 
 
 to say beatthegiraffe:
@@ -62,11 +62,11 @@ to say beatthegiraffe:
 
 
 Section 2 - Monster Insertion
- 
+
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
- 
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Giraffe"; [Name of your new Monster]
@@ -76,7 +76,7 @@ When Play begins:
 	now desc entry is "[giraffedesc]";
 	now face entry is "sitting atop a thick, long neck. Your narrow face is dominated by a tapered muzzle, containing a long blue-black tongue. A pair of leaf shaped ears constantly flick about on either side of your head with two short, boney horns between them";
 	now body entry is "tall and slender, with toned, shapely limbs and a curvy waist giving you an overall feminine figure. Your arms and legs are elongated and slender, the joints thick and solid. Your hands have two thick fingers and a thumb, each with a thick, dark nail. Your feet are cloven hooves at the end of digitigrade legs";
-	now skin entry is "brown spotted, fur covered"; [ skin Description, format as the text "You have (your text) skin"] 
+	now skin entry is "brown spotted, fur covered"; [ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a thin, ropey, knee-length tail ending in a tuft of black fur.";
 	now cock entry is "[one of]thick[or]pink[or]flat-headed[or]equine[at random]";
 	now face change entry is "your vision seems to swim for a moment as every muscle in your neck clenches tight. You neck stretches longer as it thickens, moving your point of view upwards so fast it makes you slightly dizzy. A tapered muzzle pushes its way from your face, as twin points of pain on your forehead erupt into a pair of short, knobby horns. Your mouth feels like it's filled with cotton. As your tongue flops out of your mouth, you find it long and blue-black in colour. Very prehensile, it slides across your muzzle in a slow, sensual motion";
@@ -92,7 +92,7 @@ When Play begins:
 	now cha entry is 14;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 55; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 7; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 7; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Stables"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -103,7 +103,7 @@ When Play begins:
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 24;
-	now cunt width entry is 12; 
+	now cunt width entry is 12;
 	now libido entry is 75; [ Amount player Libido will go up if defeated ]
 	now loot entry is "libido pill";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]

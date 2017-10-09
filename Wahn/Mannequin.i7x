@@ -35,11 +35,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Mannequin"; 
+	now name entry is "Mannequin";
 	now attack entry is "[one of]It hits you in the head, strong enough to daze, but not hurt you.[or]It grabs your arm for a moment with a strong grip before you can pull away. That'll leave quite a bruise.[or]It grabs your leg for a moment with a strong grip before you can pull away. That'll leave quite a bruise.[at random]";
-	now defeated entry is "[mannequin loses]";      
-	now victory entry is  "[mannequin wins]";       
-	now desc entry is "[mannequinDesc]";              
+	now defeated entry is "[mannequin loses]";
+	now victory entry is  "[mannequin wins]";
+	now desc entry is "[mannequinDesc]";
 	now face entry is "smooth, with striking angular features like a statue";
 	now body entry is "that of a idealized male, with washboard abs and muscled arms and legs";
 	now skin entry is "pale and flawless";[ format as the text "You have (your text) skin"]
@@ -62,14 +62,14 @@ When Play begins:
 	now wdam entry is 10;
 	now area entry is "Warehouse";         [ Case sensitive]
 	now cocks entry is 0;                  [ number of cocks if sex is 'Male' or 'Both' ]
-	now cock length entry is 0;    
+	now cock length entry is 0;
 	now cock width entry is 0;             [ Size of balls ]
 	now breasts entry is 2;                [ Number of nipples. ]
 	now breast size entry is 0;            [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;                  [ number of pussies if sex is 'Female' or 'Both' ]
-	now cunt length entry is 0;            
-	now cunt width entry is 0;             
+	now cunt length entry is 0;
+	now cunt width entry is 0;
 	now libido entry is 10;                [ Amount player Libido will go up if defeated ]
 	now loot entry is "nullifying powder"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 35;            [ Percentage chance of dropping loot, from 0-100. ]
@@ -77,8 +77,8 @@ When Play begins:
 	now body descriptor entry is "idealized";      [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "human";             [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
-	now resbypass entry is false;          
-	now non-infectious entry is false;     
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry;         [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
 
@@ -90,7 +90,7 @@ when play ends:
 			say "As you succumb to the infection, you drift aimlessly through the city and go for anyone crossing your path, overpowering them and absorbing how they look. Being in the form for an unfortunate soldier whose shape you stole earlier almost gets you out of the city when the military finally moves in, but following your unrestrained urges you try assimilating a medic who wants to check you out. Tasered till you collapse, you end up in a small cell and later get shipped to a research lab, where scientists study how you constantly shift and change. As a quite valuable asset for espionage developments, you never leave that facility again...";
 			stop the action; [no other endings - player removed from the city]
 		else:
-			say "Remaining in control of the urges to acquire the shapes of others and become them, you experiment a bit and learn that with some concentration you can shift without leaving others as identity-less infected mannequins. When the military finally moves in, you're taken to a holding facility, where doctors poke and prod you for days on end. Overhearing two doctors talk, you catch '...ites active and in constant flux. The subject wasn't exposed to a one-time change, but something else. That makes [if cocks of player > 0]him[else if cunts of player > 0]her[otherwise]it[end if] far too dangerous to be released. I recommend perm...' Since you don't think you'd get out of there alive - if at all, you use the next chance you get with an orderly and overpower him to flee the facility after absorbing his shape.";
+			say "Remaining in control of the urges to acquire the shapes of others and become them, you experiment a bit and learn that with some concentration you can shift without leaving others as identity-less infected mannequins. When the military finally moves in, you're taken to a holding facility, where doctors poke and prod you for days on end. Overhearing two doctors talk, you catch '...ites active and in constant flux. The subject wasn't exposed to a one-time change, but something else. That makes [if cocks of player > 0]him[else if cunts of player > 0]her[else]it[end if] far too dangerous to be released. I recommend perm...' Since you don't think you'd get out of there alive - if at all, you use the next chance you get with an orderly and overpower him to flee the facility after absorbing his shape.";
 			say "There's quite a bit of panic when people realize you're gone and soldiers swarm out to create roadblocks and hunt for you. It's touch and go for a while, but you manage to avoid capture. A week later and several hundred miles distant, with you laying low in a small town, you think you're home free - until you walk into your motel room and find a man in a suit waiting for you. 'Quite impressive, your escape. We need people like you. A bit of training and you'd make a fine addition to the agency...'";
 			say "Recognizing a deal you can't decline, you let yourself be recruited and end up a spy, travelling all over the world. Your ability to become anyone you want to be creates a rumor, then a legend of the super-spy 'The Chameleon'. Eventually movie-directors get a hold of the story and bring out an award-winning series of films about you. You make a game out of appearing as a minor role in every last one of them - never in the same shape twice though.";
 
@@ -109,10 +109,10 @@ to say nullpowderuse:
 	let trixieexit be 0;
 	while trixieexit is 0:
 		say "[bold type]Diminish Anatomy:[roman type][line break]";
-		say "(1) [if cocks of player > 0][link]Cock[as]1[end link][otherwise][italic type]Cock-specific interaction[roman type][end if][line break]";
-		say "(2) [if cocks of player > 0][link]Balls[as]2[end link][otherwise][italic type]Balls-specific interaction[roman type][end if][line break]";
-		say "(3) [if cunts of player > 0][link]Cunt[as]3[end link][otherwise][italic type]Cunt-specific interaction[roman type][end if][line break]";
-		say "(4) [if breast size of player > 0][link]Breasts[as]4[end link][else if breasts of player > 0][link]Nipples[as]4[end link][otherwise][italic type]Chest-specific interaction[roman type][end if][line break]";
+		say "(1) [if cocks of player > 0][link]Cock[as]1[end link][else][italic type]Cock-specific interaction[roman type][end if][line break]";
+		say "(2) [if cocks of player > 0][link]Balls[as]2[end link][else][italic type]Balls-specific interaction[roman type][end if][line break]";
+		say "(3) [if cunts of player > 0][link]Cunt[as]3[end link][else][italic type]Cunt-specific interaction[roman type][end if][line break]";
+		say "(4) [if breast size of player > 0][link]Breasts[as]4[end link][else if breasts of player > 0][link]Nipples[as]4[end link][else][italic type]Chest-specific interaction[roman type][end if][line break]";
 		LineBreak;
 		say "(0) [link]Abort[as]0[end link][line break]";
 		while 1 is 1:
@@ -133,7 +133,7 @@ to say nullpowderuse:
 					if player consents:
 						decrease cocks of player by 1;
 						follow the cock descr rule;
-						say "     You apply the powder to a single rod. [if cock length of player > 10]In spite of its size[otherwise]After several applications[end if], it gradually diminishes into nothing, leaving you with [if cocks of player is 1]one cock[otherwise][cocks of player] cocks[end if].";
+						say "     You apply the powder to a single rod. [if cock length of player > 10]In spite of its size[else]After several applications[end if], it gradually diminishes into nothing, leaving you with [if cocks of player is 1]one cock[else][cocks of player] cocks[end if].";
 					else:
 						if cock length of player > 29:
 							decrease cock length of player by 6;
@@ -158,7 +158,7 @@ to say nullpowderuse:
 						else:
 							decrease cocks of player by 1;
 							follow the cock descr rule;
-							say "     You apply the powder to a single rod. [if cock length of player > 10]In spite of its size[otherwise]After several applications[end if], it gradually diminishes into nothing, leaving you with [if cocks of player is 1]one cock[otherwise][cocks of player] cocks[end if].";
+							say "     You apply the powder to a single rod. [if cock length of player > 10]In spite of its size[else]After several applications[end if], it gradually diminishes into nothing, leaving you with [if cocks of player is 1]one cock[else][cocks of player] cocks[end if].";
 					else:
 						now cocks of player is 0;
 						follow the cock descr rule;
@@ -186,7 +186,7 @@ to say nullpowderuse:
 				else:
 					decrease cock width of player by 2;
 				follow the cock descr rule;
-				say "     You apply the powder to [if player is internal]where your sack might be[otherwise]your sack[end if]. After a while, they[if player is internal] seem to[end if] shrink down to the point where you[if player is internal], presumably,[end if] have [ball size].";
+				say "     You apply the powder to [if player is internal]where your sack might be[else]your sack[end if]. After a while, they[if player is internal] seem to[end if] shrink down to the point where you[if player is internal], presumably,[end if] have [ball size].";
 			now trixieexit is 1;
 		else if calcnumber is 3:
 			if cunts of player is 0:
@@ -199,7 +199,7 @@ to say nullpowderuse:
 					if player consents:
 						decrease cunts of player by 1;
 						follow the cunt descr rule;
-						say "     You apply the powder to a single portal. [if cunt length of player > 10 or cunt width of player > 10]In spite of its size[otherwise]After several applications[end if], it gradually diminishes into nothing, leaving your with [if cunts of player is 1]one cunt[otherwise][cunts of player] cunts[end if].";
+						say "     You apply the powder to a single portal. [if cunt length of player > 10 or cunt width of player > 10]In spite of its size[else]After several applications[end if], it gradually diminishes into nothing, leaving your with [if cunts of player is 1]one cunt[else][cunts of player] cunts[end if].";
 					else:
 						if cunt length of player > 29:
 							decrease cunt length of player by 6;
@@ -230,7 +230,7 @@ to say nullpowderuse:
 						else:
 							decrease cunts of player by 1;
 							follow the cunt descr rule;
-							say "     You apply the powder to a single portal. [if cunt length of player > 10 or cunt width of player > 10]In spite of its size[otherwise]After several applications[end if], it gradually diminishes into nothing, leaving your with [if cunts of player is 1]one cunt[otherwise][cunts of player] cunts[end if].";
+							say "     You apply the powder to a single portal. [if cunt length of player > 10 or cunt width of player > 10]In spite of its size[else]After several applications[end if], it gradually diminishes into nothing, leaving your with [if cunts of player is 1]one cunt[else][cunts of player] cunts[end if].";
 					else:
 						now cunts of player is 0;
 						follow the cunt descr rule;
@@ -256,7 +256,7 @@ to say nullpowderuse:
 					if player consents:
 						decrease breasts of player by 2;
 						follow the breast descr rule;
-						say "     You apply the powder to a single rack. [if breast size of player > 12]In spite of their size[otherwise]After several applications[end if], it gradually diminishes into nothing, leaving you with [if breasts of player < 3]one set of knockers[otherwise][breasts of player] sets of knockers[end if].";
+						say "     You apply the powder to a single rack. [if breast size of player > 12]In spite of their size[else]After several applications[end if], it gradually diminishes into nothing, leaving you with [if breasts of player < 3]one set of knockers[else][breasts of player] sets of knockers[end if].";
 					else:
 						if breast size of player > 29:
 							decrease breast size of player by 6;
@@ -276,7 +276,7 @@ to say nullpowderuse:
 						else:
 							decrease breasts of player by 2;
 							follow the breast descr rule;
-							say "     After a bit of work you manage to remove a set, leaving you with [if breasts of player < 3]a single pair[otherwise][breasts of player] pairs[end if].";
+							say "     After a bit of work you manage to remove a set, leaving you with [if breasts of player < 3]a single pair[else][breasts of player] pairs[end if].";
 					else:
 						now breast size of player is 0;
 						follow the breast descr rule;
@@ -296,7 +296,7 @@ to say nullpowderuse:
 					say "     Your chest is completely flat. You could, however, remove your nipples. Shall you remove one set? Else you'll remove all of them.";
 					if player consents:
 						decrease breasts of player by 2;
-						say "     After a bit of work you manage to remove a set, leaving you with [if breasts of player < 3]a single pair[otherwise][breasts of player] pairs[end if].";
+						say "     After a bit of work you manage to remove a set, leaving you with [if breasts of player < 3]a single pair[else][breasts of player] pairs[end if].";
 					else:
 						now breasts of player is 0;
 						say "     After a bit of work you manage to remove all pairs of nipples, leaving your chest completely barren.";

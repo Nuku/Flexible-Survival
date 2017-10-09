@@ -10,7 +10,7 @@ Northwest of Park Trail is Shinto Shrine.
 
 instead of sniffing Shinto Shrine:
 	say "The shrine smells faintly of cherry blossoms and spring. The scent puts you at ease.";
-	
+
 The invent of Shinto Shrine is { "tanuki coin" }.
 
 SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
@@ -239,7 +239,7 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]chubby[or]fat[at random]";
 	now type entry is "[one of]raccoon[or]tanuki[at random]";
-	now magic entry is true; 
+	now magic entry is true;
 	now resbypass entry is true; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
@@ -260,7 +260,7 @@ name	desc	weight	object
 
 to say tancoindesc:
 	say "     A strange, solid gold coin. It's fairly heavy and quite worn. On one side there appears to be a leaf, while on the other an eastern dragon, which circles around the outer edge of its face, with its tail curving at the bottem to go straight up and occupy the center. It's warm to the touch, but doesn't feel particularly infectious.";
-	
+
 the scent of tanuki coin is "It has a benign, metallic smell about it.";
 
 tanuki coin is a grab object. It is part of the player. It is fast.  It is not temporary.  The usedesc of tanuki coin is "[usetancoin]".

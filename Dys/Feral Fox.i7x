@@ -17,7 +17,7 @@ to say FeralFoxDefeat:
 	say "     You were beaten by the creature.";
 	if cocks of player > 0:
 		say "     Additional paragraph for a male/herm player.";
-	otherwise:
+	else:
 		say "     Additional paragraph for a female player.";
 
 to say FeralFoxVictory:
@@ -28,9 +28,9 @@ to say FeralFoxVictory:
 			say "     The player agreed to sex.  Fun times begin.";
 			if cunts of player > 0:
 				say "     The player is female/herm, so sex goes like this for her.";
-			otherwise:
+			else:
 				say "     The player must be male, so sex goes like this for him.";
-		otherwise:
+		else:
 			say "     Awww!  The player refused the sex.  Party pooper.";
 
 to say FeralFoxDesc:

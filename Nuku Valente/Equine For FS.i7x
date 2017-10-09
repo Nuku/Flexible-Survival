@@ -52,10 +52,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Black Equinoid"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]She slams you with one of her great hoof hands.[or]With a sudden snap, you find your midsection being indented by a terribly forceful hoof.[or]She hefts you up suddenly and gives a great toss![or]She stomps down sharply, smacking your foot with her hoof, ow.[at random]"; 
-	now defeated entry is "[beattheequinoid]"; 
-	now victory entry is  "[equine attack]"; 
-	now desc entry is "[mongendernum 5]A tall imposing figure. A horse on two feet, towering over most, with great muscles under dense black fur. She has bright [one of]brown[or]hazel[or]green[at random] eyes and white, flat, teeth. She is dressed in a simple sheet, like a toga that wraps around her well formed body. Her great breasts are tight, as taught as the beefy muscles of her arms and legs. Her hips are round and waist slim, giving a pleasing shape. When she sees you, her lips peel back to expose those teeth, '[one of]Begone from our herd lands![or]Your kind are not welcome here![or]You do not belong here![at random],' she says, charging at you with red in her eyes. In the great motion it becomes clear that she is male as well, a huge sheath wobbling along her belly, softball sized nuts swaying as she runs."; 
+	now attack entry is "[one of]She slams you with one of her great hoof hands.[or]With a sudden snap, you find your midsection being indented by a terribly forceful hoof.[or]She hefts you up suddenly and gives a great toss![or]She stomps down sharply, smacking your foot with her hoof, ow.[at random]";
+	now defeated entry is "[beattheequinoid]";
+	now victory entry is  "[equine attack]";
+	now desc entry is "[mongendernum 5]A tall imposing figure. A horse on two feet, towering over most, with great muscles under dense black fur. She has bright [one of]brown[or]hazel[or]green[at random] eyes and white, flat, teeth. She is dressed in a simple sheet, like a toga that wraps around her well formed body. Her great breasts are tight, as taught as the beefy muscles of her arms and legs. Her hips are round and waist slim, giving a pleasing shape. When she sees you, her lips peel back to expose those teeth, '[one of]Begone from our herd lands![or]Your kind are not welcome here![or]You do not belong here![at random],' she says, charging at you with red in her eyes. In the great motion it becomes clear that she is male as well, a huge sheath wobbling along her belly, softball sized nuts swaying as she runs.";
 	now face entry is "an equine face, with an elongated snout and broad flat teeth set in your long muzzle"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "tall and well muscled, with delightful curves despite your overall toned appearance"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "[one of]black furred[or]coarsely furred[or]furry[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
@@ -73,7 +73,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 10;
 	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 45;; 
+	now hp entry is 45;;
 	now lev entry is 4; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 7; [ Monster's average damage when attacking. ]
 	now area entry is "Park"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -92,7 +92,7 @@ When Play begins:
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "muscular"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "equine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

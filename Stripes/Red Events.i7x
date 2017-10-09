@@ -239,7 +239,7 @@ to say orgyoutcome:
 	else if cunts of player > 0 and cocks of player is 0:		[ FEMALE! ]
 		say "     Deciding you want a taste of the thick coon meat, you bring your lips to it and start to suck it hungrily. The raccoon moans in pleasure, running hir hands over your head while your tongue slides up and down that tasty cock. Equipped with a heavy set of balls, you roll the grey-furred sac in your paws until they finally give up their thick load. You swallow it all down, feeling its warmth flowing into your belly.";
 		say "     As you move back, you're pulled into the arms of a pair of stallions. They appear to be from two different strains, one a large draft horse and the other a quarter horse. Pressing you between them, the pair take you in the pussy and ass at once, stuffing you so deliciously full of horse cock, and later horse cum. Once satisfied, the pair move on and you're joined by a herm gryphon to takes your messy pussy while you eat out a sexy lioness. Things grow hazier as you pass from partner to partner. There is only the lust of so many creatures satisfying one another together.";
-	else if cunts of player is 0 and cocks of player > 0:		[ MALE! ]	
+	else if cunts of player is 0 and cocks of player > 0:		[ MALE! ]
 		say "     Deciding it's high time you tend to your cock, you guide the raccoon onto all fours and slide your cock into hir dripping pussy. Hir pussy grips you tightly as you plow into hir again and again. Surprisingly strong for hir size, you find shi's able to support your weight easily, freeing your hands to play with hir tits and cock while you fuck hir. Shi turns out to be a wonderful fucktoy, squealing and moaning in delight as you have your way with hir until finally spraying your hot load into hir. Hir heavy nuts drain their load onto the pavement as you pump hir cock while seeding hir, forming a large puddle of coonseed.";
 		say "     As you withdraw, you're pulled into the arms of a lioness. Shoving you down, she wraps her muzzle around your cock while offering her pussy for you to lick. Your tongues please one another until you both reach a powerful climax. Then it's off to have a herm gryphon fill your ass again while sucking off two different strains of horses at once. Things grow hazier as you pass from partner to partner. There is only the lust of so many creatures satisfying one another together.";
 	say "     This wild romp continues for hours, with numerous monsters sharing you or being shared by you. You quickly lose track of all the creatures you mate with and cycle through a myriad of positions and partners before it finally all falls apart from exhaustion. Your grip on your identity has been shaken from the intensity of the orgy, but you are quite sexually sated - for the time being.[randomimpreg][randomimpreg]";
@@ -278,7 +278,7 @@ to say orgyoutcome:
 		break;
 	infect;
 	now researchbypass is 0;
-	
+
 
 
 Section 8 - Business as Usual

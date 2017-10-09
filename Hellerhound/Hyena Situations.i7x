@@ -70,7 +70,7 @@ instead of resolving an intact fountain:
 			say "There is some webbing across sections of the fountain. Do you want to collect it?";
 			if the player consents:
 				increase carried of spider webbing by 1;
-		
-	
+
+
 
 Hyena Situations ends here.

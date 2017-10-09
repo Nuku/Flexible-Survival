@@ -100,7 +100,7 @@ Instead of conversing the Sandra:
 	say "[sandtalk][line break]";
 
 sangr is text that varies. sangr is usually "[one of]sister[or]sis['][at random]".
-	
+
 to say sandtalk:
 	if rabbitsibling is 0 and a random chance of 1 in 2 succeeds:
 		say "     Approaching Sandra, seems suddenly seems a little bashful.";
@@ -147,7 +147,7 @@ understand "request from sandra" as sanreq.
 
 check sanreq:
 	if Sandra is not visible, say "That's not a verb I recognise." instead;
-	
+
 carry out sanreq:
 	if rabbitsibling is 0:
 		say "     You have nothing to request of Sandra.";

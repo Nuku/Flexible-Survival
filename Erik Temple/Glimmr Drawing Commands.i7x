@@ -121,12 +121,12 @@ To boxdraw (hue - a number) in (win - a g-window) from (x1 - a number) by (y1 - 
 To draw/display a/-- box (hue - a number) in (win - a g-window) from (x1 - a number) by/x (y1 - a number) to (x2 - a number) by/x (y2 - a number) with (wgt - a number) pixel/pixels/px/-- line-weight/stroke, outlined or inset:
 	if outlined:
 		boxdraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt), outlined;		
-	otherwise if inset:
+	else if inset:
 		boxdraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt), inset;
-	otherwise:
+	else:
 		boxdraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt);
 	#if utilizing Glimmr debugging;
-	say "[>console][DC]Drawing a box of color [hue] in [i][win][/i] with upper left ([x1], [y1]) and lower right ([x2], [y2]), line-weight [wgt] px[if outlined]; line is drawn outside the bounds of the box[otherwise if inset]; line is drawn inside the bounds of the box[end if].[<]";
+	say "[>console][DC]Drawing a box of color [hue] in [i][win][/i] with upper left ([x1], [y1]) and lower right ([x2], [y2]), line-weight [wgt] px[if outlined]; line is drawn outside the bounds of the box[else if inset]; line is drawn inside the bounds of the box[end if].[<]";
 	#end if;
 
 To draw/display a/-- box (hue - a number) in (win - a g-window) from (coord1 - a list of numbers) to (coord2 - a list of numbers) with (wgt - a number) pixel/pixels/px/-- line-weight/stroke, outlined or inset:
@@ -136,9 +136,9 @@ To draw/display a/-- box (hue - a number) in (win - a g-window) from (coord1 - a
 	let y2 be entry 2 of coord2;
 	if outlined:
 		boxdraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt), outlined;
-	otherwise if inset:
+	else if inset:
 		boxdraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt), inset;
-	otherwise:
+	else:
 		boxdraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt);
 		
 To box (coord1 - a list of numbers) to (coord2 - a list of numbers) at (wgt - a number) px/pixels/pixel, outlined or inset: 
@@ -153,9 +153,9 @@ To box (coord1 - a list of numbers) to (coord2 - a list of numbers) at (wgt - a 
 	let y2 be entry 2 of coord2;
 	if outlined:
 		boxdraw (current foreground-color) in (current graphics window) from (x1) by (y1) to (x2) by (y2) with (wgt), outlined;
-	otherwise if inset:
+	else if inset:
 		boxdraw (current foreground-color) in (current graphics window) from (x1) by (y1) to (x2) by (y2) with (wgt), inset;
-	otherwise:
+	else:
 		boxdraw (current foreground-color) in (current graphics window) from (x1) by (y1) to (x2) by (y2) with (wgt).
 
 
@@ -245,14 +245,14 @@ To linedraw (hue - a number) in (win - a g-window) from (x1 - a number) by/x (y1
 	if dd >= 0:
 		let ax be 2 times dd;
 		let sx be 1;
-	otherwise:
+	else:
 		let ax be -2 times dd;
 		let sx be -1;
 	let dd be y2 - y1;
 	if dd >= 0:
 		let ay be 2 times dd;
 		let sy be 1;
-	otherwise:
+	else:
 		let ay be -2 times dd;
 		let sy be -1;
 	let x be x1;
@@ -269,13 +269,13 @@ To linedraw (hue - a number) in (win - a g-window) from (x1 - a number) by/x (y1
 			if x is x2 or y is not y1:
 				if sx > 0:
 					dimrectdraw (hue) in win at (x - x1) by y1 with size x1 by wgt;
-				otherwise:
+				else:
 					dimrectdraw (hue) in win at x by y1 with size x1 by wgt;
 				let y1 be y;
 				let x1 be 1;
-			otherwise:
+			else:
 				increase x1 by 1;
-	otherwise:
+	else:
 		let y1 be 1;
 		let d be ax - (ay / 2);
 		while y is not y2:
@@ -287,11 +287,11 @@ To linedraw (hue - a number) in (win - a g-window) from (x1 - a number) by/x (y1
 			if x is not x1 or y is y2:
 				if sy > 0:
 					dimrectdraw (hue) in win at x1 by (y - y1) with size wgt by y1;
-				otherwise:
+				else:
 					dimrectdraw (hue) in win at x1 by y with size wgt by y1;
 				let y1 be 1;
 				let x1 be x;
-			otherwise:
+			else:
 				increase y1 by 1;
 
 
@@ -492,7 +492,7 @@ To monochrome/mono bitmap/bmp (BIT_MAP - a list of lists of numbers) at (COORD1 
 	let y1 be entry 2 of coord1;
 	if backgrounded:
 		display a monochrome bitmap (current foreground-color) in (current graphics window) at (X1) by (Y1) using (BIT_MAP) with dot size (WGT) px and background (current background-color);
-	otherwise:
+	else:
 		display a monochrome bitmap (current foreground-color) in (current graphics window) at (X1) by (Y1) using (BIT_MAP) with dot size (WGT) px.
 
 
@@ -564,7 +564,7 @@ To polychrome/poly bitmap/bmp (BIT_MAP - a list of lists of numbers) at (COORD1 
 	let y1 be entry 2 of coord1;
 	if backgrounded:
 		display a polychrome bitmap in (current graphics window) at (X1) by (Y1) using (BIT_MAP) with dot size (WGT) px and background (current background-color);
-	otherwise:
+	else:
 		display a polychrome bitmap in (current graphics window) at (X1) by (Y1) using (BIT_MAP) with dot size (WGT) px.
 
 
@@ -660,7 +660,7 @@ To paintbittext (hue - a number) of (str - indexed text) in (win - a g-window) a
 			now char_code is the character code of position N of STR;
 			if there is a char of char_code in the font table of TYPF:
 				choose row with a char of char_code in the font table of TYPF;
-			otherwise:
+			else:
 				choose row with a char of 32 in the font table of TYPF;
 			now g-scan is 0;
 			[let bitmap-size be width entry * height entry;]
@@ -717,7 +717,7 @@ To paintbittext (hue - a number) of (str - indexed text) in (win - a g-window) a
 			now char_code is the character code of position N of STR;
 			if there is a char of char_code in the font table of TYPF:
 				choose row with a char of char_code in the font table of TYPF;
-			otherwise:
+			else:
 				choose row with a char of 32 in the font table of TYPF;
 			let scan be 0;
 			[let bitmap-size be width entry * height entry;]
@@ -772,7 +772,7 @@ To bitmap/bmp text/txt (STR - indexed text) at (COORD1 - a list of numbers) size
 	if right-aligned:
 		paint a bitmap text (current foreground-color) of (STR) in (current graphics window) at (X1) by (Y1) using (current font) with dot size (WGT) and background (current background-color), right-aligned;
 		rule succeeds;
-	otherwise:
+	else:
 		paint a bitmap text (current foreground-color) of (STR) in (current graphics window) at (X1) by (Y1) using (current font) with dot size (WGT) and background (current background-color).
 
 To bitmap/bmp text/txt (STR - indexed text) at (COORD1 - a list of numbers) size (WGT - a number) pixel/pixels/px/--, center-aligned or right-aligned:
@@ -787,7 +787,7 @@ To bitmap/bmp text/txt (STR - indexed text) at (COORD1 - a list of numbers) size
 	if right-aligned:
 		paint a bitmap text (current foreground-color) of (STR) in (current graphics window) at (X1) by (Y1) using (current font) with dot size (WGT), right-aligned;
 		rule succeeds;
-	otherwise:
+	else:
 		paint a bitmap text (current foreground-color) of (STR) in (current graphics window) at (X1) by (Y1) using (current font) with dot size (WGT).
 		
 
@@ -810,7 +810,7 @@ To paintimgtext of/-- (STR - indexed text) in (win - a g-window) at (X1 - a numb
 			now char_code is the character code of position N of STR;
 			if there is a char of char_code in the font table of TYPF:
 				choose row with a char of char_code in the font table of TYPF;
-			otherwise:
+			else:
 				choose row with a char of 32 in the font table of TYPF;
 			let the chosen glyph be glyph-ref entry;
 			let the yoffset be yoffset entry times SCF to the nearest whole number;
@@ -860,7 +860,7 @@ To paintimgtext of/-- (STR - indexed text) in (win - a g-window) at (X1 - a numb
 			let V be the character code of position N of STR;
 			if there is a char of V in the font table of TYPF:
 				choose row with a char of V in the font table of TYPF;
-			otherwise:
+			else:
 				choose row with a char of 32 in the font table of TYPF;
 			let the chosen glyph be glyph-ref entry;
 			let the yoffset be yoffset entry times SCF to the nearest whole number;
@@ -907,7 +907,7 @@ To image/img text/txt (STR - indexed text) at (COORD1 - a list of numbers) scale
 	if right-aligned:
 		paint an image-based text of (STR) in (current graphics window) at (X1) by (Y1) using (current font) scaled at (SCF) with background (current background-color) and margin (MARGIN) px, right-aligned;
 		rule succeeds;
-	otherwise:
+	else:
 		paint an image-based text of (STR) in (current graphics window) at (X1) by (Y1) using (current font) scaled at (SCF) with background (current background-color) and margin (MARGIN) px.
 
 To image/img text/txt (STR - indexed text) at (COORD1 - a list of numbers) scaled/scale (SCF - a real number), center-aligned or right-aligned:
@@ -922,7 +922,7 @@ To image/img text/txt (STR - indexed text) at (COORD1 - a list of numbers) scale
 	if right-aligned:
 		paint an image-based text of (STR) in (current graphics window) at (X1) by (Y1) using (current font) scaled at (SCF), right-aligned;
 		rule succeeds;
-	otherwise:
+	else:
 		paint an image-based text of (STR) in (current graphics window) at (X1) by (Y1) using (current font) scaled at (SCF).
 
 
@@ -1008,9 +1008,9 @@ To image-map (IMG_MAP - a list of lists of figure names) at (COORD1 - a list of 
 		let y1 be entry 2 of coord1;
 		if backgrounded:
 			display an image-map in (current graphics window) at (X1) by (Y1) using (IMG_MAP) with tile-size (W) by (H) and background (current background-color);
-		otherwise:
+		else:
 			display an image-map in (current graphics window) at (X1) by (Y1) using (IMG_MAP) with tile-size (W) by (H) px;
-	otherwise:
+	else:
 		say "*** Error: Short-form image-map drawing directive ignored. The current graphics window global was not correctly specified."
 
 
@@ -1075,9 +1075,9 @@ To image-map (IMG_MAP - a list of lists of numbers) at (COORD1 - a list of numbe
 		let y1 be entry 2 of coord1;
 		if backgrounded:
 			display an image-map in (current graphics window) at (X1) by (Y1) using (IMG_MAP) rendered using (TSET) with tile-size (W) by (H) and background (current background-color);
-		otherwise:
+		else:
 			display an image-map in (current graphics window) at (X1) by (Y1) using (IMG_MAP) rendered using (TSET) with tile-size (W) by (H);
-	otherwise:
+	else:
 		say "*** Error: Short-form image-map drawing directive ignored. The current graphics window global was not correctly specified."
 
 
@@ -1107,7 +1107,7 @@ To decide what number is the length of (STR - indexed text) set in (TYPF - a fon
 		let V be the character code of position N of STR;
 		if there is a char of V in the font table of TYPF:
 			choose row with a char of V in the font table of TYPF;
-		otherwise:
+		else:
 			choose row with a char of 32 in the font table of TYPF;
 		increase len by the advance entry;
 	decide on len.
@@ -1169,9 +1169,9 @@ To decide which number is hex (hex - indexed text):
 		unless V < 48 or V > 70 or ( V > 57 and V < 65):
 			if V > 64:
 				let curval be V - 55;
-			otherwise if V < 58:
+			else if V < 58:
 				let curval be V - 48;
-		otherwise:
+		else:
 			let total be 0;
 			break;
 		let curval be curval * multiplier;
@@ -1257,27 +1257,27 @@ To get/set blank/-- indices for (typeface - a bitmap font), silently, verifying 
 			unless index entry is (actual-index plus next-advance):
 				say "***Index numbers for the font table of [typeface] MAY be incorrect. Check glyph '[char-code char entry]' (char [char entry]), or the index position before it. The problem may also be that the height or width is incorrectly specified.";
 			let actual-index be index entry;
-		otherwise:
+		else:
 			next;
 		if verifying glyph map:
 			if the char entry is entry (index entry) of the glyph map of the typeface:
 				unless silently:
 					say "Glyph '[char-code char entry]' ([char entry]) appears to be correctly matched to the glyph map.";
-			otherwise:
+			else:
 				say "***The index entry for glyph [char-code char entry] ([char entry]) does not seem to correctly match the glyph map. Continuing, if possible...";
 		if there is a width entry and there is a height entry:
 			let next-advance be (width entry * height entry) + 1;
-		otherwise:
+		else:
 			say "***Glyph '[char-code char entry]' ([char entry]) in the font table of [typeface] is missing bitmap dimensions. Repair font table.";
 			break;
 	if verifying glyph map:
 		if silently:
 			add indices to the typeface starting from (index entry + next-advance), silently, verifying glyph map;
-		otherwise:
+		else:
 			add indices to the typeface starting from (index entry + next-advance), verifying glyph map;
-	otherwise if silently:
+	else if silently:
 		add indices to the typeface starting from (index entry + next-advance), silently;
-	otherwise:
+	else:
 		add indices to the typeface starting from (index entry + next-advance);
 	if writing table to disk:
 		write font table to disk for the typeface.
@@ -1291,7 +1291,7 @@ To add indices to (typeface - a bitmap font) starting from (N - a number), silen
 		if calculated-index is greater than 0:
 			unless silently:
 				say "Changed index entry for glyph '[char-code char entry]' (char [char entry]) to [index entry].";
-		otherwise:
+		else:
 			say "***Could not provide an index entry for the font table of [typeface]: Check glyph '[char-code char entry]' (char [char entry]) first.";
 			break;
 		let calculated-index be calculated-index plus ( width entry * height entry) + 1;
@@ -1299,7 +1299,7 @@ To add indices to (typeface - a bitmap font) starting from (N - a number), silen
 			if the char entry is entry (index entry) of the glyph map of the typeface:
 				unless silently:
 					say "Glyph '[char-code char entry]' ([char entry]) appears to be correctly matched to the glyph map.";
-			otherwise:
+			else:
 				say "***The index entry for glyph [char-code char entry] ([char entry]) does not seem to correctly match the glyph map. Continuing, if possible...";
 
 To write font table to disk for (typeface - a bitmap font):

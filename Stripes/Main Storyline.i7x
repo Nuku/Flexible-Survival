@@ -17,7 +17,7 @@ the conversation of Doctor Matt is { "empty" };
 mattcollection is a number that varies.
 
 Section 1 - Talking w/Dr Matt (this drives the Main Storyline quests)
- 
+
 Instead of conversing the doctor matt:
 	if hp of testerbot is 0 and testerbot is in Primary Lab and hp of doctor matt is not 100:
 		now hp of testerbot is 1;
@@ -496,7 +496,7 @@ to monitor:
 				if heatlevel is 3:
 					now num is num - ( num / 5 );
 				say "Estrus Status: In Heat     Heat: [heatname]     Est. Onset: ~[num * 3] hours[line break]";
-			else if turns in heat >= ( heat cycle entry - heat duration entry ) * 8:		
+			else if turns in heat >= ( heat cycle entry - heat duration entry ) * 8:
 				say "Estrus Status: In Heat     Heat: [heatname]     Est. Onset: Immediate[line break]";
 			else:
 				let num be ( heat cycle entry - heat duration entry ) * 8;

@@ -158,7 +158,7 @@ When Play begins:
 	now int entry is 20;
 	now cha entry is 19;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 100; 
+	now hp entry is 100;
 	now lev entry is 10; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking.][altered for dolphin so that it does different dmg for each attack]
 	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall', "High", "Beach", "Red", "Labs"  Case sensitive]
@@ -172,12 +172,12 @@ When Play begins:
 	now cunt length entry is 28; [ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 10; [ Width of female sex  infection will try and give you ]
 	now libido entry is 40; [ Amount player Libido will go up if defeated ]
-	now loot entry is "dolphin milk"; 
+	now loot entry is "dolphin milk";
 	now lootchance entry is 75; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]aquatic[or]strong[at random]";
 	now type entry is "[one of]cetacean[or]dolphin-like[at random]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

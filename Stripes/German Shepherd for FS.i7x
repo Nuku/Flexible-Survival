@@ -54,13 +54,13 @@ to say gsd_desc:
 			now gsd_pet is 1;
 		else if gsd_pet is 4:
 			if KorvinSubmitCounter > 4: [new auto submit + fight]
- 				let randomnumber be a random number from 1 to 3; 
- 				if randomnumber is: 
- 					-- 1: 
- 						say "[KorvinOrcFight]"; 
- 					-- 2: 
- 						say "[KorvinTenrecFight]"; 
- 					-- 3: 
+ 				let randomnumber be a random number from 1 to 3;
+ 				if randomnumber is:
+ 					-- 1:
+ 						say "[KorvinOrcFight]";
+ 					-- 2:
+ 						say "[KorvinTenrecFight]";
+ 					-- 3:
  						say "[KorvinCentaurFight]";
 				now combat abort is 1;
 			else: [current auto submit]
@@ -745,8 +745,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "German Shepherd"; [Name of your new Monster]
-	now attack entry is "[attk gsd]"; 
-	now defeated entry is "[beatthegsd]"; 
+	now attack entry is "[attk gsd]";
+	now defeated entry is "[beatthegsd]";
 	now victory entry is "[losetogsd]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block]
 	now desc entry is "[gsd_desc]";
 	now face entry is "distinctly canine, with a long canine muzzle filled with sharp teeth and a pair of expressive pointed ears atop your head";
@@ -769,7 +769,7 @@ When Play begins:
 	now hp entry is 20;
 	now lev entry is 3;
 	now wdam entry is 5; [ Amount of  Damage monster Does when attacking.]
-	now area entry is "Outside"; 
+	now area entry is "Outside";
 	now cocks entry is 1; [ Used in infection Calculations, if cocks > 0 shaft will grow to cock length & girth dimensions slowly]
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks > 0 ]
 	now cock width entry is 4; [ Width Infection will make cock grow to is cocks > 0 ]
@@ -777,17 +777,17 @@ When Play begins:
 	now breast size entry is 4; [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Unknown. ]
 	now cunts entry is 1; [ if > 0 and sex = female or both, indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 6; 
-	now cunt width entry is 4; 
+	now cunt length entry is 6;
+	now cunt width entry is 4;
 	now libido entry is 5; [ Amount libido goes up by if you submit or are defeated by this monster ]
-	now loot entry is ""; 
+	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]mutated[or]altered[or]animalistic[at random]";
 	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
-	now resbypass entry is false; 
-	now non-infectious entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "gsd"; [ Row used to designate any special combat features, "default" for standard combat. ]
 

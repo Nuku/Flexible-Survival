@@ -430,7 +430,7 @@ When Play begins:
 	now body entry is "delicate and fragile, streamlined for flight. Two thin, bright and colorful wings stick out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "velvet and silky";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a large round abdomen covered in yellow and black stripes. ";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "ribbed";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now cock entry is "ribbed";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it becomes more streamlined and two antennae poke out at top of your head. Your eyes brighten into a [one of]brilliant[or]vibrant[or]vivid[at random] green"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it becomes adapted for flight. Limbs narrow and become lean. Some large and colorful wings sprout out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "your skin softens becoming velvet textured"; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -457,12 +457,12 @@ When Play begins:
 	now cunt length entry is 10; [ Length of female sex infection will attempt to give you. ]
 	now cunt width entry is 3; [ Width of female sex infection will try and give you ]
 	now libido entry is 20; [ Amount player Libido will go up if defeated ]
-	now loot entry is "testosterone pill"; 
+	now loot entry is "testosterone pill";
 	now lootchance entry is 5; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]delicate[or]streamlined[or]winged[at random]";
 	now type entry is "[one of]butterfly[or]insectile[or]lepidopterous[at random]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
@@ -596,7 +596,7 @@ name	desc	weight	object
 
 rlingfound is a truth state that varies. rlingfound is usually false.
 racy lingerie is a grab object. racy lingerie is equipment. It is not temporary.
-The placement of racy lingerie is "body". 
+The placement of racy lingerie is "body".
 The descmod of racy lingerie is "Over your [bodyname of player] body, you're wearing a very racy set of red lingerie.".
 The slot of racy lingerie is "body".
 the scent of racy lingerie is "While always smelling clean and fresh at first, smelling a little longer picks up a faint perfume and the scent of [if player is herm]male and female [else if player is female]female [else if player is male]male [end if]arousal.".
@@ -695,7 +695,7 @@ to say testosterone pill use:
 		now the gestation of child is 0;
 		say "The odd feeling in your lower belly ceases. ";
 	LineBreak;
-		
+
 
 Section 8 - Monster Locations
 
@@ -995,7 +995,7 @@ to say butterflymagic:
 	replace character number 6 in bmagic with "[Gestation of ButterflyBaby]";
 	replace character number 7 in bmagic with "[bcupsize]";
 	say "[bmagic]";
-	
+
 To recite butterflymagic(x - text):
 	now bmagic is "[x in upper case]";
 	now ButterflyForeplay is False;

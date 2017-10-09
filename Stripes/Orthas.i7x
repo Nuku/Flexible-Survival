@@ -35,7 +35,7 @@ instead of conversing the Orthas:
 		say "[orthas_task2_done]";
 		now hp of Orthas is 7;
 	else if hp of Orthas is 7:
-		say "     [one of]'Hey there, how's momma?'[or]'Hey there, hot stuff.'[or]'You are pretty brave to wander the city right now.'[or]'I would explore too if I wasn't guarding the doctor.'[or]'You be sure to come back to me, hon.'[or]'What is it like out there?'[or]'You keep doing your best to help the doc so we can all get out of here safe and sound.'[or]'I'm proud of you for braving the city to help the doc.'[or]Orthas gives you a hug, running her scaled hand over your [if gestation of child > 0]rounded belly. 'Mmmm... you're so pretty when you're preggers,[otherwise]belly. 'Mmm... looks like someone needs an egg in them,[end if]' she rumbles.[in random order]";
+		say "     [one of]'Hey there, how's momma?'[or]'Hey there, hot stuff.'[or]'You are pretty brave to wander the city right now.'[or]'I would explore too if I wasn't guarding the doctor.'[or]'You be sure to come back to me, hon.'[or]'What is it like out there?'[or]'You keep doing your best to help the doc so we can all get out of here safe and sound.'[or]'I'm proud of you for braving the city to help the doc.'[or]Orthas gives you a hug, running her scaled hand over your [if gestation of child > 0]rounded belly. 'Mmmm... you're so pretty when you're preggers,[else]belly. 'Mmm... looks like someone needs an egg in them,[end if]' she rumbles.[in random order]";
 
 
 Section 2 - Orthas Task 1 - Guard Duty
@@ -186,7 +186,7 @@ to say orthas_task2_done:
 		else:
 			say "     Knowing what she's after, shall you let her pop that egg [link]into your ass (2)[as]2[end link] or [link]onto your belly (3)[as]3[end link]?";
 		while ( cunts of player is 0 and calcnumber is 1 ) or ( calcnumber < 1 or calcnumber > 3 ):
-			say "Choice? ([if cunts of player > 0]1[otherwise]2[end if]-3)>";
+			say "Choice? ([if cunts of player > 0]1[else]2[end if]-3)>";
 			get a number;
 		if calcnumber is 1:
 			say "     Orthas rumbles sexily as you guide her dripping ovipositor to your pussy. You moan as that cock-like member penetrates you, pushing past your juicy folds and diving into your depths after only a few thrusts. Wrapping your legs around her waist, you goad her to fuck you, not that she needs any encouragement on that score. Her pulsating rod drives into you again and again as it leaks slick lubrication to prepare you for what's to come. And seeing her belly swelling up, you know it's coming soon.";
@@ -203,7 +203,7 @@ to say orthas_task2_done:
 				say "     Rubbing your rounded belly, you can feel the egg breaking back down into a gooey mix of semen and lubricating fluids that fill you with warm feeling of pleasure.";
 		else if calcnumber is 2:
 			say "     Orthas rumbles sexily as you guide her dripping ovipositor between your ass cheeks. She grinds against your back door, making sure to send several spurts of lubricating fluids onto and into that stretching ring. And once she's gotten you good and lubed up, she drives that cock-like member into you, pushing past your anus and into your warm bowels. Wrapping your legs around her waist, you goad her to fuck you, not that she needs any encouragement on that score. Her pulsating rod drives into you again and again as it leaks more slick lubrication to prepare you for what's to come. And seeing her belly swelling up, you know it's coming soon.";
-			say "     Panting heavily as the egg starts to move, Orthas grabs your shoulders for support. Her ovipositor throbs deep inside you as you can feel the bulge of the egg start to force your back door open even wider. After some initial difficulty, your body adjusts and soon you're sharing the dragoness's pleasure as the firm ovoid makes its journey into your rectum and then into your bowels. You climax again as you feel it finally settle into your [if the player is mpreg_ok]hidden womb[otherwise]belly[end if] with a good splatter of the dragoness's fluids.";
+			say "     Panting heavily as the egg starts to move, Orthas grabs your shoulders for support. Her ovipositor throbs deep inside you as you can feel the bulge of the egg start to force your back door open even wider. After some initial difficulty, your body adjusts and soon you're sharing the dragoness's pleasure as the firm ovoid makes its journey into your rectum and then into your bowels. You climax again as you feel it finally settle into your [if the player is mpreg_ok]hidden womb[else]belly[end if] with a good splatter of the dragoness's fluids.";
 			if the player is mpreg_ok:
 				if the gestation of the child is greater than 0:
 					say "     The essence of the egg just stimulates and aids the progress of the child already inside of you, dissolving its essence to help the young one grow.";
@@ -225,7 +225,7 @@ to say orthas_task2_done:
 	else:
 		say "     Orthas nips along your neck and grinds her hips against your ass. A hand wanders down to your bare groin as her touches become more erotic. As her caresses get you panting, she slips off your gear and pushes you down over her security desk. 'Oh, my poor lover, left with nothing for us to play with.' Grinding her hips harder against your rear, you feel her slick ovipositor emerging and gliding between your ass cheeks to kiss at your anus. 'Nothing but this, that is,' she rumbles lustfully as her lubricating fluids drool onto and into that stretching ring.";
 		say "     Before you can respond, her cock-like member emerges further, pushing past your anus and into your warm bowels. You moan as you're penetrated, that phallic tentacle of hers strangely pleasurable as it undulates inside you. With her strong hands on your shoulders, she rumbles and nuzzles at the back of your neck while she fucks your tight ass. She shows more proficiency with her unusual member than when she'd first used it on you, having it ripple and wriggle inside you in strangely erotic ways. You can't help but moan again as it works its way deeper, probing deep inside you. Having no egg to deposit, she contents herself with buggering you thoroughly while moaning that she hopes to put another egg in you soon. With the image of that her mind, she roars out in orgasmic delight, sending a gush of lubricating fluids into your bowels. Feeling those waves of fluid being pumped into you has you cry out in bliss, your anal walls squeezing and milking at it for more.";
-	say "     After that's all over with, she cuddles with you, giving you licking kisses[if player is impreg_now] while stroking your belly[end if][if crossbow is owned]. When her gaze wanders over to your pack, she smiles. 'Oh, so you found my crossbow, did you?  Well, you keep it if you like it. I expect you'll get more use out of it and I'd feel better knowing you've got it to protect you.' She[otherwise]. She[end if] pauses for a moment. 'Say, did you happen to see my Elvis collector's plates?  I feel bad for having to leave The King behind. Could you maybe go back and get them for me?' she says, twirling a finger along your chest in a way that would be sexy had your blood not just run cold.";
+	say "     After that's all over with, she cuddles with you, giving you licking kisses[if player is impreg_now] while stroking your belly[end if][if crossbow is owned]. When her gaze wanders over to your pack, she smiles. 'Oh, so you found my crossbow, did you?  Well, you keep it if you like it. I expect you'll get more use out of it and I'd feel better knowing you've got it to protect you.' She[else]. She[end if] pauses for a moment. 'Say, did you happen to see my Elvis collector's plates?  I feel bad for having to leave The King behind. Could you maybe go back and get them for me?' she says, twirling a finger along your chest in a way that would be sexy had your blood not just run cold.";
 
 
 Table of Game Objects (continued)
@@ -454,7 +454,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Dragon"; [Name of your new Monster]
-   now attack entry is "[one of]The dragoness slams into you, slamming you back against one of the tables![or]Orthas slashes out at you with her sharp claws, slashing you violently![or]The dragoness's sharp teeth dig into your arm, biting into your flesh![or]Despite her large size, the black dragoness makes a sweeping kick to your legs, sending you to the ground![or]Orthas's jaws move in, trying to bite your head. You manage to grab her head and keep her from getting you with a potentially lethal bite. As you struggle to hold her, she exhales a thick cloud of smoke and sparks that cause you to choke![or]Orthas strikes at you with a series of martial arts strikes. You struggle to block, but end up battered![or]Orthas feints with her fists and manages to wrap her tail around your waist long enough to land a powerful uppercut![at random]"; 
+   now attack entry is "[one of]The dragoness slams into you, slamming you back against one of the tables![or]Orthas slashes out at you with her sharp claws, slashing you violently![or]The dragoness's sharp teeth dig into your arm, biting into your flesh![or]Despite her large size, the black dragoness makes a sweeping kick to your legs, sending you to the ground![or]Orthas's jaws move in, trying to bite your head. You manage to grab her head and keep her from getting you with a potentially lethal bite. As you struggle to hold her, she exhales a thick cloud of smoke and sparks that cause you to choke![or]Orthas strikes at you with a series of martial arts strikes. You struggle to block, but end up battered![or]Orthas feints with her fists and manages to wrap her tail around your waist long enough to land a powerful uppercut![at random]";
    now defeated entry is "[beatorthas]";
    now victory entry is "[losetoorthas]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[orthasdesc]"; [ Description of the creature when you encounter it.]
@@ -475,7 +475,7 @@ When Play begins:
    now int entry is 12;
    now cha entry is 15;
    now sex entry is "nochange"; [ Invalid answer intentionally getting no change in gender]
-   now hp entry is 150; 
+   now hp entry is 150;
    now lev entry is 12; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
    now wdam entry is 10; [Amount of Damage monster Does when attacking.]
    now area entry is "nowhere"; [ Location of monster, in this case nowhere]
@@ -486,8 +486,8 @@ When Play begins:
    now breast size entry is 3; [Size of breasts infection will try to attain ]
    now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
    now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12; 
-   now cunt width entry is 5; 
+   now cunt length entry is 12;
+   now cunt width entry is 5;
    now libido entry is 20; [ Set to zero in this monster to control elsewhere ]
    now loot entry is ""; [ Dropped item. Key will be used later ]
    now lootchance entry is 0; [ Chance of loot dropping 0-100 ]

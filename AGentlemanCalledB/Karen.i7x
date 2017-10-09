@@ -61,7 +61,7 @@ carry out KarenFucking:
 		else:
 			say "     You don't see any such thing.";
 
-Section 2 - Karen as a pet 
+Section 2 - Karen as a pet
 
 Retriever Girl is a pet. Retriever Girl is a part of the player.
 The description of Retriever Girl is "[RetrieverGirldesc]".

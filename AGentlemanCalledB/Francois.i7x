@@ -87,7 +87,7 @@ to say BakeryGShep:
 		let escape be 0;
 		let playernum be a random number between 1 and strength of player;
 		let shepnum be a random number between 1 and str entry;
-		if playernum > shepnum: 
+		if playernum > shepnum:
 			increase escape by 1;
 			say " and feels his grip weakening as a result.";
 		else:
@@ -179,7 +179,7 @@ Instead of conversing the François:
 		now hp of Karen is 7;
 		now Forgotten Past is unresolved;
 	else if hp of Karen is 2:
-		say "     Realizing François and his bakery must be the place Karen mentioned, you decide to explain your situation to François, recounting the entire story that lead you to your position with Rex and your plot to escape."; 
+		say "     Realizing François and his bakery must be the place Karen mentioned, you decide to explain your situation to François, recounting the entire story that lead you to your position with Rex and your plot to escape.";
 		say "     'Mon Dieu, poor Karen,' François replies solemnly after hearing your tale, 'but at least it is not too late [if libido of François >= 3]for you, mon petit chou[else]to repay mon héro[end if].";
 		say "     Without another word François gets to work, gathering a few supplies before starting in earnest.  Soon the entire bakery is filled with the warm scents of his work, and you find your mouth watering[if bodyname of player is not listed in the infections of Caninelist and facename of player is not listed in infections of Caninelist], despite knowing they are snacks intended for dogs[end if].";
 		say "     Eventually François finishes his work and returns with a small paper bag filled with fresh treats. [if bodyname of player is listed in the infections of Caninelist or facename of player is listed in infections of Caninelist or hunger of player > 60]The enticing scent wafting from the bag in your hands proves to be too much, and you eagerly fish a treat out. François simply grins at you as he watches you enjoy a sample of his work. Still licking the last few crumbs of your snack from your lips, you[else]You[end if] stow the bag away in your pack and give François your regards before deciding on your next move.";
@@ -643,7 +643,7 @@ to say FrançoisBakingMenu:
 						increase carried of gingerbread by 2;
 					else:
 						say "You do not have the required ingredients, egg nog, pixie dust and blue gel.";
-				else if title entry is "cheesecake": [cheesecake - cheese + pixie dust + pink gel] 
+				else if title entry is "cheesecake": [cheesecake - cheese + pixie dust + pink gel]
 					if cheese is owned and pixie dust is owned and pink gel is owned:
 						now sextablerun is 1;
 						say "	 François takes the cheese, pixie dust and pink gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with creamy looking strawberry cheesecake. He divides the cake into several portions before wrapping a couple slices for you and placing the rest in one of his displays.";
@@ -725,7 +725,7 @@ to say FrançoisHint:
 			say "     Something to add a little extra sweetness would be tres bon.";
 		if T is 3:
 			say "     Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?";
-	if entry 1 of Francois_Undiscovered is 10: [cheesecake - cheese + pixie dust + pink gel] 
+	if entry 1 of Francois_Undiscovered is 10: [cheesecake - cheese + pixie dust + pink gel]
 		if T is 1:
 			say "     Le fromage seems hard to come by these days. Quel dommage.";
 		if T is 2:
@@ -786,7 +786,7 @@ to say lollicockGet:
 	say "	'What an unusual herb,' François says as he picks up the musky cock flower, taking a deep sniff of its musty scent. 'Hmm... perhaps...' François trails off as he spots the honeycomb, before inspiration strikes. François quickly gathers a few other things from behind the counter before stepping into his kitchen. Eventually François returns with a small tray of cock-shaped lollipops and a silly grin on his face. 'What do you think, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if]? Would you like to try one?' he asks, waving the phallic candy in your face. (Y/N)";
 	if the player consents:
 		let lollicockCheck be 0;
-		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away[run paragraph on]"; 
+		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away[run paragraph on]";
 		if a random chance of 1 in 4 succeeds:
 			now lollicockCheck is 1;
 		if cockname of player is "candy cock" or "Female Preferred" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):

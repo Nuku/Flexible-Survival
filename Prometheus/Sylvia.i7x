@@ -21,7 +21,7 @@ to say SylviasRoomDesc:
 
 Section 2 - NPC Declaration
 
-Sylvia is a woman. 
+Sylvia is a woman.
 The description of Sylvia is "[SylviaDesc]".
 The conversation of Sylvia is { "<This is nothing but a placeholder!>" }.
 The scent of Sylvia is "     ...".
@@ -46,7 +46,7 @@ The sarea of Despairing Biologist is "Campus".
 instead of going east from College Campus Entrance while (Despairing Biologist is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	DespairingBiologistEvent;
-	
+
 Instead of resolving Despairing Biologist:
 	DespairingBiologistEvent;
 
@@ -87,5 +87,5 @@ to DespairingBiologistEvent: [Meet Sylvia]
 		now hp of Sylvia is 100; [event refused, no further contact with her]
 	now Despairing Biologist is resolved; [It Won't happen again]
 	now LastCampusWalkin is turns;
-	
+
 Sylvia ends here.

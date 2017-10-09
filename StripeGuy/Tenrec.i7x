@@ -150,10 +150,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Tenrec"; 
-	now attack entry is "[one of]The tenrec lunges for you with both paws slashing![or]The sleek fisherstud darts left, then right, and traps you in a tight hug with his large tail, grinding his cock up against you![or]The limber otter-shrew feints left and strikes with his large tail![or]The fisherman reaches into his loose coat and pulls out a large fish. Which is then chucked at your head![or] The no-nonsense tenrec just punches you upside your head like an errant cub.[or]With a snarl, the tenrec uses his sharp teeth to bite you![or]The horny male grabs hold of a passing net, swinging above you. He uses his height to splatter precum all over you![at random]"; 
-	now defeated entry is "[Tenrec loses]"; 
-	now victory entry is  "[Tenrec Victory]"; 
+	now name entry is "Tenrec";
+	now attack entry is "[one of]The tenrec lunges for you with both paws slashing![or]The sleek fisherstud darts left, then right, and traps you in a tight hug with his large tail, grinding his cock up against you![or]The limber otter-shrew feints left and strikes with his large tail![or]The fisherman reaches into his loose coat and pulls out a large fish. Which is then chucked at your head![or] The no-nonsense tenrec just punches you upside your head like an errant cub.[or]With a snarl, the tenrec uses his sharp teeth to bite you![or]The horny male grabs hold of a passing net, swinging above you. He uses his height to splatter precum all over you![at random]";
+	now defeated entry is "[Tenrec loses]";
+	now victory entry is  "[Tenrec Victory]";
 	now desc entry is "[TenrecDesc]";
 	now face entry is "a quite narrow, hydrodynamic face replete with whiskers and complimented by tiny ears. You look a bit like an otter that went through a taffy machine";
 	now body entry is "limber and lithe, you are stretched out and sleek. Obviously made for working your way through the water, if the webbed digits are any indication";
@@ -162,8 +162,8 @@ When Play begins:
 	now cock entry is "[one of]otter-shrew[or]pinkish tenrec[or]slightly tapered[at random]";
 	now face change entry is "your skull suddenly thinks it is part torpedo, pushing forward and slimming down considerably. Your ears shrink and shift, moving upwards where they will cause the least turbulence. Pain flare around your eyes as new nictating membranes form, sliding over your eyes as a second set of lids. Further forward, your mouth takes on the shape of a dagger, or needle-nose pliers, a narrow toothy muzzle perfect for clamping on fish and digging them out of mud. From either side, a vast array of vibrissae spout from nose to cheekbones, forming a massive facial tactile array"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "everything begins to ache, then thob, from inside out as your bones reshape. Some lengthen, others shorten, and the sensation of your spine sprouting almost puts you on the ground. Your shoulders draw inward, body narrowing and becoming streamlined. Your arm tremble, fingers growing fine and slender, tipped with sharp little claws perfect for gripping prey. It is almost enough to distract you from the sticky feeling of webbing forming between your digits, confirming what your torpedo-shaped body is made for"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "rich chestnut colored fur erupts from your skin, sensation traveling in waves as layers of waterproof fur emerge"; 
-	now ass change entry is "muscle is packed on, pelvis creaking as your hips widen to make more room for your muscular tailbase. Your spine seems to shift upwards, if that were possible, allowing your rudder-like tail to unfurl above your newly empowered rump"; 
+	now skin change entry is "rich chestnut colored fur erupts from your skin, sensation traveling in waves as layers of waterproof fur emerge";
+	now ass change entry is "muscle is packed on, pelvis creaking as your hips widen to make more room for your muscular tailbase. Your spine seems to shift upwards, if that were possible, allowing your rudder-like tail to unfurl above your newly empowered rump";
 	now cock change entry is "it flushes a bright pink before settling to a rich muted red, taking on a slightly tapered profile. Ridges and veins briefly surge from the surface before the shaft retracts into a well-shielded tenrec sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 14;
@@ -172,7 +172,7 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 14;
 	now sex entry is "Male"; 			[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 65; 
+	now hp entry is 65;
 	now lev entry is 7; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 7; [Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
@@ -191,9 +191,9 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]whippy[or]limber[or]lithe[or]slender[at random]";
 	now type entry is "[one of]musteline[or]tenrec[at random]";
-	now magic entry is false; 
-	now resbypass entry is false; 
-	now non-infectious entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 

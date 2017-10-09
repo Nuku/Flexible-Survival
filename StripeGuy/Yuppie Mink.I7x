@@ -88,7 +88,7 @@ to say beattheymgirl:
 	if cocks of player > 0: [male or herm]
 		say "  The shocked mink is made speechless by the rough treatment, too startled to struggle even weakly as her skirt is flipped up. Despite the beatdown, her cunt is inflamed with arousal and dripping with femmy juices, beckoning to your hard cock! You descend on her like a severe market correction, pinning her down against the rough planks of the dock. She yelps, her tits bouncing up and out of the sportsbra to jiggle in the salty air. They look so delectable, but you cannot resist the siren song of that hot snatch! There is a deep pleasure to be had from putting the bratty mustelid in her place, roughly fucking her like some low-class bimbo until at last you spurt your hot cum deep inside! You snicker at the thought of impregnating her with a scandalous mixed-breed litter as you draw back out, admiring how her cunt bubbles with your cum.";
 	else if cunts of player > 0: [female]
-		say "  The shocked mink is made speechless by the rough treatment, too startled to struggle even weakly as her skirt is flipped up. Despite the beatdown, her cunt is inflamed with arousal and dripping with femmy juices, mirroring your own excited gash! Without a word you just take hold of her tiny ears and yank that angular muzzle right up against your snatch! At first she struggle a bit, but after a box to the ears she gets the picture! Her tiny tongue is small but skillful, and hot as the shining sun! By flexing your arms, you get her into a good cunt-lapping rhythm that brings you to a happy gushing orgasm before too long! Satisfied, you shove the sticky splattered mink aside and return to your adventure!"; 
+		say "  The shocked mink is made speechless by the rough treatment, too startled to struggle even weakly as her skirt is flipped up. Despite the beatdown, her cunt is inflamed with arousal and dripping with femmy juices, mirroring your own excited gash! Without a word you just take hold of her tiny ears and yank that angular muzzle right up against your snatch! At first she struggle a bit, but after a box to the ears she gets the picture! Her tiny tongue is small but skillful, and hot as the shining sun! By flexing your arms, you get her into a good cunt-lapping rhythm that brings you to a happy gushing orgasm before too long! Satisfied, you shove the sticky splattered mink aside and return to your adventure!";
 	else:
 		say "Having nothing to work with, you leave the beaten mink to be ravaged by dock-workers or merchants as fate decides.";
 
@@ -96,21 +96,21 @@ to say beattheymguy:
 	say "     The poor mink fellow sinks down to his knees, jaunty cap sliding off to clatter across the deck. It splashes into the water, forlornly.";
 	if cocks of player > 0: [male]
 		say "Your cock is rock hard in anticipation as you kneel down and flip the mink over. His short tail presents no obstacle to revealing his puckered tailhole, which winks at you as the poor male gasps for breath. You show him the same mercy he would have shown you - none. Your cock is lubed with drizzles of your precum, and that is all you need to press deep inside the defeated man! His soft humiliated moan is drowned out by your happy growl, as the yuppie mink is very tight and very hot! Before long you are jackhammering the poor ermine hard enough to make your balls slap together with wet sexual sounds! Like the nice person you are, you grope underneath his hips, finding his fat mink-fucker, giving it a few strokes. Somehow you manage to time your orgasms together completely by accident, splattering his jizz across the dock as you fill his guts with cum! After you're fully sated, a single shove decouples you and after a dick-shake, it's time to hit the adventuring trail!  ";
-	else if cunts of player > 0: [female]	
+	else if cunts of player > 0: [female]
 		say "You admire the well tenderized mink, one hand dropping down to fondle your needy cunt. Despite the violence, his cock is still throbbing and ready for action - an elegantly curved and shapely mass of thick cunt-pleasing pole. It is simply too tempting to pass up, and you give in to your own carnal desires for that thick cock! With a happy sigh, you straddle the mink's slender hips and guide that fat cunt-spreader to your lips, hissing gently as it spreads your cunt. It feels so hot and thick, filling you wonderfully with sheer animal pleasure! Using his supple body as your anchor, you start bouncing on it, riding it like a throbbing dildo until at last you come to a screaming orgasm! Weakly, he mirrors your intense pleasure, weakly groaning as his fat cock pumps a massive load into your steamy snatch! After a few moments of recovery, you pry yourself off him, snickering as you dribble a mixture of juices all over his fancy jacket. Maybe next time he'll think twice before attacking you![impregchance]";
 	else:
 		say "Having nothing to work with, you leave the beaten mink to be ravaged by dock-workers or merchants as fate decides.";
 
 
 Section 2 - Monster Insertion
- 
+
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
- 
+
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Yuppie Mink"; 
+	now name entry is "Yuppie Mink";
 	now attack entry is "[ymgfight]";
 	now defeated entry is "[beattheymg]";
 	now victory entry is  "[losetoymg]";
@@ -133,7 +133,7 @@ When Play begins:
 	now cha entry is 10;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 28; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Warehouse"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -144,16 +144,16 @@ When Play begins:
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 10; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6; [ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 6; [ Width of female sex  infection will try and give you ]
 	now libido entry is 60; [ Amount player Libido will go up if defeated ]
 	now loot entry is ""; [ Loot monster drops, ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]elegant[or]aristocratic[or]compact[at random]";
 	now type entry is "mustelid"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
-	now resbypass entry is false; 
-	now non-infectious entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -174,5 +174,5 @@ when play ends:
 				say "     It takes a bit of time and some quick thinking, but before long you manage to identify a young heiress, pretty enough but unattached. You use your considerable charm and sensuality, capitalizing on the rich allure of your natural scent to captivate her. When you judge her to be at the apex of affection and fertile, you strike with the predatory swiftness of your mink breeding. The stolen poetry flows from your lips like honeyed wine, and the touch of your nimble paws tear down the last of her defenses. She offers her body, and you take it with all the masculine force you can bring to bear. Again and again you dump thick, hot loads from your oversized nuts deep into her cunt, taking pains to ensure she catches your litter that first night. By morning, your pups are planted deep inside her young body, securing the first part of your plan.";
 				say "     Her parents are less than pleased that a seemingly penniless mutant has bred their daughter, and intends to wed. A bit of charm does the trick - dear old mum gets a skilled fucking right atop her tea cozies, while dad experiences the famous mink flexibility as you ride his cock and suck his balls at the same time. She is barely showing when you walk down the aisle, but that soon changes. A lot of things change, actually, as you become the center of a slew of minks! Between your children and your wife, you also infect her immediate family with your strain of nouveau riche minkness.";
 
- 
-Yuppie Mink ends here. 
+
+Yuppie Mink ends here.

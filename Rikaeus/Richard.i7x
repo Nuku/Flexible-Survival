@@ -29,7 +29,7 @@ instead of conversing the Richard:
 
 to say RichardTalkMenu:
 	say "[line break]";
-	say "What do you wish to talk about with the satyr?";	
+	say "What do you wish to talk about with the satyr?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -84,7 +84,7 @@ Section 3 - Sex
 
 instead of fucking Richard:
 	if (lastfuck of Richard - turns < 3): [he got fucked in the last 9 hours = 3 turns]
-		say "     The satyr chuckles at you before waving you off. 'Down [if cunts of player > 0]girl[otherwise]boy[end if]! I need time to rest.' He jokingly tells you.";
+		say "     The satyr chuckles at you before waving you off. 'Down [if cunts of player > 0]girl[else]boy[end if]! I need time to rest.' He jokingly tells you.";
 	else:
 		say "     While Richard is tapping away at his keyboard, you think of how you can use that body of his.";
 		wait for any key;

@@ -301,9 +301,9 @@ carry out navigating:
 	if hp of Velos > 2, move Velos to the noun;
 	move the player to the noun;
 	follow turnpass rule;
-		
+
 NavCheckReturn is a truth state that varies.
-	
+
 to say NavCheck (CheckRoom - a room): [check if a nav attempt can go through]
 	if debugactive is 1:
 		say "DEBUG -> NavCheck just checked your travel route out! <- DEBUG";

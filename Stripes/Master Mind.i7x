@@ -18,7 +18,7 @@ the scent of the Master Mind is "Master Mind has little scent of her own, throug
 to say masterminddesc:
 	say "     Imprisoned in one of the police station's cells, this gold-skinned automaton is some kind of elite model. She has a glass dome at the top of her cranium, through which you can see a computerized brain made of electronics, wires and blinking lights. It looks like something out of a 50[']s B-movie, but created with modern components. Her gold-plated skin is smooth and without blemish or patina. She is wearing a skintight silver jumpsuit that leaves little to the imagination, her firm nipples, camel toe and sexy ass all smoothly outlined by the fabric.";
 	say "     She stands or sits impassively, quietly doing nothing during her confinement. Except when engaged in conversation, the only activity from her is the erratic flashing of the lights in her brain computing away in silence with a faint air of smugness to her else expressionless face.";
-		
+
 Instead of conversing the Master Mind:
 	if hp of Master Mind is 0:
 		say "     You and Alexandra confront your prisoner in an effort to get some information out of her. The doberwoman takes the lead starting by asking her name.";

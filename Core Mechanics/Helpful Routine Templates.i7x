@@ -60,7 +60,7 @@ to staticmenu: [A basic, static menu that's easily expandible, but otherwise can
 		say "[bold type]Choices:[roman type][line break]";
 		say "(1) [link]Choice 1[as]1[end link][line break]";
 		LineBreak;
-		say "(0) [link]Abort[as]0[end link][line break]";	
+		say "(0) [link]Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-1)>[run paragraph on]";
 			get a number;

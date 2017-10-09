@@ -158,7 +158,7 @@ to say BeatTheVixenNurse:
 						say "[VixenNursePlayWithHer]";
 					-- "Ride her cock":
 						say "[VixenHermNurseRideHer]";
-					-- otherwise: say "Sex menu failed!";
+					-- else: say "Sex menu failed!";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Resist your urges and move on?";
@@ -217,7 +217,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Vixen Nurse"; [Name of your new Monster]
-   now attack entry is "[one of]The naughty nurse gives you a hard slap![or]The vixen bonks you on the head with the clipboard she's carrying![or]The silver vixen gives you a scratch with her claws![or]The vixen nurse stomps her foot-paw down onto the top of your foot![or]Lunging at you, the nurse tries to smother you in her ample cleavage![or]The vixen nurse knees you in the side![or]The silver-furred nurse strikes you firmly at the temple, making your ear ring![or]The nurse moves in quick and grinds her body against you as she gives you a steaming kiss![or]The vixen swings wildly, managing to bop you on the nose with her clipboard![or]She sidesteps you as she grabs your upper arm in one paw and spanks you repeatedly with her clipboard![at random]"; 
+   now attack entry is "[one of]The naughty nurse gives you a hard slap![or]The vixen bonks you on the head with the clipboard she's carrying![or]The silver vixen gives you a scratch with her claws![or]The vixen nurse stomps her foot-paw down onto the top of your foot![or]Lunging at you, the nurse tries to smother you in her ample cleavage![or]The vixen nurse knees you in the side![or]The silver-furred nurse strikes you firmly at the temple, making your ear ring![or]The nurse moves in quick and grinds her body against you as she gives you a steaming kiss![or]The vixen swings wildly, managing to bop you on the nose with her clipboard![or]She sidesteps you as she grabs your upper arm in one paw and spanks you repeatedly with her clipboard![at random]";
    now defeated entry is "[BeatTheVixenNurse]";
    now victory entry is "[LoseToVixenNurse]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[VixenNurseDesc]"; [ Description of the creature when you encounter it.]

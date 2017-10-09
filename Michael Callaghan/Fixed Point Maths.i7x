@@ -38,7 +38,7 @@ To decide which number is the lesser part of (N - a number):
 Section 4 - Finding the aggregate of a number
 
 To decide which number is the aggregate of (N - a real number):
-	let temp be N to the nearest whole number;	
+	let temp be N to the nearest whole number;
 	let temp be temp times Divisor;
 	let temp be temp plus N - N to the nearest whole number;
 	decide on temp.
@@ -201,7 +201,7 @@ Chapter 6 - Subtraction
 Section 1 - Subtraction of two fixed point numbers
 
 To decide which real number is (A - a real number) real minus (B - a real number):
-	decide on A - B.	
+	decide on A - B.
 
 Section 2 - Subtraction of a fixed point number and an integer
 
@@ -240,7 +240,7 @@ Section 2 - Division of one fixed point number by an integer
 To decide which real number is (A - a real number) real divided by (B - a number):
 	let temp be B as a fixed point number;
 	decide on A real divided by temp.
-	
+
 Section 3 - Division of one number by a fixed point number
 
 To decide which real number is (A - a number) real divided by (B - a real number):
@@ -262,10 +262,10 @@ To decide which real number is the inverse of (N - a number):
 Section 2 - Factorial
 
 To decide which number is the factorial of (N - a number):
-	let temp be N; 
-	let result be 1; 
-	if temp is not 1: 
-		let temp1 be the factorial of (temp - 1); 
+	let temp be N;
+	let result be 1;
+	if temp is not 1:
+		let temp1 be the factorial of (temp - 1);
 		let result be temp times temp1;
 	decide on result.
 
@@ -301,10 +301,10 @@ To decide which real number is the real square root of (N - a real number):
 	if N real equals 0.0000:
 		decide on 0.0000;
 	if N is real less than 0.0000:
-		decide on 0.0000; 
+		decide on 0.0000;
 	let result be N real divided by 2.0000;
-	let previous be result; 
-	repeat with X running from 1 to 50: 
+	let previous be result;
+	repeat with X running from 1 to 50:
 		let temp1 be result real divided by 2.0000;
 		let temp2 be result real times 2.0000;
 		let temp2 be N real divided by temp2;
@@ -313,7 +313,7 @@ To decide which real number is the real square root of (N - a real number):
 		let factor be the absolute value of factor;
 		if factor is real less than 0.0002:
 			decide on result;
-		let previous be result; 
+		let previous be result;
 	decide on result.
 
 To decide which real number is the real square root of (N - a number):
@@ -534,7 +534,7 @@ To decide which real number is the number derived from (T - indexed text):
 	let length be the number of characters in T;
 	let multiplier be 1;
 	repeat with N running from 0 to length minus 1:
-		let pos be length minus N; 
+		let pos be length minus N;
 		let matched be false;
 		let test char be character number pos in T;
 		if test char is "-":
@@ -608,11 +608,11 @@ To decide which real number is the number derived from (T - indexed text):
 	if negative flag is true:
 		let final result be the negation of final result;
 	now invalid conversion is false;
-	decide on final result.	
+	decide on final result.
 
 Fixed Point Maths ends here.
 
----- DOCUMENTATION ---- 
+---- DOCUMENTATION ----
 
 Fixed point maths is an extension to permit simple mathematical operations to be carried out on fixed point numbers.
 
@@ -714,7 +714,7 @@ We can find the absolute value of a number using the phrase 'the absolute value 
 
 	let val be the absolute value of -12.3456;
 	let val be the absolute value of -45;
-	
+
 The function leaves positive values unchanged and converts negative numbers to their positive equivalent.  -12.3456 becomes 12.3456, etc.  This function works for both fixed point and integer numbers.
 
 Section : Convert an integer to a fixed point number

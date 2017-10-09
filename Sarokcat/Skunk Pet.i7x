@@ -55,7 +55,7 @@ Instead of resolving Lost skunk kit:
 				else:
 					say "Deciding that the whole situation is not really your problem, even if it is a fellow skunk creature, you leave the little skunk to its hiding spot, and continue on your way.";
 					now Lost skunk kit is resolved;
-			otherwise if Skunk Goo is owned:
+			else if Skunk Goo is owned:
 				say "Realizing you have some of that strange black goo from one of the other skunks, you think that you might be able to put the little skunk at ease if you smelled and looked more like one of the skunks, do you rub the goo on your hands?";
 				if the player consents:
 					say "Pulling out the strange black goo you found earlier, you rub it on your hands and face, the strange substance feeling rather rubbery for a minute before seeming to sink into the skin. Shuddering at little at the thought of whatever changes that might cause, you nevertheless take advantage of the black goo hiding your scent and looks for a minute, leaning down to try to coax the little kit out of hiding. The skunk kit whimpers for a second when it sees you are back, then seems to catch wind of the skunk scent rubbed on you and your temporarily black hands and face. Before you can do more than blink, the little skunk has awkwardly charged out of its hiding space, nearly falling over its own feet in its hurry to rub up against you. You sit back as the small skunk rubs on you and tries to crawl in your lap, making soft whimpering noises. Almost reluctantly you help it up and stroke it a few times to calm the shaking little kit down.[line break]";
@@ -77,7 +77,7 @@ Instead of resolving Lost skunk kit:
 		else:
 			say "Deciding that you can't afford to take risks in a situation that looks this dangerous, you quickly turn and leave whatever is whimpering alone as you make your way back into the forest.";
 			now Lost skunk kit is resolved;
-	otherwise if littlelostskunk is 1:
+	else if littlelostskunk is 1:
 		say " Traveling through the forest again, you realize that you are near the site of the skunks battle from earlier, curiosity getting the better of you, you decide to go see if that little skunk kit is still ok. Returning to the battle site easily enough, you note that other creatures have passed this way recently, probably looking to scavenge something as well, so you probably shouldn't stay too long. Still as you approach the little skunks hiding spot, you hear the telltale whimpering that tells you the little creature is still hanging in there. Feeling even sorrier for having left the little creature alone, you quickly check to see if you might have any way to get it to trust you better this time.";
 		if bodyname of player is "Skunk" or bodyname of player is "Skunk Taur" or bodyname of player is "Skunkbeast Lord":
 			say "Looking down at yourself you focus on your skunk-like attributes, and wonder if just maybe if you are careful the little skunk might not be drawn to them, you try to decide if you should try drawing the little creature out again.";
@@ -94,7 +94,7 @@ Instead of resolving Lost skunk kit:
 			else:
 				say "Deciding that the whole situation is not really your problem, even if it is a fellow skunk creature, you leave the little skunk to its hiding spot, and continue on your way.";
 				now Lost skunk kit is resolved;
-		otherwise if Skunk Goo is owned:
+		else if Skunk Goo is owned:
 			say "Realizing you have some of that strange black goo from one of the other skunks, you think that you might be able to put the little skunk at ease if you smelled and looked more like one of the skunks, do you rub the goo on your hands?";
 			if the player consents:
 				say "Pulling out the strange black goo you found earlier, you rub it on your hands and face, the strange substance feeling rather rubbery for a minute, before seeming to sink into the skin. Shuddering a little at the thought of whatever changes that might cause, you nevertheless take advantage of the black goo hiding your scent and looks for a minute, leaning down to try to coax the little kit out of hiding. The skunk kit whimpers for a second when it sees you are back, then seems to catch wind of the skunk scent rubbed on you and your temporarily black hands and face. Before you can do more than blink, the little skunk has awkwardly charged out of its hiding space, nearly falling over its own feet in its hurry to rub up against you. You sit back as the small skunk rubs on you and tries to crawl in your lap, making soft whimpering noises. Almost reluctantly you help it up and stroke it a few times to calm the shaking little kit down.[line break]";

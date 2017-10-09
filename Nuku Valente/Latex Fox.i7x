@@ -94,10 +94,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Latex Fox"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "The [one of]latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so[or]fox leaps on you, raking several bloody lines with its claws[or]fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth[at random]."; 
-	now defeated entry is "[latexfoxdefeat]"; 
-	now victory entry is "[latexfoxvictory]"; 
-	now desc entry is "[latexfoxdesc]"; 
+	now attack entry is "The [one of]latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so[or]fox leaps on you, raking several bloody lines with its claws[or]fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth[at random].";
+	now defeated entry is "[latexfoxdefeat]";
+	now victory entry is "[latexfoxvictory]";
+	now desc entry is "[latexfoxdesc]";
 	now face entry is "a mixture of a vulpine and human, in a perpetual sneer of exposed teeth, making for an interesting combination"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "red, black, and white latex covering your"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
@@ -108,14 +108,14 @@ When Play begins:
 	now skin change entry is "smooth latex seems to rush out over your body, covering every inch of you, inside and out, leaving you shivering and somewhat flush"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a sudden loud FWOOMF has you looking over your shoulder just in time to see a new, large, fox like tail curling and flicking energetically"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "your cock grows steel hard and begins to throb urgently. It grows increasingly red as it becomes slightly more slender. Soon a thick knot forms at the base, eager to be tied"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 10; 
+	now str entry is 10;
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 8; [ These values may be used as part of alternate combat.]
 	now per entry is 10;
 	now int entry is 6;
 	now cha entry is 6;
 	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 15; 
+	now hp entry is 15;
 	now lev entry is 1; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
 	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -134,7 +134,7 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]altered[or]animalistic[or]vulpine[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"  Use [one of] to vary ]
 	now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

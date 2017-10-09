@@ -38,10 +38,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Drone Wasp"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The drone attacks with its small claws, leaving tiny furrows that sting slightly.[or]The drone dive bombs through the air with its stinger at the ready, spreading its venom into your body causing you to shudder in pain and lust.[or]The drone flies in close and hugs you, not harming you but seeming to gaze longingly into your eyes.[at random]"; 
-	now defeated entry is "[beatthedrone]"; 
-	now victory entry is "[one of]The drone slips her lips onto yours, kissing deeply as she lets a small amount of honey in her mouth slip into your own.[or]The drone flies around happily before flying off to brag to its sisters.[or]The drone pins you down to the ground as she grins forcing your lips onto her sex as she rubs her small mound against you, moaning softly before she finally cums, and giggles flying off as quickly as she came.[at random]"; 
-	now desc entry is "[mongendernum 4]A small, shy of four feet, wasp-like girl, small delicate buzzing wings on her back, her skin coloured in yellow and brown marking. Her hands only having three fingers and small claws. Out of her rear extends her wasp-like abdomen with a small stinger on the end. Her face seeming cute with her short brown/blond hair. She looks at you with a soft smile on her lips buzzing left and right."; 
+	now attack entry is "[one of]The drone attacks with its small claws, leaving tiny furrows that sting slightly.[or]The drone dive bombs through the air with its stinger at the ready, spreading its venom into your body causing you to shudder in pain and lust.[or]The drone flies in close and hugs you, not harming you but seeming to gaze longingly into your eyes.[at random]";
+	now defeated entry is "[beatthedrone]";
+	now victory entry is "[one of]The drone slips her lips onto yours, kissing deeply as she lets a small amount of honey in her mouth slip into your own.[or]The drone flies around happily before flying off to brag to its sisters.[or]The drone pins you down to the ground as she grins forcing your lips onto her sex as she rubs her small mound against you, moaning softly before she finally cums, and giggles flying off as quickly as she came.[at random]";
+	now desc entry is "[mongendernum 4]A small, shy of four feet, wasp-like girl, small delicate buzzing wings on her back, her skin coloured in yellow and brown marking. Her hands only having three fingers and small claws. Out of her rear extends her wasp-like abdomen with a small stinger on the end. Her face seeming cute with her short brown/blond hair. She looks at you with a soft smile on her lips buzzing left and right.";
 	now face entry is "charmingly human"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "largely human, except for the new abdomen protruding from your rump, sporting a new stinger. You are also a lot shorter, shy of four feet at best."; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "black and brown striped"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
@@ -52,14 +52,14 @@ When Play begins:
 	now skin change entry is "your skin changes colour as it changes to yellow and brown, the striped markings covering your body."; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you feel something internal shifting around."; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "you feel something internal shifting around."; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 10; 
+	now str entry is 10;
 	now dex entry is 10; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 14; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Female"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 20; 
+	now hp entry is 20;
 	now lev entry is 1; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 3; [ Monster's average damage when attacking. ]
 	now area entry is "Park"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -78,7 +78,7 @@ When Play begins:
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]altered[or]exotic[or]feminine[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]insectoid[or]wasp[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

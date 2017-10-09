@@ -84,10 +84,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Platypus"; 	now attack entry is "[one of]The platypus charges you, using the full weight of his belly to knock you down![or]Using his ankle barbs, the platypus kicks at you, poisoning you![or]The platypus nips at you painfully with his bill![or]The platypus claws at you desperately![at random]"; 
-	now defeated entry is "[beattheplatypus]"; 
-	now victory entry is "[losetoplatypus]"; 
-	now desc entry is "[platypusdesc]"; 
+	now name entry is "Platypus"; 	now attack entry is "[one of]The platypus charges you, using the full weight of his belly to knock you down![or]Using his ankle barbs, the platypus kicks at you, poisoning you![or]The platypus nips at you painfully with his bill![or]The platypus claws at you desperately![at random]";
+	now defeated entry is "[beattheplatypus]";
+	now victory entry is "[losetoplatypus]";
+	now desc entry is "[platypusdesc]";
 	now face entry is "now sporting a long black bill, just like a fuzzy duck"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a curvy platypus with a little bit of a belly and wide child-bearing hips"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "short course brown fur that hides your"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
@@ -98,14 +98,14 @@ When Play begins:
 	now skin change entry is "your body starts to tingle while rough brown fur covers your skin"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you stumble, your spine elongating. A thin tail growing from above your ass, and as it settles in, it begins to flatten out and grow wider, much like a beaver's"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it tingles, becoming darker. The skin around the base of your cock pinches up into a sheath, growing soft brown fur. The tingling intensifies as you whimper, unable to stop yourself from cumming where you stand"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 17; 
+	now str entry is 17;
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 20; [ These values may be used as part of alternate combat.]
 	now per entry is 14;
 	now int entry is 13;
 	now cha entry is 16;
 	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 37; 
+	now hp entry is 37;
 	now lev entry is 2; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
 	now area entry is "Beach"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -124,7 +124,7 @@ When Play begins:
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]chubby[or]curvy[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]platypus[or]monotreme[as decreasingly likely outcomes]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

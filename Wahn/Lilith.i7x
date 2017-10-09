@@ -199,8 +199,8 @@ to say LilithTalk4:
 	say "     You discuss your demon offspring with Lilith, and she smiles at you. 'Our [LilithKidCounter] demon spawn are busy corrupting the world!'";
 	wait for any key;
 
-to say LilithTalk5: 
-	if libido of David < 64: 
+to say LilithTalk5:
+	if libido of David < 64:
 		say "     As you start to explain the rough outlines of what has been going on with David and Brutus, a wicked smile spreads over Lilith's lips. She doesn't leave you much time to get into the details, instead chuckling as she says, 'You're quite a harsh master for the purple brute, restraining him to just the one slave - and a male at that. You do realize he'll pound the boy raw day and night? The big hunks of muscle have a frightful stamina when in rut... and he can't even knock something up to end it. I like your style...' The succubus leans closer, running a finger down your chest, clearly aroused by your 'cruelty' towards Brutus - but her attempt at getting it on with you comes to a crashing halt as you say that David isn't a slave. Pulling her hand back, the demoness says distractedly, 'What? That can't be... to get that hard into rut, a brute and his pet have to be closely intertwined, inseparably bound. But, if there is no enslavement seal between them, then...'";
 		say "     Her eyes widen and stares as if you suddenly grew a second head. 'You - you allowed your demonic pet - a 1500 pound hunk of muscle and claws - to develop feelings? And there's a human who actually returns his affections? Hahahahaha... now I've heard everything.' Having gotten over her surprise, Lilith laughingly continues, 'Did the two lovebirds make kissy-faces at each other until your pet suddenly threw soldier-boy down and just pounded him deeply? Seems like his urges can't tell loooove apart from having a devoted slave worship him. Sorry to rain on your parade, you would-be cupid - but... the end result will be the same, you know. With your hunky human bent over and fucked into submission. He'll be a nice slave that hungers for a dose of that thick purple shaft all day long, every day.";
 		WaitLineBreak;
@@ -236,10 +236,10 @@ to say LilithTalk5:
 			LineBreak;
 			if libido of David is 62: [refused to Nermine before]
 				say "     Meeting the purple demon's eyes, you give a little shake of your head and see him tense, then give a somewhat relieved breath and bow his head to you. 'No. I can not do that, succubus. That... part of me is in the past. You ask too much,' Brutus brings out in a controlled, gravelly voice, though you can see the muscles in his arm tense as he makes a fist, betraying his frustration at having what he so dearly wishes dangle just out of reach. He turns away and punches the nearest wall hard enough to make splintered rock rain to the ground, then quietly addresses you to say, '[if cunts of player > 0 and cocks of player is 0]Mistress[else]Master[end if] - can we go back to the jackaless please? I can't stand being like this much longer.'";
-				now libido of David is 67; [refused both Lilith and Nermine] 
+				now libido of David is 67; [refused both Lilith and Nermine]
 			else:
 				say "     Meeting the purple demon's eyes, you give a little shake of your head and see him tense, then give a somewhat relieved breath and bow his head to you. 'No. I can not do that, succubus. That... part of me is in the past. You ask too much,' Brutus brings out in a controlled, gravelly voice, though you can see the muscles in his arm tense as he makes a fist, betraying his frustration at having what he so dearly wishes dangle just out of reach. He turns away and punches the nearest wall hard enough to make splintered rock rain to the ground, then quietly addresses you to say, '[if cunts of player > 0 and cocks of player is 0]Mistress[else]Master[end if] - can we keep looking for another way please? I can't stand being like this much longer.'";
-				now libido of David is 64; [refused Lilith] 
+				now libido of David is 64; [refused Lilith]
 		if calcnumber is 3:          [free Liam]
 			LineBreak;
 			say "     Meeting the purple demon's eyes, you give a shake of your head and ask him what he thinks David would like him to do. Brutus eyes go wide as he mulls over your words, then seems to come do a decision. Eyes focused Liam and with an intense expression on his face, he makes a step forward, much to the amusement of Lilith. But her glee is short-lived, as Brutus reaches out to just gently grab Liam by the shoulder and gives him a light shake while saying, 'You're not safe here, she is lying to you.' Your succubus host hisses as her spell seems to fall away from the man and he wakes from the trance, blinking away the illusions only he could see... then gives a strangled scream as he realizes a towering demon is standing before him.";
@@ -658,7 +658,7 @@ to say LilithSexMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-	
+
 to say LilithSex1:    [Have her blow your cock]
 	say "     As you open your mouth to say what you want from her, the succubus moves in close against you and shuts you up good with a hungry kiss planted on your lips. She moans 'I know what you need, just let me take care of you' while her hands slide down to your crotch and she takes hold of your rapidly hardening erection. Stroking it, her other hand gently fondling your balls, Lilith guides you to the bed, then gives a soft push against your chest to make you fall back on it. She quickly pulls off any clothing you might be wearing, then kneels between your legs as they hang over the edge of the bed. After another moment of stroking your manhood, you feel her incredibly soft succubus lips slide over it, then sink deeper as she takes it all into her mouth.";
 	if cunts of player > 0:    [herms]

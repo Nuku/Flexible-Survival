@@ -44,10 +44,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Opossum Sailor"; 
-	now attack entry is "[one of]The opossum snaps her hips forward and around, prehensile tail whipping toward your face![or]With a hissing growl, the opossum hops up and swings from a rope to kick you hard![or]Darting forward, she goes low and swipes upward to slash you with her claws![or]The opossum fumbles for her cutlass, and finding it missing, whups you with the leather scabbard![or]Feeling threatened, the opossum slumps onto the ground and flops around for a moment before spraying foul-smelling secretions on you![at random]"; 
-	now defeated entry is "[Opossum Sailor loses]"; 
-	now victory entry is  "[Opossum Sailor wins]"; 
+	now name entry is "Opossum Sailor";
+	now attack entry is "[one of]The opossum snaps her hips forward and around, prehensile tail whipping toward your face![or]With a hissing growl, the opossum hops up and swings from a rope to kick you hard![or]Darting forward, she goes low and swipes upward to slash you with her claws![or]The opossum fumbles for her cutlass, and finding it missing, whups you with the leather scabbard![or]Feeling threatened, the opossum slumps onto the ground and flops around for a moment before spraying foul-smelling secretions on you![at random]";
+	now defeated entry is "[Opossum Sailor loses]";
+	now victory entry is  "[Opossum Sailor wins]";
 	now desc entry is "[mongendernum 4]     The warehouse and docks are alive with sailors and dock workers and various hangers-on milling about, unloading cargo, or maintaining the ships. Unfortunately you cannot travel too far before attracting some attention from at least one lonely sailor. Swagging out of the crowd in hobnailed boots comes an opossum decked out in leather and gold brocade like a sailor of old, a cutlass by her side. She sneers at you from under her tricorn hat, spitting out the stub of a cigar that had been in her muzzle. You would almost swear you can hear the opossum's cunt sizzling as she levels a finger at you. '[one of]Ahoy! Stand fast and prepare to be boarded![or]Polish your brightwork and stow your duffle, officer on deck![or]No time to caulk, sailor, you've got to dig out![or]I've no patience for your drip, ya['] dogsbody.[or]Strike your colors and come with me to the cuddy![or]I'm always looking to press gang, come along or I'll clap you in bilboes![or]All standing! I just spotted my new bloke![or]Surrender to me or you'll dance the hemp jig![or]Which would you rather, be a blue under my command, or get tossed to the pirate sharks that hunt the sandy shore?[at random]' she cackles with a matter-of-fact threat, adjusting her epaulettes before beginning her attack!";[ Description of the creature when you encounter it.]
 	now face entry is "a round and tapering face, with a sensitive pink nose and wide eyes. Your ears are black and contrast with the very pale pink and white of your face. The overall effect is a bit clownish and not very threatening";
 	now body entry is "a bit on the slender side, but with a solid foundation. Your limbs are average in length, and proportionally are average in relation to your torso. In fact, you are weirdly average and flexibly non-specific in your shape and mass. Your body is so baseline mammal that you could adapt to many situations or sexual positions easily";
@@ -56,8 +56,8 @@ When Play begins:
 	now cock entry is "[one of]opossum[or]marsupial[or]somewhat tapered[at random]";
 	now face change entry is "you feel it stretch forward into a proper opossum-like muzzle, your jaw reshaping to make room for a swiss-army grade collection of teeth suitable for any purpose, more or less. Your ears swell and darken, shifting to lurk above your equally dark eyes. White and pink erupt in your vision as your new muzzle turns white, sprouting new whiskers"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your chest just sort of evens out, growing in some places and compacting in others until your shoulders and hips are nearly equal in width. Your limbs follow suit, feeling pained as proportions equalize. The sudden agony in your abdomen is unexpected, but it heralds the formation of a vestigial pouch which will function as another erogenous zone"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "muddled shades of gray fur begin to sprout from your skin, black and white splotches of guard hairs weaving in like smudges"; 
-	now ass change entry is "your hips widen subtly, making room for new glands on either side of your puckered asshole. Your muscles ache as they spread out slightly, to distribute power more equally to your legs, torso, and tail. Yes, your tail - its the long pink hairless appendage that uncoils with a mind of its own, sort of"; 
+	now skin change entry is "muddled shades of gray fur begin to sprout from your skin, black and white splotches of guard hairs weaving in like smudges";
+	now ass change entry is "your hips widen subtly, making room for new glands on either side of your puckered asshole. Your muscles ache as they spread out slightly, to distribute power more equally to your legs, torso, and tail. Yes, your tail - its the long pink hairless appendage that uncoils with a mind of its own, sort of";
 	now cock change entry is "it turns vibrant pink, almost like bubble gum, and acquires a very mild curve to it. Without warning, it retracts into a dapper opossum sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 17;
 	now dex entry is 21;
@@ -66,7 +66,7 @@ When Play begins:
 	now int entry is 15;
 	now cha entry is 15;
 	now sex entry is "Both"; 			[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 92; 
+	now hp entry is 92;
 	now lev entry is 11; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 14; [Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
@@ -85,8 +85,8 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]limber[or]marsupial[at random]";
 	now type entry is "[one of]marsupial[or]opossum[at random]";
-	now magic entry is false; 
-	now resbypass entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
 	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]

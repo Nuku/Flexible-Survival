@@ -26,9 +26,9 @@ To say Greek Nymph loss:
 	let t1 be a random number between ( 50 - beatgrnymph ) and 125;
 	let t2 be a random number between ( 50 - beatgrnymph ) and 125;
 	if beatgrnymph > 10 and ( t1 < libido of player ) and cocks of player > 0:
-		say "     You feel a rush of lust wash over you after having been teased too much by these sexy nymphs. You grab her wrist before she can get up and flee, tired of their games. Pushing her down, she squirms a little, but only playfully so, starting to giggle as you nuzzle at her neck and nibble along it. 'Oh, so now you want to play,' she laughs. She moans and spreads her legs as you run your hand along her thigh, letting you get your cock lined up with her wet pussy. She grips your hips tightly and giggles lustfully as you drive your hard shaft into her[if cock length of player > 24]. Her beautiful body, even practiced on the well hung satyrs, has some difficulty with your massive length, but the lustful nymph's cunt and body stretch to take you[otherwise if cock length of player > 12]. Her beautiful body, having practiced on the well hung satyrs, takes your large cock with ease, making her a wonderful fuck for someone of your size. She seems quite delighted by your ample meat as well[otherwise]. Her beautiful body, having practiced on the well hung satyrs, has no difficult taking your [cock size desc of player] cock into her wet pussy. But her delightful cunt squeezes and tugs at your meat deliciously, and she still seems to be having a good time despite it being smaller than she's used to[end if]. You have a wild, passionate romp with the sexy woman before finally pumping a hot load into her. She giggles and dances off as your seed [if cock width of player > 20]flows[otherwise if cock width of player > 12]runs[otherwise if cock width of player > 6]leaks[otherwise]trickles[end if] out of her recently creamed cunt.";
+		say "     You feel a rush of lust wash over you after having been teased too much by these sexy nymphs. You grab her wrist before she can get up and flee, tired of their games. Pushing her down, she squirms a little, but only playfully so, starting to giggle as you nuzzle at her neck and nibble along it. 'Oh, so now you want to play,' she laughs. She moans and spreads her legs as you run your hand along her thigh, letting you get your cock lined up with her wet pussy. She grips your hips tightly and giggles lustfully as you drive your hard shaft into her[if cock length of player > 24]. Her beautiful body, even practiced on the well hung satyrs, has some difficulty with your massive length, but the lustful nymph's cunt and body stretch to take you[else if cock length of player > 12]. Her beautiful body, having practiced on the well hung satyrs, takes your large cock with ease, making her a wonderful fuck for someone of your size. She seems quite delighted by your ample meat as well[else]. Her beautiful body, having practiced on the well hung satyrs, has no difficult taking your [cock size desc of player] cock into her wet pussy. But her delightful cunt squeezes and tugs at your meat deliciously, and she still seems to be having a good time despite it being smaller than she's used to[end if]. You have a wild, passionate romp with the sexy woman before finally pumping a hot load into her. She giggles and dances off as your seed [if cock width of player > 20]flows[else if cock width of player > 12]runs[else if cock width of player > 6]leaks[else]trickles[end if] out of her recently creamed cunt.";
 		now beatgrnymph is beatgrnymph / 2;
-	otherwise if beatgrnymph > 10 and ( t2 < libido of player ) and cocks of player is 0:
+	else if beatgrnymph > 10 and ( t2 < libido of player ) and cocks of player is 0:
 		say "     You feel a rush of lust wash over you after having been teased too much by these sexy nymphs. You grab her wrist before she can get up and flee, tired of their games. Pushing her down, she squirms a little, but only playfully so, starting to giggle as you nuzzle at her neck and nibble along it. 'Oh sister, I thought you didn't want to play,' she laughs. 'But shouldn't we find some satyrs to fill us?' she asks. Feeling playful and already having gotten your prize, you turn around, bringing your wet pussy over her face and diving your own face between her legs. She squeals happily in surprise and pleasure as you start eating out her juicy box, coaxing her to do the same for you. You both stroke, lick, kiss and nibble one another through a series of small orgasms before building up to one final, large climax that leaves you both panting and moaning with your faces soaked in womanly juices. Releasing her, you give her a playful spank and send her on her way, giggling down the halls.";
 		now beatgrnymph is beatgrnymph / 2;
 	else:
@@ -66,7 +66,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 20;
 	now sex entry is "Female";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 40;  
+	now hp entry is 40;
 	now lev entry is 6;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 9;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Museum";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -77,17 +77,17 @@ When Play begins:
 	now breast size entry is 8;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;  
-	now cunt width entry is 6;  
+	now cunt length entry is 12;
+	now cunt width entry is 6;
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "estrogen pill";  [ Loot monster drops, ]
 	now lootchance entry is 5;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sultry[or]effeminate[or]curvaceous[or]slender[at random]";
 	now type entry is "human-like";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is true; 
+	now magic entry is true;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  
+	now non-infectious entry is false;
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 

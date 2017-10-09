@@ -127,7 +127,7 @@ When Play begins:
 	now cunt length entry is 15; [ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 8; [ Width of female sex  infection will try and give you ]
 	now libido entry is 20; [ Amount player Libido will go up if defeated ]
-	now loot entry is "honeycomb"; 
+	now loot entry is "honeycomb";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table ]
 	now scale entry is 4; [ Number 1-5, rough approx of infected PC body size/height.  1=small, 3=avg, 5=huge ]

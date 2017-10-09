@@ -34,7 +34,7 @@ To say Wolftaur loss:
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] against 15 (Dexterity check)";
 	say "     [line break]";
 	increase diceroll by bonus;
-	if diceroll is greater than 15:	
+	if diceroll is greater than 15:
 		say "     Proving that you're not only stronger than the wolftaur, but also fast enough to catch him, you dash after the large creature and grab him by the tail. It only takes one sharp tug and pained yowl to bring him to a stand, looking back at you with a beaten expression. 'Okay okay - you win. But no more tail pulling - that hurts like hell!'";
 		say "     Now that you've caught yourself a not so little male wolftaur, what do you do with him? Have some fun with the wolfie (Y), or let him go with a warning (N)? ";
 		if player consents:
@@ -45,7 +45,7 @@ To say Wolftaur loss:
 				say "     What would you like to do now with this horny wolftaur stretched out before you? You could ride that canine shaft of his (Y), or alternatively take his tight hole yourself (N)? ";
 				if player consents:
 					say "     [line break]";
-					if cocks of player > 0 and cunts of player > 0: 
+					if cocks of player > 0 and cunts of player > 0:
 						say "     As a herm, you have the choice which hole you want to sink down on his hard canine shaft. Which shall it be? (Y = pussy, N = ass) ";
 						if player consents:
 							say "     [line break]";
@@ -64,7 +64,7 @@ To say Wolftaur loss:
 					say "     Confronted with all kinds of new sensations, it doesn't take all that long until you fucking him drives the wolftaur over the edge and he starts to cum, squirting long strings of cum from his knotted cock to land all over his furred underside and some even up to his chest. The twitches and convulsions of each shot run through his whole body, including the muscles in his ass, making an already quite tight hole grip and squeeze your shaft until you join him in orgasm, with a full load of your seed being blasted into this sexy furball's butt.";
 					WaitLineBreak;
 					say "     You lie there panting on his chest for a while, your hands instinctively stroking his soft fur as you both try to regain your wits. Eventually you pull out of his hole and watch it flex closed before too much of your cum can run out of it, then stand up on shaky legs. While you're collecting your stuff, the wolftaur says 'That was... something else. Can't remember when I last came that much. But... no, I didn't like it. You made me. It's not me. I'm a real man, not a gay sissy! You made me...', looking up at you with a somewhat sullen expression. Giving him a meaningful grin and a wink, you walk off, leaving him to think up excuses for himself why he came from getting fucked in the butt.";
-			otherwise if cunts of player > 0:   [female]
+			else if cunts of player > 0:   [female]
 				say "     What would you like to do now with this horny wolftaur stretched out before you? You could ride that canine shaft of his (Y), or make him lick your pussy (N)? ";
 				if player consents:
 					say "     [line break]";
@@ -84,13 +84,13 @@ To say Wolftaur loss:
 
 to say WolftaurRidingPussy:
 	say "     Quickly getting rid of your gear and clothing, you move into position to sit on the wolftaur's furred underside, then stretch forward to run your hands lengthwise through his luxuriously soft belly fur. The canine beast gives a sensual moan as you touch and stroke him and you can feel his throbbing shaft poke against your tailbone as he stretches a bit. Time to give this wolfie's bone a workout... scooching down his body and raising yourself up a bit, you align the pointy canine cock with your pussy. As the tip of his male member touches your moist pussy lips and starts to spread them, the wolftaur remarks 'Yeah baby - I'd gladly lose a fight any day if I get to fuck such a hot bitch afterwards', then gives a lust-filled grunt as you sink your folds deeper. It feels incredible to have his warm, thick shaft stretching your inner passage around itself, deeper and deeper until you feel the big bulge of his knot against your skin and start sliding up and down on his hard pole. 'Man, you're a grade A fuck - take that cock! Yeah!' your wolftaur howls in between pants as you ride him, fucking yourself on his manhood.";
-	say "     Before long, the ever greater arousal wakes your partner's inner animal, making his groans and lust-filled shouts sound more and more beast-like. Then suddenly, he rears up under you, wrapping his forelegs around your chest and pulling on your hips just as you are on a down-stroke - slamming your pussy down on his knot with irresistible force. You barely have time to register the painful feeling of stretching as it pops into your body, then you're washed away in the sensation of having his hot, throbbing, massive erection inside you, filling you completely and pulsing with blast after blast of canine cum shooting into your womb. Almost losing yourself in the orgasm he drives you to, [if cocks of player > 0]spraying your own seed all over his chest [otherwise]gushing femcum to soak into the fur of his crotch [end if], you close your eyes and just let the virile male hold you while he breeds your body.[fimpregchance]";
+	say "     Before long, the ever greater arousal wakes your partner's inner animal, making his groans and lust-filled shouts sound more and more beast-like. Then suddenly, he rears up under you, wrapping his forelegs around your chest and pulling on your hips just as you are on a down-stroke - slamming your pussy down on his knot with irresistible force. You barely have time to register the painful feeling of stretching as it pops into your body, then you're washed away in the sensation of having his hot, throbbing, massive erection inside you, filling you completely and pulsing with blast after blast of canine cum shooting into your womb. Almost losing yourself in the orgasm he drives you to, [if cocks of player > 0]spraying your own seed all over his chest [else]gushing femcum to soak into the fur of his crotch [end if], you close your eyes and just let the virile male hold you while he breeds your body.[fimpregchance]";
 	WaitLineBreak;
 	say "     You lie there panting on his chest for a while, your hands instinctively stroking his soft fur as you both try to regain your wits. Eventually his knot shrinks enough that you are able to pull yourself off him, his cock slipping out and leaving you feeling sadly empty as you stand up on shaky legs. While you're collecting your stuff, the wolftaur says 'That was a very good bit of fun, you horny bitch. You really can wear a guy out', looking up at you with a lupine grin, then lets his head sink back on the floor. 'Since you like to fuck anyways, how about if next time, you just submit and I show you a good time on my terms?' You just give him a meaningful grin, then walk off, leaving him to pick himself up later.";
-	
+
 to say WolftaurRidingAss:
 	say "     Quickly getting rid of your gear and clothing, you move into position to sit on the wolftaur's furred underside, then stretch forward to run your hands lengthwise through his luxuriously soft belly fur. The canine beast gives a sensual moan as you touch and stroke him and you can feel his throbbing shaft poke against your tailbone as he stretches a bit. Time to give this wolfie's bone a workout... scooching down his body and raising yourself up a bit, you align the pointy canine cock with your pucker. As the tip of his male member touches your hole and you start to push down against it, the wolftaur remarks 'Hey wait a minute - I'm not a fag-', the rest of the sentence lost in a lust-filled grunt as his cockhead pops in and you sink yourself deeper on his manhood. It feels incredible to have his warm, thick shaft stretching your inner passage around itself, deeper and deeper until you feel the big bulge of his knot against your ass and start sliding up and down on his hard pole. 'Man, I'm not into - *moan* *gasp* - ah, what the hell - take that cock! Yeah!' your wolftaur howls in between pants as you ride him, fucking yourself on his hard pole.";
-	say "     Before long, the ever greater arousal wakes your partner's inner animal, making his groans and lust-filled shouts sound more and more beast-like. Then suddenly, he rears up under you, wrapping his forelegs around your chest and pulling on your hips just as you are on a down-stroke - slamming your butt down on his knot with irresistible force. You barely have time to register the painful feeling of stretching as it pops into your body, then you're washed away in the sensation of having his hot, throbbing, massive erection inside you, filling you completely and pulsing with blast after blast of canine cum shooting deep into your insides. Almost losing yourself in the orgasm he drives you to[if cocks of player > 0], spraying your own seed all over his chest, [otherwise if cunts of player > 0]gushing femcum to soak into the fur of his crotch, [otherwise], [end if]you close your eyes and just let the virile male hold you while he breeds your body.[mimpregchance]";
+	say "     Before long, the ever greater arousal wakes your partner's inner animal, making his groans and lust-filled shouts sound more and more beast-like. Then suddenly, he rears up under you, wrapping his forelegs around your chest and pulling on your hips just as you are on a down-stroke - slamming your butt down on his knot with irresistible force. You barely have time to register the painful feeling of stretching as it pops into your body, then you're washed away in the sensation of having his hot, throbbing, massive erection inside you, filling you completely and pulsing with blast after blast of canine cum shooting deep into your insides. Almost losing yourself in the orgasm he drives you to[if cocks of player > 0], spraying your own seed all over his chest, [else if cunts of player > 0]gushing femcum to soak into the fur of his crotch, [else], [end if]you close your eyes and just let the virile male hold you while he breeds your body.[mimpregchance]";
 	WaitLineBreak;
 	say "     You lie there panting on his chest for a while, your hands instinctively stroking his soft fur as you both try to regain your wits. Eventually his knot shrinks enough that you are able to pull yourself off him, his cock slipping out and leaving you feeling sadly empty as you stand up on shaky legs. While you're collecting your stuff, the wolftaur says 'That was... something else. Can't remember when I last came that much. But... I'm not really into that ass stuff. That's for gay sissies - and I'm a real man!', looking up at you with a weak grin, then lets his head sink back on the floor. 'Since you like to fuck anyways, how about if next time, you just submit and I show you a good time on my terms?' You just give him a meaningful grin, then walk off, leaving him to pick himself up later.";
 
@@ -124,7 +124,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 16;
 	now sex entry is "Female";             [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60;                    
+	now hp entry is 60;
 	now lev entry is 8;                    [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 10;                  [ Amount of Damage monster Does when attacking.]
 	now area entry is "Zoo";               [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -135,17 +135,17 @@ When Play begins:
 	now breast size entry is 5;            [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;                  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 14;           
-	now cunt width entry is 9;             
+	now cunt length entry is 14;
+	now cunt width entry is 9;
 	now libido entry is 30;                [ Amount player Libido will go up if defeated ]
 	now loot entry is "";                  [ Loot monster drops, ]
 	now lootchance entry is 0;             [ Chance of loot dropping 0-100 ]
 	now scale entry is 4;                  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]tauric[or]bestial[or]animalistic[at random]";
 	now type entry is "lupine";            [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;             
+	now magic entry is false;
 	now resbypass entry is false;          [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;     
+	now non-infectious entry is false;
 	blank out the nocturnal entry;         [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "wtaurpounce";  [ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -184,7 +184,7 @@ when play ends:
 			if humanity of player is less than 10:
 				if cunts of player is greater than 0:
 					say "Your mind filling with images of the handsome alpha wolftaur you encountered in the zoo, you are unable to resist your needs any longer. Running back to the zoo on your four swift canine paws, your new canine muzzle sniffs the air eagerly hoping to catch a hint of that strong male musk your body knows so well. You catch his scent just as you reach the bathroom area, and turn to see Lindsey there waiting for you with a grin on his lupine face, as if he had no doubt as to the fact that you would submit. Your mate wastes no time in cementing your submission, taking you there again in the bathroom as he fills your belly up again with his fertile sperm, marking your body with this scent and seed even as your mind shifts and accepts his dominance as well. The strong male wolftaur nuzzles your neck with his muzzle as you are locked together there, enjoying the new memory of gaining another female mate in the zoo bathrooms. Eventually he pulls himself off of you, and leads you through the paths of the zoo to a small hidden area where another wolftaur bitch awaits. Her belly swollen with your mates cubs as she welcomes you into the den, your mind fills with the strong scent of pack and servitude to the alpha as Lindsey settles you into place next to his other bitch. You and your pack bitch become fast friends as you settle into the den, your alpha mounting you and her often and cementing your place in the pack, and you find yourself looking forward eagerly to your belly swelling with his big strong cubs just like the other pack bitches is. A wish that thanks to your mates virility, you don't have to wait long to have fulfilled as his seed finds root in your own body. Your small pack eventually gains a new member when the military try to retake the city, their failure seems to amuse your alpha as he teaches his new bitch her place underneath him, just like he taught you.";
-				otherwise if "MPreg" is listed in feats of player:
+				else if "MPreg" is listed in feats of player:
 					if LindseyMPregDetected is false:
 						say "     Your mind filling with images of the handsome alpha wolftaur you encountered in the zoo, you are unable to resist your needs any longer. Running back to the zoo on your four swift canine paws, your new canine muzzle sniffs the air eagerly hoping to catch a hint of that strong male musk your body knows so well. You catch his scent just as you reach the bathroom area, and turn to see Lindsey there waiting for you with a grin on his lupine face, as if he had no doubt as to the fact that you would submit. 'I supposed you would come back here instead of trying to start up your own pack, my little pet,' the more dominant wolftaur says with a soft smirk on his canine face. 'Don't worry, I saved a place in my pack for a special submissive male like yourself,' he adds, moving to mount you. 'That's right. I can smell that womb of yours, even over the stink of this place, and I'm going to enjoy putting my pups in it.'";
 					else:
@@ -205,7 +205,7 @@ when play ends:
 			if humanity of player is less than 10:
 				if cunts of player is greater than 0:
 					say "Finally submitting fully to the lusty needs of your new heat-filled body, you find your paws quickly leading you back to the zoo where you encountered the handsome male wolftaur. Your new canine nose soon picks up the scent of an aroused male, and the smell of his thick musk smells like heaven to your needy body, making your pussy clench in need as proximity to the strong male sends you into heat. The male wolftaur wastes no time in following your scent, and is soon as caught up in the pheromones your own body is putting off as you are entranced by his male musk. You are soon rutting together with bestial abandon like the animals you both now resemble, his knot tying you together as you yip and howl in pleasure, the feel of his seed filling your body as he locks you into your new permanent shape is amazing. Panting together in the afterglow, you can't help but look forward to your new life, raising his pups and playing with your new mate again and again in the streets of the once human city...";
-				otherwise if player is mpreg_ok:
+				else if player is mpreg_ok:
 					say "     Finally submitting to the wild needs of your altered body, you find your paws quickly leading you back to the zoo and the other wolftaurs. Picking up the scent of an aroused male, a heavenly smell that makes your insides quiver with need. Following your nose leads you to the other male. At first, he thinks you wish to challenge him, but when you submit and offer up your ass to him right away, he mounts you with a dominant growl. The two of you rut with bestial abandon like the animals you both now resemble, his knot tying you together as you yip and howl in pleasure. The feel of his seed filling your body as he breeds you is amazing.";
 					say "     After the rut, he dismounts and goes to leave, but you follow him. You submit to him a few more times whenever his arousal starts to return. Eventually he seems to accept you as his male bitch and leads you back to his lair. He's surprised but not at all displeased when you grow gravid with his pups. A process that he's happy to repeat over and over.";
 				else:
