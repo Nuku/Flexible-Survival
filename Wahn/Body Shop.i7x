@@ -446,6 +446,26 @@ to MoreauFaceSelection:
 	now sortorder entry is 2;
 	now description entry is "Buy yourself a gryphon head";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A satyr's face";
+	now sortorder entry is 3;
+	now description entry is "Buy yourself a satyr head, complete with goatee";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A German Shepherd's muzzle";
+	now sortorder entry is 4;
+	now description entry is "Buy yourself a canine head";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A succubus['] face";
+	now sortorder entry is 5;
+	now description entry is "Buy yourself a beautiful visage";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A snow leopard muzzle";
+	now sortorder entry is 6;
+	now description entry is "Get a feline face";
+	[]	
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -465,6 +485,14 @@ to MoreauFaceSelection:
 					setmonster "Horseman";
 				-- "A gryphon's beak":
 					setmonster "Hermaphrodite Gryphon";
+				-- "A satyr's face":
+					setmonster "Satyr";
+				-- "German Shepherd":
+					setmonster "German Shepherd";
+				-- "A succubus['] face":
+					setmonster "Succubus";
+				-- "A snow leopard muzzle":
+					setmonster "Snow Leopard";
 				choose row monster from the Table of random critters;
 				say "[MoreauFaceBuyPayment]";
 				WaitLineBreak;
@@ -534,6 +562,26 @@ to MoreauBodySelection:
 	now sortorder entry is 2;
 	now description entry is "Get a gryphon body";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Satyr";
+	now sortorder entry is 3;
+	now description entry is "Get a satyr body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Anthro German Shepherd";
+	now sortorder entry is 4;
+	now description entry is "Get an anthro canine body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Succubus";
+	now sortorder entry is 5;
+	now description entry is "Get a winged succubus body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Anthro snow leopard";
+	now sortorder entry is 6;
+	now description entry is "Get an anthro feline body";
+	[]		
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -553,6 +601,14 @@ to MoreauBodySelection:
 					setmonster "Horseman";
 				-- "Anthro gryphon":
 					setmonster "Hermaphrodite Gryphon";
+				-- "Satyr":
+					setmonster "Satyr";
+				-- "Anthro German Shepherd":
+					setmonster "German Shepherd";
+				-- "Succubus":
+					setmonster "Succubus";
+				-- "Anthro snow leopard":
+					setmonster "Snow Leopard";
 				choose row monster from the Table of random critters;
 				say "[MoreauBodyBuyPayment]";
 				WaitLineBreak;
@@ -622,6 +678,26 @@ to MoreauSkinSelection:
 	now sortorder entry is 2;
 	now description entry is "Get blue gryphon feathers";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Satyr's skin and fur";
+	now sortorder entry is 3;
+	now description entry is "Get skin and furry legs";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "German Shepherd fur";
+	now sortorder entry is 4;
+	now description entry is "Get German Shepherd fur";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Succubus skin";
+	now sortorder entry is 5;
+	now description entry is "Get flawless skin";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Snow leopard fur";
+	now sortorder entry is 6;
+	now description entry is "Get spotted white fur";
+	[]	
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -641,6 +717,14 @@ to MoreauSkinSelection:
 					setmonster "Horseman";
 				-- "A gryphon's feathers":
 					setmonster "Hermaphrodite Gryphon";
+				-- "Satyr's skin and fur":
+					setmonster "Satyr";
+				-- "German Shepherd fur":
+					setmonster "German Shepherd";
+				-- "Succubus skin":
+					setmonster "Succubus";
+				-- "Snow leopard fur":
+					setmonster "Snow Leopard";
 				choose row monster from the Table of random critters;
 				say "[MoreauSkinBuyPayment]";
 				WaitLineBreak;
@@ -710,6 +794,26 @@ to MoreauTailSelection:
 	now sortorder entry is 2;
 	now description entry is "Get a gryphon tail";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A satyr's tail";
+	now sortorder entry is 3;
+	now description entry is "Get a satyr tail";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A German Shepherd tail";
+	now sortorder entry is 4;
+	now description entry is "Get an German Shepherd tail";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A succubus ass";
+	now sortorder entry is 5;
+	now description entry is "Get a firm succubus ass";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A snow leopard tail";
+	now sortorder entry is 6;
+	now description entry is "Get a snow leopard tail";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -729,6 +833,14 @@ to MoreauTailSelection:
 					setmonster "Horseman";
 				-- "A gryphon's tail":
 					setmonster "Hermaphrodite Gryphon";
+				-- "A satyr's tail":
+					setmonster "Satyr";
+				-- "A German Shepherd tail":
+					setmonster "German Shepherd";
+				-- "A succubus ass":
+					setmonster "Succubus";
+				-- "A snow leopard tail":
+					setmonster "Snow Leopard";
 				choose row monster from the Table of random critters;
 				say "[MoreauTailBuyPayment]";
 				WaitLineBreak;
@@ -798,6 +910,26 @@ to MoreauCockSelection:
 	now sortorder entry is 2;
 	now description entry is "Get a gryphon crotch";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A satyr's groin";
+	now sortorder entry is 3;
+	now description entry is "Get a satyr crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A German Shepherd groin";
+	now sortorder entry is 4;
+	now description entry is "Get an German Shepherd crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A succubus['] groin";
+	now sortorder entry is 5;
+	now description entry is "Get a firm succubus crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A snow leopard groin";
+	now sortorder entry is 6;
+	now description entry is "Get a snow leopard crotch";
+	[]	
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -817,6 +949,14 @@ to MoreauCockSelection:
 					setmonster "Horseman";
 				-- "A gryphon's groin":
 					setmonster "Hermaphrodite Gryphon";
+				-- "A satyr's groin":
+					setmonster "Satyr";
+				-- "A German Shepherd groin":
+					setmonster "German Shepherd";
+				-- "A succubus['] groin":
+					setmonster "Succubus";
+				-- "A snow leopard groin":
+					setmonster "Snow Leopard";
 				choose row monster from the Table of random critters;
 				say "[MoreauCrotchBuyPayment]";
 				WaitLineBreak;

@@ -620,7 +620,7 @@ carry out pronounsetting:
 				now PronounChoice of player is "Herm";
 			-- 5:
 				now PronounChoice of player is "Neutral";
-			-- else :
+			-- otherwise:
 				say "Invalid choice. Pick from 0 to 5.";
 	if PronounChoice of player is not "Auto":
 		say "You are now set to [PronounChoice of player] pronouns.";

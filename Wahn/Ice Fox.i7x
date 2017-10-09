@@ -226,7 +226,7 @@ instead of conversing the Miyuki:
 						say "[MiyukiTalk2]";
 					-- "Becoming an ice fox":
 						say "[MiyukiTalk3]";
-					-- else: say "Talk menu failed!";
+					-- otherwise: say "Talk menu failed!";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -315,7 +315,7 @@ to say MiyukiSexMenu:
 						say "[MiyukiSex2]";
 					-- "Give yourself to Miyuki (ovipositor doggy-style)":
 						say "[MiyukiSex3]";
-					-- else: say "Sex menu failed!";
+					-- otherwise: say "Sex menu failed!";
 				wait for any key;
 				now lastfuck of Miyuki is turns;
 		else if calcnumber is 100:
