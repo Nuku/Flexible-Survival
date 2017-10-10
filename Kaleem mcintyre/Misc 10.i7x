@@ -1,7 +1,7 @@
 Misc 10 by Kaleem mcintyre begins here.
 
 [
-Section 1 - Mysterious Stranger 
+Section 1 - Mysterious Stranger
 
 Mysterious Stranger is a situation. The level of Mysterious Stranger is 7.
 
@@ -17,7 +17,7 @@ Instead of resolving a Mysterious Stranger:
 	Say "Pocketing the capsules you hurry off on your way before anything can come from out of the shadows to try and accost you.";
 	Add "Capsule" to invent of player;
 	Add "Capsule" to invent of player;
-	Add "Capsule" to invent of player; 
+	Add "Capsule" to invent of player;
 	Now Mysterious Stranger is resolved;
 	Increase score by 1;
 
@@ -34,7 +34,7 @@ it is part of the player.
 It is temporary.
 
 to say capsuleuse:
-	say "Not sure, but trusting the unknown person who gave you this thing you pop the capsule into your mouth."; 
+	say "Not sure, but trusting the unknown person who gave you this thing you pop the capsule into your mouth.";
 	if a random chance of 1 in 2 succeeds:
 		say "A slightly stomach pain causes your knees give out and you find yourself kneeling onto the ground with your [one of]left[or]right[at random] hand being the only thing keeping your from face planting onto the ground. A second or two later the pain subsides and you shake your head before getting back up onto your feet. Berating yourself for taking an unknown substance from an unknown person you pause and then blink before noting that you feel rather...odd...all of a sudden. Could the capsule have really increased your stamina or is this some kind of placebo affect?";
 		say "The player's stamina has increased by 1!";
@@ -67,7 +67,7 @@ Instead of resolving a Air Drop:
 
 Section 3 - Magical Girl
 
-Magical Girl is a situation. 
+Magical Girl is a situation.
 The sarea of Magical Girl is "Outside".
 When play begins:
 	Add Magical Girl to badspots of humorous;
@@ -104,11 +104,11 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Sailor Outfit"	"A sailor soldier outfit designed to make you a sex symbol to both men and women alike."	1	Sailor Outfit
 
-Sailor Outfit is equipment. 
-Sailor Outfit is not temporary. 
+Sailor Outfit is equipment.
+Sailor Outfit is not temporary.
 The AC of Sailor Outfit is 10.
-The effectiveness of Sailor Outfit is 40. 
-The placement of Sailor Outfit is "body". 
+The effectiveness of Sailor Outfit is 40.
+The placement of Sailor Outfit is "body".
 The descmod of Sailor Outfit is "A simple yet magical sailor outfit rests over your body.".
 The slot of Sailor Outfit is "body".
 
@@ -168,10 +168,10 @@ trident is an armament. It is part of the player. It has a weapon "[one of]your 
 
 instead of sniffing trident:
 	say "The trident smells like the sea, the moon, the stars and...a little mermaid? Weird.";
-		
 
 
-Section 5 - June Mermaid 
+
+Section 5 - June Mermaid
 
 June Mermaid is a situation.
 The sarea of June Mermaid is "Warehouse".
@@ -185,7 +185,7 @@ Instead of resolving a June Mermaid:
 
 Section 6 - Anomaly
 
-Anomaly is a situation. 
+Anomaly is a situation.
 The sarea of Anomaly is "Warehouse".
 
 Instead of resolving a Anomaly:
@@ -217,7 +217,7 @@ The sarea of Rumors is "Warehouse".
 Instead of resolving a Rumors:
 	Say "While standing on one of the docks of the pier you find yourself listening to the words of a small group of people that just happen to be passing by. 'Hey, you know how these Zephyr corp people keep coming around and advertising their company all over the city, especially down here at the docks?' A middle aged orca quietly asks his companions, a brown otter and a three headed bipedal hydra. 'Yeah, so what?' The otter asks unimpressively. 'Well, rumor has it that they were in business long before the epidemic hit this side of the states.' The orca mutters somewhat quietly. 'Where'd you hear such a thing from.' The hydra's three heads ask all at the same time. 'From my cousin down south. She told me that they had these weird people come around and set up an office in the area where she is staying right before a serious of strange events started to take place down there.'";
 	Say "'Strange like what?' The otter asks. 'Well, things like a rash of animal attacks, people going missing, and people reporting seeing strangers moving other's stuff out of their houses in the dead of night.' The orca mutters. 'So you think that what..?' The hydra inquires suspiciously. 'It could be just a coincidence, but I heard that...' The others move away before you can hear anymore.";
-	Now Rumors is resolved; 
+	Now Rumors is resolved;
 
 
 
@@ -228,7 +228,7 @@ The sarea of Diving Contest is "Warehouse".
 
 Instead of resolving a Diving Contest:
 	Say "Moving over to the pier and listening to several groups of mutants arguing with each other over who can dive the best you watch as a somewhat bored looking pirate shark comes over and then offers a challenge to the groups. The rules are simply: whoever can show off the best moves while diving gets to put their group's mark on a board at the front of the pier for this week and be named Diving Champs. This sets the respective groups on fire and soon the contest to see who can dive the best gets quickly under way. You don't stay to watch the show, but you do notice how everyone seems to be getting along better now since they have a way to exert some of their pent up aggressions with one another. Maybe this will be a key to helping to figure things out for later, you think before moving on.";
-	Now Diving Contest is resolved; 
+	Now Diving Contest is resolved;
 
 
 

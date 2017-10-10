@@ -213,8 +213,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Kitsune"; 
-	now attack entry is "[one of]The tall fox man laughs while shooing you away playfully. A blue ball of flame appears in his hand when you don't back down.[at random]"; 
+	now name entry is "Kitsune";
+	now attack entry is "[one of]The tall fox man laughs while shooing you away playfully. A blue ball of flame appears in his hand when you don't back down.[at random]";
 	now defeated entry is "[Kitsune loss]";
 	now victory entry is  "[Kitsune attack]";
 	now desc entry is "A silver furred vulpine stands on two digitigrade legs while looking at you calculatingly. Piercing azure eyes glare at you somewhat hotly as if the fox-man is trying to undress you with his eyes. Just exactly who or what is this creature that stands with nine soft and flowing tails at his backside? The loincloth tied over his waist tells you nothing, save that the other is well endowed."; [ Description of the creature when you encounter it.]

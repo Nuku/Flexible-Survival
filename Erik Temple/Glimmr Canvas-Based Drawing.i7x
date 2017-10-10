@@ -125,7 +125,7 @@ A g-element has a g-canvas called the associated canvas.
 
 Displayedness relates a g-element (called A) to a g-canvas (called B) when B is the associated canvas of A. The verb to be displayed on implies the displayedness relation.
 
-The verb to display (he displays, they display, he displayed) implies the reversed displayedness relation. 
+The verb to display (he displays, they display, he displayed) implies the reversed displayedness relation.
 
 [The origin, layer, alignment, and scaling factors are specified by the author and represent the positioning of the element in relation to the canvas.]
 A g-element has a list of numbers called the origin. The origin of a g-element is usually {0, 0}.
@@ -135,7 +135,7 @@ A g-element has a number called the display-layer. The display-layer of a g-elem
 A g-element has a real number called the scaling factor. The scaling factor of a g-element is usually 1.0000. The scaling factor property translates into I6 as "scaling_factor".
 
 [These are used only if asymmetrical scaling is enabled.]
-A g-element has a real number called the x-scaling factor. The x-scaling factor of a g-element is usually 1.0000. The x-scaling factor property translates into I6 as "x_factor". 
+A g-element has a real number called the x-scaling factor. The x-scaling factor of a g-element is usually 1.0000. The x-scaling factor property translates into I6 as "x_factor".
 
 A g-element has a  real number called the y-scaling factor. The y-scaling factor of a g-element is usually 1.0000. The y-scaling factor property translates into I6 as "y_factor".
 
@@ -146,7 +146,7 @@ Chapter - Element properties related to the window
 
 [The win-x and win-y refer to the window coordinate system; that is, they represent the scaled coordinates of the element. These values are supplied by the extension and will be overwritten (how rude!) if the author attempts to set them directly.]
 
-A g-element has a number called the win-x. The win-x is usually 0. 
+A g-element has a number called the win-x. The win-x is usually 0.
 A g-element has a number called the win-y. The win-y is usually 0.
 
 
@@ -173,9 +173,9 @@ A graphics g-window has a list of numbers called the origin. The origin is usual
 
 A graphics g-window has a real number called the arbitrary scaling factor. The arbitrary scaling factor is usually 0.0000.
 
-A graphics g-window has a  real number called the x-scaling factor. 
-A graphics g-window has a  real number called the y-scaling factor. 
-The x-scaling factor of a graphics g-window is usually 0.0000. 
+A graphics g-window has a  real number called the x-scaling factor.
+A graphics g-window has a  real number called the y-scaling factor.
+The x-scaling factor of a graphics g-window is usually 0.0000.
 The y-scaling factor of a graphics g-window is usually 0.0000.
 
 A graphics g-window has a  real number called the scaling factor. The scaling factor of a graphics g-window is usually 1.0000. [The scaling factor property translates into I6 as "scaling_factor". --Already included with the g-element kind.]
@@ -236,7 +236,7 @@ The window-drawing rules have default success.
 
 Chapter - Calculating the scaling factors
 
-Scaling something is an activity. 
+Scaling something is an activity.
 
 Last for scaling a graphics g-window (called the window) (this is the default window-scaling rule):
 	#if utilizing Glimmr debugging;
@@ -265,7 +265,7 @@ Last for scaling a graphics g-window (called the window) (this is the default wi
 		#if utilizing Glimmr debugging;
 		say "[>console][CBD]Scaling factor of [i][window][/i] set to [scaling factor of the window] based on arbitrary scaling factor.[<]";
 		#end if;
-	otherwise:
+	else:
 		let x-win be the width of the window;
 		let y-win be the height of the window;
 		now the x-scaling factor of the window is x-win  divided by the canvas-width of panel;
@@ -275,7 +275,7 @@ Last for scaling a graphics g-window (called the window) (this is the default wi
 			#if utilizing Glimmr debugging;
 			say "[>console][CBD][i][window][/i] scaling factor set to the vertical scaling factor: [y-scaling factor of the window].[<]";
 			#end if;
-		otherwise:
+		else:
 			now the scaling factor of the window is the x-scaling factor of the window;
 			#if utilizing Glimmr debugging;
 			say "[>console][CBD][i][window][/i] scaling factor set to the horizontal scaling factor: [i][x-scaling factor of the window][/i].[<]";
@@ -377,18 +377,18 @@ Last for drawing the canvas background of a graphics g-window (called the window
 			#if utilizing Glimmr debugging;
 			say "[>console][CBD]Drawing canvas background [i][background image of panel][/i] in [i][window][/i].[<]";
 			#end if;
-		otherwise:
+		else:
 			do nothing;
 			#if utilizing Glimmr debugging;
 			say "[>console][CBD]Canvas [i][panel][/i] has no background image.[<]";
 			#end if;
-	otherwise:
+	else:
 		say "*** Glimmr Error: No canvas defined for [i][window][/i]."
 
 To draw the background-image of (panel - a g-canvas) in (win - a g-window):
 	(- DrawCanvas({panel}, {win}); -)
 
-	
+
 Include (-
 
 [ DrawCanvas c g;
@@ -401,7 +401,7 @@ Include (-
 		}
 	}
 ];
- 
+
 -)
 
 
@@ -454,7 +454,7 @@ To decide which  number is (N - a number) scaled by (R - a  number):
 	Let temp be N as a fixed point number;
 	let temp be temp  times R;
 	decide on temp.
-	
+
 To decide which  number is (N - a  number) scaled by (R - a  number):
 	Let temp be N  times R;
 	decide on temp.
@@ -467,7 +467,7 @@ To decide which list of numbers is the (warp - a list of numbers) offset by (wef
 	if the number of entries of warp is not 2:
 		say "[>console][CBD] ***Warning: Offsetting coordinates: [warp] is not a coordinate pair.[<]";
 	if the number of entries of weft is not 2:
-		say "[>console][CBD] ***Warning: Offsetting coordinates: [weft] is not a coordinate pair.[<]"; 
+		say "[>console][CBD] ***Warning: Offsetting coordinates: [weft] is not a coordinate pair.[<]";
 	#end if;
 	let result1 be entry 1 of warp + entry 1 of weft;
 	let result2 be entry	2 of warp + entry 2 of weft;
@@ -491,7 +491,7 @@ To decide which list of numbers is the canvas equivalent of the screen coordinat
 Part - Graphic Hyperlinks
 
 Chapter - Graphlink management (for use with Glimmr Graphic Hyperlinks by Erik Temple)
-		
+
 To prune the/-- link-table of the/-- (g - a g-window) links:
 	repeat through the Table of Graphlink Glulx Replacement Commands:
 		if g is the g-win entry:
@@ -502,7 +502,7 @@ Chapter - Graphlink management (for use without Glimmr Graphic Hyperlinks by Eri
 
 To zero the/-- link-table:
 	do nothing.
-		
+
 To prune the/-- link-table of the/-- (g - a g-window) links:
 	do nothing.
 
@@ -540,7 +540,7 @@ Include (-
 			glk_image_draw(g.ref_number, ResourceIDsOfFigures-->ID.image_ID, off_x, off_y);
 		}
 	}
-];  
+];
 
 -).
 
@@ -555,7 +555,7 @@ An element scaling rule for a sprite (called the current-sprite) (this is the sp
 		unless the asymmetrical scaling option is active:
 			now sprite-x is x-temp times the scaling factor of current window times the scaling factor of the current-sprite to the nearest whole number ;
 			now sprite-y is y-temp times the scaling factor of current window times the scaling factor of the current-sprite to the nearest whole number ;
-		otherwise:
+		else:
 			now sprite-x is x-temp times the scaling factor of current window  times the x-scaling factor of the current-sprite to the nearest whole number ;
 			now sprite-y is y-temp times the scaling factor of current window  times the y-scaling factor of the current-sprite to the nearest whole number ;
 		if current-sprite is center-aligned:
@@ -575,7 +575,7 @@ An element display rule for a sprite (called the current-sprite) (this is the sp
 		if graphlink status of current-sprite is g-active:
 			set a graphlink in the current window identified as current-sprite from win-x of current-sprite by win-y of current-sprite to (win-x of current-sprite + sprite-x of current-sprite) by (win-y of current-sprite + sprite-y of current-sprite) as the linked replacement-command of current-sprite;
 		#if utilizing Glimmr debugging;
-		say "[>console][CBD]Drawing sprite element [i][current-sprite][/i] ([image-ID of current-sprite]) in [i][current window][/i] at origin ([win-x of current-sprite], [win-y of current-sprite]), dimensions [sprite-x of current-sprite] x [sprite-y of current-sprite] pixels.[line break][if current-sprite is graphlinked][CBD]Graphlink corresponding to [i][current-sprite][/i] set from ([win-x of current-sprite], [win-y of current-sprite]) to ([win-x of current-sprite + sprite-x of current-sprite], [win-y of current-sprite + sprite-y of current-sprite]): [quotation mark][linked replacement-command of current-sprite][quotation mark].[end if][<]"; 
+		say "[>console][CBD]Drawing sprite element [i][current-sprite][/i] ([image-ID of current-sprite]) in [i][current window][/i] at origin ([win-x of current-sprite], [win-y of current-sprite]), dimensions [sprite-x of current-sprite] x [sprite-y of current-sprite] pixels.[line break][if current-sprite is graphlinked][CBD]Graphlink corresponding to [i][current-sprite][/i] set from ([win-x of current-sprite], [win-y of current-sprite]) to ([win-x of current-sprite + sprite-x of current-sprite], [win-y of current-sprite + sprite-y of current-sprite]): [quotation mark][linked replacement-command of current-sprite][quotation mark].[end if][<]";
 		#end if;
 	if the image-ID of current-sprite is Figure of Null:
 		do nothing;
@@ -598,7 +598,7 @@ To decide what list of numbers is the center-point of (current-sprite - a sprite
 	unless the asymmetrical scaling option is active:
 		let dx be x-temp  times the scaling factor of the current-sprite to the nearest whole number;
 		let dy be y-temp  times the scaling factor of the current-sprite to the nearest whole number;
-	otherwise:
+	else:
 		let dx be x-temp  times the x-scaling factor of the current-sprite to the nearest whole number;
 		let dy be y-temp  times the y-scaling factor of the current-sprite to the nearest whole number;
 	let x be x + (dx / 2);
@@ -611,7 +611,7 @@ To decide what list of numbers is the center-point of (current-sprite - a sprite
 
 Chapter - The primitive base class
 
-A primitive is a kind of g-element. 
+A primitive is a kind of g-element.
 
 The specification of a primitive is "A primitive element is a simple shape that is generally intended to be used in concert with other shapes and images to build up a composition; for example, rectangles and lines. The meaning of a graphics primitive is somewhat stretched here, since the only primitive actually provided by Glulx is a simple rectangle, whereas all of the other 'primitives' provided by Glimmr Canvas-Based Drawing are in fact built up out of rectangles. The most intensive of these, the line primitive, can be made up of many, many rectangles and may be quite slow to draw. Primitives have an origin, as do all g-elements, and they also have a second coordinate pair, the endpoint. For most primitives, the origin describes the upper left corner, while the endpoint describes the lower right corner. The line primitive, however, is freer--the two points can have any relationship. It is also necessary to specify the color of a primitive, using the 'tint' property. This is a glulx color value (see the Glulx Text Effects extension). Some primitives (the stroked rectangle) also have a 'background tint' property that controls a second color value."
 
@@ -637,7 +637,7 @@ An element scaling rule for a primitive (called the subject) (this is the primit
 		let weight-temp be the line-weight of the subject + 0.0;
 		unless the asymmetrical scaling option is active:
 			now the stroke of the subject is the weight-temp times the scaling factor of the current window times the scaling factor of the subject to the nearest whole number ;
-		otherwise:
+		else:
 			now the stroke of the subject is the weight-temp times the scaling factor of the current window times the x-scaling factor of the subject to the nearest whole number ;
 		if the stroke of the subject < 1, now the stroke of the subject is 1;
 	if the subject is center-aligned:
@@ -668,7 +668,7 @@ To decide what list of numbers is the center-point of (item - a primitive):
 	unless the item is a point primitive:
 		let xx be entry 1 of the endpoint of the item;
 		let yy be entry 2 of the endpoint of the item;
-	otherwise:
+	else:
 		let x be x - (line-weight of the item / 2);
 		let y be y - (line-weight of the item / 2);
 		let xx be x + line-weight of item;
@@ -748,7 +748,7 @@ An element display rule for a stroked rectangle primitive (called the stroked re
 
 
 Section - Line primitive
-			
+
 A line primitive is a kind of primitive.
 
 The specification of line primitive is "A line primitive is a type of g-element. It draws a line between any two points using a specified color. The line is drawn between an origin coordinate and an endpoint. The color of the line is specified using the 'tint' property, a glulx color value (see the Glulx Text Effects extension). The width of the line is specified using the 'line-weight' property. The line-weight will be scaled along with the canvas; that is, if the line-weight is specified as 4 pixels wide and the canvas must be scaled to 50% to fit in the window, the actual displayed width of the line will be 2 pixels."
@@ -800,20 +800,20 @@ An element display rule for a point primitive (called the point):
 
 Chapter - Bitmap base class
 
-A bitmap is a kind of g-element. 
+A bitmap is a kind of g-element.
 
-The specification of bitmap is "A bitmap element draws a rectangular image composed of individual 'bits' that are specified by the author in the form of a list of lists of numbers (the 'bitmap-array') defining the status of each bit. For example, a cross might be specified like so: 
+The specification of bitmap is "A bitmap element draws a rectangular image composed of individual 'bits' that are specified by the author in the form of a list of lists of numbers (the 'bitmap-array') defining the status of each bit. For example, a cross might be specified like so:
 
 	{
 	{ 0, 0, 1, 0, 0 },
  	{ 0, 0, 1, 0, 0 },
  	{ 1, 1, 1, 1, 1 },
  	{ 0, 0, 1, 0, 0 },
- 	{ 0, 0, 1, 0, 0 }  }. 
+ 	{ 0, 0, 1, 0, 0 }  }.
 
-The ones represent bits that are turned on, while the zeros represent bits that are off. Note that each row is represented by its own list of numbers, and that we need to have the same number of entries in each row or errors will result. 
+The ones represent bits that are turned on, while the zeros represent bits that are off. Note that each row is represented by its own list of numbers, and that we need to have the same number of entries in each row or errors will result.
 
-When image files such as PNGs or JPEGs are scaled, pixels can be interpolated so that the image file can be presented at virtually any scaling factor. However, the pixels of a bitmap element are set directly, and so the individual pixel is the primary unit of measurement. Thus, a bitmap displayed with a bit-size of 2 will be twice as wide and twice as high as the same bitmap displayed with a bit-size of 1. Glimmr will attempt to scale bitmaps to the canvas, but they cannot be scaled with the accuracy that sprites can be. 
+When image files such as PNGs or JPEGs are scaled, pixels can be interpolated so that the image file can be presented at virtually any scaling factor. However, the pixels of a bitmap element are set directly, and so the individual pixel is the primary unit of measurement. Thus, a bitmap displayed with a bit-size of 2 will be twice as wide and twice as high as the same bitmap displayed with a bit-size of 1. Glimmr will attempt to scale bitmaps to the canvas, but they cannot be scaled with the accuracy that sprites can be.
 
 There are two types of bitmaps: monochrome and polychrome bitmaps. In a monochrome bitmap, a maximum of two colors are allowed--all bits are either on or off. In a polychrome bitmap, the author can specify a full RGB color for each pixel. For both types, bits are rendered using the properties 'tint' (foreground color) and 'background tint' (background color)."
 
@@ -832,7 +832,7 @@ An element scaling rule for a bitmap (called the grid) (this is the bitmap scali
 	let the bitsize-temp be the bit-size of the grid + 0.0;
 	unless the asymmetrical scaling option is active:
 		now the dot-size of the grid is the bitsize-temp times the scaling factor of the current window times the scaling factor of the grid to the nearest whole number ;
-	otherwise:
+	else:
 		now the dot-size of the grid is the bitsize-temp times the scaling factor of the current window times the x-scaling factor of the grid to the nearest whole number ;
 	if the dot-size of the grid < 1, now the dot-size of the grid is 1;
 	let the bitmap-width be the number of entries in entry 1 of the bitmap-array of the grid;
@@ -858,7 +858,7 @@ To decide what list of numbers is the center-point of (item - a bitmap):
 	unless the asymmetrical scaling option is active:
 		let dx be the dot-scale  times the scaling factor of the item to the nearest whole number;
 		let dy be the dot-scale  times the scaling factor of the item to the nearest whole number;
-	otherwise:
+	else:
 		let dx be the dot-scale  times the x-scaling factor of the item to the nearest whole number;
 		let dy be the dot-scale  times the y-scaling factor of the item to the nearest whole number;
 	let x be x + (dx / 2);
@@ -866,7 +866,7 @@ To decide what list of numbers is the center-point of (item - a bitmap):
 	let coord be {0, 0};
 	now entry 1 of coord is x;
 	now entry 2 of coord is y;
-	decide on coord.	
+	decide on coord.
 
 
 Section - Monochrome bitmap
@@ -879,7 +879,7 @@ An element display rule for a monochrome bitmap (called the grid):
 	let bitmap-height be the number of entries in bitmap-array of the grid;
 	if the background tint of the grid is g-PlaceNullCol:
 		draw a monochrome bitmap (color tint of the grid) in (current window) at (win-x of the grid) by (win-y of the grid) using (bitmap-array) with dot size (dot-size) pixels;
-	otherwise:
+	else:
 		drmonobitmap (color tint of the grid) in (current window) at (win-x of the grid) by (win-y of the grid) using (bitmap-array) with dot size (dot-size) pixels and background (color background tint of the grid);
 	if the grid is graphlinked:
 		set a graphlink in the current window identified as grid from win-x by win-y to win-x + (bitmap-height * dot-size) by win-y + (bitmap-height * dot-size) as the linked replacement-command of the grid;
@@ -900,7 +900,7 @@ An element display rule for a polychrome bitmap (called the grid):
 	let bitmap-height be the number of entries in bitmap-array of the grid;
 	if the background tint of the grid is g-PlaceNullCol:
 		draw a polychrome bitmap in (current window) at (win-x of the grid) by (win-y of the grid) using (bitmap-array) with dot size (dot-size) pixels;
-	otherwise:
+	else:
 		draw a polychrome bitmap in (current window) at (win-x of the grid) by (win-y of the grid) using (bitmap-array) with dot size (dot-size) pixels and background (color background tint of the grid);
 	if the grid is graphlinked:
 		set a graphlink in the current window identified as grid from win-x by win-y to win-x + (bitmap-height * dot-size) by win-y + (bitmap-height * dot-size) as the linked replacement-command of the grid;
@@ -948,7 +948,7 @@ To decide what number is the length of (stream - a rendered string):
 		let V be the character code of position N of the text-string of the stream;
 		if there is a char of V in the font table of the associated font of the stream:
 			choose row with a char of V in the font table of the associated font of the stream;
-		otherwise:
+		else:
 			choose row with a char of 32 in the font table of the associated font of the stream;
 		increase len by the advance entry;
 	decide on len.
@@ -983,7 +983,7 @@ To decide what list of numbers is the center-point of (item - a bitmap-rendered 
 	unless the asymmetrical scaling option is active:
 		let dx be the dot-width  times the scaling factor of the item to the nearest whole number;
 		let dy be the font-height of the associated font of the item  times the scaling factor of the item to the nearest whole number;
-	otherwise:
+	else:
 		let dx be the dot-width  times the x-scaling factor of the item to the nearest whole number;
 		let dy be the font-height of the associated font of the item  times the x-scaling factor of the item to the nearest whole number;
 	let x be x + (dx / 2);
@@ -991,7 +991,7 @@ To decide what list of numbers is the center-point of (item - a bitmap-rendered 
 	let coord be {0, 0};
 	now entry 1 of coord is x;
 	now entry 2 of coord is y;
-	decide on coord.	
+	decide on coord.
 
 
 Section - Scaling rule for bitmap-rendered strings
@@ -1000,7 +1000,7 @@ An element scaling rule for a bitmap-rendered string (called the stream) (this i
 	let the bitsize-temp be the bit-size of the stream + 0.0;
 	unless the asymmetrical scaling option is active:
 		now the dot-size of the stream is the bitsize-temp times the scaling factor of the current window times the scaling factor of the stream to the nearest whole number ;
-	otherwise:
+	else:
 		now the dot-size of the stream is the bitsize-temp times the scaling factor of the current window times the x-scaling factor of the stream to the nearest whole number ;
 	if the dot-size of the stream < 1, now the dot-size of the stream is 1;
 	continue.
@@ -1037,7 +1037,7 @@ An element display rule for a bitmap-rendered string (called the stream):
 		let V be the character code of position N of the text-string of the stream;
 		if there is a char of V in the font table of the associated font of the stream:
 			choose row with a char of V in the font table of the associated font of the stream;
-		otherwise:
+		else:
 			choose row with a char of 32 in the font table of the associated font of the stream;
 		let scan be 0;
 		let bitmap-size be width entry * height entry;
@@ -1084,7 +1084,7 @@ To decide what list of numbers is the center-point of (item - a image-rendered s
 	unless the asymmetrical scaling option is active:
 		let dx be the string-width  times the scaling factor of the item to the nearest whole number;
 		let dy be the string-height  times the scaling factor of the item to the nearest whole number;
-	otherwise:
+	else:
 		let dx be the string-width  times the x-scaling factor of the item to the nearest whole number;
 		let dy be the string-height  times the x-scaling factor of the item to the nearest whole number;
 	let x be x + (dx / 2);
@@ -1092,7 +1092,7 @@ To decide what list of numbers is the center-point of (item - a image-rendered s
 	let coord be {0, 0};
 	now entry 1 of coord is x;
 	now entry 2 of coord is y;
-	decide on coord.	
+	decide on coord.
 
 
 Section - Prefer the null typeface (for use without Glimmr Image Font by Erik Temple)
@@ -1104,10 +1104,10 @@ The associated font of an image-rendered string is Null-image-typeface.
 Section - Image-rendered string scaling rule
 
 An element scaling rule for an image-rendered string (called the stream) (this is the image-rendered string scaling rule):
-	unless the asymmetrical scaling option is active: 	
+	unless the asymmetrical scaling option is active:
 		now the calculated scaling factor of the stream is ( the scaling factor of the current window  times the scaling factor of the stream) to the nearest whole number;
-	otherwise:
-		now the calculated scaling factor of the stream is ( the scaling factor of the current window  times the x-scaling factor of the stream) to the nearest whole number; 
+	else:
+		now the calculated scaling factor of the stream is ( the scaling factor of the current window  times the x-scaling factor of the stream) to the nearest whole number;
 	continue.
 
 
@@ -1145,7 +1145,7 @@ An element display rule for an image-rendered string (called the stream):
 		let V be the character code of position N of the text-string of the stream;
 		if there is a char of V in the font table of the associated font of the stream:
 			choose row with a char of V in the font table of the associated font of the stream;
-		otherwise:
+		else:
 			choose row with a char of 32 in the font table of the associated font of the stream;
 		let the chosen glyph be glyph-ref entry;
 		let the yoffset be yoffset entry  times the calculated scaling factor of the stream to the nearest whole number;
@@ -1249,16 +1249,16 @@ To fit (grid - an image-map) to/into a/-- total/-- width of (X -  a number) canv
 		let image-map-width be the number of entries in entry 1 of the tile-array of the grid;
 		now the tile-width override of the grid is X divided by image-map-width;
 		let width-token be the tile-width override of the grid;
-	otherwise if the grid is a direct image-map:
+	else if the grid is a direct image-map:
 		let image-map-width be the number of entries in entry 1 of the tile-array of the grid;
 		now the tile-width of the grid is X divided by image-map-width;
 		let width-token be the tile-width of the grid;
-	otherwise:
+	else:
 		rule fails;
 	#if utilizing Glimmr debugging;
 	    say "[>console][CBD]Trying to fit [grid] to a width of [X] canvas units. Changed tile-width to [width-token]. [if width-token * image-map-width is not X]The width could not be set precisely to [X]. [end if]The overall width before scaling will be [width-token * image-map-width].[<]";
 	#end if.
-	
+
 
 To fit (grid - an image-map) to/into a/-- total/-- height of (Y - a number) canvas/-- pixel/pixels/px/units/-- high/--:
 	let height-token be a number;
@@ -1267,16 +1267,16 @@ To fit (grid - an image-map) to/into a/-- total/-- height of (Y - a number) canv
 		let the calc-height be the number of entries of the tile-array of the grid;
 		now the tile-height override of the grid is Y divided by the calc-height;
 		let height-token be the tile-height override of the grid;
-	otherwise if the grid is a direct image-map:
+	else if the grid is a direct image-map:
 		let the calc-height be the number of entries of the figure-array of the grid;
 		now the tile-height of the grid is Y divided by the calc-height;
 		let height-token be the tile-height of the grid;
-	otherwise:
+	else:
 		rule fails;
 	#if utilizing Glimmr debugging;
 	    say "[>console][CBD]Trying to fit [grid] to a height of [Y] canvas units. Changed tile-height override to [height-token]. [if height-token * calc-height is not Y]The height could not be set to [Y]. [end if]The overall height before scaling will be [height-token * calc-height].[<]";
 	#end if.
-		
+
 
 Section - Scaling rule for image-maps
 
@@ -1286,7 +1286,7 @@ An element scaling rule for an image-map (called the grid) (this is the image-ma
 	unless the asymmetrical scaling option is active:
 		now the scaled tile-width of the grid is imap-x times the scaling factor of current window  times the scaling factor of the grid to the nearest whole number ;
 		now the scaled tile-height of the grid is imap-y times the scaling factor of current window  times the scaling factor of the grid to the nearest whole number ;
-	otherwise:
+	else:
 		now the scaled tile-width of the grid is imap-x times the scaling factor of current window  times the x-scaling factor of the grid to the nearest whole number ;
 		now the scaled tile-height of the grid is imap-y times the scaling factor of current window times the y-scaling factor of the grid to the nearest whole number ;
 	if grid is center-aligned:
@@ -1301,20 +1301,20 @@ To decide which number is the desired tile-width of (grid - an image-map):
 	if the grid is a tileset image-map:
 		if the tile-width override of the grid is greater than 0:
 			decide on the tile-width override of the grid;
-		otherwise:
+		else:
 			decide on the tile-width of the associated tileset of the grid;
 	if the grid is a direct image-map:
 		decide on the tile-width of the grid.
-		
+
 To decide which number is the desired tile-height of (grid - an image-map):
 	if the grid is a tileset image-map:
 		if the tile-height override of the grid is greater than 0:
 			decide on the tile-height override of the grid;
-		otherwise:
+		else:
 			decide on the tile-height of the associated tileset of the grid;
 	if the grid is a direct image-map:
 		decide on the tile-height of the grid.
-	
+
 
 Section - Centering algorithm for image-maps
 
@@ -1328,7 +1328,7 @@ To decide what list of numbers is the center-point of (grid - an image-map):
 	if the asymmetrical scaling option is not active:
 		let dx be imap-x times the scaling factor of the grid to the nearest whole number;
 		let dy be imap-y times the scaling factor of the grid to the nearest whole number;
-	otherwise:
+	else:
 		let dx be imap-x times the x-scaling factor of the grid to the nearest whole number;
 		let dy be imap-y times the y-scaling factor of the grid to the nearest whole number;
 	let the calc-height be the number of entries of the tile-array of the grid;
@@ -1366,7 +1366,7 @@ An element display rule for a tileset image-map (called the grid):
 		#end if;
 	if the grid is tile-graphlinked:
 		follow the tiled graphlink setting rules for the grid.
-				
+
 
 Section - Direct image-map display rule
 
@@ -1389,7 +1389,7 @@ An element display rule for a direct image-map (called the grid):
 		#end if;
 	if the grid is tile-graphlinked:
 		follow the tiled graphlink setting rules for the grid.
-		
+
 
 Part - Converting between image-map, screen, and canvas coordinates
 
@@ -1406,8 +1406,8 @@ To decide what list of numbers is the canvas coordinate/coordinates/-- equivalen
 	add x1 to L;
 	add y1 to L;
 	decide on L.
-	
-	
+
+
 Chapter - Converting image-map to screen coordinates
 
 [This phrase can only be used after the element scaling rules for the image-map have been followed.]
@@ -1421,7 +1421,7 @@ To decide what list of numbers is the screen coordinate/coordinates/-- equivalen
 	add x1 to L;
 	add y1 to L;
 	decide on L.
-	
+
 
 Chapter - Converting canvas to image-map coordinates
 
@@ -1440,7 +1440,7 @@ To decide what list of numbers is the equivalent of canvas coordinate/coordinate
 	add dx to L;
 	add dy to L;
 	decide on L.
-	
+
 Chapter - Converting screen to image-map coordinates
 
 [This phrase can only be used after the element scaling rules for the image-map have been followed.]
@@ -1456,7 +1456,7 @@ To decide what list of numbers is the equivalent of screen coordinate/coordinate
 	add dx to L;
 	add dy to L;
 	decide on L.
-	
+
 
 Part - Adding figures to an image-map array using internal coordinates
 
@@ -1464,12 +1464,12 @@ To place/add tile/-- (tile - a number) at internal/-- coordinate/coordinates/-- 
 	let x be entry 1 of the internal-coordinates;
 	let y be entry 2 of the internal-coordinates;
 	now entry x of entry y of the tile-array of the grid is the tile.
-		
+
 To place/add figure/-- (tile - a figure name) at internal/-- coordinate/coordinates/-- (internal-coordinates - a list of numbers) of/in (grid - a direct image-map):
 	let x be entry 1 of the internal-coordinates;
 	let y be entry 2 of the internal-coordinates;
 	now entry x of entry y of the figure-array of the grid is the tile.
-		
+
 
 Part - Graphic hyperlinking using tiled linked command arrays
 
@@ -1508,22 +1508,22 @@ To construct/build graphic/-- hyperlinks/graphlinks array for (grid - a direct i
 			if index is a figure listed in the link-table:
 				if there is a linked command entry:
 					add the linked command entry to L;
-				otherwise:
+				else:
 					add "" to L;
-			otherwise:
+			else:
 				add "" to L;
-		add L to the linked command array of the grid; 
+		add L to the linked command array of the grid;
 	#if utilizing Glimmr debugging;
 	    say "[>console][CBD]Constructed hyperlink command array for [grid] (a direct image-map) from the table [link-table].[<]";
 	#end if.
 
 [This table is required for the above routine to compile. It is best to make your own table rather than add to this one.]
-	
+
 Table of Figure Commands
 figure	linked command
 figure name	text
 with 1 blank row.
-	
+
 
 Chapter - Constructing a hyperlink set for a tileset image-map
 
@@ -1536,9 +1536,9 @@ To construct/build graphic/-- hyperlinks/graphlinks array for (grid - a tileset 
 			if index is a char listed in the translation-table of the associated tileset of the grid:
 				if there is a linked command entry:
 					add the linked command entry to L;
-				otherwise:
+				else:
 					add "" to L;
-			otherwise:
+			else:
 				add "" to L;
 		add L to the linked command array of the grid;
 	#if utilizing Glimmr debugging;
@@ -1553,7 +1553,7 @@ Chapter - Dumping image-map data (not for release)
 Dumping imap is an action out of world applying to one visible thing. Understand "image-map [any image-map]" or "[any image-map]" or "image map [any image-map]" as dumping imap.
 
 Understand "image-map [text]" or "image map [text]" as a mistake ("That image-map could not be found. If this is not a typo, you may need to assign it the 'publically-named' property.").
-	
+
 Carry out dumping imap:
 	let rules-altered be false;
 	let image-map-width be a number;
@@ -1585,11 +1585,11 @@ Carry out dumping imap:
 			repeat with item running through current-row:
 				if item is 0:
 					say "... ";
-				otherwise if item < 10:
+				else if item < 10:
 					say " [item]  ";
-				otherwise if item < 100:
+				else if item < 100:
 					say " [item] ";
-				otherwise:
+				else:
 					say "[item] ";
 			increment row-count;
 	if the noun is a direct image-map:
@@ -1612,13 +1612,13 @@ Carry out dumping imap:
 		say "[line break]";
 	if rules-altered is true:
 		activate intensive rules tracing.
-		
+
 To say appropriate spacing for (N - a number):
 	if N < 10:
 		say "    ";
-	otherwise if N < 100:
+	else if N < 100:
 		say "   ";
-	otherwise:
+	else:
 		say "  ".
 
 
@@ -1626,10 +1626,10 @@ Chapter - Graphlink preview
 [This would be better implemented as a  debugging command, perhaps, but is presented as a use option for performance reasons. With a use option, we can use an #ifdef block to define the debugging behavior;  in other words, when the use option is not in use, no code at all related to it is compiled into the game, and thus no need to waste time checking a conditional.]
 
 Use image-map graphlink preview translates as (- Constant Glimmr_GRAPHLINK_PREVIEW; -).
-	
+
 To #if utilizing the image-map graphlink preview option:
 	(- #ifdef Glimmr_GRAPHLINK_PREVIEW; -)
-	
+
 The graphlink preview color is a glulx color value variable. The graphlink preview color is usually g-Light-Grey.
 
 
@@ -1676,15 +1676,15 @@ Glimmr Canvas-Based Drawing is designed to be easy to use, but also both powerfu
 	3) Create elements and assign them to the canvas.
 	4) Activate elements for display.
 
-	
+
 Section: Define a graphics window
 
 Windows are managed by the Flexible Windows extension, and we can make use of any of the features available in that extension. It is important that the window be defined using the "graphics g-window" kind (or a descendant of this kind):
 
 	The graphics-window is a graphics g-window spawned by the main-window.
-	
+
 You may find it useful to use the Glimmr Simple Graphics Window extension, which will do most of the configuration of the graphics window for you, including assigning a canvas (see the following section). See the Flexible Windows extension for more on creating windows.
-	
+
 We also need to be sure that we open the window at some point, using the "open up the <g-window>" phrase, and that we have provided an indication of when the window should be redrawn. For most cases, doing the latter in an every turn rule will suffice:
 
 	Every turn: follow the refresh windows rule.
@@ -1695,15 +1695,15 @@ Section: Define the canvas
 Defining the canvas is also quite easy. We simply declare the canvas object and associate it with a g-window:
 
 	The graphics-canvas is a g-canvas. The associated canvas of the graphics-window is the graphics-canvas.
-	
+
 We should also specify the dimensions of the canvas. There are two ways to do this. We can set the width and height directly:
 
 	The canvas-width of the graphics-canvas is 600. The canvas-height of the graphics-canvas is 300.
-	
+
 Or we can supply a background image for the canvas. The background image will be drawn underneath (that is, before) any of the elements associated with the canvas are drawn. If we have not explicitly set the canvas dimensions as described above, the background image will itself define the dimensions of the canvas. We declare the background image like this:
 
 	The background image of the graphics-canvas is Figure of Background.
-	
+
 Again, the background image will only define the canvas dimensions for us if we have not specified dimensions, or if we have specified either the width or the height at 0. If, on the other hand, we have specified dimensions in advance, the background image will be resized to fit the previously defined dimensions. It will even be stretched to fit if need be.
 
 
@@ -1711,7 +1711,7 @@ Section: Create elements and assign them to the canvas
 
 Finally, we need to create some elements (called g-elements in Inform to avoid namespace issues) and assign these to our canvas.
 
-Elements are things, in Inform's sense of the term. The player cannot see or refer to them (they are given the "privately-named" and "scenery" properties by default), and we will generally create them off-stage, but authors can declare and manipulate them just like any other thing. 
+Elements are things, in Inform's sense of the term. The player cannot see or refer to them (they are given the "privately-named" and "scenery" properties by default), and we will generally create them off-stage, but authors can declare and manipulate them just like any other thing.
 
 Each type of element (sprite/image, primitive, bitmap, image-map, or text) needs to be declared with its own set of properties that define its behavior. This is generally a simple process; in fact, the Glimmr Canvas Editor extension allows you to arrange elements visually using a GUI interface and will output appropriate element definitions in I7 source code for you. Here is an example of definitions for a few different types of element:
 
@@ -1757,7 +1757,7 @@ All elements are marked for display by default, so if we say nothing about the d
 
 Very often, however, we do not want all of our elements on all of the time; a more dynamic approach is desired. For example, If we have designed a map in which each room is represented by a sprite, we want only the rooms that a player has visited to be displayed. We might begin by defining all of these as of the sub-kind room-sprite, and then mark all of them as initially not for display:
 
-	A room-sprite is a kind of a sprite. The associated canvas of a room-sprite is the map-canvas. A room-sprite has a room called the associated room. The display status of a room-sprite is g-inactive. 
+	A room-sprite is a kind of a sprite. The associated canvas of a room-sprite is the map-canvas. A room-sprite has a room called the associated room. The display status of a room-sprite is g-inactive.
 
 Now, none of our rooms will show up when the map window is first opened. If we add a rule to the rules for the looking action, which are carried out each time we enter a room, we can cause rooms to display as we enter them (note that we have added a property here to room-sprites, the "associated room," which represents the room that the sprite depicts):
 
@@ -1817,7 +1817,7 @@ The color of a primitive is specified using the "tint" property. This is a glulx
 
 Section: Bitmaps
 
-A bitmap element draws a rectangular image composed of individual "bits" that are specified by the author in the form of a list of lists (the "bitmap-array") that defines the status of each bit. For example, a cross might be specified like so: 
+A bitmap element draws a rectangular image composed of individual "bits" that are specified by the author in the form of a list of lists (the "bitmap-array") that defines the status of each bit. For example, a cross might be specified like so:
 
 	{
 		{ 0, 0, 1, 0, 0 },
@@ -1825,7 +1825,7 @@ A bitmap element draws a rectangular image composed of individual "bits" that ar
  		{ 1, 1, 1, 1, 1 },
  		{ 0, 0, 1, 0, 0 },
  		{ 0, 0, 1, 0, 0 }
-	}. 
+	}.
 
 The ones represent bits that are turned on, while the zeros represent bits that are off. Each row is given as a list of numbers with its own set of braces.
 
@@ -1835,11 +1835,11 @@ Remember that the bitmap-array is a list of lists of numbers. We supply the stan
 
 It is very important that all rows have the same number of entries (i.e., columns).
 
-When image files such as PNGs or JPEGs are scaled, pixels can be interpolated so that the image file can be presented at virtually any scaling factor. However, the pixels of a bitmap element are set directly, and so the individual pixel is the primary unit of measurement (a bitmap displayed with a bit-size of 2 will be twice as wide and twice as high as the same bitmap displayed with a bit-size of 1). Fractional pixel measurements are not possible, and the bit-size is rounded to the nearest integer. So, if you define a bit-size of 2 pixels, the bit will be 2 pixels from 75% to 100% of full size, but will appear as 1 pixel when scaled to 74% or less. The screen size of the bitmap is determined by the bit-size and the dimensions of its grid: a 10 x 10 bitmap with a scaled bit-size of 2 will occupy 20 x 20 pixels on the screen.  
+When image files such as PNGs or JPEGs are scaled, pixels can be interpolated so that the image file can be presented at virtually any scaling factor. However, the pixels of a bitmap element are set directly, and so the individual pixel is the primary unit of measurement (a bitmap displayed with a bit-size of 2 will be twice as wide and twice as high as the same bitmap displayed with a bit-size of 1). Fractional pixel measurements are not possible, and the bit-size is rounded to the nearest integer. So, if you define a bit-size of 2 pixels, the bit will be 2 pixels from 75% to 100% of full size, but will appear as 1 pixel when scaled to 74% or less. The screen size of the bitmap is determined by the bit-size and the dimensions of its grid: a 10 x 10 bitmap with a scaled bit-size of 2 will occupy 20 x 20 pixels on the screen.
 
 The "on" bit of a bitmap is rendered using the color provided by the "tint" property (defaults to black). The "off" bit can be implemented in one of two ways. If the "background tint" property is specified, the "off" bit will be rendered using the background color. If the "background tint" property is not set, the "off" bit will do nothing (anything drawn beneath the bitmap will show through the off bits). Both the tint and background tint properties are specified using the glulx color value kind of value (see the Glulx Text Effects extension).
 
-There are two types of bitmaps: 
+There are two types of bitmaps:
 
 	Monochrome bitmap - Each bit is either on or off. The "on" bit is specified using 1, the "off" bit using 0.
 
@@ -1850,13 +1850,13 @@ Polychrome bitmaps are not as human-readable as monochrome ones (white, for exam
 
 Section: Image-maps
 
-An image-map is similar to a bitmap in that the author defines a regular grid for graphical display. However, rather than each cell of the grid displaying a rectangular area of color, it draws an image from a PNG or JPEG file. This could be used for drawing tile-based maps (as in RPG games), sliding-block puzzles, graphical user interfaces, or a number of other things. 
+An image-map is similar to a bitmap in that the author defines a regular grid for graphical display. However, rather than each cell of the grid displaying a rectangular area of color, it draws an image from a PNG or JPEG file. This could be used for drawing tile-based maps (as in RPG games), sliding-block puzzles, graphical user interfaces, or a number of other things.
 
 There are two types of image-maps:
 
 	Tileset image-map - Specified using a list of lists of numbers called the "tile-array", where each row is given as a list of numbers. These numbers are keyed to an "associated tileset", basically a translation-table that converts the digits to figure names. The tileset allows for one set of images to be changed out for another with a single line; for example, a map could change from day to night simply by changing the image-map's associated tileset. Tilesets also allow image-map lists to be relatively human-readable. For example, the following might represent a long hallway with a door on the left:
 
-		{ 
+		{
 			{ 11, 11, 11, 11, 11, 11, 11 },
 			{ 05, 00, 00, 00, 00, 00, 00 },
 			{ 05, 00, 00, 00, 00, 00, 00 },
@@ -1865,7 +1865,7 @@ There are two types of image-maps:
 
 	Direct image-map - Specified using a list of lists of figure names called the "figure-array", where each row is given as a list of numbers. When typed out, the figure-array will be more difficult to read than a tileset-array, at least when there are more than a few cells in the grid. The figure-array of a simple six-cell grid might read like this:
 
-		{ 
+		{
 			{ Figure of Red, Figure of Blue },
 			{ Figure of Blue, Figure of Red },
 			{ Figure of Red, Figure of Blue }
@@ -1884,7 +1884,7 @@ We must also specify the width and height of the tiles in an image-map. For a di
 If we know the total width or total height we want an image-map to fit into, we can also automate the specification of these properties using these phrases:
 
 	fit my image-map to a total width of 120 canvas units;
-	fit my image-map to a total height of 150 canvas units; 
+	fit my image-map to a total height of 150 canvas units;
 
 Be sure to invoke these before drawing the image-map for the first time. The extension will attempt to get as close as possible to these measurements, but may not be able to match exactly; for best results, make your final measurement evenly divisible by the number of tiles in the row or column (120 canvas units divided by 10 cells = 12 units each). Use Glimmr debugging (see below) to see the final dimension selected.
 
@@ -1906,7 +1906,7 @@ After we have set up these correspondences between image tiles and commands, we 
 
 	For tileset image-maps:
 		construct graphic hyperlinks array for my image-map.
- 
+
 	For direct image-maps:
 		construct graphic hyperlinks array for my image-map using the Table of My Image Maps Commands.
 
@@ -1932,7 +1932,7 @@ We can also convert between the internal coordinates of an image-map and the coo
 
 	the canvas coordinate equivalent of {5, 5} in the internal coordinates of my image-map;
 
-To get the internal coordinates corresponding to a given canvas coordinate: 
+To get the internal coordinates corresponding to a given canvas coordinate:
 
 	the equivalent of canvas coordinates {150, 200} in the internal coordinates of my image-map;
 
@@ -1968,13 +1968,13 @@ We can "dump" the data in an image-map to the screen by typing "image-map <the n
 Note that image-maps may run particularly slowly in the IDE. Test them in an outside interpreter to gauge true performance.
 
 
-Section: Rendered strings 
+Section: Rendered strings
 
 A rendered string is a graphic element that renders an indexed text string graphically. The string is read character by character from the element's "text string" property, and each character is drawn to the screen using either an image file or a bitmap. Note that rendered strings are not accessible to screen readers.
 
-Rendered strings need to have a font specified in their "associated font" property in order to function. A font in this sense is a special kind of object; its major task is to link letterforms (images or bitmaps), via a lookup table, with the characters they are meant to represent. Two fonts are available with Glimmr (Glimmr Image Font and Glimmr Bitmap Font), and authors are of course free to create their own fonts (see the documentation for Glimmr Drawing Commands). 
+Rendered strings need to have a font specified in their "associated font" property in order to function. A font in this sense is a special kind of object; its major task is to link letterforms (images or bitmaps), via a lookup table, with the characters they are meant to represent. Two fonts are available with Glimmr (Glimmr Image Font and Glimmr Bitmap Font), and authors are of course free to create their own fonts (see the documentation for Glimmr Drawing Commands).
 
-Rendered strings can be left-aligned (the default), center-aligned, or right-aligned; the alignment determines whether the origin coordinate will represent the upper left, the upper center point, or the upper right of the rendered text. 
+Rendered strings can be left-aligned (the default), center-aligned, or right-aligned; the alignment determines whether the origin coordinate will represent the upper left, the upper center point, or the upper right of the rendered text.
 
 Rendered strings can manage the display of a cursor, which is drawn as a simple vertical line whose color is determined by the "tint" property of the rendered string (see below). This functionality is not likely to be useful except when paired with something like the Glimmr Canvas Text Input Fields extension, which handles mouse and keyboard input to allow for input to be accepted and understood via a graphics window. To display a cursor, provide a number 0 or greater via a rendered string's "cursor" property. This represents the position after which the cursor will be placed; e.g. with a cursor value of 0, the cursor will appear immediately before the first character in the string. To suppress display of the cursor (the default), provide a negative number for the cursor property.
 
@@ -2047,7 +2047,7 @@ And now, as long as the Mario sprite appears in the window, clicking on it with 
 
 A graphlink-active element that overlaps another in the display layering system will supercede the lower element. That is, if Mario, on display-layer 4, partially overlaps a hyperlinked mushroom  sprite on display-layer 3, clicking within the boundaries of the rectangle that defines Mario will cause Mario's, rather than the mushroom's, linked replacement-command to be invoked.
 
-The background of a canvas cannot be hyperlinked. We can, however, imitate a clickable background by including a fully transparent sprite image of the same dimensions as the background and placing it on the lowest display-layer (usually display-layer 1). 
+The background of a canvas cannot be hyperlinked. We can, however, imitate a clickable background by including a fully transparent sprite image of the same dimensions as the background and placing it on the lowest display-layer (usually display-layer 1).
 
 A final note: if we will need to have more than 120 hyperlinked elements active at a single moment, we need to extend the number of blank rows in the Table of Graphlink Glulx Replacement Commands. Graphic Window Sprites manages this table automatically, and we should not attempt to set entries in it directly--the table is rebuilt each time the sprite drawing rules are updated, so direct edits will be disregarded in any case.
 
@@ -2112,18 +2112,18 @@ This works by changing the origin coordinates of the window. In addition to spec
 		center the frame of the graphics-window on the center-point of Mario;
 		continue the action.
 
-Or, more concisely, we can simply say "center the frame of the graphics-window on Mario," which will have the same effect. 
+Or, more concisely, we can simply say "center the frame of the graphics-window on Mario," which will have the same effect.
 
 One note: if we have changed the alignment of a graphic element from left-aligned to center-aligned (see the property reference), we will need to specify this differently. Since the origin coordinate of a center-aligned element actually refers to the center-point of the element, we need to say "center the frame of the graphics-window on the origin of Mario". Centering the window on a right-aligned element will not have the desired effect.
 
 
 Section: Creating new kinds of elements
 
-The types of element defined in Glimmr Canvas-Based Drawing are, in most cases, pretty simple. They draw just one entity. But elements need not be so simple. The bitmap and rendered string elements, for example, actually draw many rectangles or images to the screen each time the element is called upon. 
+The types of element defined in Glimmr Canvas-Based Drawing are, in most cases, pretty simple. They draw just one entity. But elements need not be so simple. The bitmap and rendered string elements, for example, actually draw many rectangles or images to the screen each time the element is called upon.
 
 We can write our own custom rules for drawing elements. The Glimmr Automap extension, for example, creates a new g-element called the map-renderer. This works similarly to a tileset grid: the map-renderer iterates through grid-based map data produced by Mark Tilford's Automap extension, and for each space in the grid, it selects an appropriate tile from a tileset (the tileset is basically a table that relates each bit of map data to a given image). We use the element display rules to write behavior for new elements and element-kinds:
 
-	An element display rule for the map-renderer (this is the map-renderer display rule): 
+	An element display rule for the map-renderer (this is the map-renderer display rule):
 		...
 		repeat with count running from 1 to (map height * map width):
 		...
@@ -2145,7 +2145,7 @@ There is no limit on how many entities we can draw in a single element display r
 		if the highlighted item is graphlinked:
 			set a graphlink in the current window...
 
-We can also set multiple hyperlinks in the same element display rule. If, for example, our g-element is L-shaped, we can set two rectangular hyperlink zones (graphic hyperlink zones are always rectangular) at right angles to one another. 
+We can also set multiple hyperlinks in the same element display rule. If, for example, our g-element is L-shaped, we can set two rectangular hyperlink zones (graphic hyperlink zones are always rectangular) at right angles to one another.
 
 
 Section: Customizing element display
@@ -2167,11 +2167,11 @@ Since elements are objects, like any other entity of Inform's "thing" kind, we c
 		repeat with item running through g-elements assigned to the present window:
 			if the item can be seen by the player:
 				activate item;
-			otherwise:
+			else:
 				deactivate item;
 		continue the action.
 
-We could also potentially use other aspects of g-elements--particularly their relationships with one another--as means of organizing their display. I leave users to think about whether this kind of thing might have advantages for them. 
+We could also potentially use other aspects of g-elements--particularly their relationships with one another--as means of organizing their display. I leave users to think about whether this kind of thing might have advantages for them.
 
 If for some reason we actually want players to be able to see, pick up, and refer to some elements as if they were objects in the game world, we can declare those elements to be "publically-named":
 
@@ -2202,7 +2202,7 @@ Now Glimmr functions will announce themselves, as well as the particular extensi
 
 		To say >console:
 			say echo stream of main-window.
-	
+
 		To say <:
 			say stream of main-window;
 			say run paragraph on.
@@ -2232,12 +2232,12 @@ It can often be useful to control debugging commands from source text, rather th
 		activate rules tracing
 		suspend rules tracing
 		if rules tracing is active
-	
+
 	RULES ALL
 		activate intensive rules tracing
 		suspend rules tracing
 		if intensive rules tracing is active
-	
+
 	GLKLIST
 		show glk list [the GLKLIST command]
 
@@ -2248,7 +2248,7 @@ Chapter: Troubleshooting
 
 Runtime error "cannot divide by zero" (or similar):
 
-	The canvas dimensions have probably not been defined. Be sure you define the canvas before the window-drawing rules are run. 
+	The canvas dimensions have probably not been defined. Be sure you define the canvas before the window-drawing rules are run.
 
 Inform doesn't recognize the "image-ID" property, or a table in which it is used:
 
@@ -2274,7 +2274,7 @@ Test your game in all the interpreters you can get your hands on, and recommend 
 
 Chapter: Producing images for use with Glimmr
 
-Full instructions for producing images are well beyond the scope of this documentation, but a few notes and links will be useful. For almost all purposes, you will want to produce your images in PNG (Portable Networks Graphics) format. PNG graphics (file extension .png) can contain an "alpha channel" that defines transparent areas of the image, allowing for shapes that are not rectangular. They can be produced with Photoshop, of course, but also with many other programs, including the free, cross-platform GIMP software (http://www.gimp.org). Here are some sites that might be of use to you if you are unfamiliar with PNG graphics (Inform tends to mangle URL spacing in documentation, so you may need to edit these by hand or open the extension itself and copy the links from there into your browser): 
+Full instructions for producing images are well beyond the scope of this documentation, but a few notes and links will be useful. For almost all purposes, you will want to produce your images in PNG (Portable Networks Graphics) format. PNG graphics (file extension .png) can contain an "alpha channel" that defines transparent areas of the image, allowing for shapes that are not rectangular. They can be produced with Photoshop, of course, but also with many other programs, including the free, cross-platform GIMP software (http://www.gimp.org). Here are some sites that might be of use to you if you are unfamiliar with PNG graphics (Inform tends to mangle URL spacing in documentation, so you may need to edit these by hand or open the extension itself and copy the links from there into your browser):
 
 	http://en.wikipedia.org/wiki/Portable_Network_Graphics
 	http://www.libpng.org/pub/png/pngintro.html
@@ -2306,7 +2306,7 @@ Here is a list of properties common to all graphic elements (g-elements). Separa
 
 	graphlink status - indicates whether or not the element is accepting mouse input. Can be g-active (accepting input) or g-inactive. Default value: g-inactive
 
-	linked replacement-command - an indexed text containing a command that should be entered on the player's behalf when an element has received a mouse-click. The command will be automatically printed to the command line and parsed after clicking. Default value: "" (empty string, will have no visible effect) 
+	linked replacement-command - an indexed text containing a command that should be entered on the player's behalf when an element has received a mouse-click. The command will be automatically printed to the command line and parsed after clicking. Default value: "" (empty string, will have no visible effect)
 
 	win-x** - represents the x-coordinate of the element's origin AFTER it has been scaled according to the window's scaling factor; i.e., it refers to the position of the element in the window's coordinate system, not the canvas's. Default value: 0
 
@@ -2422,7 +2422,7 @@ Note that the alignment property functions differently for rendered strings than
 	background tint - a glulx color value (see the Glulx Text Effects extension) that defines the color of the background of the rendered string element. Will be drawn as a single block of color behind the letterforms. Default value: g-PlaceNullCol (null, no background will appear)
 
 	text-animation delay - a number defining the number of milliseconds that will be delayed after the drawing of each character of the text-string. Default value: 0
-	
+
 	cursor - a number defining the position of the cursor in the display of the rendered string. The cursor is only displayed when this property is 0 or higher. The cursor wil placed immediately after the string position; i.e., when cursor is 1, the cursor will be positioned immediately after the first character in the string. Default value: -99 (no cursor displayed)
 
 
@@ -2434,12 +2434,12 @@ This section presents a list of the properties associated with bitmap-rendered s
 
 	dot-size** - the final display size of each bit in the bitmaps of the associated font's letterforms, measured in pixels as output on-screen. Default value: 1
 
-	
+
 Section: Summary of the properties of image-rendered strings
 
 This section presents a list of the properties associated with image-rendered strings. Properties which the extension uses internally, and should not be referred to by the author, are marked with a double asterisk (**). All image-rendered strings also inherit the properties common to the g-element and rendered string kinds (see above for those properties).
 
-	calculated scaling factor** - a  number (decimal with four-digit precision) that represents the scaling factor of both the window and the rendered string element. 
+	calculated scaling factor** - a  number (decimal with four-digit precision) that represents the scaling factor of both the window and the rendered string element.
 
 
 Chapter: Contact info
@@ -2461,11 +2461,11 @@ Version 1: Initial release.
 Chapter: Examples
 
 A number of examples are included here, showcasing just some of the capabilities of Glimmr. Many of these require external resources (image files), which can be downloaded from http://code.google.com/p/glimmr-i7x/downloads/list. Compiled versions of the examples can also be downloaded, if you prefer to see the final result without compiling yourself.
- 
+
 
 Example: * Simple Buttons - In this example, we show how to create a simple set of buttons that the player can press to issue commands. (We use the most important meta-commands: undo, save, restore, and transcript.) The example requires the Glimmr Image Font extension, and you will need to copy the images associated with that extension to your project's Materials folder before building this example. The example also requires Glimmr Graphic Hyperlinks, which enables the buttons to accept mouse input.
 
-We make each button out of two g-elements: a stroked rectangle primitive creates the button's outline and color, while an image-rendered string provides the text of the button. This is convenient, since it doesn't require us to create our own images for each button. (Though using a single image for each button is in fact the most resource-efficient method.) 
+We make each button out of two g-elements: a stroked rectangle primitive creates the button's outline and color, while an image-rendered string provides the text of the button. This is convenient, since it doesn't require us to create our own images for each button. (Though using a single image for each button is in fact the most resource-efficient method.)
 
 Before we get to the buttons, we need to set up the window and canvas. For an example like this, Glimmr Simple Graphics Window would be an even easier way to set things up, but it's better if we show everything here.
 
@@ -2487,11 +2487,11 @@ Before we get to the buttons, we need to set up the window and canvas. For an ex
 
 	When play begins:
 		open up the graphics-window.
-		
+
 	[After printing the banner text:
 	say "[line break]This is one of two very similar examples for the Glimmr Canvas-Based Drawing extension. It demonstrates a simple set of UI buttons. The buttons are not sprites. In other words, they are created without the need to make external PNG or JPEG images. Instead, we use Glimmr's functions for easily drawing rectangles and more complex elements. An image-rendered string provides the button's text, and this is superimposed on a stroked rectangle primitive that creates the body of the button. A simple animation allows the button to change color briefly when pressed, to provide visual feedback.[paragraph break]".]
-	
-	
+
+
 	Table of Common Color Values (continued)
 	glulx color value	assigned number
 	g-LightGray	15066597
@@ -2501,7 +2501,7 @@ Before we get to the buttons, we need to set up the window and canvas. For an ex
 Now we create the buttons. We begin by setting up most of properties using subclasses of the stroked rectangle primitive and image-based string kinds--these are the "button" and "label" kinds. The buttons are primed to accept mouse input by making them graphlink-active. The labels merely float over the button; it is the latter which does all the work.
 
 Note that the image-based font is rather large, and we need to scale it down to a quarter of its actual size. Also note that the labels are center-aligned. This isn't necessary, but it does mean that if we change the text of the label slightly, we may be able to avoid changing the origin coordinate, since it will still attempt to center itself over the button background. Finally, we use display-layers to keep the label text, on layer 2, above the button background, on layer 1 (the default layer).
-	
+
 	*: A button is a kind of stroked rectangle primitive. The associated canvas of a button is the graphics-canvas. The tint of a button is g-LightGray. The background tint of a button is g-MidGray. The graphlink status of a button is g-active.
 
 	A label is a kind of image-rendered string. The associated canvas of a label is the graphics-canvas. The scaling factor of a label is 0.2500. The display-layer of a label is 2. The alignment of a label is center-aligned.
@@ -2529,10 +2529,10 @@ Note that the image-based font is rather large, and we need to scale it down to 
 
 
 We can include a little optional code to change the color of the button momentarily when it is pressed, then reverting back to the original color. We do this using Glulx's -time capability: when the button is pressed, we change the button's color, and start a short timer (85 milliseconds). When the timer runs out, we stop the timer and change the button back to the original color. Note that the window must be redrawn after each of these to show the state change to the player.
-	
+
 	*: To revert the/-- button/-- after (T - a number) millisecond/milliseconds:
 		(- glk_request_timer_events({T});  -)
-	
+
 	To stop the/-- timer:
 		(- glk_request_timer_events(0); -)
 
@@ -2547,7 +2547,7 @@ We can include a little optional code to change the color of the button momentar
 		follow the window-drawing rules for the graphics-window.
 
 This last part is even more optional, but it will ensure that the button acts correctly after UNDO. We set the timer to revert immediately after undoing the state of the last turn, to be sure that the buttons end in their resting state. To act after undoing, we either have to directly hack the template layer, or use an extension such as Undo Output Control, which is how we handle it here.
-	
+
 	*: Include Undo Output Control by Erik Temple.
 
 	After undoing an action:
@@ -2558,7 +2558,7 @@ Example: * Simpler Buttons - This example is a simple refinement of the previous
 
 Simpler Buttons also uses a bitmap font for variety's sake. Note that if you make the window too narrow--unplayably narrow, ly--the labels will not fit within the button outlines. This is because bitmaps can't be scaled below 1 pixel per bit, while the canvas itself is scaled to much less than this. This is something to be wary of whenever you are using bitmaps.
 
-The example starts out in essentially the same way as the previous: 
+The example starts out in essentially the same way as the previous:
 
 	*: "Simpler Buttons"
 
@@ -2576,14 +2576,14 @@ The example starts out in essentially the same way as the previous:
 
 	Hello is a room.
 
-	
+
 	Table of Common Color Values (continued)
 	glulx color value	assigned number
 	g-LightGray	15066597
 	g-MidGray	12829635
 
 
-Now we get to the new stuff. The short loop code that occurs before we open the graphics window sets origin coordinates of the labels by finding the center point of each button, then using that coordinate for the label's origin. We manually change the vertical coordinate for better fit (because the origin of the label is the top line rather than the center, we need to move it up, otherwise it will flow in from the center of the button down, filling up only the lower half of the button background). 
+Now we get to the new stuff. The short loop code that occurs before we open the graphics window sets origin coordinates of the labels by finding the center point of each button, then using that coordinate for the label's origin. We manually change the vertical coordinate for better fit (because the origin of the label is the top line rather than the center, we need to move it up, otherwise it will flow in from the center of the button down, filling up only the lower half of the button background).
 
 The text-string is replaced with the linked replacement-command of the button. Note that Inform is very picky about the conversion of text (the linked replacement-command of the button) into indexed text (the text-string of the label). We use a replacement routine to handle this task.
 
@@ -2596,7 +2596,7 @@ Compare the Table of Button Labels here with the one for Simple Buttons--we've b
 			now entry 2 of the origin of the current-label is 12;
 			replace the text "0" in text-string of the current-label with the linked replacement-command of item;
 		open up the graphics-window.
-	
+
 	A button is a kind of stroked rectangle primitive. The associated canvas of a button is the graphics-canvas. The tint of a button is g-LightGray. The background tint of a button is g-MidGray. The graphlink status of a button is g-active.
 
 	A label is a kind of bitmap-rendered string. The associated canvas of a label is the graphics-canvas. The scaling factor of a label is 0.2500. The display-layer of a label is 2. The alignment of a label is center-aligned. The tint is g-Dark-Grey. The text-string is "0".
@@ -2621,7 +2621,7 @@ And the (optional) button animations (see the previous example for explanation):
 
 	*: To revert the/-- button/-- after (T - a number) millisecond/milliseconds:
 		(- glk_request_timer_events({T});  -)
-	
+
 	To stop the/-- timer:
 		(- glk_request_timer_events(0); -)
 
@@ -2629,12 +2629,12 @@ And the (optional) button animations (see the previous example for explanation):
 		stop the timer;
 		now the tint of the current graphlink is g-LightGray;
 		follow the window-drawing rules for the graphics-window.
-	
+
 	First graphlink processing rule for a button (called the depressed):
 		change the tint of the depressed to g-MidGray;
 		follow the window-drawing rules for the graphics-window;
 		revert the button after 85 milliseconds.
-	
+
 	Include Undo Output Control by Erik Temple.
 
 	After undoing an action:
@@ -2645,7 +2645,7 @@ Example: *** Basic Floorplan - Given IF's overwhelming focus on movement through
 
 This example shows how to construct a floorplan for a multilevel space, in a dynamic way: The map only shows rooms that the player has visited. In other words, the map reveals itself as the player moves through the game.
 
-Glimmr includes a set of images that can be used freely for constructing maps of this sort, and this example uses that set. The image files are rather generic, by design, to be useful in the widest number of situations. The predominant colors are white and dark gray, but because each tile is essentially monochromatic, the coloring is relatively easy to change using programs like Photoshop or GIMP (the latter is free). 
+Glimmr includes a set of images that can be used freely for constructing maps of this sort, and this example uses that set. The image files are rather generic, by design, to be useful in the widest number of situations. The predominant colors are white and dark gray, but because each tile is essentially monochromatic, the coloring is relatively easy to change using programs like Photoshop or GIMP (the latter is free).
 
 The easiest way to use this set of map images is with the Glimmr Canvas Editor extension, which allows you to create a Glulx game file that contains a graphics editor. Place and scale the images as you like them, and the editor will output I7 source code for you. The source code for this example was generated using Glimmr Canvas Editor. (It's been cleaned up slightly, and the Scenario and Associated Rooms with Images sections were added, but otherwise it is fairly representative of the code produced by that resource. The canvas editor is highly recommended for most complex compositions.)
 
@@ -2665,7 +2665,7 @@ The scenario definition is followed by the list of figures. The list of figures 
 
 	Entrance Chamber is a room. "A stair spirals upward, and there is a doorway in the south wall."
 
-	The heavy door is an open door. "[if the heavy door is open]The heavy wooden door is open.[otherwise]The heavy wooden door is closed.[end if]". It is south of Entrance Chamber and north of Hall.
+	The heavy door is an open door. "[if the heavy door is open]The heavy wooden door is open.[else]The heavy wooden door is closed.[end if]". It is south of Entrance Chamber and north of Hall.
 
 	Guard Room is east of Hall. "An exit leads west."
 
@@ -2678,10 +2678,10 @@ The scenario definition is followed by the list of figures. The list of figures 
 	Flanking Chamber is south of Upper Chamber. "The passage leads back to the west."
 
 	North of Flanking Chamber is nowhere. West of Flanking Chamber is Upper Chamber. East of Upper Chamber is nowhere.
-	
+
 	[After printing the banner text:
 		say "[paragraph break]This is an example of a dynamic map built using Glimmr Canvas-Based Drawing. It provides a floorplan that reveals itself as the player moves through it. Each room is revealed as the player enters it, and each floor is pictured in a separate pane. A spare icon acts as an avatar for the player, showing the present location in the developing map.[paragraph break]This example was built using the "Basic Floorplan Toolkit" distributed with Glimmr. The Basic Floorplan Toolkit is an instance of the Glimmr Canvas Editor, a GUI graphics editor that allows you to build a composition graphically and output I7 source code describing it. Basic Floorplan Toolkit includes a set of images designed for use in creating simple floorplans in the style of those used by Emily Short in her pdf map for [i]Bronze[/i] (chosen as a model because of the manifest popularity of the style).[paragraph break]".]
-		
+
 
 	Chapter - Figure Definitions
 
@@ -2734,7 +2734,7 @@ Next we define our graphics window and its accompanying canvas. For other exampl
 
 	The graphics-window is a graphics g-window spawned by the main-window. The position of the graphics-window is g-placeabove. The measurement of the graphics-window is 50. The back-colour of the graphics-window is g-black.
 
-	The graphics-window canvas is a g-canvas. The canvas-width is 500. The canvas-height is 300. The associated canvas of the graphics-window is graphics-window canvas. 
+	The graphics-window canvas is a g-canvas. The canvas-width is 500. The canvas-height is 300. The associated canvas of the graphics-window is graphics-window canvas.
 
 	When play begins:
 		open up the graphics-window.
@@ -2744,7 +2744,7 @@ The next block of code is short but crucial--it controls the revelation of the m
 
 Our set of sprites is designed so that multiple elements may be needed to make up a room; for example, our Entrance Chamber includes a squarish shape for the room outline, a short hallway, a spiral staircase, and a door. Each of these is a separate sprite, but we need them all to be "turned on" at the same time when the player enters that room for the first time.
 
-The way we do this is by assigning a room to each sprite, its "associated room" property. Whenever we need to update the displayed map, we repeat through the inactive (undisplayed) elements and, if the location matches its associated room, we mark that element as active. 
+The way we do this is by assigning a room to each sprite, its "associated room" property. Whenever we need to update the displayed map, we repeat through the inactive (undisplayed) elements and, if the location matches its associated room, we mark that element as active.
 
 We then update the screen position of the player's avatar by looking up the location in the Table of Avatar Coordinates and using the x,y pair we find there.
 
@@ -2769,7 +2769,7 @@ Next we divide the basic elements into sub-classes, such as rooms, movable objec
 
 	*: Section - Room-element sprites
 
-	A room-element is a kind of sprite. The graphlink status of a room-element is g-inactive. The associated canvas of a room-element is graphics-window canvas. 
+	A room-element is a kind of sprite. The graphlink status of a room-element is g-inactive. The associated canvas of a room-element is graphics-window canvas.
 
 	Some room-elements are defined by the Table of Room-element Elements.
 
@@ -2796,7 +2796,7 @@ Next we divide the basic elements into sub-classes, such as rooms, movable objec
 
 	Section - Movable-element sprites
 
-	A movable-element is a kind of sprite. The graphlink status of a movable-element is g-inactive. The associated canvas of a movable-element is graphics-window canvas. 
+	A movable-element is a kind of sprite. The graphlink status of a movable-element is g-inactive. The associated canvas of a movable-element is graphics-window canvas.
 
 	Some movable-elements are defined by the Table of Movable-element Elements.
 
@@ -2808,7 +2808,7 @@ We have a couple of types of objects that are not sprites. Rectangle primitives 
 
 	*: Section - Backcloth rectangle primitives
 
-	A backcloth is a kind of rectangle primitive. The graphlink status of a backcloth is g-inactive. The associated canvas of a backcloth is graphics-window canvas. 
+	A backcloth is a kind of rectangle primitive. The graphlink status of a backcloth is g-inactive. The associated canvas of a backcloth is graphics-window canvas.
 
 	Some backcloths are defined by the Table of Backcloth Elements.
 
@@ -2823,11 +2823,11 @@ We have a couple of types of objects that are not sprites. Rectangle primitives 
 
 	A title-text is a kind of bitmap-rendered string. The graphlink status of a title-text is g-inactive. The associated canvas of a title-text is graphics-window canvas.
 
-	Ground_level_1 is a title-text.  The origin is {39, 63}.   The text-string is "Ground level". The associated font is Glimmr C&C. Ground_level_1 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The associated room of Ground_level_1 is Entrance Chamber. 
+	Ground_level_1 is a title-text.  The origin is {39, 63}.  The text-string is "Ground level". The associated font is Glimmr C&C. Ground_level_1 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The associated room of Ground_level_1 is Entrance Chamber.
 
-	Shaft_2 is a title-text.  The origin is {189, 63}.   The text-string is "Shaft". The associated font is Glimmr C&C. Shaft_2 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The display status of Shaft_2 is g-inactive. The associated room of Shaft_2 is Shaft. 
+	Shaft_2 is a title-text.  The origin is {189, 63}.  The text-string is "Shaft". The associated font is Glimmr C&C. Shaft_2 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The display status of Shaft_2 is g-inactive. The associated room of Shaft_2 is Shaft.
 
-	Upper_level_3 is a title-text.  The origin is {341, 63}.   The text-string is "Upper level". The associated font is Glimmr C&C. Upper_level_3 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The display status of Upper_level_3 is g-inactive. The associated room of Upper_level_3 is Upper Chamber.
+	Upper_level_3 is a title-text.  The origin is {341, 63}.  The text-string is "Upper level". The associated font is Glimmr C&C. Upper_level_3 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The display status of Upper_level_3 is g-inactive. The associated room of Upper_level_3 is Upper Chamber.
 
 Finally, the table that converts the location to the coordinates that the player's avatar should have onscreen. (These were mapped using Glimmr Canvas Editor's "instances" feature.)
 
@@ -2848,7 +2848,7 @@ Example: ** Wandering Rhodes - We want to show the player's location on a map, b
 
 This example illustrates one way to do this, by displaying the same canvas in two different windows, with each window having different framing parameters. We have a larger graphics window on the left, displaying the full map, scaled to fit in the window. A smaller window on the right displays a close-up of the map, centered on the player's location.
 
- Because this by itself is too easy, we also provide the ability to "TOGGLE" between two means of showing the player's location: a placemarker, a la Google Maps, and a box on the full map that marks the area shown in the inset view. The latter will also serve to illustrate how we can dynamically resize elements based on the size of our windows. 
+ Because this by itself is too easy, we also provide the ability to "TOGGLE" between two means of showing the player's location: a placemarker, a la Google Maps, and a box on the full map that marks the area shown in the inset view. The latter will also serve to illustrate how we can dynamically resize elements based on the size of our windows.
 
 	*: "Wandering Rhodes"
 
@@ -2872,7 +2872,7 @@ We then assign x,y coordinates to each room. These coordinates will determine wh
 	When play begins:
 		open up graphics-window;
 		open up the closeup-window;
-	
+
 	[After printing the banner text:
 		say "[line break]This example for the Glimmr Canvas-Based Drawing extension demonstrates the display of a single canvas in two different windows. The inset window at right shows a detail view of the main map window at left. The main window scales the canvas to fit, while the inset window always displays it at 100% of actual size, zoomed to the specific location shown by the placemarker in the main window.[paragraph break]The placemarker can be toggled between a pointer and a box the same size as the inset: Type TOGGLE at the command line to change it.[paragraph break]"]
 
@@ -2900,12 +2900,12 @@ We offer the player the choice to display the current location on the map using 
 			now the placemarker is the map inset;
 			activate the placemarker;
 			deactivate pointer;
-		otherwise:
+		else:
 			now the placemarker is the pointer;
 			activate the placemarker;
 			deactivate map inset;
 		refresh windows;
-		say "The placemarker will now be displayed [if the placemarker is the pointer]as an image[otherwise]using a box to depict the area displayed in the closeup window[end if]."
+		say "The placemarker will now be displayed [if the placemarker is the pointer]as an image[else]using a box to depict the area displayed in the closeup window[end if]."
 
 	Carry out looking:
 		follow the refresh windows rule;
@@ -2960,7 +2960,7 @@ Example: ** Roguelike-like - This example uses image-maps and some sprites to cr
 
 We use an image-map to display the outline of whatever room we are in. Some of the tiles are graphlinked, so that clicking on the floor of the room will move us one step in the direction clicked, and so that clicking on the exit to a room will take us out of the room. Only the latter takes any time: moving around within a room has no effect on actual gameplay in this example.
 
-We wouldn't have a roguelike, though, if all we had was a map. We also need characters that wander over the map. One way we could do this would be to layer multiple image-maps over one another--one map containing the characters, say, and another of the same size representing the base map. An easier method, the one this example employs, is to use sprites for the characters. 
+We wouldn't have a roguelike, though, if all we had was a map. We also need characters that wander over the map. One way we could do this would be to layer multiple image-maps over one another--one map containing the characters, say, and another of the same size representing the base map. An easier method, the one this example employs, is to use sprites for the characters.
 
 The tiles used in this example come from a set of tiles known as LoFi Roguelike, by TIGSource user oryx. These are very nice, low-resolution tiles. Each of the tiles is 8 x 8 pixels, but we display them here at 24 by 24. Link to LoFi Roguelike: http://forums.tigsource.com/index.php?topic=8970.0
 
@@ -2984,7 +2984,7 @@ Note the linked command entries in the tileset's translation table. These allow 
 	Figure of Stairs Up is the file "Stairs Up.png".
 	Figure of Stairs Down is the file "Stairs Down.png".
 	Figure of Table is the file "Table.png".
-	Figure of Torch Wall is the file "Wall with Torch.png". 
+	Figure of Torch Wall is the file "Wall with Torch.png".
 	Figure of Wall is the file "Wall.png".
 	Figure of Vertical Wall is the file "Vertical Wall.png".
 
@@ -3002,7 +3002,7 @@ Note the linked command entries in the tileset's translation table. These allow 
 	8	Figure of Floor	"east"
 	9	Figure of Floor	"south"
 	10	Figure of Floor	"west"
-	
+
 
 	Section - The Graphics Window
 
@@ -3012,17 +3012,17 @@ Note the linked command entries in the tileset's translation table. These allow 
 	When play begins:
 		follow the update dungeon map rule;
 		open up the graphics-window.
-		
+
 	[After printing the banner text:
 		say "[line break]This imitation of a roguelike game is an example for the Glimmr Canvas-Based Drawing extension. It features an image-map element that displays the map base for each room, using regular graphic tiles from a tileset known as LoFi Roguelike, by TIGSource user oryx (http://forums.tigsource.com/index.php?topic=8970.0). The character icons are borrowed from the same tileset, and are implemented in Glimmr as sprite objects.[paragraph break]Click on the floor of the room to move toward the location clicked. Click on the furthest floor tile of a map exit to move to the next room. Click on the player's avatar (the archer) to take inventory, or click on an enemy to attack it.[paragraph break]"]
 
 Sprites are displayed using the coordinate system of the canvas, but the characters we are using them to display will need to move according to the internal grid of our image-map. We handle this by giving the sprite a second set of coordinates that we will use for calculating the character's position on the map. We convert this coordinate to canvas coordinates (based on the current position of the image-map on the canvas) before scaling and drawing a sprite. This is the "convert origin coordinate" rule below, and it utilizes one of the phrases that GCBD provides for converting between canvas, screen, and image-map coordinate systems; see the section on image-maps in the documentation above for more.
 
-We want each room to have its own independent map, but there is no reason to create a different image-map element for each room. Instead, we have just one image-map object, the Dungeon Map. We assign each room a tile-array, and change the tile-array of the Dungeon Map to reflect the tile-array of the location. 
+We want each room to have its own independent map, but there is no reason to create a different image-map element for each room. Instead, we have just one image-map object, the Dungeon Map. We assign each room a tile-array, and change the tile-array of the Dungeon Map to reflect the tile-array of the location.
 
 At the same time, we also ensure that the appropriate characters are visible. Each character in the game (there are only two, the player and the beast at the end of his quest) has an associated sprite. Whenever we need to redraw the map--as usual, we do this in the looking rules--we activate the characters he can see and deactivate the ones he can't.
 
-	
+
 	*: Section - Element display and updating
 
 	Element scaling rule for a character-sprite (called the character) (this is the convert origin coordinate rule):
@@ -3036,7 +3036,7 @@ At the same time, we also ensure that the appropriate characters are visible. Ea
 	Carry out looking:
 		follow the update dungeon map rule;
 		follow the window-drawing rules for the graphics-window.
-	
+
 	This is the update dungeon map rule:
 		now the tile-array of the Dungeon Map is the tile-array of the location;
 		construct graphic hyperlinks array for the dungeon map;
@@ -3044,9 +3044,9 @@ At the same time, we also ensure that the appropriate characters are visible. Ea
 		repeat with P running through people:
 			if P can be seen by the player:
 				mark the character of P for display;
-			otherwise:
-				deactivate the character of P.	
-	
+			else:
+				deactivate the character of P.
+
 
 	Section - Image-map and Sprites
 
@@ -3054,7 +3054,7 @@ At the same time, we also ensure that the appropriate characters are visible. Ea
 
 	A character-sprite is a kind of sprite. A character-sprite has a list of numbers called the grid-coordinate. The display-layer of a character-sprite is 3. The graphlink status of a character-sprite is g-active. The display status of a character-sprite is g-inactive.
 
-	A person has a character-sprite called the character. 
+	A person has a character-sprite called the character.
 
 	Some character-sprites are defined by the Table of Characters.
 
@@ -3062,7 +3062,7 @@ At the same time, we also ensure that the appropriate characters are visible. Ea
 	character-sprite	image-ID	grid-coordinate	linked replacement-command
 	Bowman-sprite	Figure of Bowman	{4, 4}	"inventory"
 	Manticore-sprite	Figure of Manticore	{5, 7}	"attack manticore"
-	
+
 
 The next section contains the scenario and is fairly simple. We assign the character-sprites to our characters, and we also set the player's sprite to be active from the start.
 
@@ -3115,15 +3115,15 @@ We then define the rooms and other behavior. Note that each room has an image-ma
 
 	Every turn while the player is in the Den:
 		say "[one of]The Manticore roars[or]A snort echoes through the chamber. The Manticor shakes its mane[or]The Manticore stares at you. You feel that your impudence is truly epic[or]The spiked pad at the end of the Manticore's tail sways lazily over the beast's back[purely at random]."
-	
+
 	The Manticore is an animal in the Den. "The Manticore stirs. His eyes lock on yours." The character is the Manticore-sprite. The description is "More fearsome than the villagers said. A massive catlike creature. Its tail is studded with large, deadly spikes."
 
 	Understand "shoot [something]" as attacking.
-	
+
 	Instead of attacking the Manticore:
 		say "As you nock one of your spindly arrows, you ize just how foolish you have been. Before you can draw back the bowstring, the Manticore's tail stiffens and a shower of deadly spikes arcs toward you.";
 		end the story finally.
-	
+
 	Every turn when the player is in the Den:
 		if the player has been in the Den for three turns and the current action is not the action of attacking the manticore:
 			say "The Manticore has evidently tired of your dithering. He crouches low and, before you can fit your arrow, he flings a barrage of spikes from his tail.";
@@ -3140,7 +3140,7 @@ You will notice that this rule doesn't do any collision checking--what happens i
 
 	First graphlink processing rule when not the story has not ended:
 		rule fails.
-	
+
 	A graphlink processing rule for the Dungeon Map when the candidate replacement command is "-" (this is the handle movement rule):
 		now the candidate replacement command is "";
 		let L be a list of numbers;
@@ -3150,11 +3150,11 @@ You will notice that this rule doesn't do any collision checking--what happens i
 		let L be the equivalent of screen coordinate L in the coordinates of the Dungeon Map;
 		if entry 1 of L is greater than entry 1 of the grid-coordinate of the Bowman-sprite:
 			increase entry 1 of the grid-coordinate of the Bowman-sprite by 1;
-		otherwise if entry 1 of L is less than entry 1 of the grid-coordinate of the Bowman-sprite:
+		else if entry 1 of L is less than entry 1 of the grid-coordinate of the Bowman-sprite:
 			decrease entry 1 of the grid-coordinate of the Bowman-sprite by 1;
 		if entry 2 of L is greater than entry 2 of the grid-coordinate of the Bowman-sprite:
 			increase entry 2 of the grid-coordinate of the Bowman-sprite by 1;
-		otherwise if entry 2 of L is less than entry 2 of the grid-coordinate of the Bowman-sprite:
+		else if entry 2 of L is less than entry 2 of the grid-coordinate of the Bowman-sprite:
 			decrease entry 2 of the grid-coordinate of the Bowman-sprite by 1;
 		follow the window-drawing rules for the graphics-window;
 		rule succeeds.
@@ -3241,7 +3241,7 @@ If the player is holding fewer than 5 cards, we repeat through the number of pla
 
 When we 	set the graphic hyperlink zone for cards in the element display rule for a card, we identified that graphlink zone using the name of the card (card placeholders were identified as the card-manager rather than any particular card). When we click on a card, then, we can provide a special graphlink processing rule to handle the mouse input (see the Glimmr Graphic Hyperlinks extension for more on the graphlink processing rules).
 
-In this rule, we change the replacement command to refer to the name of the card, e.g. "discard the ten of hearts". 
+In this rule, we change the replacement command to refer to the name of the card, e.g. "discard the ten of hearts".
 
 In the next section, we provide phrases to assign the color and bitmap shape appropriate to a given card's suit.
 
@@ -3411,7 +3411,7 @@ From this point on, the code does not differ from the Inform documentation's "Ti
 				change suit of item to current suit;
 				now item is in the deck of cards;
 			change current suit to the suit after the current suit.
-		
+
 
 	Section 7 - The Deck and the Discard Pile
 
@@ -3419,7 +3419,7 @@ From this point on, the code does not differ from the Inform documentation's "Ti
 
 	The deck of cards is in the Casino. It is a closed unopenable container. The description is "A standard poker deck."
 
-	The discard pile is a closed unopenable container. The description is "Cards in this game are discarded face-down, so the discard pile is not very interesting to see. All you can observe is that it currently contains [if the number of cards which are in the discard pile is less than ten][the number of cards which are in the discard pile in words][otherwise]about [the rounded number of cards which are in the discard pile in words][end if] card[s]."
+	The discard pile is a closed unopenable container. The description is "Cards in this game are discarded face-down, so the discard pile is not very interesting to see. All you can observe is that it currently contains [if the number of cards which are in the discard pile is less than ten][the number of cards which are in the discard pile in words][else]about [the rounded number of cards which are in the discard pile in words][end if] card[s]."
 
 	To decide what number is the rounded number of (described set - a description of objects):
 		let N be the number of members of the described set;
@@ -3476,9 +3476,9 @@ From this point on, the code does not differ from the Inform documentation's "Ti
 			say "[run paragraph on]";
 			follow the hand-ranking rules;
 			if the rule succeeded, say "[the outcome of the rulebook]";
-			otherwise say "some random cards";
+			else say "some random cards";
 			if the outcome of the rulebook is pair outcome, say " of [rank of the first thing held by the player as a card value]s";
-		otherwise:
+		else:
 			say "[number of cards carried by the player in words] assorted cards";
 		say " (".
 
@@ -3612,9 +3612,3 @@ From this point on, the code does not differ from the Inform documentation's "Ti
 		high card.
 
 	Sort-debugging is a truth state that varies.
-
-
-
-
-
-

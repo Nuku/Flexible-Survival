@@ -142,7 +142,7 @@ to say AlexandraBrutusCuckScene:
 		say "While you are still creaming your underwear, Alexandra convinces her demon fuck-buddy to set her back down. She looks at your pretty bedraggled state, dripping cum and pleasuring yourself, then lets out an amused bark. Strolling over to you - a bit bow-legged from her own demon fuck though - she reaches out to pluck her clothes from your grasp. She looks at the cum stains all over them (the clothes got splurged, just like you), then takes a sniff and tells you with a teasing grin, 'And here I thought I gave these to you to keep clean. No matter, I like the smell actually - reminds me of a good time.' With that, she saunters off, still naked and with Brutus's cum trickling down the inside of her legs from her still somewhat gaping pussy. ";
 		now AlexandraBrutusInteraction is 1;
 		now lastdobiemess is 89; [Brutus creamed her pussy]
-		now lastfuck of Alexandra is turns;	
+		now lastfuck of Alexandra is turns;
 		let t be 2;
 		increase t by level of Alexandra;
 		if hp of Alexandra is even and a random chance of t in 5 succeeds:
@@ -155,7 +155,7 @@ to say AlexandraBrutusCuckScene:
 		say "     Alexandra isn't that easily discouraged and she follows after the purple giant, pushing herself against his thigh on the right side and brushing the shapely curves of her breasts against his hip. Brutus's knuckles creak as he clenches his fists even tighter, holding back from returning her caresses and he lets out a grunt through teeth grinding against each other. You give Alexandra a pointed stare which she casually ignores, then reaches for your demon pet's erection again. Yet her paw-hand glides right through as it and the rest of Brutus turn into purple smoke, swirling out of shape through her interaction with it before forming a vortex that stretches to the demontooth amulet you're holding up. Having intoned the command word, you draw your pet into his magical container, safely out of reach of the canine bitch before you.";
 		WaitLineBreak;
 		say "     'Spoilsport,' Alexandra barks, less than amused, then makes a few steps to pick up the jacket you so unceremoniously dumped on the floor. She shrugs into it, then zips up the front (a rare occurrence as she usually loves to present her breasts) and turns back to throw you a dirty look. 'Guess I'll have to look elsewhere to find something long and hard,' she adds in a mocking tease, stroking her fingers up and down the nightstick hanging from her belt. With that, she whirls around with a huff and stalks off.";
-		now AlexandraBrutusInteraction is 100; 
+		now AlexandraBrutusInteraction is 100;
 
 instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction is 0):
 	say "[NavCheck Grey Abbey Library]";
@@ -189,13 +189,13 @@ to say AlexandraKorvinCuckScene1:
 		say "     Shaking your head at the antics of the two of them, you stroke Korvin's head and neck, telling him he's a good dog and that he can keep fucking Alexandra as long as he stays loyal to you. Oh, and that he should really give it to her hard when he does, as Alexandra needs to be reminded who her bosses are. There is an amused snort from the kneeling woman as you say those words, but at least she refrains from contradicting you. You just know she'll fuck around again, but this way, you can pay her back a little by having Korvin take her extra hard and at the same time bind him ever tighter to you out of loyalty to his 'generous' alpha.";
 		now AlexandraKorvinInteraction is 1; [they fucked]
 		now lastdobiemess is 95; [Korvin creamed her pussy]
-		now lastfuck of Alexandra is turns;	
+		now lastfuck of Alexandra is turns;
 		let t be 2;
 		increase t by level of Alexandra;
 		if hp of Alexandra is even and a random chance of t in 5 succeeds:
 			increase hp of Alexandra by 1;
 			now lust of Alexandra is 1;
-			now AlexandraPupDaddy	is 3; [Korvin knocked her up]		
+			now AlexandraPupDaddy	is 3; [Korvin knocked her up]
 	else: [stop this - the player might not like Korvin being used this way, even if he has allowed Alexandra to get into cuck status]
 		LineBreak;
 		say "     With a sharp snarl, you call out the German shepherd's name, making him wrench his gaze away from the swaying orbs of Alexandra's breasts to look at you. The broad grin on his face turns into half of a snarl as he sees your expression, his lips drawing back from the dog's teeth. 'Fuuuuckkk,' he groans, then looks back at Alexandra as she bends forward and strokes his erection. 'Come on boss! She's ripe for the taking. I mean... come ON!' Korvin adds after that, frustration obvious in his exclamation. But no, you're unrelenting in your decision and shout for him to come over to you.";
@@ -219,7 +219,7 @@ to say AlexandraKorvinCuckScene2:
 	WaitLineBreak;
 	say "     'Yo bitch! Where are ya? I can smell that you need a fuck!' your attack dog barks out loudly and you can see the tip of his cock start to push out of its sheath. Not too far off, you see the red swirl of Alexandra's hair come up behind a sofa's backrest, with the doberwoman bitch looking over the edge and replying, 'Korvin! Finally. Been dying for a proper bone.' The way she stresses those last words and gives you a sidelong glance is pure provocation, Alexandra wanting to rub it in that she gets what she needs from other partners beside you. Following your companion as he dashes forward to get to her, you come around to see that Alexandra is stretched out on the sofa naked, her clothes lying in an untidy heap on the floor. Her hand is between her legs, stroking her pussy.";
 	say "     'Gonna be busy for a while boss,' Korvin says to you distractedly, never taking his eyes off the sexy canine spread out before him. By now, his knotted cock is fully hard, standing straight and erect, with the pointy tip aimed right at Alexandra. Meanwhile, she raises her hand from the matted fur on her crotch, raising it demonstratively to show the two of you the strings of her sticky female juices that stretch between the fingers. She gives you a teasing wave, then brings her hand to her muzzle and licks it clean, followed by sliding it back down and holding open her nether lips. 'Give it to me, big boy!' Alexandra adds, her eyes now fully focused on your attack dog.";
-	say "     [bold type]Will you stay to watch them?[roman type][line break]";	
+	say "     [bold type]Will you stay to watch them?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Oh yeah, bring on that canine action!";
 	say "     ([link]N[as]n[end link]) - Nah. Find a book or something to occupy yourself while you - try - to tune out their sounds.";
@@ -250,7 +250,7 @@ to say AlexandraKorvinCuckScene2:
 		increase hp of Alexandra by 1;
 		now lust of Alexandra is 1;
 		now AlexandraPupDaddy	is 3; [Korvin knocked her up]
-		
+
 instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is not gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
@@ -276,13 +276,13 @@ to say AlexandraKorvinCuckScene3:
 		increase hp of Alexandra by 1;
 		now lust of Alexandra is 1;
 		now AlexandraPupDaddy	is 3; [Korvin knocked her up]
-		
+
 instead of going up from Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and Carl is in Grey Abbey 2F and hp of Carl > 9 and hp of Carl < 40 and AlexandraCarlInteraction is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Alexandra makes a move on Carl - AlexandraCarlInteraction: [AlexandraCarlInteraction][line break]";
 	say "[AlexandraCarlOralCuckScene]";
-	
+
 to say AlexandraCarlOralCuckScene:
 	say "     Coming up the stairs to the upper floor of the library, you spot Carl at his usual watch-post in front of the big windows overlooking the street outside - and beside him is Alexandra, leaning casually against the wall. Looks like the doberwoman is having a friendly conversation with your husky [CarlStatus] - or maybe more than a little friendly, as you notice that she has her leather jacket pushed open fairly wide, baring her breasts fully. Even though he does his best to keep scanning the street for incoming danger, the canine soldier can't help but glance over at Alexandra's chest again and again, his bushy tail wagging a bit quicker every time he does. Curious of the things they're talking about, you wander a bit closer.";
 	say "     Carl is talking at the moment and says, '...I mean, having a canine squad would definitively benefit the army. I'm not saying that anyone but volunteers should go through the change, but once you get used to all this...' He waves a hand to indicate his body, glancing down at the digitigrade paws he stands on and lifting one to stretch and curl his toes. Then Carl looks back up at Alexandra - though his gaze 'snags' on the curves of her shapely boobs for a moment before he catches himself and somewhat shame-facedly looks her in the eyes. 'Erm, so... yeah. The advantages of being a dog are pretty great - the nose alone...' Carl goes on to say rather hastily and leans forward out of the open window, taking a sniff of the gentle breeze blowing past.";

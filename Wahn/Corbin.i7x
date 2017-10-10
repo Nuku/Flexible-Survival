@@ -1,6 +1,6 @@
 Version 1 of Corbin by Wahn begins here.
 [Version 1 - Put into its own file]
-	
+
 [ hp states of Corbin                                                   ]
 [   0: starting state                                                   ]
 [   1: had oral sex with the player                                     ]
@@ -55,9 +55,9 @@ to say CorbinDesc:
 		else if CorbinPregnancy is 1:
 			say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area (resulting from the perky breasts you know he has there). As you look at him, your thoughts run back to you fucking the equine cuntboy, thrusting into the tight pussy hidden by his pants. Corbin's chest is bare, showing off a well-built upper body with washboard abs. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";
 		else if CorbinPregnancy is 2:
-			say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area (resulting from the perky breasts you know he has there) - and an even more interesting bulge starting to show on his stomach, the result of [if libido of Corbin is 1]your[otherwise]someone's[end if] fertile seed being shot deep into his pussy. Corbin's chest is bare, showing off a well-built upper body with washboard abs. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";
+			say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area (resulting from the perky breasts you know he has there) - and an even more interesting bulge starting to show on his stomach, the result of [if libido of Corbin is 1]your[else]someone's[end if] fertile seed being shot deep into his pussy. Corbin's chest is bare, showing off a well-built upper body with washboard abs. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";
 		else if CorbinPregnancy is 3:
-			say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area (resulting from the perky breasts you know he has there) - and an even more interesting massive bulge on his stomach, showing his advanced state of pregnancy, the result of [if libido of Corbin is 1]your[otherwise]someone's[end if] fertile seed being shot deep into his pussy. Corbin's chest is bare, showing off a well-built upper body. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";
+			say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area (resulting from the perky breasts you know he has there) - and an even more interesting massive bulge on his stomach, showing his advanced state of pregnancy, the result of [if libido of Corbin is 1]your[else]someone's[end if] fertile seed being shot deep into his pussy. Corbin's chest is bare, showing off a well-built upper body. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";
 	else if hp of Corbin is 1:
 		say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area - which (as you now know) stems from a pair of perky breasts over a tight pussy. His chest is bare, showing off a well-built upper body with washboard abs. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";
 	else:
@@ -127,7 +127,7 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 		say "     The cat can look after himself generally, and the farm is a pretty peaceful place in today's world, so you jut leave the felinoid be. He'll return eventually, as he always does.";
 		now lastfuck of Corbin is turns;
 		move player to Central Farm Square;
-		
+
 instead of going to Central Farm Square while (companion of player is Felinoid companion and hp of Corbin > 1 and hp of Corbin < 100 and daytimer is night and a random chance of 1 in 3 succeeds):
 	if debugactive is 1:
 		say "DEBUG -> FELINOID + CORBIN WALKIN REPEAT <- DEBUG[line break]";
@@ -152,13 +152,13 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 			say "     Meanwhile, the equine farm worker is deep in the grip of his own lusts, driven into overdrive as they are by your feline companion's musk. Corbin gasps and pants loudly as he gives himself fully to his feral conqueror, with both legs hooked behind the big cat's and hands dug firmly into the felinoid's chest fur, holding on tightly. Between the pheromones, the hard erection rubbing his inner walls with its nubby spines and the simple reality of being mounted by such a large, virile animal, it doesn't take long before Corbin's moans rise to an almost shouted climax and he comes, soaking the big cat's crotch with squirted femcum. The felinoid stops his thrusts for a short moment after that, giving a pretty self-satisfied purr and rubbing his furry cheeks against Corbin again, then he starts mating the cuntboy with undiminished intensity.";
 			say "     Watching the hot coupling between the two unequal partners before you go on and on, with Corbin being driven to multiple screaming orgasms, one thing becomes clear - if the felinoid does pull someone under his spell, he certainly does an amazing job of taking care of them afterwards. Only when Corbin has been worn out almost completely, now just limply holding on to the big cat on top of him, does the lusty feline go all out in a rapid flurry of hard and deep thrusts until he himself roars out with his own climax. The large, furry orbs that are the big cat's balls twitch and pulse as spurt after spurt of his fertile seed splashes into Corbin's womb, filling him up with a huge load that eventually even squishes out around the felinoid's shaft.";
 			WaitLineBreak;
-			say "     After he finishes cumming, the felinoid pulls out of Corbin's well-bred pussy with a wet slurp, then turns around and sniffs the cuntboy's crotch. With a satisfied grumble in his throat, the cat gives the cowboy's crotch a few quick licks before throwing himself on the ground beside his latest conquest for a post-coital nap. Meanwhile, Corbin slowly comes out of the pheromone-induced haze he was in, weakly raising his head and reaching down to touch his gaping pussy. Raising his hand and looking at the cum sticking to its fingers for a moment, he then looks over to you. 'Man - that... was intense. [if Dexterity of Corbin is 1]I was wondering how it'd feel to have him hump my pussy since the last time this big furball came along with you. And I got to tell you... he's fucking great! [otherwise]I just can't get enough of this big furball's prick! [end if]Man, I really let myself get pounded like a bitch in heat.'";
+			say "     After he finishes cumming, the felinoid pulls out of Corbin's well-bred pussy with a wet slurp, then turns around and sniffs the cuntboy's crotch. With a satisfied grumble in his throat, the cat gives the cowboy's crotch a few quick licks before throwing himself on the ground beside his latest conquest for a post-coital nap. Meanwhile, Corbin slowly comes out of the pheromone-induced haze he was in, weakly raising his head and reaching down to touch his gaping pussy. Raising his hand and looking at the cum sticking to its fingers for a moment, he then looks over to you. 'Man - that... was intense. [if Dexterity of Corbin is 1]I was wondering how it'd feel to have him hump my pussy since the last time this big furball came along with you. And I got to tell you... he's fucking great! [else]I just can't get enough of this big furball's prick! [end if]Man, I really let myself get pounded like a bitch in heat.'";
 			now Dexterity of Corbin is 2;
 			now lastfuck of Corbin is turns;
 		else:
 			LineBreak;
 			say "     Quickly entering the stall, you grab the felinoid by the scruff of the neck and pull him aside. It's not an easy task, given the sheer size of the beast, but thankfully he relents after a moment of leaning stoically against what force you can bring to bear. With a somewhat annoyed low growl, the big cat pads out of sight without looking back, somehow creating the expression that he never wanted Corbin in the first place. Almost as if you didn't stop him, but he decided for himself that he wanted to go somewhere else. With the felinoid now gone, you bend down and take the dildo that Corbin had been using from the ground. It's shaped like a horse-cock you notice, flared tip and all.";
-			say "     As you stand there, inspecting the sex toy, Corbin slowly comes out of the pheromone-induced haze he was in. 'Phew, that musk of his is just... out of this world. [if Dexterity of Corbin is 1]I wonder how it'd feel to have him actually mount me...'[otherwise]Next time, you can let him just go for it... I don't mind. Just thinking about the spines on his shaft makes me all weak-kneed and wet.'[end if] Wiping himself off with a towel, Corbin pulls his jeans back on and grabs a water bucket, rinsing the suction cups out in it and afterwards cleaning the horsecock dildo. He then takes it to a storage closet standing against the back wall, hiding it inside and locking the closet for good measure.";
+			say "     As you stand there, inspecting the sex toy, Corbin slowly comes out of the pheromone-induced haze he was in. 'Phew, that musk of his is just... out of this world. [if Dexterity of Corbin is 1]I wonder how it'd feel to have him actually mount me...'[else]Next time, you can let him just go for it... I don't mind. Just thinking about the spines on his shaft makes me all weak-kneed and wet.'[end if] Wiping himself off with a towel, Corbin pulls his jeans back on and grabs a water bucket, rinsing the suction cups out in it and afterwards cleaning the horsecock dildo. He then takes it to a storage closet standing against the back wall, hiding it inside and locking the closet for good measure.";
 			if Dexterity of Corbin is 0:
 				now Dexterity of Corbin is 1;
 		move player to Milking Shed Main Room;
@@ -203,7 +203,7 @@ instead of going southwest from Central Farm Square while (hp of Corbin is 4 and
 			say "     With you already having knocked out three of their buddies, the other farmhands don't look quite as eager to be the next one in line. There's a moment in which looks go back and forth between them, then most of them pull away from you. One guy, on suddenly finding himself standing in the front after everyone stepped back, says 'Okay okay - you win. He's all yours.'";
 			say "     The confrontation over, the gathered horsemen help up their bruised buddies and go back to what they were doing before. That just leaves you and a pretty relieved-looking Corbin standing in the bunks area. He hugs you close, then says 'Thank you. That'll show them I'm not just a slut to be used.' He kisses you, then lets his hand wander down to your crotch, giving it a squeeze as he adds 'Not that I'm opposed to regular rolls in the hay - with the right person and on my schedule, not theirs.' With a suggestive wink, the cowboy cuntboy saunters over to his bed and lies back on it, grabbing a magazine to read.";
 			now hp of Corbin is 5;
-		now inasituation is false;	
+		now inasituation is false;
 		now horsefight is 0;
 
 instead of going southwest from Central Farm Square while (CorbinPregnancy is 4	and daytimer is day):
@@ -219,7 +219,7 @@ instead of going east from Central Farm Square while (CorbinPregnancy is 4	and d
 	else: [a horseman was the father]
 		say "     As you enter the barracks, Corbin quickly comes up to you and gives you a hug. 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he tells you that your child is in the barracks, a sweet little horseman boy in his early teens.";
 	now CorbinPregnancy is 0;
-	
+
 to say LoseInBarracksfight:
 	say "     With you out of action, there isn't anything left so stop the horny horsemen. In short order, they have Corbin on one of the beds and strip off his clothes while holding him down. 'You know you want a real man's cock to fuck you', the leader of the little mob tells the equine cuntboy as he pushes two fingers in and out of his soppingly wet pussy. 'At least your body knows what it needs. And I'm gonna give it to you!' With that, the large horseman climbs on the bed and slaps his thick cock against Corbin's pubic mound with a meaty thud or two. Then he positions his flared equine shaft at the transgendered cowboy's nether lips and thrusts in, grunting in satisfaction as he buries his manhood deep. Corbin can't stop himself from moaning loudly as the other farm-worker starts to fuck him hard, pounding his pussy with rapid thrusts.";
 	say "     For some time, grunts, moans and the sounds of the horseman's balls hitting the cuntboy's crotch fill the barracks, finally building up to a shouted 'Uh uh uuuuh - I'm gonna fill you up, slut!' as Corbin's fucker slams forward one last time and floods the equine cowboy's womb with a deluge of cum. After he finishes coming, the horseman then pulls out unceremoniously and is immediately replaced by another, who sinks his own shaft into Corbin's freshly bred hole with a wet squishy noise and starts to fuck him. This continues for quite a while, with all of the men taking a turn, or even two, before they allow the totally exhausted and sticky cuntboy some rest.";
@@ -418,7 +418,7 @@ to say CorbinSex4: [Corbin's pussy fucked]
 	if thirst of Corbin is 1: [in the barracks]
 		if hp of Corbin is 2 or hp of Corbin is 3: [player fucked him - or just saw him in the milking shed, his pussy still a secret]
 			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch - then he realizes where you are, stepping backwards and looking around with concern in his eyes. He says in a low whisper 'Phew - no one noticed. Please, we can't do this here.' He bites his lip, then takes a deep breath, fighting down his arousal 'No, we really can't - later, in the milking shed tonight, ok?'";
-			say "     [bold type]Do you accept this, or proceed anyways?[roman type][line break]";	
+			say "     [bold type]Do you accept this, or proceed anyways?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Accept it.";
 			say "     ([link]N[as]n[end link]) - Proceed anyway.";
@@ -497,7 +497,7 @@ to say CorbinSex5: [Corbin's ass fucked]
 	if thirst of Corbin is 1: [in the barracks]
 		if hp of Corbin is 2 or hp of Corbin is 3: [player fucked him - or just saw him in the milking shed, his pussy still a secret]
 			say "     Stepping up close to Corbin, you put your hand on his ass, giving it a good squeeze. He instinctively pushes back against you, suppressing a moan - then suddenly, gives you a shove away from him and says loudly 'I may be willing to give blowjobs, but I'm not taking it up the ass.' Seeing the surprised look in your face, he gives you a telling stare and a little nod to the side, where you see one of the other horsemen casually observing the two of you. Corbin gives you a wink, whispering 'Tonight, in the milking shed, ok?'";
-			say "     [bold type]Do you accept this, or proceed anyways?[roman type][line break]";	
+			say "     [bold type]Do you accept this, or proceed anyways?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -546,7 +546,7 @@ to say CorbinSex6: [Corbin milked]
 	if thirst of Corbin is 1: [in the barracks]
 		if hp of Corbin is 2 or hp of Corbin is 3: [player fucked him - or just saw him in the milking shed, his pussy still a secret]
 			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch - then he realizes where you are, stepping backwards and looking around with concern in his eyes. He says in a low whisper 'Phew - no one noticed. Please, we can't do this here.' He bites his lip, then takes a deep breath, fighting down his arousal 'No, we really can't - later, in the milking shed tonight, ok?'";
-			say "     [bold type]Do you accept this, or proceed anyways?[roman type][line break]";	
+			say "     [bold type]Do you accept this, or proceed anyways?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";

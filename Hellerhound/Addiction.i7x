@@ -32,7 +32,7 @@ before using a grab object (called X):
 				break;
 		if foundaitem is 0:
 			say "ERROR: ADDICTION NOT FOUND";
-			
+
 
 withdrawel is a number that varies.
 an everyturn rule:
@@ -57,7 +57,7 @@ an everyturn rule:
 				increase the strength of the player by 7;
 				increase the dexterity of the player by 5;[leaves you worse off]
 				say "You have recovered from the drug.";
-	
+
 
 Section 2 - Test Drug
 
@@ -78,7 +78,7 @@ to say bloodpilluse:
 	now onbloodpill is 1;
 	increase bloodpillturns by 4;
 	increase the strength of the player by 10;
-	increase the dexterity of the player by 10; 
+	increase the dexterity of the player by 10;
 
 an everyturn rule:
 	if bloodpillturns > 0:

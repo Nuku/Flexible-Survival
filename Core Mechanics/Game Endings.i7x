@@ -41,7 +41,7 @@ to ratetheplayer:
 		increase score by tempnum;
 	if "Ultimatum" is listed in feats of player and score > 0:
 		now tempnum2 is (score / 10);
-	say "In Scenario: [bold type][scenario][roman type], You have achieved a score of [bold type][score][roman type].";
+	say "In Scenario: [bold type][scenario][roman type], you have achieved a score of [bold type][score][roman type].";
 	if gsgl is 1 and score > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
 	if "Ultimatum" is listed in feats of player and score > 0, say "Your Ultimatum perk grants you a bonus of [tempnum2] points.";
 	say "You've achieve the rank of: [bold type]";
@@ -81,7 +81,7 @@ to ratetheplayer:
 				say ".  Your confused, instinctual thoughts are sometimes broken by strange thoughts or images from a book you once read";
 			else:
 				say ".  With all the excitement you went through at the library, the book you found remains firmly in your mind";
-			say ".  In the Abbey, type [']dewey [bookcode entry]['] to find it again in your next game";
+			say ".  In the Abbey, type [bold type][']dewey [bookcode entry]['][roman type] to find it again in your next game";
 		say ".";
 	LineBreak;
 
@@ -95,12 +95,12 @@ when play ends:
 		say "     You have perished from [if hunger of player >= 100 and thirst of player >= 100]starvation and thirst[else if hunger of player >= 100]starvation[else]thirst[end if] and are no more.  Your body becomes a meal for another of the more predatory creatures roaming the city.";
 	else if bodyname of player is "DBrute Slave":
 		say "     Your new reality in hell focuses on satisfying the relentless lusts of your demon brute masters, as well as being shared around for any other hellspawn he feels like allowing a ride...";
-		stop the action;		
+		stop the action;
 	else if bodyname of player is "Demon Slave":
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
 		stop the action;
 	else if bodyname of player is "dead":
-		stop the action;		
+		stop the action;
 	else if humanity of the player is less than 10 and hp of the player is greater than 0:
 		if bodyname of player is "Dragoness" and hp of doctor matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
@@ -128,5 +128,5 @@ when play ends:
 				say "However, thanks to your unusual tendency to birth feral children, many of your young soon strike out on their own, often sneaking away in the night, as their instinct to breed and spread their infection takes control.";
 		if bodyname of player is "Dragoness":
 			say "Your dragon like body proves as much a curiosity as repulsion in those around you. You find gainful employment as a mascot for a theme park, where you are paid to wander the park and entertain the clients within. The job proves largely enjoyable, especially since the more annoying people are intimidated by your bulk and claws.";
-			
+
 Game Endings ends here.

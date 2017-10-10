@@ -26,7 +26,7 @@ Version 1 of Kyrverth by Speedlover begins here.
 [Pic one for descriptions and sizing]
 
 Section 1 - Basic Setup
-	
+
 Kyrverth is a man. The hp of Kyrverth is usually 0.
 The description of Kyrverth is "[KyrverthDesc]".
 The conversation of Kyrverth is { "<This is nothing but a placeholder!>" }.
@@ -59,7 +59,7 @@ to say DragonsDenDesc:
 			say "     In the centre of the room he has made a large wide nest from hay and twigs. Bits of chainmail are woven into the bits of wood, and glint in the light shining through the vault door. Occasionally you hear the sounds of the infected in the distance, bangs, crashes, sometimes even moans carry over ruined streets, but it is hard to pay them heed when you are in what feels like such a safe place.";
 		else if KyrverthStage is 3:
 			say "     In the centre of the room the large nest he made has been broken and remade. Now it is a heap of chainmail, and dragon scales that he curls around at night, safe in the knowledge it cannot be taken without waking him. Bits of chainmail and dragon scales are revealed when Kyrverth wakes, and glint in the light shining through the vault door, making patterns on the walls.";
- 
+
 to say KyrverthDesc:
 	if KyrverthStage is 0:
 		say "     A small red dragon, just under 5 feet tall. [one of]Tiny[or]Small[or]Little[or]Miniature[or]Minute[at random] red Scales cover him from head to toe and [one of]tiny[or]small[or]little[or]miniature[or]minute[at random] horns peek out from behind a muzzle filled with [one of]tiny[or]small[or]little[or]miniature[or]minute[at random] fangs. His hands are more claws than nails. Talons on his feet grip the ground surely, and scrape lines in the metal floor of the den. A thin tail helps him with balance, it seems to be 4ft long. [one of]Tiny[or]Small[or]Little[or]Miniature[at random] wings sprout from his back and twitch and flap occasionally as he goes about his day, but they don't look [one of]large[or]big[at random] enough to be functional...";
@@ -68,8 +68,8 @@ to say KyrverthDesc:
 	else if KyrverthStage is 2:
 		say "     No longer a weakling, Kyrverth is now just over 7 foot tall. The red scaled dragon strikes an intimidating figure, with a large maw containing a scary amount of teeth. He occasionally cleans bits of meat from between them with his claws and talons which are now much larger than before. His wings and tail are fully grown, letting him fly around at will. He occasionally picks up boxes around the room, showing off his newfound strength. His body shape reminds you of a swimmer - Lithe but with obvious muscle. Since you gave him the links of chainmail he has also grown a blond mane that helps to hide the silver token that hangs from a thin chain around his neck, reminding you that somehow this is still the little guy you met not that long ago.";
 	else if KyrverthStage is 3:
-		say "     No longer a weakling, Kyrverth has become a feral [one of]stud[or]beefcake[at random] of a dragon. Just over 7 foot tall and built like an athlete, the dragon seems to have reached his final size. He is 12 feet long from head to backside, and a reddish tail extends another 8 feet past that. A blond mane sits above a large muzzle with large, expressive blue eyes, which look around constantly for threats to his hoard. A mouth filled with sharp teeth, ready to tear into anything that tries to steal from the dragons den, ensures that whatever he spots, wont get away with the treasure. Wide shoulders conceal massive batlike wings that stretch at times to almost 50 feet wide, you know Kyrverth can fly with them and often see him carrying supplies through the air on his way back to the den. As you look at Kyrverths long prehensile tail, you notice something interesting - Two [one of]large[or]ponderous[or]bulging[or]vast[or]generous[or]considerable[or]hefty[or]immense[at random] balls sit behind a bulging vent. You wonder if you could tempt the dragon into playing with you at some point...";
-	
+		say "     No longer a weakling, Kyrverth has become a feral [one of]stud[or]beefcake[at random] of a dragon. Just over 7 foot tall and built like an athlete, the dragon seems to have reached his final size. He is 12 feet long from head to backside, and a reddish tail extends another 8 feet past that. A blond mane sits above a large muzzle with large, expressive blue eyes, which look around constantly for threats to his hoard. A mouth filled with sharp teeth, ready to tear into anything that tries to steal from the dragons den, ensures that whatever he spots, won't get away with the treasure. Wide shoulders conceal massive batlike wings that stretch at times to almost 50 feet wide, you know Kyrverth can fly with them and often see him carrying supplies through the air on his way back to the den. As you look at Kyrverths long prehensile tail, you notice something interesting - Two [one of]large[or]ponderous[or]bulging[or]vast[or]generous[or]considerable[or]hefty[or]immense[at random] balls sit behind a bulging vent. You wonder if you could tempt the dragon into playing with you at some point...";
+
 to say KyrverthSmellDesc:
 	if KyrverthStage is 0:
 		say "     The dragon barely smells of anything. There is a faint tang to the smell but you struggle to place what it is.";
@@ -79,12 +79,12 @@ to say KyrverthSmellDesc:
 		say "     The dragon has a musk to him, it smells nice but there is a tang to the smell and you struggle to place what it is. Something about the smell makes you feel [one of]nice[or]good[at random]...";
 	else if KyrverthStage is 3:
 		say "     The dragon has a [one of]thick[or]pungent[at random] musk that floods the room with a tang that invades your nostils and causes [if cocks of player > 0]your [cock of player] cock to engorge[else]your [one of]cunt[or]vagina[or]nether regions[at random] to moisten[end if]";
-	
+
 Section 2 - Talk
 
 instead of conversing the Kyrverth: [Catches the talk command]
 		say "[KyrverthTalk]";
-	
+
 to say KyrverthTalk: [Quest turnin check]
 	LineBreak;
 	if (SilverToken is 1 and KyrverthStage is 0 and KyrverthQuestGiven is 1): [Quest one end]
@@ -94,7 +94,7 @@ to say KyrverthTalk: [Quest turnin check]
 		now SilverToken is 0;
 		now KyrverthTimer is turns;
 	else if (carried of stray links >= 5 and KyrverthStage is 1 and KyrverthQuestGiven is 1): [Quest 2 end]
-		say "     [bold type]Aware of the 5 links of chainmail in your backpack, you wonder whether to give it to Kyrverth[roman type][line break]";	
+		say "     [bold type]Aware of the 5 links of chainmail in your backpack, you wonder whether to give it to Kyrverth[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -127,14 +127,14 @@ to say KyrverthTalk: [Quest turnin check]
 		now KyrverthTimer is turns;
 	else:
 		say "[KyrverthNormalChat]";
-		
+
 to say KyrverthNormalChat: [Quest give and normal chat]
 	if KyrverthQuestGiven is 0 and (KyrverthTimer - turns >= 6): [Quest give]
 		if KyrverthStage is 0:
 			say "     'Hi there, would you be willing to help me out? I have been trying to build up a hoard, but it's a bit too dangerous for me out there. Would you be willing to help get the first few [one of]pieces[or]parts[or]bits[at random] of my hoard? You should be able to find something in the [bold type]high rise district[roman type], maybe somewhere that deals in [bold type]jewels?[roman type]";
 			now Jewel Heist is not resolved;
 		else if KyrverthStage is 1:
-			say "     'You're willing to help me out again? Awesome! A proper dragon would defeat some knights and hoard their armour, but they wont come to me and there are some pretty [one of]scary[or]dangerous[at random] monsters between here and there so I cant go to them, could you bring me back [bold type]5 bits of chainmail?[roman type]'";
+			say "     'You're willing to help me out again? Awesome! A proper dragon would defeat some knights and hoard their armour, but they won't come to me and there are some pretty [one of]scary[or]dangerous[at random] monsters between here and there so I can't go to them, could you bring me back [bold type]5 bits of chainmail?[roman type]'";
 		else if KyrverthStage is 2:
 			say "     'I heard there were some eastern [bold type]dragons[roman type] in the [bold type]park[roman type] ruining our reputation. They are saying that THEY are the best dragons! Pffft, they wish! I would deal with them myself but someone needs to guard this hoard. Would you be willing to give them a telling off? Teach them a lesson, and bring me back [bold type]5 scales[roman type] as a trophy.'";
 		else:
@@ -171,7 +171,7 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 			else if ((cocks of player >= 1 and KyrverthStage is 3 and KyrverthMaleBoning is 1) or cunts of player >= 1):
 				say "     'Hows about you and I have some fun?' Kyrverths hand strays toward his vent and strokes it a few times, showing the tip of a massive cock 'Ive been wanting to make some eggs...'";
 		else if randomnumber >= 36 and randomnumber <= 40:
-			say "     'All my life I've had four limbs. Now I have four limbs and a tail and wings, it can be strange sometimes. I use the limbs almost without thinking, but when I try to use them consciously im a lot more clumsy with them.'";
+			say "     'All my life I've had four limbs. Now I have four limbs and a tail and wings, it can be strange sometimes. I use the limbs almost without thinking, but when I try to use them consciously I'm a lot more clumsy with them.'";
 		else if randomnumber >= 41 and randomnumber <= 45:
 			if KyrverthStage is not 3:
 				say "     'I wonder what my hoard is worth? And in what currency? Ever since the outbreak money has become a bit useless...'";
@@ -194,16 +194,16 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 				say "     'That's a great hoard you've given me, I can grow it on my own from now on, but please dont forget that I owe you one'";
 		else:
 			say "BUG - [randomnumber]"
-			
-Section 3 - Sex [Bear in mind Kyrverth has a massive cock in his final form - 26 inches.]	
-	
+
+Section 3 - Sex [Bear in mind Kyrverth has a massive cock in his final form - 26 inches.]
+
 instead of fucking the Kyrverth:
 	if KyrverthStage is 3:
 		if (KyrverthTimer - turns < 6): 		[He got fucked in the last 18 hours = 6 turns]
 			say "     'Sorry, but not right now, maybe later?'";
 		else if cocks of player > 0: 				[Male player]
 			if KyrverthMaleBoning is 0:
-				say "     Sorry bro, I do owe you one, but im really into girls...";
+				say "     Sorry bro, I do owe you one, but I'm really into girls...";
 				say "[KyrverthMaleCheck]";
 			else if KyrverthMaleBoning is 1:
 				say "[KyrverthAnalSex]";
@@ -214,14 +214,14 @@ instead of fucking the Kyrverth:
 			say "[KyrverthSex]";
 		else: [Player has no gender, large enough]
 			if KyrverthMaleBoning is 0:
-				say "     Sorry, I do owe you one, but im really into girls, and you don't have those parts...";
+				say "     Sorry, I do owe you one, but I'm really into girls, and you don't have those parts...";
 			else if KyrverthMaleBoning is 1:
 				say "[KyrverthMaleCheck]";
 	else:
 		say "     'You're nice and all, but I really need to focus on my hoard'";
-		
+
 to say KyrverthMaleCheck:
-	say "     [bold type]He doesnt sound too sure about that, do you want to try to convince him otherwise?[roman type][line break]";	
+	say "     [bold type]He doesnt sound too sure about that, do you want to try to convince him otherwise?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -247,7 +247,7 @@ to say KyrverthSex:
 		if hp of player <= 0:
 			now hp of player is 1;
 	WaitLineBreak;
-	[If player has a cunt length between 10 and 18 or they are scalevalue 1 with the kinky trait, kyrverth stuffs their cunt but cant get balls deep. Cum everywhere.]
+	[If player has a cunt length between 10 and 18 or they are scalevalue 1 with the kinky trait, kyrverth stuffs their cunt but can't get balls deep. Cum everywhere.]
 	[If the players cunt length is greater than 18, kyrverth fucks them in the cunt, gets balls deep, fucks them, knots, and cums. High chance of impregnation?]
 
 to say KyrverthAnalSex: [For null and male players]
@@ -338,7 +338,7 @@ to say KyrverthLargePlayerAnal:
 	say "     Your hole only puts up a little resistance, before he manages to spread you wider and wider around his knot, until you finally pass the widest point, the rest of it popping into you with a loud, wet squelch. [if cocks of player > 0]With your hole tied and your stomach bulging vaguely in the shape of a dragon cock, you cum, spilling your [cum load size of player] load onto the ground.[else]With your hole tied, you let out a loud moan of sheer pleasure.[end if] The dragon continues to fuck you, his movements limited by his own knot, which actually seems to be swelling larger along with his ridges as his climax draws near. He lets loose a mighty roar before he cums inside you, rope after rope of dragon seed filling your bowels. The thick cream coats your inner walls rapidly before it begins to fill up your insides. As more of the cum rushes into you, your belly begins to round out a slight bit more. By the time his flow starts to slow, you've swollen enough that movement might present a slight issue.";
 	WaitLineBreak;
 	say "     You're lover waits for a few minutes as his shaft softens and his knot deflates before pulling out of you, a rush of his own seed flowing out after him, covering your ass[if cocks of player > 0] and balls[end if] in it's heady scent. Your arms and legs give out from beneath you, and you flop to the ground. You simply lay there for a moment before you roll over with a groan to look at the massive feral dragon. He gives you a toothy grin. 'That was more fun than I was expecting. Perhaps we should do it again some time?'";
-	
+
 Section 4 - Events
 [Strange sighting - Encounter Kyrverth		]
 [Jewel Heist - First Quest					]
@@ -351,17 +351,17 @@ when play begins: [flags for blocking this event]
 	add Strange Sighting to badspots of guy;
 	add Strange Sighting to badspots of feral;
 	add Strange Sighting to badspots of furry;
-	
+
 Instead of resolving a Strange Sighting:
 	say "     As you walk down the street you could swear you saw a glimpse of red in a shop window but as you get close all that can be seen through the broken glass is a dark room with overturned or broken tables and chairs.";
-	say "     [bold type]Shall you investigate?[roman type][line break]";	
+	say "     [bold type]Shall you investigate?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go inside and have a look.";
 	say "     ([link]N[as]n[end link]) - Leave, it's none of your business.";
 	if player consents:
 		LineBreak;
 		say "     You push the door open with one hand and creep in. Through the haze of dust you see what used to be a bar. It looks like people left in a hurry, glasses still on the bar, tables and chairs have been knocked over, and the windows are broken.  Mounted above the counter, a carved wooden dragons head with the maw stuck in a roaring snarl grabs your eye, but you realise there is nothing here of use. As you turn to leave you spot the red again. A tiny bit of tail poking out from behind an overturned table. Creeping up on it, you place your feet well, and might as well be silent. Suddenly the floor creaks under your foot. The red tail twitches and you know what is going to happen next. You dive and grab it as a red blur bursts from behind and heads toward the exit.";
-		say "     Though it pulls strongly to get away, you keep your hold of the tail, reel it in and grab it's owners body. As you pin it to the floor you notice you have caught what may well be the smallest dragon in the city. He struggles with you for a second but you hold him easily. Realising he wont be getting away, he goes limp. A few seconds go by then he says 'Well, that's not the best of introductions is it? Shall we start again? I'm Kyrverth'. The diminutive dragon leads you to his hideout, a large vault in the next door bank. it's empty, but the heavy metal door - currently sitting on the ground, one hinge broken - makes you think of what might have been in here in earlier times, and what broke the door off it's hinges...";
+		say "     Though it pulls strongly to get away, you keep your hold of the tail, reel it in and grab it's owners body. As you pin it to the floor you notice you have caught what may well be the smallest dragon in the city. He struggles with you for a second but you hold him easily. Realising he won't be getting away, he goes limp. A few seconds go by then he says 'Well, that's not the best of introductions is it? Shall we start again? I'm Kyrverth'. The diminutive dragon leads you to his hideout, a large vault in the next door bank. it's empty, but the heavy metal door - currently sitting on the ground, one hinge broken - makes you think of what might have been in here in earlier times, and what broke the door off it's hinges...";
 		LineBreak;
 		say "     As he arrives he hands you a soda, saying 'sorry about that, I'm not exactly the biggest dragon, and I heard some of those savages talking about eating me...'.";
 		say "     [bold type]You head back to the library, maybe you should visit the dragon again in the High Rise District - later when he's calmed down a bit.[roman type][line break]";
@@ -391,7 +391,7 @@ when play begins: [flags for blocking this event]
 
 Instead of resolving a Jewel Heist:
 	say "     Walking down the street you spot a good source of jewels, a jewellery shop! The faded blue shop has two windows with bars behind them. Display cases inside catch your eye but a wolverine standing in front of the only entrance gives you pause. It would not be easy to try and fight your way past him, and he does not look friendly enough to trade with. You think about Kyrverth and resolve that this would be the easiest way to start his hoard.";
-	say "     [bold type]Now if only you could get past the guard at the door... Do you try?[roman type][line break]";	
+	say "     [bold type]Now if only you could get past the guard at the door... Do you try?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -422,8 +422,8 @@ Instead of resolving a Jewel Heist:
 	now battleground is "void";
 
 to say JewelHeistSneak:
-	say "    The wolverine stands by the front door, a permanent scowl on his face. His hand regularly strokes a bat hanging from a loop on his waist. Deciding not to try and fight him you walk around to the next street and go down the alley to the back of the shop. The rear door looks like it might be alarmed with a wire running down to a small box on the side of the door by the handle. If the alarm goes off you know the wolverine will come running.";
-	say "     [bold type]Will you try to disarm it?[roman type][line break]";	
+	say "     The wolverine stands by the front door, a permanent scowl on his face. His hand regularly strokes a bat hanging from a loop on his waist. Deciding not to try and fight him you walk around to the next street and go down the alley to the back of the shop. The rear door looks like it might be alarmed with a wire running down to a small box on the side of the door by the handle. If the alarm goes off you know the wolverine will come running.";
+	say "     [bold type]Will you try to disarm it?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -440,7 +440,7 @@ to say JewelHeistSneak:
 			now SilverToken is 1;
 	else:
 		LineBreak;
-		say "     You didnt want to disarm the door, [bold type]do you want to fight the wolverine or leave?[roman type][line break]";	
+		say "     You didnt want to disarm the door, [bold type]do you want to fight the wolverine or leave?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fight.";
 		say "     ([link]N[as]n[end link]) - Leave.";
@@ -471,9 +471,9 @@ to say JewelHeistFight:
 		now Jewel Heist is resolved;
 		now SilverToken is 1;
 	now inasituation is false;
-	
 
-	
+
+
 Section 5 - Endings
 
 [when play ends:

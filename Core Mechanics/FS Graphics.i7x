@@ -542,13 +542,13 @@ carry out artistcredits:
 	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sam (as Vixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sandra by Trav @ ???[line break]";
-	say "     Sarah by Lyttathebug @ deviantart.com[line break]";		
+	say "     Sarah by Lyttathebug @ deviantart.com[line break]";
 	say "     Septus by Feralise @ furaffinity.net[line break]";
 	say "     Septus (face) by Cirrusthecloud @ https://www.furaffinity.net/user/cirrusthecloud/[line break]";
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";
 	say "     Stella by Furball @ furaffinity.net[line break]";
 	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";		
+	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
 	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";

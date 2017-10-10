@@ -157,7 +157,7 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Male Dominator";
 	now attack entry is "[domattack]";
-	now defeated entry is "[domdef]"; 
+	now defeated entry is "[domdef]";
 	now victory entry is  "[domvictory]";
 	now desc entry is "[domdesc]";
 	now face entry is "is that of a wolf's with a pair of pointed wolf ears covered in [skin of player], a metal chain is rapped around your neck ";[ Face description, format as the text "You have a (your text) face."]
@@ -167,8 +167,8 @@ When Play begins:
 	now cock entry is "constantly hard canine";
 	now face change entry is "it stretches out into a wolf's muzzle, two pointed wolf's ears sprouting from the top of your head a second later, a chain appearing from nowhere and rapping around your neck"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your body's fat is converted into muscle, becoming that of a muscular wolf"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "soft and shiny black fur covers your body. "; 
-	now ass change entry is "a long wolf's tail grows and begins waggling happily."; 
+	now skin change entry is "soft and shiny black fur covers your body. ";
+	now ass change entry is "a long wolf's tail grows and begins waggling happily.";
 	now cock change entry is "it becomes canine, and incredibly hard."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 19;
 	now dex entry is 12;
@@ -177,7 +177,7 @@ When Play begins:
 	now int entry is 13;
 	now cha entry is 18;
 	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 70; 
+	now hp entry is 70;
 	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
 	now area entry is "Outside"; [ Current options are 'Outside' and 'Mall'  Case sensitive]

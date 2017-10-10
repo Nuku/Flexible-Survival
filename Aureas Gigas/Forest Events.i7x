@@ -5,7 +5,7 @@ One flew into the Cuckoos Nest is a situation.
 The sarea of One flew into the Cuckoos Nest is "Forest".
 CuckooWatched is a number that varies. CuckooWatched is usually 0.
 
-when play begins: 
+when play begins:
 	add One flew into the Cuckoos Nest to badspots of humorous;
 	add One flew into the Cuckoos Nest to badspots of guy;
 	add One flew into the Cuckoos Nest to badspots of girl;
@@ -20,22 +20,22 @@ Instead of resolving a One flew into the Cuckoos Nest:
 	say "     [line break]";
 	say "     ([link]Y[as]y[end link]) - Warn the guy.";
 	say "     ([link]N[as]n[end link]) - Don't say anything.";
-	if player consents:   
+	if player consents:
 		say "     You stop the Cuckoo and stumble with your words describing this awkward situation. The bird's eyes light up and he says, 'Oh! Thank you for telling me!' He then starts to sprint down the path, moving quickly towards his home. Curious to see what will happen next, you follow him. As he approaches the tent, the anthro bird stops and peeps at it from behind a bush. You hide there as well so you don't attract any attention.";
 		say "     Through the opening of the tent you can see the cuckoo girl riding the bull's long tapered cock in a reverse cowgirl position, her body exposed for anyone outside the tent to see. Aroused by this the male cuckoo begins to softly stroke his dick. It doesn't take too much longer before the bull bellows a loud moo and comes inside the girl. He takes a second to catch his breath before quickly leaving.";
 		WaitLineBreak;
 		say "     Stepping out of the entrance of the tent, still naked and with a trickle of cum running down the inside of her thighs, the cuckoo girl smiles and calls to you, 'You can come out now Gray, and tell your [if player is female]friend[else]buddy[end if] that they can come out as well.' The male cuckoo stands up and replies, 'Be right there Izzy.' Turning to you, he smiles and bashfully begins to explain that this kind of thing is normal for them. Seems like their infection left Izzy with a desire for big dicks and Gray with the desire to see her take them. Gray then hugs Izzy and playfully asks if 'she's grabbed life by the horns'. She gives him a friendly little swat against the chest and the two of them start to cuddle. You leave them be so they can enjoy an intimate moment.";
 		now CuckooWatched is 1; [warned the guy and saw the resolution with them happy together]
-	else:   
+	else:
 		say "     Deciding its not worth it to get involved in this type of drama, you keep your mouth shut and keep walking.";
 		now CuckooWatched is 100; [ignored the cuckoos]
 	now One flew into the Cuckoos Nest is resolved;
 	now Two Crash into the Cuckoos Nest is not resolved;
-	
+
 Two Crash into the Cuckoos Nest is a situation.	Two Crash into the Cuckoos Nest is resolved.
 The sarea of Two crash into the Cuckoos Nest is "Forest".
 
-when play begins: 
+when play begins:
 	add Two crash into the Cuckoos Nest to badspots of humorous;
 	add Two crash into the Cuckoos Nest to badspots of guy;
 	add Two crash into the Cuckoos Nest to badspots of girl;
@@ -58,7 +58,7 @@ Instead of resolving a Two crash into the Cuckoos Nest:
 	say "     [line break]";
 	say "     ([link]Y[as]y[end link]) - Head inside.";
 	say "     ([link]N[as]n[end link]) - Don't go inside.";
-	if player consents:   
+	if player consents:
 		say "     Quietly you head into the tent, making sure to leave the entry way open so people can see what goes on inside. Gray is still lost in the fantasy pumping his below average sized cock. Watching the bird up close you can see a certain charm to his appearance. He has a sleek and slender frame with a build that is in pretty decent shape. The cuckoo has a slightly masculine smell like sandalwood. Fortune favors the bold, so you lick your lips move your lean down to his crotch. Softly you start to lick the tapered tip of his avian cock.";
 		say "     Still lost in fantasy, the slim male groans and groggily states, 'Now you want to get spit-roasted... babe that's so fucking hot!' It seems like your involvement has made Gray's role in his fantasy more active. Feeling more daring you decide to start to sucking on his dick at an unhurried pace, gradually going further down the shaft with each bob of your head. After a few long moments of this drawn-out oral you reach the much thicker base, by now the entranced avian has stroking using his claw-like hands and is now caressing his body.";
 		WaitLineBreak;
@@ -85,7 +85,7 @@ Instead of resolving a Two crash into the Cuckoos Nest:
 Avian Tent is a situation. Avian Tent is resolved.
 The sarea of Avian Tent is "Forest";
 
-when play begins: 
+when play begins:
 	add Avian Tent to badspots of guy;
 	add Avian Tent to badspots of girl;
 
@@ -93,7 +93,7 @@ Instead of resolving a Avian Tent:
 	say "     As you are making your way through the forest you come across Izzy, the female member of the cuckoo couple you've met before. She is strolling down a path not too far from your own, heading deeper into the woods away from you. Based on the clothing she is wearing and only carrying a metal bar for self-defense it seems like she's on the 'hunt' for something besides supplies. The sexy avian wears a low cut white blouse which has been tied off to show her slender waist, combined with a skimpy tartan miniskirt that hardly conceals anything. As she bends down to get past a low-hanging branch you see that she doesn't have any panties on either.";
 	say "     Curious about whom the adventurous avian will bring back to her tent this time, you do stealthily tail her for a while, soon seeing her  approach the wreckage of a air force jet. There are deep scratches all along the fuselage  seems like this thing had a run-in with a wyvern or something similar. Nearby to the wreck is a makeshift shelter made using a parachute as a canopy. Under that sits a large anthro osprey, busy sharpening his combat knife by using a whetstone. This must have been the pilot. The fabric on his air-force jumpsuit is visibly strained by his enlarged form. Eyeing this fine example of masculinity, the cuckooess straightens her feathers for a moment and chuckles softly.";
 	WaitLineBreak;
-	say "     Swaying her hips as she walks up to the transformed pilot, Izzy says in a flirtatious tone 'Hey there fly-boy,  welcome to the neighborhood.' He grasps his knife tightly for a second, ready to defend himself, but soon relents as it becomes obvious that his visitor doesn't seem intent on forcing herself on him. Happy to have some non-hostile contact in the city, the man begins to chat with the slutty woman.  After a while of sharing tales about who they are and what is going on, Izzy offers, 'I can show you the community I live in. We're always ready to welcome new people that are still alright in the head, you know. And a person with your skills and physique would be greatly appreciated...' She emphasizes this point by stroking his bicep. The bird of prey shrugs and says, 'Better than sitting around here and watching the wreck rust, I guess. So sure, lead on.' A happy grin on her face, the cuckooess takes his hand and leads him back towards the camp.";
+	say "     Swaying her hips as she walks up to the transformed pilot, Izzy says in a flirtatious tone 'Hey there fly-boy, welcome to the neighborhood.' He grasps his knife tightly for a second, ready to defend himself, but soon relents as it becomes obvious that his visitor doesn't seem intent on forcing herself on him. Happy to have some non-hostile contact in the city, the man begins to chat with the slutty woman.  After a while of sharing tales about who they are and what is going on, Izzy offers, 'I can show you the community I live in. We're always ready to welcome new people that are still alright in the head, you know. And a person with your skills and physique would be greatly appreciated...' She emphasizes this point by stroking his bicep. The bird of prey shrugs and says, 'Better than sitting around here and watching the wreck rust, I guess. So sure, lead on.' A happy grin on her face, the cuckooess takes his hand and leads him back towards the camp.";
 	say "     Coming back down the same trail you followed her on, the two of them spot you before you can react  resulting in a friendly nod by Izzy as she leads her new-found piece of man-candy past you a moment later. She doesn't seem surprised to see you... could it be that the avian spotted you before and enjoyed being observed on her 'hunt?'. No matter which, as you go on to walk after them in a little distance, the would-be seductress intentionally bends over at certain narrow parts of the trail so that the osprey's gaze quickly gets  focused on her shapely booty and the absence of underwear on her person. It doesn't take long before a noticeable bulge in the crotch area can be seen on the pilot's jumpsuit.";
 	WaitLineBreak;
 	say "     Upon reaching the campground a couple of the infected walk up and begin to greet the new person. With more and more of the camp's inhabitants checking out the newcomer, it becomes obvious to you that Gray, the cuckooess's partner, isn't among the crowd. The osprey pilot talks to a couple of people, but eventually Izzy gets a bit impatient, leaning in against him and guiding one of his hands to caresses her ass. Getting the hint about what is going to happen next, the other inhabitants of the community soon do go back to what they had been doing previously  not without exchanging some grins and chuckles of course. Once done showing her guest the amenities of the small community, the pair arrive at the final destination of Izzy's tent.";
@@ -109,15 +109,15 @@ Instead of resolving a Avian Tent:
 		say "     The now submissive cuckooess hops off his lap and turns around giving you a very good view of her pussy, slick with her juices. Next she starts to lick the tapered tip of the pilot's impressive rod. In between licks the subby birdy teasingly says, 'How are you able to fit inside a cockpit when you're packing something like this sir? Having to giant joystick to deal with is probably why you crashed.' Grabbing the back of her head the sea hawk responds, 'You talk too much,' and pushes her head forward so that the mouthy femme can take his dick all the way to the enlarged base. I know a better use for that mouth of yours,' the forceful osprey says next. With the tapered tip of the pilot's phallus reaching the back of her throat, the woman can only manage to utter a very garbled, 'Yes sir.'";
 		WaitLineBreak;
 		say "     Izzy's eyes start to widen as she is kept deep-throating the shaft for a couple seconds longer than is comfortable. Releasing his grip, the osprey allows the cuckooess's beak to get off his cock and lies down on his back and states 'Now how about you ride me in reverse cowgirl position.' Taking a couple of seconds to catch her breath the exhausted woman nods and gets ready to move into place. Guiding the thick raptors rod between her nether lips the cuckoess grunts as it slides into her Meanwhile, having had to listen to his girlfriend being taken by someone he hasn't even seen yet, Gray's slightly undersized dick starts to leak precum. Noticing this the sea hawk give gives a sudden and forceful thrust of his hips causing the adulterous femme to sharply cry out.";
-		say "      Oozing with bravado the raptor says 'Bet you've never made her cry out like that before have you boy?' Meekly the diminutive cuckoo male shakes his head and says 'No sir...'. With a wry smile, the fighter jet pilot caresses the curves of the stuffed woman's curvaceous booty then says, 'Now I want you to use your hips to ride my dick, I'm not gonna do any thrusting, if you want to cum you have to earn it.' Turning her head to look at the face of the commanding male the woman winks one eye and energetically replies, 'Sir yes sir!' She then places her arms on the burly ospreys broad shoulders and starts to thrust her hips up and down to ride the large shaft. Picking up the pace she goes faster and fast coming ever closer to a climax.";
+		say "     Oozing with bravado the raptor says 'Bet you've never made her cry out like that before have you boy?' Meekly the diminutive cuckoo male shakes his head and says 'No sir...'. With a wry smile, the fighter jet pilot caresses the curves of the stuffed woman's curvaceous booty then says, 'Now I want you to use your hips to ride my dick, I'm not gonna do any thrusting, if you want to cum you have to earn it.' Turning her head to look at the face of the commanding male the woman winks one eye and energetically replies, 'Sir yes sir!' She then places her arms on the burly ospreys broad shoulders and starts to thrust her hips up and down to ride the large shaft. Picking up the pace she goes faster and fast coming ever closer to a climax.";
 		WaitLineBreak;
 		say "     By this point Izzy's tied-up lover in the corner is writhing on the ground, unable to touch himself and aching for release. Looking at this sight the big dicked male utters in a commanding tone, 'Get over here boy, I want the girl to give you a footjob.' Following the sound of his girlfriend's moaning the tied-up male moves close to the couple. Wrapping her talons along the small shaft the busy woman teasingly says, 'How does it feel love, to get the side dish while this stud is getting the main course. He's filling me up sooo well.' Getting a footjob, the male cuckoo squirms and trembles, trying to suppress his urge to cum  but he is just too turned on by the whole situation, as is she. Both of the cuckoos are on the very edge of climaxing, and a heartbeat later, the two cum with the female being the first one.";
 		say "     The bird of prey's shaft gets  covered in a deluge of squirted femcum while a couple of drops of the Gray's cuckoo's spunk lands on Izzy's right butt cheek and the osprey's heavy orbs. 'Clean up that mess boy!' barks the raptor, he then grabs the spent male's neck using one his foot talons .With his face pulled close to the other two's genitals , Gray starts to use his tongue to lick up the ejaculate. being especially thorough with the large balls. This new sensation causes the pilot to tense up and unload a massive amount of jizz inside Izzy.";
 		WaitLineBreak;
 		say "     It takes a few minutes for the three to catch their breath and recover. Sliding off the spent giant shaft; the sated cuckooess gets off her osprey partner's lap and start to untie the ropes and blindfold on her lover. Next she gives him a long passionate kiss using plenty of tongue. Beaming with joy she states, 'Oh my god Baby, that was so fucking hot! I loved every second of that! Are you sure you're okay with it sweetie?' Her partner eagerly nods. Shifting her head she then asks the spent dom, 'Is that convincing enough for you to stay Ace?' Grinning the osprey says 'I'll admit you do make a very convincing case.' Sitting up, he pats the other male on the shoulder and says,'Sorry if things got a little too intense...'";
-		say "    Interrupting him, Gray utters 'No! No! It was totally fine man.' Izzy then asks, 'My eyes were closed did you see who came first?' The osprey shakes his head and replies, 'I didn't have a good view of the situation. But I think your partner came before you did.' Accidentally rustling the bushes when you shift your position, you see the wheels inside the woman's mind work as she looks over in your direction. Suddenly her eyes light up and she starts to smile. Walking over to your locations she drags you out of the bush and asks 'So [if player is female]ma'am[else]buddy[end if] did you happen to see which one of us came first while you were being a peeping tom?' Bashfully you reply it was her. Gray smiles while the osprey gives him a thumbs up. You start to walk away while they are wrapped up in discussion and offering to help the osprey move.  Based on the tone you are hearing the start of a new unusual friendship.";
+		say "     Interrupting him, Gray utters 'No! No! It was totally fine man.' Izzy then asks, 'My eyes were closed did you see who came first?' The osprey shakes his head and replies, 'I didn't have a good view of the situation. But I think your partner came before you did.' Accidentally rustling the bushes when you shift your position, you see the wheels inside the woman's mind work as she looks over in your direction. Suddenly her eyes light up and she starts to smile. Walking over to your locations she drags you out of the bush and asks 'So [if player is female]ma'am[else]buddy[end if] did you happen to see which one of us came first while you were being a peeping tom?' Bashfully you reply it was her. Gray smiles while the osprey gives him a thumbs up. You start to walk away while they are wrapped up in discussion and offering to help the osprey move.  Based on the tone you are hearing the start of a new unusual friendship.";
 		Now CuckooWatched is 6; [watched the couple with the osprey partner. Gray won bet]
-	else:   
+	else:
 		say "     Deciding you don't want to watch this couple's unusual proclivities you walk away from the settlement, hearing the sound of the female's moans grow ever distant.";
 		Now CuckooWatched is 7; [did not watch the couple. Izzy won ]
 	now Avian Tent is resolved;
@@ -145,19 +145,19 @@ Instead of resolving a Sandwich Shop:
 	else:
 		say "     Seems a little too risky, with likely no reward, so you exit the store and walk in the opposite direction of where the wolves went.";
 	now Sandwich Shop is resolved;
-	
+
 [ BridgetPowellEventVar                                ]
 [  0: never met                                        ]
 [  1: watched Bridget fuck Powell                      ]
 [ 98: didn't help in the fight against the lizards     ]
 [ 99: didn't stay to see what Bridget does with Powell ]
-	
-	
+
+
 Thief's Punishment is a situation.
 The sarea of Thief's Punishment is "Forest".
 BridgetPowellEventVar is a number that varies. BridgetPowellEventVar is usually 0.
 
-when play begins: 
+when play begins:
 	add Thief's Punishment to badspots of guy;
 	add Thief's Punishment to badspots of girl;
 
@@ -176,7 +176,7 @@ instead of resolving Thief's Punishment:
 	say "     [line break]";
 	say "     ([link]Y[as]y[end link]) - Watch the thief get punished.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
-	if player consents:   
+	if player consents:
 		say "     You say you will watch, if only to make sure he doesn't get hurt too badly. After a cheerful nod to you, Bridget whispers in her captive's ear, 'Don't worry. I won't bite... hard.' The mouse's legs start shaking and a whimper escapes his throat, to which the tigress says, 'Just kidding... Sheesh can't even take a joke. All right sticky fingers - go kneel down by the bench!' Being let go, the diminutive captive glances towards the edge of the forest as if contemplating another (most likely futile) escape attempt, then gulps visibly and walks over to the bench. There he submissively kneels, his gaze lowered to ground level.";
 		say "     The massive feline walks after him and begins to peel off her shorts - smiling gleefully as she shows off her booty and her aroused pussy. The captured rodent's eyes dart back and forth between the ground and his captor's genitals. In a coy tone Bridget comments, 'You truly are a thief, even now you're stealing glances at me.' The shocked mouse stutters and repeatedly says sorry - drawing a chuckle from her. The tigress pats his cheek gently and smirks, then says cockily, 'You don't need to feel sorry, I've worked hard to get my ass to look like this. If anything I'd be more offended if you weren't peeking. Speaking of...how about you start making up for your mistake by worshiping my glutes.'";
 		WaitLineBreak;
@@ -184,22 +184,22 @@ instead of resolving Thief's Punishment:
 		say "     The dominant anthro tiger pulls her rodent captive's snout close to her pussy. Powell almost hyperventilates for a moment from the situation - and position - he finds himself in, then is broken out of that by a somewhat impatient mrowl from Bridget. He then starts to lick around the folds of her nether lips and gently sucks on her clit. The huge tigress lets out a few pleasured pants and pushes his head against her crotch. Growing increasingly more daring the diminutive captive begins eagerly licking inside her, really sticking his tongue deep and wiggling it around.";
 		WaitLineBreak;
 		say "     Pleased by her little mouse's efforts, the muscular feline lets out a few aroused growls and locks Powell into place between her muscled thighs. Knowing the only way to escape his captor's clutch is to finish what he has started, the slender mouse quickens the pace to bring the buff trainer to climax. After not too much longer, a loud roar echoes through the forest as Bridget orgasms - her thighs firmly pressing the rodent's head stuck in between. After riding out the wave of pleasure, Bridget eventually lowers her legs to the ground, with the repentant thief flopping down to lie lengthwise on the bed - panting to catch his breath and let the sides of his head recover from the squishing.";
-		say "     It takes a couple of minutes for both of them to recover. Embarrassed, Powell stands up and says in a hurried fashion,  'I'll be going now. I won't try something like that ever again, I swear. Bye!' But just as he is about to leave the tigress grabs his tail. 'Where do you think you're going, pint size? I didn't say you could just walk off scot free! If you think one little bit of tongue-wagging is enough, think again!' Bridget tells him in a domineering tone. Futilely tugging at his tail, the rodent starts to stammers out some words, but is immediately interrupted by the personal trainer shushing him.";
+		say "     It takes a couple of minutes for both of them to recover. Embarrassed, Powell stands up and says in a hurried fashion, 'I'll be going now. I won't try something like that ever again, I swear. Bye!' But just as he is about to leave the tigress grabs his tail. 'Where do you think you're going, pint size? I didn't say you could just walk off scot free! If you think one little bit of tongue-wagging is enough, think again!' Bridget tells him in a domineering tone. Futilely tugging at his tail, the rodent starts to stammers out some words, but is immediately interrupted by the personal trainer shushing him.";
 		say "     With a broad grin on her face, Bridget tells her caught thief, 'As your ongoing punishment, you're going to have to massage me, train with me, and see to my every need. In return I'll make sure you're well fed, protected from that gang of assholes, and a lot more in shape. Sound good?' Perplexed, the small mouse gapes at her for a second, then starts to smile and nods eagerly. Bridget slaps him on the back and says jovially, 'Great! I'll make a gym rat out of ya before you know it.' You can't help but smile about how this situation turned out as you leave, walking along one of the dirt tracks into the forest. Behind you, the two of them start doing some warm-up stretches.";
 		now BridgetPowellEventVar is 1; [player knows Powell's fate]
-	else:   
+	else:
 		say "     With a shrug, you shake your head and walk away.";
 		now BridgetPowellEventVar is 99; [player ignored Bridget and Powell]
 	now Thief's Punishment is resolved;
 	now Thief's Reformation is not resolved;
-	
+
 Thief's Reformation is a situation. Thief's Reformation is resolved.
 The sarea of Thief's Reformation is "Forest".
 
-when play begins: 
+when play begins:
 	add Thief's Reformation to badspots of guy;
 	add Thief's Reformation to badspots of girl;
-	
+
 instead of resolving Thief's Reformation:
 	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
 	say "     While walking through the woods, you once again find yourself near the fitness studio ruin and are reminded of the muscled tigress you encountered there earlier. Curious about how she is doing now you decide to head over. Soon stepping out into the little clearing, you see that the campsite is a little different than the first time. A fair bit of rubble from the front of the collapsed gym has been removed, forming a large mound a little off to the side. This now allows a glimpse into the inside of the building - or at least what's left of it, squished between the floor and low-sagging ceiling.";
@@ -210,7 +210,7 @@ instead of resolving Thief's Reformation:
 	if BridgetPowellEventVar is 99: [player doesn't know their arrangement]
 		say "As the two round a bend and come into view, you see it is Bridget the tigress - and also for some reason the mouse who tried to steal her water previously. Whatever the punishment was, it didn't seem too harsh based on the fact that he appears to enjoy his captors company now.";
 	else if BridgetPowellEventVar is 1: [player watched Bridget sex up Powell and adopt him]
-		say "As the two round the bend and are visible, you see it is Bridget and Powell. Remembering the 'punishment' it seems like the mouse didn't weasel out of the agreement and has been helping her in the salvage operation too. Based on the way the rodent looks at his trainer/captive it seems like he really loves the arrangement.'"; 
+		say "As the two round the bend and are visible, you see it is Bridget and Powell. Remembering the 'punishment' it seems like the mouse didn't weasel out of the agreement and has been helping her in the salvage operation too. Based on the way the rodent looks at his trainer/captive it seems like he really loves the arrangement.'";
 	WaitLineBreak;
 	say "     The two joggers see you and walk over give you a warm hello[if BridgetPowellEventVar is 99], including an introduction of the mouse as Powell[end if]. The four and a half foot tall rodent has certainly changed since you saw him last. Instead of the gangly nerdish physique he had previously, there are toned muscles on his frame now. While still being pretty slender, where once his biceps had the consistency of a wet noodle, there are now muscles that make him someone to be reckoned with. Furthermore, it seems like more than just his body has changed. The athlete in training appears to have lost a lost most of his nervous anxiety and apprehension, instead seeming quite calm and confident.";
 	say	"     Bridget steps forward and does her best to be a good host, saying, 'Let me go get some drinks for you and Powell, I've got a recipe for a dynamite protein shake.' She grabs two water bottles and a protein powder container then heads inside the tent. You ask the mouse what the two of them have been up to since you last met. Powell explains in an eager tone that Bridget has become his trainer and is very dedicated in making the best out of him. Clearing the rubble, weightlifting, and cardio exercises are all part of an intense training regimen that she set for him. Joyfully the male rodent explains how his feline fitness guru knows how to strike a perfect balance of punishment and reward to keep him well motivated. Judging from the way the bulge of his tight shorts throbbed when he said 'reward', it is fairly obvious that the tigress likes to use sex as a motivational goal.";
@@ -234,7 +234,7 @@ instead of resolving Thief's Reformation:
 		say "     Without any hesitation Powell plunges his manhood inside the feline and starts fucking her wildly, bracing himself against Bridget's rock hard abs. Bridget growls in lust and fills the clearing with pleased roars as she rocks her hips in tempo with his movements. Their intense mating quickly escalates to the point where both are at the edge of climax - then beyond. With satisfied shouts from both athletes, they come at the same time, with Powell's balls pumping a heavy load into Bridget's womb. Breeding his amazonian mistress, he puts enough cum into her to have it squirt our around his still thrusting shaft before too much longer, drenching the bench's leather padding in their mixed fluids.";
 		say "     As the studly mouse sinks forward to lay on Bridget's stretched-out form, his prick still balls-deep in her well-filled pussy, Powell rests his head on her large breasts for a little moment. Deep, contented purring starts to emanate from the depths of the sexy tigress's broad chest and she strokes his back affectionately - then gives a pleased mrowl as her little mouse proceeds to catch her nipple between his lips, suckling more tiger milk directly from the teat. You leave the two to enjoy their intimate moment, idly wondering how long it might take until the rodent has to share the bounty of Bridget's breasts with someone else - or several someones even. Not long would be your guess, if he always cums that much and keeps fucking her...";
 		now BridgetPowellEventVar is 2; [helped them in the fight]
-	else:   
+	else:
 		say "     You decide to play it safe and let the two jocks fight their own battle. Wishing them the best of luck, you quickly dash into the forest on the opposite side of the clearing to lizard gang-members. Behind you, there are sounds of a tough scuffle.";
 		now BridgetPowellEventVar is 98; [left them to fight alone]
 	now Thief's Reformation is resolved;

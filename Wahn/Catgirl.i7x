@@ -33,11 +33,11 @@ when play begins:
 
 to say Catgirl_Wins:
 	say "     The catgirl looks at you a bit disdainfully, then walks away with a flirt of her tail, on the lookout for a more worthy mating partner.";
-	
+
 to say Catgirl_Loses:
 	say "     With a lust-filled mrowl, the catgirl accepts your dominance, dropping to all fours and flirting her tail at you. She lowers her chest and spreads her legs a bit, presenting you with a pussy just ready to be mounted.";
 	say "     The little fight with her did get your blood pumping quite a bit, and you feel yourself tempted to have some fun with her.";
-	say "     [bold type]Do you do so?[roman type][line break]";	
+	say "     [bold type]Do you do so?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -46,15 +46,15 @@ to say Catgirl_Loses:
 		if cunts of player > 0 and cocks of player < 1: [female]
 			say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, softly pushing her over to sprawl on her back. Sitting down beside her, you run your hands over her breasts and then start to fondle her pussy. As she purrs and mrowls lustfully under your massaging fingers, your own libido awakens. You quickly remove your clothes and play with your own female parts in tandem with the catgirl's.";
 			say "     Her yowls and moans get louder and louder, and before too much longer, the catgirl orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you focus more on your own pussy, rubbing your fingers over its sensitive lips. Then you get another idea and softly take hold of the feline's tail, rubbing it against your pussy. With its soft length rubbing your private parts, you soon join the catgirl in her bliss.";
-			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her fur as you come down from your high. She proves her amazing flexibility by not only licking up any female juices that had flowed out of her pussy, but cleaning up the rest of her fur as well. Watching her bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off. Pretty flighty, these hot felines - [if CatgirlFucked > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad.[otherwise]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round.[end if]";
+			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her fur as you come down from your high. She proves her amazing flexibility by not only licking up any female juices that had flowed out of her pussy, but cleaning up the rest of her fur as well. Watching her bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off. Pretty flighty, these hot felines - [if CatgirlFucked > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad.[else]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round.[end if]";
 		else if cocks of player > 0: [male + herm]
 			say "     Who could resist such a nice invitation? Quickly throwing off your clothes, you take hold of your already half-hard cock and kneel behind the catgirl. Her fur feels amazingly soft against your shaft as you rub it over the inside of her legs, before bringing it to her moist opening. The feline girl gives a lust-filled yowl as you plunge in deep, burying your manhood into her in one quick thrust.";
 			say "     It feels great to reap the pleasure you earned by defeating her, the now willing catgirl gripping your cock tightly with her inner muscles as you fuck her. The sexy little feline is deep in the grip of heat, using her flexible body in any way she can to get you to cum inside her. Before long, her efforts bear fruit as the urgent need to spend your load rises in your balls. With one last deep thrust, you bottom out within her, shooting spurt after spurt of seed directly into her womb.";
-			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her soft fur until your shaft softens and slips from her body. She proves her amazing flexibility by not only licking up any cum that had flowed out of her pussy, but cleaning up the rest of her fur as well. Watching her bend and stretch has an invigorating effect on your maleness, and you're almost ready for another go when the catgirl finishes her cleaning and dashes off. Pretty flighty, these hot felines - [if CatgirlFucked > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad.[otherwise]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round.[end if]";
+			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her soft fur until your shaft softens and slips from her body. She proves her amazing flexibility by not only licking up any cum that had flowed out of her pussy, but cleaning up the rest of her fur as well. Watching her bend and stretch has an invigorating effect on your maleness, and you're almost ready for another go when the catgirl finishes her cleaning and dashes off. Pretty flighty, these hot felines - [if CatgirlFucked > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad.[else]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round.[end if]";
 		else: [neuter]
 			say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, softly pushing her over to sprawl on her back. Sitting down beside her, you run your hands over her breasts and then start to fondle her pussy. As she purrs and mrowls lustfully under your massaging fingers, your genderless body attunes with hers, letting you feel part of the pleasure you're giving her.";
 			say "     The catgirl's yowls and moans get louder and louder, and before too much longer, she orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you become a bit light-headed yourself. The fringe of orgasm you're picking up makes you think about becoming a female yourself.";
-			say "     She proves her amazing flexibility by cleaning herself up afterwards, licking her own female juices out of the fur between her legs. Watching her bend and stretch has an invigorating effect on you, waking a deep aching inside for a cock to fuck her with. All too soon, she finishes her cleaning and dashes off. Pretty flighty, these hot felines - [if CatgirlFucked > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad.[otherwise]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round.[end if]";
+			say "     She proves her amazing flexibility by cleaning herself up afterwards, licking her own female juices out of the fur between her legs. Watching her bend and stretch has an invigorating effect on you, waking a deep aching inside for a cock to fuck her with. All too soon, she finishes her cleaning and dashes off. Pretty flighty, these hot felines - [if CatgirlFucked > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad.[else]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round.[end if]";
 		if CatgirlFucked < 3:
 			increase CatgirlFucked by 1;
 	else:
@@ -64,7 +64,7 @@ to say Catgirl_Desc:
 	setmongender 4; [female]
 	say "     A slender black-furred female comes out of an alley a short distance ahead from you, meowing as she comes closer to have a look at you. She's a mixture between human and cat, having short fur covering her humanoid body, pointy ears, typical cat's eyes and a long tail. She walks with seductive grace on two digitigrade paws.";
 	say "     After a moment of studying you from a distance, it seems she comes to a decision and starts to give you a bit of a show. With flowing movements, she runs her hands over her own body, stroking over her own breasts and flirting her tail at you. Then she demonstratively bends over, flashing you her moist and ready pussy.";
-	say "     You find yourself almost hypnotized by her flowing movements and seductive demeanor and take a step closer before you can stop yourself. But as you do so, she hisses and bares her claws, though she is still showing off her body. Looks like she's in heat and wants [if cocks of player > 0]to be mated - but only by a partner who proves his strength and virility. [otherwise]someone to soothe her desires - but nevertheless only a person who proves their worth first. [end if]And she really wants to know if you qualify, it seems - jumping you a moment later with outstretched claws.";
+	say "     You find yourself almost hypnotized by her flowing movements and seductive demeanor and take a step closer before you can stop yourself. But as you do so, she hisses and bares her claws, though she is still showing off her body. Looks like she's in heat and wants [if cocks of player > 0]to be mated - but only by a partner who proves his strength and virility. [else]someone to soothe her desires - but nevertheless only a person who proves their worth first. [end if]And she really wants to know if you qualify, it seems - jumping you a moment later with outstretched claws.";
 
 Section 2 - Monster Insertion
 
@@ -153,7 +153,7 @@ to say FionaFirstMeeting:
 	if graphics is true:
 		project the figure of Fiona_icon;
 	say "     As you enter the library and move into the main room, a meow suddenly sounds from over near the bookshelves, drawing your attention. There is an anthro catgirl there, lounging comfortably on a sofa in one of the reading group arrangements - and not just any catgirl... you recognize her as the one you've had some fun with multiple times before. She must have decided you're worth her time and followed you here. Now that your attention is on her the sexy feline starts stretching and posing a bit in a very enticing manner, accompanied by needy little meows to give her what she's come to expect from you.";
-	say "     [bold type]Do you want to satisfy the horny feline's desires?[roman type][line break]";	
+	say "     [bold type]Do you want to satisfy the horny feline's desires?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -184,7 +184,7 @@ to say FionaRepeatMeeting:
 	if graphics is true:
 		project the figure of Fiona_icon;
 	say "     As you enter the library and move into the main room, a meow suddenly sounds from over near the bookshelves, drawing your attention. Your sexy catgirl Fiona is there, lounging comfortably on a sofa in one of the reading group arrangements. Seems she felt the need to come in again for some sexual gratification. Now that your attention is on her the beautiful feline starts stretching and posing a bit in a very enticing manner, accompanied by needy little meows to give her what she's come to expect from you.";
-	say "     [bold type]Do you want to satisfy the horny feline's desires?[roman type][line break]";	
+	say "     [bold type]Do you want to satisfy the horny feline's desires?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -234,7 +234,7 @@ to say FionaFangSex:
 		now FionaFangStatus is 1;
 	else:
 		say "     The library is filled with yowls, growls and the scratching or claws on the ground as you enter - sounds like Fiona and Fang are at it again...";
-		say "     [bold type]do you want to watch, or would you rather leave what will happen to happen and turn your attention elsewhere?[roman type][line break]";	
+		say "     [bold type]do you want to watch, or would you rather leave what will happen to happen and turn your attention elsewhere?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Watch.";
 		say "     ([link]N[as]n[end link]) - Leave.";
@@ -266,7 +266,7 @@ instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlS
 to say FionaCarlMeet:
 	say "     As you enter the library and move into the main room, you see Carl standing near the rows of bookshelves in the back, looking with interest at Fiona the catgirl as she lounges on a sofa, flirting her tail invitingly at him. Judging from the size of the bulge in the front of his pants, he's more than a little interested in what she has to offer. Though as the husky soldier walks closer and reaches out to touch Fiona, the catgirl stands up with a hiss, taking a fighting stance instead. She bares her fangs and holds them ready to claw at Carl - while still showing off her body and throwing 'come hither' looks at him. It's the same little game she did with you - a back and forth between the need to get bred during her heat and the wish to let only the strongest males fuck her.";
 	say "     'So that's how it is, you little minx,' Carl says with a chuckle, then pulls off his shirt, immediately followed by his pants. As soon as the last piece of cloth hits the ground, he lunges at Fiona with an eager grin on his muzzle. The two of them don't actually fight for real, it being more of a little dance for Fiona to let herself get caught without making it too easy, though even so, Carl gets a few claw-scratches before he finally manages to grapple the catgirl, holding her against his chest from behind. In between light panting, the husky says 'You just love playing hard to get, don't you kitty? Well, I got you now...' With that, he moves a hand up to cup her left breast, gently playing with the nipple and making her start to purr.";
-	say "     [bold type]It's more than obvious what will come next... unless you want to play party pooper?[roman type][line break]";	
+	say "     [bold type]It's more than obvious what will come next... unless you want to play party pooper?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -276,7 +276,7 @@ to say FionaCarlMeet:
 		now FionaCarlStatus is 100; [stopped them hooking up]
 	else:
 		LineBreak;
-		say "     [bold type]Do you want to watch as they go at it?[roman type][line break]";	
+		say "     [bold type]Do you want to watch as they go at it?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -314,7 +314,7 @@ instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlS
 
 to say FionaCarlRepeatFuck:
 	say "     As you enter the library and move into the main room, hear a lusty mrowl and eager grunt coming from a reading group near the back row of bookshelves. Looking over there, you see Carl's upper body stand up from behind the back rest of a sofa, holding on to and thrusting into what you're sure must be Fiona the catgirl.";
-	say "     [bold type]Do you want to walk up to them and watch as they go at it?[roman type][line break]";	
+	say "     [bold type]Do you want to walk up to them and watch as they go at it?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";

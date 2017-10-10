@@ -10,7 +10,7 @@ Chapter 1 - Abandoned Lot into Storage Room
 
 Section 1 - Lot Environment
 
-Abandoned Lot is a room. 
+Abandoned Lot is a room.
 Abandoned Lot is fasttravel.
 the description of Abandoned Lot is "[LotDesc]".
 
@@ -18,7 +18,7 @@ to say LotDesc:
 	say "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the nanite outbreak, this place clearly off the beaten path and ill-used. Bordering the lot are a series of broken-down, graffiti-coloured warehouses. Old 'Authorized Personnel Only' signs lay on the ground.";
 	say "A road leads east between the buildings. You can make out the entrance to a junkyard there";
 
-Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints -- human footprints, in fact! -- leading up to it[otherwise]There are many doors along the wall, but the only one open to you is the one leading outside[end if].";
+Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints -- human footprints, in fact! -- leading up to it[else]There are many doors along the wall, but the only one open to you is the one leading outside[end if].";
 
 Lot Exit is a door. Lot Exit is dangerous. The marea of Lot Exit is "Outside". Lot Exit is undescribed. Lot Exit is west of Abandoned Lot. West of Lot Exit is Outside Exploration.
 South of Abandoned Lot is Warehouse Door.
@@ -107,9 +107,9 @@ Instead of going south from the Abandoned Lot:
 				say "You barely see a pair of eyes look out at you before a man cries, 'Yikes!' and the slat closes rapidly. Perhaps it was your [facename of player] face.";
 		else if scalevalue of player is 1 or scalevalue of player > 3 or bodyname of player is listed in infections of Taurlist: [small or large player, or taurs]
 			if StevenSwayed is 1: [gave Steven soda before]
-				say "A person you recognize as Steven looks out at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but there's [italic type]no[roman type] way to hide [if bodyname of player is listed in infections of Taurlist]those four feet of yours. You're going to have to at least be humanoid, okay[otherwise if scalevalue of player is 1]just how small you are. They're sure to know something's up. Try to find a way to get back to normal size, okay[otherwise]big you've gotten. Try to find a way to shrink back down somehow, okay[end if]?' Giving you an apologetic look, he quickly closes the slat again right after that.";
+				say "A person you recognize as Steven looks out at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but there's [italic type]no[roman type] way to hide [if bodyname of player is listed in infections of Taurlist]those four feet of yours. You're going to have to at least be humanoid, okay[else if scalevalue of player is 1]just how small you are. They're sure to know something's up. Try to find a way to get back to normal size, okay[else]big you've gotten. Try to find a way to shrink back down somehow, okay[end if]?' Giving you an apologetic look, he quickly closes the slat again right after that.";
 			else:
-				say "You barely see a pair of eyes look out at you before a man cries, 'Yikes!' and the slat closes rapidly. Perhaps it was your [if bodyname of player is listed in infections of Taurlist]tauric body[otherwise]altered body and its [body size of player] size[end if].";
+				say "You barely see a pair of eyes look out at you before a man cries, 'Yikes!' and the slat closes rapidly. Perhaps it was your [if bodyname of player is listed in infections of Taurlist]tauric body[else]altered body and its [body size of player] size[end if].";
 		else:
 			say "'Hello! Who's there?' a man from behind the door says, looking out at you.";
 			if StevenSwayed is 1: [gave Steven soda before]
@@ -208,7 +208,7 @@ Instead of trading when the second noun is Steven:
 			say "Steven's eyes gleam for a moment, before he snatches the can and tucks it away. He pulls out a medkit. 'Don't tell anyone about this.'";
 			increment carried of medkit;
 			delete soda;
-		otherwise if the noun is chips:
+		else if the noun is chips:
 			say "Steven looks hungrily at the chips, and he carefully takes them off you and gives you back a medkit. 'You know, I'm breaking the rules for this,' as he winks at you.";
 			increment carried of medkit;
 			delete chips;
@@ -217,9 +217,9 @@ Instead of trading when the second noun is Steven:
 	else:
 		if the noun is soda:
 			say "Steven looks at the soda with an air of remembrance. 'You keep it,' he says. 'I've had enough soda for now.'";
-		otherwise if the noun is chips:
+		else if the noun is chips:
 			say "Steven shakes his head sadly. 'I think I lost my appetite for junk food, frankly.'";
-		otherwise if the noun is medkit:
+		else if the noun is medkit:
 			say "He shakes his head. 'Eh, you keep it. I'm not particularly injured right now.'";
 		else:
 			say "'Thanks, but no. You hang on to it.";
@@ -402,7 +402,7 @@ To Stevenjunkfuck:
 					say "[Stevenride]";
 				else:
 					say "[Stevensuck]";
-			otherwise if Stevenmm > 1:
+			else if Stevenmm > 1:
 				say ". As the equine man relaxes and enjoys the attention you're giving his shaft, you ponder how best to have fun with him. You might provide him with a [link]blow job (1)[as]1[end link] or [link]let him fuck your ass (2)[as]2[end link] again. Then again, given how relaxed he is with you now and anal sex, perhaps you might even be able to convince him to [link]let you be on top (3)[as]3[end link].";
 				now calcnumber is 0;
 				while calcnumber < 1 or calcnumber > 3:
@@ -410,7 +410,7 @@ To Stevenjunkfuck:
 					get a number;
 				if calcnumber is 1:
 					say "[Stevensuck]";
-				otherwise if calcnumber is 2:
+				else if calcnumber is 2:
 					say "[Stevenanal]";
 				else:
 					say "[Stevenonbottom]";
@@ -449,16 +449,16 @@ to say Stevensuck:
 	say "     After stroking the equine man till he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out. Leaning further forward, you slip the tip into your mouth, gently sucking on it. Groaning, you feel Steven placing his hand on your head, pushing you further down on his shaft, the thick length filling up your mouth. You gulp around the length, stroking the base of it as you begin bobbing your mouth up and down.";
 	say "     Your mouth is too much for the poor equine man to take and you feel the head of his cock flare up as he climaxes, pumping his thick cum down your throat. You gulp down as much as you can, but much of it squirts out around his shaft. When he finally empties his balls you slip his length out of your mouth and take a long needed breath. Panting hard you lick your lips and get about cleaning yourself off, but not before you move up and give Steven a good long kiss. He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.";
 	if ( "Submissive" is listed in feats of player or ( "MPreg" is listed in feats of player and cunts of player is 0 ) ) and a random chance of 2 in 5 succeeds:
-		say "     Steven smiles down at you and strokes your head. 'Mmm... I can tell what you're really after,' he nickers before moving around behind you. He pushes you forward onto all fours and runs his hands over your [bodydesc of player] body. 'You're really wanting the big stallion to mount you, aren't you?' he says. He runs his hand between your legs to tease your [if cunts of player > 0]pussy[otherwise]pucker[end if] while grinding his cock against your backside, leaking the last few dribbles of his previous load onto your ass. 'How about I take you like a mare, huh?' he asks, rubbing a pair of fingers over into your needy hole. Your ";
+		say "     Steven smiles down at you and strokes your head. 'Mmm... I can tell what you're really after,' he nickers before moving around behind you. He pushes you forward onto all fours and runs his hands over your [bodydesc of player] body. 'You're really wanting the big stallion to mount you, aren't you?' he says. He runs his hand between your legs to tease your [if cunts of player > 0]pussy[else]pucker[end if] while grinding his cock against your backside, leaking the last few dribbles of his previous load onto your ass. 'How about I take you like a mare, huh?' he asks, rubbing a pair of fingers over into your needy hole. Your ";
 		if "Submissive" is listed in feats of player:
 			say "submissive urges, already fired up from sucking off the virile male, have ";
 		else:
 			say "breedable backside, already aching to be filled after having sucked off the virile male, has ";
 		say "you moaning beneath him for him to mount you, bringing a smile to his equine face.";
-		say "     The strong horse guides his throbbing cock against your [if cunts of player > 0]pussy before thrusting into your wet hole[otherwise]pucker before thrusting into your tight hole[end if]. Climbing atop you, he nickers in pleasure as he fucks you, fucking you energetically despite having just gotten off[if breast size of player > 0]. He moves a hand to your [breast size desc of player] breasts, tweaking your nipples while he rides you[otherwise]. He rubs one hand over your flat [bodytype of player] chest[end if].";
+		say "     The strong horse guides his throbbing cock against your [if cunts of player > 0]pussy before thrusting into your wet hole[else]pucker before thrusting into your tight hole[end if]. Climbing atop you, he nickers in pleasure as he fucks you, fucking you energetically despite having just gotten off[if breast size of player > 0]. He moves a hand to your [breast size desc of player] breasts, tweaking your nipples while he rides you[else]. He rubs one hand over your flat [bodytype of player] chest[end if].";
 		if cocks of player > 0 and cunts of player is 0:		[male sub bonus scene]
 			say "     His hand moves lower, wrapping around your [cock size desc of player] [cock of player] dick and stroking it as he fucks you. 'What a strange mare you are with a leaking cock like this. You're a sexy mare though, aren't you? Or maybe I'm wrong and I should stop fucking you,' he says, slowing his thrusts and moving to withdraw from you. You release a soft whinny of need and push back onto his rod, replying that you want to be his sexy mare and that you need him to fill you. At your words, he thrusts back into you hard and resumes fucking you, still stroking your dribbling erection.";
-		say "     Having already fucked you a few minutes ago, the stallion has more endurance this time, making for a nice, long fuck that has you moaning and whinnying beneath him. He nuzzles at your neck and nips at it with his flat teeth as you both get hot and sweaty from the mating. Finally his excitement boils over and he thrusts hard into you one last time, blasting his hot load deep inside you. His loud, while not as big as the last, it still quite impressive and gives your [if cunts of player > 0]womb[otherwise]lower belly[end if] a wonderfully full feeling. After withdrawing, he wipes his spent shaft across your rear and snuggles you in his arms.[impregchance]";
+		say "     Having already fucked you a few minutes ago, the stallion has more endurance this time, making for a nice, long fuck that has you moaning and whinnying beneath him. He nuzzles at your neck and nips at it with his flat teeth as you both get hot and sweaty from the mating. Finally his excitement boils over and he thrusts hard into you one last time, blasting his hot load deep inside you. His loud, while not as big as the last, it still quite impressive and gives your [if cunts of player > 0]womb[else]lower belly[end if] a wonderfully full feeling. After withdrawing, he wipes his spent shaft across your rear and snuggles you in his arms.[impregchance]";
 
 
 to say Stevenanal:
@@ -474,7 +474,7 @@ to say Stevenonbottom:
 		say "     'What do you think you're doing? I don't know if I'm ready for that sor- Uhh... I mean, I'm not really interested in that,' he says, trying to sound firm though with that same repressed desire you've heard from him before";
 	else:
 		say "     'Whoa! Slow down there. I don't know if I'm up for that again,' he starts to protest, trying his best to hold back his desire";
-	say ". Seeing how his cock is as hard as ever, you give it a playful stroke and rub his tailhole again and grin at how it twitches."; 
+	say ". Seeing how his cock is as hard as ever, you give it a playful stroke and rub his tailhole again and grin at how it twitches.";
 	attempttowait;
 	let bonus be ( charisma of player - 10 ) / 2;
 	if "Haggler" is listed in feats of player:
@@ -484,8 +484,8 @@ to say Stevenonbottom:
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus]: [dice + bonus] vs 15:[line break]";
 	if bonus + dice is greater than 14:
-		say "     You continue to tantalize him, not pressing the matter too fast. You tell him how sexy he is and how hard just looking at him makes you. As you move to get him to lay back, you silence a half-formed protest with a kiss and remind him that [if Stevenmm is 2]you've let him fuck you a few times, so it'd only be fair to let you have a turn[otherwise]he seemed to enjoy it last time and that you just want to make him feel that good again[end if].";
-		say "     Your stiff, dribbling rod finds its place under his balls and against his dark red asshole. That horse pucker spreads open for you [if cock length of player < 20]readily, having little difficulty accommodating your [cock size desc of player] manhood[otherwise]slowly, having a little trouble with your [cock size desc of player] manhood[end if]. His ass is hot and grips so nicely around your pulsing shaft that you have to hold yourself back from pounding him right away. He releases a nickering moan and blushes all the redder upon your next thrust. While it's a little tempting to tease him, you instead resume stroking his cock, further keeping the strong horse happy as you fuck him.";
+		say "     You continue to tantalize him, not pressing the matter too fast. You tell him how sexy he is and how hard just looking at him makes you. As you move to get him to lay back, you silence a half-formed protest with a kiss and remind him that [if Stevenmm is 2]you've let him fuck you a few times, so it'd only be fair to let you have a turn[else]he seemed to enjoy it last time and that you just want to make him feel that good again[end if].";
+		say "     Your stiff, dribbling rod finds its place under his balls and against his dark red asshole. That horse pucker spreads open for you [if cock length of player < 20]readily, having little difficulty accommodating your [cock size desc of player] manhood[else]slowly, having a little trouble with your [cock size desc of player] manhood[end if]. His ass is hot and grips so nicely around your pulsing shaft that you have to hold yourself back from pounding him right away. He releases a nickering moan and blushes all the redder upon your next thrust. While it's a little tempting to tease him, you instead resume stroking his cock, further keeping the strong horse happy as you fuck him.";
 		attempttowait;
 		say "     The grinding of your cock against his prostate soon gets to him and he's panting heavily soon enough. You keep at playing with his cock and balls, enjoying how they pulse and throb with growing need. The sight of him laying there as you drill into him is wonderfully arousing; the tough stallion looks so sexy as he moans with a cock buried in his butt. As your pace picks up, he's not able to hold out much longer, the stimulation against his prostate eventually putting him over the edge. He groans loudly and cums in messy spurts across himself, staining his red coat with streaks of white.";
 		say "     The sight of him cumming's enough to push you over the top as well. Driving your [cock of player] shaft [if cock length of player < 18]fully [end if]into him, you groan and cum messily into his ass. Your gooey load pools in his bowels, making him extra-slick for the few last thrusts as you drain your balls in him. By the time you pull out, he's left panting and dazed with a sated smiled on his equine face.";
@@ -541,11 +541,11 @@ When play begins:
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]powerful[or]muscled[or]muscular[at random]";
 	now type entry is "equine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			
-	now resbypass entry is false;			
-	now non-infectious entry is false;		
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		
+	now altcombat entry is "default";
 
 
 Chapter 4 - Junkyard

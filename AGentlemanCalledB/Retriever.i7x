@@ -210,7 +210,7 @@ when play ends:
 			else:
 				say "     When the military finally moves into the city and the retriever infection still hasn't taken hold Rex takes you aside for a private moment, realizing that, despite convincing you to submit to him and accept a place as his pet, his 'training' still hasn't managed to take hold of you. With tears welling up in his puppydog eyes Rex reaches behind your neck and unfastens the blue collar, he tenderly places it in your palms, and closes your hands tightly around it. Finally he informs you that you are free to leave and do what you wish in this new world, but you will always have a place in his home should you every truly desire it.";
 		else if hp of Rex is 4:
-			say "     As the last of the retriever infection is worked out of your system you find the powerful urges caused by that strange bone seam to diminish as well.";
+			say "     As the last of the retriever infection is worked out of your system you find the powerful urges caused by that strange bone seem to diminish as well.";
 		if Retriever Girl is tamed:
 			if humanity of player is less than 10:
 				say "	With your mind lost to another infection you quickly forget your commitment to Karen, and as you settle into your new life Karen leaves you. Having lost yet another master to the infection she returns to her home in the high rise district to await military rescue.";

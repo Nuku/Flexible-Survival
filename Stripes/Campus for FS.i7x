@@ -19,11 +19,11 @@ Instead of Resolving a Reaching the College:
 		say "You quickly snatch the flying football from the air with both hands before it can bash you in the head.  It was a very powerful throw, but you manage to hold on and quickly tuck the ball to your chest.  'Nice catch,' someone calls you.  'Over here, I'm open.'  Looking up, you spot a pack of gorillas in football gear charging at you, some running, but most moving on all fours.  Looking over at the one who called out, you see him and another gorilla moving in fast outside of his line of sight.  You signal with a quick tilt of your head and then throw the ball off to his right, outside of the would-be interceptor's reach.  Snagging the ball, the player makes a run for it with the ball cradled to his chest.  The others, seeing the completed pass, turn and charge after him, saving you from getting trampled.";
 		increase score by 20;
 		say "     Leaning against one of the buildings, you watch the gorilla football players running around the corner then take a look around again.";
-	otherwise if bonus + dice >= 14:
+	else if bonus + dice >= 14:
 		say "You are startled, but manage a few quick steps back to catch the football in your arms.  It was a very powerful throw that leaves you a little winded from the force of it, but you've got it.  Looking up, you spot a pack of gorillas in football gear charging at you, some running, but most moving on all fours.  'Over here, man,' comes the cry from one side and you spot another gorilla there with his arms up.  'I'm open,' he says.  You toss it to him only to have another speedy primate leap in front and body check him to the side to steal the ball.  Holding it in one meaty, hand-like foot, he charges off in a new direction with it.  The group turns quickly and charges off after the ball, saving you from getting trampled.";
 		increase score by 5;
 		say "     Leaning against one of the buildings, you watch the gorilla football players running around the corner then take a look around again";
-	otherwise:
+	else:
 		say "You don't react in time and the football strikes you rather hard in the head, then bounces off.  'Aww man, fumbled,' the same, burly voice cries before there is a heavy thundering.  As your vision is just starting to clear, you get bowled over and trampled by a pack of gorillas in football uniforms chasing after their ball.  Their big, heavy hands and feet stomp over you, ignoring you in an attempt to complete the play.  By the time you manage to get up after that rough treatment, you can see them continuing on, one of them throwing a pass to someone else around the corner, restarting the whole thing.";
 		decrease score by 10;
 		decrease humanity of player by 5;
@@ -102,7 +102,7 @@ East of College Walkway Northwest is College Fountain.
 The description of College Fountain is "[fountaindesc]".
 
 to say fountaindesc:
-	say "      The fountain area appears to be a bustling center of activity. There is quite a number of people hanging out at the center of the campus. While there is one or two couples having sex out in the open, most of the people are just sitting and chatting with their friends. The fountain itself has random gunk in it but it looks like the campus staff clean it on a daily basis, if the person with the uniform and bucket says anything. Overall the location appears to be a nice place to spend time with your friends or have a romantic date.";
+	say "     The fountain area appears to be a bustling center of activity. There is quite a number of people hanging out at the center of the campus. While there is one or two couples having sex out in the open, most of the people are just sitting and chatting with their friends. The fountain itself has random gunk in it but it looks like the campus staff clean it on a daily basis, if the person with the uniform and bucket says anything. Overall the location appears to be a nice place to spend time with your friends or have a romantic date.";
 
 [Room Declaration]
 North of College Fountain is College Administration Building.

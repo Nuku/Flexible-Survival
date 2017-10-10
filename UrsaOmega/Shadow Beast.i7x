@@ -13,7 +13,7 @@ to say shadowbeastdesc:
 	setmongender 3; [creature is male]
 	increase mondodgebonus by 5;
 	if inasituation is true: [special event]
-		say ""; [dealt with in the file where the event is described]	
+		say ""; [dealt with in the file where the event is described]
 	else:
 		if ShadowBeastEventState is 0:
 			say "     [one of]You see something shimmer out of the corner of your eye[or]You feel a strange presence behind you[or]You are overtaken by a sense of dread[at random] and you turn to see a black cat step out of the shadows. It looks like a regular panther on all fours, except for the two black tentacles which sprout from its back. They end in gripping pads, which you imagine are ideal for holding victims still. Between its legs you can see a hefty sheath and testicles, demonstrating the breeding ability of the beast. It seems to shimmer, like it's manipulating the light around it; suddenly, it disappears for a second before reappearing before you, claws extended!";
@@ -27,7 +27,7 @@ to say shadowbeastdesc:
 to say losetoshadowbeast:
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
-	else:	
+	else:
 		if a random chance of 1 in 3 succeeds and inheat is not true:		[creature demands oral]
 			say "     The black feline grabs you [if hp of player > 0]softly[else]roughly[end if] with its tentacles and restrains you. It snarls before moving overtop of you, pressing its groin to your face. The dark cat's large manhood is ground against you, precum dribbling onto your cheek. Its strong scent is enticing[if player is submissive] and awakens your submissive urges. You moan and part your lips, welcoming it into your willing mouth[else if hp of player > 0], drawing you to welcome it into your willing mouth[else], but you try to resist, turning away. When you do, the beast gives you a warning growl and squeezes its tentacles around you more firmly. Forced to comply, you part your lips and welcome it into your unwilling mouth.";
 			say "     Once the shadowy beasts's rod is in your mouth, drooling its musky pre onto your tongue, [if player is submissive or hp of player > 0]you lick and suck on it with a growing lustful need[else]you find yourself licking and sucking on it with a growing lustful need[end if]. This male's cock tastes so wild, so virile that your body desires the feline's seed inside you. And though its barbed member scratches across your throat, the discomfort of this soon turns to an increased sensitivity that allows you to feel its thrusts into you all the better.";
@@ -39,12 +39,12 @@ to say losetoshadowbeast:
 	[	if fightoutcome is 20 or fightoutcome is 21: [Damage and lust succumb]		]
 			say "     The shadowy cat's onslaught is too much to bear, and you fall prostrate before it. The beast senses the last of your resistances failing, and adopts a more relaxed stance, advancing on you with purpose. Despite your weak struggling, it manages to remove your gear quickly with its teeth and tentacles, leaving you shivering and naked on the floor before it.";
 			say "[sbmissionary]";
-	
+
 to say beattheshadowbeast: [Victory scenes WIP]
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
 	else:
-		say "      The beast, clearly surprised by your ability to fight it off, gives you a threatening growl as it backs off. Its body shimmers as it tries to slips back into invisibility, but it seems wounding it has hindered its ability to cloak. Instead, it chooses a more conventional form of escape; it darts off into the shadows, its pitch-black body merging with the darkness.";
+		say "     The beast, clearly surprised by your ability to fight it off, gives you a threatening growl as it backs off. Its body shimmers as it tries to slips back into invisibility, but it seems wounding it has hindered its ability to cloak. Instead, it chooses a more conventional form of escape; it darts off into the shadows, its pitch-black body merging with the darkness.";
 
 to say sbmissionary:
 	say "     You try to scramble away, but the black cat pounces on you, pinning your arms and upper body, your back pressed to the hard ground with its lithe but surprisingly muscular bulk. You try to kick at the beast, but that only puts your legs in range of the cat's back-tentacles, which lash out and grab your limbs. Before you can wretch them away, they curl around your shins and ankles firmly. [if player is submissive]You gasp as you are dominated by your captor, aroused by the beast's rough handling of your body[else]You struggle against your captor, but you are quickly overpowered[end if]. Your legs are pulled up and apart by the tentacles, raising your rear and exposing your [if cunts of player > 0]moist slit[else]tight pucker[end if] fully.";
@@ -54,7 +54,7 @@ to say sbmissionary:
 	say "     Each time the cat pulls back, you feel the rough barbs on the head of its shaft rub your insides uncomfortably; however, after several strokes, the pain becomes strangely pleasurable[if player is impreg_able]. The barbs start to kindle a warmth around your womb, and you wonder how much the strange physiology is effecting your reproductive system; unbidden, thoughts of your belly swelling with the dark beast's spawn swirl in your head[end if]. The feline pounds you, its thick cock plunging into you over and over again. It moves its head to grab your shoulder with its powerful jaws and spread your legs further with its tentacles to thrust even deeper into you. You shudder [if player is submissive]with pleasure [end if]at the sensation of being so thoroughly used by this creature.";
 	WaitLineBreak;
 	say "     After what feels like an eternity of being roughly bred by the creature, the end seems to be near as the cat speeds up its already frantic thrusting. The beast growls as its climax nears, and with one titanic thrust it bottoms out in you. You feel its huge malehood twitch as the first spurts of hot, fertile cum spurt into your [if cunts of player > 0]womb[else]rectum[end if], coating your insides with thick ropes of feline seed. The cat continues thrusting throughout its orgasm, pushing its load deeper into you. The flow eventually abates, and the beast pulls out with a wet pop, its cum dribbling from your abused [if cunts of player > 0]cunt[else]pucker[end if]. The tentacles let your legs down, and the cat slinks away into the shadows, its interest with you lost now that you've served its pleasures.[impregchance]";
-	
+
 to say sbdoggystyle:
 	say "     The beast circles your prostrated form contentedly, looking over its latest conquest. From the way its sizeable length is quickly slipping from its sheath, you suspect it approves heartily. It pushes you down to your hands and knees with its tentacles, and you maintain the all-fours posture, [if player is submissive]eager to please your shadowy master[else]hoping the cat won't be too rough on you[end if]. The creature stalks behind you, and suddenly you feel the thing's warm breath on your bare skin as it sniffs around your rear. You come to the uncomfortable realization that it's probably ascertaining your ability to bear its offspring; [if player is impreg_able]it purrs with satisfaction at your apparent fertility[else]it gives a growl of disappointment at your inability to bear its young, but seems to be undeterred in mounting you[end if].";
 	WaitLineBreak;
@@ -62,7 +62,7 @@ to say sbdoggystyle:
 	WaitLineBreak;
 	say "     The cat pumps in and out of your [if cunts of player > 0]cunt[else]ass[end if] mercilessly, breeding you hard and deep. Soon, the sensation of the cat's barbs becomes almost pleasant as they rub your [if cunts of player > 0]vaginal[else]rectal[end if] walls[if player is impreg_able]. They start to kindle a warmth around your womb, and you wonder how much the strange physiology is effecting your reproductive system; unbidden, thoughts of your belly swelling with the dark beast's spawn swirl in your head[end if]. The thing's tentacles descend under your body, stroking your [if cocks of player > 1][cock of player] cocks[else if cocks of player > 0][cock of player] cock[else if breast size of player > 0]your [breast size desc of player] breasts[else]your bare skin[end if] as it drives its cock into you over and over again. [if cocks of player > 0]A tentacle wraps itself around your cock[smn], stroking in time with the pounding thrusts. Between this new stimulation and the battering your prostate is receiving, it doesn't take long for you to reach climax, blowing your [cum load size of player] load uselessly on the floor. Your orgasm causes you to clench around the malehood invading you, drawing a lusty purr from your bestial captor[end if]. ";
 	WaitLineBreak;
-	say "     The beast's thrusting grows faster and deeper, and you push yourself back into the thrusts, [if player is submissive]eager to feel the beast cum inside you[else]eager to end this before it goes on any longer[end if]. The creature tightens its grip around your waist and the mating bite on your shoulder as it hilts itself inside you with one powerful thrust. You feel hot ropes of cum coat your [if cunts of player > 0]womb[else]rectum[end if] as the creature growls out its climax. It keeps thrusting, pushing its fertile seed deeper into your receptive body. It lays on top of you while its orgasm subsides, [if player is impreg_able]stroking your belly with its tentacles; you shudder and hope its seed didn't take[else]purring contentedly at its latest conquest[end if]. Finally, it dismounts, withdrawing its cock with a wet pop and a dribble of cum from your abused [if cunts of player > 0]snatch[else]asshole[end if]. As it slinks back into the shadows, you wonder if [if player is submissive]you'll get another chance to play with the cat soon[else]submitting to the beast was worth it[end if].[impregchance]"; 
+	say "     The beast's thrusting grows faster and deeper, and you push yourself back into the thrusts, [if player is submissive]eager to feel the beast cum inside you[else]eager to end this before it goes on any longer[end if]. The creature tightens its grip around your waist and the mating bite on your shoulder as it hilts itself inside you with one powerful thrust. You feel hot ropes of cum coat your [if cunts of player > 0]womb[else]rectum[end if] as the creature growls out its climax. It keeps thrusting, pushing its fertile seed deeper into your receptive body. It lays on top of you while its orgasm subsides, [if player is impreg_able]stroking your belly with its tentacles; you shudder and hope its seed didn't take[else]purring contentedly at its latest conquest[end if]. Finally, it dismounts, withdrawing its cock with a wet pop and a dribble of cum from your abused [if cunts of player > 0]snatch[else]asshole[end if]. As it slinks back into the shadows, you wonder if [if player is submissive]you'll get another chance to play with the cat soon[else]submitting to the beast was worth it[end if].[impregchance]";
 
 ShadowBeastEventState is a number that varies.
 
@@ -74,19 +74,19 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Shadow Beast"; 
+	now name entry is "Shadow Beast";
 	now attack entry is "[one of]The beast disappears in a flicker of darkness before reappearing behind you, striking at you![or]The beast lashes out with its tentacles![or]The beast leaps at you![or]The Shadow Beast firmly makes its point![or]One of its tentacles whips though the air and gives you a painful slap.[or]A slash of a clawed paw leaves bloody marks on you.[at random]";
 	now defeated entry is "[beattheshadowbeast]";       [ Text when monster loses. Change 'shadowbeast' as above. ]
 	now victory entry is "[losetoshadowbeast]";         [ Text when monster wins. Change 'shadowbeast' as above. ]
-	now desc entry is "[shadowbeastdesc]";              
+	now desc entry is "[shadowbeastdesc]";
 	now face entry is "that of a panther, sleek and predatory";  [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "the form of a large feral cat, but with two long tentacles emerging from your back";  
+	now body entry is "the form of a large feral cat, but with two long tentacles emerging from your back";
 	now skin entry is "dark-furred";  [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have a feline tail that twitches this way and that behind you.";  [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "feline";       
+	now cock entry is "feline";
 	now face change entry is "it reforms into the visage of a panther, complete with a sleek predatory muzzle and catlike ears";  [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "it cracks and shifts into a quadrupedal stance, becoming sleek and muscled. You feel like a coiled spring, ready to pounce on prey at a moment's notice. Two long black tentacles with strong gripping pads at their ends grow out of your back, giving you another pair of appendages";  
-	now skin change entry is "inky black fur covers you from head to toe";  
+	now body change entry is "it cracks and shifts into a quadrupedal stance, becoming sleek and muscled. You feel like a coiled spring, ready to pounce on prey at a moment's notice. Two long black tentacles with strong gripping pads at their ends grow out of your back, giving you another pair of appendages";
+	now skin change entry is "inky black fur covers you from head to toe";
 	now ass change entry is "your new feline tail pushes out from somewhere above your rear";  [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes more tapered, the head of your shaft growing wicked-looking barbs to stimulate your mates with";  [ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
@@ -96,7 +96,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 12;
 	now sex entry is "Male";              [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 30;                   
+	now hp entry is 30;
 	now lev entry is 3;                   [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5;                  [ Monster's average damage when attacking. ]
 	now area entry is "Sealed";           [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -115,9 +115,9 @@ When Play begins:
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]sleek[or]toned[at random]";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"]
 	now type entry is "[one of]feline[or]catlike[at random]";    [ one-word creature type. Ex: feline, canine, lupine, robotic, human...]
-	now magic entry is false;             
-	now resbypass entry is false;         
-	now non-infectious entry is false;    
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -129,7 +129,7 @@ The sarea of Hunted Survivor is "Sealed".
 
 when play begins:
 	add Hunted Survivor to badspots of guy;
-	
+
 Instead of resolving a Hunted Survivor:
 	say "     As you step through the access door into the underground levels under the Trevor Labs and move down the dark corridor beyond, you hear something. The sound of naked feet on the concrete floor echo from somewhere ahead, quickly getting louder as their source gets closer. Then a man bursts out of one of the side passages, clothed in nothing but a few shreds of tattered clothing and running all out towards the exit.";
 	if the player is not facially human or the player is not bodily human:
@@ -149,9 +149,9 @@ Instead of resolving a Hunted Survivor:
 				say "     After having fought of the tentacled shadow beast, you decide to postpone further underground adventures to another time and walk back towards the access door. Stepping out and closing it behind you gives you relief of the constant tension that there might be something in the darkness, watching you.";
 				say "     Of the man you helped escape, there is no trace. He must have kept running, vanishing out into the city. Who knows what already has or will happen to him out there - naked and exhausted as he is. On the other hand... he might just get lucky and you could run into him again.";
 		else:
-			say "    Whirling around, you run as fast as you can back to the exit and don't look back. The sounds of what's happening behind you follow you though, even though you wish you wouldn't hear the man's panicked struggling, followed by a satisfied-sounding roar and painful scream. Rhythmic grunts and growls interspersed with whimpering indicate that the creature at least didn't hunt the man to eat him, though leaving him to 'just be raped' by some monstrosity from the depths of the underground complex is a bit of a weak excuse. A shudder runs down your spine as you throw the door closed behind you and you do your best to scrub what's happened from your mind."; 
+			say "     Whirling around, you run as fast as you can back to the exit and don't look back. The sounds of what's happening behind you follow you though, even though you wish you wouldn't hear the man's panicked struggling, followed by a satisfied-sounding roar and painful scream. Rhythmic grunts and growls interspersed with whimpering indicate that the creature at least didn't hunt the man to eat him, though leaving him to 'just be raped' by some monstrosity from the depths of the underground complex is a bit of a weak excuse. A shudder runs down your spine as you throw the door closed behind you and you do your best to scrub what's happened from your mind.";
 	now Hunted Survivor is resolved;
-		
+
 Section 4 - Endings
 
 when play ends:

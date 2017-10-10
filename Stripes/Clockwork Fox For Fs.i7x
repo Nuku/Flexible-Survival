@@ -28,7 +28,7 @@ to say cfgdesc:
 		now cfgmode is 2;
 	else if guy is warded and girl is warded:
 		now cfgmode is a random number between 1 and 2;
-	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
+	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
 		if guy is warded and a random chance of 1 in 3 succeeds:
 			now cfgmode is 1;
 		else if girl is warded and a random chance of 1 in 3 succeeds:
@@ -69,7 +69,7 @@ to say losetocfgirl:
 	else:
 		say "     Unable to continue resisting this mechanical creature, you stumble to your knees. She wraps her arms around you, pressing her cold body to yours and slides off your clothes with her cool paws. She laughs in delight, having soft, music box chimes mixed into the sound. With soft clicking noises, she moves her paw between your legs and runs her digits over your genitals.";
 	if cocks of player > 0:
-		say "    The clockwork vixen wraps her cool paw around your cock and strokes it. You find yourself getting hard despite (or perhaps because) of the unusual nature of your impromptu lover. She grins and nips at your neck with a muzzle full of small gears instead of teeth and chimes musically, saying 'Let's get this key of yours in me so you can wind me up.' With that, she presses you down onto your back and straddles your hips. With a series of clicks, she lowers herself an inch at a time down onto your erection, making you moan as her cool pussy sinks down around you. Her pussy, lubricated by some oils she's producing, is very soft and wet. It grips around your cock and slides over it like flesh would, but squeezes and milks at your cock in an odd, mechanical manner.";
+		say "     The clockwork vixen wraps her cool paw around your cock and strokes it. You find yourself getting hard despite (or perhaps because) of the unusual nature of your impromptu lover. She grins and nips at your neck with a muzzle full of small gears instead of teeth and chimes musically, saying 'Let's get this key of yours in me so you can wind me up.' With that, she presses you down onto your back and straddles your hips. With a series of clicks, she lowers herself an inch at a time down onto your erection, making you moan as her cool pussy sinks down around you. Her pussy, lubricated by some oils she's producing, is very soft and wet. It grips around your cock and slides over it like flesh would, but squeezes and milks at your cock in an odd, mechanical manner.";
 		say "     The pleasure from this unusual mating builds quickly as her pussy warms up as your heated rod pumps into her. The motion of her internal walls grows faster and smoother as she warms up as well, making the motion of her vaginal walls over you increasingly enjoyable. Her paws roam over your body as she lets her nimble, mechanical digits tease and caress your body. When you finally cum, she cries out happily with those music box tones intermixed with the moans and pants you're more used to hearing. As your spent shaft softens, she withdraws from you and heads off down the halls, moving more quickly and smoothly than before, as if you did indeed somehow wind up her mechanism through fucking her.";
 	else:
 		say "     Finding only a wet pussy between your legs, the vixen releases a twang sound of disappointment. She presses you down onto your hands and knees, bringing your face to her crotch and pressing you to her leaking pussy. Her oily cunt is cool, but the scent is arousing in its own way. You find yourself licking at those soft, coppery lips and are soon diving your tongue into it. She warms up gradually as you keep licking and you press your tongue in deeper. Intrigued by the strange, mechanical movements of her inner walls and you slide a pair of fingers into her to better feel it. Some internal mechanism has her pussy squeeze and tug at your fingers as if they were a cock. You pump your digits into her, feeling her warm up further and those internal motions get smoother and faster until finally she cums hard, sending her tasty lubricant flowing out over your fingers and tongue. Finished and running much more smoothly now for the strange winding you gave her, she pulls off your fingers and heads down the halls with a quicker and smoother pace than when she first approached you.";
@@ -110,11 +110,11 @@ to say beatthecfguy:
 
 
 Section 2 - Monster Insertion
- 
+
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
- 
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Clockwork Fox"; [Name of your new Monster]
@@ -140,7 +140,7 @@ When Play begins:
 	now cha entry is 10;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 28; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Museum"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -151,7 +151,7 @@ When Play begins:
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 10;
-	now cunt width entry is 6; 
+	now cunt width entry is 6;
 	now libido entry is 40; [ Amount player Libido will go up if defeated ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -180,5 +180,5 @@ when play ends:
 			else:									[MALE]
 				say "     Over time, you get to know him and his daughter, a lovely young woman with considerable knowledge of her father's craft, if not quite the same passion. She is intrigued by you and is happy to spend time with you where many others won't. But she is very comfortable with you, relaxed and open. One evening, she gives you a soft peck on the side of your muzzle, then blushes and turns away. Your clockworks click and whirr, setting to their new goal and soon enough, you woo the pretty girl into being your lover and in time, your mate. She becomes a clockwork vixen as your infection spreads to her, but neither her nor her father are upset by this turn of events, merely happy that his quiet girl has found happiness through the mechanical art he loves too much, if not quite in the way he would have expected.";
 
- 
-Clockwork Fox for FS ends here. 
+
+Clockwork Fox for FS ends here.

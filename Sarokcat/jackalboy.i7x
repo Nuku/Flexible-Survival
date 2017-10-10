@@ -50,7 +50,7 @@ When Play begins:
 	now int entry is 18;
 	now cha entry is 26;
 	now sex entry is "Male"; 						[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 100;								
+	now hp entry is 100;
 	now lev entry is 10;								[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 20;								[ Amount of Damage monster Does when attacking.]
 	now area entry is "Shop";						[ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -61,8 +61,8 @@ When Play begins:
 	now breast size entry is 0;					[ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;								[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;					
-	now cunt width entry is 0;					
+	now cunt length entry is 0;
+	now cunt width entry is 0;
 	now libido entry is 30;							[ Amount player Libido will go up if defeated ]
 	now loot entry is "";								[ Loot monster drops, ]
 	now lootchance entry is 0;					[ Chance of loot dropping 0-100 ]
@@ -72,7 +72,7 @@ When Play begins:
 	now type entry is "canine";					[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is true;						[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is true;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;  
+	now non-infectious entry is true;
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 

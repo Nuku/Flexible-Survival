@@ -16,7 +16,7 @@ Version 1 of Jenna by Rikaeus begins here.
 [   3: Has learned all they can from the suspects          ]
 [   4: Has solved the mystery                              ]
 [   5: Has learned that player can purchase culprit        ]
-[   6: Has recieved the culrpit from Nermine end           ]
+[   6: Has received the culprit from Nermine end           ]
 
 [   hp of Jenna                                            ]
 [   0: Not Placed                                          ]
@@ -42,7 +42,7 @@ to say JennaDesc:
 		say "     The female wolverine is wearing a Wolverine Security uniform like all the others. However, hers has the slight difference of big bold letters spelling 'Boss' onto it. Beyond that Jenna looks like a gruff looking person, though that may be due to the frustrated look on her face. To be honest, you can't blame the woman, as the murder has shaken you up as well. She sees you looking at her, which in turn causes Jenna to give you a hopeful look. That reminds you that you still need to solve that case.";
 	else if Jenna is in Wolverine Lockup:
 		say "     She is currently wearing her Wolverine Security uniform. The outfit is different than the guards at the cells as it has the word 'Boss' in bold letters on it. The female wolverine is glaring at the suspects in the cells, as if they have personally offended her. Though, they probably have in some way or another by being law breakers or something. However, when she sees you staring at her, Jenna gives you a smile and waves at you. Clearly you haven't pissed her off.";
-	otherwise:
+	else:
 		say "     Jenna is wearing a worn security uniform just like all her subordinates. Her outfit is slightly different from the others as proven by the giant letters that spell 'Boss'. The female wolverine has a soft look on her face, which makes her appear to be the most approachable of all the wolverines in the room. When she sees you, the woman smiles at you and waves at you, clearly happy to see you.";
 
 Section 2 - Talking with Jenna
@@ -167,7 +167,7 @@ to say JennaTalk3: [Solve the Murder]
 			WaitLineBreak;
 		if GordonFurSuspicion > 1:
 			say "     [line break]";
-			say "     The next thing you tell them, is explained to be a damning piece of evidence. You tell them that you learned this [if GordonFurSuspicion is 2]from a friendly lizard girl.[otherwise]getting intimate with the person.[end if] Holding the piece of fur out in the open you proceed to ask Jenna who here has brown fur, that she can see. 'Uh, the bear and the dog.' She says, confused as to where you're going with this. You then tell her to have her subordinates strip the monkey.'Wha-WHAT?!' Gordon shouts as the female wolverine does just that and he's manhandled by the guards. Once stripped almost everyone not employed by Cane gasps when they see that on the monkey's ass is a patch of brown fur. 'So Gordon actually does have brown fur?!' Jenna shouts. You nod and say that it's pretty damn suspicious to dye your fur from your original color, a color that pertains to a murder suspect. You then move on from that, having explained all you could.";
+			say "     The next thing you tell them, is explained to be a damning piece of evidence. You tell them that you learned this [if GordonFurSuspicion is 2]from a friendly lizard girl.[else]getting intimate with the person.[end if] Holding the piece of fur out in the open you proceed to ask Jenna who here has brown fur, that she can see. 'Uh, the bear and the dog.' She says, confused as to where you're going with this. You then tell her to have her subordinates strip the monkey.'Wha-WHAT?!' Gordon shouts as the female wolverine does just that and he's manhandled by the guards. Once stripped almost everyone not employed by Cane gasps when they see that on the monkey's ass is a patch of brown fur. 'So Gordon actually does have brown fur?!' Jenna shouts. You nod and say that it's pretty damn suspicious to dye your fur from your original color, a color that pertains to a murder suspect. You then move on from that, having explained all you could.";
 			WaitLineBreak;
 		if GordonMotive > 1:
 			say "     [line break]";

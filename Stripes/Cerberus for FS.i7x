@@ -71,9 +71,9 @@ to say beatthecerberus:
 		else:
 			say "     You manage to fight down your lustful urges and decide to leave while you safely can";
 	if godoggygo is 1:
-		say "     Giving into your unnatural attraction to this mythic beast's body, you run your hands over hir while kissing hir. Hir slobbery, canine tongue plays in your mouth as you run your fingers across hir breasts, then down hir rough-furred sides to hir tail and its cock. You stroke hir large meat, then move a hand down that tail to tease hir wet slit. You dive a pair of fingers into her hot cunt and pump them into hir while you ponder what you'd like to do to hir. ";
+		say "     Giving into your unnatural attraction to this mythic beast's body, you run your hands over hir while kissing hir. Hir slobbery, canine tongue plays in your mouth as you run your fingers across hir breasts, then down hir rough-furred sides to hir tail and its cock. You stroke hir large meat, then move a hand down that tail to tease hir wet slit. You dive a pair of fingers into her hot cunt and pump them into hir while you ponder what you'd like to do to hir.";
 		if cocks of player > 2 and cock length of player > 5:		[3+ COCKS ORAL]
-			say "   As your many cocks throb, you ponder hir three muzzles. This would certainly be a rare opportunity to orally satisfy several of them at once. ";
+			say "     As your many cocks throb, you ponder hir three muzzles. This would certainly be a rare opportunity to orally satisfy several of them at once. ";
 			say "     [bold type]Shall you have your three-headed bitch service your cocks with hir many muzzles?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";

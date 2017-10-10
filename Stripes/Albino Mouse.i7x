@@ -73,14 +73,14 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Albino Mouse"; [Name of your new Monster]
-	now attack entry is "[drmouseattack]"; 
+	now attack entry is "[drmouseattack]";
 	now defeated entry is "[beatdrmouse]";
 	now victory entry is "[losetodrmouse]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[drmousedesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "mouse-like head with large ears and cute whiskers on your muzzle"; [ Face description, format as the text "Your face is (your text)."]
 	now body entry is "small and mouse-like, with pink paws for hands and feet"; [ Body Description, format as the text "Your Body is (your text)."]
 	now skin entry is "pure white fur over your"; [ skin Description, format as the text "your body is covered in (your text) skin."]
-	now tail entry is "You have a long, musine tail."; [ Tail description, write a whole Sentence or leave blank. ] 
+	now tail entry is "You have a long, musine tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "pink"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it deforms and reshapes itself into something more rodent-like. You gain large ears and whiskers around your muzzle. Your eyes turn a blood-red"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it becomes that of an anthropomorphic mouse. At only about four feet tall, your stature matches your species. Your hands are replaced with pink paws with nimble digits"; [ body change text. format as "Your body feels funny as (your text)." ]

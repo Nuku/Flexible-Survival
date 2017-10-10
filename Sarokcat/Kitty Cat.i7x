@@ -48,7 +48,7 @@ Instead of resolving Lost house cat:
 						if calcnumber > 0 and calcnumber <= number of filled rows in table of itemselection:
 							choose row calcnumber in table of itemselection;
 							now chosenmilk is object entry;
-						otherwise if calcnumber is 0:
+						else if calcnumber is 0:
 							now chosenmilk is journal;
 				if chosenmilk is not journal:
 					say "Pulling out some of the milk you found earlier, you manage to find a small container to pour a little bit of it into. Setting the container down just outside the cat's narrow hiding place, you sit back and try to look nonthreatening as you wait. Slowly getting used to your presence, the cat eventually slips out of hiding, its whiskers twitching as it follows its nose over to the milk, eyeing you warily while it slowly begins to drink. You can almost hear it purr from where you are sitting as it enjoys the taste of the milk.";

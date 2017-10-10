@@ -122,32 +122,32 @@ Carry out reciting:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
 						now monster is Y;
-						now body is body entry;				
+						now body is body entry;
 						now bodyname is name entry;
 						attributeinfect;
 			-- 13:	[Face infection]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
-						now face is face entry;				
+						now face is face entry;
 						now facename is name entry;
 			-- 14:	[Skin infection]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
-						now skin is skin entry;				
+						now skin is skin entry;
 						now skinname is name entry;
 			-- 15:	[Tail infection]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
-						now tail is tail entry;				
+						now tail is tail entry;
 						now tailname is name entry;
 			-- 16:	[Cock infection]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
-						now cock is cock entry;				
+						now cock is cock entry;
 						now cockname is name entry;
 			-- 17:	[Tanuki]
 				if the player's command matches "[number]":
@@ -670,7 +670,7 @@ Carry out reciting:
 					if hp of Ronda is 6:
 						now Art Collector is unresolved;
 					if hp of Ronda >= 8:
-						now SlutRat Den is known;	
+						now SlutRat Den is known;
 			-- 93:	[Athanasia]
 				if the player's command matches "[number]":
 					now carried of phoenix egg is 0;

@@ -83,10 +83,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Donkeywoman"; 
-	now attack entry is "[one of]The sexy donkeywoman lets out a loud braying laugh as she mocks your attempt to escape, the sound making you feel surprisingly submissive.[or]She lashes out at you with her short riding crop, its stinging bite making you feel strangely more submissive with each strike.[or]She reaches out and traces the tip of her whip over you skin teasingly, the touch of the soft leather making you shudder with desire.[or]She raises her whip to strike at you, and as you duck away, her other hand lashes out at you and strikes you square in the face, knocking you back![or]She strides forward confidently, describing lovingly just what kind of strangely sexy bondage games she has in store for you, her words making you shudder slightly with a strange desire to give in to the powerful female and let her have her way with you.[or]She charges right at you and twists aside at the last second, bringing her hand around to grab at your crotch teasingly.[at random]"; 
-	now defeated entry is "[Donkeywoman loses]"; 
-	now victory entry is  "[Donkeywoman wins]"; 
+	now name entry is "Donkeywoman";
+	now attack entry is "[one of]The sexy donkeywoman lets out a loud braying laugh as she mocks your attempt to escape, the sound making you feel surprisingly submissive.[or]She lashes out at you with her short riding crop, its stinging bite making you feel strangely more submissive with each strike.[or]She reaches out and traces the tip of her whip over you skin teasingly, the touch of the soft leather making you shudder with desire.[or]She raises her whip to strike at you, and as you duck away, her other hand lashes out at you and strikes you square in the face, knocking you back![or]She strides forward confidently, describing lovingly just what kind of strangely sexy bondage games she has in store for you, her words making you shudder slightly with a strange desire to give in to the powerful female and let her have her way with you.[or]She charges right at you and twists aside at the last second, bringing her hand around to grab at your crotch teasingly.[at random]";
+	now defeated entry is "[Donkeywoman loses]";
+	now victory entry is  "[Donkeywoman wins]";
 	now desc entry is "[mongendernum 4]     Wandering through the building, you round a corner and come face to face with a Donkeywoman. The tall Donkeywoman looks down at you with a derisive smirk. 'What do we have here?' she asks as she roughly grabs your chin and twists your head side to side, examining you. Too scared to say anything, all you can do is look at her with a dumb expression on your face. Looking her over, you can see that she is dressed in a tight studded leather corset that is barely able to contain her more than ample tits as well as a spiked leather collar and spiked cuffs. She is wearing a pair of modified thigh high boots. Her sleek gray fur and donkey mane Mohawk give her a sinister air. Tapping the whip she's carrying in her other hand against her thigh, she says 'I think someone needs a lesson in discipline. Isn't that right, my little soon-to-be [if cocks of player > 0]donkey[else]jenny[end if]?'"; [ Description of the creature when you encounter it.]
 	now face entry is "long, asinine muzzle, with two large equine ears and a short close cropped mane of hair, and a plain leather collar which complements your rather sexy donkey-like face"; [You have a (your text) face."]
 	now body entry is "both strong and slender, your well-muscled form and powerful limbs easily suited for both work and sex, and you balance easily on the balls of your slightly hoof-like feet, even as you run your slender hands over your extremely sensitive and aroused body happily";
@@ -95,8 +95,8 @@ When Play begins:
 	now cock entry is "[one of]thick[or]equine[or]donkey[at random]";
 	now face change entry is "it flattens and stretches out into a more equine like muzzle, your eyes shifting position even as your hair shifts into a short mane, and your ears reposition themselves on top of your head. Lustful thoughts fill your mind, though something seems missing still. Looking around, you spot a bit of leather lying there conspicuously on the ground, and picking it up see that it seems to be a plain and simple collar. Grinning slightly at your luck, you latch the collar loosely around your throat"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it shifts and seems to change, growing both more slender and muscular at the same time, your heels rising up slightly as you balance on the balls of your feet as your toes seem to harden slightly, becoming not quite hoof like, but much stronger than before. A rush of arousal surges through you as your body finishes changing into a slightly more donkey like form"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it seems to stretch and toughen slightly into a more donkey like hide, silken grey donkey fur pushing out of your changed skin and making you shudder with pleasure as your new coat finishes growing in"; 
-	now ass change entry is "it seems to shift slightly, the muscles moving around as it plumps out, even as soft silken strands of donkey hair begin to push their way out of your spine. Wiggling your ass experimentally, you find your new donkey like tail feels surprisingly good and amazingly sexy as it swishes through the air behind you"; 
+	now skin change entry is "it seems to stretch and toughen slightly into a more donkey like hide, silken grey donkey fur pushing out of your changed skin and making you shudder with pleasure as your new coat finishes growing in";
+	now ass change entry is "it seems to shift slightly, the muscles moving around as it plumps out, even as soft silken strands of donkey hair begin to push their way out of your spine. Wiggling your ass experimentally, you find your new donkey like tail feels surprisingly good and amazingly sexy as it swishes through the air behind you";
 	now cock change entry is "it draws up close to your body, its tip flattening as it flares out into a more equine shape as your skin bulges out to form a proper donkey-like sheath around it"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 18;
 	now dex entry is 22;
@@ -105,7 +105,7 @@ When Play begins:
 	now int entry is 13;
 	now cha entry is 20;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 45; 
+	now hp entry is 45;
 	now lev entry is 6; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
 	now area entry is "Stable"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
@@ -124,9 +124,9 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]strong[at random]";
 	now type entry is "[one of]asinine[or]donkey-like[at random]";
-	now magic entry is false; 
-	now resbypass entry is false; 
-	now non-infectious entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 

@@ -51,7 +51,7 @@ Instead of resolving Husky Group Take Two:
 		if x is less than 1, now x is 1;
 		decrease the population of the tribe of player by x;
 		say "After an emergency census, you have learned you lost [x] people to the outbreak, but you are assured it has been dealt with permanently and the threat has been completely isolated. Your Science Adviser has given the green light to let the populace resume its day-to-day activities.[line break][line break]";
-	otherwise:
+	else:
 		say "Strolling out into the center of your village, you spot that one individual that had their prior engagement with a group of Slutty Huskies not just a few months ago. They seemed to be working diligently enough, and even socially accepted amongst their peers. Even with that curled, fluffed tail wagging to-and-fro from their pert bottom. Who would have thought that you made the right decision about keeping them within the walls of the village? So many things could have gone very poorly if the infection did not cease at their tail alone! Maybe that very same scout's situation could mean a brighter tomorrow for your tribe![line break][line break]";
 	now Husky Group Take Two is resolved;
 
@@ -59,13 +59,13 @@ Part 2 - Bloated Hunter
 
 Instead of resolving Bloated Hunter:
 	if "Male" is listed in the gender of the tribe of player:
-		say "One of your hunters returns looking rather... round around the middle. His stomach gurgling loudly, bloated beyond recognition, even you yourself were not oblivious enough to know that this particular male wasn't at all overweight, nor pregnant the morning you saw him last. His distended stomach could tell numerous stories, and the most likely one was likely the truth. His hands/paws holding the lip of his bulging stomach up, hoisting and carrying it as he waddled down the road. Mumbling incoherently to himself. Thankfully it didn't look as if he was infected with a different strain of nanites. [if Husky Group is resolved and Husky Group Take Two is resolved]Knowing damn well what the infection could potentially do to your tribe, you stare--quite intently--at the male as he wanders on by. That sickly sloshing stomach most certainly causing your own to be clenching up tightly, churning at the thought of a nanite outbreak in your settlement.[otherwise] Watching with a tilted head and cocked brow, you listen to the sounds of the contents of that stomach sickly sloshing about with every step of his.[end if][line break][line break]";
-	otherwise:
+		say "One of your hunters returns looking rather... round around the middle. His stomach gurgling loudly, bloated beyond recognition, even you yourself were not oblivious enough to know that this particular male wasn't at all overweight, nor pregnant the morning you saw him last. His distended stomach could tell numerous stories, and the most likely one was likely the truth. His hands/paws holding the lip of his bulging stomach up, hoisting and carrying it as he waddled down the road. Mumbling incoherently to himself. Thankfully it didn't look as if he was infected with a different strain of nanites. [if Husky Group is resolved and Husky Group Take Two is resolved]Knowing damn well what the infection could potentially do to your tribe, you stare--quite intently--at the male as he wanders on by. That sickly sloshing stomach most certainly causing your own to be clenching up tightly, churning at the thought of a nanite outbreak in your settlement.[else] Watching with a tilted head and cocked brow, you listen to the sounds of the contents of that stomach sickly sloshing about with every step of his.[end if][line break][line break]";
+	else:
 		if "Female" is listed in the gender of the tribe of player:
-			say "One of your huntresses returns looking rather... round around the middle. Her stomach gurgling loudly, bloated beyond recognition, even you yourself were not oblivious enough to know that this particular girl wasn't at all overweight, nor pregnant the morning you saw her last. Her distended stomach could tell numerous stories, and the most likely one was likely the truth. Her hands/paws holding the lip of her bulging stomach up, hoisting and carrying it as she waddled down the road. Mumbling incoherently to herself. Thankfully it didn't look as if she was infected with a different strain of nanites. [if Husky Group is resolved and Husky Group Take Two is resolved]Knowing damn well what the infection could potentially do to your tribe, you stare--quite intently--at the female as she wanders on by. That sickly sloshing stomach most certainly causing your own stomach to be clenching up tightly, churning at the thought of a nanite outbreak in your settlement.[otherwise]Watching with a tilted head and cocked brow, you listen to the sounds of the contents of that stomach sickly sloshing about with every step of hers.[end if][line break][line break]";
-		otherwise:
+			say "One of your huntresses returns looking rather... round around the middle. Her stomach gurgling loudly, bloated beyond recognition, even you yourself were not oblivious enough to know that this particular girl wasn't at all overweight, nor pregnant the morning you saw her last. Her distended stomach could tell numerous stories, and the most likely one was likely the truth. Her hands/paws holding the lip of her bulging stomach up, hoisting and carrying it as she waddled down the road. Mumbling incoherently to herself. Thankfully it didn't look as if she was infected with a different strain of nanites. [if Husky Group is resolved and Husky Group Take Two is resolved]Knowing damn well what the infection could potentially do to your tribe, you stare--quite intently--at the female as she wanders on by. That sickly sloshing stomach most certainly causing your own stomach to be clenching up tightly, churning at the thought of a nanite outbreak in your settlement.[else]Watching with a tilted head and cocked brow, you listen to the sounds of the contents of that stomach sickly sloshing about with every step of hers.[end if][line break][line break]";
+		else:
 			if "Hermaphrodite" is listed in the gender of the tribe of player:
-				say "One of your huntresses returns looking rather... round around the middle. Her stomach gurgling loudly, bloated beyond recognition, even you yourself were not oblivious enough to know that this particular girl wasn't at all overweight, nor pregnant the morning you saw her last. Her distended stomach could tell numerous stories, and the most likely one was likely the truth. Her hands/paws holding the lip of her bulging stomach up, hoisting and carrying it as she waddled down the road. Mumbling incoherently to herself. Thankfully it didn't look as if she was infected with a different strain of nanites. [if Husky Group is resolved and Husky Group Take Two is resolved]Knowing damn well what the infection could potentially do to your tribe, you stare--quite intently--at the female as she wanders on by. That sickly sloshing stomach most certainly causing your own stomach to be clenching up tightly, churning at the thought of a nanite outbreak in your settlement.[otherwise] Watching with a tilted head and cocked brow, you listen to the sounds of the contents of that stomach sickly sloshing about with every step of hers.[end if][line break][line break]";
+				say "One of your huntresses returns looking rather... round around the middle. Her stomach gurgling loudly, bloated beyond recognition, even you yourself were not oblivious enough to know that this particular girl wasn't at all overweight, nor pregnant the morning you saw her last. Her distended stomach could tell numerous stories, and the most likely one was likely the truth. Her hands/paws holding the lip of her bulging stomach up, hoisting and carrying it as she waddled down the road. Mumbling incoherently to herself. Thankfully it didn't look as if she was infected with a different strain of nanites. [if Husky Group is resolved and Husky Group Take Two is resolved]Knowing damn well what the infection could potentially do to your tribe, you stare--quite intently--at the female as she wanders on by. That sickly sloshing stomach most certainly causing your own stomach to be clenching up tightly, churning at the thought of a nanite outbreak in your settlement.[else] Watching with a tilted head and cocked brow, you listen to the sounds of the contents of that stomach sickly sloshing about with every step of hers.[end if][line break][line break]";
 	now Bloated Hunter is resolved.
 
 Part 3 - Hidden Cache + Nerd's Opinion (Inter-linked)
@@ -95,7 +95,7 @@ Instead of resolving Nerd's Opinion:
 			say "Who knew books could sell for so much?";
 		if x is less than 200:
 			say "For some reason, you feel ripped off, but it's money!";
-		otherwise:
+		else:
 			say " ";
 		increase (creds of tribe of player) by x;
 	now Nerd's Opinion is resolved.
@@ -105,14 +105,14 @@ Part 4 - Beast's Den
 [Instead of resolving Beast's Den:
 	if perception of the tribe of player is greater than 80:
 		say "Your hunters have informed you of a nearby cave, which they believe is inhabited by a large creature of some sort. They decided that it wouldn't be a great idea to explore, and was far too risky to attempt.[line break][line break]";
-	otherwise:
+	else:
 		say "Your hunters have informed you of a nearby cave, do you want to explore it? [bold type](Y/N)[roman type][line break][line break]";
 		if player consents:
 			if Intelligence of the tribe of player is greater than 50:
 				say "";
-			otherwise:
+			else:
 				say "";
-		otherwise:
+		else:
 			say "You decide it would be best to leave the cave alone, and that whatever lurks within probably would not be so friendly.[line break][line break]";
 	now Beast's Den is resolved;]
 

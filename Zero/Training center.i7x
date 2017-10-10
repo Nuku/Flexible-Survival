@@ -251,11 +251,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "The Mistress"; 
+	now name entry is "The Mistress";
 	now attack entry is "[one of]You are rammed by the abomination![or]The abomination punches you with its many arms![or]The abomination bites you with its many teeth![or]The abomination slams you into the wall[at random]";
-	now defeated entry is "[beattheMistress]"; 
-	now victory entry is "[losetoMistress]"; 
-	now desc entry is "[Mistressdesc]"; 
+	now defeated entry is "[beattheMistress]";
+	now victory entry is "[losetoMistress]";
+	now desc entry is "[Mistressdesc]";
 	now face entry is "is that a rabbit's, complete with a pair of long ears and twitching nose. A slut's collar has also formed around your neck. Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "You have a (your text)."]
 	now body entry is "that of a sexy rabbit's, with large bunny paws and strong, shapely legs";[ Body Description, format as the text "Your Body is (your text)."]
 	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]white fur all over your";[ skin Description, format as the text "You have (your text)."]
@@ -273,7 +273,7 @@ When Play begins:
 	now int entry is 16;
 	now cha entry is 14;
 	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 200; 
+	now hp entry is 200;
 	now lev entry is 15; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 15; [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]

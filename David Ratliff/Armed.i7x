@@ -72,7 +72,7 @@ if the person asked is dead, say "Dead men tell no tales. And they usually can't
 Before doing anything except searching or examining to a person (called the corpse) (this is the respect the dead rule): if the corpse is dead, say "Must you do that to [the corpse]? Have a little respect, please." instead.
 
 Check searching a person (called corpse) (this is the search a corpse rule):
-if the corpse is dead, say "You search [corpse][if the number of things carried by corpse is 0] but find nothing[otherwise] and find [the list of things carried by corpse][end if]." instead.
+if the corpse is dead, say "You search [corpse][if the number of things carried by corpse is 0] but find nothing[else] and find [the list of things carried by corpse][end if]." instead.
 
 Instead of taking inventory (this is the new inventory listing rule):
 if the number of things enclosed by the player is 0, say "You don't seem to have anything at the moment.[line break](Health: [present health of the player]/[max health of the player])[line break]" instead;
@@ -91,21 +91,21 @@ To say status of the player:
 	let x be the present health of the player;
 	if x is 100:
 		say "are in perfect health";
-	otherwise if x is at most 10:
+	else if x is at most 10:
 		say "are near death";
-	otherwise if x is at most 20:
+	else if x is at most 20:
 		say "are in serious condition";
-	otherwise if x is at most 30:
+	else if x is at most 30:
 		say "have taken quite a beating";
-	otherwise if x is at most 60:
+	else if x is at most 60:
 		say "have definitely been better, but you could be worse";
-	otherwise if x is at most 70:
+	else if x is at most 70:
 		say "are a little beaten up";
-	otherwise if x is at most 80:
+	else if x is at most 80:
 		say "can almost hide the fact that you have been in a fight";
-	otherwise if x is at most 90:
+	else if x is at most 90:
 		say "have some scrapes and bruises, but you have looked worse";
-	otherwise:
+	else:
 		say "are a little banged up, but still good-looking".
 
 Section 3 - Shooting
@@ -406,15 +406,15 @@ Example: ** Shooting Gallery - Bob invites you to shoot bottles to win a prize! 
 		let x be the number of bottles on the table;
 		if x is 5:
 			say "Only 5 more to go";
-		otherwise if x is 4:
+		else if x is 4:
 			say "Only 4 more";
-		otherwise if x is 3:
+		else if x is 3:
 			say "Half way there";
-		otherwise if x is 2:
+		else if x is 2:
 			say "Just 2 more";
-		otherwise if x is 1:
+		else if x is 1:
 			say "Only 1 more and you win";
-		otherwise:
+		else:
 			say "You shot all of the bottles! You win the teddy bear";
 			end the game saying "You should give your newly won teddy bear to someone you love!".
 
@@ -442,7 +442,7 @@ Example: *** Trolls - Bob, king of the trolls, must be destroyed! This example s
 				say "You gulp down the vile tasting potion. 15 points have been restored to your health.";
 				change the present health of the player to the present health of the player + 15;
 				remove elixir from play;
-			otherwise;
+			else;
 				say "Drinking the potion while your health is [present health of the player] will do you no good. Save it for when you need it.";
 			end if.
 

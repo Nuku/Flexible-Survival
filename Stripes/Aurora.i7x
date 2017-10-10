@@ -62,7 +62,7 @@ to say freeing_aurora:
 			if toolbonus > 0:
 				say "     Unfortunately, even with the tools and equipment you have available, you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to help her.";
 			else:
-				say "     Unfortunately, you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to free her."; 
+				say "     Unfortunately, you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to free her.";
 			now hp of frost giantess is 1;
 		if aurorafreed is true:
 			say "     Thanks to your efforts, a section of the concrete wall collapses, falling across the lava stream. It cracks in a few spots, but manages to largely hold together. Worried that it won't stay together for long, you hop across to help the giant woman. She heaves a small chest freezer onto her back like a backpack and rushes to join you by the lava's edge. Being so close to the lava makes her a little wobbly, but you're able to support her enough to help her across. The two of you put some distance between the magma flow and soon you're both feeling much better.";

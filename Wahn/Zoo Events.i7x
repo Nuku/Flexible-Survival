@@ -1,10 +1,10 @@
 Version 1 of Zoo Events by Wahn begins here.
 [ Version 1 - First Event ]
 
-Circle of Life is a situation. 
+Circle of Life is a situation.
 The sarea of Circle of Life is "Zoo".
 when play begins:
-	add Circle of Life to badspots of furry; 
+	add Circle of Life to badspots of furry;
 
 Instead of resolving a Circle of Life:
 	say "     While exploring the large expanse of the zoo, wandering along the walkways and even through the (usually breached) enclosures where the main way is blocked, you suddenly hear a not too distant roar, followed by frightened cries from a number of female voices. The sound of many hooves on asphalt comes closer very rapidly after that, so you decide to duck out of sight until you know what's going on. Hidden behind a bush, you see a whole group of anthro gazelles sprint past in full flight a moment later - but in their panic, one of the group members actually runs the wrong way at a fork just a short distance ahead. She is about two dozen feet down that way alone when she notices that something is up and stops in a scrape of hooves on stone, panting quickly as she looks back the way she came.";
@@ -47,5 +47,5 @@ Instead of resolving a Circle of Life:
 		say "     Trying not to listen to the frightened shouts, roars and growls coming from the direction both of the beast-people ran off in, you quickly walk the other way. One redeeming fact (maybe?) is that the noise goes on and on, so you don't think the predator went after the gazelles for food. Flashes of what might be going on between them instead dominate your imagination until you finally are out of earshot.";
 	now battleground is "void";
 	now Circle of Life is resolved;
-	
+
 Zoo Events ends here.

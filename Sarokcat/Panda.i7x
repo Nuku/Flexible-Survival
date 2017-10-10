@@ -26,9 +26,9 @@ to say panda appears:
 to say panda attack:
 	choose row monster from the table of random critters;
 	if medeapanda is true:
-		say "     [if hp of player > 0]Rather than fight a pregnant woman about to go into labour, you decide to just give up and let her have her way[otherwise]You end up getting beaten rather than giving you all to fight a pregnant woman about to go into labour[end if].";
+		say "     [if hp of player > 0]Rather than fight a pregnant woman about to go into labour, you decide to just give up and let her have her way[else]You end up getting beaten rather than giving you all to fight a pregnant woman about to go into labour[end if].";
 		now non-infectious entry is true;
-	otherwise if cocks of player is greater than 0:
+	else if cocks of player is greater than 0:
 		say "'Finally!' She says as she sends you crashing to the ground exhausted! 'Now we can have some fun!' the pandalike woman says with a happy grin as she flops onto the ground next to you, her arms quickly reaching out and pulling you close. Her heat scent fills your nostrils as she slowly strokes one of her panda-like claws along the underside of your cock. 'Oh thank god, I need this so bad,' She says with a shudder, her smell and her attentions exciting you as well as she clutches you even closer, pressing your chest up against her modest breasts as she rubs her crotch against yours. Unable to resist her desperate need, and the arousal she is stirring in you, you move your cock into position up against her heat swollen lips.";
 		say "Not waiting for you to make the next move, she grabs your ass with her clawed hand as she pulls you up forcing your cock into her, causing you both to gasp in pleasure. The feel of her swollen lips embracing and massaging your cock is wonderful, as you begin to piston yourself into her, her claws tracing lightly over your body as she moans in encouragement. You find her need is almost contagious, as you find yourself growing almost as eager as she obviously is, clutching her to you as you both writhe together on the soft landscaping, thrusting into her harder and faster, while she begs you to go even harder still. You are almost taken by surprise by the force and swiftness of your own orgasm as you shoot into her, her claws tightening on your ass as her body shudders in its own orgasm as her hot walls clench and massage your cock, trying to coax it out of every last bit of seed.[line break]";
 		say "Eventually she relaxes with a sigh, her claws leaving slightly bloody marks behind as she unclenches her hands, and you both lie there for a moment dazed by the wonderfully strong experience. She seems to recover first, pulling herself up and out of your arms and stretching, before one of her hands rests over her stomach and a happy expression crosses her face. 'Oh, I feel so much better now,' The panda woman says, as she looks down at your still exhausted body, 'Thank you so much for helping me out with that, you should come back by here more often, just in case I need your type of 'help' again.' She says, leaning down to give you a peck on the cheek from her small muzzle, before staggering off into the zoo to look for a safe place to rest, leaving you to recover from the experience on your own.";
@@ -76,7 +76,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60;  
+	now hp entry is 60;
 	now lev entry is 7;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 10;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Zoo";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -87,17 +87,17 @@ When Play begins:
 	now breast size entry is 0;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;  
-	now cunt width entry is 0;  
+	now cunt length entry is 0;
+	now cunt width entry is 0;
 	now libido entry is 40;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]rounded[or]padded[or]stocky[or]chubby[at random]";
 	now type entry is "[one of]panda[or]ursine[at random]";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  
+	now non-infectious entry is false;
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "bearhugger";  [ Row used to designate any special combat features, "default" for standard combat. ]
 

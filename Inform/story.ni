@@ -6,7 +6,7 @@ Release along with an interpreter.
 Use memory economy.
 Use slow route-finding.
 [ The following adjust Informs compiler settings so that it allocates enough space. If these values are incorrect, inform will fail to compile.]
-[ To determine if one of these is your issue, Use the Errors tab in the inform 7 window. ]
+[ To determine if one of these is your issue, use the Errors tab in the inform 7 window. ]
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
@@ -36,7 +36,7 @@ Include Basic Screen Effects by Emily Short.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 58.
+The release number is 59.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -494,7 +494,7 @@ To decide which number is numeric/numerical value of (T - indexed text):
 		else if C is "5"; let D be 5; else if C is "6"; let D be 6;
 		else if C is "7"; let D be 7; else if C is "8"; let D be 8;
 		else if C is "9"; let D be 9; else if C is "0"; let D be 0;
-		otherwise; decide on 0; end if;
+		else; decide on 0; end if;
 		let result be (result * 10) + D;
 	end repeat;
 	if negated is true, let result be 0 - result;
@@ -3751,7 +3751,7 @@ exploring is an action applying to nothing.
 understand "explore" as exploring
 
 check exploring:
-	if location of player is not fasttravel and earea of location of player is "void", say "You can not explore from here." instead;
+	if location of player is not fasttravel and earea of location of player is "void", say "You cannot explore from here." instead;
 
 carry out exploring:
 	if there is a dangerous door in the location of the player:
@@ -4987,11 +4987,12 @@ Include Text Capture by Eric Eve.
 [Locations]
 Include Apocalypse Store by DrGryphon.
 Include Approaching the Capitol Building for FS by Guest Writers.
+Include Beach by Speedlover.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
 Include Camp Bravo by Wahn.
 Include Campus For Fs by Rikaeus.
-Include Church Of The Maternal Beast For Fs by Guest Writers.
+[Include Church Of The Maternal Beast For Fs by Guest Writers.]
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
 Include Equinoid Camp For FS by Stripes.
@@ -5055,6 +5056,7 @@ Include Forest Events by Aureas Gigas.
 Include Forest Events by Defth.
 Include Forest Gang Bang by Defth.
 Include giving in by Core Mechanics.
+Include HellHound by Speedlover.
 Include High Rise Events by Stripes.
 Include How High by Kaleem mcintyre.
 Include Hyena Bikers by Stripes.

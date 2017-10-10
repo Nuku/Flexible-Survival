@@ -2878,7 +2878,7 @@ to restorepart2:	[values 60 - 161]
 		now thirst of Duke is 2;
 	if thirst of Duke is 1:
 		move Duke to Sheep Meadow SW;
-	otherwise if thirst of Duke is 2:
+	else if thirst of Duke is 2:
 		move Duke to Sheep Meadow SE;
 [160: [hp of Zigor]]
 	if hp of Zigor > 0:

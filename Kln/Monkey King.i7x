@@ -10,7 +10,7 @@ The player has a number called MonkeyKingWin.
 Randomiser MK descriptions scenes: [random adj][random name] (v 2)?
 Develop MonkeyKing: give option on how to handle victory . Depending on what you do, Fight intro and/or outcome changes. (v2)
 Interaction during fight? (v2)
-Concept : friendship meter: raises if non-dominant victory, lowers otherwise; if positive or negative, certain scenes change (v2 / v3)
+Concept : friendship meter: raises if non-dominant victory, lowers else; if positive or negative, certain scenes change (v2 / v3)
 ]
 
 Section 1 - Monster Responses
@@ -72,7 +72,7 @@ to say beattheMonkeyKing:
 		if the player consents:
 			say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. '[italic type]Wh... What are you doing?[roman type]' he asks, visibly intimidated. You could go at him [link]gently (Y)[as]y[end link], or choose to teach him a lesson the [link]hard way (N)[as]n[end link]. What is your choice?";
 			if player consents:
-				say "     You crawl on your former opponent, intent on teaching him that letting the other one handle the things can also be pleasurable. You kiss him and fondle his body. Your mate is surprised but nonetheless pleased by what happens. After a few minutes kissing and groping, The monkey's prehensile feet give you an idea. Sitting at the opposite of the now erect simian, you apply your feet on his groin and, slowly, you use them to stroke his cock. Visibly aroused, the Monkey King moans; he calms down, lies on his back and lets himself enjoy your footjob. At first a little clumsy, you quickly get the hang of things, even starting to use your toes in the action. The primate's moans become louder and louder as you massage his penis with your foot soles or circle his cock-head with your big toe.";
+				say "     You crawl on your former opponent, intent on teaching him that letting the other one handle the things can also be pleasurable. You kiss him and fondle his body. Your mate is surprised but nonetheless pleased by what happens. After a few minutes kissing and groping, the monkey's prehensile feet give you an idea. Sitting at the opposite of the now erect simian, you apply your feet on his groin and, slowly, you use them to stroke his cock. Visibly aroused, the Monkey King moans; he calms down, lies on his back and lets himself enjoy your footjob. At first a little clumsy, you quickly get the hang of things, even starting to use your toes in the action. The primate's moans become louder and louder as you massage his penis with your foot soles or circle his cock-head with your big toe.";
 				if cocks of player > 0 and cunts of player > 0:
 					say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate as his feet grab your cock and shows you how it's done, jerking your [cockname of player] rod with one paw while frotting your [cunt size desc of player] pussy with the other.";
 				else if cocks of player > 0:
@@ -109,10 +109,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Monkey"; 	now attack entry is "[one of]The Monkey King hits you in the head with his staff![or]The agile primate swipes your legs with his weapon. You fall on your ass as the arrogant creature does a backflip and laughs at you.[or]The monkey uses his staff as support and delivers a flying kick in your stomach.[or]The dexterous creature jumps and, with a somersault, lands behind you. As you turn back a furry palm hits you in the face and makes you stagger.[at random]"; 
-	now defeated entry is "[beattheMonkeyKing]"; 
-	now victory entry is "[losetoMonkeyKing]"; 
-	now desc entry is "[MonkeyKingdesc]"; 
+	now name entry is "Monkey"; 	now attack entry is "[one of]The Monkey King hits you in the head with his staff![or]The agile primate swipes your legs with his weapon. You fall on your ass as the arrogant creature does a backflip and laughs at you.[or]The monkey uses his staff as support and delivers a flying kick in your stomach.[or]The dexterous creature jumps and, with a somersault, lands behind you. As you turn back a furry palm hits you in the face and makes you stagger.[at random]";
+	now defeated entry is "[beattheMonkeyKing]";
+	now victory entry is "[losetoMonkeyKing]";
+	now desc entry is "[MonkeyKingdesc]";
 	now face entry is "like a monkey, with a small muzzle, big laughing eyes and a mane of fur around it"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "lithe and human-like. It is also very flexible, and you can do any kind of acrobatics with ease. Your feet are prehensile, meaning you can hold various objects and do many things with them as if they were hands."; [ Body Description, format as the text "Your body is (your text)" ]
 	now skin entry is "short, golden fur which recovers your entire"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
@@ -123,14 +123,14 @@ When Play begins:
 	now skin change entry is "a short but thick fur, as gold as the sun, grows on your whole body, from head to toe"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a long, prehensile tail grows from your buttocks"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it morphs. Once the transformation is over, you look down and see your cock is like a human's"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 13; 
+	now str entry is 13;
 	now dex entry is 21; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 14; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 15;
 	now sex entry is "Male";
-	now hp entry is 50; 
+	now hp entry is 50;
 	now lev entry is 10; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
 	now area entry is "Museum"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -149,7 +149,7 @@ When Play begins:
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lithe"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "simian"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

@@ -46,7 +46,7 @@ Carry out constructing:
 		now current2 of blueprints is noun;
 		now lolcation is second noun;
 		say "Your builders begin constructing [noun] in the [second noun].";
-	otherwise:
+	else:
 		say "Aborted.";
 
 Book - Define Construct
@@ -60,7 +60,7 @@ A Construct has a number called cost.
 A Construct has a rule called completion.
 The completion of a Construct is usually nothing rule;
 lolcation is a text that varies.
-	
+
 This is the nothing rule:
 do nothing;
 
@@ -68,13 +68,13 @@ Definition: A Construct (called C) is valid:
 	follow the validation of C;
 	if rule succeeded:
 		yes;
-	otherwise:
+	else:
 		no;
 
 Definition: A Construct (called C) is complete:
 	if progress of C >= cost of C:
 		yes;
-	otherwise:
+	else:
 		no;
 
 Carry out Completion:
@@ -91,5 +91,5 @@ The description of it is "A massive, flat area filled with rows upon rows of[one
 The cost of it is 60.
 The completion of it is Agricultural Zone.
 	if the value of direction is east;
-		
+
 Build WIP ends here.

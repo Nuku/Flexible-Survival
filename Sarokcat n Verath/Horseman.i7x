@@ -60,7 +60,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Horseman"; 
+	now name entry is "Horseman";
 	now attack entry is "[one of]He rears back and kicks out at you with one of his large powerful legs![or]The powerful horseman grins evilly as he lowers his head slightly and rams his forehead into yours brutally.[or]He strokes his powerful equine cock teasingly, his masculine equine musk filling your head and sapping your will to fight.[or][at random]";
 	now defeated entry is "[Horseman loses]";
 	now victory entry is  "[Horseman wins]";
@@ -72,8 +72,8 @@ When Play begins:
 	now cock entry is "[one of]equine[or]horse-like[or]blunt[or]powerful[at random]";
 	now face change entry is "your mouth stretches forward, your nose flattening as it merges with your forming equine muzzle. You find yourself groaning slightly as your forehead flattens and your eyes shift their position to the sides slightly even as your ears lengthen into larger and pointed horse-like ears, which come to rest atop your now extremely equine face"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your muscles seem to shift around underneath your skin, and your legs cramp as your heels move up your legs, causing you to stumble slightly as you are forced to assume a more digitigrade stance on your changing feet, your toes seeming to flatten and merge together until you are standing on powerful horse-like hooves. The rest of your body finishes changing as well, your hands having acquired rather hoof-like nails, and your chest and torso is broader and more equine looking"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "coarse horse-like fur begins to push its way out of your flesh, the brown and white patterned fur forming into several rather interesting dappled patternings as it finishes covering your body completely."; 
-	now ass change entry is "it seems to tighten into a rather broader and flatter ass, and long strands of thick equine hair begin to sprout from the base of your spine, quickly growing out to form a rather long and handsome equine tail which hangs down past your knees and seems to flick from side to side as if it had a mind of its own"; 
+	now skin change entry is "coarse horse-like fur begins to push its way out of your flesh, the brown and white patterned fur forming into several rather interesting dappled patternings as it finishes covering your body completely.";
+	now ass change entry is "it seems to tighten into a rather broader and flatter ass, and long strands of thick equine hair begin to sprout from the base of your spine, quickly growing out to form a rather long and handsome equine tail which hangs down past your knees and seems to flick from side to side as if it had a mind of its own";
 	now cock change entry is "it grows erect and aroused, before beginning to shift and change. The point of your cock broadening and flattening slightly into a rather blunt equine shape, while a proper sheath forms around the base of your cock, and a ribbed ring forms about halfway up your rather larger member"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 28;
 	now dex entry is 16;
@@ -82,7 +82,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 14;
 	now sex entry is "Male";            [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 90;                 
+	now hp entry is 90;
 	now lev entry is 9;                 [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 12;               [ Amount of Damage monster Does when attacking.]
 	now area entry is "Stable";         [ Current options are 'Outside' and 'Mall'  Case sensitive]
@@ -101,9 +101,9 @@ When Play begins:
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[at random]";
 	now type entry is "[one of]equine[or]horse-like[at random]";
-	now magic entry is false;           
-	now resbypass entry is false;       
-	now non-infectious entry is false;  
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
 

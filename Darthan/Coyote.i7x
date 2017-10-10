@@ -15,7 +15,7 @@ to say losetocoyote:
 	say "You shouldn't be seeing this.";
 	if cocks of player > 0:
 		say "Really, how did you do this?";
-	otherwise:
+	else:
 		say "Really, how did you do this?";
 
 to say beatthecoyote:
@@ -26,9 +26,9 @@ to say beatthecoyote:
 			say "Sorry, you shouldn't have gotten here.";
 			if cunts of player > 0:
 				say "Really, how did you get here?";
-			otherwise:
+			else:
 				say "Really, how did you get here?";
-		otherwise:
+		else:
 			say "Not sure how you got here.";
 
 
@@ -100,21 +100,21 @@ to coyotify: [Used for infection purposes.]
 			break;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
-	otherwise if "Female Preferred" is listed in feats of player:
+	else if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
+	else if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
-	otherwise if Diegochanged is 0: [Male Diego]
+	else if Diegochanged is 0: [Male Diego]
 		now sex entry is "Female";
-	otherwise if Diegochanged is 1: [Herm Diego]
+	else if Diegochanged is 1: [Herm Diego]
 		now sex entry is "Both";
-	otherwise if Diegochanged is 2: [Female Diego]
+	else if Diegochanged is 2: [Female Diego]
 		now sex entry is "Male";
 	now non-infectious entry is false;
 	infect;
 	now non-infectious entry is true;
 	if ( diegochanged is 0 and sex entry is not "Female" ) or ( diegochanged is 2 and sex entry is "Female" ):
-		say "Diego gets a puzzled look on [if diegochanged is 0]his[otherwise]her[end if] face then suddenly breaks out into a fit of laughter. 'Guess the trick really was on me.' You can't help but wonder what [if diegochanged is 0]he[otherwise]she[end if] meant by that.";
+		say "Diego gets a puzzled look on [if diegochanged is 0]his[else]her[end if] face then suddenly breaks out into a fit of laughter. 'Guess the trick really was on me.' You can't help but wonder what [if diegochanged is 0]he[else]she[end if] meant by that.";
 
 
 [
@@ -122,13 +122,13 @@ when play ends:
 	if bodyname of player is "Template":
 		if humanity of player is less than 10:
 			say "     You succumb to your template infection.";
-		otherwise:
+		else:
 			say "     You survive, but were infected by the template.";
 			if cocks of player > 0:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
-			otherwise if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
+			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";
-			otherwise:									[F-STERILE]
+			else:									[F-STERILE]
 				say "     Additional text for a female survivor who cannot become preggers.";
 ]
 

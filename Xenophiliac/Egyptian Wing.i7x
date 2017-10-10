@@ -307,7 +307,7 @@ to say SanctumofHorusDesc:
 		say "     Approaching the sarcophagus centered against the northern wall, you're surprised that the golden coffin is not covered in hieroglyphics; instead, there are only two large symbols engraved in the solid funerary box. The first symbol lies on the upper half of the sarcophagus; it consists of a simple circle with feathered wings extending from its sides. The symbol below it looks to be an insect of some sort; a beetle, if you had to guess. The beetle's front legs lie outstretched, holding an orb above its head. Taking a quick look at the seal on the sarcophagus, you don't think it would be that difficult to [bold type]remove the cover[roman type] aside and reveal what's within; you're not sure if that's a good idea, however.";
 	else:
 		say "     The sarcophagus against the northern wall is now open, the lid of the coffin lying against the wall nearby. Its former occupant is now living within this shrine, the insectoid creature keeping the sanctum immaculate.";
-		
+
 instead of sniffing Sanctum of Horus:
 	say "     While this room smells just like the rest of the Egyptian Wing, every whiff of the warm air reminds you of bright, sunny days.";
 
@@ -670,7 +670,7 @@ It is part of the player.
 It has a weapon "[one of]the ancient blade[or]the Egyptian blade[or]the warrior's blade[at random]".
 The weapon damage of ancient blade is 15.
 The weapon type of ancient blade is "Melee".
-It is not temporary. 
+It is not temporary.
 the scent of ancient blade is "The weapon smells of forged metal, with a hint of dirt and dust.".
 
 Table of Game Objects (continued)

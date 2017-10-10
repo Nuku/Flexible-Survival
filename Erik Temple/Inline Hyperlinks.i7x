@@ -26,7 +26,7 @@ A glulx hyperlink rule (this is the default inline hyperlink handling rule):
 		follow the hyperlink processing rules;
 	if the status window is the hyperlink source:
 		request glulx hyperlink event in status window;
-	otherwise:
+	else:
 		request glulx hyperlink event in main window.
 
 To request glulx hyperlink event in the/-- main window:
@@ -75,7 +75,7 @@ To say end link:
 		repeat with count running from 1 to the number of entries in the hyperlink list:
 			if entry (count) of the hyperlink list is hyperlinked command:
 				let hyperlink index be count;
-	otherwise unless the hyperlinked command is "":
+	else unless the hyperlinked command is "":
 		add hyperlinked command to hyperlink list;
 		let hyperlink index be the number of entries of hyperlink list;
 	say "[set link (hyperlink index)][hyperlinked text][terminate link]";
@@ -130,7 +130,7 @@ To say end link:
 		repeat with count running from 1 to the number of entries in the hyperlink list:
 			if entry (count) of the hyperlink list is hyperlinked command:
 				let hyperlink index be count;
-	otherwise unless the hyperlinked command is "":
+	else unless the hyperlinked command is "":
 		add hyperlinked command to hyperlink list;
 		let hyperlink index be the number of entries of hyperlink list;
 	say "[set link (hyperlink index)][hyperlinked text][terminate link]";
@@ -283,7 +283,7 @@ Example: * Survival Mode - A simple example that shows the most basic usage. The
 	Instead of swinging yourself:
 		if the player is swaying:
 			say "You swing faster.";
-		otherwise:
+		else:
 			say "You sway a bit to get the vine moving, and soon are swinging in a wide arc.";
 			now the player is swaying.
 
@@ -297,7 +297,7 @@ Example: * Survival Mode - A simple example that shows the most basic usage. The
 		if the player is swaying:
 			say "You release the vine, impeccably timing your leap. You grab onto the other vine and hold. Through the mist you see yet another vine hanging thirty feet or so ahead.";
 			now the player is hanging;
-		otherwise:
+		else:
 			say "You release the vine and drop toward the jungle floor. Tumbling through the mist, you land hard on [one of]a thorn-tree; the baroque profusion of spines the size of railroad spikes ends your life[or]a massive hill of flesh-eating ants. They swarm over you before you can regain your feet[or]a path used exclusively by stampeding boars; a pack of the loathsome creatures happens to be passing[purely at random].";
 			end the game in death.
 		
@@ -456,7 +456,7 @@ A companion rule for input redirects the player's typed direction command in the
 	12	going outside
 
 
-	The printed name of a room is "Maze". The description of a room is usually "A maze of twisty little passages, all alike. Exits: [if the player is deranged][skewed exits][otherwise][exits][end if]".
+	The printed name of a room is "Maze". The description of a room is usually "A maze of twisty little passages, all alike. Exits: [if the player is deranged][skewed exits][else][exits][end if]".
 
 	There is a red pill in R01. The red pill is edible. "A [link]red pill[as]eat red pill[end link] lies on the floor here. Perhaps this will give you the mental acuity necessary to see through the maze!"
 

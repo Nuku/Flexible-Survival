@@ -113,8 +113,8 @@ To ask an open question, in number mode, in menu mode, in yes/no mode, in gender
 		say "[current question][line break]";
 	if in menu mode:
 		repeat with counter running from 1 to the number of entries in the current question menu:
-			say "[counter] - [entry counter of the current question menu][line break]".	
-		
+			say "[counter] - [entry counter of the current question menu][line break]".
+
 Chapter 2 - Questions that require a number answer
 
 Section 1 - Flag to set number question mode
@@ -521,7 +521,7 @@ Section: Introduction
 
 During the normal course of a game, the parser responds to commands given by the player.  If we type look, the parser interprets the command and displays a description of the current room; if we type N, the player heads North (if that exit is available, and so on.
 
-Occasionally, we may want to ask specific questions and process the answers.  Examples may be asking the player's name or age or displaying a menu of options from which the player selects a choice.   Answers to these types of questions fall outside the range of the normal parser functions.  Therefore we need to intercept the player's answers to these types of questions and respond to them separately.
+Occasionally, we may want to ask specific questions and process the answers.  Examples may be asking the player's name or age or displaying a menu of options from which the player selects a choice.  Answers to these types of questions fall outside the range of the normal parser functions.  Therefore we need to intercept the player's answers to these types of questions and respond to them separately.
 
 This extension provides a framework that can be used to ask different types of questions.  The mechanics are hidden behind the scenes to allow us to concentrate on asking and responding to a question without having to implement the framework ourselves.
 
@@ -665,7 +665,7 @@ When a question is asked, we can change the command prompt to indicate to the pl
 
 	Open yes/no prompt: ">".
 
-	Closed gender prompt: "Please enter M,  F or N (Male or Female or Neuter) >".
+	Closed gender prompt: "Please enter M, F or N (Male or Female or Neuter) >".
 
 	Open gender prompt: ">".
 
@@ -690,7 +690,7 @@ If we set the current prompt to "", the relevant default prompt outlined above w
 
 Section: Combining the question and prompt
 
-We can combine the question and the prompt.   To do so, we set the current question to a blank string and the question prompt to the question that we want to ask:
+We can combine the question and the prompt.  To do so, we set the current question to a blank string and the question prompt to the question that we want to ask:
 
 	now current question is "";
 	now current prompt is "What is your name? >";

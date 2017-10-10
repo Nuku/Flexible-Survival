@@ -46,7 +46,7 @@ When Play begins:
 	now int entry is 18;
 	now cha entry is 20;
 	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 225;  
+	now hp entry is 225;
 	now lev entry is 25;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 15;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "None";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -57,8 +57,8 @@ When Play begins:
 	now breast size entry is 0;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;  
-	now cunt width entry is 0;  
+	now cunt length entry is 0;
+	now cunt width entry is 0;
 	now libido entry is 50;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "Chipped tooth";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]

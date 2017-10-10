@@ -41,7 +41,7 @@ to say awesome attack:
 				say "You get an awesome piece of wood that could be used as, an awesome bat!";
 		say "[Give Awesome][combat abort]";
 		now fightoutcome is 20;
-	otherwise:
+	else:
 		say "[one of]While you try and attack the tree, you trip over a root that you hadn't seen[or]You stop for a moment, and as you ponder just how awesome the tree really is, suddenly your leg cramps[at random].";
 		now monsterhp is 60;
 		increase Awesome_boredom by 1;
@@ -57,11 +57,11 @@ to say awesome defeat:
 		say "With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
 		infect;
 		now fightoutcome is 19;
-	otherwise:
+	else:
 		say "Somehow you manage to strike the tree in such a way that it collapses, breaking along the fault line in its trunk you had made. You notice the branches are riddled with fruit and you make an effort to gather as many ripe ones as you can.";
 		if Awesome_noreward > 2:
 			say "You drop to your knees, wailing, unable to live with yourself for how much awesome you have taken from the world. Rising to your feet, you pledge never to destroy another awesome tree so long as you live.";
-		otherwise:
+		else:
 			say "With a start, you realize what you have done: you have ended a whole other kind of awesome in the world. Guiltily you walk away from the tree but promise you will find a way to atone for your sin.";
 		let x be a random number between 4 and 10;
 		repeat with Awesome_counter running from 1 to x:
@@ -80,10 +80,10 @@ to say awesome desc:
 		if "Male Preferred" is listed in feats of player:
 			now Awesome_sex is 2;
 			now sex entry is "Male";
-		otherwise if "Female Preferred" is listed in feats of player:
+		else if "Female Preferred" is listed in feats of player:
 			now Awesome_sex is 1;
 			now sex entry is "Female";
-		otherwise:
+		else:
 			now Awesome_sex is 0;
 			now sex entry is "Both";
 	say "You turn a corner and see it. Looking up you realize due to the shape of the branches you are unable to actually see just how tall this monstrous and truly Awesome Tree is. Its branches are long and you see, among the foliage some fruit that look unbelievably tasty, if you could just shake the tree enough to get one to fall...";
@@ -102,13 +102,13 @@ When Play begins:
 	now desc entry is "[awesome desc]";[ Description of the creature when you encounter it.]
 	now face entry is "completely human";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "human-looking";[ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "[if looknow is 1]human[otherwise]normal human, lovely, healthy-looking[end if]";[ skin Description, format as the text "You have (your text) skin."]
+	now skin entry is "[if looknow is 1]human[else]normal human, lovely, healthy-looking[end if]";[ skin Description, format as the text "You have (your text) skin."]
 	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "[if awesome_sex is 2]your hips seem to return to human male normal[otherwise]your rear changes, sliding into the perfect wide-hipped female figure[end if]"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now ass change entry is "[if awesome_sex is 2]your hips seem to return to human male normal[else]your rear changes, sliding into the perfect wide-hipped female figure[end if]"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it seems to feel hot, after a few gasps you realize it looks completely human"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 15;
 	now dex entry is 15;
@@ -135,7 +135,7 @@ When Play begins:
 	now lootchance entry is 100;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]perfect[or][if player is female]lovely[otherwise]handsome[end if][at random]";
+	now body descriptor entry is "[one of]perfect[or][if player is female]lovely[else]handsome[end if][at random]";
 	now type entry is "human";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
@@ -160,7 +160,7 @@ the scent of the awesome fruit is "[awesomefrscent]".
 to say awesomefrscent:
 	if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
-	otherwise:
+	else:
 		say "The strange fruit has a strong, manly scent that seems mouthwateringly sweet.";
 
 the scent of the awesomer fruit is "[awesomerfrscent]".
@@ -168,7 +168,7 @@ the scent of the awesomer fruit is "[awesomerfrscent]".
 to say awesomerfrscent:
 	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
-	otherwise:
+	else:
 		say "The strange fruit has a lovely, feminine scent that seems mouthwateringly sweet.";
 
 the scent of the awesomest fruit is "[awesomestfrscent]".
@@ -176,7 +176,7 @@ the scent of the awesomest fruit is "[awesomestfrscent]".
 to say awesomestfrscent:
 	if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
-	otherwise:
+	else:
 		say "The strange fruit has a rich mix of male and female scents that seems mouthwateringly sweet.";
 
 the scent of the awesome bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.".
@@ -202,7 +202,7 @@ To say awesomest fruit use:
 	let omonster be monster;
 	if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
-	otherwise:
+	else:
 		repeat with Z running from 1 to number of rows in table of random critters:
 			choose row Z from the table of random critters;
 			if name entry matches the text "Awesome":
@@ -223,7 +223,7 @@ To say awesomer fruit use:
 	let omonster be monster;
 	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
-	otherwise:
+	else:
 		repeat with Z running from 1 to number of rows in table of random critters:
 			choose row Z from the table of random critters;
 			if name entry matches the text "Awesome":
@@ -244,7 +244,7 @@ To say awesome fruit use:
 	let omonster be monster;
 	if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
-	otherwise:
+	else:
 		repeat with Z running from 1 to number of rows in table of random critters:
 			choose row Z from the table of random critters;
 			if name entry matches the text "Awesome":

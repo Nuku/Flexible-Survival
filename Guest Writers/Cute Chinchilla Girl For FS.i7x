@@ -1,4 +1,4 @@
-Version 2 of Cute Chinchilla Girl For FS by Guest Writers begins here. 
+Version 2 of Cute Chinchilla Girl For FS by Guest Writers begins here.
 [ Version 2.1 - Player victory added by Stripes]
 [ Version 2.0 - Complete Overhaul by Blue Bishop]
 [- Originally Authored By: Trav -]
@@ -52,7 +52,7 @@ to say chinloss: [Placeholder, player victory scenes expected to be added in lat
 		if the player consents:
 			if cock length of player > 16:
 				say "     Giving her diminutive size, especially when compared to your [cock size desc of player] cock, you pass on outright fucking the little cutie and instead go for some other fun. Having to problem pinning her down, you press your drooling glans to her face and tell her to start licking. The small fluffball[if chindem is true][one of] grumbles something about how you don't have to so mean about it, but[or] giggles that you should've just said so in the first place. She[or]'s eyes go wide with desire at the size of your manhood. With such a prize, she[at random][else][one of] chitters indignantly, but[or] releases a chittering giggle of excitement. She[or][']s eyes go wide with desire at the size of your manhood. With such a prize, she[at random][end if] relents and slides her tongue slowly along several inches of cock before twirling it across the tip. Soon more licks follow along with her fuzzy paws joining in on caressing your [if cock length of player < 30]comparatively [end if]huge penis.";
-				say "      With her thus occupied, you slip your hands into her fuzzy fur and start caressing her curvaceous body. While it's hard to see buried under all that fluff, she's got a sexy (if rather animalistic) body hidden under her fur. You rub her breasts and tease her hidden nipples, drawing chitters of delight from her. You then let a hand slide down between her legs and slip [if scalevalue of player < 4]a pair of digits[else]a finger[end if] into her cunt. Her cunny's quite hot and wet, clearly excited from her fun with your cock.";
+				say "     With her thus occupied, you slip your hands into her fuzzy fur and start caressing her curvaceous body. While it's hard to see buried under all that fluff, she's got a sexy (if rather animalistic) body hidden under her fur. You rub her breasts and tease her hidden nipples, drawing chitters of delight from her. You then let a hand slide down between her legs and slip [if scalevalue of player < 4]a pair of digits[else]a finger[end if] into her cunt. Her cunny's quite hot and wet, clearly excited from her fun with your cock.";
 				attempttowait;
 				say "     You continue to finger and pet the female rodent while she licks and strokes your manhood. As your excitement grows, your dick drools pre onto her tongue as well as her fuzzy face. Feeling your orgasm approaching, you grab the back of her head with your free hand and stuff the end of your cock into her little muzzle. You groan and [if cock width of player > 15]bulge her cheeks out with just the first few blasts[else]shoot several blasts[end if] of your [cum load size of player] load into her mouth before pulling it out. You pump your cock frantically, spraying the rest of your seed onto her fuzzy fur, making sure she's good and messy. Even as you're cumming all over her, you finger her to a chittering orgasm.";
 				say "     After you get off her, she gets up and [if chindem is true][one of]grumbles about how messy you've gotten her soft coat[or]complains about how her fur is dry-clean only[or]complains about needing a good, long dust-bath now[at random][else]chitters indignantly, clearly upset at having her soft coat soaked in your seed[end if]. She tries her best to wipe it off while shakes her sticky arms as she walks off. This flings gobs of semen from her little paws onto the ground, though she also licks several gooey globs from them as well.";
@@ -85,7 +85,7 @@ to say chindesc:
 		now sex entry is "Female";
 	say "     [if showlocale is true]Popping up from a nearby [one of]crevice[or]alcove[at random] you are met with[else]You run up against[end if] what appears a female who's succumbed to the appearance of a chinchilla. Now no more than a few feet tall, very little in the way of human attributes remain. The diminutive creature squeaks distressingly in regards to your presence, [if a random chance of 1 in 2 succeeds and chindem is true]dressed in naught but a makeshift, canvas cloak[else]stark naked before you[end if] its pelt extraordinarily soft and inviting to your sight.";
 	say "     '[if chindem is true][one of]Don't think I can't take you on[or]Leave this place, please[or]I'll get what I need, one way or another[at random][else][one of]Tcht, kst kst[or]Scree, tcht tcht[or]Kst, tcht[at random][end if]!' [if chindem is true]Still somewhat lucid[else]Completely lost to its feral influence[end if], the little beast stands on its hindpaws, bearing its forepaws threateningly at you... Though, the gesture comes off as more adorable than threatening.";
-		
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -111,13 +111,13 @@ When Play begins:
 	now cock change entry is "Your shaft tingles with sudden arousal as it is engulfed in a soft grey sheath, the tool itself looking pinkish and tapered before your prying eyes."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 10;
 	now dex entry is 20;
-	now sta entry is 10; 
+	now sta entry is 10;
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 15;
 	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 19; 
-	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now hp entry is 19;
+	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 3; [Amount of Damage monster Does when attacking.]
 	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -128,14 +128,14 @@ When Play begins:
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 7; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6; [ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 6; [ Width of female sex  infection will try and give you ]
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
-	now loot entry is "tuft of chin fur"; 
+	now loot entry is "tuft of chin fur";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
 	now scale entry is 1; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]curvy[or]feminine[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "rodent"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
@@ -147,7 +147,7 @@ when play ends:
 			say "     Overtaken by your infection's influence you retreat to the plains, where your kin reside. Warmly greeted by them, you find yourself fitting in quite well, your days soon filled with constant sex, only occasionally interrupted by other predators or hunters, of which you either evade or add to your numbers. Your population eventually reach a point where you start spilling into more civilized areas, your disarming appearance proving very effective and quickly bringing them into the fold as well...";
 		else:
 			say "     Once you're rescued by the military you're processed by them with zero issue, likely aided by how non-threatening you look. Back in normal society, you find that, while children are easily drawn to your cute appearance, the rest of mainstream society doesn't quite regard you as highly, likely due to a stigma attached to the infected. You end up mostly staying within the social circles of other survivors, but otherwise lead a fairly reasonable life.";
-			
+
 Table of Game Objects(continued)
 name	desc	weight	object
 "tuft of chin fur"	"A soft piece of chinchilla fur."	1	tuft of chin fur

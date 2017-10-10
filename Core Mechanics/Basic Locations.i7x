@@ -39,7 +39,7 @@ to say bshower desc:
 
 Northeast of Bunker is Underground Restroom.
 Underground Restroom is a room. The description of Underground Restroom is "[brestroom desc]".
-		
+
 to say brestroom desc:
 	say "     This room is very bare bones - just a small chamber with several stalls containing toilets. Checking one out, you realize that it isn't a typical piece of bathroom installation. There is no water or anything really under the tightly closing lid... just what seems like a long drop into darkness. You try not to imagine how the lower end of the shaft might look like, or smell.";
 

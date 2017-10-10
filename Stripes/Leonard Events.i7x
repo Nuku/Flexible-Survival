@@ -347,7 +347,7 @@ to say leosupplyscene:
 			say "     Given her position, you could either choose to be on the receiving end or the giving side of some oral fun with the hard-working kitty.";
 			say "     [bold type]Which would you prefer?[roman type][line break]";
 			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Recieve oral.";
+			say "     ([link]Y[as]y[end link]) - Receive oral.";
 			say "     ([link]N[as]n[end link]) - Give oral.";
 			if the player consents:
 				say "[leosupplyoral1]";

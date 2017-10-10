@@ -14,7 +14,7 @@ Section - Zoom levels (for use with Glimmr Automap by Erik Temple)
 The zoom-level set of the Glimmr Automap Tileset is usually {0.3600, 0.5600, 0.8000, 1.0000}.
 
 The initial zoom level of the Glimmr Automap Tileset is usually 2.
-		
+
 
 Section - Figure List
 [Mark Tilford's Automap does not yet utilize the automap dark and automap present dark tiles, so these have been commented out.]
@@ -34,7 +34,7 @@ Figure of ne sw path is the file "Automap_Tileset_035.png".
 Figure of nw se path is the file "Automap_Tileset_036.png".
 Figure of empty room center is the file "Automap_Tileset_037.png".
 Figure of diagonal cross is the file "Automap_Tileset_090.png".
-Figure of orthogonal cross is the file "Automap_Tileset_091.png". 
+Figure of orthogonal cross is the file "Automap_Tileset_091.png".
 Figure of south wall is the file "Automap_Tileset_038.png".
 Figure of north wall is the file "Automap_Tileset_039.png".
 Figure of east wall is the file "Automap_Tileset_040.png".
@@ -113,7 +113,7 @@ Char	Tile
 36	Figure of nw se path
 37	Figure of empty room center
 90	Figure of diagonal cross
-91	Figure of orthogonal cross 
+91	Figure of orthogonal cross
 38	Figure of south wall
 39	Figure of north wall
 40	Figure of east wall
@@ -169,7 +169,7 @@ Char	Tile
 Glimmr Automap Tileset ends here.
 
 
----- DOCUMENTATION ---- 
+---- DOCUMENTATION ----
 
 Section: About
 

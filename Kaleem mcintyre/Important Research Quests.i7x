@@ -297,7 +297,7 @@ Instead of resolving a Friendship's Proof:
 	else if tpfs is 8:
 		say "[bold type]You'll need to help Omio first before you can finish this quest-line! Find Omio in the dry plains if you haven't already found her.[roman type]";
 	now battleground is "void";
-	
+
 
 Section 3 - Ouroboros
 
@@ -369,14 +369,14 @@ Instead of resolving a Ouroboros:
 	else:
 		say "Noticing that you're approaching the section where the Ouroboros medallion was once stored, you decide to steer clear of the area.";
 	now battleground is "void";
-	
+
 
 to say defeatedbycerb:
 	say "Having been defeated by the Cerberus you wind up getting tossed out of the Museum onto your head. Grunting in annoyance you soon find yourself chuckling in triumph as you feel the weight of the medallion shifting inside of your pocket.";
 	now carried of medallion is 1;
 	increase score by 10;
 	now Ouroboros is resolved;
-			
+
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -386,7 +386,7 @@ medallion is a grab object. It is part of the player.  It is not temporary.
 
 instead of sniffing medallion:
 	say "A strong scent of ancient times and alchemical mixtures covers the medallion.";
-	
+
 
 
 Section 3 - Special Delivery

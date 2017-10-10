@@ -1,13 +1,13 @@
 Version 1 of Hyena Shoppers by Doots begins here.
 
-Hyena Shoppers is a situation. 
+Hyena Shoppers is a situation.
 The sarea of Hyena Shoppers is "Outside".
 
 when play begins:
 	add Hyena Shoppers to badspots of furry;
 	add Hyena Shoppers to badspots of hermaphrodite;
 
-Instead of resolving a Hyena Shoppers: 
+Instead of resolving a Hyena Shoppers:
 	say "     You walk through the empty street, ducking and weaving between the abandoned cars that litter the streets, looking for something, anything to help you with your survival. Unfortunately, most of the shops that back in the day sold food have had their front windows smashed in and everything edible has been stolen. As you walk past a ransacked pet shop you hear something coming from the alley opposite to the building. The sound is strange but still you feel like you have heard it before. You could go see what is making that noise but you risk getting ambushed by horny mutants.";
 	say "     [bold type]Do you want to check what is making all that noise?[roman type][line break]";
 	LineBreak;
