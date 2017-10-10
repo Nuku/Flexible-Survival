@@ -359,8 +359,8 @@ to say VentFoxLastScavScene:
 	say "     Now that the guard has been dealt with, you and your friend continue your search for some easily accessible rubber. Looking around the lot, you eventually see a totaled truck. Upon closer examination, you notice there's a whole bed-full of tires in it! Vent seems to realize this too, as he hops up into the back of the truck, making quick work of the tires. Soon enough, he's devoured them all, and grown in size as well. Your foxy compatriot now stands taller than a horse when at full size. Of course, he doesn't stay that large for long, quickly shrinking back down to a much more manageable size, hopping out of the truck bed. With his hunger sated, the two of you make your way back to his hide out.";
 	now VentFoxContentLevel is 3;
 	now VentFoxLastFed is turns;
-	change the West exit of Smith Haven Mall Lot West to Maintenance Garage;
-	change the East exit of Maintenance Garage to Smith Haven Mall Lot West;
+	change the North exit of Smith Haven Mall Lot West to Maintenance Garage;
+	change the South exit of Maintenance Garage to Smith Haven Mall Lot West;
 
 to say VentFoxSexMenu:[Pretty self explanatory.]
 	if cocks of player > 0 and cunts of player is 0:
@@ -1248,8 +1248,8 @@ Carry out MaxOutVentStats:
 	now VentFoxEncounterCount is 3;
 	now VentFoxContentLevel is 3;
 	now VentFoxRelationship is 3;
-	change the West exit of Smith Haven Mall Lot West to Maintenance Garage;
-	change the East exit of Maintenance Garage to Smith Haven Mall Lot West;
+	change the North exit of Smith Haven Mall Lot West to Maintenance Garage;
+	change the South exit of Maintenance Garage to Smith Haven Mall Lot West;
 
 ShowVentStats is an action applying to nothing.
 Understand "ventstats" as ShowVentStats.
