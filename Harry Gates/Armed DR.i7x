@@ -453,7 +453,7 @@ Every turn (this is the fighting back rule):
 				end if;
 				if madman carries a projectile (called boomstick), try madman shooting the player with the boomstick;
 				if madman carries a blade (called pigsticker), try madman stabbing the player with the pigsticker;
-				if madman carries a bludgeon (called cudgel), try madman clubbing the player with the cudgel; 
+				if madman carries a bludgeon (called cudgel), try madman clubbing the player with the cudgel;
 			end if;
 		end if;
 	if madman is dead, change madman to docile;
@@ -579,7 +579,7 @@ Example: *** Trolls - Bob, king of the trolls, must be destroyed! This example s
 				say "You gulp down the vile tasting potion. 15 points have been restored to your health.";
 				change the present health of the player to the present health of the player + 15;
 				remove elixir from play;
-			otherwise;
+			else;
 				say "Drinking the potion while your health is [present health of the player] will do you no good. Save it for when you need it.";
 			end if.
 

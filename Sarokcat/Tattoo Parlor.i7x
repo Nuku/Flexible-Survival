@@ -24,7 +24,7 @@ The sarea of tattoonpiercing is "Red".
 Instead of resolving tattoonpiercing:
 	if tattoohunter is 0:
 		say "Wandering through the red light district, you come across a strange barricade it looks like someone set up across the entrance to a small alley. A closer look reveals that while the barricade may be made up of all sorts of different items, including several large dumpsters, and piled furnishings, it is well made enough that you can't manage to find a way past it. Shrugging you hope it will keep whoever built it safe from the creatures roaming the city, though it is pretty likely that whoever they are has already succumbed to the infection quite a while ago given the state of things in the city.";
-	otherwise if tattoohunter is 1:
+	else if tattoohunter is 1:
 		say "Hunting through the red light district for the location Harold gave you, you wander the nearby streets growing increasingly frustrated as you realize it must be near here somewhere. Finally on your third trip around the area, you find yourself looking at the remains of a small makeshift barricade covering a small alley, and decide to take a closer look. The barricade itself looks fine on close inspection, and actually remarkably well constructed considering the mixture of materials used to make it, however it is obvious someone on the inside moved key pieces aside and opened the barricade up so they could leave. Moving past the open barricade, you spot a sign not far along in the alley, apparently advertising the entrance to the Painted Dragon Tattoo and piercing parlor. You grin at your successful find for a minute, before glancing back at the opened barricade and getting something of a bad feeling about the situation. Moving forward carefully you try the door to the parlor, only to find it unlocked, going inside you find the place to be eerily quiet, though it was obviously occupied recently enough. After spending several hours searching the place for any clue as to where Harold's friend vanished, you sigh and realize that you will have to return to the Palomino and let the unicorn bartender know that his friend isn't home, and hasn't been for several days, and that they are probably infected by now, though you make note of the location in case you have to come back later.";
 		now Tattoo Parlor is known;
 		now tattoohunter is 2;
@@ -63,7 +63,7 @@ Instead of resolving Findingkara:
 			now Findingkara is resolved;
 	else:
 		say "Wandering through the red light district, you spot evidence a group of hyenas were here recently, from the gang signs recently drawn in the area, and from the tire tracks and the smell of sex in the air, it seems like they not only were riding some bikes, but they found someone to have some fun with in the district. Shrugging slightly, since it is the red light district, you find yourself wondering where a group of hyenas found some bikes that still work in this crazy city, though the thought of hyenas in biker leathers seems strangely arousing as you continue along your way.";
- 
+
 
 
 

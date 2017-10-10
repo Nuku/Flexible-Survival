@@ -29,7 +29,7 @@ instead of resolving a toy store:
 		if lost is 1:
 			say "     You manage to put some distance between you and the store, taking a while to recover from the peculiar circumstance.";
 			now toy store is resolved;
-		else:	
+		else:
 			say "     Standing in a pile of incapacitated latex foxes, you yell your triumph, and take some food and water as a reward.";
 			increase carried of food by 2;
 			if a random chance of one in two succeeds:

@@ -156,7 +156,7 @@ to blotbind:
 	psycheeval;
 	libidoeval;
 	now lustatt is libido of player;
-	now calcnumber is -1;		
+	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
 		if clearnomore is 0, clear the screen;
@@ -212,7 +212,7 @@ to blotbind:
 					blotsanitypassive;
 					blotlust;
 				else:
-					say "      [if blotintense < 3]Easily[else if blotintense < 5]With relative ease[else if blotintense < 8]Eventually[else]Finally[end if], you manage to wrench yourself free and dismount the possessed toy,  [if blotintense < 3]though it quickly regresses to a state of complete inanimacy[else if blotintense < 5]gradually cooldoing down and becoming inanimate once more[else if blotintense < 8]quivering for a moment as it slowly begins to fill the void you left[else if blotintense < 10]the mess of a thing trembling in distress over its now-missing rider[else]the thing practically crawling over to be one with you once more, forcing you to retreat even further[end if].";
+					say "      [if blotintense < 3]Easily[else if blotintense < 5]With relative ease[else if blotintense < 8]Eventually[else]Finally[end if], you manage to wrench yourself free and dismount the possessed toy, [if blotintense < 3]though it quickly regresses to a state of complete inanimacy[else if blotintense < 5]gradually cooling down and becoming inanimate once more[else if blotintense < 8]quivering for a moment as it slowly begins to fill the void you left[else if blotintense < 10]the mess of a thing trembling in distress over its now-missing rider[else]the thing practically crawling over to be one with you once more, forcing you to retreat even further[end if].";
 					say "     You clean yourself off and prepare to go about your business once more. [if blotintense > 5]It's likely best that you leave the vinyl object alone until it 'cools down' a bit[else]The vinyl object seems relatively harmless, for now at least[end if]...";
 					say "[line break]";
 					cleanboundmemory;
@@ -330,7 +330,7 @@ to say blotbinddesc:
 		else:
 			say "relentlessly pounding your cunt[sfn][if anallevel is not 1] and ass[end if] with large and distinctly moulded implements";
 		say ". Barely able to see anything through the eyes of the thing as you're forced to fellate a large and intoxicating tendril, it's clearly reached the apex of its power! You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
-		
+
 to blotbindorgasm:
 	if blotintense < 3:
 		say "     Finally overtaken by bliss, your ";
@@ -429,7 +429,7 @@ to blotsanityorgasm:
 		decrease humanity of player by (5 + psycheadjust)  / endureadj;
 	else:
 		decrease humanity of player by (3 + psycheadjust)  / endureadj;
-		
+
 to say blotstrugglebar:
 	say "[close bracket]";
 	if blotintense > 9:

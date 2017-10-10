@@ -71,10 +71,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Nerdy Mouse"; 	now attack entry is "[one of]The mouse blocks another attack from you, while shouting 'Barrier!' by using his messenger bag as a shield. OUCH!  What does he have in there anyway?[or]Seemingly recalling a self-defence class, the mouse shouts 'I don’t know you!  This is my purse!' as he manages to deliver a swift, and very painful, kick right to your groin.[or]'Look behind you!  A three-headed monkey!' The mouse shouts, pointing behind you.  You turn to look and find nothing, your pride is wounded for falling for the oldest trick in the book, further punctuated by a heady thump of his satchel bag onto your head![or]The mouse flails his balled up fists in your general direction.  It would be almost comical if he wasn't actually hitting you.[or]The mouse flails his heavy bag wildly while blocking his face.  '[mnfacequote]!' he squeaks with fear.  The bag ends up clocking you in the side of the head with a heavy thud.[or]The nerdy mouse swings his little fists wildly with his eyes squeezed tightly shut, some of his frantic blows hitting you.[at random]"; 
-	now defeated entry is "[beatthenerdymouse]"; 
-	now victory entry is "[losetonerdymouse]"; 
-	now desc entry is "[nerdymousedesc]"; 
+	now name entry is "Nerdy Mouse"; 	now attack entry is "[one of]The mouse blocks another attack from you, while shouting 'Barrier!' by using his messenger bag as a shield. OUCH!  What does he have in there anyway?[or]Seemingly recalling a self-defence class, the mouse shouts 'I don’t know you!  This is my purse!' as he manages to deliver a swift, and very painful, kick right to your groin.[or]'Look behind you!  A three-headed monkey!' The mouse shouts, pointing behind you.  You turn to look and find nothing, your pride is wounded for falling for the oldest trick in the book, further punctuated by a heady thump of his satchel bag onto your head![or]The mouse flails his balled up fists in your general direction.  It would be almost comical if he wasn't actually hitting you.[or]The mouse flails his heavy bag wildly while blocking his face.  '[mnfacequote]!' he squeaks with fear.  The bag ends up clocking you in the side of the head with a heavy thud.[or]The nerdy mouse swings his little fists wildly with his eyes squeezed tightly shut, some of his frantic blows hitting you.[at random]";
+	now defeated entry is "[beatthenerdymouse]";
+	now victory entry is "[losetonerdymouse]";
+	now desc entry is "[nerdymousedesc]";
 	now face entry is "that of an anthropomorphic mouse, complete with large ears and slightly buck teeth"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a lithe mouse with very little definition"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "light tan fur covers your"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
@@ -85,14 +85,14 @@ When Play begins:
 	now skin change entry is "you give an idle scratch to your belly to get at a sudden itch. As the itch subsides, you feel thin fur covering the area. A moment later you feel two more spots itching, soon your entire body is just one big itch that you can’t scratch.  After what feels like hours of scratching your body finally relaxes enough to notice your whole body is now covered in soft, light tan fur"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "An itch forms at your backside, reaching back to scratch at it reveals a change occurring. A tail is growing from the base of your spine. After several minutes you become the proud owner of a naked whip of a tail, like that of a mouse"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "a sudden wave of euphoria shoots through your groin. The feeling leaves you gasping for what feels like hours before you finally compose yourself enough to actually look at your crotch. You find your cock has grown slender and is now covered in a protective sheath when not aroused"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 8; 
+	now str entry is 8;
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 11; 
+	now sta entry is 11;
 	now per entry is 9;
 	now int entry is 17;
 	now cha entry is 11;
 	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 32; 
+	now hp entry is 32;
 	now lev entry is 3; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
 	now area entry is "Campus"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -111,7 +111,7 @@ When Play begins:
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lanky[or]skinny[or]lithe[or]short[at random]";
 	now type entry is "[one of]rodent[or]musine[or]mousey[as decreasingly likely outcomes]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

@@ -18,7 +18,7 @@ The sarea of HypnoGeeks is "Campus".
 when play begins: [flags for blocking this event]
 	add HypnoGeeks to badspots of guy;
 	add HypnoGeeks to badspots of furry;
-	
+
 Instead of resolving a HypnoGeeks:
 	if HG_Stage is 0: [HG_INTRO]
 		say "     Making your way through the campus grounds isn't as difficult as the rest of the city, but you make sure to keep your guard up. A couple of half-dressed stags stumble out of a nearby building, antlers locking together as they wrestle for dominance and move onto the front lawn. A situation that isn't exactly strange these days, but still something you'd rather avoid. Crossing the street, you plan to keep moving forward, but you pause when you hear a loud yelp and a short scuffle. Something's going on around the back side of the building, and unless the collectively sixteen points of buck back there lost interest in each other long enough to hear what's going on, you're the only one that might be able to help.";
@@ -68,5 +68,5 @@ Instead of resolving a HypnoGeeks:
 		say "     Event Text";
 		now HG_Stage is 2;
 		now HypnoGeeks is resolved;  [it won't happen again]
-		
+
 HypnoGeeks ends here.

@@ -91,5 +91,5 @@ when play ends:
 		else:
 			say "     You survive your experience in the infected city, but don't escape unscathed. With your stature reduced and your body much like that of an overgrown prairie dog, you don't fit in well with humanity at large. After some odd jobs, you buy yourself an empty plot of land in the country and build a small home for yourself above ground with a much more extensive burrow underneath. This work comes to you quite easily, having an affinity for the earth and tunnelling. The burrow you create is quite modern, with pipes and electrical sent down from the small entryway building, allowing you modern conveniences in a warm, dry den.";
 			say "     Word of your ingenious construction spreads and your home is bought by a mole man for a sizeable sum. With the funds, you build yourself a new place and set up a construction firm to create other. You specialize in building and digging modern burrows for underground dwelling infected people. After only a few years, you are quite successful and make a final, grand burrow for yourself. This one is larger both above and below ground, being on a much larger plot of land. The upper rooms are mainly for your guests, friends and lovers who prefer such living quarters while the ultra-modern burrow below with its throw rugs, pillows and HDTV is cozier for you.";
-			
+
 Prairie Dog For FS ends here.

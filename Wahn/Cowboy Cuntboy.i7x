@@ -11,7 +11,7 @@ to say Cowboy_Wins:
 to say Cowboy_Loses:
 	say "     Pretty beat up, the cowboy raises his hands in a placating gesture. 'Okay okay - you win, you bastard. Let's get this over with.' With that, he sets his cowboy hat on the ground, then undoes his jeans and slides them down over his legs. As he does so, the true reason for the bulge in his pants comes into sight - there's a pair of small and perky breasts on his pubic mound, just a bit up and to the sides of a very nice pussy.";
 	if cocks of player > 0 or cunts of player > 0: [male/female/herm]
-		say "     [bold type]So, do you want to have sex with him?[roman type][line break]";	
+		say "     [bold type]So, do you want to have sex with him?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";

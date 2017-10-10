@@ -50,7 +50,7 @@ Section 3 - Talking to the Couple
 Instead of conversing the Jadako:
 	if CampusCoupleRelationship < 1 or CampusCoupleRelationship is 100: [should not be available yet]
 		say "     ERROR: Jadako shouldn't be where a player can see him yet and said player should not be able to be in the Jadako's Room! Please report to Closerhenry on the FS Discord and quote this tracking number for easier bugfixing: [CampusCoupleRelationship]";
-	otherwise:
+	else:
 		say "     You approach the colorful feline, who places his hand on his hip and stands waiting,";
 		wait for any key;
 		say "[JadakoTalkMenu]";
@@ -121,7 +121,7 @@ to say JadakoTalk3:
 Instead of conversing the Joseph:
 	if CampusCoupleRelationship < 1 or CampusCoupleRelationship is 100: [should not be available yet]
 		say "     ERROR: Joseph shouldn't be where a player can see him yet and said player should not be able to be in the Jadako's Room! Please report to Closerhenry on the FS Discord and quote this tracking number for easier bugfixing: [CampusCoupleRelationship]";
-	otherwise:
+	else:
 		say "     You approach the muscular canine, who looks at you warmly. 'Is there something you want to talk about?'";
 		wait for any key;
 		say "[JosephTalkMenu]";
@@ -207,7 +207,7 @@ Instead of fucking the Joseph:
 		wait for any key;
 		say "[CampusCoupleSexMenu]";
 
-to say CampusCoupleSexMenu: 
+to say CampusCoupleSexMenu:
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -277,10 +277,10 @@ to say CampusCoupleSex1:
 	say "     You eventually wake up, still being spooned by the muscular coach, but you notice his cock is no longer inside of you. He must have taken it out at some point while you were asleep. Joseph notices you stirring, and he gently rubs your face. 'Waking up?'he asks softly. You yawn, stretching your arms. 'Well, I'm glad you had a great time. We certainly had a great time...' the canine rumbles. He sits up and leaves the bed, grabbing his athletic shorts and jacket. Coach Weber dresses himself, and sits down beside Jadako on the sofa, who was reading a book. You exit the bed, dress, and grab your stuff, prepared to head off.";
 	now lastfuck of Joseph is turns;
 	now lastfuck of Jadako is turns;
-	
+
 to say CampusCoupleSex2:
 	say "     You ask Joseph if he would be okay with sharing his boy toy, Jadako. He murmers his approval, asking which side you want to take.";
-	say "     [bold type]Which side of Jadako do you take?[roman type][line break]";	
+	say "     [bold type]Which side of Jadako do you take?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Give Jadako a good old face-fuck.";
 	say "     ([link]N[as]n[end link]) - Take Jadako's back hole for yourself.";

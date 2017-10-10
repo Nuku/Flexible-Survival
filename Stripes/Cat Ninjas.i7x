@@ -97,14 +97,14 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Ninja Cat"; [Name of your new Monster]
-   now attack entry is "[ninjaattack]"; 
+   now attack entry is "[ninjaattack]";
    now defeated entry is "[beattheninja]";
    now victory entry is "[losetoninja]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[ninjadesc]"; [ Description of the creature when you encounter it.]
    now face entry is "that of a normal cat, with a small muzzle, green eyes and pointed ears"; [ Face description, format as the text "Your face is (your text)."]
    now body entry is "slender and flexible, with a feline form. You have sharp, retractable claws on your paw-like hands and footpaws"; [ Body Description, format as the text "Your body is (your text)."]
    now skin entry is "orange tabby fur with brown stripes and lighter patches at your muzzle, chest and inner thighs. The fur is quite soft and feels good against your"; [ skin Description, format as the text "You have (your text) skin"]
-   now tail entry is "You have a long, slender cat's tail covered in orange fur with brown stripes."; [ Tail description, write a whole Sentence or leave blank. ] 
+   now tail entry is "You have a long, slender cat's tail covered in orange fur with brown stripes."; [ Tail description, write a whole Sentence or leave blank. ]
    now cock entry is "softly barbed cock"; [ Cock Description, format as you have a 'size' (your text) cock]
    now face change entry is "it shifts into a feline muzzle. Your ears become pointed and cat-like and your eyes become green with slit pupils for seeing in the dark"; [ face change text. format as "Your face feels funny as (your text)." ]
    now body change entry is "it becomes flexible and feline in form. Your arms end in dexterous paws with sharp, retractable claws and your feet are silent cat paws"; [ body change text. format as "Your body feels funny as (your text)." ]
@@ -113,12 +113,12 @@ When Play begins:
    now cock change entry is "it gains small, soft spines, but is otherwise quite human in form"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 14;
    now dex entry is 18;
-   now sta entry is 10; 
+   now sta entry is 10;
    now per entry is 14;
    now int entry is 10;
    now cha entry is 12;
    now sex entry is "Female"; [ Starting target gender is Female]
-   now hp entry is 25; 
+   now hp entry is 25;
    now lev entry is 3; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
    now wdam entry is 6; [ Avg damage the monster does when attacking.]
    now area entry is "Museum"; [ Location of monster, in this case the Museum ]
@@ -129,8 +129,8 @@ When Play begins:
    now breast size entry is 3; [Size of breasts infection will try to attain ]
    now male breast size entry is 0; [ Breast size for if Sex=male, usually zero. ]
    now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 7; 
-   now cunt width entry is 3; 
+   now cunt length entry is 7;
+   now cunt width entry is 3;
    now libido entry is 40; [ Will raise the player's libido towards this amount]
    now loot entry is ""; [ Dropped item, if any ]
    now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -182,7 +182,7 @@ when play ends:
 					project the figure of NinjaCat_M_icon;
 			say "     Corrupted by the infection, your mind falters and fails, losing itself in dreams of feudal Japan. You are drawn back to the museum, cloaking yourself in some dark fabric you find along the way. There you silently wander the halls until a feline ninja drops from the ceiling right in front of you. Several others leap from the shadows and surround you.";
 			say "     You and the other ninja begin to spar, trading blows and tricks while the others watch. Eventually the battle becomes less of a fight and more of a practised routine of blows, blocks, gropes and grinds. The blows become fewer and the gropes become fondles until finally, without any signal, it ends. The group backs off and disappears into the shadows and you join them, following them back to their hidden lair.";
-			say "     There, you join their ranks in a night of lustful passion with several of the agile felines in your new clan. You partake in the enjoyment of [if cocks of player > 0 and cunts of player > 0]several of the males and a few of the rare females[else if cocks of player > 0]several of the rare females[otherwise]several of the males[end if] in their midst. After rest and the food, the whole of the next day is spent in the company of the kachira, the ninja chief. She is a tan-coloured female with green, passionate eyes and long, black hair. Her face is stern, but her paws are soft and able to bring so much pleasure. With her talent outstripping her many subordinates, your day is filled with such pleasures that you would follow her orders and face death for her without hesitation at any moment. For that is what it means to be ninja.";
+			say "     There, you join their ranks in a night of lustful passion with several of the agile felines in your new clan. You partake in the enjoyment of [if cocks of player > 0 and cunts of player > 0]several of the males and a few of the rare females[else if cocks of player > 0]several of the rare females[else]several of the males[end if] in their midst. After rest and the food, the whole of the next day is spent in the company of the kachira, the ninja chief. She is a tan-coloured female with green, passionate eyes and long, black hair. Her face is stern, but her paws are soft and able to bring so much pleasure. With her talent outstripping her many subordinates, your day is filled with such pleasures that you would follow her orders and face death for her without hesitation at any moment. For that is what it means to be ninja.";
 			if cunts of player > 0 and "Sterile" is not listed in feats of player:
 				say "     In time, you grow round with kittens and bear your young into the clan. They are raised to be ninja, protecting the museum from the shadows from any who would strike at it.";
 		else:

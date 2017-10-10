@@ -21,7 +21,7 @@ to say SylviasRoomDesc:
 
 Section 2 - NPC Declaration
 
-Sylvia is a woman. 
+Sylvia is a woman.
 The description of Sylvia is "[SylviaDesc]".
 The conversation of Sylvia is { "Woof woof" }.
 The scent of Sylvia is "     The pretty collie smells mostly like a dog. Cleanish, but with undertones of other creatures.".
@@ -53,7 +53,7 @@ The sarea of Despairing Biologist is "Campus".
 instead of going east from College Campus Entrance while (Despairing Biologist is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	DespairingBiologistEvent;
-	
+
 Instead of resolving Despairing Biologist:
 	DespairingBiologistEvent;
 
@@ -95,6 +95,9 @@ to DespairingBiologistEvent: [Meet Sylvia]
 	now Despairing Biologist is resolved; [It won't happen again]
 	now LastCampusWalkin is turns;
 
+<<<<<<< HEAD
+Sylvia ends here.
+=======
 Room 059 is a situation.
 The level of Room 059 is 0.
 The sarea of Room 059 is Sylvia's Room.
@@ -134,3 +137,4 @@ to Room059Event: [First time to Sylvia's room]
 [Study of others]
 	
 Sylvia ends here.
+>>>>>>> 431a000dbd034909ff0d77923e6e2cc3ed0d9980

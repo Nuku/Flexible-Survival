@@ -161,9 +161,9 @@ When Play begins:
    now skin change entry is "it turns a brownish color, resembling dark sand. Touching your skin, you yelp in surprise as you feel your skin harden, thickening into a dark carapace. Parts of your new carapace shift around each other, and soon enough, your skin looks like plated leather, thick, protective, and imposing";
    now ass change entry is "the skin of your ass bulges outward slightly, mass rearranging itself as the nanite infection shifts your body. The changes on your rear do not last long, and finding a mirror, you see that you now have a half-foot pointed tail, resembling a miniature mountain protruding from your backside";
    now cock change entry is "it changes to a dark-grey color, while rows of symmetrical, fleshy nubs begin to grow along the shaft of your cock. You're overcome by pain as you observe these changes, and looking down when you're able to, you're surprised at the changes taking place. The head of your cock has extended itself, and instead of tapering off to a normal cock end, has instead peeled apart into five separate appendages. After recovering from the pangs of pain, you experiment with your new wiggling cock, and you find that you can control each of these cock-tacles. You find that if you want to, you can settle all of them down, and they sit together resembling a normal cock, the only noticeable difference being that the skin of your cock head looks cut in places. You're also able to separate them apart, having your cock resemble a starfish, appendages splayed out in a traditional star shape";
-   now str entry is 18;         
-   now dex entry is 14;         
-   now sta entry is 11;         
+   now str entry is 18;
+   now dex entry is 14;
+   now sta entry is 11;
    now per entry is 16;
    now int entry is 10;
    now cha entry is 7;
@@ -226,7 +226,7 @@ Section 4 - Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"foul scuttler spit"	"A jar of viscous spit you gathered from an Foul Scuttler. Why you did, no one knows."	1	foul scuttler spit	
+"foul scuttler spit"	"A jar of viscous spit you gathered from an Foul Scuttler. Why you did, no one knows."	1	foul scuttler spit
 
 foul scuttler spit is a grab object.
 It is temporary.

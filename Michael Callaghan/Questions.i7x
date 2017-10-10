@@ -113,8 +113,8 @@ To ask an open question, in number mode, in menu mode, in yes/no mode, in gender
 		say "[current question][line break]";
 	if in menu mode:
 		repeat with counter running from 1 to the number of entries in the current question menu:
-			say "[counter] - [entry counter of the current question menu][line break]".	
-		
+			say "[counter] - [entry counter of the current question menu][line break]".
+
 Chapter 2 - Questions that require a number answer
 
 Section 1 - Flag to set number question mode
@@ -665,7 +665,7 @@ When a question is asked, we can change the command prompt to indicate to the pl
 
 	Open yes/no prompt: ">".
 
-	Closed gender prompt: "Please enter M,  F or N (Male or Female or Neuter) >".
+	Closed gender prompt: "Please enter M, F or N (Male or Female or Neuter) >".
 
 	Open gender prompt: ">".
 

@@ -149,7 +149,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 16;
 	now sex entry is "Male";            [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 63;                 
+	now hp entry is 63;
 	now lev entry is 8;                 [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12;               [ Monster's average damage when attacking. ]
 	now area entry is "Forest";         [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -162,15 +162,15 @@ When Play begins:
 	now cunts entry is 0;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;          [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 80;             
+	now libido entry is 80;
 	now loot entry is "lembas bread";   [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50;         [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]alluring[or]sexy[or][if cocks of player > 0]handsome[otherwise]sultry[end if][at random]";
+	now body descriptor entry is "[one of]alluring[or]sexy[or][if cocks of player > 0]handsome[else]sultry[end if][at random]";
 	now type entry is "[one of]elven[or]fae[at random]";
-	now magic entry is true;            
-	now resbypass entry is false;       
-	now non-infectious entry is false;  
+	now magic entry is true;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
 

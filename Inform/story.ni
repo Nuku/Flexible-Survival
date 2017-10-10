@@ -36,7 +36,7 @@ Include Basic Screen Effects by Emily Short.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 58.
+The release number is 59.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -494,7 +494,7 @@ To decide which number is numeric/numerical value of (T - indexed text):
 		else if C is "5"; let D be 5; else if C is "6"; let D be 6;
 		else if C is "7"; let D be 7; else if C is "8"; let D be 8;
 		else if C is "9"; let D be 9; else if C is "0"; let D be 0;
-		otherwise; decide on 0; end if;
+		else; decide on 0; end if;
 		let result be (result * 10) + D;
 	end repeat;
 	if negated is true, let result be 0 - result;

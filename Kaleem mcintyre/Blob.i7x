@@ -1,6 +1,6 @@
 Blob by Kaleem mcintyre begins here.
 
-"Adds a Blob creature to Flexible Survival Reservoir" 
+"Adds a Blob creature to Flexible Survival Reservoir"
 
 
 Section 1 - Monster Responses
@@ -21,7 +21,7 @@ to say losetoBlob:
 
 
 to say beattheBlob:
-	say "Having fought the creature enough to wear it down, not to mention draw its attention to you rather than the main control terminal, the Blob is quick to solidify icily as the reservoir freezes to close to below 0. Now much smaller than it had been in the beginning, the amorphous creature seems almost harmless as it sits there both [italic type]still[roman type] and compliant before you. However, knowing that this might not be true when the reservoir heats back up, you don't wait as you charge for the creature again and then slam into it with a vicious kick. When you flip back from you attack you watch as tiny splinters in the shell of the creature appear like cracks on a frozen pond about to break. Moving back a little further you watch in fascination as the monster's body fragments more and more until finally exploding into crystalline shards."; 
+	say "Having fought the creature enough to wear it down, not to mention draw its attention to you rather than the main control terminal, the Blob is quick to solidify icily as the reservoir freezes to close to below 0. Now much smaller than it had been in the beginning, the amorphous creature seems almost harmless as it sits there both [italic type]still[roman type] and compliant before you. However, knowing that this might not be true when the reservoir heats back up, you don't wait as you charge for the creature again and then slam into it with a vicious kick. When you flip back from you attack you watch as tiny splinters in the shell of the creature appear like cracks on a frozen pond about to break. Moving back a little further you watch in fascination as the monster's body fragments more and more until finally exploding into crystalline shards.";
 
 
 Section 2 - Monster Insertion

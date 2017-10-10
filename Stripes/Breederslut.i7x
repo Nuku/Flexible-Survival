@@ -83,7 +83,7 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 "Breederslut"	400	400	"[bsheat_trigger]"	"puffy and dripping doggy mound"	"[bsheat_start]"	"[bsheat_end]"	"[bsheat]"	true	false	""
 
 to say bsheat_trigger:
-	say "     You feel a growing warmth in your lower belly that makes you moan. As it grows stronger, you drop to your knees, feeling your pussy quiver and clench. Your crotch grows damp with pussy juices[if cunt length of player < 8 or cunt width of player < 6] as it stretches and swells wider[end if] with a desire to breed. Thoughts of [if hp of Dominick > 0]Dominick[otherwise]some studly canine you can't quite picture[end if] pounding you full of puppies fill your idle thoughts as you go into heat.";
+	say "     You feel a growing warmth in your lower belly that makes you moan. As it grows stronger, you drop to your knees, feeling your pussy quiver and clench. Your crotch grows damp with pussy juices[if cunt length of player < 8 or cunt width of player < 6] as it stretches and swells wider[end if] with a desire to breed. Thoughts of [if hp of Dominick > 0]Dominick[else]some studly canine you can't quite picture[end if] pounding you full of puppies fill your idle thoughts as you go into heat.";
 	if cunt length of player < 8, increase cunt length of player by 1;
 	if cunt width of player < 6, increase cunt width of player by 1;
 

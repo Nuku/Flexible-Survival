@@ -118,7 +118,7 @@ instead of conversing the Max:
 
 Section 3- corgitrading
 
-corgi trade is a person. 
+corgi trade is a person.
 The description of corgi trade is "Max is willing to trade some of his supplies for yours. Maybe you should TRADE or GIVE MAX some food and water?".
 
 corgigiving is an action applying to nothing.

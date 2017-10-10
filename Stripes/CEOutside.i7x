@@ -32,7 +32,7 @@ Instead of resolving Consolidated Events Outside CEO1:
 			say "[ceoutside6]";
 		else if entry 1 of ceoutside1list is 7:
 			say "[ceoutside7]";
-		else if entry 1 of ceoutside1list is 8: 
+		else if entry 1 of ceoutside1list is 8:
 			say "[ceoutside8]";
 		else if entry 1 of ceoutside1list is 9:
 			say "[ceoutside9]";
@@ -216,7 +216,7 @@ Instead of resolving Consolidated Events Outside CEO2:
 			say "[ceoutside16]";
 		else if entry 1 of ceoutside2list is 17:
 			say "[ceoutside17]";
-		else if entry 1 of ceoutside2list is 18: 
+		else if entry 1 of ceoutside2list is 18:
 			say "[ceoutside18]";
 		else if entry 1 of ceoutside2list is 19:
 			say "[ceoutside19]";]

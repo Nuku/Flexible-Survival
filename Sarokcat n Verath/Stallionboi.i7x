@@ -29,20 +29,20 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Stallionboi"; 
-	now attack entry is "[one of]He gives you an equine grin for a minute, confusing you slightly, as he slowly stretches and poses teasingly in front of you, your body growing hot and aroused from the sexy show[or]The Stallionboi reaches out and strokes his hands over your body teasingly[or]Pulling a large transparent blue double ended dildo from somewhere, he smacks you in the ass with it[at random]."; 
-	now defeated entry is "[Stallionboi loses]"; 
-	now victory entry is  "[Stallionboi wins]";  
+	now name entry is "Stallionboi";
+	now attack entry is "[one of]He gives you an equine grin for a minute, confusing you slightly, as he slowly stretches and poses teasingly in front of you, your body growing hot and aroused from the sexy show[or]The Stallionboi reaches out and strokes his hands over your body teasingly[or]Pulling a large transparent blue double ended dildo from somewhere, he smacks you in the ass with it[at random].";
+	now defeated entry is "[Stallionboi loses]";
+	now victory entry is  "[Stallionboi wins]";
 	now desc entry is "[mongendernum 3]     Wandering through the building you encounter a horny stallionboi. You see that he is wearing black silk stockings held up by a garter belt,and a skimpy tight black thong that isn't hiding his fully equine manhood. His look is finished off with long black silk gloves and black choker collar around his neck  The stallionboi has a slender almost girlish figure. His human body is starting to sprout dark chocolate colored fur, a long black horsetail flicks eagerly behind him. His face is stretched out into a slender, feminine half equine muzzle and his ears are more equine than human. His dark hair is shoulder length with bright blue frosted tips. Giving you a slutty grin he strides towards you  saying, 'You are going to look so hot when I get done with you!'";[ Description of the creature when you encounter it.]
-	now face entry is "slight equine muzzle, its slender stretched out look is strangely sexy as your stare out of it with your sensuous equine eyes. Your mostly equine ears sticking up jauntily out of your long sexy mane of dark brown hair with sea green highlights, giving a rather sexy and teasing look overall to your new face"; [You have a (your text) face."] 
-	now body entry is "slender and feminine, clothed in some sexy slutty clothes you found near where you finished changing, your sexy silk stalkings and gloves, do nothing to hide your slightly equine changes, though the feel of their dark purple silk against your [skin of player] skin makes you feel increasingly aroused and sexy with every step"; 
-	now skin entry is "[one of]soft feminine[or]lightly furred[or]sexy chocolate furred[at random]"; 
-	now tail entry is "You have a long sexy equine tail swishing behind you eagerly, swaying side to side with every step as if inviting some sexy beast to hold you down and fuck you.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]equine[or]stallion like[or]thick[or]blunt equine[at random]"; 
+	now face entry is "slight equine muzzle, its slender stretched out look is strangely sexy as your stare out of it with your sensuous equine eyes. Your mostly equine ears sticking up jauntily out of your long sexy mane of dark brown hair with sea green highlights, giving a rather sexy and teasing look overall to your new face"; [You have a (your text) face."]
+	now body entry is "slender and feminine, clothed in some sexy slutty clothes you found near where you finished changing, your sexy silk stalkings and gloves, do nothing to hide your slightly equine changes, though the feel of their dark purple silk against your [skin of player] skin makes you feel increasingly aroused and sexy with every step";
+	now skin entry is "[one of]soft feminine[or]lightly furred[or]sexy chocolate furred[at random]";
+	now tail entry is "You have a long sexy equine tail swishing behind you eagerly, swaying side to side with every step as if inviting some sexy beast to hold you down and fuck you.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]equine[or]stallion like[or]thick[or]blunt equine[at random]";
 	now face change entry is "it begins to stretch and change, pushing forward slightly and giving you a more equine look, even as your hair grows out and changes in colour and texture to form a proper mane, you find yourself neighing and squealing with pleasure as your face finishes shifting, and your ears come to rest on top of your head, and you find you love admiring your new sexy look, and your lovely dark mane with shimmering sea green highlights threaded through it"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it shifts and changes, your bones shifting slightly as your body curves into a more suggestive feminine shape, and your hips widen slightly even as a strange erotic energy seems to run through you, making you shudder with arousal as a soft breeze brushes your body. Looking around desperately, you spot a discarded bit of silk clothing nearby, and quickly pull it on, the sleek silk stockings and gloves doing nothing to hide your sexy new form, though the rich royal purple silk looks amazing on you, and the feel of the silk caressing your body teasingly makes you moan with pleasure"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it shudders and softens, becoming sexier and more feminine, before a small coating of sexy dark brown fur begins to grow in, the fur only covering part of your body in its sexy sleekness, and leaving the rest of your chest and other areas teasingly bare"; 
-	now ass change entry is "a sexy little equine tail begins to form behind you, the new equine appendage making you moan with pleasure as it swishes behind you, somehow every movement of your new appendage seeming amazingly erotic, especially when its soft silken strands brush up against your tight and eager ass"; 
+	now skin change entry is "it shudders and softens, becoming sexier and more feminine, before a small coating of sexy dark brown fur begins to grow in, the fur only covering part of your body in its sexy sleekness, and leaving the rest of your chest and other areas teasingly bare";
+	now ass change entry is "a sexy little equine tail begins to form behind you, the new equine appendage making you moan with pleasure as it swishes behind you, somehow every movement of your new appendage seeming amazingly erotic, especially when its soft silken strands brush up against your tight and eager ass";
 	now cock change entry is "it balloons outwards, your balls swelling up as they begin to hang even lower between your legs. Your large thick new cock darkening in colour as its textures changes, and the tip flattens out until you have a properly shaped equine shaft hanging low between your legs"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 20;
 	now dex entry is 14;
@@ -51,8 +51,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 25; 
-	now lev entry is 3; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now hp entry is 25;
+	now lev entry is 3; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 3; [Amount of Damage monster Does when attacking.]
 	now area entry is "Stable"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -63,16 +63,16 @@ When Play begins:
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 0; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0; [ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 0; [ Width of female sex  infection will try and give you ]
 	now libido entry is 75; [ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe"; [ Loot monster drops, ]
 	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]girly[or]feminine[at random]";
 	now type entry is "[one of]equine[or]horse-like[at random]";
-	now magic entry is false; 
-	now resbypass entry is false; 
-	now non-infectious entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 

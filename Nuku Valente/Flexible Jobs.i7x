@@ -16,7 +16,7 @@ This is the maxfarmer rule:
 	if "Plant" is listed in diet of tribe of player:
 		increase x by 25;
 	now max of farmer is ( max of farmer * x ) / 100;
-	
+
 
 This is the farmvailable rule:
 	if "Plant" is listed in diet of tribe of player:
@@ -59,7 +59,7 @@ This is the maxhunter rule:
 	if "Meat" is listed in diet of tribe of player:
 		increase x by 25;
 	now max of hunter is ( max of hunter * x ) / 100;
- 
+
 This is the huntvailable rule:
 	if "Meat" is listed in diet of tribe of player, rule succeeds;
 	if "Hunting" is listed in perks of tribe of player, rule succeeds;
@@ -132,7 +132,7 @@ This is the maxsettler rule:
 This is the settlervailable rule:
 	if openland > 0, rule succeeds;
 	rule fails;
-	
+
 An everyturn rule(This is the Brave Settler rule):
 	if openland < 1, now workers of settler is 0;
 	let foragers be workers of settler;
@@ -187,6 +187,6 @@ An everyturn rule(This is the Brave Settler rule):
 						decrease workers of settler by enemies;
 		increase territory of tribe of player by 1;
 		decrease openland by 1;
-						
+
 
 Flexible Jobs ends here.

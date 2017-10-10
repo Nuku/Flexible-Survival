@@ -19,7 +19,7 @@ instead of conversing the Lance:
 	else if hp of Lance is 1:
 		say "     'I know you've already done me a huge favour just by finding and rescuing me from that mess, but...' he pauses momentarily to look at his dancing lover on stage. 'But I could us a bit of help. I want to get a nice gift for my special bird. Since you're still out there braving the city, I was hoping you'd be able to get something for me to give him. I don't really have much to repay you, but I'd really appreciate it.'";
 		say "     He passes you a pink business card for a lingerie shop. 'I got this from one of the dancing girls. She used to get her things there. My sweetie's into wearing women's lingerie sometimes for our special, private fun. Go there and pick out something hot for him. Oh, here's his measurements,' he adds, stuffing a folded note into your hand as well.";
-		now Lingerie Store is known; 
+		now Lingerie Store is known;
 		now hp of Lance is 2;
 	else if sexy nightie is owned and hp of Lance < 4:
 		say "     Motioning for Lance to come over, you slip to a less busy spot and let him know you've gotten a sexy nightie for his boyfriend. He smiles and bounces from foot to foot. 'Good goin['], hon. Let's see it!' he says eagerly. Slipping it out of your pack, you let him have a peek inside. He gives an appreciative whistle as he looks it over. 'Sweeeet!  Great job, [if cunts of player > 0]babe[else]man[end if]!  He's going to soooo love it.'  He quickly shuts the box and holds it behind his back, doing a shuffling walk as he slips out of sight before his boyfriend or anyone else spots the package and the surprise is ruined.";

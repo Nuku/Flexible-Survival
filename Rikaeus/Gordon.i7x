@@ -31,14 +31,14 @@ instead of conversing the Gordon:
 		say "     ERROR: Gordon shouldn't be where a player can see him yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [hp of Gordon]";
 	else if hp of Gordon is 2:
 		say "     You walk up to your monkey sex slave, or servant in Nermine's words, and smirk at him. The monkey just tries to sneer at you but the magic beholding him to your will sends a small shock through him.";
-	otherwise:
+	else:
 		say "     You walk up to the monkey who smiles widely at you before asking what you're here for. You tell him, and the guard watching the suspects, that you're here to interrogate him. The guard nods and takes both of you to the interrogation room.";
 		wait for any key;
 		say "[GordonTalkMenu]";
-	
+
 to say GordonTalkMenu:
 	say "[line break]";
-	say "What do you wish to talk about with the monkey?";	
+	say "What do you wish to talk about with the monkey?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -98,7 +98,7 @@ to say GordonFurEvidence:
 			WaitLineBreak;
 			say "     Soon though, the monkey's orgasm comes to an end and he pulls out. In an odd gesture, he wipes the cum off of his cock-head and... licks it off his hand? Well, it's not completely odd, you're sure other people do that. Swallowing once more to get rid of any leftover cum, you stand up. 'That was a great blowjob. But as you can see I'm one hundred percent pure black fur.' Gordon says with a satisifed smile. You nod but something catches your attention as he turns around to pull his pants up. You spot a small area on his ass that is actually brown and seems to be missing some fur. Could it really be that simple?. Shaking your head and deciding to think about it later, you call the wolverin guard in. Once he's in, you tell him that the two of you are done... talking. He gives you an odd look before shrugging his shoulders. The guy takes the two of you back to lockup where you wonder what your next step is, and if Gordon could possibly be the murderer.";
 			now GordonFurSuspicion is 2;
-		otherwise:
+		else:
 			say "     You shake your head at the monkey and decline his offer, telling him that for now you'll take him at his word. 'Aw, really? Well, if you want to then you know where to find me.' Gordon says with a disappointed look on his face. You turn to the guard and tell him that you're done with this suspect for now. The wolverine nods at you and grabs the guy by his arm and takes you and him back to lockup. There you wonder what you'll do next. Should you go back to the monkey and show him the fur again, accepting his offer or find out some other way?";
 			now GordonFurSuspicion is 1;
 	if GordonFurSuspicion is 1: [Says it's not his due to it being brown]
@@ -113,7 +113,7 @@ to say GordonFurEvidence:
 			WaitLineBreak;
 			say "     Soon though, the monkey's orgasm comes to an end and he pulls out. In an odd gesture, he wipes the cum off of his cock-head and... licks it off his hand? Well, it's not completely odd, you're sure other people do that. Swallowing once more to get rid of any leftover cum, you stand up. 'That was a great blowjob. But as you can see I'm one hundred percent pure black fur.' Gordon says with a satisifed smile. You nod but something catches your attention as he turns around to pull his pants up. You spot a small area on his ass that is actually brown and seems to be missing some fur. Could it really be that simple?. Shaking your head and deciding to think about it later, you call the wolverin guard in. Once he's in, you tell him that the two of you are done... talking. He gives you an odd look before shrugging his shoulders. The guy takes the two of you back to lockup where you wonder what your next step is, and if Gordon could possibly be the murderer.";
 			now GordonFurSuspicion is 3;
-		otherwise:
+		else:
 			say "     Shaking your head, you again decline the monkey's advances. Gordon sighs at you before he too, shakes his head. 'Darn! I'll wear you down soon enough.' He says. You roll your eyes at that, before turning to the wolverine guard. The guy asks you if you want to return to the lockup, to which you nod. Taking that as agreement, he takes the suspect by the arm and guides the two of you back to where you were prior to interrogation. There you muse about what you should do. If you really don't want to get the information about Gordon by blowing him, then maybe his coworkers know something, just show them the fur. ";
 
 to say GordonMotive:

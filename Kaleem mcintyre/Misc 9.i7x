@@ -28,8 +28,8 @@ Instead of resolving a Hanu:
 
 Section 2 - Mysterious
 
-Clotho is a situation. 
-The sarea of Clotho is "Red". 
+Clotho is a situation.
+The sarea of Clotho is "Red".
 Atropis is resolved;
 
 Instead of resolving a Clotho:
@@ -41,9 +41,9 @@ Instead of resolving a Clotho:
 	Now Atropis is unresolved;
 
 
-Section 3 - Crone 
+Section 3 - Crone
 
-Atropis is a situation. 
+Atropis is a situation.
 The sarea of Atropis is "High".
 
 Instead of resolving Atropis:
@@ -120,11 +120,11 @@ Section 5 - Fashion Statement
 
 fashionfight is a number that varies.
 
-Fashion statement is a situation. 
+Fashion statement is a situation.
 The sarea of Fashion Statement is "Campus".
 
 Instead of resolving a Fashion Statement:
-	say "Wandering through the commercial area at the edge of the campus, you happen to come across a clothing store that looks as though it's just recently been ransacked. Mildly curious to know if anything has survived the mercilessness carnage you meander inside of the store on a whim. Looking around you find the pervasive funk of musk, both male and female, as well as mildew covered shelves, dried stains, glass littering the floor and assorted items tossed around rather appealing."; 	
+	say "Wandering through the commercial area at the edge of the campus, you happen to come across a clothing store that looks as though it's just recently been ransacked. Mildly curious to know if anything has survived the mercilessness carnage you meander inside of the store on a whim. Looking around you find the pervasive funk of musk, both male and female, as well as mildew covered shelves, dried stains, glass littering the floor and assorted items tossed around rather appealing.";
 	say "However, considering the state of the world you don't really expect too much. That is, until you make your way to the back of the store and into the stockroom. Interesting enough this part of the store seems to have been kept in tack. Maybe there's something salvageable here?";
 	say "     [bold type]Should you check to see?[roman type][line break]";
 	LineBreak;
@@ -167,7 +167,7 @@ Instead of resolving a Fashion Statement:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
-				if the player consents:	
+				if the player consents:
 					LineBreak;
 					say "If at first you don't succeed, you mumble underneath your breath while going continuing to look around.";
 					follow the turnpass rule;
@@ -183,7 +183,7 @@ Instead of resolving a Fashion Statement:
 		LineBreak;
 		say "Feeling as though this would be too much trouble you shake your head before turning to go about your business.";
 		now Fashion Statement is resolved;
- 
+
 
 Section 9 - Table of Game Objects
 
@@ -191,15 +191,15 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "muscle shirt"	"A tight fitting pair of pants with a black mesh muscle shirt to go along with it."	3	muscle shirt
 
-muscle shirt is equipment. 
-muscle shirt is not temporary. 
-The placement of muscle shirt is "body". 
+muscle shirt is equipment.
+muscle shirt is not temporary.
+The placement of muscle shirt is "body".
 The descmod of muscle shirt is "A sexy black muscle shirt and waist hugging pair of pants have been slipped over your body.".
 The slot of muscle shirt is "body".
 
 Instead of smelling muscle shirt:
 	say "The muscle shirt and pants smells like musk and pheromones from long hours of working out.";
-	
+
 
 Section 9a - Red Cap
 
@@ -207,11 +207,11 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "red cap"	"A red baseball cap with the letter of your first name printed onto it."	1	red cap
 
-Red cap is equipment. 
-Red cap is not temporary. 
+Red cap is equipment.
+Red cap is not temporary.
 The AC of red cap is 10.
-The effectiveness of red cap is 40. 
-The placement of red cap is "face". 
+The effectiveness of red cap is 40.
+The placement of red cap is "face".
 The descmod of red cap is "A somewhat extraordinary red baseball cap rests atop your head.".
 The slot of red cap is "head".
 
@@ -225,11 +225,11 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "silver dress"	"A flowing silver dress that looks to be about your size. Glass slippers not included."	1	silver dress
 
-Silver dress is equipment. 
-Silver dress is not temporary. 
+Silver dress is equipment.
+Silver dress is not temporary.
 The AC of silver dress is 10.
-The effectiveness of silver dress is 40. 
-The placement of silver dress is "body". 
+The effectiveness of silver dress is 40.
+The placement of silver dress is "body".
 The descmod of silver dress is "A sparkling silver dress rests over your body.".
 The slot of silver dress is "body".
 

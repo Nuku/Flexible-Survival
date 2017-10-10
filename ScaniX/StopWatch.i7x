@@ -2,7 +2,7 @@ StopWatch by ScaniX begins here.
 
 start stopwatch is an action applying to nothing.
 To start stopwatch:
-	(- 
+	(-
 		if (glk_gestalt(gestalt_DateTime, 0)) {
 			print "Stopwatch started.@@10";
 			glk_current_time(stopWatchStartTime);
@@ -30,5 +30,5 @@ Array currentTime --> 3;   ! this holds the number of microseconds elapsed since
 	return (currentTime-->1 - stopWatchStartTime-->1) * 1000 + (currentTime-->2 - stopWatchStartTime-->2) / 1000;
 ];
 -)
-	
+
 StopWatch ends here.
