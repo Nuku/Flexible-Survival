@@ -103,8 +103,8 @@ instead of going east from Mall Atrium while (VentFoxEncounterCount < 2 and a ra
 
 Section 2 - Location
 
-vent cover is an object. It is in Smith Haven Mall Lot West. It is fixed in place. Understand "vent" as vent cover. Understand "cover" as vent cover.
-The description of vent cover is "[VentDescription]".
+ventcover is an object. It is in Smith Haven Mall Lot West. It is fixed in place. Understand "cover" as ventcover.
+The description of ventcover is "[VentCoverDescription]".
 
 KnockOnVent is an action applying to nothing.
 Understand "knock on it" as KnockOnVent.
@@ -118,16 +118,18 @@ Understand "knock on vent cover" as KnockOnVent.
 Understand "knock on the vent cover" as KnockOnVent.
 
 Check KnockOnVent:
-	if vent cover is not visible, say "What?" instead;
+	if ventcover is not visible, say "     What?" instead;
 
 Carry out KnockOnVent:
 	say "[KnockedOnVent]";
 
-To say VentDescription:[Description of the vent for various states of relationship.]
+To say VentCoverDescription:[Description of the vent for various states of relationship.]
 	if VentFoxRelationship < 3 or VentFoxRelationship is 100:[not known / disliked by Vent.]
 		say "     You can see a large, grated vent on the wall of the building. It's close enough to the ground that a creature could conceivably climb inside. One of the metal slats covering the opening is bent open, providing a narrow but workable hole for that to have already happened too. Maybe you could try [link]knocking on it[as]knock on it[end link] to draw something out?";
 	else if VentFoxRelationship is 101: [let Logan rape him.]
 		say "     You can see a large, grated vent vocer that once used to be inhabited by your companion. You could try knocking on it, but your fairly certain that Vent is no longer around.";
+	else if VentFoxContentLevel is 3:
+		say "     You can see a large, grated vent on the wall of the building. You know it used to be Vent's hideaway, but now that the fox has gotten too big for it, he's moved to the garage you found once while searching for food with him.";
 	else:
 		say "     You can see a large, grated vent on the wall of the building. You know it as Vent's hideaway. You can [link]knock on it[as]knock vent[end link] to get his attention.";
 
@@ -144,31 +146,51 @@ To say KnockedOnVent:[Various reactions to knocking on the vent.]
 		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the hole in the grating with a determined squeak. Seeing that you're his visitor, the Vent Fox yips happily before moving back into the vent. Maybe next time you visit you could [']play['] with him...";
 		now VentFoxRelationship is 3;[vent known]
 	else if VentFoxRelationship is 3:[vent known]
-		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the hole in the grating with a determined squeak. After seeing who his visitor is, the latex vulpine yips happily in greeting before his body flows into a liquid blob, dripping out of the vent and onto the ground. Why he couldn't have done that when he was stuck inside, you're really not sure. Once all of his mass is outside, he quickly reforms into his normal shape, staring at you patiently, as if asking you what you wanted to do.";
-		say "[VentFoxMenu]";
+		if VentFoxContentLevel is 3:
+			say "     You bring you fist up to knock on the cover, but you pause at the last second, remembering that Vent has since moved from this location. [bold type]Vent can be found in the Maintenance Garage west of here..[roman type].";
+		else:
+			say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the hole in the grating with a determined squeak. After seeing who his visitor is, the latex vulpine yips happily in greeting before his body flows into a liquid blob, dripping out of the vent and onto the ground. Why he couldn't have done that when he was stuck inside, you're really not sure. Once all of his mass is outside, he quickly reforms into his normal shape, staring at you patiently, as if asking you what you wanted to do.";
+			say "[VentFoxMenu]";
 	else:
 		say "     DEBUG: You shouldn't be able to see this! If you are, contact @Dys on the FS Discord, and give him the error code: VentFox:[VentFoxEncounterCount],[VentFoxRelationship]";
 
-FuckVent is an action applying to nothing.
-Understand "fuck vent" as FuckVent.
-Understand "sex vent" as FuckVent.
+Section 3 - NPC and Location
 
-Check FuckVent:
-	if vent cover is not visible, say "Who?" instead;
-
-Carry out FuckVent:
-	say "[VentFoxSexMenu]";
+Vent is a man. The hp of vent is usually 0.
+The description of Vent is "[VentDescription]".
+The conversation of Vent is { "blah blah blarg" }.
+The scent of Vent is "[VentScent]".
+Vent is in Maintenance Garage.
+The linkaction of Vent is "Possible Actions: [link]talk[as]talk vent[end link], [link]smell[as]smell vent[end link], [link]fuck[as]fuck vent[end link], [link]request[as]request vent[end link][line break]".
 
 RequestVent is an action applying to nothing.
 Understand "request vent" as RequestVent.
 
 Check RequestVent:
-	if vent cover is not visible, say "Who?" instead;
+	if Vent is not visible, say "     Who?" instead;
 
 Carry out RequestVent:
 	say "[VentFoxPrefsMenu]";
 
-Section 3 - Menus
+Instead of fucking the Vent:
+	say "[VentFoxSexMenu]";
+
+to say VentDescription:
+	say "     Vent is now only a bit smaller than a horse normally, however, he can change his size at will. His rubber body is a mixture of red, white, and black latex. The red covers his back and legs, as well as most of his face and tail. The white color is found on the tip of his tail, along his underbelly and chin, and inside his ears. The black covers his four paws like gloves, and the tips of his ears. Looking at his [']equipment['], you can see he has a plump, white sheath, and a set of baseball sized balls.";
+
+to say VentScent:
+	say "     Vent has a sort of chemical aroma to him that reminds you of freshly cured latex. You can also pick up faint hints of a foxy musk as well.";
+
+instead of conversing the Vent:
+	say "     You speak to Vent casually, and he seems to listen attentively, even giving a nod here and there.";
+
+Maintenance Garage is a room.
+The description of Maintenance Garage is "[MaintenanceGarageDescription]".
+
+to say MaintenanceGarageDescription:
+	say "     Vent's new home is sparsely decorated. A few workbenches line the rear wall, and a hydraulic lift is off to one side of the room. Aside from that, there's not much to see. Off to one corner, you can see Vent. He gives you a toothy grin as he sees you, eager to spend time with you.";
+
+Section 4 - Menus
 
 Chapter 1 - Main Menus
 
@@ -337,6 +359,8 @@ to say VentFoxLastScavScene:
 	say "     Now that the guard has been dealt with, you and your friend continue your search for some easily accessible rubber. Looking around the lot, you eventually see a totaled truck. Upon closer examination, you notice there's a whole bed-full of tires in it! Vent seems to realize this too, as he hops up into the back of the truck, making quick work of the tires. Soon enough, he's devoured them all, and grown in size as well. Your foxy compatriot now stands taller than a horse when at full size. Of course, he doesn't stay that large for long, quickly shrinking back down to a much more manageable size, hopping out of the truck bed. With his hunger sated, the two of you make your way back to his hide out.";
 	now VentFoxContentLevel is 3;
 	now VentFoxLastFed is turns;
+	change the West exit of Smith Haven Mall Lot West to Maintenance Garage;
+	change the East exit of Maintenance Garage to Smith Haven Mall Lot West;
 
 to say VentFoxSexMenu:[Pretty self explanatory.]
 	if cocks of player > 0 and cunts of player is 0:
@@ -611,7 +635,7 @@ to say OviLevelMenu:[Menu for setting Oviposition amount of Vent.]
 	else:
 		say "     Even as you make the suggestion to Vent, you realize that you're honestly not kinky enough for that. [italic type]You need the 'Kinky' fun feat for this option.[roman type]";
 
-Section 4 - Scenes
+Section 5 - Scenes
 
 Chapter 1 - Scavving Scenes
 
@@ -706,6 +730,9 @@ to say VentLoganStopByAttacking: [the player also helps!]
 
 to say VentFoxLastScavScene:
 	say "     Now that the guard has been dealt with, you and your friend continue your search for some easily accessible rubber. Looking around the lot, you eventually see a totaled truck. Upon closer examination, you notice there's a whole bed-full of tires in it! Vent seems to realize thistoo, as he hops up into the back of the truck, making quick work of the tires. Soon enough, he's devoured them all, and grown in size as well. Your foxy compatriot now stands taller than a horse when at full size. Of course, he doesn't stay that large for long, quickly shrinking back down to a much more manageable size, hopping out of the truck bed. With his hunger sated, the two of you make your way back to his hide out.";
+	WaitLineBreak;
+	say "     However, once you arrive, you're greeted with another problem. It seems as though Vent has grown too large to fit back inside the ventalation system! Wracking your brain for a solution, you eventually remember the maintenance garage where you found Vent his first bit of food. Perhaps that could work? You propose the idea to your latex friend, and he yips in agreement, bounding off that way. You quickly follow after him, and soon enough, the two of you find yourselves inside the old garage. You look around for a moment before nodding in approval. This should do nicely.";
+	say "     [bold type]Vent has moved into the maintenance garage. You can come here to interact with him now[roman type].";
 	now VentFoxContentLevel is 3;
 	now VentFoxLastFed is turns;
 
@@ -941,7 +968,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 		say "     His knot eventually shrinks enough that he can pull out of your hole, his rubbery tool slipping out with a gentle pop. A trickle of his fluids flow out of your stretched hole, and you can't help but let out a small shudder from the feeling of emptiness you've suddenly been subjected to. Vent gives you a lick on the cheek with his latex tongue before he dismounts you.";
 		WaitLineBreak;
 		say "[VentPostSexWS]";
-		say "     Now that the two of you have been satisfied, Vent gives you a lick goodbye before liquefying and flowing into his home in the vents.";
+		say "     Now that the two of you have been satisfied, Vent gives you a lick goodbye before heading back to his home.";
 	if VentFluidAmount is 1: [Above average Fluid]
 		if anallevel is 3:
 			if VentDomSize is 3:
@@ -1203,7 +1230,7 @@ to say VentPostSexWS:
 		else:
 			say "     Vent pees on your body to mark you as his.";
 
-Section 5 - Dev Tools
+Section 6 - Dev Tools
 
 LearnAboutVent is an action applying to nothing.
 Understand "learnvent" as LearnAboutVent.
@@ -1221,6 +1248,8 @@ Carry out MaxOutVentStats:
 	now VentFoxEncounterCount is 3;
 	now VentFoxContentLevel is 3;
 	now VentFoxRelationship is 3;
+	change the West exit of Smith Haven Mall Lot West to Maintenance Garage;
+	change the East exit of Maintenance Garage to Smith Haven Mall Lot West;
 
 ShowVentStats is an action applying to nothing.
 Understand "ventstats" as ShowVentStats.
