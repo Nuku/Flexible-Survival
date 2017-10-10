@@ -83,7 +83,7 @@ Instead of resolving a Small cave:
 					say "";
 					move player to bunker;
 				else if fightoutcome >= 30:[fled]
-					say "    Running away with all you have, you trip over sometimes but you can get out of the cave before the feline leaped on you. You run without noticing that your legs took you back to the familiar sight of the bunker. You can finally rest.";
+					say "     Running away with all you have, you trip over sometimes but you can get out of the cave before the feline leaped on you. You run without noticing that your legs took you back to the familiar sight of the bunker. You can finally rest.";
 					move player to bunker;
 				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 					say "";

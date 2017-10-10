@@ -12,13 +12,13 @@ The description of Zephias is "[Zephiasdesc]".
 The conversation of Zephias is { "Meep!" }.
 
 instead of sniffing Zephias:
-	say "    A";
+	say "     A";
 
 to say Zephiasdesc:
-	say "    A";
+	say "     A";
 
 instead of conversing Zephias:
-	say "    A";
+	say "     A";
 
 
 Section 2 - Events

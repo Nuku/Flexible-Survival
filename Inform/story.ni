@@ -6,7 +6,7 @@ Release along with an interpreter.
 Use memory economy.
 Use slow route-finding.
 [ The following adjust Informs compiler settings so that it allocates enough space. If these values are incorrect, inform will fail to compile.]
-[ To determine if one of these is your issue, Use the Errors tab in the inform 7 window. ]
+[ To determine if one of these is your issue, use the Errors tab in the inform 7 window. ]
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
@@ -3751,7 +3751,7 @@ exploring is an action applying to nothing.
 understand "explore" as exploring
 
 check exploring:
-	if location of player is not fasttravel and earea of location of player is "void", say "You can not explore from here." instead;
+	if location of player is not fasttravel and earea of location of player is "void", say "You cannot explore from here." instead;
 
 carry out exploring:
 	if there is a dangerous door in the location of the player:

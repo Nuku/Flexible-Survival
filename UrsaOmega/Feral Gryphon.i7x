@@ -21,7 +21,7 @@ to say Gryphondesc:
 
 to say losetoGryphon:
 	say "     The gryphon knocks you to the floor, pinning you under his feathery weight. With an angry growl-chirp, he begins picking intently at your gear; he's trying to undress you. Not wanting to get sliced by his sharp beak and claws, you put your hands up in a motion you hope he understands as surrender and begin slowly disrobing yourself.";
-	say "      Finally, you're naked before the beast. He clearly enjoyed the show, as his cock is slipping out of his furry sheath as he looks your body over approvingly.";
+	say "     Finally, you're naked before the beast. He clearly enjoyed the show, as his cock is slipping out of his furry sheath as he looks your body over approvingly.";
 	if waiterhater is 0, wait for any key;
 	LineBreak;
 	if a random chance of 3 in 4 succeeds: [Mounted by gryphon]

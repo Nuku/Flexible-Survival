@@ -424,7 +424,7 @@ to say ElijahTalk2:
 		say "     As you step up to Elijah and tell him of your encounters with the imps, a shadow of worry crosses his face. He explains, 'Imps may be small and weak in stature, but their powers should not be discounted. They are cunning little creatures that often serve stronger demons - both because they're usually forced to do so, but also of their own volition and ambition to rise in the ranks. You can be certain that they won't just go way until they have found their target and delivered it to their master. And as for him...' Elijah's brows draw together as he thinks for a moment, then nods to himself before he continues, 'Yes, now I remember the name. Skarnoth. Last I heard he took control of a pocket dimension between hell and earth and is styling himself a demon prince... which is technically true, since he is a fairly strong demon and only his minions populate the place otherwise. Still, he is a dangerous threat that we must deal with. Skarnoth has a reputation of ruthlessness and determination, so the only thing we can expect is an escalation of force if his hunting parties won't succeed for too long.'";
 		say "     Elijah does paint a rather grim picture of what Skarnoth might send after you - swarms of imps instead of single scouts, hellhounds and other creatures. Sure, so far you didn't have any problems with the demon's minions, but who knows how long that will last. Could you take two imps at the same time? Or three? You're still in your thoughts as the blond angel clears his throat and gives your upper arm a squeeze. 'I would suggest that we don't wait for him to find us. In all likelihood, Skarnoth thinks I am still severely wounded and unconscious - being treacherous creatures, demons rarely take into account that one can help a fallen comrade rather than just waiting to see if he lives or dies. Surely he doesn't expect that I got such excellent care by a kind soul.' The handsome angel gives you an almost literally glowing smile, then stands up a bit straighter. 'So - even though I am still weakened and lost my sword, I can fight. Let us go for him together at a time when he doesn't expect it. Cut the head off this snake in a counterattack while his minions are out searching for us or still... sating themselves out in the chaos that has gripped this city.";
 		LineBreak;
-		say "    [bold type]Do you agree with Elijah's plan and set out to take the fight to Skarnoth himself ([link]Y[as]y[end link]), or will you put the angel off for the moment ([link]N[as]n[end link])?[roman type][line break]";
+		say "     [bold type]Do you agree with Elijah's plan and set out to take the fight to Skarnoth himself ([link]Y[as]y[end link]), or will you put the angel off for the moment ([link]N[as]n[end link])?[roman type][line break]";
 		if player consents: [go for Skarnoth]
 			LineBreak;
 			say "[DemonLairAttack]";
@@ -435,7 +435,7 @@ to say ElijahTalk2:
 	else if libido of Skarnoth is 4:
 		say "     As you step up to Elijah and bring up the demon prince Skarnoth again, the angel gets quite lively, almost coming to attention. Feathers ruffle and spread as he stretches his wings, seemingly ready to take off at a moment's notice. 'Is it time to take on our enemy? Remember, the sooner we strike the less he will expect it. Let us cut off the head of the snake with a lightning strike!' Wow, the prospect of a good fight against demons sure got your handsome angel excited quick...";
 		LineBreak;
-		say "    [bold type]Do you agree with Elijah's plan and set out to take the fight to Skarnoth himself ([link]Y[as]y[end link]), or will you put the angel off for the moment once more ([link]N[as]n[end link])?[roman type][line break]";
+		say "     [bold type]Do you agree with Elijah's plan and set out to take the fight to Skarnoth himself ([link]Y[as]y[end link]), or will you put the angel off for the moment once more ([link]N[as]n[end link])?[roman type][line break]";
 		if player consents: [go for Skarnoth]
 			LineBreak;
 			say "[DemonLairAttack]";
@@ -448,7 +448,7 @@ to say ElijahTalk2:
 		WaitLineBreak;
 		say "     Elijah does paint a grim picture of what a whole pack of hellhounds can do - vicious and intelligent, those demon beasts are dangerous enough on their own. The concerted attack of a whole pack is the stuff of nightmares, usually leaving not much more of the victim than a few blood-dripping shreds. You're still trying to shake off thoughts of such a scene when the blond angel clears his throat and gives your upper arm a squeeze. 'I would suggest that we don't wait for them to find us. As the imp said, the beasts are pretty easily distracted - and it will take their master's whip to send them after you. So - let us go for him together at a time when he doesn't expect it. Cut the head off this snake in a counterattack while his minions are out searching for us or still... sating themselves out in the chaos that has gripped this city.";
 		LineBreak;
-		say "    [bold type]Do you agree with Elijah's plan and set out to take the fight to Skarnoth himself ([link]Y[as]y[end link]), or will you put the angel off for the moment ([link]N[as]n[end link])?[roman type][line break]";
+		say "     [bold type]Do you agree with Elijah's plan and set out to take the fight to Skarnoth himself ([link]Y[as]y[end link]), or will you put the angel off for the moment ([link]N[as]n[end link])?[roman type][line break]";
 		if player consents: [go for Skarnoth]
 			LineBreak;
 			say "[DemonLairAttack]";
@@ -459,7 +459,7 @@ to say ElijahTalk2:
 	else if libido of Skarnoth is 11: [marked player talked to Eli, didn't go through with the attack]
 		say "     As you step up to Elijah and bring up the demon prince Skarnoth again, the angel gets quite lively, almost coming to attention. Feathers ruffle and spread as he stretches his wings, seemingly ready to take off at a moment's notice. 'Is it time to take on our enemy? Remember, the hellhounds could take up your trail any time now. Let us cut off the head of the snake they call master before he reminds them of their task!' Wow, the prospect of a good fight against demons sure got your handsome angel excited quick... well, that or he's really worried about you.";
 		LineBreak;
-		say "    [bold type]Do you agree with Elijah's plan and set out to take the fight to Skarnoth himself ([link]Y[as]y[end link]), or will you put the angel off for the moment once more ([link]N[as]n[end link])?[roman type][line break]";
+		say "     [bold type]Do you agree with Elijah's plan and set out to take the fight to Skarnoth himself ([link]Y[as]y[end link]), or will you put the angel off for the moment once more ([link]N[as]n[end link])?[roman type][line break]";
 		if player consents: [go for Skarnoth]
 			LineBreak;
 			say "[DemonLairAttack]";

@@ -214,7 +214,7 @@ to say EricDesc:
 		if graphics is true:
 			project the figure of Eric_sofa_icon;
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. Or at least he looks like it - you know better that he's got a pussy hidden away under his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a grey t-shirt bearing the words 'Tenvale College' and tight green shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
-		say "      [line break]";
+		say "     [line break]";
 		say "     At the moment, he's sitting on a camp bed in the bunker, watching you a bit apprehensively. Looks like he feels uncomfortable at you knowing his gender state.";
 	else if (hp of Eric is 10 or hp of Eric is 12 or hp of Eric is 14): [pussy accepted, in the bunker]
 		if graphics is true:
@@ -2911,8 +2911,8 @@ to say EricUrikHangOut:
 	WaitLineBreak;
 	say "     'Huh? Whut - oh, its you boss,' the orc grunts, obviously still a bit sleepy as he blinks at you. Then he looks at the young man pressed to his side and a hint of a smile tugs at the corners of his mouth. Returning his gaze to you, Urik adds, 'Been 'nice' to your friend since we... had that talk. Hell, he even made me join him for a 'book club' and all.' Judging from the snort that follows, Urik seems to find the basic idea of spending time like this ridiculous, but then... he nevertheless did try his best to participate. You talk a little with the big brute, stressing that he should also have an eye out for the library's security - as some creatures might notice the inhabited building and could come looking for loot, or sexual partners.";
 	say "     When you're done talking with the two of them, you say your goodbyes and start walking towards the front desk of the library to sort through your equipment a bit. As you go along, you hear Urik's deep voice from behind you. 'So, lil'E... this reading thing isn't really my wavelength. How about we get something more interesting going? I know that 'pussy' thing of yours wants to be touched a lot. How about getting a full-on ride? Feel an orc cock in it!' The sound of indrawn breath makes you guess that the orc likely slid his hand somewhere intimate and is touching Eric. 'I - um...' Eric starts, then gives a breathless pant, 'Want to, but but... it's too public here and... oooh!' Glancing over your shoulder, you see that Urik's on his feet now, carrying Eric in a pose that has him half-hanging over one green-skinned shoulder. With a tusk-bearing smile on his face, the orc gives Eric's ass a squeeze with the hand holding on to him, then walks towards the stairs to the upper floor.";
-	say "    [line break]";
-	say "    [bold type]Do you let Urik walk off with Eric to fuck him ([link]Y[as]y[end link]), or will you stop the orc cold, ordering him not to ([link]N[as]n[end link])?[roman type][line break]";
+	say "     [line break]";
+	say "     [bold type]Do you let Urik walk off with Eric to fuck him ([link]Y[as]y[end link]), or will you stop the orc cold, ordering him not to ([link]N[as]n[end link])?[roman type][line break]";
 	if player consents: [sex]
 		LineBreak;
 		say "     [bold type]Do you want to follow them and watch?[roman type][line break]";

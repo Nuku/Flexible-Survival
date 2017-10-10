@@ -212,7 +212,7 @@ to blotbind:
 					blotsanitypassive;
 					blotlust;
 				else:
-					say "      [if blotintense < 3]Easily[else if blotintense < 5]With relative ease[else if blotintense < 8]Eventually[else]Finally[end if], you manage to wrench yourself free and dismount the possessed toy, [if blotintense < 3]though it quickly regresses to a state of complete inanimacy[else if blotintense < 5]gradually cooling down and becoming inanimate once more[else if blotintense < 8]quivering for a moment as it slowly begins to fill the void you left[else if blotintense < 10]the mess of a thing trembling in distress over its now-missing rider[else]the thing practically crawling over to be one with you once more, forcing you to retreat even further[end if].";
+					say "     [if blotintense < 3]Easily[else if blotintense < 5]With relative ease[else if blotintense < 8]Eventually[else]Finally[end if], you manage to wrench yourself free and dismount the possessed toy, [if blotintense < 3]though it quickly regresses to a state of complete inanimacy[else if blotintense < 5]gradually cooling down and becoming inanimate once more[else if blotintense < 8]quivering for a moment as it slowly begins to fill the void you left[else if blotintense < 10]the mess of a thing trembling in distress over its now-missing rider[else]the thing practically crawling over to be one with you once more, forcing you to retreat even further[end if].";
 					say "     You clean yourself off and prepare to go about your business once more. [if blotintense > 5]It's likely best that you leave the vinyl object alone until it 'cools down' a bit[else]The vinyl object seems relatively harmless, for now at least[end if]...";
 					say "[line break]";
 					cleanboundmemory;

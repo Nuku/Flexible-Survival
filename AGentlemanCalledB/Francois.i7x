@@ -71,7 +71,7 @@ to say BakeryHusky:
 			if bonus + dice is greater than 15:
 				say "     You narrowly manage to avoid the surprise attack, rolling out of the way as the husky tumbles into a nearby table and chairs. The large canine slowly raises to his feet, shaking his head clear before turning to face you.";
 			else:
-				say "      The husky's attack takes you by surprise, bowling you over as he sends you both tumbling into a nearby table and chairs. The large male pins you to the ground for a moment, barking in your face as he grinds his stiff cock against your body. Fortunately you manage to grasp a nearby piece of the crushed table. After smashing it against the back of his head, you push the stunned canine off you, scrambling to your feet as he shakes his head clear before turning to face you. (15 dmg taken)[line break]";
+				say "     The husky's attack takes you by surprise, bowling you over as he sends you both tumbling into a nearby table and chairs. The large male pins you to the ground for a moment, barking in your face as he grinds his stiff cock against your body. Fortunately you manage to grasp a nearby piece of the crushed table. After smashing it against the back of his head, you push the stunned canine off you, scrambling to your feet as he shakes his head clear before turning to face you. (15 dmg taken)[line break]";
 				decrease hp of player by 15;
 			challenge "Alpha Husky";
 
@@ -190,8 +190,8 @@ Instead of conversing the François:
 		now hp of François is 1;
 		say "[FrançoisListCompile]";
 	else if libido of François >= 3 and Françoistalk1 is false and a random chance of 2 in 5 succeeds:
-		say "      'I was having such difficulty before you came along.  I don't know if your coming around is scaring them off now, but I was having no end of trouble before.  These hands, they were made for the baking and for the love, not the fighting,' he says, momentarily forgetting he's got paws now.  'Zut alors!  How most of them were rude lovers!  No passion, no care for their lover, just raw lust.";
-		say "      'Even from the girls.  I tried to refuse them, but would they listen?  Non!  They would get what they wanted in the end, but it was always so hollow.  I am sad for them[if cocks of player > 0].  But I have found a good lover in you, mon délice,' he adds, running his paws over you as he gives you a passionate kiss full of doggy tongue in your mouth[else if cunts of player > 0].  But now I have found you, mon amie,' he says with a smile before giving you a kiss on the cheek[else].  But now I have found you, mon ami,' he says with a smile before giving you a kiss on the cheek[end if].";
+		say "     'I was having such difficulty before you came along.  I don't know if your coming around is scaring them off now, but I was having no end of trouble before.  These hands, they were made for the baking and for the love, not the fighting,' he says, momentarily forgetting he's got paws now.  'Zut alors!  How most of them were rude lovers!  No passion, no care for their lover, just raw lust.";
+		say "     'Even from the girls.  I tried to refuse them, but would they listen?  Non!  They would get what they wanted in the end, but it was always so hollow.  I am sad for them[if cocks of player > 0].  But I have found a good lover in you, mon délice,' he adds, running his paws over you as he gives you a passionate kiss full of doggy tongue in your mouth[else if cunts of player > 0].  But now I have found you, mon amie,' he says with a smile before giving you a kiss on the cheek[else].  But now I have found you, mon ami,' he says with a smile before giving you a kiss on the cheek[end if].";
 		now Françoistalk1 is true;
 	else if a random chance of 3 in 5 succeeds and Francois_Undiscovered is not empty:
 		say "[FrançoisHint]";

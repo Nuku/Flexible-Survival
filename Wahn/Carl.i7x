@@ -195,7 +195,7 @@ Instead of fucking the Carl:
 						LineBreak;
 						say "[SubCarl_PussyRide]";
 				else if cocks of player > 0:
-					say "      ";
+					say "     ";
 					say "     [bold type]Do you want to fuck him or ride him?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Fuck him.";

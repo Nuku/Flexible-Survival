@@ -158,7 +158,7 @@ to ramtrainingshift:
 
 to say subramdefeat:
 	if cocks of player is 0:
-		say "      Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. [if player is dominant]Smirking[else]Grinning[end if], you gesture for your [if player is dominant]sissy [end if]ram to get on his knees. Eagerly, he drops onto them and reaches for where your cock should be... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[else]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with.";
+		say "     Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. [if player is dominant]Smirking[else]Grinning[end if], you gesture for your [if player is dominant]sissy [end if]ram to get on his knees. Eagerly, he drops onto them and reaches for where your cock should be... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[else]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with.";
 	else:
 		if libido of player > 60: [Fuck him - Invol.]
 			say "[subramsex1]";

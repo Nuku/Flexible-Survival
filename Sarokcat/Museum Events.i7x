@@ -101,7 +101,7 @@ Instead of Resolving a Missing lamp:
 			now Missing lamp is resolved;
 			increase carried of jade scarab by 1;
 		else:
-			say "    Deciding to move on, you put the exhibit out of your head as you continue forward.";
+			say "     Deciding to move on, you put the exhibit out of your head as you continue forward.";
 
 
 

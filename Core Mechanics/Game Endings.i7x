@@ -41,7 +41,7 @@ to ratetheplayer:
 		increase score by tempnum;
 	if "Ultimatum" is listed in feats of player and score > 0:
 		now tempnum2 is (score / 10);
-	say "In Scenario: [bold type][scenario][roman type], You have achieved a score of [bold type][score][roman type].";
+	say "In Scenario: [bold type][scenario][roman type], you have achieved a score of [bold type][score][roman type].";
 	if gsgl is 1 and score > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
 	if "Ultimatum" is listed in feats of player and score > 0, say "Your Ultimatum perk grants you a bonus of [tempnum2] points.";
 	say "You've achieve the rank of: [bold type]";

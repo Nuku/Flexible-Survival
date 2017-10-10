@@ -81,7 +81,7 @@ to say Unsualgrab:
 	move player to primary lab;
 
 to say Unsualconsole:
-	say "      You kneel beside her and take a hand. Rubbing gently, you tell her that she's not ugly at all. She refuses your word at first, but slowly warms as you coo soft encouragements. She suddenly pulls you close and kisses firmly, her slender snout against your face for a moment. She quickly agrees to come back with you to the lab, smiling as she goes.";
+	say "     You kneel beside her and take a hand. Rubbing gently, you tell her that she's not ugly at all. She refuses your word at first, but slowly warms as you coo soft encouragements. She suddenly pulls you close and kisses firmly, her slender snout against your face for a moment. She quickly agrees to come back with you to the lab, smiling as she goes.";
 	now deerconsent is 1;
 	now battleground is "void";
 	now Unusual Creature is resolved;
@@ -233,7 +233,7 @@ to say sexwithSusan:
 	else if hp of Susan is 52 and hospcountdown - turns >= 16 and hospquest >= 18:
 		say "[Susanlabcoatscene]";
 	else if libido of player is less than 50:
-		say "      She rubs up against you gently and runs her hands across your [skin of player] chest. 'It is good to see you,' she whispers as she snuggles close to your [bodytype of player] body, but makes no attempt to push it further than soft chatter and close hugs.";
+		say "     She rubs up against you gently and runs her hands across your [skin of player] chest. 'It is good to see you,' she whispers as she snuggles close to your [bodytype of player] body, but makes no attempt to push it further than soft chatter and close hugs.";
 		deerfy;
 	else:
 		say "[SusanSexMenu]";
@@ -386,7 +386,7 @@ to say SusanSex5: [Susan Sucks the player]
 		now hp of Susan is 4;
 
 to say SusanSex6: [Susan fucks Pussy]
-	say "       You kiss the little doe lips putting your hand on that ebony cock and pulling your lover to her cot. You keep pulling the doe by her cock until you start lining it up with your pussy.[if Susanfirsttime is 0] First you feel the head of her cock pushing your lips open and right after she penetrates you completely without warming. You wince from the pain of the sudden invasion but she doesn't stop. Susan keeps fucking you with eagerness and without experience. As she does so, her body suddenly shifts a little, bulking up - especially at the chest and shoulders. She transitions into a strong and sexy doe-buck that is an attractive mix of the feminine and the masculine.[else] With easy, she slides that dark cock in your tight pussy. Now used to you and to your body she keeps pushing while hitting all the right spots making you almost cum time and time again. Her thrusts get faster as she lets you get more used to her new size, stretching your inner walls until her cock is all the way in and hitting the entrance of your womb.";
+	say "     You kiss the little doe lips putting your hand on that ebony cock and pulling your lover to her cot. You keep pulling the doe by her cock until you start lining it up with your pussy.[if Susanfirsttime is 0] First you feel the head of her cock pushing your lips open and right after she penetrates you completely without warming. You wince from the pain of the sudden invasion but she doesn't stop. Susan keeps fucking you with eagerness and without experience. As she does so, her body suddenly shifts a little, bulking up - especially at the chest and shoulders. She transitions into a strong and sexy doe-buck that is an attractive mix of the feminine and the masculine.[else] With easy, she slides that dark cock in your tight pussy. Now used to you and to your body she keeps pushing while hitting all the right spots making you almost cum time and time again. Her thrusts get faster as she lets you get more used to her new size, stretching your inner walls until her cock is all the way in and hitting the entrance of your womb.";
 	WaitLineBreak;
 	say "     Trying to hold on something to keep yourself stable you end up hugging her neck and hearing her long breaths in your ear. Now hearing her grunts and sexy noises makes you happy and connected with your deer lover. Feeling your [skin of player] skin against her fur and her now strong musk. Letting yourself get lost in her body. Feeling the doe cock slamming into you making you almost jump from her arms. Her balls heavy with a need to be emptied inside you. Now all you can do is let her do what she wants to do with you.";
 	say "     The horny deer keeps trusting into your needy pussy. You can feel her whole cock, all her veins pulsating and sending her heartbeat to your body. you feel yourself orgasming first, your mind goes blank and your body holds her closer. her balls move and compact as the climax is coming to her, your own orgasm grips the black rod that is inside you now. Begging to be bred by that delicious cock. Your pussy's calls are answered as she finally penetrates your womb filling it with her potent seed. Painting everything inside your womb her color and doing her best to make you pregnant.[impregchance]";
@@ -604,7 +604,7 @@ when play ends:
 				say "     Fear grips your heart and you take off running like the wind until you reach Susan's arms, leaping into them and curling up against her a moment. She calms you and pets you. Despite your loss of humanity, she remains clear, and cares for you as a mother, even if she likes playing with you like a lover. When Dr Mouse leaves the city, she goes with him and takes you into hiding with them. As the doctor continues his work in the shadows, the deer continues to care for you to the end of your days, never leaving you wanting for company, or anything else.";
 			else:
 				say "     You can feel your humanity drifting away from you and flee to where your instincts urge you. You find the herd of deer, led by that magnificent stag. On seeing you, Susan steps forward and welcomes you into her arms, holding your shivering form tight to herself, 'Now you see?' she whispers, then lays you down, rutting you to the cheers of the others, many of whom stroke their black cocks over your coupling bodies, spraying you and her with hot strings of seed even as she fills your belly and officially claims you as her own.";
-				say "      When she is done, she rises from you, and one of your pack sisters takes her place, rutting you just as eagerly. She rolls over, putting you on top [if cunts of player is greater than 0]and leaving the way open for another sister to come up and claim your ass, sandwiching you between as you're fucked by[else]fucking you wildly before passing you along to[end if] each sister in turn, passed around twice through the entire circle of adoring deer. By the time it is done, you are sore but satisfied, and begin your life as a member of the herd.";
+				say "     When she is done, she rises from you, and one of your pack sisters takes her place, rutting you just as eagerly. She rolls over, putting you on top [if cunts of player is greater than 0]and leaving the way open for another sister to come up and claim your ass, sandwiching you between as you're fucked by[else]fucking you wildly before passing you along to[end if] each sister in turn, passed around twice through the entire circle of adoring deer. By the time it is done, you are sore but satisfied, and begin your life as a member of the herd.";
 		else:
 			if Susan is in primary lab:
 				say "     When the rescue comes, you return to Susan and leave the city hand in hand. Despite any other loves or friends you pick up, she remains your favored. Her belly is swollen round often with the fruit of your couplings, and she accompanies you almost everywhere, tending to your every whim. You are both happy with the arrangement, and remain together, loving, for the rest of your long lives, eventually tended to by the children you sired and raised so well.";
@@ -627,7 +627,7 @@ when play ends:
 			if Susan is in primary lab:
 				say "     Susan happily joins you when you move north, sharing your home. At first, she merely tolerates your collection of holiday kitsch. But she loves you deeply all the same, and you her. ";
 				if cocks of player is 0 and "Sterile" is not listed in feats of player:
-					say "      She's a reluctant buck at first, but is soon rutting you every night, much to your delight. Every year, come Christmas Day, you give birth to a new fawn";
+					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight. Every year, come Christmas Day, you give birth to a new fawn";
 				else if cocks of player is 0:
 					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight.";
 				else:

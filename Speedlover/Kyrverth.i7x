@@ -171,7 +171,7 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 			else if ((cocks of player >= 1 and KyrverthStage is 3 and KyrverthMaleBoning is 1) or cunts of player >= 1):
 				say "     'Hows about you and I have some fun?' Kyrverths hand strays toward his vent and strokes it a few times, showing the tip of a massive cock 'Ive been wanting to make some eggs...'";
 		else if randomnumber >= 36 and randomnumber <= 40:
-			say "     'All my life I've had four limbs. Now I have four limbs and a tail and wings, it can be strange sometimes. I use the limbs almost without thinking, but when I try to use them consciously im a lot more clumsy with them.'";
+			say "     'All my life I've had four limbs. Now I have four limbs and a tail and wings, it can be strange sometimes. I use the limbs almost without thinking, but when I try to use them consciously I'm a lot more clumsy with them.'";
 		else if randomnumber >= 41 and randomnumber <= 45:
 			if KyrverthStage is not 3:
 				say "     'I wonder what my hoard is worth? And in what currency? Ever since the outbreak money has become a bit useless...'";
@@ -203,7 +203,7 @@ instead of fucking the Kyrverth:
 			say "     'Sorry, but not right now, maybe later?'";
 		else if cocks of player > 0: 				[Male player]
 			if KyrverthMaleBoning is 0:
-				say "     Sorry bro, I do owe you one, but im really into girls...";
+				say "     Sorry bro, I do owe you one, but I'm really into girls...";
 				say "[KyrverthMaleCheck]";
 			else if KyrverthMaleBoning is 1:
 				say "[KyrverthAnalSex]";
@@ -214,7 +214,7 @@ instead of fucking the Kyrverth:
 			say "[KyrverthSex]";
 		else: [Player has no gender, large enough]
 			if KyrverthMaleBoning is 0:
-				say "     Sorry, I do owe you one, but im really into girls, and you don't have those parts...";
+				say "     Sorry, I do owe you one, but I'm really into girls, and you don't have those parts...";
 			else if KyrverthMaleBoning is 1:
 				say "[KyrverthMaleCheck]";
 	else:
@@ -422,7 +422,7 @@ Instead of resolving a Jewel Heist:
 	now battleground is "void";
 
 to say JewelHeistSneak:
-	say "    The wolverine stands by the front door, a permanent scowl on his face. His hand regularly strokes a bat hanging from a loop on his waist. Deciding not to try and fight him you walk around to the next street and go down the alley to the back of the shop. The rear door looks like it might be alarmed with a wire running down to a small box on the side of the door by the handle. If the alarm goes off you know the wolverine will come running.";
+	say "     The wolverine stands by the front door, a permanent scowl on his face. His hand regularly strokes a bat hanging from a loop on his waist. Deciding not to try and fight him you walk around to the next street and go down the alley to the back of the shop. The rear door looks like it might be alarmed with a wire running down to a small box on the side of the door by the handle. If the alarm goes off you know the wolverine will come running.";
 	say "     [bold type]Will you try to disarm it?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";

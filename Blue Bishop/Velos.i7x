@@ -520,7 +520,7 @@ to say hadiyamusing:
 	say "     '...'";
 	say "     'So, how have you been?  Not too much trouble, I wager?  You look like you can take care of yourself.'";
 	say "     '...I'll admit, for a snake hiding in someone's ass, you've got balls.'";
-	say "     'Er, Thank you--'";
+	say "     'Er, thank you--'";
 	say "     'But you come out here again and ask me a dumbass question like that and you'll see just how quickly I can break you.'  Velos seems to pause at this, inevitably conceding to urging your retreat, but she stops you just before the two of you depart.  '...And I'm fine, thank you for asking.'  The serpent regarding her final remark with a slight grin, she then lets you off.  Discourse concluded, your resident returns back from whence he came, letting you go about your business.";
 	add 11 to velospostmusings;
 
@@ -731,7 +731,7 @@ to say christymusing:
 		say "     'I suppose you could say that.'";
 		add 19 to velospostmusings;
 	else:
-		say "     'Oh, That's so very naughty, maybe I could borrow him for a--No, no! Nevermind what I said.'  The serpent can't help but furrow his brow at the dragoness's presently conflicted state.";
+		say "     'Oh, that's so very naughty, maybe I could borrow him for a--no, no! Nevermind what I said.'  The serpent can't help but furrow his brow at the dragoness's presently conflicted state.";
 		say "     'You're quite the twisted lady, perhaps you should consider a hobby?  Knitting, maybe?  I'm sure we could find some rope and a pair of street lamps...?'";
 		say "     'I wasn't all that good with knitting at the nunnery.'  Velos seems a little perturbed that his joke flew right over her head.";
 		say "     'I... suppose I might as well address your first point by highlighting the fact that our friend is pretty much stuck with me.'";

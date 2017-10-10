@@ -2823,11 +2823,11 @@ We have a couple of types of objects that are not sprites. Rectangle primitives 
 
 	A title-text is a kind of bitmap-rendered string. The graphlink status of a title-text is g-inactive. The associated canvas of a title-text is graphics-window canvas.
 
-	Ground_level_1 is a title-text.  The origin is {39, 63}.   The text-string is "Ground level". The associated font is Glimmr C&C. Ground_level_1 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The associated room of Ground_level_1 is Entrance Chamber.
+	Ground_level_1 is a title-text.  The origin is {39, 63}.  The text-string is "Ground level". The associated font is Glimmr C&C. Ground_level_1 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The associated room of Ground_level_1 is Entrance Chamber.
 
-	Shaft_2 is a title-text.  The origin is {189, 63}.   The text-string is "Shaft". The associated font is Glimmr C&C. Shaft_2 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The display status of Shaft_2 is g-inactive. The associated room of Shaft_2 is Shaft.
+	Shaft_2 is a title-text.  The origin is {189, 63}.  The text-string is "Shaft". The associated font is Glimmr C&C. Shaft_2 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The display status of Shaft_2 is g-inactive. The associated room of Shaft_2 is Shaft.
 
-	Upper_level_3 is a title-text.  The origin is {341, 63}.   The text-string is "Upper level". The associated font is Glimmr C&C. Upper_level_3 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The display status of Upper_level_3 is g-inactive. The associated room of Upper_level_3 is Upper Chamber.
+	Upper_level_3 is a title-text.  The origin is {341, 63}.  The text-string is "Upper level". The associated font is Glimmr C&C. Upper_level_3 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The display status of Upper_level_3 is g-inactive. The associated room of Upper_level_3 is Upper Chamber.
 
 Finally, the table that converts the location to the coordinates that the player's avatar should have onscreen. (These were mapped using Glimmr Canvas Editor's "instances" feature.)
 

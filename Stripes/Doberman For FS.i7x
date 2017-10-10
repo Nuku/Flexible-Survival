@@ -296,9 +296,9 @@ to say weaponconf:
 			else if libido of player >= 110:		[lustfully submitted]
 				say "***Not written yet, but may be needed in the future. Player lost due to excess libido.";
 			else if hp of player > 0:			[resisted, then submitted]
-				say "    She takes your whip and sword away, making sure to grab them using an evidence bag. 'Just think about the damage you could have caused with these. You're too much of a loose cannon to be trusted with them. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
+				say "     She takes your whip and sword away, making sure to grab them using an evidence bag. 'Just think about the damage you could have caused with these. You're too much of a loose cannon to be trusted with them. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
 			else:							[lost the fight]
-				say "    She takes your whip and sword away, making sure to grab them using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
+				say "     She takes your whip and sword away, making sure to grab them using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
 			if weapon object of player is dirty whip:
 				now weapon damage of player is 4;
 				now weapon type of player is "Melee";

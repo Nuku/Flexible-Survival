@@ -3,14 +3,14 @@ Version 1 of Beach by Speedlover begins here.
 Section 1 - Basic Setup [of rooms]
 
 [Beach plaza]
-Beach Plaza is a Room. 
+Beach Plaza is a Room.
 The Beach Plaza is fasttravel. The Beach Plaza is not known.
 The description of beach plaza is "[BeachplazaDesc]".
 earea of Beach Plaza is "Outside".
 
 to say BeachplazaDesc:
 	say "     Quite different from the dirty, ill-kempt streets of the city you know, the plaza you are standing upon presents itself in a sunny scene. It is fairly large, open and relatively clean, with a boardwalk extending toward the west. You can see a wooden railing in the distance there, with the sea visible beyond that. Remembering the layout of the beach from previous visits, you know that there is a sharp cliff over there, with stairs leading down to the public beach and the rest of the coastline. To the north is a church, its wide doors open and inviting.";
-	say "      Numerous infected are present on this peaceful plaza, strolling around in a relaxed fashion and checking out various vendor stalls and buildings. Which is a bit surprising, to say the least - given the state of affairs everywhere else. Maybe the towering bronze statue of a crab straddling the street like an archway has something to do with it. You certainly do not remember that being there before all the trouble in the city started.".
+	say "     Numerous infected are present on this peaceful plaza, strolling around in a relaxed fashion and checking out various vendor stalls and buildings. Which is a bit surprising, to say the least - given the state of affairs everywhere else. Maybe the towering bronze statue of a crab straddling the street like an archway has something to do with it. You certainly do not remember that being there before all the trouble in the city started.".
 
 Beach Exit is a door. Beach Exit is dangerous.
 The marea of Beach Exit is "Outside". Beach Exit is undescribed. Beach Exit is east of Beach Plaza.
@@ -33,7 +33,7 @@ instead of conversing the Bronze Crab:
 instead of fucking the Bronze Crab:
 	say "     Amorous thoughts fill your mind and you step closer to one of the giant crab's legs, to... rub ub against it? Climb on it? Whatever it was, you are stopped cold by a huge pincer, closing around your midsection to hold you firm. With carefully meted-out force (to not accidentally snap you in half), the crab picks you up and sets you down outside the plaza, releasing its grasp there. You hear some clicking noises and see it gesture towards the city, although it doesn't seem to mind that you walk back to the plaza - without trying to have sex with it this time.";
 
-	
+
 [Boardwalk]
 West of Beach Plaza is Boardwalk2.
 Boardwalk2 is a Room.
@@ -154,7 +154,7 @@ instead of sniffing the BeachEnd:
 before going to the Coral Ring:
 	say "     You can't just walk around in the ocean. You'll have to [bold type]swim[roman type] to the [bold type]coral ring[roman type].";
 	stop the action;
-	
+
 [Coral Ring - *****Swimming is defined in Hellerhounds file - Underwater zone for FS*****]
 Southwest of BeachEnd is Coral Ring.
 Coral Ring is a Room.
@@ -165,7 +165,7 @@ to say CoralRingDesc:
 
 instead of sniffing the Coral Ring:
 	say "All you can smell out here is the strong scent of the ocean.";
-	
+
 after entering the Coral Ring:
 	say "You look up with awe, sure this accomplishment was great.";
 	increase score by 5;

@@ -303,7 +303,7 @@ carry out ColeenSpraying:
 				else:
 					say "     'See!' Coleen says happily. 'I knew you would understand how much fun being like this is!' she says as she wags her naked body at you.'";
 			else if SarahSlut > 0:
-				say "     'Well ok, The spray bottle is full so it should still work on you, and it might work to help Sarah over there regain a bit of her sanity as well, but treating someone as far gone as her would take the whole bottle at once. So you need to decide what you want to do.' Coleen says as she uncaps the small spray bottle and holds it up. Do ask her to help Sarah?'";
+				say "     'Well ok, the spray bottle is full so it should still work on you, and it might work to help Sarah over there regain a bit of her sanity as well, but treating someone as far gone as her would take the whole bottle at once. So you need to decide what you want to do,' Coleen says as she uncaps the small spray bottle and holds it up. Do ask her to help Sarah?'";
 				if player consents:
 					say "     'Ok! You're the boss!' Coleen says, as she turns and ambushes Sarah with the spray can, a chemical smell fills the bunker, warring with the scent of needy husky, as she unloads the can on the husky. Sarah looks offended at first, and then somewhat embarrassed as she blushes and clutches her clothes tightly to her. Soon the can clicks empty, and you can see that Sarah looks about as clearheaded now as she did right after you first found her...";
 					now Pet Shop is not resolved;
@@ -342,7 +342,7 @@ carry out ColeenSpraying:
 				else:
 					say "     'Okay, I'll hold on to it some more then,' Colleen tells you and tugs the small spray bottle away.";
 		else:
-			say "    'Well ok, here goes nothing,' Coleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
+			say "     'Well ok, here goes nothing,' Coleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
 			now face of player is "human";
 			now facename of player is "human";
 			now body of player is "human";

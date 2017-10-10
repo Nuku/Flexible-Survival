@@ -122,7 +122,7 @@ to say losetogob_m:
 			say "he moves a hand to stroke [if cocks of player > 1]one of your [cock size desc of player] cocks[else]your [cock size desc of player] cock[end if], supplementing his teasing with more direct affections until you're [if hp of player > 0]driven[else]forcibly made[end if] hard";
 		else:
 			say "[if cunts of player > 1], he moves a hand to stroke one of your cunts, supplementing his imminent intrusion with another as you feel his fingers sink into the feminine portal[else if cunts of player > 0], he moves a hand to stroke your cunt, supplementing his imminent intrusion with another as you feel his fingers sink into the feminine portal[else], he briefly teases your [bodytype of player] tailpipe before its appropriate use[end if]";
-		say ". Soon thereafter, You feel the head of his eager organ shove its way past your supple ring,";
+		say ". Soon thereafter, you feel the head of his eager organ shove its way past your supple ring,";
 		if scalevalue of player > 3:
 			say "his prick barely registering against for you and your sizeable hole.  He doesn't seem to regard this, though; perhaps all the more excuse to be more reckless in his [if hp of player > 0]use[else]abuse[end if].";
 		else:
@@ -166,7 +166,7 @@ to say losetogob_m:
 					say "[if scalevalue of player > 3][one of]Whew, ah, what a ride[or]Ah, give me a second, big one[or]Heh, I still have the magic touch, even with someone so large[at random][else][one of]Oh, you've gone and made a mess of yourself[or]Whew, I'm going to need a second[or]Ho boy, what a ride[at random][end if]";
 				say "...' Taking a moment to catch his breath, creature eventually pulls himself free from you, casually wiping his spent tool clean against your behind before he crawls back into the hole from whence he came, regarding you with a sly grin as he departs, allowing you to recover and go about your business once more.[mimpregchance]";
 			else if cunts of player > 0:
-				say "     Suddenly, you feel the goblin's load flood your bowels, The sensation -- coupled with his additional attendance -- driving you to ecstasy as well, the diminutive creature panting against your [bodytype of player] form as your greedy hole milks him of every last drop.";
+				say "     Suddenly, you feel the goblin's load flood your bowels, the sensation -- coupled with his additional attendance -- driving you to ecstasy as well, the diminutive creature panting against your [bodytype of player] form as your greedy hole milks him of every last drop.";
 				if gobdem is true:
 					say "[one of]Ah, ha, ha[or]Oh, heh, ah[or]Heh, mine, ah[at random]";
 				else:
@@ -179,7 +179,7 @@ to say losetogob_m:
 			say "he moves a hand to stroke [if cocks of player > 1]one of your [cock size desc of player] cocks[else]your [cock size desc of player] cock[end if], supplementing his teasing with more direct affections until you're [if hp of player > 0]driven[else]forcibly made[end if] hard";
 		else:
 			say "he briefly teases your [cunt size desc of player] portal[sfn] before [if cunts of player > 1]their[else]its[end if] appropriate use";
-		say ". Soon thereafter, You feel the head of his eager organ shove its way past the supple folds of your flesh,";
+		say ". Soon thereafter, you feel the head of his eager organ shove its way past the supple folds of your flesh,";
 		if cunt length of player > 15:
 			say "his prick barely registering against for you and your sizeable hole.  He doesn't seem to regard this, though; perhaps all the more excuse to be more reckless in his [if hp of player > 0]use[else]abuse[end if].";
 		else:
@@ -223,7 +223,7 @@ to say losetogob_m:
 						say "[if scalevalue of player > 3][one of]Whew, ah, what a ride[or]Ah, give me a second, big one[or]Heh, I still have the magic touch, even with someone so large[at random][else][one of]Oh, you've gone and made a mess of yourself[or]Whew, I'm going to need a second[or]Ho boy, what a ride[at random][end if]";
 					say "...' Taking a moment to catch his breath, creature eventually pulls himself free from you, casually wiping his spent tool clean against your behind before he crawls back into the hole from whence he came, regarding you with a sly grin as he departs, allowing you to recover and go about your business once more.[impregchance]";
 				else if (cunt length of player > 15 and (cunts of player > 1 or breast size of player > 0)) or cunt length of player < 16:
-					say "     Suddenly, you feel the goblin's load flood your womb, The sensation -- coupled with his additional attendance -- driving you to ecstasy as well, the diminutive creature panting against your [bodytype of player] form as your greedy hole milks him of every last drop.";
+					say "     Suddenly, you feel the goblin's load flood your womb, the sensation -- coupled with his additional attendance -- driving you to ecstasy as well, the diminutive creature panting against your [bodytype of player] form as your greedy hole milks him of every last drop.";
 					say "     '";
 					if gobdem is true:
 						say "[one of]Ah, ha, ha[or]Oh, heh, ah[or]Heh, mine, ah[at random]";

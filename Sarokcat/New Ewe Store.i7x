@@ -130,13 +130,13 @@ The description of New Ewe Storeroom is "This small family grocery store is now 
 The invent of New Ewe Storeroom is { "chips" , "food" , "water bottle" , "soda" }.
 
 Leon is a man.
-The description of Leon is "A strong and relatively rugged looking ram person is hanging around near the registers, keeping an eye on you, You recall his name was Leon.".
+The description of Leon is "A strong and relatively rugged looking ram person is hanging around near the registers, keeping an eye on you. You recall his name was Leon.".
 The conversation of Leon is { "Baa, baby!" }.
 the fuckscene of Leon is "[sexwithleon]".
 Leon is in New Ewe Storeroom.
 
 Mary is a woman.
-The description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around, You remember her introducing herself as Mary.".
+The description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around. You remember her introducing herself as Mary.".
 The conversation of Mary is { "Baa, honey!" }.
 the fuckscene of Mary is "[sexwithmary]".
 Mary is in New Ewe Storeroom.
@@ -408,7 +408,7 @@ to say sexwithmary:
 			attempttowait;
 			say "     Unable to resist the soft feel of her wet folds enveloping you, you bury your hands in the soft wool of her hips, gripping tightly as you thrust upwards. Mary moans in pleasure as you take charge, her inner muscles tightening around you deliciously with your every movement. Soon you settle into a rhythm of short quick thrusts into your willing ewe, her soft body rubbing up against your [skin of player] with every thrust, her face full of animalistic pleasure as she makes soft bleating and moaning noises in time with your thrusting. Before you know it you feel your muscles tense in orgasm, as your cock empties its load into her fertile belly, causing her to shudder in orgasm as well as your seed fills her belly. Panting, she collapses on top of you, your cock still twitching in her, as you both lie there exhausted.";
 			attempttowait;
-			say "     Waking up after a couple hours, you find yourself alone on the couch, quickly gathering up your belongings you find a short note left behind from Mary. 'I had to return to the store to take care of a few things, though I am definitely looking forward to spending more time with you as soon as we can. Signed, Your loyal ewe.' Smiling as you read the note, you feel a surge of satisfaction at having taken care of your ewe properly, and tuck the note into your backpack before heading back over to the store yourself.";
+			say "     Waking up after a couple hours, you find yourself alone on the couch, quickly gathering up your belongings you find a short note left behind from Mary. 'I had to return to the store to take care of a few things, though I am definitely looking forward to spending more time with you as soon as we can. Signed, your loyal ewe.' Smiling as you read the note, you feel a surge of satisfaction at having taken care of your ewe properly, and tuck the note into your backpack before heading back over to the store yourself.";
 		else:
 			say "     Mary's sheep-like face pouts slightly as she takes in your female form, 'It looks like you aren't quite ready to be the ram of the flock yet.' She says as she runs her hands over your body. 'But that doesn't mean we can't have a little bonding time in the flock anyways,' She finishes as she leans over you to lick the side of your face erotically. Wasting no time she begins running her hands up and down your body, teasing and exciting you as she begins to lick and kiss her way down your body. She pays special attention to your nipples and stomach, before finally lowering her head to your wet pussy, which she begins to nibble and tease with her soft lips and flexible tongue. Unable to help yourself you bury your hands in the soft fleece around her head as you moan and writhe underneath her, her marvellously skilled tongue quickly bringing you to the edge of orgasm, before finally making you cry out as you cum, your juices eagerly licked up by her wonderful tongue.";
 			attempttowait;

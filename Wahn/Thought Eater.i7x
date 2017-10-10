@@ -206,7 +206,7 @@ to say Thought_Eater_Desc:
 	say "     With a dry, hissing voice the creature tells you 'Kneel before your master!' and follows up with a brutal psychic attack that breaks over you like a powerful wave.";
 	LineBreak;
 	if mindshield helmet is equipped:
-		say "    The shiny metal helmet on your head hums silently and you feel the onslaught on your will lessen, then fade away. Phew - good that you put this thing on. Otherwise this could have been over quickly. The green eyes of your tentacled attacker flash in annoyance and anger as you shrug off its mental attack. With a hiss, it rushes at you, clawing with long fingers ending in sharp claws.";
+		say "     The shiny metal helmet on your head hums silently and you feel the onslaught on your will lessen, then fade away. Phew - good that you put this thing on. Otherwise this could have been over quickly. The green eyes of your tentacled attacker flash in annoyance and anger as you shrug off its mental attack. With a hiss, it rushes at you, clawing with long fingers ending in sharp claws.";
 	else:
 		if carried of mindshield helmet > 0 and mindshield helmet is not equipped:
 			say "     Uhoh - it might have been a good idea to put your shiny mindshield helmet actually on your head. Well, too late now...";

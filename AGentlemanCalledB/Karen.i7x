@@ -51,10 +51,10 @@ carry out KarenFucking:
 			say "     You turn around to see Rex, an uncharacteristic scowl across his muzzle, apparently aware of your intentions. Glancing back at Karen for a moment, you decide it's best to stay on Rex's good side and leave his pet be.";
 	else if companion of player is Retriever Girl:
 		if hp of Karen is 8:
-			say "      Karen bites her lip and stares at you longingly for a moment before refusing. 'I don't think I should be doing anything like that... yet.'";
+			say "     Karen bites her lip and stares at you longingly for a moment before refusing. 'I don't think I should be doing anything like that... yet.'";
 			say "     (Sorry - This quest/character is still a work in progress, this is where it ends for now. -The author)";
 		else if hp of Karen > 4:
-			say "      Karen bites her lip and stares at you longingly for a moment before refusing. 'I don't think I should be doing anything like that... yet.'";
+			say "     Karen bites her lip and stares at you longingly for a moment before refusing. 'I don't think I should be doing anything like that... yet.'";
 	else:
 		if hp of Karen > 4:
 			say "     Karen is not currently your active companion, you should call her over first.";

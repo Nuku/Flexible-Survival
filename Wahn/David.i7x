@@ -1036,7 +1036,7 @@ after of going to Parade Ground while thirst of David is 5 and hp of David is 3:
 	say "     As you step on the parade ground of Camp Bravo, David walks up to you and pulls you aside, saying he has something important to talk to you about. He looks a bit embarrassed about it, hesitating before he says 'Listen, you saved me from minotaur duty, and I like being with you and... you know. I wanted to ask how you see - you and me - us.' He looks at you with an earnest and hopeful expression.";
 	if graphics is true:
 		project the figure of David_face_icon;
-	say "      [bold type]What do you tell him?[roman type][line break]";
+	say "     [bold type]What do you tell him?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - You think there's something more between him and you...";
 	say "     ([link]N[as]n[end link]) - You just see him as a fuck buddy.";
 	if player consents:
@@ -1107,7 +1107,7 @@ after of going to Bunker while thirst of David is 5 and hp of David is 4:
 	say "     As you step on the parade ground of Camp Bravo, David walks up to you and pulls you aside, saying he has something important to talk to you about. He looks a bit embarrassed about it, hesitating before he says 'Listen, you saved me from minotaur duty, and I like being with you and... you know. I wanted to ask how you see - you and me - us.' He looks at you with an earnest and hopeful expression.";
 	if graphics is true:
 		project the figure of David_face_icon;
-	say "      [bold type]What do you tell him?[roman type][line break]";
+	say "     [bold type]What do you tell him?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You think there's something more between him and you...";
 	say "     ([link]N[as]n[end link]) - You just see him as a fuck buddy.";
@@ -1345,7 +1345,7 @@ instead of going to Bunker while hp of David is 4 and (libido of David is 0 or l
 			say "     Brutus pales visibly as he realizes what he was about to do, wrenching his large hand away from where it was gripping the seat of David's pants. He flinches back from the young man, giving an anguished howl, then wails, 'I'm sorry! I love you David, but the urges were too strong after I kept them in check for so long! I - lost control.' He stares down at his still painfully hard cock and gives a determined grunt, visibly fighting with himself. The demon's muscles tremble as he clenches is fists and you see beads of sweat appear on his brow.";
 			WaitLineBreak;
 			say "     As the first droplet of dark violet blood starts to drip from where Brutus claws are digging into his palms, David is broken out of the shocked paralysis he was in until now. With a shout of, 'No! Don't hurt yourself,' he lunges forward, pulling on Brutus hands to open them. Letting the smaller human pry open his clenched fingers without any resistance, the demon asks in a baffled tone, 'You don't hate me now? I wanted to -' 'No, you big lug! I love you!' David shouts back, instantly quieting Brutus, who falls to his knees at all the terrified tension leaves his body.";
-			say "     You walk towards the two of them, stepping up beside David as he holds his otherworldly boyfriend's head against his chest, gently stroking his purple skin. 'We will get through this. Somehow,' David sighs, then notices and gives you a helpless look. Realizing you are close, Brutus turns to look at you himself, then says, 'Master... please lock the beast inside me away. I - I tried to be strong, as not to shame you or frighten David, but I can not... the urges are just too strong. I can't bear the thought of hurting him - so please. Please!'";
+			say "     You walk towards the two of them, stepping up beside David as he holds his otherworldly boyfriend's head against his chest, gently stroking his purple skin. 'We will get through this. Somehow,' David sighs, then notices and gives you a helpless look. Realizing you are close, Brutus turns to look at you himself, then says, 'Master... please lock the beast inside me away. I - I tried to be strong, as not to shame you or frighten David, but I cannot... the urges are just too strong. I can't bear the thought of hurting him - so please. Please!'";
 			WaitLineBreak;
 			say "     You have little choice but do as asked, expressly forbidding him from acting on those impulses. As you do so, the amulet glows briefly in purple light and gets noticeably warm for a second. You can feel a tingle run down your spine as the controlling magic snaps tight around Brutus mind, straining to enforce your ruling. Something tells you the constant resistance of his deep-seated urges will put greater wear on it than all the random outbursts and flare-ups to escape by the original, evil Brutus.";
 			say "     Well, Brutus should be under control now, but he'll still be tearing himself up inside. Just suppressing issues is seldom the answer. You should better find a specialist to consult. Someone with a deeper understanding of demons - or maybe interspecies sex - to resolve this in a more healthy way for Brutus...";

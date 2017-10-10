@@ -1217,7 +1217,7 @@ MaxOutVentStats is an action applying to nothing.
 Understand "maxvent" as MaxOutVentStats.
 
 Carry out MaxOutVentStats:
-	say "    Done.";
+	say "     Done.";
 	now VentFoxEncounterCount is 3;
 	now VentFoxContentLevel is 3;
 	now VentFoxRelationship is 3;

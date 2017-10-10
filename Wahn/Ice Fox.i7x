@@ -269,7 +269,7 @@ instead of fucking the Miyuki:
 		if MiyukiRelationship < 5:
 			say "     As you step up to Miyuki and give her lewd looks, a foxy smile crosses her muzzle and she takes your hand to pull it to her chest. 'I knew you couldn't resist this for long,' she says in a very eager tone, guiding your hand to brush over her the soft fur and warm, flexible scales of her upper body. Soon, your hand comes to rest on one of her shapely breasts, cupping its full curve and giving it a playful squeeze.";
 		else:
-			say "    As you step up to Miyuki and give her lewd looks, a foxy smile crosses her muzzle and she takes your hand to pull it to her chest. Guided by the ice fox, your fingers brush over the soft fur and warm, flexible scales on her upper body, then come to rest cupping one of her shapely breasts.";
+			say "     As you step up to Miyuki and give her lewd looks, a foxy smile crosses her muzzle and she takes your hand to pull it to her chest. Guided by the ice fox, your fingers brush over the soft fur and warm, flexible scales on her upper body, then come to rest cupping one of her shapely breasts.";
 		say "[MiyukiSexMenu]";
 
 to say MiyukiSexMenu:

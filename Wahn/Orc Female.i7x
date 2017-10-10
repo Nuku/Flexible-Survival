@@ -801,7 +801,7 @@ to say KatyaTalk1: [talk about her]
 		if player consents:
 			LineBreak;
 			say "     A smile spreads over the female orc's face as you tell her you want to be with her. She immediately wraps her arms around you and pulls you close for a deep kiss, making out while her hands roam over your body, stroking and eagerly groping.";
-			say "    [KatyaSexMenu]";
+			say "     [KatyaSexMenu]";
 		else:
 			LineBreak;
 			say "     Blinking in surprise, the female orc replies, 'Err... okay? If you really want to do nothing more than talk, I... guess we can do that too.' It is clear she is a bit underwhelmed by your response, despite trying to put a friendly face on it. After a few more awkward seconds, she shrugs and accepts that there's no sexy-time coming right now, instead waving you over to the fire pit to sit down with her. She recounts tales of wandering the city, not unlike your own after you emerged from your bunker, learning the rules of the anarchic streets and fighting off a variety of creatures. After the things tat happened in the orc lair, she never really trusted anyone else again - a fact that saved her ass several times during her adventures...";
@@ -823,7 +823,7 @@ instead of fucking the Katya:
 	else if KatyaRelationship < 6: [player got an invite to her camp, but hasn't talked about sex yet]
 		say "     After all the effort you went through to get her trust, maybe it isn't such a good idea to instantly swing over to wanting to fuck the sexy orc. Maybe talk to her a bit first...";
 	else:
-		say "    [KatyaSexMenu]";
+		say "     [KatyaSexMenu]";
 
 to say KatyaSexMenu:
 	LineBreak;

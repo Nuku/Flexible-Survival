@@ -1186,7 +1186,7 @@ when play ends:
 						say "     Your memory becomes a blur of constant servitude under your master, satisfying his every, tainted need";
 						if "Kinky" is listed in feats of player:
 							say ", no matter how strange";
-						say ". Ultimately, You seem more than happy with your eternal fate as his plaything...";
+						say ". Ultimately, you seem more than happy with your eternal fate as his plaything...";
 					else:
 						say "ess is allowed the opportunity to display her absolute power over you before your submit yourself. She ultimately seems satisfied with your offering, and it's not long before you're just another plaything in her harem";
 						if player is submissive:
@@ -1195,7 +1195,7 @@ when play ends:
 						say "     Your memory becomes a blur of constant servitude under your mistress, satisfying her every, tainted need";
 						if "Kinky" is listed in feats of player:
 							say ", no matter how strange";
-						say ". Ultimately, You seem more than happy with your eternal fate as her plaything...";
+						say ". Ultimately, you seem more than happy with your eternal fate as her plaything...";
 		else:
 			say "     After being processed by the military, you find yourself returning to the normal world -- as normal as it can be after all that's happened. Your large, elongated body makes finding suitable living space something of a challenge, but you eventually manage.";
 			if player is pure:
