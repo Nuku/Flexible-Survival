@@ -5399,6 +5399,7 @@ Include Anthony by Wahn.
 Include Ares by Wahn.
 Include Athanasia by Stripes.
 Include Bastet by Wahn.
+Include Bjorn by Rikaeus.
 Include Blake by Ssely.
 Include Blanche by Stripes.
 Include Boghrim by Wahn.
