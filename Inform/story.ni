@@ -543,7 +543,7 @@ Definition: A grab object (called D) is stored:
 
 Definition: A grab object (called D) is present:
 	if there is a name corresponding to a object of d in the table of game objects:
-		if the name corresponding to a object of  d in the table of game objects is listed in the invent of the location of the player, yes;
+		if the name corresponding to a object of d in the table of game objects is listed in the invent of the location of the player, yes;
 	no;
 
 before examining the grab object(called x):
@@ -612,7 +612,7 @@ The invent of the player is { "journal" }.
 Table of Start Game
 title	subtable	description	toggle
 "Strength: [strength of player]"	--	"Your ability to exert force. Helps deal damage with melee weapons, and to carry heavy objects."	finish stats rule
-"Dexterity: [Dexterity of player]"	--	"Speed, agility. Dexterity  helps to land hits with melee weapons and avoid being hit in kind."	finish stats rule
+"Dexterity: [Dexterity of player]"	--	"Speed, agility. Dexterity helps to land hits with melee weapons and avoid being hit in kind."	finish stats rule
 "Stamina: [stamina of player]"	--	"Your ability to withstand punishment. Stamina also helps to resist the physical aspects of infection."	finish stats rule
 "Charisma: [Charisma of player]"	--	"Your ability to exert social force. Deal with NPCs favorably, also helps resist mental aspects of infection."	finish stats rule
 "Perception: [Perception of player]"	--	"Your ability to detect things. Also helps resist mental aspects of infection."	finish stats rule
@@ -2673,7 +2673,7 @@ This is the sex change rule:
 			increase the cocks of player by 1;
 			now the cock length of player is 1;
 			now the cock width of player is 1;
-			increase the cock length of player by ( cock length entry  ) divided by 3;
+			increase the cock length of player by ( cock length entry ) divided by 3;
 			increase the cock width of player by ( cock width entry ) divided by 3;
 			if skipcockchange is false:
 				now cockname of player is name entry;
@@ -2765,8 +2765,8 @@ This is the sex change rule:
 			increase the cunts of player by 1;
 			now the cunt length of player is 1;
 			now the cunt width of player is 1;
-			increase the cunt length of player by ( cunt length entry  ) divided by 3;
-			increase the cunt width of player by ( cunt width entry  ) divided by 3;
+			increase the cunt length of player by ( cunt length entry ) divided by 3;
+			increase the cunt width of player by ( cunt width entry ) divided by 3;
 			if "Modest Organs" is listed in feats of player and cunt length of player is greater than 8:
 				now cunt length of player is 8;
 			if "Modest Organs" is listed in feats of player and cunt width of player is greater than 5:
@@ -3252,7 +3252,7 @@ To get a number:
 	numberfy playerinput;
 
 to numberfy (x - a snippet):
-	change  the text of the player's command to x;
+	change the text of the player's command to x;
 	if the player's command matches "[number]":
 		now calcnumber is the number understood;
 	else:
@@ -4085,7 +4085,7 @@ This is the brain descr rule:
 		now descr is "[one of]clean[or]pristine[or]perfectly normal[at random][lusting]";
 	else if humanity of player is greater than 70:
 		now descr is "[one of]lightly tainted[or]occasionally plagued with odd instinctual[at random][lusting]";
-	else if humanity  of player is greater than 30:
+	else if humanity of player is greater than 30:
 		if facename of player is not "human":
 			now descr is "increasingly [facename of player] perspective[lusting]";
 		else if bodyname of player is not "human":
@@ -4502,7 +4502,7 @@ This is the male choice rule:
 	now the cock width of the player is 4;
 	now the breasts of the player is 2;
 	now the breast size of the player is 0;
-	now  the current menu is table of Basic Actions;
+	now the current menu is table of Basic Actions;
 	say "You are a man.";
 	wait for any key;
 	follow the final stats rule;
@@ -4754,7 +4754,7 @@ To Infect (x - text):
 		if name entry is x:
 			now monster is y;
 			let reset be 0;
-			if researchbypass is 1 and  non-infectious entry is true:
+			if researchbypass is 1 and non-infectious entry is true:
 				now reset is 1;
 				now non-infectious entry is false;
 			infect;

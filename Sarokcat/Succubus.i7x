@@ -99,7 +99,7 @@ When Play begins:
 	add {"Succubus"} to infections of hellspawn;
 	now attack entry is "[succubus fight]";
 	now defeated entry is "[Succubus loss]";
-	now victory entry is  "[Succubus attack]";
+	now victory entry is "[Succubus attack]";
 	now desc entry is "[SuccubusDesc]";
 	now face entry is "beautiful human face, your strange slit pupiled eyes and the small horns poking out of your hair, the only clue that your almost perfect features hide the lusty desires of a succubus behind your innocent";[You have a (your text) face."]
 	now body entry is "surprisingly perfect, your muscles and curves nicely defined, your long eye catching legs perfect for showing off, and your soft hands with their long nails are just made for stroking and petting the opposite sex. The only true sign of your unusual nature, are the two large bat-like wings, folded up against your back, and while they are not quite powerful enough to lift you aloft yet, though you think that might change sometime soon";[ Body Description, format as the text "Your Body is (your text)"]

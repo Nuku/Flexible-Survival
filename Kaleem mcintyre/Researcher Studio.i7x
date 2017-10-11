@@ -34,7 +34,7 @@ Omiotalk is a number that varies.
 omq is a number that varies.
 
 Omio is a woman.
-The description of Omio is "Humming to herself while puttering around the main room of her home is the strawberry redhead you met on the plains earlier. Five foot five inches tall, with golden eyes and  a blue Chinese-like dress that covers her frame from neck down to her feet, the human-like woman mutters to herself while walking around doing this, that or the other. Her skin is tanned giving her the appearance of someone who is probably native to a southern island somewhere below the equator. Her face is somewhat sharp with clearly defined angles, yet instead of making her seem manly these lines make her more... cute in a girlish like way.".
+The description of Omio is "Humming to herself while puttering around the main room of her home is the strawberry redhead you met on the plains earlier. Five foot five inches tall, with golden eyes and a blue Chinese-like dress that covers her frame from neck down to her feet, the human-like woman mutters to herself while walking around doing this, that or the other. Her skin is tanned giving her the appearance of someone who is probably native to a southern island somewhere below the equator. Her face is somewhat sharp with clearly defined angles, yet instead of making her seem manly these lines make her more... cute in a girlish like way.".
 The conversation of Omio is { "Research and Development!" }.
 
 instead of linkactioning Omio:
@@ -55,7 +55,7 @@ instead of conversing the Omio:
 		say "     ([link]N[as]n[end link]) - No.";
 		If player consents:
 			LineBreak;
-			say "Omio yaks to you about this and that before smiling imploringly. You kinda get the feeling that she's really lonely. 'Oh one thing before you go.' Turning you look to the  woman and then quirk and eyebrow. 'I do hope you'll consider my request and decide to assist me with my research.  It is important.'  You nod and politely say you'll think about it.";
+			say "Omio yaks to you about this and that before smiling imploringly. You kinda get the feeling that she's really lonely. 'Oh one thing before you go.' Turning you look to the woman and then quirk and eyebrow. 'I do hope you'll consider my request and decide to assist me with my research.  It is important.'  You nod and politely say you'll think about it.";
 			now Omiotalk is 1;
 		else:
 			LineBreak;
@@ -184,7 +184,7 @@ Section 6 - Nightstand
 
 The description of Nightstand is "A small nightstand sits idly against the left side of the room. From the looks of the crafted wood the stand both looks and feels old… very old. Maybe you could try and [bold type]open[roman type] it?".
 
-instead of  sniffing Nightstand:
+instead of sniffing Nightstand:
 	say "The nightstand smells old and somewhat musky."
 
 unlocknightstand is an action applying to nothing.
@@ -297,11 +297,11 @@ Instead of Resolving a For the Future:
 when play ends:
 	if omq > 2 and omq is not 100:
 		if humanity of player < 9:
-			say "Even though your mind is all but gone you do remember a ed female with golden eyes that you helped out before. Taking some time to go back to the plains in an effort to relocate the other you end up finding an abandoned house right where you were sure the  once lived. Sniffing the place and going inside to find no trace of anyone you leave without a second thought as you come to the conclusion that you must have imagined the entire thing.";
+			say "Even though your mind is all but gone you do remember a female with golden eyes that you helped out before. Taking some time to go back to the plains in an effort to relocate the other you end up finding an abandoned house right where you were sure the once lived. Sniffing the place and going inside to find no trace of anyone you leave without a second thought as you come to the conclusion that you must have imagined the entire thing.";
 		else:
 			say "After the military rolls into town you find yourself going back to Omio's studio to look for the redhead. What you find upon crossing the plains is an empty studio that looks as though it hadn't seen much use in maybe ten years? Odd since the garden outside seems as though it has been watered very recently. Not understanding this you search around the place, calling out for Omio as you do so, without much success in locating the .";
 			say "When you finally decide to give up almost thirty minutes later you stumble across something shining on the ground several steps away from the house. Kneeling down and picking up the thing you realize that you've found a mini GPS unit. Turning on the power of the little machine you blink in awe as a set of directions flash in front of your face with the destination name 'Prometheus Prison' glowing faintly above the coordinates.";
-			say "Could Omio have left this behind for you? And if so, what happened to the  to make her neutralize her presence here so efficiently?";
+			say "Could Omio have left this behind for you? And if so, what happened to her to make her neutralize her presence here so efficiently?";
 ]
 
 Researcher Studio ends here.

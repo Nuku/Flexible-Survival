@@ -157,7 +157,7 @@ When Play begins:
 	now name entry is "Horse-Hung Nerd";
 	now attack entry is "[one of]Clyde gives you a hard kick with one of his hooves - ouch, that hurt.[or]He punches you with a balled fist.[or]Grabbing you by the neck, Clyde pushes you down and slaps his big cock against your face.[at random]";
 	now defeated entry is "[HHNerd loses]";
-	now victory entry is  "[HHNerd wins]";
+	now victory entry is "[HHNerd wins]";
 	now desc entry is "[HHNerdDesc]";
 	now face entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
 	now body entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";

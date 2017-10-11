@@ -254,7 +254,7 @@ to say ceoutside12:
 	remove 12 from ceoutside2list;
 
 
-Section 13 - Hyena Kill  (by Hellerhound)
+Section 13 - Hyena Kill (by Hellerhound)
 
 to say ceoutside13:
 	say "You come across a murder scene in the corner of one of the streets, blood spattered everywhere, on the walls, the sidewalk, the parked cars, and black spotted hair also. Powdered segments of bone are also scattered. It looks like one of the hyenas didn't go for the rape, but for the kill. Ouch. They must have really hated the person.";
@@ -263,7 +263,7 @@ to say ceoutside13:
 	remove 13 from ceoutside2list;
 
 
-Section 14 - Panther Trap  (by Hellerhound)
+Section 14 - Panther Trap (by Hellerhound)
 
 to say ceoutside14:
 	say "You come across two large piles of debris that all but block the way forward. Despite them, you try and squeeze through. Unfortunately the grey and tall junk piles fall onto you before you get fully through, trapping you with a loud smashing noise that you would swear would be audible throughout the city. You wince to think of the attention coming your way and start trying to escape, fast.";

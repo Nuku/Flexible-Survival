@@ -86,7 +86,7 @@ When Play begins:
 	now name entry is "Donkeywoman";
 	now attack entry is "[one of]The sexy donkeywoman lets out a loud braying laugh as she mocks your attempt to escape, the sound making you feel surprisingly submissive.[or]She lashes out at you with her short riding crop, its stinging bite making you feel strangely more submissive with each strike.[or]She reaches out and traces the tip of her whip over you skin teasingly, the touch of the soft leather making you shudder with desire.[or]She raises her whip to strike at you, and as you duck away, her other hand lashes out at you and strikes you square in the face, knocking you back![or]She strides forward confidently, describing lovingly just what kind of strangely sexy bondage games she has in store for you, her words making you shudder slightly with a strange desire to give in to the powerful female and let her have her way with you.[or]She charges right at you and twists aside at the last second, bringing her hand around to grab at your crotch teasingly.[at random]";
 	now defeated entry is "[Donkeywoman loses]";
-	now victory entry is  "[Donkeywoman wins]";
+	now victory entry is "[Donkeywoman wins]";
 	now desc entry is "[mongendernum 4]     Wandering through the building, you round a corner and come face to face with a Donkeywoman. The tall Donkeywoman looks down at you with a derisive smirk. 'What do we have here?' she asks as she roughly grabs your chin and twists your head side to side, examining you. Too scared to say anything, all you can do is look at her with a dumb expression on your face. Looking her over, you can see that she is dressed in a tight studded leather corset that is barely able to contain her more than ample tits as well as a spiked leather collar and spiked cuffs. She is wearing a pair of modified thigh high boots. Her sleek gray fur and donkey mane Mohawk give her a sinister air. Tapping the whip she's carrying in her other hand against her thigh, she says 'I think someone needs a lesson in discipline. Isn't that right, my little soon-to-be [if cocks of player > 0]donkey[else]jenny[end if]?'"; [ Description of the creature when you encounter it.]
 	now face entry is "long, asinine muzzle, with two large equine ears and a short close cropped mane of hair, and a plain leather collar which complements your rather sexy donkey-like face"; [You have a (your text) face."]
 	now body entry is "both strong and slender, your well-muscled form and powerful limbs easily suited for both work and sex, and you balance easily on the balls of your slightly hoof-like feet, even as you run your slender hands over your extremely sensitive and aroused body happily";
@@ -116,8 +116,8 @@ When Play begins:
 	now breast size entry is 6; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 15; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 10; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 15; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 10; [ Width of female sex infection will try and give you ]
 	now libido entry is 75; [ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe"; [ Loot monster drops, ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]

@@ -163,9 +163,9 @@ An everyturn rule(This is the Enemy Attacking rule):
 				now foragers is ( foragers * 60 ) / 100;
 			if foragers < 1, now foragers is 1;
 			let enum be enemies;
-			now enemies is ( enemies * might of tribe of player   ) / stamina of enemy;
-			let backlash be ( foragers * might of enemy   ) / stamina of tribe of player;
-			let estimate be ( enemies * a random number from 66 to 150) / 100;
+			now enemies is ( enemies * might of tribe of player ) / stamina of enemy;
+			let backlash be ( foragers * might of enemy ) / stamina of tribe of player;
+			let estimate be ( enemies * a random number from 66 to 150 ) / 100;
 			if enemies is 0:
 				say " They manage to claim land and defeat us without losing a single soul.";
 			else:

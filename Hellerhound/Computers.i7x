@@ -375,12 +375,12 @@ Setting action variables for an actor typing the topic understood on something (
 		now the computer in question is a random computer which incorporates the second noun;
 		now the software in question is the controlling program of the computer in question. [This kicks the logic back up to chapter 3.]
 
-Check an actor typing  the topic understood on something which is not a keyboard (this is the reject typing on non-keyboards rule):
+Check an actor typing the topic understood on something which is not a keyboard (this is the reject typing on non-keyboards rule):
 	if the actor is the player:
 		say "[The second noun] [is-are] not a keyboard." instead;
 	rule fails.
 
-Check an actor typing  the topic understood on a keyboard which is part of a switched off computer (called the relevant computer) (this is the reject typing on switched off computers rule):
+Check an actor typing the topic understood on a keyboard which is part of a switched off computer (called the relevant computer) (this is the reject typing on switched off computers rule):
 	if the actor is the player:
 		say "[The relevant computer] [is-are] currently switched off.";
 	rule fails.

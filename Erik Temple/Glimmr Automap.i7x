@@ -301,7 +301,7 @@ To decide what number is the linked room-ID of (N - a number):
 	(- Automap_Links-->( {N} - 1 ) -)
 
 To place glyph (ch - number) at (x - a number):
-	(- if  ( Automap_Chars -> ( {x} - 1 ) == 32 ) {
+	(- if ( Automap_Chars -> ( {x} - 1 ) == 32 ) {
 	Automap_Chars -> ( {x} - 1 ) = {ch};
 	}
 	-)

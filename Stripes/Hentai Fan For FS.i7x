@@ -17,7 +17,7 @@ to say hentaifandesc:
 		decrease pldodgebonus by 4;
 		decrease plmindbonus by 4;
 		now hp of player is ( 3 * hp of player ) / 4;
-		now libido of player is ( 100 + libido of player + libido of player  + libido of player ) / 4;
+		now libido of player is ( 100 + libido of player + libido of player + libido of player ) / 4;
 
 to say losetohentaifan:
 	say "     Having beaten you, the tentacled creature grabs you and pulls you fully into the room and pushes you down in front of the television.";

@@ -2,11 +2,11 @@ Version 223 of Story Skipper by Core Mechanics begins here.
 [ New compressed method - 5/17/2015 - Stripes ]
 [ Version 223.1 - Updated w/Enhanced Chimera material ]
 
-The File of Trixsave  (owned by another project) is called "txsave".
-The File of Trixsave2  (owned by another project) is called "txsave2".
-The File of Trixsave3  (owned by another project) is called "txsave3".
-The File of invsave  (owned by another project) is called "invsave".
-The File of storsave  (owned by another project) is called "storsave".
+The File of Trixsave (owned by another project) is called "txsave".
+The File of Trixsave2 (owned by another project) is called "txsave2".
+The File of Trixsave3 (owned by another project) is called "txsave3".
+The File of invsave (owned by another project) is called "invsave".
+The File of storsave (owned by another project) is called "storsave".
 trixsavetext1 is an indexed text that varies. trixsavetext1 is usually "no save file found".
 trixsavetext2 is an indexed text that varies. trixsavetext2 is usually "no save file found".
 trixsavetext3 is an indexed text that varies. trixsavetext3 is usually "no save file found".
@@ -933,13 +933,13 @@ Carry out savetrix2:
 		let curword be word number z in storecover;
 		replace the text "|" in curword with " ";
 		let cur be word number 1 in curword;
-		let amt be  0;
+		let amt be 0;
 		let amttext be word number 2 in curword;
 		now amt is numerical value of amttext;
 		replace the text "`" in cur with " ";
 		repeat with Q running through grab objects:
 			let obname be printed name of q;
-			if cur matches  the text obname, case insensitively:
+			if cur matches the text obname, case insensitively:
 				now stashed of q is amt;
 				break;
 	let invrecover be indexed text;
@@ -952,13 +952,13 @@ Carry out savetrix2:
 		let curword be word number z in invrecover;
 		replace the text "|" in curword with " ";
 		let cur be word number 1 in curword;
-		let amt be  0;
+		let amt be 0;
 		let amttext be word number 2 in curword;
 		now amt is numerical value of amttext;
 		replace the text "`" in cur with " ";
 		repeat with Q running through grab objects:
 			let obname be printed name of q;
-			if cur matches  the text obname, case insensitively:
+			if cur matches the text obname, case insensitively:
 				now carried of q is amt;
 				break;
 	if carried of nanite collector > 0:

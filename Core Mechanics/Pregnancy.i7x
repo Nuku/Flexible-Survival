@@ -363,7 +363,7 @@ Chapter 3-1 - Impregnation and Ovi-Impreg Subroutines
 To impregnate with (x - text):
 	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
 		stop the action;
-	if cunts of player is 0 and "MPreg" is listed in feats of player and ( level of Velos is  1 and hp of Velos > 2 ):
+	if cunts of player is 0 and "MPreg" is listed in feats of player and ( level of Velos is 1 and hp of Velos > 2 ):
 		stop the action;
 	if "Cheerbreeder" is listed in feats of player:
 		if "Selective Mother" is listed in feats of player:

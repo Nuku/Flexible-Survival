@@ -1,4 +1,4 @@
-Arctic fox by Sarokcat begins here. 
+Arctic fox by Sarokcat begins here.
 
 "Adds a Arctic fox to Flexible Survival's Wandering Monsters table"
 
@@ -31,7 +31,7 @@ When Play begins:
 	now name entry is "Arctic fox";
 	now attack entry is "[one of]She darts forward quickly, sideswiping you with her body.[or]Swiftly racing forward and to the side, she slashes at you as she passes.[or]Her front paw flashes out faster then the eye can follow, leaving a painful set of claw marks on you.[or]Lashing her tail in anticipation, the Arctic fox purrs as she stares deep into your eyes, her sinuous movements almost hypnotically appealing.[or]Charging forward with no warning whatsoever, she pounces and knocks you to the ground![or]She bunches her powerful hind legs up, and leaps directly at you![or]She grins at you, baring her sharp feline teeth, before leaping forward snapping them at you.[at random]";
 	now defeated entry is "[Arctic fox loss]";
-	now victory entry is  "[Arctic fox attack]";
+	now victory entry is "[Arctic fox attack]";
 	now desc entry is "As you wander around the deserted paths of the zoo, you spot of blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral like Arctic fox, her long lean body resting on her narrow paws and her long cheetah tail lashing behind her as she focuses her gaze directly on you, '[one of]Why don't you run, I love the chase.[or]Hmmm, not a gazelle but you look almost as fun[or]Oooo something to chase![or]Oh good, I was feeling bored.[or]I was feeling kind of lonely here, maybe you can help.[or]Finally someone to pounce![at random]' She says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation, and slips into a runners stance, her eyes locked on her newest prey... you.";
 	now face entry is "sexy vulpine face, your slim narrow muzzle and bright eyes look perfectly suited to your body, and your pointed canine ears twitch idly at every sound even as you find yourself grinning happily, enjoying the feeling of your new sexy";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "sexy and lithe, with small vulpine paws, and rather dainty claw tipped hands, your rather sexy new vulpine form seems to burn with energy and arousal";[ Body Description, format as the text "Your Body is (your text)"]

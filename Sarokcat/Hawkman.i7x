@@ -77,7 +77,7 @@ When Play begins:
 	now name entry is "Hawkman";
 	now attack entry is "[one of]He lashes out at you with his wing, the powerful wing strike smashing you backwards.[or]The hawkman flaps his wings and gains a leaps into the air, lashing out at you with his powerful rear talons.[or]he grabs at you with his taloned fingers.[or]He charges forward, his wings flapping behind him giving his speed as he barrels into you.[or]He lets out a loud screech causing you to duck instinctively as he barrels forward.[or]He stalks forward teasingly, his rhythmic movements almost hypnotic as he postures in front of you.[or]He strikes forward with his large predatory beak and rubs it against you teasingly.[or]The hawkman stretches forward with one of his taloned fingers and strokes his cool finger down the side of your face teasingly.[at random]";
 	now defeated entry is "[Hawkman loss]";
-	now victory entry is  "[Hawkman attack]";
+	now victory entry is "[Hawkman attack]";
 	now desc entry is "[hawkmandesc]";
 	now face entry is "narrow hawk-like head, with a sharp curved raptor-like beak and two sharp piercing hawk-like eyes in your new avian";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "lithe and slim, with powerful taloned feet and rather claw-like taloned hands, your avian body sports two large powerful wings, which catch the air behind you and make you almost feel like you could fly";[ Body Description, format as the text "Your Body is (your text)"]

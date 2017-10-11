@@ -555,7 +555,7 @@ When Play begins:
 	now name entry is "Plains Lizard";
 	now attack entry is "[one of]He attacks you with a slash of his claws.[or]Ouch - you manage to pull away from a bite, but still lose some skin to sharp teeth scraping over your skin.[at random]";
 	now defeated entry is "[Plains Lizard loses]";
-	now victory entry is  "[Plains Lizard wins]";
+	now victory entry is "[Plains Lizard wins]";
 	now desc entry is " ";
 	now face entry is "elongated and reptilian, with a tooth-filled mouth and only slits on your snout as a nose. A spined crest runs over the top of your head and down the long neck, ending at the shoulders and giving you a dashing appearance";
 	now body entry is "that of a very large lizard, at least as big as a horse. It's muscular, but sleek, promising agility and speed on your four legs";

@@ -123,7 +123,7 @@ When Play begins:
 	now name entry is "Killer Whale"; [Name of your new Monster]
 	now attack entry is "[one of]The orca smashes his tail against your side![or]The killer whale bites down onto your arm![or]The killer whale leans forward and hits you with a blast of sea water from his blowhole![or]The orca strikes you with his powerful arms![or]The orca tries to crush you in his strong arms![at random]";
 	now defeated entry is "[beattheorca]";
-	now victory entry is  "[losetoorca]";
+	now victory entry is "[losetoorca]";
 	now desc entry is "[orcadesc]";
 	now face entry is "sleek and streamlined, drawing to the rounded blunt muzzled shape of an orca. Your mouth is filled with small, sharp teeth. The blow hole on the top of your head occasionally opens to take a breath";
 	now body entry is "large and heavily muscled, but with the sleek shape of a swimmer. You stand almost ten feet tall now. The large dorsal fin projecting from your back extends nearly a foot behind you, making it hard to comfortably rest your backpack. Your arms are dense with sleek muscle and your hands have a thick webbing between your fingers. Your legs are humanoid in appearance, thick with powerful muscle as well[if cocks of player > 0]. A slit between the legs conceals your manhood[end if]";
@@ -148,7 +148,7 @@ When Play begins:
 	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 25; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 0; [ Number of Breasts infection will give you. ]
 	now breast size entry is 0; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]

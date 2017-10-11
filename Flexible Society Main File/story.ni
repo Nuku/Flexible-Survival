@@ -359,7 +359,7 @@ An everyturn rule(this is the Eternal Hunger rule):
 		let loss be 1;
 		increase loss by x times 2;
 		now loss is loss * 100;
-		now  loss is loss / mood of tribe of player;
+		now loss is loss / mood of tribe of player;
 		if loss is greater than 0:
 			say "Morale Loss: [loss]";
 		decrease morale of tribe of player by loss;

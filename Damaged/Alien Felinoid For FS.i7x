@@ -87,7 +87,7 @@ to say felinoid attack:
 					now cock length of player is 0;
 					now cock width of player is 0;
 				else:
-					say "The big cat rubs himself against you, purring deeply, without thinking your hand reaches to scritch his ears, 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin  making you whine and whimper softly into his fur, breathing in more of the big animal's suddenly fiery smelling musk.";
+					say "The big cat rubs himself against you, purring deeply, without thinking your hand reaches to scritch his ears, 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin making you whine and whimper softly into his fur, breathing in more of the big animal's suddenly fiery smelling musk.";
 					increase catnum by 1;
 
 
@@ -103,7 +103,7 @@ When Play begins:
 	now name entry is "Felinoid"; [Name of your new Monster]
 	now attack entry is "[one of]He rakes at you wildly, leaving you in intense pain.[or]It leaps at you, digging its teeth into your arm.[or]It leaps at you, digging its teeth into your leg.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "With a last roar the big cat claws out wildly, trying to hit you one last time before collapsing to the ground."; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[felinoid attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now victory entry is "[felinoid attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 3]What looks like a full sized lion without a mane paces up before you, nose raised in the air, sniffing a scent. You hear the big cat purr and look your way, with a sinking feeling you think that not only was it your scent he was following but that he is very pleased to see you at last.";[ Description of the creature when you encounter it.]
 	now face entry is "that of a short muzzled, female lion";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "sleek, muscled, built for surviving, just like the large feline that gave it to you";[ Body Description, format as the text "Your Body is (your text)."]
@@ -133,8 +133,8 @@ When Play begins:
 	now breast size entry is 6;		[Size of breasts infection will try to attain ]
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 9;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ]
+	now cunt length entry is 9;		[ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 4;		[ Width of female sex infection will try and give you ]
 	now libido entry is 35;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
@@ -152,7 +152,7 @@ When Play begins:
 
 Section 3 - Monster Heat
 
-[ IMPORTANT READ ME  - This section is completely optional. If you do NOT want to go through the trouble of adding a particular heat text of events to your creature, just delete between the two marker comments. I have included the German shepherd entry for clarity. +++++]
+[ IMPORTANT READ ME - This section is completely optional. If you do NOT want to go through the trouble of adding a particular heat text of events to your creature, just delete between the two marker comments. I have included the German shepherd entry for clarity. +++++]
 [ +++++ ]
 
 Table of infection heat (continued)

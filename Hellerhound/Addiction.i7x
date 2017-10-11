@@ -23,7 +23,7 @@ before using a grab object (called X):
 		now foundaitem is 0;
 		repeat with Z running from 1 to the number of rows in the Table of Addictive Items:
 			choose row Z from the Table of Addictive Items;
-			if the object entry is  X:
+			if the object entry is X:
 				now foundaitem is 1;
 				now addicted is 1;
 				now addictlefttime is 16 divided by the speed entry;

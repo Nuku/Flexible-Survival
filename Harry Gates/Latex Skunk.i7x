@@ -66,7 +66,7 @@ When play begins, add Latex_Skunk_gene to Genetic list.
 
 Section 2 - Latex Skunk Definition
 
-A latex skunk is a kind of monster.  The body of a latex skunk is usually  {Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene}.  A latex skunk is monstrous.  A latex skunk is fully infected.  A latex skunk is usually unsuited.  A latex skunk is female.  A latex skunk is tailed.  The monster gene of a latex skunk is Latex_Skunk_gene.
+A latex skunk is a kind of monster.  The body of a latex skunk is usually {Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene, Latex_Skunk_gene}.  A latex skunk is monstrous.  A latex skunk is fully infected.  A latex skunk is usually unsuited.  A latex skunk is female.  A latex skunk is tailed.  The monster gene of a latex skunk is Latex_Skunk_gene.
 
 The description of latex skunk is "This skunk-like creature has more than a few human features, making her almost sexy despite the fact that her skin is made of rubber.  The tail standing tall behind her makes you more than a little uneasy."
 

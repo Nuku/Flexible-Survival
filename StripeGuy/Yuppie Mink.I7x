@@ -113,7 +113,7 @@ When Play begins:
 	now name entry is "Yuppie Mink";
 	now attack entry is "[ymgfight]";
 	now defeated entry is "[beattheymg]";
-	now victory entry is  "[losetoymg]";
+	now victory entry is "[losetoymg]";
 	now desc entry is "[ymgdesc]";
 	now face entry is "narrowed and strongly defined with an arrogant, aristocratic bearing made all the more visible by stark white fur. Tiny ears, a pink nose, and lips that reflexively twitch into sneers. ";
 	now body entry is "elegantly thin and tapered, with an elongated torso and somewhat short limbs. The narrow width of your shoulders and hips simplifies your silhouette to the most basic and sleek of profiles. Slightly built, and delicately wrought, your body is perfect for complimenting satin and gold.";
@@ -138,13 +138,13 @@ When Play begins:
 	now area entry is "Warehouse"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2; [ Number of Breasts infection will give you. ]
 	now breast size entry is 4; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 10; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 10; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 6; [ Width of female sex infection will try and give you ]
 	now libido entry is 60; [ Amount player Libido will go up if defeated ]
 	now loot entry is ""; [ Loot monster drops, ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]

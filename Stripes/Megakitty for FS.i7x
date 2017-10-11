@@ -84,7 +84,7 @@ When Play begins:
 	now name entry is "Megakitty"; [Name of your new Monster]
 	now attack entry is "[one of]The Megakitty[or]Big Momma[or]The margay[or]The huge margay[or]The massive feline[or]The Rubenesque hulk[or]The full-figured feline[at random] [one of]bashes you atop the head with her vibrator-turned-club, making your brains rattle[or]clubs you in the side with the massive sextoy[or]jabs you in the face with the base of her dripping club[or]slams her massive body into you, knocking you back[or]squeezes you against a wall with her heavy body[or]tosses her vibrator up, freeing her hands briefly to rapidly slash you with her painted claws[or]knees you in the gut before shoving you to the ground[or]slams into you and pushes you down, trying to smother you under her ample figure[or]pins to against something with the juicy vibrator. As she holds you there, her other paw gropes and fondles you roughly[in random order]!";
 	now defeated entry is "[beatthemegakitty]";
-	now victory entry is  "[losetomegakitty]";
+	now victory entry is "[losetomegakitty]";
 	now desc entry is "[megakittydesc]";
 	now face entry is "a small feline head with large feline eyes and small pointed feline ears."; [ Face description, format as the text "You have a (your text) face."]
 	now body entry is "quite large and VERY elastic in the belly, allowing you to move freely despite your size. Your body feels quite stretchable, and almost eager to take something large and filling inside you. Your arms are motherly feline arms with human-style hands featuring retractable claws. Your legs are plantigrade legs with plenty of jiggle and firmly toned muscles. They end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads";
@@ -109,7 +109,7 @@ When Play begins:
 	now area entry is "nowhere"; [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 6; [ Number of Breasts infection will give you. ]
 	now breast size entry is 4; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]

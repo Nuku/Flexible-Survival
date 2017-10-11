@@ -201,7 +201,7 @@ When Play begins:
 	now name entry is "Tanuki"; [Name of your new Monster]
 	now attack entry is "";
 	now defeated entry is "";
-	now victory entry is  "";
+	now victory entry is "";
 	now desc entry is "";[ Description of the creature when you encounter it.]
 	now face entry is "sleek muzzled with a raccoon's mask and large expressive ears over your";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "somewhat pudgy and oddly animal like, like a cartoon rendition of some kind of raccoon perhaps.";[ Body Description, format as the text "Your Body is (your text)"]
@@ -231,8 +231,8 @@ When Play begins:
 	now breast size entry is 3; [-Size of breasts infection will try to attain -]
 	now male breast size entry is 0; [- Breast size for if Sex="Male", usually zero. -]
 	now cunts entry is 1; [- if sex = "Female or both", indicates the number of female sexes infection will grant you.-]
-	now cunt length entry is 14; [- Length of female sex  infection will attempt to give you. -]
-	now cunt width entry is 5; [- Width of female sex  infection will try and give you -]
+	now cunt length entry is 14; [- Length of female sex infection will attempt to give you. -]
+	now cunt width entry is 5; [- Width of female sex infection will try and give you -]
 	now libido entry is 10; [- Amount player Libido will go up if defeated -]
 	now loot entry is ""; [- Loot monster drops, -]
 	now lootchance entry is 0; [- Chance of loot dropping 0-100 -]

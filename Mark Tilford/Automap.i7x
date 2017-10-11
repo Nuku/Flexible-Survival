@@ -484,7 +484,7 @@ To decide whether the map is drawn:
 			[say "eastmost_start is [ eastmost_start ], ";]
 			if shown_map_width > map width begin;
 				[increase center_location_start by 2;]
-				now map_min_x is the minimum of  center_location_start and eastmost_start;
+				now map_min_x is the minimum of center_location_start and eastmost_start;
 				now map_min_x is the maximum of -1 and map_min_x;
 			else;
 				[[now map_min_x is center_location_start;]

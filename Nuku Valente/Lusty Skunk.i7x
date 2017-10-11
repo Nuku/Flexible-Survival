@@ -55,7 +55,7 @@ Instead of Resolving a Lusty Skunk:
 			now lusty skunk is resolved;
 			say "You turn and walk away from the area, making a note not to wander back into it later. Phew, good thing you saw that sign.";
 	if skrp is 1:
-		say "You happen across another skunk hybrid. A shapely female human form perched on a skunk lower frame, two faces both smiling at you. Without a word, they prance up and embrace you. Any desire you had to avoid them fades like mist before the morning sun as their hands eagerly explore your form. Your body grows warm and tingly as  it remembers the form they want, reaffirming your strange, new, nature with gentle coos of affection and familial bond.";
+		say "You happen across another skunk hybrid. A shapely female human form perched on a skunk lower frame, two faces both smiling at you. Without a word, they prance up and embrace you. Any desire you had to avoid them fades like mist before the morning sun as their hands eagerly explore your form. Your body grows warm and tingly as it remembers the form they want, reaffirming your strange, new, nature with gentle coos of affection and familial bond.";
 		skunkform;
 		if cocks of player is greater than 0:
 			if cock length of player is less than 9:

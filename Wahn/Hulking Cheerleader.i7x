@@ -82,7 +82,7 @@ When Play begins:
 	now name entry is "Hulking Cheerleader";
 	now attack entry is "[one of]You get grabbed by an arm and slammed on the ground.[or]Your opponent throws a pom-pom at your face, then kicks you while you're distracted.[or]The cheerleader does an awe-inspiring flip through the air and suddenly lands right behind you. Before you can react, you are caught in a bearhug and gasping for air.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Cheerleader loses]";
-	now victory entry is  "[Cheerleader wins]";
+	now victory entry is "[Cheerleader wins]";
 	now desc entry is "[cheerleaderDesc]";            [ Description of the creature when you encounter it. ]
 	now face entry is "that of a pretty woman, with beautiful even features, full lips and a seductive smile. The image is completed by shoulder-long blonde hair";
 	now body entry is "that of a strongly muscled human being, more than six feet tall. It is garbed in a very tight, white crop top and a short skirt clearly meant for a much smaller person. They fit pretty tight over your large frame, stretching to contain the muscles below";
@@ -139,12 +139,12 @@ when play ends:
 			if (cocks of player > 0):
 				say "     Your exalted position brings a lot of adoration and fans with it, and a lot of the pretty human cheerleaders accompanying the games are all too eager to spread their legs for the giant quarterback. One especially wild night of celebration when your team just won the championship leads to the whole cheerleading squad being knocked up - most of them with your fertile seed, though one or two of your teammates also got winning shots in. That'll lead a whole lot of adorable green babies, little gryphlets and a litter of panthertaur cubs in the near future. Thankfully, the libido of the shifted was accounted for when the S-AFL was thought up, so there's actually a child support provision written right into your contract. Seems like the organizers want you to breed - so they can recruit your offspring later on.";
 				if (cunts of player > 0):
-					if  "Sterile" is not listed in feats of player:
+					if "Sterile" is not listed in feats of player:
 						say "     beside fucking fangirls and cheerleaders, you also have a very devoted mass of male followers. You pick up one or two sometimes after a game when the mood strikes you... until one fine day you find one you decide to keep. He's a player in human football, handsome and strong. With him, you can discuss tactics before a game, he knows just how to rub your sore muscles afterwards - and he's also got the stamina to fuck you hard and deep. Before long, you belly starts bulging in obvious pregnancy, and soon afterwards the most beautiful little boy is born. You hope he'll like playing football, since he sure will see a lot of it with both his parents in the game...";
 					else:
 						say "     beside fucking fangirls and cheerleaders, you also have a very devoted mass of male followers. You pick up one or two sometimes after a game when the mood strikes you... until one fine day you find one you decide to keep. He's a player in human football, handsome and strong. With him, you can discuss tactics before a game, he knows just how to rub your sore muscles afterwards - and he's also got the stamina to fuck you hard and deep.";
 			else if (cunts of player > 0):
-				if  "Sterile" is not listed in feats of player:
+				if "Sterile" is not listed in feats of player:
 					say "     Your exalted position brings a lot of adoration with it and you pretty much have a free selection of men from among your devoted fans. You pick up one or two after most games until you find one you decide to keep. He's a player in human football, handsome and strong. With him, you can discuss tactics before a game, he knows just how to rub your sore muscles afterwards - and he's also got the stamina to fuck you hard and deep. Before long, you belly starts bulging in obvious pregnancy, and soon afterwards the most beautiful little boy is born. You hope he'll like playing football, since he sure will see a lot of it with both his parents in the game...";
 				else:
 					say "     Your exalted position brings a lot of adoration with it and you pretty much have a free selection of men from among your devoted fans. You pick up one or two after most games until you find one you decide to keep. He's a player in human football, handsome and strong. With him, you can discuss tactics before a game, he knows just how to rub your sore muscles afterwards - and he's also got the stamina to fuck you hard and deep.";

@@ -41,7 +41,7 @@ When Play begins:
 	now name entry is "Badger";
 	now attack entry is "[one of]The brock lunges forward, leaning his shoulder into a powerful tackle![or]The big mustelid rubs down his striped body, flexing thick musculature in sequence, milking out his thickly scented musk. He flings the liquid at you in a spray, dazing you![or]The broad badger bring his big paws to bear, swiping at you with his thick claws![or]With a deep growl the badger crouches down and shoots forward, open muzzle darting forward to bite![or]The gruff badger stud throws himself forward into a dropkick, slamming his stout legs into your chest![at random]";
 	now defeated entry is "[Badger loses]";
-	now victory entry is  "[Badger wins]";
+	now victory entry is "[Badger wins]";
 	now desc entry is "[mongendernum 3]     Wandering around the park and admiring the sights, your eyes are looking anywhere but down. This is a mistake, as you almost tumble headlong into a deep pit, barely catching your feet. The narrow pit leads into a tunnel, from which a burly anthro badger emerges! Splattered in rich clean earth, this rugged, muscular male is wearing naught but a battered crown-cum-helmet with a lantern on the front and a fancy monocle. '[one of]Cor! An invader, or immigrant to my kingdom?[or]You look like a dog's dinner. Let me bugger you better, love.[or]Cost of a gander is a bit of fagging, mate.[or]Now who's this now, looking so fit and fruity![or]No need to flog your arse, I'm easy.[or]Not enough badgers, in my mind. I'll get that sorted now.[or]No time to leg it, you're in for the duration.[or]Trying to nick my kit? You're off your trolley.[at random]' he growls out, before tightening his helmet strap and moving in to attack!";[ Description of the creature when you encounter it.]
 	now face entry is "a very acutely wedge-shaped face, long and tapered for powerful biting and burrowing. Your ears are small and round, black with stripes that roll forward across your eyes and snout. Anyone can see you have a badger";
 	now body entry is "broad and stocky, limbs rather short but incredibly strong. Slightly hunched over and tightly packed with powerful muscle, you present a compact and extremely dense collection of high-torque low upkeep tunneling capacity";
@@ -71,8 +71,8 @@ When Play begins:
 	now breast size entry is 0; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 0; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 0; [ Width of female sex infection will try and give you ]
 	now libido entry is 40; [ Amount player Libido will go up if defeated ]
 	now loot entry is ""; [ Loot monster drops, ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]

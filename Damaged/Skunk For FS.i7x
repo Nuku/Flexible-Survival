@@ -198,8 +198,8 @@ When Play begins:
 	now breast size entry is 3;      [-Size of breasts infection will try to attain -]
 	now male breast size entry is 0; [- Breast size for if Sex="Male", usually zero. -]
 	now cunts entry is 1;            [- if sex = "Female or both", indicates the number of female sexes infection will grant you.-]
-	now cunt length entry is 14;     [- Length of female sex  infection will attempt to give you. -]
-	now cunt width entry is 5;       [- Width of female sex  infection will try and give you -]
+	now cunt length entry is 14;     [- Length of female sex infection will attempt to give you. -]
+	now cunt width entry is 5;       [- Width of female sex infection will try and give you -]
 	now libido entry is 10;          [- Amount player Libido will go up if defeated -]
 	now loot entry is "skunk goo";   [- Loot monster drops, -]
 	now lootchance entry is 70;      [- Chance of loot dropping 0-100 -]
@@ -291,7 +291,7 @@ to say skunk heat end:
 
 
 to say skunk in heat:
-	say "[one of]You ache constantly for a male, preferably skunk, but as you think about a large rod pushing into you you realize that any would do.[or]You need to fuck, again and again and again and again.[or]You need to be filled by a skunk's breeding tool.[or]Thinking becomes harder as the need to mate pushes everything else from your mind.[or]You NEED to fill your cunt NOW![or]'Skunk kittens...', your mind tells you, 'Skunk kittens would be fun to have.'[at random]";
+	say "[one of]You ache constantly for a male, preferably skunk, but as you think about a large rod pushing into you, you realize that any would do.[or]You need to fuck, again and again and again and again.[or]You need to be filled by a skunk's breeding tool.[or]Thinking becomes harder as the need to mate pushes everything else from your mind.[or]You NEED to fill your cunt NOW![or]'Skunk kittens...', your mind tells you, 'Skunk kittens would be fun to have.'[at random]";
 	increase skunkready by 1;
 	increase libido of player by a random number between 5 and 10;
 

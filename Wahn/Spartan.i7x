@@ -180,7 +180,7 @@ When Play begins:
 	now name entry is "Spartan";
 	now attack entry is "[one of]With a quick sweep of his leg, he brings you crashing to the floor.[or]He grabs hold of you, taking you into a choke-hold that you only just manage to wind your way out of.[or]First throwing a handful of dirt into your face, the young Spartan strikes a painful blow to your side while you're off guard.[at random]";
 	now defeated entry is "[Spartan loses]";
-	now victory entry is  "[Spartan wins]";
+	now victory entry is "[Spartan wins]";
 	now desc entry is "[SpartanDesc]";
 	now face entry is "a handsome young man's, still smooth and beardless. A Greek helmet with a large red horse-hair plume covers your short black hair";
 	now body entry is "that of a young man, quite fit and healthy. It is garbed in nothing but a pair of sandals and a long red cloak, held around your shoulders by a brooch";

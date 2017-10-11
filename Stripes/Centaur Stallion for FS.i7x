@@ -81,7 +81,7 @@ When Play begins:
 	now name entry is "Centaur Stallion"; [Name of your new Monster]
 	now attack entry is "[one of]The centaur stallion fires his bow at you, piercing your shoulder with an arrow![or]The centaur stallion charges at you, knocking you to the ground roughly![or]The centaur rears up and manages to land a heavy hoof on your shoulder![or]The centaur swings a punch at you, bashing you in the jaw![or]The stallion rears up, causing his semi-hard cock to slap against his equine belly and release a spurt of precum onto you and also giving you a good view of his impressive penis and bloated balls![at random]";
 	now defeated entry is "[beatthecentaurstallion]";
-	now victory entry is  "[losetocentaurstallion]";
+	now victory entry is "[losetocentaurstallion]";
 	now desc entry is "[centaurstalliondesc]";
 	now face entry is "mostly human at first glance, but with a broad flaring nose and pointed ears. It has a male cast to it";
 	now body entry is "that of a centaur, with a muscled, human upper torso. Your body is chiseled and has well-defined muscles. Broad shouldered and strongly-built, it evokes the male form. Your arms are strong and muscular, and very human in appearance. Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of shiny black hooves";
@@ -106,7 +106,7 @@ When Play begins:
 	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 28; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 20; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 20; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 0; [ Number of Breasts infection will give you. ]
 	now breast size entry is 0; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]

@@ -15,7 +15,7 @@ The conversation of Richard is { "<This is nothing but a placeholder!>" }.
 The scent of Richard is "     Richard smells like sex and musk, something that you expected from a randy satyr like him. However, beneath that scent you can smell... chocolate?".
 
 to say RichardDesc:
-	say "     The satyr boy is wearing a loose, short-sleeved t-shirt with the college's logo on it as well as a a pair of camo cargo pants. The virile male is currently sitting at his computer, tapping away at the keys with an open book to his left. Upon closer examination you see that he is writing what looks to be an essay, huh. Apparently even with the nanite apocalpyse, school still goes on. It's not long until Richard feels your eyes on him, causing him to turn and wave at you, a happy smile on his face.";
+	say "     The satyr boy is wearing a loose, short-sleeved t-shirt with the college's logo on it as well as a pair of camo cargo pants. The virile male is currently sitting at his computer, tapping away at the keys with an open book to his left. Upon closer examination you see that he is writing what looks to be an essay, huh. Apparently even with the nanite apocalpyse, school still goes on. It's not long until Richard feels your eyes on him, causing him to turn and wave at you, a happy smile on his face.";
 
 Section 2 - Talking with Richard
 

@@ -32,7 +32,7 @@ to say Elf attack:
 			say "     '[one of]Whew[or]Oh[or]Ah[at random], [one of]that'll do[or]you might prove useful to me[or]that's just the fun I needed[at random]...' Grinning at you as she takes a moment to catch her breath, she eventually [if scalevalue of player > 3]climbs[else]pulls[end if] off you, a trail of your seed following in her wake. She takes a moment to adjust her meager, silken attire before setting off, no doubt satisfied with her task, and leaving you to recover. Eventually, you've sufficiently recovered to depart yourself, spent and lust-worn as you are.";
 	else:
 		say ", she briefly steps off of you, repositioning yourself to expose your behind for her. Setting herself down before it and wrapping her arm around, she slings her large bow along your rump[if scalevalue of player > 3], a feat not particularly easy given your size[end if]. Slowly drawing the string back, she unleashes it to loudly smack against your back, making you visibly twitch and cry out from the harsh sensation, much to her amusement.";
-		say "     She continues this hard ritual, reveling in each protesting twitch and writhe with each loud snap. Overwhelmed by such rough treatment, you can't help but become aroused from it, [if cocks of player > 0]unattended cock[smn] dripping onto the ground[else if cunts of player > 0]unattended cunt[sfn] dripping onto the ground[else]though you lack a the proper outlet[end if][if cocks of player is 0 and cunts of player is 0 and hp of player < 1] and in spite your better judgment[else if hp of player < 1], much in spite your better judgment[end if].";
+		say "     She continues this hard ritual, reveling in each protesting twitch and writhe with each loud snap. Overwhelmed by such rough treatment, you can't help but become aroused from it, [if cocks of player > 0]unattended cock[smn] dripping onto the ground[else if cunts of player > 0]unattended cunt[sfn] dripping onto the ground[else]though you lack a proper outlet[end if][if cocks of player is 0 and cunts of player is 0 and hp of player < 1] and in spite your better judgment[else if hp of player < 1], much in spite your better judgment[end if].";
 		say "     '[if hp of player < 1][one of]Oh, all the amusing ways you writhe[or]Maybe this will teach my new toy to watch where they wander[or]The Hunt has been generous to me[at random][else][one of]Just like the wanton beast, to take so well to their punishment[or]I bet I could do anything to you and you'd take it like a slut[or]Oh, you at least suffice as an amusing toy[at random][end if]...!' Laughing at the pitiful state she's placed you in, ";
 		if cocks of player > 0 or cunts of player > 0:
 			say "she nonetheless teases your apparent arousal, fingers tracing along the length of [if cocks of player > 1]one of your [cock size desc of player] cocks[else if cocks of player > 0]your [cock size desc of player] cock[else if cunts of player > 1]one of your [cunt size desc of player] pussies[else]your [cunt size desc of player] pussy[end if], a meager balm she's eager to undermine with another lashing.";
@@ -87,7 +87,7 @@ When Play begins:
 	now name entry is "Wood Elf"; [Name of your new Monster]
 	now attack entry is "[one of]The Elf[or]She[at random] [one of]fires an arrow to pin you to the earth by a bit of your attire, pulling close as you try to free yourself to knock you onto your ass[if scalevalue of player > 3] -- a feat particularly impressive for a lady of her size --[end if] before pulling out of range[or]slings a peculiar arrow and fires it directly into your face, it's apparently cloth end puffing out a gust of strange dust to fill your lungs, leaving you fairly disoriented[or]pulls in close to trip you with the end of her bow, laughing and taunting you as you scramble back to your feet[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[Elf loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Elf attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now victory entry is "[Elf attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[Elf description]";[ Description of the creature when you encounter it.]
 	now face entry is "set of deep, soul piercing, blue eyes framed in a face that seems somewhat oriental. Your ears are quite long and tapered, inhumanly so, along your otherwise human-looking";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "largely slender and agile, with long arms and slim fingers. Your legs are shapely and athletic";[ Body Description, format as the text "Your Body is (your text)"]
@@ -117,8 +117,8 @@ When Play begins:
 	now breast size entry is 8; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 8; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 6; [ Width of female sex infection will try and give you ]
 	now libido entry is 10; [ Amount player Libido will go up if defeated ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]

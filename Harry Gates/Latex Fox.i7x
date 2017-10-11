@@ -66,7 +66,7 @@ When play begins, add Latex_Fox_Gene to Genetic list.
 
 Section 2 - Latex Fox Definition
 
-A latex fox is a kind of monster.  The body of a latex fox is usually  {Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene}.  A latex fox is monstrous.  A latex fox is fully infected.  A latex fox is usually unsuited.  A latex fox is female.  A latex fox is tailed.  The monster gene of a latex fox is Latex_Fox_gene.
+A latex fox is a kind of monster.  The body of a latex fox is usually {Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene, Latex_Fox_gene}.  A latex fox is monstrous.  A latex fox is fully infected.  A latex fox is usually unsuited.  A latex fox is female.  A latex fox is tailed.  The monster gene of a latex fox is Latex_Fox_gene.
 
 The description of latex fox is "This beast looks like a cross between a sexy woman, a fox and a pool-toy, her rubber skin catching reflections of light almost as well as her bared teeth.".
 

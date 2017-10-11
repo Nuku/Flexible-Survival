@@ -83,7 +83,7 @@ When Play begins:
 	now cock change entry is "your cock hardens into a black, ebon spire ending in short, squirming tendrils[if cunts of player > 0]. You groan in pain as it pulses and throbs, forming a thick, fleshy channel down its length with a cunt-like orifice as it mutates into an ovipositor cock. Your pain turns to pleasure as you feel the eggs inside you shifting and you find yourself eager to find a willing (or maybe even unwilling) home for them. You try to suppress this desire, but it grows increasingly tempting[else]. You feel considerable pleasure as those squirming tendrils slide across your glans and play with your cum-slit. But something doesn't feel right, like its incomplete as it is[end if]. Your balls are pulled into your body and become internalized, pressed and swollen as bulges protruding below your ebon spire";
 	now str entry is 16; [a big strong bear]
 	now dex entry is 20; [not so limber]
-	now sta entry is 12; [not too much stamina  -a lot of bear to lug about.]
+	now sta entry is 12; [not too much stamina -a lot of bear to lug about.]
 	now per entry is 12; [bears are good at finding stuff]
 	now int entry is 14; [not that much of a bear with little brain]
 	now cha entry is 6; [because you wouldn't want to argue]
@@ -94,7 +94,7 @@ When Play begins:
 	now area entry is "Capitol"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 8; [ Number of Breasts infection will give you. ]
 	now breast size entry is 6; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]

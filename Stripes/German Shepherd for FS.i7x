@@ -768,7 +768,7 @@ When Play begins:
 	now sex entry is "Female"; [ Defines which organs will be altered by the infection. current options are 'Male' 'Female' 'Both']
 	now hp entry is 20;
 	now lev entry is 3;
-	now wdam entry is 5; [ Amount of  Damage monster Does when attacking.]
+	now wdam entry is 5; [ Amount of Damage monster Does when attacking.]
 	now area entry is "Outside";
 	now cocks entry is 1; [ Used in infection Calculations, if cocks > 0 shaft will grow to cock length & girth dimensions slowly]
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks > 0 ]

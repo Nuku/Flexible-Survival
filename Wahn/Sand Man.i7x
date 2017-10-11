@@ -127,7 +127,7 @@ When Play begins:
 	now name entry is "Sand Man";
 	now attack entry is "[one of]He hits you in the head, strong enough to daze, but not hurt you.[or]He grabs your arm for a moment, pulling you in for a quick kiss.[or]He embraces you and gives your ass a quick grope before you can pull away.[at random]";
 	now defeated entry is "[sandman loses]";
-	now victory entry is  "[sandman wins]";
+	now victory entry is "[sandman wins]";
 	now desc entry is "[sandmanDesc]";
 	now face entry is "smooth, with sculpted angular features. A stylish pair of sunglasses sits over your eyes and flowing locks made of fine sand behaving like it was strands of hair surround your face";
 	now body entry is "that of a idealized male, with washboard abs and muscled arms and legs";

@@ -115,7 +115,7 @@ to say CABdesc:
 
 [Room Declaration]
 Northwest of College Campus Entrance is College Walkway Northwest.
-Southeast of of College Belltower is College Walkway Northwest.
+Southeast of College Belltower is College Walkway Northwest.
 West of College Fountain is College Walkway Northwest.
 Southwest of College Administration Building is College Walkway Northwest.
 Northeast of College Walkway West is College Walkway Northwest.

@@ -37,7 +37,7 @@ to say MonkeyKingdesc:
 			say "     The place around you looks familiar. It seems you are in the Asian wing. You shudder, remembering who is his annoying inhabitant. You starts to turn around and go back to the entrance, but a familiar, arrogant and very irritating voice resonates in the big room: 'Who dares trespass the kingdom of the mighty Monk... Oh my, that's interesting.'.";
 			say "     The prideful monkey-man startles you as he falls from the ceiling just in front of you. Unfortunately, he seems to remember you. 'Aren't you one of my subjects? Your timing is perfect. Kneel before your King and let him satiate his lust!' he declares, with the same arrogant tone.";
 		else:
-			say "     You find yourself in the Asian wing of the Museum. Suddenly, a regal-sounding voice booms in the empty halls. '[italic type]Halt, peasant![roman type]'. On these words, a golden-furred monkey dressed in an martial arts vest and pants  jumps in front of you. He is armed with a wooden staff which seems to change sizes when you're not looking at it.";
+			say "     You find yourself in the Asian wing of the Museum. Suddenly, a regal-sounding voice booms in the empty halls. '[italic type]Halt, peasant![roman type]'. On these words, a golden-furred monkey dressed in an martial arts vest and pants jumps in front of you. He is armed with a wooden staff which seems to change sizes when you're not looking at it.";
 			say "     With an arrogant grin on his face, the kung-fu artist challenges you: '[italic type]Peasant! You are now graced by the presence of the illustrious, mighty Monkey King. Obey your betters and service me. Of course, you can also do that after I whacked you a little with my staff...[roman type]'.";
 
 to say losetoMonkeyKing:

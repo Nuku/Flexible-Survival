@@ -70,7 +70,7 @@ When Play begins:
 	now cock entry is "glue-covered";
 	now face change entry is "it changes out into a snout, the twitching on your nose making you sneeze - the feeling weird, as the slime from your nostrils spurts out onto your hands. Golden goo, shiny, and sticky. You manage to remove it from your hands, but it seems the goo has already changed your face, and head"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "slime encases its form, taking it and changing it, slime seeming to secrete out of your every pore - before you feel those aforementioned pores being turned into goopy rubber";
-	now skin change entry is "you  gain a thick layer of slime all over your body, even on your non-liquidshifter parts. The slime sticks to anything around you";
+	now skin change entry is "you gain a thick layer of slime all over your body, even on your non-liquidshifter parts. The slime sticks to anything around you";
 	now ass change entry is "your tail wags behind you, having lengthened into a mysteriously draconic length, dripping glue onto the floor as you walk"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it begins to change - the gooey, sticky member twitching as it shows off its new draconic length"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;

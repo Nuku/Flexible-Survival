@@ -265,7 +265,7 @@ When Play begins:
 	now name entry is "Christmas Elf Female";
 	now attack entry is "They don't fight.";
 	now defeated entry is "They don't fight.";
-	now victory entry is  "They don't fight.";
+	now victory entry is "They don't fight.";
 	now desc entry is "They don't fight.";
 	now face entry is "delicate and beautiful, with a petite nose and elfin features. Your full, lustrous lips seem to be made to smile and laugh. The eyes through which you see the world are slightly larger than a human's, showing very round and shiny green irises. Two pointed ears poke out from under your long blond hair and complete the picture";
 	now body entry is "that of a lithe and slender human being, if proportioned to be pretty short. It is garbed in tight, dark green leather pants and leaf green tunic, allowing for unhindered, graceful movement";
@@ -319,7 +319,7 @@ When Play begins:
 	now name entry is "Christmas Elf Male";
 	now attack entry is "They don't fight.";
 	now defeated entry is "They don't fight.";
-	now victory entry is  "They don't fight.";
+	now victory entry is "They don't fight.";
 	now desc entry is "They don't fight.";
 	now face entry is "beautiful and elfin, with handsome, if a bit delicate features. Your full, lustrous lips seem to be made to smile and laugh. The eyes through which you see the world are slightly larger than a human's, showing very round and shiny green irises. Two pointed ears poke out from under your long blond hair and complete the picture";
 	now body entry is "that of a lithe and slender human being, if proportioned to be pretty short. It is garbed in tight, dark green leather pants and leaf green tunic, allowing for unhindered, graceful movement";

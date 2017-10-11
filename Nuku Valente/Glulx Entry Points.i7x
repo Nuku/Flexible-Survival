@@ -114,7 +114,7 @@ Section - HandleGlkEvent routine
 
 Include (-
 
-  [ HandleGlkEvent ev context abortres newcmd cmdlen  ;
+  [ HandleGlkEvent ev context abortres newcmd cmdlen ;
       context = 0; ! suppress ignored warning
       switch (ev-->0) {
 	evtype_Redraw:

@@ -177,7 +177,7 @@ When Play begins:
 	now name entry is "Feral Wolf"; [Name of your new Monster]
 	now attack entry is "[one of]He slams into you and bites down.[or]He roars and swipes at you with his claws.[or]He pounces you and pins you down, tearing into you with his claws.[at random]";
 	now defeated entry is "[beatferalwolf]";
-	now victory entry is  "[Feral Wolf attack]";
+	now victory entry is "[Feral Wolf attack]";
 	now desc entry is "[FeralWolfDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "feral wolf face, with an long canine snout willed with the sharp teeth of a predator filling your maw"; [ Face description, format as the text "You have a (your text) face."]
 	now body entry is "that of an average sized and well muscled wolf, with large canine features that give you a wild and deadly appearance"; [ Body Description, format as the text "Your Body is (your text)"]

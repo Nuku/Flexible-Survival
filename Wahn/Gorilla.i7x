@@ -130,7 +130,7 @@ When Play begins:
 	now name entry is "Football Gorilla";
 	now attack entry is "[one of]The gorilla throws himself on you in a tackle that drives the air out of your lungs.[or]Calling out, 'Come on, let's have some fun,' the gorilla claps his strong hand against your back, with a strength that leaves you somewhat stunned.[or]You get thrown aside and fall down as the gorilla demonstrates one of his moves - by running at you at full steam and striping you with his armored shoulder-pad.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Gorilla Loses]";   [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Gorilla Wins]";    [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now victory entry is "[Gorilla Wins]";    [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[Gorilla Desc]";            [ Description of the creature when you encounter it. ]
 	now face entry is "that of a gorilla, with a very wide, thin-lipped mouth, almost as wide and flat nose and human-like eyes under heavy brows. Short fur covers your whole head with the exception of your inner facial area";
 	now body entry is "relatively wide and burly, with strong muscles that allow you to move and run pretty fast despite the large bulk. The curve of your spine and two elongated arms make it easy to drop to all fours to do so, but you're still capable of upright walking if you chose to do so";

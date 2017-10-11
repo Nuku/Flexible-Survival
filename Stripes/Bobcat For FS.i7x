@@ -212,7 +212,7 @@ to say bobcatinheat:
 		if player is mpreg_able:
 			add { 5, 5 } to randombobcatfun; [rec anal]
 		else if anallevel > 1:
-			add { 5 } to  randombobcatfun; [rec anal]
+			add { 5 } to randombobcatfun; [rec anal]
 		sort randombobcatfun in random order;
 		if entry 1 of randombobcatfun is 1, say "[bobcatheatsex1]";
 		if entry 1 of randombobcatfun is 2, say "[bobcatheatsex2]";
