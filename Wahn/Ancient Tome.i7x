@@ -148,7 +148,10 @@ name	desc	weight	object
 
 to say TomeUse:
 	LineBreak;
-	say "     You open the old book and flip through a few pages. Sadly, it seems to be written in a squiggly script that you can make no heads or tails of, and the images in it are mildly disturbing, full of weird creatures and situations. A shiver runs down your spine as you close the book again.";
+	if cocks of player is 0 and cunts of player > 0:
+		say "     You open the old book and flip through a few pages. Sadly, it seems to be written in a squiggly script that you can make no heads or tails of, and the images in it are mildly disturbing, full of weird creatures and situations. A shiver runs down your spine as you close the book again.";
+	else:
+		say "[TomeExpansionUse]";
 
 instead of trading the ancient tome when the current action involves the Eric:
 	if TomeFound is 100: [Eric never looked into it]
