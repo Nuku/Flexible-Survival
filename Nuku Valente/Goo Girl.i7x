@@ -96,7 +96,7 @@ When Play begins:
 	now defeated entry is "[goodefeat]";
 	now victory entry is "[goovictory]";
 	now desc entry is "[goodesc]";
-	now face entry is "that of a pretty human's, yet with a curiously disquieting smile; [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "that of a pretty human's, yet with a curiously disquieting smile"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "human-like, but melded together just at your thighs, flowing together into a large and bulbous base of [skin of player] flesh"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "[one of]jellied[or]gelatin-like[or]translucent[at random] [if goocolour is 1]blue[else if goocolour is 2]purple[else]green[end if]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ]
