@@ -130,7 +130,7 @@ When Play begins:
 	now victory entry is "[sandman wins]";
 	now desc entry is "[sandmanDesc]";
 	now face entry is "smooth, with sculpted angular features. A stylish pair of sunglasses sits over your eyes and flowing locks made of fine sand behaving like it was strands of hair surround your face";
-	now body entry is "that of a idealized male, with washboard abs and muscled arms and legs";
+	now body entry is "that of an idealized male, with washboard abs and muscled arms and legs";
 	now skin entry is "fine white sand, making up your body and";[ format as the text "You have (your text) skin"]
 	now tail entry is "You have a round, firm bubble butt. A tight black speedo draws other's looks to it.";[ write a whole Sentence or leave blank. ]
 	now cock entry is "human";[ format as "You have a 'size' (your text) cock ]

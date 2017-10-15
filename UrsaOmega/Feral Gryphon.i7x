@@ -181,7 +181,7 @@ When Play begins:
 	now victory entry is "[losetoGryphon]"; [ Text when monster wins. Change 'Gryphon' as above. ]
 	now desc entry is "[Gryphondesc]";
 	now face entry is "the visage of a majestic eagle, feathered and beaked"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a lion, fully quadrupedal, with powerful muscles rippling under your skin that speak to your predatory nature";
+	now body entry is "that of a lion, fully quadrupedal, with powerful muscles rippling under your skin that speak of your predatory nature";
 	now skin entry is "golden-furred and feathered"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have a long, leonine tail hanging over your rear."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]knotted[or]leonine[or]tapered[at random]";

@@ -35,7 +35,7 @@ When Play begins:
 	now defeated entry is "[Pantherherm loss]";
 	now victory entry is "[Pantherherm attack]";
 	now desc entry is "Angie pounces you happily, mmmm angiepouncing!";
-	now face entry is "short panther like muzzle on your changed face, with bright golden panther eyes. Your face is a perfect and erotic blend of panther and human features, a feline grin tugging at your muzzle as you stare out at the world from your new";["You have a (your text) face."]
+	now face entry is "now a panther like muzzle, with bright golden panther eyes. Your face is a perfect and erotic blend of panther and human features, a feline grin tugging at your muzzle as you stare out at the world from your new";["You have a (your text) face."]
 	now body entry is "powerful and predatory, your large frame balances easily on your rather paw-like feet, your changed legs giving you the impression of always being ready to pounce forward on an opponent, and your clawed hands have soft pads on the palms for easier pouncing"; [Your Body is (your text)"]
 	now skin entry is "[one of]black furred[or]black fur with purple tints covers your[or]dark furred[or]panther-like[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a long feline tail extending down from your spine, the tail lashes back and forth in a predatory manner with every step you take.";[ Tail description, write a whole Sentence or leave blank. ]

@@ -64,7 +64,7 @@ When Play begins:
 	now victory entry is "[losetoLiquidshifter]"; [ Text when monster wins. Change 'Liquidshifter' as above. ]
 	now desc entry is "[Liquidshifterdesc]";
 	now face entry is "rubbery, constantly secreting a layer of slime"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "muscular, but seeming to be ever-changing, the slime rumbling within you despite the constant draconic form you put on";
+	now body entry is "muscular, but seemingly ever-changing, the slime rumbling within you despite the constant draconic form you put on";
 	now skin entry is "slimy, thick, rubbery golden"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "Your tail wags behind you, having lengthened into a mysteriously draconic length, dripping glue onto the floor as you walk."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "glue-covered";

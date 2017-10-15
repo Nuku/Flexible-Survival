@@ -495,7 +495,7 @@ When Play begins:
 	now defeated entry is "[beattheDoberman]";
 	now victory entry is "[losetoDoberman]";
 	now desc entry is "[Dobermandesc]";
-	now face entry is "now possesses the striking features of a cunningly handsome looking Dobie"; [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "that of a cunningly handsome looking Dobie"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "fit and toned without a trace of fat anywhere in sight. No to mention pecs that bulge out almost half an inch from your chest and torso with, count 'em, eight hard and cut abs you are definitely a stud of a dog"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "[one of]brown and black fur[or]a dense and dark pelt[or]a heavy cropping of water resistant fur[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "Your tail is long and thin, like a Dalmatian's, but pitch black in colour, oh and curved upwards."; [ Tail desc., written as a full sentence or left blank for none. ]

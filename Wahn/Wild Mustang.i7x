@@ -323,7 +323,7 @@ When Play begins:
 	now defeated entry is "[WildMustangLoses]";
 	now victory entry is "[WildMustangWins]";
 	now desc entry is "[WildMustangDesc]";
-	now face entry is "broad equine muzzle, with large brown eyes and rather expressive horse-like ears on top of your";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "equine in appearnce, with large brown eyes and rather expressive horse-like ears";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "tall and muscular, shaped like an anthro equine. It has powerful digitigrade legs ending in large hooves with fluffy fetlocks. Your hands seem to be slightly hoof-like as well, bearing little hooflet-like nails at the end of each finger";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]brown-furred[or]softly furred[or]short fur covered[at random]";[ format as the text "You have (your text) skin"]
 	now tail entry is "You have a long thick horse-like tail swaying behind you almost to the ground, its long strands of coarse hair covering your ass completely as it flicks this way and that seemingly on its own.";[ write a whole Sentence or leave blank. ]
