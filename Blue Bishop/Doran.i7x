@@ -9,7 +9,106 @@ when play begins:
 	add { "Peculiar Dragon" } to infections of guy;
 	add { "Peculiar Dragon" } to infections of furry;
 
-dorgr is text that varies. [A dorger is you!]
+[ dorgr - raw string, determines what Doran calls the player. ]
+[ Varies between "Master" and "Mistress" ]
+
+[ dorlastfed - turns that doran was fed ]
+[ Initial Value of 555, no idea how this works. Seems to be round counter before Doran can feed the player again. ]
+
+[ dorgenreg - Boolean, determines what gender Doran sees the player as. Takes priority over 'dorgr' as this variable calls for the modification of 'dorgr' ]
+[	false = male ]
+[ true = female ]
+
+[dorrolereg - Integer, determines Doran Dom/Sub role ]
+[ 0 = Dominant Doran ]
+[ 1 = Random/Neutral (Currently only serves as randomizer of D/S, there is no neutral content. BlueBishop also commented that this implementation was incomplete.) ]
+[ 2 = Submissive Doran ]
+
+[dorroleint - Integer, determines Doran Dom/Sub intensity ]
+[ 0 = full dominant ]
+[ 1-3 = Neutral ]
+[ 4 = full submissive ]
+
+[ dordomtop - Integer, represent stage advances in Doran dominance talk topic ]
+[ 0 = Inital, player has not lost to Doran in battle (Peculiar Dragon) ]
+[ 1 = Player has submitted to Doran in battle (Peculiar Dragon) (This will be used to mention that event in later conversations between Doran & Player) ]
+[ 2 = This value is set after Doran reveals his 'voluntary dominance' AKA had that talk with the player ]
+[ 3 = This value is here because of an error in BlueBishop's coding. It is not intended and needs to be fixed. However because B.B. uses the 'else' check for any value above 1, this actually works in the code. ]
+
+[ dorfirsttalk - Boolean, flag for if the player has talked to Doran at least once (first 'talk' command after winning battle with Peculiar Dragon) ]
+[ false = player has not talked to Doran, (Inital Value) ]
+[ true = set after first conversation with Doran ]
+
+[ dorwassnub - Boolean, initial value of false ]
+[ No idea what this is, here is BB's comment: "Innoculous flag used to ward backend sex calculations and sex cooldown if you decide against having sex with Doran" ]
+[ It would appear that this boolean is used to make sure canceling a sex prompt with Doran wouldn't result in sex cooldown. I have no idea what kind of code would need this, but okay. ]
+
+[ dorfedtype - Integer, determiens what type of food Doran will give you. ]
+[ 1 = Initial. Doran brings water ]
+[ 2 = Doran brings food ]
+[ Blue Bishop uses the value at the start of the scene then randomizes it (random value between 1 and 2) for use next time. wtf? ]
+
+[ dorreq - Action, Doran's 'request' talk action]
+
+[ dorrim - Action, Initates special discussion on warding Doran rimming (Dom Doran)]
+
+[ dorautint - Integer, Dominant doran sex auto fire intensity]
+[ 0 = Intial. No sex autofire ]
+[ 1 = Strict sex autofire ]
+[ 2 = Loose sex autofire (wait 2 days after having sex) ]
+
+[ dorbb - Boolean, Doran Blue-Balling of the player. Used at end of scenes to increase PC libido instead of decrease ]
+[ false = Initial. Nothing happens ]
+[ true = Player has been blue-balled in the scene. Will be reset after the post scene caculations end ]
+
+[ dorauto - Boolean, Flag that a particular scene is initiated by Doran's sex auto-fire mechanic. Will be reset at end of scene as usual ]
+[ false = Default. Nothing happens ]
+[ true = Scene has been initiated by Doran sex auto-fire ]
+
+[ dorrjd - Integer, warding for Dominant Doran rimming as per result of 'dorrim' discussion action ]
+[ -1 = Never talked to doran about it ]
+[ 0 = Talked to Doran about it ]
+[ 1 = Player indicated warding of rimming scenes ]
+
+[ dorautr - Boolean, simply states that Doran has revealed his sex auto-fire to the player in conversation ]
+[ false = Initial. Player never talked to Doran about sex auto-fire ]
+[ true = Set after first conversation regarding sex auto-fire ]
+
+[ dornpbb - Integer, regarding Sub Doran self blue-balling / orgasm denial ]
+[ 0 = Doran not blue-balled ]
+[ 1 = Doran blue-balled once (Heavily used in scene variations) ]
+[ 2 = Doran blue-balled second time (Never used in scenes) (Seems to be here for future expansion) ]
+
+[ dorinternal - Boolean, modifies Doran cock Internal / External ]
+[ Note: There are 2 ways for this to occur. Doran becomes internal if the player is also internal when he's beaten. OR changed by player with tanuki coin later ]
+[ false = Initial. Sheath & Balls ]
+[ true = Genital Slit. Internal Balls ]
+
+[ dorballmod - Integer ]
+[ -1 = Not mentioned ]
+[ 0 = Mentioned but not modified ]
+[ 1 = Expanded ]
+
+[ dortitmod - Integer ]
+[ -1 = Not mentioned ]
+[ 0 = Mentioned but not modified ]
+[ 1 = Present ]
+[ 2 = Lactating ]
+
+[ doransgender - Boolean. Doran's regarded gender. Like 'dorgenreg' but for himself instead of the player ]
+[ False = (Default) Male ]
+[ True = Female ]
+
+[ dormodtop - Integer ]
+[ 0 = Default. Nothing Happens ]
+[ 1 = Doran will mention that he has expressed unwillingness to change to female. (! This is unused and the relevant dialogue will never trigger !)]
+
+[ dorgentop - Integer ]
+[ 0 = Default. The discussion on changing Doran's regarded gender has never occurred ]
+[ 1 = Set after the discussion on changing Doran's regarded gender ]
+
+
+
 dorlastfed is a number that varies. dorlastfed is usually 555. [Doran Last Fed Timer]
 dorgenreg is a truth state that varies. [Doran Gender Regard. Boolean, false = male, true = female]
 dorrolereg is a number that varies. dorrolereg is usually 2. [Doran Role Regard. Numeric, 0 = Dominant Doran, 1 = Random/Neutral (Not implemented in base), 2 = Submissive Doran]
