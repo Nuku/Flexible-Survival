@@ -108,7 +108,7 @@ when play begins:
 [ 1 = Set after the discussion on changing Doran's regarded gender ]
 
 
-
+dorgr is text that varies. [A dorger is you!]
 dorlastfed is a number that varies. dorlastfed is usually 555. [Doran Last Fed Timer]
 dorgenreg is a truth state that varies. [Doran Gender Regard. Boolean, false = male, true = female]
 dorrolereg is a number that varies. dorrolereg is usually 2. [Doran Role Regard. Numeric, 0 = Dominant Doran, 1 = Random/Neutral (Not implemented in base), 2 = Submissive Doran]
