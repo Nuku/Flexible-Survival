@@ -162,149 +162,78 @@ to say beatdoran:
 	say "     'I yield, I yield! You are my victor, I will contest such a person no further.' It's a little surprising that the beast speaks when he hasn't made so much as a peep up to this point. 'It's quite clear who's the stronger one here...' He slowly begins to step back, and you're not sure if he's going to turn tail and run.";
 	say "     'To be honest, I'm not surprised my victor defeated me; I can see they're a determined one. In any case, this victory makes me theirs to do with as they please.' He bows slightly in punctuation of his concession, oddly willing to offer himself to you in the wake of your victory.";
 	say "     'What would my victor subject me to?'";
+	say "     By your wagering, you could...";
 	if cocks of player > 0 or cunts of player > 0:
-		say "     By your wagering, you could ";
-		if cunts of player > 0:
-			if cocks of player > 0 and cunt length of player > 4:
-				say "[link]mount him (1)[as]1[end link], make him [link]suck your dick (2)[as]2[end link], [link]eat your cunt (3)[as]3[end link], [link]ride the dragon (4)[as]4[end link], ";
-				if scalevalue of player > 1 or player is twistcapped:
-					say "[link]ride the dragon anally (5)[as]5[end link], or [link]turn down (0)[as]0[end link] his offer.";
-					while calcnumber < 0 or calcnumber > 5:
-						say "Choice? (0-5)>[run paragraph on]";
-						get a number;
-					if calcnumber is 1:
-						say "[dorvic_1]"; [fuck the dragon]
-					else if calcnumber is 2:
-						say "[dorvic_2]"; [oral cock]
-					else if calcnumber is 3:
-						say "[dorvic_3]"; [oral cunt]
-					else if calcnumber is 4:
-						say "[dorvic_4]"; [cunt sex]
-					else if calcnumber is 5:
-						say "[dorvic_5]"; [anal sex]
-					else:
-						say "[dorvic_snub]"; [turn down]
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if cocks of player > 0:
+			choose a blank row from table of fucking options;
+			now title entry is "Mount him";
+			now sortorder entry is 1;
+			now description entry is "Take the dragon's hole as your own";
+		[]
+		if cocks of player > 0:
+			choose a blank row from table of fucking options;
+			now title entry is "Have him suck your dick";
+			now sortorder entry is 2;
+			now description entry is "Get the dragon to suck your cock";
+		[]
+		if cunts of player > 0 and cunt length of player > 4:
+			choose a blank row from table of fucking options;
+			now title entry is "Have him eat your cunt";
+			now sortorder entry is 3;
+			now description entry is "Have the dragon eat out your pussy";
+		[]
+		if cunts of player > 0 and cunt length of player > 4:
+			choose a blank row from table of fucking options;
+			now title entry is "Ride the dragon";
+			now sortorder entry is 4;
+			now description entry is "Take his massive tool vaginally";
+		[]
+		if scalevalue of player > 1 or player is twistcapped:
+			choose a blank row from table of fucking options;
+			now title entry is "Ride the dragon anally";
+			now sortorder entry is 5;
+			now description entry is "Take the dragon's shaft anally";
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows from table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[line break][link]0 - Decline his offer[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows from table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber from table of fucking options;
+				say "[title entry]: [description entry]?";
+				if player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if nam is:
+						-- "Mount him":
+							say "[dorvic_1]";
+						-- "Have him suck your dick":
+							say "[dorvic_2]";
+						-- "Have him eat your cunt":
+							say "[dorvic_3]";
+						-- "Ride the dragon":
+							say "[dorvic_4]";
+						-- "Ride the dragon anally":
+							say "[dorvic_5]";
+					WaitLineBreak;
+			else if calcnumber is 0:
+				say "     Turn down the dragon's offer?";
+				if player consents:
+					now sextablerun is 1;
+					say "[dorvic_snub]";
+					WaitLineBreak;
 				else:
-					say "ride the dragon anally (Too small!), or [link]turn down (0)[as]0[end link] his offer.";
-					while calcnumber < 0 or calcnumber > 4:
-						say "Choice? (0-4)>[run paragraph on]";
-						get a number;
-					if calcnumber is 1:
-						say "[dorvic_1]"; [fuck the dragon]
-					else if calcnumber is 2:
-						say "[dorvic_2]"; [oral cock]
-					else if calcnumber is 3:
-						say "[dorvic_3]"; [oral cunt]
-					else if calcnumber is 4:
-						say "[dorvic_4]"; [cunt sex]
-					else:
-						say "[dorvic_snub]"; [turn down]
-			else if cocks of player > 0:
-				say "[link]mount him (1)[as]1[end link], make him [link]suck your dick (2)[as]2[end link], [link]eat your cunt (3)[as]3[end link], ride the dragon (Too small!)";
-				if scalevalue of player > 1 or player is twistcapped:
-					say "[link]ride the dragon anally (4)[as]4[end link], or [link]turn down (0)[as]0[end link] his offer.";
-					while calcnumber < 0 or calcnumber > 4:
-						say "Choice? (0-4)>[run paragraph on]";
-						get a number;
-					if calcnumber is 1:
-						say "[dorvic_1]"; [fuck the dragon]
-					else if calcnumber is 2:
-						say "[dorvic_2]"; [oral cock]
-					else if calcnumber is 3:
-						say "[dorvic_3]"; [oral cunt]
-					else if calcnumber is 4:
-						say "[dorvic_5]"; [anal sex]
-					else:
-						say "[dorvic_snub]"; [turn down]
-				else:
-					say "ride the dragon anally (Too small!), or [link]turn down (0)[as]0[end link] his offer.";
-					while calcnumber < 0 or calcnumber > 3:
-						say "Choice? (0-3)>[run paragraph on]";
-						get a number;
-					if calcnumber is 1:
-						say "[dorvic_1]"; [fuck the dragon]
-					else if calcnumber is 2:
-						say "[dorvic_2]"; [oral cock]
-					else if calcnumber is 3:
-						say "[dorvic_3]"; [oral cunt]
-					else:
-						say "[dorvic_snub]"; [turn down]
+					say "Pick an option.";
 			else:
-				say "make him [link]eat your cunt (1)[as]1[end link], ";
-				if cunt length of player > 4:
-					say "[link]ride the dragon (2)[as]2[end link], ";
-					if scalevalue of player > 1 or player is twistcapped:
-						say "[link]ride the dragon anally (3)[as]3[end link], or [link]turn down (0)[as]0[end link] his offer.";
-						while calcnumber < 0 or calcnumber > 3:
-							say "Choice? (0-3)>[run paragraph on]";
-							get a number;
-						if calcnumber is 1:
-							say "[dorvic_3]"; [oral cunt]
-						else if calcnumber is 2:
-							say "[dorvic_4]"; [cunt sex]
-						else if calcnumber is 3:
-							say "[dorvic_5]"; [anal sex]
-						else:
-							say "[dorvic_snub]"; [turnd own]
-					else:
-						say "ride the dragon anally (Too small!), or [link]turn down (0)[as]0[end link] his offer.";
-						while calcnumber < 0 or calcnumber > 2:
-							say "Choice? (0-2)>[run paragraph on]";
-							get a number;
-						if calcnumber is 1:
-							say "[dorvic_3]"; [oral cunt]
-						else if calcnumber is 2:
-							say "[dorvic_4]"; [cunt sex]
-						else:
-							say "[dorvic_snub]"; [cunt sex]
-				else:
-					say "ride the dragon (Too small!), ";
-					if scalevalue of player > 1 or player is twistcapped:
-						say "[link]ride the dragon anally (2)[as]2[end link], or [link]turn down (0)[as]0[end link] his offer.";
-						while calcnumber < 0 or calcnumber > 2:
-							say "Choice? (0-2)>[run paragraph on]";
-							get a number;
-						if calcnumber is 1:
-							say "[dorvic_3]"; [oral cunt]
-						else if calcnumber is 2:
-							say "[dorvic_5]"; [anal sex]
-						else:
-							say "[dorvic_snub]"; [turnd own]
-					else:
-						say "ride the dragon anally (Too small!), or [link]turn down (0)[as]0[end link] his offer.";
-						while calcnumber < 0 or calcnumber > 1:
-							say "Choice? (0-1)>[run paragraph on]";
-							get a number;
-						if calcnumber is 1:
-							say "[dorvic_3]"; [oral cunt]
-						else:
-							say "[dorvic_snub]"; [cunt sex]
-		else:
-			say "[link]mount him (1)[as]1[end link], make him [link]suck your dick (2)[as]2[end link], ";
-			if scalevalue of player > 1 or player is twistcapped:
-				say "[link]ride the dragon anally (3)[as]3[end link], or [link]turn down (0)[as]0[end link] his offer.";
-				while calcnumber < 0 or calcnumber > 3:
-					say "Choice? (0-3)>[run paragraph on]";
-					get a number;
-				if calcnumber is 1:
-					say "[dorvic_1]"; [fuck the dragon]
-				else if calcnumber is 2:
-					say "[dorvic_2]"; [oral cock]
-				else if calcnumber is 3:
-					say "[dorvic_5]"; [anal sex]
-				else:
-					say "[dorvic_snub]"; [turn down]
-			else:
-				say "ride the dragon anally (Too small!), or [link]turn down (0)[as]0[end link] his offer.";
-				while calcnumber < 0 or calcnumber > 2:
-					say "Choice? (0-2)>[run paragraph on]";
-					get a number;
-				if calcnumber is 1:
-					say "[dorvic_1]"; [fuck the dragon]
-				else if calcnumber is 2:
-					say "[dorvic_2]"; [oral cock]
-				else:
-					say "[dorvic_snub]"; [turn down]
+				say "Invalid selection made. Please pick an option from 0 to [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
 	else:
 		say "     You point out that you lack the proper equipment, and thusly have little to gain from such an interaction. This revelation seems to confuse him a fair bit, but he otherwise concedes.";
 		say "     'Very well; however, if things change for my victor, I'm always available.' He goes on to explain where he resides. Apparently there's a cave within a not-too-distant [bold type]Rocky Outcropping[roman type], and his instructions are clear enough that you should have no issue getting there, 'Doran's the name, by the way.'";
