@@ -112,7 +112,7 @@ demon fox fur is a grab object.
 instead of sniffing demon fox fur:
 	say "The fur has a distict, musky smell to it, reminding you of the fox you got it from.";
 
-the usedesc of fox cum is "[DemonFoxFurUse]";
+the usedesc of demon fox fur is "[DemonFoxFurUse]";
 
 to say DemonFoxFurUse:
 	say "You shrug before opening you mouth and eating the fur. Oddly enough, it almost seems to heat up, before it disolves in your mouth, a strong wave of heat rushing through your body.";
