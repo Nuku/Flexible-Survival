@@ -17,6 +17,10 @@ SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
 Shinto Shrine has a Grab Object called Demand.
 The demand of Shinto Shrine is usually journal.
 
+tanukiList is a list of objects that varies.
+the tanukiList is {medkit, dirty water, water bottle, dog milk, soda, chips, glob of goo, food, gryphon milk, distilled milk, libido pill, acid milk, batcubus milk, cheetah milk, cow milk, margay milk, blue gel, cheese, musky cock flower, lembas bread, mammoth jerky, pink gel, pita bread, purple gel, psionic egg, psionic larva, skunk goo, sticky sushi, tentacle tip, awesome fruit, awesomer fruit, awesomest fruit, wyvern goop, centaur cum, earthen seed, demon seed, fennec semen, gecko cum, hawkman seed, orc cum, gryphon cum, pewter seed, rhino cum, sea dragon cum, silver semen, smilodon cum, wolf cum, orc femcum, mead horn, orc brew, pony cider, satyr wine, Satyress Wine, egg nog, sports drink, chocolate milk, tasty peach, birth control pill, fertile pill, pepperspray, glowing mushroom, estosterogen pill, eagle feather, honeycomb, behemoth horn, testosterone pill, centaur hair, corota venom, tuft of chin fur, dolphin milk, dryad cum, ebonflame scale, elk antler, lucky horseshoe, glowing ember, foul scuttler spit, red fur, hermaid kelp, libido suppressant, stray links, Spotted fur, peacock feather, nullifying powder, cock pill, healing booster, Fish, Pegasus Quill, pirate bandana, tousky quill, tainted wool, Tiger patch, Chipped tooth, spider webbing, spidertaur hair, pixie dust, crushed candies, estrogen pill, dragon scale, dragon hair, zebra fur, lizard juice}.
+demandIndex is a number that varies.
+
 ringing is an action applying to nothing.
 
 understand "rung" and "ring" and "ring bell" and "ring bell with hammer" and "ring ornate bell" and "ring ornate bell with hammer" as ringing.
@@ -40,7 +44,8 @@ Carry out ringing:
 	say "You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
 	say "A spirit takes form before you, looking like some kind of strange raccoon like being. It studies you a moment before it speaks:";
 	if the demand of the Shinto Shrine is journal or demand of Shinto Shrine is gill fruit:
-		now the demand of Shinto Shrine is a random temporary grab object;
+		now demandIndex is a random number from 1 to the number of entries in tanukiList;
+		now the demand of Shinto Shrine is entry demandIndex of tanukiList;
 	say "'Bring me a [demand of shrine]! [bold type]sacrifice[roman type] it before me and I will be appeased!'";
 	say "With this said, the spirit grabs between its legs and pulls out its scrotum in a great furry blanket, curling up into it before vanishing in a puff.";
 

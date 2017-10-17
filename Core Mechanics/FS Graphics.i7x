@@ -289,7 +289,11 @@ before examining a thing(called t):
 
 to project (x - a figure name):
 	if graphics is true:
-		display x;
+		repeat with y running from 1 to number of filled rows in table of game art:
+			choose row y in table of game art;
+			if icon entry is x and artist entry is not listed in BlockList of player:
+				display x;
+				break;
 
 graphicmoding is an action applying to nothing.
 understand "graphics" as graphicmoding.
@@ -302,77 +306,245 @@ carry out graphicmoding:
 		say "Graphics are now enabled.";
 		now graphics is true;
 
-Table of infection graphics
-title	icon(figure name)
-"Abcdefghij"	Figure of pixel		[blocker for first position]
-"Alpha Husky"	Figure of AlphaHusky_icon
-"Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon
-"Bear"	Figure of Bear_icon
-"Beaver"	Figure of Beaver2_icon
-"Black Equinoid"	Figure of BlackEquinoid_icon
-"Blue Gel"	Figure of BlueGel_icon
-"Bobcat"	Figure of Bobcat1_icon
-["Bottlenose Toy"	Figure of Bottlenose_icon	]	[only shown for humanoid version]
-["Bovine"	Figure of Bovine_F_icon	]	[only shown for female version]
-"Catgirl"	Figure of Fiona_icon
-"Chocolate Lab"	Figure of ChocoLab_icon
-"Cougar"	Figure of Cougar_icon
-"Demon Brute"	Figure of DemonBrute_icon
-"Dark Elf"	Figure of DarkElf_icon
-["Doberman"	Figure of DobermanCop_icon	]	[only shown after defeating her]
-"Donkeywoman"	figure of Donkeywoman_icon
-"Dracovixentaur"	Figure of Dracovixentaur_icon
-"Elven Hunter"	Figure of ElvenHunter_icon
-"Ewe"	Figure of Ewe_icon
-["Feline"	Figure of Feline_F1_icon	]	[shows one of these two for female Feline]
-["Feline"	Figure of Feline_F2_icon	]	[shows one of these two for female Feline]
-"Feral Shaft Beast"	Figure of FeralShaftBeast_icon
-"Giraffe"	Figure of Giraffe_icon
-"Gunbunny"	Figure of Gunbunny_icon
-"Friendship Pony"	Figure of FrPony_icon
-"Goo Girl"	Figure of GooGirl_icon
-"Helot"	Figure of Helot_icon
-"Hermaphrodite Gryphon"	Figure of griffon_icon
-"Hermaphrodite Latex Vixen"	Figure of LatexVixen_icon
-"Homo Sapiens"	Figure of HomoSapiens_icon
-["Horny Doctor"	Figure of HornyDoctor_M_icon	]	[only shown for males]
-"Imp"	Figure of Imp_clothed_icon
-"Incubus"	Figure of Incubus_clothed_icon
-"Kangaroo"	Figure of kangaroo_icon
-"Lamia"	Figure of Lamia_icon
-["Latex Ermine"	Figure of LatexErmine_icon	]	[only used in defeat]
-["Latex Ermine"	Figure of LatexErmine<colour>_icon	]	[colour variants]
-"Magic Drake"	Figure of MagicDrake_icon
-"Mammoth"	Figure of Mammoth_icon
-"Mannequin"	Figure of Mannequin_icon
-"Megakitty"	Figure of Megakitty_icon
-"Mental Mouse"	Figure of MentalMice_icon
-"Messy Pig"	Figure of MessyPig_icon
-"Naga"	Figure of Naga_icon
-["Ninja Cat"	Figure of NinjaCat_F_icon	]	[only shown for female succumb ending]
-"Ninja Cat"	Figure of NinjaCat_M_icon
-"Plush Lion"	Figure of PlushLion_icon
-"Pink Gel"	Figure of PinkGel_icon
-"Pink Poodle"	Figure of PinkPoodle_icon
-"Ram"	Figure of Ram_icon
-"Reindeer"	Figure of Reindeer_icon
-"Shadow Beast"	Figure of ShadowBeast_icon
-"Shemale Smooth Collie"	Figure of SSCollie_icon
-"Siamese Cat"	Figure of SiameseCat_icon
-"Skunkbeast Lord"	Figure of SkunkbeastLord_icon
-"Snow Bat"	Figure of SnowBat_icon
-"Snow Leopard"	Figure of SnowLeopard_icon
-"Spartan"	Figure of Spartan_icon
-"Succubus"	Figure of Succubus_clothed_icon
-"Thought Eater"	Figure of ThoughtEater_icon
-"Tiger Cop"	Figure of SgtMarks_icon
-"Tigress Hooker"	Figure of TigressHooker_icon
-"Triceratops"	Figure of Triceratops_icon
-"Vixentaur"	Figure of Vixentaur_icon
-"Vixen Nurse"	Figure of VixenNurse_icon
-"Wildcat"	Figure of Wildcat_icon
-["Yuppie Mink"	Figure of YuppieMink_icon	]	[only shown for female version]
-"Zebra"	Figure of Zebra_icon
+Table of game art
+title	icon(figure name)	artist
+"Abcdefghij"	Figure of pixel	"" [blocker for first position]
+"Adam"	Figure of Adam_icon	"Kadel"
+"Alexandra_clothed"	Figure of Alexandra_clothed_icon	"Lyttathebug"
+"Alexandra_clothed_preg"	Figure of Alexandra_clothed_preg_icon	"Lyttathebug"
+"Alexandra_face"	Figure of Alexandra_face_icon	"Lyttathebug"
+"Alexandra_naked"	Figure of Alexandra_naked_icon	"Lyttathebug"
+"Alex"	Figure of Alex_icon	"canned"
+"Alpha Husky"	Figure of AlphaHusky_icon	"Anymouse1968"
+"Amy"	Figure of Amy_icon	"Sususmiles"
+"Amy_face"	Figure of Amy_face_icon	"Sususmiles"
+"Andre"	Figure of Andre_icon	"Wemd"
+"Andrew"	Figure of Andrew_icon	"Rukis"
+"Angie"	Figure of Angie_icon	"Anymouse1968"
+"Anthony_clothed"	Figure of Anthony_clothed_icon	"Laylo"
+"Anthony_face"	Figure of Anthony_face_icon	"Laylo"
+"Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon	"TwilightMaster"
+"Artemis"	Figure of Artemis_icon	"FaroreNightclaw"
+"Athanasia"	Figure of Athanasia_icon	"SandySchreiber"
+"Bear"	Figure of Bear_icon	"Anymouse1968"
+"Beaver"	Figure of Beaver2_icon	"HBruton"
+"Black Equinoid"	Figure of BlackEquinoid_icon	"Anymouse1968"
+"Blanche1"	Figure of Blanche1_icon	"The_Negative"
+"Blanche2"	Figure of Blanche2_icon	"Xenotropos"
+"Blot"	Figure of Blot_icon	"Anymouse1968"
+"Blue Gel"	Figure of BlueGel_icon	"Rastear"
+"Bobcat"	Figure of Bobcat1_icon	"Uniformvixen"
+"Boghrim_clothed"	Figure of Boghrim_clothed_icon	"Kupo Klein"
+"Boghrim_naked"	Figure of Boghrim_naked_icon	"Kupo Klein"
+"Boghrim_face"	Figure of Boghrim_face_icon	"Kupo Klein"
+"Bottlenose Toy_Human"	Figure of Bottlenose_icon	"Anymouse1968"	[only shown for humanoid version]
+"Bovine_F"	Figure of Bovine_F_icon	""	[only shown for female version]
+"Bradford"	Figure of Bradford_icon	"Anymouse1968"
+"Brooke"	Figure of Brooke_icon	"Soryane"
+"Brian"	Figure of Brian_icon	"dhstein"
+"BrutusGood"	Figure of BrutusGood_icon	"Inkydemon"
+"Brutus_good_face"	Figure of Brutus_good_face_icon	"Inkydemon"
+"BrutusEvil"	Figure of BrutusEvil_icon	"Inkydemon"
+"Brutus_evil_face"	Figure of Brutus_evil_face_icon	"Inkydemon"
+"Buster"	Figure of Buster_icon	"Padunk"
+"Candy"	Figure of Candy_icon	"uniformvixen"
+"Carl_clothed"	Figure of Carl_clothed_icon	"Hufnaar"
+"Carl_naked"	Figure of Carl_naked_icon	"Hufnaar"
+"Carl_face"	Figure of Carl_face_icon	"Lyttathebug"
+"Carl_knot"	Figure of Carl_knot_icon	"Lyttathebug"
+"Carl_Eric_training"	Figure of Carl_Eric_training_icon	"Lyttathebug"
+"Carl_Eric_sofa_fuck_1"	Figure of Carl_Eric_sofa_fuck_1_icon	"Lyttathebug"
+"Carl_Eric_sofa_fuck_2"	Figure of Carl_Eric_sofa_fuck_2_icon	"Lyttathebug"
+"Carl_Eric_sofa_fuck_3"	Figure of Carl_Eric_sofa_fuck_3_icon	"Lyttathebug"
+"Carl_Eric_sofa_fuck_4"	Figure of Carl_Eric_sofa_fuck_4_icon	"Lyttathebug"
+"Catgirl"	Figure of Fiona_icon	"Valen"
+"Chocolate Lab"	Figure of ChocoLab_icon	"SparklePens"
+"Chris_clothed"	Figure of Chris_clothed_icon	"Kupo Klein"
+"Chris_face_icon"	Figure of Chris_face_icon	"Kupo Klein"
+"Christy_pregnant"	Figure of Christy_pregnant_icon	"Anymouse1968"
+"Cougar"	Figure of Cougar_icon	"catnamedfish"
+"Danny_clothed"	Figure of Danny_clothed_icon	"Dragonpunk"
+"Danny_face_icon"	Figure of Danny_face_icon	"Dragonpunk"
+"David_clothed"	Figure of David_clothed_icon	"Keitaro87"
+"David_hurt"	Figure of David_hurt_icon	"Keitaro87"
+"David_barechest"	Figure of David_barechest_icon	"Keitaro87"
+"David_face_hurt"	Figure of David_face_hurt_icon	"Keitaro87"
+"David_face_naked"	Figure of David_face_naked_icon	"Keitaro87"
+"David_face"	Figure of David_face_icon	"Keitaro87"
+"Demon Brute"	Figure of DemonBrute_icon	"Lay"
+"Dark Elf"	Figure of DarkElf_icon	"Kattzie"
+"Diego"	Figure of Diego_icon	"valdericblackstag"
+"Diego_face"	Figure of Diego_face_icon	"valdericblackstag"
+"DiegoFem"	Figure of DiegoFem_icon	"Damdidoo"
+"DiegoFem_face"	Figure of DiegoFem_face_icon	"Damdidoo"
+"Doberman_Defeat"	Figure of DobermanCop_icon	"TheRedAngel"	[only shown after defeating her]
+"Donkeywoman"	figure of Donkeywoman_icon	"Anymouse1968"
+"Doran"	Figure of Doran_icon	"Anymouse1968"
+"Doran_face"	Figure of Doran_face_icon	"Anymouse1968"
+"Dracovixentaur"	Figure of Dracovixentaur_icon	"Anymouse1968"
+"DrMatt"	Figure of DrMatt_icon	"The_Negative"
+"DrMedea"	Figure of DrMedea_icon	"Candy"
+"DrMoffatt1"	Figure of DrMoffatt1_icon	"The_Negative"
+"DrMoffatt2"	Figure of DrMoffatt2_icon	"MadTurtle"
+"DrMouse"	Figure of DrMouse_icon	"JaxxBlackFox"
+"Elijah_evil"	Figure of Elijah_evil_icon	"Genelightfoot"
+"Elijah_good"	Figure of Elijah_good_icon	"Genelightfoot"
+"Elijah_virgin"	Figure of Elijah_virgin_icon	"Genelightfoot"
+"Elijah_naked"	Figure of Elijah_naked_icon	"Genelightfoot"
+"Elven Hunter"	Figure of ElvenHunter_icon	"Aosuka"
+"Eric_clothed"	Figure of Eric_clothed_icon	"Kupo Klein"
+"Eric_face"	Figure of Eric_face_icon	"Kupo Klein"
+"Eric_naked"	Figure of Eric_naked_icon	"Kupo Klein"
+"Eric_sofa"	Figure of Eric_sofa_icon	"Bludwing"
+"Ewe"	Figure of Ewe_icon	"Anymouse1968"
+"Fancy"	Figure of Fancy_icon	"Anymouse1968"
+"Feline_F1"	Figure of Feline_F1_icon	"Anymouse1968"	[shows one of these two for female Feline]
+"Feline_F2"	Figure of Feline_F2_icon	"Anymouse1968"	[shows one of these two for female Feline]
+"Felix"	Figure of Felix_icon	"Geir"
+"Francois"	Figure of Francois_icon	"Xenotropos"
+"Frank"	Figure of Frank_icon	"Dolphpup"
+"Feral Shaft Beast"	Figure of FeralShaftBeast_icon	"Demon-Man"
+"Fiona"	Figure of Fiona_icon	"Valen"
+"Gabriel"	Figure of Gabriel_icon	"Darian821"
+"Garrett"	Figure of Garrett_icon	"Catmonkshiro"
+"Gillian"	Figure of Gillian_icon	"Eevachu"
+"Giraffe"	Figure of Giraffe_icon	"Sharei"
+"Gobby"	Figure of Gobby_icon	"lionsilverwolf"
+"Grant"	Figure of Grant_icon	"uniformvixen"
+"Grant2"	Figure of Grant2_icon	"Familliar"
+"Gunbunny"	Figure of Gunbunny_icon	"HBruton"
+"Friendship Pony"	Figure of FrPony_icon	"Anymouse1968"
+"Goo Girl"	Figure of GooGirl_icon	"Rastear"
+"Hadiya"	Figure of Hadiya_0_icon	"lionsilverwolf"
+"Hadiya_icon"	Figure of Hadiya_icon	""
+"Harold"	Figure of Harold_icon	"Hufnaar"
+"Harold_naked"	Figure of Harold_naked_icon	"Hufnaar"
+"Hayato"	Figure of Hayato_icon	"Darian821"
+"Helot"	Figure of Helot_icon	"Obieblu"
+"Hermaphrodite Gryphon"	Figure of griffon_icon	"dbd"
+"Hermaphrodite Latex Vixen"	Figure of LatexVixen_icon	"Anymouse1968"
+"Homo Sapiens"	Figure of HomoSapiens_icon	"Astro"
+"Honey"	Figure of Honey_icon	"SandySchreiber"
+"Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	[only shown for males]
+"Imp"	Figure of Imp_clothed_icon	"Kupo Klein"
+"Imp_naked"	Figure of Imp_naked_icon	"Kupo Klein"
+"Imp_face"	Figure of Imp_face_icon	"Kupo Klein"
+"Incubus"	Figure of Incubus_clothed_icon	"Kupo Klein"
+"Incubus_naked"	Figure of Incubus_naked_icon	"Kupo Klein"
+"James"	Figure of James_icon	"Anyare"
+"Janice"	Figure of Janice_icon	"Anymouse1968"
+"Jason_clothed"	Figure of Jason_clothed_icon	"Kupo Klein"
+"Jason_naked"	Figure of Jason_naked_icon	"Kupo Klein"
+"Jimmy"	Figure of Jimmy_icon	"Redragon"
+"Kangaroo"	Figure of kangaroo_icon	"Anymouse1968"
+"Koghh_clothed"	Figure of Koghh_clothed_icon	"Kupo Klein"
+"Korvin_blackcollar"	Figure of Korvin_blackcollar_icon	"Lyttathebug"
+"Korvin_blackcollar_face"	Figure of Korvin_blackcollar_face_icon	"Lyttathebug"
+"Korvin_pinkcollar"	Figure of Korvin_pinkcollar_icon	"Lyttathebug"
+"Korvin_pinkcollar_face"	Figure of Korvin_pinkcollar_face_icon	"Lyttathebug"
+"Lamia"	Figure of Lamia_icon	"Anymouse1968"
+"Latex Ermine_Defeat"	Figure of LatexErmine_icon	"Anymouse1968"	[only used in defeat]
+"Latex Ermine_Blue"	Figure of LatexErmineBlue_icon	"Anymouse1968"
+"Latex Ermine_Green"	Figure of LatexErmineGreen_icon	"Anymouse1968"
+"Latex Ermine_Indigo"	Figure of LatexErmineIndigo_icon	"Anymouse1968"
+"Latex Ermine_Pink"	Figure of LatexErminePink_icon	"Anymouse1968"
+"Latex Ermine_Red"	Figure of LatexErmineRed_icon	"Anymouse1968"
+"Latex Ermine_Teal"	Figure of LatexErmineTeal_icon	"Anymouse1968"
+"LeonardViolin"	Figure of LeonardViolin_icon	"SandySchreiber"
+"Lilith_boobs_icon"	Figure of Lilith_boobs_icon	"Kupo Klein"
+"Lilith_clothed"	Figure of Lilith_clothed_icon	"Kupo Klein"
+"Lilith_face"	Figure of Lilith_face_icon	"Kupo Klein"
+"Lilith_naked"	Figure of Lilith_naked_icon	"Kupo Klein"
+"Lindsey"	Figure of Lindsey_icon	"Anymouse1968"
+"Magic Drake"	Figure of MagicDrake_icon	"Anymouse1968"
+"Mammoth"	Figure of Mammoth_icon	"Boo3"
+"Mannequin"	Figure of Mannequin_icon	"Rastear"
+"MarcOrwell"	Figure of MarcOrwell_icon	"CrashBurnDraw"
+"Marc_face"	Figure of Marc_face_icon	"CrashBurnDraw"
+"Marc_fucked"	Figure of Marc_fucked_icon	"Laylo"
+"MasterMind"	Figure of MasterMind_icon	""
+"Megakitty"	Figure of Megakitty_icon	"BushyCat"
+"Mental Mouse"	Figure of MentalMice_icon	""
+"Messy Pig"	Figure of MessyPig_icon	"Anymouse1968"
+"Micaela"	Figure of Micaela_icon	"Kattzie"
+"Mike"	Figure of Mike_icon	"Darian821"
+"Monty_ass"	Figure of Monty_ass_icon	"Obieblu"
+"Monty_combat"	Figure of Monty_combat_icon	"Obieblu"
+"Monty_postcombat"	Figure of Monty_postcombat_icon	"Obieblu"
+"Monty_face"	Figure of Monty_face_icon	"Obieblu"
+"Monty_naked"	Figure of Monty_naked_icon	"Obieblu"
+"Mul_clothed"	Figure of Mul_clothed_icon	"Kupo Klein"
+"Mul_face"	Figure of Mul_face_icon	"Kupo Klein"
+"Nadia"	Figure of Nadia_icon	"Anymouse1968"
+"Naga"	Figure of Naga_icon	"Rastear"
+"Nermine"	Figure of Nermine_icon	"Anymouse1968"
+"Newt"	Figure of Newt_icon	"Anyare"
+"Ninja Cat_F"	Figure of NinjaCat_F_icon	"Bix707"	[only shown for female succumb ending]
+"Ninja Cat"	Figure of NinjaCat_M_icon	""
+"Orbul_clothed"	Figure of Orbul_clothed_icon	"Kupo Klein"
+"Orthas"	Figure of Orthas_icon	"The_Negative"
+"Paula"	Figure of Paula_icon	"Kikeri-arts"
+"Plush Lion"	Figure of PlushLion_icon	"Anymouse1968"
+"Pink Gel"	Figure of PinkGel_icon	"Rastear"
+"Pink Poodle"	Figure of PinkPoodle_icon	"Anymouse1968"
+"Rachel"	Figure of Rachel_icon	"o-kemono"
+"Ram"	Figure of Ram_icon	"Anymouse1968"
+"Reindeer"	Figure of Reindeer_icon	"MoT"
+"Rod"	Figure of Rod_icon	"The_Negative"
+"RondaSR"	Figure of RondaSR_icon	"uniformvixen"
+"Ryousei_face"	Figure of Ryousei_face_icon	"ValdericBlackstag"
+"Ryousei_fundoshi"	Figure of Ryousei_fundoshi_icon	"ValdericBlackstag"
+"Ryousei_wink"	Figure of Ryousei_wink_icon	"ValdericBlackstag"
+"Sally"	Figure of Sally_icon	"Furball"
+"Sandy"	Figure of sandy_icon	""
+"Sarah_clothed"	Figure of Sarah_clothed_icon	"Lyttathebug"
+"Sarah_face"	Figure of Sarah_face_icon	"Lyttathebug"
+"Sarah_face_naked"	Figure of Sarah_face_naked_icon	"Lyttathebug"
+"Sarah_naked"	Figure of Sarah_naked_icon	"Lyttathebug"
+"Septus"	Figure of Septus_icon	"Feralise"
+"Septus_face"	Figure of Septus_face_icon	"Cirrusthecloud"
+"SgtMarks"	Figure of SgtMarks_icon	"Anyare"
+"Shadow Beast"	Figure of ShadowBeast_icon	"Hioshiru"
+"Shemale Smooth Collie"	Figure of SSCollie_icon	"Anymouse1968"
+"Siamese Cat"	Figure of SiameseCat_icon	"RedCoatCat"
+"Sidney_wusky"	Figure of Sidney_wusky_Icon	"Anymouse1968"
+"Sidney_vixen"	Figure of Sidney_vixen_Icon	"Anymouse1968"
+"Sidney_clothed"	Figure of Sidney_clothed_Icon	"Anymouse1968"
+"Skunkbeast Lord"	Figure of SkunkbeastLord_icon	"MoT"
+"Snow Bat"	Figure of SnowBat_icon	"Rosali"
+"Snow Leopard"	Figure of SnowLeopard_icon	"Anymouse1968"
+"Sonny_halfwool_jeans"	Figure of Sonny_halfwool_jeans_icon	"The_Negative"
+"Sonny_halfwool_nude"	Figure of Sonny_halfwool_nude_icon	"The_Negative"
+"Sonny_shaved_jeans"	Figure of Sonny_shaved_jeans_icon	"The_Negative"
+"Sonny_shaved_nude_icon"	Figure of Sonny_shaved_nude_icon	"The_Negative"
+"Sonny_face"	Figure of Sonny_face_icon	"The_Negative"
+"Spartan"	Figure of Spartan_icon	"Obieblu"
+"Stella"	Figure of Stella_icon	"Furball"
+"Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"
+"Thomas_erect"	Figure of Thomas_erect_icon	"Inkydemon"
+"Thomas_face"	Figure of Thomas_face_icon	"Inkydemon"
+"Thomas_soft"	Figure of Thomas_soft_icon	"Inkydemon"
+"Thought Eater"	Figure of ThoughtEater_icon	"Rastear"
+"Tiger Cop"	Figure of SgtMarks_icon	"Anyare"
+"Tigress Hooker"	Figure of TigressHooker_icon	"Sharei"
+"TinyTim"	Figure of TinyTim_icon	"Obieblu"
+"Tiny_In_Action"	Figure of TinyTim_In_Action_icon	"Obieblu"
+"Toven_clothed"	Figure of Toven_clothed_icon	"Kupo Klein"
+"Toven_naked"	Figure of Toven_naked_icon	"Kupo Klein"
+"Triceratops"	Figure of Triceratops_icon	"HBruton"
+"Urik_ass"	Figure of Urik_ass_icon	"Kupo Klein"
+"Urik_clothed"	Figure of Urik_clothed_icon	"Kupo Klein"
+"Urik_face"	Figure of Urik_face_icon	"Kupo Klein"
+"Urik_naked"	Figure of Urik_naked_icon	"Kupo Klein"
+"Valerie"	Figure of Valerie_icon	"Sususmiles"
+"Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"
+"Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"
+"Wildcat"	Figure of Wildcat_icon	"Strype"
+"Yatur_clothed"	Figure of Yatur_clothed_icon	"Kupo Klein"
+"Yolanda"	Figure of Yolanda_icon	"SandySchreiber"
+"Yuppie Mink_F"	Figure of YuppieMink_icon	"Anymouse1968"	[only shown for female version]
+"Zebra"	Figure of Zebra_icon	"Purplepardus"
+"Zigor"	Figure of Zigor_icon	"AugurMew"
 
 artistcredits is an action applying to nothing.
 
@@ -396,16 +568,17 @@ carry out artistcredits:
 	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
 	say "     Bobcat by Uniformvixen @ furaffinity.net[line break]";
 	say "     Bottlenose Toy by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Catgirl by Valen @ ?[line break]";
 	say "     Cat Ninja (female) by Bix707 @ furaffinity.net[line break]";
 	say "     Chocolate Lab by SparklePens @ furaffinity.net[line break]";
 	say "     Cougar by catnamedfish @ furaffinity.net[line break]";
 	say "     Dark Elf by Kattzie @ furaffinity.net[line break]";
-	say "     Homo Sapiens by Astrobullet @ y-gallery.net[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
 	say "     Donkeywoman by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Dracovixentaur by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
+	say "     Ewe by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Feline (females) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Feral Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
 	say "     Feral Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
@@ -418,7 +591,7 @@ carry out artistcredits:
 	say "     Helot by Obieblu @ tumblr.com[line break]";
 	say "     Hermaphrodite Gryphon by dbd @ furaffinity.net[line break]";
 	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Homo Sapiens by Astrobullet @ y-gallery.net[line break]";
+	say "     Homo Sapiens by Astro @ y-gallery.net[line break]";
 	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
 	say "     Imp by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Incubus by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
@@ -542,13 +715,13 @@ carry out artistcredits:
 	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sam (as Vixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sandra by Trav @ ???[line break]";
-	say "     Sarah by Lyttathebug @ deviantart.com[line break]";
+	say "     Sarah by Lyttathebug @ deviantart.com[line break]";		
 	say "     Septus by Feralise @ furaffinity.net[line break]";
 	say "     Septus (face) by Cirrusthecloud @ https://www.furaffinity.net/user/cirrusthecloud/[line break]";
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";
 	say "     Stella by Furball @ furaffinity.net[line break]";
 	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
+	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";		
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
 	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
@@ -572,5 +745,65 @@ carry out artistcredits:
 	say "     Skunkbeast Lord Battle by MoT @ furaffinity.net[line break]";
 	say "     Spidertaur by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Talov & Kerr by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+
+ArtistBanning is an action applying to nothing.
+
+understand "artist block" as ArtistBanning.
+understand "artist ban" as ArtistBanning.
+understand "artist disable" as ArtistBanning.
+understand "artistblocking" as ArtistBanning.
+understand "artistsblocking" as ArtistBanning.
+understand "artistbanning" as ArtistBanning.
+understand "artistsbanning" as ArtistBanning.
+understand "ban artist" as ArtistBanning.
+understand "ban artists" as ArtistBanning.
+understand "block artist" as ArtistBanning.
+understand "block artists" as ArtistBanning.
+understand "disable artist" as ArtistBanning.
+understand "disable artists" as ArtistBanning.
+
+carry out ArtistBanning:
+	artistbanmenu;
+
+to artistbanmenu: [more compact version, unfinished.]
+	let artistlist be {"Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Lyttathebug", "MadTurtle", "MoT", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Sharei", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Wemd", "Xenotropos"};
+	now calcnumber is -1;
+	let countnumber be 1;
+	let abmexit be 0;
+	while abmexit is 0:
+		say "[bold type]Artists:[roman type][line break]";
+		while countnumber <= number of entries in artistlist:
+			say "[link][entry countnumber of artistlist][as][countnumber][end link]: [run paragraph on]";
+			BlockCheck entry countnumber of artistlist;
+			if remainder after dividing countnumber by 5 is 0:
+				LineBreak;
+			increase countnumber by 1;
+		say "[link]Exit Menu[as]0[end link][line break]";
+		now countnumber is 1;
+		while 1 is 1:
+			say "Choice? (0-[number of entries in artistlist])>[run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= number of entries in artistlist:
+				break;
+			else:
+				say "Invalid Entry";
+		if calcnumber is 0:
+			now abmexit is 1;
+		else if calcnumber >= 1 and calcnumber <= number of entries in artistlist:
+			artistbanswitch entry calcnumber of artistlist;
+
+to BlockCheck (x - text):
+	if x is not listed in BlockList of player:
+		say "[bold type][special-style-1]On  [roman type]";
+	else:
+		say "[bold type][special-style-2]Off  [roman type]";
+		
+to artistbanswitch (name - text):
+	if name is not listed in BlockList of player:
+		add name to Blocklist of player;
+		say "[name] Blocked!";
+	else if name is listed in Blocklist of player:
+		remove name from Blocklist of player;
+		say "[name] Unblocked!";
 
 FS Graphics ends here.

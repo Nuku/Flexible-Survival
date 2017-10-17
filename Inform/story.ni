@@ -4988,6 +4988,8 @@ Include Text Capture by Eric Eve.
 [Locations]
 Include Apocalypse Store by DrGryphon.
 Include Approaching the Capitol Building for FS by Guest Writers.
+Include Astroslide Field Locker-room by Kernog.
+Include Astroslide Football Field by Kernog.
 Include Beach by Speedlover.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
@@ -5268,7 +5270,7 @@ Include Latex Mistress For Fs by Stripes.
 Include Latex Wolf for FS by Stripes.
 Include Leopardman by Sarokcat.
 Include Liquidshifter by Ssely.
-Include Lizard Girl For Fs by Damaged.
+Include Lizard Girl by Damaged.
 Include Lusty Skunk by Nuku Valente.
 Include Magic Drake by Stripes.
 Include Male Peacock for FS By Guest Writers.
@@ -5489,6 +5491,7 @@ Include Rane by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
 Include Richard by Rikaeus.
 Include RodAndRonda by Stripes.
+Include Roman by Kernog.
 Include Sally by Stripes.
 Include Sam for FS by Stripes.
 Include Santa Claws by Wahn.
@@ -5505,7 +5508,9 @@ Include Sven by Stripes.
 [Include Sylvia by Prometheus.] [WIP]
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
+Include Tenvale Gorillas Football Team by Kernog.
 Include Thomas by Wahn.
+Include Thunderbolt by CrimsonAsh.
 Include Timothy by Sarokcat.
 Include Tristian by Verath.
 Include Urik by Wahn.

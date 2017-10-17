@@ -192,7 +192,7 @@ the scent of Sunken Ship is "You can't smell anything while underwater.".
 Church Hall is a room. "     The inside of the Church is dim but not dark - relaxing, one could say. It seems all terribly normal, wooden pews filling much of the long hall, a smattering of heads sitting here and there. There's definitely no lack of space. There are some signs that whatever religion is practiced here, it's not anything you recognise. There are no crosses or other recognisable religious symbols. There are several freshly painted motifs however and they all seem to depict some great stylised beast offering protection and shelter to those near it. At the far end of the church, there seems to be a recessed door that, based on the outside of the building, must lead down some stairs.".
 
 North of Beach Plaza is Church Hall.
-There is a Notice Board in the Church Hall. It is rooted in place.
+There is a Church Notice Board in the Church Hall. It is rooted in place.
 There is a Confession Booth in the Church Hall. "Standing against one wall, the dark wood of the large confession booth catches the eye. It has been modified to allow even a large creature such of those Panther Taurs to fit inside.". It is Rooted in place.
 The invent of Church Hall is { "nullifying powder" }.
 
@@ -200,7 +200,7 @@ instead of sniffing Church Hall:
 	say "The church smells of incense, arousal and the sea air from outside.";
 
 [Definitions]
-understand "board" as Notice Board.
+understand "board" as Church Notice Board.
 understand "beach" as Beach Plaza.
 understand "church" as Beach Plaza.
 
@@ -209,7 +209,7 @@ Table of board entries
 entry text	entry trigger
 "The Church would like to issue a warning to all roaming the district at night. Strange flickering green light has been seen behind the sheds north of the beach. It is advised no one visit this area."	"[hellhoundtoggle]"
 
-Instead of examining the Notice Board:
+Instead of examining the Church Notice Board:
 	say "     Covering the notice board are many scraps of paper, most worse for wear. But at the same time most seem relatively new. Huh? Guess paper is a tad hard to come by. Most of them seem to be personal ads. Should those be on a church notice board?![line break]Anyways, here are a few that catch your attention.[line break]";
 	repeat through Table of board entries:
 		say "[line break][entry text entry][entry trigger entry]";
