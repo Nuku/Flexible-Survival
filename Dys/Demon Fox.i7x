@@ -2,6 +2,15 @@ Version 1 of Demon Fox by Dys begins here.
 
 "Adds a Demon Fox enemy and infection."
 
+[ DemonFoxStatus determines what path you've taken with the fox.          ]
+[   0 = no encounter yet                                                  ]
+[   10 = encountered and lost                                             ]
+[   20 = encountered and submitted                                        ]
+[   30 = encountered and fled                                             ]
+[   40 = encountered and won                                              ]
+
+DemonFoxStatus is a number that varies. DemonFoxStatus is usually 0.
+
 Section 0 - Flags
 
 when play begins:
@@ -17,31 +26,19 @@ to say DemonFoxDefeat:
 	if inasituation is true:
 		say "";
 	else:
-		say "     You were beaten by the creature.";
-		if cocks of player > 0:
-			say "     Additional paragraph for a male/herm player.";
-		else:
-			say "     Additional paragraph for a female player.";
+		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Dys know on the FS Discord.";
 
 to say DemonFoxVictory:
 	if inasituation is true:
 		say "";
 	else:
-		say "     You were victorious over the creature.";
-		if libido of player > 40:
-			say "     Additional paragraph for a player with a libido greater than 40.  Do they want sex?";
-			if the player consents:
-				say "     The player agreed to sex.  Fun times begin.";
-				if cunts of player > 0:
-					say "     The player is female/herm, so sex goes like this for her.";
-				else:
-					say "     The player must be male, so sex goes like this for him.";
-			else:
-				say "     Awww!  The player refused the sex.  Party pooper.";
+		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Dys know on the FS Discord.";
 
 to say DemonFoxDesc:
-	say "     Monster description paragraph 1.";
-	say "     Monster description paragraph 2.";
+	if inasituation is true:
+		say "";
+	else:
+		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Dys know on the FS Discord.";
 
 
 Section 2 - Monster Insertion
@@ -50,7 +47,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 when play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Demon Fox";
@@ -60,13 +56,13 @@ when play begins:
 	now desc entry is "[DemonFoxDesc]";
 	now face entry is "that of a demonic fox, with a long and narrow muzzle, a maw full of sharp teeth, pointy ears, and a set of horns protruding from the top of it. You're eyes glow a bright yellow and you have vertically slitted pupils. Black and yellow fur covers it completely";
 	now body entry is "is quadrupedal in nature, and beastly in stature. Your hulking form is somehow both lithe and strong, conveying a sense of immense power. A deep black fur covers your back and sides, with a bright yellow covering your stomach and chest";
-	now skin entry is "covered in thick and surprisingly soft fur";
+	now skin entry is "thick and surprisingly soft fur. Beneath the fur lies black";
 	now tail entry is "You have three long tails, which are jet black up until the tip, which seems to burn with an demonic yellow fire.";
 	now cock entry is "[one of]vulpine[or]knotted[or]fox[or]demonc[at random]";
 	now face change entry is "as you feel a long and tapered muzzle growing outwards. Your ears shift to the top of your head, becoming triangular in shape and growing a bit larger. A sudden pain rushing through your head as two horns suddenly sprout just behind your ears";
 	now body change entry is "your body shifts, forcing you onto all fours. Both you arms and legs lengthen, and your body in general also grows larger. Your legs snap and crack as they rearrange themselves, becoming digitigrade. Your hands and feet become that of a fox's paws, and your nails turn into long and sharp claws";
 	now skin change entry is "fur begins to sprout all over your body, with differing colors on different parts. Your chest and lower chin grow a bright yellow fur, while the rest of your body grows a deep jet-black instead";
-	now ass change entry is "a tails suddenly sprouts from the base of your spine, growing upwards of three feet long before an immense heat runs down the new appendage. It pulls apart into three distict tails, each long and fluffy, ending in a burning yellow flame";
+	now ass change entry is "a tails suddenly sprouts from the base of your spine, growing upwards of three feet long before an immense heat runs down the new appendage. It pulls apart into three distinct tails, each long and fluffy, ending in a burning yellow flame";
 	now cock change entry is "its tip tapers out, becoming distinctly vulpine. The shaft bulges and ripples as four distinctly draconic ridges form along the underside, and it's color changes, becoming dark gold at the base, and a bright yellow at the tip. A large knot forms at the base. A steady stream of molten looking pre dribbles from your tip before the whole thing recedes back into it's new sheath";
 	now str entry is 41;
 	now dex entry is 30;
@@ -75,9 +71,9 @@ when play begins:
 	now int entry is 50;
 	now cha entry is 40;
 	now sex entry is "Male";
-	now hp entry is 155;
-	now lev entry is 13;
-	now wdam entry is 40;
+	now hp entry is 200;
+	now lev entry is 15;
+	now wdam entry is 60;
 	now area entry is "Nowhere";
 	now cocks entry is 1;
 	now cock length entry is 32;
@@ -91,12 +87,12 @@ when play begins:
 	now libido entry is 45;
 	now loot entry is "demon fox fur";
 	now lootchance entry is 50;
-	now scale entry is 3;
+	now scale entry is 4;
 	now body descriptor entry is "[one of]beastly[or]fluffy[or]lithe[or]hulking[at random]";
 	now type entry is "vulpine";
 	now magic entry is false;
 	now resbypass entry is false;
-	now non-infectious entry is false;
+	now non-infectious entry is true;
 	blank out the nocturnal entry;
 	now altcombat entry is "default";
 
@@ -110,14 +106,12 @@ name	desc	weight	object
 demon fox fur is a grab object.
 
 instead of sniffing demon fox fur:
-	say "The fur has a distict, musky smell to it, reminding you of the fox you got it from.";
+	say "The fur has a distinct, musky smell to it, reminding you of the fox you got it from.";
 
 the usedesc of demon fox fur is "[DemonFoxFurUse]";
 
 to say DemonFoxFurUse:
-	say "You shrug before opening you mouth and eating the fur. Oddly enough, it almost seems to heat up, before it disolves in your mouth, a strong wave of heat rushing through your body.";
-	if libido of player < 75:
-		now libido of player is 75;
+	say "You shrug before opening you mouth and eating the fur. Oddly enough, it almost seems to heat up, before it dissolves in your mouth, a strong wave of heat rushing through your body.";
 
 demon fox fur is infectious. The strain of demon fox fur is "Demon Fox".
 
@@ -125,12 +119,33 @@ Section 4 - Tome Specific Scenes
 
 to say DemonFoxFirstLoss:
 	say "     The fox rapes you. Oh noes.";
+	now DemonFoxStatus is 10; [lost]
+	WaitLineBreak;
+
+to say DemonFoxFirstSubmit:
+	setmonster "Demon Fox";
+	say "     You raise your hands in defeat, signalling to the fox that you want no trouble. He leers at you, baring his maw full of razor sharp teeth at you. 'I knew you'd submit to your new master...' he says before advancing on you. He pounces, pinning you under his massive weight once more, but this time he doesn't stop there. Before you know what's happening, he's forced his muzzle up against your mouth, his tapered tongue slipping inbetween your lips with ease. [if player is submissive]You can't help but let out a moan as his ridiculously long organ explores your mouth.[else]You have to resist the urge to gag as his ridiculously long organ ravages your mouth.[end if] His tongue flicks around the inside of your mouth a few more times before he pulls back, a string of saliva connecting the two of you. 'See?' he pants. 'That wasn't so bad, now was it?'";
+	say "     You're not given a chance to reply as you feel that tongue moving across your neck and down your torso, leaving behind a trail of slick saliva. [if cocks of player > 0]Eventually, it finds its way to your cock[smn] and balls, caressing them.[end if]You have to stifle a gasp as the slimy organ slips between your ass cheeks. He laps against your hole a few times, coating you in his saliva before he [if anallevel is 3]plunges his tongue inside you, slipping past your tight ring. He gives you a few licks there as well before he [end if]moves on. He raises his head to meet your gaze before he lets out a possesive growl.";
+	WaitLineBreak;
+	say "     'Get on all fours,' he commands. You hastily obey, presenting your hindquarters to him, and he rumbles in approval of what he sees. [if player is mpreg_ok]'I'm gonna enjoy putting my pups in you,'[else]'I'm gonna enjoy taking you,'[end if] he growls. You feel his weight upon you once more as he mounts you, lining his massive cock up with your hole before thrusting nearly all the way in with one harsh movement. You gasp in pain from the sudden intrusion, but that doesn't discourage him. He pulls out of you just as roughly as he entered, the ridges along the underside of his cock wracking you with both pain and pleasure. He thrust back in once more, this time with a little less resistance. This cycle keeps repeating, growing in speed until he's rutting against you, his massive knot slapping against your ring loudly.";
+	say "     With a howl of pleasure, he shoves forward one last time, his knot spreading you painfully wide before it manages to pop in. Once it's inside, it swells even larger, firmly locking the two of you together. [if cocks of player > 0]The pressure on your prostate is enough to set you off, spilling your load onto to ground beneath you. [end if] He gives one last growl before you feel his sharp teeth on your shoulder. They dig into your flesh as he bites down. You can feel his cock releasing it's burning semen inside you, rope after rope of glowing cum erruping into your bowels. By the time he's finished climaxing, your belly is decently rounded out, and you can't help but moan from the heat of the fluids inside of you. With his orgasm over, he releases his hold on you, and harshly yanks his knot out of you. 'That was fun, pet,' he says. 'I hope we're able to do this once more sometime soon.'";
+	say "[mimpregchance]";
+	WaitLineBreak;
+	say "     You turn to look at the fox once more, only to be greeted with empty space. It seems the fox has gone for now... Perhaps you could summon him once more with the book, if you so desire.";
+	infect "Demon Fox";
+	infect "Demon Fox";
+	now DemonFoxStatus is 20; [submitted]
+	WaitLineBreak;
 
 to say DemonFoxFirstFlee:
-	say "     You attempt to flee, but he catches you and rapes you. Oh noes.";
+	say "     You snatch up the tome as you flee, clutching the still open book to your chest closely. The fox is hot on your heels, determined to not let you escape. 'Get back here!' he shouts. You speed up even further, determined to escape the hellish beast before you turn into an alleyway. As you race further down the narrow space, you round a corner only to be greeted by a rather tall brick wall. Whirling around, you see the fox has had no trouble keeping up with you.";
+	say "     'You've got nowhere left to go,' he growls out. As much as you wish that weren't true, you realize that he's correct. You're not really given any extra time to contemplate this however, as he suddenly crouches down, readying himself to pounce on you. Desperately, you hold the tome up, facing him. He leaps, and you close your eyes in preparation to be pinned beneath him once more. A few seconds pass before you realize that he still hasn't collided with you, and you tentatively open your eyes once more. Looking around, the fox is nowhere to be seen.";
+	now DemonFoxStatus is 30; [Fled from the fox]
+	WaitLineBreak;
 
 to say DemonFoxFirstVictory:
-	say "     You might choose to fuck him. Iunno.";
-
+	say "     You strike the defeated demon one more time for good measure, before he <insert scene here>";
+	now DemonFoxStatus is 40; [won]
+	WaitLineBreak;
 
 Demon Fox ends here.

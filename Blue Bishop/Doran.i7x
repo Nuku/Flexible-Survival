@@ -181,7 +181,7 @@ to say beatdoran:
 		[]
 		if cunts of player > 0 and cunt length of player > 4:
 			choose a blank row from table of fucking options;
-			now title entry is "Have him eat your cunt";
+			now title entry is "Have him eat out your cunt";
 			now sortorder entry is 3;
 			now description entry is "Have the dragon eat out your pussy";
 		[]
@@ -216,7 +216,7 @@ to say beatdoran:
 							say "[dorvic_1]";
 						-- "Have him suck your dick":
 							say "[dorvic_2]";
-						-- "Have him eat your cunt":
+						-- "Have him eat out your cunt":
 							say "[dorvic_3]";
 						-- "Ride the dragon":
 							say "[dorvic_4]";
@@ -331,7 +331,6 @@ to say dorvic_4: [cunt sex]
 		say "     Eventually, you pull yourself free of the dragon's now-softened organ, stepping off of him.";
 		say "     'Oh, my victor is quite impressive at being able to take me.' He offers his praise before getting back up, taking a moment to regain his posture. 'That was satisfying! Perhaps they would be interested in another go sometimes down the line?' He goes on to explain where he resides. Apparently there's a cave within [bold type]Rocky Outcropping[roman type] not far from here, and his instructions are clear enough that you should have no issue getting there. 'Doran's the name, by the way.'";
 	say "     Finished, he turns to depart in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
-
 
 to say dorvic_5: [anal sex]
 	say "     With some curiosity, your eyes wander down upon the dragon's more private regions. Already aroused at the prospect of your imminent exploitation, you can see his exposed, fleshy dick already emerged from the ";
@@ -573,7 +572,7 @@ to say dorsexprot: [Doran Sex Protocol]
 			say "[bold type]Choices:[roman type][line break]";
 			say "(1) [if cocks of player > 0][link]Mount [ghim][as]1[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 			say "(2) [if cocks of player > 0][link]Suck your dick[as]2[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
-			say "(3) [if cunts of player > 0][link]Eat your cunt[as]3[end link][else][italic type]Female-specific interaction[roman type][end if][line break]";
+			say "(3) [if cunts of player > 0][link]Eat out your cunt[as]3[end link][else][italic type]Female-specific interaction[roman type][end if][line break]";
 			say "(4) [if cunts of player > 0][link]Ride [ghim][as]4[end link][else][italic type]Female-specific interaction[roman type][end if] [if cunts of player > 0 and cunt length of player < 8][italic type]- Too small![roman type][end if][line break]";
 			say "(5) [link]Ride [ghim] anally[as]5[end link] [if scalevalue of player < 2 and player is not twistcapped][italic type]- Too small![roman type][end if][line break]";
 			say "(6) [link]Receive Rimjob[as]6[end link][line break]";
@@ -3904,11 +3903,11 @@ to say dorrptks:
 
 Chapter 5 - Miscellaneous
 
-[blued is an action applying to nothing.  [Developer Cheat]
+blued is an action applying to nothing.  [Developer Cheat]
 understand "blue dawn" as blued.
 carry out blued:
 	say "It is done.";
-	now Rocky Outcropping is known;]
+	now Rocky Outcropping is known;
 
 to say doranmusing: [Requires first talking to Doran]
 	say "     You decide to summon Velos before a slightly confused Doran. It takes a moment for the serpent to oblige this request, and when [ghe] pulls out and sees the [gdragon], [ghe] immediately cries out in abject terror. Doran [ghim]self looks equally terrified at the sight of the serpent.";
