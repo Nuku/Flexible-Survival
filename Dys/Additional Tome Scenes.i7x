@@ -148,6 +148,16 @@ to say DemonFoxFirstEncounter:
 	say "     Out of nowhere, you're tackled to the ground! A large weight is pressing down upon your back and feel the hot breath of something along the back of your neck. Pinned as you are, you're unable to get a good look at your assailant, even as you feel sharp claws rip through your clothing, leaving you fully exposed to whatever it is that's attacking you. Suddenly, you feel a long, fluffy object wrapping around your midsection before it hoists you into the air, tossing you back onto the ground on your back. You're eyes widen and you let out a gasp as you see the huge demonic fox you read about earlier standing over you.";
 	say "     Before you get a chance to react, the fox has you pinned once more, it's massive forepaws pinning you to the ground as it snarls in your face. 'Seems like I've finally got something to play with,' he says, surprising you slightly. 'I'm going to enjoy [if player is mpreg_ok]breeding[else]fucking[end if] you like the bitch you [if player is submissive]are[else]should be[end if].'";
 	WaitLineBreak;
+	say "     Mustering your strength, you manage to throw the beast off of you, causing him to let out a surprised grunt. You quickly scramble to your feet and ready yourself for a fight. 'Oh, so you're a fiesty one, eh?' he asks, licking his chops and narrowing his eyes at you. 'I like that...'";
+	now inasituation is true;
+	challenge "Demon Fox";
+	if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "[DemonFoxFirstLoss]";
+	else if fightoutcome is 30: [fled]
+		say "[DemonFoxFirstFlee]";
+	else if fightoutcome < 20: [player won]
+		say "[DemonFoxFirstVictory]";
+	now inasituation is false;
 
 Section 5 - Influence system
 
@@ -172,7 +182,7 @@ an everyturn rule:
 			if TomeTimer - turns >= 8:
 				say "     You can't help but feel drawn to the book inside your bag. The [bold type]ancient tome[roman type] really seems like it wants you to [if TomeInteractions is 0]read it, now that you finally can[else]read it once more[end if].";
 				now TomeTimer is turns;
-	if DemonFoxRead is true and DemonFoxInteractions is 0 and (cocks of player is not 0 and cunts of player is 0) and TomeTimer - turns >= 4 and a random chance of 1 in 3 succeeds and daytimer is night:
+	if DemonFoxRead is true and DemonFoxInteractions is 0 and (cocks of player is not 0 and cunts of player is 0) and TomeTimer - turns >= 4 and daytimer is night:
 		say "[DemonFoxFirstEncounter]";
 	if TentacleRead is true and TentacleInteractions is 0 and (cocks of player is not 0 and cunts of player is 0) and TomeTimer - turns >= 4 and a random chance of 1 in 3 succeeds:
 		say "     You're raped by a tentacle monster! Oh noes!";
