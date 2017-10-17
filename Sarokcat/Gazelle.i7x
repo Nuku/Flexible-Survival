@@ -81,7 +81,7 @@ When Play begins:
 	now name entry is "Gazelle";
 	now attack entry is "[one of]She leaps forward, slamming into you roughly[or]Lowering her head, she points her sharp horns at you as she charges.[or]Leaping up she lashes out at you with her hoof-like feet![or]Dancing forward she lashes out with her hoof like hand.[or]Springing forward, she slams her body into you, knocking you down.[at random]";
 	now defeated entry is "[gazelle loss]";
-	now victory entry is  "[gazelle attack]";
+	now victory entry is "[gazelle attack]";
 	now desc entry is "[mongendernum 5]     Wandering down the zoo paths, you come across a small group of rather human-like gazelles. Their short muzzles and sharp horns move happily as they graze on the topiary with thin cocks sprouting from between their legs, above their obviously female openings, with soft pert breasts resting on their chests. Spotting you they immediately freeze. Before you can even open your mouth to speak, most of them bolt in different directions, although one of them charges right at you, intent on protecting the rest of the herd! You have no choice but to brace yourself for battle!";
 	now face entry is "a short gazelle-like muzzle, it being a blend of gazelle and human features, with large bright eyes and sharp backwards pointing horns rising above your head"; [You have a (your text) face."]
 	now body entry is "lean and lithe, your legs are well built for leaping and jumping as you balance on your hoof-like feet, your arms narrow and slender and the tips of your fingers covered in hoof-like nails";[ Body Description, format as the text "Your Body is (your text)"]

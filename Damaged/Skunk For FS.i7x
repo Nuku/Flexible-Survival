@@ -170,7 +170,7 @@ When Play begins:
 	now defeated entry is "[skunk_defeat]";
 	now victory entry is "[skunk_vict]";
 	now desc entry is "[skunk_desc]";[ Description of the creature when you encounter it.]
-	now face entry is "have a large-muzzled female skunk's head";[ Face description, format as the text "Your face is (your text)."]
+	now face entry is "that of a large-muzzled female skunk's";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "curvaceous and screams 'female and needs IT', men want to fuck you women want to be you... and fuck you";[ Body Description, format as the text "Your Body is (your text)."]
 	now skin entry is "[if looknow is 1]dark black fur contrasting with pure white down your front and a matching stripe down your back, completely covering your[else]black and white furred[end if]";[ skin Description, format as the text "You have (your text) skin."]
 	now tail entry is "A thick, black mass of fur blossoms from your rear, growing in size until it's reached just above your head and then bending gracefully near the tip.  A pair of white stripes travel up its length, completing the effect.";[ Tail description, write a whole Sentence or leave blank. ]
@@ -198,8 +198,8 @@ When Play begins:
 	now breast size entry is 3;      [-Size of breasts infection will try to attain -]
 	now male breast size entry is 0; [- Breast size for if Sex="Male", usually zero. -]
 	now cunts entry is 1;            [- if sex = "Female or both", indicates the number of female sexes infection will grant you.-]
-	now cunt length entry is 14;     [- Length of female sex  infection will attempt to give you. -]
-	now cunt width entry is 5;       [- Width of female sex  infection will try and give you -]
+	now cunt length entry is 14;     [- Length of female sex infection will attempt to give you. -]
+	now cunt width entry is 5;       [- Width of female sex infection will try and give you -]
 	now libido entry is 10;          [- Amount player Libido will go up if defeated -]
 	now loot entry is "skunk goo";   [- Loot monster drops, -]
 	now lootchance entry is 70;      [- Chance of loot dropping 0-100 -]
@@ -291,7 +291,7 @@ to say skunk heat end:
 
 
 to say skunk in heat:
-	say "[one of]You ache constantly for a male, preferably skunk, but as you think about a large rod pushing into you you realize that any would do.[or]You need to fuck, again and again and again and again.[or]You need to be filled by a skunk's breeding tool.[or]Thinking becomes harder as the need to mate pushes everything else from your mind.[or]You NEED to fill your cunt NOW![or]'Skunk kittens...', your mind tells you, 'Skunk kittens would be fun to have.'[at random]";
+	say "[one of]You ache constantly for a male, preferably skunk, but as you think about a large rod pushing into you, you realize that any would do.[or]You need to fuck, again and again and again and again.[or]You need to be filled by a skunk's breeding tool.[or]Thinking becomes harder as the need to mate pushes everything else from your mind.[or]You NEED to fill your cunt NOW![or]'Skunk kittens...', your mind tells you, 'Skunk kittens would be fun to have.'[at random]";
 	increase skunkready by 1;
 	increase libido of player by a random number between 5 and 10;
 

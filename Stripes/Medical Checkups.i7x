@@ -1,5 +1,5 @@
 Version 4 of Medical Checkups by Stripes begins here.
-[ Version  4.0 - Main Storyline tie-in - Stripes]
+[ Version 4.0 - Main Storyline tie-in - Stripes]
 [- Originally Authored By: Hellerhound -]
 
 Section 1 - Pediatrics Office
@@ -56,7 +56,7 @@ instead of conversing the Doctor Medea:
 			say "     There are more supplies I need to be able to expand the range of services I can provide to my patients. With those, I'll also be able to learn more about the nanites and their manipulations of the reproductive process,' she says with a grin. Clearly she knows she's got you over a barrel, leaving you stuck fetching whatever she wants.";
 			now hp of Doctor Matt is 21;
 	else if hospquest is 20:
-		say "     Speaking with the lizard doctor, you inform her that Dr. Mouse has sent you to obtain her case files and notes. You do your best to be intimidating, letting her know that this is not a request while still couching it in terms of medical cooperation and such. While  clearly at a disadvantage, the weak lizard seems only mildly interested in what you're saying at first. It's only when you make it clear that you want access to everything she's discovered about the effects of the infection in regards to pregnancy does she give you her full attention. 'Oh. Now why didn't you just say so?  I get threatened by every other patient that comes in here, but rarely do they take an interest in my work beyond their immediate needs.";
+		say "     Speaking with the lizard doctor, you inform her that Dr. Mouse has sent you to obtain her case files and notes. You do your best to be intimidating, letting her know that this is not a request while still couching it in terms of medical cooperation and such. While clearly at a disadvantage, the weak lizard seems only mildly interested in what you're saying at first. It's only when you make it clear that you want access to everything she's discovered about the effects of the infection in regards to pregnancy does she give you her full attention. 'Oh. Now why didn't you just say so?  I get threatened by every other patient that comes in here, but rarely do they take an interest in my work beyond their immediate needs.";
 		say "     'As you've likely witnessed, the nanites have numerous effects on pregnancy and reproduction in general";
 		if medeaget < 3:
 			say "     I'm terribly under-supplied at the moment and thus have only be able to learn a little while assisting the rare patient seeking my help. Were you able to assist me in improving conditions here, I might be able to do and learn more,' she says with a grin.";

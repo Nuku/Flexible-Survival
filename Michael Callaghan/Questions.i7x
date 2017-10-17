@@ -351,7 +351,7 @@ Section 3 - Rules for text questions
 
 Text question rules is a rulebook.
 
-The text question rules have  outcomes exit (success), retry (failure) and parse (failure).
+The text question rules have outcomes exit (success), retry (failure) and parse (failure).
 
 The first text question rule (this is the remove punctuation from text questions rule):
 	if punctuation removal is true:
@@ -521,7 +521,7 @@ Section: Introduction
 
 During the normal course of a game, the parser responds to commands given by the player.  If we type look, the parser interprets the command and displays a description of the current room; if we type N, the player heads North (if that exit is available, and so on.
 
-Occasionally, we may want to ask specific questions and process the answers.  Examples may be asking the player's name or age or displaying a menu of options from which the player selects a choice.   Answers to these types of questions fall outside the range of the normal parser functions.  Therefore we need to intercept the player's answers to these types of questions and respond to them separately.
+Occasionally, we may want to ask specific questions and process the answers.  Examples may be asking the player's name or age or displaying a menu of options from which the player selects a choice.  Answers to these types of questions fall outside the range of the normal parser functions.  Therefore we need to intercept the player's answers to these types of questions and respond to them separately.
 
 This extension provides a framework that can be used to ask different types of questions.  The mechanics are hidden behind the scenes to allow us to concentrate on asking and responding to a question without having to implement the framework ourselves.
 
@@ -690,7 +690,7 @@ If we set the current prompt to "", the relevant default prompt outlined above w
 
 Section: Combining the question and prompt
 
-We can combine the question and the prompt.   To do so, we set the current question to a blank string and the question prompt to the question that we want to ask:
+We can combine the question and the prompt.  To do so, we set the current question to a blank string and the question prompt to the question that we want to ask:
 
 	now current question is "";
 	now current prompt is "What is your name? >";

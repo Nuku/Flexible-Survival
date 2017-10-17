@@ -21,7 +21,7 @@ to say Gryphondesc:
 
 to say losetoGryphon:
 	say "     The gryphon knocks you to the floor, pinning you under his feathery weight. With an angry growl-chirp, he begins picking intently at your gear; he's trying to undress you. Not wanting to get sliced by his sharp beak and claws, you put your hands up in a motion you hope he understands as surrender and begin slowly disrobing yourself.";
-	say "      Finally, you're naked before the beast. He clearly enjoyed the show, as his cock is slipping out of his furry sheath as he looks your body over approvingly.";
+	say "     Finally, you're naked before the beast. He clearly enjoyed the show, as his cock is slipping out of his furry sheath as he looks your body over approvingly.";
 	if waiterhater is 0, wait for any key;
 	LineBreak;
 	if a random chance of 3 in 4 succeeds: [Mounted by gryphon]
@@ -181,7 +181,7 @@ When Play begins:
 	now victory entry is "[losetoGryphon]"; [ Text when monster wins. Change 'Gryphon' as above. ]
 	now desc entry is "[Gryphondesc]";
 	now face entry is "the visage of a majestic eagle, feathered and beaked"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a lion, fully quadrupedal, with powerful muscles rippling under your skin that speak to your predatory nature";
+	now body entry is "that of a lion, fully quadrupedal, with powerful muscles rippling under your skin that speak of your predatory nature";
 	now skin entry is "golden-furred and feathered"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have a long, leonine tail hanging over your rear."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]knotted[or]leonine[or]tapered[at random]";

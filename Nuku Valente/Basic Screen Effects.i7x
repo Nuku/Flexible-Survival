@@ -462,7 +462,7 @@ Note that attempting to compile this example for Glulx will fail, because it use
 		say "[rose up][rose northwest][rose north][rose northeast]".
 
 	To say middle rose:
-		say "    [rose west] . [rose east]";
+		say "     [rose west] . [rose east]";
 
 	To say bottom rose:
 		say "[rose down][rose southwest][rose south][rose southeast]".

@@ -119,7 +119,7 @@ When Play begins:
 	now name entry is "Giant"; [Name of your new Monster]
 	now attack entry is "The [one of]giant[or]giant man[or]lumbering brute[or]towering creature[at random] [one of]bashes you with a massive fist[or]slaps you with an enormous backhand, knocking you back[or]grabs you in his crushing grip before throwing you to the ground[or]clobbers you with his makeshift club[or]swings his massive club into you[or]stomps a giant foot down onto you[at random]!";
 	now defeated entry is "[beatthegiant]";
-	now victory entry is  "[losetogiant]";
+	now victory entry is "[losetogiant]";
 	now desc entry is "[giantdesc]";
 	now face entry is "a human head with coarse, brown hair, just significantly larger";
 	now body entry is "a normal human body, just grown to gigantic proportions. You have a strong, muscled body to help support your great height. At around fifteen feet tall, it's quite difficult for you to get in and out, requiring you find (or make) alternate entrances or squirm your way through doorways and move on all fours while exploring. Probably best to stick to open areas";
@@ -144,7 +144,7 @@ When Play begins:
 	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 45; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 40; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 40; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2; [ Number of Breasts infection will give you. ]
 	now breast size entry is 18; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]

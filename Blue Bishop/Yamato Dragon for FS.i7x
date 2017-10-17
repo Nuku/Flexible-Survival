@@ -792,7 +792,7 @@ to say YamatM_5: [Anal Catching]
 			say "     '[one of]This should be fun to watch[or]Good luck[or]Take all the time you need[at random]...' Forcing yourself past each crevice sends pleasure down your spine, your tainted revels a little surprising to the dragon as you begin to build a motion. Occasional gouts of precum sputtering from your hole, you easily manage the whole ordeal. Shall you go rough and fast? Otherwise, you'll keep things slow.";
 			if player consents:
 				say "     As you begin to kick it into high gear, the creature can't help but writhe with each descent, as though unprepared for how well you'd handle him. Though your strange talent allows you to handle this ordeal without immediately succumbing, it nonetheless tests the very limits of your ability, your body becoming more exhausted with each passing second.";
-				say "     Once you can't take it anymore you firmly hilt with him one last time. More than enough to set you off, [if cocks of player > 0]your cock[smn] paint the dragon with your [cum load size of player] load[else if cunts of player > 0]your  unattended cunt[sfn] gushing and staining the dragon[else]much in spite your lack of proper outlet[end if].";
+				say "     Once you can't take it anymore you firmly hilt with him one last time. More than enough to set you off, [if cocks of player > 0]your cock[smn] paint the dragon with your [cum load size of player] load[else if cunts of player > 0]your unattended cunt[sfn] gushing and staining the dragon[else]much in spite your lack of proper outlet[end if].";
 				say "     The beast is clearly about to find bliss, himself. You don't think you can deny him of it this late, but you could try to shame him with his own release. Shall you?";
 				if player consents:
 					say "     His head not far above you, it's easy to pull him in closer. It's something of a challenge to do -- especially given how exhausted you are by this point -- but you manage to pull yourself free of the sputtering tool before grinding his own snout against its length. The half second it takes for him to realize what you're doing isn't fast enough to stop it before roars out in orgasm, utterly painting his face with his thick, white cum.";
@@ -895,7 +895,7 @@ When Play begins:
 	now name entry is "Yamato Dragon";
 	now attack entry is "[one of]The serpentine dragon[or]The Yamato Dragon[or]It[purely at random] [one of]snaps its neck forward like a snake to bite at you.[or]whips its tail around, smacking your body off the ground and through the air before landing roughly onto the ground.[or]slams you with one of its clawed paws.[at random]";
 	now defeated entry is "[Yamato Dragon loss]";
-	now victory entry is  "[Yamato Dragon attack]";
+	now victory entry is "[Yamato Dragon attack]";
 	now desc entry is "[yamato dragon desc]";
 	now face entry is "distinctly draconic; long-snouted, a pair of curious whiskers at its tip, with a long pair of antlers and a silver mane at the crown, flowing down to your neck";
 	now body entry is "elongated, serpentine with stout, taloned fore and hind limbs and a fin-like, silver mane across its length";
@@ -1186,7 +1186,7 @@ when play ends:
 						say "     Your memory becomes a blur of constant servitude under your master, satisfying his every, tainted need";
 						if "Kinky" is listed in feats of player:
 							say ", no matter how strange";
-						say ". Ultimately, You seem more than happy with your eternal fate as his plaything...";
+						say ". Ultimately, you seem more than happy with your eternal fate as his plaything...";
 					else:
 						say "ess is allowed the opportunity to display her absolute power over you before your submit yourself. She ultimately seems satisfied with your offering, and it's not long before you're just another plaything in her harem";
 						if player is submissive:
@@ -1195,7 +1195,7 @@ when play ends:
 						say "     Your memory becomes a blur of constant servitude under your mistress, satisfying her every, tainted need";
 						if "Kinky" is listed in feats of player:
 							say ", no matter how strange";
-						say ". Ultimately, You seem more than happy with your eternal fate as her plaything...";
+						say ". Ultimately, you seem more than happy with your eternal fate as her plaything...";
 		else:
 			say "     After being processed by the military, you find yourself returning to the normal world -- as normal as it can be after all that's happened. Your large, elongated body makes finding suitable living space something of a challenge, but you eventually manage.";
 			if player is pure:

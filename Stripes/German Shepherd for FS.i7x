@@ -69,7 +69,7 @@ to say gsd_desc:
 					say "     The sight of the buff male coming closer makes you excited and you start moving towards him as any thoughts to resist or get away fade from your mind. When he gets near, you drop to all fours and press your head to his paw. You receive a head petting and scritch that makes you very happy. 'That's my good [if cunts of player > 0]bitch[else]pup[end if],' he says condescendingly as you submit immediately to him, though his acknowledgement of you as belonging to him pleases and excites you.";
 				else:
 					say "     That [bold type]scarred[roman type] German Shepherd you met before is back, your paths having crossed once again. Perhaps he's been looking for you?  And having found you, he approaches with a confident swagger. The buff male cracks his knuckles and gives a soft growl.";
-					say "      'I thought I smelled you around, pup. How about you come over here and show your alpha what a good [if gsd_slut is true and cunts of player > 0]bitch[else if gsd_slut is true]slut[else]beta[end if] you are?'  Despite how you may normally feel about him and what he's done to you, being in the presence of your alpha dog triggers something inside you. The sound of his voice and his scent in your nose arouses you and makes you submit to him. He is your alpha and you obey, eager to please him.";
+					say "     'I thought I smelled you around, pup. How about you come over here and show your alpha what a good [if gsd_slut is true and cunts of player > 0]bitch[else if gsd_slut is true]slut[else]beta[end if] you are?'  Despite how you may normally feel about him and what he's done to you, being in the presence of your alpha dog triggers something inside you. The sound of his voice and his scent in your nose arouses you and makes you submit to him. He is your alpha and you obey, eager to please him.";
 				increase KorvinSubmitCounter by 1;
 				now combat abort is 1;
 				now fightoutcome is 22;
@@ -750,12 +750,12 @@ When Play begins:
 	now victory entry is "[losetogsd]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block]
 	now desc entry is "[gsd_desc]";
 	now face entry is "distinctly canine, with a long canine muzzle filled with sharp teeth and a pair of expressive pointed ears atop your head";
-	now body entry is "that of a bipedal dog, with digitigrade legs and paw like hands";
+	now body entry is "that of a bipedal dog, with digitigrade legs and paw-like hands";
 	now skin entry is "coarse, brown and black furred";
 	now tail entry is "Behind you is a dog's tail, which whips about expressively and frequently betrays your mood.";
-	now cock entry is "[if looknow is 1]surrounded in a tight [skin of player] sheath, protecting the wonderfully sensitive German Shepherd cock residing within[else][one of]knotted[or]animalistic canine[or]doggy[at random][end if]";
+	now cock entry is "[if looknow is 1]surrounded in a tight sheath surrounded by [skin of player] skin, protecting the wonderfully sensitive German Shepherd cock residing within[else][one of]knotted[or]animalistic canine[or]doggy[at random][end if]";
 	now face change entry is "it draws forward into a canine muzzle, which rapidly fills with teeth and a broad, lolling tongue. At the same time, your ears become more pointed and expressive and migrate towards the top of your now canine head";
-	now body change entry is "your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw like and your hands become somewhat paw like with dull black claws in the tips";
+	now body change entry is "your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw-like and your hands become somewhat paw-like with dull black claws in the tips";
 	now skin change entry is "fur begins to push through from underneath, soon covering you in a coarse, protective coat of brown and black fur";
 	now ass change entry is "a long tail pushes from your spine. It rushes straight out, then curles between your legs at the feeling of shock as you study the appendage";
 	now cock change entry is "your shaft tapers out, becoming slender, though a huge swelling comes into being towards the base, a knot. The skin turns reddish before the whole thing slowly withdraws into a sheath you didn't have a moment ago";
@@ -768,7 +768,7 @@ When Play begins:
 	now sex entry is "Female"; [ Defines which organs will be altered by the infection. current options are 'Male' 'Female' 'Both']
 	now hp entry is 20;
 	now lev entry is 3;
-	now wdam entry is 5; [ Amount of  Damage monster Does when attacking.]
+	now wdam entry is 5; [ Amount of Damage monster Does when attacking.]
 	now area entry is "Outside";
 	now cocks entry is 1; [ Used in infection Calculations, if cocks > 0 shaft will grow to cock length & girth dimensions slowly]
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks > 0 ]

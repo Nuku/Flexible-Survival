@@ -47,7 +47,7 @@ When Play begins:
 	now name entry is "Opossum Sailor";
 	now attack entry is "[one of]The opossum snaps her hips forward and around, prehensile tail whipping toward your face![or]With a hissing growl, the opossum hops up and swings from a rope to kick you hard![or]Darting forward, she goes low and swipes upward to slash you with her claws![or]The opossum fumbles for her cutlass, and finding it missing, whups you with the leather scabbard![or]Feeling threatened, the opossum slumps onto the ground and flops around for a moment before spraying foul-smelling secretions on you![at random]";
 	now defeated entry is "[Opossum Sailor loses]";
-	now victory entry is  "[Opossum Sailor wins]";
+	now victory entry is "[Opossum Sailor wins]";
 	now desc entry is "[mongendernum 4]     The warehouse and docks are alive with sailors and dock workers and various hangers-on milling about, unloading cargo, or maintaining the ships. Unfortunately you cannot travel too far before attracting some attention from at least one lonely sailor. Swagging out of the crowd in hobnailed boots comes an opossum decked out in leather and gold brocade like a sailor of old, a cutlass by her side. She sneers at you from under her tricorn hat, spitting out the stub of a cigar that had been in her muzzle. You would almost swear you can hear the opossum's cunt sizzling as she levels a finger at you. '[one of]Ahoy! Stand fast and prepare to be boarded![or]Polish your brightwork and stow your duffle, officer on deck![or]No time to caulk, sailor, you've got to dig out![or]I've no patience for your drip, ya['] dogsbody.[or]Strike your colors and come with me to the cuddy![or]I'm always looking to press gang, come along or I'll clap you in bilboes![or]All standing! I just spotted my new bloke![or]Surrender to me or you'll dance the hemp jig![or]Which would you rather, be a blue under my command, or get tossed to the pirate sharks that hunt the sandy shore?[at random]' she cackles with a matter-of-fact threat, adjusting her epaulettes before beginning her attack!";[ Description of the creature when you encounter it.]
 	now face entry is "a round and tapering face, with a sensitive pink nose and wide eyes. Your ears are black and contrast with the very pale pink and white of your face. The overall effect is a bit clownish and not very threatening";
 	now body entry is "a bit on the slender side, but with a solid foundation. Your limbs are average in length, and proportionally are average in relation to your torso. In fact, you are weirdly average and flexibly non-specific in your shape and mass. Your body is so baseline mammal that you could adapt to many situations or sexual positions easily";
@@ -77,8 +77,8 @@ When Play begins:
 	now breast size entry is 6; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 6; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 6; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 4; [ Width of female sex infection will try and give you ]
 	now libido entry is 50; [ Amount player Libido will go up if defeated ]
 	now loot entry is ""; [ Loot monster drops, ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]

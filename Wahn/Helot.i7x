@@ -224,10 +224,10 @@ When Play begins:
 	now name entry is "Helot";
 	now attack entry is "[one of]He gives you a hard kick - ouch, that hurt.[or]He punches you with a balled fist.[or]Throwing a handful of dirt into your face, the young Helot manages a painful blow to your side while you're off guard.[at random]";
 	now defeated entry is "[Helot loses]";
-	now victory entry is  "[Helot wins]";
+	now victory entry is "[Helot wins]";
 	now desc entry is "[HelotDesc]";
 	now face entry is "a handsome young man's, still smooth and beardless. Shaggy black hair falls down to your shoulders";
-	now body entry is "that of a young man, muscular, but with a lean look that hints at going hungry at least part of the time. It in nothing but a pair of sandals and a pretty ragged loincloth of faded cloth";
+	now body entry is "that of a young man, muscular, but with a lean look that hints at going hungry at least part of the time. Your wear but a pair of sandals and a pretty ragged loincloth of faded cloth";
 	now skin entry is "smooth, sun-bronzed";[ format as the text "You have (your text) skin"]
 	now tail entry is "You have a tight, firmly muscled butt.";[ write a whole Sentence or leave blank. ]
 	now cock entry is "human";[ format as "You have a 'size' (your text) cock ]

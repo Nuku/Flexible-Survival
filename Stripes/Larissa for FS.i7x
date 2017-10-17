@@ -145,7 +145,7 @@ to say sexwithLarissa:
 	else if cocks of player is 0 and cunts of player is 0:
 		say "     You're ill-equipped to consider fooling around with [objpro of Larissa] at the moment.";
 	else if hp of Larissa is 0:
-		say "     Larissa pulls a spritz bottle out of the a drawer under the counter, spraying you with diluted vinegar. You are driven back. 'Is everyone a horny freak now?  Why can't they just all leave me alone so I can work in peace?' she grumbles.";
+		say "     Larissa pulls a spritz bottle out of a drawer under the counter, spraying you with diluted vinegar. You are driven back. 'Is everyone a horny freak now?  Why can't they just all leave me alone so I can work in peace?' she grumbles.";
 	else if hp of Larissa is 1 or hp of Larissa is 2:	[unchanged human form]
 		now lastfuck of Larissa is turns;
 		say "     Larissa grins at your offer to have a little fun and, after getting someone to take over at her desk for a little while, she leads you into the back. She takes you to the break room and flips a little sign on the door. The room itself is rather sparse but does have a small cot available. Pulling off her lab coat, she stretches out, showing off her lovely human form, seemingly pure and unaffected by the nanite infection all around. She toss the coat and her other clothes over one of the chairs and pulls you into her arms, kissing you firmly while your hands run over each other's bodies.";

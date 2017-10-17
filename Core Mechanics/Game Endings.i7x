@@ -41,7 +41,7 @@ to ratetheplayer:
 		increase score by tempnum;
 	if "Ultimatum" is listed in feats of player and score > 0:
 		now tempnum2 is (score / 10);
-	say "In Scenario: [bold type][scenario][roman type], You have achieved a score of [bold type][score][roman type].";
+	say "In Scenario: [bold type][scenario][roman type], you have achieved a score of [bold type][score][roman type].";
 	if gsgl is 1 and score > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
 	if "Ultimatum" is listed in feats of player and score > 0, say "Your Ultimatum perk grants you a bonus of [tempnum2] points.";
 	say "You've achieve the rank of: [bold type]";
@@ -116,7 +116,7 @@ when play ends:
 			increase score by 0;
 		else:
 			say "Your unnatural [skin of player] flesh makes you stand out in a crowd. You find it difficult to keep friends outside of other infected, even after you're declared safe for contact.";
-		if "Fertile" is listed in feats of player and ( number of entries in childrenfaces  + FeralBirths) is greater than 5:
+		if "Fertile" is listed in feats of player and ( number of entries in childrenfaces + FeralBirths) is greater than 5:
 			if cunts of player is greater than 0:
 				say "You've been pregnant so many times and given birth to so many children that the nanites make a very strange change to your reproductive organs. Your body automatically stored a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life.";
 			else if "MPreg" is listed in feats of player and mpregcount >= 6:

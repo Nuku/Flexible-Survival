@@ -321,9 +321,9 @@ When Play begins:
 	now name entry is "Wild Mustang";
 	now attack entry is "[one of]The feral mustang rushes forward and runs you down, making you fall and tumble into the thankfully cushioning grass.[or]The feral mustang charges at you, knocking you to the ground roughly![or]The mustang rears up and manages to land a heavy hoof on your shoulder![or]The mustang bites you with his blunt, but pretty big teeth![or]The stallion rears up, causing his semi-hard cock to slap against his equine belly and release a spurt of precum onto you and also giving you a good view of his impressive penis and bloated balls![at random]";
 	now defeated entry is "[WildMustangLoses]";
-	now victory entry is  "[WildMustangWins]";
+	now victory entry is "[WildMustangWins]";
 	now desc entry is "[WildMustangDesc]";
-	now face entry is "broad equine muzzle, with large brown eyes and rather expressive horse-like ears on top of your";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "equine in appearnce, with large brown eyes and rather expressive horse-like ears";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "tall and muscular, shaped like an anthro equine. It has powerful digitigrade legs ending in large hooves with fluffy fetlocks. Your hands seem to be slightly hoof-like as well, bearing little hooflet-like nails at the end of each finger";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]brown-furred[or]softly furred[or]short fur covered[at random]";[ format as the text "You have (your text) skin"]
 	now tail entry is "You have a long thick horse-like tail swaying behind you almost to the ground, its long strands of coarse hair covering your ass completely as it flicks this way and that seemingly on its own.";[ write a whole Sentence or leave blank. ]
@@ -346,7 +346,7 @@ When Play begins:
 	now area entry is "Nowhere";       [ Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0;              [ number of cocks if sex is 'Male' or 'Both' ]
 	now cock length entry is 18;
-	now cock width entry is 25;        [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 25;        [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2;            [ Number of nipples. ]
 	now breast size entry is 0;        [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]

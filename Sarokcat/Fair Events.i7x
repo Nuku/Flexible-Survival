@@ -2,7 +2,7 @@ Fair Events by Sarokcat begins here.
 
 "Adds a series of random events to Flexible Survival set in the fair area."
 
-Section 1-  floating balloons
+Section 1- floating balloons
 
 floating balloons is a situation.
 The sarea of floating balloons is "Midway".
@@ -11,7 +11,7 @@ Instead of Resolving a floating balloons:
 	say "Wandering through the cheerful midway of the fair, you hear a strange squeaking noise nearby, looking all around you finally look up and notice a bundle of balloons floating by over some of the carnival shops. The sight makes you blink for a minute, as you could almost swear that one of the balloons was shaped like a naked woman, and it was gesturing for help. Taking a second look, you note the balloons have floated out of sight for now, though the strange sight stays with you as you wander around the fair itself.";
 	Now floating balloons is resolved;
 
-Section 2-  Game crazy
+Section 2- Game crazy
 
 Game crazy is a situation.
 The sarea of Game crazy is "Midway".
@@ -22,7 +22,7 @@ Instead of Resolving a Game crazy:
 
 
 
-Section 3-  fair food cart
+Section 3- fair food cart
 
 fair food cart is a scavevent.
 The sarea of fair food cart is "Midway".
@@ -32,7 +32,7 @@ Instead of Resolving a fair food cart:
 	increase carried of food by 1;
 	Now fair food cart is resolved;
 
-Section 4-  Happy silly feeling
+Section 4- Happy silly feeling
 
 Happy silly feeling is a situation.
 The sarea of Happy silly feeling is "Midway".
@@ -42,7 +42,7 @@ Instead of Resolving a Happy silly feeling:
 	increase humanity of player by 25;
 	Now Happy silly feeling is resolved;
 
-Section 5-  Flashing fair lights
+Section 5- Flashing fair lights
 
 Flashing fair lights is a situation.
 The sarea of Flashing fair lights is "Midway".
@@ -52,7 +52,7 @@ Instead of Resolving a Flashing fair lights:
 	decrease humanity of player by 20;
 	Now Flashing fair lights is resolved;
 
-Section 6-  Salty taffy
+Section 6- Salty taffy
 
 Salty taffy is a scavevent.
 The sarea of Salty taffy is "Midway".
@@ -64,7 +64,7 @@ Instead of Resolving a Salty taffy:
 	increase thirst of player by 20;
 	Now Salty taffy is resolved;
 
-Section 7-  Prize winning toss
+Section 7- Prize winning toss
 
 Prize winning toss is a situation.
 The sarea of Prize winning toss is "Midway".
@@ -74,7 +74,7 @@ Instead of Resolving a Prize winning toss:
 	increase carried of soda by 4;
 	Now Prize winning toss is resolved;
 
-Section 8-  Sudden stampede
+Section 8- Sudden stampede
 
 Sudden stampede is a situation.
 The sarea of Sudden stampede is "Midway".
@@ -83,7 +83,7 @@ Instead of Resolving a Sudden stampede:
 	say "Wandering through the cheerful midway of the fair, you think you hear someone scream for a minute. Turning to look, you see someone run by down the other lane arms waving in the air as they obviously panic. Blinking you are about to call out, when you hear a rumbling noise over the carnival music, your mouth open you have no choice but to stare as a large stampede of plush prize animals follows after the screaming individual, everything from plush lions hunting, to giant teddy bears, and even some furry large snakes go charging down the lane, so intent on their target none of the seem to notice you. Closing your mouth with a snap, you definitely decide there isn't anything you can do to help someone that much in demand, you move along down the midway before they can circle back around..";
 	Now Sudden stampede is resolved;
 
-Section 9-  Strange barker
+Section 9- Strange barker
 
 Strange barker is a situation.
 The sarea of Strange barker is "Midway".
@@ -100,9 +100,9 @@ The sarea of Ferris fun time is "Midway".
 Instead of Resolving a Ferris fun time:
 	say "Wandering through the cheerful midway of the fair, you quickly find yourself in trouble as a number of the beasts that inhabit the fair seem to have found you. Realizing there are far too many for you to easily fight, you quickly flee down the shining and sparkling midway, while they give hot pursuit. Eventually taking a chance, you duck into one of the Ferris wheel cages, and slam the door shut, hoping they won't find you. To your surprise the wheel starts up again right away, swinging you up and away from your pursuers, and giving you a great view of the fair itself, as you go higher you can see the entire ruined skyscape of the city spread out before you, and the ominous smoke rising from near the capital building. Still swinging around in the air as the wheel spins is actually kind of fun, and you find yourself smiling as the ride stops, even better your pursuers are long gone, so you continue off into the fairgrounds while whistling a little tune.";
 	increase humanity of player by 10;
-	Now Ferris fun time  is resolved;
+	Now Ferris fun time is resolved;
 
-Section 12-  Rubber tiger chase
+Section 12- Rubber tiger chase
 
 Rubber tigerchase is a situation. The level of Rubber tigerchase is 6.
 The sarea of Rubber tigerchase is "Midway".
@@ -123,7 +123,7 @@ Instead of Resolving a Rubber tigerchase:
 		say "Deciding not to push your luck, you move on down the midway. Leaving the tigress to chase her own tail.";
 
 
-Section 13-  Lion modifying
+Section 13- Lion modifying
 
 Lion modifying is a situation.
 The sarea of Lion modifying is "Midway".
@@ -168,7 +168,7 @@ Instead of Resolving a Locked lockers:
 	if christyquest is 0:
 		say "Traveling through the fair, you note a sign up on a half hidden door, the sign says 'Employee lockerups, authoritised personnel only.' Grinning a little at the amusing misspelling, you wander over and try the door, figuring if there is anything of use to be found, it might be in an employee locker room. Unfortunately the door is locked, and you can't seem to find any other way into the area, sighing you move back off into the fairgrounds.";
 	else if christyquest is 1:
-		say "Traveling through the fair, you note a sign up on a half hidden door, the sign says 'Employee lockerups, authoritised personnel only.' Grinning a little at the amusing misspelling, you wander over and try the door, figuring if there is anything of use to be found, it might be in an employee locker room. Unfortunately the door is locked, causing you to sigh and turn to leave, only to remember the key Boris gave you earlier! Turning back to the door you try out the key, and Success! The door opens into a rather nice well lit locker room, Though the room appears to be in a bit of disarray, since it looks like several people tried to make a stand in here. Indeed as you move inside the room you find some of them are still here! Or what is they have become anyways!";
+		say "Traveling through the fair, you note a sign up on a half hidden door, the sign says 'Employee lockerups, authoritised personnel only.' Grinning a little at the amusing misspelling, you wander over and try the door, figuring if there is anything of use to be found, it might be in an employee locker room. Unfortunately the door is locked, causing you to sigh and turn to leave, only to remember the key Boris gave you earlier! Turning back to the door you try out the key, and Success! The door opens into a rather nice well lit locker room, though the room appears to be in a bit of disarray, since it looks like several people tried to make a stand in here. Indeed as you move inside the room you find some of them are still here! Or what is they have become anyways!";
 		challenge "Rubber tigress";
 		challenge "Rubber tigress";
 		say "Recovering from the unexpected assault, you take another look around the room, from the looks of the room and the smell of sex in the air, somehow you doubt those were all the participants in whatever happened here, making you eye the two other doors leading out of the room with some trepidation. Deciding it might be best just to be about your business as quickly as possible, you search the room for the box Boris asked you for. You find several strange items, and even a couple of cans of soda someone had stuck in their locker, but are about to give up on the package, when you notice a rather unwieldy box stuck back on top of some of the lockers. Hauling the box down, you note it has the letters 'Christy' scrawled on the top in black marker, you wonder what this Christy could have had that Boris thinks will be so helpful. Sadly the box is tied up tight with several bits of twine, and you don't want to annoy Boris if he needs the box unopened, you decide just to take it back to him to find out. Besides, you think as you hurry out of the room, you thought you heard something coming from one of the other doors.";

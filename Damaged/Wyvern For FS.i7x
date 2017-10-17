@@ -563,7 +563,7 @@ to say wyvmale_2: [Anal Catching]
 	say "     Taking a moment to catch your breath, you eventually pull yourself free of the wyvern and his tool, its audible departure from your ass loudly echoing through the air. You set him off with a smack, though his lingering exhaustion makes him slow to comply. Satisfied, you go on your merry way... Though now perhaps a little sore from the whole affair[if tempnum is 1], to say nothing of being a cum-drenched mess[end if].";
 
 to say wyvmale_3: [Oral Giving Cock]
-	say "      After managing to get the wyvern on his back, you curiously fondle his thickly scaled undercarriage, the beast growling in impotent protest of your inspection. The coarse, seemingly chitinous array obstructs any identifying mark of where the creature houses his dick, but it only takes a bit of work for the scales to part, gradually exposing his impressive tool.";
+	say "     After managing to get the wyvern on his back, you curiously fondle his thickly scaled undercarriage, the beast growling in impotent protest of your inspection. The coarse, seemingly chitinous array obstructs any identifying mark of where the creature houses his dick, but it only takes a bit of work for the scales to part, gradually exposing his impressive tool.";
 	say "     Organ's supple flesh in stark contrast to the wyvern's rough exterior, it doesn't take long before you fondling brings him to full attention, throbbing and dribbling pre from its blunt head onto himself. Shall you lavish your full affection of his offering? Otherwise, you'll keep your distance.";
 	if player consents:
 		say "     Unable to resist the opportunity, you move your head in closer, tongue caressing along its length, tasting the beast's flesh. Its shaft slightly mimics the plated scales of his undercarriage along its sides, giving it a distinctive ribbing, ending at its mostly flat head, it's [if scalevalue of player is 1]almost as big as you are![run paragraph on][else if scalevalue of player is 2]at least half your size![run paragraph on][else if scalevalue of player is 3]size is extremely intimidating.[run paragraph on][else if scalevalue of player is 4]size is somewhat intimidating.[run paragraph on][else]size is impressive, though it's nothing you can't handle.[run paragraph on][end if] Your attendee growling lowly in approval, he can't help but writhe against the attention you offer him, his persistent oozing compelling your taste, tongue awash in the beast's masculine flavour.";
@@ -574,7 +574,7 @@ to say wyvmale_3: [Oral Giving Cock]
 		say "     Closing in, your lips firmly embracing its sputtering head, [if scalevalue of player < 4]it's much too large for you to fit[else if scalevalue of player is 4]you try your best to engulf it[else]you're quick to exploit your large size, engulfing it entirely[end if] within the confines of your maw, tongue lapping eagerly against his flesh. This is more than enough to set the wyvern off, roaring out in bestial ecstasy as your eager hole is quickly flooded with wave after wave of his virile cum, [if scalevalue of player < 4]very quickly becoming too much for you and sputtering from your lips[else if scalevalue of player is 4]which proves quite a challenge to keep up with, soon oozing from your lips[else]proving not to be that much of a challenge for you to keep up with, milking him for every last drop[end if].";
 	else:
 		say "     In a few, brief seconds you manage to set off the wyvern, roaring out in bestial ecstasy as his scaled body is splattered with wave after wave of his virile cum. No doubt this is quite an embarrassing sight for the once intimidating beast, now nothing but a shameful, lust-hazed mess of a creature.";
-	say "      Taking a moment to catch your breath and clean yourself of the substantial mess he's made, you set off and leave the exhausted and spent monster, satisfied with your work... Albeit a bit aroused yourself from all of it.";
+	say "     Taking a moment to catch your breath and clean yourself of the substantial mess he's made, you set off and leave the exhausted and spent monster, satisfied with your work... Albeit a bit aroused yourself from all of it.";
 	increase libido of player by 3;
 
 to say wyvfem_1: [Cunt Pitching]
@@ -620,7 +620,7 @@ to say wyvfem_1: [Cunt Pitching]
 	say "     You need a moment to catch your breath, but you eventually pull away from the monster. Observing the mess you've made, her form a writhing, lust-hazed, and exhausted pile of scales. No doubt it'll take the beast a while to recover from that, and you choose to depart, leaving her to the mercy of those in the vicinity who might risk the opportunity for some sloppy seconds.";
 
 to say wyvfem_2: [Oral Giving Cunt]
-	say "      After managing to get the wyvern on her back, you curiously fondle her thickly scaled undercarriage, the beast growling in impotent protest of your inspection. The coarse, chitinous array obstructs any identifying mark of where the creature houses her cunt, but it only takes a bit of work for the scales to part around your querying digit, exposing her soft flesh to your touch.";
+	say "     After managing to get the wyvern on her back, you curiously fondle her thickly scaled undercarriage, the beast growling in impotent protest of your inspection. The coarse, chitinous array obstructs any identifying mark of where the creature houses her cunt, but it only takes a bit of work for the scales to part around your querying digit, exposing her soft flesh to your touch.";
 	say "     Supple entrance in stark contrast to the wyvern's rough exterior, it doesn't take long before you fingering causes her to grow slick, blatantly aroused by your attendance. Shall you lavish your full affection on her offering? Otherwise, you'll keep your distance.";
 	if player consents:
 		say "     Unable to resist the opportunity, you move your head in closer, tongue plunging within her depths, tasting the wyvern's flesh. Her bestial vent yielding and inviting, it squeezes around your[if scalevalue of player > 3] substantive[end if] appendage, eager to abide its slick, writhing occupancy. Your attendee growling lowly in approval, she can't help but writhe against the attention you offer her, her persistent oozing compelling you to revel in the taste of her primal honey.";
@@ -631,7 +631,7 @@ to say wyvfem_2: [Oral Giving Cunt]
 		say "     Closing in, your lips firmly embracing its throbbing, slick entrance, tongue eagerly diving into her inviting depths. This is more than enough to set the wyvern off, roaring out in bestial ecstasy, writhing appendage squeezed by her aching hole, your eager maw is quickly flooded with a wave of her bestial honey, [if scalevalue of player < 4]very quickly dripping from your lips and staining the ground[else]compelling you to swallow down every last drop[end if].";
 	else:
 		say "     In a few, brief seconds you manage to set off the wyvern, roaring out in bestial ecstasy as the floor is quickly stained with her bestial honey. No doubt this is quite an embarrassing sight for the once intimidating beast, now nothing but a shameful, lust-hazed mess of a creature.";
-	say "      Taking a moment to catch your breath and clean yourself of the substantial mess she's made, you set off and leave the exhausted and spent monster, satisfied with your work... Albeit a bit aroused yourself from all of it.";
+	say "     Taking a moment to catch your breath and clean yourself of the substantial mess she's made, you set off and leave the exhausted and spent monster, satisfied with your work... Albeit a bit aroused yourself from all of it.";
 	increase libido of player by 3;
 
 Section 2 - Monster Insertion
@@ -646,7 +646,7 @@ When Play begins:
 	now name entry is "Wyvern"; [Name of your new Monster]
 	now attack entry is "[WYVATK]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[WYVDEF]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[WYVVIC]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now victory entry is "[WYVVIC]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[WYVDESC]";[ Description of the creature when you encounter it.]
 	now face entry is "elongated, draconic in shape with a set of fierce teeth, and completely devoid of other features like ears or hair"; [ Face description, format as the text "Your face is (your text)."]
 	now body entry is "large and muscular; Feral in build, you find it difficult to stand on your hind legs for very long, relegated to supporting the remainder of your weight with your winged forelimbs."; [ Body Description, format as the text "Your Body is (your text)."]
@@ -676,8 +676,8 @@ When Play begins:
 	now breast size entry is 0;
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 25;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 16;		[ Width of female sex  infection will try and give you ]
+	now cunt length entry is 25;		[ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 16;		[ Width of female sex infection will try and give you ]
 	now libido entry is 25;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "wyvern goop";			[ Loot monster drops, ]
 	now lootchance entry is 60;		[ Chance of loot dropping 0-100 ]
@@ -1954,7 +1954,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "wyvern goop"	"Thick, whitish-yellow ooze. You've kept the stuff wrapped up so that it doesn't completely harden."	1	wyvern goop
 
-the scent of wyvern goop is "      The sticky gel has an acrid, spicy scent.";
+the scent of wyvern goop is "     The sticky gel has an acrid, spicy scent.";
 
 To say wyvern goop use:
 	say "     Consuming the goop does seem to sate your hunger slightly, though you quickly find your thoughts wracked with a more feral need.";

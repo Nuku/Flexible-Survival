@@ -93,7 +93,7 @@ When Play begins:
 	now defeated entry is "[beatthemino]";
 	now victory entry is "[losetomino]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[minodesc]";
-	now face entry is "face similar to a bull's with a wide snout and two large wicked horns jutting out from your elongated skull";
+	now face entry is "similar to a bull's with a wide snout and two large wicked horns jutting out from your elongated skull";
 	now body entry is "heavily muscled and very masculine showing off the prime grade A beef that make up your physical frame. Every muscle along your form reveals superb definition about yourself as large, serpentine-like veins bulge just beneath your skin in a few areas. Your arms are thick and massive as your biceps and triceps are pushing up to almost impossible lengths that would make even a pro wrestler feel some envy. Down below you stand on brawny unguligrade legs, resembling a cross between a man and bull, that end with two large cloven hooves which pound the earth as you walk";
 	now skin entry is "coarse brown fur";
 	now tail entry is "You have a long, but slim bull tail hanging over a tight muscular ass.";
@@ -116,7 +116,7 @@ When Play begins:
 	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 18; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 25; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 25; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 0; [ Number of Breasts infection will give you. ]
 	now breast size entry is 0; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]

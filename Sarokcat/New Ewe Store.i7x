@@ -130,13 +130,13 @@ The description of New Ewe Storeroom is "This small family grocery store is now 
 The invent of New Ewe Storeroom is { "chips" , "food" , "water bottle" , "soda" }.
 
 Leon is a man.
-The description of Leon is "A strong and relatively rugged looking ram person is hanging around near the registers, keeping an eye on you, You recall his name was Leon.".
+The description of Leon is "A strong and relatively rugged looking ram person is hanging around near the registers, keeping an eye on you. You recall his name was Leon.".
 The conversation of Leon is { "Baa, baby!" }.
 the fuckscene of Leon is "[sexwithleon]".
 Leon is in New Ewe Storeroom.
 
 Mary is a woman.
-The description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around, You remember her introducing herself as Mary.".
+The description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around. You remember her introducing herself as Mary.".
 The conversation of Mary is { "Baa, honey!" }.
 the fuckscene of Mary is "[sexwithmary]".
 Mary is in New Ewe Storeroom.
@@ -156,7 +156,7 @@ Instead of conversing the Leon:
 		say "     'Hey there, good to see you,' Leon says, 'But I'm not the one you should be talking to. You wouldn't want your little lamb over there to get lonely, would you?";
 	else:
 		if RamFucked > 0:
-			say  "     [one of]'Welcome back to our store!'[or]'Ah you came back to the flock like a good little ewe.'[or]'Be careful out there, I wouldn't want to see one of my flock get hurt.'[or]'Are you sure all you want to do is talk?'[or]'If you don't want to go back out into the city you can stay here anytime.'[or]'I heard there was a big wolf out there, you be careful.'[or]'How is it out there today?'[or]'Almost shearing time again.'[or]Leon bleats at you absentmindedly, before blushing when he realizes what happened.[or]'If you need your ram to [']take care['] of you, just let me know.'[or]'Want to head back to the break(ing) room with me?'[or]'I wonder when rescue will arrive.'[at random]";
+			say "     [one of]'Welcome back to our store!'[or]'Ah you came back to the flock like a good little ewe.'[or]'Be careful out there, I wouldn't want to see one of my flock get hurt.'[or]'Are you sure all you want to do is talk?'[or]'If you don't want to go back out into the city you can stay here anytime.'[or]'I heard there was a big wolf out there, you be careful.'[or]'How is it out there today?'[or]'Almost shearing time again.'[or]Leon bleats at you absentmindedly, before blushing when he realizes what happened.[or]'If you need your ram to [']take care['] of you, just let me know.'[or]'Want to head back to the break(ing) room with me?'[or]'I wonder when rescue will arrive.'[at random]";
 		else:
 			Say "     'Ah great, I'm glad you came to talk to me, I assume this means you'd like to join our little flock here?'";
 			if player consents:
@@ -169,9 +169,9 @@ Instead of conversing the Leon:
 					say "     'Hmm looks like you won't fit in here quite yet...' he says, eyeing your male attributes, 'only room in a flock for one Ram at a time. Nothing we can't fix though!'";
 				else:
 					say "     'Oh yeah, that's what I like to see in woman,' he says, eyeing you lewdly, 'Now we just need to fix the rest of you...'";
-				say  "     'First thing we need to do is mark you as part of the flock,' Leon says as he pulls off a bit of wool from his side. 'Need to make sure you smell right to the rest of the flock after all.' You watch as he begins to rub the wool over his cock, pumping it more and more until finally he lets out a low bleating noise as he coats it in his seed. The smell intensifies and the erotic sight makes you unable to protest as he moves closer and begins rubbing the wool he just [']treated['] all over your body. You moan as he massages you with the soft wool, you can swear you almost feel the rams seed sinking into you, marking you as his ewe, his property to do with as he wishes.";
-				say  "     The erotic massage continues, until you almost can't take it anymore, only to stop right before you can reach orgasm, leaving you panting and moaning in protest as Leon looks down at you with a grin on his muzzle. 'That should be enough for now,' he says. 'Welcome to my flock little lamb, I'm definitely going to enjoy having you around. You are welcome to stay as long as you like now,' Leon smiles as he turns to leave, 'And if you need I'd be happy to [']take care['] of you anytime you want, I take goood care of all my flock members after all. You know where to find me when your ready' Saying that he winks one of his big innocent looking sheep eyes at you before closing the door behind him. Leaving you to gather your equipment and your dignity back up.";
-				say  "     As your getting ready to leave, you can't help but notice you smell a bit like a sheep now yourself, just like all the other flock members in the store. For some reason it doesn't seem to bother you to smell like your fellow sheep, you all belong to the same ram after all... Blushing uncertainly at that thought you return to the main store area.";
+				say "     'First thing we need to do is mark you as part of the flock,' Leon says as he pulls off a bit of wool from his side. 'Need to make sure you smell right to the rest of the flock after all.' You watch as he begins to rub the wool over his cock, pumping it more and more until finally he lets out a low bleating noise as he coats it in his seed. The smell intensifies and the erotic sight makes you unable to protest as he moves closer and begins rubbing the wool he just [']treated['] all over your body. You moan as he massages you with the soft wool, you can swear you almost feel the rams seed sinking into you, marking you as his ewe, his property to do with as he wishes.";
+				say "     The erotic massage continues, until you almost can't take it anymore, only to stop right before you can reach orgasm, leaving you panting and moaning in protest as Leon looks down at you with a grin on his muzzle. 'That should be enough for now,' he says. 'Welcome to my flock little lamb, I'm definitely going to enjoy having you around. You are welcome to stay as long as you like now,' Leon smiles as he turns to leave, 'And if you need I'd be happy to [']take care['] of you anytime you want, I take goood care of all my flock members after all. You know where to find me when your ready' Saying that he winks one of his big innocent looking sheep eyes at you before closing the door behind him. Leaving you to gather your equipment and your dignity back up.";
+				say "     As your getting ready to leave, you can't help but notice you smell a bit like a sheep now yourself, just like all the other flock members in the store. For some reason it doesn't seem to bother you to smell like your fellow sheep, you all belong to the same ram after all... Blushing uncertainly at that thought you return to the main store area.";
 				increase libido of player by 10;
 				increase RamFucked by 1;
 				if girl is not banned and "Male Preferred" is not listed in feats of player:
@@ -181,7 +181,7 @@ Instead of conversing the Leon:
 					infect "Ram";
 					infect "Ram";
 			else:
-				say  "     Ah well, I thought you would make a great addition to the flock. Think it over some more, would you?";
+				say "     Ah well, I thought you would make a great addition to the flock. Think it over some more, would you?";
 
 instead of conversing the Mary:
 	if HyenaTrailing is 3:
@@ -217,7 +217,7 @@ instead of conversing the Mary:
 					infect "Ewe";
 					infect "Ewe";
 			else:
-				say  "     'Oh, that's ok then, I understand if you have other things you'd rather do, but I'd really like it if you thought about it some more.'";
+				say "     'Oh, that's ok then, I understand if you have other things you'd rather do, but I'd really like it if you thought about it some more.'";
 
 
 Section - Sex w/Leon or Mary
@@ -408,7 +408,7 @@ to say sexwithmary:
 			attempttowait;
 			say "     Unable to resist the soft feel of her wet folds enveloping you, you bury your hands in the soft wool of her hips, gripping tightly as you thrust upwards. Mary moans in pleasure as you take charge, her inner muscles tightening around you deliciously with your every movement. Soon you settle into a rhythm of short quick thrusts into your willing ewe, her soft body rubbing up against your [skin of player] with every thrust, her face full of animalistic pleasure as she makes soft bleating and moaning noises in time with your thrusting. Before you know it you feel your muscles tense in orgasm, as your cock empties its load into her fertile belly, causing her to shudder in orgasm as well as your seed fills her belly. Panting, she collapses on top of you, your cock still twitching in her, as you both lie there exhausted.";
 			attempttowait;
-			say "     Waking up after a couple hours, you find yourself alone on the couch, quickly gathering up your belongings you find a short note left behind from Mary. 'I had to return to the store to take care of a few things, though I am definitely looking forward to spending more time with you as soon as we can. Signed, Your loyal ewe.' Smiling as you read the note, you feel a surge of satisfaction at having taken care of your ewe properly, and tuck the note into your backpack before heading back over to the store yourself.";
+			say "     Waking up after a couple hours, you find yourself alone on the couch, quickly gathering up your belongings you find a short note left behind from Mary. 'I had to return to the store to take care of a few things, though I am definitely looking forward to spending more time with you as soon as we can. Signed, your loyal ewe.' Smiling as you read the note, you feel a surge of satisfaction at having taken care of your ewe properly, and tuck the note into your backpack before heading back over to the store yourself.";
 		else:
 			say "     Mary's sheep-like face pouts slightly as she takes in your female form, 'It looks like you aren't quite ready to be the ram of the flock yet.' She says as she runs her hands over your body. 'But that doesn't mean we can't have a little bonding time in the flock anyways,' She finishes as she leans over you to lick the side of your face erotically. Wasting no time she begins running her hands up and down your body, teasing and exciting you as she begins to lick and kiss her way down your body. She pays special attention to your nipples and stomach, before finally lowering her head to your wet pussy, which she begins to nibble and tease with her soft lips and flexible tongue. Unable to help yourself you bury your hands in the soft fleece around her head as you moan and writhe underneath her, her marvellously skilled tongue quickly bringing you to the edge of orgasm, before finally making you cry out as you cum, your juices eagerly licked up by her wonderful tongue.";
 			attempttowait;

@@ -16,7 +16,7 @@ Version 1 of Jenna by Rikaeus begins here.
 [   3: Has learned all they can from the suspects          ]
 [   4: Has solved the mystery                              ]
 [   5: Has learned that player can purchase culprit        ]
-[   6: Has recieved the culrpit from Nermine end           ]
+[   6: Has received the culprit from Nermine end           ]
 
 [   hp of Jenna                                            ]
 [   0: Not Placed                                          ]

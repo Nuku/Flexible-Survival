@@ -174,7 +174,7 @@ numwater is a number that varies.
 gotwhip is a number that varies.
 
 instead of resolving Destroyed bushes:
-	say "You come across a circle of bushes crushed flat against the ground, large pools of cum and  juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
+	say "You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
 	if the humanity of the player is less than 50:
 		say "Do you want to drink from the puddles?";
 		if the player consents:

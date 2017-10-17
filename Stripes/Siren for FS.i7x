@@ -114,10 +114,10 @@ When Play begins:
 	now name entry is "Siren"; [Name of your new Monster]
 	now attack entry is "[sirenattack]";
 	now defeated entry is "[beatthesiren]";
-	now victory entry is  "[losetosiren]";
+	now victory entry is "[losetosiren]";
 	now desc entry is "[sirendesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "beautifully human, with lovely, feminine features and long, flowing hair. Hidden behind your luscious lips are a set of sharp, pointed teeth. Your voice has a musical quality to it whenever you speak";
-	now body entry is "nearly human and quite lovely to behold. You have a pair white wings sprouting from the shoulder blades. Your wings are large and powerful, but not quite enough to let the you to take flight. The entire appearance of your body is actually strangely attractive. Your arms and legs are slender and shapely human limbs, until you get to your feet. They like that of a bird of prey, with golden-brown scales and sharp talons";
+	now body entry is "nearly human and quite lovely to behold. You have a pair white wings sprouting from the shoulder blades. Your wings are large and powerful, but not quite enough to allow you to fly. The entire appearance of your body is actually strangely attractive. Your arms and legs are slender and shapely human limbs, until you get to your feet. They like that of a bird of prey, with golden-brown scales and sharp talons";
 	now skin entry is "beautifully smooth, pink and normal-looking human";
 	now tail entry is "Your rear is strong and muscular with rounded hips and a firm, shapely rear.";
 	now cock entry is "human-looking elastic";
@@ -139,7 +139,7 @@ When Play begins:
 	now area entry is "Beach";
 	now cocks entry is 2; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 18; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 19; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 19; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2; [ Number of Breasts infection will give you. ]
 	now breast size entry is 4; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]

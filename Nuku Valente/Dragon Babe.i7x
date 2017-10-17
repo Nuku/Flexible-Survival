@@ -33,7 +33,7 @@ A Dragon Babe is a infection model.  The description of a Dragon Babe is "A shap
 
 The move rate of a Dragon Babe is 2.
 The attack rate of a Dragon Babe is 2.
-The reflex of a Dragon Babe  is 15.
+The reflex of a Dragon Babe is 15.
 The primary attack description of a Dragon Babe is "[one of]slides up against their victim, pressing their large breasts temptingly while whispering soft nothings in an ear, a hand brushing across[or]leaps at the target of their interest, tackling them to the ground and grinding her groin against[at random]".
 The TF description of a Dragon Babe is "moans softly, falling to their knees as a huge tail erupts from their bottom, rapidly covered in scales. They explode out of their clothes as they gain new curves and height. An intense, but brief, scent of pure lust permeates the area as they rise as a".
 

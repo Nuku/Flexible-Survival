@@ -55,7 +55,7 @@ When Play begins:
 	now name entry is "Salamander";
 	now attack entry is "The [one of]salamander[or]salamander femme[or]female amphibian[or]red salamander[or]speckled salamander[at random] [one of]scratches at you with her claws[or]smacks you with her tail[or]bites you with her wide mouth[or]contorts in an unnatural manner to punch you in the side[or]grabs onto you and turns up her personal heat, cooking your flesh[in random order].";
 	now defeated entry is "[beatthesalamander]";
-	now victory entry is  "[losetosalamander]";
+	now victory entry is "[losetosalamander]";
 	now desc entry is "[salamanderdesc]";
 	now face entry is "now flatted down with a short muzzle. You have a widened mouth full of diminutive teeth";
 	now body entry is "especially effeminate, with wide hips, thighs, and a thin waist that draws the eye. Your limbs are still human, though they flex a little more than could be considered normal. Your digits end in short, dark claws that are probably better suited for climbing than fighting";
@@ -80,7 +80,7 @@ When Play begins:
 	now area entry is "Capitol";
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2; [ Number of Breasts infection will give you. ]
 	now breast size entry is 2; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
@@ -148,7 +148,7 @@ to salabind:
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [salastrugglebar]";
 		if humanity of player < 1:
 			LineBreak;
-			say "     Eventually you become so drained -- both mentally and physically --  that you wholly give in to your captor, ";
+			say "     Eventually you become so drained -- both mentally and physically -- that you wholly give in to your captor, ";
 			if bodyname of player is "Salamander" and player is pure:
 				say "compelled by your strain to obey her every whim";
 			else:

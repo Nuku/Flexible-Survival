@@ -189,7 +189,7 @@ When Play begins:
 	now name entry is "Stag";
 	now attack entry is "[one of]He pushes you down against the ground with strong arms and gives you a blow in the ribs.[or]You stumble and nearly fall down as he gives you a rough shove.[or]His horns prove to be quite sharp as they poke you.[or]A sudden kick lands in your midsection and drives the air from your lungs.[at random]";
 	now defeated entry is "[Stag loses]";
-	now victory entry is  "[Stag wins]";
+	now victory entry is "[Stag wins]";
 	now desc entry is "[StagDesc]";
 	now face entry is "covered in short brown fur and has the striking angular features of a proud stag. Crowning your head are two impressive multiple-pointed antlers";
 	now body entry is "that of a humanoid male, trim and fit. You have strong arms and hands, capped with blackened fingertips, like hooves that don't compromise dexterity";
@@ -1495,7 +1495,7 @@ to say HelenSex7:                       [Female Player with Fang & Helen]
 		say "     ...which makes you think of how you yourself want to get off. What should it be? Get back to pussy licking by Helen ([link]Y[as]y[end link]), or crawl under her for some 69 action ([link]N[as]n[end link])? ";
 		if player consents:     [licked by Helen]
 			LineBreak;
-			say "     Walking back around to the front of the rutting couple, you put your hands on Helen's head and pull her against your crotch. The well-trained human dog immediately continues pleasing you, lapping your genitals and poking her tongue between your pussy lips. As wound up as you already were, it doesn't take much longer until her oral attention to your vagina drives you over the edge, moaning loudly and holding Helen's head tight against your crotch where she happily slurps up your femcum. Satisfied at getting off, you move over to the nearby cot to watch your two pets rutting in comfort. Fang ruts Helen with with untamed abandon, growling and panting with his deep thrusts.";
+			say "     Walking back around to the front of the rutting couple, you put your hands on Helen's head and pull her against your crotch. The well-trained human dog immediately continues pleasing you, lapping your genitals and poking her tongue between your pussy lips. As wound up as you already were, it doesn't take much longer until her oral attention to your vagina drives you over the edge, moaning loudly and holding Helen's head tight against your crotch where she happily slurps up your femcum. Satisfied at getting off, you move over to the nearby cot to watch your two pets rutting in comfort. Fang ruts Helen with untamed abandon, growling and panting with his deep thrusts.";
 			WaitLineBreak;
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Helen, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and her body shudders as the feelings from her vagina make her come. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 			say "     That should strengthen the hierarchy in your little pack quite nicely. With both your submissive pets still standing where they fucked, patiently waiting for Fang's knot to go down and allowing them to separate, you lay back on the cot and get comfortable.";

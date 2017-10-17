@@ -108,7 +108,7 @@ East of College Walkway Northwest is College Fountain.
 The description of College Fountain is "[fountaindesc]"
 
 to say fountaindesc:
-	say "      The fountain area appears to be a bustling center of activity. There is quite a number of people hanging out at the center of the campus. While there is one or two couples having sex out in the open, most of the people are just sitting and chatting with their friends. The fountain itself has random gunk in it but it looks like the campus staff clean it on a daily basis, if the person with the uniform and bucket says anything. Overall the location appears to be a nice place to spend time with your friends or have a romantic date.";
+	say "     The fountain area appears to be a bustling center of activity. There is quite a number of people hanging out at the center of the campus. While there is one or two couples having sex out in the open, most of the people are just sitting and chatting with their friends. The fountain itself has random gunk in it but it looks like the campus staff clean it on a daily basis, if the person with the uniform and bucket says anything. Overall the location appears to be a nice place to spend time with your friends or have a romantic date.";
 
 [Room Declaration]
 North of College Fountain is College Administration Building.
@@ -129,7 +129,7 @@ to say DeanDesc:
 
 [Room Declaration]
 Northwest of College Campus Entrance is College Walkway Northwest.
-Southeast of of College Belltower is College Walkway Northwest.
+Southeast of College Belltower is College Walkway Northwest.
 West of College Fountain is College Walkway Northwest.
 Southwest of College Administration Building is College Walkway Northwest.
 Northeast of College Walkway West is College Walkway Northwest.

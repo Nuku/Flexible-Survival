@@ -87,7 +87,7 @@ When Play begins:
 	now name entry is "Latex Mistress"; [Name of your new Monster]
 	now attack entry is "The [one of]Latex Mistress[or]strange dominatrix[or]latex-clad woman[at random] [one of]strikes you with her whip[or]lashes you with her whip[or]whips around your ankle and pulls you over[or]slashes at you with her small claws when you get too close[at random].";
 	now defeated entry is "[beatthelatexmistress]";
-	now victory entry is  "[losetolatexmistress]";
+	now victory entry is "[losetolatexmistress]";
 	now desc entry is "[latexmistressdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "[one of]covered completely[or]completely wrapped[or]concealed[at random] in a black latex mask[if the player is ltxmskinned] that is attached seamlessly to the black latex covering your body[end if]. At the front of your face are solid black eyes that seem to blink even thought they are part of the mask. Your mouth is usually shut, seeming to be part of the mask until it moves, [one of]stretching open[or]opening up[at random] along the mask around it when you talk or eat";
 	now body entry is "human in shape with possessing the build of a strong, powerful female. Your hands and feet are encased in black latex formed into gloves and boots that are a part of you[if player is ltxmskinned] and blend seamlessly into your latex skinsuit[end if]. These gloves are tipped with small claws at their fingertips and the boots have a high platform and a higher heel, making you seem latter and more imposing";

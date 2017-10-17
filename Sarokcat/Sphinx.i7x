@@ -23,7 +23,7 @@ When Play begins:
 	now name entry is "Sphinx";
 	now attack entry is "[one of]She riddles you this and that till your head spins.[or]the sphinx lashes out at you with he powerful leonine paws![or]Valerie barrels into you, sending you both crashing to the ground![or]the enraged sphinx leaps at you and rakes you with her claws![or]You duck out of the way of Valerie's leonine claws only to be sent flying as one of her powerful wings smashes into your side.[or]Catching your eyes, Valerie stares at you intimidatingly, and your head starts to swim for a minute before you manage to pull yourself back together.[at random]";
 	now defeated entry is "[Sphinx Loses]";
-	now victory entry is  "[Sphinx Wins]";
+	now victory entry is "[Sphinx Wins]";
 	now desc entry is "[mongendernum 4]     Valerie comes charging down the halls of the museum, her wings half spread and a look of rage on her face as she charges forward on her powerful and sharply clawed leonine paws. 'You put that back you thief!' She cries out with a roar as she leaps at you!";
 	now face entry is "Mostly human face, with slitted cat pupiled eyes and several slight feline features lending a feral cast to your face"; [You have a (your text) face."]
 	now body entry is "long and lean, you have a feral lions body starting just below the shoulders, your hips and lower legs almost indistinguishable from those of a great cat, though your arms are still more human than beast, with clawed fingers instead of paws,Along your back rest a pair of soft feathered wings, the powerful muscles in them still not quite strong enough to let you use them to fly";[ Body Description, format as the text "Your Body is (your text)"]
@@ -42,7 +42,7 @@ When Play begins:
 	now int entry is 25;
 	now cha entry is 15;
 	now sex entry is "Male"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 160;							
+	now hp entry is 160;
 	now lev entry is 20;							[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 18;							[ Amount of Damage monster Does when attacking.]
 	now area entry is "Foyer";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -53,8 +53,8 @@ When Play begins:
 	now breast size entry is 4;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;							[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;  
-	now cunt width entry is 0;  
+	now cunt length entry is 0;
+	now cunt width entry is 0;
 	now libido entry is 30;						[ Amount player Libido will go up if defeated ]
 	now loot entry is "";							[ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]

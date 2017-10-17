@@ -25,7 +25,7 @@ carry out KarenTalking:
 		if hp of Karen is 1:
 			say "     Seeing Karen sitting alone, you realize she may know of some way you could distract Rex. You subtly try and get any information she may have by asking her about her previous life. Not surprisingly, she doesn't remember much. She tells you about the few fuzzy memories she has of her old self; most of the vague tales of her life as a student are unhelpful, but one story does catch your attention. She tells you about an unusual bakery on the outskirts of the high rise district she and Rex used to visit when he was the pet instead of her, a place that specialized in premium pet treats. Most of the story ends up revolving around how much she'd like to try one of those cookies now, but she does let slip that the old Rex was always ecstatic to visit and sample their wares. Perhaps this could provide the distraction you need?";
 			now hp of Karen is 2;
-		else if hp of Rex  > 9:
+		else if hp of Rex > 9:
 			say "     [one of]I'm so glad you decided to stay with us; I'm sure you'll love it.[or]Karen takes a moment to admire the collar Rex has given you to wear, comparing it to her own for a moment before complimenting you on how nice it looks.[or]Karen is far too busy playing with Rex on the floor to talk right now.[or]Karen is sitting on the floor in front of Rex, begging for the treat he has suspended above her head. Clearly she's far too focused on Rex and the cookie to talk right now.[or]Karen barely acknowledges you as you approach, apparently not interested in conversation while cleaning herself up after her latest escapade with Rex.[or]Karen smiles up at you as she eats from a small pink dog bowl, offering you a taste before she digs back in.[at random]";
 		else:
 			say "     [one of]Karen is far too busy playing with Rex on the floor to talk right now.[or]Karen is sitting on the floor in front of Rex, begging for the treat he has suspended above her head, clearly she's far too focused on Rex and the cookie to talk right now.[or]'I'm so glad that bone brought me back here to Rex, and you're pretty lucky it brought you here to him too!' Karen says with a smile.[or]'Are you sure you don't want to stay here with us?' Karen asks with a cute pout.[or]Karen barely acknowledges you as you approach, apparently not interested in conversation while cleaning herself up after her latest escapade with Rex.[or]Karen smiles up at you as she eats from a small pink dog bowl, offering you a taste before she digs back in.[at random]";
@@ -51,10 +51,10 @@ carry out KarenFucking:
 			say "     You turn around to see Rex, an uncharacteristic scowl across his muzzle, apparently aware of your intentions. Glancing back at Karen for a moment, you decide it's best to stay on Rex's good side and leave his pet be.";
 	else if companion of player is Retriever Girl:
 		if hp of Karen is 8:
-			say "      Karen bites her lip and stares at you longingly for a moment before refusing. 'I don't think I should be doing anything like that... yet.'";
+			say "     Karen bites her lip and stares at you longingly for a moment before refusing. 'I don't think I should be doing anything like that... yet.'";
 			say "     (Sorry - This quest/character is still a work in progress, this is where it ends for now. -The author)";
 		else if hp of Karen > 4:
-			say "      Karen bites her lip and stares at you longingly for a moment before refusing. 'I don't think I should be doing anything like that... yet.'";
+			say "     Karen bites her lip and stares at you longingly for a moment before refusing. 'I don't think I should be doing anything like that... yet.'";
 	else:
 		if hp of Karen > 4:
 			say "     Karen is not currently your active companion, you should call her over first.";
@@ -95,7 +95,7 @@ Instead of resolving a Forgotten Past:
 		say "     (Note - This quest/character is still a work in progress, this is where it ends for now. Sorry! -The author)";
 		now HP of Karen is 8;
 		increase carried of water bottle by 1;
-		now  Forgotten Past is resolved;
+		now Forgotten Past is resolved;
 	else:
 		say "     While wandering a secluded hall of the campus, you recall Karen was hoping you would bring her here to search for clues to her past. Perhaps you should return here later with her.";
 
@@ -104,8 +104,8 @@ Instead of resolving a Forgotten Past:
 [ 1 = done event once, received bone]
 [ 2-4 = used bone  1-3 times]
 [ 5 = met Rex, lost bone ]
-[ 6-9 = "training phase, fucked Rex , pet offer at 9]
-[ 10 = Pet game over  1]
+[ 6-9 = Training phase, fucked Rex, pet offer at 9]
+[ 10 = Pet game over 1]
 [ 11= Accepted collar]
 [ 49 = Defeated by Rex in escape quest]
 [ 50 = Defeated Rex]

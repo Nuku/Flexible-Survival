@@ -1,4 +1,4 @@
-Version 2 of Cute Chinchilla Girl For FS by Guest Writers begins here. 
+Version 2 of Cute Chinchilla Girl For FS by Guest Writers begins here.
 [ Version 2.1 - Player victory added by Stripes]
 [ Version 2.0 - Complete Overhaul by Blue Bishop]
 [- Originally Authored By: Trav -]
@@ -52,7 +52,7 @@ to say chinloss: [Placeholder, player victory scenes expected to be added in lat
 		if the player consents:
 			if cock length of player > 16:
 				say "     Giving her diminutive size, especially when compared to your [cock size desc of player] cock, you pass on outright fucking the little cutie and instead go for some other fun. Having to problem pinning her down, you press your drooling glans to her face and tell her to start licking. The small fluffball[if chindem is true][one of] grumbles something about how you don't have to so mean about it, but[or] giggles that you should've just said so in the first place. She[or]'s eyes go wide with desire at the size of your manhood. With such a prize, she[at random][else][one of] chitters indignantly, but[or] releases a chittering giggle of excitement. She[or][']s eyes go wide with desire at the size of your manhood. With such a prize, she[at random][end if] relents and slides her tongue slowly along several inches of cock before twirling it across the tip. Soon more licks follow along with her fuzzy paws joining in on caressing your [if cock length of player < 30]comparatively [end if]huge penis.";
-				say "      With her thus occupied, you slip your hands into her fuzzy fur and start caressing her curvaceous body. While it's hard to see buried under all that fluff, she's got a sexy (if rather animalistic) body hidden under her fur. You rub her breasts and tease her hidden nipples, drawing chitters of delight from her. You then let a hand slide down between her legs and slip [if scalevalue of player < 4]a pair of digits[else]a finger[end if] into her cunt. Her cunny's quite hot and wet, clearly excited from her fun with your cock.";
+				say "     With her thus occupied, you slip your hands into her fuzzy fur and start caressing her curvaceous body. While it's hard to see buried under all that fluff, she's got a sexy (if rather animalistic) body hidden under her fur. You rub her breasts and tease her hidden nipples, drawing chitters of delight from her. You then let a hand slide down between her legs and slip [if scalevalue of player < 4]a pair of digits[else]a finger[end if] into her cunt. Her cunny's quite hot and wet, clearly excited from her fun with your cock.";
 				attempttowait;
 				say "     You continue to finger and pet the female rodent while she licks and strokes your manhood. As your excitement grows, your dick drools pre onto her tongue as well as her fuzzy face. Feeling your orgasm approaching, you grab the back of her head with your free hand and stuff the end of your cock into her little muzzle. You groan and [if cock width of player > 15]bulge her cheeks out with just the first few blasts[else]shoot several blasts[end if] of your [cum load size of player] load into her mouth before pulling it out. You pump your cock frantically, spraying the rest of your seed onto her fuzzy fur, making sure she's good and messy. Even as you're cumming all over her, you finger her to a chittering orgasm.";
 				say "     After you get off her, she gets up and [if chindem is true][one of]grumbles about how messy you've gotten her soft coat[or]complains about how her fur is dry-clean only[or]complains about needing a good, long dust-bath now[at random][else]chitters indignantly, clearly upset at having her soft coat soaked in your seed[end if]. She tries her best to wipe it off while shakes her sticky arms as she walks off. This flings gobs of semen from her little paws onto the ground, though she also licks several gooey globs from them as well.";
@@ -97,10 +97,10 @@ When Play begins:
 	now name entry is "Chinchilla";
 	now attack entry is "[one of]She[or]The chinchilla[at random] [one of]pounces onto you, clinging to your [bodydesc of player] form. You manage to pry her off, but not before she assails you with a barrage of clawing and nipping[or]manages to get close to one of your legs, chomping down and holding on for dear life until you finally kick her free[or]swipes at you with her tiny claws[or]manages to kick you with one of her more powerful hindpaws[or]finds and rock and manages to throw it at you[at random].";
 	now defeated entry is "[chinloss].";
-	now victory entry is  "[chinvic]";
+	now victory entry is "[chinvic]";
 	now desc entry is "[chindesc]";
-	now face entry is "short chinchilla muzzle, small grey mouse-like ears, and cute, little whiskers adorned on your";[ Face description, format as the text "You have a (your text) face."]
-	now body entry is "voluptuous and somewhat bestial. You have powerful hindpaws that that allow you to move with some speed and grace.";[ Body Description, format as the text "Your Body is (your text)"]
+	now face entry is "short chinchilla muzzle, small grey mouse-like ears, and cute, little whiskers adorned on it";[ Face description, format as the text "You have a (your text) face."]
+	now body entry is "voluptuous and somewhat bestial. You have powerful hindpaws that allow you to move with some speed and grace";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]grey fur[or]downy soft fur[at random] in place of";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You fairly long tail which fluffs out quite a bit.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]tapered[or]chinchilla[at random], pinkish";[ Cock Description, format as you have a 'size' (your text) cock]
@@ -127,8 +127,8 @@ When Play begins:
 	now breast size entry is 3; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 7; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 7; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 6; [ Width of female sex infection will try and give you ]
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
 	now loot entry is "tuft of chin fur";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]

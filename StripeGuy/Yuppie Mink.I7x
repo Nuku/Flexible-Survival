@@ -57,7 +57,7 @@ to say losetoymgirl:
 	else:
 		say "     Beaten senseless by the yachting mink, you collapse to the wooden slats of the dock. At the snap of her fingers, deckhands yank your gear and clothes of without ceremony, leaving you bare to her. 'You locals are so unfriendly! This is worse than that trip to Peru!'";
 	if cocks of player > 0:
-		say "    With a soft little self-amused hum the mink stands beside you, swinging one short leg across your body to straddle your prone form. 'At least you've got something I can amuse myself with.' She hikes her skirt up to expose the dripping slit of her needy cunt, rubbing it idly with her paws. Her eyes close, head tilting back as she teases herself with her fingers and you with the sight of her lips opening. Honey-like juices dribble down, splattering on your belly and crotch. The warmth and scent is enough to get your prick stiff and ready for her, but things are outside your control! Your dick is aching with need by the time she is ready, smoothly crouching down and aligning her cunt with the tip of your cock. 'There we go.' She churrs with satisfaction as she sits down in a single motion, her cunt swallowing you to the base!";
+		say "     With a soft little self-amused hum the mink stands beside you, swinging one short leg across your body to straddle your prone form. 'At least you've got something I can amuse myself with.' She hikes her skirt up to expose the dripping slit of her needy cunt, rubbing it idly with her paws. Her eyes close, head tilting back as she teases herself with her fingers and you with the sight of her lips opening. Honey-like juices dribble down, splattering on your belly and crotch. The warmth and scent is enough to get your prick stiff and ready for her, but things are outside your control! Your dick is aching with need by the time she is ready, smoothly crouching down and aligning her cunt with the tip of your cock. 'There we go.' She churrs with satisfaction as she sits down in a single motion, her cunt swallowing you to the base!";
 		say "     She feels so good around you, her tight cunt expertly massaging and milking your length as she begins to bounce. Her pert tits wobble in the high-dollar sports bra she wears, out of your reach. Every time you extend a hand toward them, she slaps it away. The mink girl is running the show, but you are lucky enough to be along for the ride. Eventually you have to lay back and enjoy it, but are only halfway to your own orgasm before she is barking and trembling in delight! With a gush of femjuices, she has her delightful orgasm, eyes rolling back in her head. She stands up suddenly, leaving you blueballed and in sexual agony. 'Not terrible.' Daintily, she flicks the tip of your still thrumming cock with a toe. That is enough for you to finally limp to orgasm, the mink laughing as you splatter yourself. Still laughing, she returns to her yacht! ";
 	else:
 		say "     Finding only a wet pussy between your legs, the mink clicks her tongue in disappointment. 'Unfortunate' She chides you gently, but hikes her skirt up to expose the dripping slit of her needy cunt, rubbing it idly with her paws. Her eyes close, head tilting back as she teases herself with her fingers and you with the sight of her lips opening. With a huff she steps forward, gripping your head firmly and bringing up to her needy cunt. Its lick or die, and you have little choice but to worship that hot slit! Time loses meaning as you slurp and lick, teasing her swollen clit until at last the mink gushes femjuices and soaks your face! Satisfied, she allows you to collapse, climbing back aboard her yacht.";
@@ -113,12 +113,12 @@ When Play begins:
 	now name entry is "Yuppie Mink";
 	now attack entry is "[ymgfight]";
 	now defeated entry is "[beattheymg]";
-	now victory entry is  "[losetoymg]";
+	now victory entry is "[losetoymg]";
 	now desc entry is "[ymgdesc]";
-	now face entry is "narrowed and strongly defined with an arrogant, aristocratic bearing made all the more visible by stark white fur. Tiny ears, a pink nose, and lips that reflexively twitch into sneers. ";
-	now body entry is "elegantly thin and tapered, with an elongated torso and somewhat short limbs. The narrow width of your shoulders and hips simplifies your silhouette to the most basic and sleek of profiles. Slightly built, and delicately wrought, your body is perfect for complimenting satin and gold.";
+	now face entry is "narrowed and strongly defined with an arrogant, aristocratic bearing made all the more visible by stark white fur. Tiny ears, a pink nose, and lips that reflexively twitch into sneers";
+	now body entry is "elegantly thin and tapered, with an elongated torso and somewhat short limbs. The narrow width of your shoulders and hips simplifies your silhouette to the most basic and sleek of profiles. Slightly built, and delicately wrought, your body is perfect for complimenting satin and gold";
 	now skin entry is "[one of]satin soft white fur[or]elegantly white-furred[or]short but silky-smooth milky fur[at random]";
-	now tail entry is "You have an elegant if somewhat short tail which is like a cloud or snowbank in motion, an almost hypnotically swirling sensual limb..";
+	now tail entry is "You have an elegant if somewhat short tail which is like a cloud or snowbank in motion, an almost hypnotically swirling sensual limb.";
 	now cock entry is "[one of]pinkish[or]high-class cock[or]fat mink fucker[or]thick fuckstick[at random]";
 	now face change entry is "your nose and mouth pull forward into a pointy and aristocratic muzzle, angular and shapely. Your teeth extend into predatory points as both ears shift upwards into dainty cups of flesh. Sleek and dangerous, your face is obviously high-class and dangerous";
 	now body change entry is "your frame slims down and extends, the elongation making your body seem all the more slender. Your arms and legs shorter and thin out to become more dainty and attractive, for fast and lithe movements. Your limbs end in smallish paws that are soft and pink, obviously never used for a day of manual labor";
@@ -138,13 +138,13 @@ When Play begins:
 	now area entry is "Warehouse"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2; [ Number of Breasts infection will give you. ]
 	now breast size entry is 4; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 10; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 10; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 6; [ Width of female sex infection will try and give you ]
 	now libido entry is 60; [ Amount player Libido will go up if defeated ]
 	now loot entry is ""; [ Loot monster drops, ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]

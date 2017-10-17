@@ -20,7 +20,7 @@ The invent of Miles' room is { "small pouch" , "strange gem" }.
 The invent of Rec room is { "food" , "medkit" , "water bottle" , "water bottle" , "protein shake" , "protein shake" , "food"  }.
 
 North of Hallway is Rec room.
-East of Hallway  is Max's room.
+East of Hallway is Max's room.
 West of Hallway is Miles' room.
 South of Hallway is Complex.
 North of Complex is Hallway.

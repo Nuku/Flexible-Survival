@@ -71,7 +71,7 @@ When Play begins:
 	now name entry is "Amazonian"; [Name of your new Monster]
 	now attack entry is "[one of]She[or]The Amazonian[or]The Amazon woman[or]The muscular herm[at random] [one of]strikes you with a powerful punch[or]connects with a snap kick[or]strikes you with a powerful blow[at random].";
 	now defeated entry is "[beattheamazonian]";
-	now victory entry is  "[losetoamazonian]";
+	now victory entry is "[losetoamazonian]";
 	now desc entry is "[amazoniandesc]";
 	now face entry is "human in shape, though with beautifully shaped bone structure. Your hair is long and has a silken shimmer, falling all the way down to your ass";
 	now body entry is "[if cunts of player > 0 and cocks of player is 0]musclebound, but feminine, with a wasp-thin waist and wide, child-bearing hips[else if cunts of player is 0 and cocks of player > 0]muscular and strong, though with a somewhat narrow waist and slightly wider hips that give them an almost hourglass figure... although a very slight one[else if cunts of player is 0 and cocks of player is 0]muscular and androgynous, a very athletic build that could be male or female... depending on the lighting[else if cunts of player > 0 and cocks of player > 0]musclebound, but feminine, with a wasp-thin waist and wide, child-bearing hips. The muscles are somewhat bulkier than is typical for a woman though[end if]. Your body bears the telltale definition of someone who works out continuously, who is extremely proud of their strength. Your arms are slender, but with a great deal of muscular definition under the taut skin. Your legs are muscular in an athletic way. Fine toned thighs and calves that lead into almost-dainty feet that never quite sit flat on the ground; always ready to move in some way";
@@ -96,7 +96,7 @@ When Play begins:
 	now area entry is "Museum"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 16; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2; [ Number of Breasts infection will give you. ]
 	now breast size entry is 3; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]

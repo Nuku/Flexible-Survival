@@ -38,10 +38,10 @@ When Play begins:
 	now name entry is "Mannequin";
 	now attack entry is "[one of]It hits you in the head, strong enough to daze, but not hurt you.[or]It grabs your arm for a moment with a strong grip before you can pull away. That'll leave quite a bruise.[or]It grabs your leg for a moment with a strong grip before you can pull away. That'll leave quite a bruise.[at random]";
 	now defeated entry is "[mannequin loses]";
-	now victory entry is  "[mannequin wins]";
+	now victory entry is "[mannequin wins]";
 	now desc entry is "[mannequinDesc]";
 	now face entry is "smooth, with striking angular features like a statue";
-	now body entry is "that of a idealized male, with washboard abs and muscled arms and legs";
+	now body entry is "that of an idealized male, with washboard abs and muscled arms and legs";
 	now skin entry is "pale and flawless";[ format as the text "You have (your text) skin"]
 	now tail entry is "";[ write a whole Sentence or leave blank. ]
 	now cock entry is "human";[ format as "You have a 'size' (your text) cock ]

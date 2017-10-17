@@ -163,7 +163,7 @@ to say losttodobie2:		[mid-lust player loss]
 	let fine be 0;
 	let timepenalty be 0;
 	if dobieresist is 0:
-		say "     You drop your fighting stance and put your arms up, surrendering to the canine policewoman. From the way she looks at you and licks her muzzle, a part of you hopes she'll give into her lusts with you. She walks up to you with a sexy sway to her hips, but knocks your legs out from under you, pinning your arms behind your back. 'Rrrr! I'm tempted to really show you how much I appreciate your earlier stunt, but I'm trying to keep it together. And you should be too. Since you're obviously able to control yourself enough to not fight, there may still be hope for you.' You feel one of her paws grope your ass before it's pulled away quickly. 'Sh-  Look, we both need to keep it together until rescue can come,' she continues. 'I'm ordering you to take cover and wait this thing out'";
+		say "     You drop your fighting stance and put your arms up, surrendering to the canine policewoman. From the way she looks at you and licks her muzzle, a part of you hopes she'll give into her lusts with you. She walks up to you with a sexy sway to her hips, but knocks your legs out from under you, pinning your arms behind your back. 'Rrrr! I'm tempted to really show you how much I appreciate your earlier stunt, but I'm trying to keep it together. And you should be too. Since you're obviously able to control yourself enough to not fight, there may still be hope for you.' You feel one of her paws grope your ass before it's pulled away quickly. 'Sh- Look, we both need to keep it together until rescue can come,' she continues. 'I'm ordering you to take cover and wait this thing out'";
 		say "[weaponconf]";
 		say "     And with that said, she turns and heads off, leaving you feeling a little more focused[if libido of player > 50] and maybe a little disappointed you didn't get any fun with the sexy cop[end if].";
 		increase humanity of player by 12;
@@ -178,7 +178,7 @@ to say losttodobie2:		[mid-lust player loss]
 		let fine be 4 + ( dobieresist * 2 ) + ( hp entry - monsterhp );
 		let timepenalty be 2;
 		if dobieresist > 4, increase timepenalty by 1;
-		say "     Deciding it'd be best to stop and surrender, you drop your fighting stance and put up your arms. She growls and keeps a close eye on you, licking her muzzle with a grin of pleasure. From the look she give you, a part of you hopes she'll give into her lusts with you. She walks up to you with a sexy sway to her hips, but knocks your legs out from under you, pinning your arms behind your back. 'Rrrr! I'm tempted to really show you how much I appreciate your earlier stunt, but I'm trying to keep it together. And you should be too. But you've been resisting arrest,' she growls in your ear, giving your ass a squeeze. 'Sh-  Look, we both need to keep it together until rescue can come,' she continues. 'Since I can't really detain you right now, I'm giving you a ticket and ordering you back to your home. You need to keep it together, take cover and wait this mess out until rescue comes";
+		say "     Deciding it'd be best to stop and surrender, you drop your fighting stance and put up your arms. She growls and keeps a close eye on you, licking her muzzle with a grin of pleasure. From the look she give you, a part of you hopes she'll give into her lusts with you. She walks up to you with a sexy sway to her hips, but knocks your legs out from under you, pinning your arms behind your back. 'Rrrr! I'm tempted to really show you how much I appreciate your earlier stunt, but I'm trying to keep it together. And you should be too. But you've been resisting arrest,' she growls in your ear, giving your ass a squeeze. 'Sh- Look, we both need to keep it together until rescue can come,' she continues. 'Since I can't really detain you right now, I'm giving you a ticket and ordering you back to your home. You need to keep it together, take cover and wait this mess out until rescue comes";
 		say "[weaponconf]";
 		say "     She shoves the ticket into your hand, turns and heads off. More than a little confused[if libido of player > 50] and slightly disappointed sexually[end if], but feeling a bit calmer, you look it over the ticket. It says something about a fine of [special-style-2][fine][roman type] freecred and a penalty of [special-style-2][timepenalty * 3][roman type] hours of community service.";
 		increase humanity of player by 10;
@@ -296,9 +296,9 @@ to say weaponconf:
 			else if libido of player >= 110:		[lustfully submitted]
 				say "***Not written yet, but may be needed in the future. Player lost due to excess libido.";
 			else if hp of player > 0:			[resisted, then submitted]
-				say "    She takes your whip and sword away, making sure to grab them using an evidence bag. 'Just think about the damage you could have caused with these. You're too much of a loose cannon to be trusted with them. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
+				say "     She takes your whip and sword away, making sure to grab them using an evidence bag. 'Just think about the damage you could have caused with these. You're too much of a loose cannon to be trusted with them. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
 			else:							[lost the fight]
-				say "    She takes your whip and sword away, making sure to grab them using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
+				say "     She takes your whip and sword away, making sure to grab them using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
 			if weapon object of player is dirty whip:
 				now weapon damage of player is 4;
 				now weapon type of player is "Melee";
@@ -495,7 +495,7 @@ When Play begins:
 	now defeated entry is "[beattheDoberman]";
 	now victory entry is "[losetoDoberman]";
 	now desc entry is "[Dobermandesc]";
-	now face entry is "now possesses the striking features of a cunningly handsome looking Dobie"; [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "that of a cunningly handsome looking Dobie"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "fit and toned without a trace of fat anywhere in sight. No to mention pecs that bulge out almost half an inch from your chest and torso with, count 'em, eight hard and cut abs you are definitely a stud of a dog"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "[one of]brown and black fur[or]a dense and dark pelt[or]a heavy cropping of water resistant fur[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "Your tail is long and thin, like a Dalmatian's, but pitch black in colour, oh and curved upwards."; [ Tail desc., written as a full sentence or left blank for none. ]

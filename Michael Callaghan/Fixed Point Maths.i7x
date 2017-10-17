@@ -342,7 +342,7 @@ To decide what real number is (N - a real number) in degrees:
 		let angle be angle plus 1;
 	else:
 		let temp2 be temp2 times 1000;
-	let result be angle  to the nearest whole number + temp2 - temp2 to the nearest whole number;
+	let result be angle to the nearest whole number + temp2 - temp2 to the nearest whole number;
 	decide on result.
 
 To decide what real number is (N - a number) in degrees:
@@ -459,7 +459,7 @@ To decide what real number is the arctangent of (N - a real number):
 	if temp is real greater than 1.0000:
 		let temp1 be N to the power 2;
 		let temp1 be temp1 real plus 0.2809;
-		let  temp1 be N real divided by temp1;
+		let temp1 be N real divided by temp1;
 		let result be 1.5708 - temp1;
 	else:
 		let temp1 be N real times 0.2809;
@@ -521,7 +521,7 @@ Invalid conversion is false.
 Section 2 - Conversion routine
 
 To decide which real number is the number derived from (T - indexed text):
-	if T is  "":
+	if T is "":
 		now invalid conversion is true;
 		decide on 0 as a fixed point number;
 	replace the regular expression " " in T with "";
@@ -530,7 +530,7 @@ To decide which real number is the number derived from (T - indexed text):
 	let result be a number;
 	let first be a number;
 	let second be a number;
-	let second part test  be true;
+	let second part test be true;
 	let length be the number of characters in T;
 	let multiplier be 1;
 	repeat with N running from 0 to length minus 1:
@@ -564,35 +564,35 @@ To decide which real number is the number derived from (T - indexed text):
 			let result be multiplier plus result;
 			let multiplier be multiplier times 10;
 			let matched be true;
-		if  test char is "2":
+		if test char is "2":
 			let result be 2 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "3":
+		if test char is "3":
 			let result be 3 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "4":
+		if test char is "4":
 			let result be 4 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "5":
+		if test char is "5":
 			let result be 5 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "6":
+		if test char is "6":
 			let result be 6 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "7":
+		if test char is "7":
 			let result be 7 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "8":
+		if test char is "8":
 			let result be 8 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "9":
+		if test char is "9":
 			let result be 9 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
@@ -943,7 +943,7 @@ If the text does not match the requirements for a real number, an internal flag,
 
 	let X be the number derived from "a123.1222":
 	if invalid conversion is true:
-		say "This is not  valid real number.  It must contain only digits and the characters '+ - and .'  There must be [precision] digits after the decimal point.";
+		say "This is not valid real number.  It must contain only digits and the characters '+ - and .'  There must be [precision] digits after the decimal point.";
 	else:
 		say "[X]".
 
@@ -955,7 +955,7 @@ Example: * The Classroom - Shows the use of the sine function
 
 	The classroom is a room.  A chalk board is in the classroom.  Understand "chalkboard" as the chalk board.
 
-	Instead of examining the  chalk board:
+	Instead of examining the chalk board:
 		say "Someone has drawn a curve like a sine wave turned through 90 degrees.";
 		repeat with angle running from 0 to 360:
 			let val be the sine of angle;

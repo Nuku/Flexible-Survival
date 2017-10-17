@@ -139,7 +139,7 @@ When Play begins:
 	now name entry is "Hermaphrodite Dolphin"; [Name of your new Monster]
 	now attack entry is "She takes her fist and punches you with her immense strength."; [Text used when the monster makes an Attack]
 	now defeated entry is "[dolphin loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[dolphin attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now victory entry is "[dolphin attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 5]As you [if the location of the player is not Public Beach]swim along[else]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'";[ Description of the creature when you encounter it.]
 	now face entry is "long dolphin snout";
 	now body entry is "silvery with a blue back. A dorsal fin sits on top. Strong muscles contract underneath the surface";[ Body Description, format as the text "Your Body is (your text)"]
@@ -169,8 +169,8 @@ When Play begins:
 	now breast size entry is 2; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 28; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 10; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 28; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 10; [ Width of female sex infection will try and give you ]
 	now libido entry is 40; [ Amount player Libido will go up if defeated ]
 	now loot entry is "dolphin milk";
 	now lootchance entry is 75; [ Chance of loot dropping 0-100 ]
