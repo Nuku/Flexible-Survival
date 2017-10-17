@@ -190,6 +190,7 @@ the player has a list of text called invent.
 the player has a list of text called vials.
 Rooms has a list of text called invent.
 The player has a list of text called feats.
+The player has a list of text called BlockList.
 A person can be a trader.
 Scenario is a text that varies.
 Allobjs is a list of text that varies.
