@@ -18,6 +18,7 @@ use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 2000.
 use MAX_ACTIONS of 2000.
 use MAX_VERBS of 2000.
+use MAX_VERBSPACE of 50000.
 use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
 Use MAX_DICT_ENTRIES OF 2400.
@@ -4227,7 +4228,7 @@ This is the cunt descr rule:
 	else if cunt length of player is less than 8:
 		now descr is "[one of]average[or]normal sized[at random]";
 	else if cunt length of player is less than 12:
-		now descr is "[one of]large[or]thick lipped[or]above average[at random]";
+		now descr is "[one of]large[or]thick-lipped[or]above average[at random]";
 	else if cunt length of player is less than 18:
 		now descr is "[one of]belly bulgingly huge[or]inhumanly deep[or]forearm length[at random]";
 	else if cunt length of player is less than 25:
@@ -4317,7 +4318,7 @@ This is the self examine rule:
 			now cunttext is " have [cunts of the player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random].  Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around.  They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 		else:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around.  It is [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
-	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
+	say "Looking at yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "face":
