@@ -26,7 +26,7 @@ to say PKDesc:
 			say "Well hey there, welcome back. Did you come to shop, talk, or did you wanna play some more?' the not-so-innocent proprietor quietly says to you. 'Just give me a hollar if you need anything, beautiful.'";
 		else:
 			say "	'Hi [if player is female]miss[else if player is male]mister[else]there![end if] Nice to see you back here. Did you come to chat with little me, or are you looking to change up your [Italic type]horrid[roman type] attire?' the perky catgirl says, winking slyly at you. 'Either way, welcome back!'";
-			
+
 the scent of The Pretty Kitty is "Inhaling deeply, the smell of clean clothes rushes into your nose, reminding you of clean laundry.".
 
 [Objects inside the store]
@@ -58,7 +58,7 @@ instead of conversing Andromeda:
 		say "     You wave goodbye to Andromeda, having to go for now. She beams another happy smile at you and yells 'Come again soon [if player is female]miss[else if player is male]mister[else]you hear[end if]!'";
 		increase hp of Andromeda by 1;
 	else if hp of Hadiya is 9 or hp of Hadiya is 59:		[Leather jacket for Hadiya's quest]
-		say "     After checking through the racks and not seeing one, you ask Andromeda if she's got a small leather jacket. 'No, my leather items were bou-  Oh!  Wait a sec,' she says, cutting herself off as she rushes to the back. The catgirl returns shortly with a small leather jacket with red and pink trim and a high waistline. 'I got this in with a shipment of other stuff, but didn't have a chance to send it back. Something with a bare midriff like that is too trashy for me to sell to a little girl. A larger version might look pretty sexy on the right woman though,' she adds with a soft sigh as her eyes glaze over. You wait awkwardly for a bit, but it soon becomes clear she's lost in her imagination. With a shrug, you take the unwanted jacket, hoping Gobby will be satisfied with it.";
+		say "     After checking through the racks and not seeing one, you ask Andromeda if she's got a small leather jacket. 'No, my leather items were bou- Oh! Wait a sec,' she says, cutting herself off as she rushes to the back. The catgirl returns shortly with a small leather jacket with red and pink trim and a high waistline. 'I got this in with a shipment of other stuff, but didn't have a chance to send it back. Something with a bare midriff like that is too trashy for me to sell to a little girl. A larger version might look pretty sexy on the right woman though,' she adds with a soft sigh as her eyes glaze over. You wait awkwardly for a bit, but it soon becomes clear she's lost in her imagination. With a shrug, you take the unwanted jacket, hoping Gobby will be satisfied with it.";
 		increase hp of Hadiya by 1;
 		now carried of girl's jacket is 1;
 		now Goblin Thief is unresolved;
@@ -150,7 +150,7 @@ Section 3 - Clothes
 
 [Defining Clothing Shelf]
 Clothing Shelf is a man.
-The description of Clothing Shelf is "This nearby rack of clothes holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed as '1 food or 1 milk'. The outfits that stick out to you include a simple [bold type]T-shirt and Blue Jeans[roman type] combo, a lovely black [bold type]Blouse Set[roman type] that's combined with a knee-length skirt, A slim [bold type]Tuxedo set[roman type] and tie on a mannequin nearby, and a baggy, comfortable [bold type]Summer Set[roman type], consisting of a no-sleeved shirt and baggy shorts. You'd just have to have payment and ask to [bold type]procure[roman type] the outfit you want.";
+The description of Clothing Shelf is "This nearby rack of clothes holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed as '1 food or 1 milk'. The outfits that stick out to you include a simple [bold type]T-shirt and Blue Jeans[roman type] combo, a lovely black [bold type]Blouse Set[roman type] that's combined with a knee-length skirt, a slim [bold type]Tuxedo set[roman type] and tie on a mannequin nearby, and a baggy, comfortable [bold type]Summer Set[roman type], consisting of a no-sleeved shirt and baggy shorts. You'd just have to have payment and ask to [bold type]procure[roman type] the outfit you want.";
 
 the linkaction of Clothing Shelf is "Possible Actions: [link]smell[as]Smell Shelf[end link][line break]". [Add options for clothes as links?]
 the scent of Clothing Shelf is "This rack of clothes smells like fresh laundry, with a hint of finished wood.".
@@ -203,7 +203,7 @@ check TuxedoObtain:
 	if Clothing Shelf is not visible, say "I highly doubt you want to purchase an imaginary set of clothes. Or do you?" instead;
 check SummerObtain:
 	if Clothing Shelf is not visible, say "I highly doubt you want to purchase an imaginary set of clothes. Or do you?" instead;
-	
+
 [Tshirt action]
 carry out TshirtObtain:
 	say "     Taking the T-shirt & Blue Jean set up to the counter, Andromeda smiles happily as you approach. Setting your purchase on the counter, you smile back at the bouncing proprietor and mention that you'd like to purchase the T-shirt/Blue Jean combo.";
@@ -277,7 +277,7 @@ carry out BlouseObtain:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
 		else:
 			say "     'Well then why'd you bring them up here you big dolt?' Andromeda says to you, doing her best to put on a serious impression, and then failing horribly. 'I'm just teasing you! Feel free to keep looking around, and only get something if you want to!";
-	
+
 [Tuxedo action]
 carry out TuxedoObtain:
 	say	"     Taking one of the black tuxedos up to the counter, Andromeda smiles happily as you approach. Setting your purchase on the counter, you smile back at the bouncing proprietor and mention that you'd like to purchase the suit.";
@@ -351,7 +351,7 @@ carry out SummerObtain:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
 		else:
 			say "     'Well then why'd you bring them up here you big dolt?' Andromeda says to you, doing her best to put on a serious impression, and then failing horribly. 'I'm just teasing you! Feel free to keep looking around, and only get something if you want to!";
-		
+
 Section 4 - Collars
 
 [Defining Collar Rack]
@@ -460,7 +460,7 @@ carry out FuzzyCollarObtain:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
 		else:
 			say "     'Well then why'd you bring them up here you big dolt?' Andromeda says to you, doing her best to put on a serious impression, and then failing horribly. 'I'm just teasing you! Feel free to keep looking around, and only get something if you want to!";
-			
+
 carry out NametagCollarObtain:
 	say	"     Bringing the spiky collar up to the checkout counter, you're sure Andromeda is blushing slightly as you set the thick leather collar on the counter. Indicating that you'd like to purchase the collar, she smiles at you, doing her best to hide her embarrassment.";
 	if scalevalue of player >= 5 or scalevalue of player <= 1:

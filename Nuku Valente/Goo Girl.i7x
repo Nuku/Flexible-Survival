@@ -35,7 +35,7 @@ to say goovictory:
 		say "     '[one of]Hmm[or]Mm[or]Ah[at random], [one of]I made such a mess[or][if hp of player < 0]that'll teach you[else]I think you enjoyed that[end if][or]we should play again, soon[at random]!' Giggling at you, she departs, returning to the darkness once more. It takes you a while to recover from the whole ordeal and dry yourself off.";
 	now tempnum2 is 0;
 
-To say goodefeat: 
+To say goodefeat:
 	say "     Fending the goo girl off she reels back, compressing herself lowly before you and pouting in submission";
 	if libido of player > 30 or "Dominant" is listed in feats of player:
 		say ". Perhaps you could have a bit of fun with her?";
@@ -92,28 +92,28 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Goo Girl"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of][if cocks of player is greater than 0]With a swipe of a flexible hand she bypasses your clothes, slithering under them to grab at your [cock size desc of player] [cock of player] shaft and starts squeezing, causing pain and pleasure in equal parts.[else if cunts of player is greater than 0 and cunt length of player is less than 12]She surges towards you and grabs at your crotch. Her fluid body flows through creases and cracks, finding your [cunt size desc of player] pussy and diving into it with great zeal, stretching and buzzing harshly, almost making you dizzy with forced pleasure.[else if cunts of player is greater than 0 and cunt length of player is greater than 11]The goo girl grabs at your crotch, and suddenly seems to be shrinking. Your [cunt size desc of player] cunt suddenly sings in pleasure as she flows into you rapidly, making your belly bloat wide for a moment as she fully inhabits your womb before she spills back out in a great warm rush of thick fluids.[else]She swats at you with a flexible hand, bruising you between the legs.[end if][or]She hugs you into her soft bosom. It would be kind of nice if you could breathe![or]A thousand tiny tendrils suddenly spread from her body, slapping at you wildly. It's fortunate they are not too hard.[at random]"; 
-	now defeated entry is "[goodefeat]"; 
-	now victory entry is "[goovictory]"; 
+	now attack entry is "[one of][if cocks of player is greater than 0]With a swipe of a flexible hand she bypasses your clothes, slithering under them to grab at your [cock size desc of player] [cock of player] shaft and starts squeezing, causing pain and pleasure in equal parts.[else if cunts of player is greater than 0 and cunt length of player is less than 12]She surges towards you and grabs at your crotch. Her fluid body flows through creases and cracks, finding your [cunt size desc of player] pussy and diving into it with great zeal, stretching and buzzing harshly, almost making you dizzy with forced pleasure.[else if cunts of player is greater than 0 and cunt length of player is greater than 11]The goo girl grabs at your crotch, and suddenly seems to be shrinking. Your [cunt size desc of player] cunt suddenly sings in pleasure as she flows into you rapidly, making your belly bloat wide for a moment as she fully inhabits your womb before she spills back out in a great warm rush of thick fluids.[else]She swats at you with a flexible hand, bruising you between the legs.[end if][or]She hugs you into her soft bosom. It would be kind of nice if you could breathe![or]A thousand tiny tendrils suddenly spread from her body, slapping at you wildly. It's fortunate they are not too hard.[at random]";
+	now defeated entry is "[goodefeat]";
+	now victory entry is "[goovictory]";
 	now desc entry is "[goodesc]";
-	now face entry is "curiously disquieting smile on a pretty human face"; [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "that of a pretty human's, yet with a curiously disquieting smile"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "human-like, but melded together just at your thighs, flowing together into a large and bulbous base of [skin of player] flesh"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "[one of]jellied[or]gelatin-like[or]translucent[at random] [if goocolour is 1]blue[else if goocolour is 2]purple[else]green[end if]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]partially fluid[or]flexibly semi-solid[or]jellied[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "you can feel your face reshaping into rather pretty, human proportions. An urge overtakes you and you smile, and never stop"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "[googirlbodychange]"; [ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "[googirlskinchange]"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you get an odd feeling, but see no change"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "your [cock size desc of player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former colour drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 8; 
+	now str entry is 8;
 	now dex entry is 10; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10; [ These values may be used as part of alternate combat.]
 	now per entry is 10;
 	now int entry is 10;
 	now cha entry is 5;
 	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 30; 
+	now hp entry is 30;
 	now lev entry is 2; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 3; [ Monster's average damage when attacking. ]
 	now area entry is "Mall"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -132,7 +132,7 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]mutated[or]flowing[or]altered[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "gelatinous"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
@@ -153,7 +153,7 @@ to say googirlskinchange:
 	say "a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh, [if goocolour is 1]blue[else if goocolour is 2]purple[else]green[end if] in colour";
 	if bodyname of player is "Goo Girl":
 		say ". Moreover, your lower legs are drawn together, flowing into one another and creating a base of flesh that goes up to your lower thigh";
-	
+
 Section 3 - Endings
 
 when play ends:
@@ -165,5 +165,4 @@ when play ends:
 		else:
 			say "     Your jello like form proves to be quite a curiosity, especially seeing how it seems immune to the usual signs of aging. You discover that those you absorb for a few hours can be renewed within your undulating form, and offer the service out to the wealthy, who enjoy a false second youth. They don't live any longer, but they do it as a fit and healthy twenty something year old body.";
 
-[ Edit this to have the correct creature name as well]
 Goo Girl ends here.

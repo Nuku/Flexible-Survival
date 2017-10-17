@@ -23,10 +23,10 @@ understand "volunteer" as featgetting.
 
 Check featgetting:
 	if hp of doctor matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
-	if featgained of player is greater than ( ( level of player divided by 3 ) + foodwaterbonus + nerminefeat + boosterfeats ), say "You do not yet qualify for more feats." instead; 
+	if featgained of player is greater than ( ( level of player divided by 3 ) + foodwaterbonus + nerminefeat + boosterfeats ), say "You do not yet qualify for more feats." instead;
 	if hp of doctor matt <= 100:
 		if doctor matt is not visible, say "Only Doctor Matt knows how to do this." instead;
-	otherwise:
+	else:
 		if doctor mouse is not visible, say "You should see Dr Mouse about that." instead;
 
 carry out featgetting:
@@ -39,14 +39,14 @@ carry out featgetting:
 	if there is no title in row 1 of table of gainable feats:
 		say "There are no feats to gain!";
 		wait for any key;
-	otherwise:
+	else:
 		change the current menu to table of Gainable Feats;
 		carry out the displaying activity;
 ]
 
 Featqualified is a number that varies.
 Featqualified is usually 0.
- 
+
 To Featget:
 	blank out the whole of table of gainable feats;
 	repeat with x running through functional featsets:
@@ -54,7 +54,7 @@ To Featget:
 	if there is no title in row 1 of table of gainable feats:
 		say "There are no feats to gain!";
 		wait for any key;
-	otherwise:
+	else:
 		[change the current menu to table of Gainable Feats;
 		carry out the displaying activity;]
 		now featqualified is 1;
@@ -69,16 +69,16 @@ To Featget:
 				now current menu selection is calcnumber;
 				follow the gainfeat rule;
 				if featqualified is 0, break;
-			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+			else if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";
 				continue the action;
-			otherwise:
+			else:
 				say "Invalid Feat.";
 
 featgrabbing is an action applying to one topic.
 
 understand "featgrab [text]" as featgrabbing.
- 
+
  Check featgrabbing:
 	if featqualified is 0:
 		say "You are not ready to learn a new feat." instead;
@@ -95,7 +95,7 @@ To FunFeatget:
 	if there is no title in row 1 of table of gainable feats:
 		say "There are no feats to gain!";
 		wait for any key;
-	otherwise:
+	else:
 		change the current menu to table of Gainable Feats;
 		carry out the displaying activity;
 	decrease featgained of player by 1;
@@ -108,7 +108,7 @@ To FunFeatget:
 	if there is no title in row 1 of table of gainable feats:
 		say "There are no feats to gain!";
 		wait for any key;
-	otherwise:
+	else:
 		[change the current menu to table of Gainable Feats;
 		carry out the displaying activity;]
 		now featqualified is 1;
@@ -124,10 +124,10 @@ To FunFeatget:
 				follow the gainfeat rule;
 				decrease featgained of player by 1;
 				if featqualified is 0, break;
-			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+			else if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";
 				continue the action;
-			otherwise:
+			else:
 				say "Invalid Feat.";
 
 Addfeating is an action applying to one thing.
@@ -157,7 +157,7 @@ instead of addfeating the fun feats:
 			addfeat "Always A Pussy"  with "Outside of special circumstances, you will always keep a pussy.";
 	if "Male Preferred" is listed in feats of player:
 		if "Flat Chested" is not listed in feats of player, addfeat "Breasts" with "Despite being all male, you still grow breasts - curious.";
-	otherwise:
+	else:
 		if "Breasts" is not listed in feats of player, addfeat "Flat Chested" with "Your chest tends to remain flat.";]
 	if "Modest Organs" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
 		addfeat "One Way" with "You can only grow larger, not smaller, sexually - barring specific effects.";
@@ -340,7 +340,7 @@ This is the gainfeat rule:
 			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type]vore menu[roman type] command.  It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]).  It is used for adjusting vore-related game settings.";
 			now playercanvore is true;
 		if nam is "Mugger":
-			say "     You will now get a flat rate increase to item drops from monsters based on your perception.  This ability can be can turned on or off by using the [bold type]mugger[roman type] command and is currently [bold type][if muggerison is true]ON[otherwise]OFF[end if][roman type].";
+			say "     You will now get a flat rate increase to item drops from monsters based on your perception.  This ability can be can turned on or off by using the [bold type]mugger[roman type] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
 		if nam is "Vampiric":
 			say "     You will now recover a small amount of health, thirst and hunger after every victory as you get in a blood-sucking bite after your final blow or at some other point during the victory scene.";
 			now vampiric is true;
@@ -378,8 +378,8 @@ check muggering:
 carry out muggering:
 	if muggerison is false:
 		now muggerison is true;
-	otherwise:
+	else:
 		now muggerison is false;
-	say "The 'Mugger' feat is now [bold type][if muggerison is true]ON[otherwise]OFF[end if][roman type].  You will gain drop items [if muggerison is true]more frequently[otherwise]as normal[end if].";
+	say "The 'Mugger' feat is now [bold type][if muggerison is true]ON[else]OFF[end if][roman type].  You will gain drop items [if muggerison is true]more frequently[else]as normal[end if].";
 
 Feats ends here.

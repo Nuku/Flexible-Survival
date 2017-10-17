@@ -4,10 +4,10 @@ Version 1 of Forest Gang Bang by Defth begins here.
 
 Pack Bang is a situation.
 The sarea of Pack bang is "Forest".
-When play begins:  
+When play begins:
 	add Pack Bang to badspots of feral;
 	add Pack Bang to badspots of guy;
-	
+
 Instead of resolving a Pack Bang:
 	Say "     Going around what appears to be a darker path in the south part of the forest, the place looks abandoned, leaves crack under your feet, branches that had overgrown the path get in your way. The only signal that something was here is the path in itself, big enough for walks or bicycles, sometimes you see walls with overgrown herbs on it. It looks really peaceful but the noises in the background make sure to show you are not alone in here. Howls permeate the place, echoing in the dark part where your eyes can’t tell what is happening in there. But this you know, you are the prey of a pack of wolves.";
 	now inasituation is true;
@@ -22,7 +22,7 @@ Instead of resolving a Pack Bang:
 		now FeralWolfSpecialFightNumber is 2; [fighting the pack leader]
 		challenge "Feral Wolf";
 		if fightoutcome >= 20 and fightoutcome <= 29:    [lost]
-			say "     You are thrown in the ground by the pack-leader - defeated, your only chance of escaping is now gone. You can hear the others closing in on you two, looks like they will have a nice prey."; 
+			say "     You are thrown in the ground by the pack-leader - defeated, your only chance of escaping is now gone. You can hear the others closing in on you two, looks like they will have a nice prey.";
 			say "[FeralWolfGangBang]"; [pack gangbang scene]
 		else if fightoutcome >= 30:     [fled]
 			say "You manage to make your escape from the wolf, leaving him and the rest of his pack behind.";
@@ -81,10 +81,10 @@ Instead of resolving a Pack Bang:
 	now inasituation is false; [re-enables standard scenes]
 
 to say FeralWolfGangBang:
-	say "    The wolves attack your exhausted body, every single one of them wanting to satisfy their lust with your body, the first one jumps on your back penetrating your [if cunts of player > 0]cunt [otherwise]ass [end if]the others growl and bark at their companion's greed, and your moans are soon silenced by another as he jumps on your face, forcing your lips on his red spear. You gag on his cock as the wolf doesn't care about you, your tongue is squished inside your mouth to make space for his mad humping. His balls hit your chin, his paws are hugging tight against the back of your head, his growing knot presenting you what is to come.";
+	say "     The wolves attack your exhausted body, every single one of them wanting to satisfy their lust with your body, the first one jumps on your back penetrating your [if cunts of player > 0]cunt [else]ass [end if]the others growl and bark at their companion's greed, and your moans are soon silenced by another as he jumps on your face, forcing your lips on his red spear. You gag on his cock as the wolf doesn't care about you, your tongue is squished inside your mouth to make space for his mad humping. His balls hit your chin, his paws are hugging tight against the back of your head, his growing knot presenting you what is to come.";
 	say "     With both trying to knot you. The one fucking you face pushes his knot against your lips forcing your maw to open almost unhinging and snapping. Your eyes tear with the pain and your throat burns with the huge dick throbbing as it spill hot cum directly in your gullet. The other one turns around now that he has knotted you and with this another dog jumps at you, penetrating your asshole. The sudden penetration makes you get away from the one knotting your mouth. Your face finally free and dripping with your attackers cum.";
 	WaitLineBreak;
 	say "     The other wolves look angry and are fighting the one knotted in your pussy. You are pulled and pushed to your limits, and in a vain struggle to scream the pain your mouth is penetrated by another of the dog who hadn't a turn yet. you feel hot cum filling your intestines as the one on your ass finally cums, but he doesn't get a chance to knot you as both dogs on your back are pushed from you. Your holes gape without a cock, especially a knotted cock, and the cold wind of the forest send chills down your spine. The dogs fighting for a turn is now but a background noise. But your rest doesn't last long as other dogs finally fuck you.";
 	say "     You are always used by at least two of the horny wolves, in fact sometimes you felt more than two cocks penetrating your now loose asshole[if cunts of player > 0] and another one inside your drenched pussy[else].[end if] Your mouth hurts from all the use and all you can taste right now is the taste of wolf's cum, you stomach aching with how it's full, since it was filled from both ends. But the wolves are now long gone, leaving you in a pool of cum. But this finally gives you enough time to rest, until you are finally good enough to go back to your adventures.";
-	
+
 Forest Gang Bang ends here.

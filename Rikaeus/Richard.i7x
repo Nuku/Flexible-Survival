@@ -12,10 +12,10 @@ An everyturn rule:
 Richard is a man.
 The description of Richard is "[RichardDesc]".
 The conversation of Richard is { "<This is nothing but a placeholder!>" }.
-The scent of Richard is "     Richard smells like sex and musk, something that you expected from a randy satyr like him. However, beneath that scent you can smell... chocolate?";
+The scent of Richard is "     Richard smells like sex and musk, something that you expected from a randy satyr like him. However, beneath that scent you can smell... chocolate?".
 
 to say RichardDesc:
-	say "     The satyr boy is wearing a loose, short-sleeved t-shirt with the college's logo on it as well as a a pair of camo cargo pants. The virile male is currently sitting at his computer, tapping away at the keys with an open book to his left. Upon closer examination you see that he is writing what looks to be an essay, huh. Apparently even with the nanite apocalpyse, school still goes on. It's not long until Richard feels your eyes on him, causing him to turn and wave at you, a happy smile on his face.";
+	say "     The satyr boy is wearing a loose, short-sleeved t-shirt with the college's logo on it as well as a pair of camo cargo pants. The virile male is currently sitting at his computer, tapping away at the keys with an open book to his left. Upon closer examination you see that he is writing what looks to be an essay, huh. Apparently even with the nanite apocalpyse, school still goes on. It's not long until Richard feels your eyes on him, causing him to turn and wave at you, a happy smile on his face.";
 
 Section 2 - Talking with Richard
 
@@ -29,7 +29,7 @@ instead of conversing the Richard:
 
 to say RichardTalkMenu:
 	say "[line break]";
-	say "What do you wish to talk about with the satyr?";	
+	say "What do you wish to talk about with the satyr?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -84,7 +84,7 @@ Section 3 - Sex
 
 instead of fucking Richard:
 	if (lastfuck of Richard - turns < 3): [he got fucked in the last 9 hours = 3 turns]
-		say "     The satyr chuckles at you before waving you off. 'Down [if cunts of player > 0]girl[otherwise]boy[end if]! I need time to rest.' He jokingly tells you.";
+		say "     The satyr chuckles at you before waving you off. 'Down [if cunts of player > 0]girl[else]boy[end if]! I need time to rest.' He jokingly tells you.";
 	else:
 		say "     While Richard is tapping away at his keyboard, you think of how you can use that body of his.";
 		wait for any key;

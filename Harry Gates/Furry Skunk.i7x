@@ -66,7 +66,7 @@ When play begins, add Furry_Skunk_gene to Genetic list.
 
 Section 2 - Furry Skunk Definition
 
-A furry skunk is a kind of monster.  The body of a furry skunk is usually  {Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene}.  A furry skunk is monstrous.  A furry skunk is fully infected.  A furry skunk is usually unsuited.  A furry skunk is female.  A furry skunk is tailed.  The monster gene of a furry skunk is Furry_Skunk_gene.
+A furry skunk is a kind of monster.  The body of a furry skunk is usually {Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene, Furry_Skunk_gene}.  A furry skunk is monstrous.  A furry skunk is fully infected.  A furry skunk is usually unsuited.  A furry skunk is female.  A furry skunk is tailed.  The monster gene of a furry skunk is Furry_Skunk_gene.
 
 The description of furry skunk is "This is an anthropomorphic furry skunkette, her teeth bared and sharp claws ready to strike!"
 

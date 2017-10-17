@@ -117,7 +117,7 @@ When Play begins:
    now name entry is "Wrestling Wolf"; [Name of your new Monster]
    now attack entry is "[one of]He charges at you with his arm extended. Wrapping his extended arm around neck, he performs a Lariot strong enough to have torn your head clean off, tossing you hard onto the ground.[or]Faster than he looks, he gets past your defenses as he moves behind you. He wraps his arms around your waist from behind and lifts you into the air momentarily before slamming you back down head first in a German Suplex.[or]You charge at him with the intent of tackling him. He stands his ground as he takes your attack, but it is like tackling a brick wall, causing you to stumble back a bit, but not before he kicks you hard in your gut.[or]The Wrestling Wolf grabs hold of the back of your neck and groin and effortlessly hoists you up above his head before bringing you down hard onto his waiting knee, performing a devastating BackBreaker[or]The Wrestling Wolf delivers a powerful punch to your gut, causing you to bend over as you hug your gut. He wraps his arms around your waist from above and lifts you upside down. You begin to scream as he jumps into the air before landing on his ass, your head slammed onto the mat by his deadly Piledriver.[or]The wolf extends his arms out and brings them back together, slamming your head in between. You start to fall to your knees from the attack, only to be caught by the wolf, who places your ass on top the nearest post. He proceeds to hook your legs with his arms before turning you over as he places your head on his shoulder. The wrestling wolf jumps as high as he can into the air before crashing down again, delivering a powerful Muscle Buster.[at random]"; [Text used when the monster makes an Attack]
    now defeated entry is "[beatthewrwolf]"; [ Text or say command used when Monster is defeated.]
-   now victory entry is  "[wrestlingwolfattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+   now victory entry is "[wrestlingwolfattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[wrwolfdesc]";
    now face entry is "a long canine muzzle sticking out of your wolf-like head. Your mouth hangs open in a lupine grin, revealing your new sharp teeth";[ Face description, format as the text "Your face is (your text)"]
    now body entry is "lean and well muscled, your canine form standing easily on its new digitigrade legs. You're somewhat surprised that your pawlike hands are still able to do the things they could when still human";[ Body Description, format as the text "Your Body is (your text)"]
@@ -136,7 +136,7 @@ When Play begins:
    now int entry is 9;
    now cha entry is 14;
    now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 150; 
+   now hp entry is 150;
    now lev entry is 15; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
    now wdam entry is 18; [Amount of Damage monster Does when attacking.]
    now area entry is "Campus"; [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -147,15 +147,15 @@ When Play begins:
    now breast size entry is 10; [Size of breasts infection will try to attain ]
    now male breast size entry is 0;[ Breast size for if Sex="Male", usually zero. ]
    now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 20; [ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 15; [ Width of female sex  infection will try and give you ]
+   now cunt length entry is 20; [ Length of female sex infection will attempt to give you. ]
+   now cunt width entry is 15; [ Width of female sex infection will try and give you ]
    now libido entry is 35; [ Amount player Libido will go up if defeated ]
-   now loot entry is ""; 
+   now loot entry is "";
    now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
    now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]muscular[or]muscly[or]chiseled[or]beefy[at random]";
    now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false; 
+   now magic entry is false;
    now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
    now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
    blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

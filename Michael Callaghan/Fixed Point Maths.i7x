@@ -22,7 +22,7 @@ Section 1 - Printing a fixed point number
 To say (N - a real number) as a number:
 	if N is negative:
 		say "-[the absolute value of N]";
-	otherwise:
+	else:
 		say "[N]".
 
 Section 2 - Finding the greater part of a number
@@ -38,7 +38,7 @@ To decide which number is the lesser part of (N - a number):
 Section 4 - Finding the aggregate of a number
 
 To decide which number is the aggregate of (N - a real number):
-	let temp be N to the nearest whole number;	
+	let temp be N to the nearest whole number;
 	let temp be temp times Divisor;
 	let temp be temp plus N - N to the nearest whole number;
 	decide on temp.
@@ -201,7 +201,7 @@ Chapter 6 - Subtraction
 Section 1 - Subtraction of two fixed point numbers
 
 To decide which real number is (A - a real number) real minus (B - a real number):
-	decide on A - B.	
+	decide on A - B.
 
 Section 2 - Subtraction of a fixed point number and an integer
 
@@ -240,7 +240,7 @@ Section 2 - Division of one fixed point number by an integer
 To decide which real number is (A - a real number) real divided by (B - a number):
 	let temp be B as a fixed point number;
 	decide on A real divided by temp.
-	
+
 Section 3 - Division of one number by a fixed point number
 
 To decide which real number is (A - a number) real divided by (B - a real number):
@@ -262,10 +262,10 @@ To decide which real number is the inverse of (N - a number):
 Section 2 - Factorial
 
 To decide which number is the factorial of (N - a number):
-	let temp be N; 
-	let result be 1; 
-	if temp is not 1: 
-		let temp1 be the factorial of (temp - 1); 
+	let temp be N;
+	let result be 1;
+	if temp is not 1:
+		let temp1 be the factorial of (temp - 1);
 		let result be temp times temp1;
 	decide on result.
 
@@ -301,10 +301,10 @@ To decide which real number is the real square root of (N - a real number):
 	if N real equals 0.0000:
 		decide on 0.0000;
 	if N is real less than 0.0000:
-		decide on 0.0000; 
+		decide on 0.0000;
 	let result be N real divided by 2.0000;
-	let previous be result; 
-	repeat with X running from 1 to 50: 
+	let previous be result;
+	repeat with X running from 1 to 50:
 		let temp1 be result real divided by 2.0000;
 		let temp2 be result real times 2.0000;
 		let temp2 be N real divided by temp2;
@@ -313,7 +313,7 @@ To decide which real number is the real square root of (N - a real number):
 		let factor be the absolute value of factor;
 		if factor is real less than 0.0002:
 			decide on result;
-		let previous be result; 
+		let previous be result;
 	decide on result.
 
 To decide which real number is the real square root of (N - a number):
@@ -340,9 +340,9 @@ To decide what real number is (N - a real number) in degrees:
 	if temp2 is 10:
 		let temp2 be 0;
 		let angle be angle plus 1;
-	otherwise:
+	else:
 		let temp2 be temp2 times 1000;
-	let result be angle  to the nearest whole number + temp2 - temp2 to the nearest whole number;
+	let result be angle to the nearest whole number + temp2 - temp2 to the nearest whole number;
 	decide on result.
 
 To decide what real number is (N - a number) in degrees:
@@ -383,7 +383,7 @@ To decide what real number is the sine of (N - a real number):
 		if sign is -1:
 			let result be result real minus temp1;
 			let sign be the reverse of sign;
-		otherwise:
+		else:
 			let result be result real plus temp1;
 			let sign be the reverse of sign;
 [		increase X by 1;]
@@ -459,9 +459,9 @@ To decide what real number is the arctangent of (N - a real number):
 	if temp is real greater than 1.0000:
 		let temp1 be N to the power 2;
 		let temp1 be temp1 real plus 0.2809;
-		let  temp1 be N real divided by temp1;
+		let temp1 be N real divided by temp1;
 		let result be 1.5708 - temp1;
-	otherwise:
+	else:
 		let temp1 be N real times 0.2809;
 		let temp1 be temp1 real times N;
 		let temp1 be temp1 real plus 1.0000;
@@ -521,7 +521,7 @@ Invalid conversion is false.
 Section 2 - Conversion routine
 
 To decide which real number is the number derived from (T - indexed text):
-	if T is  "":
+	if T is "":
 		now invalid conversion is true;
 		decide on 0 as a fixed point number;
 	replace the regular expression " " in T with "";
@@ -530,11 +530,11 @@ To decide which real number is the number derived from (T - indexed text):
 	let result be a number;
 	let first be a number;
 	let second be a number;
-	let second part test  be true;
+	let second part test be true;
 	let length be the number of characters in T;
 	let multiplier be 1;
 	repeat with N running from 0 to length minus 1:
-		let pos be length minus N; 
+		let pos be length minus N;
 		let matched be false;
 		let test char be character number pos in T;
 		if test char is "-":
@@ -564,35 +564,35 @@ To decide which real number is the number derived from (T - indexed text):
 			let result be multiplier plus result;
 			let multiplier be multiplier times 10;
 			let matched be true;
-		if  test char is "2":
+		if test char is "2":
 			let result be 2 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "3":
+		if test char is "3":
 			let result be 3 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "4":
+		if test char is "4":
 			let result be 4 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "5":
+		if test char is "5":
 			let result be 5 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "6":
+		if test char is "6":
 			let result be 6 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "7":
+		if test char is "7":
 			let result be 7 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "8":
+		if test char is "8":
 			let result be 8 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
-		if  test char is "9":
+		if test char is "9":
 			let result be 9 times multiplier plus result;
 			let matched be true;
 			let multiplier be multiplier times 10;
@@ -608,11 +608,11 @@ To decide which real number is the number derived from (T - indexed text):
 	if negative flag is true:
 		let final result be the negation of final result;
 	now invalid conversion is false;
-	decide on final result.	
+	decide on final result.
 
 Fixed Point Maths ends here.
 
----- DOCUMENTATION ---- 
+---- DOCUMENTATION ----
 
 Fixed point maths is an extension to permit simple mathematical operations to be carried out on fixed point numbers.
 
@@ -644,7 +644,7 @@ Fixed point numbers are a kind of value called real number.  Therefore, we can c
 
 Section : Saying fixed point numbers
 
-Fixed point numbers can be negative.  There is a problem (as at version 5T18 of Inform 7) that causes negative numbers to be printed incorrectly where the number consists of parts.  Therefore, this extension uses a modified form of say statement with fixed point numbers.   We use the form 'X as a number' in the say statement.
+Fixed point numbers can be negative.  There is a problem (as at version 5T18 of Inform 7) that causes negative numbers to be printed incorrectly where the number consists of parts.  Therefore, this extension uses a modified form of say statement with fixed point numbers.  We use the form 'X as a number' in the say statement.
 
 	say "[TwoPi as a number]";
 	say "[-1234.6789 as a number]".
@@ -714,7 +714,7 @@ We can find the absolute value of a number using the phrase 'the absolute value 
 
 	let val be the absolute value of -12.3456;
 	let val be the absolute value of -45;
-	
+
 The function leaves positive values unchanged and converts negative numbers to their positive equivalent.  -12.3456 becomes 12.3456, etc.  This function works for both fixed point and integer numbers.
 
 Section : Convert an integer to a fixed point number
@@ -943,8 +943,8 @@ If the text does not match the requirements for a real number, an internal flag,
 
 	let X be the number derived from "a123.1222":
 	if invalid conversion is true:
-		say "This is not  valid real number.  It must contain only digits and the characters '+ - and .'  There must be [precision] digits after the decimal point.";
-	otherwise:
+		say "This is not valid real number.  It must contain only digits and the characters '+ - and .'  There must be [precision] digits after the decimal point.";
+	else:
 		say "[X]".
 
 Example: * The Classroom - Shows the use of the sine function
@@ -955,7 +955,7 @@ Example: * The Classroom - Shows the use of the sine function
 
 	The classroom is a room.  A chalk board is in the classroom.  Understand "chalkboard" as the chalk board.
 
-	Instead of examining the  chalk board:
+	Instead of examining the chalk board:
 		say "Someone has drawn a curve like a sine wave turned through 90 degrees.";
 		repeat with angle running from 0 to 360:
 			let val be the sine of angle;

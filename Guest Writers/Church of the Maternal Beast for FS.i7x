@@ -271,7 +271,7 @@ to Hellhound infect male:
 	wait for any key;
 	clear the screen;
 	say "     You wake up several hours later, your clothing torn to ribbons. Feeling your neck, there is a seamless leather collar, engraved with strange infernal characters tightly wrapped around it. Somehow you've been brought back to the bunker, and true to the demon-dog's words, you no longer show any signs of the infection. You seem to have been completely restored to a human form... except for one place. Glancing down, you have the dirty and fouled hellhound shaft from the night before, dried up cum peeling from your skin and making the fur clump together. As you try and take this development in, you hear a chuckle in your mind 'Mmmmmmm, that WAS an enjoyable night, puppy. But you're not quite up to the task yet. You are not ready to be a male in my pack. Return to me once you have a little more... experience,' the voice fades away, leaving you alone with your thoughts in the bunker.";
-	say "     An unholy urge fills you as rub at yourself through your pants. Females, bitches -  you need to fill them with your seed.";
+	say "     An unholy urge fills you as rub at yourself through your pants. Females, bitches - you need to fill them with your seed.";
 	if Humanity of player > 50, now humanity of player is 50;
 	now skin of player is "smooth";
 	now face of player is "leather dog collar around your neck, and a charmingly human";
@@ -405,7 +405,7 @@ every turn (This is the check Hellhound rule):
 				now the breast size of the player is 2;
 			if libido of player < 90, now libido of player is 90;
 		else if humanity of the player > 15:	[Bipedal Hellhound]
-			if hellHoundLevel  < 2:
+			if hellHoundLevel < 2:
 				now hellHoundLevel is 2;
 				say "     As you surrender your humanity, the hellhound's [']gift['] starts to manifest as the curse it truly is. Your mind starts to embrace the perverted and foul nature that the infernal mutt inflicted upon you. A soft chuckle echoes through your mind and, in your backpack, your journal turns to dust.";
 				say "     You also get an unsettling urge to return to where you first encountered the infernal hound.";
@@ -464,7 +464,7 @@ every turn (This is the check Hellhound rule):
 				now the breasts of the player is 8;
 				now the breast size of the player is 4;
 		else: [quad Hell Doggy ^.^]
-			if hellHoundLevel  < 3:
+			if hellHoundLevel < 3:
 				now hellHoundLevel is 3;
 				say "     You surrender completely, abandoning your humanity and embracing your infernal nature. Nothing matters to you any more besides pleasure and breeding, spawning as many of your kind as possible.";
 				delete journal;
@@ -609,7 +609,7 @@ When play ends:
 				else: [Male Tainted Human]
 					say "Your demonic [']luck['] holds and, as the whole city dissolves in chaos, you manage to escape. Weeks later, you stumble into an uninfected location, find a job, and try to return to the life you once had. But the longer you go without... indulging yourself, the harder and tighter your hellhound shaft becomes. It's probably only a matter of time before you end up doing your demonic master's bidding... or in escaping, perhaps you already are.";
 			else:
-				if humanity of the player is less than 1:	[Female  animal]
+				if humanity of the player is less than 1:	[Female animal]
 					say "     As your mind fades, more and more of your infernal taint comes to the fore, hands becoming paws, face stretching out into a muzzle, coarse dirty fur spreading all over your body. Eventually, you're so far gone that you start to couple with common animals without hesitation, and it's when you are tied beneath a feral mutt you discovered wandering the streets that a green, flickering glow appears behind you.";
 					say "     The rough grip on your collar startles you enough to let out a surprised yelp, but the huge, clawed, red hand rubs your ears. 'Easy, bitch! It's just time to go home, that is all. You've had enough fun in the mortal realm.' You let out a disappointed whine, bones melting and reforming as your body alters further to suit your mindless nature. Now you are nothing more than a mindless hellhound, incapable of reasoned thought or speech, unlike the beast that initially corrupted you. 'Come, girl. There's a gate for you to help guard and plenty of males waiting to make sure you remain heavy with pups. If you're good, I may let you out to play with the mortals again someday.'";
 				else if humanity of player is less than 33:	[Female bipedal demon Dog]

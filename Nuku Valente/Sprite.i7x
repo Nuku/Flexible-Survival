@@ -75,7 +75,7 @@ When Play begins:
 	now name entry is "City Sprite"; [Name of your new Monster]
 	now attack entry is "[one of]The swarm of sprites rushes over you, tickling at your sides in a maddening onslaught of the senses, leaving you giggling.[or][if cocks of player is greater than 0]A sprite zips between your thighs and grabs at your [cock of player] organ, tickling at the very tip of it with her wings as she holds on tight.[else]The sprites focus on your chest, licking and rubbing against you in an excited swarm![end if][or][if cunts of player is greater than 0 and cunt length of player is greater than 5]With a sudden wet noise, you feel your vulva spread apart as a sprite flies up into you with astounding accuracy. She begins to wriggle in deeper, lost to sight, but certainly not to your slick tunnel which spasms in forced delight.[else]The sprites get a sudden violent fit, grabbing tiny pebbles and rocks and pelting you with them in a hail of tiny debris.[end if][at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Sprite loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Sprite attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now victory entry is "[Sprite attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[spritedesc]";[ Description of the creature when you encounter it.]
 	now face entry is "exceptionally cute and young human female, with elfin ears at either side of your head";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "largely human, if not for the great set of dragonfly wings that rest on your back, with blackened flesh and clear for most of their length. Your form is also quite short and feminine";[ Body Description, format as the text "Your Body is (your text)"]
@@ -94,7 +94,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 18;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 26; 
+	now hp entry is 26;
 	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
 	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
@@ -105,15 +105,15 @@ When Play begins:
 	now breast size entry is 2; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 6; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 6; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 4; [ Width of female sex infection will try and give you ]
 	now libido entry is 40; [ Amount player Libido will go up if defeated ]
-	now loot entry is "pixie dust"; 
+	now loot entry is "pixie dust";
 	now lootchance entry is 33; [ Chance of loot dropping 0-100 ]
 	now scale entry is 1; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]elfin[or]petite[or]winged[at random]";
 	now type entry is "[one of]sprite[or]faerie[at random]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

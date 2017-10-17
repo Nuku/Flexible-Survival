@@ -29,12 +29,12 @@ Version 1 of Sonny by Rikaeus begins here.
 [ libido of Sonny                                          ]
 [   0: anal virgin                                         ]
 [   1: player fucked him                                   ]
-	
+
 [variables]
 SonnyFood is a number that varies.
 
 Section 1 - Basic Setup
-	
+
 Sonny is a man. The hp of Sonny is usually 0.
 The description of Sonny is "[SonnyDesc]".
 The conversation of Sonny is { "<This is nothing but a placeholder!>" }.
@@ -43,6 +43,8 @@ The scent of Sonny is "     Sonny smells like berries with an underhint of musk.
 to say SonnyDesc:
 	if debugactive is 1:
 		say "DEBUG -> SonnyRelationship: [SonnyRelationship], HP: [hp of Sonny] <- DEBUG[line break]";
+	if graphics is true:
+		project the figure of Sonny_shaved_jeans_icon;
 	say "     Sonny is a rather adorable looking sheep boy. He doesn't have the full looks of a ram, as clearly evidenced by the tiny little nub-horns on his forehead. What he does have is fluffy looking white wool, blue eyes, and what appears to be a disposition to being shirtless. Because of his lack of a shirt, you can see that Sonny does excercise, as he has well defined muscles, but not so much that he looks like a bodybuilder. His pants are a rather simple pair of denim jeans that are worn in some places and his shoes are a worn pair of sneakers. All in all, you pretty much think he looks like a twink, though he sure doesn't act like it.";
 	if Sonny is in Half-Renovated Room:
 		say "     In the room, Sonny seems to have set up a cozy little sleep pad in one of the corners. The area consists of a matress that the sheep boy has dragged up from the bunker, his shaving supplies, and oddly enough an open crate filled with all the shaven wool. [If Skarnoth is in Half-Renovated Room]He can be seen throwing nervous looks at the chained-up demon, which just results in Skarnoth returning lewd glances and suggestive hip-thrusts back.[end if]";
@@ -55,10 +57,12 @@ instead of conversing the Sonny:
 	if SonnyRelationship < 4: [should be not yet available]
 		say "     ERROR: Sonny shouldn't be where a player can see him yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [SonnyRelationship]";
 	else:
+		if graphics is true:
+			project the figure of Sonny_face_icon;
 		say "     As you walk up to Sonny, he smiles widely at you, clearly happy to see you. 'Hey there! Nice seeing you here,' the sheep says before warmly asking what you need.";
 		wait for any key;
 		say "[SonnyTalkMenu]";
-	
+
 to say SonnyTalkMenu:
 	say "[line break]";
 	say "What do you want to talk with Sonny about?";
@@ -92,7 +96,7 @@ to say SonnyTalkMenu:
 		now title entry is "Ask him about home";
 		now sortorder entry is 5;
 		now description entry is "Ask the sheep boy what exactly he misses about home";
-	[]	
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -129,7 +133,7 @@ to say SonnyTalkMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say SonnyTalk1: [talk about him]
 	say "     'Me?' he asks, rather confused. You nod your head, saying that you want to get to know the guy. Sonny starts stuttering and you're quite sure that if he could he'd be blushing. You find the entire situation rather adorable to be honest, but you save that bit to yourself lest you embarrass him even more. He calms down rather quickly and straightens himself up before speaking. 'Well, I grew up in New York to begin with, a nice little suburb community,' Sonny starts off. New York? Why did the sheep boy move here? 'Well, college, of course. I had gotten a full ride to the college here and then well,' he trails off. You understand what he means. The whole nanite event threw everything into hysteria. 'To be honest my life wasn't that interesting before the whole catastrophe,' the boy admits truthfully. You nod at that before backing off, feeling as if you've learned enough for now.";
 
@@ -152,7 +156,7 @@ to say SonnyTalk5: [ask him about home]
 	now SonnyFood is 1;
 
 Section 3 - Sex
-	
+
 instead of fucking the Sonny:
 [
 	if SonnyRelationship < XXX): [romance quest not yet done]

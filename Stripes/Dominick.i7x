@@ -106,16 +106,16 @@ to say dominick_sexmenu:
 		now title entry is "Lap ride";
 		now sortorder entry is 2;
 		now description entry is "get bounced on the husky's big pole";
-[	if cunts of player > 0 and hp of Dominick >= 4:
+	if cunts of player > 0 and hp of Dominick >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
-		now description entry is "take it up the ass";]
-[	else if player is mpreg_ok:		[***optional for later]
+		now description entry is "take it up the ass";
+	else if player is mpreg_ok:		[***optional for later]
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
-		now description entry is "take it up the ass";]
+		now description entry is "take it up the ass";
 	choose a blank row in table of fucking options;
 	now title entry is "Suck his cock";
 	now sortorder entry is 8;
@@ -207,7 +207,7 @@ to say sexwithDominick_00:
 		say "     Dom's swollen knot stuffs your mouth full, keeping you locked onto his cock as it throbs in your sore maw. You hardly notice the discomfort though, instead focused on how his plump ballsac draws up, signalling his eminent release. And it is quite the release indeed, the first of several powerful blasts of thick semen shoot down your throat, filling your belly with warmth. The flow is quite voluminous, causing a backwash that floods your mouth to be trapped behind his knot, giving you a taste of his potent, virile semen. Your eyes roll back in your head as the delightfully rich flavour fills your senses, becoming all you can think about.";
 		attempttowait;
 		say "     True to his word, the bulging knot is locked tightly inside your mouth, making sure you don't lose any of his hot load. You remain tied to him for some time, giving you ample opportunity to swallow down his copious load. As you lick his virile rod completely clean, he continues to deride you, praising you as his horny, cock-sucking pet. And given how eagerly you're going after the least few dregs of his delicious load, your sex-addled mind accepts the sexy stud of a dog's words. When it eventually does go down, you release his shaft reluctantly. He grinds his balls and slick shaft across your face, making sure his scent is thoroughly marked onto it, ensuring the dominant husky's scent will be in your nose for some time.";
-	else: 
+	else:
 		say "     With him pushing the tip of his hard cock down your throat, you do your best to stretch your mouth open wide to allow his knot entry. 'You should feel lucky I'm even letting you polish my rod. You slutty males are so pitiful, it hardly seems worth it to spill my seed in you.' You whimper and moan at the prospect of being denied the virile male's seed and work his pulsing shaft all the harder. He grins at this and grabs your head so he can roughly thrust into your mouth. 'Alright, you greedy fag, take that big knot. I'm gonna- uggh- tie with that slutty mouth of yours annggg... and there'll be no getting out of it, you man-whore. Bad enough I'm spending it in you. NNnnggg- Not gonna let you spill a drop of my prime puppy-making batter.' Your response to this verbal abuse is to suck and swallow over his pulsing prick all while getting your mouth stretched open wider by his bulging shaft. It's difficult and makes it hard to breathe, but that only makes every gasp of his rich scent all the more satisfying.";
 		say "     Dom's swollen knot stuffs your mouth full, keeping you locked onto his cock as it throbs in your sore maw. His thrusts are short and hard, rattling your brain as he pounds into your overstretched mouth and throat. You hardly notice the discomfort though, instead focused on how his plump ballsac draws up, signalling his eminent release. And it is quite the release indeed, the first of several powerful blasts of thick semen shoot down your throat, filling your belly with warmth. The flow is quite voluminous, causing a backwash that floods your mouth to be trapped behind his knot, giving you a taste of his potent, virile semen. Your eyes roll back in your head as the delightfully rich flavour fills your senses, becoming all you can think about.";
 		attempttowait;

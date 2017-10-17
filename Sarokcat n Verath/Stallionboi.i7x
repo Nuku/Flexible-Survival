@@ -1,15 +1,12 @@
 Stallionboi by Sarokcat n Verath begins here.
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Stallionboi to Flexible Survival's Wandering Monsters table, With Impreg chance"
-
 
 Section 1 - Monster Responses
 
 when play begins:
 	add { "Stallionboi" } to infections of guy;
 	add { "Stallionboi" } to infections of furry;
-
 
 to say Stallionboi wins:
 	if cunts of player is greater than 0:
@@ -32,20 +29,20 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Stallionboi"; 
-	now attack entry is "[one of]He gives you an equine grin for a minute, confusing you slightly, as he slowly stretches and poses teasingly in front of you, your body growing hot and aroused from the sexy show[or]The Stallionboi reaches out and strokes his hands over your body teasingly[or]Pulling a large transparent blue double ended dildo from somewhere, he smacks you in the ass with it[at random]."; 
-	now defeated entry is "[Stallionboi loses]"; 
-	now victory entry is  "[Stallionboi wins]";  
-	now desc entry is "[mongendernum 3]     Wandering through the building you encounter a horny stallionboi. You see that he is wearing black silk stockings held up by a garter belt,and a skimpy tight black thong that isn't hiding his fully equine manhood. His look is finished off with long black silk gloves and black choker collar around his neck  The stallionboi has a slender almost girlish figure. His human body is starting to sprout dark chocolate colored fur, a long black horsetail flicks eagerly behind him. His face is stretched out into a slender, feminine half equine muzzle and his ears are more equine than human. His dark hair is shoulder length with bright blue frosted tips. Giving you a slutty grin he strides towards you  saying, 'You are going to look so hot when I get done with you!'";[ Description of the creature when you encounter it.]
-	now face entry is "slight equine muzzle, its slender stretched out look is strangely sexy as your stare out of it with your sensuous equine eyes. Your mostly equine ears sticking up jauntily out of your long sexy mane of dark brown hair with sea green highlights, giving a rather sexy and teasing look overall to your new face"; [You have a (your text) face."] 
-	now body entry is "slender and feminine, clothed in some sexy slutty clothes you found near where you finished changing, your sexy silk stalkings and gloves, do nothing to hide your slightly equine changes, though the feel of their dark purple silk against your [skin of player] skin makes you feel increasingly aroused and sexy with every step"; 
-	now skin entry is "[one of]soft feminine[or]lightly furred[or]sexy chocolate furred[at random]"; 
-	now tail entry is "You have a long sexy equine tail swishing behind you eagerly, swaying side to side with every step as if inviting some sexy beast to hold you down and fuck you.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]equine[or]stallion like[or]thick[or]blunt equine[at random]"; 
+	now name entry is "Stallionboi";
+	now attack entry is "[one of]He gives you an equine grin for a minute, confusing you slightly, as he slowly stretches and poses teasingly in front of you, your body growing hot and aroused from the sexy show[or]The Stallionboi reaches out and strokes his hands over your body teasingly[or]Pulling a large transparent blue double ended dildo from somewhere, he smacks you in the ass with it[at random].";
+	now defeated entry is "[Stallionboi loses]";
+	now victory entry is "[Stallionboi wins]";
+	now desc entry is "[mongendernum 3]     Wandering through the building you encounter a horny stallionboi. You see that he is wearing black silk stockings held up by a garter belt,and a skimpy tight black thong that isn't hiding his fully equine manhood. His look is finished off with long black silk gloves and black choker collar around his neck. The stallionboi has a slender almost girlish figure. His human body is starting to sprout dark chocolate colored fur, a long black horsetail flicks eagerly behind him. His face is stretched out into a slender, feminine half equine muzzle and his ears are more equine than human. His dark hair is shoulder length with bright blue frosted tips. Giving you a slutty grin, he strides towards you and says, 'You are going to look so hot when I get done with you!'";[ Description of the creature when you encounter it.]
+	now face entry is "slight equine muzzle, its slender stretched out look is strangely sexy as your stare out of it with your sensuous equine eyes. Your mostly equine ears sticking up jauntily out of your long sexy mane of dark brown hair with sea green highlights, giving a rather sexy and teasing look overall to your new face"; [You have a (your text) face."]
+	now body entry is "slender and feminine, clothed in some sexy slutty clothes you found near where you finished changing, your sexy silk stalkings and gloves, do nothing to hide your slightly equine changes, though the feel of their dark purple silk against your [skin of player] skin makes you feel increasingly aroused and sexy with every step";
+	now skin entry is "[one of]soft feminine[or]lightly furred[or]sexy chocolate furred[at random]";
+	now tail entry is "You have a long sexy equine tail swishing behind you eagerly, swaying side to side with every step as if inviting some sexy beast to hold you down and fuck you.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]equine[or]stallion like[or]thick[or]blunt equine[at random]";
 	now face change entry is "it begins to stretch and change, pushing forward slightly and giving you a more equine look, even as your hair grows out and changes in colour and texture to form a proper mane, you find yourself neighing and squealing with pleasure as your face finishes shifting, and your ears come to rest on top of your head, and you find you love admiring your new sexy look, and your lovely dark mane with shimmering sea green highlights threaded through it"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it shifts and changes, your bones shifting slightly as your body curves into a more suggestive feminine shape, and your hips widen slightly even as a strange erotic energy seems to run through you, making you shudder with arousal as a soft breeze brushes your body. Looking around desperately, you spot a discarded bit of silk clothing nearby, and quickly pull it on, the sleek silk stockings and gloves doing nothing to hide your sexy new form, though the rich royal purple silk looks amazing on you, and the feel of the silk caressing your body teasingly makes you moan with pleasure"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it shudders and softens, becoming sexier and more feminine, before a small coating of sexy dark brown fur begins to grow in, the fur only covering part of your body in its sexy sleekness, and leaving the rest of your chest and other areas teasingly bare"; 
-	now ass change entry is "a sexy little equine tail begins to form behind you, the new equine appendage making you moan with pleasure as it swishes behind you, somehow every movement of your new appendage seeming amazingly erotic, especially when its soft silken strands brush up against your tight and eager ass"; 
+	now skin change entry is "it shudders and softens, becoming sexier and more feminine, before a small coating of sexy dark brown fur begins to grow in, the fur only covering part of your body in its sexy sleekness, and leaving the rest of your chest and other areas teasingly bare";
+	now ass change entry is "a sexy little equine tail begins to form behind you, the new equine appendage making you moan with pleasure as it swishes behind you, somehow every movement of your new appendage seeming amazingly erotic, especially when its soft silken strands brush up against your tight and eager ass";
 	now cock change entry is "it balloons outwards, your balls swelling up as they begin to hang even lower between your legs. Your large thick new cock darkening in colour as its textures changes, and the tip flattens out until you have a properly shaped equine shaft hanging low between your legs"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 20;
 	now dex entry is 14;
@@ -54,8 +51,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 25; 
-	now lev entry is 3; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now hp entry is 25;
+	now lev entry is 3; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 3; [Amount of Damage monster Does when attacking.]
 	now area entry is "Stable"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -65,17 +62,17 @@ When Play begins:
 	now breast size entry is 0; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0; [ Width of female sex  infection will try and give you ] 
+	now cunt length entry is 0; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 0; [ Width of female sex infection will try and give you ]
 	now libido entry is 75; [ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe"; [ Loot monster drops, ]
 	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]girly[or]feminine[at random]";
 	now type entry is "[one of]equine[or]horse-like[at random]";
-	now magic entry is false; 
-	now resbypass entry is false; 
-	now non-infectious entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -91,6 +88,6 @@ when play ends:
 			if cocks of the player is greater than 0:
 				say "When the rescue finally comes, you find yourself unable to resist as the powerful military men come and take you away to safety, something about their strong well toned bodies and purposeful actions making you feel rather mild and meek as they lead you away. Eventually after being poked and prodded by several of their scientists, when they can't figure out what to do with you otherwise, they end up letting you go, having deemed you to not be a threat to society, and focus their attentions back on the fight raging throughout the city. Free, you find yourself drifting for a while, unable to find much purpose or direction in your life as you wander around aimlessly. You soon realize that you are far more girlish and submissive than ever before, and are unable to put yourself forward, or deny most dominant people whatever it is they want. This results in you taking a number of jobs, and eventually slinking away from them quietly when the people there begin to realize this and start to take advantage of you. Finally you find yourself making some friends with a few sympathetic women one night, and they help you to get a job at a sexy clothing store for women. You find yourself beginning to enjoy your work again, and growing somewhat more comfortable with the place, although the female owner does think it is fun sometimes to dress your feminine form up in some of the clothing around the place. You actually find yourself amused by this as well sometimes, the feel of silk and leather on your sensitive skin making you feel quite nice and slutty, and the looks on some of the men's faces when they realize you are packing a large equine cock is hilarious sometimes. Of course eventually you do manage to find a few men and women willing to experiment with your sexy new body, including of course most of your co workers, who soon come to love being just as sexy and slutty as you do. Eventually your owner decides to start branching out the direction of the store, and you just love the thought of how much fun you are going to have with all the new lovely sex toys and bondage gear she is stocking up in back for the customers... or to use on the customers... you just can't wait to try it out yourself!";
 			else:
-				say "When the rescue finally comes, you find yourself unable to resist as the powerful military men come and take you away to safety, something about their strong well toned bodies and purposeful actions making you feel rather mild and meek as they lead you away. While they quickly dismiss you as relatively harmless compared to the more dangerous beasts within the city, you find yourself somewhat less than willing to leave right away, spending your time at the base helping the soldiers fetch things and take care of any small tasks they might need your help with. The more time you spend in the presence of the sexy and dominant men, the less you find yourself wanting to leave, somehow craving the sense of safety and security being surrounded by the soldiers gives you. When one of them inevitably takes you off into a dark corner to put your sexy little mare pussy to use, you find yourself squealing happily as your body responds eagerly to his touch. Once you realize how amazing it feels to serve your rescuers with your body, you waste no time in doing so at every opportunity, spreading your legs for them eagerly as often as possible. Before long, you find yourself hardly even thinking of them as soldiers anymore, and start thinking of the sexy uniform clad men as your masters instead. As things get worse and worse in the city, the military turns a blind eye (perhaps helped  by how often some of your higher ranked masters enjoy using you) to your presence, you enjoy your new position more and more. And when eventually some of your sexy masters start showing even more handsome equine features, you don't hesitate to send them in the direction of the stables, where you assure them they can find all sorts of horsey fun when they go into the  city. And while few of them come  back from venturing into that part of the city, and those that do only stay back long enough to take a few friends with them as they head back out, and as the military encampment slowly shrinks in size, and the numbers of sexy horsemen in the city swells larger, you have a feeling you will be seeing many of your now horsey masters again soon enough, in the meantime, there are still plenty of sexy masters willing to use your slutty equine body as often as possible... with more arriving every day...[line break]";
+				say "When the rescue finally comes, you find yourself unable to resist as the powerful military men come and take you away to safety, something about their strong well toned bodies and purposeful actions making you feel rather mild and meek as they lead you away. While they quickly dismiss you as relatively harmless compared to the more dangerous beasts within the city, you find yourself somewhat less than willing to leave right away, spending your time at the base helping the soldiers fetch things and take care of any small tasks they might need your help with. The more time you spend in the presence of the sexy and dominant men, the less you find yourself wanting to leave, somehow craving the sense of safety and security being surrounded by the soldiers gives you. When one of them inevitably takes you off into a dark corner to put your sexy little mare pussy to use, you find yourself squealing happily as your body responds eagerly to his touch. Once you realize how amazing it feels to serve your rescuers with your body, you waste no time in doing so at every opportunity, spreading your legs for them eagerly as often as possible. Before long, you find yourself hardly even thinking of them as soldiers anymore, and start thinking of the sexy uniform clad men as your masters instead. As things get worse and worse in the city, the military turns a blind eye (perhaps helped by how often some of your higher ranked masters enjoy using you) to your presence, you enjoy your new position more and more. And when eventually some of your sexy masters start showing even more handsome equine features, you don't hesitate to send them in the direction of the stables, where you assure them they can find all sorts of horsey fun when they go into the city. And while few of them come back from venturing into that part of the city, and those that do only stay back long enough to take a few friends with them as they head back out, and as the military encampment slowly shrinks in size, and the numbers of sexy horsemen in the city swells larger, you have a feeling you will be seeing many of your now horsey masters again soon enough, in the meantime, there are still plenty of sexy masters willing to use your slutty equine body as often as possible... with more arriving every day...[line break]";
 
 Stallionboi ends here.

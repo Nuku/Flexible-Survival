@@ -56,8 +56,8 @@ When Play begins:
 	now desc entry is "[messypigdesc]";[ Description of the creature when you encounter it.]
 	now face entry is "a pudgy face with a large pig's snout and two floppy ears";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "large, with copious amounts of heavy fat. Some would probably like your rotund figure, if it weren't for the wretched stentch it emits";[ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "a pink-ish hue, more like that of a Pig then a human";[ skin Description, format as the text "You have (your text) skin."]
-	now tail entry is "Your ass has reshaped to a ridiculous degree, with each plush cheek rivaling your own head. Last time you checked you did have a tail, but with your now titanic tush, its not such an easy task to get even a glimps of your cork screw piggy tail";[ Tail description, write a whole Sentence or leave blank. ]
+	now skin entry is "a pink-ish hue, more like that of a Pig than a human";[ skin Description, format as the text "You have (your text) skin."]
+	now tail entry is "Your ass has reshaped to a ridiculous degree, with each plush cheek rivaling your own head. Last time you checked you did have a tail, but with your now titanic tush, it's not such an easy task to get even a glimpse of your corkscrew piggy tail";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "you feel an odd feeling against your nose, as if invisible hands are molding and shaping it. As well as stretching it. Right before your eyes you see your nose deform, become large and snout-like, perfectly matching that of a pig. Your ears can also be felt changing into large and floppy versions of their former selves"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your stomach gurgles, and your body quickly start to put on fat! Your small frame billows with sudden and heavy fat completely ruining your figure. There is a mildly unpleasant smell in the air after the change as well, and it does not take long to realize it's you"; [ body change text. format as "Your body feels funny as (your text)." ]
@@ -71,7 +71,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 8;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 50; 
+	now hp entry is 50;
 	now lev entry is 3; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 3; [Amount of Damage monster Does when attacking.]
 	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -82,15 +82,15 @@ When Play begins:
 	now breast size entry is 4; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 6; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 6; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 4; [ Width of female sex infection will try and give you ]
 	now libido entry is 45; [ Amount player Libido will go up if defeated ]
-	now loot entry is ""; 
+	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]fat[or]chubby[or]plump[or]hefty[or]overweight[at random]";
 	now type entry is "[one of]porcine[or]piggish[at random]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

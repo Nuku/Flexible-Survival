@@ -41,31 +41,31 @@ To ask a closed question, in number mode, in menu mode, in yes/no mode, in gende
 	if in number mode:
 		if current prompt is "":
 			now the command prompt is the closed number prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now number question mode is true;
 	if in menu mode:
 		if current prompt is "":
 			now the command prompt is the closed menu prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now menu question mode is true;
 	if in yes/no mode:
 		if current prompt is "":
 			now the command prompt is the closed yes/no prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now yes/no question mode is true;
 	if in gender mode:
 		if current prompt is "":
 			now the command prompt is the closed gender prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now gender question mode is true;
 	if in text mode:
 		if current prompt is "":
 			now the command prompt is the closed text prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now text question mode is true;
 	if current question is not "":
@@ -82,39 +82,39 @@ To ask an open question, in number mode, in menu mode, in yes/no mode, in gender
 	if in number mode:
 		if current prompt is "":
 			now the command prompt is the open number prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now number question mode is true;
 	if in menu mode:
 		if current prompt is "":
 			now the command prompt is the open menu prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now menu question mode is true;
 	if in yes/no mode:
 		if current prompt is "":
 			now the command prompt is the open yes/no prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now yes/no question mode is true;
 	if in gender mode:
 		if current prompt is "":
 			now the command prompt is the open gender prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now gender question mode is true;
 	if in text mode:
 		if current prompt is "":
 			now the command prompt is the open text prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now text question mode is true;
 	if current question is not "":
 		say "[current question][line break]";
 	if in menu mode:
 		repeat with counter running from 1 to the number of entries in the current question menu:
-			say "[counter] - [entry counter of the current question menu][line break]".	
-		
+			say "[counter] - [entry counter of the current question menu][line break]".
+
 Chapter 2 - Questions that require a number answer
 
 Section 1 - Flag to set number question mode
@@ -351,7 +351,7 @@ Section 3 - Rules for text questions
 
 Text question rules is a rulebook.
 
-The text question rules have  outcomes exit (success), retry (failure) and parse (failure).
+The text question rules have outcomes exit (success), retry (failure) and parse (failure).
 
 The first text question rule (this is the remove punctuation from text questions rule):
 	if punctuation removal is true:
@@ -400,7 +400,7 @@ To ask a closed question in real number mode:
 	now saved prompt is the command prompt;
 	if current prompt is "":
 		now the command prompt is the closed real number prompt;
-	otherwise:
+	else:
 		now the command prompt is the current prompt;
 	now real number question mode is true;
 	if current question is not "":
@@ -413,7 +413,7 @@ To ask an open question in real number mode:
 	now saved prompt is the command prompt;
 	if current prompt is "":
 		now the command prompt is the open real number prompt;
-	otherwise:
+	else:
 		now the command prompt is the current prompt;
 	now real number question mode is true;
 	if current question is not "":
@@ -521,7 +521,7 @@ Section: Introduction
 
 During the normal course of a game, the parser responds to commands given by the player.  If we type look, the parser interprets the command and displays a description of the current room; if we type N, the player heads North (if that exit is available, and so on.
 
-Occasionally, we may want to ask specific questions and process the answers.  Examples may be asking the player's name or age or displaying a menu of options from which the player selects a choice.   Answers to these types of questions fall outside the range of the normal parser functions.  Therefore we need to intercept the player's answers to these types of questions and respond to them separately.
+Occasionally, we may want to ask specific questions and process the answers.  Examples may be asking the player's name or age or displaying a menu of options from which the player selects a choice.  Answers to these types of questions fall outside the range of the normal parser functions.  Therefore we need to intercept the player's answers to these types of questions and respond to them separately.
 
 This extension provides a framework that can be used to ask different types of questions.  The mechanics are hidden behind the scenes to allow us to concentrate on asking and responding to a question without having to implement the framework ourselves.
 
@@ -665,7 +665,7 @@ When a question is asked, we can change the command prompt to indicate to the pl
 
 	Open yes/no prompt: ">".
 
-	Closed gender prompt: "Please enter M,  F or N (Male or Female or Neuter) >".
+	Closed gender prompt: "Please enter M, F or N (Male or Female or Neuter) >".
 
 	Open gender prompt: ">".
 
@@ -690,7 +690,7 @@ If we set the current prompt to "", the relevant default prompt outlined above w
 
 Section: Combining the question and prompt
 
-We can combine the question and the prompt.   To do so, we set the current question to a blank string and the question prompt to the question that we want to ask:
+We can combine the question and the prompt.  To do so, we set the current question to a blank string and the question prompt to the question that we want to ask:
 
 	now current question is "";
 	now current prompt is "What is your name? >";
@@ -750,7 +750,7 @@ We can add our own rules in the game.  For example:
 			if the number understood is less than 21:
 				say "Setting the game mode to mild!";
 				now gamemode is mild;
-			otherwise:
+			else:
 				say "Setting the game mode to crude!";
 				now gamemode is crude;
 			exit.
@@ -873,7 +873,7 @@ Example: * Open Sesame - A short example to show the question rules with an init
 				now the large boulder is open;
 				now the large boulder is unopenable;
 				exit;
-			otherwise:
+			else:
 				parse.
 
 	Room of requirements is a room.  Room of requirements is down from the small cave.  The description is "The room smells musty.[If unvisited]  An alien presence invades your mind and deep in your bones you hear a voice echo 'Welcome brave soul.  You have passed the first hurdle.  Before you proceed, you must answer the following questions.'"
@@ -921,7 +921,7 @@ Example: * Open Sesame - A short example to show the question rules with an init
 			if the number of words in the current answer is greater than 1:
 				say "I think we will simply refer to you as [word number 1 in the current answer][line break]";
 				now the player's name is word number 1 in the current answer;
-			otherwise:
+			else:
 				now the player's name is the current answer;
 				say "Welcome to this venture, [player's name][line break]";
 			now stage is age;
@@ -961,7 +961,7 @@ Example: * Open Sesame - A short example to show the question rules with an init
 				say "Thank you.  Venture into the unknown brave [the player's character][line break]";
 				now stage is complete;
 				exit;
-			otherwise:
+			else:
 				say "OK.  Let's start again, shall we[line break]";
 				now stage is name;
 				exit.
@@ -1001,7 +1001,7 @@ Example: * Quiz Night - A short example to show creating a multiple choice quiz.
 		if the number understood is the expected answer:
 			if the table of quiz questions is not empty:
 				say "Well done.  You have survived to the next round.";
-			otherwise:
+			else:
 				end the story finally saying "Congratulations you have won!" ;
-		otherwise:
+		else:
 			end the story finally saying "You have been barred from the pub for getting a question wrong." .

@@ -7,7 +7,7 @@ Section 1 - Monster Responses
 
 cclosscount is a number that varies.
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 to say cannon desc:
 	setmongender 3; [creature is male]
 	now cclosttarget is false;
@@ -15,7 +15,7 @@ to say cannon desc:
 	now cannonprep is 0;
 	if "Female Preferred" is listed in feats of player:
 		say "A six foot tall, perverted abomination stands before you. The creature has perfectly normal looking human arms and legs, but that is where the similarities end. The creature's body is shaped like a giant cock! Its head is pale purple, shaped like a mushroom, and has a single slit at the top.[line break][line break]The creature moves its head until the slit on the top is pointed in your direction. You get the feeling that it is examining you. The creature must not like what it sees, because it immediately turns around and leaves.[line break]The creature won't fight you if you have the Female Preferred feat.[combat abort]";
-	else:	
+	else:
 		say "A six foot tall, perverted abomination stands before you. The creature has perfectly normal looking human arms and legs, but that is where the similarities end. The creature's body is shaped like a giant cock! Its head is pale purple, shaped like a mushroom, and has a single slit at the top.[line break][line break]The creature moves its head until the slit on the top is pointed in your direction. You get the feeling that it is examining you. The creature must like what it sees, because it immediately starts moving it your direction.";
 
 [The Cock Cannon inflicts no damage, but the player has a limited number of turns to defeat the Cock Cannon before it fires. If it fires, the player automatically loses.]
@@ -77,13 +77,13 @@ When Play begins:
 	now name entry is "Cock Cannon"; [Name of your new Monster]
 	now attack entry is "ERROR! Cock Cannon: Attack"; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatthecockcannon]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[cannon attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is "[cannon attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[cannon desc]";[ Description of the creature when you encounter it.]
-	now face entry is "purple colored, mushroom shaped head with no neck. It is devoid of any features except for a large slit at the top. You're able to see and breathe through the slit despite the lack of a mouth or eyes on your";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is "thick with no curves at all. It looks like the shaft of a penis";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "vein covered";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "Your ass has several long and curly hairs on it. The skin on your rear is also very wrinkly. The wrinkles and the hairs make your butt cheeks look like a giant ballsack.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "body length";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "purple colored, mushroom shaped head with no neck. It is devoid of any features except for a large slit at the top. You're able to see and breathe through the slit despite the lack of a mouth or eyes.";[ Face description, format as the text "Your have a (your text) face."]
+	now body entry is "thick with no curves at all. It looks like the shaft of a penis";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "vein covered";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "Your ass has several long and curly hairs on it. The skin on your rear is also very wrinkly. The wrinkles and the hairs make your butt cheeks look like a giant ballsack.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "body length";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it turns purple. Your head swells out until it is shaped like the head of a mushroom. Your eyes, nose, and mouth disappear, leaving you momentarily blind and unable to breathe. A moment later, a large slit opens up on the top of your head and you're able to see and breathe through it."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it thickens and loses all of its curves and features until it looks like the shaft of a penis."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "it becomes more sensitive to the slightest touch and large veins become visible beneath the skin."; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -91,13 +91,13 @@ When Play begins:
 	now cock change entry is "it gets absorbed into and replaced by your body."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 10;
-	now sta entry is 14; 
+	now sta entry is 14;
 	now per entry is 14;
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Male"; 		[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 20; 
-	now lev entry is 3; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now hp entry is 20;
+	now lev entry is 3; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 0; [Amount of Damage monster Does when attacking.]
 	now area entry is "Red"; [ Current options are 'Outside' and 'Mall' and 'Park' and 'Red' Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -107,15 +107,15 @@ When Play begins:
 	now breast size entry is 0; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0; [ Width of female sex  infection will try and give you ] 
+	now cunt length entry is 0; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 0; [ Width of female sex infection will try and give you ]
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
-	now loot entry is ""; 
+	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]sexualized[or]phallic[or]twisted[at random]";
 	now type entry is "mutant"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
@@ -225,5 +225,5 @@ when play ends:
 			say "Lost to your new instincts, you spend the next several days looking for victims to transform. Then the military arrives. Following a compulsion, you climb onto the roof of the nearest building and start stroking your penis shaped body as fast as you can... The military soldiers don't notice the blobs of cum falling out of the sky from you and the rest of the penile artillery until it is too late.";
 		else:
 			say "After being rescued by the military, you have trouble fitting in with the rest of society due to the fact that your body is shaped like a giant penis. But then you discover that the infection left many women with pussies so large that nobody could fill them but you...";
-		
+
 Cannon ends here.

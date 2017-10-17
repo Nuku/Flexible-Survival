@@ -251,32 +251,32 @@ This is the bikeride rule:
 
 to say bikeattack:
 	[dodge three times - 10 dmg each]
-	say "[line break]   The hyena bikers laugh derisively as they circle around you as you try to find a way out of this mess. Suddenly one veers out and tries to charge you on hir bike.";
+	say "[line break]     The hyena bikers laugh derisively as they circle around you as you try to find a way out of this mess. Suddenly one veers out and tries to charge you on hir bike.";
 	[WaitLineBreak]
 	let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 12: ";
 	if dice plus bonus is greater than 12:
-		say "   You roll to the side, narrowly missing a kick as he rides past. You get up quickly, but another one is coming at you, swinging a length of chain over hir head.[line break]";
+		say "     You roll to the side, narrowly missing a kick as he rides past. You get up quickly, but another one is coming at you, swinging a length of chain over hir head.[line break]";
 	else:
 		decrease hp of player by 10;
-		say "   You are too slow to get away before the biker kicks you hard, knocking you down. (10 dmg)  As you try to get up quickly, another one is coming at you, swinging a length of chain over hir head.[line break]";
+		say "     You are too slow to get away before the biker kicks you hard, knocking you down. (10 dmg)  As you try to get up quickly, another one is coming at you, swinging a length of chain over hir head.[line break]";
 	[WaitLineBreak]
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 13: ";
 	if dice plus bonus is greater than 13:
-		say "   You dodge to the side just in time and hear the heavy chain whizz past just inches away. You turn to face your assailant, but find another hyena biker almost upon you, tire iron raised high.[line break]";
+		say "     You dodge to the side just in time and hear the heavy chain whizz past just inches away. You turn to face your assailant, but find another hyena biker almost upon you, tire iron raised high.[line break]";
 	else:
 		decrease hp of player by 10;
-		say "   The hyena strikes you hard on the shoulder with the heavy length of chain, bruising you. (10 dmg)  You turn to face your assailant, but find another hyena biker almost upon you, tire iron raised high.[line break]";
+		say "     The hyena strikes you hard on the shoulder with the heavy length of chain, bruising you. (10 dmg)  You turn to face your assailant, but find another hyena biker almost upon you, tire iron raised high.[line break]";
 	[WaitLineBreak]
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
 	if dice plus bonus is greater than 14:
-		say "   You duck quickly and the tire iron passes over your head. You turn to face the biker, but shi's disappeared back into the whirling group. You growl in frustration and call them cowards. Most of them laugh, but one pulls to a stop and gets off to fight you hand to hand. As you get ready to fight hir, you see others getting off their bikes to take you on as well.";
+		say "     You duck quickly and the tire iron passes over your head. You turn to face the biker, but shi's disappeared back into the whirling group. You growl in frustration and call them cowards. Most of them laugh, but one pulls to a stop and gets off to fight you hand to hand. As you get ready to fight hir, you see others getting off their bikes to take you on as well.";
 	else:
 		decrease hp of player by 10;
-		say "   You are clubbed in the head by the hard metal, making you see stars for a moment. (10 dmg)  You turn to face the biker, but shi's disappeared back into the whirling group. You growl in frustration and call them cowards. Most of them laugh, but one pulls to a stop and gets off to fight you hand to hand. As you get ready to fight hir, you see others getting off their bikes to take you on as well.";
+		say "     You are clubbed in the head by the hard metal, making you see stars for a moment. (10 dmg)  You turn to face the biker, but shi's disappeared back into the whirling group. You growl in frustration and call them cowards. Most of them laugh, but one pulls to a stop and gets off to fight you hand to hand. As you get ready to fight hir, you see others getting off their bikes to take you on as well.";
 
 
 Section 3 - Sexy Subroutines
@@ -574,7 +574,7 @@ to say grantbitchsex1:
 		say "     As he fucks you, the male doesn't neglect his bitch's needs either. Now that you're properly submitting to him, his paws can roam to tease your nipples and stroke your cock while he screws you. His sharp teeth and slobbery tongue play against your ear as he tells you again and again what a good bitch you are and that he'll fill you with what you need.";
 		[WaitLineBreak]
 		say "     The hard fucking feels wonderful, but all good things must come to an end. After fucking you through one orgasm that leaves a sticky stain on the side of the crate and getting you hard and ready to blow again, he buries his cock to just before the knot and unleashes his hot seed, blasting it deep inside your ass. You can feel his virile load shooting into your bowels, sending you into another crashing climax that leaves you exhausted and panting on the crate.[mimpregchance]";
-		say "    Grant pulls his spent shaft free with a wet pop before wiping it against your butt. Done with you, he pulls you roughly from the box and onto the floor. He teasingly grins down at you as he hops back onto the crate. 'You're in my seat.'  You moan softly and lower your ears at his playful admonishment, nuzzling at his sheath and cock, to finish licking him clean. He rubs your ears and strokes your muzzle lightly before sending you off with a light swat on your rear for your impertinence.";
+		say "     Grant pulls his spent shaft free with a wet pop before wiping it against your butt. Done with you, he pulls you roughly from the box and onto the floor. He teasingly grins down at you as he hops back onto the crate. 'You're in my seat.'  You moan softly and lower your ears at his playful admonishment, nuzzling at his sheath and cock, to finish licking him clean. He rubs your ears and strokes your muzzle lightly before sending you off with a light swat on your rear for your impertinence.";
 		wait for any key;
 
 
@@ -678,7 +678,7 @@ to say grantmtop:
 	say "     His paws move to your legs and spread them as he lines up his cock. You steady yourself with a soft moan of eagerness, pressing back as soon as he's in position. You whimper softly at the sudden penetration of his sizeable member. But it feels so good, thick and hard pressing into your tight rump, pressing delightfully against your prostate.";
 	[WaitLineBreak]
 	say "     You dig your paws at the bedding the big male fucks you hard and fast, leaking a steady flow of precum into your bottom to get you slick. You can feel his muscular chest against your back as he nibbles and nips at your nape and ears. He uses one paw to help support his weight while the other grips your [cockname of player] cock, squeezing it as he pounds into you.";
-	say "     'Mmm... your such a nice, tight fuck. So smooth and tight around my cock, [if matriarchdefeated is 1]you eager slut[else]my lovely[end if],' he rumbles before taking the nape of your neck into his muzzle and growling softly. You tilt your head back and pant in pleasure, enjoying the lustful fucking you're getting.";
+	say "     'Mmm... you're such a nice, tight fuck. So smooth and tight around my cock, [if matriarchdefeated is 1]you eager slut[else]my lovely[end if],' he rumbles before taking the nape of your neck into his muzzle and growling softly. You tilt your head back and pant in pleasure, enjoying the lustful fucking you're getting.";
 	[WaitLineBreak]
 	say "     The wet sounds of your sex from the hard, steady thrusts of the hyena into your pre-slick tailhole surround you. The slap of his heavy balls against your own makes you long more and more for the virile seed within them. Your own cock throbs and leaks precum in an ever-growing stain on the blankets. His panting grows heavier as his excitement builds, growing closer until finally he thrusts hard into you one last time, driving his cock fully into you and tying with you.";
 	say "     You can feel his cock throb inside you as it blasts shot after shot of thick semen into your bowels, making your tummy plump a little from its amount. The feel of so much virile heat shooting into you sends you over the edge and you climax moments later. He growls softly and pumps at your cock, shooting your [if matriarchdefeated is 1]unwanted, submissive [end if]load onto the sheets.[mimpregchance]";

@@ -8,7 +8,7 @@ Section 0 - Basic variables
 
 monstercom is a number that varies.		[ This represents the row on the table of Critter Combat to be used in this fight. ]
 altattackmade is a number that varies.	[ This tracks whether an alternate attack what chosen. ]
-combat abort is a number that varies.	[ 0 = combat continues  /  1 = combat will be aborted. ]
+combat abort is a number that varies.	[ 0 = combat continues / 1 = combat will be aborted. ]
 ktspeciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]
 ktcockmatch is a truth state that varies.
 ktcockmatch is usually false.           [ Checks for matching player cock while using the 'Know Thyself' feat. ]
@@ -102,7 +102,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	now ktcockmatch is false;
 	if weapon object of player is journal:
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
-	otherwise:
+	else:
 		increase plhitbonus by hitbonus of weapon object of player;
 	repeat with x running through equipped equipment:
 		increase pldodgebonus by dodgebonus of x;
@@ -137,7 +137,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		decrease plmindbonus by mmb;		[increased vulnerability to mental/allure attacks]
 	if "Weak Psyche" is listed in feats of player:
 		decrease plmindbonus by 1;
-	otherwise if "Strong Psyche" is listed in feats of player:
+	else if "Strong Psyche" is listed in feats of player:
 		increase plmindbonus by 1;
 	if companion of player is mouse girl:
 		increase plmindbonus by 2;
@@ -166,11 +166,11 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 				increase pldamagebonus by 1;
 				increase plnatarmour by 300;
 				increase plweaknatarmour by 75;
-			otherwise:
+			else:
 				increase plhitbonus by 1;
 				increase plnatarmour by 200;
 				increase plweaknatarmour by 50;
-		otherwise:
+		else:
 			increase plnatarmour by 100;
 			increase plweaknatarmour by 25;
 	now fightoutcome is 100;
@@ -207,7 +207,7 @@ To Combat Menu:
 		say "     You are too injured to resist the creature.";
 		now fightoutcome is 20;
 		lose;
-	otherwise if libido of player >= 110 and combat abort is 0:
+	else if libido of player >= 110 and combat abort is 0:
 		say "     You are too aroused to consider resisting the creature.";
 		now fightoutcome is 21;
 		lose;
@@ -229,19 +229,19 @@ To Combat Menu:
 			now automaticcombatcheck is 1;
 			follow the player attack rule;
 			next;
-		otherwise if autoattackmode is 3: [always pass in combat, no player input needed]
+		else if autoattackmode is 3: [always pass in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			follow the combat pass rule;
 			next;
-		otherwise if autoattackmode is 4: [always flees in combat, no player input needed]
+		else if autoattackmode is 4: [always flees in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			follow the flee rule;
 			next;
-		otherwise if autoattackmode is 5: [always submit in combat, no player input needed]
+		else if autoattackmode is 5: [always submit in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			follow the submit rule;
 			next;
-		otherwise:
+		else:
 			if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 			say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]F[roman type]lee, [bold type]S[roman type]ubmit, [bold type]T[roman type]hrow the fight[line break]";
 			let combatopt be 0;
@@ -329,9 +329,9 @@ this is the monster combat mode rule:
 	let foundcom be 0;
 	if there is no altcombat in row monster of Table of Random Critters:
 		now searchparam is "default";	[no change]
-	otherwise if altcombat entry is "" or altcombat entry is "default" or altcombat entry is " " or altcombat entry is empty:
+	else if altcombat entry is "" or altcombat entry is "default" or altcombat entry is " " or altcombat entry is empty:
 		now searchparam is "default";	[no change]
-	otherwise:
+	else:
 		let searchparam be altcombat entry;
 	repeat with y running from 1 to number of filled rows in table of Critter Combat:
 		choose row y in table of Critter Combat;
@@ -365,12 +365,12 @@ This is the player attack rule:
 	if hardmode is true:
 		if the combat bonus is greater than 16:
 			now combat bonus is 16;
-		otherwise if the combat bonus is less than -25:
+		else if the combat bonus is less than -25:
 			now combat bonus is -25;
-	otherwise:
+	else:
 		if the combat bonus is greater than 19:
 			now combat bonus is 19;
-		otherwise if the combat bonus is less than -22:
+		else if the combat bonus is less than -22:
 			now combat bonus is -22;
 	let the roll be a random number from 1 to 50;
 	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
@@ -391,7 +391,7 @@ This is the player attack rule:
 						break;
 				if z is 0:		[creature not listed]
 					increase dam by a random number between 0 and 2;
-				otherwise:
+				else:
 					choose row z in table of random critters;
 					let dammy be 2;
 					if wdam entry > 3:					[nerfed for very high damage critters]
@@ -415,7 +415,7 @@ This is the player attack rule:
 		if weapon type of player is "Melee":
 			increase dam by (( the strength of the player minus 10 ) divided by 2);
 			increase dam by pldamagebonus;
-		otherwise if weapon type of player is "Ranged":
+		else if weapon type of player is "Ranged":
 			increase dam by (( the Perception of the player minus 10 ) divided by 2);
 			increase dam by pldamagebonus;
 		if a random chance of the morale of the player in 200 succeeds:
@@ -423,14 +423,14 @@ This is the player attack rule:
 			increase dam by dam;
 		if wmstrike is 1:			[Weaponsmaster used]
 			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapons knowledge, you attack with[or]Like the veteran fighter you are, you strike with[or]You strike with[or]You attack with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
-		otherwise if weapon object of player is journal:
+		else if weapon object of player is journal:
 			if z is not 0:	[Natural Armaments used]
 				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodytype of player] body[or]Drawing strength from your [bodyname of player] body, you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player] form's natural defences[at random], hitting [name entry] for [special-style-2][dam][roman type] damage!";
-			otherwise if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
+			else if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
 				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa!  You know kung-fu! [at random]hitting [name entry] for [special-style-2][dam][roman type] damage!";
-			otherwise:
+			else:
 				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
-		otherwise:
+		else:
 			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 		let bonusattacks be 0;		[max 2 bonus attacks in a round]
 		let specattchance be 4;
@@ -462,7 +462,7 @@ This is the player attack rule:
 			if tailname of player is "Cerberus":
 				increase dammy by a random number between 0 and 2;
 				say "[line break]Your tailcock swings in to [one of]smack[or]swat[or]slap[or]ejaculate[or]cum[purely at random] at your enemy, splattering a spray of your [one of]seed[or]semen[at random] onto them, for [special-style-2][dammy][roman type] additional damage!";
-			otherwise:
+			else:
 				say "[line break]You give [one of]your opponent[or]your enemy[or]the [name entry][purely at random] a [one of]hard swat[or]fleshy smack[or]wet slap[or]firm jab[purely at random] with your [cock size desc of player] [one of]wang[or]cock[or]prick[purely at random][if cocks of player > 1]s[end if] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
 		if a random chance of specattchance in 20 succeeds and "Ball Crush" is listed in feats of player and cock width of player >= 16 and bonusattacks < 2 and player is not internal:
@@ -487,14 +487,14 @@ This is the player attack rule:
 			let y be a random number from 4 to 6;
 			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [special-style-2][y][roman type] damage!";
 			increase dam by y;
-		otherwise if a random chance of petchance in 4000 succeeds and "Youthful Tides" is listed in feats of player:
+		else if a random chance of petchance in 4000 succeeds and "Youthful Tides" is listed in feats of player:
 			let y be 0;
 			repeat with s running from 1 to number of entries in childrenfaces:
 				increase y by a random number from 2 to 4;
 			increase dam by y;
 			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at [name entry] for [special-style-2][y][roman type] damage!";
 		decrease monsterhp by dam;
-	otherwise:
+	else:
 		say "You miss!";
 	if player is not lonely:
 		if a random chance of petchance in 4000 succeeds and "The Horde" is listed in feats of player:
@@ -507,40 +507,40 @@ This is the player attack rule:
 				if hardmode is true:
 					if the combat bonus is greater than 16:
 						now combat bonus is 16;
-					otherwise if the combat bonus is less than -25:
+					else if the combat bonus is less than -25:
 						now combat bonus is -25;
-				otherwise:
+				else:
 					if the combat bonus is greater than 19:
 						now combat bonus is 19;
-					otherwise if the combat bonus is less than -22:
+					else if the combat bonus is less than -22:
 						now combat bonus is -22;
 				now roll is a random number from 1 to 50;
 				if roll plus the combat bonus is greater than 20:
 					let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
 					say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
 					decrease monsterhp by dam;
-				otherwise:
+				else:
 					say "Your [z] misses!";
-		otherwise if a random chance of petchance in 1000 succeeds:
+		else if a random chance of petchance in 1000 succeeds:
 			LineBreak;
 			now attack bonus is dexterity of companion of player + ( level of companion of player * 2 ) + pethitbonus - 10;
 			let the combat bonus be attack bonus minus defense bonus;
 			if hardmode is true:
 				if the combat bonus is greater than 16:
 					now combat bonus is 16;
-				otherwise if the combat bonus is less than -25:
+				else if the combat bonus is less than -25:
 					now combat bonus is -25;
-			otherwise:
+			else:
 				if the combat bonus is greater than 19:
 					now combat bonus is 19;
-				otherwise if the combat bonus is less than -22:
+				else if the combat bonus is less than -22:
 					now combat bonus is -22;
 			now roll is a random number from 1 to 50;
 			if roll plus the combat bonus is greater than 20:
 				let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
 				say "[assault of companion of player][run paragraph on]  [special-style-2][dam][roman type] damage inflicted!";
 				decrease monsterhp by dam;
-			otherwise:
+			else:
 				say "Your [companion of player] misses!";
 	LineBreak;
 	if monsterhp is not currentmonhp:
@@ -553,7 +553,7 @@ This is the player attack rule:
 			if there is a continuous in row monstercom of the table of Critter Combat:
 				follow the continuous entry;
 			if combat abort is 0 and skipretaliate is false, follow the combat entry;
-	otherwise:
+	else:
 		now fightoutcome is 10;
 		win;
 
@@ -571,7 +571,7 @@ This is the combat item rule:
 	if there is no object in row 1 of table of itemselection:
 		say "You have no combat ready items to use!";
 		wait for any key;
-	otherwise:
+	else:
 		while 1 is 1:
 			if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 			repeat with y running from 1 to number of filled rows in table of itemselection:
@@ -584,10 +584,10 @@ This is the combat item rule:
 				now current menu selection is calcnumber;
 				follow the combat item process rule;
 				break;
-			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+			else if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";
 				continue the action;
-			otherwise:
+			else:
 				say "Invalid Choice.";
 
 this is the combat item process rule:
@@ -598,11 +598,11 @@ this is the combat item process rule:
 		if monsterhp < 1:
 			now fightoutcome is 10;
 			win;
-		otherwise if hp of player < 1 or libido of player > 109:
+		else if hp of player < 1 or libido of player > 109:
 			if hp of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
 			lose;
-		otherwise:
+		else:
 			wait for any key;
 			choose row monstercom from table of Critter Combat;
 			if playerpoison > 0, follow the playerpoisoned rule;
@@ -648,13 +648,13 @@ This is the flee rule:
 		if tailname of player is "Skunk" or tailname of player is "Skunkbeast Lord" or tailname of player is "Skunk Taur" or tailname of player is "Hyperskunk":
 			say "You give your striped tail a meaningful wave at your enemy before releasing your spray and trying to escape.";
 			increase gascloud by 5;
-		otherwise if tailname of player is "Squid":
+		else if tailname of player is "Squid":
 			say "Turning around, you spray an inky cloud towards your enemy before trying to escape.";
 			increase gascloud by 5;
-		otherwise if bodyname of player is "Corota":
+		else if bodyname of player is "Corota":
 			say "Rustling your wings, you send a cloud of choking dust at your foe before you attempt your escape.";
 			increase gascloud by 5;
-		otherwise:
+		else:
 			say "You release your cover cloud and try to escape.";
 			increase gascloud by 3;
 	increase combat bonus by gascloud * 2;
@@ -664,7 +664,7 @@ This is the flee rule:
 	if hardmode is true:
 		if the combat bonus is less than -25:
 			now combat bonus is -25;
-	otherwise:
+	else:
 		if the combat bonus is less than -22:
 			now combat bonus is -22;
 	let the roll be a random number from 1 to 50;
@@ -673,7 +673,7 @@ This is the flee rule:
 		say "You manage to evade [name entry] and slip back into the city.";
 		now fightoutcome is 30;
 		now combat abort is 1;
-	otherwise:
+	else:
 		say "You fail to get away.";
 		choose row monstercom from table of Critter Combat;
 		if playerpoison > 0, follow the playerpoisoned rule;
@@ -704,13 +704,13 @@ this is the playerpoisoned rule:
 		let poisonnum be a random number between 1 and poisonnum;
 		if playernum >= poisonnum:	[successful stamina check decreases poison faster]
 			decrease playerpoison by 2;
-		otherwise:
+		else:
 			decrease playerpoison by 1;
 		decrease playerpoison by playerpoison / 7;	[drops very high values faster, mostly for hard mode]
 		say "As the toxins in your system continue to affect you, you take another [special-style-2][dam][roman type] damage";
 		if poisonnum > 0:
 			say "!  Your nanites continue to try and purge it from your system, quickly working to break down more of it.";
-		otherwise:
+		else:
 			say "!  Your nanites manage to purge the last of it from your system, leaving you free of its debilitating effects.";
 			increase plhitbonus by 2;
 		decrease hp of player by dam;
@@ -728,7 +728,7 @@ this is the retaliation rule:
 	choose row monstercom from table of Critter Combat;
 	if name entry is "default":
 		standardretaliate;		[follows the basic model if default]
-	otherwise:
+	else:
 		retaliate;				[follows the advanced model if alternate]
 
 Book 1 - Standard Retaliate
@@ -741,13 +741,13 @@ to standardretaliate:
 	standardstrike;
 	if monsterhit is true:
 		standardhit;
-	otherwise:
+	else:
 		say "[Name Entry] misses!";
 	now peppereyes is 0;
 	if hp of the player is greater than 0 and libido of player < 110:
 		[wait for any key;]
 		AttemptToWaitBeforeClear;
-	otherwise:
+	else:
 		if hp of player <= 0, now fightoutcome is 20;
 		if libido of player >= 110, now fightoutcome is 21;
 		Lose;
@@ -766,7 +766,7 @@ to retaliate:
 		follow the preattack entry;								[perform a pre-attack, if it exists]
 	if there is a altstrike in row monstercom of the table of Critter Combat:
 		follow the altstrike entry;								[use an alternate striking method, if it exists]
-	otherwise:
+	else:
 		standardstrike;
 	if monsterhit is true:
 		now altattackmade is 0;
@@ -775,7 +775,7 @@ to retaliate:
 			if a random chance of ( alt1chance in row monstercom of Table of Critter Combat ) in 100 succeeds:
 				now altattackmade is 1;
 				follow the altattack1 entry;						[use altattack1, if rolled successfully and exists]
-			otherwise if there is a altattack2 in row monstercom of the table of Critter Combat and there is a alt2chance in row monstercom of the table of Critter Combat:
+			else if there is a altattack2 in row monstercom of the table of Critter Combat and there is a alt2chance in row monstercom of the table of Critter Combat:
 				if a random chance of ( alt2chance in row monstercom of Table of Critter Combat ) in 100 succeeds:
 					now altattackmade is 1;
 					follow the altattack2 entry;					[use altattack1, if rolled successfully and exists]
@@ -784,7 +784,7 @@ to retaliate:
 		choose row monstercom from table of Critter Combat;
 		if there is a postattack in row monstercom of the table of Critter Combat:
 			follow the postattack entry;							[perform a post-attack, if it exists]
-	otherwise:
+	else:
 		now missskip is 0;
 		choose row monstercom from table of Critter Combat;
 		if there is a monmiss in row monstercom of the table of Critter Combat:
@@ -797,7 +797,7 @@ to retaliate:
 	if hp of the player is greater than 0 and libido of player < 110:
 		[wait for any key;]
 		AttemptToWaitBeforeClear;
-	otherwise:
+	else:
 		if hp of player <= 0, now fightoutcome is 20;
 		if libido of player >= 110, now fightoutcome is 21;
 		Lose;
@@ -812,7 +812,7 @@ to standardstrike:
 	if gascloud > 0, decrease gascloud by 1;
 	if avoidance is 1:
 		now monsterhit is false;
-	otherwise:
+	else:
 		choose row monster from the table of random critters;
 		let the defense bonus be dexterity of the player + ( level of the player * 2 ) + pldodgebonus + bananapeeled - 10;
 		let the attack bonus be dex entry + ( lev entry * 2 ) + monhitbonus - 10;
@@ -823,19 +823,19 @@ to standardstrike:
 		if hardmode is true:
 			if the combat bonus is greater than 19:
 				now combat bonus is 19;
-			otherwise if the combat bonus is less than -22:
+			else if the combat bonus is less than -22:
 				now combat bonus is -22;
-		otherwise:
+		else:
 			if the combat bonus is greater than 16:
 				now combat bonus is 16;
-			otherwise if the combat bonus is less than -25:
+			else if the combat bonus is less than -25:
 				now combat bonus is -25;
 		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15;	[***if autopass, min. 30% chance to hit]
 		let the roll be a random number from 1 to 50;
 		say "[name entry] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
 		if the roll plus the combat bonus is greater than 20:
 			now monsterhit is true;
-		otherwise:
+		else:
 			now monsterhit is false;
 
 to say avoidancecheck:					[collection of all enemy attack avoidance checks]
@@ -843,7 +843,7 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
 		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
 		now avoidance is 1;
-	otherwise if weapon object of player is bo staff:		[defensive combat]
+	else if weapon object of player is bo staff:		[defensive combat]
 		let boblock be 5 + ( 2 * peppereyes );
 		if "Martial Artist" is listed in feats of player, increase boblock by 3;
 		if "Black Belt" is listed in feats of player, increase boblock by 4;
@@ -854,10 +854,10 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 		if boblock > a random number between 0 and 100:
 			say "[one of]Using your bo staff, you are able to deflect the enemy's blow, preventing any damage.[or]Making a skillful vault with your staff, you leap out of the enemy's path and thereby avoid their attack.[or]Just as your opponent is about to strike, you sweep with your staff, causing them to stumble.[or]Taking advantage of your weapon's long reach, you keep your enemy at bay as you prepare to make your next move.[at random]";
 			now avoidance is 1;
-	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in ( 10 - peppereyes - bananapeeled ) succeeds:
+	else if "Black Belt" is listed in feats of player and a random chance of 1 in ( 10 - peppereyes - bananapeeled ) succeeds:
 		say "You nimbly avoid the attack at the last moment!";
 		now avoidance is 1;
-	otherwise if ducky swimring is equipped and duckyactive is true and a random chance of 1 in 8 succeeds:
+	else if ducky swimring is equipped and duckyactive is true and a random chance of 1 in 8 succeeds:
 		say "Your [one of]inflatable ducky[or]ducky swim ring[or]white ducky[or]cute ducky[at random] ends up taking the hit for you, causing it to pop and deflate for the rest of the fight, but saving you from being hit this [one of]time[or]once[at random].";
 		now avoidance is 1;
 	if avoidance is 0 and level of Velos > 2 and ( ( hp of player * 100 ) / maxhp of player ) < 10 and velossaved is false:
@@ -906,7 +906,7 @@ to say normalabsorbancy:		[normal absorbancy]
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
 				increase totalarmour by ac of x * ac of x;
-			otherwise:
+			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
 				increase totalarmour by ( effectiveac * effectiveac );
@@ -932,7 +932,7 @@ to say highabsorbancy:			[increased chance to block better]
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 90 succeeds:
 				increase totalarmour by ac of x * ac of x;
-			otherwise:
+			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 90;
 				increase totalarmour by ( effectiveac * effectiveac );
@@ -980,7 +980,7 @@ to say headabsorbancy:			[targets head]
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
 				increase totalarmour by ac of x * ac of x;
-			otherwise:
+			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
 				increase totalarmour by ( effectiveac * effectiveac );
@@ -1005,7 +1005,7 @@ to say bodyabsorbancy:			[targets body]
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
 				increase totalarmour by ac of x * ac of x;
-			otherwise:
+			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
 				increase totalarmour by ( effectiveac * effectiveac );
@@ -1060,7 +1060,7 @@ to say noshieldabsorbancy:		[no shield protection]
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
 				increase totalarmour by ac of x * ac of x;
-			otherwise:
+			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
 				increase totalarmour by ( effectiveac * effectiveac );
@@ -1088,7 +1088,7 @@ to say nofeatabsorbancy:
 			if placement of x is targetlocation:
 				if a random chance of (effectiveness of x) in 100 succeeds:
 					increase totalarmour by ac of x * ac of x;
-				otherwise:
+				else:
 					let factor be a random number between 1 and effectiveness of x;
 					let effectiveac be ( ac of x * factor ) / 100;
 					increase totalarmour by ( effectiveac * effectiveac );
@@ -1115,7 +1115,7 @@ to win:
 		if "Automatic Survival" is listed in feats of player, now vorechance is 75;
 		if vorecount > 20:
 			increase vorechance by 40;
-		otherwise:
+		else:
 			increase vorechance by vorecount * 2;
 		increase vorechance by ( 100 - humanity of player ) / 4;
 		increase vorechance by ( scalevalue of player - scale entry ) * 5;
@@ -1131,7 +1131,7 @@ to win:
 		if inheat is true, increase vorechance by 20;
 		if ubcount > 20:
 			increase vorechance by 40;
-		otherwise:
+		else:
 			increase vorechance by ubcount * 2;
 		increase vorechance by ( 100 - humanity of player ) / 4;
 		increase vorechance by ( scalevalue of player - scale entry ) * 5;
@@ -1149,13 +1149,13 @@ to win:
 				now ok is 0;
 				vorebyplayer;			[See Alt Vore file]
 				now fightoutcome is 13;	[player vored foe]
-			otherwise if calcnumber is 2:
+			else if calcnumber is 2:
 				now ok is 0;
 				ubbyplayer;			[See Alt Vore file]
 				now fightoutcome is 14;	[player ub'ed foe]
-			otherwise:
+			else:
 				now ok is 1;
-		otherwise if vorechoice is 1 and ubchoice is 1:				[player has choice ub/vore]
+		else if vorechoice is 1 and ubchoice is 1:				[player has choice ub/vore]
 			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you.  Looking down at your fallen foe, you lick your lips and finger yourself.  You don't hold back the urge to be filled, but are torn between which emptiness you're feeling to fill with the [name entry].  Shall you give into your desire to [link]consume (1)[as]1[end link] them or to [link]unbirth (2)[as]2[end link] them?";
 			now calcnumber is -1;
 			while calcnumber < 1 or calcnumber > 2:
@@ -1165,44 +1165,44 @@ to win:
 				now ok is 0;
 				vorebyplayer;			[See Alt Vore file]
 				now fightoutcome is 13;	[player vored foe]
-			otherwise if calcnumber is 2:
+			else if calcnumber is 2:
 				now ok is 0;
 				ubbyplayer;			[See Alt Vore file]
 				now fightoutcome is 14;	[player ub'ed foe]
-		otherwise if vorechoice is 1 and ubchoice is 0:				[hunger overrides ub]
+		else if vorechoice is 1 and ubchoice is 0:				[hunger overrides ub]
 			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you.  Looking down at your fallen foe, you lick your lips and finger yourself.  In the end, it is the emptiness in your stomach that wins out and you don't hold it back.  You advancing on them with the intent to sate your stomach's call with the [name entry].";
 			now ok is 0;
 			vorebyplayer;			[See Alt Vore file]
 			now fightoutcome is 13;	[player vored foe]
-		otherwise if vorechoice is 0 and ubchoice is 1:				[ub overrides hunger]
+		else if vorechoice is 0 and ubchoice is 1:				[ub overrides hunger]
 			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you.  Looking down at your fallen foe, you lick your lips and finger yourself.  In the end, it is the hollowness in your uterus that wins out and you don't hold it back.  You advancing on them with the intent to use the [name entry] to fill the emptiness you feel in your womb.";
 			now ok is 0;
 			ubbyplayer;			[See Alt Vore file]
 			now fightoutcome is 14;	[player ub'ed foe]
-	otherwise if voreprompted is true:
+	else if voreprompted is true:
 		if vorechoice is 0:
 			say "     As your battle is coming to a close, you feel a primal rumbling in your belly, your hunger welling up inside you.  Looking down at your fallen foe, you lick your lips, tempted to sate your body's hunger with the [name entry].  Shall you give into this desire to [link]consume[as]y[end link] them?";
 			if the player consents:
 				now ok is 0;
 				vorebyplayer;		[See Alt Vore file]
 				now fightoutcome is 13;	[player vored foe]
-			otherwise:
+			else:
 				now ok is 1;
-		otherwise if vorechoice is 1:
+		else if vorechoice is 1:
 			say "     As your battle is coming to a close, you feel that primal rumbling in your belly, your hunger welling up inside you.  Looking down at your fallen foe, you lick your lips and don't hold it back, advancing on them with the intent to sate your stomach's call with them.";
 			now ok is 0;
 			vorebyplayer;		[See Alt Vore file]
 			now fightoutcome is 13;	[player vored foe]
-	otherwise if ubprompted is true:
+	else if ubprompted is true:
 		if ubchoice is 0:
 			say "     As your battle is coming to a close, you become intensely aware of the emptiness of your womb.  Looking down at your foe, you finger yourself, longing to use the [name entry] to fill it right away.  Shall you give into this desire and [link]unbirth[as]y[end link] them?";
 			if the player consents:
 				now ok is 0;
 				ubbyplayer;		[See Alt Vore file]
 				now fightoutcome is 14;	[player ub'ed foe]
-			otherwise:
+			else:
 				now ok is 1;
-		otherwise if ubchoice is 1:
+		else if ubchoice is 1:
 			say "     As your battle is coming to a close, you become intensely aware of the emptiness of your womb.  Looking down at your foe, you finger yourself and don't hold it back, advancing on them with the intent to fill your uterus right away with them.";
 			now ok is 0;
 			ubbyplayer;		[See Alt Vore file]
@@ -1210,7 +1210,7 @@ to win:
 	if ok is 1 and vampiric is true:
 		if nohealmode is true:
 			increase hp of player by ( 2 * lev entry ) / 3;
-		otherwise:
+		else:
 			increase hp of player by lev entry;
 		decrease thirst of player by 3;
 		decrease hunger of player by 1;
@@ -1221,7 +1221,7 @@ to win:
 		say "Do you want to perform after combat scene?";
 		if the player consents:
 			now ok is 1;
-		otherwise:
+		else:
 			now ok is 0;
 	if ok is 1, say "[defeated entry]";
 	increase the XP of the player by lev entry times two;
@@ -1231,9 +1231,9 @@ to win:
 		let jj be a random number between 1 and 4;
 		if jj is 1:			[libido boost]
 			increase libido of player by 5;					[flat libido boost]
-		otherwise if jj is 2:
+		else if jj is 2:
 			increase morale of player by 1;					[flat morale boost]
-		otherwise:
+		else:
 			increase xp of player by ( lev entry + 2 ) / 5;		[10% xp boost]
 	if ktspeciesbonus > 0, increase the XP of the player by (lev entry divided by 2);
 	if the player is not lonely:
@@ -1246,22 +1246,22 @@ to win:
 	let z be 0;
 	if randomdropchance is 0:
 		now randomdropchance is 0;		[no drop = do nothing]
-	otherwise if randomdropchance is 100:
+	else if randomdropchance is 100:
 		now randomdropchance is 100;	[always drops = no need to run all the maths]
 		say "You gain 1 x [loot entry]!";
 		add loot entry to the invent of the player;
-	otherwise:
+	else:
 		if "Magpie Eyes" is listed in feats of player and randomdropchance is greater than 50:
 			now z is ( 100 - randomdropchance ) divided by 3;		[scaled increase above 50, prevents numbers over 100]
 			increase randomdropchance by z;
-		otherwise if "Magpie Eyes" is listed in feats of player and randomdropchance is greater than 0:
+		else if "Magpie Eyes" is listed in feats of player and randomdropchance is greater than 0:
 			now z is randomdropchance divided by 3;
 			increase randomdropchance by z;
 		if "Mugger" is listed in feats of player and muggerison is true:		[flat perception based increase]
 			if perception of player < 30:
 				increase randomdropchance by ( perception of player / 2 );
 				if randomdropchance > 100, now randomdropchance is 100;
-			otherwise:
+			else:
 				increase randomdropchance by 15;
 			if randomdropchance > 100, now randomdropchance is 100;
 		let yy be ( ( ( perception of player - 10 ) / 2 ) * 3 );	[minor perception bonus to looting, maxed at 30 PER]
@@ -1276,7 +1276,7 @@ to win:
 	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 50:
 		now z is ( 100 - lootchance entry ) divided by 3;		[scaled increase above 50, prevents numbers over 100]
 		increase lootchance entry by z;
-	otherwise if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
+	else if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
 		now z is lootchance entry divided by 3;
 		increase lootchance entry by z;
 	let yy be ( ( ( perception of player - 10 ) / 2 ) * 3 );	[minor perception bonus to looting, maxed at 30 PER]
@@ -1319,12 +1319,12 @@ To lose:
 	say "[victory entry][line break]";
 	if scenario is "Researcher" and ( there is no resbypass in row monster of table of random critters or resbypass entry is false ):
 		say "";
-	otherwise:
+	else:
 		infect;
 	choose row monster from the table of random critters;
 	if libido of player < libido entry and non-infectious entry is false:
 		increase libido of player by 4;
-	otherwise:
+	else:
 		increase libido of player by 2;
 	if the player is not lonely:
 		now lastfight of companion of player is turns;
@@ -1397,7 +1397,7 @@ this is the aura1 rule:		[weak aura]
 	if dice + bonus > 20:
 		say "You manage to resist the creature's power and press on.";
 		LineBreak;
-	otherwise:
+	else:
 		say "You suffer [ ( lev entry + 4 ) / 4 ] damage.";
 		LineBreak;
 		decrease hp of player by ( lev entry + 4 ) / 4;
@@ -1412,7 +1412,7 @@ this is the bearhug rule:
 	choose row monster from table of random critters;
 	if name entry is "Snake" or name entry is "Naga":		[crushing coils]
 		say "The [one of][name entry][or]large serpent[purely at random] manages to wrap its powerful tail around you, holding you in its vice-like constriction!  You will need to break free before squeezes the fight right out of you.";
-	otherwise:									[crushing arms]
+	else:									[crushing arms]
 		say "The [name entry] manages to grab you in its powerful arms and holds you in a vice-like bear hug!  You will need to break free before it squeezes the fight right out of you.";
 	let freedom be 0;
 	while hp of player > 0 and freedom is 0:
@@ -1422,7 +1422,7 @@ this is the bearhug rule:
 		decrease hp of player by ( dam - absorb );
 		if absorb is 0:
 			say "You suffer [special-style-2][dam][roman type] damage from its crushing grip!  ([hp of player]/[maxhp of player] hp)[line break]";
-		otherwise:
+		else:
 			say "You suffer [special-style-2][dam - absorb] ([dam] - [absorb])[roman type] damage from its crushing grip!  ([hp of player]/[maxhp of player] hp)[line break]";
 		if hp of player > 0:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -1431,12 +1431,12 @@ this is the bearhug rule:
 			let num2 be a random number between 1 and ( str entry + lev entry );
 			if name entry is "Snake" or name entry is "Naga":
 				say "As your opponent continues to crush you with its powerful coils, you struggle to break free: ";
-			otherwise:
+			else:
 				say "As your opponent continues to crush you with its powerful arms, you struggle to break free: ";
 			if num1 > num2:
 				say "You manage to fight your way out of your opponent's grip.";
 				now freedom is 1;
-			otherwise:
+			else:
 				say "You struggle, but cannot break free and the creature keeps it up.";
 
 Part 3 - Post-Attack Example - Brag
@@ -1489,7 +1489,7 @@ this is the intstrike rule:
 	if gascloud > 0, decrease gascloud by 1;
 	if avoidance is 1:
 		now monsterhit is false;
-	otherwise:
+	else:
 		choose row monster from the table of random critters;
 		let the defense bonus be intelligence of player + ( level of player * 2 ) + plmindbonus - 10;
 		let the attack bonus be int entry + ( lev entry * 2 ) + monmindbonus - 10;
@@ -1500,19 +1500,19 @@ this is the intstrike rule:
 		if hardmode is true:
 			if the combat bonus is greater than 19:
 				now combat bonus is 19;
-			otherwise if the combat bonus is less than -22:
+			else if the combat bonus is less than -22:
 				now combat bonus is -22;
-		otherwise:
+		else:
 			if the combat bonus is greater than 16:
 				now combat bonus is 16;
-			otherwise if the combat bonus is less than -25:
+			else if the combat bonus is less than -25:
 				now combat bonus is -25;
 		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15;	[***if autopass, min. 30% chance to hit]
 		let the roll be a random number from 1 to 50;
 		say "[name entry] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
 		if the roll plus the combat bonus is greater than 20:
 			now monsterhit is true;
-		otherwise:
+		else:
 			now monsterhit is false;
 
 Part 6 - Conditional Alternate Attack Example - Humping
@@ -1525,7 +1525,7 @@ this is the humping rule:
 		decrease wdam entry by ( ( lev entry + 7 ) / 4 );	[then restore stats to normal]
 		increase dex entry by 2;
 		now monsterpowerup is 0;
-	otherwise if bodyname of player is name entry and a random chance of 1 in 5 succeeds:
+	else if bodyname of player is name entry and a random chance of 1 in 5 succeeds:
 		let rangenum be ( 80 - ( peppereyes * 4 ) );
 		let xyz be ( a random number from rangenum to 120 ) + 30 + ( 2 * lev entry );
 		let dam be ( ( wdam entry times xyz ) / 100 );
@@ -1539,7 +1539,7 @@ this is the humping rule:
 		decrease hp of the player by dam;
 		follow the player injury rule;
 		say "You are [descr].";
-	otherwise:
+	else:
 		standardhit;							[if not a charged attack, act as normal]
 
 Part 7 - Alternate Attack Example - Feline Taur Pounce
@@ -1585,66 +1585,66 @@ this is the firebreath rule:
 		if ( playernum * 2 ) < dragonnum:
 			let dam be ( ( wdam entry times a random number from 80 to 120 ) / 57 );	[+75% damage]
 			let fbhit be 2;		[Direct Hit]
-		otherwise if playernum < dragonnum:
+		else if playernum < dragonnum:
 			let dam be ( ( wdam entry times a random number from 80 to 120 ) / 90 );	[+11% dmg]
 			let fbhit be 1;		[Partial Hit]
-		otherwise:
+		else:
 			let fbhit be 0;		[Missed]
 		if name entry is "Ash Dragator":
 			if fbhit is 2:
 				say "[special-style-2]The [one of]Dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth.  A bright red wave of fire is spat out at you.  You try to evade, but the fiery blast washes over you.  You suffer [dam] damage![roman type]";
-			otherwise if fbhit is 1:
+			else if fbhit is 1:
 				say "The [one of]Dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth.  A bright red wave of [special-style-2]fire[roman type] is spat out at you.  You move to evade, but are still caught in part of the blast.  You suffer [special-style-2][dam][roman type] damage!";
-			otherwise:
+			else:
 				say "The [one of]Dragator[or]creature[or]croc-beast[purely at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth.  A bright red fireball is spat out in your direction, but you manage to evade it!";
-		otherwise if name entry is "Ash Drakenoid":
+		else if name entry is "Ash Drakenoid":
 			if fbhit is 2:
 				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath it took moments ago.  Unable to get out of the way, you throw up your arms to protect yourself as her gaping maw looses a fireball at you.  You are burned for [dam] damage![roman type]";
-			otherwise if fbhit is 1:
+			else if fbhit is 1:
 				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago.  You attempt to move out of the way, but are still partially caught in the [special-style-2]fireball[roman type] loosed from her maw.  You are burned for [special-style-2][dam][roman type] damage!";
-			otherwise:
+			else:
 				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago.  Scrambling, you manage to dive out of the way of the fireball she hurls at you from her maw!";
-		otherwise if name entry is "Ash Whelp":
+		else if name entry is "Ash Whelp":
 			if fbhit is 2:
 				say "[special-style-2]The [one of]whelp[or]creature[or]Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you.  It strikes you squarely in the [one of]face[or]chest[purely at random].  You take [dam] damage![roman type]";
-			otherwise if fbhit is 1:
+			else if fbhit is 1:
 				say "The [one of]whelp[or]creature[or]Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small [special-style-2]fireball[roman type] which is lobbed at you.  You try to evade, but it catches you on your [one of]leg[or]arm[or]shoulder[purely at random].  You take [special-style-2][dam][roman type] damage!";
-			otherwise:
+			else:
 				say "The [one of]whelp[or]creature[or]Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you.  You manage to avoid the poorly aimed attack!";
-		otherwise if name entry is "feral sea dragon" or name entry is "feral sea dragoness":
+		else if name entry is "feral sea dragon" or name entry is "feral sea dragoness":
 			if fbhit is 2:
 				say "The [one of]sea dragon[or]blue dragon[or][name entry][purely at random] unleashes a blast of scalding water like a firehose that slams into you.  You are knocked over and scalded badly by the constant stream of steaming sea water.  You take [special-style-2][dam][roman type] damage!";
-			otherwise if fbhit is 1:
+			else if fbhit is 1:
 				say "The [one of]sea dragon[or]blue dragon[or][name entry][purely at random] unleashes a blast of scalding water like a firehose that slams into you.  You dodge and weave away from the constant stream of steaming sea water, but are struck and scalded by it a several times.  You take [special-style-2][dam][roman type] damage!";
-			otherwise:
+			else:
 				say "The [one of]sea dragon[or]blue dragon[or][name entry][purely at random] unleashes a blast of scalding water like a firehose towards you.  You manage to dodge and weave away, rather narrowly at times, from the constant stream of steaming sea water!";
-		otherwise if name entry is "Yamato Dragon" or name entry is "Yamato Dragoness":
+		else if name entry is "Yamato Dragon" or name entry is "Yamato Dragoness":
 			if fbhit is 2:
 				say "The [one of]oriental dragon[or][name entry][or]serpentine dragon[purely at random] exhales a wave of blue fire over you.  Strangely, it doesn't burn but every pain receptor on your body screams in agony.  You suffer [special-style-2][dam][roman type] damage!";
-			otherwise if fbhit is 1:
+			else if fbhit is 1:
 				say "The [one of]oriental dragon[or][name entry][or]serpentine dragon[purely at random] exhales a wave of blue fire towards you.  Thankfully, you're only caught by part of the blast which strangely doesn't burn you, but everywhere the blue flames lick at screams in agony.  You suffer [special-style-2][dam][roman type] damage!";
-			otherwise:
+			else:
 				say "The [one of]oriental dragon[or][name entry][or]serpentine dragon[purely at random] exhales a wave of blue fire over you.  You thankfully manage to evade the strange blast which strangely doesn't seem to have damaged the landscape around you.";
-		otherwise if name entry is "Salamander":
+		else if name entry is "Salamander":
 			if fbhit is 2:
 				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you, striking you soundly.  The heat threatens is like that of a blast furnace and threatens to overwhelm you.  You suffer [special-style-2][dam][roman type] damage!";
-			otherwise if fbhit is 1:
+			else if fbhit is 1:
 				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you.  Thankfully, you're only caught by edge of the blast, but even that feels as hot as an oven.  You suffer [special-style-2][dam][roman type] damage!";
-			otherwise:
+			else:
 				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you.  You thankfully manage to get out of the way, only feeling a brief rise in temperature and suffering no ill effects.";
-		otherwise if name entry is "Magic Drake":
+		else if name entry is "Magic Drake":
 			if fbhit is 2:
 				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashed a stream of sparkling green flames.  This magical blast strikes you soundly, both burning hot and strangely arousing, sapping your strength to fight on.  You suffer [special-style-2][dam][roman type] damage!";
-			otherwise if fbhit is 1:
+			else if fbhit is 1:
 				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashed a stream of sparkling green flames.  You're briefly caught by the edge of this magical blast as you unsuccessfully try to avoid it.  The strange fire is both burning hot and also strangely arousing.  It saps some of your strength to fight on.  You suffer [special-style-2][dam][roman type] damage!";
-			otherwise:
+			else:
 				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashed a stream of sparkling flames.  Her head swivels after you, chasing you with the blast, but you manage to evade the magical flames until the fiery attack is over.";
-		otherwise:
+		else:
 			if fbhit is 2:
 				say "[special-style-2][one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of fire at you.  The flames wash over you, burning you badly.  You take [dam] damage![roman type]";
-			otherwise if fbhit is 1:
+			else if fbhit is 1:
 				say "[one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of [special-style-2]fire[roman type] at you.  You try to evade, but are still partially caught in the flames, burning you.  You take [special-style-2][dam][roman type] damage!";
-			otherwise:
+			else:
 				say "[one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of fire at you.  The flames come close, but you manage to get out of the way barely in time!";
 		if fbhit > 0:
 			now damagein is dam;
@@ -1661,20 +1661,20 @@ this is the firebreath rule:
 		now peppereyes is 0;										[pepperspray wears off]
 		if hp of the player is greater than 0 and libido of player < 110:
 			wait for any key;
-		otherwise:
+		else:
 			if hp of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
 			Lose;
 		rule succeeds;
-	otherwise if a random chance of firebreathcount in 100 succeeds:		[warning + normal attack]
+	else if a random chance of firebreathcount in 100 succeeds:		[warning + normal attack]
 		say "[one of]The creature[or]Your opponent[or]The [name entry][purely at random] takes a deep breath and its insides rumble distressingly as it continues its assault.";
 		LineBreak;
 		now firebreathready is true;
 		retaliate;
-	otherwise:											[normal attack]
+	else:											[normal attack]
 		if firebreathcount is 0:
 			now firebreathcount is 20;
-		otherwise:
+		else:
 			increase firebreathcount by a random number between 2 and 6;
 			if firebreathcount > 40, now firebreathcount is 40;
 		retaliate;

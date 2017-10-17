@@ -59,15 +59,15 @@ when play begins:
 	add Husky Pack to badspots of furry;
 
 instead of resolving a Husky Pack:
-	say "     Rounding a corner in one of the inner-city blocks, you run right into the leader of a small husky pack, his fur cushioning the impact. As you jump back from the imposing anthro canine, he snarls in your face, drawing back his lips from a muzzle full of white and sharp teeth. 'Fuck off,' the alpha husky growls in annoyance and is immediately supported by the group of husky bitches following behind him. 'You better run, [if player is female]skank![otherwise]asshole![end if]' one of them barks and gives you a quite rude gesture, then a second laughs in a shrill tone and adds, 'That's right. Our man will fuck you up otherwise.' Between the group of naked anthro females, you catch a glimpse of a thin human woman with a red leather collar on a leash. She has got a hand on the collar and clearly is uncomfortable with the tightness against her throat. And not only that - from the way the leash is stretched taut between her and the male, he has been dragging her along by force. Both of the items still bear price tags, so your guess would be that this little gang just came out of the nearby pet store after outfitting the newest unwilling recruit to his harem of bitches.";
+	say "     Rounding a corner in one of the inner-city blocks, you run right into the leader of a small husky pack, his fur cushioning the impact. As you jump back from the imposing anthro canine, he snarls in your face, drawing back his lips from a muzzle full of white and sharp teeth. 'Fuck off,' the alpha husky growls in annoyance and is immediately supported by the group of husky bitches following behind him. 'You better run, [if player is female]skank![else]asshole![end if]' one of them barks and gives you a quite rude gesture, then a second laughs in a shrill tone and adds, 'That's right. Our man will fuck you up otherwise.' Between the group of naked anthro females, you catch a glimpse of a thin human woman with a red leather collar on a leash. She has got a hand on the collar and clearly is uncomfortable with the tightness against her throat. And not only that - from the way the leash is stretched taut between her and the male, he has been dragging her along by force. Both of the items still bear price tags, so your guess would be that this little gang just came out of the nearby pet store after outfitting the newest unwilling recruit to his harem of bitches.";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Apologize and leave as quickly as you can.";
 	say "     ([link]N[as]n[end link]) - Demand an explanation what he's doing with the human woman.";
 	if the player consents: [apologize]
-		say "     You bow low and apologize for bothering them, saying that you will do your best to avoid their territory from now on. Then you turn and start to walk away, hearing one of the huskies call after you, 'You better run, you dumb [if player is female]bitch[otherwise]jackass[end if].' The sound of ripping fabric and a frightened gasp follows and you can't help but look over your shoulder to see what is going on. Looks like the alpha husky decided that he wants to break in his newest pet right here and now - the woman is pressed against the wall of a building now, with him leaning over her and just having ripped her top half off. The red canine shaft standing proudly erect between his legs leaves little to the imagination of what will happen next.";
+		say "     You bow low and apologize for bothering them, saying that you will do your best to avoid their territory from now on. Then you turn and start to walk away, hearing one of the huskies call after you, 'You better run, you dumb [if player is female]bitch[else]jackass[end if].' The sound of ripping fabric and a frightened gasp follows and you can't help but look over your shoulder to see what is going on. Looks like the alpha husky decided that he wants to break in his newest pet right here and now - the woman is pressed against the wall of a building now, with him leaning over her and just having ripped her top half off. The red canine shaft standing proudly erect between his legs leaves little to the imagination of what will happen next.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Attempt to rescue the woman from her fate.";
-		say "     ([link]N[as]n[end link]) - Accept the situation for what it is and just walk away.";		
+		say "     ([link]N[as]n[end link]) - Accept the situation for what it is and just walk away.";
 		if the player consents: [rescue Sarah]
 			LineBreak;
 			say "[SarahRescue]";
@@ -76,7 +76,7 @@ instead of resolving a Husky Pack:
 			say "     Your continued hesitation while looking at the alpha husky and his victim gives him the time to rip at the crotch of her jeans, scattering buttons over the sidewalk and shoving the pants down. He is quick to hook a clawed finger under her panties after that and thrusts into her pussy right away, with little more finesse than a wild beast. As he takes her as his new bitch, the woman quickly starts to transform more and more - hands becoming paws, white fur sprouting all over her body and her face drawing forward into a canine muzzle. The further details of their coupling are hidden from your view as the other female huskies close in around the two of them, stroking and touching their new sister and alpha male. With a shiver going down your back, you turn away and run until you can't hear the barks and moans of the group anymore.";
 	else: [demand an explanation]
 		LineBreak;
-		say "     The tall husky lets out a growl from the depth of his throat, then says under his breath, 'You dumb [if player is female]bitch[otherwise]prick[end if].' Giving a yank on the leash, the captive is forced to stumble forward while letting out a half-choked gasp - right into the alpha husky's arms. She whimpers but clearly is too afraid to speak as the furry male gives her breasts a lewd squeeze. 'What do you think? Of course she's my newest slut! Gonna be a fine bitch when I breed her again and again.' With that said, the anthro dog licks the side of his captive's neck, making her tremble at the touch. While the husky is leaning over her, the young woman meets your eyes for a second, giving a silent plea for help.";
+		say "     The tall husky lets out a growl from the depth of his throat, then says under his breath, 'You dumb [if player is female]bitch[else]prick[end if].' Giving a yank on the leash, the captive is forced to stumble forward while letting out a half-choked gasp - right into the alpha husky's arms. She whimpers but clearly is too afraid to speak as the furry male gives her breasts a lewd squeeze. 'What do you think? Of course she's my newest slut! Gonna be a fine bitch when I breed her again and again.' With that said, the anthro dog licks the side of his captive's neck, making her tremble at the touch. While the husky is leaning over her, the young woman meets your eyes for a second, giving a silent plea for help.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Attempt to rescue the woman from her fate.";
 		say "     ([link]N[as]n[end link]) - Accept the situation for what it is and just walk away.";
@@ -114,7 +114,7 @@ to say SarahRescue:
 		if "Expert Medic" is listed in feats of the player:
 			say "expertly bandage her wound, using the remains of her ripped t-shirt to tie around her torso. ";
 		else:
-			say "do your best to treat her wound, tying her ripped t-shirt around her torso in an improvised bandage. "; 
+			say "do your best to treat her wound, tying her ripped t-shirt around her torso in an improvised bandage. ";
 		say "Given the depth and ragged edges of the claw-slashes, you can tell that this usually would never have sufficed... but in this case, the trouble-making nanites in this city actually work a positive effect. Within just a few minutes, the bleeding stops completely as the tiny machines knit Sarah's flesh together again - though not without the usual side effects, as a small patch of short white fur peeks out from under the bandage soon after. The fur keeps up a slow progression over her skin, making it clear that Sarah has been exposed to the husky strain of nanites.";
 		say "     Helpless to do anything about the spreading infection, you can do little but watch as her hands and feet become more paw-like than human as the fur reaches them and her pussy conforms to a new shape too, just right for a strong canine to sink his bone into. Distracted by the sight of her shifting crotch, only the crunch of re-forming bone draws your attention back to her head - which rapidly forms a slender muzzle and pointy dog's ears, completing her external transformation. You carry Sarah downstairs to put her into a bed to rest, then walk back up into the library and watch the empty streets outside for a moment. Thinking back to what you went through earlier, you don't feel sorry for the huskies you left lying in the street. Getting caught by some of the more dangerous beasts out there would be a fit punishment for what they tried to do.";
 		now battleground is "void";
@@ -145,8 +145,8 @@ to say SarahDesc:
 			project the figure of Sarah_clothed_icon;
 		else:
 			project the figure of Sarah_naked_icon;
-	say "     Sarah is a lithe and thin woman with grey-white husky fur, plus anthro paw-hands and feet. A canine head and bushy tail complete her look of an anthro dog. There are white scar lines down her side where the alpha husky that you rescued her from slashed her during your fight. [SarahSlutState][SarahPupState]".
-	
+	say "     Sarah is a lithe and thin woman with grey-white husky fur, plus anthro paw-hands and feet. A canine head and bushy tail complete her look of an anthro dog. There are white scar lines down her side where the alpha husky that you rescued her from slashed her during your fight. [SarahSlutState][SarahPupState]";
+
 The conversation of Sarah is { "Woof!" }.
 
 instead of sniffing Sarah:
@@ -252,7 +252,7 @@ to say SarahTalk1:
 		say "     As you approach and talk to Sarah, she says [one of]'This is quite a place. Wish I had known to come here when all this chaos started.'[or]'Thank you for saving me again! Without you I'd be lost out on the streets, just another slut of that bastard!'[or]'Sometimes, I can't help but wonder what it would be like... you know, to be a member of a husky pack. Serve the alpha.'[or]'Guess you're the alpha here... oh god, what am I saying. The nanites are getting to me.'[or]'Please... I need someone to fu- Oh, sorry. Lost control of myself there for a second.'[or]'You wouldn't believe how hot I feel under this fur. Just so very... hot.' She rubs her legs against one another subconsciously as she says this. Looks like this isn't just being hot, but her being 'in heat' - like a feral bitch.[at random]";
 	else if SarahSlut > 2: [collared fuckpet]
 		say "     As you approach her, Sarah [one of]cups her own breasts and rubs their nipples[or]rubs her slit and drips female juices everywhere[or]strokes her hands down the sides of her body[or]bends over to show you her eagerly wagging tail and the needy slit between her legs[at random], then sighs in a lusty tone, [one of]'Fuck me again master!'[or]'Please take me now!'[or]'Breed your bitch master![or]'Pound my like the bitch I am.'[or]'I need you to use me master!'[or]'I just love being your bitch.'[or]'Maser, please use your slut!'[at random]";
-						
+
 to say SarahTalk2:
 	if SarahSlut > 2:
 		say "     The sight of your gathered medical supplies holds little interest for Sarah. She sniffs at them a little as you hold this or that up to her and ask if it is still usable, but all that gets you us happy licks at your fingers. The young woman has well and truly accepted her fate as your devoted fuckpet by now, so she more or less ignores the items and just keeps rubbing her dripping slit.";
@@ -271,8 +271,8 @@ to say SarahTalk2:
 			say "     After getting rid of the unusable items, you're left with a big pile of remaining supplies. The young half-husky looks at them one last time, then remarks, 'Okay these here should be fine. Very good job gathering all that stuff.' Then she strolls over to some dusty boxes you never even noticed standing in the corner until now. Digging around a little, she eventually finds several abandoned lunch-boxes in what must be years worth of unclaimed lost and found items. With sure movements, Sarah packs them with full sets of medical supplies, creating brand new medkits.";
 		let madekits be HasParts / 2;
 		increase carried of medkit by madekits;
-		decrease HasParts by madekits * 2;		
-	
+		decrease HasParts by madekits * 2;
+
 to say SarahTalk3:
 	if SarahCured is 0:
 		say "     As you bring up that you want to help Sarah manage her... urges, Sarah's tail starts wagging wildly and she closes up to you in a light-footed step. 'Thank you, I really don't know what I would do without you,' she says as her arms slide around you for a tight hug. Closing her eyes and rubbing a lightly furred cheek against yours, she sighs in a low tone and adds, 'No - that's not correct. I know exactly where I would be... spreading my legs for that fucker of a - hey, what are you doing?!' The young woman's tone switches over to bewilderment as you gently push her away and it takes a few seconds until she realizes that she had started to grind her crotch against the side of your leg halfway through the hug. 'I - I... I'm sorry,' she wails, tail drooping in despair. Gently setting a hand on the hybrid woman's shoulder, you give her a soft squeeze and tell her she'll get through it somehow.";
@@ -287,7 +287,7 @@ to say SarahTalk3:
 				LineBreak;
 				say "     Pulling out the syringe with its cloudy, orange filling from your pack, you hand it to the medical student turned husky hybrid. Sarah turns it over and reads the handwritten scrawl on its plastic casing - 'Libido Suppressant'. She gasps in surprise, tears of joy starting to form in the corners of her eyes. 'You - you already got some?! Oh wow, are you psychic or something? This is just what I need! Thank you so much!' Throwing her arm around you in a quick hug, she then hurries off right afterwards, murmuring to herself about finding the right dosage and having to do careful experiments with the small amount she has.";
 				now SarahCured is 2; [gave her a syringe of libido suppressant]
-				decrease carried of libido suppressant by 1;				
+				decrease carried of libido suppressant by 1;
 			else: [don't give it to her]
 				LineBreak;
 				say "     Keeping your stash of libido suppressant a secret, you just give her a friendly pat on the arm and watch as Sarah walks away a little afterwards.";
@@ -320,7 +320,7 @@ to say SarahTalk3:
 				now SarahCured is 4; [the player gave her enough for a full treatment]
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
 				add "Dog Whisperer" to feats of player;
-				increase Charisma of player by 2;				
+				increase Charisma of player by 2;
 				decrease carried of libido suppressant by 5;
 			else: [don't give it to her]
 				LineBreak;
@@ -409,7 +409,7 @@ to say SarahFucking:
 		say "     You approach Sarah, her needy husky scent filling the bunker and ensuring you have sex on the mind. She looks rather concerned at your expression as you approach her, nervously fingering her clothes with paw-like hands. 'I - um, w-what do you want...' she says shyly, trying to hold things together. She seems to be aware of the fact that once she has taken her clothes off this time, she most likely won't have any desire to put them back on again. Her slight reluctance makes you pause for a minute as you realize just how close the intelligent woman is to giving in to the desires of the needy husky bitch she has become.";
 		say "     While Sarah is reluctant right now, you know from watching her that with only a few soft touches, you could have her writhing underneath you willingly, her needy body's new instincts overriding her brain and reducing her to little more then your pet as you play with her sexy body. A little voice in your head (a conscience, perhaps?) tells you that Sarah would be better off if you left her to try to manage her instincts alone or even helped her suppress them somehow, but the thought of her submitting to you is extremely arousing to your already sex-filled mind...[line break]";
 		say "     ([link]Y[as]y[end link]) - Fuck her, you're not holding back any longer!";
-		say "     ([link]N[as]n[end link]) - Don't do it.";		
+		say "     ([link]N[as]n[end link]) - Don't do it.";
 		if player consents:
 			LineBreak;
 			say "[SarahFirstSlutFuck]";
@@ -435,7 +435,7 @@ to say SarahFucking:
 				say "     Moving even closer with a broad grin on your face, you enjoy her moans of submission as your hands continue to roam across her body. You decide to rub her new position in even more as you slowly push her down onto all fours, moving her tail aside to expose her dripping wet cunt. She glances back at you over her shoulder, unsure of your intent, and you find yourself smiling at the fun to come. You slowly run your fingers over her cunt a few more times, making her shudder, before slowly pushing the tip of one digit inside her body. Sarah shudders and lowers her head down as her tight passage grips you like a glove. You push more of your finger into her, then slowly draw it back out.";
 				say "     Continuing to explore her damp passage, first with one finger and then with two, you revel in the almost total power her libido gives you over this transformed woman. Sarah's wet juices soon coat your whole hand as you stroke her soft insides and the moaning bitch gets wetter and wetter. She gasps and whines in pleasure as you use your free hand to slowly begin stroking the fur along her back, teasing and stroking her just like you would a dog, even as you bring her body ever closer to orgasm. Deciding to make this moment even more complete, you lower your head down close to her ears, and whisper into them in a low sexy voice, 'Look at you on all fours like this, just like a proper bitch. You enjoy getting petted, don't you bitch? You want to be just a lovely little pet for your master don't you?'";
 				WaitLineBreak;
-				say "     You moan into the anthro husky's pointy ear, the situation getting you almost as worked up as she is. To prolong the moment, you slow down your teasing of her pussy and increase your stroking of her back, occasionally pausing to give her a soft scratch in several sensitive locations while she tries to pant out an answer. 'Yes, please!' she finally manages to respond, panting incoherently, 'I want to be your pet. Please, [if player is female]Mistress[otherwise]Master[end if], make me yours!' she cries out, finally beginning to accept her role as the animal she now is.";
+				say "     You moan into the anthro husky's pointy ear, the situation getting you almost as worked up as she is. To prolong the moment, you slow down your teasing of her pussy and increase your stroking of her back, occasionally pausing to give her a soft scratch in several sensitive locations while she tries to pant out an answer. 'Yes, please!' she finally manages to respond, panting incoherently, 'I want to be your pet. Please, [if player is female]Mistress[else]Master[end if], make me yours!' she cries out, finally beginning to accept her role as the animal she now is.";
 				say "     You shudder in pleasure at her eager response, and reward your new bitch by gripping the scruff of her neck with the hand you had stroking her, even as you plunge your fingers in and out of her even more vigorously. She stiffens under your renewed assault on her body, before howling out in pleasure as a powerful orgasm shakes her body to the core. You groan in pleasure as well, nearly orgasming yourself from the intense sexual situation. When done, you slowly release her body, letting Sarah slump bonelessly to the floor. You smile at her as she lies there on the floor of the bunker, moaning out for you over and over again like a good little pet. You know you still have a ways to go to train her up just right, but you definitely feel like this was a good start.";
 		else:
 			LineBreak;
@@ -457,7 +457,7 @@ to say SarahFucking:
 				say "     You find yourself groaning as the husky quickly gives herself over to pleasuring you, your hands reaching down to stroke and pet her furry head even as she focuses her attentions on your shaft. You can feel her need building as she gets more and more of a taste of your [cock of player] cock. She groans and brings her hands up even as she leans forward, bracing herself on your hip with one hand, as her other hand comes up to work and tease your balls, rubbing her soft paws over your thick sac as if begging you to shoot all that seed into her waiting mouth. Feeling the pressure rising, you know you won't be able to hold back much longer under the assault of her talented mouth, and use your hands to pull her off of you at the last minute, the husky almost begging to have your cock in her mouth again.";
 				WaitLineBreak;
 				say "     Groaning you lower one of your hands down to your cock again, the other still holding your new pet in place, pumping your cock a couple of time, you cry out as you orgasm, shooting your thick seed all over the husky girl's face, pumping strand after strand of your white gold all over her body, marking her as your pet. Sarah seems to get the message, panting eagerly and acting like a good little pet even as she tries to lick up every drop of your wonderful seed that she can reach.";
-				say "     Despite all the fun you just had and Sarah's obedient temper, you realize that something is missing to complete this next step of her training. A more visible show of your ownership might be needed, a collar perhaps? The one she is still wearing was put around her neck by the husky pack you found her with - but since she's all yours now, something new and befitting so her role as your slutty pet seems in order. Maybe you can find that [bold type]pet shop[roman type] again where the other collar came from. It shouldn't be that far from the library, if you recall correctly...";				
+				say "     Despite all the fun you just had and Sarah's obedient temper, you realize that something is missing to complete this next step of her training. A more visible show of your ownership might be needed, a collar perhaps? The one she is still wearing was put around her neck by the husky pack you found her with - but since she's all yours now, something new and befitting so her role as your slutty pet seems in order. Maybe you can find that [bold type]pet shop[roman type] again where the other collar came from. It shouldn't be that far from the library, if you recall correctly...";
 		else:
 			say "     You find a smile crossing your face as you reach down to stroke your damp sex a few times, Sarah's fascinated gaze following your every movement as you slowly slide your fingers into your pussy and rub your inner walls. Drawing them out slowly so she can see your needy juices coating your fingers, you then slowly bring your fingers forward and rub them across her muzzle and nose. Almost automatically Sarah licks her lips, tasting your juices even as your aroused scent explodes through her heightened senses. The look on her husky face makes you grin as she pants in need, her muzzle drawing ever closer to your crotch as she begins to lean even closer.";
 			say "     Deciding to help speed up this lesson in how to properly please her mistress, you reach down and push softly on the back of her furred head, guiding her muzzle right up to your damp pussy. 'Now pleasure me, you little bitch,' You whisper down to your needy pet, 'It's time for you to learn how to put that longer tongue of yours to work properly,' you continue, your words seeming to excite the husky even further, as she begins to lick at your wet snatch eagerly. A groan in pleasure escapes your lips as she laps at your female sex, her tongue pressing into you again and again as she begins to truly give in to her desires. You find yourself burying your hands in Sarah's soft head-fur, pressing her muzzle up against your crotch as she licks and nibbles at you, causing you to begin to buck and moan softly in pleasure.";
@@ -667,7 +667,7 @@ to say SarahSexMenu:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
-[		
+[
 Sex Menu Intro:
 say "     As you approach Sarah, she smiles at you warmly and wags her tail. 'Hah, don't I know that look in your eye,' the female husky tells you with a bit of a teasing wink, stepping close to stroke her hand down your side. Putting on a coy, playful expression, she asks, 'So... what did you have in mind this time?'";
 ]
@@ -685,9 +685,9 @@ to say SarahSex1: [go down on her]
 	say "     Playfully teasing the husky girl some more, you rub against the panties, then slip the tip of a finger under their edges and run it along in a slow back and forth movement. By the time you hook your finger over the top and pull the fabric down, Sarah is literally dripping in arousal. She lets out a very satisfied bark - almost a howl - as your lips brush against her clit, then take it between them as you start suckling on it. With one hand holding down her panties and the other stroking the outside of her nether lips, the desperately aroused husky girl doesn't last very long before a breathtaking orgasm crashes in over her. Both paw-hands flying forward to grip your head tightly, she grinds your face into her furry muff, getting you wet and sticky with femcum.";
 	say "     Holding on to you and trembling in lust that only slowly ebbs off, Sarah keeps panting rapidly for some time, then eventually releases you to pull back from between her legs. Letting go of the black panties, you watch them flick back up to cover her crotch again (apparently quite good elastic in this brand) - which of course gets them even more soaked through with the husky's femcum. Then your viewpoint shifts as Sarah gently pulls up on your jaw, guiding you to look at her, then raise a bit to meet her for another sensual kiss. 'That was amazing,' she tells you with a smile, then strokes your cheek affectionately. 'Thank you for your understanding of going slow. I do need this - and it feels so right.' After another quick peck on your lips, she slides her legs to the side and gets up, grabbing a towel to rub herself down with and clean up.";
 	now lastfuck of Sarah is turns;
-	
+
 to say SarahSex2: [let her go down on you]
-	say "     Sliding an arm around the female husky, you pull Sarah closer to you and soon meet her lips with yours. The two of you share an eager kiss, tongues intermingling and breathing the same air while your hands wander over her shapely form, holding and touching the pretty and smart young woman. Eventually pulling back to allow both of you to catch your breaths, you smile at Sarah and then lean in to whisper in her pointy ear just what you want to do. Eager to show what she can do, the anthro canine's tail starts wagging wildly and Sarah gives you a very happy smile before replying with a giggle, 'Come on then, [if player is female]girlfriend[otherwise]stud[end if].' Sliding her hand-paw into yours, your husky friend guides you over to the next bed, then gestures for you to lay down.";
+	say "     Sliding an arm around the female husky, you pull Sarah closer to you and soon meet her lips with yours. The two of you share an eager kiss, tongues intermingling and breathing the same air while your hands wander over her shapely form, holding and touching the pretty and smart young woman. Eventually pulling back to allow both of you to catch your breaths, you smile at Sarah and then lean in to whisper in her pointy ear just what you want to do. Eager to show what she can do, the anthro canine's tail starts wagging wildly and Sarah gives you a very happy smile before replying with a giggle, 'Come on then, [if player is female]girlfriend[else]stud[end if].' Sliding her hand-paw into yours, your husky friend guides you over to the next bed, then gestures for you to lay down.";
 	if cocks of player > 0:
 		say "     After quickly slipping out of your clothes, you climb on the mattress and stretch out on it, waiting for Sarah to join. A moment or two later, you feel her next to you, kneeling on the bed and reaching out for your crotch. Slender fingers take hold of your manhood, stroking and touching you to tease it to full hardness. Then the pretty canine leans over and runs her floppy tongue up the shaft of your cock, making you grunt in arousal and lightly buck up your hips. 'Easy there tiger, I'm calling the shots right now,' Sarah tells you, licking over your cockhead with exquisite slowness and making you groan. The young woman laughs merrily at your antics, then proceeds to stroke your shaft with a little more energy, pumping her paw up and down on the stiff rod.";
 		WaitLineBreak;
@@ -704,7 +704,7 @@ to say SarahSex2: [let her go down on you]
 		WaitLineBreak;
 		say "     You don't know how long the young woman keeps you in that blissful state, but when the intense orgasm eventually ebbs off, you're left panting and weak as a kitten - lying stretched out and gasping for breath. The husky sits up straight and says with a grin, 'That was a really neat treat. Guess it shouldn't come as a surprise that as a husky I got a sweet-tooth for femcum, eh?' Leaning in over you, the beautiful young woman gives you a happy smile, followed by a deep kiss. Tongue-wrestling and making out with Sarah, you have a great time with the anthro husky - though rolling around on a bed with her doesn't exactly allow you the rest you need after the exertion of the orgasm earlier. In the end, she gives you a last peck on the lips, then stands up and saunters away - leaving you with the image of her perky behind and wagging tail, as well as the faint taste of your own femcum on your lips.";
 	now lastfuck of Sarah is turns;
-				
+
 to say SarahSex3: [suggest tit-fuck]
 	say "     Sliding an arm around the female husky, you pull Sarah closer to you and soon meet her lips with yours. The two of you share an eager kiss, tongues intermingling and breathing the same air while your hands wander over her shapely form, holding and touching the pretty and smart young woman. Eventually pulling back to allow both of you to catch your breaths, you smile at Sarah and then lean in to whisper in her pointy ear that you want to grind your hard dick in between her breasts. Sarah is somewhat hesitant at first, unsure if she should really just submit and let you satisfy yourself on her - but as you keep whispering suggestive things and slide a hand up to cup her breasts, her tail starts a slow wag and she replies, 'Okay, I'm game. Just... promise me that you'll stop if, if things get too intense for me.' Taking her paw-hand, you kiss it gently and nod to Sarah, then lead your friend over to her bed, gently pushing against her chest to make her sit down.";
 	say "     You stroke a finger along the jawline of Sarah's slender muzzle, pulling her head up a little to look at you, then lean forward and kiss her again. After the quick but still steaming hot peck, you whisper for her to sit back and relax for you - which the grinning husky does right away, panting slightly as you stretch out your arm to brush a hand against the fabric of her shirt. The curve of her breasts stretches the thin top quite nicely and you can literally feel the nubs of her nipples under your fingers. The gentle touch doesn't stay without a reaction from the young woman either - Sarah moans deeply, trembling a little as her hands grip the side of the bed. 'That feels nice,' she sighs and you pause for a second, just keeping your fingers cupping her curves until Sarah says, 'More please.'";
@@ -725,7 +725,7 @@ to say SarahSex3: [suggest tit-fuck]
 	if SarahCured < 6:
 		now SarahCured is 6;
 	now lastfuck of Sarah is turns;
-	
+
 to say SarahSex4: [tit-fuck]
 	say "     Sliding an arm around the female husky, you pull Sarah closer to you and soon meet her lips with yours. The two of you share an eager kiss, tongues intermingling and breathing the same air while your hands wander over her shapely form, holding and touching the pretty and smart young woman. Eventually pulling back to allow both of you to catch your breaths, you smile at Sarah and then lean in to whisper in her pointy ear that you want to tit-fuck her. Sarah's lips draw into a smile as she hears your words and the anthro husky licks the side of your neck happily before she says, 'Sure - this'll be fun!' Her paw-hand slides into yours and with an eager tug, she pulls you along to her bed. Sitting down on it, the young woman runs both hands up to her chest and kneads the curves of her breasts through the thin fabric of her top - then takes the lower edge of it and pulls the piece of cloth up over her head, dropping it on the bed next to her.";
 	say "     Now completely topless (not having bothered with a bra for her impressively perky boobs), Sarah grins widely as she lets you have your fill of looking at her. She even runs a finger playfully up the side of her body and onto the right breast, circling a nipple slowly. Then she puts on an impish expression and gives her upper body a little shake - making the soft-furred orbs bounce for you. 'You like that?' she asks in a teasing tone - and in reply, you capture the well-sized breasts and hold them both in your hands, squeezing one after the other in appreciation. You bend your head to bring your lips to female husky's nipples, taking one between your lips and sucking on it before switching to the other and just teasing it with the tip of your tongue, circling the hard little nub of her hard nipple.";
@@ -774,7 +774,7 @@ to say SarahSex6: [face fuck]
 	WaitLineBreak;
 	say "     This new bit of great fun with your husky companion makes you all the more glad that you helped Sarah - first rescuing her from her captors, then with the problematic urges she developed. She really is a nice person to be with, both because her friendly personality and of course the sexy fun to be had. As you lean down to help her to her feet-paws again, Sarah caresses you and sighs happily, 'I wouldn't mind doing this sometime again...'";
 	now lastfuck of Sarah is turns;
-	
+
 to say SarahSex7: [suggest pussy grind]
 	say "     Sliding an arm around the female husky, you pull Sarah closer to you and soon meet her lips with yours. The two of you share an eager kiss, tongues intermingling and breathing the same air while your hands wander over her shapely form, holding and touching the pretty and smart young woman. Eventually pulling back to allow both of you to catch your breaths, you smile at Sarah and then lean in to whisper in her pointy ear that you want to grind your pussy against her muzzle. Sarah is somewhat hesitant at first, unsure if she should really just submit and let you satisfy yourself on her - but as you keep whispering suggestive things and slide a hand up to cup her breasts, her tail starts a slow wag and she replies, 'Okay, I'm game. Just... promise me that you'll stop if, if things get too intense for me.' Taking her paw-hand, you kiss it gently and nod to Sarah, then lead your friend over to her bed, gently pushing against her chest to make her sit down.";
 	say "     You stroke a finger along the jawline of Sarah's slender muzzle, pulling her head up a little to look at you, then lean forward and kiss her again. After the quick but still steaming hot peck, you whisper for her to lean forward a bit - which the sexy husky does right away, panting slightly as stroke her body a little. Caressing her cheek, you slip a finger into her muzzle, rubbing it back and forth over the warm and wet surface of her broad tongue while imagining how great it will feel against your sex. Quickly stripping down yourself, you climb on the bed with Sarah, grinning as you see her nostrils widen at the suddenly quite close pussy, taking a good huff of your scent.";
@@ -811,7 +811,7 @@ to say SarahSex9: [ask for sex]
 	WaitLineBreak;
 	say "     'I - I came out behind the divider in a daze after that - and stumbled into the pandemonium that was the emergency check-in right after. Apparently some of the hurt people in the first wave transformed while I was... busy, or already bestial infectees came in after. No matter which - there was a gangbang going on right in front of my eyes! Lots of infected in all sorts of shapes were humping away with our patients, my colleagues, anyone really! I remember a cat-guy with cream-colored fur thrusting into a nurse friend of mine and she actually screamed for him to take her harder. And ran to doctor Miller to get help, but when I touched his shoulder, he... turned around and he had breasts and a pussy, cradling his pregnant belly and talking to it - to his babies. That they would be proud hunters and find their own mates soon after.";
 	say "     Sarah shudders visibly and sobs out, 'After that, I just couldn't... couldn't watch any more of it. I ran. Ran out of the hospital and into the streets. I managed to stay free for a while but eventually... you know where you found me.' Turning to look over to you again, she reaches out and gives your shoulder a squeeze, then tries to calm herself and says in a determined tone of voices, 'I like being with you. And... doing things. But I won't become... that. A fast-cooking incubator for more and more babies of some sort or other. Controlled by hormones that make me love and care for something, no matter what species it is.' A bit disappointed that you couldn't get Sarah to have actual sex with you, but nevertheless replying that you of course understand her reasons, you walk away and leave her alone for now.";
-	if SarahCured < 7: 
+	if SarahCured < 7:
 		now SarahCured is 7;
 
 to say SarahSex10: [let her ride dick (anal)]
@@ -841,7 +841,7 @@ to say SarahSex11: [fuck doggystyle (anal)]
 	say "     'Mmmhhh - so good,' Sarah sighs as she pushes her ass towards you a little more, then brings one paw to her crotch and rubs her clit. Wanting to please your sexy partner some more, you do move your hands to stroke the sides of her chest before reaching around to caress her breasts. 'Thank god for college experimentation, hah. Had this one cute guy in my physiology class who... really liked anal, and he got me to try too. Wanna see what I learned from that?' Sarah says in a playful, almost casual tone - then suddenly flexes her inner muscles, making you groan in pleasure. 'Take me, stud!' Sarah groans out for more.";
 	say "     With the husky literally asking for it, you don't hold back one more second and start to hump your hips forward to meet her buttocks - making both of you groan in arousal as you bottom out in her. What follows is a wild bout of you pounding into Sarah's butt with your erect cock, all the while she has a hand between her thighs rubbing herself. It feels absolutely amazing to have your way with this smart and sexy woman - even more so because she clearly has experience and affinity to anal sex. Sarah's warm and tight hole grips you like a vise as you slide your hard length in and out she never falters in rubbing herself while taking your dick.";
 	WaitLineBreak;
-	say "      Between your sexy and eager partner and the arousing foreplay, it doesn't take all that long before you feel the urge to cum rise inside you, and with a grunt, you tell Sarah just that. She groans lustfully in acknowledgment, then calls out, 'Breed my furry ass, bad boy. I wanna feel it inside me.' Just a few heartbeats later, you can't hold back anymore and erupt into her, painting Sarah's inner walls in creamy cum. Pushed to new heights of arousal by feeling your throbbing member inside her, the husky isn't far behind either and soon, Sarah gasps loudly and starts dripping femcum all over the bedding she is kneeling on.";
+	say "     Between your sexy and eager partner and the arousing foreplay, it doesn't take all that long before you feel the urge to cum rise inside you, and with a grunt, you tell Sarah just that. She groans lustfully in acknowledgment, then calls out, 'Breed my furry ass, bad boy. I wanna feel it inside me.' Just a few heartbeats later, you can't hold back anymore and erupt into her, painting Sarah's inner walls in creamy cum. Pushed to new heights of arousal by feeling your throbbing member inside her, the husky isn't far behind either and soon, Sarah gasps loudly and starts dripping femcum all over the bedding she is kneeling on.";
 	say "     Eventually, when the intense orgasm ebbs off and your cum shots run out, you're left leaning exhausted over Sarah, trying to catch your breath. Sarah meanwhile still has your manhood in her ass, humping back against it and churning up all the cum you've blasted into her. When your dick soon gets rather sensitive for further touching as it starts to soften, you plead with her to let up the grinding - and Sarah finally relents, relaxing her muscles and allowing your manhood to slip out. Sinking down on the bed now that she isn't impaled on cock anymore, she rolls over halfway and looks at you. 'That was an amazing time we just had, sexy! Thank you so much for everything.'";
 	WaitLineBreak;
 	say "     As you lean in over her, the beautiful husky gives you a happy smile, followed by a deep kiss. Tongue-wrestling and making out with Sarah, you have a great time with the anthro husky - though rolling around on a bed with her doesn't exactly allow you the rest you need after the exertion of the orgasm earlier. In the end, the two of you give each other one last peck on the lips, then you doze off pretty much simultaneously.";
@@ -863,12 +863,12 @@ To say SarahPupState:
 	else if sarahpups is greater than 0:
 		say "Sarah is happily playing with your [sarahpups] husky puppies, keeping them happy and occupied while you explore the city, although from the looks the slutty husky is giving you even as she plays with the pups, she is already anticipating the next litter to come...";
 	else if SarahSlut > 0:
-		say "She seems slightly lonely [if otherhuskies is 0]as the only husky around[else if otherhuskies is 1]when her other husky friend isn't around[otherwise]when her other husky friends aren't around[end if], making you want to comfort her.";
+		say "She seems slightly lonely [if otherhuskies is 0]as the only husky around[else if otherhuskies is 1]when her other husky friend isn't around[else]when her other husky friends aren't around[end if], making you want to comfort her.";
 
 An everyturn rule:
 	if Sarah is in the bunker and player is in the bunker and SarahCured is 7:
 		say "     As you wait around in the bunker, ";
-		say "[SarahOffersAnal]";		
+		say "[SarahOffersAnal]";
 	if SarahPregnant is 1:
 		say "     [bold type]You have a strange feeling in your body, as if you somehow just know that more of your offspring have entered this world. Maybe you should go back and check on Sarah in the bunker... and make sure she is filled with your fertile seed again.[roman type]";
 		increase sarahpups by a random number between 1 and 4;
@@ -912,7 +912,7 @@ instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Sa
 instead of going north from Bunker while (Sarah is in Bunker and SarahCured > 3 and SarahShower > 0 and library computer is powered and (lastShowerUse - turns > 4) and a random chance of 1 in 10 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Shower Scene with Sarah - SaraCured: [SarahCured][line break]";
-	say "     As you enter the communal shower-area, you see a small pile of clothing (a pair of jeans, a red shirt and no-frills black panties) and a towel sitting on the bench at the entrance. The spray of water is audible from the actual shower cabin through a  door. Looks like someone is making use of the running water, now that you've turned the power back on...";
+	say "     As you enter the communal shower-area, you see a small pile of clothing (a pair of jeans, a red shirt and no-frills black panties) and a towel sitting on the bench at the entrance. The spray of water is audible from the actual shower cabin through a door. Looks like someone is making use of the running water, now that you've turned the power back on...";
 	say "     [bold type]Do you want to have a look at who it may be?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - A quick glance shouldn't be a problem.";
@@ -939,7 +939,7 @@ instead of navigating Grey Abbey Library while (Sarah is in Bunker and Carl is i
 	say "     Taking Sarah by the arm, you lead her away from the curled-up soldier, quietly giving her a short summary of Carl's story - being a member of the military and then getting betrayed and transformed by his former squad leader, fleeing and finally finding refuge with you. As you explain that he actually holds watch most of the time up by the windows on the upper floor, making sure that no hostile creature can move in on the library without being spotted, your husky companion grimaces in embarrassment at having hurt a good man who is protecting her. 'I'll have to apologize to him once Carl has had some time to... get over the pain,' she says in almost a whisper, then quickly grabs a more or less random book and hurries downstairs. Seems like she wants to make sure she doesn't run into Carl again too soon.";
 	now CarlSarahInteraction is 1;
 	now lastCarlSarahInteraction is turns;
-	
+
 instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 0 and CarlSarahInteraction < 3 and (lastCarlSarahInteraction - turns > 6)):
 	move player to Grey Abbey 2F;
 	if CarlSarahInteraction is 1:
@@ -956,24 +956,24 @@ to say SarahCarlScene1:
 	say "     Straining your ears a bit, you overhear some words that tell you they're talking about his time in the military boot camp and her studies at university. They look pretty content and happy to just talk to another transformed (yet sane) human, so you decide against walking up and joining the conversation. Best to just let them have this peaceful moment...";
 	now CarlSarahInteraction is 2; [talked]
 	now lastCarlSarahInteraction is turns;
-	
+
 to say SarahCarlScene2:
 	say "     As you walk up the stairs to the upper floor of the library, your attention is drawn by a pair of wagging tails over near the street-side windows. Carl and Sarah are sitting at a table of the study area over there and from the looks of it, they're having fun playing poker. The table between them holds the stacks of cards as well as several piles of colorful chocolate-covered nuts. Looks like Carl went out scavenging sometime and found a bag or two of them. Your anthro husky friends are using the candy as play-money now, betting some and from time to time throwing one in their mouths.";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Join them for a round or three.";
 	say "     ([link]N[as]n[end link]) - Let them play their game in peace.";
-	if player consents:	
+	if player consents:
 		say "     Walking up to the two of them, you are readily welcomed by Carl and Sarah and join them at the poker table. The three of you play for a while, having a nice and relaxing time while eating some candy on the side.";
 		increase humanity of player by 10;
 		decrease hunger of player by 5;
 		if hunger of player < 0:
 			now hunger of player is 0;
 	else:
-		say "    Not wanting to disturb their play, you turn your attention to other things. Still, it is good to see that the people you saved are getting along nicely.";
+		say "     Not wanting to disturb their play, you turn your attention to other things. Still, it is good to see that the people you saved are getting along nicely.";
 		increase humanity of player by 5;
 	now CarlSarahInteraction is 3; [played poker]
 	now lastCarlSarahInteraction is turns;
-	
+
 instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex is 0 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6)):
 	move player to Grey Abbey 2F;
 	if debugactive is 1:
@@ -1015,11 +1015,11 @@ instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl i
 		say "     Sarah lets out a shocked breath and puts a hand in front of her muzzle, then says, 'Oh god! I never even thought of that?! The poor guy, it must be so hard on him to... sniff my scent all the time. And yet, he's been just a normal friend - no, a good friend! Pushing aside urges just like the ones I had isn't an easy matter. I - I'm a bit ashamed at thinking I'm the only one with problems and seeing him as someone to just get my rocks off. And his, of course, but... yeah.' Her tail droops a bit and Sarah mulls over the situation with Carl, nodding to you in thanks. 'I'll have to make sure I don't overtax his self-control then. Carl is a really nice guy to hang out with and I don't want to break him accidentally.'";
 		now CarlSarahSex is 100; [no sex between Carl and Sarah]
 	now lastCarlSarahInteraction is turns;
-		
+
 instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex is 1 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6)):
 	move player to Grey Abbey 2F;
 	say "[SarahCarlOral2F]";
-	
+
 to say SarahCarlOral2F:
 	if debugactive is 1:
 		say "     DEBUG -> SARAH + CARL ORAL - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
@@ -1051,7 +1051,7 @@ instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl i
 	move player to Grey Abbey 2F;
 	if CarlSarahSex is 2:
 		say "[SarahCarlOral2F]";
-		
+
 instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Coleen is in Bunker and ColeenSarahInteraction < 2 and SarahCured > 1 and (lastColeenSarahInteraction - turns > 6)):
 	move player to Bunker;
 	if ColeenSarahInteraction is 0:
@@ -1062,17 +1062,17 @@ instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Co
 		if debugactive is 1:
 			say "     DEBUG -> COLEEN & SARAH SPEND TIME TOGETHER 2 - ColeenSarahInteraction: [ColeenSarahInteraction] <- DEBUG[line break]";
 		say "[SarahColeenScene2]";
-	
+
 to say SarahColeenScene1:
 	say "     As you enter the bunker, you see Sarah sitting cross-legged on her bed, with Coleen one row over on another. The two women smile and laugh as they chat with one another. Looks like the female soldier opened up a bit to her fellow bunker-dweller, now that Sarah has her sexual urges under control. Still, it is clear that she does keep her distance from the anthro husky - not wanting to risk infection even though she's become friends with the other woman.";
 	now ColeenSarahInteraction is 1;
-	now lastColeenSarahInteraction is turns;	
+	now lastColeenSarahInteraction is turns;
 
 to say SarahColeenScene2:
 	say "     As you enter the bunker, you see Sarah sitting cross-legged on her bed, with Coleen one row over on another. The two women each have an open MRE on their laps, sharing a meal and chatting with one another. Looks like the female soldier opened up a bit to her fellow bunker-dweller, now that Sarah has her sexual urges under control. Still, it is clear that she does keep her distance from the anthro husky - not wanting to risk infection even though she's become friends with the other woman.";
 	now ColeenSarahInteraction is 2;
-	now lastColeenSarahInteraction is turns;	
-	
+	now lastColeenSarahInteraction is turns;
+
 instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Alexandra is in library and AlexandraSarahInteraction is 0 and SarahCured > 1): [initial Alexandra / Sarah meet]
 	move player to Bunker;
 	if debugactive is 1:
@@ -1082,15 +1082,15 @@ instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Al
 	WaitLineBreak;
 	say "     In a move that speaks of her having taken some self-defense classes in the past, Sarah suddenly gives a sideways shove to the doberwoman's elbow and ducks under Alexandra's followup grab, bringing at least a little distance between them. The medical student raises her paw-hands in a passable fighting pose, although the tremble in her voice as she speaks makes it clear that Sarah is far from used to physical confrontations. 'I don't know what you're on about, lady! We're not animals, fighting for dominance, and I'm in no pack! Least of all with a crazy bitch like you!'";
 	if SarahCured > 4: [Sarah had sex with the player]
-		say "     Alexandra lets out a mocking bark and replies, 'I can smell the boss all over you, whore! But maybe you're right - [if player is female]she[otherwise]he[end if] might just have brought you in as a stray to fuck around for a bit and discard. Fine, you're not in the pack then, and with that attitude I'd only let you join and become even omega if you begged and lapped my pussy!' ";
+		say "     Alexandra lets out a mocking bark and replies, 'I can smell the boss all over you, whore! But maybe you're right - [if player is female]she[else]he[end if] might just have brought you in as a stray to fuck around for a bit and discard. Fine, you're not in the pack then, and with that attitude I'd only let you join and become even omega if you begged and lapped my pussy!' ";
 	else: [no sex with the player]
-		say "     Alexandra lets out a mocking bark and replies, 'Yeah right! Tell me another one, husky slut! I know what type of needy bitches your kind are. But maybe you're right - [if player is female]she[otherwise]he[end if] might just have brought you in as a stray to fuck around for a bit and discard - if not now, then soon. Fine, you're not in the pack then, and with that attitude I'd only let you join and become even omega if you begged and lapped my pussy!' ";
+		say "     Alexandra lets out a mocking bark and replies, 'Yeah right! Tell me another one, husky slut! I know what type of needy bitches your kind are. But maybe you're right - [if player is female]she[else]he[end if] might just have brought you in as a stray to fuck around for a bit and discard - if not now, then soon. Fine, you're not in the pack then, and with that attitude I'd only let you join and become even omega if you begged and lapped my pussy!' ";
 	say "Despite her words, Alexandra still seems ready to lay into Sarah at a moment's notice. The two female canines stand facing each other with growls vibrating in their throats - right until you put two fingers in your mouth and give a sharp whistle, drawing all attention to you.";
 	WaitLineBreak;
 	say "     'Oh, hey boss,' Alexandra calls out, her tail giving a little wag as she looks over to you. 'Just about done telling this slut what's what. Did you come down to pound her like the whore she is? I'll leave you to it then.' With that said, the doberwoman strolls up to you and leans in to lap your cheek in a show of devotion, then goes upstairs again. Sarah watches her leave and blows out her breath as the door closes behind Alexandra. 'Good god, that was intense. These damn nanites sure can mess with people. She's really internalized the whole dog thing - pack behaviour and all. I - um, guess I should have tried more to de-escalate, but something about her behaviour really raised my hackles...'";
 	say "     'So - you're Alexandra's... boss?' the young husky woman asks you, still rather disturbed about the confrontation. Clearing your throat, you do explain how you took in Alexandra after she succumbed to her infection (wisely leaving out that you were the one who pushed her that far). She pretty much declared herself the top bitch of your pack after that. Nodding thoughtfully, Sarah says, 'I'll do my best to keep my distance and not to trigger her. Thank god that you helped me before I was as far gone as that!' After giving you a hug, the young woman walks over to her bed and pulls out a notebook, adding more observations to her ongoing report about what the nanite infection can do.";
 	now AlexandraSarahInteraction is 1;
-		
+
 instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and hp of Eric < 90 and EricSarahInteraction < 3 and SarahCured > 1 and (lastEricSarahInteraction - turns > 6)):
 	move player to Bunker;
 	if EricSarahInteraction is 0:
@@ -1105,7 +1105,7 @@ instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Er
 		if debugactive is 1:
 			say "     DEBUG -> Eric & SARAH SPEND TIME TOGETHER 3 - EricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
 		say "[SarahEricScene3]";
-		
+
 to say SarahEricScene1:
 	say "     As you enter the bunker, you see Eric sitting cross-legged on his bed, totally focused on a book on his lap - so much so that he doesn't even look up as you come in. And neither does he notice Sarah, who walks up to him on her slender paws moments later. Her tail gives a slow and friendly beat as she clears her throat and says, 'Hello there. Nice to meet another human down here... err, you know what I mean.' After the last words, she raises her paw-hand and looks down at it thoughtfully, almost as if she had forgotten that she can't quite count herself as human anymore. Dropping a bookmark between the pages and setting his novel aside, Eric rises from the bed with the grace of a natural gymnast and steps right up to Sarah, taking her paw to shake it in greeting.";
 	say "     'Hey, I'm Eric,' the college athlete greets Sarah with a shy smile. She is momentarily baffled at the nonchalant greeting and the fact that he didn't hesitate one moment to touch her. 'I - I'm Sarah. Aren't you concerned about... catching something? Fur, for example.' Eric shakes his head slowly and replies, 'I don't think that'll be a problem. This... thing that is going on doesn't seem to affect me. That much.' He pauses at that and blushes a little bit, then quickly adds, 'And I'm really happy that you seem like a normal person. Not trying to tear someone's clothes off and mount them, like some of my former classmates at college.'";
@@ -1130,18 +1130,18 @@ to say SarahEricScene3:
 		now hunger of player is 0;
 	now EricSarahInteraction is 3;
 	now lastEricSarahInteraction is turns;
-	
+
 instead of navigating Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction is 0 and hp of Eric > 9 and hp of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if cboyEricSarahInteraction is 0:
 		if debugactive is 1:
-			say "     DEBUG -> SARAH & ERIC TALK ABOUT TRANS THINGS 1 - EricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";	
+			say "     DEBUG -> SARAH & ERIC TALK ABOUT TRANS THINGS 1 - EricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
 		say "[SarahCboyEricScene0]";
 	else: [option for situation more events between them in the library]
 		say ""; [currently not used]
-		
+
 to say SarahCboyEricScene0:
 	say "     Coming into the library after braving the dangerous streets outside, you take a moment to catch your breath and calm down. The quiet and peaceful surroundings of this former abbey do tempt you to take a stroll between the shelves, letting your gaze wander over the books as you go along. One or another title tickles your interest, but not enough to actually pull the book from its place. Then suddenly, you hear voices - there is someone behind the shelf on your left. Leaning forward a little, you glance through the small gap above the books and see that Sarah and Eric had a similar idea to your own, strolling along between the bookshelves and talking about things to read.";
 	say "     You go keep walking, quietly moving along on the other side of the bookshelf and listen to the two of them chatting in a friendly tone. Seems like they have gotten fairly comfortable with one another - both relieved to have someone to keep them company down in the bunker. But then, as they're about to reach the end of the row, Sarah pulls Eric aside a little, putting a paw on his arm, 'Listen, I wanted to ask you about... um. How long have you known that you were - you know, trans? I hope I'm not going too far in asking this... seeing how you dress, it's obvious that you don't want to appear... girly. And you have the whole act down really well.'";
@@ -1153,7 +1153,7 @@ to say SarahCboyEricScene0:
 	say "     This earns Eric a friendly lick from the anthro husky, with her leaning in to hold him tight. 'It'll be alright, Eric. You might just be the saviour of all of us in this city.' Sarah holds on to her friend and keeps talking to him in a soft tone, quelling his fears and doubts about himself. After a minute or two, you decide that it'd be best not to disturb such an intimate conversation - or indeed let them know that you listened in until now - and quietly turn around, walking away without being seen by either of the two.";
 	now cboyEricSarahInteraction is 1; [Sarah knows about Eric and has talked with him about it]
 	now lastEricSarahInteraction is turns;
-	
+
 instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction > 0 and cboyEricSarahInteraction < 2 and hp of Eric > 9 and hp of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)):
 	move player to Bunker;
 	if cboyEricSarahInteraction is 1:
@@ -1168,7 +1168,7 @@ instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Er
 		if debugactive is 1:
 			say "     DEBUG -> Trans Eric & SARAH SPEND TIME TOGETHER 3 - cboyEricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
 		say "[SarahCboyEricScene3]";
-		
+
 to say SarahCboyEricScene1:
 	say "     Coming into the bunker, you see Sarah and Eric hanging out together. They are sitting cross-legged on Eric's bed, with her talking about what she thinks is going on with the nanites. As she lays out theory after theory, Eric nods wide-eyed, clearly impressed by her medical knowledge and ideas. She spins a tale about some diseases and plagues being cured, hinting that there might be a similar way possible for the nanites, then ends on, '...and in most of those cases, finding someone who was infected but immune really brought research forward a lot.' As she says this and looks him into the eye, Eric blushes a little and starts to turn away his head - only to have her gently stroke his cheek and pull him back to looking right at her. 'There really is no need to be ashamed about what you are, Eric. We're friends and you trust me, right?'";
 	say "     The slender trans athlete lets out an indrawn breath, then bites his lips silently before finally giving a shy nod. 'Come on, let me examine you then. Any little detail I can gather could be the key to solving this thing.' Eric gulps at her request and seems on the verge of pushing himself back on the bed, but Sarah keeps a gentle hand on his arm and speaks quietly to him some more. You recognize that the determined young woman will convince Eric to play along - sooner rather than later - which means that you should decide quickly what you want to do while they're still distracted.";
@@ -1208,10 +1208,10 @@ Idea: Make Sarah ask Eric if she can... study him a bit. A little sexy examinati
 
 Idea: Interaction with Alexandra and/or Korvin - the bad girl/boy dogs
 One of them could be all "Yo bitch!" to Sarah, with her getting miffed at Alexandra or being all "What do you want asshole? Can't be anything with sex - in my experience losers with big mouths have the smallest dicks. Or do you need help opening a can of dog food that you're too stupid to get the hang of?"
-]	
+]
 
 
-	
+
 instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is in Grey Abbey Library and FangSarahInteraction is 0 and SarahCured > 3):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
@@ -1238,7 +1238,7 @@ instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is i
 		say "     The stalemate continues for a few moments longer, then eventually Fang gives a frustrated growl and starts to back away a little from Sarah. 'That's right. Go away you furry bastard!' Sarah snarls at him, in reply to which Fang makes a beeline to the spot the young woman was originally browsing books at - to raise his leg and pee all over the lowest two shelves of medical books. After doing his business, he gives a last aggressive growl, then trots away.";
 	now FangSarahInteraction is 1;
 	now lastFangSarahInteraction is turns;
-	
+
 instead of going inside from Grey Abbey Library while (Sarah is in Bunker and David is in Bunker and DavidSarahInteraction < 1 and SarahCured > 1 and (lastDavidSarahInteraction - turns > 6)):
 	move player to Bunker;
 	if DavidSarahInteraction is 0:
@@ -1253,20 +1253,20 @@ instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Da
 		if debugactive is 1:
 			say "     DEBUG -> David & SARAH SPEND TIME TOGETHER 3 - DavidSarahInteraction: [DavidSarahInteraction] <- DEBUG[line break]";
 		say "[SarahDavidScene3]";
-	
+
 to say SarahDavidScene1:
 	say "     As you walk down the stairwell into the bunker, you come upon an interesting scene. Sarah is sitting cross-legged on her bed, reading a book, as the human soldier David walks up to her with a friendly smile on his face. Holding out a hand to her, he says, 'Hey there ma'am. Since I guess we're in the same boat - holed up down here and all that - I wanted to say introduce myself. David Jackson, private first class, US army.' Looking up from her book, Sarah gives him a smile in return and her tail starts wagging. She is already halfway to taking his hand before she suddenly hesitates, pulling her hand-paw back a little. 'Um... are you sure you want to do that? I mean - you're still human and I'm... a dog. Aren't you worried it'll rub off on you? These nanites are pretty easy to transmit from what I've seen.'";
 	say "     David gives a little shrug, then enthusiastically slides her hand into his and shakes Sarah's furred appendage. 'Well, it's only polite to treat you like any other person. My grandma always said you should be friendly when meeting someone - no matter what they look like. Of course she only meant our Latino neighbours, but I think one can apply that to anyone. As for the other thing... haven't had any problems so far, and I've been here a while. Guess eating all your greens does pay off in the end, eh?' The canine medical student is almost blown away by her new friend's very open demeanour, and soon they're sitting side by side on her bed together, happily chatting with one another.";
 	now DavidSarahInteraction is 1;
 	now lastDavidSarahInteraction is turns;
-	
+
 to say SarahDavidScene2:
 	say "     Coming down the stairs to the bunker, you pull open the door leading into its main chamber... and see David sprint past the opening all of a sudden. Stepping into the room, you look after him with a curious expression. Looks like the man has decided to jog a bit, down here in the bunker. The athletic soldier soon reaches the end of the room, slaps the wall lightly and turns around, then sprints back towards you. You hear a friendly, 'Hey there,' as he passes you without stopping, going on with his run till he arrives next to Sarah. The young husky female stands waiting for him, a stopwatch in hand and with a stethoscope around her neck. As you watch, she writes down David's time on a small notepad, then puts her hand on his neck to feel his pulse.";
 	say "     Casually strolling over to the two of them, you ask what's going on, and the somewhat sweaty soldier replies, 'Oh, I'm just helping the doc here with her project.' Sarah's tail wags happily as she hears him say that, but she does raise a finger to clarify, 'I'm not a doctor yet - but I'm getting there, especially if I can figure out why David here has such a high resistance to the nanite infection. Other people seem to transform with the slightest touch, but he's... well, human through and through. And that is after being out on the streets for days and weeks.' She gives her soldier friend a smile and pats his arm - and you notice her hand lingering just a little bit long there, feeling and squeezing his firm bicep.";
 	WaitLineBreak;
 	say "     'So - er... while I don't have all the equipment that I'd like to, I can check our soldier boy out the traditional way. Gathering information about his vitals and all that. From what I can tell so far, he's healthy as a horse.' David stands up a bit straighter and runs a hand through his hair, then says with a chuckle, 'Too bad I'm not hung like one. Wouldn't that be a sight, eh.' The three of you chuckle at his joke, then Sarah turns back to examining him - listening to his heartbeat and breathing, then making David flex and stretch while taking notes. After a little while, you walk away from them again, leaving the two to their research project.";
 	now DavidSarahInteraction is 2;
-	now lastDavidSarahInteraction is turns;	
+	now lastDavidSarahInteraction is turns;
 
 to say SarahDavidScene3:
 	say "     Coming down the stairs to the bunker, you spot David and Sarah standing a bit off to the side, in a far corner of the room - with the soldier just in his underwear and standing at attention as Sarah examines him. She strokes gently over the claw-marks marring the left side of his chest and left thigh, her tail stiff in attention. 'How long ago did you say you got wounded here?' the medical student says, puzzlement audible in her voice. David replies and gives a short accounting of the events in the bar, with the captured demon breaking free and then you coming in and saving his ass. Eyebrows raised, Sarah looks at him as if she expects him to correct himself, then glances down at the scars again, tracing them with the tip of a finger.";

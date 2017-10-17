@@ -10,7 +10,7 @@ Northwest of Park Trail is Shinto Shrine.
 
 instead of sniffing Shinto Shrine:
 	say "The shrine smells faintly of cherry blossoms and spring. The scent puts you at ease.";
-	
+
 The invent of Shinto Shrine is { "tanuki coin" }.
 
 SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
@@ -201,10 +201,10 @@ When Play begins:
 	now name entry is "Tanuki"; [Name of your new Monster]
 	now attack entry is "";
 	now defeated entry is "";
-	now victory entry is  "";
+	now victory entry is "";
 	now desc entry is "";[ Description of the creature when you encounter it.]
-	now face entry is "sleek muzzled with a raccoon's mask and large expressive ears over your";[ Face description, format as the text "Your face is (your text)"]
-	now body entry is "somewhat pudgy and oddly animal like, like a cartoon rendition of some kind of raccoon perhaps.";[ Body Description, format as the text "Your Body is (your text)"]
+	now face entry is "sleek muzzled with a raccoon's mask and set of large expressive ears";[ Face description, format as the text "Your face is (your text)"]
+	now body entry is "somewhat pudgy and oddly animal-like, like a cartoon rendition of some kind of raccoon perhaps.";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]tanuki coloured[or]stripe furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "A thick and rounded tail sways behind you with black stripes along its length, covered in [skin of player] texture.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheathed[or]size changing[or]knotted[at random]";[- Cock Description, format as you have a "size" (your text) cock-]
@@ -231,15 +231,15 @@ When Play begins:
 	now breast size entry is 3; [-Size of breasts infection will try to attain -]
 	now male breast size entry is 0; [- Breast size for if Sex="Male", usually zero. -]
 	now cunts entry is 1; [- if sex = "Female or both", indicates the number of female sexes infection will grant you.-]
-	now cunt length entry is 14; [- Length of female sex  infection will attempt to give you. -]
-	now cunt width entry is 5; [- Width of female sex  infection will try and give you -]
+	now cunt length entry is 14; [- Length of female sex infection will attempt to give you. -]
+	now cunt width entry is 5; [- Width of female sex infection will try and give you -]
 	now libido entry is 10; [- Amount player Libido will go up if defeated -]
 	now loot entry is ""; [- Loot monster drops, -]
 	now lootchance entry is 0; [- Chance of loot dropping 0-100 -]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]chubby[or]fat[at random]";
 	now type entry is "[one of]raccoon[or]tanuki[at random]";
-	now magic entry is true; 
+	now magic entry is true;
 	now resbypass entry is true; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
@@ -260,7 +260,7 @@ name	desc	weight	object
 
 to say tancoindesc:
 	say "     A strange, solid gold coin. It's fairly heavy and quite worn. On one side there appears to be a leaf, while on the other an eastern dragon, which circles around the outer edge of its face, with its tail curving at the bottem to go straight up and occupy the center. It's warm to the touch, but doesn't feel particularly infectious.";
-	
+
 the scent of tanuki coin is "It has a benign, metallic smell about it.";
 
 tanuki coin is a grab object. It is part of the player. It is fast.  It is not temporary.  The usedesc of tanuki coin is "[usetancoin]".

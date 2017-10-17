@@ -10,21 +10,21 @@ lastMallInteriorScene is a number that varies. lastMallInteriorScene is usually 
 FullLitterVar is a number that varies.
 BullTerrierSiblingsVar is a number that varies.
 
-instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 4 and FullLitterVar is 0 and a random chance of 1 in 3 succeeds): 
+instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 4 and FullLitterVar is 0 and a random chance of 1 in 3 succeeds):
 	move player to Mall Atrium;
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event around the mall - Misc atmosphere setting[line break]";
 	say "     As you move through the food court into the atrium, you pass by a rare sight - a fully human woman. She is wearing a thin white top and a long, red skirt that ends just below her knees. She is conversing with another woman, a canine with bushy looking tan fur and small pointed ears. The human woman is cradling her swollen chest. 'Oh my gosh, Linda, you're pregnant! I'm so happy for you!' the canine cheers, embracing the human in a hug. 'Thank you so much, I'm so happy my husband and I finally did it!' Linda replies, looking softly at her bulging stomach. 'So, what are you carrying in there?' the canine asks, giving a soft poke at the woman's stomach. Linda looks up excitedly, replying 'A full litter of puppies! We're so happy to have this many kids!' The two happily embrace again, as your path leads you past them and you soon leave them behind you. It seems like even a species difference won't stop a mother from loving her children, and the thought brings a warm smile to your face.";
 	now FullLitterVar is 1; [did the event once]
 	now lastMallInteriorScene is turns;
-	
-instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 4 and gshep is companion of player and gsd_pet >= 60 and BullTerrierSiblingsVar is 0 and a random chance of 1 in 3 succeeds): 
+
+instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 4 and gshep is companion of player and gsd_pet >= 60 and BullTerrierSiblingsVar is 0 and a random chance of 1 in 3 succeeds):
 	move player to Mall Atrium;
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event - Korvin sniffs out a fertile bull terrier - BullTerrierSiblingsVar: [BullTerrierSiblingsVar][line break]";
-	say "     As you walk through the the food court into the atrium, passing through the moderately thick crowd of people in the main mall thoroughfare, you suddenly feel a pat on your upper arm - it's Korvin, your German Shepherd attack dog, wanting to catch your attention. 'Hey boss,' he says to you in a conversationalist tone, though only giving a short glance to your face before he sets his gaze back on something apparently quite interesting for him. 'See that one? White fur, a bit short but nicely muscled? She's one ripe bitch. I can smell her heat from here...' Following his gaze, you see a female bull terrier strolling through the crowd somewhere ahead of you, her white fur typical of the dog breed.";
+	say "     As you walk through the food court into the atrium, passing through the moderately thick crowd of people in the main mall thoroughfare, you suddenly feel a pat on your upper arm - it's Korvin, your German Shepherd attack dog, wanting to catch your attention. 'Hey boss,' he says to you in a conversationalist tone, though only giving a short glance to your face before he sets his gaze back on something apparently quite interesting for him. 'See that one? White fur, a bit short but nicely muscled? She's one ripe bitch. I can smell her heat from here...' Following his gaze, you see a female bull terrier strolling through the crowd somewhere ahead of you, her white fur typical of the dog breed.";
 	say "     Indeed, the young woman is a bit on the short side, though she seems to make that up by being well-muscled. You can't see that much of her due to the distance and people in the way, but she seems like an attractive bitch, wearing a shiny silver chain collar and a number of piercings. Giving you a sidelong grin, Korvin adds, 'This is the best time to take on tough bitches like her. If they're in heat, a gal that'd have head-butted you in a second otherwise will be ready to spread her legs easy. Come on boss, let's go after her!'";
-	say "     [bold type]Do you indulge Korvin's impulses and let him stalk the bull terrier bitch?[roman type][line break]";	
+	say "     [bold type]Do you indulge Korvin's impulses and let him stalk the bull terrier bitch?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yeah, why not. Might be fun to see him try to talk his way into her pants...";
 	say "     ([link]N[as]n[end link]) - Nope! You tamed Korvin from being a wild dog, attacking people in the streets. He doesn't need the temptation.";
@@ -35,7 +35,7 @@ instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns 
 		WaitLineBreak;
 		say "     It only takes a single look from Korvin at the hulkingly big dog to abort his mission, doing his best to act casually as he walks right past the bitch and keeps going, then circles back around to join you again while the two white dogs hug and start talk to one another. You're too far away to make out any words, given the typical noise level with the people in the mall - so you concentrate on taking in the big dog in a bit more detail. Quite tall, and muscular to match that, with a tight black muscle shirt showing off his chest exceedingly well. The only other article of clothing on him is a broad leather collar with some buckles on it. He actually is bottomless and clearly unconcerned about nakedness even in this crowd, allowing you a nice view of firm buttocks and a slim tail that wags happily.";
 		say "     'Damn,' Korvin murmurs as he steps up next to you, staring daggers at the large dog's back. 'So close to find out that she's gonna be claimed by that mountain of a guy.' Looking at him with raised eyebrows, your attack dog laughs at the expression of surprise you're wearing. 'What, did you think that her being his sister would stop him? Told ya, she's ripe as fuck. Ah, and you didn't see him from the front, did ya?' Nodding down to his crotch, Korvin wraps a hand around the base of his sheath, out of which the tip of his canine shaft is poking. 'He was half hard when he walked up to the bitch, more than I am right now. I tell you, won't take long til... ah, there they go.' Following the pointing finger of Korvin, you see the canine woman leading her brother into the store, drawing him after her with one paw-hand holding his massively larger one. You can clearly see his raging hard-on before the large canine vanishes through the glass door.";
-		say "     [bold type]Do you want to walk closer and watch?[roman type][line break]";	
+		say "     [bold type]Do you want to walk closer and watch?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Anthro dogs humping in heat? Sure!";
 		say "     ([link]N[as]n[end link]) - Nah, pass.";
@@ -100,7 +100,7 @@ The conversation of Zoe is { "Mew!" }.
 
 to say ZoeDesc:
 	say "     <WIP: Bunny Spray-Painter>";
-	
+
 [ ByronRelationship (male mall rat with skinny jeans a hoodie)       ]
 [  0: not known                                                      ]
 [  1: player has seen him and can recognize the rat                  ]
@@ -112,7 +112,7 @@ to say ZoeDesc:
 [  1: player has seen him and can recognize the bison                ]
 [  2: player has seen him and knows his name                         ]
 [  3: Amir has talked with the player and knows him in turn          ]
-	
+
 lastABEncounter is a number that varies. lastABEncounter is usually 10000.
 AmirRelationship is a number that varies.
 ByronRelationship is a number that varies.
@@ -125,7 +125,7 @@ instead of going north from Smith Haven Mall Lot South while (findwires is 2 and
 	say "     As you walk past some of the counters of all sorts of fast food franchises under new ratty management, you overhear an argument starting. 'What? But you have a whole lot more food and gave him something for free!' a burly anthro bison scoffs at the mall-rat in one of the stores. The rodent teen steps back a little and raises his hands in a consoling gesture, but still goes on to say, 'I'm sorry dude, but we only got so much, you know, and there isn't too much new stuff coming in these days. The stores are for residents only... but hey, you can always trade something. Fast food for every single damn meal does get boring quickly, so lots of people will switch with you if you got fruit, or some of the otherworldly and alien things that have appeared out there. If you find some of those purple bananas for example, you'll make lots of friends here.'";
 	WaitLineBreak;
 	say "     The bison looks hungrily at the food being prepared, running a hand through his hair and the thick mane spilling down onto his shoulders. '...shit. Lost my pack to a bunch of creeps downtown, so... I don't have anything to trade,' he murmurs mostly to himself, then looks up at the food clerk again, getting an apologetic shake of the head. Then suddenly, a slender mall-rat in skinny jeans with a black hoodie that had been waiting in line steps up and says, 'Sure you got something. You can have the hot-dogs I was gonna order for some of that fresh bison milk.' Turning around fully, the bison looks at the rat that spoke with a puzzled expression. 'Err... I'm a man, you know...' With a chuckle, the rodent pushes his hood off, revealing a broadly smiling face framed in platinum blond hair. 'I'm counting on it,' he goes on to say and reaches out to rub the larger man's crotch. 'Oh. Ooh!' the bison replies, looking at the slender teen with a surprised expression and accepting being touched.";
-	say "     [bold type]Do you want to stick around close to them and see how this works out?[roman type][line break]";	
+	say "     [bold type]Do you want to stick around close to them and see how this works out?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, they seem an interesting couple of guys.";
 	say "     ([link]N[as]n[end link]) - Nah, you got better things to do.";
@@ -143,7 +143,7 @@ instead of going north from Smith Haven Mall Lot South while (findwires is 2 and
 			now ByronRelationship is 2; [player knows his name]
 		if AmirRelationship < 2:
 			now AmirRelationship is 2; [player knows his name]
-	otherwise:
+	else:
 		LineBreak;
 		say "     With a shrug, you turn your back on the scene and walk a little further into the food-court.";
 		if ByronRelationship < 1:
@@ -158,7 +158,7 @@ instead of going north from Smith Haven Mall Lot South while (findwires is 2 and
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the food court - Amir and Byron (Bison and Mall-Rat) - lastABEncounter: [lastABEncounter], ByronRelationship: [ByronRelationship], AmirRelationship: [AmirRelationship][line break]";
 	say "     Passing a couple of keenly watching wolverines, you enter the mall - a place that has been drawing increasingly large crowds since you repaired the power plant, attracting people with its promise of security and refuge. Especially at night, the shining beacon of an illuminated building draws survivors from far and wide - as well as ferals of course, but that's what mall security is for. The food court is being used by many to hang out and get a bite to eat, be it some of the food stores of the mall itself or stuff brought in from outside. You see all sorts of stuff being handled or chewed on - from head-sized cherries and strips of roasted mystery meat to regular fries and cooked rice.";
-	say "     As you walk along over the marble floor-tiles, you notice a person a few steps ahead that you recognize. [if AmirRelationship is 1]It's that bison guy you saw a little while ago, who wanted to get some food from one of the stores and got rejected - only to get an amorous trade offer from a mall rat right after that[otherwise if AmirRelationship is 2]It's Amir, the bison guy you saw a little while ago, when he accepted the trade of getting a blow-job from a mall-rat for a meal out of the teenage rodent's food ration. You remember how unsure the big guy was about letting another man go down on him, although at least some of that feeling got blown away by the time he came in big splurts onto Byron's tongue[end if].";
+	say "     As you walk along over the marble floor-tiles, you notice a person a few steps ahead that you recognize. [if AmirRelationship is 1]It's that bison guy you saw a little while ago, who wanted to get some food from one of the stores and got rejected - only to get an amorous trade offer from a mall rat right after that[else if AmirRelationship is 2]It's Amir, the bison guy you saw a little while ago, when he accepted the trade of getting a blow-job from a mall-rat for a meal out of the teenage rodent's food ration. You remember how unsure the big guy was about letting another man go down on him, although at least some of that feeling got blown away by the time he came in big splurts onto Byron's tongue[end if].";
 	say "     [bold type]Do you want to hang around near them and listen in a bit how this second meeting turns out?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, they seem an interesting couple of guys.";
@@ -170,10 +170,10 @@ instead of going north from Smith Haven Mall Lot South while (findwires is 2 and
 			now ByronRelationship is 1;
 		if AmirRelationship is 0:
 			now AmirRelationship is 1;
-	otherwise:
+	else:
 		LineBreak;
 		say "     With a shrug, you turn your back on the scene and walk a little further into the food-court.";
 	now lastABEncounter is turns;
-]	
+]
 
 Mall Expansion ends here.

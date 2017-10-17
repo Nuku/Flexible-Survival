@@ -3,7 +3,7 @@ Version 1 of Corota for FS by Stripes begins here.
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 
 "Adds Corota to Flexible Survival."
- 
+
 Section 1 - Monster Responses
 
 [ Use 'to say xxxxx' for overlong text boxes or complex situations, using '[xxxxx]' (in square brackets) within a say statement to execute them. Typically, these are needed if there are a lot of cock/species/cunt checks. ]
@@ -60,17 +60,17 @@ to say beatthecorota:
 
 
 Section 2 - Monster Insertion
- 
+
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
- 
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Corota"; [Name of your new Monster]
 	now attack entry is "[one of]The corota[or]She[or]The serpent-hybrid[or]The bifurcated creature[as decreasingly likely outcomes] [one of]sweeps your feet out from under your with a pass of its powerful tails[or]bashes its thick tails against you[or]moves its head in to bite, splitting them at the last moment to avoid your block and bite you from two sides[or]sinks its fangs into your side[or]slashes at you with its claws, rending at your flesh[at random]";
 	now defeated entry is "[beatthecorota]";
-	now victory entry is  "[losetocorota]";
+	now victory entry is "[losetocorota]";
 	now desc entry is "[corotadesc]";
 	now face entry is "snake-like, set above a long neck. Two [one of]large[or]vicious[or]curved[at random] horns jut through your brow, while your fangs are longer than expected for a snake your size. Most notable is your ability to split your head down its center, forming two crude but functioning half heads each with their own neck half. It is most disconcerting that doing so does not feel strange to you at all";
 	now body entry is "lean and flexible, but overall human in form. Two large, leathery wings spread from your back with golden brown dust hazing around them. Your arms are human in shape, but you are gifted with two too many. Your legs are leonine, intimidating in shape and ending in clawed paws";
@@ -95,7 +95,7 @@ When Play begins:
 	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 2; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2; [ Number of Breasts infection will give you. ]
 	now breast size entry is 2; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]

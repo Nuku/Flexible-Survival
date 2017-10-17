@@ -45,10 +45,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Palomino"; 
-	now attack entry is "[one of]She riddles you this and that till you cry.[at random]"; 
-	now defeated entry is "[Palominoloses]"; 
-	now victory entry is "[Palominowins]"; 
+	now name entry is "Palomino";
+	now attack entry is "[one of]She riddles you this and that till you cry.[at random]";
+	now defeated entry is "[Palominoloses]";
+	now victory entry is "[Palominowins]";
 	now desc entry is "The Palomino is watching you!!";[ Description of the creature when you encounter it.]
 	now face entry is "that is a mixture of human and equine features, with a short palomino-like muzzle and dark equine eyes. Your features are only accentuated by the multiple earrings hanging from your new, more equine ears and the long, dark black mane which hangs down the side of your face. The lovely spiked collar Tristian gave you finishes the new look of your face"; [You have a (your text) face."]
 	now body entry is "that of a humanoid horse, thick and rather muscular. Your hands and feet have slightly hoof-like fingernails. You are wearing the outfit that your fellow horse goth picked out for you, your strong torso covered in a tight, long-sleeved fishnet shirt, the fishnet pattern tracing down your well-muscled arms to your spiked cuffs. Your thick, black leather pants only serve to accentuate your well-defined lower body, and your slightly hoof-like feet rest easily in the modified black leather boots Tristian had made for you";
@@ -57,8 +57,8 @@ When Play begins:
 	now cock entry is "[one of]stallion[or]equine[or]flared[at random]";
 	now face change entry is "you wake up from your long night with the stallion. You yawn and stretch, only to find your mouth opening wider than ever before and a strange loud jingling noise in your ears. Blinking, you reach up to find that your face seems to have changed at some point during the night. As you blink your new equine eyes, you trace your fingers over your new equine snout, and then reach up to tug on your larger equine ears. As your ear jingles again, you realize that at some point while you were resting your partner took time to attach several ear rings to your new ears. The thought makes you smile as you look around, for him, only to spot a spiked leather collar he obviously left out for you. Your new muzzle pulls back into a larger grin as you slip the collar on and get ready to face the day"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you wake up from your long night with the stallion. You notice your body has changed at some point to be more like his, and you take in your new more equine form in amazement, wiggling your new feet and enjoying its well-shaped form. Looking around, you note that he has laid out a nice new outfit to go with your new body. As you look over the items he left, you find yourself smiling at the fishnet shirt and black leather pants he left you, as well as the proper spiked cuffs and specially modified boots for your new feet"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "you wake up from your long night with the stallion, and you go to scratch it, only to find it seems to be covered in soft, palomino patterned fur, just like your lover's"; 
-	now ass change entry is "you wake up, and you moan and roll over as you reach down, only to feel a large amount of hair covering your ass. Blinking, you look down to see your new long equine tail, which someone has braided several small silver gothic charms into"; 
+	now skin change entry is "you wake up from your long night with the stallion, and you go to scratch it, only to find it seems to be covered in soft, palomino patterned fur, just like your lover's";
+	now ass change entry is "you wake up, and you moan and roll over as you reach down, only to feel a large amount of hair covering your ass. Blinking, you look down to see your new long equine tail, which someone has braided several small silver gothic charms into";
 	now cock change entry is "you wake up, and you reach down to stroke it, only to find that your morning wood is even more impressive with a thick equine cock, the feel of its new sensitive flared tip making you moan as you stroke it several times with a smile"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 17;
@@ -67,7 +67,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 18;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 21; 
+	now hp entry is 21;
 	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
 	now area entry is "Palomino"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
@@ -78,17 +78,17 @@ When Play begins:
 	now breast size entry is 0; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 0; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 0; [ Width of female sex infection will try and give you ]
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
 	now loot entry is ""; [ Loot monster drops, ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]fit[or]toned[at random]";
 	now type entry is "equine";
-	now magic entry is false; 
-	now resbypass entry is false; 
-	now non-infectious entry is true; 
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 

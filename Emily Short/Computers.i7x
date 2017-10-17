@@ -20,7 +20,7 @@ A screen is a kind of thing. One screen is part of every computer. The descripti
 A keyboard is a kind of thing. One keyboard is part of every computer. The description of a keyboard is usually "The typical arrangement of keys."
 	The specification of a keyboard is "Part of every computer by default. The player can only use the TYPE (something) ON action when a keyboard is part of the computer in question."
 
-A selection device is a kind of thing. 
+A selection device is a kind of thing.
 	The specification of a selection device is "A generic kind from on both trackpads and mice will depend. The player may only use the CLICK ON action when a selection device is part of the computer in question."
 
 An extension port is a kind of container.
@@ -32,7 +32,7 @@ A data storage device is a kind of thing.
 
 Setting action variables for an actor inserting a data storage device into a computer when the second noun incorporates exactly one extension port (called target port) (this is the guess a sensible port rule):
 	change the second noun to the target port.
-	
+
 Instead of an actor inserting something which is not a data storage device into an extension port (this is the restrict extension port usage rule):
 	if the actor is not the player:
 		rule fails;
@@ -120,7 +120,7 @@ Understand "open [laptop]" as switching on.
 
 Chapter 3 - Desktop Computers
 
-A desktop computer is a kind of computer. 
+A desktop computer is a kind of computer.
 	A desktop computer is usually fixed in place.
 	The description of a desktop computer is usually "It has a dull beige exterior and seems to be trying to avoid attracting attention."
 
@@ -136,11 +136,11 @@ Running relates one computer to various softwares. The verb to run (it runs, the
 
 Software has a number called software priority. The software priority of software is usually 5.
 
-Definition: software is fierce if its software priority is 2 or less. 
+Definition: software is fierce if its software priority is 2 or less.
 
 Chapter 2 - Software Types
 
-Section 1 - Search Engines 
+Section 1 - Search Engines
 
 A search engine is a kind of software. Understand "search box" or "search" or "search engine" as a search engine.
 	The description of a search engine is usually "A search box awaits your search terms."
@@ -181,7 +181,7 @@ Report consulting a search engine about the topic understood (this is the list s
 
 Table of Sample Data
 topic	title	data
-"food/cake/yellow" or "yellow cake"	"OnlineRecipes.org"	"A delicious recipe for yellow cake."	
+"food/cake/yellow" or "yellow cake"	"OnlineRecipes.org"	"A delicious recipe for yellow cake."
 
 Section 2 - Password Locks
 
@@ -202,7 +202,7 @@ Rule for rewarding successful answering of a password lock program (called chose
 
 Section 3 - Multiple Choice Programs
 
-[A multiple-choice program allows the user to pick among several options: as with the search engine, the topic 
+[A multiple-choice program allows the user to pick among several options: as with the search engine, the topic
 
 An options table for a multiple-choice program should have the form
 
@@ -213,7 +213,7 @@ topic	title	effect
 
 where the index will be filled in with numbers as appropriate, the title will label each numbered action, and the effect will be executed when the number is selected.]
 
-A multiple-choice program is a kind of software. 
+A multiple-choice program is a kind of software.
 	A multiple-choice program has a table-name called the options table.
 	A multiple-choice program has some text called the out of bounds response. The out of bounds response is usually "Your selection, '[topic understood]', is not one of the available choices."
 
@@ -227,7 +227,7 @@ To say options-list of (chosen program - a multiple-choice program):
 
 Section 4 - Enumerated Multiple Choice Programs
 
-[A simplified subset of the above, where options are automatically numbered for the player, who can select by number rather than by 
+[A simplified subset of the above, where options are automatically numbered for the player, who can select by number rather than by
 
 An options table for an enumerated multiple-choice program should have the form
 
@@ -250,10 +250,10 @@ To say options-list of (chosen program - an enumerated multiple-choice program):
 		change the index entry to N;
 		increase N by 1;
 		say "[index entry]: [title entry][line break]";
-	say "[run paragraph on]". 
+	say "[run paragraph on]".
 
 Table of Sample Deeds
-index	title	effect 
+index	title	effect
 a number	some text	a rule
 
 Section 5 - Email Programs
@@ -266,7 +266,7 @@ An email program is a kind of software.
 To say inbox of (chosen email - an email program):
 	if the number of filled rows in the message table of the chosen email is 0:
 		say "Your email program is on screen, but no messages are available.";
-	otherwise:
+	else:
 		say "The following messages are available for you to read or reply to:[line break]";
 		repeat through the message table of the chosen email:
 			if there is an arrival time entry:
@@ -333,11 +333,11 @@ To decide what object is the controlling program of (chosen computer - a compute
 		remove item from play;
 	if the chosen computer runs no software:
 		decide on nothing;
-	otherwise:
+	else:
 		let the chosen program be the fiercest software run by the chosen computer;
 		now the chosen program is part of the chosen screen;
 		decide on the chosen program.
-		
+
 
 Chapter 4 - Input Methods
 
@@ -357,7 +357,7 @@ Understand the commands "key" and "input" as "type".
 Rule for supplying a missing second noun while typing the topic understood on (this is the guess a keyboard while typing rule):
 	if the player can touch a keyboard (called target):
 		change the second noun to the target;
-	otherwise:
+	else:
 		say "You'll have to specify what you want to type on." instead.
 
 
@@ -365,7 +365,7 @@ Setting action variables for an actor typing the topic understood on something w
 	if the second noun is a computer:
 		let the relevant keyboard be a random keyboard which is part of the second noun;
 		change the second noun to the relevant keyboard;
-	otherwise if the second noun is something which is part of a computer (called the relevant computer):
+	else if the second noun is something which is part of a computer (called the relevant computer):
 		let the relevant keyboard be a random keyboard which is part of the relevant computer;
 		change the second noun to the relevant keyboard;
 
@@ -374,15 +374,15 @@ Setting action variables for an actor typing the topic understood on something (
 		change the computer in question to a random computer which incorporates the second noun;
 		change the software in question to the controlling program of the computer in question. [This kicks the logic back up to chapter 3.]
 
-Check an actor typing  the topic understood on something which is not a keyboard (this is the reject typing on non-keyboards rule):
+Check an actor typing the topic understood on something which is not a keyboard (this is the reject typing on non-keyboards rule):
 	if the actor is the player:
 		say "[The second noun] [is-are] not a keyboard." instead;
 	rule fails.
 
-Check an actor typing  the topic understood on a keyboard which is part of a switched off computer (called the relevant computer) (this is the reject typing on switched off computers rule):
+Check an actor typing the topic understood on a keyboard which is part of a switched off computer (called the relevant computer) (this is the reject typing on switched off computers rule):
 	if the actor is the player:
 		say "[The relevant computer] [is-are] currently switched off.";
-	rule fails. 
+	rule fails.
 
 Check an actor typing the topic understood on a keyboard controlling nothing (this is the claim a system error in the absence of software rule):
 	if the actor is the player:
@@ -400,25 +400,25 @@ Contentlessly typing is an action applying to one thing.
 Rule for supplying a missing noun while contentlessly typing (this is the guess a keyboard while contentlessly typing rule):
 	if the player can touch a keyboard (called target):
 		change the noun to the target;
-	otherwise:
+	else:
 		say "You'll have to specify what you want to type." instead.
 
 Check contentlessly typing:
 	say "You'll have to specify what you want to type." instead.
 
 
-Section 2 - Selection with a Selection Device	
+Section 2 - Selection with a Selection Device
 
-Understand "click on [text] with [a selection device]" or "select [text] with [a selection device]" or "pick [text] with [a selection device]" or "click [text] with [a selection device]" as selecting it with. 
+Understand "click on [text] with [a selection device]" or "select [text] with [a selection device]" or "pick [text] with [a selection device]" or "click [text] with [a selection device]" as selecting it with.
 
 Understand "click on [text] with [something]" or "select [text] with [something]" or "pick [text] with [something]" or "click [text] with [something]" as selecting it with. Selecting it with is an action applying to a topic and one thing.
 
-Understand "click [text]" or "select [text]" or "click on [text]" or "pick [text]" as selecting it with. 
+Understand "click [text]" or "select [text]" or "click on [text]" or "pick [text]" as selecting it with.
 
 Rule for supplying a missing second noun while selecting the topic understood with (this is the guess a selection device while selecting rule):
 	if the player can touch a selection device (called target):
 		change the second noun to the target;
-	otherwise:
+	else:
 		say "You'll have to specify what you want to click with." instead.
 
 The selecting it with action has an object called the selected computer in question.
@@ -428,7 +428,7 @@ Setting action variables for an actor selecting the topic understood with someth
 	if the second noun is a computer:
 		let the relevant selection device be a random selection device which is part of the second noun;
 		change the second noun to the relevant selection device;
-	otherwise if the second noun is something which is part of a computer (called the relevant computer):
+	else if the second noun is something which is part of a computer (called the relevant computer):
 		let the relevant selection device be a random selection device which is part of the relevant computer;
 		change the second noun to the relevant selection device;
 
@@ -445,7 +445,7 @@ Check an actor selecting the topic understood with something when the second nou
 Check an actor selecting the topic understood with a selection device which is part of a switched off computer (called the relevant computer) (this is the reject mousing on switched off computers rule):
 	if the actor is the player:
 		say "[The relevant computer] [is-are] currently switched off.";
-	rule fails. 
+	rule fails.
 
 Check an actor selecting the topic understood with a selection device controlling nothing (this is the claim a system error in the absence of selection device software rule):
 	if the actor is the player:
@@ -465,7 +465,7 @@ An input handling rule for a password lock program (called chosen software) (thi
 	if N is the password of the chosen software:
 		carry out the rewarding successful answering activity with the chosen software;
 		rule succeeds;
-	otherwise:
+	else:
 		say "[rejection of the chosen software][paragraph break]";
 		rule fails.
 
@@ -485,9 +485,9 @@ An input handling rule for a multiple-choice program (called chosen software) (t
 	if the topic understood is a topic listed in the options table of the chosen software:
 		follow the effect entry;
 		rule succeeds;
-	otherwise:
+	else:
 		say "[out of bounds response of the chosen software][paragraph break]";
-		rule fails. 
+		rule fails.
 
 An input handling rule for a search engine (called chosen software) (this is the consult software rule):
 	try consulting the chosen software about the topic understood instead.
@@ -523,7 +523,7 @@ The contents of the computer's screen will depend on what software the computer 
 
 Section: Laptops and desktops; mice and trackpads
 
-"Computer" has two subordinate kinds, "laptop" and "desktop computer". A laptop may be opened or closed (synonymous with switching it on and off, for simplicity) and has a trackpad. A desktop computer is by default fixed in place and has a mouse. 
+"Computer" has two subordinate kinds, "laptop" and "desktop computer". A laptop may be opened or closed (synonymous with switching it on and off, for simplicity) and has a trackpad. A desktop computer is by default fixed in place and has a mouse.
 
 For non-standard configurations of computer, such as an ATM with a modified keyboard and no mouse/trackpad, we would fall back on the base "computer" kind and add the desired components by hand.
 
@@ -539,7 +539,7 @@ So for instance we might write
 
 	The CD-ROM is a data storage device.
 
-...whereupon the CD-ROM may be placed in the CD slot, but nothing else will be permitted. 
+...whereupon the CD-ROM may be placed in the CD slot, but nothing else will be permitted.
 
 The extension assumes that the player who types
 
@@ -549,7 +549,7 @@ really means to insert the storage device into the extension port that is part o
 
 If we have a game in which multiple types of data storage devices exist and are to be placed in multiple types of extension ports, we may need to add subkinds of these two kinds, and restrict more thoroughly which storage devices may be put into which ports.
 
-Furthermore, there is no default treatment of data storage devices or their effect on computers or computer software, as the possibilities are too diverse. We should decide on a per-game basis what happens when a given storage device is hooked up. 
+Furthermore, there is no default treatment of data storage devices or their effect on computers or computer software, as the possibilities are too diverse. We should decide on a per-game basis what happens when a given storage device is hooked up.
 
 The examples show a very simple way to a storage device to extend the range of a search engine program.
 
@@ -568,14 +568,14 @@ A computer can run several programs at once, in which case the program with the 
 	now the software priority of the email program is 1.
 
 When the player uses a TYPE or CLICK ON command, the topic understood is passed on to the input handling rules. The input handling rules are an object-based rulebook and are keyed to the specific program currently dominant on the computer. One of the several input handling rules looks like this:
-	
+
 	An input handling rule for a multiple-choice program (called chosen software) (this is the pick a choice rule):
 		if the topic understood is a topic listed in the options table of the chosen software:
 			follow the effect entry;
 			rule succeeds;
-		otherwise:
+		else:
 			say "[out of bounds response of the chosen software][paragraph 	break]";
-			rule fails. 
+			rule fails.
 
 ...and consequently we can make new input handling rules for any new software we write, or to customize the behavior of the default software kinds.
 
@@ -587,7 +587,7 @@ Five types of software are provided by default:
 
 (2) a search program that returns results on typed searches, as well as to standard syntax such as LOOK UP "whatever" IN SEARCH PROGRAM
 
-(3) a multiple-choice program that allows the user to select options, and runs rules accordingly 
+(3) a multiple-choice program that allows the user to select options, and runs rules accordingly
 
 (4) an enumerated multiple-choice program (the same kind of thing, but assigning a number to each choice instead of matching them with topic keywords)
 
@@ -596,8 +596,8 @@ Five types of software are provided by default:
 Section: Password lock programs
 
 To define a password lock program, we may write something like:
-	
-	The PC runs a password lock program called rudimentary passcode. The password of rudimentary passcode is "xyzzy". 
+
+	The PC runs a password lock program called rudimentary passcode. The password of rudimentary passcode is "xyzzy".
 
 Note that because of the way the z-machine handles typed input, the player's input will always be flattened to lower case before it is interpreted. Therefore passwords should always be in lower case.
 
@@ -638,7 +638,7 @@ Both enumerated and regular multiple-choice programs have a response to print if
 
 Section: Search engines
 
-To define a search engine, we must provide a table of data, such as 
+To define a search engine, we must provide a table of data, such as
 
 	The PC runs a search engine called Goggle. The data table of Goggle is the Table of Goggle Data.
 
@@ -647,7 +647,7 @@ To define a search engine, we must provide a table of data, such as
 	"food/cake/yellow" or "yellow cake"	"OnlineRecipes.org"	"A delicious recipe for yellow cake."
 	"yellow balloon" or "yellow/balloon"	"PartyPlanning.com"	"How to order yellow balloons online."
 
-In keeping with the behavior of real search engines, this search engine will go through and match every possible topic on the list, reporting all hits, rather than matching only the first instance. This means that output can be very long if the individual descriptions are themselves long, so use with discretion. 
+In keeping with the behavior of real search engines, this search engine will go through and match every possible topic on the list, reporting all hits, rather than matching only the first instance. This means that output can be very long if the individual descriptions are themselves long, so use with discretion.
 
 Search engines have two pieces of text, the "no-records response" and "results-found response", as defined here:
 
@@ -672,10 +672,10 @@ Note that an arrival time is provided for "memo" but not for "SPAM". That is bec
 
 	deliver "SPAM" to laptop email.
 
-This would mark the spam message, which already exists in the Table of Laptop Messages, as available for the player to read. It would also set the arrival time. 
+This would mark the spam message, which already exists in the Table of Laptop Messages, as available for the player to read. It would also set the arrival time.
 
 If the player is in view of a switched on computer that is running this program, the arrival of the message will be reported at the moment when it happens. The text of this report is handled by the "new mail message" of the email program, like so:
-	
+
 	The new mail message of an email program is usually "You have new mail on [the random computer which is running the item described].".
 
 To change this output, we would create a different new mail message for the email program in question.
@@ -693,7 +693,7 @@ At that point, default behavior of the action is to mark the email replied and t
 Example: * Reading Email - A laptop set up with a password lock program that gives way to email we can read, and a new message that is delivered while we wait.
 
 	*: "Reading Email"
-	
+
 	Include Computers by Emily Short.
 
 	Conference room is a room.
@@ -711,13 +711,13 @@ Example: * Reading Email - A laptop set up with a password lock program that giv
 	"memo"	"Memo"	9:00 AM	false	false	"Your boss would like to see you in his office right away."
 	"SPAM"	"SPAM"	--	false	false	"Money for you from Nigeria!"
 	with 10 blank rows.
- 
+
 	At 9:10 AM:
 		deliver "SPAM" to laptop email.
 
 	Test me with "turn on laptop / x laptop / x screen / type mulderxox / read memo / read spam / z / z / z / z / z / x screen / read spam / reply to spam".
 
-Example: * USB Drive - A very simple implementation of a laptop that can search for and find new data when a USB stick is inserted into its extension port. 
+Example: * USB Drive - A very simple implementation of a laptop that can search for and find new data when a USB stick is inserted into its extension port.
 
 	*: "USB Drive"
 
@@ -733,24 +733,24 @@ Example: * USB Drive - A very simple implementation of a laptop that can search 
 
 	Table of Dull Data
 	topic	title	data
-	"myself/me/yourself/you/user/profile" or "user profile"	"your user profile"	"None of your user information has been filled in. For security reasons." 
+	"myself/me/yourself/you/user/profile" or "user profile"	"your user profile"	"None of your user information has been filled in. For security reasons."
 
 	Carry out inserting the usb stick into the USB port:
 		now the data table of generic search is the table of secret data.
 
 	Report inserting the usb stick into the USB port:
 		say "You plug in the USB stick, making its valuable data available to the quickbook's search engine." instead.
-		
+
 	Carry out taking the usb stick when the usb stick is in the USB port:
 		now the data table of generic search is the table of dull data.
-	
+
 	Report taking the USB stick when the USB stick was in the USB port:
 		say "You deftly pull out the USB stick again." instead.
-	
+
 	Table of Secret Data
 	topic	title	data
-	"myself/me/yourself/you/user/profile" or "user profile"	"your user profile"	"None of your user information has been filled in. For security reasons." 
-	"Coca-Cola" or "recipe" or "coke/coca/cola"	"secret Coca-Cola recipe"	"Scrolling across your screen is the detailed secret recipe for Coca-Cola, including all the elements of the 7X 	formula."	
+	"myself/me/yourself/you/user/profile" or "user profile"	"your user profile"	"None of your user information has been filled in. For security reasons."
+	"Coca-Cola" or "recipe" or "coke/coca/cola"	"secret Coca-Cola recipe"	"Scrolling across your screen is the detailed secret recipe for Coca-Cola, including all the elements of the 7X 	formula."
 
 	Test me with "x quickbook / open it / type recipe / insert usb stick in port / look up recipe in computer / take stick / search for recipe / take stick / drop stick / take stick".
 
@@ -783,7 +783,7 @@ We also want the computer to revert back to the operating system if switched off
 		now the software priority of PC email is 1;
 		say "You select the mail.";
 		try examining PC email.
-		
+
 	This is the open-Browser rule:
 		repeat with item running through software run by the old PC:
 			now the software priority of item is 5;
@@ -800,10 +800,10 @@ We also want the computer to revert back to the operating system if switched off
 	"memo"	"Memo"	9:00 AM	false	false	"Your boss would like to see you in his office right away."
 	"SPAM"	"SPAM"	--	false	false	"Money for you from Nigeria!"
 	with 10 blank rows.
- 
+
 	At 9:10 AM:
 		deliver "SPAM" to PC email.
-	
+
 	The PC runs a search engine called Goggle. The data table of Goggle is the Table of Goggle Data.
 
 	Table of Goggle Data
@@ -820,18 +820,18 @@ We also want the computer to revert back to the operating system if switched off
 			reset to operating system;
 			say "You return to the operating system.";
 			try examining PCOS;
-			rule succeeds. 
-		
+			rule succeeds.
+
 	Carry out switching off the old PC:
 		reset to operating system.
-		
+
 	To reset to operating system:
 		repeat with item running through software run by the old PC:
 			now the software priority of item is 5;
 		now the software priority of PCOS is 1;
-			
+
 	After examining a quittable software (called chosen software):
-		say "You can also select QUIT to return to the operating system." 
+		say "You can also select QUIT to return to the operating system."
 
 	Test me with "turn on PC / click browser / look up food on computer / type cake / type quit / type mail on keyboard / select memo / reply to memo / type quit / click browser / turn off PC / turn on PC / click browser / reboot".
 
@@ -851,7 +851,7 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 
 	Instead of switching off the ATM:
 		say "Resetting the ATM is only possible for bank employees."
-	
+
 	The player carries a wallet. The wallet contains a debit card. The debit card is a data storage device. The description of the debit card is "It is a red card stamped with numbers and embossed with a hologram of a flying eagle. With a sharp needle, you scratched the PIN 2953 into the upper left corner. You're always forgetting it."
 
 	The slot is an extension port. It is part of the ATM.
@@ -859,7 +859,7 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 	Does the player mean inserting the debit card into the slot: it is very likely.
 
 	The welcome screen is privately-named software. The description of the welcome screen is "WELCOME, reads the screen. PLEASE INSERT CARD TO PROCEED."
-	
+
 	An input handling rule for the welcome screen:
 		say "INSERT CARD TO PROCEED, insists the screen.";
 		rule fails.
@@ -881,11 +881,11 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 		rule succeeds.
 
 	Understand "insert [something]" as inserting it into.
-	
+
 	Rule for supplying a missing second noun when inserting something into:
 		if the slot is visible:
 			now the second noun is the slot;
-		otherwise:
+		else:
 			say "There is no obvious place to insert [the noun]." instead.
 
 	The PIN request screen is a privately-named password lock program. The password of PIN request screen is "2953". The description is "The screen now reads, PLEASE INPUT YOUR PERSONAL IDENTIFICATION NUMBER." The rejection of PIN request screen is "INCORRECT IDENTIFICATION NUMBER. TRY AGAIN."
@@ -933,4 +933,3 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 		try examining the target screen.
 
 	Test me with "x atm / x keyboard / turn off atm / reboot atm / i / put wallet in slot / put card in slot / x card / get card / put card in slot / input 3311 / type 2953 / type 1 / input 3 on keyboard / i / input 2 / i / type 1 / type 4 / put card in atm / take card / insert card / type 2953 / take card / type 1 / n / insert card".
-

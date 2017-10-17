@@ -65,7 +65,7 @@ to say CarlDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [hp of Carl], LEVEL: [level of Carl], LIBRARY ENTRY TURN: [CarlLibraryEntry], Libido: [libido of Carl], Dexterity: [dexterity of Carl], Thirst: [thirst of Carl], Lust: [lust of Carl] <- DEBUG[line break]";
 	if hp of Carl is 2 or hp of Carl is 3:
-		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. [if CarlLibraryEntry - turns < 17]His behaviour shows that he's a bit unsure of himself, unnerved by the automatic reactions and inherent mannerisms of his body, like movements of his tail and ears. Maybe he just needs some time to get used to it all.[otherwise]By now, he's found an equilibrium with his new shape, using his tail and ears to express himself while still maintaining most of his humanity.[end if]";
+		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. [if CarlLibraryEntry - turns < 17]His behaviour shows that he's a bit unsure of himself, unnerved by the automatic reactions and inherent mannerisms of his body, like movements of his tail and ears. Maybe he just needs some time to get used to it all.[else]By now, he's found an equilibrium with his new shape, using his tail and ears to express himself while still maintaining most of his humanity.[end if]";
 	else if hp of Carl > 9 and hp of Carl < 30:
 		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. By now, he's found an equilibrium with his new shape, using his tail and ears to express himself while still maintaining most of his humanity. As he sees you looking at him, he gives you a broad smile, followed by a salacious wink.";
 	else if hp of Carl > 29 and hp of Carl < 50:
@@ -115,7 +115,7 @@ to say CarlTalkMenu:
 		now title entry is "Bring up Candy";
 		now sortorder entry is 3;
 		now description entry is "Talk to Carl about his relationship with the gay raccoon";
-	[]	
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -177,14 +177,14 @@ Instead of fucking the Carl:
 			if graphics is true:
 				project the figure of Carl_knot_icon;
 			say "     Even though he managed to suppress his immediate urges, the flare-up of lust is clearly still bubbling strongly inside Carl's canine body.";
-			say "     [bold type]Do you want to... give him a little push over the edge?[roman type][line break]";	
+			say "     [bold type]Do you want to... give him a little push over the edge?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				LineBreak;
 				if cocks of player > 0 and cunts of player > 0:
-					say "     [bold type]Do you want to fuck him or ride him?[roman type][line break]";	
+					say "     [bold type]Do you want to fuck him or ride him?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Fuck him.";
 					say "     ([link]N[as]n[end link]) - Ride him.";
@@ -195,8 +195,8 @@ Instead of fucking the Carl:
 						LineBreak;
 						say "[SubCarl_PussyRide]";
 				else if cocks of player > 0:
-					say "      ";
-					say "     [bold type]Do you want to fuck him or ride him?[roman type][line break]";	
+					say "     ";
+					say "     [bold type]Do you want to fuck him or ride him?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Fuck him.";
 					say "     ([link]N[as]n[end link]) - Ride him.";
@@ -219,7 +219,7 @@ Instead of fucking the Carl:
 			if graphics is true:
 				project the figure of Carl_knot_icon;
 			if cocks of player > 0 and cunts of player > 0:
-				say "     [bold type]Do you want to fuck Carl or get fucked by him?[roman type][line break]";	
+				say "     [bold type]Do you want to fuck Carl or get fucked by him?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Fuck Carl.";
 				say "     ([link]N[as]n[end link]) - Get fucked.";
@@ -230,7 +230,7 @@ Instead of fucking the Carl:
 					LineBreak;
 					say "[Carl_FucksPlayerPussy]";
 			else if cocks of player > 0:
-				say "     [bold type]Do you want to fuck Carl or get fucked by him?[roman type][line break]";	
+				say "     [bold type]Do you want to fuck Carl or get fucked by him?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Fuck Carl.";
 				say "     ([link]N[as]n[end link]) - Get fucked.";
@@ -389,7 +389,7 @@ to say CarlSexMenu:
 		now sortorder entry is 6;
 		now description entry is "Fill the husky's ass with your cock";
 	[]
-	if ((hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15) and (CarlEricInteraction > 5 and CarlEricInteraction < 50)): 
+	if ((hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15) and (CarlEricInteraction > 5 and CarlEricInteraction < 50)):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Eric and Carl";
 		now sortorder entry is 7;
@@ -559,7 +559,7 @@ to say CarlSex7: [threesome with Eric]
 		say "     As it turns out, you don't have that far to go to find Eric - he's in the library, sitting cross-legged on a large sofa with an open book on his lap. Before you can even greet him, Carl has already dashed over and happily barks out, 'Hey Eric!' As the young man raises his head, Carl gently slides the book out from under his hands, setting a bookmark at the open page before putting it aside. Then Carl leans in and whispers something into Eric's ear. The slender redhead's eyes go wide as he listens to his canine friend and a blush spreads over his face as he looks back and forth between Carl and yourself. 'Come on, it'll be fun,' the husky says next and pulls off his clothes, dropping them casually to the floor. Giggling about just how quickly the soldier got buck naked, Eric gets over his initial hesitation in record time and starts stripping himself. A few moments later, during which the anthro husky kneeled down to 'help' Eric pull off his panties, they're both naked and visibly excited.";
 		WaitLineBreak;
 		say "[EricCarlThreesome Sex Menu]";
-		
+
 Section 4 - Events
 
 instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and level of Carl is 0 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang > 1 and (lastfuck of Fang - turns) > 12):
@@ -574,7 +574,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 			say "     The hostile stares between them continue for a few seconds more, then suddenly the moment breaks and Fang jumps forward with bared teeth, intent on proving that he as a big wolf is dominant to a dog. Though Carl is more than ready for his attack - dodging to the side, the soldier grabs the wolf and gives him a strong push, making the beast run face-first into the library wall not far behind him. A short struggle follows, in which Fang gets whacked several times with a heavy library book, until finally Carl's on top of him, Fang's head held tight under his arm and both hands wrapped around the wolf's muzzle. The wolf tries to get out of the soldier's grip for a moment more, then stops struggling and gives a defeated whine.";
 			WaitLineBreak;
 			say "     When Carl lets the wolf go and starts to and straightens out his somewhat ripped clothing, Fang starts to limp away with his tail between his legs - only to be stopped by a hand grabbing the scruff of his neck. 'Not so fast, furball! I know how this pack thinking works - you'll just jump me again and again until I show you who's the real boss of you!' With that, Carl grabs Fang's tail, pulling it up as he steps behind the wolf's large shape. Then he starts to undo his pants...";
-			say "     [bold type]Do you want to watch Carl fuck Fang?[roman type][line break]";	
+			say "     [bold type]Do you want to watch Carl fuck Fang?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -595,7 +595,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 			say "     Coming into the library, you notice that Fang isn't at his usual spot and as you look around, you just catch sight of the end of his tail as he vanishes up the stairs further back in the building. Curious what's going on, you hurriedly follow the feral wolf to the library's upper level. After rushing up the stairs, you catch sight of Fang's dark shape again - in the moment his he starts to raise his hackles and growl at Carl, the husky soldier you brought here. Standing up from where he was just sorting through his backpack, the transformed soldier turns around and looks at the wolf's aggressive stance. Then he snarls 'So you think I'll just submit and roll over for you because you growl a bit? Though luck, you feral mutt. Scram! I'm no one's bitch!' and balls his paw-hands to fists.";
 			say "     The hostile stares between them continue for a few seconds more, then suddenly the moment breaks and Fang jumps forward with bared teeth, intent on proving that he as a big wolf is dominant to a dog. Though Carl is more than ready for his attack - dodging to the side, the soldier grabs the wolf and gives him a strong push, making the beast run face-first into the library wall not far behind him. A short struggle follows, in which Carl gives Fang a few whacks with a heavy library book, though finally Fang manages to trip him and comes to stand over the husky with his teeth bared. Realizing he's not in a position to continue fighting, Carl ceases resisting and gives all the right signs of canine submission while growling 'You win, feral furball. Let's get this over with.'";
 			LineBreak;
-			say "     [bold type]Do you want to watch Fang fuck Carl?[roman type][line break]";	
+			say "     [bold type]Do you want to watch Fang fuck Carl?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -615,7 +615,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		say "     Coming into the library, you notice that Fang isn't at his usual spot and as you look around, you just catch sight of the end of his tail as he vanishes up the stairs further back in the building. Curious what's going on, you hurriedly follow the feral wolf to the library's upper level. After rushing up the stairs, you catch sight of Fang's dark shape again - in the moment his he starts to raise his hackles and growl at Carl, the husky soldier you brought here. Standing up from where he was just sorting through his backpack, the transformed soldier turns around and looks at the wolf's aggressive stance. Following his nature, he then immediately starts to show the signs of canine submission, falling down on all fours and making himself smaller and lowering his head before the dominant pack-mate.";
 		say "     Giving a self-satisfied chuff at the effortless subjugation of this other male, Fang pads closer and rests his head on the back of Carl's for a moment, then moves on to thoroughly inspect his new bitch. The anthro husky just obediently stays standing there as the dark-furred wolf moves around him, sniffing and poking his muzzle under his arm and between his legs. After a while of this, Fang then proceeds to push the soldier's shirt up a bit with his muzzle and lightly nip at his pants. Realizing that the wolf wants to mount him, Carl gives a submissive whine and pulls off his shirt, throwing it over to his mattress, then starts to undo his pants...";
 		LineBreak;
-		say "     [bold type]Do you want to watch Fang fuck Carl?[roman type][line break]";	
+		say "     [bold type]Do you want to watch Fang fuck Carl?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -698,22 +698,22 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 	if debugactive is 1:
 		say "     DEBUG: CARL & HELEN - SEX WALK-IN - HP OF CARL: [hp of Carl], LIBIDO OF CARL: [libido of Carl][line break]";
 	if hp of Carl > 9 and hp of Carl < 30: [normal Carl]
-		say "     Coming into the library, you notice Carl standing at the foot of the stairs leading up, with Helen circling and sniffing him. The husky soldier waves to you and asks 'What kind of dog did you say she originally was? Because she certainly seems very friendly and... interested in my furry self.' Walking over to them, you tell the transformed soldier that Helen once was a German Shepherd. As she hears your voice, the human dog stops sniffing Carl's crotch and almost pounces on you, eagerly greeting her master and[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds] saying 'Carl nice' with a cheeky grin[otherwise] giving a few happy yips and barks, looking from you to Carl[end if]. Eyes glued to Helen's shapely and naked form, especially with the unobstructed view of her slightly swollen pussy she's giving him right now, Carl suddenly feels the urgent need to adjust the growing bulge in his pants. Visibly swallowing, he then looks up at you and gives a hopeful wag of his tail. 'Your... doggie really has some very nice curves on her. Any chance I could have some fun with Helen? She certainly seems willing enough.'";
+		say "     Coming into the library, you notice Carl standing at the foot of the stairs leading up, with Helen circling and sniffing him. The husky soldier waves to you and asks 'What kind of dog did you say she originally was? Because she certainly seems very friendly and... interested in my furry self.' Walking over to them, you tell the transformed soldier that Helen once was a German Shepherd. As she hears your voice, the human dog stops sniffing Carl's crotch and almost pounces on you, eagerly greeting her master and[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds] saying 'Carl nice' with a cheeky grin[else] giving a few happy yips and barks, looking from you to Carl[end if]. Eyes glued to Helen's shapely and naked form, especially with the unobstructed view of her slightly swollen pussy she's giving him right now, Carl suddenly feels the urgent need to adjust the growing bulge in his pants. Visibly swallowing, he then looks up at you and gives a hopeful wag of his tail. 'Your... doggie really has some very nice curves on her. Any chance I could have some fun with Helen? She certainly seems willing enough.'";
 		LineBreak;
-		say "     [bold type]Allow Carl spend some time with Helen?[roman type][line break]";	
+		say "     [bold type]Allow Carl spend some time with Helen?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			LineBreak;
-			say "     [bold type]Do you want to watch?[roman type][line break]";	
+			say "     [bold type]Do you want to watch?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				LineBreak;
 				say "     Stroking Helen's head, you calmly tell her that she should go with Carl for now and obey him. As the naked woman moves over to the husky soldier and starts to sniff and nuzzle his crotch again, he gives you his thanks and leads Helen up the stairs, closely followed by yourself. Soon, Carl has Helen sitting next to him on his mattress near the windows. She smiles at him and yips happily as the soldier reaches out to gently touch her, caressing her soft skin with a paw-hand before cupping Helen's well-rounded breasts. Leaning forward, Carl then lifts her head a finger under her chin and kisses her on the lips ...which immediately devolves into her licking his muzzle and affectionately rubbing her head against his furry cheeks.";
-				say "     After some more playful touching and nuzzling with Helen, Carl sits back and pulls his shirt off, then starts to undo his zipper. Your human dog watches him intently as he does so, yipping eagerly as Carl pushes his pants down and his erect cock comes into view[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds]. Finding the right words after a moment of concentration, Helen even asks 'Carl sex?' [otherwise]. Giving the soldier a questioning bark [end if], to which he answers 'Oh yeah - I'm gonna fuck you good, girl.' Clearly understanding what he was saying, Helen immediately takes position on all fours, legs spread slightly as she prepares herself to be mounted.";
+				say "     After some more playful touching and nuzzling with Helen, Carl sits back and pulls his shirt off, then starts to undo his zipper. Your human dog watches him intently as he does so, yipping eagerly as Carl pushes his pants down and his erect cock comes into view[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds]. Finding the right words after a moment of concentration, Helen even asks 'Carl sex?' [else]. Giving the soldier a questioning bark [end if], to which he answers 'Oh yeah - I'm gonna fuck you good, girl.' Clearly understanding what he was saying, Helen immediately takes position on all fours, legs spread slightly as she prepares herself to be mounted.";
 				WaitLineBreak;
 				say "     The soon fully naked Carl reaches over to touch Helen, letting his hands stray deeper and under her [if lust of Helen >= 7]tattooed [end if]body, cupping her shapely breasts and fondling them some more before moving on to her moist pussy. Helen gives a pleased yip, dripping female juices over his fingers as he spreads her nether lips. Bringing his hand to his muzzle, Carl licks it clean, then pants 'You're so hot, Helen!' and gets into position on his knees behind her. As Carl's hard, canine shaft touches the human's swollen pussy lips for the first time, his animal instincts kick in with a vengeance and the husky drives his cock into her in one deep thrust. Moaning loudly at the tightly gripping feel of her pussy, he immediately starts fucking her in the typical 'doggie-style' position, with Helen panting and yipping in lust as he slides in and out[if lust of Helen >= 4]. 'Feels nice,' she moans, pressing her rear back into Carl's thrusts[end if]. She obviously likes getting mounted by the dog-morph a lot, with her body producing copious amounts of femcum to lube their coupling.";
 				say "     Carl runs his paw-hands over Helen's sexy body, caressing her lovely skin[if lust of Helen >= 7] and running his fingers along her collar tattoo[end if] as he leans over her. This draws added moans and yips of pleasure from the human dog and she pushes herself back into Carl's thrusts, her pussy squeezing along his shaft as he fucks her like a dog. The soldier plays with her breasts and fingers her clit while fucking Helen, whispering in her ear what a good girl she is. As he continues thrusting into Helen in a position that just feels 'right' to him in his canine form, the strong husky soon really takes out all the stops and starts to pound her pussy hard, mounting the young woman with truly animal-like intensity that has her panting nonstop.";
@@ -733,22 +733,22 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 			say "     As you silently shake your head, Carl's tail and ears dip a bit in disappointment, then he gives a shrug and says 'Oh well, I just had to ask. She's certainly a pretty sweet pet to have and I see why you don't want to share.' With that, he gives Helen an affectionate pat on the head and walks back up the stairs.";
 			now libido of Carl is 100;
 	else if hp of Carl > 29 and hp of Carl < 50: [sub Carl]
-		say "     Coming into the library, you notice Carl standing at the foot of the stairs leading up, with Helen circling and sniffing him. The husky soldier waves to you and lowers his head submissively as he sees you looking. 'Alpha', he greets you, then asks, 'What kind of dog did you say Helen originally was? Because she certainly seems very friendly and... interested in my furry self.' Walking over to them, you tell the transformed soldier that Helen once was a German Shepherd. As she hears your voice, the human dog stops sniffing Carl's crotch and almost pounces on you, eagerly greeting her master and[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds] saying 'Carl nice' with a cheeky grin[otherwise] giving a few happy yips and barks, looking from you to Carl[end if]. Eyes glued to Helen's shapely and naked form, especially with the unobstructed view of her slightly swollen pussy she's giving him right now, Carl suddenly feels the urgent need to adjust the growing bulge in his pants. Visibly swallowing, he then looks up at you and gives a hopeful wag of his tail. 'May I... have some fun with your bitch too, alpha?', comes his question a moment later, respectfully delivered with a lowered head.";
+		say "     Coming into the library, you notice Carl standing at the foot of the stairs leading up, with Helen circling and sniffing him. The husky soldier waves to you and lowers his head submissively as he sees you looking. 'Alpha', he greets you, then asks, 'What kind of dog did you say Helen originally was? Because she certainly seems very friendly and... interested in my furry self.' Walking over to them, you tell the transformed soldier that Helen once was a German Shepherd. As she hears your voice, the human dog stops sniffing Carl's crotch and almost pounces on you, eagerly greeting her master and[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds] saying 'Carl nice' with a cheeky grin[else] giving a few happy yips and barks, looking from you to Carl[end if]. Eyes glued to Helen's shapely and naked form, especially with the unobstructed view of her slightly swollen pussy she's giving him right now, Carl suddenly feels the urgent need to adjust the growing bulge in his pants. Visibly swallowing, he then looks up at you and gives a hopeful wag of his tail. 'May I... have some fun with your bitch too, alpha?', comes his question a moment later, respectfully delivered with a lowered head.";
 		LineBreak;
-		say "     [bold type]Allow Carl spend some time with Helen?[roman type][line break]";	
+		say "     [bold type]Allow Carl spend some time with Helen?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			LineBreak;
-			say "     [bold type]Do you want to watch?[roman type][line break]";	
+			say "     [bold type]Do you want to watch?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				LineBreak;
 				say "     Stroking Helen's head, you calmly tell her that she should go with Carl for now and obey him. As the naked woman moves over to the husky soldier and starts to sniff and nuzzle his crotch again, he gives you exuberant thanks and leads Helen up the stairs, closely followed by yourself. Soon, Carl has Helen sitting next to him on his mattress near the windows. She smiles at him and yips happily as the soldier reaches out to gently touch her, caressing her soft skin with a paw-hand before cupping Helen's well-rounded breasts. Leaning forward, Carl then lifts her head a finger under her chin and kisses her on the lips ...which immediately devolves into her licking his muzzle and affectionately rubbing her head against his furry cheeks.";
-				say "     After some more playful touching and nuzzling with Helen, Carl sits back and pulls his shirt off, then starts to undo his zipper. Your human dog watches him intently as he does so, yipping eagerly as Carl pushes his pants down and his erect cock comes into view[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds]. Finding the right words after a moment of concentration, Helen even asks 'Carl sex?' [otherwise]. Giving the soldier a questioning bark [end if], to which he answers 'Oh yeah - our alpha allowed me to fuck you good, girl.' Clearly understanding what he was saying, Helen immediately takes position on all fours, legs spread slightly as she prepares herself to be mounted.";
+				say "     After some more playful touching and nuzzling with Helen, Carl sits back and pulls his shirt off, then starts to undo his zipper. Your human dog watches him intently as he does so, yipping eagerly as Carl pushes his pants down and his erect cock comes into view[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds]. Finding the right words after a moment of concentration, Helen even asks 'Carl sex?' [else]. Giving the soldier a questioning bark [end if], to which he answers 'Oh yeah - our alpha allowed me to fuck you good, girl.' Clearly understanding what he was saying, Helen immediately takes position on all fours, legs spread slightly as she prepares herself to be mounted.";
 				WaitLineBreak;
 				say "     The soon fully naked Carl reaches over to touch Helen, letting his hands stray deeper and under her [if lust of Helen >= 7]tattooed [end if]body, cupping her shapely breasts and fondling them some more before moving on to her moist pussy. Helen gives a pleased yip, dripping female juices over his fingers as he spreads her nether lips. Bringing his hand to his muzzle, Carl licks it clean, then pants 'You're so hot, Helen!' and gets into position on his knees behind her. As Carl's hard, canine shaft touches the human's swollen pussy lips for the first time, his animal instincts kick in with a vengeance and the husky drives his cock into her in one deep thrust. Moaning loudly at the tightly gripping feel of her pussy, he immediately starts fucking her in the typical 'doggie-style' position, with Helen panting and yipping in lust as he slides in and out[if lust of Helen >= 4]. 'Feels nice,' she moans, pressing her rear back into Carl's thrusts[end if]. She obviously likes getting mounted by the dog-morph a lot, with her body producing copious amounts of femcum to lube their coupling.";
 				say "     Carl runs his paw-hands over Helen's sexy body, caressing her lovely skin[if lust of Helen >= 7] and running his fingers along her collar tattoo[end if] as he leans over her. This draws added moans and yips of pleasure from the human dog and she pushes herself back into Carl's thrusts, her pussy squeezing along his shaft as he fucks her like a dog. The soldier plays with her breasts and fingers her clit while fucking Helen, whispering in her ear what a good girl she is. As he continues thrusting into Helen in a position that just feels 'right' to him in his canine form, the strong husky soon really takes out all the stops and starts to pound her pussy hard, mounting the young woman with truly animal-like intensity that has her panting nonstop.";
@@ -776,22 +776,22 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 	if debugactive is 1:
 		say "     DEBUG: CARL & XERXES - SEX WALK-IN - HP OF CARL: [hp of Carl], DEXTERITY OF CARL: [dexterity of Carl][line break]";
 	if hp of Carl > 9 and hp of Carl < 30: [normal Carl]
-		say "     Coming into the library, you notice Carl standing at the foot of the stairs leading up, with Xerxes circling and sniffing him. The husky soldier waves to you and asks 'What kind of dog did you say he originally was? Because he certainly seems very friendly and... interested in my furry self.' Walking over to them, you tell the transformed soldier that Xerxes once was a German Shepherd. As he hears your voice, the human dog stops sniffing Carl's crotch and almost pounces on you, eagerly greeting his master and[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds] saying 'Carl nice' with a cheeky grin[otherwise] giving a few happy yips and barks, looking from you to Carl[end if]. Eyes glued to Xerxes's muscular and naked form, especially with the unobstructed view of his asshole and dangling cock he's giving him right now, Carl suddenly feels the urgent need to adjust the growing bulge in his pants. Visibly swallowing, he then looks up at you and gives a hopeful wag of his tail. 'Your... doggie really has a very nice body. Any chance I could have some fun with Xerxes? He certainly seems willing enough.'";
+		say "     Coming into the library, you notice Carl standing at the foot of the stairs leading up, with Xerxes circling and sniffing him. The husky soldier waves to you and asks 'What kind of dog did you say he originally was? Because he certainly seems very friendly and... interested in my furry self.' Walking over to them, you tell the transformed soldier that Xerxes once was a German Shepherd. As he hears your voice, the human dog stops sniffing Carl's crotch and almost pounces on you, eagerly greeting his master and[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds] saying 'Carl nice' with a cheeky grin[else] giving a few happy yips and barks, looking from you to Carl[end if]. Eyes glued to Xerxes's muscular and naked form, especially with the unobstructed view of his asshole and dangling cock he's giving him right now, Carl suddenly feels the urgent need to adjust the growing bulge in his pants. Visibly swallowing, he then looks up at you and gives a hopeful wag of his tail. 'Your... doggie really has a very nice body. Any chance I could have some fun with Xerxes? He certainly seems willing enough.'";
 		LineBreak;
-		say "     [bold type]Allow Carl spend some time with Xerxes?[roman type][line break]";	
+		say "     [bold type]Allow Carl spend some time with Xerxes?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			LineBreak;
-			say "     [bold type]Do you want to watch?[roman type][line break]";	
+			say "     [bold type]Do you want to watch?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				LineBreak;
 				say "     Stroking Xerxes's head, you calmly tell him that he should go with Carl for now and obey him. As the naked man moves over to the husky soldier and starts to sniff and nuzzle his crotch again, Carl gives you his thanks and leads Xerxes up the stairs, closely followed by yourself. Soon, Carl has Xerxes sitting next to him on his mattress near the windows. The human dog smiles at him and yips happily as the soldier reaches out to gently touch him, feeling his soft skin with a paw-hand and caressing his muscled chest. Leaning forward, Carl then lifts his head a finger under his chin and kisses Xerxes on the lips ...which immediately devolves into the human dog licking his muzzle and affectionately rubbing his head against Carl's furry cheeks.";
-				say "     After some more playful touching and nuzzling with Xerxes, Carl sits back and pulls his shirt off, then starts to undo his zipper. Your human dog watches him intently as he does so, yipping eagerly as Carl pushes his pants down and his erect cock comes into view[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds]. Finding the right words after a moment of concentration, Xerxes even asks 'Carl sex?' [otherwise]. Giving the soldier a questioning bark [end if], to which he answers 'Oh yeah - I'm gonna fuck you good, boy.' Clearly understanding what he was saying, Xerxes immediately takes position on all fours, ass raised and legs spread slightly as he prepares himself to be mounted.";
+				say "     After some more playful touching and nuzzling with Xerxes, Carl sits back and pulls his shirt off, then starts to undo his zipper. Your human dog watches him intently as he does so, yipping eagerly as Carl pushes his pants down and his erect cock comes into view[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds]. Finding the right words after a moment of concentration, Xerxes even asks 'Carl sex?' [else]. Giving the soldier a questioning bark [end if], to which he answers 'Oh yeah - I'm gonna fuck you good, boy.' Clearly understanding what he was saying, Xerxes immediately takes position on all fours, ass raised and legs spread slightly as he prepares himself to be mounted.";
 				WaitLineBreak;
 				say "     The soon fully naked Carl reaches over to touch Xerxes, letting his hands stray deeper and under his [if lust of Xerxes >= 7]tattooed [end if]body, feeling his muscles and playing with Xerxes nipples a moment before moving on to his dangling, erect cock. Xerxes gives a pleased yip as the soldier jerks his cock a few times and fondles his balls. Before long, beads of clear pre-cum start to form at the tip of Xerxes cock, to be wiped up by Carl's fingers. Bringing his hand to his muzzle, Carl licks it clean, then pants 'I like your taste, Xerxes. Such a hot guy!' and gets into position on his knees behind him. Quickly getting his cock wet with a bit of spit, the soldier then aims for Xerxes pucker and pushes his hips forward. As Carl's hard, canine shaft touches the human's welcoming hole for the first time, his animal instincts kick in with a vengeance and the husky drives his cock into him in one deep thrust. Moaning loudly at the tightly gripping feel of Xerxes asshole around his manhood, he immediately starts fucking the young man in the typical 'doggie-style' position, with Xerxes panting and yipping in lust as he slides in and out[if lust of Xerxes >= 4]. 'Feels nice,' he moans, pressing his rear back into Carl's thrusts[end if]. He obviously likes getting mounted by the dog-morph a lot, with his body producing copious amounts of precum that drip onto the floor to form a small puddle.";
 				say "     Carl runs his paw-hands over Xerxes's sexy body, caressing his lovely skin[if lust of Xerxes >= 7] and running his fingers along his collar tattoo[end if] as he leans over him. This draws added moans and yips of pleasure from the human dog and he pushes himself back into Carl's thrusts, his boy-pussy squeezing Carl's shaft tightly as he fucks Xerxes like a dog. The soldier plays with his nipples and gives Xerxes a reacharound while fucking him, whispering in his ear what a good boy he is. As he continues thrusting into Xerxes in a position that just feels 'right' to him in his canine form, the strong husky soon really takes out all the stops and starts to pound his ass hard, mounting the young man with truly animal-like intensity that has him panting nonstop.";
@@ -807,22 +807,22 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 			say "     As you silently shake your head, Carl's tail and ears dip a bit in disappointment, then he gives a shrug and says 'Oh well, I just had to ask. He's certainly a pretty sweet pet to have and I see why you don't want to share.' With that, he gives Xerxes an affectionate pat on the head and walks back up the stairs.";
 			now Dexterity of Carl is 100;
 	else if hp of Carl > 29 and hp of Carl < 50: [sub Carl]
-		say "     Coming into the library, you notice Carl standing at the foot of the stairs leading up, with Xerxes circling and sniffing him. The husky soldier waves to you and lowers his head submissively as he sees you looking. 'Alpha', he greets you, then asks, 'What kind of dog did you say Xerxes originally was? Because he certainly seems very friendly and... interested in my furry self.' Walking over to them, you tell the transformed soldier that Xerxes once was a German Shepherd. As he hears your voice, the human dog stops sniffing Carl's crotch and almost pounces on you, eagerly greeting his master and[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds] saying 'Carl nice' with a cheeky grin[otherwise] giving a few happy yips and barks, looking from you to Carl[end if]. Eyes glued to Xerxes's muscular and naked form, especially with the unobstructed view of his asshole and dangling cock he's giving him right now, Carl suddenly feels the urgent need to adjust the growing bulge in his pants. Visibly swallowing, he then looks up at you and gives a hopeful wag of his tail. 'May I... have some fun with your pet too, alpha?', comes his question a moment later, respectfully delivered with a lowered head.";
+		say "     Coming into the library, you notice Carl standing at the foot of the stairs leading up, with Xerxes circling and sniffing him. The husky soldier waves to you and lowers his head submissively as he sees you looking. 'Alpha', he greets you, then asks, 'What kind of dog did you say Xerxes originally was? Because he certainly seems very friendly and... interested in my furry self.' Walking over to them, you tell the transformed soldier that Xerxes once was a German Shepherd. As he hears your voice, the human dog stops sniffing Carl's crotch and almost pounces on you, eagerly greeting his master and[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds] saying 'Carl nice' with a cheeky grin[else] giving a few happy yips and barks, looking from you to Carl[end if]. Eyes glued to Xerxes's muscular and naked form, especially with the unobstructed view of his asshole and dangling cock he's giving him right now, Carl suddenly feels the urgent need to adjust the growing bulge in his pants. Visibly swallowing, he then looks up at you and gives a hopeful wag of his tail. 'May I... have some fun with your pet too, alpha?', comes his question a moment later, respectfully delivered with a lowered head.";
 		LineBreak;
-		say "     [bold type]Allow Carl spend some time with Xerxes?[roman type][line break]";	
+		say "     [bold type]Allow Carl spend some time with Xerxes?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			LineBreak;
-			say "     [bold type]Do you want to watch?[roman type][line break]";	
+			say "     [bold type]Do you want to watch?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				LineBreak;
 				say "     Stroking Xerxes's head, you calmly tell him that he should go with Carl for now and obey him. As the naked man moves over to the husky soldier and starts to sniff and nuzzle his crotch again, Carl gives you his thanks and leads Xerxes up the stairs, closely followed by yourself. Soon, Carl has Xerxes sitting next to him on his mattress near the windows. The human dog smiles at him and yips happily as the soldier reaches out to gently touch him, feeling his soft skin with a paw-hand and caressing his muscled chest. Leaning forward, Carl then lifts his head a finger under his chin and kisses Xerxes on the lips... which immediately devolves into the human dog licking his muzzle and affectionately rubbing his head against Carl's furry cheeks.";
-				say "     After some more playful touching and nuzzling with Xerxes, Carl sits back and pulls his shirt off, then starts to undo his zipper. Your human dog watches him intently as he does so, yipping eagerly as Carl pushes his pants down and his erect cock comes into view[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds]. Finding the right words after a moment of concentration, Xerxes even asks 'Carl sex?' [otherwise]. Giving the soldier a questioning bark [end if], to which he answers 'Oh yeah - I'm gonna fuck you good, boy.' Clearly understanding what he was saying, Xerxes immediately takes position on all fours, ass raised and legs spread slightly as he prepares himself to be mounted.";
+				say "     After some more playful touching and nuzzling with Xerxes, Carl sits back and pulls his shirt off, then starts to undo his zipper. Your human dog watches him intently as he does so, yipping eagerly as Carl pushes his pants down and his erect cock comes into view[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds]. Finding the right words after a moment of concentration, Xerxes even asks 'Carl sex?' [else]. Giving the soldier a questioning bark [end if], to which he answers 'Oh yeah - I'm gonna fuck you good, boy.' Clearly understanding what he was saying, Xerxes immediately takes position on all fours, ass raised and legs spread slightly as he prepares himself to be mounted.";
 				WaitLineBreak;
 				say "     The soon fully naked Carl reaches over to touch Xerxes, letting his hands stray deeper and under his [if lust of Xerxes >= 7]tattooed [end if]body, feeling his muscles and playing with Xerxes nipples a moment before moving on to his dangling, erect cock. Xerxes gives a pleased yip as the soldier jerks his cock a few times and fondles his balls. Before long, beads of clear pre-cum start to form at the tip of Xerxes, to be wiped up by Carl's fingers. Bringing his hand to his muzzle, Carl licks it clean, then pants 'I like your taste, Xerxes. Such a hot guy!' and gets into position on his knees behind him. Quickly getting his cock wet with a bit of spit, the soldier then aims for Xerxes pucker and pushes his hips forward. As Carl's hard, canine shaft touches the human's welcoming hole for the first time, his animal instincts kick in with a vengeance and the husky drives his cock into him in one deep thrust. Moaning loudly at the tightly gripping feel of Xerxes asshole around his manhood, he immediately starts fucking the young man in the typical 'doggie-style' position, with Xerxes panting and yipping in lust as he slides in and out[if lust of Xerxes >= 4]. 'Feels nice,' he moans, pressing his rear back into Carl's thrusts[end if]. He obviously likes getting mounted by the dog-morph a lot, with his body producing copious amounts of precum that drip onto the floor to form a small puddle.";
 				say "     Carl runs his paw-hands over Xerxes's sexy body, caressing his lovely skin[if lust of Xerxes >= 7] and running his fingers along his collar tattoo[end if] as he leans over him. This draws added moans and yips of pleasure from the human dog and he pushes himself back into Carl's thrusts, his boy-pussy squeezing Carl's shaft tightly as he fucks Xerxes like a dog. The soldier plays with his nipples and gives Xerxes a reacharound while fucking him, whispering in his ear what a good boy he is. As he continues thrusting into Xerxes in a position that just feels 'right' to him in his canine form, the strong husky soon really takes out all the stops and starts to pound his ass hard, mounting the young man with truly animal-like intensity that has him panting nonstop.";
@@ -837,7 +837,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 			LineBreak;
 			say "     As you silently shake your head, Carl's tail and ears dip a bit in disappointment. Still, you're his alpha, so he obediently lets the matter drop and goes back to his lookout-spot up on the upper library level.";
 			now Dexterity of Carl is 100;
-											
+
 instead of going up from Grey Abbey Library while (hp of Carl > 9 and hp of Carl < 50 and Carl is in Grey Abbey 2F and (lastfuck of Carl - turns) > 12 and ((libido of Carl > 0 and libido of Carl < 100) or (dexterity of Carl > 0 and dexterity of Carl < 100)) and a random chance of 1 in 4 succeeds):
 	move player to Grey Abbey 2F;
 	if debugactive is 1:
@@ -868,7 +868,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 9 and hp of Carl < 
 	say "     Moving his long tail to lightly rub against Carl's leg, Candy giggles 'Oh, nonono - it's what I can do for YOU, honey. Since you're such a brave and strong man, helping to keep us all safe here, I thought I'd show my full... appreciation for our military. At your service, sir!' Giving a playful salute, the cute coon then pushes right into Carl's personal space, rubbing his body against the larger male's form. Momentarily surprised at the pretty forward move of the effeminate candy striper, Carl gets over it quickly as Candy awakens his libido by rubbing and stroking his crotch. The transformed soldier gives a lusty rumble from his throat and puts his arms around Candy, slipping them under the pink raccoon's skirt and groping his butt.";
 	LineBreak;
 	say "     This is going fast in the direction Candy undoubtedly planned for it.";
-	say "     [bold type]Do you want to watch Carl fuck him?[roman type][line break]";	
+	say "     [bold type]Do you want to watch Carl fuck him?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -906,7 +906,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		say "     DEBUG: CARL & DAVID - WALK-IN - HP OF CARL: [hp of Carl], THIRST OF CARL: [thirst of Carl][line break]";
 	say "     Coming into the library, you walk in on David just finishing a conversation with Carl, then saluting him and starting back towards the stairs down into the bunker. The husky soldier watches his human compatriot walk off, eyes lingering on David's shapely butt for a moment before he notices your presence. Turning to face you, Carl says, 'Hello, my friend. Had a little talk with David and he told me about everything you did for him. Thank you for that. The demon sounded like a nasty customer...' He looks over to watch David walk through the cellar door, then puts a hand-paw on your arm and continues in a low tone. 'I have to admit that - well - some of my canine urges kicked in hard when I met David. He's a damned handsome guy - and just a private, while I'm a corporal, you know. Under me in the pack - err, the military. Half my mind was busy imagining bending him over and pounding his ass while we were talking.'";
 	say "     Carl shrugs and says 'I wasn't sure how he'd take it if I suggested anything, so I kept silent for now. Wouldn't want such a nice guy think I'm feral and just want to get in his pants... even though I really, really do.' He wags his tail subconsciously at that thought, then focuses on you again with a hopeful expression 'Say, you've spent some time with David - what do you think his reaction would be?";
-	say "     [bold type] Think I've got a shot for some no-strings-attached fun with him, or should I better suppress those urges and keep things on a just friendly level?'[roman type][line break]";	
+	say "     [bold type] Think I've got a shot for some no-strings-attached fun with him, or should I better suppress those urges and keep things on a just friendly level?'[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - No strings fun.";
 	say "     ([link]N[as]n[end link]) - Suppress.";
@@ -926,7 +926,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 	if debugactive is 1:
 		say "     DEBUG: CARL & DAVID - SEX WALK-IN - HP OF CARL: [hp of Carl], THIRST OF CARL: [thirst of Carl][line break]";
 	say "     Coming into the library, you see Carl and David stroll along the long rows of bookshelves in the back of the building, talking to one another. From the gestures the husky soldier is making, you suspect their topic is past girlfriends and conquests, something that's confirmed as you walk a bit closer and overhear '...really, she had the most massive tits you can imagine. This big - and all natural, no implants.' David is visibly astounded by the size Carl indicates at that, and it's clear their talk has gotten him quite a bit excited. When the men reach the end of the room and turn to walk on between the bookshelves, you can see a distinct bulge in the front of his pants...";
-	say "     [bold type]Do you want to follow them and observe what will happen next?[roman type][line break]";	
+	say "     [bold type]Do you want to follow them and observe what will happen next?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -968,7 +968,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		say "     DEBUG: CARL & DAVID - SEX WALK-IN - HP OF CARL: [hp of Carl], THIRST OF CARL: [thirst of Carl][line break]";
 	say "     Coming into the library, you see Carl and David at the back of the main room, quietly talking to each other. You can't help but notice how close Carl is leaning to the human soldier as he whispers something, awakening your curiosity about what's going on, so you inconspicuously wander a bit closer. Then, before you've taken more than a few steps, it becomes obvious - as Carl sets his paw-hand on David's crotch and starts to rub it through his pants. The anthro husky leans in and brings his muzzle against his friend's skin just a moment later, then gives David's neck a long and sensuous lick. Quietly observing and getting closer and closer, you're in position to hear their next exchange:[line break]";
 	say "     Carl pants, 'I really wanna fuck you again, soldier. How about we have some fun behind the bookshelves?' David's answer is a bit hard to understand, being more moaned than said, but you think it was 'Yes sir. Can't wait to feel your knot inside me.' One thing is for sure, they're pretty into each other and distracted with all the touching, licking and kissing - so much so that they don't even notice you as first David, then Carl stroll over and walk behind the bookshelves in the back row. Carl's gaze is almost glued to the human soldier's shapely ass, and judging from the big bulge in his uniform pants, he's fully erect and ready to go.";
-	say "     [bold type]Do you want to follow them and observe what will happen next?[roman type][line break]";	
+	say "     [bold type]Do you want to follow them and observe what will happen next?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";

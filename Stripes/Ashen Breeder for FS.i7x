@@ -1,7 +1,7 @@
 Version 3 of Ashen Breeder for FS by Stripes begins here.
 [ Version 3.4 - Adding libido pill as drop item. ]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
- 
+
 "Adds Ashen Breeder to Flexible Survival."
 
 ashenvicsex is a number that varies.
@@ -11,7 +11,7 @@ Section 1 - Monster Responses
 to say ashenbreederdesc:
 	setmongender 5;
 	say "     Before you is another strange mutant, a rather dog-like creature this time. Hir long, floppy ears perk up as she notices you. Sie has [one of]red[or]pink[at random] eyes and looks at you with obvious lust. Sie is completely unclothed and you can see just by looking at hir that sie is built to pleasure whoever sie comes in contact with; hir large breasts drip milk at a steady rate and sie has a cock that makes your mouth water. Hir penis is starkly inhuman, with ridges, bumps, spines and a knot at its base - yet somehow all that seems tantalizing, a source of myriad pleasures to anyone sie fucks. Sie lets out a moan and strokes hirself for a moment before rushing at you.";
- 
+
 to say ashen breeder attack:
 	if cunts of player > 0 and player is impreg_able:
 		if a random chance of 1 in 2 succeeds:
@@ -84,7 +84,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Ashen Breeder"; [Name of your new Monster]
-	now attack entry is "The Ashen Breeder [one of]grabs at you with hir small claws, trying to pull you against hir chest[or]grinds hir cock firmly against you[or]wraps hir claws around a tit and squeezes hard, letting the warm milk splash against your body[or]manages to get a hold of you and pulls you against one of hir nipples. Sie forces your mouth against it and squeezes hard, milk pouring down your throat[at random]."; 
+	now attack entry is "The Ashen Breeder [one of]grabs at you with hir small claws, trying to pull you against hir chest[or]grinds hir cock firmly against you[or]wraps hir claws around a tit and squeezes hard, letting the warm milk splash against your body[or]manages to get a hold of you and pulls you against one of hir nipples. Sie forces your mouth against it and squeezes hard, milk pouring down your throat[at random].";
 	now defeated entry is "[beattheashenbr]"; [Text or say command used when Monster is defeated.]
 	now victory entry is "[Ashen Breeder Attack]" ;
 	now desc entry is "[ashenbreederdesc]"; [ Description of the creature when you encounter it.]
@@ -111,7 +111,7 @@ When Play begins:
 	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2; [ Number of Breasts infection will give you. ]
 	now breast size entry is 6; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]

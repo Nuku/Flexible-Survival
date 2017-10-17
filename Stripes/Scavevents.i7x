@@ -357,7 +357,7 @@ Instead of resolving a Abandoned Cars:
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 	if bonus + dice is greater than difficulty:
-		say "No problem - you grab the lid and wrench it open with [if x is 1]your crowbar[otherwise]your superior strength[end if]. Inside you find several shopping bags, filled with a smelly mess of mostly rotting food. At least you manage to salvage a can of [one of]tomato soup[or]baked beans[or]spaghetti[or]pineapple[at random] and a soda bottle from it.";
+		say "No problem - you grab the lid and wrench it open with [if x is 1]your crowbar[else]your superior strength[end if]. Inside you find several shopping bags, filled with a smelly mess of mostly rotting food. At least you manage to salvage a can of [one of]tomato soup[or]baked beans[or]spaghetti[or]pineapple[at random] and a soda bottle from it.";
 		increase carried of food by 1;
 		increase carried of soda by 1;
 	else:
@@ -464,7 +464,7 @@ Instead of resolving a Plains Scavenging:
 		increase dice by bonus;
 		if difficulty is greater than dice:
 			say "It would seem that negotiations have failed and the mutants now want you gone. By the looks on their faces, it would be wise for you to get lost... and fast!";
-		otherwise :
+		else :
 			say "Coming to a mutually beneficial agreement, you find that the other mutants are willing to give up the item to you in trade for some information. It would seem that there are still some decent [']people['] in the world after all[if petbonus is true]. Though having an intimidating guard by your side may have helped a little[end if]. You quickly add [y] to your satchel and then bob your head gratefully to the others before going about your way.";
 			add y to invent of player;
 	else if x is 3:
@@ -550,9 +550,9 @@ Instead of resolving a Garden Veggies:
 			challenge "Ram";
 		now veggiegardenfight is 0;
 		if fightoutcome >= 10 and fightoutcome <= 19:			[player victory]
-			say "     Having beaten the [if guy is banned]ewe[otherwise]ram[end if], you are startled as a loud bang goes off and a chunk of the fence beside you is blown to pieces. Another sheep, a [if guy is banned]ram[otherwise]ewe[end if] this time, comes out wielding a shotgun. 'Now you back away from my [if guy is banned]husband... er... wife[otherwise]wife... er... husband[end if]... right now, or I won't miss next time.' You don't need to be told twice and flee the garden. You'll have to look elsewhere for food from now on.";
+			say "     Having beaten the [if guy is banned]ewe[else]ram[end if], you are startled as a loud bang goes off and a chunk of the fence beside you is blown to pieces. Another sheep, a [if guy is banned]ram[else]ewe[end if] this time, comes out wielding a shotgun. 'Now you back away from my [if guy is banned]husband... er... wife[else]wife... er... husband[end if]... right now, or I won't miss next time.' You don't need to be told twice and flee the garden. You'll have to look elsewhere for food from now on.";
 		else if fightoutcome >= 20 and fightoutcome <= 29:	[player loss]
-			say "     As you struggle to get back up after having been beaten by the sheep, you are startled as another sheep, this time a [if guy is banned]ram[otherwise]ewe[end if] comes out wielding a shotgun. Seeing the gun, you turn and flee before [if guy is banned]her[otherwise]his[end if] angry mate can shoot you. You'd best not return there... for a whole bunch of reasons.";
+			say "     As you struggle to get back up after having been beaten by the sheep, you are startled as another sheep, this time a [if guy is banned]ram[else]ewe[end if] comes out wielding a shotgun. Seeing the gun, you turn and flee before [if guy is banned]her[else]his[end if] angry mate can shoot you. You'd best not return there... for a whole bunch of reasons.";
 		else if fightoutcome >= 30:					[player fled]
 			say "     As you're making a break for it, you catch a glimpse of another sheep exiting the home, this time with a shotgun. As you push through the back gate, it goes off. 'You stay away, you veggie thief, or we'll fill you full of lead next time.'";
 		now Garden Veggies is resolved;
@@ -634,7 +634,7 @@ name	desc	weight	object
 "shoulder pad"	"An oversized, padded shoulderpad that juts out to the side too much. It won't cover much, but it might help."	2	shoulder pad
 
 shoulder pad is equipment.
-It is not temporary. 
+It is not temporary.
 The AC of shoulder pad is 13.
 The effectiveness of shoulder pad is 13.
 The placement of shoulder pad is "body".
@@ -780,7 +780,7 @@ Instead of resolving a Shattered House:
 				fight;
 	if battleground is "Outside", mallrecall;
 	now Shattered House is resolved;
-	
+
 Section 16 - Abandoned Milk (by cmacleod42)
 
 [Moved to Garrett.i7x file]

@@ -64,7 +64,7 @@ to say siamesecatdesc:
 		say "[swaptomale]";
 	else:										[HERM/NEUTER PLAYER]
 		let flip be a random number from 1 to 2;
-		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. They both start to speak up at once, wanting to be the first to go. They argue for a moment, but decide to flip for it before you can try sneaking away[if flip is 1]. It comes up heads and the male steps forward to confront you[otherwise]. It comes up tails and the female steps forward to confront you[end if].";
+		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. They both start to speak up at once, wanting to be the first to go. They argue for a moment, but decide to flip for it before you can try sneaking away[if flip is 1]. It comes up heads and the male steps forward to confront you[else]. It comes up tails and the female steps forward to confront you[end if].";
 		if flip is 1:
 			increase dex entry by 2; [as if female before swap]
 			decrease wdam entry by 1;
@@ -89,25 +89,25 @@ to say siameseattack:
 		increase hp of player by absorbby;
 		let T be a random number between 1 and 4;
 		if T is 1:
-			say "The [siamesegender] feline in front of you charges in with [if siamgender is male]his[otherwise]her[end if] claws[if siamgender is male]. He[otherwise]. She[end if] growls angrily and slashes at you! You take [special-style-2][dammy][roman type] damage!";
+			say "The [siamesegender] feline in front of you charges in with [if siamgender is male]his[else]her[end if] claws[if siamgender is male]. He[else]. She[end if] growls angrily and slashes at you! You take [special-style-2][dammy][roman type] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
-			say "  After its attack, it lowers its stance and the [if siamgender is male]female[otherwise]male[end if] cat twirls across [if siamgender is male]his[otherwise]her[end if] back and moves to the forefront. The second feline charges in to attack you now.";
+			say "  After its attack, it lowers its stance and the [if siamgender is male]female[else]male[end if] cat twirls across [if siamgender is male]his[else]her[end if] back and moves to the forefront. The second feline charges in to attack you now.";
 		if T is 2:
 			say "The [siamesegender] cat attacking you sends a whirling kick against your side! You take [special-style-2][dammy][roman type] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
-			say "  As [if siamgender is male]his[otherwise]her[end if] flip ends, the other cat is already spinning forward with them, giving you a new attacker to face.";
+			say "  As [if siamgender is male]his[else]her[end if] flip ends, the other cat is already spinning forward with them, giving you a new attacker to face.";
 		if T is 3:
 			say "The [siamesegender] feline strikes your chest with and open-palmed strike, knocking out your breath and forcing you to step back! You take [special-style-2][dammy][roman type] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
-			say "  As you try to recover, [if siamgender is male]he[otherwise]she[end if] does a backflip while the other slides under [if siamgender is male]him[otherwise]her[end if], taking the forefront in the attack.";
+			say "  As you try to recover, [if siamgender is male]he[else]she[end if] does a backflip while the other slides under [if siamgender is male]him[else]her[end if], taking the forefront in the attack.";
 		if T is 4:
 			say "With an agile slide behind you, the [siamesegender] one moves behind you and grabs your arms, twisting them painfully behind you! You take [special-style-2][dammy][roman type] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
-			say "This leaves you open at the front for the [if siamgender is male]female[otherwise]male[end if] to strike and lead the attack against you.";
+			say "This leaves you open at the front for the [if siamgender is male]female[else]male[end if] to strike and lead the attack against you.";
 		if siamgender is male:
 			say "[line break][swaptofemale]";
 		else:
@@ -116,11 +116,11 @@ to say siameseattack:
 	if T is 1:
 		say "With a quick spin through the air, the [siamesegender] cat kicks your side!";
 	if T is 2:
-		say "Growling menacingly, the [siamesegender] feline rakes [if siamgender is male]his[otherwise]her[end if] claws across your chest!";
+		say "Growling menacingly, the [siamesegender] feline rakes [if siamgender is male]his[else]her[end if] claws across your chest!";
 	if T is 3:
 		say "In a flurry of measured blows, the [siamesegender] feline manages to make several quick strikes against you!";
 	if T is 4:
-		say "The feline drops quickly to the ground and sweeps with [if siamgender is male]his[otherwise]her[end if] leg, knocking you to the ground. You try to get back up quickly, but have bruised your [one of]knee[or]shoulder[or]ribs[or]elbow[or]hip[at random] when you fell!";
+		say "The feline drops quickly to the ground and sweeps with [if siamgender is male]his[else]her[end if] leg, knocking you to the ground. You try to get back up quickly, but have bruised your [one of]knee[or]shoulder[or]ribs[or]elbow[or]hip[at random] when you fell!";
 
 
 to say swaptomale:
@@ -300,14 +300,14 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Siamese Cat"; [Name of your new Monster]
-	now attack entry is "[siameseattack]"; 
+	now attack entry is "[siameseattack]";
 	now defeated entry is "[beatthesiamesecat]";
 	now victory entry is "[losetosiamesecat]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[siamesecatdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "a feline head with large ears and a darker area over your muzzle and face"; [ Face description, format as the text "Your face is (your text)."]
 	now body entry is "slender and feline in form, with sharp claws on your paw-like hands"; [ Body Description, format as the text "Your body is (your text)."]
 	now skin entry is "smooth, creamy fur which grows darker at the ends of your limbs to cover your"; [ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a long, slender cat's tail covered in dark fur."; [ Tail description, write a whole Sentence or leave blank. ] 
+	now tail entry is "You have a long, slender cat's tail covered in dark fur."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "russet brown"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shifts into a feline muzzle. Your ears become large and dark coloured, as does your muzzle and much of your face"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it becomes slender and vaguely feline in form. Your arms end in dexterous paws with sharp, retractable claws"; [ body change text. format as "Your body feels funny as (your text)." ]
@@ -321,7 +321,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 39; 
+	now hp entry is 39;
 	now lev entry is 5; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
 	now wdam entry is 6; [Amount of Damage monster Does when attacking.]
 	now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
@@ -332,8 +332,8 @@ When Play begins:
 	now breast size entry is 3; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex=male, usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 7; 
-	now cunt width entry is 3; 
+	now cunt length entry is 7;
+	now cunt width entry is 3;
 	now libido entry is 40; [ Will raise the player's libido towards this amount]
 	now loot entry is ""; [ Dropped item, if any ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -354,12 +354,12 @@ when play ends:
 				say "     As your mind starts to unravel, you set off across the city, wandering in search of something, though you know not what. You somehow find your way back to Sven and have a long bout of wild, lustful sex with the feline[if hp of Sven < 8], completing his transformation into a hybrid snow leopard/siamese cat[end if]. Together, you and he set off into the city one cooler evening and come across another pair of felines who seem familiar to you and you are drawn to them. As you get closer, you can see that the conjoined cats are having some playful fun together.";
 				say "     As you approach them, the male finishes up in his conjoined twin. Noticing you, they smile and get up. 'Oh, it looks like you've found a special friend,' they purr as they move to snuggle with you both. They nuzzle and caress your bodies, seeming to know just where to touch to get you excited. Looking into Sven's soft, blue eyes you feel yourself compelled to be with him.";
 			else:
-				say "     As your mind starts to unravel, you set off across the city, wandering in search of something, though you know not what. You eventually come across a pair of felines who seem familiar to you and are drawn to them. As you get closer, you can see that the conjoined cats have a [if cunts of player > 0 and cocks of player > 0]herm[else if cunts of player > 0]male[else if cocks of player > 0]female[otherwise]neuter[end if] person under them and are in the midst of transforming them.";
-				say "     As you approach, the conjoined pair look up and smile. 'Just in time,' they purr, motioning for you towards the changing individual as they become more like a Siamese cat[if cocks of player > 0]. She[otherwise]. He[end if] gets up slowly at first; but, upon noticing you, seems to feel the same compulsion to be close to you as you are feeling.";
+				say "     As your mind starts to unravel, you set off across the city, wandering in search of something, though you know not what. You eventually come across a pair of felines who seem familiar to you and are drawn to them. As you get closer, you can see that the conjoined cats have a [if cunts of player > 0 and cocks of player > 0]herm[else if cunts of player > 0]male[else if cocks of player > 0]female[else]neuter[end if] person under them and are in the midst of transforming them.";
+				say "     As you approach, the conjoined pair look up and smile. 'Just in time,' they purr, motioning for you towards the changing individual as they become more like a Siamese cat[if cocks of player > 0]. She[else]. He[end if] gets up slowly at first; but, upon noticing you, seems to feel the same compulsion to be close to you as you are feeling.";
 			if tailname of player is "Siamese Cat":
-				say "     Drawn by some strange need, you wrap your arms around one another, licking and kissing. Your tails slowly intertwine and, as the tips touch, you can feel them start to fuse together. The pleasure of this causes you both to orgasm violently. You can feel yourself becoming linked to [if hp of Sven < 8]the hybrid Sven[else if hp of Sven is 8 or hp of Sven is 9]the sexy snow leopard[else if hp of Sven is 10]the colourful snow leopard[otherwise]the new kitty[end if], sharing some sensation with them, as well as a deep, emotional bonding. You two are individuals, but also one, partners and lovers meant to be together and now inseparable.";
+				say "     Drawn by some strange need, you wrap your arms around one another, licking and kissing. Your tails slowly intertwine and, as the tips touch, you can feel them start to fuse together. The pleasure of this causes you both to orgasm violently. You can feel yourself becoming linked to [if hp of Sven < 8]the hybrid Sven[else if hp of Sven is 8 or hp of Sven is 9]the sexy snow leopard[else if hp of Sven is 10]the colourful snow leopard[else]the new kitty[end if], sharing some sensation with them, as well as a deep, emotional bonding. You two are individuals, but also one, partners and lovers meant to be together and now inseparable.";
 			else:
-				say "     Drawn by some strange need, you wrap your arms around one another, licking and kissing. The Siamese felines run their paws over your body and play with themselves, wiping their juices across your rear, coaxing you to grow a Siamese cat tail. Your tail slowly intertwines with [if hp of Sven > 0 and hp of Sven < 49]Sven[otherwise]the single feline[end if] and, as the tips touch, you can feel them start to fuse together. The pleasure of this causes you both to orgasm violently. You can feel yourself becoming linked to [if hp of Sven < 8]the hybrid Sven[else if hp of Sven is 8 or hp of Sven is 9]the sexy snow leopard[else if hp of Sven is 10]the colourful snow leopard[otherwise]the new kitty[end if], sharing some sensation with them, as well as a deep, emotional bonding. You two are individuals, but also one, partners and lovers meant to be together and now inseparable.";
+				say "     Drawn by some strange need, you wrap your arms around one another, licking and kissing. The Siamese felines run their paws over your body and play with themselves, wiping their juices across your rear, coaxing you to grow a Siamese cat tail. Your tail slowly intertwines with [if hp of Sven > 0 and hp of Sven < 49]Sven[else]the single feline[end if] and, as the tips touch, you can feel them start to fuse together. The pleasure of this causes you both to orgasm violently. You can feel yourself becoming linked to [if hp of Sven < 8]the hybrid Sven[else if hp of Sven is 8 or hp of Sven is 9]the sexy snow leopard[else if hp of Sven is 10]the colourful snow leopard[else]the new kitty[end if], sharing some sensation with them, as well as a deep, emotional bonding. You two are individuals, but also one, partners and lovers meant to be together and now inseparable.";
 			say "     Joined together, you are able to enjoy one another's sensations and orgasms, often going off simultaneously. As well, sharing in one another, you both shift to become alike, complementary twins and resistant to more changes as each is maintained by the other[if hp of Sven > 0 and hp of Sven < 50]As a conjoined pair, you and Sven become a mix of slender Siamese cats and sexy snow leopards[end if][if lust of Sven is 1] with baby blue markings[else if hp of Sven is 2] with golden yellow markings[end if]. The twins who first changed you become frequent lovers when you're not on the prowl for others to make into paired felines.";
 		else:
 			if hp of Sven > 7 and hp of Sven < 30:
@@ -369,22 +369,22 @@ when play ends:
 					say "     You both mrowl loudly in orgasm as the pleasure of this rushes through you. You can feel yourself becoming linked to your pet - no, your lover and mate - sharing some sensation with them, as well as a deep, emotional bonding. You both remain individuals, but are also one. You are partners and lovers meant to be together and now inseparable.";
 					say "     You kiss and nuzzle Sven as you start to change, picking up his snow leopard pattern and he picks up some siamese traits, until eventually you becoming paired twins. Joined together, you are able to enjoy one another's sensations and orgasms, often going off simultaneously. Your minds remain largely intact and distinct, but you are able to silently share thoughts as you would words.";
 					say "     Sven is briefly surprised by all this, but the love and adoration he's shared for you that you can now feel tells you how much he loves being one with you. You and your lover, now permanently joined, adjust quickly. As you should, for you are whole now.";
-					say "     You do end up taking on Sven's pet-like nature, making you become a loving pet, eager to serve your owner as Sven does. When you are found by [if hp of Sven is 10 or coonsex > 0]Candy[else if pigfucked > 3]Philip[else if Sandra is in the bunker]Sandra[otherwise]your zookeeper friend[end if], you are taken to their home to become a pair of lustful, loving pets for them. As lustful pets, you are there to satisfy their sexual desires and you submit to playing with their friends eagerly. As conjoined kitties, there are so many ways to please your new owner and their friends. Soon enough, you and Sven are together at the zoo, sharing in the joy of breeding with the great cats as your own watches with a smile.";
+					say "     You do end up taking on Sven's pet-like nature, making you become a loving pet, eager to serve your owner as Sven does. When you are found by [if hp of Sven is 10 or coonsex > 0]Candy[else if pigfucked > 3]Philip[else if Sandra is in the bunker]Sandra[else]your zookeeper friend[end if], you are taken to their home to become a pair of lustful, loving pets for them. As lustful pets, you are there to satisfy their sexual desires and you submit to playing with their friends eagerly. As conjoined kitties, there are so many ways to please your new owner and their friends. Soon enough, you and Sven are together at the zoo, sharing in the joy of breeding with the great cats as your own watches with a smile.";
 					if cunts of player > 0 and "Sterile" is not listed in the feats of player:
-						say "     Sven fucks you often, pumping his feline seed into you until you bear him kittens. These lovely felines are joined together at the tail as you are. They, and their many siblings to come, grow into lovely pet pairs much like their parents[if hermaphrodite is banned]. They come in a mix of couples, sometimes matching males or females, or as a mixed, breeding pair[otherwise]. They come in a mix of couples, any combination of males, females and herms[end if]. These sexy felines always grow to become horny pets and sextoys for their owners, coming in high demand for their unique nature and lustful servitude, many sold for a lot of money by your owner. You and Sven are always very proud of them as they head off into their new lives of sex and servitude, knowing they'll enjoy the same satisfaction as you do."; 
+						say "     Sven fucks you often, pumping his feline seed into you until you bear him kittens. These lovely felines are joined together at the tail as you are. They, and their many siblings to come, grow into lovely pet pairs much like their parents[if hermaphrodite is banned]. They come in a mix of couples, sometimes matching males or females, or as a mixed, breeding pair[else]. They come in a mix of couples, any combination of males, females and herms[end if]. These sexy felines always grow to become horny pets and sextoys for their owners, coming in high demand for their unique nature and lustful servitude, many sold for a lot of money by your owner. You and Sven are always very proud of them as they head off into their new lives of sex and servitude, knowing they'll enjoy the same satisfaction as you do.";
 				else:
 					say "     At times, you feel that something is not quite right or that you are incomplete. But when you feel that way, you need only put your arms around your pet and you feel much better. The feeling never quite goes away, but a little romp with him makes everything a little brighter. You know he loves and adores you, and will never leave you, and this soothes the strange longing.";
 [			else if hp of Sven >= 30 and hp of Sven < 50:
 				say "***Ending w/confident Sven.";]
 			else:
-				say "     After your rescue, you are eventually cleared by the military and released with many others. You wander from place to place for a time before settling down when you meet a [if cunts of player > 0 and cocks of player > 0]herm[else if cunts of player > 0]male[else if cocks of player > 0]female[otherwise]neuter[end if] feline that you hit it off with[if cocks of player > 0]. She[otherwise]. He[end if] is only partially infected, having gained ears and a tail as their only visible alterations.";
-				say "     You move in together and have a pleasant life of indolence and sex [if cocks of player > 0]. She[otherwise]. He[end if] is well-to-do, so you can take it easy. Which suits the feline in you just fine.";
+				say "     After your rescue, you are eventually cleared by the military and released with many others. You wander from place to place for a time before settling down when you meet a [if cunts of player > 0 and cocks of player > 0]herm[else if cunts of player > 0]male[else if cocks of player > 0]female[else]neuter[end if] feline that you hit it off with[if cocks of player > 0]. She[else]. He[end if] is only partially infected, having gained ears and a tail as their only visible alterations.";
+				say "     You move in together and have a pleasant life of indolence and sex [if cocks of player > 0]. She[else]. He[end if] is well-to-do, so you can take it easy. Which suits the feline in you just fine.";
 				if tailname of player is "Siamese Cat":
-					say "     Over time, you do start to feel like something is missing though and you can't tell what. But one late night, after a particularly energetic romp with your lover and mate, it clicks. You nuzzle and nibble their ears, whispering that you love them as you bring [if cocks of player > 0]her[otherwise]his[end if] tailtip to yours. Moments later, they start to fuse together and you are joined at the end of your tails.";
+					say "     Over time, you do start to feel like something is missing though and you can't tell what. But one late night, after a particularly energetic romp with your lover and mate, it clicks. You nuzzle and nibble their ears, whispering that you love them as you bring [if cocks of player > 0]her[else]his[end if] tailtip to yours. Moments later, they start to fuse together and you are joined at the end of your tails.";
 					say "     You both mrowl loudly in orgasm as the pleasure of this rushes through you. You can feel yourself becoming linked to your mate, sharing some sensation with them, as well as a deep, emotional bonding. You both remain individuals, but are also one. You are partners and lovers meant to be together and now inseparable.";
-					say "     You kiss and nuzzle your lover as [if cocks of player > 0]she[otherwise]he[end if] starts to change, becoming more feline like you and soon becomes your paired twin. Joined together, you are able to enjoy one another's sensations and orgasms, often going off simultaneously. Your minds remain intact and distinct, but you are able to silently share thoughts as you would words.";
+					say "     You kiss and nuzzle your lover as [if cocks of player > 0]she[else]he[end if] starts to change, becoming more feline like you and soon becomes your paired twin. Joined together, you are able to enjoy one another's sensations and orgasms, often going off simultaneously. Your minds remain intact and distinct, but you are able to silently share thoughts as you would words.";
 					say "     Your partner is briefly surprised by all this, but the loving bond you share soon overcomes the shock of the unforeseen change. You and your lover, now permanently joined, adjust quickly. As you should, for you are whole now.";
 				else:
-					say "     At times, you feel that something is not quite right or that you are incomplete. But when you feel that way, you need only put your arms around your lover and you feel much better. The feeling never quite goes away, but a little kiss or lick from [if cocks of player > 0]her[otherwise]him[end if] makes everything a little brighter.";
+					say "     At times, you feel that something is not quite right or that you are incomplete. But when you feel that way, you need only put your arms around your lover and you feel much better. The feeling never quite goes away, but a little kiss or lick from [if cocks of player > 0]her[else]him[end if] makes everything a little brighter.";
 
 Siamese Cats ends here.

@@ -231,7 +231,7 @@ to detailbirth:
 			say "     Your [descr] sex almost laughs at the idea of birth.  You recline and concentrate and can feel your mutated [bodytype of player] body easily slipping the [if ovipregnant is true]large egg[else]child[end if] free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
 			increase morale of player by 5;
 		else if cunt width of player is greater than 3:
-			say "      You begin to realize why labor is called that, huffing and pushing as best as you can, slowly nudging the [if ovipregnant is true]large egg[else]newborn[end if] from your [descr] birthing canal.  It is not as painful as the movies make out, and after about twenty minutes, the [if ovipregnant is true]egg[else]child[end if] is ready to be held by you.  You feel tired, but whole, and satisfied.";
+			say "     You begin to realize why labor is called that, huffing and pushing as best as you can, slowly nudging the [if ovipregnant is true]large egg[else]newborn[end if] from your [descr] birthing canal.  It is not as painful as the movies make out, and after about twenty minutes, the [if ovipregnant is true]egg[else]child[end if] is ready to be held by you.  You feel tired, but whole, and satisfied.";
 			increase morale of player by 5;
 		else:
 			say "     Horrible pain lances through your body as your [descr] sex disgorges the [if ovipregnant is true]large egg[else]child[end if] only after what feels like hours of struggle.  Your [bodydesc of player] body covered in sweat, you are left exhausted and winded, but bearing a newborn.";
@@ -363,7 +363,7 @@ Chapter 3-1 - Impregnation and Ovi-Impreg Subroutines
 To impregnate with (x - text):
 	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
 		stop the action;
-	if cunts of player is 0 and "MPreg" is listed in feats of player and ( level of Velos is  1 and hp of Velos > 2 ):
+	if cunts of player is 0 and "MPreg" is listed in feats of player and ( level of Velos is 1 and hp of Velos > 2 ):
 		stop the action;
 	if "Cheerbreeder" is listed in feats of player:
 		if "Selective Mother" is listed in feats of player:

@@ -46,7 +46,7 @@ When Play begins:
 	now name entry is "Centaur Mare";
 	now attack entry is "[one of]The centaur mare fires her bow at you, piercing your side with an arrow![or]The centaur mare charges at you, knocking you to the ground roughly![or]The centaur rears up and manages to land a heavy hoof on your shoulder![or]The centaur swings a punch at you, bashing you in the jaw![or]The mare turns around and whinnies, flicking her tail and winking her equine pussy at you tantalizingly![at random]";
 	now defeated entry is "[beatthecentaurmare]";
-	now victory entry is  "[losetocentaurmare]";
+	now victory entry is "[losetocentaurmare]";
 	now desc entry is "[centaurmaredesc]";
 	now face entry is "mostly human at first glance, but with a broad flaring nose and pointed ears. It has a female cast to it";
 	now body entry is "that of a centaur, with a human and leanly athletic upper torso. Slender and tapered at the waist, it sensually evokes the female form. Your arms are slender but muscular, and very human in appearance. Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of shiny black hooves";
@@ -66,18 +66,18 @@ When Play begins:
 	now cha entry is 14;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 32; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2; [ Number of Breasts infection will give you. ]
 	now breast size entry is 3; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 30;
-	now cunt width entry is 21; 
+	now cunt width entry is 21;
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
 	now loot entry is "centaur hair";
 	now lootchance entry is 33; [ Chance of loot dropping 0-100 ]
@@ -94,4 +94,4 @@ Section 3 - Endings
 
 [See Centaur Stallion for endings]
 
-Centaur Mare for FS ends here. 
+Centaur Mare for FS ends here.

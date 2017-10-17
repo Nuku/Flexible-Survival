@@ -11,7 +11,7 @@ to say Cowboy_Wins:
 to say Cowboy_Loses:
 	say "     Pretty beat up, the cowboy raises his hands in a placating gesture. 'Okay okay - you win, you bastard. Let's get this over with.' With that, he sets his cowboy hat on the ground, then undoes his jeans and slides them down over his legs. As he does so, the true reason for the bulge in his pants comes into sight - there's a pair of small and perky breasts on his pubic mound, just a bit up and to the sides of a very nice pussy.";
 	if cocks of player > 0 or cunts of player > 0: [male/female/herm]
-		say "     [bold type]So, do you want to have sex with him?[roman type][line break]";	
+		say "     [bold type]So, do you want to have sex with him?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -77,13 +77,13 @@ When Play begins:
 	now area entry is "Nowhere";        [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;         [ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;          [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 0;          [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
 	now breast size entry is 4;         [Size of breasts infection will try to attain ]
 	now male breast size entry is 2;    [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;        [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8;          [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 12;        [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 8;          [ Width of female sex infection will try and give you ]
 	now libido entry is 40;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "cowboy milk";    [ Loot monster drops, ]
 	now lootchance entry is 25;         [ Chance of loot dropping 0-100 ]

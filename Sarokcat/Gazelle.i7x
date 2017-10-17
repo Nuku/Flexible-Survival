@@ -49,7 +49,7 @@ To say gazelle loss:
 						say "Invalid choice. Type [link]1[end link] to fuck her, [link]2[end link] to ride her cock or [link]3[end link] to let her go.";
 				if calcnumber is 1:
 					say "[gazellefuck]";
-				otherwise if calcnumber is 2:
+				else if calcnumber is 2:
 					say "[gazelleride]";
 				else:
 					say "     Still upset with the gazelle person for attacking you, you give her a hard smack on her rear, making her tail twitch, as you send her on her way.";
@@ -64,10 +64,10 @@ To say gazelle loss:
 
 
 to say gazellefuck:
-	say "     Moving atop the strange person, you grab the weakened gazelle's arms and push her onto all fours. Freeing your cock, you bring it into position under her flagging tail, making her release a moaning bleat as you brush it against her wet pussy. She starts to calm down a little, perhaps realizing you're not going to eat her. Her fearful panting is replaced by lustful moaning as you continue to fuck her, driving your cock into her again and again. Pretty confident that she's not going to make a run for it now, you move your hands to her chest, fondling her cute breasts and teasing her nipples. When you feel your orgasm approaching, you move your hands up to her horns and grip them tightly as you slam into her quickly as you drain your balls into the creature. [if cock width of player > 20]Your massive load leaves the poor creature full and bloated with your seed as she weakly staggers away[otherwise if cock width of player > 10]Your large load leaves a noticeable bump in her tummy as she heads off[otherwise]Some of your cum leaks from the creature's pussy as she heads off[end if] in search of the rest of her herd.";
+	say "     Moving atop the strange person, you grab the weakened gazelle's arms and push her onto all fours. Freeing your cock, you bring it into position under her flagging tail, making her release a moaning bleat as you brush it against her wet pussy. She starts to calm down a little, perhaps realizing you're not going to eat her. Her fearful panting is replaced by lustful moaning as you continue to fuck her, driving your cock into her again and again. Pretty confident that she's not going to make a run for it now, you move your hands to her chest, fondling her cute breasts and teasing her nipples. When you feel your orgasm approaching, you move your hands up to her horns and grip them tightly as you slam into her quickly as you drain your balls into the creature. [if cock width of player > 20]Your massive load leaves the poor creature full and bloated with your seed as she weakly staggers away[else if cock width of player > 10]Your large load leaves a noticeable bump in her tummy as she heads off[else]Some of your cum leaks from the creature's pussy as she heads off[end if] in search of the rest of her herd.";
 
 to say gazelleride:
-	say "     Moving atop the strange person, you grab the weakened gazelle's arms and push her onto her back. Slipping off your pack and any obstructing clothes, you grind your [if cunts of player > 0]wet pussy[otherwise]ass[end if] onto her crotch, making her release a moaning bleat as you brush it against her stiffening cock. She starts to calm down a little, perhaps realizing you're not going to eat her. Her fearful panting is replaced by lustful moaning as you continue to ride her erection, driving her cock into you again and again. Pretty confident that she's not going to struggle to get away now that she's bucking into you, you move your hands to her chest, fondling her cute breasts and teasing her nipples. Feeling your climax approaching, you ride her harder, squeezing your [if cunts of player > 0]cunt[otherwise]asshole[end if] down around her cock until you get her to drain her balls into you. [if cunts of player > 0 and cunt length of player < 5]You weren't able to get much of her elongated, animalistic penis into you, but you still cum hard as her seed fills your womb[otherwise if cunts of player > 0 and cunt length of player > 15]Even though her elongated, animalistic penis was not enough to fill your deep pussy, you still cum hard as her seed fills the depths of your vagina[otherwise if cunts of player > 0]You cum hard as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your womb[otherwise if cocks of player > 0]You cum hard as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your bowels[otherwise]You moan in satisfaction as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your bowels[end if]. After she'd been drained of her seed[if cocks of player > 0 or cunts of player > 0] and your orgasm subsides[end if], you release her and watch her rush off in search of the rest of her herd.[impregchance]";
+	say "     Moving atop the strange person, you grab the weakened gazelle's arms and push her onto her back. Slipping off your pack and any obstructing clothes, you grind your [if cunts of player > 0]wet pussy[else]ass[end if] onto her crotch, making her release a moaning bleat as you brush it against her stiffening cock. She starts to calm down a little, perhaps realizing you're not going to eat her. Her fearful panting is replaced by lustful moaning as you continue to ride her erection, driving her cock into you again and again. Pretty confident that she's not going to struggle to get away now that she's bucking into you, you move your hands to her chest, fondling her cute breasts and teasing her nipples. Feeling your climax approaching, you ride her harder, squeezing your [if cunts of player > 0]cunt[else]asshole[end if] down around her cock until you get her to drain her balls into you. [if cunts of player > 0 and cunt length of player < 5]You weren't able to get much of her elongated, animalistic penis into you, but you still cum hard as her seed fills your womb[else if cunts of player > 0 and cunt length of player > 15]Even though her elongated, animalistic penis was not enough to fill your deep pussy, you still cum hard as her seed fills the depths of your vagina[else if cunts of player > 0]You cum hard as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your womb[else if cocks of player > 0]You cum hard as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your bowels[else]You moan in satisfaction as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your bowels[end if]. After she'd been drained of her seed[if cocks of player > 0 or cunts of player > 0] and your orgasm subsides[end if], you release her and watch her rush off in search of the rest of her herd.[impregchance]";
 
 
 Section 2 - Monster Insertion
@@ -81,7 +81,7 @@ When Play begins:
 	now name entry is "Gazelle";
 	now attack entry is "[one of]She leaps forward, slamming into you roughly[or]Lowering her head, she points her sharp horns at you as she charges.[or]Leaping up she lashes out at you with her hoof-like feet![or]Dancing forward she lashes out with her hoof like hand.[or]Springing forward, she slams her body into you, knocking you down.[at random]";
 	now defeated entry is "[gazelle loss]";
-	now victory entry is  "[gazelle attack]";
+	now victory entry is "[gazelle attack]";
 	now desc entry is "[mongendernum 5]     Wandering down the zoo paths, you come across a small group of rather human-like gazelles. Their short muzzles and sharp horns move happily as they graze on the topiary with thin cocks sprouting from between their legs, above their obviously female openings, with soft pert breasts resting on their chests. Spotting you they immediately freeze. Before you can even open your mouth to speak, most of them bolt in different directions, although one of them charges right at you, intent on protecting the rest of the herd! You have no choice but to brace yourself for battle!";
 	now face entry is "a short gazelle-like muzzle, it being a blend of gazelle and human features, with large bright eyes and sharp backwards pointing horns rising above your head"; [You have a (your text) face."]
 	now body entry is "lean and lithe, your legs are well built for leaping and jumping as you balance on your hoof-like feet, your arms narrow and slender and the tips of your fingers covered in hoof-like nails";[ Body Description, format as the text "Your Body is (your text)"]
@@ -100,7 +100,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Both";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 30;  
+	now hp entry is 30;
 	now lev entry is 3;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Zoo";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -111,17 +111,17 @@ When Play begins:
 	now breast size entry is 4;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 9;  
-	now cunt width entry is 4;  
+	now cunt length entry is 9;
+	now cunt width entry is 4;
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]lean[or]slender[at random]";
 	now type entry is "gazelle";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  
+	now non-infectious entry is false;
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 

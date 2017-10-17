@@ -38,7 +38,7 @@ To cancel glulx hyperlink request in the/-- main window:
 
 To request glulx hyperlink event in the/-- status window:
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)  && gg_statuswin) glk_request_hyperlink_event(gg_statuswin); -)
-	
+
 To cancel glulx hyperlink request in the/-- status window:
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0) && gg_statuswin) glk_cancel_hyperlink_event(gg_statuswin); -)
 
@@ -95,7 +95,7 @@ To say end link -- ending say_link -- running on:
 		say "[hyperlinked text]";
 	else:
 		say "[set link (hyperlink index)][hyperlinked text][terminate link]";
-	
+
 To say set link (N - a number):
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)) glk_set_hyperlink({N}); -)
 
@@ -112,14 +112,14 @@ The current hyperlink ID is a number that varies.
 
 Section - Selecting replacement command
 
-A hyperlink processing rule (this is the default command replacement by hyperlinks rule):  
+A hyperlink processing rule (this is the default command replacement by hyperlinks rule):
 	now the glulx replacement command is entry (current hyperlink ID) of the hyperlink list;
 	rule succeeds.
 
 
 Chapter 2 - Replace Flexible Windows hyperlink handling if necessary (for use with Flexible Windows by Jon Ingold)
 
-Section - Code for placing links (replaces Section - Placing hyperlinks in  Flexible Windows by Jon Ingold)
+Section - Code for placing links (replaces Section - Placing hyperlinks in Flexible Windows by Jon Ingold)
 
 The hyperlink list is a list of indexed texts variable.
 
@@ -130,12 +130,12 @@ To say link -- beginning say_link -- running on:
 	now the hyperlinked text is "";
 	now the hyperlinked command is "";
 	start capturing text.
-	
+
 To say as -- continuing say_link -- running on:
 	stop capturing text;
 	now the hyperlinked text is the substituted form of "[captured text]";
 	start capturing text;
-	
+
 To say end link -- ending say_link -- running on:
 	let hyperlink index be a number;
 	stop capturing text;
@@ -151,7 +151,7 @@ To say end link -- ending say_link -- running on:
 		add hyperlinked command to hyperlink list;
 		let hyperlink index be the number of entries of hyperlink list;
 	say "[set link (hyperlink index)][hyperlinked text][terminate link]";
-	
+
 To say set link (N - a number):
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)) glk_set_hyperlink({N}); -)
 
@@ -161,7 +161,7 @@ To say terminate link:
 
 Section - Code for selecting the replacement command (replaces Section - Selecting the replacement command in Flexible Windows by Jon Ingold)
 
-A hyperlink processing rule (this is the default command replacement by hyperlinks rule):  
+A hyperlink processing rule (this is the default command replacement by hyperlinks rule):
 	now the glulx replacement command is entry (current hyperlink ID) of the hyperlink list;
 	rule succeeds.
 
@@ -174,7 +174,7 @@ Previewing the hyperlink list is an action out of world applying to nothing. Und
 Carry out previewing the hyperlink list:
 	say "The hyperlink command list is as follows:[paragraph break]";
 	Display the hyperlink list using indices.
-	
+
 To display (L - a list of indexed texts) using indices:
 	let count be 1;
 	repeat with item running through L:
@@ -191,7 +191,7 @@ Previewing the hyperlink list is an action out of world applying to nothing. Und
 Carry out previewing the hyperlink list:
 	say "The hyperlink command list is as follows:[paragraph break]";
 	Display the hyperlink list using indices.
-	
+
 To display (L - a list of indexed texts) using indices:
 	let count be 1;
 	repeat with item running through L:
@@ -258,7 +258,7 @@ To place hyperlinks in windows other than the main window using Flexible Windows
 
 Section: Internals
 
-Internally, Glulx refers to each link only by a numeric identifier. Inline Hyperlinks keys that identifier to a list of indexed texts (the "hyperlink list"); for example, if the ID for a given link is 10, Inline Hyperlinks will look up the 10th entry in the list for the linked command. Commands are not repeated, so if we repeatedly print a link with the replacement command "go north," the same number will be assigned to the link each time. This helps keep the hyperlink list as short as it can be. 
+Internally, Glulx refers to each link only by a numeric identifier. Inline Hyperlinks keys that identifier to a list of indexed texts (the "hyperlink list"); for example, if the ID for a given link is 10, Inline Hyperlinks will look up the 10th entry in the list for the linked command. Commands are not repeated, so if we repeatedly print a link with the replacement command "go north," the same number will be assigned to the link each time. This helps keep the hyperlink list as short as it can be.
 
 If you are concerned about the size of the hyperlink list, you may want to clean it out periodically. Inline Hyperlinks doesn't offer any particular facilities for doing this, since different games may have different needs. But keep in mind that, because most interpreters offer scrollback functionality, the entire game text is theoretically accessible to the player at any time: if you make changes to the hyperlink list, a player who scrolls back to click on a link may find that the link does not work as expected. The safest way to flush the list is probably to clear the screen periodically, resetting the scrollback buffer on most interpreters. At the same time that the screen is cleared, empty the hyperlink list, e.g:
 
@@ -266,7 +266,7 @@ If you are concerned about the size of the hyperlink list, you may want to clean
 		clear the screen;
 		now the hyperlink list is {}.
 
-If you are going to flush the list like this, be careful not to clear the screen without good reason. Choose natural break-points (such as chapters, or changes in setting) to avoid confusing (and frustrating) the player. 
+If you are going to flush the list like this, be careful not to clear the screen without good reason. Choose natural break-points (such as chapters, or changes in setting) to avoid confusing (and frustrating) the player.
 
 
 Section: Debugging
@@ -292,9 +292,9 @@ Example: * Survival Mode - A simple example that shows the most basic usage. The
 
 	Before reading a command:
 		say "You can [link]swing[end link] or [link]release[as]jump[end link]."
-	
+
 	Yourself can be hanging or swaying. Yourself is hanging.
-		
+
 	Instead of swinging yourself:
 		if the player is swaying:
 			say "You swing faster.";
@@ -307,7 +307,7 @@ Example: * Survival Mode - A simple example that shows the most basic usage. The
 			say "hanging";
 		if the player is swaying:
 			say "swinging".
-	
+
 	Instead of jumping:
 		if the player is swaying:
 			say "You release the vine, impeccably timing your leap. You grab onto the other vine and hold. Through the mist you see yet another vine hanging thirty feet or so ahead.";
@@ -315,12 +315,12 @@ Example: * Survival Mode - A simple example that shows the most basic usage. The
 		else:
 			say "You release the vine and drop toward the jungle floor. Tumbling through the mist, you land hard on [one of]a thorn-tree; the baroque profusion of spines the size of railroad spikes ends your life[or]a massive hill of flesh-eating ants. They swarm over you before you can regain your feet[or]a path used exclusively by stampeding boars; a pack of the loathsome creatures happens to be passing[purely at random].";
 			end the story.
-		
+
 	Understand "swing" as swinging.
 
 	Rule for supplying a missing noun while swinging:
 		now the noun is yourself.
-	
+
 	Instead of doing anything other than looking or swinging or jumping:
 		say "There is no time for anything but survival."
 
@@ -354,7 +354,7 @@ Example: ** Systematic Derangement of the Inner Compass - There may be times whe
 
 In this example, the player can eat a pill, which temporarily thwarts her attempts to move in a given direction; instead of moving the direction indicated, a random direction is substituted. The easiest way to have done this would have been to simply change the going action, but I've changed the hyperlink mechanism for illustrative purposes (along with the going action, in order to handle typed directions).
 
-The player eventually recovers from the disorienting effects of the drug, and we track this using a variable called derangement. Because most of our movement occurs in situations that do not trigger the every turn and time advancement machinery, we hack the tracking of this variable into the routines where it is needed via the derangement abation rule. 
+The player eventually recovers from the disorienting effects of the drug, and we track this using a variable called derangement. Because most of our movement occurs in situations that do not trigger the every turn and time advancement machinery, we hack the tracking of this variable into the routines where it is needed via the derangement abation rule.
 
 	*: 	"Systematic Derangement of the Inner Compass"
 
@@ -369,15 +369,15 @@ The player eventually recovers from the disorienting effects of the drug, and we
 		decrease derangement by 1;
 		if derangement < 1:
 			player recovers.
-	
+
 	Every turn when the player is deranged:
 		follow the derangement abation rule.
-		
+
 	Instead of going nowhere when the player is deranged:
 		say "You collide with a wall.";
 		follow the derangement abation rule;
 		rule succeeds.
-		
+
 	To player recovers:
 		say "[line break]The odd feeling fades a bit.[paragraph break][bracket]Press any key[close bracket]";
 		wait for any key;
@@ -394,7 +394,7 @@ We then revisit the exit lister from the Maze example above, and implement it in
 
 	*: After starting the virtual machine:
 		reserve 12 slots at the beginning of the hyperlink list.
-	
+
 	To say exits:
 		let count be the number of adjacent rooms;
 		if count is greater than 0:
@@ -422,7 +422,7 @@ We then revisit the exit lister from the Maze example above, and implement it in
 				if count > 0:
 					say ", ";
 			say ". "
-		
+
 We then write a new hyperlink processing rule that will supersede the default command-pasting rule. This rule takes effect only when the player is deranged, and when the hyperlink that was clicked has an ID in the set of 12 that we reserved above. The rule pastes text to the command line that indicates the PC's confusion ("go ???"). It is important to note, however, that this command is not entered; if it were, Inform would not understand it, since ??? is not a valid direction. Instead, we look the hyperlink ID number up in a table of stored actions and we directly "try" that action.
 
 Note that, in this example, we clear the screen to ensure that the player will never be able to click on our special links during her normal state, nor on the normal links during her deranged state. However, if she were to click on one of the 12 special links while not deranged, there would be no result, because the accompanying commands are all empty texts, i.e. "".
@@ -430,7 +430,7 @@ Note that, in this example, we clear the screen to ensure that the player will n
 Since we are shortcutting normal processes with our new hyperlink processing rule, we also print a new command prompt, as well as follow the derangement abation rule, to be sure that the player can eventually emerge from her unfortunate state.
 
 A companion rule for input redirects the player's typed direction command in the same way. (A better way to do this would be to change the "direction understood" to a random direction before going, but we choose to lie in the hole we've dug ourselves...
-	
+
 	*: Hyperlink processing rule when the player is deranged and the current hyperlink ID is less than 13:
 		say "[input-style-for-glulx]go ???[roman type]";
 		if there is an ID of current hyperlink ID in the Table of Going Actions:
@@ -442,7 +442,7 @@ A companion rule for input redirects the player's typed direction command in the
 			say "[command prompt][run paragraph on]";
 		now glulx replacement command is "";
 		rule succeeds.
-	
+
 	After reading a command when the player is deranged:
 		if the player's command matches "[direction]":
 			say "Confusion... ";
@@ -450,7 +450,7 @@ A companion rule for input redirects the player's typed direction command in the
 			let X be a stored action;
 			let X be the go-action entry;
 			try X;
-			rule succeeds.	
+			rule succeeds.
 
 
 	Table of Going Actions
@@ -483,7 +483,7 @@ A companion rule for input redirects the player's typed direction command in the
 		say "You begin to feel odd indeed. Like the synapses aren't properly connected. Your body has been divorced from your inner compass!";
 		remove the red pill from play;
 		now the player is deranged;
-		silently try looking.		
+		silently try looking.
 
 	R01 is a room. R02 is north of R01. R03 is east of R01. R04 is north of R02 and northwest of R03. R05 is northeast of R02. R06 is north of R05. R07 is west of R06. R08 is southwest of R04 and northwest of R02. R09 is east of R06. R10 is northeast of R06. R11 is east of R10. R12 is southeast of R09. R13 is south of R12. R14 is northeast of R12. R14 is southeast of R11. R15 is up from R03. R16 is east of R15. R17 is north of R16. R18 is down from R17. The description of R18 is "A maze of twisty little passages, all alike. A breeze blows from the northeast. Exits: [exits]"
 

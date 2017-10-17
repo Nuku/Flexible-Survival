@@ -21,7 +21,7 @@ to say Gryphondesc:
 
 to say losetoGryphon:
 	say "     The gryphon knocks you to the floor, pinning you under his feathery weight. With an angry growl-chirp, he begins picking intently at your gear; he's trying to undress you. Not wanting to get sliced by his sharp beak and claws, you put your hands up in a motion you hope he understands as surrender and begin slowly disrobing yourself.";
-	say "      Finally, you're naked before the beast. He clearly enjoyed the show, as his cock is slipping out of his furry sheath as he looks your body over approvingly.";
+	say "     Finally, you're naked before the beast. He clearly enjoyed the show, as his cock is slipping out of his furry sheath as he looks your body over approvingly.";
 	if waiterhater is 0, wait for any key;
 	LineBreak;
 	if a random chance of 3 in 4 succeeds: [Mounted by gryphon]
@@ -102,7 +102,7 @@ to say beattheGryphon:
 				now sextablerun is 1;
 		else:
 			say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
-	
+
 
 to say feralgryphsex01:
 	say "     Leaping atop the wounded creature before he can take to the air, you force him to the ground. He screeches angrily and tries to snap at you with his beak, but you get a good handle on his neck and press his face to the ground. It struggles weakly as you pin it in place, but is too worn to break free or effectively resist your advances.";
@@ -120,8 +120,8 @@ to say feralgryphsex02:
 	else if cocks of player > 0:
 		say "     As the nice warm feeling of getting a creamy filling spreads in you, your hand flies to your own cock, stroking it in frenzied haste as you are eager to join your mate in orgasm. Of course, with how wound-up you already are after the whole hot fuck, it takes barely a moment before you gasp out in completion, trembling all over as blasts of cum shoot from your manhood and splat down over the gryphon's chest, splattering his fur with creamy seed. You pump your hips against him even as you ride out the orgasm, making sure he's fully drained himself into you before you pull off. Rolling back over and standing up on his strong legs, the gryphon raises his head high and gives a screech, satisfied at having gotten to fuck someone even though you bested him in combat. Then he simply swings himself into the air with a flap of strong wings, proving that his kind isn't much for cuddling after sex.";
 	else:
-		say "     As the nice warm feeling of getting a creamy filling spreads in you, your hand flies to your own crotch, stroking its sexless but still sensitive skin in frenzied haste as you are eager to join your mate in orgasm. Of course, with how wound-up you already are after the whole hot fuck, it takes barely a moment before you gasp out in completion, trembling all over as your world is rocked hard. You pump your hips against him even as you ride out the orgasm, making sure he's fully drained himself into you before you pull off. Rolling back over and standing up on his strong legs, the gryphon raises his head high and gives a screech, satisfied at having gotten to fuck someone even though you bested him in combat. Then he simply swings himself into the air with a flap of strong wings, proving that his kind isn't much for cuddling after sex."; 
-	say "[impregchance]"; 
+		say "     As the nice warm feeling of getting a creamy filling spreads in you, your hand flies to your own crotch, stroking its sexless but still sensitive skin in frenzied haste as you are eager to join your mate in orgasm. Of course, with how wound-up you already are after the whole hot fuck, it takes barely a moment before you gasp out in completion, trembling all over as your world is rocked hard. You pump your hips against him even as you ride out the orgasm, making sure he's fully drained himself into you before you pull off. Rolling back over and standing up on his strong legs, the gryphon raises his head high and gives a screech, satisfied at having gotten to fuck someone even though you bested him in combat. Then he simply swings himself into the air with a flap of strong wings, proving that his kind isn't much for cuddling after sex.";
+	say "[impregchance]";
 
 to say feralgryph_milk01:
 	decrease carried of gryphon cum by 1;
@@ -165,7 +165,7 @@ to say feralgryph_milk02:
 	else:
 		say "     He grinds it against you with each thrust, and you can feel your entrance stretch open a little further each time under the incessant pressure. On one particularly firm thrust, the knot reaches its widest point, spreading your asshole that last little bit needed; on the next, it pops into you fully. The sudden surge of fullness this brings causes you to moan and your back door to squeeze back tightly around the base of the knot, tying the two of you together to finish your hot gay rut.";
 	say "     He screeches in lustful release as you feel his cock twitch and the first hot rope of gryphon-cum splash inside you[if cocks of player > 0]. You reach your own climax, your [cock size desc of player] cock[smn] shooting your own cum over the ground[end if]. The gryphon comes for what feels like minutes; by the time he's finished, his seed is drooling from you, squelching around his softening cock. He dismounts you once his knot's gone down so it can pop out with a wet, slurping sound as a gush of gryphon cum follows it out your well-fucked hole. The gryphon turns around to nuzzle you with a chirping purr and [one of]panting a soft 'Thanks.'  [or]asking 'Is there more?' while licking his beak. [or]moaning 'So hot!'  [at random]A little shocked to hear the creature speak, you direct it to Qytat and Garrett for more hot gryphon stud action before it departs in that direction.[mimpregchance]";
-	
+
 
 Section 2 - Monster Insertion
 
@@ -175,29 +175,29 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Feral Gryphon"; 
+	now name entry is "Feral Gryphon";
 	now attack entry is "[one of]The gryphon slashes at you with a sharp talon![or]The gryphon pecks you relentlessly![or]The gryphon batters you with its wings![or]The gryphon gives a shrill screech![at random]";
 	now defeated entry is "[beattheGryphon]"; [ Text when monster loses. Change 'Gryphon' as above. ]
 	now victory entry is "[losetoGryphon]"; [ Text when monster wins. Change 'Gryphon' as above. ]
-	now desc entry is "[Gryphondesc]"; 
+	now desc entry is "[Gryphondesc]";
 	now face entry is "the visage of a majestic eagle, feathered and beaked"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a lion, fully quadrupedal, with powerful muscles rippling under your skin that speak to your predatory nature"; 
+	now body entry is "that of a lion, fully quadrupedal, with powerful muscles rippling under your skin that speak of your predatory nature";
 	now skin entry is "golden-furred and feathered"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a long, leonine tail hanging over your rear."; [ Tail desc., written as a full sentence or left blank for none. ] 
-	now cock entry is "[one of]knotted[or]leonine[or]tapered[at random]"; 
+	now tail entry is "You have a long, leonine tail hanging over your rear."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "[one of]knotted[or]leonine[or]tapered[at random]";
 	now face change entry is "it pushes outwards, hardening into a predatory beak. Your ears retreat into your body, becoming simple openings as your head becomes that of an eagle"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "it twists and shifts into your new leonine form, bones cracking as they reform into a quadrupedal stance"; 
-	now skin change entry is "golden lion fur covers your body, while avian feathers sprout from your head and neck"; 
+	now body change entry is "it twists and shifts into your new leonine form, bones cracking as they reform into a quadrupedal stance";
+	now skin change entry is "golden lion fur covers your body, while avian feathers sprout from your head and neck";
 	now ass change entry is "A golden lion tail sprouts from above your ass"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes tapered, with a slight bulge appearing at the base of it. Your cockhead feels strange as it grows barbs, giving it a rough texture"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 24;           
-	now dex entry is 18;           
-	now sta entry is 20;           
+	now str entry is 24;
+	now dex entry is 18;
+	now sta entry is 20;
 	now per entry is 18;
 	now int entry is 14;
 	now cha entry is 12;
 	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 90;                
+	now hp entry is 90;
 	now lev entry is 10;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 13;              [ Monster's average damage when attacking. ]
 	now area entry is "Museum";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -216,9 +216,9 @@ When Play begins:
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]leonine[or]strong[or]predatory[or]powerful[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "hybrid";        [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;          
-	now resbypass entry is false;      
-	now non-infectious entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 

@@ -31,7 +31,7 @@ to say gargoyle attack:
 		LineBreak;
 		say "All seems to be going well for you, right up and until the monster pulls its face back from you all of a sudden and then shuffles its muscular grey toned body up over your backside. Clenching your teeth, you try not to yelp as the gargoyle plunges its long shaft inside of your soaked rear and then begins thrusting into you with all the grace of a battering ram. The gargoyle doesn't waste any time with niceties as it slaps its warm balls in your rectum with force the likes of which makes you grunt and hiss as your backside if plundered by the grey skinned beat. Purring and growling at the tightness of your rump squeezing around its rock hard shaft the gargoyle grips its talons alongside your hips as it holds you steady while rapidly shuffling its hips back and forth into your ass.";
 		WaitLineBreak;
-		say "Wild abandon flows through you as your ass clenches around the invader trying to hammer another hole up and into your guts. Panting, huffing, and grunting like a freight you don't fight as your hips begins to push back against the winged beast's thrust. This gets a joyful growl from the gargoyle and sooner than you can think the two of you are bucking together nonstop like the beasts out in the lands around you. The gargoyle seems to realize that there has been a change in you somewhere and approving of your submission it licks you onto the side of your face. A touch of grey appears where it does so."; 
+		say "Wild abandon flows through you as your ass clenches around the invader trying to hammer another hole up and into your guts. Panting, huffing, and grunting like a freight you don't fight as your hips begins to push back against the winged beast's thrust. This gets a joyful growl from the gargoyle and sooner than you can think the two of you are bucking together nonstop like the beasts out in the lands around you. The gargoyle seems to realize that there has been a change in you somewhere and approving of your submission it licks you onto the side of your face. A touch of grey appears where it does so.";
 		LineBreak;
 		say "The pleasurable moment comes to an end too soon though as without warning the monster suddenly goes stock-still and then roars out into the sky. Wings spread wide to shield the both of you from the outside world you miss out as the creature's tail snaps up into the air like a flagpole. When the first touch of warm cup flushes directly into your ass all the way up through your guts you gasp to the sky as your anal muscles wrap vice tight around the beast's pulsing shaft. Shivering and hissing as though burned you slump to the ground right as the gargoyle pulls itself free from your backside, the last of its seed painting stripes along your pert rear. Grabbing itself to shake its cock clean you take the time to turn around to stare at the beast just in time to see it smirk devilishly at you before the monster turns to fly away.[mimpregchance]";
 
@@ -70,10 +70,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 		Choose a blank row from Table of random critters;
-		now name entry is "Gargoyle"; 
-		now attack entry is "[one of]A vicious swipe at your stomach has you stumbling backwards as you feel the sharp talons of the gargoyle leaving you a lasting impression of the creature.[or]Sidestepping a flimsy attack the gargoyle snorts decisively before charging at you with its fists raised to repay the favor.[or]Letting out an earth trembling roar the monster charges forward and then slams one of its fists into your gut making you cough as air almost visibly leaves your throat.[or]A grey arm reaches up to block your next attack, the assault almost bouncing harmlessly off of the creature's marble-like body, and soon the gargoyle spins around to slap you with its flexible serpentine tail to show you the folly of your actions.[or]Growing bored with your presence the beast hisses at you and then flings itself over to pound its knuckles against your face.[at random]"; 
+		now name entry is "Gargoyle";
+		now attack entry is "[one of]A vicious swipe at your stomach has you stumbling backwards as you feel the sharp talons of the gargoyle leaving you a lasting impression of the creature.[or]Sidestepping a flimsy attack the gargoyle snorts decisively before charging at you with its fists raised to repay the favor.[or]Letting out an earth trembling roar the monster charges forward and then slams one of its fists into your gut making you cough as air almost visibly leaves your throat.[or]A grey arm reaches up to block your next attack, the assault almost bouncing harmlessly off of the creature's marble-like body, and soon the gargoyle spins around to slap you with its flexible serpentine tail to show you the folly of your actions.[or]Growing bored with your presence the beast hisses at you and then flings itself over to pound its knuckles against your face.[at random]";
 		now defeated entry is "[gargoyle loss]";
-		now victory entry is "[gargoyle attack]"; 
+		now victory entry is "[gargoyle attack]";
 		now desc entry is "[gargoyledesc]";
 		now face entry is "coal eyes shine inside of your head while finely cut lines shape your strong grey face into something almost ruggedly handsome in appearance";
 		now body entry is "leather wings flap at your backside, giving your tightly packed musculature some extra added mobility, while in front your precisely cut pectorals stand forward onto your chest only to trail smoothly down south to your thick six packed abs. Down a long ways further your well polished thighs, legs and digitigrade clawed feet keep you mobile as you stand rigidly in place while looking yourself over";
@@ -87,15 +87,15 @@ When Play begins:
 		now cock change entry is "your shaft lengthens with a slow a tedious pressure, growing full and ready to be used hammer anyone foolish enough to try and tackle you in the mating area. The flesh soon becomes smooth in texture while at the same time gaining the force of a battering ram as it stretches down closer to your knees";
 		now str entry is 20;
 		now dex entry is 15;
-		now sta entry is 24; 
+		now sta entry is 24;
 		now per entry is 12;
 		now int entry is 08;
 		now cha entry is 11;
 		now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-		now hp entry is 123; 
-		now lev entry is 12; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+		now hp entry is 123;
+		now lev entry is 12; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 		now wdam entry is 12; [ Amount of Damage monster Does when attacking. ]
-		now area entry is "Outside"; 
+		now area entry is "Outside";
 		now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 		now cock length entry is 14; [ Length infection will make cock grow to if cocks]
 		now cock width entry is 10; [ Size of balls ]
@@ -103,19 +103,19 @@ When Play begins:
 		now breast size entry is 0; [Size of breasts infection will try to attain ]
 		now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 		now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-		now cunt length entry is 0; 
-		now cunt width entry is 0; 
+		now cunt length entry is 0;
+		now cunt width entry is 0;
 		now libido entry is 52; [ Amount player Libido will go up if defeated ]
 		now loot entry is ""; [ Dropped item, blank for none.  Case sensitive. ]
 		now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 			now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 		now body descriptor entry is "[one of]well-built[or]muscular[or]rugged[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "muscled" "gelatinous" "slender"   Use [one of] to vary ]
 		now type entry is "[one of]gargoyle[or]demonic[at random]";
-		now magic entry is false; 
-		now resbypass entry is false; 
-		now non-infectious entry is false; 
+		now magic entry is false;
+		now resbypass entry is false;
+		now non-infectious entry is false;
 		blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-		now altcombat entry is "default"; 
+		now altcombat entry is "default";
 
 
 when play ends:
@@ -132,4 +132,3 @@ when play ends:
 
 
 Gargoyle ends here.
-

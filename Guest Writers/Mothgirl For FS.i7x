@@ -76,7 +76,7 @@ When Play begins:
 	now name entry is "Mothgirl"; [Name of your new Monster]
 	now attack entry is "[one of]She hits you on the cheek with her hand[or]A kick lands upside your face as the moth girl turns in midair[or]The mothgirl punches you in the gut with her fist[or]The mothgirl rams her butt into your face[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "The mothgirl slumps onto the ground with a sigh and tries to protect herself with her fragile wings."; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Moth attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now victory entry is "[Moth attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 4]     In your travels, you are suddenly accosted by a diminutive girl adorned in only a pair of moth wings and similarly moth-like fur around her neck. [one of]Blue[or]Grey[or]Hazel[or]Green[or]Lavender[or]Brown[at random] eyes agleam like jewels, the grey-skinned creature advances upon you, intent on attacking you, though you imagine she'd be a bit more intimidating if she wasn't stark naked.";[ Description of the creature when you encounter it.]
 	now face entry is "feminine visage looking with bright eyes";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "has been reduced down to about 5 feet tall and has a light, curvy form. You have moth that, wings with each flap, leave a trail of small dust behind you";[ Body Description, format as the text "Your Body is (your text)"]
@@ -95,7 +95,7 @@ When Play begins:
 	now int entry is 13;
 	now cha entry is 15;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 25; 
+	now hp entry is 25;
 	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
 	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -106,15 +106,15 @@ When Play begins:
 	now breast size entry is 3; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 15; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 10; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 15; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 10; [ Width of female sex infection will try and give you ]
 	now libido entry is 50; [ Amount player Libido will go up if defeated ]
-	now loot entry is "cock pill"; 
+	now loot entry is "cock pill";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]winged[or]light[or]slender[or]feminine[at random]";
 	now type entry is "[one of]insectile[or]lepidopterous[or]moth-like[at random]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

@@ -21,7 +21,7 @@ to say CoinFlip:
 		add "Submissive" to feats of player;
 	else:
 		say "     You throw the shiny coin into the air and watch it turn end over end, then catch - no, try to catch it in your hand. Somehow it slips through your fingers, bouncing off the ground and rolling around a little, until it comes to a sudden standstill. And that is how it remains, just standing on its side, falling over in neither direction. As you pick the little disc of metal off the ground, it is strangely cold between your fingers for a second. Almost seems like its giving you the cold shoulder since you fit neither of its different faces.";
-		
+
 
 TestMode is an action applying to nothing.
 TestingActive is a truth state that varies.
@@ -30,13 +30,13 @@ understand "iwannatest" as TestMode.
 
 check TestMode:
 	if TestingActive is true, say "You're already in testing mode." instead;
-		
+
 carry out TestMode:
 	add "Bestial Power" to feats of player;
 	add "Black Belt" to feats of player;
 	add "Breeding True" to feats of player;
 	add "City Map" to feats of player;
-	say "[bestowcitymapfeat]";	
+	say "[bestowcitymapfeat]";
 	add "Curious" to feats of player;
 	add "Dazzle" to feats of player;
 	add "Dominant" to feats of player;
@@ -75,7 +75,7 @@ carry out TestMode:
 	add "The Horde" to feats of player;
 	add "Toughened" to feats of player;
 	add "Vampiric" to feats of player;
-	now vampiric is true;	
+	now vampiric is true;
 	add "Wary Watcher" to feats of player;
 	add "Weaponsmaster" to feats of player;
 	add "Youthful Tides" to feats of player;
@@ -99,7 +99,7 @@ carry out TestMode:
 	increase carried of glob of goo by 5;
 	increase carried of honeycomb by 5;
 	increase carried of healing booster by 5;
-	
+
 Testing Mirror is a grab object. Testing Mirror is not temporary.
 Testing Mirror has a usedesc "[MirrorTest]".
 
@@ -134,7 +134,7 @@ to say MirrorTest:
 		say "+";
 	else:
 		say "-";
-	LineBreak;		
+	LineBreak;
 	say "fpreg_ok: ";
 	if player is fpreg_ok:
 		say "+";
@@ -176,5 +176,5 @@ to say MirrorTest:
 		say "+";
 	else:
 		say "-";
-	
+
 Janus ends here.

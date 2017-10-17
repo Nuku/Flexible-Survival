@@ -1,6 +1,6 @@
 Version 1 of Denise by Wahn begins here.
 
-Denise is a woman. 
+Denise is a woman.
 The description of Denise is "[DeniseDesc]".
 The conversation of Denise is { "Mew!" }.
 
@@ -78,24 +78,24 @@ to say DeniseTalk1:
 	say "     As you ask her about the past, Denise mulls the question over for a moment, then says, ";
 	let randomnumber be a random number from 1 to 3;
 	if randomnumber is:
-		-- 1:     
+		-- 1:
 			say "'Oh, my life wasn't anything special, really. You know, just normal. Finished high school, then moved out and got a job at a restaurant downtown. It wasn't being a famous singer like I had dreamed about, but I kinda liked working around people. And then... well, this happened.' Stretching forward one of her large blue wings, the transformed woman brushes it with her hands, straightening out several large feathers that got themselves out of arrangement. 'Can't say I ever saw this coming. Pretty neat though, once you get used to it.'";
 		-- 2:
 			say "'Not much to talk about on the side of family and friends, at least in the last year or so. Guess it's a relief now that my real besties left town to go to college out of state together. Wish I could have joined them, but... it's not easy if you're more or less on your own, no support at all from mom and... Greg. So Tiff and Jen moved to the San Francisco Art College, and I got an apartment and job here in the city.' Giving a very expressive shrug with her large wings, the gryphoness pulls her flexible beak into a calm smile, then adds, 'Well, that's life. You deal with what you get.'";
 		-- 3:
 			say "'I always loved to sing. Even was in the school choir. Music can take you anywhere in the whole world, or out of it. You just close your eyes and let the rhythm carry you with it.' Denise hums to herself and closes her eyes, then slowly spreads her wings and gives a half-beat with them, pushing herself up into the air a little and then landing on digitigrade paw-pads with a somewhat embarrassed expression. 'Oh, er... oops. Sometimes I forget that I'm a gryphon now. Still, isn't it kinda funny that now that I'm not human anymore, I'm actually further along on my dreams - I was good, you see, but this new body is something else...' And with that, Denise suddenly breaks into song, quietly starting then building to higher and higher volume as she sings a hauntingly beautiful melody, pitch-perfect with a songbird's skill.";
-	
+
 to say DeniseTalk2:
 	say "     Looking down over herself, Denise chuckles and says, 'Yeah, it's really crazy how things can happen these days, hm? I mean, look at ";
 	let randomnumber be a random number from 1 to 3;
 	if randomnumber is:
-		-- 1:     
+		-- 1:
 			say "these things!' She raises her hands, cupping the very generous curves of her breasts. Just below where the first feathers of her hybrid body start, they're still covered in a lioness's short fur, creating an image of two golen globes in Denise's hand. As she squeezes them, a tiny trickle of milk leaks out of the nipples on both. The young woman adds, 'I was always a bit... you know, flat, in the front. And now, it's beach ball season. Almost made me fall over on my face when I first changed.' Looking at Denise's well-sized - but far from enormous - breasts, you wonder for a second if you should tell her that there are actual creatures that do have beach ball sized mammaries these days, but before you can say anything, the gryphon herm continues, 'I've learned to milk myself, that feels absolutely amazing. And the milk is quite tasty too. You should try it sometime - I'd gladly let you drink directly from the tap.' With a sexy smile, she wiggles her chest a little, giving you an enticing display.";
 		-- 2:
 			say "these things!' She lifts and spreads her large wings, wiggling all their joints one by one as if to try every part of them out and convince herself that she actually truly has functional wings. 'I can fly! That's nothing short of amazing.' She raises a hand to look at the taloned fingers on it, then adds, 'Some things I could do without, of this shape, but the wings make it all worth it. Being stupid enough to fall for the 'free milk' trick, I mean. Hah.'";
 		-- 3:
 			say "what I've got down here. She reaches down to cup the pair of black-skinned balls dangling between her legs, just under the bulge of her sheath. 'It's plenty weird to suddenly have a cock, I can tell you that. Not that I... haven't tried it out, if I have to be honest. Stroking off really feels great! No wonder the guys in high school couldn't get enough of jacking off. Though I wonder if one can even compare my... equipment to a human's. Got a knot on it and all...";
-			
+
 to say DeniseTalk3:
 	say "     C";
 
@@ -215,7 +215,7 @@ to say DeniseSex5: [the player fucks Denise]
 		say "     Looking over at your increasingly lustful gryphon companion, you realize that she is staring back at you eagerly as well. You open your mouth to comment, only to have her shake her head slightly, before turning and dropping to all fours on the ground and looking back over her shoulder at you with a happy grin on her beak. The sight of her winking passage as her tail waves above her rear eagerly makes you pant in need as well, and glancing around you realize that it certainly wouldn[']t hurt anything to help your gryphon companion out with her own needs. Grinning eagerly, you quickly stalk over to her, your [cock of player] rod already ready and eager as you run your fingers through the soft fur of her hips, making her shudder with desire. Reaching around her body, you pin her wings to her back as you lean over her, your hands gripping her soft breasts eagerly as you rub your cock up against her damp pussy teasingly.";
 		say "     She moans underneath you as your dominant positioning enhances her already strong submissive instincts, her own cock growing stiff as she pants and moans incoherently. Deciding to reward her submission, you slowly sink your cock into her all too eager body, her pussy lips parting easily for you as she continues to moan helplessly, her lust-fogged mind obviously unable to form coherent sentences, or even coherent thought under your pleasurable assault on her body. Your pleasure growing not only from the wonderful sensations of her body engulfing and massaging your cock so eagerly, but with the dominant joy of reducing your companion to little more than a slutty little pet underneath you as well. You are hardly able to restrain your building pleasure as you thrust into her eager body, your hands teasing her breasts eagerly, each little moan of submission you draw out from the slutty gryphoness underneath you a victory all its own, as your pleasure builds higher and higher. Eventually you can[']t take it any more, and you are soon spilling your seed into her needy body, every pulse of your cock sending more and more of your dominant cum into her body to lay claim to her heat filled womb. Panting with exhaustion and a near overload of pleasure yourself, you pull out of her well-fucked body, Denise collapsing on the spot as she pants mindlessly for a while, even while you try to reclaim the shreds of your own scattered wits. Eventually you both manage to haul yourselves up to continue on exploring the city, although from the looks Denise keeps sending you, she seems more eager than ever to explore being your submissive little pet again soon...";
 		say "[deniseimpreg]";
-		
+
 to say DeniseSex6:
 	if bodyname of player is "Hermaphrodite Gryphon" or bodyname of player is "Feral Gryphon":
 		say "     Moving over to Denise's nest, with every intention of getting fucked by her, you moan as you can feel your body heat up, and your pussy clench in need. Discarding clothes and gear as you go along, you're soon standing completely naked next to Denise's refuge. The presence of the virile gryphon herm nearby makes you feel incredibly horny and slutty as you rub your talons over your heat filled body. Denise notices your predicament almost immediately, and you can see her shared arousal as she comes over to you, running her tongue along the edges of her flexible beak. Though as tempting as having her lick you might be, your eyes are inevitably drawn to the thick gryphon cock poking out of the sheath between her leonine legs. Often more or less forgotten by the gryphoness, as she still has a female gender identity - no matter what her form. Still, the proud shaft is more than ready to be awoken by your taloned hand reaching out for it, then rubbing the half-hard shaft and cupping Denise's full balls.";
@@ -268,7 +268,6 @@ instead of going up from Grey Abbey Library while (Denise is in Grey Abbey 2F an
 	increase morale of player by 2;
 	increase libido of gryphoness by 1; [tempnum increase from 3 to 4=0 - no second absentee birth message after this]
 	now knowpreg of gryphoness is 0; [preg reset]
-	
+
 
 Denise ends here.
-

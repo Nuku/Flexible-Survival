@@ -88,7 +88,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[if infvulpstate <= 2][one of]inflatable[or]balloony[or]slender[or]sexy[or]plasticky[or]light[or]buoyant[at random][otherwise][one of]inflatable[or]balloony[or]plump[or]huggable[or]over-inflated[or]rounded[or]plasticky[or]light[or]buoyant[at random][end if]";
+	now body descriptor entry is "[if infvulpstate <= 2][one of]inflatable[or]balloony[or]slender[or]sexy[or]plasticky[or]light[or]buoyant[at random][else][one of]inflatable[or]balloony[or]plump[or]huggable[or]over-inflated[or]rounded[or]plasticky[or]light[or]buoyant[at random][end if]";
 	now type entry is "[one of]vulpine[or]foxish[or]inflatable[as decreasingly likely outcomes]";
 	now magic entry is false;
 	now resbypass entry is false;
@@ -99,13 +99,13 @@ When Play begins:
 
 to say infvulpbody:
 	if infvulpstate <= 2:
-		say "empty, filled only with air like a balloon. You've got a very sexy figure, with [if cunts of player is 0]a slender physique[otherwise]lovely curves and a narrow waist[end if]. Your arms and legs end in paw-like hands with pads of textured latex";
+		say "empty, filled only with air like a balloon. You've got a very sexy figure, with [if cunts of player is 0]a slender physique[else]lovely curves and a narrow waist[end if]. Your arms and legs end in paw-like hands with pads of textured latex";
 	else:
 		say "empty, filled only with air like a balloon. You've got a rounded and full figure thanks to your increased inflation level, making you adorably plump and huggable";
 
 to say infvulpbodychange:
 	if infvulpstate <= 2:
-		say "it grows lighter and you giggle merrily for no reason. As your insides are replaced with air, you gain [if cunts of player is 0]a slender physique[otherwise]lovely curves and a narrow waist[end if]. Your hands change, puffing up into cute paws and soon your feet do the same. By the time it's over, your body is that of some kind of inflatable balloon creature";
+		say "it grows lighter and you giggle merrily for no reason. As your insides are replaced with air, you gain [if cunts of player is 0]a slender physique[else]lovely curves and a narrow waist[end if]. Your hands change, puffing up into cute paws and soon your feet do the same. By the time it's over, your body is that of some kind of inflatable balloon creature";
 	else:
 		say "it grows lighter and you giggle merrily for no reason. As your insides are replaced with air, you gain a rounded and full figure as you keep inflating until you're adorably plump and huggable. Your hands change, puffing up into cute paws and soon your feet do the same. By the time it's over, your body is that of some kind of inflatable balloon creature";
 
@@ -131,7 +131,7 @@ an everyturn rule:
 				say "     [one of]You start listing off the creatures you've seen, trying to come up with your own [']top 10 sexiest['] list.[or]An air-headed, lustful thought pops into your head to go off in a random direction and ask the next creature you find to fuck you. It sounds like such a fun game full of surprises.[or]You lose track of what you were doing, sit down and start masturbating without a care in the world. You're doing this for a few minutes before reality sets back in and you regain control of yourself.[or]You plop yourself down with a happy giggle and masturbate with a vacant grin on your face. You stop suddenly a few minutes later when you suddenly realize what you're doing.[in random order]";
 				increase libido of player by 3;
 			else:
-				say "     [one of]You end up staring at your reflection in [if the player is in the bunker]a bathroom mirror[otherwise]a window[end if], smiling happily at how cute you look.[or]You are about to rush outside to find some cute mutants to [']play['] with. Thankfully you come to your senses and head back into cover.[or]Seeing a cute mutant passing by, you imagine having some fun with them and almost rush off after them as they turn the corner.[or]You're captivated by touching your altered features, especially pleased by your balloon-like nature.[or]You forget yourself momentarily, overcome by vapid, vulpine thoughts.[in random order]";
+				say "     [one of]You end up staring at your reflection in [if the player is in the bunker]a bathroom mirror[else]a window[end if], smiling happily at how cute you look.[or]You are about to rush outside to find some cute mutants to [']play['] with. Thankfully you come to your senses and head back into cover.[or]Seeing a cute mutant passing by, you imagine having some fun with them and almost rush off after them as they turn the corner.[or]You're captivated by touching your altered features, especially pleased by your balloon-like nature.[or]You forget yourself momentarily, overcome by vapid, vulpine thoughts.[in random order]";
 				decrease humanity of player by 2;
 		else:
 			now last_infvulp_airhead is -2147483648;

@@ -46,7 +46,7 @@ to say otterstrike:
 	else if girl is banned and guy is not banned:
 		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths.  The eager male gropes and fondles your body even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
 	else:
-		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your hands  and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
+		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your handd and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
 
 to say Otter attack:
 	if hp of player is greater than 0:
@@ -157,13 +157,13 @@ When Play begins:
 	now name entry is "Sea Otter"; [Name of your new Monster]
 	now attack entry is "[otterstrike]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Otter loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Otter attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is "[Otter attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[otterdesc]";[ Description of the creature when you encounter it.]
-	now face entry is "blunt nose of an otter, with small round ears set over your cute face";[ Face description, format as the text "You have a (your text) face."] 
-	now body entry is "sleek and athletic. Almost androgynous in a way, with the curves subsumed in the trim musculature of a born swimmer. Your hands and feet are webbed with flaps of skins between fingers and toes that are quite ticklish when touched by another";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[one of]sleek pelted[or]smooth furred[or]waterproofed[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a thick rudder of a tail, [skin of player] and swaying lightly behind you. It could help a lot while swimming. ";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "otter";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "blunt nose of an otter, with small round ears set over your cute face";[ Face description, format as the text "You have a (your text) face."]
+	now body entry is "sleek and athletic. Almost androgynous in a way, with the curves subsumed in the trim musculature of a born swimmer. Your hands and feet are webbed with flaps of skins between fingers and toes that are quite ticklish when touched by another";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "[one of]sleek pelted[or]smooth furred[or]waterproofed[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a thick rudder of a tail, [skin of player] and swaying lightly behind you. It could help a lot while swimming. ";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "otter";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face reforms as you gain a short otterish snout and round [skin of player] ears"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you get the urge to stretch, reaching for the heavens as your body becomes slimmer and more streamlined. Your outspread fingers tickle fiercely as new flesh grows between each of them and short sharp claws sprout. Below, your feet become animal like paws, lifting partially from the ground even as your toes gain that same sensitive webbing"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "an oily sensation runs across your entire body, followed shortly by a dense layer of waterproof fur that coats your body perfectly"; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -176,8 +176,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 70; 
-	now lev entry is 10; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now hp entry is 70;
+	now lev entry is 10; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 17; [Amount of Damage monster Does when attacking.]
 	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -187,15 +187,15 @@ When Play begins:
 	now breast size entry is 2; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6; [ Width of female sex  infection will try and give you ] 
+	now cunt length entry is 8; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 6; [ Width of female sex infection will try and give you ]
 	now libido entry is 60; [ Amount player Libido will go up if defeated ]
-	now loot entry is "Fish"; 
+	now loot entry is "Fish";
 	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]athletic[at random]";
 	now type entry is "[one of]otter[or]lutrine[at random]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

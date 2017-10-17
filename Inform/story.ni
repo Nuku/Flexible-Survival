@@ -6,7 +6,7 @@ Release along with an interpreter.
 Use memory economy.
 Use slow route-finding.
 [ The following adjust Informs compiler settings so that it allocates enough space. If these values are incorrect, inform will fail to compile.]
-[ To determine if one of these is your issue, Use the Errors tab in the inform 7 window. ]
+[ To determine if one of these is your issue, use the Errors tab in the inform 7 window. ]
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
@@ -15,10 +15,10 @@ use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 200000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
-use MAX_OBJECTS of 1600.
-use MAX_ACTIONS of 350.
-use MAX_VERBS of 500.
-use MAX_VERBSPACE of 10000.
+use MAX_OBJECTS of 2000.
+use MAX_ACTIONS of 2000.
+use MAX_VERBS of 2000.
+use MAX_VERBSPACE of 50000.
 use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
 Use MAX_DICT_ENTRIES OF 2400.
@@ -37,7 +37,7 @@ Include Basic Screen Effects by Emily Short.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 57.
+The release number is 61.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -495,7 +495,7 @@ To decide which number is numeric/numerical value of (T - indexed text):
 		else if C is "5"; let D be 5; else if C is "6"; let D be 6;
 		else if C is "7"; let D be 7; else if C is "8"; let D be 8;
 		else if C is "9"; let D be 9; else if C is "0"; let D be 0;
-		otherwise; decide on 0; end if;
+		else; decide on 0; end if;
 		let result be (result * 10) + D;
 	end repeat;
 	if negated is true, let result be 0 - result;
@@ -544,7 +544,7 @@ Definition: A grab object (called D) is stored:
 
 Definition: A grab object (called D) is present:
 	if there is a name corresponding to a object of d in the table of game objects:
-		if the name corresponding to a object of  d in the table of game objects is listed in the invent of the location of the player, yes;
+		if the name corresponding to a object of d in the table of game objects is listed in the invent of the location of the player, yes;
 	no;
 
 before examining the grab object(called x):
@@ -613,7 +613,7 @@ The invent of the player is { "journal" }.
 Table of Start Game
 title	subtable	description	toggle
 "Strength: [strength of player]"	--	"Your ability to exert force. Helps deal damage with melee weapons, and to carry heavy objects."	finish stats rule
-"Dexterity: [Dexterity of player]"	--	"Speed, agility. Dexterity  helps to land hits with melee weapons and avoid being hit in kind."	finish stats rule
+"Dexterity: [Dexterity of player]"	--	"Speed, agility. Dexterity helps to land hits with melee weapons and avoid being hit in kind."	finish stats rule
 "Stamina: [stamina of player]"	--	"Your ability to withstand punishment. Stamina also helps to resist the physical aspects of infection."	finish stats rule
 "Charisma: [Charisma of player]"	--	"Your ability to exert social force. Deal with NPCs favorably, also helps resist mental aspects of infection."	finish stats rule
 "Perception: [Perception of player]"	--	"Your ability to detect things. Also helps resist mental aspects of infection."	finish stats rule
@@ -804,6 +804,9 @@ Bluntlist is a marker.	[list of infections w/blunt cock]
 when play begins:
 	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra", "Sierrasaur", "Wyvern", "Donkeyman", "Donkeywoman", "Giraffe", "Nightmare", "Palomino", "Friendship Pony", "Reindeer" } to infections of Bluntlist;
 
+Flightlist is a marker. [list of infections w/flight capability]
+when play begins:
+	add { "Wyvern", "Reindeer", "Pegasus", "Dragontaur", "Dracovixentaur", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame Draken", "Fire Sprite", "Yamato Dragoness", "Yamato Dragon", "Snow Bat", "Bald Eagle", "Fluffy Owl", "Hermaphrodite Gryphon", "Hawkman", "Harpy", "Vulpogryph", "Bird of Paradise", "Black Wasp", "Drone Wasp", "Butterfly", "Mothgirl" } to infections of Flightlist;
 
 Part 2 - Rules
 
@@ -2671,7 +2674,7 @@ This is the sex change rule:
 			increase the cocks of player by 1;
 			now the cock length of player is 1;
 			now the cock width of player is 1;
-			increase the cock length of player by ( cock length entry  ) divided by 3;
+			increase the cock length of player by ( cock length entry ) divided by 3;
 			increase the cock width of player by ( cock width entry ) divided by 3;
 			if skipcockchange is false:
 				now cockname of player is name entry;
@@ -2763,8 +2766,8 @@ This is the sex change rule:
 			increase the cunts of player by 1;
 			now the cunt length of player is 1;
 			now the cunt width of player is 1;
-			increase the cunt length of player by ( cunt length entry  ) divided by 3;
-			increase the cunt width of player by ( cunt width entry  ) divided by 3;
+			increase the cunt length of player by ( cunt length entry ) divided by 3;
+			increase the cunt width of player by ( cunt width entry ) divided by 3;
 			if "Modest Organs" is listed in feats of player and cunt length of player is greater than 8:
 				now cunt length of player is 8;
 			if "Modest Organs" is listed in feats of player and cunt width of player is greater than 5:
@@ -3250,7 +3253,7 @@ To get a number:
 	numberfy playerinput;
 
 to numberfy (x - a snippet):
-	change  the text of the player's command to x;
+	change the text of the player's command to x;
 	if the player's command matches "[number]":
 		now calcnumber is the number understood;
 	else:
@@ -3731,7 +3734,7 @@ This is the explore rule:
 	if "Stealthy" is listed in feats of player, decrease bonus by 2 plus (( the perception of the player minus 10 ) divided by 2);
 	if "Bad Luck" is listed in feats of player, increase bonus by 1;
 	if something is 1 and blindmode is true, decrease bonus by 3;	[already found something, so normal chance of a critter]
-	if a random number from 1 to 20 is less than 10 plus bonus and battleground is not "void":
+	if a random number from 1 to 20 is less than 15 plus bonus and battleground is not "void":
 		if there is a area of Battleground in the table of random critters:
 			now something is 1;
 			Fight;
@@ -3749,7 +3752,7 @@ exploring is an action applying to nothing.
 understand "explore" as exploring
 
 check exploring:
-	if location of player is not fasttravel and earea of location of player is "void", say "You can not explore from here." instead;
+	if location of player is not fasttravel and earea of location of player is "void", say "You cannot explore from here." instead;
 
 carry out exploring:
 	if there is a dangerous door in the location of the player:
@@ -4083,7 +4086,7 @@ This is the brain descr rule:
 		now descr is "[one of]clean[or]pristine[or]perfectly normal[at random][lusting]";
 	else if humanity of player is greater than 70:
 		now descr is "[one of]lightly tainted[or]occasionally plagued with odd instinctual[at random][lusting]";
-	else if humanity  of player is greater than 30:
+	else if humanity of player is greater than 30:
 		if facename of player is not "human":
 			now descr is "increasingly [facename of player] perspective[lusting]";
 		else if bodyname of player is not "human":
@@ -4225,7 +4228,7 @@ This is the cunt descr rule:
 	else if cunt length of player is less than 8:
 		now descr is "[one of]average[or]normal sized[at random]";
 	else if cunt length of player is less than 12:
-		now descr is "[one of]large[or]thick lipped[or]above average[at random]";
+		now descr is "[one of]large[or]thick-lipped[or]above average[at random]";
 	else if cunt length of player is less than 18:
 		now descr is "[one of]belly bulgingly huge[or]inhumanly deep[or]forearm length[at random]";
 	else if cunt length of player is less than 25:
@@ -4315,7 +4318,7 @@ This is the self examine rule:
 			now cunttext is " have [cunts of the player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random].  Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around.  They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 		else:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around.  It is [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
-	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
+	say "Looking at yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "face":
@@ -4500,7 +4503,7 @@ This is the male choice rule:
 	now the cock width of the player is 4;
 	now the breasts of the player is 2;
 	now the breast size of the player is 0;
-	now  the current menu is table of Basic Actions;
+	now the current menu is table of Basic Actions;
 	say "You are a man.";
 	wait for any key;
 	follow the final stats rule;
@@ -4752,7 +4755,7 @@ To Infect (x - text):
 		if name entry is x:
 			now monster is y;
 			let reset be 0;
-			if researchbypass is 1 and  non-infectious entry is true:
+			if researchbypass is 1 and non-infectious entry is true:
 				now reset is 1;
 				now non-infectious entry is false;
 			infect;
@@ -4985,11 +4988,12 @@ Include Text Capture by Eric Eve.
 [Locations]
 Include Apocalypse Store by DrGryphon.
 Include Approaching the Capitol Building for FS by Guest Writers.
+Include Beach by Speedlover.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
 Include Camp Bravo by Wahn.
-Include Campus For Fs by Stripes.
-Include Church Of The Maternal Beast For Fs by Guest Writers.
+Include Campus For Fs by Rikaeus.
+[Include Church Of The Maternal Beast For Fs by Guest Writers.]
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
 Include Equinoid Camp For FS by Stripes.
@@ -5027,7 +5031,7 @@ Include Assorted Events by Stripes.
 Include Beach Events by Sarokcat.
 Include Bouncy Castle by Stripes.
 Include Brookstone Books by Guest Writers.
-Include Campus Events by Stripes.
+Include Campus Events by Wahn.
 Include Campus Lovers by CloserHenry.
 Include Campus Couple NPC by CloserHenry.
 Include Candy Shop by Stripes.
@@ -5053,6 +5057,7 @@ Include Forest Events by Aureas Gigas.
 Include Forest Events by Defth.
 Include Forest Gang Bang by Defth.
 Include giving in by Core Mechanics.
+Include HellHound by Speedlover.
 Include High Rise Events by Stripes.
 Include How High by Kaleem mcintyre.
 Include Hyena Bikers by Stripes.
@@ -5395,6 +5400,7 @@ Include Anthony by Wahn.
 Include Ares by Wahn.
 Include Athanasia by Stripes.
 Include Bastet by Wahn.
+Include Bjorn by Rikaeus.
 Include Blake by Ssely.
 Include Blanche by Stripes.
 Include Boghrim by Wahn.
@@ -5433,7 +5439,7 @@ Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
 Include Garrett by Stripes.
 Include Gordon by Rikaeus.
-Include G-Shep Squad by Stripes.
+Include G-Shep Squad by Rikaeus.
 Include Gwen by Stripes.
 Include Hadiya by Stripes.
 Include Harold by Sarokcat.
@@ -5451,6 +5457,7 @@ Include Joanna by Stripes.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Kristen by Stripes.
+Include Kyrverth by Speedlover.
 Include Lance by Verath.
 Include Larissa for FS by Stripes.
 Include Leonard by Stripes.
@@ -5492,8 +5499,10 @@ Include Solstice by Stripes.
 Include Sonny by Rikaeus.
 Include Stag by Wahn.
 Include Stella by Stripes.
+Include Stewart by Rikaeus.
 Include Stuck Dragon by Stripes.
 Include Sven by Stripes.
+[Include Sylvia by Prometheus.] [WIP]
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
 Include Thomas by Wahn.

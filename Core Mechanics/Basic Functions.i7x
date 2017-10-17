@@ -54,7 +54,7 @@ To wait for any key:
 
 to say WaitLineBreak: [little bit of often used code]
 	if waiterhater is 0: [skips waiting if it's not wanted]
-		wait for any key; 
+		wait for any key;
 		if hypernull is 0, LineBreak; [adds a break after the 'more']
 	else:
 		LineBreak; [people who don't want to wait at least get a break]
@@ -68,18 +68,18 @@ to WaitLineBreak: [little bit of often used code]
 
 to LineBreak:
 	say "[line break]";
-			
+
 to PlayerEat (N - number):
 	decrease hunger of player by N;
 	if hunger of player < 0:
 		now hunger of player is 0;
-		
+
 to PlayerDrink (N - number):
 	decrease thirst of player by N;
 	if thirst of player < 0:
 		now thirst of player is 0;
-		
+
 to say NonCombatError:
 	say "ERROR! This is a noncombat creature that you should never see in a fight. Please report how you saw this on the FS Discord or Forum.";
-		
+
 Basic Functions ends here.

@@ -44,7 +44,7 @@ to say losetotemplate:
 	say "     You were beaten by the creature.";
 	if cocks of player > 0:
 		say "     Additional paragraph for a male/herm player.";
-	otherwise:
+	else:
 		say "     Additional paragraph for a female player.";
 
 to say beatthetemplate:
@@ -55,9 +55,9 @@ to say beatthetemplate:
 			say "     The player agreed to sex.  Fun times begin.";
 			if cunts of player > 0:
 				say "     The player is female/herm, so sex goes like this for her.";
-			otherwise:
+			else:
 				say "     The player must be male, so sex goes like this for him.";
-		otherwise:
+		else:
 			say "     Awww!  The player refused the sex.  Party pooper.";
 
 
@@ -132,13 +132,13 @@ when play ends:
 	if bodyname of player is "Template":
 		if humanity of player is less than 10:
 			say "     You succumb to your template infection.";
-		otherwise:
+		else:
 			say "     You survive, but were infected by the template.";
 			if cocks of player > 0:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
-			otherwise if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
+			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";
-			otherwise:									[F-STERILE]
+			else:									[F-STERILE]
 				say "     Additional text for a female survivor who cannot become preggers.";
 
 [ Edit this to have the correct creature name as well]

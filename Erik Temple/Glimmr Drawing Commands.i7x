@@ -120,13 +120,13 @@ To boxdraw (hue - a number) in (win - a g-window) from (x1 - a number) by (y1 - 
 
 To draw/display a/-- box (hue - a number) in (win - a g-window) from (x1 - a number) by/x (y1 - a number) to (x2 - a number) by/x (y2 - a number) with (wgt - a number) pixel/pixels/px/-- line-weight/stroke, outlined or inset:
 	if outlined:
-		boxdraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt), outlined;		
-	otherwise if inset:
+		boxdraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt), outlined;
+	else if inset:
 		boxdraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt), inset;
-	otherwise:
+	else:
 		boxdraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt);
 	#if utilizing Glimmr debugging;
-	say "[>console][DC]Drawing a box of color [hue] in [i][win][/i] with upper left ([x1], [y1]) and lower right ([x2], [y2]), line-weight [wgt] px[if outlined]; line is drawn outside the bounds of the box[otherwise if inset]; line is drawn inside the bounds of the box[end if].[<]";
+	say "[>console][DC]Drawing a box of color [hue] in [i][win][/i] with upper left ([x1], [y1]) and lower right ([x2], [y2]), line-weight [wgt] px[if outlined]; line is drawn outside the bounds of the box[else if inset]; line is drawn inside the bounds of the box[end if].[<]";
 	#end if;
 
 To draw/display a/-- box (hue - a number) in (win - a g-window) from (coord1 - a list of numbers) to (coord2 - a list of numbers) with (wgt - a number) pixel/pixels/px/-- line-weight/stroke, outlined or inset:
@@ -136,12 +136,12 @@ To draw/display a/-- box (hue - a number) in (win - a g-window) from (coord1 - a
 	let y2 be entry 2 of coord2;
 	if outlined:
 		boxdraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt), outlined;
-	otherwise if inset:
+	else if inset:
 		boxdraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt), inset;
-	otherwise:
+	else:
 		boxdraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt);
-		
-To box (coord1 - a list of numbers) to (coord2 - a list of numbers) at (wgt - a number) px/pixels/pixel, outlined or inset: 
+
+To box (coord1 - a list of numbers) to (coord2 - a list of numbers) at (wgt - a number) px/pixels/pixel, outlined or inset:
 	if the type of the current graphics window is not g-graphics:
 		#if utilizing Glimmr debugging;
 		say "*** Error: Short-form box-drawing directive ignored. The current graphics window global was not correctly specified.";
@@ -153,9 +153,9 @@ To box (coord1 - a list of numbers) to (coord2 - a list of numbers) at (wgt - a 
 	let y2 be entry 2 of coord2;
 	if outlined:
 		boxdraw (current foreground-color) in (current graphics window) from (x1) by (y1) to (x2) by (y2) with (wgt), outlined;
-	otherwise if inset:
+	else if inset:
 		boxdraw (current foreground-color) in (current graphics window) from (x1) by (y1) to (x2) by (y2) with (wgt), inset;
-	otherwise:
+	else:
 		boxdraw (current foreground-color) in (current graphics window) from (x1) by (y1) to (x2) by (y2) with (wgt).
 
 
@@ -245,14 +245,14 @@ To linedraw (hue - a number) in (win - a g-window) from (x1 - a number) by/x (y1
 	if dd >= 0:
 		let ax be 2 times dd;
 		let sx be 1;
-	otherwise:
+	else:
 		let ax be -2 times dd;
 		let sx be -1;
 	let dd be y2 - y1;
 	if dd >= 0:
 		let ay be 2 times dd;
 		let sy be 1;
-	otherwise:
+	else:
 		let ay be -2 times dd;
 		let sy be -1;
 	let x be x1;
@@ -269,13 +269,13 @@ To linedraw (hue - a number) in (win - a g-window) from (x1 - a number) by/x (y1
 			if x is x2 or y is not y1:
 				if sx > 0:
 					dimrectdraw (hue) in win at (x - x1) by y1 with size x1 by wgt;
-				otherwise:
+				else:
 					dimrectdraw (hue) in win at x by y1 with size x1 by wgt;
 				let y1 be y;
 				let x1 be 1;
-			otherwise:
+			else:
 				increase x1 by 1;
-	otherwise:
+	else:
 		let y1 be 1;
 		let d be ax - (ay / 2);
 		while y is not y2:
@@ -287,11 +287,11 @@ To linedraw (hue - a number) in (win - a g-window) from (x1 - a number) by/x (y1
 			if x is not x1 or y is y2:
 				if sy > 0:
 					dimrectdraw (hue) in win at x1 by (y - y1) with size wgt by y1;
-				otherwise:
+				else:
 					dimrectdraw (hue) in win at x1 by y with size wgt by y1;
 				let y1 be 1;
 				let x1 be x;
-			otherwise:
+			else:
 				increase y1 by 1;
 
 
@@ -300,7 +300,7 @@ To draw a/-- line (hue - a number) in (win - a g-window) from (x1 - a number) by
 	say "[>console][DC]Drawing a line of color [hue] in [i][win][/i] from ([x1], [y1]) to ([x2], [y2]), line-weight [wgt] pixels.[<]";
 	#end if;
 	linedraw (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt).
-		
+
 
 To draw a/-- line (hue - a number) in (win - a g-window) from (coord1 - a list of numbers) to (coord2 - a list of numbers) with (wgt - a number) pixel/pixels/px/-- line-weight/stroke:
 	let x1 be entry 1 of coord1;
@@ -318,20 +318,20 @@ To line (coord1 - a list of numbers) to (coord2 - a list of numbers) at (wgt - a
 	let x2 be entry 1 of coord2;
 	let y2 be entry 2 of coord2;
 	Draw a line (current foreground-color) in current graphics window from x1 by y1 to x2 by y2 with wgt pixel line-weight.
-	
+
 
 Section - Line using angle + distance
 
 To draw a line (hue - a number) in (win - a g-window) from (x1 - a number) by (y1 - a number) measuring/of (distance - a number) pixel/pixels/px/-- long/-- at (angle - a number) deg/degree/degrees/-- angle/-- with (wgt - a number) pixel/pixels/px/-- line-weight/stroke:
 	let xx be (sine of angle) * distance to the nearest whole number;
 	let yy be (cosine of angle) * distance to the nearest whole number;
-	let x2 be x1 + xx;	
+	let x2 be x1 + xx;
 	let y2 be y1 - yy;
 	#if utilizing Glimmr debugging;
 	say "[>console][DC]Converting angle ([angle]°) and distance ([distance]) to coordinate pair ([x2], [y2]) in preparation for line-drawing.[<]";
 	#end if;
 	Draw a line (hue) in (win) from (x1) by (y1) to (x2) by (y2) with (wgt) pixel line-weight.
-	
+
 To draw a line (hue - a number) in (win - a g-window) from (coord1 - a list of numbers) measuring (distance - a number) pixels/pixel/-- long/-- at (angle - a number) deg/degree/degrees/-- angle/-- with (wgt - a number) pixel/pixels/px/-- line-weight/stroke:
 	let x1 be entry 1 of coord1;
 	let y1 be entry 2 of coord1;
@@ -382,7 +382,7 @@ Include (-
 	if (win.ref_number) {
 		glk_image_draw(win.ref_number, ResourceIDsOfFigures-->ID, x, y);
 	}
-];  
+];
 
 -).
 
@@ -391,7 +391,7 @@ Section - Image with specified size
 
 To drscimage (ID - a figure name) in (win - a g-window) at (x1 - a number) by/x (y1 - a number) with size/dimensions (width - a number) by/x (height - a number):
 	(- DrawImageScaled({ID}, {win}, {x1}, {y1}, {width}, {height}); -)
-	
+
 To display/draw the/an/-- image/-- (ID - a figure name) in (win - a g-window) at (x1 - a number) by/x (y1 - a number) with size/dimensions (width - a number) by/x (height - a number):
 	#if utilizing Glimmr debugging;
 	say "[>console][DC]Drawing image [ID] in [i][win][/i] at ([x1], [y1]), scaled to dimensions [width] x [height].[<]";
@@ -418,7 +418,7 @@ Include (-
 	if (win.ref_number) {
 		glk_image_draw_scaled(win.ref_number, ResourceIDsOfFigures-->ID, x, y, image_x, image_y);
 	}
-];  
+];
 
 -).
 
@@ -449,7 +449,7 @@ To draw/display a/-- monochrome bitmap (HUE - a number) in (WIN - a g-window) at
 	say "[>console][DC]Drawing monochrome bitmap in [i][win][/i] with upper left ([X1], [Y1]) and dot size [WGT] (bitmap is [number of entries of bit_map] long, with width [the number of entries in entry 1 of BIT_MAP]; foreground color [hue], background color [bkgd].[<]";
 	#end if;
 	drmonobitmap (HUE) in (WIN) at (X1) by (Y1) using (BIT_MAP) with dot size (WGT) px and background (BKGD).
-	
+
 To draw/display a/-- monochrome bitmap (HUE - a number) in (WIN - a g-window) at (COORD1 - a list of numbers) using (WDT - a number) bit/-- wide data of/from/-- (BIT_MAP - a list of lists of numbers) with dot/-- size (WGT - a number) pixel/pixels/px/-- and background (bkgd - a number):
 	let x1 be entry 1 of coord1;
 	let y1 be entry 2 of coord1;
@@ -469,7 +469,7 @@ To drmonobitmap (HUE - a number) in (WIN - a g-window) at (X1 - a number) by/x (
 			increase column by WGT;
 		increase row by WGT;
 		now column is X1.
-	
+
 To draw/display a/-- monochrome bitmap (HUE - a number) in (WIN - a g-window) at (X1 - a number) by/x (Y1 - a number) using (BIT_MAP - a list of lists of numbers) with dot/-- size (WGT - a number) pixel/pixels/px/--:
 	#if utilizing Glimmr debugging;
 	say "[>console][DC]Drawing monochrome bitmap in [i][win][/i] with upper left ([X1], [Y1]) and dot size [WGT] (bitmap is [number of entries of bit_map] long, with width [the number of entries in entry 1 of BIT_MAP]; color [hue].[<]";
@@ -492,7 +492,7 @@ To monochrome/mono bitmap/bmp (BIT_MAP - a list of lists of numbers) at (COORD1 
 	let y1 be entry 2 of coord1;
 	if backgrounded:
 		display a monochrome bitmap (current foreground-color) in (current graphics window) at (X1) by (Y1) using (BIT_MAP) with dot size (WGT) px and background (current background-color);
-	otherwise:
+	else:
 		display a monochrome bitmap (current foreground-color) in (current graphics window) at (X1) by (Y1) using (BIT_MAP) with dot size (WGT) px.
 
 
@@ -564,7 +564,7 @@ To polychrome/poly bitmap/bmp (BIT_MAP - a list of lists of numbers) at (COORD1 
 	let y1 be entry 2 of coord1;
 	if backgrounded:
 		display a polychrome bitmap in (current graphics window) at (X1) by (Y1) using (BIT_MAP) with dot size (WGT) px and background (current background-color);
-	otherwise:
+	else:
 		display a polychrome bitmap in (current graphics window) at (X1) by (Y1) using (BIT_MAP) with dot size (WGT) px.
 
 
@@ -573,7 +573,7 @@ Chapter - Fonts
 
 Section - The font base class
 
-A font is a kind of thing. 
+A font is a kind of thing.
 A font has a table name called the font table.
 A font has a number called the font-height. The font-height is usually 1.
 A font has some text called the colophon. The colophon is usually "".
@@ -594,7 +594,7 @@ A bitmap font has a list of numbers called the glyph map. The glyph map is usual
 Section - Dummy bitmap typeface
 [Inform requires that there be at least one font in the world. Here we include a dummy font object, which can also be used as a null-object should we need it.]
 
-Null-bitmap-typeface is a bitmap font. 
+Null-bitmap-typeface is a bitmap font.
 The font table of a bitmap font is usually the Table of Null Bitmap Font Parameters.
 
 Table of Null Bitmap Font Parameters
@@ -660,7 +660,7 @@ To paintbittext (hue - a number) of (str - indexed text) in (win - a g-window) a
 			now char_code is the character code of position N of STR;
 			if there is a char of char_code in the font table of TYPF:
 				choose row with a char of char_code in the font table of TYPF;
-			otherwise:
+			else:
 				choose row with a char of 32 in the font table of TYPF;
 			now g-scan is 0;
 			[let bitmap-size be width entry * height entry;]
@@ -717,7 +717,7 @@ To paintbittext (hue - a number) of (str - indexed text) in (win - a g-window) a
 			now char_code is the character code of position N of STR;
 			if there is a char of char_code in the font table of TYPF:
 				choose row with a char of char_code in the font table of TYPF;
-			otherwise:
+			else:
 				choose row with a char of 32 in the font table of TYPF;
 			let scan be 0;
 			[let bitmap-size be width entry * height entry;]
@@ -772,7 +772,7 @@ To bitmap/bmp text/txt (STR - indexed text) at (COORD1 - a list of numbers) size
 	if right-aligned:
 		paint a bitmap text (current foreground-color) of (STR) in (current graphics window) at (X1) by (Y1) using (current font) with dot size (WGT) and background (current background-color), right-aligned;
 		rule succeeds;
-	otherwise:
+	else:
 		paint a bitmap text (current foreground-color) of (STR) in (current graphics window) at (X1) by (Y1) using (current font) with dot size (WGT) and background (current background-color).
 
 To bitmap/bmp text/txt (STR - indexed text) at (COORD1 - a list of numbers) size (WGT - a number) pixel/pixels/px/--, center-aligned or right-aligned:
@@ -787,9 +787,9 @@ To bitmap/bmp text/txt (STR - indexed text) at (COORD1 - a list of numbers) size
 	if right-aligned:
 		paint a bitmap text (current foreground-color) of (STR) in (current graphics window) at (X1) by (Y1) using (current font) with dot size (WGT), right-aligned;
 		rule succeeds;
-	otherwise:
+	else:
 		paint a bitmap text (current foreground-color) of (STR) in (current graphics window) at (X1) by (Y1) using (current font) with dot size (WGT).
-		
+
 
 Chapter - Text-painting with image-based fonts
 
@@ -810,7 +810,7 @@ To paintimgtext of/-- (STR - indexed text) in (win - a g-window) at (X1 - a numb
 			now char_code is the character code of position N of STR;
 			if there is a char of char_code in the font table of TYPF:
 				choose row with a char of char_code in the font table of TYPF;
-			otherwise:
+			else:
 				choose row with a char of 32 in the font table of TYPF;
 			let the chosen glyph be glyph-ref entry;
 			let the yoffset be yoffset entry times SCF to the nearest whole number;
@@ -860,7 +860,7 @@ To paintimgtext of/-- (STR - indexed text) in (win - a g-window) at (X1 - a numb
 			let V be the character code of position N of STR;
 			if there is a char of V in the font table of TYPF:
 				choose row with a char of V in the font table of TYPF;
-			otherwise:
+			else:
 				choose row with a char of 32 in the font table of TYPF;
 			let the chosen glyph be glyph-ref entry;
 			let the yoffset be yoffset entry times SCF to the nearest whole number;
@@ -907,7 +907,7 @@ To image/img text/txt (STR - indexed text) at (COORD1 - a list of numbers) scale
 	if right-aligned:
 		paint an image-based text of (STR) in (current graphics window) at (X1) by (Y1) using (current font) scaled at (SCF) with background (current background-color) and margin (MARGIN) px, right-aligned;
 		rule succeeds;
-	otherwise:
+	else:
 		paint an image-based text of (STR) in (current graphics window) at (X1) by (Y1) using (current font) scaled at (SCF) with background (current background-color) and margin (MARGIN) px.
 
 To image/img text/txt (STR - indexed text) at (COORD1 - a list of numbers) scaled/scale (SCF - a real number), center-aligned or right-aligned:
@@ -922,7 +922,7 @@ To image/img text/txt (STR - indexed text) at (COORD1 - a list of numbers) scale
 	if right-aligned:
 		paint an image-based text of (STR) in (current graphics window) at (X1) by (Y1) using (current font) scaled at (SCF), right-aligned;
 		rule succeeds;
-	otherwise:
+	else:
 		paint an image-based text of (STR) in (current graphics window) at (X1) by (Y1) using (current font) scaled at (SCF).
 
 
@@ -976,7 +976,7 @@ To draw/display an/-- image-map in (WIN - a g-window) at (X1 - a number) by/x (Y
 	say "[>console][DC]Image-map drawn at screen coordinates ([X1], [Y1]) of [WIN] using the list of figure names provided, interpreted as a grid [the number of entries in entry 1 of IMG_MAP] tiles wide and [the number of entries in IMG_MAP] tiles high. Tile size used: [W] by [H] pixels.[<]";
 	#end if;
 	drimagemap in (WIN) at (X1) by (Y1) using (IMG_MAP) with tile-size (W) by (H).
-	
+
 To draw/display an/-- image-map in (WIN - a g-window) at (COORD1 - a list of numbers) using (IMG_MAP - a list of lists of figure names) with tile-size (W - a number) by/x (H - a number) pixel/pixels/px/--:
 	let X1 be entry 1 of coord1;
 	let Y1 be entry 2 of coord1;
@@ -998,7 +998,7 @@ To draw/display an/-- image-map in (WIN - a g-window) at (COORD1 - a list of num
 	let X1 be entry 1 of coord1;
 	let Y1 be entry 2 of coord1;
 	display an image-map in (WIN) at (X1) by (Y1) using (IMG_MAP) with tile-size (W) by (H).
-		
+
 
 Section - Short form	of figure image-map
 
@@ -1008,9 +1008,9 @@ To image-map (IMG_MAP - a list of lists of figure names) at (COORD1 - a list of 
 		let y1 be entry 2 of coord1;
 		if backgrounded:
 			display an image-map in (current graphics window) at (X1) by (Y1) using (IMG_MAP) with tile-size (W) by (H) and background (current background-color);
-		otherwise:
+		else:
 			display an image-map in (current graphics window) at (X1) by (Y1) using (IMG_MAP) with tile-size (W) by (H) px;
-	otherwise:
+	else:
 		say "*** Error: Short-form image-map drawing directive ignored. The current graphics window global was not correctly specified."
 
 
@@ -1041,7 +1041,7 @@ To draw/display an/-- image-map in (WIN - a g-window) at (X1 - a number) by/x (Y
 	say "[>console][DC]Image-map drawn at screen coordinates ([X1], [Y1]) of [WIN] using the list of numbers provided, interpreted as a grid [WDT] tiles wide and [total-height] tiles high. Tile size used: [W] by [H] pixels.[<]";
 	#end if;
 	drimagemap in (WIN) at (X1) by (Y1) using (IMG_MAP) rendered with (TSET) with tile-size (W) by (H).
-	
+
 To draw/display an/-- image-map in (WIN - a g-window) at (COORD1 - a list of numbers) using (IMG_MAP - a list of lists of numbers) rendered/-- using/with/by (TSET - a tileset) with tile-size (W - a number) by/x (H - a number) pixel/pixels/px/--:
 	let X1 be entry 1 of coord1;
 	let Y1 be entry 2 of coord1;
@@ -1065,9 +1065,9 @@ To draw/display an/-- image-map in (WIN - a g-window) at (COORD1 - a list of num
 	let X1 be entry 1 of coord1;
 	let Y1 be entry 2 of coord1;
 	display an image-map in (WIN) at (X1) by (Y1) using (IMG_MAP) rendered using (TSET) with tile-size (W) by (H).
-		
 
-Section - Short form	of tileset image map	
+
+Section - Short form	of tileset image map
 
 To image-map (IMG_MAP - a list of lists of numbers) at (COORD1 - a list of numbers) width/w (WDT - a number) tileset (TSET - a tileset) tile-size/size (W - a number) by/x (H - a number)  pixel/pixels/px/--, backgrounded:
 	if the type of the current graphics window is g-graphics:
@@ -1075,9 +1075,9 @@ To image-map (IMG_MAP - a list of lists of numbers) at (COORD1 - a list of numbe
 		let y1 be entry 2 of coord1;
 		if backgrounded:
 			display an image-map in (current graphics window) at (X1) by (Y1) using (IMG_MAP) rendered using (TSET) with tile-size (W) by (H) and background (current background-color);
-		otherwise:
+		else:
 			display an image-map in (current graphics window) at (X1) by (Y1) using (IMG_MAP) rendered using (TSET) with tile-size (W) by (H);
-	otherwise:
+	else:
 		say "*** Error: Short-form image-map drawing directive ignored. The current graphics window global was not correctly specified."
 
 
@@ -1107,7 +1107,7 @@ To decide what number is the length of (STR - indexed text) set in (TYPF - a fon
 		let V be the character code of position N of STR;
 		if there is a char of V in the font table of TYPF:
 			choose row with a char of V in the font table of TYPF;
-		otherwise:
+		else:
 			choose row with a char of 32 in the font table of TYPF;
 		increase len by the advance entry;
 	decide on len.
@@ -1169,9 +1169,9 @@ To decide which number is hex (hex - indexed text):
 		unless V < 48 or V > 70 or ( V > 57 and V < 65):
 			if V > 64:
 				let curval be V - 55;
-			otherwise if V < 58:
+			else if V < 58:
 				let curval be V - 48;
-		otherwise:
+		else:
 			let total be 0;
 			break;
 		let curval be curval * multiplier;
@@ -1186,21 +1186,21 @@ Chapter - Determination of image size
 
 To decide what number is the image-width of (img - a figure name):
 	(- FindImageWidth({img}) -)
-	
+
 To decide what number is the image-height of (img - a figure name):
 	(- FindImageHeight({img}) -)
 
 Include (-
 
-[ FindImageWidth  img result img_width;
+[ FindImageWidth img result img_width;
 	result = glk_image_get_info(ResourceIDsOfFigures-->img, gg_arguments, gg_arguments+WORDSIZE);
-             		img_width  = gg_arguments-->0;
+             		img_width = gg_arguments-->0;
 	return img_width;
 ];
 
-[ FindImageHeight  img result img_height;
+[ FindImageHeight img result img_height;
 	result = glk_image_get_info(ResourceIDsOfFigures-->img, gg_arguments, gg_arguments+WORDSIZE);
-             		img_height  = gg_arguments-->1;
+             		img_height = gg_arguments-->1;
 	return img_height;
 ];
 
@@ -1257,27 +1257,27 @@ To get/set blank/-- indices for (typeface - a bitmap font), silently, verifying 
 			unless index entry is (actual-index plus next-advance):
 				say "***Index numbers for the font table of [typeface] MAY be incorrect. Check glyph '[char-code char entry]' (char [char entry]), or the index position before it. The problem may also be that the height or width is incorrectly specified.";
 			let actual-index be index entry;
-		otherwise:
+		else:
 			next;
 		if verifying glyph map:
 			if the char entry is entry (index entry) of the glyph map of the typeface:
 				unless silently:
 					say "Glyph '[char-code char entry]' ([char entry]) appears to be correctly matched to the glyph map.";
-			otherwise:
+			else:
 				say "***The index entry for glyph [char-code char entry] ([char entry]) does not seem to correctly match the glyph map. Continuing, if possible...";
 		if there is a width entry and there is a height entry:
 			let next-advance be (width entry * height entry) + 1;
-		otherwise:
+		else:
 			say "***Glyph '[char-code char entry]' ([char entry]) in the font table of [typeface] is missing bitmap dimensions. Repair font table.";
 			break;
 	if verifying glyph map:
 		if silently:
 			add indices to the typeface starting from (index entry + next-advance), silently, verifying glyph map;
-		otherwise:
+		else:
 			add indices to the typeface starting from (index entry + next-advance), verifying glyph map;
-	otherwise if silently:
+	else if silently:
 		add indices to the typeface starting from (index entry + next-advance), silently;
-	otherwise:
+	else:
 		add indices to the typeface starting from (index entry + next-advance);
 	if writing table to disk:
 		write font table to disk for the typeface.
@@ -1291,7 +1291,7 @@ To add indices to (typeface - a bitmap font) starting from (N - a number), silen
 		if calculated-index is greater than 0:
 			unless silently:
 				say "Changed index entry for glyph '[char-code char entry]' (char [char entry]) to [index entry].";
-		otherwise:
+		else:
 			say "***Could not provide an index entry for the font table of [typeface]: Check glyph '[char-code char entry]' (char [char entry]) first.";
 			break;
 		let calculated-index be calculated-index plus ( width entry * height entry) + 1;
@@ -1299,7 +1299,7 @@ To add indices to (typeface - a bitmap font) starting from (N - a number), silen
 			if the char entry is entry (index entry) of the glyph map of the typeface:
 				unless silently:
 					say "Glyph '[char-code char entry]' ([char entry]) appears to be correctly matched to the glyph map.";
-			otherwise:
+			else:
 				say "***The index entry for glyph [char-code char entry] ([char entry]) does not seem to correctly match the glyph map. Continuing, if possible...";
 
 To write font table to disk for (typeface - a bitmap font):
@@ -1331,7 +1331,7 @@ Use Glimmr debugging translates as (- Constant Glimmr_DEBUG; -).
 
 To #if utilizing Glimmr debugging:
 	(- #ifdef Glimmr_DEBUG; -)
-	
+
 To #end if:
 	(- #endif; -)
 
@@ -1345,7 +1345,7 @@ Understand "> [text]" or ">[text]" as a mistake ("[>console][line break]*[player
 Chapter - Debugging output window
 [We can direct Glimmr's debugging log to output in any window. The primary use for this feature is expected to be the separate console window, as provided by the Glimmr Debugging Console extension.]
 
-The console output window is a g-window variable. 
+The console output window is a g-window variable.
 
 
 Section - Assign the default debugging window (for use without Glimmr Debugging Console by Erik Temple)
@@ -1422,7 +1422,7 @@ Note that, like all "to" phrases in Inform, these can be "overloaded". To do som
 
 To say >console:
 	(- if ( (+ console output window +) has g_present) { glk_set_window( (+ console output window +).ref_number); -).
- 
+
 To say <:
 	(-  glk_set_window( gg_mainwin ); } RunParagraphOn(); -).
 
@@ -1501,7 +1501,7 @@ GDC in fact allows us to provide color values in all of these forms, and more. (
 	R 255 G 255 B 255
 	r 255 g 255 b 255
 	r = 255 g = 255 b = 255
-	
+
 	RGB percentages (rather coarse):
 	R% 100 G% 100 B% 100
 	r% 100 g% 100 b% 100
@@ -1651,7 +1651,7 @@ Short forms:
 
 Speed notes:
 
-	A box is drawn using four rectangles, one for each side of the box. It will thus take slightly more time to draw than a rectangle. In practice, and particularly in the best multimedia interpreters, a few boxes on screen should still draw instantaneously. 
+	A box is drawn using four rectangles, one for each side of the box. It will thus take slightly more time to draw than a rectangle. In practice, and particularly in the best multimedia interpreters, a few boxes on screen should still draw instantaneously.
 
 
 Section: Stroked rectangle
@@ -1702,7 +1702,7 @@ Speed notes:
 
 Section: Line using distance + angle
 
-It is also possible to specify a line using an origin point and an angle (in degrees or radians) plus a distance (in pixels). The endpoint will be calculated automatically. 
+It is also possible to specify a line using an origin point and an angle (in degrees or radians) plus a distance (in pixels). The endpoint will be calculated automatically.
 
 	draw a line <color> in <window> from <origin> measuring <distance> pixels at <angle> degrees/radians with <weight> pixel line-weight
 
@@ -1743,7 +1743,7 @@ A bitmap draws a rectangular image composed of individual "bits" that are specif
  		{ 1, 1, 1, 1, 1 },
  		{ 0, 0, 1, 0, 0 },
  		{ 0, 0, 1, 0, 0 }
-	}. 
+	}.
 
 The ones represent bits that are turned "on", while the zeros represent bits that are "off". The former will write to the screen using one color, and the latter will either not draw anything, or will draw using a second color (the background color).
 
@@ -1766,7 +1766,7 @@ Section: Monochrome bitmap
 
 The monochrome bitmap command allows only two bit values, 0 or 1. A background color can be specified, if desired.
 
-Note that, when using the short form, the "current foreground-color" global refers to the color of the "on" bits; the "current background-color" specifies the background color (if one is desired). 
+Note that, when using the short form, the "current foreground-color" global refers to the color of the "on" bits; the "current background-color" specifies the background color (if one is desired).
 
 	display a monochrome bitmap <color> in <window> at <origin> using <list of numbers> with dot size <pixel dimension> pixels
 
@@ -1786,7 +1786,7 @@ Long forms (the bitmap definition list is shown first as an inline list and ther
 	display a monochrome bitmap (color g-Red) in the graphics-window at {10, 10} using Slash-definition with dot size 2 pixels and background (color g-Black).
 
 Short forms (the bitmap definition list is shown first as an inline list and thereafter as a global variable containing such a list):
-	
+
 	mono bitmap {
 				{ 0, 0, 0, 0, 1 },
 				{ 0, 0, 0, 1, 0 },
@@ -1796,7 +1796,7 @@ Short forms (the bitmap definition list is shown first as an inline list and the
 
 	mono bitmap Slash-definition at {100, 100} size 2px, backgrounded.
 
-The former does not utilize the "current background-color" global variable, while the latter does. So, the former will display a red slash over whatever lies beneath it, while the latter will render black for the 0's and red for the 1's. 
+The former does not utilize the "current background-color" global variable, while the latter does. So, the former will display a red slash over whatever lies beneath it, while the latter will render black for the 0's and red for the 1's.
 
 Speed notes:
 
@@ -1862,7 +1862,7 @@ The main advantage of the direct image-map is that it is at least notionally fas
 
 One advantage of the tileset approach is human-readability. With short integers and some formatting, the list itself can be understand relatively easily as a kind of low-resolution "image." The following, for example, might represent a long hallway with a door on the left:
 
-	{ 
+	{
 		{ 11, 11, 11, 11, 11, 11, 11 },
 		{ 05, 00, 00, 00, 00, 00, 00 },
 		{ 05, 00, 00, 00, 00, 00, 00 },
@@ -1994,12 +1994,12 @@ As with other drawing types, the origin coordinate of a rendered string is usual
 Note that rendered strings are limited to a single line, though we can set two strings next to one another to create multiple lines:
 
 	bitmap text "This is the first line of" at {10, 10} size 1 px;
-	bitmap text "a two-line paragraph." at {10, 30} size 1 px.	
+	bitmap text "a two-line paragraph." at {10, 30} size 1 px.
 
 
 Section: Bitmap-rendered strings
 
-Bitmap-rendered strings are painted from "glyph maps" that are constructed very similarly to (monochrome) bitmaps, as described above (the main difference is that bitmap-rendered strings use flat arrays). Just as with bitmaps, we must specify the number of pixels we want each "bit" of the characters in our string to correspond to by supplying the "dot size": a dot size of 2 will use 4 pixels (2 x 2) onscreen to render each bit in the bitmap. 
+Bitmap-rendered strings are painted from "glyph maps" that are constructed very similarly to (monochrome) bitmaps, as described above (the main difference is that bitmap-rendered strings use flat arrays). Just as with bitmaps, we must specify the number of pixels we want each "bit" of the characters in our string to correspond to by supplying the "dot size": a dot size of 2 will use 4 pixels (2 x 2) onscreen to render each bit in the bitmap.
 
 	paint bitmap text <color> of <indexed text> in <window> at <origin> using <font> with dot size <size> pixels
 
@@ -2044,8 +2044,8 @@ The text color for short-form commands is determined by the "current foreground-
 
 Speed notes:
 
-	Bitmap-rendered strings draw a number of bitmaps each time they are redrawn, and bitmaps themselves are composed of multiple rectangle-drawing instructions. As such, bitmap-rendered strings are the most intensive of Glimmr's drawing commands. Because most interpreters are still relatively slow when it comes to drawing rectangles, they will draw relatively slowly. If you want to use bitmap-rendered strings and don't like the performance on your interpreter, contact your friendly neighborhood terp maintainer and ask for improvement! (The exception is Gargoyle, which in the bleeding-edge versions available in 2010 is quite fast at rendering bitmap-rendered strings.) 
-	
+	Bitmap-rendered strings draw a number of bitmaps each time they are redrawn, and bitmaps themselves are composed of multiple rectangle-drawing instructions. As such, bitmap-rendered strings are the most intensive of Glimmr's drawing commands. Because most interpreters are still relatively slow when it comes to drawing rectangles, they will draw relatively slowly. If you want to use bitmap-rendered strings and don't like the performance on your interpreter, contact your friendly neighborhood terp maintainer and ask for improvement! (The exception is Gargoyle, which in the bleeding-edge versions available in 2010 is quite fast at rendering bitmap-rendered strings.)
+
 
 Section: Image-rendered strings
 
@@ -2110,7 +2110,7 @@ A tileset is an object (of kind thing, to be precise) that defines the essential
 
 	The Glimmr Automap Tileset is a tileset.
 
-A tileset has only a couple of parameters. The most important is the "translation table". The translation table relates an arbitrary number to a figure name: 
+A tileset has only a couple of parameters. The most important is the "translation table". The translation table relates an arbitrary number to a figure name:
 
 	The Glimmr Automap Tileset is a tileset. The translation-table is the Table of Automap Tiles.
 
@@ -2123,7 +2123,7 @@ A tileset has only a couple of parameters. The most important is the "translatio
 	36	Figure of nw se path
 	37	Figure of empty room center
 	90	Figure of diagonal cross
-	91	Figure of orthogonal cross 
+	91	Figure of orthogonal cross
 	38	Figure of south wall
 	39	Figure of north wall
 	40	Figure of east wall
@@ -2141,7 +2141,7 @@ Chapter: Fonts and Font Creation
 
 While the design of fonts is beyond the scope of this documentation, the creation of fonts for use with Glimmr is relatively simple, though like all font-making it does involve some fiddly bookkeeping. By far the easiest place to begin to create a font is to open up the fonts included with Glimmr and see how they are made; you may want to refer to one or the other of the font extensions (Glimmr Bitmap Font and Glimmr Image Font) as you peruse this section of the documentation.
 
-There are actually two kinds of fonts used by Glimmr, bitmap fonts and image fonts. As the names imply, these are appropriate for bitmap-rendered strings and image-rendered strings, respectively (we shouldn't try to use an image font for a bitmap-rendered string or vice versa--bad things will result!). 
+There are actually two kinds of fonts used by Glimmr, bitmap fonts and image fonts. As the names imply, these are appropriate for bitmap-rendered strings and image-rendered strings, respectively (we shouldn't try to use an image font for a bitmap-rendered string or vice versa--bad things will result!).
 
 A "font" of whatever type is actually a kind of thing (though not one that the player can see, interact with, or refer to, at least not under normal circumstances). All of a font's features are provided through the properties of this font object. In the next section, we will walk through the processes of creating a font object that are common to both types, and in subsequent sections move on to the properties of the fonts that are specific to one or the other.
 
@@ -2184,7 +2184,7 @@ Every font includes a "font table." The font table provides the critical paramet
 
 	The font table of Glimmr C&C is the Table of Glimmr C&C Parameters.
 
-A font has a number called the "font height". This number represents the maximum height of the glyph space in the appropriate units. For a bitmap font, this would be the number of bits, while for an image font, it is the number of pixels. 
+A font has a number called the "font height". This number represents the maximum height of the glyph space in the appropriate units. For a bitmap font, this would be the number of bits, while for an image font, it is the number of pixels.
 
 	The font-height of Glimmr C&C is 12.
 	The font-height of Glimmr Lucidex is 56.
@@ -2195,27 +2195,27 @@ Section: Steps for the creation of new bitmap fonts
 
 If you are interested in creating your own font for use in a game, there is a thriving online scene organized around the creation of "pixel fonts" that can serve as a source of inspiration, and even advice. Just get out your google and go!
 
-The characters (glyphs) of a bitmap font are stored in the "glyph map," a list of numbers with a particular format. As with monochrome bitmaps, we specify each bit of the font using 1's for on-bits and 0's for off-bits. However, we also immediately preface the bitmap with the ASCII character code for the glyph: 
+The characters (glyphs) of a bitmap font are stored in the "glyph map," a list of numbers with a particular format. As with monochrome bitmaps, we specify each bit of the font using 1's for on-bits and 0's for off-bits. However, we also immediately preface the bitmap with the ASCII character code for the glyph:
 
 	The glyph map of Glimmr C&C is {
 		33,[exclamation point]
-		1, 
-		1, 
-		1, 
-		1, 
-		1, 
-		0, 
-		1,  
+		1,
+		1,
+		1,
+		1,
+		1,
+		0,
+		1,
 		34,[quotation mark]
-		1, 0, 1, 
-		1, 0, 1,  
+		1, 0, 1,
+		1, 0, 1,
 		35,[pound sign]
-		0, 0, 1, 0, 1, 0, 0, 
-		0, 0, 1, 0, 1, 0, 0, 
-		1, 1, 1, 1, 1, 1, 1, 
-		0, 0, 1, 0, 1, 0, 0, 
-		1, 1, 1, 1, 1, 1, 1, 
-		0, 0, 1, 0, 1, 0, 0, 
+		0, 0, 1, 0, 1, 0, 0,
+		0, 0, 1, 0, 1, 0, 0,
+		1, 1, 1, 1, 1, 1, 1,
+		0, 0, 1, 0, 1, 0, 0,
+		1, 1, 1, 1, 1, 1, 1,
+		0, 0, 1, 0, 1, 0, 0,
 		0, 0, 1, 0, 1, 0, 0 ... }
 
 Bitmaps should be made as compact as possible--there should never be a row or column of all zeros at the edges of the map, as this adds unnecessary processing time.
@@ -2245,23 +2245,23 @@ The index column has been saved for last, but it is very important. The index re
 
 	The glyph map of Glimmr C&C is {
 		33, <------
-		1, 
-		1, 
-		1, 
-		1, 
-		1, 
-		0, 
-		1,  
+		1,
+		1,
+		1,
+		1,
+		1,
+		0,
+		1,
 		34, <------
-		1, 0, 1, 
-		1, 0, 1,  
+		1, 0, 1,
+		1, 0, 1,
 		35, <------
-		0, 0, 1, 0, 1, 0, 0, 
-		0, 0, 1, 0, 1, 0, 0, 
-		1, 1, 1, 1, 1, 1, 1, 
-		0, 0, 1, 0, 1, 0, 0, 
-		1, 1, 1, 1, 1, 1, 1, 
-		0, 0, 1, 0, 1, 0, 0, 
+		0, 0, 1, 0, 1, 0, 0,
+		0, 0, 1, 0, 1, 0, 0,
+		1, 1, 1, 1, 1, 1, 1,
+		0, 0, 1, 0, 1, 0, 0,
+		1, 1, 1, 1, 1, 1, 1,
+		0, 0, 1, 0, 1, 0, 0,
 		0, 0, 1, 0, 1, 0, 0 ... }
 
 Counting each entry in the glyph map by hand to determine the index would be a chore, so there is a utility provided that will automatically populate blank index values. There are two prerequisites for this process to work: We must have correctly filled out the other columns in our table continuation, and the order in which characters are listed in the table continuation must be the same as the order in which their glyphs are defined in the glyph map. So long as both of these are true, we can leave our index column(s) blank, like so:
@@ -2372,7 +2372,7 @@ The "yoffset" and "advance" columns are similar in purpose to their counterparts
 
 That said, it is *highly* recommended that the yoffset always be set to 0, with every image file being the full height of the font-height. In other words, if the full font-height is 56 pixels, every image file should be sized at 56 pixels, with the glyph placed appropriately within. This is because scaling is inherently inaccurate, and images of different heights may not scale in exactly the same way. (Please see the image files for the Glimmr Image Font for a real-world example.) The yoffset column is there if it is needed, and a negative value can even be used, if needed, to make characters taller than the standard, but the quality of the output really will be better if height is controlled with the images rather than with offsets.
 
-The "advance" column tells GDC how many pixels to the right we should scan in order to draw the next character in the string. The advance is calculated based on the left edge of the character, so the number will usually be at least one more than the character's width, to be sure that the next glyph drawn will not touch or overlap it. When testing the advance values onscreen, be sure to do so with the scaling factor set to 1.0000. Scaling is inherently inaccurate, and character spacing decisions should be made using the most accurate scaling factor--the one (1.0000) that involves no scaling. 
+The "advance" column tells GDC how many pixels to the right we should scan in order to draw the next character in the string. The advance is calculated based on the left edge of the character, so the number will usually be at least one more than the character's width, to be sure that the next glyph drawn will not touch or overlap it. When testing the advance values onscreen, be sure to do so with the scaling factor set to 1.0000. Scaling is inherently inaccurate, and character spacing decisions should be made using the most accurate scaling factor--the one (1.0000) that involves no scaling.
 
 Once these steps are completed, you will have finished setting up your image font.
 
@@ -2395,7 +2395,7 @@ Now Glimmr functions will announce themselves, as well as the particular extensi
 
 		To say >console:
 			say echo stream of main-window.
-	
+
 		To say <:
 			say stream of main-window;
 			say run paragraph on.
@@ -2434,12 +2434,12 @@ It can often be useful to control debugging commands from source text, rather th
 		activate rules tracing
 		suspend rules tracing
 		if rules tracing is active
-	
+
 	RULES ALL
 		activate intensive rules tracing
 		suspend rules tracing
 		if intensive rules tracing is active
-	
+
 	GLKLIST
 		show glk list [the GLKLIST command]
 
@@ -2483,7 +2483,7 @@ Note the window-drawing rule provided does not scale, center, or otherwise vary 
 
 	When play begins:
 		open up the graphics-window.
-	
+
 	[After printing the banner text:
 		say "[line break]This example for the Glimmr Drawing Commands extension doesn't do much. It demonstrates a few of the drawing commands, and uses no external resources. Everything is drawn by directly coloring individual pixels. Key: [paragraph break]Ms. Pac-Man: polychrome bitmap.[line break]Maze outlines: line primitives.[line break]Lunch dots: rectangle primitives.[line break]Text box: stroked rectangle primitive.[line break]Text: Bitmap-rendered text.[paragraph break]".]
 
@@ -2515,6 +2515,3 @@ Note the window-drawing rule provided does not scale, center, or otherwise vary 
 	         { -1, -1, -1, 268431360, 268431360, 268431360, 268431360, 268431360, 268431360, 268431360, 268431360, 268431360, -1 },
 	         { -1, -1, -1, -1, -1, 268431360, 268431360, 268431360, 268431360, 268431360, -1, -1, -1 }
 	     }.
-
-
-

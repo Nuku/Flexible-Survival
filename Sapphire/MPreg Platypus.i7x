@@ -34,7 +34,7 @@ to say losetoplatypus:
 			say "     The rythmic rocking pleasure builds into a small eternity. He tenses up, holding your hips to his, twitching as he cums into you. By then you can no longer take the sensations of his fur rubbing up and down your shaft. Leaning in, he starts to lick and nip at your neck, his hands exploring your body sensually, especially your belly. The hot sticky cum tingles inside you strongly, arousing you further.";
 			say "     Giving into bliss, you cum hard, coating his fur with your seed. The platypus flops onto his back, pulling his cock out of your rump making a wet 'schluck' sound. 'Wow. I haven't had sex like that in days. I'll have to find you again sometime.' He grunts and stands, staggering a moment with the weight of his egg-filled belly, brushing the sand off of his fur, then starts walking off into the ocean to clean your cum off of his fur.[ovichance]";
 		else if cunts of player > 0:
-			say "     He smiles as he nudges you onto your back, sliding off your clothes. Looking over your body, he frowns. 'This won't do at all. I can't get more eggs from that.' With a gesture to your pussy, he sighs. 'Well, I guess we can fix that, and a little... [']Personal['] problem I've been having. You look between the creature's legs and watch as he grows swiftly erect. He slowly crawls over your body, his belly dragging over  yours.";
+			say "     He smiles as he nudges you onto your back, sliding off your clothes. Looking over your body, he frowns. 'This won't do at all. I can't get more eggs from that.' With a gesture to your pussy, he sighs. 'Well, I guess we can fix that, and a little... [']Personal['] problem I've been having. You look between the creature's legs and watch as he grows swiftly erect. He slowly crawls over your body, his belly dragging over yours.";
 			say "     Soon, his cock presses at your slit and starts to push in. Moaning in relief, he whispers in your ear 'You're such a nice lay after so long...' He grunts as he starts thrusting into you with vigor, grabbing your legs for extra leverage. His belly pressed against yours, he starts to thrust in deeper. His heavy womb presses down on your belly.";
 			say "     The rythmic rocking pleasure builds into a small eternity. His muzzle gets close to your neck and you feel his hot breath on it. A few moans escape his lips as he builds up speed, driving deep. He tenses up, holding your hips to his, keeping his dick deeply pressed into you as he cums hard. With each twitch of his cock, you feel his warm seed begin to flood you. The heat of his potent seed sends you over the edge, your hips twitching and your hands grasping at the sand beneath you.";
 			say "     A few moments pass as the pair of you pant, recovering from the orgasmic sensations. Moments pass and he slowly pulls out of you, grinning. 'Wow. I haven't had sex like that in days. I'll have to find you again sometime.' He grunts as he stands, staggering with the weight of his egg-filled belly. He winks at you as he turns to leave, walking into the ocean to clean off his fur.[ovichance]";
@@ -84,28 +84,28 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Platypus"; 	now attack entry is "[one of]The platypus charges you, using the full weight of his belly to knock you down![or]Using his ankle barbs, the platypus kicks at you, poisoning you![or]The platypus nips at you painfully with his bill![or]The platypus claws at you desperately![at random]"; 
-	now defeated entry is "[beattheplatypus]"; 
-	now victory entry is "[losetoplatypus]"; 
-	now desc entry is "[platypusdesc]"; 
+	now name entry is "Platypus"; 	now attack entry is "[one of]The platypus charges you, using the full weight of his belly to knock you down![or]Using his ankle barbs, the platypus kicks at you, poisoning you![or]The platypus nips at you painfully with his bill![or]The platypus claws at you desperately![at random]";
+	now defeated entry is "[beattheplatypus]";
+	now victory entry is "[losetoplatypus]";
+	now desc entry is "[platypusdesc]";
 	now face entry is "now sporting a long black bill, just like a fuzzy duck"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a curvy platypus with a little bit of a belly and wide child-bearing hips"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "short course brown fur that hides your"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "A broad, flat tail sprouts from above your butt, going down to your calves."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "dark"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your lips and nose pinch forward, darkening and hardening as it grows into a bill, course creamy fur sprouting from the  rest of your face. Your ears recede into your head, making you dizzy for a moment, but you soon regain your bearings"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now face change entry is "your lips and nose pinch forward, darkening and hardening as it grows into a bill, course creamy fur sprouting from the rest of your face. Your ears recede into your head, making you dizzy for a moment, but you soon regain your bearings"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "you feel a tingling in your gut. You quickly put on a little weight as your body gets a little chubbier, fur growing all over. Your hips push out, making your body look pear-shaped, almost as if getting ready for children"; [ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "your body starts to tingle while rough brown fur covers your skin"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you stumble, your spine elongating. A thin tail growing from above your ass, and as it settles in, it begins to flatten out and grow wider, much like a beaver's"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it tingles, becoming darker. The skin around the base of your cock pinches up into a sheath, growing soft brown fur. The tingling intensifies as you whimper, unable to stop yourself from cumming where you stand"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 17; 
+	now str entry is 17;
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 20; [ These values may be used as part of alternate combat.]
 	now per entry is 14;
 	now int entry is 13;
 	now cha entry is 16;
 	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 37; 
+	now hp entry is 37;
 	now lev entry is 2; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
 	now area entry is "Beach"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -124,7 +124,7 @@ When Play begins:
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]chubby[or]curvy[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]platypus[or]monotreme[as decreasingly likely outcomes]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

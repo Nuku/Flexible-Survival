@@ -17,7 +17,7 @@ Instead of Resolving a Equineguardpost:
 			challenge "Stallionboi";
 			if lost is 0:
 				challenge "Stallionboi";
-		otherwise if girl is not banned:
+		else if girl is not banned:
 			say "     Investigating the dimly lit halls of the whorsehouse, you find your way to a rather small room that the equines appear to have converted into a guardpost of sorts. Glancing inside carefully, you spy a pair of donkey women in leathers taking their turn on guard. More importantly however, you also spy several small bundles of keys tossed around the room, obviously left there by guards that aren't on shift right now. Realizing that one of those bundles of keys almost certainly has the key to Onyx's cell, you realize you won't get a better chance while the more powerful guards our out roaming. You still prepare yourself for a rough fight as you prepare to attack the donkey women.";
 			challenge "Donkeywoman";
 			if lost is 0:
@@ -29,7 +29,7 @@ Instead of Resolving a Equineguardpost:
 			now skip is 1;
 		if skip is 1:
 			say "";  [skips the win/lose portion entirely because of bans]
-		otherwise if lost is 1:
+		else if lost is 1:
 			say "     Beaten and left to lie in the corridor outside the guardpost, you barely manage to crawl back towards the entryway, your battered and well-used form needing quite a bit of rest before you can attempt something like that again...";
 		else:
 			say "     With the guards temporarily unable to stop you, you quickly rummage through the makeshift guardpost and grab as many different sets of keys as you can find before leaving as fast as possible. With the jingling mass of keys in hand, you feel sure that you have the key to Onyx's cell with you now, and quite possibly the key to some other places in the Stables as well...";
@@ -39,7 +39,7 @@ Instead of Resolving a Equineguardpost:
 		say "     Wandering through the dimly lit halls of the hotel, you hear some raucous laughter coming from up ahead. Moving cautiously you look into the room ahead, only to spy a couple of horsemen hanging out and laughing while they drink some sort of barely fermented brew. You spend a second to glance around the crude guardpost, but seeing nothing worth the fight with the horse guards, you slip away quietly and continue your trip through the quiet halls of the building.";
 		now Equineguardpost is resolved;
 
-	
+
 Section 3-  Stablestoreroom [onyx quest part 2]
 
 Stablestoreroom is a situation. Stablestoreroom is resolved.
@@ -82,7 +82,7 @@ Instead of Resolving a Ignored Memos:
 		now Ignored Memos is resolved;
 
 
-Section 6- Hardware Fort 
+Section 6- Hardware Fort
 
 [fancy quest part 2]
 
@@ -106,16 +106,16 @@ Instead of Resolving a Hardware Fort:
 				say "     You twist and dodge as best you can, and the car only manages to clip you on the way down, but it still hurts like hell, and the loud crashing noise has probably alerted whoever lives here to the fact that they now have a visitor. Looking around, you sigh as you see several wolverine guards heading your way, obviously this is just not your day.";
 				decrease hp of player by 25;
 			hardwarefortphase1;
-		otherwise if Recoveredhardware is 1:
+		else if Recoveredhardware is 1:
 			say "     Returning to the hardware store and its fortress-like lot, you prepare yourself once again to take on the wolverine guards, and preparing yourself again you move into their maze-like fortress. You are more careful this time in regards to the cars and supports in the area, but it still isn't long before the noise of your passage alerts the dangerous wolverines as to your arrival, and you brace yourself for a tough fight!";
 			hardwarefortphase1;
-		otherwise if Recoveredhardware is 2:
+		else if Recoveredhardware is 2:
 			say "     You return to the lot of the hardware store, and are somewhat relieved to find that the creatures that were here earlier appeared to have wandered back off into the city again, leaving the small fort and the store itself empty and abandoned. You cautiously check the area for any stragglers, only to sigh with relief as you find none. Activating the small radio transceiver again, you wait nervously for the horsemen to arrive again, and while the leader of the equines snorts at you with disdain on arrival, they seem gratified to find the store empty and full of useful items and loot. You feel somewhat encouraged as he eventually nods at you before leaving to coordinate the looting of the place, leaving a couple of horsemen with you on lookout as they begin to get things moving. Which is definitely a good idea, as the sound of the forklifts starting up, and the loud laughter of several of the equines as they begin to enjoy sorting through the tools and equipment quickly begins to attract several of the creatures from the city to come investigate.";
 			hardwarefortphase3;
-		otherwise if Recoveredhardware is 3:
+		else if Recoveredhardware is 3:
 			say "     Returning to the lot of the hardware store, you sigh to see that several creatures are still lurking around in the area, although at least they don't seem to have messed too much with the piles of equipment and laden carts the horsemen left around. You still need to clear them all out before you can signal the horsemen to come finish up with their looting.";
 			hardwarefortphase2;
-		otherwise if Recoveredhardware is 4:
+		else if Recoveredhardware is 4:
 			say "     Returning to the lot of the hardware store, you sigh to see that several creatures are still lurking around in the area, although at least they don't seem to have messed too much with the piles of equipment and laden carts the horsemen left around. You still need to clear them all out before you can signal the horsemen to come finish up with their looting. Hopefully you're ready to deal with them this time; the horsemen probably can't take much more of this.";
 			hardwarefortphase2;
 	else:
@@ -138,7 +138,7 @@ to hardwarefortphase1:
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
 		say "     Battered and beaten from your encounter with the wolverines, you eventually manage to crawl away from the area to recover, though you know you will still need to return at some point to try again if you want to gain access to the items the Stables needs.";
 		now Recoveredhardware is 1;
-	otherwise if fightoutcome >= 30:	[fled any fight]
+	else if fightoutcome >= 30:	[fled any fight]
 		say "     Driven back by the ferocious wolverines, you eventually make your escape from the maze of wreckage and barriers back into the city proper. From that point, you aren't pursued by those enraged guardians and can slink away to rest and recover. You know you will still need to return at some point to try again if you want to gain access to the items the Stables needs.";
 		now Recoveredhardware is 1;
 
@@ -150,7 +150,7 @@ to hardwarefortphase2:
 			if recoveredhardware < 2:
 				say "     Having driven back the first of the creatures, several more are in the process of trying to assault the makeshift fort. As this is happening, the horsemen arrive and lay into them from behind. With the creatures['] attention fully fixed on you and transforming you themselves, they are easy prey for the horsemen, and are soon either driven off or captured to be taken back to the Stables for later. The leader of the small group of horsemen gives you a grudging nod of acceptance as he and his group head in and begin moving things around inside, though he does leave a few of his horsemen with you to help keep watch as they begin to get the forklifts moving and begin to gather the supplies they need. Which is probably a good thing as it isn't long before all the activity begins to attract several more of the creatures from the city!";
 				hardwarefortphase3;
-			otherwise if recoveredhardware >= 3:
+			else if recoveredhardware >= 3:
 				say "     Signaling the horsemen again, you sigh with relief as they show up rather quickly, obviously having been loitering nearby unwilling to give up on the loot they had gathered. The lead horseman greets you brusquely as he begins to direct people to finish the loading of the carts and forklifts in preparation for moving out, while you and a few other horsemen keep watch. This time it isn't much of a surprise when several aerial creatures swoop down on the area again, and you are ready for them when they draw close to attack!";
 				hardwarefortphase4;
 	if fightoutcome >= 20:		[loss/fled any fight]
@@ -182,7 +182,7 @@ to hardwarefortphase3:
 		if hp of player > maxhp of player, now hp of player is maxhp of player;
 		increase carried of medkit by 1;
 		hardwarefortphase4;
-	otherwise if fightoutcome >= 30:	[fled any fight]
+	else if fightoutcome >= 30:	[fled any fight]
 		say "     Having fled, you end up leaving the working horsemen to fend for themselves, much to the angry cries of several of them. They are none too pleased with your cowardice. They seem to fare fairly well, able to hold their ground while working. Rather than risk entering the fray again, you escape in the confusion, heading back towards the library to rest and recover.";
 		now fancyquest is 101;  [cancelled]
 		now Hardware Fort is resolved;
@@ -191,7 +191,7 @@ to hardwarefortphase3:
 to hardwarefortphase4:
 	if level of player >= 20:
 		hardwarefortphase4-20plus;
-	otherwise if level of player >= 10:
+	else if level of player >= 10:
 		hardwarefortphase4-10plus;
 	else:
 		hardwarefortphase4-basic;
@@ -216,14 +216,14 @@ to hardwarefortphase4-basic:
 							hardwarefortphase5;
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
 		if recoveredhardware < 5:
-			Say "     Driven back and well-used by the flying creatures, you see the horsemen have been forced to scatter and take cover, and while several heavily laden carts and forklifts are there obviously ready for moving things back to the Stables, obviously that isn't going to be happening anytime soon. You can see that many of the horsemen have already fled in a disorganized [if recoveredhardware is 4]and angry [otherwise if recoveredhardware is 3]and upset [otherwise if recoveredhardware is 2]and frustrated [end if]rout, and you seeing that several of the flying creatures are still hanging around hopefully looking for stragglers, you decide to get out of here as well. Once you are a little ways away however, you sigh and shake your head as you realize you will have to go back soon to recover the items for Fancy, though maybe you should rest up first[if recoveredhardware is 4]. The horsemen clearly aren't going to put up with much more of this[end if].";
+			Say "     Driven back and well-used by the flying creatures, you see the horsemen have been forced to scatter and take cover, and while several heavily laden carts and forklifts are there obviously ready for moving things back to the Stables, obviously that isn't going to be happening anytime soon. You can see that many of the horsemen have already fled in a disorganized [if recoveredhardware is 4]and angry [else if recoveredhardware is 3]and upset [else if recoveredhardware is 2]and frustrated [end if]rout, and you seeing that several of the flying creatures are still hanging around hopefully looking for stragglers, you decide to get out of here as well. Once you are a little ways away however, you sigh and shake your head as you realize you will have to go back soon to recover the items for Fancy, though maybe you should rest up first[if recoveredhardware is 4]. The horsemen clearly aren't going to put up with much more of this[end if].";
 			if recoveredhardware < 3:
 				now recoveredhardware is 3;
 			else:
 				increase recoveredhardware by 1;
 		else:
 			hardwarefortphase4fail;
-	otherwise if fightoutcome >= 30:	[fled any fight]
+	else if fightoutcome >= 30:	[fled any fight]
 		say "     Having fled, you end up leaving the working horsemen to fend for themselves, much to the angry cries of several of them. They are none too pleased with your cowardice. They seem to fare fairly well, able to hold their ground while working. Rather than risk entering the fray again, you escape in the confusion, heading back towards the library to rest and recover.";
 		now fancyquest is 101;  [cancelled]
 		now Hardware Fort is resolved;
@@ -248,14 +248,14 @@ to hardwarefortphase4-10plus:
 							hardwarefortphase5;
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
 		if recoveredhardware < 5:
-			Say "     Driven back and well-used by the flying creatures, you see the horsemen have been forced to scatter and take cover, and while several heavily laden carts and forklifts are there obviously ready for moving things back to the Stables, obviously that isn't going to be happening anytime soon. You can see that many of the horsemen have already fled in a disorganized [if recoveredhardware is 4]and angry [otherwise if recoveredhardware is 3]and upset [otherwise if recoveredhardware is 2]and frustrated [end if]rout, and you seeing that several of the flying creatures are still hanging around hopefully looking for stragglers, you decide to get out of here as well. Once you are a little ways away however, you sigh and shake your head as you realize you will have to go back soon to recover the items for Fancy, though maybe you should rest up first[if recoveredhardware is 4]. The horsemen clearly aren't going to put up with much more of this[end if].";
+			Say "     Driven back and well-used by the flying creatures, you see the horsemen have been forced to scatter and take cover, and while several heavily laden carts and forklifts are there obviously ready for moving things back to the Stables, obviously that isn't going to be happening anytime soon. You can see that many of the horsemen have already fled in a disorganized [if recoveredhardware is 4]and angry [else if recoveredhardware is 3]and upset [else if recoveredhardware is 2]and frustrated [end if]rout, and you seeing that several of the flying creatures are still hanging around hopefully looking for stragglers, you decide to get out of here as well. Once you are a little ways away however, you sigh and shake your head as you realize you will have to go back soon to recover the items for Fancy, though maybe you should rest up first[if recoveredhardware is 4]. The horsemen clearly aren't going to put up with much more of this[end if].";
 			if recoveredhardware < 3:
 				now recoveredhardware is 3;
 			else:
 				increase recoveredhardware by 1;
 		else:
 			hardwarefortphase4fail;
-	otherwise if fightoutcome >= 30:	[fled any fight]
+	else if fightoutcome >= 30:	[fled any fight]
 		say "     Having fled, you end up leaving the working horsemen to fend for themselves, much to the angry cries of several of them. They are none too pleased with your cowardice. They seem to fare fairly well, able to hold their ground while working. Rather than risk entering the fray again, you escape in the confusion, heading back towards the library to rest and recover.";
 		now fancyquest is 101;  [cancelled]
 		now Hardware Fort is resolved;
@@ -280,28 +280,28 @@ to hardwarefortphase4-20plus:
 							hardwarefortphase5;
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
 		if recoveredhardware < 5:
-			Say "     Driven back and well-used by the flying creatures, you see the horsemen have been forced to scatter and take cover, and while several heavily laden carts and forklifts are there obviously ready for moving things back to the Stables, obviously that isn't going to be happening anytime soon. You can see that many of the horsemen have already fled in a disorganized [if recoveredhardware is 4]and angry [otherwise if recoveredhardware is 3]and upset [otherwise if recoveredhardware is 2]and frustrated [end if]rout, and you seeing that several of the flying creatures are still hanging around hopefully looking for stragglers, you decide to get out of here as well. Once you are a little ways away however, you sigh and shake your head as you realize you will have to go back soon to recover the items for Fancy, though maybe you should rest up first[if recoveredhardware is 4]. The horsemen clearly aren't going to put up with much more of this[end if].";
+			Say "     Driven back and well-used by the flying creatures, you see the horsemen have been forced to scatter and take cover, and while several heavily laden carts and forklifts are there obviously ready for moving things back to the Stables, obviously that isn't going to be happening anytime soon. You can see that many of the horsemen have already fled in a disorganized [if recoveredhardware is 4]and angry [else if recoveredhardware is 3]and upset [else if recoveredhardware is 2]and frustrated [end if]rout, and you seeing that several of the flying creatures are still hanging around hopefully looking for stragglers, you decide to get out of here as well. Once you are a little ways away however, you sigh and shake your head as you realize you will have to go back soon to recover the items for Fancy, though maybe you should rest up first[if recoveredhardware is 4]. The horsemen clearly aren't going to put up with much more of this[end if].";
 			if recoveredhardware < 3:
 				now recoveredhardware is 3;
 			else:
 				increase recoveredhardware by 1;
 		else:
 			hardwarefortphase4fail;
-	otherwise if fightoutcome >= 30:	[fled any fight]
+	else if fightoutcome >= 30:	[fled any fight]
 		say "     Having fled, you end up leaving the working horsemen to fend for themselves, much to the angry cries of several of them. They are none too pleased with your cowardice. They seem to fare fairly well, able to hold their ground while working. Rather than risk entering the fray again, you escape in the confusion, heading back towards the library to rest and recover.";
 		now fancyquest is 101;  [cancelled - fled]
 		now Hardware Fort is resolved;
 
 to hardwarefortphase4fail:
 	Say "     Driven back once again by the assault of the flying creatures, the horsemen are forced to scatter and take cover. Driven from their work site again, they feel in an angry, disorganized mess. In the chaos though, you are grabbed by the team's foreman and, after being given several very powerful punches to your already abused body, you are heaved by him right back into the fray.";
-	say "     'Youz done made a stinkin['] mess ah this and we'z all sick ah it. Let dah beasts have you, yah wretch,' he yells as you fly what must be [if scalevalue of player < 3]over 25 feet[otherwise if scalevalue of player is 3]over 15 feet[otherwise if scalevalue of player is 4]over ten feet[otherwise]almost ten feet despite your massive size[end if]. As you struggle to get back up after that, you hear him call for his stallions to grab what they can and run for it. Before you can rise, you're attacked by another of the fearsome flyers.";
+	say "     'Youz done made a stinkin['] mess ah this and we'z all sick ah it. Let dah beasts have you, yah wretch,' he yells as you fly what must be [if scalevalue of player < 3]over 25 feet[else if scalevalue of player is 3]over 15 feet[else if scalevalue of player is 4]over ten feet[else]almost ten feet despite your massive size[end if]. As you struggle to get back up after that, you hear him call for his stallions to grab what they can and run for it. Before you can rise, you're attacked by another of the fearsome flyers.";
 	decrease hp of player by 20;
 	if hp of player > 0:
 		now hp of player is hp of player / 2;
 	challenge "Hawkman";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having beaten the lustful hawkman, you make a break for it while you still can. You can see that many of the horsemen have already made their escape while others are still struggling to get away and others still probably never will, claimed as prey, playthings or mates for the assaulting flyers.";
-	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+	else if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     Beaten and abused by the victorious avian, you force yourself to your feet and make a break for it while you still can. You can see that many of the horsemen have already made their escape while others are still struggling to get away and others still probably never will, claimed as prey, playthings or mates for the assaulting flyers.";
 	else:
 		say "     Somehow managing to make your escape from the lustful hawkman, you make a break for it while you still can. You can see that many of the horsemen have already made their escape while others are still struggling to get away and others still probably never will, claimed as prey, playthings or mates for the assaulting flyers.";
@@ -318,7 +318,7 @@ to hardwarefortphase5:
 	else:
 		say "medkit.";
 		say "     'We found dis in dere and figured yah might needs it. Yah didn't do too bad. It wuz a lot tah dealz wid,' he adds with an raucous laugh and a slap on your back before turning back to organizing the rest of the horses. 'Come on, you lugs. Let's get dis stuff movin[']!'";
-		say "     You feel a little better about your earlier failure now that things have worked out. Knowing you don't have any time to sit around and patch yourself up, you you stuff the medkit somewhere accessible in case of emergency. Wasting no more time, you drop down outside of the fort in an effort to lead the remaining creatures away.";
+		say "     You feel a little better about your earlier failure now that things have worked out. Knowing you don't have any time to sit around and patch yourself up, you stuff the medkit somewhere accessible in case of emergency. Wasting no more time, you drop down outside of the fort in an effort to lead the remaining creatures away.";
 		increase carried of medkit by 1;
 	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
@@ -333,21 +333,21 @@ to hardwarefortphase5:
 		fight;
 		if fightoutcome >= 20 and fightoutcome <= 29:
 			increase xyzlost by 1;
-		otherwise if fightoutcome >= 30:
+		else if fightoutcome >= 30:
 			increase xyzfled by 1;
 		challenge "Leopardman";
 		if fightoutcome >= 20 and fightoutcome <= 29:
 			increase xyzlost by 1;
-		otherwise if fightoutcome >= 30:
+		else if fightoutcome >= 30:
 			increase xyzfled by 1;
 		fight;
 		if fightoutcome >= 20 and fightoutcome <= 29:
 			increase xyzlost by 1;
-		otherwise if fightoutcome >= 30:
+		else if fightoutcome >= 30:
 			increase xyzfled by 1;
 		if xyzlost is 0 and xyzfled is 0:
 			say "     Victorious at last, you sigh as you stagger back towards the library, definitely feeling like you need a break before continuing back to the Stables to see if the hardware made it back there safely.";
-		otherwise if xyzlost is 0:
+		else if xyzlost is 0:
 			say "     Having beaten or escaped the monsters at last, you sigh as you stagger back towards the library, definitely feeling like you need a break before continuing back to the Stables to see if the hardware made it back there safely.";
 		else:
 			say "     You drag your well-used body back towards the library, feeling increasingly sore and tired as you do so, though at least you have a new weapon to look at, and hopefully the equines managed to get back to the Stables safely after you created the distraction.";
@@ -392,7 +392,7 @@ Instead of Resolving a horsepowering:
 			if diceroll is greater than 14:
 				say "After several hours of careful and conscientious work, you think you are finally ready to try out your modifications to the generator and the electrical system. With a nervous smile you reach over and switch the generator on, bracing yourself just in case your modifications somehow make the whole thing explode or burn the place down around your head. Fortunately, while the generator is quite loud, and the sound of all the machinery in the room starting up does make you jump, your attention to detail and careful hands seem to have resulted in a disasterless generator installation! Grinning happily with relief, you leave the heavy reference books here in case you or some other horse needs them for repairs later, and shut the heavy double doors behind you as you head back out into the Stables. You can't wait to see Fancy's reaction to this latest triumph of yours, and the other equines reaction too of course...";
 				now generatorfixing is 4;
-				now  horsepowering is resolved;
+				now horsepowering is resolved;
 			else:
 				say "Everything is going fine with the wiring until you slip at just the wrong moment and let one of the bare wires you are patching touch you. The world flashes in rainbow colours for a minute as you spasm and flail in agony, destroying most of your work and scattering your notes all over the place. Fortunately you only brushed the wire, but it is still enough of a shock that it takes you several minutes to recover, and your mouth tastes of ozone. Looking down at your shaking hands, you sigh and realize you won't be able to continue any kind of delicate work for a while, and proceed to gather your books back up and stagger out into the Stables proper, forced to come back and start over again at a later time.";
 				decrease hp of player by 25;
@@ -448,7 +448,7 @@ Instead of resolving a contract hyenegotiation:
 			now provingstallionhood is 2;
 			now contract hyenegotiation is resolved;
 			stop the action;
-		otherwise if matriarchdefeated is 1 or matriarchdefeated is 2:
+		else if matriarchdefeated is 1 or matriarchdefeated is 2:
 			say "One of the hyenas steps forward and looks at you with amusement, 'A slutty little pet like you wants to take over the Stables? Yeah like that is going to happen!' He says with an amused laugh, several of the other hyenas nearby echoing his laugh with amusement. 'Well hell, if the horses are stupid enough to actually let something like that happen, far be it for us to stop them. Though if you actually become the head horsey, well that would sure help us deal with the crazy bastards... after all it's not like you won't do whatever the matriarch says after all is it?' He says with amusement, the truth of his statement making you blush slightly, even as your changing body heats up with desire as you remember your time underneath the matriarch. Seeing your reaction, the hyena negotiator smirks as he snags the paper from you and scrawls his agreement on it, before slapping you on the ass and sending you on your way back to the Stables, the entertainment starting up again behind you as you leave like a good little submissive slut.";
 			now provingstallionhood is 2;
 			now contract hyenegotiation is resolved;
@@ -477,7 +477,7 @@ Section 10-  Horsepitfight[Fancy quest part 4b]
 Horsepitfight is a situation.
 The sarea of Horsepitfight is "Stable".
 
-instead of resolving a  Horsepitfight:
+instead of resolving a Horsepitfight:
 	if provingstallionhood is 2:
 		say "Wandering through the halls of the Stables, you notice there seems to be a bit of hush over the area, and you almost aren't surprised when several stallions appear up ahead and gesture you to follow them. You feel increasingly nervous as they lead you to a rather large conference room, with seats scattered around the area, and a cleared circle in the center. From the smell of sweat and sex in the room, it is fairly obvious that the horsemen practice combat here on a fairly regular basis, and just as obvious what happens to the loser. Shaking your head slightly to clear it, you wince as several rather large horsemen step into the center of the circle and smirk at you, looking around you can see a number of other horsemen in the area pretending not to be interested in the building situation. 'Well so you're the new blood eh? I just don't see it happening, not for someone as scrawny as you anyways..' one of the horsemen in the circle says with a laugh, setting several of the others to chuckling as well. 'You may have impressed those hyenas out there, but if you want to get any further you will have to show us you can take on some real stallions, of course if you win we certainly won't object any further to your making the attempt... But if you lose...' The stallion pauses for dramatic effect, and you hear a jingle from one side of the circle and look over to see one of the other stallions showing off a full set of bondage gear obviously intended for use on you. You feel slightly nervous as you see the fully lockable gloves designed to make the hands resemble full hooves, and the straps which would force you to walk on all fours at all times... 'So what do you think, you ready to take us on little mare?' The horseman says with a smug grin on his face and an obviously erect cock as he draws your attention back to him and the other 2 standing proudly in the circle. Looking around at all the other horsemen watching, you realize that if you lose this battle you certainly won't be walking out of here on two legs, if they even let you leave again. Do you step into the ring to take up the challenge?";
 		if player consents:
@@ -522,7 +522,7 @@ Section 11-  goldenfocushunt
 
 goldenfocushunt is a situation.
 The sarea of goldenfocushunt is "Museum".
-	
+
 instead of resolving a goldenfocushunt:
 	if hellgatherquest is 2:
 		say "Wandering the halls of the rather large museum nervously, you finally come across a small alcove in a corner, which has several shiny golden pieces of jewellery on display, including luckily enough, the golden necklace Nermine painstakingly described to you! Feeling rather guilty you glance around you quickly, before examining the glass barrier protecting the items closely, trying to figure out just how to handle your first venture into grand larceny, although several of the pieces Nermine doesn't need should make you quite well off if you can ever get out of this place... You finally find some kind of latch towards the rear of the display you think you can manage to bash open with some effort, and you get to work. It is almost an hour of rather exhausting labor later when you finally manage to pop the bulletproof glass case open, and it crashes to the floor with a loud thud. The noise is soon joined by a loud and annoyed roar from the direction of the foyer, and you wince as you realize that either one of the silent alarms was still working, or Valerie's hearing is much more sensitive than you thought. You barely have time to swipe the item Nermine sent you for off its display, before you have to turn to face the sounds of the rapidly approaching sphinx, abandoning any hope of swiping anything else as the museum guardian rounds the corner at a run.";

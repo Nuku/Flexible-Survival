@@ -154,7 +154,7 @@ Instead of resolving Find Lorenda:
 
 [
 Instead of conversing the Rod while progress of alex is 2:
-	say "     'Darrell? Yeah, he was here when it all went down. But... you might be a little surprised.[if hp of ronda is 0]  Go talk to my girl, she knows where he is.'[else]' He shrugs, and points to the north. 'Go ask the others. They might know where he is.' He seems a little bummed.[end if]";
+	say "     'Darrell? Yeah, he was here when it all went down. But... you might be a little surprised.[if hp of ronda is 0] Go talk to my girl, she knows where he is.'[else]' He shrugs, and points to the north. 'Go ask the others. They might know where he is.' He seems a little bummed.[end if]";
 ]
 
 instead of going to Mall Atrium while progress of alex is 2:		[now works for getting there either from Nermine's shop or the food court]

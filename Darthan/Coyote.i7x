@@ -15,7 +15,7 @@ to say losetocoyote:
 	say "You shouldn't be seeing this.";
 	if cocks of player > 0:
 		say "Really, how did you do this?";
-	otherwise:
+	else:
 		say "Really, how did you do this?";
 
 to say beatthecoyote:
@@ -26,9 +26,9 @@ to say beatthecoyote:
 			say "Sorry, you shouldn't have gotten here.";
 			if cunts of player > 0:
 				say "Really, how did you get here?";
-			otherwise:
+			else:
 				say "Really, how did you get here?";
-		otherwise:
+		else:
 			say "Not sure how you got here.";
 
 
@@ -49,9 +49,9 @@ When Play begins:
 	now defeated entry is "[beatthecoyote]";
 	now victory entry is "[losetocoyote]";
 	now desc entry is "[coyotedesc]";
-	now face entry is "a tan furred canine muzzle full of sharp teeth, your golden eyes survey your surroundings taking in everything around you, your coyote ears twitch as if listening for something. Your lips curl back in a wicked grin as you think about all the mischief you will cause";		[ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "a tan-furred canine muzzle full of sharp teeth, your golden eyes survey your surroundings taking in everything around you, your coyote ears twitch as if listening for something. Your lips curl back in a wicked grin as you think about all the mischief you will cause";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "thin and lanky, with digitigrade legs that end in padded coyote paws, your hands a cross between a human's and a coyote's padded paws. Your bony body's appearance belies its actual strength and agility";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "tan, fur covered";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now skin entry is "tan, fur-covered";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have a [one of]bushy[or]scruffy[at random] tail that sways happily as you move.";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]canine[or]coyote[or]coyote-like[or]knotted[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "as your mouth stretches and pushes forward in a massive yawning motion, the muscles reforming as it pushes out into a sleek tan muzzle, while your eyes blur as they shift in both colour and position. New sounds and smells explode through your enhanced senses as your new coyote muzzle finishes forming and your ears finish shifting into proper canine ears, swiveling around on top of your head like a coyote's";	[ Face TF text, format as "Your face feels funny as (your text)." ]
@@ -100,21 +100,21 @@ to coyotify: [Used for infection purposes.]
 			break;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
-	otherwise if "Female Preferred" is listed in feats of player:
+	else if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
+	else if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
-	otherwise if Diegochanged is 0: [Male Diego]
+	else if Diegochanged is 0: [Male Diego]
 		now sex entry is "Female";
-	otherwise if Diegochanged is 1: [Herm Diego]
+	else if Diegochanged is 1: [Herm Diego]
 		now sex entry is "Both";
-	otherwise if Diegochanged is 2: [Female Diego]
+	else if Diegochanged is 2: [Female Diego]
 		now sex entry is "Male";
 	now non-infectious entry is false;
 	infect;
 	now non-infectious entry is true;
 	if ( diegochanged is 0 and sex entry is not "Female" ) or ( diegochanged is 2 and sex entry is "Female" ):
-		say "Diego gets a puzzled look on [if diegochanged is 0]his[otherwise]her[end if] face then suddenly breaks out into a fit of laughter. 'Guess the trick really was on me.' You can't help but wonder what [if diegochanged is 0]he[otherwise]she[end if] meant by that.";
+		say "Diego gets a puzzled look on [if diegochanged is 0]his[else]her[end if] face then suddenly breaks out into a fit of laughter. 'Guess the trick really was on me.' You can't help but wonder what [if diegochanged is 0]he[else]she[end if] meant by that.";
 
 
 [
@@ -122,13 +122,13 @@ when play ends:
 	if bodyname of player is "Template":
 		if humanity of player is less than 10:
 			say "     You succumb to your template infection.";
-		otherwise:
+		else:
 			say "     You survive, but were infected by the template.";
 			if cocks of player > 0:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
-			otherwise if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
+			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";
-			otherwise:									[F-STERILE]
+			else:									[F-STERILE]
 				say "     Additional text for a female survivor who cannot become preggers.";
 ]
 

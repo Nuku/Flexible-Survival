@@ -31,10 +31,10 @@ When Play begins:
 	now name entry is "Unicorn";
 	now attack entry is "His shining horn mesmerizes you completely, and you submit totally to his every sexual whim, becoming a complete and total plaything of the powerful unicorn.";
 	now defeated entry is "[Unicorn loss]";
-	now victory entry is  "[Unicorn attack]";
+	now victory entry is "[Unicorn attack]";
 	now desc entry is "Sexy barkeep of DUUUUM.";
 	now face entry is "sexy equine muzzle, with a beautiful spiraling horn which almost seems to catch and reflect the light extending from your forehead above your new unicorn-like";[ Face description, format as the text "You have a (your text) face."]
-	now body entry is "slim and lithe, it is almost the very picture of perfection as you balance easily on your beautiful silvery hooves, their soft chiming noise when you walk seeming to fill the air around you with beauty, even as your dainty hoof tipped hands trace over your soft and lovely new curves.";[ Body Description, format as the text "Your Body is (your text)"]
+	now body entry is "slim and lithe, it is almost the very picture of perfection as you balance easily on your beautiful silvery hooves, their soft chiming noise when you walk seeming to fill the air around you with beauty, even as your dainty hoof tipped hands trace over your soft and lovely new curves";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]Beautiful white furred[or]silvery[or]unicorn furred[or]shimmering white fur[or]short brilliant fur covered[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have an amazing equine tail flicking behind you softly, its beautiful silvery white hair seeming to ripple with a rainbow of reflected colours with every move you make, even as it swishes teasingly behind you.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]equine[or]unicorn[or]blunt tipped[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
@@ -50,7 +50,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 20;
 	now sex entry is "Female";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 20;  
+	now hp entry is 20;
 	now lev entry is 2;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "nowhere";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -61,17 +61,17 @@ When Play begins:
 	now breast size entry is 8;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 14;  
-	now cunt width entry is 6;  
+	now cunt length entry is 14;
+	now cunt width entry is 6;
 	now libido entry is 50;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slim[or]lithe[or]slender[or]perfect[at random]";
 	now type entry is "[one of]equine[or]unicorn[or]mythological[as decreasingly likely outcomes]";
-	now magic entry is true; 
+	now magic entry is true;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;  
+	now non-infectious entry is true;
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -87,6 +87,6 @@ when play ends:
 				say "When the military finally retrieve you from the city, many of your erstwhile rescuers are in awe of your handsome form and mythical countenance. A fact that you quite quickly put to use as you convince them that like the unicorn of legend you are no real threat to them, and should be let go as soon as possible. It goes to show how few of them actually read the older versions of the legends, as the quickly release you, though several of them stare at you with longing as you leave the camp behind you. Once free of the military's interference however, it is easy enough for you to head to the nearest town, and begin looking for a way to make your fortune. Your beautiful new form and your shimmering horn make it easy to get a decent job, and you find that people are more than willing to confide in you and trust you quite easily now. This works to your advantage as you quickly capitalize on the situation, with promotion and raises coming easily, as well as an ever increasing group of unicorn groupies who begin to gather to follow you around and stare at your beautiful form. Feeling deeply amused, you even begin to charge some of the more attractive and pure of the groupies for the privilege of becoming your mare, something that soon has more and more people clamouring for your attention. Soon you have plenty of money with which to buy a nice little wooded estate a bit out of the city for you and your slowly growing herd of unicorns, and you enjoy the feel of the wind in your hair as you play on the wooded banks of your stream with several of your lovely mares, and whicker with amusement at how eager people are these days for the touch of a unicorn... and how much fun It can be for you to give them that touch...";
 			else:
 				say "You are wonderfully happy once the military finally arrives, and glad to be leaving the city, and though you get a number of awed stares from the soldiers, you are much more interested in the thought of being able to run and roam safely wherever you choose. It isn't long before the scientists release you to do so either, unable to bear the thought of running intrusive tests on your splendid new body. As you walk out into the world on your shining silver hooves, you find yourself smiling happily as your horn seems to shimmer with amusement as well, catching everyone's eye and making them sigh with awe. It is easy enough to realize just how useful your new form will be in finding yourself a comfortable new position now that you are outside the city, especially with the near mesmeric powers your horn seems happy to display. Deciding to enjoy things to the fullest you soon begin looking for a good job, and a good candidate to make into a unicorn stud for you to play with as well, your enhanced libido and slightly submissive tendencies desiring a nice stallion to tease and tempt. Soon enough you find both, as you encounter a handsome young CEO at one of the luxury parties you are often invited too due to your unique new look. It isn't long before you get the rich young man all to yourself off to the side and offer him a chance at a new life with you, a chance he wastes no time in accepting. You take time to make sure his transformation isn't going to raise any questions about his identity, before the two of you go off for a week and enjoy each others body in every way possible. Soon the handsome new unicorn stud is back at work amongst the envious looks of his subordinates, while you are settling in happily with your burning heat finally sated for the season.[line break]";
-				say "The two of you soon prove to be a powerful pair, with your powers of persuasion as well as your amazing looks, it is easy enough to manipulate deals and agreements to your new companies benefit, and you both rather enjoy the adoring looks of your many fans as you begin to increase your new wealth many-fold. Soon it becomes evident that your efforts with your new stallion will be bearing fruit, a fact that you find yourself eagerly anticipating, even as you begin to help your mate to pick out several other promising prospects to add to your herd. After all, you certainly won't mind having several subordinate mares around to help you out, and you certainly can't wait to start training the new mares in just how best to pleasure you as well as your stallion... and since unicorns are rumored to be immortal, hopefully you will have  long sexy life of pleasure with your new herd to look forward as well you think happily as you watch your mate begin to transform the first of your many new herd members...";
+				say "The two of you soon prove to be a powerful pair, with your powers of persuasion as well as your amazing looks, it is easy enough to manipulate deals and agreements to your new companies benefit, and you both rather enjoy the adoring looks of your many fans as you begin to increase your new wealth many-fold. Soon it becomes evident that your efforts with your new stallion will be bearing fruit, a fact that you find yourself eagerly anticipating, even as you begin to help your mate to pick out several other promising prospects to add to your herd. After all, you certainly won't mind having several subordinate mares around to help you out, and you certainly can't wait to start training the new mares in just how best to pleasure you as well as your stallion... and since unicorns are rumored to be immortal, hopefully you will have a long, sexy life of pleasure with your new herd to look forward to as well, you think happily as you watch your mate begin to transform the first of your many new herd members...";
 
 Unicorn ends here.

@@ -36,7 +36,7 @@ An everyturn rule(this is the entertainer rule):
 	now x is x divided by (population of tribe of player); [Keeps it at a fraction of a whole number, so 1-20 would be max . If 5% of population is entertainment, +1 moral.]
 	if x is greater than 0: [Public Relations Success]
 		if x is less than 1, now x is 1;
-		say "[if x is less than 5]Your entertainers yield a bonus of +[x] morale for your tribe.[otherwise]With an excellent team of entertainers working alongside each other, your people have gained an outstanding +[x] morale![end if]";
+		say "[if x is less than 5]Your entertainers yield a bonus of +[x] morale for your tribe.[else]With an excellent team of entertainers working alongside each other, your people have gained an outstanding +[x] morale![end if]";
 		increase morale of tribe of player by x;
 
 

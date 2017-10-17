@@ -87,8 +87,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Painted Wolf Herm"; [Name of your new Monster]
 	now attack entry is "The painted wolf herm [one of]gouges you with hir claws, leaving streaks of blood across your skin[or]leaps at you, catching your arm in hir mouth, shi bites down hard leaving a muzzle shaped wound[or]howls, causing you to tremble in fear for a moment before you regain your resolve[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is  "[beatpwh]"; [Text used when player wins, can be directly entered like combat text or description. If it is more complex it can be linked with a "To Say" block as the demonstation text shows.]
-	now victory entry is  "[wolfherm attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now defeated entry is "[beatpwh]"; [Text used when player wins, can be directly entered like combat text or description. If it is more complex it can be linked with a "To Say" block as the demonstation text shows.]
+	now victory entry is "[wolfherm attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 5]     Looking over the Painted Wolf Herm, hir body is covered in thick, fluffy, patchwork gold, gray, and black fur. Hir head is mostly canine, with rare smatterings of human and harsh, triangular ears. Hir body is coated in layers of powerful, flexing muscles that are made readily apparent with the slightest twist. Shi has four heavy breasts, hir first row is basketball sized and the second row is slightly smaller. Hir arms are still human, with the exception of tiny claws on the tips of the fingers. Hir legs are digitigrade, with powerful haunches and graceful calves. Shi has a large, fluffy tail that, although similar to a husky, is lacking any curve or curl in it. As shi stands unabashed in the open you see shi has a thick, knotted 10 inch canine shaft. Two heavy balls rest above hir dripping female sex, the aroma of which lays thick and heady in the air around you.";[ Description of the creature when you encounter it.]
 	now face entry is "mostly canine, with rare smatterings of human and harsh, triangular ears";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "coated in layers of powerful, flexing muscles that are made readily apparent with the slightest twist. Your arms are still human, with the exception of tiny claws on the tips of the fingers. Your legs are digitigrade, with powerful haunches and graceful calves";[ Body Description, format as the text "Your Body is (your text)."]
@@ -113,20 +113,20 @@ When Play begins:
 	now area entry is "Park"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 4; [ Number of Breasts infection will give you. ]
 	now breast size entry is 7; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 10; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 7; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 10; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 7; [ Width of female sex infection will try and give you ]
 	now libido entry is 60; [ Amount player Libido will go up if defeated ]
-	now loot entry is ""; 
+	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscular[or]powerful[at random]";
 	now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

@@ -39,7 +39,7 @@ to say OrcVictorious:
 			say "     Chuckling, he shakes his head and says 'Enough slobbering around. Time to fuck!' Then he manhandles you to a wrecked car standing not too far away and bends you over its hood. Trembling at the thought of taking his thick meat, you reach back and spread your cheeks, doing your best to relax your sphincter. Your orc master whacks his erection against your ass with a meaty thud, then slides the hot rod up and down your crack before finally lining up its tip with your hole. Gripping your hips with two large hands, he presses forward, giving a satisfied grunt as he pushes through your back door, stretching it tight around his invading member.";
 		say "     It's big - pretty big and thick and meaty, making you gasp from the initial penetration. But as the orc's shaft sinks deeper into your body, pleasant feelings prevail as its sides rub against your inner walls, touching sensitive spots deep inside you. Even though you relaxed as much as you could, it's still quite a lot to take - which the orc seems to know very well, moving deeper only slowly and with surprising patience, sometimes even stopping for a moment so you can get used to it. As he does so, you feel something warm and wet leak into you from the tip of his cock, accompanied by a soothing feeling of well-being. That must be more of his precum - feels a bit strange, but good, and it certainly helps taking his thick meat. Some time later, he finally bottoms out inside you, hard shaft buried all the way and his two large cum-factories resting against your skin.";
 		WaitLineBreak;
-		say "     After giving you a moment to get used to the stretching feeling of having a whole foot of hard cock inside your ass, he pulls back and thrusts back in  with a loud grunt - hard and deep, creating a slapping noise as his hips hit your ass. No wonder he went so slow before, or that'd have ripped you in two! And he just keeps on going like that, now taking out all the stops and really pounding into you like the big brute he is. The sensations of his thrusts make you moan and howl in lust, conscious thought pushed aside completely by the feelings of having that thick shaft deep inside you. Everything after that is just a haze of arousal and need, and you can't even remember how long it took for his wild fucking to drive you over the edge, [if cocks of player > 0]spraying your own cum against the side of the car under you[else if cunts of player > 0]squirting femcum all over the car under you and the ground below[otherwise]gripping the metal of the car's hood tightly as an orgasm wracks your body[end if].";
+		say "     After giving you a moment to get used to the stretching feeling of having a whole foot of hard cock inside your ass, he pulls back and thrusts back in with a loud grunt - hard and deep, creating a slapping noise as his hips hit your ass. No wonder he went so slow before, or that'd have ripped you in two! And he just keeps on going like that, now taking out all the stops and really pounding into you like the big brute he is. The sensations of his thrusts make you moan and howl in lust, conscious thought pushed aside completely by the feelings of having that thick shaft deep inside you. Everything after that is just a haze of arousal and need, and you can't even remember how long it took for his wild fucking to drive you over the edge, [if cocks of player > 0]spraying your own cum against the side of the car under you[else if cunts of player > 0]squirting femcum all over the car under you and the ground below[else]gripping the metal of the car's hood tightly as an orgasm wracks your body[end if].";
 		say "     Having your hole tremble and twitch around his orcish member while you come gives your partner the last little push he needed to reach his own climax, and with a loud and very satisfied grunt, the orc starts blasting a massive load of cum into your innermost depths. He keeps fucking you as he comes, clearly revelling in the feeling of his seed squishing around his thrusting shaft inside your body. With the amount of cum he pumps into you, quite a bit squirts out around his cock as he does so, to run down the inside of your legs and drip onto the ground.[mimpregchance]";
 		WaitLineBreak;
 		infect "Orc Breeder";
@@ -140,60 +140,69 @@ to say OrcBeaten:
 				say "     DEBUG: EVENT VICTORY OVER THE ORC ([OrcSpecialFightNumber]), DEALT WITH IN THE EVENT [line break]";[to be resolved in Orc Lair.i7x]
 		now inasituation is false;
 		now OrcSpecialFightNumber is 0;
-		
+
 to say BeatenOrcSexMenu:
+	LineBreak;
+	say "     What do you want to do with the orc?";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Milk him for some orc cum";
 	now sortorder entry is 1;
 	now description entry is "Collect a bottle of cum from him.";
-	now toggle entry is BeatenOrcSex rule;
-	choose a blank row in table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Blow him off";
 	now sortorder entry is 2;
 	now description entry is "Suck the orc warrior's cock.";
-	now toggle entry is BeatenOrcSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ride his cock";
 	now sortorder entry is 3;
 	now description entry is "Impale yourself on the orc warrior's cock.";
-	now toggle entry is BeatenOrcSex rule;
+	[]
 	if cocks of player > 0 and bodyname of player is "Orc Warrior" and player is pure:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
 		now sortorder entry is 4;
 		now description entry is "Take the orc warrior's ass.";
-		now toggle entry is BeatenOrcSex rule;
-	choose a blank row in table of fucking options;
-	now title entry is "Nothing";
-	now sortorder entry is 10;
-	now description entry is "Change your mind and just walk away.";
-	now toggle entry is BeatenOrcSex rule;
+	[]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the BeatenOrcSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Milk him for some orc cum"):
-			say "[BeatenOrcSex1]";
-		if (nam is "Blow him off"):
-			say "[BeatenOrcSex2]";
-		if (nam is "Ride his cock"):
-			say "[BeatenOrcSex3]";
-		if (nam is "Fuck his ass"):
-			say "[BeatenOrcSex4]";
-		else if (nam is "Nothing"):
-			say "     You just walk away after checking him over for loot.";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Milk him for some orc cum"):
+					say "[BeatenOrcSex1]";
+				if (nam is "Blow him off"):
+					say "[BeatenOrcSex2]";
+				if (nam is "Ride his cock"):
+					say "[BeatenOrcSex3]";
+				if (nam is "Fuck his ass"):
+					say "[BeatenOrcSex4]";
+				WaitLineBreak;
+		else if calcnumber is 100:
+			say "Just leave him?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You just walk away after checking him over for loot.";
+				WaitLineBreak;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
 
 to say BeatenOrcSex1:
 	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you kneel down beside the downed orc and take hold of his meaty shaft. Fingers around the thick member, you start jerking on it, causing the big brute to switch from pained groans to lust-filled moans in no time at all. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority. Setting down your other hand on the full, weighty globes of his balls, you stroke and fondle your helpless orc a bit, grinning as you push him closer and closer to orgasm. When he finally can't hold back any more, you quickly snatch up your prepared bottle and hold it to his cock, successfully catching one, two, three big spurts of his milky white cum before the bottle is full. The rest of the muscled brute's load just arcs high into the air as you pull your container out of the way, to splatter messily all over the orc's broad chest. Putting the cap on your bottle and stashing it away, you give the orc's balls a last quick fondle, then walk away and leave the panting brute to pick himself up later.";
@@ -215,7 +224,7 @@ to say BeatenOrcSex3:
 	say "     Wow, the taste of orc cum or pre-cum on your lips really goes to one's head quickly. It takes several minutes of bobbing down on his erection till you even remember that you did want to do something else right now, and you almost have to force yourself to pull off his shaft. Well, at least his cock should be pretty slick now, you think as you move into position to kneel over the orc's hips and slide his erection up and down between your asscheeks. Then you line up the tip of his cock with your pucker and slowly increase your downward pressure until the orcish dong pops into you.";
 	WaitLineBreak;
 	say "     It's big - pretty big and thick and meaty, making you gasp from the initial penetration. Though not one to give up so easily, you sink yourself deeper onto his hard shaft, and before long, more pleasant feelings prevail as its sides rub against your inner walls, touching sensitive spots deep inside you. Even though you relaxed as much as you could, it's still quite a lot to take - so you have to stop often and take a moment to get used to things as you impale yourself more and more on the orcish warrior's erection. As you do so, you feel something warm and wet leak into you from the tip of his cock, accompanied by a soothing feeling of well-being. That must be more of his precum - feels a bit strange, but good, and it certainly helps taking his thick meat. Some time later, you're finally all the way down on his prick, his hard shaft buried all the way in you and his two large cum-factories resting against your skin.";
-	say "     After taking a deep breath, you start sliding up and down on the orc's manhood, fucking yourself first slowly, then faster and faster as your insides stretch and more and more of his precum makes your hole pretty slick and wet. As good as riding the orc's thick shaft makes you feel, it doesn't take all that long until your frantic movements drive your arousal over all limits, making you almost shout out a pleased moan as you orgasm and [if cocks of player > 0]spray your cum all over the orc's broad chest[else if cunts of player > 0]femcum sprays from your pussy to splatter down on the orc's abs[otherwise]a tingly feeling spreads through your whole body[end if].";
+	say "     After taking a deep breath, you start sliding up and down on the orc's manhood, fucking yourself first slowly, then faster and faster as your insides stretch and more and more of his precum makes your hole pretty slick and wet. As good as riding the orc's thick shaft makes you feel, it doesn't take all that long until your frantic movements drive your arousal over all limits, making you almost shout out a pleased moan as you orgasm and [if cocks of player > 0]spray your cum all over the orc's broad chest[else if cunts of player > 0]femcum sprays from your pussy to splatter down on the orc's abs[else]a tingly feeling spreads through your whole body[end if].";
 	WaitLineBreak;
 	say "     Having your hole tremble and twitch around his orcish member while you come gives your partner the last little push he needed to reach his own climax, and with a loud and very satisfied grunt, the orc starts blasting a massive load of cum into your innermost depths. He bucks up against you as he comes, clearly revelling in the feeling of his seed squishing around his thrusting shaft inside your body. With the amount of cum he pumps into you, quite a bit squirts out around his cock as he does so, to drip down onto his own crotch and the ground below.[mimpregchance]";
 	say "     Exhausted but happy, you pull off your toy orc's still pretty hard shaft, then stand up on somewhat weak knees. After collecting your clothes and gear, you give the orc an affectionate pat on the chest, then walk away, leaving the panting brute to pick himself up later.";
@@ -305,7 +314,7 @@ When Play begins:
 	now int entry is 6;
 	now cha entry is 6;
 	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 125;               
+	now hp entry is 125;
 	now lev entry is 14;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 15;              [ Monster's average damage when attacking. ]
 	now area entry is "Capitol";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -318,15 +327,15 @@ When Play begins:
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;         [ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 70;            
+	now libido entry is 70;
 	now loot entry is "orc brew";      [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50;        [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]meaty[or]powerful[or]broad[or]bulky[at random]";
 	now type entry is "[one of]orc[at random]";
 	now magic entry is false;
-	now resbypass entry is false;      
-	now non-infectious entry is true;  
+	now resbypass entry is false;
+	now non-infectious entry is true;
 	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
 
@@ -384,7 +393,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 25;                
+	now hp entry is 25;
 	now lev entry is 4;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4;               [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -397,15 +406,15 @@ When Play begins:
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;         [ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 70;            
+	now libido entry is 70;
 	now loot entry is "";                             [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;                   [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;                             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]well-built[at random]";
 	now type entry is "[one of]orc[at random]";
 	now magic entry is false;
-	now resbypass entry is false;             
-	now non-infectious entry is false;   
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry;           [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
 

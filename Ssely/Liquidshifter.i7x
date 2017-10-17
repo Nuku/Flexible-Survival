@@ -58,29 +58,29 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Liquidshifter"; 
+	now name entry is "Liquidshifter";
 	now attack entry is "[one of]The Liquidshifter spurts a sticky layer of goop at you, restraining you![or]The Liquidshifter stares into your eyes, grinning - perhaps submitting may be a good idea...[or]The Liquidshifter batters you with its formed fists![or]The Liquidshifter gnaws into your shoulder with its gooey teeth![at random]";
 	now defeated entry is "[beattheLiquidshifter]"; [ Text when monster loses. Change 'Liquidshifter' as above. ]
 	now victory entry is "[losetoLiquidshifter]"; [ Text when monster wins. Change 'Liquidshifter' as above. ]
-	now desc entry is "[Liquidshifterdesc]"; 
+	now desc entry is "[Liquidshifterdesc]";
 	now face entry is "rubbery, constantly secreting a layer of slime"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "muscular, but seeming to be ever-changing, the slime rumbling within you despite the constant draconic form you put on"; 
+	now body entry is "muscular, but seemingly ever-changing, the slime rumbling within you despite the constant draconic form you put on";
 	now skin entry is "slimy, thick, rubbery golden"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "Your tail wags behind you, having lengthened into a mysteriously draconic length, dripping glue onto the floor as you walk."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "glue-covered"; 
+	now cock entry is "glue-covered";
 	now face change entry is "it changes out into a snout, the twitching on your nose making you sneeze - the feeling weird, as the slime from your nostrils spurts out onto your hands. Golden goo, shiny, and sticky. You manage to remove it from your hands, but it seems the goo has already changed your face, and head"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "slime encases its form, taking it and changing it, slime seeming to secrete out of your every pore - before you feel those aforementioned pores being turned into goopy rubber"; 
-	now skin change entry is "you  gain a thick layer of slime all over your body, even on your non-liquidshifter parts. The slime sticks to anything around you"; 
+	now body change entry is "slime encases its form, taking it and changing it, slime seeming to secrete out of your every pore - before you feel those aforementioned pores being turned into goopy rubber";
+	now skin change entry is "you gain a thick layer of slime all over your body, even on your non-liquidshifter parts. The slime sticks to anything around you";
 	now ass change entry is "your tail wags behind you, having lengthened into a mysteriously draconic length, dripping glue onto the floor as you walk"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it begins to change - the gooey, sticky member twitching as it shows off its new draconic length"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 12; 
-	now dex entry is 12; 
+	now str entry is 12;
+	now dex entry is 12;
 	now sta entry is 12; [ These values may be used as part of alternate combat. ]
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 52; 
+	now hp entry is 52;
 	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6; [ Monster's average damage when attacking. ]
 	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -99,9 +99,9 @@ When Play begins:
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slimy[or]muscular[or]gooey[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "draconic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
-	now resbypass entry is false; 
-	now non-infectious entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 

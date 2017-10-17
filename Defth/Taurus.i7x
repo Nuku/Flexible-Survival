@@ -3,7 +3,7 @@ Version 1 of Taurus by Defth begins here.
 
 to say taurusdesc:
 	setmongender 3;		[creature is male]
-	say "     You run into a bull running around the plains as if looking for something, his shaggy fur appearing coal-black, absorbing all the colors of the [if daytimer is day]sun[otherwise]moon[end if]. The bovine would be a giant ebony block of muscles if it weren't for his silvery horns that gleam with almost would-be thirst for a victim. By his figure you guess that the beast was used for breeding or exposition on some farm. His muscles - surely already plentiful even before the nanite apocalypse – have grown to an enormous bulk, making him look like a giant of his species, standing almost 6 foot tall on all fours. Between his legs, you can glimpse a mighty sack that was made to breed any cow with just one try, and his spear-like penis casually poking out of his sheath clearly hungers for a nice pussy. This bull is looking for someone to breed, and apparently doesn't differentiate much between candidates, turning to you as he spots you. Hitting the ground with mighty hooves the oxen gets ready to run you down. Lowering his head to bring his horns into play, he charges a moment later, eager to beat – and breed you. Looks like this fight won't be easy.";
+	say "     You run into a bull running around the plains as if looking for something, his shaggy fur appearing coal-black, absorbing all the colors of the [if daytimer is day]sun[else]moon[end if]. The bovine would be a giant ebony block of muscles if it weren't for his silvery horns that gleam with almost would-be thirst for a victim. By his figure you guess that the beast was used for breeding or exposition on some farm. His muscles - surely already plentiful even before the nanite apocalypse – have grown to an enormous bulk, making him look like a giant of his species, standing almost 6 foot tall on all fours. Between his legs, you can glimpse a mighty sack that was made to breed any cow with just one try, and his spear-like penis casually poking out of his sheath clearly hungers for a nice pussy. This bull is looking for someone to breed, and apparently doesn't differentiate much between candidates, turning to you as he spots you. Hitting the ground with mighty hooves the oxen gets ready to run you down. Lowering his head to bring his horns into play, he charges a moment later, eager to beat – and breed you. Looks like this fight won't be easy.";
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
@@ -11,11 +11,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Taurus"; 
-	now attack entry is "[one of]The mighty bull charges at you. [or]Swinging his horns the bull tries to impale you on their pointy ends. [or]He takes a step back, tensing his muscles, then charges at you. [or]He groans and moos like a mad cow before going for a frantic attack. [or]His horns gleam with ecstasy  as he readies his next attack, then tries to spear you with one of them and leaves a bleeding scratch.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[ tauruslost]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is "[ tauruswon]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[ taurusdesc]";
+	now name entry is "Taurus";
+	now attack entry is "[one of]The mighty bull charges at you.[or]Swinging his horns the bull tries to impale you on their pointy ends.[or]He takes a step back, tensing his muscles, then charges at you.[or]He groans and moos like a mad cow before going for a frantic attack.[or]His horns gleam with ecstasy as he readies his next attack, then tries to spear you with one of them and leaves a bleeding scratch.[at random]"; [Text used when the monster makes an Attack]
+	now defeated entry is "[tauruslost]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is "[tauruswon]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[taurusdesc]";
 [	to be decided if Taurus will have an infection:
 	now face entry is "";
 	now body entry is "";
@@ -40,13 +40,13 @@ When Play begins:
 	now area entry is "Plains";[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0;[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 0;[ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 4;[ Number of Breasts infection will give you. ]
 	now breast size entry is 0;[Size of breasts infection will try to attain ]
 	now male breast size entry is 0;[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;[ Width of female sex  infection will try and give you ]
+	now cunt length entry is 0;[ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 0;[ Width of female sex infection will try and give you ]
 	now libido entry is 0;[ Amount player Libido will go up if defeated ]
 	now loot entry is "food";[ Loot monster drops, ]
 	now lootchance entry is 12;[ Chance of loot dropping 0-100 ]
@@ -71,6 +71,6 @@ to say tauruswon:
 		say “     The bull sniffs your crotch but with the lack of any female genitalia he is easy to lose sexual interest in you. Problem is… if you're not a mate for him, you are competition. Kicking you with a large hoof, he throws you on the grass, rolling a few times before coming to a rest. Despite this, you can count yourself lucky to have survived the encounter.“;
 
 to say tauruslost:
-	say "     Almost losing consciousness the instincts of the now weak bull are everything that is pushing him now, and it looks like they were screaming at him to run away from you. Trying to ram you for a final time, he fails miserably as all the wounds from the fight make him slow and really easy to dodge. But the bull doesn't stop, running away to the horizon, this time the beast escaped. Maybe there is a way to bound the bull instead, you could do something with him."; 
+	say "     Almost losing consciousness the instincts of the now weak bull are everything that is pushing him now, and it looks like they were screaming at him to run away from you. Trying to ram you for a final time, he fails miserably as all the wounds from the fight make him slow and really easy to dodge. But the bull doesn't stop, running away to the horizon, this time the beast escaped. Maybe there is a way to bound the bull instead, you could do something with him.";
 
 Taurus ends here.

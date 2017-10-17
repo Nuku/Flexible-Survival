@@ -1,4 +1,4 @@
-Arctic fox by Sarokcat begins here. 
+Arctic fox by Sarokcat begins here.
 
 "Adds a Arctic fox to Flexible Survival's Wandering Monsters table"
 
@@ -31,10 +31,10 @@ When Play begins:
 	now name entry is "Arctic fox";
 	now attack entry is "[one of]She darts forward quickly, sideswiping you with her body.[or]Swiftly racing forward and to the side, she slashes at you as she passes.[or]Her front paw flashes out faster then the eye can follow, leaving a painful set of claw marks on you.[or]Lashing her tail in anticipation, the Arctic fox purrs as she stares deep into your eyes, her sinuous movements almost hypnotically appealing.[or]Charging forward with no warning whatsoever, she pounces and knocks you to the ground![or]She bunches her powerful hind legs up, and leaps directly at you![or]She grins at you, baring her sharp feline teeth, before leaping forward snapping them at you.[at random]";
 	now defeated entry is "[Arctic fox loss]";
-	now victory entry is  "[Arctic fox attack]";
+	now victory entry is "[Arctic fox attack]";
 	now desc entry is "As you wander around the deserted paths of the zoo, you spot of blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral like Arctic fox, her long lean body resting on her narrow paws and her long cheetah tail lashing behind her as she focuses her gaze directly on you, '[one of]Why don't you run, I love the chase.[or]Hmmm, not a gazelle but you look almost as fun[or]Oooo something to chase![or]Oh good, I was feeling bored.[or]I was feeling kind of lonely here, maybe you can help.[or]Finally someone to pounce![at random]' She says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation, and slips into a runners stance, her eyes locked on her newest prey... you.";
 	now face entry is "sexy vulpine face, your slim narrow muzzle and bright eyes look perfectly suited to your body, and your pointed canine ears twitch idly at every sound even as you find yourself grinning happily, enjoying the feeling of your new sexy";[ Face description, format as the text "You have a (your text) face."]
-	now body entry is "sexy and lithe, with small vulpine paws, and rather dainty claw tipped hands, your rather sexy new vulpine form seems to burn with energy and arousal";[ Body Description, format as the text "Your Body is (your text)"]
+	now body entry is "sexy and lithe, with small vulpine paws, and rather dainty claw-tipped hands, your rather sexy new vulpine form seems to burn with energy and arousal";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]pure white[or]white furred[or]Arctic fox[or]soft furred[or]thick white fur covered[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a beautiful white vulpine tail stretched out behind you, its soft fur rubbing against your body pleasantly as you swish it from side to side with amusement.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]vulpine[or]knotted[or]pointed[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
@@ -50,7 +50,7 @@ When Play begins:
 	now int entry is 15;
 	now cha entry is 25;
 	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 40;  
+	now hp entry is 40;
 	now lev entry is 3;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 4;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "None";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -61,17 +61,17 @@ When Play begins:
 	now breast size entry is 0;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;  
-	now cunt width entry is 0;  
+	now cunt length entry is 0;
+	now cunt width entry is 0;
 	now libido entry is 50;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]alluring[or]sultry[at random]";
 	now type entry is "vulpine";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  
+	now non-infectious entry is false;
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 

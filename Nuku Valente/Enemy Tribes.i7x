@@ -37,7 +37,7 @@ to rival menu:
 		now toggle entry is rival select rule;
 		change the current menu to table of Combat Items;
 		carry out the displaying activity;
- 
+
  This is the rival select rule:
 	choose row Current Menu Selection in table of combat items;
 	let nam be description entry;
@@ -64,7 +64,7 @@ to rival menu:
 		now z is active;
 	decrease the menu depth by 1;
 	rival menu;
-	
+
 An everyturn rule(This is the Enemies Breed rule):
 	if the remainder after dividing turns by 2 is 0, continue the action;
 	repeat with enemy running through active species:
@@ -163,9 +163,9 @@ An everyturn rule(This is the Enemy Attacking rule):
 				now foragers is ( foragers * 60 ) / 100;
 			if foragers < 1, now foragers is 1;
 			let enum be enemies;
-			now enemies is ( enemies * might of tribe of player   ) / stamina of enemy;
-			let backlash be ( foragers * might of enemy   ) / stamina of tribe of player;
-			let estimate be ( enemies * a random number from 66 to 150) / 100;
+			now enemies is ( enemies * might of tribe of player ) / stamina of enemy;
+			let backlash be ( foragers * might of enemy ) / stamina of tribe of player;
+			let estimate be ( enemies * a random number from 66 to 150 ) / 100;
 			if enemies is 0:
 				say " They manage to claim land and defeat us without losing a single soul.";
 			else:
@@ -190,6 +190,6 @@ An everyturn rule(This is the Enemy Attacking rule):
 			decrease territory of tribe of player by 1;
 
 
-		
+
 
 Enemy Tribes ends here.

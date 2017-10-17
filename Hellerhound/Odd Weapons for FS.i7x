@@ -132,7 +132,7 @@ instead of resolving sword nest:
 			say "You master the desire, and look around paying more attention to detail.";
 	if a random number between one and 20 < the perception of the player:
 		say "You spot a sword in the middle of the mess, coated so thoroughly with the juices that you suspect it was the target for the raids, and the source of the jubilation of victory. Its metal is cloudy and coated with thick slime, and the pommel is dried cum of some unknown creature, glowing white. It looks like a powerful, but dangerous weapon. Do you want to walk into the mess and take it?";
-		if the player consents: 
+		if the player consents:
 			say "You slosh through the mess, leaving a trail that fill after a couple of seconds. You get to the sword, and place it in your backpack, and trudge back.";
 			now fellforward is 1;
 			if a random number between 1 and 25 > the dexterity of the player:
@@ -174,7 +174,7 @@ numwater is a number that varies.
 gotwhip is a number that varies.
 
 instead of resolving Destroyed bushes:
-	say "You come across a circle of bushes crushed flat against the ground, large pools of cum and  juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
+	say "You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
 	if the humanity of the player is less than 50:
 		say "Do you want to drink from the puddles?";
 		if the player consents:
@@ -190,9 +190,9 @@ instead of resolving Destroyed bushes:
 		say "In a nearby bush you find a riding saddle and riding boots, both women's. It seems as if a woman went riding in the park when the infection broke out. Her horse changed, and raped her. Since the clearing is larger than if the horse just fucked her, you assume she changed and submitted as well.";
 		if the perception of the player is greater than a random number between one and 20:
 			say "In one of the puddles of cum you find a whip with metal bits strung throughout it. It looks as if the rider carried it, and lost it in the fray. it is currently covered with cum, but if you have enough water, you could change that. Do you wish to?";
-			if the player consents:	
+			if the player consents:
 				if carried of water bottle >= 3:
-					say "You have to use a few bottles to wash off the whip, but you manage to get it clean and safe to use."; 
+					say "You have to use a few bottles to wash off the whip, but you manage to get it clean and safe to use.";
 					say "You pick up the now clean whip, and place it in your backpack. It looks like a good weapon.";
 					decrease carried of water bottle by 3;
 					increase carried of horse whip by 1;

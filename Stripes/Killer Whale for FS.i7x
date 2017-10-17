@@ -18,7 +18,7 @@ Section 1 - Monster Responses
 
 to say orcadesc:
 	setmongender 3; [creature is male]
-	say "     Looking over Killer Whale, his body is covered in the distinctive patterning of an orca on thick, sleek flesh. His head is sleek and streamlined, drawing to the rounded blunt muzzled shape of an orca. His mouth is filled with small sharp, dagger-like teeth. The blow hole on the top of his head occasionally opens to take a breath. His body is large and heavily muscled, but with the sleek shape of a swimmer. He stands easily ten feet tall. The large dorsal fin projecting from his back extends nearly a foot behind him in a sharp knife-like shape. His arms are dense with sleek muscle. His hands have a thick webbing between his fingers. His legs are humanoid in appearance, thick with powerful muscle. His ass is dense with muscle, supporting a thick and very muscular tail 4 feet in length ending in a whale's flukes. Between his powerful, swimmer's legs he has a titanic, sleek and curving cetacean cock. Beneath his impressive maleness is a large bulge, showing his swollen balls. While they would normally be internal on the oceanic creature, their apparent hugeness cannot be fully contained inside him and bulge out considerably.";
+	say "     Looking over Killer Whale, his body is covered in the distinctive patterning of an orca on thick, sleek flesh. His head is sleek and streamlined, drawing to the rounded blunt muzzled shape of an orca. His mouth is filled with small sharp, dagger-like teeth. The blowhole on the top of his head occasionally opens to take a breath. His body is large and heavily muscled, but with the sleek shape of a swimmer. He stands easily ten feet tall. The large dorsal fin projecting from his back extends nearly a foot behind him in a sharp knife-like shape. His arms are dense with sleek muscle. His hands have a thick webbing between his fingers. His legs are humanoid in appearance, thick with powerful muscle. His ass is dense with muscle, supporting a thick and very muscular tail 4 feet in length ending in a whale's flukes. Between his powerful, swimmer's legs he has a titanic, sleek and curving cetacean cock. Beneath his impressive maleness is a large bulge, showing his swollen balls. While they would normally be internal on the oceanic creature, their apparent hugeness cannot be fully contained inside him and bulge out considerably.";
 
 to say losetoorca:
 	if hp of player > 0:
@@ -117,16 +117,16 @@ Section 2 - Monster Insertion
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
- 
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Killer Whale"; [Name of your new Monster]
 	now attack entry is "[one of]The orca smashes his tail against your side![or]The killer whale bites down onto your arm![or]The killer whale leans forward and hits you with a blast of sea water from his blowhole![or]The orca strikes you with his powerful arms![or]The orca tries to crush you in his strong arms![at random]";
 	now defeated entry is "[beattheorca]";
-	now victory entry is  "[losetoorca]";
+	now victory entry is "[losetoorca]";
 	now desc entry is "[orcadesc]";
 	now face entry is "sleek and streamlined, drawing to the rounded blunt muzzled shape of an orca. Your mouth is filled with small, sharp teeth. The blow hole on the top of your head occasionally opens to take a breath";
-	now body entry is "large and heavily muscled, but with the sleek shape of a swimmer. You stand almost ten feet tall now. The large dorsal fin projecting from your back extends nearly a foot behind you, making it hard to comfortably rest your backpack. Your arms are dense with sleek muscle and your hands have a thick webbing between your fingers. Your legs are humanoid in appearance, thick with powerful muscle as well[if cocks of player > 0]. A slit between the legs conceals your manhood[end if]";
+	now body entry is "large and heavily muscled, but with the sleek shape of a swimmer. You stand almost ten feet tall now. The large dorsal fin projecting from your back extends nearly a foot behind you, making it hard to comfortably rest your backpack. Your arms are dense with sleek muscle, and your hands have a thick webbing between your fingers. Your legs are humanoid in appearance, thick with powerful muscle as well[if cocks of player > 0]. A slit between the legs conceals your manhood[end if]";
 	now skin entry is "the distinctive patterning of an orca on thick, sleek";
 	now tail entry is "Your ass is dense with muscle, supporting a thick and very muscular tail 4 feet in length ending in a whale's flukes.";
 	now cock entry is "sleek and curving cetacean";
@@ -143,18 +143,18 @@ When Play begins:
 	now cha entry is 16;
 	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 45; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 7; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 25; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 0; [ Number of Breasts infection will give you. ]
 	now breast size entry is 0; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 0;
-	now cunt width entry is 0; 
+	now cunt width entry is 0;
 	now libido entry is 55; [ Amount player Libido will go up if defeated ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -191,4 +191,4 @@ when play ends:
 				say "     When the military rescues you, you are pleased to find they've built some special holding facilities for those like yourself who have become partially aquatic creatures. There is some interest in you and the others and they get several marine biologist to study your group. Several members of the military speak to you as well. At first, it seems their interest is casual and before you know it, you're becoming interested in their offer to join their forces as an aquatic soldier.";
 				say "     You and several of the others in the tanks are recruited and trained, becoming a secret force working with the navy and the marines to perform aquatic missions and to help defend coastal cities from the menace of the many aquatic infected creatures who would raid them for supplies and to spread their infection. You become strong friends and eventually mated to a shark creature who is also in your group, one of the few who could overcome their more vicious and piratical tendencies while still being transformed enough and willing enough to join the para-military group. While your hybrid children are even more aquatic in nature than their parents and are a little more wild and vicious, they are trained from a young age by the yourselves and the military to become powerful grunts in the military's coastal defense teams.";
 
-Killer Whale for FS ends here. 
+Killer Whale for FS ends here.

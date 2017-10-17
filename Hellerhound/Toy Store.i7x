@@ -11,7 +11,7 @@ instead of resolving a toy store:
 	say "     You come across a store with gas lamps in the windows, and activity inside. You catch a flash of orange, but the windows are shaded, and you cannot really tell who or what is inside.";
 	say "     Do you wish to enter?";
 	if the player consents:
-		say "   You open the door to find a whole nest of latex foxes, all playing with each other. Thick seed covers the walls, and as soon as you open the door, they flood out and attack, sensing another potential playmate.";
+		say "     You open the door to find a whole nest of latex foxes, all playing with each other. Thick seed covers the walls, and as soon as you open the door, they flood out and attack, sensing another potential playmate.";
 		repeat with N running from one to ten:
 			now toystoreoverride is true;
 			challenge "Latex Fox";
@@ -29,7 +29,7 @@ instead of resolving a toy store:
 		if lost is 1:
 			say "     You manage to put some distance between you and the store, taking a while to recover from the peculiar circumstance.";
 			now toy store is resolved;
-		else:	
+		else:
 			say "     Standing in a pile of incapacitated latex foxes, you yell your triumph, and take some food and water as a reward.";
 			increase carried of food by 2;
 			if a random chance of one in two succeeds:
@@ -41,7 +41,7 @@ instead of resolving a toy store:
 				increase carried of water bottle by 2;
 			now toy store is resolved;
 	else:
-		say "    You go on your way, away from the store.";
+		say "     You go on your way, away from the store.";
 	now toystoreoverride is false;
 
 

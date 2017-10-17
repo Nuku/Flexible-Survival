@@ -12,7 +12,7 @@ when play begins:
 
 to say fluffyowldesc:
 	setmongender 4; [creature is female]
-	say "     With a soft hoot, a fluffy owl creature comes swooping out at you from a dark corner  She has soft, fluffy looking feathers covering her bre... body. Her arms are partially wings, but have taloned hands at the end. Her feet end in large, taloned bird's feet. Her piercing eyes seem to flash brightly in the dim corridors and her beak looks quite sharp. As she swoops in close, you can't ignore them any longer. On her chest are an enormous, simply titanic pair of boobs. Each the size of a large pumpkin, you have no idea how she can stand upright and walk, let alone fly with them. But somehow she does, moving with a strange lightness and grace despite her ample assets. She seems to smile at her beak as she notices your gaze and runs her taloned fingers over her huge breasts, jiggling them tantalizingly at you.";
+	say "     With a soft hoot, a fluffy owl creature comes swooping out at you from a dark corner. She has soft, fluffy looking feathers covering her bre... body. Her arms are partially wings, but have taloned hands at the end. Her feet end in large, taloned bird's feet. Her piercing eyes seem to flash brightly in the dim corridors and her beak looks quite sharp. As she swoops in close, you can't ignore them any longer. On her chest are an enormous, simply titanic pair of boobs. Each the size of a large pumpkin, you have no idea how she can stand upright and walk, let alone fly with them. But somehow she does, moving with a strange lightness and grace despite her ample assets. She seems to smile at her beak as she notices your gaze and runs her taloned fingers over her huge breasts, jiggling them tantalizingly at you.";
 
 
 to say losetofluffyowl:
@@ -73,7 +73,7 @@ When Play begins:
 	now face entry is "now the head of a fluffy barn owl with sharp eyes and a sharp beak. You have a faint trace of lips as well, though they are hard to see at first glance";
 	now body entry is "light and slender, but still having strong muscles. This fitness can mostly be felt in your chest and arms, running to the feathery wings that your arms have become. Your hands have reshaped themselves into bird-like talons, as have your feet";
 	now skin entry is "fluffy, brown and cream feathers cover your";
-	now tail entry is "You have a broad, flat tail of brown feathers over your pert bottom."; [ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is "You have a broad, flat tail of brown feathers over your pert bottom."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "slick, hidden";
 	now face change entry is "it changes and reshapes itself into that of a barn owl. Your head has a very rounded face, with a lighter fluff of feathers making it soft and cute. Your eyes are sharp, as is your small beak";
 	now body change entry is "your body becomes light and slender, but still strong and muscled. You can feel the muscles on your upper body reshaping and tightening around your shoulders before the changes spread to your arms. As you watch, your arms reshape themselves into wing-like structures covered in soft feathers. Your hands thankfully remain, though they do change form as well, reshaping into bird-like talons, as do your feet";

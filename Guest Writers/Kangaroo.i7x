@@ -52,12 +52,12 @@ When Play begins:
 	now name entry is "Red Kangaroo"; [Name of your new Monster]
 	now attack entry is "[one of]A left hook catches you in the chin, making you stumble[or]Sweeping around, the powerful tail slams into your side, knocking the wind out of your lungs[or]After blocking a punch, she throws an uppercut into your chin, followed by a left and then a right jab to your stomach[or]The kangaroo hops from one foot to the other as it delivers a series of quick punches[at random].[rookickreset]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[kangaroo loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[kangaroo attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now victory entry is "[kangaroo attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[redroodesc]";[ Description of the creature when you encounter it.]
 	now face entry is "rounded, medium-sized muzzle with a black nose pad at the very tip";
-	now body entry is "a soft rounded shoulder build with tight stomach, leading down into wide hips, large spring like thighs and feet";
+	now body entry is "a soft rounded shoulder build with a tight stomach, leading down into wide hips, large spring-like thighs and feet";
 	now skin entry is "[one of]rusty red furred[or]short furred[or]softly furred[at random]";
-	now tail entry is "You have a thick muscled tail, being able to be used as a  third leg [skin of player], and lightly thumping on the ground with each movement.";
+	now tail entry is "You have a thick muscled tail, being able to be used as a third leg [skin of player], and lightly thumping on the ground with each movement.";
 	now cock entry is "[one of]marsupial[or]kangaroo[at random]";
 	now face change entry is "your face draws forward into a kangaroo muzzle, stretching to mold to the new shape";
 	now body change entry is "your muscles switch, moving lower as your bottom half now becomes a powerful spring board, leaving your upper half reasonably muscled";
@@ -71,7 +71,7 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 11;
 	now sex entry is "Female"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 35; 
+	now hp entry is 35;
 	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 7; [ Amount of Damage monster Does when attacking.]
 	now area entry is "Red"; [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -82,15 +82,15 @@ When Play begins:
 	now breast size entry is 7; [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 10; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 3; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 10; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 3; [ Width of female sex infection will try and give you ]
 	now libido entry is 45; [ Amount player Libido will go up if defeated ]
 	now loot entry is ""; [ Loot monster drops ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "altered"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]marsupial[or]kangaroo[at random]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

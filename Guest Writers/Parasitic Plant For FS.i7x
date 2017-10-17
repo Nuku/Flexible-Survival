@@ -16,12 +16,9 @@ to say plantwin:
 		say "[PlantWinRegular]";
 	else: [event]
 		say ""; [dealt with at the event source]
-			
+
 to say PlantWinRegular:
-	if joannafight is 3:
-		now joannafight is 2;
-		say "     As your struggles cease, the vines truss you up tightly. Captured, you have become a second victim for this giant plant monster.";
-	else if plantdefeat is 0: [ first time losing to a plant ]
+	if plantdefeat is 0: [ first time losing to a plant ]
 		if didsubmit is 1: [submited check]
 			if cunts of player > 0:
 				say "     The plant seems to sense your willingness to submit to it and lightly pulls on the vine inside your pussy like a leash, inviting you to walk into the dense bush of vines. Your legs are pulled apart and a second cock headed vine pushes against your ass, soon working its way inside your willing body where its tip expands just as the first had, locking itself inside you. Even if you wanted to get away, the size of the cock vines makes it impossible to remove them. A final vine lifts itself to your mouth as it leaks a musky smelling liquid which it presses to your mouth, allowing you to suckle on it to your heart's content. There is no mistaking that the liquid is cum. The hot, musky fluid seems to be absorbed into your body as you drink it. The plant fills you with the stuff, making you addicted to the cum of all creatures, creating a permanent physical need to drink cum that will stay with you forever.";
@@ -71,11 +68,7 @@ to say PlantWinRegular:
 
 to say beattheplant:
 	if inasituation is false:
-		if joannafight is 3:
-			now joannafight is 1;
-			say "     Fighting off the plant's vines, you are able to break off the one buried deep inside you, allowing you to press onwards.";
-		else:
-			say "You finally manage to break the vine that [if plantdefeat > 0]grew out of you. Getting as far away as you can from the area, you begin attempting to remove the vine that grew from inside you. It seems almost like it were attached to something deep in your body, but with one final tug it comes free with a loud *POP*. Unfortunately, the seed it grew from didn't come with it, and is still rooted deep inside your body[else]forced its way inside of you. Getting far away from the vine-like bushes, you begin attempting to remove the vine that still dangles from between your legs. The inflated cock end of the plant makes it very difficult to remove, forcing you to stretch around it painfully as you pull on the vine. With one final tug, it comes free with a loud *POP*[end if].";
+		say "You finally manage to break the vine that [if plantdefeat > 0]grew out of you. Getting as far away as you can from the area, you begin attempting to remove the vine that grew from inside you. It seems almost like it were attached to something deep in your body, but with one final tug it comes free with a loud *POP*. Unfortunately, the seed it grew from didn't come with it, and is still rooted deep inside your body[else]forced its way inside of you. Getting far away from the vine-like bushes, you begin attempting to remove the vine that still dangles from between your legs. The inflated cock end of the plant makes it very difficult to remove, forcing you to stretch around it painfully as you pull on the vine. With one final tug, it comes free with a loud *POP*[end if].";
 	else:
 		say ""; [dealt with in the event]
 
@@ -84,26 +77,14 @@ to say PlantOrSeed:
 	if inasituation is false:
 		say "[PlantOrSeedRegular]";
 	else: [event]
-		say ""; [dealt with at the event source]	
-	
+		say ""; [dealt with at the event source]
+
 to say PlantOrSeedRegular:
 	setmongender 5; [creature is herm]		[***maybe???]
 	choose row monster from the table of random critters;
 	say "[submitcheck]";
 	let debit be 0;
-	if joannafight is 3:					[special boss plant]
-		if hardmode is true and level of player > 10, let debit be level of player - 10;
-		now dex entry is 16 + ( debit / 5 );
-		now hp entry is 100 + ( debit * 6 );
-		now monsterhp is 100 + ( debit * 6 );
-		now lev entry is 10 + debit;
-		now wdam entry is 9 + ( ( 2 * debit ) / 5 );
-		if plantdefeat is 0: [encounter yet to fight it]
-			say "     This odd vegetation has spread its vines and tentacles across the garden and is hanging its phallic fruit and flowers from the large tree as temptation for its victims. It is quite large, making you wonder how this horrifying plant grew so large. You try to push your way past the vines to get at the cluster at its base, but one of the large vines manages to grab you and hold you briefly. Another one bursts from the soft soil and strikes, forcing itself into your [if cunts of player > 0]cunt[else]ass[end if]! You grab at it and pull, only to find the cock-like tip swelling inside you like a knot. It is soon large enough that you can't dislodge it without a fight, or a good running start might let you break the vine if you try to flee. You are quite certain you'll share the girl's fate should you lose, fed to and transformed by this giant plant.";
-		else:	[already seeded by another]
-			say "     This odd vegetation has spread its vines and tentacles across the garden as is hanging its phallic fruit and flowers from the large tree as temptation to its victims. It is much larger than the others you've seen and faced in the past for some reason. You try to push your way past the vines to get at the cluster at its base when you suddenly feel another twist in your belly and the seed in your [if cunts of player > 0]womb[else]gut[end if] pushes out a root of its own, burrowing into the soil as it responds to the larger plant. It squirms inside you, fighting to pull you down even as you fight the tentacles, severely hampering you in this fight. You will have a hard fight ahead of you if you don't pull out the vine and make a run for it. You are quite certain you'll share the girl's fate should you lose, fed to and transformed by this giant plant.";
-			now hp of player is ( 3 * ( hp of player + 1 ) ) / 4;
-	else if peachtreefight is 3:
+	if peachtreefight is 3:
 		if hardmode is true and level of player > 7, let debit be level of player - 7;
 		now dex entry is 16 + ( debit + 2 / 5 );
 		now hp entry is 60 + ( debit * 5 );
@@ -111,7 +92,7 @@ to say PlantOrSeedRegular:
 		now lev entry is 7 + debit;
 		now wdam entry is 7 + ( ( 2 * debit ) / 5 );
 		say "     This strange plant has spread its vines through the branches of the peach tree and bonded itself to it. You, as many others probably been before, were lured in by the temptation presented by the juicy fruit. The sweet scent of peaches accompanies the dribbling juices that leak from the tips of the vines. The tendril inside you pulses and throbs as those in the tree come down to restrain you so it may complete its tentacular assault upon you. You'll need to break free of the vine locked inside you if you are to escape.";
-	else:							[regular park plant]
+	else: [regular park plant]
 		if hardmode is true and level of player > 4, let debit be level of player - 4;
 		now dex entry is 16 + ( ( debit + 4 ) / 5 );
 		now hp entry is 40 + ( debit * 4 );
@@ -159,10 +140,10 @@ When Play begins:
 	now body entry is "undeniably feminine with root-like legs, your needy cunt exuding a musky substance meant to attract males";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]green plant-like[or]beautiful plant-like[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "A very moist vagina replaced your anus, concealed by a dress made of long petals which extend down to the floor. ";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[if looknow is 1]tentacle cock[else][one of]vine-like[or]tentacle[or]green tendril[at random][end if]";[ Cock Description, format as you have a 'size' (your text) cock]
+	now cock entry is "[if looknow is 1]tentacle[else][one of]vine-like[or]tentacle[or]green tendril[at random][end if]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is " as long tendrils covered with leaves sprout like long green hair. A strange sensation spreads through your mouth as it seals up and your teeth disappear. A new slit forms just below your nose, ending at your chin, leaving you with a vagina for a mouth. It feels moist and fills your mind with an unending need for cum! At the same time, your face becomes rounder, and more feminine"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "a sudden surge of vines and roots spread like an infection through your body from a seed hidden inside of you. Your legs become root-like vines that dig into the ground if you stay in one place for too long, while the rest of your body shifts, leaving you much shorter, with feminine curves and a gorgeous body. Your pussy starts drooling a musky substance which arouses you"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "thin vines suddenly force their way out of your ass spreading outward over your skin from some unseen seed inside your body. They cover every inch and work their way into any orifice of your body  before sinking into your skin turning your entire body a dark plant-like green colour!"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now skin change entry is "thin vines suddenly force their way out of your ass spreading outward over your skin from some unseen seed inside your body. They cover every inch and work their way into any orifice of your body before sinking into your skin turning your entire body a dark plant-like green colour!"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a very strange sensation spreads around your waist and your anus seems to stretch almost painfully! Reaching back you find it is now shaped like a pussy. It feels so empty, practically begging you to fill it with a nice, hard cock! Around your waist, long petals sprout like a dress extending down to the floor"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is " followed by a sudden pain at your groin! Your cock seems to swell into an odd bulb-like shape and turn a green plant-like colour, while small green tendrils spread over your groin like roots."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 12;
@@ -172,7 +153,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 18;
 	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 40; 
+	now hp entry is 40;
 	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 6; [Amount of Damage monster Does when attacking.]
 	now area entry is "Park"; [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -183,15 +164,15 @@ When Play begins:
 	now breast size entry is 8; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0;[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 3; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 15; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 5; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 15; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 5; [ Width of female sex infection will try and give you ]
 	now libido entry is 40; [ Amount player Libido will go up if defeated ]
 	now loot entry is "musky cock flower";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "feminine";
 	now type entry is "plant";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

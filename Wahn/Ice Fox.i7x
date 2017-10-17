@@ -35,12 +35,12 @@ When Play begins:
 	now face entry is "that of an anthro fox, with a narrow and delicate muzzle and small but sharp teeth. Two pointy ears rise from the top of your triangular head, giving you exceptional hearing"; [ "Your face is (your text)." ]
 	now body entry is "that of an anthro fox, standing tall on digitigrade legs. A band of scales runs from your throat down towards your crotch and inner thighs, giving a partially draconic appearance too. This is also helped by further scales on the backs of your forearms and shins, culminating in feet with impressive toe-claws";
 	now skin entry is "[one of]white furred[or]a snow-white coat of fur sprouting from your[at random]"; [ "Your body is covered in (your text) skin." ]
-	now tail entry is "A full nine of prehensile fox tails weave through the air behind you, snow white except their charcoal tips.";
+	now tail entry is "A full nine of prehensile fox tails weave through the air behind you, snow white except for their charcoal tips.";
 	now cock entry is "[one of]vulpine[or]pointy[or]pinkish[at random]";
 	now face change entry is "its mouth pushes out into a slim muzzle and the ears tapering to points and wander steadily upwards. All in all, your whole head seems to stretch and reform into the more triangular visage of a fox, your slim new muzzle full of sharp teeth and your bright shining eyes seeing the world around you in an entirely new, and more sexual light"; [ "Your face feels funny as (your text)." ]
 	now body change entry is "its muscles twitching and tremble and bones reform, shaping your being into a more slim and streamlined form. A row of scales solidifies in an unbroken band from your throat all the way to your inner thighs, as well as on the backs of your forearms and your shins. Meanwhile, your hands seem to narrow and your fingers grow closer together as soft claws push their way out of your new slightly paw-like hands. Finally, your feet take on a shape more fitting the digitigrade stance and form draconic toe-claws";
 	now skin change entry is "a strange warmth begins to spread across your body, and a soft downy layer of pure white fur begins to push out of your skin, longer thicker fur beginning to grow in even as you begin to stroke your soft white undercoat, until you have a full pelt full of soft layered fox fur";
-	now ass change entry is "it becomes tight and firm and nine long fox  tails sprout out of your tailbone. It takes a few seconds before you manage to get them under control, not quite as easy as one thinks due to the fact that they actually are prehensile appendages";
+	now ass change entry is "it becomes tight and firm and nine long fox tails sprout out of your tailbone. It takes a few seconds before you manage to get them under control, not quite as easy as one thinks due to the fact that they actually are prehensile appendages";
 	now cock change entry is "it tapers to a soft point, your skin distending slightly at the base as a sheath begins to form around your increasingly canine cock, and you find yourself groaning slightly as the base of your cock bulges out as a knot forms, then slips into its new waiting sheath";
 	now str entry is 18;
 	now dex entry is 16;
@@ -62,7 +62,7 @@ When Play begins:
 	now cunts entry is 1;
 	now cunt length entry is 9;        [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 4;         [ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 70;            
+	now libido entry is 70;
 	now loot entry is "snow star";     [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;         [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -70,7 +70,7 @@ When Play begins:
 	now type entry is "[one of]vulpine[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
-	now non-infectious entry is true;
+	now non-infectious entry is false;
 	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
 
@@ -82,7 +82,7 @@ name	desc	weight	object
 instead of sniffing snow star:
 say "     The little piece of ice smells fresh, a little like a menthol bonbon.";
 
-snow star is a grab object. 
+snow star is a grab object.
 the usedesc of snow star is "[snow star use]";
 
 to say snow star use:
@@ -118,7 +118,7 @@ Section 5 - Events
 instead of going Down from Frozen Cave Tunnel while (Miyuki is in Ice Fox's Den and MiyukiRelationship is 0): [first encounter]
 	move player to Frozen Cave Tunnel;
 	say "     In the midst of the cave stands what must be the person living here - an anthro fox with snow-white fur, as well as some flexible draconic scales that run in a broad band from her throat, between two shapely breasts and all the way down to the inside of her thighs. She bears more scales on the backs of her forearms, as well as the shins of her legs, with them becoming more pronounced further down and ending at the sharp toe-claws that make her paws appear more like a dragon's than a foxes. Finally, there is a grand total of nine flexible fox tails fanned out behind her, swaying gently left and right. All of this is readily visible to you as she doesn't seem to need - or want - to wear clothes. Inevitably, your gaze wanders down between her thighs, where you spot a thin slit between two scale-plates.";
-	say "     The dragon-fox is standing right underneath the big snowflake rotating close up to the ceiling, looking at it with her arms raised, sending pale wispy streamers of energy up to it. This seems to charge up the frosty star, making it spin even faster, with more snow forming in the surrounding air. It blows towards the cavern entrance in a strong gust - or in other terms... right at you! Surprised, you can't help but let out a 
+	say "     The dragon-fox is standing right underneath the big snowflake rotating close up to the ceiling, looking at it with her arms raised, sending pale wispy streamers of energy up to it. This seems to charge up the frosty star, making it spin even faster, with more snow forming in the surrounding air. It blows towards the cavern entrance in a strong gust - or in other terms... right at you! Surprised, you can't help but let out a
 	strained gasp as you stand against the gale, barely keeping upright despite the blowing wind. The sound draws the attention of the ice fox, who stops what she was doing and turns her muzzle to look at you. Raising an eyebrow in a quizzical expression, she takes a few steps closer and says, 'What do we have here? An uninvited trespasser...'";
 	WaitLineBreak;
 	say "     Stopping the snowy gale threatening to push you over with a flick of her wrist, the anthro fox comes to stand before you with a smirk on her muzzle and arms crossed in front of her shapely chest. She looks you up and down quite closely, her gaze resting on your crotch for a few seconds before she looks you right in the eye. 'And what an interesting visitor you are to come visit Miyuki. Still, just walking into a woman's bedroom unbidden. I think that demands an apology...' She smiles at you and you become aware of movement behind her back - several of those long tails of hers curve around, pointing at her crotch, where the tip of a vulpine shaft starts to push outwards from the elongated slit between her scales.";
@@ -153,7 +153,7 @@ instead of going Down from Frozen Cave Tunnel while (Miyuki is in Ice Fox's Den 
 		say "     As you apologize for your intrusion and give her a little bow just to be sure (given the name and her appearance making you think Asian folklore, you think it fits), Miyuki nods gracefully and replies, 'Well, at least you're well mannered. Not that I wouldn't have preferred a... different apology.' She strokes her fox-like shaft demonstratively and gives you a wink before going on, 'But fine - you're forgiven for your intrusion. I do have to ask you to leave now though... since you don't seem to be interested in taking care of my 'little fox' down here, I guess I'll have to do it myself.' Friendly but determined, she ushers you out of her cave, leaving you a bit bewildered at what you just experienced that.";
 		move player to Forest Cave Entrance;
 		now MiyukiRelationship is 1; [player apologized to her]
-	else: 
+	else:
 		LineBreak;
 		say "     As you scoff and ignore her request, telling her she can forget about this and stepping forward to do... you don't know what exactly, Miyuki's brows draw together and she shakes her head in disappointment. 'How rude,' she says with a slight ruffle to her muzzle and flicks her paw-hand at you. With a creak of frost forming impossibly fast, you freeze in your movements and feel yourself get incredibly stiff - and not in a good way. The burning feeling of ice touching your skin creeps up your extremities in an eye-blink, followed by a pressure on your chest that makes it hard to breathe in against the carapace of ice forming there. Then finally, you feel the creeping frost crawl up your neck and start to spread over your face, at which point you pass out from the sudden hypothermia.";
 		WaitLineBreak;
@@ -204,7 +204,7 @@ instead of conversing the Miyuki:
 	now title entry is "Becoming an ice fox";
 	now sortorder entry is 3;
 	now description entry is "Talk to her about maybe becoming like her";
-	[]	
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -239,10 +239,10 @@ instead of conversing the Miyuki:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-			
+
 to say MiyukiTalk1: [talk about her]
 	say "     As you ask Miyuki about herself, a sly smile crosses the ice fox's muzzle. 'Curious, aren't you? But a woman needs to have some secrets, you know. Let's just say I came here from... a different place. One that isn't so drearily warm all the time. Everything around these parts is in flux right now, and things are bound to stay quite interesting for a long time... so I decided to stay. It wasn't hard to set up a nice little den afterwards.' With a sweep of her arm, she indicates her warm nest, as well as the few pieces of frost-rimmed furniture in the icy cave. Then she glances up at the rotating snowstar, sending another stream of energy its way to ramp up the little snowstorm once more.";
-	
+
 to say MiyukiTalk2: [talk about the city]
 	let randomnumber be a random number from 1 to 3;
 	if randomnumber is:
@@ -252,7 +252,7 @@ to say MiyukiTalk2: [talk about the city]
 			say "     Miyuki smiles a little as you bring up the city, one of her hands moving to idly stroke around the rim of one of her nipples. 'You know, it is refreshing to get to a place that isn't quite as... stuck up about its morals. Why, I was here barely five minutes before a bit of a loudmouth dog demanded that I spread myself for him. Typical for your customs, eh? So very direct...' She grins at your expression, and before you can decide if you want to tell her about what actually is going on, the ice fox goes on to say, 'Of course, I was direct too and showed the insistent puppy what a surprise I've got for guys like him. They usually hit quite a different tone once their tail is raised and ass fucked. I wonder if the eggs took and I got some kits with the guy. They'd be good for him - motherhood changes even the most hard-boiled man.";
 		-- 3:
 			say "     Miyuki grins as you bring up the city and says, 'It is really nice how... malleable this place is.' Raising one hand, she points at the large snow-star rotating under the ceiling, which increases its brightness and speed as she sends a little streamer of energy up to it. The cloud of whirling snowflakes around it multiplies several times over and a gust of wind carries them out of the cave to swirl up the winding tunnel to the surface. 'Everything here is just humming with power. Almost seems like no one used magic for centuries - but that can't be right, can it?'";
-		
+
 to say MiyukiTalk3: [talk about becoming an ice fox]
 	if lastSnowStarGiven - turns > 8: [didn't give the player one in the last day]
 		say "     You step up to Miyuki and compliment her about herself, the fox's beautiful body and her snow-white fur. She seems to eat up the praise, becoming quite pleased and smiling at you, until she eventually asks in a chuckle, 'So - what is it that you want from me? I recognize shameless flattery building up to a request.' Oops - busted! You start to apologize, but she just waves you off and says, 'You can tell me sweet nothings all day every day, sweetie. But aside from that - really, just tell me what you want.' You explain that you absolutely love her looks and would be thrilled to be just like her.";
@@ -266,12 +266,12 @@ instead of fucking the Miyuki:
 	if lastfuck of Miyuki - turns < 4:
 		say "     As you step up to Miyuki and give her lewd looks, she smiles but then raises a hand, laying it against your chest to hold you back. 'As much as I'd love to have more fun with you... a woman does need a bit of time to catch her breath. Later, okay sweetie?'";
 	else:
-		if MiyukiRelationship < 5: 
+		if MiyukiRelationship < 5:
 			say "     As you step up to Miyuki and give her lewd looks, a foxy smile crosses her muzzle and she takes your hand to pull it to her chest. 'I knew you couldn't resist this for long,' she says in a very eager tone, guiding your hand to brush over her the soft fur and warm, flexible scales of her upper body. Soon, your hand comes to rest on one of her shapely breasts, cupping its full curve and giving it a playful squeeze.";
 		else:
-			say "    As you step up to Miyuki and give her lewd looks, a foxy smile crosses her muzzle and she takes your hand to pull it to her chest. Guided by the ice fox, your fingers brush over the soft fur and warm, flexible scales on her upper body, then come to rest cupping one of her shapely breasts.";
+			say "     As you step up to Miyuki and give her lewd looks, a foxy smile crosses her muzzle and she takes your hand to pull it to her chest. Guided by the ice fox, your fingers brush over the soft fur and warm, flexible scales on her upper body, then come to rest cupping one of her shapely breasts.";
 		say "[MiyukiSexMenu]";
-	
+
 to say MiyukiSexMenu:
 	LineBreak;
 	say "What do you want to do with Miyuki?";
@@ -293,7 +293,7 @@ to say MiyukiSexMenu:
 	now title entry is "Give yourself to Miyuki (ovipositor doggy-style)";
 	now sortorder entry is 3;
 	now description entry is "Let Miyuki egg you";
-	[]	
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

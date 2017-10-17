@@ -33,7 +33,7 @@ Section 1a - Reservoir Main Pathway
 Reservoir Main Pathway is a room.
 Reservoir Main Pathway entry is a door. It is dangerous.
 
-The description of Reservoir Main Pathway entry is  "There's something you may need important over here!" It is dangerous.
+The description of Reservoir Main Pathway entry is "There's something you may need important over here!" It is dangerous.
 
 West of Reservoir Main Pathway entry is Reservoir Main Pathway.
 North of Reservoir is Reservoir Main Pathway entry.
@@ -109,7 +109,7 @@ Instead of resolving a Technical Assistance:
 			say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
 			if diceroll is greater than 10:
-				say "Ten minutes of searching leads you to an instruction manual, somehow kept perfectly clean and intact despite the creature that dominated the room having taken over and defiled just about everything in the place, and eagerly you find yourself flipping through the instruction book to read its contents. A few minutes of reading later -- thankfully without any interruption from outside forces --  you feel that you would be successful in working with the machines in the Reservoir to clean up the water supply. Closing the book you sigh in relief, right before you have to moan in grief as you now you just have to deal with some other…minor…nuisances.";
+				say "Ten minutes of searching leads you to an instruction manual, somehow kept perfectly clean and intact despite the creature that dominated the room having taken over and defiled just about everything in the place, and eagerly you find yourself flipping through the instruction book to read its contents. A few minutes of reading later -- thankfully without any interruption from outside forces -- you feel that you would be successful in working with the machines in the Reservoir to clean up the water supply. Closing the book you sigh in relief, right before you have to moan in grief as you now you just have to deal with some other…minor…nuisances.";
 				say "[resevfight1]";
 				say "[resevfight1]";
 				say "[resevfight1]";
@@ -155,7 +155,7 @@ The sarea of Slightly Sidetracked is "Reservoir".
 
 Instead of resolving Slightly Sidetracked:
 	If resevquest is 2:
-		say "Making your way from technical assistance room you find yourself cautiously listening to various noises that seem to be coming from all around you. Instantly you put yourself on guard as your pervasive sense of danger starts to ring through your spirit like a church bell of on Sunday. When a somewhat familiar sound comes from behind you your feet are  running without you having to tell them to move as you find yourself moving throughout the reservoir at top speeds. The raw need to [italic type]be away[roman type] taking hold of you until soon your mind is all but screaming at you to flee.";
+		say "Making your way from technical assistance room you find yourself cautiously listening to various noises that seem to be coming from all around you. Instantly you put yourself on guard as your pervasive sense of danger starts to ring through your spirit like a church bell of on Sunday. When a somewhat familiar sound comes from behind you your feet are running without you having to tell them to move as you find yourself moving throughout the reservoir at top speeds. The raw need to [italic type]be away[roman type] taking hold of you until soon your mind is all but screaming at you to flee.";
 		say "Sadly this leads you on a merry little romp throughout through the reservoir and directly into the arms of danger. Several forms all look at you with various smirks, scowls, leers and grins and instantaneously you're preparing yourself to fight as your feet skid to a halt roughly five yards between you and the creatures ahead of you.";
 		say "[resevfight2]";
 		say "[resevfight2]";
@@ -484,7 +484,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "icicle knives"	"Twin pair of daggers made from the thoughts and feelings of those who were devoured by a monster and then frozen in an icy tomb of flesh and slime. Carry a chilly sharp edge to them that can pierce as well as cut."	5	icicle knives
 
-icicle knives is an armament. 
+icicle knives is an armament.
 It is part of the player.
 It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and ice[or]thin, but sharp blades[at random]". The weapon damage of icicle knives is 16. The weapon type of icicle knives is "Melee". It is not temporary. the objsize of icicle knives is 2.
 

@@ -37,7 +37,7 @@ To say Furling loses:
 	say "     Rather roughed up, the furry beast takes a reeling step towards you... and then falls over backwards. He lies in front of you on his back for a moment, silently moaning, then shakes his head and starts taking account of all his bruises, gingerly touching them. Given your current position and the way it came to lie when he fell, you can see up the furling's loose loincloth - showing you that even though 'he' is otherwise looking male, there's a moist and swollen pussy between his legs. Its up to you to decide what to do next...";
 	wait for any key;
 	say "[FurlingSexMenu]";
-	
+
 to say FurlingSexMenu:
 	setmonster "Furling";
 	now sextablerun is 0;
@@ -144,10 +144,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Furling";         
+	now name entry is "Furling";
 	now attack entry is "[one of]The furling slashes you with its long claws.[or]With a back-handed blow, the furling throws you to the ground.[or]The furling gives you a tight bear-hug, almost crushing you.[or]Grabbing your arm, the furling sinks its teeth into it.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[Furling loses]";      
-	now victory entry is  "[Furling wins]";       
+	now defeated entry is "[Furling loses]";
+	now victory entry is "[Furling wins]";
 	now desc entry is "[FurlingDesc]";            [ Description of the creature when you encounter it. ]
 	now face entry is "that of a young man, though with brightly orange slitted eyes and an impressive set of sharp predator's teeth and long fangs. A thick mane of orange-red fur covers your head down to your shoulders, with two pointy fox-like ears poking out of it at the top";
 	now body entry is "large, about ten feet tall and with a wide, powerful build. You have long arms bulging with muscles, ending in large clawed hands. A loose loincloth that looks like it once was a football shirt covers your crotch";
@@ -166,7 +166,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 12;
 	now sex entry is "Female";          [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 90;                 
+	now hp entry is 90;
 	now lev entry is 11;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 15;               [ Monster's average damage when attacking. ]
 	now area entry is "Campus";         [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -179,15 +179,15 @@ When Play begins:
 	now cunts entry is 1;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 12;        [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 8;          [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 80;             
+	now libido entry is 80;
 	now loot entry is "red fur";        [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 30;         [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]large[or]muscular[at random]";
 	now type entry is "humanoid";
 	now magic entry is false;
-	now resbypass entry is false;       
-	now non-infectious entry is false;  
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
 

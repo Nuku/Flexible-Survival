@@ -238,7 +238,7 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 14;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 45; 
+	now hp entry is 45;
 	now lev entry is 6; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
 	now area entry is "nowhere"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
@@ -249,15 +249,15 @@ When Play begins:
 	now breast size entry is 4; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 17; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 24; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 17; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 24; [ Width of female sex infection will try and give you ]
 	now libido entry is 0; [done in the loss/win text]		[ Amount player Libido will go up if defeated ]
-	now loot entry is "fresh apple"; 
+	now loot entry is "fresh apple";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[or]corrupted[at random]";
 	now type entry is "[one of]centaur[or]mutant[at random]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
@@ -265,7 +265,7 @@ When Play begins:
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[or]corrupted[at random]";
 	now type entry is "centaur"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

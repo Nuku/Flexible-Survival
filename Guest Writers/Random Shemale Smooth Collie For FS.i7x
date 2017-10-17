@@ -166,7 +166,7 @@ to say CollieVagRide:
 	say "     Your cunt accepts inch after inch of the dog creature's dick as you continue to ride her, sinking a little lower every time you go down. Her cock pulses and throbs inside you with an obvious need for release. And from the heft of those balls of hers, you know it'll be a big one - just what your sex-fuelled mind desires. Eventually working your way down to her knot, you grind against it, leaking femmecum over the thick bulge. Your cunny[if cunt width of player < 12] slowly[end if] stretches open, eventually reaching the point you're able to force the slick bulb into you.";
 	say "     Your vaginal walls clamp down around the knot, drawing a lustful howl from the collie. You can feel those hot, heavy orbs under your ass pull up and throb a moment before the first of a near-constant stream of doggy cum shoots into you. Her seed gushes into your womb, leaving it swollen in no time. She continues to cum even after your uterus is full, stretching your belly as she pumps more and more of her thick, fertile seed into your [if gestation of child > 0]already occupied womb[else if player is impreg_able]ready and waiting womb[else]belly[end if]. After what feels like gallons of cum has been stuffed into you, the worn out canine passes out and you're left stuck on her knot. It keeps it all trapped inside you, leaving your belly rounded and your insides feeling warm and tingly[if scalevalue of player < 3], if more than a bit uncomfortably stretched as well[else], if a bit uncomfortable stretched[end if][if player is impreg_able] while her cum does its best to knock you up[end if]. When it finally does go down enough to free you, you pull yourself off the flagging doggy dong, drooling a mess of her cum onto the shemale's manhood and down your thighs.";
 
-	
+
 to say CollieAnalRide:
 	say "     With one hand on the collie's dick and the other on her shoulder, you get her to roll over onto her back for you. She groans, still dazed from fight and doesn't noticed what you're doing until you're already pressing the dribbling tip of her canine cock against your back door. Your pucker spreads [if player is twistcapped]readily[else]slowly[end if] to accept the tapered glans, taking the first few inches of meat into your ass. She groans something [if cunts of player > 0]asking why you'd even want it in the butt when you've got a cunt she could be breeding[else]about why you wouldn't just let her fuck you if that's what you wanted[end if], but you cut her off by grabbing her tits and giving her big nipples a squeeze. Spurts of milk fly from them and the canine shemale releases something between a whimper and moan of delight.";
 	say "     Savouring this, you work inch after inch of the dog creature's dick into your rear as you continue to ride her, sinking just a little lower every time you go down. Happy for a hot hole to fill, her cock pulses and throbs inside you with an obvious need for release. And from the heft of those balls of hers, you know it'll be a big one - just what your sex-fuelled mind desires. The feel of it stuffing your ass and [if cocks of player > 0]throbbing against your prostate[else]stretching your bowels[end if] as it pushes deeper and deeper inside you is wonderful. Eventually you work your way down to her knot and you grind against the thick bulge. Your asshole[if player is not twistcapped] slowly[end if] stretches open, eventually reaching the point you're able to force the hard bulb into your rectum.";
@@ -184,7 +184,7 @@ When Play begins:
 	now name entry is "Shemale Smooth Collie"; [Name of your new Monster]
 	now attack entry is "[one of]The 'bitch' charges in quickly, barking as it runs at you before biting at your shoulder and trying to overbalance you in an attempt to subdue you quickly and with minimal pain.[or]The over-sized beast backs up slightly before running and leaping at you, throwing all of its weight at your stomach in an effort to knock you on your ass. She must be 90% muscle![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Shemale Smooth Collie Defeat]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Shemale Smooth Collie attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now victory entry is "[Shemale Smooth Collie attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 6]This canine beast looks quite a bit like Lassie, if Lassie were twelve feet tall, and walked upright and had the general shape of an attractive woman, and had eight rather large breasts and a dick that would probably cause a stallion some envy... oh, and much shorter fur. You know, I guess she doesn't look much like Lassie after all.";[ Description of the creature when you encounter it.]
 	now face entry is "drawn forward into a long muzzle that leads back into a flat canine skull. Your ears now stick straight up from your head most of the time, only shifting when you hear a particularly loud noise. New muscles easily change which way they";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "[rsscbodyentry]";
@@ -206,7 +206,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 10;
 	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 50; 
+	now hp entry is 50;
 	now lev entry is 9; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 8; [ Amount of Damage monster Does when attacking.]
 	now area entry is "Outside"; [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -217,15 +217,15 @@ When Play begins:
 	now breast size entry is 10; [ Size of breasts infection will try to attain ]
 	now male breast size entry is 4; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 24; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 10; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 24; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 10; [ Width of female sex infection will try and give you ]
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
-	now loot entry is "dog milk"; 
+	now loot entry is "dog milk";
 	now lootchance entry is 60; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if cocks of player > 0][one of]muscled[or]strong[or]powerful[at random][else][one of]voluptuous[or]curvaceous[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]canine[or]doggy[purely at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

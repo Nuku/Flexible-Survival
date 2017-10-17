@@ -21,7 +21,7 @@ Instead of resolving a Informant:
 		say "Taking care of those miscreants you find the black clad figure stepping out from behind an overturned dumpster with slow and nervous movements. 'Jeez, I know things are getting bad, but come on. Really?' The other person sighs before shoving their hoodie down from off of their head. A shock of chestnut coloured hair fluffs out from the other's head and upon seeing this you can't help but chuckle. The other person, who proves to be a man by both looks as well as voice, well he almost looks like a rooster with part of his hair sticking up in a spiky sort of way. When the other turns to face you, you quickly school your features as Prussian blue eyes stare at you gratefully.";
 		say "'Hey man, thanks a lot for the assist. I think I'd be even more of a mutant than I already am if you hadn't come to my rescue.' Looking the captivatingly human face of the other man you silently begin to wonder just what part of the black coat wearing individual has been mutated. 'Trust me, you don't want to know.' The long suffering sigh tells you that you probably don't want to pry. 'Anyway, if you need my help just ask, I happen to be something of an information dealer here in the city. My name's Homaru by the way and I live over behind the deli just around the block.' The chestnut haired man hikes a thumb across his shoulder.";
 		WaitLineBreak;
-		say "Stopping the other man before he can turn to run off you ask Homaru if he knows anything about the firemen from station 86. 'Why would you ask me about them?' Homaru seems honestly curious and so you explain to him the situation with Kenaz. 'Ahhh, okay. Well I thought that I had heard a rumor like that. Heh, nice to know that even shady information can sometimes even be trusted. The laughter that comes from the other man makes your [skin of player] crawl as you feel something foreboding about the outburst.[line break]"; 
+		say "Stopping the other man before he can turn to run off you ask Homaru if he knows anything about the firemen from station 86. 'Why would you ask me about them?' Homaru seems honestly curious and so you explain to him the situation with Kenaz. 'Ahhh, okay. Well I thought that I had heard a rumor like that. Heh, nice to know that even shady information can sometimes even be trusted. The laughter that comes from the other man makes your [skin of player] crawl as you feel something foreboding about the outburst.[line break]";
 		say "'Sorry about that. Anyway, if you'll come with me to my shop underneath the Bakery then I'll be happy to trade some information with you.' Not seeing anything else you can do at the moment you nod to your new cohort and then begin to follow him back to his abode.[line break]";
 		now Informant is resolved;
 		now Agency is known;
@@ -41,7 +41,7 @@ Instead of sniffing the Agency:
 	say "The room smells of gathered information, deductive reasoning, unspoken secrets and...ham on rye?";
 
 
-Section 3 - Homaru 
+Section 3 - Homaru
 
 Homarutalk is a number that varies.
 Homarusearch is a number that varies.
@@ -59,11 +59,11 @@ The description of Homaru is "A young man with spiky brown hair and black hooded
 Homaru is in Agency.
 The conversation of Homaru is { "I'll find it out for you!" };
 
-Instead of sniffing Homaru: 
+Instead of sniffing Homaru:
 say "The information dealer smells like unsolved puzzles and mysterious best left kept in the dark...as well a turkey and ham on whole wheat.";
 
-Instead of fucking Homaru: 
-	say "'Whoa! Whoa, there friend!' The brown haired man quickly throws out his hand as you advance on him. 'You're [if cunts of player > 0]cute in all[else]a nice guy[end if] but I don't want or need to have this infection getting any worse on me. So please, for me and all of the people out there who still need information only a reputable informant like myself can gather, keep your [if cocks of player > 0]cock[else]sexy self[end if] at least five feet away from me!"; 
+Instead of fucking Homaru:
+	say "'Whoa! Whoa, there friend!' The brown haired man quickly throws out his hand as you advance on him. 'You're [if cunts of player > 0]cute in all[else]a nice guy[end if] but I don't want or need to have this infection getting any worse on me. So please, for me and all of the people out there who still need information only a reputable informant like myself can gather, keep your [if cocks of player > 0]cock[else]sexy self[end if] at least five feet away from me!";
 
 instead of linkactioning Homaru when Homarutalk > 0:
 	say "Possible Actions: [link]talk[as]talk Homaru[end link], [link]smell[as]smell Homaru[end link], [link]fuck[as]fuck Homaru[end link], [link]delay[as]delay military[end link], [link]find firefighters[as]find[end link][line break]";
@@ -77,11 +77,11 @@ instead of conversing the Homaru:
 			Now Homarusearch is 70;
 			Now Homarutalk is 1;
 		else:
-			say "Rapidly typing on his keyboard Homaru begins to talk to you without looking up into your [facename of player] face. 'Hey, I was looking through some information that I have on hand and I think I found one of the firefighters you spoke about earlier.' Homaru's words make you stare in awe as you try and think up how the other man could have had this kind of info when you only asked him about it, like ten minutes ago. Unless the other was some kind of fortune teller or prophet that should have been impossible...right? Or maybe he was spying on you?[line break]"; 
+			say "Rapidly typing on his keyboard Homaru begins to talk to you without looking up into your [facename of player] face. 'Hey, I was looking through some information that I have on hand and I think I found one of the firefighters you spoke about earlier.' Homaru's words make you stare in awe as you try and think up how the other man could have had this kind of info when you only asked him about it, like ten minutes ago. Unless the other was some kind of fortune teller or prophet that should have been impossible...right? Or maybe he was spying on you?[line break]";
 			say "Pulling out a manila folder Homaru leafs through the information and then goes about giving you some of the highlights. 'It seems that when things started to get out of hand around this city some of the people here panicked and started moving into shelters, bunkers, barracks, or what have you. However, from the intel I have on hand here, it seems as though some small groups of like-minded mutants began popping up when the outbreak became almost impossible to contain in any one place. After that these said groups worked to grab up as many uninfected people as they can to use them for...well let's just say no good purposes.'[line break]";
 			say "You ask Homaru to elaborate. 'Well,' The other man lowers the folder in front of him and then sweeps a hand through his spiky as looks to try to find the right words to say. 'You know how kinky everything is outside right now?' You nod at this. 'Well, it seems as though there are some people more immune to what's going on than others, or at least partially appear to be so.' You get a feeling for what Homaru is saying as the man starts to flush deep red and bite at his lower lip.";
 			WaitLineBreak;
-			say "'Well, uhm, let's just say that there is a place down at the Warehouse district where some of the, shall we say, less [']upstanding['] members of society have gather to host full on sex shows with [']regular['] people and some of the [']furries['] there are outside.' At this you can actually hear part of your brain explode. 'Trust me on this -  there are strange people out there who would pay to see such a thing. And if you are going to ask why...even I don't have enough information to understand that, however, I can say that your missing firefighter is probably there.'[line break]";
+			say "'Well, uhm, let's just say that there is a place down at the Warehouse district where some of the, shall we say, less [']upstanding['] members of society have gather to host full on sex shows with [']regular['] people and some of the [']furries['] there are outside.' At this you can actually hear part of your brain explode. 'Trust me on this - there are strange people out there who would pay to see such a thing. And if you are going to ask why...even I don't have enough information to understand that, however, I can say that your missing firefighter is probably there.'[line break]";
 			say "Asking Homaru exactly where [']there['] is you watch as the information collector squirms about in his seat and then blushes before chuckling offhandedly as he answers you. 'Oh, sorry, there is a gloomy looking warehouse down at the warehouse district. If you go there and knock three times and then say you're there for the [bold type]DogHouse[roman type] special and the guard will let you in.";
 			say "     [bold type]How you go about rescuing the firefighter, well, you're on your own on that one, but I'll give you some information on how to go about it if you like?'[roman type][line break]";
 			LineBreak;
@@ -115,7 +115,7 @@ instead of conversing the Homaru:
 			say "[one of]'Hey, welcome back'.[or]'I hope things are going well for you.'[or]'Have any new information I can play with?'[or]Homaru is busy eating a sandwich and simply nods to you.[or]'I wish someone strong and daring would figure out a way to infiltrate the military ranks and gather some intel for me.' Homaru looks to you while saying this.[or]'Have you seen a blonde in a white coat running around here lately?'[or]'That blonde woman...just who is she?'[or]Homaru is nibbling on a pen top while going through something on his computer.[or]'I hope you manage to keep yourself from falling victim to the virus running around. It'd be a shame to lose a contact such as you.'[or]Homaru is working on a crossword puzzle.[or]'Where in the world is Carmen Sandiego when I need a good thief/spy?'[or]'Maybe I should think about retiring and settling down with a big Labr...' Homaru shakes his head while shuffling around uncomfortably in his seat.[or]'I can't offer much, but you can spend some time here if you'd like.'[or]'Please don't bother the turtles, they're kind of shy.'[or]'Man, what I wouldn't give for a nice thick d...' Homaru shakes his head and then blushes somewhat awkwardly.[or]'What I wouldn't give to have some chocolate milk right about now.' Homaru sighs wistfully.[or]'It'd be nice if I had a nice dil...uhm Dill Pickle right about now! Yeah!' Homaru chuckles nervously at you.[at random]";
 
 
-Section 3 - Delaying the Military 
+Section 3 - Delaying the Military
 
 Delaymilitary is an action applying to nothing.
 
@@ -152,7 +152,7 @@ carry out delaymilitary:
 		say "'Alright I managed to get some bogus intel to the soldiers. This should delay them just a bit.'";
 		extend game by 8;
 	if DEL is 4:
-		say "'Hmmm, uhm...well it seems as though I may have slightly goofed up. Sorry, but it looks as though the military will be coming just a little sooner than expected.' Homaru laughs nervously."; 
+		say "'Hmmm, uhm...well it seems as though I may have slightly goofed up. Sorry, but it looks as though the military will be coming just a little sooner than expected.' Homaru laughs nervously.";
 		extend game by -4;
 	if DEL is 5:
 		say "'I was able to buy off one of the soldiers to get them to spread a couple of rumors around to confuse the rest of the military with. That should keep them out of our hair for a while.'";
@@ -240,7 +240,7 @@ to say findfirefighter4:
 
 to say findfirefighter5:
 	say "'Remember, you're looking for a [bold type]Dame[roman type] in the [bold type]high rise[roman type] district with salt and pepper hair. If you [bold type]take on a chocolate Lab body and face[roman type] then you should be able to find her without too much trouble. Saving her after that...well...I hope you're strong enough to face off a bunch of angry doggies!' Homaru chirps with a menacing smile on his face.";
- 
+
 to say findfirefighter6:
 	say "'You've found three firefighters already, congratulations!' Homaru chuckles at you while saying this. 'There's only one other still here in the city, but he'll be by on his own time.' Homaru says cryptically.  'Anyway why don't you go back and check to see how Kenaz is? You might be surprised if you do.' And with that Homaru waves you off. Maybe going to the firehouse would be wise?
 	[bold type]There are no more firefighters to find now! So head back to the Fire House![roman type]";

@@ -29,7 +29,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and hp of Eric
 		say "     DEBUG: Eric finds a book - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
 	say "     As you enter the library, you find Eric sitting cross-legged on one of the sofas close to the entrance. A dusty box sits on the low sofa table he has dragged close and is apparently in the progress of unpacking. Small stacks of old, sometimes damaged-looking books are spread out next to him as he takes stock. Looking up from the box, Eric smiles at you and calls out, 'Hey there - look what I found back in one of the storerooms! I got bored just sitting around and since it is so dangerous to go outside, I looked around a bit in here...' Leaning forward, the college athlete pulls another item out of his mystery box - an old crucifix made from blackened wood this time.";
 	say "     'Oh, another one. Guess now we know where all the crosses from the old abbey went, hm?' he says, putting the piece of wood on a pile of similar items next to him.' Curiosity makes you step up closer and check the crosses out - are they supposed to look... singed? Then Eric suddenly pulls a thick book out of the box, bound in black leather. 'Hey, this looks interesting. And old... I wonder what it is about.' The book - well, more like a tome actually - is clearly quite old and looks heavy enough to break someone's foot if dropped. It bears a triangle symbol with a slit-pupiled eye on the front, branded into the leather.";
-	say "     [bold type]This find somehow seems... ominous to you. Maybe you should let Eric give it to you...[roman type][line break]";	
+	say "     [bold type]This find somehow seems... ominous to you. Maybe you should let Eric give it to you...[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yup. Better safe than sorry.";
 	say "     ([link]N[as]n[end link]) - You're just imagining things. Let him have the book, it'll give him something to do.";
@@ -52,7 +52,7 @@ instead of going inside from Grey Abbey Library while (Eric is in Bunker and hp 
 		say "     DEBUG: Eric reads the book - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
 	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As let your gaze sweep over the room, you spot Eric, lying stretched out on his bed and reading - but not just any book but that old tome he found not long ago. Elbows braced on the mattress, his head is bent over the book and he seems to be studying with an intent gaze. Curious, you wander over to the college student and glance over his shoulder. The page he is looking at is filled with strange curving squiggles, following no script you can really recognize. Clearing your throat, you manage to draw Eric's attention away from the book after a few seconds and he looks up at you with a curious expression.";
 	say "     Asking if he can understand what the book says, your red-headed friend replies, 'Not really, no - but sometimes I kinda feel like I do. Certainly looks very interesting. You should see some of the pictures in here!' With that, he turns a few pages back, revealing more of the unknown script. 'Strange, I could have sworn there was an image there. Oh well, I'll put in a bookmark if I find it again and you can have a look next time,' Eric says in a distracted tone of voice, then turns the page back to where he was before.";
-	say "     [bold type]Something doesn't seem quite right here. Do you take the book from Eric?[roman type][line break]";	
+	say "     [bold type]Something doesn't seem quite right here. Do you take the book from Eric?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yup. Better safe than sorry.";
 	say "     ([link]N[as]n[end link]) - You're just imagining things. Let him have the book, it'll give him something to do.";
@@ -148,7 +148,13 @@ name	desc	weight	object
 
 to say TomeUse:
 	LineBreak;
-	say "     You open the old book and flip through a few pages. Sadly, it seems to be written in a squiggly script that you can make no heads or tails of, and the images in it are mildly disturbing, full of weird creatures and situations. A shiver runs down your spine as you close the book again.";
+	if cocks of player is 0 and cunts of player > 0:
+		say "     You open the old book and flip through a few pages. Sadly, it seems to be written in a squiggly script that you can make no heads or tails of, and the images in it are mildly disturbing, full of weird creatures and situations. A shiver runs down your spine as you close the book again.";
+	else:
+		say "[TomeExpansionUse]";
+		
+to say TomeExpansionUse:
+	say "This appears to be not coded yet, so says Nuku/David.";
 
 instead of trading the ancient tome when the current action involves the Eric:
 	if TomeFound is 100: [Eric never looked into it]
@@ -182,6 +188,6 @@ instead of trading the ancient tome when the current action involves the Eric:
 		now TomeFound is 1; [Eric got the book now]
 	else if TomeFound is 101: [Eric is afraid of the book and was offered it back before]
 		say "     You shouldn't tease Eric with the tome any further. He was genuinely afraid the last time. Confronting him with the book would just be cruel after that.";
-		
+
 
 Ancient Tome ends here.

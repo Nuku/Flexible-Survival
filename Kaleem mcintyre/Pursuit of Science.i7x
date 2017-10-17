@@ -220,8 +220,8 @@ to say omioquest5:
 	say "Asking Omio about the woman you are supposed to be meeting up with you watch as the red head stares at you blankly. Sighing and then reminding her about your task you watch as the information almost literally crosses her eyes before it stops in her brain. 'OH!! Uhm, sorry, I...hehe.' she flusters and you silently count to five before breathing sighing. 'The woman you are looking for is a blonde with a scar over her nose wearing a white hoodie. She should be easy enough to spot since she's probably still very much human. Oh, and she's in the red light district.' Omio cheerfully says, but you get the feeling she may have totally forgotten about the assignment she just asked you to take on. What a scatter brain!";
 	now opcl is 1;
 	now omq is 6;
-	
-	
+
+
 to say omioquest6:
 	if omq is 6:
 		say "Remember, I need you to head for the [bold type]red light district[roman type] and pick up that [bold type]important[roman type] package for me, ok? Omio asks with a serious look on her face. It would seem that whatever this package is the red head needs it somewhat badly.";
@@ -254,7 +254,7 @@ to say omioquest6:
 to say omioquest7:
 	say "Just as you are about to speak to walk up to speak to Omio a somewhat loud explosion throws you back against the patio door of the research studio. Grunting from the waves of pain spiking through your body after you hit the glass you slam your eyes close just in time to miss the miasma of black smoke rushing into your direction. Enveloped by darkness and slightly injured you find yourself getting to your feet somewhat shakily as you call out for Omio. Fanning the front of your [facename of player] nose as the scent of burnt [']feline?['] has you sneezing in reflex you call again out for the red headed before taking a hesitant step forward into the smoke. When glimmering golden orbs shine directly in front of your face a moment or two later from inside the large grey cloud of soot and ash you freeze. 'Yes? Is everything alright?' The cool tone in the other's voice has you backing up some as Omio suddenly sounds very...different...for some reason.";
 	WaitLineBreak;
-	say "Informing  the other that you worried about her and wanted to know if she was still alive, Omio chuckles at you before she sweeps her hand in front of her golden eyes to dispel the black smoke away from her face. Like magic...and mildly you wonder if that is exactly what it is...Omio bats the clouds of darkened smoke out of her house through the open patio door and the chimney, respectfully. A small gale rips through the living room area a second later and soon you and the red head are standing face-to-face in a...slightly...disarrayed household. 'Now then maybe that will make it better for you to see me, wouldn't you agree?'";
+	say "Informing the other that you worried about her and wanted to know if she was still alive, Omio chuckles at you before she sweeps her hand in front of her golden eyes to dispel the black smoke away from her face. Like magic...and mildly you wonder if that is exactly what it is...Omio bats the clouds of darkened smoke out of her house through the open patio door and the chimney, respectfully. A small gale rips through the living room area a second later and soon you and the red head are standing face-to-face in a...slightly...disarrayed household. 'Now then maybe that will make it better for you to see me, wouldn't you agree?'";
 	WaitLineBreak;
 	say "You're not sure what to say to the red head as you simply blink in confusion. Wasn't she just in the middle of a large explosion? From the looks of the researcher you don't see anything out of place on her, well save for her blue Chinese dress being somewhat dirty. Trying to open your mouth to ask Omio how she just did what she did you get a raised hand and then a single wag of a tanned finger. 'Don't worry about the little things right now.' The red head smiles before winking. Obviously she must be okay because her former teasing mannerisms have returned. 'So what can I do for you today?'";
 	WaitLineBreak;
@@ -607,4 +607,3 @@ instead of sniffing Organi Rod:
 
 
 Pursuit of Science ends here.
-

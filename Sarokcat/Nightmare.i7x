@@ -27,7 +27,7 @@ When Play begins:
 	now name entry is "Nightmare";
 	now attack entry is "[one of]He stares at you with his blazing red eyes, the flame within seeming to tear at your mind and unbalance your sense of self.[or]He strikes out at you with one powerful hoof-tipped hand, knocking you backwards![or]The powerful musk of the stablemaster fills your nostrils, causing you to pause for a minute as a wave of submissiveness sweeps over you.[or]He lashes out at you with one of his blood red hooves, knocking the wind out of you![or]The stablemaster grabs hold of you and tries to wrestle you down to the ground![or]Your opponent strokes his cock teasingly, the sight making you pause as a strange desire sweeps through you for a minute, before you shake off the effects.[at random]";
 	now defeated entry is "[Nightmare loss]";
-	now victory entry is  "[Nightmare attack]";
+	now victory entry is "[Nightmare attack]";
 	now desc entry is "[mongendernum 3]     The stablemaster charges forward to attack, his powerful black equine form almost a mirror of your own new body as he tries to grapple you into submission!";
 	now face entry is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face"; [You have a (your text) face."]
 	now body entry is "the strong and powerful body of a black stallion, with blood red hooves and hoof tipped hands, as well as a large chest and fully digitigrade equine legs. Your new body is amazingly responsive and powerful feeling, with almost unnatural amounts of energy surging through you constantly";[ Body Description, format as the text "Your Body is (your text)"]
@@ -46,7 +46,7 @@ When Play begins:
 	now int entry is 18;
 	now cha entry is 20;
 	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 225;  
+	now hp entry is 225;
 	now lev entry is 25;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 15;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "None";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -57,8 +57,8 @@ When Play begins:
 	now breast size entry is 0;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;  
-	now cunt width entry is 0;  
+	now cunt length entry is 0;
+	now cunt width entry is 0;
 	now libido entry is 50;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "Chipped tooth";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]

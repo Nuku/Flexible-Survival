@@ -2,7 +2,7 @@
 
 Book 0 - Pre game prep stuff
 
-Release along with an interpreter. 
+Release along with an interpreter.
 Use memory economy.
 Use fast route-finding.
 Use fast route-finding.
@@ -13,7 +13,7 @@ Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 50000.
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
-Include Basic Screen Effects by Emily Short. 
+Include Basic Screen Effects by Emily Short.
 
 The release number is 2.
 The story creation year is 2011.
@@ -29,7 +29,7 @@ There is a Clipboard in it. "A clipboard is set near the fire. You are sure you 
 Book - Help
 
 Table of Basic Help Options (continued)
-title	description 
+title	description
 "Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://blog.flexiblesurvival.com/"
 "Food"	"Most tribes need food to survive. Be sure to assign some workers to hunting or farming as appropriate."
 "Turns"	"As leader of the tribe, you and you alone decide when time advances. Type turn to make this happen."
@@ -104,16 +104,16 @@ A job has a number called max.
 Definition: An object (called O) is incomplete:
 	if O is complete:
 		no;
-	otherwise:
+	else:
 		yes;
 
 Definition: A job (called J) is valid:
 	follow the validation of J;
 	if rule succeeded:
 		yes;
-	otherwise:
+	else:
 		no;
- 
+
 Include Flexible Jobs by Nuku Valente.
 
 The player has a species called tribe.
@@ -152,7 +152,7 @@ left	central	right
 "Location: [the player's surroundings]"	"Morale: [morale of tribe of player]/100"	"Tribe:[tribe of player]"
 "Exits: [List of Valid Directions]"	"Food: [food of tribe of player] Water: [water of tribe of player]"	"Score:[score]/[maximum score]"
 "Population: [population of tribe of player]"	"Freecred: [creds of tribe of player]"	"Science: [science of tribe of player]"
-"[if menu depth > 0]N = Next[otherwise]Research[end if]"	"[if menu depth > 0]ENTER = Select[otherwise][current of nerd] Lvl [level of current of nerd plus one][end if]"	"[if menu depth > 0]P = Previous[otherwise][progress of current of nerd]/[cost of current of nerd][end if]"
+"[if menu depth > 0]N = Next[else]Research[end if]"	"[if menu depth > 0]ENTER = Select[else][current of nerd] Lvl [level of current of nerd plus one][end if]"	"[if menu depth > 0]P = Previous[else][progress of current of nerd]/[cost of current of nerd][end if]"
 
 
 Book 4 - Tribes
@@ -221,7 +221,7 @@ Carry out Taketurn:
 	say "Time passes...";
 	if morale of tribe of player is less than 0, now morale of tribe of player is 0;
 	follow the turnpass rule;
-	
+
 An everyturn rule(this is the Foraging rule):
 	if the remainder after dividing turns by 2 is 0, continue the action;
 	if ( occupied of tribe of player + 1) > population of tribe of player, continue the action;
@@ -259,7 +259,7 @@ An everyturn rule(this is the Foraging rule):
 		say "[line break]Ruined artifacts advance your research: +[x]";
 		increase Science of tribe of player by x;
 
- 
+
  An everyturn rule(this is the Self Love rule):
 	if the remainder after dividing turns by 2 is 0, continue the action;
 	let z be territory of tribe of player * density of tribe of player;
@@ -283,9 +283,9 @@ An everyturn rule(this is the Foraging rule):
 	if x is greater than 90:
 		now y is 3;
 		now crit is 1;
-	otherwise if x is greater than 60:
+	else if x is greater than 60:
 		now y is 2;
-	otherwise:
+	else:
 		now y is 1;
 	now y is ( foragers * the Self Fertility of the tribe of player * y ) / 250 ;
 	let mor be morale of tribe of player;
@@ -304,8 +304,8 @@ An everyturn rule(this is the Foraging rule):
 				say "Morale gain: [gain]";
 			increase morale of tribe of player by gain;
 
-	
-	
+
+
 
 An everyturn rule(This is the Water's Fine rule):
 	let consume be the population of the tribe of player;
@@ -313,7 +313,7 @@ An everyturn rule(This is the Water's Fine rule):
 	now consume is consume / 100;
 	if consume is less than 0, now consume is 0;
 	increase water of tribe of player by consume;
-	
+
 
 An everyturn rule(this is the Eternal Hunger rule):
 	let consume be the population of the tribe of player;
@@ -359,7 +359,7 @@ An everyturn rule(this is the Eternal Hunger rule):
 		let loss be 1;
 		increase loss by x times 2;
 		now loss is loss * 100;
-		now  loss is loss / mood of tribe of player;
+		now loss is loss / mood of tribe of player;
 		if loss is greater than 0:
 			say "Morale Loss: [loss]";
 		decrease morale of tribe of player by loss;
@@ -371,10 +371,10 @@ An everyturn rule(This is the You Lose rule):
 		end the game saying "Your people have been destroyed.";
 	if the territory of tribe of player is less than 1:
 		end the game saying "Your people have been driven away and scattered.";
-		
+
 An everyturn rule(This is the Not 9001 rule):
 	if morale of tribe of player is greater than 100, now morale of tribe of player is 100.
-	
+
 The not 9001 rule is listed last in the everyturn rules.
 
 Part 2 - Other rules
@@ -382,13 +382,13 @@ Part 2 - Other rules
 Instead of examining the player:
 	say "You are the leader of the [tribe of player]. Your people tend to look like:[line break][description of tribe of player]";
 	say "[Line Break]Notable traits of your tribe: [perks of tribe of player]";
-	
+
 Part 3 - Game Start
 
 When play begins:
 	repeat with x running through jobs:
 		now x is a part of the clipboard;
-		
+
 First for constructing the status line (this is the bypass status line map rule):
 	fill status bar with table of fancy status;
 
@@ -408,14 +408,14 @@ to species menu:
 	if there is no title in row 1 of table of combat items:
 		say "There are no species!";
 		wait for any key;
-	otherwise:
+	else:
 		choose a blank row in table of combat items;
 		now title entry is "Begin Game";
 		now description entry is "Begin Game";
 		now toggle entry is species select rule;
 		change the current menu to table of Combat Items;
 		carry out the displaying activity;
- 
+
  This is the species select rule:
 	choose row Current Menu Selection in table of combat items;
 	let nam be description entry;
@@ -439,14 +439,14 @@ When play begins(this is the play start rule):
 	say "Are you sure?";
 	if player consents:
 		follow the nothing rule;
-	otherwise:
+	else:
 		follow the play start rule;
 		continue the action;
 	if the might of tribe of player is 0, follow the play start rule;
 	say "As leader of the tribe, you and you alone decide when time advances. Type [bold type]turn[roman type] to make this happen.";
 
 Include Enemy Tribes by Nuku Valente.
-	
+
 Part 4 - Job assigning
 
 To Workercheck:
@@ -454,14 +454,14 @@ To Workercheck:
 	repeat with x running through jobs:
 		if x is valid:
 			increase occupied of tribe of player by workers of x;
-		otherwise:
+		else:
 			now workers of x is 0;
 	if occupied of tribe of player is greater than population of tribe of player:
 		say "Something is wrong here. You have too many people assigned. Let's start from the beginning. Job assignments reset.";
 		repeat with x running through jobs:
 			now workers of x is 0;
 		now occupied of tribe of player is 0;
-	otherwise:
+	else:
 		repeat with x running through jobs:
 			if x is valid and x is maximized and workers of x < max of x:
 				let z be max of x - workers of x;
@@ -486,7 +486,7 @@ Carry out Assigning:
 	say "Unassigned Workers: [population of tribe of player - occupied of tribe of player]";
 	say "[line break]Type [bold type]assign (number) to (job)[roman type] to change the amount of workers in a job.";
 	say "Type [bold type]assign max to (job)[roman type] to auto fill a job with available workers.";
-	
+
 Understand "Assign max to [job]" as maxtasking.
 
 Maxtasking is an action applying to one thing.
@@ -505,7 +505,7 @@ Carry out Maxtasking:
 	if noun is maximized:
 		say "[noun] will no longer be automatically filled with workers.";
 		now noun is not maximized;
-	otherwise:
+	else:
 		say "[noun] will be automatically filled with workers.";
 		now noun is maximized;
 
@@ -550,10 +550,10 @@ carry out destinationcheck:
 	say "You know how to get to the following places: [line break]";
 	if the number of entries in L is 0:
 		say "Nowhere.";
-	otherwise:
+	else:
 		repeat with q running through L:
 			say "[Q][line break]";
-	
+
 navigating is an action applying to one thing.
 
 understand "navigate [any known fasttravel room]" as navigating;
@@ -575,12 +575,12 @@ carry out navigating:
 	say "You travel to [the noun].";
 	move the player to the noun;
 
-	
+
 Book - Game Over
 
 When Play Ends:
 	try examining the player;
-	
+
 Book - Building
 
 A room has a text called proximity.
@@ -603,7 +603,7 @@ The ongoing of a construct is usually the nothing rule.
 An everyturn rule(This is the Awesome Building Effects Rule):
 	repeat with x running through complete constructs:
 		follow the ongoing of x;
-		
+
 Book - Random Includes
 
 Include Entertainers by Maw.
@@ -624,7 +624,7 @@ Check fucking:
 
 Carry out fucking:
 	say "[Noun] does not look interested.";
-	
+
 Include Latex Nerd Fscene by Maw.
 
 Book - Talking
@@ -643,7 +643,7 @@ Check talking:
 
 Carry out talking:
 	say "[Noun] does not have anything interesting to say.";
-	
+
 Book - Situations
 
 A situation is a kind of thing.
@@ -657,7 +657,7 @@ Definition: A situation (called J) is valid:
 	follow the validation of J;
 	if rule succeeded:
 		yes;
-	otherwise:
+	else:
 		no;
 
 When play begins:
@@ -694,7 +694,7 @@ An everyturn rule(This is the Shit Happens rule):
 
 Include Random Situations by Maw.
 Include Events Basic by Sarokcat.
- 
+
 Part - Resolving Action
 
 Resolving is an action applying to one thing.
