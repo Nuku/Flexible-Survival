@@ -118,7 +118,20 @@ demon fox fur is infectious. The strain of demon fox fur is "Demon Fox".
 Section 4 - Tome Specific Scenes
 
 to say DemonFoxFirstLoss:
-	say "     The fox rapes you. Oh noes.";
+	setmonster "Demon Fox";
+	say "     Now that he's beaten the fight out of you, the demon fox pins you once more, his heavy weight pressing down onto you. 'You should've just submitted. Now I'm going to have to punish you,' he growls out. It's then that you notice his entire body expanding, growing large enough to make you look rather small. Only a single paw rests on your chest now, as that's all he needs to keep you in place. He cocks his head to the side, contemplating his next move. Suddenly, you feel one of his long tails wrapping around your torso, lifting you into the air. He roughly tosses you down stomach first before his paw finds it's place on your back once more, forcing you head down and your ass up.";
+	say "     You're not given any time prepare for what comes next. The demonic vulpine roughly shoves his length into your hole, stretching you painfully wide around the head alone. He doesn't stop there, however. Instead, he pushes even further into you. You feel your hole yawning open wider and wider as the first ridge of his cock slips into you. Soon enough, the next ridge is sliding in as well, then the next, and the next. You can feel his massive knot up against your hips, and you can see your stomach stretching out almost comically in the shape of his cock. Soon enough, he pulls back, each ridge leaving you with a wet squelch. Eventually, only the tip of his shaft remains inside you.";
+	WaitLineBreak;
+	say "     You're only given a moment of relief, however, before he begins pushing the massive tool back into you. He manages to push in to the knot a little more quickly this time, your passage slowly loosening enough to make it slightly less painful. Soon enough, the fox has built up a rhythm of thrusting in and out of you. His knot starts to bash against your entrance as he becomes increasingly determined to impale you with it, and the thing is wider than your hips! He lets out a grunt with each and every thrust, pushing harder and harder into you.";
+	if player is twistcapped:
+		say "     Somehow, you can feel the knot slip further and further in, your twisted body somehow able to accept the impossibly wide mass. Soon enough, the knot has passed its widest point, and the rest is pulled into you with a loud squelch. The demon on top of you lets out a loud howl of pleasure before his knot swells even wider, locking your already tied hole even more. [if cocks of player > 0]Your own cock[smn] throb[smv] as you release your [cum load size of player] load onto the ground, the pressure on your prostate driving you over the edge. [end if]He leans down and bites into your shoulder roughly as he climaxes, rope after rope of molten cum rushes into you, quickly rounding you out. His orgasm doesn't seem like it's going to abate any time soon, however, as more and more cum spills into you. Looking down at your bloated belly, you swear you can see a faint glow through your skin, even! By the time his climax comes to an end, he let's go of your shoulder, a trickle of blood dripping from his maw before he harshly yanks his tool out of you, the knot popping out loudly.";
+	else:
+		say "     Despite his best efforts, the knot is just too big to fit. This doesn't seem to bother the fox too much, however, as he simply thrusts against you once more before howling as he reaches his climax, rope after rope of molten, glowing cum spilling into your bowels. There's so much of the stuff that your belly starts to bulge from the sheer amount of fluid filling it. Eventually, the cum has nowhere left to go, managing to find its way out of your ass around his massive shaft. By the time his climax has ended, you're thoroughly drenched in fox cum, the hot ejaculate forming a pool around the two of you.";
+	say "[mimpregchance]";
+	WaitLineBreak;
+	say "     The fox gives you a look, observing your battered form as if admiring his handiwork. 'I told you that you should've submitted, pet,' he says. 'Maybe next time this won't have to be so hard...' By the time you've recovered enough energy to glance over your shoulder, the fox is gone, apparently having decided to leave after finishing with you. After that encounter, you're not sure why you'd want to, but perhaps you could [italic type]summon the fox again sometime[roman type]?";
+	infect "Demon Fox";
+	infect "Demon Fox";
 	now DemonFoxStatus is 10; [lost]
 	WaitLineBreak;
 
@@ -131,7 +144,7 @@ to say DemonFoxFirstSubmit:
 	say "     With a howl of pleasure, he shoves forward one last time, his knot spreading you painfully wide before it manages to pop in. Once it's inside, it swells even larger, firmly locking the two of you together. [if cocks of player > 0]The pressure on your prostate is enough to set you off, spilling your load onto to ground beneath you. [end if] He gives one last growl before you feel his sharp teeth on your shoulder. They dig into your flesh as he bites down. You can feel his cock releasing it's burning semen inside you, rope after rope of glowing cum erruping into your bowels. By the time he's finished climaxing, your belly is decently rounded out, and you can't help but moan from the heat of the fluids inside of you. With his orgasm over, he releases his hold on you, and harshly yanks his knot out of you. 'That was fun, pet,' he says. 'I hope we're able to do this once more sometime soon.'";
 	say "[mimpregchance]";
 	WaitLineBreak;
-	say "     You turn to look at the fox once more, only to be greeted with empty space. It seems the fox has gone for now... Perhaps you could summon him once more with the book, if you so desire.";
+	say "     You turn to look at the fox once more, only to be greeted with empty space. It seems the fox has gone for now... [italic type]Perhaps you could summon him once more with the book, if you so desire.[roman type]";
 	infect "Demon Fox";
 	infect "Demon Fox";
 	now DemonFoxStatus is 20; [submitted]
