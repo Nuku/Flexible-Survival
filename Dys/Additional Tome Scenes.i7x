@@ -134,7 +134,7 @@ to say TomeReadMenu:
 		now TentacleRead is true;
 		now TomeInteractions is 2;
 	else if calcnumber is 2 and DemonFoxRead is false:
-		say "     You read about the demon fox. It apparently likes to fuck and breed and shit. Go figure, it's a fox after all.";
+		say "     Looking over the page about the fox, you manage to learn a few things. The demon fox is apparently able to change it's size to whatever it desires. In addition, it's cum is said to glow a bright orange, almost like lava. The fox is also supposedly very possesive and domineering, desiring to have others submitting to it. Anyone who has encountered the beast has reaffirmed that fact.";
 		now DemonFoxRead is true;
 		now TomeInteractions is 2;
 	else if DemonFoxRead is true or TentacleRead is true:
