@@ -37,15 +37,17 @@ to say TomeSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	choose a blank row from table of fucking options;
-	now title entry is "Summon a tentacle monster";
-	now sortorder entry is 1;
-	now description entry is "Perhaps you could get the tentacle monster to have it's way with you";
+	if TentacleInteractions > 0:
+		choose a blank row from table of fucking options;
+		now title entry is "Summon a tentacle monster";
+		now sortorder entry is 1;
+		now description entry is "Perhaps you could get the tentacle monster to have it's way with you";
 	[]
-	choose a blank row from table of fucking options;
-	now title entry is "Summon a demon fox";
-	now sortorder entry is 2;
-	now description entry is "The demon fox sounds like it could be fun";
+	if DemonFoxInteractions > 0:
+		choose a blank row from table of fucking options;
+		now title entry is "Summon a demon fox";
+		now sortorder entry is 2;
+		now description entry is "The demon fox sounds like it could be fun";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows from table of fucking options:
@@ -66,7 +68,7 @@ to say TomeSexMenu:
 					-- "Summon a tentacle monster":
 						say "[TentacleSex]";
 					-- "Summon a demon fox":
-						say "[DemonFoxSex]";
+						say "[DemonFoxMenu]";
 				WaitLineBreak;
 		else if calcnumber is 0:
 			say "     Change your mind and do something else?";
@@ -147,7 +149,7 @@ Section 4 - Other Scenes
 to say TentacleSex:
 	say "     Placeholder.";
 
-to say DemonFoxSex:
+to say DemonFoxMenu:
 	say "     Placeholder.";
 
 to say DemonFoxFirstEncounter:
