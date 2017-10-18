@@ -827,13 +827,15 @@ ishunting is a truth state that varies.  ishunting is usually false.
 understand "hunt [text]" as hunting.
 
 check hunting:
-	if there is no dangerous door in the location of the player:
-		say "I don't see any good hunting grounds around here." instead;
-	else if blindmode is true:
+	if blindmode is true:
 		say "You're playing in blind-mode, so hunting is not allowed.  You'll have to try exploring to find what you seek." instead;
-	else:
+	else if there is a dangerous door in the location of the player: [danger door]
 		let y be a random dangerous door in the location of the player;
 		now battleground is the marea of y;
+	else if earea of location of player is not "void": [explore/hunt anywhere]
+		now battleground is earea of location of player;
+	else: [neither option available]
+		say "I don't see any good hunting grounds around here." instead;
 
 carry out hunting:
 	let Q be a list of numbers;
