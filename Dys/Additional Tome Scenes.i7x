@@ -33,6 +33,7 @@ TentacleInteractions is a number that varies. TentacleInteractions is usually 0.
 DemonFoxInteractions is a number that varies. DemonFoxInteractions is usually 0.
 DemonFoxRead is a truth state that varies. DemonFoxRead is usually false.
 TentacleRead is a truth state that varies. TentacleRead is usually false.
+TentacleStatus is a number that varies. TentacleStatus is usually 0.
 
 Section 2 - Menus
 
@@ -152,7 +153,7 @@ Section 4 - Other Scenes
 
 to say TentacleSex:
 	say "     You look over the instructions on how to summon the tentacle beast before shaking your head. You've had enough time with that thing.";
-	say "     [italic type]More content will be added with the tentacles in the future[roman type]."
+	say "     [italic type]More content will be added with the tentacles in the future[roman type].";
 
 to say DemonFoxMenu:
 	say "     You recite the incantation shown in the book, albeit with a little difficulty. With a flash of light, you see the demon fox from before standing in front of you.";
