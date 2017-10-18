@@ -177,10 +177,10 @@ When Play begins:
 	now name entry is "Feral Wolf"; [Name of your new Monster]
 	now attack entry is "[one of]He slams into you and bites down.[or]He roars and swipes at you with his claws.[or]He pounces you and pins you down, tearing into you with his claws.[at random]";
 	now defeated entry is "[beatferalwolf]";
-	now victory entry is  "[Feral Wolf attack]";
+	now victory entry is "[Feral Wolf attack]";
 	now desc entry is "[FeralWolfDesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "feral wolf face, with an long canine snout willed with the sharp teeth of a predator filling your maw"; [ Face description, format as the text "You have a (your text) face."]
-	now body entry is "that of an average sized and well muscled wolf, with large canine features that give you a wild and deadly appearance"; [ Body Description, format as the text "Your Body is (your text)"]
+	now face entry is "feral wolf face, with a long canine snout willed with the sharp teeth of a predator filling your maw"; [ Face description, format as the text "You have a (your text) face."]
+	now body entry is "that of an average sized and well-muscled wolf, with large canine features that give you a wild and deadly appearance"; [ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a long black tail that trails behind you. The wolf tail showing your emotions quite clearly."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feral canine[or]wolf[or]pitch black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]

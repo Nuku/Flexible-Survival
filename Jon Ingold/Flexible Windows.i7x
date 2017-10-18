@@ -155,7 +155,7 @@ Carry out peeping (this is the peep rule):
 	if noun is g-present, say "(present) "; else say "(missing) ";
 	if noun is g-required, say "(required)."; else say "(unneeded).";
 
-tracking it to is an action applying to two visible  things.
+tracking it to is an action applying to two visible things.
 
 Understand "track [any g-window] to [any g-window]" as tracking it to.
 
@@ -163,8 +163,8 @@ Carry out tracking it to:
 	say "no. =>: [number of steps via the spawning relation from noun to second noun].";
 	say "no. <=: [number of steps via the spawning relation from second noun to noun].";
 
-Throwing open is an action applying to one visible  thing.
-Slamming shut is an action applying to one visible  thing.
+Throwing open is an action applying to one visible thing.
+Slamming shut is an action applying to one visible thing.
 
 Understand "slam shut [any g-window]" as slamming shut.
 Understand "throw open [any g-window]" as throwing open.
@@ -249,14 +249,14 @@ To g-make (g - a g-window):
 	else now p2 is the measurement of g;
 	let p3 be the kind-val of the type of g;
 	let p0 be the ref-number of the direct parent of g;
-	now the  ref-number of g is the reference created from p0 with p1 and p2 and p3 and rock value rock-value of g;
+	now the ref-number of g is the reference created from p0 with p1 and p2 and p3 and rock value rock-value of g;
 	end the constructing activity with the pending g-window;
 
 To decide which number is the reference created from (p0 - a number) with (p1 - a number) and (p2 - a number) and (p3 - a number) and rock value (rock - a number):
 (- (glk_window_open({p0},{p1}, {p2}, {p3}, {rock}))
 -)
 
-To decide which number is the pos-val for (g - a g-window) of (N - a g-window-position): (-  (GetPos({N}, {g})) -).
+To decide which number is the pos-val for (g - a g-window) of (N - a g-window-position): (- (GetPos({N}, {g})) -).
 To decide which number is the method-val of (N - a g-window-type): (- (GetMethod({N})) -).
 To decide which number is the kind-val of (N - a g-window-kind): (- (GetKind({N})) -).
 
@@ -384,10 +384,10 @@ To decide which number is the height of (g - a g-window):
 
 Include (-
 
-[ WindowSize g  index result;
+[ WindowSize g index result;
 	if (g hasnt g_present) return 0;
 	result = glk_window_get_size(g.ref_number, gg_arguments, gg_arguments+WORDSIZE);
-            return  gg_arguments-->index;
+            return gg_arguments-->index;
 ];
 
 -)
@@ -409,7 +409,7 @@ Before constructing a g-window when the position of the pending g-window is g-pl
 	if the position of the direct parent of the pending g-window is at least g-placeabove, now the position of the pending g-window is g-placeright;
 	else now the position of the pending g-window is g-placeabove.
 
-Before constructing a g-window when the scale method of the pending g-window is g-proportional  (this is the use minimum size instead rule):
+Before constructing a g-window when the scale method of the pending g-window is g-proportional (this is the use minimum size instead rule):
 	let p1 be 100 multiplied by the minimum size of the pending g-window;
 [actually, this should be the size of the direct parent, shouldn't it? ]
 	let p2 be the measurement of the pending g-window multiplied by width of the direct parent of the pending g-window;
@@ -511,7 +511,7 @@ Include (-
 [ FWBlankWindowToColor g result graph_width graph_height col;
     col = ColVal(g.back_colour);
     result = glk_window_get_size(g.ref_number, gg_arguments, gg_arguments+WORDSIZE);
-                 graph_width  = gg_arguments-->0;
+                 graph_width = gg_arguments-->0;
                  graph_height = gg_arguments-->1;
 
     glk_window_fill_rect(g.ref_number, col, 0, 0, graph_width, graph_height);
@@ -576,7 +576,7 @@ g-pink		16761035
 
 A g-window has a glulx color value called back-colour. The back-colour of a g-window is usually g-placenullcol. The back-colour property translates into I6 as "back_colour".
 
-Before constructing  when the type of the pending g-window is g-text-buffer (this is the set text-colours rule):
+Before constructing when the type of the pending g-window is g-text-buffer (this is the set text-colours rule):
 	set the background text-colour of the pending g-window;
 
 After constructing when the type of the pending g-window is g-text-buffer (this is the reset text-colours rule):

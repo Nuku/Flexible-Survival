@@ -353,7 +353,7 @@ Section - Replacement of the library's Window Color routines
 
 Include (-
 
-[ VM_SetWindowColours f b window doclear  i fwd bwd swin;
+[ VM_SetWindowColours f b window doclear i fwd bwd swin;
     if (clr_on && f && b) {
         if (window) swin = 5-window; ! 4 for TextGrid, 3 for TextBuffer
 

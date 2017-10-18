@@ -40,13 +40,13 @@ to say cfgdesc:
 			now cfgmode is 2;
 	if cfgmode is 1:	[female]
 		setmongender 4; [creature is female]
-		say "     Before you is one of the most unusual forms the infection has taken, creating a partially mechanical fox-creature. Looking over this clockwork fox girl, her body is covered in gears sticking through brass wire fur. She whirrs and clicks as she moves in a strangely mechanical manner, occasionally twitching as something internal catches before releasing a moment later. Her head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look. Her body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears. Her chestplate has two small breasts formed onto it. Her arms and legs are thin and vulpine, leading down to small clawed paws. She has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within. A private peek reveals that she has a thick-lipped cunt nestled between her legs, made of shimmering, coppery flesh, but dripping a clear lubricant that glistens like oil as the female mechanism moves forward to attack you.";
+		say "     Before you is one of the most unusual forms the infection has taken, creating a partially mechanical fox-creature. Looking over this clockwork fox girl, her body is covered in gears sticking through brass wire fur. She whirrs and clicks as she moves in a strangely mechanical manner, occasionally twitching as something internal catches before releasing a moment later. Her head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look. Her body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears. Her chestplate has two small breasts formed onto it. Her arms and legs are thin and vulpine, leading down to small-clawed paws. She has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within. A private peek reveals that she has a thick-lipped cunt nestled between her legs, made of shimmering, coppery flesh, but dripping a clear lubricant that glistens like oil as the female mechanism moves forward to attack you.";
 		now sex entry is "Male";
 		if "Female Preferred" is listed in the feats of the player, now sex entry is "Female";
 		if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";
 	if cfgmode is 2:	[male]
 		setmongender 3; [creature is male]
-		say "     Before you is one of the most unusual forms the infection has taken, creating a partially mechanical fox-creature. Looking over this clockwork fox guy, his body is covered in gears sticking through brass wire fur. He whirrs and clicks as he moves in a strangely mechanical manner, occasionally twitching as something internal catches before releasing a moment later. His head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look. His body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears. His chestplate gleams brightly, as if polished brass. His arms and legs are thin and vulpine, leading down to small clawed paws. He has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within. A private peek reveals that he has a long, knotted cock made of coppery flesh and driven by a clockwork mechanism. It leaks a clear lubricant that glistens like oil as the male mechanism moves forward to attack you.";
+		say "     Before you is one of the most unusual forms the infection has taken, creating a partially mechanical fox-creature. Looking over this clockwork fox guy, his body is covered in gears sticking through brass wire fur. He whirrs and clicks as he moves in a strangely mechanical manner, occasionally twitching as something internal catches before releasing a moment later. His head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look. His body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears. His chestplate gleams brightly, as if polished brass. His arms and legs are thin and vulpine, leading down to small-clawed paws. He has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within. A private peek reveals that he has a long, knotted cock made of coppery flesh and driven by a clockwork mechanism. It leaks a clear lubricant that glistens like oil as the male mechanism moves forward to attack you.";
 		now sex entry is "Female";
 		if "Male Preferred" is listed in the feats of the player, now sex entry is "Male";
 		if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";
@@ -120,10 +120,10 @@ When Play begins:
 	now name entry is "Clockwork Fox"; [Name of your new Monster]
 	now attack entry is "[cfgfight]";
 	now defeated entry is "[beatthecfg]";
-	now victory entry is  "[losetocfg]";
+	now victory entry is "[losetocfg]";
 	now desc entry is "[cfgdesc]";
 	now face entry is "drawn forward into a mechanical muzzle with whirring gears for teeth. Atop your head, you have a pair of pointed ears made of shiny brass, adding to your foxish look";
-	now body entry is "thin and muscled, resembling that of one of the clockwork fox beings. Your arms are thin and vulpine, leading down to small clawed paws. Your legs are thin but filled with a mix of muscles and clockwork mechanisms, leading down to a pair of foxy paws";
+	now body entry is "thin and muscled, resembling that of one of the clockwork fox beings. Your arms are thin and vulpine, leading down to small-clawed paws. Your legs are thin but filled with a mix of muscles and clockwork mechanisms, leading down to a pair of foxy paws";
 	now skin entry is "[one of]brass wire fur with gears poking through your metallic[or]lush wire fur over your brass[or]gears sticking through brass wire fur to cover your metallic[at random]";
 	now tail entry is "You have a mechanical fox tail that is covered in soft, metallic fur. It whirrs and clicks softly with the sounds of the cogs and gears inside to make it move so beautifully.";
 	now cock entry is "[one of]clockwork[or]knotted[or]clockwork knotted[or]mechanically-driven[at random]";
@@ -145,7 +145,7 @@ When Play begins:
 	now area entry is "Museum"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2; [ Number of Breasts infection will give you. ]
 	now breast size entry is 3; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]

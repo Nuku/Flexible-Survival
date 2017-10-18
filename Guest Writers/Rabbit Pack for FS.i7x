@@ -78,9 +78,9 @@ When Play begins:
 	now name entry is "Rabbit Pack"; [Name of your new Monster]
 	now attack entry is "[one of]They pounce on you all at the same time![or]One of them crawls on your back and hits you in the head. More than once.[or]You lose your balance and fall on the ground! They try to pin you down![or]One of them manages to flank you and attack by surprise.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[rabpackbeaten]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[rabpackvictory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now victory entry is "[rabpackvictory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[rabpackdesc]";[ Description of the creature when you encounter it.]
-	now face entry is "rabbit ears sprouting from the top of your head and flopping around the sides of your";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "that of a rabit, with distinctive ears sprouting from the top of your head and flopping downwards";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "short but agile";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "short fur covering almost every inch of your body";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a [one of]short[or]fluffy[or]twitchy[at random] rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ]
@@ -108,8 +108,8 @@ When Play begins:
 	now breast size entry is 3; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 5; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 4; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 3; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 4; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 3; [ Width of female sex infection will try and give you ]
 	now libido entry is 10; [ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";
 	now lootchance entry is 0;

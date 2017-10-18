@@ -30,7 +30,7 @@ instead of conversing the Dan:
 		WaitLineBreak;
 		say "'I keep trying to tell you that having a badge does not make you a hero, super or else.' Greg says as he comes up to hug his younger mate. The two reptiles nuzzle each other for several minutes, their thin tongues rapidly flick out across one another's scaled forms and then over the sides of their heads before moving down underneath toward their chins, before pulling away to give each other space. You find yourself smiling as you look between the two lovers. 'Y-yea, I know, but still...'";
 		WaitLineBreak;
-		say "'Despite what they tried to teach us, we're all human, never mind the new bodies and whatnot we have now, so all of us have emotional trials to overcome.' Dan cocks his head to the side as he blinks owlishly at his older lover. 'What's that got to do with everyone turning into hormone driven lunatics?' The four armed iguana asks innocently. Greg sighs unwearyingly at this. 'It means that the people out there who have things buried inside of them, they've given everything over to more simplistic instincts just to cope with the fallout of what's happened. Some of them anyway.' Greg corrects himself as he thinks over something for a moment. 'I think I read somewhere that the basic needs of a person are met out by four separate responses. See if you recognize any of these -  there's the need to fight, the need to feed, the need to flee and the need to fornicate.";
+		say "'Despite what they tried to teach us, we're all human, never mind the new bodies and whatnot we have now, so all of us have emotional trials to overcome.' Dan cocks his head to the side as he blinks owlishly at his older lover. 'What's that got to do with everyone turning into hormone driven lunatics?' The four armed iguana asks innocently. Greg sighs unwearyingly at this. 'It means that the people out there who have things buried inside of them, they've given everything over to more simplistic instincts just to cope with the fallout of what's happened. Some of them anyway.' Greg corrects himself as he thinks over something for a moment. 'I think I read somewhere that the basic needs of a person are met out by four separate responses. See if you recognize any of these - there's the need to fight, the need to feed, the need to flee and the need to fornicate.";
 		WaitLineBreak;
 		say "Greg doesn't say anything more after this as he lets the information stir around inside of his four armed lover's head. 'So you're saying that this is all happening because people want it to?' Dan questions. 'I'm saying that, without getting into deeper psychology, which I failed twice during my Academy days, everyone out there, and probably us in here, all have things that need to be expressed. This virus, or whatever, has given birth to both the untapped potential of almost everyone here in the city as well as to their faults. Think about it, you've got four arms now while I've got a tail long enough to wrap around Chicago. What do you think the coincidence of this happening to both of us, especially given our [italic type]sordid pasts[roman type]? Dan goes quiet at this as he tries to think things over.";
 		WaitLineBreak;
@@ -73,7 +73,7 @@ Instead of fucking the Dan:
 			LineBreak;
 			Say "Shaking your head you let Dan know that you'll have to get back to him later on that. 'Alright. Catch you later then.' The younger iguana immediately turns his head to disregard you as he nuzzles and licks his thin tongue along the side of Greg's throat. You can tell that the two are about to do something really hot and sexy with each other so you quietly turn to go about your way.";
 		now lastfuck of Dan is turns;
-		now lastfuck  of greg is turns;
+		now lastfuck of greg is turns;
 
 
 
@@ -113,7 +113,7 @@ instead of conversing the Greg:
 
 
 Instead of fucking the Greg:
-	If lastfuck  of greg - turns is less than 6:
+	If lastfuck of greg - turns is less than 6:
 		say "'Not without Dan.' The other man snarls quietly, more at himself than at you. 'Never without Dan.' The raptor hybrid turns his head to regard his worn lover and notes the slight twinge in the iguana's steps as the younger male goes about his business.";
 	else:
 		if a random chance of 1 in 2 succeeds:

@@ -18,6 +18,7 @@ use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 2000.
 use MAX_ACTIONS of 2000.
 use MAX_VERBS of 2000.
+use MAX_VERBSPACE of 50000.
 use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
 Use MAX_DICT_ENTRIES OF 2400.
@@ -36,7 +37,7 @@ Include Basic Screen Effects by Emily Short.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 59.
+The release number is 61.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -189,6 +190,7 @@ the player has a list of text called invent.
 the player has a list of text called vials.
 Rooms has a list of text called invent.
 The player has a list of text called feats.
+The player has a list of text called BlockList.
 A person can be a trader.
 Scenario is a text that varies.
 Allobjs is a list of text that varies.
@@ -543,7 +545,7 @@ Definition: A grab object (called D) is stored:
 
 Definition: A grab object (called D) is present:
 	if there is a name corresponding to a object of d in the table of game objects:
-		if the name corresponding to a object of  d in the table of game objects is listed in the invent of the location of the player, yes;
+		if the name corresponding to a object of d in the table of game objects is listed in the invent of the location of the player, yes;
 	no;
 
 before examining the grab object(called x):
@@ -612,7 +614,7 @@ The invent of the player is { "journal" }.
 Table of Start Game
 title	subtable	description	toggle
 "Strength: [strength of player]"	--	"Your ability to exert force. Helps deal damage with melee weapons, and to carry heavy objects."	finish stats rule
-"Dexterity: [Dexterity of player]"	--	"Speed, agility. Dexterity  helps to land hits with melee weapons and avoid being hit in kind."	finish stats rule
+"Dexterity: [Dexterity of player]"	--	"Speed, agility. Dexterity helps to land hits with melee weapons and avoid being hit in kind."	finish stats rule
 "Stamina: [stamina of player]"	--	"Your ability to withstand punishment. Stamina also helps to resist the physical aspects of infection."	finish stats rule
 "Charisma: [Charisma of player]"	--	"Your ability to exert social force. Deal with NPCs favorably, also helps resist mental aspects of infection."	finish stats rule
 "Perception: [Perception of player]"	--	"Your ability to detect things. Also helps resist mental aspects of infection."	finish stats rule
@@ -2673,7 +2675,7 @@ This is the sex change rule:
 			increase the cocks of player by 1;
 			now the cock length of player is 1;
 			now the cock width of player is 1;
-			increase the cock length of player by ( cock length entry  ) divided by 3;
+			increase the cock length of player by ( cock length entry ) divided by 3;
 			increase the cock width of player by ( cock width entry ) divided by 3;
 			if skipcockchange is false:
 				now cockname of player is name entry;
@@ -2765,8 +2767,8 @@ This is the sex change rule:
 			increase the cunts of player by 1;
 			now the cunt length of player is 1;
 			now the cunt width of player is 1;
-			increase the cunt length of player by ( cunt length entry  ) divided by 3;
-			increase the cunt width of player by ( cunt width entry  ) divided by 3;
+			increase the cunt length of player by ( cunt length entry ) divided by 3;
+			increase the cunt width of player by ( cunt width entry ) divided by 3;
 			if "Modest Organs" is listed in feats of player and cunt length of player is greater than 8:
 				now cunt length of player is 8;
 			if "Modest Organs" is listed in feats of player and cunt width of player is greater than 5:
@@ -3252,7 +3254,7 @@ To get a number:
 	numberfy playerinput;
 
 to numberfy (x - a snippet):
-	change  the text of the player's command to x;
+	change the text of the player's command to x;
 	if the player's command matches "[number]":
 		now calcnumber is the number understood;
 	else:
@@ -4085,7 +4087,7 @@ This is the brain descr rule:
 		now descr is "[one of]clean[or]pristine[or]perfectly normal[at random][lusting]";
 	else if humanity of player is greater than 70:
 		now descr is "[one of]lightly tainted[or]occasionally plagued with odd instinctual[at random][lusting]";
-	else if humanity  of player is greater than 30:
+	else if humanity of player is greater than 30:
 		if facename of player is not "human":
 			now descr is "increasingly [facename of player] perspective[lusting]";
 		else if bodyname of player is not "human":
@@ -4227,7 +4229,7 @@ This is the cunt descr rule:
 	else if cunt length of player is less than 8:
 		now descr is "[one of]average[or]normal sized[at random]";
 	else if cunt length of player is less than 12:
-		now descr is "[one of]large[or]thick lipped[or]above average[at random]";
+		now descr is "[one of]large[or]thick-lipped[or]above average[at random]";
 	else if cunt length of player is less than 18:
 		now descr is "[one of]belly bulgingly huge[or]inhumanly deep[or]forearm length[at random]";
 	else if cunt length of player is less than 25:
@@ -4317,7 +4319,7 @@ This is the self examine rule:
 			now cunttext is " have [cunts of the player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random].  Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around.  They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 		else:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around.  It is [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
-	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
+	say "Looking at yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "face":
@@ -4502,7 +4504,7 @@ This is the male choice rule:
 	now the cock width of the player is 4;
 	now the breasts of the player is 2;
 	now the breast size of the player is 0;
-	now  the current menu is table of Basic Actions;
+	now the current menu is table of Basic Actions;
 	say "You are a man.";
 	wait for any key;
 	follow the final stats rule;
@@ -4754,7 +4756,7 @@ To Infect (x - text):
 		if name entry is x:
 			now monster is y;
 			let reset be 0;
-			if researchbypass is 1 and  non-infectious entry is true:
+			if researchbypass is 1 and non-infectious entry is true:
 				now reset is 1;
 				now non-infectious entry is false;
 			infect;
@@ -4987,6 +4989,8 @@ Include Text Capture by Eric Eve.
 [Locations]
 Include Apocalypse Store by DrGryphon.
 Include Approaching the Capitol Building for FS by Guest Writers.
+Include Astroslide Field Locker-room by Kernog.
+Include Astroslide Football Field by Kernog.
 Include Beach by Speedlover.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
@@ -5267,7 +5271,7 @@ Include Latex Mistress For Fs by Stripes.
 Include Latex Wolf for FS by Stripes.
 Include Leopardman by Sarokcat.
 Include Liquidshifter by Ssely.
-Include Lizard Girl For Fs by Damaged.
+Include Lizard Girl by Damaged.
 Include Lusty Skunk by Nuku Valente.
 Include Magic Drake by Stripes.
 Include Male Peacock for FS By Guest Writers.
@@ -5399,6 +5403,7 @@ Include Anthony by Wahn.
 Include Ares by Wahn.
 Include Athanasia by Stripes.
 Include Bastet by Wahn.
+Include Bjorn by Rikaeus.
 Include Blake by Ssely.
 Include Blanche by Stripes.
 Include Boghrim by Wahn.
@@ -5487,6 +5492,7 @@ Include Rane by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
 Include Richard by Rikaeus.
 Include RodAndRonda by Stripes.
+Include Roman by Kernog.
 Include Sally by Stripes.
 Include Sam for FS by Stripes.
 Include Santa Claws by Wahn.
@@ -5503,7 +5509,9 @@ Include Sven by Stripes.
 [Include Sylvia by Prometheus.] [WIP]
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
+Include Tenvale Gorillas Football Team by Kernog.
 Include Thomas by Wahn.
+[Include Thunderbolt by CrimsonAsh. This does not exist.]
 Include Timothy by Sarokcat.
 Include Tristian by Verath.
 Include Urik by Wahn.

@@ -66,7 +66,7 @@ When Play begins:
 	now defeated entry is "[beatthecaveman]";
 	now victory entry is "[losetocaveman]";
 	now desc entry is "[cavemandesc]";
-	now face entry is "humanlike, but beetlebrowed and hypermasculine, with a lantern jaw and much stubble";      [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "humanlike, but beetle-browed and hypermasculine, with a lantern jaw and much stubble";      [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a caveman, strongly muscled, with massive, overly long arms";
 	now skin entry is "leathery, incredibly hirsute and humanlike";   [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "";   [ Tail desc., written as a full sentence or left blank for none. ]

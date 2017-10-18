@@ -2,10 +2,10 @@ Version 221 of Story Skipper by Nuku Valente begins here.
 [ Version up to 5/16/2015 ]
 [ Version 221 - Saving Micaela and Sidney ]
 
-The File of Trixsave  (owned by another project) is called "txsave".
-The File of Trixsave2  (owned by another project) is called "txsave2".
-The File of Trixsave3  (owned by another project) is called "txsave3".
-The File of invsave  (owned by another project) is called "invsave".
+The File of Trixsave (owned by another project) is called "txsave".
+The File of Trixsave2 (owned by another project) is called "txsave2".
+The File of Trixsave3 (owned by another project) is called "txsave3".
+The File of invsave (owned by another project) is called "invsave".
 trixsavetext1 is an indexed text that varies. trixsavetext1 is usually "no save file found".
 trixsavetext2 is an indexed text that varies. trixsavetext2 is usually "no save file found".
 trixsavetext3 is an indexed text that varies. trixsavetext3 is usually "no save file found".
@@ -2126,13 +2126,13 @@ Carry out savetrix2:
 		let curword be word number z in invrecover;
 		replace the text "|" in curword with " ";
 		let cur be word number 1 in curword;
-		let amt be  0;
+		let amt be 0;
 		let amttext be word number 2 in curword;
 		now amt is numerical value of amttext;
 		replace the text "`" in cur with " ";
 		repeat with Q running through grab objects:
 			let obname be printed name of q;
-			if cur matches  the text obname, case insensitively:
+			if cur matches the text obname, case insensitively:
 				now carried of q is amt;
 				break;
 	if carried of nanite collector > 0:
@@ -3702,7 +3702,7 @@ Carry out reciting:
 					now SvenAmySex is the number understood;
 			-- 170: [BrutusAmySex]
 				if the player's command matches "[number]":
-					now BrutusAmySex  is the number understood;
+					now BrutusAmySex is the number understood;
 			-- 171: [lust of Zephias]
 				if the player's command matches "[number]":
 					now lust of Zephias is the number understood;

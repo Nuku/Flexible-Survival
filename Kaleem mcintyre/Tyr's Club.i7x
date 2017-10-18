@@ -53,7 +53,7 @@ Part 2 - Sex Match with Tyr
 Instead of fucking the Tyr:
 	setmonster "Doberman";
 	choose row monster from the table of random critters;
-	If lastfuck of Tyr -  turns is less than 6:
+	If lastfuck of Tyr - turns is less than 6:
 		say "'Sorry, I'm not ready to go another round with you yet. Maybe come back in a little while?' Tyr rolls his shoulders and you can hear his spine pop slightly.";
 		stop the action;
 	else:

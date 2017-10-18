@@ -1259,7 +1259,7 @@ carry out trixiecheating:
 		say "[link](7) Set Libido[as]7[end link] - Current Libido: [bold type][libido of player][roman type][line break]";
 		LineBreak;
 		say "[bold type]Game settings:[roman type][line break]";
-		say "[link](8) Set anal play content level[as]8[end link] -  Currently: [bold type][if anallevel is 1]Less Anal[else if anallevel is 2]Standard[else]More Anal[end if][roman type][line break]";
+		say "[link](8) Set anal play content level[as]8[end link] - Currently: [bold type][if anallevel is 1]Less Anal[else if anallevel is 2]Standard[else]More Anal[end if][roman type][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-8)> [run paragraph on]";

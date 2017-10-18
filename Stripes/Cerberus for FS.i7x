@@ -190,7 +190,7 @@ When Play begins:
 	now name entry is "Cerberus"; [Name of your new Monster]
 	now attack entry is "[one of]The Cerberus herm growls and swings hir powerful arms at you, striking you with hir heavy paws![or]The Cerberus herm presses hir body to yours, leaking milk from hir many nipples across your body. The scent of that warm milk running across your body and the scent of it filling your nose weakens your resolve to keep fighting hir![or]The canine foe releases spurts of hir pre from hir tail's cock across your face. You can't help but lick it up and find yourself thirsting for more![or]As shi grapples with you, hir tailcock rubs against you, spurting precum onto your body. The scent of it excites you, making you want to cease struggling![or]Dropping briefly to all fours, the Cerberus herm pounces at you and knocks you over, hir triple heads panting and drooling as shi grinds hir wet pussy against you until you manage to push away![at random]";
 	now defeated entry is "[beatthecerberus]";
-	now victory entry is  "[losetocerberus]";
+	now victory entry is "[losetocerberus]";
 	now desc entry is "[cerberusdesc]";
 	now face entry is "really three heads, as confusing as that is for you. Your three heads are canine in form, with broad muzzles and slobbery tongues. Your primary head, the one that is YOU, is in the middle and seems to have control over your body most of the time, though you can faintly feel the others there are well. The other heads have their own personalities and minds, and are able to seize control of your shared body at times when something catches their interest";
 	now body entry is "broader near the top, with a wide chest with numerous strong lungs and a trio of powerful hearts to fuel your muscled form. Your arms and legs are well muscled and end in clawed, canine hands and paws";
@@ -215,7 +215,7 @@ When Play begins:
 	now area entry is "Museum"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 18; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 12; [ Number of Breasts infection will give you. ]
 	now breast size entry is 5; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]

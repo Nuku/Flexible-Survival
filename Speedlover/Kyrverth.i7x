@@ -207,7 +207,7 @@ instead of fucking the Kyrverth:
 				say "[KyrverthMaleCheck]";
 			else if KyrverthMaleBoning is 1:
 				say "[KyrverthAnalSex]";
-		else if ((scalevalue of player <= 1 and  "Kinky" is not listed in feats of player) or cunt length of player < 10): [Too small for sex]
+		else if ((scalevalue of player <= 1 and "Kinky" is not listed in feats of player) or cunt length of player < 10): [Too small for sex]
 			say "     As you walk up to Kyrverth, he looks at you closely, then says 'sorry, you are nice and all, but I doubt it would fit'";
 			WaitLineBreak;
 		else if cunts of player > 0: [Female player that is large enough]
@@ -221,7 +221,7 @@ instead of fucking the Kyrverth:
 		say "     'You're nice and all, but I really need to focus on my hoard'";
 
 to say KyrverthMaleCheck:
-	say "     [bold type]He doesnt sound too sure about that, do you want to try to convince him otherwise?[roman type][line break]";
+	say "     [bold type]He doesn't sound too sure about that, do you want to try to convince him otherwise?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -233,7 +233,7 @@ to say KyrverthMaleCheck:
 			say "You try to convince the dragon that males are ok too, but he shakes his head, firm in the belief that he is into females and females only.";
 		else:
 			now KyrverthMaleBoning is 1;
-			say "You speak clearly and convincingly, telling Kyrverth that liking girls and guys are not mutually exclusive. He doesnt immediately object, so you keep talking. You talk for almost 10 minutes, and at the end he nods his head 'I think you're onto something there...'";
+			say "You speak clearly and convincingly, telling Kyrverth that liking girls and guys are not mutually exclusive. He doesn't immediately object, so you keep talking. You talk for almost 10 minutes, and at the end he nods his head 'I think you're onto something there...'";
 			now KyrverthTimer is turns;
 	else:
 		LineBreak;

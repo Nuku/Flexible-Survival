@@ -235,7 +235,7 @@ this is the lamiaboob rule:	[***]
 	say "[special-style-1][playernum][roman type] vs [special-style-2][matlamianum][roman type]: ";
 	if playernum >= matlamianum:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 133;	[75% dmg this round]
-		say "Able to keep your arms free, you grab the encroaching coils and force them open enough to escape.  The constriction does  [special-style-2][dam][roman type] damage before then though.";
+		say "Able to keep your arms free, you grab the encroaching coils and force them open enough to escape.  The constriction does [special-style-2][dam][roman type] damage before then though.";
 		decrease hp of player by dam;
 		now matlamiacaught is 0;
 	else:

@@ -143,7 +143,7 @@ Instead of resolving a Dragon voyeurism:
 	Now Dragon voyeurism is resolved;
 
 
-Section 7-  relaxing scene
+Section 7- relaxing scene
 
 relaxing scene is a situation.
 The sarea of relaxing scene is "Beach".

@@ -144,7 +144,7 @@ to say gshep_postfightargue:		[Post-fight argument]
 	WaitLineBreak;
 
 to say gshep_sexargue:				[Sex role argument]
-	say "     Feeling a rush of arousal, you decide to have Korvin help you deal with it  You run your eyes appreciatively over the German Shepherd's studly body and lick your lips. Setting aside your gear, you prop one leg up on [if location of player is bunker or location of player is grey abbey library or location of player is grey abbey 2F]a chair[else]some debris[end if] with your thighs spread. With a come-hither motion, you tell him to put that [if cocks of player > 0]fine muzzle[else]doggy tongue[end if] of his to work. He eyes your crotch with some interest, but manages to pull his eyes away and glare at you defiantly.";
+	say "     Feeling a rush of arousal, you decide to have Korvin help you deal with it. You run your eyes appreciatively over the German Shepherd's studly body and lick your lips. Setting aside your gear, you prop one leg up on [if location of player is bunker or location of player is grey abbey library or location of player is grey abbey 2F]a chair[else]some debris[end if] with your thighs spread. With a come-hither motion, you tell him to put that [if cocks of player > 0]fine muzzle[else]doggy tongue[end if] of his to work. He eyes your crotch with some interest, but manages to pull his eyes away and glare at you defiantly.";
 	say "     'Why don't you try and make me, jerkface?  I'm not just some silly lapdog to [if cocks of player > 0]suck you off[else]lick your snatch[end if] whenever you want. What am I getting out of it and when do I get my turn?  I got plenty of tail out there on my own!' he responds even as he strides towards you.";
 	say "     [bold type]How shall you react to this insubordination from him?[roman type][line break]";
 	LineBreak;
@@ -474,6 +474,11 @@ to say subby_Korvin_sexmenu:
 		say "***M/F subby Korvin sex.";
 	now lastfuck of gshep is turns;
 
+Section 6 - Events
+
+[ Korvin sniffs after a female bull terrier -> see file Wahn/Mall Expansion.i7x]
+[ Korvin meets a young adult beagle boy -> see file Speedlover/Extra College Events.i7x]
+[ Korvin antagonizes Tehuantl -> see file Wahn/Tehuantl.i7x]
 
 [ *** notes ]
 [

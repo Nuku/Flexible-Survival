@@ -8,7 +8,7 @@ Section 0 - Basic variables
 
 monstercom is a number that varies.		[ This represents the row on the table of Critter Combat to be used in this fight. ]
 altattackmade is a number that varies.	[ This tracks whether an alternate attack what chosen. ]
-combat abort is a number that varies.	[ 0 = combat continues  /  1 = combat will be aborted. ]
+combat abort is a number that varies.	[ 0 = combat continues / 1 = combat will be aborted. ]
 ktspeciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]
 ktcockmatch is a truth state that varies.
 ktcockmatch is usually false.           [ Checks for matching player cock while using the 'Know Thyself' feat. ]
@@ -177,13 +177,13 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	let nam be name entry;
 [	let typ be type entry;	]
 	let found be 0;
-	repeat through the table of infection graphics:
+	repeat through the table of game art:
 		if title entry is nam:
 			now found is 1;
 			project icon entry;
 			break;
 [	if found is 0:
-		repeat through the table of infection graphics:
+		repeat through the table of game art:
 			if title entry matches the text typ:
 				now found is 1;
 				project icon entry;

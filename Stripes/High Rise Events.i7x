@@ -217,7 +217,7 @@ to say dogparksearch:
 
 
 to say doggyinfect:
-	let tempnum  be a random number between 1 and 11; [adjust this for new dogs]
+	let tempnum be a random number between 1 and 11; [adjust this for new dogs]
 	if tempnum is 1:
 		infect "Female Husky";
 	else if tempnum is 2:

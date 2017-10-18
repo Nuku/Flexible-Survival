@@ -69,7 +69,7 @@ instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship
 		now LockerroomTrioRelationship is 2; [met the trio twice]
 		move player to Mall Foyer;
 
-instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship > 1 and LockerroomTrioRelationship < 4 and  (LastLockerroomTrioMeet - turns > 3)): [event 3 will fire at the earliest 3 turns after the previous one]
+instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship > 1 and LockerroomTrioRelationship < 4 and (LastLockerroomTrioMeet - turns > 3)): [event 3 will fire at the earliest 3 turns after the previous one]
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the mall lockerroom. LockerroomTrioRelationship: [LockerroomTrioRelationship].[line break]";
 	now LastLockerroomTrioMeet is turns; [saves the last event time]

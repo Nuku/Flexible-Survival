@@ -5,7 +5,7 @@ Section 1 - Monster Responses
 
 
 slutmaster is a number that varies. slutmaster is usually 0.
-slutprotection  is a number that varies. slutprotection  is usually 0.
+slutprotection is a number that varies. slutprotection is usually 0.
 slutty is a number that varies. slutty is usually 0.
 slutname is a text that varies. slutname is usually "hound dog".
 
@@ -264,8 +264,8 @@ When Play begins:
 	now breast size entry is 0; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 7; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 7; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 8; [ Width of female sex infection will try and give you ]
 	now libido entry is 100; [ Amount player Libido will go up if defeated ]
 	now loot entry is "slut tag"; [ Loot monster drops, ]
 	now lootchance entry is 45; [ Chance of loot dropping 0-100 ]
@@ -281,7 +281,7 @@ When Play begins:
 	now name entry is "Female Slut";
 	now attack entry is "[sluttyattack]";
 	now defeated entry is "[sluttydef]";
-	now victory entry is  "[sluttyvictory]";
+	now victory entry is "[sluttyvictory]";
 	now desc entry is "[sluttydesc]";
 	now face entry is "is that of a rabbit's, complete with a pair of long ears and twitching nose. A slut's collar has also formed around your neck. Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "You have a (your text)."]
 	now body entry is "that of a sexy rabbit's, with large bunny paws and strong, shapely legs";[ Body Description, format as the text "Your Body is (your text)."]
@@ -311,8 +311,8 @@ When Play begins:
 	now breast size entry is 6; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 7; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 7; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 8; [ Width of female sex infection will try and give you ]
 	now libido entry is 100; [ Amount player Libido will go up if defeated ]
 	now loot entry is "slut tag"; [ Loot monster drops, ]
 	now lootchance entry is 46; [ Chance of loot dropping 0-100 ]

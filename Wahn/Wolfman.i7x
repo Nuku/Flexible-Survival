@@ -100,7 +100,7 @@ When Play begins:
 	now name entry is "Football Wolfman";
 	now attack entry is "[fw_attack]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Septus loses]";
-	now victory entry is  "[Septus wins]";
+	now victory entry is "[Septus wins]";
 	now desc entry is "[Wolfmandesc]";            [ Description of the creature when you encounter it. ]
 	now face entry is "a canine muzzle sticking out of your wolf-like head. The sharp teeth inside it make your smiles and growls pretty unforgettable for others, and the long tongue should come in handy for french kissing";
 	now body entry is "tall and well muscled, standing on two legs and showing an interesting mix of lupine and human form. While your legs are fully digitigrade and end in large paws, your arms are changed but still more human-like and end in strong, now clawed, hands";
@@ -842,7 +842,7 @@ When Play begins:
 	now name entry is "Wolfman Cheerleader";
 	now attack entry is "    <cheerleaders shouldn't fight, when did you see this?>"; [Text used when the monster makes an Attack]
 	now defeated entry is "    <cheerleaders shouldn't fight, when did you see this?>";
-	now victory entry is  "    <cheerleaders shouldn't fight, when did you see this?>";
+	now victory entry is "    <cheerleaders shouldn't fight, when did you see this?>";
 	now desc entry is "    <cheerleaders shouldn't fight, when did you see this?>";            [ Description of the creature when you encounter it. ]
 	now face entry is "that of a beautiful young woman, framed in shoulder-length hair";
 	now body entry is "a well-shaped young woman's, with a slender and flexible build that just seems made for gymnastics. Perfectly rounded perky breasts complete the picture that will take many a man's breath away with its seductive beauty";
@@ -906,7 +906,7 @@ to say CheerleaderTryout1:
 
 to say CheerleaderTryout2:
 	LineBreak;
-	say "     Leading you over to a large mat on the side of the room, Jennifer calls out for two of her teammates who join her quickly, soon to be followed by several  more girls and wolfmen as they direct you to strip and go through a few poses and moves.";
+	say "     Leading you over to a large mat on the side of the room, Jennifer calls out for two of her teammates who join her quickly, soon to be followed by several more girls and wolfmen as they direct you to strip and go through a few poses and moves.";
 	LineBreak;
 	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;

@@ -28,7 +28,7 @@ Instead of examining the Mall Food Court entrance:
 
 Section 2 - Mall Lot North
 
-The description of Smith Haven Mall Lot North is  "[mallnorthlot]".
+The description of Smith Haven Mall Lot North is "[mallnorthlot]".
 
 To say mallnorthlot:
 	If daytimer is day:

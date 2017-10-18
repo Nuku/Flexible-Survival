@@ -726,7 +726,7 @@ When Play begins:
 	now name entry is "Viking";
 	now attack entry is "[VikingAttacks]";
 	now defeated entry is "[Viking loses]";
-	now victory entry is  "[Viking wins]";
+	now victory entry is "[Viking wins]";
 	now desc entry is "[VikingDesc]";
 	now face entry is "a handsome young man's, framed by a mane of shoulder-long, unkempt blond hair. Your cheeks and chin sport a short blond beard";
 	now body entry is "that of a young man, quite fit and healthy. It is garbed in a woolen tunic and pants, plus a pair of leather boots";

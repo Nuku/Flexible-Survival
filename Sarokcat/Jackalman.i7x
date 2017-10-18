@@ -31,7 +31,7 @@ When Play begins:
 	now name entry is "Jackalman";
 	now attack entry is "[one of]She riddles you this and that till you cry.[at random]";
 	now defeated entry is "[jackalman loss]";
-	now victory entry is  "[jackalman attack]";
+	now victory entry is "[jackalman attack]";
 	now desc entry is "The jackalman is watching you!!";
 	now face entry is "narrow canine face, with a long sleek muzzle full of sharp teeth and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. Your powerful jaws pull your lips back in a feral grin as you admire your new face"; [You have a (your text) face."]
 	now body entry is "strong and powerful, nicely muscled with bestial digitigrade legs and jackal-like feet, your hands ending in sharp jackal-like claws. Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself";[ Body Description, format as the text "Your Body is (your text)"]

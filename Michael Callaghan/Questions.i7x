@@ -351,7 +351,7 @@ Section 3 - Rules for text questions
 
 Text question rules is a rulebook.
 
-The text question rules have  outcomes exit (success), retry (failure) and parse (failure).
+The text question rules have outcomes exit (success), retry (failure) and parse (failure).
 
 The first text question rule (this is the remove punctuation from text questions rule):
 	if punctuation removal is true:

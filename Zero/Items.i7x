@@ -88,7 +88,7 @@ to say protein shake use:
 		increase Strength of player by 3;
 		increase Stamina of player by 1;
 	if T is 3:
-		say "You quickly gulp down the white substance. Its taste is pleasantly familiar and leaves you felling sturdier  and slightly stronger.";
+		say "You quickly gulp down the white substance. Its taste is pleasantly familiar and leaves you felling sturdier and slightly stronger.";
 		increase Strength of player by 1;
 		increase Stamina of player by 2;
 	if T is 4:

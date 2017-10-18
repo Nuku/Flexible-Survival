@@ -938,7 +938,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 				say "     Vent penetrates the player, stretching them a good amount.";
 				say "     Vent knots the player, stretching them a lot.";
 			else if scalevalue of player is 3: [Average player]
-				say "     Vent penetrates the player, stretching the a little bit.";
+				say "     Vent penetrates the player, stretching them a little bit.";
 				say "     Vent knots the player, stretching them further.";
 			else if scalevalue of player is 4: [Large player]
 				say "     Vent penetrates the player, barely stretching them.";
@@ -1014,7 +1014,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 				say "     Vent penetrates the player, stretching them a good amount.";
 				say "     Vent knots the player, stretching them a lot.";
 			else if scalevalue of player is 3: [Average player]
-				say "     Vent penetrates the player, stretching the a little bit.";
+				say "     Vent penetrates the player, stretching them a little bit.";
 				say "     Vent knots the player, stretching them further.";
 			else if scalevalue of player is 4: [Large player]
 				say "     Vent penetrates the player, barely stretching them.";
@@ -1090,7 +1090,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 				say "     Vent penetrates the player, stretching them a good amount.";
 				say "     Vent knots the player, stretching them a lot.";
 			else if scalevalue of player is 3: [Average player]
-				say "     Vent penetrates the player, stretching the a little bit.";
+				say "     Vent penetrates the player, stretching them a little bit.";
 				say "     Vent knots the player, stretching them further.";
 			else if scalevalue of player is 4: [Large player]
 				say "     Vent penetrates the player, barely stretching them.";
@@ -1166,7 +1166,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 				say "     Vent penetrates the player, stretching them a good amount.";
 				say "     Vent knots the player, stretching them a lot.";
 			else if scalevalue of player is 3: [Average player]
-				say "     Vent penetrates the player, stretching the a little bit.";
+				say "     Vent penetrates the player, stretching them a little bit.";
 				say "     Vent knots the player, stretching them further.";
 			else if scalevalue of player is 4: [Large player]
 				say "     Vent penetrates the player, barely stretching them.";

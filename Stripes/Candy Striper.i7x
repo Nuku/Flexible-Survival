@@ -91,7 +91,7 @@ When Play begins:
    now face entry is "girlish, raccoon head with luscious lips and a mask of pink around your eyes"; [ Face description, format as the text "Your face is (your text)."]
    now body entry is "slender and effeminate, with nimble little hands with pink claws. You smell faintly of cotton candy and lust"; [ Body Description, format as the text "Your Body is (your text)."]
    now skin entry is "soft, gray fur with pink highlights over your"; [ skin Description, format as the text "your body is covered in (your text) skin."]
-   now tail entry is "From the base of your spine, you have fluffy raccoon tail with pink stripes banding it. Just below lies your equaly modified rear, now the cutest of bubble butts. An ass so shaply and soft it just begs to be squeezed."; [ Tail description, write a whole Sentence or leave blank. ]
+   now tail entry is "From the base of your spine, you have fluffy raccoon tail with pink stripes banding it. Just below lies your equally modified rear, now the cutest of bubble butts. An ass so shaply and soft it just begs to be squeezed."; [ Tail description, write a whole Sentence or leave blank. ]
    now cock entry is "hot-pink"; [ Cock Description, format as you have a 'size' (your text) cock.]
    now face change entry is "it grows the pointed muzzle of a raccoon with a cute, pink nose and whiskers. Grey and white fur coats your muzzle, with a mask of pink around your eyes"; [ face change text. format as "Your face feels funny as (your text)." ]
    now body change entry is "it becomes a slender and effeminate. Your hands become nimble paws, with little pink claws at the tips of your grey-furred fingers"; [ body change text. format as "Your body feels funny as (your text)." ]

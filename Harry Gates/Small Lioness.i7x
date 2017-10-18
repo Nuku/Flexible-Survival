@@ -12,7 +12,7 @@ Segment		Shift Text																				Desc Text
 "pelvis"		"You feel paralyzed for a moment as your loins are set on fire, creamy fur encroaching on your groin as a small tight pussy forms, already hot, wet and engorged with blood.  You are left panting with lust."	"You have a small eager pussy that is slick with arousal and swollen with need.  It is covered in light creamy fur."
 "left upper arm"	"Your upper left arm shrinks, better to fit a small female feline."															"Your upper left arm is small and covered with tan fur."
 "left forearm"	"Your left forearm tingles as it becomes smaller and tan fur spreads out to cover it."												"Your left forearm is coated with tan fur and is smaller."
-"left hand"	"As the lioness infection spreads over YOUR left hand, a thick rubbery pad develops on your palm and sharp claws eject from your fingertips, the whole thing covered in tan fur."		"Your left hand is a cross between  a human's and a lion's."
+"left hand"	"As the lioness infection spreads over YOUR left hand, a thick rubbery pad develops on your palm and sharp claws eject from your fingertips, the whole thing covered in tan fur."		"Your left hand is a cross between a human's and a lion's."
 "right upper arm"	"Your upper right arm shrinks, better to fit a small female feline."														"Your upper right arm is small and covered with tan fur."
 "right forearm"	"Your right forearm tingles as it becomes smaller and tan fur spreads out to cover it."												"Your right forearm is coated with tan fur and is smaller."
 "right hand"	"As the lioness infection spreads over YOUR right hand, a thick rubbery pad develops on your palm and sharp claws eject from your fingertips, the whole thing covered in tan fur."		"Your right hand is a cross between a human's and a lion's."
@@ -21,7 +21,7 @@ Segment		Shift Text																				Desc Text
 "left foot"	"Brown fur flows down over YOUR left foot, leaving a comically large paw in its place."												"You have a lion's paw for a left foot."
 "right thigh"	"Your right leg bends as your thigh becomes well built and furry."														"Your right thigh is covered with tan fur and looks stronger."
 "right shin"	"Your leg assumes a digitigrade stance as the fur spreads over your lower right shin."												"Your lower right leg is covered in tan fur and looks feline, shifted into a digitigrade form."
-"right foot" 	"Brown fur flows down over YOUR right foot, leaving a comically large paw in its  place."												"You have a lion's paw for a right foot."
+"right foot" 	"Brown fur flows down over YOUR right foot, leaving a comically large paw in its place."												"You have a lion's paw for a right foot."
 "rear"		"Your ass shrinks even as it becomes fuller and rounder.  Pleasantly grabbable and covered in tan fur, you have a female lion's butt."							"Your rear end is coated in tan fur and wonderfully rounded."
 
 
@@ -29,7 +29,7 @@ Small_Lioness_gene is an infection gene.  The tf table of Small_Lioness_gene is 
 
 Gene_attack of Small_Lioness_gene is {claw,bite};
 
-The pdesc of Small_Lioness_gene is  "You are a female lioness.  You are only about four feet tall, though you have large B cups for your height.  Your exposed sex is swollen and dripping with need.  Your nipples are visible and black, begging to be sucked on.".
+The pdesc of Small_Lioness_gene is "You are a female lioness.  You are only about four feet tall, though you have large B cups for your height.  Your exposed sex is swollen and dripping with need.  Your nipples are visible and black, begging to be sucked on.".
 
 The npcdesc of Small_Lioness_gene is "A small cute girl, about four feet in height, covered in tan fur with round lion ears and a bright smile.  She is quite developed for her size, sporting B cups and wide hips.  She seems to be eyeing UOY rather provacatively.".
 
@@ -67,7 +67,7 @@ When play begins, add Small_Lioness_gene to Genetic list.
 
 Section 2 - Small Lioness Definition
 
-A Small Lioness is a kind of monster.  The body of a Small Lioness is usually  {Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene}.  A Small Lioness is monstrous.  A Small Lioness is fully infected.  A Small Lioness is usually unsuited.  A Small Lioness is female.  A Small Lioness is tailed.  The monster gene of a Small Lioness is Small_Lioness_gene.
+A Small Lioness is a kind of monster.  The body of a Small Lioness is usually {Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene, Small_Lioness_gene}.  A Small Lioness is monstrous.  A Small Lioness is fully infected.  A Small Lioness is usually unsuited.  A Small Lioness is female.  A Small Lioness is tailed.  The monster gene of a Small Lioness is Small_Lioness_gene.
 
 The description of Small Lioness is "A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile.  She is quite developed for her size, sporting B cups and wide hips.  She seems to be eyeing UOY rather provacatively."
 

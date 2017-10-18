@@ -19,7 +19,7 @@ Instead of resolving Meeting the corgi:
 		say "[line break]Before the dominator can get very far, a small furry missile rams into him, and begins to beat the life out of him.";
 		say "Do you attack the [']small furry missile['] while it's distracted?";
 		if the player consents:
-			say "Deciding that such a aggressive creature could become a problem later on, you try to knock it out from behind.[line break]The now-relieved  corgi blocks your attacks with ease and glares at you. [']And here I thought you weren't stupid, guess I was wrong!['] Before you can do anything else the corgi slams a fist into your jaw, knocking you out, leaving you stunned but conscious, and leaving the very ticked off corgi to walk off.";
+			say "Deciding that such a aggressive creature could become a problem later on, you try to knock it out from behind.[line break]The now-relieved corgi blocks your attacks with ease and glares at you. [']And here I thought you weren't stupid, guess I was wrong!['] Before you can do anything else the corgi slams a fist into your jaw, knocking you out, leaving you stunned but conscious, and leaving the very ticked off corgi to walk off.";
 			Now corgitalk is -1;
 			now Meeting the corgi is resolved;
 		else:

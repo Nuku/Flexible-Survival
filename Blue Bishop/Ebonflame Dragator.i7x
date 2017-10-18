@@ -38,7 +38,7 @@ to say ebgatorvic:
 			now hijackgestation is 8;
 		else:
 			say ". Like a fire hose, the lizard's dick pumps its substantial, molten cum deep into your bowels, making you wince and cry out in the intense, searing sensation.";
-			say "     Still high from the throes of bliss -- and its motion further lubricated by its glowing seed -- it still continues to fuck you senselessly, forcing a weak, strained orgasm, [if cocks of player > 0]your unattended cock[smn] staining the ground with your [cum load size of player] load[else if cunts of player > 0]your unattended cunt[sfn] staining the ground with your juices[else]causing you to writhe in insatiable need[end if]. Finally satisfied, the beast wrenches his still-hard rod  from your[if scalevalue of player > 4 or player is twistcapped] slightly[end if] gaping hole.";
+			say "     Still high from the throes of bliss -- and its motion further lubricated by its glowing seed -- it still continues to fuck you senselessly, forcing a weak, strained orgasm, [if cocks of player > 0]your unattended cock[smn] staining the ground with your [cum load size of player] load[else if cunts of player > 0]your unattended cunt[sfn] staining the ground with your juices[else]causing you to writhe in insatiable need[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if scalevalue of player > 4 or player is twistcapped] slightly[end if] gaping hole.";
 			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.[mimpregchance]";
 	else if cunts of player > 0:
 		say "     You soon feel the slightly flat head of the reptile's[if ebgatord is 0][else] peculiar,[end if] oversized dick press against[if cunts of player > 1] one of[end if] your cunt[sfn]";
@@ -59,7 +59,7 @@ to say ebgatorvic:
 			now hijackgestation is 8;
 		else:
 			say ". Like a fire hose, the lizard's dick pumps its substantial, molten cum deep into your bowels, making you wince and cry out in the intense, searing sensation.";
-			say "     Still high from the throes of bliss -- and its motion further lubricated by its glowing seed -- it still continues to fuck you senselessly, forcing a weak, strained orgasm, your [if cocks of player > 0]unattended cock[smn] staining the ground with your [cum load size of player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod  from your[if cunt length of player > 11] slightly[end if] gaping hole.";
+			say "     Still high from the throes of bliss -- and its motion further lubricated by its glowing seed -- it still continues to fuck you senselessly, forcing a weak, strained orgasm, your [if cocks of player > 0]unattended cock[smn] staining the ground with your [cum load size of player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if cunt length of player > 11] slightly[end if] gaping hole.";
 			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.[impregchance]";
 	else:
 		say "     You soon feel the slightly flat head of the reptile's[if ebgatord is 0][else] peculiar,[end if] oversized dick press against your face";
@@ -115,7 +115,7 @@ When Play begins:
 	now name entry is "Ebonflame Dragator";
 	now attack entry is "[one of]The gator[or]The oversized lizard[or]The scaled beast[or]The Ebonflame Dragator[or]It[or]He[at random] [one of]lunges forward and snaps it jaws around one of your limbs, the horribly sharp teeth digging into you until you finally pry its jaw wide enough to free yourself[or]shreds you painfully with its claws[or]attempts to pin you against the ground, biting and clawing at you until you push yourself free[or]painfully bashes you with its large, powerful tail[at random].";
 	now defeated entry is "     With one final attack, the terrifying monster lets out a low groan and slumps onto the ground, completely spent and unable to move -- save for the occasional stirring. You decide it's probably best to move on before the gator recovers.";
-	now victory entry is  "[ebgatorvic]";
+	now victory entry is "[ebgatorvic]";
 	now desc entry is "[ebgatordesc]";
 	now face entry is "NA";
 	now body entry is "NA";

@@ -12,10 +12,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Taurus";
-	now attack entry is "[one of]The mighty bull charges at you. [or]Swinging his horns the bull tries to impale you on their pointy ends. [or]He takes a step back, tensing his muscles, then charges at you. [or]He groans and moos like a mad cow before going for a frantic attack. [or]His horns gleam with ecstasy  as he readies his next attack, then tries to spear you with one of them and leaves a bleeding scratch.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[ tauruslost]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is "[ tauruswon]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[ taurusdesc]";
+	now attack entry is "[one of]The mighty bull charges at you.[or]Swinging his horns the bull tries to impale you on their pointy ends.[or]He takes a step back, tensing his muscles, then charges at you.[or]He groans and moos like a mad cow before going for a frantic attack.[or]His horns gleam with ecstasy as he readies his next attack, then tries to spear you with one of them and leaves a bleeding scratch.[at random]"; [Text used when the monster makes an Attack]
+	now defeated entry is "[tauruslost]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is "[tauruswon]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[taurusdesc]";
 [	to be decided if Taurus will have an infection:
 	now face entry is "";
 	now body entry is "";
@@ -40,13 +40,13 @@ When Play begins:
 	now area entry is "Plains";[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0;[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 0;[ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 4;[ Number of Breasts infection will give you. ]
 	now breast size entry is 0;[Size of breasts infection will try to attain ]
 	now male breast size entry is 0;[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;[ Width of female sex  infection will try and give you ]
+	now cunt length entry is 0;[ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 0;[ Width of female sex infection will try and give you ]
 	now libido entry is 0;[ Amount player Libido will go up if defeated ]
 	now loot entry is "food";[ Loot monster drops, ]
 	now lootchance entry is 12;[ Chance of loot dropping 0-100 ]

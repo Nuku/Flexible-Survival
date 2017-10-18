@@ -93,10 +93,10 @@ When Play begins:
 	now name entry is "Komodo Dragon"; [Name of your new Monster]
 	now attack entry is "The [one of]Komodo Dragon[or]great lizard[or]brutish reptile[or]powerful reptile[or]reptilian creature[at random] [one of]bashes you with a powerful blow from its fist[or]slashes at you with its large claws[or]rakes its claws across your [bodytype of player] body[or]slaps its heavy tail into your [bodydesc of player] body[or]charges and rams his large body into yours, knocking you back[at random]!";
 	now defeated entry is "[beatthekomododragon]";
-	now victory entry is  "[losetokomododragon]";
+	now victory entry is "[losetokomododragon]";
 	now desc entry is "[komododragondesc]";
-	now face entry is "broad, somewhat flat, and blunted at the end. The snout extends about three feet and the nostrils are mere slits at the tip with a slightly raised ridge to mark where they are. The eyes are rounded like a human's and rest on the sides of the head, allowing for a far superior range of vision than most other creatures. This gives you a field of vision that is roughly 270 degrees, but has a smaller window for binocular vision. Down at your neck hang folds of skin to allow you to swallow your large chunks of food after unhinging your jaw";
-	now body entry is "very broad and extremely dense with muscle. Despite your ten-foot height, you have a very powerful, stocky frame. Your arms and legs are muscled and end in hooked claws meant for slashing and grabbing at prey. Your bowlegged stance and altered hips let you move either on all fours or on two legs with a slouching posture.";
+	now face entry is "broad, somewhat flat, and blunted at the end. The snout extends about three feet, and the nostrils are mere slits at the tip with a slightly raised ridge to mark where they are. The eyes are rounded like a human's and rest on the sides of the head, allowing for a far superior range of vision than most other creatures. This gives you a field of vision that is roughly 270 degrees, but has a smaller window for binocular vision. Down at your neck hang folds of skin to allow you to swallow your large chunks of food after unhinging your jaw";
+	now body entry is "very broad and extremely dense with muscle. Despite your ten-foot height, you have a very powerful, stocky frame. Your arms and legs are muscled, and end in hooked claws meant for slashing and grabbing at prey. Your bowlegged stance and altered hips let you move either on all fours or on two legs with a slouching posture.";
 	now skin entry is "[one of]rough[or]leathery[or]loose[or]scaled[or]brown-green[at random]";
 	now tail entry is "You have a strong tail that extends [if scalevalue of player is 5]eight[else if scalevalue of player is 4]six[else if scalevalue of player is 3]four[else if scalevalue of player is 2]three[else if scalevalue of player is 1]two[end if] feet from your body. Thick at the spine, it terminates to a blunted tip and seems to sway of its own accord from time to time.";
 	now cock entry is "[one of]reptilian[or]ridged[or]tapered[or]dark[at random]";
@@ -118,7 +118,7 @@ When Play begins:
 	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 2; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 20; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 15; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 15; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2; [ Number of Breasts infection will give you. ]
 	now breast size entry is 6; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]

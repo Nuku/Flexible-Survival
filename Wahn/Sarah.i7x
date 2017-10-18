@@ -912,7 +912,7 @@ instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Sa
 instead of going north from Bunker while (Sarah is in Bunker and SarahCured > 3 and SarahShower > 0 and library computer is powered and (lastShowerUse - turns > 4) and a random chance of 1 in 10 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Shower Scene with Sarah - SaraCured: [SarahCured][line break]";
-	say "     As you enter the communal shower-area, you see a small pile of clothing (a pair of jeans, a red shirt and no-frills black panties) and a towel sitting on the bench at the entrance. The spray of water is audible from the actual shower cabin through a  door. Looks like someone is making use of the running water, now that you've turned the power back on...";
+	say "     As you enter the communal shower-area, you see a small pile of clothing (a pair of jeans, a red shirt and no-frills black panties) and a towel sitting on the bench at the entrance. The spray of water is audible from the actual shower cabin through a door. Looks like someone is making use of the running water, now that you've turned the power back on...";
 	say "     [bold type]Do you want to have a look at who it may be?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - A quick glance shouldn't be a problem.";

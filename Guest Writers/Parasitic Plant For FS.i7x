@@ -140,10 +140,10 @@ When Play begins:
 	now body entry is "undeniably feminine with root-like legs, your needy cunt exuding a musky substance meant to attract males";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]green plant-like[or]beautiful plant-like[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "A very moist vagina replaced your anus, concealed by a dress made of long petals which extend down to the floor. ";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[if looknow is 1]tentacle cock[else][one of]vine-like[or]tentacle[or]green tendril[at random][end if]";[ Cock Description, format as you have a 'size' (your text) cock]
+	now cock entry is "[if looknow is 1]tentacle[else][one of]vine-like[or]tentacle[or]green tendril[at random][end if]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is " as long tendrils covered with leaves sprout like long green hair. A strange sensation spreads through your mouth as it seals up and your teeth disappear. A new slit forms just below your nose, ending at your chin, leaving you with a vagina for a mouth. It feels moist and fills your mind with an unending need for cum! At the same time, your face becomes rounder, and more feminine"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "a sudden surge of vines and roots spread like an infection through your body from a seed hidden inside of you. Your legs become root-like vines that dig into the ground if you stay in one place for too long, while the rest of your body shifts, leaving you much shorter, with feminine curves and a gorgeous body. Your pussy starts drooling a musky substance which arouses you"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "thin vines suddenly force their way out of your ass spreading outward over your skin from some unseen seed inside your body. They cover every inch and work their way into any orifice of your body  before sinking into your skin turning your entire body a dark plant-like green colour!"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now skin change entry is "thin vines suddenly force their way out of your ass spreading outward over your skin from some unseen seed inside your body. They cover every inch and work their way into any orifice of your body before sinking into your skin turning your entire body a dark plant-like green colour!"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a very strange sensation spreads around your waist and your anus seems to stretch almost painfully! Reaching back you find it is now shaped like a pussy. It feels so empty, practically begging you to fill it with a nice, hard cock! Around your waist, long petals sprout like a dress extending down to the floor"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is " followed by a sudden pain at your groin! Your cock seems to swell into an odd bulb-like shape and turn a green plant-like colour, while small green tendrils spread over your groin like roots."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 12;
@@ -164,8 +164,8 @@ When Play begins:
 	now breast size entry is 8; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0;[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 3; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 15; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 5; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 15; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 5; [ Width of female sex infection will try and give you ]
 	now libido entry is 40; [ Amount player Libido will go up if defeated ]
 	now loot entry is "musky cock flower";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]

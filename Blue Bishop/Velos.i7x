@@ -284,7 +284,7 @@ to say sgtalexmusing:
 		say "     'I can't--... How coul--... No words!  You know how hard it is for me to have no--... Why--...?'";
 		say "     'Are... Are you alright?'";
 		say "     'YOU'VE BEEN DUPED!  THE INFECTION'S MELTED YOUR BRAIN, YOU FOOL!'  You try really hard to calm Velos down, seeing as how his screaming is bound to attract unwanted attention.  'They don't want us to leave, I'll be trapped in this hellhole forever--This must be their most elaborate hallucination yet, if they're trying to break me this time it might just be working!'";
-		say "     'Oh god, I've seen  faces like that before.  He's losing it.  Maybe I should get a gun?'";
+		say "     'Oh god, I've seen faces like that before.  He's losing it.  Maybe I should get a gun?'";
 		say "     'I'd dare you to find one, but clearly you're all so thick that you'd probably shoot yourself by accident.'  Velos is about to go completely off the deep end by this point, white snake blatantly red with impotent rage, and you eventually have no choice but to force the serpent back inside you before other soldiers--doubtlessly drawn over by the sudden yelling--come to see what is up.  You wave them off, trying to be innocuous before you return to Alexander again.";
 	say "     'I think I might be going crazy... I'm going to pretend I didn't see what I just saw.  But if what I saw did just happen, I urge you not to show it to anyone else.'  Nodding silently, Tiny Tim just gazes at you, still horror-struck, as you depart.";
 	add 1 to velospostmusings;

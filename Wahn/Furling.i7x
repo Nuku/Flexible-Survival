@@ -147,7 +147,7 @@ When Play begins:
 	now name entry is "Furling";
 	now attack entry is "[one of]The furling slashes you with its long claws.[or]With a back-handed blow, the furling throws you to the ground.[or]The furling gives you a tight bear-hug, almost crushing you.[or]Grabbing your arm, the furling sinks its teeth into it.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Furling loses]";
-	now victory entry is  "[Furling wins]";
+	now victory entry is "[Furling wins]";
 	now desc entry is "[FurlingDesc]";            [ Description of the creature when you encounter it. ]
 	now face entry is "that of a young man, though with brightly orange slitted eyes and an impressive set of sharp predator's teeth and long fangs. A thick mane of orange-red fur covers your head down to your shoulders, with two pointy fox-like ears poking out of it at the top";
 	now body entry is "large, about ten feet tall and with a wide, powerful build. You have long arms bulging with muscles, ending in large clawed hands. A loose loincloth that looks like it once was a football shirt covers your crotch";

@@ -249,8 +249,8 @@ When Play begins:
 	now breast size entry is 4; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 17; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 24; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 17; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 24; [ Width of female sex infection will try and give you ]
 	now libido entry is 0; [done in the loss/win text]		[ Amount player Libido will go up if defeated ]
 	now loot entry is "fresh apple";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]

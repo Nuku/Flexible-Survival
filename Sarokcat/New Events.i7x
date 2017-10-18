@@ -103,7 +103,7 @@ Instead of Resolving a Hyena Gang:
 		say "Wandering the city again, you come across one of the areas claimed by that strange gang of hyenas, causing you to recall your last encounter with the strange hyena recruiter. As if summoned by your thoughts of her, you see a familiar looking hyena coming towards you from down a side street, a large grin on her hyena muzzle. Before you can decide what to do about it, you are quickly enveloped once more in a large and enthusiastic hug.[line break]";
 		say "'I thought I scented you!' The large herm hyena exclaims, still hugging you tightly, 'I knew you'd come back to join us, you said you would after all.' She says as she releases you, causing you to stagger for a minute, before she grabs your hand and starts dragging you down the street, heading deeper into what the graffiti tags proclaim to be hyena territory. 'You must be pretty special to have survived out here this long on your own, but you don't have to worry about that anymore' the hyena says as you are led through a bewildering maze of side streets and partially wrecked buildings to one of the warehouse districts. 'You have a whole gang on your side now, or pack, whatever you want to call it, you got our back, we got yours. Speaking of which,' She says as she stops in the middle of the street, facing a row of shipment warehouses. 'The names Gina, and I guess I'm your sponsor for now, so let me know if anyone bothers ya or if you need anything.' the newly introduced Gina says with a grin.[line break]";
 		say "'Course first we have to make sure you smell like you belong to me...' She says giving you an evil look. Before you can protest, she has you pinned to the ground underneath her, as she rubs her soft hyena furred body against yours. The sensation and sudden pouncing cause you to gasp in surprise, and she takes advantage of your open mouth to once more give you a deep kiss, exploring your mouth with her surprisingly flexible tongue, and filling you with her almost addictive personal flavor. Gina breaks the kiss, leaving your mouth open and panting as she continues to rub herself all over you, her hyenalike musk coating you in its arousing scent. You find it hard to think straight as she rubs her nipples across your face, letting you lick them and toy with them for a minute, before she backs off of you and hauls you unsteadily back up to your feet, still aroused and needy.[line break]";
-		say "'There now, that should help you fit in here better,' Gina  says with a self satisfied smirk as you can feel your body becoming more hyenalike already. 'And now everyone will know you belong to me.' She finishes with a grin, causing you to realize that her own musky scent seems to be clinging to you now, its bestial odor both strange and arousing at the same time. Noticing your increasing arousal, Gina runs her hand along your side slowly, causing you to twitch at the erotic sensation, while her other hand caresses her large package. 'Hmmm and if you want to pick up where that left off, maybe we should go inside instead of just standing around out here in the street.' So saying she walks up to one of the side doors to a nondescript warehouse nearby, swishing her hips and hyena tail at you as you follow her, your nose filled with her erotic scent and your mind on her lovely assets, leaving you unable to think about doing anything but follow along like a good little hyena. As she opens the door and ushers you inside, she gives you a minute to take it all in, before going over to several mattresses set up nearby, obviously letting you decide what to do next.'";
+		say "'There now, that should help you fit in here better,' Gina says with a self satisfied smirk as you can feel your body becoming more hyenalike already. 'And now everyone will know you belong to me.' She finishes with a grin, causing you to realize that her own musky scent seems to be clinging to you now, its bestial odor both strange and arousing at the same time. Noticing your increasing arousal, Gina runs her hand along your side slowly, causing you to twitch at the erotic sensation, while her other hand caresses her large package. 'Hmmm and if you want to pick up where that left off, maybe we should go inside instead of just standing around out here in the street.' So saying she walks up to one of the side doors to a nondescript warehouse nearby, swishing her hips and hyena tail at you as you follow her, your nose filled with her erotic scent and your mind on her lovely assets, leaving you unable to think about doing anything but follow along like a good little hyena. As she opens the door and ushers you inside, she gives you a minute to take it all in, before going over to several mattresses set up nearby, obviously letting you decide what to do next.'";
 		hyenaify;
 		now hyg is 4;
 		increase libido of player by 30;
@@ -143,7 +143,7 @@ The sarea of Transformed Seals is "Beach";
 
 Instead of Resolving a Transformed Seals:
 	say "While walking along the beach you come across a shiny object half buried in the sand, dreams of treasure come over you as you as you quickly uncover it. You are surprised to find just a couple thin pieces of metal, closer examination shows them to be a pair of navy seal dog tags. Looking around more carefully you notice the remains of several stretched and torn wet suits in the surf, and a few other telltale signs of a struggle. Quickly brushing the sand off your hands, you move on down the beach before whatever happened to them happens to you.";
-	now  Transformed Seals is resolved;
+	now Transformed Seals is resolved;
 
 Section 8- Wrecked ships
 
@@ -166,7 +166,7 @@ Instead of Resolving a Dolphin lotion:
 	Now Dolphin lotion is resolved;
 
 
-Section 10-  Broken fountain
+Section 10- Broken fountain
 
 Broken fountain is a situation.
 The sarea of Broken fountain is "Park".
@@ -179,7 +179,7 @@ Instead of Resolving a Broken fountain:
 
 
 
-Section 10-  Scenic View
+Section 10- Scenic View
 
 Scenic View is a situation.
 The sarea of Scenic View is "Park".
@@ -191,7 +191,7 @@ Instead of Resolving a Scenic View:
 	Now Scenic View is resolved;
 
 
-Section 11-  Twisted grove
+Section 11- Twisted grove
 
 Twisted grove is a situation.
 The sarea of Twisted grove is "Park".
@@ -205,7 +205,7 @@ Instead of Resolving a Twisted grove:
 	Now Twisted grove is resolved;
 
 
-Section 12-  Ominous hole
+Section 12- Ominous hole
 
 Ominous hole is a situation.
 The sarea of Ominous hole is "Park".
@@ -254,7 +254,7 @@ Instead of Resolving a library visitor:
 	else if libvis is 2:
 		say "returning from your hours of searching the city, you are relieved to see the library up ahead of you, and the chance to rest and relax a little from your scavenging. However just as soon as you let your guard down to unlock the door and let yourself in, one of the creatures prowling the city springs out of concealment and attacks!'";
 		fight;
-		say "Finally driving away the creature, you quickly duck inside the library to rest and relax, your heart hammering from the  shock of the unexpected fight and the fight itself. The beast was obviously lying in wait for your return, making you wonder if it was the creature that has been trying to get into the library these past several times. Hopefully its defeat at your hands means it won't be back this way again anytime soon, then again if it does come back you suppose you will just have to be ready for it.";
+		say "Finally driving away the creature, you quickly duck inside the library to rest and relax, your heart hammering from the shock of the unexpected fight and the fight itself. The beast was obviously lying in wait for your return, making you wonder if it was the creature that has been trying to get into the library these past several times. Hopefully its defeat at your hands means it won't be back this way again anytime soon, then again if it does come back you suppose you will just have to be ready for it.";
 		increase libvis by 1;
 	else if libvis is 3:
 		say "Returning to the library you are shocked to open the door to find that you appear to have had a visitor again, only this time they somehow made their way inside. You look around at the library entrance and the books knocked over and the obvious signs of someone or something searching the place, probably for you. Checking carefully you determine that whatever it was and however it got in here, at least now it seems to be long gone, luckily enough. Following what you can of its trail, you sigh in relief as it doesn't seem to have found the entry to the bunker in its searching, of course you still haven't figured out how it found its way in to begin with...";
@@ -291,7 +291,7 @@ Instead of resolving a ruined supplies:
 		now thirst of player is 0;
 		Now ruined supplies is resolved;
 	else:
-		say "Deciding it's perhaps best not to get involved in such a total mess, just on the off chance you might find something useful left in the remains, you  continue along your way doing your best to forget the horrible carnage you are leaving behind.";
+		say "Deciding it's perhaps best not to get involved in such a total mess, just on the off chance you might find something useful left in the remains, you continue along your way doing your best to forget the horrible carnage you are leaving behind.";
 		Now ruined supplies is resolved;
 
 

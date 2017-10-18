@@ -32,7 +32,7 @@ to say felinegymnastdesc:
 	3 - Footjob(M/H), Get fucked (F)
 	4 - Fuck her (M/H)
 	5 - Get fucked (H)]
-[Note: Uses anallevel  1=no anal, 2=you will do her butt, 3=50/50 she rims and does your butt instead of 2]
+[Note: Uses anallevel: 1=no anal, 2=you will do her butt, 3=50/50 she rims and does your butt instead of 2]
 
 to say losetofelinegymnast:
 	say "     You let out one last, pained groan as you slump onto the ground in front of the bench, too battered to move.";

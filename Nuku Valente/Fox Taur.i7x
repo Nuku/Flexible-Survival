@@ -47,7 +47,7 @@ A Fox Taur is a infection model.  The description of a Fox Taur is "A strange cr
 
 The move rate of a Fox Taur is 2.
 The attack rate of a Fox Taur is 2.
-The reflex of a Fox Taur  is 15.
+The reflex of a Fox Taur is 15.
 The attack type of a fox taur is "engulf".
 The secondary attack description of a fox taur is "begins to pant and moan needfully, rocking their large hind legs back and forth as they give birth with what looks to be utter satisfaction. They only open their eyes when it is done and a puddle of their fluids has gathered back there around the new form.".
 The primary attack description of a Fox Taur is "[one of]slides up against their victim, pressing their large breasts temptingly while whispering soft nothings in an ear, a hand brushing across[or]leaps at the target of their interest, tackling them to the ground and grinding her groin against[at random]".

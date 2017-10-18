@@ -97,10 +97,10 @@ When Play begins:
 	now name entry is "Chinchilla";
 	now attack entry is "[one of]She[or]The chinchilla[at random] [one of]pounces onto you, clinging to your [bodydesc of player] form. You manage to pry her off, but not before she assails you with a barrage of clawing and nipping[or]manages to get close to one of your legs, chomping down and holding on for dear life until you finally kick her free[or]swipes at you with her tiny claws[or]manages to kick you with one of her more powerful hindpaws[or]finds and rock and manages to throw it at you[at random].";
 	now defeated entry is "[chinloss].";
-	now victory entry is  "[chinvic]";
+	now victory entry is "[chinvic]";
 	now desc entry is "[chindesc]";
-	now face entry is "short chinchilla muzzle, small grey mouse-like ears, and cute, little whiskers adorned on your";[ Face description, format as the text "You have a (your text) face."]
-	now body entry is "voluptuous and somewhat bestial. You have powerful hindpaws that that allow you to move with some speed and grace.";[ Body Description, format as the text "Your Body is (your text)"]
+	now face entry is "short chinchilla muzzle, small grey mouse-like ears, and cute, little whiskers adorned on it";[ Face description, format as the text "You have a (your text) face."]
+	now body entry is "voluptuous and somewhat bestial. You have powerful hindpaws that allow you to move with some speed and grace";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]grey fur[or]downy soft fur[at random] in place of";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You fairly long tail which fluffs out quite a bit.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]tapered[or]chinchilla[at random], pinkish";[ Cock Description, format as you have a 'size' (your text) cock]
@@ -127,8 +127,8 @@ When Play begins:
 	now breast size entry is 3; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 7; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 7; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 6; [ Width of female sex infection will try and give you ]
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
 	now loot entry is "tuft of chin fur";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]

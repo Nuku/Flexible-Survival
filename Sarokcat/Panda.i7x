@@ -57,9 +57,9 @@ When Play begins:
 	now name entry is "Panda";
 	now attack entry is "[one of]She charges at you eagerly![or]Lowering her head, she rams it into you, knocking you on your ass.[or]She slaps you with her big bearlike paw![or]Charging forward, she manages to trip, and goes rolling out of control right into you![at random]";
 	now defeated entry is "[panda loss]";
-	now victory entry is  "[panda attack]";
+	now victory entry is "[panda attack]";
 	now desc entry is "[panda appears].";
-	now face entry is "short panda like muzzle, your face a blend of panda and human features, with large dark eyes surrounded by black rings, your short round ears swivel around nimbly on top of your";   ["You have a (your text) face."]
+	now face entry is "a blend of panda and human features, with large dark eyes surrounded by black rings, your short round ears swivel around nimbly";   ["You have a (your text) face."]
 	now body entry is "Stocky and somewhat rounded, you have a slightly ursine body, though obviously still with some human influences, your legs are however slightly shorter, as are your arms, giving you a rather rounded, appearance. Though your hands are tipped with panda-like claws, they are still easily able to grip and manipulate objects.";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]black and white patterned[or]panda furred[or]soft furred[or]short panda furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a small fluffy panda tail hanging down your ample backside.";[ Tail description, write a whole Sentence or leave blank. ]

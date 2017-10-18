@@ -119,7 +119,7 @@ A hyperlink processing rule (this is the default command replacement by hyperlin
 
 Chapter 2 - Replace Flexible Windows hyperlink handling if necessary (for use with Flexible Windows by Jon Ingold)
 
-Section - Code for placing links (replaces Section - Placing hyperlinks in  Flexible Windows by Jon Ingold)
+Section - Code for placing links (replaces Section - Placing hyperlinks in Flexible Windows by Jon Ingold)
 
 The hyperlink list is a list of indexed texts variable.
 
