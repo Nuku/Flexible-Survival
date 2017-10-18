@@ -7,7 +7,8 @@ Version 1 of Demon Fox by Dys begins here.
 [   10 = encountered and lost                                             ]
 [   20 = encountered and submitted                                        ]
 [   30 = encountered and fled                                             ]
-[   40 = encountered and won                                              ]
+[   40 = encountered and won, but refused sex                             ]
+[   41 = encountered and won, let him fuck you                            ]
 
 DemonFoxStatus is a number that varies. DemonFoxStatus is usually 0.
 
@@ -157,8 +158,23 @@ to say DemonFoxFirstFlee:
 	WaitLineBreak;
 
 to say DemonFoxFirstVictory:
-	say "     You strike the defeated demon one more time for good measure, before he <insert scene here>";
-	now DemonFoxStatus is 40; [won]
+	say "     You strike the defeated demon one more time for good measure, and he lets out one last yelp of pain before he shakes his head. 'Alright. Enough. I see that forcing myself onto you may not have been wise,' he admits, looking over your form. 'Considering your victory, it's only fair that I offer some sort of retribution.' You ask him to elaborate. 'What I'm saying is, I will gladly take you, [italic type]gently[roman type], of course. If you're not interested in that, then I'm afraid there's not much more I can offer. I'm not one to bottom, and even if you try to force me to, I'll just go back into the book. It's up to you.'";
+	say "     [bold type]Well, considering the offer, what do you do?[roman type][line break]";
+	say "     [link]Let the fox mount you[as]y[end link] - (Y)[line break]";
+	say "     [link]Decline his offer[as]n[end link] - (N)[line break]";
+	if player consents:
+		say "     You tell the fox that you'd like him to fuck you, and he seems to get an excited gleam in his vulpine eyes. 'Glad to hear it. I'll be gentle,' he purrs out, and you can't help but shudder in anticipation. 'Now why don't you get into position for me?' You quickly comply, presenting your ass to him, waggling it back and forth teasingly. He lets out a chuckle before he sniffs the air a few times. Pressing his snout into your crack, the fox gives a few sniffs there as well before his tapered tongue darts out of his mouth, giving you a few licks. 'You mortals have always tasted good...'";
+		WaitLineBreak;
+		say "     You can't help but whine in disappointment as his muzzle departs from your rear. That disappointment only lasts for a moment, however, as you soon feel him wrapping his forepaws around your was, mounting you. He gives you a few gentle prods with his massive cock before he pushes his head into you slowly. You can't help but let out a moan as he gently pushes more of his shaft into you, until his first ridge begins to push in. 'This might hurt a bit,' he warns you as he pushes a little harder. The ridge eventually manages to go in, albeit with a little bit of pain. Soon enough the next ridge is pressing into you. That one goes in a little easier than the first. The next two are even easier than the previous. With his knot resting against your entrance, the fox grunts before pulling back out. Each ridge leaves you with a soft squelch.";
+		say "     Now that only his tip remains inside you, he pushes back in. This thrust goes by faster, your hole getting used to his size. Pretty soon, he's built up a decent rhythm, and you can help but push your own body back, meeting his thrusts. 'I'm going to speed up now,' he warns you. His next thrust is much more agressive and primal, his knot bashing against your entrance. Your own thrust grow in fervor, determined to get the demon's massive knot in you. With each thrust, more and more of the knot slips inside you, until it finally passes its widest point and your own body pulls it in the rest of the way. His knot firmly buried inside you, it swells to it's full size, ensuring the two of you won't be moving anytime soon. He let's out a howl of pleasure as his cock throbs and errupts inside you, rope after rope of molten, gloqing cum spilling into you. [if cocks of player > 0]You own orgasm follows shortly after, your cock[smn] shooting your [cum load size of player] load onto the ground below you. [end if]More and more of his molten seed fills you, and your belly swells with its weight. By the time his orgasm abates and his knot has shruken down, your belly is rather swollen and decently rounded out from the load. 'That was fun, kit,' he pants in your ear. 'I think you'd enjoy being my pet, if you liked that...'";
+		say "[mimpregchance]";
+		WaitLineBreak;
+		say "     Eventually, he pulls out of your hole, a dribble of his glowing cum flowing out. He gives a few laps at your stretched hole before walking around to face you. 'We should do this again sometime,' he growls suggestively. 'However, I think it's time for me to depart.' A blinding flash suddenly fills your vision, and once it clears, he's gone. If you'd like to see him again, you could [italic type]use the tome[roman type].";
+		infect "Demon Fox";
+		now DemonFoxStatus is 41; [won, let him fuck you]
+	else:
+		say "     You tell the demon that you're simply not interested, and he gives a nod. 'A pity really. You looked like you'd be a fun partner,' he laments. 'I'll respect your wishes, however. If you ever change your mind, you know where to find me.' In a blinding flash of light, the fox is suddenly gone, the tome laying where he once stood.";
+		now DemonFoxStatus is 40; [won, but refused sex]
 	WaitLineBreak;
 
 Demon Fox ends here.
