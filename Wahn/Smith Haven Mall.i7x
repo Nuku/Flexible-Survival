@@ -29,6 +29,7 @@ Instead of examining the Mall Food Court entrance:
 Section 2 - Mall Lot North
 
 The description of Smith Haven Mall Lot North is "[mallnorthlot]".
+earea of Smith Haven Mall Lot North is "Outside".
 
 To say mallnorthlot:
 	If daytimer is day:
@@ -43,6 +44,7 @@ the scent of Smith Haven Mall Lot North is "The light breeze blowing around you 
 Section 3 - Mall Lot East
 
 The description of Smith Haven Mall Lot East is "[malleastlot]".
+earea of Smith Haven Mall Lot East is "Outside".
 
 To say malleastlot:
 	If daytimer is day:
@@ -57,6 +59,7 @@ the scent of Smith Haven Mall Lot East is "The light breeze blowing around you c
 Section 4 - Mall Lot West
 
 The description of Smith Haven Mall Lot West is "[mallwestlot]".
+earea of Smith Haven Mall Lot West is "Outside".
 
 To say mallwestlot:
 	If daytimer is day:
@@ -71,6 +74,7 @@ the scent of Smith Haven Mall Lot West is "The light breeze blowing around you c
 Section 5 - Mall Lot South
 
 The description of Smith Haven Mall Lot South is "[mallsouthlot]".
+earea of Smith Haven Mall Lot South is "Outside".
 
 To say mallsouthlot:
 	If daytimer is day:

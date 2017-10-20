@@ -9,7 +9,7 @@ The description of beach plaza is "[BeachplazaDesc]".
 earea of Beach Plaza is "Outside".
 
 to say BeachplazaDesc:
-	say "     Quite different from the dirty, ill-kempt streets of the city you know, the plaza you are standing upon presents itself in a sunny scene. It is fairly large, open and relatively clean, with a boardwalk extending toward the west. You can see a wooden railing in the distance there, with the sea visible beyond that. Remembering the layout of the beach from previous visits, you know that there is a sharp cliff over there, with stairs leading down to the public beach and the rest of the coastline. To the north is a church, its wide doors open and inviting.";
+	say "     Quite different from the dirty, ill-kempt streets of the city you know, the plaza you are standing upon presents itself in a sunny scene. It is fairly large, open and relatively clean, with a boardwalk extending toward the west. You can see a wooden railing in the distance there, with the sea visible beyond that. Remembering the layout of the beach from previous visits, you know that there is a sharp cliff that way, with stairs leading down to the public beach and the rest of the coastline. To the north is a church, its wide doors open and inviting.";
 	say "     Numerous infected are present on this peaceful plaza, strolling around in a relaxed fashion and checking out various vendor stalls and buildings. Which is a bit surprising, to say the least - given the state of affairs everywhere else. Maybe the towering bronze statue of a crab straddling the street like an archway has something to do with it. You certainly do not remember that being there before all the trouble in the city started.".
 
 Beach Exit is a door. Beach Exit is dangerous.
@@ -42,7 +42,7 @@ Boardwalk2 is a room with printed name "Boardwalk".
 earea of Boardwalk2 is "Outside".
 
 to say BoardwalkDesc:
-	say "     The broad boardwalk you are standing on extends for a fair bit, starting at the beach plaza to east of your position and leading to the edge of the beachside cliffs just west of here. A broad wooden railing makes sure no one falls over the edge while they enjoy the view of the open ocean and the beach and coastline at the foot of the cliff. A set of broad stairs lead down to the beach, twisting back and forth as they descend the rock wall. Meanwhile, small stores flank the boardwalk up here, although from what you can see they are almost uniformly closed. Apparently most now house people who are living in them, no doubt fled from the city to this halfway peaceful area.";
+	say "     The broad boardwalk you are standing on extends for a fair bit, starting at the beach plaza to east of your position and leading to the edge of the beachside cliffs just west of here. A wooden railing makes sure no one falls over the edge while they enjoy the view of the open ocean and the beach and coastline at the foot of the cliff. A set of broad stairs lead down to the beach, twisting back and forth as they descend the rock wall. Meanwhile, small stores flank the boardwalk up here, although from what you can see they are almost uniformly closed. Apparently most now house people who are living in them, no doubt fled from the city to this halfway peaceful area.";
 	say "     There is a decent amount of people of all sorts of species here, either chit-chatting or simply just hanging out by themselves, sitting at one of the many tables of a cafe that is actually still open. Sadly, the long line coming out of the door tells you that you won't be getting an ice-cream cone or other treat anytime soon. Overall, this area is a nice difference from the insanity of the city as everyone here appears to just want to relax.";
 
 instead of sniffing the Boardwalk2:
@@ -143,7 +143,9 @@ instead of sniffing the Rocky Cliff:
 South of Rocky Cliff is BeachEnd.
 The description of BeachEnd is "[BeachEndDesc]".
 BeachEnd is southwest of Public Beach.
+BeachEnd is a room with printed name "End of the Beach".
 BeachEnd is a Room.
+earea of BeachEnd is "Beach".
 
 to say BeachEndDesc:
 	say "     The sand here curves sharply towards the cliff-side, meeting it a little further south, just where the cliff actually ends in the cean. Beyond, the water gets deeper quickly, and numerous craggy rocks stick out of the ocean, constantly trashed by crashing waves. That looks like a rather unhealthy area to get into the water - but wait, at one spot, there is a kind of coral-encrusted arch allowing passage through the rocks. Maybe you could brave the ocean after all and [bold type]swim[roman type] that way? Of course, if you just want to get wet, why not head east instead - inside the bay, the waters are shallow and much calmer. Otherwise, you can head northeast to the public beach or north to the foot of the rocky cliff where it gets much taller and more jagged.";
