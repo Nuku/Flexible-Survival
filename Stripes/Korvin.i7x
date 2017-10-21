@@ -474,6 +474,11 @@ to say subby_Korvin_sexmenu:
 		say "***M/F subby Korvin sex.";
 	now lastfuck of gshep is turns;
 
+Section 6 - Events
+
+[ Korvin sniffs after a female bull terrier -> see file Wahn/Mall Expansion.i7x]
+[ Korvin meets a young adult beagle boy -> see file Speedlover/Extra College Events.i7x]
+[ Korvin antagonizes Tehuantl -> see file Wahn/Tehuantl.i7x]
 
 [ *** notes ]
 [

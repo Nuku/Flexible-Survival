@@ -176,10 +176,10 @@ When Play begins:
 	now defeated entry is "[hermaphrodite latex vixen defeat]";
 	now victory entry is "[hermaphrodite latex vixen victory]";
 	now desc entry is "[hermaphrodite latex vixen desc]";
-	now face entry is "short muzzle filled with very sharp carnivorous teeth set below deep brilliant green eyes and pointed fox like ears, all giving you a slightly intimidating yet very alluring";
-	now body entry is "tall and nimble, with ample curves. You have fox-like digitigrade legs that end in sharp claws.";
-	now skin entry is "shiny white rubber latex skin running from just above your nose all the way down your inner thighs, just covering your stomach. Glistening black latex covers your hands up to your elbows, and you feet up to your knees, giving you the appearance of long black gloves and boots. The rest of your body is covered in a bright rubbery red";
-	now tail entry is "You have a long red bushy fox tail. The most remarkable thing about the tail is the fur that covers it, instead of being fine strands of fur it is actually fine strands of rubber. Even though it must weigh over 20 pounds you find it doesn't affect your balance, in fact it seems to help.";
+	now face entry is "short muzzle filled with very sharp carnivorous teeth set below deep brilliant green eyes and pointed fox-like ears, all giving you a slightly intimidating yet very alluring";
+	now body entry is "tall and nimble, with ample curves. You have fox-like digitigrade legs that end in sharp claws";
+	now skin entry is "shiny white rubber latex skin running from just above your nose all the way down your inner thighs, just covering your stomach. Glistening black latex covers your hands up to your elbows, and your feet up to your knees, giving you the appearance of long black gloves and boots. The rest of your body is covered in a bright rubbery red";
+	now tail entry is "You have a long red bushy fox tail. The most remarkable thing about the tail is the fur that covers it, instead of being fine strands of fur it is actually fine strands of rubber. Even though it must weigh over 20 pounds you find it doesn't affect your balance, in fact, it seems to help.";
 	now cock entry is "[one of]bright pink[or]knotted[or]black sheathed[at random]";
 	now face change entry is "it starts to contort, drawing into a short muzzle. Your ears migrate to the top of your head pointing straight up, while your eyes change to a deep green";
 	now body change entry is "you start to lose muscle definition, accentuating your curves. You feel a tingling in your legs as you hear bone cracking and reshaping leaving you with digitigrade legs ending in sharp claws";

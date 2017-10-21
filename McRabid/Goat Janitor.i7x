@@ -74,7 +74,7 @@ When Play begins:
 	now defeated entry is "[BeatTheGoatJanitor]";
 	now victory entry is "[LoseToGoatJanitor]";
 	now desc entry is "[Goat Janitor desc]";
-	now face entry is "that of an anthropomorphic goat, covered in fur and with your nose and mouth drawn out into a short muzzle.  A pair of curved horns grow from your forehead and you have a long goatee hanging from your chin";
+	now face entry is "that of an anthropomorphic goat, covered in fur and with your nose and mouth drew out into a short muzzle.  A pair of curved horns grow from your forehead, and you have a long goatee hanging from your chin";
 	now body entry is "humanoid, with a scraggly build and a slightly pudgy belly.  Despite that, you feel pretty confident with your climbing skills due to your two digitigrade goat legs, complete with hooves";
 	now skin entry is "grey-furred";
 	now tail entry is "A short tail hangs limply over your ass, giving an occasional twitch.";

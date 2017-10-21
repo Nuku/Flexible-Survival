@@ -177,13 +177,13 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	let nam be name entry;
 [	let typ be type entry;	]
 	let found be 0;
-	repeat through the table of infection graphics:
+	repeat through the table of game art:
 		if title entry is nam:
 			now found is 1;
 			project icon entry;
 			break;
 [	if found is 0:
-		repeat through the table of infection graphics:
+		repeat through the table of game art:
 			if title entry matches the text typ:
 				now found is 1;
 				project icon entry;

@@ -41,7 +41,7 @@ When Play begins:
 	now defeated entry is "[beateasterbunny]";
 	now victory entry is "[losetoeasterbunny]";
 	now desc entry is "[easterbunnydesc]";
-	now face entry is "rabbit-like head with a short muzzle and large, floppy ears. Your eyes are of mismatched colour, one blue and the other brown. Your long, flowing hair is a colourful [if cocks of player > 0 and cunts of player > 0]blue[else if cocks of player > 0]purple[else if cunts of player > 0]pink[else]yellow[end if] and always seems to stay fashionably styled";
+	now face entry is "that of a rabbit-like head with a short muzzle and large, floppy ears. Your eyes are of mismatched colour, one blue and the other brown. Your long, flowing hair is a colourful [if cocks of player > 0 and cunts of player > 0]blue[else if cocks of player > 0]purple[else if cunts of player > 0]pink[else]yellow[end if] and always seems to stay fashionably styled";
 	now body entry is "slender and sexy, like a sexy [if cunts of player > 0]Playboy model[else]boytoy[end if]. Your thighs are strong and put a lot of bounce in your legs, helping to show off your assets. Your hands and feet are small and dainty, but a little paw-like as well, having fluff and pads, making them bunny-like as well";
 	now skin entry is "soft fur of a [if cocks of player > 0 and cunts of player > 0]pretty pink[else if cocks of player > 0]coral blue[else if cunts of player > 0]sunshine yellow[else]pastel orange[end if] colour over your sensitive";
 	now tail entry is "You have the cutest little bunny tail of [if cocks of player > 0 and cunts of player > 0]pink[else if cocks of player > 0]blue[else if cunts of player > 0]yellow[else]orange[end if] and white fluff poking out just above your curvy ass";

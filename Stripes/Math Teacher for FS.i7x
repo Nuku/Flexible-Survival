@@ -100,7 +100,7 @@ When Play begins:
 	now defeated entry is "[beatthemathteacher]";
 	now victory entry is "[losetomathteacher]";
 	now desc entry is "[mathteacherdesc]";
-	now face entry is "a female human's head. You have wire-framed reading glasses in front of your strict eyes. Your brown hair is kept in a neat bun and you're wearing red lipstick. From time to time your thoughts [one of]drift to numbers and equations rather than words and ideas[or]get caught up in a numerical analysis of the genitals of the various creatures you spot[or]mull over what paths through the city might get you the most sex[at random]";
+	now face entry is "a female human's head. You have wire-framed reading glasses in front of your strict eyes. Your brown hair is kept in a neat bun, and you're wearing red lipstick. From time to time your thoughts [one of]drift to numbers and equations rather than words and ideas[or]get caught up in a numerical analysis of the genitals of the various creatures you spot[or]mull over what paths through the city might get you the most sex[at random]";
 	now body entry is "a human female body. You are wearing a white, button-up shirt with a pocket protector in it. Half-hidden by your knee-length brown skirt, you have long, shapely legs with brown high-heeled shoes on your feet";
 	now skin entry is "human";
 	now tail entry is "";

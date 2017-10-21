@@ -33,7 +33,7 @@ To say gator loss:
 		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 		if cocks of player is greater than 0:
 			say "Your own member stiffens unconsciously, responding to the obvious signals of readiness this beast is sending.";
-		say "You wrap your hands around her in return in a brief exchange. Your hands find that, despite her thick looking scales, the gator is soft to the touch, and quite round. If you closed your eyes, she is nothing but a full bodied woman, with a few extras. Her fertile form gently squirms from you with a snap of her great jaws, 'Visit, soon. I will be waiting,' she promises, slipping away into the darkness with a sway of her thick tail.";
+		say "You wrap your hands around her in return in a brief exchange. Your hands find that, despite her thick looking scales, the gator is soft to the touch, and quite round. If you closed your eyes, she is nothing but a full-bodied woman, with a few extras. Her fertile form gently squirms from you with a snap of her great jaws, 'Visit, soon. I will be waiting,' she promises, slipping away into the darkness with a sway of her thick tail.";
 		now gator den is known;
 	else:
 		say "The gator lets out an uncomfortable hiss as she is beaten, slinking off into the waters with an unhappy thrash of a tail. You can feel her eyes on you as she looks back to you a moment before she is gone.";
@@ -52,7 +52,7 @@ When Play begins:
 	now victory entry is "[gator attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 5]She emerges from the muck, surprisingly clean despite the surroundings. Her green scales glint in the light as she saunters towards you, snout curled in a smile as her wide hips sway, '[one of]I was looking for someone to play with.[or]Did you come looking for me?[or]I love a good wrestle![at random]' she says, thick tail swaying as she crouches over, thick cock dangling between her scaly thighs and breasts heaving with her breath as she readies for battle.";
 	now face entry is "long reptilian snout, with nostrils perched at the top end and long tearing teeth filling your crocodilian maw";
-	now body entry is "full bodied, with wide hips and narrow waist.  Your form feels full of strength and tough to boot.  Peeking behind you, you can see you have two sets of bony ridges running down towards your ass";
+	now body entry is "full-bodied, with wide hips and narrow waist.  Your form feels full of strength and tough to boot.  Peeking behind you, you can see you have two sets of bony ridges running down towards your ass";
 	now skin entry is "[one of]green scaled[or]softly scaled[or]thick scaled[at random]";
 	now tail entry is "You have a broad, reptilian, tail. It has two ridges that run along the top, converging at the tip. It is covered in [skin of player] flesh and sways behind you with every step.";
 	now cock entry is "[one of]reptilian[or]gator[at random]";[ Cock Description, format as you have a 'size' (your text) cock]

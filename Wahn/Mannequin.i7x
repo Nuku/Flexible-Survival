@@ -41,7 +41,7 @@ When Play begins:
 	now victory entry is "[mannequin wins]";
 	now desc entry is "[mannequinDesc]";
 	now face entry is "smooth, with striking angular features like a statue";
-	now body entry is "that of a idealized male, with washboard abs and muscled arms and legs";
+	now body entry is "that of an idealized male, with washboard abs and muscled arms and legs";
 	now skin entry is "pale and flawless";[ format as the text "You have (your text) skin"]
 	now tail entry is "";[ write a whole Sentence or leave blank. ]
 	now cock entry is "human";[ format as "You have a 'size' (your text) cock ]

@@ -18,6 +18,7 @@ use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 2000.
 use MAX_ACTIONS of 2000.
 use MAX_VERBS of 2000.
+use MAX_VERBSPACE of 50000.
 use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
 Use MAX_DICT_ENTRIES OF 2400.
@@ -36,7 +37,7 @@ Include Basic Screen Effects by Emily Short.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 59.
+The release number is 61.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -189,6 +190,7 @@ the player has a list of text called invent.
 the player has a list of text called vials.
 Rooms has a list of text called invent.
 The player has a list of text called feats.
+The player has a list of text called BlockList.
 A person can be a trader.
 Scenario is a text that varies.
 Allobjs is a list of text that varies.
@@ -825,13 +827,15 @@ ishunting is a truth state that varies.  ishunting is usually false.
 understand "hunt [text]" as hunting.
 
 check hunting:
-	if there is no dangerous door in the location of the player:
-		say "I don't see any good hunting grounds around here." instead;
-	else if blindmode is true:
+	if blindmode is true:
 		say "You're playing in blind-mode, so hunting is not allowed.  You'll have to try exploring to find what you seek." instead;
-	else:
+	else if there is a dangerous door in the location of the player: [danger door]
 		let y be a random dangerous door in the location of the player;
 		now battleground is the marea of y;
+	else if earea of location of player is not "void": [explore/hunt anywhere]
+		now battleground is earea of location of player;
+	else: [neither option available]
+		say "I don't see any good hunting grounds around here." instead;
 
 carry out hunting:
 	let Q be a list of numbers;
@@ -4227,7 +4231,7 @@ This is the cunt descr rule:
 	else if cunt length of player is less than 8:
 		now descr is "[one of]average[or]normal sized[at random]";
 	else if cunt length of player is less than 12:
-		now descr is "[one of]large[or]thick lipped[or]above average[at random]";
+		now descr is "[one of]large[or]thick-lipped[or]above average[at random]";
 	else if cunt length of player is less than 18:
 		now descr is "[one of]belly bulgingly huge[or]inhumanly deep[or]forearm length[at random]";
 	else if cunt length of player is less than 25:
@@ -4317,7 +4321,7 @@ This is the self examine rule:
 			now cunttext is " have [cunts of the player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random].  Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around.  They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 		else:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around.  It is [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
-	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
+	say "Looking at yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "face":
@@ -4987,6 +4991,8 @@ Include Text Capture by Eric Eve.
 [Locations]
 Include Apocalypse Store by DrGryphon.
 Include Approaching the Capitol Building for FS by Guest Writers.
+Include Astroslide Field Locker-room by Kernog.
+Include Astroslide Football Field by Kernog.
 Include Beach by Speedlover.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
@@ -5267,7 +5273,7 @@ Include Latex Mistress For Fs by Stripes.
 Include Latex Wolf for FS by Stripes.
 Include Leopardman by Sarokcat.
 Include Liquidshifter by Ssely.
-Include Lizard Girl For Fs by Damaged.
+Include Lizard Girl by Damaged.
 Include Lusty Skunk by Nuku Valente.
 Include Magic Drake by Stripes.
 Include Male Peacock for FS By Guest Writers.
@@ -5488,6 +5494,7 @@ Include Rane by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
 Include Richard by Rikaeus.
 Include RodAndRonda by Stripes.
+Include Roman by Kernog.
 Include Sally by Stripes.
 Include Sam for FS by Stripes.
 Include Santa Claws by Wahn.
@@ -5504,7 +5511,9 @@ Include Sven by Stripes.
 [Include Sylvia by Prometheus.] [WIP]
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
+Include Tenvale Gorillas Football Team by Kernog.
 Include Thomas by Wahn.
+[Include Thunderbolt by CrimsonAsh. This does not exist.]
 Include Timothy by Sarokcat.
 Include Tristian by Verath.
 Include Urik by Wahn.

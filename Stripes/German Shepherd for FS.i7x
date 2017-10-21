@@ -750,12 +750,12 @@ When Play begins:
 	now victory entry is "[losetogsd]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block]
 	now desc entry is "[gsd_desc]";
 	now face entry is "distinctly canine, with a long canine muzzle filled with sharp teeth and a pair of expressive pointed ears atop your head";
-	now body entry is "that of a bipedal dog, with digitigrade legs and paw like hands";
+	now body entry is "that of a bipedal dog, with digitigrade legs and paw-like hands";
 	now skin entry is "coarse, brown and black furred";
 	now tail entry is "Behind you is a dog's tail, which whips about expressively and frequently betrays your mood.";
-	now cock entry is "[if looknow is 1]surrounded in a tight [skin of player] sheath, protecting the wonderfully sensitive German Shepherd cock residing within[else][one of]knotted[or]animalistic canine[or]doggy[at random][end if]";
+	now cock entry is "[if looknow is 1]surrounded in a tight sheath surrounded by [skin of player] skin, protecting the wonderfully sensitive German Shepherd cock residing within[else][one of]knotted[or]animalistic canine[or]doggy[at random][end if]";
 	now face change entry is "it draws forward into a canine muzzle, which rapidly fills with teeth and a broad, lolling tongue. At the same time, your ears become more pointed and expressive and migrate towards the top of your now canine head";
-	now body change entry is "your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw like and your hands become somewhat paw like with dull black claws in the tips";
+	now body change entry is "your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw-like and your hands become somewhat paw-like with dull black claws in the tips";
 	now skin change entry is "fur begins to push through from underneath, soon covering you in a coarse, protective coat of brown and black fur";
 	now ass change entry is "a long tail pushes from your spine. It rushes straight out, then curles between your legs at the feeling of shock as you study the appendage";
 	now cock change entry is "your shaft tapers out, becoming slender, though a huge swelling comes into being towards the base, a knot. The skin turns reddish before the whole thing slowly withdraws into a sheath you didn't have a moment ago";

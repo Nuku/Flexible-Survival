@@ -117,7 +117,7 @@ When Play begins:
 	now victory entry is "[losetosiren]";
 	now desc entry is "[sirendesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "beautifully human, with lovely, feminine features and long, flowing hair. Hidden behind your luscious lips are a set of sharp, pointed teeth. Your voice has a musical quality to it whenever you speak";
-	now body entry is "nearly human and quite lovely to behold. You have a pair white wings sprouting from the shoulder blades. Your wings are large and powerful, but not quite enough to let the you to take flight. The entire appearance of your body is actually strangely attractive. Your arms and legs are slender and shapely human limbs, until you get to your feet. They like that of a bird of prey, with golden-brown scales and sharp talons";
+	now body entry is "nearly human and quite lovely to behold. You have a pair white wings sprouting from the shoulder blades. Your wings are large and powerful, but not quite enough to allow you to fly. The entire appearance of your body is actually strangely attractive. Your arms and legs are slender and shapely human limbs, until you get to your feet. They like that of a bird of prey, with golden-brown scales and sharp talons";
 	now skin entry is "beautifully smooth, pink and normal-looking human";
 	now tail entry is "Your rear is strong and muscular with rounded hips and a firm, shapely rear.";
 	now cock entry is "human-looking elastic";

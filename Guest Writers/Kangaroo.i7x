@@ -55,7 +55,7 @@ When Play begins:
 	now victory entry is "[kangaroo attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[redroodesc]";[ Description of the creature when you encounter it.]
 	now face entry is "rounded, medium-sized muzzle with a black nose pad at the very tip";
-	now body entry is "a soft rounded shoulder build with tight stomach, leading down into wide hips, large spring like thighs and feet";
+	now body entry is "a soft rounded shoulder build with a tight stomach, leading down into wide hips, large spring-like thighs and feet";
 	now skin entry is "[one of]rusty red furred[or]short furred[or]softly furred[at random]";
 	now tail entry is "You have a thick muscled tail, being able to be used as a third leg [skin of player], and lightly thumping on the ground with each movement.";
 	now cock entry is "[one of]marsupial[or]kangaroo[at random]";

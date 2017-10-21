@@ -80,7 +80,7 @@ When Play begins:
 	now defeated entry is "[rabpackbeaten]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[rabpackvictory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[rabpackdesc]";[ Description of the creature when you encounter it.]
-	now face entry is "rabbit ears sprouting from the top of your head and flopping around the sides of your";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "that of a rabit, with distinctive ears sprouting from the top of your head and flopping downwards";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "short but agile";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "short fur covering almost every inch of your body";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a [one of]short[or]fluffy[or]twitchy[at random] rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ]

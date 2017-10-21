@@ -151,7 +151,7 @@ When Play begins:
 	now face entry is "[if matriarchowned is 1]that of a strong hyena, with a scruffy streak of dark fur atop your head[else]brown-furred, hyena-like[end if]";
 	now body entry is "[if matriarchowned is 1]that of a toughened hyena with an impressive build[else]lean and tightly muscled[end if]";
 	now skin entry is "[if matriarchowned is 1]hyena-spotted[else]brown[end if] furred";
-	now tail entry is "Your rear end has become tightly muscled, with enough size to it that one could still get a nice hand full. Hanging just above your sculpted derriere is a hyena tail, its brown-furred length barely reaches past your uper thigh.";
+	now tail entry is "Your rear end has become tightly muscled, with enough size to it that one could still get a nice hand full. Hanging just above your sculpted derriere is a hyena tail, its brown-furred length barely reaches past your upper thigh.";
 	now cock entry is "[one of]black[or]knotted[at random]";
 	now face change entry is "[if matriarchowned is 1]shifts and stretches as a short but powerful muzzle forms at the end of your face, filled with sharp fangs. Your ears move upwards and grow rounded as a scruffy streak of dark fur forms between them as your head settles into that of a hyena[else]it rapidly stretches outward, your mouth suddenly feeling very full as your new teeth settle into place[end if]";
 	now body change entry is "[if matriarchowned is 1]toughens up as it transforms once again, returning to your form as the hyena matriarch[else]you lose any trace of fat you may have had on you, it being replaced with tightly compacted muscle[end if]";

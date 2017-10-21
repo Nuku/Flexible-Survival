@@ -63,7 +63,7 @@ When Play begins:
 	now desc entry is "[redonidesc]";
 	now face entry is "quite frightening in appearance, having gained an exaggerated brow, yellow eyes and protruding fangs. Sticking straight up from your scraggly dark hair is a pair of horns, giving you the appearance of an oni from Japanese folklore";
 	now body entry is "overall human-like, but grown to 10 feet tall and heavily muscled. Your proportions are slightly off and your feet and hands have large, claw-like nails[if player is redonicocked]. Around your waist, a dirty loincloth of tigerskin loosely covers your crotch[end if]";
-	now skin entry is "[one of]bright red[or]blood red[at random]";
+	now skin entry is "[one of]bright red[or]blood-red[at random]";
 	now tail entry is "";
 	now cock entry is "[one of]meaty[or]veined[or]red[or]crimson[at random]";
 	now face change entry is "your skull pounds angrily. As the changes overtake you, your brow enlarges and your jaw stretches into an angry snarl. Soon your nose swells and your chin protrudes even as your incisors grow into large fangs that stick past your lips. As the pounding fades, a pair of horns grow onto the top of your head";

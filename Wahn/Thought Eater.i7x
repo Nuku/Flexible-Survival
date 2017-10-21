@@ -226,7 +226,7 @@ When Play begins:
 	now defeated entry is "[Thought_Eater_Loses]";
 	now victory entry is "[Thought_Eater_Wins]";
 	now desc entry is "[Thought_Eater_Desc]";
-	now face entry is "only vaguely resembles that of a human. Below a high-arching cranium and green eyes, a quartet of tentacles forms its lower half, hiding a sharp-edged beak between them";
+	now face entry is "only vaguely that of a human's. Below a high-arching cranium and green eyes, a quartet of tentacles forms its lower half, hiding a sharp-edged beak between them";
 	now body entry is "humanoid and tall, but very spindly. Your long arms end in hands with thin fingers, each of them bearing a sharply pointed claw";
 	now skin entry is "pale, clammy";
 	now tail entry is "";

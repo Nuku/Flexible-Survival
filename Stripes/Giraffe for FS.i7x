@@ -74,9 +74,9 @@ When Play begins:
 	now defeated entry is "[beatthegiraffe]";
 	now victory entry is "[losetogiraffe]";
 	now desc entry is "[giraffedesc]";
-	now face entry is "sitting atop a thick, long neck. Your narrow face is dominated by a tapered muzzle, containing a long blue-black tongue. A pair of leaf shaped ears constantly flick about on either side of your head with two short, boney horns between them";
+	now face entry is "sitting atop a thick, long neck. Your narrow face is dominated by a tapered muzzle, containing a long blue-black tongue. A pair of leaf-shaped ears constantly flick about on either side of your head with two short, bony horns between them";
 	now body entry is "tall and slender, with toned, shapely limbs and a curvy waist giving you an overall feminine figure. Your arms and legs are elongated and slender, the joints thick and solid. Your hands have two thick fingers and a thumb, each with a thick, dark nail. Your feet are cloven hooves at the end of digitigrade legs";
-	now skin entry is "brown spotted, fur covered"; [ skin Description, format as the text "You have (your text) skin"]
+	now skin entry is "brown spotted, fur-covered"; [ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a thin, ropey, knee-length tail ending in a tuft of black fur.";
 	now cock entry is "[one of]thick[or]pink[or]flat-headed[or]equine[at random]";
 	now face change entry is "your vision seems to swim for a moment as every muscle in your neck clenches tight. You neck stretches longer as it thickens, moving your point of view upwards so fast it makes you slightly dizzy. A tapered muzzle pushes its way from your face, as twin points of pain on your forehead erupt into a pair of short, knobby horns. Your mouth feels like it's filled with cotton. As your tongue flops out of your mouth, you find it long and blue-black in colour. Very prehensile, it slides across your muzzle in a slow, sensual motion";

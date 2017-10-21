@@ -49,9 +49,9 @@ When Play begins:
 	now defeated entry is "[beatthecoyote]";
 	now victory entry is "[losetocoyote]";
 	now desc entry is "[coyotedesc]";
-	now face entry is "a tan furred canine muzzle full of sharp teeth, your golden eyes survey your surroundings taking in everything around you, your coyote ears twitch as if listening for something. Your lips curl back in a wicked grin as you think about all the mischief you will cause";		[ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "a tan-furred canine muzzle full of sharp teeth, your golden eyes survey your surroundings taking in everything around you, your coyote ears twitch as if listening for something. Your lips curl back in a wicked grin as you think about all the mischief you will cause";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "thin and lanky, with digitigrade legs that end in padded coyote paws, your hands a cross between a human's and a coyote's padded paws. Your bony body's appearance belies its actual strength and agility";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "tan, fur covered";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now skin entry is "tan, fur-covered";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have a [one of]bushy[or]scruffy[at random] tail that sways happily as you move.";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]canine[or]coyote[or]coyote-like[or]knotted[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "as your mouth stretches and pushes forward in a massive yawning motion, the muscles reforming as it pushes out into a sleek tan muzzle, while your eyes blur as they shift in both colour and position. New sounds and smells explode through your enhanced senses as your new coyote muzzle finishes forming and your ears finish shifting into proper canine ears, swiveling around on top of your head like a coyote's";	[ Face TF text, format as "Your face feels funny as (your text)." ]

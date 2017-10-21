@@ -168,7 +168,7 @@ When Play begins:
 	now victory entry is "[losetosnowmeow]"; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[snowmeowdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "feline in form, with leopard-like marking across it"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a short, but agile feline. Your hands are paw-like and your fingers end in sharp claws. Your body does not seem well-suited to the hot weather hanging over the city"; [ Body Description, format as the text "Your body is (your text)." ]
+	now body entry is "that of a short, but agile feline. Your hands are paw-like, and your fingers end in sharp claws. Your body does not seem well-suited to the hot weather hanging over the city"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "thick, fluffy fur. It is a snowy white and ash grey in colour, with a leopard-like pattern across it. Your thick coat does not help with the southern sun as your pelt warms your"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have the thickly furred, luxuriously beautiful tail of a snow leopard."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "grey"; [ Cock desc., format as "You have a 'size' (your text) cock." ]

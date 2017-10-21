@@ -423,8 +423,8 @@ When Play begins:
 	now defeated entry is "[RazorbackBoar loses]";
 	now victory entry is "[RazorbackBoar wins]";
 	now desc entry is "[RazorbackBoarDesc]";            [ Description of the creature when you encounter it. ]
-	now face entry is "that of a wild boar, with an elongated snout showing sharp tusks. With the bristly fur covering all of it and two eyes capable of giving a very penetrating stare, you're an image of untamed spirit.";
-	now body entry is "stocky in build, but quite obvious muscles make up much of that large bulk - from the broad shoulders down to the cloven hooves on which you stand. Anyone looking at you can easily see why wild boars shouldn't be messed with.";
+	now face entry is "that of a wild boar, with an elongated snout showing sharp tusks. With the bristly fur covering all of it and two eyes capable of giving a very penetrating stare, you're an image of untamed spirit";
+	now body entry is "stocky in build, but quite obvious muscles make up much of that large bulk - from the broad shoulders down to the cloven hooves on which you stand. Anyone looking at you can easily see why wild boars shouldn't be messed with";
 	now skin entry is "[one of]bristly-furred[or]brown-furred[or]dark-furred[at random]";
 	now tail entry is "You have a firm bubble butt, complete with a short tail ending in a brush of hairs.";  [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "human-like";

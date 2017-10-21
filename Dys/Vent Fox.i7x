@@ -103,8 +103,8 @@ instead of going east from Mall Atrium while (VentFoxEncounterCount < 2 and a ra
 
 Section 2 - Location
 
-vent cover is an object. It is in Smith Haven Mall Lot West. It is fixed in place. Understand "vent" as vent cover. Understand "cover" as vent cover.
-The description of vent cover is "[VentDescription]".
+ventcover is an object. It is in Smith Haven Mall Lot West. It is fixed in place. Understand "cover" as ventcover.
+The description of ventcover is "[VentCoverDescription]".
 
 KnockOnVent is an action applying to nothing.
 Understand "knock on it" as KnockOnVent.
@@ -118,16 +118,18 @@ Understand "knock on vent cover" as KnockOnVent.
 Understand "knock on the vent cover" as KnockOnVent.
 
 Check KnockOnVent:
-	if vent cover is not visible, say "What?" instead;
+	if ventcover is not visible, say "     What?" instead;
 
 Carry out KnockOnVent:
 	say "[KnockedOnVent]";
 
-To say VentDescription:[Description of the vent for various states of relationship.]
+To say VentCoverDescription:[Description of the vent for various states of relationship.]
 	if VentFoxRelationship < 3 or VentFoxRelationship is 100:[not known / disliked by Vent.]
 		say "     You can see a large, grated vent on the wall of the building. It's close enough to the ground that a creature could conceivably climb inside. One of the metal slats covering the opening is bent open, providing a narrow but workable hole for that to have already happened too. Maybe you could try [link]knocking on it[as]knock on it[end link] to draw something out?";
 	else if VentFoxRelationship is 101: [let Logan rape him.]
 		say "     You can see a large, grated vent vocer that once used to be inhabited by your companion. You could try knocking on it, but your fairly certain that Vent is no longer around.";
+	else if VentFoxContentLevel is 3:
+		say "     You can see a large, grated vent on the wall of the building. You know it used to be Vent's hideaway, but now that the fox has gotten too big for it, he's moved to the garage you found once while searching for food with him.";
 	else:
 		say "     You can see a large, grated vent on the wall of the building. You know it as Vent's hideaway. You can [link]knock on it[as]knock vent[end link] to get his attention.";
 
@@ -144,31 +146,51 @@ To say KnockedOnVent:[Various reactions to knocking on the vent.]
 		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the hole in the grating with a determined squeak. Seeing that you're his visitor, the Vent Fox yips happily before moving back into the vent. Maybe next time you visit you could [']play['] with him...";
 		now VentFoxRelationship is 3;[vent known]
 	else if VentFoxRelationship is 3:[vent known]
-		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the hole in the grating with a determined squeak. After seeing who his visitor is, the latex vulpine yips happily in greeting before his body flows into a liquid blob, dripping out of the vent and onto the ground. Why he couldn't have done that when he was stuck inside, you're really not sure. Once all of his mass is outside, he quickly reforms into his normal shape, staring at you patiently, as if asking you what you wanted to do.";
-		say "[VentFoxMenu]";
+		if VentFoxContentLevel is 3:
+			say "     You bring you fist up to knock on the cover, but you pause at the last second, remembering that Vent has since moved from this location. [bold type]Vent can be found in the Maintenance Garage west of here..[roman type].";
+		else:
+			say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the hole in the grating with a determined squeak. After seeing who his visitor is, the latex vulpine yips happily in greeting before his body flows into a liquid blob, dripping out of the vent and onto the ground. Why he couldn't have done that when he was stuck inside, you're really not sure. Once all of his mass is outside, he quickly reforms into his normal shape, staring at you patiently, as if asking you what you wanted to do.";
+			say "[VentFoxMenu]";
 	else:
 		say "     DEBUG: You shouldn't be able to see this! If you are, contact @Dys on the FS Discord, and give him the error code: VentFox:[VentFoxEncounterCount],[VentFoxRelationship]";
 
-FuckVent is an action applying to nothing.
-Understand "fuck vent" as FuckVent.
-Understand "sex vent" as FuckVent.
+Section 3 - NPC and Location
 
-Check FuckVent:
-	if vent cover is not visible, say "Who?" instead;
-
-Carry out FuckVent:
-	say "[VentFoxSexMenu]";
+Vent is a man. The hp of vent is usually 0.
+The description of Vent is "[VentDescription]".
+The conversation of Vent is { "blah blah blarg" }.
+The scent of Vent is "[VentScent]".
+Vent is in Maintenance Garage.
+The linkaction of Vent is "Possible Actions: [link]talk[as]talk vent[end link], [link]smell[as]smell vent[end link], [link]fuck[as]fuck vent[end link], [link]request[as]request vent[end link][line break]".
 
 RequestVent is an action applying to nothing.
 Understand "request vent" as RequestVent.
 
 Check RequestVent:
-	if vent cover is not visible, say "Who?" instead;
+	if Vent is not visible, say "     Who?" instead;
 
 Carry out RequestVent:
 	say "[VentFoxPrefsMenu]";
 
-Section 3 - Menus
+Instead of fucking the Vent:
+	say "[VentFoxSexMenu]";
+
+to say VentDescription:
+	say "     Vent is now only a bit smaller than a horse normally, however, he can change his size at will. His rubber body is a mixture of red, white, and black latex. The red covers his back and legs, as well as most of his face and tail. The white color is found on the tip of his tail, along his underbelly and chin, and inside his ears. The black covers his four paws like gloves, and the tips of his ears. Looking at his [']equipment['], you can see he has a plump, white sheath, and a set of baseball sized balls.";
+
+to say VentScent:
+	say "     Vent has a sort of chemical aroma to him that reminds you of freshly cured latex. You can also pick up faint hints of a foxy musk as well.";
+
+instead of conversing the Vent:
+	say "     You speak to Vent casually, and he seems to listen attentively, even giving a nod here and there.";
+
+Maintenance Garage is a room.
+The description of Maintenance Garage is "[MaintenanceGarageDescription]".
+
+to say MaintenanceGarageDescription:
+	say "     Vent's new home is sparsely decorated. A few workbenches line the rear wall, and a hydraulic lift is off to one side of the room. Aside from that, there's not much to see. Off to one corner, you can see Vent. He gives you a toothy grin as he sees you, eager to spend time with you.";
+
+Section 4 - Menus
 
 Chapter 1 - Main Menus
 
@@ -302,41 +324,6 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			say "     You think about going to find more food for Vent, but he's honestly so big at this point that there's really no point.";
 	else:
 		say "     You make your suggestions to Vent, but he simply shakes his head, still too full from his last meal.";
-
-to say VentShedEatScene:
-	say "     The vulpine comes in after you, and he gives the air a few sniffs before he dashes over to the containers of latex. He lets out a happy yip and looks at your expectantly, an excited gleam in his eyes. You grin and step over towards him, leaning down and unfastening the lids of the containers before tossing them aside. Now that he can get to the material, he extends his tail, forking it into two separate tendrils. Each one dips into each respective container, and you watch as the fluids flow up his tail and into his body. As it gets absorbed into his system, he grows larger. Once he's completely drained the containers, he's near the size of a lion. He gives you grin as he shrinks his body back down again, before you both make your way back to the vent.";
-	now VentFoxContentLevel is 2;
-	now VentFoxLastFed is turns;
-
-to say VentLoganDoNothing: [the player is a butt head.]
-	say "     Not wanting to provoke the wolverine, you instead opt to slip around the corner of the SUV, pressing yourself up against it to make sure you're as hidden as possible. Peeking your head around the corner, you watch Logan unzip his pants with his free hand, before he gives the rubber vulpine a long lick across his tailhole. Vent let's out a shuddering whimper, clearly not wanting any part of this. The guard doesn't seem to notice or care, however, as he continues his assault until the fox's hole is dripping with his saliva.";
-	say "     Bringing his now-erect cock to Vent's prone form, he shoves it all in with one harsh thrust. The fox let's out a pained yelp as he's stretched suddenly. Logan pays no heed to the vulpine's cries, however, as he just starts to thrust his length in and out of Vent, using him purely for his own pleasure. He continues to fuck Vent roughly, picking up the pace all the while. He lets out a pleasured grunt as he bottoms out one last time before him cums, his load spilling into Vent's insides, distinctly bloating him with the heady fluid.";
-	WaitLineBreak;
-	say "     With his orgasm winding down, Logan pulls his softening cock out of the fox, before kicking the fox harshly. 'Get out of here, ya piece of trash! And don't come back!' Vent quickly obliges, running off into the city, probably never to be seen again. Finished with his business, Logan begins to turn around to head back to his patrol. You quietly slip away as soon as you get the chance, a distinct feeling of remorse coming over you for not intervening.";
-	now VentFoxRelationship is 101;
-
-to say VentLoganStopByCommand: [the player helps!]
-	say "     Without a moment of hesitation, you shout out the command to take control of the wolverine. As it registers, his body stiffens slightly, and he turns to face you, his eyes glazed over and unseeing. Vent swings back and forth, still firmly held by his tail, looking at you desperately. You command Logan to set your friend down gently, and he does so without hesitation, setting the rubber vulpine back onto the ground before he looks at you again, waiting for the next command. You simply opt to get him to leave the two of you alone, telling him to move along as if he saw nothing. He obeys, as expected.";
-	say "[VentFoxLastScavScene]";
-
-to say VentLoganStopByAttacking: [the player also helps!]
-	say "     Seeing a solid metal hubcap lying on the ground to your right, you quietly grab it. As Logan sneers at your friend, you sneak up behind him, raising the hubcap above your head before you slam it down as hard as you can. It connects with a loud bang, and Logan lets out a pathetic whimper as he crumples to the ground, completely unconscious. Vent falls as well, no longer being held up by the wolverine's grasp, and he hits the ground with a small squeak before he rights himself and gazes at you with a look of admiration on his feral muzzle.";
-	say "[VentFoxLastScavScene]";
-
-to say VentLoganCommandSex:
-	say "     'Come here, will you!' You shout out loud, the command instantly taking effect. Logan turns towards you, his eyes glazed over and his body in your control. Out in the open you then drop whatever clothes you're wearing on your lower half, revealing your slowly hardening cock. With a rough order, you tell the wolverine to get on his knees and start sucking. Thanks to the mental magic worked on the guy by Moreau, he obeys you and lowers himself so that his muzzle is face first to your dick. When he licks his tongue along your manhood you shiver and moan, humping it against the male's mouth. Seconds later Logan takes you into his mouth. By how well the corrupt guard appears to be doing, you wonder if he's sucked cock before.";
-	say "     Sadly for the wolverine, you're rather impatient. You abruptly grab ahold of his head and slam him down on your dick, but you don't leave him there for long. Instead, you start thrusting in and out of his mouth, groaning at the warm velvety grip of his throat. Having almost forgot about Vent, you look behind Logan and see that the latex fox is staring at you two rather curiously, as if interested by the sex, proven by his hardening cock. Wanting to show off for your friend, you begin to rapidly fuck the wolveirne's face, enjoying the sound of your balls slapping against his chin. That however isn't the only noise coming from the male. It appears that he's enjoying it rather thoroughly if the fact that his dick is hardening against his stomach.";
-	WaitLineBreak;
-	say "     Suddenly though, you feel Vent headbutting your leg. Realizing that the fox is horny, you grow a smirk on your face. You order Logan to stay put and get on all fours as you reposition yourself at his backside, hotdogging your dick between his cheeks. Taking this as a cue the latex fox jumps onto the wolverine, placing his two front paws on the man's back, presenting him with the feral's dick. As if it was synchronized the two of you thrust inward at the same time, with you penetrating the male's ass and Vent his mouth. In tandem the two of you fuck the wolverine's orfices, your balls slapping wetly against his ass and Vent's against his chin. If Logan's throat felt great, then his ass felt amazing, squeezing your length in a tight vice, making you moan loudly.";
-	say "     You quickly lose yourself in the pleasure of thrusting in and out of the wolverine's hole, mentally thinking that he deserves it, thinking back to when you had first seen him. Those thoughts fuel your fucking, making you slam into his entrance a lot rougher. If the yelps from Vent and the growing feeling in your balls tell you anything, the both of you are getting closer to your peaks. Not long after that, you feel your balls tighten and you let out a roar as you thrust in one last time before releasing your load into his ass. Looking over his back you see that the latex fox is cumming as well, as he is currently locked with Logan's mouth, spilling his sperm down the male's throat. This appears to set him off, the wolverine spilling his own seed onto the floor.";
-	WaitLineBreak;
-	say "     The three of you ride out your bliss and wait for Vent's knot to shrink down. When it does you realize that if you leave Logan like this he'll slowly realize what's happening. So instead you order him to clean up his mess with his tongue while you clean his ass. The wolverine nods and puts his face to the ground and slurps up his own cum. You look for something to clean with before finding a towel that you use to wipe his butt. About a few minutes later you're finally done. You then order the male to forget what happened here and to go on his own way before uttering the end command phrase. When you do, the glazed eyes go away and he walks away from the two of you. Once gone you look to Vent and see him staring at you in both what appears to be admiration and lust.";
-	say "[VentFoxLastScavScene]";
-
-to say VentFoxLastScavScene:
-	say "     Now that the guard has been dealt with, you and your friend continue your search for some easily accessible rubber. Looking around the lot, you eventually see a totaled truck. Upon closer examination, you notice there's a whole bed-full of tires in it! Vent seems to realize this too, as he hops up into the back of the truck, making quick work of the tires. Soon enough, he's devoured them all, and grown in size as well. Your foxy compatriot now stands taller than a horse when at full size. Of course, he doesn't stay that large for long, quickly shrinking back down to a much more manageable size, hopping out of the truck bed. With his hunger sated, the two of you make your way back to his hide out.";
-	now VentFoxContentLevel is 3;
-	now VentFoxLastFed is turns;
 
 to say VentFoxSexMenu:[Pretty self explanatory.]
 	if cocks of player > 0 and cunts of player is 0:
@@ -611,7 +598,7 @@ to say OviLevelMenu:[Menu for setting Oviposition amount of Vent.]
 	else:
 		say "     Even as you make the suggestion to Vent, you realize that you're honestly not kinky enough for that. [italic type]You need the 'Kinky' fun feat for this option.[roman type]";
 
-Section 4 - Scenes
+Section 5 - Scenes
 
 Chapter 1 - Scavving Scenes
 
@@ -685,7 +672,7 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 		say "     You make your suggestions to Vent, but he simply shakes his head, still too full from his last meal.";
 
 to say VentShedEatScene:
-	say "     The vulpine comes in after you, and he gives the air a few sniffs before he dashes over to the containers of latex. He lets out a happy yip and looks at your expectantly, an excited gleam in his eyes. You grin and step over towards him, leaning down and unfastening the lids of the containers before tossing them aside. Now that he can get to the material, he extends his tail, forking it into two seperate tendrils. Each one dips into each respective container, and you watch as the fluids flow up his tail and into his body. As it gets absorbed into his system, he grows larger. Once he's completely drained the containers, he's near the size of a lion. He gives you grin as he shrinks his body back down again, before you both make your way back to the vent.";
+	say "     The vulpine comes in after you, and he gives the air a few sniffs before he dashes over to the containers of latex. He lets out a happy yip and looks at your expectantly, an excited gleam in his eyes. You grin and step over towards him, leaning down and unfastening the lids of the containers before tossing them aside. Now that he can get to the material, he extends his tail, forking it into two separate tendrils. Each one dips into each respective container, and you watch as the fluids flow up his tail and into his body. As it gets absorbed into his system, he grows larger. Once he's completely drained the containers, he's near the size of a lion. He gives you grin as he shrinks his body back down again, before you both make your way back to the vent.";
 	now VentFoxContentLevel is 2;
 	now VentFoxLastFed is turns;
 
@@ -704,10 +691,22 @@ to say VentLoganStopByAttacking: [the player also helps!]
 	say "     Seeing a solid metal hubcap lying on the ground to your right, you quietly grab it. As Logan sneers at your friend, you sneak up behind him, raising the hubcap above your head before you slam it down as hard as you can. It connects with a loud bang, and Logan lets out a pathetic whimper as he crumples to the ground, completely unconscious. Vent falls as well, no longer being held up by the wolverine's grasp, and he hits the ground with a small squeak before he rights himself and gazes at you with a look of admiration on his feral muzzle.";
 	say "[VentFoxLastScavScene]";
 
+to say VentLoganCommandSex:
+	say "     'Come here, will you!' You shout out loud, the command instantly taking effect. Logan turns towards you, his eyes glazed over and his body in your control. Out in the open you then drop whatever clothes you're wearing on your lower half, revealing your slowly hardening cock. With a rough order, you tell the wolverine to get on his knees and start sucking. Thanks to the mental magic worked on the guy by Moreau, he obeys you and lowers himself so that his muzzle is face first to your dick. When he licks his tongue along your manhood you shiver and moan, humping it against the male's mouth. Seconds later Logan takes you into his mouth. By how well the corrupt guard appears to be doing, you wonder if he's sucked cock before.";
+	say "     Sadly for the wolverine, you're rather impatient. You abruptly grab ahold of his head and slam him down on your dick, but you don't leave him there for long. Instead, you start thrusting in and out of his mouth, groaning at the warm velvety grip of his throat. Having almost forgot about Vent, you look behind Logan and see that the latex fox is staring at you two rather curiously, as if interested by the sex, proven by his hardening cock. Wanting to show off for your friend, you begin to rapidly fuck the wolveirne's face, enjoying the sound of your balls slapping against his chin. That however isn't the only noise coming from the male. It appears that he's enjoying it rather thoroughly if the fact that his dick is hardening against his stomach.";
+	WaitLineBreak;
+	say "     Suddenly though, you feel Vent headbutting your leg. Realizing that the fox is horny, you grow a smirk on your face. You order Logan to stay put and get on all fours as you reposition yourself at his backside, hotdogging your dick between his cheeks. Taking this as a cue the latex fox jumps onto the wolverine, placing his two front paws on the man's back, presenting him with the feral's dick. As if it was synchronized the two of you thrust inward at the same time, with you penetrating the male's ass and Vent his mouth. In tandem the two of you fuck the wolverine's orfices, your balls slapping wetly against his ass and Vent's against his chin. If Logan's throat felt great, then his ass felt amazing, squeezing your length in a tight vice, making you moan loudly.";
+	say "     You quickly lose yourself in the pleasure of thrusting in and out of the wolverine's hole, mentally thinking that he deserves it, thinking back to when you had first seen him. Those thoughts fuel your fucking, making you slam into his entrance a lot rougher. If the yelps from Vent and the growing feeling in your balls tell you anything, the both of you are getting closer to your peaks. Not long after that, you feel your balls tighten and you let out a roar as you thrust in one last time before releasing your load into his ass. Looking over his back you see that the latex fox is cumming as well, as he is currently locked with Logan's mouth, spilling his sperm down the male's throat. This appears to set him off, the wolverine spilling his own seed onto the floor.";
+	WaitLineBreak;
+	say "     The three of you ride out your bliss and wait for Vent's knot to shrink down. When it does you realize that if you leave Logan like this he'll slowly realize what's happening. So instead you order him to clean up his mess with his tongue while you clean his ass. The wolverine nods and puts his face to the ground and slurps up his own cum. You look for something to clean with before finding a towel that you use to wipe his butt. About a few minutes later you're finally done. You then order the male to forget what happened here and to go on his own way before uttering the end command phrase. When you do, the glazed eyes go away and he walks away from the two of you. Once gone you look to Vent and see him staring at you in both what appears to be admiration and lust.";
+	say "[VentFoxLastScavScene]";
+
 to say VentFoxLastScavScene:
-	say "     Now that the guard has been dealt with, you and your friend continue your search for some easily accessible rubber. Looking around the lot, you eventually see a totaled truck. Upon closer examination, you notice there's a whole bed-full of tires in it! Vent seems to realize thistoo, as he hops up into the back of the truck, making quick work of the tires. Soon enough, he's devoured them all, and grown in size as well. Your foxy compatriot now stands taller than a horse when at full size. Of course, he doesn't stay that large for long, quickly shrinking back down to a much more manageable size, hopping out of the truck bed. With his hunger sated, the two of you make your way back to his hide out.";
+	say "     Now that the guard has been dealt with, you and your friend continue your search for some easily accessible rubber. Looking around the lot, you eventually see a totaled truck. Upon closer examination, you notice there's a whole bed-full of tires in it! Vent seems to realize this too, as he hops up into the back of the truck, making quick work of the tires. Soon enough, he's devoured them all, and grown in size as well. Your foxy compatriot now stands taller than a horse when at full size. Of course, he doesn't stay that large for long, quickly shrinking back down to a much more manageable size, hopping out of the truck bed. With his hunger sated, the two of you make your way back to his hide out.";
 	now VentFoxContentLevel is 3;
 	now VentFoxLastFed is turns;
+	change the North exit of Smith Haven Mall Lot West to Maintenance Garage;
+	change the South exit of Maintenance Garage to Smith Haven Mall Lot West;
 
 Chapter 2 - Sex Scenes
 
@@ -941,7 +940,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 		say "     His knot eventually shrinks enough that he can pull out of your hole, his rubbery tool slipping out with a gentle pop. A trickle of his fluids flow out of your stretched hole, and you can't help but let out a small shudder from the feeling of emptiness you've suddenly been subjected to. Vent gives you a lick on the cheek with his latex tongue before he dismounts you.";
 		WaitLineBreak;
 		say "[VentPostSexWS]";
-		say "     Now that the two of you have been satisfied, Vent gives you a lick goodbye before liquefying and flowing into his home in the vents.";
+		say "     Now that the two of you have been satisfied, Vent gives you a lick goodbye before heading back to his home.";
 	if VentFluidAmount is 1: [Above average Fluid]
 		if anallevel is 3:
 			if VentDomSize is 3:
@@ -1203,7 +1202,7 @@ to say VentPostSexWS:
 		else:
 			say "     Vent pees on your body to mark you as his.";
 
-Section 5 - Dev Tools
+Section 6 - Dev Tools
 
 LearnAboutVent is an action applying to nothing.
 Understand "learnvent" as LearnAboutVent.
@@ -1221,6 +1220,8 @@ Carry out MaxOutVentStats:
 	now VentFoxEncounterCount is 3;
 	now VentFoxContentLevel is 3;
 	now VentFoxRelationship is 3;
+	change the North exit of Smith Haven Mall Lot West to Maintenance Garage;
+	change the South exit of Maintenance Garage to Smith Haven Mall Lot West;
 
 ShowVentStats is an action applying to nothing.
 Understand "ventstats" as ShowVentStats.

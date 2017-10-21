@@ -34,8 +34,8 @@ When Play begins:
 	now victory entry is "[losetobreederslut]";
 	now desc entry is "[breederslutdesc]";
 	now face entry is "that of a cute doggy with a mid-length muzzle, pointed ears and a happy if vapid expression";
-	now body entry is "quite short, not even five feet tall, and with a cute, feminine build. As a Shiba Inu, you've got an overall canine frame and, while bipedal, are quite comfortable moving down onto all fours (for presenting yourself). You limbs are short and end in partially paw-like hands. Just above your crotch, you have the word [']fucktoy['] tattooed there, always showing through any fur or scales you might have";
-	now skin entry is "golden brown and snowy white fur now covers your";
+	now body entry is "quite short, not even five feet tall, and with a cute, feminine build. As a Shiba Inu, you've got an overall canine frame and, while bipedal, are quite comfortable moving down onto all fours (for presenting yourself). Your limbs are short and end in partially paw-like hands. Just above your crotch, you have the word [']fucktoy['] tattooed there, always showing through any fur or scales you might have";
+	now skin entry is "golden brown and snowy white fur-covered";
 	now tail entry is "You have a short, fluffy tail that curls up cutely.";
 	now cock entry is "[one of]canine[or]knotted[or]doggy[at random]";
 	now face change entry is "pleasant tingles spread across your face. Your mouth distorts, forming a cute little muzzle with a happy doggy smile on it. Your eyes shift position and your ears become short and pointed. By the time the transition is over, you're left with the head of a very cute Shiba Inu atop your shoulders";
