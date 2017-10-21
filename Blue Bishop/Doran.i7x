@@ -953,7 +953,7 @@ to say DoranDom_Vaginal: [Cunt Sex] [BODY MODDED]
 			if cocks of player > 0:
 				say "cock[if cocks of player > 1]s'[else]'s[end if] sputtering forcibly erratic against the [if cunt length of player > 13]somewhat[else]immensely[end if] straining intrusion, staining the [gdragon]'s thigh and the ground with your [cum load size of player] load";
 			else:
-				say "pussy[if cunts of player > 1]ies'[else]y's[end if] gushing forcibly strained against the[if cunt length of player < 14] immense[end if] intrusion, staining the [gdragon]'s thigh and the ground with your sexual fluids";
+				say "puss[if cunts of player > 1]ies'[else]y's[end if] gushing forcibly strained against the[if cunt length of player < 14] immense[end if] intrusion, staining the [gdragon]'s thigh and the ground with your sexual fluids";
 			say ". Doran would doubtlessly chide you for so easily succumbing if [ghe] wasn't so wrapped up in matters of [ghis] own, approaching climax, forcing you firm against [ghis] crotch one last time before roaring out, gout after overwhelming, continuous gout flooding your womb, ";
 			if DoranBallModStatus > 0:
 				say "belly [if scalevalue of player < 4]immediately and distinctly[else]quickly[end if] bloating to abide [ghis] massive, torrential load, until the -- almost seemingly absurd -- release starts to sputter from your [if scalevalue of player < 4]over[end if]stuffed hole.";
