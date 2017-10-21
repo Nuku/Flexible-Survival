@@ -307,7 +307,7 @@ to say hayatosexmenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Hayato is turns;
-	wait for any key;
+	WaitLineBreak;
 	clear the screen and hyperlink list;
 
 
@@ -446,7 +446,7 @@ instead of resolving Oni Lair:
 	if debugactive is 1:
 		say "DEBUG -> hp of Hayato: [hp of Hayato] <- DEBUG[line break]";
 	if hp of Hayato is 19:
-		say "     As your exploration takes you towards a collapsed office tower, you notice several odd things about it. The building has fallen onto its side and is largely ruin, having taken out several other buildings during its fall. This isn't too strange in and of itself, as several skyscrapers in this area were similarly knocked down during the eruption and quake, but the first few floor are mostly intact... you think. It is difficult to be certain, as it appears that concrete rubble has been piled up in front of the windows. Whether this was done to fortify the building or to block outside scrutiny is unclear, but it is definitely would have taken an exceptional feat of strength to do so.";
+		say "     As your exploration takes you towards a collapsed office tower, you notice several odd things about it. The building has fallen onto its side and is largely ruin, having taken out several other buildings during its fall. This isn't too strange in and of itself, as several skyscrapers in this area were similarly knocked down during the eruption and quake, but the first few floor are mostly intact... you think. It is difficult to be certain, as it appears that concrete rubble has been piled up in front of the windows. Whether this was done to fortify the building or to block outside scrutiny is unclear, but it definitely would have taken an exceptional feat of strength to do so.";
 		say "     Since the building fell forward, the front entrance is blocked and buried by the tower's rubble. Knowing there has to be a way in since it's sealed up from the inside, you start to circle around the building in search of it. As you move around the back, a disturbing sight comes into view. The parking garage ramp has been converted into a gruesome entrance, lined with skulls (human and otherwise) on poles and littered with scraps of bones and cloth. The yawning mouth into darkness is like the cave of some monster's lair. Realizing what you've found is probably the lair of the oni creatures, you start to back away quickly, hoping you can get away unnoticed.";
 		WaitLineBreak;
 		let bonus be (( perception of player minus 10 ) divided by 2 );
@@ -564,7 +564,7 @@ to say onilairlost1:
 	WaitLineBreak;
 	end the game saying "Reduced to wild oni, you join the Great Oni's clan.";
 	now battleground is "void";
-	wait for any key;
+	WaitLineBreak;
 	now skipturnblocker is 1;
 	follow the turnpass rule;
 	stop the action;

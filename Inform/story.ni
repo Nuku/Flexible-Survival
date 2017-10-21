@@ -5070,6 +5070,7 @@ Include Hyena Shoppers by Doots.
 Include Hyena Situations by Hellerhound.
 Include Important Research Quests by Kaleem Mcintyre.
 Include Infected Pool for FS by Hellerhound.
+Include Inflatable Orca by Song.
 Include Inventory Management Enhancements for FS by Core Mechanics.
 Include Junkyard Events by Stripes.
 Include Kitsune by Kaleem mcintyre.
