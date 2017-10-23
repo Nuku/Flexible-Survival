@@ -616,7 +616,7 @@ to say DoranSexMenu: [Doran Sex Protocol]
 						-- "Worship [ghis] balls":
 							say "[DoranDom_BallWorship]"; [Ball Worship]
 						-- "Worship [ghis] cum":
-							say "[DoranDom_Anal0]"; [Cum Worship]
+[							say "[DoranDom_Anal0]"; [Cum Worship] [This does not exist?]]
 						-- "Get fucked by the [gdragon] anally":
 							say "[DoranDom_Anal]"; [anal sex scene]
 						-- "Get fucked by the [gdragon]":
@@ -672,8 +672,9 @@ to say DoranSexMenu: [Doran Sex Protocol]
 				if cocks of player is 0:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 				else:
-					say "[DoranSub_AnalCatch]"; [fuck the dragon]
-					now trixieexit is 1;
+					say "This is busted.";
+[					say "[DoranSub_AnalCatch]"; [fuck the dragon]
+					now trixieexit is 1;][This does not exist, the analcatch]
 			else if calcnumber is 2:
 				if cocks of player is 0:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
