@@ -15,7 +15,7 @@ Cheetah Cheater is a situation.
 The level of Cheetah Cheater is 0. [minimum level to find the event]
 The sarea of Cheetah Cheater is "Campus".
 
-instead of going west from College Campus Entrance while (Cheetah Cheater is not resolved and LastCampusWalkin - turns > 2):
+instead of going west from College Campus Entrance while (Cheetah Cheater is not resolved and LastCampusWalkin - turns > 2 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
 	PregnantFriendEvent;
 
@@ -33,7 +33,7 @@ Pregnant Friend is a situation.
 The level of Pregnant Friend is 0.
 The sarea of Pregnant Friend is "Campus". ["College Walkway West"]
 
-instead of going west from College Campus Entrance while (Pregnant Friend is not resolved and LastCampusWalkin - turns > 2):
+instead of going west from College Campus Entrance while (Pregnant Friend is not resolved and LastCampusWalkin - turns > 2 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
 	PregnantFriendEvent;
 
@@ -54,7 +54,7 @@ CatsVSDogs is a situation.
 The level of CatsVSDogs is 0.
 The sarea of CatsVSDogs is "Campus". ["Athletic Street"]
 
-instead of going southwest from College Walkway West while (CatsVSDogs is not resolved and LastCampusWalkin - turns > 2):
+instead of going southwest from College Walkway West while (CatsVSDogs is not resolved and LastCampusWalkin - turns > 2 and a random chance of 1 in 3 succeeds):
 	move player to Athletic Street;
 	CampusLoversEvent;
 
@@ -80,19 +80,19 @@ SharkFountain is a situation.
 The level of SharkFountain is 0.
 The sarea of SharkFountain is "Campus". [Fountain]
 
-instead of going south from College Administration Building while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+instead of going south from College Administration Building while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))  and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 
-instead of going north from College Campus Entrance while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+instead of going north from College Campus Entrance while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 
-instead of going east from College Walkway Northwest while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+instead of going east from College Walkway Northwest while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 
-instead of going west from College Walkway Northeast while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+instead of going west from College Walkway Northeast while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 
