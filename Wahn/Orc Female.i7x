@@ -501,9 +501,11 @@ Section 4 - Location
 
 Inconspicuous Trail is a room.
 The description of Inconspicuous Trail is "     You're on a fairly seldom-used trail through the expansive grassland of the dry plains. If you hadn't known exactly what to look for, there would be little chance you'd even have noticed this trail. Just a little distance further to the northeast is Katya's hidden camp.".
+earea of Inconspicuous Trail is "Plains".
 
 Northeast of Inconspicuous Trail is Hidden Camp. Hidden Camp is sleepsafe.
 The description of Hidden Camp is "[KatyasCampDesc]".
+earea of Hidden Camp is "Plains".
 
 to say KatyasCampDesc:
 	if daytimer is day: [daytime text]

@@ -15,7 +15,7 @@ Cheetah Cheater is a situation.
 The level of Cheetah Cheater is 0. [minimum level to find the event]
 The sarea of Cheetah Cheater is "Campus".
 
-instead of going west from College Campus Entrance while (Cheetah Cheater is not resolved and LastCampusWalkin - turns > 2):
+instead of going west from College Campus Entrance while (Cheetah Cheater is not resolved and LastCampusWalkin - turns > 2 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
 	PregnantFriendEvent;
 
@@ -33,7 +33,7 @@ Pregnant Friend is a situation.
 The level of Pregnant Friend is 0.
 The sarea of Pregnant Friend is "Campus". ["College Walkway West"]
 
-instead of going west from College Campus Entrance while (Pregnant Friend is not resolved and LastCampusWalkin - turns > 2):
+instead of going west from College Campus Entrance while (Pregnant Friend is not resolved and LastCampusWalkin - turns > 2 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
 	PregnantFriendEvent;
 
@@ -54,7 +54,7 @@ CatsVSDogs is a situation.
 The level of CatsVSDogs is 0.
 The sarea of CatsVSDogs is "Campus". ["Athletic Street"]
 
-instead of going southwest from College Walkway West while (CatsVSDogs is not resolved and LastCampusWalkin - turns > 2):
+instead of going southwest from College Walkway West while (CatsVSDogs is not resolved and LastCampusWalkin - turns > 2 and a random chance of 1 in 3 succeeds):
 	move player to Athletic Street;
 	CampusLoversEvent;
 
@@ -80,19 +80,19 @@ SharkFountain is a situation.
 The level of SharkFountain is 0.
 The sarea of SharkFountain is "Campus". [Fountain]
 
-instead of going south from College Administration Building while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+instead of going south from College Administration Building while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))  and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 
-instead of going north from College Campus Entrance while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+instead of going north from College Campus Entrance while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 
-instead of going east from College Walkway Northwest while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+instead of going east from College Walkway Northwest while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 
-instead of going west from College Walkway Northeast while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+instead of going west from College Walkway Northeast while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 
@@ -146,6 +146,6 @@ instead of going east from College Campus Entrance while (LastCampusWalkin - tur
 		LineBreak;
 		say "     Raising a hand to your mouth, you give a loud and sharp whistle that has both of the anthro canines whirling around to face you. Ordering the black-collared German shepherd to heel, you make eye-contact with Korvin as his lips start to show a little scowl, holding the stare until he looks down submissively a few moments later. With a sidelong glance at the beagle and a bark of, 'So long, pup!' Korvin then trots back over to you, taking his usual position. You hook a finger under the collar marking him as yours and adjust it a little to remind him of his status. Then you pat his head like a good dog and start moving on. The beagle student is left behind, staring after the dominant dog with a sigh of relief - and a sliver of regret.";
 		now GibsonRelationship is 100; [stopped things cold]
-	now lastMallInteriorScene is turns;
+	now LastCampusWalkin is turns;
 
 Extra College Events ends here.

@@ -1,4 +1,4 @@
-Version 1 of Campus for FS by Rikaeus begins here.
+Version 1 of Tenvale College Campus by Rikaeus begins here.
 
 "Adds a college campus area w/adjoining sports venue for Flexible Survival"
 
@@ -205,4 +205,4 @@ earea of Campus Walkway Northeast is "Campus".
 to say campusnortheastdesc:
 	say "     The walkway is clean but not completely, with stray pieces of clothing. Due to the area being close to the library, which is northeast of here, there are many people who are reading books, or using them to study out in the nice weather. Of course, on top of that you can spot some soon-to-be students filling out admissions paperwork on the grass, as the administrations building is northwest of here. To your west you can hear running water, which you expect to be the fountain. To the southeast is another pathway while to the southwest is the entrance to the college.";
 
-Campus for FS ends here.
+Tenvale College Campus ends here.

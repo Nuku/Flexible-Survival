@@ -693,10 +693,10 @@ Instead of resolving Concert Hall:
 	else:
 		say "     You make your way through the backstage area to the orchestra pit. As you're about to start searching through it, you notice a cute bunny head poke out from behind the curtain. But even as you're trying to decide how to peacefully introduce yourself, there appears another bunny elsewhere, and then another and another still, more and more bunnies moving in to surround you despite no alarm having been raised.";
 		now fightstatus is 3;
-		challenge "rabbit pack";
+		challenge "Rabbit Pack";
 		if fightstatus is 1:
 			now fightstatus is 3;
-			challenge "rabbit pack";
+			challenge "Rabbit Pack";
 			if fightstatus is 1:
 				say "     Having beaten the large group of bizarre bunnies and driven them back, you start searching the orchestra pit for a violin. Thankfully the instruments are actually in the pit and do not appear to have been damaged by the creatures. If anything, it seems like they have been well maintained. Perhaps those teams of bunnies have been playing them? It takes some fumbling around to navigate through the camped space, but you eventually find the string section and locate the violins.";
 				say "     Hopeful that one of these will make a fine instrument for your handsome lion, you look them over. Not really a judge of quality, you take the violin from the stand labelled as '1st violin' in the hopes it will be the best of them all. Putting it in its case, you check the other cases and folders, taking sets of spare strings, bows and wax, as well as as much different sheet music as you can find. Spotting one of the bunnies watching you nervously from behind the curtain, you kindly decide to not just take it all. Certainly several replacements will be enough for Leonard for quite some time.";

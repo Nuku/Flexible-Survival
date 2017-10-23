@@ -13,7 +13,7 @@ use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 200000. [ Code 10 ]
-use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
+use SYMBOLS_CHUNK_SIZE of 26000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 2000.
 use MAX_ACTIONS of 2000.
@@ -4997,7 +4997,7 @@ Include Beach by Speedlover.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
 Include Camp Bravo by Wahn.
-Include Campus For Fs by Rikaeus.
+Include Tenvale College Campus by Rikaeus.
 [Include Church Of The Maternal Beast For Fs by Guest Writers.]
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
@@ -5070,7 +5070,6 @@ Include Hyena Shoppers by Doots.
 Include Hyena Situations by Hellerhound.
 Include Important Research Quests by Kaleem Mcintyre.
 Include Infected Pool for FS by Hellerhound.
-Include Inflatable Orca by Song.
 Include Inventory Management Enhancements for FS by Core Mechanics.
 Include Junkyard Events by Stripes.
 Include Kitsune by Kaleem mcintyre.
@@ -5132,7 +5131,7 @@ Include Zoo Events by Wahn.
 
 [Monsters/Infections]
 Include Albino Mouse by Stripes.
-Include Alien Felinoid For FS by Damaged.
+Include Alien Felinoid by Damaged.
 Include Alpha Husky by Sarokcat.
 Include Alpha Wolf by Sarokcat.
 Include Amazonian for FS by Stripes.
@@ -5455,6 +5454,7 @@ Include Hungry Boar Man by Closerhenry.
 Include Hyper Squirrel by Nuku Valente.
 Include Icarus by Stripes.
 Include Ice Fox by Wahn.
+Include Inflatable Orca by Song.
 Include Informant by Kaleem mcintyre.
 Include Janice by Sarokcat.
 Include Jenna by Rikaeus.
@@ -5509,12 +5509,12 @@ Include Stella by Stripes.
 Include Stewart by Rikaeus.
 Include Stuck Dragon by Stripes.
 Include Sven by Stripes.
-[Include Sylvia by Prometheus.] [WIP]
+Include Sylvia by Prometheus. [WIP]
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
 Include Tenvale Gorillas Football Team by Kernog.
 Include Thomas by Wahn.
-[Include Thunderbolt by CrimsonAsh. This does not exist.]
+Include Thunderbolt by CrimsonAsh.
 Include Timothy by Sarokcat.
 Include Tristian by Verath.
 Include Urik by Wahn.

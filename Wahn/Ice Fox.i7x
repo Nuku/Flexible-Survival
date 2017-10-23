@@ -94,9 +94,11 @@ Section 4 - Location
 
 Snowy Forest Trail is a room. Snowy Forest Trail is northeast of Urban Forest.
 The description of Snowy Forest Trail is "     You're on a narrow trail through the urban forest, in an area of fairly dense growth. Fragments of the buildings formerly occupying this part of the city are few and far between, with trees and other plants forming what seems to be a century-old forest. Interestingly, this part of the woods is a lot cooler than the rest of the city, with some snow covering low-hanging branches and the ground under your feet. Despite this, you don't actually feel uncomfortable, which might actually be a wholly positive result of the nanites. Towards the north, this effect only gets more pronounced - there are white flakes in the air there, falling at a placid pace to settle in a glistening blanket of undisturbed snow.".
+earea of Snowy Forest Trail is "Forest".
 
 Forest Cave Entrance is a room. Forest Cave Entrance is north of Snowy Forest Trail.
-The description of Forest Cave Entrance is "[ForestCaveEntranceDesc]";
+The description of Forest Cave Entrance is "[ForestCaveEntranceDesc]".
+earea of Forest Cave Entrance is "Forest".
 
 to say ForestCaveEntranceDesc:
 	say "     In the midst of the sprawling and dense urban forest, with not a trace of civilization in sight now, you stand before what seems to be a small hill or mound. Everything around you is covered in a blanket of freshly fallen snow that quietly crunches with every step you take and more white flakes are falling in a gentle but steady shower. Interestingly, they actually seem to originate all from the same spot - an opening in the side of the hill, high enough to walk into. From there, the snow gets blown out into the surrounding area, creating beautiful whirls and eddies in the air as it gets blown through the air.";
