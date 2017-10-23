@@ -29,6 +29,12 @@ Use Scoring.
 Include Version 4 of Menus by Emily Short.
 Include Basic Help Menu by Emily Short.
 Include Basic Screen Effects by Emily Short.
+[dependencies]
+Include Glulx Entry Points by Emily Short.
+Include Glulx Text Effects by Emily Short.
+[depdencies 2]
+Include Flexible Windows by Jon Ingold.
+Include Simple Graphical Window by Emily Short.
 
 [To decide which number is the absolute value of (N - a number):
 	if N is less than 0:
@@ -2373,7 +2379,7 @@ To ClearMoreFunction:
 	now clearnomore is 0; [returns clearing to normal]
 	say "Screen clearing occurs frequently.";
 
-Section Color
+[Section Color
 
 Include Glulx Text Effects by Emily Short.
 
@@ -2438,7 +2444,7 @@ special-style-1	--	"#00CC00"	--	--	bold-weight	--	--	--	--	--
 special-style-2	--	"#CC0000"	--	--	bold-weight	--	--	--	--	--
 
 
-
+]
 Part 3 - Item Code
 
 Understand the command "get" as something new.
@@ -6364,6 +6370,9 @@ When play begins:
 		now x is a part of the player;
 	now the command prompt is "[promptsay]";
 
+[var to be used next]
+NewGraphics is a truth state that varies. NewGraphics is usually false.
+
 When play begins:
 	adjustdefaulthelp; [adjusts help menu]
 	let tempname be indexed text;
@@ -6380,6 +6389,13 @@ When play begins:
 		now hypernull is hypernull;
 	else:
 		now hypernull is 1;
+	say "One more thing...";[warn the player what to expect next]
+	say "Would you like to enable the new graphics system? (Y/N)[line break]";
+	if player consents:
+		NewGraphics is true;
+	else:
+		NewGraphics is false;
+		say "Ok. Graphics will not be shown.";
 	repeat with x running through featsets:
 		now x is a part of the player;
 	if gsgt is 1:		[sets name of scenario for menu based on preset]

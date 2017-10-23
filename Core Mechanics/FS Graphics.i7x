@@ -280,31 +280,52 @@ Figure of Map_Smith_Haven_Mall_icon is the file "Map_Mall.jpg".
 A thing has a figure name called icon.
 The icon of a thing is usually figure of pixel.
 graphics is a truth state that varies.
-[graphics is usually true.]
 
 before examining a thing(called t):
 	if the icon of t is figure of pixel:
 		continue the action;
 	project the icon of t;
 
+[OLD BACKUP]
+[to project (x - a figure name):
+	if graphics is true and NewGraphics is false:
+		repeat with y running from 1 to number of filled rows in table of game art:
+			choose row y in table of game art;
+			if icon entry is x and artist entry is not listed in BlockList of player:
+				display x;
+				break;]
+[NEW]
 to project (x - a figure name):
-	if graphics is true:
+	if graphics is true and NewGraphics is true:
+		repeat with y running from 1 to number of filled rows in table of game art:
+			choose row y in table of game art;
+			if icon entry is x and artist entry is not listed in BlockList of player:
+				now the currently shown picture is x;
+				follow the current graphics drawing rule;
+	if graphics is true and NewGraphics is false:
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
 			if icon entry is x and artist entry is not listed in BlockList of player:
 				display x;
 				break;
 
-graphicmoding is an action applying to nothing.
-understand "graphics" as graphicmoding.
+[COMPOUND -> nproject]
+to nproject (x - a figure name):
+	if graphics is true and NewGraphics is true:
+		repeat with y running from 1 to number of filled rows in table of game art:
+			choose row y in table of game art;
+			if icon entry is x and artist entry is not listed in BlockList of player:
+				follow the ngraphics_open rule;
+				now the currently shown picture is x;
+				follow the current graphics drawing rule;
+	if graphics is true and NewGraphics is false:
+		repeat with y running from 1 to number of filled rows in table of game art:
+			choose row y in table of game art;
+			if icon entry is x and artist entry is not listed in BlockList of player:
+				display x;
+				break;
 
-carry out graphicmoding:
-	if graphics is true:
-		say "Graphics are now disabled.";
-		now graphics is false;
-	else:
-		say "Graphics are now enabled.";
-		now graphics is true;
+
 
 Table of game art
 title	icon(figure name)	artist
@@ -715,13 +736,13 @@ carry out artistcredits:
 	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sam (as Vixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sandra by Trav @ ???[line break]";
-	say "     Sarah by Lyttathebug @ deviantart.com[line break]";		
+	say "     Sarah by Lyttathebug @ deviantart.com[line break]";
 	say "     Septus by Feralise @ furaffinity.net[line break]";
 	say "     Septus (face) by Cirrusthecloud @ https://www.furaffinity.net/user/cirrusthecloud/[line break]";
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";
 	say "     Stella by Furball @ furaffinity.net[line break]";
 	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";		
+	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
 	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
@@ -797,7 +818,7 @@ to BlockCheck (x - text):
 		say "[bold type][special-style-1]On  [roman type]";
 	else:
 		say "[bold type][special-style-2]Off  [roman type]";
-		
+
 to artistbanswitch (name - text):
 	if name is not listed in BlockList of player:
 		add name to Blocklist of player;
