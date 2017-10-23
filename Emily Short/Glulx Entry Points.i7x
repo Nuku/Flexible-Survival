@@ -186,9 +186,9 @@ Section - HandleGlkEvent routine
 
 Include (-
 
-  [ HandleGlkEvent ev context abortres newcmd cmdlen ;
+  [ HandleGlkEvent ev context abortres newcmd cmdlen;
       (+ library input context +) = context;
-      return (+ value returned by glk event handling +) ;
+      return (+ value returned by glk event handling +);
   ];
 
 -) before "Glulx.i6t".

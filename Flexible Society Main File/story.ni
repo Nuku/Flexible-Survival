@@ -287,7 +287,7 @@ An everyturn rule(this is the Foraging rule):
 		now y is 2;
 	else:
 		now y is 1;
-	now y is ( foragers * the Self Fertility of the tribe of player * y ) / 250 ;
+	now y is ( foragers * the Self Fertility of the tribe of player * y ) / 250;
 	let mor be morale of tribe of player;
 	if mor is less than 20, now mor is 20;
 	now y is ( y * mor ) / 100;

@@ -186,7 +186,7 @@ to salabind:
 				LineBreak;
 				increase struggleatt by 1;
 				if boundsegment is 0:
-					if struggleatt < 4 :
+					if struggleatt < 4:
 						say "     You strain to pull yourself away from the [one of]salamander[or]amphibian[at random], who tries to pull back. You manage to get [if struggleatt is 1]some[else if struggleatt is 2]more[else]a lot of[end if] distance from her.";
 						increase lustatt by 7 + (lustadjust * 2);
 						wait for any key;

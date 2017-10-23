@@ -99,7 +99,7 @@ Check examining a dead person (called corpse) (this is the examining a corpse ru
 Check examining the player (this is the report health rule):
 	say "You [status of the player]. (Health: [the present health of the player]/[the max health of the player])[line break]" instead.
 
-To say status of/for (P - a person) :
+To say status of/for (P - a person):
 	let x be the present health of P;
 	if P is the player:
 		if x is 100:

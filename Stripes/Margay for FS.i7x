@@ -173,7 +173,7 @@ this is the margaydance rule:
 	increase margaydancecount by 1;
 	if margaydancecount is even and a random chance of 2 in 5 succeeds and peppereyes is 0:	[40% of the time on any even round]
 		say "The big kitty performs an erotic dance that is quite tantalizing, seeking to entice you into giving into her rough advances. She runs her paws over her ample figure, her numerous breasts and then down to her wet cunts, fingering them with a moan of desire.";
-		let playernum be 150 + humanity of player + ( level of player * 2 ) + charisma of player + ( plmindbonus * 3 ) - libido of player ;
+		let playernum be 150 + humanity of player + ( level of player * 2 ) + charisma of player + ( plmindbonus * 3 ) - libido of player;
 		let margaynum be 200 + ( lev entry * 2 ) + cha entry + ( monmindbonus * 3 );
 		if bodyname of player is "Margay":
 			decrease playernum by 12;

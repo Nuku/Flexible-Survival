@@ -91,7 +91,7 @@ An everyturn rule(This is the Enemies Breed rule):
 			now y is 2;
 		else:
 			now y is 1;
-		now y is ( foragers * the Self Fertility of the enemy * y ) / 250 ;
+		now y is ( foragers * the Self Fertility of the enemy * y ) / 250;
 		let mor be morale of enemy;
 		if mor is less than 20, now mor is 20;
 		now y is ( y * mor ) / 100;

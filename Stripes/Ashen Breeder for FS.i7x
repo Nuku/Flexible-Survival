@@ -86,7 +86,7 @@ When Play begins:
 	now name entry is "Ashen Breeder"; [Name of your new Monster]
 	now attack entry is "The Ashen Breeder [one of]grabs at you with hir small claws, trying to pull you against hir chest[or]grinds hir cock firmly against you[or]wraps hir claws around a tit and squeezes hard, letting the warm milk splash against your body[or]manages to get a hold of you and pulls you against one of hir nipples. Sie forces your mouth against it and squeezes hard, milk pouring down your throat[at random].";
 	now defeated entry is "[beattheashenbr]"; [Text or say command used when Monster is defeated.]
-	now victory entry is "[Ashen Breeder Attack]" ;
+	now victory entry is "[Ashen Breeder Attack]";
 	now desc entry is "[ashenbreederdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "an obviously canine head, with long floppy ears"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "deliciously curvy and exposes the tender lip of a pouch. Any breasts present are swollen, dribbling milk upon the floor at a slow, yet constant rate.. Your arms are thick, with diminutive claws that yearn to hold and cuddle.. Your legs are digitigrade, shapely, and defined with excellent muscular tone. Your feet are exceptionally large paws with long toes"; [ Body Description, format as the text "Your body is (your text)." ]
