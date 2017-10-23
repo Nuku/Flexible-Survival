@@ -93,7 +93,7 @@ to say fangsex:
 			now title entry is "SBL fuck";
 			now sortorder entry is 4;
 			now description entry is "Vent your skunkbeast urges by fucking Fang.";
-	if libido of fang > 2 and lastfuck of Sandra - turns >= ( 9 - hp of Fang ) and Sandra is in the Bunker :
+	if libido of fang > 2 and lastfuck of Sandra - turns >= ( 9 - hp of Fang ) and Sandra is in the Bunker:
 		choose a blank row in table of fucking options;
 		now title entry is "Fang and Sandra";
 		now sortorder entry is 5;

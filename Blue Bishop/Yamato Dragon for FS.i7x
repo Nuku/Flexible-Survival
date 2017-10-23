@@ -508,7 +508,7 @@ to yamatmalesexmenu:
 				yamatdomshift;
 				now trixieexit is 1;
 		else if calcnumber is 5:
-			if scalevalue of player < 3 :
+			if scalevalue of player < 3:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[YamatM_5]"; [Anal Catching]

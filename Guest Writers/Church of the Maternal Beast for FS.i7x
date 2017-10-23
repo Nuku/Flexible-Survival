@@ -315,7 +315,7 @@ to say returntoHellhound:
 			say "     The clawed hand grabs your collar and effortlessly lifts you, making the bitch and yourself yelp in pain and shock as the tie is pulled on. After a few seconds, the bitch lets out a whuff, and from around your knot the fel bitch's piss gushes, soaking your crotch and seeping up to your belly fur as it runs down your thighs. Your sheath is continually flushed out by her urine as you feel the tightness around your knot fade as she seems to get looser and looser before finally popping free.";
 			say "     You are then hoisted fully to your feet and allowed to gain your footing, though you are still kept from turning around.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			end the game saying "Your soul is consumed by your hellish lusts.";
+			end the story saying "Your soul is consumed by your hellish lusts.";
 		else:	[if the player is female.]
 			say "     Stepping over the line and causing the watching hound to grin at you, his tongue lolling out of his muzzle and he prods his pack mates to get their attention. 'Our bitch is finally here.' You shiver at the words... but the slimy mess running down your leg makes it clear no matter what you think you want, your body craves exactly what they want to do to you. As you approach, they casually get to their feet, stretching and yawning, smirking at you as they pad over, then start to circle around. After a few seconds of study, they grab and tear at your clothes, growling happily as they expose your dirty, furred body. One of them drags his tongue over your tailhole while another presses his hot, dry nose against your oozing, lewd, hellhound twat and inhales your scent before dragging his tongue across the swollen, leaking opening.";
 			say "     The sensations from all this make you groan and shudder, dropping onto all fours as you feel your sex throb. The third hellhound, the one who initially corrupted you, snickers at your expression. He rolls onto his back, hind legs spread with the tip of his foul length poking from his sheath and oozing yellow cream into his belly fur. 'Come, bitch, it's time to accept your new place.'";
@@ -328,7 +328,7 @@ to say returntoHellhound:
 			say "     'Hurry up, you mutts. It is time we returned.' You feel a jerk on your collar, lifting your head up, startling a whine from your muzzle as the two engorged knots buried inside pull painfully. 'Enough, flood the bitch and let us be gone!'";
 			say "     You can't make yourself look at the demon. His voice alone make your ears flatten against your skull and fills you with the urge to slink to him on your belly in submission, but your four-legged lovers back happily at his instructions then grunt softly. Their piss begins to gush into you, both dogs whining happily as they empty themselves inside you. The tainted and foul liquid causes your muscles to relax as the clawed hand pulls at your collar, drawing you up until both dog cocks pop free with a fetid gush of cum and piss. This flow washes back down onto both hounds, running down your legs and staining your fur.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			end the game saying "Your soul is consumed by your hellish lusts.";
+			end the story saying "Your soul is consumed by your hellish lusts.";
 	else:
 		say "     Shuddering, you manage and turn and walk away despite the unholy urge to join the hellhounds in the clearing.";
 		move the player to Dirty Sheds;

@@ -147,7 +147,7 @@ to say christy_ending:
 	now bodydesc of player is "plump";
 	now bodytype of player is "[one of]plush[or]leonine[or]costume-like[at random]";
 	now the daycycle of player is 0;
-	end the game saying "You lose yourself to your new identity.";
+	end the story saying "You lose yourself to your new identity.";
 	follow the turnpass rule;
 	stop the action;
 

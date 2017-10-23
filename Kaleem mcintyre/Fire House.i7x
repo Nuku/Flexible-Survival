@@ -762,7 +762,7 @@ Check Firepolesliding:
 
 carry out Firepolesliding:
 	say "Hopping onto the fire pole, you hold on tight as gravity, coupled with your weight, sends you sliding down to the first floor of the firehouse. The feeling of vertigo makes you laugh slightly as the air rushing past you whips across your [bodyname of player] form.";
-	Move player to FireHouse ;
+	Move player to FireHouse;
 	increase score by 2;
 
 

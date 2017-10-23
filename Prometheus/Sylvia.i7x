@@ -48,7 +48,7 @@ instead of conversing the Sylvia:
 
 to say SylviaTalkMenu:
 	say "[line break]";
-	say "What do you wish to discuss with Sylvia?";	
+	say "What do you wish to discuss with Sylvia?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -104,7 +104,7 @@ to say SylviaTalkMenu:
 					say "[SylviaTalk4]";
 					if SylviaConv < 4:
 						increase SylviaConv by 1;
-				say "      Sylvia sits patiently, waiting to see whether you wish to continue the conversation";
+				say "     Sylvia sits patiently, waiting to see whether you wish to continue the conversation";
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -117,19 +117,19 @@ to say SylviaTalkMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say SylviaTalk1: [Talk about her]
-	say "     'As I said, I'm on exchange with Tenvale College, all payed for by a scholarship. I've always been good at the sciences. Between the pushing of my father and a family friend, I was advanced several years at school. It did mean that I didn't get much time to do what normal girls do; ride horses, gossip, talk about cute boys... but I really enjoyed learning about animals so I focused on that,' Sylvia responds. 'I was accepted into university, studying animal biology. The material and experiences were thrilling, but by the time I started considering a doctorate, the pressure I was beginning to feel from my family and tutors, unintentional I'm sure, was getting unbearable. So, I asked to come here for a complete change of scenery. I wasn't expecting it to change [italic type]this [roman type]much,' the collie gestures at the city with a chuckle.";
-	say "     'But you didn't really want to know about my education, did you? The day the city changed was mostly normal. I'd had lunch with some friends and was just sitting down in my room to work through some lab notes, when I heard roaring and screaming. Then I felt itchy and noticed I was growing fur. I don't remember much else from that day because I tripped over my chair trying to look out the window and knocked myself out. When I woke, I was the beautiful young lady you see before you.' Sylvia bats her eyelids at you. I would assume I was infected by the dog fur I always seem to have on my clothes, but who could complain about being changed into a sexy collie? After that I went to make sure my friends were still alright. As you probably saw when we first met, it nearly ruined my degree, if it hadn't been for Julian,' she trails off.";
-	
+	say "     'As I said, I'm on exchange with Tenvale College, all payed for by a scholarship. I've always been good at the sciences. Between the pushing of my father and a family friend, I was advanced several years at school. It did mean that I didn't get much time to do what normal girls do; ride horses, gossip, talk about cute boys... but I really enjoyed learning about animals so I focused on that,' Sylvia responds. 'I was accepted into university, studying animal biology. The material and experiences were thrilling, but by the time I started considering a doctorate, the pressure I was begining to feel from my family and tutors, unintentional I'm sure, was getting unbearable. So I asked to come here for a complete change of scenery. I wasn't expecting it to change [italic type]this [roman type]much,' the collie gestures at the city with a chuckle.";
+	say "     'But you didn't really want to know about my education did you? The day the city changed was mostly normal. I'd had lunch with some friends and was just sitting down in my room to work through some lab notes, when I heard roaring and screaming. Then I felt itchy and noticed I was growing fur. I don't remember much else from that day because I tripped over my chair trying to look out the window and knocked myself out. When I woke, I was the beautiful girl you see before you.' Sylvia bats her eyelids at you. I would assume I was infected by the dog fur I always seem to have on my clothes, but who could complain about being changed into a sexy collie? After that I went to make sure my friends were still alright. As you probably saw when we first met, it nearly ruined my degree, if it hadn't been for Julian,' she trails off.";
+
 to say SylviaTalk2: [Talk about her family]
-	say "     'Wanting to learn about my family, are you? reckon you might like my brother more than me? Tough. He isn't here,' Sylvia jokes. 'My father was a soldier, but has now retired. My brother, however, had enlisted before I left for university. My sister and I were miserable the day he left, but he sent us letters fairly often. I don't know how he is now since, as you know, the mail stopped getting into the city. My family must be so worried about me,' the collie laments, looking at the photo on her desk. 'My mother was a housekeeper, yes we still have those in England, but the birth of my brother meant that she had to stay at home. When my sister and I were born she realised that that time of her life was over, and so she did baking for the village shop.' Sylvia sighs, fond memories of childhood in the fore of her mind.";
-	say "     You cough politely, wanting to hear more. When you point out that she has yet to mention the family friend that encouraged her into science she snaps from her thoughts and continues. 'I was lucky to have a supportive family, even if I hadn't been interested in science, they would have been happy. However, a family friend, an entrepreneur, said that biologists could go far in the world, and would be willing to employ me once I had been to university. The family that my mother was maid for also were willing to help me, as I had grown up on their estate. I was a very lucky young lady growing up.' She smiles returning to her youth.";
-	
+	say "     'Wanting to learn about my family are you? reckon you might like my brother more than me? Tough. He isn't here,' Sylvia jokes. 'My father was a soldier, but has now retired. My brother, however, had enlisted before I left for university. My sister and I were miserable the day he left, but he sent us letters fairly often. I don't know how he is now since, as you know, the mail stopped getting into the city. My family must be so worried about me,' the collie laments, looking at the photo on her desk. 'My mother was a housekeeper, yes we still have those in England, but the birth of my brother meant that she had to stay at home. When my sister and I were born she realised that that time of her life was over, and so she did baking for the village shop.' Sylvia sighs, fond memories of childhood in the fore of her mind.";
+	say "     You cough politely, wanting to hear more. When you point out that she has yet to mention the family friend that encouraged her into science she snaps from her thoughts and continues. 'I was lucky to have a supportive family, even if I hadn't been interested in science, they would have been happy. However, a family friend whom was a entrepreneur said that biologists could go far in the world, and would be willing to employ me once I had been to university. The family that my mother was maid for also were willing to help me, as I had grown up on their estate. I was a very lucky young lady growing up.' She smiles returning to her youth.";
+
 to say SylviaTalk3: [Talk about her friends]
 	say "     'My friends? Am I not good enough for you?' Sylvia teases. ' Well, you've already met Julian, he's a biochemist so we work together fairly often, especially as he used to be part of my laboratory group. Julian has a twisty mind, good at working out problems, a trait I'm sure you already saw when you met us. He is a little shy, though that may just be compared to me, I doubt everyone would just accept someone watching them touch someone's privates in broad daylight. He's from Canada, so of course he's really nice. He claims he grew up among wolves, but that may just be an expression.";
-	say "     'There are also Michael and Michelle who are twins. Why someone would name their children such similar names is beyond me, perhaps it's a London thing as that is where they were from. They were studying engineering I'm told. I met them after the changes when I was going to the lab to see how damaged it was. They were stealing from the rooms. I doubt the equipment is usable any more, but they seem to think the machines are still valuable. They're cats so I was surprised when they were willing to talk to me so quickly, really quite charismatic those two,' the collie contemplates, scratching her chin. I met Septus, the captain of the wolf football team, he seemed nice, but was slightly disappointed when I said I wasn't interested in becoming a cheerleader. He says hello if he sees me while looking for new recruits, so I'd consider him a friend.' Sylvia thinks for a minute, 'I think that's all.'";
-	
+	say "     'There are also Michael and Michelle who are twins. Why someone would name their children such similar names is beyond me, perhaps it's a London thing as that is where they were from. They were studying engineering I'm told. I met them after the changes when I was going to the lab to see how damaged it was. They were stealing from the rooms. I doubt the equipment is usable any more, but they seem to think the machines are still valuable. They're cats so I was surprised when they were willing to talk to me so quickly, really quite charismatic those two,' the collie contemplates, scratching her chin. I met Septus, the captain of the wolf football team, he seemed nice, but was slightly disappointed when I said I wasn't interested in becoming a cheerleader. He says hello when he sees me while he looks for new recruits, so I'd consider him a friend.' Sylvia thinks for a minute, 'I think that's all.'";
+
 to say SylviaTalk4: [Talk about her interest in biology]
 	say "     'Are you sure you want to know, it's not quite as benevolent as many other people's reasons might be,' Sylvia questions you concernedly. 'Okay, I suppose I trust you enough. When I was young we had quite few dogs. Two border collies, a german shepherd, and two corgis. They were all male bar except one of the collies called Lucy whom I was especially attached to. I was about seven when I came home from school one day to find the german shepherd, Argus, mating with her. At that stage I didn't know what sex was and was curious what they were doing, so I asked my father. His response has stayed with me to this day. He told me that they were mating, trying to have puppies. and that was where children came from. I was seven when I was given the talk. He took me back into the room where they were, by which time Argus was tied. Daddy told me that this was an important part of life, and that I shouldn't be ashamed to watch nor be ashamed to discuss things such as sex.";
 	say "     'Over the time we had her she mated with all of them, the tart,' Sylvia muses amusedly. From that day I was obsessed with animals. Where they lived, how their lives interacted with others of their species as well as those not. My first science project was on the importance of foxes for the rural ecosystem. One of my A level essays was on the social structure and mating habits of timber wolves. My teachers were concerned, but my family was proud of how much effort and passion I was devoting to biology. When I was sixteen I rescued a border collie puppy from drowning and promptly took it home. I was allowed to keep him, so I named him Ajax. He grew up to be big boy. I hope my parents are still looking after him and not spoiling him too much,' Sylvia says, tilting her head. 'But anyway, that's the gist of why I started studying biology. Saw dogs having sex, decided I would make a career where I might see more animals fornicating. Not the most noble of reasons, I know.";
@@ -300,7 +300,7 @@ to DespairingBiologistEvent: [Meet Sylvia]
 
 instead of going northeast from Tenvale College Female Dorms while (hp of Sylvia is 2):
 	Room059Event;
-	
+
 to Room059Event: [First time to Sylvia's room]
 	say "     Seeing the room number that Sylvia had given you, you approach the door. However, when you knock, the door slowly swings open, revealing the collie leaning back in an armchair reading a book. her shirt is unbuttoned, but mostly covering her chest, only a glimpse of her breasts is visible. She notices you over the top of her book, placing it on a nearby desk. As the canine stands, she does up a few of the buttons on her shirt. 'That you came here at all suggests you aren't as sex driven as many of the cities occupants,' Sylvia exclaims, recognising you instantly. Motioning you in, she closes the door before patting the edge of her bed. 'Please, sit,' the student says cheerfully, returning to her armchair and smiling at you. Grateful to have a chance to rest your legs, you comply, the mattress sinking slightly, placing you at similar face heights.";
 	say "     'So, you want to get to know me more?' Sylvia remarks, stroking her tail absent-mindedly. 'I'm on exchange from northern England, where my parents are. I have an older brother and a younger sister. I'm was studying zoology, but with the changes to the city, I plan to focus on the interactions of the infected with each other, especially groups.' You can see that she is really excited about this decision, contrasting with her breakdown to her friend. 'It will mean that I will have to go into the city at points, so I'm not sure whether to just try and sneak around, or get some help from the other students. Before I do that, I should be able to study the residents on campus.' Her hand creeps up her tail, sliding over her thigh before she notices and consciously moves it away from her groin, draping it over the arm of the chair.";
@@ -443,6 +443,19 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 	now hp of Sylvia is 4; [helped with heat]
 
 	
+
+[
+Bottomless Trend is a situation.
+The level of Bottomless Trend is 0.
+The sarea of Bottomless Trend is Sylvia's Room.
+
+instead of going northeast from Tenvale College Female Dorms if (SylviaConv is 4)
+	move player to Sylvia's Room;
+	BottomlessTrendEvent;
+
+to BottomlessTrendEvent: [Sylvia removes skirt]
+	say "";
+]
 
 [Various Companions brought to Sylvia]
 

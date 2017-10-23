@@ -74,7 +74,7 @@ to say Retrieverdesc:
 	else:				[Fight Against Normal Retriever girl]
 		setmongender 4;      [creature is female]
 		say "	As you walk down the street you suddenly hear the sound of paws on pavement approaching you from behind. You turn towards the source just in time to avoid the golden furred canine rushing towards you from behind.";
-		say "	When the retriever circles around you get a clearer look at your assailant, she is a curvaceous female golden retriever with digitigrade legs and paw-like hand and feet as well as four firm breasts. her canine tail wags happily behind her, obviously looking forward to playing with you.";
+		say "	When the retriever circles around you get a clearer look at your assailant, she is a curvaceous female golden retriever with digitigrade legs and paw-like hand and feet as well as four firm breasts. Her canine tail wags happily behind her, obviously looking forward to playing with you.";
 		if hardmode is true and level of player > 5, let debit be level of player - 5;
 		now hp entry is 45 + ( debit * 4 );
 		now monsterhp is 45 + ( debit * 4 );
@@ -182,7 +182,7 @@ when play ends:
 				say "     As the last of your resistance fades and the bestial needs of the retriever bitch take full control you bound off happily into the city is search of new playmates to sate your canine lusts with.";
 				if hp of Rex is 4:
 					say "     You enjoy your time in the city with the other various infected creatures, particularly the other canines, but even they are unable to relive the burning need in your body the way your wonderful sextoy does.";
-					say "     Occasionally you share the pleasure of the wonderful bone with your lovers, but you never allow it to leave your possession, Bringing it with you everywhere you go in your new life as a carefree retriever bitch.";
+					say "     Occasionally you share the pleasure of the wonderful bone with your lovers, but you never allow it to leave your possession, bringing it with you everywhere you go in your new life as a carefree retriever bitch.";
 				else:
 					say "     You enjoy your time with the other various creatures in the city, particularly the huskies and their handsome alphas, yet you always feel something is missing. Deep down you know you will never be truly satisfied until you find a strong alpha of your own breed, to take you in and fill you with his pups like those lucky huskies.";
 		else:
@@ -201,7 +201,7 @@ when play ends:
 					if humanity of player is less than 50:
 						say "     Each time you visit you notice he has left that same blue collar out where you can see it, and each time you do you find yourself wondering about the way things could have been... the way things could still be.";
 				else if hp of Rex is 4:
-					say "     You manage to smuggle your dog-cock shaped sex toy out of the city with you, Frequently needing it to satisfy your body's strange new needs.";
+					say "     You manage to smuggle your dog-cock shaped sex toy out of the city with you, frequently needing it to satisfy your body's strange new needs.";
 				say "     You lead [if hp of Rex is 4]an otherwise normal[else]a relatively normal[end if] life outside the city, ending up working as a [if cunts of player > 0]waitress[else]waiter[end if] in an upscale restaurant catering mostly to other infected survivors. The friendly and upbeat demeanor provided by your retriever infection proves to be a valuable asset in this line of work, and your attractive canine body ensures you never have trouble finding someone who will let you follow them home for a night of lustful fun.";
 	else:
 		if hp of Rex > 9 and hp of Rex < 50:

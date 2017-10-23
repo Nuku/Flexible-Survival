@@ -189,7 +189,7 @@ instead of resolving Destroyed bushes:
 	if the player consents:
 		say "In a nearby bush you find a riding saddle and riding boots, both women's. It seems as if a woman went riding in the park when the infection broke out. Her horse changed, and raped her. Since the clearing is larger than if the horse just fucked her, you assume she changed and submitted as well.";
 		if the perception of the player is greater than a random number between one and 20:
-			say "In one of the puddles of cum you find a whip with metal bits strung throughout it. It looks as if the rider carried it, and lost it in the fray. it is currently covered with cum, but if you have enough water, you could change that. Do you wish to?";
+			say "In one of the puddles of cum you find a whip with metal bits strung throughout it. It looks as if the rider carried it, and lost it in the fray. It is currently covered with cum, but if you have enough water, you could change that. Do you wish to?";
 			if the player consents:
 				if carried of water bottle >= 3:
 					say "You have to use a few bottles to wash off the whip, but you manage to get it clean and safe to use.";

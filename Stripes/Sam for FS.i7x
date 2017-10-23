@@ -421,7 +421,7 @@ to assaultonminilab:
 				now bodydesc of player is "silky";
 				now bodytype of player is "feline";
 				now the daycycle of player is 0;
-				end the game saying "Surrendering to Rick the tigertaur you willing become another breeder kitty for the herm.";
+				end the story saying "Surrendering to Rick the tigertaur you willing become another breeder kitty for the herm.";
 				wait for any key;
 				now battleground is "void";
 				follow the turnpass rule;

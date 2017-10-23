@@ -182,7 +182,7 @@ to pewterbind:
 			now body of player is body entry;
 			now cock of player is cock entry;
 			now trixieexit is 1;
-			end the game saying "You lost your mind while bound!";
+			end the story saying "You lost your mind while bound!";
 		else:
 			let k be 0;
 			now keychar is "INVALID";

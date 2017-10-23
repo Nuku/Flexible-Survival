@@ -2,7 +2,7 @@ Version 3 of Needy Heat for FS by Core Mechanics begins here.
 [ Version 3.3 - Improved 'drive heat' subroutine created and moved here. ]
 [- Originally Authored By: Telanda Softpaw -]
 
-"Addon for adding an 'in heat' Event to infections, Designed to work with all monster type infections by default. with the option to be customisable if you want to add specifics for your monster."
+"Addon for adding an 'in heat' Event to infections, designed to work with all monster type infections by default, with the option to be customisable if you want to add specifics for your monster."
 
 Book 1 - Variables
 

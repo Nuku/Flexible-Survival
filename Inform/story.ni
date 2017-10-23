@@ -13,7 +13,7 @@ use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 200000. [ Code 10 ]
-use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
+use SYMBOLS_CHUNK_SIZE of 26000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 2000.
 use MAX_ACTIONS of 2000.
@@ -2783,7 +2783,7 @@ This is the sex change rule:
 			now cunt width of player is 0;
 		if prevcunt < cunts of player:		[did new cunt appear?]
 			follow the cunt descr rule;
-			say "Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, Leaking along a thigh as you quiver.";
+			say "Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, leaking along a thigh as you quiver.";
 	if cunts of player is not 0 and ( the sex entry is "Male" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of player:
 		let prevcunt be cunt length of player;
 		let prevcunt2 be cunt width of player;

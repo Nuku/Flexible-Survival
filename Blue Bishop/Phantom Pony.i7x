@@ -186,7 +186,7 @@ to blotbind:
 			WaitLineBreak;
 			now bodyname of player is "Blotted";
 			now humanity of player is 0;
-			end the game saying "You are milked perpetually by the toy.";
+			end the story saying "You are milked perpetually by the toy.";
 			now trixieexit is 1;
 		else:
 			let k be 0;

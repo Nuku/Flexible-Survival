@@ -287,7 +287,7 @@ An everyturn rule(this is the Foraging rule):
 		now y is 2;
 	else:
 		now y is 1;
-	now y is ( foragers * the Self Fertility of the tribe of player * y ) / 250 ;
+	now y is ( foragers * the Self Fertility of the tribe of player * y ) / 250;
 	let mor be morale of tribe of player;
 	if mor is less than 20, now mor is 20;
 	now y is ( y * mor ) / 100;
@@ -368,9 +368,9 @@ An everyturn rule(this is the Eternal Hunger rule):
 
 An everyturn rule(This is the You Lose rule):
 	if population of tribe of player is less than 1:
-		end the game saying "Your people have been destroyed.";
+		end the story saying "Your people have been destroyed.";
 	if the territory of tribe of player is less than 1:
-		end the game saying "Your people have been driven away and scattered.";
+		end the story saying "Your people have been driven away and scattered.";
 
 An everyturn rule(This is the Not 9001 rule):
 	if morale of tribe of player is greater than 100, now morale of tribe of player is 100.

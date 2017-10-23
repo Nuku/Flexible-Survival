@@ -972,7 +972,7 @@ to say leonardrivalfight:
 		WaitLineBreak;
 		if humanity of player < 10:
 			now hp of Leonard is 15;
-			end the game saying "Having become the larger and matronly lioness, you become Leonard's mate and pride mother to the other girls.";
+			end the story saying "Having become the larger and matronly lioness, you become Leonard's mate and pride mother to the other girls.";
 		else:
 			now hp of Leonard is 16;
 			now feline_attached is 0;
@@ -1035,7 +1035,7 @@ to say leonardrivalfight:
 			now cock width of player is 0;
 		if libido of player < 30, now libido of player is 30;
 		WaitLineBreak;
-		end the game saying "Having been defeated and captured by the alpha lion and his dark-haired lioness, you are made to join his pride.";
+		end the story saying "Having been defeated and captured by the alpha lion and his dark-haired lioness, you are made to join his pride.";
 
 
 [  hp of Leonard						]

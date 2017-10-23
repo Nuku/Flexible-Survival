@@ -51,7 +51,7 @@ to say losetolab:
 				now humanity of player is 0;
 				now battleground is "void";
 				WaitLineBreak;
-				end the game saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
+				end the story saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
 				stop the action;
 			else:
 				say "     Bested by yet another lab, all you can do is groan weakly as the confectionary canine pushes you to the ground. With two labs already inside you working excitedly, the third is already sinking into your softening body by the time you're on the ground. Once the third lab has disappeared inside your body, you feel their chocolate forms churning throughout your body. You are helpless to resist with the three labs now making up the majority of your chocolaty body as they begin reshaping your entire form. Your features melt away, replaced by the visage of a flowing chocolate dog. Your struggle to hold onto yourself against the will of the three labs is a short one, their combined consciousness quickly overwhelming you, leaving the labs to reshape your mind just as easily as they did your body. You feel the last of your human thoughts and desires melt away, quickly replaced by the simple needs of your benefactors.";
@@ -73,7 +73,7 @@ to say losetolab:
 				now humanity of player is 0;
 				now battleground is "void";
 				WaitLineBreak;
-				end the game saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
+				end the story saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
 				stop the action;
 		else if labhost is 1:
 			say "     Once again pushed to the ground by a chocolate lab, you are filled with dread as you feel the churning of your unwanted passenger increase. The dog who bested you barks happily as the head of the lab inside you slowly begins to emerge from your chest. The two share several slobbery doggy kisses before setting to work teasing and arousing your chocolaty body. With one working you from the inside and one from the outside, the two labs quickly wear down your resistances, once again bringing your body to a much more fluid state. All you can do is groan in displeasure as the second lab dives headfirst into your belly, and watch as its flailing legs and tail slowly disappear inside you. Once your two passenger finally settle down and you are able to once again pull yourself into a more solid form you slowly rise to your feet, struggling to maintain your form with the powerful churning inside your body and the two labs flowing across your mind.";

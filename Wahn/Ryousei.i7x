@@ -93,7 +93,7 @@ When Play begins:
 	now body change entry is "muscles tighten underneath your skin, twisting and cording and arranging themselves in a more feline manner. You stumble as your legs shift underneath you, their ankles stretching upwards as your feet expand and change, shifting your balance to the balls of new paw-like feet while the rest of the leg rearranges itself into a partially digitigrade stance, causing you to lean forward slightly";
 	now skin change entry is "it shudders and seems to shift on its own, thick orange and black tiger fur pushing out in soft pleasurable waves of change all over your body";
 	now ass change entry is "it grows firm and muscled, and a long sleek tiger tail erupts outwards from your tailbone. Soon completing its growth, it starts lashing around behind you in long natural motions, almost feeling as if it had always been a part of you";
-	now cock change entry is "it shifts and tapers to a soft point, short nubby barbs slowly sprouting along the shaft neat the head. The skin of your belly and crotch stretches out to pull the feline cock up close to your body, and wraps it in a proper furry tiger[']s sheath.";
+	now cock change entry is "it shifts and tapers to a soft point, short nubby barbs slowly sprouting along the shaft neat the head. The skin of your belly and crotch stretches out to pull the feline cock up close to your body, and wraps it in a proper furry tiger's sheath.";
 	now str entry is 22;
 	now dex entry is 18;
 	now sta entry is 24;

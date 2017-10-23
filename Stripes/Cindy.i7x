@@ -5,7 +5,7 @@ Version 2 of Cindy by Stripes begins here.
 
 Section 1 - Sunny Snacks
 
-Sunny Snacks is a room. 
+Sunny Snacks is a room.
 Sunny Snacks is northeast of Public Beach.
 The description of Sunny Snacks is "[sunnysnacksdesc]".
 
@@ -36,7 +36,7 @@ instead of conversing Cindy:
 		say "     Cindy chats up a cute otter who's come to the counter. He's wearing nothing but a plastic whistle around his neck. With a wink and a playful teasing of his headfur, she invites him to come into the back for a bit. She temporarily closes the counter window and you can hear the sounds of them fucking inside. After he leaves and she opens up again, there's she shows no signs of infection at all. She looks just as human as before.";
 		increase hp of Cindy by 1;
 	else if hp of Cindy is 2 and a random chance of 1 in 3 succeeds:
-		say "     Decide to ask Cindy if she knows why she's not become infected like the others, but she shushes you[if cocks of player > 0] sharply[end if]. Leaning over the counter to get a better look, she gazes down at the beach where an cat-eared guy's been lured onto a sun-bathing pantheress[']s blanket. What starts out friendly enough with talking and light touches, soon goes from a seemingly innocent kiss to the dark female petting and then groping the reluctant male as she strips his clothes off.";
+		say "     Decide to ask Cindy if she knows why she's not become infected like the others, but she shushes you[if cocks of player > 0] sharply[end if]. Leaning over the counter to get a better look, she gazes down at the beach where an cat-eared guy's been lured onto a sun-bathing pantheress's blanket. What starts out friendly enough with talking and light touches, soon goes from a seemingly innocent kiss to the dark female petting and then groping the reluctant male as she strips his clothes off.";
 		say "     Knowing where this is going, Cindy slips her right hand into her bikini and the left under her shirt. She moans as she starts fingering herself to the scene playing out[if cocks of player > 0]. Noticing you ogling at her, she gives you a disdainful look before shifting her attention back to the beach[end if]. 'Mmm... yeah... let's see it,' she half-whispers as she stares down at the couple. 'Do it, kitty.'";
 		say "     Events continue to play out, the feline's pulls the guy's cock out and climbs atop him. Pinning him down, she bounces on his pole. Black fur starts creeping up his belly as her starts spreading to him. 'Yeah.. That's the stuff...' Cindy moans as the victim's transformation continues, changing his body and eventually his head. By the time it's run his course and the guy's become a matching male panther, the waitress has to stiffle a moaning orgasm from what she's witnessed.";
 		say "     'Ahhhhh. Damn! That's always soooo hot to see happen.' She pants to recover her breath and wipes her hands on a dish towel. 'As inconvenient as having gotten stuck here is, the entertainment more than makes up for it. Speaking of, I could go for some private entertainment,' she says with a grin.";

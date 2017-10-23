@@ -578,7 +578,7 @@ to say sandrasex5: [Post-transformation toy sex]
 Section 4 - Sandra and Coleen Interplay
 
 An everyturn rule:
-	if lust of Sandra - turns > 15 and hp of Sandra is 1 and ( coleenalpha > 0 or coleencollared > 0 or coleenslut > 0 ) :
+	if lust of Sandra - turns > 15 and hp of Sandra is 1 and ( coleenalpha > 0 or coleencollared > 0 or coleenslut > 0 ):
 		now hp of Sandra is 2;
 		now lastfuck of Coleen is turns;
 		now lastfuck of Sandra is turns;

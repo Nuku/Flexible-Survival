@@ -371,7 +371,7 @@ Part 7a - Debugging Commands (not for release)
 
 Chapter 7.1 - Debugging Graphlinks Table
 
-Debugging graphlinks is an action out of world.	Understand "graphlinks" or "graphlinks table" as debugging graphlinks.
+Debugging graphlinks is an action out of world. Understand "graphlinks" or "graphlinks table" as debugging graphlinks.
 
 Check debugging graphlinks:
 	say "[line break][bold type]Table of Graphlink Glulx Replacement Commands[roman type] (presented in reverse order)[line break]There are [number of filled rows in the Table of Graphlink Glulx Replacement Commands] entries in the table.";

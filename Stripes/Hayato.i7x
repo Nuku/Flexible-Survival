@@ -562,7 +562,7 @@ to say onilairlost1:
 		follow the sex change rule;
 	if libido of player < libido entry, now libido of player is libido entry;
 	WaitLineBreak;
-	end the game saying "Reduced to wild oni, you join the Great Oni's clan.";
+	end the story saying "Reduced to wild oni, you join the Great Oni's clan.";
 	now battleground is "void";
 	WaitLineBreak;
 	now skipturnblocker is 1;

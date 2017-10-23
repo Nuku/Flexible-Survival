@@ -8,7 +8,7 @@ The player has a number called MonkeyKingWin.
 
 [PLANS/A FAIRE :
 Randomiser MK descriptions scenes: [random adj][random name] (v 2)?
-Develop MonkeyKing: give option on how to handle victory . Depending on what you do, Fight intro and/or outcome changes. (v2)
+Develop MonkeyKing: give option on how to handle victory. Depending on what you do, Fight intro and/or outcome changes. (v2)
 Interaction during fight? (v2)
 Concept : friendship meter: raises if non-dominant victory, lowers else; if positive or negative, certain scenes change (v2 / v3)
 ]
@@ -50,7 +50,7 @@ to say losetoMonkeyKing:
 			else:
 				say "     You try to crawl away from him but the smirking monkey jumps on your back. You feel his cock brushing against your thighs and lining with your vagina. '[italic type]Relax yourself and bask in pleasure.[roman type]' whispers the Monkey King in your ear, before forcing himself inside of you. You moan as he fucks you at a quick, steady pace.";
 				if cocks of player > 0:
-					say "     Suddenly, the agile primate's feet leave the ground and grab your cock. Having to suddenly support the entire weight of the simian fighter, you fall forward, your shoulders and your head pinned on the ground. The Monkey King hugs your chest tight as he fucks you while his prehensile paws stroke your [cock size desc of player] penis. The pleasure is really indescribable and you orgasm in a few minutes. your cock spurts its load on the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your innards signals that he came as well. Satiated, he dismounts you and apply his paws on your face, having you lick them clean, before he takes his leave in a short, taunting victory dance.";
+					say "     Suddenly, the agile primate's feet leave the ground and grab your cock. Having to suddenly support the entire weight of the simian fighter, you fall forward, your shoulders and your head pinned on the ground. The Monkey King hugs your chest tight as he fucks you while his prehensile paws stroke your [cock size desc of player] penis. The pleasure is really indescribable and you orgasm in a few minutes, your cock spurting its load on the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your innards signals that he came as well. Satiated, he dismounts you and apply his paws on your face, having you lick them clean, before he takes his leave in a short, taunting victory dance.";
 				else:
 					say "     Suddenly, the agile primate's feet leave the ground and grab on your legs while his arms hug your upper body tight. Riding you like a jockey rides a horse, you stumble forward as the speed and the intensity of his fucking doubles. The deserted halls resonate with your moans and the monkey's grunts. The pleasure is really indescribable and you orgasm in a few minutes, your cunt spasming around the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your vagina signals that he came as well. Satiated, he dismounts you and takes his leave in a short, taunting victory dance.[fimpregchance]";
 		else:
