@@ -2,26 +2,28 @@ Version 1 of New Graphics by Executaball begins here.
 
 "Provides functions that link the new window based graphics."
 [New Graphics modifier]
-The graphics window pixel count is 1. The graphics window position is g-above.
+[The graphics window pixel count is 1. The graphics window position is g-above.]
+The graphics window proportion is 1. The graphics window position is g-above.
 
 [Rule for starting the virtual machine:
 	now the current graphics drawing rule is the bland graphics drawing rule.]
 
-The graphics-window is a graphics g-window spawned by the main-window. The position of the graphics-window is g-placeabove.   Every turn: follow the refresh windows rule.
+[The graphics-window is a graphics g-window spawned by the main-window. The position of the graphics-window is g-placeabove.   Every turn: follow the refresh windows rule.
 
 When play begins: open up the graphics-window.
 
-The roomview-canvas is a g-canvas. The associated canvas of the graphics-window is the roomview-canvas. The canvas-width is 640. The canvas-height is 480.
+The roomview-canvas is a g-canvas. The associated canvas of the graphics-window is the roomview-canvas. The canvas-width is 640. The canvas-height is 480.]
 
 This is the ngraphics_close rule:
 	if graphics is true and NewGraphics is true:
-		[now the graphics window proportion is 0;]
-		now the graphics window pixel count is 1;
+		now the graphics window proportion is 1;
+		[now the graphics window pixel count is 1;]
 		follow the current graphics drawing rule.
 
 This is the ngraphics_open rule:
 	if graphics is true and NewGraphics is true:
-		now the graphics window pixel count is 450;
+		[now the graphics window pixel count is 450;]
+		now the graphics window proportion is 30;
 
 graphicmoding is an action applying to nothing.
 understand "graphics" as graphicmoding.
@@ -45,24 +47,25 @@ carry out graphicmoding:
 				if NewGraphicsInteger is 1:
 					now NewGraphics is true;
 					now NewGraphicsInteger is 2;
-				if NewGraphicsInteger is 2:
+				else if NewGraphicsInteger is 2:
 					now graphics is false;
 					now NewGraphics is false;
 					now NewGraphicsInteger is 0;
-				if NewGraphicsInteger is 0:
+				else if NewGraphicsInteger is 0:
 					now graphics is true;
 					now NewGraphics is false;
 					now NewGraphicsInteger is 1;
 			-- 2:
 				say "Exit graphics menu?";
 				if player consents:
-					now the graphics window pixel count is 0;
+					[now the graphics window pixel count is 1;]
+					now the graphics window proportion is 1;
 					follow the current graphics drawing rule; [cleanup here needs no condition check because even NewGraphics enabled players will need the window gone.]
 					now trixieexit is 1;
 
-graphiccheat is an action applying to nothing.
+[graphiccheat is an action applying to nothing.
 understand "graphiccheat" as graphiccheat.
-carry out graphiccheat:
+carry out graphiccheat:]
 
 
 
