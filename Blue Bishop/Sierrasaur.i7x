@@ -138,7 +138,7 @@ to sierrabind:
 			now cock of player is cock entry;
 			now voreloss is true;
 			now trixieexit is 1;
-			end the game saying "You lost your mind while bound!";
+			end the story saying "You lost your mind while bound!";
 		else:
 			let k be 0;
 			now keychar is "INVALID";
@@ -358,7 +358,7 @@ to sierrasex:
 		else:
 			say "your ability to breath is considerably limited,";
 		say " [if boundstate is true]though he relents just enough to not overwhelm you, [end if]making you rapidly swallow down his sexual fluids just to keep up. This ritual [if hp of player < 1]forcibly[else]quickly[end if] [if cocks of player > 0]drives your dick[smn] erect, throbbing in the open air[else if cunts of player > 0]makes your cunt[sfn] ache with an overwhelming need[else]makes you aroused, though you have no way of sating it[end if], a matter you're too preoccupied right now to properly attend to, as the beast thrusts instinctively against your attending hole.";
-		say "     With a low, loud groan, the reptile [if boundstate is true]suddenly pins you down, forcing almost the entire length down your throat. flooding[else]floods[end if] your gullet with its thick, creamy fluid. [if boundstate is true and sierrapure is true]The creature is happy to feed its little companion, generating a fair amount more than what is normal for it, probably also using this time to train you, as your torso bloats to abide the overwhelming flood[else if boundstate is true]The creature is dead set on forcing you to swallow all of it down, and it's quickly clear that it seems to be generating more than usual, your stomach quickly bloating to abide this overwhelming flood[else if sierrapure is true]The creature is happy to feed its little companion, flooding your belly with its virile seed[else]The flood is so substantive, it eventually starts spurting from your lips, ultimately forcing you to pull free of his tool and get doused with the remnant flood of the creature's virile seed[end if].";
+		say "     With a low, loud groan, the reptile [if boundstate is true]suddenly pins you down, forcing almost the entire length down your throat, flooding[else]floods[end if] your gullet with its thick, creamy fluid. [if boundstate is true and sierrapure is true]The creature is happy to feed its little companion, generating a fair amount more than what is normal for it, probably also using this time to train you, as your torso bloats to abide the overwhelming flood[else if boundstate is true]The creature is dead set on forcing you to swallow all of it down, and it's quickly clear that it seems to be generating more than usual, your stomach quickly bloating to abide this overwhelming flood[else if sierrapure is true]The creature is happy to feed its little companion, flooding your belly with its virile seed[else]The flood is so substantive, it eventually starts spurting from your lips, ultimately forcing you to pull free of his tool and get doused with the remnant flood of the creature's virile seed[end if].";
 		if sierramem is 2:
 			say "     [if hp of player < 1]Thankfully[else if sierrapure is true]Much to your approval[else]Interestingly enough[end if], the taste is not all that bad, this lewd nectar mildly sweet and clearly filling";
 			If boundstate is true:

@@ -72,9 +72,9 @@ The sarea of Grizzly gone is "Zoo".
 Instead of Resolving a Grizzly gone:
 	say "Traveling through the zoo in search of anything of use, you come across a zookeepers hut it seems like something broke into, taking a chance you look inside, and see that most of the area seems to be empty and smelling of sex. About to leave you notice several hurried notes someone left, picking them up you begin to leaf through them.[line break].";
 	say "'The grizzly is gone from the enclosure this morning! No sign of it at all and the door was left wide open! What the hell happened last night, I need to ask the night watch...'[line break]";
-	say "'Holy shit, if anyone is reading this, I found the grizzly and watch out, He seems to be a size larger than he was yesterday! And god if he doesn't seem to be smarter now too! I locked him out of the shed and I should be safe in here.'[line break]";
+	say "'Holy shit, if anyone is reading this, I found the grizzly and watch out, he seems to be a size larger than he was yesterday! And god if he doesn't seem to be smarter now too! I locked him out of the shed and I should be safe in here.'[line break]";
 	say "I don't know what the bear is up to out there, but there was a lot of grunting just a minute ago, and there is a strange smell in here now... it smells kinda... good. For some reason the shack seems to be a size too small now though...[line break]";
-	say "Grizzly so good, grizzly cock is sized juuust right,' The last note ends there, trailing off into an unrecognizable scrawl.";
+	say "'Grizzly so good, grizzly cock is sized juuust right,' The last note ends there, trailing off into an unrecognizable scrawl.";
 	Now Grizzly gone is resolved;
 
 

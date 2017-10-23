@@ -81,7 +81,7 @@ to plushlionvored:
 		now battleground is "void";
 		now combat abort is 1;
 		attempttowait;
-		end the game saying "Having been consumed by the plush lion, you've been turned into another of the stuffed felines roaming the fairgrounds.";
+		end the story saying "Having been consumed by the plush lion, you've been turned into another of the stuffed felines roaming the fairgrounds.";
 		stop the action;
 
 

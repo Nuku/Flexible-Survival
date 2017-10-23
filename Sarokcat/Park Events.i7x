@@ -66,7 +66,7 @@ when play begins:
 	add Poke trap to badspots of furry;
 
 Instead of Resolving a Poke trap:
-	say "Minding your own business as you wander the park, you start to hear a strange noise from off to the side, when you turn to look you see a flash of yellow fur, like on some small creature, and a soft pi pi pi noise, Do you investigate further? ";
+	say "Minding your own business as you wander the park, you start to hear a strange noise from off to the side. When you turn to look, you see a flash of yellow fur, like on some small creature, and a soft pi pi pi noise. Do you investigate further? ";
 	if player consents:
 		say "As you move into the bushes, you see a small yellow rodent, not more than a foot or two in height, with its back to you, its yellow tail shaped almost like a lightning bolt as it makes soft pi noises. Feeling somewhat surprised you realize this rather reminds you of some pop culture lightning creature you have seen before, from a video game of all things. As if confirming your suspicion, you hear the slight crackle of electricity in the air. Do you move closer?";
 		if player consents:

@@ -112,7 +112,7 @@ to say losejoannafight:
 	now libido of player is 100;
 	now thirst of player is 0;
 	now hunger of player is 0;
-	end the game saying "You were consumed by the giant parasitic plant.";
+	end the story saying "You were consumed by the giant parasitic plant.";
 	now battleground is "void"; [blocks a post-event fight]
 	now vinetrapped is 2;
 	wait for any key;

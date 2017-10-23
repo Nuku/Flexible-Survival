@@ -368,9 +368,9 @@ An everyturn rule(this is the Eternal Hunger rule):
 
 An everyturn rule(This is the You Lose rule):
 	if population of tribe of player is less than 1:
-		end the game saying "Your people have been destroyed.";
+		end the story saying "Your people have been destroyed.";
 	if the territory of tribe of player is less than 1:
-		end the game saying "Your people have been driven away and scattered.";
+		end the story saying "Your people have been driven away and scattered.";
 
 An everyturn rule(This is the Not 9001 rule):
 	if morale of tribe of player is greater than 100, now morale of tribe of player is 100.

@@ -272,7 +272,7 @@ Instead of fucking the Erica:
 			now thirst of Erica is 1;
 			now lastfuck of Erica is turns;
 		else:
-			say "     Stepping up to Erica, you embrace her and give her a deep kiss. she practically melts into your arms as you hold her, eagerly returning your attentions with more kisses while her hands roam over your body. Looks like she's ready and willing to lose her virginity now - too bad you don't have the right 'equipment' for that at the moment... better try again later once you've gotten a cock to fuck her with.";
+			say "     Stepping up to Erica, you embrace her and give her a deep kiss. She practically melts into your arms as you hold her, eagerly returning your attentions with more kisses while her hands roam over your body. Looks like she's ready and willing to lose her virginity now - too bad you don't have the right 'equipment' for that at the moment... better try again later once you've gotten a cock to fuck her with.";
 	else if (hp of Erica is 1): [female repeat sex]
 		if (lastfuck of Erica - turns < 6):
 			say "     As you approach Erica, she immediately sees the lust-filled twinkle in your eyes. Running a hand up the side of your arm and stroking your cheek, the attractive college student says, 'I love you baby, but I need some rest in between. Can we play another time?' She gives you a soft kiss on the lips as you nod, already thinking about what you want to do with her later.";

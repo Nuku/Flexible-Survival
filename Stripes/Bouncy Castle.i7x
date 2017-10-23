@@ -570,7 +570,7 @@ to say bckingchair:
 				now tailname of player is "Captured";
 				now cockname of player is "Captured";
 				now humanity of player is 0;
-				end the game saying "You are transformed into an inflatable [bcfinalchairform] chair.";
+				end the story saying "You are transformed into an inflatable [bcfinalchairform] chair.";
 	if chairescape is true:
 		say "     Managing to get some leverage by shifting your weight, you throw all your effort into pulling one of your arms free. The yellow material stretches upwards at first, reluctant to release you, but eventually gives way and is pulled back down into its normal shape. With an arm free, it becomes easier to pull the other free as well. You take care not to leave your hands on the chair in any one spot too long, but are eventually able to pull the rest of your body free of it in the end.";
 		say "     You move away from it quickly while trying to clear your head and refocus your thoughts";
@@ -610,7 +610,7 @@ to say bckingchair_accept:
 	now tailname of player is "Captured";
 	now cockname of player is "Captured";
 	now humanity of player is 0;
-	end the game saying "You are transformed into an inflatable [bcfinalchairform] chair.";
+	end the story saying "You are transformed into an inflatable [bcfinalchairform] chair.";
 
 
 Chapter 8 - Punching Pillars
@@ -729,7 +729,7 @@ to say bcpptendril:
 				now tailname of player is "Captured";
 				now cockname of player is "Captured";
 				now humanity of player is 0;
-				end the game saying "You are transformed into another [ppcolour] pillar.";
+				end the story saying "You are transformed into another [ppcolour] pillar.";
 	if tendrilescape is true:
 		say "     Focusing on your escape, you pull free of the liquid latex attempting to engulf you with a wet, slurping sound. The pillar makes a few more weak attempts to grab you, but it seems your escape has worn it out too much for the moment[if compnumber is 1]. You rush over to your companion and assist them in getting free, having gotten themselves mostly engulfed by the pillar which caught them[else if compnumber > 1]. You rush over to your companions, well on their way to being engulfed by pillars themselves, and help them break free[end if]. You don't have time to take a break though, as the other pillars around you are also making grabs for you now that you're unclaimed. You have two options for exit from this room.";
 		say "     [bold type]Shall you head through the door to the north or head back the way you came by going east back to the ball pit?[roman type][line break]";
@@ -775,7 +775,7 @@ to say bcpptendril_accept:
 	now tailname of player is "Captured";
 	now cockname of player is "Captured";
 	now humanity of player is 0;
-	end the game saying "You are transformed into another [ppcolour] pillar.";
+	end the story saying "You are transformed into another [ppcolour] pillar.";
 
 
 Chapter 9 - Knight's Chambers
@@ -985,7 +985,7 @@ to chairboundstate:
 			now tailname of player is "Captured";
 			now cockname of player is "Captured";
 			now humanity of player is 0;
-			end the game saying "You are imprisoned by the Bouncy Castle.";
+			end the story saying "You are imprisoned by the Bouncy Castle.";
 			now trixieexit is 1;
 		else:
 			let k be 0;
@@ -1231,7 +1231,7 @@ to chairpassivelosses:
 				now tailname of player is "Captured";
 				now cockname of player is "Captured";
 				now humanity of player is 0;
-				end the game saying "You are imprisoned by the Bouncy Castle.";
+				end the story saying "You are imprisoned by the Bouncy Castle.";
 		else:
 			say ". As you continue fighting, you can feel the sex chair's grip on you loosen and you pull hard to get free.";
 	if bcchairescape is 2:
@@ -1271,7 +1271,7 @@ to say bcchairsubmit:
 	now tailname of player is "Captured";
 	now cockname of player is "Captured";
 	now humanity of player is 0;
-	end the game saying "You become part of the Bouncy Castle.";]
+	end the story saying "You become part of the Bouncy Castle.";]
 
 
 Chapter 15 - Eastern Parapets
@@ -1506,7 +1506,7 @@ to dolboundstate:
 				now combat abort is 1;
 				WaitLineBreak;
 				now trixieexit is 1;
-				end the game saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
+				end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 			else:
 				let k be 0;
 				now keychar is "INVALID";
@@ -1752,7 +1752,7 @@ to say dolcheckA:		[empty]
 		now battleground is "void";
 		now combat abort is 1;
 		WaitLineBreak;
-		end the game saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";]
+		end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";]
 
 
 to say dolcheckB:		[free victim]
@@ -1989,7 +1989,7 @@ to say bcchairfinal1: [FLOT -- Check?]
 					now tailname of player is "Captured";
 					now cockname of player is "Captured";
 					now humanity of player is 0;
-					end the game saying "You are imprisoned by the Bouncy Castle.";
+					end the story saying "You are imprisoned by the Bouncy Castle.";
 			else:
 				say "     As you continue fighting, you can feel the sex chair's grip on you loosen and you pull hard to get free.";
 	if bcchairescape is 2:	[escape]
@@ -2037,7 +2037,7 @@ to say bcchairfinal2:
 	now tailname of player is "Captured";
 	now cockname of player is "Captured";
 	now humanity of player is 0;
-	end the game saying "You become part of the Bouncy Castle.";
+	end the story saying "You become part of the Bouncy Castle.";
 
 
 Chapter 2 - Eastern Inflatables Escape
@@ -2074,7 +2074,7 @@ to say bcfinal2:		[Fail - caught w/vixen]
 	now tailname of player is "Captured";
 	now cockname of player is "Captured";
 	now humanity of player is 0;
-	end the game saying "You and the vixen failed to escape your latex fate.";
+	end the story saying "You and the vixen failed to escape your latex fate.";
 
 
 to say bcfinal3:		[Escape - leave w/o vixen]

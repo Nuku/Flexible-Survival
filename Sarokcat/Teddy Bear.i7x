@@ -118,7 +118,7 @@ to teddybearvored:
 		now battleground is "void";
 		now combat abort is 1;
 		attempttowait;
-		end the game saying "Having been consumed by the teddy bear, you've been turned into another of the plush bears roaming the fairgrounds.";
+		end the story saying "Having been consumed by the teddy bear, you've been turned into another of the plush bears roaming the fairgrounds.";
 		stop the action;
 
 

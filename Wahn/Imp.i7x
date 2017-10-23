@@ -271,7 +271,7 @@ An everyturn rule:   [hellhound bad end progress every turn]
 			now skinname of player is "Demon Slave";
 			now bodyname of player is "Demon Slave";
 			now cockname of player is "Demon Slave";
-			end the game saying "You're stuck in hell - there's no coming back from that!";
+			end the story saying "You're stuck in hell - there's no coming back from that!";
 
 
 Section 4 - Endings

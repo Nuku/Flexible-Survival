@@ -77,7 +77,7 @@ to say mouseapts:
 	now libido of player is ( libido of player + 1 ) / 3;
 	if humanity of player < 10:
 		say "     For a moment you consider trying to leave while the mice are asleep, but your mate shifts a little and squeaks softly, squeezing you tighter. Unwilling to leave her, or them, you rest your head against hers, drifting further from yourself into the mouse collective.";
-		end the game saying "You give yourself up to the mouse collective, joining their united hive-mind in joyous mousedom.";
+		end the story saying "You give yourself up to the mouse collective, joining their united hive-mind in joyous mousedom.";
 		wait for any key;
 		follow the turnpass rule;
 		stop the action;

@@ -70,7 +70,7 @@ to orcabind:
 				WaitLineBreak;
 				now bodyname of player is "OrcaSexSlave";
 				now humanity of player is 0;
-				end the game saying "You are milked perpetually by the toy.";
+				end the story saying "You are milked perpetually by the toy.";
 				now trixieexit is 1;
 			if orcaintense < 6: [Hides content to prevent endings colliding]
 				now lustatt is libido of player;
@@ -100,7 +100,7 @@ to orcabind:
 				WaitLineBreak;
 				now bodyname of player is "OrcaSexSlave";
 				now humanity of player is 0;
-				end the game saying "You are milked perpetually by the toy.";
+				end the story saying "You are milked perpetually by the toy.";
 				now trixieexit is 1;
 			else: [Section of actions possible during the bind.]
 				let k be 0;

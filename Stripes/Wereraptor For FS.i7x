@@ -588,7 +588,7 @@ to wrcurserampage:
 			now wrcursestatus is 3;
 			now hp of player is ( hp of player + hp of player + maxhp of player ) / 4;
 		else if humanity of player <= 0:
-			end the game saying "Your wild rampage consumes you and you become nothing more than a wild creature that becomes a dangerous, bloodthirsty and lust-crazed beast each night.";
+			end the story saying "Your wild rampage consumes you and you become nothing more than a wild creature that becomes a dangerous, bloodthirsty and lust-crazed beast each night.";
 	else:		[confined, manage to hold on]
 		say "     You can feel the primitive, feral instincts of your wereraptor body trying to erode your conscious thought as its lust and hunger try to take over. Thankfully, you are able to confine yourself indoors out of the moonlight. You are wilder and more feral for a time, but manage to get a grip on yourself. It takes its toll, but you remain in control for now.";
 		decrease humanity of player by 4;

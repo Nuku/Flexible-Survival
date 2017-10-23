@@ -190,7 +190,7 @@ to say animeclublost:
 	if humanity of player < 10:
 		say ". With your mind fading away, you eventually lose yourself as your mind is overwritten by the content of the videos you've been watching. You're released out onto the campus, heading off in search of others to share your new fandom and lust for tentacles with, willing or not.";
 		WaitLineBreak;
-		end the game saying "Only thoughts of anime and tentacles fill your mind as you succumb to your infection.";
+		end the story saying "Only thoughts of anime and tentacles fill your mind as you succumb to your infection.";
 		now battleground is "void";
 		wait for any key;
 		follow the turnpass rule;

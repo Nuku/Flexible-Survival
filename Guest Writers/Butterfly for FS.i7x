@@ -493,7 +493,7 @@ when play ends:
 					say "You are unable to have children, but the two of you are inseparable all the same living as a happy lesbian couple with a very active and passionate sex life. Finding you both enjoy being in front of the camera you take up fashion modeling together. You make a successful team as fashion houses and cosmetics firms worldwide keep you in work, and help fund your comfortable lifestyle. ";
 				say "Even in your later years you look back fondly on the infection as a blessing. Every morning as you wake and see your lover's familiar face you're reminded of how even if you had to do it all again you wouldn't change a thing.[line break]";
 			else:
-				say "You are rescued and rejoin society.[line break][line break]A media frenzy erupts as you become the poster child for the infection. Finding you enjoy being in front of the camera you take up fashion modeling, but retire quickly finding the life lonely. At that time you find yourself inspired by your memories of Doctor Matt and finish your education. After graduation you enter the scientific community studying the infection. Your first-hand insight proves invaluable, and you rapidly rise through the ranks as your discoveries mount. One day while on the job you meet an intern who catches your fancy. A short time later you're living together as lovers. it's a happy life, [if ButterflyRaped is 0]leaving you with no regrets[else]but no matter how it seems on the surface you still find yourself uncomfortable over your treatment of the butterfly back during the infection. As a way to atone you donate large sums of money to charities looking after the infected[end if].[line break]";
+				say "You are rescued and rejoin society.[line break][line break]A media frenzy erupts as you become the poster child for the infection. Finding you enjoy being in front of the camera you take up fashion modeling, but retire quickly finding the life lonely. At that time you find yourself inspired by your memories of Doctor Matt and finish your education. After graduation you enter the scientific community studying the infection. Your first-hand insight proves invaluable, and you rapidly rise through the ranks as your discoveries mount. One day while on the job you meet an intern who catches your fancy. A short time later you're living together as lovers. It's a happy life, [if ButterflyRaped is 0]leaving you with no regrets[else]but no matter how it seems on the surface, you still find yourself uncomfortable over your treatment of the butterfly back during the infection. As a way to atone, you donate large sums of money to charities looking after the infected[end if].[line break]";
 
 Section 6 - Monster Rules
 
@@ -891,7 +891,7 @@ to say butterfly grove scene:
 			wait for any key;
 			decrease the humanity of the player by 5;
 			if the humanity of the player is less than 10:
-				end the game saying "You decide against leaving after all.";
+				end the story saying "You decide against leaving after all.";
 		else:
 			say "You decide you don't really want to spend time with her.";
 	else if cocks of player is 0 and cunts of player is greater than 0 and ButterflyRaped is 0 and ButterflyLove is True:
@@ -917,7 +917,7 @@ to say butterfly grove scene:
 			wait for any key;
 			decrease the humanity of the player by 5;
 			if the humanity of the player is less than 10:
-				end the game saying "You decide against leaving after all.";
+				end the story saying "You decide against leaving after all.";
 		else:
 			say "You decide you don't really want to spend time with her right now.";
 	else:

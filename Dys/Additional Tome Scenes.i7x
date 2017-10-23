@@ -205,7 +205,7 @@ to say TentaclesFirstEncounter:
 	say "     [link]Run away as fast as you can![as]y[end link] - (Y)[line break]";
 	say "     [link]See if you can find some sort of central mass.[as]n[end link] - (N)[line break]";
 	if player consents:
-		say "     You dash off into the city, having no idea where you're going, The mass of tentacles are following closely behind for a while, but soon enough, they seem to reach the perceived limits of their length. You keep running for a while longer, just to be sure that you've managed to escape them. When you're sure you're in the clear, you stop, panting to catch your breath. That was too close for comfort...";
+		say "     You dash off into the city, having no idea where you're going. The mass of tentacles are following closely behind for a while, but soon enough, they seem to reach the perceived limits of their length. You keep running for a while longer, just to be sure that you've managed to escape them. When you're sure you're in the clear, you stop, panting to catch your breath. That was too close for comfort...";
 		now TentacleInteractions is 1;
 		now TentacleStatus is 10; [Player fled]
 		WaitLineBreak;
