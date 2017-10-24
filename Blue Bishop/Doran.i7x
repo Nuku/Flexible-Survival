@@ -1,4 +1,4 @@
-DoranDoranLastBallModVersion 3 of Doran by Blue Bishop begins here.
+Doran by Blue Bishop begins here.
 [ Version 3.0: Documentation and structure updates                           ]
 
 "Adds Doran to Flexible Survival's Wandering Monsters table"
@@ -2518,7 +2518,7 @@ to say doropt_6: [NEW! Body Modification]
 						say "     'Whew! I'm a little worn out after all that. It may take a few days before I'm fully recovered, should [DoranPlayerRegard] decides to change me that way again!'";
 					else:
 						say "     '[one of]Alright[or]Very well[or]Certainly[or]No problem[at random].'";
-			else if lastballmod - turns <= 24:
+			else if DoranLastBallMod - turns <= 24:
 				say "     [gche] still appears to be sore after being restored. You should give [ghim] more time before having another go.";
 			else:
 				blank out the whole of table of itemselection;
