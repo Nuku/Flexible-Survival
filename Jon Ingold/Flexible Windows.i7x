@@ -415,7 +415,7 @@ Before constructing a g-window when the scale method of the pending g-window is 
 	let p2 be the measurement of the pending g-window multiplied by width of the direct parent of the pending g-window;
 	if p1 > p2, now the scale method of the pending g-window is g-using-minimum.
 
-The first after constructing a g-window :
+The first after constructing a g-window:
 	if the ref-number of the pending g-window is zero, now the pending g-window is g-unpresent instead.
 
 The last after constructing a g-window (this is the draw window after construction rule):

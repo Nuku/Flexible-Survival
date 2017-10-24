@@ -216,7 +216,7 @@ instead of conversing the Rex:
 			say "[fullRetrieverTF]";
 			wait for any key;
 			now hp of Rex is 10;
-			end the story saying "     Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
+			end the story saying "Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
 			wait for any key;
 			follow the turnpass rule;
 			stop the action;

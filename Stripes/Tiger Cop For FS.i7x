@@ -301,7 +301,7 @@ to say mqlostfight:
 	decrease score by 25;
 	now humanity of player is 0;
 	follow the turnpass rule;
-	end the game saying "You become another whore for the corrupt cop.";
+	end the story saying "You become another whore for the corrupt cop.";
 	now battleground is "void";
 
 
@@ -401,7 +401,7 @@ to say mqsuccess:
 	increase score by 100;
 	follow the turnpass rule;
 	WaitLineBreak;
-	end the game saying "You become the muscled guard for the tigresses.";
+	end the story saying "You become the muscled guard for the tigresses.";
 	now battleground is "void";
 
 to say MQvictory:						[Victory]

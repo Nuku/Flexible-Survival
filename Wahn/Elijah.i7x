@@ -1100,7 +1100,7 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 3 and NPCi
 		now NPCintCounter is turns;
 	else if (Sarah is in bunker) and (Char-B of Elijah is "0" or Char-B of Elijah is "1"):
 		if sarahslut is 0: [mostly human, untouched by the player character]
-			say "     As you come down into the bunker,, you see Sarah and Elijah sitting next to each other on one of the bunk beds. Looks like he's praying with her to help her deal with the urges that threaten to overcome her.";
+			say "     As you come down into the bunker, you see Sarah and Elijah sitting next to each other on one of the bunk beds. Looks like he's praying with her to help her deal with the urges that threaten to overcome her.";
 		now Char-B of Elijah is "2";
 		now NPCintCounter is turns;
 	else if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1"):

@@ -2112,9 +2112,9 @@ Check savetrix2:
 	if trixie is not visible, say "Your words have no effect. Maybe you should tell them to Trixie in the library instead of just talking to yourself." instead;
 
 Carry out savetrix2:
-	now trixsavetext1 is "[text of the File of Trixsave]" ;
-	now trixsavetext2 is "[text of the File of Trixsave2]" ;
-	now trixsavetext3 is "[text of the File of Trixsave3]" ;
+	now trixsavetext1 is "[text of the File of Trixsave]";
+	now trixsavetext2 is "[text of the File of Trixsave2]";
+	now trixsavetext3 is "[text of the File of Trixsave3]";
 	reciting2;
 	let invrecover be indexed text;
 	now invrecover is "[text of the File of invsave]";

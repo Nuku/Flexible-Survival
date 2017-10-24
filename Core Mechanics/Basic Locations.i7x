@@ -71,6 +71,7 @@ to say abbey 2F desc:
 Outside Trevor Labs is a room. "Like about everyone in this city, you've heard of Trevor Labs. They are - or were - a biopharm setup. Kind of new on the block, and the local news made a big stink a little while ago over accusations of skirting the edge of numerous laws in the name of science. The company's headquarters rise as a sleek and tall glass building to your west. You're not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious. Definitively something to investigate...".
 understand "lab" or "labs" as Outside Trevor Labs.
 Outside Trevor Labs is fasttravel.
+earea of Outside Trevor Labs is "Outside".
 
 Away from Labs is a door. "East of here lays the rest of the city." It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
 
@@ -87,11 +88,15 @@ There is an Infection Terminal in Primary Lab. "A glowing infection terminal qui
 
 Park Entrance is a room. "Ah, the city park. Smell that fresh pine air, and the scent of - wait no, that grass has not been mowed for quite a while. Just how long ago did all this trouble start anyway? Time seems fluid these days, making it hard for you to remember. No matter what, the grass has started to creep up onto the pavement that leads further into the park (north) and all the other plants seem pretty overgrown and untamed too. The park's boundary wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
 Park Entrance is fasttravel.
+
 Park Trail is a room. "Following this North/South trail, you can see the severely overgrown state of the park all around you. All this can't be purely natural - it'd take ages to have gotten this bad. Seems like some of the spreading nanites decided to create a section of untamed wilderness right in the middle of the city. There are dense woods in almost every direction, including to the North, where the paved trail ends at a tree that must have literally exploded out of the ground under it. In the Northwest, there is a small expanse of bamboo forest, with a Torii arch forming the start of a narrow gravel trail leading into it.[line break]The path northwest looks safe and strangely peaceful, but it'll be easy to become lost in the rest of the thick woods of the park - though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
+earea of Park Trail is "Park".
+
 North of Park Entrance is Park Trail.
 Park Exit is a door. Park Exit is dangerous. The marea of Park Exit is "Outside". Park Exit is undescribed. Park Exit is south of Park Entrance. South of Park Exit is Outside Exploration.
 East of Park Trail is Faint Trail.
 East of Faint Trail is Lost in the Woods.
+
 Faint Trail is a door.
 The description of a faint trail is "A faint trail that heads eastwards into the deep woods. Looks dangerous, who knows what is lurking out there...".
 Faint Trail is dangerous.

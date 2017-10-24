@@ -318,7 +318,7 @@ Instead of Resolving a The beast of the tainted waters:
 		If lastResevoirfix - turns > 10:
 			say "Having let the beast of ooze do what it wishes you have let the main terminal become destroyed beyond repair, at least from what your limited skills with working with machines tells you. Sighing and shaking your head you realize that there is little you can do as the Blob monster has disappeared, probably haven sunken back into its watery home, and there is now no way to currently fix the area. Defeated by this all you can do is turn your head and walk away out of the reservoir.";
 			now The beast of the tainted waters is resolved;
-		else :
+		else:
 			say "Deciding that you've come too far to quit now, even though any other sane person might have already tucked tail and fled, you realize that spending your time here has either made you insanely brave…or just insane. Shaking your head you watch as the tentacles of the fleshy BLOB strikes at the window again and then you curl your legs underneath you so that you can raise up onto your feet.";
 			say "Doing so, albeit somewhat unsteadily, you breath out a heavy gust of air which is visible to the naked eye. Blinking you breathe in and out again and then realize that the room is rapidly drooping in temperature. Walking over to the main terminal you find that - just as you had thought - the facility is entering into flash freeze mode. Seeing your window of opportunity coming closer to opening fully you look around the room for something to use to help you ward off the creature and then you smile victoriously as you spot several lockers that you had failed to notice when coming into the room standing idle, as though in wait for you.";
 			say "Rushing over to the metal containers you jar each of the doors open and then look inside to see if you can find something of meaningful use. Seeing what you need you take enough provisions for the fight ahead. Once that's done you decide that now it's time to the beast. [bold type]It might do well for you to make sure you're equipped and fully healthy before going out to battle. This fight will be…difficult…[roman type]";
@@ -343,7 +343,7 @@ Instead of resolving a A Fight to remember:
 		If lastResevoirfix - turns > 10:
 			say "Having spent too much time preparing, or else becoming occupied, you've allowed the beast of ooze to destroy the main terminal beyond repair. At least destroyed beyond what your limited skills with working with machines can handle. Sighing and shaking your head you realize that there is little you can do as the Blob monster has disappeared, probably haven sunken back into its watery home, and there is now no way to currently fix the area. Defeated by this all you can do is turn your head and walk away out of the reservoir.";
 			now a Fight to remember is resolved;
-		else :
+		else:
 			say "Geared up and ready to roll you head out of the room and then down back the way you came to the main area of the reservoir. Once there you find yourself wincing a little bit in disbelief as you note that the Blob monster is somewhat…bigger…than what you had first thought it should have been.";
 			let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;

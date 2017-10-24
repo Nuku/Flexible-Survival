@@ -464,7 +464,7 @@ Instead of resolving a Plains Scavenging:
 		increase dice by bonus;
 		if difficulty is greater than dice:
 			say "It would seem that negotiations have failed and the mutants now want you gone. By the looks on their faces, it would be wise for you to get lost... and fast!";
-		else :
+		else:
 			say "Coming to a mutually beneficial agreement, you find that the other mutants are willing to give up the item to you in trade for some information. It would seem that there are still some decent [']people['] in the world after all[if petbonus is true]. Though having an intimidating guard by your side may have helped a little[end if]. You quickly add [y] to your satchel and then bob your head gratefully to the others before going about your way.";
 			add y to invent of player;
 	else if x is 3:

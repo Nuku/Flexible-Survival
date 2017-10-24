@@ -819,7 +819,7 @@ to fsdmvore:
 			now cock of player is cock entry;
 			now voreloss is true;
 			now trixieexit is 1;
-			end the game saying "You became a Feral Sea Dragon's meal!";
+			end the story saying "You became a Feral Sea Dragon's meal!";
 		else:
 			let k be 0;
 			now keychar is "INVALID";

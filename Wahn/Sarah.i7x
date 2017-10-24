@@ -343,7 +343,7 @@ to say SarahTalk3:
 			else: [don't give it to her]
 				LineBreak;
 				say "     'Ah,' the young woman says with a little bit of a sigh, having gotten her hopes up. Then she catches herself and gives you a friendly smile, 'Here I am - starting to mope because my hero doesn't bring me everything I need right away. Silly, hm? Especially since I have so much to be thankful about already.' Leaning in to plant a peck on your cheek, she wags her tail happily as she adds, 'Still... if you got the time to scavenge in the hospital sometime, I'd be forever in your debt.'";
-	else if SarahCured > 3 : [Sarah is "cured" - or in treatment at least]
+	else if SarahCured > 3: [Sarah is "cured" - or in treatment at least]
 		say "     As you approach Sarah about the topic of managing her urges, the husky hybrid's tail wags excitedly and Sarah bounces over to you on her slender paws. 'It works! With the bigger stash I have now thanks to you, I experimented a little and found just the right dosage. Thank you, thank you, thank you!' Without any hesitation, she wraps her arms around your chest and even gives you a kiss on the cheek. Staying up close to you and with her fluffy tail still wagging up a storm, she gives you a confident smile. 'I feel like a real woman again - not a feral slut that will spread her legs for anyone who asks. You've been an amazing friend through all this.' With that said, she rubs the side of her lightly furred cheek against yours, then steps away and gets back to what she was doing before.";
 
 instead of fucking Sarah:

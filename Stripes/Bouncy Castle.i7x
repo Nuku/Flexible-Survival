@@ -122,10 +122,10 @@ bcseenplayroom is a truth state that varies. bcseenplayroom is normally false.
 bcplayroomlast is a truth state that varies. bcplayroomlast is normally true.
 bcseenkingchair is a truth state that varies. bcseenkingchair is normally false.
 bcseenkingknight is a truth state that varies. bcseenkingknight is normally false.
+bcseenhugeorca is a truth state that varies. bcseenhugeorca is normally false.
 bcfinalchairform is a text that varies. bcfinalchairform is normally "".
 lastsealfight is a number that varies. lastsealfight is normally 255.
 lastoctofight is a number that varies. lastoctofight is normally 255.
-lastorcasex is a number that varies. lastorcasex is normally 255.
 lastbcchair is a number that varies. lastbcchair is normally 255.
 lastbcduobeaten is a number that varies. lastbcduobeaten is normally 255.
 bcduofightlost is a truth state that varies. bcduofightlost is usually false.
@@ -406,69 +406,53 @@ to say bctoyroom:
 Chapter 6 - Great Hall
 
 to say bcgreathall:
-	say "     You find yourself in a room designed as if it were a great hall, with images of banquet table on the west wall and tapestries between the windows on the east. There's a door at the north and another at the southern corner of the east wall, the one which first brought you in here. But you have little opportunity to take in much more detail than this, for the room also holds ";
-	if lastorcasex is 255: [FLOT - DONE]
-		say "a large, inflatable orca toy. It is very round and bigger than the dolphin toys you've seen, being over two yards in from end to end and big enough for an adult to use. The black and white inflatable bobs up in to the air and rolls over a few times with a trilling noise before charging towards you to bump you with its nose. The blow doesn't really hurt much, but makes you stumble back on the rocking, swaying floor. It seems intent on playfully bumping you back out the door you just came in from.";
-		now lastorcasex is 254;
-	else:
-		say "the large orca inflatable from earlier. It trills happily to see you again moves in to charge at you, clearly wanting to bump you around some more as part of its game.";
-	if flotmarked is true and a random chance of 1 in 2 succeeds:
-		say "     The orca tries to charge you again, but seems to have trouble aiming at you and misses completely, bouncing harmlessly against a wall! You have a quick moment to decide which direction you'd like to go.";
-		say "     [bold type] Shall you head through the door to the north or head back the way you came by going west back to the play room?[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - North.";
-		say "     ([link]N[as]n[end link]) - Go back west to the play room.";
-		if the player consents:
-			say "     You move quickly to the northern doorway, push aside the plastic curtain and dive into the next room just before the orca comes rushing to slam into you. The doorway seems too small for the big orca toy, making you briefly wonder if it was deflated to bring in here.";
-			move player to King's Chambers;
+	if lastorcabeat - turns >= 4: [FLOT - DONE]
+		say "     You find yourself in a room designed as if it were a great hall, with images of banquet table on the west wall and tapestries between the windows on the east. There's a door at the north and another at the southern corner of the west wall, the one which first brought you in here. But you have little opportunity to take in much more detail than this, for the room also holds ";
+		if bcseenhugeorca is false:
+			say "a large, inflatable orca toy. It is very round and bigger than the dolphin toys you've seen, being over two yards long from end to end and big enough for an adult to use. The black and white inflatable bobs up into the air and rolls over a few times with a trilling noise before charging towards you to bump you with its nose. The blow doesn't really hurt much, but makes you stumble back on the rocking, swaying floor. It seems intent on playing with you, although what that entails is yet to be seen.";
+			now bcseenhugeorca is true;
 		else:
-			say "     You move quickly to door in the southeast end of the room. Pushing aside the plastic curtain, you head back towards the center of the bouncy castle.";
-			move player to Bouncing Play Room;
-	else:
-		let bonus be ( dexterity of player - 10 ) / 2;
-		let dice be a random number from 1 to 20;
-		say "     You roll 1d20([dice])+[bonus] + [3 - scalevalue of player]: [dice + bonus + 3 - scalevalue of player] vs 15: ";
-		if ( bonus + dice + 3 - scalevalue of player ) is greater than 14:
-			say "     You manage to weave in one direction and then push off in the other, dodging another charge from the orca which would have knocked you roughly out the doorway. You have a quick moment to decide which direction you'd like to go.";
+			say "the large orca inflatable from earlier. It trills happily and moves in to charge at you, clearly wanting to [if orcaintense is 0]turn you into its well-fucked plaything again[else]bump you around some more[end if] as part of its game.";
+		if flotmarked is true and a random chance of 1 in 2 succeeds:
+			say "     The orca tries to charge you again, but seems to have trouble aiming at you and misses completely, bouncing harmlessly against a wall! You have a quick moment to decide which direction you'd like to go before it can recover.";
 			say "     [bold type] Shall you head through the door to the north or head back the way you came by going west back to the play room?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - North.";
-			say "     ([link]N[as]n[end link]) - West - Back the way you came.";
+			say "     ([link]N[as]n[end link]) - Go back west to the play room.";
 			if the player consents:
-				say "     You move quickly to the northern doorway, push aside the plastic curtain and dive into the next room just before the orca comes rushing to slam into you. The doorway seems too small for the big orca toy, making you briefly wonder if it was deflated to bring in here.";
+				say "     You move quickly to the northern doorway, push aside the plastic curtain and dive into the next room just before the orca comes rushing to slam into you. The doorway seems too small for the big orca toy, making you briefly wonder if it was deflated to bring it in here.";
 				move player to King's Chambers;
 			else:
-				say "     You move quickly to door in the southeast end of the room. Pushing aside the plastic curtain, you head back towards the center of the bouncy castle.";
+				say "     You move quickly to door in the southwest end of the room. Pushing aside the plastic curtain, you head back towards the center of the bouncy castle.";
 				move player to Bouncing Play Room;
 		else:
-			say "     You try to dodge, but the unsure footing [if scalevalue of player > 3]and your large size make[else]makes[end if] you an easy target and you're bumped ";
-			if lastorcasex - turns >= 4:
-				say "back and sent tumbling against one of the padded walls. You get knocked around again and dropped onto your back by a sweep of the orca's tail, only to have the two meter long cetacean bellyflop onto you - good thing it's only an inflatable.";
-				if cocks of player > 0:
-					say "     Rubbing down onto you, its fins and tail manage to push away any obstructing gear between it and your groin. The feel of its softly flexing material against you causes it to stir, which is just what the creature's been waiting for. It trills happily and shifts position overtop of you, pressing the wet, rubbery lips of its pussy down over your stiffening member. The feel of that slick material sliding down overtop of your shaft and [if cock length of player > 30]stretching[else]tightening[end if] around it to make a perfect fit causes you to moan in response.";
-					say "     With you trapped beneath the giant cetacean toy, there's little you can do but respond to your instincts, bucking up into that clenching slit as the big balloon critter rides you. As her excitement grows, she moves faster, slapping her broad tail on the floor. This sets the wobbly castle floor to sway, further helping you to thrust up into her juicy cunt. Any thoughts of trying to push her off are gone; instead, your arms grip around your inflatable lover[if scalevalue of player < 3] as best you can[end if]. Eventually, you moan loudly and cum hard, pumping your creamy seed into her rubber passage.";
-					decrease libido of player by a random number between 0 and 5;
-					decrease humanity of player by a random number between 0 and 3;
-					say "     Once you're drained and released, she resumes her game of bumping you around, as if the sex and the shoving are all part of the same game to her. Too dazed from the lustful sex and too many blows, you're eventually rammed ";
-				else:
-					say "     Rubbing down onto you, it turns around and presses a large, wet slit against your face. Presented with juicy proof that the cetacean's female and getting a dose of her femmecum all over your lips and nose, you can't help but give her a quick lick, and that quick lick quickly turns into more and more licking as her slick juices excite you. She grinds her lower quarters down atop you while you run your tongue up and down along her lengthy slit.";
-					say "     With you trapped beneath the giant cetacean toy, there's little you can do but respond to your instincts, eating out her rubbery pussy with growing enjoyment at the task. Her juices carry the faint taste of latex, but that seems delightful to you at this point. You keep going at it, finally pushing her to a trilling climax send sends more of her cum washing over your face.";
-					increase libido of player by a random number between 0 and 5;
-					decrease humanity of player by a random number between 0 and 3;
-					say "     Once she's finished having her fun with you and released, she resumes her game of bumping you around, as if the sex and the shoving are all part of the same game to her. Too dazed from the heady scent of her sex and too many blows, you're eventually rammed ";
-				now lastorcasex is turns;
-			say "out the door your just entered through. You roll and come to a stop on the soft floor, knocked particularly hard by the rubber inflatable. You are left a little dizzy and confused from your tumble. It takes you a while to recover, but you seem otherwise unharmed.";
-			if libido of player > 100, now libido of player is 100;
-			decrease humanity of player by 5;
-			if humanity of player < 10:
-				say "     That last tumble knocks something loose in your already shaken mind and the last threads of your humanity snap.";
-				end the game saying "Your brain (shaken, not stirred) gave into the infection.";
-			else:
-				if lastorcasex is turns, follow the turnpass rule;
-				if bcplayroomlast is true:
-					move player to Bouncing Play Room;
-				else:
+			let bonus be ( dexterity of player - 10 ) / 2;
+			let dice be a random number from 1 to 20;
+			say "     You roll 1d20([dice])+[bonus] + [3 - scalevalue of player]: [dice + bonus + 3 - scalevalue of player] vs 15: ";
+			if ( bonus + dice + 3 - scalevalue of player ) is greater than 14:
+				say "     You manage to weave in one direction and then push off in the other, dodging another charge from the orca which would have knocked you off your feet. You have a quick moment to decide which direction you'd like to go.";
+				say "     [bold type] Shall you head through the door to the north or head back the way you came by going west back to the play room?[roman type][line break]";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - North.";
+				say "     ([link]N[as]n[end link]) - Go back west to the play room.";
+				if the player consents:
+					say "     You move quickly to the northern doorway, push aside the plastic curtain and dive into the next room just before the orca comes rushing to slam into you. The doorway seems too small for the big orca toy, making you briefly wonder if it was deflated to bring in here.";
 					move player to King's Chambers;
+				else:
+					say "     You move quickly to door in the southeast end of the room. Pushing aside the plastic curtain, you head back towards the center of the bouncy castle.";
+					move player to Bouncing Play Room;
+			else:
+				say "     You fail to dodge in time and are struck by the full brunt of the orca's charge, knocking you off your feet. It takes a moment to recover, and by that time you do, the orca is nudging and bumping you insistently, clearly intent on playing with you[if orcaintense is 0] some more[end if]. Pressed into a corner, it looks like your only option is to fight this creature if you want to make it out of this [if orcaintense is 0]place with your mind intact[else]room[end if].";
+				challenge "Inflatable Orca";
+				if fightoutcome >= 30: [Only for fleeing. For other outcomes, see Inflatable Orca.]
+					say "     Deciding that discretion is the better part of valor, you make use of an opening to book it towards your last point of entry, narrowly avoiding another charge from the overly friendly cetacean.";
+					WaitLineBreak;
+					if bcplayroomlast is true:
+						move player to Bouncing Play Room;
+					else:
+						move player to King's Chambers;
+	else:
+		say "     You find yourself in a room designed as if it were a great hall, with images of banquet table on the west wall and tapestries between the windows on the east. There's a door at the north and another at the southern corner of the west wall, the one which first brought you in here. The orca you fought against earlier is still lying in the center of the room, trying to mend itself.";
 
 
 Chapter 7 - King's Chambers
@@ -586,7 +570,7 @@ to say bckingchair:
 				now tailname of player is "Captured";
 				now cockname of player is "Captured";
 				now humanity of player is 0;
-				end the game saying "You are transformed into an inflatable [bcfinalchairform] chair.";
+				end the story saying "You are transformed into an inflatable [bcfinalchairform] chair.";
 	if chairescape is true:
 		say "     Managing to get some leverage by shifting your weight, you throw all your effort into pulling one of your arms free. The yellow material stretches upwards at first, reluctant to release you, but eventually gives way and is pulled back down into its normal shape. With an arm free, it becomes easier to pull the other free as well. You take care not to leave your hands on the chair in any one spot too long, but are eventually able to pull the rest of your body free of it in the end.";
 		say "     You move away from it quickly while trying to clear your head and refocus your thoughts";
@@ -615,7 +599,7 @@ to say bckingchair_accept:
 		say ". To further make you happy, the chair grows some bulging rubber that inflates into a [if cunts of player > 1]set of phallic dildos[else]phallic dildo[end if] to push into your juicy cunt[sfn]. Already quite aroused by the chair's actions, having [if cunts of player > 1]those cock-like bulges[else]that cock-like bulge[end if] pushing into you feels all the better, filling a needy ache inside you.";
 	else:
 		say ". To further make you happy, the chair grows some bulging rubber that inflates into a phallic dildo to push into your relaxing anus. Already quite aroused by the chair's actions, having that cock-like bulge pushing into you feels all the better, filling a needy ache inside you.";
-	say "     Squirming happily in your seat, the feel of the smooth material inside you becomes increasingly pleasurable and distracting. You let your mind wander, simply basking in the simple pleasure of sitting in the chair. It is so soft, so comfy. There's no reason to resist, you feel. It'll probably let you go when it's done, you think to yourself as you grind your ass down so a sensitive spot inside you can be better stimulated. You sigh softly in pleasure as relax into your seat to enjoy the moment.";
+	say "     Squirming happily in your seat, the feel of the smooth material inside you becomes increasingly pleasurable and distracting. You let your mind wander, simply basking in the simple pleasure of sitting in the chair. It is so soft, so comfy. There's no reason to resist, you feel. It'll probably let you go when it's done, you think to yourself as you grind your ass down so a sensitive spot inside you can be better stimulated. You sigh softly in pleasure and relax into your seat to enjoy the moment.";
 	say "     As your mind fades away further, you notice that your skin is turning the same yellow as the plastic at the edges nearest its touch. Lost in the relaxing pleasure of the chair, you can't help but smile. Sitting in this wonderful chair feels so good, so being this wonderful chair must be even better. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1]. With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]. With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, turning into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]. Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
 	say "     As you and the chair continue to merge, your [bodytype of player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [bodyname of player] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
 	now bcending is 3;
@@ -626,7 +610,7 @@ to say bckingchair_accept:
 	now tailname of player is "Captured";
 	now cockname of player is "Captured";
 	now humanity of player is 0;
-	end the game saying "You are transformed into an inflatable [bcfinalchairform] chair.";
+	end the story saying "You are transformed into an inflatable [bcfinalchairform] chair.";
 
 
 Chapter 8 - Punching Pillars
@@ -745,7 +729,7 @@ to say bcpptendril:
 				now tailname of player is "Captured";
 				now cockname of player is "Captured";
 				now humanity of player is 0;
-				end the game saying "You are transformed into another [ppcolour] pillar.";
+				end the story saying "You are transformed into another [ppcolour] pillar.";
 	if tendrilescape is true:
 		say "     Focusing on your escape, you pull free of the liquid latex attempting to engulf you with a wet, slurping sound. The pillar makes a few more weak attempts to grab you, but it seems your escape has worn it out too much for the moment[if compnumber is 1]. You rush over to your companion and assist them in getting free, having gotten themselves mostly engulfed by the pillar which caught them[else if compnumber > 1]. You rush over to your companions, well on their way to being engulfed by pillars themselves, and help them break free[end if]. You don't have time to take a break though, as the other pillars around you are also making grabs for you now that you're unclaimed. You have two options for exit from this room.";
 		say "     [bold type]Shall you head through the door to the north or head back the way you came by going east back to the ball pit?[roman type][line break]";
@@ -791,7 +775,7 @@ to say bcpptendril_accept:
 	now tailname of player is "Captured";
 	now cockname of player is "Captured";
 	now humanity of player is 0;
-	end the game saying "You are transformed into another [ppcolour] pillar.";
+	end the story saying "You are transformed into another [ppcolour] pillar.";
 
 
 Chapter 9 - Knight's Chambers
@@ -881,7 +865,7 @@ to say bcwestparapets:
 			say "     Seeing no obstructions to a potential exit from this place, you move quickly towards the slide to examine it more closely. You take a few steps, but as you're approaching the center of the room, you feel the floor give way suddenly. For a moment, you imagine the inflatable castle to be unable to support your weight, but a quick glance down shows your feet have sunk into two of the red spots[if compnumber > 1]. A noise behind you alerts you to the fact that your companions are being ensnared by bands of material growing from the mesh walls[else if compnumber is 1]. A noise behind you alerts you to the fact that your companion is being ensnared by the bands of material growing from the mesh walls[end if]. [if weapon object of player is not journal]Forced to drop your weapon in order to keep balance[else]Barely able to keep your balance[end if], you'll need to act fast to pull yourself free...!";
 			[Shall you try to [link]resist (Y)[as]y[end link] this bizarre trap or shall you relax and [link]accept (N)[as]n[end link] whatever may come?";]
 			now lastbcchair is turns;
-			wait for any key;
+			WaitLineBreak;
 			chairboundstate;
 			[if the player consents:
 				say "[bcchairfight]";
@@ -993,7 +977,7 @@ to chairboundstate:
 			say "     With the grip on your limbs too strong now to simply break free, your sex-addled mind throws itself into the pursuit of pleasure in the hopes of satisfying this strange chair's needs or overloading it. You begin to ride it, telling yourself that nothing stops you from enjoying this ride as well. You move yourself with the chair's rocking motion as best you can, pushing yourself [if cunts of player > 0 or anallevel is not 1]onto those wonderfully thrusting dildos it had stuffed inside you[else]against it while licking and sucking lustfully at that throbbing projection stuffed into your mouth[end if][if cocks of player > 1]. You pound your cocks into those gripping holes of its, losing yourself in the pleasure of fucking those slick, squeezing orifices for all they're worth[else if cocks of player is 1]. You pound your cock into that gripping hole of its, losing yourself in the pleasure of fucking that slick, squeezing orifice for all it's worth[end if][if cunts of player > 0]. You squeeze with your thighs, tightening your inner muscles around the rubbery flesh stuffed inside you, taking delight in the pulsing probes filling you so wonderfully[end if][if anallevel is not 1]. You eagerly squeeze down on the inflating butt plug inside you, the feel of it swelling deeper as it slides along your silky inner walls feeling great to your lust-clouded body[end if].";
 			say "     You push yourself to further heights, your sex-crazed mind only seeking another release, your thoughts of escape momentarily forgotten. When your climax finally comes[if cocks of player > 0] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if cunts of player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if cunts of player is 1]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath.";
 			say "     By the time the haze lifts, you realize that the chair has recovered and is resuming to engulf you. The tubes have continued to climb up your arms and legs. They join up with the other material from the seat itself, starting to seal you in seamlessly. The vinyl flows up across your back and melds with the hood, encapsulating you fully. While it is hard to tell from within your latex prison, you get the feeling that you're sinking. Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give into the pleasure, succumbing as a mindless prisoner of lust as you enjoy orgasm after orgasm in the hidden safety of your new home.";
-			wait for any key;
+			WaitLineBreak;
 			now bcending is 1;
 			now bodyname of player is "Captured";
 			now facename of player is "Captured";
@@ -1001,7 +985,7 @@ to chairboundstate:
 			now tailname of player is "Captured";
 			now cockname of player is "Captured";
 			now humanity of player is 0;
-			end the game saying "You are imprisoned by the Bouncy Castle.";
+			end the story saying "You are imprisoned by the Bouncy Castle.";
 			now trixieexit is 1;
 		else:
 			let k be 0;
@@ -1039,7 +1023,7 @@ to chairboundstate:
 						follow the turnpass rule;
 					else if calcnumber is 3:
 						try bcsliding;
-				wait for any key;
+				WaitLineBreak;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
 				LineBreak;
@@ -1053,7 +1037,7 @@ to chairboundstate:
 					LineBreak;
 					chairpassivelosses;
 					increase boundcounter by 1;
-				wait for any key;
+				WaitLineBreak;
 				next;
 			else:
 				now enduring is true;
@@ -1067,7 +1051,7 @@ to chairboundstate:
 					say "     You choose to endure the peculiar chair's influence, [one of]groaning and creaking loudly against your rigid motions[or]squeaking and stretching to loosen your tense limbs[or]the thing making some effort to tighten around you[at random].";
 					LineBreak;
 					chairpassivelosses;
-				wait for any key;
+				WaitLineBreak;
 				next;
 
 to say chairstrugglebar:
@@ -1247,7 +1231,7 @@ to chairpassivelosses:
 				now tailname of player is "Captured";
 				now cockname of player is "Captured";
 				now humanity of player is 0;
-				end the game saying "You are imprisoned by the Bouncy Castle.";
+				end the story saying "You are imprisoned by the Bouncy Castle.";
 		else:
 			say ". As you continue fighting, you can feel the sex chair's grip on you loosen and you pull hard to get free.";
 	if bcchairescape is 2:
@@ -1287,7 +1271,7 @@ to say bcchairsubmit:
 	now tailname of player is "Captured";
 	now cockname of player is "Captured";
 	now humanity of player is 0;
-	end the game saying "You become part of the Bouncy Castle.";]
+	end the story saying "You become part of the Bouncy Castle.";]
 
 
 Chapter 15 - Eastern Parapets
@@ -1298,13 +1282,13 @@ to say bceastparapets:
 	if flotmarked is true and a random chance of 1 in 2 succeeds:
 		say ", as there are two animated inflatable animals in here that have come to life with your arrival.";
 		if lastbcduobeaten is 255:
-			say "     The first is a male sea lion made of opaque purple vinyl and a whiskered face drawn on his head. He has a plump body and flippers, and you're able to tell he's male when he rears up on his rear flippers and claps his front ones together excitedly, also showing off his darker purple cock. His companion is a female orca[if lastorcasex < 255], considerably smaller than the one you encountered downstairs and[end if] and made of a translucent magenta with a white underside. As she starts to float up in the air, she does a quick roll over, which gives you a chance to spot her the damp slit at the bottom of her underbelly. Both of them are a little over a meter long.";
+			say "     The first is a male sea lion made of opaque purple vinyl and a whiskered face drawn on his head. He has a plump body and flippers, and you're able to tell he's male when he rears up on his rear flippers and claps his front ones together excitedly, also showing off his darker purple cock. His companion is a female orca[if bcseenhugeorca is false], considerably smaller than the one you encountered downstairs and[end if] and made of a translucent magenta with a white underside. As she starts to float up in the air, she does a quick roll over, which gives you a chance to spot her the damp slit at the bottom of her underbelly. Both of them are a little over a meter long.";
 			now lastbcduobeaten is 254;
 		say "     ...Thankfully, they don't seem to be able to find you, allowing you to slip by with relative ease. Your options are to head [link]northwest[end link] to the [if bcseenthroneroom is true]throne room[else]next room[end if], go back [link]west[end link] to the upper hall or [link]take the slide[end link] to leave the castle entirely while the path is clear.";
 	else:
 		if lastbcduobeaten is 255: [FLOT - DONE]
 			say ", as there are two animated inflatable animals in here that have come to life with your arrival.";
-			say "     The first is a male sea lion made of opaque purple vinyl and a whiskered face drawn on his head. He has a plump body and flippers, and you're able to tell he's male when he rears up on his rear flippers and claps his front ones together excitedly, also showing off his darker purple cock. His companion is a female orca[if lastorcasex < 255], considerably smaller than the one you encountered downstairs and[end if] and made of a translucent magenta with a white underside. As she starts to float up in the air, she does a quick roll over, which gives you a chance to spot her the damp slit at the bottom of her underbelly. Both of them are a little over a meter long. They move in on you, one from each side and trying to bear you down with their cuteness.";
+			say "     The first is a male sea lion made of opaque purple vinyl and a whiskered face drawn on his head. He has a plump body and flippers, and you're able to tell he's male when he rears up on his rear flippers and claps his front ones together excitedly, also showing off his darker purple cock. His companion is a female orca[if bcseenhugeorca is false], considerably smaller than the one you encountered downstairs and[end if] and made of a translucent magenta with a white underside. As she starts to float up in the air, she does a quick roll over, which gives you a chance to spot her the damp slit at the bottom of her underbelly. Both of them are a little over a meter long. They move in on you, one from each side and trying to bear you down with their cuteness.";
 			now lastbcduobeaten is 254;
 			say "[bcduofight]";
 		else if lastbcduobeaten is 254:
@@ -1334,11 +1318,11 @@ to say bcduofight:
 			WaitLineBreak;
 		else if cunts of player > 0:
 			say "     After a few trills and barks between them, a decision seems to be reached and the sea lion moves himself over your crotch, rubbing his throbbing cock across your wet folds. This gives you a good view of the dark purple shaft as he readies to mount you and you can see it's got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it. Growing aroused despite the trouble you're in, you're soon quite wet and rubbing your hips back up against that slick shaft. He barks happily now that he can see you're ready and shifts his bulky body a little, grabs you with his flippers and drives his inflated manhood into your [cunt size desc of player] cunt, making you moan loudly as it shifts to be just the right size to fill you fully and deeply.";
-			say "     Not to be left out, the orca moves up beside you and pulls presses her crotch to your face. Presented with her juicy pussy, your eyes run over her milky white folds and the soft, magenta interior of her cunt. At the top of it, poking partway out of the ivory lips is an air nozzle where her clit should be and wet and juicy with her arousal. Licking your lips and drawn to the unusual pussy, you run your tongue over her strange clit and can't help but smile as she trills happily. Soon you're digging it, licking at her eagerly and pushing your tongue past those yielding folds to get more of her juices.";
+			say "     Not to be left out, the orca moves up beside you and presses her crotch to your face. Presented with her juicy pussy, your eyes run over her milky white folds and the soft, magenta interior of her cunt. At the top of it, poking partway out of the ivory lips is an air nozzle where her clit should be and wet and juicy with her arousal. Licking your lips and drawn to the unusual pussy, you run your tongue over her strange clit and can't help but smile as she trills happily. Soon you're digging it, licking at her eagerly and pushing your tongue past those yielding folds to get more of her juices.";
 			say "     They go at it for quite a while until you're pushed past your limit and cum hard, moaning loudly as your inner walls clamp down around the inflatable cock stuffed inside you[if cocks of player > 0] while shooting your [cum load size of player] load across yourself[end if]. This sets off the sea lion, who shoots jet after jet of air-driven semen right into your womb with barks of excitement. The orca goes off moments later, a squirt of her own juices soaking your face as her nozzle sprays a mist of latex-scented air across your face. The orgasm, the gas and the juices all work to leave you momentarily dazed and weak, unable to resist as they push you into the [if bcseenthroneroom is true]throne room[else]next room[end if].";
 		else:
 			say "     After a few trills and barks between them, a decision seems to be reached and the sea lion moves himself over your crotch, rubbing his throbbing cock across your bare groin. This gives you a good view of the dark purple shaft as he readies to mount you and you can see it's got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it. Growing aroused despite the trouble you're in, you're soon quite excited and rubbing your hips back up against that slick shaft. He barks happily now that he can see you're ready and shifts his bulky body a little, grabs you with his flippers and drives his inflated manhood into your ass, making you moan loudly as it shifts to be just the right size to fill you fully and deeply.";
-			say "     Not to be left out, the orca moves up beside you and pulls presses her crotch to your face. Presented with her juicy pussy, your eyes run over her milky white folds and the soft, magenta interior of her cunt. At the top of it, poking partway out of the ivory lips is an air nozzle where her clit should be and wet and juicy with her arousal. Licking your lips and drawn to the unusual pussy, you run your tongue over her strange clit and can't help but smile as she trills happily. Soon you're digging it, licking at her eagerly and pushing your tongue past those yielding folds to get more of her juices.";
+			say "     Not to be left out, the orca moves up beside you and presses her crotch to your face. Presented with her juicy pussy, your eyes run over her milky white folds and the soft, magenta interior of her cunt. At the top of it, poking partway out of the ivory lips is an air nozzle where her clit should be and wet and juicy with her arousal. Licking your lips and drawn to the unusual pussy, you run your tongue over her strange clit and can't help but smile as she trills happily. Soon you're digging it, licking at her eagerly and pushing your tongue past those yielding folds to get more of her juices.";
 			say "     They go at it for quite a while until the sea lion is pushed past his limits and shoots jet after jet of air-driven semen deep inside you with barks of excitement. The orca goes off moments later, a squirt of her own juices soaking your face as her nozzle sprays a mist of latex-scented air across your face. The gas, the semen and the juices all work to leave you momentarily dazed and weak, unable to resist as they push you into the [if bcseenthroneroom is true]throne room[else]next room[end if].";
 		now libido of player is ( libido of player + libido of player + 100 ) / 3;
 		move player to Throne Room;
@@ -1347,16 +1331,16 @@ to say bcduofight:
 		say "[dolcheckA]";
 	else if fightoutcome >= 30:
 		if a random chance of 1 in 4 succeeds:
-			say "     Having gotten all turned around during the fight, you end up with your closest avenue of escape being down the waterslide. Your mind focused on getting away, you dive onto it and make your getaway while the inflatables squeek unhappily.";
-			wait for any key;
+			say "     Having gotten all turned around during the fight, you end up with your closest avenue of escape being down the waterslide. Your mind focused on getting away, you dive onto it and make your getaway while the inflatables squeak unhappily.";
+			WaitLineBreak;
 			try bcsliding;
 		else if a random chance of 1 in 2 succeeds:
 			say "     Having gotten all turned around during the fight, you end up diving through the closest of the doorways and find yourself rushing back into the upper hall. Thankfully, they don't seem to be pursuing you and are most likely content with having kept you from escaping down the slide.";
-			wait for any key;
+			WaitLineBreak;
 			move player to Upper Hall;
 		else:
 			say "     Having gotten all turned around during the fight, you end up diving through one of the doorways and find yourself tumbling out into the [if bcseenthroneroom is true]throne room[else]final upper room[end if].";
-			wait for any key;
+			WaitLineBreak;
 			move player to Throne Room;
 			now bcduofightfled is true;
 			say "[dolcheckA]";
@@ -1522,7 +1506,7 @@ to dolboundstate:
 				now combat abort is 1;
 				WaitLineBreak;
 				now trixieexit is 1;
-				end the game saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
+				end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 			else:
 				let k be 0;
 				now keychar is "INVALID";
@@ -1572,13 +1556,13 @@ to dolboundstate:
 							LineBreak;
 							if dolphinbundle < 2, increase dolphinbundle by 1;
 							cleanboundmemory;
-							wait for any key;
+							WaitLineBreak;
 							now trixieexit is 1;
 					if dolphinbundle is 0:
 						increase boundmod by 1;
 					else if dolphinbundle is 1 and a random chance of 1 in 2 succeeds:
 						increase boundmod by 1;
-					wait for any key;
+					WaitLineBreak;
 					next;
 				else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
 					LineBreak;
@@ -1610,7 +1594,7 @@ to dolboundstate:
 						increase boundmod by 1;
 					else if dolphinbundle is 1 and a random chance of 1 in 2 succeeds:
 						increase boundmod by 1;
-					wait for any key;
+					WaitLineBreak;
 					next;
 				else:
 					now enduring is true;
@@ -1643,7 +1627,7 @@ to dolboundstate:
 						increase boundmod by 1;
 					else if dolphinbundle is 1 and a random chance of 1 in 2 succeeds:
 						increase boundmod by 1;
-					wait for any key;
+					WaitLineBreak;
 					next;
 
 to say bottlestrugglebar:
@@ -1690,7 +1674,7 @@ to say dolcheckA:		[empty]
 	else:
 		say "     As it tries sealing itself around you, [if dolphinbundle is 0]you barely manage to not be completely encased in the suit[else]your struggles only manages to delay its inevitable embrace, feeling the whole of this strange, inflatable suit swelling and pressing in around you[end if]. Its inner walls press in snugly around your skin, squeezing your limbs and body tightly while inflates to become a large dolphin-shaped toy with you[if dolphinbundle is 0] partially[end if] held inside. You feel an increasing sense of euphoria as the inner lining [if cocks of player > 0 and cunts of player > 0]rubs against your throbbing cock and presses into your wet pussy[else if cocks of player > 0]rubs against your maleness[else if cunts of player > 0]presses into your wet pussy[else]slides against your bare groin[end if] arousing you greatly. ";
 	say "     It's influence on you is overwhelming, you don't imagine you'll keep a clear head for long while it still clings to you...";
-	wait for any key;
+	WaitLineBreak;
 	LineBreak;
 	dolboundstate;
 	[let dolescape be 0;
@@ -1768,7 +1752,7 @@ to say dolcheckA:		[empty]
 		now battleground is "void";
 		now combat abort is 1;
 		WaitLineBreak;
-		end the game saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";]
+		end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";]
 
 
 to say dolcheckB:		[free victim]
@@ -1818,7 +1802,7 @@ to say dolcheckE:		[vixen]
 		say "     Deciding to try your luck to the east, you grab the inflatable vixen by the wrist and pull her quickly through that door and rush towards the slide. Your path to the slide gets cut off by ";
 		if lastbcduobeaten < 255:
 			say "a pair of inflatable creatures. It seems your activity's drawn their attention and they charge at you, trying to foil the rescue attempt. The vixen is too weak and confused to be much help in the fight, so it looks like you'll have to face them on your own.";
-			say "     The first is a male sea lion made of opaque purple vinyl and a whiskered face drawn on his head. He has a plump body and flippers, and you're able to tell he's male when he rears up on his rear flippers and claps his front ones together excitedly, also showing off his darker purple cock. His companion is a female orca[if lastorcasex < 255], considerably smaller than the one you encountered downstairs and[end if] and made of a translucent magenta with a white underside. As she starts to float up in the air, she does a quick roll over, which gives you a chance to spot her the damp slit at the bottom of her underbelly. Both of them are a little over a meter long. They move in on you, one from each side and trying to bear you down with their cuteness.";
+			say "     The first is a male sea lion made of opaque purple vinyl and a whiskered face drawn on his head. He has a plump body and flippers, and you're able to tell he's male when he rears up on his rear flippers and claps his front ones together excitedly, also showing off his darker purple cock. His companion is a female orca[if bcseenhugeorca is false], considerably smaller than the one you encountered downstairs and[end if] and made of a translucent magenta with a white underside. As she starts to float up in the air, she does a quick roll over, which gives you a chance to spot her the damp slit at the bottom of her underbelly. Both of them are a little over a meter long. They move in on you, one from each side and trying to bear you down with their cuteness.";
 		else:
 			say "the same pair of strange guardians you've faced here before. It seems your activity's drawn their attention and they charge at you, trying to foil the rescue attempt. The vixen is too weak and confused to be much help in the fight, so it looks like you'll have to face them on your own.";
 		challenge "Sea Lion and Orca Toys";
@@ -1994,7 +1978,7 @@ to say bcchairfinal1: [FLOT -- Check?]
 					if x is 1:			[libido]
 						say "     Desperate, you decide to give your plan another attempt, trying your best to maintain your focus as you rock and push your body against the stimulating chair's surface[if cocks of player > 0 and cunts of player > 0], holes and probes[else if cocks of player > 0] and holes[else if cunts of player > 0] and probes[end if]. The motion pauses while you ride it to another orgasm that sends waves of pleasure through you. You have difficulty focusing after your mind-numbing climax, but the chair suffers no pause, now familiar with how much pleasure you can provide and fully able to take it all in. It resumes sinking and even starts up again, getting you aroused for another go right away.";
 					else if x is 2:	[strength]
-						say "     You try to fight your way free, but with you fully bound and encapsulated, as well as worn out from your orgasms and struggling, you cannot muster the might to pull yourself free. Even as the chair continues to sink, the gas continues to make thought difficulty, only your growing arousal starting to matter as the chair starts up again, getting you worked up for another go right away.";
+						say "     You try to fight your way free, but with you fully bound and encapsulated, as well as worn out from your orgasms and struggling, you cannot muster the might to pull yourself free. Even as the chair continues to sink, the gas continues to make thought difficult, only your growing arousal starting to matter as the chair starts up again, getting you worked up for another go right away.";
 					else:			[intelligence]
 						say "     You struggle to figure a way out of your predicament, but your mind is too foggy from the gas and your powerful afterglow, making thought too difficult now. You try to pull, push and squeeze, but with the pod fully formed around you and your limbs all tightly held, there seems to be no way out of it. Even as the chair continues to sink, the gas gets you aroused again and the chair starts up again, preparing you for another go right away.";
 					say "     Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give into the pleasure, succumbing as a mindless prisoner of lust as you enjoy orgasm after orgasm in the hidden safety of your new home.";
@@ -2005,7 +1989,7 @@ to say bcchairfinal1: [FLOT -- Check?]
 					now tailname of player is "Captured";
 					now cockname of player is "Captured";
 					now humanity of player is 0;
-					end the game saying "You are imprisoned by the Bouncy Castle.";
+					end the story saying "You are imprisoned by the Bouncy Castle.";
 			else:
 				say "     As you continue fighting, you can feel the sex chair's grip on you loosen and you pull hard to get free.";
 	if bcchairescape is 2:	[escape]
@@ -2053,7 +2037,7 @@ to say bcchairfinal2:
 	now tailname of player is "Captured";
 	now cockname of player is "Captured";
 	now humanity of player is 0;
-	end the game saying "You become part of the Bouncy Castle.";
+	end the story saying "You become part of the Bouncy Castle.";
 
 
 Chapter 2 - Eastern Inflatables Escape
@@ -2070,18 +2054,18 @@ to say bcfinal2:		[Fail - caught w/vixen]
 		say "     They go at it for quite a while until you're pushed past your limit and cum hard, shooting your [cum load size of player] load into the inflatable female while she trills happily. Moments later the sea lion is set off, shooting a jet of air-driven semen right down your throat. The orgasm, the gas and the semen all work to leave you momentarily dazed and weak, unable to resist as they move to dealing with the vixen. She's mounted in turn and fucked while eating your hot load from the orca's pussy.";
 	else if cunts of player > 0:
 		say "     After a few trills and barks between them, a decision seems to be reached and the sea lion moves himself over your crotch, rubbing his throbbing cock across your wet folds. This gives you a good view of the dark purple shaft as he readies to mount you and you can see it's got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it. Growing aroused despite the trouble you're in, you're soon quite wet and rubbing your hips back up against that slick shaft. He barks happily now that he can see you're ready and shifts his bulky body a little, grabs you with his flippers and drives his inflated manhood into your [cunt size desc of player] cunt, making you moan loudly as it shifts to be just the right size to fill you fully and deeply. You can feel the smooth, wet touch of the vixen's tongue as well as she licks at your pussy and the throbbing cock stuffed inside it.";
-		say "     Not to be left out, the orca moves up beside you and pulls presses her crotch to your face. Presented with her juicy pussy, your eyes run over her milky white folds and the soft, magenta interior of her cunt. At the top of it, poking partway out of the ivory lips is an air nozzle where her clit should be and wet and juicy with her arousal. Licking your lips and drawn to the unusual pussy, you run your tongue over her strange clit and can't help but smile as she trills happily. Soon you're digging it, licking at her eagerly and pushing your tongue past those yielding folds to get more of her juices.";
+		say "     Not to be left out, the orca moves up beside you and presses her crotch to your face. Presented with her juicy pussy, your eyes run over her milky white folds and the soft, magenta interior of her cunt. At the top of it, poking partway out of the ivory lips is an air nozzle where her clit should be and wet and juicy with her arousal. Licking your lips and drawn to the unusual pussy, you run your tongue over her strange clit and can't help but smile as she trills happily. Soon you're digging it, licking at her eagerly and pushing your tongue past those yielding folds to get more of her juices.";
 		say "     They go at it for quite a while until you're pushed past your limit and cum hard, moaning loudly as your inner walls clamp down around the inflatable cock stuffed inside you[if cocks of player > 0] while shooting your [cum load size of player] load across yourself[end if]. This sets off the sea lion, who shoots jet after jet of air-driven semen right into your womb with barks of excitement. The orca goes off moments later, a squirt of her own juices soaking your face as her nozzle sprays a mist of latex-scented air across your face. The orgasm, the gas and the juices all work to leave you momentarily dazed and weak, unable to resist as they move to dealing with the vixen. She's mounted in turn and fucked while taking a turn eating out the orca.";
 	else:
 		say "     After a few trills and barks between them, a decision seems to be reached and the sea lion moves himself over your crotch, rubbing his throbbing cock across your bare groin. This gives you a good view of the dark purple shaft as he readies to mount you and you can see it's got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it. Growing aroused despite the trouble you're in, you're soon quite excited and rubbing your hips back up against that slick shaft. He barks happily now that he can see you're ready and shifts his bulky body a little, grabs you with his flippers and drives his inflated manhood into your ass, making you moan loudly as it shifts to be just the right size to fill you fully and deeply. You can feel the smooth, wet touch of the vixen's tongue as well as she licks at your stretched anal ring and the throbbing cock stuffed inside it.";
-		say "     Not to be left out, the orca moves up beside you and pulls presses her crotch to your face. Presented with her juicy pussy, your eyes run over her milky white folds and the soft, magenta interior of her cunt. At the top of it, poking partway out of the ivory lips is an air nozzle where her clit should be and wet and juicy with her arousal. Licking your lips and drawn to the unusual pussy, you run your tongue over her strange clit and can't help but smile as she trills happily. Soon you're digging it, licking at her eagerly and pushing your tongue past those yielding folds to get more of her juices.";
+		say "     Not to be left out, the orca moves up beside you and presses her crotch to your face. Presented with her juicy pussy, your eyes run over her milky white folds and the soft, magenta interior of her cunt. At the top of it, poking partway out of the ivory lips is an air nozzle where her clit should be and wet and juicy with her arousal. Licking your lips and drawn to the unusual pussy, you run your tongue over her strange clit and can't help but smile as she trills happily. Soon you're digging it, licking at her eagerly and pushing your tongue past those yielding folds to get more of her juices.";
 		say "     They go at it for quite a while until the sea lion is pushed past his limits and shoots jet after jet of air-driven semen deep inside you with barks of excitement. The orca goes off moments later, a squirt of her own juices soaking your face as her nozzle sprays a mist of latex-scented air across your face. The gas, the semen and the juices all work to leave you momentarily dazed and weak, unable to resist as they move to dealing with the vixen. She's mounted in turn and fucked while taking a turn eating out the orca.";
 	WaitLineBreak;
-	say "     When they're done with her, they press their muzzles to your lips. As you and the vixen are kissed, there's another release of heady gas to keep you both dazed and weak. This time they bump and push you from the parapets into the upper hall and then continue on, gradually leading you both back downstairs, giving you numbing kisses along the way. Eventually you are lead into [if lastorcasex is 255]a distant room with a much larger orca inside it[else]the room with the large, pushy orca[end if].";
+	say "     When they're done with her, they press their muzzles to your lips. As you and the vixen are kissed, there's another release of heady gas to keep you both dazed and weak. This time they bump and push you from the parapets into the upper hall and then continue on, gradually leading you both back downstairs, giving you numbing kisses along the way. Eventually you are lead into [if bcseenhugeorca is true]a distant room with a much larger orca inside it[else]the room with the large, pushy orca[end if].";
 	say "     The larger orca does not seem perturbed by their arrival and shares a quick nuzzle with each of them. There is a short exchange of squeaky trills and barks before you're pressed forward to kiss and lick at the big inflatable's wet pussy while the others stroke and caress you, urging you on. Not that you need much encouragement by this point, your mind quite addled on the gas and your arousal very high.";
 	say "     You nuzzle and lick at those widening folds even as they start to spread open to let you work your tongue deeper. As you lap up her flowing juices, the stroking flippers and paws start to push at you, pressing you forward all the more. The orca's slick cunt opens wider, taking your head in, and soon after, your shoulder and upper body follow as rippling walls and pushing playmates send you into her. As your upper body's moving into a larger chamber prepared for you, you feel a pair of hands around your ankles while follow you in, the vixen being sent in behind you. Soon enough, you're bundled up together in the large orca's rubbery womb, covered in a slick coating of latex and playing lustfully with one another in the orca's snug womb.";
 	say "     As you [if cocks of player > 0]fuck her[else]grope and fondle her[end if], the big orca around you sways and rocks, her well-stuffed body most likely being fucked by the horny sea lion. This is confirmed soon enough with a rush of his hot seed and mind-numbing gas spraying into her uterus, filling it up and coating you both in the gooey semen. This is enough to have you both cum hard before conscious thought fades and you eventually pass out in one another's arms.";
-	wait for any key;
+	WaitLineBreak;
 	LineBreak;
 	now bcending is 4;
 	now bodyname of player is "Captured";
@@ -2090,7 +2074,7 @@ to say bcfinal2:		[Fail - caught w/vixen]
 	now tailname of player is "Captured";
 	now cockname of player is "Captured";
 	now humanity of player is 0;
-	end the game saying "You and the vixen failed to escape your latex fate.";
+	end the story saying "You and the vixen failed to escape your latex fate.";
 
 
 to say bcfinal3:		[Escape - leave w/o vixen]
@@ -2189,7 +2173,7 @@ understand "dolcastletest" as dolphincastletesting.
 
 carry out dolphincastletesting:
 	try resolving Snared Vixen;
-	wait for any key;
+	WaitLineBreak;
 	move player to Bouncy Castle;
 
 

@@ -106,7 +106,7 @@ to say GorillaOral:
 to say Gorilla Desc:
 	setmongender 3;
 	if inasituation is false: [regular scenes]
-		if  GorillasMember > 0 and GorillasMember < 3 :
+		if  GorillasMember > 0 and GorillasMember < 3:
 			say "     A burly and muscular gorilla steps into your line of sight. He is dressed in shorts, football shoulder pads and wears a helmet, all of them bearing the local team's colors. As the gorilla spots you, a smile spreads over his face and he drops on all fours, using his long arms as support as he quickly rushes towards you. [if cocks of player is 0]'Hey girl, nice to see ya again.[otherwise]'Hey dude, nice to see ya again.[end if] I saw you in the locker room. I can't wait to see how well you're gonna do during the tryouts. Every addition to the team would be very welcome. He hits his chest and grunts loudly to honor the team, then gives you another long look - a pretty leering one. 'So, what do ya say we do some \'warm-up\' before the big day?'";
 			say "     It looks like this simian jock is fully committed to the idea that you're a soon-to-be subordinate teammate, whom he can order around - and that there is little doubt he intends to have sex with you. You don't think there's any chance to convince him of anything else, so you ready yourself for a fight.";
 		else if GorillasMember is 3 and GorillasRep < 4:
@@ -138,7 +138,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Football Gorilla";      
+	now name entry is "Football Gorilla";
 	now attack entry is "[one of]The gorilla throws himself on you in a tackle that drives the air out of your lungs.[or]Calling out, 'Come on, let's have some fun,' the gorilla claps his strong hand against your back, with a strength that leaves you somewhat stunned.[or]You get thrown aside and fall down as the gorilla demonstrates one of his moves - by running at you at full steam and striping you with his armored shoulder-pad.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Gorilla Loses]";   [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Gorilla Wins]";    [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]

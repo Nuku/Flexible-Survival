@@ -68,7 +68,7 @@ to say losetosierra:
 			now struggleatt is 1;
 		else:
 			now struggleatt is 0;
-		wait for any key;
+		WaitLineBreak;
 		now bsextimer is 5;
 		now boundstate is true;
 		sierrabind;
@@ -138,7 +138,7 @@ to sierrabind:
 			now cock of player is cock entry;
 			now voreloss is true;
 			now trixieexit is 1;
-			end the game saying "You lost your mind while bound!";
+			end the story saying "You lost your mind while bound!";
 		else:
 			let k be 0;
 			now keychar is "INVALID";
@@ -164,7 +164,7 @@ to sierrabind:
 						if bodyname of player is "Sierrasaur", decrease humanity of player by 1;
 						if facename of player is "Sierrasaur" and "Strong Psyche" is not listed in feats of player, decrease humanity of player by 1;
 						decrease humanity of player by 3 + psycheadjust;
-						wait for any key;
+						WaitLineBreak;
 					else:
 						if bodyname of player is "Sierrasaur" and player is pure:
 							if a random chance of 1 in 5 succeeds:
@@ -176,7 +176,7 @@ to sierrabind:
 						if bodyname of player is "Sierrasaur", decrease humanity of player by 1;
 						if facename of player is "Sierrasaur" and "Strong Psyche" is not listed in feats of player, decrease humanity of player by 1;
 						decrease humanity of player by 3 + psycheadjust;
-						wait for any key;
+						WaitLineBreak;
 				else:
 					say "     Finally successful, you're met with the low hacking sound from the beast. Apparently, it wants to relinquish you from you confines, as his firm stomach squeezes you back from whence you came, up through its gullet and out, foot by foot, into the dry, cool open air, made to wallow in a puddle of saliva. Finally having had enough of your fussing, it turns to slowly depart, leaving you to gather your things and go about your business freely once more.";
 					cleanboundmemory;
@@ -227,7 +227,7 @@ to sierrabind:
 				if facename of player is "Sierrasaur" and "Strong Psyche" is not listed in feats of player, decrease humanity of player by 1;
 				decrease humanity of player by 3 + psycheadjust;
 				increase bsextimer by 1;
-				wait for any key;
+				WaitLineBreak;
 				next;
 			else:
 				now enduring is true;
@@ -279,7 +279,7 @@ to sierrabind:
 						if bodyname of player is "Sierrasaur" and "Strong Psyche" is not listed in feats of player, decrease humanity of player by 1;
 						decrease humanity of player by 2 + psycheadjust;
 				increase bsextimer by 1;
-				wait for any key;
+				WaitLineBreak;
 				next;
 			say "Invalid action.";
 
@@ -358,7 +358,7 @@ to sierrasex:
 		else:
 			say "your ability to breath is considerably limited,";
 		say " [if boundstate is true]though he relents just enough to not overwhelm you, [end if]making you rapidly swallow down his sexual fluids just to keep up. This ritual [if hp of player < 1]forcibly[else]quickly[end if] [if cocks of player > 0]drives your dick[smn] erect, throbbing in the open air[else if cunts of player > 0]makes your cunt[sfn] ache with an overwhelming need[else]makes you aroused, though you have no way of sating it[end if], a matter you're too preoccupied right now to properly attend to, as the beast thrusts instinctively against your attending hole.";
-		say "     With a low, loud groan, the reptile [if boundstate is true]suddenly pins you down, forcing almost the entire length down your throat. flooding[else]floods[end if] your gullet with its thick, creamy fluid. [if boundstate is true and sierrapure is true]The creature is happy to feed its little companion, generating a fair amount more than what is normal for it, probably also using this time to train you, as your torso bloats to abide the overwhelming flood[else if boundstate is true]The creature is dead set on forcing you to swallow all of it down, and it's quickly clear that it seems to be generating more than usual, your stomach quickly bloating to abide this overwhelming flood[else if sierrapure is true]The creature is happy to feed its little companion, flooding your belly with its virile seed[else]The flood is so substantive, it eventually starts spurting from your lips, ultimately forcing you to pull free of his tool and get doused with the remnant flood of the creature's virile seed[end if].";
+		say "     With a low, loud groan, the reptile [if boundstate is true]suddenly pins you down, forcing almost the entire length down your throat, flooding[else]floods[end if] your gullet with its thick, creamy fluid. [if boundstate is true and sierrapure is true]The creature is happy to feed its little companion, generating a fair amount more than what is normal for it, probably also using this time to train you, as your torso bloats to abide the overwhelming flood[else if boundstate is true]The creature is dead set on forcing you to swallow all of it down, and it's quickly clear that it seems to be generating more than usual, your stomach quickly bloating to abide this overwhelming flood[else if sierrapure is true]The creature is happy to feed its little companion, flooding your belly with its virile seed[else]The flood is so substantive, it eventually starts spurting from your lips, ultimately forcing you to pull free of his tool and get doused with the remnant flood of the creature's virile seed[end if].";
 		if sierramem is 2:
 			say "     [if hp of player < 1]Thankfully[else if sierrapure is true]Much to your approval[else]Interestingly enough[end if], the taste is not all that bad, this lewd nectar mildly sweet and clearly filling";
 			If boundstate is true:
@@ -389,7 +389,7 @@ to sierrasex:
 	if boundstate is false:
 		say "     After that, it pulls away, slowly stepping back and letting you depart. It just... Stands there, and only watches you passively as you get up and step away, strangely indifferent to your departure as you gather your things and leave.";
 	else:
-		say "     Pulling back away from you, it's clearly set on consuming you once more, [if hp of player < 1]you try to fight back, but you're still too weak and exhausted to really do anything, and as such the creature entirely ignores you protests[else if sierrapure is true]your infection compelling a jovial regard at the thought being brought back into your room again[else]that familiar, gaping abyss exposed to you[end if] before his maw gently wraps around your [bodytype of player] form. Shoving you gradually back down the slick hole, each successive, ponderous gulp sucks you into these unyielding confines until you're forced to reconvene with your [if humanity of player < 51]new home[else]twisted prison[end if].";
+		say "     Pulling back away from you, it's clearly set on consuming you once more[if hp of player < 1]. You try to fight back, but you're still too weak and exhausted to really do anything, and as such the creature entirely ignores you protests[else if sierrapure is true], your infection compelling a jovial regard at the thought being brought back into your room again[else], that familiar, gaping abyss exposed to you[end if] before his maw gently wraps around your [bodytype of player] form. Shoving you gradually back down the slick hole, each successive, ponderous gulp sucks you into these unyielding confines until you're forced to reconvene with your [if humanity of player < 51]new home[else]twisted prison[end if].";
 		decrease hunger of player by 3; [Effect is doubled for abducted players]
 		decrease thirst of player by 6;
 	decrease hunger of player by 3;

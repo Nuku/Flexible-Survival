@@ -250,7 +250,7 @@ to say andrewdemonshow: [evil Brutus + Andrew]
 			now demon brute is not tamed;
 			now lust of Andrew is 100;
 			if libido of player < 90, now libido of player is 90;
-			end the game saying "You lose your mind to the infernal orgy you foolishly instigated.";
+			end the story saying "You lose your mind to the infernal orgy you foolishly instigated.";
 
 to say AndrewBrutusShow: [cleansed Brutus + Andrew]
 	say "     Deciding that the wolf's idea could be a lot of fun, the three of you conspire together on the details before Andrew dashes off to make the arrangements. After a chat with the DJ and the dancers, the stage is cleared and the black wolf comes out for a sexy striptease show. While this gets some attention, it is not until you lead Brutus on stage by a leash while heavy metal music plays that the audience truly becomes interested.";
