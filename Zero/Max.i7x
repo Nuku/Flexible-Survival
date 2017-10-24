@@ -19,11 +19,11 @@ Instead of resolving Meeting the corgi:
 		say "[line break]Before the dominator can get very far, a small furry missile rams into him, and begins to beat the life out of him.";
 		say "Do you attack the [']small furry missile['] while it's distracted?";
 		if the player consents:
-			say "Deciding that such a aggressive creature could become a problem later on, you try to knock it out from behind.[line break]The now-relieved corgi blocks your attacks with ease and glares at you. [']And here I thought you weren't stupid, guess I was wrong!['] Before you can do anything else the corgi slams a fist into your jaw, knocking you out, leaving you stunned but conscious, and leaving the very ticked off corgi to walk off.";
+			say "Deciding that such a aggressive creature could become a problem later on, you try to knock it out from behind.[line break]The now-relieved corgi blocks your attacks with ease and glares at you. 'And here I thought you weren't stupid, guess I was wrong!' Before you can do anything else the corgi slams a fist into your jaw, knocking you out, leaving you stunned but conscious, and leaving the very ticked off corgi to walk off.";
 			Now corgitalk is -1;
 			now Meeting the corgi is resolved;
 		else:
-			say "After the dominator is reduced to a quivering mess, [']the small furry missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'Hey there, thanks for holding him off, stupid [slutname] tried to steal my bag, almost got away too, didn't you, ya little fucker?' he says before stomping hard onto the [slutname][']s groin, resulting in a pained shout of the now awake dominator. 'Anyway, name's Max, glad to see another sane one 'round here... you are sane right?' Quickly nodding, the corgi gives a sigh and continues on. 'Just had to be sure, lately these [']dominators['] the corgi says sarcastically 'have been trying everything to get me for the last week or so, and it's getting pretty annoying. Well whatever, if you drop by the gym any time soon give me a shout, there's a bunch of us holed up there if ya need any help.' The corgi walks off, dragging a very distressed [slutname] behind him[line break]";
+			say "After the dominator is reduced to a quivering mess, the [']small furry missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'Hey there, thanks for holding him off, stupid [slutname] tried to steal my bag, almost got away too, didn't you, ya little fucker?' he says before stomping hard onto the [slutname]'s groin, resulting in a pained shout of the now awake dominator. 'Anyway, name's Max, glad to see another sane one 'round here... you are sane right?' Quickly nodding, the corgi gives a sigh and continues on. 'Just had to be sure, lately these [']dominators['] the corgi says sarcastically 'have been trying everything to get me for the last week or so, and it's getting pretty annoying. Well whatever, if you drop by the gym any time soon give me a shout, there's a bunch of us holed up there if ya need any help.' The corgi walks off, dragging a very distressed [slutname] behind him[line break]";
 			Increase corgitalk by 1;
 			now Meeting the corgi is resolved;
 	else:
@@ -46,7 +46,7 @@ Instead of resolving pendant hunting:
 		else:
 			say " deciding that it would be better to try again later, you quickly run off";
 	else:
-		say "as you continue to search the city you find yourself looking at a group of 3 hyenas, one of with is wearing a blue pendant, thankfully they're distracted and don't notice you";
+		say "as you continue to search the city, you find yourself looking at a group of three hyenas, one of which is wearing a blue pendant. Thankfully, they're distracted and don't notice you";
 
 
 Section 2-Max
@@ -113,7 +113,7 @@ instead of conversing the Max:
 			else if maxq is 1:
 				say "'Apologizing for your lack of progress you quickly head out once again to try and find the corgi's missing pendant, maybe if you hunt for the pendant you'll have more luck?'";
 	else if location of player is Rec room:
-		say "'You want to trade some stuff? Miles and me have got some goody bags for you if you want them, if you have a bit of water and food to spare, you may find yourself surprised.'  Maybe you want to GIVE MAX some of your supplies?'";
+		say "'You want to trade some stuff? Miles and I have got some goody bags for you if you want them. If you have a bit of water and food to spare, you may find yourself surprised.'  Maybe you want to GIVE MAX some of your supplies?'";
 
 
 Section 3- corgitrading
@@ -129,23 +129,23 @@ understand "trade corgi" as corgigiving.
 understand "trade max" as corgigiving.
 
 check corgigiving:
-	if Max is not visible, say "you can't do this here" instead;
+	if Max is not visible, say "You can't do this here." instead;
 
 
 carry out corgigiving:
 	if "food" is listed in invent of player and "water bottle" is listed in invent of player:
-		say "Pulling out some of your supply of food and a water bottle, you hand them to max who quickly throws you a goody bag, opening it you find...[line break]";
+		say "Pulling out some of your supply of food and a water bottle, you hand them to Max, who quickly throws you a goody bag. Opening it, you find...[line break]";
 		delete food;
 		delete water bottle;
 		let Z be a random number between 1 and 11;
 		if Z is 1:
 			Say "nothing... absolutely nothing... even the bag is useless!";
 		else if Z is 2:
-			say "a bottle of water and some food, seems you get what you paid for after all";
+			say "a bottle of water and some food. Seems you got what you paid for, after all";
 			Add "food" to invent of player;
 			Add "water bottle" to invent of player;
 		else if Z is 3:
-			say "a lot of food and water, this is definitely a good goody bag";
+			say "a lot of food and water. This is definitely a good goody bag";
 			Add "food" to invent of player;
 			Add "water bottle" to invent of player;
 			Add "food" to invent of player;
@@ -194,14 +194,14 @@ lastkitsufucked is a number that varies. lastkitsufucked is usually 130.
 understand "kitsune" as Miles.
 understand "miles" as Miles.
 
-The description of Miles is "     Miles is a kitsune, he looks like a fox but with two tails, his fur is normally red but it seems like he can control its colour, he is wearing a plain t-shirt and black joggers, he also has and a blue diamond pendant hanging from his neck. ".
+The description of Miles is "     Miles is a kitsune. He looks like a fox but with two tails. His fur is normally red, but it seems like he can control its colour. He is wearing a plain t-shirt and black joggers. He also has a blue diamond pendant hanging from his neck.".
 
 The conversation of Miles is { "Stuff!" }.
 
 instead of conversing the Miles:
 	if location of player is Rec room:
 		if maxq is 2:
-			say "The kitsune bounds over to you as you approach, 'hi there, Max's been talking bout you, all good I assure you' [line break]'anyway thanks for helping him out he looked so guilty when he said he'd lost my gift' he says fingering the blue pendant around his neck, 'your free to hang around here whenever you want, and there's a gym next-door if your interested, it's empty at the minute though.'";
+			say "The kitsune bounds over to you as you approach, 'Hi there! Max has been talking bout you. It's all good, I assure you.'[line break]'Anyways, thanks for helping him out. He looked so guilty when he said he'd lost my gift,' he says, fiddling with the blue pendant around his neck. 'You're free to hang around here whenever you want, and there's a gym next door if your interested. It's empty at the moment, though.'";
 			now maxq is 3;
 			stop the action;
 		else if maxq is 3:
@@ -215,7 +215,7 @@ instead of conversing the Miles:
 				now maxq is 4;
 				stop the action;
 		else if maxq is 4:
-			say "'This city's got existing hasn't it, and crazy... defiantly crazy.'"
+			say "'This city's got exciting, hasn't it? And crazy... definitely crazy.'"
 
 
 

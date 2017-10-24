@@ -14,13 +14,13 @@ when play begins:
 
 To say Tenrec Victory:
 	if inasituation is false:
-		if the player is herm:				[herm]
+		if player is herm:				[herm]
 			say "[Tenrec HermVic]";
-		else if the player is female:		[female]
+		else if player is female:		[female]
 			say "[Tenrec FemVic]";
-		else if the player is male:		[male]
+		else if player is male:		[male]
 			say "[Tenrec MaleVic]";
-		else if the player is neuter:		[Neuter]
+		else if player is neuter:		[Neuter]
 			say "[Tenrec NeutVic]";
 		else:
 			say "Weird, some error occurred! Better call on some professional, maybe some Guy with Stripes? A StripeGuy, if you would.";

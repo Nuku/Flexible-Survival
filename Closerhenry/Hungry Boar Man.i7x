@@ -170,7 +170,7 @@ To pigfeed:
 					move philip to Bunker;
 					move player to bunker;
 					now pigfed is 3;
-					say "     'Thank you!' he snorts and then follows you back to the bunker. When you arrive, he quickly makes himself at home, i.e. the bunker starts to smell as bad as he does. He does at least add two bottles of water to your bunker supplies.";
+					say "     'Thank you!' he snorts and then follows you back to the bunker. When you arrive, he quickly makes himself at home, i.e., the bunker starts to smell as bad as he does. He does at least add two bottles of water to your bunker supplies.";
 					say "     After he settles in, he approaches you and smiles a little as he says, 'You know, you've been so nice to me that I've realized that you must want to be more than friends. You want to become my piggy lover, don't you? Let's rut like pigs in heat!'";
 					increase score by 5;
 					now lust of philip is turns;	[starts availability counter on Philip + Sandra]

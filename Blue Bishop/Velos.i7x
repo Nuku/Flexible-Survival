@@ -37,7 +37,7 @@ Instead of resolving Strange Serpent:
 						say "     Your new resident would only revel in this now-liberated dwelling briefly before you can see the outline of his head emerge from your hole, exposing him just enough to continue the dialogue.";
 					else:
 						say "     Driven to your knees by this wracking sensation, its raising intensity inevitably relents when he's forcibly trapped the whole of himself inside you. You can barely contain all of him, distended torso strained under such a considerable holding. In due time, you can compel yourself to your feet, your infection twisting these circumstances in such a way that you can move reasonably in spite these circumstances.";
-						say "     Bulge twitching as you must content with his irreverent movements, you're forced to illicit a weakened moan as you feel his head retreat from the hole it once invaded. pulling just enough of itself out that you might see himself before you.";
+						say "     Bulge twitching as you must content with his irreverent movements, you're forced to illicit a weakened moan as you feel his head retreat from the hole it once invaded, pulling just enough of itself out that you might see himself before you.";
 					say "     'Quite the tight fit, if I do say so myself! But I like to think that cozy is often an attribute falsely regarded as poor.' He seems rather pleased with himself, try pulling him out?";
 				else if scalevalue of player > 3:
 					say ". Struck with twisted pleasure as his form floods your bowels, and though you're more than large enough to handle him that doesn't quite change the fact that he's got a fair amount of himself to put into you, forcing you onto your knees and, inevitably, to roll over onto your back.";
@@ -54,7 +54,7 @@ Instead of resolving Strange Serpent:
 						say "     Your new resident would only revel in this now-liberated dwelling briefly before you can see the outline of his head emerge from your hole, exposing him just enough to continue the dialogue.";
 					else:
 						say "     Driven to your knees by this wracking sensation, its raising intensity inevitably relents when he's forcibly trapped the whole of himself inside you. Even finished as he is now it's a struggle for clarity, weighty and distended torso strained to abide its occupancy. In due time, you can compel yourself to your feet, your infection twisting these circumstances in such a way that you can move reasonably in spite of these circumstances.";
-						say "     Bulge twitching with his irreverent movements, you're forced to illicit a weakened moan as you feel his head retreat from the hole it once invaded. pulling just enough of itself out that you might see himself one more before you.";
+						say "     Bulge twitching with his irreverent movements, you're forced to illicit a weakened moan as you feel his head retreat from the hole it once invaded, pulling just enough of itself out that you might see himself one more before you.";
 					say "     'Doubtlessly you play victim to this praise all the time, but it'd be rude of me to not highlight the quality of this dwelling! What's your secret?' He seems rather pleased with himself, try pulling him out?";
 				if insectlarva is true:			[freed from parasite]
 					now insectlarva is false;
@@ -414,7 +414,7 @@ to say frankmusing:
 	say "     '--Oh? In that case, never mind.'  Dropping his previous persona, Velos winds himself back and looks around the cramped room.  The poor skunk is rendered briefly confused before he starts to get the hint that Velos means no harm, slowly easing up.  'So, comic shop, eh?  Looks fairly well-kept, in spite of how things are now.'";
 	say "     'Uh... Yeah.'  Frank seems to be a bit calmer now, but relegates himself to keeping his distance.";
 	say "     'Not much of a comic guy, myself--though I think it's only fair to admit my claim is slightly tinged with embarrassment in the presence of someone who would seem to be.  I suppose my lack of familiarity is rather conventional; all this continuity baffles me and I wouldn't know where to start.'";
-	say "     'W-well, Most people just say to start wherever you feel like.  Though I'd suggest you pick a hero you liked when you were a kid so you know who you're reading about.'";
+	say "     'W-well, most people just say to start wherever you feel like.  Though I'd suggest you pick a hero you liked when you were a kid so you know who you're reading about.'";
 	say "     'Fair enough... Slightly less conventional problem: I have no hands for which to pick up a comic.'";
 	say "     'Yeah, I can see that.  Why not have our friend here hold them for you?'";
 	say "     'I can't stay out for very long, and I'd also likely make a bit of a mess over the paper.  I guess you don't really regard what you haven't done until you can't do them anymore.'";
@@ -488,7 +488,7 @@ to say haroldmusing:
 	say "     Looking around to ensure that nobody's looking at you before you summon Velos before Harold.  You can imagine his endeavours to clean a glass are a bit impeded when he's distracted with the sight of the serpent.";
 	say "     'Dare I ask what you plan to do with that?'";
 	say "     'Oh, don't mind that person, they just help me get around.'  Offering up the sly remark, the unicorn seems to be put a bit at ease when it's made clear that he's not about to get attacked.";
-	say "     'Huh, Dare I ask...?'  He leans over the bar, getting a better view of where Velos is coming from, before he pulls back.  'Ah, that must be a little embarrassing.'";
+	say "     'Huh, dare I ask...?'  He leans over the bar, getting a better view of where Velos is coming from, before he pulls back.  'Ah, that must be a little embarrassing.'";
 	say "     'I wouldn't worry about it, my friend doesn't talk all that much.'  You can't help but glare a little at him and his jabs, and Harold can only chuckle.";
 	say "     'Very well, what would you like to drink, then?'";
 	say "     'I'd much rather drink in dialogue, more than anything else.'";

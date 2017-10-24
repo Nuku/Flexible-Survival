@@ -180,7 +180,7 @@ to say nogging:
 		now skin of player is skin entry;
 		now body of player is body entry;
 		now cock of player is cock entry;
-		end the game saying "You gave in to the holiday spirit.";
+		end the story saying "You gave in to the holiday spirit.";
 		now battleground is "void";
 
 

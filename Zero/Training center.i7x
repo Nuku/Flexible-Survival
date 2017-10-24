@@ -138,14 +138,14 @@ to say losetoMistress:
 	say "Defeated, you fall to the ground, now at the mercy of the abomination.[line break]You try to resist it, but as soon the creature quickly slips a collar around your neck your mind starts to give, feeling the lustful urges consume you, leaving you a willing part of the abomi... no, your master's kingdom, a beautiful kingdom where life is filled only with the wonderful sex you crave.[line break]";
 	now humanity of player is 0;
 	follow the turnpass rule;
-	end the game saying "You become drowned in the sea of lust that is the mistress of sex.";
+	end the story saying "You become drowned in the sea of lust that is the mistress of sex.";
 
 to say beattheMistress:
 	say "As you land the final blow, the creature lets a final unearthly roar before dissolving in a burst of light. You quickly cover your eyes before the lights can damage them.[line break]After the light has subsided, you find that all that's left of the foul abomination is a small glowing gold collar. [if corgitalk is greater than 1]Max walks over to you as you kneel next to the collar, seemingly just as curious as you[else]You kneel next to the collar, curious about it[end if].[line break]Taking hold of the glowing collar, strange and slutty memories assault your mind,";
 	now mistresswon is 1;
 	if humanity of player is less than 20:
 		say "Guided by the memories you fix the glowing collar to your neck, and visions of lust assault your already tainted mind, you reel over from the intake of memories, [if corgitalk is greater than 1]and Max immediately rushre over and helps you up, however before you realize what your doing, you're locking his lips with his own. Filling him with the same lust that now rules you[end if][line break]the collar's memories don't take long to integrate into you, telling you about your subjects, your sluts, your dominators and how to control them, with this new information [if corgitalk is greater than 1]Max, your new mate and [end if]you deploy what's left of your dominators, intent on taking control over the city.[line break]The old mistress is gone now but this new one has just begun its rule";
-		end the game saying "You become drowned in the sea of lust that is the mistress of sex.";
+		end the story saying "You become drowned in the sea of lust that is the mistress of sex.";
 	else:
 		say "you manage to hold onto your mind and take control of the cursed collar however temporarily it may be";
 		say "commands filter into your mind, what do you wish to do?[line break][collarcomandlist]";

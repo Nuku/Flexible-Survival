@@ -224,7 +224,7 @@ to say mre05_prey:
 	if humanity of player < 10:
 		say "     Your mind, lost in a haze of primitive thoughts, only momentarily considers leaving before you turn back to the other cavemen. Why would you want to leave your tribe?  Are they not your brothers?  Did they not spend hours showing you how much they want you to be with them?  With even these thoughts fading away into a desire for rest alongside the hunting party, you spoon with one of the strong males and let the last of your human mind drift off into sleep.";
 		WaitLineBreak;
-		end the game saying "You join the caveman tribe as another muscled brute.";
+		end the story saying "You join the caveman tribe as another muscled brute.";
 		now battleground is "void";
 		wait for any key;
 		now skipturnblocker is 1;
@@ -270,7 +270,7 @@ to say mre05_hunter:
 	if humanity of player < 10:
 		say "     Your mind, lost in a haze of primitive thoughts, only momentarily considers leaving before you turn back to the other cavemen. Why would you want to leave your tribe?  Are they not your brothers?  Did they not spend hours showing you how much they want you to be with them?  With even these thoughts fading away into a desire for rest alongside the hunting party, you spoon with one of the strong males and let the last of your human mind drift off into sleep.";
 		WaitLineBreak;
-		end the game saying "You join the caveman tribe as another muscled brute.";
+		end the story saying "You join the caveman tribe as another muscled brute.";
 		now battleground is "void";
 		wait for any key;
 		now skipturnblocker is 1;
@@ -361,7 +361,7 @@ to say mrevent08:
 					follow the sex change rule;
 				if libido of player < 40, now libido of player is 40;
 				WaitLineBreak;
-				end the game saying "You join the clockwork skulk as another vulpine member.";
+				end the story saying "You join the clockwork skulk as another vulpine member.";
 				now battleground is "void";
 				wait for any key;
 				now skipturnblocker is 1;
@@ -411,7 +411,7 @@ to say mrevent08:
 					follow the sex change rule;
 				if libido of player < 40, now libido of player is 40;
 				WaitLineBreak;
-				end the game saying "You join the clockwork skulk as another vulpine member.";
+				end the story saying "You join the clockwork skulk as another vulpine member.";
 				now battleground is "void";
 				wait for any key;
 				now skipturnblocker is 1;

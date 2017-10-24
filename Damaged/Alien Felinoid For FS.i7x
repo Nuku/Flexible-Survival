@@ -163,7 +163,7 @@ to say felinoidheat:
 	if heatform is 0:
 		say "Whining as you find yourself masturbating your feminine entrance slowly, you manage to snap out of the haze of need a moment, looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you and you begin lapping at your fingers, tasting your musk, needing more.";
 	else:
-		say "Whining as you find yourself masturbating your back entrance slowly, you manage to snap out of the haze of need a moment.  , looking down at your hand, covered in your fluids, you raise it tentatively.  Suddenly the scent of your body hits you, so like a wild cat in heat, can't help but push those fingers back in for a few more minutes before you're able to move on.";
+		say "Whining as you find yourself masturbating your back entrance slowly, you manage to snap out of the haze of need a moment. Looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you, so like a wild cat in heat, you can't help but push those fingers back in for a few more minutes before you're able to move on.";
 	infect "Felinoid";
 	increase libido of player by 15;
 

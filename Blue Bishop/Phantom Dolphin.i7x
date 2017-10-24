@@ -12,12 +12,12 @@ Instead of conversing the Discarded Dolphin:
 to say flotlook:
 	if flotintense is -1:
 		say "     Tethered to the end of the rope ladder leading into the entrance, an inflateable dolphin toy floats about, the unattended thing moving gently along with the waves.";
-		say "     This thing's particularly strange... In that it's appears to be completely inanimate. It also looks different from the other bottlenose toys you've seen, having more 'realistic' gray colour and otherwise unadorned in the usual handles or similar fare, though it's certainly still as large. For that reason, the rope has to be tied tightly around the base of the tail.";
+		say "     This thing's particularly strange... In that it appears to be completely inanimate. It also looks different from the other bottlenose toys you've seen, having more 'realistic' gray color and otherwise unadorned in the usual handles or similar fare, though it's certainly still as large. For that reason, the rope has to be tied tightly around the base of the tail.";
 		say "     This odd thing raises a lot of questions. Why is it just floating there? Shouldn't it be the same as all the other infected here? Without having to touch it, you can see that the thing clearly has a hole for 'use', so it's clearly the product of this blight's influence. If you're so daring as to 'play' with it, you imagine the end result may be equally unpredictable...";
 	else:
 		flotdecay;
 		say "     Tethered to the end of the rope ladder leading into the entrance, an inflateable dolphin toy floats about, the unattended thing moving gently along with the waves.";
-		say "     This thing's particularly strange... In that it's appears to be completely inanimate. It also looks different from the other bottlenose toys you've seen, having more 'realistic' gray colour and otherwise unadorned in the usual handles or similar fare. For that reason, the rope has to be tied tightly around the base of the tail.";
+		say "     This thing's particularly strange... In that it appears to be completely inanimate. It also looks different from the other bottlenose toys you've seen, having more 'realistic' gray color and otherwise unadorned in the usual handles or similar fare. For that reason, the rope has to be tied tightly around the base of the tail.";
 		say "     This odd thing raises a lot of questions. Why is it just floating there? Shouldn't it be the same as all the other infected here? Without having to touch it, you can see that the thing clearly has a hole for 'use', so it's clearly the product of this blight's influence. If you're so daring as to 'play' with it, you imagine the end result may be equally unpredictable...";
 		say "     [italic type][if flotintense < 2]The thing looks completely inanimate.[run paragraph on] You're fairly certain there'll be little to no consequence in using it right now[else if flotintense < 4]The thing appears to be mostly in a mundane state right now, but it seems to subtly become excited as you approach.[run paragraph on] You could probably get away with using it[else if flotintense < 6]The thing seems tinged with a streak of wanton menace.[run paragraph on] You could probably get away with using it, but not for long[else if flotintense < 8]You feel ill at ease near the thing, as though you're being drawn to the tainted object.[run paragraph on] You don't think it'd be particularly wise to use it right now[else]The thing seems to undulate from the corners of your eyes, as though thrumming with an otherworldly need.[run paragraph on] You feel overwhelmingly drawn to the thing, but you'd have to be insane to use it now[end if]...[roman type][line break]";
 		if flotmarked is true:
@@ -25,7 +25,7 @@ to say flotlook:
 	say "[line break]";
 
 flotmarked is a truth state that varies.
-flotintense is a number that varies. flotintense is usually -1;
+flotintense is a number that varies. flotintense is usually -1.
 [
 Variant for intensity:
 0-1: 1 struggle, almost no sanity loss.
@@ -41,53 +41,53 @@ to say flotfuck:
 		say "     You imagine that you wouldn't get a whole lot out of trying to have sex with the inanimate object.";
 	else:
 		flotdecay;
-		say "     Are you sure? [if flotintense is -1]Who knows what will happen![else if flotintense > 4]You imagine it won't end well, by this point![end if]";
+		say "     Are you sure?[if flotintense is -1] Who knows what will happen![else if flotintense > 4] You imagine it won't end well, by this point![end if]";
 		if player consents:
 			if flotintense is -1:
 				say "     As you descend back into the waters and swim close to the toy, you sheepishly grab the slippery thing. Further reinforcing the notion that this thing is inanimate it doesn't respond to your touch, allowing you to close in on it and get a good look at the thing.";
 				if cocks of player > 0:
-					say "     Its white undercarriage completely smooth save for the subtle cleft of the toy's lewd hole. Forcing a digit past the synthetic folds it easily stretches to accommodate the intrusion, though it doesn't seem to react to this particularly lewd act. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curiously fondling.";
+					say "     Its white undercarriage is completely smooth save for the subtle cleft of the toy's lewd hole. Forcing a digit past the synthetic folds, it easily stretches to accommodate the intrusion, though it doesn't seem to react to this particularly lewd act. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curious fondling.";
 					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of player > 3]a somewhat embarassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if]. Awkwardly aiming[if cocks of player > 1] one of[end if] your [cock size desc of player], half-erect dick[smn] for the entrance, you carefully sink it past its lips, the toy [if cock length of player > 11]seeming to easily take your cock, in spite of its impressive size; it takes a bit of work, but the pliable material stretches to handle its substantive girth[else]taking your cock without any difficulty, easily burying the organ within its pliable depths[end if].";
 				else:
-					say "     Its white undercarriage completely smooth save for the subtle cleft of the toy's lewd hole. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curiously fondling. There's not a whole lot to grind against here, but that isn't about to stop you now.";
+					say "     Its white undercarriage is completely smooth save for the subtle cleft of the toy's lewd hole. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curious fondling. There's not a whole lot to grind against here, but that isn't about to stop you now.";
 					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of player > 3]a somewhat embarassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if]. Grinding your exposed, eager cunt[sfn] against the smooth, pliable vinyl of the toy's underside, the lewd sounds of your motion compelling you to persist.";
 				say "     Inflatable object loudly creaking under your[if scalevalue of player > 3] substantive[end if] weight as you start to rock against the motion of the waves, the thing seems to quickly heat up against your touch, water and sweat-slicked body clinging to the slippery toy[if scalevalue of player > 3].[run paragraph on] You're slightly concerned that the thing might completely sink under your impressive size, but it seems to slowly grow in size to accommodate its larger rider[end if]. By this point it should be apparent that the object is indeed, and unsurprisingly, possessed by some otherworldly influence, your [bodytype of player] body beginning to stick to its surface, as though it's trying to cling against you in return. Its grip on you seems fairly weak, however, meaning you could probably get away with using it, if only for a little while...";
 				now flotintense is 0;
 			else if flotintense < 2:
 				say "     You descend back into the waters and swim close to the toy once more, cautiously grabbing the slippery thing. It looks like it's calmed down completely after you last adventure as it doesn't respond to your touch, allowing you to close in on it and get a good hold of the thing.";
 				if cocks of player > 0:
-					say "     Its white undercarriage completely smooth save for the subtle cleft of the toy's lewd hole. Forcing a digit past the synthetic folds it easily stretches to accommodate the intrusion, though it doesn't seem to react to this particularly lewd act. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curiously fondling, and otherwise seems completely devoid of your sexual fluids.";
+					say "     Its white undercarriage is completely smooth save for the subtle cleft of the toy's lewd hole. Forcing a digit past the synthetic folds, it easily stretches to accommodate the intrusion, though it doesn't seem to react to this particularly lewd act. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curious fondling, and otherwise seems completely devoid of your sexual fluids.";
 					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of player > 3]a somewhat embarassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if]. Awkwardly aiming[if cocks of player > 1] one of[end if] your [cock size desc of player], half-erect dick[smn] for the entrance, you carefully sink it past its lips, the toy [if cock length of player > 11]seeming to easily take your cock, in spite of its impressive size; it takes a bit of work, but the pliable material stretches to handle its substantive girth[else]taking your cock without any difficulty, easily burying the organ within its pliable depths[end if].";
 				else:
-					say "     Its white undercarriage completely smooth save for the subtle cleft of the toy's lewd hole. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curiously fondling. It would seem the saltwater has washed away any mess that might've been on here from before.";
+					say "     Its white undercarriage is completely smooth save for the subtle cleft of the toy's lewd hole. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curious fondling. It would seem the saltwater has washed away any mess that might've been on here from before.";
 					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of player > 3]a somewhat embarassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if]. Grinding your exposed, eager cunt[sfn] against the smooth, pliable vinyl of the toy's underside, the lewd sounds of your motion compelling you to persist.";
 				say "     Inflatable object loudly creaking under your[if scalevalue of player > 3] substantive[end if] weight as you start to rock against the motion of the waves, the thing quickly heats up against your touch, water and sweat-slicked body clinging to the slippery toy[if scalevalue of player > 3].[run paragraph on] You always seem concerned that the thing might completely sink under your impressive size, but it seems to slowly grow in size to accommodate its larger rider[end if]. Its otherworldly life slowly reigniting itself from your influence, your [bodytype of player] body begins to stick to its surface, weakly trying to cling against you in return, but otherwise having little power over its rider, for now....";
 			else if flotintense < 4:
 				say "     You descend back into the waters and swim close to the toy once more, the slippery thing subtly floating within your reach. It quivers gently against your touch, as if thrilled by the sensation of you merely holding it.";
 				if cocks of player > 0:
-					say "     Its white undercarriage completely smooth save for the subtle cleft of the toy's lewd hole. Seeing as how they still seem to be gaping from your last adventure, it takes no effort to force a digit past the synthetic folds, subtly vibrating against this particularly lewd act. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, though it seems to be trying to cling to the intrusion, and still laced with your sexual fluids.";
-					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of player > 3]a somewhat embarassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if].  Awkwardly aiming[if cocks of player > 1] one of[end if] your [cock size desc of player], half-erect dick[smn] for the entrance, you carefully sink it past its lips, the toy [if cock length of player > 11]seeming to easily take your cock, in spite of its impressive size; it takes a bit of work, but the pliable material stretches to handle its substantive girth[else]taking your cock without any difficulty, easily burying the organ within its pliable depths[end if]. Before you really begin, the inflatable trembles under your weight, engulfing your cock with a latex-like substance[if cunts of player > 0 and cocks of player > 2], as well as your cunt[sfn] and other rods[else if cunts of player > 0 and cocks of player > 1], as well as your cunt[sfn] and other rod[else if cocks of player > 2], as well as your other rods[else if cocks of player is 2], as well as your other rod[end if].";
+					say "     Its white undercarriage is completely smooth save for the subtle cleft of the toy's lewd hole. Seeing as how they still seem to be gaping from your last adventure, it takes no effort to force a digit past the synthetic folds, subtly vibrating against this particularly lewd act. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, though it seems to be trying to cling to the intrusion, and still laced with your sexual fluids.";
+					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of player > 3]a somewhat embarassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if]. Awkwardly aiming[if cocks of player > 1] one of[end if] your [cock size desc of player], half-erect dick[smn] for the entrance, you carefully sink it past its lips, the toy [if cock length of player > 11]seeming to easily take your cock, in spite of its impressive size; it takes a bit of work, but the pliable material stretches to handle its substantive girth[else]taking your cock without any difficulty, easily burying the organ within its pliable depths[end if]. Before you really begin, the inflatable trembles under your weight, engulfing your cock with a latex-like substance[if cunts of player > 0 and cocks of player > 2], as well as your cunt[sfn] and other rods[else if cunts of player > 0 and cocks of player > 1], as well as your cunt[sfn] and other rod[else if cocks of player > 2], as well as your other rods[else if cocks of player is 2], as well as your other rod[end if].";
 				else:
-					say "     Its white undercarriage completely smooth save for the subtle cleft of the toy's lewd hole. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curiously fondling. Trembling under your touch, the object seems to be trying to cling to your digits, until you pull yourself free.";
+					say "     Its white undercarriage is completely smooth save for the subtle cleft of the toy's lewd hole. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curious fondling. Trembling under your touch, the object seems to be trying to cling to your digits, until you pull yourself free.";
 					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of player > 3]a somewhat embarassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if]. Grinding your exposed, eager cunt[sfn] against the smooth, pliable vinyl of the toy's underside, the lewd sounds of your motion compelling you to persist. Almost immediately, you feel something wet flood your crotch, engulfing your [cunt size desc of player] cunt[sfn], and caressing you as you writhe.";
 				say "     Inflatable object loudly creaking under your[if scalevalue of player > 3] substantive[end if] weight as you start to rock against the motion of the waves, the thing quickly heats up against your touch, water and sweat-slicked body clinging to the strange toy[if scalevalue of player > 3].[run paragraph on] You always seem concerned that the thing might completely sink under your impressive size, but it seems to slowly grow in size to accommodate its larger rider[end if]. Its otherworldly life slowly reigniting itself from your influence, your [bodytype of player] body begins to stick to its surface, soon making it difficult for your [bodytype of player] body to move without its aid...";
 			else if flotintense < 6:
 				say "     You descend back into the waters and swim close to the toy once more, the slippery thing subtly floating within your reach. It quivers gently against your touch, as if thrilled by the sensation of you merely holding it.";
 				if cocks of player > 0:
-					say "     Its white undercarriage completely smooth save for the subtle cleft of the toy's lewd hole. Seeing as how they still seem to be gaping from your last adventure, it takes no effort to force a digit past the synthetic folds, and seems like it's trying to pull you in deeper... The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, though it seems to be trying to cling against you, and still laced with your sexual fluids.";
-					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of player > 3]a somewhat embarassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if].  Awkwardly aiming[if cocks of player > 1] one of[end if] your [cock size desc of player], half-erect dick[smn] for the entrance, you carefully sink it past its lips, the toy [if cock length of player > 11]seeming to easily take your cock, in spite of its impressive size; it takes a bit of work, but the pliable material stretches to handle its substantive girth[else]taking your cock without any difficulty, easily burying the organ within its pliable depths[end if]";
+					say "     Its white undercarriage is completely smooth save for the subtle cleft of the toy's lewd hole. Seeing as how they still seem to be gaping from your last adventure, it takes no effort to force a digit past the synthetic folds, and it seems like it's trying to pull you in deeper... The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, though it seems to be trying to cling against you, and still laced with your sexual fluids.";
+					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of player > 3]a somewhat embarassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if]. Awkwardly aiming[if cocks of player > 1] one of[end if] your [cock size desc of player], half-erect dick[smn] for the entrance, you carefully sink it past its lips, the toy [if cock length of player > 11]seeming to easily take your cock, in spite of its impressive size; it takes a bit of work, but the pliable material stretches to handle its substantive girth[else]taking your cock without any difficulty, easily burying the organ within its pliable depths[end if]";
 					if cunts of player > 0:
 						say ". Feeling something wet flood your cunt[sfn][if anallevel is not 1] and ass[end if], [if cunts of player > 1 or anallevel is not 1]they quickly harden into thick, tapered appendages to pound you with[else]it quickly hardens into a thick, tapered appendage to pound you with[end if]";
 					else if anallevel is not 1:
 						say ". Feeling something wet flood your ass, it quickly hardens into a thick, tapered appendage to pound you with";
 					say ".";
 				else:
-					say "     Its white undercarriage completely smooth save for the subtle cleft of the toy's lewd hole. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curiously fondling. Trembling under your touch, the object seems to be trying to cling to you, until you pull yourself free.";
+					say "     Its white undercarriage is completely smooth save for the subtle cleft of the toy's lewd hole. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curious fondling. Trembling under your touch, the object seems to be trying to cling to you, until you pull yourself free.";
 					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of player > 3]a somewhat embarassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if]. Grinding your exposed, eager cunt[sfn] against the smooth, pliable vinyl of the toy's underside, the lewd sounds of your motion compelling you to persist. Almost immediately you feel something wet flood your crotch, engulfing your [cunt size desc of player] cunt[sfn] and [if cunts of player > 1]their[else]your[end if] depths, quickly hardening into thick, tapered appendages to pound you with.";
 				say "     Inflatable object loudly creaking under your[if scalevalue of player > 3] substantive[end if] weight as you start to rock against the motion of the waves, the thing quickly heats up against your touch, water and sweat-slicked body clinging to the strange toy[if scalevalue of player > 3] as it inflates to accommodate your impressive size[end if]. Its otherworldly life slowly reigniting itself from your influence, your [bodytype of player] body begins to stick to its surface, soon making it difficult for your [bodytype of player] body to move without its aid...";
 			else if flotintense < 8:
-				say "     As you descend back into the waters and swim close to the toy, the strange thing quivers and gravitates towards. It responds intensely to your mere touch, vinyl liquifying around your prodding digits and slowly pulling you inside it. You instinctively try to push it off, but that only gets the other limb engulfed.";
-				say "     Forcibly, you're pulled on top of the dolphin, wobbling violently against the waves as it balances you on it ";
+				say "     As you descend back into the waters and swim close to the toy, the strange thing quivers and gravitates towards you. It responds intensely to your mere touch, vinyl liquifying around your prodding digits and slowly pulling you inside it. You instinctively try to push it off, but that only gets the other limb engulfed.";
+				say "     Forcibly, you're pulled on top of the dolphin, wobbling violently against the waves as it balances you on it";
 				if cocks of player > 0:
 					say ". Eagerly, it encases[if cocks of player > 1] one of[end if] your [cock size desc of player], half-erect dick[smn] where its hole would be[if cocks of player > 2] before taking the rest along with it[else if cocks of player is 2] before taking the other along with it[end if].";
 					say "     The toy continues to wobble against the waters, easily having consumed your[if cock length of player > 11] impressive[end if] meat as a latex-like substance quickly engulfs[if cockname of player is not listed in infections of internallist] your [ball size][else]the rest of your crotch[end if] as well";
@@ -96,7 +96,7 @@ to say flotfuck:
 					else if cunts of player > 0:
 						say ". Soon, you feel the tainted material flood your cunt[sfn], pounding your hole[sfn] with a writhing series of tapered, worming tendrils";
 				else:
-					say "forcing you to grind against its smooth surface as your crotch is quickly engulfed in the latex-like substance";
+					say ", forcing you to grind against its smooth surface as your crotch is quickly engulfed in the latex-like substance";
 					if anallevel is not 1:
 						say ". Soon, you feel the tainted material flood your cunt[sfn] and ass, pounding your holes with a writhing series of tapered, worming tendrils";
 					else:
@@ -105,7 +105,7 @@ to say flotfuck:
 				say "     Inflatable object loudly creaking under your[if scalevalue of player > 3] substantive[end if] weight, you're barely given time to acclimate before the thing rails you relentlessly, rocking you intensely against the waters. Sweat-slicked, [bodydesc of player] form writhing against the tightly binding toy, it [if scalevalue of player > 3]expands to fully accommodate your impressive size with each motion, squeezing[else]squeezes[end if] firmly against you as you're forced to endure its twisted need. Having reached a point of utterly deranged purpose, it shows absolutely no restraint in trying to fiercely abuse the bliss out of you...";
 			else:
 				say "     Some part of you questions the sanity of going through with this, by this point, but you go ahead with it regardless.";
-				say "     Just as you descend into the waters the dolphin seems to tear itself apart and lurch its open seam straight at you, wrapping itself around your [bodytype of player] form and near-instantly envolping you entirely. [if scalevalue of player > 3]Tightly wrapped around you as it gradually expands to accommodate your impressive size[else]Wrapped around you[end if], ";
+				say "     Just as you descend into the waters the dolphin seems to tear itself apart and lurch its open seam straight at you, wrapping itself around your [bodytype of player] form and near-instantly enveloping you entirely. [if scalevalue of player > 3]Tightly wrapped around you as it gradually expands to accommodate your impressive size[else]Wrapped around you[end if], ";
 				if cocks of player > 0:
 					say "your partially-aroused, [cock size desc of player] cock[if cocks of player > 1]s are[else] is[end if] firmly plunged within its vinyl depths,";
 					if anallevel is not 1:
@@ -118,8 +118,8 @@ to say flotfuck:
 					else:
 						say "you feel the tainted material flood your cunt[sfn], pounding your hole[sfn] with a writhing series of tapered, worming tendrils";
 					say ". Finally, a tendril moves to force its way past your lips, plunging deep down your gullet and forcing you to breathe in an intoxicating, synthetic gas.";
-					say "     Completely encased in the slippery dolphin, there's no indication of your occupancy, your groans and lustful writhing masked by the motion and the sound of the waves. This wasn't the wisest thing to do, you imagine it'll take a lot of work to escape this predicament, if it's even possible by this point...";
-			wait for any key;
+					say "     Completely encased in the slippery dolphin, there's no indication of your occupancy, your groans and lustful writhing masked by the motion and the sound of the waves. This wasn't the wisest thing to do, and you imagine it'll take a lot of work to escape this predicament, if it's even possible by this point...";
+			WaitLineBreak;
 			flotbind;
 			now lastfuck of Discarded Dolphin is turns;
 
@@ -160,10 +160,10 @@ to flotbind:
 			else:
 				say "     Losing yourself to your overwhelming need, trapped within this vinyl prison, the inflatable dolphin shows no relent in perpetually milking you.";
 			say "     Eventually, you completely lose track of time. From your limited vision through the toy's eyes, you watch on as it finally wrenches itself free of the castle, doomed to constant abuse by this tainted suit as it carries you into the dark depths...";
-			wait for any key;
+			WaitLineBreak;
 			now bodyname of player is "Flotted";
 			now humanity of player is 0;
-			end the game saying "You are milked perpetually by the toy.";
+			end the story saying "You are milked perpetually by the toy.";
 			now trixieexit is 1;
 		else:
 			let k be 0;
@@ -184,7 +184,7 @@ to flotbind:
 					else if flotintense < 6:
 						say "pry yourself free of the toy's powerful hold, [one of]creaking and groaning against your protests[or]engulfing vinyl trying its best to pull you back within its hold[or]squeaking against your motions as you fight it[or]rocking violently against the waves[at random].";
 					else:
-						say "escape this prison of a toy, [one of]creaking and groaning around you[or]enveloping vinyl trying its best to keep you within its hold[or]squeaking against your motions as you fight it[or]thrashing against the waves as it clings to you[at random]";
+						say "escape this prison of a toy, [one of]creaking and groaning around you[or]enveloping vinyl trying its best to keep you within its hold[or]squeaking against your motions as you fight it[or]thrashing against the waves as it clings to you[at random].";
 					say "[line break]";
 					flotsanitypassive;
 					flotlust;
@@ -193,9 +193,9 @@ to flotbind:
 					say "     You climb back onto the castle and clean yourself off. [if flotintense > 4]It's likely best that you leave the vinyl object alone until it 'cools down' a bit[else]The vinyl object remains relatively harmless, for now at least[end if]...";
 					say "[line break]";
 					cleanboundmemory;
-					wait for any key;
+					WaitLineBreak;
 					now trixieexit is 1;
-				wait for any key;
+				WaitLineBreak;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
 				say "[line break]";
@@ -215,7 +215,7 @@ to flotbind:
 					say "[line break]";
 					flotsanitypassive;
 					increase lustatt by 35 + (lustadjust * 5);] [Not needed, keeping just in case]
-				wait for any key;
+				WaitLineBreak;
 				next;
 			else:
 				now enduring is true;
@@ -243,7 +243,7 @@ to flotbind:
 					say "[line break]";
 					flotlust;
 					flotsanitypassive;
-				wait for any key;
+				WaitLineBreak;
 				next;
 
 to checkflotsegment:
@@ -436,7 +436,7 @@ when play ends:
 	if bodyname of player is "Flotted":
 		say "     Cool ocean water the only balm against the intense heat of your perpetual enslavement, you're barely able to descern what the dolphin is actually doing, seemingly content to swim around playfully, meeting various creatures and peoples -- all of whom appear wholly unaware of your ultimate fate, even as you moan out loudly with each thrust of the vinyl toy's tendrils.";
 		say "     On occasion, the creature even seems inclined to have fun with some of those it encounters, often [if cocks of player > 0 and anallevel is not 3 and cunts of player is 0]used to ride[else]made to be riden by[end if] them. You're unsure if inflatable toy particularly enjoys this, or if it likes to surpise you from time to time.";
-		say "     No doubt content to milk you until the end of days, your memorys blur into a haze of constant orgasms, writhing against your tight, slippery prison with each motion against the waters, it's eventually all you can think of...";
+		say "     No doubt content to milk you until the end of days, your memories blur into a haze of constant orgasms. Writhing against your tight, slippery prison with each motion against the waters, it's eventually all you can think of...";
 
 
 Phantom Dolphin ends here.

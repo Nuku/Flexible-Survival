@@ -142,7 +142,7 @@ to say blotfuck:
 					else:
 						say "you feel the tainted material flood your cunt[sfn], pounding your hole[sfn] with a quickly-expanding, quickly-hardening series of distinctly ribbed implements.";
 					say "     Completely encased in the vinyl pony, there's no indication of your occupancy, save for your groans and lustful writhing[if cocks of player > 0], in addition to your exposed, throbbing cock[smn], enveloped in a sheath presented as though it were the toy's own[end if]. This wasn't the wisest thing to do, you imagine it'll take a lot of work to escape this predicament, if it's even possible by this point...";
-			wait for any key;
+			WaitLineBreak;
 			blotbind;
 			now lastfuck of Blot is turns;
 
@@ -183,10 +183,10 @@ to blotbind:
 			else:
 				say "     Losing yourself to your overwhelming need, trapped within this vinyl prison, the inflatable pony shows no relent in perpetually milking you.";
 			say "     Eventually, you completely lose track of time. From your limited vision through the toy's eyes, it's very apparent that nobody is aware of your ultimate fate, doomed to constant abuse by this tainted suit...";
-			wait for any key;
+			WaitLineBreak;
 			now bodyname of player is "Blotted";
 			now humanity of player is 0;
-			end the game saying "You are milked perpetually by the toy.";
+			end the story saying "You are milked perpetually by the toy.";
 			now trixieexit is 1;
 		else:
 			let k be 0;
@@ -216,9 +216,9 @@ to blotbind:
 					say "     You clean yourself off and prepare to go about your business once more. [if blotintense > 5]It's likely best that you leave the vinyl object alone until it 'cools down' a bit[else]The vinyl object seems relatively harmless, for now at least[end if]...";
 					say "[line break]";
 					cleanboundmemory;
-					wait for any key;
+					WaitLineBreak;
 					now trixieexit is 1;
-				wait for any key;
+				WaitLineBreak;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
 				say "[line break]";
@@ -238,7 +238,7 @@ to blotbind:
 					say "[line break]";
 					blotsanitypassive;
 					increase lustatt by 35 + (lustadjust * 5);] [Not needed, keeping just in case]
-				wait for any key;
+				WaitLineBreak;
 				next;
 			else:
 				now enduring is true;
@@ -266,7 +266,7 @@ to blotbind:
 					say "[line break]";
 					blotlust;
 					blotsanitypassive;
-				wait for any key;
+				WaitLineBreak;
 				next;
 
 to checkblotsegment:

@@ -140,7 +140,7 @@ Check shooting something (called the target) with something (called the boomstic
 
 Check shooting something (called the target) with something (called the boomstick) (this is the suicide rule):
 	if the target is the player:
-		end the game saying "You have committed suicide!".
+		end the story saying "You have committed suicide!".
 
 Carry out an actor shooting something (called the target) with something (this is the standard carry out shooting rule):
 	if the target is a person begin;
@@ -240,7 +240,7 @@ Check stabbing something (called the target) with something (called the pigstick
 
 Check stabbing something (called the target) with something (called the pigsticker) (this is the harikari rule):
 	if the target is the player:
-		end the game saying "You have committed suicide!".
+		end the story saying "You have committed suicide!".
 
 Carry out an actor stabbing something (called the target) with something (this is the standard carry out stabbing rule):
 	if the target is a person begin;
@@ -416,7 +416,7 @@ Example: ** Shooting Gallery - Bob invites you to shoot bottles to win a prize! 
 			say "Only 1 more and you win";
 		else:
 			say "You shot all of the bottles! You win the teddy bear";
-			end the game saying "You should give your newly won teddy bear to someone you love!".
+			end the story saying "You should give your newly won teddy bear to someone you love!".
 
 		Test me with "x Bob/take cork gun/shoot Bob with cork gun/shoot a bottle with cork gun/shoot a bottle with cork gun/shoot a bottle with cork gun/shoot a bottle with cork gun/shoot a bottle with cork gun/shoot a bottle with cork gun"
 
@@ -460,6 +460,6 @@ Example: *** Trolls - Bob, king of the trolls, must be destroyed! This example s
 		say "Bob the troll king looks at you and says 'I am the troll king. Leave now or I will punish you for killing my followers!'".
 
 		Every turn:
-			if Bob is dead, end the game saying "You have slain Bob, king of the trolls!".
+			if Bob is dead, end the story saying "You have slain Bob, king of the trolls!".
 
 		Test me with "take all/go in/shoot troll with crossbow/shoot troll with crossbow/x me/drink potion/i/go north/shoot troll with crossbow/shoot troll with crossbow/search troll/take potions/i/drink potion/x me/go west/shoot Bob with crossbow/shoot Bob with crossbow/shoot Bob with crossbow/shoot Bob with crossbow"

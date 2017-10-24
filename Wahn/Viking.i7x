@@ -1471,7 +1471,7 @@ to VikingInfect:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"viking sword"	"A beautifully crafted sword, about 30 inches long, with a keen edge to its blade. The favorite weapon of your Viking wife, Sonya, it became yours as you married. Better take good care of it - it's a pretty good weapon, well-balanced ...and there might be some marital problems ahead if you let it rust or lose it."	5	viking sword
+"viking sword"	"A beautifully crafted sword, about 30 inches long, with a keen edge to its blade. The favorite weapon of your Viking wife, Sonya, it became yours as you married. Better take good care of it - it's a pretty good weapon, well-balanced... and there might be some marital problems ahead if you let it rust or lose it."	5	viking sword
 
 viking sword is an armament.
 It is part of the player.

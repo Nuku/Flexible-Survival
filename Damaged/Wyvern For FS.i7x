@@ -761,7 +761,7 @@ to wyvore:
 			now cock of player is cock entry;
 			now voreloss is true;
 			now trixieexit is 1;
-			end the game saying "You became a Wyvern's meal!";
+			end the story saying "You became a Wyvern's meal!";
 		else:
 			let k be 0;
 			now keychar is "INVALID";
@@ -1098,7 +1098,7 @@ to wyvorgy:
 			now body of player is body entry;
 			now cock of player is cock entry;
 			now trixieexit is 1;
-			end the game saying "You lost your mind while bound!";
+			end the story saying "You lost your mind while bound!";
 		else:
 			let k be 0;
 			now keychar is "INVALID";

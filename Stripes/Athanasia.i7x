@@ -483,7 +483,7 @@ to say salamanderraid:
 		if libido of player < 45, now libido of player is 45;
 		now hp of Newt is 2;
 		WaitLineBreak;
-		end the game saying "You are fucked and infected until you're nothing more than another salamander girl.";
+		end the story saying "You are fucked and infected until you're nothing more than another salamander girl.";
 		now battleground is "void";
 		wait for any key;
 		now skipturnblocker is 1;

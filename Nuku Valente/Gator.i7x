@@ -203,7 +203,7 @@ to say gator den scene:
 	if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 	decrease the humanity of the player by 5;
 	if the humanity of the player is less than 10:
-		end the game saying "You decide against leaving after all.";
+		end the story saying "You decide against leaving after all.";
 	else:
 		say "You head home afterwards.";
 

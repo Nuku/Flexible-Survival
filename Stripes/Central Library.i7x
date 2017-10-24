@@ -320,7 +320,7 @@ to say libguard4:
 			now body of player is body entry;
 			now cock of player is cock entry;
 			say "     Losing yourself in the lustful mating, you and James descend further into your wild, wolverine instincts until you both lose yourselves completely.";
-			end the game saying "You have become another wolverine guard watching over the Central Library.";
+			end the story saying "You have become another wolverine guard watching over the Central Library.";
 			now battleground is "void";
 			WaitLineBreak;
 			follow the turnpass rule;
@@ -452,7 +452,7 @@ to say libraryexplore:
 		attempttowait;
 		if libido of player < 60, now libido of player is 60;
 		now humanity of player is 0;
-		end the game saying "You have joined the librarian harpies in their home at the Central Library.";
+		end the story saying "You have joined the librarian harpies in their home at the Central Library.";
 		now battleground is "void";
 		WaitLineBreak;
 		follow the turnpass rule;

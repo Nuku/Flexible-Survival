@@ -223,7 +223,7 @@ To Say ratslutwelcome:
 					infect "Slut Rat";
 					infect "Slut Rat";
 					infect "Slut Rat";
-					end the game saying "You succumb to the honeyed drink.";
+					end the story saying "You succumb to the honeyed drink.";
 					stop the action;
 				else:
 					infect "Slut Rat";

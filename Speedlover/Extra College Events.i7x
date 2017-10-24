@@ -15,7 +15,7 @@ Cheetah Cheater is a situation.
 The level of Cheetah Cheater is 0. [minimum level to find the event]
 The sarea of Cheetah Cheater is "Campus".
 
-instead of going west from College Campus Entrance while (Cheetah Cheater is not resolved and LastCampusWalkin - turns > 2):
+instead of going west from College Campus Entrance while (Cheetah Cheater is not resolved and LastCampusWalkin - turns > 2 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
 	PregnantFriendEvent;
 
@@ -33,7 +33,7 @@ Pregnant Friend is a situation.
 The level of Pregnant Friend is 0.
 The sarea of Pregnant Friend is "Campus". ["College Walkway West"]
 
-instead of going west from College Campus Entrance while (Pregnant Friend is not resolved and LastCampusWalkin - turns > 2):
+instead of going west from College Campus Entrance while (Pregnant Friend is not resolved and LastCampusWalkin - turns > 2 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
 	PregnantFriendEvent;
 
@@ -44,7 +44,7 @@ to PregnantFriendEvent:
 	say "     As you walk down the path you stumble upon two girls sitting on a wooden bench. One has been infected as a fox, and has fluffy fox ears on her head and a bushy tail poking through the back of the bench. She has an arm around her friend, a wolf anthro with a bulging stomach who is crying. The wolf girl has completely changed, complete with muzzle and fur all over. You step a bit closer and listen in.";
 	say "     'It all happened so fast.' She sobs 'One minute I was studying with my boyfriend, the next hes one of those wolves!' her friend rubs her back 'Its good to talk about it, so what happened next?' she asks. 'Well he changed into one of those alphas, got real muscly, with a big you-know-what. I should have said no, he didn't have any condoms, but he just smelt so good and I let it happen' Her friend takes the opportunity to jump in 'It's ok, it's not your fault, so what happened next?'. The wolf takes a deep breath and lets it out 'Well we did the deed, and he finished in me. A few minutes later I turned into this and an hour after that [italic type]THIS[roman type]' she waves at her stomach 'started showing. He was really sorry after of course, got lost in his new instincts, but now I've got this...'";
 	LineBreak;
-	say "     'Don't worry' the fox girl soothes 'Look, you aren't alone in this, there are more than a couple of girls in your situation, turns out they grow really fast at the moment! You should give birth tonight and the child will be fully grown in a matter of weeks, you can continue your degree!' The wolf looks up 'I can?' she questions, the fox girl nods and a small smile appears on the wolf girls face before the fox girl continues 'Looks like you need to start thinking of baby names! C'mon lets go and have a look at a list of them, see what would be a good one.'";
+	say "     'Don't worry,' the fox girl soothes. 'Look, you aren't alone in this, there are more than a couple of girls in your situation, turns out they grow really fast at the moment! You should give birth tonight and the child will be fully grown in a matter of weeks, you can continue your degree!' The wolf looks up. 'I can?' she questions. The fox girl nods and a small smile appears on the wolf girl's face before the fox girl continues, 'Looks like you need to start thinking of baby names! C'mon, let's go and have a look at a list of them, see what would be a good one.'";
 	LineBreak;
 	say "     They both get up from the bench and walk down the path. You step out from behind the bush you have been hiding in and head off to continue exploring.";
 	now Pregnant Friend is resolved;
@@ -54,7 +54,7 @@ CatsVSDogs is a situation.
 The level of CatsVSDogs is 0.
 The sarea of CatsVSDogs is "Campus". ["Athletic Street"]
 
-instead of going southwest from College Walkway West while (CatsVSDogs is not resolved and LastCampusWalkin - turns > 2):
+instead of going southwest from College Walkway West while (CatsVSDogs is not resolved and LastCampusWalkin - turns > 2 and a random chance of 1 in 3 succeeds):
 	move player to Athletic Street;
 	CampusLoversEvent;
 
@@ -80,19 +80,19 @@ SharkFountain is a situation.
 The level of SharkFountain is 0.
 The sarea of SharkFountain is "Campus". [Fountain]
 
-instead of going south from College Administration Building while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+instead of going south from College Administration Building while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))  and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 
-instead of going north from College Campus Entrance while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+instead of going north from College Campus Entrance while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 
-instead of going east from College Walkway Northwest while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+instead of going east from College Walkway Northwest while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 
-instead of going west from College Walkway Northeast while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+instead of going west from College Walkway Northeast while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 
@@ -105,10 +105,10 @@ to SharkFountainEvent:
 		now SharkFountainCounter is 2;
 	else if SharkFountainCounter is 2:
 		let randomnumber be a random number from 1 to 2;
-		say "      It's getting late and there only seems to be one person around at the fountain as you approach it. A [if randomnumber is 1]female[else]male[end if] husky sits on the side of large structure, scribbling on a notepad. Just like earlier, the same shark anthro circles in the water of the fountain and bursts through the surface, but this time he grabs [if randomnumber is 1]her[else]him[end if] and drags [if randomnumber is 1]her[else]him[end if] in. You rush over, thinking to save [if randomnumber is 1]her[else]his[end if] life, but as you approach you see them lying in the water, the shark's twin shafts [if randomnumber is 1]each taking one hole, with his 'victim' moaning in euphoric pleasure. [else]squeezed together, being shoved into the husky's ass while the anthro dog is moaning in pleasure. [end if]You decide to leave them to it.[if humanity of player <= 50] Seeing the two of them go at it makes you wonder what those dual shafts could do for you...[end if]";
+		say "     It's getting late and there only seems to be one person around at the fountain as you approach it. A [if randomnumber is 1]female[else]male[end if] husky sits on the side of large structure, scribbling on a notepad. Just like earlier, the same shark anthro circles in the water of the fountain and bursts through the surface, but this time he grabs [if randomnumber is 1]her[else]him[end if] and drags [if randomnumber is 1]her[else]him[end if] in. You rush over, thinking to save [if randomnumber is 1]her[else]his[end if] life, but as you approach you see them lying in the water, the shark's twin shafts [if randomnumber is 1]each taking one hole, with his 'victim' moaning in euphoric pleasure. [else]squeezed together, being shoved into the husky's ass while the anthro dog is moaning in pleasure. [end if]You decide to leave them to it.[if humanity of player <= 50] Seeing the two of them go at it makes you wonder what those dual shafts could do for you...[end if]";
 	now LastCampusWalkin is turns;
 
-instead of going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is companion of player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds): 
+instead of going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is companion of player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway East;
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event - Korvin runs into a young adult beagle boy - GibsonRelationship: [GibsonRelationship][line break]";
@@ -146,8 +146,6 @@ instead of going east from College Campus Entrance while (LastCampusWalkin - tur
 		LineBreak;
 		say "     Raising a hand to your mouth, you give a loud and sharp whistle that has both of the anthro canines whirling around to face you. Ordering the black-collared German shepherd to heel, you make eye-contact with Korvin as his lips start to show a little scowl, holding the stare until he looks down submissively a few moments later. With a sidelong glance at the beagle and a bark of, 'So long, pup!' Korvin then trots back over to you, taking his usual position. You hook a finger under the collar marking him as yours and adjust it a little to remind him of his status. Then you pat his head like a good dog and start moving on. The beagle student is left behind, staring after the dominant dog with a sigh of relief - and a sliver of regret.";
 		now GibsonRelationship is 100; [stopped things cold]
-	now lastMallInteriorScene is turns;
+	now LastCampusWalkin is turns;
 
 Extra College Events ends here.
-
-
