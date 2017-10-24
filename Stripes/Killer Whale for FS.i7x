@@ -72,7 +72,7 @@ to say orcadefeatsex4:		[oral sex]
 		say "     You feel that worming rod throb against your tongue, informing you of his approaching release. The orcaman makes a concerted effort to conclude this ride with a handful of harsher, more deliberate thrusts before his release infers his relent, and you soon feel his thick fluids being pumped into your stomach.";
 		say "     Eventually, as the flow relents, his rod softened somewhat before he pulls himself free of your maw, and he leaves to let you lay across the sand in a dizzy stupor.";
 	else:							[oral out]
-		say "     You feel that worming rod throb against your tongue, informing you of his approaching release; However, your captor doubtlessly has a more articulate grasp on the state of his imminent orgasm and instead opts to abruptly pull his rod from your abused orifice. His intent made immediately clear, he finishes himself off with a few final strokes before you're showered with spray after spray of the orcaman's cum.";
+		say "     You feel that worming rod throb against your tongue, informing you of his approaching release; however, your captor doubtlessly has a more articulate grasp on the state of his imminent orgasm and instead opts to abruptly pull his rod from your abused orifice. His intent made immediately clear, he finishes himself off with a few final strokes before you're showered with spray after spray of the orcaman's cum.";
 		say "     Eventually, after having sufficiently unloaded himself all over you, he leaves to let you lay your jizz-soaked form across the sand in a dizzy stupor.";
 
 

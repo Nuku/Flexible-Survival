@@ -337,7 +337,7 @@ When Play begins:
 Choose a blank row from Table of infection heat;
 now infect name entry is "Female Slut"; [ This should be exactly the same as your monster name in the main table]
 now heat cycle entry is 7; [ This is the number of days a heat "cycle" lasts, usually 7 ]
-now heat duration entry is 7; [ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.]
+now heat duration entry is 7; [ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
 now trigger text entry is "Your body becomes overcome with desire, to suck, to submit, to please your master."; [ This is the text that is written to the screen when the player comes into heat]
 now inheat entry is "[sluttyheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 

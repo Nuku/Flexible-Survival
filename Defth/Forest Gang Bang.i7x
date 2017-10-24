@@ -9,7 +9,7 @@ When play begins:
 	add Pack Bang to badspots of guy;
 
 Instead of resolving a Pack Bang:
-	Say "     Going around what appears to be a darker path in the south part of the forest, the place looks abandoned, leaves crack under your feet, branches that had overgrown the path get in your way. The only signal that something was here is the path in itself, big enough for walks or bicycles, sometimes you see walls with overgrown herbs on it. It looks really peaceful but the noises in the background make sure to show you are not alone in here. Howls permeate the place, echoing in the dark part where your eyes can’t tell what is happening in there. But this you know, you are the prey of a pack of wolves.";
+	Say "     Going around what appears to be a darker path in the south part of the forest, the place looks abandoned, leaves crack under your feet, branches that had overgrown the path get in your way. The only signal that something was here is the path in itself, big enough for walks or bicycles, sometimes you see walls with overgrown herbs on it. It looks really peaceful but the noises in the background make sure to show you are not alone in here. Howls permeate the place, echoing in the dark part where your eyes can't tell what is happening in there. But this you know, you are the prey of a pack of wolves.";
 	now inasituation is true;
 	now FeralWolfSpecialFightNumber is 1; [pack members]
 	Say "     You feel your heart beating faster, quick you need to make a choice: Do you run away? Or stay and confront your enemies?";
@@ -17,7 +17,7 @@ Instead of resolving a Pack Bang:
 	say "     ([link]N[as]n[end link]) – Stay and fight.";
 	if player consents:
 		say "     [line break]";
-		Say "     You turn tail and run as fast as you can, but the wolves notice and hunt you down. Your muscles burn and scream, the branches hit your face making small cuts on it, but you don’t dare to slow down. Your hunters are left behind except for one, probably the leader of the pack stays close to you, his bestial stamina gaining on you. But a root on your way gives him the chance he needed to catch you, sending you falling down as you stumble over it. Sprawled on the ground, the wolf overtakes you easily and positions himself in the direction you had been running into, intent on driving you back towards his pack. You will need to deal with him quick or the rest of them will catch up.";
+		Say "     You turn tail and run as fast as you can, but the wolves notice and hunt you down. Your muscles burn and scream, the branches hit your face making small cuts on it, but you don't dare to slow down. Your hunters are left behind except for one, probably the leader of the pack stays close to you, his bestial stamina gaining on you. But a root on your way gives him the chance he needed to catch you, sending you falling down as you stumble over it. Sprawled on the ground, the wolf overtakes you easily and positions himself in the direction you had been running into, intent on driving you back towards his pack. You will need to deal with him quick or the rest of them will catch up.";
 		wait for any key;
 		now FeralWolfSpecialFightNumber is 2; [fighting the pack leader]
 		challenge "Feral Wolf";

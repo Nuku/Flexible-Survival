@@ -831,7 +831,7 @@ Array Automap_Font_3_Conv -> 0 38 40 96 96 96 126 126 126 96 126 11 12 13 14 15 
 	ctr = 0;
 	for (posa = line_n: posa < MAP_HEIGHT + line_n: ++ posa) {
 		posb = (width - MAP_WIDTH - 1) / 2;
-		VM_MoveCursorInStatusLine (posa, posb);;
+		VM_MoveCursorInStatusLine (posa, posb);
 
 		for (posb = 0: posb < MAP_WIDTH: ++ posb) {
 			#ifdef AUTOMAP_HYPERLINKS;

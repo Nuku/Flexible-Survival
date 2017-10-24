@@ -182,7 +182,7 @@ West of Bedroom is MainRoom.
 
 Section 6 - Nightstand
 
-The description of Nightstand is "A small nightstand sits idly against the left side of the room. From the looks of the crafted wood the stand both looks and feels old… very old. Maybe you could try and [bold type]open[roman type] it?".
+The description of Nightstand is "A small nightstand sits idly against the left side of the room. From the looks of the crafted wood the stand both looks and feels old... very old. Maybe you could try and [bold type]open[roman type] it?".
 
 instead of sniffing Nightstand:
 	say "The nightstand smells old and somewhat musky."

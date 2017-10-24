@@ -155,7 +155,7 @@ when play ends:
 				say "     Eventually, everything blurs into a haze of constant sex, you're never even learn what dark powers compelled you, or if they achieved whatever it was that they sought...";
 		else:
 			say "     More than any other infected that is eventually rescued by the military, you're forced to linger in processing, largely from the infamy born of your strain";
-			if player is submissive or “Strong Psyche” is listed in feats of player:
+			if player is submissive or "Strong Psyche" is listed in feats of player:
 				say ". It's hard to keep everything together, but ultimately your [if player is submissive]submissive tendencies allow[else]strong will allows[end if] you to endure until you're finally freed back into civilized society.";
 				say "     You ultimately find yourself doing mercenary work keeping the mindless infected at bay in the borders of civilization[if player is submissive], often by using your own body as a twisted tribute[end if]. It seems to sate your terrible, burning need, but only by so much...";
 			else:

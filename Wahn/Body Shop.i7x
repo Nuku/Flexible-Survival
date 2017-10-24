@@ -457,7 +457,7 @@ to MoreauFaceSelection:
 	now description entry is "Buy yourself a canine head";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A succubus['] face";
+	now title entry is "A succubus's face";
 	now sortorder entry is 5;
 	now description entry is "Buy yourself a beautiful visage";
 	[]
@@ -489,7 +489,7 @@ to MoreauFaceSelection:
 					setmonster "Satyr";
 				-- "German Shepherd":
 					setmonster "German Shepherd";
-				-- "A succubus['] face":
+				-- "A succubus's face":
 					setmonster "Succubus";
 				-- "A snow leopard muzzle":
 					setmonster "Snow Leopard";
@@ -921,7 +921,7 @@ to MoreauCockSelection:
 	now description entry is "Get an German Shepherd crotch";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A succubus['] groin";
+	now title entry is "A succubus's groin";
 	now sortorder entry is 5;
 	now description entry is "Get a firm succubus crotch";
 	[]
@@ -953,7 +953,7 @@ to MoreauCockSelection:
 					setmonster "Satyr";
 				-- "A German Shepherd groin":
 					setmonster "German Shepherd";
-				-- "A succubus['] groin":
+				-- "A succubus's groin":
 					setmonster "Succubus";
 				-- "A snow leopard groin":
 					setmonster "Snow Leopard";

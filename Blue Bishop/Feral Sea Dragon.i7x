@@ -27,7 +27,7 @@ to say fsdm attack:
 			now sex entry is "Female";
 	if vorelevel is not 1 and scalevalue of player < 4 and (A random chance of 1 in 5 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 4 succeeds) or (vorelevel is 3 and a random chance of 1 in 3 succeeds)):
 		if hp of player > 0:
-			say "     You immediately throw up your arms and lower your guard, showing you don't wish to fight… He doesn't seem inclined to very much regard your submission as anything more than the opening for him, and he immediately dives for";
+			say "     You immediately throw up your arms and lower your guard, showing you don't wish to fight. He doesn't seem inclined to very much regard your submission as anything more than the opening for him, and he immediately dives for";
 		else:
 			say "     Seeing an opening, he unloads a deafening roar before making a dive towards";
 			now struggleatt is 1;
@@ -1059,7 +1059,7 @@ when play ends:
 							else:
 								say ". Even as the harem swells in size, you position at the bottom of the totem pole never changes, abused by even the lowliest of dragonesses...";
 					else if fsddom > 0:
-						say ". As she approaches, you shyly offer yourself… A gesture which the dragoness eagerly obliges, apparently having grown fond of such a submissive attitude";
+						say ". As she approaches, you shyly offer yourself, a gesture which the dragoness eagerly obliges, apparently having grown fond of such a submissive attitude";
 						if bodyname of player is "Feral Sea Dragon" and cocks of player > 0:
 							say ", especially when made by one who appears male";
 						say ". You're relegated to remain within your mistress's cave, your future filled with eagerly servicing her every whim and desire.";
@@ -1068,13 +1068,13 @@ when play ends:
 						else:
 							say "     Your inability to breed with her proves somewhat inconvenient to her overwhelming need for offspring, but she has you attend to her insatiable lust regardless. In need of more, the dragoness eventually builds up a harem";
 							if guy is not banned and guy is not warded:
-								say ". She eventually manages to gather some males to feed her need for children, their persistent abuse leading them to take it out on you, though they can never satisfy you quite as well as she does…";
+								say ". She eventually manages to gather some males to feed her need for children, their persistent abuse leading them to take it out on you, though they can never satisfy you quite as well as she does...";
 							else if ublevel is not 1:
 								say " of similarly dominant females. However, in a bit of fun with one of your occasional trespassers going overboard, a way to attend her need for children is quickly found, and the lot of you soon find yourself seeking out new victims, filling your dragoness and her consort's wombs by forcing hapless strangers up her needy cunt...";
 							else:
 								say " of similarly dominant females. It's especially fun when unsuspecting trespassers stumble on the lot of you...";
 					else if player is submissive:
-						say ". As she approaches, you shyly offer yourself… A gesture which seems to confuse the dragoness, clearly not used to such a submissive gesture";
+						say ". As she approaches, you shyly offer yourself, a gesture which seems to confuse the dragoness, clearly not used to such a submissive gesture";
 						if bodyname of player is "Feral Sea Dragon" and cocks of player > 0:
 							say ", especially by one who appears male";
 						say ". Eventually, however, the beast grows comfortable in a position of being your mistress, your future filled with eagerly servicing her every whim and desire.";
@@ -1127,7 +1127,7 @@ when play ends:
 							say "you subjugate more of them under your will, and though your bestial need[if cunts of player > 0] for offspring[end if] is plenty sated by your subjects";
 						say " you remain particularly fond of abusing your first...";
 					else if "Dominant" is listed in feats of player:
-						say "the male quickly approaching and attempting to subdue you into becoming one of his consorts… However, empowered by your strain, you'll have none of this, and you turn the tables on the sea dragon, forcing him to become yours instead!";
+						say "the male quickly approaching and attempting to subdue you into becoming one of his consorts... However, empowered by your strain, you'll have none of this, and you turn the tables on the sea dragon, forcing him to become yours instead!";
 						if cocks of player > 0:
 							say "     Just as he rolls over in submissive, you plunge your dick down his virgin hole, causing the beast to cry out as you fuck him right then and there";
 						else:

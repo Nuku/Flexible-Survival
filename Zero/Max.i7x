@@ -16,14 +16,14 @@ corgitalk is a number that varies. corgitalk is usually 0.
 Instead of resolving Meeting the corgi:
 	if corgitalk is 1:
 		challenge "Male Dominator";
-		say "[line break]Before the dominator can get very far, a small furry missile rams into him, and begins to beat the life out of him.";
+		say "[line break]Before the dominator can get very far, a small furry missile rams into him and begins to beat the life out of him.";
 		say "Do you attack the [']small furry missile['] while it's distracted?";
 		if the player consents:
-			say "Deciding that such a aggressive creature could become a problem later on, you try to knock it out from behind.[line break]The now-relieved corgi blocks your attacks with ease and glares at you. 'And here I thought you weren't stupid, guess I was wrong!' Before you can do anything else the corgi slams a fist into your jaw, knocking you out, leaving you stunned but conscious, and leaving the very ticked off corgi to walk off.";
+			say "Deciding that such a aggressive creature could become a problem later on, you try to knock it out from behind.[line break]The now-relieved corgi blocks your attacks with ease and glares at you. 'And here I thought you weren't stupid. Guess I was wrong!' Before you can do anything else, the corgi slams a fist into your jaw, knocking you out, leaving you stunned but conscious, and leaving the very ticked off corgi to walk off.";
 			Now corgitalk is -1;
 			now Meeting the corgi is resolved;
 		else:
-			say "After the dominator is reduced to a quivering mess, the [']small furry missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'Hey there, thanks for holding him off, stupid [slutname] tried to steal my bag, almost got away too, didn't you, ya little fucker?' he says before stomping hard onto the [slutname]'s groin, resulting in a pained shout of the now awake dominator. 'Anyway, name's Max, glad to see another sane one 'round here... you are sane right?' Quickly nodding, the corgi gives a sigh and continues on. 'Just had to be sure, lately these [']dominators['] the corgi says sarcastically 'have been trying everything to get me for the last week or so, and it's getting pretty annoying. Well whatever, if you drop by the gym any time soon give me a shout, there's a bunch of us holed up there if ya need any help.' The corgi walks off, dragging a very distressed [slutname] behind him[line break]";
+			say "After the dominator is reduced to a quivering mess, the [']small furry missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'Hey there, thanks for holding him off, stupid [slutname] tried to steal my bag, almost got away too, didn't you, ya little fucker?' he says before stomping hard onto the [slutname]'s groin, resulting in a pained shout of the now awake dominator. 'Anyway, name's Max, glad to see another sane one [']round here... You are sane, right?' Quickly nodding, the corgi gives a sigh and continues on. 'Just had to be sure. Lately these [']dominators['],' the corgi says sarcastically, 'have been trying everything to get me for the last week or so, and it's getting pretty annoying. Well, whatever. If you drop by the gym any time soon, give me a shout. There's a bunch of us holed up there if ya need any help.' The corgi walks off, dragging a very distressed [slutname] behind him.";
 			Increase corgitalk by 1;
 			now Meeting the corgi is resolved;
 	else:
@@ -34,9 +34,9 @@ The sarea of pendant hunting is "Outside".
 
 Instead of resolving pendant hunting:
 	if maxq is 1:
-		say "As you continue to search the city you find yourself looking at a group of 3 hyenas, one of which is wearing the pendant Max was looking for, do you try to get it back?";
+		say "As you continue to search the city you find yourself looking at a group of three hyenas, one of which is wearing the pendant Max was looking for. Do you try to get it back?";
 		if the player consents:
-			say "as you approach the hyenas catch sight of you and charge towards you!";
+			say "As you approach, the hyenas catch sight of you and charge towards you!";
 			challenge "Herm Hyena";
 			challenge "Herm Hyena";
 			challenge "Herm Hyena";
@@ -44,9 +44,9 @@ Instead of resolving pendant hunting:
 			Increase maxq by 1;
 			now pendant hunting is resolved;
 		else:
-			say " deciding that it would be better to try again later, you quickly run off";
+			say "Deciding that it would be better to try again later, you quickly run off.";
 	else:
-		say "as you continue to search the city, you find yourself looking at a group of three hyenas, one of which is wearing a blue pendant. Thankfully, they're distracted and don't notice you";
+		say "As you continue to search the city, you find yourself looking at a group of three hyenas, one of which is wearing a blue pendant. Thankfully, they're distracted and don't notice you.";
 
 
 Section 2-Max
@@ -56,7 +56,7 @@ lastcorgifucked is a number that varies. lastcorgifucked is usually 130.
 understand "corgi" as Max.
 understand "max" as Max.
 
-The description of Max is "     Max is a Pembroke Welsh corgi, he has a short but strong, sturdily built and is covered in a coat of light auburn fur with a white underside and a black diamond on his back, Max is wearing a pair of black ripped jeans that reach his knees, his forearms and legs are tapped up with white bandages. He also has a black whip/bracelet tied round his right forearm and a red diamond pendant hanging from his neck. ".
+The description of Max is "     Max is a Pembroke Welsh corgi, he has a short but strong, sturdily built and is covered in a coat of light auburn fur with a white underside and a black diamond on his back, Max is wearing a pair of black ripped jeans that reach his knees, his forearms and legs are tapped up with white bandages. He also has a black whip/bracelet tied round his right forearm and a red diamond pendant hanging from his neck.".
 
 The conversation of Max is { "Stuff!" }.
 

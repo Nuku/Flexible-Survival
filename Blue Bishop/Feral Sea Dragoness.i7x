@@ -30,7 +30,7 @@ to say fsdf attack:
 			now sex entry is "Male";
 	if vorelevel is 3 and scalevalue of player < 4 and (A random chance of 1 in 4 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds)):
 		if hp of player > 0:
-			say "     You immediately throw up your arms and lower your guard, showing you don't wish to fight… She doesn't seem inclined to very much regard your submission as anything more than the opening for her and she betrays her innocent demeanor to immediately dive for";
+			say "     You immediately throw up your arms and lower your guard, showing you don't wish to fight. She doesn't seem inclined to very much regard your submission as anything more than the opening for her and she betrays her innocent demeanor to immediately dive for";
 		else:
 			say "     Having enough of this fight, her head lunges towards";
 			now struggleatt is 1;
@@ -62,7 +62,7 @@ to say fsdf attack:
 						say "     A little dizzied from pleasure, she eventually pulls herself free of you. She departs with a playful nip, diving back into the water's depths, transparently sated by her pet's company. As you recover, you remind yourself of the now-apparent, long-term implications of forcing such a normally submissive creature into a dominant role...";
 					   else:
 						say "     Briefly sharing affection with one of her kind, she seems inclined to nip and tease you, [one of]no doubt this being one who's had fun using you before[or]eager to abuse you already[stopping]. Firmly, she pins you to the ground with her body, shoving her exposed cunt against your head and very insistent on having you satisfy her.";
-						say "     Driven by your submissive inclinations, you eagerly comply with the dragoness's command, your thick tongue teasing the portal's soft entrance. rumbling softly, she revels in subjecting you to the lowly task of attending her tainted need.";
+						say "     Driven by your submissive inclinations, you eagerly comply with the dragoness's command, your thick tongue teasing the portal's soft entrance. Rumbling softly, she revels in subjecting you to the lowly task of attending her tainted need.";
 						say "     Tightly presses her hole against you, you're immediately your explore her depths with your slick organ, its soft folds parting to accommodate your writhing intrusion. Tasting her emergent juices, you too can't help but be aroused, [if cunts of player > 0]aching cunt[sfn] left unattended[else if cocks of player > 0]throbbing, [cock size desc of player] dick[smn] left unattended[else]body aching with insatiable need[end if]. All the while the beast groans and mocks you for your embarrassing need, often nipping you into working harder, until the rate of your slippery affections rise to a feverish pace, singing lowly as you're driven by an overwhelming desire to pleasure this aquatic mistress.";
 						say "     Much to your blind fervor's joy, you're rewarded with your endeavours when you feel her sexual fluids flood your maw, beast's passage tightening around your tongue as she roars out in orgasm, leaving you to simply writhe in unattended need.";
 						say "     Eventually, she crawls off you, satisfied with your offering, she gives you a cheeky nip before she turns to dive back into the waters. As you recover before setting off, you remind yourself of the now-apparent, long-term implications of forcing such a normally submissive creature into a more dominant role...";
@@ -747,7 +747,7 @@ to fsdfvore:
 							now boundsegment is 0;
 							now struggleatt is 0;
 						else:
-							say "     You choose to submit to your fate. No doubt it won't take long before the beast has her way....";
+							say "     You choose to submit to your fate. No doubt it won't take long before the beast has her way...";
 							increase lustatt by 7 + (lustadjust * 2);
 					else:
 						say "     You abide your current confines, [one of]the beast rumbling softly in approval of your compliance[or]your captor contently swimming as she enjoys her meal[or]the beast offering a soft, approving chirp towards your submission[at random].";
@@ -893,8 +893,8 @@ to say fsdinheat:
 				now Beach Plaza is known;
 				now heatturnskipper is true;
 				follow the turnpass rule;
-			otherwise if location of player is Beach Plaza or location of player is Church Hall or location of player is Dirty Sheds or location of player is Overgrown Area:
-				say "Catching the breeze of the sea in the air, your [if cunts of player > 0]puss[yfn] quiver[sfv][otherwise if cocks of player > 0]dick[smn] throb[smv][otherwise]body trembles[end if] with need and your heat-addled mind is distracted, drawn back to the beach in the hopes of satisfying its need to be fucked and bred.";
+			else if location of player is Beach Plaza or location of player is Church Hall or location of player is Dirty Sheds or location of player is Overgrown Area:
+				say "Catching the breeze of the sea in the air, your [if cunts of player > 0]puss[yfn] quiver[sfv][else if cocks of player > 0]dick[smn] throb[smv][else]body trembles[end if] with need and your heat-addled mind is distracted, drawn back to the beach in the hopes of satisfying its need to be fucked and bred.";
 				move the player to Beach Plaza;
 			else if location of player is Public Beach:
 				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water.  Perhaps its cool waters will soothe your heat.  Your [if cunts of player > 0]puss[yfn] quiver[sfv][else if cocks of player > 0]dick[smn] throb[smv][else]body trembles[end if] with each wave rolling onto the beach, making you feel all the more like you belong out there.";
@@ -904,7 +904,7 @@ to say fsdinheat:
 				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water, momentarily distracting you from your task here.  Perhaps its cool waters will soothe your heat.  Your [if cunts of player > 0]puss[yfn] quiver[sfv][else if cocks of player > 0]dick[smn] throb[smv][else]body trembles[end if] with each wave that rocks the inflatable castle, making you feel all the more like you belong out there.";
 				decrease humanity of player by 3;
 				increase libido of player by 2;
-			otherwise if location of player is BeachEnd or location of player is Coral Ring or location of player is Sunken Ship:
+			else if location of player is BeachEnd or location of player is Coral Ring or location of player is Sunken Ship:
 				say "Being out in the water feels so satisfying to your heat-addled body, helping to soothe your lustful urges somewhat.  Surely you are meant to stay here.  It feels so nice out in the water.  Now if you could only find some exotic undersea lover who's willing to breed your needy body.";
 				decrease humanity of player by 5;
 				decrease libido of player by 20;

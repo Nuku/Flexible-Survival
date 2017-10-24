@@ -529,6 +529,6 @@ when play ends:
 			if "Vore Predator" is listed in feats of player:
 				say ". However, this very quickly turns south when a much more aggressive strain you picked up causes less than desirable results. The ensuing incident eventually forces you deeper into seclusion, away from the public eye.";
 			else:
-				say ". This turns out to be extremely lucrative, ensuring you live a fairly comfortable life… Though it's something you can't easily explain to more civilized fare, especially when claiming to be a ‘courier' doesn't quite fit your financial status.";
+				say ". This turns out to be extremely lucrative, ensuring you live a fairly comfortable life... though it's something you can't easily explain to more civilized fare, especially when claiming to be a 'courier' doesn't quite fit your financial status.";
 
 Sierrasaur ends here.

@@ -15,7 +15,7 @@ when play begins:
 to say rabpackdesc:
 	setmongender 19; [creatures are mixed/variable]
 	choose row monster from the table of random critters;
-	say "A little humanoid rabbit appears in front of you! Less than three feet tall and completely naked,it looks like a young human, except for the ears and the short coat of fur covering [one of]his body. He[or]her body. She[at random] is smelling something from you, and you back away quickly.";
+	say "A little humanoid rabbit appears in front of you! Less than three feet tall and completely naked, it looks like a young human, except for the ears and the short coat of fur covering [one of]his body. He[or]her body. She[at random] is smelling something from you, and you back away quickly.";
 	if "One Pair" is listed in feats of player:
 		now area entry is "nowhere"; [removes from random intercounters and infection]
 		now non-infectious entry is true;
