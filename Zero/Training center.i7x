@@ -148,7 +148,7 @@ to say beattheMistress:
 		end the story saying "You become drowned in the sea of lust that is the mistress of sex.";
 	else:
 		say "you manage to hold onto your mind and take control of the cursed collar however temporarily it may be";
-		say "commands filter into your mind, what do you wish to do?[line break][collarcomandlist]";
+		say "commands filter into your mind, what do you wish to do?[line break][collarcommandlist]";
 
 to say wondamistressfight:
 	increase score by 150;
@@ -166,7 +166,7 @@ to say Mistressdesc:
 	say "[fight the mistress]";
 
 
-to say collarcomandlist:
+to say collarcommandlist:
 	say "do you want to get rid of the dominators and sluts? (Note if you want to get rid of only one say no)";
 	if the player consents:
 		say "The collar screams in agony as you give your command, after a few seconds the collar gives one final screech before falling apart, however the your command has been fulfilled and the dominators and sluts now cease to be ";

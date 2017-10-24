@@ -107,7 +107,7 @@ When Play begins:
 	now face entry is "that of a short muzzled, female lion";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "sleek, muscled, built for surviving, just like the large feline that gave it to you";[ Body Description, format as the text "Your Body is (your text)."]
 	now skin entry is "[if looknow is 1]a thick pelt of coarse yellow-gold fur covering your thick, pliable[else]yellow-gold fur covered[end if]";[ skin Description, format as the text "You have (your text) skin."]
-	now tail entry is "A lion's tail twitches behind you. You just know that if you find the one who gave it to you, it would be cocked to the side in seconds";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "A lion's tail twitches behind you. You just know that if you find the one who gave it to you, it would be cocked to the side in seconds.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "leonine";[ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it draws forward into a short, feline muzzle, even as your ears perk upwards to perch, rounded, atop your leonine head. Scents burn in your new nose and you find yourself turning in place, trying to catch His scent"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "power builds in every muscle, making you feel more alive than ever before. Somehow you just know that you would be just as comfortable on all fours now as on two legs"; [ body change text. format as "Your body feels funny as (your text)." ]

@@ -442,7 +442,7 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends: [Bad end to display after complete sanity loss or incasement.]
+when play ends: [Bad end to display after complete sanity loss or encasement.]
 	if bodyname of player is "OrcaSexSlave":
 		say "     You spend the rest of your life as the inflatable orca's sex slave, dutifully [if cocks of player > 0]breeding her to make more inflatable servants for the castle[else]servicing her slippery cunt[end if]. Your pod is periodically filled with a heady, arousing gas that only fuels your endless lusts, each sticky climax driving you deeper into your lustful haze until you're nothing more than an air-headed parody of your former self. It's a simple existence, but your feral mind relishes every moment with your loving, demanding mistress.";
 		say "     The castle fills the void on its surface by dispensing another inflatable orca and bondage bag in the great hall. Trilling softly, the new orca is just as eager as the last to turn any unsuspecting visitor into another sex-hungry slave for the castle. You'd relish the company, if only your mind was not too far gone to appreciate it.";

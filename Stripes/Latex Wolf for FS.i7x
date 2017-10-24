@@ -75,7 +75,7 @@ When Play begins:
 	now face entry is "elongated with a muzzle and sharp teeth"; [ Face description, format as the text "Your face is (your text)."]
 	now body entry is "small and lupine, bent onto all fours. Your insides feel strange, as if they are made of something shifting and changing"; [ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "rubbery latex with black, fur-like patterned"; [ skin Description, format as the text "You have (your text) skin."]
-	now tail entry is "Thin and black, your tail whips behind you back and forth."; [ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "Thin and black, your tail whips back and forth behind you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "deep red with a canine knot towards the bottom"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your nose elongates, growing into a muzzle as your teeth sharpen"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your body bends, and your spine and skull grow soft and reform, forcing you down onto all fours. You can feel your insides churn and flow as if somehow melting together and changing as well"; [ body change text. format as "Your body feels funny as (your text)." ]

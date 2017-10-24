@@ -157,7 +157,7 @@ When Play begins:
 	now face entry is "that of a lynx with tufted ears and a sizeable cheekruff of fluffy fur";
 	now body entry is "transformed into that of a quadrupedal feline. You have the stocky build of a lynx, but expanded to roughly the size of a wolf or large dog. Your hands and feet have become large, padded paws hiding sharp claws";
 	now skin entry is "[one of]flaming fur[or]fiery fur[or]flame-coloured fur[at random]";
-	now tail entry is "You have short lynx-like tail with a flaming tip.";
+	now tail entry is "You have short, lynx-like tail with a flaming tip.";
 	now cock entry is "[one of]red[or]feline[at random]";
 	now face change entry is "a feline muzzle and whiskers form on your face. You can't help but yowl as your head reshapes itself into that of a lynx";
 	now body change entry is "your posture changes to one that prefers walking on all fours, though you manage to retain the ability to walk upright with some effort for now. Your body reshapes itself to become one of a strong, stocky feline with large, padded paws";

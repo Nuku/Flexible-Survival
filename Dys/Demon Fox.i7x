@@ -58,7 +58,7 @@ when play begins:
 	now face entry is "that of a demonic fox, with a long and narrow muzzle, a maw full of sharp teeth, pointy ears, and a set of horns protruding from the top of it. You're eyes glow a bright yellow and you have vertically slitted pupils. Black and yellow fur covers it completely";
 	now body entry is "is quadrupedal in nature, and beastly in stature. Your hulking form is somehow both lithe and strong, conveying a sense of immense power. A deep black fur covers your back and sides, with a bright yellow covering your stomach and chest";
 	now skin entry is "thick and surprisingly soft fur. Beneath the fur lies black";
-	now tail entry is "You have three long tails, which are jet black up until the tip, which seems to burn with a demonic yellow fire.";
+	now tail entry is "You have three long tails that are jet black up until the tips, which seem to burn with a demonic yellow fire.";
 	now cock entry is "[one of]vulpine[or]knotted[or]fox[or]demonc[at random]";
 	now face change entry is "as you feel a long and tapered muzzle growing outwards. Your ears shift to the top of your head, becoming triangular in shape and growing a bit larger. A sudden pain rushing through your head as two horns suddenly sprout just behind your ears";
 	now body change entry is "your body shifts, forcing you onto all fours. Both you arms and legs lengthen, and your body in general also grows larger. Your legs snap and crack as they rearrange themselves, becoming digitigrade. Your hands and feet become that of a fox's paws, and your nails turn into long and sharp claws";

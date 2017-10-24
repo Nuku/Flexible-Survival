@@ -116,7 +116,7 @@ When Play begins:
 	now face entry is "like a monkey, with a small muzzle, big laughing eyes and a mane of fur around it"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "lithe and human-like. It is also very flexible, and you can do any kind of acrobatics with ease. Your feet are prehensile, meaning you can hold various objects and do many things with them as if they were hands"; [ Body Description, format as the text "Your body is (your text)" ]
 	now skin entry is "short, golden fur which recovers your entire"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a long, prehensile tail that wiggles in your back every time you move."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a long, prehensile tail that wiggles behind you every time you move."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "human-like"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "you feel your hair grow and surround it. Your nose and your mouth changes, forming a small muzzle"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "your body loses mass and becomes lither. Your feet tingle as they change form, gaining an opposable thumb and becoming prehensile"; [ Body TF text, format as "Your body feels funny as (your text)." ]
