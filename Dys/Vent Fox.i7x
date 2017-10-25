@@ -338,7 +338,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			now sortorder entry is 1;
 			now description entry is "Use the fox's hole for your own pleasure";
 		[]
-		if anallevel is not 1 and VentFoxContentLevel > 0 and scalevalue of player is 3:
+		if anallevel is not 1 and VentFoxContentLevel > 0 and scalevalue of player <= 3:
 			choose a blank row from table of fucking options;
 			now title entry is "Get fucked by Vent";
 			now sortorder entry is 2;
