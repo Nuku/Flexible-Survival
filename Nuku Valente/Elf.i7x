@@ -92,7 +92,7 @@ When Play begins:
 	now face entry is "otherwise human-looking, except the set of deep, soul piercing, blue eyes framed in a face that seems somewhat oriental. Your ears are quite long and tapered, inhumanly so.";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "largely slender and agile, with long arms and slim fingers. Your legs are shapely and athletic";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "smooth and flawless";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a large, firm, buttocks, waiting to be grabbed.";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a large, firm buttocks, waiting to be grabbed.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]human[or]normal-looking[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "a strange warping ripple runs across the flesh of your cheeks as your face changes and smooths out to new, elfin, proportions, but otherwise appears human"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "waves of heat run through your altering form. Appearing human, your figure nonetheless becomes lithe and slender and your fingers lengthen to agile digits"; [ body change text. format as "Your body feels funny as (your text)" ]

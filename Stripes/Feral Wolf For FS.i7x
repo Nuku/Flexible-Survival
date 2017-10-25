@@ -182,7 +182,7 @@ When Play begins:
 	now face entry is "feral wolf face, with a long canine snout willed with the sharp teeth of a predator filling your maw"; [ Face description, format as the text "You have a (your text) face."]
 	now body entry is "that of an average sized and well-muscled wolf, with large canine features that give you a wild and deadly appearance"; [ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a long black tail that trails behind you. The wolf tail showing your emotions quite clearly."; [ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a long black tail that trails behind you, your lupine tail displaying your emotions quite clearly."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feral canine[or]wolf[or]pitch black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your bones creak and crack as they morph into a more suitable form for hunting, leaving you with the strong body of a feral wolf"; [ body change text. format as "Your body feels funny as (your text)" ]

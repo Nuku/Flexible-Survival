@@ -101,7 +101,7 @@ When Play begins:
 	now face entry is "multi-eyed, but otherwise human";
 	now body entry is "curved and feminine from the waist up, but your legs have been replaced with the abdomen of a great spider, twitching with hairy legs";
 	now skin entry is "[one of]shiny black[or]dull brown[or]black and red[at random] chitin-armoured";
-	now tail entry is "Nestled in your backside are several spinnerets, ready to spin web at a moment's notice.";
+	now tail entry is "Nestled in your backside are several spinnerets, ready to spin a web at a moment's notice.";
 	now cock entry is "armour-protected";
 	now face change entry is "swellings grow on your head, suddenly bursting open into new eyes, expanding your field of vision";
 	now body change entry is "you fall to the ground, your lower torso flowing and bulging with great creaks and pops, swelling into a bulging abdomen. It sprouts chitinous armour and then eight legs, raising you up off the ground again to stand like a spider";

@@ -57,7 +57,7 @@ When Play begins:
 	now face entry is "rounded, medium-sized muzzle with a black nose pad at the very tip";
 	now body entry is "a soft rounded shoulder build with a tight stomach, leading down into wide hips, large spring-like thighs and feet";
 	now skin entry is "[one of]rusty red furred[or]short furred[or]softly furred[at random]";
-	now tail entry is "You have a thick muscled tail, being able to be used as a third leg [skin of player], and lightly thumping on the ground with each movement.";
+	now tail entry is "You have a thick, muscled tail, being able to be used as a third leg. It is covered in [skin of player] hide and lightly thumps on the ground with each movement.";
 	now cock entry is "[one of]marsupial[or]kangaroo[at random]";
 	now face change entry is "your face draws forward into a kangaroo muzzle, stretching to mold to the new shape";
 	now body change entry is "your muscles switch, moving lower as your bottom half now becomes a powerful spring board, leaving your upper half reasonably muscled";

@@ -231,7 +231,7 @@ When Play begins:
 	now face entry is "drawn forward into a very cow-like muzzle, ending at a large damp nose. Large ears flick back and forward above your head idly";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "a cross between a bovine and a humans, large splayed hips lead down to hoofed feet";[ Body Description, format as the text "Your Body is (your text)."]
 	now skin entry is "[if looknow is 1]a thick mat of rough fur covering your body, patterned like a friesian cow over a thick[else]cow patterned, furred[end if]";[ skin Description, format as the text "You have (your text) skin."]
-	now tail entry is "A thin, almost useless cow tail extends down over your buttocks, its only use seems to be to scare flies away.";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "A thin, almost useless cow tail extends down over your buttocks, its only use seeming to be to scare flies away.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "bovine";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it draws forward, flowing into a large blunt cows muzzle even as your ears migrate up your head and stretching out to have a very bovine appearance. Slow thoughts begin to slowly push away your present needs. You find yourself mooing softly under your breath"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "grows and stretches, bones growing hugely into the frame of a cow beast, forcing your muscles and posture to follow"; [ body change text. format as "Your body feels funny as (your text)." ]

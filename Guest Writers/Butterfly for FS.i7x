@@ -429,7 +429,7 @@ When Play begins:
 	now face entry is "a pair of [one of]brilliant[or]vibrant[or]vivid[at random] green eyes, two antennae on top of your head, and a streamlined";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "delicate and fragile, streamlined for flight. Two thin, bright and colorful wings stick out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "velvet and silky";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a large round abdomen covered in yellow and black stripes. ";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a large, round abdomen covered in yellow and black stripes.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "ribbed";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it becomes more streamlined and two antennae poke out at top of your head. Your eyes brighten into a [one of]brilliant[or]vibrant[or]vivid[at random] green"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it becomes adapted for flight. Limbs narrow and become lean. Some large and colorful wings sprout out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk"; [ body change text. format as "Your body feels funny as (your text)" ]

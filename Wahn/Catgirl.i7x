@@ -82,7 +82,7 @@ When Play begins:
 	now face entry is "a mixture of cat and human, with rather sharp features and a mouth full of pointy teeth. Vertically slitted eyes and large cats ears relatively high on your head complete the picture";
 	now body entry is "very slender and sleek, built for speed and agility. Your hands are mostly human, although equipped with sharp claws, while your long legs end in more paw-like digitigrade feet";
 	now skin entry is "black, soft-furred";
-	now tail entry is "You have a long mobile tail over the tight buns of your behind. It's pretty useful for helping you hold your balance in any situation.";
+	now tail entry is "You have a long, mobile tail over the tight buns of your behind. It's pretty useful for helping you hold your balance in any situation.";
 	now cock entry is "feline, spined";
 	now face change entry is "it reshapes itself, giving you sharp features and a pretty pointy chin. You feel your mouth filling with a predator's sharp teeth as your ears grow and migrate further up your head";
 	now body change entry is "you fall to the ground, your chest and limbs reforming into a slender, sleek new shape. Your hands acquire sharp claws, while your feet take the shape of digitigrade paws";

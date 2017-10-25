@@ -121,7 +121,7 @@ When Play begins:
 	now face entry is "now the head of a grizzly bear, with a short muzzle tipped in a large, wet, black nose and a wide head topped by two round bearish ears"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a bipedal grizzly bear, thickly proportioned and muscled, with large ursine pawlike hands ending in sharp claws";
 	now skin entry is "[one of]thick brown fur covered[or]grizzly furred[or]shaggy brown furred[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a short ursine tail that hangs over your ass."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a short, ursine tail that hangs over your ass."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "ursine";
 	now face change entry is "your head widens and your face pushes out. Your nose becomes large and wet as it migrates to the end of your new bearlike muzzle and your ears move to the top of your head, becoming rounded and ursine"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands become more paw-like";

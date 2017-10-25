@@ -124,7 +124,7 @@ Wolverine Lockup is a room.
 The description of Wolverine Lockup is "[WolverineLockupDesc]".
 
 to say WolverineLockupDesc:
-	say "     The place where they store their criminals seems to be located within a comandeered bank that they have connected to the station. You can tell this by the fact that on one side of the room is a massive vault door that is wide open, showing various security deposit boxes. However, the vault isn't where the suspects are stored, no, you see that they're held within the old cells that held money and other things in the bank. Overall, you think it's a pretty decent setup, and unlikely to fail unless the wolverines decide to hold someone much stronger than them and the bars.";
+	say "     The place where they store their criminals seems to be located within a commandeered bank that they have connected to the station. You can tell this by the fact that on one side of the room is a massive vault door that is wide open, showing various security deposit boxes. However, the vault isn't where the suspects are stored, no, you see that they're held within the old cells that held money and other things in the bank. Overall, you think it's a pretty decent setup, and unlikely to fail unless the wolverines decide to hold someone much stronger than them and the bars.";
 
 instead of going East from Mall West Wing while (JennaRelationship is 3 and MurderMystery < 1):
 	if debugactive is 1:

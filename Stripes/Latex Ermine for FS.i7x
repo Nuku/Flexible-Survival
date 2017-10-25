@@ -123,7 +123,7 @@ When Play begins:
 	now face entry is "that of a ermine with a sexy smile and bedroom eyes that give alluring glances to all you see. Atop your head is a coiffure of indigo hair formed of latex into a ponytail, matching your indigo eyes";
 	now body entry is "slender and sexy[if cunts of player > 0] with curvy hips and long legs[else], but with a strong physique[end if]. Your body is quite flexible and will always strike a sexy, or even slutty, pose if you're not careful";
 	now skin entry is "seamless white latex";
-	now tail entry is "Attached to your rear is a long, tubular tail of white latex that seamless changes to indigo at the tip. Your stoat tail feels thick and padded, just right for snuggling in your arms or around someone.";
+	now tail entry is "Attached to your rear is a long, tubular tail of white latex that seamlessly changes to indigo at the tip. Your stoat tail feels thick and padded, just right for snuggling in your arms or around someone.";
 	now cock entry is "[one of]latex[or]ivory[or]smooth[or]white[or]dildo-like[at random]";
 	now face change entry is "your senses get all confused, your vision blurring and your mouth feeling like its full of something thick and syrupy. Your head seems to go soft and flow as it reforms into latex shaped like a happy ermine with a sexy smile and latex hair";
 	now body change entry is "your insides seem to go soft and turn malleable as the transformation begins to take effect. Your body becomes slender and sexy with [if cunts of player > 0]curvy hips and long legs[else]a strong physique[end if]. The pliant nature of your insides doesn't seem to quite go away though, leaving you quite flexible";

@@ -78,7 +78,7 @@ When Play begins:
 		now face entry is "coal eyes shine inside of your head while finely cut lines shape your strong grey face into something almost ruggedly handsome in appearance";
 		now body entry is "leather wings flap at your backside, giving your tightly packed musculature some extra added mobility, while in front your precisely cut pectorals stand forward onto your chest only to trail smoothly down south to your thick six packed abs. Down a long ways further your well polished thighs, legs and digitigrade clawed feet keep you mobile as you stand rigidly in place while looking yourself over";
 		now skin entry is "[one of]shiny grey flesh[or]marble-like skin [or]densely tightened shining ashen grey skin[at random]";
-		now tail entry is "You have a dexterous and meaty serpentine tail, which seems to have a mind of its own [skin of player], as it whips behind you in boredom.";
+		now tail entry is "You have a dexterous and meaty serpentine tail which seems to have a mind of its own. It is covered in [skin of player] hide and whips behind you in boredom.";
 		now cock entry is "[one of]gargoyle[or]demonic[or]unyielding[at random]";
 		now face change entry is "a slight feeling of pain goes through your skull as your face reforms itself to become harder and more rigid like that of a gargoyle while turning sharp and angular in all the right places. Your eyesight seems to dim a little as coal black orbs frame your former irises";
 		now body change entry is "your insides twist subtly as your inner organs reform themselves, your muscles become more dense while your bones thicken as your body hardens into a mirror image of that of a gargoyle";

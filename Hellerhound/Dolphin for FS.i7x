@@ -144,7 +144,7 @@ When Play begins:
 	now face entry is "long dolphin snout";
 	now body entry is "silvery with a blue back. A dorsal fin sits on top. Strong muscles contract underneath the surface";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]wet, glistening[or]smooth silver[or]thick blubbered[at random]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a tail that fattens out horizontally at the end, much like a dolphins. However, it is only half as thick, and the ends are not rounded. It is covered in [skin of player] flesh and sways behind you with every step. ";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a tail that fattens out horizontally at the end, much like a dolphin's. However, it is only half as thick, and the ends are not rounded. It is covered in [skin of player] flesh and sways behind you with every step.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]tentacle-like[or]prehensile[or]pink[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is " blubber forms. It twists and reforms into the snout of a dolphin. Your hair retracts and disappears, leaving a hole in its place"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you swell with the appearance of muscles under your flesh, and a nice-looking dorsal fin sprouts out of your back"; [ body change text. format as "Your body feels funny as (your text)" ]

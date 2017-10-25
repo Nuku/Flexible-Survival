@@ -101,7 +101,7 @@ When Play begins:
 	now face entry is "a mixture of a vulpine and human, in a perpetual sneer of exposed teeth, making for an interesting combination"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "red, black, and white latex covering your"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a long tail, shaped like a fox tail. It instinctively sways back and forth."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a long, vulpine tail. It instinctively sways back and forth."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]canine[or]knotted[or]bright red doggy[or]bestial[or]vulpine[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "your face reforms, vision blocked by a narrow snout, and new ears twitching on top of your head. It appears you now have the head of a fox"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "a wave of itching runs through your body. Humanoid in structure, your legs, however, pop into a new, digitigrade, configuration. Your feet begin to feel cramped before they snap loudly, becoming entirely paws. Your fingers are still itching as sharp little claws slip free of them"; [ Body TF text, format as "Your body feels funny as (your text)." ]

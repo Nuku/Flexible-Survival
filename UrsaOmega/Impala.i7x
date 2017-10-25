@@ -165,7 +165,7 @@ When Play begins:
 	now face entry is "that of an impala, with a long graceful neck and deerlike muzzle, and topped with large alert ears[if cocks of player > 0]; large, twisty horns jut out of your forehead, displaying your virility[end if]"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "slender and deerlike";
 	now skin entry is "reddish-brown furred"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Your furry impala-like tail hangs behind you."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "Your furry, impala-like tail hangs behind you."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "tapered";
 	now face change entry is "your face pushes out into the deerlike muzzle of an impala, with your nose moving down to the end of it and your ears enlarging and moving to the top of your head to better hear incoming predators[if cocks of player > 0]. Your forehead feels strange as two twisty horns grow from your skull, curving outward to display your new impala virility[end if]"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "it becomes slender and graceful, ideal for outrunning predators";

@@ -508,7 +508,7 @@ When play begins:
 	now face entry is "flat-toothed, prehensile-lipped equine";
 	now body entry is "well-muscled";
 	now skin entry is "long red hairs up and down your";
-	now tail entry is "You have a long stringy tail that you can whisk as you please.";
+	now tail entry is "You have a long, stringy tail that you can whisk as you please.";
 	now cock entry is "horse";
 	now face change entry is "the bones in your face mold like putty into a long, equine snout. Your ears scurry to the top of your head as your hair flows down into a mane.";
 	now body change entry is "your body stretches and bends in places you didn't know existed. Muscles grow on your body, and your fingers thicken and blacken, but thankfully don't disappear. Your feet lengthen and both of your legs toughen up to support your sizable bulk.";
