@@ -73,7 +73,7 @@ When Play begins:
 	now body entry is "human-looking";     [ Body Description, format as the text "Your Body is (your text)."]
 	now skin entry is "human";             [ format as the text "You have (your text) skin."]
 	now tail entry is "";                  [ write a whole Sentence or leave blank. ]
-	now cock entry is "human";             [ format as "You have a 'size' (your text) cock .]
+	now cock entry is "human";             [ format as "You have a 'size' (your text) cock.]
 	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [  format as "Your body feels funny as (your text)." ]
 	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ format as "Your skin feels funny as (your text)" ]

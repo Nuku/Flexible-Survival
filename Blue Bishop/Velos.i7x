@@ -343,7 +343,7 @@ to say drmousemusing:
 	say "     'It'd be remiss of me to not point out that I can barely maintain my own form, let alone two.'  This forces the doctor to stop for a moment and think, returning to this discussion with a frown.";
 	say "     '...You're a parasite, then?'";
 	say "     'Hey! I offer exceptional moral support, I would have you know.'";
-	say "     'That's not much of a practical application for such an unusual symbiosis.'.";
+	say "     'That's not much of a practical application for such an unusual symbiosis.'";
 	say "     'You -really- have a one-track mind, don't you?'  The scientist doesn't regard that statement, and is already mumbling to himself, scribbling notes on a mess of papers.  'Hmpf, even a pragmatic approach can become unreasonable, at a point...'  When the mouse doesn't regard this remark either, instead reaching for a syringe, Velos concedes to retreating from the discussion altogether, leaving you to your own business here.";
 	add 4 to velospostmusings;
 

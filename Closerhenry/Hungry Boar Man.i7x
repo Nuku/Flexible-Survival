@@ -132,7 +132,7 @@ To pigfeed:
 			now lastpigfed is 250;
 	else if pigfed is 1:
 		now lastpigfed is turns;
-		say "     'I'm still digesting the food you gave me before. However, I did find some other food a few minutes ago. You fed me, so I want to pay you back by feeding you. You can eat it if you want.'  He says as he holds out a strange box.";
+		say "     'I'm still digesting the food you gave me before. However, I did find some other food a few minutes ago. You fed me, so I want to pay you back by feeding you. You can eat it if you want,' he says as he holds out a strange box.";
 		say "     You take a look at the box and notice that it is different from all the other packages of food that you've found. There is a picture of a cartoon pig on the front. The name of the product is too faded for you to read.";
 		say "     [bold type]Will you accept his offer and eat the food?[roman type][line break]";
 		LineBreak;

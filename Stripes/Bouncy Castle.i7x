@@ -1705,7 +1705,7 @@ to say dolcheckA:		[empty]
 			let playernum be a random number between 1 and playernum;
 			let dolphinnum be a random number between 1 and ( 150 + lev entry );
 			if playernum >= dolphinnum:
-				say ". You manage to block out the pleasure that comes from the rubbery material rubbing and sliding agaisnt you and remain focused. Sliding your hands along the slick inner surface, you reach outward and grab both sides of the seal and start pulling it back open. You get the opening wide enough to pull yourself from its grip. You push it back off of you, forcing the air out of it until it starts to sag down, unable to continue holding you. You pant from breath and toss it aside, looking over the others as you try and decide what to do next.";
+				say ". You manage to block out the pleasure that comes from the rubbery material rubbing and sliding against you and remain focused. Sliding your hands along the slick inner surface, you reach outward and grab both sides of the seal and start pulling it back open. You get the opening wide enough to pull yourself from its grip. You push it back off of you, forcing the air out of it until it starts to sag down, unable to continue holding you. You pant from breath and toss it aside, looking over the others as you try and decide what to do next.";
 				now dolescape is 1;
 			else:
 				say ". You can feel a slick lubricant coating its inside, letting it slide easily over your flesh. Guiding itself over your legs, it presses your feet into the bottom tail section. It squeezes itself down around your legs, binding them together and molding its insides to grip around your feet. Your joints bend and stretch as needed to make you painlessly fit into the oversized dolphin inflatable.";

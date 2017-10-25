@@ -3103,7 +3103,7 @@ to restorepart3:	[values 162 - 223]
 	if hp of Gwen > 2, now lust of Meredith is 1;
 [201: [hp of Rane]]
 	if hp of Rane > 49 or hp of Rane < 6:
-		remove Rane from play;;
+		remove Rane from play;
 	else if hp of Rane is 6:
 		move Rane to shrine;
 	else if hp of Rane is 7:

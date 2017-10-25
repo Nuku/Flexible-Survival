@@ -37,8 +37,8 @@ to say losetoLiquidshifter:
 to say beattheLiquidshifter:
 	say "     The strange goo creature lies back on the floor, basically melted - having been defeated, it looks up at you with a whimper.";
 	LineBreak;
-	say "    ([link]Y[as]y[end link]) - Fuck the slimy creature??";
-	say "    ([link]N[as]n[end link]) - Leave him?";
+	say "     ([link]Y[as]y[end link]) - Fuck the slimy creature??";
+	say "     ([link]N[as]n[end link]) - Leave him?";
 	if player consents:
 		say "     With a grin, you move forward to the liquidshifter, licking your lips as your feet stick yet again in his mass. You trip up, enjoying the feeling of its gluey-form sticking you to the floor, the adhesion forcing you to stay there, wallowing in enjoyment of the blissful creature's secretions.";
 		if cunts of player > 0:

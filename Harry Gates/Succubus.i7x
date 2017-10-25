@@ -98,7 +98,7 @@ Infected_chats of Succubus_gene is {"prays, 'Please forgive me my sins, as I for
 
 The Herm_pdesc of Succubus_gene is "You have transformed into a succubus, a sexual demoness of great strength, strong magics, and dark allure.  A thick crimson penis sets you apart from your demonic sisters, and makes you feel somehow more powerful than they are.  With your new form comes a darkening of your mind and soul, and a twofold mission for your dark mistress:  Convert humans into succubi like yourself, and slay the hated satyresses.".
 
-The Herm_npcdesc of Succubus_gene is "The vision of sexual intensity in front of you is as terrifying as it is alluring.  [Name of P_target] is crimson-skinned, bearing fangs and a forked tongue, pointed ears and thick onyx horns.  Shi is also a hermaphrodite, sporting a throbbing crimson penis and balls above hir regular genitalia.  Claws, a spaded tail, cloven hooves, and wicked wings complete the magnificent picture.  As you gaze longingly at [Poss_Name of P_target] full breasts, dripping cock, and wet pussy, you don[’]t know whether to run toward or away.".
+The Herm_npcdesc of Succubus_gene is "The vision of sexual intensity in front of you is as terrifying as it is alluring.  [Name of P_target] is crimson-skinned, bearing fangs and a forked tongue, pointed ears and thick onyx horns.  Shi is also a hermaphrodite, sporting a throbbing crimson penis and balls above hir regular genitalia.  Claws, a spaded tail, cloven hooves, and wicked wings complete the magnificent picture.  As you gaze longingly at [Poss_Name of P_target] full breasts, dripping cock, and wet pussy, you don[']t know whether to run toward or away.".
 
 When play begins, add Succubus_gene to Genetic list.
 

@@ -177,7 +177,7 @@ to say SeraphVictorious:
 to say SeraphDesc:
 	if hp of Gabriel is 2:
 		setmongender 1;
-		say "     Turning around a street corner, you suddenly find yourself face to face with the angel you saw search for Elijah earlier - and hacking apart or interrogating demons while doing that. The divine warrior's handsome face turns to you and his eyes widen as he recognizes you from the incubus['] description, then he says, 'Hello Mortal, you may call me Gabriel. I heard you have had a hand in the disappearance of my brother in arms Elijah. Explain yourself!'";
+		say "     Turning around a street corner, you suddenly find yourself face to face with the angel you saw search for Elijah earlier - and hacking apart or interrogating demons while doing that. The divine warrior's handsome face turns to you and his eyes widen as he recognizes you from the incubus's description, then he says, 'Hello Mortal, you may call me Gabriel. I heard you have had a hand in the disappearance of my brother in arms Elijah. Explain yourself!'";
 		LineBreak;
 		say "     [link](1)[as]1[end link] - Just tell him what you did.[line break]";
 		say "     [link](2)[as]2[end link] - Make up a convincing lie.[line break]";

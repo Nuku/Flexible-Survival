@@ -1,7 +1,7 @@
 Astroslide Football Field by Kernog begins here.
 
 [General]
-Astroslide Football Field is a room. 
+Astroslide Football Field is a room.
 Astroslide Football Field is west of Athletic Street.
 Astroslide Football Field is east of Football Field Locker-room.
 
@@ -16,19 +16,19 @@ to say AstroslideFootFielddesc:
 	else:
 		say "     You stand at the entrance of the Astroslide Football Field, which is in the same kind of bustling activity in which you left it earlier. Gorilla and Wolfman football players are still alternating training and demonstration plays of their new spin on American Football, and do not seem tired of it, as it looks. Apes (and wolves) who are not currently training or playing are 'meeting' fans and onlookers, such as [one of]a fan-girl giving one grinning football player a blowjob[or]a fan-boy giving one grinning football player a blowjob[or]a football player grunting loudly as he humps a moaning fan-girl[or]a football player grunting loudly as he humps a moaning fan-girl[at random]. Overall, the impression you get is that of a bustling, yet orderly locale. People of all shapes come and go freely and it seems that the only molesting taking place is on the playing field.";
 		WaitLineBreak;
-		say "    There's quite a few things to do around here. You could take a [bold type]look at[roman type] the [bold type]notice board[roman type] if you have not already, or watch a [bold type]football game[roman type]. The captain of the Tenvale Gorillas is on the sideline, overwatching the game himself, and he seems rather amicable. On the other side of the field, the locker-rooom building seems to be open to visitors.";
-	
+		say "     There's quite a few things to do around here. You could take a [bold type]look at[roman type] the [bold type]notice board[roman type] if you have not already, or watch a [bold type]football game[roman type]. The captain of the Tenvale Gorillas is on the sideline, overwatching the game himself, and he seems rather amicable. On the other side of the field, the locker-rooom building seems to be open to visitors.";
+
 [Sceneries]
-Football Field Notice Board is scenery in the Astroslide Football Field. "You take a look at the notice board. Among the miscellanous -sex- job offers, a specific notices catches your eye. Opening with the cute drawing of a toonish gorilla juggling with footballs, the notice announces that the staff and players of the Tenvale Gorillas welcome visitors to Astroslide Field, and invite them to meet the team in the locker-room.[if GorillasMember is 0] You also learn that, due to the disappearance of several people in the chaos that engulfed the city a few weeks ago, the team is looking for new players and supportive staff, and is about to hold tryouts. Recruitement is open to every sex and body type. Wannabe players should adress to the team captain.[end if]";
+Football Field Notice Board is scenery in the Astroslide Football Field. "You take a look at the notice board. Among the miscellanous -sex- job offers, a specific notices catches your eye. Opening with the cute drawing of a toonish gorilla juggling with footballs, the notice announces that the staff and players of the Tenvale Gorillas welcome visitors to Astroslide Field, and invite them to meet the team in the locker-room.[if GorillasMember is 0] You also learn that, due to the disappearance of several people in the chaos that engulfed the city a few weeks ago, the team is looking for new players and supportive staff, and is about to hold tryouts. Recruitement is open to every sex and body type. Wannabe players should address to the team captain.[end if]";
 
 Football Game is a scenery in the Astroslide Football Field. "[footballGameDesc]".
 
 to say footballGameDesc:
 	say "     You take a seat in the stadium, among the small, but regular audience. The game is yet another play-off between the Tenvale Gorillas, and a team of wolfmen. They are dressed in shoulder pads and helmets, but are complately naked underneath, and you have a hunch that it will not be a classic game of football. [one of]The Gorillas seem to be on the offense. After the usual preparation, the down starts. Immediately, players start pushing and tackling each other, but instead of simple contact, hands reach for cocks or nipples, and rapidly, group of three or more players of various composition form, and several gangbangs or orgies ensue. However, one of the apes escaped the starting frenzy, and began to sprint forward. The carrier of the ball vigorously launched the ball towards him. Before he could do anything, the ape is tackled by two wolfmen, but the primate manages to catch the ball with one of his feet. While the gorilla is spitroasted by the two canines, the referee whistles and validates the down, under the cheers of the crowd.[or]The Gorillas seem to be on the defense. After the usual preparation, the down starts. Immediately, players start pushing and tackling each other, but instead of simple contact, hands reach for cocks or nipples, and rapidly, group of three or more players of various composition form, and several gangbangs or orgies ensue. One of the wolfmen manages to clear from the mess in the middle of the field, and the quarterback lobs a pass in his direction. But the pass is to slow, allowing the canine to be grabbed from behind by a gorilla, who have the pair fall on the ground. The ape's arms lock around the wolf's, and his feet grab his opponent's cock and start masturbating. The referee signals that the attempt was unsucessfull, while the wolfman howls in arousal, as he is receives this unusual footjob.[at random]";
 	[Plan: Add scene for players wanting to participate to the orgy?]
-	say "    You watch the game some more. The downs and the phases follow one after the other, and the audience around you become rowdier and hornier each passing minute. You wisely slip away from your seat, before you get dragged into this improptu orgy.";
+	say "     You watch the game some more. The downs and the phases follow one after the other, and the audience around you become rowdier and hornier each passing minute. You wisely slip away from your seat, before you get dragged into this improptu orgy.";
 	increase libido of the player by 20;
-	
+
 [NPC]
 [Team captain Roman is here - see Roman extension by Kernog]
 

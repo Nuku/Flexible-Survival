@@ -31,7 +31,7 @@ to say ebgatorvic:
 		if impregnatevalid is true:
 			say ". [if ebgatord < 2]You briefly think the lizard's dick is knotted for how it forces a large bulge at its back past your ring, but it quickly reveals its true purpose as the bulb ascends[else]You're quickly reminded of the intense sensation of being [']tied['] with the lizard's dick, large bulge at its base forced past your ring, ascending[end if] along its shaft, until a large, coarse egg is squeezed from its head and into your bowels.";
 			say "     Still high from the throes of bliss -- and perhaps ensuring the orb is planted deep within you -- he still continues to fuck you senselessly, forcing a weak, [if scalevalue of player > 3]slightly[else]substantially[end if] strained orgasm, [if cocks of player > 0]your unattended cock[smn] staining the ground with your [cum load size of player] load[else if cunts of player > 0]your unattended cunt[sfn] staining the ground with your juices[else]causing you to writhe in insatiable need[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if scalevalue of player > 4 or player is twistcapped] slightly[end if] gaping hole.";
-			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal. [italic type]You're somewhat worried about the long-term results of carrying this egg…[roman type]";
+			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal. [italic type]You're somewhat worried about the long-term results of carrying this egg...[roman type]";
 			if ebgatord < 2, now ebgatord is 2;
 			now mpreghijack is true;
 			now ebgatorhijack is 2;
@@ -52,7 +52,7 @@ to say ebgatorvic:
 		if impregnatevalid is true:
 			say ". [if ebgatord < 2]You briefly think the lizard's dick is knotted for how it forces a large bulge at its back past your lips, but it quickly reveals its true purpose as the bulb ascends[else]You're quickly reminded of the intense sensation of being [']tied['] with the lizard's dick, large bulge at its base forced past your lips, ascending[end if] along its shaft, until a large, coarse egg is squeezed from its head and into your womb.";
 			say "     Still high from the throes of bliss -- and perhaps ensuring the orb is planted deep within you -- he still continues to fuck you senselessly, forcing a weak, [if cunt length of player < 12]slightly[else]substantially[end if] strained orgasm, your [if cocks of player > 0]unattended cock[smn] staining the ground with your [cum load size of player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if cunt length of player > 11] slightly[end if] gaping hole.";
-			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal. [italic type]You're somewhat worried about the long-term results of carrying this egg…[roman type]";
+			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal. [italic type]You're somewhat worried about the long-term results of carrying this egg...[roman type]";
 			if ebgatord < 2, now ebgatord is 2;
 			now preghijack is true;
 			now ebgatorhijack is 1;

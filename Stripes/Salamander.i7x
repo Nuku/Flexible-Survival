@@ -60,7 +60,7 @@ When Play begins:
 	now face entry is "now flatted down with a short muzzle. You have a widened mouth full of diminutive teeth";
 	now body entry is "especially effeminate, with wide hips, thighs, and a thin waist that draws the eye. Your limbs are still human, though they flex a little more than could be considered normal. Your digits end in short, dark claws that are probably better suited for climbing than fighting";
 	now skin entry is "[one of]smooth[or]sensitive[or]speckled[or]slimy[or]red[or]crimson[at random]";
-	now tail entry is "You have a long, fleshy tail growing from your squishy ass cheeks. It starts thick and tapers down gradually along its length";
+	now tail entry is "You have a long, fleshy tail growing from your squishy ass cheeks. It starts thick and tapers down gradually along its length.";
 	now cock entry is "[one of]red[or]speckled[or]glistening[or]retractable[as decreasingly likely outcomes]";
 	now face change entry is "your jaw stretches and warps uncomfortably. Your skull aches as becomes flatter and broader. A short muzzle protrudes forwards and your mouth widens to suit your enlarged jaw. Your long, slimy tongue brushes across your teeth as they become small and numerous";
 	now body change entry is "your hips and thighs become wide and rounded. Your waist narrows to a sultry, seductive thinness that further accentuates your effeminate appearance. Your limbs creak and twist as they bend in strange ways, your bones and joints becoming slightly flexible";

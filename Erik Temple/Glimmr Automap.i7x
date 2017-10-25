@@ -353,7 +353,7 @@ The automap graphlink rules have outcomes exit (success - the default) and conti
 
 The current map label is a g-element variable.
 
-[The following phrase is defined in Mark Tilford's Automap. but in a section that only compiles when we're using Basic Hyperlinks. Basic Hyperlinks is not recommended for use with Flexible Windows, however, so we repeat the phrase here.]
+[The following phrase is defined in Mark Tilford's Automap, but in a section that only compiles when we're using Basic Hyperlinks. Basic Hyperlinks is not recommended for use with Flexible Windows, however, so we repeat the phrase here.]
 To decide what room is the glulx equivalent of (n - a number):
 	(- {n} -)
 
