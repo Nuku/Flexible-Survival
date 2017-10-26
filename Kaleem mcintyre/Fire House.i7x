@@ -124,7 +124,7 @@ instead of conversing the Kenaz:
 			let bonus be ( charisma of player minus 10 ) divided by 2;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
-			if bonus + dice is greater than 12:
+			if bonus + dice > 12:
 				say "Grabbing Kenaz's shoulder before he can make his move out of the front door of the fire station, which has been safely blocked off by an overturned desk and other miscellaneous pieces of junk, you tell the man that you'll handle whatever's outside. 'You?' Kenaz ask dubiously as he gives you a once over before trying to shake his head, however, being the persuasive character that you are, you manage to talk him out his gung-ho offensive by enlightening him on what might happen should he possibly becoming infected. Mention of what will happen to the firehouse if he loses himself to the infection going on outside is what finally gets good common sense through the other's thick head. 'Alright, fine. But if you don't come back in thirty minutes...' Kenaz starts to say, but before he can finish you're already moving the desk and other junk away from in front of the firehouse door as you mentally prepare yourself for a fight.";
 				WaitLineBreak;
 				fight;
@@ -248,7 +248,7 @@ To say aidKenaz1:
 		Say "Othala turns to the side slightly and then shows you a circular pattern of black spots framing her lower left calf muscle. 'Anyway,' The male Dal turns and then chuckles at the slightly lustful look you're giving him. 'Long story short, the blonde said something about her tracking down a rogue mutant that's running around town biting people and subsequently turning them into mutants. At the time I couldn't have cared less, what with my leg bleeding like I had an artery burst, however, when the blonde said that the name Pertho I immediately started to grill her for info. As it turns out this [italic type]thing[roman type], whatever it is, is going around the city playing infecting people against their will. Sadly,' Othala turns his head to sigh at this.";
 		WaitLineBreak;
 		Say "'It seems Pertho got caught and now is a really stud Dalmatian going around nipping everything he can get his jaws on.' Othala then looks sheepishly at you. You can guess the rest of the story from this point, if the hardening of the firefighter's cock from out of his sheath is anything to go by.";
-		Say "'S-so,' You turn to look at Kenaz once again. 'If you could spare the time, would you please head to the [bold type]red light district[roman type] and bring back [bold type]Pertho[roman type] for us? If ' Kenaz's words make a grunt of annoyance rise from up out of the pit of your throat, but at the other man's hopeful look you simply nod to the other before going about your way. Faintly you wonder if you have [italic type]rescue[roman type] printed somewhere on your body? Because seriously...";
+		Say "'S-so,' You turn to look at Kenaz once again. 'If you could spare the time, would you please head to the [bold type]red light district[roman type] and bring back [bold type]Pertho[roman type] for us?' Kenaz's words make a grunt of annoyance rise from up out of the pit of your throat, but at the other man's hopeful look you simply nod to the other before going about your way. Faintly you wonder if you have [italic type]rescue[roman type] printed somewhere on your body? Because seriously...";
 		WaitLineBreak;
 		Say "'Oh wait a minute!' You turn just in time to see Othala running over to the only table in the room and then grabbing up something before coming up to you to hand you that said something. Amazingly enough what the Dalmatian gives you just so happens to be a...collar and leash? 'This might help make things easier on you.' The salt and pepper haired Dalmatian snickers when you look to the items in question with a curious expression written across your face, but does nothing else as you turn to head out.";
 		decrease carried of food by 10;
@@ -343,7 +343,7 @@ To say aidKenaz5:
 
 
 To say aidKenaz6:
-	If Kenazdes - turns is less than 16:
+	If Kenazdes - turns < 16:
 		Say "Oh sorry, but I don't have anything for you to do for me today.' Kenaz smiles bemusedly at you before going back to what he was just doing.";
 	else:
 		Say "'Hey, if you don't mind I need to go out and make a run real quick. Would you mind going with me?' Asking Kenaz what he means by [']run['] you find the spotted canine giving you a quick rundown of the situation. Well you see the guys and I have this thing going where, in order to make sure we all have enough food, we take turns going out to scavenge for stuff. Since Mannaz had once been working with the military he knows of a few places where certain storehouses of provisions are kept so we...ugh...[italic type]liberate[roman type] some things every so often for ourselves.'";
@@ -367,7 +367,7 @@ To say aidKenaz6:
 		say "     ([link]Y[as]y[end link]) - Leave him to his fate.";
 		say "     ([link]N[as]n[end link]) - Fight alongside.";
 		if player consents:
-			say "You tell Kenaz to take it easy before running off about your way back to the firehouse. The last thing you hear from the other is a dark chuckle followed by...'I don't think that's gonna happen!'";
+			say "You tell Kenaz to take it easy before running off about your way back to the firehouse. The last thing you hear from the other is a dark chuckle followed by 'I don't think that's gonna happen!'";
 			say "Running as fast as you can you make it back to the firehouse before long and upon bursting through the partially opened door you bark for the other firefighters to get their tails down here to help you. 'What's going on!?' Othala is the first to respond, the once female Dalmatian rushing up to you to see what all the noise is on about, with the others following hot on her heels. Quickly telling the rest of the gang what's happened and where Kenaz is you find yourself dumping the extra backpack on the ground and then making your way back to where you had left Kenaz with every last firefighter in the station trailing behind you.";
 			WaitLineBreak;
 			say "It takes you maybe ten minutes to get back to where Kenaz, but that proves to be all the time the collie needs to finish up mounting its turgid dick into the depths of the Dalmatian's tailhole. What you see, just as soon as you turn the corner with everyone else falling in behind you, is the collie rearing its head back to howl to the sky as it pumps a sticky load of cum into the well-toned stomach of the downed firefighter. At seeing Kenaz belly literally swelling as the giant collie's dick floods his insides with its cum you don't take a second to hesitate over what choices you may have as you rush over and then drag Kenaz away from the beast just as its about a fourth of the way finished with him. The collie, lost in its powerful orgasm, continues to spray the ground where Kenaz was, totally not paying attention to you as its cock continues to spray an impossible amount of cum onto the ground in front of it. ";
@@ -443,7 +443,7 @@ to say aidKenaz9:
 			say "'Not bad. Not as good as someone who's spent their formative years training for this sort of thing, but like I said before, not bad. Keep this up and you'll make an excellent firefighter in no time.' Panting and then nodding to Kenaz you lay your head back and close your eyes, right before you snap them open as you think over what Kenaz just said.";
 			if strength of player < 18:
 				increase strength of player by 1;
-				say "Your strength has increased by 1!";
+				say "[bold type]Your strength has increased by 1![roman type][line break]";
 			increase thirst of player by 16;
 			increase hunger of player by 15;
 			decrease libido of player by 15;
@@ -599,7 +599,7 @@ Instead of fucking Kenaz:
 					say "Forgetting for a second about the fact that there is a sixteen inch canine pole being primed for use just above your cunt you buck yourself up into the Dalmatian when Kenaz buries another finger inside of you. This move forces the tip of the firefighter's prick to slip into your heated channel and at feeling your warmth taunting at his manhood Kenaz grunts and pulls his now sopping wet hand off of his cock in order to thrust his hips down into you. You yelp just as Kenaz gets four inches up into you. Your hips freeze into place a second after your throaty call as your eyes look up into Kenaz's own burning green orbs.";
 					WaitLineBreak;
 					say "'Now I think you're ready.' Kenaz grumbles he both leans himself down to lick you across your [facename of player] face once again and then removes his fingers from inside of your musky, but clean, ass. The loving look in his eyes is almost enough to make your heart melt, but that's right before you hiss as the Dalmatian sinks himself further inside of you.[line break]";
-					if cunt length of player is less than 14 or cunt width of player is less than 4:
+					if cunt length of player < 14 or cunt width of player < 4:
 						say "Knowing that he'll have to be careful with you as you're amateur pussy is not ready to handle his massive rod Kenaz grunts and then drives his hips down into slowly as he watches your face almost worriedly. When half of his sixteen inches are buried inside of you the Dalmatian nips at the side of your neck to draw your eyes open to look up at him. Blinking your [facename of player] eyes up at him you watch as Kenaz asks, 'Want me to keep going?' Looking down you find the jet black spear of the Dalmatian's four inch wide manhood resting inside of you like a sword just being drawn from its sheath. Quietly you turn your head back to think. Should you or should you not? (Y=Yes, N=No)[line break]";
 						if player consents:
 							say "Shaking your head at Kenaz you tell the Dalmatian that you can take it. Looking at you for second to see if you are being serious the other nods and then sinks himself down into the depths of your wet folds. A slight hiss pushes free from your lips as your cervix is forced to spread wider and wider around the four inch width of the Dalmatian's cock. A sudden jerk has Kenaz stopping from pushing anymore inside of you. When he moves to pull back from you he mutters, 'I don't think this is going to work.' Seeing the other's hesitation, but feeling your own burning desire needing to be sated you grip Kenaz by his shoulders, which he has placed on both sides of your prone [bodyname of player] body, and then pull yourself up completely onto him.";
@@ -695,7 +695,7 @@ carry out Firepolescaling:
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
-	if diceroll is greater than 14:
+	if diceroll > 14:
 		say "Managing to climb the golden pole you make your way up to the sleeping area of the fire house.";
 		Move player to Sleeping Quarters;
 		increase score by 2;
@@ -779,7 +779,7 @@ Instead of resolving a Pertho:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 10:
+		if diceroll > 10:
 			say "Tentatively you go up behind the panting and drooling four legged Dalmatian and then, once you are sure that the other can't sense your presence, you grab it by its furry neck. Immediately the canine stops his thrusting and then yelps as you pull it bodily off of the tigress. The tigress herm isn't sure what's happening, or why the delightful cock drilling inside of hir cunt has been taken away, but upon turning hir head to see you wrestling the feral Dalmatian down onto the ground the tigress slips her red dress down onto her thighs and then quickly, but quietly, hauls tail out of here. You barely pay the hooker any attention as you try to keep the Dalmatian from biting you, something Pertho seems very keen on doing.";
 			WaitLineBreak;
 			say "When you finally end up tiring the Dalmatian out, almost ten minutes later, you snap the collar and leash you had been given by Othala onto the now whimpering mutt. Successful with this mission you prepare yourself to go about your way back to the firehouse with contentment brimming inside of your chest. Of course these feelings don't last long as the Dalmatian behind ends up dropping all of his weight onto the ground forcing you to almost literally have to carry the other back to Kenaz and the others.";
@@ -797,7 +797,7 @@ Instead of resolving a Pertho:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 14:
+		if diceroll > 14:
 			say "Successfully sneaking up behind the Dalmatian you use your full body weight to pin the other down onto the ground. The Dalmatian yelps and squirms and fights to get away from you, but currently you are too focused to allow the feral mutt to get any kind of leverage as you snap the collar around his neck and then hook the leash onto the metal tether.  Getting up off of Pertho you wrap the end of the leash around your [bodyname of player] hand and then tug on it to get the Dalmatian moving.";
 			say "Of course, as with almost everything in your life, the Dalmatian doesn't want to cooperate so you end up forcibly dragging the other back to the firehouse.";
 			now HelpKenazOut is 3;
@@ -843,7 +843,7 @@ Instead of conversing the OtherDals:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 16:
+		if diceroll > 16:
 			say "Spending the next hour of so playing round after round with the Dals nets you collecting a vast majority of the chips that the firefighters have scattered out onto the table. Because of your charisma you wind up winning the game and ultimately netting just a little more respect from the group as they growl playfully at you for beating them.";
 			say "Astonishingly enough Pertho comes up to you with a bottle of water in his jaws, offering the bottle to you for your successful win, or so you would guess. Taking the water with good grace you thank the feral pooch by scratching him behind his ears before stuffing the water bottle into the back of your pack. Thanking the guys for the good time you get up from the table to let Othala have your seat and then stretch your tired limbs before going about your way.";
 			increase carried of water bottle by 1;
@@ -881,7 +881,7 @@ Instead of conversing the DalmatianTroupe:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 16:
+		if diceroll > 16:
 			say "Spending the next hour of so playing round after round with the Dals nets you collecting a vast majority of the chips that the firefighters have scattered out onto the table. Because of your charisma you wind up winning the game and ultimately netting just a little more respect from the group as they growl playfully at you for beating them.";
 			say "Astonishingly enough Pertho comes up to you with a bottle of water in his jaws, offering the bottle to you for your successful win, or so you would guess. Taking the water with good grace you thank the feral pooch by scratching him behind his ears before stuffing the water bottle into the back of your pack. Thanking the guys for the good time you get up from the table to stretch your tired limbs before going about your way.";
 			increase carried of water bottle by 1;

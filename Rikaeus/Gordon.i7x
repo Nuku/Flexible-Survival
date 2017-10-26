@@ -1,7 +1,7 @@
 Version 1 of Gordon by Rikaeus begins here.
 [Version 1 - new npc]
 
-[   hp of Gordon                                           ]
+[   HP of Gordon                                           ]
 [   0: Not Placed                                          ]
 [   1: In Lockup                                           ]
 [   2: In the Half-Renovated Room                          ]
@@ -27,9 +27,9 @@ to say GordonDesc:
 	say "     The monkey has pitch black fur and hazel eyes. Personally you think the black is really weird because you don't recall ever hearing about monkeys having that color of fur, at least completely covering their body. But after a while you guess that you've probably haven't seen every type of monkey. Besides the fur and his eyes, he's wearing what amounts to a chef outfit, minus the hat. You figure that's his uniform for the Doggy Bowl, which makes complete and total sense, since he's the head chef. The monkey winks at you suggestively when he notices that you're staring at him, which causes you to quickly look away."
 
 instead of conversing the Gordon:
-	if hp of Gordon is 0: [should be not yet available]
-		say "     ERROR: Gordon shouldn't be where a player can see him yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [hp of Gordon]";
-	else if hp of Gordon is 2:
+	if HP of Gordon is 0: [should be not yet available]
+		say "     ERROR: Gordon shouldn't be where a player can see him yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [HP of Gordon]";
+	else if HP of Gordon is 2:
 		say "     You walk up to your monkey sex slave, or servant in Nermine's words, and smirk at him. The monkey just tries to sneer at you but the magic beholding him to your will sends a small shock through him.";
 	else:
 		say "     You walk up to the monkey who smiles widely at you before asking what you're here for. You tell him, and the guard watching the suspects, that you're here to interrogate him. The guard nods and takes both of you to the interrogation room.";
@@ -126,11 +126,11 @@ to say GordonMotive:
 		now GordonMotive is 3;
 
 instead of fucking Gordon:
-	if hp of Gordon is 1:
+	if HP of Gordon is 1:
 		say "     The monkey makes a laughing sound, not disimilar to his current species. 'If you want to fuck then maybe somewhere private ahah!' he says, smiling lewdly at you.";
 	else if (lastfuck of Gordon - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     Despite the fact that he's practically forced to obey your orders, it seems the magic has a failsafe to allow him time to recover. So instead you step away to allow that to happen.";
-	else if hp of Gordon is 2:
+	else if HP of Gordon is 2:
 		say "     The magically beholden monkey tries to refuse but the magic pushes him to obey. Although if the glint in his eyes say anything, he's quite eager for it.";
 		wait for any key;
 		say "[GordonSexMenu]";

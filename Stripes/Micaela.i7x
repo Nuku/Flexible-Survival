@@ -24,21 +24,21 @@ Instead of resolving Easter Eggs:
 			get a number;
 		if calcnumber is 1:
 			say "[micaelaintro_01]";
-			now hp of Micaela is 2;
+			now HP of Micaela is 2;
 		else if calcnumber is 2:
 			say "[micaelaintro_02]";
-			now hp of Micaela is 2;
+			now HP of Micaela is 2;
 		else:
 			say "[micaelaintro_pass]";
-			now hp of Micaela is 1;
+			now HP of Micaela is 1;
 	else:
 		say "     Shall you let the overly-friendly bunny [link]continue (Y)[as]y[end link] or simply [link]make her stop (N)[as]n[end link]?";
 		if the player consents:
 			say "[micaelaintro_01]";
-			now hp of Micaela is 2;
+			now HP of Micaela is 2;
 		else:
 			say "[micaelaintro_pass]";
-			now hp of Micaela is 1;
+			now HP of Micaela is 1;
 	now Bunny House is known;
 	now Easter Eggs is resolved;
 
@@ -74,7 +74,7 @@ The description of Bunny House is "[bunnyhousedesc]".
 the scent of Bunny House is "Micaela's scents of arousal, rabbits and candy hang in the air here.";
 
 to say bunnyhousedesc:
-     say "     The pastel blue house is more intact than the others in the area. The damage to this two-storey home is largely confined to the garage, driveway and yard. Inside, the living room is fairly clear of dirt and junk, though the carpet and furniture all show signs of recent wet stains. Micaela, the Easter bunny herm, is seated in one of those chairs, rubbing her [if xp of Micaela > 8]egg-laded [else if xp of Micaela > 0]growing [end if]tummy with a happy smile on her cute face.";
+     say "     The pastel blue house is more intact than the others in the area. The damage to this two-storey home is largely confined to the garage, driveway and yard. Inside, the living room is fairly clear of dirt and junk, though the carpet and furniture all show signs of recent wet stains. Micaela, the Easter bunny herm, is seated in one of those chairs, rubbing her [if XP of Micaela > 8]egg-laded [else if XP of Micaela > 0]growing [end if]tummy with a happy smile on her cute face.";
 
 
 Section 3 - Micaela
@@ -90,39 +90,39 @@ the icon of Micaela is Figure of Micaela_icon.
 
 to say micaeladesc:
 	if debugactive is 1:
-		say "DEBUG (Micaela) -> HP: [hp of Micaela], XP: [xp of Micaela] <- DEBUG[line break]";
+		say "DEBUG (Micaela) -> HP: [HP of Micaela], XP: [XP of Micaela] <- DEBUG[line break]";
 	say "     Micaela is a herm Easter bunny with pink fur and blue hair. Her rabbit-like head has a short muzzle and large, floppy ears. Her eyes are heterochromatic, meaning one's blue and the other is brown. Her body's like that of a Playboy model - except the ears and bunny tail are real. She's wearing a frilly red and white outfit that's quite skimpy as well. It's low cut over her busty G-cup breasts and comes with a short skirt that barely hides her cute tush, perky cock and juicy cunny. Adding to this are arm-length gloves and thigh-high stockings, both made of silky red fabric, and polished white shoes with red trim. She's always got a ribbon-wrapped basket of coloured eggs on her as well to complete her sexy Easter bunny look.";
 	if lust of Micaela >= 9:
 		say "     Her once slender belly has become rounded with the growing eggs inside her tummy. The joy of this is quite apparent on her happy face as she rubs her swollen belly. With this comes increased arousal as well, the bunny's thighs damp with her juices and her cock twitching and throbbing as she caresses the bulge.";
-	if xp of Micaela > 0:
-		say "     Micaela's bunny brood is running around the house, playing games (both innocent and naughty) and otherwise amusing themselves. These often involve hunting, hiding or eating Easter eggs. They sometimes go out into the surrounding forest to play as well. Because of this, it is difficult to judge their numbers, but you'd guess there's something around [xp of Micaela] of them these days. They're all cute and colourful bunnies in pretty and girly outfits, just like their mother[if xp of Micaela > 10]. Even the rare boys of the brood are in skirts or dresses[end if].";
+	if XP of Micaela > 0:
+		say "     Micaela's bunny brood is running around the house, playing games (both innocent and naughty) and otherwise amusing themselves. These often involve hunting, hiding or eating Easter eggs. They sometimes go out into the surrounding forest to play as well. Because of this, it is difficult to judge their numbers, but you'd guess there's something around [XP of Micaela] of them these days. They're all cute and colourful bunnies in pretty and girly outfits, just like their mother[if XP of Micaela > 10]. Even the rare boys of the brood are in skirts or dresses[end if].";
 
 
 Section 4 - Dialog
 
 Instead of conversing the Micaela:
 	if debugactive is 1:
-		say "DEBUG (Micaela) -> HP: [hp of Micaela], XP: [xp of Micaela] <- DEBUG[line break]";
-	if hp of Micaela is 0:
+		say "DEBUG (Micaela) -> HP: [HP of Micaela], XP: [XP of Micaela] <- DEBUG[line break]";
+	if HP of Micaela is 0:
 		say "***Unknown error. Adjusting.";
-		now hp of Micaela is 1;
+		now HP of Micaela is 1;
 		now Easter Eggs is resolved;
 		now Bunny House is known;
-	if hp of Micaela is 1 or hp of Micaela is 2:
-		say "     Micaela smiles as you come over. 'Hey there. I'm glad you decided to stop by. [if hp of Micaela is 1]Did you change your mind about having some fun[else]Are you in the mood for more fun[end if]?' she asks, spreading her legs and showing off her dual-gendered loins.";
+	if HP of Micaela is 1 or HP of Micaela is 2:
+		say "     Micaela smiles as you come over. 'Hey there. I'm glad you decided to stop by. [if HP of Micaela is 1]Did you change your mind about having some fun[else]Are you in the mood for more fun[end if]?' she asks, spreading her legs and showing off her dual-gendered loins.";
 		say "     'I've run into some other nasty folks out there in the woods, especially those mean wolves. That's why I've been hiding stashes of my eggs in the forest. That way there's always some around to help me get back to my cute bunny self when one of those meanies catch me and fuck me,' she says, lightly running her fingers across her damp folds. 'I love the sex, but if I stop being my pretty bunny self, who'll spread Easter cheer around here?";
-		say "     'But you seem much nicer than the others out there. How about you come snuggle up[if hp of Micaela is 2] for some more fun[end if]?'";
-		now hp of Micaela is 3;
-	else if xp of Micaela >= 3 and a random chance of 1 in 3 succeeds:
+		say "     'But you seem much nicer than the others out there. How about you come snuggle up[if HP of Micaela is 2] for some more fun[end if]?'";
+		now HP of Micaela is 3;
+	else if XP of Micaela >= 3 and a random chance of 1 in 3 succeeds:
 		say "     [one of]'There'll be loads more Easter eggs stashed around the woods now that I've got my kids to help make them and hide them.'[or]Micaela shares a rather hot cuddle and kiss with one of her bunny brood.[or]A gaggle of giggling bunny kids run through the room, interrupting you.[or]Micaela smiles as she watches a pair of her kits play [']Hide the Egg['].[at random]";
 	else:
 		say "     '[one of]It feels so nice being filled with eggs. Almost as good as when they finally come out.'[or]Feel free to come visit as often as you like.'[or]Do you like my outfit?' the bunny herm asks. She does a little spin to show it off, ending with her bending over to flash you with a playful giggle.[or]I love the taste of sweets, sugar and chocolate. That's what helps make my eggs so yummy,' she says, giving one from her basket a long, slow lick before popping it right into her mouth. 'Mmmm...'[or]I've got a bunch of bunny egg stashes around the forest to help keep me my pretty bunny self.'[or]Those mean wolves must really like hunting rabbits, I guess. Not that I mind too much. They're a good fuck, at least,' she says with a giggle.[or]Oh... uh... what were we talking about?' the bunny girl asks, too distracted by [micaela_dist].[at random]";
-[	else if hp of Micaela > 3 and micaelastory1 is false and a random chance of 2 in 5 succeeds:
+[	else if HP of Micaela > 3 and micaelastory1 is false and a random chance of 2 in 5 succeeds:
 		now micaelastory1 is true;
 		say "***";]
 
 to say micaela_dist:
-	if xp of Micaela >= 3 and a random chance of 1 in 3 succeeds:
+	if XP of Micaela >= 3 and a random chance of 1 in 3 succeeds:
 		say "her playing bunny kids";
 	else:
 		say "[one of]stroking her cock through her skirt[or]teasing her clit[or]fingering her juicy pussy under her skirt[or]playing with her nipples and breasts[or]gently pressing a colourful egg partway in and out of her cunt[at random]";
@@ -135,8 +135,8 @@ the fuckscene of Micaela is "[sexwithMicaela]".
 to say sexwithMicaela:
 	setmonster "Easter Bunny";
 	choose row monster from the table of random critters;
-	if hp of Micaela < 3:
-		say "     [if hp of Micaela < 2]She certainly seemed eager earlier, but[else]Despite having sex earlier,[end if] you should probably talk to her first.";
+	if HP of Micaela < 3:
+		say "     [if HP of Micaela < 2]She certainly seemed eager earlier, but[else]Despite having sex earlier,[end if] you should probably talk to her first.";
 	else if lastfuck of Micaela - turns < 4:
 		say "     'As fun as it's been, sweetie, even I need a break from bunny humping from time to time,' she says with a happy giggle.";
 	else:
@@ -156,7 +156,7 @@ to say michaela_sexmenu:
 		now title entry is "Get fucked";
 		now sortorder entry is 2;
 		now description entry is "let the bunny bang you";
-	if hp of Micaela >= 6:
+	if HP of Micaela >= 6:
 		if ( facename of player is not "Easter Bunny" and bodyname of player is not "Easter Bunny" and skinname of player is not "Easter Bunny" and tailname of player is not "Easter Bunny" and cockname of player is not "Easter Bunny" ) or ( bodyname of player is "Easter Bunny" and player is pure ) and ( cocks of player > 0 or cunts of player > 0 ):
 			choose a blank row in table of fucking options;
 			now title entry is "Bunny-fucking session";
@@ -184,7 +184,7 @@ to say michaela_sexmenu:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-[				if hp of Micaela >= 6 lastfuck of Micaela - turns >= 40 and lastfuck of Micaela is not 255:
+[				if HP of Micaela >= 6 lastfuck of Micaela - turns >= 40 and lastfuck of Micaela is not 255:
 					say "***";]
 				now lastfuck of Micaela is turns;
 				if nam is "Fuck Micaela":
@@ -197,7 +197,7 @@ to say michaela_sexmenu:
 					say "[sexwithMicaela_04]";
 				else if nam is "Bunny-fucking session":
 					say "[sexwithMicaela_bf]";
-				if hp of Micaela < 6, increase hp of Micaela by 1;
+				if HP of Micaela < 6, increase HP of Micaela by 1;
 
 
 Section 6 - Sex Scenes
@@ -336,20 +336,20 @@ an everyturn rule:
 		if lust of Micaela > 16 and skipturnblocker is 0:
 			if Micaela is visible:
 				let x be a random number between 3 and 5;
-				if xp of Micaela is 0:
+				if XP of Micaela is 0:
 					now x is 4;
 				say "     Micaela releases a sudden and orgasmic moan as her egg-plump belly gives a clinking jiggle. 'Oooo! Eggy time!' she giggles. She sticks a nearby cushion on the floor in front of her in preparation. Sitting on the edge of her seat and leaning back, she raises and locks her legs up with her arms. This puts her rock-hard cock, plump balls, sopping cunt and resultingly slickened pucker on display for you.";
 				say "     The bunny girl pants and moans as her labia is gradually distended open by a colourful bulge pushing its way out. The painted slips back a few times before a big, hard push forces it to pop free. This one is much larger than the typical eggs of hers. The soft movement coming from within confirms it to be a live egg.";
 				say "     As you watch this odd, amazing and erotic sight, [if x is 3]another egg and then another[else if x is 4]another egg and then another and another still[else]another four eggs[end if] are pushed out in a similar manner, though with increasing ease as the laying progresses. As it is going on, Micaela starts to masturbate herself, brushing her fingertips along her shaft and rubbing her clit. As the final is pushed out and lands besides its siblings, she cums hard, splattering her colourful outfit with sweet-smelling semen.";
-				say "     It's not long before the bunny eggs crack open and [if xp of Micaela > 0]more colourful lapines are hatched[else]the colourful lapines inside hatch[end if] from the candy shells. They bounce around happily, snuggle up to and kiss their mom in a rather un-family-like way before running off to play with their siblings. You're left aroused by the sight you've just witnessed. And despite having just cum and the effort of laying her large eggs, the bunny mom seems up for some fun as well.";
+				say "     It's not long before the bunny eggs crack open and [if XP of Micaela > 0]more colourful lapines are hatched[else]the colourful lapines inside hatch[end if] from the candy shells. They bounce around happily, snuggle up to and kiss their mom in a rather un-family-like way before running off to play with their siblings. You're left aroused by the sight you've just witnessed. And despite having just cum and the effort of laying her large eggs, the bunny mom seems up for some fun as well.";
 				if lastfuck of Micaela - turns < 4, now lastfuck of Micaela is turns + 4;
-				increase xp of Micaela by x;
+				increase XP of Micaela by x;
 			else:
 				say "     You find yourself thinking about Micaela, the sexy Easter Bunny herm. You might want to check in with her.";
 				let x be a random number between 3 and 5;
-				if xp of Micaela is 0:
+				if XP of Micaela is 0:
 					now x is 4;
-				increase xp of Micaela by x;
+				increase XP of Micaela by x;
 			now lust of Micaela is 0;
 
 
@@ -359,7 +359,7 @@ Section 9 - Endings
 
 Section X - Notes
 
-[        hp of Micaela        ]
+[        HP of Micaela        ]
 [ 0 = not met                 ]
 [ 1 = no sex                  ]
 [ 2 = event sex               ]
@@ -383,7 +383,7 @@ Section X - Notes
 [ 9-16 = late pregnancy    ]
 [ 17+ = oviposition time   ]
 
-[       xp of Micaela       ]
+[       XP of Micaela       ]
 [ # of offspring            ]
 
 Micaela ends here.

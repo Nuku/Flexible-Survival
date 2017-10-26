@@ -33,7 +33,7 @@ to say voodoogeckodesc:
 
 to say losetovoodoogecko:
 	choose row monster from the table of random critters;
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Unwilling to continue resisting her, you drop to your knees";
 	else:
 		say "     You stumble to your knees as you can resist her dark power no longer";
@@ -54,11 +54,11 @@ to say losetovoodoogecko:
 	else if vgeckoloss > 4 and cocks of player > 0 and ( ( vgeckoanal > 3 and anallevel > 1 ) or ( cunts of player > 0 and cunt length of player >= ( cock length of player / 3 ) ) ) and cock length of player < 25 and a random chance of 2 in 7 succeeds:
 		let analorvag be 0; [0 = anal, 1 = vag - controls scene delivery and selfimpreg]
 		if cunt length of player >= ( cock length of player / 3 ), now analorvag is 1;
-		say "     As before, you find it difficult to move and are unable to resist as she pushes onto your back with her foot. This gecko is in the mood to toy with you further and takes your [cock size desc of player] [cock of player] cock in hand, teasing it to erection while licking at the voodoo doll's crotch hole. The sensation of this echoes in your [if analorvag is 1]cunt[else]anus[end if], feeling her bloated tongue working around inside you. This quickly has you moaning as your arousal increases[if hp of player <= 0], overcoming your waning resistance[end if].";
+		say "     As before, you find it difficult to move and are unable to resist as she pushes onto your back with her foot. This gecko is in the mood to toy with you further and takes your [cock size desc of player] [cock of player] cock in hand, teasing it to erection while licking at the voodoo doll's crotch hole. The sensation of this echoes in your [if analorvag is 1]cunt[else]anus[end if], feeling her bloated tongue working around inside you. This quickly has you moaning as your arousal increases[if HP of player <= 0], overcoming your waning resistance[end if].";
 		say "     When she finally withdraws her tongue from the toy, your [if analorvag is 1]pussy[else]asshole[end if] is left feeling stretched and slobbery. Expecting her to drive her meaty rod into the doll, you are unprepared for her pushing it down over your own [if cock length of player > 12]oversized[end if] shaft. You cry out at the conflicting sensation of thrusting into a tight, [if analorvag is 1]slick[else]warm[end if] hole and having what seems like your enlarged phallus forcing itself into you.";
 		say "     The gecko grins in perverse delight at your predicament and pumps the voodoo doll of yourself over your throbbing shaft[if cock length of player > 16]. Given the great size of your cock, it feels incredibly massive inside you, bulging your belly to cope with it[end if]. As you adjust to the amplified penetration of yourself via the magical connection, you increasingly lose yourself to the escalating pleasure and feedback of pounding your own [if analorvag is 1]pussy[else]ass[end if] [if cock length of player > 16]beyond all reasonable limits[end if]. Losing any semblance of self-control, you start thrusting into the doll even as the gecko pushes it down. When the lizard offers you her cock directly, you eagerly accept it into your mouth and gulp down her musky load. You groan weakly and cum hard, pumping your load into the doll, resulting in your belly being filled by a proportionally magnified load of purple-streaked cum. You are left bloated and [if cock width of player > 16]gushing[else if cock width of player > 12]pouring[else]drooling[end if] cum from your abused [if analorvag is 1]vagina[else]rectum[end if] [if cock width of player > 12]and overflowing from your mouth [end if]as you pass out. By the time you recover from this mindblowing orgasm, the gecko is gone and you've been left soaking in a [if cock width of player > 12]pool[else]puddle[end if] of your own tainted semen.[if analorvag is 1 or player is mpreg_able][selfimpregchance][end if]";
 	else if vgeckoloss > 4 and cocks of player > 0 and cock length of player >= 25 and a random chance of 2 in 7 succeeds:
-		say "     As before, you find it difficult to move and are unable to resist as she pushes onto your back with her foot. This gecko is in the mood to toy with you further and takes your [cock size desc of player] [cock of player] cock in hand, teasing it to erection while licking at your large cumslit. The sensation of her tongue slathering over your oversized manhood soon has you drooling precum for her to lap up hungrily. She even stuffs a pair of fingers into it, working to stretch it open as her tongue delves deeper. This oddly pleasurable act quickly has you moaning as your arousal increases[if hp of player <= 0], overcoming your waning resistance[end if].";
+		say "     As before, you find it difficult to move and are unable to resist as she pushes onto your back with her foot. This gecko is in the mood to toy with you further and takes your [cock size desc of player] [cock of player] cock in hand, teasing it to erection while licking at your large cumslit. The sensation of her tongue slathering over your oversized manhood soon has you drooling precum for her to lap up hungrily. She even stuffs a pair of fingers into it, working to stretch it open as her tongue delves deeper. This oddly pleasurable act quickly has you moaning as your arousal increases[if HP of player <= 0], overcoming your waning resistance[end if].";
 		say "     When she finally withdraws her tongue from your cumslit, it is left feeling stretched and slobbery. Expecting her to drive her meaty rod into the doll, you are unprepared for her pushing it down into your hyperphallic shaft. You cry out at the bizarre sensations of having the fabric figure stuffed into your manhood and the tight constriction you feel all around you even as your stretched urethra squeezes down around it. You feel warm and wet as your precum soaks the totem and seeps out around it. Despite its strangeness, it is also oddly exciting.";
 		say "     The gecko grins in perverse delight at your predicament and pumps the voodoo doll of yourself in and out of your hulking shaft. As you adjust to the sensations coming via the magical connection, you increasingly lose yourself to the escalating pleasure and feedback of what feels like being stuffed into your own cock. Losing any semblance of self-control, you start trying to thrust and moan for more as the gecko works the doll into your gaping cumslit. When the lizard gives the dark totem a hard push and shoves it along with her forearm fully into your cum tunnel, you cry out loudly and your balls churn excitedly. She barely has time to pull her arm free before your cock explodes with cum, spraying the cum-laden intruder out along with your semen. You can feel yourself become stuffed and bloated with the cum forced into the doll by the rocketing blast moments before you're knocked out when it strikes the ground. When you finally recover from it all, the gecko is gone and you've been left soaked and stuffed with your own tainted semen.[selfimpregchance]";
 	else if vgeckoloss > 4 and cunts of player > 0 and ( cunt width of player > 8 or playercanub is true ) and player is impreg_able and a random chance of 1 in 4 succeeds:
@@ -201,7 +201,7 @@ to say vgeckosex_06:		[oral - pussy]
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -228,7 +228,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 16;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 54; [ The monster's starting hit points. ]
+	now HP entry is 54; [ The monster's starting HP. ]
 	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 10; [ Monster's average damage when attacking. ]
 	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -282,7 +282,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Voodoo Gecko":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As the voodoo chanting in your mind grows louder, your human personality is twisted and subsumed. Heeding the call, you search the fairgrounds until drawn to one of the haunted houses. With a heavy voodoo theme to it, you know it is where you belong. As if sensing your arrival, several gecko shaman step out to greet you.";
 			if player is pure:
 				if vgeckobeaten >= 4 and vgeckobeaten >= ( ( vgeckoloss * 125 ) / 100 ):	[25% more wins than losses]

@@ -36,10 +36,10 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 			say "[paula_saved]";
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     With you defeated by the canine doctor, Alexandra is forced to come to your rescue. Outnumbered in the mutant-infested hospital, the two of you must retreat as the doctor calls for security, leaving their vixenized victim to her fate as another member of the staff.";
-			now hp of Paula is 2;
+			now HP of Paula is 2;
 		else:
 			say "     Unable to hold up against the canine doctor, you have to call for a retreat. Alexandra, reluctant to leave their vixenized victim, is forced to go along or face the trio on her own. And with the doctor calling for security to come, you can hear more mutants approaching. The two of you quickly make your escape, leaving their patient to become another of the hospital staff.";
-			now hp of Paula is 2;
+			now HP of Paula is 2;
 	else:
 		say "     With Alexandra already focused on the doctor, you move towards the vixens. Grabbing the one busily licking at their patient's pussy, you pull her away. 'Hey! I'm on duty!' she yips as she shoves you back. 'Though I guess I could give you a quick treatment,' she adds as her eyes run over you. And with that, she comes at you.";
 		challenge "Vixen Nurse";
@@ -51,17 +51,17 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 				say "[paula_saved]";
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     With you defeated by the naughty nurse and Alexandra struggling against canine doctor, she's forced to fall back to get you out of there. Retreating further as the doctor calls for security, drawing the attention of others, you are forced to leave their vixenized victim to her fate as another member of the staff.";
-				now hp of Paula is 2;
+				now HP of Paula is 2;
 			else:
 				say "     Unable to hold up against the vulpine nurse, you have to call for a retreat. Alexandra, already struggling against the canine doctor, is forced to fall back as well or face the trio on her own. And with the doctor calling for security to come, you can hear more mutants approaching. The two of you quickly make your escape, leaving their patient to become another of the hospital staff.";
-				now hp of Paula is 2;
+				now HP of Paula is 2;
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     With you defeated by the naughty nurse and Alexandra struggling against canine doctor, she's forced to fall back to get you out of there. Retreating further as the doctor calls for security, drawing the attention of others, you are forced to leave their vixenized victim to her fate as another member of the staff.";
-			now hp of Paula is 2;
+			now HP of Paula is 2;
 		else:
 			say "     Unable to hold up against the vulpine nurse, you have to call for a retreat. Alexandra, already struggling against the canine doctor, is forced to fall back as well or face the trio on her own. And with the doctor calling for security to come, you can hear more mutants approaching. The two of you quickly make your escape, leaving their patient to become another of the hospital staff.";
-			now hp of Paula is 2;
-	if hp of Paula is 2:		[lost or fled]
+			now HP of Paula is 2;
+	if HP of Paula is 2:		[lost or fled]
 		say "     Once you've put some distance between you and the hospital, you and Alexandra pause somewhere out of sight to take stock of the situation. Before the incident in the operating room, the two of you had managed to collect some usable medical supplies, at least enough to deal with some basic problems those under her protection might have. Clearly disappointed with her failure at saving a potential survivor, she's glad that the two of you were at least able to make it out of there intact. She is a little sullen for a while, but focuses on still moving forward with her plans.";
 	move player to Police Station;
 	follow the turnpass rule;
@@ -76,7 +76,7 @@ to say paula_saved:
 	WaitLineBreak;
 	say "     The trip back to the police station is mostly quiet, though you do get some preliminary information from the vixen. Aside from learning that she's another survivor named Paula and that she was part lizard before getting caught, it turns out she was on a similar mission as you, raiding the hospital for medical supplies. Having some medical training of her own, she thought it'd be a suitable means to bribe the mutants around her home to leave her alone. She's quite dubious of the offer for safe haven at the police station, but she goes along with it rather than try to maintain the goodwill of the lustful tribes forming around her place, whom she trusts even less as they descend further into depravity. Despite her cynicism and heavy use of irony (in the trendy sense), she does offer to help out by acting as a nurse when needed. Having found a nurse's outfit among the bundle she escaped with, she certainly looks the part.";
 	move Paula to Police Lockerroom;
-	now hp of Paula is 3;
+	now HP of Paula is 3;
 
 
 Section 1 - Paula the Vixen Nurse
@@ -97,18 +97,18 @@ Section 2 - Conversation
 
 Instead of conversing the Paula:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Paula]. Location: [location of Paula]. Alexandra's hint: [if AT_Paula is true]Given[else]Not given[end if]. <- DEBUG[line break]";
-	if hp of Paula is 0 or hp of Paula is 1 or hp of Paula is 2:
-		say "ERROR-Paula-[hp of Paula]L: You should not be able to find her yet.";
-	else if hp of Paula is 3:
+		say "DEBUG -> HP: [HP of Paula]. Location: [location of Paula]. Alexandra's hint: [if AT_Paula is true]Given[else]Not given[end if]. <- DEBUG[line break]";
+	if HP of Paula is 0 or HP of Paula is 1 or HP of Paula is 2:
+		say "ERROR-Paula-[HP of Paula]L: You should not be able to find her yet.";
+	else if HP of Paula is 3:
 		say "     Approaching the vixen, you ask her how she's making out. 'Well, things aren't too bad here right now. Oh, I'm sure it'll all go downhill eventually, but it should be safe enough for a while. You and Alexandra seem to be setting up a pretty good shelter, so when this place does eventually descend into a sex pit, at least it'll be a [if policerepair > 3]well-protected and [end if]well-equipped one. A person can't reasonably expect much more than that these days.'";
 		say "     Pointing out that that's a pretty grim outlook, especially since military rescue is coming, she just rolls her eyes. 'Oh, you believe that garbage, do you? Who'd want to come in here to try and save a bunch of pervy monsters like us? That's just to keep us borderline cases quiet and complacent a little longer.";
 		say "     'Look, I'm a realist, not a pessimist. And I realize that things have gone to Hell in a handbasket. No point in expecting the best out of people - you'll rarely get it and just be disappointed in them almost all the time. But when you don't, at least you can have your expectations exceeded,' she says, running a paw across your hip with a sultry swish of her tail. 'On rare occasions.'";
-		now hp of Paula is 4;
+		now HP of Paula is 4;
 	else if population of Police Station > 0 and a random chance of 1 in 4 succeeds:
 		say "[paulasurvivors]";
 	else:
-		say "     [one of][if population of Police Station is 0]'Any patients for me?'[else]'I've got a little bit of time before I have to see my next patient.'[end if][or]'You seem to go wandering around outside quite a bit. Probably perving on the mutants, aren't you?'[or]'You know, you're going to get yourself into real trouble out there if you keep pressing your luck. If you end up hurt, come see me for some [bold type]healing[roman type].'[or]'I wonder which of you two'll snap first and turn this place into a sex harem. Probably [if hp of Alexandra < 61]Officer Doggy out there - she's wound pretty tight. She should learn to relax and have a little fun. Therapeutically ease the pressure and all[else]be you, running around out there, probably getting up to all sorts of kinky stuff with those mutants out there. You'll end up some kind of sex perv and come back here to ravage us all[end if],' she says, stretching her arms up, causing her quad breasts to press against the fabric straining to cover them.[or]'I'd made out alright on my own for a while, but my luck was bound to run out.'[or]'I think this vixen look's not bad. Better than those itchy scaly patches I'd picked up.'[or]'Can you believe I was a part-time nurse at that hospital before all this? This isn't what I had in mind when I was hoping to become full-time staff,' she says, fondling her double-bosom teasingly.[or]'So you thinking to get some [if hp of paula >= 5]more [end if]sex out of me in return for letting me stay here. Well, I guess that should be expected,' she says, giving her booty a shake in your direction.[or][if hp of Alexandra >= 65]'That robo-chick is one cold as ice bitch. She's caught and she's still smug like her shiny ass makes her better than the rest of us or something. Miss Bow-Wow should put dents in her chassis until she talks.'[else]'You just like coming here to stare at me in my nurse's outfit, don't you?'  Dirty perv,' she grumbles even as she turns and bends over to reach for something, tail raised and flicking.[end if][in random order]";
+		say "     [one of][if population of Police Station is 0]'Any patients for me?'[else]'I've got a little bit of time before I have to see my next patient.'[end if][or]'You seem to go wandering around outside quite a bit. Probably perving on the mutants, aren't you?'[or]'You know, you're going to get yourself into real trouble out there if you keep pressing your luck. If you end up hurt, come see me for some [bold type]healing[roman type].'[or]'I wonder which of you two'll snap first and turn this place into a sex harem. Probably [if HP of Alexandra < 61]Officer Doggy out there - she's wound pretty tight. She should learn to relax and have a little fun. Therapeutically ease the pressure and all[else]be you, running around out there, probably getting up to all sorts of kinky stuff with those mutants out there. You'll end up some kind of sex perv and come back here to ravage us all[end if],' she says, stretching her arms up, causing her quad breasts to press against the fabric straining to cover them.[or]'I'd made out alright on my own for a while, but my luck was bound to run out.'[or]'I think this vixen look's not bad. Better than those itchy scaly patches I'd picked up.'[or]'Can you believe I was a part-time nurse at that hospital before all this? This isn't what I had in mind when I was hoping to become full-time staff,' she says, fondling her double-bosom teasingly.[or]'So you thinking to get some [if HP of paula >= 5]more [end if]sex out of me in return for letting me stay here. Well, I guess that should be expected,' she says, giving her booty a shake in your direction.[or][if HP of Alexandra >= 65]'That robo-chick is one cold as ice bitch. She's caught and she's still smug like her shiny ass makes her better than the rest of us or something. Miss Bow-Wow should put dents in her chassis until she talks.'[else]'You just like coming here to stare at me in my nurse's outfit, don't you?'  Dirty perv,' she grumbles even as she turns and bends over to reach for something, tail raised and flicking.[end if][in random order]";
 [***]
 
 to say paulasurvivors:
@@ -128,23 +128,23 @@ the fuckscene of Paula is "[sexwithPaula]".
 
 to say sexwithPaula:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Paula]. Location: [location of Paula]. Alexandra's hint: [if AT_Paula is true]Given[else]Not given[end if]. <- DEBUG[line break]";
-	if hp of Paula is 0 or hp of Paula is 1 or hp of Paula is 2:
-		say "ERROR-Paula-[hp of Paula]L: You should not be able to find her yet.";
-	else if hp of Paula is 3:
+		say "DEBUG -> HP: [HP of Paula]. Location: [location of Paula]. Alexandra's hint: [if AT_Paula is true]Given[else]Not given[end if]. <- DEBUG[line break]";
+	if HP of Paula is 0 or HP of Paula is 1 or HP of Paula is 2:
+		say "ERROR-Paula-[HP of Paula]L: You should not be able to find her yet.";
+	else if HP of Paula is 3:
 		say "     You haven't really had a chance to talk to Paula yet since she got here. You should probably start with that.";
 	else if cocks of player is 0 and cunts of player is 0:
 		say "     Lacking a proper gender of your own right now, perhaps you should deal with that before seeking sex from others.";
 	else if lastfuck of Paula - turns < 6:
 		say "     'You're back pretty quickly for more, don't you think? Probably means you're losing it, if you're back asking for sex again so soon. Try holding out a little longer before we knock boots again,' she adds, running her paws along her sides in a sultry manner in a clear invitation that you are indeed welcome back for more soon.";
 	else:
-		if hp of Paula is 4:
+		if HP of Paula is 4:
 			say "     'And so it begins,' she says with a bit of sigh. 'Knew there'd be a catch to staying here.'  Despite her words, she show no reluctance in the speed at which she strips herself down, baring her silver-furred body to you. With a slow stretch and a swish of her tail, she spreads herself out on the cot. With one foot sitting up on the edge of it, she puts herself on tantalizing display for you. 'Guess I'll just have to learn to put up with it somehow,' she purrs, running her tongue along the edge of her lips.";
 		else:
 			say "     'Back for more, I see. Taking advantage of the poor nurse you've taken in. Well, if that's how it has to be,' she says, grinding her sexy body against yours. She rubs her ample bosom against your chest before moving her paws up to slowly unbutton her nurse's outfit. Even as she's stripping down, she moves over to the cot with a sultry sway to her hips. Dropping her clothes to the floor, she stretches out on her makeshift examination table in a steamy pin-up pose.";
-		say "     'So, what did you have in mind[if hp of Paula > 4] this time[end if]?'";
+		say "     'So, what did you have in mind[if HP of Paula > 4] this time[end if]?'";
 		say "[Paulasexmenu]";
-		if hp of Paula is 4, now hp of Paula is 5;
+		if HP of Paula is 4, now HP of Paula is 5;
 
 
 to say Paulasexmenu:
@@ -276,26 +276,26 @@ Understand "Paula healing" as paulahealing.
 Understand "healing Paula" as paulahealing.
 
 check paulahealing:
-	If Paula is not visible, say "[if hp of Paula < 3]You're on your own for that unless you go see Paula for assistance[else]Try using a medkit or another means of healing[end if]." instead;
+	If Paula is not visible, say "[if HP of Paula < 3]You're on your own for that unless you go see Paula for assistance[else]Try using a medkit or another means of healing[end if]." instead;
 
 carry out paulahealing:
-	if ( 100 * hp of player ) / maxhp of player >= 90:
+	if ( 100 * HP of player ) / maxHP of player >= 90:
 		say "     You're not really hurt enough to require using the shelter's limited medical supplies. You should probably just cope.";
-	else if lastPaulahealing - turns is less than 8:
+	else if lastPaulahealing - turns < 8:
 		say "     'We've got to ration our medical supplies. I know you're kind of a big help to Alexandra, but access is limited to once a day. We have to be sure we have enough for any survivors in need we're sheltering.";
 	else:
-		let healed be ( maxhp of player - hp of player ) / 2;
+		let healed be ( maxHP of player - HP of player ) / 2;
 		if "Rapid Healing" is listed in the feats of the player:
 			now healed is ( healed times 110 ) divided by 100;
 		if "Regeneration" is listed in the feats of the player:
 			now healed is ( healed times 110 ) divided by 100;
-		if ( healed + hp of player ) > maxhp of player, now healed is ( maxhp of player - hp of player );
-		increase hp of player by healed;
+		if ( healed + HP of player ) > maxHP of player, now healed is ( maxHP of player - HP of player );
+		increase HP of player by healed;
 		say "     'Alright, what seems to be the problem?' she asks. As you point out your injuries to her, she looks them over. 'You know, you'd not be in such rough shape if you chose to stick around here with us. It's not like you're doing any good gallivanting around out there,' she says cynically. 'Much better to just stay here and keep out of trouble,' she adds, groping you with a passing paw even as she grumbles teasingly. After her quick examination, she digs out the necessary supplies from her bag, all while making a show of waving her rear in the air. 'You're probably just out there to chase some tail. Typical.'";
-		say "     Despite her cynical edge and teasing mannerisms, she takes proper care of you, treating your wounds and ensuring you're properly patched up before letting you off the examination table with another sharp retort and a swat on your rear. You feel considerably better, having recovered [special-style-1][healed][roman type] hp.";
+		say "     Despite her cynical edge and teasing mannerisms, she takes proper care of you, treating your wounds and ensuring you're properly patched up before letting you off the examination table with another sharp retort and a swat on your rear. You feel considerably better, having recovered [special-style-1][healed][roman type] HP.";
 		now lastPaulahealing is turns;
 
-[  hp of Paula          ]
+[  HP of Paula          ]
 [ overall status        ]
 [ 0 = Task not prompted ]
 [ 1 = Alexandra got supplies, no Paula ]

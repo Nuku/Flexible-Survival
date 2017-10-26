@@ -289,7 +289,7 @@ carry out navigating:
 		stop the action;
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
 	now battleground is "Outside";
-	if a random number from 1 to 20 is less than 10 minus bonus and battleground is not "void":
+	if a random number from 1 to 20 < 10 minus bonus and battleground is not "void":
 		if there is a area of Battleground in the table of random critters:
 			Fight;
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
@@ -297,7 +297,7 @@ carry out navigating:
 				Fight;
 	else:
 		say "You travel to [the noun], avoiding trouble as best you can.";
-	if hp of Velos > 2, move Velos to the noun;
+	if HP of Velos > 2, move Velos to the noun;
 	move the player to the noun;
 	follow turnpass rule;
 

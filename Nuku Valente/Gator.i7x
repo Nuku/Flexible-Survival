@@ -14,7 +14,7 @@ to say gator attack:
 	say "'Weak little thing, too bad. I thought you had more in you,' She growls as she pushes you to the ground roughly, 'I suppose I can still have some fun with you...' She crawls up on top of you, peeling off your clothes as she goes. You try to wriggle free, but a soft but painful bite to your shoulder stills you. She wraps her arms around you and hefts your ass up into the air. Her angry looking manhood juts up from her groin, dripping thin streams of lubricant as she moves you into position.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
-	if cunts of player is greater than 0:
+	if cunts of player > 0:
 		say "She smoothly presses into your exposed cunt as you try to wriggle from her, but she just draws you back fully onto her powerful spear, starting to breed you urgently, 'Gonna fill a little slut up with little squealing gator pups', she hisses in an ear, 'Little weak cunts are no good for anything but mothering and being fucked'. She pulls you back firmly against each powerful stroke into your yielding form, balls slapping up against your bottom with each movement. Her breath grows faster and faster as she works at you, her generous breasts rubbing along your back.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
@@ -31,7 +31,7 @@ To say gator loss:
 		say "Successfully subduing the great green beast, you stand over her as she pants and heaves. 'You put up a good fight,' she says, smiling with her sharp teeth, 'Kind of turns me on... I could use a nice, strong, partner.' She slowly gets to her feet, but makes no immediate motion to resume the battle. Her reptilian dick wags under her at half mast as she stretches out, 'We could have so much fun.' She approaches you slowly and leans in, whispering the location of her den, then slipping her arms around you. You can feel the warm soft curves of her front pressed against you even as her cock nudges against a thigh, 'We don't have to fight. I can be very accommodating.'";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
-		if cocks of player is greater than 0:
+		if cocks of player > 0:
 			say "Your own member stiffens unconsciously, responding to the obvious signals of readiness this beast is sending.";
 		say "You wrap your hands around her in return in a brief exchange. Your hands find that, despite her thick looking scales, the gator is soft to the touch, and quite round. If you closed your eyes, she is nothing but a full-bodied woman, with a few extras. Her fertile form gently squirms from you with a snap of her great jaws, 'Visit, soon. I will be waiting,' she promises, slipping away into the darkness with a sway of her thick tail.";
 		now gator den is known;
@@ -41,7 +41,7 @@ To say gator loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -68,8 +68,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 10;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 45;
-	now lev entry is 7; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 45;
+	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking.]
 	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -95,12 +95,12 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Sewer Gator":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if gatorconsent is 1:
 				say "You settle down with that gator, your mind ensnared by her enchanting voice. She welcomes you with open arms and conditions you with love and affection, soon making you a perfectly obedient little pet for her.";
-				if cocks of player is greater than 0:
+				if cocks of player > 0:
 					say "She sates her female urges on your cock, riding it whenever she gets in the proper mood. Her frequent dalliances result in children, but they are feral at birth, and usually flee off to parts unknown. It does not seem to bother her greatly.";
-				if cunts of player is greater than 0:
+				if cunts of player > 0:
 					say "When her hunting goes poorly, you prove to be a very skilled outlet for her frustration. She rides you in every position over the rest of your life, filling your belly with child after child, squealing snapping beasts that stay only long enough to get a rough meal from your chest before fleeing into the wilds.";
 			else:
 				say "Your fragile mind snaps and you growl, seeking a nice dark place to hide. You prey on mutants and humans foolish enough to come too close, grabbing them in your great jaws and hauling them to your den to violate. If your hunger is too great, they never leave. Fortunately, this is only about one in five, the others are left dizzy with pleasure, but unharmed. Humans are mutated, but most leave, except one. Even snapping at them couldn't get them to budge. Eventually you gave up, and gained a partner.";
@@ -145,16 +145,16 @@ to say gator den scene:
 		say "Her words seem to wriggle insidiously in your mind, feeling like a better idea by the moment. Though she does not change your body any further in the long chat, your mind feels a bit bent, and you look forward to your next visit all the more for it.";
 		decrease the humanity of the player by a random number from 5 to 20;
 	else: [ Sex]
-		if a random chance of 1 in 2 succeeds and cocks of player is greater than 0: [ She wants to be fucked]
-			say "She rolls over and raises her thick tail over her back, exposing the pinkened lips nestled between her large thighs, 'Come show me just how much a stud you are,' she invites. Your [cock size desc of player] [cock of player] cock[if cocks of player is greater than 1]s[end if] rise[if cocks of player is 1]s[end if] to attention quickly and you scramble up to accept the offer, perhaps faster than you normally would. Something about her round rump just seems to call to you, and you heed the call, slamming home into her.";
-			if cock length of player is less than 4:
+		if a random chance of 1 in 2 succeeds and cocks of player > 0: [ She wants to be fucked]
+			say "She rolls over and raises her thick tail over her back, exposing the pinkened lips nestled between her large thighs, 'Come show me just how much a stud you are,' she invites. Your [cock size desc of player] [cock of player] cock[if cocks of player > 1]s[end if] rise[if cocks of player is 1]s[end if] to attention quickly and you scramble up to accept the offer, perhaps faster than you normally would. Something about her round rump just seems to call to you, and you heed the call, slamming home into her.";
+			if cock length of player < 4:
 				say "She gets an odd expression when you sink into her, then looks over shoulder, 'Mi amor, you need help,' she croons, curling her tail around you and squeezing. The warmth returns to you, filling you with hot tingles that slowly sink into your groin as things begin to change down there, swelling up inside the gator as she gasps and coos. The pleasure of changing while sheathed in the fertile female burns at your mind, eroding your human sensibilities.";
 				follow the sex change rule;
 				follow the sex change rule;
 				decrease the humanity of the player by 5;
-			if cock length of player is greater than 10:
+			if cock length of player > 10:
 				say "She squeals loudly as you try to cram your oversized manhood into her, but it's too much. She scampers away from you in a wriggle, but before you can be disappointed, you feel her soft hands on you, stroking firmly at you, 'Poor little dear,' she says with a smile, 'I will help us both,' she promises, engulfing you in the warm heat of her mouth, lapping at you with a large tongue and stroking at you with her skilled fingers. Your body tingles with pleasure, and change, as your genitals throb with the tell tale hint of transformation as she works you towards a peak rapidly. The changing throbbing reaches its climax just as you do, spilling your seed into her waiting maw.";
-				if cock width of player is greater than 20:
+				if cock width of player > 20:
 					say "The force and volume of your seed is so great that it overflows her long snout and runs down her front in great rivers, painting her heaving breasts in your pearly virility. She groans as her belly distends, gulping down as much as she can even as it gets everywhere else, leaving her quite a mess.";
 				follow the sex change rule;
 				decrease the humanity of the player by 5;
@@ -164,13 +164,13 @@ to say gator den scene:
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 		else if a random chance of 1 in 2 succeeds: [ She fucks]
-			if cunts of player is greater than 0:
+			if cunts of player > 0:
 				say "She presses firmly to your front, rubbing chests together in slow circles as her firmness grows against you, poking into your belly lightly, 'Gonna make you squeal,' she says with a smile, reaching for your hips and pulling up, she shimmies to light herself up to enter your moist cavern without delay.";
-				if cunt length of player is less than 8:
+				if cunt length of player < 8:
 					say "Her cock stretches your relatively small cunt as it spears up into your cavern. By the second motion, you find yourself gushing wet, making her motions all the easier as she works at you, loosening your sex with her eager thumps.";
 					increase cunt length of player by 2;
 					increase cunt width of player by 2;
-				else if cunt length of player is greater than 12:
+				else if cunt length of player > 12:
 					say "She sinks easily into your gaping hole, thrusting with loud lewd slurps as she grinds and groans with the pleasure of your hot tunnel around her eager shaft, not minding your large nature at all.";
 				say "She wraps her arms around you in a fond embrace, rubbing her scaly cheek against your own as she coos soft delightful things to you, her words echoing in erotic tingles in your body even as she starts to piston against you, filling you with her urgent and virile pole. Her thick tail thrashes about with every movement even as your own hips start to rise to meet her, crashing together in a dance of love and lust.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -179,7 +179,7 @@ to say gator den scene:
 				say "Satisfied, she draws from you with a wet pop, 'Perfect, my lovely mate. You should stay... But you don't have to, think about it, come back.' She blows a kiss at you and leans back on her bed, looking content for the moment as your cunt tingles with lingering pleasure.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
-			if cunts of player is less than 1:
+			if cunts of player < 1:
 				say "'I want to be on top,' she says as she rubs over your belly and chest slowly, 'But you are missing the part I want to fuck most. How about I let you choose?' She leans in close, rubbing her nose to yours, 'Want me to take that pretty ass of yours?'";
 				if the player consents:
 					say "With your approval, she grins and flips you right over. She runs her soft scaly palms over your rump as she rumbles appreciatively, 'Don't you worry one bit. Mother will be gentle.' She licks a finger, running it across the wet surface of her tongue before pressing the dangerously sharp tip of her claw to your puckered back door. She gently nudges your ring apart, wriggling the finger into your tight flesh as she leans in over you, 'Open up for mother, relax...' Her voice soothes you, and you find yourself relaxing at her command, allowing her digit to slowly push past, embedded fully in you. You can feel it moving inside of you as she ensures your readiness.";
@@ -202,7 +202,7 @@ to say gator den scene:
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 	decrease the humanity of the player by 5;
-	if the humanity of the player is less than 10:
+	if the humanity of the player < 10:
 		end the story saying "You decide against leaving after all.";
 	else:
 		say "You head home afterwards.";

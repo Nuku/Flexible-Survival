@@ -25,7 +25,7 @@ to say losetoGryphon:
 	if waiterhater is 0, wait for any key;
 	LineBreak;
 	if a random chance of 3 in 4 succeeds: [Mounted by gryphon]
-		say "     The gryphon pushes you over onto your belly with a powerful swipe. You push yourself up on all fours to try to get away, but his bulk is over you in an instant. [if scalevalue of player is less than 4]He puts his forelegs on either side of you, trapping you beneath him,[else]He mounts your [bodydesc of player] rear, wrapping his powerful forelegs around your hips[end if] and hunches his hips. You can feel something hot, wet, and rough probe your backside, looking for your [if cunts of player > 0]feminine cleft[else]asshole[end if].";
+		say "     The gryphon pushes you over onto your belly with a powerful swipe. You push yourself up on all fours to try to get away, but his bulk is over you in an instant. [if scalevalue of player < 4]He puts his forelegs on either side of you, trapping you beneath him,[else]He mounts your [bodydesc of player] rear, wrapping his powerful forelegs around your hips[end if] and hunches his hips. You can feel something hot, wet, and rough probe your backside, looking for your [if cunts of player > 0]feminine cleft[else]asshole[end if].";
 		say "     Suddenly, you feel his pointed tip lodge between your [if cunts of player > 0]labia[else]ass cheeks[end if] and you gasp as he thrusts inward, spreading you around the first few inches of his cock. What you suspect to be leonine barbs on the head of his penis add a strange, rough texture to his maleness. Your suspicion is confirmed as he pulls back a bit, and they drag against the walls of your [if cunts of player > 0]vagina[else]rectum[end if] in a not-altogether-unpleasant scraping sensation. He quickly works his cock into your passage fully, his copious precum lubricating you thoroughly.";
 		LineBreak;
 		if waiterhater is 0, wait for any key;
@@ -51,7 +51,7 @@ to say losetoGryphon:
 		say "     Pleased with your performance, the gryphon spreads his wings and takes off, leaving you to clean yourself up.";
 
 to say beattheGryphon:
-	say "     The beaten gryphon gives an angry cry, clearly disappointed you were not easier prey. Feeling that he deserves to have the tables turned on him, there's a brief moment when you might catch the beast before he makes his escape[if carried of gryphon cum > 0 and hp of Garrett >= 5]. You're also reminded that you have a bottle of Garrett's special gryphon cum milk. This might be a fun opportunity to get the creature to drink some[end if]. Shall you take it?";
+	say "     The beaten gryphon gives an angry cry, clearly disappointed you were not easier prey. Feeling that he deserves to have the tables turned on him, there's a brief moment when you might catch the beast before he makes his escape[if carried of gryphon cum > 0 and HP of Garrett >= 5]. You're also reminded that you have a bottle of Garrett's special gryphon cum milk. This might be a fun opportunity to get the creature to drink some[end if]. Shall you take it?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	if cocks of player > 0:
@@ -63,7 +63,7 @@ to say beattheGryphon:
 	now title entry is "Get fucked";
 	now sortorder entry is 2;
 	now description entry is "roll him over and mount that knotted cock swinging between his legs";
-	if carried of gryphon cum > 0 and hp of Garrett >= 5 and inasituation is false:
+	if carried of gryphon cum > 0 and HP of Garrett >= 5 and inasituation is false:
 		if cocks of player > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Garrett's special milk - Give anal";
@@ -127,7 +127,7 @@ to say feralgryph_milk01:
 	decrease carried of gryphon cum by 1;
 	increase fgryphon_TFcount by 1;
 	now lastfgryphon_TF is turns;
-	increase xp of Garrett by 1;
+	increase XP of Garrett by 1;
 	let gryphtype be 0;
 	if bodyname of player is "Feral Gryphon" or facename of player is "Feral Gryphon":
 		now gryphtype is 2;
@@ -146,7 +146,7 @@ to say feralgryph_milk02:
 	decrease carried of gryphon cum by 1;
 	increase fgryphon_TFcount by 1;
 	now lastfgryphon_TF is turns;
-	increase xp of Garrett by 1;
+	increase XP of Garrett by 1;
 	let gryphtype be 0;
 	if bodyname of player is "Feral Gryphon" or facename of player is "Feral Gryphon":
 		now gryphtype is 2;
@@ -170,7 +170,7 @@ to say feralgryph_milk02:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -197,7 +197,7 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 12;
 	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 90;
+	now HP entry is 90;
 	now lev entry is 10;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 13;              [ Monster's average damage when attacking. ]
 	now area entry is "Museum";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -226,13 +226,13 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Feral Gryphon":
-		if humanity of player is less than 10:
-			if player is pure and hp of Garrett >= 7 and cocks of player > 0 and cunts of player is 0:
+		if humanity of player < 10:
+			if player is pure and HP of Garrett >= 7 and cocks of player > 0 and cunts of player is 0:
 				say "     As you succumb to your gryphon infection, you can feel your mind descending to bestial urges. Before you completely lose yourself, you make your way back to Qytat and Garrett's milking operation. The milkman greets you happily and makes a special place for you among his prized milkers. The doses of processed he-gryphon milk you receive do help keep more of your intellect intact even as they fuel your gay lusts and gryphon desires.";
 				say "     Garrett keeps you apprised of his success in arranging a deal with the military, as the two of you had planned. With his gryphon milkmen providing reconnaissance on the city, they in turn are left unharassed by the incoming soldiers. This leaves them free to continue to spread the male milk to others, further bolstering your numbers. To the soldiers just trying to get out of the city, one gryphon in a milk company hat is the same as another, so the swelling numbers go unremarked. And if the occasional stray squaddie gets snatched up for the milking facility - well, who's going to miss one here or there?";
 				say "     As for yourself, you are quite happy with your position managing the milking facility. There, you are able to spend your time with the other sexy male gryphons, both anthro and feral, being used to produce the potent cream. In the early days, your semen is collected multiple times a day by sexy assistants eager for the task. Later on, once the commercial product is released on the market, milking machines are obtained to further increase production - though everyone gets plenty of [']hands-on['] assistance as well.";
 				say "     While the commercial product has to be rendered non-infectious first with a quick microwaving, some full-potency bottles are occasionally slipped out to special clients. This often results in a new client for the product or in a new recruit being brought to the milking facility. You take particular pleasure in seeing to the training of these new recruits on their role as semen-producing milkers. It usually doesn't take long for these recruits to accept their new role in life and even the more obstinate ones only requiring a few disciplinary fucks and extra rations of the unprocessed he-gryphon milk to bring about a change of heart.";
-				if gryphoness is tamed and xp of Timothy > 2:
+				if gryphoness is tamed and XP of Timothy > 2:
 					say "     With you stabled and working in the milking facility, you have no interest in Denise anymore. For a while, you are pestered by visits from her, but those soon stop. You hear from others that she's been taken as a pet by Timothy's mistress and turned into another breeder pet by her. The news doesn't affect you, your life focused on milking facility in which you live almost constantly now. There's plenty enough for you with being milked, monitoring the other milkers, seeing to the training of new recruits and fucking or being fucked by any cute milker who happens to catch your eye.";
 				else if gryphoness is tamed:
 					say "     With you stabled and working in the milking facility, you have no interest in Denise anymore. For a while, you are pestered by visits from her, but those eventually stop. When you think to ask, you hear from others that she'd been taken as a breeder pet by one of the returning herm gryphons. The news doesn't affect you, your life focused on milking facility in which you live almost constantly now. There's plenty enough for you with being milked, monitoring the other milkers, seeing to the training of new recruits and fucking or being fucked by any cute milker who happens to catch your eye.";
@@ -265,7 +265,7 @@ when play ends:
 					if gryphoness is tamed:
 						say "     After you've had your turn and your mate's recovered enough, he finds an additional prize waiting from him in your nest and turns his attention to the smaller gryphoness who's accompanied you. Faced with the big, feral stud before her, Denise cannot control her needs for long and is soon on all fours beneath your mate, getting fucked as you were. She becomes a plaything and pet for your mate as well as the caretaker for his eggs. And while she can't produce as large of clutches as you do, she still ends up carrying his eggs in her as well.";
 		else:
-			if player is pure and hp of Garrett >= 7 and cocks of player > 0 and cunts of player is 0:
+			if player is pure and HP of Garrett >= 7 and cocks of player > 0 and cunts of player is 0:
 				say "     When the military finds you, they aren't sure what to do with a seemingly intelligent feral gryphon. You're held in a facility for a while, where scientists poke and test you for some time, even taking humiliating samples of 'genetic material' a few times. You put up with their ministrations for now; luckily, they deem you noninfectious before you lose your patience. They offer to release you into a nature preserve, but you have other plans and turn them down.";
 				say "     At first, you have some difficulty making a life for yourself given your altered form, but you only need to hold out for a few months. Once things settle down, you make contact with Garrett and move ahead with the plans you've made together. Having expanded his milking operation and built up a stockpile, he's finally ready to go to market. Your part in this is to act as the impressive (and exotically sexy) spokesman for the product. Ads are run, public appearances are made, private parties (orgies) are put on - all to promote the exotic and erotic new drink.";
 				say "     Of course, the commercial product has to be rendered non-infectious first with a quick microwaving. And while your it isn't infectious, it does make for a fine erotic stimulant, fuelling male-on-male lusts, ensuring you'll always have a steady pool of clients in this new, sex-centric world. You can always count on new clients coming when an existing one convinces, tempts or tricks a friend into sampling some for a hot gay romp.";

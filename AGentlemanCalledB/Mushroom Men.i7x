@@ -37,7 +37,7 @@ to say MushroomMenFaceTF:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -65,7 +65,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 15;
 	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 24;			[ The monster's starting hit points. ]
+	now HP entry is 24;			[ The monster's starting HP. ]
 	now lev entry is 3;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 4;			[ Monster's average damage when attacking. ]
 	now area entry is "Park";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -101,20 +101,20 @@ this is the swarmattack rule:		[damage bonus based on remaining health]
 	choose row monster from the table of random critters;
 	let basicdam be ( wdam entry * a random number between ( 80 - ( peppereyes * 4 ) ) and 120 ) / 100;
 	let dam be basicdam;
-	let basicdam be ( basicdam * monsterhp ) / hp entry;
+	let basicdam be ( basicdam * monsterHP ) / HP entry;
 	let dam be dam + basicdam;
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "     The [name entry] [one of]attack[or]swarm[or]rush[at random] you as a group, [one of]grabbing at your limbs, trying to drag you down[or]attacking you from all sides[or]groping and teasing your body as they swarm over you[at random]. With [if (( monsterhp * 100 ) / hp entry ) > 75]the group still at full strength, the attack easily overwhelms your defenses[else if (( monsterhp * 100 ) / hp entry ) > 50]the majority of the group still fighting, the assault is quite effective[else if (( monsterhp * 100 ) / hp entry ) > 25]most of their group injured or defeated, the attack is only somewhat effective[else]the majority of the group defeated, the attack is severely weakened[end if]. You suffer [special-style-2][dam][roman type] damage.";
+	say "     The [name entry] [one of]attack[or]swarm[or]rush[at random] you as a group, [one of]grabbing at your limbs, trying to drag you down[or]attacking you from all sides[or]groping and teasing your body as they swarm over you[at random]. With [if (( monsterHP * 100 ) / HP entry ) > 75]the group still at full strength, the attack easily overwhelms your defenses[else if (( monsterHP * 100 ) / HP entry ) > 50]the majority of the group still fighting, the assault is quite effective[else if (( monsterHP * 100 ) / HP entry ) > 25]most of their group injured or defeated, the attack is only somewhat effective[else]the majority of the group defeated, the attack is severely weakened[end if]. You suffer [special-style-2][dam][roman type] damage.";
 	now damagein is dam;
 	say "[noshieldabsorbancy]";		[unable to use shield effectively - attacked from multiple angles]
-	if absorb is greater than dam:
+	if absorb > dam:
 		now absorb is dam;
-	if absorb is greater than 0:
+	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease hp of the player by dam;
-	increase hp of player by absorb;
+	decrease HP of the player by dam;
+	increase HP of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 
@@ -133,7 +133,7 @@ this is the sporecloud rule:      [Spore aura following spore blast attack]
 			let dam be wdam entry / 4;
 			increase dam by a random number between 0 and 1;
 			say "     [one of]Breathing heavily as a result of your continued fighting[or]As you try to catch your breath[or]Taking a deep breath[at random], you inhale the lingering airborne spores, causing a [one of]painful fit of coughing[or]warm tingling in your chest[or]powerful sneeze[at random].  You suffer [special-style-2][dam][roman type] damage.";
-			decrease hp of the player by dam;
+			decrease HP of the player by dam;
 			if bodyname of player is "Mushroom Men":
 				say "     The fungal spores have a[one of]n especially strong[or]n unusual[or] powerful[at random] effect on your mushroom body, arousing you slightly.";
 				increase libido of player by a random number between 1 and 3;
@@ -143,8 +143,8 @@ this is the sporecloud rule:      [Spore aura following spore blast attack]
 			follow the player injury rule;
 			say "You are [descr].";
 			say "[line break]";
-			if hp of player < 1 or libido of player > 109:
-				if hp of player <= 0, now fightoutcome is 20;
+			if HP of player < 1 or libido of player > 109:
+				if HP of player <= 0, now fightoutcome is 20;
 				if libido of player >= 110, now fightoutcome is 21;
 				lose;
 
@@ -174,7 +174,7 @@ Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Mushroom Men":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As the fungal infection begins to take root in your mind, you find yourself drawn back to the park. You wander to forested paths aimlessly for some time before coming across a small, clear glade with a single large tree at its center. Attracted to the unusual peace of this place, you settle down at the base of the tree, eventually drifting off to a deep sleep as your body begins to change further.";
 			say "     When you finally awaken, you find yourself rooted to the ground just below the knees and your limbs fused to your body, making you look much more like a simple giant mushroom at a glance. However, with the exception of your missing limbs, you still have a rather shapely body, and the wandering groups of mushroom men that happen upon you are more than happy to help you enjoy it. Several groups frequently make return trips to your glade, ensuring your sexual desires are always satisfied. Often after these visits you find your body reacting to the spores left behind by your company, both inside your body and out, causing you to release fertile spores of your own into the nearby soil where more groups of mushroom men quickly grow.";
 			say "     The life of a mushroom sextoy for the many mushroom men of the forest is a simple one, but with your mind long lost to the fungal infection you are never unhappy to live it.";

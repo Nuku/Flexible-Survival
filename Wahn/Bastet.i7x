@@ -263,7 +263,7 @@ instead of sniffing Bastet:
 
 to say BastetDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Bastet] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Bastet] <- DEBUG[line break]";
 	say "     The goddess Bastet's avatar on this world currently is a beautiful anthro lioness, young and lightly muscled. She stands tall on her digitigrade legs and slender paws, looking at her surroundings with regal composure. Currently, the attractive female is dressed in a kalasiris, a tube dress of ancient egyptian design, starting just below her armpits and hugging every curve of Bastet's body until it stops just a little below her knees. In addition to being quite spectacularly tight, the dress also is woven in a striped pattern out of very fine, in places almost transparent, fabric, giving enticing glimpses at her body below.";
 	say "     Since having lost to you in a quite enjoyable sexual contest, the lioness is duty-bound to repay her debt to Nermine - and the cunning storekeeper seems to have decided that means doing guard duty at the store. Now Bastet spends most of her days here, watching out for people to make trouble. With you in your position as Nermine's [Master], this offers interesting opportunities to get to know the cat goddess better - or just to make use of her.";
 

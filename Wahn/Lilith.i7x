@@ -24,7 +24,7 @@ Version 1 of Lilith by Wahn begins here.
 
 Section 1 - Lilith, the succubus
 
-Lilith is a woman. Lilith is in Sacristy. The hp of Lilith is normally 0.
+Lilith is a woman. Lilith is in Sacristy. The HP of Lilith is normally 0.
 The description of Lilith is "[LilithDesc]".
 The conversation of Lilith is { "Mew!" }.
 lastLilithTalk is a number that varies. lastLilithTalk is usually 555.		[turn-counter for talking delays (humanity restoration)]
@@ -51,7 +51,7 @@ An everyturn rule:
 		now LilithPregnancy is 3;   [very visible pregnancy]
 	if LilithPregCounter is 24:
 		now LilithPregnancy is 2;   [visible pregnancy]
-	if LilithPregCounter is greater than 1:
+	if LilithPregCounter > 1:
 		decrease LilithPregCounter by 1;
 
 instead of sniffing Lilith:
@@ -59,10 +59,10 @@ instead of sniffing Lilith:
 
 to say LilithDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Lilith], LILITHPREGNANCY: [LilithPregnancy], KIDCOUNTER: [LilithKidCounter], PREGCOUNTER: [LilithPregCounter] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Lilith], LILITHPREGNANCY: [LilithPregnancy], KIDCOUNTER: [LilithKidCounter], PREGCOUNTER: [LilithPregCounter] <- DEBUG[line break]";
 	if graphics is true:
 		project the figure of Lilith_naked_icon;
-	if (hp of Lilith is 0):   [starting state]
+	if (HP of Lilith is 0):   [starting state]
 		say "ERROR-Lilith-001A: She should not be around yet anywhere where players can see her.";
 	else:
 		say "     Lilith is a woman with breathtaking looks and a curvy body, which she shamelessly displays for you in all its naked glory. Looking her over you would almost think she was still human, if it weren't for the large bat-like wings coming out of her back, and of course, the small horns on her head and the rather feral look in her amber, slightly glowing eyes.";
@@ -72,7 +72,7 @@ to say LilithDesc:
 			say "     Her belly is currently bulging outwards quite a bit, showing the result of your recent coupling growing inside her. The impressive breasts on her chest have filled out even more, with their nipples sometimes leaking small amounts of succubi milk.";
 
 instead of conversing the Lilith:
-	if (hp of Lilith is 0):      [not yet met]
+	if (HP of Lilith is 0):      [not yet met]
 		say "ERROR-Lilith-001B: She should not be around yet anywhere where players can see her.";
 	else:
 		say "[LilithTalkMenu]";
@@ -96,7 +96,7 @@ to say LilithTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Talk a bit about this and that";
 	[]
-	if Elijah is in the Burned-Out Chapel or hp of Elijah > 0:
+	if Elijah is in the Burned-Out Chapel or HP of Elijah > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about Elijah";
 		now sortorder entry is 2;
@@ -164,13 +164,13 @@ to say LilithTalk1:
 	wait for any key;
 
 to say LilithTalk2:
-	if hp of Elijah is 0:
+	if HP of Elijah is 0:
 		say "     'Oh, him? Nice catch by the others, but I didn't bother to reserve a place in line.' She shrugs and runs a finger down over her breasts and to her pussy, drawing your looks with it. 'Been there, done that, you know. Other than all these new converts, I was there at the beginning and had lots of fun with the winged boys after I broke up with my ex. They're cute and all, but how good in bed can a man be if he's only had his cock for a few hours or days?'";
-	else if hp of Elijah > 0 and hp of Elijah < 99:
+	else if HP of Elijah > 0 and HP of Elijah < 99:
 		say "     'Everyone is still whining about losing the angel. I don't really care - it's their own fault, if they couldn't even fight you off. All of them against one of you - they came at you one after another, didn't they? Amateurs.' She shrugs, then starts running her finger around one of her nipples. 'If they had done it right and properly seduced him, he wouldn't even have wanted to go. Who needs chains if you can control lust.' With a seductive wink, she saunters over to the bed and fingers her pussy, sitting in a position in which you can see everything.";
-	else if hp of Elijah is 99:
+	else if HP of Elijah is 99:
 		say "     'Good work in making something out of the kid... he's come visiting a few times now. Not bad at all between the sheets, and black really is his colour.'";
-	else if hp of Elijah is 100:
+	else if HP of Elijah is 100:
 		say "     'That little winged cutie? He's down below now... and I hear he's made quite a splash with Lucifer. His angel ass is out infernal master's new favorite toy. He won't even stop fucking him when meeting the demon princes - just has their meetings in his quarters as he rams his ass, or carries his angel pet around impaled on his shaft.'";
 	wait for any key;
 
@@ -343,18 +343,18 @@ to say LilithPregCheck:
 		else:
 			say "     'Getting cold feet? Now, of all times?' Lilith sighs, then drains the chalice, licking the last of the milk off her lips. 'Not very reliable, my mortal lover. Well, at least you came through for me - or rather into me - when it did count.' She rubs her stomach, bulging with your child, and lies on the bed to stroke her pussy a bit.";
 
-instead of going northeast from Burned-Out Chapel while hp of Lilith is 0:[first meeting]
+instead of going northeast from Burned-Out Chapel while HP of Lilith is 0:[first meeting]
 	move player to Sacristy;
 	say "     As you enter the sacristy, you find a breathtakingly beautiful succubus there, lounging on a large bed. She stretches and flexes her naked body to give you quite a show as she stands up from the bed and comes to stand before you. 'Hello there, brave traveller. You walk right into a building inhabited by demons to visit me - that has to be rewarded. Come on, why don't you share this bed with me...' As she talks, she gives you little touches and caresses, inevitably heightening your arousal a bit.";
 	increase libido of player by 5;
-	now hp of Lilith is 1;   [has met the player, not the demon brute yet]
+	now HP of Lilith is 1;   [has met the player, not the demon brute yet]
 
-instead of going northeast from Burned-Out Chapel while hp of Lilith > 0:   [not the first meeting]
+instead of going northeast from Burned-Out Chapel while HP of Lilith > 0:   [not the first meeting]
 	if LilithPregnancy is 4:
 		move player to Sacristy;
 		say "     As you enter the sacristy, you find Lilith there, with a young incubus nuzzling her breasts and her hand on his hard cock. The male demon, looking about eighteen years old in human terms, looks up to you and with a small shock you recognize his features as very similar to your own. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
 		now LilithPregnancy is 0;
-	else if hp of Lilith is 1 and companion of player is demon brute:   [first time the player takes the demon brute pet where she can see him]
+	else if HP of Lilith is 1 and companion of player is demon brute:   [first time the player takes the demon brute pet where she can see him]
 		move player to Sacristy;
 		if DBCaptureQuestVar is 5:
 			say "     Lilith looks very interested as the captured demon brute follows you into the sacristy. 'A very nice pet... how did you get him so - tame?'";
@@ -364,8 +364,8 @@ instead of going northeast from Burned-Out Chapel while hp of Lilith > 0:   [not
 			say "     She saunters over to your demon brute, stroking her hand over his muscled form and grabbing his balls. Brutus stands there, calmly accepting her touching him, only giving a small whimper as the succubus squeezes him a bit too tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Just think about how much fun you could have with this big boy if he had a pussy too...'";
 			LineBreak;
 			say "     Telling the succubus you'll have to think about it, you go back to the main chapel itself, followed by your demon companion. When you're far enough away from Lilith's room to be out of earshot, you ask Brutus what he thinks about her offer. The demon hesitates just a second, then bows his horned head to you. 'Anything for you, master. If you want to change me for your pleasure, do so.' Keeping that in mind, you walk back into the sacristy.";
-		now hp of Lilith is 2;   [met the demon brute pet]
-	else if hp of Elijah is 99 and lastfuck of Elijah - turns > 12 and lastfuck of Lilith - turns > 6 and a random chance of 1 in 3 succeeds:[Evil Elijah is horny (hasn't had sex that day) and visits her for a fuck]
+		now HP of Lilith is 2;   [met the demon brute pet]
+	else if HP of Elijah is 99 and lastfuck of Elijah - turns > 12 and lastfuck of Lilith - turns > 6 and a random chance of 1 in 3 succeeds:[Evil Elijah is horny (hasn't had sex that day) and visits her for a fuck]
 		move player to Sacristy;
 		if Dexterity of Lilith is 0:
 			say "     As you walk over to the door of the sacristy, you hear the moaning of at least two persons from inside, one of them clearly Lilith, the other one a man's voice that seems... familiar. Your curiosity leads you forward and into the room without delay, putting a hot little scene into view. On top of the large bed in the middle of the room is Lilith, her sexy curves shimmering in the candlelight with a slight sheen of sweat as she rides Elijah's shaft. Lying on his back with black wings spread wide, the dark angel's hands meanwhile roam his demonic partner's body, often cupping and squeezing her shapely breasts. 'I was wondering when you'd come by' Lilith purrs to you without even stopping her gyrations on Elijah's hard cock. She chuckles and says 'Very nice work with angel-boy here by the way. No more stuffy and boring Seraphim, is he?', underlining her last words by slamming herself down on the angel's cock and grinding her crotch against his. Then Lilith gives you a seductive smile and purrs 'Come on, join us - there's always room for three in my bed.'";
@@ -546,7 +546,7 @@ instead of going northeast from Burned-Out Chapel while hp of Lilith > 0:   [not
 Section 2 - Fucking Lilith
 
 Instead of fucking the Lilith:
-	if (hp of Lilith is 0):               [not yet met]
+	if (HP of Lilith is 0):               [not yet met]
 		say "ERROR-Lilith-001C: She should not be around yet anywhere where players can see her.";
 	else:
 		if(lastfuck of Lilith - turns < 5):
@@ -755,7 +755,7 @@ Section 3 - Endings
 
 [
 when play ends:
-	if (hp of Lilith > 0:  [player met her and is sane]
+	if (HP of Lilith > 0:  [player met her and is sane]
 		say "     A";
 ]
 Lilith ends here.

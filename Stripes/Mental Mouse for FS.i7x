@@ -36,22 +36,22 @@ to say mousebuff:
 	if battleground is "Red" and ( bodyname of player is "Mental Mouse" or mousecurse is 1 ):
 		increase lev entry by ( ( a random number between 0 and 250 ) / 100 ); [ +0-2 lvls in Red, lower chance of +2 ]
 	if lev entry < 15:
-		now dex entry is ( lev entry / 2 ) + 13; [quick dex, int and hp growth early on]
+		now dex entry is ( lev entry / 2 ) + 13; [quick dex, int and HP growth early on]
 		now int entry is ( lev entry / 2 ) + 10;
-		now hp entry is ( lev entry times 7 );
-		increase hp entry by a random number between 1 and lev entry;
-		increase hp entry by a random number between 1 and lev entry;
-		increase hp entry by a random number between 1 and lev entry;
+		now HP entry is ( lev entry times 7 );
+		increase HP entry by a random number between 1 and lev entry;
+		increase HP entry by a random number between 1 and lev entry;
+		increase HP entry by a random number between 1 and lev entry;
 		now wdam entry is ( ( lev entry * 2 ) / 3 ) plus 4;
 	else:
 		now dex entry is 17 + ( lev entry / 5 ); [normal hard mode dex growth at lvl 15+]
 		now int entry is 14 + ( lev entry / 5 ); [same growth for int at lvl 15+]
-		now hp entry is 55 + ( lev entry times 4 ); [strong hp growth at lvl 15+]
-		increase hp entry by a random number between 1 and lev entry;
-		increase hp entry by a random number between 1 and lev entry;
-		increase hp entry by a random number between 1 and lev entry;
+		now HP entry is 55 + ( lev entry times 4 ); [strong HP growth at lvl 15+]
+		increase HP entry by a random number between 1 and lev entry;
+		increase HP entry by a random number between 1 and lev entry;
+		increase HP entry by a random number between 1 and lev entry;
 		now wdam entry is ( lev entry / 3 ) + 9; [normal dmg growth for lvl 15+]
-	now monsterhp is hp entry;
+	now monsterHP is HP entry;
 
 
 to say losetomouse:
@@ -83,7 +83,7 @@ to say losetomouse:
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 			now libido of player is ( libido of player + 1 ) / 3;
 		decrease humanity of player by a random number between 1 and 4;
-		if hp of player is 0, decrease humanity of player by a random number between 1 and 2;
+		if HP of player is 0, decrease humanity of player by a random number between 1 and 2;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	else:
@@ -168,7 +168,7 @@ to say mouseyvicsex:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -195,7 +195,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 15;
 	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 35; [ The monster's starting hit points. ]
+	now HP entry is 35; [ The monster's starting HP. ]
 	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6; [ Monster's average damage when attacking. ]
 	now area entry is "Red"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -244,7 +244,7 @@ this is the mentalmouse rule:
 				now dam is (dam * 150) divided by 100;
 				say "The enemy finds a particular vulnerability in your mental defenses - Critical Hit![line break]";
 			say "[one of]Being this close to them, you can feel their minds tugging at yours, weakening your resolve[or]You can feel what must be their united thoughts at the edge of your mind, whispering for you to give in and accept mousedom with them[or]The mice surround you and look at you funny. You thoughts get cloudy and it becomes harder to stay focused on resisting them[at random]! You take [special-style-2][dam][roman type] damage[if mousecurse is 1] and you grow more aroused[end if]!";
-			decrease hp of the player by dam; [No armour protection from the mental whammy]
+			decrease HP of the player by dam; [No armour protection from the mental whammy]
 			if mousecurse is 1:
 				let libdam be 2;
 				increase libdam by a random number between 0 and ( lev entry / 2 );
@@ -256,10 +256,10 @@ this is the mentalmouse rule:
 		else:
 			say "You can feel the touch of their mousey minds at the edge of yours, but you manage to block them out for the moment!";
 		now peppereyes is 0;
-		if hp of the player is greater than 0 and libido of player < 110:
+		if HP of the player > 0 and libido of player < 110:
 			wait for any key;
 		else:
-			if hp of player <= 0, now fightoutcome is 20;
+			if HP of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
 			Lose;
 		rule succeeds;
@@ -312,7 +312,7 @@ Section 6 - Endings
 
 when play ends:
 	if bodyname of player is "Mental Mouse" or ( bodyname of player is "Albino Mouse" and mouse girl is tamed ):
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Something seems to click inside you and the mouse-like call you've been hearing in your mind comes in loud and clear. No longer resisting it, you welcome the other mice into your mind, feeling the joy and happiness of being united with them. There was nothing to fear at all from it, a wonderful union of your mind to theirs. As your own thoughts fade into the background - still there, but secondary - you follow their call back to the mouse nest. Welcomed by the beautiful mice, you snuggle up with them and share in their company, thoughts and sensations as you make love together, truly together.";
 		else:
 			say "     You resist the call of the mouse collective until the military comes into the city to rescue what survivors they can find. The call becomes more manageable once you are removed from the city, only troubling you at times in dreams. You do feel a shadow of their minds within you after sex as well, the mouse hive-mind peeking in past your lowered defenses and sharing in the pleasure of your orgasm. Your small, sexy body catches the eye of several lovers who find your appearance attractive.";

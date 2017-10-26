@@ -131,10 +131,10 @@ instead of resolving a Trickster:
 		let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 15: ";
-		if dice plus bonus is greater than 15:
+		if dice plus bonus > 15:
 			say "     You toss the bag of fur in the face of one wolf about the slam into you. He has large sections of his pelt shaved off, exposing wide patches of pink skin. The bagged fur is sent flying, floating in the air all around the area. You cough and brush it out of your eyes in time to see another wolf moving in to attack you.";
 		else:
-			decrease hp of player by 10;
+			decrease HP of player by 10;
 			say "     You are slammed into by one of the wolves and knocked to the side, taking [special-style-2]10[roman type] damage. You can see as he continues past you that this wolf is the largest of them all and probably the pack alpha. He has large sections of his pelt poorly shaved off, exposing wide patches of pink skin. The bagged fur is sent flying, floating in the air all around the area. You cough and brush it out of your eyes as you get back to your feet in time to see another wolf moving in to attack you.";
 		now wolffight is 3;
 		challenge "Feral Wolf";
@@ -274,7 +274,7 @@ Instead of resolving a Lovers Bench:
 			decrease humanity of player by 5;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
-			increase xp of pink raccoon by ( level of pink raccoon + 1 ) * 3;
+			increase XP of pink raccoon by ( level of pink raccoon + 1 ) * 3;
 			increase score by 20;
 		else if companion of player is Gryphoness:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -297,7 +297,7 @@ Instead of resolving a Lovers Bench:
 			decrease humanity of player by 5;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
-			increase xp of Gryphoness by ( level of Gryphoness + 1 ) * 3;
+			increase XP of Gryphoness by ( level of Gryphoness + 1 ) * 3;
 			increase score by 20;
 		else if companion of player is Felinoid companion:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -321,12 +321,12 @@ Instead of resolving a Lovers Bench:
 			decrease humanity of player by 5;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
-			increase xp of Felinoid companion by ( level of Felinoid companion + 1 ) * 3;
+			increase XP of Felinoid companion by ( level of Felinoid companion + 1 ) * 3;
 			increase score by 20;
 		else if companion of player is bee girl:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
-			say "     As you're finishing up your scavenging, Honey buzzes on over and takes your hand in her. She smiles up at you and grins playfully. She gives your arm a gentle tug with her four hands. 'I want to try out the bench, now that I have someone special to share it with,' she buzzes softly. 'I used to see couples here when I was...'  She pauses, remembering her lost sisters. 'But I have you now[if hp of bee girl >= 5], a strong and caring queen bee[end if],' she says, smiling up at your with a mix of lust and adoration as you walk with her to the bench to take her up on her offer. Her nipples, normally hidden, are quite hard, and her honeyed juices run down her legs. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your small companion up on her offer.";
+			say "     As you're finishing up your scavenging, Honey buzzes on over and takes your hand in her. She smiles up at you and grins playfully. She gives your arm a gentle tug with her four hands. 'I want to try out the bench, now that I have someone special to share it with,' she buzzes softly. 'I used to see couples here when I was...'  She pauses, remembering her lost sisters. 'But I have you now[if HP of bee girl >= 5], a strong and caring queen bee[end if],' she says, smiling up at your with a mix of lust and adoration as you walk with her to the bench to take her up on her offer. Her nipples, normally hidden, are quite hard, and her honeyed juices run down her legs. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your small companion up on her offer.";
 			if cocks of player > 0:
 				say "     Honey climbs up onto the bench, raising her bee abdomen up and waving her cute little bottom at you. The soft, golden puff over her pussy is soaked in her juices and you can see her soft lips parted and ready for you. The bumblebee drone buzzes excitedly as you move in behind her and get your hard cock lined up with her eager pussy. She pushes herself back onto your cock slowly, clearly holding back from pushing it all in quickly, wanting to savour this moment. Once you're stuffed inside her, you wrap your arms around her insect abdomen and start thrusting. Her wings buzz frantically and her abdomen twitches in your arms. 'Mmm... kiss it. Please, I want you to kiss me there,' she moans as her pussy quivers and squeezes around you at the thought of it. So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others. Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex. With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";
 				say "     After a powerfully long orgasm that pumps your seed into the cute bumblebee girl's pussy while her honeyed juices soak you both, you slide your spent cock from her. Your companion is extra-snugly after the lovemaking, nuzzling against your side as she holds your hand in her four small hands and you happily return this affection, feeling closer to her.";
@@ -334,12 +334,12 @@ Instead of resolving a Lovers Bench:
 				say "     Honey lays back on the middle of the bench and motions for you to climb atop her. Bringing your pussy to her lips, she starts licking and kissing at your sex, running her long proboscis over your wet folds before sliding it into you like a flower full of rich nectar. Her talented tongue delves inside you again and again, licking and teasing at your sensitive inner walls as it slides to your very depths to please you. You run your hand over her insect abdomen and she buzzes with delight. 'Mmm... kiss it. Please, I want you to kiss me there,' she moans before diving her tongue into you again. Her tongue is writhing inside you at the thought of it. So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others. Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex. With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";
 				say "     After a powerfully long orgasm that soaks the cute bumblebee girl's face in your female nectar while her honeyed juices soak her crotch as her lower hands finger herself vigorously, you climb slowly off from overtop her. Your companion is extra-snugly after the lovemaking, nuzzling against your side as she holds your hand in her four small hands and you happily return this affection, feeling closer to her.";
 			now lastfuck of bee girl is turns;
-			if hp of bee girl >= 5, infect "Queen Bee";
+			if HP of bee girl >= 5, infect "Queen Bee";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
-			increase xp of bee girl by ( level of bee girl + 1 ) * 3;
+			increase XP of bee girl by ( level of bee girl + 1 ) * 3;
 			increase score by 20;
 		else if companion of player is mouse girl:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -368,7 +368,7 @@ Instead of resolving a Lovers Bench:
 			decrease humanity of player by 20;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by 5;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 5;
-			increase xp of mouse girl by ( level of mouse girl + 1 ) * 3;
+			increase XP of mouse girl by ( level of mouse girl + 1 ) * 3;
 			increase score by 20;
 		else if companion of player is equinoid warrior:
 			say "     As you're finishing up your scavenging, Liliana strides up beside you to run her hoofed hands over your [bodytype of player] body. She smiles at you with a lustful hunger in her eyes[if player is blequinoidbodied]. 'Come, join me over here and I will remind you of the warm embrace of the herd[else]. 'We may be away from the herd, but we can still keep one another fulfilled[end if],' she says, guiding you towards the bench. Having gotten quite aroused by the scents of fulfilled lusts in the air, the sight of the aroused equinoid with her perky nipples, equine erection and dripping pussy entice you to take her up on her offer.";
@@ -389,7 +389,7 @@ Instead of resolving a Lovers Bench:
 			decrease humanity of player by 5;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
-			increase xp of equinoid warrior by ( level of equinoid warrior + 1 ) * 3;
+			increase XP of equinoid warrior by ( level of equinoid warrior + 1 ) * 3;
 			increase score by 20;
 		else if companion of player is demon brute and DBCaptureQuestVar > 5:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -427,7 +427,7 @@ Instead of resolving a Lovers Bench:
 			decrease humanity of player by 5;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
-			increase xp of demon brute by ( level of demon brute + 1 ) * 3;
+			increase XP of demon brute by ( level of demon brute + 1 ) * 3;
 			increase score by 20;
 		else:
 			increase libido of player by ( 100 - libido of player ) / 4;
@@ -509,7 +509,7 @@ when play begins:
 Instead of resolving a PeachTree:
 	now peachtreefight is 3;
 	say "     Straying down a disused path, you find yourself approaching a large peach tree. The tree is laden with large, juicy fruit. Your mouth salivates just from the scent coming from it";
-	if hp of Joanna >= 7 and hp of Joanna < 90:		[Joanna's seed]
+	if HP of Joanna >= 7 and HP of Joanna < 90:		[Joanna's seed]
 		say ". As you start to step towards the tree, intent on having your fill of its fruit, your belly stirs. You stifle a groan as Joanna's seed inside you squirms in an uncomfortable way. Having not felt that reaction from it before, you stop yourself short and realize that you were about to rush up to the tree without pausing to check if it was safe. Now that you look, you can see that the earth around the base of the tree has been disturbed and proper scrutiny of the canopy shows some half-hidden vines.";
 		say "     The fruit is still quite tempting, but it seems to not be as free as it first appeared.";
 		say "     [bold type]Shall you still try to gather some?[roman type][line break]";
@@ -534,11 +534,11 @@ Instead of resolving a PeachTree:
 		if plantdefeat > 0:
 			say ".";
 			say "     As you approach the peach tree, there is a squirming sensation from your belly before the slumbering plant inside you pushes free. It digs its main vine into the soil near the tree, trapping you there as other vines start to descent from the canopy. Tricked by the plant's alluring scent and tempting fruit, you are now caught in a fight with the vines. Between those from the tree and the one inside you, you will have a struggle on your hands.";
-			decrease hp of player by hp of player / 4;
+			decrease HP of player by HP of player / 4;
 		else:
 			say ".";
 			say "     As you approach the peach tree, your mind is intent only on those delicious, juicy fruit and blind to all else until it is too late. As you reach up to grab some of the peaches, vines whip out from the canopy, wrapping around your wrists and grabbing you tightly. As you struggle against this, another tendril erupts from the soil at the base of the tree, driving itself into your [if cunts of player > 0]pussy[else]anus[end if] and swelling to try and lock itself inside you. You groan in a mix of discomfort and pleasure at this unusual intrusion and struggle to break free, but you will be fighting at a disadvantage this time as the plant's taken you by surprise.";
-			decrease hp of player by hp of player / 5;
+			decrease HP of player by HP of player / 5;
 		challenge "Parasitic Plant";
 		if lost is 0:
 			say "     Disentangling yourself from the tendrils in the tree and freed yourself of the vine inside you, you make a quick grab for some of the fruit. You snag a couple of them and then make a run for it as more vines rustle in the canopy.";

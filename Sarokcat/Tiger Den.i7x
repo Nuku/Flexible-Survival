@@ -19,19 +19,19 @@ Chase is in Tiger den.
 the scent of Chase is "The tigerman smells strongly of male tiger[if cunts of player > 0 or lust of Chase > 0] and arousal[end if].".
 
 instead of conversing the Chase:
-	if hp of Chase is 0:
+	if HP of Chase is 0:
 		say "     Chase waves at you as you approach, 'Hey welcome to our little hideout, we call it the Tigers den', he says with a soft chuckle, 'Not a bad little place here either. Not sure who found it to begin with, or if they are even still around or ended up changed by one of the tigertaurs.' Chase lets out a soft sigh at that, 'The damn Tigertaurs are catching more and more of us each time we go out to forage or try to find people to help, we actually have a good stockpile of supplies here,' He says with a gesture to one of the locked doors, 'But as you can see we have a decent amount of people here too, and no idea how long we need to wait for rescue, if it's even coming.' Chase shrugs slightly before proceeding to show you around the rather large solid basement, several of the tiger people stopping to watch as the two of you pass by.";
 		say "     Noting your interest in all various different tiger-like people, Chase stops for a minute to explain. 'When I first ended up down here, not long after this place was started, there were more different types of minorly infected here, and we even had a number of people who hadn't been infected yet at all we thought. Still,' the tiger says with a shrug, 'the longer we all stayed down here together, the more tiger-like everyone else seemed to become, until at this point I'm not sure if there are any non-tigers left down here. Most people actually seem to have adapted to the changes without any real regrets though. I mean heck,' Chase says with an amused grin on his tiger-like muzzle, 'What's NOT to like about being a tiger? I mean not only are we amazingly strong and fast hunters, but you seem to come through the change with your mind intact unlike a lot of the other infected. Most of all though,' Chase says as he strokes a hand down his tiger-furred side in amusement, 'Tigers are so just damn sexy, with the stripes and all, don't you agree?' Chase says as he poses his long lean body for your examination. Taking your silence as a sign of agreement, the tiger man grins as he finishes up the tour and goes back to watching the rest of the den members go about their business.";
-		increase hp of Chase by 1;
-	else if hp of Chase is 1:
+		increase HP of Chase by 1;
+	else if HP of Chase is 1:
 		If a random chance of 2 in 5 succeeds:
 			say "	'Hey, I'm sorry to ask this of a friend, but could you do me a small favor?' Not sure what the tiger is on about, you ask Chase what he needs. 'Well, we're kind of running low on food and water around here. I was kind of hoping that if you happened to come across some extra supplies, you wouldn't mind sharing some with us?'";
 			say "	Not seeing any reason why not as long as you can keep yourself supplied too, you nod and then ask Chase how much in the way of provisions he and the others would need. 'Not much maybe just 20 pounds of food (8 units) and maybe a couple gallons of water (5 units). The waters not that necessary though, but the food would be really appreciated.' The tiger smiles at you somewhat sheepishly. Gaping and then nodding somewhat bewilderedly at the feline man you tell Chase that you'll see what you can do.";
 			Say "'Thanks and sorry about the inconvenience.' Chase saunters up next to you and then licks his raspy tongue across your [facename of player] face.";
-			Now hp of Chase is 2;
+			Now HP of Chase is 2;
 		else:
 			say "[chasebasictalk]";
-	else if hp of Chase is 2:
+	else if HP of Chase is 2:
 		if carried of water bottle < 5 or carried of food < 8:
 			if a random chance of 3 in 5 succeeds:
 				Say "	[one of]'Hey, sorry to bug, but did you ever get that food? We need like 8 things of food and maybe 5 liters of water, if you can spare that much.'[or]'Did you have any luck finding those supplies I'd asked about?'[or]'Don't forget to keep your eyes open for some of the supplies we need here.'[or]'Did you see those small packs of rabbits roaming around? God they always make my mouth water...'[at random]";
@@ -42,13 +42,13 @@ instead of conversing the Chase:
 			decrease carried of food by 8;
 			if a random chance of 1 in 2 succeeds:
 				Say "	'Woah, thanks a lot for this! This should keep the rest of us going for a while longer!' Chase nuzzles the side of your neck and then licks you across your throat. A shiver racks down your spine from the rough wet feel of the tiger's tongue sliding along your [facename of player] throat. When the feline pulls back Chase says, 'Hey why don't I show you some neat tricks we tigers like to pull off? It may help you to fight and run away better when your outside foraging or whatever.";
-				Increase xp of player by 40 + ( 3 * level of player );
-				Now hp of Chase is 3;
+				Increase XP of player by 40 + ( 3 * level of player );
+				Now HP of Chase is 3;
 			else:
 				Say "	'Hey, thanks a lot for this. I really appreciate it!' Chase smiles as he looks to you fondly. Blushing at the tigerman, you quickly hand him the provisions. 'Hey why don't I show you some neat tricks we tigers like to pull off? It may help you to fight and run away better when your outside foraging or whatever.";
-				Increase xp of player by 40 + ( 3 * level of player );
-				Now hp of Chase is 3;
-	else if hp of Chase is 3:
+				Increase XP of player by 40 + ( 3 * level of player );
+				Now HP of Chase is 3;
+	else if HP of Chase is 3:
 		say "[chasebasictalk]";
 
 
@@ -65,9 +65,9 @@ to say sexwithchase:
 		if name entry is "Tiger":
 			now monster is y;
 			break;
-	if lastfuck of Chase - turns is less than 6:
+	if lastfuck of Chase - turns < 6:
 		say "     'Sorry, I would love to spend some more time with you, but it looks like neither of us really are ready for that,' Chase says apologetically, 'Maybe we should take it slow and you should come back and visit me again later.'";
-	else if cunts of player is greater than 0:
+	else if cunts of player > 0:
 		if the remainder after dividing libido of chase by 3 is 0:
 			say "     'Well who could say no to such a pretty woman?' Chase asks as he runs his eyes over your body, his gaze lingering over your aroused cunt. Your eyes drift to his obvious arousal as he pulls you over to one of the sleeping pallets, and slowly pushes you down onto it. 'I think we can really have some fun together,' he says as he moves over you, his hands slowly rubbing along your [skin of player] skin, pausing to tease your breasts as he nuzzles your neck with his furred muzzle. 'You want this so badly, don't you?' Chase asks with a rumbling purr, as he rubs his feline cock along the outside of your pussy, causing you to gasp and pant with the need the large male tiger is arousing in you.";
 			say "     'Mmm look at you, you look like you would make a fine tigress, what do you think,' he says, as he teases you underneath him, your body rising up against him as your mind clouds with pleasure and male musk. 'You want to be a tigress don't you?' Chase asks as rubs his soft fur against you, causing you to moan and nod, willing to agree to anything just to get him inside your hot body. 'I knew you wanted it,' Chase says with a churring laugh, as he rubs himself against you, 'I just knew you wanted to be just another lovely tigress, but even more you want to be MY little tigress, don't you. My pet and my little tigress mate, isn't that right?.' he growls out, his rough need filled voice sending shivers down your spine. You can only groan in need, and nod helplessly, as he rubs his cock along your folds.";

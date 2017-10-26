@@ -30,10 +30,10 @@ The description of Cuero Lobo is "[cuerolobodesc]".
 the scent of Cuero Lobo is "The store smells of cured leather, oil and lupine arousal.".
 
 to say cuerolobodesc:
-	if hp of Zigor is 0:
+	if HP of Zigor is 0:
 		say "     Finding your way back in the area of that leather store, you approach it cautiously. Scoping it out, you find that the pack of leather wolves has moved on, taking their harness with them. There is a sign on the window that says 'Out of Stock' but another that says they're open. Curious and feeling it's probably safe to approach, you head inside. The store interior has largely been denuded of material, leaving mostly empty mannequins and display photos on the wall, though a few pieces remain. The scent of leather, oils and lupine sex still hangs in the air. The store is not as unoccupied as it first appeared though, there being one of those leather wolves reclining casually with his feet up on the counter.";
 		say "     'Hola! Welcome to Cuero Lobo, my friend. I am Zigor,' he says with a rich Spanish accent, rolling his r's and smiling. He, like the others you saw outside previously, is partially covered in leather gear that is somehow a part of him. 'I'm sorry, but we are fresh out of stock these days. Demand for our quality items is quite high, you must understand. We hope to resume business once all the excitement settles down a little and we're able to provide more to our ever-eager clients. But perhaps you'd like to stay to keep me company while we wait,' he says in that alluring, sensual accent of his.";
-		now hp of Zigor is 1;
+		now HP of Zigor is 1;
 	else:
 		say "     This leather goods store has been almost completely denuded of its wares by the lustful mobs, its racks and displays emptied and the mannequins disrobed. The photos on the wall show several of their more elaborate items, many of them quite kinky. Looking more closely, many of them are actually very explicit photos, probably having replaced the more acceptable sample images that were once in the frames. The store is manned by Zigor, a leather-bound wolf with a sexy accent.";
 
@@ -55,16 +55,16 @@ to say zigordesc:
 
 
 Instead of conversing the Zigor:
-	if hp of Zigor is 0:
+	if HP of Zigor is 0:
 		say "ERROR-Zigor-0L: You should not be able to find me!";
-	else if hp of Zigor is 1:
+	else if HP of Zigor is 1:
 		say "     Zigor smiles as you chat with him for a little while. 'My store has always done quite well, our goods being the best around,' he says with pride. 'And we have only become more popular lately. We can hardly keep up with demand. That first night, our store was mobbed by so many eager customers. Oh, it filled my heart with joy to see them all clamoring for the wares, many of them trying them out right away. Oh, it was such a sight,' his already sexy voice adding extra sensual emphasis to his words.";
 		say "     'Now, our stock unfortunately too low for sales at the moment. But because I like you, I might be convinced to show you some items from my personal collection downstairs. I have a room set aside where my special guests and try them out. Doesn't that sounds like fun,' he says softly, rubbing his leather-clad body against yours while running his padded fingertips along your side. 'I promise to make you cry out with such painful delight,' he adds, his lupine fangs showing as he grins.";
-		now hp of Zigor is 2;
-	else if ( hp of Hadiya is 9 or hp of Hadiya is 59 ) and zigorhadiyaquest is false:
+		now HP of Zigor is 2;
+	else if ( HP of Hadiya is 9 or HP of Hadiya is 59 ) and zigorhadiyaquest is false:
 		say "     You bring up the fact that you're looking for a small-sized leather jacket to the wolf proprietor, but he just shakes his head. 'As I've told you, I don't have much in the way of materials right now and my stock is depleted. Not that I'd have something that size in my stock. I have a more [']mature['] clientele,' he rumbles in that sexy accent of his, running a paw over your chest. 'Try the mall if you're looking for something in children's sizes,' he adds with a dismissive wave of his paw.";
 		now zigorhadiyaquest is true;
-	else if hp of Zigor is 2:
+	else if HP of Zigor is 2:
 		say "     [one of]'I named my store [italic type][']Cuero Lobo['][roman type], or [']Leather Wolf['], because I thought it evoked strength and power. Little did I know I'd one day become a [italic type]cuero lobo[roman type] myself to make it all the more fitting.'[or]'This is one item that customers particularly enjoy,' he says, pointing to one of the photos on the wall, showing some very kinky leather gear trussing up a [one of]man[or]woman[at random] while they are disciplined and fucked. 'I would love to see you in one of those someday,' he adds with a sensual rumble and a hard squeeze of your ass.[or]'Perhaps I could interest you in a more personal session with my collection downstairs?' he says in that sensual voice of his.[or]'We are working hard to restock our wares, but the demand is so high now.'[or][if player is submissive]'You look like you'd take very well to my private chamber. The discipline of a strong, firm wolf is just what you need, carino,' he says, giving your ass a hard squeeze. Your submissive urges cause you to moan, making you long to let him have his way with you[else]'I think you should join me downstairs. The strong ones like you are all the more fun to break and the discipline from a strong, firm wolf is just what you need to do it, carino,' he says, giving your ass a hard squeeze. His offer sounds very enticing, making you strongly consider seeing just what he means[end if].[or]'That first night was such fun. So many eager customers coming in here, trying out our wares right in the store. You should have been there. It would have been nice to see them all taking turns with you,' he says with a toothy grin.[or]Zigor runs his eyes up and down you. 'Mmm... I have trouble deciding what to tie you up in first, mi mascota,' he says with a rather predatory smile.[at random]";
 	else:
 		say "     [one of]'I named my store [italic type][']Cuero Lobo['][roman type], or [']Leather Wolf['], because I thought it evoked strength and power. Little did I know I'd one day become a [italic type]cuero lobo[roman type] myself to make it all the more fitting.'[or]'This is one item that customers particularly enjoy,' he says, pointing to one of the photos on the wall, showing some very kinky leather gear trussing up a [one of]man[or]woman[at random] while they are disciplined and fucked. 'I would love to see you in one of those someday,' he adds with a sensual rumble and a hard squeeze of your ass.[or]'You should join me for another personal session with my collection downstairs,' he says in that sensual voice of his.[or]'We are working hard to restock our wares, but the demand is so high now.'[or][if player is submissive]'Someone like you was meant to enjoy all the painful delights of my private collection, carino,' he says in that sexy accent of his while grabbing your ass[else]'I look forward to having you for another session with the painful delights of my private collection, carino,' he says in that sexy accent of his while grabbing your ass[end if]. The offer is very tempting, your body longing for more of the wolf's tough love.[or]'That first night was such fun. So many eager customers coming in here, trying out our wares right in the store. You should have been there. It would have been nice to see them all taking turns with you,' he says with a toothy grin.[or]Zigor runs his eyes up and down you. 'Mmm... I have trouble deciding what to [if a random chance of 1 in 3 succeeds]tie you up in next[else if a random chance of 1 in 2 succeeds]strike you with next[else]train you with next[end if], mi mascota,' he says with a with a rather predatory smile.[at random]";
@@ -75,45 +75,45 @@ Section 3 - Sex Mechanics
 the fuckscene of Zigor is "[sexwithZigor]".
 
 to say sexwithZigor:
-	if hp of Zigor < 2:
+	if HP of Zigor < 2:
 		say "     You should probably get to know him a little before making such an offer.";
 	else if cocks of player is 0:
 		say "     'I apologize. I thought I mentioned this, but my collection is only available to those of a more masculine persuasion at the moment,' he says with regret. 'Surely you can find someone out there who can help you with that,' he adds.";
 		say "[bracket]Only M/M content at present - The Mgmt.[close bracket][line break]";
 	else if lastfuck of Zigor - turns < 8:
 		say "     'I know you long for more, but this is about teaching you discipline. If you cannot wait until the next session, then you aren't learning and I will have to be more... zealous... in my methods.'  Despite his sexy, sensual tone, his lupine teeth show as he emphasizes his point.";
-	else if hp of Zigor is 2:
+	else if HP of Zigor is 2:
 		say "[zigor_S1_00_MM]";
 		now lastfuck of Zigor is turns;
-		now hp of Zigor is 3;
-	else if hp of Zigor < 8:	[Stage 1]
-		say "     Asking Zigor for another session in his private dungeon, he motions for you to wait by the door downstairs. Flipping the sign on the window, he calls out for [randomwolfgimp] to [one of]stand guard[or]mind the store[or]keep an eye on things[at random] while he's occupied[if hp of Zigor is 3]. Another leather wolf comes out, looking quite similar to the previous one and again covered by a gimp mask. He pays you little mind and says nothing, moving to guard against intruders[else]. The masked, leather-bound wolf exits from the [one of]back room[or]stockroom[or]leatherworking room[at random] and moves to guard the front door[end if]. Knowing you won't be disturbed, you follow Zigor down the stairs and into the dark basement.";
-		if hp of Zigor is 6 or ( hp of Zigor is 7 and a random chance of anallevel in 5 succeeds ):	[hp of 6-7 - buttplug training]
+		now HP of Zigor is 3;
+	else if HP of Zigor < 8:	[Stage 1]
+		say "     Asking Zigor for another session in his private dungeon, he motions for you to wait by the door downstairs. Flipping the sign on the window, he calls out for [randomwolfgimp] to [one of]stand guard[or]mind the store[or]keep an eye on things[at random] while he's occupied[if HP of Zigor is 3]. Another leather wolf comes out, looking quite similar to the previous one and again covered by a gimp mask. He pays you little mind and says nothing, moving to guard against intruders[else]. The masked, leather-bound wolf exits from the [one of]back room[or]stockroom[or]leatherworking room[at random] and moves to guard the front door[end if]. Knowing you won't be disturbed, you follow Zigor down the stairs and into the dark basement.";
+		if HP of Zigor is 6 or ( HP of Zigor is 7 and a random chance of anallevel in 5 succeeds ):	[HP of 6-7 - buttplug training]
 			say "[zigor_S1_analtraining]";
-		else if hp of Zigor is 4 or ( hp of Zigor > 4 and a random chance of anallevel in 5 succeeds ):		[hp of 4 - anal]
+		else if HP of Zigor is 4 or ( HP of Zigor > 4 and a random chance of anallevel in 5 succeeds ):		[HP of 4 - anal]
 			say "[zigor_S1_02_MM]";
 			now libido of player is ( libido of player + libido of player + 100 ) / 3;
-		else:		[hp of 3 - oral]
+		else:		[HP of 3 - oral]
 			say "[zigor_S1_01_MM]";
-		if hp of Zigor < 7, increase hp of Zigor by 1;
+		if HP of Zigor < 7, increase HP of Zigor by 1;
 		now lastfuck of Zigor is turns;
 	else:		[Stage 2]
 		say "     After flipping the store sign to [']closed['] and calling for [randomwolfgimp] to come to the front, you are brought down into your dominator's private dungeon. With the silent, masked wolf there to [one of]stand guard[or]mind the store[or]keep an eye on things[at random], you know you will neither be disturbed nor be saved from Zigor's painful dominance. And still you descend, a thrill of excitement and anticipation already running through you, already getting hard at the thought of it.";
-		if hp of Zigor is 8:		[intro to second level - suspended and whipped]
+		if HP of Zigor is 8:		[intro to second level - suspended and whipped]
 			say "[zigor_S2_00_MM]";
-			now hp of Zigor is 9;
+			now HP of Zigor is 9;
 		else if a random chance of 1 in 4 succeeds:	[occasionally reuse old ones]
 			say "[one of][zigor_S1_01_MM][or][zigor_S1_02_MM][at random]";
-		else if hp of Zigor is 9:			[oral]
+		else if HP of Zigor is 9:			[oral]
 			say "[zigor_S2_01_MM]";
-			now hp of Zigor is 10;
-		else if hp of Zigor is 10:			[anal]
+			now HP of Zigor is 10;
+		else if HP of Zigor is 10:			[anal]
 			say "[zigor_S2_02_MM]";
-			now hp of Zigor is 11;
-		else if hp of Zigor is 11:			[orgy/gangbang]
+			now HP of Zigor is 11;
+		else if HP of Zigor is 11:			[orgy/gangbang]
 			say "[zigor_S2_03_MM]";
-			now hp of Zigor is 12;
-		else if hp of Zigor is 12:
+			now HP of Zigor is 12;
+		else if HP of Zigor is 12:
 			say "[zigor_S2_04_MM]";
 		now lastfuck of Zigor is turns;
 
@@ -130,7 +130,7 @@ to say zigor_S1_00_MM:	[stage 1 intro - padded bench/riding crop - MM]
 
 
 to say zigor_S1_01_MM:	[stage 1 - stocks/oral - MM]
-	say "     Once inside, he orders you over to the wooden stocks in one corner of the room. The restraint [if scalevalue of player is not 3]has been fitted with boards where the holes have been scaled to fit your wrists and neck[else]has holes cut into the boards for your wrists and neck[end if][if hp of Zigor is 3]. When you hesitate, he lashes your ass with a flog, prompting you to climb into it[else]. You obediently move over to it and climb into it[end if]. Resting your chest across an angled, leather-padded bench, you place yourself in the holes and your dominator locks you into it. With you trapped, he takes his time to run his flog across your cheek while giving you a wolfish grin. He then strides around behind the medieval restraint, moving out of your line of sight. You're left staring at the wall for a while, making you wonder if he's left you alone before suddenly receiving a harsh lashing across your ass, making you cry out in pained surprise.";
+	say "     Once inside, he orders you over to the wooden stocks in one corner of the room. The restraint [if scalevalue of player is not 3]has been fitted with boards where the holes have been scaled to fit your wrists and neck[else]has holes cut into the boards for your wrists and neck[end if][if HP of Zigor is 3]. When you hesitate, he lashes your ass with a flog, prompting you to climb into it[else]. You obediently move over to it and climb into it[end if]. Resting your chest across an angled, leather-padded bench, you place yourself in the holes and your dominator locks you into it. With you trapped, he takes his time to run his flog across your cheek while giving you a wolfish grin. He then strides around behind the medieval restraint, moving out of your line of sight. You're left staring at the wall for a while, making you wonder if he's left you alone before suddenly receiving a harsh lashing across your ass, making you cry out in pained surprise.";
 	say "     You are lashed and whipped for quite some time, broken up by brief respites of him stroking your erect cock. The lupine dominator strikes you all over, paying particular attention to your ass, [if breast size of player > 0]breasts[else]pecs[end if] and sides, though few spots are spared from the flog's touch. The heat of every lashing seems to make your [cock of player] penis ache all the more even as your eyes water from the pain.";
 	say "     Once you're aching all over and about to cum from it, he stops and moves back around in front of you. You can see he's removed the patch from his loins, uncovering his white sheath and the black cock emerging from it. Grabbing your head roughly, he forces his cock into your mouth. 'Take it, my pet. Suck it like you need it to live, you slutty bitch. But if you bite,' he says in warning while rubbing his scourge across your cheek again, 'you will truly know my wrath.'  His voice gets hard like steel, hard like that wolf cock stuffed in your mouth, as he growls menacingly at you. You nod quickly and start sucking at his cock, your unsatiated arousal making you lustful for his lupine seed. You're doing well until it whips you again suddenly across the back, causing you to moan. You resist the urge to clench your teeth, but the effort makes your jaws ache even more. Thankfully, after his extended torture of you, he's quite close himself and you're able to finish him off before your jaw muscles give out. And your reward is the delicious rush of his wolf cum into your mouth and down your throat, which you gulp down hungrily.";
 	say "     His balls drained, Zigor takes your cock in hand and strokes you off, rewarding you for being such a good, cocksucking pet. On edge for so long, it only takes a few pumps to get you to climax. Your [cum load size of player] load is shot into a bucket beneath you, the last few shots aided out of you by lashes from his flog across your ass. Once you're spent, he leaves you in the stocks. You can only stare at the wall as he casually cleans up the mess and straightens the room while the painful lashings fade to dull aches as your body quickly heals. It's hard to tell how long you're there, losing track of time before finally being freed and allowed to return back upstairs.";
@@ -139,7 +139,7 @@ to say zigor_S1_01_MM:	[stage 1 - stocks/oral - MM]
 to say zigor_S1_02_MM:	[stage 1 - sling/anal - MM]
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
-	say "     Once inside, he grabs you by the back of the neck before your eyes can adjust to the low light and pushes you onto a leather sling. In it, you are suspended face down off the ground at waist height[if scalevalue of player > 3]. Given its size and reinforced chains, it has clearly been made after the outbreak to hold [body size of player] mutants like yourself[end if][if hp of Zigor is 4]. When you try to get up, you're given a smack on the back of the head by the wolf as he growls for you to stay where he puts you[else]. Knowing what's coming, you get settled into the sling and hold out your arms and legs for your dominator[end if]. Picking up some manacles and shackles, he places them around your ankles and wrists, tightening the chains enough that you can swing, but are unable to resist or escape. With you secure, he strides over to his shelf and selects a [one of]hard[or]leather[or]wooden[or]long[or]wide[at random] paddle with considerable care while you are forced to watch him mull over his decision, increasing your trepidation and anticipation further. His choice made, he gives it a hard SMACK! across your rear, making you cry out.";
+	say "     Once inside, he grabs you by the back of the neck before your eyes can adjust to the low light and pushes you onto a leather sling. In it, you are suspended face down off the ground at waist height[if scalevalue of player > 3]. Given its size and reinforced chains, it has clearly been made after the outbreak to hold [body size of player] mutants like yourself[end if][if HP of Zigor is 4]. When you try to get up, you're given a smack on the back of the head by the wolf as he growls for you to stay where he puts you[else]. Knowing what's coming, you get settled into the sling and hold out your arms and legs for your dominator[end if]. Picking up some manacles and shackles, he places them around your ankles and wrists, tightening the chains enough that you can swing, but are unable to resist or escape. With you secure, he strides over to his shelf and selects a [one of]hard[or]leather[or]wooden[or]long[or]wide[at random] paddle with considerable care while you are forced to watch him mull over his decision, increasing your trepidation and anticipation further. His choice made, he gives it a hard SMACK! across your rear, making you cry out.";
 	say "     Your rear is tenderized by several more painful blows, each one accompanied by a twitch of your cock and a spurt of precum. The stinging of your rump is soothed by the soft caress of his sheath fur and the dribbling precum leaking from his emerging shaft. Getting himself lined up, he thrusts hard into you without preamble, the suddenness of the penetration only adding to the aching pleasure you're feeling. He fucks you hard and fast, rocking you in the sling. From time to time he pulls on the chains to force himself in harder or swats your shoulder, back or thigh with the paddle. Despite, or perhaps because of the pain, the rough fucking feels wonderful, your asshole clenching tightly around his lupine penis with every blow, allowing you to feel every push, throb and grind it makes inside your oversensitive ass.";
 	say "     After a good, long session of painful fucking, he drives his foot long cock into you, knot and all. With a howl and his claws sinking into your tender ass, he cums. His lupine seed blasts into you, filling your ass with his creamy load. This sends you over the edge and you cry out, cumming messy streaks of cum onto the floor as you spill your [cum load size of player] load onto the stone floor. Zigor hardly waits for his knot to go down before yanking it out hard, causing you to cry out even as his oily cum leaks out to soothe it. He leaves you suspended like that for a while, disciplining you with more blows from the paddle. It is only once you're hard again that he releases you, aching and aroused, to go back upstairs.[mimpregchance]";
 	if baby is 0 and gestation of child is not 0:
@@ -149,28 +149,28 @@ to say zigor_S1_02_MM:	[stage 1 - sling/anal - MM]
 
 
 to say zigor_S1_analtraining:
-	say "     Once inside, he directs you to the padded bench you used on your first visit with a hard swat from a switch he pulled off the wall. With a whimper of delight, you get naked and onto it as quickly as you can[if hp of player is 6], earning a second lashing as you're not quite fast enough for your dominator's liking[end if]. As quick as before, he has you shackled down onto it, leaving you at his not-so-tender mercies.";
+	say "     Once inside, he directs you to the padded bench you used on your first visit with a hard swat from a switch he pulled off the wall. With a whimper of delight, you get naked and onto it as quickly as you can[if HP of player is 6], earning a second lashing as you're not quite fast enough for your dominator's liking[end if]. As quick as before, he has you shackled down onto it, leaving you at his not-so-tender mercies.";
 	if "Twisted Capacity" is not listed in feats of player:
-		say "     He drags the switch slowly between your ass cheeks, but does not swat you as you whimper and raise your ass for him. He instead starts spreading some lube across your pucker and then pushing one finger and then another into it[if hp of player is 6]. At first, you are rather surprised at how tender and sensual he is about this. But when he selects a dauntingly large buttplug from his collection you realize what his true intentions are[else]. Knowing what is to come, you do your best to relax, enjoying his sensual touch while you can before he selects a dauntingly large buttplug to be used on you[end if]. He has a very cruel grin on his lupine face as he lubes up the massive toy before jamming it hard against your back entrance. The earlier preparation is nowhere near enough to cope with such a big toy and you're left whimpering and moaning in a mix of pleasure and pain as he works it steadily deeper with hard pushes while stroking your dangling cock with his other paw.";
-		say "     'That's it, little mascota,' he whispers sensually in your ear as he gives it another hard push. 'Your body needs to be trained. These are such interesting times; you need to be -he drives the increasingly thick plug another inch into you- prepared to accept it.'  He gives a chuckling growl and gives the toy another push. It hurts, but it is a good hurting and your cock is rock hard and dribbling with pre from the wolf's constant stroking. As the session goes on, it gets more and more difficult for you to deal with the thick base of the latex plug, but [if hp of Zigor is 6]Zigor keeps pushing to stretch you out[else]you do you best to accommodate the dominant wolf's toy[end if].";
+		say "     He drags the switch slowly between your ass cheeks, but does not swat you as you whimper and raise your ass for him. He instead starts spreading some lube across your pucker and then pushing one finger and then another into it[if HP of player is 6]. At first, you are rather surprised at how tender and sensual he is about this. But when he selects a dauntingly large buttplug from his collection you realize what his true intentions are[else]. Knowing what is to come, you do your best to relax, enjoying his sensual touch while you can before he selects a dauntingly large buttplug to be used on you[end if]. He has a very cruel grin on his lupine face as he lubes up the massive toy before jamming it hard against your back entrance. The earlier preparation is nowhere near enough to cope with such a big toy and you're left whimpering and moaning in a mix of pleasure and pain as he works it steadily deeper with hard pushes while stroking your dangling cock with his other paw.";
+		say "     'That's it, little mascota,' he whispers sensually in your ear as he gives it another hard push. 'Your body needs to be trained. These are such interesting times; you need to be -he drives the increasingly thick plug another inch into you- prepared to accept it.'  He gives a chuckling growl and gives the toy another push. It hurts, but it is a good hurting and your cock is rock hard and dribbling with pre from the wolf's constant stroking. As the session goes on, it gets more and more difficult for you to deal with the thick base of the latex plug, but [if HP of Zigor is 6]Zigor keeps pushing to stretch you out[else]you do you best to accommodate the dominant wolf's toy[end if].";
 		say "     After what feels like hours of stretching, your anus crests the widest point and quickly yanks the rest of the toy into your ass as it closes back down around the narrower portion. This slams the toy buried deep inside you against your prostate, setting you off into a screaming climax as your reward for finally succeeding. The whole of your lower body, aching from the effort of your training, quivers and trembles as you spray your [cum load size of player] messily onto the ground and into the waiting bucket. As you're cumming, the leather wolf moves in front of you and forces his cock down your throat, feeding you his seed after a few thrusts.";
-		increase xp of Zigor by 1;
-		if xp of Zigor is 3:
+		increase XP of Zigor by 1;
+		if XP of Zigor is 3:
 			say "     'It pleases me to see you coming along so well, cachorro. That should help with your ordeals in the city as well as let us move on to some more intense pleasures,' he says with a toothy smile in that sensual accent of his. He gives your ass a firm squeeze with his claws digging in, causing your ass to clench and squeeze down around that extremely large buttplug it is holding with ease. As he leaves you there to enjoy the sensation of fullness and being delightfully stretched inside, you eye his collection with a hunger for the various huge toys.";
 			say "     [bracket]You have gained the [bold type]Twisted Capacity[roman type] feat.[close bracket]";
 			add "Twisted Capacity" to feats of player;
 			increase score by 20;
 		else:
-			say "     After several lashings across the ass with the switch, he relents. 'You did well enough, I suppose,' the wolf says in his sensual, Iberian accent. 'Perhaps we'll have you try something [if xp of Zigor is 1]a little bigger[else]with real girth to it[end if] next time.'  Feeling the sore ache from your ass despite the nanite infection, you are filled with both trepidation and anticipation for more. He leaves you tied up and stuffed for quite some time, your ass gradually becoming used to the added extension. During this time, your eyes drawn to his collection and those even larger toys awaiting you.";
+			say "     After several lashings across the ass with the switch, he relents. 'You did well enough, I suppose,' the wolf says in his sensual, Iberian accent. 'Perhaps we'll have you try something [if XP of Zigor is 1]a little bigger[else]with real girth to it[end if] next time.'  Feeling the sore ache from your ass despite the nanite infection, you are filled with both trepidation and anticipation for more. He leaves you tied up and stuffed for quite some time, your ass gradually becoming used to the added extension. During this time, your eyes drawn to his collection and those even larger toys awaiting you.";
 	else:
-		if xp of Zigor is 3:	[got feat from him]
-			say "     He drags the switch slowly between your ass cheeks, but does not swat you as you whimper and raise your ass for him. He instead starts spreading some lube across your pucker and then pushing one finger and then another into it[if hp of player is 6]. At first, you are rather surprised at how tender and sensual he is about this given what you've come to expect and desire from him[else]. Having been through this before, you do your best to relax, enjoying his sensual touch[end if]. As your accommodating anus relaxes and stretches, the surprised wolf plunges further into you. 'It seems that someone has already stretched you out quite nicely, pequeno juguete,' he says while teasingly rubbing at your prostate.";
+		if XP of Zigor is 3:	[got feat from him]
+			say "     He drags the switch slowly between your ass cheeks, but does not swat you as you whimper and raise your ass for him. He instead starts spreading some lube across your pucker and then pushing one finger and then another into it[if HP of player is 6]. At first, you are rather surprised at how tender and sensual he is about this given what you've come to expect and desire from him[else]. Having been through this before, you do your best to relax, enjoying his sensual touch[end if]. As your accommodating anus relaxes and stretches, the surprised wolf plunges further into you. 'It seems that someone has already stretched you out quite nicely, pequeno juguete,' he says while teasingly rubbing at your prostate.";
 		else:			[got feat elsewhere]
 			say "     He drags the switch slowly between your ass cheeks, but does not swat you as you whimper and raise your ass for him. He instead starts spreading some lube across your pucker and then pushing one finger and then another into it. Having undergone your training, your accommodating anus relaxes and stretches, allowing the sensual wolf to plunge further into you. 'It seems that you are indeed stretched out quite nicely, pequeno juguete,' he says while teasingly rubbing at your prostate.";
 		say "     'I have something I have been saving for just this occasion,' the wolf says sexily, giving your ass a swat with the switch as added emphasis. He strides over to his collection and pulls out a huge, knotted dildo. It looks much like his own cock, but enlarged and wired to a handheld remote. This he lubes up quickly before easing it inch by delightful inch into your anus. He pauses from time to time to give you another few lashings. These cause you to moan in pleasure as your stuffed hole clenches momentarily around the thick toy inside you. Once it's buried into you to the top of the knot, he takes a moment to caress your cock and balls, telling you to be a good sub and take it all. You nod eagerly, your lust-filled mind wanting that thick bulb in you so badly. Zigor grins at your respond and gives it a hard push, forcing it all into you with a wet plop and a loud cry from you.";
 		say "     With that big thing buried and knotted inside you, he's free to stride around you, remote and switch in hand. The dildo begins to vibrate inside you, sending tingles of erotic bliss through your lower body. As he starts lashing you, he punctuates each blow by turning up the vibrator briefly, tying your pain into your pleasure. From time to time, he pauses before you, stuffing his cock down your throat and having you suck his leaking meat. This goes on for quite a while, the wolf expertly keeping you from cumming as he draws out your punishing delight. Once he's satisfied with your continued training, he takes your mouth again and lashes you wildly, keeping the vibrator on max until you both have powerful, sticky climaxes that leave you both tired and panting. Your balls drained, he gradually eases the dial down until its off and removes the knotted dildo from you before sending you back up the stairs on unsteady legs with another swat of the switch.";
-		now xp of Zigor is 4;
-		now hp of Zigor is 8;
+		now XP of Zigor is 4;
+		now HP of Zigor is 8;
 
 
 Section 4 - Sex w/Zigor - Stage 2
@@ -222,13 +222,13 @@ to say zigor_S2_01_MM:	[stage 2 - spreader/pain choice/oral - MM]
 		say "     The wolf, with the riding crop in hand again, slaps it across each of your cheeks and growls for you to lift your head. Looking up at your dominator, you find your mouth in line with his erection. 'Get to sucking, cachorro,' he rumbles with a long, rolling 'R'. After the lengthy and painful disciplinary session has left you achingly aroused, you give no thought to resisting and obediently bury his bone in your wet maw, licking and sucking at it greedily. He brushes the [one of]riding crop[or]wooden paddle[or]heavy flog[or]leather truncheon[at random] across your cheek as if reminding you to do a good job lest you be punished, though you no longer need any such enticement in your current state. You are eager to please your dominator and master as well as thirsty for his seed. With the scent of leather and him filling your nose, you can think of nothing more by this point.";
 		say "     The wolf holds back much longer than during your earlier sessions, giving you plenty of opportunity to show your devotion to his knotted manhood before he finally rewards you with a sticky flood of his lupine seed. This you swallow down hungrily, licking and sucking for more until finally he's got none left to give. After such an enthusiastic blow job, the wolf gently caresses your cheek. 'I am pleased to see you feeling dutiful again,' he rumbles. 'Let me show you what else obedience earns you,' he says in that suave accent of his while nuzzling down your chest. He sniffs his way down your trapped form, muzzle making its way to your throbbing cock and balls. He gives them a long, slow lick before wrapping his tongue around your shaft and pulling it into his maw. While sucking you, he strokes the crop against your balls, reminding you of the painful pleasure it's given you. After your long session, you don't hold out long and end up feeding your [cum load size of player] load to the leather-bound lupine. Licking his muzzle as he rises, he frees you of the restraints lets you drop to the stone floor in a heap. Your muscles and joints sore from being locked in them for so long, you are left there for a time to recover before Zigor escorts you back upstairs with a final tap of the [one of]riding crop[or]paddle[or]flog[or]leather club[at random] on your ass.";
 	if dchoice is 3:
-		now hp of player is ( 2 * hp of player ) / 3;
+		now HP of player is ( 2 * HP of player ) / 3;
 	else if dchoice is 4:
-		now hp of player is hp of player / 2;
+		now HP of player is HP of player / 2;
 	else if dchoice is 5:
-		now hp of player is hp of player / 3;
+		now HP of player is HP of player / 3;
 	else if dchoice is 0:
-		now hp of player is hp of player / 4;
+		now HP of player is HP of player / 4;
 
 
 to say zigor_S2_02_MM:	[stage 2 - sling/anal/accessory - MM]
@@ -335,7 +335,7 @@ to say zigor_S2_04_MM:		[ stage 4 - offer of finale - MM ]
 		say "     'You should appreciate the time I am spending on you, bobo. I have a store to run and many other leather bitches eager for their master's cock,' he rumbles as he drives the rest of his mighty manhood into you with another authoritative thrust. Grabbing a different lever this time, he gives it a yank down several notches. This twists your limbs, rotating them within their already uncomfortable position. After sending this fresh jolt of pain through you, he starts pounding away before even your stretchable ass can quite adjust to the rapid penetration. Your body rapidly returns to full arousal, the pain and the pleasure becoming blurred, your body simply aching for more stimulation. You begin to look forward to the next click of the levers almost as much as you are to the firm smash of his knot against your spreading hole.";
 		say "     While you can tell the wolf was looking forward to taking his time enjoying fucking you, his anger has driven him to take you hard and fast. Despite your painful position, you do your best to drag it out for him, holding back your own release so he might be sated. Eventually though, you can't resist any longer and you beg him to knot you. Grabbing your twisted shoulders, he yanks hard and drives his bulging knot into you with a howl. The hot rush of his seed pours into you with steady, rhythmic bursts that leave you full and leaking. Your dangling cock twitches wildly, splattering your own load across the floor as you give a long, moaning cry.";
 		say "     'Perhaps there is still hope for you, mi cachorro. I want you to come back soon to renew your training.'  Popping his half-deflated knot from your hole releases a gush of gooey wolf seed. He has you lick his sticky prick clean before pulling a release on the contraption holding you. Your twisted body drops to the sticky floor in a heap. You're left alone in your mess with only the slow clicking as the machine ratchets back gradually, one click every few seconds. It takes a few minutes before returning to its original, [if zigseat is 1]bench-like[else]chair-like[end if] configuration. Between the torture [if zigseat is 1]bench[else]chair[end if] and the violent fucking, it is many more before you're recovered enough to stand and stagger your way back upstairs.";
-		now hp of Zigor is 9; [reset cycle]
+		now HP of Zigor is 9; [reset cycle]
 		now zigorcycle is true;
 
 to say randomwolfgimp:
@@ -350,7 +350,7 @@ when play ends:
 			say "     As these new locations open, your true purpose is revealed. Your strong, tauric body is lashed to a wooden cart and you are made to pull supplies and complete product runs to and from the main store. It is a tough task, but one your well-disciplined mind and body accept as your proper place. It also comes with the added perks of the lashings of the driver and their lustful thanks during and after the long hauls. At those rare times that the other creatures of the city threaten the wolves['] territory and the leatherworking den, you are ridden out by your master as his epic steed as he leads the pack into battle like a noble Spanish general.";
 
 
-[      hp of Zigor      ]
+[      HP of Zigor      ]
 [ 0 = not been to store ]
 [ 1 = seen store        ]
 [ 2 = talked to Zigor   ]
@@ -360,7 +360,7 @@ when play ends:
 [ 12 = had orgy session - leather gear next ]
 [ 13 = game over as leather pet ]
 
-[      xp of Zigor      ]
+[      XP of Zigor      ]
 [ 0 = no anal training  ]
 [ 1 = anal training 1   ]
 [ 2 = anal training 2   ]

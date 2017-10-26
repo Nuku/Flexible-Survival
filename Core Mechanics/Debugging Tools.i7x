@@ -97,8 +97,8 @@ carry out TestMode:
 	now charisma of player is 30;
 	now perception of player is 30;
 	now level of player is 30;
-	now maxhp of player is 300;
-	now hp of player is 300;
+	now maxHP of player is 300;
+	now HP of player is 300;
 	now capacity of player is 300;
 	increase carried of food by 15;
 	increase carried of water bottle by 15;
@@ -286,15 +286,15 @@ to DescriptionDisplay:
 	now looknow is 1;
 	let cocktext be "";
 	follow the cock descr rule;
-	if the cocks of the player is greater than 0:
-		if the cocks of the player is greater than 1:
+	if the cocks of the player > 0:
+		if the cocks of the player > 1:
 			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size].";
 		else:
 			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size].";
 	let cunttext be "";
 	follow the cunt descr rule;
-	if the cunts of the player is greater than 0:
-		if the cunts of the player is greater than 1:
+	if the cunts of the player > 0:
+		if the cunts of the player > 1:
 			now cunttext is " have [cunts of the player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
 		else:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. It is [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
@@ -339,23 +339,23 @@ to DescriptionDisplay:
 	else if cunttext is not "":
 		say " You[cunttext]";
 	follow the breast descr rule;
-	if breasts of player is greater than 0:
+	if breasts of player > 0:
 		if breast size of player is 0:
 			say "You have [breasts of player] nipples on your [bodydesc of player] chest.";
 		else:
-			if breasts of player is greater than 2:
+			if breasts of player > 2:
 				say "You have [breasts of player] breasts on your [bodydesc of player] chest. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [(breast size of player times three) divided by five] inch[if ( breast size of player times three ) divided by 5 is not 1]es[end if] from your chest. ";
-				if breasts of player is greater than 4, say "The rest jostle for space [breast size of player divided by three] inch[if breast size of player divided by 3 is not 1]es[end if] from your belly.";
+				if breasts of player > 4, say "The rest jostle for space [breast size of player divided by three] inch[if breast size of player divided by 3 is not 1]es[end if] from your belly.";
 			else:
 				say "You have two [descr] breasts on your [bodydesc of player] chest, curving out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest.";
-	if child is not born and gestation of child is greater than 0:
-		if gestation of child is less than 10:
+	if child is not born and gestation of child > 0:
+		if gestation of child < 10:
 			now looknow is 0;
 			say "Your [skin of player] swollen belly looks ready to spill forth life at any moment.";
 			now looknow is 1;
-		else if gestation of child is less than 20:
+		else if gestation of child < 20:
 			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child.";
-		else if gestation of child is less than 30:
+		else if gestation of child < 30:
 			say "You feel a soft subtle glow somewhere in your belly.";
 	else if heat enabled is true:
 		if inheat is true:

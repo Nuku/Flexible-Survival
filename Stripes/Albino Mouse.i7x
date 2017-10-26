@@ -39,8 +39,8 @@ to say drmousedesc:
 	if hospfight is 1:
 		say "     Dr Mouse, barely four feet tall, intends to fight you. With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak. But the musine doctor snarls angrily and charges at you, tiny paws clenched into fists. You ready to strike, prepared to deal with the mad doctor once and for all.";
 		if hardmode is true and level of player > 4, let debit be level of player - 4;
-		now hp entry is 30 + ( debit * 2 );
-		now monsterhp is 30 + ( debit * 2 );
+		now HP entry is 30 + ( debit * 2 );
+		now monsterHP is 30 + ( debit * 2 );
 		now wdam entry is 3 + ( debit / 8 );
 		now lev entry is 4 + ( debit / 2 );
 		now libido entry is 20;
@@ -52,8 +52,8 @@ to say drmousedesc:
 		say "     The now monstrous mouse is attacking you. His altered body is huge, almost nine feet tall and bristling with sharp claws, teeth, horns and spikes. He has managed to give himself a powerful physique and seems to have retained his twisted mind. His hide is toughened, making it much harder to harm the mutated hybrid he's become.";
 		let debit be 0;
 		if hardmode is true and level of player > 12, let debit be level of player - 12;
-		now hp entry is 150 + ( debit * 6 );
-		now monsterhp is 150 + ( debit * 6 );
+		now HP entry is 150 + ( debit * 6 );
+		now monsterHP is 150 + ( debit * 6 );
 		now wdam entry is 10;
 		if hardmode is true, now wdam entry is 12 + ( ( 2 * debit ) / 5 );
 		now lev entry is 12 + debit;
@@ -67,7 +67,7 @@ to say drmousedesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -94,8 +94,8 @@ When Play begins:
 	now int entry is 24;
 	now cha entry is 20;
 	now sex entry is "Female";
-	now hp entry is 30;
-	now lev entry is 4; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+	now HP entry is 30;
+	now lev entry is 4; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
 	now wdam entry is 3; [Amount of Damage monster Does when attacking.]
 	now area entry is "nowhere"; [ Location of monster, in this case nowhere]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']

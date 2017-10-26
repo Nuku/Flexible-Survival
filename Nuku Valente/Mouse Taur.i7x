@@ -19,13 +19,13 @@ Instead of Resolving a Mouse Taur:
 	if mtrp is 0:
 		say "     A voice suddenly rises, startling you. Spinning about in alarm, you see a creature approaching you. She has a body that reminds you of a basic house variety mouse, if expanded until it were six feet long. Where its head should be is the belly and upper torso of a humanoid. As she approaches, her two C or D cup breasts sway in counterpoint to her two hips. Her face is mostly human, with fine whiskers, large round rodent ears and just enough snout to know it's there. She smiles at you, showing off bucked teeth, 'Hello', she says, 'I was watching you roam around and thought you might like some company.'";
 		attempttowait;
-		if cocks of player is greater than 0 and cunts of player is less than 1:
+		if cocks of player > 0 and cunts of player < 1:
 			say "     She looks you over critically, placing her paw like hands on her hips and leaning a bit, 'I was hoping for something a little more...' she trails off, then shakes her head, 'Nevermind that, I am being rude. You will be just fine, I'm sure, with some work.' She smiles brilliantly and offers a hand, 'Lisa, you are?'";
-		if cunts of player is greater than 0 and cocks of player is greater than 0:
+		if cunts of player > 0 and cocks of player > 0:
 			say "     'I get the feeling you are what I want and some extra, huh... Life sure has gotten more interesting since the lights went out,' she says with a friendly expression, 'Glad to run into someone who can talk. My name is Lisa. What's your name?";
-		if cunts of player is greater than 0 and cocks of player is less than 1:
+		if cunts of player > 0 and cocks of player < 1:
 			say "     She approaches closer, reaching to embrace you. You flinch with worry, but no harm befalls as she hugs you softly to her soft and warm body. Your face is drawn against her soft tits as her hand rubs your back quietly a moment, 'Poor little dear, lost in all this ruin and chaos. I'm Lisa, but you can call me mom if you prefer, or sis, that works.'";
-		if cunts of player is less than 0 and cocks of player is less than 1:
+		if cunts of player < 0 and cocks of player < 1:
 			say "     She sniffs the air lightly and looks at you with some confusion, 'You must have had such a hard time of it,' she says with some sympathy, 'I am Lisa, nice to meet you.'";
 		attempttowait;
 		say "     You give your name and begin idly chatting about time before everything went bad. You settle with her and she pulls out some snacks, sharing with you as you talk with her. She was a recently graduated major in education, 'I planned to be a teacher,' she explained, 'Grade school, but then this happened.' It seems that some mice that lived in her house became infected.";
@@ -33,7 +33,7 @@ Instead of Resolving a Mouse Taur:
 		say "     Meal time over, you both rise. She gives you a firm parting hug, and turns to walk off into the red light area, long furry tail swaying behind her.";
 		increase mtrp by 1;
 		decrease hunger of player by 20;
-		if hunger of player is less than 0, now hunger of player is 0;
+		if hunger of player < 0, now hunger of player is 0;
 		now Porn Store is known;
 		now mouse taur is resolved;
 		now find porn store is resolved;
@@ -82,17 +82,17 @@ instead of sniffing Lisa:
 	say "     The mousetaur smells very feminine and musine.  She wears a soft perfume and scented oils.  There is a strong scent of females and sex about her person.";
 
 instead of sniffing Porn Store:
-	say "     The porn store smells of scented oils and candles, lube, latex toys, secret desires and backroom sex.  There is also the smell of mouse [if hp of Sven > 49 and hp of Sven < 99]and snow leopard from its residents[else]from its resident[end if].";
+	say "     The porn store smells of scented oils and candles, lube, latex toys, secret desires and backroom sex.  There is also the smell of mouse [if HP of Sven > 49 and HP of Sven < 99]and snow leopard from its residents[else]from its resident[end if].";
 
 to say pornstoredesc:
 	let T be 0;
 	say "     It was once a [']den of sin['], now mostly quiet. It smells fresh and clean. A small picture on the counter shows a familiar-looking female, presumably before she became a mouse creature. She is quite recognizable, at least in the face and general build. Most of the pictures show her alone. The porn is still present, stacked in neat piles or arranged on the shelves. Only a few are out of place. Girls on Girls 23, Lesbone 7 and Cunning Linguist Part 4.";
-	if hp of Sven is 52:
+	if HP of Sven is 52:
 		now T is 1;
 		say "[line break]     Upon your return to the porn store, you find a new feline here.  This female snow leopard has pink markings on her white fur and is wearing a red bathing suit that struggles to hold in her ample bosom of six breasts.  You smile to her and ask if she's a friend of Sven's.  The snowmeow blushes and hides her face behind her fluffy tail.  Your brain roughly switches gears as you realize that this buxom kitty IS Sven.  Fortunately, Lisa returns from the back, having heard the door and greets you.  'Ah!  I see you've been getting reacquainted with my dear Svetlana,' she says, running a paw playfully up the feline's side.";
 		say "     Sven, or Svetlana as she is now, mews softly at the pleasant touch and watches you nervously to see your reaction to her change.  You smile politely and she relaxes a little, purring as the mouse's paws move over her body.  Her swimsuit, being quite tight over her large rack, has a perceptible camel toe showing between her legs, which is where Lisa has let one of her paws wander.  She brushes over the snowmeow's covered pussy, rubbing and teasing her until there's a growing wet patch in her swimwear.  'She's so much more fun now that my pet kitty's got a nice, wet pussy.  You should give her a try sometime.'  She teases the snowmeow like this for a little while before eventually tiring of the game for now to tend to the store.";
-		now hp of Sven is 53;
-	if hp of rubber tigress is 8 and companion of player is rubber tigress:
+		now HP of Sven is 53;
+	if HP of rubber tigress is 8 and companion of player is rubber tigress:
 		if T is 1, attempttowait;
 		say "[line break]     [if T is 1]While you're distracted by Svetlana[else if Sven is in Porn Store]As you're greeting Lisa and Sven[else if Svetlana is in Porn Store]As you're greeting Lisa and Svetlana[else]As you're greeting Lisa[end if], Artemis pads around the store in idle feline curiosity.  That is, until her attention is caught by the glass display case under the counter.  Looking inside it, she mewls plaintively, leaning in closer and closer for a better look until the front of her rubbery face is mooshed up against it and flattened out.  Drawn by her unusual behaviour, you nudge her aside and look into the cabinet.";
 		say "     Behind the glass, among the selection of DVDs and magazines stored there are a pair of sex toys.  The first is an exotically shapely dildo, having a definite feline shape and 'rubbery pleasure barbs' as the box calls them.  The second is a clear, flexible sleeve and purports itself to be a 'realistic vagina toy' according to its packaging.  Artemis nuzzles your face and gives another plaintive mewl before flattening her muzzle against the glass again.  Given her proclivity for eating plastics, perhaps she wants to eat them as well.";
@@ -106,14 +106,14 @@ to say pornstoredesc:
 		else:
 			say "     'There's been some kangaroo girls in the area who have been harassing my store.  And it's too bad, too.  They look like they'd be a lot of fun if they'd just be more neighbourly,' adds wistfully, licking her lips at the thought of those sexy females.  'If you'll go around and deal with some of them, warning them to not bother my store, I'd appreciate it.  If you beat up four of them, let's say, I'll consider those paid for and Ms. Meowlyface here can have them.'  Artemis ignores the final comment, mewling again and purring happily.  You pet her head and agree to Lisa's deal.";
 			now lisaartemiscount2 is 1;
-		now hp of rubber tigress is 9;
+		now HP of rubber tigress is 9;
 
 
 instead of conversing the Lisa:
 	if lisaartemiscount1 is 5 or lisaartemiscount2 is 5:
 		say "     Having helped deal with her [if hellspawn is not banned]demoness[else][']roo[end if] problem, you tell Lisa that you've driven off several of them.  She smiles at the news and heads towards the counter.  'I thought that might be the case.  There's been a lot less trouble from them lately.  It's looking like the word's getting around among them not to harass my place.  I hate to resort to such tactics, but until they become more civil about it, I can't have them bugging me and my few customers just because it's a sex shop.'";
 		say "     As she's been talking to you, she's opened up the cabinet and taken out the toys reserved for Artemis[if companion of player is rubber tigress], much to the feline's mewling delight.  She nuzzles at your hip and winds around your legs, threatening to topple you over in her eagerness[end if].  You take the two boxes from Lisa, grumbling a little that it's a lot to do just so she can have a tasty treat.  The mousetaur giggles at this and leans over the counter.  'I couldn't help noticing that your feline friend's a little lacking under the tail.  Maybe your rubber kitty's wants a little more out of them than you think.'  [if companion of player is rubber tigress]As Artemis mrowls all the louder, [end if]Lisa slides a tube of rubber cement across the counter with a playful grin on her musine face.  Hmm... Maybe you'd best take a closer [bold type]look[roman type] at the rubber tigress.";
-		now hp of rubber tigress is 10;
+		now HP of rubber tigress is 10;
 		now lisaartemiscount1 is 0;
 		now lisaartemiscount2 is 0;
 	else if rabbitsibling is 3: [Sandra Quest]
@@ -130,13 +130,13 @@ instead of conversing the Lisa:
 				say "     Sadly, you don't have one to spare, you'll need to return with one to obtain the item.";
 		else:
 			say "     Shrugging at you, she stows the item in the back room once more. You imagine your only course of action right now is to deliver the buttled water.";
-	else if hp of Sven is 50:
+	else if HP of Sven is 50:
 		say "     [one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you brought your cute friend by.  He's very sweet.  And don't worry, I think we'll get along famously.'[or]'How are you?'[or]While you chat with Lisa, she scritches a paw along Sven's back, grinning as he purrs.  He tries to hide his blushing face behind his tail.[or]Lisa gives Sven's ears another scritch, getting the shy fellow to purr a little from behind his tail.[at random]";
-	else if hp of Sven is 51:
+	else if HP of Sven is 51:
 		say "     [one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you brought your cute friend by.  He's very sweet.  And don't worry, I think we'll get along famously.'[or]'How are you?'[or]While you chat with Lisa, she scritches a paw along Sven's back, grinning as he purrs and arches his back into her touch.  He still blushes a little, but is not nearly so red.[or]Lisa gives Sven's ears another scritch, getting the shy fellow to purr a little from behind his tail.[or]Lisa puts her arms around Sven from behind and runs them over his chest.  He notices you watching and blushes profusely.  He tries to conceal the bulge in his shorts with his tail.[or]'Sven is turning into such a nice kitty.  He's always so polite and quiet.  Not a bother at all.  I'm glad to help him out in any way I can,' she adds with a little grin.[at random]";
-	else if hp of Sven is 52:
+	else if HP of Sven is 52:
 		say "ERROR-LISA-52T: You should not be able to speak to me at this point!";
-	else if hp of Sven is 53 or hp of Sven is 54:
+	else if HP of Sven is 53 or HP of Sven is 54:
 		say "     [one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you brought your cute friend by.  He's made a very lovely girl.  And don't worry, I'll be keeping good care of her.'[or]'How are you?'[or]While you chat with Lisa, she scritches a paw along Svetlana's back, grinning as she purrs and arches his back into her touch.  The shy snowmeow blushes a little at the ears, but nuzzles up against the mousetaur affectionately.[or]Lisa gives Svetlana's ears another scritch, getting the shy girl to purr happily.[or]Lisa puts her arms around Svetlana from behind and runs them along her sides.  She smiles bashfully to you when she notices you watching.[or]'Svetlana has become such a fine kitty.  She's always so polite and quiet.  And so much fun snuggle up to at night,' she adds with a little grin.[or]'I hope you're pleased with my pretty kitty, Svetlana.'[or]Lisa runs a paw along Svetlana's side before cupping her rear.  'Feel free to play with my pet kitty any time you like, sweety,' she tells you, making the snowmeow hide her face behind her fluffy tail.  But you can hear her purring and catch a glimpse of her smiling as well.[at random]";
 	else:
 		say "     [one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you visited. I was getting lonely.'[or]'How are you?'[at random]";
@@ -161,7 +161,7 @@ To mousefuck:
 		if name entry is "Female Husky":
 			now monster is y;
 			break;
-	if lastfuck of Lisa - turns is less than 12:
+	if lastfuck of Lisa - turns < 12:
 		say "She points over to a pile of porn mags, 'Help yourself.'";
 		stop the action;
 	now lastfuck of Lisa is turns;
@@ -179,10 +179,10 @@ To mousefuck:
 			say "Give her what she wants?";
 			if the player consents:
 				increase mousefucked by 1;
-				say "You nod in consent even as she gives soft tugs with her furred fingers. She smiles, leaning in to nip at your neck and shoulder slowly as she noses her way downwards, sinking down until her lower belly lays on the rug. She pushes you back far enough to sniff lightly at the [cock size desc of player] organ you have, 'I can smell a lot better these days.' she says, 'You are a tough one,' She licks over her lips, then licks over the head of your organ, sending shivers along your body as she starts to bathe it in slow long draws of her slippery and skilled tongue. Your hips buck forward, driving against her as she snorts around it, fine whiskers tickling your [skin of player] thighs. She draws back and nuzzles at you a moment before lifting it up out of the way and reaching for your [short ball size] balls and extending her tongue. Warm wetness flows over the sensitive bag of flesh, making your toes clench as she slowly cleans you, even lapping at the joint where sac joins torso. Her softly furred fingers squeeze at you and start pulling in slow strokes as she draws back.[if cocks of player is greater than 1] She noses gently at your extra equipment, then begins to rub her face, stimulating all [cocks of player] cocks in soft strokes of her furry face and agile hands.[end if][line break][line break]You feel your body tense with anticipation and she looks up at you with a grin, 'You want me to swallow?' she asks.";
+				say "You nod in consent even as she gives soft tugs with her furred fingers. She smiles, leaning in to nip at your neck and shoulder slowly as she noses her way downwards, sinking down until her lower belly lays on the rug. She pushes you back far enough to sniff lightly at the [cock size desc of player] organ you have, 'I can smell a lot better these days.' she says, 'You are a tough one,' She licks over her lips, then licks over the head of your organ, sending shivers along your body as she starts to bathe it in slow long draws of her slippery and skilled tongue. Your hips buck forward, driving against her as she snorts around it, fine whiskers tickling your [skin of player] thighs. She draws back and nuzzles at you a moment before lifting it up out of the way and reaching for your [short ball size] balls and extending her tongue. Warm wetness flows over the sensitive bag of flesh, making your toes clench as she slowly cleans you, even lapping at the joint where sac joins torso. Her softly furred fingers squeeze at you and start pulling in slow strokes as she draws back.[if cocks of player > 1] She noses gently at your extra equipment, then begins to rub her face, stimulating all [cocks of player] cocks in soft strokes of her furry face and agile hands.[end if][line break][line break]You feel your body tense with anticipation and she looks up at you with a grin, 'You want me to swallow?' she asks.";
 				say "Let her swallow?";
 				if the player consents:
-					if cocks of the player is greater than 1:
+					if cocks of the player > 1:
 						say "She squeezes your cocks together as best she can, licking across the slits of them all in as her hands stroke at a feverish pitch. You are unable to hold back any longer, balls contracting with a loud groan as you spray hotly. She latches onto one of your members and begins to guzzle down the bitter salty offering as she's being painted with the remaining seed across hair and shoulders, her hands still stroking and pulling, draining you thoroughly.";
 					else:
 						say "She rubs along the tip of your member as she opens her snout. She begins to suckle in delicious eagerness as she lets a hand wander, rubbing along your thighs and making your legs quiver with the feel of her light claws pressing to sensitive points. All too abruptly, you feel the pressure explode. She swallows each burst as it comes, guzzling your rich male seed with soft sounds of approval, stroking you until you have no more to give.";
@@ -204,7 +204,7 @@ To mousefuck:
 				say "That ass looks fine, or is that the nanites talking? Who cares! Go for it?";
 				if the player consents:
 					increase mousefucked by 1;
-					say "Giving in to the urge, you close the distance with the mouse swiftly and seize her by the back hips. She looks over her shoulder at you and gives a leer of a smile as her tail flips up over her back in consent. You are on her in moments, driving your [cock size desc of player] [cock of player] cock deep inside her wet cunt. [if cock length of player is greater than 12]Your cock stretches her eager tunnel to a snug fit as you drive against her, drawing out the most pleased of noises from her with every motion[else]Her large cunt proves so wet and hot around your eager pole as you begin to rut against her in a fury[end if].[if cocks of player is greater than 1] Your other shaft finds a home in her tight pucker. She goes red in the ears as it nudges at her, then it works into her trembling form. As it pops fully into her, she coos in delight, rocking back against you.[end if][line break][line break]Her tauric body rocks in powerful motions against your own, taking you further and deeper as she grows warm under you. Your loins burn with a fiery pleasure as you can feel your [short ball size] sac contract. You fill her body with a few thick sprays of your virility and she squeals in a shuddering hiss that seems to fill the room. As you both start to relax, your body resting against her, she slowly turns about to half face you, 'And I thought you were going to say no,' she taunts lightly.";
+					say "Giving in to the urge, you close the distance with the mouse swiftly and seize her by the back hips. She looks over her shoulder at you and gives a leer of a smile as her tail flips up over her back in consent. You are on her in moments, driving your [cock size desc of player] [cock of player] cock deep inside her wet cunt. [if cock length of player > 12]Your cock stretches her eager tunnel to a snug fit as you drive against her, drawing out the most pleased of noises from her with every motion[else]Her large cunt proves so wet and hot around your eager pole as you begin to rut against her in a fury[end if].[if cocks of player > 1] Your other shaft finds a home in her tight pucker. She goes red in the ears as it nudges at her, then it works into her trembling form. As it pops fully into her, she coos in delight, rocking back against you.[end if][line break][line break]Her tauric body rocks in powerful motions against your own, taking you further and deeper as she grows warm under you. Your loins burn with a fiery pleasure as you can feel your [short ball size] sac contract. You fill her body with a few thick sprays of your virility and she squeals in a shuddering hiss that seems to fill the room. As you both start to relax, your body resting against her, she slowly turns about to half face you, 'And I thought you were going to say no,' she taunts lightly.";
 					if "Male Preferred" is listed in feats of player:
 						say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";
 						increase mousespot by 1;
@@ -255,15 +255,15 @@ To mousefuck:
 Section 4 - Endings
 
 When play ends:
-	if mousefucked is greater than 1 and humanity of the player > 9:
+	if mousefucked > 1 and humanity of the player > 9:
 		increase score by 5;
 		say "     You receive an occasional letter or call from Lisa.  It turns out she made it through alright and has joined up with a group called the [']Prometheans['].  It sounds like some kind of weird cult thing, but at least she is happy and safe. You remain good pen pals with the mousetaur you met in that fallen city";
-		if mousespot is greater than 0:
+		if mousespot > 0:
 			say ".  She writes that you remain to be the only male she's ever laid with that didn't become a female afterwards.  After many years of exchanged letters, she admits that she misses the moment and wishes she had stayed closer at your side.  Maybe... well, they say it is never too late.";
 			increase score by 10;
 		else:
 			say ".";
-	if hp of Sven is 54 and humanity of player > 9:		[Svetlana endings]
+	if HP of Sven is 54 and humanity of player > 9:		[Svetlana endings]
 		if cocks of player > 0:
 			say "     Svetlana keeps in touch with you[if mousefucked > 1] as well[end if], even coming to visit you at times when her mistress permits it.  It seems Lisa's quite busy with her duties (which are never really elaborated upon), which keeps her from accompanying her pet.  Burly guards keep the pink snowmeow safe on these journeys, making you feel that Lisa has become someone of import.  You consider asking the pink kitty at times, but her lustful appetite for your attention during these visits always distracts you.  You have long, energetic breeding sessions with the kitty, making sure she's well and truly knocked up before letting her leave.  She and Lisa won't allow anyone else to breed the pink snowmeow but her brave hero, so you always make sure to do your duty as best and as often as you can during these rare visits.";
 		else:

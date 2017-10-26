@@ -21,14 +21,14 @@ to say infect:
 
 to say Give Awesome:
 	if a random number between 1 and 100 > 40:
+		say "[bold type]You gain 1 awesome fruit![roman type][line break]";
 		increase carried of awesome fruit by 1;
-		say "You gain 1x awesome fruit!";
 	if a random number between 1 and 100 > 40:
+		say "[bold type]You gain 1 awesomer fruit![roman type][line break]";
 		increase carried of awesomer fruit by 1;
-		say "You gain 1x awesomer fruit!";
 	if a random number between 1 and 100 > 85:
+		say "[bold type]You gain 1 awesomest fruit![roman type][line break]";
 		increase carried of awesomest fruit by 1;
-		say "You gain 1x awesomest fruit!";
 
 to say awesome attack:
 	if Awesome_boredom is 4:
@@ -43,7 +43,7 @@ to say awesome attack:
 		now fightoutcome is 20;
 	else:
 		say "[one of]While you try and attack the tree, you trip over a root that you hadn't seen[or]You stop for a moment, and as you ponder just how awesome the tree really is, suddenly your leg cramps[at random].";
-		now monsterhp is 60;
+		now monsterHP is 60;
 		increase Awesome_boredom by 1;
 
 to say awesome defeat:
@@ -89,7 +89,7 @@ to say awesome desc:
 	say "You turn a corner and see it. Looking up you realize due to the shape of the branches you are unable to actually see just how tall this monstrous and truly Awesome Tree is. Its branches are long and you see, among the foliage some fruit that look unbelievably tasty, if you could just shake the tree enough to get one to fall...";
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -117,8 +117,8 @@ When Play begins:
 	now int entry is 15;
 	now cha entry is 15;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60;			[ How many HP has the monster got? ]
-	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 60;			[ How many HP has the monster got? ]
+	now lev entry is 7;			[ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 3;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Forest";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -183,10 +183,10 @@ the scent of the awesome bat is "The powerful bat smells faintly of wood and the
 
 to say awesome bat proc:
 	choose row monster from the table of random critters;
-	if hp entry is 60:
+	if HP entry is 60:
 		if name entry matches the text "Awesome":
 			say "[line break]Your bat resounds against the tree, causing the world itself to shake. The unstoppable force and the immovable object meet, however your strength behind the bat is the deciding factor.";
-			now monsterhp is 0;
+			now monsterHP is 0;
 			increase Awesome_noreward by 1;
 
 awesome bat is a armament. It has a weapon "[one of]awesome bat, a double rainbow appears for a brief second,[awesome bat proc][or]bat of awesomeness[or]indestructible length of awesome-wood[at random]".

@@ -12,7 +12,7 @@ when play begins:
 
 
 to say CheetahWomanWins:
-	if cocks of player is greater than 0:
+	if cocks of player > 0:
 		say "A happy grin stretches across the cheetah woman's muzzle as you stumble, off balance due to her swift movements. She pounces before you can recover your balance, knocking you to the ground beneath her. 'That was a good workout,' she murmurs in a low voice as she rubs the side of her muzzle slowly along your face, her whiskers tickling you as her soft fur trails along your [skin of player] skin. 'But working out always leaves me so... hot,' she moans, one of her hands caressing your side, while her other hand slowly trails down her body, emphasizing her lithe form and her pert breasts, before she runs it over her soft mound seductively. You find yourself growing hard underneath her teasing, as the scent of a cheetah in heat washes over you, its effect only intensified by her recent exertion. 'Mmmm,' she moans above you as her hand moves from her wet mound to rub over your erect cock, the feel of her juice on your cock as she strokes it with her soft paw nearly making you erupt right then and there. 'So hot, need it so bad,' the cheetah moans, as she slowly lowers herself onto you, making you gasp in pleasure at the feel of her tight passage slipping itself around your cock.";
 		say "The cheetah moans in obvious relief at the feel of your cock sliding inside her, lowering herself onto you until you are fully hilted inside her. Moaning, she wiggles her hips slightly, causing you to gasp in pleasure. Then she lowers herself down onto you, her pert breasts rubbing up against your chest as her soft short fur slides over your body, her muzzle coming up to capture your mouth in a deep kiss, silencing any potential protest you might make. Her tongue darts into your mouth, teasing and rubbing along your own as her muzzle stays locked on your mouth, and her body begins to rock up against you, moving up and down slightly on your cock as she uses you for her pleasure.[line break]";
 		say "Starting out slow and sensual, she soon builds up speed as she moves her body on top of yours. The sensations of her tight wet cunt gripping your cock as she moves are almost indescribable, and her needy musky scent fills your body as she rubs herself all over you. Soon you can't help but thrust upwards into her on your own, your body an eager participant in the procedure, her muzzle still locked to yours as she groans and writhes on top of you. She finally breaks the bestial kiss with a loud moan as you both draw closer and closer to your peak. Orgasming together, your world explodes in pleasure as she lets out a loud yowl, before resting her head on your shoulder for a minute, her body shuddering on top of yours in reaction to the amazing orgasm you both share.[line break]";
@@ -38,7 +38,7 @@ to say CheetahWomanDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -65,8 +65,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 40;
-	now lev entry is 4;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 40;
+	now lev entry is 4;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Zoo";  [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -197,8 +197,8 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Cheetah Woman":
-		if humanity of player is less than 10:
-			if cocks of player is greater than 0:
+		if humanity of player < 10:
+			if cocks of player > 0:
 				say "Surrendering to your baser instincts, you find yourself running and running through the city, until you once more end up back in the zoo where you found that cheetah before. Following where your nose and your cock lead you, you soon find where the cheetah has made her den in one of the empty enclosures, and much to your surprise, she isn't alone either. You find her there slowly teasing another female cheetah as they relax during the day, the other female is obviously a new convert to the cheetah way of life much like yourself, but you find yourself unable to care about that anymore with the sight of two females in front of you. Their gazes focus on you as you proudly approach, a soft grin spreading across the muzzle of the cheetah you encountered earlier as she recognizes your fine spots and masculine scent.[line break]";
 				say "As the two cheetah women approach you eagerly, the more experienced cheetah nudges the newer cheetah woman ahead of her, making you grin in approval as you rub your body along her obviously nervous form, calming her down and preparing her for you. Once she is ready, her soft heat filled scent filling your muzzle with its delicious sexual promises, you move behind her and mount her properly, making her moan and yowl like the cat she now is. Sealing her fate as a cheetah as you shoot your seed inside her again and again until it is sure to take, your other cheetah mate stroking and teasing her as she moves underneath you. Having fully inducted her into her new life you leave her sated form in the new den as you turn eagerly to the cheetah that infected you originally, mating her again and again and reaffirming her position as your mate.[line break]";
 				say "Eventually the humans return to the city, and finding you living happily in the zoo, they eventually manage to convince you to relocate to another zoo where they can study you. You don't mind much at all, as you enjoy teasing the people who come to look with your magnificent cheetah body, and mating your mates where they can watch on scandalized. Some of them though you can tell are much more interested than scandalized, and having long ago managed to find the enclosure keys, you slip out and whisper to the more interested women to come back after dark and they will get a real show. Some do and some don't come back, those that do however rarely leave, though the some of zookeepers occasionally wonder why you always seem to have a new mate around the enclosure...";

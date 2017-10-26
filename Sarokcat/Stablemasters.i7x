@@ -37,10 +37,10 @@ instead of conversing the Slutslave:
 the fuckscene of Slutslave is "[sexwithslutslave]";
 
 to say sexwithslutslave:
-	if lastSlutslavefucked - turns is less than 2:
+	if lastSlutslavefucked - turns < 2:
 		say "     'Sorry, master,' your new slave pants out breathlessly as she kneels helplessly in front of you, 'but your new slave just can't keep up with your incredible stamina.' She has an apologetic, almost disappointed tone as she prostrates herself before you. 'Perhaps master should come back soon and train their new slave again?' she says with a rather lustful tone in her voice, which causes you to grin at how far the formerly dominant stallion has fallen.";
 	else:
-		if cocks of player is greater than 0:
+		if cocks of player > 0:
 			say "Your slut squeals with delight as you make your desire to use her soft black equine body once again obvious as you approach her all too eager form. You can feel a grin spreading over your powerful equine muzzle as your sexy pet lies back on the cushions around her and spreads her soft equine thighs for her new master. The sight of the formerly dominant Stablemaster, now reduced to your eager and wanton slut excites you more than ever, your powerful equine cock growing stiff with desire as you teasingly approach your lovely pet, enjoying her soft moans of desire as you approach, and the was she spreads herself open for her stallion so very eagerly. Her soft whinny of need and desire for your strong stallionhood as you lower yourself above her is like music to your ears, your cock twitching with pleasure even as it slowly begins to rub up against her body, the soft black fur of her inner thighs making you moan slightly even as you prepare to claim your slut's body for your own once again. Your slut squeals with pleasure her legs wrap around your thighs almost automatically as you sink your powerful stallionhood into her pink slit, her hot needy passage eagerly welcoming home her master' stallionhood. You groan as the sensation of her velvety passage gripping and massaging your member rushes through you, before pulling out slightly and thrusting back into your lusty little mare. Every thrust making your pet moan with pleasure and desire as you once again conquer her body for your own, a slight smirk crossing your face even as the pleasure increases with every thrust, as you once more enjoy the fruits of your victory over the formerly powerful Stablemaster, now just another slutty little mare.[line break]";
 			say "The pleasure of feeling of the formerly dominant stallion moaning underneath you as a wanton mare, as well as the exquisite pleasure of her soft passage clenching your stallionhood tight, is just too much for you to handle for long. And almost before you know it your mind explodes in pleasure as you give your slutty little mare exactly what she has been begging for, your strong seed filling her needy body even as she cries out underneath you in ecstasy. Groaning in pleasure as your lusty little slut's passage milks your cock for every drop of its lovely nectar, you find yourself grinning almost uncontrollably as you begin to shift your hips and begin to slowly pound into your favorite little pet once again... making use of your new stallion like endurance as you begin to wring several more orgasms out of her desperately needy form. As your second orgasm begins to build, you can't help but think -[line break]";
 			say "{Scene incomplete.}";
@@ -74,7 +74,7 @@ Carry out Slavelearning:
 		if name entry is "Nightmare":
 			now monster is y;
 			break;
-	if LastSlutslavelearned minus turns is less than 10:
+	if LastSlutslavelearned minus turns < 10:
 		say "Your slave glances down at the ground sadly, and shakes her head slightly apologetically. 'Your Slut is truly sorry master, but she doesn't think either of us are ready for another training session so soon... maybe her gorgeous master should come back a little later? And maybe even punish their slut for not being ready sooner?' She says in a rather sad tone, though you can see from the slight dampness on her black thighs that the idea of being punished has already made your little pet hot and needy...";
 	else:
 		let T be a random number between 1 and 6;
@@ -95,7 +95,7 @@ Carry out Slavelearning:
 			say "You groan slightly as you eventually settle your overworked body back at your desk, your muscles protesting the activity even as you lean back in the far too comfortable chair. Glancing around the room at the number of passed out mares and even several well used stallions sprawled all over every surface, you can't help but feel pleased at how well things went. And as your eyes drift over to the well used body of your favorite toy, where she lies passed out on the cushions helplessly, you already find yourself looking forward rather eagerly to your next lovely endurance session... once your body stops aching from this one anyways...";
 			if stamina of player < sta entry:
 				say "Your Stamina has increased!";
-				decrease hp of player by 20;
+				decrease HP of player by 20;
 			increase Stamina of player by 1;
 			now Lastslutslavelearned is turns;
 		else if T is 4:

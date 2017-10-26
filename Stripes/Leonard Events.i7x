@@ -18,18 +18,18 @@ lastleomidcoitus is a number that varies.
 leopocketwatch is a truth state that varies. leopocketwatch is usually false.
 
 
-after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 and lastdenevent - turns >= 12:
-	if hp of Leonard is 16:	[maids]
+after navigating Lion's Den while HP of Leonard >= 16 and HP of Leonard < 100 and lastdenevent - turns >= 12:
+	if HP of Leonard is 16:	[maids]
 		say "[leodenscene1]";
-	else if hp of Leonard is 17 and a random chance of 2 in 5 succeeds:
+	else if HP of Leonard is 17 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene2]";
-	else if hp of Leonard is 18 and a random chance of 2 in 5 succeeds:
+	else if HP of Leonard is 18 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene3]";
-	else if hp of Leonard is 19 and a random chance of 2 in 5 succeeds:
+	else if HP of Leonard is 19 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene4]";
-	else if hp of Leonard is 20 and a random chance of 2 in 5 succeeds:
+	else if HP of Leonard is 20 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene5]";
-[	else if hp of Leonard is 21 and a random chance of 2 in 5 succeeds:
+[	else if HP of Leonard is 21 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene6]";]
 	else if leodenlist is not empty and a random chance of (the number of entries in leodenlist) in 5 succeeds:
 		sort leodenlist in random order;
@@ -76,7 +76,7 @@ to say leodenscene1:
 	increase libido of player by 5;
 	decrease humanity of player by 5;
 	if libido of player > 100, now libido of player is 100;
-	now hp of Leonard is 17;
+	now HP of Leonard is 17;
 	now lastdenevent is turns;
 
 
@@ -109,7 +109,7 @@ to say leodenscene2:
 	decrease libido of player by 10;
 	decrease humanity of player by 5;
 	if libido of player < 0, now libido of player is 0;
-	now hp of Leonard is 18;
+	now HP of Leonard is 18;
 	now lastdenevent is turns;
 	rest;
 	follow the turnpass rule;
@@ -147,7 +147,7 @@ to say leodenscene3:
 	else:
 		felinebodyshift;
 	now lastdenevent is turns;
-	now hp of Leonard is 19;
+	now HP of Leonard is 19;
 
 
 Part 4 - Special Gift
@@ -184,7 +184,7 @@ to say leodenscene4:
 	decrease libido of player by 10;
 	decrease humanity of player by 5;
 	if libido of player < 0, now libido of player is 0;
-	now hp of Leonard is 20;
+	now HP of Leonard is 20;
 	now lastdenevent is turns;
 	rest;
 	follow the turnpass rule;
@@ -223,7 +223,7 @@ to say leodenscene5:
 	decrease libido of player by 10;
 	decrease humanity of player by 20;
 	if libido of player < 0, now libido of player is 0;
-	now hp of Leonard is 21;
+	now HP of Leonard is 21;
 	now lastdenevent is turns;
 	rest;
 	follow the turnpass rule;
@@ -276,7 +276,7 @@ to say leodenspecial2:
 		infect "Feline";
 	else:
 		felinebodyshift;
-	increase xp of player by ( intelligence of player * 2 ) + level of player;
+	increase XP of player by ( intelligence of player * 2 ) + level of player;
 	now lastdenevent is turns;
 	remove 2 from leodenlist;
 	decrease thirst of player by 6;
@@ -418,8 +418,8 @@ to say leopracticesession:
 				increase morale of player by 2;
 		else if T is 2:
 			say "that some of your road weariness has lifted. The four of you clap politely for the musical lion, who smiles and bows before instructing the maids to put his instrument and stand away.";
-			increase hp of player by ( hp of player / 10 );
-			if hp of player > maxhp of player, now hp of player is maxhp of player;
+			increase HP of player by ( HP of player / 10 );
+			if HP of player > maxHP of player, now HP of player is maxHP of player;
 		else if T is 3:
 			say "aroused and eager to be with your loving mate. The four of you clap politely for the musical lion, who smiles and bows before instructing the maids to put his instrument and stand away.";
 			increase libido of player by 5;

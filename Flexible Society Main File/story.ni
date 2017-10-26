@@ -21,7 +21,7 @@ The maximum score is 100.
 
 Book - The Village
 
-Village Center is a room. "You stand in the middle of, what you hope, will become the vast hub of your future civilization. For now it is just a small bonfire for you and your kind.[if population of tribe of player is greater than 0] Wandering the village, you see your people number [population of tribe of player].[end if]".
+Village Center is a room. "You stand in the middle of, what you hope, will become the vast hub of your future civilization. For now it is just a small bonfire for you and your kind.[if population of tribe of player > 0] Wandering the village, you see your people number [population of tribe of player].[end if]".
 The proximity of it is "You can see the village center to the".
 
 There is a Clipboard in it. "A clipboard is set near the fire. You are sure you can use it to [bold type]assign[roman type] jobs.".
@@ -219,7 +219,7 @@ Understand "Wait" as Taketurn.
 
 Carry out Taketurn:
 	say "Time passes...";
-	if morale of tribe of player is less than 0, now morale of tribe of player is 0;
+	if morale of tribe of player < 0, now morale of tribe of player is 0;
 	follow the turnpass rule;
 
 An everyturn rule(this is the Foraging rule):
@@ -231,31 +231,31 @@ An everyturn rule(this is the Foraging rule):
 	let x be a random number from 80 to 120; [mild variance]
 	decrease x by turns;
 	if "Scavenging" is listed in perks of tribe of player:
-		if x is less than 30, now x is 30;
+		if x < 30, now x is 30;
 		increase x by 20;
 	increase x by (perception of tribe of player) / 5;
 	now x is x * foragers;
 	now x is x / 100;
-	if x is greater than 0: [ There is forage available ]
-		if x is less than 1, now x is 1;
+	if x > 0: [ There is forage available ]
+		if x < 1, now x is 1;
 		say "Foraging yields food: +[x]";
 		increase food of tribe of player by x;
 	let x be a random number from 80 to 120; [mild variance]
 	decrease x by turns;
 	if "Scavenging" is listed in perks of tribe of player:
-		if x is less than 30, now x is 30;
+		if x < 30, now x is 30;
 		increase x by 20;
 	let x be a random number from 90 to 110; [mild variance]
 	decrease x by turns;
 	if "Scavenging" is listed in perks of tribe of player:
-		if x is less than 10, now x is 10;
+		if x < 10, now x is 10;
 		increase x by 20;
 	increase x by (perception of tribe of player) / 5;
 	increase x by (intelligence of tribe of player) / 5;
 	now x is x * foragers;
 	now x is x / 200;
-	if x is greater than 0: [ There is forage available ]
-		if x is less than 1, now x is 1;
+	if x > 0: [ There is forage available ]
+		if x < 1, now x is 1;
 		say "[line break]Ruined artifacts advance your research: +[x]";
 		increase Science of tribe of player by x;
 
@@ -280,27 +280,27 @@ An everyturn rule(this is the Foraging rule):
 	let x be a random number from 1 to 100;
 	let y be 0;
 	let crit be 0;
-	if x is greater than 90:
+	if x > 90:
 		now y is 3;
 		now crit is 1;
-	else if x is greater than 60:
+	else if x > 60:
 		now y is 2;
 	else:
 		now y is 1;
 	now y is ( foragers * the Self Fertility of the tribe of player * y ) / 250;
 	let mor be morale of tribe of player;
-	if mor is less than 20, now mor is 20;
+	if mor < 20, now mor is 20;
 	now y is ( y * mor ) / 100;
-	if crit is 1 and y is less than 1, now y is 1;
-	if y is greater than 0:
+	if crit is 1 and y < 1, now y is 1;
+	if y > 0:
 		say "New [skinadj of tribe of player] children are born, rapidly growing to ready adults: +[y] ";
 		increase population of tribe of player by y;
-		if morale of tribe of player is less than 60:
+		if morale of tribe of player < 60:
 			let gain be 1;
 			increase gain by y times 2;
 			now gain is gain * mood of tribe of player;
 			now gain is gain / 100;
-			if gain is greater than 0:
+			if gain > 0:
 				say "Morale gain: [gain]";
 			increase morale of tribe of player by gain;
 
@@ -311,7 +311,7 @@ An everyturn rule(This is the Water's Fine rule):
 	let consume be the population of the tribe of player;
 	now consume is consume times the thirst of the tribe of player;
 	now consume is consume / 100;
-	if consume is less than 0, now consume is 0;
+	if consume < 0, now consume is 0;
 	increase water of tribe of player by consume;
 
 
@@ -319,15 +319,15 @@ An everyturn rule(this is the Eternal Hunger rule):
 	let consume be the population of the tribe of player;
 	now consume is consume times the hunger of the tribe of player;
 	now consume is consume / 100;
-	if consume is less than 0, now consume is 0;
+	if consume < 0, now consume is 0;
 	decrease food of tribe of player by consume;
-	if food of tribe of player is less than 0:
+	if food of tribe of player < 0:
 		say "Your people starve without food: ";
 		let x be 0 - food of tribe of player;
 		now food of tribe of player is 0;
 		now x is x * 100;
 		now x is x /  hunger of the tribe of the player;
-		if x is greater than 0:
+		if x > 0:
 			now x is a random number from 1 to x;
 			say "Casualties: [x] ";
 			decrease population of tribe of player by x;
@@ -335,45 +335,45 @@ An everyturn rule(this is the Eternal Hunger rule):
 		increase loss by x times 2;
 		now loss is loss * 100;
 		now loss is loss / mood of tribe of player;
-		if loss is greater than 0:
+		if loss > 0:
 			say "Morale Loss: [loss]";
 		decrease morale of tribe of player by loss;
-		if morale of tribe of player is less than 0, now morale of tribe of player is 0;
+		if morale of tribe of player < 0, now morale of tribe of player is 0;
 		say "[line break]";
 
  An everyturn rule(this is the Eternal Thirst rule):
 	let consume be the population of the tribe of player;
 	now consume is consume times the thirst of the tribe of player;
 	now consume is consume / 100;
-	if consume is less than 0, now consume is 0;
+	if consume < 0, now consume is 0;
 	decrease water of tribe of player by consume;
-	if water of tribe of player is less than 0:
+	if water of tribe of player < 0:
 		say "Your people starve without water: ";
 		let x be 0 - water of tribe of player;
 		now water of tribe of player is 0;
 		now x is x * 100;
 		now x is x /  thirst of the tribe of the player;
-		if x is greater than 0:
+		if x > 0:
 			say "Casualties: [x] ";
 			decrease population of tribe of player by x;
 		let loss be 1;
 		increase loss by x times 2;
 		now loss is loss * 100;
 		now loss is loss / mood of tribe of player;
-		if loss is greater than 0:
+		if loss > 0:
 			say "Morale Loss: [loss]";
 		decrease morale of tribe of player by loss;
-		if morale of tribe of player is less than 0, now morale of tribe of player is 0;
+		if morale of tribe of player < 0, now morale of tribe of player is 0;
 		say "[line break]";
 
 An everyturn rule(This is the You Lose rule):
-	if population of tribe of player is less than 1:
+	if population of tribe of player < 1:
 		end the story saying "Your people have been destroyed.";
-	if the territory of tribe of player is less than 1:
+	if the territory of tribe of player < 1:
 		end the story saying "Your people have been driven away and scattered.";
 
 An everyturn rule(This is the Not 9001 rule):
-	if morale of tribe of player is greater than 100, now morale of tribe of player is 100.
+	if morale of tribe of player > 100, now morale of tribe of player is 100.
 
 The not 9001 rule is listed last in the everyturn rules.
 
@@ -419,7 +419,7 @@ to species menu:
  This is the species select rule:
 	choose row Current Menu Selection in table of combat items;
 	let nam be description entry;
-	if nam is "Begin Game" and might of tribe of player is greater than 0:
+	if nam is "Begin Game" and might of tribe of player > 0:
 		decrease the menu depth by 1;
 		rule succeeds;
 	let z be Snozzlefoggles;
@@ -456,7 +456,7 @@ To Workercheck:
 			increase occupied of tribe of player by workers of x;
 		else:
 			now workers of x is 0;
-	if occupied of tribe of player is greater than population of tribe of player:
+	if occupied of tribe of player > population of tribe of player:
 		say "Something is wrong here. You have too many people assigned. Let's start from the beginning. Job assignments reset.";
 		repeat with x running through jobs:
 			now workers of x is 0;
@@ -465,7 +465,7 @@ To Workercheck:
 		repeat with x running through jobs:
 			if x is valid and x is maximized and workers of x < max of x:
 				let z be max of x - workers of x;
-				if z is greater than population of tribe of player - occupied of tribe of player, now z is population of tribe of player - occupied of tribe of player;
+				if z > population of tribe of player - occupied of tribe of player, now z is population of tribe of player - occupied of tribe of player;
 				increase workers of x by z;
 				increase occupied of tribe of player by z;
 
@@ -620,7 +620,7 @@ Understand "fuck [person]" as fucking.
 
 Check fucking:
 	if noun is not visible, say "Who?" instead;
-	if turns - lastfuck of noun is less than fuckfrequency of noun and lastfuck of noun is greater than 0, say "It's too soon." instead;
+	if turns - lastfuck of noun < fuckfrequency of noun and lastfuck of noun > 0, say "It's too soon." instead;
 
 Carry out fucking:
 	say "[Noun] does not look interested.";
@@ -639,7 +639,7 @@ Understand "talk [person]" as talking.
 
 Check talking:
 	if noun is not visible, say "Who?" instead;
-	if turns - lasttalk of noun is less than talkfrequency of noun and lasttalk of noun is greater than 0, say "They don't appear to want to talk again so soon." instead;
+	if turns - lasttalk of noun < talkfrequency of noun and lasttalk of noun > 0, say "They don't appear to want to talk again so soon." instead;
 
 Carry out talking:
 	say "[Noun] does not have anything interesting to say.";
@@ -666,15 +666,15 @@ When play begins:
 
 An everyturn rule(This is the Shit Happens rule):
 	let x be a random number from 1 to 100;
-	if x is less than 75, continue the action;
+	if x < 75, continue the action;
 	let x be a random number from 1 to 100;
 	if "Unlucky" is listed in perks of tribe of player:
 		increase x by 10;
 	if "lucky" is listed in perks of tribe of player:
 		decrease x by 10;
-	if x is greater than 75:
+	if x > 75:
 		now x is 100;
-	if x is less than 25:
+	if x < 25:
 		now x is 1;
 	if x is 100 and "Lucky" is not listed in perks of tribe of player:
 		let sit be a random bad unresolved valid situation;

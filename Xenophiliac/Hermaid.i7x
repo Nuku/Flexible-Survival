@@ -12,7 +12,7 @@ when play begins:
 HermaidSub is a number that varies.
 
 to say losetoHermaid:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Putting up your hands in a sign of surrender, the herm croons joyously at your clear submission. Swimming tantalizingly towards you, you soon find yourself wrapped up in the pretty herm's arms, and you can feel lust building in your body. You find yourself tentatively looking forward to what the herm has in store for you.";
 	else:
 		say "     Your attacker lures you into throwing a hit, but quickly counters and lands a punch across your head, sending your head spinning and stopping you from thinking for a few moments. As you recover yourself, you find that the beautiful creature has you wrapped in her arms, stopping you from escaping.";
@@ -92,7 +92,7 @@ to say HermaidFemLoss:
 		say "     You feel the Hermaid slowly withdraw herself from you, and gives you a long-lasting parting kiss. She sinks beneath the surface of the water as you right yourself in the shifting waves. You pull yourself up onto dry land, and lay there for a few moments, drying off and regaining your senses. You hoist yourself up and prepare to continue on, giving yourself a mental reminder to come and visit here again.";
 
 to say HermaidMaleLoss:
-	if anallevel is less than 3 or a random chance of 1 in 2 succeeds:
+	if anallevel < 3 or a random chance of 1 in 2 succeeds:
 		say "     The herm kisses you lustfully, her hands running quickly across your body as she explores all you have to offer. Her hands sneak under your clothes, caressing your skin masterfully as your lust continues to mount. One of her silken hands continues to tingle across your chest, sending pleasurable tingles through your body. Her other hand roams lower, running down your chest to your groin, lustfully groping your [cock of player] rod roughly, causing a gasp of pleasure to escape your lips. Continuing to massage your [cock of player] cock and balls, and continuing to elicit gasps of pleasure from you, the Hermaid runs her other hand down your chest to your pelvis and removing your pants, letting them sink down to your feet. She slowly moves herself to the front of you, taking pleasure in the fact that she has caused you to become so aroused. Smiling happily, she lines up her inviting slit with your [cock of player] cock, tantalizing you with her hands and silken vice while her twelve inches of maleness bobs between the two of you.[WaitLineBreak]It can't come soon enough, but you finally feel the Hermaid begin to descend on your stiff [cock of player] rod, slowly bringing your maleness into her folds. You groan loudly at the sudden entrance as you try desperately to bury yourself fully into the lovely creature, but she holds you back, and smiles all the wider. Slowly, ever so slowly, she sinks onto your cock, all while her maleness bounces off your stomach, leaving smears of her precum across it. She coos delightedly at the sensations she feels, while the only thing you can do is thrust helplessly forward and groan in pleasure[if player is submissive] Your mind begins to drift, awash in a sea of pleasure. You imagine yourself living below the ocean, being a loving mate to the beautiful creature. Imaging the wonderful life you would lead below the waves and all the beautiful children you would sire causes your cock to thicken and jump, causing your playmate to coo happily[else]. You're almost unable to handle the sensations emanating from your [cock of player] maleness that the alluring herm is triggering within you. Seeing the love-drunk look on your face, the Hermaid smiles joyfully as she continues down your cock[end if]. She stops the slow descent onto your throbbing cock, taking all that she wants to take, and raises herself up off of you, leaving only your tip within her. She slams herself down, taking most of your length and causing you both to yelp in pleasure simultaneously. She begins to bounce atop your cock, reducing you to nothing more than a rutting beast as she speeds up. Soon after, she slams herself down one last time as she cums, her cunt spasming around your [cock of player] prick. You moan loudly to the sky as you finally cum, blasting her cunt with your [cum load size of player] load of cum just as her seed blasts from her tapered cock and rains down upon the both of you.";
 		now libido of player is 0;
 		WaitLineBreak;
@@ -126,7 +126,7 @@ to say Hermaiddesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -153,7 +153,7 @@ When Play begins:
    now int entry is 12;
    now cha entry is 17;
    now sex entry is "Both";
-   now hp entry is 65;
+   now HP entry is 65;
    now lev entry is 9;
    now wdam entry is 9;
    now area entry is "Warehouse";
@@ -182,7 +182,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Hermaid":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "	Unable and unwilling to resist the call you hear, you soon find yourself on the shores of the Warehouse District, where you first met your Hermaid companions. The sounds and scents of the water is music to your ears; the lapping waves, the caws of the sea birds, the smell of salt water that permeates the air. The call of the sea is even stronger here, and you know that it is time to answer that call. Wading into the water, your legs finally merge into one long tail as you begin swimming out to sea, never again to step foot on land. Your new sisters come to meet you, taking you deep into the depths of the sea, to your new life.";
 		else:
 			say "	Soon enough, the military rolls through in an attempt to contain the situation that has arisen. You present yourself to the military patrols, and after a few tense moments with guns pointed in your direction, you eventually convince the soldiers that you are not feral, and are led through quarantine. You pass through quarantine after multitudes of tests, and emerge back into sane society. Quickly putting your picturesque body to use, you find yourself a job as a professional model, and you soon become the newest craze, with people across the world lining up to see you, and millions of people wanting to be you. You live out the remainder of your long live in luxury, happy as you could be.";

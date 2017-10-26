@@ -31,7 +31,7 @@ when play begins:
 	add Noteworthy Ruin to badspots of girl;
 
 Instead of resolving a Noteworthy Ruin:
-	if hp of Katya is 0: [first time]
+	if HP of Katya is 0: [first time]
 		say "     Roaming through the plains, you pass yet another of the small ruins left over from the city that stretched out in this area before the grass came. There are basically just a few sections of roofless wall still standing, as well as as a field of scattered stones and high mounds of rubble. Nothing too interesting - until you spot the [if daytimer is day]very faint line of smoke rising from somewhere between those walls[else]faint shine of firelight that illuminates one section of wall sticking up a little higher than the rest[end if]. It's not a lot - someone is being as careful as possible about giving away their location - but with your close proximity, you did notice it no matter what.";
 		say "     [bold type]Seems like someone has set up camp in that ruin. Shall you go over and have a look who it may be?[roman type][line break]";
 		LineBreak;
@@ -52,8 +52,8 @@ Instead of resolving a Noteworthy Ruin:
 		else:
 			LineBreak;
 			say "     Deciding against exploring the camp, you do turn away from it and keep going. You do make a note of where it was though, in case you want to return to the [bold type]noteworthy ruin[roman type] sometime in the future.";
-			now hp of Katya is 1; [declined to investigate]
-	else if hp of Katya is 1: [didn't investigate before]
+			now HP of Katya is 1; [declined to investigate]
+	else if HP of Katya is 1: [didn't investigate before]
 		say "     Roaming through the plains, you come upon the section of ruins again where you made your observation about someone possibly living inside. There are basically just a few sections of roofless wall still standing, as well as as a field of scattered stones and high mounds of rubble. This time there is nothing obvious to draw your attention to it, but you remember it from the last time...";
 		say "     [bold type]Shall you go over and have a look at what might be between those walls?[roman type][line break]";
 		LineBreak;
@@ -74,7 +74,7 @@ Instead of resolving a Noteworthy Ruin:
 		else:
 			LineBreak;
 			say "     Deciding against exploring the camp, you do turn away from it and keep going. You do make a note of where it was though, in case you want to return to the [bold type]noteworthy ruin[roman type] sometime in the future.";
-			now hp of Katya is 1; [declined to investigate]
+			now HP of Katya is 1; [declined to investigate]
 
 Section 2 - Monster Responses
 
@@ -299,7 +299,7 @@ to say KatyaBeatenSex5:  [fuck her ass]
 	say "     Sated and exhausted from the fuck-session, you almost let yourself be drawn in too much by the beauty of the orc's shapely boobs. The temptation is there to feel and caress them, take a nipple between your lips and suckle - but the orc would likely punch you if you remained much longer. She's still riding out her orgasm right now, but give her a few minutes and she'll be back to her full strength and try to kick your ass. For the moment, you decide to be content with fucking her this once and quickly pull out, then snatch up your gear and clothes and rush to the exit out of the camp.";
 
 to say OrcFemVictorious:
-	if hp of player > 0:    [player submits]
+	if HP of player > 0:    [player submits]
 		if bodyname of player is "Orc Breeder" and facename of player is "Orc Breeder" and skinname of player is "Orc Breeder":
 			say "     'Did you lose your master, little breeder?' the female orc says in a gruff voice as you surrender. Then she grasps your chin and bends your head left and right, inspecting you with a snort. 'Well, you won't find a thick green prick here either, that's for sure! But I think I'll have fun with you nonetheless.' ";
 		else if bodyname of player is "Orc Warrior" and facename of player is "Orc Warrior" and skinname of player is "Orc Warrior":
@@ -374,7 +374,7 @@ to say OrcFemDesc:
 Section 3 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -401,7 +401,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 12;
 	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 80;
+	now HP entry is 80;
 	now lev entry is 8;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12;              [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -570,31 +570,31 @@ instead of going northeast from Inconspicuous Trail while (Katya is in Hidden Ca
 		say "[KatyaDominancePath]";
 
 to say KatyaDominancePath:
-	if hp of Katya is 0: [second visit]
+	if HP of Katya is 0: [second visit]
 		say "     Deciding to return to the female orc's camp and show her what's what, you remember in time that she had traps set up - little pits to step in and possibly break your leg. This time, each has been given an additional level of concealment by putting two thin sticks across them crosswise, holding up a layer of the typical yellow-green grass around here. That'll look like just a bit of trampled grass for the unprepared. Thankfully, you know what to expect and carefully pick your way through the traps, soon arriving at the camouflage tarp that is the hidden entrance into Katya's hideout. Lifting the edge a little bit, you slip inside, finding the orc inside and awake, just sitting against a wall and taking a drink from a water bottle.";
 		say "     [KatyaResistanceMessage]With that, the orc screws the bottle-top back on and gently drops the plastic water bottle - not willing do waste any of the precious fluid even if she's gonna fight you. Then she rises to her feet, stretching to the full height of her impressive stature.";
 		wait for any key;
 		challenge "Orc Female";
-		now hp of Katya is 1; [second visit completed]
-	else if hp of Katya is 1: [third visit]
+		now HP of Katya is 1; [second visit completed]
+	else if HP of Katya is 1: [third visit]
 		say "     Deciding to return to the female orc's camp, you carefully pick your way through the leg-sized pit traps spread out close to the hidden entrance. Soon, you're standing in front of the camo tarp stretched between two pieces of wall and nudge aside one of the rocks holding its lower edge secured. But as you lift the fabric to slide in, something new happens - there is one hell of a racket as a string of empty cans is dislodged somewhere from the wall inside, falling down. This serves very well to wake the orc from where she lay on her bedding, sitting up with a growl at being disturbed in her rest. Rising quickly to her feet, Katya stretches to the full height of her impressive stature.";
 		say "     [KatyaResistanceMessage]";
 		wait for any key;
 		challenge "Orc Female";
-		now hp of Katya is 2; [third visit completed]
-	else if hp of Katya is 2: [fourth visit]
+		now HP of Katya is 2; [third visit completed]
+	else if HP of Katya is 2: [fourth visit]
 		say "     Deciding to return to the female orc's camp, you carefully pick your way through the leg-sized pit traps spread out close to the hidden entrance. Soon, you're standing in front of the camo tarp stretched between two pieces of wall and nudge aside both of the rocks holding its lower edge secured. Forewarned from last time, you peek under the fabric at the right side and see the thin string of twine that in all likelihood holds the empty cans. You can see that pulling the tarp open to slip past it can easily snap that string, so you try the other end instead. No twine there, so far so good, and...";
 		say "     WHAT THE FUCK?! You can't help but curse out loud as you place your foot in an open bear-trap, its metallic jaws just waiting for a victim. That is all they do though - the trap is pretty rusty and thankfully DOESN'T snap shut around your ankle, though the shock alone sends you stumbling uncoordinatedly into the camp. The female orc who had been warming up a can of beans over her little fire pit looks up and gives a rough chuckle at your panic. [KatyaResistanceMessage]";
 		wait for any key;
 		challenge "Orc Female";
-		now hp of Katya is 3; [fourth visit completed]
-	else if hp of Katya is 3: [fifth visit]
+		now HP of Katya is 3; [fourth visit completed]
+	else if HP of Katya is 3: [fifth visit]
 		say "     Deciding to return to the female orc's camp, you carefully pick your way through the leg-sized pit traps spread out close to the hidden entrance. Soon, you're standing in front of the camo tarp stretched between two pieces of wall and nudge aside both of the rocks holding its lower edge secured. Expecting the worst this time, you check for traps with the utmost care and find... nothing?! No strings, no bear trap, just a now loose tarp. This seems very suspicious indeed. With sweat on your brow, you nonetheless pull aside the flap of fabric and slip into Katya's hideout. It is empty - at least of the expected muscular orc woman.";
 		say "     You're a few steps into the enclosed space, still wary of what you might walk into, when you hear a growl behind you. Katya is there, having just re-entered her camp after being out and about. [KatyaResistanceMessage]";
 		wait for any key;
 		challenge "Orc Female";
-		now hp of Katya is 4; [fifth visit completed]
-	else if hp of Katya > 3: [any further visits]
+		now HP of Katya is 4; [fifth visit completed]
+	else if HP of Katya > 3: [any further visits]
 		say "     Deciding to return to the female orc's camp, you carefully pick your way through the leg-sized pit traps spread out close to the hidden entrance. Soon, you're standing in front of the camo tarp stretched between two pieces of wall and nudge aside both of the rocks holding its lower edge secured. Expecting the worst this time, you check for traps with the utmost care and re-tie the twine for the can-alarm around a rock, making sure it doesn't snap when you slip in. Nevertheless, Katya quickly notices your entry - she's come to expect you, so she keeps an eye out even while [one of]sorting through her stuff[or]drinking[or]preparing food[or]working to free the bear-trap from rust with a wire brush[or]paging through a survivalist pocket-book[or]having a hand under her loincloth and rubbing herself[at random]. With more of a sigh than a growl, she rises to her feet and stretches out to the full height of her impressive stature. [KatyaResistanceMessage]";
 		wait for any key;
 		challenge "Orc Female";
@@ -610,7 +610,7 @@ to say KatyaResistanceMessage:
 		say "'You know, I am SICK AND TIRED of this bullshit!', she growls, baring her sharp tusks to you. 'Coming into my camp no matter what I do, wanting to kick my ass and satisfy yourself. So FINE. Let's settle this once and for all. If you beat me this time, I'll give in - become your slut to fuck when you feel like it.'";
 
 to say KatyaFriendshipPath:
-	if hp of Katya is 0: [second visit]
+	if HP of Katya is 0: [second visit]
 		say "     Deciding to return to the female orc's camp and show her that you'd like to get to know her instead of fighting, you remember in time that she had traps set up - little pits to step in and possibly break your leg. This time, each has been given an additional level of concealment by putting two thin sticks across them crosswise, holding up a layer of the typical yellow-green grass around here. That'll look like just a bit of trampled grass for the unprepared. Thankfully, you know what to expect and carefully pick your way through the traps, soon arriving at the camouflage tarp that is the hidden entrance into Katya's hideout. Taking the medkit out of your pack, you place it on the ground in such a way that it is easily visible, the red cross angled towards the camouflaged entrance.";
 		say "     After walking away a little distance, stepping around the traps carefully, you turn to look towards the ruin and call out the orc's name in a loud voice. It takes barely a moment before the green-skinned woman pulls the flap of the camouflage tarp aside, stepping out into the [if daytimer is day]sunlight[else]moonlight[end if]. 'You again!' she snarls, her beautiful features drawing into an angry grimace. 'What do you want, asshole?' Katya goes on to say, then ducks behind the wall for a second, leaning down and coming back into sight holding a chunk of crumbling concrete as big as your head. Seems like she is intending to hurl that at you. Hastily raising your hands in a consoling gesture, you explain that you want to clear the air of how... unfortunate your first meeting turned out to be. Then you mention the medkit left as a gift and the orc looks down at it for the first time.";
 		WaitLineBreak;
@@ -619,8 +619,8 @@ to say KatyaFriendshipPath:
 		say "     Well, at least she isn't all the way hostile anymore. Guess you'll have to keep working at befriending Katya and work up to something friendly over time. For now, there is little left to do but to wander away.";
 		wait for any key;
 		move player to Dry Plains;
-		now hp of Katya is 1; [second visit completed]
-	else if hp of Katya is 1: [third visit]
+		now HP of Katya is 1; [second visit completed]
+	else if HP of Katya is 1: [third visit]
 		say "     Deciding to return to the female orc's camp, now that she's had a bit of time to think about the gift you gave her, you walk towards the ruin in the distance. You remember in time that she had traps set up - little pits to step in and possibly break your leg. This time, each has been given an additional level of concealment by putting two thin sticks across them crosswise, holding up a layer of the typical yellow-green grass around here. That'll look like just a bit of trampled grass for the unprepared. Thankfully, you know what to expect and carefully pick your way through the traps, soon arriving at the camouflage tarp that is the hidden entrance into Katya's hideout. Staying a few steps back, you call out Katya's name, soon resulting in her pulling the tarp aside to check out who is there.";
 		say "     'What do you want?' comes a harsh question from the female orc - while she is looking you up and down as if planning how to knock you out the fastest. Replying that you just want to talk puts a frown on her face, and you see the muscles in her arm tighten as she moves to crack her knuckles. With her general air of hostile rejection for anyone trying to come close, your only chance is to talk fast and convince her otherwise...";
 		let bonus be (( charisma of player minus 10 ) divided by 2);
@@ -633,13 +633,13 @@ to say KatyaFriendshipPath:
 			say "     With that said, the orc steps back into the crumbling walls of her camp, pulling the tarp closed behind her. Well, at least you got her to open up a little. Not enough to ask you inside, but hey... tomorrow is another day to work on her. With a slight smile on your face, you wander away for now...";
 			wait for any key;
 			move player to Dry Plains;
-			now hp of Katya is 2; [third visit completed successfully]
+			now HP of Katya is 2; [third visit completed successfully]
 		else:
 			LineBreak;
-			say "     The reply Katya gives you is less than encouraging. 'Fuck off. Stop bothering me,' she says, then waves vaguely into the wide open plain and adds, 'Go find your own place to hang out at - or be eaten by something. What do I care?!' With that said, the orc steps back into the crumbling walls of her camp, pulling the tarp closed behind her. Hm, seems like your attempt to chat her up let something to be desired. You won't get any further with her today, so there is nothing left but to shrug and wander away...";
+			say "     The reply Katya gives you < encouraging. 'Fuck off. Stop bothering me,' she says, then waves vaguely into the wide open plain and adds, 'Go find your own place to hang out at - or be eaten by something. What do I care?!' With that said, the orc steps back into the crumbling walls of her camp, pulling the tarp closed behind her. Hm, seems like your attempt to chat her up let something to be desired. You won't get any further with her today, so there is nothing left but to shrug and wander away...";
 			wait for any key;
 			move player to Dry Plains;
-	else if hp of Katya is 2: [fourth visit]
+	else if HP of Katya is 2: [fourth visit]
 		say "     Deciding to return to Katya's camp, you pause for a second and think about how you want to go on with your charm offensive on the brash orc. Hm, after the medkit you got her to open up and at least talk to you... so offering a useful thing seems to have worked. Why not try that again?! You could... invite her to have a bite with you, sharing some food. Katya is nothing if not pragmatic, so she wouldn't refuse a meal - at least if you stay and eat some too, proving its not poisoned or anything like that. Yeah, that should work to get your foot in the door and to chat her up a bit in the meantime.";
 		if carried of food > 1:
 			say "     This time moving off the beaten track and almost passing the ruin before switching direction to get to it, you carefully bypass the trap holes, then come to stand in front of the entrance to Katya's home. Digging around in your pack, you select some food that you hope she'll like, holding it in both hands before calling out the orc's name. It doesn't take long before she pulls the tarp aside and looks at you, one eyebrow raised. 'Again? What is it this time?!' she gruffly asks, tapping her foot impatiently. The female orc's eyes widen a bit as you tell her that you found a nicely large stash of food, too much to lug around, so you want to share it with her. She hesitates for a moment, looking down at what you're offering, then waves you past her, tucking the tarp back into place when you're both in the camp.";
@@ -652,7 +652,7 @@ to say KatyaFriendshipPath:
 			wait for any key;
 			move player to Dry Plains;
 			decrease carried of food by 1;
-			now hp of Katya is 3; [fourth visit completed successfully]
+			now HP of Katya is 3; [fourth visit completed successfully]
 		else if carried of food is 1:
 			say "     If only you actually had enough food for the both of you. Seems like you need to go and find some more... ideally of the tasty variant and definitively non-infective foodstuffs only. She might mistrust the offer otherwise.";
 			wait for any key;
@@ -662,10 +662,10 @@ to say KatyaFriendshipPath:
 			wait for any key;
 			move player to Dry Plains;
 
-instead of going north from Dry Plains while (hp of Katya is 3 and KatyaRelationship is 1):
+instead of going north from Dry Plains while (HP of Katya is 3 and KatyaRelationship is 1):
 	move player to Inconspicuous Trail;
 	if debugactive is 1:
-		say "     DEBUG: Meeting Katya outside her camp; hp of Katya: [hp of Katya], KatyaRelationship: [KatyaRelationship][line break]";
+		say "     DEBUG: Meeting Katya outside her camp; HP of Katya: [HP of Katya], KatyaRelationship: [KatyaRelationship][line break]";
 	say "     Setting out on the inconspicuous foot-trail through the thigh-high grass, you follow the path that leads towards Katya's camp for a while, then notice a humanoid shape not too far ahead of you. Is that - yeah, it is her - the orc amazon herself, Katya is out and about and coming the other way. She walks up to you and comes to stand before you, hands on her hips as she looks you up and down. 'Hah, on your way to bug me again, aren't you? Bad timing - I'm just on my way to scavenge a bit. But yeah, you're lucky you ran into me right now... I left some surprises for anyone trying to loot my stuff. Would be a pity if you stepped in the bear trap. A friend bleeding out on the doormat and all that.'";
 	say "     Smiling at the fact that Katya called you a friend, you chat with her and listen to her plans of scavenging some seemingly untouched houses at the edge of the city. But then, she suddenly raises a hand and hushes you, whispering, 'Don't move. Did you hear that?' Freezing in your spot, you let your eyes stray left and right, sweeping over the sea of grass - and making out a void in the thin blades of grass sticking up. Something is sneaking up on you! 'Two more over there,' Katya adds in a quiet tone, 'I'll go for them, you keep my back free.' And with that said, she suddenly whips around and charges into the grassland. Two surprised growls from animalistic throats tell you that she did indeed spot some ambush predators - as do the two pairs of tentacles suddenly being raised high in combat readiness.";
 	WaitLineBreak;
@@ -682,7 +682,7 @@ to say KatyaTrailFightLoss:
 	say "     Outmaneuvering you with multiple attacks that wear you down bit by bit, the shadow beast eventually wraps a tentacle around your leg and pulls, sending you sprawling on the ground. Before you even have time to take a breath after having all the air pushes out of you by the impact, the feral beast is standing above you, its maw opened and held menacingly over your throat. It - no, he actually... judging from the shaft pushing out of a sheath underneath the creature's body - looks down at you with cunning in its gaze and the tentacles start to man-handle you, doing their best to strip you naked. The cat is less quick than if he had hands, but still pretty fast - no doubt by experience in preparing its prey for fucking.";
 	say "     As you are already imagining how it will feel to be taken by this feral beast, things suddenly change in a sudden burst of activity. It's Katya, landing a flying side kick on the torso of your attacker and sending the cat-thing flying into the grass. 'Thanks for distracting him,' she calls out to you, barely giving you a glance before she has to defend against a pounce - by side-stepping and grabbing the beast mid-flight, then slamming him into the ground. He lands head-first and is instantly knocked out, ending the threat for now. 'Let's get out of here,' Katya tells you and helps you up, then the two of you hurry back to her camp. After disarming some pretty well-hidden traps, she takes you inside.";
 	wait for any key;
-	now hp of Katya is 4; [4th visit completed successfully]
+	now HP of Katya is 4; [4th visit completed successfully]
 	now KatyaRelationship is 4; [player has an invite now]
 	move player to Hidden Camp;
 
@@ -696,7 +696,7 @@ to say KatyaTrailFightFlee:
 to say KatyaTrailFightVictory:
 	say "     Overpowering the large cat - tentacles or none, you kick its butt - you eventually get a good grip of its neck-fur, holding the large cat as you land a heavy punch between its eyes. With a groan, its eyes cross and flutter closed, followed by the creature sinking down into unconsciousness. With your own opponent dealt with, you stand up straight and look for Katya - who is standing over two other vanquished shadow beasts. They were no match for her, even two on one. 'Thanks for distracting him,' she calls out to you, nodding towards your own opponent, then strolling over to you and giving you a friendly punch on the shoulder. 'Let's get out of here,' Katya tells you and the two of you hurry back to her camp. After disarming some pretty well-hidden traps, she takes you inside.";
 	wait for any key;
-	now hp of Katya is 4; [4th visit completed successfully]
+	now HP of Katya is 4; [4th visit completed successfully]
 	now KatyaRelationship is 4; [player has an invite now]
 	move player to Hidden Camp;
 

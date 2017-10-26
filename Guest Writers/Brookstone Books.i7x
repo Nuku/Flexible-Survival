@@ -103,8 +103,8 @@ carry out browsebooks:
 				Increase diceroll by bonus;
 				If diceroll >= 12:
 					say "With a chuckle, you nod in agreement. After helping complete the complex crossword, you feel a little bit more intelligent.";
+					say "[bold type]Your intelligence has increased by 1![roman type][line break]";
 					Increase intelligence of player by 1;
-					say "Your intelligence has increased by one!";
 					Follow the turnpass rule;
 				else:
 					say "You nod and chuckle in agreement. Some of the clues seemed to sail right over your head.";
@@ -179,14 +179,14 @@ carry out browsebooks:
 			say "     Beverly points to a set of shelves in one corner of the store. 'There should be a book over there discussing self defense. It might be of help to you.' You thank her and head for the shelf she pointed to. After a minute of searching you find a book titled [bold type]Self Defense 101[roman type]. Taking it, you settle into a chair and look through your recent acquisition. As you suspected when you picked up the book, it's more or less basic defensive tactics, though you do manage to pick up a few pointers on how to parry and dodge attacks.";
 			Increase dexterity of player by 1;
 			LineBreak;
-			say "You're dexterity has increased by one!";
+			say "[bold type]You're dexterity has increased by 1![roman type][line break]";
 			Increase sdbook by 1;
 			Follow the turnpass rule;
 		else if sdbook is 1:
 			say "     Even though you found the pointers in the self defense book pretty basic, you decide to delve into it some more to see if you can pick up anything else from it. You manage to find a few more pieces of advice, though it's all still pretty basic, on using your opponent's energy against them to counter their attack.";
 			Increase dexterity of player by 1;
 			LineBreak;
-			say "You're dexterity has increased by one!";
+			say "[bold type]You're dexterity has increased by 1![roman type][line break]";
 			Increase sdbook by 1;
 			Follow the turnpass rule;
 		else:

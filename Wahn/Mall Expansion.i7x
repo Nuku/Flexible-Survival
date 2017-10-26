@@ -59,10 +59,10 @@ instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns 
 		now BullTerrierSiblingsVar is 100; [stopped things cold]
 	now lastMallInteriorScene is turns;
 
-instead of going northwest from Smith Haven Mall Lot South while (hp of Zoe is 0):
+instead of going northwest from Smith Haven Mall Lot South while (HP of Zoe is 0):
 	move player to Smith Haven Mall Lot West;
 	if debugactive is 1:
-		say "     DEBUG: Zoe gets caught; hp of Zoe: [hp of Zoe][line break]";
+		say "     DEBUG: Zoe gets caught; HP of Zoe: [HP of Zoe][line break]";
 	say "     As you make your way through the chaos of parked, crashed and often cum-smeared cars, a sudden clicking noise makes you listen up. Sounds like some marbles being shaken in a metal can... Then a hissing noise follows, drawing your attention to the side of the Mall, where a small-ish figure is spray-painting the anarchy symbol on the wall. Dressed in baggy camo pants and a black hoodie, it is hard to make out who or what it is exactly - though the snow-white fur covering the slender hand with the can hints at it being an anthro furry. The spray-painter shakes the can in their hand once more, preparing to add some more writing next to the symbol - and in their eagerness of thinking up something fitting, the furry concentrates on the wall itself just a little too much... totally missing the wolverine guard coming around the outside corner of the mall on his patrol.";
 	say "     With a growl, the guardsman storms up to the hapless spray-painter, who tries to escape in fright. Futilely, in this case, as the muscular wolverine runs them down with little effort, capitalizing well on the first few seconds of surprise. Getting a hold of the black hoodie, he stops the fleeing furry cold with a harsh wrench backwards, making them sprawl on the asphalt of the parking lot. Wandering closer in a relatively casual pace (as not to appear as an accomplice and drawing the ire of the wolverine yourself), you can make out that the spray-painter is a teenage bunny girl with snow-white fur, except the dark brown mop of her head hair. She looks up at the predator standing over her with fright-widened blue eyes and tries to pull away, only to be stopped once more by his unrelenting grip on her clothes.";
 	WaitLineBreak;
@@ -85,16 +85,16 @@ instead of going northwest from Smith Haven Mall Lot South while (hp of Zoe is 0
 		WaitLineBreak;
 		say "     Giving Zoe an overbearing grin, the wolverine tucks his softening cock back into his uniform pants and zips up, then walks over to where he threw her pants. Picking them up, Logan tosses the garment over to her and chuckles as it lands in the puddle of his cum that is still leaking from her pussy. 'So long bunny fuck-toy,' he calls to her, then walks off to confiscate the backpack and spray cans left lying at the scene of her 'crime' before continuing his patrol around the mall. Having snatched her pants from being soaked with any more of his cum, the bunny girl sits on her haunches, sniffling a little. When you step forward a short moment later, to console her - or do something else entirely with her - you accidentally kick a piece of refuse and make noise, drawing her frightened gaze to you.";
 		say "     Before you can say or do anything, Zoe jumps up to her feet and runs, clutching her pants to her chest as she dashes off half-naked, with wolverine cum running down the insides of her legs. Bunnies being as fast as they are when it comes to running away, you have no chance at all to catch up with her panicked flight.";
-		now hp of Zoe is 20; [she was fucked and bred by the wolverine]
+		now HP of Zoe is 20; [she was fucked and bred by the wolverine]
 	else: [stop him]
 		LineBreak;
 		say "     Calling out, you draw the attention of the strong wolverine and he turns his head to glance your way from the corner of his eyes. 'Move on, this is official mall business. Nothing to see here,' he replies, splitting his attention between yourself and his captive. And that's pretty much all it takes, as Zoe uses that moment to kick up at him, landing a straight blow to the man's balls. With a breathless groan of pain, the guy falls to the ground, curling up as he holds his aching crotch. His captive quickly jumps to her feet and pulls her pants back up, then dashes back to the spot where she sprayed the wall, snatching up two cans and hastily stuffing them in a backpack lying against the building.";
 		say "     Shouldering the bag, she looks back to the guard as he shouts, 'You're gonna pay for that, bitch!' Thankfully, the guy is still out of commission, having only pulled himself up to all fours and still retching as he holds back the urge to vomit. Zoe isn't gonna wait for him to get up, that's for sure... she looks over to you and gives you a shy smile as she raises a snow-white paw-hand to wave. Then the bunny calls out, 'Thank you!' before she turns tail and runs away at an impressive sprinting speed. Your attention is inevitably drawn to her cute little behind as she does, since Zoe didn't tuck her snowy bush of a tail into the pants in her haste. It sways left and right a little with each stride, the bright white fur easy to track with your eyes.";
 		LineBreak;
 		say "     You take care to quickly get out of dodge too before the wolverine recovers, putting some of the wrecked cars and then the mall itself between the two of you so he can't get a good look at you. Best if he doesn't know whom to 'thank' for his situation...";
-		now hp of Zoe is 1; [the player helped her escape, still virgin]
+		now HP of Zoe is 1; [the player helped her escape, still virgin]
 
-Zoe is a woman. The hp of Zoe is normally 0. The Dexterity of Zoe is normally 0.
+Zoe is a woman. The HP of Zoe is normally 0. The Dexterity of Zoe is normally 0.
 The description of Zoe is "[ZoeDesc]".
 The conversation of Zoe is { "Mew!" }.
 

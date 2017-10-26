@@ -17,8 +17,8 @@ to say newtdesc:
 
 
 Instead of conversing the Newt:
-	if hp of Newt < 4:
-		say "ERROR-Newt-[hp of Newt]T: You should not be here.";
+	if HP of Newt < 4:
+		say "ERROR-Newt-[HP of Newt]T: You should not be here.";
 	else:
 		say "     [one of]'Athanasia's been so nice to me.'[or]'The other salamanders shouldn't trouble Athie again.'[or]'I apologized to Athanasia about the eggs. We didn't know they were so important,' she says, looking over at the phoenix with loving awe.[or]'This is such a lovely, warm home you've found for Athie. And I'm so lucky to be able to stay here.'[or]'The others haven't come back since the last raid. And good riddance to them if they'd leave me like that.'[or]'I want to thank you for taking me in even after we'd fought like that,' she says, snuggling up against you.[or]'Are you sure you don't want to soak in this wonderful lava?  It's simply divine.'[or]'I'm helping Athie take care of her precious eggs now.'[or]'Doesn't Athie look beautiful?'[or]'Athie told me how you saved her as well,' she says, cuddling up to you.[in random order]";
 
@@ -28,8 +28,8 @@ Section 2 - Sexy Times
 the fuckscene of Newt is "[sexwithNewt]".
 
 to say sexwithNewt:
-	if hp of Newt < 4:
-		say "ERROR-Newt-[hp of Newt]T: You should not be here. Poof!";
+	if HP of Newt < 4:
+		say "ERROR-Newt-[HP of Newt]T: You should not be here. Poof!";
 		remove Newt from play;
 	else if cocks of player is 0 and cunts of player is 0:
 		say "     Lacking a gender, there's no fun to be had with Newt yet.";
@@ -211,7 +211,7 @@ to say NewtAthanasia3someC:
 	else:
 		say "     Newt is the first to cum, crying out long and loud in orgasmic release as you sink that glowing hot sextoy into her on your final round. Athanasia is there to catch her in the soft embrace of her wing as the salamander sags backwards when her throws of delight finally subside. You are the next to receive this treatment as the glowing phallus sends you into intense orgasm. The phoenix helps brace the sextoy for you as writhe in carnal ecstasy, pumping it into you as you flop back onto the ground. Steam rises from your overheated crotch as the scent of your femmecum fills the air. With the two of you sated, Athanasia turns the heated dildo on herself and plunges it forcefully into her cloacal pussy with both feet. Her musical cry is the loudest of you three as she achieves her long-delayed orgasm. By the time it's over, the air is heavy with the steamy scent of sated females and the three of you a flopped out in a post-orgasmic haze with the sticky, overused toy resting at the centre, slowly cooling.";
 
-[ hp of Newt                        ]
+[ HP of Newt                        ]
 [ 0 = Nothing                       ]
 [ 1 = Fled the raid                 ]
 [ 2 = Lost during raid              ]

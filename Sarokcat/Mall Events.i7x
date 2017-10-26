@@ -19,7 +19,7 @@ Instead of resolving Tight space:
 			increase carried of water bottle by 1;
 		else if T is 3:
 			say "You get stuck in the tight space. Panicking, you struggle and fight to get out, eventually managing to tear your way free, leaving a good portion of skin behind though... damn that hurts!";
-			decrease hp of player by 20;
+			decrease HP of player by 20;
 		else if T is 4:
 			say "It looks like some kid made a little nest down here, you find some comic books and a few other shiny items, but most importantly you find some chips and soda to snack on!";
 			increase carried of chips by 1;
@@ -99,7 +99,7 @@ Instead of resolving a puddle of goo:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 14:
+		if diceroll > 14:
 			say "You manage to gather up some of the strange goo without incident!";
 			increase carried of glob of goo by 2;
 		else:
@@ -135,7 +135,7 @@ Instead of resolving a Goo Gathering:
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
-	if diceroll is greater than 14:
+	if diceroll > 14:
 		say "Your nimble feet navigate the passage without any problems, allowing you to slip away from the potentially dangerous situation unharmed.";
 	else:
 		say "You try to slip away down the passage, only to scuff your feet and trip on the rough surface, you catch yourself almost immediately, but it appears several of the gooey beasts heard the noise and are coming to investigate!";

@@ -17,7 +17,7 @@ to say losetocougar:
 		say "     She rubs herself against you as she moves forward, bringing her crotch to your face. Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock. Expecting her to want you to suck her off, you open your mouth. But instead of a mouthful of cock, you get a mouthful of her hot piss as she releases her bladder with a chuckle. Coughing and sputtering at the acrid surprise, she sprays more across your face before forcing her penis into your mouth to empty the rest down your throat.";
 		say "     After your hot drink is done, she moves on to satisfying her lusts";
 	else if a random chance of 1 in 3 succeeds:
-		say "     She rubs herself against you as she moves forward, bringing her crotch to your face. Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock. Knowing what's expected of you and [if hp of player > 0]accepting that you must satisfy the feline's needs[else]seeing little point in resisting further[end if], you open your mouth and take her throbbing cock into it. You lick and suck at the dribbling member while she rumbles and purrs in pleasure.";
+		say "     She rubs herself against you as she moves forward, bringing her crotch to your face. Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock. Knowing what's expected of you and [if HP of player > 0]accepting that you must satisfy the feline's needs[else]seeing little point in resisting further[end if], you open your mouth and take her throbbing cock into it. You lick and suck at the dribbling member while she rumbles and purrs in pleasure.";
 		say "     After a few minutes of having you suck her off for foreplay, she moves on to satisfying her lusts more actively";
 	if cocks of player > 0 and cunts of player is 0:
 		say "[cougarride]";
@@ -64,7 +64,7 @@ to say cougardesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -91,7 +91,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 50; [ The monster's starting hit points. ]
+	now HP entry is 50; [ The monster's starting HP. ]
 	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 8; [ Monster's average damage when attacking. ]
 	now area entry is "Forest"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -118,7 +118,7 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Cougar":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Losing yourself in the lustful, animalistic urges of your feline body, you wander out into the city for satisfaction. In time, you come across an overturned bus, as if drawn by the scent of the horny feline living within. You mate with her repeatedly, your yowls of pleasure loud [if cocks of player > 0 and cunts of player > 0]as you take turns fucking one another[else if cocks of player > 0]as you fuck her again and again[else]as she fucks you again and again[end if]. Together, you capture a few others to be mates as well, but find the increasing military activity to be more of a distraction than a source of new playthings. Taking your collected mates, you head off to another bus you spotted elsewhere in your travels through the city, one still able to run. When a weak point in the military lines opens up, your mate, with lingering skills from her past life, pushes the bus through the gap and gets you away from the city.";
 			say "     While the busload of pumas celebrate lustfully, the orgy is sadly brief. As the military will eventually track the bus that got through, you start dropping off cougars in pairs as you go, letting them slip into the woods to escape on foot or to gain other means of transport. You and the driver are the last to go, commandeering a car and making its driver and passenger into the first of your new set of lovers. The cougars, having spread out from across a stretch of a hundred miles, cannot be contained and many small towns become puma colonies.";
 		else:

@@ -13,14 +13,14 @@ when play begins:
 	add ForcedAdoption to badspots of furry;
 
 Instead of Resolving a ForcedAdoption:
-	if hp of Rex is 0:
+	if HP of Rex is 0:
 		say "     As you walk down the street of what remains of an upscale neighborhood on the outskirts of the high rise district, you spot a figure up ahead and duck out of sight before they spot you. As the figure gets closer you see that she is an attractive female canine with a thick coat of golden fur, much like the other retriever girls you've seen around the district. From your hiding place you can see she is clutching something against her ample chest with both hands.";
 		say "     She glances around nervously as she walks, when suddenly another figure, a large powerful looking male retriever, steps out of a nearby alley into her path, cutting her off. The retriever girl runs into him and stumbles backward, falling to the ground and dropping whatever she was carrying. Without even acknowledging the male's presence, she begins scrambling around on all fours, looking for her prize, until she comes face to face with his erect canine cock. Slowly she looks up over his body until she is staring lustfully into his eyes. The large male then reaches down and picks up the entranced girl, carrying her back down the alley he emerged from as she whimpers needfully.";
 		attempttowait;
 		say "     Once you are certain the pair is gone you get up from your hiding place and walk over to where they were standing. As you glance around you spot the object the retriever girls was so obsessed with, an unusual sex toy shaped like a canine cock on one end with a bone-shaped handle on the other. Against your better judgment, you feel compelled to pick the strange toy up, examining it more closely momentarily before slipping it into your bag and heading on your way, even as faint thoughts of doggie sex begin to creep into your mind.";
 		increase carried of Dog Bone by 1;
-		now hp of Rex is 1;
-	else if hp of Rex is 4:
+		now HP of Rex is 1;
+	else if HP of Rex is 4:
 		if Dog Bone is owned:
 			say "     As you once again find yourself passing through a familiar neighborhood you are suddenly stuck with concern for your favorite toy. Pulling it from your bag you hold it tightly to your chest. In a moment of clarity you realize this is the very same place you first acquired the toy... and saw its previous owner captured by a large male retriever. ";
 			say "     You ponder just how similar a position you are in to hers when you are suddenly grabbed from behind. You are spun around to see the large, sexy, male canine face to face before he presses his muzzle to your face, drawing you into a deep kiss. Your mind is flooded with the thoughts and desires of the retriever bitch you have been becoming, your infection driven to new a new lust fueled high by his deep kiss and powerful male scent.";
@@ -29,7 +29,7 @@ Instead of Resolving a ForcedAdoption:
 			say "     'I see that wonderful bone has brought another lovely bitch right to my doorstep. Why don't you come inside so we can start training you to be a proper pet?' he says, wrenching the bone from your grasp as he finishes. He then turns to a nearby house, motioning you towards the large doggy door as he enters through the front.";
 			delete Dog Bone;
 			now Rex's Place is known;
-			now hp of Rex is 5;
+			now HP of Rex is 5;
 			say "[bold type]Rex's Place is now known.[roman type]";
 			now ForcedAdoption is resolved;
 		else:
@@ -62,29 +62,29 @@ Dog Bone is infectious. The strain of Dog Bone is "retriever". It is not tempora
 the scent of Dog Bone is "The bone-shaped doggie dildo smells strongly of canine sex, much like the bitch you acquired it from.".
 
 To say DogBoneUse:
-	if hp of Rex is 1:
+	if HP of Rex is 1:
 		say "[DogBoneScene1]";
 		infect "Retriever";
 		decrease humanity of player by 3;
-		now hp of Rex is 2;
-	else if hp of Rex is 2:
+		now HP of Rex is 2;
+	else if HP of Rex is 2:
 		if cunts of player > 0:
 			say "[DogBoneScene2f]";
 		else:
 			say "[DogBoneScene2m]";
 		infect "Retriever";
 		decrease humanity of player by 3;
-		now hp of Rex is 3;
-	else if hp of Rex is 3:
+		now HP of Rex is 3;
+	else if HP of Rex is 3:
 		if cunts of player > 0:
 			say "[DogBoneScene3f]";
 		else:
 			say "[DogBoneScene3m]";
 		say "[fullRetrieverTF]";
 		decrease humanity of player by 6;
-		now hp of Rex is 4;
+		now HP of Rex is 4;
 		now bonelust is 1;
-	else if hp of Rex is 4:
+	else if HP of Rex is 4:
 		if cunts of player > 0:
 			say "[DogBoneScene4f]";
 		else:
@@ -94,14 +94,14 @@ To say DogBoneUse:
 		decrease humanity of player by 4;
 
 An everyturn rule:
-	if HP of Rex > 3 and hp of Rex < 50:
+	if HP of Rex > 3 and HP of Rex < 50:
 		if bonelust > 10:
 			say "     The instincts caused by the retriever infection and the burning need caused by the canine sex toy dominate your mind almost completely. You struggle to maintain some small part of yourself as the thoughts of the retriever bitch you're becoming begin to be indistinguishable from your own. You need to find some way to sate this burning need now, else you will surely lose yourself completely to these desires.";
 			increase bonelust by 1;
 			decrease humanity of player by 15;
 		else if bonelust > 6:
 			if a random chance of 1 in 2 succeeds:
-				say "     You struggle to resist the urges of the retriever bitch which the infection is trying to make of you, but its grip on your mind tightens. Your body burns with desire as the lewd daydreams of doggy sex dominate your thoughts. Perhaps you could relieve some of this lust with some playtime with [if hp of Rex > 6]Rex[else]your beloved dog bone sex toy[end if]?";
+				say "     You struggle to resist the urges of the retriever bitch which the infection is trying to make of you, but its grip on your mind tightens. Your body burns with desire as the lewd daydreams of doggy sex dominate your thoughts. Perhaps you could relieve some of this lust with some playtime with [if HP of Rex > 6]Rex[else]your beloved dog bone sex toy[end if]?";
 				increase bonelust by 1;
 				decrease humanity of player by 9;
 		else if bonelust > 3:
@@ -109,7 +109,7 @@ An everyturn rule:
 				say "The Retriever urges and desires continue clawing at your mind, growing more powerful. You catch yourself panting occasionally as the canine sex dreams invade your thoughts more frequently.";
 				increase bonelust by 1;
 				decrease humanity of player by 6;
-		else if hp of Rex > 3:
+		else if HP of Rex > 3:
 			if a random chance of 1 in 4 succeeds:
 				say "You feel the retriever infection pawing at the back of your mind and a warm tingling deep within you as your mind drifts to thoughts of large male canines and their rigid knotted cocks.";
 				increase bonelust by 1;
@@ -159,12 +159,12 @@ to say Rexdescribing:
 the scent of Rex is "     The large retriever carries the strong musk of a virile male, and the scent of doggy sex clings to his fur constantly thanks to his frequent playtime with his happy retriever sexpet.".
 
 instead of conversing the Rex:
-	if hp of Karen is 3 and Dog Treats is owned:
+	if HP of Karen is 3 and Dog Treats is owned:
 		say "     You slowly approach Rex, sliding your bag off your shoulders as you step towards him. As you get close, Rex's ears suddenly perk up and he begins sniffing the air around you. 'Is that wonderful scent what I think it is?' Rex asks, eagerly trying to peer into your bag.";
 		say "	You hesitate a moment before reaching into your sack for the treats. You may only get one shot at this. Are you sure you are ready? (Y-make your escape attempt now! N-hide the cookies from Rex, you're not ready to escape just yet.)";
 		if the player consents:
 			say "     With a knowing grin you reach into you backpack, digging out the bag of treats you retrieved from the bakery. Rex begins panting heavily as you pull the brown paper bag out, even drooling a bit from the corner of his mouth. 'My lovely stray bringing ME a treat? And how did you know these were my favorite?' Rex asks happily as you drop the bag into his waiting paws. With a sharp whistle he calls Karen over before digging into the bag. He divides the treats up into a few small piles, pushing one towards Karen, who barks happily in response before digging in. Next he offers one pile to you, which you politely refuse, despite a strong desire to enjoy the share he's offering you. With a confused smirk and a shrug, Rex combines your pile with his own before he begins eating. With the two retrievers seemingly distracted by your gift, you slowly begin creeping around the room, carefully approaching your prize sitting on a side table near Rex's favorite seat. Soon the bone is within your grasp again, and you reach out to take it, only to stop just short when you hear a low growl behind you. Slowly turning around, you find yourself face to face with Rex. Apparently your little distraction wasn't enough to occupy him long. You glance towards the door on the other side of the room, then back to Rex, realizing that it's unlikely you'll be able to get past with him blocking your escape. Trying to flee this situation is probably not an option.";
-			now hp of Karen is 4;
+			now HP of Karen is 4;
 			now inasituation is true;
 			challenge "Retriever";
 			now inasituation is false;
@@ -186,10 +186,10 @@ instead of conversing the Rex:
 				say "     Reaching out to wipe away the tear welling in her eye, you do your best to comfort the poor girl. Leaning into your hand, a smile creeps across Karen's face. 'Thank you,' she says again quietly. 'Do you think... I could come with you? I can't stay here in case Rex comes back, but I don't know if I would fare any better against the other monsters out there. Please?' Wiping the fresh tear from her face, you consider her request for a moment and come to the same conclusion, she's far too vulnerable right now to leave alone, and so you agree to bring her with you.";
 				say "     With an excited squeal, she pulls you in for another quick hug before dashing around the house to collect a small bag of supplies. After gathering your own things and preparing to head out, you pause for a moment, considering finding and bringing that strange bone with you, but when a quick glance around the room doesn't reveal it, you decide it's probably best to leave it behind anyway.'";
 				now Retriever Girl is tamed;
-				say "     (The Retriever Girl is now tamed! You can make her your active pet by typing [bold type][link]pet Retriever Girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Retriever Girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				say "     (The Retriever Girl is now tamed! You can make her your active pet by typing [bold type][link]pet Retriever Girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Retriever Girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now carried of Dog Treats is 0;
 				now KarenTimer is turns;
-				now hp of Rex is 50;
+				now HP of Rex is 50;
 				now HP of Karen is 5;
 				now Rex's Place is unknown;
 				move player to high rise district;
@@ -201,7 +201,7 @@ instead of conversing the Rex:
 				say "     Before you've even had a chance to fully recover, Rex begins his rhythmic pounding again, sending fresh waves of delight through your eager body, further clouding your mind in the lustful haze, fucking away the last remnants of your humanity with each powerful thrust. As your master continues his relentless pounding, you begin to lose focus on anything but the wonderful cock and delightful knot tying you to him. Everything begins to fade and time slips away as your training continues until you finally black out after what feel like a wonderful eternity.";
 				say "[fullRetrieverTF]";
 				wait for any key;
-				now hp of Rex is 49;
+				now HP of Rex is 49;
 				now humanity of player is 0;
 				end the story saying "Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
 				wait for any key;
@@ -209,13 +209,13 @@ instead of conversing the Rex:
 				stop the action;
 		else:
 			say "     Deciding you're not quite ready to follow through with your plans, you hide your bag behind your back, playing dumb as best you can in response to Rex's questions about its contents. Eventually Rex tires of trying to discover the bag's contents and turns to leave you be.";
-	else if hp of Rex is 5:
+	else if HP of Rex is 5:
 		say "     'Ah, I'm glad to see you've come to accept my offer,' the large male says, waving a small blue collar towards you.";
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Realizing his intent, the retriever bitch that has been slowly taking control of your mind snaps to the forefront, consuming you entirely. You pad over to Rex happily and kneel down in front of him, allowing him to affix the collar around your neck. Once down, he pets the top of your head softly as you look up at your new master and smile, already imagining the new life ahead of you.";
 			say "[fullRetrieverTF]";
 			wait for any key;
-			now hp of Rex is 10;
+			now HP of Rex is 10;
 			end the story saying "Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
 			wait for any key;
 			follow the turnpass rule;
@@ -223,23 +223,23 @@ instead of conversing the Rex:
 		else:
 			say "     You realize Rex's intent immediately and push the collar away, informing him that you have no intention of submitting to him. 'That's too bad,' Rex replies. 'It really would be much easier for both of us if you just gave in now, but I'm sure I'll have plenty of opportunity to change your mind,' he says with a smirk as he glances back at your bone sitting in the back of the room. 'After all, who else is going to help you control those urges you're struggling with?'";
 			say "     'But enough of that, let me show you around our home,' Rex says as he begins touring you around the small house. Finally he introduces you to Karen, the other retriever in the home, who you quickly recognize as the girl you saw Rex grab earlier and the original owner of the bone that drew you here. As Rex introduces you properly, she smiles at you knowingly, apparently somehow recognizing you as well.";
-		now hp of Rex is 6;
-	else if hp of Rex > 9:
+		now HP of Rex is 6;
+	else if HP of Rex > 9:
 		say "     [one of]'Isn't life as a pet some much simpler? I hope you're enjoying it as much as Karen does.'[or]'You're such a good pet,' Rex says, patting you on the head softly.[or]'You make such a lovely pet,' Rex says, giving the small tag on your collar a light swat. 'Aren't you glad you decided to stay with us?'[or]'Go ahead and do whatever you feel you need to do out in the city. Just make sure you come home when you're done,' Rex says, trying to hide the worry in his expression.[or]Before you can say anything, Rex pulls you close into a deep kiss, his long canine tongue playing in your mouth as he holds you tight against himself. By the time he breaks off the kiss, you're left speechless, your lust fogged mind having forgotten what you intended to speak with him about.[at random]";
-	else if hp of Rex is 9:
+	else if HP of Rex is 9:
 		say "     'So, have you reconsidered my offer yet?' Rex asks, pulling the familiar blue collar from behind his back and brandishing it in front of you. 'Now that we've spent more time together, surely you must see how much better life is here then out wandering the city alone.'";
 		say "     Will you accept Rex's collar and a place as his newest pet? (Y/N)";
 		if the player consents:
 			say "     As you stare at the thin blue collar in Rex's paw-life hand, you find yourself longing to reach out and accept it. Unsure if it's the infection, your lust, or maybe even your own personal desire, you tentatively reach out to take the collar from Rex. Turning it over slowly in your hands, you become more and more sure this is what you want the longer you hold the lovely leather collar. Finally you look up into Rex's eyes, staring deeply into them for a moment before nodding in acceptance. A broad, genuine smile creeps across his face as Rex gently takes the collar from you, reaching around your neck to fasten the small buckle behind your head. When Rex steps back to admire you fully, you look down to look at your new accessory, running your fingers over the small, silver, bone-shaped tag, realizing it even has your name engraved on it already.";
 			say "     When you finally look up, the first thing you see is your new master, still smiling contently at you. Stepping forward to embrace him, you bury your face in his shining golden fur, nuzzling him affectionately as he whispers in your ear. 'You made the right choice,' he says. 'You'll love your new life here with us.' Realizing the finality of this statement, you find your thoughts drawn back to the city, the people and things out there you might have left undone. As if knowing your concern, Rex releases you and takes a step back, 'But I can tell there are still things out in that city you need to do,' he starts, placing a paw on your shoulder. 'If you really must, you can go out there and do as you please, but make sure you return home as soon as you've finished. After all, this is where you belong.' All you can manage is a nod in response before Rex returns to his business, leaving you alone to ponder the consequences of this decision.";
-			now hp of Rex is 11;
+			now HP of Rex is 11;
 		else:
 			say "     Pushing the collar away, you inform Rex you still have no intention of giving in and becoming his pet";
-			now hp of Rex is 6;
-			if hp of Karen is 0:
+			now HP of Rex is 6;
+			if HP of Karen is 0:
 				say ". As Rex walks away dejectedly, you realize he probably isn't going to give up on making a proper pet out of you, and with the powerful urges his infection causes, you're unsure how long you'll be able to continue resisting his offers. Perhaps you should try and find a way to escape his grasp?";
 				say "     Glancing around the room to look for ideas, you spot the dog bone sex toy that got you into this mess. You realize that while you may not have a way to prevent the urges it caused, if you could get your hands on it, you at least wouldn't need to see Rex to curb your need. Unfortunately, Rex always seems to keep a close eye on the toy. You'll need to find some way to distract him before making your move";
-				now hp of Karen is 1;
+				now HP of Karen is 1;
 			say ".";
 	else:
 		say "     [one of]'Karen is so much happier now that she's become my pet rather than the other way around. You really should give in and join her.'[or]'Would you like a treat?' Rex says, gesturing to the large jar of cookies beside him.[or]'Why don't you come over here and let me show you how nice life as a retriever sexpet can be?'[or]'It must be difficult finding relief without that dog bone sex toy, huh?' the large male says with a mischievous grin.[or]Rex doesn't seem to notice you as he twirls a small blue collar in his paw like hand. Looking up, he spots you and waves the collar towards you, trying to entice you to put it on.[or]'Are you sure you don't want to stay here with me and Karen? Life as a pet is so much easier, and I'll even be sure to give you some lovely pups to play with.'[or]Rex doesn't seem to be interesting in talking as he rolls around on the floor, playing with Karen.[or]Rex lies sleeping on the couch with Karen in his arms. She smiles at you vacantly, almost making you jealous of the simple, happy life she now must lead.[or]'Why don't you just stay a while with us? I'm sure you'll come to enjoy your time here.'[at random]";
@@ -252,12 +252,12 @@ Instead of fucking the Rex:
 			now monster is y;
 			break;
 	if lastfuck of Rex - turns < 8:
-		if hp of Rex > 10:
+		if HP of Rex > 10:
 			say "     'Oh, my lovely little pet is back for more fun already?' Rex says with his familiar grin. 'I don't know if I'm ready to go again yet, and it certainly wouldn't be fair to Karen if I keep spending all my time with you, now would it?'";
 		else:
 			say "     'Back again ready? Are you sure you're here because you really need it, or are you just starting to enjoy my company?' Rex says with a mischievous grin. 'Either way, I don't think I'm ready to go again, so I guess you'll just have to wait,' he continues, his smirk broadening even more.";
 	else:
-		if hp of Rex > 9:
+		if HP of Rex > 9:
 			if bonelust > 6:
 				say "[RexPetHighLustScene]";
 			else if bonelust > 3:
@@ -276,12 +276,12 @@ Instead of fucking the Rex:
 		now lastfuck of Rex is turns;
 		if humanity of player < 10:
 			attempttowait;
-			if hp of Rex > 9:
+			if HP of Rex > 9:
 				say "     Eventually you find the energy to rise from your rest, but you find the that this time the lust induced fog in your mind never fully clears, the last of your concerns in the city beginning to fade away, lost in this haze. Finally you realize everything you could ever want is here, in your home, with your loving master Rex. Why did you ever want to continue wandering that city to begin with?";
 			else:
 				say "     As you begin to rise, you see Rex has left that damned blue collar laying out on a nearby counter for you to see again, but this time something clicks inside you. His 'training' seeming to finally have taken hold, you reach out and pick up the collar, fastening it around your neck without a second thought.";
 				say "     All your other concerns seem to drain away as the retriever infection takes full control of your mind and body, shaping you into another perfect sexpet for you new owner. Eagerly you return to him, finding him waiting for you on his couch at the back of the room, the broad smile on his face as he see you in the collar filling you with pride. He motions for you to join him laying on the couch, and you happily snuggle up against him. You begin to drift off to sleep as he scratches your ears, telling you that you made the right decision, and you can't help but agree as you drift off into slumber, dreaming off all the wonderful times in your new life ahead of you.";
-				now hp of Rex is 10;
+				now HP of Rex is 10;
 			wait for any key;
 			say "[fullRetrieverTF]";
 			end the story saying "Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
@@ -290,11 +290,11 @@ Instead of fucking the Rex:
 			stop the action;
 		else:
 			attempttowait;
-			if hp of Rex > 9:
+			if HP of Rex > 9:
 				say "     Eventually you find the energy to rise from your rest, rubbing the tag of your collar idly as you collect your thoughts and prepare to return to your tasks.";
 			else:
 				say "     You eventually return to your senses, the fog seeming to have lifted from your mind once again. You note the burning desires within you seem to have diminished, but so has some of your resistance to Rex and the retriever infection.";
-				if hp of Rex < 9, increase hp of Rex by 1;
+				if HP of Rex < 9, increase HP of Rex by 1;
 
 
 Section 5 - Karen
@@ -305,7 +305,7 @@ Section 5 - Karen
 Section 6 - Rex Pet Events
 
 Every turn when the player is in Rex's Place and Rex is visible:
-	if hp of Rex > 9:
+	if HP of Rex > 9:
 		if lastfuck of Rex - turns > 14:
 			say "[RexPetLongWait]";
 			infect "Retriever";
@@ -459,7 +459,7 @@ to say RexTrainHighLustScene:
 		say "     You howl in pleasure as your cunt finally stretches enough to allow his wonderful knot inside you, the rush of your feminine juices soaks your thighs as it gushes out around Rex's rod but he leaves you little time to recover from your first climax, beginning to hump you in earnest again moments later.";
 		say "     Each movement pulls and teases the knot inside you, quickly bringing you towards a second climax. With one final powerful thrust he pushes both of you over the edge, howling in unison as his throbbing members fills your womb with virile retriever seed, finally quenching the fire inside you, for now.";
 		attempttowait;
-		say "     Exhausted, you both collapse to the floor, still tied together by his knot. Rex begins stroking the back of your head softly as he lay atop you, both of you still basking in the afterglow of your intense orgasms. 'Isn't this nice?' he whispers into your ear, ' Are you sure this isn't the life you want to live?'";
+		say "     Exhausted, you both collapse to the floor, still tied together by his knot. Rex begins stroking the back of your head softly as he lay atop you, both of you still basking in the afterglow of your intense orgasms. 'Isn't this nice?' he whispers into your ear, 'Are you sure this isn't the life you want to live?'";
 		say "     Eventually Rex's knot has softened enough that he can pull himself free, leaving you whimpering for a moment at the sudden empty feeling. He slowly climbs to his feet, taking a moment to stretch with a low groan before returning to his business, leaving you to finish recovering on your own.[impregchance]";
 	else:
 		say "     Rex looks deep into your eyes as you stumble towards him, struggling to not lose yourself entirely to the overwhelming urges welling up inside you. Seeing the pleading look in your eyes he smiles knowingly and places an arm around your shoulder, leading you off towards his bed in the back room. By the time you reach your destination your mind is made up, you can't resist the powerful need burning inside you any longer, and as your resistance slips away once again you lean heavily against Rex, taking a deep breath of his powerful male scent as you reach the bed.";
@@ -545,7 +545,7 @@ to say RexPetScene5:
 
 Section 8 - Progression Values
 
-[  hp of Rex   ]
+[  HP of Rex   ]
 [ 0 = not met        ]
 [ 1 = done event once, received bone]
 [ 2-4 = used bone 1-3 times]
@@ -556,7 +556,7 @@ Section 8 - Progression Values
 [ 49 = Defeated by Rex in escape quest]
 [ 50 = Defeated Rex]
 
-[  hp of Karen  ]
+[  HP of Karen  ]
 [ 0 = Default state        ]
 [ 1 = Refused Rex offer @ Rex HP 9 ]
 [ 2 = talked about bakery ]

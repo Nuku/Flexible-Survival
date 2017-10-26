@@ -52,7 +52,7 @@ to say losetoymg:
 		say "[losetoymguy]";
 
 to say losetoymgirl:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Unable to resist the mink gal's insistent arrogance, you sink to your knees. Your fingers go slack, gear falling to the deck as she closes in to rest one foot on your shoulder. With a smirk, she pushes you onto your back. 'At least you have the sense to take your place.' She muses quietly, gesturing for you to strip.";
 	else:
 		say "     Beaten senseless by the yachting mink, you collapse to the wooden slats of the dock. At the snap of her fingers, deckhands yank your gear and clothes of without ceremony, leaving you bare to her. 'You locals are so unfriendly! This is worse than that trip to Peru!'";
@@ -63,7 +63,7 @@ to say losetoymgirl:
 		say "     Finding only a wet pussy between your legs, the mink clicks her tongue in disappointment. 'Unfortunate' She chides you gently, but hikes her skirt up to expose the dripping slit of her needy cunt, rubbing it idly with her paws. Her eyes close, head tilting back as she teases herself with her fingers and you with the sight of her lips opening. With a huff she steps forward, gripping your head firmly and bringing up to her needy cunt. Its lick or die, and you have little choice but to worship that hot slit! Time loses meaning as you slurp and lick, teasing her swollen clit until at last the mink gushes femjuices and soaks your face! Satisfied, she allows you to collapse, climbing back aboard her yacht.";
 
 to say losetoymguy:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Swayed by the mink stud's almost obnoxious confidence, you find yourself kneeling on the dock, head bowing. 'There is the trait I like. Subservience.' His claws tick on the wooden planks as he draws closer, gesturing for you to disrobe as he removes his cravat.";
 	else:
 		say "     Having beaten the stuffing out of you, the studly mink unknots his cravat with something almost like disinterest as a deckhand pulls off your gear and clothing. Too weak to resist, you allow yourself to be stripped bare and laid out.";
@@ -105,7 +105,7 @@ to say beattheymguy:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -116,7 +116,7 @@ When Play begins:
 	now victory entry is "[losetoymg]";
 	now desc entry is "[ymgdesc]";
 	now face entry is "narrowed and strongly defined with an arrogant, aristocratic bearing made all the more visible by stark white fur. Tiny ears, a pink nose, and lips that reflexively twitch into sneers";
-	now body entry is "elegantly thin and tapered, with an elongated torso and somewhat short limbs. The narrow width of your shoulders and hips simplifies your silhouette to the most basic and sleek of profiles. Slightly built, and delicately wrought, your body is perfect for complimenting satin and gold";
+	now body entry is "elegantly thin and tapered, with an elongated torso and somewhat short limbs. The narrow width of your shoulders and hips simplifies your silhouette to the most basic and sleek of profiles. Slightly built, and delicately wrought, your body is perfect for complementing satin and gold";
 	now skin entry is "[one of]satin soft white fur[or]elegantly white-furred[or]short but silky-smooth milky fur[at random]";
 	now tail entry is "You have an elegant if somewhat short tail which is like a cloud or snowbank in motion, an almost hypnotically swirling sensual limb.";
 	now cock entry is "[one of]pinkish[or]high-class cock[or]fat mink fucker[or]thick fuckstick[at random]";
@@ -132,8 +132,8 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 10;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 28; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 28; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 2; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Warehouse"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -162,7 +162,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Yuppie Mink":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Lost in the inhuman desires that rule your body and the shell of your mind, you leave the city. The dueling needs you feel to breed and rule end up making you quite dysfunctional, barely able to even survive until you find your way to another yuppie mink who is not quite as far gone as you are. What begins as a mindless fuckfest eventually becomes something like an arranged marriage, in that they arrange continual survival for you, and your body is married to their genitals. It works out well enough for you in the long run, not that you are ever aware enough to truly realize and appreciate it.";
 		else:
 			say "     You manage to survive the many hardships of the city with something like an intact sense of self and free-will. Despite your impressive feats in combat and stealth, you still fall prey to the effects of your Yuppie Mink infection, and emerge with an obnoxious sense of entitlement that drives the military up the wall. Between demands for special treatment and confusion as to the location of the shiatsu massage parlor, your time under quarantine is insufferable for everyone involved. To add insult to injury, there is not a single person in the camp as sophisticated and worldly as you are!";

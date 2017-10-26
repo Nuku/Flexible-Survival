@@ -37,7 +37,7 @@ Instead of resolving a Apartment 319:
 		say "     [bold type]Though you were told it was none of your business, can you really turn a blind eye on this one?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Come back later.";
-		say "     ([link]N[as]n[end link]) - Dont return.";
+		say "     ([link]N[as]n[end link]) - Don't return.";
 		if player consents:
 			LineBreak;
 			say "Making the decision that whatever going on with Dagaz is going to [italic type]be[roman type] your problem as of now, you make plans to come back later on to in the evening to check up on the other man. Because whatever is going on, it's mighty suspicious![line break][line break]";

@@ -65,7 +65,7 @@ To say gargoyle loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -92,8 +92,8 @@ When Play begins:
 		now int entry is 08;
 		now cha entry is 11;
 		now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-		now hp entry is 123;
-		now lev entry is 12; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+		now HP entry is 123;
+		now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 		now wdam entry is 12; [ Amount of Damage monster Does when attacking. ]
 		now area entry is "Outside";
 		now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -120,8 +120,8 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Gargoyle":
-		if humanity of player is less than 10:
-			if cunts of player is greater than 0:
+		if humanity of player < 10:
+			if cunts of player > 0:
 				say "Having been infected by the strain of gargoyle mutation you find that day by day your weeping cunt is shrinking itself down inch by inch. Not understanding this at first you panic and roar to the sky as you fly over the country without thought or destination. Soon though your mournful cries are lost to you, the same as your cunt, as your pussy closes up and then seals tight leaving nothing but a fine, smooth skinned line behind for you to remember it by. Moaning and grunting as your mind tries to understand what's going on you are soon given your answers when another gargoyle finds his way over to you and then moves to claim you as a mate. On your knees under the impressive male you find that any feminine traits you may have had slowly change over to masculine ones as your body hardens further into becoming a perfect gargoyle. In the dim part of your foggy brain that can recall much of what it means to be human you come to realize that gargoyle must be inherently male and that any female coming into sexual contact with them will slowly lose their femininity until they fully become male. This means little to you though as when your mate finishes seeding you, for you are already forgetting you ever were partially female.";
 			else:
 				say "It's too late for you when rescue comes as you've already given over to the gargoyle you were destined to become as all of your human memories have long since emptied out of your head. Flapping across the sky, well out of the sight of the army's helicopters and radar seeking devices, you find yourself coming across another gargoyle while dancing above the humans and furries down below. Impressively muscular, and well endowed to boot, you lead the other male on a fast paced chase across much of the country as you are eager to get caught by the impressive gargoyle keeping up in time with you. Once he finally does catch up to you the other leads the two of you to a rooftop to land onto and immediately the other is claiming dominance over you as he nuzzles and purr and then hiss quietly into your throat. Enticing you without words, as you have long lost the ability to use your former language, you close your wings tight before flipping yourself over and then present the other with your upturned tail. The newcomer gargoyle is on you fast and hard after that as the other tackles you and then spreads your backside open with its impressively long and hard cock.";

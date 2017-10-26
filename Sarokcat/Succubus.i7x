@@ -6,7 +6,7 @@ Version 3 of Succubus by Sarokcat begins here.
 Section 1 - Monster Responses
 
 to say Succubus attack:
-	if cocks of player is greater than 0:
+	if cocks of player > 0:
 		if bodyname of player is "Incubus":
 			say "     'Ah! I can see that you've already met some of my male brethren out there and are already on your way to joining us,' he succubus says with a grin as she stalks forward again. 'And now that you have stopped that silly pretense of wanting to resist, it's time for me to enjoy that lovely cock you've brought for me to play with,' she teases with a grin as she reaches out and pushes you back and down. Your overly-aroused body is forced to stumble and lie back on the ground, while the succubus eagerly moves over you, her hands tracing down your chest until she can wrap one of them around your cock, stroking it several times and making you moan.";
 			say "     'What a nice lovely [cock of player] cock you have here for me, why it's just what I wanted!' She says teasingly as she straddles your helpless form, her perfect breasts bouncing teasingly above you as her wings lower down and rub up against your sides. The feel of her hand guiding your cock into her damp moist pussy is amazing, her other hand resting on your chest as she lowers herself onto you, her body engulfing your thick rod easily as she slides it all the way into he. She moans in pleasure above you as she begins to rock up and down on your body, both her hands rubbing up against your [skin of player] chest even as she presses your back into the ground, her pussy seeming to vibrate and massage your cock as she pistons it into her amazing female body.";
@@ -35,8 +35,8 @@ to say Succubus attack:
 
 To say Succubus loss:
 	if lisaartemiscount1 > 0 and lisaartemiscount1 < 5, increase lisaartemiscount1 by 1;
-	if companion of player is demon brute and hp of Lilith is 0 and inasituation is false:
-		if cocks of player is greater than 0:
+	if companion of player is demon brute and HP of Lilith is 0 and inasituation is false:
+		if cocks of player > 0:
 			if bodyname of player is "Incubus":
 				say "     'Good fight, dark brother,' the succubus says with a smile as she raises her hands in surrender and you order your companion to stop fighting and stand still. 'You are definitely the more powerful seducer,' she acknowledges with a smile as you grin back at her, 'and you do have a most interesting pet... how did you get him so - tame?'";
 				say "     She saunters over to your captured demon brute, stroking her hand over his muscled form and grabbing his balls. He snarls, clearly aching to rape her, you, anyone - then starts to whimper as the succubus squeezes tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Just think about how much fun you could have with this big boy if he had a pussy too. Look me up in the [bold type]Burned-Out Chapel[roman type] in Flint street, if you're interested. For now, I've got to go - mortals to corrupt, you know...'";
@@ -57,9 +57,9 @@ To say Succubus loss:
 				say "     She saunters over to your captured demon brute, stroking her hand over his muscled form and grabbing his balls. He snarls, clearly aching to rape her, you, anyone - then starts to whimper as the succubus squeezes tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Show this big brute how it is to have a pussy. Look me up in the [bold type]Burned-Out Chapel[roman type] in Flint street, if you're interested. For now, I've got to go - mortals to corrupt, you know...'";
 				say "     The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss. Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[else]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
 		now Burned-Out Chapel is known;
-		now hp of Lilith is 2;
+		now HP of Lilith is 2;
 	else:
-		if cocks of player is greater than 0:
+		if cocks of player > 0:
 			if bodyname of player is "Incubus":
 				say "     'Good fight, dark brother,' the succubus says with a smile as she raises her hands in surrender. 'You are definitely the more powerful seducer,' she acknowledges with a smile as you grin back at her, feeling strangely at ease now that the combat is over. 'I really look forward to you joining our ranks fully and showing us just how amazing you can be.' The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss. Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[else]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
 				infect "Incubus";
@@ -89,7 +89,7 @@ to say SuccubusDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -118,8 +118,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 25;
 	now sex entry is "Female";       [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 50;
-	now lev entry is 8;              [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 50;
+	now lev entry is 8;              [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 14;            [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Red";         [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 0;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -146,9 +146,9 @@ When Play begins:
 when play ends:
 	if bodyname of player is "Succubus":
 		if player is pure and graphics is true, project the figure of Succubus_clothed_icon;
-		if humanity of player is less than 10: [succumb]
-			if cunts of the player is greater than 0: [female + herm]
-				if cocks of the player is greater than 0: [herm]
+		if humanity of player < 10: [succumb]
+			if cunts of the player > 0: [female + herm]
+				if cocks of the player > 0: [herm]
 					say "     Finally giving in to your new body's strong sexual urges, you waste no time in returning to the red light district, where you waste no time in hunting down one of the succubi that changed you. Once you find her, you immediately pounce on her shapely form - and while she smiles at first at her new sister in welcome, her eyes go wide as she feels your large cock rubbing up against her eager pussy. An evil smile on your lips, you waste no time in fucking the surprised succubus senseless, her female body unable to keep up with the stamina of your own combined male and female needs.";
 					say "     Once she finally acknowledges you as her superior, she leads you back to where the other succubi are waiting with their captive pets, and you waste no time in filling each and every one of them with your demonic seed, plunging your cock into their bodies again and again, even as other succubi lick and worship your needy pussy and bountiful breasts. Soon the other demons are all kneeling before you as well, even their lusty desires unable to keep up with your insatiable new body, and your new subjects hail you as their queen. You can almost feel your horns growing slightly larger, as your body becomes even more perfect under their adoring caresses, and you enjoy the irony of your former tormentors worshipping you so very eagerly.";
 					say "     Still, their worship isn't quite enough, and while you are sure that your seed will grow in their bellies until more followers will be born to worship you, you still need more playthings to satisfy you now. You waste no time in commanding your new subjects to hunt through the city to find you more pets and people to convert, while you enjoy the ones already here, and when this doesn't bear fruit fast enough, you order them to search even farther afield.";
@@ -163,7 +163,7 @@ when play ends:
 				say "     She purrs with amusement as she holds up the collar to you as you shudder with arousal and desire for her sultry body. 'All you need to do now is slip the collar on for me and we will make sure you never need to worry about anything other than fucking ever again...' She says teasingly as she holds the collar out for you, and while you know somewhere deep down inside that if you put the collar on, you will never be the same again, the need in your body is just too great, and the promise of all the amazing sex to come fills your mind as you reach out and take the collar. The succubus smiles happily as you slip the collar around your neck, the latch seeming to vanish once the soft leather band is securely fastened against your skin, and you feel like something inside you has been collared and chained as well.";
 				say "     Fastening the leash to your collar, the succubus begins to lead you off down the street like a good pet, your cock growing harder and your body tingling more and more with arousal at every step. Soon you can't help but fantasize about all the ways you can be a good little pet for your mistress, serving her and her sisters like a good fucktoy, while they go out and hunt for more innocent people to make into sexy pets just like you. Arriving at the lobby of a small building, you look up to see a number of other succubi smiling and grinning at you eagerly. As your new mistress parades her pet around the room, you see several other pets already serving their own mistresses in the corners, and realize that all your dirty little fantasies are about to come true.";
 		else: [sane]
-			if cunts of the player is greater than 0: [female + herm]
+			if cunts of the player > 0: [female + herm]
 				say "     When the rescue comes, you are more than happy to wait for the military to show up and escort you out of the horribly strange city. Your new form getting you several speculative looks and the phone numbers of a number of the soldiers before you can manage to talk your way out of their camp, their fawning attempts to win your favor making you smile and feel rather powerful. Once you are clear of the military and free to do what you want, you try to think for a minute about what you can do to make a living now that you have changed so drastically.";
 				say "     The answer comes to you easily however as you recall how well people respond to your new body, and so you ";
 				let randomnumber be a random number from 1 to 2;

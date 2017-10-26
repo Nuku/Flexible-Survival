@@ -61,7 +61,7 @@ to say beatthexeno:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -88,8 +88,8 @@ When Play begins:
 	now int entry is 14; [not that much of a bear with little brain]
 	now cha entry is 6; [because you wouldn't want to argue]
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 80; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 12; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 80; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 15; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Capitol"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -127,13 +127,13 @@ to say drinkacidmilk:
 	say "     Foolishly, you take a gulp of the acid milk. ";
 	if facename of player is not "Xeno":
 		say "     The caustic acid eats away at your flesh and you're forced to spit it up, but not before it does terrible things to the inside of your mouth and throat.";
-		now hp of player is hp of player / 3;
+		now HP of player is HP of player / 3;
 	else if bodyname of player is not "Xeno":
 		say "     You are able to swallow down the acidic milk thanks to your altered head and mouth, but this only allows it access to your body where it starts to eat away at your internals instead. You writhe in pain as it burns inside you for several minutes until it's spread out enough for the nanites to start dealing with cleaning it up.";
-		now hp of player is hp of player / 4;
+		now HP of player is HP of player / 4;
 	else:
 		say "     You are able to drink down the acidic milk thanks to your altered mouth and your infected body is able to deal with it. It still stings and burns inside you, but does restore a small amount of thirst in return.";
-		decrease hp of player by level of player;
+		decrease HP of player by level of player;
 		decrease thirst of player by 3;
 		if thirst of player < 3, now thirst of player is 0;
 
@@ -166,7 +166,7 @@ Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Xeno":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your horrific infection, feeling its silent power and revelling in it. You head out into the city to seek your prey, eager to breed and spread your kind to satisfy your lustful instincts. ";
 			if cunts of player > 0 and cocks of player > 0:
 				say "     Finding others of your kind, you breed with them. But unlike before, you are no longer restrained by your humanity and seek out victims to mount and fill with your eggs, corrupting them even as you turn them into incubators and carriers for your offspring.";

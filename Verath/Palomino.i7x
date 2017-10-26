@@ -30,7 +30,7 @@ when play begins:
 to say Palominowins:
 	say "'wow you got here how did that happen.'";
 	wait for any key;
-	if cocks of player is greater than 0:
+	if cocks of player > 0:
 		say "yay";
 	else:
 		say "how the heck did you find me hiding here?";
@@ -40,7 +40,7 @@ To say Palominoloses:
 
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -67,8 +67,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 18;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 21;
-	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 21;
+	now lev entry is 2; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
 	now area entry is "Palomino"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -96,7 +96,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Palomino":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Surrendering to the infection, you finally realize that you want nothing more than to be a lovely little slutty pony for your handsome male stallion. Wasting no time, you run on your new equine feet back to the club where your new master is waiting. Arriving at the club, you are happy to be welcomed into Tristian's waiting arms, and even happier when your new master lets you know what you will be doing for him from now on. You love your stallion taking you back to the dressing room and helping you into your new stage clothes, and the crowd outside goes wild when he announces your first night as the Palomino's newest stripper!  You love the feeling of showing off your handsome [if cocks of player > 0 and cunts of player > 0]herm[else if cocks of player > 0]male[else if cunts of player > 0]female[else]genderless[end if] body on the stage, as you dance and tease the other clubgoers using what you learned here in the club from Tristian and the other dancers.";
 			if cocks of player > 0:
 				say "     Soon you and several other strippers are nearly naked on stage and showing off for the all too appreciative audience, as you grind up against the naked bodies of a black swan, while a well-endowed panther grinds up against you from behind. Your first night is a tremendous success, though the best part is how happy your dominant stud is with you afterwards. You wake up from a night of wonderful sex to find several new piercings for you to wear to demonstrate who you belong to, as well as his tag hanging from your collar. Smiling happily, you settle in to your new life as one of the clubs strippers with ease, dancing all night for the patrons, and dancing with your mate and several other strippers afterwards.";
@@ -111,7 +111,7 @@ when play ends:
 		else:
 			say "     When the rescue finally comes, the military and civilian authorities put you and Tristian through a battery of tests and interviews before finally allowing the two of you to rejoin normal society. You both suspect that you were released so quickly not so much because they thought that you were safe and sane, but because the authorities had bigger problems to deal with, both in the fight for the city and with some of the other infected being brought in, especially given the large numbers of hyenas.";
 			say "     You and Tristian settle down in a smaller city outside Seattle and eventually open up another club catering to the goth, emo, rave, and alternative crowd. Your sexy gothy forms attract many of the more curious clubgoers. No one seems to complain when their sons, daughters, or significant others visit your club and leave with permanent changes as a reminder of their visit. The club's success and large number of repeat customers soon allows you to open a second even larger club in downtown Seattle, and soon after that the two of you are opening clubs in several other major cities.";
-			say "     The two of you soon branch out into the sex industry with [']Palomino Magazine['] and the cleaning up of an abandoned film studio to make [']Palomino Videos[']. People are soon flocking to get the monthly releases of your newest issues and videos, eager to see the photo stories of the models being converted into sexy, lusty beasts and your porn movies of the same nature. Both are hot sellers, even in a world with rampant sex, your content letting them enjoy witnessing the process and to take in every well-framed detail[if hp of Tristian > 10 and hp of Tristian < 99]. The issue and movie where Lance and his lover are converted into a slinky goth unicorn boi and a gothy Doberman boi respectively is a particularly hot item[end if]. Within ten years, the Palomino Publishing empire is the biggest name in porn, aimed directly at the lustful needs of this new world.";
+			say "     The two of you soon branch out into the sex industry with [']Palomino Magazine['] and the cleaning up of an abandoned film studio to make [']Palomino Videos[']. People are soon flocking to get the monthly releases of your newest issues and videos, eager to see the photo stories of the models being converted into sexy, lusty beasts and your porn movies of the same nature. Both are hot sellers, even in a world with rampant sex, your content letting them enjoy witnessing the process and to take in every well-framed detail[if HP of Tristian > 10 and HP of Tristian < 99]. The issue and movie where Lance and his lover are converted into a slinky goth unicorn boi and a gothy Doberman boi respectively is a particularly hot item[end if]. Within ten years, the Palomino Publishing empire is the biggest name in porn, aimed directly at the lustful needs of this new world.";
 
 
 Palomino ends here.

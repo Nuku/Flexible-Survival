@@ -145,7 +145,7 @@ to say TenrecDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -155,7 +155,7 @@ When Play begins:
 	now defeated entry is "[Tenrec loses]";
 	now victory entry is "[Tenrec Victory]";
 	now desc entry is "[TenrecDesc]";
-	now face entry is "a quite narrow, hydrodynamic face replete with whiskers and complimented by tiny ears. You look a bit like an otter that went through a taffy machine";
+	now face entry is "a quite narrow, hydrodynamic face replete with whiskers and complemented by tiny ears. You look a bit like an otter that went through a taffy machine";
 	now body entry is "limber and lithe, you are stretched out and sleek. Obviously made for working your way through the water, if the webbed digits are any indication";
 	now skin entry is "[one of]chestnut brown[or]water resistant[or]slightly oily[or]musky Tenrec fur[at random]";
 	now tail entry is "You have a very long tail, strangely ridged along the top and hairless. It is like a vertical wall of muscle, moving from side to side as if to help you swim through the air as you walk.";[ Tail description, write a whole Sentence or leave blank. ]
@@ -172,8 +172,8 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 14;
 	now sex entry is "Male"; 			[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 65;
-	now lev entry is 7; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 65;
+	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 7; [Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -199,10 +199,10 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Tenrec":
-		if humanity of player is less than 10:
-			if cunts of player is greater than 0:
+		if humanity of player < 10:
+			if cunts of player > 0:
 				say "You surrender yourself to the animal instincts that rule your mind at last. Your cunt is on fire with the memory of a scent, of salt and fish and the magnificent male that granted you so dear an infection. The aquatic stud that lives by the bounty of the sea calls to you like a siren would. Unable to resist it, you make your way to the coast, nose searching for the right ship. Pussy glowing like a lighthouse, you shimmy yourself on board and throw yourself into the nets of his lust. Pawed over by the crew of the slime-slick fishing vessel, you are eventually taken down into the hold. For the hardworking crew of a fishing vessel, your dripping cunt is a welcome respite from the cold wet of the ocean!";
-			if cocks of player is greater than 0:
+			if cocks of player > 0:
 				say "The powerful animal urges the tenrec stud planted deep rise like a tidal wave to sweep away the last vestiges of your humanity. Concepts of things like your individuality and sense of free will are dissolved in the sheer animal power of are simply shoved aside to make room for new drives and urges, manifested with a certain feral intensity. You hunger for sex and fish and water, and most importantly the companionship of your fellow tenrecs. You head for the docks, seeking out the ship on which you know you belong, finding it with your nose and feeling it for sure in the throbbing hardness of your cock. The male that broke you down so completely and remade you in his image welcomes you back into his arms, and onto his prick. After a fun orgy where the rest of the crew take turns in your various holes, you are formally inducted into their brotherhood. Your days blur in sex and fish, sex and fish, until the day you die.";
 		else:
 			say "Rescued finally by the military, you manage somehow to endure all the mistaken doctors and professionals that think you are an actual otter. The experience hardens you to the ocean and the sea otters that live there, so after your release you head inland. An oar over your shoulder, as tradition, until someone asks what it is you bear. There, far from the sea, you settle besides a lake that welcomes you with a calmness that soothes your internal turmoil. It isn't long before you become intimately familiar with the lake and its tributary streams. It seems only natural that you fall into the position of guide, taking tourist fisherman among the gentle white waters and placid coves of the waterways you love.";

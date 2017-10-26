@@ -15,7 +15,7 @@ to say rodeoclowndesc:
 
 
 to say losetorodeoclown:
-	if hp of player > 0:		[SUBMIT]
+	if HP of player > 0:		[SUBMIT]
 		say "     Unwilling to keep fighting against the quick-moving clown, you give in and drop to your knees. The rodeo clown grins even more broadly and rushes over to you. 'That's a good [if cocks of player > 0]steer[else]cow[end if]! No more fighting for you,' she says soothingly as she kneels down in front of you. Rubbing your head, she guides your mouth to her ample bosom. With the colourful shirt open, you can see the large nipples on her huge breasts and lick your lips at the sight of them. 'Go on now, drink up! You had a rough ride, but it's all over now,' the rodeo clown says softly as you start nursing, drinking down her milk. It is quite delicious and soothing, though it does little to quell your thirst.";
 		decrease thirst of player by 6;
 		if thirst of player < 0, now thirst of player is 0;
@@ -64,7 +64,7 @@ to say beattherodeoclown:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -91,7 +91,7 @@ When Play begins:
 	now int entry is 6;
 	now cha entry is 12;
 	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 40; [ The monster's starting hit points. ]
+	now HP entry is 40; [ The monster's starting HP. ]
 	now lev entry is 2; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 3; [ Monster's average damage when attacking. ]
 	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -120,7 +120,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Rodeo Clown":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As if having taken one too many blows to the head, your mind falls apart in a haze and you pass out. After dreams of rodeos, bulls and bucking broncos (which you are under as often as you are riding them), you awaken lost in your new instincts. You travel across the city, taunting the much stronger creatures to attack you, your sturdy, flexible body able to take the punishment of their blows with a chuckle until it is all too much and you collapse to let them have their way with you. You take particular delight in drawing the attention of powerful beasts away from much weaker prey and letting yourself bear the brunt of their lusts instead. You spend quite a bit of time in the park, taunting those well-hung bulls and big-teated cows and nearly as much time at the growing stables of the equine creatures. The latter always try to keep you there, but you always manage to squirm out once you're satisfied and bored of horseflesh.";
 			say "     The soldiers, when they come, aren't as much fun and won't play with you when you tire of dodging their bullets or letting them bounce off of you. So you take to rounding up stragglers instead, lassoing and roping them like a calf or jumping them and riding them like a bucking bronco before you have your way with them. With a few more rodeo clowns on your team, you are able to put on better shows and take turns taunting your prey before giving in or riding them when they tire out.";
 		else:

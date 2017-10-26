@@ -12,7 +12,7 @@ when play begins:
 	add Poor Kitty to badspots of furry;
 
 Instead of resolving a Poor Kitty:
-	if hp of rubber tigress is 0:
+	if HP of rubber tigress is 0:
 		say "     As you're cautiously poking into some of the abandoned booths around the fair, you end up startling one of those rubbery tigresses from her hiding spot. She runs out of the cupboard on all fours with a squeaking mrowl of surprise, sending a pile of red plastic drinking cups spilling out around you. As you watch her run towards the exit, you notice two strange things about her. First, despite her feminine curves and rounded bottom, she seems to be stuck on all fours unlike the others of her kind. The second, and even more surprising, is the lack of any gender or genitals to her.";
 		say "     Intrigued, you look down at your feet and pick up one of the red cups at your feet. Turning it around, you notice the cup in your hand has a large bite taken out of it, as if this feline's been slowly dining on them. Cup still in hand, you head to the exit and look around. You spot her hiding around the corner of a nearby booth. She releases a soft, cautious mewl, eyeing the cup. She pads out slowly towards you and mewls again.";
 		say "     [bold type]Shall you give her the cup or throw it away to distract her?[roman type][line break]";
@@ -23,12 +23,12 @@ Instead of resolving a Poor Kitty:
 			say "     She looks up at you and slowly reaches out to take the cup into her muzzle. Her smooth, rubbery mouth doesn't so much bite into it as absorb the portion her lips touch. Her tongue slides the melting red and white plastic around in her mouth before swallowing it down[if skinname of player is listed in infections of Latexlist]. Seeing her do this is a little disconcerting, given your current nature, but she is careful to only take the cup into her mouth when she goes for the second bite[else]. She takes rest of the cup into her mouth and it soon follows the first bite[end if].";
 			say "     After swallowing the last of it down, she nuzzles against your leg and purrs softly, giving a cute, cat-like mew. You reach down and cautiously pet her head, rubbing the rubber tigress's ears for a bit. After petting her head for a while, you move to back off while she watches you go.";
 			increase score by 5;
-			now hp of rubber tigress is 1;
+			now HP of rubber tigress is 1;
 		else:
 			say "     You throw the cup several yards away and the tigress bounds over to it. She gives it several playful bats with her paw, sending it skittering across the ground. She hunkers down, hips and tail all atwitch as she creeps closer and then pounces. She bites into the cup, her lips melting through the plastic. As she's doing all this, you're backing away slowly and dash off around the corner. You hear a soft, plaintive mewl in the distance, but that is all.";
-			now hp of rubber tigress is 2;
+			now HP of rubber tigress is 2;
 			now Poor Kitty is resolved;
-	else if hp of rubber tigress is 1:
+	else if HP of rubber tigress is 1:
 		say "     While walking the midway you get this odd feeling that you're being watched. You catch a bit of orange out of the corner of your eye and close to the ground, but it is gone by the time you look. Noticing that you've been in this area before, you suspect you know what's up. You continue nonchalantly while knowing that strange, neuter tigress is following you.";
 		say "     [bold type] You consider your options, you wonder if you should try offering her another treat or just drive her off.[roman type][line break]";
 		LineBreak;
@@ -41,16 +41,16 @@ Instead of resolving a Poor Kitty:
 			increase carried of cup stack by 1;
 			increase score by 20;
 			now rubber tigress is tamed;
-			now hp of rubber tigress is 3;
+			now HP of rubber tigress is 3;
 			now libido of rubber tigress is 30;
-			say "     (The rubber tigress is now tamed! You can make her your active pet by typing [bold type][link]pet rubber tigress[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+			say "     (The rubber tigress is now tamed! You can make her your active pet by typing [bold type][link]pet rubber tigress[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			now Poor Kitty is resolved;
 		else:
 			say "     Continuing to walk along, you turn around the next corner and, once out of sight, run around the stand. You move quietly as you sneak back onto the main thoroughfare, finding the strange tigress poking her head around the corner[if weapon object of player is not journal]. You pull out your weapon and charge at her[else]. You raise your fists and charge at her[end if]. She gives a shrill shriek of surprise and scrambles away. You don't expect that thing will be bothering you again.";
-			now hp of rubber tigress is 2;
+			now HP of rubber tigress is 2;
 			now Poor Kitty is resolved;
 	else:
-		say "ERROR-Artemis-[hp of rubber tigress]PK: HP outside of range for the event!";
+		say "ERROR-Artemis-[HP of rubber tigress]PK: HP outside of range for the event!";
 		increase carried of cup stack by 1;
 		now rubber tigress is tamed;
 		now Poor Kitty is resolved;
@@ -78,8 +78,8 @@ The rubber tigress has a number called Cunt length.
 The rubber tigress has a number called Cunt width.
 
 to say artemisdesc:
-	if hp of rubber tigress < 11:
-		say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves. Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly. Malformed or incomplete for some reason, the rubber tigress cannot stand upright and lacks any gender of her own, unlike the rest of her kind[if hp of rubber tigress >= 6]. As you've noticed, she is capable of borrowing your body to give herself one for a little while[end if]. Despite her female curves and strangely sexy booty, she has nothing under her striped tail save for the crinkled hole of her anus. Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[at random].";
+	if HP of rubber tigress < 11:
+		say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves. Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly. Malformed or incomplete for some reason, the rubber tigress cannot stand upright and lacks any gender of her own, unlike the rest of her kind[if HP of rubber tigress >= 6]. As you've noticed, she is capable of borrowing your body to give herself one for a little while[end if]. Despite her female curves and strangely sexy booty, she has nothing under her striped tail save for the crinkled hole of her anus. Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[at random].";
 	else:
 		if lust of rubber tigress is 0 and thirst of rubber tigress is 1:
 			say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves. Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly. Malformed or incomplete for some reason, the rubber tigress cannot stand upright and was even lacking any gender until you changed that. Having now gained a sheath-bound cock at her hindquarters that often pokes free, displaying its sextoy nature, she struts around now with greater confidence. Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[or]makes a show of slowly running her tongue across her cock while eyeing your reaction[at random].";
@@ -105,11 +105,11 @@ to say artemisdesc:
 			say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves. Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly. Malformed or incomplete for some reason, the rubber tigress cannot stand upright and was even lacking any gender until you changed that. Having transformed her muzzle by installing the pussy sextoy into it, she has gained a pleasure-giving pussy instead of a mouth at the end of her feline muzzle. As well, you've transformed her tail by installing the dildo onto the end of it, providing her with a pleasure-giving cock at the tip of her tail. Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[or]makes a show of slowly running her textured tongue of her pussy mouth across her tailcock while eyeing your reaction[or]makes a show of slowly licking the pussy folds of her mouth while eyeing your reaction[at random].";
 		else:
 			say "ERROR-Artemis-[lust of rubber tigress]L+[thirst of rubber tigress]T-L: Impossible configuration.";
-	if hp of rubber tigress < 6:
+	if HP of rubber tigress < 6:
 		say "     While your companion, the loyal rubber tigress can keep an ear perked for trouble if you're sleeping outside, keeping you safe from unwanted interruption.";
 	else:
 		say "     While your companion, the loyal rubber tigress borrows your body while you rest. This will keep you safe from interruption and put you in a sleepwalking state full of kinky dreams while you rest and enjoy the pleasure of the fun she's having as she gets her much-needed relief.";
-	if hp of rubber tigress >= 10 and ( lust of rubber tigress is 0 or thirst of rubber tigress is 0 ):
+	if HP of rubber tigress >= 10 and ( lust of rubber tigress is 0 or thirst of rubber tigress is 0 ):
 		LineBreak;
 		say "     Having obtained the set of rubber toys for Artemis, you can now use them to modify her. You have [if lust of rubber tigress is 0 and thirst of rubber tigress is 0]both the feline cock dildo and the vagina toy[else if lust of rubber tigress is 0]the feline cock dildo[else]the vagina toy[end if] available. Shall you use [if lust of rubber tigress + thirst of rubber tigress is 0]them[else]it[end if] to alter your rubber tigress pet?";
 		say "[bracket]     Please note, such modifications are permanent (until you restore). Also, at present, some scenes will continue to show the old results for the moment[close bracket].";
@@ -153,12 +153,12 @@ An everyturn rule:
 		if lastfuck of rubber tigress - turns >= 4 and ( cocks of player > 0 or cunts of player > 0 ):
 			let diceroll be a random number from 80 to 300; [lust check vs 300, min total over 80 required for success]
 			let atStateFairbonus be 0;
-			if location of player is State Fair and hp of rubber tigress > 7, now atStateFairbonus is 20;
+			if location of player is State Fair and HP of rubber tigress > 7, now atStateFairbonus is 20;
 			if diceroll < ( libido of player + libido of rubber tigress + atStateFairbonus):
 				let artemissex be a list of numbers;
 				let glompchance be ( lastArtemisglomp - turns ) / 4;
 				if glompchance > 6, now glompchance is 6; [# of additional chances]
-				if hp of rubber tigress <= 10:
+				if HP of rubber tigress <= 10:
 					if cocks of player > 0:
 						if "More Anal" is listed in feats of player, add 1 to artemissex; [anal]
 						add 2 to artemissex; [M-oral 1]
@@ -168,11 +168,11 @@ An everyturn rule:
 						add 5 to artemissex; [F-oral 1]
 						add 6 to artemissex; [F-oral 2]
 						add 7 to artemissex; [F-oral 3]
-					if hp of rubber tigress > 5:									[Engulf+masturbate]
+					if HP of rubber tigress > 5:									[Engulf+masturbate]
 						add 8 to artemissex;
 						repeat with y running from 1 to glompchance:
 							add 8 to artemissex;
-					if hp of rubber tigress > 7:									[Engulf+sex]
+					if HP of rubber tigress > 7:									[Engulf+sex]
 						if location of player is State Fair, add { 9, 9, 9 } to artemissex;
 						add { 9, 9, 9 } to artemissex;
 						repeat with y running from 1 to glompchance:
@@ -247,18 +247,18 @@ Chapter 1 - Sexxxings Scenes
 
 to say artemissex1:	[anal]
 	say "     Your rubber tigress companion snuggles up beside you as you take a short break. She nuzzles at your hand, getting you to scritch her. As the scritching continues, Artemis slinks slowly forward, letting your hand rub down her back and eventually across her ass. As you scritch her bottom, she gives a needy mewl and wiggles her rear, tail raised with her sexy bottom on display. It takes you only a moment to realize what your kitty wants. Lacking a pussy of her own[if lust of rubber tigress is 2] back there[end if], she still has another hole you can fill.";
-	say "     Moving in behind her, you press your stiffening member to her anus and easily spread open that rubbery ring. She mewls in pleasure, her soft, smooth flesh squeezing down around your [cock size desc of player] [cock of player] shaft, milking at it as you fuck her[if thirst of rubber tigress is 1]. You reach around for her stiff manhood, stroking that sextoy cock of hers while you screw her in the ass[else if thirst of rubber tigress is 2]. You reach forward to her muzzle, scritching it until that sextoy cocktongue of hers emerges for you to stroke[else if thirst of rubber tigress is 3]. You run your hand from her ass along her tail, you reach her tail's tip and stroke it, coaxing the black-coloured tip to draw back and reveal her tailcock for you to stroke[end if]. You pound away at the needy kitty, doing your best to satisfy her with a good, long fucking before finally cumming, depositing your sticky seed inside the kitty's rubber insides[if cock width of player > 40], rounding her tummy and making her slosh as she moves for quite a while[else if cock width of player > 20], making her slosh a little as she moves around for a while[end if][if thirst of rubber tigress > 0]. Even as you're filling her, you pump shot after shot of her lubricating cum from her spurting shaft[end if][if lust of rubber tigress is 2]. She stretches slowly and runs her tongue along the lips of her pussy-like muzzle, purring happily in pleasure[else if lastArtemisglomp >= 8 or hp of rubber tigress < 6]. She stretches slowly and gives a big yawn, giving you a good view of her smooth, rubber maw[end if].";
+	say "     Moving in behind her, you press your stiffening member to her anus and easily spread open that rubbery ring. She mewls in pleasure, her soft, smooth flesh squeezing down around your [cock size desc of player] [cock of player] shaft, milking at it as you fuck her[if thirst of rubber tigress is 1]. You reach around for her stiff manhood, stroking that sextoy cock of hers while you screw her in the ass[else if thirst of rubber tigress is 2]. You reach forward to her muzzle, scritching it until that sextoy cocktongue of hers emerges for you to stroke[else if thirst of rubber tigress is 3]. You run your hand from her ass along her tail, you reach her tail's tip and stroke it, coaxing the black-coloured tip to draw back and reveal her tailcock for you to stroke[end if]. You pound away at the needy kitty, doing your best to satisfy her with a good, long fucking before finally cumming, depositing your sticky seed inside the kitty's rubber insides[if cock width of player > 40], rounding her tummy and making her slosh as she moves for quite a while[else if cock width of player > 20], making her slosh a little as she moves around for a while[end if][if thirst of rubber tigress > 0]. Even as you're filling her, you pump shot after shot of her lubricating cum from her spurting shaft[end if][if lust of rubber tigress is 2]. She stretches slowly and runs her tongue along the lips of her pussy-like muzzle, purring happily in pleasure[else if lastArtemisglomp >= 8 or HP of rubber tigress < 6]. She stretches slowly and gives a big yawn, giving you a good view of her smooth, rubber maw[end if].";
 	now libido of player is ( 2 * libido of player ) / 3;
 	now libido of rubber tigress is libido of rubber tigress / 3;
 
 to say artemissex2:	[M-oral 1]
 	say "     The rubber tigress nuzzles at your groin and mewls softly. You reach down and scritch her head, knowing what your needy kitty's after. You give your [cock size desc of player] [cock of player] cock a few strokes before letting her slide her slick muzzle down over it. The smooth, rubbery mouth and tongue squeeze and rub at your shaft, coaxing your precum to flow. This only serves to make her mouth slicker and you grip her neck, curling some of her rubbery hide around your fingers so you can pound into her muzzle. This rough treatment seems fine by the kitty, who's more than happy to get some sexual fun. Soon she's gulping down your hot seed as you cum down the feline's throat. When you pull out, she licks her licks and rolls onto her back, rubbing her paws over her [if cock width of player > 40]bloated, [else if cock width of player > 20]stuffed, [end if]cream-filled tummy";
-	if lastArtemisglomp >= 8 or hp of rubber tigress < 6:
+	if lastArtemisglomp >= 8 or HP of rubber tigress < 6:
 		if cock width of player > 20:
 			say ". After having been so well fed, she gives a sleepy yawn";
 		else:
 			say ". She turns to you and seems to smile as she opens her muzzle to show that she's swallowed it all down, but this turns into a sleepy yawn from your lazy tigress";
-		if hp of player < ( maxhp of player * 3 ):
+		if HP of player < ( maxHP of player * 3 ):
 			say ". You end up yawning in response and, given how you're feeling, that might not be such a bad idea";
 		else:
 			say ". As always seems to happen when someone yawns, you can't help but yawn as well";
@@ -268,25 +268,25 @@ to say artemissex2:	[M-oral 1]
 
 to say artemissex3:	[M-oral 2]
 	say "     The rubber tigress nuzzles at your leg, sniffing softly along it as she makes her way to your crotch. She noses at it, licking her lips and mewling softly. With a grin, you rub her head and offer your [cock size desc of player] [cock of player] cock to her. She plunges her muzzle forwards, stuffing it into her mouth[if cock length of player > 9] and down her throat[end if]. She works her muzzle and tongue over your shaft with a lustful eagerness. You pet her head, telling her what a good kitty is the feline gives you a fine blow job. When you finally blow, she eagerly laps up every spurt of your cum she can get[if cock width of player > 40], stuffing her belly with your seed[else if cock width of player > 20], feeding her your ample load[end if]";
-	if lastArtemisglomp >= 8 or hp of rubber tigress < 6:
+	if lastArtemisglomp >= 8 or HP of rubber tigress < 6:
 		if cock width of player > 20:
 			say ". After having been so well fed, she gives a sleepy yawn";
 		else:
 			say ". She turns to you and seems to smile as she opens her muzzle to show that she's swallowed it all down, but this turns into a sleepy yawn from your lazy tigress";
-		if hp of player < ( maxhp of player * 3 ):
+		if HP of player < ( maxHP of player * 3 ):
 			say ". You end up yawning in response and, given how you're feeling, a nap might not be such a bad idea";
 		else:
 			say ". As always seems to happen when someone yawns, you can't help but yawn as well";
 	say ".";
 
 to say artemissex4:	[M-oral 3]
-	say "     Suddenly feeling quite turned on, you notice your kitty's sexy muzzle and decide to get a little relief[if hp of rubber tigress < 11]. With your poor kitty's lack of gender, she's more than eager to get some sexual fun now that she's got you to please[else]. Having you to thank for her new, gendered state, she's clearly eager for an opportunity to thank you... with mouth[end if]. She runs her tongue along your [cock size desc of player] [cock of player] cock. Her tongue has rough, rubbery texture that's very pleasing. Soon enough she has you very excited and leaking precum. She slurps over your balls before taking your shaft into her muzzle and suckling at it. You moan in pleasure, rub her ears and release your hot seed down her throat[if cock width of player > 40], rounding her empty belly with your seed[else if cock width of player > 20], filling her empty belly with your seed[end if]";
-	if lastArtemisglomp >= 8 or hp of rubber tigress < 6:
+	say "     Suddenly feeling quite turned on, you notice your kitty's sexy muzzle and decide to get a little relief[if HP of rubber tigress < 11]. With your poor kitty's lack of gender, she's more than eager to get some sexual fun now that she's got you to please[else]. Having you to thank for her new, gendered state, she's clearly eager for an opportunity to thank you... with mouth[end if]. She runs her tongue along your [cock size desc of player] [cock of player] cock. Her tongue has rough, rubbery texture that's very pleasing. Soon enough she has you very excited and leaking precum. She slurps over your balls before taking your shaft into her muzzle and suckling at it. You moan in pleasure, rub her ears and release your hot seed down her throat[if cock width of player > 40], rounding her empty belly with your seed[else if cock width of player > 20], filling her empty belly with your seed[end if]";
+	if lastArtemisglomp >= 8 or HP of rubber tigress < 6:
 		if cock width of player > 20:
 			say ". After having been so well fed, she gives a sleepy yawn";
 		else:
 			say ". She turns to you and seems to smile as she opens her muzzle to show that she's swallowed it all down, but this turns into a sleepy yawn from your lazy tigress";
-		if hp of player < ( maxhp of player * 3 ):
+		if HP of player < ( maxHP of player * 3 ):
 			say ". You end up yawning in response and, given how you're feeling, a nap might not be such a bad idea";
 		else:
 			say ". As always seems to happen when someone yawns, you can't help but yawn as well";
@@ -294,9 +294,9 @@ to say artemissex4:	[M-oral 3]
 
 to say artemissex5:	[F-oral 1]
 	say "     The rubber tigress nuzzles at your groin and mewls softly, licking her lips. Knowing what she's after, you find a spot to sit and spread your legs, giving her access to your juicy pussy. As her rough, rubbery tongue licks across your wet folds of your [cunt size desc of player] snatch, you rub her head. Reaching back a little, you grip her neck and curl some of her rubbery hide around your fingers so you can pull firmly to your pussy. This rough treatment seems fine by the kitty, who's more than happy to get some sexual fun. She dives her tongue into you, working it inside you to lap up your juices as you cum a few times before finally letting her go.";
-	if lastArtemisglomp >= 8 or hp of rubber tigress < 6:
+	if lastArtemisglomp >= 8 or HP of rubber tigress < 6:
 		say "     After having gotten her tasty treat, your lazy tigress gives a big yawn that stretches her rubbery muzzle wide";
-		if hp of player < ( maxhp of player * 3 ):
+		if HP of player < ( maxHP of player * 3 ):
 			say ". You end up yawning in response and, given how you're feeling, a nap might not be such a bad idea.";
 		else:
 			say ". As always seems to happen when someone yawns, you can't help but yawn as well.";
@@ -307,9 +307,9 @@ to say artemissex5:	[F-oral 1]
 
 to say artemissex6:	[F-oral 2]
 	say "     The rubber tigress nuzzles at your leg, sniffing softly along it as she makes her way to your crotch. She noses at it, licking her lips and mewling softly. With a grin, you rub her head and move onto all fours, waving your ass at her face. With your juicy cunt on display, Artemis mrowls lustfully and dives in, licking over [if anallevel is 3]your pucker a few times before shifting down to [end if]your wet folds and lapping up your female cum as you get off several times to your eager pet's licking tongue.";
-	if lastArtemisglomp >= 8 or hp of rubber tigress < 6:
+	if lastArtemisglomp >= 8 or HP of rubber tigress < 6:
 		say "     After having gotten her tasty treat, your lazy tigress gives a long yawn as she stretches";
-		if hp of player < ( maxhp of player * 3 ):
+		if HP of player < ( maxHP of player * 3 ):
 			say ". You end up yawning in response and, given how you're feeling, a nap might not be such a bad idea";
 		else:
 			say ". As always seems to happen when someone yawns, you can't help but yawn as well.";
@@ -320,9 +320,9 @@ to say artemissex6:	[F-oral 2]
 
 to say artemissex7:	[F-oral 3]
 	say "     Suddenly feeling quite hot and wet between your legs, you notice your kitty's sexy muzzle and decide to get a little relief. Propping one leg up, you spread your pussy and call open your other pussy to deal with it. She's more than eager to get some sexual fun and bounds over to you, pressing her muzzle to your snatch. She runs her tongue along your dripping folds and teases your clit with the rough, rubbery texture of her tongue, exciting you greatly. Soon enough she has you very cumming, your juices running over the kitty's muzzle. She laps up as much as he can get and keeps it up, getting you off a few more times before you're feeling satisfied for the moment.";
-	if lastArtemisglomp >= 8 or hp of rubber tigress < 6:
+	if lastArtemisglomp >= 8 or HP of rubber tigress < 6:
 		say "     After having gotten her tasty treat, your lazy tigress gives a wide yawn that gives a good view of her rubbery maw and throat all slick with your juices";
-		if hp of player < ( maxhp of player * 3 ):
+		if HP of player < ( maxHP of player * 3 ):
 			say ". You end up yawning in response and, given how you're feeling, a nap might not be such a bad idea";
 		else:
 			say ". As always seems to happen when someone yawns, you can't help but yawn as well.";
@@ -333,9 +333,9 @@ to say artemissex7:	[F-oral 3]
 
 
 to say artemissex8:	[Engulf and masturbate]
-	if location of player is State Fair and hp of rubber tigress > 7 and ( artemisstatefairrt is false or a random chance of 2 in 3 succeeds ):
+	if location of player is State Fair and HP of rubber tigress > 7 and ( artemisstatefairrt is false or a random chance of 2 in 3 succeeds ):
 		say "[artemissex9]"; [Wants sex at State Fair most of the time]
-	else if hp of rubber tigress > 10:
+	else if HP of rubber tigress > 10:
 		say "[artemissex8_mod]"; [version w/modified Artemis]
 	else:
 		project the figure of Artemis_icon;
@@ -359,11 +359,11 @@ to say artemissex8:	[Engulf and masturbate]
 
 to say artemissex9:	[Engulf and sex]
 	let stfairdone be 0;
-	if hp of rubber tigress is 11:
+	if HP of rubber tigress is 11:
 		say "[artemissex8_mod]"; [first engulf post-mod goes to masturbation]
-	else if location of player is State Fair and hp of rubber tigress > 10:
+	else if location of player is State Fair and HP of rubber tigress > 10:
 		say "[artemissex9_SF_mod]"; [State Fair version w/modified Artemis]
-	else if hp of rubber tigress > 11:
+	else if HP of rubber tigress > 11:
 		say "[artemissex9_mod]"; [version w/modified Artemis]
 	else:
 		project the figure of Artemis_icon;
@@ -520,7 +520,7 @@ to say artemisplay3:	[juggle cup]
 	say "     Artemis comes up to you and mewls softly. She nuzzles at your pack and runs her tongue across her muzzle. Figuring she wants another tasty cup, you pull one out, much to her delight. She purrs happily and weaves around your legs, mewling and purring like a kitty eager to get a treat. You scritch her ears and roll it across the ground. She chases after it, batting it around with her paws before knocking it into the air so she can juggle and bat at it with her paws. Finally getting a grip on it, she eats up the cup [if lust of rubber tigress is 2 or thirst of rubber tigress is 2]by shoving it into her altered maw to[else]in three fast bites that[end if] consume the red plastic in gooey mouthfuls.";
 
 to say artemisplay4:	[string cup]
-	say "     Deciding to have some fun with your overgrown kitty, you pull out one of the plastic cups. Hearing the sound of it coming out, her rubber ears perk up and she comes bounding over, mewling for her treat. When you don't give it right away, she resorts to rolling onto her tummy to look extra cute. It's not until you've tied and knotted some string through a hole you punch in the bottom of it that you put it down. You start dragging the cup across the ground by the string, making a toy for her to bat and chase. She has lots of fun swatting it around and pouncing at it, only eating the cup once you've both tired of the game[if lust of rubber tigress is 2 and lastArtemisglomp >= 8]. She makes a show of licking the last few streaks of red from her pussy-muzzle before grooming her paws as well. She comes over to you, purring happily as she nuzzles against your thigh, clearly pleased to have gotten some playtime. You can't help but feel a little cheered up for having played with her a little[else if lastArtemisglomp >= 8 or hp of rubber tigress < 6]. After finishing it off, she gives a very wide yawn and licks her paws clean. You can't help but yawn as well, though you feel happier for having taken the time to play with her a little[else]. After having finished it off, Artemis comes over to you, purring happily as she nuzzles against your thigh, clearly pleased to have gotten some playtime. After getting some head scritches, she sits down and licks her paws clean. You can't help but feel a little cheered up for having played with her a little[end if].";
+	say "     Deciding to have some fun with your overgrown kitty, you pull out one of the plastic cups. Hearing the sound of it coming out, her rubber ears perk up and she comes bounding over, mewling for her treat. When you don't give it right away, she resorts to rolling onto her tummy to look extra cute. It's not until you've tied and knotted some string through a hole you punch in the bottom of it that you put it down. You start dragging the cup across the ground by the string, making a toy for her to bat and chase. She has lots of fun swatting it around and pouncing at it, only eating the cup once you've both tired of the game[if lust of rubber tigress is 2 and lastArtemisglomp >= 8]. She makes a show of licking the last few streaks of red from her pussy-muzzle before grooming her paws as well. She comes over to you, purring happily as she nuzzles against your thigh, clearly pleased to have gotten some playtime. You can't help but feel a little cheered up for having played with her a little[else if lastArtemisglomp >= 8 or HP of rubber tigress < 6]. After finishing it off, she gives a very wide yawn and licks her paws clean. You can't help but yawn as well, though you feel happier for having taken the time to play with her a little[else]. After having finished it off, Artemis comes over to you, purring happily as she nuzzles against your thigh, clearly pleased to have gotten some playtime. After getting some head scritches, she sits down and licks her paws clean. You can't help but feel a little cheered up for having played with her a little[end if].";
 	if morale of player < 0:
 		increase morale of player by 5;
 		if morale of player > 0, now morale of player is 0;
@@ -528,7 +528,7 @@ to say artemisplay4:	[string cup]
 		increase morale of player by 1;
 
 to say artemisplay5:	[tummy rubs]
-	say "     As the rubber tigress wanders close to you, you reach out and scritch her ears. She purrs happily and nuzzles into your touch. You continue scritching her as she leans into it more and more, eventually flopping over onto her side. She rolls over and mewls softly. Kneeling down, you rub the cute tigress's tummy, making her moan and purr happily[if lastArtemisglomp >= 8 and lust of rubber tigress is 2]. You keep this up until she stretches out on her side for a rest, her tongue teasingly brushing across her altered muzzle[else if lastArtemisglomp >= 8 or hp of rubber tigress < 6]. You keep this up until she's yawning and lays down to have a little rest. Seeing her yawn has you do the same[else]. You keep this up until she's completely flopped out[end if].";
+	say "     As the rubber tigress wanders close to you, you reach out and scritch her ears. She purrs happily and nuzzles into your touch. You continue scritching her as she leans into it more and more, eventually flopping over onto her side. She rolls over and mewls softly. Kneeling down, you rub the cute tigress's tummy, making her moan and purr happily[if lastArtemisglomp >= 8 and lust of rubber tigress is 2]. You keep this up until she stretches out on her side for a rest, her tongue teasingly brushing across her altered muzzle[else if lastArtemisglomp >= 8 or HP of rubber tigress < 6]. You keep this up until she's yawning and lays down to have a little rest. Seeing her yawn has you do the same[else]. You keep this up until she's completely flopped out[end if].";
 
 to say artemisplay6:	[scritches]
 	say "     Deciding to lavish some attention on your cute kitty, you wrap your arms around the tigress and start scritching her. She purrs happily at his and nuzzles against you. She particularly seems to like it when you rub under her chin. You scritch and hug the big feline, cuddling her in your arms.";
@@ -547,11 +547,11 @@ cuptrick is a truth state that varies. cuptrick is normally false.
 
 instead of using cup stack:
 	if companion of player is rubber tigress:
-		if hp of rubber tigress >= 7 and a random chance of 1 in 2 succeeds and cuptrick is false:	[cup training]
+		if HP of rubber tigress >= 7 and a random chance of 1 in 2 succeeds and cuptrick is false:	[cup training]
 			say "     Deciding the cups might make a good means to train Artemis, given her fondness for them. You take one out, which quickly draws the kitty's attention. Almost immediately, she's at your side, purring and nuzzling around your legs. You hold the cup up and tell her to sit. She eyes the cup and mrowls needfully. You keep it out of reach and tell her again to sit.";
 			say "     When you ask her a third time, she lowers and down obediently. Or so you think at first. A moment later you notice her continue to sink down past her normal sitting position, her hindquarters being pressed down and deforming. Just as you're taking this in, she springs upward, her reinflating hindquarters propelling her up so she may swat the cup out of your surprised hand. As it skitters across the ground, she walks over to it slowly, tail and ass swishing. She gulps it down in one extra wide, very deliberate bite[if lust of rubber tigress is 2], stretching her vaginal maw open surprisingly wide as she does[end if].";
 			say "     You decide it best not to try that again.";
-		else if hp of rubber tigress >= 7 and a random chance of 2 in 9 succeeds:			[offer cup]
+		else if HP of rubber tigress >= 7 and a random chance of 2 in 9 succeeds:			[offer cup]
 			say "     Taking out one of the cups, you kneel down and offer it in hand to the rubber tigress. She mewls happily and starts [if lust of rubber tigress is 2]licking up chunks of it with her textured tongue while feminine juices drip from her pussy-mouth, mingling with the melting red plastic[else]munching up the cup as you hold it out for her[end if]. With the last of it melting and flowing down across your fingers, she licks at your hand, drawing it off your skin. There's a slight shiver of pleasure that runs through you as she does this as it feels a bit like when she spreads herself over you.";
 		else if a random chance of 2 in 5 succeeds:								[cup toss]
 			say "     Deciding to feed the tigress a treat, you pull out one of the cups. Hearing it come out, her ears perk up and she comes rushing over. As she's coming, you toss it just over her head, making her rear up and swat at it. She bounds off in pursuit, swatting it around the ground before leaping onto it. It cracks with the crinkling of hard plastic. Holding it down by one of the flaps, she starts eating away at it, melting portions of the plastic as she wraps her mouth around them. Soon enough she's lapping the last few dribbles of runny red and white plastic from the ground.";
@@ -586,12 +586,12 @@ lastArtemisglomp is a number that varies. lastArtemisglomp is usually 255. [time
 
 to artemisnap:
 	now libido of rubber tigress is libido of rubber tigress / 3;
-	if hp of rubber tigress >= 11:
+	if HP of rubber tigress >= 11:
 		say "[artemisnap_mod]";
-	else if hp of rubber tigress < 5:
+	else if HP of rubber tigress < 5:
 		say "     As you're getting ready to lie down and take a nap, the rubber tigress pads over to you. She purrs softly, kneads around for a little bit and then curls up to nap with you. Being mostly filled with air, she's fairly light, but still feels nice against your [one of]legs[or]thigh[or]side[at random] and her soft purring helps lull you to sleep.";
-		increase hp of rubber tigress by 1;
-	else if hp of rubber tigress is 5:
+		increase HP of rubber tigress by 1;
+	else if HP of rubber tigress is 5:
 		say "     As usual, when you're getting ready to lie down and take a catnap, the rubber tigress pads over to you. She purrs softly, kneads around for a little bit and then curls up to name with you. Being mostly filled with air, she's fairly light, but still feels nice against your [one of]legs[or]thigh[at random] and her soft purring helps lull you to sleep.";
 		WaitLineBreak;
 		project the figure of Artemis_icon;
@@ -606,17 +606,17 @@ to artemisnap:
 		else:								[neuter]
 			say "     She stumbles around for a bit, getting better and better and moving your [body size of player] body, enjoying her new, upright stature. She rubs between your legs with a soft mewl of disappointment, still left without genitals. She wiggles her fingers and seems to realize that she's still got something extra she was lacking before. Stretching out where you were resting, she takes a seat and runs her paws over her body, rubbing, pinching, teasing and kneading any sensitive or interesting spot she can find. She plays with herself frantically and with little direction, simply overloading herself on the pleasure of being able to grope and fondle herself[if anallevel is not 1]. Still wanting more, she slides a hand a little further down past your bare crotch to your crinkled anus. She rubs at the rubber-coated hole and mewls at the sensation playing it provides. Soon she's stuffing one, and then several fingers into your ass[else]. In her search for stimulation at times, she gets a little rough, pinching too hard or pushing down too firmly, but it all brings a little pleasure for her with it as well[end if]. She goes at it for hours, filling your walking dream with these sensations as she plays with your hijacked body. Eventually, she's finally tires of her new fun for now and you pass out fully into sleep.";
 		wait for any key;
-		increase hp of rubber tigress by 1;
+		increase HP of rubber tigress by 1;
 	else:
 		project the figure of Artemis_icon;
-		say "     As you're getting ready to lie down and take a nap, the rubber tigress pads over to you, snuggling up at your feet[if hp of rubber tigress > 7 and location of player is State Fair and ( cocks of player > 0 or cunts of player > 0 ) and artemisstatefairrt is false] and seeming more eager than usual about naptime[end if]. Having a pretty good idea what she really has in mind, you pet her head and decide to just go with it. You'll get your rest and even some kinky dreams while she gets her much-needed release. Once again, as you're drifting off into slumber, she starts to spread over you[if scalevalue of player > 3]. It takes some extra time and stretching to be able to cover your [body size of player], [bodydesc of player] body, but the prospect of being bigger as well makes it well worth the effort for her[end if]. This time you don't resist, instead letting her flow out and cover you. The feel of her forming tightly around you, even reshaping you a little to make you into a [if cocks of player > 0 and cunts of player is 0]girlish tiger[else]sexy tigress[end if][if bodyname of player is listed in infections of taurlist] taur[end if] made of rubber.";
+		say "     As you're getting ready to lie down and take a nap, the rubber tigress pads over to you, snuggling up at your feet[if HP of rubber tigress > 7 and location of player is State Fair and ( cocks of player > 0 or cunts of player > 0 ) and artemisstatefairrt is false] and seeming more eager than usual about naptime[end if]. Having a pretty good idea what she really has in mind, you pet her head and decide to just go with it. You'll get your rest and even some kinky dreams while she gets her much-needed release. Once again, as you're drifting off into slumber, she starts to spread over you[if scalevalue of player > 3]. It takes some extra time and stretching to be able to cover your [body size of player], [bodydesc of player] body, but the prospect of being bigger as well makes it well worth the effort for her[end if]. This time you don't resist, instead letting her flow out and cover you. The feel of her forming tightly around you, even reshaping you a little to make you into a [if cocks of player > 0 and cunts of player is 0]girlish tiger[else]sexy tigress[end if][if bodyname of player is listed in infections of taurlist] taur[end if] made of rubber.";
 		say "     Adding to this is the increasingly pleasurable sensation of her rubbery goo flowing [if cocks of player > 0 and cunts of player > 0]over and into you dual genitals[else if cocks of player > 1]over your cocks[else if cocks of player is 1]over your cock[else if cunts of player > 1]into your cunts[else if cunts of player is 1]into your cunt[else]into your back passage[end if]. The final moments with her covering your head and going down your throat is still somewhat disconcerting, but as that's ending, you drift off into a more passive state, sleepwalking along as she uses your body as her own.";
-		if hp of rubber tigress > 7 and location of player is State Fair and ( cocks of player > 0 or cunts of player > 0 ):
+		if HP of rubber tigress > 7 and location of player is State Fair and ( cocks of player > 0 or cunts of player > 0 ):
 			say "     Once Artemis has reasserted control over your body, she wastes no time at all, quickly getting up and heading off in search of fun. She strides around the midway with far more grace and confidence than she first had manipulating your body and she shows off her talents while on the prowl. Now at the fairgrounds in her anthropomorphic body and with a gender of her own finally, there's clearly just one thing on the horny kitty's mind - to find another rubber tigress to be her playmate while she's running the show. Despite drawing the attention of a few of the other critters around, she passes them by until she locates one of the feline tigresses. There is only the briefest moment of hesitation before Artemis gives a lustful mrowl and strides towards the other feline";
 			say "[artemissf_sex]";
 			say "     With the felines quite satisfied by their encounter, they part ways, Artemis heading back to your resting spot so you both might finish your cat nap together. Stretching out, she purrs happily while you drift off fully into slumber, only to be awoken by the fully-reformed tigress nuzzling at your cheek. After some snuggling, you get up and head back on your way.";
 			artemisinfect;
-		else if a random chance of 2 in 5 succeeds or hp of rubber tigress is 6:	[default masturbation]
+		else if a random chance of 2 in 5 succeeds or HP of rubber tigress is 6:	[default masturbation]
 			if cocks of player > 0 and cunts of player > 0:		[herm]
 				say "     After a bit of time just spent enjoying walking upright and casually feeling up her new body, she settles down to the main event, playing with those wonderful genitals she now possesses. Putting her hand around [if cocks of player > 1]one of your [cock size desc of player] cocks[else]your [cock size desc of player] cock[end if], she starts stroking its [cock of player] length with a soft purr. When her other paw makes it down to your [cunt size desc of player] [if cunts of player > 1]pussies[else]pussy[end if], she runs her paws over the wet, sensitive folds before pushing a few fingers into it and pumping away. Much less frantic about her masturbation, but just as eager and overjoyed as ever, she plays with herself, and thereby with you, through several orgasms.";
 				say "     All this dreamy pleasure has you moan softly, enjoying the feline's control of your body and the delight she takes in enjoying such pleasures you can take for granted at times. She goes at it for quite some time, though time is a difficult concept to hold onto during the erotic dreams of this somnambulistic state. As she's winding down, she delights in running her rubbery paws through the accumulated cum and juices sticking to herself and then licking them up. Eventually, you drift off to a deeper sleep with her still encapsulating you.";
@@ -628,18 +628,18 @@ to artemisnap:
 				say "     All this dreamy pleasure has you moan softly, enjoying the feline's control of your body and the delight she takes in enjoying such pleasures you can take for granted at times. She goes at it for quite some time, though time is a difficult concept to hold onto during the erotic dreams of this somnambulistic state. As she's winding down, she delights in running her rubbery paws through the accumulated cum and juices sticking to herself and then licking them up. Eventually, you drift off to a deeper sleep with her still encapsulating you.";
 			else:								[neuter]
 				say "     After spending a while enjoying walking upright and casually feeling up her new body, she seems much more at ease with moving you around than when she started out. She even tries a little [one of]climbing[or]jumping[or]dancing[or]stretching[or]swinging[at random] before getting bored of this and settling down for the main event, playing with this wonderfully sensitive body she both now possesses and has the means to enjoy. She lets her paws run all over her rubbery hide, putting particular emphasis on all those sensitive spots she's found before and even finding a few new ones to try out. She is much less frantic in her search for stimulation than before, but remains just as eager and overjoyed as ever at doing so[if anallevel is not 1]. Completing this preamble and wanting more, she slides a paw across your ass and starts teasing as her crinkled hole. The rubber-coated ring parts easily enough for her, letting her stimulate you both inside and out[else]. Her search for stimulation can be a little rough at times, but she seems to have a fairly good idea now of how much is too much and only indulges in a harder pinch or prod from time to time[end if]. She plays with herself, and thereby with you, for quite some time before eventually wearing herself out and letting you drift fully into slumber with her still encapsulating you.";
-			if hp of rubber tigress < 7, increase hp of rubber tigress by 1;
-		else:									[hp 7+ for sex]
-			if hp of rubber tigress is 7:					[first attempt for sex]
+			if HP of rubber tigress < 7, increase HP of rubber tigress by 1;
+		else:									[HP 7+ for sex]
+			if HP of rubber tigress is 7:					[first attempt for sex]
 				say "     Not content to simply stay put this time, Artemis sleepwalks you of your hiding spot and goes into the city. Having practiced before, she's able to walk around pretty well with only the occasional odd motion to show something may be amiss. But she's not just out for a walk, the rubber kitty's busily looking around as well. She finds it in the form of a ";
 				if cunts of player > 0:
 					say "studly wolf, running over to him and bending over, offering herself up (and thereby you) to be fucked by the well-hung male. He growls softly in his throat and laughs, pouncing onto top of her, quickly driving his shaft into her needy body. Artemis releases a squeaking mrowl of lust while you moan softly in this erotic waking dream.";
 					say "     Getting her first taste of true sex, Artemis is mrowling and mewling in delight, heedless that the wolf's wild, rambunctious fucking shows no skill or restraint. He simply pounds away at what he sees to be another slutty female, eager to dump his load into her before moving on. But to her, it is wonderful and she pushes back into his thrusts for more. With her pushing her rubbery pussy onto him, she soon has his knot locked inside as she's rewarded with his hot, sticky cum. If flows into her, into you, pooling inside [if gestation of child > 0 or larvaegg is 2]a bubble of rubber[else]your rubber-coated womb[end if]. When the wolf's knot goes down, he's off, leaving the cream-filled tigress to stumble back happily to your resting spot where she passes out in a blissful haze and you sink further into sleep.";
-					increase hp of rubber tigress by 1;
+					increase HP of rubber tigress by 1;
 				else if cocks of player > 0:
 					say "sultry red panda, running over to her and running her paws over the wah's furry body. Grinding her cock against the sexy girl's bottom, she's clearly offering to fuck (and thereby have you fuck) the fuzzy red female. When the red panda moans and bends over, Artemis quickly moves you atop her, driving her cock into that hot, juicy pussy. The rubber tiger releases a squeaking mrowl of lust while you moan softly in this erotic waking dream.";
 					say "     Getting her first taste of true sex, Artemis is mrowling and mewling in delight as she heedlessly pounds into her cute playmate. The red panda moans and squirms at his rough treatment at first, but soon is too overcome with lust to mind it. Artemis licks and nibbles at the wah lightly as she fucks that hot, clenching hole until she can't take it any more and drives hard into it and cums with a loud, triumphant mrowl. Your [cum load size of player] is released into the wah as you cum in your wet dream. Once your balls are drained, she pulls out and leaves the leaking red panda behind. Clearly worn out after her first time, the rubber tigress stumbles back to your resting spot where she passes out in a blissful haze and you sink further into sleep.";
-					increase hp of rubber tigress by 1;
+					increase HP of rubber tigress by 1;
 				else:
 					say "[randombodypart]"; [yields male 'bodyselector']
 					say "well-hung [bodyselector], who she eagerly runs over to. On her knees before him, she runs her paws along his legs and starts licking and kissing at his cock. With such enticing, the [bodyselector] laughs and grows hard, the rubbery tigress soon taking his cock into her muzzle and throat (and thereby down your throat as well). She licks and sucks at him eagerly, kneading her paws over his nuts as she does. She releases wet, squeaking moans as she blows her chosen lover. He cums soon enough, feeding a hefty load of hot, cream seed to the eager kitty. This flows down into you, pooling in your rubber-coated stomach. Having gotten her creamy treat, the tigress gets up, licks her muzzle and waddles off happily, rubbing her rounded belly. Her fun over for now, she stumbles back to your resting spot where she passes out in a blissful haze and you sink further into sleep.";
@@ -676,13 +676,13 @@ to artemisnap:
 
 after resting while companion of player is rubber tigress:
 	now skipturnblocker is 0;
-	if hp of rubber tigress is 4:
+	if HP of rubber tigress is 4:
 		say "     You wake up from your nap feeling refreshed[if libido of player > 40] and even somewhat less wildly aroused[end if]. As you stretch, you rouse the tigress at your side, who yawns her rubbery mouth wide and comes up to nuzzle you[if cocks of player > 0 or cunts of player > 0], picking up the faint scent of sex from her[end if]. You feel a little closer to the pretty kitty and snug her in your arms as thanks for keeping watch while you slept.";
 		now libido of player is ( libido of player * 2 ) / 3;
-	else if hp of rubber tigress is 5:
+	else if HP of rubber tigress is 5:
 		say "     You wake up from your nap feeling refreshed[if libido of player > 40] and even somewhat less wildly aroused[end if] despite the odd, sexual dreams you had. As you stretch, you rouse your kitty, who yawns her rubbery mouth wide and comes up to nuzzle you[if cocks of player > 0 or cunts of player > 0]. You notice she again smells faintly of sex. Perhaps she snuck off for a bit and found some fun of her own while you rested[else]. You notice she seems in a particularly good mood, making you wonder if she perhaps snuck off for a bit and found some fun of her own while your rested[end if]. Regardless, you snuggle her affectionately and as thanks for keeping watch while you slept.";
 		now libido of player is ( libido of player * 2 ) / 3;
-	else if hp of rubber tigress is 6:
+	else if HP of rubber tigress is 6:
 		say "     You awaken same as always after your nap, your body same as it was before as if it was indeed all a strange dream. Roused by your movement, the rubber tigress stretches and yawns her smooth mouth open wide before coming up to nuzzle you. She purrs and licks your cheek, leaving a long streak of orange rubber that clings briefly before being pulled back into her mouth. You can still smell the scent of [if cocks of player > 0 or cunts of player > 0]arousal[else]yourself[end if] upon her.";
 		say "     Looking yourself and her both over carefully, it seems you're both unchanged from these somnolescent escapades. Since everything seems fine and intact, you can't really get upset with the kitty for wanting in on the fun, given her circumstances. To show you're not upset, you give her a big, tight hug that briefly distorts her rubbery body and makes her head bulge comically. She releases a long, squeaking mew to rebalance the air inside her before nuzzling and licking you again, a less sticky one this time.";
 		now libido of player is libido of player / 2;
@@ -780,7 +780,7 @@ to artemismodding:
 		LineBreak;
 	if templust is not lust of rubber tigress or tempthirst is not thirst of rubber tigress:
 		say "[artemispostmod]";
-		if hp of rubber tigress is 10, now hp of rubber tigress is 11;
+		if HP of rubber tigress is 10, now HP of rubber tigress is 11;
 
 
 to say artemistoydesc:
@@ -950,27 +950,27 @@ Section 9 - Modded Scene Variations
 Chapter 1 - Modified Masturbate/Sex Formatting
 
 to say artemissex8_mod:		[Engulf and masturbate]
-	if location of player is State Fair and ( artemisstatefairrt is false or a random chance of 2 in 3 succeeds ) and hp of rubber tigress >= 12:
+	if location of player is State Fair and ( artemisstatefairrt is false or a random chance of 2 in 3 succeeds ) and HP of rubber tigress >= 12:
 		say "[artemissex9_SF_mod]"; [Wants sex at State Fair most of the time]
-	else if hp of rubber tigress < 11:
+	else if HP of rubber tigress < 11:
 		say "[artemissex8]"; [error - sent back to unmodded version]
 	else:
 		say "[artemis_set_genitals]";
 		say "[artemisengulf_mod]";
 		WaitLineBreak;
 		say "[artemis_mast_mod]";
-		if hp of rubber tigress is 11, now hp of rubber tigress is 12;
+		if HP of rubber tigress is 11, now HP of rubber tigress is 12;
 		now libido of rubber tigress is libido of rubber tigress / 3;
 		now libido of player is ( libido of player * 3 ) / 4;
 		now lastfuck of rubber tigress is turns;
 		now lastArtemisglomp is turns;
 
 to say artemissex9_mod:	[Engulf and sex - Modded Artemis]
-	if hp of rubber tigress <= 10:
+	if HP of rubber tigress <= 10:
 		say "[artemissex9]"; [error - sent back to non-modded version]
-	else if hp of rubber tigress is 11:
+	else if HP of rubber tigress is 11:
 		say "[artemissex8_mod]"; [first engulf post-mod goes to masturbation]
-	else if location of player is State Fair and hp of rubber tigress >= 12:
+	else if location of player is State Fair and HP of rubber tigress >= 12:
 		say "[artemissex9_SF_mod]"; [State Fair version w/modified Artemis]
 	else:
 		say "[artemis_set_genitals]";
@@ -983,9 +983,9 @@ to say artemissex9_mod:	[Engulf and sex - Modded Artemis]
 		now lastArtemisglomp is turns;
 
 to say artemissex9_SF_mod:	[Engulf and sex - Modded at State Fair]
-	if hp of rubber tigress is 11:
+	if HP of rubber tigress is 11:
 		say "[artemissex8_mod]"; [first engulf post-mod goes to masturbation]
-	else if hp of rubber tigress < 11:
+	else if HP of rubber tigress < 11:
 		say "[artemissex9]"; [error - sent back to unmodded version]
 	if location of player is not State Fair:
 		say "[artemissex9_mod]"; [error - sent back to modded sex version for reclassification]
@@ -1035,9 +1035,9 @@ Chapter 2 - Modified Engulfing Scenes
 to say artemisengulf_mod:
 	project the figure of Artemis_icon;
 	let TT be a random number between 1 and 3;
-	if hp of rubber tigress is 11:
+	if HP of rubber tigress is 11:
 		say "[artemisengulf_mod_01]";
-	else if hp of rubber tigress >= 12 and lastfuck of rubber tigress - turns >= 24:
+	else if HP of rubber tigress >= 12 and lastfuck of rubber tigress - turns >= 24:
 		say "[artemisengulf_mod_ext]";
 	else if TT is 1:
 		say "[artemisengulf_mod_01]";
@@ -1047,7 +1047,7 @@ to say artemisengulf_mod:
 		say "[artemisengulf_mod_03]";
 
 to say artemisengulf_mod_01:
-	if hp of rubber tigress is 11:
+	if HP of rubber tigress is 11:
 		say "     Catching sight of the glancing looks the tigress is giving you, you realize that your rubbery kitty's still looking to snuggle extra-close to you despite now having a gender of her own[if lust of rubber tigress is not 1 and thirst of rubber tigress is not 1], in a manner of speaking[end if]. While feeling a little trepidation, you must admit that you're also quite curious to see what will happen. The lustful possibilities exceed your caution and you find a safe spot to drop your gear and welcome her into your arms.";
 	else:
 		say "     Catching sight of the glancing looks the tigress is giving you, you realize that your rubbery kitty's looking to snuggle extra-close to you once again. And given how things have been even kinkier now that she's been modified to have a gender of her own as well[if lust of rubber tigress is not 1 and thirst of rubber tigress is not 1], in a manner of speaking[end if], you have been looking forward to the next opportunity. Deciding like you could use a break for some sexy fun, you set your gear down and welcome her into your arms.";
@@ -1308,29 +1308,29 @@ to say artemisSF_sex_mod:		[***]
 Chapter 6 - Modified Napping Scenes
 
 to say artemisnap_mod:
-	if hp of rubber tigress < 11:
+	if HP of rubber tigress < 11:
 		artemisnap; [return to standard version]
 	else:
 		say "[artemis_set_genitals]";
 		say "[artemisengulf_nap_mod]";
-		if hp of rubber tigress > 11 and location of player is State Fair and ( cocks of rubber tigress > 0 or cunts of rubber tigress > 0 ):
+		if HP of rubber tigress > 11 and location of player is State Fair and ( cocks of rubber tigress > 0 or cunts of rubber tigress > 0 ):
 			say "     With you nice and sealed up, she wastes no time quickly goes off in search of some companionship. Knowing full well what she wants, she struts around with confidence in her new [if rubber tigress is herm]herm[else if rubber tigress is male]male[else if player is female]female[end if] form, sleepwalking your body with considerable grace after all her practice. And while she draws the attention of a few of the other critters around, she passes them by until she locates one of the feline tigresses. Once found, there is no hesitation before Artemis gives a lustful mrowl and strides towards the other feline. Putting their arms around one another, they purr and runs their paws over each other. And what starts initially as stroking and petting soon turns to groping and grinding as the aroused felines kiss.";
 			say "[artemisSF_sex_mod]";
-		else if a random chance of 2 in 5 succeeds or hp of rubber tigress is 11:
+		else if a random chance of 2 in 5 succeeds or HP of rubber tigress is 11:
 			say "[artemis_mast_mod]";
 		else:
 			say "[artemis_sex_mod]";
-		if hp of rubber tigress is 11, now hp of rubber tigress is 12;
+		if HP of rubber tigress is 11, now HP of rubber tigress is 12;
 
 to say artemisengulf_nap_mod:
-	if hp of rubber tigress is 11:
+	if HP of rubber tigress is 11:
 		say "     Feeling the need to take a rest, you look over at Artemis. She gives an overly big yawn, stretching her rubbery mouth comically wide as she does. Reminded of her propensity for borrowing your body while you sleep, you're given pause for a moment. Now that she's got a gender of her own, you're unsure what will happen. While feeling a little trepidation, you must admit that you're also quite curious to see what will happen. The lustful possibilities exceed your caution and you throw yourself into your preparation to rest with added enthusiasm. Your increased excitement does play against you, though you eventually settle down enough to fall asleep.";
 	else:
 		say "     Deciding to take a break and catch a few z's, you start getting ready. Noticing this, Artemis pads over to you and snuggles up at your feet. Having a pretty good idea what she really has in mind, you pet her head and decide to just go with it. You'll get your rest and even some kinky dreams while she gets to have some fun. Patting her head, you lay down and close your eyes, safe in the knowledge that she'll take care of you.";
 	project the figure of Artemis_icon;
 	let NN be 1;
 [	let NN be a random number from 1 to 3;]
-	if hp of rubber tigress is 11 or NN is 1:
+	if HP of rubber tigress is 11 or NN is 1:
 		say "[artemisengulf_nap_mod_01]";
 	else if NN is 2:
 		say "[artemisengulf_nap_mod_02]";
@@ -1354,7 +1354,7 @@ to say artemisengulf_nap_mod_03:
 	say "***nap engulf scene - modded version 3";
 
 
-[ hp of rubber tigress ]
+[ HP of rubber tigress ]
 [ 0 = no encounter     ]
 [ 1 = fed once         ]
 [ 2 = refused          ]

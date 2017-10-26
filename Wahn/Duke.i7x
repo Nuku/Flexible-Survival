@@ -1,7 +1,7 @@
 Version 1 of Duke by Wahn begins here.
 [Version 1 - Put into its own file]
 
-[ hp states of Duke                                                     ]
+[ HP states of Duke                                                     ]
 [   0: starting state                                                   ]
 [   1: player saw him getting fucked by Shawn                           ]
 [   2: he asked the player to bring in some wool                        ]
@@ -13,7 +13,7 @@ Version 1 of Duke by Wahn begins here.
 [   1: Sheep Meadow SW                                                  ]
 [   2: Sheep Meadow SE                                                  ]
 
-Duke is a man. The hp of Duke is normally 0. The thirst of Duke is normally 2. Duke is in Sheep Meadow SE.
+Duke is a man. The HP of Duke is normally 0. The thirst of Duke is normally 2. Duke is in Sheep Meadow SE.
 The description of Duke is "[DukeDesc]".
 The conversation of Duke is { "Mew!" }.
 
@@ -22,7 +22,7 @@ instead of sniffing Duke:
 
 to say DukeDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Duke], THIRST: [thirst of Duke] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Duke], THIRST: [thirst of Duke] <- DEBUG[line break]";
 	if daytimer is day:
 		say "     Standing before you is an anthro German shepherd, standing tall on two digitigrade legs and keeping the spread-out sheep in his attentive gaze at all times. As his view crosses your position, he gives you a slight nod, then continues with his vigilance.";
 		say "     The dog-morph has a fit, muscular body sporting the traditional brown and tan fur coat of his breed. Seeing as he's not wearing anything except a black dog-collar with a medallion bearing the name 'Duke', it is quite clear that he's male, with a furry canine sheath resting against is belly and a pair of golf ball size balls dangling beneath.";
@@ -34,9 +34,9 @@ instead of conversing the Duke:
 	if daytimer is day: [he doesn't talk to the player during the day]
 		say "     Duke says [one of]'I take my duty protect the herd seriously, not now'[or]'I have to stay vigilant so the herd is safe, please don't distract me'[or]'I don't have time to chat now'[or]'Look for me this evening, if you want to talk'[at random], not even taking his eyes off the sheep and ignoring any attempt to start a conversation.";
 	else: [at night, he's got some time to chat]
-		if hp of Duke is 0:
+		if HP of Duke is 0:
 			say "     Note: Hm, you shouldn't be able to talk to him before watching his event with Shawn the ram - please report how you got to see this.";
-		else if hp of Duke is 1:
+		else if HP of Duke is 1:
 			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he looks you up and down with a happy, almost ecstatic expression, his tail wagging excitedly. 'I haven't seen you around here before, so you came in from elsewhere in the city? And you're a sheep-person!' He turns his head to look at his 'special' ram friend, then back to you. 'I was hoping that there might be... sheep-people out there somewhere - and now you just walk into our farm and come to talk to me.'";
 				say "     Duke takes a deep breath, then says 'You see - my boyfriend and I started working here a while ago as shepherds, and... then everything went crazy with that nanite infection and I turned into an actual German shepherd. At least still more or less humanoid...' He looks down over his naked body and stretches his arms a bit, then points at the young ram you saw him with before. 'Shawn on the other hand, he went all the way to being a sheep. He can't even talk, and barely recognizes me. I don't know if there's much left of him inside, he acts pretty much like any other ram.'";
@@ -63,12 +63,12 @@ instead of conversing the Duke:
 						say "     [DukeShawnFirstTimeSex]";
 					else:
 						say "     For now keeping quiet about the wool you have, you assure Duke you'll have an eye out and walk away from him a bit.";
-						now hp of Duke is 2;
+						now HP of Duke is 2;
 				else:
 					LineBreak;
 					say "     You assure Duke you'll have an eye out for sheep in the city and walk away from him a bit.";
-					now hp of Duke is 2;
-		else if hp of Duke is 2:
+					now HP of Duke is 2;
+		else if HP of Duke is 2:
 			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he looks you up and down with a happy, almost ecstatic expression, his tail wagging excitedly. 'I ask you to get some wool, and you go all the way and come back as a sheep-person. Thank you - you're amazing!' He turns his head to look at his ram boyfriend, then back to you. 'Could you maybe... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
 				LineBreak;
@@ -79,7 +79,7 @@ instead of conversing the Duke:
 					say "     [DukeShawnFirstTimeSex]";
 				else:
 					say "     You tell Duke that you'd rather... not do that. The German shepherd's smile falls and he looks rather dejected as he replies 'Oh, then... I guess it's back to hoping for someone else to come along.' He turns from you, walking over to Shawn and kneeling next to him, stroking the sheep's fur. You can hear him talking to his friend, saying 'At least we're now sure that there is a sheep strain out there. We'll get it for you, eventually. And then it'll work - it must work!'";
-					now hp of Duke is 3;
+					now HP of Duke is 3;
 			else: [player isn't a sheep himself]
 				say "     As you walk up to Duke, he gives you a hopeful expression. 'Have you found the sheep-people and got something from them? Maybe some wool?";
 				if carried of Tainted wool > 2:
@@ -92,12 +92,12 @@ instead of conversing the Duke:
 						say "     [DukeShawnFirstTimeSex]";
 					else:
 						say "     For now keeping quiet about the wool you have, you assure Duke you'll have an eye out and walk away from him a bit.";
-						now hp of Duke is 2;
+						now HP of Duke is 2;
 				else:
 					LineBreak;
 					say "     Shaking your head to show that you don't have what he needs, you see Duke's raised tail droop a bit, then partly perk up again as you assure him you'll have an eye out for sheep in the city.";
-					now hp of Duke is 2;
-		else if hp of Duke is 3:
+					now HP of Duke is 2;
+		else if HP of Duke is 3:
 			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he gives you a hopeful but still somewhat guarded look, then says 'Have you changed your mind? Please let it be so. You could just... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
 				LineBreak;
@@ -108,7 +108,7 @@ instead of conversing the Duke:
 					say "     [DukeShawnFirstTimeSex]";
 				else:
 					say "     You tell Duke that you'd rather... not do that. The German shepherd's smile falls and he looks rather dejected as he replies 'Oh, then... I guess it's back to hoping for someone else to come along.' He turns from you, walking over to Shawn and kneeling next to him, stroking the sheep's fur. You can hear him talking to his friend, saying 'At least we're now sure that there is a sheep strain out there. We'll get it for you, eventually. And then it'll work - it must work!'";
-					now hp of Duke is 3;
+					now HP of Duke is 3;
 			else: [player isn't a sheep himself]
 				say "     As you walk up to Duke, he gives you a hopeful expression. 'Have you found the sheep-people and got something from them? Maybe some wool?";
 				if carried of Tainted wool > 2:
@@ -121,12 +121,12 @@ instead of conversing the Duke:
 						say "     [DukeShawnFirstTimeSex]";
 					else:
 						say "     For now keeping quiet about the wool you have, you assure Duke you'll have an eye out and walk away from him a bit.";
-						now hp of Duke is 2;
+						now HP of Duke is 2;
 				else:
 					LineBreak;
 					say "     Shaking your head to show that you don't have what he needs, you see Duke's raised tail droop a bit, then partly perk up again as you assure him you'll have an eye out for sheep in the city.";
-					now hp of Duke is 2;
-		else if hp of Duke is 10 or hp of Duke is 11:
+					now HP of Duke is 2;
+		else if HP of Duke is 10 or HP of Duke is 11:
 			say "     Duke gives you a happy smile as you approach, saying 'I can't thank you enough. What you've done for me and Shawn is just amazing.'";
 
 to say DukeShawnFirstTimeSex:
@@ -149,29 +149,29 @@ to say DukeShawnFirstTimeSex:
 	say "     Seeing you there, Duke says 'Oh, err - sorry for just leaving you to wait while we... got distracted'. He continues to tell Shawn all about your part in getting him transformed, both of them thanking you effusively afterwards.";
 	now lastfuck of Duke is turns;
 	move Shawn to Sheep Meadow SE;
-	now hp of Duke is 10;
+	now HP of Duke is 10;
 
 An everyturn rule:
 	if daytimer is night and thirst of Duke is 1:
 		move Duke to Sheep Meadow SE;
 		now thirst of Duke is 2;
-		if hp of Duke is 0 and player is in Sheep Meadow SE:
+		if HP of Duke is 0 and player is in Sheep Meadow SE:
 			say "[DukeShawnSheepScene]";
 	else if daytimer is day and thirst of Duke is 2:
 		move Duke to Sheep Meadow SW;
 		now thirst of Duke is 1;
 
-instead of going east from Sheep Meadow SW while (hp of Duke is 0 and daytimer is night):
+instead of going east from Sheep Meadow SW while (HP of Duke is 0 and daytimer is night):
 	move player to Sheep Meadow SE;
 	say "[DukeShawnSheepScene]";
 	now lastfuck of Duke is turns;
 
-instead of going southeast from Sheep Meadow NW while (hp of Duke is 0 and daytimer is night):
+instead of going southeast from Sheep Meadow NW while (HP of Duke is 0 and daytimer is night):
 	move player to Sheep Meadow SE;
 	say "[DukeShawnSheepScene]";
 	now lastfuck of Duke is turns;
 
-instead of going south from Sheep Meadow NE while (hp of Duke is 0 and daytimer is night):
+instead of going south from Sheep Meadow NE while (HP of Duke is 0 and daytimer is night):
 	move player to Sheep Meadow SE;
 	say "[DukeShawnSheepScene]";
 	now lastfuck of Duke is turns;
@@ -183,15 +183,15 @@ to say DukeShawnSheepScene:
 	say "     Giving another sigh, he continues 'I miss you. Talking to you, being with you...', his hand meanwhile wandering lower and touching the ram's crotch. Stroking his transformed boyfriend, it doesn't take long till he's got his ram hard and ready to go. Then the German shepherd takes a new position on all fours, ass raised high. Lust is clearly audible in the eager 'Meeeh!' given by the ram as he proceeds to mount the dog without much ceremony, just rearing up to get on top of him and plunging in his erect shaft. Duke takes it easily, this clearly not being his first time in getting fucked, and from the way he rocks back against the young ram to meet his thrusts, not just his fifth or tenth time either. He moans as the ram pounds his ass, gasping 'Fuck me! Yeah - harder!'";
 	say "     With the sheep on top of Duke just rutting away, not remotely intelligent enough to think about giving his partner some additional pleasure or even simply talk, it doesn't take too much longer until he suddenly bleeks and fills the dog's ass with a load of his cum. Quickly dismounting him after that, the ram stands beside Duke as he jerks himself off, soon afterwards spraying his own load into the grass. Panting, the dog-morph puts his arms around his ram friend, holding and stroking his fur as he rides out is orgasm.";
 	now lastfuck of Duke is turns;
-	now hp of Duke is 1;
+	now HP of Duke is 1;
 
 instead of fucking the Duke:
 	if daytimer is day: [he doesn't talk to the player during the day]
 		say "     Duke says [one of]'I take my duty protect the herd seriously, not now'[or]'I have to stay vigilant so the herd is safe, please don't distract me'[or]'I don't have time to chat now, sorry'[or]'Look for me this evening if you want to talk, ok?'[at random], not even taking his eyes off the sheep and ignoring any attempt to start a conversation.";
 	else:
-		if hp of Duke < 10:
+		if HP of Duke < 10:
 			say "     As you make Duke your offer of some nice time together, he looks over to you and shakes his head. 'I'm flattered, but... no. I hardly know you, after all...'";
-		else if hp of Duke is 10:
+		else if HP of Duke is 10:
 			say "     As you make Duke your offer of some nice time together, he looks over to you and gives a smile. 'Of course I'm interested. I'd do almost anything for you. Though as you've... seen before, I'm gay, and a bottom at that. Pussy just doesn't do anything for me, so you'll have to excuse me if you wanted me to fuck you or anyone anyone...'";
 			wait for any key;
 			say "[DukeSexMenu]";
@@ -216,13 +216,13 @@ to say DukeSexMenu:
 		now sortorder entry is 1;
 		now description entry is "Put your shepherd friend's mouth to good use.";
 		now toggle entry is DukeSex rule;
-	if (hp of Duke > 1):
+	if (HP of Duke > 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Duke a blowjob";
 		now sortorder entry is 3;
 		now description entry is "Blow off the German shepherd.";
 		now toggle entry is DukeSex rule;
-	if (hp of Duke > 1):
+	if (HP of Duke > 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Finger his ass";
 		now sortorder entry is 4;
@@ -268,8 +268,8 @@ This is the DukeSex rule:
 to say DukeSex1: [cock sucked by Duke]
 	say "     Rubbing your crotch, you tell Duke how much you'd appreciate some attention from him, pulling out your already half-hard shaft in an obvious invitation. With a smiling face, the German shepherd sinks to his knees and starts licking your manhood and balls, showing good skill in the use of his long and flexible tongue. Taking your shaft into his muzzle, carefully using his lips and tongue to hold it away from his teeth, Duke bobs up and down, sending shivers of pleasure up your spine. Meanwhile, he moves a hand up to tease and caress your balls, fondling them softly between his fingers.";
 	say "     Running your hands over the German shepherd's head, you feel Duke's soft fur, then rub him behind his pointy ears. Finally you just hold on to him as he keeps giving you an amazing blowjob, giving yourself over to his skillful stimulation. It doesn't take much longer until you feel the urgent need to cum rise in your balls, the first spurt already blasting into Duke's mouth before you can say anything or warn him. He just takes it in stride and continues what he's doing, eagerly swallowing your seed. As he pulls off your cock after you stop cumming, the dog-morph gives it another slow lick along its side and smiles up at you. 'Your cum is pretty tasty, just so you know.' he adds, giving you a wink as he stands up.";
-	if hp of Duke is 10:
-		now hp of Duke is 11;
+	if HP of Duke is 10:
+		now HP of Duke is 11;
 
 to say DukeSex2: [Blowjob for Duke]
 	say "     Stepping up to Duke, you put your hand on his crotch, rubbing his balls and canine cock as it fills out and comes out of its sheath. He moans as you grasp the shaft, tongue hanging out of his mouth and tail wagging excitedly. Then you kneel, bringing your head to about the same level as his crotch. Holding the aroused canine's shaft up with one hand, you grab his balls with the other, squeezing them lightly as you fondle them with your fingers. You look up at Duke with a smile, then put your tongue to the underside of his penis, running it up along the shaft until you reach the tip and slide your lips over it.";
@@ -279,8 +279,8 @@ to say DukeSex2: [Blowjob for Duke]
 	say "     With Duke speeding up his face-fucking and you having two, then three, fingers knuckle-deep in his ass, it's not much longer until the muscular anthro dog calls out 'I'm... gonnna... cummmMMM!', grunting as his knotted shaft starts spurting sperm into your mouth and down your throat. His asshole twitches around your fingers with each blast of seed that splashes onto your tongue and that you immediately swallow.";
 	WaitLineBreak;
 	say "     After he finishes coming and pulls out, Duke strokes your head and gives your shoulder a squeeze. 'Thanks a lot, you were awesome. A really great friend to have.'";
-	if hp of Duke is 10:
-		now hp of Duke is 11;
+	if HP of Duke is 10:
+		now HP of Duke is 11;
 
 to say DukeSex3: [Duke's ass fingered]
 	say "     Stepping up behind Duke, you slide your hand down his back, running through the soft fur until you arrive at a firm asscheek and give it a good squeeze. He gives a quick yip as you do it, moaning as you continue to grope his ass, tongue hanging out of his mouth and tail wagging excitedly. Then you move your hand to his crack, rubbing your fingers between his buns and finding his pucker. The German shepherd gives a lust-filled gasp as you push a probing digit into his back-door, his knotted cock starting to push out of his shaft in arousal. 'I love having my ass played with' he tells you happily, leaning back to get a bit more of your finger in and rubbing his soft-furred and muscular back against yourself.";
@@ -289,8 +289,8 @@ to say DukeSex3: [Duke's ass fingered]
 	say "     Getting jerked off at the same time as having two, then three, fingers knuckle-deep in his ass, it's not much longer until the muscular anthro dog calls out 'I'm... gonnna... cummmMMM!', grunting as his knotted shaft starts spurting arcs of sperm in the air. His asshole twitches around your fingers with each blast of seed that splashes down onto the grass.";
 	WaitLineBreak;
 	say "     After he finishes coming and you pull your fingers out, Duke turns around and gives your shoulder a squeeze. 'Thanks a lot, you were awesome. A really great friend to have.'";
-	if hp of Duke is 10:
-		now hp of Duke is 11;
+	if HP of Duke is 10:
+		now HP of Duke is 11;
 
 to say DukeSex4: [Duke fucked in the ass]
 	say "     Stepping up behind Duke, you slide your hand down his back, running through the soft fur until you arrive at a firm asscheek and give it a good squeeze. He gives a quick yip as you do it, moaning as you continue to grope his ass, tongue hanging out of his mouth and tail wagging excitedly. Then you move your hand to his crack, rubbing your fingers between his buns and finding his pucker. The German shepherd gives a lust-filled gasp as you push a probing digit into his back-door, his knotted cock starting to push out of his shaft in arousal. 'I love having my ass played with' he tells you happily, leaning back to get a bit more of your finger in and rubbing his soft-furred and muscular back against yourself.";
@@ -302,8 +302,8 @@ to say DukeSex4: [Duke fucked in the ass]
 	say "     Soon, the wild ride you're giving him pushes Duke over the edge and he orgasms, his sphincter gripping your cock like a vise as his knotted shaft starts spurting arcs of cum in the air. With Duke's hot hole tight around your cock and creating breathtaking sensations as you fuck him through his climax, you soon feel a familiar tingle rise in your balls. Plunging in one last time, you grind your hips against his furry ass and hold on tight as you come, shooting burst after burst of cum deep into his asshole.";
 	WaitLineBreak;
 	say "     Holding the German shepherd until your orgasm ebbs out and the last spurt of cum is shot inside him, you pull out after a while, feeling his pucker pull tight the moment you leave his body, not letting one drop of your load escape. Duke turns around and gives your shoulder a squeeze, then leans in to lick your face. 'Thanks a lot, you were awesome. A really great friend to have.'";
-	if hp of Duke is 10:
-		now hp of Duke is 11;
+	if HP of Duke is 10:
+		now HP of Duke is 11;
 
 to say DukeSex5: [Player fucked in the ass]
 	setmonster "German Shepherd";
@@ -317,10 +317,10 @@ to say DukeSex5: [Player fucked in the ass]
 	say "     Burying his manhood down to the base in your warm and tight ass is the last straw for the German Shepherd. He gives a sound that's halfway between a howl and an aroused grunt, then starts to flood your insides with blast after blast of canine seed, gushing forth as his knot expands even more and seals the two of you together. Panting, Duke leans against your back, his cock still pulsing with more cum shooting into you. He says 'That was... amazing.' and caresses your chest, then reaches down to take hold of your own shaft and return the favor. With how hot and horny all this fucking already made you, it doesn't take all that long until his eager jerking drives you over the edge and you spray your own seed all over the grass below.[mimpregchance]";
 	WaitLineBreak;
 	say "     With both of you having gotten off, Duke just puts his arms around your body to hold you and pulls you down to lie on the grass as you wait for his knot to go down. He nuzzles against your neck from behind and whispers 'Thanks for letting me fuck you. I really could get used to this too...'";
-	if hp of Duke is 10:
-		now hp of Duke is 11;
+	if HP of Duke is 10:
+		now HP of Duke is 11;
 
-Shawn is a man. The hp of Shawn is normally 0.
+Shawn is a man. The HP of Shawn is normally 0.
 The description of Shawn is "[ShawnDesc]".
 The conversation of Shawn is { "Mew!" }.
 

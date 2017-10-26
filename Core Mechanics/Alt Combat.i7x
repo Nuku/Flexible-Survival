@@ -17,7 +17,7 @@ inafight is a number that varies.		[ Used to detect if player is in a fight (ite
 skipretaliate is a truth state that varies. [Used to detect if monster will be denied a chance to retaliate.]
 avoidance is a number that varies.		[ Used to track if a player automatically avoids an attack. ]
 gascloud is a number that varies.		[ Tracks the ongoing strength of a player's ambient gas cloud. ]
-monsterhp is a number that varies.		[ Remaining monster hit points. ]
+monsterHP is a number that varies.		[ Remaining monster HP. ]
 monsterpowerup is a number that varies.	[ Used to track if a monster got a powerup that needs to be monitored or later removed. ]
 missskip is a number that varies.		[ Used to indicate if the default monster miss message should be omitted. ]
 monsterhit is a truth state that varies.	[ Used to denote if the monster hit ]
@@ -77,12 +77,12 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	now combat abort is 0;
 	setmongender 0;		[clear monster gender]
 	now skipretaliate is false;
-	if lev entry is less than level of player and hardmode is true:
+	if lev entry < level of player and hardmode is true:
 		hardmodeboost;
 	now peppereyes is 0;
 	now bananapeeled is 0;
 	now eprodused is false;
-	now monsterhp is hp entry;
+	now monsterHP is HP entry;
 	now gascloud is 0;
 	now playerpoison is 0;
 	now monsterpoison is 0;
@@ -142,14 +142,14 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	if companion of player is mouse girl:
 		increase plmindbonus by 2;
 		if name entry is "Mental Mouse", decrease plmindbonus by 1;
-	if hp of Velos > 2 and scalevalue of player < 3:
+	if HP of Velos > 2 and scalevalue of player < 3:
 		decrease plfleebonus by 5 - ( scalevalue of player * 2 );
 	if ducky swimring is equipped:
 		now duckyactive is true;
 	if mindshield helmet is equipped:
 		increase plmindbonus by 3;
 	now petchance is 0;
-	if the player is not lonely or number of entries in childrenfaces is greater than 0:
+	if the player is not lonely or number of entries in childrenfaces > 0:
 		now petchance is ( charisma of player * 250 ) / 12;
 		if petchance > 500, now petchance is 500;
 		if "Good Teacher" is listed in feats of player, increase petchance by 20;
@@ -203,7 +203,7 @@ To Combat Menu:
 	now inafight is 1;
 	now automaticcombatcheck is 0; [sets to zero as combat starts, just in case]
 	follow the monster combat mode rule;
-	if hp of player < 1 and combat abort is 0:
+	if HP of player < 1 and combat abort is 0:
 		say "     You are too injured to resist the creature.";
 		now fightoutcome is 20;
 		lose;
@@ -211,7 +211,7 @@ To Combat Menu:
 		say "     You are too aroused to consider resisting the creature.";
 		now fightoutcome is 21;
 		lose;
-	while hp of player is greater than 0 and monsterhp is greater than 0:
+	while HP of player > 0 and monsterHP > 0:
 		if combat abort is 1:
 			now combat abort is 0;
 			[wait for any key;
@@ -248,7 +248,7 @@ To Combat Menu:
 			repeat through table of basic combat:
 				increase combatopt by 1;
 				say "[bold type][combatopt][roman type] - [link][title entry][as][combatopt][end link][line break][run paragraph on]";
-			say "Your HP: [hp of player]/[maxhp of player]  Libido: [libido of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters] >[run paragraph on]";
+			say "Your HP: [HP of player]/[maxHP of player]  Libido: [libido of player]      [name in row monster of table of random critters] HP: [monsterHP]/[HP in row monster of table of random critters] >[run paragraph on]";
 			let k be 0;
 			now keychar is "INVALID";
 			change the text of the player's command to "";
@@ -356,21 +356,21 @@ Chapter 2 - Player Attack
 
 This is the player attack rule:
 	choose row monster from the table of random critters;
-	let currentmonhp be monsterhp;
+	let currentmonHP be monsterHP;
 	let the attack bonus be dexterity of player + ( level of player * 2 ) + plhitbonus - 10;
 	let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
 	let the combat bonus be attack bonus - defense bonus;
 	if ktcockmatch is true:		[That's what you get for thinking with your crotch.]
 		increase libido of player by a random number from 0 to 2;
 	if hardmode is true:
-		if the combat bonus is greater than 16:
+		if the combat bonus > 16:
 			now combat bonus is 16;
-		else if the combat bonus is less than -25:
+		else if the combat bonus < -25:
 			now combat bonus is -25;
 	else:
-		if the combat bonus is greater than 19:
+		if the combat bonus > 19:
 			now combat bonus is 19;
-		else if the combat bonus is less than -22:
+		else if the combat bonus < -22:
 			now combat bonus is -22;
 	let the roll be a random number from 1 to 50;
 	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
@@ -493,7 +493,7 @@ This is the player attack rule:
 				increase y by a random number from 2 to 4;
 			increase dam by y;
 			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at [name entry] for [special-style-2][y][roman type] damage!";
-		decrease monsterhp by dam;
+		decrease monsterHP by dam;
 	else:
 		say "You miss!";
 	if player is not lonely:
@@ -505,20 +505,20 @@ This is the player attack rule:
 				now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
 				let the combat bonus be attack bonus minus defense bonus;
 				if hardmode is true:
-					if the combat bonus is greater than 16:
+					if the combat bonus > 16:
 						now combat bonus is 16;
-					else if the combat bonus is less than -25:
+					else if the combat bonus < -25:
 						now combat bonus is -25;
 				else:
-					if the combat bonus is greater than 19:
+					if the combat bonus > 19:
 						now combat bonus is 19;
-					else if the combat bonus is less than -22:
+					else if the combat bonus < -22:
 						now combat bonus is -22;
 				now roll is a random number from 1 to 50;
-				if roll plus the combat bonus is greater than 20:
+				if roll plus the combat bonus > 20:
 					let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
 					say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
-					decrease monsterhp by dam;
+					decrease monsterHP by dam;
 				else:
 					say "Your [z] misses!";
 		else if a random chance of petchance in 1000 succeeds:
@@ -526,27 +526,27 @@ This is the player attack rule:
 			now attack bonus is dexterity of companion of player + ( level of companion of player * 2 ) + pethitbonus - 10;
 			let the combat bonus be attack bonus minus defense bonus;
 			if hardmode is true:
-				if the combat bonus is greater than 16:
+				if the combat bonus > 16:
 					now combat bonus is 16;
-				else if the combat bonus is less than -25:
+				else if the combat bonus < -25:
 					now combat bonus is -25;
 			else:
-				if the combat bonus is greater than 19:
+				if the combat bonus > 19:
 					now combat bonus is 19;
-				else if the combat bonus is less than -22:
+				else if the combat bonus < -22:
 					now combat bonus is -22;
 			now roll is a random number from 1 to 50;
-			if roll plus the combat bonus is greater than 20:
+			if roll plus the combat bonus > 20:
 				let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
 				say "[assault of companion of player][run paragraph on]  [special-style-2][dam][roman type] damage inflicted!";
-				decrease monsterhp by dam;
+				decrease monsterHP by dam;
 			else:
 				say "Your [companion of player] misses!";
 	LineBreak;
-	if monsterhp is not currentmonhp:
+	if monsterHP is not currentmonHP:
 		follow the monster injury rule;
 		say "[Name entry] is [descr].";
-	if monsterhp is greater than 0:
+	if monsterHP > 0:
 		if before combat is 0:
 			choose row monstercom from table of Critter Combat;
 			if playerpoison > 0, follow the playerpoisoned rule;
@@ -595,11 +595,11 @@ this is the combat item process rule:
 	choose row Current Menu Selection in table of itemselection;
 	process object entry;
 	if combat abort is 0 and battleitem is 0:
-		if monsterhp < 1:
+		if monsterHP < 1:
 			now fightoutcome is 10;
 			win;
-		else if hp of player < 1 or libido of player > 109:
-			if hp of player <= 0, now fightoutcome is 20;
+		else if HP of player < 1 or libido of player > 109:
+			if HP of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
 			lose;
 		else:
@@ -630,7 +630,7 @@ Chapter 4 - Submit
 
 This is the submit rule:
 	choose row monster from the table of random critters;
-	let temp be the hp of the player;
+	let temp be the HP of the player;
 	now fightoutcome is 22;
 	Lose;
 	if "Submissive" is listed in feats of the player, increase the XP of the player by ( ( 2 + lev entry ) / 5 );
@@ -658,18 +658,18 @@ This is the flee rule:
 			say "You release your cover cloud and try to escape.";
 			increase gascloud by 3;
 	increase combat bonus by gascloud * 2;
-	if hp of Velos > 2 and scalevalue of player < 3 and velosfleepenalty is false:
+	if HP of Velos > 2 and scalevalue of player < 3 and velosfleepenalty is false:
 		say "The added weight and discomfort of the heavy serpent inside your [body size of player] body does make it a little harder to get away.";
 		now velosfleepenalty is true;
 	if hardmode is true:
-		if the combat bonus is less than -25:
+		if the combat bonus < -25:
 			now combat bonus is -25;
 	else:
-		if the combat bonus is less than -22:
+		if the combat bonus < -22:
 			now combat bonus is -22;
 	let the roll be a random number from 1 to 50;
 	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-	if the roll plus the combat bonus is greater than 20:
+	if the roll plus the combat bonus > 20:
 		say "You manage to evade [name entry] and slip back into the city.";
 		now fightoutcome is 30;
 		now combat abort is 1;
@@ -685,7 +685,7 @@ Chapter 6 - Throw the Fight
 
 This is the throw combat rule:
 	now fightoutcome is 20;
-	now hp of player is -2;
+	now HP of player is -2;
 	say "You allow yourself to be subdued while putting up a token struggle.";
 	Lose;
 
@@ -713,9 +713,9 @@ this is the playerpoisoned rule:
 		else:
 			say "!  Your nanites manage to purge the last of it from your system, leaving you free of its debilitating effects.";
 			increase plhitbonus by 2;
-		decrease hp of player by dam;
-		if hp of player < 1:
-			if hp of player <= 0, now fightoutcome is 20;
+		decrease HP of player by dam;
+		if HP of player < 1:
+			if HP of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
 			lose;
 
@@ -744,11 +744,11 @@ to standardretaliate:
 	else:
 		say "[Name Entry] misses!";
 	now peppereyes is 0;
-	if hp of the player is greater than 0 and libido of player < 110:
+	if HP of the player > 0 and libido of player < 110:
 		[wait for any key;]
 		AttemptToWaitBeforeClear;
 	else:
-		if hp of player <= 0, now fightoutcome is 20;
+		if HP of player <= 0, now fightoutcome is 20;
 		if libido of player >= 110, now fightoutcome is 21;
 		Lose;
 	rule succeeds;
@@ -794,11 +794,11 @@ to retaliate:
 			say "[Name Entry] misses!";
 	now peppereyes is 0;										[pepperspray wears off]
 	if bananapeeled > 0, decrease bananapeeled by 1;
-	if hp of the player is greater than 0 and libido of player < 110:
+	if HP of the player > 0 and libido of player < 110:
 		[wait for any key;]
 		AttemptToWaitBeforeClear;
 	else:
-		if hp of player <= 0, now fightoutcome is 20;
+		if HP of player <= 0, now fightoutcome is 20;
 		if libido of player >= 110, now fightoutcome is 21;
 		Lose;
 	rule succeeds;
@@ -821,19 +821,19 @@ to standardstrike:
 			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
 			decrease combat bonus by 6;
 		if hardmode is true:
-			if the combat bonus is greater than 19:
+			if the combat bonus > 19:
 				now combat bonus is 19;
-			else if the combat bonus is less than -22:
+			else if the combat bonus < -22:
 				now combat bonus is -22;
 		else:
-			if the combat bonus is greater than 16:
+			if the combat bonus > 16:
 				now combat bonus is 16;
-			else if the combat bonus is less than -25:
+			else if the combat bonus < -25:
 				now combat bonus is -25;
 		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15;	[***if autopass, min. 30% chance to hit]
 		let the roll be a random number from 1 to 50;
 		say "[name entry] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
-		if the roll plus the combat bonus is greater than 20:
+		if the roll plus the combat bonus > 20:
 			now monsterhit is true;
 		else:
 			now monsterhit is false;
@@ -860,9 +860,9 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 	else if ducky swimring is equipped and duckyactive is true and a random chance of 1 in 8 succeeds:
 		say "Your [one of]inflatable ducky[or]ducky swim ring[or]white ducky[or]cute ducky[at random] ends up taking the hit for you, causing it to pop and deflate for the rest of the fight, but saving you from being hit this [one of]time[or]once[at random].";
 		now avoidance is 1;
-	if avoidance is 0 and level of Velos > 2 and ( ( hp of player * 100 ) / maxhp of player ) < 10 and velossaved is false:
+	if avoidance is 0 and level of Velos > 2 and ( ( HP of player * 100 ) / maxHP of player ) < 10 and velossaved is false:
 		say "[one of]Velos, perhaps sensing that things aren't going well out there, makes a surprise exit, startling your foe for a moment before the serpent has to retreat.[or]When the serpent hidden within you emerges suddenly, the [name entry] is startled and stumbles back, losing their opportunity to strike.[or]With an exaggerated moaning, Velos rises from your depths, throwing off your opponent.[or]In an attempt to safeguard his friend and his home, Velos emerges.  'Boo.'  Stunned by this new foe, the [name entry] is thrown off balance for a moment.  By the time they recover and swing at Velos, he's already ducked back inside you.[or]Velos emerges from you, yelling angrily at you to stop all that knocking about while he's trying to sleep.  Your foe, meanwhile, staggers back several steps from the brief appearance of the snake.[or]Velos, emerging like some serpentine horror from your body, makes moaning, otherworldly noises at your foe.  This drives your opponent is back for a few moments['] reprieve.[cycling]";
-		increase hp of player by 5;
+		increase HP of player by 5;
 		now velossavedyes is true;
 		now velossaved is true;
 		now avoidance is 1;
@@ -879,12 +879,12 @@ to standardhit:
 	say "[Attack entry]  You take [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[normalabsorbancy]";
-	if absorb is greater than dam:
+	if absorb > dam:
 		now absorb is dam;
-	if absorb is greater than 0:
+	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease hp of the player by dam;
-	increase hp of player by absorb;
+	decrease HP of the player by dam;
+	increase HP of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 
@@ -1209,12 +1209,12 @@ to win:
 			now fightoutcome is 14;	[player ub'ed foe]
 	if ok is 1 and vampiric is true:
 		if nohealmode is true:
-			increase hp of player by ( 2 * lev entry ) / 3;
+			increase HP of player by ( 2 * lev entry ) / 3;
 		else:
-			increase hp of player by lev entry;
+			increase HP of player by lev entry;
 		decrease thirst of player by 3;
 		decrease hunger of player by 1;
-		if hp of player > maxhp of player, now hp of player is maxhp of player;
+		if HP of player > maxHP of player, now HP of player is maxHP of player;
 		if thirst of player < 0, now thirst of player is 0;
 		if hunger of player < 0, now hunger of player is 0;
 	if ok is 1 and "Control Freak" is listed in feats of player:
@@ -1226,7 +1226,7 @@ to win:
 	if ok is 1, say "[defeated entry]";
 	increase the XP of the player by lev entry times two;
 	if ssxpa is true:
-		increase xp of player by ( lev entry * 2 ) / 3;
+		increase XP of player by ( lev entry * 2 ) / 3;
 	if the player is dominant:
 		let jj be a random number between 1 and 4;
 		if jj is 1:			[libido boost]
@@ -1234,13 +1234,13 @@ to win:
 		else if jj is 2:
 			increase morale of player by 1;					[flat morale boost]
 		else:
-			increase xp of player by ( lev entry + 2 ) / 5;		[10% xp boost]
+			increase XP of player by ( lev entry + 2 ) / 5;		[10% XP boost]
 	if ktspeciesbonus > 0, increase the XP of the player by (lev entry divided by 2);
 	if the player is not lonely:
 		now lastfight of companion of player is turns;
-		increase the xp of the companion of the player by lev entry times two;
+		increase the XP of the companion of the player by lev entry times two;
 		if "Ringmaster" is not listed in feats of player:
-			decrease the xp of the player by ( lev entry times 2 ) divided by 3;
+			decrease the XP of the player by ( lev entry times 2 ) divided by 3;
 	increase the morale of the player by 1;
 	let randomdropchance be lootchance entry;
 	let z be 0;
@@ -1248,13 +1248,13 @@ to win:
 		now randomdropchance is 0;		[no drop = do nothing]
 	else if randomdropchance is 100:
 		now randomdropchance is 100;	[always drops = no need to run all the maths]
-		say "You gain 1 x [loot entry]!";
+		say "[bold type]You gain 1 [loot entry]![roman type][line break]";
 		add loot entry to the invent of the player;
 	else:
-		if "Magpie Eyes" is listed in feats of player and randomdropchance is greater than 50:
+		if "Magpie Eyes" is listed in feats of player and randomdropchance > 50:
 			now z is ( 100 - randomdropchance ) divided by 3;		[scaled increase above 50, prevents numbers over 100]
 			increase randomdropchance by z;
-		else if "Magpie Eyes" is listed in feats of player and randomdropchance is greater than 0:
+		else if "Magpie Eyes" is listed in feats of player and randomdropchance > 0:
 			now z is randomdropchance divided by 3;
 			increase randomdropchance by z;
 		if "Mugger" is listed in feats of player and muggerison is true:		[flat perception based increase]
@@ -1270,13 +1270,13 @@ to win:
 		if randomdropchance <= 50, now yy is ( yy * randomdropchance ) divided by 100;
 		now randomdropchance is randomdropchance + yy;
 		if a random chance of randomdropchance in 100 succeeds:
-			say "You gain 1 x [loot entry]!";
+			say "[bold type]You gain 1 [loot entry]![roman type][line break]";
 			add loot entry to the invent of the player;
 [	let z be 0;
-	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 50:
+	if "Magpie Eyes" is listed in feats of player and lootchance entry > 50:
 		now z is ( 100 - lootchance entry ) divided by 3;		[scaled increase above 50, prevents numbers over 100]
 		increase lootchance entry by z;
-	else if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
+	else if "Magpie Eyes" is listed in feats of player and lootchance entry > 0:
 		now z is lootchance entry divided by 3;
 		increase lootchance entry by z;
 	let yy be ( ( ( perception of player - 10 ) / 2 ) * 3 );	[minor perception bonus to looting, maxed at 30 PER]
@@ -1284,9 +1284,9 @@ to win:
 	if lootchance entry > 50, now yy is ( yy * ( 100 - lootchance entry ) ) divided by 100;
 	if lootchance entry <= 50, now yy is ( yy * lootchance entry ) divided by 100;
 	if a random chance of ( lootchance entry + yy ) in 100 succeeds:
-		say "You gain 1 x [loot entry]!";
+		say "[bold type]You gain 1 [loot entry]![roman type][line break]";
 		add loot entry to the invent of the player;
-	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
+	if "Magpie Eyes" is listed in feats of player and lootchance entry > 0:
 		decrease lootchance entry by z;		]
 	if fightoutcome is not 13 and fightoutcome is not 14 and fightoutcome is not 18 and fightoutcome is not 19:
 		vialchance (name entry);
@@ -1328,7 +1328,7 @@ To lose:
 		increase libido of player by 2;
 	if the player is not lonely:
 		now lastfight of companion of player is turns;
-	if hp of player is less than 1, now hp of player is 1;
+	if HP of player < 1, now HP of player is 1;
 	now combat abort is 1;
 	increase the XP of the player by lev entry divided by two;
 	if ktspeciesbonus > 0, increase the XP of the player by 1;
@@ -1358,7 +1358,7 @@ alt2chance:		The likelihood the second alternate attack will be chosen (if the f
 			methodology.
 monmiss:		This rule replaces the regular miss statement and may contain necessary code for counting/resetting/etc...
 continuous:		This rule takes place before any and all combat rules.  It is much like the pre-attack, but happens regardless of the attack method
-			being used.  Good for enemy regen, player hp drain, player libido boosting, etc... that happens every turn.
+			being used.  Good for enemy regen, player HP drain, player libido boosting, etc... that happens every turn.
 altstrike:		This rule replaces the standard dexterity to-hit attempt by the monster (ex: using Int, Char, etc...)
 
 While most anything can be created by placing it all in the combat rule, that requires duplication of all the code whereas using the subsets would save a lot of hassle and would ensure basic combat adaptations could more accurately be carried over (new player feats relating to defense, for example).  As well, with the rules broken out, they can more easily be repeated in the table in other combinations.  The 'retaliation rule' is the standard combat option, designed to call all the others at the appropriate time, except for the continuous entry (which is run independently before any combat rule).  A combat rule may branch between picking to do the 'retaliate' action as normal or doing something special instead (like a non-dexterity attack).
@@ -1400,9 +1400,9 @@ this is the aura1 rule:		[weak aura]
 	else:
 		say "You suffer [ ( lev entry + 4 ) / 4 ] damage.";
 		LineBreak;
-		decrease hp of player by ( lev entry + 4 ) / 4;
-		if hp of player < 1:
-			if hp of player <= 0, now fightoutcome is 20;
+		decrease HP of player by ( lev entry + 4 ) / 4;
+		if HP of player < 1:
+			if HP of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
 			lose;
 
@@ -1415,16 +1415,16 @@ this is the bearhug rule:
 	else:									[crushing arms]
 		say "The [name entry] manages to grab you in its powerful arms and holds you in a vice-like bear hug!  You will need to break free before it squeezes the fight right out of you.";
 	let freedom be 0;
-	while hp of player > 0 and freedom is 0:
+	while HP of player > 0 and freedom is 0:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125;	[80% dmg / round]
 		now damagein is dam;
 		say "[noarmourabsorbancy]";		[ignores armour]
-		decrease hp of player by ( dam - absorb );
+		decrease HP of player by ( dam - absorb );
 		if absorb is 0:
-			say "You suffer [special-style-2][dam][roman type] damage from its crushing grip!  ([hp of player]/[maxhp of player] hp)[line break]";
+			say "You suffer [special-style-2][dam][roman type] damage from its crushing grip!  ([HP of player]/[maxHP of player] HP)[line break]";
 		else:
-			say "You suffer [special-style-2][dam - absorb] ([dam] - [absorb])[roman type] damage from its crushing grip!  ([hp of player]/[maxhp of player] hp)[line break]";
-		if hp of player > 0:
+			say "You suffer [special-style-2][dam - absorb] ([dam] - [absorb])[roman type] damage from its crushing grip!  ([HP of player]/[maxHP of player] HP)[line break]";
+		if HP of player > 0:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, LineBreak;	[adds a break after the 'more']
 			let num1 be a random number between 0 and ( Strength of player + level of player );
@@ -1444,7 +1444,7 @@ Part 3 - Post-Attack Example - Brag
 this is the brag rule:
 	choose row monster from table of random critters;
 	say "[one of]'Woo!  Take that!' [or]'Aww yeah!' [or]'Like a boss, baby!' [or]'Po feels embarrassed for you,' [at random][one of]your enemy chuckles[or]your opponent gloats[or]the [name entry] laughs derisively[at random].";
-	if monsterhp < hp entry, increase monsterhp by 1;
+	if monsterHP < HP entry, increase monsterHP by 1;
 
 Part 4 - Pre/Post/Miss Combo Example - Power Strike 1
 
@@ -1498,19 +1498,19 @@ this is the intstrike rule:
 			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
 			decrease combat bonus by 6;
 		if hardmode is true:
-			if the combat bonus is greater than 19:
+			if the combat bonus > 19:
 				now combat bonus is 19;
-			else if the combat bonus is less than -22:
+			else if the combat bonus < -22:
 				now combat bonus is -22;
 		else:
-			if the combat bonus is greater than 16:
+			if the combat bonus > 16:
 				now combat bonus is 16;
-			else if the combat bonus is less than -25:
+			else if the combat bonus < -25:
 				now combat bonus is -25;
 		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15;	[***if autopass, min. 30% chance to hit]
 		let the roll be a random number from 1 to 50;
 		say "[name entry] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
-		if the roll plus the combat bonus is greater than 20:
+		if the roll plus the combat bonus > 20:
 			now monsterhit is true;
 		else:
 			now monsterhit is false;
@@ -1536,7 +1536,7 @@ this is the humping rule:
 		increase libido of player by a random number from 2 to 6;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
-		decrease hp of the player by dam;
+		decrease HP of the player by dam;
 		follow the player injury rule;
 		say "You are [descr].";
 	else:
@@ -1554,12 +1554,12 @@ this is the ftaurpounce rule:		[double-damage pouncing]
 	say "The [one of][name entry][or]feline[or]feline taur[or]large cat[purely at random] growls and pounces playfully atop you, [one of]knocking[or]pushing[or]slamming[purely at random] you down briefly.  Its many paws knead and claw at you while the feline rumbles and purrs at having caught its [one of]toy[or]prey[or]plaything[purely at random], rubbing its body against yours.  This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]";		[unable to use shield while pinned]
-	if absorb is greater than dam:
+	if absorb > dam:
 		now absorb is dam;
-	if absorb is greater than 0:
+	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease hp of the player by dam;
-	increase hp of player by absorb;
+	decrease HP of the player by dam;
+	increase HP of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 
@@ -1650,19 +1650,19 @@ this is the firebreath rule:
 			now damagein is dam;
 			say "[areaabsorbancy]";		[area of effect attack]
 			now absorb is ( absorb + 1 ) / 2;	[total defense value halved]
-			if absorb is greater than dam:
+			if absorb > dam:
 				now absorb is dam;
-			if absorb is greater than 0:
+			if absorb > 0:
 				say "You prevent [special-style-1][absorb][roman type] damage!";
-			decrease hp of the player by dam;
-			increase hp of player by absorb;
+			decrease HP of the player by dam;
+			increase HP of player by absorb;
 			follow the player injury rule;
 			say "You are [descr].";
 		now peppereyes is 0;										[pepperspray wears off]
-		if hp of the player is greater than 0 and libido of player < 110:
+		if HP of the player > 0 and libido of player < 110:
 			wait for any key;
 		else:
-			if hp of player <= 0, now fightoutcome is 20;
+			if HP of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
 			Lose;
 		rule succeeds;

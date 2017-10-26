@@ -13,10 +13,10 @@ Section 1 - Monster Responses
 to say Cheerleader wins:
 	if CheerleaderFirstEncounter is 2: [fighting Stacy, for the event with Eric]
 		say "     Ouch, that hurt. With another hit, Stacy almost finishes you off, leaving you swaying dangerously as you try to keep standing.";
-	else if hp of player <= 0 and bodyname of player is "Hulking Cheerleader": [she's a good winner, giving hints to other players in their 'game']
+	else if HP of player <= 0 and bodyname of player is "Hulking Cheerleader": [she's a good winner, giving hints to other players in their 'game']
 		say "     The hulking cheerleader steps over you, then gives you a hand and pulls you to your feet. 'I won - all the pussies in the area are mine. But still, you didn't do too bad. You should take on Alice or Jenny - they aren't too tough and while their areas aren't as good as mine, you should still be able to make good some points on the pussy hunt there.'";
 	else:
-		if hp of player is greater than 0: [player submitted]
+		if HP of player > 0: [player submitted]
 			say "     'Wanna throw the towel and get right to business? Fine by me,' the hulking cheerleader says, then lays you down on the ground and quickly exposes your crotch.";
 		else: [she's won the right to fuck - now the cheerleader wants to 'score']
 			say "     'I beat you fair and square, so just hold still and let's see what's what,' the hulking cheerleader says, then lays you down on the ground and quickly exposes your crotch.";
@@ -74,7 +74,7 @@ to say cheerleaderDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -101,7 +101,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 12;
 	now sex entry is "Male";                [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 70;
+	now HP entry is 70;
 	now lev entry is 9;                     [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12;                   [ Monster's average damage when attacking. ]
 	now area entry is "Campus";             [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -131,7 +131,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Hulking Cheerleader":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As you succumb to the infection, you feel all concerns other than the pussy hunt game fade from your mind. You make your way to the campus and carve off a very respectable section of it for your own, beating all challengers intruding into your territory. With your fertile seed soon taking hold in all the females in your turf, and quite a few in your neighbour's too, you rapidly rise in the rankings. A group of female soldiers straying into the wrong area of the city finally gives you the last push to get all the way to the top, cementing your position as champion as you breed them one by one.";
 		else:
 			say "     When rescue comes, the soldiers are at first very sceptical about allowing you to leave the city because of your large size and obvious physical power. It takes quite a bit of talking to calm their worries of you squishing people - looks like they had some bad experiences with some larger infectees. When you're finally brought to a holding facility outside the city, several doctors poke and prod you, mumbling about your amazing muscle density and healing capacity. After being given a shot to make you non-infectious, you're released.";

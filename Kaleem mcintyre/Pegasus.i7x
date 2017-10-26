@@ -12,7 +12,7 @@ when play begins:
 
 to say Pegasusdesc:
 	setmongender 4; [creature is female]
-	say "Reminiscent of the flying mount of Bellerophon back in the myths of old, the creature folding its wings onto its side is both a thing of beauty and terror as the feral winged horse rears up at you in preparation to fight. With its luxurious gold and white hide [if daytimer is day] gleaming underneath the light of the sun[else]radiating underneath the cool glow of the moon[end if], expansive wings set on side of it, cloven hooves, and proud cerulean mane flowing in the breeze the mutated mount is truly a beast to dwarf all equines in both ferocity and intelligence as it stares at you with blue eyes filled with almost endless wisdom. Strangely enough, the creature seems to be female, if the heated scent of equine mare in heat wafting from around it is anything to go by.";
+	say "Reminiscent of the flying mount of Bellerophon back in the myths of old, the creature folding its wings onto its side is both a thing of beauty and terror as the feral winged horse rears up at you in preparation to fight. With its luxurious gold and white hide [if daytimer is day]gleaming underneath the light of the sun[else]radiating underneath the cool glow of the moon[end if], expansive wings set on side of it, cloven hooves, and proud cerulean mane flowing in the breeze the mutated mount is truly a beast to dwarf all equines in both ferocity and intelligence as it stares at you with blue eyes filled with almost endless wisdom. Strangely enough, the creature seems to be female, if the heated scent of equine mare in heat wafting from around it is anything to go by.";
 
 to say losetoPegasus:
 	say "Knocked down after being beaten by the flying mount you find yourself planted fully onto the ground by a wide hoof as the majestic creature whinnies loudly over you in triumph.";
@@ -79,7 +79,7 @@ to say beatthePegasus:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -106,7 +106,7 @@ When Play begins:
 	now int entry is 22;
 	now cha entry is 24;
 	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 90; [ The monster's starting hit points. ]
+	now HP entry is 90; [ The monster's starting HP. ]
 	now lev entry is 13; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 22; [ Monster's average damage when attacking. ]
 	now area entry is "Warehouse";
@@ -147,7 +147,7 @@ The usedesc of Pegasus Quill is "The quill you picked up is actually a large fea
 
 when play ends:
 	if bodyname of player is "Pegasus":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "Succumbing to the infection you find yourself looking off to the far horizon as your human mind begins to fade like mist in the morning. It doesn't take long for you to spread your wings and take off into the [if daytimer is day]clear blue yonder[else]starry skies above[end if] as the sheer need to be [italic type]free[roman type] overcomes your senses. It takes a moment of trying, but quickly you get the hang of flying and soon you are making your way across both land and sea as you instinctively search for a mate, equal to you in both strength and power, but with a soul clear enough that your restless spirit can find home beside it. Something silently calls you back [']home['] to where your ancestral herd once congregated at in days long since gone by. Vehemently you hope that whoever you find will be randy enough to [if cocks of player > 0 and cunts of player > 0]fill the ache burning throughout your mixed gendered sexes[else if cocks of player > 0]quiet the incessant need to rut buzzing throughout your mind as your nuts sway heavily between your legs while the length of your throbbing horse shaft spurts pearls of cum from out of the head of your equine sex[else if cunts of player > 0]still the deep need burning inside of your fluttering pussy[else]be willing to quell the lustful need your genderless body cannot release on its own[end if]. You whicker a silent prayer to the Great Winged One, the first of the first pegasi, for aid in this venture.";
 		else:
 			say "Having survived the trails of the city just as the military arrives to clean up you find something strange happening to you as your body goes through and almost epileptic fit one day. Not wanting to, at first anyway, you end up letting the soldiers cart you off to one of their bunkers to be tested over when a particularly spectacular fit causes strange fluid to tumble out of your muzzle, nose, eyes and ears. It takes a while but the military scientist end up determining that you have an unidentified malfunction in the nanites running around throughout your body which is causing them to respond in a way that has never before been documented. Joy... When driving several chemicals and newer nanites inside of you does nothing the doctors ask you permission to amputate one of your wings in an effort to try and make a counter batch of nanites to combat the problem. Agreeing, after having another explosive fit, you end up with one less wing a day later. However, because of this, you end up growing another soon after as your body tries to reassert the correct [']form['] you need to take in order to be [']right['], which sends you into another shock. Least to say, you become a pet project to the scientist after this as your stay with the military becomes...somewhat indefinite. And yet, not all of the news is bad as you happen to end up meeting someone who helps you along as the [']good doctors['] try to work on you.";

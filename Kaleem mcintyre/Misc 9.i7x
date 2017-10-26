@@ -18,7 +18,7 @@ Instead of resolving a Hanu:
 		if libido of player < 0, now libido of player is 0;
 		increase humanity of player by 20;
 		if humanity of player > 100, now humanity of player is 100;
-		Increase maxhp of player by 5;
+		Increase maxHP of player by 5;
 		Increase score by 5;
 	else:
 		LineBreak;
@@ -81,8 +81,8 @@ Instead of resolving a The Cap:
 	If player consents:
 		LineBreak;
 		Say "Telling the Cerberus that you were just browsing you chuckle nervously before slowly setting the statue back into the case. Seeing that you're not here to steal the Cerberus comes over, hefts you up by your collar and then casually walks you out of the Museum. When the beast tosses you out onto your head you get the feeling that would-be thieves are not wanted inside of the Museum. You make a mental note to yourself that you're going to avoid that particular case for now on. Right after you get an ice pack for the headache growing inside of your noggin'.";
-		Decrease hp of player by 6;
-		If hp of player < 1, now hp of player is 1;
+		Decrease HP of player by 6;
+		If HP of player < 1, now HP of player is 1;
 	else:
 		LineBreak;
 		Say "Not knowing why you tug the statue tight into your chest and then chuckle nervously up at the three headed guard dog before darting out the backside of the room.";
@@ -90,7 +90,7 @@ Instead of resolving a The Cap:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 14:
+		if diceroll > 14:
 			say "Running as fast as your [bodyname of player] feet can take you, you rush through the narrow twist and turns of the Museum's hallways and then out of the rear entrance of the building, leaving your three-headed pursuer confusedly trying to follow after your scent. Moving down the alleyway and then on your way back to the bunker you accidentally [one of]trip over the side of the curb[or]slip on a can[or]slip over something hard[or]get your feet tangled over a discarded pair of pants[at random] and end up accidentally dropping the statue you're holding onto.";
 			say "Cursing your luck you watch as the falcon headed artifact sails through the air and then crashes onto the ground, breaking into a hundred different pieces. Sighing at the loss, even though you don't understand why, you find yourself gaping in awe as you look to see a bright red... baseball cap... lying admits the rubble of the statue. Finding your balance you cautiously step over to the cap and then reach down to pick up the headwear. If things weren't already weird enough as they are you find that the cap bears the first letter of your name.";
 			say "Not sure you understand what's going on, you shrug and then flip the headwear onto your head. Seeing that the baseball cap is a perfect fit you step over the ruined statue and then head off onto your way. You never notice how the letter on the hat spark for a second, as you can feel nothing out of place on top of your head, before going silent.";
@@ -155,7 +155,7 @@ Instead of resolving a Fashion Statement:
 			if "Scavenger" is listed in feats of the player:
 				increase bonus by 4;
 			say "You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
-			if dice + bonus is greater than 15:
+			if dice + bonus > 15:
 				say "Scrounging up whatever you could you finally manage to find something worth wearing from the leftover inventory back here. Giving the apparel a quick a sniff, just to make sure it's not tainted, you smile approvingly before stuffing the items in question into your backpack. Time to head for home!";
 				now carried of muscle shirt is 1;
 				increase score by 5;

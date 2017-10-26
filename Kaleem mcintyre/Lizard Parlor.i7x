@@ -24,7 +24,7 @@ Instead of sniffing Dan:
 	Say "The four armed iguana smells of both happiness and determination with a hint of tangy reptile musk mixed in there somewhere.";
 
 instead of conversing the Dan:
-	if hp of dan is 0:
+	if HP of dan is 0:
 		say "'Hey you!' Dan cheers while smiling at you like an overexcited hatchling. 'm glad you decided to stop by today. Greg was starting to think that something had happened to you.' You tell Dan that you wouldn't be done in by anything in this city you watch as the other man's green-brown eyes shine with a bright and intensive light as he flicks his reptilian tongue out at you. 'I'm glad to hear that. It would be a serious shame if you turned into one of the mutants out there.' At this the four armed males sighs wistfully.[line break]";
 		say "Asking the other what the matter is you get a story you weren't expecting. 'Well, when everything began to go all to hell many of the officers at the various stations dotting the city tried to do their best to handle what was happening, to both them and the people around them. But,' Dan reaches up with one of his four arms to scratch a thick claw underneath his chin. 'that really didn't go so well and many of them ended up succumbing to the virus and then doing some really... [italic type]wild[roman type]... things to each other once it looked as though the problem couldn't be solved by house arrest any longer.' Dan sighs forlornly at this. 'Logically one would think that people like police officers, who are trained to handle much more strenuous situations, would be able to hand little things like out of control boners and whatnot, but when the shit hit the fan... well.";
 		WaitLineBreak;
@@ -40,13 +40,13 @@ instead of conversing the Dan:
 		WaitLineBreak;
 		say "'Not yet, we've got company after all.' The raptor growls with his burning gold-green eyes drilling holes into Dan's own brown-green orbs. Heavy with lust as they are you get the feeling that it won't be long before the two are wrapped up in each other. A hiss from Dan follows the younger man turning to regard you somewhat crossly. Waving your hands in surrender you back up before the other can get bring any dangerous thoughts or ideas going through his mind into play.[line break]";
 		say "A gentle hand turns the iguana's face back around so that he is looking at Greg once again. 'You. Bed. Now.' Greg grunts out as his slime coated cock rubs up in between his lover's thighs. A nod from Dan a moment after and soon the two are charging towards their upstairs bedroom. Perhaps you should bother them for attention later?";
-		now hp of dan is 1;
-	else if hp of dan is 1:
+		now HP of dan is 1;
+	else if HP of dan is 1:
 		say "[one of]Oh hey, sorry about before. I was really horned up and need some extra relief with Greg.' Dan blushes somewhat embarrassedly before chuckling slightly.[or]'Do you want to colour with me? I like colouring a lot!'[or]Dan is busy trying to prepare something to eat.[or]Dan is sitting next to Greg with his head on the older raptor's lap.[or]'When this is all over with... I think I want to ask Greg to become my life partner.' Dan blushes as he says this, but his conviction is unwavering.[or]'Maybe I should try and get some work done?'[or]I wish it was just a little cooler, then I could sit comfortably on the roof of the building and sunbathe.[or]'I wonder if Greg has gotten over what happened before with us at the warehouse?' Dan seems pensive over this.[or]'I hope that one day, I can forgive the guys who...'[or]'Between colouring and crosswords there's not much else to do here... well other than [italic type]that[roman type].' The reptile flushes as he thinks on something.[or]'Maybe I can get Greg to come outside with me for a midnight stroll?'[or]'Police work has become all but a faded memory with the town in the shape its in.'[or]'Have you seen that blonde in the white hoodie again? I need to ask her something.'[or]'Sometimes Greg and I go out on patrol together... with no clothes on.' Dan shudders after saying this.[or]'That female Doberman, just which department is she from?'[or]'My badge Id has me registered as Danny Smith Raphon.'[or]'I would seriously love to hear some tunes right about now.'[at random]";
 
 
 Instead of fucking the Dan:
-	If lastfuck of Dan - turns is less than 6:
+	If lastfuck of Dan - turns < 6:
 		say "'Sorry, but I won't be doing anything until both Greg and I recover.' The younger reptile looks at his [one of]slumbering[or]lounging[or]meditating[at random] lover and then smiles somewhat playfully. 'Surprisingly enough, Greg has a lot more stamina now than he did before when he was a [']fleshy[']. Its times like these when I wonder if this virus-thing is a real blessing in disguise.' Dan snicker as Greg opens his eyes to regard him reproachfully. 'I was just being serious.' At that the raptor closes his eyes, only to snap them open once again.";
 	else:
 		say "'Hey, hope you don't mind, but if you want to get intimate with me then Greg comes along as a package deal.' The four armed male says as he hugs himself up to his larger lover while nuzzling and flicking his tongue onto the underside of the older detective's orange scaled throat. Seeing the two reptiles hugging close to one another you find yourself growing slightly aroused by the display, however, the thought of trying to take the two males on at once does make you pause somewhat.";
@@ -90,7 +90,7 @@ Instead of sniffing Greg:
 
 
 instead of conversing the Greg:
-	If hp of greg is 0:
+	If HP of greg is 0:
 		say "'So I see you survived this place another day. Not bad, even for a rookie like you.' Greg's words are mild, but carry enough of a sting to them to make you pause for a second in afterthought. 'Don't take it the wrong way,' The raptor flicks his tongue out from between his lips and then chuckles at you. 'I'm just surprised by your tenacity. Not many have [']survived['] this place. Well, if you take the general census from before the epidemic and compare it to what we have now as being considered [']citizens['].' Any annoyed growl slips free from Greg's muzzle and mildly you have to wonder what's gotten him into such a snit.[line break]";
 		say "Asking the other on his thoughts about what may happen after the military rolls into the clean up the city you find yourself getting a somewhat unanticipated reply. 'When/if the military comes then not much will change - other than the population of mutants here increasing with the influx of new blood.' Blinking you ask the other about his bleak outlook. 'Bleak? I'm being realistic.' The other man shrugs before rolling his head from side to side in an effort to pop the bones in his neck. 'Come on, wake up some of those latent brain cells for a moment and think outside the box. If you were a top commander leading a group of people into a assured danger zone how would you handle this situation, seeing as all other alternatives and possibilities have, as of currently, been ineffective in solving the crisis?' At that you pause to think.";
 		WaitLineBreak;
@@ -107,13 +107,13 @@ instead of conversing the Greg:
 		say "'Sorry about this, but Greg has uhm... what do you call them...' Dan tries to think up the world escaping his mental grasp. 'The word is decadence. And it's not an illness so much as a type of personality trait.' The orange and yellow raptor shivers before pulling himself up to shake himself free of his former reservations over the future. 'I'm sorry, I didn't mean for you to see that.' The raptor apologizes truthfully. 'I guess that this entire situation is taking me over in a more detrimental way than I had first thought.' Greg whispers before four slender, but muscular arms come to wrap around him.";
 		WaitLineBreak;
 		say "Dan says nothing as he pulls his taller mate closer into him and then nuzzles the sides of Greg's neck. The slow and easy grind of the iguana's crotch into the side of the raptor's thigh is almost easy to miss however, the grunt that comes from out of Greg's throat is not. 'Let me show you what lies after decadence and the destruction of civilized order.' Dan whispers and soon the two reptiles are moving away up to the stairs toward their bedroom. You get the feeling that there's much more between these two than you had first assumed. But at the same time... doesn't that make getting closer to them sound more rewarding than trying to run away?[line break]";
-		now hp of greg is 1;
-	else if hp of greg is 1:
+		now HP of greg is 1;
+	else if HP of greg is 1:
 		say "[one of]Greg waves an arm at you from where he is sitting snuggled up to Dan.[or]'I... apologize for my behavior from before. I didn't want you to see me like that.'[or]'I despise how no one will stand up to try and make some kind of order out of this mess. And yet those in power pretend as if everything is under control when they know it's not!'[or]'I used to be a private detective before I became Dan's partner. Odd, I know, but I've always been a loner.'[or]'Maybe one day true order will return so that chaos can flourish and bring prosperity once more.'[or]Greg is busy running his long tailtip along the side of a sleeping Dan's face.[or]Greg is doing push ups right now.[or]Greg is cleaning both his gun and Dan's.[or]Greg is meditating.[or]'There's a man named Homaru out there... I wonder if I should pay him a visit?'[or]'I... have a weakness for Dan's cooking. He makes the best parfaits I've ever eaten.' Greg blushes at saying this.[or]'I can speak multiple languages, but I have trouble writing them. How ironic, no?'[or]'Once this [italic type]epidemic[roman type] has ended I hope to get out of this country. Preferably with Dan in tow.'[or]Greg is looking out the window at the world hidden behind a thin veil of glass.[or]Greg seems to be contemplating something at the moment.[at random]";
 
 
 Instead of fucking the Greg:
-	If lastfuck of greg - turns is less than 6:
+	If lastfuck of greg - turns < 6:
 		say "'Not without Dan.' The other man snarls quietly, more at himself than at you. 'Never without Dan.' The raptor hybrid turns his head to regard his worn lover and notes the slight twinge in the iguana's steps as the younger male goes about his business.";
 	else:
 		if a random chance of 1 in 2 succeeds:

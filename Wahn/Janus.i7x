@@ -86,8 +86,8 @@ carry out TestMode:
 	now charisma of player is 30;
 	now perception of player is 30;
 	now level of player is 30;
-	now maxhp of player is 300;
-	now hp of player is 300;
+	now maxHP of player is 300;
+	now HP of player is 300;
 	now capacity of player is 300;
 	increase carried of janus coin by 1;
 	increase carried of testing mirror by 1;

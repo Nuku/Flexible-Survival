@@ -155,7 +155,7 @@ DoranRP_var4 is a number that varies. DoranRP_var4 is usually 0.
 Section 1.1 - Doran Monster Responses
 
 to say losetodoran:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     You quickly surrender to the dragon, which seems to briefly confuse him. Once it's clear you're really submitting, he only snorts, audibly regarding your gesture with an odd measure of disappointment, before turning tail and departing.";
 		say "     It's particularly strange that any beast around these parts to so readily reject an opportunity to abuse a potential victim further.";
 		now DoranDominanceTopic is 1;
@@ -385,7 +385,7 @@ to say DoranVictory_TurnDown: [turn down]
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -412,7 +412,7 @@ When Play begins:
 	now int entry is 20;
 	now cha entry is 16;
 	now sex entry is "nochange";
-	now hp entry is 105;
+	now HP entry is 105;
 	now lev entry is 16;
 	now wdam entry is 17;
 	now area entry is "Plains";

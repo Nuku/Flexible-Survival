@@ -60,10 +60,10 @@ carry out supersponsor:
 			else:
 				say "     During your conversation with Trixie, the [companion of player] has been confused and concerned as you talk to apparently no one. Trixie waggles here fingers in their direction and they fall into a trance. A set of VR goggles and headphones are magicked onto their head and start to play. They absorb the information from the VR session, auto-magically training them in mere minutes. Once the training session is over, the equipment disappears and your companion comes out of their trance with increased skill.";
 				let nn be ( level of player - level of companion of player ) - 3;
-				let xpfactor be 5;
+				let XPfactor be 5;
 				if "Good Teacher" is listed in feats of player:
-					now xpfactor is 3;
-				increase xp of companion of player by ( ( level of companion of player * 2 ) + ( nn - 1 ) ) * nn * xpfactor;
+					now XPfactor is 3;
+				increase XP of companion of player by ( ( level of companion of player * 2 ) + ( nn - 1 ) ) * nn * XPfactor;
 				repeat with x running from 1 to nn:
 					pet level up;
 		else if calcnumber is 4:
@@ -182,10 +182,10 @@ to sslvl12:
 		if "Fast Learner" is listed in feats of player:
 			now val is 4;
 		say "[bold type]You feel empowered by your support of the game.[roman type][line break]";
-		now xp of player is val * 12 * 13;
-		[ say "XP set to [xp of player].";]
-		decrease xp of player by val * ( level of player ) * ( level of player + 1 );
-		[ say "XP decreased to [xp of player].";]
+		now XP of player is val * 12 * 13;
+		[ say "XP set to [XP of player].";]
+		decrease XP of player by val * ( level of player ) * ( level of player + 1 );
+		[ say "XP decreased to [XP of player].";]
 		now val is 12 - level of player;
 		[ say "Levelling up [value] times.";]
 		repeat with x running from 1 to val:

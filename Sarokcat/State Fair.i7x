@@ -86,12 +86,12 @@ to say borisquestforcock:
 		increase borisquest by 1;
 		increase boristalk by 1;
 		now lastfuck of Boris is turns;
-	else if lastfuck of Boris - turns is less than 6:
+	else if lastfuck of Boris - turns < 6:
 		say "'Sorry friend,' Boris says with regret, 'I may be as eager as you seem to be to enjoy my new cock, but it still needs a bit of rest before it is ready and roarin to go again.'";
 	else if borisquest is 5:
-		if cocks of the player is greater than 0:
+		if cocks of the player > 0:
 			if christyquest is 0:
-				say "'Um, sorry friend,' Boris says, as he glances down at your [cock of player] cock, 'I may owe you a lot for what you've done, but if there is going to be cock involved in any fucking, well let's just say I would rather it be mine.' Boris says apologetically. 'I just don't swing that way, if things were different... hmm that gives me an idea.' Boris says as he eyes you thoughtfully. 'I think I know where there might be something that could help us both out a lot, since you are obviously interested in getting to know me better,' he says as he pats his newly-acquired member. 'Since you went to such pains to find such a nice thing for me, it seems only fair I should find a way for you to try it out.' Boris finishes with a grin, 'You must have liked the look of it after all to pick such a nice one. Anyways, ' He says, shaking himself as he gets back to the conversation at hand, 'Here is a key to the locker room we use here, there should be a box there marked [']Christy[']. If you bring that back here we can see about having some real fun.' Boris says with a wink, his muzzle stretched out in a lewd grin as he sends you on your way.";
+				say "'Um, sorry friend,' Boris says, as he glances down at your [cock of player] cock, 'I may owe you a lot for what you've done, but if there is going to be cock involved in any fucking, well let's just say I would rather it be mine,' Boris says apologetically. 'I just don't swing that way, if things were different. Hmm, that gives me an idea,' Boris says as he eyes you thoughtfully. 'I think I know where there might be something that could help us both out a lot, since you are obviously interested in getting to know me better,' he says as he pats his newly-acquired member. 'Since you went to such pains to find such a nice thing for me, it seems only fair I should find a way for you to try it out,' Boris finishes with a grin. 'You must have liked the look of it after all to pick such a nice one. Anyways,' he says, shaking himself as he gets back to the conversation at hand, 'Here is a key to the locker room we use here, there should be a box there marked [']Christy[']. If you bring that back here we can see about having some real fun.' Boris says with a wink, his muzzle stretched out in a lewd grin as he sends you on your way.";
 				now christyquest is 1;
 			else if christyquest is 1:
 				say "'Sorry friend,' Boris says with a shrug, 'I still don't swing that way. But if you really want to try out my new addition you can go check out that locker room I told you about.'";
@@ -183,7 +183,7 @@ check gameplay:
 
 
 carry out gameplay:
-	if lastgameplay - turns is less than 4:
+	if lastgameplay - turns < 4:
 		say "Stepping up to the game booth, you hit the button to activate the contest game, only to sigh when nothing happens. The game must not have reset yet. You should try again later.";
 		stop the action;
 	else:
@@ -193,7 +193,7 @@ carry out gameplay:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 14:
+		if diceroll > 14:
 			say "Your swift reflexes are the death of all little cardboard targets! They will learn to fear your awesome might! Oh and hey you won a prize too![line break]";
 			let prizegift be a random number from 1 to number of filled rows in the table of random critters;
 			choose row prizegift from the table of random critters;

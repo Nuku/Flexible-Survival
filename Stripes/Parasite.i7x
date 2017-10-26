@@ -100,7 +100,7 @@ an everyturn rule:
 								now non-infectious entry is true; [Wasps locked again]
 								break;
 				else:
-					if hp of player < 1, now hp of player is 1;
+					if HP of player < 1, now HP of player is 1;
 					say "     The larva's activity inside you becomes too much for you and following some strange instinct, you head off alone briefly and find an elevated, open spot and wait. Soon enough, one of the black wasps is drawn in by your scent. Feeling strangely aroused and having no more will to resist it, you readily give yourself up to the large large insect with a lustful moan.";
 					say "[losetoblackwasp]";
 			else if larvacounter is odd and a random chance of 1 in 2 succeeds:
@@ -155,7 +155,7 @@ to say blackwaspdesc:
 
 
 to say losetoblackwasp:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Giving into the urges coming from your [if cunts of player > 0]womb[else]belly[end if] and the parasite within, you moan lustfully and bare yourself to the creature, dropping to your knees. The insect buzzes happily and moves atop you, running its insectile legs over your [bodytype of player] body. Soon, it brings its abdomen into position and drives its stinger-cock into your [if cunts of player > 0]cunt[else]ass[end if] and starts fucking you wildly. ";
 	else:
 		say "     Battered by the insect until you can no longer resist, your exhausted body is pinned down by it. Its insectile legs run over your [bodydesc of player] pulling off your pack and clothes quickly. It does seem to take care in doing so though, perhaps trying not to damage you further, and pushes you onto all fours. Lacking the strength to continue to struggle, you can only wait as it brings its abdomen into position and drives its stinger-cock into your [if cunts of player > 0]cunt[else]ass[end if] and starts fucking you wildly. ";
@@ -179,7 +179,7 @@ to say beattheblackwasp:
 Chapter 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -206,7 +206,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 6;
 	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 40; [ The monster's starting hit points. ]
+	now HP entry is 40; [ The monster's starting HP. ]
 	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
 	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -246,7 +246,7 @@ this is the waspparasite rule:
 when play ends:
 	if insectlarva is true:
 		if bodyname of player is "Black Wasp":
-			if humanity of player is less than 10:
+			if humanity of player < 10:
 				say "     Driven mad by the effects of the infection and the parasite inside you, you lose yourself to the lustful urges it is imposing upon you. You wander your way back to the hive, rejoining the wasps there. Pleased to see the return of another of their parasitic breeders, they welcome you lustfully by running their proboscis tongues over you and fucking you repeatedly. During this orgy of welcome, your hands and feet are encased in the grey material, making you a part of the hive like the other breeders. Your infected mind is pleased by this prospect and you happily let yourself be [one of]fixed into position on all fours[or]suspended spread eagle[or]trapped as part of a wall[at random] and be bred full of gooey eggs over and over again.";
 				say "     It is a pleasant, mindless life that fills you with a drug-filled joy from the wonderful symbiosis you have with the hive's larva inside you. The queen is generous as well, sometimes releasing those with fertilized eggs already in them to enjoy a mindless, lustful orgy together while the insects watch their breeders amuse themselves before being reattached to the hive in new positions.";
 				if larvalaid > 4:
@@ -259,7 +259,7 @@ when play ends:
 				say "     Starting a new life, you have trouble making new friends because of your significantly altered body, but this doesn't bother you very much. You are quite close to the few friends that you do have. Your life as a programmer lets you avoid unnecessary interpersonal contact. You do well at this, speedily typing away with both your hands and additional pair of insect legs. Your insect instincts also result in a slightly different way of thinking, allowing you to have creative and innovative solutions for certain problems, especially with computer networking and multi-computer programs.";
 				say "     And always, you have the companionship of your symbiotic larva, sharing a faint sense of its rather simple emotions. You go camping often, almost every week-end, and find a secluded, elevated spot to wait. Each time, a black wasp eventually follows your scent and comes to join you in lustful breeding of more eggs. These eggs you later deposit in an abandoned warehouse or factory in the city for the wasps to find. You move every few years once each new hive is properly established, sometimes with a few people you brought to it become fresh breeders for the new wasps' nest. You are tempted to join these new hives from time to time, but you know your greater role is to help spread new hives and not just to enjoy the pleasures of simply being a mindless breeder for one alone.";
 		else:
-			if humanity of player is less than 10:
+			if humanity of player < 10:
 				say "     As your infection begins to fully take hold of you, your body roils and the larva in you struggles before being expelled, allowing you to complete your transition into your new life without its influence corrupting your new instinctual needs.";
 			else:
 				if humanity of player < 40:

@@ -51,12 +51,12 @@ Section 1 - Int function converts to the nearest integer
 	let result be the whole part of N;
 	let temp1 be the absolute value of N;
 	let temp2 be the fractional part of temp1;
-	if temp2 is greater than HalfDivisor:
-		if result is greater than 0:
+	if temp2 > HalfDivisor:
+		if result > 0:
 			let result be result plus 1;
 		if result is 0:
 			let result be result plus 1;
-		if result is less than 0:
+		if result < 0:
 			let result be result minus 1;
 	decide on result.
 ]
@@ -84,7 +84,7 @@ To decide which real number is the absolute value of (N - a real number):
 Section 5 - Absolute value of a number (converts negatives to positives)
 
 To decide which number is the absolute value of (N - a number):
-	if N is less than 0:
+	if N < 0:
 		let N be 0 minus N;
 	decide on N.
 ]
@@ -136,7 +136,7 @@ Section 2 - Greater than
 To decide if (A - a real number) is real greater than (B - a real number):
 	let temp1 be the aggregate of A;
 	let temp2 be the aggregate of B;
-	if temp1 is greater than temp2:
+	if temp1 > temp2:
 		decide yes;
 	decide no.
 
@@ -157,7 +157,7 @@ Section 3 - Less than
 To decide if (A - a real number) is real less than (B - a real number):
 	let temp1 be the aggregate of A;
 	let temp2 be the aggregate of B;
-	if temp1 is less than temp2:
+	if temp1 < temp2:
 		decide yes;
 	decide no.
 
@@ -551,7 +551,7 @@ To decide which real number is the number derived from (T - indexed text):
 		if test char is ".":
 			let second be result;
 			let second part test be false;
-			if multiplier is less than divisor:
+			if multiplier < divisor:
 				now invalid conversion is true;
 				decide on 0 as a fixed point number;
 			let result be 0;
@@ -600,7 +600,7 @@ To decide which real number is the number derived from (T - indexed text):
 			now invalid conversion is true;
 			decide on 0 as a fixed point number;
 		if second part test is true:
-			if multiplier is greater than divisor:
+			if multiplier > divisor:
 				now invalid conversion is true;
 				decide on 0 as a fixed point number;
 	let first be result;
@@ -747,30 +747,30 @@ If we want to test if two fixed point numbers are equal we use the phrase 'if X 
 
 We can also substitute an integer number on one side or other of the phrase but not on both sides.
 
-Section : Testing if one fixed point number is greater than a second fixed point number
+Section : Testing if one fixed point number > a second fixed point number
 
-If we want to test if one fixed point number is greater than a second fixed point number we use the phrase 'if X is real greater than Y'
+If we want to test if one fixed point number > a second fixed point number we use the phrase 'if X is real greater than Y'
 
 	if val1 is real greater than val2:
-		say "val1 is greater than val2".
+		say "val1 > val2".
 
 We can also substitute an integer number on one side or other of the phrase but not on both sides.
 
-Section : Testing if one fixed point number is less than a second fixed point number
+Section : Testing if one fixed point number < a second fixed point number
 
-If we want to test if one fixed point number is less than a second fixed point number we use the phrase 'if X is real less than Y'
+If we want to test if one fixed point number < a second fixed point number we use the phrase 'if X is real less than Y'
 
 	if val1 is real less than val2:
-		say "val1 is less than val2".
+		say "val1 < val2".
 
 We can also substitute an integer number on one side or other of the phrase but not on both sides.
 
-Section : Testing if a fixed point number is less than 0
+Section : Testing if a fixed point number < 0
 
-If we want to test whether a fixed point number is less than 0, we use the phrase 'if X is negative'.
+If we want to test whether a fixed point number < 0, we use the phrase 'if X is negative'.
 
 	if val1 is negative:
-		say "val1 is less than 0".
+		say "val1 < 0".
 
 We need a separate function for this as a fixed point number is made up of two number parts.  -0.2333 contains the parts 0 and -2333.  Testing only the first part of the number would give an incorrect result as it is not less than 0.
 
@@ -1000,7 +1000,7 @@ Example: *** Ballistics - Shows the use of real numbers in ballistic calculation
 			say "Try turning the handle to a number." instead.
 
 	Check adjusting it to:
-		if the number understood is less than 1 or the number understood is greater than 90:
+		if the number understood < 1 or the number understood > 90:
 			say "That is physically impossible.  The gun can be set to an angle from 1 to 90 degrees." instead.
 
 	Carry out adjusting it to:
@@ -1023,7 +1023,7 @@ Example: *** Ballistics - Shows the use of real numbers in ballistic calculation
 		say "After a few seconds, you see the projectile land at [distance as an integer] metres.";
 		if the distance as an integer is 1918:
 			end the story finally saying "Congratulations, you have passed your basic field artillery exam.";
-		if the distance as an integer is less than 10:
+		if the distance as an integer < 10:
 			say "The projectile goes straight up and comes down destroying both you and the gun.";
 			end the story finally saying "You have failed in a spectacular way.";
 		if the projectiles of the gun is 0:

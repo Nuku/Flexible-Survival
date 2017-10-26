@@ -289,7 +289,7 @@ Centering text puts the text on its own new line, since it would not make much s
 
 If we want to make our own calculations using this information, the width of the screen can be checked at any time, like so:
 
-	if the screen width is less than 75, say "The map will not display properly until you widen your screen." instead.
+	if the screen width < 75, say "The map will not display properly until you widen your screen." instead.
 
 Section: Customizing the status line
 
@@ -355,7 +355,7 @@ This is an easily overused effect, but here is how we might do it, using Basic S
 	When play begins:
 		say "You stand in the footlights, looking out over the assembled multitude, dimly recognizing the Grand Duke seated in his box, and the Grand Duke's mistress in hers; and try to remember (through two bottles of brandy and an ill-advised champagne) how your part begins. You've relied often enough on sheer instinct to carry you through; but this time might just be the time it fails... [line break]";
 		fake command;
-		say "Yes: the high C . It begins there...";
+		say "Yes: the high C. It begins there...";
 		pause the game.
 
 	Include Basic Screen Effects by Emily Short.

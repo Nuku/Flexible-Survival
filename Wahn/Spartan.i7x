@@ -9,7 +9,7 @@ when play begins:
 Section 1 - Monster Responses
 
 to say Spartan wins:
-	if hp of player > 0:[player submits]
+	if HP of player > 0:[player submits]
 		if bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player is 0:[Spartans, but not herms and females]
 			say "     A shocked expression on his face, the young warrior stares at you as you kneel and submit to him. Then anger clouds his features and he shouts 'Impostor! How dare you disguise yourself as one of your betters, slave. I'll teach you your place, dirty Helot!' With that, he rips the helmet off your head and throws it on the ground, its metal crumpling like it's a cheap copy and not the well-crafted helmet it was seconds before. Then he shreds your cloak, its bright red colour fading as he touches it and the material ripping easily in his hands.";
 			LineBreak;
@@ -172,7 +172,7 @@ to say SpartanDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -199,7 +199,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Male";
-	now hp entry is 95;
+	now HP entry is 95;
 	now lev entry is 10;
 	now wdam entry is 15;
 	now area entry is "Campus";         [ Current options are 'Outside' and 'Mall'  Case sensitive]
@@ -335,7 +335,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Spartan":
-		if humanity of player is less than 10:   [succumbed]
+		if humanity of player < 10:   [succumbed]
 			if cunts of player > 0:[female + herm]
 				if "Submissive" is not listed in feats of player:
 					say "No matter about the rest of you, having female genitals makes the other Spartans belittle you, leading to quite a few engaging you in battle to 'show you your place'. It takes quite a bit of work handing out black eyes and sprained wrists until you've shown them that just because you have a pussy, you aren't weak. After gaining grudging acceptance, you keep yourself busy with training sessions with other promising Spartans, usually winning and making them eat you out.";

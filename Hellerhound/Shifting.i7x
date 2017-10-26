@@ -11,7 +11,7 @@ instead of resolving a Secure Area:
 		say "     There is a large sign on the fence surrounding the facility which reads: [']Please be advised: This facility is now closed due to a lack of male content.[']";
 		now secure area is resolved;
 		continue the action;
-	if a random number between 5 and 20 is less than the perception of the player:
+	if a random number between 5 and 20 < the perception of the player:
 		say "     Oh my god. You realize that the doors are made of diamond. What needs that much protection?";
 	say "[line break][line break]";
 	say "Do you wish to get to the door?";
@@ -57,7 +57,7 @@ instead of resolving a Secure Area:
 				say "     The halo resists all your efforts to break through, and you are forced to be on your way.";
 		else:
 			say "     You trip and fall onto one of the barbed wire fences! Yow!";
-			decrease the hp of the player by 20;
+			decrease the HP of the player by 20;
 			say "     An odd tingling runs through you, and with jarring suddenness you are back on the street, looking away from the secure house.";
 	else:
 		say "     You wisely avoid what could only be more trouble than it is worth.";
@@ -165,31 +165,31 @@ To transform:
 	follow the sex change rule;
 	follow the sex change rule;
 	if cockname of player is not name entry:
-		if cocks of player is greater than 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
+		if cocks of player > 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 		now cockname of player is name entry;
 		now cock of player is cock entry;
-	if strength of player is less than str entry:
+	if strength of player < str entry:
 		say "You feel your muscles swelling with [name entry] [one of]strength[or]physique[or]power[at random].";
 		increase strength of player by 1;
 		increase capacity of player by 5;
-	if Intelligence of player is less than Int entry:
+	if Intelligence of player < Int entry:
 		say "You feel your mind swelling with [name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
 		increase Intelligence of player by 1;
-	if Dexterity of player is less than Dex entry:
+	if Dexterity of player < Dex entry:
 		say "You feel your hand eye coordination swelling with [name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
 		increase Dexterity of player by 1;
-	if Stamina of player is less than Sta entry:
+	if Stamina of player < Sta entry:
 		say "You feel your body toughening with [name entry] [one of]Stamina[or]physique[or]power[at random].";
 		increase Stamina of player by 1;
 		if remainder after dividing stamina of player by 2 is 0:
-			increase maxhp of player by level of player plus 1;
-	if Perception of player is less than Per entry:
+			increase maxHP of player by level of player plus 1;
+	if Perception of player < Per entry:
 		say "You feel your senses swelling with [name entry] [one of]Perception[or]aptitude[or]feral attention[at random].";
 		increase Perception of player by 1;
-	if Charisma of player is less than Cha entry:
+	if Charisma of player < Cha entry:
 		say "You feel your social sense swelling with [name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
 		increase Charisma of player by 1;
-	if the libido of the player is less than libido entry:
+	if the libido of the player < libido entry:
 		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";
 		now the libido of the player is the libido entry;
 

@@ -60,7 +60,7 @@ check swimtoing:
 	if the location of the player is noun, say "You're already there." instead;
 
 carry out swimtoing:
-	if a random number between 1 and 26 is greater than the perception of the player:[higher chance than normal]
+	if a random number between 1 and 26 > the perception of the player:[higher chance than normal]
 		swimmingfight;
 	else:
 		say "You travel to [the noun], avoiding trouble as best you can. The gills on your neck prove their worth, gathering air for you underwater as you move beneath the waves.";

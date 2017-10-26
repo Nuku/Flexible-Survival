@@ -56,7 +56,7 @@ to say automatondesc:
 
 to say losetoautomaton:
 	if autogender is 1:
-		if hp of player > 0:
+		if HP of player > 0:
 			say "     You submit to the metal man, unwilling to fight the robotic person any longer. ";
 		else:
 			say "     You are knocked down by the metal man, unable to continue to fight the robotic person any longer. ";
@@ -65,10 +65,10 @@ to say losetoautomaton:
 		else if cunts of player is 0 and a random chance of anallevel in 4 succeeds:
 			say "     He grabs you and pins you down beneath him, moving mechanically, but with clear intent. Pushing you onto all fours, the metal man moves atop you and sinks his stiff, metal cock into your ass. His rod is quite hard and is cool at first, but warms up quickly as he thrusts into you with mechanical motion over and over. His rhythm is steady and soon has you moaning beneath him as he drives his [if metalskin is 1]bronze[else if metalskin is 2]aluminium[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into you[if cocks of player > 0] until you cum. As you orgasm beneath him, [else] until [end if]you feel the hot pulse of his silvery seed shooting into you. This mercurial semen flows into you, claiming your ass as the metal man empties his balls into you. Once he's been drained, he gets up and moves off, searching for a new partner to mount and infect.[mimpregchance]";
 		else:
-			say "     He takes you by the shoulders and firmly pushes you to your knees. Mechanically moving a hand to the back of your head, your face is pressed to his crotch[if hp of player > 0]. Having conceded the fight, you must acceded to his emotionless demand and [else]. Given the firmness of his emotionless demand, you have little choice but to[end if] open your mouth to welcome his [if metalskin is 1]bronze[else if metalskin is 2]aluminium[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into your mouth. The rod is quite hard and is cool at first, though it warms up quickly as you lick and suck at it.";
+			say "     He takes you by the shoulders and firmly pushes you to your knees. Mechanically moving a hand to the back of your head, your face is pressed to his crotch[if HP of player > 0]. Having conceded the fight, you must acceded to his emotionless demand and [else]. Given the firmness of his emotionless demand, you have little choice but to[end if] open your mouth to welcome his [if metalskin is 1]bronze[else if metalskin is 2]aluminium[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into your mouth. The rod is quite hard and is cool at first, though it warms up quickly as you lick and suck at it.";
 			say "     He remains impassive as he thrusts into you with mechanical motion over and over. His rhythm is steady and allows you to work your tongue and palate over the shiny penis. While it does have a faintly metallic taste, there is something enticing about its flavour as well. His lack of external reaction only goads you on further, working with increasing zeal in your attempt to get the unfeeling robot man to cum. After a few minutes of this, you've gotten yourself quite worked up and are finally rewarded for your efforts with the metal man's mercurial seed. Pulse after pulse of silvery cum shoots across your tongue and down your throat. The taste and texture of it may be unusual, but is also strangely exciting, with both the musky tang of semen and the slickness of the flowing metal. Once he's been drained, you are pushed back and he moves off, searching for a new partner to claim and infect.";
 	else:
-		if hp of player > 0:
+		if HP of player > 0:
 			say "     You submit to the metal woman, unwilling to fight the robotic person any longer. ";
 		else:
 			say "     You are knocked down by the metal woman, unable to continue to fight the robotic person any longer. ";
@@ -85,7 +85,7 @@ to say beattheautomaton:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -112,7 +112,7 @@ When Play begins:
 	now int entry is 16;
 	now cha entry is 16;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 60; [ The monster's starting hit points. ]
+	now HP entry is 60; [ The monster's starting HP. ]
 	now lev entry is 8; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
 	now area entry is "Capitol"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -171,7 +171,7 @@ the scent of silver semen is "The contents of the jar has a metallic smell to ac
 [
 when play ends:
 	if bodyname of player is "Automaton":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your automaton infection.";
 		else:
 			say "     You survive, but were infected by the automaton.";

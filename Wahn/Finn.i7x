@@ -27,7 +27,7 @@ Instead of resolving a Missing Farm Hand:
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Perception-Check)[line break]";
 		LineBreak;
 		increase diceroll by bonus;
-		if diceroll is greater than 13:
+		if diceroll > 13:
 			say "     Walking along the path, you do spot something a little bit out of the ordinary - there is a faint dip in the height of the grass in one spot, a bit off into the grassland. You move closer and see the signs of a struggle, with a moderately sized patch of the quick-growing grass still recovering from a disturbance in its growing pattern. Looks like someone - or several someones - wrestled on the ground here. The typical cowboy-hat of one of the farmhands is visible between the yellow and green stalks of the grass, obviously abandoned when Finn was abducted. Following a fairly well visible trail starting at the fight's location, you walk out into the grassland. A bit further along, on a small patch of dirt they moved across, you see that the group left numerous hoof-prints. Looks like they were some sort of equines too...";
 			LineBreak;
 			say "     [bold type]Do you want to keep tracking the raiders? There'll likely be a few of them, so you'd better be ready for a fight.[roman type]";
@@ -188,14 +188,14 @@ Section 2 - NPC
 [  99: Finn's dead                                       ]
 [ 100: Finn joined the stables                           ]
 
-Finn is a man. The hp of Finn is usually 0.
+Finn is a man. The HP of Finn is usually 0.
 The description of Finn is "[FinnDesc]".
 The conversation of Finn is { "<This is nothing but a placeholder!>" }.
 The scent of Finn is "     Finn smells nicely masculine, with a little bit of fur, straw and sweat in the mix. Seems like he's not adverse to doing some good and solid work for his boss at the farm.".
 
 to say FinnDesc:
 	if debugactive is 1:
-		say "DEBUG -> FINNTRACKINGPROGRESS: [FinnTrackingProgress], HP: [hp of Finn] <- DEBUG[line break]";
+		say "DEBUG -> FINNTRACKINGPROGRESS: [FinnTrackingProgress], HP: [HP of Finn] <- DEBUG[line break]";
 	say "     <This is the basic description of Finn. Body, Clothing, etc. can be laid out here>";
 	if FinnTrackingProgress is 3: [Finn rescued, no sex]
 		say "     The horseman notices your gaze on himself and looks up from what he was doing, then <Reaction of Finn at being approached by the guy that rescued him.>";

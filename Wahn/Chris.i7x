@@ -1,6 +1,6 @@
 Version 1 of Chris by Wahn begins here.
 
-[ hp of Chris - location                           ]
+[ HP of Chris - location                           ]
 [   0: not born yet                                ]
 [   1: in the library                              ]
 [ 100: lost in the orc lair                        ]
@@ -14,7 +14,7 @@ Version 1 of Chris by Wahn begins here.
 [   0: nothing yet                                 ]
 [   1: fucked the guy                              ]
 
-Chris is a man. The hp of Chris is normally 0.
+Chris is a man. The HP of Chris is normally 0.
 The description of Chris is "[ChrisDesc]".
 The conversation of Chris is { "Mew!" }.
 The icon of Chris is Figure of Chris_clothed_icon.
@@ -27,7 +27,7 @@ instead of sniffing Chris:
 
 to say ChrisDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Chris] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Chris] <- DEBUG[line break]";
 	if libido of Chris is 0: [half-orc Chris]
 		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. Still, the sleeveless shirt he found to wear is stretched tight over his hard pecs and abs, providing quite a nice sight. His other articles of clothing are a pair of shorts and some designer undies (known to be 'roomy' at the front), both of which ride pretty low, letting you glimpse the trimmed bush of his pubes. Something tells you that he'd be ready to push them off completely in a heartbeat, letting free the cock showing in a respectively sized bulge at the front. Chris's features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Mid-length dark brown hair completes the picture of a very handsome man.";
 		say "     As Chris notices your intense gaze upon him, he smiles back at you, giving a little wave with his hand.";

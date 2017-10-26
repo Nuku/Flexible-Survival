@@ -85,7 +85,7 @@ Instead of resolving DogHouse:
 					WaitLineBreak;
 					say "Muttering into the herms ear about how good shi tastes you're not ready to receive a punch to the face as the Dal growls at you. Blinking from the feeling of pain going up your spine you give the other a strange look. 'Asshole, I'm a girl not a guy so don't treat me like I'm some kind of callboy can just play with however you like.' The rumbling snarl from the spotted canine makes you nod without having to think twice. Trying to apologize gets you nowhere as the herm Dal simply gets up, after wiping hirself off with a handkerchief, and then goes about hir way down the steps of the bleacher and then out of sight.[line break]";
 					say "Not understanding what just happened, but not exactly feeling that guilty about it, you simply shrug and then turn to watch the rest of the show. The eyes mocking you and the voices snickering inside of your ears mean little to you as you lick your tongue across your teeth. Tasting the last of the yummy tasting herm you just had you think over how you'll plan to save Birch from his fate. Thoughts of the disgruntled Dalmatian are already leaving your mind in favor of more important things.[line break]";
-					decrease hp of player by 10;
+					decrease HP of player by 10;
 					increase libido of player by 17;
 					increase score by 5;
 				else:

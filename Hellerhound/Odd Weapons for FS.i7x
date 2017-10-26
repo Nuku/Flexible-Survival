@@ -69,7 +69,7 @@ fellforward is a number that varies.
 instead of resolving sword nest:
 	say "You come across the remains of a giant nest [if washerenest is 1]again[end if], probably belonging to gryphons. It is scattered, and sexual fluids of all kinds, not all from gryphons, cover the ground. It looks as if several gangs of different species fought here.. or maybe 'played' as well. The ground is so thoroughly coated with it that you cannot enter without touching it.";
 	now washerenest is 1;
-	if the humanity of the player is less than 60: [falling to the nanites]
+	if the humanity of the player < 60: [falling to the nanites]
 		say "Your mind feels fuzzy, and you have a strange desire to roll in the muck. Do you submit?";
 		if the player consents:
 			say "You run and jump into the slimy muck, a sick splot sounding and echoing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
@@ -175,7 +175,7 @@ gotwhip is a number that varies.
 
 instead of resolving Destroyed bushes:
 	say "You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
-	if the humanity of the player is less than 50:
+	if the humanity of the player < 50:
 		say "Do you want to drink from the puddles?";
 		if the player consents:
 			infect "Black Equinoid";
@@ -188,7 +188,7 @@ instead of resolving Destroyed bushes:
 	say "Do you wish to look around?";
 	if the player consents:
 		say "In a nearby bush you find a riding saddle and riding boots, both women's. It seems as if a woman went riding in the park when the infection broke out. Her horse changed, and raped her. Since the clearing is larger than if the horse just fucked her, you assume she changed and submitted as well.";
-		if the perception of the player is greater than a random number between one and 20:
+		if the perception of the player > a random number between one and 20:
 			say "In one of the puddles of cum you find a whip with metal bits strung throughout it. It looks as if the rider carried it, and lost it in the fray. It is currently covered with cum, but if you have enough water, you could change that. Do you wish to?";
 			if the player consents:
 				if carried of water bottle >= 3:

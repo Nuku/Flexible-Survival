@@ -53,7 +53,7 @@ instead of resolving a loaded catapult:
 			increase catadiff by 10;
 		if the player consents:
 			say "You begin to wriggle into the tangle of ropes.";
-			if a random number between one and catadiff is greater than the dexterity of the player:[the catapult fires]
+			if a random number between one and catadiff > the dexterity of the player:[the catapult fires]
 				say "You accidentally bump a trigger rope, and the contraption begins to swing. You get out of there fast. [catapult fire]";
 			else:
 				say "You manage to get the resources without touching the ropes.";

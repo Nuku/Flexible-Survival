@@ -12,7 +12,7 @@ Instead of Resolving a Horse Sense:
 	let bonus be ( intelligence of player + perception of player - 20 ) / 2;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
-	if bonus + dice is greater than 10:
+	if bonus + dice > 10:
 		say "     As the scent of the rain just starting to come down catches your attention, you realize that something is amiss and you shake the swelling thoughts of galloping naked through the rain from your thoughts. You scan the area quickly for shelter and rush to the ruins of a nearby building.  Getting there before the horse-scented downpour can kick into full gear, you huddle under a scrap of ceiling that remains standing and wait it out.  Thankfully it is very brief.  And while you're disappointed to see rain and not be able to enjoy it or gather some for drinking, you can tell even it is not to be trusted.  At least you get to enjoy the beautiful lightning across the sky.  After the rain passes, the water is quickly soaked up by the parched soil.";
 	else:
 		say "     Basking in the pleasure of the rain falling on you, washing away some of the dust and grime that has built up during this heat wave.  Holding your mouth open wide, you try to catch what you can for your [if thirst of player > 30]parched [end if]throat.  As the rainfall picks up, the scent of the rain coupled with the drenching wetness of your clothes matting down across your frame makes you shake your head wildly as the sudden urge to charge across the plains gets you moving before you can stop yourself.";

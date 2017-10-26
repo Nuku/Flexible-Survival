@@ -54,8 +54,8 @@ to say mixnmatch:
 	let zz be a random number between 1 and 15;
 	if hardmode is true and level of player > 7:		[Hard Mode Version!]
 		increase qq by level of player - 7;
-		now hp entry is 27 + ( ( 5 * qq ) + zz + a random number between 0 and qq );
-		now monsterhp is hp entry;
+		now HP entry is 27 + ( ( 5 * qq ) + zz + a random number between 0 and qq );
+		now monsterHP is HP entry;
 		now lev entry is qq;
 		if lev entry > 9:
 			now wdam entry is 9 + ( ( qq * 2 ) / 7 );
@@ -63,14 +63,14 @@ to say mixnmatch:
 			now wdam entry is ( ( ( qq - 1 ) * 3 ) / 2 );
 		now dex entry is 15 + ( qq / 6 ) + ( square root of ( qq + 8 ) ); [faster initial growth, but slows down more]
 	else:								[Normal Play Version!]
-		now hp entry is ( ( 8 times qq ) plus zz );
-		now monsterhp is hp entry;
+		now HP entry is ( ( 8 times qq ) plus zz );
+		now monsterHP is HP entry;
 		now wdam entry is ( ( ( qq minus 1 ) times 3 ) divided by 2 );
 		now lev entry is qq;
 		now dex entry is ( ( ( ( qq minus 1 ) times 4 ) divided by 3 ) plus 10 );
 	[testing values achieved]
 [	say "Lvl is [qq]. Variable is [zz].";
-	say "HP is [hp entry].";
+	say "HP is [HP entry].";
 	say "Dmg is [wdam entry]. Dex is [dex entry].[line break]";]
 
 
@@ -157,7 +157,7 @@ to say beatthemischim:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -184,8 +184,8 @@ When Play begins:
    now int entry is 15;
    now cha entry is 15;
    now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 60;
-   now lev entry is 6; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now HP entry is 60;
+   now lev entry is 6; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
    now wdam entry is 8; [Amount of Damage monster Does when attacking.]
    now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
    now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -213,7 +213,7 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Mismatched Chimera":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your identity collapses, you are left with your fractured mind and instincts. Lacking any true focus to your instincts, you wander the city in a haze. You pass from one territory group to another, mating with the creatures there, but never transforming further, remaining a mismatched hodgepodge of creatures. Several try to keep you as a mate or prisoner, but you always escape eventually and move on. Your existence is aimless and with little conscious thought, but filled with sex of endless variety from all those you meet.";
 			if "Sterile" is not listed in feats of player and cunts of player > 0:
 				say "     Your womb gives birth of a wide array of hybrid children over the years. Some are taken and assimilated into other groups, but some go on to form new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";

@@ -1,7 +1,7 @@
 Latex Nerd FScene by Maw begins here.
 
 Instead of fucking the nerd when tribe of player is latex foxes:
-	if turns minus lastfuck of nerd is less than fuckfrequency of nerd and lastfuck of nerd is greater than 0:
+	if turns minus lastfuck of nerd < fuckfrequency of nerd and lastfuck of nerd > 0:
 		say "The nerdy vixen looks at you sadly, ears dropping with a small squeak upon her skull. 'I has to do work now boss. Come later?' Her paw lowers to rub at the said sore cheeks of her rear with that all too common squeal of rubber-like fleshes rubbing against each other.";
 		stop the action;
 	say "[line break]The vixen looks at you with a curious gaze, a soft squeak of rubber against rubber flickering in your ears. She raises one of her black, glossy paws up and over her snout, using a single digit to push the bridge of her glasses up the top of her muzzle. 'Boss wants what?' she cocks her head to the side while she stares you down. The large hat upon her head makes a ruckus of jingling when she cocks her head to the side in curiosity.[line break][line break]";

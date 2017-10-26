@@ -26,10 +26,10 @@ to say losetoimpalagirl:
 
 to say losetoimpalaguy:
 	if a random chance of 1 in 4 succeeds and inheat is false:	[occasional oral if player is not in heat]
-		say "     [if hp of player > 0]When you give in to the impala's advances, the successful male chuckles and pushes you down onto your knees[else]Worn out from your fight, you cannot resist as the impala man pushes you to your knees[end if]. 'I'm going to have a little fun with you, little [if cunts of player > 0]ewe[else]ram[end if],', he says lustily. He strokes his above-average cock against your cheek, the musky scent filling your nose and making [if player is submissive]your submissive urges well up[else if cunts of player > 0]your pussy wet with its virility[else]your mouth water a little[end if][if hp of player > 0] despite yourself[end if]. Feeling a little light-headed, you part your lips as he brushes his dribbling glans across them. After a lick to sample his taste, your mouth welcomes it in.";
+		say "     [if HP of player > 0]When you give in to the impala's advances, the successful male chuckles and pushes you down onto your knees[else]Worn out from your fight, you cannot resist as the impala man pushes you to your knees[end if]. 'I'm going to have a little fun with you, little [if cunts of player > 0]ewe[else]ram[end if],', he says lustily. He strokes his above-average cock against your cheek, the musky scent filling your nose and making [if player is submissive]your submissive urges well up[else if cunts of player > 0]your pussy wet with its virility[else]your mouth water a little[end if][if HP of player > 0] despite yourself[end if]. Feeling a little light-headed, you part your lips as he brushes his dribbling glans across them. After a lick to sample his taste, your mouth welcomes it in.";
 		say "     The victorious stud chuckles and grabs your head, thrusting into your mouth as you do your best to lick and suck as he does. Each time he pulls back, he leaves just his tapered glans in your mouth, allowing you a moment to suck on it firmly while your tongue plays across it. His throbbing manhood drools richly musky pre into your mouth and his crotch fur is heavy with his scent as well. You're reduced to an eager, cocksucking slut as you lose yourself in the moment. And when his climax comes, you're fed a gooey load of impala cum that you swallow down with a thirst for more. But done with you for now, the impala stud pushes you back, leaving you to land on your ass. 'That's enough for now, little [if cunts of player > 0]ewe[else]ram[end if][if player is impreg_ok]. Maybe next time I'll give you the breeding you deserve and put a fawn in your belly[else]. I might not be so generous next time you stray into my territory[end if].'  And with that said, he drives you off with a firm swat on your ass.";
 	else if player is impreg_able or ("Submissive" is listed in the feats of the player and cunts of player is 0): [male and female, can be impregnated or submissive]
-		say "     [if hp of player > 0]Giving in to the impala's advances, the successful male grabs you in his slender arms[else]Exhausted from your fight, you nearly fall over, but the impala man rushes forward to catch you with his slender arms[end if]. 'You're mine now, little ewe...' he says lustily. The presence of the strong male triggers [run paragraph on]";
+		say "     [if HP of player > 0]Giving in to the impala's advances, the successful male grabs you in his slender arms[else]Exhausted from your fight, you nearly fall over, but the impala man rushes forward to catch you with his slender arms[end if]. 'You're mine now, little ewe...' he says lustily. The presence of the strong male triggers [run paragraph on]";
 		if "Submissive" is listed in feats of the player and player is not impreg_able:
 			say "your submissive nature";
 		if player is impreg_able:
@@ -152,7 +152,7 @@ to say impaladesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -179,7 +179,7 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 16;
 	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 45;
+	now HP entry is 45;
 	now lev entry is 7; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
 	now area entry is "Plains"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -208,7 +208,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Impala":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb fully to your impala instincts, joining up with a herd of other impalas roaming the plains.";
 			if cunts of player is 0 and "Submissive" is listed in the feats of the player:
 				say "     Your submissive nature gets the better of you, and when the lead male moves to drive you out of his territory, you instead offer yourself up him. He's wary of you at first, but after he spends some time with you he realizes you're no more a threat to him than a doe. He spends almost as much time with you as he does with the females, you come to love the feeling of his cock filling you.";

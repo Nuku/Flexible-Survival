@@ -44,12 +44,12 @@ This is the quit rule:
 		rule succeeds.
 
 This is the move down rule:
-	if current menu selection is less than the number of filled rows in the current menu, increase current menu selection by 1;
+	if current menu selection < the number of filled rows in the current menu, increase current menu selection by 1;
 	reprint the current menu;
 	make no decision.
 
 This is the move up rule:
-	if current menu selection is greater than 1, decrease current menu selection by 1;
+	if current menu selection > 1, decrease current menu selection by 1;
 	reprint the current menu;
 	make no decision.
 

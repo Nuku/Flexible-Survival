@@ -44,7 +44,7 @@ an everyturn rule:
 			say "Your head begins to hurt, and you have a powerful urge to get some more [addictname].";
 		else if addictlefttime < 2:
 			say "You NEED MORE [addictname]!";
-			decrease the hp of the player by 5;
+			decrease the HP of the player by 5;
 			increase withdrawel by 1;
 		if withdrawel > 0:
 			if withdrawel < 1:

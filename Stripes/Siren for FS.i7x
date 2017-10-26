@@ -32,11 +32,11 @@ to say sirendesc:
 		let bonus be ( Strength of player + Stamina of player - 20 ) divided by 2;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] vs 16 and score [dice plus bonus]:[line break]";
-		if dice + bonus is greater than 15:
+		if dice + bonus > 15:
 			say "     You manage to fight your way through the rough waves and reach the rocky crag tired, but uninjured. You call out in search of the singer and are shocked as they appear.";
 		else:
 			say "     You are tossed and battered by the rough waters before you finally are bashed up against the rocky crag. You take [special-style-2]12[roman type] damage! You do manage to hang on and not be pulled away by the next wave and scramble up onto the sharp rock. You call out in search of the singer and are shocked as they appear.";
-			decrease hp of player by 12;
+			decrease HP of player by 12;
 		say "     The figure, despite their beauty and lovely face, is male and not entirely human as they first appeared. With the spell of the song breaking as they stop singing for a moment, you shake your head and look the creature over. This siren has a beautifully feminine face, but is otherwise entirely male. His body is mostly human and covered in smooth, perfect skin. But behind his back are a pair of white, feathery wings capable of supporting him in flight. His feet are taloned and bird-like, covered in golden-brown scales. Between his legs, he has a twin pair of very long cocks with a pair of football sized balls to accompany them. He grins viciously at you, his teeth a little too pointed and his eyes flashing menacingly.";
 		increase sirenfight by 1;
 	else:
@@ -44,11 +44,11 @@ to say sirendesc:
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus]+[sirenfight] vs 16 and score [dice plus bonus plus sirenfight]:[line break]";
 		say "     As you travel along, you can hear a siren's song again and it starts to cloud your mind. You struggle against it, trying to maintain control in the face of its hypnotizing effect. ";
-		if dice + bonus + sirenfight is greater than 15:
+		if dice + bonus + sirenfight > 15:
 			say "     Your will is strong and you are able to resist the haunting tune calling you into the sea. From afar, you hear the angry screech of the siren. They launch themselves off their rocky home and fly across the water, swooping in to attack you moments later.";
 		else:
 			say "     With that lovely song filling your mind, you head out into the water towards the rocky outcropping in the sea, heedless of the danger. As you start swimming out, the siren swoops down from the air to attack you, catching its entranced prey by surprise. You take [special-style-2]8[roman type] damage before you can struggle to land to fight the siren.";
-			decrease hp of player by 8;
+			decrease HP of player by 8;
 		say "     He has a mostly-human body with lovely, feminine features and beautiful, smooth skin. His eyes are sharp and menacing, as are his pointed teeth. Attached to his back are a pair of white, feathered wings and his feet end in bird-like talons. This well-endowed male has a pair of giant cocks and a huge ballsac to go with them. From the way those pricks are growing hard, it's clear he intends to use them on you.";
 
 
@@ -87,12 +87,12 @@ to say sirenattack:
 		let bonus be ( Charisma of player - 10 ) / 2;
 		let penalty be ( cha entry - 10 ) / 2;
 		let dicedice be a random number from 1 to 20;
-		if dicedice + bonus + sirenfight - penalty is less than 10:
+		if dicedice + bonus + sirenfight - penalty < 10:
 			let tempnum be a random number between 1 and 4;
-			decrease hp of player by tempnum;
+			decrease HP of player by tempnum;
 			decrease charcounter by tempnum;
 			if charcounter < 1:
-				now hp of player is 0;
+				now HP of player is 0;
 				say "     The siren's song drains the last of your will to fight and you collapse before it, submitting to the creature's beautiful melody as it knocks you to the ground.";
 				continue the action;
 			else:
@@ -106,7 +106,7 @@ to say sirenattack:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -133,8 +133,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 20;
 	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 30; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 3; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 30; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 3; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 4; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Beach";
 	now cocks entry is 2; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -163,14 +163,14 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Siren":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your infection takes over, your new instincts draw you to the seaside. You soon join the hidden aerie of the sirens among the sharp rocks. ";
 			if cocks of player > 0:
 				say "     The changes deep within you reach full fruition and you can feel eggs growing within you, waiting to be deposited in warm nests. From the rocky spires, you sing out to anyone you find tantalizing, drawing them in with your mesmerizing song. After a long and pleasurable mating, you deposit your eggs into them. Doing this brings you a level of pleasure you've never known before. You always enjoy filling them to capacity, then watching them, still under the effects of your song, complete the eggs' cycle by burying them on the warm beach to eventually hatch into new sirens for the aerie.";
 				say "     When the soldiers come through, you and the others take particular pleasure in luring them in. Between your lovely voices and gorgeous, nearly-human bodies, they are easy prey. The particularly religious ones are the easiest targets of all, your almost angelic appearance and voices overwhelming them with awe. During that time, your colony grows greatly and siren flocks spread up and down the coast, singing their lovely song to draw in sailors to their doom. Their delicious, eggy doom.";
 		else:
 			say "     You make it through the ordeal in the city and are rescued by the military during their attempt at clean-up. Your predominantly human body receives little scrutiny and your enchanting, musical voice makes it much easier to handle the people there. While not able to overpower anyone with it, it does let you manipulate them a little. With a few well-timed comments and tuneful words, you keep them from examining your abdomen, where you can feel your changes continuing to progress.";
-			if xp of Timothy < 3 and Gryphoness is tamed:
+			if XP of Timothy < 3 and Gryphoness is tamed:
 				say "     When the military came through, Denise was scared, but you managed to convince her to come with you and kept her close with you during that time. Once released, you are quick to combine your singing talents with hers, forming a powerful duet. Your alluring voice quickly draws in some talented musicians among the other infected you met at the military's camp to form the rest of your band. Denise quickly gets excited about this project and manages to get a small gig booked. With her lovely voice and your alluring tones to back her up, the band's popularity spreads quickly. Soon your group is drawing larger and larger crowds, with the novelty of a band made up entirely of those changed in the outbreak helping you get started before your unique musical abilities can win them over. The two of you are soon happier than ever as you travel around with the band, enjoying your new [if charisma of player > 17]legendary[else if charisma of player > 14]international[else]major[end if] success status. You both enjoy spending time together, both on and off the stage, and are happy to include with some of the band's groupies and die-hard fans as well when on tour.";
 			else:
 				say "     With your release, you use your musical voice to convince several musically talented people among the infected in the camp to form a band with you. Your alluring tones, coupled with the band's unique musical style and lyrics, helps your group's popularity spread quickly. Soon your group is drawing larger and larger crowds, with your promoter using the novelty of a band made up entirely of those changed in the outbreak to help spread the word during the initial wave of public curiosity and excitement over the event. After that initial novelty wears off, your enchanting voice has had its effect and your popularity remains. Your group has a great time as a new [if charisma of player > 17]superstar[else if charisma of player > 14]major[else]minor[end if] musical sensation that always keeps a steady level of fan interest. And the best part of this continued fame is the tours and all the fun you can have with the groupies and die-hard fans.";

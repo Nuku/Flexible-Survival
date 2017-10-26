@@ -21,7 +21,7 @@ Version 1 of Ancient Tome by Wahn begins here.
 TomeFound is a number that varies.
 lastTomeInteraction is a number that varies.
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and hp of Eric > 9 and hp of Eric < 99 and TomeFound is 0 and a random chance of 1 in 2 succeeds):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 99 and TomeFound is 0 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -46,7 +46,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and hp of Eric
 		now TomeFound is 1; [Eric got the book]
 		now lastTomeInteraction is turns;
 
-instead of going inside from Grey Abbey Library while (Eric is in Bunker and hp of Eric > 9 and hp of Eric < 99 and TomeFound is 1 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
+instead of going inside from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 99 and TomeFound is 1 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: Eric reads the book - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
@@ -69,7 +69,7 @@ instead of going inside from Grey Abbey Library while (Eric is in Bunker and hp 
 		now TomeFound is 2; [Eric is reading the book]
 		now lastTomeInteraction is turns;
 
-instead of going inside from Grey Abbey Library while (Eric is in Bunker and hp of Eric > 9 and hp of Eric < 20 and TomeFound is 2 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
+instead of going inside from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and TomeFound is 2 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: Eric gets tentacled - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
@@ -98,8 +98,8 @@ instead of going inside from Grey Abbey Library while (Eric is in Bunker and hp 
 			say "     The thing seems to wink at you, closing and opening in quick secession, then splurts out a last gob of off-white cum and sinks out of sight behind the bed. Maybe a message - but it's anyone's guess what that was supposed to mean. Crouching down, you look under the bed... and there's nothing there, just empty air. With a shrug, you turn your attention back to Eric - who is still out for the count, despite everything that has happened to him just now! The steady trickle of monster cum from between his legs has the potential to make a hell of a mess of the bed, so you quickly snatch up the t-shirt he took off before going to bed and position the bunched-up fabric under his crotch to soak up what it can. Snatching up another piece of usable fabric, you then start working on cleaning him up from all the other goop that came off the tentacles, and Eric's own sweat from being fucked.";
 			WaitLineBreak;
 			say "     It'll be better if he doesn't wake up all slimed up - since the college student slept through the whole situation, he otherwise would be in for quite a shock. You'll have to see what he will or will not remember when he wakes up. By the time you're done cleaning up everything that made his naked body wet and sticky, Eric's belly has gone down to normal once more, no longer showing the slight bulge all the cum gave it. The t-shirt between his legs is a soppy mess as you pull it away and do a final wipe over Eric's pussy with your other cum-rag. Well, that's about as good as this will get - from looking at him now, you couldn't tell he was fucked by a tentacle monster ten minutes ago. With a concerned look at the young guy's now peaceful face, you cover him with a blanket again and go pick up the tome. It clearly has something to do with all this. Better to confiscate it and keep it out of Eric's hands for now unless you want to see a repeat of this...";
-			if hp of Eric is 10: [virgin cboy]
-				now hp of Eric is 14; [tentacles took his virginity]
+			if HP of Eric is 10: [virgin cboy]
+				now HP of Eric is 14; [tentacles took his virginity]
 				now EricVirginityTaken is 7; [impregnated with tentacle spawn]
 			increase carried of ancient tome by 1;
 			say "(You gain an ancient tome.)";
@@ -134,8 +134,8 @@ instead of going inside from Grey Abbey Library while (Eric is in Bunker and hp 
 		LineBreak;
 		say "     With a shrug, you leave Eric in peace and turn to other things. When you glance over to him again some while later, he has indeed calmed down and is again sleeping peacefully.";
 		now TomeFound is 3; [Eric is was tentacle-fucked, player saw nothing]
-		if hp of Eric is 10: [virgin cboy]
-			now hp of Eric is 14; [tentacles took his virginity]
+		if HP of Eric is 10: [virgin cboy]
+			now HP of Eric is 14; [tentacles took his virginity]
 			now EricVirginityTaken is 7; [impregnated with tentacle spawn]
 		now lastTomeInteraction is turns;
 

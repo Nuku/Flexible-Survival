@@ -49,8 +49,8 @@ to say ec_mixnmatch:
 	let zz be a random number between 1 and 16;
 	if hardmode is true and level of player > 13:		[Hard Mode Version!]
 		increase qq by level of player - 13;
-		now hp entry is 36 + ( ( 5 * qq ) + zz + a random number between 0 and qq );
-		now monsterhp is hp entry;
+		now HP entry is 36 + ( ( 5 * qq ) + zz + a random number between 0 and qq );
+		now monsterHP is HP entry;
 		now lev entry is qq;
 		if lev entry > 13:
 			now wdam entry is 11 + ( ( qq * 2 ) / 7 );
@@ -58,14 +58,14 @@ to say ec_mixnmatch:
 			now wdam entry is 9 + ( qq / 3 );
 		now dex entry is 16 + ( qq / 6 ) + ( square root of ( qq + 8 ) ); [faster initial growth, but slows down more]
 	else:								[Normal Play Version!]
-		now hp entry is 36 + ( ( 4 * qq ) + zz );
-		now monsterhp is hp entry;
+		now HP entry is 36 + ( ( 4 * qq ) + zz );
+		now monsterHP is HP entry;
 		now wdam entry is 9 + ( qq / 3 );
 		now lev entry is qq;
 		now dex entry is 17 + ( ( qq * 2 ) / 7 );
 	[testing values achieved]
 [	say "Lvl is [qq]. Variable is [zz].";
-	say "HP is [hp entry].";
+	say "HP is [HP entry].";
 	say "Dmg is [wdam entry]. Dex is [dex entry].[line break]";]
 
 to say randombaseform:
@@ -134,7 +134,7 @@ to say ec_reset:
 	now lev entry is 12; [ reset level for random encounter availability ]
 
 to say losetoenhancedchimera:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Rather than fight the creature, you give in and accept its lustful advances. ";
 	else:
 		say "     Having beaten the resistance out of you, it advances upon you with a lustful rumble. ";
@@ -143,24 +143,24 @@ to say losetoenhancedchimera:
 to say ec_sex:
 	say "[ec_reset]";
 	if cunts of player > 0 and a random chance of 3 in 5 succeeds:
-		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, she gets itself lined up with your pussy and mounts you with a throaty purr. The creature's [headadjdata] mouth [if hp of player > 0]nips tenderly along[else]bites down upon[end if] your neck as she thrusts her ridged cock into you again and again with increasing vigour. You can feel the heavy slaps of the chimera's large ballsac against [if cocks of player > 0 and player is not internal]your own[else]your thighs[end if]. Those balls feel quite full, probably stuffed to the brim with a slurry of hybrid semen mixed from whatever may have in part been used to help concoct this chimera.";
-		say "     The horny creature continues her vigorous humping, driving her hybridized shaft into you over and over again. The feel of that spearhead tip spreading your vaginal walls open, the texture of the ridged shaft sliding along your inner walls, the growing firmness of the knot at its base - all of these exciting sensations build your arousal higher and higher[if hp of player <= 0] despite yourself[end if]. Her myriad of scents becomes exciting to you and soon you're panting and moaning for the chimera to fill you[if player is fpreg_able] and breed you[end if]. She releases a pleased rumble at your words and drives harder into you[if hospquest >= 19]. That latent chimera treatment inside you tingles in anticipation of getting a boost as the creature attempts to sire another of her kind in you[else]. The idea of her changing you in random ways or siring almost anything inside you arouses you greatly[end if]. As you push back into her final thrusts, you both moan in pleasure as she knots you fully. Moments after, you feel the first of many shots of her hot seed, thick and plentiful from her throbbing balls being shot deep into your womb. And with the knot there, it ensures it all remains inside you so you're properly infected and bred by her load before she pulls out and departs. ";
+		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, she gets itself lined up with your pussy and mounts you with a throaty purr. The creature's [headadjdata] mouth [if HP of player > 0]nips tenderly along[else]bites down upon[end if] your neck as she thrusts her ridged cock into you again and again with increasing vigour. You can feel the heavy slaps of the chimera's large ballsac against [if cocks of player > 0 and player is not internal]your own[else]your thighs[end if]. Those balls feel quite full, probably stuffed to the brim with a slurry of hybrid semen mixed from whatever may have in part been used to help concoct this chimera.";
+		say "     The horny creature continues her vigorous humping, driving her hybridized shaft into you over and over again. The feel of that spearhead tip spreading your vaginal walls open, the texture of the ridged shaft sliding along your inner walls, the growing firmness of the knot at its base - all of these exciting sensations build your arousal higher and higher[if HP of player <= 0] despite yourself[end if]. Her myriad of scents becomes exciting to you and soon you're panting and moaning for the chimera to fill you[if player is fpreg_able] and breed you[end if]. She releases a pleased rumble at your words and drives harder into you[if hospquest >= 19]. That latent chimera treatment inside you tingles in anticipation of getting a boost as the creature attempts to sire another of her kind in you[else]. The idea of her changing you in random ways or siring almost anything inside you arouses you greatly[end if]. As you push back into her final thrusts, you both moan in pleasure as she knots you fully. Moments after, you feel the first of many shots of her hot seed, thick and plentiful from her throbbing balls being shot deep into your womb. And with the knot there, it ensures it all remains inside you so you're properly infected and bred by her load before she pulls out and departs. ";
 		if hospquest >= 19:
 			say "     [fimpregchance]";
 		else:
 			say "     [randomfimpreg]";
 	else if anallevel is not 1 and ( cunts of player is 0 or anallevel is 3 ) and ( ( a random chance of anallevel in 5 succeeds and cocks of player is 0 ) or ( a random chance of anallevel in 7 succeeds and cocks of player > 0 ) ):
-		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, she gets itself lined up with your anal ring and mounts you with a throaty purr. The creature's [headadjdata] mouth [if hp of player > 0]nips tenderly along[else]bites down upon[end if] your neck as she thrusts her ridged cock into you again and again with increasing vigour. You can feel the heavy slaps of the chimera's large ballsac against [if cocks of player > 0 and player is not internal]your own[else]your thighs[end if]. Those balls feel quite full, probably stuffed to the brim with a slurry of hybrid semen mixed from whatever may have in part been used to help concoct this chimera.";
-		say "     The horny creature continues her vigorous humping, driving her hybridized shaft into your ass over and over again. The feel of that spearhead tip pushing its way into your bowels, the texture of the ridged shaft sliding along your inner walls, the growing firmness of the knot at its base - all of these exciting sensations build your arousal higher and higher[if hp of player <= 0] despite yourself[end if]. Her myriad of scents becomes exciting to you and soon you're panting and moaning for the chimera to fill you[if player is mpreg_able] and breed you[end if]. She releases a pleased rumble at your words and drives harder into you[if hospquest >= 19]. That latent chimera treatment inside you tingles in anticipation of getting a boost from the creature pounding away at your ass[else]. The prospect of her changing you in random and unexpected ways starts arouses you greatly[end if]. As you push back into her final thrusts, you both moan in pleasure as she knots you fully. Moments after, you feel the first of many shots of her hot seed, thick and plentiful from her throbbing balls being shot deep into your bowels. And with the knot there, it ensures it all remains inside you so you're properly infected[if player is mpreg_able] and bred[end if] by her load before she pulls out and departs. ";
+		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, she gets itself lined up with your anal ring and mounts you with a throaty purr. The creature's [headadjdata] mouth [if HP of player > 0]nips tenderly along[else]bites down upon[end if] your neck as she thrusts her ridged cock into you again and again with increasing vigour. You can feel the heavy slaps of the chimera's large ballsac against [if cocks of player > 0 and player is not internal]your own[else]your thighs[end if]. Those balls feel quite full, probably stuffed to the brim with a slurry of hybrid semen mixed from whatever may have in part been used to help concoct this chimera.";
+		say "     The horny creature continues her vigorous humping, driving her hybridized shaft into your ass over and over again. The feel of that spearhead tip pushing its way into your bowels, the texture of the ridged shaft sliding along your inner walls, the growing firmness of the knot at its base - all of these exciting sensations build your arousal higher and higher[if HP of player <= 0] despite yourself[end if]. Her myriad of scents becomes exciting to you and soon you're panting and moaning for the chimera to fill you[if player is mpreg_able] and breed you[end if]. She releases a pleased rumble at your words and drives harder into you[if hospquest >= 19]. That latent chimera treatment inside you tingles in anticipation of getting a boost from the creature pounding away at your ass[else]. The prospect of her changing you in random and unexpected ways starts arouses you greatly[end if]. As you push back into her final thrusts, you both moan in pleasure as she knots you fully. Moments after, you feel the first of many shots of her hot seed, thick and plentiful from her throbbing balls being shot deep into your bowels. And with the knot there, it ensures it all remains inside you so you're properly infected[if player is mpreg_able] and bred[end if] by her load before she pulls out and departs. ";
 		if hospquest >= 19:
 			say "     [mimpregchance]";
 		else:
 			say "     [randommimpreg]";
 	else if cocks of player > 0 and cock length of player > 5 and a random chance of 3 in 5 succeeds:
-		say "     The hybrid creature pushes you back onto a nearby hospital bed. With a little fumbling at your remaining clothes, she gets your [cock of player] cock exposed and ready before climbing atop you. The creature's [headadjdata] mouth [if hp of player > 0]nips tenderly along[else]clamps down upon[end if] your neck as she pushes her hips down onto your shaft. She rides you vigorously from the very beginning, working your [cock size desc of player] shaft in and out of her with lustful need. The herm's heavy shaft and scrotum grind and slap against your belly as she rides upon you with wet, meaty thwacks. Those balls feel quite full, probably stuffed to the brim with a slurry of hybrid semen mixed from whatever may have in part been used to help concoct this chimera. You can feel it pulsing and throbbing as it drools a growing mess of sticky precum onto you.";
-		say "     The horny creature continues her vigorous humping, driving your manhood into her heated cunny over and over again. Those inner walls of hers squeeze and tug at your shaft, working hard to milk you to climax[if hp of player <= 0] despite your attempts to resist[end if]. As the mating continues, her myriad of scents becomes exciting to you and soon you're panting and moaning that you're about to cum. She releases a pleased rumble at your words and grinds her hips down upon your crotch, causing her big cock to throb and spurt more pre[if hospquest >= 19]. That latent chimera treatment inside you tingles in anticipation of getting a boost from the rush of semen soon to come[else]. The idea of the oncoming rush of semen changing you in random ways arouses you greatly[end if]. Grabbing her by the hips, you push your cock up into her in a final thrust and you both moan in ecstasy. You pump your [cum load size of player] load into the chimera herm as she unloads her balls across your face and chest. The semen is thick and gooey, rich with a medley of flavours that you can't help but lick from your lips and rub into your body.";
+		say "     The hybrid creature pushes you back onto a nearby hospital bed. With a little fumbling at your remaining clothes, she gets your [cock of player] cock exposed and ready before climbing atop you. The creature's [headadjdata] mouth [if HP of player > 0]nips tenderly along[else]clamps down upon[end if] your neck as she pushes her hips down onto your shaft. She rides you vigorously from the very beginning, working your [cock size desc of player] shaft in and out of her with lustful need. The herm's heavy shaft and scrotum grind and slap against your belly as she rides upon you with wet, meaty thwacks. Those balls feel quite full, probably stuffed to the brim with a slurry of hybrid semen mixed from whatever may have in part been used to help concoct this chimera. You can feel it pulsing and throbbing as it drools a growing mess of sticky precum onto you.";
+		say "     The horny creature continues her vigorous humping, driving your manhood into her heated cunny over and over again. Those inner walls of hers squeeze and tug at your shaft, working hard to milk you to climax[if HP of player <= 0] despite your attempts to resist[end if]. As the mating continues, her myriad of scents becomes exciting to you and soon you're panting and moaning that you're about to cum. She releases a pleased rumble at your words and grinds her hips down upon your crotch, causing her big cock to throb and spurt more pre[if hospquest >= 19]. That latent chimera treatment inside you tingles in anticipation of getting a boost from the rush of semen soon to come[else]. The idea of the oncoming rush of semen changing you in random ways arouses you greatly[end if]. Grabbing her by the hips, you push your cock up into her in a final thrust and you both moan in ecstasy. You pump your [cum load size of player] load into the chimera herm as she unloads her balls across your face and chest. The semen is thick and gooey, rich with a medley of flavours that you can't help but lick from your lips and rub into your body.";
 	else:
-		say "     The hybrid creature pushes you to your knees before her. She presses her strange cock to your face and into your mouth. She moans softly and strokes your head, coaxing you to lick and suck it. Her arousing scent, such a strong and virile mix, excites you and you [if hp of player <= 0]soon give in and comply[else]comply willingly enough[end if]. She starts to thrust into you, holding your head steady with her clawed hands while pumping her foot-long cock into your [if hp of player <= 0]increasingly [end if]eager mouth. Her precum leaks onto your tongue, thick with an array of arousing flavours.";
+		say "     The hybrid creature pushes you to your knees before her. She presses her strange cock to your face and into your mouth. She moans softly and strokes your head, coaxing you to lick and suck it. Her arousing scent, such a strong and virile mix, excites you and you [if HP of player <= 0]soon give in and comply[else]comply willingly enough[end if]. She starts to thrust into you, holding your head steady with her clawed hands while pumping her foot-long cock into your [if HP of player <= 0]increasingly [end if]eager mouth. Her precum leaks onto your tongue, thick with an array of arousing flavours.";
 		say "     You slide a hand up to fondle her large, furry ballsac and find it full and heavy. The feel like they're stuffed to the brim with cum - a slurry of hybrid semen mixed from whatever may have in part been used to help concoct this chimera[if hospquest >= 19]. That latent chimera treatment inside you tingles in anticipation of getting a boost from the rush of semen you'll soon be ingesting[else]. In your increasingly sex-addled state, the thought of having the creature's spooge transform you in unpredictable ways seems a small price to pay if you can get to taste the rich mix her balls are brewing. The prospect even starts to become arousing in its own right, filling you with additional excitement. You start to picture yourself changing in random ways while these creatures have their way with you again and again.";
 		say "     You moan in delight at the large chimera growls in climax, pumping a hot, thick medley of cum into your mouth and down your throat. You swallow down as much as you can of her impressive load, then sag to the ground as she releases you. You flop back onto the floor and release a wet gurgle. You roll the mix of tastes around in your mouth, enjoying the delightfully corruptive fluid sliding across your tongue and down your throat. The chimera, sated for now, wanders off, leaving you to the infection's changes.";
 	if hospquest >= 19:
@@ -182,7 +182,7 @@ to say beattheenhancedchimera:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -209,7 +209,7 @@ When Play begins:
 	now int entry is 18;
 	now cha entry is 18;
 	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 90; [ The monster's starting hit points. ]
+	now HP entry is 90; [ The monster's starting HP. ]
 	now lev entry is 12; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 13; [ Monster's average damage when attacking. ]
 	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -240,7 +240,7 @@ Section 3 - Endings
 [
 when play ends:
 	if bodyname of player is "Enhanced Chimera":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";

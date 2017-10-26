@@ -16,21 +16,21 @@ ursinedefeat is a number that varies.
 
 to say ursine desc:
 	setmongender 4; [creature is female]
-	if hp of bee girl is 3:
+	if HP of bee girl is 3:
 		say "     You are faced with a towering figure. While her head and body are much like that of a wild bear, her legs are somewhat longer and she's gotten quite pudgy from eating the stolen honey. The plain red t-shirt she wears is barely able to fit her enlarged body as it is, her six busty breasts pressed tightly against the taut fabric such that there's a clear impression of her hard nipples. She is no cute teddy bear though, her muzzle is filled with sharp teeth and her powerful limbs end in paws equipped with claws. The big bruin, eager to defend her ill-gotten gains, is ready to attack.";
 	else:
 		say "     A huge towering figure comes into view. At first you see a wild bear on its hind legs but on closer inspection you realise that it's legs are somewhat long and its black claws are painted with nail polish, and she is absently rubbing herself... another infected citizen of this crazy world. It must be the influence of the infection on you, but the longer you watch the more you see she is quite attractive in a uniquely bear kind of way. She has bright [one of]brown[or]blue[or]green[at random] eyes and behind what might be a smile a row of terrifying huge pointed teeth. She is naked but covered in dense shaggy fur that covers her tall and wide body completely. Her muscular chest is padded with three rows of flattish breasts and long nipples peek through her fur. On seeing you, she speaks and exposes more of those teeth, '[one of]Run! I don't want to break another one![or]Not now, you dummy![or]Are you stalking me?[at random]'";
 
 
 to say ursine fighting:
-	if hp of bee girl is 3:
+	if HP of bee girl is 3:
 		say "[one of]She slams you with one of her great clawed hands, sending you flying.[or]With terrifying ease, she picks you up and throws you into the underbrush.[or]With a great sweep of her fur covered arm, she knocks you flying.[or]The bear snaps at you with its powerful teeth.[or]You are clubbed upside the head with a toy pop-gun.[or]Your head is grabbed and your face is buried in her red-shirted bosom. It is sticky with honey and heady with her scent, leaving you a little dazed by the time you squirm free.[at random]";
 	else:
 		say "[one of]She slams you with one of her great clawed hands. As you are sent flying, you wonder where she gets her red nail polish.[or]With terrifying ease, she picks you up and throws you into a pile of rubbish.[or]With a great sweep of her fur covered arm, she knocks you flying.[or]Teeth that can shear your head off close around your neck, before being withdrawn. She smiles embarrassed, 'sorry!' before punching the wind out of you.[or]As she flattens you again you wonder if your plan needs changing.[at random]";
 
 
 to say ursine attack:
-	if hp of bee girl is 3:
+	if HP of bee girl is 3:
 		say "     The large bear grabs you roughly and tosses you to the ground with an angry roar. Hearing the bear roar terrifies poor Honey and she flees off into the trees to hide while the bear has her way with you. By the time she's done with you, you're very tired and very stick with both honey and female juices.";
 	else if ursinedefeat is 0: [ first time losing to a bear ]
 		say "You realise she has been holding back on you as she easily hefts you up towards her broad well padded chest, pressing your face into her coarse thick fur. The pressure of her huge furry grip engulfs you and you fear you are about to be crushed out of existence. As your consciousness fades you realise it's not the worst way to go, and you feel oddly comfortable as the pressure decreases. While you are wondering what next, you realise you are being rocked back and forth against the bear's increasingly hardening nipples. She begins to rumble low in her throat with pleasure. 'No, Phyllis you mustn't...' she says to herself as she gets increasingly aroused. Her strong paws irresistibly rub you through the thick sweetly musky fur covering her muscular body. 'Oh..feels so good...' You feel a heat and dampness covering your lower half. The sweet smell of sex fills the air and with some small feeling of horror you realise she is masturbating herself with you. The bear begins to talk to itself more as it gets more aroused becoming increasingly incoherent and noisy as her orgasm approaches. In the throes of her mighty roaring orgasm the pressure again increases and you pass out to awaken bruised, tingling and soaked in the juices of the bear's orgasm.";
@@ -51,8 +51,8 @@ to say ursine attack:
 		say "That last blow was a doozy. You feel your limp self picked up bodily and find yourself helplessly carried to the shade. The bear watches over you with an odd mixture of concern and barely restrained lust. 'It's hard sometimes,' she says absently and pats you on the head affectionately. Despite the way her huge paw jars your aching head, you cannot help but feel warmly towards the bear before passing out. You awaken to find the tattered remains of your clothes feeling odd. With a start you realise they have been washed and ironed. Of all the messed up things in the world, that small gesture affects you deeply.";
 		increase morale of player by 2;
 		decrease libido of player by 4;
-		increase hp of player by 5;
-		if hp of player > maxhp of player, now hp of player is maxhp of player;
+		increase HP of player by 5;
+		if HP of player > maxHP of player, now HP of player is maxHP of player;
 		if libido of player < 0, now libido of player is 0;
 	else if ( ursinedefeat is 2 or ursinedefeat is 3 ) and a random chance of 2 in 3 succeeds and ( cocks of player > 0 or cunts of player > 0 ):
 		if cocks of player > 0 and ( cunts of player is 0 or a random chance of 2 in 5 succeeds ):
@@ -62,8 +62,8 @@ to say ursine attack:
 		now ursinedefeat is 3;
 		increase morale of player by 2;
 		decrease libido of player by 6;
-		increase hp of player by 5;
-		if hp of player > maxhp of player, now hp of player is maxhp of player;
+		increase HP of player by 5;
+		if HP of player > maxHP of player, now HP of player is maxHP of player;
 		if libido of player < 0, now libido of player is 0;
 	else:
 		say "She hugs you against her honey-scented body and presses you deep into her warm dark fur. Through the dark fur you hear her sigh. 'Why must we always fight so?' You feel her nipples leaking honeyed milk and it feels natural to suck at them. Incredibly sweet milk flows into your mouth and into your body, each sweet spurt making you more and more aroused. You feel if you can just get enough milk you can cum over and over. You move from one dark nipple to the next and suck and suck to get more milk. You can hear the bear purring deeply with pleasure. Your hand snakes down between the bears huge thighs as yous suckle and you rub her drenched slippery pussy increasing the flow of milk. You can feel and taste her orgasm approaching. With one last big spurt of milk into your mouth you both orgasm hard. Feeling somewhat refreshed and with a feeling of great satisfaction, you head on your way.";
@@ -71,13 +71,13 @@ to say ursine attack:
 		decrease hunger of player by 2;
 		increase morale of player by 2;
 		decrease libido of player by 6;
-		increase hp of player by 5;
-		if hp of player > maxhp of player, now hp of player is maxhp of player;
+		increase HP of player by 5;
+		if HP of player > maxHP of player, now HP of player is maxHP of player;
 		if libido of player < 0, now libido of player is 0;
 
 
 to say ursine loses:
-	if hp of bee girl is 3:
+	if HP of bee girl is 3:
 		say "     Your final blow makes the large bear lose her footing and she staggers back.";
 	else:
 		say "     [one of]The beaten bear comes back to her senses. 'Oh. That's better.' and then slumps over, apparently peacefully asleep.[or]You find yourself watching the motion of her big furry backside as the defeated bear hurriedly ambles off.[at random]";
@@ -86,7 +86,7 @@ to say ursine loses:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -113,8 +113,8 @@ When Play begins:
 	now int entry is 14; [not that much of a bear with little brain]
 	now cha entry is 14; [because you wouldn't want to argue]
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 7; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 60; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Park"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -141,7 +141,7 @@ When Play begins:
 
 when play ends:
 	if bodyname is "Bear":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "You amble off into the parkland, only occasionally to reappearing to scare the hell out of anyone still foolish enough to try camping. Occasionally you leave signs of your passing in the form of rifles twisted into pretzels and tales from horrified hunters that have been both attacked and abused. Seeing you are no threat unless threatened, you are left to your own devices.";
 		else:
 			say "Your body shape strongly inclines you to seek an outdoor life. Your resourcefulness, hardiness and aptitude are noted and your kind are soon recognised as excellent park warden material. Despite often being posted to wilderness areas you are seldom left completely alone for long as bears begin to build an increasing fan base amongst both the infected and the more [one of]adventurous[or]deviant[at random] uninfected.";

@@ -56,9 +56,9 @@ Section 3 - Monster Victory
 
 to say losetogunbunny:
 	now nogunbunnysex is 0;
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     The gun-toting bunny seems quite upset when you give up. She clubs you in the side of the head with her gun, knocking you to the ground in a daze. She says something having wanted more target practice before popping several more shots into you and then kicking you in the guts for good measure. You're left to slowly, painfully recover.";
-		now hp of player is 0;
+		now HP of player is 0;
 	else:
 		say "     The gun-toting bunny mocks you while bragging about her shooting skills before leaving you to slowly, painfully recover.";
 
@@ -102,7 +102,7 @@ to say beatthegunbunny:
 Section 5 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -112,15 +112,15 @@ When Play begins:
 	now defeated entry is "[beatthegunbunny]"; [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is "[losetogunbunny]"; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[gunbunnydesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "very human, save for the set of [if hp of doctor matt >= 12 and hp of doctor matt < 100]white[else if hospquest < 14]grey[else]black[end if] bunny ears atop your head. Your face is [if cunts of player > 0]pretty and effeminate[else]girlish[end if] with a cute, if slightly bucktoothed smile";
-	now body entry is "largely human-looking, with a figure that is svelte[if cunts of player > 0] and effeminate[end if]. This illusion is marred by the paw-patterned gloves stuck over your decidedly paw-shaped hands. They are cartoonish and [if hp of doctor matt >= 12 and hp of doctor matt < 100]white[else if hospquest < 14]grey[else]black[end if] with pink pawpads drawn on the underside. Your limbs are slender and sexy, though you can feel a hidden strength and bounciness in your legs, allowing you to run faster and jump higher than you ever could before";
+	now face entry is "very human, save for the set of [if HP of doctor matt >= 12 and HP of doctor matt < 100]white[else if hospquest < 14]grey[else]black[end if] bunny ears atop your head. Your face is [if cunts of player > 0]pretty and effeminate[else]girlish[end if] with a cute, if slightly bucktoothed smile";
+	now body entry is "largely human-looking, with a figure that is svelte[if cunts of player > 0] and effeminate[end if]. This illusion is marred by the paw-patterned gloves stuck over your decidedly paw-shaped hands. They are cartoonish and [if HP of doctor matt >= 12 and HP of doctor matt < 100]white[else if hospquest < 14]grey[else]black[end if] with pink pawpads drawn on the underside. Your limbs are slender and sexy, though you can feel a hidden strength and bounciness in your legs, allowing you to run faster and jump higher than you ever could before";
 	now skin entry is "smooth, pink and normal-looking";
-	now tail entry is "You have a cute bunny tail of [if hp of doctor matt >= 12 and hp of doctor matt < 100]white[else if hospquest < 14]grey[else]black[end if] fur attached to your toned bubble butt.";
+	now tail entry is "You have a cute bunny tail of [if HP of doctor matt >= 12 and HP of doctor matt < 100]white[else if hospquest < 14]grey[else]black[end if] fur attached to your toned bubble butt.";
 	now cock entry is "[one of][if hospquest < 14]pink[else]black[end if][or]slender[or]human-shaped[as decreasingly likely outcomes]";
-	now face change entry is "it shifts and changes. For the most part, you're hopeful you'll come out looking human as your features settle into what becomes a pretty [if cunts of player > 0]and[else]if[end if] girlish face. Your hopes for passing as human are dashed though as you gain a set of tall bunny ears covered in soft [if hp of doctor matt >= 12 and hp of doctor matt < 100]white[else if hospquest < 14]grey[else]black[end if] fur";
+	now face change entry is "it shifts and changes. For the most part, you're hopeful you'll come out looking human as your features settle into what becomes a pretty [if cunts of player > 0]and[else]if[end if] girlish face. Your hopes for passing as human are dashed though as you gain a set of tall bunny ears covered in soft [if HP of doctor matt >= 12 and HP of doctor matt < 100]white[else if hospquest < 14]grey[else]black[end if] fur";
 	now body change entry is "it shifts and changes. At first, your new body seems quite human as the transformation progresses, if svelte[if cunts of player > 0] and effeminate[end if]. That changes though at your hands, with your digits popping and snapping as they get shorter and thicker. Your new paw-hands end up covered in cartoonish paw-gloves that cannot be removed. Oddly, you long for the comforting weight of a gun to hold in them";
 	now skin change entry is "it becomes smooth and lightly flesh-toned despite all the sun you've been getting lately";
-	now ass change entry is "you feel soft tickling at the base of your spine. It builds up to a pressure that gradually becomes uncomfortable before finally popping as a cute and puffy bunny tail of [if hp of doctor matt >= 12 and hp of doctor matt < 100]white[else if hospquest < 14]grey[else]black[end if] fur emerges";
+	now ass change entry is "you feel soft tickling at the base of your spine. It builds up to a pressure that gradually becomes uncomfortable before finally popping as a cute and puffy bunny tail of [if HP of doctor matt >= 12 and HP of doctor matt < 100]white[else if hospquest < 14]grey[else]black[end if] fur emerges";
 	now cock change entry is "your manhood twitches and throbs, spurting several gobs of precum as it changes. It becomes human-like in form thankfully, though circumcised and [if hospquest < 14]somewhat slender in shape with a soft, flesh tone[else]a deep black in colour[end if]";
 	now str entry is 10; [ These are now the creature's stats... ]
 	now dex entry is 19; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
@@ -129,7 +129,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 15;
 	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 65; [ The monster's starting hit points. ]
+	now HP entry is 65; [ The monster's starting HP. ]
 	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12; [ Monster's average damage when attacking. ]
 	now area entry is "High"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -180,7 +180,7 @@ this is the gb_gat_count rule:		[manages odds of gatling attack each round]
 [	say "DEBUG: Gatling counter = [gb_gatling_counter]."; [***]	]
 
 this is the gb_gat_down rule:		[odds go down if she hits normally]
-	if hp of player > 0:
+	if HP of player > 0:
 		say "[one of]The bunny girl[or]The gunbunny[or]She[or]The gun-totting rabbit[or]The rabbit-eared girl[at random] [one of]cheers at her own success[or]gives a happy 'Yatta!' at having hit you[or]sticks out her tongue and makes a face at you[or]makes the [']V-for-Victory['] sign at her success[or]giggles and taunts you[or]calls you 'Baka!['] for getting hit[at random]. But now that she's got to take a moment to [if gb_gun is 6]recharge her ray gun[else]reload[end if], you've got an opportunity to respond to this assault.";
 		decrease gb_gatling_chance by 3;
 	else:
@@ -246,12 +246,12 @@ to gb_gatling_attack:
 		say "Meanwhile, you're left leaning against a [if gb_gun is 6]scorched[else]bullet-riddled[end if] wall, trying to catch your breath and recover from your wounds. You've taken [special-style-2][damagetotal][roman type] damage during the firefight!";
 		now damagein is damagetotal;
 		say "[areaabsorbancy]";
-		if absorb is greater than damagetotal:
+		if absorb > damagetotal:
 			now absorb is damagetotal;
-		if absorb is greater than 0:
+		if absorb > 0:
 			say "You prevent [special-style-1][absorb][roman type] damage!";
-		decrease hp of the player by damagetotal;
-		increase hp of player by absorb;
+		decrease HP of the player by damagetotal;
+		increase HP of player by absorb;
 		follow the player injury rule;
 		say "You are [descr].";
 	else:	[missed every time]
@@ -265,7 +265,7 @@ Section 7 - Endings
 
 when play ends:
 	if bodyname of player is "Gunbunny":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if player is pure:
 				if pistol is owned:
 					say "     Your thoughts gradually become more confused and jumbled as your mind slips away. The grip of your pistol in your paw-glove hands is a strong comfort, feeling very right to you and no other weapon will do. Forgetting about the bunker, you end up setting up a new den for yourself, choosing to build a cozy burrow in the woodlands that's popped up inside the city. It's quite concealed and you stock it with more guns and ammo for added protection as well as food and other supplies, living like some crazy bunny-eared survivalist.";
@@ -293,7 +293,7 @@ when play ends:
 		else:
 			if player is pure:
 				say "     When the soldiers come through to rescue survivors, you're teased a bit about your new bunny form, but manage to take it in stride[if pistol is owned]. Having to turn over your pistol though when you get to the processing camp?  Now that was tough. It took quite the effort of will, even with armed soldiers there, to leave it in their possession[end if]. The scientists who examine you show little interest in your bunny features, falsely accepting that you've only been subject to minor changes to get those ears, tail and strange paw-gloves.";
-				if hp of doctor matt >= 12 and hp of doctor matt < 100:
+				if HP of doctor matt >= 12 and HP of doctor matt < 100:
 					say "     You instead choose to talk to some of the soldiers. Now, while most are understandably standoffish, you do find a couple who're willing to talk about guns with you. As you talk with them, it seems you knew more about guns than you'd have thought. Your mind convinces you that you must've picked this stuff up here and there from stuff you've read or watched in the past. Your new gun buddies arrange a little practice fun, letting you get in on a shooting contest at the range they've set up. And while you don't remember having used one of their rifles before, you pick it up very quickly and are soon [if level of player >= 15]shooting almost on par with the best of them[else if level of player >= 8]scoring at about their average[else]scoring nearly as well as they are[end if].";
 					say "     Having impressed your new friends, they arrange another session a few days later. You fare a little better this second time, quickly getting back to your previous level, letting you score much better overall across all the targets. It seems you have an unexpected spectator though, the common soldiers surprised to find an officer standing quietly among the range staff. Now whether he got wind of it in advance or if someone spotted an infected detainee on the range this time, you never do find out.";
 					say "     But the important part is, after giving the soldiers a proper scare for breaking regs, you're taken aside and given a fresh review by a different team of clearly military scientists and psychologists. They are more extensive in their testing, focusing more on your physical and mental attributes as well as going over the material relating to Dr. Matt. It's clear the military consider the good doctor a very important asset and when you sit back down with the officer (of suspiciously unclear rank, you can't help but note), you're tapped to be part of a team to continue assisting him. And while part of you would like to just leave the events in the city behind, the lure of excitement, money and access to military-grade weapons ends up too tempting. You accept the offer.";

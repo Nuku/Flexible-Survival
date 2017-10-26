@@ -33,7 +33,7 @@ to say losetoocelot:
 
 to say losetoocelot_bt:
 	choose row monster from the table of random critters;
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Opting to give in rather than fight the small feline, you let him push you to sit on the ground and climb atop you. He runs his paws over your [bodytype of player] body. He nuzzles at your neck and licks your throat softly.";
 	else:
 		say "     Beaten by the small, agile feline, you are pushed rather roughly to sit on the ground by him. He climbs atop you and runs his paws over your [bodytype of player] body. He nuzzles at your neck and licks your throat softly.";
@@ -142,7 +142,7 @@ to say ocelotloss_bt_j2:	[sub on dom - jerk]
 
 to say losetoocelot_ld:
 	choose row monster from the table of random critters;
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Opting to give in rather than fight the large feline, you let him wrap his arms around you and pull you into his lap as he sits down with you. He runs his paws over your [bodytype of player] body. He nuzzles at your neck and licks your throat softly.";
 	else:
 		say "     Beaten by the large, powerful feline, you are grabbed rather roughly in his arms and pulled into his lap as he sits down. He runs his paws over your [bodytype of player] body. He nuzzles at your neck and licks your throat softly.";
@@ -305,8 +305,8 @@ to say ocelotdesc:
 	say "     You are [one of]surprised[or]startled[at random] by a small, speedy feline running out from cover. Finding himself [one of]confronted[or]blocked[at random] by you, he stops and bares his claws. This small fellow is short and slender, maybe around five feet tall. His golden-brown fur is beautifully spotted and striped, lighter at the belly, though densely filled with black spots there are well. The ocelot is wearing a black leather harness, collar, cuffs and a codpiece over what seems to be an average sized package. In it, he looks like someone's boytoy kitty slave. He shifts from foot to foot, preparing to strike.";
 	let debit be 0;
 	if hardmode is true and level of player > 3, let debit be level of player - 3; [one level behind player]
-	now hp entry is 22 + ( debit * 3 );
-	now monsterhp is 22 + ( debit * 3 );
+	now HP entry is 22 + ( debit * 3 );
+	now monsterHP is 22 + ( debit * 3 );
 	now wdam entry is 5 + ( debit / 3 );
 	now lev entry is 2 + debit;
 	now str entry is 8;
@@ -330,8 +330,8 @@ to say ocelotdesc:
 	if ocelotsize is 0:
 		say "     You are [one of]surprised[or]startled[at random] by a small, speedy feline running out from cover. Finding himself [one of]confronted[or]blocked[at random] by you, he stops and bares his claws. This small fellow is short and slender, maybe around five feet tall. His golden-brown fur is beautifully spotted and striped, lighter at the belly, though densely filled with black spots there are well. The ocelot is wearing a black leather harness, collar, cuffs and a codpiece over what seems to be an average sized package. In it, he looks like someone's boytoy kitty slave. He shifts from foot to foot, preparing to strike.";
 		if hardmode is true and level of player > 3, let debit be level of player - 3; [one level behind player]
-		now hp entry is 22 + ( debit * 3 );
-		now monsterhp is 22 + ( debit * 3 );
+		now HP entry is 22 + ( debit * 3 );
+		now monsterHP is 22 + ( debit * 3 );
 		now wdam entry is 5 + ( debit / 3 );
 		now lev entry is 2 + debit;
 		now str entry is 8;
@@ -343,8 +343,8 @@ to say ocelotdesc:
 	else:
 		say "     You find yourself facing off with a very large, rotund feline. The pudgy ocelot glares at you angrily for disturbing him and bares his claws. This big fellow is quite large, maybe six feet tall, but well over 300 lbs. His golden-brown fur is beautifully spotted and striped, lighter at the belly, though densely filled with black spots there are well. The ocelot is wearing a black leather harness, fingerless gloves, cap and a codpiece over what seems to be rather sizable package. In all this, he looks like someone's leather daddy kitty. He shifts his leather cap, making sure its snug with his feline ears poking out before preparing to strike.";
 		if hardmode is true and level of player > 3, let debit be level of player - 3; [one level above player]
-		now hp entry is 33 + ( debit * 4 );
-		now monsterhp is 33 + ( debit * 4 );
+		now HP entry is 33 + ( debit * 4 );
+		now monsterHP is 33 + ( debit * 4 );
 		now wdam entry is 7 + ( debit / 3 );
 		now lev entry is 4 + debit;
 		now str entry is 14;
@@ -369,7 +369,7 @@ to say leghit:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -396,7 +396,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 14;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 22; [ The monster's starting hit points. ]
+	now HP entry is 22; [ The monster's starting HP. ]
 	now lev entry is 2; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
 	now area entry is "High"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -461,7 +461,7 @@ Section 4 - Endings
 [
 when play ends:
 	if bodyname of player is "Ocelot":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your ocelot infection.";
 		else:
 			say "     You survive, but were infected by the ocelot.";

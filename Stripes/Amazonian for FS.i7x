@@ -18,15 +18,15 @@ to say losetoamazonian:
 	choose row monster from the table of random critters;
 	now noamazoniansex is 0;
 	if wslevel is 3 and a random chance of 1 in 3 succeeds:
-		if hp of player > 0:
+		if HP of player > 0:
 			say "     The amazonian woman grabs you roughly and slams you to the ground when you give up the fight early. 'What a useless, cowardly creature you are,' she growls with disdain. 'Why should I consent to [if cunts of player > 0]breeding such a feeble warrior[else]taking one such as you as a mate[end if] if you will not struggle to the end?  You are naught but waste.' And with that, she presses her foot down onto your gut and starts to urinate. The hot stream splatters across your chest and face. Digging her heel in harder, you groan in discomfort, which allows her piss to leak into your mouth, forcing you to taste the acrid liquid.";
 			say "     After her bladder is drained, she keeps you in place with her foot and strokes her throbbing erection. Already quite aroused by her mistreatment of her cowardly foe, it doesn't take long before she cums. Adding to the mess, you're covered in sticky splatters of her gooey semen. 'That is the only sample you'll get of my warrior seed. Now away with you,' she snarls, giving you a harsh kick to the side. You are forced to scramble away, wet and reeking of cum and urine.";
-			decrease hp of player by wdam entry;
+			decrease HP of player by wdam entry;
 		else:
 			say "     Defeated by the powerful amazonian, you are unable to resist when she grabs you and presses you up against a wall. 'You fought bravely, little [if cunts of player > 0]girl[else]man[end if], but I am the greater warrior. And now, to claim my prize,' she says with a lustful grin. Baring your ass, she flips aside her loincloth to reveal her sixteen inch long cock and grind it between your cheeks. '[if cunts of player > 0]And now to prove that I am better than any man[else]And now I'll show you the only thing men are good for[end if].' And with that, she thrusts her thick rod into your [if cunts of player > 0]juicy pussy[else]tight asshole[end if].";
 			say "     [if cunts of player > 0]Your pussy is spread open around the herm warrior's throbbing cock as she fucks you, pounding away at your increasingly wet hole as you can't help but respond to the vigourous fucking you're receiving[else]Your asshole is spread open around the herm warrior's throbbing cock as she fucks you, pounding away at your painfully stretched hole. As the vigourous fucking continues, the discomfort fades and the pleasure of getting pounded in the ass grows to replace it[end if]. She keeps you pressed against the broken wall as she drives her pulsing rod into you again and again. When she finally cums, she empties her hot seed inside you, [if cunts of player > 0]coating your womb in her virile sperm[else]filling your bowels with her virile sperm[end if].";
 			say "     Once finished, she pulls out, but does not release you, instead grinding her semi-hard shaft messily against your rear. 'Mmm... I've found you to be a most enjoyable [if cunts of player > 0]mate[else]plaything[end if]. Perhaps I might keep you for my harem. Let me leave you with something to remind you to whom you belong,' she whispers softly as she licks along the edge of your ear. You feel a heat wash across your ass, your nose catching the acrid scent of urine. She's pissing on you, marking you as her property. You wriggle and squirm, but her grip is strong and you're too worn from earlier to break free. She chuckles as you try to resist, only growing more excited and you feel a surge in the flow of hot liquid. You even feel a splatter of it spray against your creamy, leaking hole, staking her claim again on it. When her bladder's drained, she releases you and drives you off, saying she looks forward to challenging you again soon.";
-	else if hp of player > 0:
+	else if HP of player > 0:
 		say "     Unwilling to continue to resist this powerful woman, you drop to your knees before her, intent on letting her have her way with you. She seems displeased that you've given up so easily and pushes you roughly to the ground with her heel. 'Why should I [if cunts of player > 0]breed with one such a you if you will not fight to the last[else]want one such as you as a mate if you will not fight to the last[end if]?' she growls. 'You are useless to me but as a means of amusement.'";
 		say "     With that said, she grabs your head and pushes your face to her loincloth, forcing you to take in the heady scent of her arousal. Despite the short fight, it seems it's gotten her blood flowing and she needs some relief. Pushing back the furry cloth, she frees her sixteen inch cock and presses it to your face, forcing you to take it in your mouth. The scent of her pussy is there as well, but you are not allowed near it, instead forced to suck her off.";
 		say "     She thrusts into your mouth rather brutally, cramming that massive cock of hers down your throat. It seems like hours go by before she is moaning above you. Her hand grips the top of your head in a painfully tight hold as she pull out all but the last inch. 'Swallow it all, my little pretty, or you'll never be big and strong. Big girls need to drink lots to get big muscles.'";
@@ -63,7 +63,7 @@ to say beattheamazonian:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -90,8 +90,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 12;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 66; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 9; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 66; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 9; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Museum"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -191,7 +191,7 @@ to say estosterogen pill use:
 [
 when play ends:
 	if bodyname of player is "Amazonian":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";

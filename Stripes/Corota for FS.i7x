@@ -42,14 +42,14 @@ to say losetocorota:
 			say "     The corota brings you to the ground with a rough sweep of their tail, staring down at your broken and bruised form. Failing to see anything that catches their interest, the corota gives a snarl and turns around, raising both their tails high to bring down on you. Raising your arms to shield your face, you barely have the time to sigh in relief as each miss your arms and head by scant inches. You were so weak, for it to be seemingly beneath the serpent creature to even bother to make sure they've finished the job. The corota flaps their large wings to take to the skies, leaving you coated in a small layer of their dust.";
 	else if a random chance of 1 in 4 succeeds:
 		say "     Mind muddled trying to stay focused on the battle, you fail to catch the sweep of the tail until almost too late. Only by acting in the last second do you go from taking a scythe in the gut to having yourself smashed to the floor. Seemingly satisfied with 'only' flooring you for the count, the corota stomps off to vent its frustrations on another victim.";
-		decrease hp of player by wdam entry;
+		decrease HP of player by wdam entry;
 	else if a random chance of 1 in 3 succeeds:
 		say "     Focusing on the tail and great claws of the corota, you forget about the obvious threat until it's already in your face. Literally. Your cheeks explode in pain as two great fangs sink into them, being used to inject a significant amount of poison into your mouth as the serpent-woman kisses you. You barely have the time or desire to consider that a half foot higher or lower, and you might not be in a position to ever complain again. When the fangs finally pull out, the corota smashes you roughly to the ground with a two handed overhead strike, and you're left there sputtering, and spitting blood and toxins from your mouth. While you've heard eating a rattlesnake's toxin is harmless, you aren't in the least bit willing to test that out with infected snake bites.";
-		decrease hp of player by wdam entry;
+		decrease HP of player by wdam entry;
 		infect;
 	else if a random chance of 1 in 2 succeeds:
 		say "     A low sweep by the corota's tail knocks you to the ground, the chimeric critter quickly leaping upon your prone form and clawing at it with their leonine half. Fortunately, they don't seem to strike anything vital before they get bored with you, crawling off your sore body and giving it a final, hard stomp to the gut before hurrying off.";
-		decrease hp of player by wdam entry;
+		decrease HP of player by wdam entry;
 	else:
 		say "     Out of breath, and needing a breather, you try to pull back from the fight with the corota to regain your breath. For a moment, it looks like the corota is going to allow you to do so, turning their back on you and beginning to walk away. Then you notice the small cloud of dust forming between their wings, too late to get out of the way or close your mouth before the corota sends the dust cloud straight into your open mouth with a quick flap of their wings. Gasping now in pain as the particles cling to your throat and insides of your breathing organs, you haven't the environmental awareness to notice them repeating the action again and again. Face going blue, you pass out to wake up some time later covered in the ochre dust, throat raw and demanding a drink soon.";
 		increase thirst of player by 5;
@@ -62,7 +62,7 @@ to say beatthecorota:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -89,8 +89,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 10;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 68; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 11; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 68; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 11; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 9; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 2; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -135,9 +135,9 @@ this is the corotadust rule:		[draining cloud]
 		if face mask is equipped, decrease dam by 1;
 		say "You cough violently as you're forced to breathe in more of the dust. You take [special-style-2][dam][roman type] damage!";
 		LineBreak;
-		decrease hp of player by dam;
-		if hp of player < 1:
-			if hp of player <= 0, now fightoutcome is 20;
+		decrease HP of player by dam;
+		if HP of player < 1:
+			if HP of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
 			lose;
 
@@ -152,7 +152,7 @@ the usedesc of corota venom is "[corotavenomuse]".
 
 to say corotavenomuse:
 	say "     Feeling brave or foolish, you try drinking down the snake venom. It stings as it goes down, making you weak in the knees and cough as it starts to burn at your throat and stomach. You curl up in a ball of pain as the heat spreads, setting off something inside you.";
-	decrease hp of player by 10;
+	decrease HP of player by 10;
 
 the scent of corota venom is "The snake venom has a strong, stinging scent that reminds you slightly of the creature's dusty powder.".
 
@@ -162,7 +162,7 @@ Section 5 - Endings
 [
 when play ends:
 	if bodyname of player is "Template":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your corota infection.";
 		else:
 			say "     You survive, but were infected by the corota.";

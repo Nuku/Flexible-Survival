@@ -38,7 +38,7 @@ Instead of taking the donation box:
 
 check ringing:
 	if the player is not in Shinto Shrine, say "I see nothing to ring here." instead;
-	if SatisfiedTanuki is less than 1, say "Nothing happens." instead;
+	if SatisfiedTanuki < 1, say "Nothing happens." instead;
 
 Carry out ringing:
 	say "You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
@@ -75,7 +75,7 @@ leafing is an action applying to nothing.
 understand "leaf" as leafing.
 
 check leafing:
-	if SatisfiedTanuki is greater than 0, say "What?" instead;
+	if SatisfiedTanuki > 0, say "What?" instead;
 
 
 carry out leafing:
@@ -120,7 +120,7 @@ check ballshrinking:
 
 carry out ballshrinking:
 	decrease cock width of player by a random number between 1 and 5;
-	if cock width of player is less than 1:
+	if cock width of player < 1:
 		say "You have no more balls!  Your [if cocks of player > 1]cocks go[else]cock goes[end if] away as well for now!";
 		now cocks of player is 0;
 		now cock length of player is 0;
@@ -154,7 +154,7 @@ check cockshrinking:
 
 carry out cockshrinking:
 	decrease cock length of player by a random number between 1 and 5;
-	if cock length of player is less than 1:
+	if cock length of player < 1:
 		now cock length of player is 0;
 		now cock width of player is 0;
 		now cocks of player is 0;
@@ -174,7 +174,7 @@ check breastgrowing:
 carry out breastgrowing:
 	if breasts of player is 0, now breasts of player is 2;
 	increase breast size of player by a random number between 1 and 2;
-	if breast size of player is greater than 26, now breast size of player is 26;
+	if breast size of player > 26, now breast size of player is 26;
 	follow the breast descr rule;
 	say "Your tanuki magic surges up into your chest as it begins to swell rapidly, leaving you with [descr] breasts!";
 
@@ -187,7 +187,7 @@ check breastshrinking:
 
 carry out breastshrinking:
 	decrease breast size of player by a random number between 1 and 2;
-	if breast size of player is less than 1:
+	if breast size of player < 1:
 		now breast size of player is 0;
 		say "You have no more breasts than nipples!";
 		follow the breast descr rule;
@@ -198,7 +198,7 @@ carry out breastshrinking:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -225,8 +225,8 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 19;
 	now sex entry is "nochange"; [- Defines which sex the infection will try and make you. current options are "Male" "Female" "Both"-]
-	now hp entry is 64; [- How many HP has the monster got? -]
-	now lev entry is 5; [- Level of the Monster, you get this much hp if you win, or this much hp halved if you loose -]
+	now HP entry is 64; [- How many HP has the monster got? -]
+	now lev entry is 5; [- Level of the Monster, you get this much HP if you win, or this much HP halved if you loose -]
 	now wdam entry is 10; [-Amount of Damage monster Does when attacking.-]
 	now area entry is "Nowhere"; [- Current options are "Outside" and "Mall"  Case sensitive-]
 	now cocks entry is 0; [- How many cocks will the infection try and cause if sex is "Male" or "Both"-]
@@ -253,7 +253,7 @@ When Play begins:
 when play ends:
 	if SatisfiedTanuki is 0:
 		say "Your tanuki blood serves you well. They say Tanuki are shapeshifters as well, but you never quite get past size shifting. A handy enough trick on its own? The ability to at least transition from tanuki form to human is quite useful at least!";
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			increase humanity of player by 20;
 			say "Your supernatural heritage burns off the worst of your insanity, granting you clarity!";
 

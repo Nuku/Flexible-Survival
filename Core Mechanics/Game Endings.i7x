@@ -9,19 +9,19 @@ carry out vetcheat:
 		say "You can only use this once.";
 		stop the action;
 	increase vetcheater by 1;
-	increase xp of player by 200;
-	if level of player is less than 5:
-		if xp of player is greater than ( level of player plus one ) times 10:
+	increase XP of player by 200;
+	if level of player < 5:
+		if XP of player > ( level of player plus one ) times 10:
 			level up;
-		if xp of player is greater than ( level of player plus one ) times 10:
+		if XP of player > ( level of player plus one ) times 10:
 			level up;
-		if xp of player is greater than ( level of player plus one ) times 10:
+		if XP of player > ( level of player plus one ) times 10:
 			level up;
-		if xp of player is greater than ( level of player plus one ) times 10:
+		if XP of player > ( level of player plus one ) times 10:
 			level up;
-		if xp of player is greater than ( level of player plus one ) times 10:
+		if XP of player > ( level of player plus one ) times 10:
 			level up;
-		else if "Fast Learner" is listed in feats of player and xp of player is greater than ( level of player plus one ) times 8:
+		else if "Fast Learner" is listed in feats of player and XP of player > ( level of player plus one ) times 8:
 			level up;
 	decrease score by 400;
 
@@ -45,28 +45,28 @@ to ratetheplayer:
 	if gsgl is 1 and score > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
 	if "Ultimatum" is listed in feats of player and score > 0, say "Your Ultimatum perk grants you a bonus of [tempnum2] points.";
 	say "You've achieve the rank of: [bold type]";
-	if score is less than 0:
+	if score < 0:
 		say "A used, broken condom!";
-	else if score is less than 120:
+	else if score < 120:
 		say "A used condom!";
-	else if the score is less than 240:
+	else if the score < 240:
 		say "Post-Apocalyptic Passaround!";
-	else if the score is less than 500:
+	else if the score < 500:
 		say "Salacious Scavenger!";
-	else if the score is less than 1000:
+	else if the score < 1000:
 		say "Wanton Wastewanderer!";
-	else if the score is less than 1500:
+	else if the score < 1500:
 		say "Serpent Blisskin!";
-	else if the score is less than 2000:
+	else if the score < 2000:
 		say "Maester Baster!";
-	else if the score is less than 2500:
+	else if the score < 2500:
 		say "Baude Warrior!";
-	else if score is greater than 9000:
+	else if score > 9000:
 		say "Th -- What, 9000?!";
 	else:
 		say "The Lord Humungus!";
 	say "[roman type]";
-	if the score is greater than 999:
+	if the score > 999:
 		say "Your performance was so excellent, we'll give you a little... help, for your next run through. Type 'I am a pro' to gain 200 XP. It only works once per character";
 		if bookfound is not 0:
 			let tempnum be 0;
@@ -101,23 +101,23 @@ when play ends:
 		stop the action;
 	else if bodyname of player is "dead":
 		stop the action;
-	else if humanity of the player is less than 10 and hp of the player is greater than 0:
-		if bodyname of player is "Dragoness" and hp of doctor matt <= 100:
+	else if humanity of the player < 10 and HP of the player > 0:
+		if bodyname of player is "Dragoness" and HP of doctor matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	else:
 		say "You emerge from your harrowing experience with your mind intact, with your [bodyname of player] form and [facename of player] face.";
 		if bodyname is "Human":
 			say "Despite the traumas set on you, you do your best to fit back in with humanity after the rescue arrives.";
-		if cock length of player is greater than 10 or cock width of player is greater than 6 and cocks of player is greater than 0:
+		if cock length of player > 10 or cock width of player > 6 and cocks of player > 0:
 			say "Your extreme masculine attributes prove to be more than a little awkward. As society puts itself back together, you do find a niche. Others, changed as you, require the services of such studs, and you never lack for something to do on the weekends.";
-			if cocks of player is greater than 1:
+			if cocks of player > 1:
 				say "Your multiple endowments become quite popular amongst some infected, whom come from some great distance to be serviced by you. Though it is illegal to charge for such services, many leave you a 'gift' regardless, even a marriage proposal or two.";
 		if skinname of player matches the text "human", case insensitively:
 			increase score by 0;
 		else:
 			say "Your unnatural [skin of player] flesh makes you stand out in a crowd. You find it difficult to keep friends outside of other infected, even after you're declared safe for contact.";
-		if "Fertile" is listed in feats of player and ( number of entries in childrenfaces + FeralBirths) is greater than 5:
-			if cunts of player is greater than 0:
+		if "Fertile" is listed in feats of player and ( number of entries in childrenfaces + FeralBirths) > 5:
+			if cunts of player > 0:
 				say "You've been pregnant so many times and given birth to so many children that the nanites make a very strange change to your reproductive organs. Your body automatically stored a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life.";
 			else if "MPreg" is listed in feats of player and mpregcount >= 6:
 				if "Breeding True" is not listed in feats of player and "They Have Your Eyes" is not listed in feats of player:

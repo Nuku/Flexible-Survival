@@ -90,7 +90,7 @@ to say Great Dane Rougedesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -117,7 +117,7 @@ When Play begins:
 	now int entry is 17;
 	now cha entry is 18;
 	now sex entry is "Female"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 118; [ The monster's starting hit points. ]
+	now HP entry is 118; [ The monster's starting HP. ]
 	now lev entry is 13; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 20; [ Monster's average damage when attacking. ]
 	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -153,7 +153,7 @@ The usedesc of bandage is "The strip of cloth you won off of a Great Dane fighte
 
 when play ends:
 	if bodyname of player is "Great Dane Rouge":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "Losing all sense of time and place you run off back towards Tyr's club in order to join the rest of the girls in order to rejoin with the rest of the pack. It's a little hard for you to traverse the city in your current condition, but your instinctive fighting skills help you to progress without much incident. The skunkbeast you ran across in the park will probably be sore for a few weeks from the beating you gave it, but que sera sera as they say. Once you find Tyr's little underground fight club you are somberly embraced by the Doberman before being shown to the rest area where the rest of the Great Dane's are.";
 			say "At seeing you the other Dane bitches immediately pounce on top of you in order to shower you in licks and kisses. Each of the females is pleased to see you in her own way[if cocks of player > 0]especially with the fine piece of meat growing hard between your legs. Knowing that they can trust another of their own the Great Dane's allow you to mount each of them in turn before washing your face down with their oozing cunts. By the time they are finished you barely remember anything about before now as your mind fully descends into that of a Great Dane Rouge[else]and to show you this the others gently lay you down onto the ground and then go to work making you feel welcomed within your new home with lips, tongues, noses and teeth. As they drench your face down in their combined sexual juices you find your own cunt gushing out onto your thighs as you are licked and suckled on like crazy[end if]. Soon you forget everything but this time at this moment with your pack of rouges surrounding you.";
 		else:

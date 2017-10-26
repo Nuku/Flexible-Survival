@@ -234,7 +234,7 @@ to say sexwithfratmembers:
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		now lastfuck of frat members is turns;
-		increase hp of frat members by 1;
+		increase HP of frat members by 1;
 		wait for any key;
 		clear the screen and hyperlink list;
 

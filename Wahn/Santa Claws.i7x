@@ -12,7 +12,7 @@ Version 1 of Santa Claws by Wahn begins here.
 
 Section 1 - Description
 
-Santa Claws is a man. The hp of Santa Claws is usually 0.
+Santa Claws is a man. The HP of Santa Claws is usually 0.
 The description of Santa Claws is "[Santa Claws Desc]".
 The conversation of Santa Claws is { "Roar." }.
 lastfuck of Santa Claws is usually 555.
@@ -22,19 +22,19 @@ Santa Claws is in Christmas Village.
 to say Santa Claws Desc:
 	setmongender 3;
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Santa Claws], LEVEL: [level of Santa Claws] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Santa Claws], LEVEL: [level of Santa Claws] <- DEBUG[line break]";
 	say "     Santa Claws is a large and powerful anthro polar bear, his bulky body covered in thick snow-white fur. It is obviously clear that this is no timid little bear, as there are strong muscles under his white pelt, and the claws on his paw-hands and -feet do look pretty dangerous. Nevertheless, you don't feel threatened by him, since the big ursine is wearing a gloriously red and white Santa suit, golden belt buckle and all. Sitting on a wide, cushioned throne made of carved hardwood and with festive decorations carved into its sides, the bear watches his domain with a jolly smile on his face.";
 
 The scent of Santa Claws is "     Santa Claws smells quite manly - like a big and virile furred beast.".
 
-instead of going east from Mall East Wing while hp of Santa Claws is 0:
+instead of going east from Mall East Wing while HP of Santa Claws is 0:
 	say "     As you walk further east down the wide open hallway, you see a thick whirl of white flakes in the air before you, obscuring sight in that direction. Looks like... falling snow? Strange - but what isn't, these days. Coming closer, you see that the snowfall only really is strong for a few feet, forming a kind of curtain and little wall of snow to divide half of the east wing from the rest of the mall. There is a break in the low snow wall though, as if to welcome you in, with a sign saying 'Christmas Village' stuck in a pile of snow beside it. Curious about the snow here inside the building, you lean down and take a handful - finding it cool to the touch, but not freezing, and realizing that while it feels real in all other concerns, the white flakes do not melt in your hand.";
 	say "     Do you really want to explore this strange place?";
 	if player consents:
 		move player to Christmas Village;
 		say "     Passing the curtain of snowfall, you enter a pretty little winter wonderland. One can still make out the general shape of the mall, the wide corridor with skylights above, but things have been... transformed quite a bit. There are evergreen conifer trees that sprout out of the snow-covered ground, mostly hiding the walls and letting things appear as if you're in a midwinter forest, with the front sides of the stores appearing as block houses built from round tree trunks. There are many petite humanoids dressed in green clothes going about their business here, following tracks through the snow, chatting and laughing. Looks like they're Christmas elves, with their unlined, delicate features and the pointy ears sticking out to the sides.";
 		say "     In the center of it all stands a large cushioned throne, carved with many decorative designs, and on it sits a man in a bright red suit - an anthro polar bear. As he lets his gaze wander over his domain, smiling at all the little elves, he notices you and waves you closer with a clawed hand. In a deep voice, the polar bear says, 'Welcome to Santa Claws little village, visitor. Be advised that this is my realm and I don't condone violence - this is a place to be jolly, so leave any troubles outside. Rest, get your present and enjoy some time here before you have to go back - or stay, as one of my Christmas elves, if you wish.'";
-		now hp of Santa Claws is 1;
+		now HP of Santa Claws is 1;
 		now Dexterity of Santa Claws is turns + 20;
 	else:
 		say "     Nah, you step back from the curtain of snowfall and walk back towards the normal shops in the west.";
@@ -149,13 +149,16 @@ to say SantaTalk2:
 			let randomnumber be a random number from 1 to 3;
 			if randomnumber is:
 				-- 1:
-					say "a soda bottle, which bears Christmas-y print with snow and smiling polar bears.[line break](You gain a soda bottle)";
+					say "a soda bottle, which bears Christmas-y print with snow and smiling polar bears.";
+					say "[bold type]You gain 1 soda![roman type][line break]";
 					increase carried of soda by 1;
 				-- 2:
-					say "a large gingerbread star, decorated with lots of almonds - still in its clear plastic wrapping.[line break](You gain 1 food)";
+					say "a large gingerbread star, decorated with lots of almonds - still in its clear plastic wrapping.";
+					say "[bold type]You gain 1 food![roman type][line break]";
 					increase carried of food by 1;
 				-- 3:
-					say "a hearty-looking Christmas fruitcake - still in its clear plastic wrapping. It looks relatively small, but when you accept it, you realize how heavy it is. There's quite a bit packed into this thing.[line break](You gain 2 food)";
+					say "a hearty-looking Christmas fruitcake - still in its clear plastic wrapping. It looks relatively small, but when you accept it, you realize how heavy it is. There's quite a bit packed into this thing.";
+					say "[bold type]You gain 2 food![roman type][line break]";
 					increase carried of food by 2;
 		else if calcnumber is 3:[rub him]
 			setmonster "Polar Bear";
@@ -204,7 +207,7 @@ Instead of fucking the Santa Claws:
 Section 4 - Infections
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -231,7 +234,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Male";              [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 96;
+	now HP entry is 96;
 	now lev entry is 14;                  [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 18;                 [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";          [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -257,7 +260,7 @@ When Play begins:
 	now altcombat entry is "default";
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -284,7 +287,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 16;
 	now sex entry is "Female";          [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 15;
+	now HP entry is 15;
 	now lev entry is 1;                 [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 2;                [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -311,7 +314,7 @@ When Play begins:
 
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -338,7 +341,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 16;
 	now sex entry is "Male";            [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 15;
+	now HP entry is 15;
 	now lev entry is 1;                 [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 2;                [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]

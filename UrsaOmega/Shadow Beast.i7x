@@ -29,8 +29,8 @@ to say losetoshadowbeast:
 		say ""; [dealt with in the file where the event is described]
 	else:
 		if a random chance of 1 in 3 succeeds and inheat is not true:		[creature demands oral]
-			say "     The black feline grabs you [if hp of player > 0]softly[else]roughly[end if] with its tentacles and restrains you. It snarls before moving overtop of you, pressing its groin to your face. The dark cat's large manhood is ground against you, precum dribbling onto your cheek. Its strong scent is enticing[if player is submissive] and awakens your submissive urges. You moan and part your lips, welcoming it into your willing mouth[else if hp of player > 0], drawing you to welcome it into your willing mouth[else], but you try to resist, turning away. When you do, the beast gives you a warning growl and squeezes its tentacles around you more firmly. Forced to comply, you part your lips and welcome it into your unwilling mouth.";
-			say "     Once the shadowy beasts's rod is in your mouth, drooling its musky pre onto your tongue, [if player is submissive or hp of player > 0]you lick and suck on it with a growing lustful need[else]you find yourself licking and sucking on it with a growing lustful need[end if]. This male's cock tastes so wild, so virile that your body desires the feline's seed inside you. And though its barbed member scratches across your throat, the discomfort of this soon turns to an increased sensitivity that allows you to feel its thrusts into you all the better.";
+			say "     The black feline grabs you [if HP of player > 0]softly[else]roughly[end if] with its tentacles and restrains you. It snarls before moving overtop of you, pressing its groin to your face. The dark cat's large manhood is ground against you, precum dribbling onto your cheek. Its strong scent is enticing[if player is submissive] and awakens your submissive urges. You moan and part your lips, welcoming it into your willing mouth[else if HP of player > 0], drawing you to welcome it into your willing mouth[else], but you try to resist, turning away. When you do, the beast gives you a warning growl and squeezes its tentacles around you more firmly. Forced to comply, you part your lips and welcome it into your unwilling mouth.";
+			say "     Once the shadowy beasts's rod is in your mouth, drooling its musky pre onto your tongue, [if player is submissive or HP of player > 0]you lick and suck on it with a growing lustful need[else]you find yourself licking and sucking on it with a growing lustful need[end if]. This male's cock tastes so wild, so virile that your body desires the feline's seed inside you. And though its barbed member scratches across your throat, the discomfort of this soon turns to an increased sensitivity that allows you to feel its thrusts into you all the better.";
 			say "     With its pendulous balls resting at your chin, you can feel those warm orbs pulse and throb moments before the creature snarls in climax. It drives all fifteen inches of its cock into your mouth and empties its copious load down your throat and into your belly, filling you with the warmth of its fertile seed. Tasting the excess that bubbles up around its shaft, you savour the strong taste of this virile creature's semen. A wave of lust overtakes you, filling you with a lustful need for more. But the cat's already done with you and pads off, leaving you feeling horny for more. It takes you an effort to not go off after it or go searching immediately for another of its kind to submit yourself to in the hopes of getting properly bred.";
 		else if fightoutcome is 22: [Submit]
 			say "     The cat is clearly pleased at your submission to it, adopting a more relaxed stance. The beast tugs at your gear, indicating that you should remove it - a request you comply with quickly, putting your gear aside and kneeling before the creature.";
@@ -69,7 +69,7 @@ ShadowBeastEventState is a number that varies.
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -96,7 +96,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 12;
 	now sex entry is "Male";              [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 30;
+	now HP entry is 30;
 	now lev entry is 3;                   [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5;                  [ Monster's average damage when attacking. ]
 	now area entry is "Sealed";           [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -156,7 +156,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Shadow Beast":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if cocks of player > 0: [male+herm]
 				if "Submissive" is not listed in feats of player:
 					say "     After you lose your mind to the infection's insidious grip, you find yourself stalking along the streets of the ruined city with a new eagerness as you go on the lookout for something to breed your virile seed into. Quickly realizing that it's easier to move and hunt at night, as your black form shifts through the darkness like sand down the slope of a hill, you make darkness your new companion as you sweep through the streets, a wraith in your own right.";

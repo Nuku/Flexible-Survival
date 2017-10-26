@@ -87,16 +87,16 @@ to say PlantOrSeedRegular:
 	if peachtreefight is 3:
 		if hardmode is true and level of player > 7, let debit be level of player - 7;
 		now dex entry is 16 + ( debit + 2 / 5 );
-		now hp entry is 60 + ( debit * 5 );
-		now monsterhp is 60 + ( debit * 5 );
+		now HP entry is 60 + ( debit * 5 );
+		now monsterHP is 60 + ( debit * 5 );
 		now lev entry is 7 + debit;
 		now wdam entry is 7 + ( ( 2 * debit ) / 5 );
 		say "     This strange plant has spread its vines through the branches of the peach tree and bonded itself to it. You, as many others probably been before, were lured in by the temptation presented by the juicy fruit. The sweet scent of peaches accompanies the dribbling juices that leak from the tips of the vines. The tendril inside you pulses and throbs as those in the tree come down to restrain you so it may complete its tentacular assault upon you. You'll need to break free of the vine locked inside you if you are to escape.";
 	else: [regular park plant]
 		if hardmode is true and level of player > 4, let debit be level of player - 4;
 		now dex entry is 16 + ( ( debit + 4 ) / 5 );
-		now hp entry is 40 + ( debit * 4 );
-		now monsterhp is 40 + ( debit * 4 );
+		now HP entry is 40 + ( debit * 4 );
+		now monsterHP is 40 + ( debit * 4 );
 		now lev entry is 4 + debit;
 		now wdam entry is 6 + ( debit / 3 );
 		if plantdefeat is 0: [encounter yet to fight it]
@@ -114,7 +114,7 @@ to say PlantOrSeedRegular:
 		decrease plfleebonus by 3;
 		decrease pldodgebonus by 3;
 		decrease plmindbonus by 3;
-		now hp of player is ( 2 * hp of player ) / 3;
+		now HP of player is ( 2 * HP of player ) / 3;
 		now libido of player is ( 100 + libido of player + libido of player ) / 3;
 
 to say submitcheck:
@@ -126,7 +126,7 @@ to say didnotsubmit:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -153,8 +153,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 18;
 	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 40;
-	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 40;
+	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 6; [Amount of Damage monster Does when attacking.]
 	now area entry is "Park"; [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 4; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -199,19 +199,19 @@ this is the ppstrike rule:  [possible sonic attack and sets upcoming strike]
 		let the attack bonus be sta entry + ( lev entry * 2 ) - 10;
 		let the combat bonus be attack bonus minus defense bonus;
 		if hardmode is true:
-			if the combat bonus is greater than 19:
+			if the combat bonus > 19:
 				now combat bonus is 19;
-			else if the combat bonus is less than -22:
+			else if the combat bonus < -22:
 				now combat bonus is -22;
 		else:
-			if the combat bonus is greater than 16:
+			if the combat bonus > 16:
 				now combat bonus is 16;
-			else if the combat bonus is less than -25:
+			else if the combat bonus < -25:
 				now combat bonus is -25;
 		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15; [***if autopass, min. 25% chance to hit]
 		let the roll be a random number from 1 to 50;
 		say "[name entry] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-		if the roll plus the combat bonus is greater than 20:
+		if the roll plus the combat bonus > 20:
 			now monsterhit is true;
 		else:
 			now monsterhit is false;
@@ -229,12 +229,12 @@ this is the ppattack rule:
 		now damagein is dam;
 		say "[noarmourabsorbancy]"; [natural defence only]
 		now absorb is ( absorb + 1 ) / 2; [total defense value halved]
-		if absorb is greater than dam:
+		if absorb > dam:
 			now absorb is dam;
-		if absorb is greater than 0:
+		if absorb > 0:
 			say "You prevent [special-style-1][absorb][roman type] damage!";
-		decrease hp of the player by dam;
-		increase hp of player by absorb;
+		decrease HP of the player by dam;
+		increase HP of player by absorb;
 		let libinc be a random number between 1 and dam;
 		if "Horny Bastard" is listed in feats of player, increase libinc by 1;
 		if "Cold Fish" is listed in feats of player, decrease libinc by 1;
@@ -321,7 +321,7 @@ to say parasiticlust:
 	if plantdefeat > 0:
 		increase libido of player by addedlibido;
 		if libido of player > 99, now libido of player is 99;
-		if (libido of player is greater than 90) and (location of player is fasttravel) and (timetillrampage is greater than 3):
+		if (libido of player > 90) and (location of player is fasttravel) and (timetillrampage > 3):
 			if heatform is 0:
 				say "As you pant and feverishly massage your clit, trying to suppress the need for sex caused by the seed, you suddenly smell male pheromones and your mind snaps. You rush to its source and fuck it frantically, not caring about what or who the cock belongs to. As your needy nethers obtain at last the cum they so craved, you smell another cock, and proceed to fuck it as well, lost in mad lust. You enter a sex rampage.";
 			else:
@@ -390,7 +390,7 @@ to say parasiticlust:
 				say "With your deep, lustful hunger sated for the moment, you massage your abused holes and lick your cum-covered lips. Now that was a good fucking session!";
 				increase the morale of the player by 5;
 				now the libido of the player is (libido of player) / 2;
-		else if libido of player is greater than 90:
+		else if libido of player > 90:
 			increase timetillrampage by 1;
 			say "The sexual urges caused by the seed are harder and harder to suppress.[line break]";
 		else:
@@ -403,7 +403,7 @@ when play ends:
 	if vinetrapped is 0:
 		if bodyname of player is "Parasitic Plant":
 			if humanity of player < 10:			[succumb]
-				if hp of Joanna > 0 and hp of Joanna < 90:			[Joanna saved]
+				if HP of Joanna > 0 and HP of Joanna < 90:			[Joanna saved]
 					say "     As your plant-like urges take the fore, you sink into a passive state. You are a peaceful, bliss-filled plant creature, wandering the city in search of sex. You feel a thirst, a hunger for the sexual fluids of others and give yourself to them whenever you can. Many are quite willing to indulge your needs, sometimes repeatedly, filling you with cum or soaking you in their juices until you are briefly satisfied. You experience a life of varied lust, seeking out as many different creatures as you can.";
 					say "     You are always drawn back to the flowery garden of the kinkajou, who welcomes you with open arms and tendrils[if plantdefeat > 0]. Having removed the plant seed within you on your first visit, the fluids you've been collecting are all hers to enjoy[else]. The collected semen and juices you've been collecting are all hers to enjoy[end if]. Her tongue and fresh vines delve into you, drawing the nourishing fluids from you to help satisfy her cravings. You are her lustful servant plant, going out into the city to gather so many different and delicious delights for her to later lap from you like nectar with her sensual tongue.";
 					if cunts of player > 0:
@@ -431,7 +431,7 @@ when play ends:
 					say "     Your manage to restrain your lustful urges until you're released. Once you're free, you celebrate with a fine orgy with several of the others released at the same time as you. Your body soaks up their sexual fluids as they cum in and over you repeatedly, revitalizing you. These orgies become a regular affair for you and the others of that group, a special thing you share with them once a month.";
 					say "     You get work as a gardener for the city, tending to several small parks. It is a pleasant life for a plant like you. The work comes naturally, knowing what the plants need and doing your best to provide for them, making the parks flourish, earning you several awards and a job as a gardener at a lavish private estate.";
 					say "     Your monthly orgies continue and while several of the attendees offer to become mates with you, you prefer sharing yourself with all of them. They are all precious to you and you could never be happy picking one over another even if your open group is always open to sharing.";
-		else if plantdefeat > 0 and hp of Joanna >= 7 and hp of Joanna < 90:
+		else if plantdefeat > 0 and HP of Joanna >= 7 and HP of Joanna < 90:
 			if humanity of player >= 10:
 				say "     When rescue arrives, you decide to hide the existence of Joanna's seed resting within you, deciding that it is now a part of what you are. You live a rather normal life, except for the very, very frequent sex, of course. Nymphomania is not really high on the list of mental illnesses you get locked up for and it's certainly a lot more common these days.";
 		else if plantdefeat > 0 and cockname of player is "Parasitic Plant":	[non-plant, but plant groin w/seed]

@@ -23,18 +23,18 @@ to say ninjadesc:
 	if "Wary Watcher" is listed in feats of player, increase featbonus by 3;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20: [dice]+[bonus]+[featbonus] = [dice + bonus + featbonus][line break]";
-	if dice + bonus + featbonus is greater than 12 + ( ( dex entry - 10 ) / 2 ):
-		if hp of Hayato is 12:	[in Noh Mask fights]
+	if dice + bonus + featbonus > 12 + ( ( dex entry - 10 ) / 2 ):
+		if HP of Hayato is 12:	[in Noh Mask fights]
 			say "     As the ninja feline spins to face you, you catch sight of a glint of metal in his paws moments before they're thrown. Dodging swiftly, you are able to evade the trio of flying shuriken. They embed themselves into the wall behind you. When you turn to face the feline, he's already upon you, having pulled an oriental weapon from his black outfit and swinging to strike.";
 		else:
 			say "     As you move down the halls of the museum, you hear a faint sound from behind you and turn around quickly. You are narrowly missed by a triad of flying shuriken that embed themselves into the floor beside you. There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours. Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you. The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
 	else:
 		let dammy be 8;
 		if hardmode is true, increase dammy by ( square root of lev entry );
-		decrease hp of player by dammy;
+		decrease HP of player by dammy;
 		increase libido of player by 10;
 		if libido of player > 110, now libido of player is 110;
-		if hp of Hayato is 12:	[in Noh Mask fights]
+		if HP of Hayato is 12:	[in Noh Mask fights]
 			say "     When the ninja feline spins to face you, his paw makes a fast motion. Before you can realize what is happening, you are struck by a trio of flying shuriken, taking [dammy] damage. The pain is quickly replaced by a warm rush of lustful excitement. Even as you're pulling the poisoned ninja stars from your chest, the black garbed cat is rushing you. He pulls an oriental weapon from his black outfit and swings to strike.";
 		else:
 			say "     As you move down the halls of the museum, you hear the soft whizz of something flying through the air too late, as a pain fills your back, causing [dammy] damage. This is quickly replaced by a warm rush of lustful excitement. You turn quickly to face your attacker as you reach back to pull the trio of poisoned shuriken from your back. There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours. Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you. The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
@@ -69,7 +69,7 @@ to say ninjaattack:
 		if libido of player > 110, now libido of player is 110;
 		let dammy be a random number between 2 and 3;
 		if hardmode is true, increase dammy by ( square root of lev entry );
-		decrease the hp of player by dammy;
+		decrease the HP of player by dammy;
 		say "You take [dammy] damage from the ninja star.";]
 	let T be a random number between 1 and 6;
 	if T is 1:
@@ -91,7 +91,7 @@ to say ninjaattack:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -118,8 +118,8 @@ When Play begins:
    now int entry is 10;
    now cha entry is 12;
    now sex entry is "Female"; [ Starting target gender is Female]
-   now hp entry is 25;
-   now lev entry is 3; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now HP entry is 25;
+   now lev entry is 3; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
    now wdam entry is 6; [ Avg damage the monster does when attacking.]
    now area entry is "Museum"; [ Location of monster, in this case the Museum ]
    now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -164,17 +164,17 @@ this is the ninjastar rule:
 			if hardmode is true, increase dammy by ( square root of lev entry );
 			now damagein is dammy;
 			say "[normalabsorbancy]";
-			if absorb is greater than dammy:
+			if absorb > dammy:
 				now absorb is dammy;
-			say "While making another acrobatic set of leaps and dodges, the ninja slips a shuriken from his robe and tosses it at you. The bladed star stabs into your [one of]shoulder[or]hip[or]side[or]thigh[or]leg[at random] for [special-style-2][dammy][roman type] damage[if absorb > 0]. Your defenses manage to prevent [special-style-1][absorb][roman type] hp of this damage[end if]. There is a stab of pain from the strike, followed from a warm heat that flows into you from the wound, causing a surge of lustful desires in you. As these thoughts momentarily distract you, the feline ninja moves in to make his attack.";
-			decrease hp of the player by dammy;
-			increase hp of player by absorb;
+			say "While making another acrobatic set of leaps and dodges, the ninja slips a shuriken from his robe and tosses it at you. The bladed star stabs into your [one of]shoulder[or]hip[or]side[or]thigh[or]leg[at random] for [special-style-2][dammy][roman type] damage[if absorb > 0]. Your defenses manage to prevent [special-style-1][absorb][roman type] HP of this damage[end if]. There is a stab of pain from the strike, followed from a warm heat that flows into you from the wound, causing a surge of lustful desires in you. As these thoughts momentarily distract you, the feline ninja moves in to make his attack.";
+			decrease HP of the player by dammy;
+			increase HP of player by absorb;
 		else:
 			say "The [one of]feline ninja[or]cat ninja[or]ninja[as decreasingly likely outcomes] [one of]flicks a shuriken at you that narrowly misses[or]pulls a ninja star from his dark robes, but you manage to evade it[or]tries to hit you with a surprise shuriken strike, but you catch the motion of his hand and are ready to dodge[or]throws a ninja star he pulls from his robes, but misses[purely at random]!";
 
 when play ends:
 	if bodyname of player is "Ninja Cat":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if player is pure:
 				if breast size of player > 0:
 					project the figure of NinjaCat_F_icon;

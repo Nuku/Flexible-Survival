@@ -8,7 +8,7 @@ Section 1 - Monster Responses
 to say Tiger attack:
 	say "'this is not the fighting monster you are looking for.'";
 	wait for any key;
-	if cunts of player is greater than 0:
+	if cunts of player > 0:
 		say "no text here!";
 		infect "Tiger";
 	else:
@@ -21,7 +21,7 @@ To say Tiger loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -48,8 +48,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 16;
 	now sex entry is "Female";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 80;
-	now lev entry is 7;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 80;
+	now lev entry is 7;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 10;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Tiger Den";  [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -75,8 +75,8 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Tiger":
-		if humanity of player is less than 10:
-			if cunts of player is greater than 0:
+		if humanity of player < 10:
+			if cunts of player > 0:
 				say "Finally giving in completely to your new instincts, you find yourself returning automatically to the tiger den, when you return, you find several of the other tigers eyeing you hopefully, but you have eyes only for Chase, something deep within you burning hot with need at the sight of the tiger who changed you, his scent still marking your body as his. You find yourself stalking up to the surprised looking tiger male, he quickly gets the idea when you reach out and start stroking his cock as you rub your furred tiger body up against him. Soon he hauls you off to one of the small pallets in the room, and your lustful cries fill the den as he fulfills his role as your newly chosen mate, filling your eager body with his seed and marking you as his. Eventually sated, you lie next to your strong and handsome mate while he whispers words to you, he seems glad you decided to embrace your true nature and give yourself over to him and being his tigress, and he promises to take care of your needs and see you are always well bred and full of his little tiger cubs. While it is hard to make much sense of his words, you catch the gist of your mates comments, and rumble in happy satisfaction at being the chosen mate of such a big and strong tiger, and you look forward to giving him many big and strong cubs...";
 			else if "MPreg" is listed in feats of player and lust of Chase > 0:
 				say "Finally giving in completely to your new instincts, you find yourself returning automatically to the tiger den, when you return, you find several of the other tigers eyeing you hopefully, but you have eyes only for Chase, something deep within you burning hot with need at the sight of the tiger who changed you, his scent still marking your body as his. You find yourself stalking up to the surprised looking tiger male, he quickly gets the idea when you reach out and start stroking his cock as you rub your furred tiger body up against him. Soon he hauls you off to one of the small pallets in the room, and your lustful cries fill the den as he fulfills his role as your newly chosen mate, filling your eager body with his seed and marking you as his.";
@@ -84,7 +84,7 @@ when play ends:
 			else:
 				say "Finally giving in to the infection and your baser desires, you find yourself becoming increasingly more interested in finding a way to get rid of much of the tiger competition so you can have your pick of the mates. Finally your lust crazed mind hits on what you think is the perfect scheme, and you hunt down a small group of those tigertaurs, and manage to tease them into chasing you. You lead the horny beasts right through the traps and down to the entrance of the Tiger den, before ducking inside and taking cover as they burst into the room. Several of the other tiger men try to stop the horny beasts, but their susceptibility to the group of tigertaurs['] strong musk soon has new limbs exploding from their bodies as they switch sides. You yourself go and try to pick out a few of the prime females to escape with, and start to try to slip past the growing tigertaur orgy with them, only to find another small group of tigertaurs just now coming down the stairs. They spot you instantly, and before you can react they are upon you and your small group of handpicked mates, causing you to moan and pant in joy as your body shifts underneath them. You can see out of the corner of your eye your potential mates also succumbing to their changes as they moan in desire, and you realize you chose mates well. Because you realize as you give yourself over fully to the changes, soon they and you will both be very good mates indeed for the lusty tigertaurs, as you moan underneath the strong tigertaur that begins to mount your changed form, and eventually once you have all borne the litters your new mates are so eager to give you, maybe you will actually get to mate them as well your self, or even better, maybe they will mate you!";
 		else:
-			if cunts of player is greater than 0:
+			if cunts of player > 0:
 				say "Finally rescued from the city by the military, you make sure to lead them to where the rest of the tigers are hiding in the den. The soldiers are completely surprised to find so many infected in one place that seem to be relatively sane, and even more surprised that they all seem to be tigers. They happily help you out of the city, where several of their scientists spend several weeks poking and prodding everyone to see what it is about being a tiger that makes you so resistant to the mental deterioration, finally they give up though and let all of you go, having bigger issues to deal with in the city. Glad to be free, you and the rest of the tigers from the den promise to keep in touch as you spread out to contact old friends and family members, and rebuild new lives. You yourself try several different things as you try to work your way back into society, but nothing seems to make you truly happy for long. Chase stays close to you though, providing companionship and is one of the few tigers that is around you at all times, finally you wake up one day and realize what he was waiting for, as your body burns with need and arousal, your heat shooting through you and making you desperate for companionship. Smelling your heat Chase soon has you underneath him teasing your body and making you beg in need for him to fill you again and again, which he does several times over the next few days and nights of your heat. His body claiming yours in the most primal of ways, you realize just what you were missing in your life, a strong dominant mate to take care of you and see to your carnal needs. When your heat is finally over, and you know his seed has caught, he finds it all too easy to convince you to move in with him, and become his mate on a more permanent basis. Soon you are happier than you ever thought possible, as you work hard to please your mate, and to prepare for the cubs that are sure to come soon, and hopefully many more of his strong tiger cubs after that...";
 			else if "MPreg" is listed in feats of player and lust of Chase > 0:
 				say "Finally rescued from the city by the military, you make sure to lead them to where the rest of the tigers are hiding in the den. The soldiers are completely surprised to find so many infected in one place that seem to be relatively sane, and even more surprised that they all seem to be tigers. They happily help you out of the city, where several of their scientists spend several weeks poking and prodding everyone to see what it is about being a tiger that makes you so resistant to the mental deterioration, finally they give up though and let all of you go, having bigger issues to deal with in the city.";

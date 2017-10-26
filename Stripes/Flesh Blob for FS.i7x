@@ -19,8 +19,8 @@ to say fleshblobdesc:
 	let zz be a random number between 1 and 12;
 	if hardmode is true and level of player > 8:		[Hard Mode Version!]
 		increase qq by level of player - 8;
-		now hp entry is 18 + ( ( 4 * qq ) + zz + a random number between 0 and qq );
-		now monsterhp is hp entry;
+		now HP entry is 18 + ( ( 4 * qq ) + zz + a random number between 0 and qq );
+		now monsterHP is HP entry;
 		now lev entry is qq;
 		if lev entry > 9:
 			now wdam entry is 8 + ( qq / 3 );
@@ -28,14 +28,14 @@ to say fleshblobdesc:
 			now wdam entry is 1 + ( ( ( qq - 2 ) * 3 ) / 2 );
 		now dex entry is 14 + ( qq / 6 ) + ( square root of ( qq + 8 ) ) + a random number between 0 and 2; [faster initial growth, but slows down more]
 	else:								[Normal Play Version!]
-		now hp entry is ( ( 5 times qq ) + zz + 5 );
-		now monsterhp is hp entry;
+		now HP entry is ( ( 5 times qq ) + zz + 5 );
+		now monsterHP is HP entry;
 		now wdam entry is 1 + ( ( ( qq - 2 ) * 3 ) / 2 );
 		now lev entry is qq;
 		now dex entry is ( ( ( ( qq - 1 ) * 4 ) / 3 ) + 10 );
 	[testing values achieved]
 [	say "Lvl is [qq]. Variable is [zz].";
-	say "HP is [hp entry].";
+	say "HP is [HP entry].";
 	say "Dmg is [wdam entry]. Dex is [dex entry].[line break]";]
 	say "     You find yourself being confronted by an oozing, undulating mass of flesh. It has near-white skin over its shifting mass, probably from its underground existence. It is a mound of pallid flesh roughly [if lev entry is 5]five[else if lev entry is 6]six[else if lev entry is 7]seven[else if lev entry is 8]eight[else if lev entry is 9]nine[else]ten[end if] feet in diameter that continuously forms disturbing bulges across its surface. Hands and arms, feet and legs, rise up at times, only to sink back into the mass of flesh. Eyes form in random places across itself, staring at you before closing and fading back into it. Transitory cocks, cunts and breasts are also quite common across the creature's body.";
 	say "     Most disturbing of all though are the heads and faces that push out of the blob briefly. These are of both men and women and have varied expressions of horror, terror, delight and lust. Many of these do not even fully form and look more like someone's stretching the pale flesh across their face while others stare at you with mismatched eyes or grow an eye in their screaming mouth.";
@@ -78,7 +78,7 @@ to say beatthefleshblob:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -105,7 +105,7 @@ When Play begins:
 	now int entry is 16;
 	now cha entry is 16;
 	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 38; [ The monster's starting hit points. ]
+	now HP entry is 38; [ The monster's starting HP. ]
 	now lev entry is 5; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6; [ Monster's average damage when attacking. ]
 	now area entry is "Sealed"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -135,7 +135,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Flesh Blob":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if level of player > 10:
 				say "     As your mind becomes increasingly lost in the strange new instincts taking over, you wander off into the city. After assaulting and taking sexual pleasure from some of the creatures you find, you can't quite seem to find complete satisfaction. After a few attempts, you catch a fresh victim, but don't let them go this time, keeping it up while pressing your malleable body against theirs. As you keep going at it, your body loses more of its consistency, turning into an undulating, rippling blob of flesh and lust that engulfs your prey whole.";
 				say "     Over time, as you continue to fuck them, they start to become gooey, flowing flesh like you. Hiding in a dark basement during the day with your prey, you keep going until they are melded and absorbed into your body with only traces of their mind remaining mixed with yours. You go on like this, resting and hiding during the day and coming out at night to find other victims, sometimes keeping them and absorbing them into your growing blob of shifting flesh.";

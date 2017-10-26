@@ -81,7 +81,7 @@ to say beattheBehemoth:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -108,7 +108,7 @@ When Play begins:
 	now int entry is 22;
 	now cha entry is 10;
 	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 240; [ The monster's starting hit points. ]
+	now HP entry is 240; [ The monster's starting HP. ]
 	now lev entry is 20; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 35; [ Monster's average damage when attacking. ]
 	now area entry is "Plains"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -150,7 +150,7 @@ The usedesc of behemoth horn is "Taking the behemoth horn and rolling it around 
 
 when play ends:
 	if bodyname of player is "Behemoth":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "With your mind becoming lost to the infection strain of the Behemoth running throughout your body you find yourself growling and roaring without knowing why before taking off towards the plains. By the time you get there any other infection has ran its course out of you and now you are another sixteen foot long behemoth like the rest of your brethren.";
 			if cocks of player > 0:
 				say "However, after finding a large brood of other Behemoths you find yourself quickly getting challenged by the lot so as to you decide your place within the ranks of their disheveled pecking order[if strength of player > 20]. With your strength you are able to suppress them all and thereby force them to accept you as their sovereign, after rutting each other them in turn that is[else]. Since you prove to be so much weaker than them you are made into a lower brother who is thereby taken by the rest both forcibly and painstakingly for days to months on end[end if].";

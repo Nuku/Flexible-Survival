@@ -3,7 +3,7 @@ Version 1 of Anthony by Wahn begins here.
 
 Section 1 - NPC
 
-[ hp states of Anthony                                                         ]
+[ HP states of Anthony                                                         ]
 [   0: starting state                                                          ]
 [   1: about to give a reward for returning Wendy to a player he never met     ]
 [   2: talked to the player                                                    ]
@@ -16,7 +16,7 @@ Section 1 - NPC
 [   0: no sex with the player yet                                              ]
 [   1: reward sex with the player                                              ]
 
-Anthony is a man. The hp of Anthony is normally 0. Anthony is in Farmhouse Main Room.
+Anthony is a man. The HP of Anthony is normally 0. Anthony is in Farmhouse Main Room.
 The description of Anthony is "[AnthonyDesc]".
 The conversation of Anthony is { "Mew!" }.
 The icon of Anthony is Figure of Anthony_clothed_icon.
@@ -26,7 +26,7 @@ instead of sniffing Anthony:
 
 to say AnthonyDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Anthony] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Anthony] <- DEBUG[line break]";
 	say "     Anthony McDermott is a tall anthro anteater in a kilt, with a light and slender build and the characteristic elongated head and narrow snout of a giant anteater. He has large brown eyes and expressive, flexible ears on top of his head, plus a beautiful mane of brown hair down to the midst of his back. One lock of his mane hangs down over his brow, giving him a somewhat dashing appearance.";
 	say "     The young man's body is covered in lustrous and silky fur, with most of it light brown to blond and pretty short, showing off the fit shape and light muscles of his upper body, abs, legs and (you assume) crotch. Meanwhile, his forearms and lower legs have longer, almost purely blond hair covering them, and the very long prehensile tail behind him looks pretty big with the thick and darker brown fur along its length.";
 	say "     Another thing of note are the long and curved claws on his hands and feet, longer than the fingers themselves. Looking at them makes you recall something you once read about a regular giant anteater being able to kill a jaguar in a stand-up fight...";
@@ -47,11 +47,11 @@ instead of conversing the Anthony:
 		say "     Chatting a bit about this and that, you finally come to the topic of [one of]Anthony's kilt. He laughs as you bring up the unconventional piece of clothing, running a hand over its fabric. 'Yeah, I know - it feels strange to be wearing a skirt - ok, kilt - all the time. Not that I have any choice - imagine trying to pull a pair of pants over those...' He nods down to the long curved claws on his feet. 'I ripped three pairs of jeans after I transformed until I remembered this thing. Thank god grandmother insisted on all of us men wearing 'traditional' outfits when my older sister married a few years back.'[or]the farm itself. Anthony explains 'This land has been in my family for generations. I spent quite a few summer holidays out here as a kid. Just a few months before all this...' *he raises one of his furred arms and clicks the claws against each other* 'happened, my grandfather died, leaving all of it to me and I moved here for good. I was just getting the hang of making everything work all right when the world got crazy. Since then, all us humans have become something else and various animals started acting strange. And then there's that strange grass, growing fast and actively trying to destroy things...'[or]the plains. Anthony says 'Crazy stuff, the grass out there. I mean, the farm was on the far edge of the city, pretty thinly built up with farmland and a few wooded areas around - now it's all just that endless sea of grass, with all the other buildings already collapsed and gone.'[at random]";
 	else if calcnumber is 2: [help]
 		say "     Anthony smiles as you offer your help, putting his hand on your shoulder - carefully, because of his claws. 'Thanks a lot, we really can use the help.' His eyes get a faraway expression as he thinks for a moment, trying to find the right job for you to do.";
-		if hp of Anthony < 4:
+		if HP of Anthony < 4:
 			say "     'You've been around in the area and further into the city, so could you please have a look out for a cow - a regular, untransformed one. Some of our cows ran off when a critter broke through the fence and frightened them, and we still haven't found one of our best producers. Really hope she's all right. Her name is Wendy and she's very docile and peaceful. If you do find her, just calm her down, talk to her a bit and she'll follow you so you can bring her back here.'";
 			say "     He looks to you with a hopeful expression, then continues with 'There's a reward too. If you bring Wendy back, I can give you a bag of food - farm-fresh and guaranteed infection free.'";
-		else if hp of Anthony is 4:
-			if hp of Duke < 10: [not helped yet]
+		else if HP of Anthony is 4:
+			if HP of Duke < 10: [not helped yet]
 				say "     'You're pretty resourceful and often out in the city, aren't you? Maybe you could find a way to help Shawn and Duke - they're shepherds, really nice guys and hard workers. Just go out to the meadow after dark and you'll see what's going on, ok?'";
 			else: [helped the farmhands]
 				say "     'I was gonna ask you to help out Shawn and Duke, but you already did that, didn't you? I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
@@ -67,8 +67,8 @@ instead of conversing the Anthony:
 				else:
 					LineBreak;
 					say "     [AnthonyRewardSex]";
-				now hp of Anthony is 5;
-		else if hp of Anthony is 5:
+				now HP of Anthony is 5;
+		else if HP of Anthony is 5:
 			say "     'One of the farmhands has gone missing and I could really use someone experienced with the dangers of the city to go looking for him. You see, my guys regularly patrol the outskirts of the farm and fields, always on the lookout for roving beasts or a new growth burst of the creeping grass - but early this morning, Finn didn't come back. Being a horseman like the others he's pretty strong and fast too, so I - I didn't think something like this could happen. Not here, so close to my family farm. Something terrible must have gotten to him.'";
 			say "     Anthony scrapes his claws against each other in a move that betrays his anxiousness, then adds, 'Just the thought of one of my workers, out there all alone with a slobbering beast wanting to gnaw his bones, or something...' Falling silent, he stops the hand-movements a second later, then gives a sigh. 'Everyone here is my responsibility as the owner of this farm. I'm half-minded to go out with you, but then I would be abandoning the rest to look for one man. Who knows what might happen if I'm not here to lead them. I don't think the farm would last long without coordination. Just days ago, we had a behemoth deciding he wanted to move in...'";
 			LineBreak;
@@ -82,24 +82,24 @@ instead of conversing the Anthony:
 instead of fucking the Anthony:
 	say "     Anthony looks at you with interest as you make him your amorous offer, then sighs and shakes his head. 'I'd love to take you up on that, but right now isn't such a good time, sorry. With all the things that I have to worry about, sudden emergencies coming up and so on, I... can't just take time off right now. People on the farm count on me and grandfather would spin in his grave if I started fucking around with someone before sorting out the problems we have.'";
 
-instead of going northwest from Central Farm Square while (hp of Anthony is 0 or hp of Anthony is 1 or hp of Anthony is 3 or hp of Anthony is 4 or hp of Anthony is 5):
+instead of going northwest from Central Farm Square while (HP of Anthony is 0 or HP of Anthony is 1 or HP of Anthony is 3 or HP of Anthony is 4 or HP of Anthony is 5):
 	move player to Farmhouse Main Room;
 	if graphics is true:
 		project the figure of Anthony_face_icon;
-	if hp of Anthony is 0: [first meeting, no reward for Wendy yet]
+	if HP of Anthony is 0: [first meeting, no reward for Wendy yet]
 		say "     Entering the farmhouse, you find yourself in a large main room that combines the living and dining area. Sitting on a leather couch in the front part of the room, leaning forward to write on a notebook on the coffee table next to it, you see a lean, humanoid anteater. The young man stands up as he notices you, walking over to you and offering you his clawed hand in greeting. After introducing himself as Anthony McDermott, owner of the farm, he smiles and continues with 'Nice to see that not everyone out there has devolved into horny beasts. You're welcome to stay here with us for a while, if you want, though we can't offer any food or water, I hope you understand.'";
-		now hp of Anthony is 2;
-	else if hp of Anthony is 1: [he never met the player before]
+		now HP of Anthony is 2;
+	else if HP of Anthony is 1: [he never met the player before]
 		say "     Entering the farmhouse, you find yourself in a large main room that combines the living and dining area. Sitting on a leather couch in the front part of the room, leaning forward to write on a notebook on the coffee table next to it, you see a lean, humanoid anteater. The young man stands up as he notices you, walking over to you and offering you his clawed hand in greeting. After introducing himself as Anthony McDermott, owner of the farm, he smiles and continues with 'Nice to see that not everyone out there has devolved into horny beasts. You're welcome to stay here with us for a while, if you want, though we can't offer any food or water, I hope you understand.'";
 		LineBreak;
 		say "     Nodding, you bring up the cow you found and led back to the farm. A visibly relieved Anthony puts his long arms around you, giving you an exuberant hug. Realizing a moment later that you don't really know him and might not like this, he lets you go, giving you a clap in camaraderie on the shoulder instead. 'Thank you, thank you. I had feared she'd just be lost out there, alone, maybe eaten. That's a big worry of my mind. Here, let me give you a reward for your efforts.' With that, the anthro anteater walks over into the kitchen, packing a carrying bag with fresh fruit for you, then handing it over with a smile.";
 		increase carried of food by 4;
-		now hp of Anthony is 4;
-	else if hp of Anthony is 3: [met the player before]
+		now HP of Anthony is 4;
+	else if HP of Anthony is 3: [met the player before]
 		say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about the cow you found and led back to the farm. Visibly relieved, he puts his long arms around you, giving you an exuberant hug. Realizing a moment later that you don't really know him all that well and might not like this, he lets you go, giving you a clap in camaraderie on the shoulder instead. 'Thank you, thank you. I had feared she'd just be lost out there, alone, maybe eaten. That's a big worry off my mind. Here, let me give you a reward for your efforts.' With that, the anthro anteater walks over into the kitchen, packing a carrying bag with fresh fruit for you, then handing it over with a smile.";
 		increase carried of food by 4;
-		now hp of Anthony is 4;
-	else if hp of Anthony is 4 and hp of Duke > 9:
+		now HP of Anthony is 4;
+	else if HP of Anthony is 4 and HP of Duke > 9:
 		say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Shawn's transformation from feral sheep to a more human form. Very happy to hear about that, he gives you a beaming smile and claps you on the shoulder in camaraderie. 'Thank you, thank you. I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
 		LineBreak;
 		say "     [bold type]Do you wait patiently for him to get you some food, or would you rather pull him against yourself for a kiss and a more 'personal' reward?[roman type][line break]";
@@ -113,8 +113,8 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 		else:
 			LineBreak;
 			say "     [AnthonyRewardSex]";
-		now hp of Anthony is 5;
-	else if hp of Anthony is 5 and FinnTrackingProgress > 2:
+		now HP of Anthony is 5;
+	else if HP of Anthony is 5 and FinnTrackingProgress > 2:
 		if FinnTrackingProgress < 90: [Finn got saved]
 			say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Finn's abduction by the horsemen and the fact that you've brought his farmhand back. Very happy to hear about that, he gives you a beaming smile and claps you on the shoulder in camaraderie. 'Thank you, thank you. I'm so glad you found him.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
 			LineBreak;
@@ -135,14 +135,14 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 		else if FinnTrackingProgress is 100: [Finn joined the stables]
 			say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Finn's abduction by the horsemen and the fact that he joined their numbers in the end. The friendly anteater is visibly deflated at such news and gives a deep sigh. 'I - um, I hope he'll be happy there. Thank you for at least the knowledge what happened to him. I'll get you some food.' With that, the anthro anteater trots over to the kitchen and soon hands you a small bag with fresh fruit.";
 			increase carried of food by 2;
-		now hp of Anthony is 6;
+		now HP of Anthony is 6;
 [
-	else if hp of Anthony is 5 and hp of Selena is 1 and SelenaDelivery - turns > 16:
+	else if HP of Anthony is 5 and HP of Selena is 1 and SelenaDelivery - turns > 16:
 		say "     Entering the main room of the farmhouse, you are greeted by Anthony, who says, 'Hello my friend. Could I maybe ask you for a report about the newest spread of creatures out in the plains? We have to keep informed so we're not hit out of the blue when some new type of creature appears or any group expands their territory into the plains. So if -' His words are interrupted by a high-pitched voice calling out, 'Uncle Anthony! Can I ride one of the horses, today?' A small, spotted catgirl in an oversized t-shirt bounces into the room as she says the last words, which leads over to an 'Eep' as she notices you in the room too. Lightning-quick, the little feline flits to a spot behind Anthony, peeking out from behind him at you.";
-		now hp of Anthony is 6;
-		if xp of Selena is 1: [player lifted blanket, Selena vaguely remembers player]
+		now HP of Anthony is 6;
+		if XP of Selena is 1: [player lifted blanket, Selena vaguely remembers player]
 			say "     The tawny kitten tilts her head to the side, her eyes wide with wonder. She looks up to him, gently tugging on his kilt as she speaks in a soft voice. 'Uncle Anthony? Who is that?'";
-		else if xp of Selena is 0: [player didn't lift blanket, no memories of player]
+		else if XP of Selena is 0: [player didn't lift blanket, no memories of player]
 			say "     She grips his clothes a little tighter, [if facename of player is in infections of CanineList]ducking back behind him with a whimper[else]looking up at him in concern.";
 		say "     Anthony looks behind his back, then says in a calming tone, 'Don't worry, kitten. [if player is female]She[else]He[end if]'s a friend. Even saved Wendy from the creatures out in the plains. You got nothing to fear from [if player is female]her[else]him[end if]. Why don't you go and introduce yourself. That's only polite, you know.";
 		say "     You do your best to give a friendly smile, and...";
@@ -159,7 +159,7 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 		say "     Her ears droop at this, but Selena nods, giving him one last hug before trudging out of the room, briefly glancing at you before she disappears through the doorway. Waiting a few seconds after watching Selena walk out of the room, Anthony calls after her, 'I can see the shadow of your tail on the wall, little lady. Don't eavesdrop, that's not nice. And please go do your homework. Now.' After a little huff that can be heard through the open door, there is only silence. Something tells you she's gone now, but that anthro kitten walks on pretty quiet paws...";
 		WaitLineBreak;
 		say "     Anthony clears his throat, then says, 'Hard to believe she's the kitten that got left at our gate only some short days ago. Growing up in jumps, large and small. Well, that's the new world I guess.' He shrugs and looks back over to the door through which Selena left, a smile playing over his lips. 'She's a sweet girl, and I'm glad to have her. One has to watch out a bit with her though - she can think up the wildest things to do. I'd appreciate it if you could try to rein her in a bit if you see her planning some hijinks on the farm grounds. Ha - a typical feline... let's just make sure that curiosity doesn't lead this kitty astray...'";
-		now hp of Selena is 2;
+		now HP of Selena is 2;
 		now libido of Selena is 5;   [neutral start]
 ]
 
@@ -322,7 +322,7 @@ to say AnthonySex5: [fuck Anthony]
 Section 3 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -349,8 +349,8 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 14;
 	now sex entry is "Male";         [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 35;              [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 4;              [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 35;              [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 4;              [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 6;             [ Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Nowhere";     [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']

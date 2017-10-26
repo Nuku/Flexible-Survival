@@ -16,7 +16,7 @@ instead of sniffing Denise:
 
 to say DeniseDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Gryphoness], LIBIDO: [libido of Gryphoness], DEXTERITY: [dexterity of Gryphoness] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Gryphoness], LIBIDO: [libido of Gryphoness], DEXTERITY: [dexterity of Gryphoness] <- DEBUG[line break]";
 	now tempnum is the remainder after dividing libido of gryphoness by 4;
 	let T be ( libido of gryphoness / 4 );
 	say "     Denise is a beautiful and striking example of the blue gryphons now living in this city. Being a creature out of legend, her form consists of wildly different parts - standing upright on the paw-feet of digitigrade legs, she has a long lion's tail and white-gold fur on her lower body and front up to the collarbone, with everything above bearing bright blue feathers. Her feathered, but otherwise human-like arms end in hands that bear dangerous talons, and the proud set of fully functional wings behind her back gives the gryphoness an imposing stature. Topping all of that is the avian head of a bird of prey, complete with feathers in many shades of blue and a sharp beak.";

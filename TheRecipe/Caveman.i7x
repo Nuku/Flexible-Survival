@@ -56,7 +56,7 @@ to say beatthecaveman:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -83,7 +83,7 @@ When Play begins:
 	now int entry is 9;
 	now cha entry is 8;
 	now sex entry is "Male";          [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 55;
+	now HP entry is 55;
 	now lev entry is 6;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 10;             [ Monster's average damage when attacking. ]
 	now area entry is "Museum";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -112,7 +112,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Caveman":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your caveman infection, your mind regressing to a simpler, devolved state. You find the city confusing and troublesome and run away until you find a comfortable cave deep in the woods, away from everyone else.";
 		else:
 			say "     You survive, but you can never live a normal life. Most of the other survivors are furry and have started their own community, but you are almost human, but not quite. The only work you can find is as a subject in college lectures about prehistory and evolution, until a construction foreman sees the massive arms and hands on your freakish body and puts them to good use. The work is hard and simple, perfect for your devolved mind.";

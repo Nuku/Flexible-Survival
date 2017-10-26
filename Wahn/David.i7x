@@ -113,7 +113,7 @@ Instead of resolving a Thankful Soldier:
 		else if TSEventCounter > 3: [all good things come to an end - he's ordered to Camp Bravo]
 			say "     Moving through the city, you run into a lone soldier walking down a street. It's Private Jackson, the young soldier you saved from that demon brute in the red light district. He's got a slender but still muscular build and a nice-looking face with a boyish charm. Currently he's pretty loaded with equipment, a large backpack full and all kinds of stuff hanging on straps and his belt.";
 			say "     As he recognizes you, he gives you a little wave and walks up to talk. He says [if thirst of David < 2]'Hello and goodbye I guess. I got new order to report to one of the larger beachhead camps in the city for some special duties, so I'm afraid we won't be seeing each other again for now.' You ask him if he knows what he's supposed to do there and he shrugs, saying that he just got ordered to report there.[else]with a bit of a sad expression 'I got ordered to report to one of the larger beachhead camps in the city for some other duties. So I guess that's it for our little meetings in that alley... I'll miss you.' After pulling you in for a goodbye-kiss, he walks away, looking back after a while and waving, then continuing on his way.[end if]";
-			now hp of David is 1;
+			now HP of David is 1;
 			move David to Parade Ground;
 			now Thankful Soldier is resolved;
 		else: [meeting him in the alley to chat or fuck]
@@ -206,7 +206,7 @@ Section 2 - NPC
 
 [ David, the npc                                                        ]
 [                                                                       ]
-[ hp states of David - Location                                         ]
+[ HP states of David - Location                                         ]
 [   0: on patrol                                                        ]
 [   1: got called in to Camp Bravo                                      ]
 [   2: met the player in Camp Bravo                                     ]
@@ -274,7 +274,7 @@ Section 2 - NPC
 [   1: Had sexy fun with Marc                                           ]
 
 David is a man.
-The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair. [if debugactive is 1][line break]DEBUG -> Dexterity: [Dexterity of David], HP: [hp of David], Libido: [libido of David], Lust: [lust of David], Thirst: [thirst of David] <- DEBUG[end if]".
+The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair. [if debugactive is 1][line break]DEBUG -> Dexterity: [Dexterity of David], HP: [HP of David], Libido: [libido of David], Lust: [lust of David], Thirst: [thirst of David] <- DEBUG[end if]".
 The conversation of David is { "Oh, hello." }.
 The icon of David is Figure of David_clothed_icon.
 DavidBunkerEntry is a number that varies.
@@ -412,13 +412,13 @@ Instead of fucking David:
 		now lastfuck of David is turns;
 
 instead of conversing David:
-	if hp of David < 2:
+	if HP of David < 2:
 		say "     Error! He shouldn't be talking yet - please report on the forum how you saw this.";
 	if graphics is true:
 		project the figure of David_face_icon;
-	if hp of David is 2:
+	if HP of David is 2:
 		say "     David says 'I'm still waiting for my number to come up. Doesn't seem as frightening as before though - maybe it's the strange smell in the air here...'";
-	else if hp of David > 2:
+	else if HP of David > 2:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
@@ -427,13 +427,13 @@ instead of conversing David:
 		now sortorder entry is 1;
 		now description entry is "Chat a bit with David";
 		[]
-		if hp of David is 3:
+		if HP of David is 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Send him to the bunker";
 			now sortorder entry is 2;
 			now description entry is "Send David to stay with you in the bunker";
 		[]
-		if hp of David is 4:
+		if HP of David is 4:
 			choose a blank row in table of fucking options;
 			now title entry is "Send him to Camp Bravo";
 			now sortorder entry is 3;
@@ -445,19 +445,19 @@ instead of conversing David:
 			now sortorder entry is 4;
 			now description entry is "Bring up the demon brute in your conversation";
 		[]
-		if libido of David > 57 and libido of David < 80 and hp of David is 4 and Beach Plaza is known:
+		if libido of David > 57 and libido of David < 80 and HP of David is 4 and Beach Plaza is known:
 			choose a blank row in table of fucking options;
 			now title entry is "Suggest a trip to the beach with Brutus";
 			now sortorder entry is 5;
 			now description entry is "Spend some time on the beach with David and Brutus";
 		[]
-		if libido of David > 57 and libido of David < 80 and hp of David is 4 and Camp Bravo Entrance is known:
+		if libido of David > 57 and libido of David < 80 and HP of David is 4 and Camp Bravo Entrance is known:
 			choose a blank row in table of fucking options;
 			now title entry is "Suggest a trip to Camp Bravo with Brutus";
 			now sortorder entry is 6;
 			now description entry is "Visit the camp and let David show Brutus around";
 		[]
-		if libido of David is 60 and hp of David is 4:
+		if libido of David is 60 and HP of David is 4:
 			choose a blank row in table of fucking options;
 			now title entry is "Tell him about Brutus inner turmoil";
 			now sortorder entry is 7;
@@ -508,9 +508,9 @@ instead of conversing David:
 		clear the screen and hyperlink list;
 
 to say DavidTalk1: [chatting]
-	if hp of David is 3: [in the camp]
+	if HP of David is 3: [in the camp]
 		say "     David says 'As you can see, the sample gathering is still going well. It's unbelievable how much stamina Tiny Tim has. [if CampBravoWomenAllowed is 1]Several of the female soldiers got sent out as well by now, their bellies already swelling with minotaur calves.' [end if][if Adam is in Quartermaster's Tent]The quartermaster had a half-minotaur son too - he's in her tent helping her out.' [end if]";
-	if hp of David is 4: [in the bunker]
+	if HP of David is 4: [in the bunker]
 		if Sarahpups > 3:
 			say "     David says 'Sarah's puppies keep trying to chew up my boots. They're sweet and all, but sometimes they get on my nerves. I've been going up into the library to get some peace and quiet and read[if Fang is in the Grey Abbey Library]. Of course, there your wolf keeps staring at me like he wants to mount me[end if].'";
 		else:
@@ -519,13 +519,13 @@ to say DavidTalk1: [chatting]
 to say DavidTalk2: [send him to the bunker]
 	say "     David gives you a salute and says [if thirst of David is 20]'See you there, baby.' [else]'As you wish, sir.' [end if]before going to collect his clothes and equipment.";
 	move David to Bunker;
-	now hp of David is 4;
+	now HP of David is 4;
 	now DavidBunkerEntry is turns;
 
 to say DavidTalk3: [send him to Camp Bravo]
 	say "     David gives you a salute and says [if thirst of David is 20]'See you there, baby.' [else]'As you wish, sir.' [end if]before going to collect his clothes and equipment.";
 	move David to Parade Ground;
-	now hp of David is 3;
+	now HP of David is 3;
 
 to say DavidTalk4: [talk about Brutus]
 	if libido of David is 51:
@@ -535,13 +535,13 @@ to say DavidTalk4: [talk about Brutus]
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] in a Charisma-Check.";
 		increase diceroll by bonus;
-		if diceroll is greater than 12:
+		if diceroll > 12:
 			say "     ...manage to convince David to do it.";
 			LineBreak;
 			if DemonBruteStatus is 2: [female]
-				say "     [if hp of David is 3]After moving over to an empty tent a bit out of the way from the parade ground,[else if hp of David is 4]After moving to the far corner of the bunker,[end if] you give the young soldier a squeeze on the shoulder and an encouraging nod. With a look up at the demon waiting beside you, and another at Brutus (again) moist and swollen pussy, David gives himself a small shake, then pulls his shirt over his head and strips down. As the young man slides the last bit of fabric off and stands completely naked before you. He trembles uncontrollably as Brutus steps up to him. Brutus looks down on the naked human, then carefully puts a hand on David's shoulder. 'I'm... sorry about what was done to you. And that I make you feel like this.' David looks up, meeting Brutus eyes, and after a moment you see him slowly relax a bit as he sees the concern and apology in the demon's large, slitted pupils.";
+				say "     [if HP of David is 3]After moving over to an empty tent a bit out of the way from the parade ground,[else if HP of David is 4]After moving to the far corner of the bunker,[end if] you give the young soldier a squeeze on the shoulder and an encouraging nod. With a look up at the demon waiting beside you, and another at Brutus (again) moist and swollen pussy, David gives himself a small shake, then pulls his shirt over his head and strips down. As the young man slides the last bit of fabric off and stands completely naked before you. He trembles uncontrollably as Brutus steps up to him. Brutus looks down on the naked human, then carefully puts a hand on David's shoulder. 'I'm... sorry about what was done to you. And that I make you feel like this.' David looks up, meeting Brutus eyes, and after a moment you see him slowly relax a bit as he sees the concern and apology in the demon's large, slitted pupils.";
 			else: [male+herm]
-				say "     [if hp of David is 3]After moving over to an empty tent a bit out of the way from the parade ground,[else if hp of David is 4]After moving to the far corner of the bunker,[end if] you give the young soldier a squeeze on the shoulder and an encouraging nod. With a look up at the demon waiting beside you, and another at Brutus (again) hardening cock, David gives himself a small shake, then pulls his shirt over his head and strips down. As the young man slides the last bit of fabric off and stands completely naked before you. He trembles uncontrollably as Brutus steps up to him. Brutus looks down on the naked human, then carefully puts a hand on David's shoulder. 'I'm... sorry about what was done to you. And that I make you feel like this.' David looks up, meeting Brutus eyes, and after a moment you see him slowly relax a bit as he sees the concern and apology in the demon's large, slitted pupils.";
+				say "     [if HP of David is 3]After moving over to an empty tent a bit out of the way from the parade ground,[else if HP of David is 4]After moving to the far corner of the bunker,[end if] you give the young soldier a squeeze on the shoulder and an encouraging nod. With a look up at the demon waiting beside you, and another at Brutus (again) hardening cock, David gives himself a small shake, then pulls his shirt over his head and strips down. As the young man slides the last bit of fabric off and stands completely naked before you. He trembles uncontrollably as Brutus steps up to him. Brutus looks down on the naked human, then carefully puts a hand on David's shoulder. 'I'm... sorry about what was done to you. And that I make you feel like this.' David looks up, meeting Brutus eyes, and after a moment you see him slowly relax a bit as he sees the concern and apology in the demon's large, slitted pupils.";
 			WaitLineBreak;
 			say "     Slowly stepping around David, Brutus looks closely at him, lightly touching the scars the other demon left. Then he has the young man raise his right arm, and brushes his clawed fingers over a bit of scar tissue there. 'This is it - the seal. This will make you amplify your fear, almost paralyze you with it, while at the same time craving to serve, being degraded, everything like that. You would follow your master everywhere, even to hell.'";
 			say "     Concentrating, murmuring a chain words that you couldn't even pronounce while holding his hand in place over David, Brutus draws some purple smoke out of the young soldier. It coalesces into a faintly glowing, eye-twisting rune in the air above David's skin. You notice that there seems to be quite a bit of effort involved - judging from the beads of sweat forming on Brutus skin and dripping off the demon's brow. In an earnest tone, he says 'I'm sorry for all the innocents I too bound like this. You, at least, will be free.' then slashes his claws through the glowing symbol.";
@@ -695,7 +695,7 @@ to say DavidTalk4: [talk about Brutus]
 		let diceroll be a random number from 1 to 20;
 		increase diceroll by bonus;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
-		if diceroll is greater than 14:
+		if diceroll > 14:
 			say "     With some carefully chosen words, you get David to open up fully. His smile becomes a little brittle as he says, 'I don't know. Part of me says that it's not okay that he just 'uses' me sometimes, just grabs me and goes for it, but... I remember asking for it, wanting everything just like it happened.' For a second, David is hesitant, even a bit confused, then he settles down into a more firm, 'I simply know that I need Brutus cock inside me. It's hard to describe...'";
 			LineBreak;
 			say "     Hmm... that does sound a bit ominous.";
@@ -1023,8 +1023,8 @@ to say DavidTalk7:
 [  51: de-virginized by Brutus                                          ]
 [  51: de-virginized by Carl                                            ]
 
-after of going to Parade Ground while hp of David is 1:
-	now hp of David is 2;
+after of going to Parade Ground while HP of David is 1:
+	now HP of David is 2;
 	say "     As you enter Camp Bravo, you see a familiar face standing on the parade ground - it's David Jackson, your handsome Private from out in the city. He's watching the minotaur with a bit of a wide-eyed expression. Moving up to him, you say hello.";
 	LineBreak;
 	if graphics is true:
@@ -1032,7 +1032,7 @@ after of going to Parade Ground while hp of David is 1:
 	say "     'Hello again. I was told there might be a special agent coming to talk to us, but I never thought it'd be you. You never told me you're with the government...' You apologize, giving him some airy explanation about needed secrecy and gathering unbiased information. Quickly leading over to another topic, you ask him about what he thinks about the Camp.";
 	say "     David points over at the minotaur, saying 'Just look at the thing - it's huge. Almost couldn't believe it when the first group of men came out and it stuck its cock up their asses and fucked them. And the whole story about why we're doing this sounds a bit fishy to me... but orders are orders.' He gives the minotaur another look and rubs his ass. 'I worry a bit that it'll be my turn soon...'";
 
-after of going to Parade Ground while thirst of David is 5 and hp of David is 3:
+after of going to Parade Ground while thirst of David is 5 and HP of David is 3:
 	say "     As you step on the parade ground of Camp Bravo, David walks up to you and pulls you aside, saying he has something important to talk to you about. He looks a bit embarrassed about it, hesitating before he says 'Listen, you saved me from minotaur duty, and I like being with you and... you know. I wanted to ask how you see - you and me - us.' He looks at you with an earnest and hopeful expression.";
 	if graphics is true:
 		project the figure of David_face_icon;
@@ -1048,10 +1048,10 @@ after of going to Parade Ground while thirst of David is 5 and hp of David is 3:
 		now thirst of David is 10; [fuck-buddy]
 		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.'";
 
-after of going to Bunker while Dexterity of David is 0 and hp of David is 4 and (DavidBunkerEntry - turns > 8) and Sven is in bunker and hp of Sven >= 8 and hp of Sven < 50:
+after of going to Bunker while Dexterity of David is 0 and HP of David is 4 and (DavidBunkerEntry - turns > 8) and Sven is in bunker and HP of Sven >= 8 and HP of Sven < 50:
 	if debugactive is 1:
 		say "     DEBUG: DAVID/SVEN (DEXTERITY 0) WALKIN[line break]";
-	if hp of Sven < 30: [pet Sven]
+	if HP of Sven < 30: [pet Sven]
 		say "     As you enter the bunker, you swing by the rows of beds set up in the room and find David in one of them, stretched out on his back and sleeping. The thin blanket he's under is showing a large tent over his crotch, making it pretty obvious that he's got a boner right now. That must be one nice dream he's having. And you're not the only one who noticed that - not far away, Sven is sitting cross-legged on his own bed, stealing glances at the sleeping man. The snowmeow shyly lowers his gaze and flirts his long tail through the air in front of himself as he notices your attention. It's clear that he's... interested in David, though he'd never make a first move, being as shy and submissive as he is - and your pet on top of that.";
 		LineBreak;
 		say "     Do you want to tell Sven that he should... give David's dream a happy ending ([link]Y[as]y[end link]), or do you let things stand as they are, with him just looking ([link]N[as]n[end link])? ";
@@ -1086,10 +1086,10 @@ after of going to Bunker while Dexterity of David is 0 and hp of David is 4 and 
 			say "     Walking over towards David's bed, you shake your head at Sven as he sits down next to the sleeping man, but the snow leopard doesn't really notice it, being all eyes for the handsome soldier. He has already started to gently tug the blanket off David by the time you get there, revealing part of the man's naked, muscular chest. Then you're up close and in Sven's face, doing your best to keep quiet and not wake David as you give the snow leopard a clear head-shake in negation and make shooing motions away from the soldier.";
 			say "     Sven looks from you to the sleeping man, pointing at the two of you and pantomiming with his hands gripping each other, then shrugs and gives a bit of a disappointed huff. He throws you a somewhat reluctant nod, then leans in and teasingly runs his hand over the curve of David's erection, making the man moan in his sleep. After steeling that little touch, the snow leopard gives David a last hungry look before flouncing away. This leaves you standing next to a still sleeping soldier, leaving the man none the wiser that he almost got a 'happy ending' to his dream from your feline friend.";
 
-after of going to Bunker while Dexterity of David is 1 and hp of David is 4 and Sven is in bunker and hp of Sven >= 8 and hp of Sven < 50:
+after of going to Bunker while Dexterity of David is 1 and HP of David is 4 and Sven is in bunker and HP of Sven >= 8 and HP of Sven < 50:
 	if debugactive is 1:
 		say "     DEBUG: DAVID/SVEN (DEXTERITY 1) WALKIN[line break]";
-	if hp of Sven < 30: [pet Sven]
+	if HP of Sven < 30: [pet Sven]
 		if cunts of player > 0 and cocks of player is 0: [female player]
 			say "     As you enter the bunker, you see David sitting on one of the closer beds, right next to Sven. They're talking and you overhear David say '...so let me get this straight, you're -' 'Her pet, yes. She saved me and brought me here, takes care of me - the best and strongest and bravest mistress one can have. She even gave me this nice collar. I love her and am hers.' Sven happily replies, smiling at the young soldier as he praises you. David looks slightly nonplussed at the transformed student's so totally submissive behaviour, then shrugs to himself and says 'Well, if that's what you want.' After a quick look down at his crotch and with his cheeks reddening slightly, he continues 'Err - about what you did earlier... thanks? That was... pretty amazing. I thought I was dreaming till after I came and realized you felt pretty furry.'";
 			say "     Sven blushes at the hesitant compliment and ducks momentarily behind his fluffy tail. 'Anything for my mistress's friends,' he says softly. Releasing his furry appendage, he lets it wind around David's waist as he slips up beside him, nuzzling against the young man's shoulder. 'And... and I like you too - you are very nice and very attractive,' he adds quietly as he snuggles all the closer. Confronted with such a soft-spoken and cuddly snowmeow, David can't help himself but stroke Sven's fur too, accepting this strange bunker-mate for what he is.";
@@ -1101,7 +1101,7 @@ after of going to Bunker while Dexterity of David is 1 and hp of David is 4 and 
 		say "     The two of them chat a bit more about this and that, then eventually David glances down to his crotch and over at his own bed. His cheeks redden slightly and he says, 'Err - about what you did earlier... thanks? That was... pretty amazing. I thought I was dreaming till after I came and realized you felt pretty furry.' Sven smiles at the hesitant compliment and playfully flirts his tail under the handsome soldier's nose. 'Sorry if I caught you a bit by surprise there, but... if I learned anything from all this, it is that you just sometimes have to go for it,' he says softly, then winks at the man and adds, 'Just wanted to give that dream of yours a happy ending.' Letting his tail settle down a bit more, the snow leopard winds it around David's waist as he slips closer beside him, nuzzling against the young man's shoulder. 'And who could resist helping out such a hunk as yourself,' he adds in a husky tone, sliding an arm around David's shoulders. Confronted with the soft-spoken and quite touch-friendly feline, David can't help himself but stroke Sven's fur too, accepting this furred bunker-mate's affection.";
 	now Dexterity of David is 2;
 
-after of going to Bunker while thirst of David is 5 and hp of David is 4:
+after of going to Bunker while thirst of David is 5 and HP of David is 4:
 	if debugactive is 1:
 		say "     DEBUG: DAVID (THIRST 5) RELATIONSHIP WALKIN[line break]";
 	say "     As you step on the parade ground of Camp Bravo, David walks up to you and pulls you aside, saying he has something important to talk to you about. He looks a bit embarrassed about it, hesitating before he says 'Listen, you saved me from minotaur duty, and I like being with you and... you know. I wanted to ask how you see - you and me - us.' He looks at you with an earnest and hopeful expression.";
@@ -1120,36 +1120,36 @@ after of going to Bunker while thirst of David is 5 and hp of David is 4:
 		now thirst of David is 10; [fuck-buddy]
 		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.";
 
-after of going to Bunker while Eric is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 0: [David spots Eric's genitals and wants to talk about them]
+after of going to Bunker while Eric is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 0: [David spots Eric's genitals and wants to talk about them]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERIC (LUST [lust of DAVID]) 1 WALKIN[line break]";
 	if graphics is true:
 		project the figure of David_face_icon;
 	say "     As you enter the bunker, David walks up to you and pulls you to the side, whispering he has something talk to you about. He looks a bit embarrassed about it, and you notice his eyes straying over to where Eric sits on his bunk (reading something with his back to you) before he continues. 'I - I accidentally saw Eric when he changed his clothes. I didn't spy on him or anything, it just happened, and... he's...'";
-	if hp of Eric is 1:
+	if HP of Eric is 1:
 		say "     '...a woman, down below. I didn't know the infections could do that - change only your gender and nothing else. It must be very strange for him.'";
 		LineBreak;
 		say "     You explain that Eric was bitten and got that rather surprising transformation out of it, leaving him a bit conflicted about his new form. You can't help but think to yourself that maybe you should talk to him about that sometime... either he has to accept his new gender, or maybe you could help find a 'cure' somewhere. Meanwhile, David looks over to Eric and opens his mouth to ask another question, but you put a hand on his arm and shake your head. Explaining that you don't really want to gossip about Eric, you suggest he ask the young man himself - and that he should be nice about it, as Eric has been through a lot.";
 		now lust of Eric is 1;
-	else if (hp of Eric > 9 and hp of Eric < 16):
+	else if (HP of Eric > 9 and HP of Eric < 16):
 		say "     '...a woman, down below. I didn't know the infections could do that - change only your gender and nothing else. It must be very strange for him.'";
 		LineBreak;
 		say "     You explain that Eric was bitten and got that rather surprising transformation out of it, leaving him a bit conflicted about his new form. You can't help but think to yourself that hopefully, he'll accept his new gender in time. Meanwhile, David looks over to Eric and opens his mouth to ask another question, but you put a hand on his arm and shake your head. Explaining that you don't really want to gossip about Eric, you suggest he ask the young man himself - and that he should be nice about it, as Eric has been through a lot.";
 		now lust of Eric is 1;
-	else if hp of Eric is 20:
+	else if HP of Eric is 20:
 		say "     '...a woman, down below. I didn't know the infections could do that - change only your gender and nothing else. It must be very strange for him.'";
 		LineBreak;
 		say "     You explain that Eric was bitten and got that rather surprising transformation out of it, leaving him a bit conflicted about his new form. You can't help but think to yourself about ways to 'fix' him. Meanwhile, David looks over to Eric and opens his mouth to ask another question, but you put a hand on his arm and shake your head. Explaining that you don't really want to gossip about Eric, you suggest he ask the young man himself - and that he should be nice about it, as Eric has been through a lot.";
 		now lust of Eric is 1;
-	else if hp of Eric is 21 or hp of Eric is 22:
+	else if HP of Eric is 21 or HP of Eric is 22:
 		say "     '...got a horse's penis. But he's human everywhere else. I didn't know the infections could do that - change only your genitals without the rest. It must be very strange for him.'";
 		say "     You start explaining that he should have seen Eric before - then stop yourself, as the young man might not appreciate gossip about his personal issues. Meanwhile, David looks over to Eric and opens his mouth to ask another question, but you put a hand on his arm and shake your head. Explaining that you don't really want to go into any more detail, you suggest he ask the student himself - and that he should be nice about it, as Eric has been through a lot.";
 		now lust of Eric is 1;
-	else if hp of Eric is 31 or hp of Eric is 32:
+	else if HP of Eric is 31 or HP of Eric is 32:
 		say "     '...got a goat's penis. But he's human everywhere else. I didn't know the infections could do that - change only your genitals without the rest. It must be very strange for him.'";
 		say "     You start explaining that he should have seen Eric before - then stop yourself, as the young man might not appreciate gossip about his personal issues. Meanwhile, David looks over to Eric and opens his mouth to ask another question, but you put a hand on his arm and shake your head. Explaining that you don't really want to go into any more detail, you suggest he ask the student himself - and that he should be nice about it, as Eric has been through a lot.";
 		now lust of Eric is 1;
-	else if hp of Eric is 99:
+	else if HP of Eric is 99:
 		say "     '...a woman, down below. I didn't know the infections could do that - change only your gender and nothing else. It must be very strange for him.'";
 		LineBreak;
 		say "     You just tell him not to worry about it - Eric's got a pussy now and needs to be fucked. Maybe he wants a ride too? David opens his mouth as if to say something, then stops and shakes his head 'I couldn't just take advantage of him - we're supposed to help people.'";
@@ -1157,9 +1157,9 @@ after of going to Bunker while Eric is in bunker and thirst of David > 5 and hp 
 		say "     His moment of hesitation tells you that David wouldn't be completely adverse to fucking your submissive cuntboy. If you could get him over the initial hangup and into that juicy pussy... maybe you should talk to Eric about making that happen.";
 		now lust of Eric is 2;
 	else:
-		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
+		say "ERROR-Eric-[HP of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
-after of going to Bunker while Erica is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric is 200 and (lust of Erica is 0 or lust of Erica is 50): [David finds out about Erica]
+after of going to Bunker while Erica is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric is 200 and (lust of Erica is 0 or lust of Erica is 50): [David finds out about Erica]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERICA (LUST [lust of DAVID]) 1 WALKIN[line break]";
 	if graphics is true:
@@ -1172,7 +1172,7 @@ after of going to Bunker while Erica is in bunker and thirst of David > 5 and hp
 		say "     You shake your head and reply that that's not quite it and make some vague mentions of Erica's extraordinary transformations, as compared to the regular stuff going on these days. David looks over to Erica and opens his mouth to ask for specifics, but you put a hand on his arm and shake your head. After all, Erica might not want just anyone to know everything about her, so David will just have to ask her himself if he is curious enough. That explanation seems enough for the young man... for now, but the interested gleam in his eye shows you that it won't be the end of it with him.";
 	now lust of Erica is 1;
 
-after of going to Bunker while Eric is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 1: [David talks with Eric about his gender and they exchange stories]
+after of going to Bunker while Eric is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1: [David talks with Eric about his gender and they exchange stories]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERIC TALK WALKIN[line break]";
 	say "     As you enter the bunker, you see David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
@@ -1180,7 +1180,7 @@ after of going to Bunker while Eric is in bunker and thirst of David > 5 and hp 
 	say "     [DavidEricTalk]";
 
 An everyturn rule: [you can just wait for them to talk too]
-	if player is in bunker and Eric is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 1:
+	if player is in bunker and Eric is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1:
 		say "     As you spend some time in the bunker, you notice David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 		LineBreak;
 		say "     [DavidEricTalk]";
@@ -1190,7 +1190,7 @@ An everyturn rule: [you can just wait for them to talk too]
 		now libido of David is 81; [The urges push through]
 		now BrutusEscalationTimer is 0;
 
-after of going to Bunker while Erica is in bunker and thirst of David > 5 and hp of David is 4 and hp of Erica > 0 and lust of Erica is 1: [David talks with Erica and they exchange stories]
+after of going to Bunker while Erica is in bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1: [David talks with Erica and they exchange stories]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/Erica TALK WALKIN[line break]";
 	say "     As you enter the bunker, you see David and Erica sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
@@ -1198,12 +1198,12 @@ after of going to Bunker while Erica is in bunker and thirst of David > 5 and hp
 	say "     [DavidEricaTalk]";
 
 An everyturn rule: [you can just wait for them to talk too]
-	if player is in bunker and Erica is in bunker and thirst of David > 5 and hp of David is 4 and hp of Erica > 0 and lust of Erica is 1:
+	if player is in bunker and Erica is in bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1:
 		say "     As you spend some time in the bunker, you notice David and Erica sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 		LineBreak;
 		say "     [DavidEricaTalk]";
 
-instead of going to Bunker while hp of David is 4 and (libido of David is 57): [David wants Brutus to get out more]
+instead of going to Bunker while HP of David is 4 and (libido of David is 57): [David wants Brutus to get out more]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: DAVID/BRUTUS TRIP INTERACTION[line break]";
@@ -1212,7 +1212,7 @@ instead of going to Bunker while hp of David is 4 and (libido of David is 57): [
 	say "     As you enter the bunker, David is already waiting for you and waves you over. When you come closer, he says, 'I've been thinking... about Brutus, you know. He's never had a normal life, has he? Just forever as a rampaging beast like that one demon who attacked me.' The young man shudders, rubbing the healed claw-mark on his side as he thinks back to it, then catches himself and continues, 'So - how about we take Brutus out for a nice trip or two, show him what he's been missing. Come on, it'll be good for him and between the three of us, there shouldn't be too much danger in going outside. I bet you know a few nice places to visit. Just talk to me if you wanna go out...'";
 	now libido of David is 58;
 
-instead of going to Bunker while hp of David is 4 and (libido of David is 0 or libido of David is 1 or libido of David is 50 or libido of David is 52 or libido of David is 58 or libido of David is 81 or libido of David is 83) and companion of player is demon brute: [David reacts when the player comes in with the demon brute pet]
+instead of going to Bunker while HP of David is 4 and (libido of David is 0 or libido of David is 1 or libido of David is 50 or libido of David is 52 or libido of David is 58 or libido of David is 81 or libido of David is 83) and companion of player is demon brute: [David reacts when the player comes in with the demon brute pet]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: DAVID/BRUTUS INTERACTION 1[line break]";
@@ -1299,7 +1299,7 @@ instead of going to Bunker while hp of David is 4 and (libido of David is 0 or l
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		increase diceroll by bonus;
-		if diceroll is greater than 12:
+		if diceroll > 12:
 			say "     (Perception-Check Success) As you start to turn to the downwards stairs, wanting to get back to what you had planned to do in the bunker, you spot something from the corner of your eye. There are a few purple splotches on the ground where Brutus stood not too long ago. Crouching down, you have a closer look - it's blood! He must have been making a tight fist with one hand, digging his claws into the palm and holding it behind his body so you wouldn't see. Clearly, there is more of a problem with Brutus urges than he wants you to believe. You should REALLY talk to him about this!";
 		now BrutusEscalationTimer is 12;
 	else if libido of David is 81 and a random chance of 3 in 10 succeeds and DemonBruteStatus < 2: [dominant sex]
@@ -1355,7 +1355,7 @@ instead of going to Bunker while hp of David is 4 and (libido of David is 0 or l
 		say "     It is clear that he has genuine feelings about David and does feel very attached to the young soldier. Still, the purple giant's careful choice of words to you just now makes you think that... there might be more to this. You should think carefully if you really do want to fulfill his request.";
 		now libido of David is 84;
 
-instead of going to Bunker while hp of David is 4 and companion of player is demon brute and libido of David > 52 and libido of David < 80 and a random chance of 1 in 3 succeeds: [David reacts when the player comes in with the demon brute pet]
+instead of going to Bunker while HP of David is 4 and companion of player is demon brute and libido of David > 52 and libido of David < 80 and a random chance of 1 in 3 succeeds: [David reacts when the player comes in with the demon brute pet]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: DAVID/BRUTUS INTERACTION 2[line break]";
@@ -1379,7 +1379,7 @@ instead of going to Bunker while hp of David is 4 and companion of player is dem
 		else: [Brutus is rather more obvious]
 			say "     As you walk into the bunker with Brutus in tow, the large demon makes a beeline for David, who was just [one of]reading a book[or]sorting through his supplies[or]cleaning his weapon[or]making his bed[or]folding his clothes[at random]. With a loud 'Hey there, David!' he pulls the young soldier into a tight embrace, the smaller human pressed against his muscled chest. Then he lowers his head and runs his forked tongue along his friend's neck before giving him a lust-filled kiss that is eagerly returned. Watching them make out, you notice the demon's hand cupping David's ass as he holds him, giving it an appreciative squeeze. Putting the man down some short while later, Brutus walks back to you and takes his usual place - behind your shoulder on the right side.";
 
-instead of navigating Grey Abbey Library while (hp of David is 4 and companion of player is demon brute and libido of David > 81 and libido of David < 86 and a random chance of 1 in 5 succeeds):
+instead of navigating Grey Abbey Library while (HP of David is 4 and companion of player is demon brute and libido of David > 81 and libido of David < 86 and a random chance of 1 in 5 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1451,27 +1451,27 @@ instead of navigating Grey Abbey Library while (hp of David is 4 and companion o
 				say "     You, on the other hand, turn your thoughts to other things, stroll between the shelves and tune them out as best as you can - at least until you hear the deep growl of, 'Take it like a good little slut!' and the moans and grunts that accompany Brutus filling David's ass with his seed (or so you assume). Soon after, the purple demon enters the aisle you're in and takes his place by your shoulder, cum literally dripping from his massive cock. You don't say anything about it as you can feel its a sign of pride for him - proving that he's given his mate, his man, one hell of a fuck.";
 
 to say DavidEricTalk:
-	if hp of Eric is 1 or hp of Eric is 20: [gender not addressed yet, or Eric waiting for a cure]
+	if HP of Eric is 1 or HP of Eric is 20: [gender not addressed yet, or Eric waiting for a cure]
 		say "     '...and then, as I was bandaging my arm, I felt this wrenching pain in my gut and passed out. When I came back to I was...' Eric waves a hand at his crotch. 'You know. Different.' David nods in silent understanding and puts a hand on Eric's shoulder. 'I don't believe I can understand what you went through, but... look at it from this point - you're still a human, good-looking guy and above all still have your own mind. You should see some of the infected out there, behaving like beasts. So what if you're female down below now - that's not all that defines you...' Eric gets a thoughtful expression, then bites his lip before... whispering something.";
 		say "     Standing there, craning your head to maybe catch his words, you suddenly realize how ridiculous you must look - and that it's not a good thing to spy on friends. Not wanting to listen in any more than you already have, you go to the other side of the room and busy yourself by counting and sorting your supplies.";
 		WaitLineBreak;
 		say "     Quite a while later, now knowing exactly how many blankets and other things are in the bunker, you turn back to the bunks and see that your two friends are still sitting there, now seemingly in much higher spirits. David gestures wildly and says '...it really was this big, a massive brute of a thing. I had no chance, until...' he spots you and smiles, waving you closer to them 'Hi there, we're just regaling each other with tales of your heroics - kicking demon butt and taking down green cheerleaders. Thanks to your timely intervention, both of us are hanging around here now in nice company, instead of getting buggered by who knows what.' Both of them smile at you and invite you to sit with - or rather between - them. Then Eric starts another story, this time about fighting against the incubus and succubus you two met while on the campus...";
 		LineBreak;
 		say "     Being on a bunk with David on one side and Eric on the other makes your thoughts wander a bit, imagining what it would be like to do... other things on a bed together. From what you can see, they like each other and might possibly be down for it... though you should surely first sort out Eric's gender issues. Bringing up fun with David up before he's really comfortable in his skin wouldn't be a good idea.";
-	if hp of Eric is 10 or (hp of Eric > 10 and hp of Eric < 16): [Eric talked into accepting his female parts or already fucked]
+	if HP of Eric is 10 or (HP of Eric > 10 and HP of Eric < 16): [Eric talked into accepting his female parts or already fucked]
 		say "     '...and then, as I was bandaging my arm, I felt this wrenching pain in my gut and passed out. When I came back to I was...' Eric waves a hand at his crotch. 'You know. Different.' David nods in silent understanding and puts a hand on Eric's shoulder. 'I don't believe I can understand what you went through, but... look at it from this point - you're still a human, good-looking guy and above all still have your own mind. You should see some of the infected out there, behaving like beasts. So what if you're female down below now - that's not all that defines you...' Eric gets a thoughtful expression, then bites his lip before... whispering something.";
 		say "     Standing there, craning your head to maybe catch his words, you suddenly realize how ridiculous you must look - and that it's not a good thing to spy on friends. Not wanting to listen in any more than you already have, you go to the other side of the room and busy yourself by counting and sorting your supplies.";
 		WaitLineBreak;
 		say "     Quite a while later, now knowing exactly how many blankets and other things are in the bunker, you turn back to the bunks and see that your two friends are still sitting there, now seemingly in much higher spirits. David gestures wildly and says '...it really was this big, a massive brute of a thing. I had no chance, until...' he spots you and smiles, waving you closer to them 'Hi there, we're just regaling each other with tales of your heroics - kicking demon butt and taking down green cheerleaders. Thanks to your timely intervention, both of us are hanging around here now in nice company, instead of getting buggered by who knows what.' Both of them smile at you and invite you to sit with - or rather between - them. Then Eric starts another story, this time about fighting against the incubus and succubus you two met while on the campus...";
 		LineBreak;
-		say "     Being on a bunk with David on one side and Eric on the other makes your thoughts wander a bit, imagining what it would be like to do... other things on a bed together. From what you can see, they like each other and might possibly be down for it... [if hp of Eric is 10]though for now, it would be best if you spent some time with Eric first and took his virginity. Pushing sex with someone he barely knows on Eric might otherwise put him back into denying his new gender.[else if hp of Eric is 12 or hp of Eric is 14]though for now, it would be best if you spent some time with Eric yourself. You doubt he'd let you just play matchmaker without 'getting to know' you much better first.[else if hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15]Eric should be comfortable enough with sex now to be open for some fun - as long as you're part of it. It's worth a try to talk to him about it.[end if]";
-	else if hp of Eric is 21 or hp of Eric is 22 or hp of Eric is 31 or hp of Eric is 32: [horse/satyr hung Eric]
-		say "     '...and then, as I was bandaging my arm, I felt this wrenching pain in my gut and passed out. When I came back to I was...' Eric waves a hand at his crotch. 'You know. Different. And when we tried to fix me later, it made me part [if hp of Eric is 21 or hp of Eric is 22]horse[else if hp of Eric is 31 or hp of Eric is 32]goat-man[end if].' David nods in silent understanding and puts a hand on Eric's shoulder. 'I don't believe I can understand what you went through, but... look at it from this point - you're still a human, good-looking guy and above all still have your own mind. You should see some of the infected out there, behaving like beasts. So what if you're different now down below - that's not all that defines you...' Eric gets a thoughtful expression, then bites his lip before... whispering something.";
+		say "     Being on a bunk with David on one side and Eric on the other makes your thoughts wander a bit, imagining what it would be like to do... other things on a bed together. From what you can see, they like each other and might possibly be down for it... [if HP of Eric is 10]though for now, it would be best if you spent some time with Eric first and took his virginity. Pushing sex with someone he barely knows on Eric might otherwise put him back into denying his new gender.[else if HP of Eric is 12 or HP of Eric is 14]though for now, it would be best if you spent some time with Eric yourself. You doubt he'd let you just play matchmaker without 'getting to know' you much better first.[else if HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15]Eric should be comfortable enough with sex now to be open for some fun - as long as you're part of it. It's worth a try to talk to him about it.[end if]";
+	else if HP of Eric is 21 or HP of Eric is 22 or HP of Eric is 31 or HP of Eric is 32: [horse/satyr hung Eric]
+		say "     '...and then, as I was bandaging my arm, I felt this wrenching pain in my gut and passed out. When I came back to I was...' Eric waves a hand at his crotch. 'You know. Different. And when we tried to fix me later, it made me part [if HP of Eric is 21 or HP of Eric is 22]horse[else if HP of Eric is 31 or HP of Eric is 32]goat-man[end if].' David nods in silent understanding and puts a hand on Eric's shoulder. 'I don't believe I can understand what you went through, but... look at it from this point - you're still a human, good-looking guy and above all still have your own mind. You should see some of the infected out there, behaving like beasts. So what if you're different now down below - that's not all that defines you...' Eric gets a thoughtful expression, then bites his lip before... whispering something.";
 		say "     Standing there, craning your head to maybe catch his words, you suddenly realize how ridiculous you must look - and that it's not a good thing to spy on friends. Not wanting to listen in any more than you already have, you go to the other side of the room and busy yourself by counting and sorting your supplies.";
 		WaitLineBreak;
 		say "     Quite a while later, now knowing exactly how many blankets and other things are in the bunker, you turn back to the bunks and see that your two friends are still sitting there, now seemingly in much higher spirits. David gestures wildly and says '...it really was this big, a massive brute of a thing. I had no chance, until...' he spots you and smiles, waving you closer to them 'Hi there, we're just regaling each other with tales of your heroics - kicking demon butt and taking down green cheerleaders. Thanks to your timely intervention, both of us are hanging around here now in nice company, instead of getting buggered by who knows what.' Both of them smile at you and invite you to sit with - between - them. Then Eric starts another story, this time about fighting against the incubus and succubus you two met while on the campus...";
 		LineBreak;
-		say "     Being on a bunk with David on one side and Eric on the other makes your thoughts wander a bit, imagining what it would be like to do... other things on a bed together. From what you can see, they like each other and might possibly be down for it... [if lust of David is 0]though you should break David's ass in first. You'll have to get the soldier used to taking it up the rear end, otherwise he'll refuse to even consider Eric's enlarged meat. [else if lust of David > 0]with the pleasure he had from getting shafted in the ass before, David would surely like it. [end if][if hp of Eric is 21]And Eric - it'd likely be best if you broke in the newly virgin shaft yourself first...[else if hp of Eric is 22]And Eric - with how much he enjoys his new cock, you're sure he'll jump at the opportunity. You really should talk to him about it.[end if]";
+		say "     Being on a bunk with David on one side and Eric on the other makes your thoughts wander a bit, imagining what it would be like to do... other things on a bed together. From what you can see, they like each other and might possibly be down for it... [if lust of David is 0]though you should break David's ass in first. You'll have to get the soldier used to taking it up the rear end, otherwise he'll refuse to even consider Eric's enlarged meat. [else if lust of David > 0]with the pleasure he had from getting shafted in the ass before, David would surely like it. [end if][if HP of Eric is 21]And Eric - it'd likely be best if you broke in the newly virgin shaft yourself first...[else if HP of Eric is 22]And Eric - with how much he enjoys his new cock, you're sure he'll jump at the opportunity. You really should talk to him about it.[end if]";
 	now lust of Eric is 2;
 
 to say DavidEricaTalk:
@@ -1480,7 +1480,7 @@ to say DavidEricaTalk:
 	WaitLineBreak;
 	say "     Quite a while later, now knowing exactly how many blankets and other things are in the bunker, you turn back to the bunks and see that your two friends are still sitting there, now seemingly in much higher spirits. David gestures wildly and says '...it really was this big, a massive brute of a thing. I had no chance, until...' he spots you and smiles, waving you closer to them 'Hi there, we're just regaling each other with tales of your heroics - kicking demon butt and taking down green cheerleaders. Thanks to your timely intervention, both of us are hanging around here now in nice company, instead of getting buggered by who knows what.' Both of them smile at you and invite you to sit with - or rather between - them. Then Erica starts another story, this time about fighting against the incubus and succubus you two met while on the campus...";
 	LineBreak;
-	say "     Being on a bunk with David on one side and Erica on the other makes your thoughts wander a bit, imagining what it would be like to do... other things on a bed together. From what you can see, they like each other and might possibly be down for it... [if hp of Erica is 0]though for now, it would be best if you spent some time with Erica first and took her virginity. You wouldn't want to push sex with anyone at her if she doesn't feel ready to enjoy it in the role of a woman yet.[else if hp of Erica is 1]Erica should be comfortable enough with sex now to be open for some fun - as long as you're part of it. It's worth a try to talk to her about it.[end if]";
+	say "     Being on a bunk with David on one side and Erica on the other makes your thoughts wander a bit, imagining what it would be like to do... other things on a bed together. From what you can see, they like each other and might possibly be down for it... [if HP of Erica is 0]though for now, it would be best if you spent some time with Erica first and took her virginity. You wouldn't want to push sex with anyone at her if she doesn't feel ready to enjoy it in the role of a woman yet.[else if HP of Erica is 1]Erica should be comfortable enough with sex now to be open for some fun - as long as you're part of it. It's worth a try to talk to her about it.[end if]";
 	now lust of Erica is 2;
 
 to say DavidSex1: [player sucks him]

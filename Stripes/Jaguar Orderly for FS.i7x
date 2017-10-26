@@ -16,18 +16,18 @@ to say jaguardesc:
 	setmongender 3; [creature is male]
 	choose row monster from the table of random critters;
 	let debit be 0;
-	now hp entry is 80;
+	now HP entry is 80;
 	now lev entry is 8;
 	now wdam entry is 10;
 	now int entry is 10;
-	if lev entry is less than level of player and hardmode is true:
+	if lev entry < level of player and hardmode is true:
 		now debit is ( level of player ) - lev entry;
 		increase lev entry by debit;
-		increase hp entry by debit * 4;
+		increase HP entry by debit * 4;
 		increase wdam entry by ( debit / 3 );
 	if sabtoothed is 1:		[permanent upgrade]
 		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly. But no man, this is a large jaguar creature. But unlike the ones you've seen earlier at the hospital, this one is bigger and has large, sabretoothed fangs protruding from its upper jaw. The devolved jaguarman growls and reaches to grab you with its powerful paws.";
-		increase hp entry by 15;
+		increase HP entry by 15;
 		increase lev entry by 1;
 		increase wdam entry by ( square root of lev entry ) - 1; [minor increasing bonus]
 		now int entry is 8;
@@ -35,8 +35,8 @@ to say jaguardesc:
 		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly. But no man, this is a large jaguar creature. He looks you over angrily and reaches to grab you, obviously feeling you are somewhere you don't belong.";
 	if triclamped is 1:		[permanent upgrade]
 		say "     Getting a closer look at the creature as it charges towards you, you can see traces of toughened scales at the top of its neck and there are three small horns on its head, one at the end of its muzzle and two over its brow. These poke just a little out from his fur.";
-		increase hp entry by 15 + debit;
-	now monsterhp is hp entry;
+		increase HP entry by 15 + debit;
+	now monsterHP is HP entry;
 
 to say losetojaguar:
 	now fightstatus is 2; [required for hospital fight]
@@ -48,7 +48,7 @@ to say losetojaguar:
 			say "     His load spent, the big male withdraws his cock slowly from you, licks your cheek a few times and gets back up. He picks you up gently and lays you atop a nearby gurney to rest and recover from the powerful mating session. You can't help but smile up at him as he drapes a blanket over you and nuzzles you with a soft purr before leaving you as you drift off for a nap after the romp. The feel of the wild beastman's hot seed inside you fills you with a blissful warmth.";
 		else:
 			say "     You are battered by the brutish, feline orderly and left in a heap to recover.";
-			now hp of player is (( hp of player ) times 2 ) divided by 3;
+			now HP of player is (( HP of player ) times 2 ) divided by 3;
 	else:
 		if a random chance of 1 in 4 succeeds:
 			say "     The brutish, feline orderly growls and shoves you down, getting ready to continue wailing on you, but as a swipe of one clawed paw uncovers your rear end, he grins as he gets other ideas. Growling, he climbs atop you, pinning you down with one paw while the other removes any remaining clothes between him and his prize, that tight back door of yours. You can feel his large shaft as it rubs against your rear. It is quite large, perhaps a rather thick 9 inches of feline meat. His precum leaks onto your ass as he moves to get lined up, then thrusts into you.";
@@ -57,7 +57,7 @@ to say losetojaguar:
 			say "     His load spent, the big male withdraws his cock slowly from you, licks your cheek a few times and gets back up. He picks you up gently and lays you atop a nearby gurney to rest and recover from the powerful mating session. You can't help but smile up at him as he drapes a blanket over you and nuzzles you with a soft purr before leaving you as you drift off for a nap after the romp. The feel of the wild beastman's hot seed inside you fills you with a blissful warmth.";
 		else:
 			say "     You are battered by the brutish, feline orderly and left in a heap to recover.";
-			now hp of player is (( hp of player ) times 2 ) divided by 3;
+			now HP of player is (( HP of player ) times 2 ) divided by 3;
 
 
 to say beatthejaguar:
@@ -112,7 +112,7 @@ to say jagride:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -139,8 +139,8 @@ When Play begins:
    now int entry is 10;
    now cha entry is 10;
    now sex entry is "nochange"; [ Invalid answer intentionally getting no change in gender]
-   now hp entry is 80;
-   now lev entry is 8; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now HP entry is 80;
+   now lev entry is 8; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
    now wdam entry is 10; [Amount of Damage monster Does when attacking.]
    now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
    now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -191,7 +191,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Jaguar":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your human mind and experiences fade away, you give in to the instinctual urges of your body. You are drawn to the city hospital, feeling the need to work alongside your feline brethren in the corrupted medical facility. You are welcomed by the other jaguars as well as the other denizens.";
 			if hospquest < 2:
 				say "     You are given a task of patrolling the hospital and keeping any unwanted interlopers out by your superiors. Somewhere deep inside, you can feel that there is someone in charge, but you have not met them. At first, your duties are simple, as there are few who would approach the hospital and they are easily driven off or corrupted to join you. But later things get more difficult as the military moves in. You and the others manage to hold the hospital, but there are some losses. Thankfully, many of the defeated soldiers are added to the jaguar ranks.";
@@ -201,12 +201,12 @@ when play ends:
 					say "     You report back in to Dr Mouse, though only vaguely remembering the experiences that lead you to know him. He somehow recognizes you readily and happily welcomes you to his staff. He has you join one of his exploratory teams, collecting samples and test subjects for the doctor's research. On a trip to the zoo, your team is waylayed by an ambush of cheetah women. While not very strong, they are fast and the ambush takes out most of your support quickly. They get a net over you and manage to tie you up before you can get away. You, their intended prize, are dragged off to become their mate. While you remain a jaguar, the thoughts of the hospital fade from your mind as you fuck them over and over, filling them with jaguar-cheetah hybrid cubs. All in all, not an unpleasant fate.";
 				else:
 					say "     You report back to Dr Mouse, though only vaguely remembering the experiences that lead you to know him. He somehow recognizes you readily and happily welcomes you to his staff. He has you join one of his exploratory teams, collecting samples and test subjects for the doctor's research. On a trip to the zoo, your team is waylayed by a plush lion. While fairly strong, it is his cleverness that does you in. He managed to frighten a pack of lesser fair folk to flee right into your squad. During the chaos, he pushed you onto one of the rides and started fucking you. You soon gave in to the mating from the plush lion. As his hot seed flowed into you, you changed, becoming a plush jaguar and his mate. Thoughts of the hospital were driven from your cotton-filled head and you followed him to his lair deep in the fair.";
-			else if hospquest is 13 and hp of doctor mouse is 1:
+			else if hospquest is 13 and HP of doctor mouse is 1:
 				say "     Driven by your new instincts, you report back to Dr Mouse, though only vaguely remembering the experiences that lead you to know him. He somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement. ";
 				if "Sterile" is not listed in feats of player and cunts of player > 0:
 					say "     You birth many bizarre, hybrid creatures from these matings. ";
 				say "     You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower.";
-			else if hospquest is 13 and hp of doctor mouse is 2:
+			else if hospquest is 13 and HP of doctor mouse is 2:
 				say "     The hospital is in disarray when you arrive, like an ant hive where the queen has been killed. The various factions strike out at each other at times, but cooperate at others. The various labs remain a no man's land, but the cafeteria is often host to in-fighting over mates.";
 				if intelligence of player >= 20 and charisma of player >= 15 and "Expert Medic" is listed in feats of player:
 					say "     It is only with the coming of the military that control is restored. The united threat of military action unifies the factions, at least temporarily. And you would see that order remain and start taking charge of the groups. Feeling the need to have someone in charge, the other groups begin to respond to your commands, beginning to rely on you to fill that void. Your familiarity and experience in the city helps counter the military incursion into the hospital by personally leading several strikes against the soldiers. By attacking their squads and the field camps they've set up in the city using the experience you gained and your familiarity with its streets and its safe routes, you are able to put their lines into disarray. This soon forces them to back off from the hospital and continue their search for survivors elsewhere before pulling out of the city.";

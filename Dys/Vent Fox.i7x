@@ -156,7 +156,7 @@ To say KnockedOnVent:[Various reactions to knocking on the vent.]
 
 Section 3 - NPC and Location
 
-Vent is a man. The hp of vent is usually 0.
+Vent is a man. The HP of vent is usually 0.
 The description of Vent is "[VentDescription]".
 The conversation of Vent is { "blah blah blarg" }.
 The scent of Vent is "[VentScent]".

@@ -181,7 +181,7 @@ to say beattheReptaur:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -208,7 +208,7 @@ When Play begins:
 	now int entry is 18;
 	now cha entry is 23;
 	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 89; [ The monster's starting hit points. ]
+	now HP entry is 89; [ The monster's starting HP. ]
 	now lev entry is 15; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 15; [ Monster's average damage when attacking. ]
 	now area entry is "Park"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -253,12 +253,12 @@ this is the rtaurpounce rule:		[double-damage pouncing]
 	say "The [one of][name entry][or]reptile[or]reptilian taur[or]reptilian creature[purely at random] knocks you to the ground and pounces atop you quickly, stomping you repeatedly with its clawed feet in an attempt to knock the resistance out of you.  This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield while pinned]
-	if absorb is greater than dam:
+	if absorb > dam:
 		now absorb is dam;
-	if absorb is greater than 0:
+	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease hp of the player by dam;
-	increase hp of player by absorb;
+	decrease HP of the player by dam;
+	increase HP of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 
@@ -267,7 +267,7 @@ this is the rtaurpounce rule:		[double-damage pouncing]
 
 when play ends:
 	if bodyname of player is "Reptaur":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "Falling prey to the Reptaur strain of infect you find yourself losing control over your senses. Instinctively heading deep into the city to become lost amongst your feral kin who roam the park area you find the rest of your days becoming much a blur as you feed, and fuck and fight any who decide to harm the little patch you've made for yourself. The small herd of other Reptaur's that become something like your family make up the difference for whatever emotional needs you may require and as for the sex... well that's never in small demand. Especially when you and your kin begin capturing lonesome soldiers who end up straying too far from their post to [italic type]blow off a little steam[roman type].";
 		else:
 			say "Surviving the crisis plaguing the city you wind up being captu-rescued by the military and then taken to one of their quarantine facilities to be experime-checked over by the helpful men in camouflage fatigues. Days of winding up being poked and prodded and else made into a part-time lab rat has your temper reaching almost dangerous levels as you threaten to blow up at the doctors and scientist on duty. However, right before you go ballistic you end up being released back out into the world at the behest of a certain doctor that just so happens to be mutant friendly. Thrown back out into the world you slowly come to realize that there's not much keeping you here in the city anymore and at that point you are quick to pack up what little things you have in order to head for new horizons awaiting you out there in the big world.";

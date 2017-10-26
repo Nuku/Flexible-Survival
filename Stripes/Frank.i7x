@@ -120,7 +120,7 @@ to say sexwithFrank:
 		say "     Having no sexual organs of your own, there seems to be little point in trying to have sex with the skunk.";
 	else if cunts of player is 0 and cocks of player > 0:
 		say "[Frank_MM_sex00]";
-	else if lastfuck of Frank - turns is less than 8:
+	else if lastfuck of Frank - turns < 8:
 		say "     The large skunk smiles and brushes his paws over his fluffy chair to straighten it out a little. 'Mmm... that sounds nice, but I could use a bit more of a break. Besides, I want to finish the last of these issues,' he adds, pointing to the large pile he's set out.";
 	else:
 		say "[Frank_MF_sex00]";

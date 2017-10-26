@@ -137,7 +137,7 @@ to say Naiad Desc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -164,8 +164,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Female";          [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60;                 [ How many HP has the monster got? ]
-	now lev entry is 8;                 [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 60;                 [ How many HP has the monster got? ]
+	now lev entry is 8;                 [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8;                [ Amount of Damage monster Does when attacking.]
 	now area entry is "Campus";         [ Case sensitive]
 	now cocks entry is 0;               [ number of cocks if sex is 'Male' or 'Both' ]
@@ -191,7 +191,7 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Naiad":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "Before long, your instincts take over, driving you to seek out a body of water to claim for your own. As you find a suitable lake in a park and do so, its contents supernaturally become fresh and clean again, a rarity in this stricken city. This causes all kinds of people to search out your lake, the infected as well as the rare human survivors. You allow most to drink, punishing those who try to pollute your water and inviting selected guests to swim and couple with you.";
 			say "When the military finally moves in, some soldiers think you a surviving human and try to 'rescue' you - which doesn't go so well for them. They end up wet as drowned rats and washed all the way to the park entrance - except for a cute one you decide to keep for a while and play with. In the end, you're marked down as 'too much trouble to bring in' and left in peace. So there you stay, in your pristine enchanted lake in the middle of the chaotic infected city.";
 		else:

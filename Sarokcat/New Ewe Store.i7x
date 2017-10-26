@@ -47,7 +47,7 @@ Instead of Resolving a New Ewe Store:
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Charisma Check):[line break]";
 			increase diceroll by bonus;
-			if diceroll is greater than 10:
+			if diceroll > 10:
 				say "     After convincing the voice that you aren't a threat, the door is quickly opened and you are hurried inside, the door closing rapidly behind you. Looking around, you find yourself being stared at by a small herd of rather sheep-like people, most of their bodies covered in soft wool, with rather sheep-like faces. As you stare around you in astonishment, one of them steps forward and introduces himself as Leon. 'Sorry for trying to turn you away earlier, I got to make sure the herd isn't in danger, you understand. We're all a bit on edge since Mary went out to gather supplies and hasn't returned yet. I'm getting really worried about her... but I can't leave everyone else to search for one ewe, as much as it pains me. You know - would it be possible if you had an eye out for her? If you can help find Mary, we would be happy to help you out in return.";
 				If player consents:
 					say "     Leon smiles and shakes your hand thankfully as he hears you agree. 'Thank you very much, we've all been worried sick about her. It's not good for someone to be away from the flock for too long.' The watching sheep nod at this statement.";
@@ -67,7 +67,7 @@ Instead of Resolving a New Ewe Store:
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Charisma Check):[line break]";
 			increase diceroll by bonus;
-			if diceroll is greater than 12:
+			if diceroll > 12:
 				say "     After a while of calling out, you are about to leave when you hear a small voice reply - a woman, by the sound of it. 'Hello can you help me? I was chased in here by some flying beasts while scavenging some goods for my family, and the entryway came down when they tried to force their way through. It's dark down here and I don't know how to find my way out. Please won't you help me?' After reassuring the voice that you will do the best you can, you look at the collapsed entry carefully and realize you would never be able to dig through that in time. Perhaps you can find another way down through the sewers?";
 				now Little Lost Lamb is unresolved;
 				increase NESProgress by 1;
@@ -101,7 +101,7 @@ Instead of resolving Little Lost Lamb:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 14:
+		if diceroll > 14:
 			say "     Carefully marking the twists and turns of the subway, you quickly head to where you think the person was trapped, and almost before you know it you've arrived at a partially collapsed subway station. Calling out you quickly get a response from a shadowy form hiding in the corner, upon realizing you are here to help a Pretty female Ewe steps out into the dim light.";
 			say "     Thank you very much for coming to help me, I kept hearing strange things moving around down here and I was getting pretty frightened,' She pauses for a moment to look you over before continuing, 'My name is Mary and I've been trapped down here in the dark alone for what seems like forever, I know it's a lot to ask, but do you suppose you could help me get home to my flock? They must be very worried about me at this point, I've been gone for much longer than I intended.";
 			attempttowait;
@@ -165,7 +165,7 @@ Instead of conversing the Leon:
 				say "     The room is well lit from the overhead lights, though that seems to be the only constants with most other break rooms you've seen. At some point most of the furniture seems to have been replaced with low benches, and the rest of the room is stuffed with what appears to be fresh piles of wool made into bedding. The room is covered in a strong musk of sheep and sex, making your head swim and your body tingle. Your attention is once more drawn back to Leon as he runs his hand along your neck, before carefully helping you remove your clothes, leaving you blushing as all of your [skin of player] skin is exposed for him to see.";
 				attempttowait;
 				say "     Leon grins as he looks you up and down, before guiding you over to one of the benches to sit.";
-				if cocks of player is greater than 0:
+				if cocks of player > 0:
 					say "     'Hmm looks like you won't fit in here quite yet...' he says, eyeing your male attributes, 'only room in a flock for one Ram at a time. Nothing we can't fix though!'";
 				else:
 					say "     'Oh yeah, that's what I like to see in woman,' he says, eyeing you lewdly, 'Now we just need to fix the rest of you...'";
@@ -236,7 +236,7 @@ to say sexwithLeon:
 		say "     You should [bold type]talk[roman type] to him for a bit first.";
 	else if EweFucked > 0:
 		say "     'Well that sounds like an interesting offer,' Leon says, 'But I'm not the one you should be talking to now am I? You wouldn't want your little lamb over there to get lonely would you?'";
-	else if lastfuck of Leon - turns is less than 6:
+	else if lastfuck of Leon - turns < 6:
 		say "     Leon smiles at you as you approach, before shaking his head sadly at you. 'Much as I'd like to spend some more time with you, you aren't the only one in the flock that needs my personal attention. And it wouldn't be fair to the rest of them for me to neglect them like that. But if you come back later, I'm sure we could find some time,' your handsome flock leader says with some amusement..";
 	else:
 		now lastfuck of Leon is turns;
@@ -244,7 +244,7 @@ to say sexwithLeon:
 		let ewe be "Ewe";
 		say "     Leon looks up from what he was doing as you approach and smiles, 'I can tell what you want, just head on back to the back room and I'll be right there' he says as he calls over one of the other ewes to finish what he was doing. Shuddering in anticipation you find yourself heading through the doorway as your ram suggested, unable to disobey.";
 		attempttowait;
-		if cunts of player is greater than 0:
+		if cunts of player > 0:
 			say "     Leon reaches the room right behind you giving you little time to get comfortable, noting you still have your clothes on he quickly gestures for you to strip. You eagerly find yourself removing what little clothing you were wearing, your body tightening in pleasure in spite of yourself at a command from the strong and dominant ram. 'Now that's what I like to see,' He says as he takes in your naked body, his eyes lingering on your now exposed slit. Leon grins as he slowly begins stalking forward, something in the way he moves making you feel smaller and more needy as he draws close to you, his strong masculine musk filling your nose and making your insides clench in need. Reaching out he rests his three fingered hand on your shoulder for a minute, before gently turning you to face away from him.";
 			attempttowait;
 			say "     Being unable to see what's happening adds an extra erotic flavor to the experience as he gently pushes you forward until you are braced on one of the low padded benches in the room, causing you to shudder in anticipation. Your body tenses as you can feel the tip of his hard cock pressed up against your ass, almost unconsciously you find yourself lifting your ass up higher to provide your ram with easier access to your increasingly wet opening. You hear Leon chuckle softly behind you at your obvious wantonness, before you can turn your head to look behind you, you feel your vagina split open as he impales you with his rod in one swift move. Gasping in shock and pleasure, you quickly lower your head as he begins to slowly slide himself in and out of your needy pussy. You can only moan as you feel your insides shudder and grip his cock tightly, his every move sending shockwaves of pleasure through your body.";
@@ -397,13 +397,13 @@ to say sexwithmary:
 		say "     You should [bold type]talk[roman type] to her a bit first.";
 	else if RamFucked > 0:
 		say "     Mary smiles at you happily as you greet her. 'It's always good to see you here, but I think the Flock leader will be even happier to see you, if you know what I mean,' the blushing ewe says as she gives you a nudge in Leon's direction.";
-	else if lastfuck of Mary - turns is less than 6:
+	else if lastfuck of Mary - turns < 6:
 		say "     Mary blushes happily as she looks around, before sighing sadly at the amused glances the other flock members send her way, 'Sorry, I just can't duck out again from my duties here again so soon. Maybe you could come back a little later?' your cute little ewe says hopefully.";
 	else:
 		now lastfuck of Mary is turns;
 		say "     'Mary blushes eagerly at your advances, nodding shyly she quickly looks around the store before ducking outside with you. Quickly heading over to her nearby hideout she kisses you as soon as the two of you are safe and alone. Breaking off the kiss Mary says, 'I'm so glad to see you again,' she pants eagerly, 'I haven't been able to stop thinking about you since last time.' Before you know it she has quickly stripped you naked and is pushing you down onto the couch.";
 		attempttowait;
-		if cocks of player is greater than 0:
+		if cocks of player > 0:
 			say "     Her eyes slowly drift down your body only to stop at your erect [cock of player] cock, staring in licking her lips in anticipation she lowers her head to it and runs her long tongue along the base of it, her eyes crossing as she savors the taste. Unable to wait any longer, she quickly moves herself over you, straddling you as she positions herself over your erect maleness. Before you can say anything she lowers herself onto you in one swift movement, moaning in ecstasy as her soft cavern wraps around your cock.";
 			attempttowait;
 			say "     Unable to resist the soft feel of her wet folds enveloping you, you bury your hands in the soft wool of her hips, gripping tightly as you thrust upwards. Mary moans in pleasure as you take charge, her inner muscles tightening around you deliciously with your every movement. Soon you settle into a rhythm of short quick thrusts into your willing ewe, her soft body rubbing up against your [skin of player] with every thrust, her face full of animalistic pleasure as she makes soft bleating and moaning noises in time with your thrusting. Before you know it you feel your muscles tense in orgasm, as your cock empties its load into her fertile belly, causing her to shudder in orgasm as well as your seed fills her belly. Panting, she collapses on top of you, your cock still twitching in her, as you both lie there exhausted.";

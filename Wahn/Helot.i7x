@@ -23,7 +23,7 @@ to say StealthHelotTransformation:
 	now tail of player is "human";
 
 to say Helot wins:
-	if hp of player > 0: [player submits]
+	if HP of player > 0: [player submits]
 		if bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player is 0: [Spartans, but not herms and females]
 			say "     As you kneel down in front of him to show your submission, the Helot looks at you in shock for a second, then chuckles. 'So you're not all such unbeatable warriors after all. Are you afraid to fight me, Spartan boy - or do you just long for a real man to take your ass? Not that it matters now...' The young man undoes the knots on his ragged loincloth, then throws it aside to reveal his already half hard cock. 'Come and get it, little Spartan.' he says tauntingly, holding out his erection and grinning widely as you crawl several feet to take it into your mouth. He lets you bob up and down on his shaft for a while, then decides to take things into his own hands. Plucking your Greek helmet off and donning it himself, he runs both his hands over your head and grabs you by the hair. Then he starts moving your head as he fucking into your mouth. Pushing deep quickly, he makes you cough a few times but still continues going without much interest in your comfort.";
 			WaitLineBreak;
@@ -216,7 +216,7 @@ to say HelotDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -243,7 +243,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 12;
 	now sex entry is "Male";
-	now hp entry is 70;
+	now HP entry is 70;
 	now lev entry is 9;
 	now wdam entry is 12;
 	now area entry is "Campus";         [ Case sensitive]
@@ -272,7 +272,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Helot":
-		if humanity of player is less than 10: [succumbed]
+		if humanity of player < 10: [succumbed]
 			if "Submissive" is listed in feats of player:
 				if FuckedBySpartan is 1: [had sex with a Spartan - wants to go back]
 					say "Finding survival out alone in the city difficult, your thoughts stray back to the Spartan warrior you met before. Memories of his strength and trained body suddenly spring up as you fight - or run from - all kinds of strange critters, and the dreams of many a night revolve about muscled arms holding your body and feeling him inside you.";

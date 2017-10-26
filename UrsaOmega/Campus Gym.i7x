@@ -43,15 +43,15 @@ The description of Randy is "A tall, muscular male rhino-man wearing a tank top 
 The conversation of Randy is { "What's up?" }.
 lastworkout is a number that varies. lastworkout is usually 500.
 workoutprice is a number that varies. workoutprice is usually 100.
-the hp of Randy is usually 0.
+the HP of Randy is usually 0.
 wrestlechance is a number that varies. wrestlechance is 50.
 
 instead of conversing Randy:
 	if (lastworkout - turns < 8):
 		say "You're still pretty exhausted from your last workout. Maybe some other time?";
 	else:
-		say "[if hp of Randy is 0]     'Hey there! Always good to see a fresh face around here... Especially when that face doesn't belong to somethin['] that's tryin['] to rape or kill me. The name's Randy, and this here is my gym. Well, it wasn't mine originally, but after everything went down, I kinda adopted it. I've always liked this place, an['] I felt some kinda loyalty to it, ya know? So I kept it runnin[']! It's more important than ever, really - you'll need an extra muscle or two to get around outside, right? Plus, I've turned some of the back rooms into shelters for people who aren't too far gone. Say, you wouldn't happen to be needin['] some physical trainin['], would ya? I'd be happy to teach ya, but I'm afraid I'm gonna need some freecred for my trouble. My going rate is 100 freecred a session, with a 35 increase each session... Gotta trade for supplies for the survivors, and supplies ain't cheap right now. You interested?'[else] 'Back for more! What kinda training ya wanna do today? All sessions cost [workoutprice] freecred each!'[end if]";
-		if hp of Randy is 0, now hp of Randy is 1; [if you haven't met him... You have now!]
+		say "[if HP of Randy is 0]     'Hey there! Always good to see a fresh face around here... Especially when that face doesn't belong to somethin['] that's tryin['] to rape or kill me. The name's Randy, and this here is my gym. Well, it wasn't mine originally, but after everything went down, I kinda adopted it. I've always liked this place, an['] I felt some kinda loyalty to it, ya know? So I kept it runnin[']! It's more important than ever, really - you'll need an extra muscle or two to get around outside, right? Plus, I've turned some of the back rooms into shelters for people who aren't too far gone. Say, you wouldn't happen to be needin['] some physical trainin['], would ya? I'd be happy to teach ya, but I'm afraid I'm gonna need some freecred for my trouble. My going rate is 100 freecred a session, with a 35 increase each session... Gotta trade for supplies for the survivors, and supplies ain't cheap right now. You interested?'[else] 'Back for more! What kinda training ya wanna do today? All sessions cost [workoutprice] freecred each!'[end if]";
+		if HP of Randy is 0, now HP of Randy is 1; [if you haven't met him... You have now!]
 		if freecred >= workoutprice:
 			setmonster "Rhino";
 			now sextablerun is 0;
@@ -102,7 +102,7 @@ instead of conversing Randy:
 the fuckscene of Randy is "[randysex]".
 
 to say randysex:
-	if hp of Randy < 2:
+	if HP of Randy < 2:
 		say " 'Woah, hey - slow down there a bit. Can't say I'm not flattered, but I hardly know ya!'";
 	else if (lastfuck of Randy - turns < 6):
 		say "'Gosh, I'm still tired from last time. Give me a bit more recovery time, would ya?'";
@@ -161,15 +161,15 @@ to say strtraining:
 		increase workoutprice by 35;
 	else:
 		say "     You lift for what feels like hours under Randy's approving observation, relishing the tense-relax rhythm of your muscles as you hoist an increasingly heavy series of weights. You feel victorious as you lift the final, heaviest one, the burn in your limbs only serving to drive you to greater feats of strength. Randy, grinning from your performance, give you a pat on the back, and you feel ready to take on the world!";
-		increase morale of player by 5;
 		say "[bold type]Your morale has increased by 5![roman type]";
+		increase morale of player by 5;
 	now lastworkout is turns;
 	follow the turnpass rule;
 	if waiterhater is 0, wait for any key;
 	say "     Randy looks over your worked-out body with a different light in his eyes. 'You know, yer not half bad lookin['] after a workout... Pretty sexy, if you don't mind me sayin[']. Actually, if yer not too tuckered out, would you be interested in some, uh... Naked wrestling? It's kind of a popular pasttime around here...' The rhino-man is blushing through his thick grey skin. Do you want to try some [']naked wrestling['] with him?";
 	if player consents:
 		say "[wrestlesex]";
-		if hp of Randy < 2, now hp of Randy is 2;
+		if HP of Randy < 2, now HP of Randy is 2;
 	else:
 		say "You politely decline his offer. He looks a bit disappointed, but he seems to understand. ";
 
@@ -184,14 +184,14 @@ to say dextraining:
 		follow the turnpass rule;
 	else:
 		say "     After the session, you feel proud that you were able to handle the session with ease; you feel centered, both physically and mentally, ready to take on any challenges today throws at you.";
-		increase morale of player by 5;
 		say "[bold type]Your morale has increased by 5![roman type]";
+		increase morale of player by 5;
 		LineBreak;
 	now lastworkout is turns;
 	say "     Randy comes up to you with a smile on his face and you note a slight bulge in his pants. 'Hey, uh...' he says embarrassedly, '...You wanna grab a shower? You know, uh, together?'";
 	if player consents:
 		say "[showersex]";
-		if hp of Randy < 2, now hp of Randy is 2;
+		if HP of Randy < 2, now HP of Randy is 2;
 	else:
 		say "You politely decline his offer. He looks a bit disappointed, but he seems to understand. ";
 
@@ -210,7 +210,7 @@ to say statraining:
 	say "Randy gives me a lusty grin. 'Hey, uh, would you be interested in some stamina training of a... Different kind?'";
 	if player consents:
 		say "[endurancesex]";
-		if hp of Randy < 2, now hp of Randy is 2;
+		if HP of Randy < 2, now HP of Randy is 2;
 	else:
 		say "You politely decline his offer. He looks a bit disappointed, but he seems to understand. ";
 
@@ -239,7 +239,7 @@ to say wrestlesex:
 				else:
 					say "You press your asshole down into Randy's muzzle harder, and he obliges, tonguefucking your hole with more force. Sometimes he pulls back to tease your ring before diving his muzzle back between your buttcheeks, penetrating you deeply with his thick tongue. You moan as he drives you to an anal orgasm, your muscles spasming around his thick tongue as your rear blooms with warm pleasure.";
 				if waiterhater is 0, wait for any key;
-				say "     Randy's hand is flying up and down his cock now, and he cums with a tensing of muscles and a grunt, spurting rhino cum over the both of you. You disentangle your bodies, collapsing on the padded floor side by side, panting after your session. Randy smacks his lips dramatically, cleaning stray juices from his muzzle. [if hp of Randy is 0]'Damn, haven't been fucked like that in a long time!'[else]'Fuck, you're good at that!'[end if], Randy pants. 'Rematch sometime?', he says hopefully as you disentangle your bodies. He finds a towel and you dry off before getting your gear together and leaving.";
+				say "     Randy's hand is flying up and down his cock now, and he cums with a tensing of muscles and a grunt, spurting rhino cum over the both of you. You disentangle your bodies, collapsing on the padded floor side by side, panting after your session. Randy smacks his lips dramatically, cleaning stray juices from his muzzle. [if HP of Randy is 0]'Damn, haven't been fucked like that in a long time!'[else]'Fuck, you're good at that!'[end if], Randy pants. 'Rematch sometime?', he says hopefully as you disentangle your bodies. He finds a towel and you dry off before getting your gear together and leaving.";
 				infect "Rhino";
 				now lastfuck of Randy is turns;
 				stop the action;
@@ -250,14 +250,14 @@ to say wrestlesex:
 						wait for any key;
 					say "     You quickly establish a rhythm, slowly pulling your length from the hot embrace of his ass before feeding it back in, relishing the way his ring spreads around your [cock of player] cock. You move a spare hand to Randy's thick rhino meat, which has been drooling precum like a broken tap ever since you first pinned him. You spread some of that precum over his length, using it to help you slowly stroke him in time with your thrusts. 'C'mon, you can fuck me harder than that!', Randy says huskily. You oblige, pounding his hole with quick, powerful thrusts, speeding up the jerking of his cock in kind. The room fills with the sound of flesh hitting flesh and your combined grunting and sighing.";
 					if waiterhater is 0, wait for any key;
-					say "     Your frantic fucking reaches a crescendo as he starts to squeeze his powerful rear around your length, embracing you each time you withdraw from his ass. The gripping sensation is too much for you, and you cross the finish line with a deep thrust, pumping your [cum load size of player] load in his guts. Your hand brings Randy do his own orgasm, his rhino cock stiffening and spurting cum between your bodies. You collapse over the rhino man, panting and sweating from the exertion. [if hp of Randy < 2]'Damn, haven't been fucked like that in a long time!'[else]'Fuck, you're good at that!'[end if], Randy pants. 'Rematch sometime?', he says hopefully as you disentangle your bodies. He finds a towel and you dry off before getting your gear together and leaving.";
+					say "     Your frantic fucking reaches a crescendo as he starts to squeeze his powerful rear around your length, embracing you each time you withdraw from his ass. The gripping sensation is too much for you, and you cross the finish line with a deep thrust, pumping your [cum load size of player] load in his guts. Your hand brings Randy do his own orgasm, his rhino cock stiffening and spurting cum between your bodies. You collapse over the rhino man, panting and sweating from the exertion. [if HP of Randy < 2]'Damn, haven't been fucked like that in a long time!'[else]'Fuck, you're good at that!'[end if], Randy pants. 'Rematch sometime?', he says hopefully as you disentangle your bodies. He finds a towel and you dry off before getting your gear together and leaving.";
 					infect "Rhino";
 					now lastfuck of Randy is turns;
 					stop the action;
 				if cocks of player is 0:			[Riding]
 					say "     You straddle Randy's body, reaching one hand down between your legs to position his thick rhino meat at the entrance to your [if cunts of player > 0]pussy[else]ass[end if]. Your wrestling has gotten him quite worked up, and his flared tip is dripping a copious supply of precum between your thighs. You start to sink down on his length, sighing as his glans spreads your [if cunts of player > 0]labia[else]asshole[end if] open. You slid down until you feel his hefty balls rest against your bare, [bodydesc of player] ass. Every bit of your [if cunts of player > 0]vagina[else]rectum[end if] feels stuffed with the grey malehood of the rhino. You roll your hips, working your body up and down his cock.";
 					say "     Randy grunts and tries to thrust up into you, but being pinned under your body, you control the pace; you tease him by pulling off his cock slowly before slamming yourself back down, loving the feeling of being filled with thick rhino dick. Each time he bottoms out in you, you bear down on him, gripping him with your internal muscles, eliciting a moan and a jet of warm precum from Randy each time. As his orgasm nears, he brings his muscular hands to your hips, pulling you down into his powerful thrusts. With a cry, he bottoms out inside you before unloading, filling you up with thick rhino cream.[impregchance]";
-					say "     You collapse on top of him, panting and sweating, dully aware of the seed dripping from your well-worked [if cunts of player > 0]snatch[else]anus[end if]. [if hp of Randy is 1]'Damn, haven't been fucked like that in a long time!'[else]'Fuck, you're good at that!'[end if], Randy pants. 'Rematch sometime?', he says hopefully as you disentangle your bodies. He finds a towel and you dry off before getting your gear together and leaving.";
+					say "     You collapse on top of him, panting and sweating, dully aware of the seed dripping from your well-worked [if cunts of player > 0]snatch[else]anus[end if]. [if HP of Randy is 1]'Damn, haven't been fucked like that in a long time!'[else]'Fuck, you're good at that!'[end if], Randy pants. 'Rematch sometime?', he says hopefully as you disentangle your bodies. He finds a towel and you dry off before getting your gear together and leaving.";
 					infect "Rhino";
 					now lastfuck of Randy is turns;
 					stop the action;
@@ -277,7 +277,7 @@ to say wrestlesex:
 	if cocks of player > 0:
 		say "Randy reaches down and grips [if cocks of player > 1]one of[end if] your [cock size desc of player] [cock of player] cock[smn], stroking it in time with his thrusts. ";
 	say " You feel your orgasm rapidly approaching, and you tighten your legs around Randy as he leans over you, increasing the speed and intensity of his thrusts. He hilts himself deep inside you and comes with a great bellow, and you feel your [if cunts of player > 0]womb[else]rectum[end if] fill with hot, thick rhino seed[impregchance]. You're not far behind him, thanks to his stimulation, and you [if cocks of player > 0]shoot your own [cum load size of player] load across your chest[else if cunts of player > 0]cry out as pleasure blossoms in your lower half your cunt clenches around his thick manhood[else]cry out as pleasure blossoms in your lower half and your ass clenches around his thick cock[end if].";
-	say "     [if hp of Randy is 0]'Damn, haven't had that good of a fuck in a long time!'[else]'Fuck, you're good at that!'[end if], Randy pants. 'Rematch sometime?', he says hopefully as you disentangle your bodies. He finds a towel and you dry off before getting your gear together and leaving.";
+	say "     [if HP of Randy is 0]'Damn, haven't had that good of a fuck in a long time!'[else]'Fuck, you're good at that!'[end if], Randy pants. 'Rematch sometime?', he says hopefully as you disentangle your bodies. He finds a towel and you dry off before getting your gear together and leaving.";
 	infect "Rhino";
 	now lastfuck of Randy is turns;
 

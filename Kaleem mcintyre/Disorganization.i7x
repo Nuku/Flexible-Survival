@@ -51,7 +51,7 @@ Instead of resolving Disorganization:
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus]:[line break]";
 			increase diceroll by bonus;
-			if diceroll is greater than 12:
+			if diceroll > 12:
 				say "Reasoning with the other on an intellectual level as well as emotional one you tell him that you can still keep his life and his manhood, so long as he doesn't take this way out. 'What are you talking about?' The anger in the other's voice is steadily becoming a growl and you realize that you don't have that much time before he's lost to his budding feral instincts. Telling him that as long as he uses his cock he will stay a man, per say, you slowly convince the other to put his gun down. It takes a while to do as the other seems to be almost itching to off himself, but finally you reach through to the soldier's strong will to live and get him to drop his gun. Quickly you move over to kick it out of the way, if just so the other won't get any more funny ideas. 'Lord almighty,'";
 				say "The other man begins as he slides down the wall of the building he was standing in front of him. 'I can't believe that I almost. Oh man...' For a minute there is nothing said as the soldier just stares forward, unseeing, as he tries to get his thoughts into some kind of working order. Once he does though, the changeling lifts his head up towards you and then chuckles remorsefully. 'Thanks, kid. You saved me...well what's left of the human me after all. Why did you go through so much trouble for me? You don't even know me and I sure as hell don't know you.'";
 				WaitLineBreak;
@@ -69,7 +69,7 @@ Instead of resolving Disorganization:
 			else:
 				say "'[one of]No! I'm not going to be a monster![or]Are you trying to be funny?[or]I'm literally turning into a bitch here, guy! There's nothing worse that can happen to me than this![or]Why are you trying so hard to save a complete stranger!?[at random]' the dog soldier growls, trying to line up the muzzle under his chin.  Throwing yourself at him in one, final desperation move, you wrench the gun from his hands, sending it to the ground as it fires off a round.  The increasingly bitch-like man punches you square in the jaw, knocking you to the ground.  'I'd saved that last bullet for myself, asshole,' he howls.  Dropping to all fours, the increasingly canine soldier runs off into the city, soon to succumb to the infection afflicting his increasingly feminine body.";
 				say "You look over at the gun, but as he said, it's now out of ammo.  As well, the rough slam to the ground seems to have cracked its stock and bent the barrel slightly.  You kick it aside and continue on your way, somewhat disappointed as you rub your aching jaw.";
-				decrease hp of player by 6;
+				decrease HP of player by 6;
 				now drs is 2;
 		else:
 			LineBreak;
@@ -92,7 +92,7 @@ Instead of resolving Disorganization:
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
-			if diceroll is greater than 12:
+			if diceroll > 12:
 				say "Quickly you snatch the tags before the latex critter can do anything to counter you. A sad look overcomes the mutant's muzzle, as though it was seeing something that was breaking its spirit, but soon it is replace by a dopey look filled with lust as the rubber vulpine begins to steadily hump the air in front of it. Not wanting to see what you are sure is going to happen next you beat feet away from the other just in time to hear subtle squeaks come from the toy-like vulpine.";
 				now drs is 4;
 				increase score by 5;
@@ -136,9 +136,9 @@ Instead of resolving Disorganization:
 		say "You nod once more before answering with another affirmative. 'Ok. You can leave this walkie-talkie behind where you like. We suspect this frequency's been compromised and you don't want them following it back to you. I'm going to shut off the link to this channel.  For security, I can't tell you the new channel and codes, so it'll be useless anyway. Over and out, kid. And hey, thanks so much for all you've done.' You barely have time to respond before grey noise comes over the transceiver as the line is suddenly cut. Lowering your head and then letting the walkie-talkie drop onto the ground you find yourself somewhat empty after having done all of this. Is this how it goes for those soldiers who serve faithfully?";
 		say "Truth really is stranger than fiction because this all just can't be real. It just... hurts too much to be reality. Shivering and rubbing your arms you let out a half choked sob before shaking your head and then letting out a fierce yell. Your emotions are too chaotic to hold back your need to grieve any longer. Graciously enough, some force or another keeps any mutants away from you right now. Not even you could be sure of what you would do if you stumbled onto any of the creatures that plague this town right at the moment.";
 		increase perception of player by 1;
-		say "your perception has increased by 1!";
+		say "[bold type]Your perception has increased by 1![roman type][line break]";
 		increase intelligence of player by 1;
-		say "your intelligence has increased by 1!";
+		say "[bold type]Your intelligence has increased by 1![roman type][line break]";
 		decrease morale of player by 15;
 		increase carried of food by 2;
 		increase carried of water bottle by 2;

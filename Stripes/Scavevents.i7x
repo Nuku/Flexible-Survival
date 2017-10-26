@@ -64,13 +64,13 @@ Instead of resolving a Tight Fit:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "The tunnel looks like it would be ";
-		if difficulty is less than 8:
+		if difficulty < 8:
 			say "easy";
-		else if difficulty is less than 10:
+		else if difficulty < 10:
 			say "not too bad";
-		else if difficulty is less than 12:
+		else if difficulty < 12:
 			say "hard";
-		else if difficulty is less than 14:
+		else if difficulty < 14:
 			say "very difficult";
 		else:
 			say "extremely difficult";
@@ -82,7 +82,7 @@ Instead of resolving a Tight Fit:
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
-		if difficulty is greater than dice:
+		if difficulty > dice:
 			say "You try your best to squeeze into the tunnel, but you aren't able make it more than a couple of feet before it becomes impossible to move forward. Rather than risk getting completely stuck and vulnerable to any lusty mutant who comes by, you work your way back out and head off.";
 		else:
 			say "It is a tight fit at a few spots, but you manage to wriggle your way in and out of the tunnel, snagging the [y] to add to your backpack's contents.";
@@ -137,7 +137,7 @@ Instead of resolving a Protected Supplies:
 	repeat with tt running from 1 to number of filled rows in table of random critters:
 		choose row tt from the table of random critters;
 		if there is a lev entry:
-			if lev entry is greater than level of player plus levelwindow and hardmode is false:
+			if lev entry > level of player plus levelwindow and hardmode is false:
 				next;
 		else:
 			next;
@@ -160,7 +160,7 @@ Instead of resolving a Protected Supplies:
 			now monster is Z;
 			break;
 		choose row monster from the table of random critters;
-		if lev entry is less than level of player and hardmode is true:
+		if lev entry < level of player and hardmode is true:
 			hardmodeboost;
 		say "In your searching through the city, you come across some [y] and move to get it.";
 		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
@@ -257,7 +257,7 @@ Instead of resolving a Dented Bike:
 	if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
-	if bonus + dice is greater than difficulty:
+	if bonus + dice > difficulty:
 		let t be a random number between 1 and 3;
 		if t is 1:
 			say "You spot something under one of the shredded rags - it's an unopened bottle of water in a holder on the bike's frame! ";
@@ -290,7 +290,7 @@ Instead of resolving a Looted Supermarket:
 		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
-		if bonus + dice is greater than difficulty:
+		if bonus + dice > difficulty:
 			say "As you turn to head out of the store, you spot something interesting from the corner of your eye. There's a tin can that seems to have fallen down and rolled under a shelf - you pick it up and see it's [one of]dog[or]cat[at random] food. Not your first choice for a meal, but hey - it's in a sealed container so it'll be infection free!";
 		else:
 			say "You continue looking elsewhere for supplies, but aren't able to find any on this trip.";
@@ -301,7 +301,7 @@ Instead of resolving a Looted Supermarket:
 		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
-		if bonus + dice is greater than difficulty:
+		if bonus + dice > difficulty:
 			say "You get an idea and check the checkout section. The cashiers are people with needs too, so... you find an unopened soda bottle under the register.";
 			increase carried of soda by 1;
 		else:
@@ -313,7 +313,7 @@ Instead of resolving a Looted Supermarket:
 		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
-		if bonus + dice is greater than difficulty:
+		if bonus + dice > difficulty:
 			say "You get an idea and check the checkout section. The cashiers are people with needs too, so... you find an energy bar under the register.";
 			increase carried of food by 1;
 		else:
@@ -329,7 +329,7 @@ Instead of resolving a Looted Supermarket:
 			let x be 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
-		if bonus + dice is greater than difficulty:
+		if bonus + dice > difficulty:
 			say "You break open the door to a small room in the back[if x is 1] with the help of your crowbar[end if]. Aww - it's just the employees lockers and some cleaning supplies. At least one of them had a bag of chips in his locker.";
 			increase carried of chips by 1;
 		else:
@@ -356,7 +356,7 @@ Instead of resolving a Abandoned Cars:
 		let x be 1;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
-	if bonus + dice is greater than difficulty:
+	if bonus + dice > difficulty:
 		say "No problem - you grab the lid and wrench it open with [if x is 1]your crowbar[else]your superior strength[end if]. Inside you find several shopping bags, filled with a smelly mess of mostly rotting food. At least you manage to salvage a can of [one of]tomato soup[or]baked beans[or]spaghetti[or]pineapple[at random] and a soda bottle from it.";
 		increase carried of food by 1;
 		increase carried of soda by 1;
@@ -441,13 +441,13 @@ Instead of resolving a Plains Scavenging:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "Sighing in annoyance you notice that there are some mutants lording over a few items, the [y] among them. Seeming peaceful enough folks, you head on over. The one in charge looks up at you with a grunt of annoyance at the interruption. From the looks of the creature, he should be ";
-		if difficulty is less than 8:
+		if difficulty < 8:
 			say "easy";
-		else if difficulty is less than 10:
+		else if difficulty < 10:
 			say "not too bad";
-		else if difficulty is less than 12:
+		else if difficulty < 12:
 			say "hard";
-		else if difficulty is less than 14:
+		else if difficulty < 14:
 			say "very difficult";
 		else:
 			say "extremely difficult";
@@ -462,7 +462,7 @@ Instead of resolving a Plains Scavenging:
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
-		if difficulty is greater than dice:
+		if difficulty > dice:
 			say "It would seem that negotiations have failed and the mutants now want you gone. By the looks on their faces, it would be wise for you to get lost... and fast!";
 		else:
 			say "Coming to a mutually beneficial agreement, you find that the other mutants are willing to give up the item to you in trade for some information. It would seem that there are still some decent [']people['] in the world after all[if petbonus is true]. Though having an intimidating guard by your side may have helped a little[end if]. You quickly add [y] to your satchel and then bob your head gratefully to the others before going about your way.";
@@ -471,13 +471,13 @@ Instead of resolving a Plains Scavenging:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "It is perched precariously among some rubble of a collapsing building. It looks ";
-		if difficulty is less than 8:
+		if difficulty < 8:
 			say "easy";
-		else if difficulty is less than 10:
+		else if difficulty < 10:
 			say "not too bad";
-		else if difficulty is less than 12:
+		else if difficulty < 12:
 			say "hard";
-		else if difficulty is less than 14:
+		else if difficulty < 14:
 			say "very difficult";
 		else:
 			say "extremely difficult";
@@ -499,9 +499,9 @@ Instead of resolving a Plains Scavenging:
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
-			if difficulty is greater than dice:
+			if difficulty > dice:
 				say "You try your best to traverse the collapsing [one of]store[or]building[or]home[or]structure[at random], but end up setting off the collapse even further. Rubble falls and dust flies up as a portion of a wall falls onto you. Thankfully you're able to get yourself out from under it easily enough, but looking at the devastation, you find that the falling debris has crushed your intended prize as well.";
-				decrease hp of player by 10;
+				decrease HP of player by 10;
 			else:
 				say "You successfully manage to move across the collapsing [one of]store[or]building[or]home[or]structure[at random] and snag the [y], stuffing it into your backpack.";
 				add y to invent of the player;
@@ -757,8 +757,8 @@ Instead of resolving a Shattered House:
 		if dice >= 16:
 			say "     Taking a quick look inside, you luckily feel the kitchen floor starting to give way out from under you and manage to back away before the middle of the kitchen floor caves in and that section of the damaged house collapses into the basement. You move on after that unsuccessful venture and remind yourself to be more careful inside damaged buildings from now on.";
 		else:
-			let dam be ( ( hp of player + maxhp of player ) ) / 7;
-			decrease hp of player by dam;
+			let dam be ( ( HP of player + maxHP of player ) ) / 7;
+			decrease HP of player by dam;
 			say "     Taking a quick look inside, you yell in surprise as the kitchen floor collapses out from under you, dropping you into the basement as more of the room falls in around you. You avoid a close call as the appliances comes tumbling in. Once the dust settles, you grab a few items that fell out of the cubbard and climb out before the whole place collapses on top of you, much more wary about damaged buildings now.";
 			increase carried of food by 1;
 	else if x is 5:
@@ -772,8 +772,8 @@ Instead of resolving a Shattered House:
 		if dice >= 14:
 			say "     As you're searching through the rubble, you luckily notice some creaking and some plaster dust falling out of the corner of your eye. You get out quickly, avoiding the sudden collapse of the house. Scared but safe, you leave the place behind before the noise can attract anything dangerous.";
 		else:
-			let dam be ( ( hp of player + maxhp of player ) ) / 7;
-			decrease hp of player by dam;
+			let dam be ( ( HP of player + maxHP of player ) ) / 7;
+			decrease HP of player by dam;
 			say "     As you're searching through the rubble, you are too focused on looking for something you can take that you don't notice the growing groans of the building until it's too late and it starts collapsing around you. Debris falls down atop you, hurting you quite a bit and pinning you beneath it. You eventually dig yourself out, but you're left tired and bruised.";
 			if a random chance of 2 in 3 succeeds:
 				say "     As you're pulling yourself out, you see that the collapse has also attracted one of the local creatures, eager to take advantage of the situation.";

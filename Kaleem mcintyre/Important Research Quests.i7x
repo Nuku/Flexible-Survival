@@ -71,7 +71,7 @@ Instead of resolving Important Treasure:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 10:
+		if diceroll > 10:
 			say "Telling the other's that this ass belongs to you while rubbing up against the rear end of the drunken officer, which gets a quiet [']meep['] out of the reptile, you grind into the cop front while letting the others know that you're hot piece is not up for grabs. 'If that's the case then you need to keep [italic type]your[roman type] sluts out of our bar, unless you want them cream filled after the boys and I get through with them.' Huffing and saying [']whatever['] you wave the group off. Watching carefully as the assembled grumbles and then goes about their way back into the bar you let out a sigh of relief when the door to the place slams shut behind the last one.";
 			WaitLineBreak;
 			say "'T-thank you. I-I...' The iguana officer shivers and then breaks down in front of you. 'I really wish Greg was here. He knows I'm just a pathetic reprobate without him.' Letting the reptile know that he isn't that bad since he's an officer and all you begin to get some of the lizard's life story, completely without haven been asked for it. 'Greg's the one who got me signed up for the Academy. He's the one who encouraged me to keep on even when the other cops found out I was a [']fag['] and started to harass me about it.' The iguana shivers much harder and then starts to sob openly. 'He's the one who found me when the other guys were raping me and had me tied up in that basement. If it wasn't for him... I... I...'";
@@ -240,7 +240,7 @@ Instead of resolving a Friendship's Proof:
 			say "The hands on your head tighten hard enough that you actually feel as though your skull will break into pieces, and yet, the growl that comes from behind you has you more terrified mentally more terrified than anything physically happening to you at the moment. '[italic type]Friend[roman type] you are a bad liar and someone that does not want to try my patients. I don't know what your game is, but you better be ready to play some serious hardball if you stick your nose in where it doesn't belong. The things happening are not...' The other person behind you stops himself from speaking all of a sudden and then lets out a roar before throwing you down onto the ground suddenly.";
 			WaitLineBreak;
 			say "The sudden impact makes your chest heave, but at getting in much-needed air you figure that it's worth the effort. When you turn to look at your captor you find your eyes, which have long adjusted to the gloom, not able to find anyone.";
-			decrease hp of player by 30;
+			decrease HP of player by 30;
 			increase score by 10;
 		else:
 			LineBreak;
@@ -410,7 +410,7 @@ Instead of resolving a Special Delivery:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 14:
+		if diceroll > 14:
 			say "Having beaten back the enraged hydra you find the twin-headed terror stumbling backwards against the railing of his ship somewhat awkwardly. When the twin heads of the sea beast begin to shake themselves in time with one another you shout at the scalie to let him know that you're not here for a fight. That however, does not stop you from remaining in a defensive stance as you wait for either the acceptance of peace or another physical dispute with the other.[line break]";
 			say "'It's not about whatcha want,' The red eyed hydra says quietly. Both of its mouths speak at the same time which, extraordinarily enough, give the hydra a somewhat echoing tenor to his words. 'it's about what the other person wants and how they plan to go about getting it. You're job, my little friend, is to know how to deal with the outcome of the situation if words can't dissuade a conflict from becoming paramount.'";
 			WaitLineBreak;
