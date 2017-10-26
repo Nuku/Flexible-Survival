@@ -2457,7 +2457,7 @@ carry out grabbing something(called x):
 		increase num by 1;
 		if q matches the regular expression printed name of x, case insensitively:
 			now found is 1;
-			increase carried of q by 1;
+			Add q to invent of player;
 			remove entry num from invent of the location of the player;
 			say "You pick up the [printed name of x] and tuck it in your backpack.";
 			break;
@@ -2579,7 +2579,7 @@ carry out looting:
 	repeat with Q running through invent of the location of the player:
 		increase num by 1;
 		now found is 1;
-		increase carried of q by 1;
+		Add q to invent of player;
 		say "You pick up the [q] and tuck it in your backpack.";
 	if found is 0:
 		say "You don't see anything around here.";
@@ -2607,10 +2607,10 @@ Check trading:
 
 Carry out trading:
 	say "You offer up [the noun] to [second noun] and they look it over for a moment before nodding and drawing out a [trade of the noun] and handing it to you. A fair trade, right?";
-	increase carried of trade of the noun by 1;
+	Add trade of the noun to invent of player;
 	if "Haggler" is listed in feats of player and a random chance of 1 in 3 succeeds:
 		say "You get a second one free with your amazing negotiating skills.";
-		increase carried of trade of the noun by 1;
+		Add trade of the noun to invent of player;
 	let num be 0;
 	delete noun;
 
