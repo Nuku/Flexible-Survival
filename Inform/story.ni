@@ -5031,6 +5031,7 @@ Include Zoo by Hellerhound.
 
 [Quests & Events]
 Include Ancient Tome by Wahn.
+Include Ancient Tome Expansion by Dys.
 Include Apartment 319 by Kaleem Mcintyre.
 Include Assorted Events by Stripes.
 Include Beach Events by Sarokcat.
@@ -5179,6 +5180,7 @@ Include Cute Chinchilla Girl For FS by Guest Writers.
 Include Dalmatian by Kaleem mcintyre.
 Include Dark Elf for FS by Stripes.
 Include Demon Brute For Fs by Wahn.
+Include Demon Fox by Dys.
 Include Doberman for FS by Stripes.
 Include Dolphin for FS by Hellerhound.
 Include Donkeyman by Sarokcat n Verath.
