@@ -228,10 +228,10 @@ This is the church description rule:
 
 this is the lustconfession rule:
 	say "     You hear a soft sigh. 'Indeed, you speak of one of the most dangerous aspects of the infection, for it leads towards loosing yourself. Please just listen, and I will attempt to help you overcome its controlling nature.'";
-	if ( lastconfession - 7 ) is greater than turns:
+	if ( lastconfession - 7 ) > turns:
 		say "     The priestess's words and advice do indeed help, granting you better control over your lusts, at least for now.";
 		Decrease libido of player by 20;
-		if libido of player is less than 0, now libido of player is 0;
+		if libido of player < 0, now libido of player is 0;
 		now lastconfession is turns;
 	else:
 		say "     Unburdening yourself again, you sadly discover it has little effect as you had nothing to add since your last confession session.";

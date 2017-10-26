@@ -12,7 +12,7 @@ ImpPlayerMarkingTurn is a number that varies.
 Section 1 - Monster Responses
 
 to say Imp wins:
-	if hp of player > 0:[player submits]
+	if HP of player > 0:[player submits]
 		say "     As you submit to the little demon, the imp puffs up his chest and gives an imperious nod, then starts to smile. His too-broad mouth pulls into a wide grin showing off a whole row of sharp teeth and he calls out, 'Not as stupid as you look, I see. At least some mortals realize they are no match for demonic powers, hah! Strip naked slave!' After those words, the foot-tall being flutters around you as you obey and take off your gear and clothes, dropping them to the ground one by one. The imp demands that you take some lewd poses to show off - like shaking and spreading your ass or air-humping with your crotch - then commands you to lie down on your back. With a flutter of wings, he lands on your chest a moment later, placing tiny hooves to stand on your breastbone.";
 	else:[player loses]
 		say "     You are left swaying badly after the last hit of the little demon and the imp gives an evil chuckle as he flies right up to your face in a flutter of wings. With his too-broad mouth pulling into a wide grin showing off a whole row of sharp teeth, he reaches out to poke your forehead with one finger, then gives a small shove - enough to make you keel over backwards. 'You really should have realized that you're no match for me! I'm a demon, dumb-fuck!' With those words, the foot-tall being lands on your chest, placing tiny hooves to stand on your breastbone.";
@@ -150,7 +150,7 @@ to say ImpDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -177,7 +177,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Male";
-	now hp entry is 50;
+	now HP entry is 50;
 	now lev entry is 5;
 	now wdam entry is 5;
 	now area entry is "Nowhere";        [ Case sensitive]
@@ -204,7 +204,7 @@ When Play begins:
 
 Section 3 - Events
 
-instead of navigating Red Light District while (level of player > 10 and hp of Elijah > 2 and hp of Elijah < 99 and libido of Skarnoth < 10 and LastImpMeeting - turns > 8 and a random chance of 1 in 3 succeeds):
+instead of navigating Red Light District while (level of player > 10 and HP of Elijah > 2 and HP of Elijah < 99 and libido of Skarnoth < 10 and LastImpMeeting - turns > 8 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Red Light District]";
 	if NavCheckReturn is false, stop the action;
 	if debugactive is 1:
@@ -214,7 +214,7 @@ instead of navigating Red Light District while (level of player > 10 and hp of E
 	now LastImpMeeting is turns;
 	move player to Red Light District;
 
-instead of navigating Grey Abbey Library while (level of player > 10 and hp of Elijah > 2 and hp of Elijah < 99 and libido of Skarnoth < 10 and LastImpMeeting - turns > 8 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (level of player > 10 and HP of Elijah > 2 and HP of Elijah < 99 and libido of Skarnoth < 10 and LastImpMeeting - turns > 8 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	if debugactive is 1:
@@ -224,7 +224,7 @@ instead of navigating Grey Abbey Library while (level of player > 10 and hp of E
 	now LastImpMeeting is turns;
 	move player to Grey Abbey Library;
 
-instead of navigating Smith Haven Mall Lot South while (level of player > 10 and hp of Elijah > 2 and hp of Elijah < 99 and libido of Skarnoth < 10 and LastImpMeeting - turns > 8 and a random chance of 1 in 3 succeeds):
+instead of navigating Smith Haven Mall Lot South while (level of player > 10 and HP of Elijah > 2 and HP of Elijah < 99 and libido of Skarnoth < 10 and LastImpMeeting - turns > 8 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Smith Haven Mall Lot South]";
 	if NavCheckReturn is false, stop the action;
 	if debugactive is 1:
@@ -278,7 +278,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Imp":
-		if humanity of player is less than 10:   [succumbed]
+		if humanity of player < 10:   [succumbed]
 			say "     Finally giving in to your base desires, you take off and fly over the city on the search for someone to fuck. Small as you may be, from high up everyone looks tiny and weak - which makes you feel powerful and strong. They're just insects to you, mortal mayflies to be played with. Before long, your search bears fruit - there is a small group of people holed up on top of a building, uninfected humans that have the stairwell barricaded and cower from the monsters below in a shack on the roof. Of course, this doesn't protect them from you as you, with your wings and demonic powers. With little more than a few fireballs thrown around, you frighten them into obedience and gain a flock of fucktoys to serve your every whim. This even goes so far that they never even dare to try calling out to the soldiers as they sweep the city, instead hiding according to your commands and being left behind - all yours, forever.";
 		else:[sane]
 			say "     Rescued by the military, you are released after a short while of quarantine. With your small stature and demonic looks, it isn't easy to find a new place in the post-nanite world, but the fact that you do have functional wings does pay off in the end and you're hired as a courier by the 'Skymail' express delivery service. Supplanting the bike couriers of the big cities, the mixed crew of gryphons, harpies and even demons just like yourself does quite well, and before long the bigger companies usually have a little balcony added to their high rises for speedy drop-offs. As you and those like you become part of the typical day to day of many people - regularly swooshing past over their heads with important documents - the distrust about looking like a demon lessons bit by bit too. Sure, you get splashed with holy water by bigots once in a while, but that becomes the exception as society integrates all the new species of new people...";

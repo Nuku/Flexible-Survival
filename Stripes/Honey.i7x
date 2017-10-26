@@ -11,7 +11,7 @@ when play begins:
 	add Smashed Hive to badspots of girl;
 
 Instead of resolving a Smashed Hive:
-	if hp of bee girl is 0:
+	if HP of bee girl is 0:
 		say "     As you search through the park, you come across a giant, devastated bee hive. The hive was built around the branches of a large tree and may have been over 15 feet tall when completed intact. Now, broken fragments of it lay scattered around the area and only some of the upper chunks cling to the top branches to give you a scope of its size. Scattered around the sticky rubble are the bodies of numerous bee girl drones, unmoving. Cautiously, you step between the sticky chunks of honeycomb to take a closer look.";
 		say "     As you follow the bear tracks all around the area, you can see that one or even several bears assaulted the hive for the sweet honey. Much of the honeycomb center has been taken away, though you may be able to retrieve some for yourself. As you look around to find a clean section to pick from, you hear a weak buzz from behind you. Turning, you see one of the bee drone's still alive, struggling to get up despite her injuries.";
 		if medkit is owned:
@@ -32,7 +32,7 @@ Instead of resolving a Smashed Hive:
 				say "     Honeycomb x 5 obtained.";
 				increase carried of honeycomb by 5;
 				increase score by 10;
-				now hp of bee girl is 100;
+				now HP of bee girl is 100;
 				now Smashed Hive is resolved;
 		else if healing booster is owned:
 			say "     [bold type]Do you try to help the poor bee girl with a healing booster or do you grab some honey while you can and make a run for it?[roman type][line break]";
@@ -48,15 +48,15 @@ Instead of resolving a Smashed Hive:
 				say "     Honeycomb x 5 obtained.";
 				increase carried of honeycomb by 5;
 				increase score by 10;
-				now hp of bee girl is 100;
+				now HP of bee girl is 100;
 				now Smashed Hive is resolved;
 		else:
 			say "     Feeling there is nothing that you can do for her, and not wanting to risk staying around an enraged bee girl, you grab some chunks of honeycomb and make a break for it.";
 			say "     Honeycomb x 5 obtained.";
 			increase carried of honeycomb by 5;
 			increase score by 10;
-			now hp of bee girl is 100;
-	else if hp of bee girl is 1:
+			now HP of bee girl is 100;
+	else if HP of bee girl is 1:
 		if companion of player is bee girl:
 			say "     Your meandering through the park takes you back to the ruins of the shattered bee hive. The sticky rubble has been picked through since you were last here, the last of the honey having been taken. Even the bodies of the fallen drones are gone - something you don't want to think about too much. Looking down at Honey, who is clutching your side tightly, she could have shared their grisly fate had you not helped her[if scalevalue of player is 1]. As you hug her[else]. As you kneel down to hug her[end if], you notice some bear tracks and dried dribbles of honey heading off into the woods. You might be able to track down one of the bears responsible for this, if you want to. ";
 			say "     [bold type]Shall you try?[roman type][line break]";
@@ -76,7 +76,7 @@ Instead of resolving a Smashed Hive:
 					attempttowait;
 					say "     Following the tracks and snapped branches for a few minutes leads you to a cluster of large boulders. The bear seems to have made its home here, having scattered a few odds and ends around, including a large clay pot labeled as 'hunny'. When the bear lumbers into view, she's stuffing her maw with a pawful of sticky honey from another such crock pot. Her ill-gotten gains have made this one somewhat pudgier than the other bears around, causing her red shirt to stretch tightly over her upper chest, struggling to contain her large bosom.";
 					say "     Seeing you both there, she drops the honey pot in surprise. It smashes to the ground in a sticky mess. 'Oh bother,' she says. 'Look at what you made me do.'  She licks the last of the honey from her sticky paw before balling it into a fist and striding towards you. 'The honey's mine - every last smackerel,' she growls.";
-					now hp of bee girl is 3;
+					now HP of bee girl is 3;
 					challenge "Bear";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "     The bear gives another sad moan of 'Oh bother' as she staggers back. She trips over a log and ends up tumbling end over end and around, coming to a crashing halt as she falls face first between the rocks. Her pudgy body gets stuck in the rocks and, despite her struggles, she cannot pull herself free. Honey laughs and gives the bear's furry brown bottom a hard smack. 'That'll teach you to steal from bees,' she yells at the bear. While this is going on, your eyes are drawn to the bear's big backside and her honeyed slit.";
@@ -93,7 +93,7 @@ Instead of resolving a Smashed Hive:
 						attempttowait;
 						project the figure of QueenBee_icon;
 						say "     The queen is dead. Long live the queen.";
-						now hp of bee girl is 5;
+						now HP of bee girl is 5;
 						increase score by 25;
 						setmonster "Queen Bee";
 						choose row monster from the table of random critters;
@@ -116,21 +116,21 @@ Instead of resolving a Smashed Hive:
 						now lastfuck of bee girl is turns;
 					else if fightoutcome >= 20 and fightoutcome <= 29:
 						say "     Having lost and been used by the large bruin, you stagger back into the woods. Honey rejoins you, taking your hand and helping you back to the old hive. 'I'm glad you were willing to stand up to the bear for me, but I'm just happy you're back safe and sound.'  You nod and take her hand, leaving the ruins of the old hive behind for good.";
-						now hp of bee girl is 4;
+						now HP of bee girl is 4;
 					else:
 						say "     Unwilling or unable to keep fighting, you and Honey make a break for it, running back into the woods. The pudgy bear only gives pursuit briefly before she's tried and panting for breath. She gives an angry roar of warning not to return and heads back to her campsite. You and the bee girl make your way back to the old hive. 'I'm glad you tried standing up to the bear for me. They're really scary, aren't they?'  You nod and take her hand, leaving the ruins of the old hive behind for good.";
-						now hp of bee girl is 4;
+						now HP of bee girl is 4;
 					now Smashed Hive is resolved;
 				else:
 					say "Despite your search, you fail to find that bear. It has to be around here somewhere, but you follow the path in search of traces of where she went, but eventually end up circling back towards the park's main path and give up the search for now.";
 			else:
 				say "     Deciding it'd not be worth the bother to try and track down the bear, you gently guide poor Honey away from the site of her loss. Given how the place has been stripped clean, you resolve not to come back here again to spare her the pain.";
-				now hp of bee girl is 2;
+				now HP of bee girl is 2;
 				now Smashed Hive is resolved;
 		else:
 			say "     Your meandering through the park takes you back to the ruins of the shattered bee hive. The sticky rubble has been picked through since you were first here, the last of the honey having been taken. Even the bodies of the fallen drones are gone - something you don't want to think about too much. Without Honey here with you, there's little point in lingering any longer and you head back into the park.";
 	else:
-		say "ERROR-Honey-[hp of bee girl]E: This event should be closed.";
+		say "ERROR-Honey-[HP of bee girl]E: This event should be closed.";
 		now Smashed Hive is resolved;
 
 
@@ -143,8 +143,8 @@ to say beegirlsaved:
 	increase carried of honeycomb by 2;
 	increase score by 20;
 	now bee girl is tamed;
-	now hp of bee girl is 1;
-	say "     (The bee girl is now tamed! You can make it your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck bee girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+	now HP of bee girl is 1;
+	say "     (The bee girl is now tamed! You can make it your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck bee girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 
 
 Section 2 - Bee Girl Pet
@@ -179,11 +179,11 @@ to say sexwithhoney:
 		say "     You've had some fun with the bee girl quite recently. Perhaps you should give her a break for a little longer?";
 	else if cocks of player is 0 and cunts of player is 0:
 		say "[beesexhoneypot]";
-		if hp of bee girl >= 5, infect "Queen Bee";
+		if HP of bee girl >= 5, infect "Queen Bee";
 		now lastfuck of bee girl is turns;
 	else:
 		let T be a random number between 1 and 5;
-		if hp of bee girl >= 5 and bodyname of player is "Queen Bee" and a random chance of 1 in 3 succeeds:
+		if HP of bee girl >= 5 and bodyname of player is "Queen Bee" and a random chance of 1 in 3 succeeds:
 			say "[beesexqueen]";
 		else if cocks of player > 0:
 			if T is 1 or T is 2:
@@ -199,28 +199,28 @@ to say sexwithhoney:
 				say "[beesexfemale2]";
 			if T is 5:
 				say "[beesexhoneypot]";
-		if hp of bee girl >= 5, infect "Queen Bee";
+		if HP of bee girl >= 5, infect "Queen Bee";
 		now lastfuck of bee girl is turns;
 
 
 to say beesexmale1:
-	say "     Drawn to her by her sweet scent, you take Honey into your arms and run your hands over her body. She buzzes happily and hugs [if hp of bee girl >= 5]her queen[else]you[end if] tightly. Lifting her small body up into your arms, you slide your cock into her warm pussy. Normally hidden under a puff of soft, golden hair, her honeypot is tight and wet around your [cock of player] cock. Her wings buzz excitedly as she bounces in your arms, riding your cock until you finally pump your thick[if hp of bee girl >= 5 and player is queenbeecocked], honeyed[end if] seed into her.";
+	say "     Drawn to her by her sweet scent, you take Honey into your arms and run your hands over her body. She buzzes happily and hugs [if HP of bee girl >= 5]her queen[else]you[end if] tightly. Lifting her small body up into your arms, you slide your cock into her warm pussy. Normally hidden under a puff of soft, golden hair, her honeypot is tight and wet around your [cock of player] cock. Her wings buzz excitedly as she bounces in your arms, riding your cock until you finally pump your thick[if HP of bee girl >= 5 and player is queenbeecocked], honeyed[end if] seed into her.";
 	now libido of player is ( libido of player + 1 ) / 3;
 
 to say beesexmale2:
-	say "     Sensing [if hp of bee girl >= 5]her queen's[else]your[end if] arousal, Honey snuggles up to you and nuzzles your crotch. Her tongue, long and thin, wraps around your shaft and wriggles over it. She takes you into her mouth and starts sucking hungrily while that [if hp of bee girl >= 5]wonderful[else]strange[end if] tongue teases you incessantly. Her upper arms run over your body, stroking and caressing you while her smaller ones cup your balls and knead them until you finally cum. She drinks down your seed, clearly loving the taste and always happy to [if hp of bee girl >= 5]service her queen's needs[else]repay you for your kindness[end if].";
+	say "     Sensing [if HP of bee girl >= 5]her queen's[else]your[end if] arousal, Honey snuggles up to you and nuzzles your crotch. Her tongue, long and thin, wraps around your shaft and wriggles over it. She takes you into her mouth and starts sucking hungrily while that [if HP of bee girl >= 5]wonderful[else]strange[end if] tongue teases you incessantly. Her upper arms run over your body, stroking and caressing you while her smaller ones cup your balls and knead them until you finally cum. She drinks down your seed, clearly loving the taste and always happy to [if HP of bee girl >= 5]service her queen's needs[else]repay you for your kindness[end if].";
 	now libido of player is ( libido of player + 1 ) / 2;
 
 to say beesexfemale1:
-	say "     Sensing [if hp of bee girl >= 5]her queen's[else]your[end if] arousal, Honey snuggles up to you and nuzzles you crotch. Her tongue, long and thin, slides out to tease at your wet pussy. Pressing her lips to your dripping folds, she slides that wriggling tongue down into you, making you moan in delight. Her tongue quite skillfully delves to your very depths to taste your[if hp of bee girl >= 5 and player is queenbeecocked] honeyed[end if] nectar. You cum several times and she happily drinks down your sweet waters until you're both satisfied.";
+	say "     Sensing [if HP of bee girl >= 5]her queen's[else]your[end if] arousal, Honey snuggles up to you and nuzzles you crotch. Her tongue, long and thin, slides out to tease at your wet pussy. Pressing her lips to your dripping folds, she slides that wriggling tongue down into you, making you moan in delight. Her tongue quite skillfully delves to your very depths to taste your[if HP of bee girl >= 5 and player is queenbeecocked] honeyed[end if] nectar. You cum several times and she happily drinks down your sweet waters until you're both satisfied.";
 	now libido of player is ( libido of player + 1 ) / 2;
 
 to say beesexfemale2:
-	say "     The cute bee girl buzzes over to you and snuggles close. As you run your hands through her soft hair and caress her sensitive antennae, she runs the small hand from one of her lower arms across your wet pussy, teasing your sensitive folds. After a little stroking, she slips a finger into you, then another, then the whole of the little hand. The chitin is firm, but flexes and feels very nice stuffed inside your needy cunt. She drives it into you again and again until you orgasm loudly. As you get back on the move, you catch her licking and sucking your [if hp of bee girl >= 5 and player is queenbeecocked] honeyed[end if] juices from her little hand with a grin.";
+	say "     The cute bee girl buzzes over to you and snuggles close. As you run your hands through her soft hair and caress her sensitive antennae, she runs the small hand from one of her lower arms across your wet pussy, teasing your sensitive folds. After a little stroking, she slips a finger into you, then another, then the whole of the little hand. The chitin is firm, but flexes and feels very nice stuffed inside your needy cunt. She drives it into you again and again until you orgasm loudly. As you get back on the move, you catch her licking and sucking your [if HP of bee girl >= 5 and player is queenbeecocked] honeyed[end if] juices from her little hand with a grin.";
 	now libido of player is ( libido of player + 1 ) / 3;
 
 to say beesexhoneypot:
-	say "     The bee girl's antennae twitch, sensing you a moment before you pounce her into a hug. Buzzing playfully, you roll [if hp of bee girl >= 5]your loving drone[else]her[end if] onto her back and bury your face between her legs. You nuzzle at the soft, golden hair covering her pussy and start lapping at her honeypot. And how appropriate that name is for it, for her juices are thick, sweet and rich like honey. Loving her taste, you drive her to several orgasms before finally stopping. She hugs you tightly and uses her long, slender tongue to lick away the sticky honey from your face.";
+	say "     The bee girl's antennae twitch, sensing you a moment before you pounce her into a hug. Buzzing playfully, you roll [if HP of bee girl >= 5]your loving drone[else]her[end if] onto her back and bury your face between her legs. You nuzzle at the soft, golden hair covering her pussy and start lapping at her honeypot. And how appropriate that name is for it, for her juices are thick, sweet and rich like honey. Loving her taste, you drive her to several orgasms before finally stopping. She hugs you tightly and uses her long, slender tongue to lick away the sticky honey from your face.";
 	now libido of player is ( ( libido of player + 1 ) * 2 ) / 3;
 	decrease hunger of player by 6;
 	if hunger of player < 0, now hunger of player is 0;
@@ -242,7 +242,7 @@ to say beesexqueen:
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 
-[ hp of bee girl      ]
+[ HP of bee girl      ]
 [ 0 = not encountered ]
 [ 1 = saved           ]
 [ 2 = leave hive      ]
@@ -258,14 +258,14 @@ when play ends:
 	if bee girl is tamed:
 		if bodyname of player is "Queen Bee":
 			now tempnum is 0; [content in Queen Bee]
-		else if humanity of player is less than 10 and bodyname of player is "Black Equinoid":
+		else if humanity of player < 10 and bodyname of player is "Black Equinoid":
 			now tempnum is 0; [succumb content in black equinoid]
-		else if humanity of player is less than 10 and bodyname of player is "Drone Wasp":
+		else if humanity of player < 10 and bodyname of player is "Drone Wasp":
 			now tempnum is 0; [succumb content in Drone Wasp]
-		else if humanity of player is less than 10:
-			say "     When you succumb and end up giving in to your instincts, Honey ends up leaving you. She buzzes off sadly into the city to find a new hive[if hp of bee girl >= 5] on her own[end if].";
+		else if humanity of player < 10:
+			say "     When you succumb and end up giving in to your instincts, Honey ends up leaving you. She buzzes off sadly into the city to find a new hive[if HP of bee girl >= 5] on her own[end if].";
 		else:
 			say "     When the military comes to rescue you and the other survivors they can find, Honey is able to come with you. Her small, girlish looks and her cute offer of honey from her precious bag wins over the gruff soldiers. As you're heading off, she grins and winks playfully to you, acting like an innocent little girl in front of the soldiers. A sample of the honey is tested just to be safe, but it is clean and non-infectious, as you already know. Honey keeps up her little girl act, claiming to be orphaned (which is true enough), and is released into your custody.";
-			say "     When you set up your new life, Honey takes over a disused shed near your home and starts turning it into a new hive. With the royal jelly she hid at the bottom of her bag, she transforms herself into a new queen and gathers herself some new bee girl drones. Honey, now voluptuous and womanly, is a frequent lover of yours. You spend many a sunny day in her hidden hive with attention lavished on you both by her and her many lovely and lustful drones[if hp of bee girl >= 5]. She never seems to feel sad that you didn't end up remaining her queen, content in her new life as royalty living alongside you[end if].";
+			say "     When you set up your new life, Honey takes over a disused shed near your home and starts turning it into a new hive. With the royal jelly she hid at the bottom of her bag, she transforms herself into a new queen and gathers herself some new bee girl drones. Honey, now voluptuous and womanly, is a frequent lover of yours. You spend many a sunny day in her hidden hive with attention lavished on you both by her and her many lovely and lustful drones[if HP of bee girl >= 5]. She never seems to feel sad that you didn't end up remaining her queen, content in her new life as royalty living alongside you[end if].";
 
 Honey ends here.

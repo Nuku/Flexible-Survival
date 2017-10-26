@@ -23,12 +23,12 @@ the scent of Brooke is "Brooke carries a medley of musky male scents upon him.".
 Section 2 - Conversation
 
 Instead of conversing the Brooke:
-	if hp of Brooke is 0:
-		now hp of Brooke is 1;
-		say "     Working your way over to the dancing otter, you smile at him and try to get a few words in between songs.  'Oh, hey there!  I saw you arrive earlier,' he responds.  'The name's Brooke.  [if hp of Andrew > 1]I couldn't help noticing you and Andrew having fun, too.  [end if][if cocks of player > 0]I was kind of hoping you'd swing by.  I wouldn't mind getting sneaking out back to get to know you a little better[else]I hope you have a good time at the club[end if].'  Since the next song's picking up, your brief introduction comes to an end with a wink from the otter cutey.";
-	else if xp of Brooke is 0:		[***adjust for post sex later]
+	if HP of Brooke is 0:
+		now HP of Brooke is 1;
+		say "     Working your way over to the dancing otter, you smile at him and try to get a few words in between songs.  'Oh, hey there!  I saw you arrive earlier,' he responds.  'The name's Brooke.  [if HP of Andrew > 1]I couldn't help noticing you and Andrew having fun, too.  [end if][if cocks of player > 0]I was kind of hoping you'd swing by.  I wouldn't mind getting sneaking out back to get to know you a little better[else]I hope you have a good time at the club[end if].'  Since the next song's picking up, your brief introduction comes to an end with a wink from the otter cutey.";
+	else if XP of Brooke is 0:		[***adjust for post sex later]
 		if cocks of player > 0:
-			say "     [one of]'Why don't we go make out, hot stuff?'[or][if dexterity of player < 16]'You could use a little practice with your dance moves,' he teases before showing off an energetic routine[else if dexterity of player < 20]'You dance pretty well, hot stuff,' he says, letting his flexible body slide along yours for a moment[else]'You really know how to move that hot bod of yours, don't you?' he says with a smile.  Dancing up alongside you, he lets his flexible body grind against you to the rhythm of the beat[end if].[or][if hp of Andrew is 0]'Have you met Andrew yet?' he asks, motioning to a wolf sitting in one of the private booths.  'He's a friend of mine and I think he'd really like to get to know you better,' he says, letting a paw rub across your groin and giving your manhood a firm squeeze.[else if hp of Andrew is 1 or hp of Andrew is 2]'I noticed you talking to Andrew earlier.  If you two hit it off, perhaps the three of us can have a little fun together.'[else if hp of Andrew > 2]'I couldn't help noticing you and Andrew getting to know each other better,' he says with a wink.  'He's quite a lot of fun.  We could have fun like that too, if you'd like.'[end if][or]'Oh, I love this song,' he says excitedly and throws himself into an energetic dance routine.[or]Showing off, he goes into a frenetic set of dance moves that waves his arms, sways his body and ends with him flashing his rear to you.[or]'You'd be much better off just staying in here with us party animals than taking your chance out in the city.'[or]'Personally, I love the changes that've been made to this place since this all started.  I mean, it was a good club before, but now it's awesome.'[or]'I'm glad everyone's managed to keep this place open.  It's a lot more fun than just hiding while we wait for help.'[in random order]";
+			say "     [one of]'Why don't we go make out, hot stuff?'[or][if dexterity of player < 16]'You could use a little practice with your dance moves,' he teases before showing off an energetic routine[else if dexterity of player < 20]'You dance pretty well, hot stuff,' he says, letting his flexible body slide along yours for a moment[else]'You really know how to move that hot bod of yours, don't you?' he says with a smile.  Dancing up alongside you, he lets his flexible body grind against you to the rhythm of the beat[end if].[or][if HP of Andrew is 0]'Have you met Andrew yet?' he asks, motioning to a wolf sitting in one of the private booths.  'He's a friend of mine and I think he'd really like to get to know you better,' he says, letting a paw rub across your groin and giving your manhood a firm squeeze.[else if HP of Andrew is 1 or HP of Andrew is 2]'I noticed you talking to Andrew earlier.  If you two hit it off, perhaps the three of us can have a little fun together.'[else if HP of Andrew > 2]'I couldn't help noticing you and Andrew getting to know each other better,' he says with a wink.  'He's quite a lot of fun.  We could have fun like that too, if you'd like.'[end if][or]'Oh, I love this song,' he says excitedly and throws himself into an energetic dance routine.[or]Showing off, he goes into a frenetic set of dance moves that waves his arms, sways his body and ends with him flashing his rear to you.[or]'You'd be much better off just staying in here with us party animals than taking your chance out in the city.'[or]'Personally, I love the changes that've been made to this place since this all started.  I mean, it was a good club before, but now it's awesome.'[or]'I'm glad everyone's managed to keep this place open.  It's a lot more fun than just hiding while we wait for help.'[in random order]";
 		else:
 			say "[randomdesc]";
 			say "     [one of]'I'm going to slip off for a bit with this new friend of mine,' he says with a grin, running his paws over the body of a studly male [bodyselector].[or][if dexterity of player < 16]'You could use a little practice with your dance moves,' he teases before showing off an energetic routine of his own[else if dexterity of player < 20]'You dance pretty well,' he says[else]'You really know how to move that hot bod of yours, don't you?' he says with a smile.  Dancing up alongside you, he falls into step with you and you join in[end if].[or]'Oh, I love this song,' he says excitedly and throws himself into an energetic dance routine.[or]Showing off, he goes into a frenetic set of dance moves that waves his arms, sways his body and ends with him flashing his rear to several of the other guys around him.[or]'You'd be much better off just staying in here with us party animals than taking your chance out in the city.'[or]'Personally, I love the changes that've been made to this place since this all started.  I mean, it was a good club before, but now it's awesome.'[or]'I'm glad everyone's managed to keep this place open.  It's a lot more fun than just hiding while we wait for help.'[in random order]";
@@ -54,13 +54,13 @@ to say sexwithBrooke:
 		if name entry is "Sea Otter":
 			now monster is y;
 			break;
-	if hp of Brooke is 0:
+	if HP of Brooke is 0:
 		say "     That's rather forward of you.  You should probably introduce yourself first.";
 	else if cocks of player is 0:
 		say "     'I appreciate the offer, but I'm looking for guys.'";
 	else if lastfuck of Brooke - turns < 6:
 		say "     'Maybe later.  I want to dance for a bit.'";
-	else if hp of Brooke is 1:
+	else if HP of Brooke is 1:
 		say "[brookesex00]";
 		now lastfuck of Brooke is turns;
 		brookeinfect;
@@ -76,12 +76,12 @@ to say sexwithBrooke:
 		now title entry is "Blow job";
 		now sortorder entry is 2;
 		now description entry is "have him suck you off";
-		if hp of Brooke >= 3:
+		if HP of Brooke >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Get fucked";
 			now sortorder entry is 3;
 			now description entry is "take your turn on the receiving end";
-		if hp of Brooke >= 3 and hp of Andrew >= 3 and lastfuck of Andrew - turns >= 6:
+		if HP of Brooke >= 3 and HP of Andrew >= 3 and lastfuck of Andrew - turns >= 6:
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome w/Andrew";
 			now sortorder entry is 9;
@@ -131,7 +131,7 @@ to say brookesex00:		[first time scene]
 		attempttowait;
 		say "     [if level of player < 4]Given what you've seen, you suspect that plenty of others you've seen out there have had their gender swapped around[else]Having seen much out in the city, you know that plenty of those you've met have similarly had their gender jumbled around[end if].  Saying as much, you reassure the otter that you're happy as long as he's happy.  And to further reassure him, you point out that your cock's still buried between those sexy buns of his.";
 		say "     'Mmm... indeed it is.  Does that mean you're looking for another go?' he chirrs with a wiggle of his ass.  His creamy hole gives your [cock of player] cock a squeeze, making you throb.  But just as you're starting to become aroused, Brooke pulls off with a teasing grin.  Turning around, the otter gives you a kiss and strokes your cock with his paw.  'I really appreciate your offer and your understanding, but I could use a break.  Besides, now you're left wanting more and you'll come back for another go at this sexy ass of mine,' he giggles, raising his tail to show off his creamy buns and cum-slick pucker.  And with that, he bounds back out onto the dance floor with the same excited energy as before.";
-		now hp of Brooke is 3;
+		now HP of Brooke is 3;
 	else:
 		say "     The sexy otter bobs his muzzle along your shaft in time to the music while his agile tongue does some very artful tricks[if cockname of player is not listed in infections of internallist].  He rolls your [ball size] around in his palm and sucks down harder, thirsting for their contents[end if].  The otter shows a lot of both enthusiasm and skill as he does his best to drain your balls down his throat.  Given his sexy boytoy body and eagerness, it's clear he's had plenty of practice learning how to best use his new muzzle to satisfy a cock.";
 		say "     And satisfy he does, your [cock size desc of player] penis pulse and throbs against his tongue and palate.  Groaning that you're about to blow, he sucks down all the harder, pushing you over the edge.  As you orgasm, the otter gulps down your [cum load size of player] load while frantically masturbating himself.  Soon he's moaning around your cock as he cums as well, adding fresh splatters of otterseed to the sticky mess on the floor.";
@@ -142,14 +142,14 @@ to say brookesex00:		[first time scene]
 		attempttowait;
 		say "     [if level of player < 4]Given what you've seen, you suspect that plenty of others you've seen out there have had their gender swapped around[else]Having seen much out in the city, you know that plenty of those you've met have similarly had their gender jumbled around[end if].  Saying as much, you reassure the otter that you're happy as long as he's happy.  And to further reassure him, you point out that your stiffy's still rubbing against that sexy muzzle of his.";
 		say "     'Mmm... indeed it is.  Does that mean you're looking for another go?' he chirrs and gives your cock a slow lick.  His lips press to your glans and his tonguetip flicks out to slide over it while he gives your [cock of player] cock a squeeze, making you throb.  But just as you're starting to become aroused, Brooke moves away with a teasing grin.  Getting up, the otter gives you a kiss and strokes your cock with his paw.  'I really appreciate your offer and your understanding, but I could use a break.  Besides, now you're left wanting more and maybe I can get you to take this sexy ass of mine next time,' he giggles, raising his tail to show off his tight buns and pink pucker.  And with that, he bounds back out onto the dance floor with the same excited energy as before.";
-		now hp of Brooke is 2;
+		now HP of Brooke is 2;
 
 
 to say brookesex01:		[Fuck him]
-	say "     Telling him you'd like [if hp of Brooke >= 3]another[else]a[end if] go at that sexy ass of his, you head off with him into the shadowy hallway to fuck.  Eager as well, the otter only gives your cock a quick licking this time before facing the wall and raising his tail.  '[one of]Come on, hot stuff.  Fuck me[or]Come and get it, stud[or]Show me what you've got[in random order],' he purrs.  Moving up behind him, you press your [cock size desc of player] penis between his cheeks and grind against him before getting lined up.  Kissing his neck, you sink your shaft into his tight yet yielding anus to your mutual delight.";
+	say "     Telling him you'd like [if HP of Brooke >= 3]another[else]a[end if] go at that sexy ass of his, you head off with him into the shadowy hallway to fuck.  Eager as well, the otter only gives your cock a quick licking this time before facing the wall and raising his tail.  '[one of]Come on, hot stuff.  Fuck me[or]Come and get it, stud[or]Show me what you've got[in random order],' he purrs.  Moving up behind him, you press your [cock size desc of player] penis between his cheeks and grind against him before getting lined up.  Kissing his neck, you sink your shaft into his tight yet yielding anus to your mutual delight.";
 	say "     [if cock length of player > 24]It takes the sexy otter a few thrusts to adjust to the impressive size of your manhood so he can take it fully, but there is no real difficulty beyond that.  And once in, you start to pound away at him[else]After easily burying your [cock of player] manhood in the sexy otter, you start to pound away at him[end if].  With him moaning for more, you press him hard against the wall and drill your cock into that wiggling butt of his over and over again.  His rocking hips, moving to the music of the club, soon sets the pace of you thrusting in time to the beat.  His anal muscles squeeze and tug at your cock as he rides back into your thrusts harder.";
 	say "     Hearing him moaning and panting over the music gets you all the more excited.  Reaching around, you take his cock in hand and pump it.  Having a good nine inches of ottermeat and a hefty set of balls to go with it, Brooke's transformation's made him into quite the stud.  Stroking his pulsing rod is soon enough to push to lustful lutrine over the top and he groans loudly, cumming hard.  His sticky seed splatters onto the messy wall.  With his ass clamping down around you in orgasm, you only manage a few last thrusts before you're cumming as well.  You empty your [cum load size of player] load into his bowels even as the press of your spurting cock against his prostate forces the last few spurts from him.  By the time you're done, you're both left panting for breath and thoroughly satisfied.  Keeping your cock in him until it goes soft and slips out, you snuggle with the otter.  When you do slip free, the otter cutey gives you a flash of his creamy booty and dances right back onto the dance floor with a contented smile on his face.";
-	if hp of Brooke < 4, increase hp of Brooke by 1;
+	if HP of Brooke < 4, increase HP of Brooke by 1;
 
 
 to say brookesex02:		[Blow job]
@@ -173,7 +173,7 @@ to say brookesex03:		[Get fucked]
 
 to say brookesex04:		[Threesome w/Andrew]
 	say "     When you suggest a threesome with Andrew, the otter grins excitedly.  Grabbing your wrist, he practically drags you over to wolf's personal booth in the corner.  He greets you both casually, though from the growing bulge at his crotch, you can tell he knows what's up and is looking forward to the opportunity.  Putting an arm around each of you, he gives you each a kiss.  Before long though, his paws have instead moved to your crotches and taken hold of your stiffening shafts.  'Shall we have a little fun together, boys?' he says with a fae giggle in his voice.  Brooke smiles eagerly and blushes a bit at the ears and nosetip.  'Oh, so cute as always, Brooke,' Andrew says with a smile, stroking the otter's cheek.";
-	[if xp of Brooke is even]
+	[if XP of Brooke is even]
 	if 1 is 1:
 		say "     'And you,' the wolf adds as he nuzzles you again.  'How about you be the meat in our furry sandwich?'  Not waiting for your answer, he guides you down overtop of Brooke, who's already laying atop the table with his ass in the air.  Guided in by the wolf, your [cock size desc of player] cock slips into the eager otter's sexy ass.  The cute lutrine gives a soft moan and pushes upwards, urging you to mount him fully.  Even as you're sinking into him, Andrew moves in on your ass and pops his lupine cock into your back door.  The feel of his big cock spreading you open causes you to moan and thrust firmly into the otter beneath you.";
 		say "     With the three of you sandwiched together on the table, Andrew starts thrusting away, setting the pace for your threesome.  And with you stuck between the wolf and the otter, you're quickly moaning and panting between the wolf cock stuffing your ass and the feel of the otter's squeezing asshole around your own [cock of player] shaft.  You do your best to hold out, shifting your focus onto stroking the otter's throbbing shaft.  It pulses and throbs between your fingers, drooling precum with every push you're made to drive into him.";
@@ -182,9 +182,9 @@ to say brookesex04:		[Threesome w/Andrew]
 		say "     Between the powerful pounding and his exhibitionist teasing, you end up crying out in lustful release.  You blast shot after shot of rich cum into the otter's ass.  Feeling your seed painting his insides, he pushes his ass up hard one last time and cums himself.  His pulsing rod throbs in your hand, spraying lutrine semen out in sticky bursts.  And just as your climax is waning, you feel the thick bulge of the wolf's knot knocking down your back door.  With a few firm pushes, he ends up tied with you and empties his gooey load into your ass, plumping up your belly a little with his impressive output.";
 		attempttowait;
 		say "     When Andrew flops down atop you, the spectators know the show's over and return to their own activities.  For many of them, aroused by the display, this ends up being some sex of their own.  You're stuck like this between them, the sated wolf and the bliss-filled otter, until that knot goes down.";
-		if xp of Brooke is 0:
+		if XP of Brooke is 0:
 			say "     While waiting, the wolf gives you both some licking kisses.  'Brooke makes for a pretty sexy boytoy, doesn't [']he[']?' Andrew says with a grin.  The otter squirms beneath you, blushing but also grinding back onto your half-hard cock even as he does.  'Oh yes,' the wolf continues.  'I knew sweet Brooke here from before all this started.  And I must say, he's so much happier now, aren't you sweetie?'  The otter can only nod and moan softly, still in a post-orgasmic haze of bliss.";
-	increase xp of Brooke by 1;
+	increase XP of Brooke by 1;
 	now lastfuck of Andrew is turns;
 	andrewinfect;
 
@@ -195,7 +195,7 @@ to brookeinfect:
 	setmonster "Sea Otter";
 	infect "Sea Otter";
 
-[ hp of Brooke                      ]
+[ HP of Brooke                      ]
 [ 0 = Nothing                       ]
 [ 1 = Talked w/him                  ]
 [ 2 = Received oral                 ]

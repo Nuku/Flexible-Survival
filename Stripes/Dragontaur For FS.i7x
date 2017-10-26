@@ -15,7 +15,7 @@ when play begins:
 
 
 to say losetodragontaur:
-	if hp of Sam is 15:
+	if HP of Sam is 15:
 		say "     Sam grabs you roughly and [if scalevalue of player < 4]hefts you over his head. With a growl, he tosses you several yards away[else]pushes you back with a powerful shove[end if]. You land half on and half off a cot, painfully injuring your back.";
 	else:
 		if cunts of player > 0 or ( anallevel is not 1 and a random chance of 2 in 3 succeeds ):
@@ -26,7 +26,7 @@ to say losetodragontaur:
 
 
 to say beatthedragontaur:
-	if hp of Sam is 15:
+	if HP of Sam is 15:
 		say "     You manage to knock Sam down, having beaten the fight out of him.";
 	else if a random number between 1 and 100 < dragontaurcatch and ( cocks of player > 0 or cunts of player > 0):
 		say "     The beaten dragontaur backs away from you, stumbling somewhat from his injuries. Like the others, he prepares to release a blast of flame to allow his escape, but you rush forward and clamp his muzzle shut in an arm lock. He thrashes briefly before exhaling a cloud of smoke as the flames fail. You press him to the ground and pin down his wings.";
@@ -53,7 +53,7 @@ to say beatthedragontaur:
 
 to say dragontaurdesc:
 	setmongender 3; [creature is male]
-	if hp of Sam is 15:	[Fight w/Sam]
+	if HP of Sam is 15:	[Fight w/Sam]
 		say "     Drawn into a fight with Sam, you find yourself facing off against the powerful dragontaur. He has a draconic head with a pointed muzzle filled with sharp teeth and has pointy horns at the back of it. His hands have claws and his feet are taloned. His tail is thick and has a spaded tip. Sam's hide is covered in thick, hard scales as well. Both armed and armoured, the dragontaur is a dangerous enemy.";
 	else:			[Random Dragontaur]
 		say "     Before you is a draconic taur creature, definitely one of Sam's many descendants. The creature's draconic head has a long, pointed muzzle with a slight curve at the end. Its blue scales darken towards the back of its head as they approach the base of the ivory horns which jut from the back of its head. Aside from the large pair at the top, there are three smaller horns on each side. Its upper body is generally human in shape, but covered in azure scales and is quite toned, showing firm pecs and hard abs under the dense scales.";
@@ -63,7 +63,7 @@ to say dragontaurdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -90,7 +90,7 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 12;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 99; [ The monster's starting hit points. ]
+	now HP entry is 99; [ The monster's starting HP. ]
 	now lev entry is 11; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 10; [ Monster's average damage when attacking. ]
 	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -132,12 +132,12 @@ this is the drtaurpounce rule:		[double-damage pouncing]
 	say "The [one of][name entry][or]draconid[or]dragontaur[or]dragon creature[purely at random] growls and pounces atop you, [one of]knocking[or]pushing[or]slamming[purely at random] you down briefly. Its many talons claw at you while the dragon roars. This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield while pinned]
-	if absorb is greater than dam:
+	if absorb > dam:
 		now absorb is dam;
-	if absorb is greater than 0:
+	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease hp of the player by dam;
-	increase hp of player by absorb;
+	decrease HP of the player by dam;
+	increase HP of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 
@@ -146,8 +146,8 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Dragontaur":
-		if humanity of player is less than 10:
-			if hp of Sam >= 10 and hp of Sam <= 29:
+		if humanity of player < 10:
+			if HP of Sam >= 10 and HP of Sam <= 29:
 				if cunts of player > 0 and cocks of player > 0:
 					say "     As you lose your humanity to your increasingly dragontaur nature, you feel your lustful drive to breed grow stronger. You and Sam pair up as a couple of increasingly feral dragontaurs. While Sam does maintain more of his old self than you do in the end, he's more than happy to stay in the city and turn the bunker into his personal lair. He breeds you often, filling you plump with dragontaur eggs most of the time. You do make forays with him out into the city as well, siring plenty of offspring of your own in the many sexy females and herms you find out there. With you both breeding strong, draconic offspring, the numbers of dragontaurs in the area quickly grow.";
 				else if cunts of player > 0:
@@ -156,9 +156,9 @@ when play ends:
 					say "     As you lose your humanity to your increasingly dragontaur nature, you feel your lustful drive to breed grow stronger. You and Sam pair up as a team of increasingly feral dragontaurs. While Sam does maintain more of his old self than you do in the end, he's more than happy to stay in the city and turn the bunker into his personal lair. You often make forays with him out into the city, siring plenty of offspring of your own in the many sexy females and herms you both find out there. With you both breeding strong, draconic offspring, the numbers of dragontaurs in the area quickly grow.";
 				else:
 					say "     As you lose your humanity to your increasingly dragontaur nature, you feel your lustful drive to breed grow stronger. You and Sam pair up as increasingly feral dragontaurs. While Sam does maintain more of his old self than you do in the end, he's more than happy to stay in the city and turn the bunker into his personal lair. Lacking any defined gender of your own, you often act at the guardian to the dragontaur's lair. You also enjoy the role of servicing the powerful male, particularly enjoying to lick him clean after returning from an expedition into the city to breed the females he finds out there. With the virile dragontaur's efforts out there, the number of his draconic progeny grow steadily.";
-			else if hp of Sam >= 30 and hp of Sam <= 49:
+			else if HP of Sam >= 30 and HP of Sam <= 49:
 				say "***Succumb w/Sam as Vixentaur. Should not be possible.";
-			else if hp of Sam >= 50 and hp of Sam <= 69:
+			else if HP of Sam >= 50 and HP of Sam <= 69:
 				if cunts of player > 0 and cocks of player > 0:
 					say "     As you lose your humanity to your increasingly dragontaur nature, you feel your lustful drive to breed grows stronger. You and Sam pair up as a couple of increasingly feral, herm taurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the bunker into her personal lair. You breed with the dracovixentaur often, swapping roles as top or bottom to ensure you're both well bred. You do make forays with her out into the city often, siring plenty of offspring of your own in the many sexy females and herms you find out there. While Sam's offspring are a collection of dragontaurs, vixentaurs and dracovixentaurs, the number of dragontaurs in the area grow to be the most frequent of the three.";
 				else if cunts of player > 0:
@@ -167,20 +167,20 @@ when play ends:
 					say "     As you lose your humanity to your increasingly dragontaur nature, you feel your lustful drive to breed grows stronger. You and Sam pair up as a couple of increasingly feral taurs. While Sam does maintain more of his old self than you do in the end, she's more than happy to stay in the city and turn the bunker into her personal lair. She allows you to mount her and breed her often, keeping her heavy with eggs most of the time. You do make forays with her out into the city often, enjoying mounting and breeding many of the females you find with her. While Sam's offspring are a collection of dragontaurs, vixentaurs and dracovixentaurs, the number of dragontaurs in the area grow to be the most frequent of the three.";
 				else:
 					say "     As you lose your humanity to your increasingly dragontaur nature, you feel your lustful drive to breed grows stronger. You and Sam pair up as increasingly feral taurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the bunker into her personal lair. Lacking any defined gender of your own, you often act at the guardian to the dracovixen's lair. You also enjoy the role of servicing the powerful herm, particularly enjoying to lick her clean after returning from an expedition into the city, sucking her cock or licking the leaking cum from her well-used pussy. While Sam's offspring are a collection of dragontaurs, vixentaurs and dracovixentaurs, the number of dragontaurs in the area grow to be the most frequent of the three.";
-			else if hp of Sam is 98:
+			else if HP of Sam is 98:
 				say "     Shortly after you lose your humanity, you are found by Sam the Dragontaur, who takes you in to be his personal sex toy. He greatly enjoys using you to satisfy his sexual desires. His throbbing dragonhood is pounded into you until you're nothing but an obedient slut for dragon cock. He'll share you often with his offspring or take you with him on his forays into the city, offering you up as a plaything for any creature he desires. He barters the use of your mouth[if cocks of player > 0], cock[end if][if cunts of player > 0], cunt[end if] or ass at times to bribe a potential new lover on occasion. A duty you're more than happy to perform. With the virile dragontaur's efforts out there, the number of his draconic progeny grow steadily.";
 		else:
-			if hp of Sam >= 10 and hp of Sam <= 29:
-				say "     You are able, through the strong connection Sam shares with you, to convince the dragontaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in his time in the city, [if hospquest is 13 and hp of doctor matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of his rather enthusiastic work.";
+			if HP of Sam >= 10 and HP of Sam <= 29:
+				say "     You are able, through the strong connection Sam shares with you, to convince the dragontaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in his time in the city, [if hospquest is 13 and HP of doctor matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of his rather enthusiastic work.";
 				say "     You and Sam continue his work, entering other infected hot spots to collect samples and classify the creatures within, all while getting to enjoy their myriad variety. Your collective strength and experience make you able to deal with most anything you find while exploring. And if clutches of dragontaurs start popping up in those areas as well, then all the better[if cunts of player > 0]. As Sam's mate, you lay several clutches of dragon eggs as well, helping the spread of the strong, dominant dragontaurs wherever you go[end if].";
-			else if hp of Sam >= 30 and hp of Sam <= 49:
+			else if HP of Sam >= 30 and HP of Sam <= 49:
 				say "***Survive w/Sam as Vixentaur. Should not be possible.";
-				say "     You are able, through the strong connection Sam shares with you, to convince the vixentaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in her time in the city, [if hospquest is 13 and hp of doctor matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of her rather enthusiastic work.";
+				say "     You are able, through the strong connection Sam shares with you, to convince the vixentaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in her time in the city, [if hospquest is 13 and HP of doctor matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of her rather enthusiastic work.";
 				say "     You and Sam continue her work, entering other infected hot spots to collect samples and classify the creatures within, all while getting to enjoy their myriad variety. Your collective strength and experience make you able to deal with most anything you find while exploring. And if clutches of dragontaurs and litters of vixentaurs start popping up in those areas as well, then all the better[if cocks of player > 0]. As Sam's mate, you enjoy siring several clutches and litters in her as well, helping the spread of the strong dragontaurs and sexy vixentaurs wherever you go[end if].";
-			else if hp of Sam >= 50 and hp of Sam <= 69:
-				say "     You are able, through the strong connection Sam shares with you, to convince the dracovixentaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in her time in the city, [if hospquest is 13 and hp of doctor matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of her rather enthusiastic work.";
+			else if HP of Sam >= 50 and HP of Sam <= 69:
+				say "     You are able, through the strong connection Sam shares with you, to convince the dracovixentaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in her time in the city, [if hospquest is 13 and HP of doctor matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of her rather enthusiastic work.";
 				say "     You and Sam continue her work, entering other infected hot spots to collect samples and classify the creatures within, all while getting to enjoy their myriad variety. Your collective strength and experience make you able to deal with most anything you find while exploring. And if clutches of dragontaurs, litters of vixentaurs and broods of dracovixentaurs start popping up in those areas as well, then all the better[if cocks of player > 0 and cunts of player > 0]. As Sam's mate, you enjoy siring several offspring in her as well as having her breed you with them, helping the spread of the strong dragontaurs, sexy vixentaurs and herm dracovixentaurs wherever you go[else if cocks of player > 0]. As Sam's mate, you enjoy siring several clutches and litters in her as well, helping the spread of the strong dragontaurs, sexy vixentaurs and herm dracovixentaurs wherever you go[else if cunts of player > 0]. As Sam's mate, you enjoy getting bred with many of her offspring as well, helping the spread of the strong dragontaurs, sexy vixentaurs and herm dracovixentaurs wherever you go[end if].";
-			else if hp of Sam is 98:
+			else if HP of Sam is 98:
 				say "     When the military arrive to rescue you and the others, you feel somewhat disappointed about not being able to patch things up with Sam, but hope he's enjoying his new life out in the city. There is considerable interest over your new form and you are subject to a battery of tests by the military scientists before finally being released. You visit the university which sponsored Sam's work upon you're release, informing them (in general terms) what happened to their researchers and of the loss of their data. They provide you with a reward for this information. It is unfortunately quite small[if cocks of player > 0], but the human secretary your seduced and banged while there more than makes it worth your time. Being unprepared for the virility of those transformed, she's left bred full of dragontaurs[else], but is enough to make it worth your time[end if].";
 				say "     Being a strong and impressive creature, you find work as hired muscle in several capacities. And while some of these tasks may be a little shady, your intimidating physique keeps you from getting into too much trouble (except when you want to make some of your own). It also allows you to impress or dominate many a prospective lover into sex with you[if cocks of player > 0], breeding many a clutch of whelps in your wake[else if cunts of player > 0], bearing many a clutch of eggs which you leave to hatch and spread in your wake[end if] as you travel the countryside.";
 

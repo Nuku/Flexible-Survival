@@ -121,7 +121,7 @@ to say corruptedvicdesc:
 
 
 to say losetocorruptedvic:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Unwilling to continue fighting this poor victim of the infection, you stop resisting and simply allow her to throw herself upon you. She moans happily and runs her hands over your body as she pushes you to the floor. ";
 	else:
 		say "     You try to resist the infected woman, but are worn down by her wild advances until you finally relent and are knocked to the ground. ";
@@ -139,7 +139,7 @@ to say beatthecorruptedvic:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -166,7 +166,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 16;
 	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 32; [ The monster's starting hit points. ]
+	now HP entry is 32; [ The monster's starting HP. ]
 	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
 	now area entry is "Sealed"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -196,7 +196,7 @@ Section 3 - Endings
 [
 when play ends:
 	if bodyname of player is "Corrupted Spawner":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";

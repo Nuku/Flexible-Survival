@@ -13,7 +13,7 @@ when play begins:
 
 
 to say Greek Nymph attack:
-	if cocks of player is greater than 0:
+	if cocks of player > 0:
 		say "     With one last blow, the nymph knocks you to the ground, dazed. 'Yay that was fun!' The beautiful young woman cries out, clapping her hands at her victory, 'I won! I won! Now we get to play a new game!' the nymph says as she eyes your prone form, making you nervous. Her eyes fix on your cock, which is already partially erect due to her naked state, 'And I know what I want to play with!' she adds as she lowers her hand to tease your cock. The feel of her soft hands on your cock has you lying back on the floor with a groan as she slowly runs her hands all over it. 'Mmm I just love your [cock of player] cock, it looks like fun, we should try it out,' the nymph says with a moan of her own, as she positions herself above you.";
 		say "     You can't even put up a token protest as she slides herself onto your member, her warm wetness engulfing your cock causing you to shudder in pleasure. Soon she is lifting herself up and down on you, giggling as you writhe underneath her, her long legs rubbing along your sides as they lift her, and her hands playing over your chest. Before you know it, you are lost in the sensations of the moment and all thoughts of the future fly out of your mind as you bring your hips up to meet her each time, loving the feel of penetrating her again and again. Your hands go to her hips as you begin to move in sync, and the nymph rubs her silken soft skin over your body, laughing and whispering happy little words as she rides you. After what seems like forever of her teasing touches and warmth, and yet seems far far too soon, you find yourself exploding into her, making her moan as she orgasms with you. Shuddering you lie there on the cool floor, as she giggles and pulls herself off your spent cock. 'Not as much endurance as a real satyr,' the nymph says as she pats you on the head sadly, 'But I'm sure you'll get there eventually, you should work on that for next time we play together ok?' The nymph says with a perky smile, before sauntering happily off down the hall, giving you an excellent view of her nice ass, and making you think eagerly about the promised [']next time[']";
 		if guy is not banned, infect "Satyr";
@@ -39,7 +39,7 @@ To say Greek Nymph loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -66,8 +66,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 20;
 	now sex entry is "Female";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 40;
-	now lev entry is 6;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 40;
+	now lev entry is 6;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 9;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Museum";  [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 0;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -93,7 +93,7 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Greek Nymph":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "Surrendering to your nymph-like desires, you laugh as you run back towards the museum, somehow knowing you will find the rest of your sisters there, and the always wonderful to tease satyrs. Reaching the large museum halls you join your sisters happily dancing and playing the days away, at some point some people try to come and 'rescue' you. Being happy enough as is, you let them men among them come 'rescue' you from your temporary boredom, laughing as they join the satyrs in their revels, and you eagerly help the women amongst them who are envious of their beauty, find the inner nymph within themselves. Soon most of the visitors stop coming, and you hear this military thing has set up some kind of cordon to keep people out, still occasionally new people slip inside, drawn by the lure of endless joy and pleasure, and you and your sisters welcome them with open arms. Sometimes you think about heading outside and spreading joy and fun to the people out there, but are unable to work up the motivation to do so... perhaps one of these days though you will help the world embrace a life of endless joy and pleasure... until then you are too busy living that life yourself...";
 		else:
 			say "Rescued by the military, you can't help but giggle in amusement as they fail to realize you are infected at all, too busy admiring your perfect nymph-like form to think to check. Left to your own devices afterwards, you wander around mostly aimlessly, men falling over themselves to buy you food or places to stay for the night, you really have no reason to bother working. Eventually though, attracted by tales of your beauty a woman tracks you down and asks you to come model cosmetics for her, since it sounds amusing you go along with her idea, and quickly become one of the companies best models. Some of the other models get slightly jealous, until you all go on a shoot together, and intrigued by the idea of having some new sisters to play with, you spend plenty of time with the other models. To your surprise they too take on a slightly nymph-like appearance and attitude, and you happily model different cosmetics with your new sisters. Eventually the company starts poking and prodding you and your sisters to try to figure out the secret of your beauty, with plans at some point for a new Greek Nymph line of products once they manage to duplicate it. The very idea makes you giggle at the thought of all the new sisters and all the fun you can have together if it works!";

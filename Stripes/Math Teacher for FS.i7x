@@ -90,7 +90,7 @@ to say mathteachsex2:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -117,8 +117,8 @@ When Play begins:
 	now int entry is 18;
 	now cha entry is 14;
 	now sex entry is "Both";
-	now hp entry is 42; [ How many HP has the monster got?]
-	now lev entry is 7; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose]
+	now HP entry is 42; [ How many HP has the monster got?]
+	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you lose]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
 	now area entry is "Campus";
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']

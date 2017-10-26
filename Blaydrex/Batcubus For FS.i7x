@@ -48,7 +48,7 @@ to say beatthebatcubus:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -76,8 +76,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Female";          [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 49;                 [ How many HP has the monster got? ]
-	now lev entry is 6;                 [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 49;                 [ How many HP has the monster got? ]
+	now lev entry is 6;                 [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 6;               [ Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse";        [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -128,9 +128,9 @@ When play ends:
 			say "You search the city looking for males to impregnate you and anybody to kiss, your cunt always dripping, ready to be fucked at any time. Sometimes thoughts of your past return, but a single lick of your lips quickly sends your lust soaring and you can't help but forget again and go look for relief you so desperately need.";
 		else:
 			say "Life as a batcubus proves fun. Every time you find someone you enjoy all you have to do is kiss them and they are putty in your hands. Thanks to this you have a good life, letting you have everything you want, never needing to work a day in your life";
-			if cocks of player is greater than 0 and cunts of player is greater than 0:
+			if cocks of player > 0 and cunts of player > 0:
 				say "You spend your days fighting the urge to lick your lips. Being one gender or the other would allow you to instinctively lick them safely, but the combined lust of your female and male sex organs would be too much. A single lick could send you into a sexual fury. Last time it happened you tried to turn a whole town into batcubuses. Hopefully one day someone can find out how to get this lipstick off you.";
-			else if cocks of player is greater than 0:
+			else if cocks of player > 0:
 				say "You find that having a cock isn't as fun as having a slavering cunt like most other batcubuses, but you make do. Your cock is insatiable, no matter how much you cum and fuck. One day you find a tigress hooker, who takes an interest in you. Shi wastes no time in raping you and dominating you until you submit to hir. Shi claims you as hir own and shi is actually able to keep up with your sex drive, so it works out. You spend the rest of your days happily mated to hir.";
 			else:
 				say "...";

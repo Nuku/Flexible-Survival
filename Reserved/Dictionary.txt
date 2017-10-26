@@ -734,7 +734,7 @@
 |Stripes|Alt Combat|skipretaliate|value|
 |Stripes|Alt Combat|avoidance|value|
 |Stripes|Alt Combat|gascloud|value|
-|Stripes|Alt Combat|monsterhp|value|
+|Stripes|Alt Combat|monsterHP|value|
 |Stripes|Alt Combat|monsterpowerup|value|
 |Stripes|Alt Combat|missskip|value|
 |Stripes|Alt Combat|monsterhit|value|
@@ -2550,8 +2550,8 @@
 |Stripes|Siamese Cats|20140908213124/7420:Mon 8 September 2014 21:31|indexing|
 |Stripes|Siamese Cats|Siamgender|thing|
 |Stripes|Siamese Cats|siamesegender|value|
-|Stripes|Siamese Cats|malecathp|value|
-|Stripes|Siamese Cats|femalecathp|value|
+|Stripes|Siamese Cats|malecatHP|value|
+|Stripes|Siamese Cats|femalecatHP|value|
 |Stripes|Albino Mouse|20140908213124/1342:Mon 8 September 2014 21:31|indexing|
 |Stripes|Cat Ninjas|20140908213124/3791:Mon 8 September 2014 21:31|indexing|
 |Stripes|Flaming Lynx For Fs|20140908213124/4824:Mon 8 September 2014 21:31|indexing|

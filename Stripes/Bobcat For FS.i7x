@@ -25,15 +25,15 @@ to say bobcatdesc:
 Section 2 - Monster Victory
 
 to say losetobobcat:
-	say "     [if hp of player > 0]Rather than keep fighting, you allow the latex-covered feline to push you to the ground beneath it[else]Unable to keep fighting, the latex-covered feline manages to push you to the ground beneath it[end if]. It's motor gives a happy, purr-like rumble as it runs its smoothly padded paws over your body. After shedding your gear, it looks you over one last time before ";
+	say "     [if HP of player > 0]Rather than keep fighting, you allow the latex-covered feline to push you to the ground beneath it[else]Unable to keep fighting, the latex-covered feline manages to push you to the ground beneath it[end if]. It's motor gives a happy, purr-like rumble as it runs its smoothly padded paws over your body. After shedding your gear, it looks you over one last time before ";
 	if cunts of player > 0 and ( anallevel is not 3 or a random chance of 3 in 4 succeeds ):
-		say "getting you on your back and moving atop you. The vibrating dildo at its crotch slides across your pussy, the sensation getting you wet[if hp of player <= 0] despite yourself[end if] and a small moan escapes your lips.";
-		say "     Your moan only grows louder as the bobcat pushes that rumbling shaft into your cunt. Your hips raise up and tremble a little at the delight his manhood gives[if cunt length of player > 15] despite its comparatively small size[end if][if hp of player > 0]. You grab onto the sexbot's hips, urging to fuck you, which it readily responds by doing[else]. You try to push the sexbot's hips away, but it has no trouble continuing in its task to fuck you[end if]. As the sextoy creature picks up the pace and intensifies its vibrator functions, your [if hp of player > 0]attempts to think are[else]desire to resist is[end if] driven from your mind as the delight the sex toy provides overwhelms you.";
+		say "getting you on your back and moving atop you. The vibrating dildo at its crotch slides across your pussy, the sensation getting you wet[if HP of player <= 0] despite yourself[end if] and a small moan escapes your lips.";
+		say "     Your moan only grows louder as the bobcat pushes that rumbling shaft into your cunt. Your hips raise up and tremble a little at the delight his manhood gives[if cunt length of player > 15] despite its comparatively small size[end if][if HP of player > 0]. You grab onto the sexbot's hips, urging to fuck you, which it readily responds by doing[else]. You try to push the sexbot's hips away, but it has no trouble continuing in its task to fuck you[end if]. As the sextoy creature picks up the pace and intensifies its vibrator functions, your [if HP of player > 0]attempts to think are[else]desire to resist is[end if] driven from your mind as the delight the sex toy provides overwhelms you.";
 		WaitLineBreak;
 		say "     The sextoy creature seems like an ideal lover, adjusting the pace, depth and strength of its thrusts to suit your needs through a long and eventually satisfying lovemaking session. It also tweaks the speed and intensity of its rumbling dildo often, raising or lowering them as needed to provide you with the most delight and to build you up to a powerful orgasm. And when you do climax, it is a powerful one that has you crying out while your hips grind up onto that thrusting vibe. Only when you cum does it trigger its own, pumping a hot rush of latex semen into your quivering cunt. And once you're sated, the creature quietly pulls out and sanitizes itself while you bask in the blissful haze of the afterglow.[fimpregchance]";
 	else:
-		say "moving you onto all fours and getting behind you. The vibrating dildo at his crotch slides between your cheeks as the more lube leaks from its tip. Knowing [if hp of player > 0]what's desired of you, you[else]what's coming, you reluctantly[end if] raise your hips further.";
-		say "     The bobcat starts slowly, easing its rumbling shaft into your tight asshole. The lube and the vibration certainly help, but the sextoy creature seems to know just how much to move and when. The process is largely a pleasant one as your body rapidly adjusts to the intruder. As it goes on, it starts to feel better and better, your body responding to getting butt-fucked with increasing arousal[if hp of player <= 0] despite your attempts to resist at first[end if]. Soon you're moaning and panting as the sexbot's latex cock buggers your increasingly needy ass. As the bobcat picks up the pace and intensifies its vibrator functions, your [if hp of player > 0]attempts to think are[else]desire to resist is[end if] driven from your mind as the delight this walking sex toy provides overwhelms you.";
+		say "moving you onto all fours and getting behind you. The vibrating dildo at his crotch slides between your cheeks as the more lube leaks from its tip. Knowing [if HP of player > 0]what's desired of you, you[else]what's coming, you reluctantly[end if] raise your hips further.";
+		say "     The bobcat starts slowly, easing its rumbling shaft into your tight asshole. The lube and the vibration certainly help, but the sextoy creature seems to know just how much to move and when. The process is largely a pleasant one as your body rapidly adjusts to the intruder. As it goes on, it starts to feel better and better, your body responding to getting butt-fucked with increasing arousal[if HP of player <= 0] despite your attempts to resist at first[end if]. Soon you're moaning and panting as the sexbot's latex cock buggers your increasingly needy ass. As the bobcat picks up the pace and intensifies its vibrator functions, your [if HP of player > 0]attempts to think are[else]desire to resist is[end if] driven from your mind as the delight this walking sex toy provides overwhelms you.";
 		WaitLineBreak;
 		say "     The sextoy creature seems like an ideal lover, adjusting the pace, depth and strength of its thrusts to suit your needs through a long and eventually satisfying ass-fucking session. It also tweaks the speed and intensity of its rumbling dildo often, raising or lowering them as needed to provide you with the most delight and to build you up to a powerful orgasm. And when you do climax, it is a powerful one that has you crying out while you push your ass back onto that thrusting vibe. Only when you cum does it trigger its own, pumping a hot rush of latex semen into your clenching asshole. And once you're sated, the creature quietly pulls out and sanitizes itself while you bask in the blissful haze of the afterglow.[mimpregchance]";
 
@@ -112,7 +112,7 @@ to say bobcat_pvsex03:
 Section 4 - Monster Stats and Infection Data
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -139,7 +139,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 14;
 	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 32; [ The monster's starting hit points. ]
+	now HP entry is 32; [ The monster's starting HP. ]
 	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 7; [ Monster's average damage when attacking. ]
 	now area entry is "Red"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -342,7 +342,7 @@ Section 6 - Endings
 
 when play ends:
 	if bodyname of player is "Bobcat":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if player is pure:
 				project Figure of Bobcat2_icon;
 			say "     After the last vestiges of your humanity fade away, your altered mind comes to a realization - this body of yours is built for sex and pleasure and you should enjoy it. And let others enjoy it as well. You wander, a bit aimlessly at first, but end up drifting to the red light district of town. There you roam, at first offering the services of your body to random creatures to sate their lusts, and then later to the incoming soldiers scouting the city.";

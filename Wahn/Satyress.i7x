@@ -127,12 +127,12 @@ to say SatyressFuck4:
 
 to say SatyressDesc:
 	setmongender 4;
-	say "     You hear the light clatter of hooves on the sidewalk behind you and on turning around see a young woman walk up towards you on goat-like legs. Indeed her whole lower body appears to be that of a goat and she has two small curved horns protruding from his forehead. The rest of her body is fully human, and fully female too, which you get quite an eyeful of as she doesn't wear clothing. Smooth pale skin compliments her blond hair exceedingly well, her perky breasts are a sight to behold and surrounded by the blond curls of her leg-fur, the college student even shows off her pussy to anyone wanting to take a look. After your time spent in the Phi Alpha Nu frat-house, you have no problem recognizing her as a satyr. And a horny, slightly drunk one at that - she carries a red plastic cup full of sloshing liquid and has an aroused gleam in her eyes. '[one of]Hey there! Care for a bit of wine?[or]Hey come join the party![or]You look like you need to lighten up![at random]' she says, dancing forward nimbly on his goat-like hooves. Doesn't seem like she wants to listen to anything you might have to say, as she's got her eyes on your body the whole time.";
+	say "     You hear the light clatter of hooves on the sidewalk behind you and on turning around see a young woman walk up towards you on goat-like legs. Indeed her whole lower body appears to be that of a goat and she has two small curved horns protruding from his forehead. The rest of her body is fully human, and fully female too, which you get quite an eyeful of as she doesn't wear clothing. Smooth pale skin complements her blond hair exceedingly well, her perky breasts are a sight to behold and surrounded by the blond curls of her leg-fur, the college student even shows off her pussy to anyone wanting to take a look. After your time spent in the Phi Alpha Nu frat-house, you have no problem recognizing her as a satyr. And a horny, slightly drunk one at that - she carries a red plastic cup full of sloshing liquid and has an aroused gleam in her eyes. '[one of]Hey there! Care for a bit of wine?[or]Hey come join the party![or]You look like you need to lighten up![at random]' she says, dancing forward nimbly on his goat-like hooves. Doesn't seem like she wants to listen to anything you might have to say, as she's got her eyes on your body the whole time.";
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -159,8 +159,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 22;
 	now sex entry is "Female";            [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 25;                   [ How many HP has the monster got? ]
-	now lev entry is 2;                   [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 25;                   [ How many HP has the monster got? ]
+	now lev entry is 2;                   [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5;                  [ Amount of Damage monster Does when attacking.]
 	now area entry is "Nowhere";          [ Case sensitive]
 	now cocks entry is 0;                 [ number of cocks if sex is 'Male' or 'Both' ]
@@ -201,7 +201,7 @@ instead of sniffing Satyress Wine:
 
 when play ends:
 	if bodyname of player is "Satyress":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Finally giving in to your base desires, you make your way back to the college campus where you know there is a party going on. Running into several students, male and female, you entice them to come with you and soon arrive at the Phi Alpha Nu frat-house with a small entourage. Bringing more fun to the party, you're eagerly welcomes by Kerr and Talov, the two satyr bartenders. As you join the revels, with alcohol flowing freely and sex just a question away, time loses most of its meaning for you. Days and nights are danced away, but as neither you nor the satyrs and nymphs around you ever seem to get any older, who cares?";
 			say "     At one point several people with guns come around to try to get you to leave, but as they don't have any booze of their own, you helpfully offer them some of yours, and soon enough they come around to your way of thinking as they join the party. Strangely enough, the rest of them seem to avoid your party after that, one could almost think they didn't know how to have fun, not that you could really bring yourself to care through the happy fog of alcohol and sex that you pass the carefree days in.";
 		else:

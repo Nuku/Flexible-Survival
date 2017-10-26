@@ -57,7 +57,7 @@ to say bopvictorysex1:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -84,8 +84,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 18;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 45; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 9; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 45; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 9; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -153,14 +153,14 @@ this is the bopsong rule:
 		if facename of player is listed in Infections of Avianlist:
 			increase libido of player by a random number between 0 and 2;
 		say "[if bodyname of player is listed in infections of Avianlist or facename of player is listed in infections of Avianlist]Your avian nature is particularly captivated by the exotically captivating [one of]bird[or]female[at random] before you and you start to sing back to her, starting to move in time with her dancing[else]Unable to look away from the [one of]sexy[or]exotic[or]alluring[or]vibrant[or]colourful[at random] [one of]bird woman[or]avian[or]bird of paradise[purely at random]'s sensual and erotic motions, your feel an increasing need to [one of]be with her[or]join in her dance[or]stop and listen to her song[or]simply enjoy the musical song[purely at random][end if]. The entire display drains some of your resistance, arousing you further and tempting you to give in and join in the bird's mating dance! You take [special-style-2][dam][roman type] damage!";
-		decrease hp of the player by dam;
+		decrease HP of the player by dam;
 		follow the player injury rule;
-		say "You are [descr][if hp of player > 0 and libido of player < 110] and it takes an effort of will to refocus your mind and break your gaze away from those deep eyes of hers[end if].";
+		say "You are [descr][if HP of player > 0 and libido of player < 110] and it takes an effort of will to refocus your mind and break your gaze away from those deep eyes of hers[end if].";
 		now peppereyes is 0; [pepperspray wears off]
-		if hp of the player is greater than 0 and libido of player < 110:
+		if HP of the player > 0 and libido of player < 110:
 			wait for any key;
 		else:
-			if hp of player <= 0, now fightoutcome is 20;
+			if HP of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
 			Lose;
 		rule succeeds;
@@ -193,7 +193,7 @@ Section 5 - Endings
 [
 when play ends:
 	if bodyname of player is "Template":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";

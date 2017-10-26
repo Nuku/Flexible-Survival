@@ -31,7 +31,7 @@ Instead of resolving a Save the Dame:
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
-			if diceroll is greater than 10:
+			if diceroll > 10:
 				say "Calmly telling the firefighter that you are not interested in mounting her, or anything else like that, you watch carefully as the wooden weapon is removed from the end of your muzzle and then put aside. 'Alright, now I'm interested. I didn't know one of you things could actually talk. So who you are and why did you just save me?' Telling the female firefighter your name and then letting her know that you saved her because [one of]it was the right thing to do[or]you couldn't just stood by and do nothing while she was being attacked[or]she's just too beautiful to get turned into another chocolate laced bitch[at random] you can only chuckle as the other rolls her eyes at you in resigned annoyance.";
 				WaitLineBreak;
 				say "'Oh great. A mutant dog with charm.' The woman chuckles and you snort right back at her. 'Now, seriously, what did you save me for,' When she waves her bat in front of your nose you go cross eyed as you look at the floating weapon. 'and this time, no bullshit.' Telling the other the truth, and that you are looking for her and the other missing firefighters from station 86 you watch as the woman's eyes widen and then narrow at you all of a sudden.";

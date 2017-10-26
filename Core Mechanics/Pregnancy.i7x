@@ -67,7 +67,7 @@ Definition: A person (called x) is fem_vacant: [Disregarding fertility, is the p
 [Male/Anal-particular]
 Definition: A person (called x) is mpreg_ok: [Can the player become pregnant in general. Male]
 	if "Sterile" is listed in feats of player, no;
-	if "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ), yes;
+	if "MPreg" is listed in feats of player and ( level of Velos is not 1 or HP of Velos < 3 ), yes;
 	no;
 
 Definition: A person (called x) is mpreg_able: [Can the player be impregnated RIGHT NOW. Male]
@@ -106,7 +106,7 @@ to pregprotocol:
 		else if ebgatorhijack > 0:
 			ebgatorhijackroutine;
 	if player is impreg_now:
-		if child is not born and gestation of child is greater than 0:
+		if child is not born and gestation of child > 0:
 			decrease gestation of child by 1;
 			if "Fertile" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease gestation of child by 1;
 			if "Maternal" is listed in feats of player and a random chance of 1 in 3 succeeds, decrease gestation of child by 1;
@@ -139,7 +139,7 @@ to pregprotocol:
 						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[else]neuter[end if], now [breast size desc of player] breasts.";
 					else:
 						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.";
-			if gestation of child is less than 1 and ( cunts of player is greater than 0 or "MPreg" is listed in feats of the player ) and skipturnblocker is 0:
+			if gestation of child < 1 and ( cunts of player > 0 or "MPreg" is listed in feats of the player ) and skipturnblocker is 0:
 				if pregtype is 1 and cunts of player is 0:
 					now pregtype is 2;
 				say "[detailbirth]";
@@ -189,7 +189,7 @@ to pregprotocol:
 					now snakeocc is 0;
 					now snakehijacktimer is turns;
 			else:
-				if gestation of child is less than 0, now gestation of child is 1;
+				if gestation of child < 0, now gestation of child is 1;
 
 to say detailpregnancy:
 	detailpregnancy;
@@ -227,22 +227,22 @@ to detailbirth:
 			say "     Your altered, stretchable cunt with its powerful muscles quiver in echo to the pleasure you felt when it earlier consumed the [ubpreg] now leaving your womb[if ovipregnant is true] as a large egg[end if].  You recline and concentrate, feeling your mutated [bodytype of player] body easily slipping your new child from it.  Again, there is some effort, but it is far easier as they slip along your well-lubricated tunnel to enter your caring embrace.";
 		else if playercanub is true:
 			say "     Your altered, stretchable cunt with its powerful muscles have little difficulty with the birth, an act that becomes quite pleasurable for you.  You simply recline and relax, letting your instincts take over, slipping the [if ovipregnant is true]large egg[else]child[end if] easily free from your [bodytype of player] body.  They slip almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
-		else if cunt width of player is greater than 10:
+		else if cunt width of player > 10:
 			say "     Your [descr] sex almost laughs at the idea of birth.  You recline and concentrate and can feel your mutated [bodytype of player] body easily slipping the [if ovipregnant is true]large egg[else]child[end if] free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
 			increase morale of player by 5;
-		else if cunt width of player is greater than 3:
+		else if cunt width of player > 3:
 			say "     You begin to realize why labor is called that, huffing and pushing as best as you can, slowly nudging the [if ovipregnant is true]large egg[else]newborn[end if] from your [descr] birthing canal.  It is not as painful as the movies make out, and after about twenty minutes, the [if ovipregnant is true]egg[else]child[end if] is ready to be held by you.  You feel tired, but whole, and satisfied.";
 			increase morale of player by 5;
 		else:
 			say "     Horrible pain lances through your body as your [descr] sex disgorges the [if ovipregnant is true]large egg[else]child[end if] only after what feels like hours of struggle.  Your [bodydesc of player] body covered in sweat, you are left exhausted and winded, but bearing a newborn.";
-			now hp of player is 1;
+			now HP of player is 1;
 			decrease morale of player by 10;
 	else:
 		let ubpreggers be 0;
 		if playercanub is true and ubpreg is not "false", now ubpreggers is 1;
 		if mpregcount < 3:			[First few times, painful]
 			say "     Shifting the large mass through your lower colon and sends horrible pain through your body as it struggles to adapt to this method of birthing.  You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if].  Your body squeezes and pushes as your [bodydesc of player] body is covered in sweat and you have a grimace of pain on your [facename of player] face with each painful shifting inside you.  By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the soccer-ball-sized egg from your ass.  Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
-			now hp of player is 1;
+			now HP of player is 1;
 			decrease morale of player by 10;
 			increase mpregcount by 1;
 		else if mpregcount < 6:		[Next few times, struggle]
@@ -361,9 +361,9 @@ To Birth:
 Chapter 3-1 - Impregnation and Ovi-Impreg Subroutines
 
 To impregnate with (x - text):
-	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
+	if child is born or gestation of child > 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
 		stop the action;
-	if cunts of player is 0 and "MPreg" is listed in feats of player and ( level of Velos is 1 and hp of Velos > 2 ):
+	if cunts of player is 0 and "MPreg" is listed in feats of player and ( level of Velos is 1 and HP of Velos > 2 ):
 		stop the action;
 	if "Cheerbreeder" is listed in feats of player:
 		if "Selective Mother" is listed in feats of player:
@@ -532,7 +532,7 @@ to selfimpregchance:
 to selfimpregnate:
 	if player is not mpreg_able and player is not fpreg_able:
 		stop the action;
-	[if cunts of player is 0 and "MPreg" is listed in feats of player and level of Velos is 1 and hp of Velos > 2:
+	[if cunts of player is 0 and "MPreg" is listed in feats of player and level of Velos is 1 and HP of Velos > 2:
 		stop the action;]
 	if "Selective Mother" is listed in feats of player:
 		say "Do you wish to be self-impregnated?";

@@ -22,7 +22,7 @@ Section 2 - Sexxxings
 the fuckscene of Sally is "[sexwithSally]".
 
 to say sexwithSally:
-	if lastSallyfucked - turns is less than 6:
+	if lastSallyfucked - turns < 6:
 		say "     You consider playing with Sally again, but you did so fairly recently. While tempting, you decide to wait, wanting to draw out your enjoyment of your slut's new form.";
 	else:
 		now lastSallyfucked is turns;
@@ -98,7 +98,7 @@ to say sallyimpreg:
 Section 3 - Endings
 
 when play ends:
-	if hp of Doctor Matt is 104:						[Sally the slutpet]
+	if HP of Doctor Matt is 104:						[Sally the slutpet]
 		if humanity of player < 10:
 			say "     Not long after you give in to your infection, Sally comes running up to you and snuggles up against you. You have trouble remembering quite who she is, but you both know that she belongs to you. Glancing at her leash, you can see that she chewed through it, probably worried that you've not come back for her. Wherever back was. But regardless, she is here with you now and is your special slutpet. Despite any changes you may go through or any creatures you may encounter, she remains a huskybunny plaything. She eagerly submits to any and all of your needs and is a lover and breedtoy for you and any lovers you may find in your new life.";
 		else:

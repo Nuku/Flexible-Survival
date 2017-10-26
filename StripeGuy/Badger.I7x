@@ -12,7 +12,7 @@ when play begins:
 
 
 to say Badger wins:
-	if cunts of player is greater than 0:   [female + herm]
+	if cunts of player > 0:   [female + herm]
 		say "The badger stud stands tall, arms across his chest as you fall into the dirt, defeated. His triumphant muzzle is twisted into a sneer of contempt. 'Weak. Still - what say you get a good shag, eh?' A broad paw drops down to heft that badger's ebony pole, already jutting forward in anticipation. Every droplet of his infectious precum is loaded with a musky and masculine aroma that spreads stronger and stronger with every splash against the ground. The ground, softened by the flow, squishes under the badger's broad footpaws as he kicks your legs apart. The brock snerks quietly at the sight of your pussy, already heating up as the thick male musk floods your senses. Feminine juices gush from your needy slit as the muscular male takes hold of your ankles, a moan escaping your lips when the badger lifts your ass up in the air. 'I am uncertain as to why you fight. You moan like a whore when rent is due.' With your ass in the air and feet resting on those broad shoulders, all the blood rushes into your head. It only adds to the haze of intense fucklust radiating from your [cunt size desc of player] cunt, fueled by the masculine scents overwhelming you.";
 		LineBreak;
 		say "The fat, ebony cock rests against your swollen lips, tormenting the soft folds with the incredible heat and hefty weight of such a massive prick. The badger rocks his hips, paws clamped on your inner thighs, pinning you firmly as he teases with a cold cruelty. It is more of a relief than rape when he finally tilts slightly and allows gravity to bear down and penetrate your [bodydesc of player] body. His prick is like a drilling core, rigidly hard and completely unstoppable. Your sloppy cunt is forced open around it, the veins and ridges popping past your sensitive lips, each sending an erotic blast of submissive pleasure up your spine like detonation cord. Lights dance behind your eyes like demolition charges, as the badger begins to fuck in earnest with slow but powerful thrusts. He is quietly and confidently dominant, needing only a firm grip and his thrusting cock to demonstrate how much of a mindless cumdump you have become.";
@@ -33,7 +33,7 @@ To say Badger loses:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -60,8 +60,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Male"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 75;
-	now lev entry is 8; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 75;
+	now lev entry is 8; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 10; [Amount of Damage monster Does when attacking.]
 	now area entry is "Park"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -87,8 +87,8 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Badger":
-		if humanity of player is less than 10:
-			if cunts of player is greater than 0:
+		if humanity of player < 10:
+			if cunts of player > 0:
 				say "You surrender yourself to the animal instincts that rule your mind at last. Your cunt is on fire with the memory of a scent, of a masculine musk that belongs to only one male. The badger stud that lives in the earth has left his mark on you and it is like a shackle in your heart. Desperate to feel his thick cock spreading you open again, you travel back to his hunting grounds. You burrow into the earth after him, and almost end your journey when you find his tunnels. The thick scent of his is concentrated in the corridors and burrows he has dug, so strong that your cunt gushes reflexively. By the time you finally reach him your legs are a mess, your mind completely overwhelmed with a powerful lust and need. His touch sends you to your knees, bowed in submission to your subterranean master.[line break]";
 				say "In the court of the Underground King you are made a member of his harem, draped in gold and precious gems pried from the clutches of the earth. More than that, you are comforted by his control, his quiet but sure dominance sending you into frenzies of lust and self-abasement. You would do any humiliating thing to break his silence, perform any erotic act to make the stud groan at your goading, but all for naught. He is the one in control, and he makes you shiver and cry out again and again with the skill of his intense breeding. In time his cock rules you as completely, and your entire purpose in life becomes to serve.";
 			else:

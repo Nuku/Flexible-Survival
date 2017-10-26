@@ -68,28 +68,28 @@ Version 1 of Murder Mystery by Rikaeus begins here.
 [   1: Has been given to Nermine                           ]
 [   2: Has been purchased from Nermine                     ]
 
-[   hp of Jenna                                            ]
+[   HP of Jenna                                            ]
 [   0: Not Placed                                          ]
 [   1: In Wolverine Guard Station                          ]
 [   2: In Wolverine Lockup                                 ]
 
-[   hp of Dead Body                                        ]
+[   HP of Dead Body                                        ]
 [   0: Not Placed                                          ]
 [   1: In the Mall Atrium                                  ]
 
-[   hp of Tawnya                                           ]
+[   HP of Tawnya                                           ]
 [   0: Not Placed                                          ]
 [   1: In Lockup                                           ]
 
-[   hp of Cane                                             ]
+[   HP of Cane                                             ]
 [   0: Not Placed                                          ]
 [   1: In Lockup                                           ]
 
-[   hp of Barry                                            ]
+[   HP of Barry                                            ]
 [   0: Not Placed                                          ]
 [   1: In Lockup                                           ]
 
-[   hp of Gordon                                           ]
+[   HP of Gordon                                           ]
 [   0: Not Placed                                          ]
 [   1: In Lockup                                           ]
 [   2: In the Half-Renovated Room                          ]
@@ -136,19 +136,19 @@ instead of going East from Mall West Wing while (JennaRelationship is 3 and Murd
 	say "     You turn the page to see the next suspect and find your eyes met with a picture of a brown furred wolf-morph. In the picture he's giving a wolfish smile which makes his green eyes stand out. 'This is Cane Ein, he's twenty-three years old and runs the Doggy Bowl restauraunt out in the food court.' She explains. You nod once more and turn the page to find yourself face to face with a picture of a smiling male bear-morph with brown eyes. 'This is Barry Baire, twenty-eight years old. He does all the heavy lifting for Cane.' Jenna says before gesturing for you to turn the page. It appears to be the last page as you are met with the photograph of a black-furred monkey-morph with hazel eyes. 'This is Gordon Nanas, he's twenty-six years old and is Cane's head chef.' She says to you. After she finishes she tells you that you'll want to inspect the body. 'When you're done come to the mall foyer where our station is, you can interrogate the suspects there.' Jenna says before leaving you alone with the body and the guards.";
 	now JennaRelationship is 4;
 	now MurderMystery is 1;
-	now hp of Dead Body is 1;
+	now HP of Dead Body is 1;
 	move Dead Body to Mall Atrium;
 	move player to Mall Atrium;
 
-instead of going East from Mall Foyer while (JennaRelationship is 4 and MurderMystery is 2 and hp of Jenna is 0):
+instead of going East from Mall Foyer while (JennaRelationship is 4 and MurderMystery is 2 and HP of Jenna is 0):
 	if debugactive is 1:
-		say "     DEBUG: Walk-in Event in Wolverine Guard Station. JennaRelationship: [JennaRelationship].MurderMystery: [MurderMystery].hp of Jenna: [hp of Jenna].[line break]";
+		say "     DEBUG: Walk-in Event in Wolverine Guard Station. JennaRelationship: [JennaRelationship].MurderMystery: [MurderMystery].HP of Jenna: [HP of Jenna].[line break]";
 	say "     When you enter the Guard Station after fully examining the body you spot Jenna standing against the wall by the impromptu desk the wolverines have set up. She spots you and walks over to you. 'Great! I'm guessing you've examined the body?' the female wolverine asks you. You nod and mention that you've found a few interesting facts. 'Oh? Really?' Jenna says, intrigued. You nod and show her the tuft of fur you found in the victim's hand as well as mention how the cuts appear to have been made with a professional knife. 'Hmm... well in a restaraunt you're bound to find those kinds of knives and two of the suspects have brown fur so...' She trails off. You nod and say that you'd like to question the suspects. 'Alright, just come talk to me when you want me to take you to lockup where they're being held.' Jenna says before going back to leaning against the wall";
-	now hp of Jenna is 1;
-	now hp of Tawnya is 1;
-	now hp of Gordon is 1;
-	now hp of Barry is 1;
-	now hp of Cane is 1;
+	now HP of Jenna is 1;
+	now HP of Tawnya is 1;
+	now HP of Gordon is 1;
+	now HP of Barry is 1;
+	now HP of Cane is 1;
 	move Tawnya to Wolverine Lockup;
 	move Gordon to Wolverine Lockup;
 	move Barry to Wolverine Lockup;
@@ -163,8 +163,8 @@ to say TylerBodyDesc:
 	say "     The overall look of the dead body is rather gruesome. There are sharp cuts and gashes littering the body and from those spots, blood leaks from. Although because it has been some time since the body... has expired, it has tapered a weak trickle. You desperately wonder who could possibly have murdered this person during what is already a hectic time period.";
 
 instead of conversing the Dead Body:
-	if hp of Dead Body is 0: [should be not yet available]
-		say "     ERROR: Tyler's dead body shouldn't be where a player can see it yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [hp of Dead Body]";
+	if HP of Dead Body is 0: [should be not yet available]
+		say "     ERROR: Tyler's dead body shouldn't be where a player can see it yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [HP of Dead Body]";
 	else:
 		say "     As you walk up to the dead body you let out a sigh. Something like this should have never happened. With a vow to bring the murderer to justice, you get on your knees and begin to examine the body.";
 		wait for any key;
@@ -243,8 +243,8 @@ to say TawnyaDesc:
 	say "     The lizard woman is wearing a waitress outfit, that covers up a lot compared to other outfits you've seen. You can't exactly tell what's under the dress and by the look on the lizard woman's face you'd rather not stare much longer. Other than her looks, Tawnya has set herself up in the corner of her cell, just standing there, irritated. When she sees you, you can tell that the woman's not exactly happy to see you.";
 
 instead of conversing the Tawnya:
-	if hp of Tawnya is 0: [should be not yet available]
-		say "     ERROR: Tawnya shouldn't be where a player can see her yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [hp of Tawnya]";
+	if HP of Tawnya is 0: [should be not yet available]
+		say "     ERROR: Tawnya shouldn't be where a player can see her yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [HP of Tawnya]";
 	else:
 		say "     You walk up to the female suspect and tell the wolverine guarding her that you want to interrogate Tawnya. The male nods and then unlocks the cell before taking Tawnya by the hand and leading both of you to the interrogation room.";
 		wait for any key;
@@ -398,8 +398,8 @@ to say CaneDesc:
 	say "     The canine has brown fur, the same color as the fur you found in the victim's hand. Although, to be completely honest, you can't be one hundred percent sure that he is the culprit just on that alone. Beyond the fur, he has green eyes, just like the photo that you were presented with. Also, he's wearing a black shirt with red letters and a red dog bowl. The letters say 'Doggy Bowl' which make you think his top is the employee shirt for his restaraunt. When the dog looks your way he smiles at you and waves, clearly confident that he's innocent.";
 
 instead of conversing the Cane:
-	if hp of Cane is 0: [should be not yet available]
-		say "     ERROR: Cane shouldn't be where a player can see him yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [hp of Cane]";
+	if HP of Cane is 0: [should be not yet available]
+		say "     ERROR: Cane shouldn't be where a player can see him yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [HP of Cane]";
 	else:
 		say "     You walk up to the canine suspect and tell the guard that you wish to interrogate him. The wolverine nods and grabs Cane out of the cell and leads the two of you to the interrogation room.";
 		wait for any key;
@@ -480,8 +480,8 @@ To say BarryDesc:
 	say "     The bear is rather big, which is to be expected. But it looks like seventy-five percent of the weight on him is muscle while the other is fat. He has brown fur, brown eyes, and is wearing a simple black shirt with the words 'Doggy Bowl' on it and black jeans. Directing your attention to his face you can see he's a rather happy guy if the wide smile on his face says anything when he notices you looking at him. Overall he looks like someone you'd very much like to get to know.";
 
 instead of conversing the Barry:
-	if hp of Barry is 0: [should be not yet available]
-		say "     ERROR: Barry shouldn't be where a player can see him yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [hp of Barry]";
+	if HP of Barry is 0: [should be not yet available]
+		say "     ERROR: Barry shouldn't be where a player can see him yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [HP of Barry]";
 	else:
 		say "     You walk up to the bear he gives you a big smile. He asks you if you're here to interrogate him, his voice holding no anger, only kindness. You nod and have the Wolverine Guard take you two to the interrogation room.";
 		wait for any key;

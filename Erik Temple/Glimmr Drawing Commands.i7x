@@ -234,7 +234,7 @@ Chapter - Lines
 
 
 Section - Basic line
-[The code for drawing a line between any two points was ported from the GREX module of the GWindows system by L. Ross Raszewski (http://gwindows.trenchcoatsoft.com). The code is there indicated to having been based on code by Paul Heckbert.]
+[The code for drawing a line between any two points was ported from the GREX module of the GWindows system by L. Ross Raszewski (http://gwindows.trenchcoatsoft.com/). The code is there indicated to having been based on code by Paul Heckbert.]
 
 To linedraw (hue - a number) in (win - a g-window) from (x1 - a number) by/x (y1 - a number) to (x2 - a number) by/x (y2 - a number) with (wgt - a number):
 	let dd be x2 - x1;
@@ -1288,7 +1288,7 @@ To add indices to (typeface - a bitmap font) starting from (N - a number), silen
 		if there is an index entry:
 			next;
 		now index entry is calculated-index;
-		if calculated-index is greater than 0:
+		if calculated-index > 0:
 			unless silently:
 				say "Changed index entry for glyph '[char-code char entry]' (char [char entry]) to [index entry].";
 		else:
@@ -2455,9 +2455,9 @@ Chapter: Contact info
 
 If you have comments about the extension, please feel free to contact me directly at ek.temple@gmail.com.
 
-Please report bugs on the Google Code project page, at http://code.google.com/p/glimmr-i7x/issues/list.
+Please report bugs on the Google Code project page, at https://code.google.com/archive/p/glimmr-i7x/issues.
 
-For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the intfiction forum (http://www.intfiction.org/forum/). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, please contact me directly via email (ek.temple@gmail.com).
+For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the intfiction forum (https://www.intfiction.org/forum/). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, please contact me directly via email (ek.temple@gmail.com).
 
 
 Chapter: Change Log

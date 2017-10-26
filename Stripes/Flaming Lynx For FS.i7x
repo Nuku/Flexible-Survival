@@ -27,7 +27,7 @@ to say losetoflaminglynx:
 	let lynxfun be 0;
 	if cunts of player > 0 and cocks of player is 0:			[Female - unwanted]
 		say "     The flaming lynx sniffs down your [bodydesc of player] body before growling in disdain upon noticing your cunt moments later. He gives you a final, heavy smack with his paw before his flames surge up again, washing all over you. The fire seems to sink into your [bodytype of player] body, seeking to burn away that which is unwanted.";
-		decrease hp of player by wdam entry;
+		decrease HP of player by wdam entry;
 		decrease humanity of player by a random number between 2 and 4;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
@@ -44,7 +44,7 @@ to say losetoflaminglynx:
 			let lynxfun be 3;
 		else:								[20% dismissed]
 			say "     He gives you a final, heavy smack with his paw before his flames surge up again, washing all over you. The fire seems to sink into your [bodytype of player] body, seeking to burn away that which is unwanted.";
-			decrease hp of player by wdam entry;
+			decrease HP of player by wdam entry;
 			decrease humanity of player by a random number between 2 and 4;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
@@ -72,12 +72,12 @@ to say losetoflaminglynx:
 			let lynxfun be 2;
 		else:
 			say "     He gives you a final, heavy smack with his paw before his flames surge up again, washing all over you. The fire seems to sink into your [bodytype of player] body, seeking to fill the void and make you more amenable to his tastes.";
-			decrease hp of player by wdam entry;
+			decrease HP of player by wdam entry;
 			decrease humanity of player by a random number between 2 and 4;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	if lynxfun is 1:				[anal selected]
-		if ( hp of player > 0 or the player is submissive ) and a random chance of 1 in 2 succeeds:
+		if ( HP of player > 0 or the player is submissive ) and a random chance of 1 in 2 succeeds:
 			say "     He paws over you, nuzzling along your side with a chuff[if player is submissive]. Your submissive tendencies kick in and you grow increasingly aroused, moaning softly with desire[else]. Already having submitted to him, you see no point in resisting now[end if]. Knowing what he wants, you divest yourself of your gear and move onto all fours. Nuzzling between your cheeks, he [if cunts of player > 0]steers clear of your feminine entrance and instead [end if]licks across your crinkled hole. An sensual rush of excitement flows into you from that warm tongue and you grind back into his licking.";
 			say "     After a few more licks, he moves onto the main event and mounts you with an animalistic rumble. Having prepped you, his feline shaft slips into you with ease. You moan as the pleasant warmth of his body that you've been enjoying atop you can now be felt warming your insides as well, filling you with greater pleasure and arousing you greatly. Grinding your hips back into his thrusts entices him to fuck you more zealously. Your [if the player is submissive]submissive desires[else]lustful body[end if] revels in this as his stimulating barbs feel delightful along your sensitive anal passage[if cocks of player > 0] and the press of his thrusts against your prostate make your cock twitch[end if].";
 			say "     The feline keeps a large paw on your shoulders as he pounds away at your back door. You squeeze your anal muscles and shift your hips, rocking along and gripping around his pulsing meat as he buggers you. You do your best to please the virile beast, longing to feel his release. And when it does come, the enlarged lynx nips down on your shoulder firmly[if the player is submissive], sending another shiver of delight through you[end if] as his deliciously hot seed surges into you. Blast after blast from him fills you with a rush of sexual excitement that culminates in [if cocks of player > 0]your own orgasm that sends your [cum load size of player] load shooting forth from your twitching rod[else]an unfocused wave of sensual warmth rushing through you[end if]. Once he's finished, he eases himself off you and slides his spent shaft from your sticky and leaking hole. He pads around you, nuzzling and purring like a big pussycat before strutting off. The warm pleasure radiating from your filled rectum lingers inside you for quite some time, a pleasant reminder of your kinky encounter.[mimpregchance]";
@@ -144,7 +144,7 @@ to say beattheflaminglynx:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -171,7 +171,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 60; [ The monster's starting hit points. ]
+	now HP entry is 60; [ The monster's starting HP. ]
 	now lev entry is 9; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 10; [ Monster's average damage when attacking. ]
 	now area entry is "Mall"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -201,7 +201,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Flaming Lynx":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if cocks of player > 0:
 				say "     As your mind falls into a constant cycle of depravity, you find yourself eagerly returning to the sewers where you faintly recall another flaming kitty waiting for you. Happily pouncing on the other fiery feline, once you find the beacon of his shimmering form glowing hot within the darkness of the underground passageways, you spend the next several hours reacquainting yourself with the flaming feline - nuzzling, licking, grooming and passionately fucking the other, allowing yourself to be mounted in turn once your low hanging orbs have become empty, before settling down to take a pleasant catnap next to your new companion[if cunts of player > 0]. In the days to come you find yourself ignoring your feline twat, as your new companion seems to almost completely disregard that part of you[end if].";
 				say "     You and your companion subsist on the lingering natural gas in the city's pipes for your flames, though your passions for male sex also fuels your fiery pelts. When the soldiers comes in to clean up the city, you and your companion use the sewer system to circumvent most of them. Once at the edge of the city, you blaze through the military's blockades, literally setting many of the barriers on fire, before you and your new friend head out into the bright unknown world together.";

@@ -79,7 +79,7 @@ to say BoghrimSlaveDeal:
 
 Section 2 - NPC
 
-[ hp of Boghrim                                   ]
+[ HP of Boghrim                                   ]
 [ 0: never fucked                                 ]
 [ 1: player got fucked                            ]
 [ 2: hunting event successfully done              ]
@@ -115,7 +115,7 @@ instead of conversing the Boghrim:
 	now sortorder entry is 2;
 	now description entry is "Ask if you can have some fun with Jason";
 	[]
-	if hp of Boghrim > 0:
+	if HP of Boghrim > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Hunting";
 		now sortorder entry is 3;
@@ -182,7 +182,7 @@ to say BoghrimTalk1:   [talk about him]
 to say BoghrimTalk2:    [talk about Jason]
 	say "     Boghrim chuckles as you ask about Jason and directs the human to stand up and spin around. 'So you want to bang my little slave-boy? That'll cost you a packet of food, but trust me - it's well worth it...'";
 	if carried of food is 0:
-		say "     As you don't actually have any food on you, there is little choice but declining the offered trade. 'Your loss,' Boghrim grunts, giving a shrug. ' You know where to find him, if you change your mind...'";
+		say "     As you don't actually have any food on you, there is little choice but declining the offered trade. 'Your loss,' Boghrim grunts, giving a shrug. 'You know where to find him, if you change your mind...'";
 	else if cocks of player is 0:
 		say "     As you don't currently have a cock, you have little choice but declining the offered trade. Who knows how Boghrim would react if he learned you're not a 'real' orc. Giving a shrug at your refusal, the green man grunts, 'Your loss,' accompanied by a shrug. 'You know where to find us, if you change your mind...'";
 	else:
@@ -262,7 +262,7 @@ to say BoghrimTalk3:     [go hunting]
 		now inasituation is true;
 		challenge "Hydra Beast";
 		if fightoutcome >= 20 and fightoutcome <= 29:  [lost]
-			say "     [if hp of player > 0]Forced to submit to[else]Unable to keep fighting against[end if] the monstrous creature and its numerous heads, you are knocked down by its many heads and pinned there. From this new position, you have a very good view of the beast's genitals - showing you that it sports as many cockheads below as it has reptilian heads up top, with all of them oozing droplets of pre-cum from the hydra's anticipation of ravaging your body. All of the big creature's attention focuses on you now. It starts to inspect and sniff you with one head while others move in to grip your gear and clothes to tear them off... until suddenly, you see a broad green-skinned foot flash through your line of sight and kick the big reptile in its massive set of balls. Ouch, that must have hurt!";
+			say "     [if HP of player > 0]Forced to submit to[else]Unable to keep fighting against[end if] the monstrous creature and its numerous heads, you are knocked down by its many heads and pinned there. From this new position, you have a very good view of the beast's genitals - showing you that it sports as many cockheads below as it has reptilian heads up top, with all of them oozing droplets of pre-cum from the hydra's anticipation of ravaging your body. All of the big creature's attention focuses on you now. It starts to inspect and sniff you with one head while others move in to grip your gear and clothes to tear them off... until suddenly, you see a broad green-skinned foot flash through your line of sight and kick the big reptile in its massive set of balls. Ouch, that must have hurt!";
 			say "     With a shrill, screamed whine that leaves your ears ringing and you slightly dazed, the massive creature rears up and throws itself on the ground to your right, writhing and twitching for a long moment before it can think of anything else than the pain. Then the hydra beast's heads whip around and focus on the source of its misery - Boghrim, standing over it with a snarl on his face. 'Think you can drop cars on me without consequences, fucker? I'm gonna kick your ass!' Bellowing, the brutish orc throws himself at the hydra, and you can only watch in shock at the explosion of violence that follows. After only barely a minute of combat, the fight is decided, with the big reptile fleeing in terror, two of its heads dangling down with broken necks. As it does so, the creature slams into another tall pile of wrecked cars, making it sway, then collapse just as the hydra is past - which cuts your orc companion off from catching it.";
 			WaitLineBreak;
 			say "     Grumbling under his breath at your quarry getting away, Boghrim walks back to you and gives you a hand to get up. He isn't much in the mood to talk afterwards as you make your way back to the orc lair, mostly coming back to 'Next time, that fucker is toast,' as he thinks about another hunt for the hydra.";
@@ -312,7 +312,7 @@ to say BoghrimTalk3:     [go hunting]
 							say "[BoghrimHydraSex2]";
 						if (nam is "Nah - just leave"):
 							say "     Telling Boghrim that you're not in the mood for reptiles right now, you suggest going back to the lair and celebrating with a cold orc brew. The big orc looks somewhat disappointed for a moment, then shrugs and answers, 'As you wish - it's your prey, so you decide.' With that, the two of you make your way to the exit from the junkyard, leaving a somewhat knocked around and still really horny hydra behind. There's little doubt that it'll go hunting for someone else to take its sexual frustrations out on, but... that's not your problem, after all.";
-							if hp of Boghrim < 3:
+							if HP of Boghrim < 3:
 								say "     As you make your way back to the orc lair, and when you share a drink soon after, you realize that the orc boss gives you... interested looks, and his cock stays half-hard the whole time. It seems you've impressed him today, proved that you're a 'real man' - he now might be more open to the possibility of getting fucked by you.";
 						WaitLineBreak;
 				else if calcnumber is 100:
@@ -326,7 +326,7 @@ to say BoghrimTalk3:     [go hunting]
 				else:
 					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 			clear the screen and hyperlink list;
-			now hp of Boghrim is 2;
+			now HP of Boghrim is 2;
 		now BoghrimHuntingTrip is 0;
 		now inasituation is false;
 
@@ -342,7 +342,7 @@ to say BoghrimHydraSex1:
 	say "     As you go on pounding into the hydra and making out with its main head at the same time, you become dimly aware that something changes after a short while - the pleased sounds of its other heads do start to sound a bit muffled. Curious what's going on, you break the kiss with your reptilian partner for a moment and look past its scaled visage - only to see Boghrim, standing at the creature's other end and pumping his massive prick into an elongated muzzle. The other side heads of the hydra aren't idle either, instead being put to good use lapping at the mighty orc's green skin and even eating out the crack of his ass. 'Yeah, that's what I'm talking about,' the orc roars in satisfaction and pumps into the vanquished beast, giving you a thumbs-up as his gaze meets yours.";
 	WaitLineBreak;
 	say "     After giving the mythic monster a good, hard pounding, you bury your [cock size desc of player] cock into it and moan in release. You shoot your [cum load size of player] into its clenching asshole[if cocks of player > 0] and across its meaty backside[end if], blast after blast of potent orcish seed flooding the big beast. As he sees you breed the large creature, Boghrim bellows, 'Yeah, let's give this fucker a cream filling!' Then he pumps into the hydra's open mouth with new vigour, climaxing before much longer and pumping his potent orc cum directly down its throat. The sudden spike in arousal as a double load of orc cum starts to show its effects causes the creature's many heads to growl lustfully as it climaxes itself, spraying gushers of cum from each of its [hydraheadcount] penises. Much of its load is sucked up by its additional heads, but plenty ends up leaving a sticky mess on the ground. When you're done and pull out, the hydra's many heads set themselves to licking you clean before you give it another long, tongue-filled kiss. Then you send it on its away, staggering a little and still lust-drunk, while leaving a trail of white cum dripping from its well-bred rear[if hydraheadcount > 6]. As it departs, you can see its extra heads already decaying away, dropping off and melting into fleshy goop until it's down to its original half-dozen[else if hydraheadcount < 6]. As it departs, you can see the bulges of new heads starting to form at the severed stumps, the creature soon to be back up to a half-dozen[end if].";
-	if hp of Boghrim < 3:
+	if HP of Boghrim < 3:
 		LineBreak;
 		say "     As you make your way back to the orc lair, and when you share a drink soon after, you realize that the orc boss gives you... interested looks, and his cock stays half-hard the whole time. It seems you've impressed him today, proved that you're a 'real man' - he now might be more open to the possibility of getting fucked by you.";
 
@@ -355,7 +355,7 @@ to say BoghrimHydraSex2:
 	WaitLineBreak;
 	say "     Your threesome with the eagerly participating hydra is kept up for quite a while, until you can hold back no longer and cum with a long, loud moan[if cocks of player > 1], pumping your hot seed down the creature's throats[else if cocks of player is 1], pumping your hot seed down the creature's throat. It feels amazing to have its muscles flex around your shaft as it swallows everything you can give, suckling eagerly to get every last bit of your tasty orc cum. As your load slides down into the big creature's stomach, it quickly unfolds its true potential, overwhelming the hydra with a sudden spike of pure lust that makes the beast blast its own load all over the ground below. Its massive balls churn out more and more creamy cum to add to the growing puddle underneath. Meanwhile, the twitching and squirming of your hydra's fuckhole around Boghrim's cock drive the large orc past his own point of no return and he blasts away with a rich load of orc cum to fill up the big reptile's rear.";
 	say "     After giving you and your hunting buddy such fulfilling orgasms, you give the hydra beast's prime head another kiss, this one having lingering traces of your semen to flavour it. Then you send it on its away, staggering a little and still lust-drunk, while leaving a trail of white cum dripping from its well-bred rear[if hydraheadcount > 6]. As it departs, you can see its extra heads already decaying away, dropping off and melting into fleshy goop until it's down to its original half-dozen[else if hydraheadcount < 6]. As it departs, you can see the bulges of new heads starting to form at the severed stumps, the creature soon to be back up to a half-dozen[end if].";
-	if hp of Boghrim < 3:
+	if HP of Boghrim < 3:
 		LineBreak;
 		say "     As you make your way back to the orc lair, and when you share a drink soon after, you realize that the orc boss gives you... interested looks, and his cock stays half-hard the whole time. It seems you've impressed him today, proved that you're a 'real man' - he now might be more open to the possibility of getting fucked by you.";
 
@@ -376,31 +376,31 @@ instead of fucking Boghrim:
 		now sortorder entry is 1;
 		now description entry is "Ask the orc leader to fuck you and have some fun with Jason at the same time";
 		[]
-		if hp of Boghrim > 0:
+		if HP of Boghrim > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Get fucked - one on one with Boghrim";
 			now sortorder entry is 2;
 			now description entry is "Ask the orc leader to fuck you";
 		[]
-		if hp of Boghrim > 0:
+		if HP of Boghrim > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck him";
 			now sortorder entry is 3;
 			now description entry is "Ask if you can fuck Boghrim";
 		[]
-		if hp of Boghrim > 0 and MulAnalAcceptance > 2:
+		if HP of Boghrim > 0 and MulAnalAcceptance > 2:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Mul to be fucked upstairs";
 			now sortorder entry is 4;
 			now description entry is "Have a sex party with Boghrim, Mul and Jason";
 		[]
-		if hp of Boghrim > 2:
+		if HP of Boghrim > 2:
 			choose a blank row in table of fucking options;
 			now title entry is "A threesome in which you fuck him";
 			now sortorder entry is 5;
 			now description entry is "Stick your dick up Bogrim's rear end as he fucks Jason";
 		[]
-		if hp of Boghrim > 0 and MulAnalAcceptance > 6:
+		if HP of Boghrim > 0 and MulAnalAcceptance > 6:
 			choose a blank row in table of fucking options;
 			now title entry is "Double-team Mul with Boghrim";
 			now sortorder entry is 6;
@@ -491,10 +491,10 @@ to say BoghrimFirstFuck:
 		say "     Eventually, as Jason finishes with you two and joins Boghrim in a post-coital nap cuddled up against his master's side, you get back up from the bed and gather up your belongings. While doing so, you notice that the sting of the teethmarks on your shoulder has already faded completely, and by craning your neck a bit, you see that the nanites have already healed them over - though not without leaving two spots of distinctive scarring. Something to remember your first time with Boghrim by, it seems. Putting on your clothes and gear, you then make your way back down into the drinking hall.";
 	if "Boghrim's Mark" is not listed in feats of player:
 		add "Boghrim's Mark" to feats of player;
-	now hp of Boghrim is 1;
+	now HP of Boghrim is 1;
 
 to say BoghrimSex1:  [get fucked]
-	if hp of Boghrim is 0: [never fucked]
+	if HP of Boghrim is 0: [never fucked]
 		say "     Just openly walking up to Boghrim and offering sex might have drastic consequences. Who knows how he'd react to that. Do you really want to do it?";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
@@ -510,8 +510,8 @@ to say BoghrimSex1:  [get fucked]
 					now monster is y;
 					break;
 			choose row monster from the table of random critters;
-			now hp entry is 250;
-			now monsterhp is 250;
+			now HP entry is 250;
+			now monsterHP is 250;
 			now lev entry is 16;
 			now wdam entry is 25;
 			challenge "Orc Warrior";
@@ -521,13 +521,13 @@ to say BoghrimSex1:  [get fucked]
 					now monster is y;
 					break;
 			choose row monster from the table of random critters;
-			now hp entry is 125;
-			now monsterhp is 125;
+			now HP entry is 125;
+			now monsterHP is 125;
 			now lev entry is 14;
 			now wdam entry is 15;
 		else:
 			say "     You decide to better play it safe and put those plans on ice - for now...";
-	else if hp of Boghrim is 1: [fuck buddy]
+	else if HP of Boghrim is 1: [fuck buddy]
 		say "     You step up on the orc boss's platform and find Boghrim with his favourite slave Jason stretched out over his lap, ass up and getting fingered by Boghrim's thick fingers. After you give the muscled green male a suggestive wink and nod towards the stairs leading up to his private rooms, Boghrim slaps Jason's ass playfully, which makes makes the young man pant in arousal. Then the orc pulls him aside, making his hard prick whip up, now that there isn't a submissive human lying on it anymore. While Jason automatically starts to worship his Master's shaft, stroking and licking it, Boghrim gives a telling look from the thick pole of man-meat to you and back, then loudly says, 'Time to... share this little slut between us again. Let's do it!'";
 		say "     The mighty orc grunts in satisfaction, then gives Jason another quick slap on the bare butt and says, 'Get up, boytoy - we're making this a private party now.' That said, he stands up himself and, without even bothering to put on his loincloth, leads his naked slave and yourself through the drinking hall, his thick prick proudly dangling between his legs. Soon, you're walking up a set of stairs up to the second floor and into the station chief's conference room. Like the rest of the station, things have been rearranged in there quite a bit, as there is no sign of any table or even chairs... instead, the room holds a mightily big, round fuck-pad of a bed, combined with piles of loot and a top of the line stereo system. Moving over to switch it on, Boghrim gives you a bragging grin as the beat of punk music vibrates in your bones for a second, then is turned down to the level of background music.";
 		WaitLineBreak;
@@ -589,14 +589,14 @@ to say BoghrimSex2:  [get fucked]
 	say "     Eventually, as Jason finishes with you two and joins Boghrim in a post-coital nap cuddled up against his master's side, you get back up from the bed and gather up your belongings. While doing so, you notice the distinct scars made by Boghrim's tusks on your shoulder again from the corner of your eye. Somehow, you can't help but feel good about having them, knowing that the mighty orc has accepted you as the only free man he has sex with. Putting on your clothes and gear, you then make your way back down into the drinking hall.";
 
 to say BoghrimSex3:  [fuck him]
-	if hp of Boghrim < 2:
+	if HP of Boghrim < 2:
 		say "     Right now, the best you can expect if you ask to fuck him is a punch to the face that knocks you out. Maybe you should get to know the mighty orc a bit better before trying that... a hunting trip out into the city together could serve well for that purpose - provided you can bring down something powerful enough to impress Boghrim. Why don't you talk to him about it.";
 	else:
 		say "     You step up on the orc boss's platform and find Boghrim with his favourite slave Jason stretched out over his lap, ass up and getting fingered by Boghrim's thick fingers. After you give the muscled green male a suggestive wink and nod towards the stairs leading up to his private rooms, Boghrim slaps Jason's ass playfully, which makes makes the young man pant in arousal. Then the orc pulls him aside, making his hard prick whip up, now that there isn't a submissive human lying on it anymore. While Jason automatically starts to worship his Master's shaft, stroking and licking it, Boghrim gives a telling look from the thick pole of man-meat to you and back, then loudly says, 'Time to... share this little slut between us again. Let's do it!'";
 		say "     The mighty orc grunts in satisfaction, then gives Jason another quick slap on the bare butt and says, 'Get up, boytoy - we're making this a private party now.' That said, he stands up himself and, without even bothering to put on his loincloth, leads his naked slave and yourself through the drinking hall, his thick prick proudly dangling between his legs. Soon, you're walking up a set of stairs up to the second floor and into the station chief's conference room. Like the rest of the station, things have been rearranged in there quite a bit, as there is no sign of any table or even chairs... instead, the room holds a mightily big, round fuck-pad of a bed, combined with piles of loot and a top of the line stereo system. Moving over to switch it on, Boghrim gives you a bragging grin as the beat of punk music vibrates in your bones for a second, then is turned down to the level of background music.";
 		WaitLineBreak;
 		say "     While his master was setting the right atmosphere for some hot and heavy sex, Jason already sunk to his knees in front of you and undid your pants. Now he's looking up at you, an eager 'use me' expression on his face - which is something you just can't resist, holding up your hard prick and guiding the submissive human to take it in his mouth. And oh does he do a good job with that. Jason just slides those sexy lips up and up your shaft, going on to deep-throat you till his nose is buried right in your pubes - damn, Boghrim trains his bitches well! As Jason starts to bob up and down on your manhood, the broad-shouldered shape of the orc boss steps up beside you and his large hand slides down your back to tightly squeeze your right buttock.";
-		if hp of Boghrim is 2: [first time]
+		if HP of Boghrim is 2: [first time]
 			say "     Before things go any further and these two distract you what your real plans are, you snake your arm around Boghrim's broad frame and get a grip on his firm and naked behind, then tell him in a lusty voice that YOU want to fuck HIM now. There is a second of shocked silence in which Boghrim's eyes start to go wide, then both your attention is drawn down to Jason choking on your cock in his mouth. The young man pulls off your shaft and pants quickly while looking up with surprise on his face, then his master murmurs, 'Get back to work, slut.' After Jason buries his nose in your pubes again, your erect cock in his throat, Boghrim gives you a long, calculating look. Finally, he nods to you and says, 'You certainly were... impressive on that hunting trip we took and kinda saved my bacon, so... I'll give you a chance. Get on the bed and we'll wrestle, then we can see who gets who fucks whom.'";
 		else:
 			say "     Before things go any further and these two distract you what your real plans are, you snake your arm around Boghrim's broad frame and get a grip on his firm and naked behind, then tell him in a lusty voice that YOU want to fuck HIM now. Interest flares up in Boghrim's eyes and a smile starts to spread over his face, showing off the orc's sharp tusks. Meanwhile, Jason starts to fondle your balls while slurping on your shaft with new elan, as if to prepare you to fuck his master hard. The young man pulls off your shaft and pants quickly while looking up at the two of you with a happy submissive's expression, then buries his nose in your pubes again, your erect cock sliding easily into his well-trained throat. Boghrim gives your naked body a long, lusty look, then says, 'You certainly were... impressive on that hunting trip we took and kinda saved my bacon, so... I'll give you a chance. Get on the bed and we'll wrestle, the winner gets to pound the other's fuckhole.'";
@@ -632,8 +632,8 @@ to say BoghrimSex3:  [fuck him]
 			say "     Waiting some time longer till the last little spurt of your load is deposited deep inside Boghrim's hole, you eventually pull out of the orc with a wet slurp. A small amount of your cum leaks out as your cockhead pops past the muscled brute's pucker, giving a very nice contrast as it starts to slowly run down between his legs. Seeing it fills you with pride, as it is the visible proof that you bested the orc, in a playful and sexualized wrestling match at least. There is even a little string of cum stretching from your slit to the upper edge of his winking pucker - glistening enticingly in the light and drawing the attention of Jason, who's moved up right next to you on the mattress. He licks his lips and asks in a pleading tone, 'May I -' And that is as far as he gets before you grip his neck softly, pulling him down towards your crotch. The eager human catches your dangling little string of cum with his tongue, slurping it up, then gently pushes against your hip so you make room for him to go down on Boghrim and eat your load out of his ass.";
 			WaitLineBreak;
 			say "     'Oooh yeah, stick your tongue in there deep,' the orc boss groans to his favorite slave, raising his own hips a little bit more to allow Jason easier access. As the human is busy lapping your seed from Boghrim's well-bred hole, you wipe the small amount of cum that stuck to your cock off against his naked side, then move towards the edge of the bed and start looking for your clothes. Giving the two of them one last look and seeing Jason busy pleasing his master -as well as licking up and swallowing the 'evidence' of your activities you left behind, you then close the door properly behind you and make your way back down into the drinking hall.";
-			if hp of Boghrim < 3:
-				now hp of Boghrim is 3;
+			if HP of Boghrim < 3:
+				now HP of Boghrim is 3;
 
 to say BoghrimSex4: [sex party with Boghrim, Mul and Jason]
 	if libido of Mul is 0: [first time]
@@ -668,7 +668,7 @@ to say BoghrimSex4: [sex party with Boghrim, Mul and Jason]
 			say "     Meeting Boghrim's eyes, you grin widely and give him an inviting gesture as you nod towards Mul. The big orc gives a lusty chuckle, his massive prick twitching in anticipation. He gets on the bed, walking on it to stand behind the fucking couple of man and orc, then he crouches down far enough for his member to come to rest between Mul's firm asscheeks. Your orcish boy-toy's grunting and humping into Jason comes to a shrieking halt as he feels the touch of a hard cock. Mul lifts his head from where he was just giving Jason a love-bite on the back, and his eyes go wide as he sees you standing at the side of the bed - which of course makes him realize that the person who's on top of him is Boghrim. The orc opens his mouth as if to say... something, you don't know what, as his tribe's chief chooses just that moment to pull back a little and then thrust forward hard, ramming the whole length of his erection down Mul's chute in one go.";
 			say "     'OoooaarrRRRRGHHHH!' comes the guttural howl from Mul at this sudden and merciless penetration, though even before he's done with the exclamation, you can hear the tone of his voice shift, betraying an undertone of arousal and lust. Oh well - orcs are tough, so you guess he can take it... and Mul's enough of a butt-slut right now that he really gets off a lot on having such a heavy piece of man-meat shoved up his rear end. Not giving his orcish subordinate even a second to rest, Boghrim just keeps fucking him roughly, laughing as that makes Mul grunt and moan in lust. 'Always thought you were the toughest of your family Mul. And now I learn you're just a needy bitch inside, hungry for cock! Very tight and gripping too! Gonna ride your ass till you can't sit straight, you slut!'";
 			WaitLineBreak;
-			if hp of Boghrim < 2: [not arranged to fuck Boghrim yet]
+			if HP of Boghrim < 2: [not arranged to fuck Boghrim yet]
 				say "[PlayerJasonMulBoghrimFuck]";
 			else:
 				say "     Hearing Boghrim talk about fucking another orc's hungry hole, you do get reminded of the time you sank your own erection into his tight end. Do you want to take a go at him for another round and make this a fuck-chain, or would you rather line up to get blown by Jason?";
@@ -771,7 +771,7 @@ to say PlayerJasonMulBoghrimFuck:
 
 
 to say BoghrimSex5:  [Threesome + fuck him]
-	if hp of Boghrim < 2:
+	if HP of Boghrim < 2:
 		say "     Right now, the best you can expect if you ask to fuck him is a punch to the face that knocks you out. Maybe you should get to know the mighty orc a bit better before trying that... a hunting trip out into the city together could serve well for that purpose - provided you can bring down something powerful enough to impress Boghrim. Why don't you talk to him about it.";
 	else:
 		say "     You step up on the orc boss's platform and find Boghrim with his favourite slave Jason stretched out over his lap, ass up and getting fingered by Boghrim's thick fingers. After you give the muscled green male a suggestive wink and nod towards the stairs leading up to his private rooms, Boghrim slaps Jason's ass playfully, which makes makes the young man pant in arousal. Then the orc pulls him aside, making his hard prick whip up, now that there isn't a submissive human lying on it anymore. While Jason automatically starts to worship his Master's shaft, stroking and licking it, Boghrim gives a telling look from the thick pole of man-meat to you and back, then loudly says, 'Time to... share this little slut between us again. Let's do it!'";
@@ -870,7 +870,7 @@ instead of sniffing Jason:
 Section 4 - Infection for combat purposes
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -897,7 +897,7 @@ When Play begins:
 	now int entry is 6;
 	now cha entry is 6;
 	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 300;               [ The monster's starting hit points. ]
+	now HP entry is 300;               [ The monster's starting HP. ]
 	now lev entry is 18;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 30;              [ Monster's average damage when attacking. ]
 	now area entry is "nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]

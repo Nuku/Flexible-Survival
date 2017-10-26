@@ -134,7 +134,7 @@ understand "activate control panels" and "activate controls" and "activate panel
 
 carry out activating:
 	if findwires is 0:
-		if a random number between one and 20 is greater than the intelligence of the player:
+		if a random number between one and 20 > the intelligence of the player:
 			say "The lights stay red, even though you are trying hard to understand the buttons.";
 		else:
 			say "You use your superior intelligence to turn off the emergency shutdown.";
@@ -173,7 +173,7 @@ check towerfixing:
 
 carry out towerfixing:
 	say "After reattaching one power line that must have ripped off when the tower was damaged, you lift the tower top, grunting even though it's somewhat lighter than you expected. You tilt it, and try to align the bottom of the top to the top of the bottom.";
-	if a random number between one and 20 is greater than the strength of the player:
+	if a random number between one and 20 > the strength of the player:
 		say "The tower top slips, and falls. Maybe you could try to fix it again?";
 	else:
 		say "The tower top slides into place, and the stress on the wires is released.";

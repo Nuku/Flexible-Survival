@@ -10,7 +10,7 @@ Equineguardpost is a situation. Equineguardpost is resolved. The level of Equine
 The sarea of Equineguardpost is "Stable".
 
 Instead of Resolving a Equineguardpost:
-	if xp of Onyx is 1:
+	if XP of Onyx is 1:
 		let skip be 0;
 		if guy is not banned:
 			say "     Investigating the dimly lit halls of the whorsehouse, you find your way to a rather small room that the equines appear to have converted into a guardpost of sorts. Glancing inside carefully, you spy two of those wannabe horsemen you saw outside relaxing in the area, more importantly however, you also spy several small bundles of keys tossed around the room, obviously left there by guards that aren't on shift right now. Realizing that one of those bundles of keys almost certainly has the key to Onyx's cell, you realize you won't get a better chance while the more powerful guards our out roaming. You still prepare yourself for a rough fight as you prepare to attack the stallionbois.";
@@ -24,7 +24,7 @@ Instead of Resolving a Equineguardpost:
 				challenge "Donkeywoman";
 		else:
 			say "     Investigating the dimly lit halls of the whorsehouse, you find your way to a rather small room that the equines appear to have converted into a guardpost of sorts. Unfortunately, the place has been locked up tight with a sign on the door marked as 'Sealed due to imposed bans.' Not quite sure what that means, but knowing it somehow means you won't be able to get inside, you sigh sadly and head off, reminded that you won't be able to help Onyx now.";
-			now xp of Onyx is 100;
+			now XP of Onyx is 100;
 			now Equineguardpost is resolved;
 			now skip is 1;
 		if skip is 1:
@@ -33,7 +33,7 @@ Instead of Resolving a Equineguardpost:
 			say "     Beaten and left to lie in the corridor outside the guardpost, you barely manage to crawl back towards the entryway, your battered and well-used form needing quite a bit of rest before you can attempt something like that again...";
 		else:
 			say "     With the guards temporarily unable to stop you, you quickly rummage through the makeshift guardpost and grab as many different sets of keys as you can find before leaving as fast as possible. With the jingling mass of keys in hand, you feel sure that you have the key to Onyx's cell with you now, and quite possibly the key to some other places in the Stables as well...";
-			now xp of Onyx is 2;
+			now XP of Onyx is 2;
 			now Equineguardpost is resolved;
 	else:
 		say "     Wandering through the dimly lit halls of the hotel, you hear some raucous laughter coming from up ahead. Moving cautiously you look into the room ahead, only to spy a couple of horsemen hanging out and laughing while they drink some sort of barely fermented brew. You spend a second to glance around the crude guardpost, but seeing nothing worth the fight with the horse guards, you slip away quietly and continue your trip through the quiet halls of the building.";
@@ -46,15 +46,15 @@ Stablestoreroom is a situation. Stablestoreroom is resolved.
 The sarea of Stablestoreroom is "Stable".
 
 Instead of Resolving a Stablestoreroom:
-	if xp of Onyx is 4:
+	if XP of Onyx is 4:
 		say "     Carefully exploring the Stables interior leads you to a room near the front of the area which is almost hidden in a small alcove. Peeking inside cautiously, you find the small room is packed with all sorts of strange items, though most of it appears to be clothing of various sizes. Looking around at the large, unorganized piles of random stuff, you figure this must be where they toss the personal items from their captives when they search them. You sigh slightly as you realize that the necklace Daisy sent you after is probably buried somewhere in the large amount of clutter stacked up in the small room. Figuring you had better get started looking, you shake your head slightly as you begin sorting through the room looking for the necklace the changing mare described.";
 		let bonus be ( the Perception of the player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 15:
+		if diceroll > 15:
 			say "     Sifting through the disorganized piles of junk, you find yourself growing frustrated at the seemingly unending supply of debris and geegaws stacked around the room. You are about to give up the search, when you spot a small silver glint which appears to have recently been unearthed due to your poking around in the piles. Pulling the item out, you find it is a rather intricately patterned necklace in the shape of several interlocking leaves. The inscription on the back reads [']To Diana From Oscar[']. Smiling at your good fortune, you tuck the small necklace away in your pack, sure that this is the item that Daisy sent you to retrieve and, still smiling softly, you slip out of the room and head back to the entranceway, sure that Onyx will want to see your recent find.";
-			now xp of Onyx is 5;
+			now XP of Onyx is 5;
 			Now Stablestoreroom is resolved;
 		else:
 			say "     You grow increasingly frustrated as you sift through the disorganized piles of junk, and you feel increasingly exposed the longer you spend hunting through the small room. Eventually you get a bit careless, and shove a pile of junk the wrong way, and barely manage to leap out of the way as it and several other nearby heaps tip over. You stumble out the open door as a growing cascade of junk and memorabilia nearly trips you, the loud noise of cell phones, jewellery and other items banging into each other as the room rearranges itself making you wince at your clumsiness. Looking around quickly, you sigh as you realize you aren't the only one who noticed the noise, as you see one of the equine stablebeasts heading down the corridor right towards you!";
@@ -100,11 +100,11 @@ Instead of Resolving a Hardware Fort:
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
-			if diceroll is greater than 16:
+			if diceroll > 16:
 				say "     You nimbly dodge the falling car, but the loud crash certainly alerts anyone nearby to the fact that they definitely have a visitor, and you groan as you see several wolverine guards heading your way at speed.";
 			else:
 				say "     You twist and dodge as best you can, and the car only manages to clip you on the way down, but it still hurts like hell, and the loud crashing noise has probably alerted whoever lives here to the fact that they now have a visitor. Looking around, you sigh as you see several wolverine guards heading your way, obviously this is just not your day.";
-				decrease hp of player by 25;
+				decrease HP of player by 25;
 			hardwarefortphase1;
 		else if Recoveredhardware is 1:
 			say "     Returning to the hardware store and its fortress-like lot, you prepare yourself once again to take on the wolverine guards, and preparing yourself again you move into their maze-like fortress. You are more careful this time in regards to the cars and supports in the area, but it still isn't long before the noise of your passage alerts the dangerous wolverines as to your arrival, and you brace yourself for a tough fight!";
@@ -170,16 +170,16 @@ to hardwarefortphase3:
 				fight;  [third fight if returning attempt]
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     One of the horsemen gives you an approving nod as you finish driving off the last of the beasts attacking your part of the fort. You feel rather proud of yourself as you look behind you at all the work being done at the store, as items are efficiently loaded up onto makeshift carts and the forklifts move some of the cars around so they have better access to the store itself. One of the equines at the wall gestures at you, and you glance over just in time to catch the medkit he tosses at you with an equine grin on his muzzle. Nodding in thanks, you begin to start patching yourself up slightly, only to be interrupted by several large shadows sweeping over the area, it looks like the aerial creatures have decided to bypass the fort and start attacking you and the others directly!";
-				increase hp of player by 20;
-				if hp of player > maxhp of player, now hp of player is maxhp of player;
+				increase HP of player by 20;
+				if HP of player > maxHP of player, now HP of player is maxHP of player;
 				increase carried of medkit by 1;
 				hardwarefortphase4;
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
 		say "     One of the horsemen gives you a pat on the shoulder as he helps you up after driving off the rest of the creatures. And while you are certainly embarrassed at the situation, and having needed their help at this point, at least they managed to keep things going while you were being [']entertained['] by your recent partner. Feeling somewhat weak after the exertion, when one of them hands you a draft beer and a medkit, you only nod gratefully as you drain the cool drink. You blink for a moment in surprise though as you feel a surge of power shoot through you, and groan as you realize it was a draft horse beer you just drank, and while it definitely makes you feel a bit better, you can already feel your body changing in response. Though you have little time to comment or react as several shadows blot out the sky, and you realize some of the aerial creatures have arrived and are attacking you and your fellow lookouts directly!";
 		infect "Horseman";
 		infect "Horseman";
-		increase hp of player by 40;
-		if hp of player > maxhp of player, now hp of player is maxhp of player;
+		increase HP of player by 40;
+		if HP of player > maxHP of player, now HP of player is maxHP of player;
 		increase carried of medkit by 1;
 		hardwarefortphase4;
 	else if fightoutcome >= 30:	[fled any fight]
@@ -295,9 +295,9 @@ to hardwarefortphase4-20plus:
 to hardwarefortphase4fail:
 	Say "     Driven back once again by the assault of the flying creatures, the horsemen are forced to scatter and take cover. Driven from their work site again, they feel in an angry, disorganized mess. In the chaos though, you are grabbed by the team's foreman and, after being given several very powerful punches to your already abused body, you are heaved by him right back into the fray.";
 	say "     'Youz done made a stinkin['] mess ah this and we'z all sick ah it. Let dah beasts have you, yah wretch,' he yells as you fly what must be [if scalevalue of player < 3]over 25 feet[else if scalevalue of player is 3]over 15 feet[else if scalevalue of player is 4]over ten feet[else]almost ten feet despite your massive size[end if]. As you struggle to get back up after that, you hear him call for his stallions to grab what they can and run for it. Before you can rise, you're attacked by another of the fearsome flyers.";
-	decrease hp of player by 20;
-	if hp of player > 0:
-		now hp of player is hp of player / 2;
+	decrease HP of player by 20;
+	if HP of player > 0:
+		now HP of player is HP of player / 2;
 	challenge "Hawkman";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having beaten the lustful hawkman, you make a break for it while you still can. You can see that many of the horsemen have already made their escape while others are still struggling to get away and others still probably never will, claimed as prey, playthings or mates for the assaulting flyers.";
@@ -324,7 +324,7 @@ to hardwarefortphase5:
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
-	if diceroll is greater than 16:
+	if diceroll > 16:
 		say "Making lots of noise to draw their attention, you lead the creatures on a merry chase around this part of the city. You finally manage to lose the last of them near the library itself. Panting with exertion and actually feeling rather hopeful, you duck into the library, eager both for a bit of rest after your long day[if recoveredhardware < 2], and to take a look at the new sledgehammer the horseman handed you[end if].";
 	else:
 		say "You lead the creatures away from the hardware store for a while, but it isn't long before you are outmanoeuvred in the narrow streets, and brought to bay as several of the horny creatures close in on you!";
@@ -383,19 +383,19 @@ Instead of Resolving a horsepowering:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 14:
+		if diceroll > 14:
 			say "After an hour of examining the situation and referring to the books you brought several times, you think you have worked out what you need to do to get things up and running. Unfortunately it looks like it will require some very delicate wiring on your part, and you begin to carefully apply yourself to the rather dangerous problem, hoping you can manage to get it sorted without too much trouble.";
 			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
-			if diceroll is greater than 14:
+			if diceroll > 14:
 				say "After several hours of careful and conscientious work, you think you are finally ready to try out your modifications to the generator and the electrical system. With a nervous smile you reach over and switch the generator on, bracing yourself just in case your modifications somehow make the whole thing explode or burn the place down around your head. Fortunately, while the generator is quite loud, and the sound of all the machinery in the room starting up does make you jump, your attention to detail and careful hands seem to have resulted in a disasterless generator installation! Grinning happily with relief, you leave the heavy reference books here in case you or some other horse needs them for repairs later, and shut the heavy double doors behind you as you head back out into the Stables. You can't wait to see Fancy's reaction to this latest triumph of yours, and the other equines reaction too of course...";
 				now generatorfixing is 4;
 				now horsepowering is resolved;
 			else:
 				say "Everything is going fine with the wiring until you slip at just the wrong moment and let one of the bare wires you are patching touch you. The world flashes in rainbow colours for a minute as you spasm and flail in agony, destroying most of your work and scattering your notes all over the place. Fortunately you only brushed the wire, but it is still enough of a shock that it takes you several minutes to recover, and your mouth tastes of ozone. Looking down at your shaking hands, you sigh and realize you won't be able to continue any kind of delicate work for a while, and proceed to gather your books back up and stagger out into the Stables proper, forced to come back and start over again at a later time.";
-				decrease hp of player by 25;
+				decrease HP of player by 25;
 				increase thirst of player by 10;
 				stop the action;
 		else:
@@ -431,7 +431,7 @@ Instead of resolving a technicalbookstore:
 		say "Wandering the streets of the city, you come across a small almost overlooked bookshop that appears to be stuffed with survival guides and useful technical manuals. Deciding on impulse to check inside to see if there is any useful information for your current situation, you carefully slip inside the store, the smell of sex filling your nose as you enter, and you can see that someone has been enjoying themselves in here for quite some time. Sexual fluids stain the floor, and several of the books have obviously been used as masturbatory aids rather recently, moving deeper in carefully, you startle the creature which has obviously been either stuck in here for a while, the lust-filled beast reaching for you eagerly!";
 		fight;
 		say "The fight over, and the creature having left through the door you left open when you entered, you gather your wits around you and begin to look around for some book or bit of information worth all the effort. Unfortunately, while you find survival guides for everything from zombie apocalypses, to nuclear winter, but the only survival guide dealing with any situation even remotely resembling your own, happens to be a guide to a computer game! Idly flipping through the 'Flexible Survival' Strategy guide, doesn't seem to help you too much, although several of the tips in there might actually come in handy you think as you slip back out into the city again.";
-		increase xp of player by a random number between 1 and 10;
+		increase XP of player by a random number between 1 and 10;
 
 
 
@@ -486,7 +486,7 @@ instead of resolving a Horsepitfight:
 			challenge "Horseman";
 			challenge "Horseman";
 			if lost is 0:
-				say "As the last of the powerful stallions fall before you, you hear the room around you erupt into cheering, much to your surprise. The loud noise startling you after your intense concentration on the combat, though as you look around now, you can see your fight has seriously impressed the gathered stallions. Looking down at the defeated horsemen, you can see from their groggy looks of awe, that you won't be facing any problems from that direction either. You feel a grin splitting your face as you look around the room in triumph, and several of the stallions come by to clap you on the back companionably before they let you leave the room. As you head back through the Stables to the entrance, you find yourself feeling pretty confidant that Fancy won't have any more trouble getting those stallions agree to work with you.";
+				say "As the last of the powerful stallions fall before you, you hear the room around you erupt into cheering, much to your surprise. The loud noise startling you after your intense concentration on the combat, though as you look around now, you can see your fight has seriously impressed the gathered stallions. Looking down at the defeated horsemen, you can see from their groggy looks of awe, that you won't be facing any problems from that direction either. You feel a grin splitting your face as you look around the room in triumph, and several of the stallions come by to clap you on the back companionably before they let you leave the room. As you head back through the Stables to the entrance, you find yourself feeling pretty confident that Fancy won't have any more trouble getting those stallions to agree to work with you.";
 				now provingstallionhood is 3;
 				now Horsepitfight is resolved;
 			else:

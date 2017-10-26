@@ -60,7 +60,7 @@ Version 1 of Erica by Wahn begins here.
 
 CarlEricaInteraction is a number that varies.
 
-instead of going inside from the Grey Abbey Library while (Dexterity of Erica is 0 and (hp of Eric > 9 and hp of Eric < 16)):
+instead of going inside from the Grey Abbey Library while (Dexterity of Erica is 0 and (HP of Eric > 9 and HP of Eric < 16)):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC/ERICA QUESTION[line break]";
@@ -178,7 +178,7 @@ Section 1 - Erica the female athlete
 
 [Smells, Description, Conversation and NPC Interaction]
 
-Erica is a woman. The hp of Erica is normally 0. The Dexterity of Erica is normally 0.
+Erica is a woman. The HP of Erica is normally 0. The Dexterity of Erica is normally 0.
 The description of Erica is "[Ericadesc]".
 The conversation of Erica is { "Mew!" }.
 
@@ -190,7 +190,7 @@ instead of sniffing Erica:
 
 to say Ericadesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Erica], DEXTERITY: [Dexterity of Erica], THIRST: [thirst of Erica], LIBIDO: [libido of Erica], LUST: [lust of Erica], LEVEL: [level of Erica], XP: [xp of Erica] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Erica], DEXTERITY: [Dexterity of Erica], THIRST: [thirst of Erica], LIBIDO: [libido of Erica], LUST: [lust of Erica], LEVEL: [level of Erica], XP: [XP of Erica] <- DEBUG[line break]";
 	say "     Erica is a college age young woman with ginger hair, light skin and quite a few freckles. Her unlined face has a very cute look to it and she often smiles while talking. She's wearing a black t-shirt that shows off the alluring bumps of her perky B-cup breasts. Under that, the college athlete has red running shorts on, giving you a good look at those long legs that clearly show she's a runner. All in all, a very nice package - nicely muscled, while still being lithe and lean. Her left underarm shows a thin oval line of redness - a fading scar from the bite that started her initial transformation. [if UrikEricInteraction > 6]Erica also bears two small healed puncture marks just above her collarbone on the right - an affectionate mark of being Urik's honorary orc breeder slut.[end if]";
 	LineBreak;
 	say "     She's lived herself in at the bunker by now, and it looks like she has gone out and brought some more of her stuff in here in the meantime. Beside her camp bed there are several sports bags full of clothing and supplies, and a baseball bat rests against it for when she goes outside. You often see her stretching and working out - like right now for example, as you stop and watch her move her inviting lithe body. Erica notices you standing there, and gives you a shy smile, then goes on with her exercises.";
@@ -256,7 +256,7 @@ to say EricaTalk2:
 Section 3 - Fucking Erica
 
 Instead of fucking the Erica:
-	if (hp of Erica is 0): [virgin woman]
+	if (HP of Erica is 0): [virgin woman]
 		if (cocks of player > 0):
 			say "     Stepping up to Erica, you embrace her and give her a deep kiss. When you come back up for air, you look deep into her eyes and ask to be her first man and show her what it really means to be a woman. There's only a short moment of hesitation, then Erica nods and leans her head forward to kiss you back.";
 			say "     The two of you make out for a moment, holding on to each other. In between playful tongue-wrestling, you let your hands wander all over her, feeling up her slender body, cupping the perky breasts through her t-shirt and giving those nice firm buns of her ass a slight squeeze. While she still has the build of an athlete, it is clearly a female now, with feminine curves in addition to toned muscle. Eager to get get to know her more intimately, you grab her by the hand and lead the young woman to your bunk.";
@@ -268,12 +268,12 @@ Instead of fucking the Erica:
 			WaitLineBreak;
 			say "     You rest your hard shaft inside Erica for a moment to allow her to get used to it, then start moving in and out, moaning in unison with your handsome athlete. Her legs wrap around your hips and pull you tight against her with each of your thrusts. Fucking this tight virgin pussy has you incredibly aroused and you have to control yourself pretty hard to last at least a little bit longer. And you're not the only one - soon Erica's moans and groans rise to a pretty noisy climax and you feel the femcum leak from her pussy and squirt out around your cock. She pulls you down on top of her, going for a breathtaking kiss, then whispers 'Finish it - come inside me.'";
 			say "     Giving her another quick kiss on the lips, you eagerly follow the beautiful student's request and pump your hips up and down rapidly, thrusting hard and deep into her body. With your cock already primed and ready to go, it takes just a few more thrusts for the cum to boil up from your balls and pulse through your cock, spurt after spurt blasting into her. You fill Erica's pussy with your fertile seed, feeling a deep satisfaction as you imagine the millions of little swimmers invading her womb in search of an egg. Your cock still inside her, the two of you move to lie on your sides on the bed, holding each other and reveling in post-coital bliss. Lying there, Erica softly strokes your side and says 'That was amazing - thank you.'";
-			now hp of Erica is 1;
+			now HP of Erica is 1;
 			now thirst of Erica is 1;
 			now lastfuck of Erica is turns;
 		else:
 			say "     Stepping up to Erica, you embrace her and give her a deep kiss. She practically melts into your arms as you hold her, eagerly returning your attentions with more kisses while her hands roam over your body. Looks like she's ready and willing to lose her virginity now - too bad you don't have the right 'equipment' for that at the moment... better try again later once you've gotten a cock to fuck her with.";
-	else if (hp of Erica is 1): [female repeat sex]
+	else if (HP of Erica is 1): [female repeat sex]
 		if (lastfuck of Erica - turns < 6):
 			say "     As you approach Erica, she immediately sees the lust-filled twinkle in your eyes. Running a hand up the side of your arm and stroking your cheek, the attractive college student says, 'I love you baby, but I need some rest in between. Can we play another time?' She gives you a soft kiss on the lips as you nod, already thinking about what you want to do with her later.";
 		else:
@@ -314,13 +314,13 @@ to say EricaSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Fill your horny friend's ass with your cock";
 	[]
-	if hp of Erica is 1 and lust of Erica is 3 and hp of David is 4 and lastfuck of David - turns >= 6: [Erica ready for sex with David, non-virgin female, David in the bunker and ready]
+	if HP of Erica is 1 and lust of Erica is 3 and HP of David is 4 and lastfuck of David - turns >= 6: [Erica ready for sex with David, non-virgin female, David in the bunker and ready]
 		choose a blank row in table of fucking options;
 		now title entry is "Have David fuck Erica's pussy";
 		now sortorder entry is 6;
 		now description entry is "Make the soldier boy fuck Erica";
 	[]
-	if lust of Erica is 4 and hp of David is 4 and lastfuck of David - turns >= 6: [David+Erica had sex, David in the bunker and ready]
+	if lust of Erica is 4 and HP of David is 4 and lastfuck of David - turns >= 6: [David+Erica had sex, David in the bunker and ready]
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with David and Erica";
 		now sortorder entry is 7;
@@ -573,7 +573,7 @@ to say EricaSex8_2_Female: [Erica]
 
 Section 4 - Events
 
-instead of navigating Grey Abbey Library while (level of Erica is 0 and Felinoid Companion is tamed and (hp of Erica is 1) and (lastfuck of Erica - turns) > 12):
+instead of navigating Grey Abbey Library while (level of Erica is 0 and Felinoid Companion is tamed and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -607,7 +607,7 @@ instead of navigating Grey Abbey Library while (level of Erica is 0 and Felinoid
 		now level of Erica is 1;
 		now lastfuck of Erica is turns;
 
-instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and level of Erica is 4 and hp of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and level of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -618,7 +618,7 @@ instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and 
 	say "     The animalistic coupling of the felinoid and his entranced partner is quite a show - between seeing the curves of Erica's shapely breasts swing with each new thrust and the play of trained muscles on their naked bodies, it drives your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Erica's pussy relentlessly, until finally the beautiful redhead's moans and noises rise up to a climactic shout, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and then holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Erica with her, still impaled on the hard shaft inside her and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Erica is turns;
 
-instead of going inside from Grey Abbey Library while (Level of Erica > 0 and Level of Erica < 4 and Erica is in Bunker and hp of Erica < 99):
+instead of going inside from Grey Abbey Library while (Level of Erica > 0 and Level of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERICA POST-FELINOID-SEX WALKIN [line break]";
@@ -640,7 +640,7 @@ instead of going inside from Grey Abbey Library while (Level of Erica > 0 and Le
 		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining to her that you're not angry or anything. After all, it's partly your fault for bringing the felinoid here with you (and letting him fuck Erica, but she doesn't need to know that). Telling Erica just not to fall for the felinoid's charms and arousing musk again, you give the visibly relieved athlete a kiss on the cheek and leave her to get back to her bunk.";
 		now Level of Erica is 99;
 
-instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and (hp of Erica is 1) and (lastfuck of Erica - turns) > 12):
+instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -655,7 +655,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 		say "     Walking into the same space between the bookshelves that you saw your two companions go into, you spot Erica some distance ahead of you, crouched down in front of a shelf and still checking out books, totally oblivious to Fang stalking her. Then the dark-furred wolf catches up to the young woman and pounces, hitting her with both front paws in the back and making her fall over on all fours, with the books she was holding tumbling on the floor. 'Hey, what are you doing,' the college athlete starts to exclaim - only to fall silent with a frightened 'Eeep' when she turns her head to face her attacker and finds herself face to face with a snarling and dominantly growling Fang. With Erica frozen motionless from seeing the wolf's sharp fangs bared at her, the feral beast raises a paw and pushes down on her shoulders, successfully managing to make her lower her front some more, now looking up at him in a classically submissive pose.";
 		say "     Then, giving a commanding growl that you think might mean 'stay', the wolf pads around his prey, sticking his nose in between her legs from behind and taking a deep sniff. It's obvious that Fang likes the young woman's scent quite a bit - as his knotted shaft starts to push out from its sheath and he gives aroused growls and pants. A moment later, the feral wolf nips at Erica, catching her shorts between his teeth and giving them a tug downwards, baring her shapely behind and the white panties that form the last barrier between him and this young woman's pussy. Interestingly, you notice that the silky material of Erica's underwear is rather damp at the front - almost as if she can't help but be aroused from the situation she now finds herself in.";
 		LineBreak;
-		if hp of Fang < 3: [Beta Fang can be stopped]
+		if HP of Fang < 3: [Beta Fang can be stopped]
 			say "     The sound of ripping cloth as Fang takes Erica's panties between his teeth and wrenches them off her body breaks you out of the stasis in which you watched what has been going on. If you want to stop Fang, now would be the time to do it!";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Pull the wolf off Erica right now.";
@@ -795,7 +795,7 @@ instead of navigating Grey Abbey Library while (Erica is in Bunker and Carl is i
 			say "     DEBUG: Erica & CARL SPEND TIME TOGETHER 4 - CarlEricInteraction: [CarlEricInteraction]";
 		say "[EricaCarlScene4]";
 
-instead of navigating Grey Abbey Library while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastCarlEricInteraction - turns > 6) and hp of Erica > 0 and hp of Erica < 21 and a random chance of 1 in 4 succeeds):
+instead of navigating Grey Abbey Library while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastCarlEricInteraction - turns > 6) and HP of Erica > 0 and HP of Erica < 21 and a random chance of 1 in 4 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -838,7 +838,7 @@ to say EricaCarlScene3:
 
 to say EricaCarlScene4:
 	say "     Coming into the library, you see Carl and Erica do another stint of jogging together, coming out of the long rows of shelves side by side in casual conversation as they go along. Seeing you as they reach the end of their run, the human and husky wave in greeting, then Carl tells his friend with a smile, 'Nice workout. I'm so glad to have someone to hang out with.' Erica gives him a beaming grin and replies, 'Right back at you. Always a pleasure Carl.' And with that, the young woman says she wants to cool down a bit and read, then starts walking to the bunker entrance door. The canine soldier gives you a sidelong glance that tells you he wants to talk, but you notice his eyes barely leave Erica's backside. He is checking the young woman out as she walks away, tail wagging excitedly as he clearly likes what he sees.";
-	if hp of Carl < 11: [regular Carl]
+	if HP of Carl < 11: [regular Carl]
 		say "     By the time you've walked over to Carl, Erica is through the bunker door and on her way down, leaving your resident soldier to turn to you. 'She's quite something, isn't she?' Carl says distractedly with a last glance at the door as it closes slowly on its own. It is clear that he doesn't really expect an answer, and he shakes off whatever thought was in his mind a second later, then turns his whole attention to you. 'Hey there, I wanted to ask you something. With you kinda being the landlord here, giving me a place to stay in all this chaos... would you be okay with it if I had some fun with... someone? Just hypothetically, you know. Don't worry, I don't plan to build a husky harem.'";
 		LineBreak;
 		say "     It is fairly clear who he's eluding to. What's your reply?";
@@ -852,7 +852,7 @@ to say EricaCarlScene4:
 			LineBreak;
 			say "     Reaching out to give the muscular soldier's shoulder a firm squeeze, you put on a serious expression and tell him that he should focus on his duty. Some of the people in the city are hanging on to their humanity by the barest thread, and it'd be bad to have someone succumb right here in the library. It is easily visible how disappointed the man his - from his drooping tail and flopping-down ears to a little grimace on his muzzle, but he accepts your decision nonetheless. With a nod, he trots off towards the stairs and makes his way to the upper story of the library.";
 			now CarlEricInteraction is 50;
-	else if hp of Carl is 30: [subby Carl]
+	else if HP of Carl is 30: [subby Carl]
 		say "     By the time you've walked over to Carl, Erica is through the bunker door and on his way down, leaving your resident soldier to turn to you. 'She's quite something, isn't she?' Carl says distractedly with a last glance at the door as it closes slowly on its own. Then a visible change goes through Carl as he remembers your status over him - lowering his head submissively, the anthro husky turns to you. 'Alpha, I wanted to ask you something. With you giving me a place to stay in all this chaos and being my pack-leader... would you be okay with it if I had some fun with... someone? Just hypothetically, you know.'";
 		LineBreak;
 		say "     It is fairly clear who he's eluding to. What's your reply?";
@@ -867,7 +867,7 @@ to say EricaCarlScene4:
 			say "     Reaching out to raise Carl's muzzle so he can look you in the eye, you give a definite shake of your head and tell him to forget about it. You're his alpha, so it is his job to obey you - and you don't want him humping Erica right now. It is easily visible how disappointed the man his - from his drooping tail and flopping-down ears to a little grimace on his muzzle, but he accepts your decision nonetheless. With a nod, he trots off towards the stairs and makes his way to the upper story of the library.";
 			now CarlEricInteraction is 50;
 	else:
-		say "     ERROR - Carl isn't in the state he should be in. Please report this on the FS forum and quote the hp of Carl: [hp of Carl]";
+		say "     ERROR - Carl isn't in the state he should be in. Please report this on the FS forum and quote the HP of Carl: [HP of Carl]";
 	now lastCarlEricInteraction is turns;
 
 to say EricaCarlScene5:
@@ -1203,7 +1203,7 @@ to say EricaCarlThreesome8: [player rides Carl's cock while Eric straddles his f
 	say "     <This scene is WIP, please have some patience for the next update>";
 
 [
-instead of navigating Grey Abbey Library while (Fang Companion is tamed and XP of Erica is 4 and hp of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (Fang Companion is tamed and XP of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1214,7 +1214,7 @@ instead of navigating Grey Abbey Library while (Fang Companion is tamed and XP o
 	say "     The animalistic coupling of Fang and his entranced partner is quite a show - between seeing the curves of Erica's shapely breasts swing with each new thrust and the play of trained muscles on their naked bodies, it drives your arousal to new heights as you watch. With the stamina of a wild beast, Fang drives his cock into Erica's pussy relentlessly, until finally the beautiful redhead's moans and noises rise up to a climactic shout, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, Fang isn't far behind, burying his hard cock all the way in the young human's pussy and then holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Erica with her, still impaled on the hard shaft inside her and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Erica is turns;
 
-instead of going inside from Grey Abbey Library while (XP of Erica > 0 and XP of Erica < 4 and Erica is in Bunker and hp of Erica < 99):
+instead of going inside from Grey Abbey Library while (XP of Erica > 0 and XP of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERICA POST-Fang-SEX WALKIN [line break]";
@@ -1240,7 +1240,7 @@ instead of going inside from Grey Abbey Library while (XP of Erica > 0 and XP of
 Section 5 - Endings
 [
 when play ends:
-	if (hp of Erica is 0):
+	if (HP of Erica is 0):
 		say "     A";
 	else:
 		say "     B";

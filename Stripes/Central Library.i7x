@@ -385,9 +385,9 @@ to say libraryexplore:
 		say "[libbook7]"; [animal handling]
 		now bookfound is 7;
 	attempttowait;
-	if xp of player is greater than ( level of player plus one ) times 10:
+	if XP of player > ( level of player plus one ) times 10:
 		level up;
-	else if "Fast Learner" is listed in feats of player and xp of player is greater than ( level of player plus one ) times 8:
+	else if "Fast Learner" is listed in feats of player and XP of player > ( level of player plus one ) times 8:
 		level up;
 	say "     You turn back to the stacks, but bump the shelf behind you with your pack, sending several tomes onto the floor. Their thumps on the stone floor reverberate through the quiet library. Before the sound has a chance to fade, you start to hear a loud [']Shhh!['] from somewhere in the distance, then another, and another. The sound of flapping fills the air as the shushing sounds start to travel around the room. You try to make your way back to your exit, but a pair of taloned feet swoop in. You manage to dodge to the side, getting pushed into the open reading area. You quickly note that this area is overlooked by all the floors above and that you are not alone here.";
 	say "     You find yourself surrounded by harpies whirling around in the air and swooping down to attack you. The one who chased you out from the stacks is similar to the others you've seen outside, but with her grey hair in a tight bun and a pair of reading glasses dangling on a chain. Her eyes are wild with anger at the disturbance to her library.";
@@ -466,7 +466,7 @@ to say libbook1:
 	add 1 to bookcollection;
 	if "Martial Artist" is listed in feats of player:
 		say "     You have gained [bold type]50 XP[roman type] from reading the book.";
-		increase xp of player by 25;
+		increase XP of player by 25;
 	else:
 		add "Martial Artist" to feats of player;
 		say "     You have gained the [bold type]Martial Arts[roman type] feat.";
@@ -484,7 +484,7 @@ to say libbook3:
 	say "     You come across a book on animals with plenty of photos to help you identify the various creatures you may encounter in the city. The book has many details on the habits, abilities and hunting/defensive techniques of the creatures as well. It is a veritable font of knowledge, giving your altered mind lots of scattered information that may improve your chances dealing with the hordes out there[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 3 to bookcollection;
 	say "     You have gained [bold type]50 XP[roman type] from reading the book.";
-	increase xp of player by 25;
+	increase XP of player by 25;
 	if player is in Grey Abbey Library, follow the turnpass rule;
 
 
@@ -493,7 +493,7 @@ to say libbook4:
 	add 4 to bookcollection;
 	increase carried of Wild Animals by 1;
 	say "     You have gained [bold type]25 XP[roman type] from reading the book.";
-	increase xp of player by 10;
+	increase XP of player by 10;
 
 
 to say libbook5:
@@ -506,7 +506,7 @@ to say libbook5:
 to say libbook6:
 	say "     You find a book on first aid which might be of use to you. The small pocket-sized book seems to cover most common injuries and how to treat them. While certainly no match for proper training, it should still help you deal with any unfortunate injuries and help you heal faster through proper care and treatment. You put it in your pack and remind yourself to consult it should you get hurt out in the city or when trying to use a medkit.";
 	add 6 to bookcollection;
-	say "     While the manual is in your possession, you will regain health at the rate of 1 faster each turn and recover 2 more hp when using a healing item (unless superseded by the Expert Medic feat).";
+	say "     While the manual is in your possession, you will regain health at the rate of 1 faster each turn and recover 2 more HP when using a healing item (unless superseded by the Expert Medic feat).";
 	increase carried of First Aid Manual by 1;
 
 
@@ -515,9 +515,9 @@ to say libbook7:
 	add 7 to bookcollection;
 	if "Good Teacher" is listed in feats of player:
 		repeat with z running through pets:
-			increase xp of z by ( level of player + 1 ) * 3;
-			say "     You have gained [bold type]10 XP[roman type] from reading the book and your pets have all gained xp as well.";
-			increase xp of player by 10;
+			increase XP of z by ( level of player + 1 ) * 3;
+			say "     You have gained [bold type]10 XP[roman type] from reading the book and your pets have all gained XP as well.";
+			increase XP of player by 10;
 	else:
 		add "Good Teacher" to feats of player;
 		say "     You have gained the [bold type]Good Teacher[roman type] feat.";
@@ -598,7 +598,7 @@ instead of using First Aid Manual:
 
 the scent of First Aid Manual is "     It smells like an old book.".
 
-Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mattintel is 0 and ( hp of doctor matt > 0 and hp of doctor matt < 100 ):
+Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mattintel is 0 and ( HP of doctor matt > 0 and HP of doctor matt < 100 ):
 	say "     As you're about to talk to Dr. Matt, you consider passing along intel on the creatures in the city, which he can then relay to the military to help in their planning. With your knowledge from the book, you know which information is most likely to cause them to rethink and delay their plans. This would then buy you more time in the infected city, possibly buying you and Dr Matt more time to investigate what's happening, or just so you can do as you please in this fallen city.";
 	say "     [bold type]Shall you relay this intelligence to the military?[roman type][line break]";
 	LineBreak;

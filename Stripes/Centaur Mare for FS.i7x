@@ -21,7 +21,7 @@ to say losetocentaurmare:
 		say "     Seeing exactly what she wants, the centaur mare turns around and flicks her tail aside, giving you a clear view of her dripping, winking, equine cunt. Unable to help yourself, you dive forward and plunge your [cock of player] cock into the large centaur's equine body repeatedly. She whinnies and moans in pleasure as you fuck her, [if cock length of player < 15]your shaft underwhelming in size compared to her equine cunt, but you make up for it with your wild enthusiasm[else if cock length of player <= 30]your enlarged shaft a good fit for the needy mare's cunt[else]your [cock size desc of player] shaft able to more than fill the needy mare's cunt[end if]. Lost in the excitement of the scent of her heat, it is only after a few wild thrusts that you cum inside her. Snorting at the disappointingly short fuck, she gives a violent kick to your gut and she gallops off while you're stunned.";
 	else:
 		say "     Not seeing what she wants, the centaur mare knocks you roughly to the ground and cuffs you hard on the side of the head, ordering you to get licking. And with that, she turns around and flicks her tail aside, giving you a clear view of her dripping, winking, equine cunt. Unable to help yourself, you dive forward and press your face to her juicy folds, lapping at them as her aroused juices flow down your face. She whinnies and moans in pleasure as you eat her out, the scent of her heat driving you wild. The scent is so strong that you can't help but pleasure yourself as well[if cunts of player > 0]stuffing several fingers into your cunt[sfn][else]groping any sensitive or erogenous zone your neutered body still has[end if]. Eventually, you become so distracted by your arousal that you quickly neglect her pussy entirely in your lustful daze. Snorting at the disappointingly short licking, she gives you a violent kick to your gut and gallops off while you're stunned.";
-	decrease hp of player by 10;
+	decrease HP of player by 10;
 	if "Male Preferred" is listed in feats of player and guy is not banned:		[change target to Stallion for infection]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
@@ -38,7 +38,7 @@ to say beatthecentaurmare:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -65,8 +65,8 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 14;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 32; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 32; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']

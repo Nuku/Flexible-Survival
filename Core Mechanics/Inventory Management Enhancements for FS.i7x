@@ -27,7 +27,7 @@ Carry out masslittering something(called x):
 		repeat with z running from 1 to found:
 			add printed name of x to invent of location of player;
 		now carried of x is 0;
-		if found is greater than 0:
+		if found > 0:
 			say "You set down [found] x [x].";
 
 criminallittering is an action applying to nothing.

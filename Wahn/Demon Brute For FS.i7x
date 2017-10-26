@@ -494,7 +494,7 @@ instead of trading the demon tooth when the current action involves the Nermine:
 						now DBCaptureQuestVar is 5;   [captured and controlled]
 						now demon brute is tamed;
 						LineBreak;
-						say "     (That demon brute is now controlled! You can make him your active companion by typing [bold type][link]pet demon brute[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck demon brute[end link][roman type]. You can see all the pets and followers you have with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to leave a companion home for a while and go out alone? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+						say "     (That demon brute is now controlled! You can make him your active companion by typing [bold type][link]pet demon brute[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck demon brute[end link][roman type]. You can see all the pets and followers you have with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to leave a companion home for a while and go out alone? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 						choose blank row from Table of confession entries;
 						now title entry is "Ask about the possibility of freeing a demon of his inner evil";
 						now description entry is "";
@@ -780,7 +780,7 @@ to say DBTalk2:
 			let diceroll be a random number from 1 to 20;
 			increase diceroll by bonus;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
-			if diceroll is greater than 14:
+			if diceroll > 14:
 				say "     With some carefully chosen words, you get Brutus to open up fully. A desperate look fills his eyes as he gives a shuddering breath, then says 'I care for him, more than I ever have for anyone. More than... for my life. But at the same time, I feel I should just grab him, hold him down and fuck him. Hard. Rough. Again, and again - all the time! Fill him with my seed! Never let him go. Never!' He huffs and growls as the words burst forth, clenching his fists hard to bring himself under control again. You can see droplets of purple blood drip down from his hands, showing that he is pushing hard enough to let his claws pierce their palms. Staring at his feet, Brutus then adds, 'I did not want either of you to know, think less of me. I will not act like a beast again. It is... under control.'";
 				say "     He isn't able to lie right now, not consciously, but... the slow drip of blood from both his clenched fists tells you that Brutus is deceiving himself. He seems to be barely holding on to his composure, and is hurting himself to manage even that. This might escalate badly, so you have little choice but to expressly forbid him from acting on those impulses. As you do so, the amulet glows briefly in purple light and gets noticeably warm for a second. You can feel a tingle run down your spine as the controlling magic snaps tight around Brutus mind, straining to enforce your ruling. Something tells you the constant resistance of his deep-seated urges will put greater wear on it than all the random outbursts and flare-ups to escape by the original, evil Brutus.";
 				LineBreak;
@@ -885,7 +885,7 @@ to say DBTalk2:
 				say "     Still breathing hard from his orgasm and clutching David to his chest with one strong arm Brutus pats over the bed with his other hand, finding your amulet a moment later and raising it into the air by the leather cord it hangs from. A satisfied grin spreads over the demon's tooth-filled mouth, followed by him intoning a long and insanely tongue-twisting sequence of strange words. As he does so, the magical item starts to hum and glow visibly, the orb of brightness around it at first wavering a little bit, then expanding more and more. Finishing the intonation, the purple demon then continues in English, most likely to David's or your benefit. He says, 'I claim this man as mine, as he bears the mark of my seed deep inside him and has readily surrendered his will to mine,' followed by a kiss on the young man's lips. 'We'll be together forever now, my love, my slut, my David!'";
 				say "     With his words still hanging in the air, the sphere of purple light expands to envelop them both and with a flash of brightness, both of them vanish in a cloud of smoke, with swirls through the air in a small vortex, being absorbed by the amulet as it drops onto the bed. After a moment of silence that fills the bunker after the two male's disappearance, you shake yourself out of your paralysis and walk over to the bed, taking the amulet into your possession again. It is pretty hot at first, having gained a glowing band of metal at the base of the tooth now, but that rapidly cools and soon is safe to touch. With interest, you realize that the upper end of Brutus knocked-out tooth is now ringed by what must be the re-shaped remnant of David's dog tags, as you can see the stamped-in letters 'DAVID JACKSON' on the thin strip of metal.";
 				remove David from play;
-				now hp of David is 100;
+				now HP of David is 100;
 				now libido of David is 86;
 			else:
 				LineBreak;
@@ -1434,7 +1434,7 @@ to say DemonBruteSex9:    [player ass fucked]
 Section 3 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -1462,7 +1462,7 @@ When Play begins:
 	now int entry is 5;
 	now cha entry is 3;
 	now sex entry is "Male";
-	now hp entry is 50;
+	now HP entry is 50;
 	now lev entry is 5;
 	now wdam entry is 10;
 	now area entry is "Mall";
@@ -1523,12 +1523,12 @@ this is the bruteforce rule:
 	say "[one of]The demonic creature[or]The [name entry][or]Your enemy[or]The demon[purely at random] growls and charges you, pinning you against a wall briefly. It leans its strong, heavy body against yours and punches you several times in the [one of]gut[or]side[or]solar plexus[or]sternum[or]breadbasket[purely at random]. It then [if scalevalue of player < 4]tosses you aside[else]shoulders you back[end if] roughly with another growl, sending you tumbling. You suffer [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield while pinned]
-	if absorb is greater than dam:
+	if absorb > dam:
 		now absorb is dam;
-	if absorb is greater than 0:
+	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease hp of the player by dam;
-	increase hp of player by absorb;
+	decrease HP of the player by dam;
+	increase HP of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 
@@ -1539,7 +1539,7 @@ Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "demon brute":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You find yourself overcome with lust, your balls simply aching, ready to burst. You need to find some relief, and soon!  You go on a proper rampage, pushing over small trees and walls, and smashing in windows, and generally wreaking havoc. You eventually spot what you want, a woman in her prime. She is a [one of]human-feline mix, with large cat-ears, a tail, and beautiful black fur[or]husky-human mix, with soft white and grey fur and a puffy white-grey tail[at random]. You seize her, and, without much resistance on her part, are able to gain control. You tear her clothes away, revealing her naked, furry body. She seems too overcome with lust to worry about the size of your cock. But, then again, you aren't the only one with a large tool, and you aren't the first to rut with this girl. She wraps her arms and legs around your large body, her wet sex exposed and moistening, ready for your massive meat. You thrust into her without hesitating, and before long the both of you are moaning and grunting two lust-filled monsters mating like the animals they have become. During the ordeal, the girl climaxes several times, each time becoming more intense than the last. You can feel that you are approaching your climax as well, and your grunts become more frequent. Then, as she is hit by her most powerful orgasm yet, her tight sex squeezes your big meat, enough to push you ever the edge. You begin to come, shooting your seed up inside your new bitch. She pants and moans as your cum fills her womb, causing it to swell to a great size. Massive quantities of cum spill out onto the ground beneath your feet, and a constant stream of it is leaking out around your cock. You realize that this ordeal was too much for the girl, and that she has passed out. Since you really enjoyed your time with this girl, you decide to hold onto her as you disappear back to your den, that safe-room you started your journey in. You set up the cot, and then lay her down on it, her pussy still leaking fluid. Months of wild mating later, and she is heavily pregnant with your brood, which gives you the utmost satisfaction.";
 		else:
 			say "     You are eventually found by a rather strange man, leading a group of explorers through the city. He walks up to you, and holds out his hand. He introduces himself as a adult film producer with a special request. He says that you would make the perfect monster to fill the part of the evil demon-lord in a live-action version of a hentai anime series he has decided to produce. He offers you asylum, a mountain estate away from the peering eyes of society, and a large sum of money. How could you possibly turn that kind of an offer down? The series becomes [one of]a great success, with millions flowing in from frenzied fans. You become a hero to many hentai fans, and you can use all the fangirls you want..[or]a controversial work which ends up getting banned in several countries. The money soon dries up, and you are forced to move out, eventually joining a circus.[at random]";

@@ -20,7 +20,7 @@ to say salamanderdesc:
 
 to say losetosalamander:
 	if vorelevel is 3 and scalevalue of player < 4 and (a random chance of 1 in 4 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds)):
-		if hp of player > 0:
+		if HP of player > 0:
 			say "     When you submit to the red amphibian she exploits the opening by lashing you from afar with her elongated tongue. The hot, sticky thing clinging against your [bodytype of player] form, the creature reels you in close, wrapping the appendage around you, loop by loop, as it gets some slack from your approach.";
 			say "     Limbs bound by her tongue, her wide maw savours your compliance by doting on you, kissing and nuzzling your face. It's quickly apparent that she seems to be sizing you up, hot breath washing over you as you're given a glimpse into her crimson abyss of a maw. If you don't try to break free, it looks like you'll end up as a meal for salamander!";
 		else:
@@ -30,7 +30,7 @@ to say losetosalamander:
 		wait for any key;
 		salabind;
 	else:
-		if hp of player > 0:
+		if HP of player > 0:
 			say "     Rather than resist, you submit to the red amphibian. You allow her to push you to the ground, after which she moves atop you to have her way with you";
 		else:
 			say "     The red amphibian's latest blow leaves you weak and staggered. After that, she's easily able to knock you to the ground and moves atop you to have her way with you";
@@ -47,7 +47,7 @@ to say beatthesalamander:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -74,7 +74,7 @@ When Play begins:
 	now int entry is 9;
 	now cha entry is 9;
 	now sex entry is "Female";
-	now hp entry is 66;
+	now HP entry is 66;
 	now lev entry is 9;
 	now wdam entry is 8;
 	now area entry is "Capitol";
@@ -107,7 +107,7 @@ to salabind:
 	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
-		if hp of player > 0 or humanity of player < 50:
+		if HP of player > 0 or humanity of player < 50:
 			now obliging is true;
 		checkboundrecover;
 		if clearnomore is 0, clear the screen;
@@ -329,13 +329,13 @@ to say salastrugglebar:
 Section 4 - Endings
 
 when play ends:
-	if bodyname of player is "Salamander" and voreloss is true and humanity of player is less than 10: [Needs to be corrected if standard endings are added]
+	if bodyname of player is "Salamander" and voreloss is true and humanity of player < 10: [Needs to be corrected if standard endings are added]
 		say "     Doomed to be a plaything for the Salamander, she often enjoys your company both inside and outside of her. Having completely lost your sanity you can only eagerly oblige your fiery new mistress and attend to her every need. You memory soon becomes nothing more than a blur of your seemingly eternal attendance and the warm feel of her soft, inner flesh...";
 
 [
 when play ends:
 	if bodyname of player is "Salamander":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";

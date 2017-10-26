@@ -21,11 +21,11 @@ to say orcadesc:
 	say "     Looking over Killer Whale, his body is covered in the distinctive patterning of an orca on thick, sleek flesh. His head is sleek and streamlined, drawing to the rounded blunt muzzled shape of an orca. His mouth is filled with small sharp, dagger-like teeth. The blowhole on the top of his head occasionally opens to take a breath. His body is large and heavily muscled, but with the sleek shape of a swimmer. He stands easily ten feet tall. The large dorsal fin projecting from his back extends nearly a foot behind him in a sharp knife-like shape. His arms are dense with sleek muscle. His hands have a thick webbing between his fingers. His legs are humanoid in appearance, thick with powerful muscle. His ass is dense with muscle, supporting a thick and very muscular tail 4 feet in length ending in a whale's flukes. Between his powerful, swimmer's legs he has a titanic, sleek and curving cetacean cock. Beneath his impressive maleness is a large bulge, showing his swollen balls. While they would normally be internal on the oceanic creature, their apparent hugeness cannot be fully contained inside him and bulge out considerably.";
 
 to say losetoorca:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Not wanting to fight, you immediately drop to your knees and let the Killer Whale advance upon you. Grabbing hold of you, you're given a clear view of the beast's long, curving cock as it commences the ritual of relinquishing itself from it's beleaguered confines. 'Suck it!' He orders to you in a deep, rumbling command. ";
 	else:
 		say "     Seeing an opening, he relinquishes you of your leg's support by sweeping them away with his thick and powerful tail. On the ground and too weak to continue, the Killer Whale pulls you onto your knees, displaying for you a clear view of the beast's long, curving cock as it commences the ritual of relinquishing itself from it's beleaguered confines. 'Suck it!' He orders to you in a deep, rumbling command. ";
-	if libido of player > 40 or hp of player > 0:
+	if libido of player > 40 or HP of player > 0:
 		say "     Overwhelmed by lust, you shame your better senses as you engulf the emergent tip of the whale's cock within the confines of your [bodytype of player] lips, your olfactories flooded with the salty musk of the aquatic beast's arousal.";
 	else:
 		say "     You look reluctant to comply with such an order, and--perceiving this immediately--the orcaman grabs you by your head, carefully prying your [bodytype of player] maw loose so that he may so occupy this new void with his emergent cock, forcing you to taste his writhing, thick meat.";
@@ -115,7 +115,7 @@ to say orcavicsex2:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -142,8 +142,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 45; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 45; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 7; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -184,7 +184,7 @@ when play ends:
 			else:
 				say "     Lacking a gender of your own, you instead delight in turning others into orcas stroking theirs or rubbing their pussies, making them cum repeatedly as you transform them. You take particular amusement in watching them sate their new instinctual lusts for the first time.";
 		else:						[SURVIVE]
-			if hp of doctor mouse > 13:		[ALLIED W/DR MOUSE]
+			if HP of doctor mouse > 13:		[ALLIED W/DR MOUSE]
 				say "     When the military rescues you, you are pleased to find they've built some special holding facilities for those like yourself who have become partially aquatic creatures. There is some interest in you and the others and they get several marine biologists to study your group. Several members of the military speak to you as well. At first, it seems their interest is casual, but you soon catch on to what they're doing and you start talking to the others when they're not around. You argue against the military's offer to work for them, instead telling them you know someone who would be interested in their services and that he can help them with their infection. You keep your promises vague, but work to undermine the military's tempting offer to those who would otherwise feel they have no possible future. In the end, the military is only able to recruit a few of the people kept in your group, and predominantly those with lesser infections. Those more greatly infected and with more powerful bodies were more easily swayed by you.";
 				say "     After your release, you keep in contact with the most promising of those you spoke with, content to simply leave the others out of military control. When Dr. Mouse gets in touch with you, you relay your information to him and he happily thanks you for the addition of what will soon become his aquatic research material and sea forces to further his plans. Among the group is a shark-infected person who has managed to retain enough of their mind while being transformed enough to be quite powerful. You become mates and your hybrid children are composites of you both, strong and vicious. As they grow, you teach them to be powerful sea fighters and carry out raids upon coastal cities and towns or marine research facilities on any tasks the little mouse doctor needs taken care of by his loyal assistant and his aquatic family.";
 			else:					[NOT ALLIED W/DR MOUSE]

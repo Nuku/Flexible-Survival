@@ -92,7 +92,7 @@ to say beatthepsychoweasel:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -119,7 +119,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 45; [ The monster's starting hit points. ]
+	now HP entry is 45; [ The monster's starting HP. ]
 	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6; [ Monster's average damage when attacking. ]
 	now area entry is "Hospital"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -149,7 +149,7 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Psycho Weasel":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your experiences in this strange city gone mad overwhelm you, you do the only sane thing... you go insane as well. Released from the bonds of sanity, you feel so much better and run wild through the city. Overflowing with the strangeness you've witnessed, you start to babble wildly about it all, letting it loose in an incoherent stream of consciousness tirade. As you do this, you wander the city as if aimlessly, though somehow you find yourself at the city hospital. Inside, you are soon met by a friendly nurse and some strong orderlies who fit you in your very own snug straightjacket. Held in the psychiatric ward, you are tended to by several of the vixens and watched over by the big jaguars. They are nice to you, keeping bound up tight for your own good, but often willing to play with you when you'd been a good boy. Occasionally you get the urge to go wander the halls for fun and sneak out to play for a while before being brought back.";
 		else:
 			say "     You manage to survive your time in the city, but it's definitely taken its toll on your mind. You keep it together when the soldiers come through to rescue you, but end up breaking down while their experts try to debrief you. It takes you some time and[if humanity of player > 75] [else if humanity of player > 40] some [else] lots of [end if]meds to calm down.";

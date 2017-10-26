@@ -84,21 +84,21 @@ An everyturn rule(This is the Enemies Breed rule):
 		let x be a random number from 1 to 100;
 		let y be 0;
 		let crit be 0;
-		if x is greater than 90:
+		if x > 90:
 			now y is 3;
 			now crit is 1;
-		else if x is greater than 60:
+		else if x > 60:
 			now y is 2;
 		else:
 			now y is 1;
 		now y is ( foragers * the Self Fertility of the enemy * y ) / 250;
 		let mor be morale of enemy;
-		if mor is less than 20, now mor is 20;
+		if mor < 20, now mor is 20;
 		now y is ( y * mor ) / 100;
-		if crit is 1 and y is less than 1, now y is 1;
-		if y is greater than 0:
+		if crit is 1 and y < 1, now y is 1;
+		if y > 0:
 			increase population of enemy by y;
-			if morale of enemy is less than 60:
+			if morale of enemy < 60:
 				let gain be 1;
 				increase gain by y times 2;
 				now gain is gain * mood of enemy;
@@ -125,7 +125,7 @@ An everyturn rule(This is the Enemy Expanding rule):
 			let enum be enemies;
 			now enemies is ( enemies * 100 ) / stamina of enemy;
 			let estimate be ( enemies * a random number from 66 to 150) / 100;
-			if estimate is greater than population of enemy:
+			if estimate > population of enemy:
 				continue the action;
 			else:
 				say "Scouts report that an enemy tribe is conquering wild territory, ";
@@ -136,12 +136,12 @@ An everyturn rule(This is the Enemy Expanding rule):
 					if enemies > population of enemy:
 						say "They fail to conquer the region!";
 						decrease population of enemy by enemies;
-						if population of enemy is less than 5, now population of enemy is 5;
+						if population of enemy < 5, now population of enemy is 5;
 						next;
 					else:
 						say " They claim the region!";
 						decrease population of enemy by enemies;
-						if population of enemy is less than 5, now population of enemy is 5;
+						if population of enemy < 5, now population of enemy is 5;
 			increase territory of enemy by 1;
 			decrease openland by 1;
 
@@ -172,12 +172,12 @@ An everyturn rule(This is the Enemy Attacking rule):
 				if enemies > backlash:
 					say "They fail to conquer any territory, !";
 					decrease population of enemy by enemies;
-					if population of enemy is less than 5, now population of enemy is 5;
+					if population of enemy < 5, now population of enemy is 5;
 					next;
 				else:
 					say " They claim some land in a bloody conflict!";
 					decrease population of enemy by enemies;
-					if population of enemy is less than 5, now population of enemy is 5;
+					if population of enemy < 5, now population of enemy is 5;
 			if backlash > 0:
 				say "We lose [backlash] people.";
 				decrease population of tribe of player by backlash;

@@ -32,14 +32,14 @@ to say LibrarySideRoomDesc:
 
 Section 1 - Description
 
-Skarnoth is a man. The hp of Skarnoth is usually 0.
+Skarnoth is a man. The HP of Skarnoth is usually 0.
 The description of Skarnoth is "[SkarnothDesc]".
 The conversation of Skarnoth is { "Woof." }.
 SkarnothLibraryEntry is a number that varies. [when he was brought in]
 
 to say SkarnothDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Skarnoth], LEVEL: [level of Skarnoth], LIBIDO: [libido of Skarnoth], LIBRARY ENTRY TURN: [SkarnothLibraryEntry] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Skarnoth], LEVEL: [level of Skarnoth], LIBIDO: [libido of Skarnoth], LIBRARY ENTRY TURN: [SkarnothLibraryEntry] <- DEBUG[line break]";
 	say "     Skarnoth the demon prince is a magnificent specimen of masculinity, with a strikingly handsome face framed by blood-red hair. His firm pecs and six-pack abs would fit an underwear model - which he kind of is, as you stripped him of his regalia, taking off anything but a skin-tight black thong. The strip of fabric does more to show off the bulge of his package than to conceal anything.";
 	say "     Letting your gaze stray from the flawless, reddish skin of the demon's torso, his similarity to the perfection a Greek statue does diminish a bit - as Skarnoth's otherworldly nature shows clearly on the rest of his body. Starting with a few small scales on the sides of his upper body, then larger and more solid ones on his hips and down the legs, the infernal being has overlapping, flexible scales. His feet bear sharp claws, as do the hands (if a bit smaller ones), and further scale-plates make it appear like he is wearing elaborate bracers as well as pauldrons to cover his shoulders. Also, he has a long tail with a ridge of scales running down the backside, ending in a spaded tip. A pair of large horns curving up from his head completes the image of a handsome and dangerous predator.";
 
@@ -48,10 +48,10 @@ The scent of Skarnoth is "     Skarnoth has an almost entrancing, sexy scent. A 
 Section 2 - Talking
 
 instead of conversing the Skarnoth:
-	if (hp of Skarnoth > 0):
+	if (HP of Skarnoth > 0):
 		say "     <This is a placeholder text for this WIP npc. Please have some patience until there is time to write more content for Skarnoth>";
 	else:
-		say "ERROR-Skarnoth-[hp of Skarnoth]C: He isn't in one of the states she should be in! Please report how you got to this message.";
+		say "ERROR-Skarnoth-[HP of Skarnoth]C: He isn't in one of the states she should be in! Please report how you got to this message.";
 
 Section 3 - Sex
 
@@ -215,16 +215,16 @@ to say SkarnothSex6: [Skarnoth's ass fucked]
 
 Section 4 - Events
 
-instead of going northwest from Grey Abbey Library while (hp of Skarnoth > 1):
+instead of going northwest from Grey Abbey Library while (HP of Skarnoth > 1):
 	move player to Half-Renovated Room;
 	if debugactive is 1:
-		say "     DEBUG: SKARNOTH WALK-IN - HP OF SKARNOTH: [hp of Skarnoth], THIRST OF Skarnoth: [thirst of Skarnoth][line break]";
+		say "     DEBUG: SKARNOTH WALK-IN - HP OF SKARNOTH: [HP of Skarnoth], THIRST OF Skarnoth: [thirst of Skarnoth][line break]";
 	say "     .";
 
 Section 5 - Infection for combat purposes
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -251,7 +251,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 22;
 	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 275;
+	now HP entry is 275;
 	now lev entry is 20;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 35;              [ Monster's average damage when attacking. ]
 	now area entry is "nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]

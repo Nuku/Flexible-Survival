@@ -39,7 +39,7 @@ to say wrestlingwolfattack:
 	else:
 		if a random chance of 1 in 3 succeeds: 	[impatient - rough fuck]
 			if cunts of player > 0:
-				if cunt length of player is less than 20 or cunt width of player is less than 15:
+				if cunt length of player < 20 or cunt width of player < 15:
 					say "     Unable to stand up against the Wrestling Wolf's might, you collapse to your knees in front of him. 'Tch, I was hoping you'd put up more of a fight. At least make me work for my prize,' the Wrestling Wolf groans as he removes his wrestling briefs. 'You know I think you need to understand just what kind of guy I am,' he says as he bundles up his briefs into a ball. 'I am and always have been a fighter, I enjoy a good fight.'";
 					say "     'So it really ticks me off when I'm forced to fight weaklings. I'd figured you being alone in these times, you would give me a decent fight. But no! Instead I'm forced to beat up on another weakling,' he roars as he stuffs his briefs down your throat. You gag as you get a taste of his masculine musk stained into his briefs. You don't have time to take in the taste as you are grabbed by your throat and hoisted into the air by the Wrestling Wolf with only one arm. 'Just how strong was this guy' you wonder as he begins to finger your [cunt size desc of player] folds with his free paw. 'You're a tight little bitch, aren't ya?' he states as he positions your cunt just above his already erect shaft. You swear that it's somehow grown since the last time you met. 'Now this is gonna hurt,' he says, placing both of his pawed hands on your shoulders. 'A lot.' And just like that he pushes you down, forcing his entire length into you until you hit the rim of his gigantic knot, your stomach stretching from his [one of]gigantic[or]enormous[at random] length. You start to scream, only to have your shouts muffled by the Wrestling Wolf's balled up briefs that you're still gagging on.";
 					say "     'Oh, I bet that hurt, didn't it? Well, it's only gonna get worse!' he growls as he grabs hold of your waist and slides you up to the tip of his shaft. 'You see, when I get angry I like to get rough,' he says, bringing you down his entire length, slamming you down onto the rim of his gigantic knot once more. He continues this for several minutes, which to you feels like an eternity. Your eyes swell with tears from the sheer pain of the Wrestling Wolf's treatment. He lifts you the very tip of his rod and tightens his hold on your waist. 'And nothing angers me more than when I fight someone not giving it their all,' he roars as he pulls you down, this time with much greater force and thrusting his hips up, ramming you hard against his swollen knot. The feeling of hitting home is too much for the Wolf as he explodes incredible waves of his hot seed into you. Your belly expands even farther to its limits from the Wolf's cum now filling your stomach.[impregchance]";
@@ -60,7 +60,7 @@ to say wrestlingwolfattack:
 				say "     Pulling his spent and sticky shaft from your rear, he wipes it on your ass and tucks it back into his trunks. 'Now I want you to put up a better fight in our next match or you'll get more of the same,' he growls. 'And reconsider getting that pussy too,' he says with a chuckle while you grab your stuff and run off before he decides he wants a rematch or decides to skip it and go right back to pinning you to the mat.";
 		else:
 			if cunts of player > 0:
-				if cunt length of player is less than 20 or cunt width of player is less than 15:
+				if cunt length of player < 20 or cunt width of player < 15:
 					say "     Unable to stand up against the Wrestling Wolf's might, you collapse to your knees in front of him. Before you, the Wrestling Wolf is covered in sweat and panting quite a bit. 'Not bad! I mean you lost, but at least ya put up more of a fight than last time,' he says as he approaches you. His sweaty masculine scent washes over you, fueling your arousal. The Wolf catches the scent of your arousal and smiles. 'Heh, smells like someone could use a little attention,' he saes as he squats down in front of you. He pushes you onto your back and pulls off your clothes.";
 					say "     'I think I can help ya with that,' he says, burying his wolf-like muzzle between your legs. He pokes around a bit before finding your already wet pussy and sticking his tongue inside, sending waves of pleasure throughout your body. 'This is probably for the best. I don't think you could handle my equipment just yet,' he says before returning to your pussy. He continues to work his tongue inside you. You can hold back no longer as you finally reach your orgasm, covering the Wrestling Wolf's muzzle in you juices. He pulls back his head and helps you up. 'That sure was something, huh!' he says with a smile. 'Now if you'll excuse me, I have ta find a bitch with a big enough pussy for this,' he says, patting the bulge in his tight wrestling briefs. You both leave the ring to go your separate ways. As you walk away, you can't help but wish you had what it takes to sate his needs.";
 				else:
@@ -109,7 +109,7 @@ to say wrwolfdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -136,8 +136,8 @@ When Play begins:
    now int entry is 9;
    now cha entry is 14;
    now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 150;
-   now lev entry is 15; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+   now HP entry is 150;
+   now lev entry is 15; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
    now wdam entry is 18; [Amount of Damage monster Does when attacking.]
    now area entry is "Campus"; [ Current options are 'Outside' and 'Mall' Case sensitive]
    now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -192,12 +192,12 @@ to wwpowerslam:
 		now damagein is dam;
 		say "[noshieldabsorbancy]"; [shield doesn't help against being bodyslammed]
 		now absorb is ( absorb + 1 ) / 2; [total defense value halved]
-		if absorb is greater than dam:
+		if absorb > dam:
 			now absorb is dam;
-		if absorb is greater than 0:
+		if absorb > 0:
 			say "Your defences are only able to prevent [absorb] damage from the devastating attack!";
-		decrease hp of the player by dam;
-		increase hp of player by absorb;
+		decrease HP of the player by dam;
+		increase HP of player by absorb;
 		decrease humanity of player by a random number between 8 and 12;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 2 and 4;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
@@ -206,7 +206,7 @@ to wwpowerslam:
 	else:
 		say "The Wrestling Wolf rushes in to grab you, clearly ready to unleash a crowd-pleasing maneuver, but you barely manage to squirm out of his reach and whip him into the ropes. That was a close one.";
 	now peppereyes is 0; [pepperspray wears off]
-	if hp of the player is greater than 0:
+	if HP of the player > 0:
 		wait for any key;
 	else:
 		Lose;
@@ -215,9 +215,9 @@ to wwpowerslam:
 
 this is the wrwolfpose rule:
 	choose row monster from table of random critters;
-	if hp entry > ( monsterhp * 5 ) and a random chance of 3 in 5 succeeds and wwheal < 4:
+	if HP entry > ( monsterHP * 5 ) and a random chance of 3 in 5 succeeds and wwheal < 4:
 		say "     After his successful attack, the [one of]big wolf howls for the crowd[or]powerful wolf makes a show of struggling to stay standing, ears perked as if listening to the crowd[or]wrestler finds a shirt from somewhere to tear from his body[or]lupine wrestler's body shakes with the power of the Wolfamaniacs cheering him on in his mind[at random], helping him draw on a hidden reserve of strength.";
-		increase monsterhp by ( hp entry / 12 );
+		increase monsterHP by ( HP entry / 12 );
 		increase wwheal by 1;
 
 Wrestling Wolf For FS ends here.

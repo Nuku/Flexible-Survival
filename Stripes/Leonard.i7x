@@ -30,7 +30,7 @@ the scent of Lion's Den is "There is a faint, damp smell to the lion's den benea
 to say lionsdendesc:
 	say "     The dark cave extends for about thirty or forty meters at a roughly even diameter, making you suspect it is some sort of abandoned tunnel project. The back half of the cave has been furnished rather lavishly, with such items as plush chairs and ottomans arranged on a large rug like a sitting room. Beside those are a small bookcase and a coat rack holding several lanterns for light[if leonardwrdesk is true] as well as Leonard's new writing desk[end if]. Past those, there lies a dining room table and chairs with a small camping stove set up along one wall[if leonardcabinet is true]. There is an ornate cabinet to house his cooking supplies[else]. There is another bookcase nearby for cooking supplies[end if][if leonardcaraway is true] with Caraway working away happily in the kitchen[end if][if leopocketwatch is true]Beside it is a tall grandfather clock with simple and dignified woodwork[end if]. This forms a partial wall with a hand-carved wardrobe at its back. This last section holds a very large, four-poster bed that abuts the end of the tunnel cave.";
 	say "     There are several paintings attached to the walls. These seem quite old and possibly quite expensive. They have been tastefully chosen, all going well together despite being from different styles and artists. While not depicting anything overtly erotic, you can't help but feel the paintings have a primal, sexual quality to them.";
-	if hp of Leonard >= 16:
+	if HP of Leonard >= 16:
 		say "     Leonard's subservient maids are here as well, having obtained cute maid outfits from somewhere. They are happily [one of]cleaning the cave[or]and lovingly grooming their handsome master's mane[or]changing the sheets on the bed[or][if leonardcaraway is true]helping Caraway prepare some food in the kitchen[else]preparing some food for their master[end if][or]dusting, making sure to bend over with their tails up to flash their pantiless bottoms at their handsome master[or][if leonardcaraway is true and a random chance of 2 in 5 succeeds]snuggled up with Caraway, playfully cuddling with her as she watches the stove[else]snuggled up together, their paws caressing one another[end if][or]snuggling up to you, showing their love for their pride mother[in random order]. They seem quite content in their new role as Leonard's servants, having completely forgotten about ever once being lions or leading prides of their own.";
 
 
@@ -50,7 +50,7 @@ to say Leonarddesc:
 	say "     Leonard is a lion-man like those you've seen in the park, but well-groomed and well-mannered. He has a strong, manly chest, which he loosely covers with his suit coat. While it could probably close, it certainly seems more comfortable open[if leopocketwatch is true]. He keeps an antique gold pocket watch in the breast pocket[end if]. He is covered in tawny fur and has a large, russet mane. His lower body is unclothed, leaving his sheath and plump balls exposed.";
 
 Instead of conversing the Leonard:
-	if hp of Leonard is 0:
+	if HP of Leonard is 0:
 		say "     'I'm glad you were willing to trust me and come in. You should be safe enough here. Those lupine ruffians don't like to get close since I sent them packing the last time.'";
 		say "     'But yes, I should properly introduce myself. My name is Leonard and this is my humble abode now. It is not much,' he says, 'but I have been rather fortunate. I have managed to retain my faculties and have been able to secure a suitable, if somewhat unconventional, new home.'  He motions with a sweep of his arm down the passageway, indicating his surprisingly well-furnished cave. You consider asking about it, as it seems the powerful lion could have taken a house or apartment instead of transporting all of this from the city into the park and to his cave, but he continues on, motioning you to have a seat in his improvised sitting room.";
 		if Feline_attached > 0:		[suckling feline]
@@ -64,27 +64,27 @@ Instead of conversing the Leonard:
 			say "     'You must find it quite difficult out there,' he says with a soft rumble, passing you a drink from a small bar to one side of the [']room[']. You smile and take the drink, relaxing into the plush chair. 'Perhaps you should stay here for a time, under my protection. You could take a break and we could get to know each other better,' the lion says with a smile, taking a seat of his own. You can see that his sheath has grown fuller and the tip of his feline cock is poking free. The scent of his strong, feline musk increases, beginning to arouse you.";
 		increase libido of player by 10;
 		decrease thirst of player by 5;
-		now hp of Leonard is 1;
-	else if hp of Leonard is 1:
+		now HP of Leonard is 1;
+	else if HP of Leonard is 1:
 		say "     [one of]'I hope you've reconsidered my offer of sharing my company,' he says with a rumble, running a paw along your side.[or]'I do hope you'll say for a while,' he purrs with a smile.[or]'You should relax and stay. Let a big, strong male take care of you,' he rumbles in your ear.[or]'Wouldn't things be simpler if you had a big, strong lion watching over you?' the powerful feline rumbles.[or][if cunts of player > 0]'I hope you'll consider staying and enjoying my company, my dear,' the sexy lion rumbles. 'A sexy girl like you deserves a handsome male like myself.'[else]'I hope you'll consider staying and enjoying my company,' the sexy lion rumbles. 'I can tell you need a proper, strong male to take care of you.'[end if][at random]";
-	else if hp of Leonard is 2:
+	else if HP of Leonard is 2:
 		say "     The handsome lion [one of]runs his paws along your sides[or]strokes a strong paw over your ass[or]rubs his body against yours[or]slides his tail across your hip[or]scritches down your back[at random][one of]. 'I look forward to having you underneath me,' he rumbles in your ear[or]. 'You'll make a lovely, sexy kitty for me,' he purrs[or]. 'You're looking forward to having the big kitty mount you, aren't you?' he rumbles[or][if cunts of player > 0]. 'Your hot, little pussy's wet for your big lion, isn't it?' he purrs in your ear[else]. 'You're longing to let a proper male like me to mount you and show you your place, aren't you?' he purrs in your ear[end if][or]. 'You know, deep down, you're nothing but my horny girl,' he rumbles[in random order]. Surrounded by the lion's arousing scent, you find yourself nodding, part of you agreeing with the sexy male.";
-	else if hp of Leonard is 3:
+	else if HP of Leonard is 3:
 		say "     The handsome lion [one of]gives your ass a possessive squeeze[or]puts an arm around you from behind and strokes over your groin[or]rubs himself against you, pressing his sheath to your body[or]runs his paws along your sides and nibbles at your neck[or]takes your hands in his paws and presses them to his plump balls[or]grinds his half-hard cock against your bottom[at random][one of]. 'I look forward to having you underneath me again soon,' he rumbles in your ear[or]. 'You'll fit right in with my other horny, kitty girls,' he purrs, nibbling your ear[or]. 'You need the big kitty to mount you again soon, don't you?' he rumbles[or][if cunts of player > 0]. 'Your hot little pussy's wet for the big lion, isn't it?' he purrs as he rubs a finger over it[else]. 'You're looking for your big lion stud to mount you and show you your place, aren't you, my horny girly-boy?' he purrs in your ear as he grabs your ass firmly[end if][or]. 'You know you're nothing but my horny girl, my mewling kitty slut,' he rumbles[in random order]. With the lion's scent filling your senses, your aroused, needy body responds as the part of you longing to be his nods in agreement.";
-	else if hp of Leonard is 4:
+	else if HP of Leonard is 4:
 		say "     The handsome lion moves up beside you, holding you close as he runs a paw over your [if cunts of player > 0]breast[else]ass[end if], making you moan softly. 'I have a small favour I'd like to ask of you, my dear[if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist] kitty[end if]. The other girls have been so helpful in trying to help make my meager accommodations somewhat more suitable, but I have found myself needing something to occupy my time.'  He nuzzles at your neck and slides a finger between your legs. 'When I'm not taking care of my lovely kitties and their needs, that is,' he amends, purring in your ear.";
 		say "     'I used to be an accomplished violinist in my old life, but had to set my practicing aside to deal with other obligations,' he says with remorse. 'But I have found myself thinking that it would be a fine hobby for a proper gentlelion such as myself.'  Running his paws over your hips, he continues. 'Would you not like to hear me play, my dear?'  You mewl in response to his touch and nod in agreement, longing to hear the handsome lion play something just for you. 'Unfortunately, I have no violin to play. Perhaps one could be found in the city though,' he rumbles thoughtfully. Finding yourself eager to please the handsome male, you quickly promise him that you'll find one for him, not even pausing to consider the matter. He smiles and caresses your cheek. 'Oh, you are such a kind and thoughtful [if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist]kitty[else]lover[end if] to offer doing that for me.'  He runs his other paw across your thigh, giving a light squeeze. 'I would be most grateful if you were to bring me one.'";
 		now Music Store is unresolved;
 		now Concert Hall is unresolved;
-		now hp of Leonard is 5;
-	else if hp of Leonard is 5 and violin is not owned:
+		now HP of Leonard is 5;
+	else if HP of Leonard is 5 and violin is not owned:
 		if a random chance of 2 in 5 succeeds:
 			say "     The handsome lion [one of]gives your ass a possessive squeeze[or]puts an arm around you from behind and strokes over your groin[or]rubs himself against you, pressing his sheath to your body[or]runs his paws along your sides and nibbles at your neck[or]takes your hands in his paws and presses them to his plump balls[or]grinds his half-hard cock against your bottom[at random][one of]. 'I look forward to having you underneath me again soon,' he rumbles in your ear[or]. 'You'll fit right in with my other horny, kitty girls,' he purrs, nibbling your ear[or]. 'You need the big kitty to mount you again soon, don't you?' he rumbles[or][if cunts of player > 0]. 'Your hot little pussy's wet for the big lion, isn't it?' he purrs as he rubs a finger over it[else]. 'You're looking for your big lion stud to mount you and show you your place, aren't you, my horny girly-boy?' he purrs in your ear as he grabs your ass firmly[end if][or]. 'You know you're nothing but my horny girl, my mewling kitty slut,' he rumbles[in random order]. With the lion's scent filling your senses, your aroused, needy body responds as the part of you longing to be his nods in agreement.";
 		else:
 			say "     The handsome lion holds you close as he [one of]strokes a paw along your hip[or]gives your ass a possessive squeeze[or]caresses a paw across your cheek[or]lets his warm, full sheath rub against you[or]nuzzles at your ear[at random]. '[one of]I hope you haven't forgotten about your promise, my dear[or]I do hope you'll be able to find a nice violin for me[or]You might be able to find a violin for me at a concert hall or perhaps even in a music store[or]Have you tried finding a violin at a concert hall in the city? If that doesn't work out, try searching through a music store[or]Please keep looking for me, my dear[if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist] kitty[end if][at random]. I would so like to play something special for you,' he purrs, [one of]running a finger across your groin[or]caressing your inner thigh[or][if cunts of player > 0]rubbing your breast[else]patting your bottom[end if][at random]. You moan and nod in response, [if violinfound is 1 or violinfound is 2][else]eager to rush out and find one to please your sexy lion[end if].";
-	else if hp of Leonard is 5 and violin is owned:
+	else if HP of Leonard is 5 and violin is owned:
 		delete violin;
-		now hp of Leonard is 6;
+		now HP of Leonard is 6;
 		now the icon of Leonard is the figure of LeonardViolin_icon;
 		now leonardtimer is turns;
 		now lastfuck of Leonard is turns;
@@ -123,20 +123,20 @@ Instead of conversing the Leonard:
 		now libido of player is ( libido of player + libido of player + 30 ) / 3;
 		decrease humanity of player by 5;
 		follow the turnpass rule;
-	else if hp of Leonard is 6 and ( leonardtimer - turns ) < 16:
+	else if HP of Leonard is 6 and ( leonardtimer - turns ) < 16:
 		if a random chance of 3 in 5 succeeds:
 			say "     The handsome lion [one of]gives your ass a possessive squeeze[or]puts an arm around you from behind and strokes over your groin[or]rubs himself against you, pressing his sheath to your body[or]runs his paws along your sides and nibbles at your neck[or]takes your hands in his paws and presses them to his plump balls[or]grinds his half-hard cock against your bottom[at random][one of]. 'I look forward to having you underneath me again soon,' he rumbles in your ear[or]. 'You'll fit right in with my other horny, kitty girls,' he purrs, nibbling your ear[or]. 'You need the big kitty to mount you again soon, don't you?' he rumbles[or][if cunts of player > 0]. 'Your hot little pussy's wet for the big lion, isn't it?' he purrs as he rubs a finger over it[else]. 'You're looking for your big lion stud to mount you and show you your place, aren't you, my horny girly-boy?' he purrs in your ear as he grabs your ass firmly[end if][or]. 'You know you're nothing but my horny girl, my mewling kitty slut,' he rumbles[in random order]. With the lion's scent filling your senses, your aroused, needy body responds as the part of you longing to be his nods in agreement.";
 		else:
 			say "     The handsome lion [one of]takes up the violin you brought him and plays a few notes[or]carefully cleans and waxes the violin you brought him[or]plays a short tune on his violin[at random][one of]. 'I've been enjoying your gift very much, my dear,' he purrs. You are quite pleased with yourself to hear this and you try to come up with more ideas on how to earn his favour[or]. 'I believe my playing's starting to improve now that I've been able to practice again,' he rumbles as you moan softly in response to the manly lion's touch[or]. 'I hope to have a new piece composed for the violin soon. Just a simple little song that I want to put onto paper,' he rumbles. Despite his casual nature about it, you are filled with a powerful longing to hear what your wonderful feline master will compose[at random]. You feel a sense of warmth and longing for the handsome lion, happy that he's enjoying your gift.";
-	else if hp of Leonard is 6:
+	else if HP of Leonard is 6:
 		say "     'I was wondering if you might do me another favour, my dear kitty,' Leonard purrs as he runs his paws over you. You moan and nod eagerly, willingly agreeing before even hearing the handsome lion's request. 'There are so many other kitty girls out there in the park that haven't come to visit me yet. Could you find a few more of them and bring them to me? You're such a good, obedient pet that I know you won't be jealous,' he rumbles, stroking over your groin. 'I'd be most grateful, my precious darling,' he adds with a purr and a firm press of his hard sheath against your side. You agree readily, wanting to do anything to please your sexy lover and master.";
-		now hp of Leonard is 7;
-	else if hp of Leonard is 7:
+		now HP of Leonard is 7;
+	else if HP of Leonard is 7:
 		if a random chance of 3 in 5 succeeds:
 			say "     The handsome lion [one of]gives your ass a possessive squeeze[or]puts an arm around you from behind and strokes over your groin[or]rubs himself against you, pressing his sheath to your body[or]runs his paws along your sides and nibbles at your neck[or]takes your hands in his paws and presses them to his plump balls[or]grinds his half-hard cock against your bottom[at random][one of][if cunts of player > 0]. 'Your hot little pussy's wet for the big lion, isn't it?' he purrs as he rubs a finger over it[else]. 'You're looking for your big lion stud to mount you and show you your place, aren't you, my horny girly-boy?' he purrs in your ear as he grabs your ass firmly[end if][or]. 'Please don't forget your promise to help those other wayward girls find their way here,' he rumbles as he runs a finger down your side[or]. 'Please bring me a few more lost feline girls, my dear. We'll have such a pleasant time welcoming them into the pride together,' he purrs softly as he licks the edge of your ear, making you tremble in delight[or]. 'Don't forget that I asked you to lead a few more feline girls here so I could meet them,' he rumbles as he fondles you[in random order]. With the lion's scent filling your senses, your aroused, needy body responds as the part of you longing to be his nods in agreement.";
 		else:
 			say "     The handsome lion [one of]takes up the violin you brought him and plays a few notes[or]carefully cleans and waxes the violin you brought him[or]plays a short tune on his violin[at random][one of]. 'I've been enjoying your gift very much, my dear,' he purrs. You are quite pleased with yourself to hear this and you try to come up with more ideas on how to earn his favour[or]. 'I believe my playing's starting to improve now that I've been able to practice again,' he rumbles as you moan softly in response to the manly lion's touch[or]. 'I hope to have a new piece composed for the violin soon. Just a simple little song that I want to put onto paper,' he rumbles. Despite his casual nature about it, you are filled with a powerful longing to hear what your wonderful feline master will compose[or]. 'Please look for more wayward felines to bring back here. I should like to let them hear me play your wonderful gift,' he says with a smile[at random]. You feel a sense of warmth and longing for the handsome lion, happy that he's enjoying your gift.";
-	else if hp of Leonard is 8:
+	else if HP of Leonard is 8:
 		say "     Leonard wraps his strong arms around you, running his paws along your sides to your hips. 'You've done very well, my dear,' he rumbles. 'All your efforts have been very [']inspiring['],' he adds with a deep purr on the last word as he whispers it in your ear before nibbling you lightly there. This sends shivers of delight down your spine, making you mewl in response. 'I have decided I will put on a small recital for you and the rest of the pride. I've put the word out and they should be arriving shortly.'  Looking up from you, he smiles. 'Ah, they're arriving to set up now. Go and lend them a [if bodyname of player is listed in infections of Felinelist]paw[else]hand[end if],' he rumbles, giving you a pat on the ass to send you on your way.";
 		say "     You can see a large group of feline girls have arrived and are unrolling Afghan and Persian rugs. You obediently rush over to join them, helping to cover a large area at the entrance of the tunnel. You are accepted immediately into the work group with the rest of Leonard's pride, working well with your pride sisters to set up for your master's important first recital. You find yourself teaming up with the females you've recently brought in at Leonard's behest and receive many kisses and caresses from them as you work. As you're finishing up, spreading numerous plush cushions across the rugs, you notice that the group's gotten larger, with more girls having arrived with refreshments. As you enjoy some of the delicious treats, you snuggle up with the other felines you'd been working with for more loving nuzzles and caresses.";
 		say "     A gentle tapping draws your attention to the music stand that has been set up in front of the seating area. The group almost immediately settles down, drawing in closer as the lion prepares to start. He makes a small motion to you with his paw, pointing to an opening left at the very front of the group. He smiles indulgently as you bring the other girls along with you. They are very pleased to get such premium seating and lavish even more attention upon you in thanks.";
@@ -156,25 +156,25 @@ Instead of conversing the Leonard:
 		decrease humanity of player by 25;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
-		now hp of Leonard is 9;
+		now HP of Leonard is 9;
 		now leonardtimer is turns;
 		now lastfuck of Leonard is turns;
 		follow the turnpass rule;
-	else if hp of Leonard is 9 and leonardtimer - turns < 8:
+	else if HP of Leonard is 9 and leonardtimer - turns < 8:
 		if a random chance of 3 in 5 succeeds:
 			say "     The handsome lion [one of]gives your ass a possessive squeeze[or]puts an arm around you from behind and strokes over your groin[or]rubs himself against you, pressing his sheath to your body[or]runs his paws along your sides and nibbles at your neck[or]takes your hands in his paws and presses them to his plump balls[or]grinds his half-hard cock against your bottom[at random][one of][if cunts of player > 0]. 'Your hot little pussy's wet for the big lion, isn't it?' he purrs as he rubs a finger over it[else]. 'You're looking for your big lion stud to mount you and show you your place, aren't you, my horny girly-boy?' he purrs in your ear as he grabs your ass firmly[end if][or]. 'Please don't forget your promise to help those other wayward girls find their way here,' he rumbles as he runs a finger down your side[or]. 'Please bring me a few more lost feline girls, my dear. We'll have such a pleasant time welcoming them into the pride together,' he purrs softly as he licks the edge of your ear, making you tremble in delight[or]. 'Don't forget that I asked you to lead a few more feline girls here so I could meet them,' he rumbles as he fondles you[in random order]. With the lion's scent filling your senses, your aroused, needy body responds as the part of you longing to be his nods in agreement.";
 		else:
 			say "     The handsome lion [one of]takes up the violin you brought him and plays a few notes[or]carefully cleans and waxes the violin you brought him[or]plays a short tune on his violin[at random][one of]. 'I've been enjoying your gift very much, my dear,' he purrs. You are quite pleased with yourself to hear this and you try to come up with more ideas on how to earn his favour[or]. 'I believe my recital was very successful,' he rumbles as his paws move over you, reminding you of just how much of a success it, and the ensuing orgy, was[or]. 'I've been playing more since my recital. Often a feline from the park will stop by to enjoy my music and my company,' he rumbles, rubbing his warm sheath against you, making it clear just what kind of company these lucky felines receive after finding their way to your master[or]. 'Please look for more wayward felines to bring back here. I should like to let them hear me play your wonderful gift,' he says with a smile[at random]. You feel a sense of warmth and longing for the handsome lion, happy that he's enjoying your gift.";
-	else if hp of Leonard is 9:
+	else if HP of Leonard is 9:
 		say "     The handsome lion takes a seat in his plush chair and motions for you to come closer[if scalevalue of player > 3]. Obediently kneeling down beside you, you wait eagerly on his words. He smiles and caresses your cheek, eliciting a moan and soft purr[else]. You eagerly climb into his lap, purring softly as he caresses you[end if]. He strokes under your chin, tilting your head before giving you a kiss that makes you feel so special. 'My precious [if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist]kitty[else if cunts of player > 0]girl[else]pet[end if], it seems I'm in need of your help again. It seems the other lions in the park - the savage, feral ones - have gotten upset. My girls tell me that these lions are upset that lionesses from their pride aren't returning to them. As if it is somehow my fault that they can't keep their kitties satisfied,' he rumbles, stroking a paw along your side while nuzzling you, making you purr in response.'";
 		say "     'Regardless of the cause, it seems they've started fighting over what felines they can capture and have sent out their pride in bands to capture other felines. Outnumbered several to one, some of my precious kitties are getting beaten up or captured by these hunting groups. But most of my girls aren't experienced fighters like you are,' he rumbles, stroking your face again. 'And so I need you, my strong kitty hunter, to go out and deal with these bands. Are you strong enough, brave enough to help me with this?' he purrs, licking your ear. Eager to show him that you could do anything for him, you nuzzle him in return, promising to deal with his problem to protect your pride sisters.";
 		say "     Leonard smiles and gives you another kiss. 'I knew I could count on you, my brave hunter. Now, go out into the park and search for these [bold type]hunting prides[roman type],' he says with confidence. 'I must prepare to deal with these feral upstarts for harassing my lovely girls.'  He gets up out of the chair, and you are again reminded of how regal and impressive the handsome lion is. Driven by his words to action, you leave the lion's den, heading back out into the park.";
 		move player to Park Trail;
-		now hp of Leonard is 10;
+		now HP of Leonard is 10;
 		now Hunting Prides is unresolved;
-	else if ( hp of Leonard >= 10 and hp of Leonard <= 15 ) or hp of Leonard is 100:
-		say "ERROR-Leonard-[hp of Leonard]C: You should not be able to talk to me!";
-	else if hp of Leonard >= 16:
+	else if ( HP of Leonard >= 10 and HP of Leonard <= 15 ) or HP of Leonard is 100:
+		say "ERROR-Leonard-[HP of Leonard]C: You should not be able to talk to me!";
+	else if HP of Leonard >= 16:
 		if a random chance of 3 in 5 succeeds:
 			say "     The handsome lion [one of]gives your ass a firm squeeze[or]puts an arm around you from behind and strokes over your groin[or]rubs himself against you, pressing his sheath to your body[or]runs his paws along your sides and nibbles at your neck[or]takes your hands in his paws and presses them to his plump balls[or]grinds his half-hard cock against your bottom[at random][one of][if cunts of player > 0]. 'Your sexy pussy's wet for your lion mate, isn't it?' he purrs as he rubs a finger over it[else]. 'You're looking for your big lion mate to mount you so you can maybe get your juicy pussy back, aren't you?' he purrs in your ear as he grabs your ass firmly[end if][or]. 'Please don't forget your promise to help those other wayward girls find their way here,' he rumbles as he runs a finger down your side[or]. 'Please bring me a few more lost feline girls, my dear. We'll have such a pleasant time welcoming them into the pride together,' he purrs softly as he licks the edge of your ear, making you tremble in delight[or]. 'With those prides broken up, there's probably quite a few feline girls in need of a new home. I look forward to you helping more of them find their way back here,' he rumbles as he fondles you[or]. 'I'm very pleased with my lovely new servants. It was a very clever of you to find such a suitable place for them,' he rumbles with an amused grin before giving you a kiss[in random order]. With the lion's scent filling your senses, your aroused, needy body responds as you long to have your handsome mate inside you again soon.";
 		else:
@@ -196,15 +196,15 @@ to say sexwithLeonard:
 			now monster is y;
 			break;
 	if Feline_attached > 0 and feline_status is 0, now lastfuck of leonard is 255; [resets Leonard for immediate fun if the player has a new kitty girl]
-	if hp of Leonard is 0:
+	if HP of Leonard is 0:
 		say "     That's rather forward of you. Perhaps you should at least talk to him first.";
 	else if lastfuck of Leonard - turns < 8:
 		say "     'I really appreciate your eagerness, my dear, but I think it'd be all the sweeter if we wait until we're both recovered from the last time.";
-	else if hp of Leonard >= 16:
+	else if HP of Leonard >= 16:
 		leonardmatesex;
-	else if hp of Leonard is 1:
+	else if HP of Leonard is 1:
 		now lastfuck of Leonard is turns;
-		now hp of Leonard is 2;
+		now HP of Leonard is 2;
 		if cunts of player > 0 or bodyname of player is "Feline":
 			say "[leonardsex_firsttimeA]";
 			infect "Feline";
@@ -221,21 +221,21 @@ to say sexwithLeonard:
 			increase libido of player by 5;
 			if libido of player > 100, now libido of player is 100;
 			decrease humanity of player by 4;
-	else if hp of Leonard >= 3 and Feline_attached > 0 and feline_status is 0 and ( a random chance of 1 in 2 succeeds or hp of Leonard is 7 ):
+	else if HP of Leonard >= 3 and Feline_attached > 0 and feline_status is 0 and ( a random chance of 1 in 2 succeeds or HP of Leonard is 7 ):
 		[not one of Leonard's girls... yet.]
 		now lastfuck of Leonard is turns;
-		if hp of Leonard < 4, now hp of Leonard is 4;
+		if HP of Leonard < 4, now HP of Leonard is 4;
 		say "[leonardsex_newkitty]";
 		now feline_status is 2;
 		rest;
 		decrease humanity of player by 8;
 		follow the turnpass rule;
-		if hp of Leonard is 7:
+		if HP of Leonard is 7:
 			increase libido of Leonard by 1;
-			if libido of Leonard is 3, now hp of Leonard is 8;
-	else if hp of Leonard >= 3 and Feline_attached > 0:
+			if libido of Leonard is 3, now HP of Leonard is 8;
+	else if HP of Leonard >= 3 and Feline_attached > 0:
 		now lastfuck of Leonard is turns - 4; [longer delay after fucking you both]
-		if hp of Leonard < 4, now hp of Leonard is 4;
+		if HP of Leonard < 4, now HP of Leonard is 4;
 		say "[leonardsex_pridekitty]";
 		now feline_status is 3;
 		rest;
@@ -243,9 +243,9 @@ to say sexwithLeonard:
 		decrease libido of player by libido of player / 3;
 		decrease humanity of player by 8;
 		follow the turnpass rule;
-	else if bodyname of player is "Feline" and player is pure and ( hp of Leonard is 3 or ( hp of Leonard > 3 and a random chance of 1 in 2 succeeds ) ):
+	else if bodyname of player is "Feline" and player is pure and ( HP of Leonard is 3 or ( HP of Leonard > 3 and a random chance of 1 in 2 succeeds ) ):
 		now lastfuck of Leonard is turns;
-		if hp of Leonard < 4, now hp of Leonard is 4;
+		if HP of Leonard < 4, now HP of Leonard is 4;
 		say "[leonardsex_purefeline]";
 		infect "Feline";
 		rest;
@@ -264,7 +264,7 @@ to say sexwithLeonard:
 		now feline_meow is feline_meow / 2;
 		decrease libido of player by libido of player / 4;
 		decrease humanity of player by 4;
-		if hp of Leonard < 3, now hp of Leonard is 3;
+		if HP of Leonard < 3, now HP of Leonard is 3;
 		follow the turnpass rule;
 
 
@@ -295,7 +295,7 @@ to say leonardsex_firsttimeB:		[First time - male]
 
 
 to say leonardsex_newkitty:		[Brought Leonard a new kitty]
-	if hp of Leonard is 7:
+	if HP of Leonard is 7:
 		say "     Leonard looks over the kitty girl you've brought to him and rumbles happily. 'Good work, my dear. I am always pleased to welcome another of these poor, wayward felines into my home and give them the proper loving care they need. He gives you a tender kiss even as a paw slides down your back to your ass while the other does the same to the feline nursing from you. 'Shall you help me welcome her to the pride?'";
 	else:
 		say "     'Oh my! It seems you've brought a special treat, my dear,' he says with a rumble as he runs his paw down your body and over your ass. 'This cute kitty girl you've found isn't one from my pride. Perhaps you'd like to help me invite her to join us. What do you say?'";
@@ -399,12 +399,12 @@ to leonardmatesex:
 		now title entry is "Doggy-style";
 		now sortorder entry is 5;
 		now description entry is "have the lion mount you like a beast";
-		if ( cunts of player > 0 or cocks of player > 0 ) and hp of Leonard >= 17:
+		if ( cunts of player > 0 or cocks of player > 0 ) and HP of Leonard >= 17:
 			choose a blank row in table of fucking options;
 			now title entry is "Maid foot rub";
 			now sortorder entry is 6;
 			now description entry is "have the maids lick your feet (and more)";
-		if cocks of player > 0 and hp of Leonard >= 17:
+		if cocks of player > 0 and HP of Leonard >= 17:
 			choose a blank row in table of fucking options;
 			now title entry is "Maid fuck";
 			now sortorder entry is 7;
@@ -783,8 +783,8 @@ the scent of the violin is "     The violin smells of polished wood.".
 
 Section 5 - Hunting Prides
 
-instead of navigating Lion's Den while hp of Leonard >= 10 and hp of Leonard <= 14:				[Lion's Den closed until resolved]
-	if hp of Leonard is not 14:
+instead of navigating Lion's Den while HP of Leonard >= 10 and HP of Leonard <= 14:				[Lion's Den closed until resolved]
+	if HP of Leonard is not 14:
 		say "You find yourself thinking of Leonard and want to return to him, but this reminds you that he's asked you to take care of an important task - dealing with those [bold type]hunting prides[roman type][one of]. Feeling a stronger bond to your pride sisters after the recital and orgy, protecting them is foremost in your mind[or]. Not wanting to return to your handsome lion master without completing the job, you decide to stay focused on that first[or]. Reminding yourself how much more pleased (and therefore passionate) he'll be when you come back victorious, you are eager to get the job done[or]. Thinking of those affectionate pride sisters you'd snuggled with during the concert, you want to protect them from being stolen away from Leonard[or]. Not wanting to get distracted by thoughts of sex with your handsome lion, you turn your thoughts back to dealing with those other felines first[in random order].";
 	else:
 		say "[leonardrivalfight]";
@@ -795,59 +795,59 @@ Hunting Prides is resolved.
 
 Instead of resolving Hunting Prides:
 	now fightoutcome is 100;
-	if hp of Leonard is 10:
+	if HP of Leonard is 10:
 		say "     As you're travelling through the park, you notice signs that a band of felines has passed by recently. Remembering your promise to Leonard to deal with these roving prides, you start tracking this one down. You follow their trail for a while before hearing some commotion ahead. Following it, you manage to catch up with the group of felines and find them in the midst of attacking another of the feline girls. While you can't be certain, she does seem familiar and may be another of your pride sisters. With a growl, you rush to her aid, charging the band of felines from behind.";
 		now Feline_type is 3;
 		challenge "Feline";
 		now Feline_type is 1;
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     You pant for breath after having fought the rival pride. With several of the girls injured and a few others knocked out, the dispersed felines should think twice before trying something like this again to oppose Leonard. As you prepare to talk away, you do spot a feline with dark hair watching you cautiously as you leave. Presuming her to be one of the band you just beat, you call out to her, telling her to stop assaulting your pride sisters or Leonard will have you deal with them again. With that warning given, you leave the clearing, recalling that there are a few other of these groups yet to be dealt with.";
-			increase hp of Leonard by 1;
+			increase HP of Leonard by 1;
 			increase level of Hunting Prides by 2;
-	else if hp of Leonard is 11:
+	else if HP of Leonard is 11:
 		say "     While following a wooded path, you turn a corner to find yourself facing another feline pride[if the player is felinefaced or the player is felinebodied]. They smile toothily at having found another feline to capture and start moving in[else if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist]. They pause for a moment, looking you over, padding slowly closer. They discuss that, while not a cat girl like them, you are still feline and may still be worth capturing[else]. They growl angrily as they notice the scent of a rival male on you and move in to capture you[end if]. Remembering your promise to Leonard, you prepare to fight this hunting pride to help keep your weaker pride sisters safe. You take up a fighting stance and growl that your pride won't stand for these attacks and you've been sent to deal with them.";
 		now Feline_type is 3;
 		challenge "Feline";
 		now Feline_type is 1;
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     Having defeated this second hunting party, you scatter the remaining felines, growling that you'll give them this same treatment if they try this again. Looking around at those lioness girls who were knocked out, you briefly consider some means to bring them back to Leonard so the handsome lion might teach them some proper manners, but you notice the dark-haired feline watching from the trees again. Knowing for certain she wasn't among the group you just fought, you call out to her, beckoning her to come forward. Presuming she might be a lone feline who's been hiding from these hunting packs, you tell her it's safe to come out and that you won't hurt her, but she moves away, slipping further into the trees and leaving. Recalling that Leonard wants you focused on dealing with these hunting bands, you decide to leave the fallen girls and move on.";
-			increase hp of Leonard by 1;
+			increase HP of Leonard by 1;
 			increase level of Hunting Prides by 2;
-	else if hp of Leonard is 12:
-		now hp of Leonard is 13; [encountered final hunting pride]
+	else if HP of Leonard is 12:
+		now HP of Leonard is 13; [encountered final hunting pride]
 		say "     Travelling through the park, you spot the dark-haired feline watching you from the edge of the trees again. You stop and smile, kneeling down and motioning for her to come forward in a friendly manner, trying to coax the nervous kitty. She cautiously steps out from behind the bushes and wrings the edge of her frilly dress nervously. You speak softly to her, trying to calm her and bring the timid girl closer.";
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		if "Wary Watcher" is listed in feats of player, increase bonus by 3;
 		if bonus > 15, now bonus is 14;
 		let dice be a random number from 1 to 20;
-		say "     (Perception: 1d20([dice])+[bonus]=[special-style-1][dice + bonus][roman type])  ";
-		if bonus + dice is greater than 15:
+		say "     (Perception: 1d20([dice])+[bonus]=[special-style-1][dice + bonus][roman type]) ";
+		if bonus + dice > 15:
 			say "With your focus on the nervous feline, you almost drop your guard, but a few small things suddenly set you on edge. The park's grown too quiet. The brief yet excited glance the cat girl makes behind you. The faint sound of a padded paw stepping closer. Instinctively, you roll to the side as there is a whoosh through the air you once occupied as the feline sneaking up behind you just misses you with a heavy stick. You scramble back a few steps only to find yourself surrounded by another hunting pack of felines. The dark-haired one giggles merrily. 'Oh, aren't you precious? Standing up for your pride sisters, are you? Well, we're not going to let your pride steal away the rest of the girls from our master. We're too clever for that.'";
 		else:
 			say "Keeping focused on the nervous feline, you gradually draw her closer. Not wanting to startle her, you let her come to you, hoping she might even have some useful information if she's been watching and evading the hunting prides. She stops just out of your reach and gives you a pretty smile that makes you smile all the more just before something large and heavy hits you upside the head. Knocked for a loop by the blow, your head spins as you find yourself surrounded by another hunting pack of felines while the dark-haired feline giggles merrily. 'Oh, aren't you precious? Standing up for your pride sisters, are you? Well, we're not going to let your pride steal away the rest of the girls from our master. We're too clever for that.'";
 			if hardmode is true and level of player > 12:
-				decrease hp of player by level of player + square root of level of player;
+				decrease HP of player by level of player + square root of level of player;
 			else:
-				decrease hp of player by 15;
+				decrease HP of player by 15;
 		say "     As you get back to your feet and take stock of the situation, you find that this group is larger than the others you've dealt with before. And that's when it strikes you, several of these felines look familiar and are among those you knocked out from the other hunting groups. It seems you were all wrong about the dark-haired girl. She wasn't with the first pride nor was she a loner, but was in actuality from another hunting pride altogether - one which scooped up the felines you'd rendered unconscious to add to their own. It seems you'll have to break up this group as well if you're to prove the might of your pride over all others.";
 		now Feline_type is 3;
 		challenge "Feline";
 		now Feline_type is 1;
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     After having knocked out several of the small lionesses and sending several more running, you manage to grab the dark-haired one and toss her to the ground. With the hunting pride collapsing and the felines scattered, you'd think she'd be more upset, but she continues to giggle excitedly. 'Oh, you think you're so strong now, don't you?' she laughs. 'Well, it's too late now. Our clever master will deal with your prissy lion. He has a plan to take care of him.'  As she starts giggling again, you growl angrily and punch her hard, knocking her out to silence her. From the sounds of it, you'd best rush back to Leonard as soon as possible.";
-			increase hp of Leonard by 1;
+			increase HP of Leonard by 1;
 			now Hunting Prides is resolved;
-	else if hp of leonard is 13:		[encountered final pride again]
+	else if HP of leonard is 13:		[encountered final pride again]
 		say "     You hear a small rustle nearby and glance over to see the tip of a golden tail moving behind a nearby bush. Suspecting trouble, you take up a fighting stance and prepare yourself to fight. Having noticed them, the feline girls surrounding you move out from behind their scattered cover, moving in to fight you again. The black-haired lioness girl among them, her hunting pride seeking to deal with you properly this time. 'Clever prey, running away like that. You should stay and join our pride,' she teases. If you come along, I know our master will welcome you,' she purrs with a smile on her cute face. It is a smile full of sharp teeth and sinister intent.";
 		now Feline_type is 3;
 		challenge "Feline";
 		now Feline_type is 1;
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     After having knocked out several of the small lionesses and sending several more running, you manage to grab the dark-haired one and toss her to the ground. With the hunting pride collapsing and the felines scattered, you'd think she'd be more upset, but she continues to giggle excitedly. 'Oh, you think you're so strong now, don't you?' she laughs. 'Well, it's too late now. Our clever master will deal with your prissy lion. He has a plan to take care of him.'  As she starts giggling again, you growl angrily and punch her hard, knocking her out to silence her. From the sounds of it, you'd best rush back to Leonard as soon as possible.";
-			increase hp of Leonard by 1;
+			increase HP of Leonard by 1;
 			now Hunting Prides is resolved;
 	if fightoutcome >= 20 and fightoutcome <= 29:
-		say "     [if fightoutcome is 22]Having submitted to the band of lionesses[else]Unable to continue resisting the band of lionesses[end if], you are dragged to the ground by them as they purr and giggle happily. You are kissed, licked and petted by the cute felines. As they continue this loving assault upon you, you start to purr and nuzzle them back, welcoming their kisses and caressing them in return[if hp of Leonard is 12 or hp of Leonard is 13]. You find yourself French kissing the black-haired one, who rumbles happily at your increasing submission[end if]. You begin to forget why you were ever fighting with them in the first place, eventually becoming another cute feline girl like them. Eventually, after much playful teasing and fun, you're brought back to the meet their leonine pride leader, who is happy to welcome you properly into the pride by mounting you, much to your feline delight.";
+		say "     [if fightoutcome is 22]Having submitted to the band of lionesses[else]Unable to continue resisting the band of lionesses[end if], you are dragged to the ground by them as they purr and giggle happily. You are kissed, licked and petted by the cute felines. As they continue this loving assault upon you, you start to purr and nuzzle them back, welcoming their kisses and caressing them in return[if HP of Leonard is 12 or HP of Leonard is 13]. You find yourself French kissing the black-haired one, who rumbles happily at your increasing submission[end if]. You begin to forget why you were ever fighting with them in the first place, eventually becoming another cute feline girl like them. Eventually, after much playful teasing and fun, you're brought back to the meet their leonine pride leader, who is happy to welcome you properly into the pride by mounting you, much to your feline delight.";
 		now humanity of player is 0;
 		now feline_pride_defeat is true;
 		[puts Feline as lead monster for infection and impregnation]
@@ -899,7 +899,7 @@ Instead of resolving Hunting Prides:
 		follow the turnpass rule;
 		stop the action;
 	else if fightoutcome >= 30:
-		say "     You manage to push your way through the felines and make your escape[if hp of Leonard is 13]. You can hear the raven-haired one growl angrily before beginning to giggle and tease you for running away[end if]. You feel an ache of disappointment at having to flee, knowing you've failed Leonard in your task. You resolve to do better next time, wanting to prove to your leonine master that you can help him protect the pride.";
+		say "     You manage to push your way through the felines and make your escape[if HP of Leonard is 13]. You can hear the raven-haired one growl angrily before beginning to giggle and tease you for running away[end if]. You feel an ache of disappointment at having to flee, knowing you've failed Leonard in your task. You resolve to do better next time, wanting to prove to your leonine master that you can help him protect the pride.";
 
 
 to say leonardrivalfight:
@@ -914,7 +914,7 @@ to say leonardrivalfight:
 	now inasituation is false;
 	now Feline_type is 1;
 	if fightoutcome >= 10 and fightoutcome <= 19:
-		now hp of Leonard is 15;
+		now HP of Leonard is 15;
 		say "     As you look down upon Leonard's fight, you see the exhausted but still handsome lion clock his opponent soundly in the jaw with a powerful right hook, sending him to the ground with a knock-out. As Leonard is about to roar triumphantly, your opponent's battered body tumbles over the edge of the tunnel mouth, landing atop the other fallen lion. He's surprised by this and looks up, spotting you grinning up there. Quickly assessing what was about to occur, your handsome lover smiles up at you and you both roar together, having defeated all those who would attack your pride, calling a halt to the fighting amongst the remaining females. Those from opposing prides who can either flee or give in, their prides broken.";
 		say "     As you are scrambling down the hillside to rush into Leonard's arms, you hear a cry of despair from the clearing's edge. The black-haired lioness is there with the ragged remains of her pride, having come in the hopes of seeing victory, but only finding crushing defeat. Quick to react, you call out to your work team, ordering them to seize her. Those few girls still with her, loyalty already wavering after their last defeat by you, flee back into the woods as their pride dissolves. The black-haired one struggles weakly, but the fight has largely gone out of her, and the others soon drag her down and start the work of welcoming her into her new pride.";
 		WaitLineBreak;
@@ -971,10 +971,10 @@ to say leonardrivalfight:
 		if libido of player < 30, now libido of player is 30;
 		WaitLineBreak;
 		if humanity of player < 10:
-			now hp of Leonard is 15;
+			now HP of Leonard is 15;
 			end the story saying "Having become the larger and matronly lioness, you become Leonard's mate and pride mother to the other girls.";
 		else:
-			now hp of Leonard is 16;
+			now HP of Leonard is 16;
 			now feline_attached is 0;
 			now PridePark is unresolved;
 			now lastdenevent is turns;
@@ -991,7 +991,7 @@ to say leonardrivalfight:
 	if fightoutcome >= 20:			[defeated/fled]
 		now lastdenevent is turns;
 		now humanity of player is 0;
-		now hp of Leonard is 100;
+		now HP of Leonard is 100;
 		[puts Feline as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
@@ -1038,7 +1038,7 @@ to say leonardrivalfight:
 		end the story saying "Having been defeated and captured by the alpha lion and his dark-haired lioness, you are made to join his pride.";
 
 
-[  hp of Leonard						]
+[  HP of Leonard						]
 [ 0 = not met						]
 [ 1 = talked once						]
 [ 2 = oral sex						]

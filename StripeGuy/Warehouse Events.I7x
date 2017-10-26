@@ -12,14 +12,14 @@ Instead of Resolving a dock team:
 	say "The warehouse and dock district are weirdly contrasted with the wilds of the city. There is almost a bustle about them like in the days before the nanites, a bit more orderly and perhaps slightly less savage than some harder hit areas. Oh sure, there is a lot more sex and a bit of violence, but the docks were always a rough part of town and at least around here you might get a [']by your leave['] before a rough non-consensual fucking. You pause to admire a group of longshoremen, now longshore animalmen, all working in concert to move large crates of booty from a coast-raiding galley fresh from the limited expanse of the military-cordoned nanite bubble. Despite the recent disasters, the beating human heart of greed drives a limping economy of scavenge and plunder old as time. Without power, even the loading and unloading has returned to ancient roots, the dockers working in teams with old fraying ropes and wooden pulleys. The survival of order and teamwork in the face of adversity is uplifting, and proof that humanity can overcome any obstacle with proper motivation. As you meditate on the scene, a line from an old song comes to mind, about some how some hungers are strong as the wind and tides. Something about a lust for treasure and the love of gold, you cannot quite recall.";
 	let bonus be ( Strength of player + Perception of player - 20 ) divided by 2;
 	let dice be a random number from 1 to 20;
-	if dice + bonus is greater than 14:
+	if dice + bonus > 14:
 		say "In the midst of your musing, you hear a sudden sound coming from your right, and turn to see[one of] a rope fraying, about to snap![or] a cotter pin nearly fit to fly from its hole![or] a stack of crates, precariously about to fall![at random] You call to the crew of rough longshoremen as you leap to the source of trouble, stopping disaster just in time. Your muscles ache at the sudden exertion, but in a few heartbeats hot paws clasp over your own and the rest of the crew arrive to help shoulder the load. After things are sorted, you gracefully accept the thanks of the crew and soak in the warmth of social acceptance.";
 		increase score by 5;
 		increase humanity of player by 5;
 	else:
 		say "In the midst of your musing, you hear a groaning sound coming from your right, and turn to see[one of] a load-bearing rope snap![or] a cotter pin sailing from its failure point![or] a stack of crates, beginning to tumble![at random] You call out in alarm and rush over as fast as you can, but you are too weak, too slow. The precious cargo and moorings sail from your hands, ripping flesh as they rapidly exit. Time freezes in mid-disaster, eyes of the crew split between you and the impending chaos. In the following explosions of wood and goods, you are lucky to escape in the confusion with only mild injuries as a mark of your shame.";
 		decrease morale of player by 10;
-		decrease hp of player by 5;
+		decrease HP of player by 5;
 	Now dock team is resolved;
 
 Section 2-  Hidden Fucknest
@@ -80,7 +80,7 @@ Instead of Resolving a FreshFish:
 	if the player consents:
 		let bonus be ( Charisma of player - 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
-		if dice + bonus is greater than 12:
+		if dice + bonus > 12:
 			say "Sidling up to the ship, you cautiously engage one of the less intimidating fishermen in a bit of light conversation. Carefully trying to diplomatically steer the conversation, you somehow to manage avoid the topic of sex. Directing it toward his other obsession, fishing, works, and soon enough he is boasting of the freshness and flavor of his catch. The trap set, you spring it, and a tense few moments later leave with some very fresh fish you can salt for later.";
 			increase score by 5;
 			increase carried of food by 2;
@@ -126,14 +126,14 @@ Instead of Resolving a hot stepping:
 	say "Something catches your eyes as you roam the warehouse and dock district. A certain kind of stealthy movement, the kind that comes before an ambush. Sudden cautious, you decide it would be best to get out of there, and do it quickly! Glancing around, you take stock of your situation, eyeing escape routes. It might be tricky, but survival in the nanite-ravaged city has been anything but easy. Hard choices have to be made, and fast decisions! No time to think, just react - and so you spring into action!";
 	let bonus be ( Dexterity of player + Perception of player - 20 ) divided by 2;
 	let dice be a random number from 1 to 20;
-	if dice + bonus is greater than 16:
+	if dice + bonus > 16:
 		say "Quick as a whip, you combat roll behind a crate and then skitter around, keeping low to the ground. You avoid crates and old pallets easily, dodging the darker blobs in the poorly lit warehouse. To get by some stacked handcarts you do a triple ninja handspring followed by some back-flips until you are perched on an inactive forklift. From your new viewpoint you look closer at where you saw the secretive motions. Almost immediately you are relieved to see its just some horny worker creeping off into an alley. There, he meets with some slender spotty cat and gives some small item. Something valuable, obviously, as the feline takes the worker by the hand and leads him deeper into the alley. You are about to sigh in relief when a smattering of applause from behind nearly startles you right off your perch. Face flushing, you look over your shoulder to see a gaggle of workers applauding and whistling at your clownish antics. One of them even tosses you a bottle of water, like you were busking!";
 		increase score by 5;
 		increase carried of water by 1;
 	else:
 		say "Quick as you can, you combat roll across the darkened floor of a nearby warehouse, stifling cries of pain as you plant your hands into a pile of discarded nails. In haste to recover, you snap behind some cover, smacking your face right into a[one of] box long abandoned[or] rusty ladder[or] trash can[or] filing cabinet[at random]. That of course makes quite a racket that you must rapidly distance yourself from, or at least that is what your overbearing paranoia is telling you. Using the obstacle as a launching pad, you begin a series of ninja handsprings, only to slam into an abandoned forklift in mid-air. The sound of your pained yelp is loud enough as you tumble to the concrete. When the crate of sleigh bells falls from the forklift's tines and bursts over your back, insult and injury are both piled on. Bells bounce across the floor, announcing to any passerby of your location and vulnerability.";
 		decrease morale of player by 10;
-		decrease hp of player by 10;
+		decrease HP of player by 10;
 		fight;
 		fight;
 	Now hot stepping is resolved;

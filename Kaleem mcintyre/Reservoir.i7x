@@ -108,7 +108,7 @@ Instead of resolving a Technical Assistance:
 			let diceroll be a random number from 1 to 20;
 			say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
-			if diceroll is greater than 10:
+			if diceroll > 10:
 				say "Ten minutes of searching leads you to an instruction manual, somehow kept perfectly clean and intact despite the creature that dominated the room having taken over and defiled just about everything in the place, and eagerly you find yourself flipping through the instruction book to read its contents. A few minutes of reading later -- thankfully without any interruption from outside forces -- you feel that you would be successful in working with the machines in the Reservoir to clean up the water supply. Closing the book you sigh in relief, right before you have to moan in grief as you now you just have to deal with some other... minor... nuisances.";
 				say "[resevfight1]";
 				say "[resevfight1]";
@@ -243,7 +243,7 @@ This is the doorcheck rule:
 					let diceroll be a random number from 1 to 20;
 					say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 					increase diceroll by bonus;
-					if diceroll is greater than 12:
+					if diceroll > 12:
 						say "A firm push and then a resound crack and you're in. Stumbling into the room and then looking around you find that there's very little of interest to you as you see look around at the cum stained and ruined break room that had once been a resting place for tired and overworked employees within the facility. All across the floor you can see that cum has stained just about everything from one side of the room to another, though thankfully not the ceiling. You mildly wonder then, if others had been in here, why, or rather how the door got jammed. Your answer comes when you turn to see dried cum crusted onto the sides of wood barrier.";
 						say "Ignoring this you try to look around to find something useful to your quest. Nose quivering at the smells coming from in here you find your eyes widening slightly as you spot an intact refrigerator that seems to have missed the carnage that had dominated the 20' x 15' foot room. Going over and listening to the sounds of the machine still working, a surprise you really hadn't been expecting - with what luck you're having today - you quickly open the fridge door and peek your [facename of player] head in to have a look at the contents. Most of whatever had been inside of here has been cleaned out, no small shocker there, but upon looking onto the side shelves you find both food, chips, and water waiting for you. Lady luck really does smile on the foolish sometimes... or was that the brave?";
 						wait for any key;
@@ -289,7 +289,7 @@ This is the doorcheck rule:
 			let diceroll be a random number from 1 to 20;
 			say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
-			if diceroll is greater than 8:
+			if diceroll > 8:
 				say "You manage to knock the unknown person away from you with an elbow and then duck into a defensive crouch as you wonder what to expect next. What you come to find is that your 'captor' is actually a German Shepherd that seems to be looking at you in confusion. All the standard markings apply to this creature and you guess that it must have been someone's pet before the canine changed into the bipedal creature it is now. Growling at you in aggression as it sees that you are not willing to cooperate the German Shepherd is soon stalking over to you. The intent to dominant you shines clearly in the mutants dark eyes.";
 				challenge "German Shepherd";
 				say "Having driven the creature off you to begin looking around the room. Nothing of interest pops out at you, or anything else for that matter. The room actually looks as though it were some manner of storage closet that happened to have modified into a makeshift doggy room for 'Rover' back there. You see a standard doggy bed set in the corner, a dish with some drinking water, though no food, a TV on a stand, some chairs and a desk dominating the center of the room. Mops, buckets, and brooms lie around on the floor and you can't help but wonder what the janitor, or other figure that dressed up the room as such, was like before things all went to hell. Giving a shrug you decide that it doesn't matter. Time won't come back or change the fact that the world as it is no longer how it once was. Shaking your head you decide to leave.";
@@ -349,7 +349,7 @@ Instead of resolving a A Fight to remember:
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
-			if diceroll is greater than 14:
+			if diceroll > 14:
 				say "You shake off your fear as you note that the thing before you was hurt once just recently, by its own ignorance no less, and you feel certain that you can take it on again. Glaring up at the thing you watch as it seems to [italic type]recognize[roman type] you as a threat and then turns its massive gelatinous form in your direction before shooting out tentacles to attack you. You smirk in glee. You're ready for it.";
 				wait for any key;
 				challenge "Blob";
@@ -385,7 +385,7 @@ Instead of resolving a A Fight to remember:
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 				increase diceroll by bonus;
-				if diceroll is greater than 10:
+				if diceroll > 10:
 					say "You find yourself dodging out of the way just in time not to be hurt. Obviously, even if your mind has turned to jelly your feet haven't and you dance skillfully out of the way of the creature's oozing appendages.";
 					wait for any key;
 					challenge "Blob";
@@ -417,7 +417,7 @@ Instead of resolving a A Fight to remember:
 						now lastResevoirfix is turns;
 				else:
 					say "You find yourself meeting the wall and losing some of your health as the lashing tentacle knocks you back into the concrete. Your breath wisps out from your mouth at an alarming speed because of this. So much so in fact that you can actually see much of it very clearly as it forms into a cloud of diamond dust in front of your face. Coughing to try and absorb some of the cold air into your lungs in order to ease the growing ache building up within you shakily get back up onto your feet and then growl fiercely at the monster. Oh there's no way you're going to take that lying down! A savage battle cry rips free from your lips a second later and soon you are charging right at the BLOB!";
-					decrease hp of player by 10;
+					decrease HP of player by 10;
 					wait for any key;
 					challenge "Blob";
 					if fightoutcome >= 10 and fightoutcome <= 19:

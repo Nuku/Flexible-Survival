@@ -7,7 +7,7 @@ mrevents is a list of numbers that varies. mrevents is usually { 1, 2, 3, 4, 5, 
 mre01 is a number that varies.
 mre02 is a number that varies.
 mre04 is a truth state that varies. mre04 is usually false.
-hp of Valerie is usually 255.
+HP of Valerie is usually 255.
 
 museumrounding is an action applying to nothing.
 
@@ -22,7 +22,7 @@ check museumrounding:
 	if Valerie is not visible, say "You go around and around, but don't find who you're looking for." instead;
 
 carry out museumrounding:
-	if xp of Valerie is 0:
+	if XP of Valerie is 0:
 		if guy is banned, remove { 5 } from mrevents, if present;
 		if girl is banned, remove { 4 } from mrevents, if present;
 		if guy is banned and girl is banned, remove { 8 } from mrevents, if present;
@@ -30,7 +30,7 @@ carry out museumrounding:
 		if hermaphrodite is banned, remove { 11 } from mrevents, if present;
 	if riddlewin < 3:
 		say "     'I'd prefer more intellectual companionship while making my rounds. One needs to be clever to deal with many of the denizens of the Museum. Perhaps you could prove your cleverness by solving a few of my riddles?' she says with an enigmatic grin.";
-	else if hp of Valerie - turns < 8:
+	else if HP of Valerie - turns < 8:
 		say "     'We checked on stuff a while ago. I can't be leaving the front desk all the time or unsavory people'll be sneaking into the museum.'";
 	else:
 		now battleground is "Museum";
@@ -66,13 +66,13 @@ carry out museumrounding:
 			say "[mrevent14]";
 		else if entry 1 in mrevents is 15:
 			say "[mrevent15]";
-		increase xp of valerie by 1;
-		now hp of valerie is turns;
+		increase XP of valerie by 1;
+		now HP of valerie is turns;
 		follow the turnpass rule;
 
 
-[ xp of valerie = number of times doing rounds with her. ]
-[ hp of valerie = last turn museum rounds were made. ]
+[ XP of valerie = number of times doing rounds with her. ]
+[ HP of valerie = last turn museum rounds were made. ]
 
 
 Section 2 - Doing the Rounds
@@ -187,7 +187,7 @@ to say mrevent05:
 			if cock length of player > 12, increase sexbonus by 1;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus]+[sexbonus] -- [dice + bonus + sexbonus] vs 15: ";
-			if bonus + dice + sexbonus is greater than 14:
+			if bonus + dice + sexbonus > 14:
 				say "     You approach the group in a friendly manner, trying to convince them through soft words and lewd gestures that you would like to join in on the fun. At first they seem wary, but then huddle together to grunt and hoot at one another quickly. One gestures to your face, then pokes his own cromagnon features and shakes his head. [if cunts of player > 0]. Another points back at you and then grunts emphatically while hip-thrusting, to much nodding from the group[else if breast size of player > 3]. Another cups imaginary [breast size desc of player] breasts in front of his chest and whistles, much to the delight of his peers[else if cock length of player > 12]. Glances are made at your [cock size desc of player] cock while they debate your merits[else]. Occasional glances back at you are made as they debate the matter[end if]. Finally, one of them shrugs and motions for you to come along. Pleased with your success, you follow off after the hunting party while Valerie smiles and tells you to have fun, though you barely notice in your excitement.";
 				say "[mre05_hunter]";
 			else:

@@ -14,18 +14,18 @@ FangWS is a number that varies.
 FangToy is a truth state that varies. FangToy is usually false.
 [See Feral Wolf file for collecting Fang.]
 
-the scent of the Fang is "[if hp of Fang is 3 or hp of Fang is 4]The scent of your alpha wolf is strong and exciting.[else]The scarred wolf has an arousing male scent.[end if]".
+the scent of the Fang is "[if HP of Fang is 3 or HP of Fang is 4]The scent of your alpha wolf is strong and exciting.[else]The scarred wolf has an arousing male scent.[end if]".
 
 to say fangdesc:
 	if debugactive is 1:
-		say "     DEBUG -> hp: [hp of Fang], Libido: [libido of Fang], Lust: [lust of Fang], FangWS: [FangWS], FangToy: [FangToy] <- DEBUG[line break]";
-	if hp of Fang is 3 or hp of Fang is 4:
+		say "     DEBUG -> HP: [HP of Fang], Libido: [libido of Fang], Lust: [lust of Fang], FangWS: [FangWS], FangToy: [FangToy] <- DEBUG[line break]";
+	if HP of Fang is 3 or HP of Fang is 4:
 		say "     The feral wolf creature is now prowling around freely in the Library, unchained and without a collar. Your beastly wolf has a mix of black and dark grey fur that blends into the shadows as he stands on watch. Fang looks quite assertive as he patrols, his bright, yellow eyes shining with confidence in his new position as the alpha wolf. He's seems bigger now, having grown larger since asserting himself over you. And this size growth doesn't seem to be limited to just his body. His sheath and balls are also plumper and fuller, proper for a virile alpha such as he. You feel a rush of excitement as you look at him, your alpha wolf, feral instincts making you want to submit to him again.";
 	else:
 		say "     The feral wolf creature seems to be doing better in his new home. He is looking more confident and strong as he sits obediently on watch, clearly adjusting well to his improved position as your beta. His fur is a mix of black and dark grey fur that blends into the shadows as he watches the door with his bright, yellow eyes. You are pleased with how he's turning out so far. He's not made a mess around the Library and remains on his long, rope leash. The fact that he cleverly unties and reties its anchoring point to get around when you're not looking doesn't bother you very much, as the fact he still wears it shows he recognizes your authority as his [if cocks of player > 0]master[else]mistress[end if][if FangToy is true and a random chance of 1 in 3 succeeds][one of]Fang has his doggy dick toy stuffed in his muzzle, happily working his tongue over it[or]Fang has the playtoy Sandra gave him on the ground between his paws and is giving it a few casual licks[or]Fang's red dildo toy is on the floor beneath him. He's idly rubbing his own hard cock against it, dribbling getting it slick with wolf pre[at random][end if].";
 
 Instead of conversing the Fang:
-	if hp of Fang is 3 or hp of Fang is 4:
+	if HP of Fang is 3 or HP of Fang is 4:
 		say "     The wolf creature listens attentively as you tell him what happening out in the city while you stroke and scritch your lupine master.";
 	else:
 		say "     The wolf creature listens attentively as you speak to him.";
@@ -42,13 +42,13 @@ to say sexwithFang:
 		if name entry is "Feral Wolf":
 			now monster is y;
 			break;
-	if lastfuck of Fang - turns is less than ( 9 - hp of Fang ):
+	if lastfuck of Fang - turns < ( 9 - HP of Fang ):
 		say "     Fang got off fairly recently, so you'd probably have a better time with him if you give him a little longer to recover.";
-	else if hp of Fang is 3:
+	else if HP of Fang is 3:
 		say "[fangalphasex]";
 		infect "Feral Wolf";
 		now lastfuck of Fang is turns;
-	else if hp of Fang is 4:
+	else if HP of Fang is 4:
 		say "[fangalphasex2]";
 		infect "Feral Wolf";
 		now lastfuck of Fang is turns;
@@ -59,7 +59,7 @@ to say sexwithFang:
 		now lastfuck of Fang is turns;
 	else:
 		say "     Lacking any sexual organs of your own, you content yourself with snuggling the wolf and scritching his ears. He nuzzles you in return and licks your face.";
-		if hp of Fang is 3 or hp of Fang is 4:
+		if HP of Fang is 3 or HP of Fang is 4:
 			infect "Feral Wolf";
 			now lastfuck of Fang is turns;
 
@@ -93,7 +93,7 @@ to say fangsex:
 			now title entry is "SBL fuck";
 			now sortorder entry is 4;
 			now description entry is "Vent your skunkbeast urges by fucking Fang.";
-	if libido of fang > 2 and lastfuck of Sandra - turns >= ( 9 - hp of Fang ) and Sandra is in the Bunker:
+	if libido of fang > 2 and lastfuck of Sandra - turns >= ( 9 - HP of Fang ) and Sandra is in the Bunker:
 		choose a blank row in table of fucking options;
 		now title entry is "Fang and Sandra";
 		now sortorder entry is 5;
@@ -153,7 +153,7 @@ to say fangsex4:		[assfuck Fang]
 to say fangsex5:		[assfuck Fang]
 	say "     Deciding to sate your skunkbeast urges by mounting the wolf, you stride over to him. With your enlarged body, you're easily able to push him over. He gives a submissive whine and, noticing your midnight black erection, starts licking over it. You give an appreciative rumble ";
 	if skrp is 1:
-		say "and your added skunk girl head chirrs happily. She directs the beta wolf to lick and suck your [cock size desc of player] cock and balls[if hp of Fang is 2], which he does obediently[else], which he obeys reluctantly[end if].";
+		say "and your added skunk girl head chirrs happily. She directs the beta wolf to lick and suck your [cock size desc of player] cock and balls[if HP of Fang is 2], which he does obediently[else], which he obeys reluctantly[end if].";
 	else:
 		say ", allowing the beta wolf to lick and suck your [cock size desc of player] cock and balls.";
 	say "     Once you're good and slick with his saliva, you pull your throbbing back and press the wolf down beneath you. Your strong, mephit body is able to stand over him and you press your pulsing rod against him. Knowing what's coming, the wolf's ears dip and he gives a soft whimper, but keeps his tail raised for his beastly alpha. He releases a soft growl as you push your ebon rod into him, spreading his tight pucker [if cock length of player > 20]very wide[else if cock length of player > 10]wide[else]open[end if] as you fuck him. Your first few thrusts are restrained, giving the wolf a chance to adjust, but you don't hold back after that, letting your bestial urges set a fast and rough pace. ";
@@ -167,7 +167,7 @@ to say fangsex5:		[assfuck Fang]
 
 Section 3 - Fang and Sandra
 
-instead of going outside from Bunker while ( lastfuck of Sandra - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and libido of Fang < 2 and ( hp of Fang is 1 or hp of Fang is 2 ) ):
+instead of going outside from Bunker while ( lastfuck of Sandra - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and libido of Fang < 2 and ( HP of Fang is 1 or HP of Fang is 2 ) ):
 	now lastfuck of Sandra is turns;
 	now lastfuck of Fang is turns;
 	move player to Grey Abbey Library;
@@ -227,12 +227,12 @@ to say fangsandrasex:
 	increase lust of Fang by 1;
 	say "     Recalling that you haven't spent time with Sandra in a while, you lead Fang over to one of the side rooms before poking your head in the bunker long enough to call the bunny girl over[if ( number of booked people + number of bunkered people ) > 4 and libido of Fang > 5]. The others smile, having picked up on what's going on, but saying nothing as she heads out to join you[else if ( number of bunkered people + number of booked people ) > 4]. The others inside glance over for a moment, but largely ignore the brief intrusion and the bunny girl's exit[else]. The bunny girl exits the bunker to come join you[end if]. Once in the side room, the bunny girl [if libido of Fang > 5]grins playfully and[else]blushes a little to find Fang there, but[end if] rushes over to hug the big wolf around the neck. You slip off your pack and clothes, smiling to see that Sandra's already got her paw at the wolf's hard cock. Clearly she's been looking forward to this as much as your guard wolf has.";
 	WaitLineBreak;
-	if lust of Fang is 3 and hp of Fang is 1:			[3rd threesome w/Fang in this playthrough w/basic Fang]
+	if lust of Fang is 3 and HP of Fang is 1:			[3rd threesome w/Fang in this playthrough w/basic Fang]
 		say "     As Sandra strokes the wolf's cock, she spreads his precum over it, getting it nice and slick. 'Mmm... would you like a turn under this sexy beast?  I'd love to see you bent over for this big wolf[if cunts of player is 0] and taking it up the ass. That'd be really hot,'[else], getting bred as his bitch. That'd be really sexy,'[end if] she moans, fingering herself. Looking at that throbbing, red cock, you find yourself tempted by the idea of letting the wolf ravage you as he did with Sandra. Fang, as if sensing your momentary lapse in control, moves up to you and begins trying to mount you. Shall you let him (Y) or reassert your dominance (N) ?";
 		if the player consents:
 			say "[fangsub]";
-			now hp of Fang is 3; [Fang becomes alpha]
-			now xp of Alexandra is 0;
+			now HP of Fang is 3; [Fang becomes alpha]
+			now XP of Alexandra is 0;
 			now vmusedone of Fang is false; [Open for fresh musings]
 			now libido of player is libido of player / 2;
 			infect "Feral Wolf";
@@ -248,10 +248,10 @@ to say fangsandrasex:
 				say "[fangdomfuck]";
 			else:
 				say "[fangdomride]";
-			now hp of Fang is 2; [Fang locked into beta-mode]
+			now HP of Fang is 2; [Fang locked into beta-mode]
 			now libido of player is libido of player / 4;
 			if thirst of player > 50, decrease thirst of player by 10;
-	else if ( lust of Fang is 4 or lust of Fang is 0 ) and hp of Fang is 2 and FangToy is false:
+	else if ( lust of Fang is 4 or lust of Fang is 0 ) and HP of Fang is 2 and FangToy is false:
 		say "     As Sandra strokes the wolf's cock with one bunny paw, she pulls out a large dildo out of a small bag she's brought this time. 'Mmm... I was thinking about what you'd said before and thought it might be nice to give the big wolf here a toy to play with,' she says with a grin as she passes it to you. You look over the rather canid-looking sextoy made of red latex with a knot and pointed tip like that of a dog or wolf. After looking it over and then back to Sandra, the bunny girl blushes a little. 'Its... ah... from my personal collection. It was one of my personal favorites before I became a rabbit. But Fang can have it now since I've got the real thing to play with.' And with that, Sandra rolls onto her back under the wolf and stuffs his large, lupine cock into her eager muzzle.";
 		say "     Looking between the wolf and the bunny, you find yourself presented with a few options. ";
 		if cocks of player > 0:
@@ -360,7 +360,7 @@ to say fangsandracloser1:
 	wait for any key;
 
 
-[ hp of Fang			]
+[ HP of Fang			]
 [ 0 - not found			]
 [ 1 - at Library			]
 [ 2 - locked as Beta		]
@@ -472,7 +472,7 @@ to say fangalphatrio:
 
 Chapter 2 - w/o Sandra	[Only available if 'girl' is banned, removing Sandra from the game]
 
-instead of going outside from Bunker while ( lastfuck of Fang - turns >= 24 and hp of Fang is 1 and girl is banned) and ( cocks of player > 0 or cunts of player > 0 ):	[ignored for 3+ days]
+instead of going outside from Bunker while ( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and girl is banned) and ( cocks of player > 0 or cunts of player > 0 ):	[ignored for 3+ days]
 	now lastfuck of Fang is turns;
 	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something. As you start to struggle, you are surprised to find that it's Fang atop you. From his growls and the hard cock rubbing against you, you surmise that the wolf's not playing around. It's been some time since you've given the beast some attention and it looks like he's intent on satisfying his lusts with you whether you like it or not. As his throbbing shaft grinds against you while he tries to get a better grip on you, the scent from the powerful beast is quite enticing. It could be fun to just give in and let the big wolf have his way with you.";
 	say "     [bold type]Shall you let him or reassert your dominance?[roman type][line break]";
@@ -481,8 +481,8 @@ instead of going outside from Bunker while ( lastfuck of Fang - turns >= 24 and 
 	say "     ([link]N[as]n[end link]) - Reassert your dominance.";
 	if the player consents:
 		say "[fangsub2]";
-		now hp of Fang is 4; [Alpha Fang w/o Sandra]
-		now xp of Alexandra is 0;
+		now HP of Fang is 4; [Alpha Fang w/o Sandra]
+		now XP of Alexandra is 0;
 		now vmusedone of Fang is false; [Open for fresh musings]
 		now libido of player is libido of player / 2;
 		infect "Feral Wolf";
@@ -498,7 +498,7 @@ instead of going outside from Bunker while ( lastfuck of Fang - turns >= 24 and 
 			say "[fangdomfuck2]";
 		else:
 			say "[fangdomride2]";
-		now hp of Fang is 2; [Fang locked into beta-mode]
+		now HP of Fang is 2; [Fang locked into beta-mode]
 		now libido of player is libido of player / 4;
 
 to say fangsub2:
@@ -606,11 +606,11 @@ to say fangwscontent:
 Chapter 4 - Alpha Fang and Candy
 
 an everyturn rule:
-	if ( hp of Fang is 3 or hp of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( libido of Fang is 7 or libido of Fang is 6 or ( lust of Fang >= 2 and girl is banned ) ) and lust of Candy is 0 and coonstatus is 2:
+	if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( libido of Fang is 7 or libido of Fang is 6 or ( lust of Fang >= 2 and girl is banned ) ) and lust of Candy is 0 and coonstatus is 2:
 		now lust of Candy is 1;
 		now lastCandyfucked is turns;
 		now lastfuck of Fang is turns;
-		say "     As you're adjusting your gear, you hear the door to the bunker open. Glancing over, you spot Candy sashaying out. He smiles and waves at you, giving his tail a playful flick. 'I'm going to borrow your big, bad wolf, sweetie[if hp of Fang is 3]. Sandra spilled the beans to me about how much fun she's been having, so I thought I'd give the big boy a test drive[else]. You mentioned how much fun you'd been having with him, so I thought I'd give the big boy a test drive[end if]. I hope you don't mind.' And with that said, he continues over to Fang. He seems hesitant to approach the big wolf for only a moment before moving up to offer himself to the wolf.";
+		say "     As you're adjusting your gear, you hear the door to the bunker open. Glancing over, you spot Candy sashaying out. He smiles and waves at you, giving his tail a playful flick. 'I'm going to borrow your big, bad wolf, sweetie[if HP of Fang is 3]. Sandra spilled the beans to me about how much fun she's been having, so I thought I'd give the big boy a test drive[else]. You mentioned how much fun you'd been having with him, so I thought I'd give the big boy a test drive[end if]. I hope you don't mind.' And with that said, he continues over to Fang. He seems hesitant to approach the big wolf for only a moment before moving up to offer himself to the wolf.";
 		say "     [bold type]It seems like things are about to get started here. Do you want to stick around?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
@@ -633,7 +633,7 @@ an everyturn rule:
 		else:
 			say "     Grabbing your pack, you toss the rest of the stuff back into it and head into the bunker to give the two some privacy. You putter around in there for a while, Candy eventually returning. His fur is rather scruffy and his dress has got a tear in it. He's got a wild look in his eyes that you haven't seen since his time at the hospital and snarls a little[if the number of bunkered people > 3]. The others seem a little concerned at this and you[else]. You[end if] get up slowly, concerned the girly coon may have regressed further and shift into a fighting stance.";
 			say "     'Aieee! My dress!' Candy shrieks, spotting the torn shoulder. He immediately slides it off, pausing only a moment to tease his nipples and straighten his fur. He runs over to grab his little sewing kit and gets to work repairing his outfit, clearly making a show of grumbling about [']such brutish behaviour['] and the like between commenting about how the wolf was [']at least a good fuck['] and [']quite the beast in the sack[']. As this goes on, Candy recounts his romp in increasingly graphic detail and you slip back into the library.";
-	else if ( hp of Fang is 3 or hp of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( libido of Fang is 7 or libido of Fang is 6 or ( lust of Fang >= 2 and girl is banned ) ) and lust of Candy is 2 and coonstatus is 2:
+	else if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( libido of Fang is 7 or libido of Fang is 6 or ( lust of Fang >= 2 and girl is banned ) ) and lust of Candy is 2 and coonstatus is 2:
 		now lust of Candy is 3;
 		now lastfuck of Fang is turns;
 		say "     As you're taking a break, you hear the door to the bunker open. Glancing over, you spot Candy sashaying out again. He smiles and waves to you, giving his tail a big swish. 'I'll be borrowing your big, bad wolf again, hon. I've decided the best way he can repay me for nearly ruining my outfit is with another fucking. I hope you don't mind.' And with that said, he continues over to Fang. This time, he pulls off his dress and tosses it across the librarian's desk.";
@@ -652,7 +652,7 @@ Section 6 - The Rivalry
 ffrivalry is a number that varies.
 
 an everyturn rule:
-	if the player is in the Grey Abbey Library and ( hp of Fang is 3 or hp of Fang is 4 ) and felinoid companion is tamed:
+	if the player is in the Grey Abbey Library and ( HP of Fang is 3 or HP of Fang is 4 ) and felinoid companion is tamed:
 		increase ffrivalry by 1;
 		let num be a random number between 5 and 20;
 		if num >= ffrivalry and Felinoid companion is the companion of the player:
@@ -663,22 +663,22 @@ an everyturn rule:
 Section 7 - Endings
 
 when play ends:
-	if Fang is in the Grey Abbey Library and hp of Fang is not 3 and hp of Fang is not 4:			[ Fang the guard wolf ]
+	if Fang is in the Grey Abbey Library and HP of Fang is not 3 and HP of Fang is not 4:			[ Fang the guard wolf ]
 		if humanity of player < 10:
 			say "     Having had his alpha succumb to the infection, Fang leaves behind his rope leash and heads back into the city to find his fortune elsewhere.";
 		else:
 			say "     When the military comes, you worry about how they'll react to Fang. He's been quite loyal and not caused any trouble, but his bestial form distresses the soldiers. As the squad leader moves up to tell you the wolf can't come, Fang pads quietly in front of you and sits down. Clearing his throat, he starts talking with some difficulty. In anticipation of this moment, it's clear to you he's spent some time among the library stacks reading in preparation. With his clearly rational arguments (albeit cribbed from the philosophy section), he's able to plead his case well enough to join you. While two soldiers remain with guns trained on him, the rest of the squad moves on to inspect and search the rest of the building. You quietly pat the wolf's head before going along to show them the rest of the place. Needing no more recognition, his tail wags once and he sits patiently waiting to join you in your new life as you home's loyal guardian and your secret lover.";
 			if Sandra is in the bunker:
 				say "     Sandra, thankful to the big wolf for helping to keep everyone safe in the bunker, is always very kind to the big wolf when she comes to visit. Often, during visits or get-togethers at your place, you'll find that the bunny's quietly slipped away. Always knowing where you'll find her, you'll check and see her safely beneath the big wolf, getting his large, red cock stuffed into her cunt. The bunny's tummy grows large after one of these visits and she eventually gives birth to a pair of wolf cubs with bunny ears and a tail. These quiet, taciturn boys are never lacking in companionship, always having numerous lovers drawn in by the strong bodies and brooding nature, eager to bend over for them.";
-	else if hp of Fang is 3 or hp of Fang is 4:				[ alpha Fang ]
+	else if HP of Fang is 3 or HP of Fang is 4:				[ alpha Fang ]
 		if bodyname of player is "Feral Wolf":
 			[ see Feral Wolf file for this ending ]
 			now tempnum is 0;
 		else:
 			if humanity of player < 10:
-				if hp of Fang is 3:
+				if HP of Fang is 3:
 					say "     Having succumbed to another infection, Fang has lost his slutty bitch and, having no more reason to stay, leaves the bunker. With his newfound confidence, he forms a small pack of his own[if coleenalpha is 0]. Taking Sandra with him, he leads her off to be his special bunny fucktoy, a role that she enjoys greatly. She bears him many quick-footed pups who become runners for the pack, chasing down prey so the stronger wolves can catch them and take them down[end if].";
-				else if hp of Fang is 4:
+				else if HP of Fang is 4:
 					say "     Having succumbed to another infection, Fang has lost his slutty bitch and, having no more reason to stay, leaves the bunker. With his newfound confidence, he forms a small pack of his own.";
 			else:
 				say "     When the military comes, you worry about how they'll react to Fang. Secretly your lupine alpha, you keep that fact hidden when speaking to the military. His bestial form distresses the soldiers, but you do your best to appease them. As the squad leader tries to move you out of the way, telling you the wolf can't come, Fang pads confidently in front of you growls for him to let you go. Clearing his throat, he starts talking with some difficulty. In anticipation of this moment, it's clear your clever master has spent some time among the library stacks reading in preparation. With his clearly rational arguments (albeit cribbed from the philosophy section), he's able to articulate clearly his points and that he WILL be going with you. While two soldiers remain with guns trained on him, the rest of the squad moves on to inspect and search the rest of the building. You hug your wonderful alpha's head before going along to show them the rest of the place. He gives your cheek a lick and ignores the soldiers guarding him as inconsequential, having impressed their alpha, and strides back to his favourite resting spot to await departure.";

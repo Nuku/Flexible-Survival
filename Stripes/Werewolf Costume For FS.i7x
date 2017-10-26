@@ -61,7 +61,7 @@ to say monstercostumedesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -88,7 +88,7 @@ When Play begins:
 	now int entry is 6;
 	now cha entry is 14;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 30; [ The monster's starting hit points. ]
+	now HP entry is 30; [ The monster's starting HP. ]
 	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
 	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -118,7 +118,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Werewolf Costume":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     With the infection leaving your mind nearly as empty as your head now is, you wander off into the city and find your way back to the State Fair. You find your way to one of the many haunted houses and join the other varied costume monsters shambling around within. There are monsters, werewolves, ghosts, zombies and many other varieties of costume creatures there. You have an great time living with them, roaming the park and hijacking the bodies of the other creatures of the midway to allow you to sate your needs.";
 			say "     Coming back from one of these, you run into a soldier and can hear many others coming up. He stiffens and glances back, then whips off his backpack and tosses it to you. 'Quick! Get in!' he whispers. You catch a hint of gasoline and smoke in the air and you can see several black columns of smoke rising from the way you were headed. Scared, but knowing your thin, costume-like body would not survive a flamethrower, you nod. After dumping the contents behind a booth, you crawl into the pack and deflate yourself as much as you can. It is a little cramped, but you manage it.";
 			say "     When he rejoins the others, you can hear several of them laughing about how easy this detail is, nothing but stuffed bears and toys to deal with. You seethe in anger, but remain quiet, and your rescuer only gives a token chuckle before getting back to guarding the flamers. Once he gets you back to base, he gets a short moment to whisper to you that he couldn't stand seeing them burning down those creatures and just had to help you. Besides, you're just a cute costume; there are much more dangerous things out there than you. He manages to slip you some rations and a few treats from time to time, keeping you hidden in a footlocker until he can be discharged. He, like many others, are released from service after the disturbing events in the city.";

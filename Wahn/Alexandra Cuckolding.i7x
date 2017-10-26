@@ -3,7 +3,7 @@ Version 1 of Alexandra Cuckolding by Wahn begins here.
 
 "Adds Cuckolding scenes for Bad Alexandra the Doberwoman to the Flexible Survival game"
 
-[ hp of Alexandra                                     ]
+[ HP of Alexandra                                     ]
 [ 0 = still roaming                                   ]
 [ 1-49 = Bad Alexandra                                ]
 [ 1 = At bunker, no talk                              ]
@@ -38,7 +38,7 @@ Version 1 of Alexandra Cuckolding by Wahn begins here.
 [ 0 = not preggers                                    ]
 [ 1-12 = lightly preggers                             ]
 [ 13-24 = plumply preggers                            ]
-[ if ( hp of Alexandra is 3 and lust of Alexandra > 12 ) or hp of Alexandra > 3  =  bigger breasts ]
+[ if ( HP of Alexandra is 3 and lust of Alexandra > 12 ) or HP of Alexandra > 3  =  bigger breasts ]
 
 [ libido of Alexandra                                 ]
 [ number of offspring                                 ]
@@ -49,7 +49,7 @@ Version 1 of Alexandra Cuckolding by Wahn begins here.
 [ 1 = unshared                                        ]
 [ 2 = shared                                          ]
 
-[ xp of Alexandra                                     ]
+[ XP of Alexandra                                     ]
 [ turn when both Fang and Alexandra are determined to be present]
 
 [ lastdobiemess                                       ]
@@ -145,8 +145,8 @@ to say AlexandraBrutusCuckScene:
 		now lastfuck of Alexandra is turns;
 		let t be 2;
 		increase t by level of Alexandra;
-		if hp of Alexandra is even and a random chance of t in 5 succeeds:
-			increase hp of Alexandra by 1;
+		if HP of Alexandra is even and a random chance of t in 5 succeeds:
+			increase HP of Alexandra by 1;
 			now lust of Alexandra is 1;
 			now AlexandraPupDaddy	is 5; [Brutus knocked her up]
 	else: [stop this - the player might not like Brutus being used this way, even if he has allowed Alexandra to get into cuck status]
@@ -192,8 +192,8 @@ to say AlexandraKorvinCuckScene1:
 		now lastfuck of Alexandra is turns;
 		let t be 2;
 		increase t by level of Alexandra;
-		if hp of Alexandra is even and a random chance of t in 5 succeeds:
-			increase hp of Alexandra by 1;
+		if HP of Alexandra is even and a random chance of t in 5 succeeds:
+			increase HP of Alexandra by 1;
 			now lust of Alexandra is 1;
 			now AlexandraPupDaddy	is 3; [Korvin knocked her up]
 	else: [stop this - the player might not like Korvin being used this way, even if he has allowed Alexandra to get into cuck status]
@@ -246,8 +246,8 @@ to say AlexandraKorvinCuckScene2:
 	now lastfuck of Alexandra is turns;
 	let t be 2;
 	increase t by level of Alexandra;
-	if hp of Alexandra is even and a random chance of t in 5 succeeds:
-		increase hp of Alexandra by 1;
+	if HP of Alexandra is even and a random chance of t in 5 succeeds:
+		increase HP of Alexandra by 1;
 		now lust of Alexandra is 1;
 		now AlexandraPupDaddy	is 3; [Korvin knocked her up]
 
@@ -272,12 +272,12 @@ to say AlexandraKorvinCuckScene3:
 	now lastfuck of Alexandra is turns;
 	let t be 2;
 	increase t by level of Alexandra;
-	if hp of Alexandra is even and a random chance of t in 5 succeeds:
-		increase hp of Alexandra by 1;
+	if HP of Alexandra is even and a random chance of t in 5 succeeds:
+		increase HP of Alexandra by 1;
 		now lust of Alexandra is 1;
 		now AlexandraPupDaddy	is 3; [Korvin knocked her up]
 
-instead of going up from Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and Carl is in Grey Abbey 2F and hp of Carl > 9 and hp of Carl < 40 and AlexandraCarlInteraction is 0):
+instead of going up from Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and Carl is in Grey Abbey 2F and HP of Carl > 9 and HP of Carl < 40 and AlexandraCarlInteraction is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Alexandra makes a move on Carl - AlexandraCarlInteraction: [AlexandraCarlInteraction][line break]";

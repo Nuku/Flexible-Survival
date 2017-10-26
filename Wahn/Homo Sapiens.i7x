@@ -9,7 +9,7 @@ when play begins:
 	add { "Homo Sapiens" } to infections of guy;
 
 to say losetoHomoSapiens:
-	if hp of player > 0: [player submits]
+	if HP of player > 0: [player submits]
 		say "     As you stop fighting and lower your hands, the young tribesman gives you a suspicious look, still holding his spear tightly as his eyes wander up and down over you, then look into yours. A moment later, he murmurs something in his own language, followed by the word 'Stay' in English - something he must have picked up, or be remembering from his old life before the nanites. Finally convinced that you really have given in, the athletic man leans his spear against a wall where it'll be ready for him to snatch up in a moment's notice, then steps up to inspect you closely.";
 	else: [player beaten]
 		say "     As you collapse at his feet, the young tribesman gives you a suspicious look, still holding his spear tightly as his eyes wander up and down over you, then look into yours. A moment later, he murmurs something in his own language, followed by the word 'Stay' in English - something he must have picked up, or be remembering from his old life before the nanites. Finally convinced that you're not just trying to trick him, the athletic man leans his spear against a wall where it'll be ready for him to snatch up in a moment's notice, then steps up to inspect you closely.";
@@ -109,7 +109,7 @@ to say HomoSapiensDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -136,7 +136,7 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 12;
 	now sex entry is "Male";          [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 55;
+	now HP entry is 55;
 	now lev entry is 8;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12;             [ Monster's average damage when attacking. ]
 	now area entry is "Museum";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -183,7 +183,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Homo Sapiens":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As you succumb fully to the nanites and the way you think is re-adjusted to what their jumbled programming deems right, you fall back into a more primitive mindset, befitting the early human tribes. Survival comes first - yours, then the tribe's - and if there is a need, you fight and take what is necessary to survive. Albeit a rather cut-throat outlook, it works - and you do survive the following days and weeks as part of the primitive tribe carving out a part of the museum as their territory. Things are... simpler, since your mind has no room for any second thoughts about something like cooking gryphon eggs or wearing the tanned fur of a jaguarman.";
 			say "     When the military finally comes to evacuate your group of seemingly 'normal human survivors', there is a brutal clash as you wipe the floor with the soldiers, taking the women as spoils and initiating the bravest of them into the tribe, all of them quickly transformed to fit in. The rest is left naked at the entrance of the museum, to live or die as they will. When you turn to walk back down the corridor to tribal land, your thoughts are on enjoying yourself with the new members. You barely register the shouts and gasps from behind you as the other museum inhabitants and creatures coming by on the street pick off the defenseless naked men.";
 		else:

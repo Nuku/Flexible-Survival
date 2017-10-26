@@ -66,7 +66,7 @@ to say beatthetrashcoon:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -93,7 +93,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 40; [ The monster's starting hit points. ]
+	now HP entry is 40; [ The monster's starting HP. ]
 	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6; [ Monster's average damage when attacking. ]
 	now area entry is "Junkyard"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -120,7 +120,7 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Trash Coon":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your human mind falters, it is filled with a longing for trash and scavenging. You find your way to the city mall and set up your home among the many dumpsters behind the food court. Several of the rats who live there become friends with you, though only a few are willing to have a romp with you in the messy trash, much preferring their clean stores and mall. They try to encourage you to come in and live with them, but you much prefer your messy home, though you'll go through the trouble of cleaning up (a little) to visit on occasion.";
 		else:
 			say "     You manage to maintain your sanity during your time in the city until rescue from the military arrives. You join the others in their holding area and have to wait through testing and processing. [if coonstatus > 0]While the pink raccoon is distracting the guards at night[else]During this time[end if], you do manage to slip away at night on occasion, drawn to the dumpsters behind the mess hall. You rummage around in them happily, unable to stop yourself. When you get caught one night by one of the mess officers, you are able to convince him to not call the MPs in exchange for a blow job. After that, he stops by every night during your nocturnal visits to enjoy another blow job. You are happy to see his balls and cock swelling and gaining gray fur after a few quickies with you. [if cunts of player > 0]And after a few nights, it's on to him fucking you roughly in the dumpster and his changes progress further[else]His changes continue to progress over the next week or so until finally there no hiding them[end if]. After that, there's another messy coon in the waiting area with you. He's not at all upset with this, enjoying the pleasures of his new form and joining you in sneaking off to the dumpsters at night.";

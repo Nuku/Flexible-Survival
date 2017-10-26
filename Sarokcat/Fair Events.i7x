@@ -115,7 +115,7 @@ Instead of Resolving a Rubber tigerchase:
 	if player consents:
 		say "Chasing the rubber tigress down the narrow paths between booths, you follow the flickering glimpses of that black and orange tail until you lose sight of it behind one of the employee buildings, you are about to turn away when you notice one of the doors leading into the building is slightly ajar. Smiling at the discovery, you quickly barge into the building ready to fight, only to find yourself drenched in some kind of sticky stuff. Trying to claw the stuff out of your eyes as it coats you, you realize you fell for one of the oldest tricks in the book, and are now covered in some kind of orange and black tinted paint that someone balanced above the door you barged through. You groan as you can feel the stuff sinking into your skin and changing you, and then your eyes go wide as the tigress you were chasing appears before you with a grin and attacks!";
 		infect "Rubber tigress";
-		decrease hp of player by 10;
+		decrease HP of player by 10;
 		challenge "Rubber tigress";
 		say "The rough encounter over, you drag yourself away, still spitting out tiger striped paint and feeling rather strange due to being coated in the stuff, you resolve to be more careful in the future.";
 		Now Rubber tigerchase is resolved;

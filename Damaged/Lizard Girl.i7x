@@ -34,7 +34,7 @@ to say lizgirl impreg:
 
 to say lizgirl check angry:
 	if lizgirlangry is 1:
-		if hp of player < 11:
+		if HP of player < 11:
 			now fightoutcome is 19;
 			say "     The lizard girl draws away from the fight.";
 			LineBreak;
@@ -77,10 +77,10 @@ to say lizgirl defeat:
 			say "     'Did you not want this? Was the canvas too flawed?' she murmurs before collapsing on the ground.";
 		else:
 			say "     With a whine she says, 'I only wanted what was best for you, now another artist must finish my work' before collapsing.";
-	if hp of ronda is 4:
+	if HP of ronda is 4:
 		say "     Remembering that the lizard girl has part of the cure for Ronda, you run your hands over her body and slip a finger into her wet pussy.  You start to rub and finger her cunt, making her moan and squirm in pleasure.  She grips your shoulders firmly and bucks her hips as you pump a pair of fingers into her again and again.  As her excitement builds and her vaginal walls quiver around your digits, she moans and bucks her hips almost as if thrusting before finally climaxing loudly. She sags against you, panting for breath after her orgasm. Still holding her up with one arm, you place a small vial under her pussy to gather the leaking juices, a little surprised to find them a thick and creamy white instead of clear juices. Sealing up the unusual sample, you resist the urge to lick your fingers clean and instead wipe them off after taking a moment to enjoy her thick, musky scent.";
 		now carried of lizard juice is 1;
-		now hp of ronda is 5;
+		now HP of ronda is 5;
 	if libido of player > 33:
 		if cocks of player > 0:
 			say "[lizdefmale]";
@@ -116,7 +116,7 @@ to say lizgirl desc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -143,8 +143,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 16;
 	now sex entry is "Female";	  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 32;				[ How many HP has the monster got? ]
-	now lev entry is 3;				[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 32;				[ How many HP has the monster got? ]
+	now lev entry is 3;				[ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5;				[Amount of Damage monster Does when attacking.]
 	now area entry is "Park";	 [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;				[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']

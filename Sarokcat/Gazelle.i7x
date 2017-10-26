@@ -16,7 +16,7 @@ when play begins:
 to say gazelle attack:
 	say "     The gazelle-like human knocks you to the ground, and then stares down at your defeated form, almost seeming surprised at their victory. 'Well you aren't so dangerous after all,' the beast says, and you can see its cock growing erect and its pussy moistening as it savors its victory. 'Maybe we didn't have to panic after all... then again,' the gazelle says with a speculative look at your prone form. 'Just maybe deep down you wanted me to win after all, hmm.' She considers you for a minute as she tries to catch her breath before deciding something. 'I think I see something I like in you,' she says with a sharp nod, her horns bobbing as she lowers herself over you. 'Maybe we should have some fun...'";
 	WaitLineBreak;
-	if cunts of player is greater than 0:
+	if cunts of player > 0:
 		say "     Reaching down, she spreads your legs further apart as she takes a good long look at your body, before running her hoof-like fingers along the outside of your soft cunt. 'Yes I definitely see something I like,' She says with a grin, as she pumps her cock with her other hand, not waiting for your reaction, she quickly grabs your legs in her hands and spreads them wide as she moves between them, her cock probing at your feminine passage. Finding the right angle she wastes no time thrusting herself into you fully, making you cry out at the sudden invasion, soon though you find the feeling of being penetrated by her hard maleness becomes completely pleasurable. Her animalistic member spearing into you again and again as she leans over you, her hoof-like hands on her hips as she thrusts in, you find your own hands gripping her horns as she hovers over you, gripping her in an effort to get her to thrust harder, and faster. She soon complies to your demands, and you buck and writhe underneath her as your orgasm shoots through you, causing her to orgasm as well, her strong member filling you up to the brink. Slowly she withdraws as you collapse bonelessly, a mixture of your juices leaking out of your passage as she sets you down, causing you to moan at the erotic feeling. 'Yes I definitely see something here I like,' She says with a grin, as she brushes herself off, 'Hopefully you will come by soon so I can see it again,' So saying she bounds off down the zoo pathways to rejoin her herd, leaving you lying there helplessly, her warm seed still leaking out of you.[impregchance]";
 		infect "Gazelle";
 	else:
@@ -73,7 +73,7 @@ to say gazelleride:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -100,8 +100,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Both";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 30;
-	now lev entry is 3;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 30;
+	now lev entry is 3;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Zoo";  [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -127,9 +127,9 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Gazelle":
-		if humanity of player is less than 10:
-			if cunts of player is greater than 0:
-				if cocks of the player is greater than 0:
+		if humanity of player < 10:
+			if cunts of player > 0:
+				if cocks of the player > 0:
 					say "Unable to fight your need to belong any longer, you quickly search out the gazelle herd, you encountered several times before. Unlike before though, this time instead of scattering at your approach, they open ranks and are completely accepting of your presence here, making you feel as if you belong as they close ranks around you to keep an eye out for dangers. You soon find yourself being greeted by a familiar looking gazelle as shi nuzzles you happily, 'I knew I saw something I liked in you' shi mutters as shi runs her hands along your sides, 'I'd be happy to welcome you to the herd properly...' Shi says with a grin. You shudder and find yourself nodding, happy to belong and happy to have found your place as she slowly runs her stiff cock along your thighs, before thrusting into you. You enjoy the mating, while several other gazelles watch both you and for any threats, their presences seeming almost comforting as the two of you put on a show for them, soon shi cums into you, making you happy, and pulling out she turns and presents herself for your stiff cock. You happily find yourself returning the favor, thrusting into her eager body as she welcomes you fully into the herd.[line break]";
 					say "Finally feeling like a true part of the herd, you help focus on surviving in a rough and changed city, the challenges of daily life are both exciting and dangerous, yet easily met with a group by your side. Eventually though the military moves to retake the city, and things get even more dangerous, as the groups within the city fight it out with the military, your small herd and several other herds take advantage of the confusion to flee, slipping out into the countryside while everyone else's attention is focused elsewhere. Feeling totally free finally of the constant fighting, you still don't relax your vigilance, as the world is still a dangerous place for a group of gazelles. Your herd moves south while others take other paths, eventually finding some nice mostly unoccupied plains in which to settle and build up your numbers, in several years people will start hearing reports of large groups of wild gazelle wandering the area again, and several nearby towns will mysteriously be missing all their people...";
 				else:

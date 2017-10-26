@@ -59,7 +59,7 @@ to say RTiger loses:
 			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'And again you have won our little sparring duel, my friend. I find myself impressed, truly. I knew from the start you would be a better opponent than those mindlessly ravishing beasts your world seems to be populated with - but now you have really proven yourself.' Smiling, he adds, 'The workout has made me hungry, so I am off to find something to eat, but... let us do this again sometime. I will be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
 		-- 6:
 			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'You know what... since I am having so much fun with you - how about we travel together for a while? With the prowess you have proven to me time and again, I am sure you are having grand adventures that I would love to take part in!' Smiling, he adds, 'I will leave you to think about it for a while - but if you accept, you can just use a little magic to reach me. Just focus your mind on my image, then intone 'Watashi wa anata ni yonde, Ryousei'. I will meet you as soon as I am able.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
-			say "(Ryousei, the royal tiger is now tamed! You can make him your active pet by typing [bold type]pet royal tiger[roman type]. You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])[line break]";
+			say "(Ryousei, the royal tiger is now tamed! You can make him your active pet by typing [bold type]pet royal tiger[roman type]. You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])[line break]";
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Royal Tiger":
@@ -74,7 +74,7 @@ to say RTigerDesc:
 Section 3 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -101,7 +101,7 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 16;
 	now sex entry is "Male";
-	now hp entry is 95;
+	now HP entry is 95;
 	now lev entry is 13;
 	now wdam entry is 10;
 	now area entry is "Nowhere";             [ Case sensitive]

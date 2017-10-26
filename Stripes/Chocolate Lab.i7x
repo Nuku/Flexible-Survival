@@ -151,7 +151,7 @@ to say chococheck:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -178,8 +178,8 @@ When Play begins:
    now int entry is 18;
    now cha entry is 18;
    now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 40;
-   now lev entry is 4; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now HP entry is 40;
+   now lev entry is 4; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
    now wdam entry is 6; [Amount of Damage monster Does when attacking.]
    now area entry is "High"; [ Location of monster, in this case the High Rise District]
    now cocks entry is 3; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -310,7 +310,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Chocolate Lab":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if labhost is 4: [lost to three labs; big dog ending]
 				say "     You wander the streets, drawn by your nose to seek out chocolate, which you ingest ravenously wherever found and eventually your nose has you cross paths with another of those confectionary canines. Your mouth fills with thick chocolaty saliva as you eye the smaller dog hungrily but before you can make your move the smaller lab spots you and makes a run for it.";
 				say "     You chase the lab back to a chocolate maker's shop at the edge of the high rise district, finally cornering it between some dumpsters at the back of the building. The small dog whines in fear as you swallow it whole, enjoying the feeling of it struggling inside you just as much as the wonderful chocolate taste.";

@@ -66,7 +66,7 @@ to say beatthenerdymouse:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -92,7 +92,7 @@ When Play begins:
 	now int entry is 17;
 	now cha entry is 11;
 	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 32;
+	now HP entry is 32;
 	now lev entry is 3; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
 	now area entry is "Campus"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -126,7 +126,7 @@ Section 3 - Endings
 [
 when play ends:
 	if bodyname of player is "Nerdy Mouse":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You give in to the vast nerdiness inside your head.  After pouring over all of the books you can find in the library you grow bored and desire a more structured path of learning.  Wandering around, you eventually find yourself at the College Campus and are overjoyed at the thought of getting a higher education.  Almost immediately you find yourself on the receiving end of a wedgie to shouts of 'NERD!'.  Ah, sweet academia.";
 		else:
 			say "     You survived, by some miracle, with your humanity still intact.  It takes some time but you finally find a place you fit in, surrounded by those like you, by fellow nerds.";

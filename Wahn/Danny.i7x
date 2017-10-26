@@ -5,7 +5,7 @@ Version 1 of Danny by Wahn begins here.
 
 [ Danny, the mall rat                                                                  ]
 [                                                                                      ]
-[ hp of Danny                                                                          ]
+[ HP of Danny                                                                          ]
 [   0: hasn't met the player yet                                                       ]
 [   1: knows the player                                                                ]
 
@@ -26,14 +26,14 @@ Version 1 of Danny by Wahn begins here.
 
 Section 1 - Description
 
-Danny is a man. The hp of Danny is usually 0. Danny is in Mall Foodcourt.
+Danny is a man. The HP of Danny is usually 0. Danny is in Mall Foodcourt.
 The icon of Danny is Figure of Danny_clothed_icon.
 The description of Danny is "[DannyDesc]".
 The conversation of Danny is { "Woof." }.
 
 to say DannyDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Danny], LIBIDO: [libido of Danny] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Danny], LIBIDO: [libido of Danny] <- DEBUG[line break]";
 	say "     Danny is a young adult mall-rat, wearing his signature sleek and stylish long coat that hangs down to his knees and highlights his slender frame. His face is pretty cute, with a pointy nose and large ears, framed by unruly streaks of green-dyed hair. He usually has a shiny black smartphone in one of his fine-boned hands, using the precious piece of still-working technology to take photos and videos of just about anything he sees.";
 
 The scent of Danny is "     Danny smells hip, like the coolest rat ever.".
@@ -41,11 +41,11 @@ The scent of Danny is "     Danny smells hip, like the coolest rat ever.".
 Section 2 - Talking
 
 instead of conversing the Danny:
-	if hp of Danny is 0:
+	if HP of Danny is 0:
 		if graphics is true:
 			project the figure of Danny_face_icon;
 		say "     As you walk up to the slender mall-rat, he raises his smartphone and calls out 'smile', then takes a picture. Sliding the device into his pocket afterwards, the anthro rodent then holds a hand out for you to shake and says, 'Welcome to the mall and nice to meet you. I'm Danny.' The young man is pretty friendly and starts a conversation with you about how things stand outside the mall. He is clearly interested in what new types of beings now live in the city and eagerly shows you some of the pictures he took since the whole trouble with the nanites started. There clearly are quite a few more types of creatures than you had even realized, and those are just the ones peaceful enough to be allowed in the mall. After a while, the topic of conversation swings over to the mall itself and its inhabitants, from Danny's ratty compatriots to the more unique Santa Claws and even the mysterious Nermine. He warns you about the jackaless, saying that strange things go on in her store.";
-		now hp of Danny is 1;
+		now HP of Danny is 1;
 	else:
 		say "[DannyTalkMenu]";
 
@@ -62,7 +62,7 @@ to say DannyTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Talk about what comes to mind";
 	[]
-	if hp of Santa Claws > 0: [player was at the Christmas village before, photography quest not turned down]
+	if HP of Santa Claws > 0: [player was at the Christmas village before, photography quest not turned down]
 		choose a blank row in table of fucking options;
 		now title entry is "Ask him about taking photographs";
 		now sortorder entry is 2;
@@ -189,7 +189,7 @@ to say DannyTalk2:
 Section 3 - Sex
 
 Instead of fucking the Danny:
-	if hp of Danny is 0: [player never talked to Danny]
+	if HP of Danny is 0: [player never talked to Danny]
 		say "     The mall is a bit more civilized than the dangerous streets of the city. In general, you should at least speak with someone and introduce yourself before approaching with sex in your mind...";
 	else if Dexterity of Danny < 2 or Dexterity of Danny > 99: [player hasn't done his quest yet]
 		say "     Danny smiles a little as you make your offer of having sex with him, then slowly shakes his head. 'Thank you, I'm flattered. But... I'm a little busy with my project to take photographs of all the creatures that came into existence in this chaos. I can't go out into the city since it is too dangerous, so hanging around here in the main corridor is my best shot at it. Sometimes you have to put aside your own pleasure for your art, you see?'";

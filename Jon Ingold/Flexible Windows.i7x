@@ -443,7 +443,7 @@ have no effect on any Glk windows until the next time you open a text
 buffer, so as a practical matter it should do nothing in other Glk
 implementations."
 
-( from http://groups.google.com/group/rec.arts.int-fiction/msg/b88316e2dcf1bb6b )
+( from https://groups.google.com/forum/#!msg/rec.arts.int-fiction/t2cYg_A5FMw/a7vx3OIWg7gJ )
 
 (The workaround as incorporated here accepts a glulx color value (see Glulx Text Effects) rather than defaulting to white as in the originally posted code.)
 
@@ -871,7 +871,7 @@ To cancel glulx hyperlink request in (win - a g-window):
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)) glk_cancel_hyperlink_event({win}.ref_number); -)
 
 To request glulx hyperlink event in the/-- status window:
-	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)  && gg_statuswin) glk_request_hyperlink_event(gg_statuswin); -)
+	(-  if (glk_gestalt(gestalt_Hyperlinks, 0) && gg_statuswin) glk_request_hyperlink_event(gg_statuswin); -)
 
 To cancel glulx hyperlink event in the/-- status window:
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0) && gg_statuswin) glk_cancel_hyperlink_event(gg_statuswin); -)
@@ -1362,7 +1362,7 @@ What follows is some I6 code for handling the glulx imagery. Note that you may n
 		! Doing scaling calculations in I6 lets us handle bigger numbers
 
 		[ GetImageSize curimg index result;
-			result = glk_image_get_info( ResourceIDsOfFigures-->curimg, gg_arguments,  gg_arguments+WORDSIZE);
+			result = glk_image_get_info( ResourceIDsOfFigures-->curimg, gg_arguments, gg_arguments+WORDSIZE);
 			return gg_arguments-->index;
 		];
 

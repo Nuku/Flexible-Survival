@@ -299,9 +299,9 @@ to say candyshopsex5:
 
 to say candyshopsex6:
 	if caffeinehigh of player is 0:
-		say "     As you're looking for someone to play with, you find yourself tackled by a pair of cute hobs. The first has [one of]light red[or]pastel blue[or]pale yellow[or]pear coloured[cycling] fur and the other is a [one of]pale green[or]light orange[or]powder purple[or]light rose[cycling] colouration. You can't help but laugh as the playful pair nuzzle and kiss you as they move you onto all fours. They then start taking turns, each making a few thrusts into your pussy before letting the other have a turn. You moan in pleasure at this, quickly growing excited as the two friends share you. You get a wonderfully fulfilling fucking from the pair of complimentary hobs and eventually have your cunt stuffed with one sweet load that is soon followed by another, making you feel delightfully hot and creamy inside.[impregchance][impregchance]";
+		say "     As you're looking for someone to play with, you find yourself tackled by a pair of cute hobs. The first has [one of]light red[or]pastel blue[or]pale yellow[or]pear coloured[cycling] fur and the other is a [one of]pale green[or]light orange[or]powder purple[or]light rose[cycling] colouration. You can't help but laugh as the playful pair nuzzle and kiss you as they move you onto all fours. They then start taking turns, each making a few thrusts into your pussy before letting the other have a turn. You moan in pleasure at this, quickly growing excited as the two friends share you. You get a wonderfully fulfilling fucking from the pair of complementary hobs and eventually have your cunt stuffed with one sweet load that is soon followed by another, making you feel delightfully hot and creamy inside.[impregchance][impregchance]";
 	else:
-		say "     Moaning lustfully, you finger your wet slit and raise your tail, clearly seeking a male to fill you. A pair of horny hobs advance upon you together, pushing you to the ground and running their paws over your body. You moan lustfully and let them move you into position. You end up with the [one of]electric lime[or]bright yellow[or]navy blue[or]flame red[or]cerise[or]royal purple[or]orange[or]neon green[cycling] one beneath you and the [one of]cerise[or]royal purple[or]orange[or]neon green[or]electric lime[or]bright yellow[or]navy blue[or]candy apple red[cycling] one moving overtop of you. As your hips are pushed down, you find your pussy stretched open to take the complimentary pair at once. Their two cocks stuff you nicely as buck their hips in unison, giving you a much more thorough fucking than even the most endowed male here could give you. You are reduced to moaning and chirring as your cunt is pounded into until you receive the dual blast of their hot and heavy loads to stuff your wanton womb.[impregchance][impregchance]";
+		say "     Moaning lustfully, you finger your wet slit and raise your tail, clearly seeking a male to fill you. A pair of horny hobs advance upon you together, pushing you to the ground and running their paws over your body. You moan lustfully and let them move you into position. You end up with the [one of]electric lime[or]bright yellow[or]navy blue[or]flame red[or]cerise[or]royal purple[or]orange[or]neon green[cycling] one beneath you and the [one of]cerise[or]royal purple[or]orange[or]neon green[or]electric lime[or]bright yellow[or]navy blue[or]candy apple red[cycling] one moving overtop of you. As your hips are pushed down, you find your pussy stretched open to take the complementary pair at once. Their two cocks stuff you nicely as buck their hips in unison, giving you a much more thorough fucking than even the most endowed male here could give you. You are reduced to moaning and chirring as your cunt is pounded into until you receive the dual blast of their hot and heavy loads to stuff your wanton womb.[impregchance][impregchance]";
 	now tempnum is 6;
 
 to say candyshopsex7:
@@ -327,8 +327,8 @@ to sfcaffeine:
 	increase caffeinehigh of player by a random number between 7 and 9;
 	increase intelligence of player by 2;
 	increase stamina of player by 4;
-	increase maxhp of player by 2 + (2 * level of player);
-	increase hp of player by level of player;
+	increase maxHP of player by 2 + (2 * level of player);
+	increase HP of player by level of player;
 	decrease dexterity of player by 2;
 	increase libido of player by 15;
 	if libido of player < 66, now libido of player is 66;
@@ -338,7 +338,7 @@ to sfcaffeine:
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 3;
 	increase morale of player by 5;
 	say "     As the soda rushes through your system, the sugar and caffeine gets your body all worked up. Your body seems to have increased endurance and boundless energy to keep you going from the rush. Even your mind seems sharper and more alert. But this comes at a cost as well, as you can't seem to keep still or focused and the excess twitchiness is affecting your dexterity as well. The rush of arousal that comes with this [if cocks of player > 0 and cunts of player > 0]gets you hard and wet[else if cocks of player > 0]gets you hard[else if cunts of player > 0]gets you wet[else]excites you greatly[end if] and further erodes your grip on your mind.";
-	say "     (You have received a significant stamina and hp boost (+ [special-style-1][2 + ( 2 * level of player)][roman type] max hp), an intelligence boost and a dexterity drop, all of which will last as long as your caffeine high remains in effect. But be careful, you're filled with manic energy now and will have trouble sitting still.)[line break]";
+	say "     (You have received a significant stamina and HP boost (+ [special-style-1][2 + ( 2 * level of player)][roman type] max HP), an intelligence boost and a dexterity drop, all of which will last as long as your caffeine high remains in effect. But be careful, you're filled with manic energy now and will have trouble sitting still.)[line break]";
 
 to sfcaffeineboost:
 	increase caffeinehigh of player by a random number between 3 and 5;
@@ -350,11 +350,11 @@ to sfcaffeineboost:
 	if libido of player > 100, now libido of player is 100;
 	increase morale of player by 1;
 	let healed be level of player;
-	increase hp of player by level of player;
-	if hp of player is greater than maxhp of player:
-		decrease healed by hp of player minus maxhp of player;
-		now hp of player is maxhp of player;
-	say "     Feeling the rush of more carbonated delight down your throat, you twitch as a rush of fresh energy fills you. Your ferret body twitches and you feel a burst of new endurance, pushing you to keep going without pause. Along with this comes the arousal of excitement and manic, ferrety impulses. Aside from helping to quench your thirst for sugary sweetness, you recover [special-style-1][healed][roman type] hp.";
+	increase HP of player by level of player;
+	if HP of player > maxHP of player:
+		decrease healed by HP of player minus maxHP of player;
+		now HP of player is maxHP of player;
+	say "     Feeling the rush of more carbonated delight down your throat, you twitch as a rush of fresh energy fills you. Your ferret body twitches and you feel a burst of new endurance, pushing you to keep going without pause. Along with this comes the arousal of excitement and manic, ferrety impulses. Aside from helping to quench your thirst for sugary sweetness, you recover [special-style-1][healed][roman type] HP.";
 
 an everyturn rule:
 	if caffeinehigh of player is not 0:
@@ -367,9 +367,9 @@ an everyturn rule:
 			now caffeinehigh of player is 0;
 			decrease intelligence of player by 2;
 			decrease stamina of player by 4;
-			decrease maxhp of player by 2 + (2 * level of player);
-			now hp of player is hp of player / 2;
-			if hp of player > maxhp of player / 2, now hp of player is maxhp of player / 2;
+			decrease maxHP of player by 2 + (2 * level of player);
+			now HP of player is HP of player / 2;
+			if HP of player > maxHP of player / 2, now HP of player is maxHP of player / 2;
 			increase dexterity of player by 2;
 			decrease libido of player by 10;
 			if libido of player < 0, now libido of player is 0;

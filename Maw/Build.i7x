@@ -184,8 +184,8 @@ An everyturn rule(this is the Can We Build It rule):
 	if "Deft" is listed in perks of tribe of player:
 		increase x by 20;
 	now x is ( x * foragers ) / 100;
-	if x is greater than 0: [ There is building to be done ]
-		if x is less than 1, now x is 1;
+	if x > 0: [ There is building to be done ]
+		if x < 1, now x is 1;
 		say "Your construction advances: +[x]";
 		increase progress of building of blueprints by x;
 		if building of blueprints is complete:

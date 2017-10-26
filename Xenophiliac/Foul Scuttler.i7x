@@ -70,7 +70,7 @@ to say FoulS_PlayerVictory:
 		say "     Deciding that sex with this beast might not be worth the risk, you swiftly gather your things and leave the creature behind, hoping to not have to face one of those beasts anytime soon.";
 
 to say FoulS_PlayerDefeat:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Lowering yourself to the ground as non-threateningly as you can, you place your fate in the hands of the creature. Approaching you cautiously, the Foul Scuttler ambles to you, preparing for any sudden movements. Bowling you over onto your back, the beast repositions itself above you, placing its face inches from yours. Wafting its warm breath over your face, you are overwhelmed with the smell of meat, while a subtle musk begins to set your senses aflame. Inhaling your scent with deep, drawn-out sniffs, the creature seems to be trying to figure out what to do with you.";
 	else:
 		say "     While you put up your best effort, the Foul Scuttler proves to be too much for you, and you find yourself panting on the ground, exhausted and bleeding. Thundering up to you, each step he makes sending vibrations throughout the floor, the Scuttler ambles up to you, assured of its victory. Easily rolling you over onto your back, the beast positions itself over you, its muzzle of imposing teeth hovering inches from your face. You've no idea what the beast has in store for you, but you know that it's probably not going to be good.";
@@ -141,7 +141,7 @@ to say OuterSuck:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -168,7 +168,7 @@ When Play begins:
    now int entry is 10;
    now cha entry is 7;
    now sex entry is "Female";
-   now hp entry is 38;
+   now HP entry is 38;
    now lev entry is 6;
    now wdam entry is 10;
    now area entry is "Sealed";
@@ -197,7 +197,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Foul Scuttler":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if cocks of player > 0 and cunts of player is 0:
 				if "Sterile" is not listed in feats of player:
 					say "     Finding your way to the labs beneath the ground, you explore the endless corridors of these labs, looking for your brethren. Finally finding a nest deep in the labs, you're quickly accepted into the pack. You hunt the desolate halls for food and mates, taking survivors and explorers back to your ever-growing nest. Swelling the wombs of fertile survivors with your virile seed, their bellies bulge with your children, and they soon birth a new generation of ever-evolving magic beasts. Your children grow quickly as you teach them to live and hunt, with you always at the head of the pack, your screams echoing throughout the corridors of your home. The military tries again and again to remove you and your children, but they are never able to, every man and woman sent down into the labs disappearing forever. Your children soon seed a new generation of smarter, stronger Foul Scuttlers, but again and again, you prove to be the best among them, leading them forward without any conscious knowledge of it. Your children soon swarm the underground labs, an unstoppable force of life and evolution. Looking into the light of the surface, you let out a yell, reverberating it throughout the lab complex. The time has come, and soon, you and your children will swarm the outside world, taking it for yourself.";

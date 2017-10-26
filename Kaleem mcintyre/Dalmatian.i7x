@@ -41,7 +41,7 @@ to say Dalmatiandesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -68,7 +68,7 @@ When Play begins:
 	now int entry is 16;
 	now cha entry is 20;
 	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 66; [ The monster's starting hit points. ]
+	now HP entry is 66; [ The monster's starting HP. ]
 	now lev entry is 1; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 15; [ Monster's average damage when attacking. ]
 	now area entry is "None"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -101,7 +101,7 @@ Definition: a person is dalskinned:
 
 when play ends:
 	if bodyname of player is "Dalmatian":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "Giving yourself over to the Dalmatian infection taking over your body and mind you wander aimlessly about the city until you find yourself stumbling over a slightly familiar looking white and black spotted four legged canine. When the other gets a hold of your scent the Dalmatian immediately senses something wrong as it turns to look you over. Slowly padding its way over to try and administer comfort onto you, you find yourself whimpering back at the other as the need to rut as well as play overtakes your sensibilities. At the touch of the Dalmatian's cold nose touches your legs you kneel down next to the other Dal and then nuzzle the other four legged canine in turn before whining at it in confusion. Quickly as can be the feral creature barks into your face and then grabs you by your arm with its sharpened teeth to drag you off somewhere.";
 			say "Not having a reason to fight you simply let the other take you to wherever it's trying to get to. When you ultimately find yourself coming to a red brick edifice, which [italic type]really[roman type] looks familiar to you, you bark happily as you think that you've finally found the place where you belong. This fact is made even more certain when your new friend releases your arm and then goes over to bark and scratch at the front door to the building. Upon getting a response from someone from the inside you find yourself panting in joy as your bright eyes look over the form of a tall white and black spotted canine, this one standing on two legs instead of all fours, whom your confused canine mind screams at you that you should know intimately. Hurriedly you go over to tackle the other and then proceed to show them in rampant licks across the face.";
 			say "You definitely know now that this is where you belong now.";

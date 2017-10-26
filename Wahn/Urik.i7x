@@ -178,13 +178,13 @@ instead of conversing Urik:
 	now sortorder entry is 1;
 	now description entry is "Chat a bit with Urik";
 	[]
-	if hp of Urik is 0: [Urik is in the orc lair]
+	if HP of Urik is 0: [Urik is in the orc lair]
 		choose a blank row in table of fucking options;
 		now title entry is "Send him to the library";
 		now sortorder entry is 2;
 		now description entry is "Send Urik to stay with you in the Grey Abbey Library";
 	[]
-	if hp of Urik is 1: [Urik is in the library]
+	if HP of Urik is 1: [Urik is in the library]
 		choose a blank row in table of fucking options;
 		now title entry is "Send him to the orc lair";
 		now sortorder entry is 3;
@@ -240,12 +240,12 @@ to say UrikTalk1: [chatting]
 to say UrikTalk2: [send him to the library]
 	say "     Urik listens to your instructions with a quiet intensity that makes it clear he commits the directions to the library to his memory. When you finish and ask if he understood, he hesitates for a second, then forces himself to say, 'Yes, [master].' You can see that he is still a bit uncomfortable at accepting his new reality of being your breeder. Well, he'd better learn to live with it, as having your own orc warrior is something you won't easily let go of. With a playful slap at his muscled buttocks, you send him off into the city.";
 	move Urik to Grey Abbey 2F;
-	now hp of Urik is 1;
+	now HP of Urik is 1;
 
 to say UrikTalk3: [send him to the orc lair]
 	say "     Urik listens to your instructions quietly, looking a little embarrassed as you say he should go back to the orc lair. When you finish and ask if he understood, he hesitates for a second, then forces himself to say, 'Yes, [master].' You can see that he is still a bit uncomfortable at accepting his new reality of being your breeder. Well, he'd better learn to live with it, as having your own orc warrior is something you won't easily let go of. With a playful slap at his muscled buttocks, you send him off into the city.";
 	move Urik to Main Hall;
-	now hp of Urik is 0;
+	now HP of Urik is 0;
 
 to say UrikTalk4: [talk about Eric]
 	if UrikEricInteraction is 1: [Urik grabbed Eric, player stepped in and allowed Eric to watch the orc finger himself]

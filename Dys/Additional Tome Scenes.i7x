@@ -188,7 +188,7 @@ to say DemonFoxFirstEncounter:
 	now inasituation is true;
 	challenge "Demon Fox";
 	if fightoutcome >= 20 and fightoutcome <= 30: [lost or submitted]
-		if hp of player > 0: [submitted]
+		if HP of player > 0: [submitted]
 			say "[DemonFoxFirstSubmit]";
 		else: [lost]
 			say "[DemonFoxFirstLoss]";

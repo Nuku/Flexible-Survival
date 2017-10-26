@@ -24,8 +24,8 @@ to say losetohippo:
 	else:
 		say "     The victorious strongman cheers his own success and slams you to your knees. Holding you in place with one meaty hand, the other brushes aside his loincloth to release his throbbing cock. At about 16 inches, his grey cock is quite huge, as are the balls beneath it. The hippo's cock is quite thick as well and bulges with throbbing veins. As his precum dribbles out from that impressive cock, you find yourself longing for a taste and lick the dribbling tip. His pre is quite invigorating and you start licking and sucking at his cock for more. He pushes you to take more and more of his cock into your mouth until finally he's managed to stuff the full, monstrous thing into you. With it stuffed down your throat, you have trouble breathing, but that doesn't seem to matter now, only sucking at that muscled male's meat does. When he finally cums, you are quite light-headed, but enjoy the feel of that ample load pumping into your belly so much that you cum as well. Still coming, he pulls his cock free and you gasp for breath even as he paints your face with the other half of his big load.";
 		say "     Feeling quite satisfied from the ample load in your belly, you wander off without direction before finally ending back where you started. You feel a little better from the effects of his powerful, steroid-filled cum, but also hornier as well.";
-		increase hp of player by ( Stamina of player / 2 ) + a random number between 2 and 4;
-		if hp of player > maxhp of player, now hp of player is maxhp of player;
+		increase HP of player by ( Stamina of player / 2 ) + a random number between 2 and 4;
+		if HP of player > maxHP of player, now HP of player is maxHP of player;
 		increase libido of player by a random number between 6 and 12;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 1 and 4;
@@ -41,7 +41,7 @@ to say beatthehippo:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -68,7 +68,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 14;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 52; [ The monster's starting hit points. ]
+	now HP entry is 52; [ The monster's starting HP. ]
 	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 15; [ Monster's average damage when attacking. ]
 	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -98,7 +98,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Hippo":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Unable to resist your new instincts any longer, your humanity leaves you as your new body's urges take over. You make your way back to the State Fair and come across another hippo strongman. You team up with him, proving your might together in your successful two-man show. That is, if you measure success by how often you manage to beat the other creatures you encounter and sate your lusts on them. When the soldiers come in, their guns are a problem, but a sly coyote pops up and gives you an idea on how to deal with them. Laying out one of the safety nets from the acrobatic show and covering it with dirt, you make a huge trap for them. A couple of fast fairground creatures zip around, luring in the separate teams to reach the central square together. With the combined strength of two mighty hippos (and maybe a little help from others at the fairgrounds... but just a little), you manage to catch yourselves a whole squad of soldiers in your net. You and the other creatures divvy up your prize, taking several soldiers to fuck and convert each.";
 		else:
 			say "     Upon the arrival of the soldiers, you are brought back to their holding facility before finally being cleared. You get a job at a professional gym as a trainer and bodybuilding coach, helping others work to get a muscled body like yours. Some of the patrons are a little edgy about you at first, but they warm up to you in time and you become part of the group. It certainly helps that they're seeing results from working with you, never suspecting that [if cocks of player > 0]you've been adding a little [']personal something['] to their protein shakes[else]the milk in their protein shakes is your own[end if] to help them along. While non-infectious, it is a strong muscle booster and undetectable to testing due to its rather unique source. As another added perk, the gym also provides you with many well-muscled lovers to satisfy your animal lusts.";

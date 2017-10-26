@@ -36,7 +36,7 @@ instead of resolving lost gear:
 				if "Scavenger" is listed in feats of the player:
 					increase bonus by 4;
 				say "You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
-				if dice + bonus is greater than 20:
+				if dice + bonus > 20:
 					say "Hidden under the counter, you find an old army helmet. You snatch it up and tuck it into your backpack before leaving the, otherwise empty, store.";
 					increase carried of combat helmet by 1;
 					increase score by 5;

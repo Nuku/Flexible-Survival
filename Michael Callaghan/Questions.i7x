@@ -190,9 +190,9 @@ The first menu question rule (this is the invalid menu reply rule):
 			retry;
 		if closed question mode is false:
 			parse;
-	if the number understood is less than 1:
+	if the number understood < 1:
 		retry;
-	if the number understood is greater than the number of entries in the current question menu:
+	if the number understood > the number of entries in the current question menu:
 		retry.
 
 The last menu question rule (this is the default menu question rule):
@@ -741,13 +741,13 @@ We can add our own rules in the game.  For example:
 
 	A number question rule (this is the set age rating rule):
 		if the current question is "How old are you?":
-			if the number understood is less than 5:
+			if the number understood < 5:
 				say "It seems unlikely that a person of such tender years would be playing this game.";
 				retry;
-			if the number understood is greater than 111:
+			if the number understood > 111:
 				say "I find it hard to believe that this is your real age.  Please be more realistic.";
 				retry;
-			if the number understood is less than 21:
+			if the number understood < 21:
 				say "Setting the game mode to mild!";
 				now gamemode is mild;
 			else:
@@ -918,7 +918,7 @@ Example: * Open Sesame - A short example to show the question rules with an init
 
 	A text question rule (this is the gather name rule):
 		if gathering is happening and stage is name:
-			if the number of words in the current answer is greater than 1:
+			if the number of words in the current answer > 1:
 				say "I think we will simply refer to you as [word number 1 in the current answer][line break]";
 				now the player's name is word number 1 in the current answer;
 			else:
@@ -929,10 +929,10 @@ Example: * Open Sesame - A short example to show the question rules with an init
 
 	A number question rule (this is the gather age rule):
 		if gathering is happening and stage is age:
-			if the number understood is less than 5:
+			if the number understood < 5:
 				say "It seems improbable that one of such tender years would be venturing so far.[line break]";
 				retry;
-			if the number understood is greater than 111:
+			if the number understood > 111:
 				say "Let's try to be realistic about this.";
 				retry;
 			now the player's age is the number understood;

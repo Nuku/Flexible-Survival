@@ -66,14 +66,14 @@ to say useelectricprod:
 			let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
 			let the combat bonus be attack bonus - defense bonus;
 			if hardmode is true:
-				if the combat bonus is greater than 16:
+				if the combat bonus > 16:
 					now combat bonus is 16;
-				else if the combat bonus is less than -25:
+				else if the combat bonus < -25:
 					now combat bonus is -25;
 			else:
-				if the combat bonus is greater than 19:
+				if the combat bonus > 19:
 					now combat bonus is 19;
-				else if the combat bonus is less than -22:
+				else if the combat bonus < -22:
 					now combat bonus is -22;
 			let the roll be a random number from 1 to 50;
 			say "[line break]You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
@@ -83,13 +83,13 @@ to say useelectricprod:
 				now eprodused is true;
 				decrease mondodgebonus by 2;
 				decrease monhitbonus by 2;
-				let hpdamage be a random number between 30 and 50;
+				let HPdamage be a random number between 30 and 50;
 				let lvlresist be lev entry / 4;
 				if lvlresist > 5, now lvlresist is 5;
-				decrease hpdamage by lvlresist;
-				decrease hpdamage by eprecharge;
-				decrease monsterhp by ( hpdamage * monsterhp ) / 100;
-				say ". Enemy hp dropped by [special-style-2][hpdamage]%[roman type]!";
+				decrease HPdamage by lvlresist;
+				decrease HPdamage by eprecharge;
+				decrease monsterHP by ( HPdamage * monsterHP ) / 100;
+				say ". Enemy HP dropped by [special-style-2][HPdamage]%[roman type]!";
 				if eptarget is 0:
 					say "Your electric prod is now [if eprecharge >= 2]permanently dead and you toss it aside[else]dead until you can repair it[end if].";
 					now Electricprodstatus is 3;
@@ -99,13 +99,13 @@ to say useelectricprod:
 				decrease eptarget by 1;
 				say "Hit: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at the [name entry]. Getting a glancing blow, the electricity shocks it and makes it stagger back, taking some of the fight out of it. Ozone hangs in the air and your electric shocker [if eptarget is 0]sputters and sparks, burning out with the smell of magic smoke[else]is overheated. It will be a while before you can use it again[end if]";
 				now eprodused is true;
-				let hpdamage be a random number between 20 and 40;
+				let HPdamage be a random number between 20 and 40;
 				let lvlresist be lev entry / 3;
 				if lvlresist > 5, now lvlresist is 5;
-				decrease hpdamage by lvlresist;
-				decrease hpdamage by eprecharge;
-				decrease monsterhp by ( hpdamage * monsterhp ) / 100;
-				say ". Enemy hp dropped by [special-style-2][hpdamage]%[roman type]!";
+				decrease HPdamage by lvlresist;
+				decrease HPdamage by eprecharge;
+				decrease monsterHP by ( HPdamage * monsterHP ) / 100;
+				say ". Enemy HP dropped by [special-style-2][HPdamage]%[roman type]!";
 				if eptarget is 0:
 					say "Your electric prod is now [if eprecharge >= 2]permanently dead and you toss it aside[else]dead until you can repair it[end if].";
 					now Electricprodstatus is 3;

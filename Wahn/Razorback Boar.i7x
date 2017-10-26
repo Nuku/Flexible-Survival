@@ -167,7 +167,7 @@ Instead of resolving a Boar Encounter:
 Section 2 - Monster Responses
 
 to say RazorbackBoar wins:
-	if hp of player is greater than 0: [player surrendered]
+	if HP of player > 0: [player surrendered]
 		say "     'That's right - submit like you should. I don't enjoy punching someone's nose in, you know. The sooner everyone realizes that I'm tougher than them the better,' Garth the razorback boar tells you in a gruff voice, ";
 	else: [player got clobbered]
 		say "     'Could have told you that's how it was gonna end,' Garth the razorback boar scoffs as you collapse on the ground. He steps up right next to you, the ground shaking a little under his cloven hooves as the stout and muscled boar stomps around demonstratively. 'I don't enjoy punching someone's nose in, you know. The sooner everyone realize that I'm tougher than them the better.' he adds in a gruff voice, ";
@@ -413,7 +413,7 @@ to say RazorbackBoarDesc:
 		say "     Walking through the forest, you run into Garth, the razorback boar. Unheard and unnoticed till he suddenly steps out from behind a thick tree nearby, he proves that he's completely at home in this patch of 'wilderness'. The anthro furry male looks you up and down and gives a grunt, then says, 'So, what makes you think you can just stomp through my forest? Civilization's gone - it's back to survival of the fittest! So I'm your boss here and now - or do you seriously think you can take me, eh?' He leaves you little time to make up your mind, instead charging at you right away.";
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -440,7 +440,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 10;
 	now sex entry is "Male";            [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 90;
+	now HP entry is 90;
 	now lev entry is 10;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12;               [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -468,7 +468,7 @@ When Play begins:
 [
 when play ends:
 	if bodyname of player is "Razorback Boar":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     ....";
 		else:
 			say "     ...";

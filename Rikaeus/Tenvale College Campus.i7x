@@ -27,7 +27,7 @@ Instead of Resolving a Reaching the College:
 		say "You don't react in time and the football strikes you rather hard in the head, then bounces off.  'Aww man, fumbled,' the same, burly voice cries before there is a heavy thundering.  As your vision is just starting to clear, you get bowled over and trampled by a pack of gorillas in football uniforms chasing after their ball.  Their big, heavy hands and feet stomp over you, ignoring you in an attempt to complete the play.  By the time you manage to get up after that rough treatment, you can see them continuing on, one of them throwing a pass to someone else around the corner, restarting the whole thing.";
 		decrease score by 10;
 		decrease humanity of player by 5;
-		now hp of player is 1;
+		now HP of player is 1;
 		say "     Trying your best to ignore your aches, you lean against one of the buildings and look around again. ";
 	say "     Your travels have lead you to the city's college campus.  Built beside a major sporting arena, the college's main focus is its sports program, though there are other programs and classes available, you recall.  While you never attended college here, you know they have several teams, including football, baseball, track and field and many others.  And if those big gorillas are any indication, it looks like there'll be plenty of powerful creatures running around here.";
 	move the player to the College Campus Entrance;

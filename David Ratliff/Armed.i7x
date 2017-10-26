@@ -20,7 +20,7 @@ The present health of a person is usually 100.
 
 The max health of the player is usually 100.
 
-Definition: a person is dead if his present health is less than 1.
+Definition: a person is dead if his present health < 1.
 
 After printing the name of a dead person (called P) (this is the I see dead people rule):
 	if the person is dead for at least 1 turn and P is on-stage, say "[']s dead body" instead.
@@ -134,7 +134,7 @@ Check shooting something (called the target) with something (called the boomstic
 
 Check shooting something (called the target) with something (called the boomstick) (this is the you can't shoot something with itself rule):
 	if the target is the boomstick begin;
-		say "You try to ricochet the shot so that. . . Wait, you can't shoot [the boomstick] with itself!";
+		say "You try to ricochet the shot so that... Wait, you can't shoot [the boomstick] with itself!";
 		stop the action;
 	end if.
 
@@ -234,7 +234,7 @@ Check stabbing something (called the target) with something (called the pigstick
 
 Check stabbing something (called the target) with something (called the pigsticker) (this is the you can't stab something with itself rule):
 	if the target is the pigsticker begin;
-		say "You try to break the blade so that. . . Wait, you can't stab [the pigsticker] with itself!";
+		say "You try to break the blade so that... Wait, you can't stab [the pigsticker] with itself!";
 		stop the action;
 	end if.
 
@@ -437,7 +437,7 @@ Example: *** Trolls - Bob, king of the trolls, must be destroyed! This example s
 		A potion is a kind of thing.
 
 		Instead of drinking a potion:
-			if the present health of the player is less than 86 begin;
+			if the present health of the player < 86 begin;
 				let elixir be a random potion carried by the player;
 				say "You gulp down the vile tasting potion. 15 points have been restored to your health.";
 				change the present health of the player to the present health of the player + 15;

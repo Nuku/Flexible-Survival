@@ -11,7 +11,7 @@ when play begins:
 
 to say Gorilla Wins:
 	if inasituation is false: [regular scenes]
-		if hp of player > 0: [player submits]
+		if HP of player > 0: [player submits]
 			if GorillasMember is 3 and GorillasRep < 4:
 				say "     As you stop fighting and tell the mighty gorilla that he can do what he wants to you, he chuckles heartily. 'Hah! I knew a scrub like you could not hold the distance!' he chuckles, flexing his muscled arms. 'Now, get to work, [if cocks of player is 0]girl[else]boy[end if]! That's what you joined the team for, right?'";
 			else if GorillasRep < 8:
@@ -22,7 +22,7 @@ to say Gorilla Wins:
 				say "     As you stop fighting and tell the mighty gorilla that he can do what he wants to you, he chuckles heartily. 'You don't want a demonstration of one of your star player's moves? Ha - I guess you just can't wait to get a demonstration of my other skills. Okay then... everything for the fans,' he chuckles, flexing his muscled arms.";
 		else: [player beaten]
 			say "     As you collapse at his feet, the mighty gorilla drums both hands on his chest and roars in an imposing spectacle. He grins down at you and says, 'And that's why the Gorillas are the top football team hereabouts. Our training and the moves I just showed you are unbeatable! Now then... with this little exercise getting the blood pumping, let's have some fun.' ";
-		say Line Break;
+		LineBreak;
 		say "     'Your turn - show me what you got [if cocks of player is 0]baby[else]dude[end if],' the gorilla grunts after pulling off the shoulder-pads and now stands before you in his full naked glory. Not having much choice in the matter, you strip for him, baring your body to his leering looks as piece after piece of clothing is taken off. ";
 		if cunts of player > 0:
 			if "submissive" is listed in feats of player:
@@ -133,7 +133,7 @@ to say Gorilla Desc:
 Section A - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -160,7 +160,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 12;
 	now sex entry is "Male";            [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 100;                [ The monster's starting hit points. ]
+	now HP entry is 100;                [ The monster's starting HP. ]
 	now lev entry is 12;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 16;               [ Monster's average damage when attacking. ]
 	now area entry is "Campus";         [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -190,7 +190,7 @@ Section 8 - Endings
 
 when play ends:
 	if bodyname of player is "Football Gorilla":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As you lose your last shreds of humanity, you feel the need to join your team supplant all other concerns. Roaming the campus until you run into one of the other gorillas, you let him guide you to their club headquarters and join in for almost constant training and practice games - with some sexy fun between the players themselves and any fans coming along being thrown in. When the military finally moves in, soldiers try to evacuate the campus and attempt to interrupt a game - which doesn't go over well. It's only a matter of moments before your organized team has overwhelmed the squad of men and takes an 'ah, it's almost half-time and we got these guys on our hands' break - which involves you [if player is male]sinking your manhood into a tight soldier's ass[else]riding a soldier's cock while holding him down[end if] in a wild gangbang.";
 			say "     There aren't any attempts to move you from the campus for a while after that, until a smooth-talking businessman comes along one day and tells you about the creation of the 'Shifted American Football League' - totally wrapping all the gorillas around his finger with stories of athletic battle and glory. Soon, the whole team agrees to lets him manage them and follows him readily to the military's medical holding facility for a 'pre-game' checkup. After being prodded and poked, then given injections to make you noninfectious, your manager leads you off to become one of the top teams in the league - with him cashing in almost all the profits. Though at least he has to work hard to keep this exploitation going - keeping under control a whole team of wild and boisterous gorillas who'll want to fuck anyone they encounter...";
 			stop the action;

@@ -278,7 +278,7 @@ to say ChineseSupplies:
 	say "     Wary about the sleeping husky on her mattress, you are quick to run and find a cupboard to hide behind. From there, you locking your gaze on the husky at the other end of the room. The dog squirms a little and open her eyes just a bit, yawning. Her large mouth (big enough to swallow you up in one gulp right night) shows an impressive array of a meat-eater's teeth, sharp and intimidating, as well as a very long tongue curling down a bit at the end. Her gaze roams over the room, seeing nothing out of the ordinary - the general state of chaos in here helps you out there - and so she soon gives in to her tiredness again. Stretching out on the mattress this time, which puts her colossal boobies to a very nice display for your miniature self, she goes back to sleep.";
 	WaitLineBreak;
 	say "     Breathing a sigh of relief you go back to your cans, rolling them on towards the exit and getting there without any further trouble. After pushing them out of the hole to add to your pile of gear, you wait a while until you finally feel yourself growing. Quickly getting dressed again, you put the two cans into your backpack and get ready for more adventures out in the city.";
-	say "You gain 2 food!";
+	say "[bold type]You gain 2 food![roman type][line break]";
 	increase carried of food by 2;
 
 to say ChineseUB:

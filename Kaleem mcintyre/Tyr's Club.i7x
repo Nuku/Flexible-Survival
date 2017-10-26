@@ -53,7 +53,7 @@ Part 2 - Sex Match with Tyr
 Instead of fucking the Tyr:
 	setmonster "Doberman";
 	choose row monster from the table of random critters;
-	If lastfuck of Tyr - turns is less than 6:
+	If lastfuck of Tyr - turns < 6:
 		say "'Sorry, I'm not ready to go another round with you yet. Maybe come back in a little while?' Tyr rolls his shoulders and you can hear his spine pop slightly.";
 		stop the action;
 	else:
@@ -65,7 +65,7 @@ Instead of fucking the Tyr:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 18:
+		if diceroll > 18:
 			increase tyrdefeated by 1;
 			say "Tyr falls back hard onto his tail after you last assault. Defeated, the Doberman takes a minute to revel in his loss before he grunts and then flips himself up onto his feet. Just when you think the other is about ready to renew the fight you find yourself cocking your head in confusion as he waves a hand at you. 'Well won warrior. I didn't expect to have my tail handed to me, but I suppose that I still have extra training to do. No matter though, to the victor goes the spoils.' Tyr lowers his head to chuckle about something, what you're not sure, before lifting his face to stare at you with glowing green orbs.[line break]";
 			say "'So how would you like to have me pleasure you?'";
@@ -430,7 +430,7 @@ to say TyrWon_Training:
 	say "When the two of you are done you find the Doberman taking you out of the arena and then into one of the rooms here in the club to give you a massage. 'This is to help you muscles relax so they won't be so achy later on.' Is what the Dobie says, but for some reason Tyr seems to find your crotch area the most interesting part of you to massage after he strips you out of your clothes and then begins running his hands over your sweating [bodyname of player] form. However, you don't say anything to the other about this. Instead you simply smile and relax as the Dobie goes over your arms, chest, thighs and legs. When he dips some of his fingers into your cunt to begin rolling them around inside of you, you pass out on the table minutes afterwards as Tyr presses along your g-spot causing you to orgasm.[line break]";
 	say "When next you return to consciousness you find that Tyr is gone, but your [bodyname of player] is charged with a strange kind of energy. Though oddly enough, even though you find yourself dressed, you note that your crotch has a slightly sticky feel to it. Looking down you realize that it's because your pants are half open and something warm is covering over the crux of your thighs. Reaching and hand down and then bringing it up to your nose to take a whiff, you find yourself chuckling in amusement.";
 	if tyrtraining is false:
-		increase xp of the player by 25;
+		increase XP of the player by 25;
 		now tyrtraining is true;
 
 

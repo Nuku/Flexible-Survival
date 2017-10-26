@@ -24,7 +24,7 @@ to say beattheprairiedog:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -51,7 +51,7 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 12;
 	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 52; [ The monster's starting hit points. ]
+	now HP entry is 52; [ The monster's starting HP. ]
 	now lev entry is 5; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6; [ Monster's average damage when attacking. ]
 	now area entry is "Plains"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -81,7 +81,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Prairie Dog":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your new instincts take over, your body shrinks down further, becoming smaller and end up about three feet tall, though your sexual organs remain unchanged in size. You head back to the dry plains and wander them. As you go, you can see the dry grasses continuing to slowly spread over the ruined buildings, making it much more beautiful, you feel. Coming to what appears to be a grassy spot like all others, you can read the subtle signs now and start to dig. You burrow through the soft earth with ease, enjoying the feel of it against your paws as you tunnel down. You only have to go a few feet to find the underground tunnels of the other prairie dogs and scurry through along them to find the warren.";
 			say "     Joining the others, you have a wonderful romp to welcome you among them before its back to work. You and the others continue your tunnels and the demolition of the last few buildings. As some soldiers are sent to investigate the plains, they are quickly surrounded by burrowing rodents emerging all around them. They are pounced and mated by the coterie until they are prairie dogs themselves and pulled down into the tunnels.";
 			if centaurmate is 1 or centaurmate is 2:

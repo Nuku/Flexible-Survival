@@ -117,7 +117,7 @@ Instead of conversing the Buster:
 	else if busterstory1 is true and busterstory2 is false and a random chance of 1 in 3 succeeds:
 		say "     'Ginger, that's the herm over there,' he says, pointing her out. 'She says she half remembers her canine partner melding with her, but that it was kind of like a dream so she could've imagined it. I sometimes feel that she might be right, but I don't rightfully remember. And besides, I know things are crazy with everyone transforming and stuff, but even that seems a little too weird to have really happened. Right?'";
 		now busterstory2 is true;
-	else if hp of Buster is 0:
+	else if HP of Buster is 0:
 		say "     [one of]'With these criminals, sometimes all it takes is a few disciplinary bonings to set them on the road to reformation and they're good dogs in no time.'[or]'Every dog is a good dog.'[or]'We've got a few hot bitches upstairs we've rescued who've volunteered to stay on as our breeders. They're such good girls.'[or]'There's some wild German Shepherds out there. They're good dogs, of course, but don't mistake them for us - they can be a little over-eager.'[or]'Why don't we get to know each other a little better sometime?' he says, giving your ass a squeeze.[or][if gshepsquad < 6]'Some of the other officers have been asking about you. They're a friendly bunch. You should have fun with them sometime,' he says, rubbing his crotch meaningfully.[else]'I saw you with the others earlier. They're a friendly bunch, aren't they?  Now, I must say, I wouldn't mind getting in on that action either,' he says, rubbing his crotch meaningfully.[end if][or]'There's so many great breeds of dogs out there. I can't wait to see them spread across the city.'[or]'If this city's going to go to the dogs, we're going to make sure it does it right.'[in random order]";
 	else:
 		say "     [one of]'With these criminals, sometimes all it takes is a few disciplinary bonings to set them on the road to reformation and they're good dogs in no time.'[or]'Every dog is a good dog.'[or]'We've got a few hot bitches upstairs we've rescued who've volunteered to stay on as our breeders. They're such good girls.'[or]'There's some wild German Shepherds out there. They're good dogs, of course, but don't mistake them for us - they can be a little overeager.'[or]'We should fool around again sometime soon,' he says while giving your ass a squeeze.[or][if gshepsquad < 6]'Some of the other officers have been asking about you. They're a friendly bunch. You should have fun with them sometime,' he says, rubbing his crotch meaningfully.[else]'I saw you with the others earlier. They're a friendly bunch, aren't they?  I'm looking forward to my next chance to get in on that action with you,' he says, rubbing his crotch meaningfully.[end if][or]'There's so many great breeds of dogs out there. I can't wait to see them spread across the city.'[or]'If this city's going to go to the dogs, we're going to make sure it does it right.'[in random order]";
@@ -127,18 +127,18 @@ the fuckscene of Buster is "[sexwithBuster]";
 to say sexwithBuster:
 	catdogstatecheck;
 	if debugactive is 1:
-		say "DEBUG -> gshepsquad: [gshepsquad], HP: [hp of Buster], catdogstate: [catdogstate], Msg 1: [if busterstory1 is true]Y[else]N[end if], Msg 2: [if busterstory2 is true]Y[else]N[end if] <- DEBUG[line break]";
+		say "DEBUG -> gshepsquad: [gshepsquad], HP: [HP of Buster], catdogstate: [catdogstate], Msg 1: [if busterstory1 is true]Y[else]N[end if], Msg 2: [if busterstory2 is true]Y[else]N[end if] <- DEBUG[line break]";
 	if gshepsquad < 5:
-		say "ERROR-Buster-[hp of Buster]F: You should be able to find me yet.";
+		say "ERROR-Buster-[HP of Buster]F: You should be able to find me yet.";
 	else if lastfuck of Buster - turns < 6:
 		say "     'While that sounds like fun, the others on the squad also need me.'";
 	else if cocks of player is 0 and cunts of player is 0:
 		say "     You're ill-equipped to play with him right now.";
-	else if hp of Buster is 0:
+	else if HP of Buster is 0:
 		say "[bustersex00]";
 		gsquadinfect;
 		now lastfuck of Buster is turns;
-		increase hp of Buster by 1;
+		increase HP of Buster by 1;
 	else:
 		say "[bustersexmenu]";
 
@@ -218,7 +218,7 @@ to say bustersexmenu:
 
 
 to say bustersex00:
-	if hp of Buster is 0:		[***first time - until separate oral is created]
+	if HP of Buster is 0:		[***first time - until separate oral is created]
 		say "     '[if catdogstate is 2]I'm always up for helping out a good dog feel better,' he says with a happy grin and wagging tail[else if catdogstate is 1]Sounds good to me. I had a feeling you'd understand and agree to join up. Let's get you on the path to being a good doggy,' he says with a friendly smile and a wag of the tail[else]Alright. We can see about clearing up this feline taint you've gotten and put you on the path to being a good doggy,' he says with friendly concern[end if]. Using one paw to help you out of your gear, he rubs his fuzzy sheath with the other, coaxing his canine cock to rise from it. When you're ready so is he, his member dripping with precum.";
 	say "     With a paw at your shoulder, he pushes you down on your knees and his doggy dong into your mouth. The taste of the K9 cop's cock fills your mouth and you lick the sticky precum from its warm flesh. This gets him to moan softly, rubbing his hand atop your head as if petting you[if catdogstate is 2 and cocks of player > 0]. 'Mmm... that's it. Lick that bone like a good dog[else if catdogstate is 2]. 'Mmm... that's it. Lick that bone like a good bitch[else if catdogstate is 1]. 'Alright, now work that tongue. Lick it like a good dog[else]. 'Yeah, lick it you naughty kitty. Lick that dog bone. We'll make a horny pup out of you yet[end if],' he moans. His encouragement has you work your tongue all over his throbbing canine penis, getting him to pant with growing pleasure. Drool drips from his dangling tongue onto your head, but you hardly mind at this point, too into sucking on the delicious treat in your mouth.";
 	WaitLineBreak;
@@ -298,7 +298,7 @@ Section 100 - Notes
 [ 4 = completed event 3 ( K9 Vans known ) ]
 [ 5 = been to K9 Vans   ]
 
-[ hp of Buster ]
+[ HP of Buster ]
 [ 0 = no sex ]
 [ 1 = had sex w/player ]
 

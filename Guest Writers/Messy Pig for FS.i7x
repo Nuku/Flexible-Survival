@@ -42,7 +42,7 @@ to say beatthepig:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -71,8 +71,8 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 8;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 50;
-	now lev entry is 3; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 50;
+	now lev entry is 3; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 3; [Amount of Damage monster Does when attacking.]
 	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -122,66 +122,66 @@ this is the pigpussy rule:
 	let messypignum be 200 + ( lev entry * 2 ) + cha entry;
 	let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 	say "The pig creature makes a grab at you and manages to knock you over briefly. Before you can get back up, she's atop you, grinding her wet, messy pussy down onto your face. Her juices run across your face and her heavy scent is strong and strangely alluring. You take [special-style-2][dam][roman type] damage as those juices arouse you further and weaken your efforts to keep fighting!";
-	decrease hp of player by dam;
+	decrease HP of player by dam;
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 	increase libido of player by a random number between 3 and 5;
 	if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 1;
 	if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 1;
-	if messypigcaught is 1 and hp of player > 0 and libido of player < 110:							[caught and fighting]
+	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[caught and fighting]
 [		say "TEST: [playernum] vs [messypignum]:[line break]"; ]
 		let playernum be a random number between 50 and playernum;
 		let messypignum be a random number between 50 and messypignum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][messypignum][roman type]: ";
-	if messypigcaught is 1 and playernum >= messypignum and hp of player > 0 and libido of player < 110:		[caught / escape attempt]
+	if messypigcaught is 1 and playernum >= messypignum and HP of player > 0 and libido of player < 110:		[caught / escape attempt]
 		say "As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late.";
 		now messypigcaught is 0;
 	else if messypigcaught is 1:													[still caught]
 		say "Enticed by her dripping juices, you bury your face in her cunt and start licking away, making her squeal in pleasure. You fade further, your resistance continuing to wane. ";
-	if messypigcaught is 1 and hp of player > 0 and libido of player < 110:							[still fighting, damaged]
+	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[still fighting, damaged]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 		say "You take [special-style-2][dam][roman type] damage and grow more aroused!";
-		decrease hp of player by dam;
+		decrease HP of player by dam;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 	if messypigcaught is 1:															[still caught, aroused]
 		increase libido of player by a random number between 4 and 6;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 1;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 1;
-	if messypigcaught is 1 and hp of player > 0 and libido of player < 110:							[caught and fighting]
+	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[caught and fighting]
 [		say "TEST: [playernum] vs [messypignum]:[line break]"; ]
 		let playernum be a random number between 25 and playernum;
 		let messypignum be a random number between 25 and messypignum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][messypignum][roman type]: ";
-	if messypigcaught is 1 and playernum >= messypignum and hp of player > 0 and libido of player < 110:		[caught / escape attempt]
+	if messypigcaught is 1 and playernum >= messypignum and HP of player > 0 and libido of player < 110:		[caught / escape attempt]
 		say "As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late.";
 		now messypigcaught is 0;
 	else if messypigcaught is 1:													[still caught]
 		say "You continue to lick the pig woman's wonderful pussy, growing more and more excited as you continue to do so. You happily work your tongue inside her, growing more and more pleased by her squeals of pleasure. ";
-	if messypigcaught is 1 and hp of player > 0 and libido of player < 110:							[still fighting, damaged]
+	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[still fighting, damaged]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100; [100% dmg this round]
 		say "You take another [special-style-2][dam][roman type] damage as your lustful longing for her grows higher!";
-		decrease hp of player by dam;
+		decrease HP of player by dam;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 	if messypigcaught is 1:															[still caught, aroused]
 		increase libido of player by a random number between 5 and 8;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 1 and 2;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
-	if messypigcaught is 1 and hp of player > 0 and libido of player < 110:							[caught and fighting]
+	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[caught and fighting]
 [		say "TEST: [playernum] vs [messypignum]:[line break]"; ]
 		let playernum be a random number between 10 and playernum;
 		let messypignum be a random number between 10 and messypignum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][messypignum][roman type]: ";
-	if messypigcaught is 1 and playernum >= messypignum and hp of player > 0 and libido of player < 110:		[caught / escape attempt]
+	if messypigcaught is 1 and playernum >= messypignum and HP of player > 0 and libido of player < 110:		[caught / escape attempt]
 		say "As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late.";
 		now messypigcaught is 0;
 	else if messypigcaught is 1:													[still caught]
 		say "You dive your tongue in and out of her while rubbing her sticky folds and messy bottom with your hands. Her scent is leaving you reeling, starting to oink and grunt in pleasure as well. ";
-	if messypigcaught is 1 and hp of player > 0 and libido of player < 110:							[still fighting, damaged]
+	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[still fighting, damaged]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 90; [111% dmg this round]
 		say "You take another [special-style-2][dam][roman type] damage as your arousal continues to climb as does hers!";
-		decrease hp of player by dam;
+		decrease HP of player by dam;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 	if messypigcaught is 1:															[still caught, aroused]
@@ -191,20 +191,20 @@ this is the pigpussy rule:
 		increase libido of player by a random number between 6 and 9;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 1 and 3;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 1 and 2;
-	if messypigcaught is 1 and hp of player > 0 and libido of player < 110:							[caught and fighting]
+	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[caught and fighting]
 [		say "TEST: [playernum] vs [messypignum]:[line break]"; ]
 		let playernum be a random number between 1 and playernum;
 		let messypignum be a random number between 1 and messypignum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][messypignum][roman type]: ";
-	if messypigcaught is 1 and playernum >= messypignum and hp of player > 0 and libido of player < 110:		[caught / escape attempt]
+	if messypigcaught is 1 and playernum >= messypignum and HP of player > 0 and libido of player < 110:		[caught / escape attempt]
 		say "As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late. She grunts in frustration, you having managed to stop just before her climax.";
 		now messypigcaught is 0;
 	else if messypigcaught is 1:													[still caught]
 		say "Your efforts finally pay off as you drive the porcine beauty to climax, spraying a fresh wave of her juices across your face and down your throat. You oink and squeal happily, lapping it all up even as it starts to seep into your skin and start changing you";
-	if messypigcaught is 1 and hp of player > 0 and libido of player < 110:							[still fighting, damaged]
+	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[still fighting, damaged]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 67; [150% dmg this round]
 		say ". You take [special-style-2][dam][roman type] damage and are left sexually lustful yourself.";
-		decrease hp of player by dam;
+		decrease HP of player by dam;
 	else if messypigcaught is 1:													[still caught]
 		say ".";
 	if messypigcaught is 1:															[completely caught, infected]

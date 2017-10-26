@@ -38,7 +38,7 @@ to say cannon fire:		[outmoded, now uses alt-attack below]
 		[Fire]
 		now cannonprep is 0;
 		say "The Cock Cannon reaches its peak and ejaculates with a loud BOOM!";
-		now hp of player is 0;
+		now HP of player is 0;
 ]
 
 to say cannon attack:
@@ -58,7 +58,7 @@ to say cannon attack:
 
 to say beatthecockcannon:
 	say "The Cock Cannon goes flaccid and collapses to the ground.";
-	if hp of Bradford is 2:
+	if HP of Bradford is 2:
 		LineBreak;
 		if bradfordbounty > 0:
 			decrease bradfordbounty by 1;
@@ -69,7 +69,7 @@ to say beatthecockcannon:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -96,8 +96,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Male"; 		[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 20;
-	now lev entry is 3; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 20;
+	now lev entry is 3; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 0; [Amount of Damage monster Does when attacking.]
 	now area entry is "Red"; [ Current options are 'Outside' and 'Mall' and 'Park' and 'Red' Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -210,7 +210,7 @@ this is the cockcannon rule:
 				now cclosttarget is true;
 				decrease cannonprep by 1;
 	now peppereyes is 0;
-	if hp of the player is greater than 0 and libido of player < 110:
+	if HP of the player > 0 and libido of player < 110:
 		[wait for any key;]
 		AttemptToWaitBeforeClear;
 	else:
@@ -221,7 +221,7 @@ this is the cockcannon rule:
 
 when play ends:
 	if bodyname of player is "Cock Cannon":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "Lost to your new instincts, you spend the next several days looking for victims to transform. Then the military arrives. Following a compulsion, you climb onto the roof of the nearest building and start stroking your penis shaped body as fast as you can... The military soldiers don't notice the blobs of cum falling out of the sky from you and the rest of the penile artillery until it is too late.";
 		else:
 			say "After being rescued by the military, you have trouble fitting in with the rest of society due to the fact that your body is shaped like a giant penis. But then you discover that the infection left many women with pussies so large that nobody could fill them but you...";

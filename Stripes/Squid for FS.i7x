@@ -26,11 +26,11 @@ to say squiddesc:
 		decrease plfleebonus by 3;
 		decrease pldodgebonus by 3;
 		decrease plmindbonus by 3;
-		now hp of player is ( 2 * hp of player ) / 3;
+		now HP of player is ( 2 * HP of player ) / 3;
 		now libido of player is ( 100 + libido of player + libido of player ) / 3;
 
 to say losetosquid:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     You stand down and throw your hands up in submission against the tentacled lady. Cautiously, she advances upon you, and once sufficiently satisfied with your compliance she starts to gently relinquish you of your attire before having her fun.";
 	else:
 		say "     Quickly moving, you find you're too weak to react before her suctioned tendrils grab hold of you and throw you to the ground, getting a faceful of sand. She then roughly exonerates your clothing from its beleaguered owner, its lewd intent made transparent to your vulnerable form.";
@@ -68,7 +68,7 @@ to say squidskinchange:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -95,8 +95,8 @@ When Play begins:
 	now int entry is 16;
 	now cha entry is 10;
 	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 32; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 32; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 6; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -125,7 +125,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Squid":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     With thoughts of the cool waters of the ocean, you head back to the beach area as your infection starts rewriting your mind. Discarding you pack, you slide your sleek body into the water and swim out to find the other squids. You join their underwater school, frolicking and fondling one another happily under the waves[if cocks of player > 0]. Having a cock, you are quite popular with the cute girls[end if].";
 		else:
 			say "     Being partially aquatic now, the military keep you in a special holding facility for those with aquatic transformations. There is some interest in you and the others and they get several marine biologists to study your group. Several members of the military speak to you as well. While several of the others are swayed and recruited by the military, you have little interests in their offers and are happy just to swim around and enjoy your sensitive, new form. You do make friends with one of the marine biologists though, and she helps you make contact to join a marine park's staff after your release. Given your extensive transformation, you are given work as part of the cleaning staff. Able to clean the tanks and scrub the walls from within while filled, that is your primary task. You don't mind though, as it lets you [']make friends['] with all the lovely whales and dolphins after hours.";

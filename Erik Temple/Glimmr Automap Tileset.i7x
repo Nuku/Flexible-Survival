@@ -173,7 +173,7 @@ Glimmr Automap Tileset ends here.
 
 Section: About
 
-Glimmr Automap Tileset is a tileset extension intended for use with the Glimmr Automap extension. It requires a set of external images for use. This can be downloaded as part of the current Glimmr archive (http://code.google.com/p/glimmr-i7x/downloads/list).
+Glimmr Automap Tileset is a tileset extension intended for use with the Glimmr Automap extension. It requires a set of external images for use. This can be downloaded as part of the current Glimmr archive (https://code.google.com/archive/p/glimmr-i7x/downloads).
 
 The extension can also be used as a tileset for any standard image-map element (see Glimmr Drawing Commands and Glimmr Canvas-Based Drawing).
 
@@ -195,6 +195,6 @@ Section: Contact info
 
 If you have comments about the extension, please feel free to contact me directly at ek.temple@gmail.com.
 
-Please report bugs on the Google Code project page, at http://code.google.com/p/glimmr-i7x/issues/list.
+Please report bugs on the Google Code project page, at https://code.google.com/archive/p/glimmr-i7x/issues.
 
-For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the intfiction forum (http://www.intfiction.org/forum/). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, please contact me directly via email (ek.temple@gmail.com).
+For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the intfiction forum (https://www.intfiction.org/forum/). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, please contact me directly via email (ek.temple@gmail.com).

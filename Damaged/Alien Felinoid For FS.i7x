@@ -15,7 +15,7 @@ catnum is a number that varies.
 mateable is a number that varies.
 
 to say felinoid attack:
-	if hp of player > 0:
+	if HP of player > 0:
 		let mchance be 4;
 		if "Submissive" is listed in feats of player, increase mchance by 2;
 		if "More Anal" is listed in feats of player, increase mchance by 2;
@@ -40,7 +40,7 @@ to say felinoid attack:
 			say "     Done with you, the cat gets up and gives your rear a swat.  With a bit of a growl, it urges you on your way.  You grab your stuff and leave, still licking your lips for the last lingering traces of the male's seed.";
 			increase catnum by 1;
 	else if "Male Preferred" is listed in feats of player:
-		if cunts of player is greater than 0:
+		if cunts of player > 0:
 			say "At first he just starts nuzzling you, but pretty soon he begins pushing you around, trying to get you to move.[line break]You feel odd to begin with, his friendliness making something within you warm up and without thinking, without your conscious mind having a say in it at all, you feel yourself on your knees, breasts pushing down into the ground.[line break]He rips at your clothing, tearing it.[line break]His weight pins you down and you moan out loud, needing what he would give you.[line break]Hips meet yours, but his aim was off. His third try was successful though and you cry out, feeling yourself filled and stretched around him.[line break]He didn't take it slow, he breeds you as though you were his very own mate.[line break]You moan out loud.[line break]You are his mate.[line break]Deeper and faster, his spines cause the friction building to turn alternately from agony to bliss as they scrape and then soothe sensitive parts deep within you.[line break]You are panting heavily, unsure if you could take much more.[line break]Existence fades then, he thrust deep once more and roars above you, finally deigning to clamp his jaws down on your neck, extending your own orgasm as his seed floods into you.[line break]The cat pulls away from you and turns behind to clean your cleft, at his first blissful lick he pulls back and you hear a growl coming from him, without hesitating, fearing for your life, you grab your things and run as fast as you can.";
 			increase catnum by 1;
 		if "Submissive" is listed in feats of player or "More Anal" is listed in feats of player or "MPreg" is listed in feats of player:
@@ -53,15 +53,15 @@ to say felinoid attack:
 			say "The big cat rubs himself against you, purring deeply, without thinking your hand reaches to scritch his ears.  As he takes in your scent, he growls and cuffs you with a paw, sending you tumbling back.  You scramble to get away from the suddenly aggressive feline.";
 	else:
 		if "Sterile" is listed in feats of player:
-			if cunts of player is greater than 0:
+			if cunts of player > 0:
 				say "At first he just starts nuzzling you, but pretty soon he begins pushing you around, trying to get you to move.[line break]You feel odd to begin with, his friendliness making something within you warm up and without thinking, without your conscious mind having a say in it at all, you feel yourself on your knees, breasts pushing down into the ground.[line break]He rips at your clothing, tearing it.[line break]His weight pins you down and you moan out loud, needing what he would give you.[line break]Hips meet yours, but his aim was off. His third try was successful though and you cry out, feeling yourself filled and stretched around him.[line break]He didn't take it slow, he breeds you as though you were his very own mate.[line break]You moan out loud.[line break]You are his mate.[line break]Deeper and faster, his spines cause the friction building to turn alternately from agony to bliss as they scrape and then soothe sensitive parts deep within you.[line break]You are panting heavily, unsure if you could take much more.[line break]Existence fades then, he thrust deep once more and roars above you, finally deigning to clamp his jaws down on your neck, extending your own orgasm as his seed floods into you.[line break]The cat pulls away from you and turns behind to clean your cleft, at his first blissful lick he pulls back and you hear a growl coming from him, without hesitating, fearing for your life, you grab your things and run as fast as you can.";
 				increase catnum by 1;
 			else:
 				say "The big cat rubs himself against you, purring deeply, without thinking your hand reaches to scritch his ears.  As he takes in your scent, he growls and cuffs you with a paw, sending you tumbling back.  You scramble to get away from the suddenly aggressive feline.";
 		else:
-			if cunts of player is greater than 0:
-				if cunt length of player is greater than 7:
-					if catnum is less than 3:
+			if cunts of player > 0:
+				if cunt length of player > 7:
+					if catnum < 3:
 						say "At first he just starts nuzzling you, but pretty soon he begins pushing you around, trying to get you to move.[line break]You feel odd to begin with, his friendliness making something within you warm up and without thinking, without your conscious mind having a say in it at all, you feel yourself on your knees, breasts pushing down into the ground.[line break]He rips at your clothing, tearing it.[line break]His weight pins you down and you moan out loud, needing what he would give you.[line break]Hips meet yours, but his aim was off. His third try was successful though and you cry out, feeling yourself filled and stretched around him.[line break]He didn't take it slow, he breeds you as though you were his very own mate.[line break]You moan out loud.[line break]You are his mate.[line break]Deeper and faster, his spines cause the friction building to turn alternately from agony to bliss as they scrape and then soothe sensitive parts deep within you.[line break]You are panting heavily, unsure if you could take much more.[line break]Existence fades then, he thrust deep once more and roars above you, finally deigning to clamp his jaws down on your neck, extending your own orgasm as his seed floods into you.[line break]Curling up as he paces off, you can't help but think how wonderful it was to just be His.";
 						increase catnum by 1;
 					else:
@@ -94,7 +94,7 @@ to say felinoid attack:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -122,8 +122,8 @@ When Play begins:
 	now int entry is 6;
 	now cha entry is 15;
 	now sex entry is "Female";	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 38;			[ How many HP has the monster got? ]
-	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 38;			[ How many HP has the monster got? ]
+	now lev entry is 6;			[ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 14;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Park";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']

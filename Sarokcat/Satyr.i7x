@@ -12,7 +12,7 @@ when play begins:
 	add { "Satyr" } to infections of guy;
 
 to say Satyr attack:
-	if cunts of player is greater than 0:
+	if cunts of player > 0:
 		say "'Hah!' The satyr says as he pins you to the wall, 'What do we have here?' the goat-like man says with a leer as his hands roam your body, 'Not quite a proper nymph I'll admit, but you'll do!' The satyr says as he begins to fondle you, wine spilling everywhere the scent of the strong wine seeming to spiral through your head making you feel as if you had had a few too many drinks yourself. The satyr pays no attention however to your distraction, as he is too busy positioning his large member for best effect, a fact brought to your attention as it begins to poke at your feminine opening. Looking down you can only get small glimpses of his large member, as his body is in the way as he presses your back up against the wall. His hands drop to your hips as he spreads you wide for him, you open your mouth to try to protest, but only a lusty moan comes out as he begins to sink his hot goat-like meat into you.";
 		say "Your mind fogs even more as the scent of wine, the satyrs musk and your own body's lust combine, sending you into a pleasurable haze as he begins to fuck you hard against the wall. His stout goat-like legs easily supporting both your weight, as he holds your moaning body up, you can't help but realize now why nymphs always end up letting satyrs catch them. You find yourself thinking idly, their cock just feels sooo good. You moan in delight as his cock stimulates all the places deep inside you, throwing your head back as you orgasm around his cock, and he doesn't even stop, just pumps into you all the harder. You find your legs and arms wrapping around his back as he thrusts into you, holding him tight as he continues to fuck you, bringing you to yet another orgasm as his wonderful rod thrusts into you. Finally satisfied that you are good and fucked, the satyr groans himself, and lets his cock explode inside of you, filling you with his hot seed. Gasping, you shudder in one last orgasm as your mind goes blank for a minute, only dimly noticing as the sated satyr pulls you off of him and lies you down carefully on the floor. 'Not quite the fun of a real nymph yet,' you think you hear the satyr say, 'But I have to admit that was pretty damn good anyways, maybe you'll let me catch ya again sometime and we can make a real nymph out of you.' The satyr finishes with a smile, as he snags his wine cup from where it fell, and goes looking for a refill. Slowly you manage to pull your well used body together, and head back off into the museum halls yourself, almost looking forward to that next promised chase[impregchance]";
 		if girl is not banned, infect "Greek Nymph";
@@ -107,7 +107,7 @@ to say satyrsexselection:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -134,8 +134,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 18;
 	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 30;
-	now lev entry is 4;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 30;
+	now lev entry is 4;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 7;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Museum";  [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -177,7 +177,7 @@ instead of sniffing satyr wine:
 
 when play ends:
 	if bodyname of player is "Satyr":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "Finally giving in to your base desires, you run back to the museum where you know there is a party going on. Running into several other satyrs, they welcome you with alcoholic grins as they pass you a cup, a new vigor and zest for living in the moment shooting through you as you drink. Soon you are carousing just as hard as they are, enjoying the moment for all it is worth, and charging off down the halls in pursuit whenever one of you manages to spot a lovely little tease of a nymph. You lose all track of time as you party the days and nights away, but as neither you nor the nymphs never seem to get any older, who cares? At one point several people with guns came around to try to get you to leave, but as they didn't have any booze of their own, you helpfully offered them some of yours, and soon enough they came around to your way of thinking as they joined the party. Strangely enough the rest of them seemed to avoid your party after that, you would almost think they didn't know how to have fun, not that you could really bring yourself to care through the happy fog of alcohol and sex that you pass the carefree days in.";
 		else:
 			say "Rescued by the military, you wander around a bit, people giving you odd looks due to your goat-like lower body, still most of the changes are easy enough to hide when viewed from the waist up. This leads you to find your true calling in life, as a bartender, your nimble hands and your ingrained reverence for the booze serving you well. Soon you earn enough to buy your own bar, which you call [']The Satyrs Revel['] amused at the ironic name, soon your bar becomes one of the hottest in the city, your parties always seeming to have that extra something others lack. While most of the people who get a good look at you in your new bar think your merely in a costume, you are happy to let many of the woman find out how real you are for themselves, and while your new life is sadly lacking in any naked nymphs, you have to admit you have found the next best thing.";

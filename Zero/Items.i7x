@@ -171,7 +171,7 @@ carry out Anti-slut:
 
 an everyturn rule:
 	if weapon object of player is bloody sword:
-		Decrease hp of player by 3;
+		Decrease HP of player by 3;
 
 an everyturn rule:
 	if weapon object of player is demonic sword:

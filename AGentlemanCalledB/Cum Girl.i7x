@@ -68,14 +68,14 @@ to say CumGirldesc:
 			now lev entry is level of player;
 	else:
 		now lev entry is 4 + cumgrowth;
-	now hp entry is 40 + ( debit * 4 );
+	now HP entry is 40 + ( debit * 4 );
 	now wdam entry is 5 + ( ( debit + 1 ) / 3 );
 	now dex entry is 12 + ( ( debit + 4 ) / 5 );
 	if cumgrowth > 0:
-		increase hp entry by ( 2 * cumgrowth * lev entry ) / 3;
+		increase HP entry by ( 2 * cumgrowth * lev entry ) / 3;
 		increase dex entry by cumgrowth;
 		increase wdam entry by ( ( cumgrowth + 1 ) / 2 );
-	now monsterhp is hp entry;
+	now monsterHP is HP entry;
 	say "     Before you is a creature that appears, at a glance, to be a pale-looking female human, but as she steps out of the shadows you quickly realize something is very wrong. Her entire form is slick and white, her flesh seeming to run slightly as she moves, as if reshaping itself with each motion. However, the most disturbing feature is the creature's face. While vaguely human in shape, it is almost mannequin like, devoid of any features other than her expressionless mouth and the flat, empty depressions where her eyes should be.";
 	if cumgirlfed is -1:
 		say "     The overwhelming smell of sex hits you as the creature gets within striking distance, and you realize this sickening creature appears to be made entirely of animate cum and other bodily fluids.";
@@ -91,7 +91,7 @@ to say CumGirldesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -119,7 +119,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "No change";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 24;			[ The monster's starting hit points. ]
+	now HP entry is 24;			[ The monster's starting HP. ]
 	now lev entry is 1;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 3;			[ Monster's average damage when attacking. ]
 	now area entry is "Sealed";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -151,7 +151,7 @@ Section 3 - Endings
 [
 when play ends:
 	if bodyname of player is "Cum Girl":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your Cum Girl infection.";
 		else:
 			say "     You survive, but were infected by the Cum Girl.";

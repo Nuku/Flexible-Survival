@@ -84,7 +84,7 @@ to say gryphonfuck7:
 
 to say gryphonfuck8:	[MPreg special]
 	say "     When the victorious gryphon pushes you to the ground, your body automatically moves onto all fours with your ass raised.  You feel a warm of excitement in your lower belly, like an empty need you hope to be filled.  Like an animal in heat, your hidden male womb's decided it wants to be bred.  The gryphon grins as you present yourself so easily and rubs her taloned hands over your rear, massaging your butt as it moves into position.  With a little spit added, a taloned finger dips into your waiting pucker and wriggles around, drawing a moan from you.";
-	say "     [one of]'My, aren't we eager now?'  [or][if hp of player > 0]'Oh, I do love the eager ones.'  [else]'What was all that fuss for earlier?  I can tell you really want it.'  [end if][or]'That's it, slut - raise that ass and take it.'  [or]'I've seen your like before.  Time to breed that ass of yours.'  [or]'You're a breeder male, aren't you?  Well, time to put some eggs in that butt of yours.'  [at random]With that, the herm sinks her dick into your readied hole and starts pounding away at you.  Your hips push back into her thrusts and your anal walls squeeze and tug at it, eager to get the creature's seed.  Your body acts on its own, leaving you awash in the pleasure of the coming breeding.";
+	say "     [one of]'My, aren't we eager now?'  [or][if HP of player > 0]'Oh, I do love the eager ones.'  [else]'What was all that fuss for earlier?  I can tell you really want it.'  [end if][or]'That's it, slut - raise that ass and take it.'  [or]'I've seen your like before.  Time to breed that ass of yours.'  [or]'You're a breeder male, aren't you?  Well, time to put some eggs in that butt of yours.'  [at random]With that, the herm sinks her dick into your readied hole and starts pounding away at you.  Your hips push back into her thrusts and your anal walls squeeze and tug at it, eager to get the creature's seed.  Your body acts on its own, leaving you awash in the pleasure of the coming breeding.";
 	say "     The two of you go at it like this for a few minutes, the gryphon as eager to accomplish the act as you are.  When she does peak, your insides are blasted with a hot rush of virile cream that fills your bowels with warm, gooey heat.  Much of this heat pools in your rectal womb, seeking to impregnate you.[mimpregchance]";
 	if gestation of child is 0:
 		say "     Having dumped her load into you, the gryphon pauses to recover for a time before starting up again.  Perhaps it is your pheromones urging her on, telling her loins that you've not yet been impregnated and thus driving them to try a second time.  Having just cum, she fucks your rougher and goes for much longer in her attempt to breed you.  Eventually though, she's able to build up another orgasm and unleashes a second, somewhat weaker, series of shots that flood your already filled bowels.  More semen flows into your already filled womb, stuffing it with a fresh batch of virile sperm that seek out your egg.[mimpregchance]";
@@ -104,7 +104,7 @@ To say beatthehgryphon:
 		say "     Driven back by you, the herm gryphon whimpers with unsatisfied need.  She crawls over to a [one of]wall[or]pile of rubble[or]crashed car[at random] and sits against it while masturbating furiously in an attempt to sate her lust.  As with the others, you turn away, ignoring your urges to join in.";
 		increase nohgryphonsex by 1;
 	else:
-		say "     [if a random chance of 1 in 2 succeeds]Your opponent hits the ground with a loud *thud* and a squawk.  Lying defeated and on her back, the gryphon awaits her fate with more than a little anticipation[else]Driven back by you, the herm gryphon whimpers with unsatisfied need.  She crawls over to a [one of]wall[or]pile of rubble[or]crashed car[at random] and sits against it while masturbating furiously in an attempt to sate her lust[end if].  The sight of her like this is quite a tempting one.  Perhaps you might have some fun now that you've taken the fight out of her[if carried of gryphon cum > 0 and hp of Garrett >= 5 and inasituation is false].  You're also reminded that you have a bottle of Garrett's special gryphon cum milk.  It probably wouldn't take much coaxing to tempt her into drinking some[end if].";
+		say "     [if a random chance of 1 in 2 succeeds]Your opponent hits the ground with a loud *thud* and a squawk.  Lying defeated and on her back, the gryphon awaits her fate with more than a little anticipation[else]Driven back by you, the herm gryphon whimpers with unsatisfied need.  She crawls over to a [one of]wall[or]pile of rubble[or]crashed car[at random] and sits against it while masturbating furiously in an attempt to sate her lust[end if].  The sight of her like this is quite a tempting one.  Perhaps you might have some fun now that you've taken the fight out of her[if carried of gryphon cum > 0 and HP of Garrett >= 5 and inasituation is false].  You're also reminded that you have a bottle of Garrett's special gryphon cum milk.  It probably wouldn't take much coaxing to tempt her into drinking some[end if].";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		if cocks of player > 0:
@@ -136,7 +136,7 @@ To say beatthehgryphon:
 		now title entry is "Blow her";
 		now sortorder entry is 6;
 		now description entry is "suck her off"; ]
-		if carried of gryphon cum > 0 and hp of Garrett >= 5 and inasituation is false:
+		if carried of gryphon cum > 0 and HP of Garrett >= 5 and inasituation is false:
 			choose a blank row in table of fucking options;
 			now title entry is "Garrett's special milk";
 			now sortorder entry is 99;
@@ -179,7 +179,7 @@ To say beatthehgryphon:
 
 to say hgryphon_pw_01:
 	say "     Approaching the defeated gryphon with confidence, you nudge her legs apart with your feet to get a better look at that moist slit she has tucked under those balls of hers.  Seeing your interest, she raises her hips and holds her scrotum out of the way.  You move to your knees, positioning your [cock size desc of player] member at your victim's quivering slit.";
-	if cock length of player is less than 6:
+	if cock length of player < 6:
 		say "     With almost no effort, her massive pussy swallows your entire cock. With what could almost pass for a smirk, the gryphon squawks 'I guess you're just not man enough...' Anger and lust getting the better of you, you pull your cock out of her voluminous cunt and, repositioning slightly, place the tip at the entrance to her back door. Her eyes going wide with fear, your prey is about to voice her dissent, but too late, your lust won't be denied. With some effort you push past her tightly clenched sphincter, drawing loud pained squawks from your victim. You start slowly fucking her tight asshole, in and out, gradually picking up speed. Eventually the gryphon's squawking changes pitch; however she felt before, she definitely seems to be enjoying this now.";
 	else:
 		say "     With what almost sounds like a combination of a squawk and purring the gryphon spreads her legs further apart, her blue lips trembling against your [cock of player] manhood. She stares up at you expectantly as you slowly enter her accommodating tunnel. A look of absolute pleasure crosses the gryphon's face as you start to slide in and out. You pick up speed, your balls slapping against her on every thrust.";
@@ -190,14 +190,14 @@ to say hgryphon_pw_01:
 	say "     Spent and exhausted you get dressed and walk away, leaving the Hermaphrodite Gryphon to lie in a pool of her own milk.";
 	decrease libido of player by 30;
 	decrease hunger of player by 5;
-	if libido of player is less than 0, now libido of player is 0;
-	if hunger of player is less than 0, now hunger of player is 0;
+	if libido of player < 0, now libido of player is 0;
+	if hunger of player < 0, now hunger of player is 0;
 
 to say hgryphon_pw_02:
 	say "     Approaching the defeated gryphon with confidence, you approach her and eye that stiff cock of hers.  You straddle your fallen blue playmate and start to ease the tip of the long black shaft past your moistening lips.  You feel every inch as you slide all the way down to the knot.  Unable to take the cock in any further, you start to move your hips, grinding against the gryphon's mighty black knot.  The gryphon's eyes start to roll back, your opponent lost in bliss from your grinding, occasionally emitting a low, rolling squawk.";
 	attempttowait;
 	say "     As you increase your pace, you see what appears to be milk dribbling from the beast's large nipples. You bend down and take one of the nipples into your mouth. While you greedily consume all the milk these wonderful teats will produce, a hot wave of desire floods through you, and you start to really want that knot inside you. Grinding harder and harder, faster and faster, you try and slide that bulb past your slick labial lips. You feel climax approaching, so you thrust down as hard as you can to force that wonderful bulge inside.";
-	if cunt length of player is less than 6:
+	if cunt length of player < 6:
 		say "     It's no use, you are just too small to take it all in. The gryphon chirps soothingly understanding your frustration. Suddenly, you let out a startled yelp as you feel an electrifying tickling sensation on your clit and look down to see the puffed end of a blue tail to be the cause.";
 		attempttowait;
 		say "     'Perhaps this will help ease your suffering,' your lover says softly, and help it does! The added sensation of that blue tail proves too much for you. As your body shakes with orgasm, you involuntarily clench your jaw, clamping down on her tasty, milk squirting nipple. The added pain is apparently just what she needed, your azure mate letting out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.[ovichance]";
@@ -208,8 +208,8 @@ to say hgryphon_pw_02:
 	say "     You lie there for a few minutes, not wanting to move after that marathon fucking, and also enjoying the softness of your partner's massive furry blue breasts. Eventually, the gryphon's swollen knot shrinks down and she finishes filling you with seed. You slowly get to your feet, still impaled on gryphon cock. You start gingerly sliding the bulbous black shaft out, and as it passes your abused nether lips, a torrent of cum spills out, drenching the almost unconscious gryphon below. You get dressed and leave, the gryphon still on the ground, eyes closed, moaning, and idly fondling her ample breasts.";
 	decrease thirst of player by 5;
 	decrease libido of player by 30;
-	if thirst of player is less than 0, now thirst of player is 0;
-	if libido of player is less than 0, now libido of player is 0;
+	if thirst of player < 0, now thirst of player is 0;
+	if libido of player < 0, now libido of player is 0;
 
 to say hgryphon_pw_03:
 	say "***anal ride";
@@ -224,7 +224,7 @@ to say hgryphon_pw_04:
 	say "     You absentmindedly start sucking on one of your lover's dark blue nipples and your tongue is greeted with the sweetest, most delicious milk you have ever tasted. You start suckling greedily, taking your fill of the gryphon's magnificent nectar. Once your thirst has been quenched, you notice that the gryphon's cock has shrunk down and can now be easily removed. As you rise to your feet, the gryphon's cock pops out of you like the cork on a champagne bottle, your gaping pussy spraying gryphon seed everywhere.[ovichance]";
 	say "     'Call me!' the gryphon squawks plaintively as you stumble away, dressing yourself as you go.";
 	decrease thirst of player by 5;
-	if thirst of player is less than 0, now thirst of player is 0;
+	if thirst of player < 0, now thirst of player is 0;
 
 to say hgryphon_pw_05:
 	say "***blow job";
@@ -236,7 +236,7 @@ to say hgryphon_TG:
 	decrease carried of gryphon cum by 1;
 	increase hgryphon_TGcount by 1;
 	now lasthgryphon_TG is turns;
-	increase xp of Garrett by 1;
+	increase XP of Garrett by 1;
 	say "     Approaching the gryphon, you take her cock in hand and start stroking it.  She gives a satisfied moan and relinquishes it to you.  Stroking the dark-skinned meat gets the creature all the more aroused and compliant.  Taking out the bottle of gryphon cum, you let her have a tantalizing sniff of it.  She moans and asks what that [one of]great[or]rich[or]yummy[at random] stuff is.  You wave it under her beak and say that it's pure, he-gryphon milk, rich and potent.";
 	say "     'It's from a buff, sexy gryphon - all male and all stud.  Firm chest, strong shoulders and hard, hard cock.  His virile spunk refined and purified into a potent milk.  Doesn't that just sound simply delicious?' you whisper sensually to her, stroking her pulsing rod all the while.  It leaks increasingly the further you go on.  'Have some and you'll be a he-gryphon stud just like that.'";
 	attempttowait;
@@ -244,13 +244,13 @@ to say hgryphon_TG:
 	attempttowait;
 	say "     By the time it's over, the hybrid is now fully male, a cute and sexy [if the remainder after dividing hgryphon_TGcount by 4 is 1]twink[else if the remainder after dividing hgryphon_TGcount by 4 is 2]stud[else if the remainder after dividing hgryphon_TGcount by 4 is 3]girly-boy[else]dude[end if].  He sags back against their resting spot, panting to catch his breath while running his paws over his gender-shifted body.  Whether it is an effect of the semen milk, the powerful orgasm or the delicious afterglow, the creature seems quite pleased with his present state.";
 	say "     Taking the opportunity, you run your fingers through his feathers sensually and tell him about Garrett, the sexy male stud who is making the special milk he's just enjoyed.  You describe the buff gryphon male in a way that makes the woozy gryphon lustful with gay thoughts.  You add that the milkman would enjoy meeting him and showing him just how much fun two sexy male gryphons can have together.  You finish by providing directions to the floating city and send him on his way, quite certain your friend will be very pleased to meet the newcomer.";
-	if hp of Garrett < 6, now hp of Garrett is 6;
+	if HP of Garrett < 6, now HP of Garrett is 6;
 
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -277,7 +277,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 12;
 	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 22;
+	now HP entry is 22;
 	now lev entry is 2; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
 	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]

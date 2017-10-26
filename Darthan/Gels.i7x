@@ -10,7 +10,7 @@ when play begins:
 	add { "Purple Gel" } to infections of hermaphrodite;
 
 to say losetopinkgel: [Loss to Pink Gel.]
-	if hp of player > 0:
+	if HP of player > 0:
 		say "Unwilling to fight the Pink Gel you remove your clothing and present yourself to the creature so that she can sate her sexual desires on you.";
 	else:
 		say "Unable to continue the fight, you have no choice but to let the Pink Gel have her way with you.";
@@ -72,7 +72,7 @@ to say pinkgeldesc: [Pink Gel description.]
 
 
 to say losetobluegel: [Loss to Blue Gel.]
-	if hp of player > 0:
+	if HP of player > 0:
 		say "Unwilling to fight the Blue Gel you remove your clothing and present yourself to the creature so that he can sate his sexual desires on you.";
 	else:
 		say "Unable to continue the fight, you have no choice but to let the Blue Gel have his way with you.";
@@ -137,7 +137,7 @@ to say bluegeldesc: [Blue Gel description]
 
 
 to say losetopurplegel: [Loss to Purple Gel.]
-	if hp of player > 0:
+	if HP of player > 0:
 		say "Unwilling to fight the Purple Gel you remove your clothing and present yourself to the creature so that she can sate her sexual desires on you.";
 	else:
 		say "Unable to continue the fight, you have no choice but to let the Purple Gel have her way with you.";
@@ -207,7 +207,7 @@ to say purplegeldesc: [Purple Gel Description.]
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -234,7 +234,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 15;
 	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 48;			[ The monster's starting hit points. ]
+	now HP entry is 48;			[ The monster's starting HP. ]
 	now lev entry is 6;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 7;			[ Monster's average damage when attacking. ]
 	now area entry is "Red";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -262,7 +262,7 @@ When Play begins:
 
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -289,7 +289,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 15;
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 48;			[ The monster's starting hit points. ]
+	now HP entry is 48;			[ The monster's starting HP. ]
 	now lev entry is 6;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 9;			[ Monster's average damage when attacking. ]
 	now area entry is "Red";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -317,7 +317,7 @@ When Play begins:
 
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -344,7 +344,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 15;
 	now sex entry is "Both";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 48;			[ The monster's starting hit points. ]
+	now HP entry is 48;			[ The monster's starting HP. ]
 	now lev entry is 6;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 8;			[ Monster's average damage when attacking. ]
 	now area entry is "Red";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]

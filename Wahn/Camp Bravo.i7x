@@ -46,7 +46,7 @@ Instead of resolving a Trickster's Masterpiece:
 	if libido of player > 100, now libido of player is 100;
 	increase score by 15;
 	extend game by 24;
-	now hp of Adam is 2;
+	now HP of Adam is 2;
 	Now Back at the Camp is unresolved;
 	Now Trickster's Masterpiece is resolved;
 
@@ -125,7 +125,7 @@ to say GuardLie: [lie to get into the camp]
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
-	if diceroll is greater than 16:
+	if diceroll > 16:
 		say "     You walk up to them like confidently and totally wrap them around your finger with some quick talking. In the end, they salute you before one of them leads the way to their commanding officer's tent. You pass the hitching post you saw being used before, and also the huge minotaur sitting beside it right now munching on some food.";
 		WaitLineBreak;
 		say "     The commandant of the camp is Major Padgett, who stands up from his field desk to shake your hand before offering you a seat.";
@@ -133,7 +133,7 @@ to say GuardLie: [lie to get into the camp]
 		say "     'Several detachments of soldiers are on the way to the containment barrier, but I'm running out of men rapidly. I've already had to pull people out of other camps and scouting posts. Many of the remaining soldiers are women, and considering the potency of that creature's seed, I hesitate to expose any of them to it.'";
 		say "     'Please feel free to check out the camp and talk with everyone. And when you go back to report, please pass on that I need more people here to be able to send more people out with samples.'";
 		move player to Major's Tent;
-		now hp of Adam is 3;
+		now HP of Adam is 3;
 		now Camp Bravo Entrance is known;
 		now Back at the Camp is resolved;
 		now battleground is "void";
@@ -289,7 +289,7 @@ instead of conversing Major Padgett:
 		now sortorder entry is 3;
 		now description entry is "Convince him to let the minotaur breed female soldiers.";
 	[]
-	if hp of David is 2:
+	if HP of David is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to have David taken of the minotaur breeding list.";
 		now sortorder entry is 4;
@@ -360,7 +360,7 @@ to say MajorPartypooper: [try to make the Major see how he's been tricked]
 	say "     You try to explain to the man that he's been led to believe a highly unlikely scenario, making him offer his men to a minotaur for rutting on the word of only one individual of doubtful intent and qualification.";
 	say "     As the major listens to you talk, his face gets redder and redder in anger. After a while he says 'Ah, I see...' - and pulls out a pistol - '... that you're an impostor, trying to stop our efforts in finding a cure. Sick individuals like you relish in all this chaos and don't want it to end, hm?'";
 	say "     Not being able to accept having been duped, he has his soldiers throw you out of the camp, ordering them to drive you away if you return. Your body bruised from the rough handling, you slowly make your way back to the bunker and resolve not to return to Camp Bravo to avoid any further unpleasantness.";
-	now hp of player is hp of player / 2;
+	now HP of player is HP of player / 2;
 	now Camp Bravo Entrance is not known;
 	move player to bunker;
 
@@ -374,10 +374,10 @@ to say MajorBreeding:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 6:
+		if diceroll > 6:
 			say "     He nods at your explanation, clearly accepting it for the truth. 'I see your point. Spreading out the duty of obtaining and transporting research samples to all soldiers under my command would alleviate the shortage of people I can send off. I'll pass along orders to that effect. Thank you for bringing this to my attention.'";
 			now CampBravoWomenAllowed is 1;
-			now hp of Adam is 4;
+			now HP of Adam is 4;
 			now ElainePregnant is 48; [48h till birth]
 		else:
 			say "     He looks doubtful at your explanation, unconvinced that sending his female soldiers to be impregnated by the huge minotaur outside is such a great idea. Maybe you should work at getting better at Ly- err, convincing him of the truth and try this again later.";
@@ -386,7 +386,7 @@ to say MajorBreeding:
 to say MajorDavid:
 	say "     You tell the major that you could use a soldier to serve as a liaison to you, keeping you informed about what's going on in the camp and sometimes coming with you for special duties. And that very nice Private David Jackson would fit perfectly...";
 	say "     He nods, answering 'Of course, I'll issue the order in a moment. And please remember to tell the people outside the city that I need more men sent here.'";
-	now hp of David is 3;
+	now HP of David is 3;
 
 to say MajorRadio:
 	say "     As you ask the Major about the strange transmission you heard over the radio, he grumbles and gives the device a hostile stare.";
@@ -447,14 +447,14 @@ ElainePregnant is a number that varies.
 An everyturn rule:
 	if ElainePregnant is 1:
 		move Adam to Quartermaster's Tent;
-		now hp of Adam is 5;
+		now HP of Adam is 5;
 		now ElainePregnant is 0;
 		now thirst of Elaine is 3;
 	if ElainePregnant is 24:
 		now thirst of Elaine is 2; [visible pregnancy]
 	if ElainePregnant is 36:
 		now thirst of Elaine is 1; [so there's some time between the player talking to the Major and Elaine first mentioning she got fucked by the minotaur]
-	if ElainePregnant is greater than 1:
+	if ElainePregnant > 1:
 		decrease ElainePregnant by 1;
 
 instead of sniffing Elaine:
@@ -922,7 +922,7 @@ to say CampBravoWatchMen:
 	else:
 		say "     'So you want to watch someone's ass getting filled by Tiny Tim?' Sergeant Alexander asks and you nod in confirmation. 'Just a moment, the next plugging team will be here shortly.' He chats a bit with you until two buck-naked soldiers enter the parade ground, carrying nothing but two butt-plugs and a bottle of lube.";
 		let diceroll be a random number from 1 to 20; [a bit randomness which soldiers come]
-		if diceroll is greater than 13: [guy #1 straight, guy #2 gay]
+		if diceroll > 13: [guy #1 straight, guy #2 gay]
 			say "     The first one, a brown haired guy looks a bit apprehensively at the large minotaur next to the hitching post, while his blond partner has his eyes mostly on his buddy's bubble butt in front of him and shows a nine inch erection. Arriving at the field bed near the hitching post, the men set down their butt plugs on it and the blond one has his buddy bend over, then goes on to lube his ass, giving the man's opening a massage with very eager fingers. With his cock even harder than before, you'd say he himself wants to use the opportunity to fuck that hole.";
 		else: [both straight]
 			say "     Both men look very apprehensively at the large minotaur next to the hitching post. The first one pales visibly as the beast stands up, allowing him to clearly see the massive shaft dangling between its legs. He drops his butt plug on the field bed, then hesitantly steps towards the hitching post. Sergeant Alexander calls to him 'Hey buddy, go let your partner put some of that lube up your butt - you'll need it.' The naked soldier looks back a bit sheepishly, then turns around and bends over so he other guy can lube him up.";
@@ -931,7 +931,7 @@ to say CampBravoWatchMen:
 		say "     For a moment, only the man and beast's heavy breathing can be heard, then the minotaur pulls almost all the way out and slams back inside with a bellow, gripping the human's hips tightly with his large hands as he humps him with deep thrusts. The mystical beast's animal nature becomes obvious now, as he tirelessly ruts the man without holding back, each thrust accompanied by the meaty slap of his balls against the human's ass. Having been prepared for this and thoroughly lubed, the soldier takes the hard fucking pretty well, with the first gasps at the thick intruder into his ass quickly replaced by lustful moaning. His cock hardens without ever being touched and you can see a glistening line of precum dripping from its tip.";
 		say "     The minotaur continues fucking the soldier without pause for about twenty minutes, until the man under him gives a sudden shout of 'Aaah... I'm coming!' and thick ropes of cum spray from his manhood, splattering over the cum-drenched ground. The anal muscles of his human buddy clenching in orgasm around his long thrusting cock, the minotaur isn't far behind. With a last deep shove he buries his cock fully in the human as his balls spasm with the blasts of cum shooting up his shaft. Breathing heavily, he steadies himself with one hand on the wooden post while the other holds the human close until his orgasm subsides.";
 		LineBreak;
-		if diceroll is greater than 13: [guy #1 straight, guy #2 gay]
+		if diceroll > 13: [guy #1 straight, guy #2 gay]
 			say "     Sergeant Alexander waves the second man forward to stand ready with his butt-plug for when the minotaur pulls out so they don't lose any of the cum. He eagerly steps forward, already having lubed himself up and being almost impatient at taking a ride on the long minotaur cock himself.";
 		else: [both straight]
 			say "     Sergeant Alexander waves the second man forward to stand ready with his butt-plug for when the minotaur pulls out so they don't lose any of the cum. The man seems a lot less anxious now to be the next in line for fucking. Might be that he's reconsidered his position on anal intercourse after seeing his buddy come while being fucked - or it could just be the pheromone-laden musk of the minotaur laying heavily in the air...";

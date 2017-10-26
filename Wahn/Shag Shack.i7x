@@ -19,13 +19,13 @@ the scent of Jerome is "Jerome smells mainly of cheap aftershave, with a hint of
 
 To say JeromeDesc:
 	if debugactive is 1:
-		say "DEBUG -> hp of Jerome: [hp of Jerome], libido of Jerome: [libido of Jerome] <- DEBUG[line break]";
+		say "DEBUG -> HP of Jerome: [HP of Jerome], libido of Jerome: [libido of Jerome] <- DEBUG[line break]";
 	say "     Jerome is an anthro shark dressed in a snazzy business suit and with a Rolex watch on his wrist. As you look at him, the guy accepts various items from horny customers walking up to him with lustful intent - mostly clearly visible due to leading the way with hard cocks. After passing on the articles of food, drink and other valuables to a flunky, the shark nods to his wolverine guards and the eager John is allowed to go in and have his pick of the local 'talent'. Meanwhile, Jerome becomes aware of your attention and gives you a broad smile - filled with dozens and dozens of overlapping razor-sharp teeth - seemingly daring you to step up.";
 
 Instead of conversing the Jerome:
-	if hp of Jerome is 0:
+	if HP of Jerome is 0:
 		say "     'Hey there friend,' the grinning shark tells you in a very chummy and direct way. 'Come in, come in - only the best sluts for you to get your rocks off with. You can pay in food, clean water or a bottle of orc cum. Or if you want to get the special offer lifetime membership - bring us a new hot piece of ass and you can go in anytime you want! Its a bargain, believe me!'";
-		increase hp of Jerome by 1; [got his initial spiel]
+		increase HP of Jerome by 1; [got his initial spiel]
 	else:
 		say "[JeromeTalkMenu]";
 
@@ -45,31 +45,31 @@ to say JeromeTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Ask the shark what he wants";
 	[]
-	if carried of water bottle > 0 and hp of Jerome is 1:
+	if carried of water bottle > 0 and HP of Jerome is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Pay for entry with a bottle of clean water";
 		now sortorder entry is 3;
 		now description entry is "Hand a bottle of clean water to Jerome";
 	[]
-	if carried of food > 0 and hp of Jerome is 1:
+	if carried of food > 0 and HP of Jerome is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Pay for entry with some food";
 		now sortorder entry is 4;
 		now description entry is "Hand food to Jerome";
 	[]
-	if carried of orc cum > 0 and hp of Jerome is 1:
+	if carried of orc cum > 0 and HP of Jerome is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Pay for entry with a bottle of orc cum";
 		now sortorder entry is 5;
 		now description entry is "Hand your bottle of orc cum to Jerome";
 	[]
-	if carried of orc cum > 0 and hp of Jerome is 1:
+	if carried of orc cum > 0 and HP of Jerome is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Inquire about getting a lifetime membership";
 		now sortorder entry is 6;
 		now description entry is "Do you want to chat to Jerome about finding him a new whore";
 	[]
-	if hp of Jerome is 10: [lifetime member]
+	if HP of Jerome is 10: [lifetime member]
 		choose a blank row in table of fucking options;
 		now title entry is "Stroll in and have your pick of the 'talent'";
 		now sortorder entry is 7;
@@ -181,41 +181,41 @@ to say ShagShackWhoringPayment:
 		if randomnumber is:
 			-- 1:
 				say "[one of]two cans of beans[or]a plastic baggie with two hunks of mystery-meat jerky[or]a pair of fresh melons[or]two baseball-sized cherries[or]a weighty Christmas fruit-cake[or]two packets of breakfast cereal[at random].";
+				say "[bold type]You gain 2 food![roman type][line break]";
 				increase carried of food by 2;
-				say "You gain 2 food!";
 			-- 2:
 				say "a soda bottle and a slightly stale packet of crackers.";
-				increase carried of soda by 1;
+				say "[bold type]You gain 1 food and 1 soda![roman type][line break]";
 				increase carried of food by 1;
-				say "You gain food and soda!";
+				increase carried of soda by 1;
 			-- 3:
 				say "[one of]two bottles of clean water. Carbonated, of a name brand even[or]two bottles of lukewarm water - at least they've got an intact safety seal[or]two bottles of asparagus water. The wilted green plant-piece swimming inside looks not particularly appetizing, but the water itself should still be drinkable[or]two bottles of clean water. It isn't carbonated, of a store brand[at random].";
+				say "[bold type]You gain 2 water bottles![roman type][line break]";
 				increase carried of water bottle by 2;
-				say "You gain 2 water bottle!";
 			-- 4:
 				say "[one of]a bag of chips[or]a bag of spicy chips[or]a bag of cheese and onion chips[or]a bag of chips flavored like a popular candy snack. WTF? Some combinations just shouldn't exist[at random].";
+				say "[bold type]You gain 1 chips![roman type][line break]";
 				increase carried of chips by 1;
-				say "You gain chips!";
 	else: [better rewards for repeat whoring]
 		let randomnumber be a random number from 1 to 4;
 		if randomnumber is:
 			-- 1:
-				say "     [one of]two bottles of clean water that actually look in good shape, and two cans of peaches[or]two cans of canned meat that appear to be in an ok state and two water bottles that look clear enough to reflect light without problem[at random].";
-				increase carried of water bottle by 2;
+				say "[one of]two bottles of clean water that actually look in good shape, and two cans of peaches[or]two cans of canned meat that appear to be in an ok state and two water bottles that look clear enough to reflect light without problem[at random].";
+				say "[bold type]You gain 2 food and 2 water bottles![roman type][line break]";
 				increase carried of food by 2;
-				say "You gain 2 food and 2 water bottles!";
+				increase carried of water bottle by 2;
 			-- 2:
-				say "     an assortment of rations that might help you for days.";
+				say "an assortment of rations that might help you for days.";
+				say "[bold type]You gain 4 food![roman type][line break]";
 				increase carried of food by 4;
-				say "You gain 4 food!";
 			-- 3:
-				say "     a small white box with medical supplies, it looks a little bit aged but from a small inspection the contents are still intact.";
+				say "a small white box with medical supplies, it looks a little bit aged but from a small inspection the contents are still intact.";
+				say "[bold type]You gain 1 medkit![roman type][line break]";
 				increase carried of medkit by 1;
-				say "You gain 1 medkit!";
 			-- 4:
-				say "     a small container with some pills, from what you know this will raise the libido of anyone who takes it.";
+				say "a small container with some pills, from what you know this will raise the libido of anyone who takes it.";
+				say "[bold type]You gain 1 libido pill![roman type][line break]";
 				increase carried of libido pill by 1;
-				say "You gain 1 libido pill!";
 
 the fuckscene of Jerome is "     As you make an amorous offer to the shark, Jerome laughs and shakes his head. 'Much as I'd love to, I'm busy with business. Can I interest you in having a go with my 'talent' in there instead?'".
 
@@ -559,8 +559,7 @@ to say ShagShackSex6: [Shirley the ape]
 	say "     Seeing Shirley stride over to the bed, pulling her red top off completely in the progress and throwing it aside, you almost stumble in your eagerness to follow. Along the way to the bed, you strip in haste, throwing pieces of clothing and gear on the floor with every step. Naked by the time you arrive at the bed, you are greeted by the sexy simian woman who strokes your body appreciatively. Then she rubs herself up against you, breasts brushing over your chest as she turns the two of you - followed by a surprisingly strong push that sends you falling back on the bed. Landing softly, with your arms spread wide from a try to catch yourself, you're in exactly the right position for her to climb on top, her hands grasping your forearms to pin them to the bed.";
 	say "     'I've been waiting for a happy little sub to have fun with,' she says with a grin and leans her head down, licking your cheek. 'You'll see how good it feels to give yourself to me.' With that said, she ";
 	if cocks of player > 0: [male and herm]
-		say "pulls up one of her legs and closes a hand-like foot around the erect length of your manhood, stroking its length. 'Oh yeah, this'll be fun!' Shirley adds in a gleeful tone, then lowers herself on your cock, sinking her wet and dripping pussy over its firm pole. You moan in unison with her as you feel the nether lips spread around your dickhead, followed by the envelopment of her warm and tight pussy. Then the chimp's inner muscles flex around you, giving your cock a welcoming squeeze as the dominant simian grins down at you. 'Fuuuck! I like feeling that [cock of player]
- dick of yours!'";
+		say "pulls up one of her legs and closes a hand-like foot around the erect length of your manhood, stroking its length. 'Oh yeah, this'll be fun!' Shirley adds in a gleeful tone, then lowers herself on your cock, sinking her wet and dripping pussy over its firm pole. You moan in unison with her as you feel the nether lips spread around your dickhead, followed by the envelopment of her warm and tight pussy. Then the chimp's inner muscles flex around you, giving your cock a welcoming squeeze as the dominant simian grins down at you. 'Fuuuck! I like feeling that [cock of player] dick of yours!'";
 		WaitLineBreak;
 		say "     Keeping her hold on you, arms pinned down on the mattress, Shirley starts to ride your dick, grinding her hips against yours and bouncing up and down on the erection. The sensations of her fucking herself on your cock are breathtaking - literally, as you can't help but gasp and moan constantly from feeling her inner walls rub your shaft. Your partner gleefully grins down at you as she gyrates her hips and gives your manhood an extra-tight little squeeze from time to time, intermixed with lusty kisses she plants on your mouth. Such stimulating treatment doesn't stay without consequences and you can feel yourself get closer and closer to orgasm - winding you up so much that you struggle against Shirley's hold at one point.";
 		say "     The desire to grab her as you thrust into the wet pussy on this sexy ape is almost overwhelming and you can't help but buck under her, trying to do just that. But no, she retains her firm grip on your arms, keeping them spread-out and pinned... and you can just see it in her face how much she enjoys her power over you. The female ape even slows her gyrations on your dick for a moment, teasing you mercilessly before she relents and gets back to enthusiastically riding your bucking hips. It doesn't take much longer of this before you reach the point of no return and let out a deep grunt as your cock starts to erupt into her, throb after throb of cum filling the simian bombshell of a woman.";
@@ -851,7 +850,7 @@ to say ShagShackSex14: [Seth]
 			say "     You can feel his twin cocks pressing up against your tummy, their slime smearing across its surface. Seth's movements are also becoming less precise and his breathing catches occasionally. 'I think your massage is complete, don't you? How about we move onto the next part of what you paid for, the sex.' You readily agree as your body tingles, the massage having awoken feelings within you that magnify your arousal. He shifts around until his penises are in front of your face and you can admire them in their glory. Each is almost seven inches long with fluid dripping out the end coating each shaft liberally. You bring your hand up and run it down the side if one, collecting the pre-cum on your fingers. He shivers at the stimulation and makes a few short thrusts. When you bring your fingers to your mouth and lick them, the flavour isn't particularly strong but is distinct enough that you make sure to clean them thoroughly.";
 			say "     Moistening your mouth in preparation, you signal that he may bring his twin organs to your mouth. He lowers himself until they are resting against your lips before thrusting them through, into the warmth and wetness of your mouth. As they enter, you lick around the head of each penis, the combined girth of them stretching your lips sideways. Each twitches intermittently in your mouth, the pleasure you are returning to Seth showing in his face and movements. You content yourself to give him control of the speed and angle of thrusting, resting your head against the mattress as he gains speed and force. You feel a wetness on your breast and guess that it is his tongue as it meanders around brushing against you nipple every so often. This slight touch titillates you more than one would have thought.";
 			WaitLineBreak;
-			say "     With a slurp, Seth pulls his members from your mouth and settles back between your thighs. ' As excellent as you mouth is, I'm eager to try another hole before our session is over' he remarks. He gestures beneath your erection at your anus. 'May I?' Eager to feel him in you, you comply readily, spreading your legs and lifting your shaft out of his way. The giant snake slithers forward and aligns his cock with your rear. You guide his lower member in, allowing the other to rub up against your [cock of player] shaft. Thrusting forth, Seth pushes nearly half his length in before withdrawing, leaving only the tip inside you before thrusting in even further. As he does so, his other penis rubs pleasantly against your own, the mucus covering it allowing it to slide effortlessly between your bodies.";
+			say "     With a slurp, Seth pulls his members from your mouth and settles back between your thighs. 'As excellent as you mouth is, I'm eager to try another hole before our session is over,' he remarks. He gestures beneath your erection at your anus. 'May I?' Eager to feel him in you, you comply readily, spreading your legs and lifting your shaft out of his way. The giant snake slithers forward and aligns his cock with your rear. You guide his lower member in, allowing the other to rub up against your [cock of player] shaft. Thrusting forth, Seth pushes nearly half his length in before withdrawing, leaving only the tip inside you before thrusting in even further. As he does so, his other penis rubs pleasantly against your own, the mucus covering it allowing it to slide effortlessly between your bodies.";
 			say "     Each time he thrusts, your body is pushed into the mattress slightly, the absence of springs being fortuitous. Gasps break from both of your mouths as the pleasure increases from your coupling. The weight of his body against your own holding your thrusting genitals tightly enough that they don't slide apart, your combining fluids easing any friction that might be caused by scale on skin. Seth increases his tempo, bringing his mouth to yours exchanging kisses as his phallus penetrates deeply into your bowels. As the arousal mounts further and further these kisses become more common, his tongue looping your own, its tip tickling your palate.";
 			WaitLineBreak;
 			say "     Hissing, Seth rises from your body, orgasming within you and spraying cum over your body, a few shots reaching your face. The feeling of his cock throbbing in your anus, and the sperm filling your bowels sends you over the edge just after him. Your own semen mixes with his on your body, before he quickly brings his mouth down to take your shaft inside. He swallows as you ejaculate down his throat, his tongue coaxing out extra, making sure you get the full experience. Relaxing in satisfaction and contentment, you wipe a finger through the spooge that is oozing across your chest and bring the finger to your mouth, tasting the combined essence of yourself and the snake.";
@@ -863,7 +862,7 @@ to say ShagShackSex14: [Seth]
 			say "     You can feel his twin cocks pressing up against your tummy, their slime smearing across its surface. Seth's movements are also becoming less precise and his breathing catches occasionally. 'I think your massage is complete, don't you? How about we move onto the next part of what you paid for, the sex.' You readily agree as your body tingles, the massage having awoken feelings within you that magnify your arousal. He shifts around until his penises are in front of your face and you can admire them in their glory. Each is almost seven inches long with fluid dripping out the end coating each shaft liberally. You bring your hand up and run it down the side if one, collecting the pre-cum on your fingers. He shivers at the stimulation and makes a few short thrusts. When you bring your fingers to your mouth and lick them, the flavour isn't particularly strong but is distinct enough that you make sure to clean them thoroughly.";
 			say "     Moistening your mouth in preparation, you signal that he may bring his twin organs to your mouth. He lowers himself until they are resting against your lips before thrusting them through, into the warmth and wetness of your mouth. As they enter, you lick around the head of each penis, the combined girth of them stretching your lips sideways. Each twitches intermittently in your mouth, the pleasure you are returning to Seth showing in his face and movements. You content yourself to give him control of the speed and angle of thrusting, resting your head against the mattress as he gains speed and force. You feel a wetness on your breast and guess that it is his tongue as it meanders around brushing against you nipple every so often. This slight touch titillates you more than one would have thought.";
 			WaitLineBreak;
-			say "     With a slurp, Seth pulls his members from your mouth and settles back between your thighs. ' As excellent as you mouth is, I'm eager to try another hole before our session is over' he remarks. He gestures at both your oozing pussy and your anus. 'May I?' Eager to feel him in you, you comply readily, further opening your legs and spreading your vaginal lips apart. The giant snake slithers forward and aligns his cocks with your inviting holes. You guide his lower member in to your asshole, allowing the other to rub up against your gash and clitoris. Thrusting forth, Seth pushes nearly half his length in before withdrawing, leaving only the tip inside you. Settling to allow you to insert his other penis into your pussy, you anticipate the pleasure you will feel with the two rods separated by only a thin wall of flesh. Now that he can double penetrate you, Seth resumes his thrusting, getting both cocks in completely.";
+			say "     With a slurp, Seth pulls his members from your mouth and settles back between your thighs. 'As excellent as you mouth is, I'm eager to try another hole before our session is over,' he remarks. He gestures at both your oozing pussy and your anus. 'May I?' Eager to feel him in you, you comply readily, further opening your legs and spreading your vaginal lips apart. The giant snake slithers forward and aligns his cocks with your inviting holes. You guide his lower member in to your asshole, allowing the other to rub up against your gash and clitoris. Thrusting forth, Seth pushes nearly half his length in before withdrawing, leaving only the tip inside you. Settling to allow you to insert his other penis into your pussy, you anticipate the pleasure you will feel with the two rods separated by only a thin wall of flesh. Now that he can double penetrate you, Seth resumes his thrusting, getting both cocks in completely.";
 			say "     You can feel them pulsing in you intimate areas as he accelerates and slows down to vary the pleasure. Each time he thrusts, your body is pushed into the mattress slightly, the absence of springs being fortuitous. Gasps break from both of your mouths as you couple, him as he penetrates your pussy and ass simultaneously, feeling his own cocks through your body, and you as you feel him doing so. Seth increases his tempo, bringing his mouth to yours exchanging kisses as his phallus penetrates deeply into your bowels and cunt. As the arousal mounts further and further these kisses become more common, his tongue looping your own, its tip tickling your palate.";
 			WaitLineBreak;
 			say "     Hissing, Seth rises from your body, orgasming in both your pussy and ass. He writhes slightly the feeling of his penises spraying semen stimulating each other as they swell and shrink, pumping his seed into your body. The feeling of his cock throbbing in your anus and pussy, and the sperm filling your inner passages sends you over the edge just after him. The clenching of your anal and vaginal walls around his shafts prolongs Seth's orgasm, coaxing any spare semen from him to be spent within your body. Relaxing in satisfaction and utterly spent, you rub a hand over your tummy and bulging labia, imagining the serpents sperm swimming through your body.";
@@ -876,7 +875,7 @@ to say ShagShackSex14: [Seth]
 			say "     You can feel his twin cocks pressing up against your tummy, their slime smearing across its surface. Seth's movements are also becoming less precise and his breathing catches occasionally. 'I think your massage is complete, don't you? How about we move onto the next part of what you paid for, the sex.' You readily agree as your body tingles, the massage having awoken feelings within you that magnify your arousal. He shifts around until his penises are in front of your face and you can admire them in their glory. Each is almost seven inches long with fluid dripping out the end coating each shaft liberally. You bring your hand up and run it down the side if one, collecting the pre-cum on your fingers. He shivers at the stimulation and makes a few short thrusts. When you bring your fingers to your mouth and lick them, the flavour isn't particularly strong but is distinct enough that you make sure to clean them thoroughly.";
 			say "     Moistening your mouth in preparation, you signal that he may bring his twin organs to your mouth. He lowers himself until they are resting against your lips before thrusting them through, into the warmth and wetness of your mouth. As they enter, you lick around the head of each penis, the combined girth of them stretching your lips sideways. Each twitches intermittently in your mouth, the pleasure you are returning to Seth showing in his face and movements. You content yourself to give him control of the speed and angle of thrusting, resting your head against the mattress as he gains speed and force. You feel a wetness on your nipple and guess that it is his tongue as it meanders around leaving a thin trail of saliva. This slight touch titillates you more than one would have thought.";
 			WaitLineBreak;
-			say "     With a slurp, Seth pulls his members from your mouth and settles back between your thighs. ' As excellent as you mouth is, I'm eager to try another hole before our session is over' he remarks. He gestures beneath your erection at your anus. 'May I?' Eager to feel him in you, you comply readily, spreading your legs and lifting your shaft out of his way. The giant snake slithers forward and aligns his cock with your rear. You guide his lower member in, allowing the other to rub up against your [cock of player] shaft. Thrusting forth, Seth pushes nearly half his length in before withdrawing, leaving only the tip inside you before thrusting in even further. As he does so, his other penis rubs pleasantly against your own, the mucus covering it allowing it to slide effortlessly between your bodies.";
+			say "     With a slurp, Seth pulls his members from your mouth and settles back between your thighs. 'As excellent as you mouth is, I'm eager to try another hole before our session is over,' he remarks. He gestures beneath your erection at your anus. 'May I?' Eager to feel him in you, you comply readily, spreading your legs and lifting your shaft out of his way. The giant snake slithers forward and aligns his cock with your rear. You guide his lower member in, allowing the other to rub up against your [cock of player] shaft. Thrusting forth, Seth pushes nearly half his length in before withdrawing, leaving only the tip inside you before thrusting in even further. As he does so, his other penis rubs pleasantly against your own, the mucus covering it allowing it to slide effortlessly between your bodies.";
 			say "     Each time he thrusts, your body is pushed into the mattress slightly, the absence of springs being fortuitous. Gasps break from both of your mouths as the pleasure increases from your coupling. The weight of his body against your own holding your thrusting genitals tightly enough that they don't slide apart, your combining fluids easing any friction that might be caused by scale on skin. Seth increases his tempo, bringing his mouth to yours exchanging kisses as his phallus penetrates deeply into your bowels. As the arousal mounts further and further these kisses become more common, his tongue looping your own, its tip tickling your palate.";
 			WaitLineBreak;
 			say "     Hissing, Seth rises from your body, orgasming within you and spraying cum over your body, a few shots reaching your face. The feeling of his cock throbbing in your anus, and the sperm filling your bowels sends you over the edge just after him. Your own semen mixes with his on your body, before he quickly brings his mouth down to take your shaft inside. He swallows as you ejaculate down his throat, his tongue coaxing out extra, making sure you get the full experience. Relaxing in satisfaction and contentment, you wipe a finger through the spooge that is oozing across your chest and bring the finger to your mouth, tasting the combined essence of yourself and the snake.";
@@ -888,7 +887,7 @@ to say ShagShackSex14: [Seth]
 			say "     You can feel his twin cocks pressing up against your tummy, their slime smearing across its surface. Seth's movements are also becoming less precise and his breathing catches occasionally. 'I think your massage is complete, don't you? How about we move onto the next part of what you paid for, the sex.' You readily agree as your body tingles, the massage having awoken feelings within you that magnify your arousal. He shifts around until his penises are in front of your face and you can admire them in their glory. Each is almost seven inches long with fluid dripping out the end coating each shaft liberally. You bring your hand up and run it down the side if one, collecting the pre-cum on your fingers. He shivers at the stimulation and makes a few short thrusts. When you bring your fingers to your mouth and lick them, the flavour isn't particularly strong but is distinct enough that you make sure to clean them thoroughly.";
 			say "     Moistening your mouth in preparation, you signal that he may bring his twin organs to your mouth. He lowers himself until they are resting against your lips before thrusting them through, into the warmth and wetness of your mouth. As they enter, you lick around the head of each penis, the combined girth of them stretching your lips sideways. Each twitches intermittently in your mouth, the pleasure you are returning to Seth showing in his face and movements. You content yourself to give him control of the speed and angle of thrusting, resting your head against the mattress as he gains speed and force. You feel a wetness on your nipple and guess that it is his tongue as it meanders around leaving a thin trail of saliva. This slight touch titillates you more than one would have thought.";
 			WaitLineBreak;
-			say "     With a slurp, Seth pulls his members from your mouth and settles back between your thighs. ' As excellent as you mouth is, I'm eager to try another hole before our session is over' he remarks. He gestures at both your oozing pussy and your anus. 'May I?' Eager to feel him in you, you comply readily, further opening your legs and spreading your vaginal lips apart. The giant snake slithers forward and aligns his cocks with your inviting holes. You guide his lower member in to your asshole, allowing the other to rub up against your gash and clitoris. Thrusting forth, Seth pushes nearly half his length in before withdrawing, leaving only the tip inside you. Settling to allow you to insert his other penis into your pussy, you anticipate the pleasure you will feel with the two rods separated by only a thin wall of flesh. Now that he can double penetrate you, Seth resumes his thrusting, getting both cocks in completely.";
+			say "     With a slurp, Seth pulls his members from your mouth and settles back between your thighs. 'As excellent as you mouth is, I'm eager to try another hole before our session is over,' he remarks. He gestures at both your oozing pussy and your anus. 'May I?' Eager to feel him in you, you comply readily, further opening your legs and spreading your vaginal lips apart. The giant snake slithers forward and aligns his cocks with your inviting holes. You guide his lower member in to your asshole, allowing the other to rub up against your gash and clitoris. Thrusting forth, Seth pushes nearly half his length in before withdrawing, leaving only the tip inside you. Settling to allow you to insert his other penis into your pussy, you anticipate the pleasure you will feel with the two rods separated by only a thin wall of flesh. Now that he can double penetrate you, Seth resumes his thrusting, getting both cocks in completely.";
 			say "     You can feel them pulsing in you intimate areas as he accelerates and slows down to vary the pleasure. Each time he thrusts, your body is pushed into the mattress slightly, the absence of springs being fortuitous. Gasps break from both of your mouths as you couple, him as he penetrates your pussy and ass simultaneously, feeling his own cocks through your body, and you as you feel him doing so. Seth increases his tempo, bringing his mouth to yours exchanging kisses as his phallus penetrates deeply into your bowels and cunt. As the arousal mounts further and further these kisses become more common, his tongue looping your own, its tip tickling your palate.";
 			WaitLineBreak;
 			say "     Hissing, Seth rises from your body, orgasming in both your pussy and ass. He writhes slightly the feeling of his penises spraying semen stimulating each other as they swell and shrink, pumping his seed into your body. The feeling of his cock throbbing in your anus and pussy, and the sperm filling your inner passages sends you over the edge just after him. The clenching of your anal and vaginal walls around his shafts prolongs Seth's orgasm, coaxing any spare semen from him to be spent within your body. Relaxing in satisfaction and utterly spent, you rub a hand over your tummy and bulging labia, imagining the serpents sperm swimming through your body.";

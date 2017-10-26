@@ -24,11 +24,11 @@ Lindsey is in Zoo Restrooms.
 the scent of Lindsey is "Lindsey has a strong, masculine scent. It is powerful and arousing, making you long to submit to this beast[if level of Lindsey > 5]. As you should, for you are his bitch to use[end if].".
 
 instead of conversing the Lindsey:
-	if hp of Lindsey is 0:[first time you encounter the NPC text]
+	if HP of Lindsey is 0:[first time you encounter the NPC text]
 		say "     'Well, hey there,' the large beast says with a small smile tugging at his muzzle. 'Fancy seeing someone like you here in the zoo. Must just be my good luck, I guess,' the creature says with a lupine grin as he moves his gaze up and down your body. 'Oh, I suppose I haven't introduced myself yet. The name is Lindsey, a few friends and I decided to have some fun breaking into the zoo when all the crazy stuff started going down,' the male wolf with a female name says, a look of fond remembrance seeming to cross his lupine face as he thinks about the events. 'Let's just say it was a wonderful night to remember.'";
 		say "     He pads towards you slowly, the musky smell in the room seeming to intensify as he draws close to you. 'I actually come by here occasionally just for the lovely memories. I had such a lovely time here that night with the wolftaur that used to be my boyfriend... He makes such a lovely bitch now,' the beast says with a grin. He reaches out and strokes your face with one of his clawed fingers, his strong masculine musk flooding your nose and making you feel slightly weak at the knees. 'Hmmm, I think you could make a fine little bitch too, all you need to do is ask, and I can help you with that...' the beast says with a lupine grin before lowering its face to yours to give your cheek a lick. 'Just say the word, and you could be enjoying yourself as much as I am,' Lindsey says in a teasing tone of voice as he saunters back over to the mirrors, his tail wagging happily for some reason as you stand there and try to recover your wits.";
-		increase hp of Lindsey by 1;
-	else if hp of Lindsey is 1:[Normal short messages the NPC will say each time you talk to them]
+		increase HP of Lindsey by 1;
+	else if HP of Lindsey is 1:[Normal short messages the NPC will say each time you talk to them]
 		say "[one of]'So are you ready to be my bitch?'[or]'My former boyfriend is back at the den. I could take you to meet her sometime, if you were a proper bitch...'[or]'I am so glad we came to the zoo that night.'[or]'The whole wolf thing was a bit scary at first, but now it is downright amazing.'[or]'It would be nice to have a pack, don't you think?'[or]'I think you would make a fine addition to my pack.'[or]'I wish I knew who caused whatever this is to happen, so I could thank them!'[or]'Have you seen those Tigertaurs out there? If they weren't so feline they could be fun to fuck...'[or]'I love having a cock. I never realized how much fun they were before.'[or]'Don't you want to pet my soft fur?' Lindsey says with a teasing look in his eyes.[or]The wolftaur just stares at you with his bright yellow eyes as you try to talk to him. Unable to meet that intent gaze, you quickly find yourself lowering your eyes. The wolftaur chuckles, his dominance established.[or]'Wolves have all the fun. I should know.'[or]'Wouldn't you feel better on all four paws?'[or]'It's good to be the alpha.'[at random]";
 
 
@@ -41,11 +41,11 @@ to say sexwithLindsey:
 		if name entry is "Wolftaur":
 			now monster is y;
 			break;
-	if lastfuck of Lindsey - turns is less than 6:
+	if lastfuck of Lindsey - turns < 6:
 		say "     'Sorry there my horny little bitch,' Lindsey says with a soft chuckle, 'but I have to check on my other bitch and make sure she is properly taken care of too, so I need to save a bit of energy for that. Why don't you come back in a little bit and I can make you even more into a proper little bitch, just like you want,' the masculine wolftaur says with lupine grin, the mingled musk of male wolftaur and your recent sex filling the air.";
 	else if cunts of player is 0 and cocks of player is 0:
 		say "     You are ill-equipped to play with the alluring and masculine wolftaur before you.";
-	else if level of Lindsey is greater than 3:
+	else if level of Lindsey > 3:
 		if bodyname of player is "Wolftaur":
 			if wslevel is 3 and a random chance of 1 in 4 succeeds:
 				say "     'Well well, what have we here?' Lindsey says with an amused look on her canine muzzle as he examines your wolftaur form. 'Are you back for another lesson on your proper place? That's easy,' he growls before pouncing against your side, knocking you to the floor on your side. 'Your place is beneath me,' he states, striding confidently over you and grinds his crotch into your face. Confronted by the smell of the dominant wolf's erect manhood right in your face, you give a soft moan as the musky scent arouses you. You have your lips around that throbbing cock before you even know what you're doing.";
@@ -68,8 +68,8 @@ to say sexwithLindsey:
 					now lastfuck of Lindsey is turns;
 					increase level of Lindsey by 1;
 					decrease humanity of player by 6;
-			else if cocks of player is greater than 0:
-				if cunts of player is greater than 0:
+			else if cocks of player > 0:
+				if cunts of player > 0:
 					say "     'Well well, what have we here?' Lindsey says with an amused look on his canine muzzle as he examines your own wolftaur-like body. 'A bit of a gender-confused wolftaur I see,' the strong male wolftaur says with a chuckle. 'I see your body can't decide if it should be male or female there or a bit of both. Maybe I can help you out there by showing you what it's like to be a proper little bitch,' he says in a low, teasing tone, his dominant words making your body shudder and grow hot with arousal. At the same time, his powerful alpha musk surrounds you, making your body respond instinctively, your pussy dampening while your rear legs shift further apart and your tail lifts up in anticipation. You only have a moment for your lust-fogged mind to realize the implications of your body's new stance before the strong male beast is climbing atop you, his forepaws gripping your canine sides while his arms reach around your humanoid torso to clutch you close against his own upper body. His canine chin comes to rest against your shoulder as a moan of pleasure slips through your lips.";
 					say "     Your mind is still reeling even as your body responds eagerly to his soft touch and the weight of him on your back, instinctively bracing itself underneath him, your pussy beginning to burn with primal need while your cock feels limp and useless as you rub your body up against the strong alpha wolftaur. Your canine ass wiggles as it rubs up against his own firm, powerful hindquarters, teasing and begging for his dominant rod to fill you up. You can feel yourself panting in need as your own hands reach down to tangle with the more dominant male's as he strokes your chest and reaches up to tease and rub your soft nipples.";
 					WaitLineBreak;
@@ -188,7 +188,7 @@ to say sexwithLindsey:
 				now lastfuck of Lindsey is turns;
 				increase level of Lindsey by 1;
 				decrease humanity of player by 3;
-		else if cunts of player is greater than 0:
+		else if cunts of player > 0:
 			say "     'Well well, look what I have here,' Lindsey says with amusement as you approach the male wolftaur. 'It looks like my newest bitch couldn't stay away from her alpha, now could she?' the male taur says in a teasing tone of voice as he begins to slowly stalk towards you, his powerful male musk filling the enclosed bathroom with its strongly arousing scent. 'I knew you had the making of a proper bitch inside you,' the male says as he slowly moves around your body, his furred flank rubbing up against your side and making you moan in pleasure. 'Such a shame the outside doesn't match the inside though...' he says mournfully as his clawed hands pet and stroke your head, the combination of his musk, his soft touches, and his strangely soothing dominant tone, cause your body to respond to him even as your mind fogs over with lust. 'Aren't you lucky that your alpha is here to help you out with that? To help show you how to be a proper bitch inside and out?' Lindsey says teasingly, his lupine muzzle pulling back in a grin as you nod in agreement with the dominant alpha before his words can even fully register.";
 			say "     'Well to start with, proper bitches walk around on all four paws,' the Wolftaur says in amusement as he pushes your upper body down to the ground, and you find yourself dropping down to all fours on the dirty cum stained floor eagerly. The situation seems wrong for a minute, as you breathe in his musky scent as you crawl around on the floor, but somehow being on all fours like this in the presence of such a wonderful alpha male is making your body feel even hornier than ever, your pussy feeling warm and empty as it aches for a thick canine cock to fill it. 'Now that's better,' you can hear the alpha male say with amusement as he watches you move around on the floor. 'Now that we have you positioned and acting like a proper bitch, it's time for your reward,' he says, his words making you shudder in anticipation even as his furred side rubs up against your skin.";
 			WaitLineBreak;
@@ -208,8 +208,8 @@ to say sexwithLindsey:
 			now lastfuck of Lindsey is turns;
 			stop the action;
 	else:
-		if cocks of player is greater than 0:
-			if cunts of player is greater than 0:
+		if cocks of player > 0:
+			if cunts of player > 0:
 				say "     'I knew you would come to see things my way,' the large male wolftaur says with a grin, as he stalks forward, the strong musk of aroused canine filling the air. 'And you are definitely looking nice and eager there, but you definitely have some equipment there that a proper bitch doesn't need. Still, we can fix that with some proper bitch training, I'm sure,' Lindsey says with an amused tone in his voice as he backs you up against the wall, his muzzle stretched wide in a lupine grin. 'Don't worry though, I'm sure once I have you properly trained you won't miss that useless little cock of yours at all,' the male wolf says as he reaches out and pushes your back up against the wall, before pushing you down into a kneeling position. Lindsey then grins as he grips the top of the nearby stall with his hands, and uses it to help him lift his front paws up onto the wall as well. His paws land on each side of your head as he braces herself on the wall, his long canine body stretching above you as his erect canine cock comes to rest right in front of your face.";
 				say "     The strong musk of a dominant wolf redoubles and wipes out any thoughts of protest you might have, as he begins to thrust his canine hips forward, his cock bouncing in the air in front of you lewdly. 'Why don't you give a wolf a hand, my little wannabe bitch, or better yet, your mouth?' the male beast asks in a teasing tone, his voice seeming to invade your lust-filled thoughts, as his suggestion fills your mind. You find yourself happily reaching up to rub your hands along his canine shaft, one hand rubbing at the beasts amazing rod, while the other caresses the large canine's sac, the soft pouch full of the wonderful beast's dominant, bitch-breeding seed, making your mouth water.";
 				WaitLineBreak;

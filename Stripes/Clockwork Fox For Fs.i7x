@@ -64,7 +64,7 @@ to say losetocfg:
 		say "[losetocfguy]";
 
 to say losetocfgirl:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Enraptured by the unusual nature of this mechanical beauty, you stop resisting and submit to her desires. She runs her cool paws over your body, sliding off your clothes. She presses her cold, metal body to yours and chirrs mechanically in pleasure. With soft clicking noises, she moves her paw between your legs and runs her digits over your genitals.";
 	else:
 		say "     Unable to continue resisting this mechanical creature, you stumble to your knees. She wraps her arms around you, pressing her cold body to yours and slides off your clothes with her cool paws. She laughs in delight, having soft, music box chimes mixed into the sound. With soft clicking noises, she moves her paw between your legs and runs her digits over your genitals.";
@@ -75,7 +75,7 @@ to say losetocfgirl:
 		say "     Finding only a wet pussy between your legs, the vixen releases a twang sound of disappointment. She presses you down onto your hands and knees, bringing your face to her crotch and pressing you to her leaking pussy. Her oily cunt is cool, but the scent is arousing in its own way. You find yourself licking at those soft, coppery lips and are soon diving your tongue into it. She warms up gradually as you keep licking and you press your tongue in deeper. Intrigued by the strange, mechanical movements of her inner walls and you slide a pair of fingers into her to better feel it. Some internal mechanism has her pussy squeeze and tug at your fingers as if they were a cock. You pump your digits into her, feeling her warm up further and those internal motions get smoother and faster until finally she cums hard, sending her tasty lubricant flowing out over your fingers and tongue. Finished and running much more smoothly now for the strange winding you gave her, she pulls off your fingers and heads down the halls with a quicker and smoother pace than when she first approached you.";
 
 to say losetocfguy:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Enraptured by the unusual nature of this mechanical beauty, you stop resisting and submit to his desires. He runs his cool paws over your body, sliding off your clothes. He presses his cold, metal body to yours and chirrs mechanically in pleasure. With soft clicking noises, he moves his paw between your legs and runs his digits over your genitals.";
 	else:
 		say "     Unable to continue resisting this mechanical creature, you stumble to your knees. He wraps his arms around you, pressing his cold body to yours and slides off your clothes with his cool paws. He laughs in delight, having soft, music box chimes mixed into the sound. With soft clicking noises, he moves his paw between your legs and runs his digits over your genitals.";
@@ -112,7 +112,7 @@ to say beatthecfguy:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -139,8 +139,8 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 10;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 28; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 28; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 2; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Museum"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -169,7 +169,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Clockwork Fox":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your humanity is ground away by the inner clicking of your increasingly mechanical mind, you automatically make your way back to the shadowy museum. There, you meet up with several other mechanical foxes and vixens who have set up their dens in a hall displaying the growth of mechanical clockwork from its beginnings in the 13th Century and onto the later mechanical marvels designed before electricity hastened to make the art obsolete. As you're setting up your new den among the others, several of them snuggle up to you, clearly wanting to welcome you properly into the mechanical skulk with a good, long winding.";
 		else:
 			say "     You survive your experience in the city, but emerge changed, having become a partially mechanical fox creature. Your unusual body creates a lot of head scratching and arguments among the scientists who examine you, as such a blending of life and technology is astounding. In the end though, they are ordered to focus on other more pressing and dangerous strains of the infection. You overhear one conversation where a colonel is berating one interested scientist, saying that they won't learn anything useful from someone fused with such outdated technology. This makes you grind your gears, but you keep quiet, as it means you get released soon.";

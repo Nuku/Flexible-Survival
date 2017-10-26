@@ -1,6 +1,6 @@
 Version 1 of Val by Wahn begins here.
 
-[ hp of Val                                                    ]
+[ HP of Val                                                    ]
 [  0: player hasn't visited his cell                           ]
 [  1: player has visited his cell                              ]
 [  2: player has seen him pregnant                             ]
@@ -17,7 +17,7 @@ Version 1 of Val by Wahn begins here.
 [  3: big bulge                                                ]
 [  4: kid born and taken while the player was out              ]
 
-Val is a man. The hp of Val is normally 0.
+Val is a man. The HP of Val is normally 0.
 The description of Val is "[ValDesc]".
 The conversation of Val is { "Mew!" }.
 ValPregCounter is a number that varies.
@@ -28,7 +28,7 @@ instead of sniffing Val:
 
 to say ValDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Val], THIRST: [thirst of Val], ValPregCounter: [ValPregCounter], VALPREGNANCY: [ValPregnancy] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Val], THIRST: [thirst of Val], ValPregCounter: [ValPregCounter], VALPREGNANCY: [ValPregnancy] <- DEBUG[line break]";
 	say "     Val is a very handsome orc breeder, with a muscled physique that lacks the sheer bulk and mass of the orc warriors. Being completely naked, you can see that his cock is a bit smaller than those of the bigger orcs, though still respectably sized. His features are almost pretty but still masculine, with a somewhat pronounced brow, a square jaw and yellow eyes. Two small tusks protrude from his lower mandible, looking rather cute, compared to a real orc's. Long, silky black hair hanging down over his shoulders underlines his good looks. ";
 	if ValPregnancy is 1:
 		say "There is a kind of special glow about him.";
@@ -120,14 +120,14 @@ An everyturn rule:
 					now battleground is "void";
 					move player to Grey Abbey 2F;
 					move Chris to Grey Abbey 2F;
-					now hp of Chris is 1;
+					now HP of Chris is 1;
 				else:
 					say "     Val moves over to the cell door, holding it open for you. As you leave the cell, the door automatically falls shut again when Val lets go of it, pushed by a spring at the top. The breeder slave gives you a wave, being too tamed and dependent on orc cum to want to escape himself, then sits down on his cot. Well, if he doesn't want to leave himself, there's nothing much you can do about that, so you just make your way out and down the corridor with Chris, silently escaping the orc lair. The young orc is a natural at stealthy movement, no doubt thanks to the skills inherited from his father, and you make your way to the library with ease after that.";
 					now the Cell Door 1 is closed;
 					now battleground is "void";
 					move player to Grey Abbey 2F;
 					move Chris to Grey Abbey 2F;
-					now hp of Chris is 1;
+					now HP of Chris is 1;
 			else:
 				LineBreak;
 				say "     Val's expression falls as you decline, and the disappointment is audible in his voice as he says 'I - I'll just spend what time I have with Chris then... while he still is Chris.' Turning away from you, the orc breeder then walks over to his son, talking to him in a quiet voice. You decide to keep your distance and leave them to it in peace.";
@@ -136,13 +136,13 @@ An everyturn rule:
 			say "     You have a strange feeling in your body, as if you somehow just know that a new life has entered this world. Maybe you should go check on Val in the orc lair...";
 			now ValPregnancy is 4;     [so he can tell the player about their kid in the next meeting]
 		now ValPregCounter is 0;
-	else if ValPregCounter is 3 and player is not in Slave Cell 1 and hp of Val is 2:
+	else if ValPregCounter is 3 and player is not in Slave Cell 1 and HP of Val is 2:
 		say "     [bold type]You remember that the time for the birth of Val's child should be soon. Maybe you should visit the orc breeder in his cell to be at his side when that happens...[roman type]";
 	else if ValPregCounter is 12:
 		now ValPregnancy is 3;   [very visible pregnancy]
 	else if ValPregCounter is 24:
 		now ValPregnancy is 2;   [visible pregnancy]
-	if ValPregCounter is greater than 1:
+	if ValPregCounter > 1:
 		decrease ValPregCounter by 1;
 
 Instead of fucking the Val:

@@ -6,7 +6,7 @@ to say taurusdesc:
 	say "     You run into a bull running around the plains as if looking for something, his shaggy fur appearing coal-black, absorbing all the colors of the [if daytimer is day]sun[else]moon[end if]. The bovine would be a giant ebony block of muscles if it weren't for his silvery horns that gleam with almost would-be thirst for a victim. By his figure you guess that the beast was used for breeding or exposition on some farm. His muscles - surely already plentiful even before the nanite apocalypse – have grown to an enormous bulk, making him look like a giant of his species, standing almost 6 foot tall on all fours. Between his legs, you can glimpse a mighty sack that was made to breed any cow with just one try, and his spear-like penis casually poking out of his sheath clearly hungers for a nice pussy. This bull is looking for someone to breed, and apparently doesn't differentiate much between candidates, turning to you as he spots you. Hitting the ground with mighty hooves the oxen gets ready to run you down. Lowering his head to bring his horns into play, he charges a moment later, eager to beat – and breed you. Looks like this fight won't be easy.";
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -34,8 +34,8 @@ When Play begins:
 	now int entry is 5;
 	now cha entry is 11;
 	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 150;[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 15;[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ]
+	now HP entry is 150;[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 15;[ Level of the Monster, you get this much HP if you win, or this much HP halved if you lose ]
 	now wdam entry is 15;[Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Plains";[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0;[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']

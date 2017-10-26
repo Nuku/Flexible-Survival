@@ -42,7 +42,7 @@ Instead of resolving Pregnant Friend:
 
 to PregnantFriendEvent:
 	say "     As you walk down the path you stumble upon two girls sitting on a wooden bench. One has been infected as a fox, and has fluffy fox ears on her head and a bushy tail poking through the back of the bench. She has an arm around her friend, a wolf anthro with a bulging stomach who is crying. The wolf girl has completely changed, complete with muzzle and fur all over. You step a bit closer and listen in.";
-	say "     'It all happened so fast.' She sobs 'One minute I was studying with my boyfriend, the next hes one of those wolves!' her friend rubs her back 'Its good to talk about it, so what happened next?' she asks. 'Well he changed into one of those alphas, got real muscly, with a big you-know-what. I should have said no, he didn't have any condoms, but he just smelt so good and I let it happen' Her friend takes the opportunity to jump in 'It's ok, it's not your fault, so what happened next?'. The wolf takes a deep breath and lets it out 'Well we did the deed, and he finished in me. A few minutes later I turned into this and an hour after that [italic type]THIS[roman type]' she waves at her stomach 'started showing. He was really sorry after of course, got lost in his new instincts, but now I've got this...'";
+	say "     'It all happened so fast!' she sobs 'One minute I was studying with my boyfriend, the next he's one of those wolves!' Her friend rubs her back. 'It's good to talk about it. So what happened next?' she asks. 'Well, he changed into one of those alphas, got real muscly, with a big you-know-what. I should have said no, he didn't have any condoms, but he just smelt so good and I let it happen.' Her friend takes the opportunity to jump in and say, 'It's ok, it's not your fault. So what happened next?' The wolf takes a deep breath and lets it out. 'Well, we did the deed, and he finished in me. A few minutes later I turned into this, and an hour after that, [italic type]THIS[roman type]-' she waves at her stomach '-started showing. He was really sorry after of course, got lost in his new instincts, but now I've got this...'";
 	LineBreak;
 	say "     'Don't worry,' the fox girl soothes. 'Look, you aren't alone in this, there are more than a couple of girls in your situation, turns out they grow really fast at the moment! You should give birth tonight and the child will be fully grown in a matter of weeks, you can continue your degree!' The wolf looks up. 'I can?' she questions. The fox girl nods and a small smile appears on the wolf girl's face before the fox girl continues, 'Looks like you need to start thinking of baby names! C'mon, let's go and have a look at a list of them, see what would be a good one.'";
 	LineBreak;
@@ -80,7 +80,7 @@ SharkFountain is a situation.
 The level of SharkFountain is 0.
 The sarea of SharkFountain is "Campus". [Fountain]
 
-instead of going south from College Administration Building while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))  and a random chance of 1 in 3 succeeds):
+instead of going south from College Administration Building while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 

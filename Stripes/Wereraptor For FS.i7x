@@ -96,13 +96,13 @@ to say wereraptordesc:
 	choose row monster from the table of random critters;
 	let debit be 0;
 	now dex entry is 19;
-	now hp entry is 45;
+	now HP entry is 45;
 	now lev entry is 8;
-	if lev entry is less than level of player and hardmode is true:
+	if lev entry < level of player and hardmode is true:
 		now debit is ( level of player ) - 8;
 		increase lev entry by debit;
 		increase dex entry by debit / 5;
-		increase hp entry by debit * 3;
+		increase HP entry by debit * 3;
 		increase wdam entry by ( debit / 3 );
 	now wrmode is a random number between 1 and 2;
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
@@ -118,8 +118,8 @@ to say wereraptordesc:
 		now wrmode is 1;
 		increase dex entry by 1;
 		increase lev entry by 1;
-		increase hp entry by lev entry;
-		now monsterhp is hp entry;
+		increase HP entry by lev entry;
+		now monsterHP is HP entry;
 	else if guy is banned:
 		now wrmode is 1;
 	else if girl is banned:
@@ -243,7 +243,7 @@ to say wrvict3:		[69 w/male]
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -270,7 +270,7 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 8;
 	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 45; [ The monster's starting hit points. ]
+	now HP entry is 45; [ The monster's starting HP. ]
 	now lev entry is 8; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 14; [ Monster's average damage when attacking. ]
 	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -328,12 +328,12 @@ this is the wereraptor curse rule:
 			if ( ( jackalmantf > 0 or jackalboytf > 0 ) and wrcursestatus < 7 ) or nightmaretf > 0 or HellHoundlevel > 0:	[eliminates curse]
 				if wrcursestatus >= 3:
 					say "     You can feel your mystical transformation fighting off the wereraptor curse you are under. Your body writhes in pain and you hiss angrily as your eyes flash yellow and turn slitted before returning to normal. The scars at your shoulders heal, the curse purged by the greater power that now has a hold of you - for better or for ill.";
-					now hp of player is hp of player / 2;
+					now HP of player is HP of player / 2;
 					if wrcursestatus is 5:
 						wrcurserecede;
 				else if wrcursestatus is 2:
 					say "     You can feel your mystical transformation fighting off something lingering inside you. Your body writhes in pain and you hiss angrily as your eyes flash yellow and turn slitted before returning to normal. The scars at your shoulders heal, whatever lingering affect they had purged by the greater power that now has a hold of you - for better or for ill.";
-					now hp of player is ( 2 * hp of player ) / 3;
+					now HP of player is ( 2 * HP of player ) / 3;
 				now wrcursestatus is 100;
 				now Greenhouse is resolved;
 				now Getting the Knife is resolved;
@@ -586,7 +586,7 @@ to wrcurserampage:
 			decrease morale of player by 5;
 			wrcurserecede;
 			now wrcursestatus is 3;
-			now hp of player is ( hp of player + hp of player + maxhp of player ) / 4;
+			now HP of player is ( HP of player + HP of player + maxHP of player ) / 4;
 		else if humanity of player <= 0:
 			end the story saying "Your wild rampage consumes you and you become nothing more than a wild creature that becomes a dangerous, bloodthirsty and lust-crazed beast each night.";
 	else:		[confined, manage to hold on]
@@ -707,7 +707,7 @@ to say wrgetknife:
 	increase carried of silver knife by 1;
 	let bonus be ( intelligence of player + perception of player - 20 ) divided by 2;
 	let dice be a random number from 1 to 20;
-	if bonus + dice is greater than 18:
+	if bonus + dice > 18:
 		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		say "You are about to head out when you realize that you're about to walk away from this collection of antiquities without even checking out any of the others. Just because Nermine doesn't want any of them doesn't mean they can't be of use to you. You flip through the auction list. It appears the items come from an estate sale and while most of them are nothing of interest to you, one of the photos catches your eye. Finding the crate, you break into it and pull out the torso mannequin with a chainmail vest on it. Now that might come in handy, you muse as you head out, feeling a little closer to being rid of your cursed affliction.";
 		increase score by 20;
@@ -789,7 +789,7 @@ to say wrcureattempt:
 		if humanity of player < 100:
 			increase humanity of player by 1;
 			increase humanity of player by ( 100 - humanity of player ) / 2;
-		now hp of player is hp of player / 2;
+		now HP of player is HP of player / 2;
 		increase morale of player by 5;
 		if wrcursestatus is 5:
 			wrcurserecede;

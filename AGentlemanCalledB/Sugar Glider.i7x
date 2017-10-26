@@ -15,7 +15,7 @@ when play begins:
 to say losetoSugarGlider:
 	now nosugarglidersex is 0;
 	if bodyname of player is "Sugar Ferret" or facename of player is "Sugar Ferret":
-		if hp of player > 0:
+		if HP of player > 0:
 			say "     Giving up on resisting the sweet marsupial, you allow her to push you to the ground in her eagerness, stripping you of your clothing and gear in the process.  'Yay!  Let's have some fun, you stinky [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random],' she says with a giggle.[run paragraph on]";
 		else:		[steal before]
 			say "     Beaten by the giggling marsupial, you are unable to continue resisting her.  She pushes you to the ground, stripping you of your clothing and gear in the process.  'You [one of]soda jerks[or]fizz heads[or]carbonated tube rats[or]candy hoarders[or]pop guzzlers[at random] don't normally put up nearly so much of a fight.  You must really be holding out on me.'  She leans in closer, giving you an exaggerated, inquiring look before grinning and licking her long tongue across your cheek.  'Is that it?  Got lots of candy you're trying to hide?  I think you're holding out on me, honey,' she says with a playful giggle while her paws and bushy tail run tickling across your body.";
@@ -29,7 +29,7 @@ to say losetoSugarGlider:
 			else:
 				say ".  Finding your stash of snacks empty, she mock-pouts and grinds her twin cunts against your leg.  'Nothing for me at all?  How about some sweet sex then, you [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random]?' she says with a giggle as she turns her attention back to your body.[run paragraph on]";
 	else:
-		if hp of player > 0:
+		if HP of player > 0:
 			say "     Giving up on resisting the sweet marsupial, you allow her to push you to the ground in her eagerness, stripping you of your clothing and gear in the process.[run paragraph on]";
 		else:
 			say "     Beaten by the giggling marsupial, you are unable to resist as she pushes you to the ground, stripping you of your clothing and gear in the process.[run paragraph on]";
@@ -54,7 +54,7 @@ to say losetoSugarGlider:
 		attempttowait;
 		say "     The overpowering sweetness of the sugar glider's feminine juices fills your mouth as she cums. You continue licking and sucking at her quivering folds, drawing out her climax as long as you can to get as much of the sweet nectar as possible while her second cunt soaks your face in her sticky mess.";
 		say "     Staring down at you, your face still half buried in her groin, the glider gives you one last gleeful titter before springing to her feet and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random], but not before pulling a [one of]lollipop[or]jaw breaker[or]piece of saltwater taffy[at random] from her pouch and slipping it into your mouth with a smile.";
-	if ( bodyname of player is "Sugar Ferret" or facename of player is "Sugar Ferret" ) and hp of player > 0:	[steal after]
+	if ( bodyname of player is "Sugar Ferret" or facename of player is "Sugar Ferret" ) and HP of player > 0:	[steal after]
 		if carried of chips > 0:
 			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while you were having sweet, syrupy sex together.  Looking towards her departing figure, you see her turn back and wave tauntingly with the snacks she's stolen tucked into her pouch.  She giggles and gives her tail a teasing flick as she rushes away, making her escape.";
 			decrease carried of chips by 1;
@@ -120,7 +120,7 @@ to say SugarGliderdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -148,7 +148,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 31;			[ The monster's starting hit points. ]
+	now HP entry is 31;			[ The monster's starting HP. ]
 	now lev entry is 3;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 5;			[ Monster's average damage when attacking. ]
 	now area entry is "Midway";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -216,7 +216,7 @@ Section 4 - Endings [Awaiting sugar ferret tie ins]
 [
 when play ends:
 	if bodyname of player is "Sugar Glider":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Succumbing to your sugary infection, you are soon drawn back to the sights and sounds of the midway...";
 		else:
 			say "     You survive, but were infected by the Sugar Glider.";

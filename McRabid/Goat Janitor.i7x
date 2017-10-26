@@ -13,7 +13,7 @@ to say Goat Janitor desc:
 	say "     Rounding a corner ahead of you is a janitor's push cart, soon followed by a goat-like man wearing a pair of dirty gray coveralls, more than likely a hospital janitor succumbed to the infection.  He strokes his beard as he watches you for a moment.  'Damn kids, lookit that mess.  Just leave it fer the old goat huh?'  He narrows his eyes and grabs hold of his mop, 'Think I'm gonna clean up after you?  You've got another thing coming.'  He charges at you, wielding his mop like a long club.";
 
 to say LoseToGoatJanitor:
-	say "     [if hp of player > 0]Unwilling to keep fighting against the old goat[else]Defeated[end if], you collapse to your knees only to look up as the victorious janitor steps in front of you.  You fail to suppress a whimper at the sight of the wicked grin on the old goat's face.";
+	say "     [if HP of player > 0]Unwilling to keep fighting against the old goat[else]Defeated[end if], you collapse to your knees only to look up as the victorious janitor steps in front of you.  You fail to suppress a whimper at the sight of the wicked grin on the old goat's face.";
 	if cocks of player > 0: [male/herm]
 		say "     The goat janitor snorts as he looks down at you on your knees. 'You some kinda dandy, like that silly [']coon? Got to yer knees awful fast,' he sneers down at you, grabbing the back of your head and shoves it forward into the crotch of his dirty coveralls.  'This what you want?'  Your answer is muted by the bulge in your face.  You can't help but whimper again as you hear the sound of the goat lowering the zipper of his coveralls.";
 		say "     He slips his arm free of one sleeve and then the other, the hand on the back of your head changing left, to right, to left again.  Once his arms are both free, the coveralls fall to the floor exposing that he had nothing on underneath save for his white and grey fur and ample gut.  Your eyes lower to his crotch and are unable to contain a blush at the sight of the rather large sheath and large, low hanging balls.  Your blush deepens when you hear him chuckling above you before he once again presses your face into his crotch, pressing your nose into his bushy pubic fur and holding you there as he strokes himself to full arousal.";
@@ -23,7 +23,7 @@ to say LoseToGoatJanitor:
 		say "     At some point you realize in your haze of lust from his musky scent and taste you've started to stroke your own cock, causing you to whimper and blush even more in embarrassment.  'HRRG!' the goat grunts before bleating out and flooding your mouth with his thick seed forcing you to swallow or choke all over again.  The old goat chuckles and backs away splattering the last few ropes of his cum across your face before he starts getting dressed.  Once finished he goes back to his cart and throws a roll of paper towels at you, 'Better clean up after yourself, boy.'  He smirks before leaving.  A glance down causes you to realize you came as you pleasured yourself to being used by the dirty old janitor.";
 	else if cunts of player > 0: [female]
 		say "     The goat janitor grins as he looks down at you on your knees.  'I must say.  It's nice to at least see a proper girl around here.  Not like that silly [']coon or those messed up boy-girl things I see running around.  Is that the sort of thing you young people are into these days?  Downright deplorable,' he grumbles as he grabs you and pushes you down onto the floor.  'Why, in my day, it just took a man and a woman and that was it.'  As the goat continues to go on, he opens the crotch to his coveralls pushes aside your clothes as well.  'Just like this,' he adds as he thrusts his stiff cock into you with a bleat.";
-		say "     [if hp of player > 0]A little resistant at first, the[else]The[end if] pleasure of the spry old fellow thrusting into you soon as you moaning.  Grinning, he rubs your shoulder and picks up the pace.  'Now, ain't that so much better.'  [if breasts of player > 0 and breast size of player > 1]Leaning down, he wraps his wide lips around your nipple and starts sucking on it[else]He lets his free hand roam over your body as you stop struggling and gives your ass a squeeze[end if] while thrusting all the harder.  For an old guy, he's certainly got plenty of energy.  And experience too, certainly no stranger at making a woman feel good.";
+		say "     [if HP of player > 0]A little resistant at first, the[else]The[end if] pleasure of the spry old fellow thrusting into you soon as you moaning.  Grinning, he rubs your shoulder and picks up the pace.  'Now, ain't that so much better.'  [if breasts of player > 0 and breast size of player > 1]Leaning down, he wraps his wide lips around your nipple and starts sucking on it[else]He lets his free hand roam over your body as you stop struggling and gives your ass a squeeze[end if] while thrusting all the harder.  For an old guy, he's certainly got plenty of energy.  And experience too, certainly no stranger at making a woman feel good.";
 		say "     With a heavy slap from his large balls against your thighs, he drives deep inside you and bleats again.  You can feel the hot rush of cum from the old goat's enlarged balls.  His sticky seed splashes against the bottom of your cunt and overflowing back out[if cunt length of player < 25] in messy spurts[end if].  Once he's finished, he pulls out and has you suck him clean, which you do readily in your lust-dazed state.  That done, he zips up and goes back to his cart.  Before moving on, he tosses you a roll of paper towels.  'You'd best clean up after yourself, missy.'  He smirks and gets ready to move on.  Looking down, you notice the sticky puddle of goat cum and your juices that're pooling between your spread thighs after being used by the old janitor.[impregchance]";
 	else: [neuter]
 		say "     The goat janitor snorts as he looks down at you on your knees, 'You some kinda dandy, like that silly [']coon?  Got to yer knees awful fast,' he sneers down at you, grabbing the back of your head and shoves it forward into the crotch of his dirty coveralls.  'This what you want?'  Your answer is muted by the bulge in your face.  You can't help but whimper again as you hear the sound of the goat lowering the zipper of his coveralls.";
@@ -64,7 +64,7 @@ to say BeatTheGoatJanitor:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -91,7 +91,7 @@ When Play begins:
 	now int entry is 16;
 	now cha entry is 14;
 	now sex entry is "Male";
-	now hp entry is 40;
+	now HP entry is 40;
 	now lev entry is 4;
 	now wdam entry is 3;
 	now area entry is "Hospital";
@@ -118,7 +118,7 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Goat Janitor":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your Goat Janitor infection and eventually wander past the city hospital. 'You're late!' a somewhat familiar voice shouts.  A glance up to the entrance you see a very angry goat in coveralls.  After an hour of being berated for how young people are ruining today's economy with their laziness and loud music, you find yourself mopping one of the many hallways of the hospital in your own coveralls as your boss continues to complaints over a walkie talkie.";
 		else:
 			say "     You survive, but were infected by the goat janitor.  After dealing with the rigmarole at the military processing camp, you're eventually released.  Thankfully, it doesn't take you too long to find some work.  There's always a need for someone to clean up, especially after an apocalypse and especially after a particularly messy, sexual one.  It's nothing glamourous, but it pays alright and gives you plenty to do, at least.  And getting to join in on the occasional make-out session you find in the janitor's closet (which are at least once a week), is an added perk.";

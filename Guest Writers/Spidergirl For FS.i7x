@@ -7,7 +7,7 @@ Version 1 of Spidergirl For FS by Guest Writers begins here.
 Section 1 - Monster Responses
 
 to say spidergirl attack:
-	say "     [if hp of player > 0]The spidergirl does not accept your peaceful surrender and you[else]You[end if] are pinned to the ground by the spider's webbing, your struggles ineffectual! The creature slowly approaches you, a gleam of desire in her eight eyes...";
+	say "     [if HP of player > 0]The spidergirl does not accept your peaceful surrender and you[else]You[end if] are pinned to the ground by the spider's webbing, your struggles ineffectual! The creature slowly approaches you, a gleam of desire in her eight eyes...";
 	[ We're going to choose what kind of scene to do, male-ish (player has a cock which is used) or female-ish (player has a cunt which is used) or neither. ]
 	let spider_choice be "neither";
 	if a random chance of 1 in 4 succeeds and player is not impreg_able:
@@ -88,7 +88,7 @@ to say spidergirl defeat:
 Section 2 - Monster Insertion [ Huh huh, insertion ]
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -115,8 +115,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 35;
-	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 35;
+	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
 	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -143,7 +143,7 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Spidergirl":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "Your predatory instincts take over and you scurry off into the ruins of the city, drinking the blood of other outcasts and forcing them to bear your eggs. It is a rough existence, but eventually you acquire a sort of 'harem' of lovers who enjoy the rough imprisonment you offer...";
 		else:
 			say "Your arachnid form proves perfect for exploring ruined buildings. You are immediately recruited into the armed forces, eventually rescuing hundreds of people from disasters, often lowering them from great heights on web ropes. On your off days you help out with construction projects, ultimately becoming known the world over as a hero.";

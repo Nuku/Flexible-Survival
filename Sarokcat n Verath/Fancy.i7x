@@ -48,7 +48,7 @@ instead of conversing the Fancy:
 				challenge "Nightmare";
 				now inasituation is false;
 				if fightoutcome >= 10 and fightoutcome <= 19:
-					if cocks of player is greater than 0:
+					if cocks of player > 0:
 						say "Grinning down at your obviously needy new pet, you decide to waste no time in ensuring her body bears your mark permanently, as well as your collar. And you quickly have her bent over one of the cushions and are buried up to the hilt in her new amazingly soft wetness, the fact that she was a powerful independent stallion only minutes before only making your conquest of the new mares soft body seem all the sweeter as you thrust into her again and again. As aroused as you both are, it doesn't take much for you to cum, your orgasm making you cry out with pleasure as you fill her body with your seed, branding her as your pet now and forever. And as the former Stablemaster, and now stableslut collapses down on the cushions as you pull out of her. You turn with amusement to the other heat filled mare in the room, a smile tugging on your face as you move forward to do your Stablemaster's duty with the new mare as well...[line break]";
 						say "Eventually though, after you have sated your lusts on your new mares bodies several times, you call in several of the horsemen, and enjoy their looks of shock as they see the state of the former Stablemaster. They quickly snap to attention however as you explain the way things are going to be from now on, nodding with increasing eagerness as they bring Fancy and several of the other important equines in the Stables to your office so you can begin to go over the changes you plan to make. Eventually your first days work is done, and you relax back in your new office happily, already planning a few redecorations as you grin with amusement at where your new slave is sitting waiting for you.";
 					else:
@@ -165,7 +165,7 @@ instead of conversing the Fancy:
 		else:
 			say "     'Still no luck on finding the materials?' Fancy asks with a sad sigh. 'I am sure you can find some of them out there in the city somewhere. It doesn't matter if they are infectious or not really. In fact, it might be mildly preferable honestly...' she says with an equine grin as she gives you a wink.";
 	else if fancyquest is 1:
-		if fancyaroused is greater than 1:
+		if fancyaroused > 1:
 			say "     'Hey again there sexy,' Fancy says with a teasing wink as she looks at you curiously for a minute, only to blink when you mention the ignored memos. 'It figures they would just throw them away like that,' the sexy white mare says with a sigh. 'But it's nothing you need to worry your little head about right now,' she adds with a soft teasing smile as she stretches her nearly naked form out teasingly, seemingly unworried about the problem right now with you in front of her.";
 			Now fancyquest is 0;
 		else:
@@ -198,7 +198,7 @@ Instead of fucking the Fancy:
 		say "     Currently lacking a gender, you don't really have much to tempt Fancy away from her duties at the moment.";
 	else if fancyquest >= 100:
 		say "     'While a little romp might be fun, I don't particularly feel you're what I'm looking for. Clearly I was wrong about you; you messed things up too much.";
-	else if lastfuck of Fancy - turns is less than 6:
+	else if lastfuck of Fancy - turns < 6:
 		if fancyquest < 16:
 			say "     'That certainly sounds tempting, but I've unfortunately still got a lot of work to do around here. Despite what the Stablemaster may think, this place doesn't run itself.'";
 		else:
@@ -269,18 +269,18 @@ instead of sniffing Nightmare Vial:
 The usedesc of Nightmare Vial is "[nightmaremagic].";
 
 To say nightmaremagic:
-	if jackalmantf is greater than 0:
+	if jackalmantf > 0:
 		say "For some reason your body seems to fight with itself for a minute as you ingest the vial of strange liquid, and you get flashes of dark images and strange places in your eyes as your body convulses helplessly. Eventually though the tremors fade, and you lie there panting on the ground for several minutes before you are able to move again, though looking yourself over you can't see that the strange vial of liquid changed any of your nice and sexy jackal-like features...";
 		stop the action;
-	if jackalboytf is greater than 0:
+	if jackalboytf > 0:
 		now nerminetalk is 1;
 		now jackalboytf is 5;
 		say "You feel strange as the liquid runs down your throat, feeling strangely more dominant and less like a good little jackal slut as the changes begin to run through your body.[line break]";
 		say "The strange salty yet delicious taste of the strange mixture washes over your tongue, and burns like fire or fine whiskey as it slides down your throat easily. Before you know it you have drank the whole vial and are licking your lips looking for more. It isn't long however, before you are distracted by a strange warmth growing within as what feels like a dim coal of power burning within you ignites. And you moan as your body begins to shift and reshape itself, your spine seeming to crack slightly and become more flexible, as a silken waterfall of fine horsehair erupts from your rear, spilling forth to form a surprisingly comfortable and handsome long black equine tail, with just the hint of a dark reddish colour when the light reflects off of it. You swish your new tail behind you experimentally for a minute, finding it surprisingly easy to move and control, the new balance your tail provides to be quite helpful as well as handsome. You grin slightly with a strange pleasure at your new appendage, as well as the new sense of power burning within you awoken by the strange but delicious liquid.";
 		now tailname of player is "Nightmare";
 		now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red coloured strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
+		say "[bold type]Your dexterity has increased by 5![roman type][line break]";
 		increase dexterity of player by 5;
-		say "your dexterity has increased by 5!";
 		now fancyquest is 7;
 		now nightmaretf is 1;
 		stop the action;
@@ -288,8 +288,8 @@ To say nightmaremagic:
 		say "Eyeing the unusual liquid dubiously for a minute, you watch the strange play of the light off the whitish fluid, noting the dark and almost red swirls within the vial. Feeling rather dubious, but increasingly curious about the vial, you decide you might as well get on with it, and carefully take a drink. The strange salty yet delicious taste of the strange mixture washes over your tongue, and burns like fire or fine whiskey as it slides down your throat easily. Before you know it you have drank the whole vial and are licking your lips looking for more. It isn't long however, before you are distracted by a strange warmth growing within as what feels like a dim coal of power burning within you ignites. And you moan as your body begins to shift and reshape itself, your spine seeming to crack slightly and become more flexible, as a silken waterfall of fine horsehair erupts from your rear, spilling forth to form a surprisingly comfortable and handsome long black equine tail, with just the hint of a dark reddish colour when the light reflects off of it. You swish your new tail behind you experimentally for a minute, finding it surprisingly easy to move and control, the new balance your tail provides to be quite helpful as well as handsome. You grin slightly with a strange pleasure at your new appendage, as well as the new sense of power burning within you awoken by the strange but delicious liquid.[line break]";
 		now tailname of player is "Nightmare";
 		now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red coloured strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
+		say "[bold type]Your dexterity has increased by 5![roman type][line break]";
 		increase dexterity of player by 5;
-		say "your dexterity has increased by 5!";
 		now fancyquest is 7;
 		now nightmaretf is 1;
 		stop the action;
@@ -298,9 +298,9 @@ To say nightmaremagic:
 		now facename of player is "Nightmare";
 		now face of player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face.";
 		increase perception of player by 4;
-		say "your perception has increased by 4![line break]";
+		say "[bold type]Your perception has increased by 4![roman type][line break]";
 		increase intelligence of player by 3;
-		say "your intelligence has increased by 3!";
+		say "[bold type]Your intelligence has increased by 3![roman type][line break]";
 		now fancyquest is 10;
 		now nightmaretf is 2;
 		stop the action;
@@ -309,10 +309,10 @@ To say nightmaremagic:
 		now skin of player is "[one of]dark black[or]shimmering black furred[or]Nightmare[or]Coal black[or]midnight black furred[or]shadowy furred[at random]";
 		now skinname of player is "Nightmare";
 		now fancyquest is 13;
+		say "[bold type]Your charisma has increased by 4![roman type][line break]";
+		say "[bold type]Your stamina has increased by 4![roman type][line break]";
 		increase charisma of player by 4;
-		say "your charisma has increased by 4!";
 		increase stamina of player by 4;
-		say "your stamina has increased by 4!";
 		now nightmaretf is 3;
 		stop the action;
 

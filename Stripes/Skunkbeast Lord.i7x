@@ -165,8 +165,8 @@ to say sbldesc:
 	let debit be 0;
 	if hardmode is true and level of player > 15, let debit be level of player - 15;
 	say "     This skunkbeast is much larger than the others you've seen in the forest. While it mostly resembles a normal skunk, it is massive and almost the size of a small elephant. It has large paws with elongated claws and large, pointed teeth filling its giant muzzle. Under its belly, you can see its huge, black cock which leaks precum that is rich with the arousing scent of the skunk creatures. Several of the other skunks and skunkbeasts move in around you both but don't interfere as this battle begins. The skunkbeast lord's dark eyes are fixed on you with an animalistic intent, though it is cunning enough to keep you from reaching the gun. You will have to try your best to fight off the creature in the hopes of reaching the weapon if you want any hope of winning this battle.";
-	now hp entry is 120 + ( debit * 6 ); [- How many HP has the monster got? -]
-	now monsterhp is 120 + ( debit * 6 );
+	now HP entry is 120 + ( debit * 6 ); [- How many HP has the monster got? -]
+	now monsterHP is 120 + ( debit * 6 );
 	now wdam entry is 16 + ( ( 2 * debit ) / 5 ); [-Amount of Damage monster Does when attacking.-]
 
 to say beatthesbl:
@@ -175,7 +175,7 @@ to say beatthesbl:
 
 to say losetosbl:
 	now skunkbeaststatus is 2;
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     The alluring scent and powerful, masculine might of this creature become too tempting for you and you drop to your knees before it, unwilling to keep resisting it.";
 	else:
 		say "     Feeling worn down by the skunkbeast's attack, you make a final rush for the rifle. But just as you're about to put your hand on it, a big paw comes swinging in, knocking you to the ground with the rifle just out of reach.";
@@ -184,7 +184,7 @@ to say losetosbl:
 Section 3 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -211,7 +211,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 6;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 120; [ The monster's starting hit points. ]
+	now HP entry is 120; [ The monster's starting HP. ]
 	now lev entry is 15; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 16; [ Monster's average damage when attacking. ]
 	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -351,7 +351,7 @@ when play ends:
 				say "     Your little skunk kit grows and matures as you care for him, changing as he grows until he becomes a young anthro skunk like his adopted father. Taking after Frank, he'll happily pound your sexy ass while your mate is off on his collection runs. He keeps you filled and satisfied until then, making the time apart more bearable for you. But the times they share you back and forth are the best, taking turns fucking and filling you over and over again until you're so sore and stuffed that you can hardly move for hours, lost in a haze of blissful afterglow.";
 	else if skunk kit is tamed:
 		if bodyname of player is "Skunk":
-			if humanity of player is less than 10:
+			if humanity of player < 10:
 				if cunts of player > 0:
 					say "     Surrendering to the infection, you make an even better mother to the little skunk kit, as you soon give your first little skunk child several siblings to play with. Still, the first little skunk you rescued always has a special place in your skunky heart. And once he has grown up enough, he also proves to be a fine skunk mate for you in your new life, and you bear him even more wonderful skunk kits for you to raise.";
 				else:
@@ -362,7 +362,7 @@ when play ends:
 				else:
 					say "     After your rescue, you manage to smuggle the little skunk kit out of the city with you. Its presence a constant comfort to you as you settle into your new life outside the city. Eventually though like all kits will, it grows larger and stronger, and you have to work harder to hide it as you try to live life in the outside world. Eventually though, when its size is close to that of the skunk beasts in the city, you realize its presence seems to be triggering something within you. Where before its presence triggered strong protective impulses, now its presence serves to excite your body with dark urges. This is a fact that seems to interest it more and more, until one day you find yourself panting in need when you catch his scent and you get onto your knees beneath him, licking and sucking his impressive cock. Seeing the skunk you raised in an entirely new manner, you crawl before him and he sates himself on your eager body, instinct guiding him in how best to dominate you. As you moan underneath the new skunkbeast, you know the roles have changed in your life for good now, and you are now the pet, while he is the master. You are his special male skunk bitch. While at first no one can tell the difference, you soon buy yourself a proper collar to show your new status and begin to plan ways to help your new master acquire more pets. Your strangely enticing scent lures in others who you bring home for him to mount and change into sexy skunk femmes to breed. He occasionally even rewards your success by letting you mount one of them.";
 		else if bodyname of player is "Skunk Taur":
-			if humanity of player is less than 10:
+			if humanity of player < 10:
 				if cunts of player > 0:
 					say "     Surrendering to the infection, your conjoined partner urges you to nurse feed your little skunk kit and you give in to her suggestion. You do whatever she wants actually, as she always has such wonderfully kinky ideas. Feeding your little one, he grows and matures quickly, becoming a skunkbeast like those in the forest. You are soon raising your tail and letting your beastly new master mount your skunktaur body and mate you, filling you with new kits.";
 				else:
@@ -377,12 +377,12 @@ when play ends:
 					say "     Eventually though like all kits will, it grows larger and stronger, and you have to work harder to hide it as you try to live life in the outside world. Eventually though, when its size is close to that of the skunk beasts in the city, you realize its presence seems to be triggering something within you. Where before its presence triggered strong protective impulses, now its presence serves to excite your body with dark urges. This is a fact that your skunk half urges you to act on and soon enough, you are panting in need when you catch his scent and you get onto your knees beneath him, licking and sucking his impressive cock. You both take turns licking, kissing and sucking his large shaft. Seeing the skunk you raised in an entirely new manner, you crawl before him and he sates himself on your eager body, instinct guiding him in how best to dominate your skunktaur body.";
 					say "     As you moan underneath the new skunkbeast, you can feel him changing and becoming a skunkbeast taur. With this change in form, you both know the roles have changed in your life for good now, and you are now the pet, while he is the master. You are his special male skunk bitch. While at first no one can tell the difference, you soon buy yourself a proper collar to show your new status and your conjoined partner is always urging you to bring your outside lovers home now to introduce them to your sexy master so they can be changed into sexy skunk femmes to breed. He occasionally even rewards your success by letting you mount one of them.";
 		else:
-			if humanity of player is less than 10:
+			if humanity of player < 10:
 				say "     The little skunk kit whines at you pathetically as you surrender to the infection fully, still obviously attached to you even now. You manage to bring yourself to care for it for a bit longer, but as it grows larger and stronger and more like a regular skunkbeast, you find yourself less and less able to tolerate his presence. Eventually you drive the skunkbeast out into the wild on its own, the beast more than able to take care of itself now, and let you get back to your own cares.";
 			else:
 				say "     After your rescue, you manage to smuggle the little skunk kit out of the city with you. Its presence a constant comfort to you as you settle into your new life outside the city. Eventually though like all kits will, it grows larger and stronger, and you have to work harder to hide it as you try to live life in the outside world. Soon the skunk kit has grown almost as large as those you fought in the city, this doesn't cause any problems until at one point he tries to mount you in your sleep. While you wake up in time to stop the action, his scent filling the room makes you almost want to let him continue. Unable to ignore the problem you try to make the skunk understand it has to be careful, only to have the now instinct driven beast set out on its own to find mates to fill in this new area. You try to find him for quite a while, and turn up no clues at all, although you hear later about a new explosion of skunkmorphs in the region...";
 	else if bodyname of player is "Skunk":		[Skunk player w/o kit]
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if cunts of player > 0:
 				say "     Surrendering to the infection, you are drawn back to the forest by the alluring scent of the skunkbeasts on the wind. Finding one, you are rutted repeatedly and made into one of his many mates, bred full of beautiful skunk kits[if cocks of player > 0]. You do occasionally sneak off to grab one of the busty females and slake your male needs on them, siring a few kits of your own behind your master's back[end if].";
 			else:
@@ -398,7 +398,7 @@ when play ends:
 				say "     You are rescued from the infected city by the military forces as they move through. At the base, you are subject to a series of tests. Your nature as a male skunk arouses some scientific interest, but you are a skunk like so many others they've rescued and there are much higher priorities than an anomaly like you. Eventually they must be satisfied that you haven't given into your infection, for you are released. You live a quiet life for a while, needing a break after the excitement of the city. But you wake up one morning with an erection that won't go away. You feel the urge, no, the need to mate.";
 				say "     Drawn by a strange impulse, you go to a couple of clubs and bars until you find one with a skunk girl among the clientele. You buy the lovely femme some drinks before inviting her back to your place. There you pounce her and rut her like an animal, much to her delight. You satisfy her instinctual needs as well as your own as you breed her while becoming more and more like the feral skunkbeasts of the woods. She becomes the first of your new mates and lures in others for you to fuck and transform.";
 	else if bodyname of player is "Skunk Taur":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if cunts of player > 0:
 				say "     Surrendering to the infection, you are drawn back to the forest by the alluring scent of the skunkbeasts on the wind. Your lower half urges you on incessantly as you find yourself in a lustful heat. Finding one of the big males, you are rutted repeatedly and made into one of his many mates, bred full of beautiful skunk kits. Being such a large mate, you are his favorite, best able to take his massive cock and bear him large litters[if cocks of player > 0]. Your skunk partner coaxes you often to sneak off to grab one of the busty females and slake your male needs on them, siring a few kits of your own behind your master's back[end if].";
 			else:

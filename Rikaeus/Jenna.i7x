@@ -18,7 +18,7 @@ Version 1 of Jenna by Rikaeus begins here.
 [   5: Has learned that player can purchase culprit        ]
 [   6: Has received the culprit from Nermine end           ]
 
-[   hp of Jenna                                            ]
+[   HP of Jenna                                            ]
 [   0: Not Placed                                          ]
 [   1: In Wolverine Guard Station                          ]
 [   2: In Wolverine Lockup                                 ]
@@ -61,19 +61,19 @@ to say JennaTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (hp of Jenna is 1 and MurderMystery > 1 and MurderMystery < 4): [Jenna is in the Station]
+	if (HP of Jenna is 1 and MurderMystery > 1 and MurderMystery < 4): [Jenna is in the Station]
 		choose a blank row in table of fucking options;
 		now title entry is "Lockup";
 		now sortorder entry is 1;
 		now description entry is "Ask Jenna to take you to see the suspects";
 	[]
-	if hp of Jenna is 2: [Jenna is in Lockup]
+	if HP of Jenna is 2: [Jenna is in Lockup]
 		choose a blank row in table of fucking options;
 		now title entry is "Station";
 		now sortorder entry is 2;
 		now description entry is "Ask Jenna to take you back to the Station";
 	[]
-	if (MurderMystery < 4 and MurderMystery > 1 and hp of Jenna is 2):
+	if (MurderMystery < 4 and MurderMystery > 1 and HP of Jenna is 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Solve the Murder";
 		now sortorder entry is 3;
@@ -123,13 +123,13 @@ to say JennaTalk1: [Ask to go to the Lockup.]
 	say "     You tell Jenna you're ready to go visit the suspects. She nods at you and directs you to follow after her. The female wolverine leads you through a surprising amount of hallways, a rather large amount for the small cafe store. You mention this and she chuckles. 'Yeah, it was rather small when we first got this area. But me and the boys knocked down some of the walls leading into an empty store and boarded the entrance to it up.' She says. Soon though you guys reach a door that when opened shows entrance to a room filled with cells. In the cells are the four suspects, each of them doing different things. 'Let me know if you want to leave and head back out.' Jenna informs you before leaving you to your thoughts.";
 	move player to Wolverine Lockup;
 	move Jenna to Wolverine Lockup;
-	now hp of Jenna is 2;
+	now HP of Jenna is 2;
 
 to say JennaTalk2: [Ask to return to the Station]
 	say "     You let Jenna know that you want to head back out. She nods and leads you back out through the hallways and into the Wolverine Guard Station. Once there she gives you a look. 'If you want back in, just talk to me.' The female wolverine says. You nod at her, after which she leaves you alone, heading back to her original spot against the wall by the desk.";
 	move player to Wolverine Guard Station;
 	move Jenna to Wolverine Guard Station;
-	now hp of Jenna is 1;
+	now HP of Jenna is 1;
 
 to say JennaTalk3: [Solve the Murder]
 	say "     With a look of determination, you tell Jenna that you can solve the murder. The female wolverine looks at you in shock. 'Wait, you can?' She asks you, clearly wanting to make sure. You nod and tell her that you've gathered enough evidence to find the killer. 'Is that true? Then I'll gather all the suspects.' The woman tells you. Even though you're in the same room as her when she goes to get everyone from the cells, you are still left with your thoughts. Did you truly figure out who murdered Tyler? You have a bad feeling that if you end up guessing wrong, then something really horrible will happen. Once everyone's gathered you are standing in front of the four suspects with Jenna at your side.";
@@ -167,7 +167,7 @@ to say JennaTalk3: [Solve the Murder]
 			WaitLineBreak;
 		if GordonFurSuspicion > 1:
 			say "     [line break]";
-			say "     The next thing you tell them, is explained to be a damning piece of evidence. You tell them that you learned this [if GordonFurSuspicion is 2]from a friendly lizard girl.[else]getting intimate with the person.[end if] Holding the piece of fur out in the open you proceed to ask Jenna who here has brown fur, that she can see. 'Uh, the bear and the dog.' She says, confused as to where you're going with this. You then tell her to have her subordinates strip the monkey.'Wha-WHAT?!' Gordon shouts as the female wolverine does just that and he's manhandled by the guards. Once stripped almost everyone not employed by Cane gasps when they see that on the monkey's ass is a patch of brown fur. 'So Gordon actually does have brown fur?!' Jenna shouts. You nod and say that it's pretty damn suspicious to dye your fur from your original color, a color that pertains to a murder suspect. You then move on from that, having explained all you could.";
+			say "     The next thing you tell them, is explained to be a damning piece of evidence. You tell them that you learned this [if GordonFurSuspicion is 2]from a friendly lizard girl.[else]getting intimate with the person.[end if] Holding the piece of fur out in the open you proceed to ask Jenna who here has brown fur, that she can see. 'Uh, the bear and the dog.' She says, confused as to where you're going with this. You then tell her to have her subordinates strip the monkey. 'Wha-WHAT?!' Gordon shouts as the female wolverine does just that and he's manhandled by the guards. Once stripped almost everyone not employed by Cane gasps when they see that on the monkey's ass is a patch of brown fur. 'So Gordon actually does have brown fur?!' Jenna shouts. You nod and say that it's pretty damn suspicious to dye your fur from your original color, a color that pertains to a murder suspect. You then move on from that, having explained all you could.";
 			WaitLineBreak;
 		if GordonMotive > 1:
 			say "     [line break]";
@@ -213,7 +213,7 @@ instead of going north from Smith Haven Mall Lot South while (LoganCommand is 0)
 	say "     She sighs before shaking her head and turning to several other wolverines that have just shown up from deeper inside the mall. 'Boys, this worthless piece of crap is to be relegated to parking lot duty. He can cool his heels with the other rapists roaming the streets,' she orders with a firm look to the mustelids that appear to be her subordinates. The males nod at her and grab the angry offender and drag him out of the mall. The woman turns around and helps the mall rat comfort the near-rape victim and leads him away. This leaves you standing around in the midst of the very mixed crowd of countless different species as it slowly dissolves, and you overhear some murmurs of people to one another. Apparently the woman you saw is the leader of the Wolverine Guard and she is a quite well respected person in the mall. After learning this and some other interesting tidbits of information, you return to what you were doing before.";
 	now LoganCommand is 1;
 
-instead of going southeast from Mall East Wing while (MurderMystery > 3 and hp of Moreau > 0 and LoganCommand is 1):
+instead of going southeast from Mall East Wing while (MurderMystery > 3 and HP of Moreau > 0 and LoganCommand is 1):
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the body shop. MurderMystery: [MurderMystery].hp: [hp].LoganCommnad: [LoganCommand][line break]";
 	say "     Upon entering the body shop you notice a familiar person in here, it is none other than Jenna, the leader of the Wolverine Guard. What's interesting is the person next to her, a fellow Wolverine Guard. But... by the look on his face and how he appears to stare at the woman angrily you can rather instantly tell it is the one guard that [italic type]does not[roman type] get along with her, Logan. Your friend looks to be talking to Moreau about something before the naga gestures for them to follow him to his offices. Your curioisity gets the better of you, so you follow them into the back. When you get there you can see that the body shop owner is staring intently at the male wolverine. 'Just look into my eyes and relax...' the naga orders, focusing his green-slitted irises on the anthro canine. 'Yes sir.' Logan tonelessly replies.";

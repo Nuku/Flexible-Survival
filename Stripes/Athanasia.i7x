@@ -31,7 +31,7 @@ Instead of resolving a Captured Bird:
 					say "     With only the last panther holding onto the net, it cannot keep the bird down. It manages to flap its wings and take to the air. With its wings spread wide, the fire bird shrieks one last time before unleashing a wave of fire towards the last of the cats. This burst of fire incinerates the remains of the net and sends the feline running, fleeing with her tail aflame.";
 					say "     With an unearthly grace, the phoenix turns about to face you as it hovers. You are scared you'll receive the same treatment as the cat, but the bird's eyes shine with intelligence. It nods its head to you, then takes back to the air, the fire fading quickly after that outburst. You are left with a sense of awe and wonder at the majesty of the creature you helped save.";
 					increase score by 15;
-					now hp of Athanasia is 1;
+					now HP of Athanasia is 1;
 					if guy is not banned, now FireAndIce is unresolved;
 		if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
 			say "     Keeping you pinned down, the feline enjoys having some fun with you as the others from her group return. They come with buckets of water, tossing them onto the flaming bird until her fires go out and she's left ashen and shivering in the remains of the net. The panther taurs give some celebratory yells, kisses and gropes before, as a team, dragging off their captured prey in the damaged net. The soaked bird shivers, but does not struggle as it's taken away to meet its fate.";
@@ -60,7 +60,7 @@ instead of resolving FireAndIce:
 	say "     As you bundle the egg up in some scraps of clothes you find nearby, you ponder the strange event you witnessed. Reminded of the myth of the phoenix which bursts into flames as it dies to be reborn in an egg, you wonder if you've met someone whose infection is imitating the old legends or if this is something greater. Left uncertain, you pack away the egg with care while wondering where you could find a place hot enough to hatch a phoenix's egg.";
 	increase carried of phoenix egg by 1;
 	now FireAndIce is resolved;
-	now hp of Athanasia is 2;
+	now HP of Athanasia is 2;
 
 
 Section 2 - The Egg
@@ -87,51 +87,51 @@ instead of conversing the Nermine while phoenix egg is owned and shownermine of 
 
 Section 3 - The Volcanic Cave
 
-Volcanic Cave is a room. "     Partway down the volcanic crater, this cave is filled with heat from the lava further down[if hp of Athanasia >= 5]. The cave is just as hot as before, but with Athanasia here it seems more bearable and only a mild inconvenience[else]. You are hot and sweating, but managing to cope for the moment[end if]. It seems the passage this cave leads into goes much deeper, but the eruption has blocked it off. The cave contains a few open pools of magma, though the air is a little clearer of noxious gasses.".
+Volcanic Cave is a room. "     Partway down the volcanic crater, this cave is filled with heat from the lava further down[if HP of Athanasia >= 5]. The cave is just as hot as before, but with Athanasia here it seems more bearable and only a mild inconvenience[else]. You are hot and sweating, but managing to cope for the moment[end if]. It seems the passage this cave leads into goes much deeper, but the eruption has blocked it off. The cave contains a few open pools of magma, though the air is a little clearer of noxious gasses.".
 down of A Volcanic Crater is Volcanic Cave.
 
 the scent of Volcanic Cave is "The smell of smoke, soot and volcanic gasses is particularly strong here.".
 
 instead of going down from Volcanic Crater:
-	if hp of Athanasia < 2:
+	if HP of Athanasia < 2:
 		say "     You have no reason to go down there.";
-	else if hp of Athanasia is 2:
+	else if HP of Athanasia is 2:
 		say "     Looking down into the fiery pit, you are reluctant to go down there, but this is certainly the hottest place around for the phoenix's egg. Deciding to take a look, you begin to very carefully scale down into the crater. The great heat makes this a terrible struggle, but you manage to persevere, feeling a need to see it through for Athanasia. Reaching the tunnels down there, you enter the cave.";
 		move the player to Volcanic Cave;
 		if phoenix egg is owned:
 			say "     You look around the cave and its open magma pools, deciding this place certainly meets the requirements. Short of throwing it into the volcanic crater itself, this is probably the hottest spot you'll find. It should also be quite safe down here. There's no reason anything should venture into this infernal cave to disturb it. Unpacking it, you bring the egg to one of the magma pools and, hoping you're doing the right thing, lower the egg onto the semi-solid crust covering it. The soft layer dips and cracks a little, letting some of the lava flow up and pool around the egg. It seems unharmed by this and even seems to become more golden and lustrous. You sigh in relief and step away, reminding yourself to return to check on it later. You feel thirsty and drained after your climb and stay down here.";
 			delete phoenix egg;
 			now lastfuck of Athanasia is turns;
-			now hp of Athanasia is 3;
+			now HP of Athanasia is 3;
 			increase score by 25;
 			increase thirst of player by 12;
-			decrease hp of player by ( hp of player / 5 );
+			decrease HP of player by ( HP of player / 5 );
 		else:
 			say "     You look around the cave and its open magma pools, deciding this place certainly meets the requirements. Short of throwing it into the volcanic crater itself, this is probably the hottest spot you'll find. It should also be quite safe down here. There's no reason anything should venture into this infernal cave to disturb it. You'd best leave this place and collect the egg now that you've found a safe spot for it. You feel thirsty and drained after your climb and stay down here.";
 			increase thirst of player by 12;
-			decrease hp of player by ( hp of player / 5 );
-	else if hp of Athanasia is 3:
+			decrease HP of player by ( HP of player / 5 );
+	else if HP of Athanasia is 3:
 		move the player to Volcanic Cave;
 		say "     Checking on the egg, you find it much as you left it, if perhaps a little shinier. Hopefully that's a good sign.";
-	else if hp of Athanasia is 4:
+	else if HP of Athanasia is 4:
 		move the player to Volcanic Cave;
 		say "     Inside the cave, you find the broken remains of the phoenix egg blackened and crumbling scattered around the lava pool. Fearing the worst, you start calling out Athanasia's name while searching the alcoves and crevices of the cavern. You find nothing and are about to give up hope when there is a loud, triumphant shriek from outside the cave. Running to its mouth, you see a large, fiery plume of lava boil up before unfolding a pair of wide wings. The lava pours off the reborn phoenix like water and it comes swooping into the cave.";
 		project the figure of Athanasia_icon;
 		say "     Still aflame, the firebird wraps its wings around you, holding you to her fiery breast, but you are unharmed. You can feel the inferno of heat, but it does not harm you, only feeling warm and soothing as the red and gold bird nuzzles you. 'You did wonderfully,' the bird says cheerfully, spinning you around in its wings, giving an affectionate nip on the shoulder before setting you down.";
 		say "     The bird spreads its wings for you, showing off its reborn body. 'I was just having a refreshing bath when I heard you calling out for me. Isn't my new body lovely?' the phoenix asks, preening its rich red and gold plumage. 'And I have changed like I needed to. Now I'm reborn for this w... this place,' the firebird adds, turning around and raising her tail to show off a plump and wet cloacal pussy which you don't recall being there before. 'Mmmm... and it feels so good,' she adds with a coy glance at you and a shake of her tailfeathers.";
-		now hp of Athanasia is 5;
+		now HP of Athanasia is 5;
 	else:
 		move the player to Volcanic Cave;
 
 instead of going up from Volcanic Cave:
 	move the player to Volcanic Crater;
-	if hp of Athanasia < 4:
+	if HP of Athanasia < 4:
 		follow the turnpass rule;
 
 an everyturn rule:
-	if hp of Athanasia is 3 and lastfuck of Athanasia - turns >= 16 and player is not in the Volcanic Cave and the player is not in the Volcanic Crater:
+	if HP of Athanasia is 3 and lastfuck of Athanasia - turns >= 16 and player is not in the Volcanic Cave and the player is not in the Volcanic Crater:
 		say "     You recall the phoenix egg you left at the volcanic crater and remind yourself to go and check on it soon.";
-		now hp of Athanasia is 4;
+		now HP of Athanasia is 4;
 		move Athanasia to Volcanic Cave;
 
 
@@ -148,13 +148,13 @@ to say athanasiadesc:
 	say "     The phoenix reborn looks much as she did in her last incarnation, fully avian in form and as tall as a normal human being when upright. She has rich red and golden plumage over her hawk-like body. The edges of her wings and the end of tail ripple like the tongue of a flame, but do not harm you as you touch them. Her golden eyes shine with intelligence and warmth for you and while her sharp, raptor beak looks dangerous, it nuzzles tenderly against your side. Between her legs is a wet slit, something between a woman's pussy and a bird's cloacal vent.";
 
 Instead of conversing the Athanasia:
-	if hp of Athanasia < 5:
+	if HP of Athanasia < 5:
 		say "     ERROR-Athanasia-5T: You should not be able to speak to me at this point!";
-	else if hp of Athanasia is 5:
+	else if HP of Athanasia is 5:
 		say "     [one of]Athanasia smiles and nuzzles her golden beak against you. 'I want to thank you again for helping me. I don't know if I would have ever woken up without your help.'[or]The phoenix nips at your shoulder. 'I want to [']repay['] you for all you've done soon.'[or]The phoenix rubs her thighs together. 'Mmm... I never felt this way before. It's so nice.'[or]'I was here before, a long time ago. Things have certainly changed since then.'[or]'I can feel my strength returning slowly now.'[or]'This strange infection was draining my strength, but now that I've been reborn and let it change me, I feel better than ever,' she says with a soft moan as she runs a wingtip across her wet slit.[at random]";
-	else if hp of Athanasia <= 8:
+	else if HP of Athanasia <= 8:
 		say "     [one of]Athanasia smiles and nuzzles her golden beak against you. 'I want to thank you again for helping me. I don't know if I would have ever woken up without your help.'[or]The phoenix nips at your shoulder. 'I hope you'll let me [']repay['] you again soon for all you've done soon.'[or]The phoenix rubs her thighs together. 'Mmm... I can hardly wait to return home and share this gift with the others.'[or]'I was here before, a long time ago. Things have certainly changed since then.'[or]'I can feel my strength returning slowly now.'[or]'This strange infection was draining my strength, but now that I've been reborn and let it change me, I feel better than ever,' she says with a soft moan as she runs a wingtip across her wet slit.[or]'I've never done anything before in my existence like that. I want to do it again soon.'[or]'This [']sex['] thing is strange to me, but such a delight. I'm sure, with a little encouragement, the others will love it too,' she muses.[at random]";
-	else if hp of Athanasia is 10 and a random chance of 2 in 5 succeeds:
+	else if HP of Athanasia is 10 and a random chance of 2 in 5 succeeds:
 		say "[salamanderraid]";
 	else:
 		say "     [one of]Athanasia smiles and nuzzles her golden beak against you. 'I want to thank you again for helping me. I don't know if I would have ever woken up without your help.'[or]'At first I didn't understand what all this sex was for aside from fun, but once I laid my first egg, I knew it was something much more.'[or]'I can hardly wait to return with my new clutch so we can share this new gift with the others.'[or]'I was here before, a long time ago. It was much different back then, but now that I've adapted to it, this is much better,' she says with a smile and a brush of her wingtip across her pussy.[or]'I can feel my strength returning slowly now.'[or]'This strange infection was draining my strength, but now that I've been reborn and let it change me, I feel better than ever,' she says with a soft moan as she runs a wingtip across her wet slit.[or]'Having sex is such a wonderfully new delight for me. My many chicks and I will certainly have fun introducing the others to it.'[or]'There were so few of us left, but this gift you've given me will change all that.'[at random]";
@@ -166,35 +166,35 @@ the fuckscene of Athanasia is "[sexwithAthanasia]";
 
 to say sexwithAthanasia:
 	follow the cock descr rule;
-	if hp of Athanasia < 5:
+	if HP of Athanasia < 5:
 		say "     ERROR-Athanasia-5F: You should be able to proposition me at this point!";
 	else if lastfuck of Athanasia - turns < 8:
 		say "     'As wonderful as that would be, I want to savour the new pleasures my changed body brings, so let's not rush things too much,' the lovely bird says, nuzzling your side.";
-	else if hp of Athanasia > 10:
+	else if HP of Athanasia > 10:
 		athanasiasexmenu;
 	else:
 		now lastfuck of Athanasia is turns;
-		if hp of Athanasia is 5:
+		if HP of Athanasia is 5:
 			say "[athanasiasex00]"; [first time]
-		else if (cunts of player > 0 or cocks of player > 0) and ( ( hp of Athanasia is 8 or hp of Athanasia is 9 ) and a random chance of 1 in 2 succeeds ) or ( hp of Athanasia > 9 and a random chance of 1 in 4 succeeds ):	[volcano]
+		else if (cunts of player > 0 or cocks of player > 0) and ( ( HP of Athanasia is 8 or HP of Athanasia is 9 ) and a random chance of 1 in 2 succeeds ) or ( HP of Athanasia > 9 and a random chance of 1 in 4 succeeds ):	[volcano]
 			say "[athanasiasex06a]"; [volcano - lead-in]
-			if cocks of player > 0 and ( a random chance of 2 in 3 succeeds or hp of Athanasia is 8 ):
+			if cocks of player > 0 and ( a random chance of 2 in 3 succeeds or HP of Athanasia is 8 ):
 				say "[athanasiasex06b]"; [volcano - sex]
-			else if a random chance of 1 in 2 succeeds or hp of Athanasia is 8:
+			else if a random chance of 1 in 2 succeeds or HP of Athanasia is 8:
 				say "[athanasiasex06c]"; [volcano - basalt dildo]
 			else:
 				say "[athanasiasex06d]"; [volcano - 69]
-			if hp of Athanasia is 8:
+			if HP of Athanasia is 8:
 				say "     Once back in the cave, she cautions you not to try entering the volcano without her present to protect you. As with her shielding you here in the volcanic cave, it is her power which is allowing you to survive such heat unscathed.";
-			if hp of Athanasia < 10, increase hp of Athanasia by 1;
-		else if ( hp of Athanasia is 7 and a random chance of 1 in 2 succeeds ) or ( hp of Athanasia > 7 and a random chance of 1 in 4 succeeds ):		[basalt dildo]
+			if HP of Athanasia < 10, increase HP of Athanasia by 1;
+		else if ( HP of Athanasia is 7 and a random chance of 1 in 2 succeeds ) or ( HP of Athanasia > 7 and a random chance of 1 in 4 succeeds ):		[basalt dildo]
 			if cunts of player > 0:
 				say "[athanasiasex05a]"; [basalt dildo - female/herm]
 			else:
 				say "[athanasiasex05b]"; [basalt toy - male/neuter]
-			if hp of Athanasia is 7, now hp of Athanasia is 8;
+			if HP of Athanasia is 7, now HP of Athanasia is 8;
 		else if cocks of player > 0 and a random chance of 3 in 5 succeeds:	[wants cock]
-			if hp of Athanasia >= 7 and a random chance of 2 in 5 succeeds:
+			if HP of Athanasia >= 7 and a random chance of 2 in 5 succeeds:
 				say "[athanasiasex03]"; [fuck her - on her back]
 			else if a random chance of 1 in 2 succeeds:
 				say "[athanasiasex02]"; [fuck her]
@@ -204,7 +204,7 @@ to say sexwithAthanasia:
 			say "[athanasiasex04]"; [receive cunnilingus]
 		else:
 			say "[athanasiasex07]"; [give cunnilingus]
-		if hp of Athanasia < 7, increase hp of Athanasia by 1;
+		if HP of Athanasia < 7, increase HP of Athanasia by 1;
 		athanasiasexchange;
 
 to athanasiasexmenu:
@@ -348,14 +348,14 @@ to say athanasiasex04:		[receive cunnilingus]
 	say "     Opening her beak, Athanasia lets her broad, thick tongue slide across your wet folds. It is exquisitely warm, like a bonfire that doesn't burn and only further stokes the heat in your loins. Aside from the occasional nip at your side, she keeps her beak out of the way while her tongue works to pleasure you[if cunt width of player > 5]. She even manages to push some of it into you, fucking your loose cunny with that thick, wet organ[end if]. Her tongue keeps working you until you are finally sent over the edge in a crashing orgasm while her wings safely hold you in their fiery embrace[if cocks of player > 0]. Your cock throbs and pulses against her hard beak, spraying your thick seed across her face as it boils over from your overflowing balls[end if].";
 
 to say athanasiasex05a:		[basalt dildo - female/herm]
-	if hp of Athanasia is 7:
+	if HP of Athanasia is 7:
 		say "     Deciding to have some more fun with the firebird, you run your hands across her body, scritching her to get her excited. She nuzzles her large head against yours as you set aside your clothes and gear. 'Mmmm... I have a special treat for you. I made it myself and it's quite nice,' she chirps with a grin. Her footclaw reaches over and picks up a rather phallic black spire from behind a rock. It seems quite smooth and well-formed to fill a wanton hole attached to a larger section suitable for the bird's talons to grip. 'I think it will fit quite nicely,' she adds with a grin in her voice. You are a little reluctant to give the basalt dildo a try, but are too aroused to say no to the eager phoenix at this point.";
-	else if hp of Athanasia >= 8:
+	else if HP of Athanasia >= 8:
 		say "     Deciding to have some more fun with the firebird, you run your hands across her body, scritching her to get her excited. She nuzzles her large head against yours as you set aside your clothes and gear. 'Mmmm... I think we should break out my little toy again,' she says with a playful chirp. Her footclaw reaches over and picks up the basalt dildo. It is very smooth, shiny, and (as you know) well-formed to fill a wanton hole. There is a larger section suitable for the bird's talons to grip. Having already experienced the pleasure of the phoenix's personal toy, you have no reservations about enjoying it once more.";
 	say "     The fiery bird lays down on her back with her wings spread and you climb atop her hot, downy feathers and resume scritching her. You can feel her legs fumble around, eventually grabbing the rocky toy and lining it up to plunge into her pussy. After several thrusts that make her moan and chirp in delight, the stone spire is slid out of her hot hole and repositioned to push into you. You moan softly, feeling that heated column push its phallic head past your wet lips and slowly sink into your cunt, filling you deep inside with a warmth that excites you. You grip her feathers tightly and start pushing back into her thrusts. You share the toy with like the several minutes, each taking turns. Glancing back as she pops it from her cloacal pussy, you can see it's become red hot over the course of the session with you both and, when it plunges back into you, the heat of it brings no pain, only the joy of orgasm[if cocks of player > 0]. Your cock pulses against her soft feathers, spraying your hot seed across them[end if]. Athanasia pounds the rocky dildo into you until your climax passes, then drives it back into herself with the same results. Dropping the well-used toy, she sags back with a sigh of satisfaction, draping her wings across her lover's back.";
 
 to say athanasiasex05b:		[basalt dildo - male/neuter]
-	if hp of Athanasia is 7:
+	if HP of Athanasia is 7:
 		say "     Deciding to have some more fun with the firebird, you run your hands across her body, scritching her to get her excited. She nuzzles her large head against yours as you set aside your clothes and gear. 'Mmmm... I have a special treat for you. I made it myself and it's quite nice,' she chirps with a grin. Her footclaw reaches over and picks up a rather phallic black spire from behind a rock. It seems quite smooth and well-formed to fill a wanton hole attached to a larger section suitable for the bird's talons to grip. 'I thought you might like to give it a try,' she says with a grin in her voice. Realizing that she must have in mind, you are a little reluctant to give the basalt dildo a try, but are also quite aroused and part of you finds the phallic spire quite tempting at this point.";
 	else:
 		say "     Deciding to have some more fun with the firebird, you run your hands across her body, scritching her to get her excited. She nuzzles her large head against yours as you set aside your clothes and gear. 'Mmmm... I think we should break out my little toy again,' she says with a playful chirp. Her footclaw reaches over and picks up the basalt dildo. It is very smooth, shiny, and (as you know) well-formed to fill a wanton hole. There is a larger section suitable for the bird's talons to grip. Having already seen it in action, you are less reluctant to play with it again.";
@@ -366,15 +366,15 @@ to say athanasiasex05b:		[basalt dildo - male/neuter]
 	if the player consents:
 		say "     The fiery bird lays down on her back with her wings spread and you climb atop her hot, downy feathers and resume scritching her. You can feel her legs fumble around, eventually grabbing the rocky toy and lining it up to plunge into her pussy. After several thrusts that make her moan and chirp in delight, the stone spire is slid out of her hot hole and repositioned to push into you. You moan softly and try to relax as that hard, heated dildo probes at your back door. Coated in her juices, it eases its passage into you, slowly working to stuff your tight ass. The warmth of her fiery body flows into you, increasing the intensity of your lust. She takes her time fucking you with her toy while her fiery wings hold you close, letting their heat suffuse you[if cocks of player > 0] and flow into your groin[end if]. Eventually, the pounding of the basalt rod into your anus[if cocks of player > 0], grinding against your prostate, becomes too much and you cry out loudly in lustful release, cumming hard across your avian lover's crimson feathers. As you orgasm, she nuzzles and nips at your neck and shoulders, moaning and chirping happily[end if] as she climaxes hard in lustful release. Dropping the well-used toy, she sags back with a sigh of satisfaction, draping her wings across her lover's back.";
 	else:
-		say "     You take a moment to [if hp of Athanasia is 7]explain to her that hole isn't commonly used for sex (though you do have to add that it's certainly becoming more common these days)[else]remind her that hole isn't most people's first choice for sex (especially with something of that size)[end if], but add that you'd be happy to help her use it on herself. Pleased with that solution, she lays down on her back with her wings spread and you climb atop her hot, downy feathers facing her groin. You watch as her legs fumble around a little before eventually grabbing the rocky toy and lining it up to plunge into her pussy. As the basalt toy plunges into her stretched cunt again and again, you tease her wet folds and start licking at her clit, lapping up her delicious juices[if cocks of player > 0]. As you're doing this, she returns the favour by bringing her beak to your crotch to lick and suck your throbbing cock[end if].";
+		say "     You take a moment to [if HP of Athanasia is 7]explain to her that hole isn't commonly used for sex (though you do have to add that it's certainly becoming more common these days)[else]remind her that hole isn't most people's first choice for sex (especially with something of that size)[end if], but add that you'd be happy to help her use it on herself. Pleased with that solution, she lays down on her back with her wings spread and you climb atop her hot, downy feathers facing her groin. You watch as her legs fumble around a little before eventually grabbing the rocky toy and lining it up to plunge into her pussy. As the basalt toy plunges into her stretched cunt again and again, you tease her wet folds and start licking at her clit, lapping up her delicious juices[if cocks of player > 0]. As you're doing this, she returns the favour by bringing her beak to your crotch to lick and suck your throbbing cock[end if].";
 		say "     Enjoying the pleasure of watching the phoenix fuck herself with her homemade toy, you feel her juicy cunt grow hotter and hotter as her excitement builds. Eventually the stone phallus glows a warm red, heated surprisingly hot by the fiery bird's lustful energy. You lick the smooth, glowing stone, lapping the juices from it as she slides it back before another thrust. The heat from it, as always, does you no harm and only seems to fill you with more energy and excitement. In time, it all becomes too much for the lustful bird and she drives her toy hard into herself one last time, cumming intensely[if cocks of player > 0]. As she cums, you thrust your cock into her hot maw, unleashing the fiery load of semen you've built up for her. Dropping the well-used toy, she sags back with a sigh of satisfaction, draping her wings across her lover's back.";
 
 to say athanasiasex06a:		[lead-in]
-	if hp of Athanasia is 8:
+	if HP of Athanasia is 8:
 		say "     Seeking more pleasure from the phoenix, you snuggle up to her and start running your hands through her fiery feathers. She moans softly and nuzzles you. 'Mmm... do you trust me, my lover?' she asks, nipping gently at your shoulder. Feeling her warmth seeping into you, you nod. 'Good, for there's something I wish to show you,' she chirps happily and folds her wings around you, holding you tightly to her body. She carries you like this towards the mouth of the cave, but then leaps off the edge into the volcanic crater. You scream as you fall together towards the lava and dive into it.";
 		say "     Enveloped in the molten rock, you can feel its intense heat all around you. But it is only invigorating and does not incinerate you as you'd expect. Feeling the soft nuzzle of the phoenix's beak against your cheek, you open your eyes and see her with a happy and slightly playful look on her face. With a wing still around you, she flaps the other to swim through the lava, rolling over so you can see the bottom. A part of you realizes that you're not seeing through the lava, but still you're able to 'see' its bottom. Resting on the crater's floor are numerous large eggs, golden and glowing, soaking in the lava's incredible heat.";
 		say "     Athanasia surfaces, rolling onto her back so you can rest on her body outside of the lava. 'I wanted you to see them. You and a few other friends I've met have helped me, changed me and even given me eggs. It has been so very long since there was a new phoenix egg and now there are so many. And I have you to thank for them all.' She nuzzles and nips at you affectionately.";
-		now hp of Athanasia is 9;
+		now HP of Athanasia is 9;
 	else:
 		say "     As you snuggle up to the phoenix in search of more sex, she wraps her wings around you and nips you lightly. 'Mmm... I feel like another hot bath while we play, my friend,' she says, leading you to the crater's edge. Despite it being safe when you did it before, you can't help but be nervous as she dives back into the lava with you. The molten rock envelops you both, bathing you in its intense heat without harm. You catch another glimpse of her hidden clutch[if a random chance of 1 in 3 succeeds] with a few more eggs added to it[end if] before you both surface. She floats on her back with you lying atop her flaming plumage.";
 
@@ -419,8 +419,8 @@ to say athanasiasex08:		[dommy fuck]
 
 
 [*** - flight scene?
-	[else if cocks of player > 0 and hp of Athanasia >= 11 and bodyname of player is listed in infections of Avianpredlist and a random chance of 3 in 7 succeeds:	[***]
-		if hp of Athanasia is 11:
+	[else if cocks of player > 0 and HP of Athanasia >= 11 and bodyname of player is listed in infections of Avianpredlist and a random chance of 3 in 7 succeeds:	[***]
+		if HP of Athanasia is 11:
 			say "     I've been feeling stronger lately. I think I might have the strength for a short flight... a short [']mating['] flight,' she adds coyly, nuzzling her beak against your cheek. Giving your wings a rustle, you try to tell her that you've not quite gotten the hang of flying yes, but she won't hear it. 'In that case, I'll take care of the flying. It will not be a problem. Don't you trust me?' she trills teasingly. Given all the amazing things she's already shown herself capable of, what's one more?";]
 ]
 
@@ -428,7 +428,7 @@ to say athanasiasex08:		[dommy fuck]
 Section 6 - Salamander Raid
 
 to say salamanderraid:
-	say "     Your chat with Athanasia's cut short when the sounds of excited hissing come from outside the cave. The phoenix shrieks angrily and rushes out of the cave, wings flapping wildly. 'Thieves! Egg-stealers! Slinking lizards!' she cries as she takes wing. Following her, you find [if hp of Newt > 0]that the salamander girls are back for another frolicking egg raid in the lava pool[else]a group of salamander girls coming over the lip of the volcano and descending into the lava fearlessly[end if]. While some just splash around in it playfully like it's a pond, others start diving, possibly going for the eggs.";
+	say "     Your chat with Athanasia's cut short when the sounds of excited hissing come from outside the cave. The phoenix shrieks angrily and rushes out of the cave, wings flapping wildly. 'Thieves! Egg-stealers! Slinking lizards!' she cries as she takes wing. Following her, you find [if HP of Newt > 0]that the salamander girls are back for another frolicking egg raid in the lava pool[else]a group of salamander girls coming over the lip of the volcano and descending into the lava fearlessly[end if]. While some just splash around in it playfully like it's a pond, others start diving, possibly going for the eggs.";
 	say "     Seeing Athanasia dive into the molten magma to defend her clutch, you start scaling the rocky cliff. While leery of entering the intense heat of the lava on your own, you do feel comfortable enough to try driving off the others from its edge. Intercepting one intent on diving into the volcano, you prepare yourself for a fight.";
 	now inasituation is true;
 	challenge "Salamander";
@@ -452,15 +452,15 @@ to say salamanderraid:
 					say "     'And what's your name, little lizard?' she asks.";
 					say "     'Not lizard. Amphibian. Salamander,' she moans in response. 'The others call me Newt,' she adds. 'Where are they?' she asks, looking around, trying to take in her surroundings.";
 					say "     'They left you, little one, even though you fought so bravely. But I'll take care you,' the phoenix coos, pumping the dildo faster. The salamander girl can only moan in response, panting and hissing louder as her pleasure builds, distracting her from all else. Eventually she ends up crying out in climax, her musky juices running down her thighs and the toy. They hiss and steam as they land on the hot rocks. When the throes of her orgasm pass, she passes out again, this time with a blissful expression on her pretty face.";
-					now hp of Newt is 4;
+					now HP of Newt is 4;
 					move Newt to Volcanic Cave;
 				else:
 					say "     Rather than risk adding more difficulty to your situation, you drag the unconscious salamander up to the edge of the crater and push out. Hopefully one of the other salamanders will come looking for her. After the beating they'd received, hopefully they've learned their lesson and won't be back to trouble the phoenix's nest.";
-					now hp of Newt is 3;
+					now HP of Newt is 3;
 					say "     Once back in the cave, Athanasia nuzzles up to you. 'You were very brave, facing them to protect my nest. I should thank you for your help,' she adds, nipping you affectionately with her beak. 'Come, let us celebrate our victory.'";
 					now lastfuck of Athanasia is 255;
 					say "[sexwithAthanasia]";
-				now hp of Athanasia is 11;
+				now HP of Athanasia is 11;
 	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     Beaten and abused by the victorious salamanders, you're dragged off by them as another prize as they escape the furious phoenix. In her desire to protect her nest, she must not notice you gone until it's far too late. You end up dragged back to the ruins where this group is nesting. There, you're fucked and molested until there's nothing left of you but another horny salamander.";
 		now humanity of player is 0;
@@ -481,7 +481,7 @@ to say salamanderraid:
 			follow the sex change rule;
 			follow the sex change rule;
 		if libido of player < 45, now libido of player is 45;
-		now hp of Newt is 2;
+		now HP of Newt is 2;
 		WaitLineBreak;
 		end the story saying "You are fucked and infected until you're nothing more than another salamander girl.";
 		now battleground is "void";
@@ -492,7 +492,7 @@ to say salamanderraid:
 	else if fightoutcome >= 30:
 		say "     Forced to withdraw, you are driven back into the volcanic cave. From there, you watch as the salamanders are eventually driven off by the phoenix, though you can see several of them carrying off eggs as they make their escape. Athanasia shrieks angrily and pursues the fleeing amphibians, only to return much later, tired and saddened by her loss. You clutch the phoenix tenderly and try to console her. She eventually returns to her old self, but it takes time.";
 		now lastfuck of Athanasia is turns - 4;
-		now hp of Newt is 1;
+		now HP of Newt is 1;
 	now inasituation is false;
 
 
@@ -521,15 +521,15 @@ to athanasiasexchange:
 Section 8 - Endings
 
 when play ends:
-	if hp of Athanasia >= 5:
+	if HP of Athanasia >= 5:
 		if humanity of player < 10:
 			say "     Not long after your mind falls and you are lost to the infection, there is a fiery column which rises into the air. There is a triumphant ring to it, though also a hint of sadness. You do not notice this event, too caught up in your new, lustful existence.";
 		else:
-			say "     As you are being taken out of the city by the military forces, everything stops for a moment as a fiery column erupts in the distance, shooting off into the sky. You watch as the pillar of flame continues to ascend with a triumphant cry filled with ecstasy and joy. You watch as the column briefly unfolds a broad pair of fiery wings before curling them back in and the blaze seems to implode upon itself. The soldiers are in chaos at this sight, yelling over their radios to report in and demand orders while you watch with a smile, knowing that Athanasia the Phoenix [if hp of Athanasia >= 9]and her many eggs are on their way home[else]is on her way home[end if], off to share her precious gift with the rest of her people, probably changing them forever.";
+			say "     As you are being taken out of the city by the military forces, everything stops for a moment as a fiery column erupts in the distance, shooting off into the sky. You watch as the pillar of flame continues to ascend with a triumphant cry filled with ecstasy and joy. You watch as the column briefly unfolds a broad pair of fiery wings before curling them back in and the blaze seems to implode upon itself. The soldiers are in chaos at this sight, yelling over their radios to report in and demand orders while you watch with a smile, knowing that Athanasia the Phoenix [if HP of Athanasia >= 9]and her many eggs are on their way home[else]is on her way home[end if], off to share her precious gift with the rest of her people, probably changing them forever.";
 
 
 
-[	hp of Athanasia			]
+[	HP of Athanasia			]
 [ 0 = quest not started/failed	]
 [ 1 = freed Athanasia			]
 [ 2 = got egg				]

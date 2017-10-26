@@ -210,13 +210,13 @@ to say Thought_Eater_Desc:
 	else:
 		if carried of mindshield helmet > 0 and mindshield helmet is not equipped:
 			say "     Uhoh - it might have been a good idea to put your shiny mindshield helmet actually on your head. Well, too late now...";
-		decrease hp of player by ((hp of player * 75) / 100);
+		decrease HP of player by ((HP of player * 75) / 100);
 		say "     Stars dance in front of your eyes and you feel as if the thought eater's tentacles were winding themselves into your head, prodding and poking your mind. When your vision clears a bit, you see the tall creature standing right in front of you, clawed hands outstretched to finish you off.";
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -243,8 +243,8 @@ When Play begins:
 	now int entry is 28;
 	now cha entry is 16;
 	now sex entry is "Male";              [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 75;                   [ How many HP has the monster got? ]
-	now lev entry is 12;                  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 75;                   [ How many HP has the monster got? ]
+	now lev entry is 12;                  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 7;                  [ Amount of Damage monster Does when attacking.]
 	now area entry is "Nowhere";          [ Case sensitive]
 	now cocks entry is 1;                 [ number of cocks if sex is 'Male' or 'Both' ]
@@ -291,7 +291,7 @@ to TEInfect:
 
 when play ends:
 	if bodyname of player is "Thought Eater":
-		if humanity of player is less than 10:   [succumbed]
+		if humanity of player < 10:   [succumbed]
 			say "     Your worldview shifting further and further from anything close to human, you eventually succumb to your urges to own and control others. Your first victim is a husky you meet out on the street, easily overpowering her mind and making her yours. From then on, it's pretty easy to gather more slaves, using her as a puppet to parade in front of others and draw them closer.";
 			say "     As your power and number of followers grows more and more, you prepare for the impending arrival of the military by moving your lair to a mostly empty industrial area, keeping your slaves out of sight in a large warehouse. When one, then a day later another, army scout finally comes along, you manage to dominate them quickly enough so neither of them can give word of anything, then send them on their way. With the men reporting the area to be empty, the military's sweep just passes over you and your slaves, leaving you undiscovered.";
 			if cocks of player > 0:

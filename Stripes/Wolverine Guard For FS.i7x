@@ -78,12 +78,12 @@ to say losetowolverine:
 				say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you off from the Medieval History wing of the museum.";
 		else:
 			say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you off from the Medieval History wing of the museum.";
-			if hp of player > 0, now hp of player is hp of player / 2;
+			if HP of player > 0, now HP of player is HP of player / 2;
 	else if libfight is 1:				[Central Library]
 		say "     The obsessed wolverine knocks you firmly to the ground, leaving you unable to keep fighting.";
 	else if wrknifefight is true:		[Getting the Knife - Wereraptor]
 		say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you away from the warehouse he's so vigilantly guarding.";
-		if hp of player > 0, now hp of player is hp of player / 2;
+		if HP of player > 0, now HP of player is HP of player / 2;
 	else:								[Normal encounter]
 		if cunts of player > 0:
 			if a random chance of 3 in 5 succeeds:
@@ -136,7 +136,7 @@ to say beatthewolverine:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -163,8 +163,8 @@ When Play begins:
    now int entry is 8;
    now cha entry is 10;
    now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 111;
-   now lev entry is 8; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now HP entry is 111;
+   now lev entry is 8; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
    now wdam entry is 15; [Amount of Damage monster Does when attacking.]
    now area entry is "High"; [ Location of monster, in this case the High Rise District]
    now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -191,7 +191,7 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Wolverine Guard":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if jamessex is 3 and cunts of player > 0:
 				say "     You find your growing urge to protect and defend your post increasing. Joining James at the Central Library, you become his mate and share the duty with him. He accepts him place now, no longer fighting his powerful body. Most of the time, you both guard it together, though occasionally alone so the other can get a brief nap. As with that first time, you rut often on the library steps. The lustful growls of your animalistic sex carry far, warning any would be interlopers away. You eventually bear him some kits, who grow big and strong like their parents and take up the duty to protect the library as well. You live peaceably with the librarians inside, guarding their home and leaving them undisturbed. There is some commotion when the soldiers come through the city, but you, your mate and your offspring are able to drive them off, protecting your post.";
 			else:
@@ -207,7 +207,7 @@ when play ends:
 				else:
 					say "another female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, its another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with James eager to spend time with either of you when off duty. ";
 				say "     Your wild romps get rather loud and vicious sounding at times, so eventually the guardhouse you all share as home gets soundproofed.";
-			else if hp of doctor matt <= 100:
+			else if HP of doctor matt <= 100:
 				say "     You hold out until the rescue comes and you are taken in by the military. You wait impatiently for your release, always on edge and feeling that there's something you should be doing. You are eventually moved into the care of Dr. Matt, who has you alternate with Orthas as his personal guard at the research station the military sets him up at to combat the spreading infection. While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
 			else:
 				say "     You hold out until the rescue comes and you are taken in by the military. With your false identity never questioned, you wait impatiently for your release, always on edge and feeling that there's something you should be doing. One day, you are released and are quickly picked up by a large van. You are quietly taken to where Dr Mouse is hiding, apparently having funneled some bribes through a third party to gain custody of you. He takes you on as his private security guard, watching over him as he conducts his secret research. He works for a variety of foreign countries and infected factions[if susan is in hidden lab]. Susan continues to accompany him as an assistant and a lover for you when off duty[end if]. While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";

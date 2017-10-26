@@ -21,7 +21,7 @@ Version 1 of Sonny by Rikaeus begins here.
 [   3: has acquried the ingredients for manicotti          ]
 [   4: has cooked manicotti for Sonny, quest end           ]
 
-[ hp of Sonny                                              ]
+[ HP of Sonny                                              ]
 [   0: NPC not placed                                      ]
 [   1: NPC in the mall lockerroom                          ]
 [   2: NPC in the bunker                                   ]
@@ -35,14 +35,14 @@ SonnyFood is a number that varies.
 
 Section 1 - Basic Setup
 
-Sonny is a man. The hp of Sonny is usually 0.
+Sonny is a man. The HP of Sonny is usually 0.
 The description of Sonny is "[SonnyDesc]".
 The conversation of Sonny is { "<This is nothing but a placeholder!>" }.
 The scent of Sonny is "     Sonny smells like berries with an underhint of musk. You feel as if it's probably from the conditioner he uses for his wool.".
 
 to say SonnyDesc:
 	if debugactive is 1:
-		say "DEBUG -> SonnyRelationship: [SonnyRelationship], HP: [hp of Sonny] <- DEBUG[line break]";
+		say "DEBUG -> SonnyRelationship: [SonnyRelationship], HP: [HP of Sonny] <- DEBUG[line break]";
 	if graphics is true:
 		project the figure of Sonny_shaved_jeans_icon;
 	say "     Sonny is a rather adorable looking sheep boy. He doesn't have the full looks of a ram, as clearly evidenced by the tiny little nub-horns on his forehead. What he does have is fluffy looking white wool, blue eyes, and what appears to be a disposition to being shirtless. Because of his lack of a shirt, you can see that Sonny does excercise, as he has well defined muscles, but not so much that he looks like a bodybuilder. His pants are a rather simple pair of denim jeans that are worn in some places and his shoes are a worn pair of sneakers. All in all, you pretty much think he looks like a twink, though he sure doesn't act like it.";
@@ -79,13 +79,13 @@ to say SonnyTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Talk to him about what the city and your situation";
 	[]
-	if hp of Sonny is 1: [Sonny is in the mall lockerroom]
+	if HP of Sonny is 1: [Sonny is in the mall lockerroom]
 		choose a blank row in table of fucking options;
 		now title entry is "Take him to the library";
 		now sortorder entry is 3;
 		now description entry is "Take Sonny to stay with you in the Grey Abbey Library";
 	[]
-	if hp of Sonny is 2: [Sonny is in the half renovated room of the library]
+	if HP of Sonny is 2: [Sonny is in the half renovated room of the library]
 		choose a blank row in table of fucking options;
 		now title entry is "Take him to the mall";
 		now sortorder entry is 4;
@@ -144,12 +144,12 @@ to say SonnyTalk3: [send him to the library]
 	say "     'Move in with you?' the sheep-morph asks rather confused. You nod your head, telling him that it'd far easier if he lived within the same place that you did. 'But wouldn't I be taking up too much space?' Sonny asks shyly. This time a shake of the head is given, telling the sheep boy that the library has more than enough room for him and a few dozen others. Instantly after that is said, he perks up and nods eagerly. 'That'd be great then! I accept!' he shouts in joy. You chuckle at his enthusiasm as you wait for him to finish packing up to lead the guy to the library.";
 	move Sonny to Half-Renovated Room;
 	move player to Half-Renovated Room;
-	now hp of Sonny is 2;
+	now HP of Sonny is 2;
 
 to say SonnyTalk4: [send him to the mall]
 	say "     'A-alright. I don't mind moving back to the mall.' He stutters out, looking rather sad. He works on packing up his area, getting all his stuff into one box. When he's done and carrying the box the sheep boy is standing in front of you. 'I'm... packed and ready to go,' he says still rather depressed about the entire situation. You then lead him back to the mall, thankfully nothing bad happening on the way there. When Sonny's settled back in his usual place, he turns to you to speak. 'P-please don't forget to visit me, okay?' the guy asks you. You assure him that you'll try to visit him from time to time before you head back to the bunker.";
 	move Sonny to Mall Lockerroom;
-	now hp of Sonny is 1;
+	now HP of Sonny is 1;
 
 to say SonnyTalk5: [ask him about home]
 	say "'O-oh, you remember that from our conversation?' He asks, shocked that you remembered. You smile at him, of course you'd remember, you do care for him. That sends the sheep into a bluster of stutters and fidgeting. You're quite sure that if he could, he'd be blushing as red as can be right now. Thankfully though it doesn't take long for the shy ovine to stop acting embarrassed. When he does, the wistful look is back on his face. 'Well... back at home, my mother would always make this amazing manicotti that we'd eat together..' Sonny says. It doesn't sound like a father was in the picture, you say as much and regret it when you do. The sheep has a sad look now as he tells you that his father died when he was young. 'B-b-but that's fine! My mom was all I needed.' He tells you. Nodding at his information, you head off. Maybe you could find a place where someone could teach you how to make manicotti?";
@@ -286,7 +286,7 @@ to say SonnySex6: [Sonny fucks player ass]
 
 Section 4 - Events
 
-instead of going to Bunker while hp of Sonny is 2 and (SonnyRelationship is 5): [walk-in event for special occasions]
+instead of going to Bunker while HP of Sonny is 2 and (SonnyRelationship is 5): [walk-in event for special occasions]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: Sonny Bunker Event. SonnyRelationship: [SonnyRelationship][line break]";
@@ -297,25 +297,25 @@ instead of going to Bunker while hp of Sonny is 2 and (SonnyRelationship is 5): 
 Section 5 - Endings
 
 when play ends:
-	if (hp of Sonny > 0):  [player met him and got as far as seeing him as an npc]
+	if (HP of Sonny > 0):  [player met him and got as far as seeing him as an npc]
 		if humanity of player < 10: [player went feral]
-			if hp of Sonny is 1: [Sonny is at the mall when the game ends]
+			if HP of Sonny is 1: [Sonny is at the mall when the game ends]
 				if SonnyRelationship < XXX: [non romance ending]
 					say "     ...";
 				else if SonnyRelationship > XXX: [romance ending]
 					say "     ...";
-			else if hp of Sonny is 2: [Sonny is at the bunker when the game ends]
+			else if HP of Sonny is 2: [Sonny is at the bunker when the game ends]
 				if SonnyRelationship < XXX: [non romance ending]
 					say "     ...";
 				else if SonnyRelationship > XXX: [romance ending]
 					say "     ...";
 		else:
-			if hp of Sonny is 1: [Sonny is at the mall when the game ends]
+			if HP of Sonny is 1: [Sonny is at the mall when the game ends]
 				if SonnyRelationship < XXX: [non romance ending]
 					say "     ...";
 				else if SonnyRelationship > XXX: [romance ending]
 					say "     ...";
-			else if hp of Sonny is 2: [Sonny is at the bunker when the game ends]
+			else if HP of Sonny is 2: [Sonny is at the bunker when the game ends]
 				if SonnyRelationship < XXX: [non romance ending]
 					say "     ...";
 				else if SonnyRelationship > XXX: [romance ending]

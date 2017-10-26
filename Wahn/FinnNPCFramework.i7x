@@ -11,14 +11,14 @@ Version 1 of Finn by Wahn begins here.
 [  99: Finn's dead                                       ]
 [ 100: Finn joined the stables                           ]
 
-Finn is a man. The hp of Finn is usually 0.
+Finn is a man. The HP of Finn is usually 0.
 The description of Finn is "[FinnDesc]".
 The conversation of Finn is { "<This is nothing but a placeholder!>" }.
 The scent of Finn is "     Finn smells nicely masculine, with a little bit of fur, straw and sweat in the mix. Seems like he's not adverse to doing some good and solid work for his boss at the farm.".
 
 to say FinnDesc:
 	if debugactive is 1:
-		say "DEBUG -> FINNTRACKINGPROGRESS: [FinnTrackingProgress], HP: [hp of Finn] <- DEBUG[line break]";
+		say "DEBUG -> FINNTRACKINGPROGRESS: [FinnTrackingProgress], HP: [HP of Finn] <- DEBUG[line break]";
 	say "     <This is the basic description of Finn. Body, Clothing, etc. can be laid out here>";
 	if FinnTrackingProgress is 3: [Finn rescued, no sex]
 		say "     The horseman notices your gaze on himself and looks up from what he was doing, then <Reaction of Finn at being approached by the guy that rescued him.>";

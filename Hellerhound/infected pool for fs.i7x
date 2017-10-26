@@ -36,7 +36,7 @@ to say stop wyvern:
 			now thirst of player is 0;
 		else:
 			say "You watch as the wyvern screams just like it did before.";
-			if the Perception of the player is greater than 12:
+			if the Perception of the player > 12:
 				decrease perception of the player by 4;
 				say "The blast damages your eardrums. (perception -4)";
 			say "Then the wyvern blows its load into the pool, clouding the water and dissipating the clean smell about the area.";
@@ -72,7 +72,7 @@ instead of resolving a pure pool:
 				say "[stop wyvern]";
 	else if purpol is 4:
 		say "You find the infected pool";
-		if purpolu is greater than 0:
+		if purpolu > 0:
 			say " that you infected before.";
 		else:
 			say " that you watched the wyvern infect.";
