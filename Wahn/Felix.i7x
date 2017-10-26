@@ -23,7 +23,7 @@ Version 1 of Felix by Wahn begins here.
 
 Section 1 - Walk-in Event to put him into the dry plains room
 
-instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 and libido of Thomas > 9 and libido of Thomas < 20 and (FelixSaved - turns > 8) and hp of Felix is 0):
+instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 and libido of Thomas > 9 and libido of Thomas < 20 and (FelixSaved - turns > 8) and HP of Felix is 0):
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
 	say "     As you come out into the dry plains, you see a centaur at your usual meeting spot with Thomas - though it isn't him, but Felix, the young centaur colt you helped save. He smiles and waves as he notices you, then trots closer. 'Hello there, nice to see you again. [if libido of Thomas is 10]Thomas is[else if libido of Thomas is 11]Thomas and Sandy are[else if libido of Thomas is 12]Thomas and the others are[end if] out gathering supplies and I offered to wait here in case you came along. I - I wanted to speak with you privately anyways.' He hesitates a moment, biting his lip before continuing. 'You see - I think there's... something stalking me, hiding out in the high grass. I feel like - whatever it is - watches me from time to time. But then, it might just be paranoia and I don't want to alarm everyone for nothing. Could you maybe help me out with this? There might be tracks or something...'";
@@ -36,7 +36,7 @@ instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Perception-Check)[line break]";
 		LineBreak;
 		increase diceroll by bonus;
-		if diceroll is greater than 10:
+		if diceroll > 10:
 			say "     Searching around for a while, you find a relatively fresh trail showing footprints of some creature. The marks on the ground look like they were made by something quadrupedal, its hands and feet a bit larger than a human's and armed with claws. Following the trail, you come to a flattened area of grass - looks like the creature lay down here to observe Felix unnoticed from behind the screen of grass. You'd say it's at least as large as a horse, from the size of the flattened imprint...";
 			LineBreak;
 			say "     Coming back to Felix, you tell him what you found. He's both relieved at not imagining things, as well as a bit frightened as you recount the clawed footmarks and the size of his stalker. 'Hm, it might be gone now... but I bet it'll be back. I'll be extra vigilant from now on and keep an eye out. Maybe you could... do something about it? I will tell you when I think it is close.' ";
@@ -47,11 +47,11 @@ instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 
 	else:
 		say "     Not in the mood to go trekking through the high grass for probably nothing, you do your best to calm Felix down. Your conversation soon turns to other topics and you chat until Thomas returns some time later.";
 		now Libido of Felix is 1;
-	now hp of Felix is 1;
+	now HP of Felix is 1;
 	move Felix to Dry Plains;
 	move player to Dry Plains;
 
-instead of navigating Dry Plains while (hp of Felix is 1 and libido of Felix is 3 and a random chance of 1 in 2 succeeds):
+instead of navigating Dry Plains while (HP of Felix is 1 and libido of Felix is 3 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
 	move player to Dry Plains;
@@ -70,7 +70,7 @@ to say Stalker1:
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Dexterity-Check)[line break]";
 			LineBreak;
 			increase diceroll by bonus;
-			if diceroll is greater than 10:
+			if diceroll > 10:
 				say "     Carefully selecting your hand and footholds, you make your way up on the large mound of rubble. With the higher position, you can clearly see the centaurs in the distance, as well as a creature lurking in the grass, crouched low to keep itself hidden and watching your friends. Looks like a large lizard, about as big as a horse. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass. Continuing on your climb, you move down the other side of the rubble until you're standing close behind the creature.";
 				say "     [AndreMeeting]";
 			else:
@@ -89,7 +89,7 @@ to say Stalker1:
 		say "     Not in the mood to go trekking through the high grass, you do your best to calm Felix down and tell him you'll look into it another time. He looks a rather disappointed, but gives you a curt nod and says he understands.";
 	move player to Dry Plains;
 
-instead of navigating Dry Plains while (hp of Felix is 1 and libido of Felix is 4 and a random chance of 1 in 2 succeeds):
+instead of navigating Dry Plains while (HP of Felix is 1 and libido of Felix is 4 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
 	move player to Dry Plains;
@@ -107,7 +107,7 @@ to say Stalker2:
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Dexterity-Check)[line break]";
 			LineBreak;
 			increase diceroll by bonus;
-			if diceroll is greater than 10:
+			if diceroll > 10:
 				say "     Carefully selecting your hand and footholds, you make your way up on the large mound of rubble. With the higher position, you can clearly see the centaurs in the distance, as well as a creature lurking in the grass, crouched low to keep itself hidden and watching your friends. Looks like a large lizard, about as big as a horse. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass. Continuing on your climb, you move down the other side of the rubble until you're standing close behind the creature.";
 				say "     [AndreMeeting]";
 			else:
@@ -155,7 +155,7 @@ to say AndreMeeting:
 
 Section 2 - Felix, the centaur
 
-Felix is a man. The hp of Felix is normally 0.
+Felix is a man. The HP of Felix is normally 0.
 The description of Felix is "[FelixDesc]".
 The conversation of Felix is { "Mew!" }.
 lastFelixTalk is a number that varies. lastFelixTalk is usually 555. [turn-counter for talking delays (humanity restoration)]
@@ -166,21 +166,21 @@ instead of sniffing Felix:
 
 to say FelixDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Felix], LIBIDO: [libido of Felix] <- DEBUG[line break]";
-	if (hp of Felix is 0): [starting state]
+		say "DEBUG -> HP: [HP of Felix], LIBIDO: [libido of Felix] <- DEBUG[line break]";
+	if (HP of Felix is 0): [starting state]
 		say "ERROR-Felix-001A: He should not be around yet anywhere where players can see him.";
-	else if (hp of Felix is 100):
+	else if (HP of Felix is 100):
 		say "ERROR-Felix-100A: He should be removed from the game.";
-	else if hp of Felix is 1:
+	else if HP of Felix is 1:
 		say "     Felix is a handsome young centaur, his human upper body looking like he's about twenty years of age, the lower equine half is lithe and slender as if made for winning races. Below his belly button, where the horse body starts, he's got a beautiful light brown coat shining in the [if daytimer is day]sunlight[else]moonlight[end if], while his tail and shoulder-length hair is more reddish in hue. Unobtrusively letting your eyes wander to his hind legs, you see the young stallion's large pair of balls and equine sheath. Looking up to Felix face again before he notices you checking him out, he catches you with one of his glowing smiles.";
-	else if hp of Felix is 2:
+	else if HP of Felix is 2:
 		say "     Felix is a handsome young centaur, his human upper body looking like he's about twenty years of age, the lower equine half is lithe and slender as if made for winning races. Below his belly button, where the horse body starts, he's got a beautiful light brown coat shining in the [if daytimer is day]sunlight[else]moonlight[end if], while his tail and shoulder-length hair is more reddish in hue. Unobtrusively letting your eyes wander to his hind legs, you see the young stallion's large pair of balls and equine sheath.";
 		say "     Looking up to Felix face again before he notices you checking him out, you realize that you needn't have worried. He's busy exchanging longing looks with his new boyfriend Andre, almost everything around them forgotten.";
 
 instead of conversing the Felix:
-	if (hp of Felix is 0): [not yet met]
+	if (HP of Felix is 0): [not yet met]
 		say "ERROR-Felix-001B: He should not be around yet anywhere where players can see him.";
-	else if (hp of Felix is 100): [removed from game]
+	else if (HP of Felix is 100): [removed from game]
 		say "ERROR-Felix-100A: He should be removed from the game.";
 	else:
 		say "     Felix smiles as you come closer and says 'Hello, what's up?'";
@@ -272,7 +272,7 @@ to say FelixTalk2:
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Perception-Check)[line break]";
 	LineBreak;
 	increase diceroll by bonus;
-	if diceroll is greater than 10:
+	if diceroll > 10:
 		say "     Searching around for a while, you find a relatively fresh trail showing footprints of some creature. The marks on the ground look like they were made by something quadrupedal, its hands and feet a bit larger than a human's and armed with claws. Following the trail, you come to a flattened area of grass - looks like the creature lay down here to observe Felix unnoticed from behind the screen of grass. You'd say it's at least as large as a horse, from the size of the flattened imprint...";
 		LineBreak;
 		say "     Coming back to Felix, you tell him what you found. He's both relieved at not imagining things, as well as a bit frightened as you recount the clawed footmarks and the size of his stalker. 'Hm, it might be gone now... but I bet it'll be back. I'll be extra vigilant from now on and keep an eye out. Maybe you could... do something about it? I will tell you when I think it is close.' ";
@@ -300,7 +300,7 @@ to say FelixTalk4:
 	LineBreak;
 	say "     Watching the making out that follows and seeing the two of them walk a bit away to talk and laugh with each other, it looks like you helped two people destined for each other to find together. It's a very comforting thought that love on first sight and affectionate feelings aren't quite dead in this sex-crazed new world. And who cares if it's between a rather unusual centaur-lizard gay couple - they're obviously quite happy together...";
 	now Libido of Felix is 6;
-	now hp of Felix is 2;
+	now HP of Felix is 2;
 	move Andre to Dry Plains;
 
 
@@ -308,11 +308,11 @@ to say FelixTalk5:
 	say "     You walk up to Felix and tell him 'You can stop worrying now - turns out it was some sort of lizard dude stalking you, but I took care of things. He won't be bothering you anymore. Oh, and he had this...' With that, you pull out the leather pouch and hand it to Felix. He looks surprised to see it, saying 'Hey, I lost this - I thought I'd never see it again. Guess my stalker picked it up, hm?' He gives you a hug, then continues 'Thank you so much for bringing it back.' Opening up the bag, he looks through its contents - a book, a small plastic dragon, pens and various knickknacks come to light. 'This is everything I ever owned - my favorite toys and possessions from all the weeks of my childhood. One of my father's mares gave it to me when he threw me out.'";
 	LineBreak;
 	say "     Leaving the young centaur to reminisce about his short time as a kid (from a human perspective), you turn your thoughts back towards everyday survival.";
-	now hp of Felix is 99;
+	now HP of Felix is 99;
 	now Libido of Felix is 100;
 
 to say FelixTalk6:
-	if hp of Thomas is 100: [lost in the fight with Jill's followers]
+	if HP of Thomas is 100: [lost in the fight with Jill's followers]
 		if libido of Thomas is 10:
 			say "     Felix looks rather grim as he says 'Which herd? Thomas is gone - something terrible must have happened to him when he went to help that centaur mare Jill. I wish he had allowed me to come with him and help, maybe that'd have changed something.'";
 		else if libido of Thomas is 11:
@@ -341,9 +341,9 @@ Instead of fucking the Felix:
 		if name entry is "Centaur Stallion":
 			now monster is y;
 			break;
-	if (hp of Felix is 0): [not yet met]
+	if (HP of Felix is 0): [not yet met]
 		say "ERROR-Felix-001C: He should not be around yet anywhere where players can see him.";
-	else if (hp of Felix is 100): [avoiding the player]
+	else if (HP of Felix is 100): [avoiding the player]
 		say "ERROR-Felix-100B: He should be removed from the game.";
 	else:
 		if(lastfuck of Felix - turns < 6):
@@ -457,7 +457,7 @@ to say FelixSex6: [Felix fucks Andre]
 
 Section 4 - Andre, the lizard
 
-Andre is a man. The hp of Andre is normally 0.
+Andre is a man. The HP of Andre is normally 0.
 The description of Andre is "[AndreDesc]".
 The conversation of Andre is { "Mew!" }.
 lastAndreTalk is a number that varies. lastAndreTalk is usually 555.	     [turn-counter for talking delays (humanity restoration)]
@@ -467,18 +467,18 @@ instead of sniffing Andre:
 	say "Andre has a pleasant animalistic smell. It's definitely male, with a kind of spicy undertone.";
 
 to say AndreDesc:
-	if (hp of Felix < 2): [starting state]
+	if (HP of Felix < 2): [starting state]
 		say "ERROR-Andre-001A: He should not be around yet anywhere where players can see him.";
-	else if (hp of Felix is 100):
+	else if (HP of Felix is 100):
 		say "ERROR-Andre-100A: He should be removed from the game (together with Felix).";
-	else if hp of Felix is 2:
+	else if HP of Felix is 2:
 		say "     Andre is an about horse-sized lizard, strong and agile. He is quadrupedal and has a long and flexible tail and neck, with the latter ending in an elongated reptilian head with sharp teeth. On top of his head is a spined crest, giving him a dashing appearance. With his sand-colored scales glinting in the [if daytimer is day]sunlight[else]moonlight[end if], it looks like he was made to prowl these dry plains. You wonder if the nanites would adjust his coloring to a greener environment or other areas. Unobtrusively letting your eyes wander to his hind legs, you catch a glimpse of a small slit between his legs. He doesn't have any external balls or anything, but you remember that there's a quite impressive cock hidden inside that sheath.";
 		say "     Looking up to Andre face again before he notices you checking him out, you realize that you needn't have worried. He's busy exchanging longing looks with his new boyfriend Felix, almost everything around them forgotten.";
 
 instead of conversing the Andre:
-	if (hp of Felix is 0): [not yet met]
+	if (HP of Felix is 0): [not yet met]
 		say "ERROR-Andre-001B: He should not be around yet anywhere where players can see him.";
-	else if (hp of Felix is 100): [removed from game]
+	else if (HP of Felix is 100): [removed from game]
 		say "ERROR-Andre-100A: He should be removed from the game, together with Felix.";
 	else:
 		say "     Andre gives you a tooth-filled (but friendly) smile as you come closer and says 'Hey there, what's up?'";
@@ -547,7 +547,7 @@ to say Plains Lizard loses:
 	say "     After having taken quite a few of your blows, the big lizard turns and flees, dashing off quickly through the high grass. With the beating you've given him, you don't think he'll be back anytime soon. Oh, and seems like he dropped something - a leather pouch, with Felix name written on it. You take it with you. Might be best to ask the young centaur about it.";
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -574,7 +574,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 12;
 	now sex entry is "Male";
-	now hp entry is 40;
+	now HP entry is 40;
 	now lev entry is 6;
 	now wdam entry is 8;
 	now area entry is "Nowhere";        [ Case sensitive]
@@ -608,9 +608,9 @@ Instead of fucking the Andre:
 		if name entry is "Plains Lizard":
 			now monster is y;
 			break;
-	if (hp of Felix is 0): [not yet met]
+	if (HP of Felix is 0): [not yet met]
 		say "ERROR-Andre-001C: He should not be around yet anywhere where players can see him.";
-	else if (hp of Felix is 100): [avoiding the player]
+	else if (HP of Felix is 100): [avoiding the player]
 		say "ERROR-Andre-100B: He should be removed from the game, together with Felix.";
 	else:
 		if(lastfuck of Andre - turns < 6):

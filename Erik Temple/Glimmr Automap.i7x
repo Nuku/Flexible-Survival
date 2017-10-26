@@ -353,7 +353,7 @@ The automap graphlink rules have outcomes exit (success - the default) and conti
 
 The current map label is a g-element variable.
 
-[The following phrase is defined in Mark Tilford's Automap. but in a section that only compiles when we're using Basic Hyperlinks. Basic Hyperlinks is not recommended for use with Flexible Windows, however, so we repeat the phrase here.]
+[The following phrase is defined in Mark Tilford's Automap, but in a section that only compiles when we're using Basic Hyperlinks. Basic Hyperlinks is not recommended for use with Flexible Windows, however, so we repeat the phrase here.]
 To decide what room is the glulx equivalent of (n - a number):
 	(- {n} -)
 
@@ -1213,9 +1213,9 @@ Section: Contact info
 
 If you have comments about the extension, please feel free to contact me directly at ek.temple@gmail.com.
 
-Please report bugs on the Google Code project page, at http://code.google.com/p/glimmr-i7x/issues/list.
+Please report bugs on the Google Code project page, at https://code.google.com/archive/p/glimmr-i7x/issues.
 
-For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the infiction forum (http://www.intfiction.org/forum/). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, you may contact me directly via email (ek.temple@gmail.com).
+For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the infiction forum (https://www.intfiction.org/forum/). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, you may contact me directly via email (ek.temple@gmail.com).
 
 Chapter: Change Log
 

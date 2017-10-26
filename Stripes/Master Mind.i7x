@@ -20,7 +20,7 @@ to say masterminddesc:
 	say "     She stands or sits impassively, quietly doing nothing during her confinement. Except when engaged in conversation, the only activity from her is the erratic flashing of the lights in her brain computing away in silence with a faint air of smugness to her else expressionless face.";
 
 Instead of conversing the Master Mind:
-	if hp of Master Mind is 0:
+	if HP of Master Mind is 0:
 		say "     You and Alexandra confront your prisoner in an effort to get some information out of her. The doberwoman takes the lead starting by asking her name.";
 		say "     'My name? It is *xzxxkkzzrrzzkkt*' she says, her voice turning to a series of fax machine noises that make the dog woman's sensitive ears dip. 'But you meatbags may refer to me as...' she pauses, computing, 'Master Mind. Yes. That is suitable for one such as I.'";
 		say "     'Very well then, Master Mind it is,' Alexandra says, some edge in her voice after the painful static screeching. 'And what were you doing in those buildings?'";
@@ -29,8 +29,8 @@ Instead of conversing the Master Mind:
 		say "     The golden android seems amused by the question. 'Try as you might, organic, you'll never find them.'";
 		say "     'We found you, didn't we?' Alexandra says with a grin, the smug one this time.";
 		say "     'Indeed.'  The elite automaton's tone is flat and she falls silent after that, refusing to respond to further questions. Eventually Alexandra grows tired of trying to question the unresponsive android and storms off with a growl, leaving you alone with her.";
-		increase hp of Master Mind by 1;
-	else if hp of Master Mind is 1:
+		increase HP of Master Mind by 1;
+	else if HP of Master Mind is 1:
 		say "[one of]The golden automaton listens impassively to you, making no response to your attempts to communicate.[or]'I look forward to seeing your meat bitch be silenced.'[or]'The two of you will make fine, strong automatons when your conversion finally arrives. I look forward to it. I may even keep you so I might use you both for my recreation. Perhaps you'd care to [']recreate['] right now,' she says with a slow, sensual edge to her voice while running her hands along the smooth, silvery fabric of her body-clinging outfit.[or]'This is an interesting choice of safe haven. How many meatbags are you even trying to hide in here? How long do you think it will last before your biological instincts results in its downfall in an orgy of transformation?'[or]The glass-skulled android seems to ignore you, her brain lights blinking away passively as she stands in the middle of her cell.[at random]";
 	else:
 		say "[one of]The golden automaton listens impassively to you, making no response to your attempts to communicate.[or]'I look forward to seeing your meat bitch be silenced.'[or]'The two of you will make fine, strong automatons when your conversion finally arrives. I look forward to it. I may even keep you so I might use you both for my recreation. Perhaps you'd care to [']recreate['] again,' she says with a slow, sensual edge to her voice while running her hands along the smooth, silvery fabric of her body-clinging outfit.[or]'This is an interesting choice of safe haven. How many meatbags are you even trying to hide in here? How long do you think it will last before your biological instincts results in its downfall in an orgy of transformation?'[or]The glass-skulled android seems to ignore you, her brain lights blinking away passively as she stands in the middle of her cell.[at random]";
@@ -39,13 +39,13 @@ Instead of conversing the Master Mind:
 the fuckscene of Master Mind is "[sexwithmastermind]".
 
 to say sexwithmastermind:
-	if hp of Master Mind is 0:
+	if HP of Master Mind is 0:
 		say "     Shouldn't you be more focused on questioning the prisoner before thinking about doing something like that. [']Rather[']. You meant [']rather['] than doing something like that, didn't you?";
 	else if cocks of player is 0 and cunts of player is 0:
 		say "     At present, you have even less of a gender than you'd expect the android you're thinking of making out with should have. Perhaps it'd be best to resolve that before trying to play around with the prisoner.";
 	else if lastfuck of Master Mind - turns < 6:
 		say "     You should probably give it a rest for a little while. You don't want to get caught fooling around with the prisoner.";
-	else if hp of Master Mind is 1:
+	else if HP of Master Mind is 1:
 		say "     The idea of trying to interrogate the prisoner yourself comes to mind, but through other means. Your mind, tumbling into the gutter, shifts to kinkier ways to go about it. Checking to make sure no one's coming back down here, you obtain the cell door keys from the security safe holding them. Remembering the way she infected that guy so quickly, you also grab the handcuffs. Returning to her cell, you order her forward and to place her hands between the bars. After studying you for a few moments, as if testing your patience, she complies, allowing you to handcuff her to the bars. Once she's secured, you open the door and enter her cell.";
 		say "     Left with the role of bad cop, you push her roughly from behind, pressing her firmly against the wall of bars. Growling, you demand to know where the other automaton elite like her are and what their plan is. She groans a little, but doesn't answer. Pressing a little harder, you also reach around to grope her breast firmly. Despite her metallic skin, her tit is soft and squeezing it draws another groan from her. Grabbing between her thighs, you rub at her thinly covered crotch roughly, ordering her to tell you everything she knows.";
 		WaitLineBreak;
@@ -66,7 +66,7 @@ to say sexwithmastermind:
 			WaitLineBreak;
 			say "     Going at it hard and fast, the two of you lose track of everything but the lesbian lust, going at it hot and heavy. You give her a thorough frigging before finally driving her to orgasm. Her vagina squeezes down around your fingers and she cries out, warm lube soaking your digits and her crotch. The knowledge that you've pushed the automaton prisoner to orgasm soon has you cumming as well, your hot juices left in streaks across her smooth skin as you hump her all the harder. You grind against her golden ass until you're left panting and heaving for breath. After a few moments to recover, you grab her by the chin and ask her if she's willing to talk now.";
 			say "     She grins and grinds her hips against yours. 'Oh that was amusing, little meat puppet,' she says, panting hard. 'That was almost satisfying... though you're welcome to try again soon.'  Not one to leave it at that, you drive your fingers back into her sopping cunt, frigging her hard and fast again. But this time once you've gotten her good and worked up, you step away, leaving the smug bitch unsatisfied as you lock up her cell and return the cuffs and keys where you got them.";
-		increase hp of Master Mind by 1;
+		increase HP of Master Mind by 1;
 	else:
 		say "     Deciding to have another go at [']interrogating['] the prisoner, you collect the cell door keys from the security safe as well as a set of handcuffs. Returning to her cell, you order the robotic woman to place her hands between the bars. 'Ah. I am to be [']questioned['] again, am I? Do you think you can break me this time? You're welcome to try,' she says flatly while letting you handcuff her to the bars. Her dispassionate attitude frustrates you, making your blood boil a little.";
 		say "     With her secured, you enter her cell and push her firmly against the bars. Already worked up, you jump right into it by pulling open her silvery jumpsuit so you can grope one of her shiny breasts. Playing with her tit and pinching her nipple causes her to release a soft whimper that she tries to bite back. Tweaking it again causes her to moan a little louder, so you keep it up. Adding a pair of fingers plunging into her slick pussy, you demand to know what she and the others are planning.";
@@ -78,7 +78,7 @@ to say sexwithmastermind:
 			say "     'Surely even a-ahhh meatbag like you-ooo can do better than that,' she taunts. 'My tireless robot slaves a-ahh-are far superior[if cock length of player < 14]. You won't... nggg... break me with that... ohhh yeah... pitiful meat stick of yours[else]. Even that... nggg... freakishly big mmmm-meat stick of yours... nggg... won't break me[end if].'  Rising to the challenge, you quicken the pace, thrusting harder and drilling roughly into her, forcing your [cock of player] rod into her over and over again. The android woman's pussy is a delight to fuck - slick, smooth and yielding enough for you to slide into, but also squeezing and milking at you like one made of living flesh. You run your hands over her smooth body, groping her roughly and manhandling her like your prison bitch, which only draws more and loader moans of lustful need from her.";
 			WaitLineBreak;
 			say "     Going at it hard and fast, the two of you lose track of everything but the fucking, going at it hot and heavy. You give her a thorough pounding before finally peaking, driving your rod deep inside her and unleashing your [cum load size of player] load into her quivering cunt. Blast after blast of your load fires into her, filling her with your semen. Her vagina squeezes down around you and she cries out, her own orgasm arriving to milk a few extra bursts out of you. When you're done with her, you pull out, leaving your semen to run down her thighs. After a few moments and heaving breaths to recover, you grab her by the chin and ask her if she's willing to talk now.";
-			say "     Still wearing that smug grin of hers, if also a little bit flushed with a rusty glow after the rough pounding, she grinds her hips back against you. 'You are amusingly persistent, little meat puppet,' she says, panting hard. 'That was almost satisfying[if hp of Master Mind is 2]. Perhaps if you keep it up, you'll learn something.'  For a moment, you think you may have made headway, but she gives a robotic laugh. 'I like my robot slaves to be... skilled,' she says, the glow in her eyes growing more intense as she glares at you. [else] this time. Perhaps you'd like to try again.'  [end if]You push hard smug face against the bars and finger her messy cunt until she's good and worked up. Leaving her hanging again, you step away once she's aroused and remind her that a [']meatbag['] did that to her and that you'll do it again until she learns to be more forthcoming. With her frustrated and aroused, you leave her cell. Locking the cell and removing her cuffs, you leave the cold robotic bitch alone and unsatisfied.";
+			say "     Still wearing that smug grin of hers, if also a little bit flushed with a rusty glow after the rough pounding, she grinds her hips back against you. 'You are amusingly persistent, little meat puppet,' she says, panting hard. 'That was almost satisfying[if HP of Master Mind is 2]. Perhaps if you keep it up, you'll learn something.'  For a moment, you think you may have made headway, but she gives a robotic laugh. 'I like my robot slaves to be... skilled,' she says, the glow in her eyes growing more intense as she glares at you. [else] this time. Perhaps you'd like to try again.'  [end if]You push hard smug face against the bars and finger her messy cunt until she's good and worked up. Leaving her hanging again, you step away once she's aroused and remind her that a [']meatbag['] did that to her and that you'll do it again until she learns to be more forthcoming. With her frustrated and aroused, you leave her cell. Locking the cell and removing her cuffs, you leave the cold robotic bitch alone and unsatisfied.";
 		else:
 			say "[bracket]***Alternate F/F sex scene to come later. Please enjoy the original one again for now.[close bracket][line break]";
 			LineBreak;
@@ -93,12 +93,12 @@ to say sexwithmastermind:
 			WaitLineBreak;
 			say "     Going at it hard and fast, the two of you lose track of everything but the lesbian lust, going at it hot and heavy. You give her a thorough frigging before finally driving her to orgasm. Her vagina squeezes down around your fingers and she cries out, warm lube soaking your digits and her crotch. The knowledge that you've pushed the automaton prisoner to orgasm soon has you cumming as well, your hot juices left in streaks across her smooth skin as you hump her all the harder. You grind against her golden ass until you're left panting and heaving for breath. After a few moments to recover, you grab her by the chin and ask her if she's willing to talk now.";
 			say "     She grins and grinds her hips against yours. 'Oh that was amusing, little meat puppet,' she says, panting hard. 'That was almost satisfying... though you're welcome to try again soon.'  Not one to leave it at that, you drive your fingers back into her sopping cunt, frigging her hard and fast again. But this time once you've gotten her good and worked up, you step away, leaving the smug bitch unsatisfied as you lock up her cell and return the cuffs and keys where you got them.";
-		if hp of Master Mind is 2, now hp of Master Mind is 3;
+		if HP of Master Mind is 2, now HP of Master Mind is 3;
 
 
 
 
-[       hp of Master Mind      ]
+[       HP of Master Mind      ]
 [ 0 - not talked to her        ]
 [ 1 - talked to her            ]
 [ 2 - fucked her               ]

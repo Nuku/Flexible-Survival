@@ -4,7 +4,7 @@ Version 5 of Slutrat by Nuku Valente begins here.
 Section 0 - Slut Rat Monster
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 "Slut Rat"	"[slutratattacks]"	"[defeattheslutrat]"	"[slut rat victory]"	"[slutratdesc]"	"furry and narrow snout, with quivering black nose set in the middle of a very female, but clearly rodent"	"bent to emphasize fertile signals, with wide hips and narrow waist. You feel like you're putting out a constant ready signal to anyone looking at you"	"[one of]black furred[or]rat furred[or]softly furred[at random]"	"You have a long, [skin of player] tail. It is segmented, like a rat tail should be, thin and whip-like, moving about in long motions."	"[one of]sheathed[or]leaking[or]human like[at random]"	"your face draws forward into a long snout as hair spills to your shoulders"	"you can feel your entire body changing configuration to emphasize your fertile signals, ass and hips pushing outwards as waist slims. Short claws forming on your hands, which remain smooth. The rest of you [skin of player]"	"a wave of erotic satisfaction forces you to your knees, your genitals releasing their fluids across thighs as fur explodes out across your form"	"A long slithering sensation is felt in your pants. A quick check reveals it to be a naked pink rat tail"	"it swells and throbs and refuses to calm down. It is soon leaking prefluids all over the place in constant readiness"	10	16	10	10	12	10	"Both"	45	6	13	"Unknown"	1	12	10	2	10	0	1	12	7	100	"soda"	20	4	"[one of]sultry[or]alluring[or]curvaceous[at random]"	"[one of]murine[or]ratty[or]rodent[at random]"	false	false	false	--	"slutratalt"
 
 
@@ -22,7 +22,7 @@ this is the rattymilk rule:
 	say "!  You take [special-style-2][dam][roman type] damage";
 	if "Female Preferred" is listed in feats of player:
 		say ".  You can feel a tingling in your groin that starts to flare up, but is then resisted until it subsides.";
-	else if cock width of player is greater than 0 and cock width of player < 10:
+	else if cock width of player > 0 and cock width of player < 10:
 		increase cock width of player by a random number from 1 to 3;
 		if cock width of player > 10, now cock width of player is 10;
 		say ".  Your balls sing with pleasure as they grow heavier as the milk sends them into overproduction and your balls feel like they have become [ball size]!";
@@ -43,7 +43,7 @@ this is the rattymilk rule:
 	decrease humanity of player by a random number between 1 and 4;
 	if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
-	decrease hp of the player by dam;
+	decrease HP of the player by dam;
 	follow the player injury rule;
 	say "You are [descr].";
 
@@ -54,15 +54,15 @@ to say slutratdesc:
 	let debit be 0;
 	if rondafight is 3:
 		if hardmode is true and level of player > 9, let debit be level of player - 9;
-		now hp entry is 69 + ( debit * 5 ); [- How many HP has the monster got? -]
-		now monsterhp is 69 + ( debit * 5 );
+		now HP entry is 69 + ( debit * 5 ); [- How many HP has the monster got? -]
+		now monsterHP is 69 + ( debit * 5 );
 		now wdam entry is 15 + ( debit / 3 ); [-Amount of Damage monster Does when attacking.-]
 		now lev entry is 9 + debit;
 		say "     Despite your hopes of saving her, you find yourself facing off against the slut rat Ronda.  She is a tall and intimidating wall of fur and leather, appearing female at first glance.  But you know better, sporting a bulging package under her tight, leather outfit.  She has a lustful look in her eyes, having decided she'd rather repay you for the chocolates with sex than listening to what you have to say.  You try to calm her down and get her to focus, but that moment of remembrance is fading.  In her confusion, she seems to think you're just looking to scrap to see who's on top, as the slut rats sometimes do.  Being the first of the slut rats, she is a little bigger and tougher than the others.";
 	else:
 		if hardmode is true and level of player > 6, let debit be level of player - 6;
-		now hp entry is 45 + ( debit * 5 ); [- How many HP has the monster got? -]
-		now monsterhp is 45 + ( debit * 5 );
+		now HP entry is 45 + ( debit * 5 ); [- How many HP has the monster got? -]
+		now monsterHP is 45 + ( debit * 5 );
 		now wdam entry is 13 + ( debit / 3 ); [-Amount of Damage monster Does when attacking.-]
 		now lev entry is 6 + debit;
 		say "     Towering over most, a tall intimidating wall of fur and leather. It appears female at first glance. Piercing its large directed ears are one ring a piece, one a golden hue, and another silvery shade. It's covered from top to bottom in ebony black fur, that is, where clothing is not apparent. Her eyes are the same black shade as her hair, the left eye having a scar that runs an inch above downwards in a slicing motion to an inch or two below.";
@@ -103,19 +103,19 @@ to say slut rat victory:
 			say "     The rat grins as she pushes you towards the others, 'Let's remind this one how we treat bad people'. Of course, how they treat bad people and how they treat good people can be a bit foggy at times. At the call, the other rats stop their coupling and stroking and other diversions to instead gather around you with hungry expressions.";
 		else:
 			say "     Defeated, she grabs you and hauls you rapidly back towards her den, grinning the whole way like she knows a joke she does not care yet to share. When you arrive, you find many large pillows strewn about comfortably, and almost half a dozen other slut rats, stroking themselves, or each other, or kissing and otherwise engaged.  They all pause when you are hauled in, and scramble to their feet, rushing up to enjoy and share the fresh meat.";
-		if cocks of player is greater than 0:
+		if cocks of player > 0:
 			say "     One rat lowers before you and takes your [cock size desc of player] [cock of player] dick into her waiting snout, suckling firmly as her hands caress your [ball size] in eager rubs of her smooth hands";
-			if cocks of player is greater than 1:
+			if cocks of player > 1:
 				say ".  Your extra endowment is not put to waste, as a rat girl reaches for each, and you are soon being stroked in increasingly fast motions. [if cocks of player > 2]Your extra cocks are[else]Your extra cock is[end if] stroked with loving adoration as they nuzzle into your excited flesh and lap at it with warm soft tongues.";
 			else:
 				say ".";
-		if cunts of player is greater than 0:
+		if cunts of player > 0:
 			say "     The rat who [if location of player is slutrat den]beat you[else]brought you in[end if] tips you forward, pressing her massive tool against your exposed snatch and rubbing along it in slow teasing motions, considering.";
-			if cunt length of player is less than 12 or cunt width of player is less than 7:
+			if cunt length of player < 12 or cunt width of player < 7:
 				say "     She humphs, 'You will not fit, but we can fix that,' she assures in a needy whisper in your ear. Soon your head is being tipped back as something sickly sweet is poured down your throat, making your female organs tingle powerfully as they begin to expand";
 				increase cunt length of player by 4;
 				increase cunt width of player by 3;
-				if cunt length of player is less than 12 or cunt width of player is less than 7:
+				if cunt length of player < 12 or cunt width of player < 7:
 					say ".  Despite the growth, you remain a bit too small, but the rat only has so much patience. She drives up, stuffing her huge organ into your now sopping wet cunt, the lubrication doing much to ease the passage as she begins to piston against you, slapping your bottom with her huge swaying balls and breeding you with a feral intensity.[impregchance]";
 				else:
 					say ".  Now large enough, she smoothly pops her cock into your drenched hole, your needy fluids making it quite easy for her to pump lovingly against your wanton sex, grinding her hips against you when she isn't rocking with increasing intensity, her huge balls bumping you, promising a terrific load.[impregchance]";
@@ -164,7 +164,7 @@ To Say slutratdenscene:
 		if name entry is "Slut Rat":
 			now monster is y;
 			break;
-	if lastratvisit - turns is less than 8 and visittimes of slutrat den > 0:
+	if lastratvisit - turns < 8 and visittimes of slutrat den > 0:
 		continue the action;
 	now lastratvisit is turns;
 	if visittimes of SlutRat Den is 0:
@@ -192,22 +192,22 @@ To Say slutratdenscene:
 		say "[ratstopoolhall]";
 	else:
 		increase visittimes of slutrat den by 1;
-	if hp of Ronda is 9 and bodyname of player is "Slut Rat":
+	if HP of Ronda is 9 and bodyname of player is "Slut Rat":
 		say "[rondarescue]";
 
 
 Section 2 - Slut Rat Welcome
 
 To Say ratslutwelcome:
-	if breasts of player is greater than 0 and breast size of player is greater than 0:
+	if breasts of player > 0 and breast size of player > 0:
 		say "     Her slender fingers brush up across your [skin of player] breasts, squeezing lightly even as the sharp claws at the end slowly trail across delicate flesh. 'We're not always sharing.' she whispers as she gazes into your eyes with her own vibrantly violet ones, 'Such a good little bitch.' she croons, trailing claws down over your nipples as she looks downwards.";
 	[Male scene, 50% chance if herm]
-	if (cocks of player is greater than 0 and cunts of player is 0) or ( cunts of player is greater than 0 and cocks of player is greater than 0 and a random chance of 1 in 2 succeeds):
+	if (cocks of player > 0 and cunts of player is 0) or ( cunts of player > 0 and cocks of player > 0 and a random chance of 1 in 2 succeeds):
 		say "     She crouches down and reaches to cup your groin, fingers seeking out your [cock size desc of player] [cock of player] tool and give it a few soft pulls, stroking it ever so slowly to erection as she looks up at you, 'And just how big is our little man?' she coos, long tongue flicking out across it in a flicker";
-		if cocks of player is greater than 1:
+		if cocks of player > 1:
 			say ".  Her fine whiskers tickle at your extra man meat. She leans back and brushes across all of your painfully erect shafts, tickling from the base to the tips and back down again in slow appraisal";
 		if cock length of player > 9:
-			say ".  Seemingly pleased with what she finds, she takes a moment to rub her snout alongside your [cock of player] [if cocks of player is greater than 1]cocks[else]cock[end if]. With the barest flicker of her tongue, she continues her inspection.  Her paws roam over the rest of your body, stroking your [if cunts of player > 1]cunts, [else if cunts of player is 1]cunt, [end if]thighs and ass, putting you on display for all the other rats as she does.  After your lustful introduction to the rat nest, she gives your ass a swat.  'Go have fun now, little bitch.'";
+			say ".  Seemingly pleased with what she finds, she takes a moment to rub her snout alongside your [cock of player] [if cocks of player > 1]cocks[else]cock[end if]. With the barest flicker of her tongue, she continues her inspection.  Her paws roam over the rest of your body, stroking your [if cunts of player > 1]cunts, [else if cunts of player is 1]cunt, [end if]thighs and ass, putting you on display for all the other rats as she does.  After your lustful introduction to the rat nest, she gives your ass a swat.  'Go have fun now, little bitch.'";
 			infect "Slut Rat";
 		else:
 			say ".  'This won't do,' she says with a frown on her pointed snout. Warm fingers squeeze at your shaft, 'This won't do at all.' On saying this, another rat hurries forward with a plastic bottle filled with some strange purple syrup that sloshes slowly with the vigorous movement. The first rat raises up and reaches for your mouth, 'Say [']ahhh[']' she beckons with a smile.";
@@ -223,7 +223,7 @@ To Say ratslutwelcome:
 					infect "Slut Rat";
 					infect "Slut Rat";
 					infect "Slut Rat";
-					end the game saying "You succumb to the honeyed drink.";
+					end the story saying "You succumb to the honeyed drink.";
 					stop the action;
 				else:
 					infect "Slut Rat";
@@ -233,12 +233,12 @@ To Say ratslutwelcome:
 				Challenge "Slut Rat";
 				now inasituation is false;
 				if lost is 0:
-					if slutratsub is greater than 5:
+					if slutratsub > 5:
 						say "     You feel more confident about your dealings with the rat after that little battle.";
 						decrease slutratsub by 1;
-	else if cunts of player is greater than 0:		[Female scene, Herm if above did not run]
+	else if cunts of player > 0:		[Female scene, Herm if above did not run]
 		say "     Her nimble paws drift down between your legs, slipping between your thighs and parting them easily.  Her fingers slide over your pussy, teasing your sensitive folds and getting you wet[if cunts of player > 1].  Finding more than one pussy tucked down there, she switches between them a few times before settling on one[end if].  She eases a finger into you, probing your pussy and stroking your inner walls.  'And just how accommodating is our new bitch,' she giggles as she slips second finger into you and then another.  She spreads her fingers and stretches you open, seeing how roomy your cunny is.  You moan and shiver at this sensual inspection, blushing a little as the other girls are clearly watching.";
-		if cunt length of player is less than 10 or cunt width of player is less than 6:
+		if cunt length of player < 10 or cunt width of player < 6:
 			say "     She humphs, 'Still quite tight, but we can fix that,' she assures you with a nibble at your ear. Soon your head is being tipped back as a cup with something sickly sweet pressed to your lips.  The rat grinds her bulging crotch against you thigh as she continues fingering you.  'Drink it down,' she beckons with a smile.  Allow her?";
 			if the player consents:
 				say "     The rat smiles as the sweet liquid is poured down your throat, making your groin tingle powerfully.  Your female genitals begin to expand while her fingers continue to probe and stroke inside you, making you quiver in delight.  Soon enough, you're moaning and panting as she displays your growing cunt for the others, who snicker and giggle as they watch the arousing show.  Turned on by the display, you can see several of them groping themselves or one another.  Soon, it becomes too much and you cum, soaking the rat's paw in your female juices.  She grins and licks her paw clean, giving your rear a swat.  'Good little bitch,' she says with a chuckle.  'Go have fun, slut.'";
@@ -251,14 +251,14 @@ To Say ratslutwelcome:
 				Challenge "Slut Rat";
 				now inasituation is false;
 				if lost is 0:
-					if slutratsub is greater than 5:
+					if slutratsub > 5:
 						say "You feel more confident about your dealings with the rat after that little battle.";
 						decrease slutratsub by 1;
 		else:
 			say "     She smiles as she manages to stuff her whole paw into you and starts pumping it in and out, making you moan and quiver as she fists you.  'Mmm... nice and roomy,' she rumbles.  'Just like a nice bitch should be,' she adds while wiggling her fingertips to tease inside you before slipping her paw free.  She licks her dripping paw as her other one gives your ass a swat.  'Good little bitch,' she says with a chuckle.  'Go have a fun, slut.'";
 			infect "Slut Rat";
 	else:
-		if breasts of player is greater than 0 and breast size of player is greater than 0:
+		if breasts of player > 0 and breast size of player > 0:
 			say "     The rat arrives at the junction of your thighs and seems surprised at what she finds, or does not find. Her teeth are felt, nipping twice at your [skin of player] skin before she looks back up, 'How do you live like that?' she says in an almost accusing tone. She rises to her feet and kisses your cheek, 'Poor thing. We will just have to fix that.'";
 		else:
 			say "     She brushes up alongside you, nose twitching lightly as she takes your scent, 'Mmm, something is wrong,' she murmurs, reaching for your flat chest, then grasping your featureless groin openly, 'You have nothing.' She moves around behind you and presses against your back, 'That won't work at all...'";
@@ -286,21 +286,21 @@ To ratslutchug:
 		increase Slutratcor by 1;
 		follow the cock descr rule;
 		decrease humanity of the player by 20;
-		say "     As the pain fades, a warmth rushes down between your thighs. Your [cock of player] [if cocks of player is greater than 1]cocks begin[else]cock begins[end if] to grow rapidly. The sound of stretching flesh is barely heard as pleasure runs through your altering shaft in sharp, almost painful, spikes of delight. The rats are cheering on the growth while the two beside you reach to rub and caress encouragingly. You are all too soon long enough for both of them to pull, squeeze, and play with you without getting in the way of the other, lavishing attention on your now [cock size desc of player] equipment with agile fingers and slippery tongues.";
+		say "     As the pain fades, a warmth rushes down between your thighs. Your [cock of player] [if cocks of player > 1]cocks begin[else]cock begins[end if] to grow rapidly. The sound of stretching flesh is barely heard as pleasure runs through your altering shaft in sharp, almost painful, spikes of delight. The rats are cheering on the growth while the two beside you reach to rub and caress encouragingly. You are all too soon long enough for both of them to pull, squeeze, and play with you without getting in the way of the other, lavishing attention on your now [cock size desc of player] equipment with agile fingers and slippery tongues.";
 		say "     Their hands leave your sensitive bits to haul you to your feet. That's when you notice their scent has changed. Instead of smelling like dirty animals, they smell like a delicate floral perfume, subtle and bogglingly attractive. You reach for one of them and your hand is swatted away lightly, 'Easy there, bitch,' she says with a smile, 'Good bitch. But you only touch when told to,' she says as she leans in and plants a kiss. Her fur tickles lightly against your own [skin of player] flesh as she draws you in against her curvy form. Down below, her throbbing shaft nudges against you through the leather she wears[if slutratcor is 1], 'Welcome, bitch. We'll have lots of fun together[else], 'That's a good boy, drink nice and hard[end if].' Greeting given, she pushes you back half a step, and moves back to her pillow.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 		try looking;
 		continue the action;
 	else:
-		say "     You seal your lips on the bottle, but make no special effort to chug down that thick, powerfully sweet, stuff. At first, the gunk doesn't move at all, being so thick, but the rats are quite happy to give it a squeeze, forcing a great dollop of the honey like texture. You force yourself to swallow it and the rats pull the bottle back, looking at you expectantly. All the rats are staring at you at this point. Your potential nervousness at this fades as a new sensation distracts you from down below. Your [cock of player] [if cocks of player is greater than 1]cocks begin[else]cock begins[end if] to grow, slowly, inching forward as little crawly feelings run up and down your altering equipment.";
+		say "     You seal your lips on the bottle, but make no special effort to chug down that thick, powerfully sweet, stuff. At first, the gunk doesn't move at all, being so thick, but the rats are quite happy to give it a squeeze, forcing a great dollop of the honey like texture. You force yourself to swallow it and the rats pull the bottle back, looking at you expectantly. All the rats are staring at you at this point. Your potential nervousness at this fades as a new sensation distracts you from down below. Your [cock of player] [if cocks of player > 1]cocks begin[else]cock begins[end if] to grow, slowly, inching forward as little crawly feelings run up and down your altering equipment.";
 		increase cock length of player by 4;
 		increase cock width of player by 4;
 		follow the cock descr rule;
 		decrease humanity of the player by 10;
-		say "     Those strange crawling sensations run from the tip of your [cock of player] [if cocks of player is greater than 1]cocks[else]cock[end if] down to your swelling [ball size]. Your hips buck forward against your will, bits of prefluid splattering across the floor as arousal mounts in your sensitive flesh. You clench your hands, gasping for breath as the growth begins to ebb, with a light stream of pearly fluids running down the underside of your [cock of player] equipment to pool between your legs on the floor. One of the two rats leans forward and flicks her tongue, wet and so warm, across the mess at the end, cleaning you with soft slurps. The other rat presses against your side, 'That is looking much better.'";
+		say "     Those strange crawling sensations run from the tip of your [cock of player] [if cocks of player > 1]cocks[else]cock[end if] down to your swelling [ball size]. Your hips buck forward against your will, bits of prefluid splattering across the floor as arousal mounts in your sensitive flesh. You clench your hands, gasping for breath as the growth begins to ebb, with a light stream of pearly fluids running down the underside of your [cock of player] equipment to pool between your legs on the floor. One of the two rats leans forward and flicks her tongue, wet and so warm, across the mess at the end, cleaning you with soft slurps. The other rat presses against your side, 'That is looking much better.'";
 		say "     As the excitement fades from you, the rats abandon you to your arousal, moving to retake their places and watch you, ever so curiously, as if to see what you might do next.";
-	if humanity of the player is less than 1:
+	if humanity of the player < 1:
 		now lost is 1;
 	else:
 		say "     The slut rat wraps her paws around your swollen, oversized cock, stroking and pumping at it until you finally cum hard.  This drains your overgrown balls and cock somewhat, but you are still quite a bit larger than before.  She continues her inspection by letting her paws roam over the rest of your body, stroking your [if cunts of player > 1]cunts, [else if cunts of player is 1]cunt, [end if]thighs and ass, putting you on display for all the other rats as she does.  After your lustful introduction to the rat nest, she gives your ass a swat.  'Go have fun now, little slut.'";
@@ -333,7 +333,7 @@ ratdartcount is a number that varies.
 
 check ratdarts:
 	if the location of the player is not Slutrat Den, say "What darts?" instead;
-	if visittimes of slutrat den is less than 1:
+	if visittimes of slutrat den < 1:
 		say "The rats scowl at you when you approach the dart board. Perhaps you should reconsider.";
 		say "Continue?";
 		if the player consents:
@@ -370,8 +370,8 @@ Carry out ratdarts:
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: Taking a brief breath, you draw back the dart and eye the center circle. With a sudden thrust, the dart sails forward. ";
 		let total be bonus + dice;
 		now total is total / 5;
-		if total is less than 0, now total is 0;
-		if total is greater than 5, now total is 5;
+		if total < 0, now total is 0;
+		if total > 5, now total is 5;
 		if total is:
 			-- 0:
 				say "Your dart goes drastically wide, almost hitting one of the lounging rats. With a loud annoyed sound, she moves to tackle you to the ground.  Do you let her?";
@@ -630,13 +630,13 @@ instead of conversing the Pool Table:
 Section 9 - Endings
 
 When play ends:
-	if humanity of the player is less than 10 and hp of the player is greater than 0:
+	if humanity of the player < 10 and HP of the player > 0:
 		if bodyname of player is "Slut Rat":
 			say "     You can no longer deny your new basic needs. You flee to the mall and its comforting sewers. Following your instincts, you are soon in the welcoming embrace of your rodent sisters, who take turns fucking and being fucked by you for what feels like days in a celebration of your coming around. Your family remains there, hiding from the rescue, and living out your days together.";
-			if slutratcor is greater than 4:
+			if slutratcor > 4:
 				say "     Your [skin of player] hide slowly tints to a deep angry red shade, turning towards black at your hands and feet. Those feet harden into cloven like hooves as the months go by and strange images assault you in your fevered lust dreams. It all comes to a crest when you awaken to a rat sister mounted on top of you, riding you for all your worth. As you climax together, you realize that this is Rod's girl. She leans in and licks her tongue over your nose, gazing into your eyes, 'It's time,' she whispers. You rise with her, each smelling of the other, and leave the other rats behind. Your dark lords have need of you both.";
 				continue the action;
-			else if visittimes of slutrat den is greater than 0:
+			else if visittimes of slutrat den > 0:
 				if slutratsub is 5:
 					say "     You are neither dominant nor submissive of your rat sisters, living as equals. This is not without its frictions, as you do not all have the same ideas, but you always managed to reach an accord, eventually. Sometimes this involves taking or being taken until someone realizes the error of their ways in a pile of sweat and other fluids, but you don't find that to be a disagreeable way to work things out.";
 				if slutratsub > 6:

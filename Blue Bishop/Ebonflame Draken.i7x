@@ -13,7 +13,7 @@ When Play begins:
 Section 1 - Monster Responses
 
 to say ebdrakenvic:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Some part of you questions the sanity of submitting to one of these horrors, but you do it all the same. It takes a moment for the Draken to catch on that you're offering yourself, before she breaks out in shrill laughter.";
 		say "     '[one of]Oh[or]Hmpf[or]Ha[at random], [one of]you're hardly worth my energy[or]such a pitiful creature[or]you're at least an amusing piece of fuckmeat[at random]!' Immediately, she strikes you down to leave you doubled over, tearing free any attire blocking her way before you're assaulted by a barrage of lashes against your ass, using her tail as a terrible whip to punish you.";
 		say "     '[one of]Before you turn, all you'll remember of your past life is agony[or]So soft, you practically ask for pain[or]Have you forgotten already?[run paragraph on] You want for every bit of this suffering[at random]";
@@ -50,7 +50,7 @@ to say ebdrakenvic:
 	else:
 		say "     The dragoness circles around your[if scalevalue of player > 3] larger,[end if] [bodytype of player] form, she wraps [if scalevalue of player > 3]both[else]one[end if] of her scaled hands around your neck, pulling your head forward until you're forced to stare down her glowing eyes.";
 		say "     '[one of]Ha[or]Hmm[or]Hmpf[at random], [one of]like what you see[or]don't you find me pretty[or]are you arrogant, or just plain stupid[at random]? [one of]How about a kiss for the lady[or]Would you like to feel this lady's tongue[at random]?' She doesn't seem to care for your response, because immediately she presses her coarse, scaled lip against yours, her powerful tendril-like tongue piercing your maw's depths.";
-		say "     He saliva burns terribly against your soft flesh, [if hp of player > 0]forced to writhe in protest even with your submission[else]driving you to weakly writhe in protest[end if], making her laugh against the forced kiss. You start to gag and cough as your lungs are flooded with her smoldering breath, and she finally pulls away once your wholly dazed from the affair.";
+		say "     He saliva burns terribly against your soft flesh, [if HP of player > 0]forced to writhe in protest even with your submission[else]driving you to weakly writhe in protest[end if], making her laugh against the forced kiss. You start to gag and cough as your lungs are flooded with her smoldering breath, and she finally pulls away once your wholly dazed from the affair.";
 		say "     The lizard's hand[if scalevalue of player > 3]s are[else] is[end if] still gripped around your neck, however, and she immediately plunges your head southwards, until she's rubbing your face against her charred black, throbbing cock. Sharp barbs pressing against you, her precum is just as burning as it's smeared against you.";
 		say "     '[one of]Satisfy my need[or]Pay the tribute[or]Suck me off[at random], [one of]whelp[or]fool[or]plaything[at random], [one of]and maybe I'll let you off[or]and perhaps you'll live to see another day[or]or I'll be sure to prolong your suffering[at random]!' Guided by her forceful grip, the pointed tip of her draconic dick as plunged between your lips, taste flooded with the intense sensation of her molten, glowing seed. Forced to bob against the organ, its barbs do nothing but make your efforts more difficult, though she's dead set on making sure you don't slow down.";
 		say "     As things progress, you become increasingly concerned about the monster's imminent bliss, the dragoness becoming increasingly feral and desperate for release with each passing second, until she's practically clawing at you to give it to her.";
@@ -75,9 +75,9 @@ to say ebdrakendesc:
 	if blanchefight is true:
 		say "     In the ash-filled haze, the imposing, dragon-humanoid figure glares angrily at you, no doubt smoldering over your surprise attack. Covered in an impenetrably dark shade of purple scales, she's almost naught but a silhouette against the[if daytimer is night] night's[end if] surroundings, save for her fiery eyes and the ample strings of the hermaphrodite's glowing, molten precum oozing from her terrifying, barbed cock.";
 		say "     'You have the gall to try and steal what is already mine? Well then... Perhaps you wish to take her place!' She immediately comes to life, charging at you with a shrill howl, forcing you to ready yourself for combat!";
-		let temp1 be hp entry / 8;
-		if temp1 > weapon damage of player, decrease monsterhp by weapon damage of player;
-		if temp1 <= weapon damage of player, decrease monsterhp by temp1;
+		let temp1 be HP entry / 8;
+		if temp1 > weapon damage of player, decrease monsterHP by weapon damage of player;
+		if temp1 <= weapon damage of player, decrease monsterHP by temp1;
 	else:
 		say "     In the ash-filled haze, you see [if scalevalue of player < 4]a towering[else]an imposing[end if], dragon-humanoid in the distance. [one of]You're barely given a chance to react before it notices you as well[or]Already the subject of its pursuit[stopping], it turns to amble towards you slowly. Covered in an impenetrably dark shade of purple scales, she's almost naught but a silhouette against the[if daytimer is night] night's[end if] surroundings, save for her fiery eyes and the occasional strings of the hermaphrodite's glowing, molten precum oozing from her terrifying, barbed cock.";
 		say "     '[one of]Whelp[or]Mortal[or]Pitiful creature[at random]! [one of]Submit to the will of the Matriarch[or]You are not prepared[or]There is no escape[or]You will be my plaything[at random]!' Her pace begins to pick up, until the reptile is practically charging you down, forcing you to ready yourself for combat!";
@@ -85,7 +85,7 @@ to say ebdrakendesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 
@@ -99,7 +99,7 @@ When Play begins:
 	now face entry is "distinctly draconic head, a pair of horns sprouting from its sides, curving back such that the tips nearly connect behind you. A set of faintly glowing, fiery eyes match your fierce set of teeth arraying your";
 	now body entry is "tall and powerful. Your hands wield a fearsome set of claws, though they can be sheathed to not obstruct your articulation, and a similar set adorn your now-digitigrade feet. A set of under-developed wings also adorn your back";
 	now skin entry is "an array of [one of]deep[or]abyssally[at random] dark, purple scales for";
-	now tail entry is "You have a long and powerful tail. Quite prehensile, it narrows to a sharp tip that sings as it moves through the air";
+	now tail entry is "You have a long and powerful tail. Quite prehensile, it narrows to a sharp tip that sings as it moves through the air.";
 	now cock entry is "[one of]barbed[or]fearsome[or]intimidating[at random], [one of]draconic[or]reptilian[at random]";
 	now face change entry is "a searing pain wracks your face. You cry out as bone and skin cracks and stretches to accommodate a new shape. Once the pain subsides, your head is revealed to have taken on the reptilian form of an Ebonflame Draken, elongated snout adorned with an array of razor-sharp teeth and a pair of glowing, fire-red eyes. A long pair of horns seem to have erupted from the back of your head, curving such that the tips almost touch";
 	now body change entry is "it suddenly becomes engulfed in a terrible, burning pain. Falling to your knees, you nearly pass out from the intense sensation as limbs both old and new undergo a very aggressive transformation. When you recover, you find that you taken on a tall, humanoid form, hands and feet transformed into fierce talons that take you a while to acclimate to. Additionally, you appear to have grown a set of wings on your back, but they seem under-developed and you're too inexperienced to really make much use of them.";
@@ -113,7 +113,7 @@ When Play begins:
 	now int entry is 15;
 	now cha entry is 15;
 	now sex entry is "Both";
-	now hp entry is 80;
+	now HP entry is 80;
 	now lev entry is 16;
 	now wdam entry is 20;
 	now area entry is "Capitol";
@@ -155,7 +155,7 @@ when play ends:
 				say "     Eventually, everything blurs into a haze of constant sex, you're never even learn what dark powers compelled you, or if they achieved whatever it was that they sought...";
 		else:
 			say "     More than any other infected that is eventually rescued by the military, you're forced to linger in processing, largely from the infamy born of your strain";
-			if player is submissive or “Strong Psyche” is listed in feats of player:
+			if player is submissive or "Strong Psyche" is listed in feats of player:
 				say ". It's hard to keep everything together, but ultimately your [if player is submissive]submissive tendencies allow[else]strong will allows[end if] you to endure until you're finally freed back into civilized society.";
 				say "     You ultimately find yourself doing mercenary work keeping the mindless infected at bay in the borders of civilization[if player is submissive], often by using your own body as a twisted tribute[end if]. It seems to sate your terrible, burning need, but only by so much...";
 			else:
@@ -171,6 +171,6 @@ ebonflame scale is infectious. The strain of ebonflame scale is "Ebonflame Drake
 the usedesc of ebonflame scale is "You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.".
 
 instead of sniffing ebonflame scale:
-	say "It's smell of something burnt to a crisp.";
+	say "It smells of something burnt to a crisp.";
 
 Ebonflame Draken ends here.

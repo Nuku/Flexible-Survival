@@ -18,7 +18,7 @@ to say equine attack:
 	else:
 		if a random chance of 2 in 3 succeeds: [ Prefer male action]
 			if cunts of player > 0:
-				if cunt length of player is less than 15 or cunt width of player is less than 10:
+				if cunt length of player < 15 or cunt width of player < 10:
 					say "She flips you over onto your belly and hefts your ass up into the air before yanking your clothes down to your knees. You look over your shoulder just in time to see her grab your [bodyname of player] ass and pull it back towards a frighteningly erect horse cock. It pushes against your [cunt size desc of player] petals, then rudely inches in past them. Her grip is like velvet covered iron, not allowing you to escape from the sudden pain of the huge member invading your snatch. She thumps forward, starting to rock despite the resistance, using those hugely muscled hips of hers to stretch you.[line break][line break]As she pistons into you, the pain begins to slowly ebb as pleasure creeps in. You can feel your passage growing damp and hot as she gives your ass a firm swat, 'Dirty outside wench,' she growls in an ear like a curse as she pulls you back against a rough shove, slamming her hips into yours, the shaft feeling like it's pushing into your belly from the inside. You feel the potent tool swell, then explode in terrific waves of heat into your womb, filling you to the brim, then overflowing with gallons of seed.[impregchance]";
 					if "Male Preferred" is not listed in feats of player and ( "Modest Organs" is not listed in feats of player and cunt length of player > 7 ), increase cunt length of player by 1;
 					if "Male Preferred" is not listed in feats of player and ( "Modest Organs" is not listed in feats of player and cunt width of player > 7 ), increase cunt width of player by 2;
@@ -30,7 +30,7 @@ to say equine attack:
 			say "She snorts loudly as she looks you over, then pushes you to the ground on your knees. 'Stay.' she orders in a tone that does not encourage argument. She leans back a bit and runs her thick fingers along her long, excited shaft, pulling the flesh along the stiff core in long but fast motions. She leaks heavy pre and pauses long enough to scoop it up and run it along the member, allowing her to rock her hips against the motions faster and faster, the shaft bobbing close enough to kiss as the fluid emerges faster and faster. Her heavy balls sway and jostle with every pump as she stares at you almost unblinkingly, snorting louder as the tension hits the breaking point. With a loud neigh, the shaft bulges at the base, rippling up towards the top before painting your world white, hot sticky fluids raining across your face and front in a great deluge of virile horse cum, leaving you drenched with the horse's proof of fertility. With a dismissive snort, she rises and clops off.";
 
 to say beattheequinoid:
-	if cocks of player > 0 and cock length of player > 5 and a random number between 40 and 140 is greater than libido of player:
+	if cocks of player > 0 and cock length of player > 5 and a random number between 40 and 140 > libido of player:
 		say "     The black furred equine sinks to the ground, then slumps over, panting and defeated.  The battle, having gotten your blood pumping, has left your [cock size desc of player] [cock of player] cock engorged and throbbing.  Before you even think otherwise, you jump atop her and pin down her shoulders.  She groans softly and reaches up to push you off, but ends up wrapping her arms around you instead.  Even as you bring your hard rod into position, she spreads her legs for you and whinnies softly in anticipation, moaning as your glans slips in under her ballsac and presses into her wet pussy[if cock length of player < 12].  Her equinoid pussy is very accommodating, letting your penis in easily, but still grips you rather nicely as she clenches down around it in need of being filled[else if cock length of player < 20].  Her equinoid pussy is very accommodating, taking in your large penis easily, but still grips you rather nicely in her need to be filled[else].  Her equinoid pussy stretches a little to take your huge member, but is quite accommodating.  She moans and grips you even harder, her pussy cumming once even as you're stuffing her so full[end if].";
 		say "     Her long, equine cock rests across her body, twitching as you pound into her.  It spits precum across the underside of her huge breasts of the large horse herm.  Having gotten quite aroused by the lovely show of this strong warrior now reduced to a horny slut beneath you, as well as her delicious cunt around you soon pushes you over the edge and you drive hard into her, blasting your hot seed into her pussy.  She arches her back and cums hard as well, painting her body with equine seed as you fill her.  '[one of]Oh yes, breed me you great warrior[or]Fill me with your seed[or]Put your strong colt in me[or]Breed me like your mare[or]Oh, breed me you powerful stud[at random]!' she whinnies loudly.  You do your best to fill her request, draining your balls into her before withdrawing.  As you get up, she moans softly and lays there, rubbing her tummy with a smile on her face.  You can't help but grin as you walk off, knowing another of her tribe will have to replace her on patrol if you've just knocked her up.";
 		now equinoiddefeat is 0;
@@ -46,7 +46,7 @@ to say beattheequinoid:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -73,7 +73,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 10;
 	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 45;;
+	now HP entry is 45;
 	now lev entry is 4; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 7; [ Monster's average damage when attacking. ]
 	now area entry is "Park"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -100,7 +100,7 @@ When Play begins:
 
 when play ends:
 	if bodyname is "Black Equinoid":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if bee girl is tamed:
 				say "     Following a compulsion, you seek out other horses in the park, and are soon welcomed into the herd proper.  Together, you defend the park against interlopers, be they mutant or human.  The exception are the bees; they're tolerated for their benefit to the local flora and their delicious honey.  Because of this, Honey, who accompanied you back to the park, is welcomed by the black equinoids of the herd and lavished with attention.  They show her a lovely tree surrounded by flowers and she soon sets up her home there, becoming a new queen bee and raising a new hive.  Because of your bond with her, there is a peaceful alliance between the herd and the hive.  The bears are kept away and the hive thrives and the equinoids are allowed to harvest honey in peace.";
 				say "     There are some city horses as well that come by from time to time.  They seem friendly enough at first, but the bees overhear them secretly whispering of making your people into slaves and whores.  The herd, warriors at heart, with the help of the bees, attack and drive off these foul, urban horses.  With the herd's numbers and the bees on watch from the air, these interlopers are kept from raiding and some are even captured and made to accept the proper ways of a natural, equine warrior.";

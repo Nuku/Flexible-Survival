@@ -220,7 +220,7 @@ to say FireSpritedesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -247,7 +247,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 15;
 	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 30;						[ The monster's starting hit points. ]
+	now HP entry is 30;						[ The monster's starting HP. ]
 	now lev entry is 3;					[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 5;					[ Monster's average damage when attacking. ]
 	now area entry is "Capitol";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -296,12 +296,12 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 			say "     The sprite winds up and launches another fireball! You take [special-style-2][dam][roman type] damage!";
 		now damagein is dam;
 		say "[normalabsorbancy]";
-		if absorb is greater than dam:
+		if absorb > dam:
 			now absorb is dam;
-		if absorb is greater than 0:
+		if absorb > 0:
 			say "You prevent [special-style-1][absorb][roman type] damage!";
-		decrease hp of the player by dam;
-		increase hp of player by absorb;
+		decrease HP of the player by dam;
+		increase HP of player by absorb;
 		if M is 5:
 			now N is 1;
 		else if a random chance of 1 in M succeeds:
@@ -334,7 +334,7 @@ Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Fire Sprite":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your fire sprite infection spreads through your mind like wildfire, you soon desire little more than to share the gift of the flame inside you with the world, delighting in the havoc and destruction wrought by the beautiful cleansing flames.";
 			if cocks of player > 0:
 				say "     Occasionally your fiery dreamscape is broken by another like you, a female sprite who you share your flame with, filling her body with the warmth of life to further aid in the spread of your mischief.";

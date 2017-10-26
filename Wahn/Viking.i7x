@@ -87,7 +87,7 @@ An everyturn rule:
 			now VikingPregnancy is 2;   [visible pregnancy]
 			if VikingRelationship < 7:[getting visibly pregnant will get Sonya's involvement with the player noticed]
 				now VikingRelationship is 7;
-		if VikingPregCounter is greater than 1:
+		if VikingPregCounter > 1:
 			decrease VikingPregCounter by 1;
 	if VikingUltimatum is 1:
 		say "You remember the [bold type]challenge of the viking chieftain[roman type] against you - running out right about now, your time being up. With you not even showing up, now they'll see Sonya as doubly dishonored - losing in combat against an outlander (with most of them suspecting you of magic or some trickery), who additionally isn't even brave enough to fight her father. Hopefully, you won't run into any of them again, as this'll enrage all of them - even Sonya - a lot. She'd likely try to kill you...";
@@ -103,7 +103,7 @@ An everyturn rule:
 		say "Time's ticking away if you want to fight for Sonya. The [bold type]chieftain's challenge[roman type] you can answer on the beach will run out today, so better grab your gear now and get moving - but watch out, the man will actually try to kill you...";
 	else if VikingUltimatum is 16:
 		say "Time's ticking away if you want to fight for Sonya. The [bold type]chieftain's challenge[roman type] you can answer on the beach will run out in two days, so better grab your gear now and get moving soon - but watch out, the man will actually try to kill you...";
-	if VikingUltimatum is greater than 1:
+	if VikingUltimatum > 1:
 		decrease VikingUltimatum by 1;
 
 Section 1 - Monster Responses
@@ -112,7 +112,7 @@ to say Viking wins:
 	if VikingRelationship is 9:  [fighting Sonya's father]
 		say "";   [dealt with in the event]
 	else:
-		if hp of player > 0:    [player submits]
+		if HP of player > 0:    [player submits]
 			if the player is not facially human or the player is not bodily human or the player is not skintone human:    [non-human player = a monster, in her words]
 				if VikingRelationship is 1:             [first time submit]
 					if charisma of player > 15:   [handsome enough for some sexy time]
@@ -281,8 +281,8 @@ to say Viking loses:
 			else:
 				LineBreak;
 				say "     Making a fist, you punch the viking woman in the nose, sending her sprawling backwards on the sand. She appears dazed for the moment - giving you a chance to gain some ground and get away from her. As you hurry over the beach, a static charge starts to buld all around you. Uh-oh... that doesn't seem like a good thing. You tense for what might happen next, then feel the hum of electricity suddenly quiet down - like the calm before a storm. Your first instinct in that moment is to jump to the side... and it definitively was the right one. A literal thunderbolt hits the sand right where you had been standing, leaving a patch of it molten into glass, spraying outside in a shower of searing hot droplets. Quite a few of them hit and singe you, but at least you didn't get fried by that lightning bolt.";
-				if hp of player > 10:
-					now hp of player is 7;
+				if HP of player > 10:
+					now HP of player is 7;
 	else if VikingRelationship is 2:   [second victory]
 		if the player is not facially human or the player is not bodily human or the player is not skintone human:    [non-human player = a monster, in her words]
 			say "     Breathing heavily, Sonya stumbles back from your last hit, then lowers her sword and shield with a grunt, looking annoyed. 'You beat me - again! There just might be more to the legends about you monsters you than I thought.' With a shrug, her expression changes to one that is a bit more friendly, coupled with eyes that roam over your body with interest. She bites her lip for a second, then continues 'You know... last time with you wasn't half bad, and you certainly proved yourself again. How about another tumble in the dunes?'";
@@ -718,7 +718,7 @@ to say VikingAttacks:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -745,7 +745,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 18;
 	now sex entry is "Male";
-	now hp entry is 80;
+	now HP entry is 80;
 	now lev entry is 9;
 	now wdam entry is 15;
 	now area entry is "Beach";             [ Case sensitive]
@@ -795,8 +795,8 @@ Instead of resolving a Chieftain's Challenge:
 			now monster is y;
 			break;
 	choose row monster from the table of random critters;   [the chieftain is stronger than Sonya]
-	now hp entry is 275;
-	now monsterhp is 275;
+	now HP entry is 275;
+	now monsterHP is 275;
 	now lev entry is 15;
 	now wdam entry is 30;
 	now lootchance entry is 0;
@@ -813,8 +813,8 @@ Instead of resolving a Chieftain's Challenge:
 			now monster is y;
 			break;
 	choose row monster from the table of random critters;
-	now hp entry is 80;
-	now monsterhp is 80;
+	now HP entry is 80;
+	now monsterHP is 80;
 	now lev entry is 9;
 	now wdam entry is 15;
 	now lootchance entry is 40;
@@ -831,7 +831,7 @@ to say VikingDuelDeath:
 to say VikingDuelEscape:
 	say "     After you showed up to fight, it seems the Vikings assumed you had the honor to see it through till the end - which is why you totally managed to surprise them when you suddenly took off. You broke out of the circle of watchers, bowling two of them over and running away before they even realized what was happening. After a moment of shock, the gathered onlookers took up chase, throwing rocks and even one or two axes after you, resulting in many bruises and even a moderately severe cut.";
 	say "     Followed by shouts of 'Coward', 'Wimp' and lots of worse terms, you're hunted almost to exhaustion by the enraged mob. Only by dashing through what looked like some talk or negotiation between the hyenas and leopardmen did you finally manage the lose them. Before the representatives of the two gangs managed to react with anything but growls at your sudden appearance, the viking lynch-mob ran straight into them, causing a free for all fight. Not even looking back to check what was happening there or if anyone was still following you, you just kept going until you finally arrived at the library, bloodied and exhausted.";
-	now hp of player is 1;
+	now HP of player is 1;
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry is "Viking":
@@ -989,7 +989,7 @@ Section 5 - NPC Sonya
 If you can add Sonya to the viking longboat, along with discussion topics and a sex scene, just fingers and body contact for women, the guy on top for the other gender. I'd like her to have some scaling conversation about how many children she and the PC have had, some conversations and pointers about interesting events at the Beach for the player to look for. I'm keeping this one simple for the time being.
 ]
 
-Sonya is a woman. The hp of Sonya is normally 0.
+Sonya is a woman. The HP of Sonya is normally 0.
 Sonya is in Sonya's Cabin.
 The description of Sonya is "[SonyaDesc]".
 The conversation of Sonya is { "Mew!" }.
@@ -1471,7 +1471,7 @@ to VikingInfect:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"viking sword"	"A beautifully crafted sword, about 30 inches long, with a keen edge to its blade. The favorite weapon of your Viking wife, Sonya, it became yours as you married. Better take good care of it - it's a pretty good weapon, well-balanced ...and there might be some marital problems ahead if you let it rust or lose it."	5	viking sword
+"viking sword"	"A beautifully crafted sword, about 30 inches long, with a keen edge to its blade. The favorite weapon of your Viking wife, Sonya, it became yours as you married. Better take good care of it - it's a pretty good weapon, well-balanced... and there might be some marital problems ahead if you let it rust or lose it."	5	viking sword
 
 viking sword is an armament.
 It is part of the player.
@@ -1489,7 +1489,7 @@ when play ends:
 [
 when play ends:
 	if bodyname of player is "Viking":
-		if humanity of player is less than 10:   [succumbed]
+		if humanity of player < 10:   [succumbed]
 			say "     A";
 		else:    [sane]
 			say "     B";

@@ -70,7 +70,7 @@ to say bull vict:
 			say "Your blood seems to have covered the scent of the bovine cow attack from earlier.";
 			decrease CowKiller by 1;
 	else if vorelevel > 1 and a random chance of vorelevel in 5 succeeds and ( a random chance of antimoo in 20 succeeds or cunts of player is 0 ) and scalevalue of player < 4:
-		say "     The bull snorts after knocking you down and stomps overtop of you.  Its cock, semi-engorged after the fight, slaps against your face, leaving a streak of bovine pre across your face[if hp of player > 0].  Feeling arousal[else].  Still dazed from the fight[end if], you turn your head towards it to get a proper taste, but are instead surprised as the bull pushes its large cock forward.  The thick cock slams into you and stretches surprisingly wide, engulfing your whole head.  Your initial shock allows the beast a chance to press its advantage and its cock gulps around you, pulling in your shoulders as well.  Surrounded by the hot, squeezing flesh of its bestial manhood, you are assaulted by the strong, musky scent of its virility.  Any struggles you make are futile and seem to only further excite the big bovine as you are pulled inches at a time along that meaty tunnel.  More and more of your [bodytype of player] body is drawn into that bulging bovine penis.";
+		say "     The bull snorts after knocking you down and stomps overtop of you.  Its cock, semi-engorged after the fight, slaps against your face, leaving a streak of bovine pre across your face[if HP of player > 0].  Feeling arousal[else].  Still dazed from the fight[end if], you turn your head towards it to get a proper taste, but are instead surprised as the bull pushes its large cock forward.  The thick cock slams into you and stretches surprisingly wide, engulfing your whole head.  Your initial shock allows the beast a chance to press its advantage and its cock gulps around you, pulling in your shoulders as well.  Surrounded by the hot, squeezing flesh of its bestial manhood, you are assaulted by the strong, musky scent of its virility.  Any struggles you make are futile and seem to only further excite the big bovine as you are pulled inches at a time along that meaty tunnel.  More and more of your [bodytype of player] body is drawn into that bulging bovine penis.";
 		say "     You are eventually deposited into its ballsac and left to bathe in its virile semen while its cum factories churn away.  You lose track of time, falling into a lustful haze in the heated chamber, only to be roused much later by some rubbing from the outside.  As this continues, you can hear the faint mooing of the excited bull growing louder before you are finally blasted free along with a sticky load of bull semen.  Landing in the grassy field, you are set upon by the cow who masturbated the bull to climax.  She licks you clean, her sloppy tongue getting as much of bovine seed as she can get before you make your getaway.";
 		say "[mooplus]";
 		infect;
@@ -130,11 +130,11 @@ to say bull attack:
 	if CowKiller > 0:
 		say "[one of]The bull lowers its horns, bellowing wildly and charges at you, raking your side painfully.[or]Screaming and bucking around you the huge animal lashes out with its back hooves, knocking you aside like a tin can.[or]Shaking its huge head as it bolts around wildly, it catches you with a horn, dragging you for a while before swinging its head up and throwing you into the air. As you hit the ground you feel real pain blossom into your legs.[at random]";
 	else:
-		if monsterhp < ( hp entry / 4 ):			[ < 20 for regular play ]
+		if monsterHP < ( HP entry / 4 ):			[ < 20 for regular play ]
 			say "The bull flicks its tail at you. You have finally annoyed him so much he has moved.[combat abort]";
 		say "[one of]The big bull snorts softly, trying to eat grass and completely ignoring you.[or]Looks up from its grazing for a moment, making a mooing sound at you, before returning to its meal.[at random]";
-		if monsterhp < ( ( hp entry * 7 ) / 10 ):		[ < 56 for regular play ]
-			increase monsterhp by 9 + ( hp entry / 5 );	[ +25 hp for regular play ]
+		if monsterHP < ( ( HP entry * 7 ) / 10 ):		[ < 56 for regular play ]
+			increase monsterHP by 9 + ( HP entry / 5 );	[ +25 HP for regular play ]
 		say "You notice that the big animal is almost completely ignoring your attacks as they fail to pierce its tough hide.";
 
 to say bull desc:
@@ -216,7 +216,7 @@ to say bovine vict:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -231,7 +231,7 @@ When Play begins:
 	now face entry is "drawn forward into a very cow-like muzzle, ending at a large damp nose. Large ears flick back and forward above your head idly";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "a cross between a bovine and a humans, large splayed hips lead down to hoofed feet";[ Body Description, format as the text "Your Body is (your text)."]
 	now skin entry is "[if looknow is 1]a thick mat of rough fur covering your body, patterned like a friesian cow over a thick[else]cow patterned, furred[end if]";[ skin Description, format as the text "You have (your text) skin."]
-	now tail entry is "A thin, almost useless cow tail extends down over your buttocks, its only use seems to be to scare flies away.";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "A thin, almost useless cow tail extends down over your buttocks, its only use seeming to be to scare flies away.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "bovine";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it draws forward, flowing into a large blunt cows muzzle even as your ears migrate up your head and stretching out to have a very bovine appearance. Slow thoughts begin to slowly push away your present needs. You find yourself mooing softly under your breath"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "grows and stretches, bones growing hugely into the frame of a cow beast, forcing your muscles and posture to follow"; [ body change text. format as "Your body feels funny as (your text)." ]
@@ -245,8 +245,8 @@ When Play begins:
 	now int entry is 6;
 	now cha entry is 10;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 80;			[ How many HP has the monster got? ]
-	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 80;			[ How many HP has the monster got? ]
+	now lev entry is 6;			[ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 2;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Park";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -281,7 +281,7 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 to say bovineheat:
 	say "You feel your throat go drier and drier.  It seems only milk fresh from the cow will fill your growling stomach.";
 	increase thirst of player by 6 minus (Mooing divided by 3);
-	if Mooing is greater than 0 and a random chance of 2 in 5 succeeds:
+	if Mooing > 0 and a random chance of 2 in 5 succeeds:
 		decrease Mooing by 1;
 
 

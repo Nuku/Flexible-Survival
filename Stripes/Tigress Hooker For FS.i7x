@@ -26,24 +26,24 @@ to say tigress_desc:
 	if mqstatus is 3:				[fighting tigresses at the motel]
 		say "     The lovely tigress is quite upset at the intruder to hir motel home. Shi growls angrily and readies to deal with you soundly so shi can have hir way with you and put you in your place. Under hir.";
 		if hardmode is true and level of player > 5, let debit be level of player - 5;
-		now hp entry is 55 + ( debit * 4 );
-		now monsterhp is 55 + ( debit * 4 );
+		now HP entry is 55 + ( debit * 4 );
+		now monsterHP is 55 + ( debit * 4 );
 		now wdam entry is 7 + ( debit / 3 );
 		now lev entry is 5 + debit;
 		now libido entry is 100;
 	else if mqstatus is 6:				[fighting the matron]
 		say "     The tigress matron of the motel is a larger and more impressive female. Shi's got an extra foot of height on any of hir girls and a much fuller rack as well. Hir long, flowing orange hair swishes as shi pulls off the bathrobe shi was wearing, baring hir strong and sensual body to you. Shi looks at you with a strange expression, clearly not pleased that you've burst in here after hurting several of hir girls, but eager to put you in your place. Hir dark nipples and cock are hard with hir anticipation of enjoying a new plaything.";
 		if hardmode is true and level of player > 8, let debit be level of player - 8;
-		now hp entry is 90 + ( debit * 6 );
-		now monsterhp is 90 + ( debit * 6 );
+		now HP entry is 90 + ( debit * 6 );
+		now monsterHP is 90 + ( debit * 6 );
 		now wdam entry is 12 + ( ( 4 * debit ) / 11 );
 		now lev entry is 8 + debit;
 		now libido entry is 100;
 	else:					[standard tigress]
 		say "     Leaning against a building is a striking female feline. She is wearing a skimpy outfit, a short top and even shorter skirt. This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes. Her bosom and stomach have snowy, white fur that covers them. Her ears have [one of]large hoop earrings[or]a trio of small studs[or]tattoos of stars on the inside[or]long, dangling earrings[at random]. Her [one of]long, black hair is held in a pony tail.[or]hair is dyed a bright red.[or]orange hair is styled into fiery mane.[or]dark hair has been bleached blond, though you can see the darker roots.[or]hair is neon pink and very long, hanging to her waist.[or]hair is a deep blue, with green tips.[at random]     Spotting you before you can move away, she flicks her cigarette aside and sizes you up quickly. 'So honey, you lookin['] for a little fun?  For a little something, I'll show you a good time.' As she steps up, you catch the edge of something extra making a bulge under her skirt. Clearly this tigress hooker is equipped to pleasure any client shi may find. And shi's found you!";
 		if hardmode is true and level of player > 5, let debit be level of player - 5;
-		now hp entry is 55 + ( debit * 4 );
-		now monsterhp is 55 + ( debit * 4 );
+		now HP entry is 55 + ( debit * 4 );
+		now monsterHP is 55 + ( debit * 4 );
 		now wdam entry is 7 + ( debit / 3 );
 		now lev entry is 5 + debit;
 		now libido entry is 0;
@@ -58,7 +58,7 @@ to say losetotigress:
 		say "Oh No! You are beaten up by the tigress matron.";
 		stop the action;
 	now tempnum is 0; [Reset payment flag]
-	if hp of player > 0:									[DID THE PLAYER SUBMIT? - YES]
+	if HP of player > 0:									[DID THE PLAYER SUBMIT? - YES]
 		if junknum is 0:									[Normal encounter]
 			say "     As you accept hir offer, shi moves up to you with a lustful smile. Rumbling and purring as shi rubs hir body against yours, shi guides you into a shadowy alleyway as shi starts releasing the easy straps on hir street clothes. There's an old mattress in there and from the smell, shi's used it for hir clients before. As shi guides you towards it, shi nuzzles along your neck and slides your backpack's straps off your shoulders. As shi helps you with your remaining clothes with one paw and a smile, hir other dips into your pack, searching for something to take as payment.";
 			say "[paymentcheck][line break]"; [Put forth a payment]
@@ -458,7 +458,7 @@ to say paymentcheck:
 		say "     Before you have a chance to recover, hir teeth are at the back of your neck and hir throbbing cock grinds against your rear. You look for a means to escape, but those sharp teeth keep you in place. Then suddenly it's too late and the tigress's cock is pushing into your back door, spreading your tailhole open painfully fast. Shi gives you no time to adjust to the rapid intrusion, pounding you in quick, hard strokes. Despite yourself, you start to grow aroused from the assfuck you're receiving, but shi holds your arms tightly to the wall, preventing you from tending to your growing arousal.";
 		say "     Eventually, you feel the hot blast of hir cum inside you and you moan in pleasure. You hope shi'll let you get off now, but shi just holds you to the wall, growling softly. Growing fearful, you continue to wait, wiggling your rear over hir cock for what little stimulation you can get without rubbing your tender flesh against the rough brick wall. Suddenly, your bowels are filled with a rush of stinging fluid, painful to your abused hole. As shi withdraws, shi continues to empty hir bladder, pissing across your butt. Shi shoves you to the ground, then finishes draining hirself all over your battered body.";
 		say "     Painfully grabbing you by the neck and ass, claws sinking into your flesh, shi tosses you from the alley. Shi gives you a final kick to send you on your way. You are left a dirty mess, reeking of hir scent and painfully aroused from the rough sex without relief.";
-		decrease hp of player by 20;
+		decrease HP of player by 20;
 		increase libido of player by 15; [Increase libido because shi doesn't let you get off...]
 		if libido of player > 100:
 			now libido of player is 100;
@@ -471,7 +471,7 @@ to say paymentcheck:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -498,8 +498,8 @@ When Play begins:
    now int entry is 12;
    now cha entry is 18;
    now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 55;
-   now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+   now HP entry is 55;
+   now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
    now wdam entry is 7; [Amount of Damage monster Does when attacking.]
    now area entry is "Red"; [ Location of monster, in this case Red Light District ]
    now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']

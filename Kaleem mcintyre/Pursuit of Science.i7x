@@ -166,7 +166,7 @@ to say omioquest3:
 			say "Slamming into one of the wyverns both you and the flying reptile squawk in pain at your star-crossed gathering. However, the worst part doesn't exactly come until two seconds later when you and your impromptu mount end up spiraling down onto the ground when the wyvern loses its focus and forgets to flap its massive wings on a coming updraft. Screaming as the ground hurriedly grows larger in front of your eyes you hang onto to your traveling companion in vain hopes that, you'll at least, survive the jarring impact you know is coming.";
 			if a random chance of 2 in 5 succeeds:
 				say "Thankfully the wyvern ends up breaking both of your falls as it crashes onto a large truck. Well more so for you than the reptile because by breaking your fall the flying scalie has given you the time to both to collect yourself and then jump off of its backside, once your head has stopped ringing that is. Deciding that this adventure is over for today you hurry on your way back to your bunker at top speeds. Good thing to because five seconds after you start to beat feet several of the fallen wyvern's companions are flying overhead to have a look-see over at their dazed and slightly moaning cohort.";
-				decrease hp of player by 15;
+				decrease HP of player by 15;
 				Move player to Bunker;
 				extend game by 8;
 				increase score by 15;
@@ -185,8 +185,8 @@ to say omioquest3:
 				now omq is 4;
 		else:
 			say "Omio's attack sends you reeling back from an instant K.O. and soon stars are popping out in front of your eyes as darkness covers you vision. The last thing you hear before unconsciousness kicks in is, 'Why in the hell are these things continuously bothering me!? I'm so going to make a [bold type]shock[roman type] device for these pests. Forget about being nice!'";
-			decrease hp of player by 100;
-			if hp of player < 1, now hp of player is 1;
+			decrease HP of player by 100;
+			if HP of player < 1, now HP of player is 1;
 			extend game by 8;
 			increase score by 10;
 			now omq is 4;
@@ -270,7 +270,7 @@ to say omioquest8:
 	let taintedwoolfound be 0;
 	if gatherspottedfur is 0:
 		if carried of Spotted fur >= 5:
-			say "'Well, aren't you a dashing hero, collecting this fur from savage leopards at the behest of a fair maiden.' Omio teases you and you find yourself blushing from the compliment...at least you think it's a compliment. The look in the other's golden eyes seem to speak somewhat differently though.'";
+			say "'Well, aren't you a dashing hero, collecting this fur from savage leopards at the behest of a fair maiden.' Omio teases you and you find yourself blushing from the compliment... at least, you think it's a compliment. The look in the other's golden eyes seem to speak somewhat differently though.'";
 			decrease carried of Spotted fur by 5;
 			now gatherspottedfur is 1;
 	if gathertaintedwool is 0:
@@ -323,7 +323,7 @@ to say omioquest8:
 				increase score by 20;
 				now omq is 9;
 	else:
-		say "'I know that I just asked you to go on a hunting missing for me, not more than a couple of days prior, but I do need those materials for my research .";
+		say "'I know that I just asked you to go on a hunting missing for me, not more than a couple of days prior, but I do need those materials for my research.";
 		if gatherspottedfur is 0:
 			if Spotted fur is not owned:
 				say "'Remember, [']five spotted fur['] in the high rise district. Fix it into your memory. A little ditty about both will help if all else fails. What do you know that rhymes with fur?' Omio asks honestly while tilting her head to the side.";
@@ -386,8 +386,8 @@ to say omioquest10:
 				say "'For now though,' Omio says catching you just as you are about to go deep into thoughts of [if cocks of player > 0]nice juicy cunts dribbling with sweet honey[else]hard and thick cocks leaking pre cum like slow flowing rivers[end if]. A tea kettle smacks you across the head all of a sudden. 'Don't worry about it. Just know that there is a going to be a safe enough haven for you to go, if you feel that the world is becoming too much, provided that you are willing to do you share enough to help out the whole.' Omio glares at you as the tea kettle rolls on the floor back into the kitchen. 'We're not running a charity site for people just looking to get over on someone else. We're running a place where everyone helps everyone else. All for one and one for all, as you could say.'";
 				WaitLineBreak;
 				say "Anyway,' The red head smiles and then giggles in her normal girlish way signifying that the conversation's focus has now changed. 'Thank you for helping me out just now. I'm going to be working more on my experiments so please, continue to help me out as much as you can. It will go a long way towards making this so much better for everyone involved.' Omio winks and you breathe out a sigh of disbelief at the golden eyed woman's sudden personality flip.";
-				decrease hp of player by 10;
-				if hp of player < 1, now hp of player is 1;
+				decrease HP of player by 10;
+				if HP of player < 1, now HP of player is 1;
 		else:
 			LineBreak;
 			say "'Alright.' Omio giggles good-naturedly. It seems the red head is not bothered by your lack of interest in her people in the slightest. Maybe that's proof she trusts you? Or maybe not? 'Any who, thanks for all of your hard word. Please, accept these as a gift for all of your trouble, my sweet little bandit in disguise.' The thought of your past caper makes you roll your eyes to the ceiling.";
@@ -448,7 +448,7 @@ to say omioquest14:
 			say "'So I can transmute wood into metal. Given that, I should be able to turn iron into either orichalcum or mythril, with the right chemical, of course.' Omio seems to go off somewhere inside of her own head and while you might normally have not minded you currently wonder what's become of your former weapon. 'Oh, sorry to keep you waiting,' Omio turns to blush at you before chuckling abashedly. 'If you give me a moment then I'll fashion this into something slightly useful for you and then send it your way.' Nodding to the red head you watch as Omio goes off before you have a chance to actually reply to her verbally.";
 			WaitLineBreak;
 			say "An hour later, 'Well, it's ready for you now!; Omio squeaks as she comes out of her room while polishing a long rod about seven feet tall and one and a half inches wide. 'I hope you like it.' Omio says before handing you the newly improved weapon. Giving the rod a few test swings you find that whatever Omio has done has now reincarnated the former piece of driftwood into a much more powerful pole that is both much stronger and much lighter than it used to be.";
-			say "Thanking Omio for her gift and then go about placing the rod down at your side so that you can lean on it as your legs have currently fallen asleep on you, you smile to the other appreciatively. 'Consider it a gift for all of your hard work.' The red head chuckles at you before sighing somewhat mournfully. 'After everything that you've done for me I do want you to know that you have not only my gratitude, but also a place with me and my people within the Promethean society.'";
+			say "Thanking Omio for her gift and then going about placing the rod down at your side so that you can lean on it as your legs have currently fallen asleep on you, you smile to the other appreciatively. 'Consider it a gift for all of your hard work.' The red head chuckles at you before sighing somewhat mournfully. 'After everything that you've done for me I do want you to know that you have not only my gratitude, but also a place with me and my people within the Promethean society.'";
 			WaitLineBreak;
 			say "'Though from what you've shown me you may not need to be taken care of nor provided for, so it may be me calling on you instead of the other way around later on. I hope you'll be willing to help me out, if I ever need it.' Telling the red head that you'd think it over Omio simply nods at you before chuckling again.'";
 			say "'That's fine. I can accept that without problem. Anyway, if you ever need a place to stay then just come on over and hang out for a while. I'll be more than happy to share some tea with you.' Omio moves to bow low and you can only chuckle and then shake your head at the crazy researcher. That is, right before a strange feeling flashes through your mind all of a sudden.";

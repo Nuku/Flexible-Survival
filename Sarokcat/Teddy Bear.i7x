@@ -15,7 +15,7 @@ when play begins:
 to say teddy bear attack:
 	choose row monster from the table of random critters;
 	if scalevalue of player <= 3 and a random chance of 2 in 5 succeeds:
-		if hp of player > 0:
+		if HP of player > 0:
 			say "     You are pulled into a soft hug by the stuffed bear";
 		else:
 			say "     You are grabbed by the fluffy, stuffed bear in a tight hug, squeezing the air out of you";
@@ -27,7 +27,7 @@ to say teddy bear attack:
 			say ". As has happened before, the pink bear holding you opens its muzzle in a wide, wide grin, pulling you towards it. You try to squirm from its grip, but it's got too strong a hold on you. Your head gets stuffed into its open maw. The soft, fabric mouth slides over you smoothly as you're pulled into her. Her fabric tongue brushes across your face and neck as you're steadily lifted further up and into its mouth.";
 			say "     You feel her thump to the ground on her padded ass after raising you vertically, your momentum and gravity sliding your shoulders into her muzzle and down into her throat. Soft, velvety gulping feeds your [bodytype of player] body into her mouth. Your groin is slathered by her soft tongue. The feel of it across your [if cocks of player > 0 and cunts of player > 0]cock[smn] and cunt[sfn][else if cocks of player > 0]cock[smn][else if cunts of player > 0]cunt[sfn][else]bare groin[end if] causes you to moan and grow aroused despite yourself[if cocks of player > 0 or cunts of player > 0]. She takes her time licking you, savouring playing with you until she can get you to cum. You and your cum are[else]. After some playful licking, you are[end if] swallowed down, destined for her warm belly. You curl up there, feeling sleepy inside the bear's padded tummy, eventually drifting off into childlike slumber.";
 		teddybearvored;
-	else if cocks of player is greater than 0:
+	else if cocks of player > 0:
 		say "     The giant stuffed bear lets out a happy cry as you collapse, before quickly climbing on top of you. You soon see that someone has stitched a large opening in the crotch, right where a cunt should be. Before you can think about it too much, she quickly stuffs your [cock of player] cock into her waiting opening. You cry out as her velvety insides caress you, her body moving and twisting on top of you as her insides massage you like a velvet glove, ripping one of your most intense orgasms ever out of you. Soon your mind begins to cloud over with pleasure as she tirelessly rides you to orgasm after orgasm, hardly pausing at all as she runs her soft plush hands up and down your body, her ursine muzzle planting soft kisses over your face the entire time. Eventually your body can't take anymore, and you pass out in a haze of pleasure. Waking up, there is no sign of your plush tormentor, realizing she has probably gone off to pleasure someone else, you quickly gather up your belongings and leave while you can.";
 	else:
 		say "     The giant stuffed bear lets out a happy cry as you collapse helplessly. Its hands wander your body for a minute, stripping you naked before it plops down next to you and begins to rub its soft plush body on you. You quickly realize it is actually a female bear, or at least someone has made an appropriate opening, as she rubs herself on your thighs. She then lowers her bearlike muzzle to your female opening and begins to lick and rub at you with her long tongue and furred muzzle, causing you to moan in pleasure. Her plush fur and soft whiskers tickle your thighs as her flexible tongue massages your insides, causing you to clench and rub your legs along her soft sides as the pleasure builds, until finally your orgasm shoots through you, causing you to cry out as you cover her plush face in your female juices. Seeming somewhat smug the giant teddy bear lifts her damp muzzle up, licking it clean as she moves up beside you, gathering you into her soft fluffy arms as you drift off into an exhausted slumber. Waking up later there is no sign of the big fluffy bear, making you feel vaguely sad and lonely as you gather up your belongings and leave.";
@@ -99,8 +99,8 @@ to teddybearvored:
 	else:
 		say "     As you slumber inside that soft belly, you dream of teddy bears and warm hugs. These dreams go on and on, filling your mind with their fuzzy thoughts of plush happiness until that is all that remains. You come to shortly after being let out of the plush bear, rising up and giving her a soft, padded hug with your teddy bear body. You, like her, are a living teddy bear creature, both in body and in mind. After some playful, kinky cuddling together, you skip down the midway, padded paw in padded paw.";
 		now teddyvored is -100;
-		now xp of player is 0;  [prevents accidental level up]
-		if the player is not lonely, now xp of companion of player is 0;
+		now XP of player is 0;  [prevents accidental level up]
+		if the player is not lonely, now XP of companion of player is 0;
 		now non-infectious entry is true;  [prevents regular teddy bear infection from occurring]
 		now tailname of player is "Teddy Bear";
 		now facename of player is "Teddy Bear";
@@ -118,14 +118,14 @@ to teddybearvored:
 		now battleground is "void";
 		now combat abort is 1;
 		attempttowait;
-		end the game saying "Having been consumed by the teddy bear, you've been turned into another of the plush bears roaming the fairgrounds.";
+		end the story saying "Having been consumed by the teddy bear, you've been turned into another of the plush bears roaming the fairgrounds.";
 		stop the action;
 
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -138,7 +138,7 @@ When Play begins:
 	now face entry is "large teddy bear like face, with a short muzzle and rosy cheeks. Your big black eyes seem comical and cute, and your mouth is pulled upwards by your muzzle, so it seems as if you are always smiling goofily";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "rounded in the middle with somewhat round arms and legs, and plump, plush, paw-like hands, your body almost feels like it is full of some sort of strange stuffing that moves around as you walk, poking yourself you can see your clawed paw sink deeply into your stuffed side with almost no pain whatsoever";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]brown furred[or]softly furred[or]fake furred[or]strangely plush[at random]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a short plush little bear tail attached to your rear, while it doesn't seem to be made of flesh and blood, you can still feel it as if it were.";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a short, plush little bear tail attached to your rear, and while it doesn't seem to be made of flesh and blood, you can still feel it as if it were.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]plush[or]teddy bear[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face balloons outwards as your head seems to swell up, your cheeks stretching out and a cute little muzzle forming as your face becomes that of a happy giant teddy bear"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it shifts and plumps outwards, your hands and feet becoming fatter and rounder, making it hard to balance as you seem to become much more like a children's toy"; [ body change text. format as "Your body feels funny as (your text)" ]
@@ -152,8 +152,8 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 18;
 	now sex entry is "Female";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 50;
-	now lev entry is 5;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 50;
+	now lev entry is 5;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 7;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Midway";  [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 0;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -179,7 +179,7 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Teddy Bear":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if teddyvored is -100:
 				say "     You stay together in the state fair with your plushie friend, feeling very happy together. You snuggle and play together often, [if cocks of player > 0]fucking her with your plush cock[else if cunts of player > 0]licking each other with your velvety tongues[else]licking her with your velvety tongue[end if] and roaming the midway in search of others to cuddle with. From time to time you stumble across other teddy bears like yourselves and have a grand old time together, but other times you're even luckier and find a human. Having been shown how to do it by your pink friend, you really enjoy swallowing them down to give them an extra-special belly hug, helping them to become more happy teddy bears to wander around the fair. You always have a particularly good time meeting up with them again as bears and enjoying soft, plush sex with those you've changed in this manner.";
 			else if the player is pure:

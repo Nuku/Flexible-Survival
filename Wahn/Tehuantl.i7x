@@ -14,42 +14,42 @@ the fuckscene of Tehuantl is "[TehuantlSex]".
 the scent of Tehuantl is "Tehuantl has an exotic earthy aroma which reminds you of the wilds.".
 
 to say TehuantlDesc:
-	if hp of Tehuantl < 50: [female Tehuantl]
+	if HP of Tehuantl < 50: [female Tehuantl]
 		say "     Tehuantl is an exotic-looking female jaguar, with wide hips, long legs and an alluring figure. Her long dark hair, which matches the black rosettes in her golden yellow fur, is tied up in a long ponytail which reaches down to the middle of her back. Noticing your eyes upon her, she saunters over to you, showing off her naked body to full effect. There is a deep purr in her voice as she greets her [if player is female]mistress[else]master[end if] and leans in to rub her furred cheek against your shoulder.";
 	else: [male Tehuantl]
 		say "     Tehuantl is an exotic-looking male jaguar, with a lean physique and impressive muscles. His bearing and fluid movements make it instantly clear that he knows how to fight - not as good as you though, as you forced him to submit to you in the museum and took the proud feline as your pet. Having accepted his new role under you, the jaguar keeps his feathered shield and obsidian-toothed Aztec sword stashed next to his bedroll these days, spending his time with trying to please you instead of martial training.";
 		say "     Noticing your eyes upon him, Tehuantl saunters over to you, showing off his naked body to full effect. There is a deep purr in his voice as he greets his [if player is female]mistress[else]master[end if] and leans in to rub his furred cheek against your shoulder.";
 
 Instead of conversing the Tehuantl:
-	if hp of Tehuantl is 11: [first heat started]
+	if HP of Tehuantl is 11: [first heat started]
 		say "[TehuantlHeatIntro]";
-		now hp of Tehuantl is 12;
+		now HP of Tehuantl is 12;
 		now Feline Relief is unresolved;
-	else if hp of Tehuantl is 14: [toys found]
+	else if HP of Tehuantl is 14: [toys found]
 		say "     As you approach Tehuantl you drop your bag and dig out the toys you've collected for her, as well as her extra surprise. When she spots you she rushes over, nearly knocking you down as she hugs you tightly, causing the rubbery sex toys to slip from your grasp and bounce across the floor. 'Oh master, you are so kind!' she rumbles as she surveys the colourful toys scattered around her before she kisses you lightly on the cheek. As Tehuantl gets on her hands and knees to gather and inspect the things you've brought her, you quickly scan the floor for the thin red collar and quickly move to pick it up before she spots it as well.";
 		say "     Quietly sneaking up behind her as she admires a particularly large pink dildo, you carefully unclasp the collar and move to place it around her neck. Tehuantl gives a curious meow as she hears the bell jingle above her head, looking back to see you holding the collar just above her. She smiles as you reach down to place it around her neck, purring happily as you fasten it snugly around her throat. She bats the bell softly several times, delighting in the cute jingle as you gently pet her for a short while before you get back to what you were doing, leaving her to get back to inspecting the toys you've brought her.";
 		now TehuantlStatus is 1;
-		now hp of Tehuantl is 15;
+		now HP of Tehuantl is 15;
 		now TehuantlTimer is turns;
 	else if TehuantlStatus is 2: [in heat]
-		say "     [one of]Tehuantl mewls at you plaintively as she stares up from her spot on the floor, furiously working [if hp of Tehuantl > 14]a large dildo[else]several fingers[end if] into her needy cunt.[or]'Oh master, I need you...'[or]Too busy licking and sucking at her own groin as she mewls in pleasure, Tehuantl doesn't even notice you approach.[or]'Please, fill me master.'[at random]";
-	else if hp of Tehuantl > 49 and hp of Tehuantl < 100: [male Tehuantl]
+		say "     [one of]Tehuantl mewls at you plaintively as she stares up from her spot on the floor, furiously working [if HP of Tehuantl > 14]a large dildo[else]several fingers[end if] into her needy cunt.[or]'Oh master, I need you...'[or]Too busy licking and sucking at her own groin as she mewls in pleasure, Tehuantl doesn't even notice you approach.[or]'Please, fill me master.'[at random]";
+	else if HP of Tehuantl > 49 and HP of Tehuantl < 100: [male Tehuantl]
 		say "     [one of]Tehuantl runs his paws down your chest as he nuzzles up against you, purring softly as his hands slide down towards you groin.[or]'My big strong warrior, I hope you're here to use your servant again.'[or]'I look forward to being beneath you again soon, [master].'[or]'How can I serve - or service - you, my [master]?'[or]Tehuantl rumbles softly as he grooms himself on one of the padded chairs, licking his fur while one hand slowly strokes his erect cock.[at random]";
 	else:
 		say "     [one of]Tehuantl runs her paws down your chest as she nuzzles up against you, purring softly as her hands slide down towards you groin[or]'My big strong warrior, I hope you're here to use your pussycat again.'[or]'I look forward to being beneath you again soon, master.'[or]'How can I serve - or service - you, my master?'[or]Tehuantl rumbles softly as she grooms herself on one of the padded chairs, slowly working towards her moist cunt.[at random]";
 
 to say TehuantlSex:
-	if hp of Tehuantl is 11:
+	if HP of Tehuantl is 11:
 		try conversing the Tehuantl;
 	else if cocks of player < 1 and cunts of player < 1:
 		say "     As eager as you are to have some fun with your feline pet, you find yourself ill equipped to have any fun with her at the moment.";
 	else if lastfuck of Tehuantl - turns < 6:
-		if hp of Tehuantl > 49: [male]
+		if HP of Tehuantl > 49: [male]
 			say "     Tehuantl rubs himself against you and purrs, but then pulls back a little and says, 'Mmm, as much as I would love my big warrior to make use of [if player is female]her[else]his[end if] servant again, I need some time to recuperate please.'";
 		else: [female]
 			say "     Tehuantl rubs herself against you and purrs, but then pulls back a little and says, 'Mmm, as much as I would love my big warrior to make use of [if player is female]her[else]his[end if] pussycat again, I think it would be nicer for both of us if we took a break.'";
 	else:
-		if hp of Tehuantl < 50:
+		if HP of Tehuantl < 50:
 			say "     Spotting your feline pet [one of]stretching suggestively[or]bathing herself, paying particular attention to her groin[or]lounging around the library[at random], you consider having some fun with her.";
 			say "[TehuantlSexMenu]";
 		else:
@@ -61,13 +61,13 @@ to say TehuantlSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0 and hp of Tehuantl < 50: [male/herm player, female Tehuantl]
+	if cocks of player > 0 and HP of Tehuantl < 50: [male/herm player, female Tehuantl]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her";
 		now sortorder entry is 1;
 		now description entry is "Make use of your pussy's pussy";
 	[]
-	if cocks of player > 0 and hp of Tehuantl < 50 and TehuantlStatus is 2: [male/herm player, female Tehuantl in heat]
+	if cocks of player > 0 and HP of Tehuantl < 50 and TehuantlStatus is 2: [male/herm player, female Tehuantl in heat]
 		choose a blank row in table of fucking options;
 		now title entry is "Soothe her heat";
 		now sortorder entry is 2;
@@ -85,19 +85,19 @@ to say TehuantlSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Put your kitty's rough tongue to use";
 	[]
-	if cunts of player > 0 and hp of Tehuantl < 50 and TehuantlStatus is 2: [female player, female Tehuantl in heat]
+	if cunts of player > 0 and HP of Tehuantl < 50 and TehuantlStatus is 2: [female player, female Tehuantl in heat]
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 5;
 		now description entry is "share in some mutual pleasure with Tehuantl";
 	[]
-	if hp of Tehuantl > 49: [any player, male Tehuantl]
+	if HP of Tehuantl > 49: [any player, male Tehuantl]
 		choose a blank row in table of fucking options;
 		now title entry is "Ride him";
 		now sortorder entry is 6;
 		now description entry is "Make use of your kitty's manhood";
 	[]
-	if cocks of player > 0 and hp of Tehuantl > 49: [any player, male Tehuantl]
+	if cocks of player > 0 and HP of Tehuantl > 49: [any player, male Tehuantl]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the jaguar's ass";
 		now sortorder entry is 7;
@@ -138,7 +138,7 @@ to say TehuantlSexMenu:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
-				say "     You step back from the submissive feline, shaking your head slightly as [if hp of Tehuantl < 50]she[else]he[end if] gives a questioning look.";
+				say "     You step back from the submissive feline, shaking your head slightly as [if HP of Tehuantl < 50]she[else]he[end if] gives a questioning look.";
 				wait for any key;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
@@ -165,7 +165,7 @@ to say TehuantlSex_vag_Inheat:
 	say "     With your twitching member still buried in Tehuantl's quivering tunnel, you lay atop her soft-furred form. She rumbles happily as your fingers trace and tickle her delicate form. You lay together with Tehuantl, cuddling for some time, simply enjoying your pet's company for a while before you finally lift yourself from the couch[if cockname of player is listed in infections of BarbedCocklist], sending one last ripple of pleasure through both of you as your barbs make one final rough withdrawal[end if].";
 
 to say TehuantlSex_cunni:
-	if hp of Tehuantl < 50: [female]
+	if HP of Tehuantl < 50: [female]
 		say "     Deciding to put Tehuantl's rough feline tongue to use, you drop your gear and approach her slowly while letting one hand wander down between your things. She mrowls lustfully as you approach, licking her lips as she watches your fingers slowly part your pussy lips. Taking a seat on one of the padded chairs, you spread your legs for Tehuantl as she approaches on her hands and knees.";
 		say "     Her padded paws tease your inner thighs gently as she positions herself between them, rumbling happily as she begins teasing your glistening folds. You run your hands through her long dark hair as the feeling of her rough tongue making long, slow passes across your outer lips sends shivers of delight run through you. Tehuantl's paws drift closer to your drooling pussy as her tongue begins pressing further into you, her soft paw pads rubbing your clit delightfully as her other paw spreads your cunt apart to give her further access to your needy depths. Soon you are moaning in pleasure as your thirsty feline pet pushes her master to a powerful climax, drinking up every drop of your feminine fluids as her talented tongue and paws draw out your orgasm as long as they can.";
 		WaitLineBreak;
@@ -185,7 +185,7 @@ to say TehuantlSex_69wtoy:
 	say "     You lay together with Tehuantl cuddling for some time, simply enjoying your pet's company for a while before you finally lift yourself from the couch.";
 
 to say TehuantlSex_BJ:
-	if hp of Tehuantl < 50: [female]
+	if HP of Tehuantl < 50: [female]
 		say "     Deciding to put Tehuantl's rough feline tongue to use, you drop your gear and approach her slowly while letting one hand wander down to stroke your [cock size desc of player] [cock of player] cock. She mrowls lustfully as you approach, licking her lips as she watches your pre drip from the tip of your shaft. Taking a seat on one of the padded chairs, you spread your legs for Tehuantl, still stroking yourself as she approaches on her hands and knees.";
 		say "     Tehuantl rumbles eagerly as she takes hold of your cock with one paw, her soft pads gripping you tightly as her other paw moves to fondle your [ball size]. With a smile she leans forward, her feline tongue slipping from her mouth to slowly lick across your glans, [if cockname of player is listed in infections of BarbedCocklist]its rough surface catching slightly on your pointed barbs [end if]sending shivers of pleasure through your body. Slowly her muzzle descends down your length, her tongue licking and teasing you the entire time as she wraps her lips around your cock.";
 		WaitLineBreak;
@@ -259,7 +259,7 @@ to say TehuantlSex_Assfuck:
 
 
 to say TehuantlandSven:
-	if hp of Sven < 30:		[pet Sven]
+	if HP of Sven < 30:		[pet Sven]
 		say "     As you make your way into the library, you hear the heavy bunker door creak open on the far side of the room. Ducking out of sight for a moment, you watch with curious interest as Sven quietly slips out and makes his way towards the stairs to the library's upper level with his nose high in the air. Taking a breath yourself, you realize the scent of Tehuantl's heat still permeates the room.";
 		say "     Seeing how distracted he seems, you could probably follow Sven upstairs and see what happens without him noticing pretty easily ([link]Y[as]y[end link]), or you could leave it be ([link]N[as]n[end link]).";
 		if the player consents:
@@ -267,10 +267,10 @@ to say TehuantlandSven:
 			say "     Finally tired of waiting, Tehuantl rises from her seat and makes her way over to where Sven is lurking. Realizing she's approaching, he quickly tries to make himself look busy, shuffling through the books in front of him as if he's looking for a specific title. With a predatory glint in her eye, Tehuantl pads up beside Sven, rumbling softly as she steps in close to him.";
 			attempttowait;
 			say "     'And what brings you up here, cutie?' Tehuantl rumbles as she leans in close to the nervous snow leopard, gently placing a paw between his shoulders. 'I'm sure I could help you find [italic type]whatever[roman type] you're looking for.";
-			say "     Sven shudders as Tehuantl's paw slowly descends down his back, settling at the base of his tail. Sven attempts to explain that he's looking for a particular book, but with the powerful scent of Tehuantl's arousal so close and her distracting touch, he manages only to fumble and stutter over his words until she places a finger over his lips. With her paw now scritching Sven's lower back, his tail slips from his grasp, revealing his [if hp of Sven >= 10 and lust of Sven is 1]baby blue[else if hp of Sven >= 10 and lust of Sven is 2]yellow[else]grey[end if] member, hard with arousal. Tehuantl licks her lips slowly as she eyes Sven's ready cock before looking back into the nervous kitty's face. Her paw slides down from Sven's mouth, scritching his chin for a moment before tilting his head upward slightly so she can plant a quick kiss on the end of his muzzle.";
+			say "     Sven shudders as Tehuantl's paw slowly descends down his back, settling at the base of his tail. Sven attempts to explain that he's looking for a particular book, but with the powerful scent of Tehuantl's arousal so close and her distracting touch, he manages only to fumble and stutter over his words until she places a finger over his lips. With her paw now scritching Sven's lower back, his tail slips from his grasp, revealing his [if HP of Sven >= 10 and lust of Sven is 1]baby blue[else if HP of Sven >= 10 and lust of Sven is 2]yellow[else]grey[end if] member, hard with arousal. Tehuantl licks her lips slowly as she eyes Sven's ready cock before looking back into the nervous kitty's face. Her paw slides down from Sven's mouth, scritching his chin for a moment before tilting his head upward slightly so she can plant a quick kiss on the end of his muzzle.";
 			say "     'I think I know just what you need; I happen to be looking for the same thing. I'm sure we can help each other out cutie.' Sven can only mewl sheepishly in response before Tehuantl gives him a light push, smirking mischievously as Sven stumbles backwards, tripping over his own tail and landing his back. Without hesitation Tehuantl steps over the supine snowmeow. She positions her dripping cunt over Sven's groin and pins his shoulders to the ground before lowering herself onto his shaft.";
 			attempttowait;
-			say "     Both felines groan in pleasure as Sven's shaft spreads Tehuantl's opening apart, pressing into her depths as she descends down his length. With a lustful growl, Tehuantl rides up and down Sven's [if hp of Sven > 10 and lust of Sven is 1]baby blue[else if hp of Sven > 10 and lust of Sven is 2]yellow[else]grey[end if] cock, yowling in pleasure as she drives him into her eager cunt, and soon any show of resistance from Sven is gone as he thrusts his hips forward to match her descent. Tehuantl grabs the other kitty's paws and presses them to her breasts, prompting him to play with them. The bell on the jaguar's collar jingles merrily as she rides the snowmeow's shaft.";
+			say "     Both felines groan in pleasure as Sven's shaft spreads Tehuantl's opening apart, pressing into her depths as she descends down his length. With a lustful growl, Tehuantl rides up and down Sven's [if HP of Sven > 10 and lust of Sven is 1]baby blue[else if HP of Sven > 10 and lust of Sven is 2]yellow[else]grey[end if] cock, yowling in pleasure as she drives him into her eager cunt, and soon any show of resistance from Sven is gone as he thrusts his hips forward to match her descent. Tehuantl grabs the other kitty's paws and presses them to her breasts, prompting him to play with them. The bell on the jaguar's collar jingles merrily as she rides the snowmeow's shaft.";
 			say "     [if cocks of player > 0 or cunts of player > 0]As you watch the show, you can't help but let your own hands drift down towards your excited groin and begin playing with yourself as you watch the feline intercourse. [end if]Before long Tehuantl's rough fucking has her approaching a powerful climax and with a yowl of ecstasy she drives herself down Sven's length, soaking his fur with her juices as she orgasms. Meanwhile, Tehuantl's wild orgasm is enough to push Sven over the edge as well, and you watch as his entire body tenses up, knowing his seed is being unloaded deep inside Tehuantl's body.";
 			say "     As the two begin to come down from their respective climaxes, Tehuantl stares down at the exhausted snowmeow beneath her, licking her lips as she releases a shoulder to scratch his chin gently. Then, without another word, she begins her motion again, clearly intent on riding the submissive snow leopard to another orgasm before she'll be satisfied. Sven is a far less active participant in this second fucking, struggling to keep in time with Tehuantl's eager bouncing. By the time Tehuantl reaches her second climax, Sven can do little more than moan beneath her. With another yowl Tehuantl soaks both their crotches in a fresh wave of her feminine juices, shivering in delight as orgasm rolls through her.";
 			say "     Finally sated, the lustful jaguar rolls off the exhausted snowmeow, licking and nuzzling his face as she lays beside him for a short time before getting to her feet and strutting back towards her favorite seat by the balcony, their combined juices dripping from her swollen cunt the entire way. As Sven begins stumbling to his unsteady feet, you decide it best to [if cocks of player > 0 or cunts of player > 0]clean up your own mess and [end if]slip back downstairs before you're seen.";
@@ -397,15 +397,15 @@ an everyturn rule:
 ]
 
 after navigating Grey Abbey Library:
-	if hp of Tehuantl is 10:
+	if HP of Tehuantl is 10:
 		if TehuantlTimer - turns > 16:
 			now HP of Tehuantl is 11;
 			say "     As you enter the library, you are hit with an overwhelming scent of feline arousal and you hear mewling and moaning coming from the library's second floor. You can't help but wonder if everything is alright with your pretty pet kitty upstairs.";
-	else if hp of Tehuantl is 11:
+	else if HP of Tehuantl is 11:
 		say "     The air is still thick with the powerful scent of feline arousal, and while she seems to have quieted up, you wonder if you should go up and check on Tehuantl anyway.";
-	else if hp of Tehuantl is 12 or hp of Tehuantl is 13 or hp of Tehuantl is 14:
+	else if HP of Tehuantl is 12 or HP of Tehuantl is 13 or HP of Tehuantl is 14:
 		say "     The air is still thick with the powerful scent of feline arousal. It would seem Tehuantl is still in heat. You can't help but wonder about finding something to help the poor [bold type]feline[roman type] find some [bold type]relief[roman type].";
-	else if hp of Tehuantl > 14:
+	else if HP of Tehuantl > 14:
 		if TehuantlStatus is 2:
 			if a random chance of ( lastfuck of Tehuantl - turns ) in 20 succeeds:
 				say "[TehuantlBunkerScenes]";
@@ -414,7 +414,7 @@ after navigating Grey Abbey Library:
 
 to say TehuantlBunkerScenes:
 	let TehuantlList be a list of numbers;
-	if hp of Sven is 8 or (hp of Sven >= 10 and hp of Sven <= 29):		[***adjust once alternate Sven scene is available]
+	if HP of Sven is 8 or (HP of Sven >= 10 and HP of Sven <= 29):		[***adjust once alternate Sven scene is available]
 		add 1 to TehuantlList;
 	if Snow is booked and TehuantlSnowStatus is not 99:
 		add 2 to TehuantlList;
@@ -462,7 +462,7 @@ Feline Relief is a situation. Feline Relief is resolved.
 The sarea of Feline Relief is "Red".
 
 instead of resolving Feline Relief:
-	if hp of Tehuantl is 12:
+	if HP of Tehuantl is 12:
 		say "     As you wander through the red light district, you happen across a surprisingly intact-looking shop. The windows are blackened, preventing you from seeing inside, but the large sign above the door with three simple red Xs leaves little doubt in your mind as to what might be inside. As you stand outside the store, your mind wanders back to your poor heat afflicted kitty back at the library, and you wonder if there might be some 'toys' left inside that could help her take the edge off. Deciding there's no harm in checking, you slowly step up to the door, gripping the handle tightly and slowly pulling it open a crack. Peering inside, you see the small shop is filled with various pieces of BDSM equipment, and it is surprisingly well kept despite the state of the city around it. Not seeing anyone inside the room, you carefully push the door open and step inside. The majority of the wares in the store seem to be bondage equipment, but you do manage to find a couple colourful sex toys your poor kitty may be interested in.";
 		say "     Once you've given the storefront a through search, you quickly glance around the room for a box or bag for the few toys you've selected; it is then that you spot the display of cute leather collars above the store's till. Quickly hopping over the counter, you browse the collection of collars, picking out a nice red one with a cute bell for your pet kitty to go with her new toys. After grabbing a bag from under the counter, you start packing it and prepare to depart.";
 		say "     Just as you're getting ready to leave you notice shadows moving past the window outside. You hope for a second that it's just some creature wandering past, but those hopes are quickly dashed as the shop door swings open. Much to your chagrin, three of the latex covered women you've seen wandering around the city step into the small shop, each carrying another handful toys and fetish equipment. As they spot you, all three dump their cargo and turn their attention to you, two of them stepping forward to engage you while the third steps back to block the door.";
@@ -493,12 +493,12 @@ instead of resolving Feline Relief:
 			say "     Unable to fend off the latex covered women, you decide it best to make a break for it, leaving the bag of toys behind as you duck and weave around the store, drawing your assailants away from the door before you make a break for it, escaping back into the city streets.";
 			say "     It looks like you'll have to return another time to get those toys, hopefully without being disturbed next time.";
 			now HP of Tehuantl is 13;
-	else if hp of Tehuantl is 13:
+	else if HP of Tehuantl is 13:
 		say "     As you wander through the red light district, you once again find yourself outside the BDSM shop you were chased out of by those latex clad dominatrixes. Taking a deep breath, you once again pull the door open a crack and peer inside. Seeing the coast is clear once again you quickly step inside and make a b-line for the back counter. Finding the bag of toys and collar right where you left them, you quickly stuff them into your backpack before you rush back outside, making your escape before the latex mistresses return again.";
 		now HP of Tehuantl is 14;
 		now Feline Relief is resolved;
 
-instead of going up from Grey Abbey Library while ((LastTehuantlCarlScene - turns > 6) and (Tehuantl is in Grey Abbey 2F and libido of Tehuantl < 2 and hp of Tehuantl > 49 and hp of Tehuantl < 100) and (hp of Carl > 9 and hp of Carl < 50 and Carl is in Grey Abbey 2F)):
+instead of going up from Grey Abbey Library while ((LastTehuantlCarlScene - turns > 6) and (Tehuantl is in Grey Abbey 2F and libido of Tehuantl < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F)):
 	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: TEHUANTL/CARL TALK WALKIN; LIBIDO OF TEHUANTL: [libido of Tehuantl][line break]";
@@ -548,7 +548,7 @@ instead of going up from Grey Abbey Library while ((LastTehuantlCarlScene - turn
 	now LastTehuantlCarlScene is turns;
 
 
-instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - turns > 6 and (Tehuantl is in Grey Abbey 2F and TehuantlKorvinRelationship is 0 and hp of Tehuantl > 49 and hp of Tehuantl < 100) and (gsd_pet >= 60 and gshep is tamed)):
+instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - turns > 6 and (Tehuantl is in Grey Abbey 2F and TehuantlKorvinRelationship is 0 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (gsd_pet >= 60 and gshep is tamed)):
 	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: TEHUANTL/Korvin TALK WALKIN; LIBIDO OF TEHUANTL: [libido of Tehuantl][line break]";
@@ -587,7 +587,7 @@ instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - tur
 				say "     A slight shake of your head is enough to make Tehuantl let go of Korvin. The jaguar still takes the opportunity in order to extend his claws before releasing the dog, having him feel their pointy extremities through his fur. The male jaguar stands up and quietly stalks a few steps away, and crosses his arms while giving Korvin a simple, casual glance, which screams silently 'He's no danger to me at all.' The eyes of the two males meet for a second. Tehuantl gives a little growl, which shows his teeth; your beaten attack dog picks himself up and walks over to you, his tail between his legs. 'Stupid savage,' you can hear him mutter under his breath as he takes his usual spot by your side.";
 				now TehuantlKorvinRelationship is 1; [Korvin got beaten up by Tehuantl]
 		else:
-			say "     You put two fingers in your mouth and whistle sharply, drawing the German shepherd's attention to you. 'What?!' the anthro dog barks in an annoyed tone, 'I was just gonna show this kitty what a real man can do.' His tail droops a bit when he notices your disapproving expression, and he brings one paw-hand up to his neck, touching the collar you put on him. This seems to remind him that he is actually your pet. 'Um,' the canine mutters. He sets one paw in front of the other, and slowly walk backs over to you. 'Just... Some teasing, of course. I - I didn't mean to rough up your, uhm, sex slave. Guess the little pussy bruises easily?' Korvin babbles a little bit, in a pace too quick for it to be anything but excuses - at your intention,  but also his. The attack dog takes his usual position by your side, avoiding to meet your eye or look towards Tehuantl. Your jaguar warrior lets out an audible purr, clenches his paw over his heart, and bows to you respectfully.";
+			say "     You put two fingers in your mouth and whistle sharply, drawing the German shepherd's attention to you. 'What?!' the anthro dog barks in an annoyed tone, 'I was just gonna show this kitty what a real man can do.' His tail droops a bit when he notices your disapproving expression, and he brings one paw-hand up to his neck, touching the collar you put on him. This seems to remind him that he is actually your pet. 'Um,' the canine mutters. He sets one paw in front of the other, and slowly walk backs over to you. 'Just... Some teasing, of course. I - I didn't mean to rough up your, uhm, sex slave. Guess the little pussy bruises easily?' Korvin babbles a little bit, in a pace too quick for it to be anything but excuses - at your intention, but also his. The attack dog takes his usual position by your side, avoiding to meet your eye or look towards Tehuantl. Your jaguar warrior lets out an audible purr, clenches his paw over his heart, and bows to you respectfully.";
 			LineBreak;
 			say "     The embarrassment should keep Korvin from bothering Tehuantl now, and in the future. It is for the best, as you have no doubt that the jaguar would have kicked his ass. Hard.";
 			now TehuantlKorvinRelationship is 100; [stopped things between them]
@@ -596,7 +596,7 @@ instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - tur
 [Section 7 - Endings
 when play ends:
 	if bodyname of player is "Jaguar":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your Jaguar infection.";
 		else:
 			say "     You survive, but were infected by the Jaguar.";
@@ -615,7 +615,7 @@ carry out TehuantlCheating:
 TehuantlStating is an action applying to one topic.
 understand "TehuantlStat" as TehuantlStating.
 carry out TehuantlStating:
-	say "hp of Tehuantl:[hp of Tehuantl][line break]";
+	say "HP of Tehuantl:[HP of Tehuantl][line break]";
 	say "TehuantlTimer:[TehuantlTimer][line break]";
 	say "TehuantlStatus:[TehuantlStatus][line break]";
 ]

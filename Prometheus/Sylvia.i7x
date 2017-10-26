@@ -1,6 +1,6 @@
 Version 1 of Sylvia by Prometheus begins here.
 
-[ hp of Sylvia - relationship variable with the player          ]
+[ HP of Sylvia - relationship variable with the player          ]
 [   0: not met                                                  ]
 [   1: told them her room number                                ]
 [   2: watched her give a BJ + told them her room number        ]
@@ -28,16 +28,16 @@ to say SylviasRoomDesc:
 
 Section 2 - NPC Declaration
 
-Sylvia is a woman. The hp of Sylvia is usually 0.
+Sylvia is a woman. The HP of Sylvia is usually 0.
 SylviaConv is a number that varies. SylviaConv is usually 0.
 The description of Sylvia is "[SylviaDesc]".
 The conversation of Sylvia is { "Woof woof" }.
 The scent of Sylvia is "     The pretty collie smells mostly like a dog. Cleanish, but with undertones of other creatures.".
 
 to say SylviaDesc:
-	say "     Sylvia is a young anthro border collie. Her hind legs, paws, chest, muzzle, and the tip of her fluffy tail are white, while the rest of her fur is black. She gazes at you with green eyes, an abnormality in dogs. [if hp of Sylvia < 3]The shirt she wears does little to hide her two C cup breasts, but keeps them from the eyes of passing creatures. She is wearing a royal blue skirt that hides her thighs from view. [end if]";
+	say "     Sylvia is a young anthro border collie. Her hind legs, paws, chest, muzzle, and the tip of her fluffy tail are white, while the rest of her fur is black. She gazes at you with green eyes, an abnormality in dogs. [if HP of Sylvia < 3]The shirt she wears does little to hide her two C cup breasts, but keeps them from the eyes of passing creatures. She is wearing a royal blue skirt that hides her thighs from view. [end if]";
 	LineBreak;
-	say "     From the interactions you've had with her so far, Sylvia is a confident young lady, though your first encounter shows that she can be brought to despair. [if hp of Sylvia < 3]While she seems fairly sexually open, people that she is unfamiliar with must first earn her trust and respect before they can expect to be pleasured by the border collie.[end if] She looks back at you, striking a seductive pose, before sticking her tongue out light-heartedly.";
+	say "     From the interactions you've had with her so far, Sylvia is a confident young lady, though your first encounter shows that she can be brought to despair. [if HP of Sylvia < 3]While she seems fairly sexually open, people that she is unfamiliar with must first earn her trust and respect before they can expect to be pleasured by the border collie.[end if] She looks back at you, striking a seductive pose, before sticking her tongue out light-heartedly.";
 
 Section 3 - Talking
 
@@ -48,7 +48,7 @@ instead of conversing the Sylvia:
 
 to say SylviaTalkMenu:
 	say "[line break]";
-	say "What do you wish to discuss with Sylvia?";	
+	say "What do you wish to discuss with Sylvia?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -104,7 +104,7 @@ to say SylviaTalkMenu:
 					say "[SylviaTalk4]";
 					if SylviaConv < 4:
 						increase SylviaConv by 1;
-				say "      Sylvia sits patiently, waiting to see whether you wish to continue the conversation";
+				say "     Sylvia sits patiently, waiting to see whether you wish to continue the conversation";
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -117,19 +117,19 @@ to say SylviaTalkMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say SylviaTalk1: [Talk about her]
-	say "     'As I said, I'm on exchange with Tenvale College, all payed for by a scholarship. I've always been good at the sciences. Between the pushing of my father and a family friend, I was advanced several years at school. It did mean that I didn't get much time to do what normal girls do; ride horses, gossip, talk about cute boys... but I really enjoyed learning about animals so I focused on that,' Sylvia responds. 'I was accepted into university, studying animal biology. The material and experiences were thrilling, but by the time I started considering a doctorate, the pressure I was beginning to feel from my family and tutors, unintentional I'm sure, was getting unbearable. So, I asked to come here for a complete change of scenery. I wasn't expecting it to change [italic type]this [roman type]much,' the collie gestures at the city with a chuckle.";
-	say "     'But you didn't really want to know about my education, did you? The day the city changed was mostly normal. I'd had lunch with some friends and was just sitting down in my room to work through some lab notes, when I heard roaring and screaming. Then I felt itchy and noticed I was growing fur. I don't remember much else from that day because I tripped over my chair trying to look out the window and knocked myself out. When I woke, I was the beautiful young lady you see before you.' Sylvia bats her eyelids at you. I would assume I was infected by the dog fur I always seem to have on my clothes, but who could complain about being changed into a sexy collie? After that I went to make sure my friends were still alright. As you probably saw when we first met, it nearly ruined my degree, if it hadn't been for Julian,' she trails off.";
-	
+	say "     'As I said, I'm on exchange with Tenvale College, all payed for by a scholarship. I've always been good at the sciences. Between the pushing of my father and a family friend, I was advanced several years at school. It did mean that I didn't get much time to do what normal girls do; ride horses, gossip, talk about cute boys... but I really enjoyed learning about animals so I focused on that,' Sylvia responds. 'I was accepted into university, studying animal biology. The material and experiences were thrilling, but by the time I started considering a doctorate, the pressure I was begining to feel from my family and tutors, unintentional I'm sure, was getting unbearable. So I asked to come here for a complete change of scenery. I wasn't expecting it to change [italic type]this [roman type]much,' the collie gestures at the city with a chuckle.";
+	say "     'But you didn't really want to know about my education did you? The day the city changed was mostly normal. I'd had lunch with some friends and was just sitting down in my room to work through some lab notes, when I heard roaring and screaming. Then I felt itchy and noticed I was growing fur. I don't remember much else from that day because I tripped over my chair trying to look out the window and knocked myself out. When I woke, I was the beautiful girl you see before you.' Sylvia bats her eyelids at you. I would assume I was infected by the dog fur I always seem to have on my clothes, but who could complain about being changed into a sexy collie? After that I went to make sure my friends were still alright. As you probably saw when we first met, it nearly ruined my degree, if it hadn't been for Julian,' she trails off.";
+
 to say SylviaTalk2: [Talk about her family]
-	say "     'Wanting to learn about my family, are you? reckon you might like my brother more than me? Tough. He isn't here,' Sylvia jokes. 'My father was a soldier, but has now retired. My brother, however, had enlisted before I left for university. My sister and I were miserable the day he left, but he sent us letters fairly often. I don't know how he is now since, as you know, the mail stopped getting into the city. My family must be so worried about me,' the collie laments, looking at the photo on her desk. 'My mother was a housekeeper, yes we still have those in England, but the birth of my brother meant that she had to stay at home. When my sister and I were born she realised that that time of her life was over, and so she did baking for the village shop.' Sylvia sighs, fond memories of childhood in the fore of her mind.";
-	say "     You cough politely, wanting to hear more. When you point out that she has yet to mention the family friend that encouraged her into science she snaps from her thoughts and continues. 'I was lucky to have a supportive family, even if I hadn't been interested in science, they would have been happy. However, a family friend, an entrepreneur, said that biologists could go far in the world, and would be willing to employ me once I had been to university. The family that my mother was maid for also were willing to help me, as I had grown up on their estate. I was a very lucky young lady growing up.' She smiles returning to her youth.";
-	
+	say "     'Wanting to learn about my family are you? reckon you might like my brother more than me? Tough. He isn't here,' Sylvia jokes. 'My father was a soldier, but has now retired. My brother, however, had enlisted before I left for university. My sister and I were miserable the day he left, but he sent us letters fairly often. I don't know how he is now since, as you know, the mail stopped getting into the city. My family must be so worried about me,' the collie laments, looking at the photo on her desk. 'My mother was a housekeeper, yes we still have those in England, but the birth of my brother meant that she had to stay at home. When my sister and I were born she realised that that time of her life was over, and so she did baking for the village shop.' Sylvia sighs, fond memories of childhood in the fore of her mind.";
+	say "     You cough politely, wanting to hear more. When you point out that she has yet to mention the family friend that encouraged her into science she snaps from her thoughts and continues. 'I was lucky to have a supportive family, even if I hadn't been interested in science, they would have been happy. However, a family friend whom was a entrepreneur said that biologists could go far in the world, and would be willing to employ me once I had been to university. The family that my mother was maid for also were willing to help me, as I had grown up on their estate. I was a very lucky young lady growing up.' She smiles returning to her youth.";
+
 to say SylviaTalk3: [Talk about her friends]
-	say "     'My friends? Am I not good enough for you?' Sylvia teases. ' Well, you've already met Julian, he's a biochemist so we work together fairly often, especially as he used to be part of my laboratory group. Julian has a twisty mind, good at working out problems, a trait I'm sure you already saw when you met us. He is a little shy, though that may just be compared to me, I doubt everyone would just accept someone watching them touch someone's privates in broad daylight. He's from Canada, so of course he's really nice. He claims he grew up among wolves, but that may just be an expression.";
-	say "     'There are also Michael and Michelle who are twins. Why someone would name their children such similar names is beyond me, perhaps it's a London thing as that is where they were from. They were studying engineering I'm told. I met them after the changes when I was going to the lab to see how damaged it was. They were stealing from the rooms. I doubt the equipment is usable any more, but they seem to think the machines are still valuable. They're cats so I was surprised when they were willing to talk to me so quickly, really quite charismatic those two,' the collie contemplates, scratching her chin. I met Septus, the captain of the wolf football team, he seemed nice, but was slightly disappointed when I said I wasn't interested in becoming a cheerleader. He says hello if he sees me while looking for new recruits, so I'd consider him a friend.' Sylvia thinks for a minute, 'I think that's all.'";
-	
+	say "     'My friends? Am I not good enough for you?' Sylvia teases. 'Well, you've already met Julian, he's a biochemist so we work together fairly often, especially as he used to be part of my laboratory group. Julian has a twisty mind, good at working out problems, a trait I'm sure you already saw when you met us. He is a little shy, though that may just be compared to me, I doubt everyone would just accept someone watching them touch someone's privates in broad daylight. He's from Canada, so of course he's really nice. He claims he grew up among wolves, but that may just be an expression.";
+	say "     'There are also Michael and Michelle who are twins. Why someone would name their children such similar names is beyond me, perhaps it's a London thing as that is where they were from. They were studying engineering I'm told. I met them after the changes when I was going to the lab to see how damaged it was. They were stealing from the rooms. I doubt the equipment is usable any more, but they seem to think the machines are still valuable. They're cats so I was surprised when they were willing to talk to me so quickly, really quite charismatic those two,' the collie contemplates, scratching her chin. I met Septus, the captain of the wolf football team, he seemed nice, but was slightly disappointed when I said I wasn't interested in becoming a cheerleader. He says hello when he sees me while he looks for new recruits, so I'd consider him a friend.' Sylvia thinks for a minute, 'I think that's all.'";
+
 to say SylviaTalk4: [Talk about her interest in biology]
 	say "     'Are you sure you want to know, it's not quite as benevolent as many other people's reasons might be,' Sylvia questions you concernedly. 'Okay, I suppose I trust you enough. When I was young we had quite few dogs. Two border collies, a german shepherd, and two corgis. They were all male bar except one of the collies called Lucy whom I was especially attached to. I was about seven when I came home from school one day to find the german shepherd, Argus, mating with her. At that stage I didn't know what sex was and was curious what they were doing, so I asked my father. His response has stayed with me to this day. He told me that they were mating, trying to have puppies. and that was where children came from. I was seven when I was given the talk. He took me back into the room where they were, by which time Argus was tied. Daddy told me that this was an important part of life, and that I shouldn't be ashamed to watch nor be ashamed to discuss things such as sex.";
 	say "     'Over the time we had her she mated with all of them, the tart,' Sylvia muses amusedly. From that day I was obsessed with animals. Where they lived, how their lives interacted with others of their species as well as those not. My first science project was on the importance of foxes for the rural ecosystem. One of my A level essays was on the social structure and mating habits of timber wolves. My teachers were concerned, but my family was proud of how much effort and passion I was devoting to biology. When I was sixteen I rescued a border collie puppy from drowning and promptly took it home. I was allowed to keep him, so I named him Ajax. He grew up to be big boy. I hope my parents are still looking after him and not spoiling him too much,' Sylvia says, tilting her head. 'But anyway, that's the gist of why I started studying biology. Saw dogs having sex, decided I would make a career where I might see more animals fornicating. Not the most noble of reasons, I know.";
@@ -139,7 +139,7 @@ Section 4 - Sex
 instead of fucking Sylvia:
 	if (lastfuck of Sylvia - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     Sylvia looks at you, an amused expression gracing her face. 'Letting your instincts control you? Sorry, but you'll have to find someone else.' The then melodramatically places a hand to her forehead. 'For I have... a headache.'";
-	else if hp of Sylvia < 4: [relationship not high enough]
+	else if HP of Sylvia < 4: [relationship not high enough]
 		say "     'As attractive as you are, we got to know each other more in other ways before letting you ravish me.' She gasps, 'we could talk about BOYS.'";
 	else: [ready for sex]
 		say "     Looking around the room, you see the collie isn't paying attention to you, instead, gazing out the window with a book in hand. The moisture around her groin suggests she is ready though.'";
@@ -168,7 +168,7 @@ to say SylviaSexMenu:
 	now sortorder entry is 3;
 	now description entry is "Give some attention to her canine cunt";
 	[]
-	if cocks of player > 0 and hp of Sylvia > 4: [only males and herms can mount her]
+	if cocks of player > 0 and HP of Sylvia > 4: [only males and herms can mount her]
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
@@ -180,14 +180,14 @@ to say SylviaSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Stimulate each other's pussy";
 	[]
-	sort the table of fucking options in sortorder order;	
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
 	say "[link]100 - Nevermind[as]100[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
-		get a number;	
+		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
@@ -217,11 +217,11 @@ to say SylviaSexMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say SylviaSex1: [Receive a blowjob]
 	say "     Closing the door to avoid the eyes of other students, you sit down on the bed. Turning around at the sound of the door closing, Sylvia moves over to you, her eyes meeting yours. At your request for her to give you a blowjob, she licks her lips and kneels, her breasts brushing your exposed erection. Cupping your balls, she runs her wide tongue up your shaft, the trail of saliva causing a tingle as it cools. Pulling back, the collie asks you to stand, not wishing to dirty the bed covers. You do so, looking down at the dog on her knees between your legs. Stroking the side of her face, you thrust forward into her waiting mouth, your cock being enveloped in the soft, wet warmth within. She sighs, her tongue rotating around you as you penetrate her mouth. Eager to increase the pace, you grip the sides of her head and pound your groin against her face, the increase in roughness doing little to perturb the eager bitch whom whines needfully";
 	say "     A paw creeps its way over your backside, before a digit wriggles into your anus, causing you to clench and your member to leap in her mouth. She gives a muffled giggle as you resume and continues to work her finger in and out of your rear. As a knuckle repeatedly stimulates against your prostate, you feel your orgasm nearing. As it crests, you push into her mouth until your scrotum is against her jaw before climaxing. Her eyes widen as your cum squirts down her throat and the muscles of your anus constrict and relax around her finger. As your orgasm recedes, you release her head and stroke over her ears, telling her what a good girl she is. Letting out a contented moan, she pulls her mouth of your penis, catching a few stray strings of sperm on her tongue, and nuzzles her cheek up against your groin. Patting her, you retrieve the clothes you brought and leave her savouring your taste, a sticky patch unnoticed on her cheek.";
-	
+
 to say SylviaSex2: [Be eaten out]
 	say "     As much as an audience might excite you, you close the door before taking your clothes off and tossing them onto Sylvia's bed. Turning at the sound, the collie is greeted by your naked body, a sight she seems to find alluring. She slinks over to you, her tits swaying slightly. Seemingly knowing exactly what you want, Sylvia licks up your thigh, causing your pussy to twitch. Tracing her paws over your backside, she licks your gash enthusiastically, collecting your juices in her mouth. Despite your knees weakening at this treatment, between force of will and the surprising strength of the border collie. A claw traces over your back entrance, but continues over, teasing your tingling nerves. She looks up at you saucily, knowing exactly what she is doing and the effect that she is having on you with her ministrations.";
 	say "     With each lick, her nose rubs against your clitoris, the friction heightening your growing arousal. With a squelch, the collie forces her tongue into your cunt, the surprise and sensation causing your pelvis to mash against her face, driving her even deeper. As she writhes her tongue around in your passage, she snuffles against your clit, ensuring that it remains unforgotten. After a short time of this treatment, your building orgasm overwhelms you, causing you climax around her tongue and over her face. Fem cum sprays against her mouth as she pulls back, replacing her tongue with a thrusting finger. She guides you to sit on her bed as he licks her lips, collecting your essence. As your climax comes to an end, she withdraws her finger and sticks it in her mouth, giving you a dirty wink as she sucks it, savouring your flavour. As you redress yourself, Sylvia returns to writing notes at her desk, her finger still in the corner of her mouth.";
@@ -229,7 +229,7 @@ to say SylviaSex2: [Be eaten out]
 to say sylviaSex3: [Eat her out]
 	say "     Feeling that the collie deserves some attention, you close the door a step up behind her, caressing her shoulders. You whisper that you'd like to taste her doggy cunt, a request that causes her tail to start wagging, signalling her desire for it. You quickly remove what little you are wearing and place them on a chair, before turning back to the canine. You admire her toned body, not overly muscular, but a form that has been worked for. She sits on the edge of her bed and opens her legs, displaying her moist pussy. You kneel and trace your fingers over her spade, slipping a digit in. Content, you bring your mouth forward and give a tentative lick, before continuing confidently, her yips of pleasure spurring you on. She strokes the back of your head, applying subtle pressures to guide your tongue to more pleasing zones in her vagina.";
 	say "     As you lick, her juices flow across your tongue, dripping onto her sheets or trickling into your mouth. Your hands grip her thighs, your thumbs rubbing around her genitals, adding extra stimulation. Realising you have forgotten her clit, you pull your tongue from her passage and purse your lips around it, sucking. This sends her over the edge, causing her hips to spasm and thrust against your face. Her fem cum shoots into your mouth as she caresses the back of your head, sighing and moaning in time with the contractions. Surprised at how quickly she climaxed, you sit up and look at her, allowing the last of her orgasm to drip onto the bed. She gives a weak smile and shakes her head, declining to speak further on the matter. Shrugging you stand up and re-dress. she gives you a quick thank you before lying back and relaxing.";
-	
+
 to say SylviaSex4: [Anal]
 	say "     As Sylvia gazes out the window, her backside catches your eye. Covered in fur, its soft curve causes a carnal hunger to rise in your stomach. Closing the door, you creep up behind her mischievously, hoping to convince her to sate your desire. 'I can hear you, and I don't advise grabbing me,' Sylvia warns cheerfully, turning around. Seeing your erection, she blushes slightly before stepping next to you and grazing a palm across it. Hearing your request for anal, she smiles before crouching on all fours and flagging her tail. Her tail star twitches as she awaits your touch. Remembering last time, you take the bottle of lube out of her desk and slather your penis, before kneeling behind her. Applying some to your fingers, you press them against her anus, smearing the substance around your target, slipping two fingers in to ease internal passage as well. Ready, you align yourself behind her, a smile from her giving you consent.";
 	say "     Gripping the base of her tail, you thrust forward penetrating her and causing a moan to burst from her mouth. The muscles in her anus squeeze around you, unsure whether to repulse the intruding appendage or draw it in. Your caresses of her bottom loosen the constriction, allowing you to withdraw for another thrust. As you eagerly couple, your shaft oscillating into her willing hole, Sylvia lets out the occasional grunt, moan, or yip, expressing the joy and pleasure that you are giving her. You too let out animalistic growls, a primal instinct urging you to make her your bitch. Opposing this instinct, a rational part of your mind reminds you to restrain yourself, lest you hurt her. Rationality wins out as you release your grip on her tail and instead move your hands to her waist as you continue to thrust into her bowels.";
@@ -239,7 +239,7 @@ to say SylviaSex4: [Anal]
 		say "     As you near climax, a strong urge to knot her arises. Desperately, you attempt to force your knot past her anal ring, each thrust swelling your knot further. In a last-ditch attempt, you grab her legs and pull back on her as you press forward. Sylvia lets out a cry of pure pleasure, her anus relenting enough for you to knot her. Not a moment afterwards your climax erupts, cum shooting deep into her bowels, setting off her own orgasm. You both let out howls of ecstasy as her ass squeezes around your [cock of player]cock and juices spray from her pussy onto your leg. Exhausted, you both lie there, waiting for hour penis to soften. Remembering her request last time, you grab a beaker and hold it beneath your bodies. As you pull out with a slurp, a steady flow of semen runs into the beaker. Sylvia collapses on her side before hauling herself to her feet. She takes the beaker from you and, giving you a wink, takes a sip. Shaking your head and chuckling, you stand up and dress yourself.";
 	else:
 		say "     Nearing climax, your grip tightens and you manage a last few powerful strokes before you cum inside her, setting of her own orgasm. You feel her ass squeeze around your [cock of player]cock as juices spray from her pussy onto your leg. You let out a sigh feeling your semen slosh against your tip as her muscles compress around you. Remembering her request last time, you grab a beaker and hold it beneath your bodies. As you pull out with a slurp, a steady flow of semen runs into the beaker. Sylvia collapses on her side before hauling herself to her feet. She takes the beaker from you and, giving you a wink, takes a sip. Shaking your head and chuckling, you stand up and dress yourself.";
-	
+
 to say SylviaSex5: [Tribbing]
 	say "     Sitting down on the bed, your eyes start looking over Sylvia's naked body. As her tail wags idly, you catch a glimpse of her canine spade. You stand up and close the door before approaching the collie, an idea of what you want firm in your mind. Sylvia turns to face you having heard the door. Upon hearing your wish for lesbian fun, she smiles and agrees readily, her hand grasping your thigh as she leans in to kiss you. As your mouths meet, her tongue slips past your lips and begins caressing your own, the wide organ effortlessly tracing around your mouth. Breaking the kiss, you pull back and remove your clothes, before embracing her again, your breasts rubbing against each other causing warmth to grow in your loins.";
 	say "     Her hand eases its way between your bodies, making its way to your pussy and slipping a digit in. Finding you already wet, Sylvia lies on her back and indicates for you to lie atop her with your face next to her cunt. Assuming this to be part of readying her for the main event, you do so, immediately sending your tongue to work on her vulva, arousing her further to allow for greater pleasure later. With each stroke of your tongue, the collie twitches and lets out a small moan, your efforts obviously appreciated. To ensure that your own arousal doesn't wane, Sylvia reciprocates your oral stimulation by running her tongue up and down your gash, occasionally flicking the skin around your anus. Mutually deciding that you are ready for tribbing, the canine helps you turn around and align your pussies with one another with her lying on her back with you atop her.";
@@ -262,9 +262,9 @@ Instead of resolving Despairing Biologist:
 
 to DespairingBiologistEvent: [Meet Sylvia]
 	say "     Walking through the college, you see the occupants still acting in ways that you might expect from students. Lying on the grass laughing with friends, chatting to each other as they walk carrying stacks of books, and standing in groups complaining about one thing or another. Among these activities are some that fit more with the recent events. A pretty pantheress on her knees treating several colleagues to handjobs, moaning from behind a bench as two students relieve some stress, and an elephant dressed in a groundskeeper uniform cleaning sperm from the lawns. Smirking, you continue down the path, thoughts of how the futures of these many people changed with the nanite outbreak.";
-	say "     As you turn a corner you hear an argument. ' I don't want to swap my degree, I like biology, but the city has changed. Just yesterday I saw a lion being chased by a gazelle. Darwin doesn't cover that!' a female voice says exasperatedly. Looking over, you see a border collie girl talking to a male wolf, both wearing clothes unlike many of the other residents of the city. 'You don't have to change degree. Think off all the creatures running around the city, or even just the college. Did Darwin catalogue minotaurs or dragons? You could be the leading authority!' her companion replies enthusiastically. The collie tilts her head, 'I suppose so. Could be fun collecting the data, and there are a lot of never before seen animals...' she reasons.";
+	say "     As you turn a corner you hear an argument. 'I don't want to swap my degree, I like biology, but the city has changed. Just yesterday I saw a lion being chased by a gazelle. Darwin doesn't cover that!' a female voice says exasperatedly. Looking over, you see a border collie girl talking to a male wolf, both wearing clothes unlike many of the other residents of the city. 'You don't have to change degree. Think off all the creatures running around the city, or even just the college. Did Darwin catalogue minotaurs or dragons? You could be the leading authority!' her companion replies enthusiastically. The collie tilts her head, 'I suppose so. Could be fun collecting the data, and there are a lot of never before seen animals...' she reasons.";
 	WaitLineBreak;
-	say "     Her friend gives her a hug, the show of friendship slightly ruined by the erection tenting his trousers. 'Really Julian? You’re that pleased for me? Or are you perhaps wanting something else?' she questions him in a sultry manner, her hand sneaking down his trousers to cup his bulge. By this time, you are standing in full view about five metres away. A fact that has been noticed by the wolf, Julian. 'Umm, Sylvia. There's someone right there, would we not be better going...' he remarks cautiously. The collie, whom you take to be Sylvia, turns around, but you notice she doesn't remove her hand from his pants. She studies you shortly, 'From the look of them, they've seen sex before, and besides, universities were rife with fornication and debauchery even before the changes.' Unfazed by your presence, she continues to play with the lupine's junk.";
+	say "     Her friend gives her a hug, the show of friendship slightly ruined by the erection tenting his trousers. 'Really Julian? You're that pleased for me? Or are you perhaps wanting something else?' she questions him in a sultry manner, her hand sneaking down his trousers to cup his bulge. By this time, you are standing in full view about five metres away. A fact that has been noticed by the wolf, Julian. 'Umm, Sylvia. There's someone right there, would we not be better going...' he remarks cautiously. The collie, whom you take to be Sylvia, turns around, but you notice she doesn't remove her hand from his pants. She studies you shortly, 'From the look of them, they've seen sex before, and besides, universities were rife with fornication and debauchery even before the changes.' Unfazed by your presence, she continues to play with the lupine's junk.";
 	say "     [bold type]Do you wish to continue watching, or leave before this gets awkward?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stay here, she seems fine with you watching.";
@@ -282,25 +282,25 @@ to DespairingBiologistEvent: [Meet Sylvia]
 			LineBreak;
 			say "     Aroused by such a shameless display of gratitude, [if cocks of player is 1]your cock swells, pre drizzling from the tip [else if cocks of player > 1]your cocks swell, pre drizzling from the tips [else]fem-lube dribbles from your widening slit [end if]and you bring your hand down to soothe this growing desire. Looking up, you see that Julian has seated himself upon the bench, with Sylvia between his legs caressing his furry scrotum as her head bobs up and down in his lap. He leans back, a blissful expression on his face, groans escaping from his open mouth. In a rush of confidence, Julian holds the back of Sylvia's head and begins to piston his hips back and forth, taking control of his pleasure. The dog girl accepts this change in control and rests herself back on her thighs, relaxing a bit while still allowing the wolf access to thrust into her maw.";
 			WaitLineBreak;
-			say "     The male continues to hammer himself into the canine’s mouth, occasionally stroking the back of her head or scratching an ear. Noticing his imminent orgasm, the collie brings a hand up between her mouth and his knot, preventing its entrance to her mouth. Giving a few last thrusts, Julian cums inside Sylvia's mouth, his knot throbbing between her fingers. Short of breath, the biology student pulls back, semen oozing from her mouth as the lupine cock slips out, still contracting leaving trails of sperm on the ground. Swallowing the contents of her mouth, the collie stands up, dusting her knees off and straitening her skirt. 'Mmm, not bad for a first experience, I might even consider doing that again' she said brightly before kissing her companion on the nose.";
+			say "     The male continues to hammer himself into the canine's mouth, occasionally stroking the back of her head or scratching an ear. Noticing his imminent orgasm, the collie brings a hand up between her mouth and his knot, preventing its entrance to her mouth. Giving a few last thrusts, Julian cums inside Sylvia's mouth, his knot throbbing between her fingers. Short of breath, the biology student pulls back, semen oozing from her mouth as the lupine cock slips out, still contracting leaving trails of sperm on the ground. Swallowing the contents of her mouth, the collie stands up, dusting her knees off and straitening her skirt. 'Mmm, not bad for a first experience, I might even consider doing that again' she said brightly before kissing her companion on the nose.";
 			say "     'But, fair is fair, I haven't had an orgasm,' she chuckles, playfully attempting to drag the lupine up. As you step forward to offer your services for such a task she looks at you and laughs good naturedly. 'I only met you a moment ago, what sort of girl would I be if I allowed anyone I met to watch me fellate a friend before allowing the stranger to go down on me.' Seeing your disappointment, she relents slightly. 'I'll tell you what, prove to me you're not just interested in me sexually. Talk to me later in my room when we aren't both horny, then I'll consider whether you are worth knowing. Room number 059, toodle pip.' Beginning to feel like a third wheel, you leave the two bonding, and continue through the college.";
-			now hp of Sylvia is 2; [watched BJ, got room number]
+			now HP of Sylvia is 2; [watched BJ, got room number]
 		else: [do not watch]
 			LineBreak;
 			say "     Allowing the wolf to feel the attentions of the collie, you turn to leave. Sylvia pulls back from his cock momentarily and calls after you, 'I'm in room 059 of the female dormitory if you want to talk to me more. You seemed nice enough.' Noting the room in your head you push past the branches and continue through the college.";
-			now hp of Sylvia is 1; [got room number]
+			now HP of Sylvia is 1; [got room number]
 		change the northeast exit of Tenvale College Female Dorms to Sylvia's Room; [connecting the location to the travel room]
 		change the southeast exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
 	else:
 		LineBreak;
 		say "     Feeling slightly embarrassed at the willingness of the pair to let you watch, you mutter something about needing to be somewhere before walking hurriedly back the way you came, the collie giggling behind you.";
-		now hp of Sylvia is 100; [event refused, no further contact with her]
+		now HP of Sylvia is 100; [event refused, no further contact with her]
 	now Despairing Biologist is resolved; [It won't happen again]
 	now LastCampusWalkin is turns;
 
-instead of going northeast from Tenvale College Female Dorms while (hp of Sylvia is 2):
+instead of going northeast from Tenvale College Female Dorms while (HP of Sylvia is 2):
 	Room059Event;
-	
+
 to Room059Event: [First time to Sylvia's room]
 	say "     Seeing the room number that Sylvia had given you, you approach the door. However, when you knock, the door slowly swings open, revealing the collie leaning back in an armchair reading a book. her shirt is unbuttoned, but mostly covering her chest, only a glimpse of her breasts is visible. She notices you over the top of her book, placing it on a nearby desk. As the canine stands, she does up a few of the buttons on her shirt. 'That you came here at all suggests you aren't as sex driven as many of the cities occupants,' Sylvia exclaims, recognising you instantly. Motioning you in, she closes the door before patting the edge of her bed. 'Please, sit,' the student says cheerfully, returning to her armchair and smiling at you. Grateful to have a chance to rest your legs, you comply, the mattress sinking slightly, placing you at similar face heights.";
 	say "     'So, you want to get to know me more?' Sylvia remarks, stroking her tail absent-mindedly. 'I'm on exchange from northern England, where my parents are. I have an older brother and a younger sister. I'm was studying zoology, but with the changes to the city, I plan to focus on the interactions of the infected with each other, especially groups.' You can see that she is really excited about this decision, contrasting with her breakdown to her friend. 'It will mean that I will have to go into the city at points, so I'm not sure whether to just try and sneak around, or get some help from the other students. Before I do that, I should be able to study the residents on campus.' Her hand creeps up her tail, sliding over her thigh before she notices and consciously moves it away from her groin, draping it over the arm of the chair.";
@@ -317,9 +317,9 @@ to Room059Event: [First time to Sylvia's room]
 	else: [hug]
 		say "     You step up next to her and encircle her within your arms. Smiling at how forward you are, she returns the hug, her soft chest pressed against your body. You can feel her heart beat, its percussion sounding at similar interval to your own. Suddenly, you feel the collie's hands squeeze your backside, causing you to jump away from her slightly. You give her an accusatory stare as she doubles over laughing. 'I thought that was what you wanted,' Sylvia says between sniggers. 'To feel my hands upon your body as we embraced. But it seems perhaps you aren't ready judging from that reaction to me only touching your rear.'";
 		say "     Wanting revenge, you close the distance between you, her eyes carefully watching your movement but allowing your response. As you attempt to grab her, she sidesteps you before licking you behind your ear and dancing away as you swing your arm around in a vain attempt to catch her. 'Growing up a girl, I was taught how to avoid the grasps of overly enthusiastic men, with a few lessons from my brother and father,' Sylvia chides, tapping you on the nose as you straighten. 'Come and talk to me again at some point. For now though, I have things to study.' Sylvia dismisses you with a hand gesture. As you leave, you suddenly wonder whether she meant studying a book, herself, ... or others. You dismiss the thought and walk back down the dorm hallway.";
-	now hp of Sylvia is 3; [Met her in her room]
+	now HP of Sylvia is 3; [Met her in her room]
 
-instead of going northeast from Tenvale College Female Dorms while (SylviaConv is 4 and hp of Sylvia is 3 and a random chance of 1 in 4 succeeds):
+instead of going northeast from Tenvale College Female Dorms while (SylviaConv is 4 and HP of Sylvia is 3 and a random chance of 1 in 4 succeeds):
 	UnnaturalHeatEvent;
 
 to UnnaturalHeatEvent: [Sylvia removes skirt]
@@ -440,9 +440,22 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 				say "     She places the container on her desk before slumping back on the bed with you. Julian sits down beside her and squeezes the collie's hand. 'Feeling better now,' he enquires, to which the canine nods. 'Ahhh, that felt good enough to try again in future. Though next time hopefully without mind altering drugs,' Sylvia laughs, taking this development in her relationships with you both within her stride. 'Not having a skirt on makes me feel more liberated, I think I'll leave it off for now.' She stands before turning to you both and motions for you to stand. When you have done so, she hugs you both, a breast compressing into each of your sides. 'Thank you. I don't know what I would have done without you. Come back again soon, I want to spend more time with both of you. But for now, you should probably go, you'll have things to do and I need to clean my room,' the collie beamed. She bids you and Julian adieu before bending down to tidy her floor. This gives you both a view of her stretched anus, splashes of cum shining on her fur. You smirk at each other before walking out the door.";
 		else: [not interested]
 			say "     You shake your head, helping her was enough. You wish them well and leave them to their coupling. As you close the door, you hear a yip of pleasure.";
-	now hp of Sylvia is 4; [helped with heat]
+	now HP of Sylvia is 4; [helped with heat]
 
-	
+
+
+[
+Bottomless Trend is a situation.
+The level of Bottomless Trend is 0.
+The sarea of Bottomless Trend is Sylvia's Room.
+
+instead of going northeast from Tenvale College Female Dorms if (SylviaConv is 4)
+	move player to Sylvia's Room;
+	BottomlessTrendEvent;
+
+to BottomlessTrendEvent: [Sylvia removes skirt]
+	say "";
+]
 
 [Various Companions brought to Sylvia]
 

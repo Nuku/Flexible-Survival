@@ -78,7 +78,7 @@ To say Donkeywoman loses:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -91,7 +91,7 @@ When Play begins:
 	now face entry is "long, asinine muzzle, with two large equine ears and a short close cropped mane of hair, and a plain leather collar which complements your rather sexy donkey-like face"; [You have a (your text) face."]
 	now body entry is "both strong and slender, your well-muscled form and powerful limbs easily suited for both work and sex, and you balance easily on the balls of your slightly hoof-like feet, even as you run your slender hands over your extremely sensitive and aroused body happily";
 	now skin entry is "[one of]gray furred[or]silken gray[or]gray hide covered[at random]";
-	now tail entry is "A long, sexy black donkey tail stretches out from above your surprisingly muscular ass, its tip trailing just above the ground as you swish it this way and that, finding yourself feeling surprisingly happy at how sexy your new donkey like tail makes you feel.";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "A long, sexy black donkey tail stretches out from above your surprisingly muscular ass, its tip trailing just above the ground as you swish it this way and that, finding yourself feeling surprisingly happy at how sexy your new donkey-like tail makes you feel.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]thick[or]equine[or]donkey[at random]";
 	now face change entry is "it flattens and stretches out into a more equine like muzzle, your eyes shifting position even as your hair shifts into a short mane, and your ears reposition themselves on top of your head. Lustful thoughts fill your mind, though something seems missing still. Looking around, you spot a bit of leather lying there conspicuously on the ground, and picking it up see that it seems to be a plain and simple collar. Grinning slightly at your luck, you latch the collar loosely around your throat"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it shifts and seems to change, growing both more slender and muscular at the same time, your heels rising up slightly as you balance on the balls of your feet as your toes seem to harden slightly, becoming not quite hoof like, but much stronger than before. A rush of arousal surges through you as your body finishes changing into a slightly more donkey like form"; [ body change text. format as "Your body feels funny as (your text)" ]
@@ -105,8 +105,8 @@ When Play begins:
 	now int entry is 13;
 	now cha entry is 20;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 45;
-	now lev entry is 6; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 45;
+	now lev entry is 6; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
 	now area entry is "Stable"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -133,7 +133,7 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Donkeywoman":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Finally unable to deny your body's desires any longer, you return to the stables and the comfort and company of your fellow donkeys, sure that they will understand your growing desire to dominate and be dominated. Once back at the Stables and with the scent of leather and equine sex filling your head, you feel even more aroused than ever as you head out into the hallways looking for some fun. Almost immediately you run into an extremely sexy looking jenny, her finely tooled leather a cut above the rest, and the glint in her eye as she looks you up and down makes you shudder with anticipation. The sexy beast wastes no time in leading you to her own personal tack room, where several sexy looking donkeys are already bound and waiting to be played with. The sight of all that bound equine flesh makes you quiver with excitement and arousal. Seeing your reaction, the sexy donkey mistress grins, seemingly pleased at how you are adapting, and soon she is showing you just how to be a proper little top for all the other donkeys, by topping you herself like a proper mistress.";
 			say "     Soon you find your place with your new mistress as her assistant. She shows you how to be a proper dom and teaches you that most people are so much happier once they learn to embrace their own submissive natures, something you can certainly understand from personal experience as your mistress's favorite fucktoy and assistant!  After a while you show a positive talent for the work, and she lets you start topping some of her pets while she watches, eventually even helping you start training your own little pets to be properly submissive to your needs. Soon after she helps you set up your own little playroom. Although it seems rather empty of lovely moaning donkey pets for a little while, it soon turns out you got yourself set up just in time, as a large influx of soldiers finds the red light district, and some of them even make their way into the Stables. Before long, you have a lovely room full of bound and helpless soldiers, naked and waiting for you to teach them to embrace their submissive natures and serve your every whim... and you just can't wait to get started!";
 		else:

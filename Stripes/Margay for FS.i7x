@@ -109,7 +109,7 @@ to say margayoral:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -122,7 +122,7 @@ When Play begins:
 	now face entry is "a small feline head with large feline eyes and small pointed feline ears."; [ Face description, format as the text "You have a (your text) face."]
 	now body entry is "quite large and VERY elastic in the belly, allowing you to move freely despite your size. Your body feels quite stretchable, and almost eager to take something large and filling inside you. Your arms are motherly feline arms with human-style hands featuring retractable claws. Your legs are plantigrade legs with plenty of jiggle and firmly toned muscles. They end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads";
 	now skin entry is "a lovely, spotted patterned coat of fur over your";
-	now tail entry is "You have very wide hips and a very full, plump behind. Its completed by a thick and leg-length feline tail covered in golden brown fur with black markings.";
+	now tail entry is "You have very wide hips and a very full, plump behind. It's completed by a thick and leg-length feline tail covered in golden brown fur with black markings.";
 	now cock entry is "barbed feline";
 	now face change entry is "the infection hits your head, making your eyes grow bigger and your head a little smaller. Your ears turn triangular and move to the top of your head while your face grows a short muzzle like that of a wild jungle cat";
 	now body change entry is "the infection seeps into you, flowing into your body. Your torso then starts growing bigger and taller, developing extra space that makes you feel like you could smuggle a washing machine in your belly. Your arms burn with an itchy fire as the infection spreads through them. Your hands crack and grow a little smaller while new claws take form in your fingers. The itchy fire hits your legs as the Margay infection takes hold in them, forcing your toes to grow claws and plumping them up with extra muscles to carry your increased weight, and even more for short periods of time";
@@ -136,8 +136,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 12;
 	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 55; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 7; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 55; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 7; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Midway"; [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -173,7 +173,7 @@ this is the margaydance rule:
 	increase margaydancecount by 1;
 	if margaydancecount is even and a random chance of 2 in 5 succeeds and peppereyes is 0:	[40% of the time on any even round]
 		say "The big kitty performs an erotic dance that is quite tantalizing, seeking to entice you into giving into her rough advances. She runs her paws over her ample figure, her numerous breasts and then down to her wet cunts, fingering them with a moan of desire.";
-		let playernum be 150 + humanity of player + ( level of player * 2 ) + charisma of player + ( plmindbonus * 3 ) - libido of player ;
+		let playernum be 150 + humanity of player + ( level of player * 2 ) + charisma of player + ( plmindbonus * 3 ) - libido of player;
 		let margaynum be 200 + ( lev entry * 2 ) + cha entry + ( monmindbonus * 3 );
 		if bodyname of player is "Margay":
 			decrease playernum by 12;
@@ -203,14 +203,14 @@ this is the margaydance rule:
 			if facename of player is listed in Infections of Felinelist:
 				increase libido of player by a random number between 0 and 2;
 			say "[if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist]Your feline nature is particularly captivated by the suddenly alluring cat before you and you mrowl longingly as you watch her move. [end if]Unable to look away from the [one of]feline[or]margay[purely at random]'s sensual and erotic motions, your feel an increasing need to [one of]be with her[or]snuggle up against that plump body of hers[or]bury your face in her wet crotch[or]curl up in her motherly arms[purely at random]. The entire display drains some of your resistance, arousing you further and tempting you to give in and play with the plump feline! You take [special-style-2][dam][roman type] damage!";
-			decrease hp of the player by dam;
+			decrease HP of the player by dam;
 			follow the player injury rule;
 			say "You are [descr].";
 		now peppereyes is 0; [pepperspray wears off]
-		if hp of the player is greater than 0 and libido of player < 110:
+		if HP of the player > 0 and libido of player < 110:
 			wait for any key;
 		else:
-			if hp of player <= 0, now fightoutcome is 20;
+			if HP of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
 			Lose;
 		rule succeeds;
@@ -236,7 +236,7 @@ Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Margay":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if cunts of player > 0:							[FEMALE/HERM]
 				say "     As your mind collapses, you succumb to the strange, feline urges that fill you. Or more accurately, that demand that you be filled. You strike out into the city. As you travel, you can feel your infection spreading and reaching completion, growing something deep inside you. Coupled with your new instincts, you make your way to the park, drawn by the scent of felines there. You are soon confronted by one of the many small feline girls that inhabit this territory. She seeks to latch onto your bosom and nurse from you as if you were her mother, but your instincts urge you to make her your child in a different manner. One much more fulfilling. Wrapping your motherly arms around the youthful kitty, you hug her tenderly before pressing her muzzle to your wet, gaping pussy. You give the struggling feline a little push and your cunt stretches with ease to take her in, drawing her head into your vagina. Your inner muscles, designed for just such an act, stroke and pull at the cute kitty, pulling her further and further into your large body, drawing her up into your [if cunts of player > 1]second[else]special[end if] womb. You can feel her curling up inside you and drifting into a soft slumber.";
 				say "     You find your way into a small, maintenance building and rest there. After a few hours, you feel your womb shift and you mrowl in delight as your womb slowly, but painlessly, releases your new daughter. The feline girl is now well on her way to becoming a sexy margay like yourself. Together, you leave your den in the maintenance building to find more new daughters to feed to your loving womb again and again until they're fully mature and ready to capture prey of their own.";

@@ -121,7 +121,7 @@ to say corruptedvicdesc:
 
 
 to say losetocorruptedvic:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Unwilling to continue fighting this poor victim of the infection, you stop resisting and simply allow her to throw herself upon you. She moans happily and runs her hands over your body as she pushes you to the floor. ";
 	else:
 		say "     You try to resist the infected woman, but are worn down by her wild advances until you finally relent and are knocked to the ground. ";
@@ -139,7 +139,7 @@ to say beatthecorruptedvic:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -152,7 +152,7 @@ When Play begins:
 	now face entry is "mostly human in appearance, but having small patches of grey scales at the corners of your eyes";
 	now body entry is "slender and feminine with curvy hips. Overall, it looks rather human, but has a few visible differences. Most prominently, you have a trio of six-inch tendrils fluttering from your outer thighs and bony plates covering your forearms and the back of your hands";
 	now skin entry is "has a yellow hue and has patches of grey scales across your breastbone, hips, wrists and ankles"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a long tail covered in grey scales that slowly flattens out and becomes akin to a slimy, tongue-like appendage. You have a little trouble controlling it at times, finding it prone to licking things (which you indeed end up tasting) when you least expect it if you don't focus on keeping it in check";
+	now tail entry is "You have a long tail covered in grey scales that slowly flattens out and becomes akin to a slimy, tongue-like appendage. You have a little trouble controlling it at times, finding it prone to licking things (which you indeed end up tasting) when you least expect it if you don't focus on keeping it in check.";
 	now cock entry is "[one of]spaded[or]altered[or]mutant[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "delightful shivers of pleasure accompany the changes occurring. Your face takes on a largely human appearance with beautiful, soft features and a lovely smile. Your brow is a little oddly shaped and there are patches of grey scales at the corners of your eyes"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "your form shifts and reshapes itself with increasingly pleasant alterations. By the time it settles down, your body thankfully has a generally human shape with feminine curves. There are several odd differences, some prominent and others more subtle. Your forearms and the back of your hands are armoured by bony plates. Growing from your outer thighs, you have a few waving tendrils that are quite erotically sensitive to the touch";
@@ -166,7 +166,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 16;
 	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 32; [ The monster's starting hit points. ]
+	now HP entry is 32; [ The monster's starting HP. ]
 	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
 	now area entry is "Sealed"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -196,7 +196,7 @@ Section 3 - Endings
 [
 when play ends:
 	if bodyname of player is "Corrupted Spawner":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";

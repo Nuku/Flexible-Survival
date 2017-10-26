@@ -329,8 +329,8 @@ To recenter the region of (r - a mappable room):
 	let min_x be the map_x of r;
 	let min_y be the map_y of r;
 	repeat with loop_room running through all mappable rooms coregional with r begin;
-		if the map_x of loop_room is less than min_x, now min_x is the map_x of loop_room;
-		if the map_y of loop_room is less than min_y, now min_y is the map_y of loop_room;
+		if the map_x of loop_room < min_x, now min_x is the map_x of loop_room;
+		if the map_y of loop_room < min_y, now min_y is the map_y of loop_room;
 	end repeat;
 	repeat with loop_room running through all mappable rooms coregional with r begin;
 		now the map_x of loop_room is the map_x of loop_room - min_x;
@@ -449,8 +449,8 @@ To decide whether the map is drawn:
 		let max_x be the map_x of location;
 		let max_y be the map_y of location;
 		repeat with loop_room running through the mappable rooms coregional with location begin;
-			if the map_x of loop_room is greater than max_x, now max_x is the map_x of loop_room;
-			if the map_y of loop_room is greater than max_y, now max_y is the map_y of loop_room;
+			if the map_x of loop_room > max_x, now max_x is the map_x of loop_room;
+			if the map_y of loop_room > max_y, now max_y is the map_y of loop_room;
 		end repeat;
 		let map_min_x be 0;
 		[ If the width of the drawn map is no more than the width allocated, center the map horizontally.]
@@ -831,7 +831,7 @@ Array Automap_Font_3_Conv -> 0 38 40 96 96 96 126 126 126 96 126 11 12 13 14 15 
 	ctr = 0;
 	for (posa = line_n: posa < MAP_HEIGHT + line_n: ++ posa) {
 		posb = (width - MAP_WIDTH - 1) / 2;
-		VM_MoveCursorInStatusLine (posa, posb);;
+		VM_MoveCursorInStatusLine (posa, posb);
 
 		for (posb = 0: posb < MAP_WIDTH: ++ posb) {
 			#ifdef AUTOMAP_HYPERLINKS;

@@ -95,8 +95,8 @@ carry out trixiecheating:
 				decrease charisma of player by 1;
 				decrease perception of player by 1;
 				if remainder after dividing stamina of player by 2 is 1:
-					decrease maxhp of player by level of player plus 1;
-					if hp of player > maxhp of player, now hp of player is maxhp of player;
+					decrease maxHP of player by level of player plus 1;
+					if HP of player > maxHP of player, now HP of player is maxHP of player;
 			else:
 				add "Lil Better" to feats of player;
 				decrease score by 400;
@@ -109,7 +109,7 @@ carry out trixiecheating:
 				increase charisma of player by 1;
 				increase perception of player by 1;
 				if remainder after dividing stamina of player by 2 is 0:
-					increase maxhp of player by level of player plus 1;
+					increase maxHP of player by level of player plus 1;
 		else if calcnumber is 5:
 			if boosterfeats > 0:
 				say "This ability cannot be removed once gained.";

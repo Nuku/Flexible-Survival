@@ -8,7 +8,7 @@ The player has a number called MonkeyKingWin.
 
 [PLANS/A FAIRE :
 Randomiser MK descriptions scenes: [random adj][random name] (v 2)?
-Develop MonkeyKing: give option on how to handle victory . Depending on what you do, Fight intro and/or outcome changes. (v2)
+Develop MonkeyKing: give option on how to handle victory. Depending on what you do, Fight intro and/or outcome changes. (v2)
 Interaction during fight? (v2)
 Concept : friendship meter: raises if non-dominant victory, lowers else; if positive or negative, certain scenes change (v2 / v3)
 ]
@@ -34,7 +34,7 @@ to say MonkeyKingdesc:
 		say "     You are once again in the Asian wing of the Museum. 'You [bodyname of player] bastard! Stay where you are!' A furious Monkey King jumps in your way, intent on taking his revenge. It seems the humiliation from last time was not enough for him...";
 	else:
 		if bodyname of player is "Monkey":
-			say "     The place around you looks familiar. It seems you are in the Asian wing. You shudder, remembering who is his annoying inhabitant. You starts to turn around and go back to the entrance, but a familiar, arrogant and very irritating voice resonates in the big room: 'Who dares trespass the kingdom of the mighty Monk... Oh my, that's interesting.'.";
+			say "     The place around you looks familiar. It seems you are in the Asian wing. You shudder, remembering who is his annoying inhabitant. You starts to turn around and go back to the entrance, but a familiar, arrogant and very irritating voice resonates in the big room: 'Who dares trespass the kingdom of the mighty Monk... Oh my, that's interesting.'";
 			say "     The prideful monkey-man startles you as he falls from the ceiling just in front of you. Unfortunately, he seems to remember you. 'Aren't you one of my subjects? Your timing is perfect. Kneel before your King and let him satiate his lust!' he declares, with the same arrogant tone.";
 		else:
 			say "     You find yourself in the Asian wing of the Museum. Suddenly, a regal-sounding voice booms in the empty halls. '[italic type]Halt, peasant![roman type]'. On these words, a golden-furred monkey dressed in an martial arts vest and pants jumps in front of you. He is armed with a wooden staff which seems to change sizes when you're not looking at it.";
@@ -50,7 +50,7 @@ to say losetoMonkeyKing:
 			else:
 				say "     You try to crawl away from him but the smirking monkey jumps on your back. You feel his cock brushing against your thighs and lining with your vagina. '[italic type]Relax yourself and bask in pleasure.[roman type]' whispers the Monkey King in your ear, before forcing himself inside of you. You moan as he fucks you at a quick, steady pace.";
 				if cocks of player > 0:
-					say "     Suddenly, the agile primate's feet leave the ground and grab your cock. Having to suddenly support the entire weight of the simian fighter, you fall forward, your shoulders and your head pinned on the ground. The Monkey King hugs your chest tight as he fucks you while his prehensile paws stroke your [cock size desc of player] penis. The pleasure is really indescribable and you orgasm in a few minutes. your cock spurts its load on the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your innards signals that he came as well. Satiated, he dismounts you and apply his paws on your face, having you lick them clean, before he takes his leave in a short, taunting victory dance.";
+					say "     Suddenly, the agile primate's feet leave the ground and grab your cock. Having to suddenly support the entire weight of the simian fighter, you fall forward, your shoulders and your head pinned on the ground. The Monkey King hugs your chest tight as he fucks you while his prehensile paws stroke your [cock size desc of player] penis. The pleasure is really indescribable and you orgasm in a few minutes, your cock spurting its load on the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your innards signals that he came as well. Satiated, he dismounts you and apply his paws on your face, having you lick them clean, before he takes his leave in a short, taunting victory dance.";
 				else:
 					say "     Suddenly, the agile primate's feet leave the ground and grab on your legs while his arms hug your upper body tight. Riding you like a jockey rides a horse, you stumble forward as the speed and the intensity of his fucking doubles. The deserted halls resonate with your moans and the monkey's grunts. The pleasure is really indescribable and you orgasm in a few minutes, your cunt spasming around the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your vagina signals that he came as well. Satiated, he dismounts you and takes his leave in a short, taunting victory dance.[fimpregchance]";
 		else:
@@ -104,7 +104,7 @@ to say beattheMonkeyKing:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -116,7 +116,7 @@ When Play begins:
 	now face entry is "like a monkey, with a small muzzle, big laughing eyes and a mane of fur around it"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "lithe and human-like. It is also very flexible, and you can do any kind of acrobatics with ease. Your feet are prehensile, meaning you can hold various objects and do many things with them as if they were hands"; [ Body Description, format as the text "Your body is (your text)" ]
 	now skin entry is "short, golden fur which recovers your entire"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a long, prehensile tail that wiggles in your back every time you move."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a long, prehensile tail that wiggles behind you every time you move."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "human-like"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "you feel your hair grow and surround it. Your nose and your mouth changes, forming a small muzzle"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "your body loses mass and becomes lither. Your feet tingle as they change form, gaining an opposable thumb and becoming prehensile"; [ Body TF text, format as "Your body feels funny as (your text)." ]
@@ -130,7 +130,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 15;
 	now sex entry is "Male";
-	now hp entry is 50;
+	now HP entry is 50;
 	now lev entry is 10; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
 	now area entry is "Museum"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -162,7 +162,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Monkey":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Losing the remnants of your sanity, you seek out the Monkey King and pledges loyalty to him. You spend the following days with your new leader, training under him and catering to his every whims, many of which are of carnal nature. Eventually, other victims of the Monkey King strain join you, and soon, with the Museum as your base, your gang takes on the other groups in the city, with you as of one the gang's lieutenants.";
 		else:
 			say "     After the evacuation, you use your newly acquired abilities for martial arts to open a dojo in a nearby city. You quickly become famous, and your physique and your skills gets you a big movie studio's attention. Soon, you begin to star in kung-fu movies and monster flicks, and become a worldwide celebrity. Like a King.";

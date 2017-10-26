@@ -129,12 +129,12 @@ south of Mustang Paddock Gate is Central Farm Square.
 north of Mustang Paddock Gate is Mustang Paddock.
 
 
-instead of going north from Central Farm Square while (hp of Lucifer is 0):
+instead of going north from Central Farm Square while (HP of Lucifer is 0):
 	move player to Mustang Paddock;
 	wait for any key;
 	challenge "Wild Mustang";
 
-instead of going north from Central Farm Square while (hp of Lucifer is 1 and Dexterity of Lucifer is 0):
+instead of going north from Central Farm Square while (HP of Lucifer is 1 and Dexterity of Lucifer is 0):
 	say "     As you move to open the gate to the horse paddock, someone calls out to you, making you turn and look. It is a horseman, clearly one of the farm workers, who casually strolls over to you with a bundle of... something on his shoulder, consisting of lots of sturdy leather straps and buckles. Soon, he comes to stand before you on his broad hooves and gives you a calculating grin. 'Hey there, partner. Name's Lee. I saw you making all buddy buddy with Lucifer in there. You're a brave one, that I have to admit. Lots of others tried and ended up as mares right quick. There's a betting pool how long you'll last, just you know.' Looking you up and down as if to evaluate your body's willingness to transform, the horseman gives a knowing nod, then focuses back on your face. 'Anyhow, I got a proposition for you. Since you're so friendly with the big bad stallion, I'll offer you this thing for a low, low price. Hell, I'll even play pit crew if you need me to,' Lee explains, pulling the leather harness from under his arm and spreading it out for you to see.";
 	say "     It looks like... a sex sling, with a sturdy leather pad on which to lie, plus very long leather straps, arranged so they can fit a broad barrel shape. You study the arrangement for a few seconds, then your eyes go wide in realization and you glance to the horses out on the paddock's green grass. 'Exactly,' the farmhand says, smiling broadly. 'You see, we had a... horse enthusiast, coming over sometimes before everything went to hell like this. At night, or when the boss was off for a few days, you know. For the right price, me and a few of the guys allowed him to have his fun, strapped him in. The guy had been waiting for a chance to try the new stud, but with everything going on...' Lee waves at his own horseman body and the entrance of the farm, beyond which you can see the creeping grass move in waves that have nothing at all to do with wind.";
 	WaitLineBreak;
@@ -148,7 +148,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Cowboy":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if level of player > 10:
 				say "     A";
 			else:

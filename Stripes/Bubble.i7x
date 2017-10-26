@@ -24,20 +24,20 @@ to say bubbledesc:
 Section 2 - Conversation
 
 Instead of conversing the Bubble:
-	if hp of Bubble < 4:
-		say "ERROR-Bubble-[hp of Bubble]C: Something funky's going on here.";
-	else if hp of Bubble is 4:
+	if HP of Bubble < 4:
+		say "ERROR-Bubble-[HP of Bubble]C: Something funky's going on here.";
+	else if HP of Bubble is 4:
 		say "     'This is such a fun place you've got here,' she giggles happily. There's lots of space[if the number of bunkered people + the number of booked people > 3], lots of new friends[end if] and plenty of interesting stuff to go see outside. Thanks for letting me stay here, cutie.'  She gives you a kiss on the cheek while giving your ass a squeeze before bounding around happily, only the weight of her sneakers keeping her partly grounded.";
-		now hp of Bubble is 5;
-	else if hp of Bubble is 6 and a random chance of 1 in 3 succeeds:
+		now HP of Bubble is 5;
+	else if HP of Bubble is 6 and a random chance of 1 in 3 succeeds:
 		say "     'I've been having such a great time since I've come here. Playing [']High Dive['] is especially fun!' she says excitedly. Confused, you ask her what she's talking about and she just giggles. 'I'll show you. It's loads of fun!'";
 		say "     Bending over to untie her sneakers, she ends up flashing you a fine view of her delectable pussy and bubble butt. 'I got these sneakers so I don't bounce around too much while I'm having fun,' she says with some clarity. 'But they'd mess up things up now,' she adds with a giggle. After pulling them off, she snuggles her own tail and, pinching the air valve at its tip, takes a few quick breaths and blows into it. This causes her body to start to swell up, inflating herself until she's got a plump, rounded figure. Full of air, she bounds effortlessly to the balcony area overlooking the main floor and leaps right off. Crying out, you run to the balcony railing to see her floating down at a rather sedate speed while she giggles happily.";
 		say "     Reaching the bottom, she bounces lightly off of the floor and rises back up several feet, rolling in mid-air as she does. 'Come on. You try it now,' she calls up merrily in mid-bounce. 'It's awesome!'  Responding that you don't think that'd be such a good idea, you head over to take the stairs down, only to find her bounding buoyantly up them four or five steps at a time. Once she reaches the top, she dives right over the railing again, this time with a spin. She twirls down, bounces around, rushes back up and leaps off again repeatedly, getting seemingly endless amusement out of it.";
-		now hp of Bubble is 7;
-	else if hp of Bubble >= 7 and a random chance of 2 in hp of Bubble succeeds:
-		say "     [one of]'I'm so super-stretchy now, even down in my pussy. I could probably fit anything I like in there.'[or]'I found a new friend out in the city. He was this big - wide!' she says, holding her paws over two feet apart. 'He was so surprised when I was able to take him no problem,' she giggles.[or]'I met a funny little doggy out in the city. We were playing and he pushed himself right into me. I was surprised, but it was loads of fun[if hp of Bubble is 7]. We should try it[end if]'[at random]";
+		now HP of Bubble is 7;
+	else if HP of Bubble >= 7 and a random chance of 2 in HP of Bubble succeeds:
+		say "     [one of]'I'm so super-stretchy now, even down in my pussy. I could probably fit anything I like in there.'[or]'I found a new friend out in the city. He was this big - wide!' she says, holding her paws over two feet apart. 'He was so surprised when I was able to take him no problem,' she giggles.[or]'I met a funny little doggy out in the city. We were playing and he pushed himself right into me. I was surprised, but it was loads of fun[if HP of Bubble is 7]. We should try it[end if]'[at random]";
 	else:
-		say "     [one of]'I think I'll go and see if I can meet up with one of those cute foxes out there. They have such a sexy sheen to their latex.'[or]'Thanks again for saving me. From what I saw of it, getting to me couldn't have been easy. And now we can have lots of fun together,' she giggles at the end, her bubbling joviality returning.[or]'I think I look really sexy now, don't you?' she asks, posing naughtily for you.[or]'I can do lots of fun stuff now that I'm a balloon. It's great.'[or]'I was so stressed before. So many worries and problems. All pointless stuff that was weighing me down. But now - Poof! - no room for them in my fun-loving bubble brain,' she giggles happily.[or][if skinname of player is listed in infections of Latexlist]'Your skin feels so nice like this,' she says, running her paws over your smooth hide.[else]'Mmm... I think you'd look pretty sexy with a nice latex coating,' she purrs, running a finger teasingly across your chest.[end if][or][if hp of Bubble is 6]Cuddling her own inflatable tail, she licks her tongue slowly around the air valve. 'The great thing about the new me is I can have any sexy figure I want. Or you want,' she adds with coquettishly.[else]She giggles vapidly and makes some air-headed comment.[end if][or]She giggles vapidly and makes some air-headed comment.[in random order]";
+		say "     [one of]'I think I'll go and see if I can meet up with one of those cute foxes out there. They have such a sexy sheen to their latex.'[or]'Thanks again for saving me. From what I saw of it, getting to me couldn't have been easy. And now we can have lots of fun together,' she giggles at the end, her bubbling joviality returning.[or]'I think I look really sexy now, don't you?' she asks, posing naughtily for you.[or]'I can do lots of fun stuff now that I'm a balloon. It's great.'[or]'I was so stressed before. So many worries and problems. All pointless stuff that was weighing me down. But now - Poof! - no room for them in my fun-loving bubble brain,' she giggles happily.[or][if skinname of player is listed in infections of Latexlist]'Your skin feels so nice like this,' she says, running her paws over your smooth hide.[else]'Mmm... I think you'd look pretty sexy with a nice latex coating,' she purrs, running a finger teasingly across your chest.[end if][or][if HP of Bubble is 6]Cuddling her own inflatable tail, she licks her tongue slowly around the air valve. 'The great thing about the new me is I can have any sexy figure I want. Or you want,' she adds with coquettishly.[else]She giggles vapidly and makes some air-headed comment.[end if][or]She giggles vapidly and makes some air-headed comment.[in random order]";
 
 
 Section 3 - Sexytimes
@@ -47,7 +47,7 @@ the fuckscene of Bubble is "[sexwithBubble]";
 to say sexwithBubble:
 	if lastfuck of Bubble - turns < 4:
 		say "     You try to entice the bubble-headed vixen into more sex, but her attention keeps wandering. It looks like you'll have to wait a little while and try again later.";
-	else if hp of Bubble is 1:
+	else if HP of Bubble is 1:
 		say "     She seems mighty eager, but you do want to talk to her first.";
 	else if cocks of player is 0 and cunts of player is 0:
 		say "     For now, there's nothing you can do with Bubble while you're genderless."; [***]
@@ -91,7 +91,7 @@ to say bubblesex00:
 	now title entry is "Rim job";
 	now sortorder entry is 7;
 	now description entry is "have your ass licked";]
-	if hp of Bubble >= 7:
+	if HP of Bubble >= 7:
 		choose a blank row in table of fucking options;
 		now title entry is "UB";
 		now sortorder entry is 9;
@@ -104,7 +104,7 @@ to say bubblesex00:
 		now sortorder entry is 10;
 		now description entry is "change her figure by [if libido of Bubble is 0]inflating[else]deflating[end if] her";
 		choose a blank row in table of fucking options;
-	if hp of Bubble >= 8 and bodyname of player is "Inflatable Vulpine" and player is pure:
+	if HP of Bubble >= 8 and bodyname of player is "Inflatable Vulpine" and player is pure:
 		if infvulpstate <= 2:
 			now title entry is "Be inflated";
 		else:
@@ -151,7 +151,7 @@ to say bubblesex00:
 					say "[bubblesex12]";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	if hp of Bubble is 5, now hp of Bubble is 6;
+	if HP of Bubble is 5, now HP of Bubble is 6;
 	now libido of player is ( ( libido of player * 2 ) + 50 ) / 3;
 	now lastfuck of Bubble is turns;
 	wait for any key;
@@ -215,15 +215,15 @@ to say bubblesex09:
 	now libido of Bubble is 0;
 
 to say bubblesex10:
-	if hp of Bubble is 7:
+	if HP of Bubble is 7:
 		say "     Getting the bubbly vixen to lay down, you start by fingering her pussy. Her stretchy folds spread around your digits and her lubricating juices flow. Working them in deeper and adding another digit, you stretch her open further, resulting in increased moans and giggles of delight from the air-headed cutie. Deciding to see just how much she can take, you work your whole hand into her, resulting in a happy yip for more. Licking her pussy and clit, you slide in finger after finger from your other hand until it's pulled in as well.";
 		say "     Before you even realize it, your hands are no longer sliding back when you pull and instead are just slipping further and further into her. You're already in up past your elbows by the time you start to notice this, at which point your face is pressed to those quivering folds. You release a cry of surprise that's wetly muffled by the slurp of her juicy pussy spreading wider as your head gets pulled in with a sudden orgasm from the balloon girl.";
 	else:
 		say "     Feeling drawn to the bubbly vixen's pussy, you start fingering her in an attempt to stretch her open. As her folds expand and swell wider, you press your face to them. You lick up her lubricating juices and kiss at her clit before using both hands to stretch her open even further. She releases a shuddering moan and yips in delight. Perhaps knowing what you want, the presses her padded paws to the back of your head and helps push it right into her vagina along with the hands helping to hold her open. Her vaginal walls squeeze and pull around you gently but inexorably, once again pulling you inch after inch into her. You lick across her inner walls and wiggle your fingers teasingly along them as you slide along them, much to her delight.";
-	say "     Her rubbery vaginal walls ripple and squeeze around your [bodytype of player] body as you're drawn further and further into her [if libido of Bubble is 0]slender but stretched[else]rounded and increasingly stuffed[end if] belly as room is made to accommodate you. Awash in her juices and the rubbery scent of her insides, you become more and more aroused, hardly resisting and more just squirming around for your mutual delight. You find yourself [if hp of Bubble is 8]once again slipping into that[else]slipping into an[end if] inflating chamber inside her, a balloon within the balloon. This womb forms for you as first your hands and then your arms, followed by the rest of you as the process progresses, are moved into it. In the end, you end up bundled up in this snug, padded chamber.";
+	say "     Her rubbery vaginal walls ripple and squeeze around your [bodytype of player] body as you're drawn further and further into her [if libido of Bubble is 0]slender but stretched[else]rounded and increasingly stuffed[end if] belly as room is made to accommodate you. Awash in her juices and the rubbery scent of her insides, you become more and more aroused, hardly resisting and more just squirming around for your mutual delight. You find yourself [if HP of Bubble is 8]once again slipping into that[else]slipping into an[end if] inflating chamber inside her, a balloon within the balloon. This womb forms for you as first your hands and then your arms, followed by the rest of you as the process progresses, are moved into it. In the end, you end up bundled up in this snug, padded chamber.";
 	say "     There's a dim orange glow from the light passing through her latex walls to provide a little illumination. You find it very peaceful and very arousing in this snug bundle inside her. You've been masturbating furiously from the moment your crotch slid past her tight, rubbery ring of her cervix and your hands to get at it to [if cocks of player > 0]grab your throbbing cock. You stroke your [cock of player] shaft, erect from the squeezing passage and slick with her juices, until you cum messily across yourself. After adding your semen to the slick mess inside the steamy, musky womb[else if cunts of player > 0]stuff your juicy pussy. You finger yourself energetically, your cunny dripping with arousal from the squeezing passage into her, until you soak your hands with your femme cum. After adding your hot juices to the slick mess inside the steamy, musky womb[else]your bare crotch. You rub your genderless groin and finger your anus in search of stimulation, using the vixen's slick juices as lubrication, until you have a shuddering, unfocused release. After this unsatisfying orgasm[end if], you drift off into a lustful slumber filled with erotic dreams while the inflatable vixen rubs her rounded belly.";
 	say "     When you begin to awaken, your thoughts are hazy and you don't quite realize what's happening at first. You simply move on instinct, squirming around inside the inflated chamber around you as you're pushed slowly from it. You are squeezed through a slick passage that feels delightful across your skin and exit out onto the cool tile floor of the library. You and Bubble moan and yip in delight as you're gradually pushed free of her inflatable body. You masturbate again even as your legs are still being pushed out of the inflatable vixen while she watches. You both end up cumming roughly at the same point you fully slide free of her. She cuddles you in her arms, cooing happily and sharing numerous kisses with you. Your thoughts remain empty for some time, thinking of nothing more than being happy snuggled up with your inflatable lover.";
-	if hp of Bubble is 7, now hp of Bubble is 8;
+	if HP of Bubble is 7, now HP of Bubble is 8;
 	if libido of Bubble is 0:
 		if infvulpstate is 0 or infvulpstate is 3, now infvulpstate is 1; [slender mode]
 	else:
@@ -261,7 +261,7 @@ to say bubblesex12:
 
 Section 9 - Information
 
-[ hp of Bubble           ]
+[ HP of Bubble           ]
 [ 0 = not started        ]
 [ 1 = Bouncy Castle open ]
 [ 2 = Arrive at BC       ]

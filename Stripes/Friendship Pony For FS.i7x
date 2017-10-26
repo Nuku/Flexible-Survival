@@ -270,7 +270,7 @@ to say fpattack:
 
 to say losetofpony:
 	now nofponysex is 0;
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Giving in to the pony's demands for friendship, you stop resisting and let her approach you";
 	else:
 		say "     Unable to continue resisting the pony's demands for friendship, you drop to your knees as she approaches you";
@@ -332,7 +332,7 @@ to say beatthefpony:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -363,7 +363,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 26; [ The monster's starting hit points. ]
+	now HP entry is 26; [ The monster's starting HP. ]
 	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
 	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -397,14 +397,14 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the fpony rule:
 	choose row monster from table of random critters;
 	if a random chance of 2 in 5 succeeds:
-		decrease hp of player by wdam entry / 2;
+		decrease HP of player by wdam entry / 2;
 		let libgrowth be wdam entry / 2;
 		if facename of player is listed in infections of equinelist, increase libgrowth by 1;
 		if "Cold Fish" is listed in feats of player, decrease libgrowth by a random number between 1 and 2;
 		if "Horny Bastard" is listed in feats of player, increase libgrowth by a random number between 0 and 2;
 		if libgrowth > 10, now libgrowth is 10;
 		increase libido of player by libgrowth;
-		say "[one of]'We shouldn't fight over this. Let's be friends!' [or]'I'm sorry. Let's just snuggle, friend!' [or]'How about we just kiss and make up?' [or]'Let's get to know each other,' [or]'Stop being so grumpy and gimme a kiss,' [or]'I know! A kiss will cheer you up,' [at random]the pony says, putting her forelegs around you in a hug while you're still recovering from her recent assault. She pulls you into a kiss for [special-style-2][wdam entry / 2][roman type] damage and [if libgrowth < 5]slightly [end if]increased libido[if hp of player > 0 and lust of player < 110]. You moan softly and reach to grab that ass of hers, but recover your reason and push her back[else]. You moan softly into the kiss and reach back, grabbing that ass of hers right on that design of [rfponybm] on her flank[end if].";
+		say "[one of]'We shouldn't fight over this. Let's be friends!' [or]'I'm sorry. Let's just snuggle, friend!' [or]'How about we just kiss and make up?' [or]'Let's get to know each other,' [or]'Stop being so grumpy and gimme a kiss,' [or]'I know! A kiss will cheer you up,' [at random]the pony says, putting her forelegs around you in a hug while you're still recovering from her recent assault. She pulls you into a kiss for [special-style-2][wdam entry / 2][roman type] damage and [if libgrowth < 5]slightly [end if]increased libido[if HP of player > 0 and lust of player < 110]. You moan softly and reach to grab that ass of hers, but recover your reason and push her back[else]. You moan softly into the kiss and reach back, grabbing that ass of hers right on that design of [rfponybm] on her flank[end if].";
 
 Section 4 - TF mechanics
 
@@ -703,7 +703,7 @@ Section 7 - Endings
 
 when play ends:
 	if bodyname of player is "Friendship Pony":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Having your old identity slip away from you, the new instincts of your infection take over. Your mind is rewritten, filled with thoughts of friendship, kindness and simplistic moral lessons[if pfptype is 4 and the player is fponyfaced]. You also figure out what you were doing wrong and are able to unlock your horn's magic. After taking a few minutes to enjoy it on yourself, you remember how fun it is to share with friends and trot off to make some[else if pfptype is 3]. Realizing you have wings, you flap them and fly with ease now. Taking to the air, you go off in search of some friends to play with[else]. Excited at the prospect of making some new friends, you head off to find some[end if].";
 			say "     Over the course of your wandering, you inexorably make your way to the fairgrounds. There you meet up with five other pretty ponies, representing a diverse set of character archetypes who all want to be your friend. Life with your new friends is wonderful, magical even, because there's nothing better than friends, especially when it's friends with benefits.";
 		else:

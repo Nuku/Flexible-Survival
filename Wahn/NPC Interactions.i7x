@@ -51,13 +51,13 @@ to say HelenSnowInteraction:
 				say "     Entering the library, you see Snow coming from between the shelves, carrying a stack of books to the small side room where she set up her workshop. As she does so, Helen jumps up from where she was lounging on a nearby sofa and chases after her, playfully trying to catch her long, fluffy tail. Snow gives a sigh as she feels the human dog's face brush up against her fur in her second attempt to take the tail into her mouth, and she raises the appendage higher as she turns to face Helen. 'You really were a dog once, weren't you? Can't resist chasing the big squirrel, hm?' she says, giving the naked teenage human a stare that stops her in her tracks.";
 				say "     But then a smile creeps over Snow's face and she chuckles, 'Oh well, it's your nature and I know you only wanna play. Guess there are worse things to be around by a beautiful young woman who doesn't understand the concept of clothes.' Snow steps forward to pat Helen's head affectionately, then says, 'Fine, come along doggie - you can sit on my mattress and be pretty for me to look at while I work, as long as you behave.' Your human dog gives an affirmative whine and happily follows Snow into her workshop.";
 
-instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and hp of Amy > 1 and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and HP of Amy > 1 and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	say "[AmySnowInteraction]";
 
-instead of going outside from Bunker while (Amy is in Grey Abbey Library and hp of Amy > 1 and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of going outside from Bunker while (Amy is in Grey Abbey Library and HP of Amy > 1 and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[AmySnowInteraction]";
 
@@ -71,13 +71,13 @@ to say AmySnowInteraction:
 		-- 2:      [workshop lessons]
 			say "     Entering the library, you hear voices come from the small side room in which Snow has her workshop set up. Curious, you walk over to check out what is going on and find Amy and Snow inside, with the big squirrel just explaining something to the attentively listening husky. While the young woman then starts to loosen a screw of the item on the workbench in front of her, Snow turns her head to look at you and gives a nod in greeting. Then she says, 'Our sexy little doggie here isn't half bad with a wrench and screwdriver. Give her half a year of lectures and she could be up with the best of em - me, for example.' Snow smiles as Amy gives a shy 'Thank you' to answer her praise, then tells you 'Don't let us keep you from doing any other stuff - we're gonna be busy for quite a while, until Amy can take apart and assemble this blindfolded...'";
 
-instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and hp of Amy > 1 and Felinoid companion is tamed and a random chance of 1 in 8 succeeds):
+instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and HP of Amy > 1 and Felinoid companion is tamed and a random chance of 1 in 8 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	say "[AmyFelinoidInteraction]";
 
-instead of going outside from Bunker while (Amy is in Grey Abbey Library and hp of Amy > 1 and Felinoid companion is tamed and a random chance of 1 in 8 succeeds):
+instead of going outside from Bunker while (Amy is in Grey Abbey Library and HP of Amy > 1 and Felinoid companion is tamed and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[AmyFelinoidInteraction]";
 
@@ -92,13 +92,13 @@ to say AmyFelinoidInteraction:
 			say "     Entering the library, you spot Amy sitting on one of the numerous sofas, reading a book while your felinoid companion sits beside her and is licking his own fur, including moistening a paw and rubbing behind the ears. Before long, the big cat is done with his task and starts to lick Amy too, making her giggle and rub under his chin. The felinoid keeps going for a while, just slow enough so that Amy won't get distracted from her book completely. You can't really tell if it's just meant as a gesture of affection or if he simply wants to spread his scent all over the husky and frighten off any other contenders for her.";
 
 
-instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and Alexandra is in Grey Abbey Library and hp of Amy > 1 and a random chance of 1 in 8 succeeds):
+instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and Alexandra is in Grey Abbey Library and HP of Amy > 1 and a random chance of 1 in 8 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	say "[AmyAlexandraInteraction]";
 
-instead of going outside from Bunker while (Amy is in Grey Abbey Library and Alexandra is in Grey Abbey Library and hp of Amy > 1 and a random chance of 1 in 8 succeeds):
+instead of going outside from Bunker while (Amy is in Grey Abbey Library and Alexandra is in Grey Abbey Library and HP of Amy > 1 and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[AmyAlexandraInteraction]";
 
@@ -113,13 +113,13 @@ to say AmyAlexandraInteraction:
 		-- 2:      [talking about parents]
 			say "     Entering the library, you spot Amy sitting on one of the numerous sofas, with her back against Alexandra, whose arms are curled around the husky's waist while they talk. Curious about what topic, you step up a bit closer and overhear the doberwoman say, 'So your mother is a total whore, you were born after a gangbang and then brought here by the boss? Shit, you've almost had it as bad as me - my parents were crooks and criminals. So here we are, a born slut and a tamed slut, both in training. Guess the apple doesn't fall too far from the tree.' Then she tightens her embrace around Amy and pulls her close, before continuing with 'Bah, screw everyone else - now we have the boss, and each other.' Alexandra rubs her muzzle against Amy's neck and says, 'You hear that, girl? If anyone but the boss gives you even a hint of trouble - I'll kick the shit out of them. Least thing I can do...'";
 
-instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and hp of Carl > 9 and Xerxes is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Xerxes is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	say "[CarlXerxesInteraction]";
 
-instead of going outside from Bunker while (Carl is in Grey Abbey 2F and hp of Carl > 9 and Xerxes is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of going outside from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Xerxes is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[CarlXerxesInteraction]";
 
@@ -129,25 +129,25 @@ to say CarlXerxesInteraction:
 	let randomnumber be a random number from 1 to 2;
 	if randomnumber is:
 		-- 1:       [playing ball]
-			if hp of Carl is 10:   [normal Carl]
+			if HP of Carl is 10:   [normal Carl]
 				say "     Entering the library, you suddenly see a tennis ball fly past your nose, instantly followed by Xerxes and Carl dashing after it on all fours. Your human dog just keeps going, totally focused on the ball, while Carl skids to a stop and gets to his feet, a sheepish expression on his face. 'Oh - er.. hi,' he says, looking at you before returning his attention to Xerxes, who finally catches the ball and starts to carry it over in his teeth. 'You must be wondering what we - what I am doing. Well, Xerxes came to me with that ball and wanted to play...' In that moment, the buck-naked teenage human arrives at your side, sitting down and obediently offering his [if cocks of player is 0 and cunts of player > 0]mistress[else]master[end if] the tennis ball. Carl continues while you take the toy from Xerxes, 'You can't believe how tempted I was to run after that thing myself when I threw it for him. So... I did, after a few times. It's really quite a bit of fun to just let go for a while, feel the ground under all four paws as you chase something.'";
 				say "     Both your eyes drop to the yellow ball in your hand, bearing obvious bite-marks from sharper teeth than Xerxes in his human form can call his own. Carl clears his throat, then continues with, 'I'm not going feral on you, if that's your worry. Just a bit of fun - running and chasing. Xerxes has a bit of a lead in experience as a dog, but... well, I'm the one with paws here so it's a close thing mostly.' Weighing the ball in your hand, you can't help but agree - given what most of the other infected are doing out in the city, playing around like a dog really is pretty unremarkable. A smile spreads over your face as you look at first the husky soldier, then the human dog... and shake the hand with the ball to draw their attention to it. Then you fling the tennis ball with some force, making it fly, then bounce along an aisle between the bookshelves. Your two canine friends dash after it without delay, hands and claws scrabbling on the carpet.";
-			else if hp of Carl is 30:    [subby Carl]
+			else if HP of Carl is 30:    [subby Carl]
 				say "     Entering the library, you suddenly see a tennis ball fly past your nose, instantly followed by Xerxes and Carl dashing after it on all fours. Your human dog just keeps going, totally focused on the ball, while Carl skids to a stop and gets to his feet, a sheepish expression on his face. 'Sorry Alpha,' he says, looking at the ground at your feet before returning his attention to Xerxes, who finally catches the ball and starts to carry it over in his teeth. 'I really didn't want to hit you or anything. It's just that Xerxes came to me with that ball and wanted to play...' In that moment, the buck-naked teenage human arrives at your side, sitting down and obediently offering his [if cocks of player is 0 and cunts of player > 0]mistress[else]master[end if] the tennis ball. Carl continues while you take the toy from Xerxes, 'You can't believe how tempted I was to run after that thing myself when I threw it for him. So... I did. It's really quite a bit of fun to just let go for a while, feel the ground under all four paws as you chase something.'";
 				say "     Both your eyes drop to the yellow ball in your hand, bearing obvious bite-marks from sharper teeth than Xerxes in his human form can call his own. Carl clears his throat, then continues with, 'I'm not going feral on you, Alpha. Just a bit of fun - running and chasing. Xerxes has a bit of a lead in experience as a dog, but... well, I'm the one with paws here so it's a close thing mostly.' Weighing the ball in your hand, you can't help but agree - given what most of the other infected are doing out in the city, playing around like a dog really is pretty unremarkable. A smile spreads over your face as you look at first the husky soldier, then the human dog... and shake the hand with the ball to draw their attention to it. Then you fling the tennis ball with some force, making it fly, then bounce along an aisle between the bookshelves. Your two canine friends dash after it without delay, hands and claws scrabbling on the carpet.";
 		-- 2:
-			if hp of Carl is 10:   [normal Carl]
-				say "     Entering the library, you see Carl crouched down next to Xerxes mattress, filling the human dog's feeding bowl from a sack of kibble. beside that, he also fills a big cereal bowl for himself, then sets the sack down on the ground. Xerxes is well-trained enough to patiently wait for the husky to take his bowl and stand up, only then starting to hungrily eat the dried food. Meanwhile, Carl starts to pick up kibble out of his own bowl, throwing them into his muzzle to crunch them with sharp teeth. As he sees you standing nearby, the soldier says, 'You know, dog food isn't as bad as I always imagined as a human. Well, that or it's just made to fit my new taste buds. It really is quite tasty.' Still eating out of the bowl, he then walks up the stairs to finish his meal at his watch post.";
-			else if hp of Carl is 30:    [subby Carl]
-				say "     Entering the library, you see Carl crouched down next to Xerxes mattress, filling the human dog's feeding bowl from a sack of kibble. beside that, he also fills a big cereal bowl for himself, then sets the sack down on the ground. Xerxes is well-trained enough to patiently wait for the husky to take his bowl and stand up, only then starting to hungrily eat the dried food. Meanwhile, Carl starts to pick up kibble out of his own bowl, throwing them into his muzzle to crunch them with sharp teeth. As he sees you standing nearby, the soldier lowers his head and says, 'Hello, Alpha. I was just feeding your pet... and myself. I'm gonna get back on watch now.' Still eating out of the bowl, he then walks up the stairs to finish his meal at his watch post.";
+			if HP of Carl is 10:   [normal Carl]
+				say "     Entering the library, you see Carl crouched down next to Xerxes mattress, filling the human dog's feeding bowl from a sack of kibble. Beside that, he also fills a big cereal bowl for himself, then sets the sack down on the ground. Xerxes is well-trained enough to patiently wait for the husky to take his bowl and stand up, only then starting to hungrily eat the dried food. Meanwhile, Carl starts to pick up kibble out of his own bowl, throwing them into his muzzle to crunch them with sharp teeth. As he sees you standing nearby, the soldier says, 'You know, dog food isn't as bad as I always imagined as a human. Well, that or it's just made to fit my new taste buds. It really is quite tasty.' Still eating out of the bowl, he then walks up the stairs to finish his meal at his watch post.";
+			else if HP of Carl is 30:    [subby Carl]
+				say "     Entering the library, you see Carl crouched down next to Xerxes mattress, filling the human dog's feeding bowl from a sack of kibble. Beside that, he also fills a big cereal bowl for himself, then sets the sack down on the ground. Xerxes is well-trained enough to patiently wait for the husky to take his bowl and stand up, only then starting to hungrily eat the dried food. Meanwhile, Carl starts to pick up kibble out of his own bowl, throwing them into his muzzle to crunch them with sharp teeth. As he sees you standing nearby, the soldier lowers his head and says, 'Hello, Alpha. I was just feeding your pet... and myself. I'm gonna get back on watch now.' Still eating out of the bowl, he then walks up the stairs to finish his meal at his watch post.";
 
-instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and hp of Carl > 9 and Helen is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Helen is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	say "[CarlHelenInteraction]";
 
-instead of going outside from Bunker while (Carl is in Grey Abbey 2F and hp of Carl > 9 and Helen is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of going outside from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Helen is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[CarlHelenInteraction]";
 
@@ -157,26 +157,26 @@ to say CarlHelenInteraction:
 	let randomnumber be a random number from 1 to 2;
 	if randomnumber is:
 		-- 1:       [playing ball]
-			if hp of Carl is 10:   [normal Carl]
+			if HP of Carl is 10:   [normal Carl]
 				say "     Entering the library, you suddenly see a tennis ball fly past your nose, instantly followed by Helen and Carl dashing after it on all fours. Your human dog just keeps going, totally focused on the ball, while Carl skids to a stop and gets to his feet, a sheepish expression on his face. 'Oh - er.. hi,' he says, looking at you before returning his attention to Helen, who finally catches the ball and starts to carry it over in her teeth. 'You must be wondering what we - what I am doing. Well, Helen came to me with that ball and wanted to play...' In that moment, the buck-naked teenage human arrives at your side, sitting down and obediently offering her [if cocks of player is 0 and cunts of player > 0]mistress[else]master[end if] the tennis ball. Carl continues while you take the toy from Helen, 'You can't believe how tempted I was to run after that thing myself when I threw it for her. So... I did, after a few times. It's really quite a bit of fun to just let go for a while, feel the ground under all four paws as you chase something.'";
 				say "     Both your eyes drop to the yellow ball in your hand, bearing obvious bite-marks from sharper teeth than Helen in her human form can call her own. Carl clears his throat, then continues with, 'I'm not going feral on you, if that's your worry. Just a bit of fun - running and chasing. Helen has a bit of a lead in experience as a dog, but... well, I'm the one with paws here so it's a close thing mostly.' Weighing the ball in your hand, you can't help but agree - given what most of the other infected are doing out in the city, playing around like a dog really is pretty unremarkable. A smile spreads over your face as you look at first the husky soldier, then the human dog... and shake the hand with the ball to draw their attention to it. Then you fling the tennis ball with some force, making it fly, then bounce along an aisle between the bookshelves. Your two canine friends dash after it without delay, hands and claws scrabbling on the carpet.";
-			else if hp of Carl is 30:    [subby Carl]
+			else if HP of Carl is 30:    [subby Carl]
 				say "     Entering the library, you suddenly see a tennis ball fly past your nose, instantly followed by Helen and Carl dashing after it on all fours. Your human dog just keeps going, totally focused on the ball, while Carl skids to a stop and gets to his feet, a sheepish expression on his face. 'Sorry Alpha,' he says, looking at the ground at your feet before returning his attention to Helen, who finally catches the ball and starts to carry it over in her teeth. 'I didn't want to hit you or anything. It's just that Helen came to me with that ball and wanted to play...' In that moment, the buck-naked teenage human arrives at your side, sitting down and obediently offering her [if cocks of player is 0 and cunts of player > 0]mistress[else]master[end if] the tennis ball. Carl continues while you take the toy from Helen, 'You can't believe how tempted I was to run after that thing myself when I threw it for her. So... I did. It's really quite a bit of fun to just let go for a while, feel the ground under all four paws as you chase something.'";
 				say "     Both your eyes drop to the yellow ball in your hand, bearing obvious bite-marks from sharper teeth than Helen in her human form can call her own. Carl clears his throat, then continues with, 'I'm not going feral on you, Alpha. Just a bit of fun - running and chasing. Helen has a bit of a lead in experience as a dog, but... well, I'm the one with paws here so it's a close thing mostly.' Weighing the ball in your hand, you can't help but agree - given what most of the other infected are doing out in the city, playing around like a dog really is pretty unremarkable. A smile spreads over your face as you look at first the husky soldier, then the human dog... and shake the hand with the ball to draw their attention to it. Then you fling the tennis ball with some force, making it fly, then bounce along an aisle between the bookshelves. Your two canine friends dash after it without delay, hands and claws scrabbling on the carpet.";
 		-- 2:      [feeding the dogs]
-			if hp of Carl is 10:   [normal Carl]
-				say "     Entering the library, you see Carl crouched down next to Helen's mattress, filling the human dog's feeding bowl from a sack of kibble. beside that, he also fills a big cereal bowl for himself, then sets the sack down on the ground. Helen is well-trained enough to patiently wait for the husky to take his bowl and stand up, only then starting to hungrily eat the dried food. Meanwhile, Carl starts to pick up kibble out of his own bowl, throwing them into his muzzle to crunch them with sharp teeth. As he sees you standing nearby, the soldier says, 'You know, dog food isn't as bad as I always imagined as a human. Well, that or it's just made to fit my new taste buds. It really is quite tasty.' Still eating out of the bowl, he then walks up the stairs to finish his meal at his watch post.";
-			else if hp of Carl is 30:    [subby Carl]
-				say "     Entering the library, you see Carl crouched down next to Helen's mattress, filling the human dog's feeding bowl from a sack of kibble. beside that, he also fills a big cereal bowl for himself, then sets the sack down on the ground. Helen is well-trained enough to patiently wait for the husky to take his bowl and stand up, only then starting to hungrily eat the dried food. Meanwhile, Carl starts to pick up kibble out of his own bowl, throwing them into his muzzle to crunch them with sharp teeth. As he sees you standing nearby, the soldier lowers his head and says, 'Hello, Alpha. I was just feeding your pet... and myself. I'm gonna get back on watch now.' Still eating out of the bowl, he then walks up the stairs to finish his meal at his watch post.";
+			if HP of Carl is 10:   [normal Carl]
+				say "     Entering the library, you see Carl crouched down next to Helen's mattress, filling the human dog's feeding bowl from a sack of kibble. Beside that, he also fills a big cereal bowl for himself, then sets the sack down on the ground. Helen is well-trained enough to patiently wait for the husky to take his bowl and stand up, only then starting to hungrily eat the dried food. Meanwhile, Carl starts to pick up kibble out of his own bowl, throwing them into his muzzle to crunch them with sharp teeth. As he sees you standing nearby, the soldier says, 'You know, dog food isn't as bad as I always imagined as a human. Well, that or it's just made to fit my new taste buds. It really is quite tasty.' Still eating out of the bowl, he then walks up the stairs to finish his meal at his watch post.";
+			else if HP of Carl is 30:    [subby Carl]
+				say "     Entering the library, you see Carl crouched down next to Helen's mattress, filling the human dog's feeding bowl from a sack of kibble. Beside that, he also fills a big cereal bowl for himself, then sets the sack down on the ground. Helen is well-trained enough to patiently wait for the husky to take his bowl and stand up, only then starting to hungrily eat the dried food. Meanwhile, Carl starts to pick up kibble out of his own bowl, throwing them into his muzzle to crunch them with sharp teeth. As he sees you standing nearby, the soldier lowers his head and says, 'Hello, Alpha. I was just feeding your pet... and myself. I'm gonna get back on watch now.' Still eating out of the bowl, he then walks up the stairs to finish his meal at his watch post.";
 
 
-instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and hp of Carl > 9 and David is in Bunker and a random chance of 1 in 8 succeeds):
+instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl > 9 and David is in Bunker and a random chance of 1 in 8 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	say "[CarlDavidInteraction]";
 
-instead of going outside from Bunker while (Carl is in Grey Abbey 2F and hp of Carl > 9 and David is in Bunker and a random chance of 1 in 8 succeeds):
+instead of going outside from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and David is in Bunker and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[CarlDavidInteraction]";
 

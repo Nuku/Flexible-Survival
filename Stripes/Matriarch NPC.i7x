@@ -14,7 +14,7 @@ the scent of the Matriarch is "[matriarchscent]".
 to say matriarchscent:
 	say "The powerful scent of the matriarch makes you feel aroused and submissive.";
 	if lust of Matriarch - turns >= 8:
-		increase libido of player by 5 + hp of Matriarch;
+		increase libido of player by 5 + HP of Matriarch;
 		now lust of Matriarch is turns;
 
 to say matriarchdesc:
@@ -45,9 +45,9 @@ to say sexwithMatriarch:
 	else if lastfuck of Matriarch - turns < 8:
 		say "     The matriarch glances over at you as you start your needy pleas for sex, but she just gives you a shove with her foot, knocking you over. 'I've given you enough attention for now. Go [if grantbitch >= 3]beg your master to tend to your lusts. You are Grant's bitch, aren't you?' she rumbles with a smile[else]service the gang members. Unlike you, they've earned a reward,' she growls firmly down at you[end if]. 'For now, I have work to do.' And with that, she turns back to some of the attendants around her, barking orders. You whimper and slink away.";
 	else:
-		if hp of Matriarch is 0:
+		if HP of Matriarch is 0:
 			say "     'Mmm... back for more, are you?' she rumbles with a chuckle in her voice. Her dark cock twitches, growing larger as her arousal builds as she looks you over. She runs a paw over you, stroking your hyena body before groping your ass. 'Did you need something?  Does that submissive body of yours call out for something?' she laughs, fondling you as her hard cock grinds against you, leaking precum onto you. The strong scent of it makes you feel aroused and needy, longing for her to take you again. With their matriarch preparing to have some fun, her attendants and followers step back, some taking the opportunity to start some fun of their own while her stoic guards keep watch.";
-		else if hp of Matriarch > 0:
+		else if HP of Matriarch > 0:
 			say "     '[one of]Are you looking to please your matriarch again?' she rumbles[or]Are you and that needy, submissive body of yours in need some attention?' she says with a chuckle in her voice[or]Do you need to be bred again, my good girl?,' she asks[or]Were you looking for another fucking, my needy girl?' she rumbles[purely at random]. Her dark cock twitches, growing larger as her arousal builds as she looks you over. She runs a paw over you, stroking your hyena body before groping your ass. '[one of]Maybe another ride on your matriarch's cock will satisfy that itch[or]I could use a quick break[or]I do so enjoy keeping my toys in their place[purely at random],' she rumbles with a grin, fondling you as her cock grinds against you, leaking precum onto you[one of]. Its strong scent makes you feel aroused and needy, longing for her to take you again[or]. You lick your lips as you eye her impressive breeding rod[or]. Your hips tremble as your body longs to have that black rod back inside you[or]. As you look it over, your need to have it thrusting into you gets even stronger[or]. As you watch a drop of pre run down its length, your submissive instincts make you whimper with a need to have it in you[purely at random][one of]. The guards and attendants step back, making room for their matriarch to enjoy the privilege of fucking her defeated rival again[or]. With their matriarch preparing to have some fun, the others move back, some taking the opportunity to have some fun of their own while her stoic guards keep watch[or]. Seeing their matriarch ready to take a break, the attendants turn to other matters - such as their own enjoyment of the show[or]. As their matriarch prepares to play with her [if a random chance of 1 in 2 succeeds]would-be usurper[else]fallen adversary[end if] again, several of the hyenas around pair off for some fun[purely at random].";
 		if cocks of player > 0 or cunts of player is 0:
 			if cocks of player > 0:		[MALE/HERM]
@@ -73,7 +73,7 @@ to say sexwithMatriarch:
 			say "     Your matriarch runs a paw down between your legs, fingering your wet pussy, drawing a long and needful moan out of you. 'Mmm... nothing but a needy, proper bitch now, aren't you?' she rumbles with pleasure. Sliding a pair of fingers into you, your body trembles, wanting more. 'Doesn't that feel better?  You were meant to be needy bitch, [one of]needing cock inside you, getting bred all the time[or]wanting to just be fucked. I could tell it the moment I mounted you[or]meant to carry pups for the gang[or]a slutty breeder[or]the gang's fucktoy[purely at random],' she rumbles to you. You nod eagerly, grinding your hot pussy down onto those fingers, wishing they were her penis. Lost to your growing lust, you can't help but agree with her words, your submissive instincts telling you that's what you want. ";
 			WaitLineBreak;
 			let Z be a random number between 0 and 100;
-			increase Z by hp of matriarch * 20;
+			increase Z by HP of matriarch * 20;
 			if Z < 55:			[no-sex variations]
 				let T be a random number between 1 and 3;
 				if T is 1:
@@ -95,7 +95,7 @@ to say sexwithMatriarch:
 					say "[hyenamatsex2]";
 				else if T is 3:
 					say "[hyenamatsex3]";
-				if hp of Matriarch is 0, now hp of Matriarch is 1;
+				if HP of Matriarch is 0, now HP of Matriarch is 1;
 				decrease humanity of player by 10;
 				if cunt length of player < 10, increase cunt length of player by 1;
 				if cunt width of player < 4, increase cunt width of player by 1;
@@ -108,7 +108,7 @@ to say sexwithMatriarch:
 				else if T is 2:
 					say "[hyenamatspecial2]";
 					now lastfuck of Matriarch is turns - 2;
-				if hp of Matriarch is 1, now hp of Matriarch is 2;
+				if HP of Matriarch is 1, now HP of Matriarch is 2;
 				decrease humanity of player by 12;
 	[puts Herm Hyena as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:

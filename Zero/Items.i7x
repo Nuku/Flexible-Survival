@@ -112,9 +112,9 @@ to say protein shake use:
 		say "You quickly gulp down the white substance. Its taste is pleasantly familiar and leaves you felling slightly stronger.";
 		increase Strength of player by 1;
 	if T is 10:
-		say “You quickly try to down the shake, only to find it's empty! Seems as if there was a hole you missed.”;
+		say "You quickly try to down the shake, only to find it's empty! Seems as if there was a hole you missed.";
 	if T is 11:
-		say “Gagging, you spit out the drink, feeling disgusted in yourself for putting whatever that was in your mouth. It seems this one was off... way, way off.”;
+		say "Gagging, you spit out the drink, feeling disgusted in yourself for putting whatever that was in your mouth. It seems this one was off... way, way off.";
 		decrease Strength of player by 1;
 		decrease Stamina of player by 1;
 
@@ -171,7 +171,7 @@ carry out Anti-slut:
 
 an everyturn rule:
 	if weapon object of player is bloody sword:
-		Decrease hp of player by 3;
+		Decrease HP of player by 3;
 
 an everyturn rule:
 	if weapon object of player is demonic sword:

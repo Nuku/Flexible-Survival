@@ -135,7 +135,7 @@ Lastdelaymilitary is a number that varies. Lastdelaymilitary is usually 590.
 Delaymilcount is a number that varies.
 
 carry out delaymilitary:
-	if lastdelaymilitary - turns is less than 8:
+	if lastdelaymilitary - turns < 8:
 		say "Homaru shakes his head at you when you ask him to delay the military. 'Sorry, but with information giving and swapping you have to be careful how much and how soon you send out into the world. Too much too soon and confusion can occur, but in this case it could speed up the military's intervention against both of [italic type]our[roman type] affairs. Just give it some time and then I'll go out and see what I can do.";
 		stop the action;
 	now lastDelaymilitary is turns;

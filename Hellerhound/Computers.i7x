@@ -912,7 +912,7 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 		say "Your balance is [checking account balance]."
 
 	This is the quick-cash rule:
-		if checking account balance is less than $20.00:
+		if checking account balance < $20.00:
 			say "Insufficient funds!" instead;
 		decrease checking account balance by $20.00;
 		increase cash in hand by $20.00;

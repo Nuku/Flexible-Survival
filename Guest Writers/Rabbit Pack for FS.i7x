@@ -15,7 +15,7 @@ when play begins:
 to say rabpackdesc:
 	setmongender 19; [creatures are mixed/variable]
 	choose row monster from the table of random critters;
-	say "A little humanoid rabbit appears in front of you! Less than three feet tall and completely naked,it looks like a young human, except for the ears and the short coat of fur covering [one of]his body. He[or]her body. She[at random] is smelling something from you, and you back away quickly.";
+	say "A little humanoid rabbit appears in front of you! Less than three feet tall and completely naked, it looks like a young human, except for the ears and the short coat of fur covering [one of]his body. He[or]her body. She[at random] is smelling something from you, and you back away quickly.";
 	if "One Pair" is listed in feats of player:
 		now area entry is "nowhere"; [removes from random intercounters and infection]
 		now non-infectious entry is true;
@@ -70,7 +70,7 @@ to say rabpackbeaten:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -97,8 +97,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Both"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 80;
-	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 80;
+	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 4; [ Amount of Damage monster Does when attacking.]
 	now area entry is "High"; [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 5; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -124,7 +124,7 @@ When Play begins:
 
 when play ends:
 	if bodyname is "Rabbit Pack":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "Your memories dissolves as the infection makes you a feral. A pack of mutants, guided by a single consciousness, always trying to fight for survival or to quench your thirst of sex.";
 		else:
 			say "You need some psychiatric help, but you finally manage to adapt to your strange condition. You then manage to find a work in a [one of]restaurant[or]hotel[or]supermarket[or]theme park[at random]. A little team working together in synchronicity for the price of one-and-a-half normal worker is convenient, after all...";

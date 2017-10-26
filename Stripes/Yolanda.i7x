@@ -12,7 +12,7 @@ The description of Raven Nest is "[ravennestdesc]";
 the scent of Raven Nest is "This place smells of birds with a tinge of sexual arousal.";
 
 to say ravennestdesc:
-	if hp of Yolanda < 6:
+	if HP of Yolanda < 6:
 		say "     Inside the apartment building are several small units - likely lower income or student tenants, you'd guess from the remains of their contents. While they've been broken into and looted of supplies, one on the second floor is still occupied. While still in disarray, some attempt has been made to organize the apartment for its occupant - a human-sized raven. Much of the furniture's been removed, though the cushions from several couches (pillaged from the neighbouring units) along with several blankets form a rather comfy nest for the avian. When you come in, she's [one of]pecking at her food supplies[or]adjusting the blankets of her nest[or]reading a book[or]poking through her collection of shiny gewgaws[cycling].";
 	else:
 		say "     The apartment building has several small units inside it, none inhabited now that Yolanda's gone. They've all been rather thoroughly looted by the raven and so there's nothing of import left here any longer.";
@@ -31,7 +31,7 @@ the icon of Yolanda is figure of Yolanda_icon.
 
 to say yolandadesc:
 	say "     Upon casual examination, Yolanda appears to be a normal raven, but enlarged to human scale and wearing some golden jewelry. Keeping to the posture of a bird most of the time, it takes a while to realize that she can take on a more human posture when she feels it's necessary and even has small, taloned hands hidden under her wings['] primary feathers. She has sharp eyes, a sharper beak and an even sharper tongue.";
-	if hp of Yolanda >= 6:
+	if HP of Yolanda >= 6:
 		say "     She's set up a new nest for herself up here on the second floor of the library in an open spot near a window. She's gathered some cushions you recognize as coming from the chairs and sofa, though others seem new and may have been taken from nearby buildings. While she's protectively keeping much of her sex toys and collection of shinies protectively in the packs, she's got an assortment of each out for her to enjoy. There's also discrete signs of her having put in some new anchor points for her kinkier gear.";
 
 the scent of Yolanda is "The raven smells of bird feathers and feminine arousal.".
@@ -40,39 +40,39 @@ the scent of Yolanda is "The raven smells of bird feathers and feminine arousal.
 Section 2 - Conversation
 
 Instead of conversing the Yolanda:
-	if hp of Yolanda is 0:
+	if HP of Yolanda is 0:
 		say "     Introducing yourself to the raven, she looks you up and down with a sideways, avian stare. 'Oh sure, just come barging right in. With manners like that, you're either a looter or some sex fiend. Probably both, with my luck.'  You try to explain that you're a survivor looking for others until rescue, but the bird just gives you a sharp, laughing caw! 'You'll be waiting a long time for that, honey. If they haven't gotten off of their asses yet, I doubt they're going to bother trying at this point.";
 		say "     'Now, back to the current matter... the name's Yolanda and I ain't in the mood to be raisin['] my tail to just anyone who comes wandering in here. I get hassled enough by those pesky gryphons who keep popping up around here as it is.'  She pauses to look you over with an avian, sideways stare. 'That said, should you be looking to take a turn on bottom... then I think something might be arranged...' she says with a faint grin in her voice, pulling the corner of a blanket off of an assorted box of leather straps and strap-ons.";
-		now hp of Yolanda is 1;
+		now HP of Yolanda is 1;
 		now Raven Key Fob is unresolved;
 	else if yolandaqytat is false and a random chance of 1 in 3 succeeds and Yolanda is in Raven Nest:
 		say "     'Those blue gryphon herms are always showing up around here. Those feather-brains have gotten some fool notion in their heads that there's something special around here. As far as I can tell, they're the only ones around here who're [']special[']... in the Olympic sense.'";
 		if findablestairs is 1:
-			say "     Mentioning that you heard something about that from one of them acting as a guide for the others, she caws and rolls her eyes. 'Great! Now they're telling others to come around here to bug me[if hp of Yolanda > 1]. Well, at least you've been able to provide some amusement[end if].'";
+			say "     Mentioning that you heard something about that from one of them acting as a guide for the others, she caws and rolls her eyes. 'Great! Now they're telling others to come around here to bug me[if HP of Yolanda > 1]. Well, at least you've been able to provide some amusement[end if].'";
 		else:
 			say "     Inquiring for more details on what the gryphons are doing, she shakes her head. 'I'm not really sure. All I ever get out of them is nonsense. Some foolishness about a crazy [bold type]guard gryphon[roman type] who told them about a special stairwell. And when they come looking for it, they keep coming into my building and going up the stairs straight to my apartment to harass me. Damn pests, most of them.'";
 		now yolandaqytat is true;
 	else if jbfound < 2 and Jewelry Box is unresolved and a random chance of 1 in 3 succeeds:
 		say "     'I've got a nice collection of pretties, don't you think? I'm sure it's all because of some compulsion from being a raven, but that doesn't make them any less lovely,' she muses, holding up a pearl necklace in her talons. 'Besides, if you're right and we do actually get rescued, it won't hurt to have a few things to ensure I'm comfortable. Should you come across anything particularly nice, be sure to keep me in mind,' she says, brushing a wing sensually along your side. 'A [bold type]jewelry box[roman type] would be a good place to start. That's where I got most of these.'";
 		now jbfound is 1;
-	else if ( hp of Yolanda is 3 or hp of Yolanda is 4 or hp of Yolanda is 5 ) and a random chance of 1 in 4 succeeds:
+	else if ( HP of Yolanda is 3 or HP of Yolanda is 4 or HP of Yolanda is 5 ) and a random chance of 1 in 4 succeeds:
 		say "[movingYolanda]";
-	else if hp of Yolanda < 6:
+	else if HP of Yolanda < 6:
 		say "     [one of]'You say [']Nevermore['] and I'll peck out your gizzard.'[or]'If you want to be rewarded with a chance to be on top, be on the lookout for some more pretties for my collection.'[or]'I keep seeing those pesky blue gryphons around here. They're occasionally amusing when I'm willing to put up with their foolishness.'[or]'I've got the place all to myself these days... aside from the occasional nosey visitor,' she adds, giving you a steely gaze.[or]'After the outbreak, I pecked through the other apartments for what I needed. I'm pretty well off for supplies and even got myself a nice, shiny collection,' she adds, shifting her pile of jewelry and junk with one foot as she admires her trinkets.'[or]'Maybe you can be of some use to me. Bring me some nice trinkets if you happen to find any.'[or]Setting down a shiny marble she was admiring, she rakes her shiny collection a little closer.[or]'I've already gone through the other apartments a couple of times. That's how I put together my collections,' she says, glancing from her pile of shiny trinkets and box of sex toys. 'Some of them were mine, obviously, but it's not like anyone's going to be back for theirs, so why should they go to waste?'[at random]";
-	else if hp of Yolanda >= 6:
+	else if HP of Yolanda >= 6:
 		say "     [one of]'You say [']Nevermore['] and I'll peck out your gizzard.'[or]'If you want to be rewarded with a chance to be on top, be on the lookout for some more pretties for my collection.'[or]'I've noticed through the window that there's some of those blue gryphons around here as well. It seems they're wide spread across the city despite being weaker creatures than most.'[or]'Thanks to your help, I've managed to keep most of my collection of shinies and playthings. And I've found a few new pieces around here to help make up for it,' she says, examining some new piece of shiny junk.[or]'I've still got a good set of supplies for myself, so I'll be fine for a while as far as food and water go.'[or]'Maybe you can be of some use to me. Bring me some nice trinkets if you happen to find any.'[or]Digging through her big bag of shinies, she shows off a few choice pieces to you.[or]Patting the big duffel full of kink gear, she gives you an appraising look up and down with an avian sidelong stare. 'Thankfully those feathery thieves didn't get away with this, so there's still plenty of kinky fun we can have together.'[at random]";
-		if hp of Yolanda is 6, now hp of Yolanda is 7; [interacted w/since move to Library]
+		if HP of Yolanda is 6, now HP of Yolanda is 7; [interacted w/since move to Library]
 
 
 
 to say movingYolanda:
 	let icaruscheck be false;
-	if hp of Icarus > 2 and hp of Icarus is not 7 and hp of Icarus is not 9:
+	if HP of Icarus > 2 and HP of Icarus is not 7 and HP of Icarus is not 9:
 		now icaruscheck is true;
-	if hp of Yolanda is 3:
+	if HP of Yolanda is 3:
 		say "     'So where're you holing up when you're not wandering around, perving on mutants? I'm sure you've got some safe hidey hole to rest and stash your stuff.'  You assure her that you're quite safe, having actually found an old fallout shelter for you[if the number of bunkered people + the number of booked people > 1] and your friends[else if the number of bunkered people + the number of booked people is 1] and your friend[end if]. She seems momentarily impressed, but then waves it off with a snarky comment that it's probably some rusty old dump of a place. You assure her that it's in good shape and actually under a library, so it's quite comfortable and has plenty of space.";
 	else:
-		say "     'So how are things at this [']library shelter['] of yours?' she asks. 'Anyone new there? [if hp of Yolanda is 5]Still working on collecting that[else]Collecting a[end if] little harem of pervy mutants for yourself, maybe?'";
+		say "     'So how are things at this [']library shelter['] of yours?' she asks. 'Anyone new there? [if HP of Yolanda is 5]Still working on collecting that[else]Collecting a[end if] little harem of pervy mutants for yourself, maybe?'";
 	say "     Shall you offer to bring Yolanda to the safety of the library? It'd certainly be safer than here with random mutants showing up.";
 	say "     [bold type]Shall you offer to bring Yolanda to the safety of the library?[roman type][line break]";
 	LineBreak;
@@ -80,17 +80,17 @@ to say movingYolanda:
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
 		if icaruscheck is true and the number of bunkered people + the number of booked people > 3:
-			say "     You [if hp of Yolanda is 5]again [end if]pitch that Yolanda move to the library as being a safer place for her and her collection since the place draws little interest from the other creatures roaming around. She's skeptical at first, suspecting that you only want her there so you can perv on her without having to come see her. She does start to gain interest when you mention [if hp of Icarus < 50]that there's a subby bird boy there already[else]that there's a dommy bird guy already there[end if] along with several others.";
-			say "     'Well, that sounds like quite the harem you're building up,' she teases. 'It'd be nice to have some company, so I guess I can come along and check it out with you, see if it's really like you've said[if hp of Icarus < 50]. Having a subby songbird around sounds like it could be fun. I'm sure a perv like you wouldn't mind sharing a little[else]. Having another dommy bird around sounds like it could be fun. I'm sure a perv like you wouldn't mind being shared around a little[end if]. You just better not be making it all up so you can get me all alone at your sex den; I'll peck out your eyes if you are.'";
+			say "     You [if HP of Yolanda is 5]again [end if]pitch that Yolanda move to the library as being a safer place for her and her collection since the place draws little interest from the other creatures roaming around. She's skeptical at first, suspecting that you only want her there so you can perv on her without having to come see her. She does start to gain interest when you mention [if HP of Icarus < 50]that there's a subby bird boy there already[else]that there's a dommy bird guy already there[end if] along with several others.";
+			say "     'Well, that sounds like quite the harem you're building up,' she teases. 'It'd be nice to have some company, so I guess I can come along and check it out with you, see if it's really like you've said[if HP of Icarus < 50]. Having a subby songbird around sounds like it could be fun. I'm sure a perv like you wouldn't mind sharing a little[else]. Having another dommy bird around sounds like it could be fun. I'm sure a perv like you wouldn't mind being shared around a little[end if]. You just better not be making it all up so you can get me all alone at your sex den; I'll peck out your eyes if you are.'";
 		else if icaruscheck is true:
-			say "     You [if hp of Yolanda is 5]again [end if]pitch that Yolanda move to the library as being a safer place for her and her collection since the place draws little interest from the other creatures roaming around. She's skeptical at first, suspecting that you only want her there so you can perv on her without having to come see her. She does start to gain interest when you mention [if hp of Icarus < 50]that there's a subby bird boy there already[else]that there's a dommy bird guy already there[end if].";
-			say "     'Well, that songbird of yours does sound interesting. I wouldn't mind getting to know him better,' she teases. '[if hp of Icarus < 50]Having a subby bird boy around sounds like it could be fun. I'm sure a perv like you wouldn't mind sharing a little[else]. Having another dommy bird around sounds like it could be fun. I'm sure a perv like you wouldn't mind being shared around a little[end if]. It'd be nice to have some company, so I guess I can come along and check it out with you, see if it's really like you've said. You just better not be making it all up so you can get me all alone at your sex den; I'll peck out your eyes if you are.'";
+			say "     You [if HP of Yolanda is 5]again [end if]pitch that Yolanda move to the library as being a safer place for her and her collection since the place draws little interest from the other creatures roaming around. She's skeptical at first, suspecting that you only want her there so you can perv on her without having to come see her. She does start to gain interest when you mention [if HP of Icarus < 50]that there's a subby bird boy there already[else]that there's a dommy bird guy already there[end if].";
+			say "     'Well, that songbird of yours does sound interesting. I wouldn't mind getting to know him better,' she teases. '[if HP of Icarus < 50]Having a subby bird boy around sounds like it could be fun. I'm sure a perv like you wouldn't mind sharing a little[else]. Having another dommy bird around sounds like it could be fun. I'm sure a perv like you wouldn't mind being shared around a little[end if]. It'd be nice to have some company, so I guess I can come along and check it out with you, see if it's really like you've said. You just better not be making it all up so you can get me all alone at your sex den; I'll peck out your eyes if you are.'";
 		else if the number of bunkered people + the number of booked people > 3:
-			say "     You [if hp of Yolanda is 5]again [end if]pitch that Yolanda move to the library as being a safer place for her and her collection since the place draws little interest from the other creatures roaming around. She's skeptical at first, suspecting that you only want her there so you can perv on her without having to come see her. She does start to gain interest when you start telling her about all the other people already there.";
+			say "     You [if HP of Yolanda is 5]again [end if]pitch that Yolanda move to the library as being a safer place for her and her collection since the place draws little interest from the other creatures roaming around. She's skeptical at first, suspecting that you only want her there so you can perv on her without having to come see her. She does start to gain interest when you start telling her about all the other people already there.";
 			say "     'Well, that sounds like quite the harem you're building up,' she teases. 'It'd be nice to have some company, so I guess I can come along and check it out with you, see if it's really like you've said. They're probably all kinky pervs like you, but they might be fun to pass the time with. You just better not be making it all up so you can get me all alone at your sex den; I'll peck out your eyes if you are.'";
 		else:
-			say "     You [if hp of Yolanda is 5]again [end if]pitch that Yolanda move to the library as being a safer place for her and her collection since the place draws little interest from the other creatures roaming around. 'You're probably just trying to get me back to whatever lair you've got so you can perv on me without having to come visit. I'll add [']lazy['] to your personal charms. Huh. You probably just want to get your grubby paws on my shinies,' she adds, raking her collection closer.";
-			now hp of Yolanda is 5;
+			say "     You [if HP of Yolanda is 5]again [end if]pitch that Yolanda move to the library as being a safer place for her and her collection since the place draws little interest from the other creatures roaming around. 'You're probably just trying to get me back to whatever lair you've got so you can perv on me without having to come visit. I'll add [']lazy['] to your personal charms. Huh. You probably just want to get your grubby paws on my shinies,' she adds, raking her collection closer.";
+			now HP of Yolanda is 5;
 		if icaruscheck is true or ( the number of bunkered people + the number of booked people > 3 ):
 			say "     Having convinced Yolanda to come along, she starts to gather up her collections of pretties and kink gear. You try to caution her to pack light, but she won't hear of it, not wanting to part with any of it. She loads up a couple of packs that she's purposefully set aside for this eventuality and fits them across her avian back as best she can. You're even drafted as a pack mule, made to carry a heavy backpack of her shiny baubles. You're tempted to refuse, but it's easier to just put up with it than continue arguing about it.";
 			say "     Striking out, the pair of you make your way towards the bunker, your pace hampered by the burdens you carry. While you'd originally been planning on taking a safer route, your winding path irritates the raven. 'I thought you said this place wasn't far and now we're just zig-zagging across the city. Do you even know where you're going? Is this place of yours even real or are you just looking for someone to sell off my treasures to?'  You put up with this cawing as best you can, reminder her that you're the survivalist guide here, though you do deviate onto some more direct paths when possible.";
@@ -101,22 +101,22 @@ to say movingYolanda:
 				say "     'Oh no! My collection!' the raven caws angrily, preparing to take flight after the stolen satchels, but you hold her back. Pointing out that she'll neither be able to keep up with them nor fight them if she did catch them, she caws angrily again, hurling a colourful mix of curses upon the escaping harpies. In the end, you're able to regain her focus enough by showing her a handful of glittery jewelry and junk from the pack you had saved. Reassuring her that most of her collections are intact, she calms down enough to continue the journey.";
 				say "     She's in a foul mood for the remainder of the trip, snappy and finding fault in everything until you finally make it to the library. Once there, her mood does improve fairly quickly as she discovers that the place is more or less as you'd described it. She continues to make snarky remarks and comments on how it's only a matter of time before some crazy creature comes to drag everyone away, but the tone's changed and more teasing than angry or spiteful. She even thanks you and gives you a tender nip on the neck for protecting her [']treasures[']. In the end, she selects a spot upstairs near a window to set up her new nest. You leave her a little time to get settled in and to finish cooling off.";
 				move Yolanda to Grey Abbey 2F;
-				now hp of Yolanda is 6;
+				now HP of Yolanda is 6;
 				move player to Grey Abbey 2F;
 				now lastfuck of Yolanda is turns + 8;
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Beaten and distracted by the victorious harpy, you are unable to stop the backpack you were carrying from being snatched up and carried off in the talons of another. Other packs have been torn from Yolanda's back and are similarly being carried off by the others. 'Oh no! My collection!' the raven caws angrily, taking flight clumsily under the remaining burden to give pursuit before you can stop her. 'Give me back my shinies! My playthings! You feathery thieves! Lice-ridden bandits! You... you... mythological robbers!' you hear her crying out as she flies off after the considerably faster harpies, leaving you behind. You wait a while, hoping she'll return, but she never does. Eventually, you have to give up and return back to the library on your own after this ill-fated venture.";
-				now hp of Yolanda is 100;
+				now HP of Yolanda is 100;
 				remove Yolanda from play;
 				move the player to Grey Abbey Library;
 			else:
 				say "     Driven into retreat by the harpies, you quickly search for an avenue of escape from the harpies. With the backpack of baubles you were carrying unprotected, it gets snatched up by another of the bird women. Other packs have been torn from Yolanda's back and are similarly being carried off by the others. 'Oh no! My collection!' the raven caws angrily, taking flight to give pursuit. She adds a 'You big coward!' down at you as she struggles into the air with the remaining packs atop her. 'Give me back my shinies! My playthings! You... you... mythological robbers!' you hear her crying out as she flies off after the considerably faster harpies, leaving you behind. You wait briefly, but doubt she'd return to you after having abandoned her treasures to be stolen. In the end, you return back to the library, giving up on this ill-fated venture.";
-				now hp of Yolanda is 100;
+				now HP of Yolanda is 100;
 				remove Yolanda from play;
 				move the player to Grey Abbey Library;
 	else:
 		say "     You fill her in on a few details on how things have been going, leaving out some of the kinkier details so she doesn't scoff at you about them. Not that she's really one to talk, but no point in giving her more material to tease you about.";
-		if hp of Yolanda is 3, now hp of Yolanda is 4;
+		if HP of Yolanda is 3, now HP of Yolanda is 4;
 
 
 
@@ -125,14 +125,14 @@ Section 3 - Sexy Times
 the fuckscene of Yolanda is "[sexwithYolanda]".
 
 to say sexwithYolanda:
-	if hp of Yolanda is 0:
+	if HP of Yolanda is 0:
 		say "     That's rather forward of you. You should probably introduce yourself first.";
 	else if cocks of player is 0 and cunts of player is 0:
 		say "     Lacking a gender, you doubt you'll be able to rouse much interest out of the cynical raven.";
 	else if lastfuck of Yolanda - turns < 6:
-		say "     'More already? If you're going to go sex crazy, run along and do it somewhere else,' she says, flapping her wing dismissively towards the [if hp of Yolanda >= 6]stairwell back to the ground floor[else]door[end if].";
+		say "     'More already? If you're going to go sex crazy, run along and do it somewhere else,' she says, flapping her wing dismissively towards the [if HP of Yolanda >= 6]stairwell back to the ground floor[else]door[end if].";
 	else:
-		say "     '[if hp of Yolanda is 1]Looking for sex? Why am I not surprised? Still, I guess I can indulge you if you're willing to play by my rules,' she adds, reaching for her box of sex toys with one foot[else]Back for more? Well, I guess I can indulge you [one of]as a means to pass the time[or]as a change of pace from banging those gryphons[or]so you don't go nuts for lack of sex[cycling].'  As she speaks, her foot strays towards her box of toys[end if].";
+		say "     '[if HP of Yolanda is 1]Looking for sex? Why am I not surprised? Still, I guess I can indulge you if you're willing to play by my rules,' she adds, reaching for her box of sex toys with one foot[else]Back for more? Well, I guess I can indulge you [one of]as a means to pass the time[or]as a change of pace from banging those gryphons[or]so you don't go nuts for lack of sex[cycling].'  As she speaks, her foot strays towards her box of toys[end if].";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		if cunts of player > 0:
@@ -140,7 +140,7 @@ to say sexwithYolanda:
 			now title entry is "Receive vaginal";
 			now sortorder entry is 1;
 			now description entry is "take it in the pussy";
-		if cunts of player > 0 and hp of Yolanda >= 3:
+		if cunts of player > 0 and HP of Yolanda >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Bound for vaginal";
 			now sortorder entry is 2;
@@ -149,12 +149,12 @@ to say sexwithYolanda:
 		now title entry is "Receive anal";
 		now sortorder entry is 3;
 		now description entry is "take it in the ass";
-		if hp of Yolanda >= 3:
+		if HP of Yolanda >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Bound for anal";
 			now sortorder entry is 4;
 			now description entry is "get tied down before taking it in the ass";
-		if hp of Yolanda >= 3 and scalevalue of player < 5:
+		if HP of Yolanda >= 3 and scalevalue of player < 5:
 			choose a blank row in table of fucking options;
 			now title entry is "Suspended";
 			now sortorder entry is 5;
@@ -163,17 +163,17 @@ to say sexwithYolanda:
 		now title entry is "Bound for oral";
 		now sortorder entry is 6;
 		now description entry is "have some kinky oral fun";
-		if hp of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and hp of Icarus >= 51 ) and lastfuck of Icarus is not turns:
+		if HP of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and HP of Icarus >= 51 ) and lastfuck of Icarus is not turns:
 			choose a blank row in table of fucking options;
 			now title entry is "3some w/Dom Icarus - 1";
 			now sortorder entry is 10;
 			now description entry is "have a threesome with light bondage and sex";
-		if hp of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and hp of Icarus >= 53 ) and lastfuck of Icarus is not turns:
+		if HP of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and HP of Icarus >= 53 ) and lastfuck of Icarus is not turns:
 			choose a blank row in table of fucking options;
 			now title entry is "3some w/Dom Icarus - 2";
 			now sortorder entry is 11;
 			now description entry is "have a threesome with sex and footplay";
-		if hp of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and hp of Icarus >= 53 ) and lastfuck of Icarus is not turns:
+		if HP of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and HP of Icarus >= 53 ) and lastfuck of Icarus is not turns:
 			choose a blank row in table of fucking options;
 			now title entry is "3some w/Dom Icarus - 3";
 			now sortorder entry is 12;
@@ -233,15 +233,15 @@ to say sexwithYolanda:
 						say "[yolanda+domicarus03]";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-		if hp of Yolanda is 1, now hp of Yolanda is 2;
-		if hp of Yolanda is 6, now hp of Yolanda is 7; [interacted w/since move to Library]
+		if HP of Yolanda is 1, now HP of Yolanda is 2;
+		if HP of Yolanda is 6, now HP of Yolanda is 7; [interacted w/since move to Library]
 		now lastfuck of Yolanda is turns;
 		wait for any key;
 		clear the screen and hyperlink list;
 
 
 to say yolandasex01:
-	if ( ( "Kinky" is listed in feats of player and a random chance of 1 in 5 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 5 succeeds ) or a random chance of 1 in 3 succeeds ) and hp of Yolanda < 3:
+	if ( ( "Kinky" is listed in feats of player and a random chance of 1 in 5 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 5 succeeds ) or a random chance of 1 in 3 succeeds ) and HP of Yolanda < 3:
 		say "[yolandasex02_b]"; [Yolanda opts for bondage version]
 	else:
 		say "     Feeling aroused enough to indulge the raven's interest, you get onto all fours for Yolanda. Offering up your juicy pussy by spreading your folds with a few fingers, you get an appreciative caw from the bird. After gently nuzzling your cunny with the curve of her beak, she grabs an appropriately [if cunt length of player < 5]small[else if cunt length of player < 10]sized[else if cunt length of player < 15]large[else]huge[end if] dildo from her collection with one of her feet. Using her rarely-seen hand talons, she affixes it into a [one of]black[or]red[or]pink[as decreasingly likely outcomes] harness and dons the strap-on. After taking a moment to adjust the fit, making sure you get a good look at the phallus that'll soon be filling you, she strides over to you.";
@@ -253,9 +253,9 @@ to say yolandasex01:
 		say ". Finished, she pulls the sex toy out of you with a wet slurp, wipes it clean and stores it back in the box with the others.";
 
 to say yolandasex01_b:
-	say "     Feeling aroused enough to agree to let the raven top you, you strip down while Yolanda goes through her kink collection. You start to move onto all fours, but she motions for you to get on your back instead while she selects a pair of long restraining bars[if scalevalue of player is not 3] suitable to your size[end if]. 'Let's make this a little more fun,' she says[if hp of Yolanda < 3]. Before you can decide if you're up for that, she bumps her avian body against you, knocking you over onto your back. Taking a moment to rub her wing against your crotch, she gives a soft, cawing chuckle. 'Oh, come now. Lemme have my fun, too. I'll make sure you enjoy it,' she adds even as she secures one end of the first bar to your wrist and tightens the leather strap[else]. Not giving you the time to decide, she slips one leather strap around your wrist while brushing her other wing across your crotch. 'Lemme have my fun, too. Didn't you have fun last time?' she adds, fondling you further[end if]. She keeps you distracted like this, attaching the long bars vertically from wrist to ankle on each side of you, leaving you spread eagle on the floor. She secures each bar to a concealed D-ring in the floor, immobilizing your [bodytype of player] body on naked display for her.";
+	say "     Feeling aroused enough to agree to let the raven top you, you strip down while Yolanda goes through her kink collection. You start to move onto all fours, but she motions for you to get on your back instead while she selects a pair of long restraining bars[if scalevalue of player is not 3] suitable to your size[end if]. 'Let's make this a little more fun,' she says[if HP of Yolanda < 3]. Before you can decide if you're up for that, she bumps her avian body against you, knocking you over onto your back. Taking a moment to rub her wing against your crotch, she gives a soft, cawing chuckle. 'Oh, come now. Lemme have my fun, too. I'll make sure you enjoy it,' she adds even as she secures one end of the first bar to your wrist and tightens the leather strap[else]. Not giving you the time to decide, she slips one leather strap around your wrist while brushing her other wing across your crotch. 'Lemme have my fun, too. Didn't you have fun last time?' she adds, fondling you further[end if]. She keeps you distracted like this, attaching the long bars vertically from wrist to ankle on each side of you, leaving you spread eagle on the floor. She secures each bar to a concealed D-ring in the floor, immobilizing your [bodytype of player] body on naked display for her.";
 	say "     After gently nuzzling your cunny with the curve of her beak, she grabs an appropriately [if cunt length of player < 5]small[else if cunt length of player < 10]sized[else if cunt length of player < 15]large[else]huge[end if] dildo from her collection with one of her feet. The toy is textured with [one of]ridges[or]bumps[or]ticklers[or]a spiral pattern[at random] to increase the sensual stimulation. Taking a moment to tease your juicy pussy with the tip of the dong and give your side a playful nip that causes you to squirm ineffectually in your restraints, she affixes the toy into a [one of]black[or]red[or]pink[as decreasingly likely outcomes] harness and dons the strap-on. Taking a moment to adjust the fit and making sure you get a good look at the phallus that'll soon be filling you, she struts around your prone form.";
-	if hp of Yolanda < 3:
+	if HP of Yolanda < 3:
 		say "     'Rather trusting, aren't you? Letting a strange mutant tie you up. What's to stop me from leaving you like this? Or sharing you with those annoying gryphons until you're as feather-brained as them?'  She brushes her wingtip teasingly down your chest and over your crotch[if cocks of player > 0]. Your cock[smn] twitch[esmv] and stiffens[smv] further and your puss[yfn] grow[sfv] all the wetter[else]. Your puss[yfn] grow[sfv] all the wetter in response[end if], though you start to have second thoughts. You give your bonds a tug to test them, but you're secured tightly. She gives a chuckling caw at your struggle and fingers you once again to show she's the one in control.";
 		say "     'Mmm, yes. Feel that. You're so hot and juicy,' she says with a sensual rumble as she pumps her digits inside you, making your cunt quiver. She gives you a nip with her beak as she adjusts herself over you. Her soft feathers brush over your chest[if breast size of player > 0 and cocks of player > 0], tickling sensually at your breasts even as your stiff manhood is nestled into the ebon plumage between you. The textured dildo then pushes into you, causing you to moan from these myriad pleasures[else if cocks of player > 0] and your stiff manhood is nestled into the ebon plumage between you. The textured dildo then pushes into you, causing you to moan with pleasure[else if breasts of player > 0], tickling sensually at your nipples, as the textured dildo pushes into you, causing you to moan in dual pleasure[end if]. Returning to a more avian posture, she seats herself atop you and starts rocking her hips. The lower position means she can only take slower thrusts, but she doesn't seem to mind as this lets her draw it out all the longer.";
 		say "     'Getting fucked by a girl, fucked by a bird - such a perv,' she caws, nipping at your shoulders with her beak. She's right, you find; there is something strangely arousing about letting yourself get tied up and then fucked by a woman/bird wearing a strap-on. This turns you on all the more and you try to push up into her thrusts, but your bonds don't allow it well, giving you an additional reminder of your kinky predicament. This leaves the bird to set the pace, drawing it out for her own amusement. The raven's clearly had plenty of experience with the role, only letting you achieve small orgasms that leave you wanting more rather than properly satisfying you[if cunts of player > 1]. She even takes pauses to swap from one cunt to another, both ensuring you're thoroughly fucked and building your need all the higher[end if]. Yours is by no means the first pussy she's stuffed, working that stimulating phallus with practised skill and ease to ride you to the sexually edge while she savours her prize before finally bringing it to a head with a powerful orgasm from both of you. You cry out with much-needed release as the bird caws in orgasmic delight through your mutual climaxes.";
@@ -274,10 +274,10 @@ to say yolandasex01_b:
 		else:
 			say ". Finished, she pulls the sex toy out of you with a wet slurp, wipes it clean and stores it back in the box with the others";
 		say ". Yolanda releases you from your bonds for some post-sex snuggles while you both bask in the afterglow. You're still stiff from the bondage, so the feathery cuddling in her cushion nest is the perfect way for your sore muscles to relax and recover.";
-	if hp of Yolanda < 3, now hp of Yolanda is 3;
+	if HP of Yolanda < 3, now HP of Yolanda is 3;
 
 to say yolandasex02:
-	if ( ( "Kinky" is listed in feats of player and a random chance of 1 in 5 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 5 succeeds ) or a random chance of 1 in 3 succeeds ) and hp of Yolanda < 3:
+	if ( ( "Kinky" is listed in feats of player and a random chance of 1 in 5 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 5 succeeds ) or a random chance of 1 in 3 succeeds ) and HP of Yolanda < 3:
 		say "[yolandasex02_b]"; [Yolanda opts for bondage version]
 	else:
 		say "     Feeling particularly kinky, you get onto all fours for Yolanda. Offering up your tight back door by spreading your cheeks with both hands, you get an appreciative caw from the bird. After gently nuzzling your rump with the side of her beak while checking you out with a sidelong glance, she grabs an appropriately [if scalevalue of player < 3]small[else if scalevalue of player is 3]sized[else if scalevalue of player is 4]large[else]huge[end if] dildo from her collection with one of her feet. Using her rarely-seen hand talons, she affixes it into a [one of]black[or]red[or]pink[as decreasingly likely outcomes] harness and dons the strap-on. After taking a moment to adjust the fit, making sure you get a good look at the phallus that'll soon be filling you, she strides over to you.";
@@ -289,8 +289,8 @@ to say yolandasex02:
 			say ". Removing it, she cleans it with a wet wipe and stores it back in the box with the others.";
 
 to say yolandasex02_b:	[bondage anal]
-	say "     While you strip down, Yolanda goes through her kink collection. Seeing you get down on all fours, Yolanda selects a spreader bar[if scalevalue of player is not 3] suitable to your size[end if]. 'Let's make this a little more fun,' she says, holding up the spreader bar along with some leather-clad cuffs[if hp of Yolanda < 3]. Before you can decide if you're up for that, she bumps her avian body against you, knocking you over onto her nest of cushions. Taking a moment to rub her wing against your crotch, she gives a soft, cawing chuckle. 'Oh, come now. Lemme have my fun, too. I'll make sure you enjoy it,' she adds even as she cuffs your hands together[else]. Not giving you the time to decide, she slips the cuffs around your wrists while brushing her other wing across your crotch. 'Lemme have my fun, too. Didn't you have fun last time?' she adds, fondling you further[end if]. Relenting, you move your feet apart so she can cuff your ankles. She then locks the bar such that your legs are spread slightly uncomfortably - just enough to be a steady reminder of your bonds. This is especially so when she gives your exposed ass a beak nip, jolting you to raise it higher. You're given the occasional nip. Between donning an appropriately [if scalevalue of player < 3]small[else if scalevalue of player is 3]sized[else if scalevalue of player is 4]large[else]huge[end if] strap-on and lubing it up, you're given a few more of these nips as well as some playful fondling to help keep you hard.";
-	if hp of Yolanda < 3:
+	say "     While you strip down, Yolanda goes through her kink collection. Seeing you get down on all fours, Yolanda selects a spreader bar[if scalevalue of player is not 3] suitable to your size[end if]. 'Let's make this a little more fun,' she says, holding up the spreader bar along with some leather-clad cuffs[if HP of Yolanda < 3]. Before you can decide if you're up for that, she bumps her avian body against you, knocking you over onto her nest of cushions. Taking a moment to rub her wing against your crotch, she gives a soft, cawing chuckle. 'Oh, come now. Lemme have my fun, too. I'll make sure you enjoy it,' she adds even as she cuffs your hands together[else]. Not giving you the time to decide, she slips the cuffs around your wrists while brushing her other wing across your crotch. 'Lemme have my fun, too. Didn't you have fun last time?' she adds, fondling you further[end if]. Relenting, you move your feet apart so she can cuff your ankles. She then locks the bar such that your legs are spread slightly uncomfortably - just enough to be a steady reminder of your bonds. This is especially so when she gives your exposed ass a beak nip, jolting you to raise it higher. You're given the occasional nip. Between donning an appropriately [if scalevalue of player < 3]small[else if scalevalue of player is 3]sized[else if scalevalue of player is 4]large[else]huge[end if] strap-on and lubing it up, you're given a few more of these nips as well as some playful fondling to help keep you hard.";
+	if HP of Yolanda < 3:
 		say "     Grabbing the handcuffs, she pulls your arms under your chest and down between your legs, leaving your ass in the air and your face pressed to the floor. She then locks both the cuffs and the spreader bar together and tosses the key aside. 'Rather trusting, aren't you? Letting a strange mutant tie you up. What's to stop me from leaving you like this? Or sharing you with those annoying gryphons until you're as feather-brained as them?'  She brushes her wingtip teasingly across your raised ass and down to your crotch[if cocks of player > 0 and cunts of player > 0]. Your cock[smn] twitch[esmv] and stiffens[smv] further and your puss[yfn] grow[sfv] all the wetter[else if cocks of player > 0]. Your cock[smn] twitch[esmv] and grow[smv] harder in response[else]. Your puss[yfn] grow[sfv] all the wetter in response[end if], though you start to have second thoughts. You give your bonds a tug to test them, but you're secured tightly.";
 		say "     'Ah-ah-ah!' she teases with another feathery touch while grabbing your ass with one taloned foot. 'No backing out now. Though I do think I'd rather keep you all to myself.'  And with that, she moves atop you with a caw. Her soft feathers brush across your back as the hard dildo pushes into you, causing you to moan in dual pleasure. Returning to a more avian posture, she rests herself atop her captured lover and starts rocking her hips. She takes slow thrusts initially, allowing your crinkled hole to adjust to the penetration, but soon picks up the pace and is eventually pounding away at you hard and fast.";
 		say "     'Yeah, take it, you perv. Bending over and taking it up the ass from a girl, and a bird at that. You slut,' she caws, nipping at your shoulder with her beak as she grinds her feathered hips hard against you, pressing the dildo [if cocks of player > 0]against your prostate[else]deep inside you[end if]. You can't help but agree, feeling like quite the slut for having allowed a bird/woman to tie you up and then fuck you in the ass with a strap-on. This turns you on all the more and you try to push back into her thrusts, but your bonds don't allow it, giving you an additional reminder of your kinky predicament. This leaves the bird to set the pace, drawing it out for her own amusement. The raven's clearly had plenty of experience with the role, pausing when needed to keep you from coming. Yours is by no means the first ass she's filled, working that phallus with practised skill and ease to keep you on sexual edge while she savours her prize before finally bringing it to a head with a powerful orgasm from both of you. You cry out with much-needed release as the bird caws in orgasmic delight through your mutual climaxes.";
@@ -310,12 +310,12 @@ to say yolandasex02_b:	[bondage anal]
 		else:
 			say ". Removing it, she cleans it with a wet wipe and stores it back in the box with the others";
 		say ". Yolanda releases you from your bonds for some post-sex snuggles while you both bask in the afterglow. You're still stiff from the bondage, so the feathery cuddling in her cushion nest is the perfect way for your sore muscles to relax and recover.";
-	if hp of Yolanda < 3, now hp of Yolanda is 3;
+	if HP of Yolanda < 3, now HP of Yolanda is 3;
 
 to say yolandasex03:
 	say "     Running a hand along her side and under her tail, you offer to lick her pussy. She gives a little caw as your fingers slip between her feathers and brush across her cloacal folds. 'Well, that doesn't sound too bad, though it's a little on the vanilla side. How about we make it a little more fun?' she says, plucking some leather straps from her box of fun. Before you can decide if you're up for that, she bumps her avian body against you, knocking you over onto her nest of cushions. Taking a moment to rub her wing against your crotch, she gives a soft, cawing chuckle. 'Oh, come now. Lemme have my fun, too. I'll make sure you enjoy it,' she adds.";
-	say "     Allowing her to tie you up, she uses her oft-hidden talon hands to secure your wrists to the old radiator using some leather straps. A spreader bar is attached to your ankles before being connected to a concealed D-ring in the floor. And with a few adjustments, you're secured spread eagle across [if hp of Yolanda < 6]her apartment floor[else]the library floor[end if]";
-	if hp of Yolanda < 3:
+	say "     Allowing her to tie you up, she uses her oft-hidden talon hands to secure your wrists to the old radiator using some leather straps. A spreader bar is attached to your ankles before being connected to a concealed D-ring in the floor. And with a few adjustments, you're secured spread eagle across [if HP of Yolanda < 6]her apartment floor[else]the library floor[end if]";
+	if HP of Yolanda < 3:
 		say ". With you nude and unable to move, the raven strides back and forth, looking you over.";
 		say "     'Rather trusting, aren't you? Letting a strange mutant tie you up. What's to stop me from leaving you like this? Or sharing you with those annoying gryphons until you're as feather-brained as them?'  She brushes her wingtip teasingly down your chest to your groin[if cocks of player > 0 and cunts of player > 0]. Your cock[smn] twitch[esmv] and stiffens[smv] further and your puss[yfn] grow[sfv] all the wetter[else if cocks of player > 0]. Your cock[smn] twitch[esmv] and grow[smv] harder in response[else]. Your puss[yfn] grow[sfv] all the wetter in response[end if], though you start to have second thoughts. You give your bonds a tug to test them, but you're secured tightly.";
 		say "     'Ah-ah-ah!' she teases with another feathery touch while slamming her foot down onto the spreader bar. 'No backing out now. Though I do think I'd rather keep you all to myself.'  And with that, she turns around and sits herself atop you like a bird, burying you in the darkness of her tailfeathers. She grinds her hips back, pressing her cloaca to your face, urging you to start licking. The stuffy heat surrounding you only makes the musky scent of her arousal all the stronger in your nose. Your tongue darts out to get a taste of it and soon you're delving into her dripping cunny. And true to her word, she [if cocks of player > 0]begins stroking your throbbing cock[smn][else]fingers your wet snatch[esfn][end if] after giving your crotch a beak nuzzle.";
@@ -324,7 +324,7 @@ to say yolandasex03:
 		say "     'And now I've got you tied up and all to myself again,' she says with a chuckling caw. She brushes her wingtip teasingly down your chest to your groin[if cocks of player > 0 and cunts of player > 0]. Your cock[smn] twitch[esmv] and stiffens[smv] further and your puss[yfn] grow[sfv] all the wetter[else if cocks of player > 0]. Your cock[smn] twitch[esmv] and grow[smv] harder in response[else]. Your puss[yfn] grow[sfv] all the wetter in response[end if], excited at the prospect of what's to come. You give your bonds a playful tug, finding them quite secure.";
 		say "     'Ah-ah-ah!' she teases with another feathery touch while slamming her foot down onto the spreader bar. 'It's too late to back out now. Now why don't you make yourself useful and get to licking like you promised.'  And with that, she turns around and sits herself atop you like a bird, burying you in the darkness of her tailfeathers. She grinds her hips back, pressing her cloaca to your face, urging you to start licking. The stuffy heat surrounding you only makes the musky scent of her arousal all the stronger in your nose. Your tongue darts out to get a taste of it and soon you're delving into her dripping cunny. And true to her word, she [if cocks of player > 0]begins stroking your throbbing cock[smn][else]fingers your wet snatch[esfn][end if] after giving your crotch a beak nuzzle.";
 	say "     Your hips want to [if cocks of player > 0]thrust into[else]grind against[end if] her touch, but the restraints make it difficult, leaving the bird to set the pace, drawing it out for her own amusement. She takes her time with you, shifting to light brushes of her feathers whenever it looks like you're getting too close. With your face buried in her snatch, you can only moan and groan in frustration, licking all the more vehemently in the hopes of getting her off so you can have your release. And eventually you are rewarded, the raven's femmecum soaking your face as she climaxes. As her cunt clenches around your tongue, she [if cocks of player > 0]jerks you off[else]frigs your sopping cunny[end if] to a mind-blowing orgasm that leaves you panting and dazed. You're still basking in the afterglow as Yolanda undoes the cuffs, releasing you for some post-sex snuggles.";
-	if hp of Yolanda < 3, now hp of Yolanda is 3;
+	if HP of Yolanda < 3, now HP of Yolanda is 3;
 
 to say yolandasex04:
 	say "     'Well now you're getting into it. You must be even farther gone than I thought,' she teases. Taking a padded bar built for this purpose, she slips it between your shoulders and back. With your arms thus held back, she puts a pair of fur-lined manacles around your wrists to lock them tightly together. She gives your neck some firm nips with her beak while placing some support straps across your chest and adjusting them nice and snug. Running a cable from the bar to a loop on the ceiling, she slowly raises you up off the ground. While by no means comfortable, it certainly isn't painful thanks to her care in strapping you in.";
@@ -570,7 +570,7 @@ Instead of resolving a Raven Key Fob:
 
 Section 5 - Yolanda and Icarus
 
-instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Library and hp of Icarus >= 3 and hp of Icarus < 50 ) and ( Yolanda is in Grey Abbey 2F and hp of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 ):
+instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Library and HP of Icarus >= 3 and HP of Icarus < 50 ) and ( Yolanda is in Grey Abbey 2F and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 ):
 	say "     As you're coming up the stairs, you can hear the excited caws of Yolanda. Curious, you go to check on her and find her in lustful play with Icarus. Sitting atop him in avian posture, she's got your passarine pet tied up with his tail raised and her strap-on buried in his ass. She's even put something akin to a combination bird hood and ball gag onto him. Seeing you there, her first response is to give a few hard thrusts into this feathery bottom, drawing out some muffled chirps from his muzzled beak.";
 	say "     [bold type]Giving him a firm nip on the neck, she pauses, as if waiting to see if you'll come join them or leave.[roman type][line break]";
 	LineBreak;
@@ -588,14 +588,14 @@ instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Libr
 		say "     You give the masochistic songbird a [if avpred is true]firm bite on his shoulder[else]firm swat on his rear[end if] as you drive your [cock size desc of player] cock into his well-prepared hole. After a few warm-up thrusts, you grab his ass with both hands and drive [if avpred is true]hard[else]firmly[end if] into him[if cock length of player > 30]. Your pulsing rod throbs inside the little guy, stuffing him so delightfully full that you're making a big bulge of ruffled feathers from your oversized phallus plowing into him[else if cock length of player > 20]. Your pulsing rod throbs inside the little guy, stuffing him so full that you're giving him a small bulge of puffed feathers from your enlarged phallus inside him[end if]. You [if avpred is true]taunt[else]tease[end if] him about what a little cock slut he is, even raising his tail for a strap-on. From the wiggle his but gives, you can tell the tied-up bird's enjoying this mistreatment at both your hands.";
 		say "     You ride him until you feel your climax approaching and then switch off with Yolanda. The raven, having enjoyed the show, eagerly retakes her position atop the blue songbird and resumes pegging him[if cock length of player > 20]. She makes up for the size difference between her toy and your [cock size desc of player] schlong through skillful thrusting and experienced manipulation of the straps and harnesses on the bird[else]. She takes a different approach, using more skillful thrusting and experienced manipulation of the harnesses on the bird[end if]. You and Yolanda continue to switch in and out, having your way with Icarus repeatedly. It is hard to tell which of his [if avpred is true]rough [end if][']studs['] he enjoys more from his muffled noises and attempts to push back into your thrusting.";
 		say "     Eventually you grow tired of holding back and drive yourself fully into him with an orgasmic [if avpred is true]shriek while digging your talons in[else]cry while gripping his feathery bottom tightly[end if]. Icarus shivers beneath you in a mix of terror and excitement, his tight tailhole tensing around you, increasing your lust to stuff it[if cock width of player > 35]. And stuff him you do, pumping the whole of your [cum load size of player] load into the poor songbird, overfilling him to the point that some of your semen leaks messily from the breathing holes in the mask. His body is left rounded like a feathery balloon from it all[else if cock width of player > 25]. And stuff him you do, pumping the whole of your [cum load size of player] load into the poor songbird. You leave him so overfilled that his body is left rounded like a feathery balloon from it all[else if cock width of player > 15]. And stuff him you do, pumping the whole of your [cum load size of player] load into the poor songbird. This leaves him so full that he's left somewhat chubbier looking than before, his belly stuffed quite full with your seed[else]. You pump your [cum load size of player] load into the poor songbird, painting his insides with your seed[end if]. But it is not over for the abused birdie, for Yolanda moves in to stuff his creamy hole with her strap-on, pushing herself to a second and stronger orgasm as she messily pounds your [if avpred is true]mutual prey plaything's[else]shared plaything's[end if] cum-filled ass. Once she's done, she swaps the dildo in his rear for a [if cock length of player > 20]large [end if]buttplug and leaves him tied up like that. Knowing that she'll let him go... eventually, you give his achingly abused bottom a [if avpred is true]final swat[else]playful squeeze[end if] before heading off, leaving him to enjoy his bound and filled state.";
-		now hp of Yolanda is 9;
+		now HP of Yolanda is 9;
 		follow the turnpass rule;
 	else:
 		say "     While this outcome's not at all unexpected, you'd prefer to keep your fun with them as one-on-one time. You nod to Yolanda to continue and head back down the stairs, leaving her to her fun. As you descend, you can hear the raven's excited cawing starting up again along with some muffled chirps of pained delight from the songbird. Perhaps you'll come back later for some one-on-one time with your avian lovers later.";
-		now hp of Yolanda is 8;
+		now HP of Yolanda is 8;
 
 an everyturn rule:
-	if player is in Grey Abbey Library and ( Icarus is in Grey Abbey Library and hp of Icarus >= 51 ) and ( Yolanda is in Grey Abbey 2F and hp of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 or cunts of player > 0 ) and skipturnblocker is 0:
+	if player is in Grey Abbey Library and ( Icarus is in Grey Abbey Library and HP of Icarus >= 51 ) and ( Yolanda is in Grey Abbey 2F and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 or cunts of player > 0 ) and skipturnblocker is 0:
 		let avpred be false;
 		if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
 			now avpred is true;
@@ -625,7 +625,7 @@ an everyturn rule:
 				say "     Just as you're building to the point of release, Yolanda withdraws without warning, leaving you to moan with frustrated need. You can hear some quick flapping and soon Icarus is back between your legs, driving his avian prick back into you. His aggressive thrusting takes you a little while to adjust to after Yolanda's more sensual motions, thwarting you from achieving orgasm. And just as your body's about to go over the edge from the wild pounding of the passarine, he's switching off again. They continue to swap like this several more times, always denying you the powerful orgasm you're increasingly aching for.";
 				say "     Eventually though, Icarus has had enough and [if avpred is true]sinks his talons into your hips as he keeps going until his release[else]grabs your hips roughly as he keeps going until his release[end if]. This is finally enough to push you over the top and you give a muffled cry of ecstasy, splattering your seed onto the floor as you cum hard. You can feel shot after shot of avian seed being pumped into you even as the bird moans about what a [if avpred is true]cock-slut hen[else]horny cock-slut[end if] you really are. He continues thrusting for another minute after he's spent, nipping at you and calling you his slutty plaything.[movichance]";
 				say "     But things don't finish there, Yolanda taking one last turn atop you, pegging your creamy hole one last time with her strap-on. This final fucking pushes the chaffinch's semen further down into your bowels, spreading that warm, wet feeling even deeper. She screws your already aching hole until her eventual climax, leaving you weak and dazed. You're left tied up and masked like this once they're finished with you, leaving you to imagine yourself messy and on display after your prolonged fucking. You are eventually released, but not until some time has passed and they've had plenty of time to enjoy the view of their handiwork from the bird's-eye view of the rafters above.";
-			now hp of Yolanda is 9;
+			now HP of Yolanda is 9;
 			if avpred is true:
 				decrease humanity of player by a random number between 4 and 8;
 				if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
@@ -637,10 +637,10 @@ an everyturn rule:
 		else:
 			say "     You move hastily to the heavy door of the bunker and go inside. As you're closing the door, you can hear them start arguing again. From the sounds of it, they're each blaming the other for spooking you. While it sounds like their temporary team-up is falling apart, you decide it best to wait for it to fully dissolve before going back out there.";
 			move player to Bunker;
-			now hp of Yolanda is 8;
+			now HP of Yolanda is 8;
 
 
-[ hp of Yolanda                      ]
+[ HP of Yolanda                      ]
 [ 0 = Nothing                        ]
 [ 1 = Talked w/her                   ]
 [   + Raven Key Fob unresolved       ]
@@ -677,7 +677,7 @@ when play ends:
 
 [
 when play ends:
-	if hp of Yolanda > 1:
+	if HP of Yolanda > 1:
 		say "***";
 ]
 

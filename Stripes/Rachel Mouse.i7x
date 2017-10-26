@@ -77,7 +77,7 @@ to say mouseapts:
 	now libido of player is ( libido of player + 1 ) / 3;
 	if humanity of player < 10:
 		say "     For a moment you consider trying to leave while the mice are asleep, but your mate shifts a little and squeaks softly, squeezing you tighter. Unwilling to leave her, or them, you rest your head against hers, drifting further from yourself into the mouse collective.";
-		end the game saying "You give yourself up to the mouse collective, joining their united hive-mind in joyous mousedom.";
+		end the story saying "You give yourself up to the mouse collective, joining their united hive-mind in joyous mousedom.";
 		wait for any key;
 		follow the turnpass rule;
 		stop the action;
@@ -92,7 +92,7 @@ to say mouseapts:
 			say "     Rachel stares at your [companion of player], who had been hiding outside since you got here, and it slinks off. She smiles and takes your hand in hers, chirring softly.";
 		now mouse girl is tamed;
 		now the companion of the player is mouse girl;
-		say "     (The mouse girl is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type][link]pet mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck mouse girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], but then the mouse collective will be tracking you again.)";
+		say "     (The mouse girl is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type][link]pet mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck mouse girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], but then the mouse collective will be tracking you again.)";
 		increase score by 20;
 		wait for any key;
 
@@ -248,7 +248,7 @@ Section 4 - Endings
 
 when play ends:
 	if mouse girl is tamed:
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if bodyname of player is "Albino Mouse" or bodyname of player is "Mental Mouse":
 				say "     Giving into your musine urges, you fully accept Rachel, and the whole of the mouse collective, into your mind. Becoming one with them, your own mind recedes away to make room for the united minds of the mice. You love them all, but love Rachel the most of all. The mouse girl who was willing to accompany you into the city, to risk losing you to let you come to this point on your own, is your special mate among the group, though all those in the collective are your lovers. From your frequent matings, there comes several lovely children who are exceptionally powerful from your chosen union, helping the making the mouse collective even stronger. Several of them move to help be part of new nests, forming an interconnected web of hive-minds that cannot be resisted, growing slowly, secretly, around the world.";
 		else:

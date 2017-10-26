@@ -29,7 +29,7 @@ when play begins:
 hoodequipped is a number that varies.
 
 to say losetoJaguarWarrior:
-	say "     [if hp of player > 0]Unable to resist[else]Beaten by[end if] the jaguar warrior, you are helpless as he strips you of your gear. [run paragraph on]";
+	say "     [if HP of player > 0]Unable to resist[else]Beaten by[end if] the jaguar warrior, you are helpless as he strips you of your gear. [run paragraph on]";
 	if "more anal" is listed in feats of player and a random chance of 1 in 3 succeeds:
 		say "[JagWarVic_Anal][mimpregchance]";
 	else if cunts of player > 0 and a random chance of 2 in 3 succeeds:
@@ -40,35 +40,35 @@ to say losetoJaguarWarrior:
 		say "[JagWarVic_Oral]";
 
 to say beattheJaguarWarrior:
-	if hp of Tehuantl is 1:
+	if HP of Tehuantl is 1:
 		say "     Just as it seems you're gaining the upper hand on the large jungle cat, he slips past you with an agile maneuver and retreats into the depths of the museum.";
-		now hp of Tehuantl is 2;
-	else if hp of Tehuantl is 2:
+		now HP of Tehuantl is 2;
+	else if HP of Tehuantl is 2:
 		say "     As you're once again gaining the upper hand over the feline warrior, he tries to slip away once again, but you're ready for it this time. You attempt to block his path, but he manages to slip by you when he [one of]knocks you off balance with his shield[or]surprises you by leaping over your head[or]slides under your grasp[at random].";
 		if a random chance of 1 in 3 succeeds:
-			now hp of Tehuantl is 3;
-	else if hp of Tehuantl is 3:
+			now HP of Tehuantl is 3;
+	else if HP of Tehuantl is 3:
 		say "     As you're once again gaining the upper hand over the feline warrior, he tries to slip away once again, but you're ready for it this time. Cutting him off as he attempts to escape, you make a diving tackle towards him. The jaguar stumbles and falls as you nearly catch him, grabbing the back of his shawl as he makes his escape. He quickly scrambles to his feet and rolls away. He looks back at you holding his headdress for a moment, as if considering trying to get it back, but with a shake of his head he turns and slips back into the twisting museum corridors.";
-		now hp of Tehuantl is 4;
+		now HP of Tehuantl is 4;
 		now carried of Jaguar Headdress is 1;
-	else if hp of Tehuantl is 4:
+	else if HP of Tehuantl is 4:
 		if hoodequipped is 1:
 			say "[JaguarWarriorCaptured]";
 		else:
 			say "     Beaten, the jaguar warrior is sent reeling with your final blow, stumbling backwards and falling to the ground. With one last nervous glance, he rolls over to his hands and feet, scrambling upright before retreating back into the twisting museum corridors. As you watch him once again slip away, you are reminded of the strange headdress you managed to take from him before...";
 	else:
-		say "Error! hp of Tehuantl = [hp of Tehuantl]. You shouldn't be able to encounter me right now! Please report this on the forums.";
+		say "Error! HP of Tehuantl = [HP of Tehuantl]. You shouldn't be able to encounter me right now! Please report this on the forums.";
 
 to say JaguarWarriorDesc:
 	setmongender 3;      [creature is male]
-	if hp of Tehuantl is 0 and inasituation is false:
+	if HP of Tehuantl is 0 and inasituation is false:
 		say "     As you wander the halls of the museum, your attention is drawn to a large broken display case. What remains of the exhibit appears to document a powerful Aztec military unit known as jaguar warriors. As you wonder where the contents of the display case might have ended up you hear a low, rumbling growl behind you. Turning quickly to face this potential threat you [run paragraph on]";
-		now hp of Tehuantl is 1;
+		now HP of Tehuantl is 1;
 	else if showlocale is true:
 		say "     As you wander the halls of the museum you [one of]hear a low rumbling growl behind you. Turning quickly to face this potential threat you[or]turn a corner and[or]spot a figure moving towards you down the long corridor. Once the creature is close enough to make out the details you[at random] [run paragraph on]";
 	else:
 		say "     You [run paragraph on]";
-	say "find yourself facing a powerful-looking feline warrior with the distinctive markings of a jaguar. He carries an ornate feathered shield and a dangerous-looking sword crafted from a stick with several sharp-looking black stones embedded in it[if hp of Tehuantl < 4]. Atop the jaguar's head is an elaborate headdress modeled after the large feline now wearing it[end if][if hoodequipped is 1]. Spotting the jaguar headdress you're wearing, the warrior shifts slightly, his stance becoming slightly more defensive as if intimidated by your garb[end if].";
+	say "find yourself facing a powerful-looking feline warrior with the distinctive markings of a jaguar. He carries an ornate feathered shield and a dangerous-looking sword crafted from a stick with several sharp-looking black stones embedded in it[if HP of Tehuantl < 4]. Atop the jaguar's head is an elaborate headdress modeled after the large feline now wearing it[end if][if hoodequipped is 1]. Spotting the jaguar headdress you're wearing, the warrior shifts slightly, his stance becoming slightly more defensive as if intimidated by your garb[end if].";
 	say "     As the jaguar readies his weapon and moves forward you see the barbed tip of his feline cock poking free of its sheath, making his intent clear as he charges forward.";
 
 to say JagWarVic_Vag:
@@ -88,7 +88,7 @@ to say JagWarVic_Anal:
 
 to say JagWarVic_Oral:
 	choose row monster from the table of random critters;
-	say "You wince as the jaguar warrior grips your shoulder tightly, pressing his sharp claws into your flesh as he forces you to your knees while taking hold of his thick feline member with his free hand. You soon find yourself level with the jungle cat's impressive member, already erect and dripping with pre after your [if monsterhp < ( hp entry / 3 ) ]drawn out[else if monsterhp < ( hp entry / 2 )][else]brief[end if] struggle. A shiver runs through you as you eye the barbed feline shaft, quickly moving towards your face as the jaguar moves closer.";
+	say "You wince as the jaguar warrior grips your shoulder tightly, pressing his sharp claws into your flesh as he forces you to your knees while taking hold of his thick feline member with his free hand. You soon find yourself level with the jungle cat's impressive member, already erect and dripping with pre after your [if monsterHP < ( HP entry / 3 ) ]drawn out[else if monsterHP < ( HP entry / 2 )][else]brief[end if] struggle. A shiver runs through you as you eye the barbed feline shaft, quickly moving towards your face as the jaguar moves closer.";
 	say "     Having no other choice, you open your mouth wide as the jaguar warrior grips the back of your head and pulls you forward, driving his length down your throat roughly. You feel the feline barbs that adorn his shaft slide easily across your flesh until he pauses his forward motion. Ripples of pain lance through you as the jaguar pulls back slowly, the pointed spines of his feline cock scraping agonizingly across your tender flesh as he rumbles in satisfaction. As the tip of his length reaches your lips, you try to pull your mouth away, until you feel the jaguar's grip tighten and the threatening presence of his claws at the back of your skull.";
 	WaitLineBreak;
 	say "     When the Jaguar once again drives his length into you, you begin licking and sucking at the engorged length, working through the pain to get the big kitty off so he may finally release you. As the big kitty's rhythmic thrusting begins to increase you begin to lose track of the painful scraping barbs as your attention is focused more and more on pleasing the powerful male. Soon you once again feel his claws at the back of your head, gripping you tightly as he makes his final powerful thrusts into your wanton mouth before driving his length into you with a triumphant roar. You [one of]work the barbed shaft between your tongue and palette[or]suck as hard as you can on the barbed intruder[or]tease the large feline's swollen balls while working your tongue over his length[at random] as he drains his balls into you, milking the big kitty for every drop of cream you can get.";
@@ -109,7 +109,7 @@ to say JaguarWarriorCaptured:
 			WaitLineBreak;
 			say "     After remaining on his belly for a few moments as he pants in exhaustion, the jaguar eventually twists around, flopping down to lay on his back. What an inviting sight - so very docile now that you've broken him in, looking up at you in adoration. His belly-fur is wet and matted with the load of cum you fucked out of him and a slight trickle of your seed oozes out of his well-bred ass. Crouching down over the jaguar warrior, you wipe up the cum with two fingers and bring them to his muzzle - and your pet laps up the creamy treat without any hesitation. You can't help but smile as you tell him that he's been a very good boy, then hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";
 			say "[TameTehuantl]";
-			now hp of Tehuantl is 50; [male jaguar pet]
+			now HP of Tehuantl is 50; [male jaguar pet]
 		else:
 			say "     [line break]";
 			say "     Stroking both hands over the jaguar warrior's back, you let them slide around his sides, searching out the little nubs of his nipples on the feline's chest. He gives a little surprised mewl as you brush over them, then lightly pinch both at the same time. Bent over the spotted feline, you comment that he's quite the sexy pussycat - and that he shouldn't worry too much about his fate. Sure, he's yours now, and you reserve the right to pet him and play with his nipples whenever you want - but there's no reason this shouldn't be enjoyable for the both of you. As you proceed to rub him in circling motions, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
@@ -120,7 +120,7 @@ to say JaguarWarriorCaptured:
 			WaitLineBreak;
 			say "     As you roll off her exhausted form, the rumbling kitty snuggles up against you, staring up at you with a look of adoration as she slips out of consciousness. Clearly very little of the once dominant feline remains in this docile new creature and without a second thought you pull her into your arms as you rise to your feet. Your new pet nuzzles against your chest as you make your way back to the bunker.";
 			say "[TameTehuantl]";
-			now hp of Tehuantl is 10;	[female jaguar pet]
+			now HP of Tehuantl is 10;	[female jaguar pet]
 	else if cunts of player > 0:
 		say "     You knock the jaguar's arm away from the display case he's supporting himself with and watch with satisfaction as he falls to one knee. With a low rumble emanating from somewhere inside you, you grip his shoulders tightly and push him to the ground, lowering yourself down on top of him in the process. Even with you nearly sitting on his chest and pinning his shoulders to the ground the jaguar looks away, unable to make eye contact, and you relish in the submissive gesture.";
 		say "     [line break]";
@@ -137,7 +137,7 @@ to say JaguarWarriorCaptured:
 			WaitLineBreak;
 			say "     After a very pleasurable time having your female bits licked and teased, you can't help but smile as you tell the jaguar that he's been a very good boy, then you hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";
 			say "[TameTehuantl]";
-			now hp of Tehuantl is 50; [male jaguar pet]
+			now HP of Tehuantl is 50; [male jaguar pet]
 		else:
 			say "     [line break]";
 			say "     Stroking both hands over the jaguar warrior's firm pecs, you feel his muscles and then search out the little nubs of his nipples. He gives a little surprised mewl as you brush over them, then lightly pinch both at the same time. Bent over the spotted feline, you comment that he's quite the sexy pussycat - and that he shouldn't worry too much about his fate. Sure, he's yours now, and you reserve the right to pet him and play with his nipples whenever you want - but there's no reason this shouldn't be enjoyable for the both of you. As you proceed to rub him in circling motions, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
@@ -148,7 +148,7 @@ to say JaguarWarriorCaptured:
 			WaitLineBreak;
 			say "     The exhausted kitty rumbles at she stares up at your with adoration, clearly very little of the once dominant feline remains in this docile new creature and without a second thought your reach down for her. Your new pet nuzzles against your chest as you lift her into your arms, cradling her gently against you as you make your way back to the bunker.";
 			say "[TameTehuantl]";
-			now hp of Tehuantl is 10; [female jaguar pet]
+			now HP of Tehuantl is 10; [female jaguar pet]
 	else:
 		say "     Were you better equipped, you could probably catch the beaten feline with ease this time, but since you lack a gender of your own you allow the jaguar to collect his scattered gear and retreat back into the museum halls.";
 
@@ -165,7 +165,7 @@ to say TameTehuantl:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -192,7 +192,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Female";            [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 95;                   [ The monster's starting hit points. ]
+	now HP entry is 95;                   [ The monster's starting HP. ]
 	now lev entry is 13;                  [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 15;                 [ Monster's average damage when attacking. ]
 	now area entry is "Museum";           [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]

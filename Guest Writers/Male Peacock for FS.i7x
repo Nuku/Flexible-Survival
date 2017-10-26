@@ -35,7 +35,7 @@ to say peacockattack:
 	say "[one of]While you are trying to hit the feathered enemy, he trips you! You fall flat to the ground.[or]He pushes you and flees back out of range, laughing.[or]He jumps on your shoulders as you try to grab him, and then he jumps back on the ground. Is he mocking you?[or]The bird flaps a few feet back and fans his tail wide, waving his colourful plumage.[at random]";
 	say "You take no damage.";
 	increase peacockcontrol by a random number between 1 and 5;
-	if peacockcontrol is greater than intelligence of player:
+	if peacockcontrol > intelligence of player:
 		now fightoutcome is 22;
 		lose;
 
@@ -53,14 +53,14 @@ to say peacockvictory:
 		say "     With another flourish of his tail, you drop to your knees in front of him. You can see his growing member emerging from a slit buried in the soft plumage of his crotch. 'I need some relief, so get to it,' he says, rippling those dazzling tailfeathers. Unresisting, you lean in, taking the bird cock into your mouth. Running your hands over his feathered hips, you work that avian shaft with your lips, tongue and palate until finally rewarded with a hot, sticky mess as the bird groans in orgasmic release.";
 		attempttowait;
 		say "     Once drained, the peacock's shaft withdraws and he gently raises your head back up to look at him and his colourful tail. He gives it a mesmerizing wave and your mind rapidly drifts away. 'It will be better for both of us if you don't remember this... Forget... Forget...' he says softly. You slump over, passing out. When you awaken, you find yourself in an alleyway with no memories of how you'd gotten there, the encounter entirely forgotten.";
-		decrease xp of player by lev entry / 2; [no xp from forgotten encounter]
+		decrease XP of player by lev entry / 2; [no XP from forgotten encounter]
 		if ktspeciesbonus > 0, decrease the XP of the player by 1;
-		if "Submissive" is listed in feats of the player and hp of player > 0, decrease the XP of the player by ( ( 2 + lev entry ) / 5 );
+		if "Submissive" is listed in feats of the player and HP of player > 0, decrease the XP of the player by ( ( 2 + lev entry ) / 5 );
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -89,8 +89,8 @@ When Play begins:
 	now int entry is 20;
 	now cha entry is 12;
 	now sex entry is "Female"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 20;
-	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 20;
+	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 0; [Amount of Damage monster Does when attacking.]
 	now area entry is "High"; [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -101,7 +101,7 @@ When Play begins:
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 7; [ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 3; [ Width of female sex infection will try and give you ] 
+	now cunt width entry is 3; [ Width of female sex infection will try and give you ]
 	now libido entry is 20; [ Amount player Libido will go up if defeated ]
 	now loot entry is "peacock feather";
 	now lootchance entry is 35; [ Chance of loot dropping 0-100 ]
@@ -130,10 +130,10 @@ this is the peacockhypno rule:
 	else:
 		say "The peacock tries to distract you with his plumage, but is forced to dodge away!";
 	now peppereyes is 0;
-	if hp of the player is greater than 0 and libido of player < 110:
+	if HP of the player > 0 and libido of player < 110:
 		wait for any key;
 	else:
-		if hp of player <= 0, now fightoutcome is 20;
+		if HP of player <= 0, now fightoutcome is 20;
 		if libido of player >= 110, now fightoutcome is 21;
 		Lose;
 	rule succeeds;
@@ -213,7 +213,7 @@ Section 6 - Endings
 
 when play ends:
 	if bodyname is "Peacock":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if cock length of player > cunt length of player:
 				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different...ahem...[']fruits['] to taste.";
 			else:

@@ -123,7 +123,7 @@ Check Marefeeding:
 	If Feeding Table is not visible, say "huh?" instead;
 
 Carry out Marefeeding:
-	if Lastmarefed - turns is less than 8:
+	if Lastmarefed - turns < 8:
 		say "     You wander over to the table filled with food for the mares again, only to see several of the mares shooting you rather dirty looks as you look over the food. Sighing slightly, you decide that being greedy about the food isn't worth annoying the so far polite horsewomen, and decide to try to snag some of the food again at a later time.";
 	else:
 		say "     Wandering over to the table filled with food on the side of the room, you notice several of the mares seem quite amused as you browse the selection, several of them coming over to help. The mares select several different bits of food for you to try, all the while they are giggling to themselves as you enjoy the strangely flavorful food selections. By the time the mares let you go after you have sampled at least a bite or two of most of the dishes set out on the table, you are definitely starting to feel a bit strange yourself, and definitely horny from all the attention the mares have been giving you.";
@@ -137,7 +137,7 @@ Carry out Marefeeding:
 
 Holding Pens is a room.
 
-The description of Holding Pens is "     This area seems to be a rather large hallway, with several open doors leading into small cell like rooms, that are all mostly unoccupied, though the smell of equine musk lingers strongly in the air. Strangely enough, all the rooms seem to have been modified with small bars to make them hard to escape from. [if xp of Onyx < 3]Interestingly enough, one of the cells at the end of the hallway appears to be occupied[else]Onyx's holding pen remains open as if awaiting a new occupant[end if]. Next to it someone has hung a handmade sign reading ['][if xp of Onyx >= 60 and xp of Onyx <= 79]Obsidian[else]Onyx[end if]['].".
+The description of Holding Pens is "     This area seems to be a rather large hallway, with several open doors leading into small cell like rooms, that are all mostly unoccupied, though the smell of equine musk lingers strongly in the air. Strangely enough, all the rooms seem to have been modified with small bars to make them hard to escape from. [if XP of Onyx < 3]Interestingly enough, one of the cells at the end of the hallway appears to be occupied[else]Onyx's holding pen remains open as if awaiting a new occupant[end if]. Next to it someone has hung a handmade sign reading ['][if XP of Onyx >= 60 and XP of Onyx <= 79]Obsidian[else]Onyx[end if]['].".
 Onyx is in Holding Pens.
 
 instead of sniffing Holding Pens:

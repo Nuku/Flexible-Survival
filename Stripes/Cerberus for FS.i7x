@@ -22,13 +22,13 @@ to say cerberusdesc:
 		decrease plfleebonus by 2;
 		decrease pldodgebonus by 2;
 		decrease plmindbonus by 2;
-		now hp of player is ( 3 * hp of player ) / 4;
+		now HP of player is ( 3 * HP of player ) / 4;
 		now libido of player is ( 100 + libido of player + libido of player + libido of player ) / 4;
 
 
 to say losetocerberus:
 	now cerbfight is 2;
-	if hp of player > 0:			[submit]
+	if HP of player > 0:			[submit]
 		say "     Drawn in by this herm canine's exotic body, you give in to hir and offer yourself for hir amusement. Shi runs hir paws over hir body and releases a chuckle that is partially a howl from all three heads. Shi takes you into hir arms and runs hir paws over your body, groping and fondling you as shi slips off your clothes and backpack to better see what hir new bitch has brought hir to play with.";
 	else:					[beaten]
 		say "     Beaten by the strange, three-headed dog-beast, you are knocked to the ground. The three snarling heads sniff and nuzzle over you, inspecting their prize. You try to resist as those maws drool onto you, showing three vicious sets of teeth. The hermaphrodite canine pushes your legs apart with hir large paws and sniffs at your crotch.";
@@ -41,7 +41,7 @@ to say losetocerberus:
 		say "[impregchance]";
 		say "     When the knot finally goes down, the canine herm pops it out of you and a waterfall of doggy seed flows from your well-used hole. You moan softly and pass out, lost in the bliss of being so thoroughly bred by the mythic beast.";
 	else:								[MALE]
-		if hp of player > 0:		[male submit]
+		if HP of player > 0:		[male submit]
 			say "     The trio of heads growl in disappointment at having only found a male, but at least it is one willing to play with hir. 'And perhaps, with a little help, he'll become more fun to play with in the future,' the heads discuss, nodding to one another. Shi pushes you to your knees and strokes a paw over hir thick tail, bringing the cock at its end to your lips. You lick your lips as you eye the huge, throbbing meat. You should be concerned given its great size, but its musky, arousing scent is overwhelming. Soon you're licking and kissing along it, running your tongue up and down its length. You suck eagerly at its pointed tip, drinking down hir precum. When shi takes your head in hir paws, shi guides your mouth over hir cock, steadily driving it down your throat until the whole thing is stuffed down into you. You ache a little from its size, but that hardly seems to matter as you're all too eager to accept that as long as you have that big bone buried in you. You suck and lick until finally shi cums hard, blasting half hir load into your belly and the rest across your face when shi pulls out. You fall back, cumming hard all over yourself as you collapse, panting for breath and passing out. You drift off into wild, wet dreams. Perhaps, if you are lucky, you will awaken as a beast like hir and be able to please the powerful Cerberus as hir bitch as those dreams make you long to be.";
 		else:				[male beaten]
 			say "     The trio of heads growl at having only found a male. Shi seems to have a conversation between hir three heads for a moment before reaching down and picking you up. You're too beaten up to resist hir at that point as shi forces you to drink from hir breast, feeding you hir infected milk. As the tainted milk gets you aroused, shi grabs your stiffening cock and spears hir wet pussy down onto it. 'If only you were a herm or female, then we could really have some fun.'  Shi holds you tightly and doesn't make any attempt to ride your cock and prevents you from thrusting into hir, letting hir leaking juices soak into you while you drink down hir milk until you pass out from your injuries into wild, wet dreams. Perhaps, if you are lucky, you will awaken a beast like hir and be able to please the powerful Cerberus as hir bitch as those dreams make you long to be.";
@@ -151,7 +151,7 @@ to say cerberusdesc:
 		decrease plfleebonus by 2;
 		decrease pldodgebonus by 2;
 		decrease plmindbonus by 2;
-		now hp of player is ( 3 * hp of player ) / 4;
+		now HP of player is ( 3 * HP of player ) / 4;
 		now libido of player is ( 100 + libido of player + libido of player + libido of player ) / 4;
 
 
@@ -182,7 +182,7 @@ to say cerberuscocktf:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -195,7 +195,7 @@ When Play begins:
 	now face entry is "really three heads, as confusing as that is for you. Your three heads are canine in form, with broad muzzles and slobbery tongues. Your primary head, the one that is YOU, is in the middle and seems to have control over your body most of the time, though you can faintly feel the others there are well. The other heads have their own personalities and minds, and are able to seize control of your shared body at times when something catches their interest";
 	now body entry is "broader near the top, with a wide chest with numerous strong lungs and a trio of powerful hearts to fuel your muscled form. Your arms and legs are well muscled and end in clawed, canine hands and paws";
 	now skin entry is "[if looknow is 1]a coat of short, coarse fur. It is as black as coal, covering your dark, rough[else][one of]dark[or]furred[or]black furred[at random][end if]";
-	now tail entry is "You have a tight, muscled ass with very little jiggle in it. A long and thick muscular tail extends from right above your ass[if cocks of player > 0]. As you examine the tail, you notice it has a slit at the very end of it from whence your male genitals are just peeking out of. You can somehow sense that your testicles are in that tail as well[end if]."; [ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a tight, muscled ass with very little jiggle in it. A long and thick tail extends from right above your ass[if cocks of player > 0]. As you examine the tail, you notice it has a slit at the very end of it from whence your male genitals are just peeking out of. You can somehow sense that your testicles are in that tail as well[end if]."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]black, ribbed canine[or]ebon, knotted and ribbed[or]black, ridged and knotted[or]ebon, ridged canine[at random]";
 	now face change entry is "[cerberusfacetf]";
 	now body change entry is "[cerberusbodytf]";
@@ -209,8 +209,8 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 8;
 	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 55; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 55; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 11; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Museum"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -291,19 +291,19 @@ this is the cerberus rule:
 		if cmdmgtotal > 0:
 			now damagein is cmdmgtotal;
 			say "[noshieldabsorbancy]"; [unable to use shield while pinned]
-			if absorb is greater than cmdmgtotal:
+			if absorb > cmdmgtotal:
 				now absorb is cmdmgtotal;
-			if absorb is greater than 0:
+			if absorb > 0:
 				say "You prevent [special-style-1][absorb][roman type] damage!";
-			decrease hp of the player by cmdmgtotal;
-			increase hp of player by absorb;
+			decrease HP of the player by cmdmgtotal;
+			increase HP of player by absorb;
 			follow the player injury rule;
 			say "You are [descr].";
 		now peppereyes is 0; [pepperspray wears off]
-		if hp of the player is greater than 0 and libido of player < 110:
+		if HP of the player > 0 and libido of player < 110:
 			wait for any key;
 		else:
-			if hp of player <= 0, now fightoutcome is 20;
+			if HP of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
 			Lose;
 		rule succeeds;
@@ -316,7 +316,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Cerberus":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your mind unravels, you start to give in to your body's instinctual urges and wander off into the city as your humanity fades away into the background of your mind. ";
 			if facename of player is "Cerberus":
 				say "     With the help of your two other heads, you make your way back to the Museum and follow the scents down the halls to find a service door down into the basement. Tracking those scents easily with your three noses, you made your way down and find the Cerberus den, joining the others of your kind. You receive a very lustful welcome from the other three-headed dog people, who share triple-kisses with you. Soon enough, you are rolling around with them, mating one another";

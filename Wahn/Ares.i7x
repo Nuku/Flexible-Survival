@@ -5,7 +5,7 @@ Version 1 of Ares by Wahn begins here.
 
 Section 1 - Dog-Walking Event
 
-[ hp states of Ares                                                               ]
+[ HP states of Ares                                                               ]
 [   0: hasn't met the player yet                                                  ]
 [   1: option for walking him brought up                                          ]
 [   2: no sex during a walk with him                                              ]
@@ -16,28 +16,28 @@ Section 1 - Dog-Walking Event
 
 Chapter 1 - Ares Basics
 
-Ares is a man. hp of Ares is usually 0.
+Ares is a man. HP of Ares is usually 0.
 The description of Ares is "[AresDesc]".
 The conversation of Ares is { "Woof." }.
 AresDannyEncounters is a number that varies.
 
 to say AresDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Ares] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Ares] <- DEBUG[line break]";
 	say "     Originally one of Mike's dogs, Ares now is a young human male of just about nineteen. He has closely cropped red hair and a very well-developed physique, with muscular arms and legs. All in all a very handsome guy with an aura of untamed energy - but no matter what he looks like - there's still only a dog's mind behind his eyes, so he walks on all fours and only uses barks and growls as communication. ";
-	if hp of Ares is 1:
+	if HP of Ares is 1:
 		say "He watches you attentively from inside his kennel, from time to time giving a pleading whine in an attempt to get you to take him out for a walk.";
-	else if hp of Ares is 2 or hp of Ares is 4:
+	else if HP of Ares is 2 or HP of Ares is 4:
 		say "He sits right in front of the door to his kennel, watching you intently and hoping for another chance of getting out for a walk with you.";
-	else if hp of Ares is 3 or hp of Ares is 5:
+	else if HP of Ares is 3 or HP of Ares is 5:
 		say "He sits right in front of the door to his kennel, watching you intently and hoping for another chance of getting out for a walk with you. Looking down at his naked body and the raging hardon between his legs, you see that he's also thinking of mounting you again...";
 
 instead of conversing Ares:
-	if hp of Ares is 1:
+	if HP of Ares is 1:
 		say "     As you try talking to him, Ares keeps giving pleading whines, hoping to get you to take him out for a walk. ";
-	else if hp of Ares is 2 or hp of Ares is 4:
+	else if HP of Ares is 2 or HP of Ares is 4:
 		say "     As you try talking to him, Ares answers with happy woof's, intermixed with some pleading whines, hoping to get you to take him out for a walk. ";
-	else if hp of Ares is 3 or hp of Ares is 5:
+	else if HP of Ares is 3 or HP of Ares is 5:
 		say "     As you try talking to him, Ares answers with insistent woof's that sound just a bit commanding. [bold type]Having mounted you successfully before, it seems like he now expects you to take him out and serve as his bitch again.[roman type] ";
 	say "[bold type]Do you do so?[roman type][line break]";
 	LineBreak;
@@ -46,9 +46,9 @@ instead of conversing Ares:
 	if player consents:
 		say "     [WalkingAres]";
 	else:
-		if hp of Ares is 1 or hp of Ares is 2 or hp of Ares is 4:
+		if HP of Ares is 1 or HP of Ares is 2 or HP of Ares is 4:
 			say "     Telling the human dog that you won't take him out right now, you get a low whine as an answer. You're not sure if he actually understood you or just interpreted the tone of your voice correctly, nevertheless he is pretty sad at not getting out for some fun.";
-		else if hp of Ares is 3 or hp of Ares is 5:
+		else if HP of Ares is 3 or HP of Ares is 5:
 			say "     Telling the human dog that you won't take him out right now, you get an insistent bark as an answer. Though even if he's starting to believe that you're his bitch, he's still only got the intelligence of a dog and can't actually unbolt his kennel door. You shake your head at Ares, who falls silent with a sullen expression on his face a moment later.";
 
 instead of sniffing Ares:
@@ -59,15 +59,15 @@ instead of fucking Ares:
 
 Chapter 2 - Walkies
 
-instead of going east from Mike's Office while (hp of Ares is 0):  [initial event]
+instead of going east from Mike's Office while (HP of Ares is 0):  [initial event]
 	move Ares to Dog Kennels;
 	move player to Dog Kennels;
 	say "     As you walk into the long hallway between the dog kennels, one of the transformed dogs, a magnificently built male with short-cropped red hair jumps up from his air mattress. He pads up and down in front of the cage door almost demonstratively, then gives you a hopeful look and pleading whine. As you step closer to check out what's up with him, the human dog starts barking loudly in excitement and comes to stand right at the door, running his hand over the mesh at its edge. Attracted by the noise, Mike comes from his office to join you in front of the barking dog's cage. 'Ah, of course... who else would it be' he says, opening the door and crouching down to stroke the young man's head.";
 	say "     Then Mike turns to you and explains 'This is Ares, one of my newer dogs and not all that trained yet. He's a bit of a wild one and needs lots of exercise... sadly, since I have to care for Lea, I haven't really had time for him. Now he's itching to get out and you coming up to his cage got him all excited since he thinks you're here for him.' The stag-man continues to stroke Ares head slowly and calmingly for a moment, then guides him back into the kennel and closes the door to it again. To the sad whine that follows to him closing the door's bolt again, Mike answers 'Sorry boy, you'll have to wait for now.' Then he turns to you and says 'Unless you maybe want to take him out for a while? That'd be a great help and we'd both be very thankful for it. I've got to get back to Lea now, but if you're interested... collars and leashes are on hooks over there on the wall.' With that, he hurries back to his office, leaving you alone with the dogs in their kennels.";
-	now hp of Ares is 1;
+	now HP of Ares is 1;
 
 to say WalkingAres:
-	say "     Walking over to where the collars and leashes hang on the wall, you grab a pair of them, then return to Ares kennel and open the door. The human dog is exuberantly happy at being let out, woofing and circling you several times to sniff you and rub his head against your legs. Then he sits down and lets you put the collar on him, thoroughly used to this procedure for going outside. Moments later, with the attractive young man on your leash, you walk out into Mike's office and are greeted by the smiling stag-man. [if hp of Ares is 1]'Ah, so you decided to take Ares out? Thanks a lot, that really helps and he and I appreciate it. There's a park in the residential area down the street, just a few blocks over. And don't let him pull you around too much. He needs a bit of a firm hand.' [else if hp of Ares > 1]'Another trip with Ares? Thanks for taking such good care of him. Maybe, if we make it out of all this, I should hire you as a professional dog-walker.' [end if]After that, you're out the door, walking down the street with Ares by your side.";
+	say "     Walking over to where the collars and leashes hang on the wall, you grab a pair of them, then return to Ares kennel and open the door. The human dog is exuberantly happy at being let out, woofing and circling you several times to sniff you and rub his head against your legs. Then he sits down and lets you put the collar on him, thoroughly used to this procedure for going outside. Moments later, with the attractive young man on your leash, you walk out into Mike's office and are greeted by the smiling stag-man. [if HP of Ares is 1]'Ah, so you decided to take Ares out? Thanks a lot, that really helps and he and I appreciate it. There's a park in the residential area down the street, just a few blocks over. And don't let him pull you around too much. He needs a bit of a firm hand.' [else if HP of Ares > 1]'Another trip with Ares? Thanks for taking such good care of him. Maybe, if we make it out of all this, I should hire you as a professional dog-walker.' [end if]After that, you're out the door, walking down the street with Ares by your side.";
 	say "[AresWalkMenu]";
 
 to say AresWalkMenu:
@@ -146,7 +146,7 @@ to say AresWalk_Park:
 to say AresParkMounting:
 	setmonster "human";
 	choose row monster from the table of random critters;
-	if hp of Ares < 3:  [no sex before]
+	if HP of Ares < 3:  [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around on you, proving that this was just what he planned - by mounting you from the back and starting to hump against you. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, though obviously the concept of clothing being in the way did escape Ares.";
 		LineBreak;
 		if "Submissive" is listed in feats of player:
@@ -162,12 +162,12 @@ to say AresParkMounting:
 			say "     Ares fucks you with a wild animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you. Being mounted by this animal in human form, pushed down by his weight on your back makes you all tingly with arousal at your submission, which quickly builds up to a mind-blowing orgasm[if cocks of player > 0] that makes you shoot long streams of cum all over the leafy ground[else if cunts of player > 0] that makes your pussy drip with femcum[end if]. Meanwhile, your anal muscles twitching around his cock pleases and excites Ares, as his growls of lust increase and he speeds up before plunging in one last time and filling your asshole with his human seed.[mimpregchance]";
 			WaitLineBreak;
 			say "     As his cock and balls keep twitching with blast after blast of cum into you, the transformed dog just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and making out with lots of tongue-action between you two. As his instincts tell him to stay still till his knot pops out, Ares leaves his human manhood in your freshly bred ass till it softens enough to slip out on its own. Then he dismounts you and starts to lap at your butt, licking up any trickle of cum escaping your still slightly gaping pucker. As this feels quite nice, you stay as you are some more time before you finally stand up again and put your clothes in order.";
-			now hp of Ares is 3;
+			now HP of Ares is 3;
 		else:
 			LineBreak;
 			say "     Enough of this. Finally coming back to your senses, you shove Ares off and grab the leash again before scolding him for what he tried to do. He accepts that with a hanging head, though you guess that's more from being sad that he didn't succeed than from understanding you at all.";
-			now hp of Ares is 2;
-	else if hp of Ares is 3 or hp of Ares is 5:  [he fucked the player before]
+			now HP of Ares is 2;
+	else if HP of Ares is 3 or HP of Ares is 5:  [he fucked the player before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked you right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man standing in front of you on all fours, his cock dangling erect under his muscular body.";
 		LineBreak;
 		say "     [bold type]Seems like he wants another round on what he thinks is his bitch... Do you let him?[roman type][line break]";
@@ -183,10 +183,10 @@ to say AresParkMounting:
 		else:
 			LineBreak;
 			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
-	else if hp of Ares is 4:  [he only fucked Helen/Xerxes before]
-		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked [if hp of Helen > 0]Helen[else]Xerxes[end if] right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man standing in front of you on all fours, his cock dangling erect under his muscular body.";
+	else if HP of Ares is 4:  [he only fucked Helen/Xerxes before]
+		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked [if HP of Helen > 0]Helen[else]Xerxes[end if] right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man standing in front of you on all fours, his cock dangling erect under his muscular body.";
 		LineBreak;
-		say "     [bold type]Seems like he wants to repeat his performance with [if hp of Helen > 0]Helen[else]Xerxes[end if] and make you his bitch too... Do you let him?[roman type][line break]";
+		say "     [bold type]Seems like he wants to repeat his performance with [if HP of Helen > 0]Helen[else]Xerxes[end if] and make you his bitch too... Do you let him?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -196,7 +196,7 @@ to say AresParkMounting:
 			say "     Ares fucks you with a wild animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you. Being mounted by this animal in human form, pushed down by his weight on your back makes you all tingly with arousal at your submission, which quickly builds up to a mind-blowing orgasm[if cocks of player > 0] that makes you shoot long streams of cum all over the leafy ground[else if cunts of player > 0] that makes your pussy drip with femcum[end if]. Meanwhile, your anal muscles twitching around his cock pleases and excites Ares, as his growls of lust increase and he speeds up before plunging in one last time and filling your asshole with his human seed.[mimpregchance]";
 			WaitLineBreak;
 			say "     As his cock and balls keep twitching with blast after blast of cum into you, the transformed dog just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and making out with lots of tongue-action between you two. As his instincts tell him to stay still till his knot pops out, Ares leaves his human manhood in your freshly bred ass till it softens enough to slip out on its own. Then he dismounts you and starts to lap at your butt, licking up any trickle of cum escaping your still slightly gaping pucker. As this feels quite nice, you stay as you are some more time before you finally stand up again and put your clothes in order.";
-			now hp of Ares is 5;
+			now HP of Ares is 5;
 		else:
 			LineBreak;
 			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
@@ -204,7 +204,7 @@ to say AresParkMounting:
 
 to say AresHelenWalk:
 	say "     As you look down at Helen, happily padding around in the library, you remember one of Mike's other dogs - Ares. With Mike busy caring for Lea, the human dog doesn't get out much from his kennel these days, so you decide to go and take him for a walk - and Helen too, while you're at it. You whistle to call Helen, making the dog with the buck-naked body of a young woman immediately rush to you from where she was. She comes to stand beside you, looking happy at getting her master's attention[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds]. 'Master play?' she says with a wide grin[end if]. Explaining that you're gonna take her for a walk and to see the other dogs, you find yourself with a very exuberant and happy Helen, eager to go out with you. With your human dog by your side, you leave the library and make your way through the mostly empty streets, thankful that you seem to have chosen a lull in the creature activity in this area for your little excursion. Maybe they're asleep... or busy fucking each other - no matter which, you arrive unmolested at Mike's House not too much later and are greeted by the stag after knocking on the door.";
-	say "     'Oh, hello - and hello Helen.' he says, patting her head, then allowing her to trot inside and go see Lea. While the two young women happily yip and sniff at each other, Mike asks 'So, what brings you here? No problems with Helen, I hope?' Assuring him that you're very happy with having her as your pet, you tell him that you just wanted to take her and Ares out for a walk. The anthro stag smiles as he hears your explanation and he says [if hp of Ares is 1]'Ah, so you decided to take Ares out? Thanks a lot, that really helps and he and I appreciate it. There's a park in the residential area down the street, just a few blocks over. Just don't let him pull you around too much. He needs a bit of a firm hand.' [else if hp of Ares > 1]'Another trip with Ares? Thanks for taking such good care of him. Maybe, if we make it out of all this, I should hire you as a professional dog-walker.' [end if]With that, Mike just waves you into the kennel area and turns his attention to Helen and Lea, who were getting a bit wild in their reunion.";
+	say "     'Oh, hello - and hello Helen.' he says, patting her head, then allowing her to trot inside and go see Lea. While the two young women happily yip and sniff at each other, Mike asks 'So, what brings you here? No problems with Helen, I hope?' Assuring him that you're very happy with having her as your pet, you tell him that you just wanted to take her and Ares out for a walk. The anthro stag smiles as he hears your explanation and he says [if HP of Ares is 1]'Ah, so you decided to take Ares out? Thanks a lot, that really helps and he and I appreciate it. There's a park in the residential area down the street, just a few blocks over. Just don't let him pull you around too much. He needs a bit of a firm hand.' [else if HP of Ares > 1]'Another trip with Ares? Thanks for taking such good care of him. Maybe, if we make it out of all this, I should hire you as a professional dog-walker.' [end if]With that, Mike just waves you into the kennel area and turns his attention to Helen and Lea, who were getting a bit wild in their reunion.";
 	WaitLineBreak;
 	say "     Entering the room with the dog's cages, you walk over to where the collars and leashes hang on the wall and grab a pair of them, then go to Ares kennel and open the door. The human dog is exuberantly happy at being let out, woofing and circling you several times to sniff you and rub his head against your legs. Then he sits down and lets you put the collar on him, thoroughly used to this procedure for going outside. Moments later, with the attractive young man on your leash, you walk out into Mike's office and after a quick whistle to Helen that brings her to your side, you're out the door with your two 'dogs'.";
 	if a random chance of 1 in 3 succeeds:  [no fight]
@@ -229,7 +229,7 @@ to say AresHelenWalk:
 to say AresHelenParkMounting:
 	setmonster "human";
 	choose row monster from the table of random critters;
-	if hp of Ares < 3:  [no sex before]
+	if HP of Ares < 3:  [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Helen from behind, his hard cock easily finding her pussy in the typical 'doggie style' position. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young woman under him.";
 		LineBreak;
 		say "     [bold type]If he still was a normal dog, he'd likely have knotted her by now and you'd be powerless to do anything about this. But he isn't, and you doubt he understands that he doesn't have a knot anymore. Do you let Ares continue, or pull him off Helen?[roman type][line break]";
@@ -241,11 +241,11 @@ to say AresHelenParkMounting:
 			say "     You think a moment about it, then decide to just let them go on. After all, Helen clearly seems to like it and you brought them out here for some exercise - which is what their wild coupling might be counted as. Ares fucks Helen with a untamed animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside her. Being mounted by this other animal in human form, Helen pants and yips in lust, obviously getting all her buttons pushed and being very happy at feeling his weight on her back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
 			LineBreak;
 			say "     [AresHelenParkFuck]";
-			now hp of Ares is 4;  [only had sex with Helen]
+			now HP of Ares is 4;  [only had sex with Helen]
 		else:  [pull Ares off]
 			LineBreak;
 			say "     Enough of this. Coming back to your senses, you shorten the leash and pull Ares off Helen, with him giving a surprised (for not being safely locked with her by a knot) and annoyed grunt. Then you take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
-	else if hp of Ares is 3:  [he fucked only the player before]
+	else if HP of Ares is 3:  [he fucked only the player before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked you right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Helen, cock dangling erect under his muscular body.";
 		LineBreak;
 		say "     [bold type]Seems like he wants to make Helen his bitch too - just like he did with you. Do you let him?[roman type][line break]";
@@ -257,11 +257,11 @@ to say AresHelenParkMounting:
 			say "     You think a moment about it, then decide to just let Ares go on. After all, you brought them out here for some exercise - which a good fucking might be counted as. Ares quickly mounts Helen, his hard cock easily finding her pussy in the typical 'doggie style' position. Fucking the young woman with a wild animalistic energy, Ares hard thrusts rub very sensitive and pleasurable spots inside her. Being mounted by this other animal in human form, Helen pants and yips in lust, obviously getting all her buttons pushed and being very happy at feeling his weight on her back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
 			LineBreak;
 			say "     [AresHelenParkFuck]";
-			now hp of Ares is 5;     [had sex with the player and Helen]
+			now HP of Ares is 5;     [had sex with the player and Helen]
 		else:
 			LineBreak;
 			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
-	else if hp of Ares is 4 or hp of Ares is 5:  [he fucked Helen before]
+	else if HP of Ares is 4 or HP of Ares is 5:  [he fucked Helen before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked Helen right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Helen, cock dangling erect under his muscular body.";
 		LineBreak;
 		say "     [bold type]Seems like he wants another round on what he thinks is his bitch... Do you let him?[roman type][line break]";
@@ -388,7 +388,7 @@ to say AresHelenParkFuck:
 
 to say AresXerxesWalk:
 	say "     As you look down at Xerxes, happily padding around in the library, you remember one of Mike's other dogs - Ares. With Mike busy caring for Lea, the human dog doesn't get out much from his kennel these days, so you decide to go and take him for a walk - and Xerxes too, while you're at it. You whistle to call Xerxes, making the dog with the buck-naked body of a young man immediately rush to you from where he was. He comes to stand beside you, looking happy at getting his master's attention[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds]. 'Master play?' he says with a wide grin[end if]. Explaining that you're gonna take him for a walk and to see the other dogs, you find yourself with a very exuberant and happy Xerxes, eager to go out with you. With your human dog by your side, you leave the library and make your way through the mostly empty streets, thankful that you seem to have chosen a lull in the creature activity in this area for your little excursion. Maybe they're asleep... or busy fucking each other - no matter which, you arrive unmolested at Mike's House not too much later and are greeted by the stag after knocking on the door.";
-	say "     'Oh, hello - and hello Xerxes.' he says, patting him head, then allowing him to trot inside and go see Lea. While the two human dogs happily yip and sniff at each other, Mike asks 'So, what brings you here? No problems with Xerxes, I hope?' Assuring him that you're very happy with having Xerxes as your pet, you tell him that you just wanted to take him and Ares out for a walk. The anthro stag smiles as he hears your explanation and he says [if hp of Ares is 1]'Ah, so you decided to take Ares out? Thanks a lot, that really helps and he and I appreciate it. There's a park in the residential area down the street, just a few blocks over. Just don't let him pull you around too much. He needs a bit of a firm hand.' [else if hp of Ares > 1]'Another trip with Ares? Thanks for taking such good care of him. Maybe, if we make it out of all this, I should hire you as a professional dog-walker.' [end if]With that, Mike just waves you into the kennel area and turns his attention to Xerxes and Lea, who were getting a bit wild in their reunion.";
+	say "     'Oh, hello - and hello Xerxes.' he says, patting him head, then allowing him to trot inside and go see Lea. While the two human dogs happily yip and sniff at each other, Mike asks 'So, what brings you here? No problems with Xerxes, I hope?' Assuring him that you're very happy with having Xerxes as your pet, you tell him that you just wanted to take him and Ares out for a walk. The anthro stag smiles as he hears your explanation and he says [if HP of Ares is 1]'Ah, so you decided to take Ares out? Thanks a lot, that really helps and he and I appreciate it. There's a park in the residential area down the street, just a few blocks over. Just don't let him pull you around too much. He needs a bit of a firm hand.' [else if HP of Ares > 1]'Another trip with Ares? Thanks for taking such good care of him. Maybe, if we make it out of all this, I should hire you as a professional dog-walker.' [end if]With that, Mike just waves you into the kennel area and turns his attention to Xerxes and Lea, who were getting a bit wild in their reunion.";
 	WaitLineBreak;
 	say "     Entering the room with the dog's cages, you walk over to where the collars and leashes hang on the wall and grab a pair of them, then go to Ares kennel and open the door. The human dog is exuberantly happy at being let out, woofing and circling you several times to sniff you and rub his head against your legs. Then he sits down and lets you put the collar on him, thoroughly used to this procedure for going outside. Moments later, with the attractive young man on your leash, you walk out into Mike's office and after a quick whistle to Xerxes that brings him to your side, you're out the door with your two 'dogs'.";
 	if a random chance of 1 in 3 succeeds:  [no fight]
@@ -413,7 +413,7 @@ to say AresXerxesWalk:
 to say AresXerxesParkMounting:
 	setmonster "human";
 	choose row monster from the table of random critters;
-	if hp of Ares < 3:  [no sex before]
+	if HP of Ares < 3:  [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Xerxes from behind, his hard cock easily finding Xerxes['] asshole and penetrating it. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young man under him.";
 		LineBreak;
 		say "     [bold type]If he still was a normal dog, he'd likely have knotted Xerxes by now and you'd be powerless to do anything about this. But he isn't, and you doubt he understands that he doesn't have a knot anymore. Do you let Ares continue, or pull him off Xerxes?[roman type][line break]";
@@ -425,11 +425,11 @@ to say AresXerxesParkMounting:
 			say "     You think a moment about it, then decide to just let them go on. After all, Xerxes clearly seems to like it and you brought them out here for some exercise - which is what their wild coupling might be counted as. Ares fucks Xerxes with a untamed animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside your pet. Being mounted by this other animal in human form, Xerxes pants and yips in lust, obviously getting all his buttons pushed and being very happy at feeling Ares weight on his back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
 			LineBreak;
 			say "     [AresXerxesParkFuck]";
-			now hp of Ares is 4;  [only had sex with Xerxes]
+			now HP of Ares is 4;  [only had sex with Xerxes]
 		else:  [pull Ares off]
 			LineBreak;
 			say "     Enough of this. Coming back to your senses, you shorten the leash and pull Ares off Xerxes, with him giving a surprised (for not being safely locked with him by a knot) and annoyed grunt. Then you take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
-	else if hp of Ares is 3:  [he fucked only the player before]
+	else if HP of Ares is 3:  [he fucked only the player before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked you right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Xerxes, cock dangling erect under his muscular body.";
 		LineBreak;
 		say "     [bold type]Seems like he wants to make Xerxes his bitch too - just like he did with you. Do you let him?[roman type][line break]";
@@ -441,11 +441,11 @@ to say AresXerxesParkMounting:
 			say "     You think a moment about it, then decide to just let Ares go on. After all, you brought them out here for some exercise - which a good fucking might be counted as. Ares quickly mounts Xerxes, Xerxes from behind, his hard cock easily finding Xerxes['] asshole and penetrating it. Fucking the young man with a wild animalistic energy, Ares hard thrusts rub very sensitive and pleasurable spots inside your human dog. Being mounted by this other animal in human form, Xerxes pants and yips in lust, obviously getting all his buttons pushed and being very happy at feeling Ares's weight on his back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
 			LineBreak;
 			say "     [AresXerxesParkFuck]";
-			now hp of Ares is 5;     [had sex with the player and Xerxes]
+			now HP of Ares is 5;     [had sex with the player and Xerxes]
 		else:
 			LineBreak;
 			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
-	else if hp of Ares is 4 or hp of Ares is 5:  [he fucked Xerxes before]
+	else if HP of Ares is 4 or HP of Ares is 5:  [he fucked Xerxes before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked Xerxes right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Xerxes, cock dangling erect under his muscular body.";
 		LineBreak;
 		say "     [bold type]Seems like he wants another round on what he thinks is his bitch... Do you let him?[roman type][line break]";
@@ -546,15 +546,15 @@ to say AresXerxesParkFuck:
 to say AresWalk_Mall:
 	if AresDannyEncounters is 0: [first meeting Danny/Ares]
 		say "     It is a surprisingly pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dog. What might have something to do with it is that you're following the larger roads towards the mall, where there are less dark corners out of which you can be jumped. Soon, the expansive structure comes into sight, surrounded by its big parking lots on all sides, filled with wrecks and abandoned cars. A duo of patrolling wolverine guards stares at you with suspicious intent and they sniff the air in your direction before waving you past with a low growl. As confrontational and gruff as these tough as nails anthros are, they nevertheless do perform their set task well enough. As you appear sane (enough) to their eyes, you're allowed to enter the building without any fuss.";
-		say "     Stepping through the propped-open doors of the mall food court, you're treated to what would have been a fairly normal scene of mall activity on a calm day. Provided you ignore the fact that most of the people hanging around in here and manning the few stores that are open are mall-rats with the exception of some felines, canines, and an occasional rare and exotic creature. Your own [bodytype of player] form draws a few glances from some of the people present, as does Ares with his collar and leash. Then an appealing voice calls out in a friendly tone, 'Wow, you're quite a kinky couple, aren't you?' As you turn around to look, you see that the person who spoke is [if hp of Danny > 0]Danny the mall-rat, wearing his signature [else]a young male mall-rat, wearing a [end if]sleek and stylish long coat that hangs down to his knees and highlights his slender frame. His face is pretty cute, with a pointy nose and large ears, framed by unruly streaks of green-dyed hair. A shiny black smartphone in his fine-boned hands flashes for flashes for the blink of an eye as he takes a photo of you and your companion.";
+		say "     Stepping through the propped-open doors of the mall food court, you're treated to what would have been a fairly normal scene of mall activity on a calm day. Provided you ignore the fact that most of the people hanging around in here and manning the few stores that are open are mall-rats with the exception of some felines, canines, and an occasional rare and exotic creature. Your own [bodytype of player] form draws a few glances from some of the people present, as does Ares with his collar and leash. Then an appealing voice calls out in a friendly tone, 'Wow, you're quite a kinky couple, aren't you?' As you turn around to look, you see that the person who spoke is [if HP of Danny > 0]Danny the mall-rat, wearing his signature [else]a young male mall-rat, wearing a [end if]sleek and stylish long coat that hangs down to his knees and highlights his slender frame. His face is pretty cute, with a pointy nose and large ears, framed by unruly streaks of green-dyed hair. A shiny black smartphone in his fine-boned hands flashes for flashes for the blink of an eye as he takes a photo of you and your companion.";
 		if graphics is true:
 			project the figure of Danny_face_icon;
 		WaitLineBreak;
-		if hp of Danny > 0: [player knows Danny]
+		if HP of Danny > 0: [player knows Danny]
 			say "     Having met the adventurous teenager before, you say hello to Danny and turn in his direction. After a few steps, you have to tug softly on Ares leash as the human dog is too intent on sniffing at a passing tigress in a black power-suit, but soon all three of you are standing near one of the abandoned shops. 'So... pet-play, eh? I have to say, that's one thing I haven't seen here before,' the mall-rat tells you with a grin, still looking rather wide-eyed at the naked man crouching next to you. 'Rawr - woof!' Ares proudly proclaims at the attention he is given, then pulls towards Danny and starts sniffing at him with a broad smile on his face. 'Ehm, I - nice to meet you dude,' Danny says to the transformed canine, then squeaks in surprise as the hand he holds out to Ares is immediately licked. 'He's really committed to the role, that's for sure,' the baffled anthro rat says and turns his attention back to you.";
-		else if hp of Danny is 0: [never talked to Danny]
+		else if HP of Danny is 0: [never talked to Danny]
 			say "     Looking up from his phone, the anthro rodent gives a somewhat shy smile at the raised eyebrow you give him, then hastily slips his mobile into a pocket and waves you closer. 'Ehm... welcome to the mall? I'm Danny, nice to meet you.' Turning in his direction, you take a few steps, but then have to tug softly on Ares leash as the human dog is too intent on sniffing at a passing tigress in a black power-suit. Soon after, the three of you are standing together near one of the abandoned shops. 'So... pet-play, eh? I have to say, that's one thing I haven't seen here before,' the mall-rat tells you with a grin, still looking rather wide-eyed at the naked man crouching next to you. 'Rawr - woof!' Ares proudly proclaims at the attention he is given, then pulls towards Danny and starts sniffing at him with a broad smile on his face. 'Ehm, I - nice to meet you dude,' Danny says to the transformed canine, then squeaks in surprise as the hand he holds out to Ares is immediately licked. 'He's really committed to the role, that's for sure,' the baffled anthro rat says and turns his attention back to you.";
-			now hp of Danny is 1; [Danny introduced himself]
+			now HP of Danny is 1; [Danny introduced himself]
 		say "     Not wanting to keep the mall-rat guessing any longer, you tell Danny that Ares is actually a dog who got transformed into his current shape. He is quite interested to hear about Mike and his dog kennel, filled with a number of well-trained human dogs. Or not so well-trained, as Ares soon starts sniffing Danny's crotch with intense interest, barely reacting when you try to bring him to heel. The attractive human even half-jumps up at the mall-rat, somewhat clumsily holding on to Danny's sides with his hands and reflexively flexing the muscles of his hips and lower back as if to hump away at him. It does take you a few moments to calm Ares down again, during which you wonder if you maybe should put the human dog in his place a bit more thoroughly and also... show off the commands Mike trained Ares for recently. After all, it wouldn't do to leave a bad impression of Mike's skills as an animal trainer.";
 		LineBreak;
 		say "     [bold type]Do you want to remind Ares of his proper submissive role as a pet (in a pretty public sexual fashion)?[roman type][line break]";

@@ -49,7 +49,7 @@ check treasurehunt:
 
 
 carry out treasurehunt:
-	if lasttreasurehunt - turns is less than 8:
+	if lasttreasurehunt - turns < 8:
 		say "Approaching the dark caves that dot the island, you realize that you still haven't fully recovered from your last trip down into the darkness, and decide to come back again later...";
 		stop the action;
 	else:
@@ -64,8 +64,8 @@ carry out treasurehunt:
 					stop the action;
 				else:
 					say "Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier. Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did! You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up. Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won't hurt once you get back to civilization either![line break]";
-					say "Your xp has increased!";
-					increase xp of player by 50;
+					say "Your XP has increased!";
+					increase XP of player by 50;
 					now treasurefound is 1;
 					stop the action;
 			else:
@@ -75,17 +75,17 @@ carry out treasurehunt:
 					stop the action;
 				if T is 2:
 					say "Walking through the dark and damp caves, you hear a soft trickling noise from one of the nearby alcoves, deciding to investigate you find a small stream trickling up from a crack in the wall. Taking a look at the small spring you find the water is both crisp and clear, and decide to gather some of it up to take with you. You continue exploring through the caves, but eventually find they twist and turn back on each other, and you end up back on the beach.[line break]";
+					say "[bold type]You gain 1 water bottle![roman type][line break]";
 					increase carried of water bottle by 1;
-					say "You gained a water bottle!";
 					stop the action;
 				if T is 3:
 					say "Walking through the caves, you find yourself starting to jog a bit, and then a bit more, as you move along the long cave, always following the left passage when it appears in an attempt to solve the maze of passages within. After some time you begin to tire, but there is no end to the cave in sight, as you move in the dim light you realize your surrounding seem increasingly familiar even as you continue to jog along. Finally in frustration you take a right turn instead of a left turn, and almost immediately shoot back out onto the beach from the cave you entered from, with an embarrassed glance behind you, you realize the left part of that cave looped in a large circle, and you have been running around it for hours. You sigh as you plop down on the beach to rest for a minute, still you do feel slightly more dexterous from all that jogging you find yourself thinking, as you let the waves lap at your body.[line break]";
+					say "[bold type]Your dexterity has increased by 1![roman type][line break]";
 					increase dexterity of player by 1;
-					say "your dexterity has increased by 1!";
 					stop the action;
 				If T is 4:
 					say "Traveling along the dim caves, you can see small bits of light filter through from holes far above you in the cave walls, leaving you barely enough light to see as you slowly feel your way forward. The cave stretches on endlessly before you as you hunt for the treasure you know is in here somewhere, eventually you grow slightly careless as you move forward, and your foot comes down on empty air as you tumble forward into a natural pit in the rock. You lie there for a minute cursing at the dark hole, as your body aches with pain, slowly you climb back out of the pit, and in too much pain to continue, you carefully make your way back to the entrance, the treasure still safe in its caves, for now...";
-					decrease hp of player by 20;
+					decrease HP of player by 20;
 					stop the action;
 				if T is 5:
 					say "Wandering through the dark tunnels, you eventually trip over something as you explore one of the alcoves, reaching down you find a small item, hoping it is part of the treasure you decide to take it with you as you explore. Eventually you find your way back out of the caves, without finding the treasure and rather tired, and examine the site you found... well it may not be part of the treasure, but at least it will make a nice souvenir.";
@@ -93,16 +93,16 @@ carry out treasurehunt:
 					choose row minortreasure from the table of random critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
+							say "[bold type]You acquired 1 [loot entry].[roman type][line break]";
 							add loot entry to invent of player;
-							say "You acquired 1 [loot entry].";
+							say "[bold type]You acquired 1 dirty water![roman type][line break]";
 							increase carried of dirty water by 1;
-							say "you acquired some dirty water!";
 						else:
+							say "[bold type]You acquired 1 pirate bandana![roman type][line break]";
 							increase carried of pirate bandana by 1;
-							say "you acquired a pirate bandana!";
 					else:
+						say "[bold type]You acquired some seafood![roman type][line break]";
 						increase carried of food by 1;
-						say "You acquired some seafood!";
 					stop the action;
 				if T is 6:
 					say "Traveling through the caves, you come across a large open cave with light filtering in from above, as you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave. Thinking it might be the treasure you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you. The cave seems to be a Sea dragons lair!";
@@ -112,8 +112,8 @@ carry out treasurehunt:
 						stop the action;
 					else:
 						say "Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier. Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did! You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up. Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won't hurt once you get back to civilization either![line break]";
-						say "Your xp has increased!";
-						increase xp of player by 50;
+						say "[bold type]Your gain 50 XP![roman type][line break]";
+						increase XP of player by 50;
 						now treasurefound is 1;
 						stop the action;
 				if T is 7:
@@ -160,7 +160,7 @@ carry out treasurehunt:
 					say "Wandering through the caves of the island, you hear a strange rhythmic noise coming from one of the caverns up ahead, do you want to investigate?";
 					if player consents:
 						say "Moving ahead you find yourself in a large open beach cave, a strange pleasant scent filling your nostrils as you move into the cave. The noise continues, before a loud roar lets out behind you. Jumping you turn around swiftly to see a sea dragon and dragoness panting together in the far back of the cave, this must be their lair, and the rhythmic sound was the sound of their mating! The two large beasts stare at you for a second, and you stare back at them as well, before they can react you break into a run, leaving the cave to the two large beasts before they can get around to punishing you for trespassing. Still after the encounter you find yourself feeling slightly strange and woozy, your head still filled with the scent of their mating as you realize it is trying to change you...";
-						if cunts of player is greater than 0 or girl is banned:
+						if cunts of player > 0 or girl is banned:
 							infect "Feral Sea Dragon";
 							infect "Feral Sea Dragon";
 						else:
@@ -228,7 +228,7 @@ Instead of resolving Findingboat:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 14:
+		if diceroll > 14:
 			say "Finding a usable boat, you make sure you have everything you might need, before setting out on the waves in search of the island the map talks about, visions of pirate treasure sparkling through your head.";
 			challenge "Pirate Shark";
 			if lost is 0:

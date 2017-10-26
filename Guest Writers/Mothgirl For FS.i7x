@@ -68,7 +68,7 @@ to say mothgirl defeat:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -95,8 +95,8 @@ When Play begins:
 	now int entry is 13;
 	now cha entry is 15;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 25;
-	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 25;
+	now lev entry is 2; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
 	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -122,7 +122,7 @@ When Play begins:
 
 when play ends:
 	if bodyname is "Mothgirl":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "You do not have any prejudice to any particular infected creature, except spidergirls whose nature invites trouble. You flit around acting on the instincts of wanting sex or having sex with numerable partners.";
 		else:
 			say "You are able to fly anywhere you want in the city and take up a small delivery service, in exchange you get money and multiple sex partners to satisfy your lust.";
@@ -146,11 +146,11 @@ to say cock pill use:
 		now cock width of player is 10;
 		say "With a rush of euphoria, your groin practically explodes as a new [cock of player] cock bursts free of you, twitching readily, fueled by [short ball size] orbs dangling underneath.";
 	else if a random chance of 1 in 5 succeeds:
-		say "You feel dizzy, leaning against the nearest support as your [cock of player] shaft[if cocks of player is greater than 1]s[end if] engorge painfully, growing larger before splitting, revealing a new shaft.";
+		say "You feel dizzy, leaning against the nearest support as your [cock of player] shaft[if cocks of player > 1]s[end if] engorge painfully, growing larger before splitting, revealing a new shaft.";
 		increase cocks of player by 1;
 	else:
 		increase cock length of player by a random number from 1 to 2;
 		Follow the cock descr rule;
-		say "You groan as you gain more male meat, leaving you with a [cock size desc of player] [cock of player] dick[if cocks of player is greater than 1]s[end if]";
+		say "You groan as you gain more male meat, leaving you with a [cock size desc of player] [cock of player] dick[if cocks of player > 1]s[end if]";
 
 Mothgirl For FS ends here.

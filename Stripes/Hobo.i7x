@@ -30,10 +30,10 @@ Instead of resolving a Mournful Dog:
 				let dice be a random number from 1 to 20;
 				let total be ( dice plus bonus plus dogfoodcount plus featbonus);
 				say "You roll 1d20([dice])+[bonus]+[dogfoodcount + featbonus] vs 22 and score [total]: ";
-				if total is greater than 21:
+				if total > 21:
 					say "     You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head and check its tag, finding only the name 'Hobo'. Reaching over, you pull the sheets over its former master's body, then you both leave together.";
 					now helper dog is tamed;
-					say "     (The helper dog is now tamed! You can make it your active pet by typing [bold type][link]pet helper dog[as]pet helper dog[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+					say "     (The helper dog is now tamed! You can make it your active pet by typing [bold type][link]pet helper dog[as]pet helper dog[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 					increase score by 10;
 					now Mournful Dog is resolved;
 				else:
@@ -57,10 +57,10 @@ Instead of resolving a Mournful Dog:
 				let dice be a random number from 1 to 20;
 				let total be ( dice plus bonus plus dogfoodcount plus featbonus);
 				say "You roll 1d20([dice])+[bonus]+[dogfoodcount + featbonus] vs 22 and score [total]: ";
-				if total is greater than 21:
+				if total > 21:
 					say "     You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head. Reaching over, you pull the sheets over its former master's body, then you both leave together.";
 					now helper dog is tamed;
-					say "(The helper dog is now tamed! You can make it your active pet by typing [bold type]pet helper dog[roman type]. You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])";
+					say "(The helper dog is now tamed! You can make it your active pet by typing [bold type]pet helper dog[roman type]. You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])";
 					now lastfuck of helper dog is turns;
 					increase score by 10;
 					now Mournful Dog is resolved;
@@ -138,7 +138,7 @@ an everyturn rule:
 					say "     As you continue to struggle to cope with your heat and its urges, you are momentarily distracted from your thoughts of sex when you catch the helper dog rummaging through your pack. You tell him to stop and are about to pull him away when he pulls a syringe of cloudy orange fluid from your pack, the libido suppressant. Delicately holding it in his mouth, he pads over to you and drops it in your hand. Hmmm... perhaps that will help. What a clever dog.";
 				now hobo-libidosupp is true;
 				now lastfuck of helper dog is turns;
-			else if hp of player < stamina of player and ( medkit is owned or healing booster is owned ) and hobo-medical - turns >= 8:
+			else if HP of player < stamina of player and ( medkit is owned or healing booster is owned ) and hobo-medical - turns >= 8:
 				say "     Feeling worn out and aching from your injuries, you pause to take a short break. During this, [one of]Hobo pulls your [if medkit is owned]medkit[else]healing booster[end if] from your backpack with his muzzle and offers it to you[or]Hobo barks to get your attention, having dropped your [if medkit is owned]medkit[else]healing booster[end if] at your feet[or]you close your eyes for a moment, only to be started when something is dropped in your lap. There you find your [if medkit is owned]medkit[else]healing booster[end if] and the helper dog at your side[at random]. You pat the caring canine's head.";
 				now hobo-medical is turns;
 				now lastfuck of helper dog is turns;
@@ -164,7 +164,7 @@ an everyturn rule:
 				say "     After taking a short break, you go to pick up your pack again, finding that your journal's sitting atop it. Hobo, resting beside your pack, looking up at you and barks once.";
 				now hobo-journal is turns;
 				now lastfuck of helper dog is turns;
-			else if hp of doctor matt is 2 and carried of gryphon milk < 2 and hobo-grmilk is false and hobo-grmilkhelp - turns >= 8 and furry is not banned and hermaphrodite is not banned:
+			else if HP of doctor matt is 2 and carried of gryphon milk < 2 and hobo-grmilk is false and hobo-grmilkhelp - turns >= 8 and furry is not banned and hermaphrodite is not banned:
 				say "     Before you've even noticed, your helper dog returns to your side carrying something in his mouth. As you take it from him, he gives a meaningful bark. Examining it, you find it to be an old-style glass bottle filled with milk. Surprisingly, it is still cold and smells delicious. You're about to taste a sample of it, when Hobo grabs your sleeve and pulls on your arm, keeping you from doing so. Reminded of the request from Dr. Matt for [bold type]gryphon milk[roman type], you cap the milk and tuck it away, wondering at just how smart this dog really is.";
 				now hobo-grmilk is true;
 				now lastfuck of helper dog is turns;
@@ -175,7 +175,7 @@ an everyturn rule:
 - reminds you of food/water if in pack and getting high (extended delay)
 - offers you the journal if getting low (extended delay)
 - gryphon milk if carried < 2 and doing matt's first task (once, conditional)
-- medkit/healing booster if hp low (extended delay)
+- medkit/healing booster if HP low (extended delay)
 - libido suppressant if libido too high while in heat and slutfucked > 6 (once conditionally)
 ]
 
@@ -186,7 +186,7 @@ Section 4 - Endings
 
 when play ends:
 	if helper dog is tamed:
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As you give in to your feral instincts, your helper dog looks at you mournfully. He then turns and wanders off to find another poor, needy soul to help. Perhaps he will be more successful next time.";
 		else:
 			say "     After your rescue, you are able to convince the distracted military that the helper dog isn't a threat. He certainly seems quite normal to them and is an intelligent and helpful animal. Once you arrive at the safety of the military compound and disembark with the others extracted with you, you spot Hobo in the distance. He looks back at you once and, as if satisfied you are now safe, turns and continues on, perhaps to find another poor soul in need of his help."; [The God-I'm-so-fucking-Canadian ending]

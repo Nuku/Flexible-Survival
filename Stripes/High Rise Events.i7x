@@ -57,7 +57,7 @@ Instead of resolving a Pigging Out:
 			infect "Messy Pig";
 			infect "Messy Pig";
 			decrease hunger of player by 30;
-			if hunger of player is less than 0, now hunger of player is 0;
+			if hunger of player < 0, now hunger of player is 0;
 			decrease libido of player by 18;
 			if libido of player < 0, now libido of player is 0;
 			decrease humanity of player by 10;
@@ -492,11 +492,11 @@ Instead of resolving a Cameo:
 			if bonus > 12, now bonus is 12;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
-			if bonus + dice is greater than 15:
+			if bonus + dice > 15:
 				say "     You manage to avoid the sneak attack, as the dog leaps past you and into the company logo, mashing its whole head into a slobbery kiss on the face of the store's namesake heroine. It flows and reshapes itself quickly, forming its tail into a new head and swapping its front and back legs around. This startling change shocks you long enough for it to complete the reversal and start snapping at you before you can take flight.";
 			else:
 				say "     The chocolate dog slams itself into you, flowing itself across your body. It squeezes around your chest, pushing out your breath even as its flowing body starts teasing at your nipples and groin. As you are forced to exhale, the chocolate canine presses its gooey face to yours, pushing its chocolatey tongue into your mouth and humping against your body. As its arousing taste fills your mouth, you moan softly and find yourself giving in before you snap back control of yourself and push the semi-solid dog back and off of you. It growls in frustration at you denying its lustful urges and charges to attack. But its assault on you has weakened you further as well as gotten you more aroused. (15 dmg taken)[line break]";
-				decrease hp of player by 15;
+				decrease HP of player by 15;
 				increase libido of player by 12;
 			now choclabfight is 0;
 			challenge "Chocolate Lab";
@@ -505,10 +505,10 @@ Instead of resolving a Cameo:
 				if "Junk Food Junky" is listed in feats of player:
 					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. Your junk food fueled metabolism finds the chocolates quite satisfying and you still have enough chocolates and almond bark to be equivalent to roughly two more snacks.";
 					decrease hunger of player by 15;
-					if hunger of player is less than 0, now hunger of player is 0;
-					if morale of player is less than 0:
+					if hunger of player < 0, now hunger of player is 0;
+					if morale of player < 0:
 						increase morale of player by 36;
-						if morale of player is greater than 0, now morale of player is 0;
+						if morale of player > 0, now morale of player is 0;
 						say "You feel much better after having your snack.";
 					increase morale of player by 1;
 					increase carried of chips by 2;
@@ -516,10 +516,10 @@ Instead of resolving a Cameo:
 				else:
 					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. While not very nutritious, you still have enough chocolates and almond bark to be equivalent to roughly one meal.";
 					decrease hunger of player by 6;
-					if hunger of player is less than 0, now hunger of player is 0;
-					if morale of player is less than 0:
+					if hunger of player < 0, now hunger of player is 0;
+					if morale of player < 0:
 						increase morale of player by 15;
-						if morale of player is greater than 0, now morale of player is 0;
+						if morale of player > 0, now morale of player is 0;
 						say "You feel better having eaten.";
 					increase carried of food by 1;
 					increase score by 5;

@@ -31,7 +31,7 @@ to say beateasterbunny:
 Section 4 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -44,7 +44,7 @@ When Play begins:
 	now face entry is "that of a rabbit-like head with a short muzzle and large, floppy ears. Your eyes are of mismatched colour, one blue and the other brown. Your long, flowing hair is a colourful [if cocks of player > 0 and cunts of player > 0]blue[else if cocks of player > 0]purple[else if cunts of player > 0]pink[else]yellow[end if] and always seems to stay fashionably styled";
 	now body entry is "slender and sexy, like a sexy [if cunts of player > 0]Playboy model[else]boytoy[end if]. Your thighs are strong and put a lot of bounce in your legs, helping to show off your assets. Your hands and feet are small and dainty, but a little paw-like as well, having fluff and pads, making them bunny-like as well";
 	now skin entry is "soft fur of a [if cocks of player > 0 and cunts of player > 0]pretty pink[else if cocks of player > 0]coral blue[else if cunts of player > 0]sunshine yellow[else]pastel orange[end if] colour over your sensitive";
-	now tail entry is "You have the cutest little bunny tail of [if cocks of player > 0 and cunts of player > 0]pink[else if cocks of player > 0]blue[else if cunts of player > 0]yellow[else]orange[end if] and white fluff poking out just above your curvy ass";
+	now tail entry is "You have the cutest little bunny tail of [if cocks of player > 0 and cunts of player > 0]pink[else if cocks of player > 0]blue[else if cunts of player > 0]yellow[else]orange[end if] and white fluff poking out just above your curvy ass.";
 	now cock entry is "[one of]pink[or]smooth[or]idealized[or]bunny[at random]";
 	now face change entry is "a sweet taste fills your mouth and your vision goes out of whack. Swirls of colour tint everything you look at. Your nose twitches a few times and, with soft pops, whiskers appear as you gain a bunny nose and muzzle. You can feel your front teeth growing longer to match. As long, flowing hair starts to grow on your head, long bunny ears pop out from it. The swirling hues settle down as your colour perception realigns such that everything you perceive seems just a little bit brighter and more colourful";
 	now body change entry is "it becomes that of an anthropomorphic bunny with a very sexy [if cunts of player > 0]figure like that of a centerfold[else]boytoy figure[end if]. Your thighs become strong and springy as the changes progress down to your legs";
@@ -58,8 +58,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 17;
 	now sex entry is "Both";
-	now hp entry is 29;
-	now lev entry is 3; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+	now HP entry is 29;
+	now lev entry is 3; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
 	now wdam entry is 4; [Amount of Damage monster Does when attacking.]
 	now area entry is "nowhere"; [ Location of monster, in this case nowhere]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -185,7 +185,7 @@ Section 5 - Endings
 [
 when play ends:
 	if bodyname of player is "Template":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";

@@ -159,7 +159,7 @@ to say pig_fratinitiation:
 		else:
 			say "     The party continues on from there with plenty more sex and drinking, though many adjourn to their rooms for more private romps or to pass out. You get dragged up to the doorkeeper's room along with a few other members for some added fun. You have a lot of wild, piggish sex with them over the next several hours. Eventually you all end up passing out. When you wake up, others are gone, but your new roommate is still there. And like a good roommate and freshman member should, you take his cock into your snout and wake him up with a good-morning blow-job.";
 		WaitLineBreak;
-		end the game saying "You succumb to your piggish desires and remain at the frat house.";
+		end the story saying "You succumb to your piggish desires and remain at the frat house.";
 		now battleground is "void";
 		wait for any key;
 		now skipturnblocker is 1;
@@ -234,7 +234,7 @@ to say sexwithfratmembers:
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		now lastfuck of frat members is turns;
-		increase hp of frat members by 1;
+		increase HP of frat members by 1;
 		wait for any key;
 		clear the screen and hyperlink list;
 

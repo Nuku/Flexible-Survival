@@ -65,7 +65,7 @@ To say gargoyle loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -78,7 +78,7 @@ When Play begins:
 		now face entry is "coal eyes shine inside of your head while finely cut lines shape your strong grey face into something almost ruggedly handsome in appearance";
 		now body entry is "leather wings flap at your backside, giving your tightly packed musculature some extra added mobility, while in front your precisely cut pectorals stand forward onto your chest only to trail smoothly down south to your thick six packed abs. Down a long ways further your well polished thighs, legs and digitigrade clawed feet keep you mobile as you stand rigidly in place while looking yourself over";
 		now skin entry is "[one of]shiny grey flesh[or]marble-like skin [or]densely tightened shining ashen grey skin[at random]";
-		now tail entry is "You have a dexterous and meaty serpentine tail, which seems to have a mind of its own [skin of player], as it whips behind you in boredom.";
+		now tail entry is "You have a dexterous and meaty serpentine tail which seems to have a mind of its own. It is covered in [skin of player] hide and whips behind you in boredom.";
 		now cock entry is "[one of]gargoyle[or]demonic[or]unyielding[at random]";
 		now face change entry is "a slight feeling of pain goes through your skull as your face reforms itself to become harder and more rigid like that of a gargoyle while turning sharp and angular in all the right places. Your eyesight seems to dim a little as coal black orbs frame your former irises";
 		now body change entry is "your insides twist subtly as your inner organs reform themselves, your muscles become more dense while your bones thicken as your body hardens into a mirror image of that of a gargoyle";
@@ -92,8 +92,8 @@ When Play begins:
 		now int entry is 08;
 		now cha entry is 11;
 		now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-		now hp entry is 123;
-		now lev entry is 12; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+		now HP entry is 123;
+		now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 		now wdam entry is 12; [ Amount of Damage monster Does when attacking. ]
 		now area entry is "Outside";
 		now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -120,8 +120,8 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Gargoyle":
-		if humanity of player is less than 10:
-			if cunts of player is greater than 0:
+		if humanity of player < 10:
+			if cunts of player > 0:
 				say "Having been infected by the strain of gargoyle mutation you find that day by day your weeping cunt is shrinking itself down inch by inch. Not understanding this at first you panic and roar to the sky as you fly over the country without thought or destination. Soon though your mournful cries are lost to you, the same as your cunt, as your pussy closes up and then seals tight leaving nothing but a fine, smooth skinned line behind for you to remember it by. Moaning and grunting as your mind tries to understand what's going on you are soon given your answers when another gargoyle finds his way over to you and then moves to claim you as a mate. On your knees under the impressive male you find that any feminine traits you may have had slowly change over to masculine ones as your body hardens further into becoming a perfect gargoyle. In the dim part of your foggy brain that can recall much of what it means to be human you come to realize that gargoyle must be inherently male and that any female coming into sexual contact with them will slowly lose their femininity until they fully become male. This means little to you though as when your mate finishes seeding you, for you are already forgetting you ever were partially female.";
 			else:
 				say "It's too late for you when rescue comes as you've already given over to the gargoyle you were destined to become as all of your human memories have long since emptied out of your head. Flapping across the sky, well out of the sight of the army's helicopters and radar seeking devices, you find yourself coming across another gargoyle while dancing above the humans and furries down below. Impressively muscular, and well endowed to boot, you lead the other male on a fast paced chase across much of the country as you are eager to get caught by the impressive gargoyle keeping up in time with you. Once he finally does catch up to you the other leads the two of you to a rooftop to land onto and immediately the other is claiming dominance over you as he nuzzles and purr and then hiss quietly into your throat. Enticing you without words, as you have long lost the ability to use your former language, you close your wings tight before flipping yourself over and then present the other with your upturned tail. The newcomer gargoyle is on you fast and hard after that as the other tackles you and then spreads your backside open with its impressively long and hard cock.";

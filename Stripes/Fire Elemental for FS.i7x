@@ -16,10 +16,10 @@ to say fireelementaldesc:
 to say losetofireelemental:
 	if bodyname of player is "Reindeer":
 		say "     The fiery woman stalks over to you, eyes burning with loathing, flames swirling and snapping around her form. 'Wretched creature! Snow spawner! Bringer of cold and death! There is no True Fire in you,' she hisses, voice sparking and crackling. The ground, scorched in her wake, is a path of black soot. She grabs you painfully by the shoulders, hands burning at your flesh so that her angry, hateful gaze can be fully directed at you. 'Your kind are not welcome here, ice demon.' Her voice resembles the hiss of a doused flame, unlike its normal cheerful crackle, words dripping with napalm. 'So leave this place and never return. When you recover.' She throws you to the ground once more, and beats her flaming fists against your form again and again and again, until you pass out from the pain, battered, burnt and scorched.";
-		now hp of player is 0;
+		now HP of player is 0;
 	else if bodyname of player is "Naiad":
 		say "     The fiery woman grabs you with her flaming hands, great gouts of steam jutting from between her fingers as your flesh around her grip becomes clear and fluid, boiling like water. Surprised by this, she pushes you away and shakes her hands, fanning the flames back to full strength. 'There is more to you than there appears, o watery one. You surprised me. And I do not,' she says with a crackling, sparking hiss to her voice, 'take such surprises well.' With that, she waves her arms towards you, sending a wave of fire across your entire body. Your body bubbles as it all becomes water briefly, boiling and steaming. Severely weakened by this, you drop to your knees, barely becoming flesh again before you are soaked up by the dry ground. With a laugh like merry flames, she turns and leaves.";
-		now hp of player is hp of player / 2;
+		now HP of player is HP of player / 2;
 	else if bodyname of player is "Fire Elemental" and the player is fireskinned:
 		say "     The fiery woman moves up to you, smiling warmly now. She reaches down, offering you her hand and helping you to your feet. 'Come, [if cunts of player > 0]sister[else if cocks of player > 0]brother[else]my kin[end if], you are in no danger from me now. We are family for The True Fire is in both of us. Come, let us see you out of here - others make this a dangerous place.' The woman keeps to her word, helping you to the nearest safe spot. She places a loving kiss on your lips once you're there, wrapping her fiery arms around your hot body.";
 		say "     'Yes, isn't it so much better not to fight?  Fire is light and warmth, passion and love...' Her lips are deliciously hot as they press themselves to your cheeks and her flames flow and blend with yours. 'Let us enjoy that instead.'";
@@ -55,10 +55,10 @@ to say losetofireelemental:
 	else if bodyname of player is "Fire Elemental" or bodyname of player is "Flaming Lynx " or skinname of player is "Fire Sprite":
 		say "     The fiery woman moves up to you, smiling tenderly now. She reaches down, offering you her hand and helping you to your feet. 'You poor ember. You are ready to burn, but have not felt the heat of The True Fire that is in both of us. Let me help you,' she says, rubbing her fiery body sensually against yours as she places a loving kiss on your lips once you're there, wrapping her fiery arms around your [bodytype of player] body.";
 		say "[fireelsex]";
-	else if ( hp of player > hp of player / 4):
+	else if ( HP of player > HP of player / 4):
 		say "     As you submit, she smiles warmly and steps up to you, wrapping you in a warm and welcoming hug. 'Yes, isn't it so much better not to fight?  Fire is light and warmth, passion and love...' Her lips are a touch searing as they press themselves to your cheeks, but your flesh is unmarred. 'I'm glad that you've decided to accept that.'";
 		say "[fireelsex]";
-	else if hp of player > 0:
+	else if HP of player > 0:
 		say "     As you submit, she looks down at your burnt and battered form from having fought so long. She runs a hand gently across your cheek. 'It would be better for you not to fight. Fire is light and warmth, passion and love...' Her lips are a touch searing as they press themselves to your cheeks, but your flesh is unmarred. 'You would find me much more enjoyable if you were to accept that.'";
 	else:
 		say "     The fiery woman looks down at your burnt and battered form, clearly displeased that you would oppose her. She runs a hand gently across your cheek. 'It would be better for you not to fight. Fire is light and warmth, passion and love...' Her lips are a touch searing as they press themselves to your cheeks, but your flesh is unmarred. 'You would find me much more enjoyable if you were to accept that.'";
@@ -82,7 +82,7 @@ to say beatthefireelemental:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -109,8 +109,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 17;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 95; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 15; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 95; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 15; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 15; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -176,7 +176,7 @@ Section 4 - Endings
 [
 when play ends:
 	if bodyname of player is "Template":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";

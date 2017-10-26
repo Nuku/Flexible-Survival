@@ -48,7 +48,7 @@ to say le_libidoup:
 
 to say losetolatexermine:
 	now nolatexerminesex is 0;
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Pleased that you've finally relented, she pulls you into a kiss, pressing her soft, smooth body against yours. ";
 	else:
 		say "     Eventually, the temptation she represents become too much for you and you stop resisting. She pulls you into a kiss with a happy giggle, pressing her soft, smooth body against yours. ";
@@ -59,7 +59,7 @@ to say losetolatexermine:
 			say "     The pair of you go at it like the lustful mustelids that you are. Her slick, lubricating juices soak both your crotches as she cries out in orgasmic release. This makes her love tunnel quiver around your cock, driving you to plunge your [cock size desc of player] shaft into her and unleash your [cum load size of player] load into her[if cock width of player > 30]. Her cunt keeps a tight grip around your cock, ensuring that every last drop of your excessive output remains inside her rapidly swelling tummy. She moans and giggles happily, running her hands over her bulging belly as her latex skin stretches with ease to hold it all[else if cock width of player > 20]. Her cunt forms a tight seal around your cock, keeping every last drop of your large output inside her. She moans and giggles happily as her latex tummy forms a rounded bulge from all the cum you're shooting into her[else]. Her pussy keeps a snug grip around your cock, not letting any of your seed escape from her needy body[end if]. When you're finally done mating the beautiful female, you share some more kisses and groping before finally each heading your own way.";
 		else:
 			say "     Having a latex mustelid body much like hers, the pair of you make for a very sexy sight as you playfully tease one another. Eventually, you end up in a 69 position each with your muzzles buried into the other's crotch. Taking in the rich, rubbery scent of her juicy cunt, you dive right in, your flexible tongue probing into that wet hole of hers. You moan moments later as the same is done to you.";
-			say "     Soon it becomes a playful competition to one up each other, doing all you can with your mouths and fingers to pleasure the other into cumming first. Latex folds are nibbled, hot holes are delved into, clits are licked and sucked[if anallevel is not 1], even assholes are tantalizingly fingered and licked[end if] - exciting you both all the more as latex-scented juices run freely from both your well-pleasured cunts[if a random number between 0 and 80 is greater than a random number between 0 and (libido of player)]. You end up winning your sexy game as your playmate cums with a happy moan when you [one of]suck hard on her clit[or]tease your latex tailtip against her pussy[or]dive your tongue as deep as you can into her[at random]. Your delight in victory has you cum moments later when she does the same right back to you[else]. You can't hold back any longer when she [one of]stuffs a trio of fingers into your cunt and rubs at your g-spot[or]presses her muzzle to your pussy and licks at your folds wildly[or]nibbles across your thigh while giving your clit a playful pinch[at random]. You release a happy moan as your orgasm fills you with a wave of pleasure, quickly doing the same to your lover to push her over the edge[end if]. In the end, you both are left panting and satisfied, at least for the moment. You share some more kisses and groping before finally each heading your own way.";
+			say "     Soon it becomes a playful competition to one up each other, doing all you can with your mouths and fingers to pleasure the other into cumming first. Latex folds are nibbled, hot holes are delved into, clits are licked and sucked[if anallevel is not 1], even assholes are tantalizingly fingered and licked[end if] - exciting you both all the more as latex-scented juices run freely from both your well-pleasured cunts[if a random number between 0 and 80 > a random number between 0 and (libido of player)]. You end up winning your sexy game as your playmate cums with a happy moan when you [one of]suck hard on her clit[or]tease your latex tailtip against her pussy[or]dive your tongue as deep as you can into her[at random]. Your delight in victory has you cum moments later when she does the same right back to you[else]. You can't hold back any longer when she [one of]stuffs a trio of fingers into your cunt and rubs at your g-spot[or]presses her muzzle to your pussy and licks at your folds wildly[or]nibbles across your thigh while giving your clit a playful pinch[at random]. You release a happy moan as your orgasm fills you with a wave of pleasure, quickly doing the same to your lover to push her over the edge[end if]. In the end, you both are left panting and satisfied, at least for the moment. You share some more kisses and groping before finally each heading your own way.";
 	else:
 		if cocks of player > 0 and a random chance of 2 in 3 succeeds:
 			say "     Soon enough, you end up on your back with the sexy ermine's lovely breasts nestled around your [cock size desc of player] [cock of player] cock. She squeezes them softly against your throbbing flesh before taking a long, slow lick over your manhood. You moan in pleasure, loving the smooth feel of her latex breasts sliding across your erection while watching her play with her [if erminecolour is 1]blue[else if erminecolour is 2]teal[else if erminecolour is 3]green[else if erminecolour is 4]red[else]pink[end if] nipples[if cock length of player > 36]. Her breasts, ample as they are, have trouble encompassing your huge manhood. She rubs them along your pillar of virility, clearly impressed by it[end if]. From time to time, that slick, latex tongue of hers slathers across your shaft, keeping it slick for her bosom to slip against. The happy female's playful fun eventually gets to be too much for you and you cum hard, spraying your [cum load size of player] load onto yourself and her ivory tits. She gets up with a giggle, rubbing your semen into her smooth flesh before bounding off with a swish of her tail.";
@@ -110,7 +110,7 @@ to say beatthelatexermine:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -123,7 +123,7 @@ When Play begins:
 	now face entry is "that of a ermine with a sexy smile and bedroom eyes that give alluring glances to all you see. Atop your head is a coiffure of indigo hair formed of latex into a ponytail, matching your indigo eyes";
 	now body entry is "slender and sexy[if cunts of player > 0] with curvy hips and long legs[else], but with a strong physique[end if]. Your body is quite flexible and will always strike a sexy, or even slutty, pose if you're not careful";
 	now skin entry is "seamless white latex";
-	now tail entry is "Attached to your rear is a long, tubular tail of white latex that seamless changes to indigo at the tip. Your stoat tail feels thick and padded, just right for snuggling in your arms or around someone.";
+	now tail entry is "Attached to your rear is a long, tubular tail of white latex that seamlessly changes to indigo at the tip. Your stoat tail feels thick and padded, just right for snuggling in your arms or around someone.";
 	now cock entry is "[one of]latex[or]ivory[or]smooth[or]white[or]dildo-like[at random]";
 	now face change entry is "your senses get all confused, your vision blurring and your mouth feeling like its full of something thick and syrupy. Your head seems to go soft and flow as it reforms into latex shaped like a happy ermine with a sexy smile and latex hair";
 	now body change entry is "your insides seem to go soft and turn malleable as the transformation begins to take effect. Your body becomes slender and sexy with [if cunts of player > 0]curvy hips and long legs[else]a strong physique[end if]. The pliant nature of your insides doesn't seem to quite go away though, leaving you quite flexible";
@@ -137,7 +137,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 17;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 48; [ The monster's starting hit points. ]
+	now HP entry is 48; [ The monster's starting HP. ]
 	now lev entry is 7; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 7; [ Monster's average damage when attacking. ]
 	now area entry is "High"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -170,7 +170,7 @@ when play ends:
 	if bodyname of player is "Latex Ermine":
 		if player is pure and breast size of player > 0:
 			project the figure of LatexErmineIndigo_icon;
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Your latex infection seeps too deeply into your mind and you lose yourself to it. Your thoughts fill with a desire for playful fun and sexual pleasure. You wander the city briefly, having a few flings with those who catch your fancy before eventually ";
 			if player is pure:
 				if cocks of player > 0:

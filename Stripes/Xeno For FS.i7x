@@ -61,7 +61,7 @@ to say beatthexeno:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -74,7 +74,7 @@ When Play begins:
 	now face entry is "a thin elongated skull that curves backwards towards the top. Your eyes are large black orbs encased in sunken sockets. You have no gums, and your teeth are silvery, long, straight, and densely packed in several rows. Behind your first mouth is a second smaller mouth able to extend out atop your black tongue. This smaller mouth has smaller, but equally fearsome, razor-sharp teeth";
 	now body entry is "large, but oddly enough you can see your [skin] fold around your ribs and bones as it all forms into an exoskeleton[if the player is not xenoskinned] just beneath your taut skin[end if]. Your animal-like body has hints of feminine curves and wide, bony hips[if breasts of player > 0 and breast size of player > 5]. Your breasts, heavy with milk, leak a green acid with each bounce[end if][if player is xenoskinned and breasts of player > 0]. You easily notice green blood vessels and veins running along your breasts and converging on your nipples[end if]. Your long, thin arms and legs bend in odd places, and you're able to walk both upright and on all fours, moving surprisingly silently despite your hard claws. From your back grow breathing tubes that take in air for you[if cunts of player > 0 and cocks of player > 0 and the player is xenococked]. Your cock extends out like a hard, phallic probe with squirming, inch-long tendrils at its tip. Encircled by these is a wet, vaginal opening to complete your ovipositor. You thankfully have a normal, [cunt size desc of player] pussy beneath your cock as well, allowing you to enjoy a good fucking as well[else if cunts of player > 0 and the player is xenococked]. Your [cunt size desc of player] juicy pussy has a quartet of inch-long, squirming tendrils around it that rub constantly against your folds, feeling wonderfully stimulating and making you crave a good fucking to fill it[else if cocks of player > 0 and the player is xenococked]. Your cock extends out like a hard, phallic probe with squirming, inch-long tendrils at its tip. These rub against your glans and cumslit, keeping you aroused and eager to find a wet hole to fill[end if]";
 	now skin entry is "hard, black exoskeleton"; [ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a long tail consisting of many vertebrae but completely absent of any muscle. It hovers behind you, snaking this way and that, slashing its pointed, razor end through the air as if eager to find something to sink into.";
+	now tail entry is "You have a long tail consisting of many vertebrae but completely absent of any muscle. It hovers behind you, snaking this way and that, slashing its pointed, razor-sharp end through the air as if eager to find something to sink into.";
 	now cock entry is "[one of][if cunts of player > 0]ovipositor[else]probing[end if][or]black[or]ebon[or]tendrilled[at random]";
 	now face change entry is "you suddenly get a massive headache as your skull reshapes and stretches itself as any hair you have falls from it. Your skull changes, becoming completely smooth and elongated. As your headache subsides, you feel a sharp pain in your mouth as your gums pull away your teeth elongate and gather in several pointed rows. Your tongue erupts in pain as you feel it thicken and lengthen, splitting off to form a second, smaller mouth filled with more sharp teeth";
 	now body change entry is "your torso starts to ache. Looking down, you notice that your torso is growing longer and twisting its shape, your ribs and bones pushing outwards to form into an exoskeleton[if player is not xenoskinned] just beneath your taut skin[end if]. The bones in your hips crack as they expand and your animalistic body takes on subtle, female curves[if player is xenoskinned and breasts of player > 0]. Feeling strange tingles spreading from your nipples, you see green blood vessels and veins spreading towards your erect nipples[end if][if breasts of player > 0 and breast size of player > 5]. Your breasts start to leak a green, acidic milk that sizzles when it hits the ground[end if][if cunts of player > 0]. You feel a growing vacancy inside lower abdomen as your insides stretch to make room for countless eggs[end if]. Your arms and legs have a dull ache as they become thinner and bend in odd places and directions. Your fingers and toes grow long, sinister claws";
@@ -88,8 +88,8 @@ When Play begins:
 	now int entry is 14; [not that much of a bear with little brain]
 	now cha entry is 6; [because you wouldn't want to argue]
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 80; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 12; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 80; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 15; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Capitol"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -127,13 +127,13 @@ to say drinkacidmilk:
 	say "     Foolishly, you take a gulp of the acid milk. ";
 	if facename of player is not "Xeno":
 		say "     The caustic acid eats away at your flesh and you're forced to spit it up, but not before it does terrible things to the inside of your mouth and throat.";
-		now hp of player is hp of player / 3;
+		now HP of player is HP of player / 3;
 	else if bodyname of player is not "Xeno":
 		say "     You are able to swallow down the acidic milk thanks to your altered head and mouth, but this only allows it access to your body where it starts to eat away at your internals instead. You writhe in pain as it burns inside you for several minutes until it's spread out enough for the nanites to start dealing with cleaning it up.";
-		now hp of player is hp of player / 4;
+		now HP of player is HP of player / 4;
 	else:
 		say "     You are able to drink down the acidic milk thanks to your altered mouth and your infected body is able to deal with it. It still stings and burns inside you, but does restore a small amount of thirst in return.";
-		decrease hp of player by level of player;
+		decrease HP of player by level of player;
 		decrease thirst of player by 3;
 		if thirst of player < 3, now thirst of player is 0;
 
@@ -166,7 +166,7 @@ Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Xeno":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your horrific infection, feeling its silent power and revelling in it. You head out into the city to seek your prey, eager to breed and spread your kind to satisfy your lustful instincts. ";
 			if cunts of player > 0 and cocks of player > 0:
 				say "     Finding others of your kind, you breed with them. But unlike before, you are no longer restrained by your humanity and seek out victims to mount and fill with your eggs, corrupting them even as you turn them into incubators and carriers for your offspring.";

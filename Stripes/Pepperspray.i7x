@@ -58,13 +58,13 @@ this is the peppersprayattack rule:
 	decrease monmindbonus by 5;
 	now skipretaliate is true; [monster to be denied retaliation on first attack]
 	follow the player attack rule;
-	if monsterhp is greater than 0 and combat abort is 0:
+	if monsterHP > 0 and combat abort is 0:
 		follow the player attack rule;
 	now skipretaliate is false; [monster now able to retaliate once again]
 	now battleitem is 1;
 	if gascloud > 0:
 		decrease gascloud by 1;
-	if monsterhp is greater than 0:
+	if monsterHP > 0:
 		say "[line break]Having partially recovered, your enemy attempts to retaliate.[line break]";
 		choose row monstercom from table of Critter Combat;
 		if playerpoison > 0, follow the playerpoisoned rule;
@@ -88,13 +88,13 @@ this is the peppersprayattack rule:
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
 	increase combat bonus by gascloud; [cannot release gas cloud if pepperspraying, but will still linger]
-	if hardmode is true and the combat bonus is less than -9:				[pepperspray limits hardmode penalty to -9]
+	if hardmode is true and the combat bonus < -9:				[pepperspray limits hardmode penalty to -9]
 		now the combat bonus is -9;
-	if hardmode is false and the combat bonus is less than -8:				[pepperspray limits regular penalty to -8]
+	if hardmode is false and the combat bonus < -8:				[pepperspray limits regular penalty to -8]
 		now the combat bonus is -8;
 	let the roll be a random number from 1 to 20;
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-	if the roll plus the attack bonus minus the defense bonus is greater than 8:
+	if the roll plus the attack bonus minus the defense bonus > 8:
 		say "Using the pepperspray to briefly disable the [name entry], you manage to make your escape.";
 		say "[pepperspraydrain]";
 		now fightoutcome is 30;
@@ -113,11 +113,11 @@ this is the peppersprayattack rule:
 	say "You spray the creature with your pepperspray, then quickly press your advantage as it disables them briefly. You attack twice while they have difficulty defending themselves.[line break]";
 	say "[pepperspraydrain]";
 	say "[enhancedattack]";
-	if monsterhp is greater than 0:
+	if monsterHP > 0:
 		say "[enhancedattack]";
 	if gascloud > 0:
 		decrease gascloud by 1;
-	if monsterhp is greater than 0:
+	if monsterHP > 0:
 		say "[line break]Having partially recovered, your enemy attempts to retaliate.[line break]";
 		follow the retaliation rule;
 	else:
@@ -135,13 +135,13 @@ to say enhancedattack:
 	if "Know Thyself" is listed in feats of player:		[That's what you get for thinking with your crotch.]
 		if cockname of player is name entry, increase libido of player by a random number from 0 to 2;
 	if hardmode is true:
-		if the combat bonus is greater than 12:				[pepperspray increases hardmode bonus limit to +12]
+		if the combat bonus > 12:				[pepperspray increases hardmode bonus limit to +12]
 			now combat bonus is 12;
-		else if the combat bonus is less than -8:			[pepperspray limits hardmode penalty to -8]
+		else if the combat bonus < -8:			[pepperspray limits hardmode penalty to -8]
 			now combat bonus is -8;
 	let the roll be a random number from 1 to 20;
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-	if the roll plus the combat bonus is greater than 8:
+	if the roll plus the combat bonus > 8:
 		let wmstrike be 0;
 		let z be 0;
 		let dam be ( weapon damage of the player times ( a random number from 80 to ( 120 + level of player ) ) ) divided by 100;
@@ -242,7 +242,7 @@ to say enhancedattack:
 				increase y by a random number from 2 to 4;
 			increase dam by y;
 			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at [name entry] for [special-style-2][y][roman type] damage!";
-		decrease monsterhp by dam;
+		decrease monsterHP by dam;
 		follow the monster injury rule;
 		say "[Name entry] is [descr].";
 	else:
@@ -254,25 +254,25 @@ to say enhancedattack:
 		repeat with z running through tamed pets:
 			now attack bonus is ( ( dexterity of z minus 4 ) divided by 2 ) plus level of z; [+3 to hit for each pet]
 			let the combat bonus be attack bonus minus defense bonus;
-			if hardmode is true and combat bonus is greater than 12:	[pepperspray increases hardmode bonus limit to +12]
+			if hardmode is true and combat bonus > 12:	[pepperspray increases hardmode bonus limit to +12]
 				now combat bonus is 12;
 			now roll is a random number from 1 to 20;
-			if roll plus the combat bonus is greater than 8:
+			if roll plus the combat bonus > 8:
 				let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
 				say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
-				decrease monsterhp by dam;
+				decrease monsterHP by dam;
 			else:
 				say "Your [z] misses!";
 	else if player is not lonely and a random chance of 3 in 10 succeeds:
 		now attack bonus is ( ( dexterity of companion of player minus 4 ) divided by 2 ) plus level of companion of player; [+3 to hit for pet]
 		let the combat bonus be attack bonus minus defense bonus;
-		if hardmode is true and combat bonus is greater than 12:		[pepperspray increases hardmode bonus limit to +12]
+		if hardmode is true and combat bonus > 12:		[pepperspray increases hardmode bonus limit to +12]
 			now combat bonus is 12;
 		now roll is a random number from 1 to 20;
-		if roll plus the combat bonus is greater than 8:
+		if roll plus the combat bonus > 8:
 			let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
 			say "[assault of companion of player] [special-style-2][dam][roman type] damage inflicted!";
-			decrease monsterhp by dam;
+			decrease monsterHP by dam;
 		else:
 			say "Your [companion of player] misses!";
 
@@ -291,11 +291,11 @@ to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Co
 		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
 			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
 			decrease combat bonus by 3;
-		if hardmode is true and the combat bonus is less than -10:
+		if hardmode is true and the combat bonus < -10:
 			now the combat bonus is -10;
 		let the roll be a random number from 1 to 20;
 		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-		if the roll plus the combat bonus is greater than 8:
+		if the roll plus the combat bonus > 8:
 			let dam be ( wdam entry times a random number from 67 to 120 ) divided by 100; [chance for weaker attacks]
 			if hardmode is true and a random chance of 1 in 12 succeeds:					[lower chance of hard mode critical]
 				now dam is (dam * 150) divided by 100;
@@ -304,10 +304,10 @@ to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Co
 			let absorb be 0;
 			if "Toughened" is listed in feats of player:
 				increase absorb by dam divided by 5;
-			if absorb is greater than 0:
+			if absorb > 0:
 				say "You prevent [absorb] damage!";
-			decrease hp of the player by dam;
-			increase hp of player by absorb;
+			decrease HP of the player by dam;
+			increase HP of player by absorb;
 			follow the player injury rule;
 			say "You are [descr].";
 		else:

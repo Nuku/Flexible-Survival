@@ -69,7 +69,7 @@ to say Catgirl_Desc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -82,7 +82,7 @@ When Play begins:
 	now face entry is "a mixture of cat and human, with rather sharp features and a mouth full of pointy teeth. Vertically slitted eyes and large cats ears relatively high on your head complete the picture";
 	now body entry is "very slender and sleek, built for speed and agility. Your hands are mostly human, although equipped with sharp claws, while your long legs end in more paw-like digitigrade feet";
 	now skin entry is "black, soft-furred";
-	now tail entry is "You have a long mobile tail over the tight buns of your behind. It's pretty useful for helping you hold your balance in any situation.";
+	now tail entry is "You have a long, mobile tail over the tight buns of your behind. It's pretty useful for helping you hold your balance in any situation.";
 	now cock entry is "feline, spined";
 	now face change entry is "it reshapes itself, giving you sharp features and a pretty pointy chin. You feel your mouth filling with a predator's sharp teeth as your ears grow and migrate further up your head";
 	now body change entry is "you fall to the ground, your chest and limbs reforming into a slender, sleek new shape. Your hands acquire sharp claws, while your feet take the shape of digitigrade paws";
@@ -96,8 +96,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Female";          [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60;                 [ How many HP has the monster got? ]
-	now lev entry is 8;                 [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 60;                 [ How many HP has the monster got? ]
+	now lev entry is 8;                 [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8;                [ Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse";      [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -249,13 +249,13 @@ to say FionaFangSex:
 			say "     Keeping your distance from the area the sounds are coming from, you see Fiona streak out from between the bookshelves a moment later, tail all bushy and thick. She dashes down between two other rows of shelves, closely followed by Fang. A moment later, you fan hear the chase come to a sudden end, followed by a low growl and then a lust-filled mrowl. You do your best to filter out the sounds of their animalistic mating after that...";
 		now LastCatgirlFuck is turns;
 
-instead of going outside from Bunker while (CatgirlFucked > 3 and FionaCarlStatus is 0 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and hp of Carl is 10):
+instead of going outside from Bunker while (CatgirlFucked > 3 and FionaCarlStatus is 0 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL WALKIN [line break]";
 	say "[FionaCarlMeet]";
 
-instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus is 0 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and hp of Carl is 10):
+instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus is 0 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -298,13 +298,13 @@ to say FionaCarlMeet:
 				now FionaCarlStatus is 1; [they fucked, player didn't watch]
 		now LastCatgirlFuck is turns;
 
-instead of going outside from Bunker while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and hp of Carl is 10 and a random chance of 1 in 4 succeeds):
+instead of going outside from Bunker while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10 and a random chance of 1 in 4 succeeds):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL REPEAT WALKIN [line break]";
 	say "[FionaCarlRepeatFuck]";
 
-instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and hp of Carl is 10 and a random chance of 1 in 4 succeeds):
+instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10 and a random chance of 1 in 4 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -336,7 +336,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Catgirl" and cunts of player > 0:
-		if humanity of player is less than 10: [succumbed]
+		if humanity of player < 10: [succumbed]
 			say "Before long, your instincts take over, with your human life only a fading memory. Driven by powerful urges to be bred by any strong male, no matter what shape, you roam the streets of the city and flirt your sexy body in front of those you meet.";
 			if "Sterile" is not listed in feats of player: [F-BREEDABLE]
 				say "When the military finally moves in, a scouting soldier finds you in a fight with another potential mate and 'saves' you, driving off the creature with a few shots in the air. As worked up as you are, you immediately rub up against him and soon have the human's cock balls deep inside you. Several more matings follow as he escorts you out of the city, and before you even arrive at the holding facility, your belly starts to bulge with the fruit of your soldier's fertile seed. The man smuggles you past the checkpoints and brings you home with him as his private sex-pet, very well taken care of and fucked daily. You bear him several litters of kittens, many of whom go to his buddies who helped smuggle you out.";

@@ -14,7 +14,7 @@ when play begins:
 
 Instead of resolving a Goblin Trap:
 	say "     As you are travelling along, looking over the various junk piles as you go, you inadvertently set off a hidden trap. A snare closes around your ankles and pulls your feet out from under you as you hear a heavy weight strike the ground nearby, pulling the rope. This also sets off a spring trap which sends a cluster of machine parts at you, aimed to land at your location. Battered by the volley of junk, you try to extricate yourself from the snare as a giggling goblin scrambles out from his hidey-hole in the junkpile after you set off his trap. 'Hee hee! It worked! It worked! And now to claim my prize,' he cackles as he comes at you as you get your legs free. You have taken 12 damage.";
-	decrease hp of player by 12;
+	decrease HP of player by 12;
 	now goblinfight is 3;
 	challenge "Goblin";
 	if goblinfight is 1:
@@ -108,7 +108,7 @@ Instead of resolving a Scattered Trash:
 	let bonus be (( perception of player + dexterity of player minus 20 ) divided by 2 );
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
-	if bonus + dice is greater than 15:
+	if bonus + dice > 15:
 		say "     You manage to spot a sticky mess as you're stepping around through the trash. It's hard to tell over the scent of the surrounding garbage, but it's clearly the sexual fluids from some kind of creature. Finishing picking around the trash, you do manage to find a container of water. The small jug has enough for a drink of water, but it seems to have been filled after the outbreak and is probably not clean.";
 		increase carried of dirty water by 1;
 		increase score by 1;

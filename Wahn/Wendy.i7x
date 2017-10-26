@@ -106,7 +106,7 @@ to say WendyGryphonAftermath:
 	say "     Corbin nods with a smile as she starts walking, then gets pretty wide eyes as her hindquarters come into sight, still covered in by-now dried cum. 'What the -?' he gasps, turning to you with a questioning look, after which you explain about the gryphon you found the cow with. 'Wow, that's a pretty wild story. One of those winged lion things and Wendy having sex? I'll have to go check her out right now... oh, about the reward - go to the farmhouse and talk to Mr. McDermott, ok?'";
 	LineBreak;
 	say "     With that, Corbin rushes after the cow, leaving you standing alone at the farm entrance.";
-	increase hp of Anthony by 1;
+	increase HP of Anthony by 1;
 	move player to McDermott Farm Entrance;
 	move Wendy to McDermott Barn;
 	now Missing Cow is resolved;
@@ -114,7 +114,7 @@ to say WendyGryphonAftermath:
 Section 2 - NPC
 
 
-Wendy is a woman. The hp of Wendy is normally 0.
+Wendy is a woman. The HP of Wendy is normally 0.
 The description of Wendy is "[WendyDesc]".
 The conversation of Wendy is { "Moh Moo Moh Mooo Moo - Moh!" }.
 

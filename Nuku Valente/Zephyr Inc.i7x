@@ -28,9 +28,9 @@ to say zephyrlobbydesc:
 	say "     This is a small Zephyr Inc branch. Their power is hard to argue with, as they actually have power, with bright, fluorescent lights shining down from above. The floor is clean and swept. To the left are some chairs next to a table with old magazines on it. A few people loiter around, eating doughnuts and chatting, all in various stages of mutation. Your eyes are drawn to a [link]price sign[as]look price sign[end link] that hangs above the counter.";
 	if sblzephyr is false and bodyname of player is "Skunkbeast Lord" and player is pure:
 		attempttowait;
-		if hp of Larissa is 0:		[not familiar w/Larissa]
+		if HP of Larissa is 0:		[not familiar w/Larissa]
 			say "     There is a soft chime as you enter the branch office, causing the woman behind the counter to glance up at you sharply.  Her eyes then dart quickly between watching you, her terminal and some lights on her desk.  She does her best to compose herself and presses a few buttons to stop the lights.  You notice that the place's discrete guards are no longer quite so discrete, having moved up beside your large, mephit form even as another pair enter from the back.";
-			say "     'Please be calm, [if cunts of player > 0]ma'am[else]sir[end if],' the woman says in a cheerfully rehearsed tone.  'This is purely routine.  Please go with these gentlemen for a complimentary examination.'  From the way the guards are resting their hands on their holsters, its clear this complimentary examination isn't going to be a voluntary one.  Deciding to go along with this, at least for the moment, you allow yourself to be escorted into a small, vaguely medical room.  The room is rather cramped given your [if skrp is 1]tauric [end if]Skunkbeast form.";
+			say "     'Please be calm, [if cunts of player > 0]ma'am[else]sir[end if],' the woman says in a cheerfully rehearsed tone.  'This is purely routine.  Please go with these gentlemen for a complementary examination.'  From the way the guards are resting their hands on their holsters, it's clear this complementary examination isn't going to be a voluntary one.  Deciding to go along with this, at least for the moment, you allow yourself to be escorted into a small, vaguely medical room.  The room is rather cramped given your [if skrp is 1]tauric [end if]Skunkbeast form.";
 			attempttowait;
 			say "     The four guards outside the door talk nervously in hushed tones, stopping only once an examiner arrives.  He's clearly a little uneasy and insists on having one of the guards inside the increasingly cramped room with you.  You're quickly checked over, photographed and analyzed by some unfamiliar scanners.  The doctor, technician or whatever he is never gives his name and steadfastly refuses to explain anything or even talk to you beyond asking you to move from time to time.  Finally, a blood sample is taken before you're escorted back into the lobby by the edgy guards.";
 			say "     Approaching the front desk, you ask the woman there what that was all about.  'Oh... Ah...  I'm sorry about that.  It was just a routine examination.  Nothi-'  She cuts herself off as you give her a stern look, your imposing form looming large over the counter.  'Okay, I'll level with you.  When you came in, you'd set off an outstanding notification and triggered an automated alert.  It seems HQ'd sent out a team to... investigate a creature similar to your current infection, but they didn't make it back.  But don't worry about it.  You seem [if humanity of player > 66]pretty[else if humanity of player > 33]fairly[else]somewhat[end if] stable and the data from the examination didn't bring up any major warnings.'";
@@ -156,7 +156,7 @@ Carry out zephbuying:
 	else:
 		say "That doesn't seem to be sold here.";
 		continue the action;
-	if price entry is greater than freecred:
+	if price entry > freecred:
 		say "You can't afford the [name entry], it costs [price entry] freecred.";
 		continue the action;
 	say "You purchase [name entry] for [price entry] creds.";
@@ -225,7 +225,7 @@ to say zephyrmatt1:
 	now red light detector site is unresolved;
 	now high rise detector site is unresolved;
 	now park detector site is unresolved;
-	now hp of doctor matt is 17;
+	now HP of doctor matt is 17;
 
 to say zephyrmatt2:
 	say "     'Don't forget about taking care of those nanite detection monitors.  Our system shows that there [if number of entries in ndmlist is 1]is still one[else if number of entries in ndmlist is 2]are still two[else if number of entries in ndmlist is 3]are still three[else]are still four[end if] left to be placed.  We won't be able to pay you for the work until the whole job is completed.  Remember, if you get this done, I'll put a rush on that request from Dr. Matt for you,' she says with a bureaucratic smile that tells you that you have no real choice in the matter.";
@@ -235,7 +235,7 @@ to say zephyrmatt3:
 	say "     'I'll inform head office that Dr. Matt's completed his end of the bargain,' she adds, sliding you a CD-ROM.  'The data's encrypted and Dr. Matt - what an odd name - will be sent the key electronically.'  You take the disk and tuck it away somewhere safe.";
 	say "     The woman slides you a credit voucher.  'There you go.  That's two hundred free credits, good for any place that accepts the new currency of the new world,' she says with a smile.  Again, you have to bite your tongue from saying that this is just about the only place around that takes them right now.  You should at least be able to get some supplies or some gear from these guys.";
 	increase freecred by 200;
-	now hp of doctor matt is 18;
+	now HP of doctor matt is 18;
 
 [ -- Dr. Mouse versions -- ]
 
@@ -288,11 +288,11 @@ Instead of resolving a Beach Detector Site:
 			let bonus be ( dexterity of player + strength of player minus 20 ) divided by 2;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
-			if bonus + dice is greater than 16:
+			if bonus + dice > 16:
 				say "You manage to safely make it up to the top!";
 			else:
 				say "You manage to make it partway to the top on your first attempt, but slip as a large wave crashes against the spire and sends chilling water slamming against you.  You are bashed against the stone pillar and sent tumbling back down into the water.  You are scratched and bruised when you finally make it to the top on your second attempt.";
-				decrease hp of player by 20;
+				decrease HP of player by 20;
 			say "     Tearing open the bags, you pull out the device and place it on a smooth surface at the top of the spire.  Activating it, there is a whirring accompanied by a grinding sound as the screw bolts dig into the rock, locking it into place.  Given the height and the fresh sea breeze, you're quite confident the detector will get unobstructed readings of... whatever for Zephyr.  Your descent is thankfully easier, choosing to make an exhilarating dive from the fifty foot spire into the water and swimming back to shore.";
 			remove "Beach" from ndmlist;
 			now Beach Detector Site is resolved;
@@ -361,7 +361,7 @@ Instead of resolving a High Rise Detector Site:
 			say "     Making it to the top floor, you search around quietly, eventually finding the service entrance to the roof and make your way up there.  It is rather windy at the top of the tower, a pleasant change after your long, hot climb up the building.  The ascent has left you tired, hungry and thirsty, but you still have work to do before you can rest and head back down.";
 			increase thirst of player by 12;
 			increase hunger of player by 6;
-			decrease hp of player by ( hp of player divided by 6 );
+			decrease HP of player by ( HP of player divided by 6 );
 			say "     Heading over to the central spire, you place the black box against a flat spot and turn it on.  There is a whirr as the screws drill into the smooth stone and secure the detector in place.  You are about to congratulate yourself on a job well done when you hear the shifting of stone nearby.  Looking around, you notice that one of the decorative gargoyles lining the building's edge doesn't match the others and has begun to move.  Aroused from its nap by the sound of the device locking itself into place, the huge creature takes to the air and swoops around, coming in to attack you.";
 			challenge "Gargoyle";
 			say "     Your battle the with creature completed, you stagger back down to the street level, sore, tired and exhausted, but one step of this job completed at least.";

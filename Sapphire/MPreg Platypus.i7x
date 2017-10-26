@@ -24,9 +24,9 @@ to say platypusdesc:
 
 to say losetoplatypus:
 	if gestation of child > 0 and gestation of child < 20:
-		say "     You fall to your knees under the platypus['] assault. He goes and kneels beside you, his hand going quickly to your belly. As he rubs it for a moment, he looks you in the eyes. 'You should take better care of yourself, especially in your condition.' He holds you for a moment longer, rubbing your belly and staring at it as if lost in thought. Then he shakes his head as if to clear it, then smiles. 'Well, if you're ever up for another litter when you're done with this one, you're always welcome to find me. I'm sure you know how.' Then he walks off into the ocean, waving with his tail lifted high.";
+		say "     You fall to your knees under the platypus's assault. He goes and kneels beside you, his hand going quickly to your belly. As he rubs it for a moment, he looks you in the eyes. 'You should take better care of yourself, especially in your condition.' He holds you for a moment longer, rubbing your belly and staring at it as if lost in thought. Then he shakes his head as if to clear it, then smiles. 'Well, if you're ever up for another litter when you're done with this one, you're always welcome to find me. I'm sure you know how.' Then he walks off into the ocean, waving with his tail lifted high.";
 	else:
-		say "     You fall to your knees under the platypus['] assault. He grins and rubs his belly as he stands over you. [if player is impreg_ok]'Soon enough you'll have a clutch of your own to take care of. But until then, how's about you and I have a little fun?'[else]'Now now... don't let the belly fool you. I can make you feel just as good as any guy out there.' [end if] ";
+		say "     You fall to your knees under the platypus's assault. He grins and rubs his belly as he stands over you. [if player is impreg_ok]'Soon enough you'll have a clutch of your own to take care of. But until then, how's about you and I have a little fun?'[else]'Now now... don't let the belly fool you. I can make you feel just as good as any guy out there.' [end if] ";
 		say "A few glances up and down your body, a few rubs over his taut belly, and his dark shaft starts peeking out of its sheath, growing erect.";
 		if cocks of player > 0:
 			say "     He smiles as he nudges you onto your back, sliding off your clothes. Looking over your bare rump a few moments, he smiles. 'It's a good start. But I think you'll look so much better with a big belly full of eggs.' Leaning in, he kisses at your ass, then gives a long lick between your cheeks. Suddenly he shifts and grabs you by the feet and hoists your hips to his, his cock throbbing hotly between your legs.";
@@ -79,7 +79,7 @@ to say beattheplatypus:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -105,7 +105,7 @@ When Play begins:
 	now int entry is 13;
 	now cha entry is 16;
 	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 37;
+	now HP entry is 37;
 	now lev entry is 2; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
 	now area entry is "Beach"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -134,7 +134,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Platypus":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You hear a call in your mind, the call of other platypus like yourself. Following the call through the ruined city, you pass many infected creatures, but they don't seem to bother you, much less matter right now. The closer the call gets, the more platypuses you see following the same road. Soon the city is left behind and you find yourself at the beach.";
 			say "     One by one, all the platypuses around you start diving into the water, swimming away to leave the dry world behind. The call pulls you towards the water, and though you try to fight it, you find yourself wading in, looking for a good mate, ready to start your own family with. As you search the shallow waters, another platypus finds you, and something sparks between you, knowing that this is the one that you'll spend your life with.";
 			say "     You and your mate swim out into deeper waters, avoiding the boats of the soldiers moving in to cleanse the city of the infection. A few days of travel gives you plenty of time to talk with your mate, have some food, and engage in plenty of sex. Eventually you find yourself up on a strange beach. After a bit of discussion, and your mate rubbing his belly full of eggs ready to be laid, you decide that this is the place where you will set up your nest and live out the rest of your days.";

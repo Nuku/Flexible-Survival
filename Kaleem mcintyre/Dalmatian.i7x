@@ -41,7 +41,7 @@ to say Dalmatiandesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -54,7 +54,7 @@ When Play begins:
 	now face entry is "covered with black spots while long floppy ears hang down the side of your regal-looking head. Your impressive jowls come with a fat red tongue, while the eyes with which you see the world in newfound sharpness are hazel in color. A black button-nose at the end of your long muzzle completes the image of an anthro Dalmatian's head.";
 	now body entry is "lean and limber with hidden muscles as your canine body hides what strength you have[if player is dalskinned] underneath the pale wisps of black spotted fur covering your body[end if].  All across your arms, legs, thighs, chest, and torso you have almost unseen muscles cropped along your wiry body as your cano-mutant form is now more suited for maximizing your newfound dexterity with extreme running, jumping, bounding and leaping rather than fighting with what strength you do possess, what with you now possessing digitigrade feet instead of the normal plantigrade ones that other mutants boast";
 	now skin entry is "short, but thick fur covered with black rosettes dotted all across your";
-	now tail entry is "A thin, almost wiry white tail sways from out of the end of your bubble shaped rump.";
+	now tail entry is "A thin, almost wiry white tail sways from out of the end of your bubble-shaped rump.";
 	now cock entry is "[one of]canine[or]knotted[or]doggy[at random]";
 	now face change entry is "your nose begins to push out from your face while your senses dull ever so slightly. Reaching up with a hand you have the strangest urge to scratch at your ears, which just so happen to be growing longer and floppier onside of your head, at the exact same moment your teeth are elongating into sharpened points. With your tongue stretching free from out of your mouth, giving you a perfect dog tongue, you can only whimper and whine as you feel new canine instincts overcoming your senses";
 	now body change entry is "your entire form starts to increase in length. If that wasn't odd enough when the muscles you have along your chest, arms, legs and torso quickly go to receding back into your body you feel yourself almost wanting to curl up and shiver into a tight knit ball as your body pumps all of your strength into your thickening bones, giving them extra added density needed for holding up your escalating form. You actually have to stop yourself from jumping around like mad as your heels stretch up to give you a twin pair of digitigrade feet as the raw urge to [']go play['] takes you over down to your core";
@@ -68,7 +68,7 @@ When Play begins:
 	now int entry is 16;
 	now cha entry is 20;
 	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 66; [ The monster's starting hit points. ]
+	now HP entry is 66; [ The monster's starting HP. ]
 	now lev entry is 1; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 15; [ Monster's average damage when attacking. ]
 	now area entry is "None"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -101,7 +101,7 @@ Definition: a person is dalskinned:
 
 when play ends:
 	if bodyname of player is "Dalmatian":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "Giving yourself over to the Dalmatian infection taking over your body and mind you wander aimlessly about the city until you find yourself stumbling over a slightly familiar looking white and black spotted four legged canine. When the other gets a hold of your scent the Dalmatian immediately senses something wrong as it turns to look you over. Slowly padding its way over to try and administer comfort onto you, you find yourself whimpering back at the other as the need to rut as well as play overtakes your sensibilities. At the touch of the Dalmatian's cold nose touches your legs you kneel down next to the other Dal and then nuzzle the other four legged canine in turn before whining at it in confusion. Quickly as can be the feral creature barks into your face and then grabs you by your arm with its sharpened teeth to drag you off somewhere.";
 			say "Not having a reason to fight you simply let the other take you to wherever it's trying to get to. When you ultimately find yourself coming to a red brick edifice, which [italic type]really[roman type] looks familiar to you, you bark happily as you think that you've finally found the place where you belong. This fact is made even more certain when your new friend releases your arm and then goes over to bark and scratch at the front door to the building. Upon getting a response from someone from the inside you find yourself panting in joy as your bright eyes look over the form of a tall white and black spotted canine, this one standing on two legs instead of all fours, whom your confused canine mind screams at you that you should know intimately. Hurriedly you go over to tackle the other and then proceed to show them in rampant licks across the face.";
 			say "You definitely know now that this is where you belong now.";

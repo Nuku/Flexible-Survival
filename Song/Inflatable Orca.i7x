@@ -28,7 +28,7 @@ to say beattheinflatableorca:
 	now lastorcabeat is turns;
 
 to say losetoinflatableorca:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     The orca's enthusiasm entirely too infectious, you begin to entertain its playful assault, dodging and weaving its clumsy bounds and charges. It's all fun and games until your leg slips on the unsure footing, [if scalevalue of player > 3]your large size [end if]making you an easy target for the energetic inflatable. You're bumped back and sent tumbling against one of the padded walls, the impact leaving you reeling. You're knocked around some more in your dazed state before being dropped onto your back by a sweep of the orca's tail, only to have the two meter long cetacean pin you down with its sleek and buoyant body.";
 	else:
 		say "     Bashed about by the insistent orca, your body finally relents when a final sweep of the tail sends you tumbling against one of the padded walls. The living inflatable continues to bump and nudge against you in play until you slump to the ground, too worn out to continue. Subdued, you're all too easy to clamber atop of, weary form pinned down beneath the two meter long cetacean's sleek and buoyant body.";
@@ -55,7 +55,7 @@ to orcabind:
 	let trixieexit be 0;
 	while trixieexit is 0:
 		now boundstate is true;
-		if hp of player > 0 or humanity of player < 50:
+		if HP of player > 0 or humanity of player < 50:
 			now obliging is true;
 		checkboundrecover;
 		if clearnomore is 0, clear the screen;
@@ -70,7 +70,7 @@ to orcabind:
 				WaitLineBreak;
 				now bodyname of player is "OrcaSexSlave";
 				now humanity of player is 0;
-				end the game saying "You are milked perpetually by the toy.";
+				end the story saying "You are milked perpetually by the toy.";
 				now trixieexit is 1;
 			if orcaintense < 6: [Hides content to prevent endings colliding]
 				now lustatt is libido of player;
@@ -100,7 +100,7 @@ to orcabind:
 				WaitLineBreak;
 				now bodyname of player is "OrcaSexSlave";
 				now humanity of player is 0;
-				end the game saying "You are milked perpetually by the toy.";
+				end the story saying "You are milked perpetually by the toy.";
 				now trixieexit is 1;
 			else: [Section of actions possible during the bind.]
 				let k be 0;
@@ -114,7 +114,7 @@ to orcabind:
 				if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle": [player picked struggle]
 					say "[line break]";
 					increase struggleatt by 1;
-					if struggleatt < boundsegment: [Determines if the cumulative "struggle attribute" is less than or equal to bound stage. If equal to, the player escapes. Each orgasm will remove a tick of struggleatt.]
+					if struggleatt < boundsegment: [Determines if the cumulative "struggle attribute" < or equal to bound stage. If equal to, the player escapes. Each orgasm will remove a tick of struggleatt.]
 						if orcaintense is 1:
 							say "     [one of]You struggle to wiggle out from under the toy, its hollow rubber body weighing you down[or]Straining, you try to find some leverage to push the orca off of you[or]Determined to escape, you try to find a grip on the orca's immaculate hide to push it away[at random].";
 						else if orcaintense is 2:
@@ -388,7 +388,7 @@ to say orcastrugglebar: [Displays struggle bar. The amount of struggle turns nec
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -415,7 +415,7 @@ When Play begins:
 	now int entry is 6;
 	now cha entry is 14;
 	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 120; [ The monster's starting hit points. ]
+	now HP entry is 120; [ The monster's starting HP. ]
 	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
 	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -442,7 +442,7 @@ When Play begins:
 
 Section 3 - Endings
 
-when play ends: [Bad end to display after complete sanity loss or incasement.]
+when play ends: [Bad end to display after complete sanity loss or encasement.]
 	if bodyname of player is "OrcaSexSlave":
 		say "     You spend the rest of your life as the inflatable orca's sex slave, dutifully [if cocks of player > 0]breeding her to make more inflatable servants for the castle[else]servicing her slippery cunt[end if]. Your pod is periodically filled with a heady, arousing gas that only fuels your endless lusts, each sticky climax driving you deeper into your lustful haze until you're nothing more than an air-headed parody of your former self. It's a simple existence, but your feral mind relishes every moment with your loving, demanding mistress.";
 		say "     The castle fills the void on its surface by dispensing another inflatable orca and bondage bag in the great hall. Trilling softly, the new orca is just as eager as the last to turn any unsuspecting visitor into another sex-hungry slave for the castle. You'd relish the company, if only your mind was not too far gone to appreciate it.";

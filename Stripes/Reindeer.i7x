@@ -28,7 +28,7 @@ to say reindeerattack:
 		if lootchance entry > 80, now lootchance entry is 80;
 		if libido of player >= 110:
 			say "grabs you and rubs his cock against your hip. You find yourself too aroused to resist the sexy reindeer further and give in to his lustful holiday spirit!";
-			now hp of player is 0;
+			now HP of player is 0;
 			continue the action;
 	else:
 		say "     The reindeer swoops in to attack and ";
@@ -69,8 +69,8 @@ to say losetoreindeer:
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	now libido of player is ( libido of player * 3 ) divided by 4;
-	increase hp of player by ( maxhp of player / 5 );
-	if hp of player > maxhp of player, now hp of player is maxhp of player;
+	increase HP of player by ( maxHP of player / 5 );
+	if HP of player > maxHP of player, now HP of player is maxHP of player;
 
 to say beatthereindeer:
 	say "     'Oh, you Scrooge. Where's your holiday spirit?' he whines as your continued resistance frustrates him. Having had enough, the holiday reindeer finally flies off, heading elsewhere for someone to fill with a load of his special holiday cheer.";
@@ -79,7 +79,7 @@ to say beatthereindeer:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -106,7 +106,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 18;
 	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 60; [ The monster's starting hit points. ]
+	now HP entry is 60; [ The monster's starting HP. ]
 	now lev entry is 7; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
 	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -150,8 +150,8 @@ to say nogging:
 	if hunger of player < 0, now hunger of player is 0;
 	decrease thirst of player by 6;
 	if thirst of player < 0, now hunger of player is 0;
-	increase hp of player by ( Stamina of player / 2 );
-	if hp of player > maxhp of player, now hp of player is maxhp of player;
+	increase HP of player by ( Stamina of player / 2 );
+	if HP of player > maxHP of player, now HP of player is maxHP of player;
 	increase morale of player by a random number from 0 to 1;
 	increase morale of player by a random number from 0 to 1;
 	decrease humanity of player by a random number from 3 to 8;
@@ -180,7 +180,7 @@ to say nogging:
 		now skin of player is skin entry;
 		now body of player is body entry;
 		now cock of player is cock entry;
-		end the game saying "You gave in to the holiday spirit.";
+		end the story saying "You gave in to the holiday spirit.";
 		now battleground is "void";
 
 
@@ -275,7 +275,7 @@ Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Reindeer":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your mind fails, it empties of most things, filled instead with Christmas songs, holiday specials and festive recipes. You prance outside, feeling light on your feet even as the temperature starts to drop around you. Pulling the heat out of your environment, you use this energy to fly, taking to the air with natural ease. You trot merrily through the air, starting to laugh and cheer as the spirit of the season fills you. For it is the holiday season. It is always the holiday season now, in your mind.";
 			say "     You fly around the city, soon spotting the reindeer from before and move to join him. He is very pleased to see you joining him in the holiday spirit. He fits you with a festive harness festooned with bells. He then mounts you in mid-air, taking you as his mate and filling you with a large, thick load of caribou cum.";
 			say "     When the soldiers come into the city in force, you have fun sharing the spirit of the season with them for a while, but their particularly grinchy attitude is unpleasant. Together, you both decide to fly off into the night to spread your cheer elsewhere. There is soon a growing herd of flying reindeer roaming across the countryside, leaving special presents in good, big girls and boys.";

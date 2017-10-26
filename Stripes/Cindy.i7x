@@ -5,7 +5,7 @@ Version 2 of Cindy by Stripes begins here.
 
 Section 1 - Sunny Snacks
 
-Sunny Snacks is a room. 
+Sunny Snacks is a room.
 Sunny Snacks is northeast of Public Beach.
 The description of Sunny Snacks is "[sunnysnacksdesc]".
 
@@ -29,23 +29,23 @@ to say cindydesc:
 
 instead of conversing Cindy:
 	cindycheck;
-	if hp of Cindy is 0:
+	if HP of Cindy is 0:
 		say "     'Hello there. Welcome to the [']Sunny Snacks[']. What can I get you?' She motions to the [link]menu[as]look menu[end link] boards on either side of the concession window.";
-		now hp of Cindy is 1;
-	else if hp of Cindy is 1 and a random chance of 1 in 3 succeeds:
+		now HP of Cindy is 1;
+	else if HP of Cindy is 1 and a random chance of 1 in 3 succeeds:
 		say "     Cindy chats up a cute otter who's come to the counter. He's wearing nothing but a plastic whistle around his neck. With a wink and a playful teasing of his headfur, she invites him to come into the back for a bit. She temporarily closes the counter window and you can hear the sounds of them fucking inside. After he leaves and she opens up again, there's she shows no signs of infection at all. She looks just as human as before.";
-		increase hp of Cindy by 1;
-	else if hp of Cindy is 2 and a random chance of 1 in 3 succeeds:
-		say "     Decide to ask Cindy if she knows why she's not become infected like the others, but she shushes you[if cocks of player > 0] sharply[end if]. Leaning over the counter to get a better look, she gazes down at the beach where an cat-eared guy's been lured onto a sun-bathing pantheress[']s blanket. What starts out friendly enough with talking and light touches, soon goes from a seemingly innocent kiss to the dark female petting and then groping the reluctant male as she strips his clothes off.";
+		increase HP of Cindy by 1;
+	else if HP of Cindy is 2 and a random chance of 1 in 3 succeeds:
+		say "     Decide to ask Cindy if she knows why she's not become infected like the others, but she shushes you[if cocks of player > 0] sharply[end if]. Leaning over the counter to get a better look, she gazes down at the beach where an cat-eared guy's been lured onto a sun-bathing pantheress's blanket. What starts out friendly enough with talking and light touches, soon goes from a seemingly innocent kiss to the dark female petting and then groping the reluctant male as she strips his clothes off.";
 		say "     Knowing where this is going, Cindy slips her right hand into her bikini and the left under her shirt. She moans as she starts fingering herself to the scene playing out[if cocks of player > 0]. Noticing you ogling at her, she gives you a disdainful look before shifting her attention back to the beach[end if]. 'Mmm... yeah... let's see it,' she half-whispers as she stares down at the couple. 'Do it, kitty.'";
 		say "     Events continue to play out, the feline's pulls the guy's cock out and climbs atop him. Pinning him down, she bounces on his pole. Black fur starts creeping up his belly as her starts spreading to him. 'Yeah.. That's the stuff...' Cindy moans as the victim's transformation continues, changing his body and eventually his head. By the time it's run his course and the guy's become a matching male panther, the waitress has to stiffle a moaning orgasm from what she's witnessed.";
 		say "     'Ahhhhh. Damn! That's always soooo hot to see happen.' She pants to recover her breath and wipes her hands on a dish towel. 'As inconvenient as having gotten stuck here is, the entertainment more than makes up for it. Speaking of, I could go for some private entertainment,' she says with a grin.";
 		say "     For a moment, you [if cocks of player > 0]allow yourself to hope that[else]think[end if] she might mean with you, but she whistles over to the lifeguard and gives him a signal. The buff orca is down the ladder in a flash, sending a familiar-looking otter up to take his post. For such a big guy, he dashes up the steps very quickly and joins her in the back for what sounds like a very energetic round of fucking. Again when she emerges, she's left unchanged despite the heavy scent of orca sex lingering about her.";
-		increase hp of Cindy by 1;
-	else if hp of Cindy is 3 and a random chance of 1 in 3 succeeds:
+		increase HP of Cindy by 1;
+	else if HP of Cindy is 3 and a random chance of 1 in 3 succeeds:
 		say "     Noticing that Cindy seems to be in a good mood at the moment, you ask her what her story is. She gets a little guarded and loses some of her earlier smile, but then shrugs and relaxes a bit. 'Not much to say. I was travelling when this whole mess got started and got stuck here. So no, I don't really own this place or even work here. I just took it over because it's where I've ended up. It gives me something novel to do while I wait for this mess to settle down.' She grins and nods down to the beach. 'And it comes with quite the view. So many interesting creatures and transformations to witness. I don't even have to do anything and I'm treated to such an imaginative range of entertainment.'";
 		say "     You ask if she knows why she's not become infected like the others. You've seen her have sex on a few occasions now, but she's remained unchanged. She looks you over again, as if assessing you with a very keen eye. In the end, she just gives a little laugh. 'Come now. A girl's got to have her secrets.' And with that, she closes the service window for a while to do work inside.";
-		increase hp of Cindy by 1;
+		increase HP of Cindy by 1;
 	else:
 		say "[randomdesc2]"; [randomly selects a female 'slutname' for below]
 		say "     [one of]Cindy's a little too busy with other customers to chat.[or]'What would you like to order?' she asks, motioning to the [link]menu[as]look menu[end link].[or]The large orca sitting on lifeguard duty waves to her from his watchpost and she nods. She sends down a fishburger and some fries for him with the next customer.[or]The woman takes a moment to fan herself while drinking a soda. 'I'm glad I've got plenty to drink to deal with the heat, but it's not helping my waistline,' she grumbles.[or]Cindy only half-listens to you, her attention focused on a pair of transformed individuals fucking on the beach.[or]While making an order, a male customer makes a rather crude pass at Cindy, fondling his junk right in front of her. She just eyes him up and down coldly, her usual friendly demeanour gone and completely unimpressed by his over-sized manhood. 'Don't even think of it, swine. If you keep this up, you'll end up face first in the garbage.'[or]You watch Cindy serve a few customers, noticing the eclectic assortment of sodas and chips she provides. While not unusual in and of itself, stranger still is the range of different styles and quality she'll provide for the same food order.[or]You find yourself ogling the lovely woman as she goes around cleaning up the tables. Noticing you staring at her ass when she bends over, she [if cocks of player > 0]glares at you, hand raised as if ready to point accusingly at you. 'You pig,' she grumbles in the end. After tossing the trash at you, she storms back inside[else]grins a little and makes a show of grinding her butt into the lap of another female patron she's clearly quite familiar with before heading back inside[end if].[or]Bringing over her orders to the table, you watch as Cindy gets rather friendly with a [if a random chance of 1 in 4 succeeds]herm[else]female[end if] [slutname]. There's quite a bit of playful groping and sexual fondling between the two of them before the woman gets back to work.[or]Cindy puts a [']Back in 15 minutes['] sign up and closes the sales window, explaining that she's got do some inventory work.[in random order]";
@@ -54,15 +54,15 @@ instead of conversing Cindy:
 to say nosexwithcindy:
 	cindycheck;
 	if cocks of player > 0:
-		if hp of Cindy is 0:
+		if HP of Cindy is 0:
 			say "     You go up to the human woman and start putting the moves on her, saying you'll to rock her world. She gives you a snort and tosses her half-finished soda in your face. 'What kind of a pig comes up and asks a woman for sex without even introducing themselves?  Why I should...' she pauses, glancing at the other customers watching the confrontation and takes a deep breath. 'Look. I'm feeling generous, but you better watch your step.'";
-			now hp of Cindy is 1;
+			now HP of Cindy is 1;
 		else:
 			say "     [one of]Cindy does not seem particularly impressed at your suggestion of going into the back for sex. She probably gets a lot of offers like that.[or]You try to chat up the restauranteure, but she rebukes your attentions rather harshly. 'Don't go getting any funny ideas. I'm not in the mood right now, you pig. Besides - I'm way out of your league,' she says curtly.[at random]";
 	else:
-		if hp of Cindy is 0:
+		if HP of Cindy is 0:
 			say "     You go up to the human woman and start putting the moves on her, saying you'll to rock her world. She just laughs. 'I think [']my world['] is more than you can handle. You're cute, but it's rude to make such an offer to someone you've not even met.'";
-			now hp of Cindy is 1;
+			now HP of Cindy is 1;
 		else:
 			say "     You try to chat up the restauranteure, but she rebukes your attentions rather harshly. 'Look. You're kinda cute, but I've got plenty of [']friends['] out there on the beach for that already. Besides - I'm way out of your league,' she adds.";
 
@@ -158,7 +158,7 @@ carry out ssvending:
 
 Section 4 - Unwanted Trouble
 
-instead of going west from Beach Plaza when ( hp of Cindy is 4 and a random chance of 2 in 3 succeeds ) and ( cocks of player > 0 or cunts of player > 0 ):
+instead of going west from Beach Plaza when ( HP of Cindy is 4 and a random chance of 2 in 3 succeeds ) and ( cocks of player > 0 or cunts of player > 0 ):
 	say "     As you start down the steps to the beach, there's an obvious commotion going on. A large squad of muscular men in naught but sandals, red cloaks and Grecian helmets are attacking the peaceful beachgoers. Some of the latter being dragged off, though some are being assaulted right then and there. A half-dozen of these soldiers are storming up the stairs to the Sunny Snacks patio, pushing past the mutants trying to flee down the stairs. You can see Cindy, the only one left up there, about to be cornered and outnumbered by the attackers.";
 	say "     If you're going to do something, you'd best do it soon.";
 	say "     [bold type]Shall you rush up to try to help the restauranteure or clear out like the other beachgoers are trying to do?[roman type][line break]";
@@ -217,11 +217,11 @@ instead of going west from Beach Plaza when ( hp of Cindy is 4 and a random chan
 		remove Cindy from play;
 		move Circe to Sunny Snacks;
 		move player to Sunny Snacks;
-		now hp of Cindy is 6;
+		now HP of Cindy is 6;
 	else:
 		say "     Knowing you can do little against a mob of trained warriors, you see no point in entering the fray. The denizens of the beach, Cindy included, will have to look out for themselves. You turn and rush back up the stairs amid a throng of other fleeing beachgoers. You take cover inside the church which is openly welcoming the escaping mutants.";
 		move player to Church Hall;
-		now hp of Cindy is 5;
+		now HP of Cindy is 5;
 
 
 Section 5 - Circe
@@ -239,15 +239,15 @@ to say circedesc:
 
 instead of conversing Circe:
 	cindycheck;
-	if hp of Cindy is 6 and a random chance of 1 in 3 succeeds:
+	if HP of Cindy is 6 and a random chance of 1 in 3 succeeds:
 		say "     'I may have fibbed about my name, but it pays to be cautious when you've got a reputation like mine. I've been maligned and misrepresented by history,' she growls. 'I mean, yeah I could be a little bitchy back in the day, but the accounts have all been very one-side. Events have been blown out of proportion and taken out of context. Those guys had it coming and it's not like I was going to leave them like that. Probably not, anyhow. Still, as you can see from how those warrior rejects reacted, I'd rather things be kept quiet about who I really am.'";
-		increase hp of Cindy by 1;
-	else if hp of Cindy is 7 and a random chance of 1 in 3 succeeds:
+		increase HP of Cindy by 1;
+	else if HP of Cindy is 7 and a random chance of 1 in 3 succeeds:
 		say "     'My story's essentially the same as I'd told you. I happened to be travelling when this mess you mortals have unleashed was set off. It really shook things up in the nearby planes and I ended up tumbling down here. Honestly, I'm not the best at world hopping and things are still to unstable for me to try getting back quite yet. Besides, I'm having fun hanging out and enjoying the sights.' From the way you've seen her ogle the transformed beachgoers, you know quite well exactly what [']sights['] she's enjoying.";
-		increase hp of Cindy by 1;
-	else if hp of Cindy is 8 and a random chance of 1 in 3 succeeds:
+		increase HP of Cindy by 1;
+	else if HP of Cindy is 8 and a random chance of 1 in 3 succeeds:
 		say "     'I don't mind running this place while I wait. I landed on this beach and decided working here would provide a nice cover and be a fun change of pace. I provide food that I don't even have to make and I get plenty of entertainment in return. I get to see all these kinky creatures and transformations - and I don't even have to lift a finger for any of it to happen. They've given me so many fun and interesting ideas for when I get back home.'";
-		increase hp of Cindy by 1;
+		increase HP of Cindy by 1;
 	else:
 		say "[randomdesc2]"; [randomly selects a female 'slutname' for below]
 		say "     [one of]Circe's a little too busy with other customers to chat, though she does give you smile.[or]'Is there anything you like to order?' she asks, motioning to the [link]menu[as]look menu[end link].[or]The large orca sitting on lifeguard duty waves to her from his watchpost and she nods. She sends down a fishburger and some fries for him with the next customer.[or]The woman takes a moment to fan herself while drinking a soda. 'I'm glad I've got plenty to drink to deal with the heat, but it's not helping my waistline,' she grumbles.[or]You go to talk to Circe, but her attention focused on a pair of transformed individuals fucking on the beach.[or]You watch [']Cindy['] serve a few customers, noticing the eclectic assortment of sodas and chips she provides. While not unusual in and of itself, stranger still is the range of different styles and quality she'll provide for the same food order.[or]You find yourself ogling the lovely woman as she goes around cleaning up the tables. Noticing you staring at her ass when she bends over, she [if cocks of player > 0]gives her rear a wiggle. 'You pig,' she teases, a joking insult with added meaning[else]grins a little and makes a show of grinding her butt into the lap of another female patron she's clearly quite familiar with before heading back inside[end if].[or]Bringing over her orders to the table, you watch as [']Cindy['] gets rather friendly with a [if a random chance of 1 in 4 succeeds]herm[else]female[end if] [slutname]. There's quite a bit of playful groping and sexual fondling between the two of them before the woman gets back to work.[or]Circe puts a [']Back in 15 minutes['] sign up and closes the sales window, explaining that she's got do some inventory work.[or]'[if lastfuck of Circe - turns < 6]I'm a little too busy right now for some fun, but I'd definitely be up for something later, if you're in the mood[else]Things aren't too busy right now. Let me know if you'd like me to thank you again for your help[end if],' she says with a sultry smile.[or]'Thanks again for coming to my rescue. It's nice to have someone want to be [']my['] hero for a change.'[or]'I don't normally get nearly this much sex back where I come from. I mean, I've got a few lovers and my little collection of [']playthings['], but I'd normally not indulge in fornicating several times a day and not with so many different and varied lovers. I'm a little worried this place making me into a bit of a slut,' she jokes even as she eyes some of mutants on the beach making out.[or]'The great variety of transformations I get to see, and to fuck, has been so much fun. As far as being stranded goes, this is proving to actually be quite enjoyable.'[in random order]";
@@ -286,20 +286,20 @@ to say sexwithcirce:
 			say "     Eventually though, you're both focused on eating each other out. Licking tongues, probing fingers and nibbling teeth ply their pleasures upon you both. And while the sorceress may be more experienced and artful at the task, this does serve to excite you to greater enthusiasm, thus ensuring she receives your best in return[if phumanface is false]. One of her hands finds its way to the back of your head and caresses over it, pressing your transformed face into her crotch[end if]. And from how she's moaning and panting, you can tell she's loving receiving your lustful affections as much as she is at providing them.";
 			say "     In the end, the two of you are brought to loud orgasms, treating you both to a rush of hot, feminine juices to lap up while your cunts quiver and your hips grind against the other's face. You're left spent and dazed by the time it's over and have to recover before you're able to get up and head back out. She gives you a peck on the cheek and makes a show of getting her bikini and t-shirt back on before going to check on her other customers.";
 		now lastfuck of Circe is turns;
-		increase hp of Circe by 1;
+		increase HP of Circe by 1;
 
 
 Section 7 - Mechanics
 
 to cindycheck:
 	if debugactive is 1:
-		say "DEBUG - Cindy | HP: [hp of Cindy].";
-		if Circe is in Sunny Snacks, say "DEBUG - Circe | HP: [hp of Circe].";
-	if hp of Cindy < 6 and Circe is in Sunny Snacks:
+		say "DEBUG - Cindy | HP: [HP of Cindy].";
+		if Circe is in Sunny Snacks, say "DEBUG - Circe | HP: [HP of Circe].";
+	if HP of Cindy < 6 and Circe is in Sunny Snacks:
 		say "ERROR - Circe shouldn't be here. Swapping.";
 		remove Circe from play;
 		move Cindy to Sunny Snacks;
-	if hp of Cindy > 5 and Cindy is in Sunny Snacks:
+	if HP of Cindy > 5 and Cindy is in Sunny Snacks:
 		say "ERROR - Cindy shouldn't be here. Swapping.";
 		remove Cindy from play;
 		move Circe to Sunny Snacks;
@@ -308,7 +308,7 @@ Section 8 - Testing - Not for release
 
 
 
-[  hp of Cindy   ]
+[  HP of Cindy   ]
 [ Conversations  ]
 [ 0 = not met    ]
 [ 1 = met        ]
@@ -321,7 +321,7 @@ Section 8 - Testing - Not for release
 [ 8 = stuck here ]
 [ 9 = shop and tfs ]
 
-[ hp of Circe    ]
+[ HP of Circe    ]
 [ Sexings        ]
 
 

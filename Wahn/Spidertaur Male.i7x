@@ -21,7 +21,7 @@ when play begins:
 	add { "Spidertaur" } to infections of guy;
 
 to say Spidertaur_Wins:
-	if hp of player > 0:    [player submits]
+	if HP of player > 0:    [player submits]
 		if SpidertaurRelationship is 1:[never submitted]
 			say "     As you lower your hands and stop resisting, the spidertaur gives you an interested glance. 'Well well', he says 'what do we have here. You don't even want to struggle? Too weak - or do you maybe even like being tied up?' His large form scuttles closer on surprisingly quick, spidery legs until he's right in front of you. He then reaches out to stroke your chin and runs his hand down your chest. 'Not bad prey,' he says, then adds,'Now how about you give me a nice little show,' with a small tug on your clothes.";
 			say "     Under the watching eyes of the spidertaur, you slowly start to undress, taking off your clothes bit by bit and doing poses to show off your body. Seems like your striptease is giving the spidertaur quite a bit of arousal, as you can see the chitinous plates between his legs bulge outward a bit, then get pulled aside as his manhood rises to full hardness. And as horny as you've made him, he isn't in the mood to wait much longer. Before you're even completely naked, he starts spinning long strands of webbing with which he ties you up. You end up standing there in the alley, mostly naked, arms spread out to the sides, they and your body held by soft but surprisingly tough silk threads.";
@@ -134,7 +134,7 @@ to say SpidertaurWinSex:
 	say "     [SpidertaurPostSex]";
 
 to say SpidertaurPostSex:
-	if hp of player > 0:    [player submits]
+	if HP of player > 0:    [player submits]
 		if SpidertaurRelationship is 1:[never submitted]
 			if cunts of player > 0:
 				say "     Satisfied, the spidertaur pulls out of you, lowering your legs to the ground, though it's debatable if you're really standing on your own or still hanging from the strands, as shaky as they are after that workout. Stalking backwards on eight spindly legs, he lets his gaze wander over you, a grin spreading over his face as he looks at the trickle of cum running out of your pussy and down your leg. 'You're a nice little catch - just right for me to fuck and so accommodating. Which puts me in a good mood right now.' With a sudden flash of movement, he cuts the web strands holding you with the claws at the end of a long spider-leg, making you collapse onto the pile of your clothes on the ground. 'There, you're free to go. And ready yourself for another round when we meet next.' With that, he scuttles up the wall and on top of the nearest building. With a last leering look down at your cum-dripping body, he vanishes over the edge of the roof.";
@@ -203,7 +203,7 @@ to say Spidertaur_Desc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -230,8 +230,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Male";            [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 90;                 [ How many HP has the monster got? ]
-	now lev entry is 12;                [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 90;                 [ How many HP has the monster got? ]
+	now lev entry is 12;                [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12;               [ Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse";      [ Case sensitive]
 	now cocks entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
@@ -518,7 +518,7 @@ Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Spidertaur":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if cocks of player > 0:
 				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Females and some choicy males you keep to impregnate and have some fun with, the rest just serve as stored food for when you get hungry.";
 			else if cunts of player > 0 and "Sterile" is not listed in feats of player:
@@ -536,7 +536,7 @@ when play ends:
 			say "     Without knowing anything about him, not even his name or if he made it out of the city at all, sadly, it remains a futile thought. Some time later, as you're out to buy some things, you find yourself thinking about sex with the spidertaur again, prompting you to get several beautiful silk ropes. They serve you well in spicing up your sex life with other partners, although you still dream about getting together with your spidertaur lover.";
 		else if SpidertaurRelationship > 3:
 			say "     At night in your dreams, your thoughts often stray back to your encounters with Aelias the spidertaur. Reliving him fucking you in an incredibly erotic dream, you awaken breathless and horny, the memory of his silken strands against your skin fresh in your mind, incredibly soft yet holding you tightly. The urge - the need - to see him again, feel him inside you once more, drives you to go back to the containment zone around the city.";
-			say "     Being among the untold thousands searching for people they lost, it takes days, then weeks, for you to check the records and talk to people at each of the multiple holding facilities set up around the city. You find your hopes dashed again and again, almost breaking off the search - until you meet a pair of army medics in one of the local bars. 'Spider-hybrid you say, big guy, white hair? Wasn't there someone like that a while ago, Jimmy?' 'Yeah, he was pretty intense too. The counselors had quite a time explaining to him he can't just grab anyone off the streets whenever he wants. Then suddenly Danny, that private from the 5th, spoke up and told spidy about a club for people who like bondage and ...stuff. Never knew he swung that way.'";
+			say "     Being among the untold thousands searching for people they lost, it takes days, then weeks, for you to check the records and talk to people at each of the multiple holding facilities set up around the city. You find your hopes dashed again and again, almost breaking off the search - until you meet a pair of army medics in one of the local bars. 'Spider-hybrid you say, big guy, white hair? Wasn't there someone like that a while ago, Jimmy?' 'Yeah, he was pretty intense too. The counselors had quite a time explaining to him he can't just grab anyone off the streets whenever he wants. Then suddenly Danny, that private from the 5th, spoke up and told spidy about a club for people who like bondage and... stuff. Never knew he swung that way.'";
 			say "     After that, it's just a question of following the trail. That very night, you make your way to the entrance of a popular nightclub called 'Arachne's Web', joining the crowd dancing to loud, rhythmic music. There are several platforms anchored with many web strands in the upper reaches of the main room and you can see large, eight-legged shapes moving on them, entwined with human or at least humanoid others. Then you hear someone call your name, which draws your attention to the bar, where Aelias is just handing someone his drink, then moves out from behind it to meet you. In a reunion that doesn't need words, you embrace each other, then start making out right in the middle of the crowd. Coming up for air, he asks 'Will you walk into my parlor, my lovely fly?', shouting to be heard above the music.";
 			say "     Hand in hand with your spidertaur lover, you walk to his nearby place, fearlessly entering the dominant male's web. Being with him again after your temporary separation feels amazing, more than fulfilling your needs and desires. It's a night to remember, and you return again and again on other days to join him in his silken nest, or let him 'catch' you in his parlor.";
 

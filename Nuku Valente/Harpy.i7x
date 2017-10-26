@@ -15,7 +15,7 @@ to say Harpy attack:
 	choose row monster from the table of random critters;
 	if harpyfight is 3:
 		say "     The harpy swoops in and grabs you, running her taloned hands over your body as the others close in around you.";
-	else if hp of player is greater than 0:
+	else if HP of player > 0:
 		if harpyconsent is 0:
 			say "     She swoops down and grabs you up, pressing her lips to yours. Peace sweeps through this form even as your heart hammers in your chest. You pull her tight as she draws you closer, swept away in the fierce exchange. You are unsure how long you remain like that, but eventually she sets you down and shakes her head, 'We will meet again, I hope.' and she takes off.";
 			now Harpyconsent is 1;
@@ -47,7 +47,7 @@ to say Harpy attack:
 			else:
 				say "     Once she gets you up on the roof, she presses you down on your back, but is disappointed to see your lack of genitalia.  She shrieks in frustration and slashes at you with her claws.  'Ugh!  Why am I wasting my time with you?'  You cry out to her needfully, but she has decided you are no longer worth the bother and flies off, leaving you on the roof to nurse your wounds before climbing down the fire escape, feeling dejected and heartbroken to have been rejected by her.";
 				decrease morale of player by 10;
-				decrease hp of player by wdam entry;
+				decrease HP of player by wdam entry;
 				now harpyconsent is 0;
 		else:
 			say "     She grabs at you with her powerful talons, leaving painful marks even as your body flushes with the warm tingles of nanite infection. She shouts at you angrily, scratching until her anger passes, then, with great pumps born of her frustration, she flaps her wings and retreats.";
@@ -73,7 +73,7 @@ To say Harpy loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
@@ -87,7 +87,7 @@ When Play begins:
 	now face entry is "young woman with large, elfin ears and unruly red hair that barely reaches your shoulders. While a little chubby, it could pass as a human";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "built slightly, with slender curves that remind of a teenaged female and an exposed belly button on your [skin of player] front. Feathers spread over your shoulders and back, light brown in colour. Your thighs are covered in downy looking feathers, but shins fade into tough looking bird talons that grip the ground securely. Your arms have wings like fins, with powerful flight feathers ready.";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "smooth and flawless";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "Above your pert ass is a fan of brown feathers curved upwards. ";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "Above your pert ass is a fan of brown feathers that curve upwards.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "a soft warmth flows through your head as it dwindles and rounds to nymph like appeal. Your ears stretch a little to the sides as hair shifts in hue."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "light brown feathers spread rapidly, covering your shoulders and back. Brown feathers spread over your legs, from the hips down towards your shin where it fades towards yellow scaly skin. Your feet become powerful looking bird talons with wicked claws. Even as you consider reaching to touch, wing fins burst from your arms with new feathers."; [ body change text. format as "Your body feels funny as (your text)" ]
@@ -101,8 +101,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 50;
-	now lev entry is 6; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 50;
+	now lev entry is 6; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 10; [Amount of Damage monster Does when attacking.]
 	now area entry is "Outside"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -128,7 +128,7 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Harpy":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if centrallib is 7:
 				say "     As a harpy in the library, you quietly tend to the stacks as do the others.  The guard outside makes sure that you are rarely disturbed, leaving you and your sisters to quietly read most of the time.  On occasion, you fly out into the city to pluck up a [if cunts of player > 0]male to satisfy your needs and give you an egg for the season.  Sometimes, if he's cute enough, smart enough and quiet enough, you [']allow['] him to stay, making him into the newest harpy of the aerie[else]female or herm to satisfy your lusts, screwing her until you're sure she'll grow round with a harpy egg.  Sometimes, if she's cute enough, smart enough and quiet enough, you [']allow['] her to stay, making her into the newest harpy of the aerie[end if][if cocks of player > 0].  The other harpies also enjoy your cock often, many of them getting eggs from you[end if][if cocks of player > 0 and cunts of player is 0].  You have become an unusual creature of myth and legend, the rare male librarian[end if].";
 			if hellHoundLevel > 0:			[Hellhound while taken by the librarians]

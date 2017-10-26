@@ -10,7 +10,7 @@ Museum Foyer is a room. It is fasttravel.
 The description of Museum Foyer is "[museumdesc]".
 
 to say museumdesc:
-	if hp of Solstice is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned, now Adventurer is unresolved;  [Solstice's quest available after visiting the Museum]
+	if HP of Solstice is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned, now Adventurer is unresolved;  [Solstice's quest available after visiting the Museum]
 	say "You find yourself standing in the foyer of a large museum, apparently one equipped with an emergency generator of some sort as the electric lighting while dim, still appears to be functioning. The dim lighting casts shadows throughout the large area, evoking a sense of danger and mystery. Along the walls near you are several paintings and small bits of history that would probably be priceless if you had time to worry about such things right now. More disturbing perhaps is the empty pedestal in the center of the entryway, its name plaque proudly proclaiming a preserved woolly mammoth cub to be displayed in the empty spot. Looking further into the area you can see a circular desk marked 'Information'.";
 
 instead of sniffing Museum Foyer:
@@ -42,7 +42,7 @@ instead of conversing the Valerie:
 		say "     'I was in the Egypt exhibit readying for opening when this all started, and I found myself changing. I find I don't really mind the changes though,' the sphinx says with an enigmatic smile. 'You wouldn't believe how comfortable it is just to relax and be a sphinx. Definitely better than most of the creatures I've seen wandering the halls. Course it can be rather lonely sometimes being the only sphinx,' she says as she shoots you a contemplative look. 'And I have the strangest compulsion to ask riddles of people, not that there have been any of those around either,' Valerie comments. 'Hmm, I do hope you will be staying around here a bit more, and just let me know if you have any questions about the museum itself.'";
 		increase valtalk by 1;
 	else if Dexterity of Erica is 1:
-		say "     Walking up to Valerie, you explain Eric's plight - being stuck between male and female, with the nanite infection being unable to finish what it started. As you ask her if she might know some relic or artifact that might help, the sphinx blows out her breath and answers with a chuckle, 'Magic? Who believes in magic these days - says the greek sphinx sitting on the front desk of a strangely large museum. Ha! Yeah, I guess there could be something around that might help. Let me think.' The female sphinx pauses to mull things over, murmuring things like '...the bowl of Ham- nah, that's got a hole. Maybe Osiris...'. Eventually, she clicks her fingers and calls out, 'Ah, I think I got something. There's the story of the young man Tiresias, a priest of Zeus, who encountered two snakes mating. He hit them with a stick and as punishment for that got transformed into a woman by Hera. Afterwards, Tiresias became a priestess of Hera, married and had children, including Manto. So, since it's in the mythology... I'd try to find the greek wing. There is an exhibit somewhere in there about the [bold type]Temple of Hera[roman type]. Good luck, you'll need it - Greek Gods are notoriously short-tempered.";
+		say "     Walking up to Valerie, you explain Eric's plight - being stuck between male and female, with the nanite infection being unable to finish what it started. As you ask her if she might know some relic or artifact that might help, the sphinx blows out her breath and answers with a chuckle, 'Magic? Who believes in magic these days - says the greek sphinx sitting on the front desk of a strangely large museum. Ha! Yeah, I guess there could be something around that might help. Let me think.' The female sphinx pauses to mull things over, murmuring things like '...the bowl of Ham- nah, that's got a hole. Maybe Osiris...' Eventually, she clicks her fingers and calls out, 'Ah, I think I got something. There's the story of the young man Tiresias, a priest of Zeus, who encountered two snakes mating. He hit them with a stick and as punishment for that got transformed into a woman by Hera. Afterwards, Tiresias became a priestess of Hera, married and had children, including Manto. So, since it's in the mythology... I'd try to find the greek wing. There is an exhibit somewhere in there about the [bold type]Temple of Hera[roman type]. Good luck, you'll need it - Greek Gods are notoriously short-tempered.";
 		now Temple of Hera is not resolved;
 		now Dexterity of Erica is 2;
 	else:
@@ -67,7 +67,7 @@ check riddlesphinxing:
 	if Valerie is not visible, say "Who you are looking for is the real riddle here?" instead;
 
 carry out riddlesphinxing:
-	If lastriddlesphinx - turns is less than 6:
+	If lastriddlesphinx - turns < 6:
 		say "     Valerie smiles enigmatically as you try to engage her in another riddle contest. 'I'm sorry, but even I can't think of a truly challenging new riddle that quickly. I am still new to this whole sphinx thing after all. Why don't you come back and try again later,' she says with a dismissive flick of her tail as she goes back to what she was doing.";
 		stop the action;
 	now lastriddlesphinx is turns;
@@ -77,7 +77,7 @@ carry out riddlesphinxing:
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
-	if diceroll is greater than 15:
+	if diceroll > 15:
 		say "     'Oh my, that's right!' Valerie exclaims, obviously impressed at your mental prowess. 'You are a smart one aren't you?' she continues, giving you a speculative glance as she purrs. 'We should definitely do this again sometime soon. Oh, and I did mention a prize, didn't I? Here, I suppose you earned this...' she says as she pushes an item towards you. 'I found it lying around here somewhere. Maybe you can make better use of it. Of course, if you keep answering my riddles properly, maybe we can see about a proper reward for us both?' the sphinx says with a smug look on her face, leaving no doubt as to what she is talking about.";
 		increase riddlewin by 1;
 		if riddlewin > 2:
@@ -98,12 +98,12 @@ carry out riddlesphinxing:
 		infect "sphinx";
 
 instead of fucking Valerie:
-	if Riddlewin is greater than 2:
-		if lastfuck of Valerie - turns is less than 6:
+	if Riddlewin > 2:
+		if lastfuck of Valerie - turns < 6:
 			say "     'Mmm sorry hun, unlike some people I still need some recovery time,' she says with a sly wink. 'Why don't you come back later and we can play?'";
 		else if cocks of player is 0 and cunts of player is 0:
 			say "     Lacking any gender of your own, you have little to offer the sphinx as a sexual partner right now.";
-		else if cocks of the player is greater than 0:
+		else if cocks of the player > 0:
 			now lastfuck of Valerie is turns;
 			say "     'Mmm finally I thought you would never get to the good part.' Valerie says with an aroused look on her face, as she nimbly leaps down to the ground in front of you, her wings spreading out somewhat before settling up against her long leonine body as she stretches herself out in front of you, her tail lashing excitedly as she positions her feline rear facing you. 'I don't know about you, but after finally being outmatched, I just can't help but need you on top of me so badly.' Valerie murrs, as she lifts her hindquarters up slightly, exposing her winking feline passage for you to see, 'While we can try another position if you want, I really want you on top of me...' She asks you with a coy look as she looks at you over her shoulders.";
 			if player consents:

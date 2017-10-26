@@ -11,8 +11,8 @@ when play begins:
 	add FindingKristen to badspots of furry;
 
 Instead of resolving FindingKristen:
-	if hp of Kristen is not 0:
-		say "ERROR-Kristen-[hp of Kristen]E: This event should already be resolved!";
+	if HP of Kristen is not 0:
+		say "ERROR-Kristen-[HP of Kristen]E: This event should already be resolved!";
 	else:
 		say "     While travelling through the city, you hear a bit of commotion coming from down a side street. At first you're going to just let it go, but you catch sight of a rather human-looking woman rushing past the far end of the alleyway, soon followed by an eager ewe. You wonder if your eyes are playing tricks on you or if she might have an infection that's passably human at first glance.";
 		say "     [bold type] Shall you charge to the rescue and hope for the best?[roman type][line break]";
@@ -39,20 +39,20 @@ Instead of resolving FindingKristen:
 					say "     As you introduce yourselves, you're able to take in her appearance. The Caucasian woman stands about 5 foot 10 inches. She has fair skin with only a light tan, leading you to suspect that she's been hiding indoors a lot lately or using quite a bit of sunscreen. She's got shoulder-length dirty blonde hair in a ponytail, which is now partially undone by the rough handling earlier. Her eyes are a very pretty blue and she's got a silver stud earring on each ear.";
 					say "     'We're getting close to the place I've been hiding out. I guess I can trust you, so I'll show you. It's not great, but I've been safe enough. If I hadn't gone out to lo- well, if I'd stayed here, I'd not have gotten into that mess earlier.'";
 					say "     She's leading you along the rear of a stretch of two-story shops. Several of them have been damaged by the rampage of some creature. She slips into the lower floor of a half-ruined travel agency and grabs the extension ladder stashed inside. Carrying it a few buildings over, she uses it to climb up to the second story of one of them and go through an open window. After you follow her up, the pulls the ladder inside, cutting off the means of entry.";
-					now hp of Kristen is 2;
+					now HP of Kristen is 2;
 					move player to Kristen's Hideout;
 					now Kristen's Hideout is known;
 					now battleground is "void";
 					increase score by 20;
 			if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     The ewe's assault leaves you too weak and dazed to prevent her from grabbing onto the woman and dragging her back down the alley. You can hear the lustful cries of mob of sheep get louder when the poor human's dragged into their midst. Still having enough sense to realize that you very well could be next, you struggle your way up and over the wooden fence and make a run for it.";
-				now hp of Kristen is 1;
+				now HP of Kristen is 1;
 			else if fightoutcome >= 30:
 				say "     Hearing the mob getting closer, you know you need to make your escape before they get here. You sidestep the ewe as she makes a grab for you, sending her crashing right into the woman as she tries to get up. Finding herself atop an unchanged human, the sheep's attention immediately turns to groping and kissing her. With a running start, you use her woolly back as a springboard to hop up onto the wooden wall and climb over it to get away before things get out of hand.";
-				now hp of Kristen is 1;
+				now HP of Kristen is 1;
 		else:
 			say "     Counting yourself lucky that it's not you being chased for a change, you slip off in the opposite direction as the sound starts to draw the interest of more infected mutants.";
-			now hp of Kristen is 1;
+			now HP of Kristen is 1;
 	now FindingKristen is resolved;
 
 
@@ -64,47 +64,47 @@ The description of Kristen's Hideout is "[krishideoutdesc]".
 the scent of Kristen's Hideout is "[krishideoutscent]".
 
 to say krishideoutscent:
-	if hp of Kristen < 12:
+	if HP of Kristen < 12:
 		say "This place smells of potpourri and cleaners, possibly to help mask her human scent from any creatures nosing around.";
 	else:
 		say "There is a faint scent of vixen mixed in with the other scents in here.";
 
 to say krishideoutdesc:
-	if hp of Kristen < 2:
-		say "ERROR-Kristen-[hp of Kristen]R: You should be able to get here! Get out!";
+	if HP of Kristen < 2:
+		say "ERROR-Kristen-[HP of Kristen]R: You should be able to get here! Get out!";
 		move player to Grey Abbey Library;
 		now Kristen's Hideout is unknown;
-	else if hp of Kristen < 12:
+	else if HP of Kristen < 12:
 		say "     This second floor apartment is above a ruined coffee shop. It is fairly small, with a small living room, kitchen, bathroom and bedroom. Despite the modest size, the accommodations are very well maintained and the furnishings seem quite expensive. The furniture is of high quality, is well padded and rests upon hardwood floors. The rooms are decorated with lovely vases and paintings as well as a full-length mirror right in the living room as well as the bathroom and bedroom. It's clear that this place belonged to someone who liked living in the lap of luxury. The place has been kept quite clean given the circumstances. The ladder Kristen uses to get in and out (and to let you in) rests along one wall and the blinds are kept shut.";
-	else if hp of Kristen is 12:
+	else if HP of Kristen is 12:
 		say "[kristentf_phase1]";
 		attempttowait;
-		now hp of Kristen is 13;
+		now HP of Kristen is 13;
 		move player to Grey Abbey Library;
 		now lastfuck of Kristen is turns;
-	else if hp of Kristen < 16 and lastfuck of Kristen - turns < 4:
-		if hp of Kristen < 15:
+	else if HP of Kristen < 16 and lastfuck of Kristen - turns < 4:
+		if HP of Kristen < 15:
 			say "     [if libido of Kristen is 2]You promised to give Kristen some time to think. You should give her a little longer before returning.[else if libido of Kristen is 3]As much as you look forward to seducing the transforming woman further, you don't want to rush things. You decide to wait a little longer before returning to see her again.[else]As much as you look forward to enjoying the transforming vixen's body, you should give her some time to allow her infection to progress further. Besides, she'll be hornier if you let her change further.[end if]";
 		else:
 			say "     Kristen could use some time to rest and take stock of her situation before you return to see how she's dealing with her changes[if libido of Kristen is 2]. [else if libido of Kristen is 3]. After the excitement last time, you decide to give her a little more time before attempting to seal the deal again[else]. As eager as you are to see if the slutty vixen's completed her transformation, you decide to wait a little longer to be sure[end if].";
 		attempttowait;
 		move player to Grey Abbey Library;
-	else if hp of Kristen is 13:
+	else if HP of Kristen is 13:
 		say "[kristentf_phase2]";
 		attempttowait;
-		now hp of Kristen is 14;
+		now HP of Kristen is 14;
 		move player to Grey Abbey Library;
 		now lastfuck of Kristen is turns;
-	else if hp of Kristen is 14:
+	else if HP of Kristen is 14:
 		say "[kristentf_phase3]";
 		attempttowait;
-		now hp of Kristen is 15;
+		now HP of Kristen is 15;
 		move player to Grey Abbey Library;
 		now lastfuck of Kristen is turns;
-	else if hp of Kristen is 15:
+	else if HP of Kristen is 15:
 		say "[kristentf_phase4]";
 		attempttowait;
-		now hp of Kristen is 16;
+		now HP of Kristen is 16;
 		move Kristen to Private club room;
 		move player to Private club room;
 	else:
@@ -126,20 +126,20 @@ kristentf3fuck is a truth state that varies. kristentf3fuck is usually false.	[f
 the scent of Kristen is "[kristenscent]".
 
 to say kristenscent:
-	if hp of Kristen < 2:
-		say "ERROR-Kristen-[hp of Kristen]S: You should be able to find me yet.";
+	if HP of Kristen < 2:
+		say "ERROR-Kristen-[HP of Kristen]S: You should be able to find me yet.";
 	else:
 		say "     Kristen smells [if humanity of player < 33]tantalizingly[else]pleasantly[end if] human.";
 
 to say kristendesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Kristen], Libido: [libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[else]N[end if], Msg 2: [if kristenmsg2 is true]Y[else]N[end if], Msg 3: [if kristenmsg3 is true]Y[else]N[end if], Msg 4: [if kristenmsg4 is true]Y[else]N[end if] <- DEBUG[line break]";
-	if hp of Kristen < 2:
-		say "ERROR-Kristen-[hp of Kristen]L: You should be able to find me yet.";
-	else if hp of Kristen < 12:
+		say "DEBUG -> HP: [HP of Kristen], Libido: [libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[else]N[end if], Msg 2: [if kristenmsg2 is true]Y[else]N[end if], Msg 3: [if kristenmsg3 is true]Y[else]N[end if], Msg 4: [if kristenmsg4 is true]Y[else]N[end if] <- DEBUG[line break]";
+	if HP of Kristen < 2:
+		say "ERROR-Kristen-[HP of Kristen]L: You should be able to find me yet.";
+	else if HP of Kristen < 12:
 		say "     Still apparently unchanged, this Caucasian woman stands about 5 foot 10 inches. She has a slender figure with just the right amount of sexy curves to give her feminine allure. She's wearing a white cotton shirt and black jeans. She has fair skin with only a light tan, partially from staying hidden indoors a lot lately as well as her frequent use of sunscreen. She's got shoulder-length dirty blonde hair which she wears in a ponytail. Her eyes are a very pretty blue and she's got a silver stud earring on each ear.";
-	else if hp of Kristen < 16:
-		say "ERROR-Kristen-[hp of Kristen]L: You shouldn't be able to see me right now.";
+	else if HP of Kristen < 16:
+		say "ERROR-Kristen-[HP of Kristen]L: You shouldn't be able to see me right now.";
 	else:
 		say "     The now vulpine Kristen is a sensually beautiful vixen. While showing signs of being an arctic fox like Janice with her snowy white fur, she's also got the black gloves and socks of a more traditional fox. Her ears and the tip of her fluffy tail are also charcoal black. It gives her quite the [if libido of Kristen is 4]sexy[else]elegant[end if] appearance, adding to her exotic allure. She's also continuing to wear the traitorous blouse that started this transformation, [if libido of Kristen is 2]worn over[else if libido of Kristen is 3]worn only partly buttoned up to tantalize with[else]left open to show off[end if] her slightly fuller and perkier breasts.";
 
@@ -148,15 +148,15 @@ Section 3 - Conversation Tree
 
 Instead of conversing the Kristen:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Kristen], Libido: [libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[else]N[end if], Msg 2: [if kristenmsg2 is true]Y[else]N[end if], Msg 3: [if kristenmsg3 is true]Y[else]N[end if], Msg 4: [if kristenmsg4 is true]Y[else]N[end if] <- DEBUG[line break]";
-	if hp of Kristen < 2:
-		say "ERROR-Kristen-[hp of Kristen]T: You should be able to find me yet.";
-	else if hp of Kristen is 2:
+		say "DEBUG -> HP: [HP of Kristen], Libido: [libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[else]N[end if], Msg 2: [if kristenmsg2 is true]Y[else]N[end if], Msg 3: [if kristenmsg3 is true]Y[else]N[end if], Msg 4: [if kristenmsg4 is true]Y[else]N[end if] <- DEBUG[line break]";
+	if HP of Kristen < 2:
+		say "ERROR-Kristen-[HP of Kristen]T: You should be able to find me yet.";
+	else if HP of Kristen is 2:
 		say "     'Welcome to my place. Well, it's not really my place. It belongs to my friend, but it doesn't look like she's coming back by this point.' After an awkward pause, she affects some excitement in her voice and forces a smile.";
 		say "     'I was on my way to come see her when things went nutso-bonkers. It was all happening too fast - the power outage, the electronics failure, the quake, people turning into monsters... Madness! I rushed here through that chaos, got inside with her spare key and hid here overnight. I could hear the rampage growing outside. There's a club a few buildings over and the people inside must've turned into something big and destructive. A lot of the buildings along this stretch are wrecked because of it. Even the staircase up here was taken out, trapping me inside.";
 		say "     'Which turned out to be a good thing, as it meant those mutant monsters couldn't get up here and find me. At first, I hoped to just wait for someone to come rescue me, but it eventually became clear we're on our own for a while. After that, I had to find a way down. I could see that ladder a few buildings over, but it was out of my reach. I made a rope out of some sheets,' she says, pointing to where that improvised rope still sits in one corner, 'and used it to get down so I could snag the ladder. As long as I'm careful not to be seen, I can get in and out and nothing else will stumble its way into my hideout. I've still got to stay out of sight in case any of those flyers spot me or I ended up besieged, but it's else safe.'";
-		now hp of Kristen is 3;
-	else if hp of Kristen < 10 and kristenmsg1 is false and a random chance of 1 in 3 succeeds:
+		now HP of Kristen is 3;
+	else if HP of Kristen < 10 and kristenmsg1 is false and a random chance of 1 in 3 succeeds:
 		say "     'Once I'd managed to work out a means to get in and out, I went off to look for my friend. I knew it was a long shot, but it wasn't that far and I had to try. I was on the phone with Janice when the network went down, so I knew she had been at this club where I used to work - the Palomino. I snuck my way over there, but I found it overrun with mutants. I couldn't even get close before one spotted me and a bunch rushed after me. I managed to evade them, but after that close call, I held off on looking for... well, there just didn't seem to be much hope.'";
 		now kristenmsg1 is true;
 		if kristenmsg3 is true:
@@ -165,10 +165,10 @@ Instead of conversing the Kristen:
 		else if janicetalk > 0:
 			say "     Realizing that Janice might very well be the arctic fox femme you met at the dance club, you tell Kristen about her. She's almost in tears as you tell her about the vixen, so happy to hear that her friend's happy and safe. 'That sounds so like her. She's always been a little vain and loving luxury. Please let her know that I'm safe at her place.'";
 			now kristenmsg4 is true;
-	else if hp of Kristen < 12 and kristenmsg1 is true and kristenmsg2 is false and a random chance of 1 in 3 succeeds:
+	else if HP of Kristen < 12 and kristenmsg1 is true and kristenmsg2 is false and a random chance of 1 in 3 succeeds:
 		say "     'I'm not really sure what's going on, but I have noticed a few things. I feel in better shape than I've ever been and I heal really quickly now. I'm also a lot hornier these days. I'm guessing whatever is behind all this has affected everyone, including myself. I've just managed to avoid running into anything to set off a mutation. Like, my friend Janice has a collection of fur shawls in her closet that I don't dare get anywhere near.'";
 		now kristenmsg2 is true;
-	else if hp of Kristen is 10 and carried of Janice's blouse > 0 and kristenmsg5 is false and a random chance of 1 in 3 succeeds:
+	else if HP of Kristen is 10 and carried of Janice's blouse > 0 and kristenmsg5 is false and a random chance of 1 in 3 succeeds:
 		say "     Remembering the blouse Janice gave you, you ponder giving it to Kristen and telling her that you found her friend. While you know she'd be happy to know her friend is alive and (mostly) sane, she might get it into her head to try going there to see her.";
 		say "     [bold type]Shall you give it to her?[roman type][line break]";
 		LineBreak;
@@ -179,11 +179,11 @@ Instead of conversing the Kristen:
 		else:
 			say "     Deciding against it for now, you keep it tucked away in your pack. Should you change your mind, you'll need to [bold type]give Janice's blouse to Kristen[roman type].";
 			now kristenmsg5 is true;
-	else if hp of Kristen < 12:
+	else if HP of Kristen < 12:
 		say "     [one of]'I've been raiding my friend's cupboards and gathered what I can from the nearby shops, so I'm okay for now.'[or]'I'm glad I decided to trust you. It's good to have someone to talk to after all this.'[or]'I'm lucky I've managed to stay human for now, but I've got to be careful.'[or]'You need to be careful about what you come into contact with. From what I've seen, lots of stuff - even random objects - can prompt a mutation. There was one guy while I was trying to get here who turned into a cougar just because that was the kind of car he was driving.'[or]'Ever since this started, I've been really horny. I'm sometimes tempted to just give up on all this hiding and throw myself into the arms of one of those sexy creatures I see from the windows. I'm guessing that's how they get you.'[or]'Thanks again for helping me out back there. I don't think I would have made it out of there without your help. That ewe was cute and all, but I've never been a sheep to just follow the herd.'[or]'Stuck here on my own, I can't help but sometimes think everyone whose lives have been destroyed by this mess. So many dead or driven mad. It's a disaster when you really think about it.'[in random order]";
-	else if hp of Kristen <= 15:
-		say "ERROR-Kristen-[hp of Kristen]T: You should be able to talk to me.";
-	else if hp of Kristen is 16:
+	else if HP of Kristen <= 15:
+		say "ERROR-Kristen-[HP of Kristen]T: You should be able to talk to me.";
+	else if HP of Kristen is 16:
 		say "     [one of]'It's nice to be back together with Janice. We're better friends than ever[if libido of Kristen is 2]. Isn't that right?' she asks the other vixen as she pats her bottom[else if libido of Kristen is 3],' she says, demonstrating this with a very sexy kiss with the other vixen[else],' she says, demonstrating this with gropes of the vixen's breasts from behind[end if].'[or]'Janice has been showing me that there are some definite perks to being a [if libido of Kristen is 2]beautiful[else if libido of Kristen is 3]sexy[else]slutty[end if] vixen.'[or]'I've been meeting Janice's other would-be suitors. But don't worry, you're definitely our favourite.'[or]'As nice as it is to be here with Janice, it can be a little too loud at times. Sometimes you just want some quiet time... together.' She runs a paw across your cheek on that final word.[or][if libido of Kristen is 2]'Thanks for all your help, hon.'[else if libido of Kristen is 3]'Why don't you stick around? Janice and I would love to show you our appreciation for our mate,' she says while brushing her tail across your side.[else]'I'm quite popular with many of the club-goers.'[end if][or]'The Palomino's always been a good club, but I think I like this new version even better.'[or][if libido of Kristen is 2]'Do you really think I'm beautiful like this?' she asks with a teasing swish of her tail.[else if libido of kristen is 3]'Tell me again how beautiful I am,' she says as she poses sexily, longing for your approval.[else]'Don't you think I look sexy,' she asks, posing wantonly before you.[end if][or]Kristen takes you out into the club to dance for a while[if libido of Kristen is 2], the two of you having a good time[else if libido of Kristen is 3], sharing a slow dance together[else], bumping and grinding her sexy body against yours[end if].[in random order]";
 
 
@@ -246,7 +246,7 @@ to say kristentf_phase1:	[denial/anger]
 
 
 to say kristentf_phase2:	[bargaining]
-	say "     When you announce your arrival below Kirsten's hideout, she's at the window and lowering the ladder in record time. Heading up, you're helped through the window rather roughly. 'I'm glad you're back. I need your help,' she says frantically, not even bothering to remove the ladder or even close the window before starting, quite unlike herself. As you take care of all that, she continues on. 'Look, you know how the soldiers out there [if xp of Kristen is 0]seem to be resistant to transformation? They've got some kind of spray or pills or something that ups their resistance. [else]have got that spray stuff to make them more resistant and reverse minor changes? [end if]Now, if you can get a bunch of that stuff for me - I mean like a whole lot - maybe you can help me get out of this mess.' She spews out her plan quickly, almost babbling in here eagerness for your assistance. She's pants heavily and grips your shoulders firmly with her paws.";
+	say "     When you announce your arrival below Kirsten's hideout, she's at the window and lowering the ladder in record time. Heading up, you're helped through the window rather roughly. 'I'm glad you're back. I need your help,' she says frantically, not even bothering to remove the ladder or even close the window before starting, quite unlike herself. As you take care of all that, she continues on. 'Look, you know how the soldiers out there [if XP of Kristen is 0]seem to be resistant to transformation? They've got some kind of spray or pills or something that ups their resistance. [else]have got that spray stuff to make them more resistant and reverse minor changes? [end if]Now, if you can get a bunch of that stuff for me - I mean like a whole lot - maybe you can help me get out of this mess.' She spews out her plan quickly, almost babbling in here eagerness for your assistance. She's pants heavily and grips your shoulders firmly with her paws.";
 	say "     The sight of her paws draws your attention to them and you look her over. In addition to her foxish ears, she's now got paw-like hands. They're mostly human in form with elegant digits, but also have pawpads and small claws at the fingertips. Short, black fur covers them, thinning as it crosses her wrists and her human skin resumes. She's wearing her white shirt again, though [if libido of Kristen is 4]you can see that the white fluff that started at her crotch has crept up past her navel, spreading further[else]you catch a glimpse of some white fluff that's spread from her crotch and up past her navel[end if]. Her figure, already quite lovely, has subtly changed to make her even more appealing. She's got a short fox tail that's started to form as well, only about a foot or so long at present. Following her legs down to her feet, you can see they've become black-furred paws as well, though somewhat more animal-like than her hands. With her changes progressing even without the blouse on any more, it's clear why she's frantic to find a way to stop this.";
 	attempttowait;
 	say "     '...get away from this mess. Hey! Are you even listening?' she growls angrily while her short tail thrashes. 'This is an emergency! There's got to be a way out of this, so I was thinking we might try getting out of the city. I've got some money saved up; just a couple grand, but you can have it if you can get me out of the city. If it's a local thing, I should be safe once I get away from whatever's causing this mess. I mean, it's not like it's fully changed me yet,' she says with desperate hope.";
@@ -266,7 +266,7 @@ to say kristentf_phase2:	[bargaining]
 		get a number;
 	if calcnumber is 1 and libido of Kristen <= 2:
 		say "     Not wanting her to get carried away or try anything foolish, you get her to sit down and talk to her";
-		if ( hp of Doctor Matt > 0 and hp of Doctor Matt < 100 ) or ( hospquest >= 2 ):
+		if ( HP of Doctor Matt > 0 and HP of Doctor Matt < 100 ) or ( hospquest >= 2 ):
 			say ". Explaining that you've already met someone studying the nanites in the city, you tell her that nothing can be done. The microscopic robots are out of control. At first, she's desperately holding out hope, but eventually it seems to sink in. She sighs heavily and leans back against the couch. 'I just... it's just not fair,' she says sadly.";
 		else:
 			say ". Saying that you don't think anyone can control this mess - if someone had a solution for it, they'd already be out there curing everyone. And to keep her from doing anything desperately foolish, you add that the military are desperate to keep the infected inside the city. They can't risk the infection spreading any further, so trying to get past them would likely be fatal. She seems ready to continue at first, but then just sighs heavily and leans back against the couch. 'I just... it's just not fair,' she says sadly.";
@@ -373,7 +373,7 @@ to say kristentf_phase4:	[acceptance]
 		say "[kristentf_phase4_3]"; [seductive]
 	else:
 		say "[kristentf_phase4_4]"; [forceful]
-	now hp of Kristen is 16;
+	now HP of Kristen is 16;
 	increase score by 25;
 
 to say kristentf_phase4_2:		[supportive]
@@ -546,18 +546,18 @@ the fuckscene of Kristen is "[sexwithKristen]".
 
 to say sexwithKristen:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Kristen], Libido: [libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[else]N[end if], Msg 2: [if kristenmsg2 is true]Y[else]N[end if], Msg 3: [if kristenmsg3 is true]Y[else]N[end if], Msg 4: [if kristenmsg4 is true]Y[else]N[end if] <- DEBUG[line break]";
-	if hp of Kristen < 2:
-		say "ERROR-Kristen-[hp of Kristen]F: You should be able to find me yet.";
-	else if hp of Kristen is 2:
+		say "DEBUG -> HP: [HP of Kristen], Libido: [libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[else]N[end if], Msg 2: [if kristenmsg2 is true]Y[else]N[end if], Msg 3: [if kristenmsg3 is true]Y[else]N[end if], Msg 4: [if kristenmsg4 is true]Y[else]N[end if] <- DEBUG[line break]";
+	if HP of Kristen < 2:
+		say "ERROR-Kristen-[HP of Kristen]F: You should be able to find me yet.";
+	else if HP of Kristen is 2:
 		say "     That's awfully forward of you. Perhaps you should talk to her a little first.";
 	else if lastfuck of Kristen - turns < 6:
 		say "     'I need a little more time to recover, hon.'";
 	else if cocks of player is 0 and cunts of player is 0:
 		say "     You're ill-equipped to play with her right now.";
-	else if hp of Kristen < 12:
+	else if HP of Kristen < 12:
 		say "[bracket]***Sorry, sex as human content not present at this time. - The Mgmt[close bracket][line break]";
-	else if hp of Kristen >= 16:
+	else if HP of Kristen >= 16:
 		say "[kristentfsexmenu]";
 
 
@@ -732,7 +732,7 @@ to say kristenjanice3some00:
 
 Section 8 - Variable Charts
 
-[	hp of Kristen         ]
+[	HP of Kristen         ]
 [ 0 = not encountered     ]
 [ 1 = not saved           ]
 [ 2 = saved				  ]
@@ -747,7 +747,7 @@ Section 8 - Variable Charts
 [ 16 = fully tf'd         ]
 [...                      ]
 
-[     xp of Kirsten       ]  [not currently active, but preparatory]
+[     XP of Kirsten       ]  [not currently active, but preparatory]
 [ 0 = no spray            ]
 [ 1 = got spray           ]
 [ 2 = using spray         ]

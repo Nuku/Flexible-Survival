@@ -81,7 +81,7 @@ to say beattheBehemoth:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -94,7 +94,7 @@ When Play begins:
 	now face entry is " lightly tinted with a greenish-blue hue with a long and angular muzzle, filled with twin rows of jagged fangs, protruding from the end of your face. With two sixteen inch onyx curved horns jutting out from your scalp, a shaggy white mane extending around your face and down to your back, fierce golden-orange almond shaped irises centered into your pitch black eyes and a pair of furry tri-pointed ears flicking back and forth beside both of your horns you are a fearsome-looking beast indeed"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "stacked on with massive muscles and thickly corded sinew. Because of your body's new physique you have acquired a slightly hunched over posture, symbolizing a better aptitude for you to walk and run on all fours instead of on two feet. Yet because of the density of your newly thickened bones you are able to walk without lumbering...too much. With your bestial eight foot frame there is no denying your ferocity as you now boast sharpened claws at the end of your four fingered hands and at the tips of your three toed feet. To complete your new body you now have two pure white fin-like wings, complete with greenish-blue membranes, fluttering at your backside"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "a toughed hide of light greenish-blue"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Your rump is dense with muscle, but strangely enough very shapely with the six foot long, two foot thick tail waving around in back of you. Lightly coated with white fur your restless extension supports several thick spikes running from the base of your fifth appendage up to the point where your extended spinal column meets your lower back."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "Your rump is dense with muscle, but strangely enough very shapely with the six foot long, two foot thick tail waving around in back of you. Lightly coated with white fur, your restless extension supports several thick spikes running from the base of your fifth appendage up to the point where your extended spinal column meets your lower back."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "monstrous"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "your head shifts outwards gaining both depth and added dimension as your skull and facial muscles painfully rearranges themselves. The onset of two long nubs, the beginning of horns, protruding out of your scalp doesn't help anything as your skin breaks apart to allow the new growths to come in. When an irritatingly itchy sensation runs throughout your face and neck things seem to be about to get much worse, but before they can the feelings turn rather ticklish as fur begins to grow out from your head down the side of your back and then around your face and neck"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "the contents of your stomach twist and turn as whatever fat you have stored inside of your body gets burned away with the inception of your growing musculature. Dropping to the ground you bellow out a wail as your arms thicken, your legs bloat, your calves swell and your back arches and pops from every single bone under your neck extending and thickening while muscles over muscles harden and balloon outwards across your expanding form. Your hands and feet aren't spared from this uncomfortable change as your fingers meld into one another, giving you a pair of four fingered hands, while your toes mold into each other until you have a pair of three toed feet"; [ Body TF text, format as "Your body feels funny as (your text)." ]
@@ -108,7 +108,7 @@ When Play begins:
 	now int entry is 22;
 	now cha entry is 10;
 	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 240; [ The monster's starting hit points. ]
+	now HP entry is 240; [ The monster's starting HP. ]
 	now lev entry is 20; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 35; [ Monster's average damage when attacking. ]
 	now area entry is "Plains"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -150,7 +150,7 @@ The usedesc of behemoth horn is "Taking the behemoth horn and rolling it around 
 
 when play ends:
 	if bodyname of player is "Behemoth":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "With your mind becoming lost to the infection strain of the Behemoth running throughout your body you find yourself growling and roaring without knowing why before taking off towards the plains. By the time you get there any other infection has ran its course out of you and now you are another sixteen foot long behemoth like the rest of your brethren.";
 			if cocks of player > 0:
 				say "However, after finding a large brood of other Behemoths you find yourself quickly getting challenged by the lot so as to you decide your place within the ranks of their disheveled pecking order[if strength of player > 20]. With your strength you are able to suppress them all and thereby force them to accept you as their sovereign, after rutting each other them in turn that is[else]. Since you prove to be so much weaker than them you are made into a lower brother who is thereby taken by the rest both forcibly and painstakingly for days to months on end[end if].";

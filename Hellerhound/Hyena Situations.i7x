@@ -24,11 +24,11 @@ instead of resolving an intact fountain:
 			say "You feel less thirsty and hungry after guzzling some thick, infected, tasty water, yum!";
 			decrease thirst of player by 10;
 			decrease hunger of player by 4;
-			if thirst of player is less than 0, now thirst of player is 0;
-			if hunger of player is less than 0, now hunger of player is 0;
-			if morale of player is less than 0:
+			if thirst of player < 0, now thirst of player is 0;
+			if hunger of player < 0, now hunger of player is 0;
+			if morale of player < 0:
 				increase morale of player by 62;
-				if morale of player is greater than 0, now morale of player is 0;
+				if morale of player > 0, now morale of player is 0;
 				say "After drinking something, you feel better.";
 			if "Iron Stomach" is not listed in feats of player:
 				if a random chance of 1 in 3 succeeds:

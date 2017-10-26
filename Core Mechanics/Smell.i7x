@@ -69,7 +69,7 @@ instead of sniffing yourself:
 	say "You smell like a [if the cocks of the player > 0 and the cunts of the player > 0]hermaphrodite[else if the cunts of the player > 0]female[else if the cocks of the player > 0]male[else]neuter[end if] [bodyname of the player].";
 	if animal heat is True:
 		say "There is a animalistic musk around you.";
-	if child is not born and gestation of child is greater than 0:
+	if child is not born and gestation of child > 0:
 		say "You smell pregnant.";
 
 [
@@ -81,7 +81,7 @@ Section 3 - overrides for included places
 
 [this is the stuff from the main story.ni file.  Other content is in their files.]
 
-the scent of doctor matt is "[if hp of Doctor Matt is not 100]Safely encapsulated in his environment suit, he cannot be smelled[else]The doctor isn't here, and his tape recorder smells like old plastic[end if].".
+the scent of doctor matt is "[if HP of Doctor Matt is not 100]Safely encapsulated in his environment suit, he cannot be smelled[else]The doctor isn't here, and his tape recorder smells like old plastic[end if].".
 
 the scent of grey abbey library is "The smell of books permeates the air in the library.  Smelling outside the doors, you can smell the scents of the city.  You catch numerous scents of lust and arousal on the breeze, including that of [one of]several lupine creatures[or]some sulfurous stink[or]a variety of canines[or]something like latex[or]a feline in heat[at random].".
 
@@ -97,7 +97,7 @@ the scent of Mall Atrium is "The air smells of fake plants and excessive perfume
 
 the scent of Outside Trevor Labs is "The air out here smells no different than the rest of the city.";
 
-the scent of Trevor Labs Lobby is "The air is better in here, with[if hp of Orthas > 2] Orthas's aroused scent in the room[else]out the excess scents of sex and arousal of the city[end if].".
+the scent of Trevor Labs Lobby is "The air is better in here, with[if HP of Orthas > 2] Orthas's aroused scent in the room[else]out the excess scents of sex and arousal of the city[end if].".
 
 the scent of 2F Trevor Labs is "The air smells pretty clear up here.  It doesn't seem that roaming creatures have been getting in here.".
 

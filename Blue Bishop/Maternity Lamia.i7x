@@ -23,7 +23,7 @@ to say lamiadesc:
 
 
 to say losetolamia:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Surrendering to the creature, she seems very quick to ease off and trust your compliance, giggling in excitement and pulling you in a tight embrace. Clothing practically bursting at the seams to contain her numerous breast, you're very firmly [one of][or]re[stopping]introduced to them as she practically tries to smother you in her cleavage.";
 		say "     '[one of]Oh[or]Eee[or]Ah[at random], [one of]it's so nice to find some company[or]everyone usually runs away[or]we're going to have so much fun[at random]!' Clearly giddy at the prospect of such a obliging victim, she pulls any attire or supplies from you and tosses them aside.";
 	else:
@@ -31,9 +31,9 @@ to say losetolamia:
 		say "     '[one of]Oh no[or]Shh[or]Ah[at random], I'm so sorry, [one of]I didn't mean to be so rough[or]you gave me little choice[or]I'll take care of you[at random]!' Clearly, she seems to have twisted her victory into an opportunity to 'care' for you, pulling any attire or supplies from you and tossing them aside.";
 	if cocks of player > 0 and a random chance of 1 in 3 succeeds:
 		say "     Scaled coils gently constricting you, they caress along your[if scalevalue of player > 4], larger[end if] [bodytype of player] form as her grip gradually tightens around you, the half-serpent repositioning herself as her hand moves along you grope at your[if cockname of player is listed in infections of internallist] partially[end if] exposed, [cock size desc of player] dick[smn].";
-		say "     '[one of]I really need this[or]This ought to be fun[or]Someone's excited to see me[at random]...' Eager to bring you into full arousal, it doesn't take long for her to get what she wants[if hp of player <= 0], in spite of your impotent struggles[end if]. Hissing eagerly, her movement finally reveals her[one of][or] familiar,[stopping] triple pussies.";
+		say "     '[one of]I really need this[or]This ought to be fun[or]Someone's excited to see me[at random]...' Eager to bring you into full arousal, it doesn't take long for her to get what she wants[if HP of player <= 0], in spite of your impotent struggles[end if]. Hissing eagerly, her movement finally reveals her[one of][or] familiar,[stopping] triple pussies.";
 		say "     Head forcibly buried within her abundant cleavage again, she gradually sinks the[if cockname of player is listed in infections of bluntlist] blunt[end if] head of [if cocks of player > 3]three of your cocks[else if cocks of player is 3]all three cocks[else if cocks of player is 2]both your cocks[else]your cock[end if] within her tight, scaled lips. The creature hissing and moaning with twisted glee, she can barely temper any restraint in burying your flesh inside her, and, [if cockname of player is listed in infections of knotlist]after forcing her way past your knot[smn][else]once hilting you within her slick depths[end if], so does her coils tighten further to hide her [one of]newfound[or]familiar[stopping] toy from the outside world[if scalevalue of player > 3] -- a feat made somewhat challenging by your size[end if].";
-		say "     '[one of]Calm down[or]Let me take care of this[or]Oh, you feel so nice[at random]...' Writhing, twisting body grinding against you, forced to [if hp of player > 0]abide[else]endure[end if] the creature's strength as her whole form clenches rhythmically, practically intent on squeezing your bliss from you. As her tainted need grows, your face is made slick with her dribbling teats, [if hp of player > 0]driven[else]made[end if] to taste her sweet fluid in the heat of the moment.";
+		say "     '[one of]Calm down[or]Let me take care of this[or]Oh, you feel so nice[at random]...' Writhing, twisting body grinding against you, forced to [if HP of player > 0]abide[else]endure[end if] the creature's strength as her whole form clenches rhythmically, practically intent on squeezing your bliss from you. As her tainted need grows, your face is made slick with her dribbling teats, [if HP of player > 0]driven[else]made[end if] to taste her sweet fluid in the heat of the moment.";
 		if libido of player > 33:
 			say "     It's not long before you're finally overtaken, letting out a muffled cry in the darkness as you pump her hole[smn] full of your [cum load size of player] load[if cock width of player > 24], until she can take no more and it begins to squirt between the crevices of her tightly-gripping coils[end if]. The wet sounds of her continued motions filling the air, she finally hisses out loudly as she's brought to bliss as well barely able to breathe against her near-crushing hold as you're milked dry.";
 		else:
@@ -41,7 +41,7 @@ to say losetolamia:
 			say "     Once things eventually die down and she catches her breath, she uncoils from you and set you down on a nearby bench. She seems to check and fuss over you a bit before being satisfied, the softer gesture betrayed by her prior abuse.";
 			say "     '[one of]You sure look tuckered out[or]That was fun[or]That was great[at random]! [one of]I'll be back in a bit[or]Be sure to stick around[or]I'd love to have some more fun with you later[at random]...' Making her parting remark, she wanders off -- perhaps compelled by some twisted sense of duty to 'attend' to another victim. In any case, it takes you a while to recover from being left so sore, going back on your way once again.";
 	else:
-		say "     [if hp of player > 0]Rather than risk you starting to struggle again[else]Not wanting to risk you getting away[end if], the white lamia coils her lower body around you, smooshing your face into her ample bosom.  With your face buried in her boobs, your nose is filled with the softly alluring scent of her milk.  Without even realizing it, you shift your lips to one of her many nipples and wrap them around it.  You suckle softly as the maternal lamia coos softly about how you're a good [if cunts of player > 0]girl[else]boy[end if] and to drink up like a good baby.";
+		say "     [if HP of player > 0]Rather than risk you starting to struggle again[else]Not wanting to risk you getting away[end if], the white lamia coils her lower body around you, smooshing your face into her ample bosom.  With your face buried in her boobs, your nose is filled with the softly alluring scent of her milk.  Without even realizing it, you shift your lips to one of her many nipples and wrap them around it.  You suckle softly as the maternal lamia coos softly about how you're a good [if cunts of player > 0]girl[else]boy[end if] and to drink up like a good baby.";
 		say "     Her milk flows readily, flowing across your tongue.  It is warm, rich and creamy, the flavour so good that you want more.  Nursing from her is soothing and you relax more fully, her snug coils around you feeling more like a hug to you than a prison.  The wet nurse gently caresses your head as she rocks you gently as she hums a soothing tune.";
 		if libido of player > 33 and ( cocks of player > 0 or cunts of player > 0 ):
 			if cocks of player > 0:
@@ -152,7 +152,7 @@ to say mlamiavsex04:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -180,7 +180,7 @@ When Play begins:
 	now int entry is 13;
 	now cha entry is 16;
 	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 85;			[ The monster's starting hit points. ]
+	now HP entry is 85;			[ The monster's starting HP. ]
 	now lev entry is 12;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 11;			[ Monster's average damage when attacking. ]
 	now area entry is "Hospital";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -236,12 +236,12 @@ this is the lamiaboob rule:	[***]
 	if playernum >= matlamianum:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 133;	[75% dmg this round]
 		say "Able to keep your arms free, you grab the encroaching coils and force them open enough to escape.  The constriction does [special-style-2][dam][roman type] damage before then though.";
-		decrease hp of player by dam;
+		decrease HP of player by dam;
 		now matlamiacaught is 0;
 	else:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125;	[80% dmg this round]
 		say "Her coils ensnare your limbs, trapping them within her body's grip.  You can feel the warm, wet touch of her leaking slits as well as she slide across your thigh even as she wraps herself around your tighter.  You take [special-style-2][dam][roman type] damage from the constriction.  Even as you continue to resist, she mashes your face into her extra-ample bosom.";
-		if hp of player <= 0 or libido of player >= 110:
+		if HP of player <= 0 or libido of player >= 110:
 			say "That's enough to take the last of the fight out of you.  She continues to have her way with you and you can only put up a token amount of resistance.";
 			now matlamiacaught is 2;	[unable to continue fighting]
 	if matlamiacaught is 1:
@@ -257,12 +257,12 @@ this is the lamiaboob rule:	[***]
 		now matlamiacaught is 0;
 	else if matlamiacaught > 0:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125;	[80% dmg this round]
-		decrease hp of player by dam;
+		decrease HP of player by dam;
 		increase libido of player by a random number between 4 and 6;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 1;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 1;
 		say "With your face buried in her fleshy fun-pillows, you have trouble breathing.  The only air you can get heavily laced with the milky scent of her multi-bosom, dulling your wits even as you grow aroused.  And it gets even harder for your poor brain to remain oxygenated when her tail tightens further around your chest.  This forced exhalation results in you motorboating those jugs of hers, to her giggling delight.  '[one of]Oh! I always love that[or]Tee hee! That tickles[or]Oooo! That's more like it[at random][if matlamiacaught is not 2]!'  The experience weakens you, causing [special-style-2][dam][roman type] damage even as you grow more aroused.[else]!'[end if]";
-		if hp of player <= 0 or libido of player >= 110 and matlamiacaught is 1:
+		if HP of player <= 0 or libido of player >= 110 and matlamiacaught is 1:
 			say "With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
 			now matlamiacaught is 2;	[unable to continue fighting]
 	if matlamiacaught is 1:
@@ -278,12 +278,12 @@ this is the lamiaboob rule:	[***]
 		now matlamiacaught is 0;
 	else if matlamiacaught > 0:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 110;	[90% dmg this round]
-		decrease hp of player by dam;
+		decrease HP of player by dam;
 		increase libido of player by a random number between 5 and 8;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 1;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 1;
 		say "Her grip eases a little as she laughs and your immediate response is to gasp for air, but all you get is another lungful of her arousing scent followed by a mouthful of nipple.  You end up sucking down on her hard nip before you realize what you're doing.  Your resistance fades further and you become all the more aroused[if cocks of player > 0 and cunts of player > 0].  Your cock[smn] stiffen[smv] and grind[smv] against the firm, muscular tail pressed around it, causing an excess of your feminine juices to leak from your cunt[sfn][else if cocks of player > 0].  Your cock[smn] stiffen[smv] and grind[smv] against the firm, muscular tail pressed around it[else if cunts of player > 0].  You grind your hips and try to wiggle your legs as fresh feminine juices leak from your cunt[sfn][end if][if matlamiacaught is not 2].  It becomes harder to hold out as you take another [special-style-2][dam][roman type] damage and become further aroused[end if].";
-		if hp of player <= 0 or libido of player >= 110 and matlamiacaught is 1:
+		if HP of player <= 0 or libido of player >= 110 and matlamiacaught is 1:
 			say "With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
 			now matlamiacaught is 2;	[unable to continue fighting]
 	if matlamiacaught is 1:
@@ -299,7 +299,7 @@ this is the lamiaboob rule:	[***]
 		now matlamiacaught is 0;
 	else if matlamiacaught > 0:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;	[100% dmg this round]
-		decrease hp of player by dam;
+		decrease HP of player by dam;
 		increase libido of player by a random number between 8 and 12;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 2;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 2;
@@ -311,7 +311,7 @@ this is the lamiaboob rule:	[***]
 		infect;
 		say "[line break]";
 		say "After this taste of her bounty, she releases you with a happy sigh.  '[one of]There.  Feeling better now[or]Are you ready to snuggle up for a proper meal now[or]Are you ready for some real fun[or]Has that gotten you ready for feeding time[at random][if scalevalue of player < 4], little one[end if]?' she coos, slithering around you with a sensual sway.";
-		if hp of player <= 0 or libido of player >= 110:
+		if HP of player <= 0 or libido of player >= 110:
 			say "The whole of this has left you weakened and aroused, your willpower too expended to continue resisting at this point.";
 			now matlamiacaught is 2;
 		choose row monstercom from the table of critter combat;
@@ -329,7 +329,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Lamia":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Ultimately overtaken by your infection, you're inevitably drawn back to the hospital.  Finally meeting the other lamia there, she greets you with open arms.";
 			say "     'There you are!  Oh, you want to offer a helping hand?  That's great!' Giggling a little, she presses her ample bosom against your similarly infected form, entwining with yours as she welcomes her new assistant.  Over time, the two of you happen upon other, unsuspecting victims to 'care' for.  The outside world is so very harsh anyways, it's much better that they stay inside where it's safe, with the two of you...";
 		else:

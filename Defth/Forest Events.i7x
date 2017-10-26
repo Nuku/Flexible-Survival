@@ -71,7 +71,7 @@ Instead of resolving a Small cave:
 					end the story saying "You were eaten alive!";
 					now Small cave is resolved;
 		else:
-			say "     Going around the forest, never getting the rock wall out of your sights you explore for a new opening. Finally you find what appears to be a cave big enough for you to enter, but somebody might be living inside there, do you still wish to go inside?“;
+			say "     Going around the forest, never getting the rock wall out of your sights you explore for a new opening. Finally you find what appears to be a cave big enough for you to enter, but somebody might be living inside there, do you still wish to go inside?";
 			WaitLineBreak;
 			say "     ([link]Y[as]y[end link]) – Go inside the place.";
 			say "     ([link]N[as]n[end link]) – Give up and go home.";
@@ -91,7 +91,7 @@ Instead of resolving a Small cave:
 					now Small cave is resolved;
 			else:
 				WaitLineBreak;
-				Say "     You go back the way you came, it’s not worth the risk, whatever it was.";
+				Say "     You go back the way you came, it's not worth the risk, whatever it was.";
 	else:
 		say "     Walking around the forest you find what appears to be a hole in a rock, it does have sound coming from the other side so it might be worth exploring. But the hole is too small for you size, you would need to shrink before getting in there.";
 		say "     Going around the place, never getting the rock wall out of your sights you explore for a new opening. Finally you find what appears to be a cave big enough for you to enter, but somebody might be living inside there, do you still wish to go inside?";
@@ -105,7 +105,7 @@ Instead of resolving a Small cave:
 			now Small cave is resolved;
 		else:
 			WaitLineBreak;
-			Say "     You go back the way you came, it’s not worth the risk, whatever it was.";
+			Say "     You go back the way you came, it's not worth the risk, whatever it was.";
 	now battleground is "void";
 
 Forest Events ends here.

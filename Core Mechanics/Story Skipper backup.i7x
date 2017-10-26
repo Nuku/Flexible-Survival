@@ -8,7 +8,7 @@ instead of sniffing Trixie:
 The description of trixie is "[trixiedesc]".
 
 to say trixiedesc:
-	say "     Look, it[']s Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Let[']s skip to the good stuff!'.";
+	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Let's skip to the good stuff!'.";
 	say "     Trixie's got a new button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it.  Hmmm.";
 
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" }.
@@ -16,9 +16,9 @@ The conversation of trixie is { "Hello. I will teach you a magic word. To use it
 To say magic word:
 	if wrcursestatus is 5:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
-	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
+	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxHP of player]}[humanity of player]}[score - 50]}[HP of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[HP of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
 	say "[line break]'It seems this magic word gets longer every time I say it. Here is the second half,' she says, taking a breath before speaking on:[line break]";
-	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[if bee girl is tamed]1[else]0[end if]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]";
+	say "continuedchant}[orthasstart]}[fancyquest]}[HP of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[HP of Sandra]}[franksex]}[HP of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[if bee girl is tamed]1[else]0[end if]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[HP of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[HP of Leonard]}[HP of Solstice]}[HP of Ronda]}[HP of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[HP of Eric]}[HP of Christy]}[dragontype]}[dragonessfuck]}[HP of Doctor Medea]}[HP of Doctor Moffatt]}[HP of Lucy]}[thirst of david]}[lust of david]}[HP of david]}[HP of Adam]}[HP of Alexandra]}[HP of Larissa]}[HP of Sam]}[wrcursestatus]}[wrcurseNermine]}[HP of Doctor Utah]}[HP of Mike]}[HP of Xerxes]}[HP of Helen]}[libido of Helen]}[HP of Rex]}[HP of Karen]";
 	say "[line break]'You'll need to recite that part on its own (including the continuedchant part) after telling me the first one using a second recite command.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.  'Just be sure to copy and paste that somewhere so you can use it to restore.  If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log.'";
 	if wrcursestatus is 5:
 		say "[line break]     Trixie waves her magic wand around and you flash between your normal form and your wereraptor form a few times so she can examine it before leaving you fully as a wereraptor once again.";
@@ -70,8 +70,8 @@ Carry out reciting:
 					now the Level of player is the number understood;
 			-- 8:		[HP]
 				if the player's command matches "[number]":
-					now the maxhp of player is the number understood;
-					now the hp of player is the maxhp of player;
+					now the maxHP of player is the number understood;
+					now the HP of player is the maxHP of player;
 			-- 9:		[Humanity]
 				if the player's command matches "[number]":
 					now the humanity of player is the number understood;
@@ -82,38 +82,38 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now carried of nanite density monitor is 0;
 					now unusual creature is resolved;
-					now the hp of doctor matt is the number understood;
+					now the HP of doctor matt is the number understood;
 					now level of doctor matt is turns;
-					if hp of doctor matt > 0 and hp of doctor matt < 100:
+					if HP of doctor matt > 0 and HP of doctor matt < 100:
 						now Outside Trevor Labs is known;
-					if hp of doctor matt is greater than 4 and hp of doctor matt is less than 100:
+					if HP of doctor matt > 4 and HP of doctor matt < 100:
 						move the microwave to the location of doctor matt;
-					if hp of doctor matt is 6:
+					if HP of doctor matt is 6:
 						now unusual creature is unresolved;
-					if hp of doctor matt is 7:
+					if HP of doctor matt is 7:
 						now susan is in the location of doctor matt;
-					if hp of doctor matt is 13:
+					if HP of doctor matt is 13:
 						now foodneed is 6;
 						now waterneed is 6;
-					if hp of doctor matt >= 16:
+					if HP of doctor matt >= 16:
 						increase freecred by 100 + ( 2 * number of fasttravel rooms );	[awards to minimum 50%]
 						now Zephyr Lobby is known;
-					if hp of doctor matt is 17:
+					if HP of doctor matt is 17:
 						now carried of nanite density monitor is 1;
 						now beach detector site is unresolved;
 						now red light detector site is unresolved;
 						now high rise detector site is unresolved;
 						now park detector site is unresolved;
 						now ndmlist is { "Beach", "Red Light District", "High Rise District", "Park" };
-					if hp of doctor matt is 18:
+					if HP of doctor matt is 18:
 						now beach detector site is resolved;
 						now red light detector site is resolved;
 						now high rise detector site is resolved;
 						now park detector site is resolved;
 						now ndmlist is { };
 						increase freecred by 200;
-						if hp of Larissa is 0, now hp of Larissa is 1;
-					else if hp of doctor matt is 100:
+						if HP of Larissa is 0, now HP of Larissa is 1;
+					else if HP of doctor matt is 100:
 						remove orthas from play;
 						now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 						now the initial appearance of Doctor Matt is "A small recorder labeled 'doctor matt' remains abandoned.";
@@ -229,7 +229,7 @@ Carry out reciting:
 					now coleenspray is the number understood;
 			-- 39:	[Dr. Mouse]
 				if the player's command matches "[number]":
-					now hp of doctor mouse is the number understood;
+					now HP of doctor mouse is the number understood;
 			-- 40:	[Candy / raccoon pet]
 				if the player's command matches "[number]":
 					now coonstatus is the number understood;
@@ -249,10 +249,10 @@ Carry out reciting:
 					now gryphoncomforted is the number understood;
 					now lonely gryphoness is unresolved;
 					now Gryphoness Nest is resolved;
-					if gryphoncomforted is greater than 0:
+					if gryphoncomforted > 0:
 						now lonely gryphoness is resolved;
 						now Gryphoness Nest is unresolved;
-					if gryphoncomforted is greater than 2:
+					if gryphoncomforted > 2:
 						now gryphoness is tamed;
 						now Gryphoness Nest is resolved;
 			-- 46:	[Shifting]
@@ -317,27 +317,27 @@ Carry out reciting:
 			-- 53:	[Boris]
 				if the player's command matches "[number]":
 					now borisquest is the number understood;
-					if borisquest is greater than 4:
+					if borisquest > 4:
 						if christyquest is 0:
 							now christyquest is 1;
 			-- 54:	[Alex]
 				if the player's command matches "[number]":
 					now progress of alex is the number understood;
-					if progress of alex is greater than 0:
+					if progress of alex > 0:
 						now Alex's Condo is known;
 						now meet alex is resolved;
-					if progress of alex is greater than 1:
+					if progress of alex > 1:
 						now find lorenda is resolved;
 			-- 55:	[Angie]
 				if the player's command matches "[number]":
 					now angiehappy is the number understood;
-					if angiehappy is greater than 0:
+					if angiehappy > 0:
 						now angiefound is 1;
 						now zoo entrance is known;
 			-- 56:	[Angie]
 				if the player's command matches "[number]":
 					now angietalk is the number understood;
-					if angietalk is greater than 1:
+					if angietalk > 1:
 						Now AngieTrapped is resolved;
 			-- 57:	[Susan]
 				if the player's command matches "[number]":
@@ -347,11 +347,11 @@ Carry out reciting:
 					now deerhappy is the number understood;
 					move Susan to dark basement;
 					now unusual creature is resolved;
-					if hp of doctor matt is 6:
+					if HP of doctor matt is 6:
 						now unusual creature is unresolved;
 						now deerconsent is 0;
 						now deerhappy is 0;
-					if hp of doctor matt is greater than 6:
+					if HP of doctor matt > 6:
 						if deerhappy is 1:
 							remove Susan from play;
 							now unusual creature is resolved;
@@ -375,13 +375,13 @@ Carry out reciting:
 					now fancyquest is the number understood;
 					now findinghardware is unresolved;
 					now ignoredmemo is unresolved;
-					if fancyquest is greater than 4:
+					if fancyquest > 4:
 						now findinghardware is resolved;
-					if fancyquest is greater than 0:
+					if fancyquest > 0:
 						now ignoredmemo is resolved;
 			-- 62:	[Sven]
 				if the player's command matches "[number]":
-					now hp of Sven is the number understood;
+					now HP of Sven is the number understood;
 			-- 63:	[Sven]
 				if the player's command matches "[number]":
 					now lust of Sven is the number understood;
@@ -407,17 +407,17 @@ Carry out reciting:
 					now tmapfound is the number understood;
 					now noteinbottle is unresolved;
 					now findingboat is unresolved;
-					if tmapfound is greater than 0:
+					if tmapfound > 0:
 						now noteinbottle is resolved;
-					if tmapfound is greater than 2:
+					if tmapfound > 2:
 						now pirate island is known;
 						now findingboat is resolved;
 						now boatfound is 3;
 			-- 71:	[Sandra + Coleen]
 				if the player's command matches "[number]":
-					now hp of Sandra is the number understood;
+					now HP of Sandra is the number understood;
 					now lust of Sandra is turns;
-					if hp of Sandra > 0:
+					if HP of Sandra > 0:
 						now Sandra is in the bunker;
 						now needy rabbit girl is resolved;
 						now rabbit den is known;
@@ -430,15 +430,15 @@ Carry out reciting:
 					now franksex is the number understood;
 			-- 73:	[Fang]
 				if the player's command matches "[number]":
-					now hp of Fang is the number understood;
-					if hp of Fang is 0 or hp of Fang is 100:
+					now HP of Fang is the number understood;
+					if HP of Fang is 0 or HP of Fang is 100:
 						now Fang is in the dark basement;
-					if hp of Fang > 0 and hp of Fang < 100:
+					if HP of Fang > 0 and HP of Fang < 100:
 						now Fang is in the Grey Abbey Library;
 			-- 74:	[Fang + Sandra]
 				if the player's command matches "[number]":
 					now libido of Fang is the number understood;
-					if libido of Fang is 2 and ( hp of Fang is 1 or hp of Fang is 2 ), now libido of Fang is 1;
+					if libido of Fang is 2 and ( HP of Fang is 1 or HP of Fang is 2 ), now libido of Fang is 1;
 					if Fang is not in the Grey Abbey Library and Sandra is not in the Bunker:
 						now libido of Fang is 0;
 			-- 75:	[Philip]
@@ -537,20 +537,20 @@ Carry out reciting:
 						now mouse girl is not tamed;
 			-- 86:	[Elijah]
 				if the player's command matches "[number]":
-					now hp of Elijah is the number understood;
+					now HP of Elijah is the number understood;
 					now NPCintCounter is turns;
 					move Elijah to Burned-Out Chapel;
 					now Angel vs Demons is unresolved;
 					now Burned-Out Chapel is unknown;
-					if hp of Elijah > 0:
+					if HP of Elijah > 0:
 						now Angel vs Demons is resolved;
 						now Burned-Out Chapel is known;
-					if hp of Elijah > 0 and hp of Elijah < 100:
+					if HP of Elijah > 0 and HP of Elijah < 100:
 						move Elijah to Bunker;
-					if hp of Elijah is 100:
+					if HP of Elijah is 100:
 						remove Elijah from play;
-					if hp of Elijah is 2, now Sweet Surprise is unresolved;
-					if hp of Elijah is 2 and furry is not banned, now Examination Room is unresolved;
+					if HP of Elijah is 2, now Sweet Surprise is unresolved;
+					if HP of Elijah is 2 and furry is not banned, now Examination Room is unresolved;
 			-- 87:	[Elijah's interactions]
 				now npcEint is "[the player's command]";
 				npcEint-Restore;
@@ -579,38 +579,38 @@ Carry out reciting:
 					now insectlarva is false;
 			-- 90:	[Leonard]
 				if the player's command matches "[number]":
-					now hp of Leonard is the number understood;
+					now HP of Leonard is the number understood;
 					now level of Hunting Prides is 8;
 					now Hunting Prides is resolved;
 					now PridePark is resolved;
-					if hp of Leonard is 100, now hp of Leonard is 0;
-					if hp of Leonard > 0:
+					if HP of Leonard is 100, now HP of Leonard is 0;
+					if HP of Leonard > 0:
 						now Lion's Den is known;
 						now Feline Friend is resolved;
 					else:
 						now Lion's Den is unknown;
 						now Feline Friend is unresolved;
-					if hp of Leonard is 5:
+					if HP of Leonard is 5:
 						now Music Store is unresolved;
 						now Concert Hall is unresolved;
 						now violinfound is 0;
-					if hp of Leonard is 6:
+					if HP of Leonard is 6:
 						now leonardtimer is turns;
-					if hp of Leonard is 7:
+					if HP of Leonard is 7:
 						now libido of Leonard is 0;
-					if hp of Leonard is 9:
+					if HP of Leonard is 9:
 						now leonardtimer is turns;
-					if hp of Leonard >= 10:
+					if HP of Leonard >= 10:
 						now Hunting Prides is unresolved;
-					if hp of Leonard is 11:
+					if HP of Leonard is 11:
 						now level of Hunting Prides is 10;
-					if hp of Leonard is 12 or hp of Leonard is 13:
+					if HP of Leonard is 12 or HP of Leonard is 13:
 						now level of Hunting Prides is 12;
-					if hp of Leonard >= 14:
+					if HP of Leonard >= 14:
 						now Hunting Prides is resolved;
 						now level of Hunting Prides is 12;
-					if hp of Leonard is 15, now hp of Leonard is 16;
-					if hp of Leonard >= 16 and hp of Leonard <= 100:
+					if HP of Leonard is 15, now HP of Leonard is 16;
+					if HP of Leonard >= 16 and HP of Leonard <= 100:
 						if "Male Preferred" is listed in feats of player, remove "Male Preferred" from feats of player;
 						let foundfel be 0;
 						repeat with y running from 1 to number of filled rows in table of random critters:
@@ -633,64 +633,64 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					remove Solstice from play;
 					now carried of Crow Artifact is 0;
-					now hp of Solstice is the number understood;
+					now HP of Solstice is the number understood;
 					now Adventurer is resolved;
 					now Onyx Crow is resolved;
-					if hp of Solstice is 1:
+					if HP of Solstice is 1:
 						now Onyx Crow is unresolved;
-					if hp of Solstice is 2:
+					if HP of Solstice is 2:
 						now carried of Crow Artifact is 1;
 						now Adventurer is unresolved;
-					if hp of Solstice is 3 or hp of Solstice is 4:
+					if HP of Solstice is 3 or HP of Solstice is 4:
 						now lastfuck of Solstice is turns;
-					if hp of Solstice > 4:
+					if HP of Solstice > 4:
 						move Solstice to Grey Abbey Library;
 			-- 92:	[Ronda the Slut Rat]
 				if the player's command matches "[number]":
 					now carried of lizard juice is 0;
-					now hp of Ronda is the number understood;
+					now HP of Ronda is the number understood;
 					now Art Collector is resolved;
-					if hp of Ronda > 0 and hp of Ronda < 10:
+					if HP of Ronda > 0 and HP of Ronda < 10:
 						remove Ronda Mallrat from play;
 						move Rod Mallrat to Mall FoodCourt;
-					if hp of Ronda is 0 or hp of Ronda is 10:
+					if HP of Ronda is 0 or HP of Ronda is 10:
 						move Ronda Mallrat to Mall Atrium;
 						move Rod Mallrat to Mall FoodCourt;
-					if hp of Ronda is 100:
+					if HP of Ronda is 100:
 						move Ronda Mallrat to SlutRat Den;
 						move Rod Mallrat to SlutRat Den;
-					if hp of Ronda > 0:
+					if HP of Ronda > 0:
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;
 							if name entry is "Slut Rat":
 								now area entry is "Mall";
 								break;
-					if hp of Ronda is 5:
+					if HP of Ronda is 5:
 						now carried of lizard juice is 1;
-					if hp of Ronda is 6:
+					if HP of Ronda is 6:
 						now Art Collector is unresolved;
-					if hp of Ronda >= 8:
+					if HP of Ronda >= 8:
 						now SlutRat Den is known;
 			-- 93:	[Athanasia]
 				if the player's command matches "[number]":
 					now carried of phoenix egg is 0;
-					now hp of Athanasia is the number understood;
+					now HP of Athanasia is the number understood;
 					remove Athanasia from play;
-					if hp of Athanasia is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned:
+					if HP of Athanasia is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned:
 						now Captured Bird is unresolved;
 					else:
 						now Captured Bird is resolved;
-					if hp of Athanasia is 1 and guy is not banned:
+					if HP of Athanasia is 1 and guy is not banned:
 						now FireAndIce is unresolved;
 					else:
 						now FireAndIce is resolved;
-					if hp of Athanasia is 2:
+					if HP of Athanasia is 2:
 						now carried of phoenix egg is 1;
-					if hp of Athanasia >= 3:
+					if HP of Athanasia >= 3:
 						now lastfuck of Athanasia is turns;
 						now Government Assistance is resolved;
 						now Approaching the Capitol Building is known;
-					if hp of Athanasia >= 4:
+					if HP of Athanasia >= 4:
 						now lastfuck of Athanasia is turns + 8;
 						move Athanasia to Volcanic Cave;
 			-- 94:	[Skunkbeast Lord]
@@ -750,8 +750,8 @@ Carry out reciting:
 						now Foxy Hideaway is known;
 			-- 96:	[Release number]
 				if the player's command matches "[number]":
-					if release number is greater than the number understood:
-						if score is less than 0, now score is 0;
+					if release number > the number understood:
+						if score < 0, now score is 0;
 			-- 97:	[Kara]
 				if the player's command matches "[number]":
 					now tattoohunter is the number understood;
@@ -812,46 +812,46 @@ Carry out reciting:
 						now diegotalk is 1;
 			-- 101:	[Eric]
 				if the player's command matches "[number]":
-					now hp of Eric is the number understood;
+					now HP of Eric is the number understood;
 					move Eric to Sports Arena Lockerroom;
-					if hp of Eric > 0:
+					if HP of Eric > 0:
 						now Barricaded Lockerroom is resolved;
 						now Sports Arena Lockerroom is known;
-					if hp of Eric is 100:
+					if HP of Eric is 100:
 						remove Eric from play;
-					else if hp of Eric > 0:
+					else if HP of Eric > 0:
 						move Eric to Bunker;
 						now thirst of Eric is 1;
-					if hp of Eric is 21 or hp of Eric is 22:
+					if HP of Eric is 21 or HP of Eric is 22:
 						now thirst of Eric is 21;
-					if hp of Eric is 11:
+					if HP of Eric is 11:
 						now thirst of Eric is 11;
 			-- 102:	[Christy the Stuck Dragoness]
 				if the player's command matches "[number]":
-					now hp of Christy is the number understood;
+					now HP of Christy is the number understood;
 					now dragontype is 0;
 					now lust of Christy is 0;
 					now libido of Christy is 0;
 					now thirst of Christy is 0;
 					now dragoness is in Old Building;
 					now Dragon Prey is resolved;
-					if hp of Christy is 0:
+					if HP of Christy is 0:
 						now Find Building is unresolved;
 						now Another Ladder is unresolved;
 						now Isolated Street is unknown;
 						now Back Alley is unknown;
 						now NoIntroduction is 0;
-					else if hp of Christy > 0:
+					else if HP of Christy > 0:
 						now Find Building is resolved;
 						now Another Ladder is resolved;
 						now Isolated Street is known;
 						now Back Alley is known;
 						now NoIntroduction is 1;
-					if hp of Christy >= 2:
+					if HP of Christy >= 2:
 						remove dragoness from play;
-					if hp of Christy is 90:
+					if HP of Christy is 90:
 						now Dragon Prey is unresolved;
-					if hp of Christy >= 90:
+					if HP of Christy >= 90:
 						now Isolated Street is unknown;
 						now Back Alley is unknown;
 			-- 103:	[Christy: Slutty Dragoness / Horny Dragon]
@@ -862,27 +862,27 @@ Carry out reciting:
 					now dragonessfuck is the number understood;
 			-- 105:	[Dr. Medea]
 				if the player's command matches "[number]":
-					now hp of Doctor Medea is the number understood;
-					if hp of Doctor medea > 6, now hp of Doctor Medea is 0;	[reset for save bug]
-					if hp of Doctor Medea > 0:
+					now HP of Doctor Medea is the number understood;
+					if HP of Doctor medea > 6, now HP of Doctor Medea is 0;	[reset for save bug]
+					if HP of Doctor Medea > 0:
 						now Pediatrics Lobby is known;
-					if hp of Doctor Medea is 3:
+					if HP of Doctor Medea is 3:
 						now Obstetrics Department is unresolved;
 					else:
 						now Obstetrics Department is resolved;
 			-- 106:	[Dr. Moffatt]
 				if the player's command matches "[number]":
-					now hp of Doctor Moffatt is the number understood;
-					if hp of Doctor Moffatt is 99 or hp of Doctor Moffatt is 100:
-						now hp of Doctor Moffatt is 0;
+					now HP of Doctor Moffatt is the number understood;
+					if HP of Doctor Moffatt is 99 or HP of Doctor Moffatt is 100:
+						now HP of Doctor Moffatt is 0;
 					if guy is banned or girl is banned or hermaphrodite is banned or furry is banned:
 						now Psych Department is unknown;
 						now Another Doctor is resolved;
-						now hp of Doctor Moffatt is 100;
-					else if hp of Doctor Moffatt is 0:
+						now HP of Doctor Moffatt is 100;
+					else if HP of Doctor Moffatt is 0:
 						now Psych Department is unknown;
 						now Another Doctor is unresolved;
-					else if hp of Doctor Moffatt > 0:
+					else if HP of Doctor Moffatt > 0:
 						now Psych Department is known;
 						now Another Doctor is resolved;
 						now hospnav is 1;
@@ -890,8 +890,8 @@ Carry out reciting:
 						now lust of Doctor Moffatt is 0;
 			-- 107:	[Lucy the Mall Rat]
 				if the player's command matches "[number]":
-					now hp of Lucy is the number understood;
-					if hp of Lucy > 0:
+					now HP of Lucy is the number understood;
+					if HP of Lucy > 0:
 						move Lucy to Mall Atrium;
 					else:
 						remove Lucy from play;
@@ -901,21 +901,21 @@ Carry out reciting:
 			-- 109:	[David's lust]
 				if the player's command matches "[number]":
 					now lust of david is the number understood;
-			-- 110:	[David's hp]
+			-- 110:	[David's HP]
 				if the player's command matches "[number]":
-					now hp of David is the number understood;
-					if hp of David is 0 and ( guy is not banned and hellspawn is not banned ):
+					now HP of David is the number understood;
+					if HP of David is 0 and ( guy is not banned and hellspawn is not banned ):
 						remove David from play;
 						now Captured Demon is unresolved;
 						now Thankful Soldier is resolved;
 					else:
 						now Captured Demon is resolved;
 						now Thankful Soldier is resolved;
-					if hp of David > 0 and hp of David < 4, move David to Parade Ground;
-					if hp of David is 4, move David to Bunker;
+					if HP of David > 0 and HP of David < 4, move David to Parade Ground;
+					if HP of David is 4, move David to Bunker;
 			-- 111:	[Camp Bravo / Adam]
 				if the player's command matches "[number]":
-					now hp of Adam is the number understood;
+					now HP of Adam is the number understood;
 					now Red Light Requisition is resolved;
 					now Trickster's Masterpiece is resolved;
 					now Back at the Camp is resolved;
@@ -926,29 +926,29 @@ Carry out reciting:
 					remove Adam from play;
 					if guy is banned or furry is banned:
 						now Red Light Requisition is resolved;
-					else if hp of Adam is 0:
+					else if HP of Adam is 0:
 						now Red Light Requisition is unresolved;
-					else if hp of Adam is 1:
+					else if HP of Adam is 1:
 						now Trickster's Masterpiece is unresolved;
-					else if hp of Adam is 2:
+					else if HP of Adam is 2:
 						now Back at the Camp is unresolved;
-					else if hp of Adam is 3:
+					else if HP of Adam is 3:
 						now Camp Bravo Entrance is known;
-					else if hp of Adam is 4:
+					else if HP of Adam is 4:
 						now Camp Bravo Entrance is known;
 						now CampBravoWomenAllowed is 1;
 						now ElainePregnant is 48;
-					else if hp of Adam is 5:
+					else if HP of Adam is 5:
 						now thirst of Elaine is 3;
 						now Camp Bravo Entrance is known;
 						now CampBravoWomenAllowed is 1;
 						move Adam to Quartermaster's Tent;
 			-- 112:	[Doberman Cop / Alexandra]
 				if the player's command matches "[number]":
-					now hp of Alexandra is the number understood;
+					now HP of Alexandra is the number understood;
 					now lust of Alexandra is 0;
 					now libido of Alexandra is 0;
-					if hp of Alexandra > 0:
+					if HP of Alexandra > 0:
 						move Alexandra to Grey Abbey Library;
 						[puts Doberman as lead monster in case of impregnation]
 						repeat with y running from 1 to number of filled rows in table of random critters:
@@ -959,34 +959,34 @@ Carry out reciting:
 								break;
 					else:
 						remove Alexandra from play;
-					if hp of Alexandra is 3 and hp of Alexandra is 5:
+					if HP of Alexandra is 3 and HP of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
-					if hp of Alexandra is 4 or hp of Alexandra is 5:
+					if HP of Alexandra is 4 or HP of Alexandra is 5:
 						now libido of Alexandra is a random number between 2 and 4;	[minimum children restored]
 			-- 113:	[Larissa (Multiform NPC)]
 				if the player's command matches "[number]":
-					now hp of Larissa is the number understood;
-				if hp of Larissa > 3, now hp of Larissa is 3;
-				if hp of Larissa > 1, nanitecoll_discount;
+					now HP of Larissa is the number understood;
+				if HP of Larissa > 3, now HP of Larissa is 3;
+				if HP of Larissa > 1, nanitecoll_discount;
 				follow the larissa_tfoption rule;
 			-- 114:	[Sam (Dual-taur NPC)]
 				if the player's command matches "[number]":
-					now hp of Sam is the number understood;
-					if hp of Sam is 0:
+					now HP of Sam is the number understood;
+					if HP of Sam is 0:
 						now Another Researcher is unresolved;
 						now Mini-Lab is unknown;
 					else:
 						now Another Researcher is resolved;
 						now Mini-Lab is known;
-					if hp of Sam <= 4:
+					if HP of Sam <= 4:
 						now Sam is in Mini-Lab;
-					else if hp of Sam < 70:
+					else if HP of Sam < 70:
 						now Sam is in Bunker;
 					else:
 						remove Sam from play;
-					if hp of Sam is 16 or hp of Sam is 98, dragontaur_active;
-					if hp of Sam is 36 or hp of Sam is 93, vixentaur_active;
-					if hp of Sam is 56, tripletaur_active;
+					if HP of Sam is 16 or HP of Sam is 98, dragontaur_active;
+					if HP of Sam is 36 or HP of Sam is 93, vixentaur_active;
+					if HP of Sam is 56, tripletaur_active;
 			-- 115:	[Wereraptor curse]
 				if the player's command matches "[number]":
 					now wrcursestatus is the number understood;
@@ -995,7 +995,7 @@ Carry out reciting:
 					now wrcurseNermine is the number understood;
 			-- 117:	[Dr. Utah]
 				if the player's command matches "[number]":
-					now hp of Doctor Utah is the number understood;
+					now HP of Doctor Utah is the number understood;
 					now Paleontology Professor is unresolved;
 					now utahmet is false;
 					now Greenhouse is resolved;
@@ -1027,7 +1027,7 @@ Carry out reciting:
 						now carried of silver knife is 1;
 						now Dinosaur Skeleton is unresolved;
 					if wrcurseNermine is not 12 and wrcurseNermine is not 14:
-						now hp of Doctor Utah is 0;
+						now HP of Doctor Utah is 0;
 						now libido of Doctor Utah is 0;
 						now lust of Doctor Utah is 0;
 					if wrcurseNermine is 12 or wrcurseNermine is 14:
@@ -1035,25 +1035,25 @@ Carry out reciting:
 						now libido of Doctor Utah is 0;
 						now lust of Doctor Utah is 0;
 						if girl is not banned:
-							if hp of Doctor Utah > 1:
-								if hp of Doctor Utah is odd:
+							if HP of Doctor Utah > 1:
+								if HP of Doctor Utah is odd:
 									now lust of Doctor Utah is 1;
 								else:
 									now lust of Doctor Utah is 0;
-								let iterations be hp of Doctor Utah / 2;
+								let iterations be HP of Doctor Utah / 2;
 								now libido of Doctor Utah is 0;
 								repeat with itx running from 1 to iterations:
 									increase libido of Doctor Utah by a random number between 2 and 4;
 						else:
-							now hp of Doctor Utah is 0;		[no advanced male content yet]
+							now HP of Doctor Utah is 0;		[no advanced male content yet]
 					if weapon object of player is silver knife and silver knife is not owned, now weapon object of player is journal;
 			-- 118:	[Mike]
 				if the player's command matches "[number]":
-					now hp of Mike is the number understood;
-					if hp of Mike is 100 or guy is banned or furry is banned:	[Mike lost]
+					now HP of Mike is the number understood;
+					if HP of Mike is 100 or guy is banned or furry is banned:	[Mike lost]
 						now Mike's Home is unknown;
 						now Dog Walking is resolved;
-					else if hp of Mike is 99:					[Mike enemy]
+					else if HP of Mike is 99:					[Mike enemy]
 						now Mike's Home is unknown;
 						now Dog Walking is resolved;
 						repeat with y running from 1 to number of filled rows in table of random critters:
@@ -1063,7 +1063,7 @@ Carry out reciting:
 								now area entry is "Warehouse";
 								now non-infectious entry is false;
 								break;
-					else if hp of Mike > 2 and hp of Mike < 98:
+					else if HP of Mike > 2 and HP of Mike < 98:
 						now Dog Walking is resolved;
 						now Mike's Home is known;
 					else:
@@ -1071,31 +1071,31 @@ Carry out reciting:
 						now Mike's Home is unknown;
 			-- 119:	[Xerxes]
 				if the player's command matches "[number]":
-					now hp of Xerxes is the number understood;
-					if hp of Xerxes is 0, remove Xerxes from play;
-					if hp of Xerxes > 0, move Xerxes to Grey Abbey Library;
+					now HP of Xerxes is the number understood;
+					if HP of Xerxes is 0, remove Xerxes from play;
+					if HP of Xerxes > 0, move Xerxes to Grey Abbey Library;
 			-- 120:	[Helen]
 				if the player's command matches "[number]":
-					now hp of Helen is the number understood;
+					now HP of Helen is the number understood;
 			-- 121:	[Helen]
 				if the player's command matches "[number]":
 					now libido of Helen is the number understood;
 					now HelenPregnant is 0;
-					if hp of Helen is 0:
+					if HP of Helen is 0:
 						remove Helen from play;
 						now thirst of Helen is 0;
 						now libido of Helen is 0;
-					if hp of Helen > 0:
+					if HP of Helen > 0:
 						move Helen to Grey Abbey Library;
 						if libido of Helen > 0:
 							now thirst of Helen is 1;
 			-- 122:	[Rex]
 				if the player's command matches "[number]":
-[					now hp of Rex is the number understood;	]
+[					now HP of Rex is the number understood;	]
 					let y be 0;
 			-- 123:	[Karen]
 				if the player's command matches "[number]":
-[					now hp of Karen is the number understood;	]
+[					now HP of Karen is the number understood;	]
 					let y be 0;
 		if upit is 1, decrease z by 58;
 	if hospquest is 3, now hospquest is 2;
@@ -1117,7 +1117,7 @@ Carry out reciting:
 		now infection terminal is in Hidden Lab;
 	if hospquest > 13 and deerhappy is 2:
 		 move Susan to Hidden Lab;
-	if hp of doctor matt > 11 and hp of doctor matt < 100, add "Mental Booster" to the feats of the player;
+	if HP of doctor matt > 11 and HP of doctor matt < 100, add "Mental Booster" to the feats of the player;
 	now Candy is in dark basement;
 	if coonstatus > 100:
 		now pink raccoon is tamed;
@@ -1133,34 +1133,34 @@ Carry out reciting:
 	if hospquest > 1, now locked stairwell is unlocked;
 	if hospquest is 13 or hospquest is 0 or hospquest is 1, now locked stairwell is locked;
 	if mattcollection is 1, now carried of infection monitor is 1;
-	if hp of doctor matt is 104, move Sally to bunker;
-	if hp of doctor matt is not 104, remove Sally from play;
+	if HP of doctor matt is 104, move Sally to bunker;
+	if HP of doctor matt is not 104, remove Sally from play;
 	now Sven is in Sven's Place;
 	now Svetlana is in dark basement;
 	now Hidden Kitty is unresolved;
 	now Sven's Place is unknown;
-	if hp of Sven > 0:
+	if HP of Sven > 0:
 		now Hidden Kitty is resolved;
 		now Sven's Place is known;
-	if hp of Sven is 1:
+	if HP of Sven is 1:
 		now lastSvendrink is turns + 8;
-	if hp of Sven is 2 or hp of Sven is 3:
+	if HP of Sven is 2 or HP of Sven is 3:
 		now lastSvendrink is turns;
-	if hp of Sven > 3 and hp of Sven < 50:
+	if HP of Sven > 3 and HP of Sven < 50:
 		move Sven to Bunker;
-	if hp of Sven is 50 or hp of Sven is 51:
+	if HP of Sven is 50 or HP of Sven is 51:
 		move Sven to Porn Store;
 		now Mouse Taur is resolved;
 		now Porn Store is known;
-	if hp of Sven > 51 and hp of Sven < 98:
+	if HP of Sven > 51 and HP of Sven < 98:
 		move Sven to dark basement;
 		move Svetlana to Porn Store;
 		now Mouse Taur is resolved;
 		now Porn Store is known;
-	if hp of Sven > 98:
+	if HP of Sven > 98:
 		move Sven to dark basement;
 		remove Sven from play;
-	if hp of Sven is 8 and Candy is in the bunker:
+	if HP of Sven is 8 and Candy is in the bunker:
 		now lastSvendrink is turns;
 	now Sarah is in dark basement;
 	now Pet Shop is unresolved;
@@ -1314,8 +1314,8 @@ carry out trixiecheating:
 				decrease charisma of player by 1;
 				decrease perception of player by 1;
 				if remainder after dividing stamina of player by 2 is 1:
-					decrease maxhp of player by level of player plus 1;
-					if hp of player > maxhp of player, now hp of player is maxhp of player;
+					decrease maxHP of player by level of player plus 1;
+					if HP of player > maxHP of player, now HP of player is maxHP of player;
 			else:
 				add "Lil Better" to feats of player;
 				decrease score by 400;
@@ -1327,7 +1327,7 @@ carry out trixiecheating:
 				increase charisma of player by 1;
 				increase perception of player by 1;
 				if remainder after dividing stamina of player by 2 is 0:
-					increase maxhp of player by level of player plus 1;
+					increase maxHP of player by level of player plus 1;
 		else if calcnumber is 5:
 			if playon is 1:
 				now playon is 0;
@@ -1444,8 +1444,8 @@ carry out Trixiecheck1:
 	say "Basic player stats:[line break]";
 	say "STR: [strength of player]   DEX: [dexterity of player]   STM: [stamina of player][line break]";
 	say "CHR: [charisma of player]   PER: [perception of player]   INT: [intelligence of player][line break]";
-	say "LVL: [level of player]   HP: [maxhp of player]   Hum: [humanity of player]   Score: [score][line break]";
-	say "HP of Dr Matt: [hp of doctor matt][line break]";
+	say "LVL: [level of player]   HP: [maxHP of player]   Hum: [humanity of player]   Score: [score][line break]";
+	say "HP of Dr Matt: [HP of doctor matt][line break]";
 	say "Body: [bodyname of player]  Face: [facename of player]  Skin: [skinname of player][line break]";
 	say "Tail: [tailname of player]  Cock: [cockname of player][line break]";
 	say "Tanuki: [SatisfiedTanuki]   Hospquest: [hospquest][line break]";
@@ -1455,30 +1455,30 @@ carry out Trixiecheck1:
 	say "Weapon: [weapon object of player]   Snow: [location of Snow]   Sandra: [location of Sandra][line break]";
 	say "Hyper Squirrel: [if Hyper Squirrel Girl is resolved]1[else]0[end if]  Needy Bunny: [if Needy Rabbit Girl is resolved]1[else]0[end if][line break]";
 	say "COLEEN: Location: [location of coleen]   Talk: [coleentalk]   Found: [coleenfound]   Collared: [coleencollared]   Alpha: [coleenalpha]   Slut: [coleenslut]   Spray: [coleenspray][line break]";
-	say "HP of Dr Mouse: [hp of doctor mouse]   Candy: [coonstatus]   featunlock: [featunlock]   Butterfly: [butterflymagic][line break]";
+	say "HP of Dr Mouse: [HP of doctor mouse]   Candy: [coonstatus]   featunlock: [featunlock]   Butterfly: [butterflymagic][line break]";
 	say "Catnum: [catnum]   Mateable: [mateable]   gryphoncomforted: [gryphoncomforted]   shiftable: [shiftable]   Medea: [medeaget][line break]";
 	say "MTP: [mtp]   HYG: [hyg]   NES: [nes]   MTRP: [mtrp]   Boristalk: [boristalk]   Borisquest: [borisquest]   Alex: [progress of alex][line break]";
 	say "Angiehappy: [angiehappy]   Angietalk: [angietalk]   Deerconsent: [deerconsent]   Deerhappy: [deerhappy][line break]";
 	say "Mattcollection: [mattcollection]   Orthas: [orthasstart][line break]";
-	say "Fancy: [fancyquest]   HP of Sven: [hp of sven]  Lust of Sven: [lust of sven][line break]";
+	say "Fancy: [fancyquest]   HP of Sven: [HP of sven]  Lust of Sven: [lust of sven][line break]";
 	say "SARAH: Slut: [sarahslut]   Talk: [sarahtalk]   Pups: [sarahpups][line break]";
 	say "VOIDED: 0   Alexbrunch: [alexbrunch]   Treasure found: [treasurefound]   Treasure map: [tmapfound][line break]";
-	say "Sandra: [hp of Sandra]   Frank: [franksex]   Fang: [hp of Fang][line break]";
+	say "Sandra: [HP of Sandra]   Frank: [franksex]   Fang: [HP of Fang][line break]";
 
 carry out Trixiecheck2:
 	say "<Repetition of section>   Orthas: [orthasstart][line break]";
-	say "Fancy: [fancyquest]   HP of Sven: [hp of sven]  Lust of Sven: [lust of sven][line break]";
+	say "Fancy: [fancyquest]   HP of Sven: [HP of sven]  Lust of Sven: [lust of sven][line break]";
 	say "SARAH: Slut: [sarahslut]   Talk: [sarahtalk]   Pups: [sarahpups][line break]";
 	say "VOIDED: 0   Alexbrunch: [alexbrunch]   Treasure found: [treasurefound]   Treasure map: [tmapfound][line break]";
-	say "Sandra: [hp of Sandra]   Frank: [franksex]   Fang: [hp of Fang]   <end repetition>[line break]";
+	say "Sandra: [HP of Sandra]   Frank: [franksex]   Fang: [HP of Fang]   <end repetition>[line break]";
 	say "Libido of Fang: [libido of Fang]   Pigfed: [pigfed]   Pigfucked: [pigfucked][line break]";
 	say "PETS:[line break]";
 	say "Cute crab: [if cute crab is tamed]1[else]0[end if]   Exotic bird: [if exotic bird is tamed]1[else]0[end if]   Felinoid: [if Felinoid companion is tamed]1[else]0[end if][line break]";
 	say "Bee girl: [if bee girl is tamed]1[else]0[end if]   House cat: [if house cat is tamed]1[else]0[end if]   Little fox: [if little fox is tamed]1[else]0[end if][line break]";
 	say "Skunk kit: [if skunk kit is tamed]1[else]0[end if]   Helper dog: [if helper dog is tamed]1[else]0[end if]   Rachel: [mousecurse][line break]";
-	say "Rachel: [mousecurse]     Elijah: [hp of Elijah]    Elijah interactions: [npcEint][line break]";
+	say "Rachel: [mousecurse]     Elijah: [HP of Elijah]    Elijah interactions: [npcEint][line break]";
 	say "Latex Husky Mode: [if latexhuskymode is true]ON[else]OFF[end if]     Parasite?: [if insectlarva is true]YES[else]NO[end if][line break]";
-	say "Leonard: [hp of Leonard]     Solstice: [hp of Solstice]     Ronda: [hp of Ronda][line break]";
+	say "Leonard: [HP of Leonard]     Solstice: [HP of Solstice]     Ronda: [HP of Ronda][line break]";
 	say "Skunkbeast Lord: [if skunkbeaststatus is 1]YES[else]NO[end if]     Kitsune: [ktp][line break]";
 	say "Diego: [if Diegochanged is 0]Male[else if Diegochanged is 1]Herm[else]Female[end if]     Eric: ???[line break]";
 

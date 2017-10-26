@@ -50,12 +50,12 @@ Instead of resolving a Partial Ruin:
 	let bonus be ( Dexterity of player + Strength of player - 20 ) divided by 2;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]:";
-	if dice + bonus is greater than 14:
+	if dice + bonus > 14:
 		say "     You push and dodge your way past the debris to get out of the collapsing building before it all comes tumbling down atop you. From a safe distance, you watch the last of it collapse down. The strange rumble seemed more like a cave-in or sinkhole than an earthquake, so you start looking around for clues when suddenly you hear some barking sounds around you moments before the ground gives out beneath you.";
 	else:
 		say "     You try your best to dodge and push your way through the falling building, but are struck by some falling rubble on your way out (10 dmg). Rubbing your aching shoulder and side, you watch as the last of it comes tumbling down. The strange rumble seemed more like a cave-in or sinkhole than an earthquake, so you start looking around for clues when suddenly you hear some barking sounds around you moments before the ground gives out beneath you.";
-		decrease hp of player by 10;
-		if "Toughened" is listed in feats of player, increase hp of player by 1;
+		decrease HP of player by 10;
+		if "Toughened" is listed in feats of player, increase HP of player by 1;
 	challenge "Prairie Dog";
 	if lost is 1:
 		say "     Before leaving the area, the prairie dogs rummage through the ruins of the building, taking the last few items of value before disappearing back under the earth, leaving the rubble to be reclaimed by the plain and made into more pristine grasslands.";

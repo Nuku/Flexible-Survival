@@ -21,13 +21,13 @@ Version 1 of Kyrverth by Speedlover begins here.
 [Orientation - Straight (at first)							]
 [Fightable - No												]
 [Infectious - Not at the moment								]
-[Ref pic, not owned by FS so don't put in the game - http://d.facdn.net/art/justmegabenewell/1456722931/1456722931.justmegabenewell_yurii2.png	]
-[Ref pic 2, same as above, dont put in the game: https://d.facdn.net/art/incorgnito/1506117821/1506117821.incorgnito_forces1websize.png ]
+[Ref pic, not owned by FS so don't put in the game - https://d.facdn.net/art/justmegabenewell/1456722931/1456722931.justmegabenewell_yurii2.png	]
+[Ref pic 2, same as above, don't put in the game: https://d.facdn.net/art/incorgnito/1506117821/1506117821.incorgnito_forces1websize.png ]
 [Pic one for descriptions and sizing]
 
 Section 1 - Basic Setup
 
-Kyrverth is a man. The hp of Kyrverth is usually 0.
+Kyrverth is a man. The HP of Kyrverth is usually 0.
 The description of Kyrverth is "[KyrverthDesc]".
 The conversation of Kyrverth is { "<This is nothing but a placeholder!>" }.
 The scent of Kyrverth is "[KyrverthSmellDesc]".
@@ -116,7 +116,7 @@ to say KyrverthTalk: [Quest turnin check]
 			say "[KyrverthNormalChat]";
 	else if (carried of dragon scale >= 5 and KyrverthStage is 2 and KyrverthQuestGiven is 1): [Quest 3 (final) end]
 		say "     You walk into the Dragon's Den, holding the scales in your hands. A few steps into the room your foot accidentally knocks a box of supplies, making a dull thud. Kyrverth immediately looks up and spots you. Eyeing the scales in your hands, he gives you a big [one of]grin[or]smile[at random] and walks over with some supplies. As he gets to you he hands you the supplies and grabs the scales, almost greedily. This time you know better than to look away. You take a few steps back and drop the supplies to the floor, watching Kyrverth closely. Unlike the previous times his hoard grew, this time Kyrverth changes much more drastically. His entire body seems to bulge in size, growing taller and wider at the same time. He also seems to notice this time, and looks down as his physical power increases. The dragons muscles now seem to be much more toned with an athletic look to them. A small gust of air moves past your face as the drake stretches his wings and his head scratches the ceiling as he touches 10 feet tall.";
-		say "     The changes seem to slow down for a second, but as you stand there and watch they simply change direction. Kyrverths hands and feet increase in size disproportionately to his body, claws becoming strong and dangerous but at the same time they force him onto four legs. His tail extends longer, helping him to balance, but a few cracks later and Kyrverth is doomed to walk on four legs from now on - not that he seems to mind. Almost 7 foot tall at his shoulder and 20 feet long, the dragon suddenly roars in pleasure and in surprise looks between his front legs back to his groin. In front of two tiny balls, a black penis grows from a vent between his legs. It grows to it's full size, an unimpressive 6 inches, before both penis and balls surge in size. Each ball grows to stretch his sack [one of]to it's limit[or]taut[or]tight[at random], then keeps growing until each one is the size of a baseball, and in his pleasure he begins humping into the air. You watch in amazement as the tapered tip begins to extend out from his vent as his penis grows an inch with every thrust until it is almost 2 feet long! A bulbous knot quickly expands at the base and as Kyrverth goes to grab his penis, but in his haze of pleasure, he barely touches it before he explodes, covering the floor below in semen from his massive sack.";
+		say "     The changes seem to slow down for a second, but as you stand there and watch they simply change direction. Kyrverths hands and feet increase in size disproportionately to his body, claws becoming strong and dangerous but at the same time they force him onto four legs. His tail extends longer, helping him to balance, but a few cracks later and Kyrverth is doomed to walk on four legs from now on - not that he seems to mind. Almost 7 foot tall at his shoulder and 20 feet long, the dragon suddenly roars in pleasure and in surprise looks between his front legs back to his groin. In front of two tiny balls, a black penis grows from a vent between his legs. It grows to it's full size, an unimpressive 6 inches, before both penis and balls surge in size. Each ball grows to stretch his sack [one of]to its limit[or]taut[or]tight[at random], then keeps growing until each one is the size of a baseball, and in his pleasure he begins humping into the air. You watch in amazement as the tapered tip begins to extend out from his vent as his penis grows an inch with every thrust until it is almost 2 feet long! A bulbous knot quickly expands at the base and as Kyrverth goes to grab his penis, but in his haze of pleasure, he barely touches it before he explodes, covering the floor below in semen from his massive sack.";
 		WaitLineBreak;
 		say "     The red dragon stays there for a few seconds, his massive [one of]penis[or]cock[at random] dripping on the floor, panting in exertion, before he finally opens his eyes and carefully [one of]moves[or]walks[or]navigates[at random] his new body over to you. His new voice sends [one of]shivers[or]goosebumps[at random] down your spine, a deep rumble from his [one of]massive[or]muscled[or]expansive[or]huge[at random] chest 'I thank you for your assistance, but I believe I can easily expand my hoard by myself from now on. I owe you a debt of gratitude, just let me know what it is you want and I will do my [one of]best[or]utmost[at random] to [one of]provide[or]give[or]produce[or]precure[at random] it.'";
 		LineBreak;
@@ -149,16 +149,16 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 		else if randomnumber >= 11 and randomnumber <= 15:
 			say "     'I used to be a sculptor. People always made fun of me - my height, my looks, but they never made fun of my sculptures. I was just delivering a sculpture when this all kicked off, and I think it might have affected me. I'm still myself though, so I have to be thankful for that I suppose.'";
 		else if randomnumber >= 16 and randomnumber <= 20:
-			say "     'Don't you love the idea of a hoard? A massive fire breathing dragon sitting on top of a huge mount of diamonds, rubies, emeralds, and other gems. Piles of gold around, intricate armour around the place left from dead heroes who tried to steal. Priceless artifacts, forbidden texts and legendary weapons, now that would be a proper hoard...' Kyrverth fades off, dreaming of massive hoards seen in fantasy books.";
+			say "     'Don't you love the idea of a hoard? A massive fire breathing dragon sitting on top of a huge mound of diamonds, rubies, emeralds, and other gems. Piles of gold around, intricate armour around the place left from dead heroes who tried to steal. Priceless artifacts, forbidden texts and legendary weapons, now that would be a proper hoard...' Kyrverth fades off, dreaming of massive hoards seen in fantasy books.";
 		else if randomnumber >= 21 and randomnumber <= 25:
 			say "     'Have you seen anything interesting in the city? Anything valuable?'";
 		else if randomnumber >= 26 and randomnumber <= 30:
-			say "     Kyrverth smiles at you 'I had a pretty good find today, brought back a pretty decent amount of supplies'";
+			say "     Kyrverth smiles at you. 'I had a pretty good find today, brought back a pretty decent amount of supplies.'";
 		else if randomnumber >= 31 and randomnumber <= 35:
 			if KyrverthStage is 0:
-				say "     'I wish I [one of]was a stronger dragon[or]wasnt so weak[at random]'";
+				say "     'I wish I [one of]was a stronger dragon[or]wasn't so weak[at random]'";
 			else if KyrverthStage is 1:
-				say "     'I wish I [one of]was a bigger dragon[or]wasnt so small[at random]'";
+				say "     'I wish I [one of]was a bigger dragon[or]wasn't so small[at random]'";
 			else if KyrverthStage is 2:
 				say "     'Look at these muscles, this is awesome!' Kyrverth exclaims, flexing to show off his toned muscles.";
 			else if KyrverthStage is 3:
@@ -167,9 +167,9 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 			if ((cocks of player >= 1 and KyrverthMaleBoning is 0) or KyrverthStage is not 3):
 				say "     'Someday Ill look for a mate, hopefully I will have a big enough hoard to draw them in by then...'";
 			else if (cocks of player >= 1 and KyrverthStage is 3 and KyrverthMaleBoning is 0):
-				say "     'Ive been looking for a mate, have you seen any dragonesses?'";
+				say "     'I've been looking for a mate, have you seen any dragonesses?'";
 			else if ((cocks of player >= 1 and KyrverthStage is 3 and KyrverthMaleBoning is 1) or cunts of player >= 1):
-				say "     'Hows about you and I have some fun?' Kyrverths hand strays toward his vent and strokes it a few times, showing the tip of a massive cock 'Ive been wanting to make some eggs...'";
+				say "     'Hows about you and I have some fun?' Kyrverths hand strays toward his vent and strokes it a few times, showing the tip of a massive cock. 'I've been wanting to make some eggs...'";
 		else if randomnumber >= 36 and randomnumber <= 40:
 			say "     'All my life I've had four limbs. Now I have four limbs and a tail and wings, it can be strange sometimes. I use the limbs almost without thinking, but when I try to use them consciously I'm a lot more clumsy with them.'";
 		else if randomnumber >= 41 and randomnumber <= 45:
@@ -183,15 +183,15 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 				if KyrverthQuestGiven is 1:
 					say "     'Any luck finding some jewels?'";
 			else if KyrverthStage is 1:
-				say "     'Thanks for the help' He grabs the silver token around his neck and shows it to you 'This is [one of]awesome[or]great[at random]!'";
+				say "     'Thanks for the help' He grabs the silver token around his neck and shows it to you. 'This is [one of]awesome[or]great[at random]!'";
 				if KyrverthQuestGiven is 1:
 					say "     'Have you found any chainmail? I hate those so-called [']knights['].'";
 			else if KyrverthStage is 2:
-				say "     'Have a look at this hoard! It looks great, and I couldn't have gotten it together without you'";
+				say "     'Have a look at this hoard! It looks great, and I couldn't have gotten it together without you.'";
 				if KyrverthQuestGiven is 1:
 					say "     'Have you fought any eastern dragons? They need taking down a peg...'";
 			else if KyrverthStage is 3:
-				say "     'That's a great hoard you've given me, I can grow it on my own from now on, but please dont forget that I owe you one'";
+				say "     'That's a great hoard you've given me, I can grow it on my own from now on, but please don't forget that I owe you one.'";
 		else:
 			say "BUG - [randomnumber]"
 
@@ -203,22 +203,22 @@ instead of fucking the Kyrverth:
 			say "     'Sorry, but not right now, maybe later?'";
 		else if cocks of player > 0: 				[Male player]
 			if KyrverthMaleBoning is 0:
-				say "     Sorry bro, I do owe you one, but I'm really into girls...";
+				say "     'Sorry bro, I do owe you one, but I'm really into girls...'";
 				say "[KyrverthMaleCheck]";
 			else if KyrverthMaleBoning is 1:
 				say "[KyrverthAnalSex]";
 		else if ((scalevalue of player <= 1 and "Kinky" is not listed in feats of player) or cunt length of player < 10): [Too small for sex]
-			say "     As you walk up to Kyrverth, he looks at you closely, then says 'sorry, you are nice and all, but I doubt it would fit'";
+			say "     As you walk up to Kyrverth, he looks at you closely, then says, 'Sorry, you are nice and all, but I doubt it would fit.'";
 			WaitLineBreak;
 		else if cunts of player > 0: [Female player that is large enough]
 			say "[KyrverthSex]";
 		else: [Player has no gender, large enough]
 			if KyrverthMaleBoning is 0:
-				say "     Sorry, I do owe you one, but I'm really into girls, and you don't have those parts...";
+				say "     'Sorry, I do owe you one, but I'm really into girls, and you don't have those parts...'";
 			else if KyrverthMaleBoning is 1:
 				say "[KyrverthMaleCheck]";
 	else:
-		say "     'You're nice and all, but I really need to focus on my hoard'";
+		say "     'You're nice and all, but I really need to focus on my hoard.'";
 
 to say KyrverthMaleCheck:
 	say "     [bold type]He doesn't sound too sure about that, do you want to try to convince him otherwise?[roman type][line break]";
@@ -233,7 +233,7 @@ to say KyrverthMaleCheck:
 			say "You try to convince the dragon that males are ok too, but he shakes his head, firm in the belief that he is into females and females only.";
 		else:
 			now KyrverthMaleBoning is 1;
-			say "You speak clearly and convincingly, telling Kyrverth that liking girls and guys are not mutually exclusive. He doesn't immediately object, so you keep talking. You talk for almost 10 minutes, and at the end he nods his head 'I think you're onto something there...'";
+			say "You speak clearly and convincingly, telling Kyrverth that liking girls and guys are not mutually exclusive. He doesn't immediately object, so you keep talking. You talk for almost ten minutes, and at the end he nods his head. 'I think you're onto something there...'";
 			now KyrverthTimer is turns;
 	else:
 		LineBreak;
@@ -242,13 +242,13 @@ to say KyrverthMaleCheck:
 to say KyrverthSex:
 	say "Just a placeholder for Kyrverth sex right now, maybe in a future update?";
 	if "Kinky" is listed in feats of player and scalevalue is 1:
-		say "The rough sex on your small body has taken it's toll, and has not done well for your health.";
-		decrease hp of player by (maxhp of player / 4);
-		if hp of player <= 0:
-			now hp of player is 1;
+		say "The rough sex on your small body has taken its toll, and has not done well for your health.";
+		decrease HP of player by (maxHP of player / 4);
+		if HP of player <= 0:
+			now HP of player is 1;
 	WaitLineBreak;
 	[If player has a cunt length between 10 and 18 or they are scalevalue 1 with the kinky trait, kyrverth stuffs their cunt but can't get balls deep. Cum everywhere.]
-	[If the players cunt length is greater than 18, kyrverth fucks them in the cunt, gets balls deep, fucks them, knots, and cums. High chance of impregnation?]
+	[If the players cunt length > 18, kyrverth fucks them in the cunt, gets balls deep, fucks them, knots, and cums. High chance of impregnation?]
 
 to say KyrverthAnalSex: [For null and male players]
 	if scalevalue of player is:
@@ -278,16 +278,16 @@ to say KyrverthAnalSex: [For null and male players]
 
 to say KyrverthTinyPlayerAnal:
 	say "     <Kyrverth uses you like a masturbator>.";
-	now hp of player is (hp of player - (maxhp of player / 4));
-	if hp of player <= 0:
-		now hp of player is 1;
+	now HP of player is (HP of player - (maxHP of player / 4));
+	if HP of player <= 0:
+		now HP of player is 1;
 
 to say KyrverthSmallPlayerAnal:
 	say "     Kyrverth grins at your suggestion, showing off his maw full of razor sharp teeth. Not giving you near enough time to react, he slams his massive paw into you, pinning you to the ground as he leans close to your face, growling dominantly at you. 'Strip,' he commands, his deep voice vibrating through your body as you tremble in excitement. You nod and he lifts his paw up to allow you the ability to undress. While you disrobe, the dragon looks over your [bodydesc of player] body, rumbling in approval at what he sees. As your final garmet falls to the floor, the giant dragon speaks again. 'Get on all fours.'";
 	if anallevel is 3:
 		say "     You obey, clambering down onto all fours, presenting your [bodydesc of player] ass to your lover, begging him to take it. 'Oh believe me, I will. But first...' he trails off, leaving you to wonder what he has in store. Of course, you don't have to wonder for long, as you soon feel a warm and moist rush of breath against your backside. He gives you a few sniffs, taking in your scent before his tongue darts out of his mouth and into your crack, his thick saliva letting it slide in with almost no resistance. You let out a gasp as he continues his assault, the tip of his tapered tongue finding your hole and circling around it, quickly coating it in his thick drool. This goes on for only a few seconds before you feel the slimy organ pressing into your hole, the tapered tip allowing it to slip in with ease despite the size difference between you two.";
 		WaitLineBreak;
-		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a foot of it inside of you, stretching you pleasantly and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock. [if cocks of player > 0]As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips.[end if]";
+		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a foot of it inside of you, stretching you pleasantly and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock.[if cocks of player > 0] As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips.[end if]";
 		say "     With your hole dripping drool from his thorough rimming, Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his saliva. [run paragraph on]";
 	else:
 		say "     Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his pre. [run paragraph on]";
@@ -306,7 +306,7 @@ to say KyrverthAveragePlayerAnal:
 	if anallevel is 3:
 		say "     You obey, clambering down onto all fours, presenting your [bodydesc of player] ass to your lover, begging him to take it. 'Oh believe me, I will. But first...' he trails off, leaving you to wonder what he has in store. Of course, you don't have to wonder for long, as you soon feel a warm and moist rush of breath against your backside. He gives you a few sniffs, taking in your scent before his tongue darts out of his mouth and into your crack, his thick saliva letting it slide in with almost no resistance. You let out a gasp as he continues his assault, the tip of his tapered tongue finding your hole and circling around it, quickly coating it in his thick drool. This goes on for only a few seconds before you feel the slimy organ pressing into your hole, the tapered tip allowing it to slip in with ease despite the size difference between you two.";
 		WaitLineBreak;
-		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a foot of it inside of you, stretching you pleasantly and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock. [if cocks of player > 0]As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips.[end if]";
+		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a foot of it inside of you, stretching you pleasantly and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock.[if cocks of player > 0] As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips.[end if]";
 		say "     With your hole dripping drool from his thorough rimming, Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his saliva. [run paragraph on]";
 	else:
 		say "     Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his pre. [run paragraph on]";
@@ -325,7 +325,7 @@ to say KyrverthLargePlayerAnal:
 	if anallevel is 3:
 		say "     You obey, clambering down onto all fours, presenting your [bodydesc of player] ass to your lover, begging him to take it. 'Oh believe me, I will. But first...' he trails off, leaving you to wonder what he has in store. Of course, you don't have to wonder for long, as you soon feel a warm and moist rush of breath against your backside. He gives you a few sniffs, taking in your scent before his tongue darts out of his mouth and into your crack, his thick saliva letting it slide in with almost no resistance. You let out a gasp as he continues his assault, the tip of his tapered tongue finding your hole and circling around it, quickly coating it in his thick drool. This goes on for only a few seconds before you feel the slimy organ pressing into your hole, the tapered tip allowing it to slip in with ease, even with the slight size difference between you two.";
 		WaitLineBreak;
-		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a two feet of it inside of you, stretching you pleasurably and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock. [if cocks of player > 0]As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips.[end if]";
+		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a two feet of it inside of you, stretching you pleasurably and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock.[if cocks of player > 0] As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips.[end if]";
 		say "     With your hole dripping drool from his thorough rimming, Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he is now standing over you, nearly eclipsing you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his saliva. [run paragraph on]";
 	else:
 		say "     Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he is standing over you, his body almost eclipsing you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his pre. [run paragraph on]";
@@ -361,10 +361,10 @@ Instead of resolving a Strange Sighting:
 	if player consents:
 		LineBreak;
 		say "     You push the door open with one hand and creep in. Through the haze of dust you see what used to be a bar. It looks like people left in a hurry, glasses still on the bar, tables and chairs have been knocked over, and the windows are broken.  Mounted above the counter, a carved wooden dragons head with the maw stuck in a roaring snarl grabs your eye, but you realise there is nothing here of use. As you turn to leave you spot the red again. A tiny bit of tail poking out from behind an overturned table. Creeping up on it, you place your feet well, and might as well be silent. Suddenly the floor creaks under your foot. The red tail twitches and you know what is going to happen next. You dive and grab it as a red blur bursts from behind and heads toward the exit.";
-		say "     Though it pulls strongly to get away, you keep your hold of the tail, reel it in and grab it's owners body. As you pin it to the floor you notice you have caught what may well be the smallest dragon in the city. He struggles with you for a second but you hold him easily. Realising he won't be getting away, he goes limp. A few seconds go by then he says 'Well, that's not the best of introductions is it? Shall we start again? I'm Kyrverth'. The diminutive dragon leads you to his hideout, a large vault in the next door bank. it's empty, but the heavy metal door - currently sitting on the ground, one hinge broken - makes you think of what might have been in here in earlier times, and what broke the door off it's hinges...";
+		say "     Though it pulls strongly to get away, you keep your hold of the tail, reel it in and grab its owner's body. As you pin it to the floor you notice you have caught what may well be the smallest dragon in the city. He struggles with you for a second but you hold him easily. Realising he won't be getting away, he goes limp. A few seconds go by, then he says, 'Well, that's not the best of introductions, is it? Shall we start again? I'm Kyrverth.' The diminutive dragon leads you to his hideout, a large vault in the next door bank. It's empty, but the heavy metal door - currently sitting on the ground, one hinge broken - makes you think of what might have been in here in earlier times, and what broke the door off it's hinges...";
 		LineBreak;
-		say "     As he arrives he hands you a soda, saying 'sorry about that, I'm not exactly the biggest dragon, and I heard some of those savages talking about eating me...'.";
-		say "     [bold type]You head back to the library, maybe you should visit the dragon again in the High Rise District - later when he's calmed down a bit.[roman type][line break]";
+		say "     As he arrives he hands you a soda, saying, 'Sorry about that. I'm not exactly the biggest dragon, and I heard some of those savages talking about eating me...'";
+		say "     [bold type]You head back to the library, maybe you should visit the dragon again in the High Rise District - later, when he's calmed down a bit.[roman type][line break]";
 		increase carried of soda by 1;
 		WaitLineBreak;
 		change the South exit of Overgrown Street to Dragons Den;
@@ -377,7 +377,7 @@ Instead of resolving a Strange Sighting:
 	now Strange Sighting is resolved;  [it won't happen again]
 
 instead of going south from Overgrown Street while (KyrverthTimer - turns <= 6 and KyrverthStage is 0): [No other requirements, just 6 turns since the event]
-	say "That's probably not the best idea, hes probably still pretty upset.";
+	say "That's probably not the best idea, he's probably still pretty upset.";
 
 Jewel Heist is a situation.
 The level of Jewel Heist is 5. [minimum level to find the event]
@@ -477,25 +477,25 @@ to say JewelHeistFight:
 Section 5 - Endings
 
 [when play ends:
-	if (hp of Kyrverth > 0):  [player met him and got as far as seeing him as an npc]
+	if (HP of Kyrverth > 0):  [player met him and got as far as seeing him as an npc]
 		if humanity of player < 10: [player went feral]
-			if hp of Kyrverth is 1: [Kyrverth is at the mall when the game ends]
+			if HP of Kyrverth is 1: [Kyrverth is at the mall when the game ends]
 				if KyrverthRelationship < XXX: [non relationship ending]
 					say "     ...";
 				else if KyrverthRelationship > XXX: [relationship ending]
 					say "     ...";
-			else if hp of Kyrverth is 2: [Kyrverth is at the bunker when the game ends]
+			else if HP of Kyrverth is 2: [Kyrverth is at the bunker when the game ends]
 				if KyrverthRelationship < XXX: [non relationship ending]
 					say "     ...";
 				else if KyrverthRelationship > XXX: [relationship ending]
 					say "     ...";
 		else:
-			if hp of Kyrverth is 1: [Kyrverth is at the mall when the game ends]
+			if HP of Kyrverth is 1: [Kyrverth is at the mall when the game ends]
 				if KyrverthRelationship < XXX: [non relationship ending]
 					say "     ...";
 				else if KyrverthRelationship > XXX: [relationship ending]
 					say "     ...";
-			else if hp of Kyrverth is 2: [Kyrverth is at the bunker when the game ends]
+			else if HP of Kyrverth is 2: [Kyrverth is at the bunker when the game ends]
 				if KyrverthRelationship < XXX: [non relationship ending]
 					say "     ...";
 				else if KyrverthRelationship > XXX: [relationship ending]

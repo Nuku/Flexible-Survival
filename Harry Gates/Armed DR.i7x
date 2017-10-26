@@ -20,13 +20,13 @@ The present health of a person is usually 100.
 
 The max health of the player is usually 100.
 
-Definition: a person is dead if his present health is less than 1.
+Definition: a person is dead if his present health < 1.
 
-Definition: a person (called N) is alive if present health of N is greater than 0.
+Definition: a person (called N) is alive if present health of N > 0.
 
-Definition: a person (called N) is injured if present health of N is less than max health of N.
+Definition: a person (called N) is injured if present health of N < max health of N.
 
-Definition: a person (called N) is half dead if present health of N is less than (max health of N / 2).
+Definition: a person (called N) is half dead if present health of N < (max health of N / 2).
 
 After printing the name of a dead person (called P) (this is the I see dead people rule):
 	if the person is dead for at least 1 turn and P is on-stage, say "[']s dead body" instead.
@@ -99,7 +99,7 @@ Check examining a dead person (called corpse) (this is the examining a corpse ru
 Check examining the player (this is the report health rule):
 	say "You [status of the player]. (Health: [the present health of the player]/[the max health of the player])[line break]" instead.
 
-To say status of/for (P - a person) :
+To say status of/for (P - a person):
 	let x be the present health of P;
 	if P is the player:
 		if x is 100:
@@ -574,7 +574,7 @@ Example: *** Trolls - Bob, king of the trolls, must be destroyed! This example s
 		A potion is a kind of thing.
 
 		Instead of drinking a potion:
-			if the present health of the player is less than 86 begin;
+			if the present health of the player < 86 begin;
 				let elixir be a random potion carried by the player;
 				say "You gulp down the vile tasting potion. 15 points have been restored to your health.";
 				change the present health of the player to the present health of the player + 15;

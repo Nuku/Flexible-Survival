@@ -5,7 +5,7 @@ Helpful Routine Templates by Core Mechanics begins here.
 Section 1 - Basic Routines
 
 to malemonstersex: [This is the most basic version of player loss routines for male creatures]
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     This is an 'opener' for players who submitted, rather than lost. It's great for adjusting context, but not entirely necessary.";
 	else:
 		say "     This version is for player loss. Ideally, the player should act less compliant than if they had submitted.";

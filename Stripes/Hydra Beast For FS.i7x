@@ -24,8 +24,8 @@ to say hydrabeastdesc:
 	let debit be 0;
 	if hardmode is true and level of player > 12, let debit be level of player - 12;
 	now lev entry is 12 + debit;
-	now hp entry is 100 + ( debit * 5 );
-	now monsterhp is 100 + ( debit * 5 );
+	now HP entry is 100 + ( debit * 5 );
+	now monsterHP is 100 + ( debit * 5 );
 	now wdam entry is 12 + ( ( 2 * debit ) / 5 );
 	now per entry is 18;
 	increase monhitbonus by 3;
@@ -43,7 +43,7 @@ to say hydraharming:
 	now hydraheadregrowth is false;
 
 to say losetohydrabeast:
-	say "     [if hp of player > 0]Forced to submit to[else]Unable to keep fighting against[end if] the monstrous creature and its numerous heads, you are knocked down by its many heads and pinned there. While its jaws tear away and toss aside your clothing and gear, you catch quick glimpses of the large, dripping cocks dangling at its underside, noting that it has as many cocks as it does heads, all fueled by a massive set of balls. While not nearly as flexible as its necks, they do seem somewhat prehensile, sometimes rubbing up against one another in anticipation of using its fallen prey.";
+	say "     [if HP of player > 0]Forced to submit to[else]Unable to keep fighting against[end if] the monstrous creature and its numerous heads, you are knocked down by its many heads and pinned there. While its jaws tear away and toss aside your clothing and gear, you catch quick glimpses of the large, dripping cocks dangling at its underside, noting that it has as many cocks as it does heads, all fueled by a massive set of balls. While not nearly as flexible as its necks, they do seem somewhat prehensile, sometimes rubbing up against one another in anticipation of using its fallen prey.";
 	if cunts of player > 0:
 		if hydraheadcount < cunts of player:
 			[more cunts than cocks = no anal / no excess]
@@ -217,7 +217,7 @@ to say beathydrabeast99:	[no sex - leave]
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -244,7 +244,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 6;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 100; [ The monster's starting hit points. ]
+	now HP entry is 100; [ The monster's starting HP. ]
 	now lev entry is 12; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12; [ Monster's average damage when attacking. ]
 	now area entry is "Junkyard"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -278,10 +278,10 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 this is the hydrahead rule:
 	choose row monster from the table of random critters;
-	if ( monsterhp * 4 ) <= hp entry and hydraheadcheck3 is false:
+	if ( monsterHP * 4 ) <= HP entry and hydraheadcheck3 is false:
 		if hydraheadregrowth is true:
 			increase hydraheadcount by 1;
-			increase monsterhp by ( hp entry / 10 );
+			increase monsterHP by ( HP entry / 10 );
 			increase monhitbonus by 2;
 			increase wdam entry by ( wdam entry / 6 );
 			increase per entry by 1;
@@ -295,10 +295,10 @@ this is the hydrahead rule:
 		now hydraheadcheck3 is true;
 		now hydraheadcheck2 is true;
 		now hydraheadcheck1 is true;
-	else if ( monsterhp * 2 ) <= hp entry and hydraheadcheck2 is false:
+	else if ( monsterHP * 2 ) <= HP entry and hydraheadcheck2 is false:
 		if hydraheadregrowth is true:
 			increase hydraheadcount by 1;
-			increase monsterhp by ( hp entry / 10 );
+			increase monsterHP by ( HP entry / 10 );
 			increase monhitbonus by 2;
 			increase wdam entry by ( wdam entry / 6 );
 			increase per entry by 1;
@@ -311,10 +311,10 @@ this is the hydrahead rule:
 			say "[one of]Its recent wounds are[or]Your recent attacks are[or]The continued assault becomes[at random] enough to [one of]cause one of its heads to be severed[or]knocks off one of its heads[or]severs one of its many necks[at random]. The fallen head quickly begins to rot and melt away while the wound hisses and bubbles with ichor after the harmful attack. The beast is left with one less head for you to contend with, dropping the number to [special-style-1][hydraheadcount][roman type] [one of]snapping maws[or]draconic jaws[or]vicious heads[at random].";
 		now hydraheadcheck2 is true;
 		now hydraheadcheck1 is true;
-	else if ( ( monsterhp * 4 ) / 3 ) <= hp entry and hydraheadcheck1 is false:
+	else if ( ( monsterHP * 4 ) / 3 ) <= HP entry and hydraheadcheck1 is false:
 		if hydraheadregrowth is true:
 			increase hydraheadcount by 1;
-			increase monsterhp by ( hp entry / 10 );
+			increase monsterHP by ( HP entry / 10 );
 			increase monhitbonus by 2;
 			increase wdam entry by ( wdam entry / 6 );
 			increase per entry by 1;
@@ -356,19 +356,19 @@ this is the hydrabeast rule:
 		if hbdmgtotal > 0:
 			now damagein is hbdmgtotal;
 			say "[normalabsorbancy]"; [normal armour protection]
-			if absorb is greater than hbdmgtotal:
+			if absorb > hbdmgtotal:
 				now absorb is hbdmgtotal;
-			if absorb is greater than 0:
+			if absorb > 0:
 				say "You prevent [special-style-1][absorb][roman type] damage!";
-			decrease hp of the player by hbdmgtotal;
-			increase hp of player by absorb;
+			decrease HP of the player by hbdmgtotal;
+			increase HP of player by absorb;
 			follow the player injury rule;
 			say "You are [descr].";
 		now peppereyes is 0; [pepperspray wears off]
-		if hp of the player is greater than 0 and libido of player < 110:
+		if HP of the player > 0 and libido of player < 110:
 			wait for any key;
 		else:
-			if hp of player <= 0, now fightoutcome is 20;
+			if HP of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
 			Lose;
 		rule succeeds;
@@ -386,7 +386,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Hydra Beast":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your grip on your mind fades, the instinctual urges and impulses coming from your extra hydra heads become clearer and the edges blur in your mind. The thoughts grow louder and more insistent still as three additional heads form over the next few hours. Similar thoughts grow in your mind until you're left thinking like them, overcome with bestial impulses. ";
 			if facename of player is "Hydra Beast":
 				say "     Your original hydra head is the dominant one, but reduced to the mind of a beast. The other heads, their minds portions of your fractured id and reptilian instincts, are largely independent of you, but still work cooperatively to satisfy your united body's lusts. Like minded to them, you follow these hydra drives in search of lustful satisfaction";

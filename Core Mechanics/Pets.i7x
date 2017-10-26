@@ -92,7 +92,7 @@ Instead of resolving lost crab:
 			delete food;
 			say "The crab munches quite happily at the food, blowing a few bubbles afterwards to show its appreciation.";
 			now cute crab is tamed;
-			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing [link]pet cute crab[as]pet cute crab[end link]. You can see all the pets you have tamed with the [link]pet[as]pet[end link] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [link]pet dismiss[as]pet dismiss[end link], or just [link]dismiss[as]dismiss[end link])[roman type]";
+			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing [link]pet cute crab[as]pet cute crab[end link]. You can see all the pets you have tamed with the [link]pet[as]pet[end link] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [link]pet dismiss[as]pet dismiss[end link], or just [link]dismiss[as]dismiss[end link])[roman type]";
 		else:
 			say "The crab scuttles away sadly.";
 		now lost crab is resolved;

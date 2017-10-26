@@ -15,11 +15,11 @@ Section 1 - Monster Responses
 To say latex wolf defeat:
 	if libido of player <= 50:
 		Say "     The latex wolf collapses, its head slumped against the ground, and begins to melt away down a nearby storm drain.";
-	if libido of player > 50 and cocks of player is greater than 0:
+	if libido of player > 50 and cocks of player > 0:
 		Say "     The wolf collapses, and you move forward, lifting its rear before it begins to melt, and shove your [cock of player] cock inside its behind. The wolf moans, and continues melting even as you make several thrusts into it. You pull out before the melting happens near your precious cock, afraid of what might happen.";
-	if libido of player > 50 and cocks of player is 0 and cunts of player is greater than 0:
+	if libido of player > 50 and cocks of player is 0 and cunts of player > 0:
 		Say "     The wolf melts into a black puddle, draining off into the city. You are unable to sate your lust without touching the melting latex, which is most certainly dangerous.";
-	if hp of Bradford is 3:
+	if HP of Bradford is 3:
 		if bradfordbounty > 0:
 			LineBreak;
 			decrease bradfordbounty by 1;
@@ -29,7 +29,7 @@ To say latex wolf defeat:
 
 To say latex wolf attack:
 	if ( a random chance of 1 in 4 succeeds or ( "Kinky" is listed in feats of player and a random chance of 1 in 4 succeeds ) ) and inasituation is false:
-		say "     As you go down in front of the wolf creature, [if hp of player > 0]unwilling[else]unable[end if] to continue to oppose it, you are pounced upon by the latex creature. As it climbs atop you, it seems to lose structural integrity, melting and flowing down over you. You try to struggle as the black fluid flows over you, gradually engulfing you, but it clings to you tightly and makes it hard to move[if cocks of player > 1]. As the dark goo flows over your cocks, it squeezes at them, making you aroused despite yourself[else if cocks of player is 1]. As the dark goo flows over your cock, it squeezes at it, making you aroused despite yourself[end if][if cunts of player > 1]. The goo forms phallic bulges that are pressed into your cunts, stuffing them full of flowing black latex that throbs inside you, making your vaginae quiver with arousal[else if cunts of player is 1]. The goo forms phallic bulges that are pressed into your cunt, stuffing it full of flowing black latex that throbs inside you, making your vagina quiver with arousal[end if][if anallevel > 1]. More of the thick, flowing latex presses its way into your anus, stuffing your rear with a swelling cock and knot tying it inside you[end if].";
+		say "     As you go down in front of the wolf creature, [if HP of player > 0]unwilling[else]unable[end if] to continue to oppose it, you are pounced upon by the latex creature. As it climbs atop you, it seems to lose structural integrity, melting and flowing down over you. You try to struggle as the black fluid flows over you, gradually engulfing you, but it clings to you tightly and makes it hard to move[if cocks of player > 1]. As the dark goo flows over your cocks, it squeezes at them, making you aroused despite yourself[else if cocks of player is 1]. As the dark goo flows over your cock, it squeezes at it, making you aroused despite yourself[end if][if cunts of player > 1]. The goo forms phallic bulges that are pressed into your cunts, stuffing them full of flowing black latex that throbs inside you, making your vaginae quiver with arousal[else if cunts of player is 1]. The goo forms phallic bulges that are pressed into your cunt, stuffing it full of flowing black latex that throbs inside you, making your vagina quiver with arousal[end if][if anallevel > 1]. More of the thick, flowing latex presses its way into your anus, stuffing your rear with a swelling cock and knot tying it inside you[end if].";
 		say "     As your body is subject to this abuse, the black goo continues to spread over you, covering your [bodydesc of player] body and over your [facename of player] head. Your head is engulfed and your mouth and nose covered in flowing latex, cutting off your air supply momentarily. As you begin to grow woozy from lack of oxygen, an air passage is opened and you are allowed to breathe. Having seized control of your [bodytype of player] body, the latex wolf works its flowing, rubbery goo over [if cunts of player > 0 or anallevel > 1]and inside [end if]your flesh, using your body for its own pleasure. It eventually cums, spraying gooey black semen [if cunts of player > 0 or anallevel > 1]inside you[else]over you[end if][if cocks of player > 0] while pumping out your own seed onto the ground. Your balls drained, it sends a tendril of black goo flowing along your urethra and flowing into your testes, claiming them with its own dark cum until they're full and swollen with it[end if].[impregchance]";
 		say "     Weak and thoroughly used by the wolf creature, you are left lying on the ground as it flows off of you, much of its tainted latex having bonded with you. You can feel it sinking into your [bodytype of player] body, seeking to make you like itself.";
 		if cocks of player > 0 and cock width of player < 6, increase cock width of player by 1;
@@ -37,15 +37,15 @@ To say latex wolf attack:
 		infect "Latex Wolf";
 	else:
 		if cunts of player > 0:
-			say "     As you [if hp of player > 0]submit[else]fall to the ground[end if], the latex wolf rolls you over and sits up, on your hips, impaling you on his red rubbery cock. He then begins to lean forwards and backwards, sliding his doggy shaft in and out of [if cunts of player > 1]one of your [cunt size desc of player] cunts[else]your [cunt size desc of player] cunt[end if], squeaking with every thrust. He thrusts faster, and faster, making slapping noises where his black balls hit your ass cheeks, and finally slams your knot inside with a thrust that causes you to hunch up in pain and pleasure. He keeps trying to thrust, even when he is tied, and finally brings himself to orgasm, filling you with black rubbery seed.[impregchance]";
+			say "     As you [if HP of player > 0]submit[else]fall to the ground[end if], the latex wolf rolls you over and sits up, on your hips, impaling you on his red rubbery cock. He then begins to lean forwards and backwards, sliding his doggy shaft in and out of [if cunts of player > 1]one of your [cunt size desc of player] cunts[else]your [cunt size desc of player] cunt[end if], squeaking with every thrust. He thrusts faster, and faster, making slapping noises where his black balls hit your ass cheeks, and finally slams your knot inside with a thrust that causes you to hunch up in pain and pleasure. He keeps trying to thrust, even when he is tied, and finally brings himself to orgasm, filling you with black rubbery seed.[impregchance]";
 		else if "Submissive" is listed in feats of player and "Less Anal" is not listed in feats of player:
 			say "     You fall to the ground and the wolf pounces you, hoping there is something for him to use. When your lack of pussy is discovered and the male seems no longer interested in you, you whine softly, your submissive needs coming to the fore as you present yourself to him. Spurred by this wanton display, the latex creature pounces your ass and drives his red, rubbery cock into you. You groan softly at this intrusion, your body welcoming it despite the discomfort initially felt.";
 			say "     He rocks his hips, pounding his doggy shaft in and out of your ass, squeaking with every thrust. He thrusts faster, and faster, making slapping noises where his black balls hit your ass cheeks, and finally slams your knot inside with a thrust that causes you to hunch up in pain and pleasure. He keeps trying to thrust, even when he is tied, and finally brings himself to orgasm, filling you with black rubbery seed.[mimpregchance]";
 		else if a random chance of 1 in 3 succeeds or ( "More Anal" is listed in feats of player and a random chance of 1 in 3 succeeds ):
 			say "     You fall to the ground, the latex wolf pouncing your ass and driving his red, rubbery cock into you. You groan softly at this intrusion, your body welcoming it despite the discomfort initially felt. He rocks his hips, pounding his doggy shaft in and out of your ass, squeaking with every thrust. He thrusts faster, and faster, making slapping noises where his black balls hit your ass cheeks, and finally slams your knot inside with a thrust that causes you to hunch up in pain and pleasure. He keeps trying to thrust, even when he is tied, and finally brings himself to orgasm, filling you with black rubbery seed.[mimpregchance]";
 		else:
-			say "     [if hp of player > 0]Willfully subjecting yourself to the beast's whims[else]Too weak to contend the beast's will any further[end if], you're forced to the ground, giving you a proper view of the canine's rubbery, canine cock, all too eager to be put to use. He presses the twisted organ's tip against your lips, [if hp of player < 1 and player is not submissive]reluctantly[else]instinctively[end if] your mouth yields to the intrusion, tainted rod's taste of synthetic latex and heady, feral musk overwhelming your senses as the wolf thrusts it into the depths of this open hole.";
-			say "     Crimson knot [if scalevalue of player > 3]immediately[else]quickly[end if] banging against your face, an irreverent illustration of his wanton lack of regard, it's not long before the beast forces you to engulf that as well, howling in carnal satisfaction as his bitter, black seed floods your throat. [if hp of player < 1 and player is not submissive]Forced[else]Compelled[end if] to swallow down the majority of it, his tainted flow does eventually subside.";
+			say "     [if HP of player > 0]Willfully subjecting yourself to the beast's whims[else]Too weak to contend the beast's will any further[end if], you're forced to the ground, giving you a proper view of the canine's rubbery, canine cock, all too eager to be put to use. He presses the twisted organ's tip against your lips, [if HP of player < 1 and player is not submissive]reluctantly[else]instinctively[end if] your mouth yields to the intrusion, tainted rod's taste of synthetic latex and heady, feral musk overwhelming your senses as the wolf thrusts it into the depths of this open hole.";
+			say "     Crimson knot [if scalevalue of player > 3]immediately[else]quickly[end if] banging against your face, an irreverent illustration of his wanton lack of regard, it's not long before the beast forces you to engulf that as well, howling in carnal satisfaction as his bitter, black seed floods your throat. [if HP of player < 1 and player is not submissive]Forced[else]Compelled[end if] to swallow down the majority of it, his tainted flow does eventually subside.";
 		say "     Need sufficiently sated, he pries his latex knot free of you, ebon ejaculate oozing across the ground from his spent organ. ";
 		let extrainfect be false;
 		if wslevel is 3 or (wslevel is 2 and (a random chance of 1 in 3 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds))):
@@ -61,7 +61,7 @@ To say latex wolf attack:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 
@@ -75,7 +75,7 @@ When Play begins:
 	now face entry is "elongated with a muzzle and sharp teeth"; [ Face description, format as the text "Your face is (your text)."]
 	now body entry is "small and lupine, bent onto all fours. Your insides feel strange, as if they are made of something shifting and changing"; [ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "rubbery latex with black, fur-like patterned"; [ skin Description, format as the text "You have (your text) skin."]
-	now tail entry is "Thin and black, your tail whips behind you back and forth."; [ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "Thin and black, your tail whips back and forth behind you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "deep red with a canine knot towards the bottom"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your nose elongates, growing into a muzzle as your teeth sharpen"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your body bends, and your spine and skull grow soft and reform, forcing you down onto all fours. You can feel your insides churn and flow as if somehow melting together and changing as well"; [ body change text. format as "Your body feels funny as (your text)." ]
@@ -89,8 +89,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 12;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 30;
-	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ]
+	now HP entry is 30;
+	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you lose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
 	now area entry is "Outside"; [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -124,7 +124,7 @@ lwcounter is a number that varies. lwcounter is normally 240.
 an every turn rule:
 	if bodyname of player is "Latex Wolf" and lwcounter - turns > 3:
 		let tt be ( 100 - humanity of player ) + libido of player + a random number between 1 and 50;
-		if tt is less than a random number between 1 and 250:
+		if tt < a random number between 1 and 250:
 			say "[one of]You feel a strange churning in your latex body and you can feel the metamorphosis spread further[or]You find yourself munching on some rather tasty plastic you found lying around[or][lwmast1][or][lwmast2][or]You eye your supplies, thirsty not for the water, but hungry for the plastic bottle[or]Your contort your flexible, latex body and start licking your groin, enjoying the latex taste of your leaking fluids and lapping it all up as you climax, spraying into your mouth[in random order]";
 			say ". You feel yourself slip a little further into the bizarre infection.";
 			decrease humanity of player by a random number from 3 to 8;
@@ -144,7 +144,7 @@ to say lwmast1:
 		say "Overcome with lustful urges, you lay on your back and rub your paws over your pussy. You release squeaky growls of pleasure as you tease the latex folds and your juices run down your thighs. Your altered paws have trouble teasing your slit effectively, but you make due with stroking it[if cunt width of player > 3] and pushing a somewhat malleable paw into your cunt[end if]. Driven to climax eventually, you moan loudly and release a spurt of latex-like femme cum. While you lay there, panting on your back, you lick your paws clean";
 		if cunt width of player < 5 and "Male Preferred" is not listed in feats of player:
 			increase cunt width of player by 1;
-			if "Modest Organs" is listed in feats of player and cunt width of player is greater than 5:
+			if "Modest Organs" is listed in feats of player and cunt width of player > 5:
 				now cunt width of player is 5;
 
 to say lwmast2:

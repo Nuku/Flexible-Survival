@@ -126,7 +126,7 @@ to say beattheelk_4:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -139,7 +139,7 @@ When Play begins:
 	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if cocks of player > 0]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
 	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over six feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "brown, darker across the head and neck. The [if cocks of player > 0]strong, [end if]musky scent of [if cocks of player > 0 and cunts of player > 0]rut and estrus[else if cunts of player > 0]estrus[else]unfocused arousal[end if] clings to your";
-	now tail entry is "You have a short, brown tail[if cunts of player > 0] which flags to show off your needy pussy[end if]";
+	now tail entry is "You have a short, brown tail[if cunts of player > 0] which flags to show off your needy pussy[end if].";
 	now cock entry is "[one of]cervine[or]musky[or]dribbling[at random]";
 	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if cocks of player > 0]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if cocks of player > 0]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
 	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing into a hoof-like hand with clumsy digits. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if cocks of player > 0]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
@@ -153,7 +153,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 15;
 	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 53; [ The monster's starting hit points. ]
+	now HP entry is 53; [ The monster's starting HP. ]
 	now lev entry is 9; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
 	now area entry is "Forest"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -215,7 +215,7 @@ Section 5 - Endings
 [
 when play ends:
 	if bodyname of player is "Elk":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your elk infection.";
 		else:
 			say "     You survive, but were infected by the elk.";

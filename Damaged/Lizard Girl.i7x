@@ -34,7 +34,7 @@ to say lizgirl impreg:
 
 to say lizgirl check angry:
 	if lizgirlangry is 1:
-		if hp of player < 11:
+		if HP of player < 11:
 			now fightoutcome is 19;
 			say "     The lizard girl draws away from the fight.";
 			LineBreak;
@@ -60,7 +60,7 @@ to say lizgirl attack:
 					say "     Looking down at her thigh, you see another name scrawled there, similar to your own scars. 'She would be proud too,' you say softly, meaning every word of it. Kissing softly, you part ways.";
 		else:
 			if lizgirlimpreg is 0:
-				say "     Looking to your thigh, the recognizable Lizard Girl smiles, 'Always wonderful to see my pets blossoming and ready,' she pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock size desc of player] rod, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now it's my turn.' she purrs, snapping your attention away from her assault on your reproductive system. All of a sudden,  you feel a pressure build all down the length of your shaft as her own seed pours into your body, leaving your balls swollen and tingling.";
+				say "     Looking to your thigh, the recognizable Lizard Girl smiles, 'Always wonderful to see my pets blossoming and ready,' she pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock size desc of player] rod, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now it's my turn.' she purrs, snapping your attention away from her assault on your reproductive system. All of a sudden, you feel a pressure build all down the length of your shaft as her own seed pours into your body, leaving your balls swollen and tingling.";
 				say "     'Now be a good dear, and don't fight it anymore,' she says over her shoulder as she sashays away.[lizgirl female][lizgirl impreg]";
 			else:
 				say "     'Oh, who gave you this?' she says, running one claw over your [cock of player] penis delightfully. 'Oh well, it matters not - it simply must go,' she says matter of factly and lowers her snout over your member. She begins to take it all into her, sucking, licking and sometimes biting. Your bliss is soon to come and when it does you only feel a dribble actually pass down your rod. With a start you realize your love tunnel is now awash with seed... your seed.[lizgirl female][ovichance]";
@@ -77,14 +77,14 @@ to say lizgirl defeat:
 			say "     'Did you not want this? Was the canvas too flawed?' she murmurs before collapsing on the ground.";
 		else:
 			say "     With a whine she says, 'I only wanted what was best for you, now another artist must finish my work' before collapsing.";
-	if hp of ronda is 4:
+	if HP of ronda is 4:
 		say "     Remembering that the lizard girl has part of the cure for Ronda, you run your hands over her body and slip a finger into her wet pussy.  You start to rub and finger her cunt, making her moan and squirm in pleasure.  She grips your shoulders firmly and bucks her hips as you pump a pair of fingers into her again and again.  As her excitement builds and her vaginal walls quiver around your digits, she moans and bucks her hips almost as if thrusting before finally climaxing loudly. She sags against you, panting for breath after her orgasm. Still holding her up with one arm, you place a small vial under her pussy to gather the leaking juices, a little surprised to find them a thick and creamy white instead of clear juices. Sealing up the unusual sample, you resist the urge to lick your fingers clean and instead wipe them off after taking a moment to enjoy her thick, musky scent.";
 		now carried of lizard juice is 1;
-		now hp of ronda is 5;
+		now HP of ronda is 5;
 	if libido of player > 33:
 		if cocks of player > 0:
 			say "[lizdefmale]";
-		otherwise if cunts of player > 0:
+		else if cunts of player > 0:
 			say "[lizdeffemale]";
 		else:
 			say "[lizdefnone]";
@@ -116,7 +116,7 @@ to say lizgirl desc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -143,8 +143,8 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 16;
 	now sex entry is "Female";	  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 32;				[ How many HP has the monster got? ]
-	now lev entry is 3;				[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 32;				[ How many HP has the monster got? ]
+	now lev entry is 3;				[ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5;				[Amount of Damage monster Does when attacking.]
 	now area entry is "Park";	 [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;				[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -154,8 +154,8 @@ When Play begins:
 	now breast size entry is 1;		  [Size of breasts infection will try to attain ]
 	now male breast size entry is 0;	 [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;				[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;		  [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		  [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 8;		  [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 4;		  [ Width of female sex infection will try and give you ]
 	now libido entry is 2;				[ Amount player Libido will go up if defeated ]
 	now loot entry is "";				[ Loot monster drops, ]
 	now lootchance entry is 0;		  [ Chance of loot dropping 0-100 ]

@@ -211,7 +211,7 @@ to say panthertaur ride cowgirl:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -224,7 +224,7 @@ When Play begins:
 	now face entry is "feline, with a blunt snout, wet black nose and pointed ears above your head"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws[if breasts of player > 2]. All your breasts except the first two rest on the chest of that lower torso, swaying with each step[end if]"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "[one of]furry[or]black furred[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a long, black, feline tail that likes to curl and uncurl at its own whim. "; [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a long, black, feline tail that likes to curl and uncurl at its own whim."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]black sheathed[or]barbed[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "you feel warmth as your face begins to reshape into a muzzle, long teeth filling your new mouth, tongue becoming rougher. Your ears are tugged as if by an angry mother, soon perched at the top of your head, pointed and twitching"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "you stagger in place, almost toppling backwards as new legs sprout out, ruining your balance. Fortunately, those new legs dig into the ground, helping to restore your equilibrium as you rapidly grow the torso of a panther from the hips down. Your hands become somewhat paw like, claws sliding free[if breasts of player > 2]. Your breasts quiver as all but the top two migrate downward, settling on the undercarriage of your new torso[end if]"; [ Body TF text, format as "Your body feels funny as (your text)." ]
@@ -238,7 +238,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 27;
+	now HP entry is 27;
 	now lev entry is 4; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 6; [ Monster's average damage when attacking. ]
 	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]

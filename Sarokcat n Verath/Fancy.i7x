@@ -48,7 +48,7 @@ instead of conversing the Fancy:
 				challenge "Nightmare";
 				now inasituation is false;
 				if fightoutcome >= 10 and fightoutcome <= 19:
-					if cocks of player is greater than 0:
+					if cocks of player > 0:
 						say "Grinning down at your obviously needy new pet, you decide to waste no time in ensuring her body bears your mark permanently, as well as your collar. And you quickly have her bent over one of the cushions and are buried up to the hilt in her new amazingly soft wetness, the fact that she was a powerful independent stallion only minutes before only making your conquest of the new mares soft body seem all the sweeter as you thrust into her again and again. As aroused as you both are, it doesn't take much for you to cum, your orgasm making you cry out with pleasure as you fill her body with your seed, branding her as your pet now and forever. And as the former Stablemaster, and now stableslut collapses down on the cushions as you pull out of her. You turn with amusement to the other heat filled mare in the room, a smile tugging on your face as you move forward to do your Stablemaster's duty with the new mare as well...[line break]";
 						say "Eventually though, after you have sated your lusts on your new mares bodies several times, you call in several of the horsemen, and enjoy their looks of shock as they see the state of the former Stablemaster. They quickly snap to attention however as you explain the way things are going to be from now on, nodding with increasing eagerness as they bring Fancy and several of the other important equines in the Stables to your office so you can begin to go over the changes you plan to make. Eventually your first days work is done, and you relax back in your new office happily, already planning a few redecorations as you grin with amusement at where your new slave is sitting waiting for you.";
 					else:
@@ -83,7 +83,7 @@ instead of conversing the Fancy:
 			say "'Your back! Do you have the ingredients we need and the item?' Fancy asks nervously as soon as you approach her, and lets out a large sigh of relief as you pull out the small pouch with the ingredients you gathered, as well as the small box containing the collar Nermine made for you. 'What a relief, I don't think I could have put up with the stress much longer,' she says with a smile as she takes the pouch with you and quickly heads into one of the rooms in the mares quarter to mix up your next drink. You find yourself smiling at the numerous mares in the area as you wait, enjoying their submissive and aroused responses, and realizing that if you succeed at becoming the Stablemaster, all the mares in the Stables will belong to you... and the stallions too actually now that you think about it. It isn't long however before Fancy returns with your final drink, a rather larger one this time than the other smaller vials, and you raise one of your rather expressive new equine eyebrows at her questioningly. 'You will need all the help you can get, so I had the girls gather as much of the ingredients needed as possible... besides this should be your last dose,' the white mare says with a smile as she holds the cup up for you to drink.[line break]";
 			say "Feeling rather exposed as she obviously expects you to drink the mixture right here and now, you nervously shrug before putting the cup to your lips and draining the contents. The now familiar burning and tingling sensation rushing through your body and filling you with strange energy, even as you can feel your muscles begin to twist and reshape. You groan slightly as your form shifts, the change spreading through your body faster than ever before as your feet shift and change into powerful flame coloured hooves, your legs shifting as well into the proper digitigrade stance of a powerful stallion. The feel of your hands shifting and your arms and body becoming far more muscular and equine is actually increasingly amazing, and you let out a loud low whinny of pleasure as you back shifts and lengthens slightly, before the changes begin to eventually settle down. Even your mane and tail seem to blaze brightly now with an almost fiery energy, and your obsidian black hide seems to shimmer and absorb the light as it shines darkly in the well lit room. You can tell as you look around that your new form is absolutely the pinnacle of equine power and sexuality from the many admiring and lustful looks all the mares in the area are giving you, and you pause for a minute to stretch and show off your new body before turning back to Fancy.[line break]";
 			now fancyquest is 15;
-			say "'Wow, you look... amazingly good,' the obviously aroused mare says rather dreamily, before shaking herself slightly and smiling back up at you. 'This could actually work I think, you just need to beat the Stablemaster now, and get the collar on him, I take it Nermine explained what it does?' She says with a smile, her smile stretching into a rather predatory grin for a equine as you nod in agreement. 'Excellent, now the only hard part left is actually drawing the Stablemaster out, or getting you in to see him, He has been extremely cautious lately, and with good reason obviously.' Fancy smirks slightly as her eyes linger on your new powerful equine form. 'Now we have a plan for that actually, and we have been keeping her nice and ready just in case things worked out,' She says with a gesture at the almost completely changed mare named Daisy. 'You just me know when you are ready to take him on, and we will get you in to see him! What happens then depends on you... though for my sake at least, I hope you win,' Fancy says with a smile as she looks up at you with a mixture of lust and adoration in her eyes.[line break]";
+			say "'Wow, you look... amazingly good,' the obviously aroused mare says rather dreamily, before shaking herself slightly and smiling back up at you. 'This could actually work I think, you just need to beat the Stablemaster now, and get the collar on him, I take it Nermine explained what it does?' She says with a smile, her smile stretching into a rather predatory grin for a equine as you nod in agreement. 'Excellent, now the only hard part left is actually drawing the Stablemaster out, or getting you in to see him. He has been extremely cautious lately, and with good reason obviously.' Fancy smirks slightly as her eyes linger on your new powerful equine form. 'Now we have a plan for that actually, and we have been keeping her nice and ready just in case things worked out,' She says with a gesture at the almost completely changed mare named Daisy. 'You just me know when you are ready to take him on, and we will get you in to see him! What happens then depends on you... though for my sake at least, I hope you win,' Fancy says with a smile as she looks up at you with a mixture of lust and adoration in her eyes.[line break]";
 			now nightmaretf is 4;
 			now bodyname of player is "Nightmare";
 			now body of player is "the strong and powerful body of a black stallion, with blood red hooves and hoof tipped hands, as well as a large chest and fully digitigrade equine legs. Your new body is amazingly responsive and powerful feeling, with almost unnatural amounts of energy surging through you constantly";
@@ -122,7 +122,7 @@ instead of conversing the Fancy:
 		else:
 			say "'Still having trouble finding the information you need? Remember once you find a good reference guide head out back of the Stables to help them hook it up!' Fancy says with a broad smile and a happy tone, 'I just can't wait to have power again! Even if we will have to ration it!'";
 	else if fancyquest is 7:
-		say "'Ah there you are, and I see you definitely look a bit better now as well,' Fancy says teasingly as she eyes your new equine tail with open admiration, before shaking her head slightly and refocusing her attention on your face. 'Still now that you have started to change, we have to keep things moving before the current Stablemaster finds out about this, Since you definitely aren't ready to take him on quite yet, and I certainly can't help but obey if he asks me anything,' the white mare says with a soft sigh before shaking her equine head sadly, 'Not that he ever really comes down here that is, which should give us some time,' Fancy says hopefully, before giving you a rather sexy equine grin as she flicks her mobile ears teasingly, 'Which we should definitely use to get on top of things around here, especially with all the new repairs to be made... speaking of which, several of the stallions could use a bit of help with actually,' she says with a sigh as she rubs her forelock ruefully, 'They may be well endowed and all, but just not so much in the brain department anymore.' The mare shakes her head ruefully before looking back at you with a smile.[line break]";
+		say "'Ah there you are, and I see you definitely look a bit better now as well,' Fancy says teasingly as she eyes your new equine tail with open admiration, before shaking her head slightly and refocusing her attention on your face. 'Still, now that you have started to change, we have to keep things moving before the current Stablemaster finds out about this. You definitely aren't ready to take him on quite yet, and I certainly can't help but obey if he asks me anything,' the white mare says with a soft sigh before shaking her equine head sadly. 'Not that he ever really comes down here that is, which should give us some time,' Fancy says hopefully, before giving you a rather sexy equine grin as she flicks her mobile ears teasingly. 'Which we should definitely use to get on top of things around here, especially with all the new repairs to be made. Speaking of which, several of the stallions could use a bit of help, actually,' she says with a sigh as she rubs her forelock ruefully. 'They may be well endowed and all, but just not so much in the brain department anymore.' The mare shakes her head ruefully before looking back at you with a smile.";
 		say "'Which is where we could use a bit of your help honestly, they brought back a pretty nice generator, several of them actually, as well as some solar panels. And in theory we should have power, and hot water again now... if they could only figure out how to get it running and wire it into the building without shorting everything out, or hurting someone else.' The white mare actually snickers slightly as she leans closer for a minute and whispers in a low voice. 'One of the stallions actually managed to shock himself pretty good messing around with it, his fur is still standing straight up and he has a hilarious stutter now as well! Not that it hasn't gotten him plenty of sympathy from the ladies as well.' Fancy chuckles at the situation, and gives you a little wink, and you can feel yourself grinning a bit as well at the image she paints. 'But well, that's where we could use your help, if you know anyone in town who knows electronics or can find some good instructions on the subject, well they could sure use the help out back, and to be honest I really don't trust the stallions to mess with something that dangerous on their own,' she says with a smile, and remembering the vast number of books back in the library, you nod to the sexy mare, and assure her you will do your best to find out what you need to know so you can hook the power up.";
 		now fancyquest is 8;
 		now generatorfixing is 1;
@@ -165,7 +165,7 @@ instead of conversing the Fancy:
 		else:
 			say "     'Still no luck on finding the materials?' Fancy asks with a sad sigh. 'I am sure you can find some of them out there in the city somewhere. It doesn't matter if they are infectious or not really. In fact, it might be mildly preferable honestly...' she says with an equine grin as she gives you a wink.";
 	else if fancyquest is 1:
-		if fancyaroused is greater than 1:
+		if fancyaroused > 1:
 			say "     'Hey again there sexy,' Fancy says with a teasing wink as she looks at you curiously for a minute, only to blink when you mention the ignored memos. 'It figures they would just throw them away like that,' the sexy white mare says with a sigh. 'But it's nothing you need to worry your little head about right now,' she adds with a soft teasing smile as she stretches her nearly naked form out teasingly, seemingly unworried about the problem right now with you in front of her.";
 			Now fancyquest is 0;
 		else:
@@ -198,7 +198,7 @@ Instead of fucking the Fancy:
 		say "     Currently lacking a gender, you don't really have much to tempt Fancy away from her duties at the moment.";
 	else if fancyquest >= 100:
 		say "     'While a little romp might be fun, I don't particularly feel you're what I'm looking for. Clearly I was wrong about you; you messed things up too much.";
-	else if lastfuck of Fancy - turns is less than 6:
+	else if lastfuck of Fancy - turns < 6:
 		if fancyquest < 16:
 			say "     'That certainly sounds tempting, but I've unfortunately still got a lot of work to do around here. Despite what the Stablemaster may think, this place doesn't run itself.'";
 		else:
@@ -269,18 +269,18 @@ instead of sniffing Nightmare Vial:
 The usedesc of Nightmare Vial is "[nightmaremagic].";
 
 To say nightmaremagic:
-	if jackalmantf is greater than 0:
+	if jackalmantf > 0:
 		say "For some reason your body seems to fight with itself for a minute as you ingest the vial of strange liquid, and you get flashes of dark images and strange places in your eyes as your body convulses helplessly. Eventually though the tremors fade, and you lie there panting on the ground for several minutes before you are able to move again, though looking yourself over you can't see that the strange vial of liquid changed any of your nice and sexy jackal-like features...";
 		stop the action;
-	if jackalboytf is greater than 0:
+	if jackalboytf > 0:
 		now nerminetalk is 1;
 		now jackalboytf is 5;
 		say "You feel strange as the liquid runs down your throat, feeling strangely more dominant and less like a good little jackal slut as the changes begin to run through your body.[line break]";
 		say "The strange salty yet delicious taste of the strange mixture washes over your tongue, and burns like fire or fine whiskey as it slides down your throat easily. Before you know it you have drank the whole vial and are licking your lips looking for more. It isn't long however, before you are distracted by a strange warmth growing within as what feels like a dim coal of power burning within you ignites. And you moan as your body begins to shift and reshape itself, your spine seeming to crack slightly and become more flexible, as a silken waterfall of fine horsehair erupts from your rear, spilling forth to form a surprisingly comfortable and handsome long black equine tail, with just the hint of a dark reddish colour when the light reflects off of it. You swish your new tail behind you experimentally for a minute, finding it surprisingly easy to move and control, the new balance your tail provides to be quite helpful as well as handsome. You grin slightly with a strange pleasure at your new appendage, as well as the new sense of power burning within you awoken by the strange but delicious liquid.";
 		now tailname of player is "Nightmare";
 		now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red coloured strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
+		say "[bold type]Your dexterity has increased by 5![roman type][line break]";
 		increase dexterity of player by 5;
-		say "your dexterity has increased by 5!";
 		now fancyquest is 7;
 		now nightmaretf is 1;
 		stop the action;
@@ -288,8 +288,8 @@ To say nightmaremagic:
 		say "Eyeing the unusual liquid dubiously for a minute, you watch the strange play of the light off the whitish fluid, noting the dark and almost red swirls within the vial. Feeling rather dubious, but increasingly curious about the vial, you decide you might as well get on with it, and carefully take a drink. The strange salty yet delicious taste of the strange mixture washes over your tongue, and burns like fire or fine whiskey as it slides down your throat easily. Before you know it you have drank the whole vial and are licking your lips looking for more. It isn't long however, before you are distracted by a strange warmth growing within as what feels like a dim coal of power burning within you ignites. And you moan as your body begins to shift and reshape itself, your spine seeming to crack slightly and become more flexible, as a silken waterfall of fine horsehair erupts from your rear, spilling forth to form a surprisingly comfortable and handsome long black equine tail, with just the hint of a dark reddish colour when the light reflects off of it. You swish your new tail behind you experimentally for a minute, finding it surprisingly easy to move and control, the new balance your tail provides to be quite helpful as well as handsome. You grin slightly with a strange pleasure at your new appendage, as well as the new sense of power burning within you awoken by the strange but delicious liquid.[line break]";
 		now tailname of player is "Nightmare";
 		now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red coloured strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
+		say "[bold type]Your dexterity has increased by 5![roman type][line break]";
 		increase dexterity of player by 5;
-		say "your dexterity has increased by 5!";
 		now fancyquest is 7;
 		now nightmaretf is 1;
 		stop the action;
@@ -298,9 +298,9 @@ To say nightmaremagic:
 		now facename of player is "Nightmare";
 		now face of player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face.";
 		increase perception of player by 4;
-		say "your perception has increased by 4![line break]";
+		say "[bold type]Your perception has increased by 4![roman type][line break]";
 		increase intelligence of player by 3;
-		say "your intelligence has increased by 3!";
+		say "[bold type]Your intelligence has increased by 3![roman type][line break]";
 		now fancyquest is 10;
 		now nightmaretf is 2;
 		stop the action;
@@ -309,10 +309,10 @@ To say nightmaremagic:
 		now skin of player is "[one of]dark black[or]shimmering black furred[or]Nightmare[or]Coal black[or]midnight black furred[or]shadowy furred[at random]";
 		now skinname of player is "Nightmare";
 		now fancyquest is 13;
+		say "[bold type]Your charisma has increased by 4![roman type][line break]";
+		say "[bold type]Your stamina has increased by 4![roman type][line break]";
 		increase charisma of player by 4;
-		say "your charisma has increased by 4!";
 		increase stamina of player by 4;
-		say "your stamina has increased by 4!";
 		now nightmaretf is 3;
 		stop the action;
 

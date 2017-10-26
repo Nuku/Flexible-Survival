@@ -34,12 +34,12 @@ Instead of Resolving a Needy Rabbit Girl:
 		let diceroll be a random number from 1 to 20;
 		say "[bold type]You roll 1d20([diceroll])+[bonus]: [diceroll + bonus]/12[roman type], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 12:
+		if diceroll > 12:
 			say "You call out gently to the woman and she turns to face you once more. She looks ready to flee but you hurriedly explain you mean no harm. Cautiously, she begins to relax, but does not approach you.";
 		else:
 			say "You call out gently to the woman, but when she turns that panicked gaze on you, you fail to think of anything convincing to say, and she flees off into the ruins.";
 			stop the action;
-		if the cocks of the player is greater than 0:
+		if the cocks of the player > 0:
 			say "     As you approach her, slowly, you speak in gentle tones. She seems to be relaxing a little bit. When you get within twelve feet, you see that her eyes have wandered down, not meeting your gaze, instead she's looking at your belly, or groin. When you reach easy conversational distance, she grabs at your hand, 'I thought I would die alone in this city!' she gasps out, 'I can't even tell you how happy I am to see you.'";
 			now battleground is "Outside";
 			choose row with a area of battleground in the Table of random critters;
@@ -164,7 +164,7 @@ carry out sanreq:
 		else:
 			say "     'No problem!'";
 
-the scent of Sandra is "     Sandra smells of female rabbit, with hints of heather and clover in her scent[if hp of Sandra is 3].  You can smell Coleen's scent upon her as well[end if][if libido of Fang > 3].  Fang's scent lingers a little upon her as well[end if]."
+the scent of Sandra is "     Sandra smells of female rabbit, with hints of heather and clover in her scent[if HP of Sandra is 3].  You can smell Coleen's scent upon her as well[end if][if libido of Fang > 3].  Fang's scent lingers a little upon her as well[end if]."
 
 the fuckscene of Sandra is "[sexwithSandra]".
 
@@ -175,7 +175,7 @@ to say sexwithSandra:
 		say "[sandrasex2]";
 	else if cunts of player is 0 and cocks of player is 0:
 		say "     'Uh, hon? No offense or nothing but you have nothing to play with. Fucking someone without any of that just feels weird to me, ok? Sorry.'";
-	else if hp of Sandra is 0 and cocks of player > 0:
+	else if HP of Sandra is 0 and cocks of player > 0:
 		say "[sandrasex_leadin]";
 		say "[sandrasex1]";
 	else:
@@ -183,7 +183,7 @@ to say sexwithSandra:
 
 
 to say sandrasexmenu:
-	if hp of Sandra is 3:
+	if HP of Sandra is 3:
 		say "     Coleen's ears perk up as she notices you heading over to the bunny's bunk.  It seems the perceptive puppy's picked up on your intent and has taken an interest in the upcoming show";
 		if lastfuck of Coleen - turns < 4:
 			say ".  The husky girl rolls onto her back and slides a paw between her legs, seemingly content to watch what she hopes will be a nice show.";
@@ -196,12 +196,12 @@ to say sandrasexmenu:
 		now title entry is "Sex up the bunny";
 		now sortorder entry is 1;
 		now description entry is "offer the bunny a good dicking";
-	if hp of Sandra is 3 and lastfuck of Coleen - turns < 4:
+	if HP of Sandra is 3 and lastfuck of Coleen - turns < 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome w/Coleen";
 		now sortorder entry is 10;
 		now description entry is "invite the husky to join you";
-	if hp of Philip is 2 and lastfuck of Philip - turns is less than 6:
+	if HP of Philip is 2 and lastfuck of Philip - turns < 6:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome w/Philip";
 		now sortorder entry is 11;
@@ -265,7 +265,7 @@ to say sandrasexmenu:
 
 to say sandrasex_leadin: [devnote: amend]
 	if rabbitsibling > 0:
-		if rabbitsibling is greater than 1 and tailname of player is not "Rabbit Girl":
+		if rabbitsibling > 1 and tailname of player is not "Rabbit Girl":
 			if rabbitsibling is 5:
 				say "     'Oh...' Sandra frowns as she notices your lack of rabbit tail, 'We should probably fix that, [sangr], shall we?'";
 				if player consents:
@@ -279,7 +279,7 @@ to say sandrasex_leadin: [devnote: amend]
 				now tailname of player is "Rabbit Girl";
 				now tail of player is "You have a short white rabbit's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 		say "     She starts to strip naked in front of you, exposing the smooth flesh of her skin to your hungry eyes. She only has fur in a few places, across her short tail, long ears, and covering her large pouting vulva. She smiles, running hands across her six breasts, starting at the small B cups and working up towards her hefty Ds as she waits for you. Catching up to her, and feeling ready yourself, you start to follow, exposing your [skin of player] body to her. She eyes you appraisingly...";
-	if the thirst of the player is greater than 50:
+	if the thirst of the player > 50:
 		say "     Sandra frowns at you, 'You look like you haven't had a drink in over a day[if rabbitsibling > 0], [sangr][end if].' She grabs for your face and buries you against a firm breast, teat brushing against your lips as she lays back with you. Feeling quite thirsty, you have no good reason to deny her and begin to gulp up the thick cream that pours out at command of your firm suckles. You nuzzle your [skin of player] face against the life giving breast, filling your belly with sweet cream as the rabbit pets and coos at you encouragingly. When your thirst has abated somewhat, she gently pushes you back, 'Now where were we...'";
 		decrease thirst of player by 15;
 
@@ -288,9 +288,9 @@ to say sandrasex1:		[fuck the bunny]
 	let lust be 0;
 	let oversized be 0;
 	let response1 be "";
-	if the cocks of the player is greater than 0:
+	if the cocks of the player > 0:
 		let multicocks be 0;
-		if cocks of player is greater than 1:
+		if cocks of player > 1:
 			if rabbitmulticock is 0:
 				now response1 is "     She salivates a little as she eyes your multiple rods, 'I never played with someone like that. I bet it would feel great...' she says, mostly to herself, the thick musk of her permeating the room with her lust, rump wriggling. ";
 			else:
@@ -300,25 +300,25 @@ to say sandrasex1:		[fuck the bunny]
 			now multicocks is 1;
 		let response2 be "";
 		let response3 be "";
-		if cock length of player is less than 5:
+		if cock length of player < 5:
 			say "     She crosses her arms and sighs softly, 'Look, I do have standard, don't let the rabbit thing fool you. You are just too puny for me.' With that she turns away and snubs you entirely. How rude!";
 		else:
-			if cock length of player is less than 8:
+			if cock length of player < 8:
 				now response2 is "     She reaches to brush her soft fingers across your throbbing member, 'A little on the small side for me, but that looks just delicious,' she purrs at you with a smile, her scent thickening with desire.";
 				increase lust by 2;
-			else if cock length of player is less than 12:
+			else if cock length of player < 12:
 				now response2 is "     Her eyes go wide as she measures the length of your cock, mentally, then with her lusty fingers, 'Oh, god, you are just perfect. You must get all the ladies, don't you?' She titters softly, rubbing her curvaceous front to you, tail wiggling behind her.";
 				increase lust by 2;
 			else:
 				now response2 is "     She gasps with amazement as your [cock size desc of player] [cock of player] equipment is exposed to her, clapping a hand over her face before she turns deep red, 'Damn! I... I am not sure I can even take that, but I want to try, oh I want to try!'";
 				increase lust by 2;
 				now oversized is 1;
-			[if cock width of player is less than 3:
+			[if cock width of player < 3:
 				now response3 is "     She lets out a sigh as she wraps your cock easily in her small hand, 'So skinny.'";
-			else if cock width of player is less than 6:
+			else if cock width of player < 6:
 				now response3 is "     Her hands slowly wander over your [skin of player] chest as she leans in closer, sweet breath shared with you. A hand squeezes at your [cock of player] shaft as she hmms, 'A little skinny...'";
 				increase lust by 1;
-			else if cock width of player is less than 10:
+			else if cock width of player < 10:
 				now response3 is "     She trembles as she tries to wrap your cock in her small hands and barely manages it, 'What a stud...' she sighs out, almost dizzy with craving.";
 				increase lust by 2;
 			else:
@@ -340,10 +340,10 @@ to say sandrasex1:		[fuck the bunny]
 				say "     Her honey is flowing thickly, trailing down your [cock of player] shaft on contact in a warm trickle. You press up excitedly, but she raises against it, softly scolding as she lines up two of your dicks, getting the second to press securely against her tight pucker. With a nod from her, you draw her to yourself, impaling her on your [cock size desc of player] poles until she is seated firmly against you, shuddering powerfully.";
 				say "     Her hands grasp at your own as they explore her curvy front, roaming from breast to breast as she rises and falls against those [cock of player] cocks, wet slapping sounds filling the room as she grows tense. Her soft moans become louder before hitting a fever pitch, small form trembling against yours as her body tightens powerfully around you. Your [ball size] clench before you start to blast into her in thick blasts of fertile seed, filling bowels and womb at once. Your erect members bump one another in their powerful twitches inside the rabbit girl as she presses tightly to you, not allowing any to escape her hungry form. Her ears go back and down suddenly, brushing at your [facename of player] face lightly, 'I think I'm spoiled on regular fucking.' she whispers lightly, panting and glistening with sweat.";
 			else:
-				say "     Sandra rolls over onto all fours, looking somehow natural in the position. Her short tail wags over her ass invitingly as she wriggles the rump towards you, 'Come on, don't keep a gal waiting.'[if charisma of player is greater than 10][run paragraph on] Despite her invitation, you move in with your face first, licking over her furry folds. The fur is downy soft, and her flesh is wet with arousal. She gasps, then begins to give little whimpering moans as you explore her body with your hungry tongue. Your hands grab at her ass, pulling it against yourself as she nibble at her thick labia and nuzzle into the sensitive flesh. She feels large enough to take a cow, but the dense muscle of the passage keeps it clenched tight around your invading tongue as she gives a sharp wail, surrendering sweet honey for you.[end if]";
+				say "     Sandra rolls over onto all fours, looking somehow natural in the position. Her short tail wags over her ass invitingly as she wriggles the rump towards you, 'Come on, don't keep a gal waiting.'[if charisma of player > 10][run paragraph on] Despite her invitation, you move in with your face first, licking over her furry folds. The fur is downy soft, and her flesh is wet with arousal. She gasps, then begins to give little whimpering moans as you explore her body with your hungry tongue. Your hands grab at her ass, pulling it against yourself as she nibble at her thick labia and nuzzle into the sensitive flesh. She feels large enough to take a cow, but the dense muscle of the passage keeps it clenched tight around your invading tongue as she gives a sharp wail, surrendering sweet honey for you.[end if]";
 				say "     You rise up, licking your lips, and slip in over her from behind. With your [cock of player] cock at the ready, you ease it into her cunt, amazed at how well the thick muscles of her sex grip and flex around you. You sink into her in a smooth thrust, and it feels like you're already pistoning with how powerfully her cunt pulls at you. She bumps her ass against your crotch as she sighs, 'Come on...' she urges, and you comply, starting to rock, slowly at first, but faster with every satisfying push, your dick vanishes into her squelching, hungry, depths, spurting thick juices across your crotch as her strangely intoxicating scent washes over you. You lose track of time as you settle on her back and grab at her many titted from, caressing those pear shaped soft organs as you buck your hips up against her, rocking her with your passion.";
 				say "     Pressed so close, you can feel her body trembling, and her tail twitching against your [skin of player] belly as she hits peak again and again with your hard rutting. Your balls clench, then explode deep into her body, filling her with hot jets of seed as she goes rigid, then suddenly swears as her face goes red with pleasure. You rest with her, cuddling gently as you both come down from your highs.";
-			if libido of player is greater than 20, decrease libido of player by 20;
+			if libido of player > 20, decrease libido of player by 20;
 			if rabbitfucked is 0:
 				now rabbitfucked is 1;
 				increase morale of player by 10;
@@ -358,7 +358,7 @@ to say sandrasex1:		[fuck the bunny]
 						add "food" to invent of bunker;
 						move Sandra to Bunker;
 						move player to bunker;
-						now hp of Sandra is 1;
+						now HP of Sandra is 1;
 						if coleenalpha > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
 						now lust of Philip is turns; [starts availability counter on Philip + Sandra]
 						say "     'Thank you!' she cries, pressing her abundant front into your side, clinging warmly as she follows you back to the bunker, tail wagging the entire way. When you arrive, you see that she somehow trailed a suitcase of belongings, and she makes herself at home quickly. She even adds two bottles of water to your bunker supplies and a small package of dried meat.";
@@ -384,7 +384,7 @@ to say sandrasex2:		[become bunny siblings]
 			stop the action;
 		say "     She hikes up her dress, revealing her huge pussy. The vulva is about three inches long, and she reaches down to parts those thick lips wetly with two fingers, as a third finger dips inside, rubbing around slowly. She tenses and shudders with the intense feel of it, but does not linger for long, bringing out her, now glistening, finger and holding it in front of your face. The musky fluid smells good, no, great, intoxicating your senses.";
 		say "     Without thinking much about it, you flick your tongue over it. As the sweet substance is swallowed, prickles run over your [skin of player] skin. Your head tingles intensely as your ears begin to go warm. Sandra giggles as she watches you, then pulls out a mirror quickly, letting you watch. A large pair of white rabbit ears gradually begin to sprout from your head, replacing what old ones you might've had. They grow long and sensitive, new sounds reaching you. Even Sandra's excited heartbeat seems to softly tick in those great furry limbs.";
-		say "[bold type]YOUR PERCEPTION HAS INCREASED BY 1[roman type][line break]";
+		say "[bold type]Your perception has increased by 1![roman type][line break]";
 		increase perception of player by 1;
 		now rabbitified is true;
 		[now face of player is "set of two long white rabbit ears twitching above your head, looking odd compared to your normal";
@@ -404,7 +404,7 @@ to say sandrasex2:		[become bunny siblings]
 				now tailname of player is "Rabbit Girl";
 				now tail of player is "You have a short white rabbit's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 				increase dexterity of player by 1;
-				say "[bold type]YOUR DEXTERITY HAS INCREASED BY 1[roman type][line break]";
+				say "[bold type]Your dexterity has increased by 1![roman type][line break]";
 				increase score by 10;
 				now lastfuck of Sandra is turns;
 			else:
@@ -485,7 +485,7 @@ to say sandrasex2:		[become bunny siblings]
 			add "food" to invent of bunker;
 			move Sandra to Bunker;
 			move player to bunker;
-			now hp of Sandra is 1;
+			now HP of Sandra is 1;
 			if coleenalpha > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
 			now lust of philip is turns; [starts availability counter on Philip + Sandra]
 			now the rabbit den is not known;
@@ -504,7 +504,7 @@ to say sandrasex2:		[become bunny siblings]
 			add "food" to invent of bunker;
 			move Sandra to Bunker;
 			move player to bunker;
-			now hp of Sandra is 1;
+			now HP of Sandra is 1;
 			if coleenalpha > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
 			now lust of philip is turns; [starts availability counter on Philip + Sandra]
 			now the rabbit den is not known;
@@ -578,8 +578,8 @@ to say sandrasex5: [Post-transformation toy sex]
 Section 4 - Sandra and Coleen Interplay
 
 An everyturn rule:
-	if lust of Sandra - turns > 15 and hp of Sandra is 1 and ( coleenalpha > 0 or coleencollared > 0 or coleenslut > 0 ) :
-		now hp of Sandra is 2;
+	if lust of Sandra - turns > 15 and HP of Sandra is 1 and ( coleenalpha > 0 or coleencollared > 0 or coleenslut > 0 ):
+		now HP of Sandra is 2;
 		now lastfuck of Coleen is turns;
 		now lastfuck of Sandra is turns;
 		if player is in Bunker:
@@ -587,11 +587,11 @@ An everyturn rule:
 			say "     After playing around, the bunny girl scritches the husky's ears, then down her back and over her tummy as she rolls over.  She doesn't seem to notice as Coleen wriggles around on her back, tongue hanging out as the husky positions herself so her breasts are being scritched.  A little more rolling around and the bunny's paw moves down between the husky's legs.  When she feels her paw is rubbing at the husky's wet snatch, the bunny freezes.  Coleen whines softly and rubs her paws over Sandra's, getting her to resume stroking her wet folds.";
 			say "     The horny husky wriggles on her back like a happy dog getting scritches, except it's a different itch being scratched.  And when Coleen's muzzle finds its way under her skirt to lick her, she moans loudly as that doggy tongue delves into her, the bunny throws herself into it as well.  She spreads her legs and pulls up her skirt to give the husky better access while pumping a pair of fingers into her lover in return.";
 			say "     They go at it for quite some time, not caring about who may be watching them in their lesbian tryst.  They swap positions a few times, licking, kissing and fingering one another until they've cum so many times they finally pass out, exhausted and satisfied.";
-			now hp of Sandra is 3;
+			now HP of Sandra is 3;
 			increase score by 10;
 
-after going to Bunker while hp of Sandra is 2:
-	now hp of Sandra is 3;
+after going to Bunker while HP of Sandra is 2:
+	now HP of Sandra is 3;
 	say "     After entering the bunker and taking a look around, you spot Coleen resting with her head in Sandra's lap.  The bunny girl is stroking the husky gently and you smile.  It's good to see those two becoming more at ease.  It takes you a little bit to notice that they both seem particularly happy and that the scent of female husky and bunny arousal hang in the air.  And that's when it clicks that Sandra's blouse is open and her skirt is sitting beside her.  After being out and seeing all the wanton sex and nudity in the city, it took you a moment to notice what must have been going on while you were out.";
 	now lastfuck of Coleen is turns;
 	now lastfuck of Sandra is turns;
@@ -599,19 +599,19 @@ after going to Bunker while hp of Sandra is 2:
 to say sandracoleentrio:
 	say "     You grin and motion for Coleen to join you and she pads on over quickly on all fours.  She dashes ahead of you and pounces into Sandra's lap, licking and lapping at her face before it turns into a kiss with the doggy tongue diving into the bunny girl's muzzle.  You move up behind Sandra and put your arms around her, nibbling her ear and whispering that it's you.  You run your paws over the bunny's body, sliding her clothes.  As you bare her soft fur, Coleen is there to nuzzle, lick or nip at her, getting her friend to moan delightfully.  Once she's naked, Coleen buries her muzzle between Sandra's legs and laps at her large pussy, giving you a moment to toss off the last of your clothes as well.";
 	say "     The bunny girl pushes Coleen's muzzle away and she turns to look at you, smiling and quite happy to spend a special moment with her two friends.";
-	if rabbitsibling is greater than 0 and ( facename of player is not "Rabbit Girl" or facename of player is not "Female Husky" or facename of player is not "Alpha Husky" ):
+	if rabbitsibling > 0 and ( facename of player is not "Rabbit Girl" or facename of player is not "Female Husky" or facename of player is not "Alpha Husky" ):
 		say "     'Oh your ears!' she exclaims, approaching and cooing at you. She snuggles firmly, then leans in to kiss, pressing lips tightly for a moment before you feel her sharp teeth sinking into your lip. Brief pain flares before her infection spreads to you rapidly, regaining your rabbit ears.";
 		now face of player is "set of two long white rabbit ears twitching above your head, looking odd compared to your normal";
 		now facename of player is "Rabbit Girl";
-	else if rabbitsibling is greater than 0 and ( facename of player is "Female Husky" or facename of player is "Alpha Husky" ):
+	else if rabbitsibling > 0 and ( facename of player is "Female Husky" or facename of player is "Alpha Husky" ):
 		say "     She looks at your husky face and smiles, grinning to Coleen.  'Oh, I guess a husky face is pretty cute, too.  Don't you think, sweety?' she asks [if coleencollared > 0]your slutty pet[else]the horny stray[end if] as she scritches the doggy's ears.";
-	if rabbitsibling is greater than 1 and ( tailname of player is not "Rabbit Girl" or tailname of player is not "Female Husky" or tailname of player is not "Alpha Husky" ):
+	if rabbitsibling > 1 and ( tailname of player is not "Rabbit Girl" or tailname of player is not "Female Husky" or tailname of player is not "Alpha Husky" ):
 		say "     Sandra frowns as she notices your lack of rabbit tail. She grabs you suddenly and hauls you across your lap. Without word or warning, she slaps your bottom firmly, and begins to spank you on the spot. Her stinging blows make your ass warm and red even as it begins to change, slowly regaining that lost rabbit tail. When it is completely restored, she waves a finger at you, 'And don't you go losing it again.'";
 		now tailname of player is "Rabbit Girl";
 		now tail of player is "You have a short white rabbit's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
-	else if rabbitsibling is greater than 1 and ( tailname of player is "Female Husky" or tailname of player is "Alpha Husky" ):
+	else if rabbitsibling > 1 and ( tailname of player is "Female Husky" or tailname of player is "Alpha Husky" ):
 		say "     Sandra runs a paw over your fluffy, husky tail.  'And a cute husky tail is nice and soft as well.  I'll let you hang onto it for now,' she says, winking to Coleen[if coleencollared > 0].  Your husky pet[else].  The stray husky slut[end if] barks in agreement, winking back.";
-	if the thirst of the player is greater than 50:
+	if the thirst of the player > 50:
 		say "     The bunny girl puts her arms around you and pulls your face into her ample bosom, pressing you against her firm breasts and brushing her nipple against your lips.  'You should take better care to drink enough out there, hon.'  Feeling quite thirsty, you start to suckle from her breast, drinking down the milk it quickly starts giving you.  There is a bark beside you and Coleen nuzzles against you, going for the other breast.  'Oh, and I know how much you like my milk, sweety,' the bunny girl says, scritching the husky's ears.  You both nurse from her bosom, filling your bellies with her sweet cream as the bunny pets and coos at you both encouragingly.  After you've each had a good drink, she gently pushes you back.";
 	if cocks of player > 0:
 		say "[sctriomale]";
@@ -649,20 +649,20 @@ Section 6 - Endings
 
 When play ends:
 	if Sandra is in the Bunker:
-		if Fang is in the Grey Abbey Library and hp of Fang is 3 and coleenalpha is 0 and humanity of player < 10:
+		if Fang is in the Grey Abbey Library and HP of Fang is 3 and coleenalpha is 0 and humanity of player < 10:
 			[succumb: alpha Fang takes uncontested Sandra ]
 			increase score by 0; [do nothing statement]
-		else if hp of the player is greater than 0:
+		else if HP of the player > 0:
 			if humanity of the player < 10 and coleenalpha > 0:
 				say "     Sandra ends up going off with Coleen, the dominant husky taking her to be the pack's bunny slut and to be bred full of adorable husky-bunny hybrid pups.  On the occasions the alpha female husky allows her to spend time with you, the bunny tells you how much she is enjoying her new life, falling into her role as a plaything for the horny canines.  ";
-			else if humanity of the player is less than 10:
+			else if humanity of the player < 10:
 				say "     Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side despite your loss of humanity.  She remains with you, tending to your needs, all of them, as best she is able.  She does not permit you to predate on unchanged humans, tackling you to the ground when the urge becomes too strong and fucking you into a cooperative stupor.  Could anyone ask for a better friend?  ";
 			else:
-				say "     Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side after you are all rescued from the infected city[if hp of Sandra is 3].  Sandra visits with Coleen often as well, always looking forward to playing with the horny puppy[end if][if coleencollared > 0].  She even ends up adopting one of Coleen's many pups, raising him to be an obedient and loyal sex pet[end if].  ";
+				say "     Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side after you are all rescued from the infected city[if HP of Sandra is 3].  Sandra visits with Coleen often as well, always looking forward to playing with the horny puppy[end if][if coleencollared > 0].  She even ends up adopting one of Coleen's many pups, raising him to be an obedient and loyal sex pet[end if].  ";
 			if cocks of player > 0 and bodyname of player is "Siren":
 				say "     The lovely bunnygirl is particularly excited by your ability to deposit eggs into her and readily has you stuff her full of them on several occasions.  She is particularly eager to do this around springtime, painting the eggs after she pushes them out and handing them out to others on Easter.  Many young sirens join new families to further spread your infection thanks to Sandra's lustful efforts.";
 				increase score by 25;
-			else if cocks of the player is greater than 0:
+			else if cocks of the player > 0:
 				say "     Eventually, she grows round and plump, and bears you a child.  The child emerges with rabbit ears, [one of]male[or]female[at random], and adorable.  The child grows up loving the both of you and is raised with fierce protectiveness.";
 				increase score by 5;
 			else:

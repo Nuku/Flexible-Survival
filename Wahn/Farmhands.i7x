@@ -12,14 +12,14 @@ FriesianRelationship is a number that varies.
 
 Section 1 - NPC Declaration
 
-Farmhand Horsemen is a man. The hp of Farmhand Horsemen is usually 0. Farmhand Horsemen is in Worker Barracks.
+Farmhand Horsemen is a man. The HP of Farmhand Horsemen is usually 0. Farmhand Horsemen is in Worker Barracks.
 The description of Farmhand Horsemen is "[FarmhandsDesc]".
 The conversation of Farmhand Horsemen is { "<This is nothing but a placeholder!>" }.
 The scent of Farmhand Horsemen is "     Walking up to one of the horsemen, you sniff at him - he has a nicely masculine scent, with a little bit of fur, straw and sweat in the mix. Seems like the guys are not adverse to doing some good and solid work for their boss at the farm. The farm worker you approached lowers a hand to rub the bulge at his crotch and says, 'I'm game if you wanna get to know me even better.' He chuckles amicably as you make an excuse and take a few steps back from him.".
 
 to say FarmhandsDesc:
 	if debugactive is 1:
-		say "DEBUG -> Farmhand Horsemen: HP: [hp of Farmhand Horsemen] <- DEBUG[line break]";
+		say "DEBUG -> Farmhand Horsemen: HP: [HP of Farmhand Horsemen] <- DEBUG[line break]";
 	say "     The farmhands living in the barracks here are almost all anthro horsemen of various breeds meant for heavy labour. The majority are Clydesdale's, with their typical brown coats, black manes and white forearms as well as lower legs. Others are of less easily recognized breeds, but you're quite sure that a pair of magnificent twin guys from among their number are Friesians - with jet-black fur from head to hoof. One other guy of note is actually a zebra that somehow found his way here, but he doesn't stand out too much among the crowd, being just one of the guys other than his markings. At any given time, there are about five to ten of the farm workers present, with twenty more on duty somewhere on or around the farm.";
 	say "     The usual 'uniform' for these hunks seems to be a pair of blue jeans, with or without a sleeveless shirt and cowboy hat to go with it. Obviously, they don't need to wear any shoes due to their hooves, but you can just imagine the boots that once went with the rest of the outfit. Other than that, a few have some pieces of personal jewelry and even tattoos and brands that help you keep them apart. One of the Clydesdales for example has a quite large golden nose ring through both nostrils of his muzzle.";
 

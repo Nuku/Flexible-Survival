@@ -238,7 +238,7 @@ to say SheepShaving:
 		say "     [bold type]Do you want to help Sonny shave?[roman type][line break]";
 		say "     [line break]";
 		say "     ([link]Y[as]y[end link]) - Sure, you'd want help if you were in his situation.";
-		say "     ([link]N[as]n[end link]) - Nah, you just dont have the time right now.";
+		say "     ([link]N[as]n[end link]) - Nah, you just don't have the time right now.";
 		if player consents:
 			say "     [line break]";
 			if graphics is true:
@@ -284,7 +284,7 @@ to say SheepShaving:
 				say "     'Why did you do that?' is his quick question. You ask him why not and that you do find him rather cute. That appears to make Sonny look down in embarrassment and you're quite sure that if he could, he'd be blushing right now. The sheep swiftly bends down and gets dressed while you use the wool that has fallen on the floor to wipe the cum off your face. By the time he's done dressing, you're standing up and you hold out the razor. The embarrassed sheep accepts it and puts it away. Clearly the impromptu blowjob has pushed Sonny off balance. So, you turn and make your way out of the lockerroom to give him time to think. As you do this, a thought pops in your head. Perhaps you could ask the sheep to move in with you at the library. Afterall, with you and anyone else you bring there, he won't be short of people hopefully willing to help him shave.";
 				now SonnyRelationship is 4; [met, BJ]
 				move Sonny to Mall Lockerroom;
-				now hp of Sonny is 1;
+				now HP of Sonny is 1;
 				move player to Mall West Wing;
 			else: [just the butt-shave]
 				say "     [line break]";

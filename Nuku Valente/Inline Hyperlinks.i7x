@@ -37,7 +37,7 @@ To cancel glulx hyperlink request in the/-- main window:
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)) glk_cancel_hyperlink_event(gg_mainwin); -)
 
 To request glulx hyperlink event in the/-- status window:
-	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)  && gg_statuswin) glk_request_hyperlink_event(gg_statuswin); -)
+	(-  if (glk_gestalt(gestalt_Hyperlinks, 0) && gg_statuswin) glk_request_hyperlink_event(gg_statuswin); -)
 
 To cancel glulx hyperlink request in the/-- status window:
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0) && gg_statuswin) glk_cancel_hyperlink_event(gg_statuswin); -)
@@ -202,7 +202,7 @@ To display (L - a list of indexed texts) using indices:
 Chapter 4 - Manually reserving entries in the hyperlink list
 
 To reserve (N - a number) slots in/of/at the/-- beginning/-- of/-- the/-- hyperlink command/-- list:
-	if the number of entries of the hyperlink list is greater than 0:
+	if the number of entries of the hyperlink list > 0:
 		say "*** Error: Attempted to manually add entries to the hyperlink list when there are already entries present. The list must be empty in order to reserve slots. The best time to reserve entries is in the 'after starting the virtual machine' activity.";
 		rule fails;
 	repeat with index running from 1 to N:
@@ -334,7 +334,7 @@ Example: ** Maze - It can be difficult to work with text substitutions in Inform
 
 	To say exits:
 		let count be the number of adjacent rooms;
-		if count is greater than 0:
+		if count > 0:
 			repeat with destination running through adjacent rooms:
 				let the way be the best route from the location to the destination, using even locked doors;
 				let dir be "[way]";
@@ -397,7 +397,7 @@ We then revisit the exit lister from the Maze example above, and implement it in
 
 	To say exits:
 		let count be the number of adjacent rooms;
-		if count is greater than 0:
+		if count > 0:
 			repeat with destination running through adjacent rooms:
 				let the way be the best route from the location to the destination, using even locked doors;
 				let dir be indexed text;
@@ -411,7 +411,7 @@ We then revisit the exit lister from the Maze example above, and implement it in
 
 	To say skewed exits:
 		let count be the number of adjacent rooms;
-		if count is greater than 0:
+		if count > 0:
 			repeat with destination running through adjacent rooms:
 				let the way be the best route from the location to the destination, using even locked doors;
 				let dir be indexed text;
@@ -431,7 +431,7 @@ Since we are shortcutting normal processes with our new hyperlink processing rul
 
 A companion rule for input redirects the player's typed direction command in the same way. (A better way to do this would be to change the "direction understood" to a random direction before going, but we choose to lie in the hole we've dug ourselves...
 
-	*: Hyperlink processing rule when the player is deranged and the current hyperlink ID is less than 13:
+	*: Hyperlink processing rule when the player is deranged and the current hyperlink ID < 13:
 		say "[input-style-for-glulx]go ???[roman type]";
 		if there is an ID of current hyperlink ID in the Table of Going Actions:
 			choose row with ID of current hyperlink ID in the Table of Going Actions;

@@ -34,7 +34,7 @@ Instead of resolving a Policeman:
 		say "     The cop walks up to you purposefully, pulling out his nightstick and slapping his palm with it a couple of times while sizing you up. Watching your reactions, he notices that you're not a mindless monster (yet) and relaxes only slightly. 'Hold it right there. What are you doin['] roamin['] the streets during a crisis?  All citizens were advised to stay at home and in shelters before all communications dropped,' he growls with authority.";
 		if scenario is "Researcher":
 			say "     You quickly explain to him that you are actually a researcher sent in to gather data. You tell him that you have been inoculated to be resistant and have been searching throughout the city for samples. You tell him a little about what you've seen, leaving out some details for the moment. You wouldn't want to incriminate yourself. The cop keeps a stern eye on you while you talk, making a few notes and taking down your personal information.";
-		else if hp of doctor matt > 0 and hp of doctor matt < 100:
+		else if HP of doctor matt > 0 and HP of doctor matt < 100:
 			say "     You quickly explain to him that you were in a shelter, but were running out of supplies and had to risk leaving. You tell him a little bit about what you've seen, leaving out some details for the moment. You wouldn't want to incriminate yourself. You even add in the fact that you're working with a scientist who's investigating the cause of the outbreak. The cop keeps a stern eye on you while you talk, making a few notes and taking down your personal information.";
 		else:
 			say "     You quickly explain to him that you were in a shelter, but were running out of supplies and had to risk leaving. You tell him a little bit about what you've seen, leaving out some details for the moment. You wouldn't want to incriminate yourself. The cop keeps a stern eye on you while you talk, making a few notes and taking down your personal information.";
@@ -65,10 +65,10 @@ Instead of resolving a Policeman:
 			let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
 			let the dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 16: ";
-			if dice plus bonus is greater than 16:
+			if dice plus bonus > 16:
 				say "     You narrowly dodge out of the way of the vicious blow.";
 			else:
-				decrease hp of player by 15;
+				decrease HP of player by 15;
 				say "     You are struck firmly across the jaw by the hard club. (15 dmg)";
 			say "[line break]     'And here I thought you were smarter than that, but I guess you're just another stupid, punk looter?  I guess I'll have to teach you a hard lesson,' the tiger cop growls, readying to strike again if you get up.";
 			wait for any key;
@@ -78,7 +78,7 @@ Instead of resolving a Policeman:
 					now monster is y;
 					break;
 			now area entry is "High"; [activates Tiger Cop as a wandering monster]
-			if hp of player < 1:
+			if HP of player < 1:
 				say "     That blow was too much for you and you are sent sprawling to the ground, unable to retaliate or flee.";
 				say "[losetotigercop]";
 			else:
@@ -129,7 +129,7 @@ to say givekeys:
 	now mqcountdown is 0;
 	Now Policeman is resolved;
 	increase score by 40;
-	increase xp of player by 10;
+	increase XP of player by 10;
 	say "     The feline policeman opens the car and digs around in what appears to be the torn remains of a cop's uniform in the passenger's seat. 'Here, take this. You're gonna need it,' he says meaningfully as he passes you a nightstick. 'If you've got any last minute stuff to take care of or an equipment stash wherever you're holed up, you go get your gear and be back here pronto. I want you to come along on this, but I'm only willin['] to wait 24 hours before I move out. And if somethin['] holds you up, there'll be a key in the lip of the bumper. I should be able to leave somethin['] for ya in the trunk and I'll get in touch after the heat dies down.'";
 	say "     Nightstick obtained.";
 	increase carried of nightstick by 1;
@@ -209,8 +209,8 @@ to say motelquest:
 	WaitLineBreak;
 	if "Stealthy" is listed in feats of player:
 		say "     You tell him that you can jump the first guard by surprise if he'll help deal with hir after that. Using your Stealth abilities, you stick to the shadows and go at the building from behind. You slink with your back to the wall until you move around behind the tigress. Pouncing hir, you cover hir muzzle to keep hir quiet while the cop rushes out to help you subdue hir. Once shi's out cold, you stash hir around the corner and he motions for you to head up the stairs.";
-		say "     Bonus: 20 pts and 10 xp awarded.";
-		increase xp of player by 10;
+		say "     Bonus: 20 pts and 10 XP awarded.";
+		increase XP of player by 10;
 		increase score by 20;
 	else:
 		say "     You head over to the tigress, acting as if you intend to be a client until you get close to hir, then engage hir in combat. While you fight the tigress, you can see Sergeant Marks head to the nearest room on the ground floor.";
@@ -301,7 +301,7 @@ to say mqlostfight:
 	decrease score by 25;
 	now humanity of player is 0;
 	follow the turnpass rule;
-	end the game saying "You become another whore for the corrupt cop.";
+	end the story saying "You become another whore for the corrupt cop.";
 	now battleground is "void";
 
 
@@ -401,7 +401,7 @@ to say mqsuccess:
 	increase score by 100;
 	follow the turnpass rule;
 	WaitLineBreak;
-	end the game saying "You become the muscled guard for the tigresses.";
+	end the story saying "You become the muscled guard for the tigresses.";
 	now battleground is "void";
 
 to say MQvictory:						[Victory]
@@ -527,8 +527,8 @@ to say tigercopdesc:
 	choose row monster from the table of random critters;
 	let debit be 0;
 	if hardmode is true and level of player > 8, let debit be level of player - 8; [Boss hard mode growth rates]
-	now hp entry is 90 + ( debit * 6 );
-	now monsterhp is 90 + ( debit * 6 );
+	now HP entry is 90 + ( debit * 6 );
+	now monsterHP is 90 + ( debit * 6 );
 	now wdam entry is 12 + ( ( 4 * debit ) / 11 );
 	now lev entry is 8 + debit;
 	if mqstatus is 98:
@@ -540,7 +540,7 @@ to say tigercopdesc:
 to say losetotigercop:
 	if mqstatus is 98:
 		say "     Unable to stand up to the large tiger any longer, he grabs you roughly and shoves you face down onto a mound of rubble. 'You couldn't just do what you were told. The world is filled with punks like you these days. No respect for authority,' he growls as he holds you down with one paw and bares your bottom with the other.";
-		if cunts of player is greater than 0:
+		if cunts of player > 0:
 			say "     'Well, I'll teach you a lesson you won't soon forget,' he says as he slides his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of the nightstick at your pussy, making you shiver. He teases you with it briefly, getting you wet despite yourself, before sinking it into you. He pounds you hard and fast with it, making your body shudder until you finally climax. He sprays his cum across your ass, and then removes the weapon from your aching pussy. He picks you up roughly and gives you a hard shove. 'Get your dumb ass out of here. And if I catch you again, you'll get the real thing.'";
 		else:
 			say "     'Well, I'll teach you a lesson you won't soon forget,' he says as he slides his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of the nightstick at your asshole, making you shiver. He teases you with it briefly and you try your best to relax it before he sinks it into you, using only a little spit for lubrication. He pounds you hard and fast with it, making your body shudder until you finally climax. He sprays his cum across your ass, and then removes the weapon from your aching hole. He picks you up roughly and gives you a hard shove. 'Get your dumb ass out of here. And if I catch you again, you'll get the real thing.'";
@@ -553,7 +553,7 @@ to say losetotigercop:
 			else:
 				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain. After another stinging slap, he runs his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of his nightstick against your asshole, making you shiver. He rubs it against your pucker and you try your best to relax before he drives it into you with only a little spit as lube. You groan at the sudden, hard intrusion as it thrusts into you and starts sliding it back and forth[if cocks of player > 0 and player is submissive], getting you hard despite yourself[end if]. The tiger cop pounds you hard and fast with it, making your [bodydesc of player] body shudder[if cocks of player > 0 and player is submissive] until you finally cum[end if]. Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching asshole.";
 				say "     Wiping the warm rod across your ass, he gives you another hard swat, making you cry out. 'Get your dumb ass out of here. I might not go so easy on you next time,' he growls.";
-		if cunts of player is greater than 0:
+		if cunts of player > 0:
 			[puts Tigress Hooker as lead monster in case of impregnation]
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
@@ -607,7 +607,7 @@ To say beattigercop:
 Section 8 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -634,8 +634,8 @@ When Play begins:
    now int entry is 12;
    now cha entry is 18;
    now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 90;
-   now lev entry is 8; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+   now HP entry is 90;
+   now lev entry is 8; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
    now wdam entry is 12; [Amount of Damage monster Does when attacking.]
    now area entry is "nowhere"; [ Location of monster, start nowhere, High if active]
    now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -677,7 +677,7 @@ when play ends:
 		now cockname of player is "Tigress Hooker";
 	if mqstatus is 0 or mqstatus is 1:				[no motel quest / incomplete]
 		if bodyname of player is "Tigress Hooker":
-			if humanity of player is less than 10:
+			if humanity of player < 10:
 				say "[THendingC]";
 			else:
 				say "[THendingA]";
@@ -685,7 +685,7 @@ when play ends:
 		if humanity of player > 9:				[all survivors get a standard add-on]
 			say "[THending_refusal][line break]";
 		if bodyname of player is "Tigress Hooker":
-			if humanity of player is less than 10:
+			if humanity of player < 10:
 				say "[THendingD]";
 			else:
 				say "[THendingA]";
@@ -693,7 +693,7 @@ when play ends:
 		if humanity of player > 9:				[all survivors get a standard add-on]
 			say "[THending_helper][line break]";
 		if bodyname of player is "Tigress Hooker":
-			if humanity of player is less than 10:
+			if humanity of player < 10:
 				say "[THendingE]";
 			else if tailname of player is "Tigress Hooker" and facename of player is "Tigress Hooker" and skinname of player is "Tigress Hooker":			[visibly fully tigress]
 				say "[THendingB]";
@@ -701,7 +701,7 @@ when play ends:
 				say "[THendingA]";
 	if mqstatus is 4:							[fled from motel hunt]
 		if bodyname of player is "Tigress Hooker":
-			if humanity of player is less than 10:
+			if humanity of player < 10:
 				say "[THendingF]";
 			else if tailname of player is "Tigress Hooker" and facename of player is "Tigress Hooker" and skinname of player is "Tigress Hooker":			[visibly fully tigress]
 				say "[THendingB]";

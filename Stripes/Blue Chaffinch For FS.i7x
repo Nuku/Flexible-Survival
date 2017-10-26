@@ -34,10 +34,10 @@ Section 2 - Player Loss
 to say losetobluechaffinch:
 	choose row monster from the table of random critters;
 	now nobluechaffinchsex is 0;
-	say "     [if hp of player > 0]Giving in[else]Having lost[end if] to the blue songbird, you drop to your knees in front of him. He struts around arrogantly and chirps a happy song before moving towards you with an obvious swagger. ";
+	say "     [if HP of player > 0]Giving in[else]Having lost[end if] to the blue songbird, you drop to your knees in front of him. He struts around arrogantly and chirps a happy song before moving towards you with an obvious swagger. ";
 	if cunts of player > 0:
 		say "     The victorious male pushes you over roughly and gets his stiff cock lined up with your pussy with little preamble. His taloned hangs grip your [if scalevalue of player > 4]hips[else if scalevalue of player is 4]sides[else]shoulders[end if] and pulls you back onto his avian rod. The slick, tapered cock pushes into you easily, causing you to moan in pleasure despite yourself. Soon the feathered fellow is drilling into you, chirping occasionally as he does.";
-		say "     You grow increasingly aroused as the mating continues, his soft feathers rubbing against your hips, thighs and pussy lips as he thrusts into you[if hp of player > 0]. As you're not resisting his advances[else]. As you're no longer resisting his advances[end if], he lets his taloned hands roam over your [bodytype of player] body and leans gently overtop you, letting his fluffy chest rub against your back. Between the soft feathers rubbing against you and the hard cock pumping inside you until finally you both cum loudly[if facename of player is name entry], your mating song joining in with his[else] with him chirping and moaning[end if] as his hot seed pumps into your cunt and flows into your womb.[ovichance]";
+		say "     You grow increasingly aroused as the mating continues, his soft feathers rubbing against your hips, thighs and pussy lips as he thrusts into you[if HP of player > 0]. As you're not resisting his advances[else]. As you're no longer resisting his advances[end if], he lets his taloned hands roam over your [bodytype of player] body and leans gently overtop you, letting his fluffy chest rub against your back. Between the soft feathers rubbing against you and the hard cock pumping inside you until finally you both cum loudly[if facename of player is name entry], your mating song joining in with his[else] with him chirping and moaning[end if] as his hot seed pumps into your cunt and flows into your womb.[ovichance]";
 		say "     When he's done, he dismounts, gives your ass a swat with one of his wings and a chuckle and flies off. You are left lying there with his cum leaking from your stuffed pussy and trying to recover your strength.";
 	else:
 		say "     The victorious male strides in front of you and, taking your head in his taloned hands, presses your face forward against his throbbing cock. Dribbles of precum leak across your face and run down over your lips. You can't help but get a quick taste of it, and after that taste, you want more. You open your mouth and plunge it down over his seven inches of avian manhood, licking and sucking at it as he moans and chirps happily. '[one of]Yeah, who's the big, tough bird now?' he brags[or]Lick that cock, you wimp,' he orders[or]Even as a cute birdy, I'm still all man,' he boasts[at random] pulling your face forward so he can thrust into your mouth harder. You groan, licking and sucking at his cock as best you can while he pounds your face, finally cumming with a lot of chirping and moaning.";
@@ -145,7 +145,7 @@ to say bluechaffcaught:
 		now battleground is "void";
 		increase score by 20;
 		move Icarus to Grey Abbey Library;
-		now hp of Icarus is 1;
+		now HP of Icarus is 1;
 		move player to Grey Abbey Library;
 		now icarus_lastpred is 1;
 	else:
@@ -207,7 +207,7 @@ to say bluechaffpounced:
 		now battleground is "void";
 		increase score by 20;
 		move Icarus to Grey Abbey Library;
-		now hp of Icarus is 1;
+		now HP of Icarus is 1;
 		move player to Grey Abbey Library;
 		now icarus_lastpred is 2;
 	else:
@@ -218,7 +218,7 @@ to say bluechaffpounced:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -231,7 +231,7 @@ When Play begins:
 	now face entry is "obviously avian, with a thick, pointed beak for a mouth. Your head is rounded and shaped similar to that of a chaffinch. Your eyes are dark beads of black with a touch of white feathers just above and below them";
 	now body entry is "avian in form, with a pair of broad wings at your back and sides. Thankfully, you've still got your arms, though they're thin and taloned like a bird's legs. Much like your arms, your legs have the same spindly, songbird shape. On the whole, you feel much lighter, your bones hollowed for flight you can't quite achieve";
 	now skin entry is "[if cocks of player > 0]blue feathered[else]grey-brown feathered[end if]";
-	now tail entry is "You have a feathery tail extending from your backside. It is long and somewhat slender when not fanned with [if cocks of player > 0]rich blue[else]grey-brown[end if] feathers near the base before the midnight blue flight feathers extend outwards. The underside has downy white feathers to rest against your ass";
+	now tail entry is "You have a feathery tail extending from your backside. It is long and somewhat slender when not fanned with [if cocks of player > 0]rich blue[else]grey-brown[end if] feathers near the base before the midnight blue flight feathers extend outwards. The underside has downy white feathers to rest against your ass.";
 	now cock entry is "[one of]avian[or]slender[or]bird-like[at random]";
 	now face change entry is "it throbs painfully. Your jaw aches and stretches forward, reshaping itself as you grow a thick, pointed beak. It resembles that of a finch, but is thicker and has a grey-blue colour to it. As the changes continue and your vision blurs for a minute, your head changes to become avian to match your bill";
 	now body change entry is "feels increasingly lighter as an odd sensation runs through your whole body. You quickly realize that this is focused on your bones as they hollow out. Just as this strange experience is coming to a close, there's a sharp pulse at your shoulder blades, the bone matter having been transferred there to build the wings that are starting to form. As this change is going on, you become smaller than a normal person and your arms and legs turn into slender, taloned limbs like those of a small bird to match your new, songbird body";
@@ -245,7 +245,7 @@ When Play begins:
 	now int entry is 9;
 	now cha entry is 15;
 	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 27; [ The monster's starting hit points. ]
+	now HP entry is 27; [ The monster's starting HP. ]
 	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6; [ Monster's average damage when attacking. ]
 	now area entry is "Zoo"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -276,7 +276,7 @@ Section 3 - Endings
 [
 when play ends:
 	if bodyname of player is "Blue Chaffinch":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your bluechaffinch infection.";
 		else:
 			say "     You survive, but were infected by the bluechaffinch.";

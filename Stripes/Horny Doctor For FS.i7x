@@ -92,7 +92,7 @@ to hdheatprompt:
 	drive heat;
 
 to say losetohdmale:
-	say "     The horny doctor eagerly pushes you down over a stray gurney and runs his paws roughly over you. '[if hp of player > 0]Now that's much better. Now take your medicine like a good patient. I've got it nice and hot right here,' he chuckles, grinding his throbbing cock against your hip as he does[else]Such a troublesome patient you're being. You don't want me to call an orderly to help me with you, do you?' he chuckles, grinding his throbbing cock against your hip as he does[end if]. No longer resisting his advances, he licks your neck and gives your crotch a probing caress, a quick examination of what fun he might have with his new patient. You can't help but moan in response, your lustful urges rapidly overpowering your good sense.";
+	say "     The horny doctor eagerly pushes you down over a stray gurney and runs his paws roughly over you. '[if HP of player > 0]Now that's much better. Now take your medicine like a good patient. I've got it nice and hot right here,' he chuckles, grinding his throbbing cock against your hip as he does[else]Such a troublesome patient you're being. You don't want me to call an orderly to help me with you, do you?' he chuckles, grinding his throbbing cock against your hip as he does[end if]. No longer resisting his advances, he licks your neck and gives your crotch a probing caress, a quick examination of what fun he might have with his new patient. You can't help but moan in response, your lustful urges rapidly overpowering your good sense.";
 	if inheat is true and ( ( cunts of player > 0 and heatform is 0 ) or ( heatform is 1 ) ):
 		say "     While fondling your [if cunts of player > 0 and heatform is 0]juicy cunt[else]crinkled hole[end if], the canine doctor sniffs excitedly, catching your scent in the air. 'Oh, my poor patient is in heat. I have the cure for that right here,' he says, grinding his cock against your ass harder in emphasis. In your heat-addled state, you can't help but moan and raise your ass to him, allowing him to get his doggy dong lined up with your wanton hole. 'Mmm... it's [one of]malpractice time[or]time for some practical gynecology[or]heavy-duty doctoring time[as decreasingly likely outcomes], my dear,' he says with a grin and a lick just before thrusting firmly into your [if cunts of player > 0 and heatform is 0]needy cunt[else]needy back door[end if] with intent to breed you out of your heat.";
 		if cunts of player > 0 and heatform is 0:
@@ -155,7 +155,7 @@ to say hdmale_sex04:
 
 
 to say losetohdfemale:
-	say "     The horny doctor eagerly pushes you backwards onto a stray gurney, climbs atop it and runs her paws roughly over you. '[if hp of player > 0]Now that's much better. I've got the cure for what ails you right here,' she giggles, grinding her dripping pussy against your hip as she does[else]Such a troublesome patient you're being. You don't want me to call an orderly to help me with you, do you?' she giggles, grinding her dripping pussy against your hip as she does[end if]. No longer resisting her advances, she licks your neck and gives your crotch a probing caress, a quick examination while she decides what fun she might have with her new patient. You can't help but moan in response, your lustful urges rapidly overpowering your good sense.";
+	say "     The horny doctor eagerly pushes you backwards onto a stray gurney, climbs atop it and runs her paws roughly over you. '[if HP of player > 0]Now that's much better. I've got the cure for what ails you right here,' she giggles, grinding her dripping pussy against your hip as she does[else]Such a troublesome patient you're being. You don't want me to call an orderly to help me with you, do you?' she giggles, grinding her dripping pussy against your hip as she does[end if]. No longer resisting her advances, she licks your neck and gives your crotch a probing caress, a quick examination while she decides what fun she might have with her new patient. You can't help but moan in response, your lustful urges rapidly overpowering your good sense.";
 	if a random chance of 1 in 4 succeeds:
 		say "[hdfemale_sex04]";
 	if cocks of player > 0 and a random chance of 2 in 3 succeeds:
@@ -224,7 +224,7 @@ to say beatthehdfemale:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -252,7 +252,7 @@ When Play begins:
 	now int entry is 17;
 	now cha entry is 14;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 85; [ The monster's starting hit points. ]
+	now HP entry is 85; [ The monster's starting HP. ]
 	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 10; [ Monster's average damage when attacking. ]
 	now area entry is "Hospital"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -295,7 +295,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Horny Doctor":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As you lose your grip on your mind, a new set of instincts and thoughts replace your old memories. A lot of it is a jumble of medical knowledge that occupies your thoughts, drawing you to come to the city hospital. There you feel a need to work alongside the other canine doctors wandering the halls. They welcome you happily, and lustfully, as do the other denizens of the medical facility.";
 			if hospquest < 2:
 				if cocks of player > 0 and cunts of player > 0:
@@ -312,12 +312,12 @@ when play ends:
 					say "     During one of these trips to accompany a team, needing to survey the situation at the college campus yourself, your team gets stormed by a muscular team of bunnies in sports gear. During the fray, you get tackled by a pair of them and dragged away from the group. By the time you regain consciousness, you are in a locker room surrounded by the bunnies, who take turns celebrating their capture. Having been treated by the mouse director, you resist physically changing and becoming another bunny like them, but that's not what they want anyhow. You are instead remade into their sexy team doctor, tending to their injuries and providing relief for their aching loins.";
 				else:
 					say "     During one of these trips to accompany a team, wanting to hand-pick the next set of test subjects for a crucial experiment, the team gets stormed by a pack of huskies. While the females keep the team occupied, their alpha male leader - tired of having his girls snatched up by the hospital raids - assaults you from behind and captures you. You get added to his little pack of fucktoy bitches as a samoyed plaything to add some spice to his breeding bitches.";
-			else if hospquest is 13 and hp of doctor mouse is 1:
+			else if hospquest is 13 and HP of doctor mouse is 1:
 				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr Mouse. While you only vaguely remember him, he somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement. ";
 				if "Sterile" is not listed in feats of player and cunts of player > 0:
 					say "     You birth many bizarre, hybrid creatures from these matings";
 				say "     You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower.";
-			else if hospquest is 13 and hp of doctor mouse is 2:
+			else if hospquest is 13 and HP of doctor mouse is 2:
 				say "     The hospital is in disarray when you arrive, more like a bunch of seagulls squabbling over scraps than the orderly flock of birds flying in formation it once resembled. The various factions strike out at each other at times, but cooperate at others. Some sections, such as the doctors' offices are calm enough, but the cafeteria and other locations are frequent homes to squabbles over mates.";
 				if intelligence of player >= 20 and charisma of player >= 15 and "Expert Medic" is listed in feats of player:
 					say "     It is only with the coming of the military that control is restored. The united threat of military action unifies the factions, at least temporarily. And you would see that order remain and start taking charge of the groups. Feeling the need to have someone in charge, the other groups begin to respond to your commands, beginning to rely on you to fill that void. Your familiarity and experience in the city helps counter the military incursion. Using the hospital's collected samples, you direct raids against the military forces, infecting them groups of them with various strains, thereby creating pockets of sex-crazed creatures in their midst. These strikes are well planned and use infections selected to provide the most disruption, either by their power or by their high breeding rate. With their forces falling into disarray and being lost to these hot spots you've created, the military is eventually forced to withdraw from the area around the hospital and eventually from the city. With the hospital left alone and a new collection of test subjects, you turn your attention away from the army and back inwards.";

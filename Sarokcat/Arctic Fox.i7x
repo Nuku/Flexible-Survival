@@ -7,7 +7,7 @@ Section 1 - Monster Responses
 
 
 to say Arctic fox attack:
-	if cunts of player is greater than 0:
+	if cunts of player > 0:
 		say "tease-.[line break]";
 		say ".'";
 		infect "Arctic fox";
@@ -23,7 +23,7 @@ To say Arctic fox loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -36,7 +36,7 @@ When Play begins:
 	now face entry is "sexy vulpine face, your slim narrow muzzle and bright eyes look perfectly suited to your body, and your pointed canine ears twitch idly at every sound even as you find yourself grinning happily, enjoying the feeling of your new sexy";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "sexy and lithe, with small vulpine paws, and rather dainty claw-tipped hands, your rather sexy new vulpine form seems to burn with energy and arousal";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]pure white[or]white furred[or]Arctic fox[or]soft furred[or]thick white fur covered[at random]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a beautiful white vulpine tail stretched out behind you, its soft fur rubbing against your body pleasantly as you swish it from side to side with amusement.";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a beautiful white vulpine tail that stretches out behind you, its soft fur rubbing against your body pleasantly as you swish it from side to side with amusement.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]vulpine[or]knotted[or]pointed[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your mouth pushes out into a slim muzzle, your ears tapering to points and seeming to stretch out above your head as your face begins to reshape itself into the narrow sexy visage of an fox, your slim new muzzle full of sharp teeth and your bright shining eyes seeing the world around you in an entirely new, and more sexual light"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you find yourself falling to the floor, your muscles twitching as your body reshapes into a slimmer and more streamlined form. Your feet shift and compress into small dainty vulpine paws, even as your hands seem to narrow and your fingers grow closer together as soft claws push their way out of your new slightly paw-like hands"; [ body change text. format as "Your body feels funny as (your text)" ]
@@ -50,8 +50,8 @@ When Play begins:
 	now int entry is 15;
 	now cha entry is 25;
 	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 40;
-	now lev entry is 3;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 40;
+	now lev entry is 3;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 4;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "None";  [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -80,14 +80,14 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Arctic fox":
-		if humanity of player is less than 10:
-			if cocks of player is greater than 0:
+		if humanity of player < 10:
+			if cocks of player > 0:
 				say "'Giving in to your more feral instincts, you return to the palomino and your sexy vixen mate. Janice seems rather surprised at first at your intensity, but soon is moaning just as wantonly as you sheath yourself in her body again and again until she is as lost to the pleasure of her new body as you are. After you have recovered, you find you enjoy spending time at the club, the two of you occasionally teasing other club goers to give in and join you as sexy slutty arctic foxes. When the military arrives you find you have even more opportunity for fun, as they prove particularly susceptible to your sexy mates teasing looks, although you are always the one to mate them and make them proper vixens. Before long there are several vixens on stage at any time, though you settle in and make one of the private rooms into your fox den, the other club goers seeming only slightly interested in your actions, perhaps because many of them have started adapting similar habits. Eventually though the club comes under attack from the military, and you and your mates are forced out into the streets to help deal with the problem, the hunt proving surprisingly fun as you and Janice enjoy tricking, and trapping the military, together with your other vulpine converts. Before long you have broken out of the military containment area as a large group, and you only pause for a minute to get your bearings, before you all split up and begin to head north. You grin ferally as you imagine the military trying to chase all your nice pregnant vixen mates down, and snicker knowing there is no way they can catch even a quarter of your clever foxy mates before you all escape to the north. Though you certainly hope they come look for you and your fellow arctic foxes up in the snowy north once you get there... you could always use some new converts after all...";
 			else:
 				say "Giving in to your more feral instincts, you return to the palomino and your sexy vixen sister. Janice seems rather surprised at first at your intense changes, but after a while she comes to embrace and enjoy her new instincts just as fully, having already fallen in love with her new sexy form. Before long you and Janice are often found up on stage, as she shows you how to move your body to your best advantage, the cheers of the crowd as you tease them all with your sexy vixen body makes you hot, and you often invite several of them back to your private nook for you and Janice to play with together. The eventual military arrival is a big deal however, as you and Janice finally manage to get a sexy new male fox to play with as one of the soldiers joins you on a more permanent basis in the club, and several new vixen sisters end up joining soon afterwards as well. You find yourself smiling happily as you feel your mate's young begin to grow in your belly, enjoying the feeling as much as you know Janice is, already nice and eager to breed more little sexy fox kits for your mate after this litter... and you just can't wait for your next breeding season together![line break]";
 				say "Y...";
 		else:
-			if cocks of player is greater than 0:
+			if cocks of player > 0:
 				say "When the military finally arrive at the club, they find you and Janice more than happy to return to their base with them, although many other club members decide to stay behind in their newly found home. At the military camp, it is easy enough for the two of you to manipulate manners in your favor, and soon with a few phone calls to some old acquaintances in the modeling community, the two of you are released from military custody. You find yourself grinning with amusement at how eager people are not to piss your lovely new mate off, her contacts proving exceptionally useful as she reestablishes her identity and reclaims her bank accounts. Soon you are settling in to a nice comfy new den, which you celebrate by enjoying each other on every surface possible. Before long you find yourself feeling mildly restless as your mates heat begins to fade, and you take to wandering around your new property a bit. You are thus surprised one day to return to find several of your mates female contacts waiting nervously nearby, and your mate with a sexy twinkle in her eye. It doesn't take long to figure out Janice's plan, and before long you have seduced them all, and sent them off to transfer their money and get their affairs in order so they can become sexy little vixens as well. The thought of have a nice little harem of your own warms your heart, and before long you have a nice full house full of vixens, many of them with connections to the movies or modeling industries. It seems almost inevitable you would find yourself on screen soon enough, your lithe form and cavalier attitude capturing the imagination and making you rather popular, and your sexy mates acquire more than a bit of a following as well. Though you find yourself staying at home with your mates as much as possible as they slowly swell with your virile seed, and you can't wait to have a bunch of little fox kits running around the house. The thought makes you smile even as you relax in a warm pile of fur and hold your first, and favorite mate close, looking forward to a long and eventful foxy life.[line break]";
 			else:
 				say "When the military finally arrive at the club, they find you and Janice more than happy to return to their base with them, although many other club members decide to stay behind in their newly found home. At the military camp, it is easy enough for the two of you to manipulate manners in your favor, and soon with a few phone calls to some old acquaintances in the modeling community, the two of you are released from military custody. You find yourself grinning with amusement at how eager people are not to piss your lovely new sister off, her contacts proving exceptionally useful as she reestablishes her identity and reclaims her bank accounts. Before long you are both living quite comfortably together, and you enjoy exploring your bodies together as often as possible. Still Janice has that mischievous twinkle in her eye again soon enough, and before long she is talking about taking up modeling and showmanship again, though with an entirely new twist this time.[line break]";

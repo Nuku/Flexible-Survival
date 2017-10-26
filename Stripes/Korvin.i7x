@@ -28,7 +28,7 @@ understand "Korvin" as gshep.
 
 to say Korvin_desc:
 	if debugactive is 1:
-		say "DEBUG - Korvin | LVL: [level of gshep], XP: [xp of gshep], DEX: [dexterity of gshep], DMG: [weapon damage of gshep].";
+		say "DEBUG - Korvin | LVL: [level of gshep], XP: [XP of gshep], DEX: [dexterity of gshep], DMG: [weapon damage of gshep].";
 		say "DEBUG - Korvin | gsd_pet: [gsd_pet], lastfuck: [lastfuck of gshep], lastscene: [lastscene of gshep].";
 		say "DEBUG - Korvin | Scenes | Post-Fight: [gshep_postfight], Sex: [gshep_sexscene], Bed: [gshep_bed_scene], Inactive: [gshep_inactive].";
 	if gsd_pet < 20:
@@ -56,7 +56,7 @@ Instead of conversing the gshep:
 	else if gshep is not companion of player:
 		say "I don't see him around right now. You'll have to call him over first.";
 	else if gsd_pet < 16:
-		say "     [one of]'What do you want, ?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, oh wise and powerful Alpha?' he asks, rolling his eyes. A glare from you gets him to stop and hang his head.[or]'I can't wait for our next scrap, [if cunts of player > 0]Mistress[else]Master[end if]. It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[at random]";
+		say "     [one of]'What do you want?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, oh wise and powerful Alpha?' he asks, rolling his eyes. A glare from you gets him to stop and hang his head.[or]'I can't wait for our next scrap, [if cunts of player > 0]Mistress[else]Master[end if]. It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[at random]";
 	else if gsd_pet is 16:
 		if cocks of player is 0 and cunts of player is 0:
 			say "     You consider giving Korvin his new collar, but without a gender of your own, you won't really be able to [']enjoy['] the moment.";
@@ -132,7 +132,7 @@ to say gshep_postfightargue:		[Post-fight argument]
 		now gshep_postfight is 2;
 	else:
 		LineBreak;
-		say "     As he's revving up to go on about your faults as a fighter, you tell him that you'll listen if he cans the attitude. Your firm response and stance cause him to check himself for a moment. Remembering who's in charge, he tones it back while giving you his feedback on your recent battles together. There's plenty of good points mixed in there with his bluster and, with some changes from you, the two of you are able to work out some techniques and patterns that compliment your strengths and cover for your weaknesses.";
+		say "     As he's revving up to go on about your faults as a fighter, you tell him that you'll listen if he cans the attitude. Your firm response and stance cause him to check himself for a moment. Remembering who's in charge, he tones it back while giving you his feedback on your recent battles together. There's plenty of good points mixed in there with his bluster and, with some changes from you, the two of you are able to work out some techniques and patterns that complement your strengths and cover for your weaknesses.";
 		say "     By the time you're done, Korvin seems better behaved. The opportunity to be heard and work with you seems to have helped him learn to be a bit more stable as well. This has been another step on his road to recovery as well as improving your ability to fight together in the future.";
 		now gshep_postfight is 1;
 	increase dexterity of gshep by 1;
@@ -485,7 +485,7 @@ Section 6 - Events
 Post-fight (2nd or 3rd fight)
 Korvin bad-mouths the player, criticizing their fighting style/skill, kept getting in his way, glory hound
 - Player can put him back in his place - "I beat you", pin him down and so on. Fuck him, maybe minor stat upgrade to K.
-- Player listens to his feedback, maybe a bit of xp for player
+- Player listens to his feedback, maybe a bit of XP for player
 
 Growls wants to go out and fight (if no combat in several rounds)
 ---- what are you doing coming in here?  I want to go out and fight. ----

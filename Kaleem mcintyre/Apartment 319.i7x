@@ -37,7 +37,7 @@ Instead of resolving a Apartment 319:
 		say "     [bold type]Though you were told it was none of your business, can you really turn a blind eye on this one?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Come back later.";
-		say "     ([link]N[as]n[end link]) - Dont return.";
+		say "     ([link]N[as]n[end link]) - Don't return.";
 		if player consents:
 			LineBreak;
 			say "Making the decision that whatever going on with Dagaz is going to [italic type]be[roman type] your problem as of now, you make plans to come back later on to in the evening to check up on the other man. Because whatever is going on, it's mighty suspicious![line break][line break]";
@@ -197,7 +197,7 @@ Instead of resolving a Apartment 319:
 			increase score by 2;
 			WaitLineBreak;
 	if AptAid is 3:
-		say "Coming back to apartment 319 you worriedly knock on Dagaz's door while calling out for the other man. When a barking voice from the else tells you to [italic type]shut up[roman type] you sigh happily as you realize that the Dalmatian is still very much alive. Healthy might be another story all together for when the Dalmatian opens the door you find that the other looks rather…rough. And that might be an understatement. Fur tangled and stuck into knots, eyes somewhat bleary, and cum soaked across his chest and torso, the firefighter looks like he had been through an orgy.";
+		say "Coming back to apartment 319 you worriedly knock on Dagaz's door while calling out for the other man. When a barking voice from the else tells you to [italic type]shut up[roman type] you sigh happily as you realize that the Dalmatian is still very much alive. Healthy might be another story all together for when the Dalmatian opens the door you find that the other looks rather... rough. And that might be an understatement. Fur tangled and stuck into knots, eyes somewhat bleary, and cum soaked across his chest and torso, the firefighter looks like he had been through an orgy.";
 		say "'Well, if it isn't my supposed rescuer. Heh...uhm...' The other man looks somewhat conflicted as he rubs at his the back of his head while looking at you somewhat unsurely. Asking him if he's alright you watch as the Dalmatian nods at you before blushing somewhat sheepishly. 'Look, I appreciate everything you tried to do, but please, for my sake [italic type]don't[roman type] tell anybody about what happened the night before, ok?' Promising that you won't you get a bitten off chuckle as Dagaz looks to you with something akin to embarrassment written onto muzzle.";
 		WaitLineBreak;
 		say "'Yeah, you see, that was...well...' The Dal man shakes his head before grumbling somewhat in annoyance. Whether he's upset at you or himself... well you're not too sure at the moment. 'Look I don't need to explain myself to you, but I will tell you this, that was something I willingly got myself into, but am not going to go through anymore.' Asking him what he means Dagaz sighs before explaining. 'See, I kinda like the rough and kinky kind of stuff, but haven't been able to get it as of late at the clubs and stuff I normally haunt. However, with the city currently as it is and us being laid off from the fire station I got with the chance to find a place that caters to people my...[']particular tastes['], so to say, from a friend of a friend.";

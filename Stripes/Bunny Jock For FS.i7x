@@ -20,7 +20,7 @@ to say bunnyjockdesc:
 to say losetobunnyjock:
 	now bunnyjocknosex is 0;
 	if ( cunts of player > 0 and a random chance of 1 in 4 succeeds ) or ( cunts of player is 0 and a random chance of 2 in 5 succeeds ) or anallevel is 1:
-		say "     '[if cunts of player > 0]I knew you'd come around, baby,' he says with a grin. 'Now let's have some fun, hot stuff.' [else]And that's how it's done! Ain't no stoppin['] this bunny!' he says, pointing to himself with a double thumbs-up. 'Do me a solid and help me let off some steam. I won't tell if you won't,' he adds with a grin. [end if]With that, he reaches into his shorts and pulls out his meaty cock. Having gotten quite hard, it's a massive two and a half feet long with the balls to match. 'I got to get back to the game soon, so can you give me a quick blow?' With a strong paw on your head, he presses his glans to your lips, drooling pre across them[if hp of player > 0]. Despite your attempt to resist, you end up tasting the musky liquid and start to become aroused[else]. You lick the musky fluid from his tip, the taste of it making you all the more aroused[end if].";
+		say "     '[if cunts of player > 0]I knew you'd come around, baby,' he says with a grin. 'Now let's have some fun, hot stuff.' [else]And that's how it's done! Ain't no stoppin['] this bunny!' he says, pointing to himself with a double thumbs-up. 'Do me a solid and help me let off some steam. I won't tell if you won't,' he adds with a grin. [end if]With that, he reaches into his shorts and pulls out his meaty cock. Having gotten quite hard, it's a massive two and a half feet long with the balls to match. 'I got to get back to the game soon, so can you give me a quick blow?' With a strong paw on your head, he presses his glans to your lips, drooling pre across them[if HP of player > 0]. Despite your attempt to resist, you end up tasting the musky liquid and start to become aroused[else]. You lick the musky fluid from his tip, the taste of it making you all the more aroused[end if].";
 		say "     With the lapine jock keeping a steady grip, he strokes his cock while you lick across his glans. As you get more into it, you open your mouth, trying to work that mighty cock of his past your lips[if scalevalue of player < 4]. It takes some time to get started, but you somehow manage to stretch your mouth open enough to accept it with the help of the bunny's firm thrusting[else]. It's a little slow going at first, but soon enough you're taking it past your lips and into your warm mouth[end if]. You lick and suck at the titanic shaft as best you can while the big guy grunts and moans in growing pleasure. As his arousal builds higher, he thrusts harder and faster before eventually cumming with a loud '[one of]Awwwww yeah[or]Slam dunk[or]Boo-yah[or]Suck it harder[at random]!' upon release. Once he's emptied a sloshing amount of bunny cum into your belly, he pops his drooling cock free.";
 		say "     'Damn! I got to get back to the game!' And with that, the bunny pulls up his shorts, managing to only stuff about half of his oversized and still drooling cock back into them. He then turns and rushes off towards the nearest sports field, leaving you flopped down on your ass, stomach gurgling wetly from the potent load of lapine semen filling it.";
 	else if cunts of player > 0:
@@ -90,7 +90,7 @@ to say bunnyjockattack:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -117,7 +117,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 10;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 37; [ The monster's starting hit points. ]
+	now HP entry is 37; [ The monster's starting HP. ]
 	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 7; [ Monster's average damage when attacking. ]
 	now area entry is "Campus"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -164,19 +164,19 @@ this is the powerplay rule:
 			say "'And so their defensemen were lining up to block our winger and so I came skating across the ice and WHAM!' he cries, barreling his shoulder into you and plowing you into a wall so hard it rattles your teeth. 'I checked both of them in one go. Got a penalty for that one, but it was sooooo worth it!' he adds.";
 	now damagein is dam;
 	say "[normalabsorbancy]";
-	if absorb is greater than dam:
+	if absorb > dam:
 		now absorb is dam;
-	if absorb is greater than 0:
+	if absorb > 0:
 		say "You prevent [absorb] damage!";
-	decrease hp of the player by dam;
-	increase hp of player by absorb;
+	decrease HP of the player by dam;
+	increase HP of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 
 
 when play ends:
 	if bodyname of player is "Bunny Jock":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if cocks of player > 0:
 				say "     As your sanity starts to falter, your mind becomes filled with thoughts about sports and athletes. And big, sexy jocks for you to show your stuff against. You make your way across the college campus, finding a football game that's broken out in the middle of one courtyard. Smashed cars have been planted upright in the ground to act as goals for this impromptu game populated by a mix of creatures on each side. When one of the guys is taken off the field after a multi-creature tackle, you join in and take his position. The rush of the game excites you further, making you play hard and party even harder after it's finally over. You scoop up a keg under one arm and a couple of furry cheerleaders in the other, carrying them off into the bushes for some hardcore partying and fucking.";
 			else if cunts of player > 0:

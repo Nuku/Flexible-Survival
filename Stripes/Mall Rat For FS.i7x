@@ -13,7 +13,7 @@ when play begins:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -40,7 +40,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 15;
 	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 22; [ The monster's starting hit points. ]
+	now HP entry is 22; [ The monster's starting HP. ]
 	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 3; [ Monster's average damage when attacking. ]
 	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -95,11 +95,11 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Mall Rat":
-		if humanity of player is less than 10:
-			if hp of Lucy <= 1:
+		if humanity of player < 10:
+			if HP of Lucy <= 1:
 				if Smith Haven Mall Lot South is known:
 					say "     Your life of roaming and wandering slowly becomes less and less attractive to you. With thoughts of the sweet mall growing more frequent, you make your way back there to join the rats in their happy life of coolness and relaxing. You have a happy life there with all those other cool dudes and pretty girls relaxing around the shopping center. You do make the occasional excursion out into the city. Usually, you only do these when one of the rats really needs something done out in the city";
-					if hp of Ronda > 0:
+					if HP of Ronda > 0:
 						say ". The slut rats lurking below are occasionally a problem, but with an awesome [if cocks of player > 0 and cunts of player > 0]mall rat[else if cunts of player > 0]gal[else]dude[end if] like you around to help, their uncoolness is kept from harshing everyone's good vibes.";
 					else:
 						say ".";
@@ -107,10 +107,10 @@ when play ends:
 					say "     Your life of roaming and wandering slowly becomes less and less attractive to you. With thoughts of finding someplace to settle down that'd be cooler than a dingy old bunker, your wanderings bring you to a large mall. Entering the shopping plaza, you are pleased to find other rats already living there. They turn out to be a great bunch of cool dudes and pretty girls for you to hang around with and you soon settle in there to stay, having found a new home for an awesome mall rat like you.";
 			else:
 				say "     Your life of roaming and wandering slowly becomes less and less attractive to you. With thoughts of the sweet mall and your even sweeter girlfriend waiting for you there, you make your way back there to join the rats in their happy life of coolness and relaxing. You and Lucy get along wonderfully, making what everyone agrees is a cute couple. But that doesn't stop either of you from continuing your horny habits of sleeping around, Lucy with many of the other mall rats and you with many of the mall's visitors and those you meet on your new much-rarer excursions out into the city. Usually, you only do these when one of the rats really needs something done out in the city. ";
-				if hp of Ronda > 0:
+				if HP of Ronda > 0:
 					say "     The slut rats lurking below are occasionally a problem, but with an awesome [if cocks of player > 0 and cunts of player > 0]rat[else if cunts of player > 0]gal[else]dude[end if] like you around to help, their uncoolness is kept from harshing everyone's good vibes.";
 		else:
-			if hp of Lucy <= 1:
+			if HP of Lucy <= 1:
 				say "     You thankfully survive your time in the city until you're picked up and transported safely to the military processing camp. While there is a slight interest in examining you as one of the few with the mall rat infection able to resist the pull to remain at the mall, the mall rats are known to be a peaceful and safe strain so you draw little scrutiny for it. You are eventually processed and released. You travel away from the city and find a new city to call your home.";
 				say "     You get a job managing a large mall, the work coming naturally to you. You are an easy-going, laid-back manager and make friends with all the store owners and patrons quite easily. The local youths like you as well, finding you much more tolerant of their slacker ways of hanging around the mall to while away their afternoons. They treat your mall well and you have little problem with shoplifting, graffiti or other complaints you hear from the directors of other malls. And when you see a few of them start to get rat tails of their own, you can't help but smile.";
 			else:

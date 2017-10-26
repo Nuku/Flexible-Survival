@@ -44,7 +44,7 @@ to say Cowboy_Desc:
 Section 2 - Monster Insertion, Drop Item
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -57,7 +57,7 @@ When Play begins:
 	now face entry is "that of an anthro equine, with a broad muzzle, large round blue eyes and expressive horse-like ears, sitting pretty far up on your elongated head";
 	now body entry is "large and muscular, with strong digitigrade equine legs ending in powerful hooves. Your hands seem to be slightly hoof-like as well, the ends of your fingers tipped with little hooflet like nails. Your crotch has a pair of small, perky breasts, slightly above the genitals";
 	now skin entry is "[one of]cow-like[or]dappled[or]black and white patterned[or]softly furred[or]short fur covered[at random]";
-	now tail entry is "You have a long horse-like tail swaying behind you almost to the ground, its long strands of coarse hair covering your ass completely as it flicks this way and that seemingly on its own.";
+	now tail entry is "You have a long, horse-like tail swaying behind you, almost reaching to the ground. Its long strands of coarse hair cover your ass completely as it flicks this way and that seemingly on its own.";
 	now cock entry is "[one of]equine[or]horse-like[or]blunt[or]powerful[at random]";
 	now face change entry is "your mouth stretches forward, your nose flattening as it merges with your equine muzzle. You find yourself groaning slightly as your forehead flattens and your eyes shift their position to the sides slightly. Meanwhile your ears lengthen into larger and pointed horse-like ears, which come to rest atop your equine face"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your muscles seem to shift around underneath your skin, making you stumble around trying to keep your balance for a moment. Looking down, you see that you new have powerful digitigrade legs ending in a pair of hooves. The rest of your body finishes changing as well, your hands having acquired rather hoof-like nails, and your chest and torso pretty broad and more equine looking. Also, your crotch seems to have acquired a pair of small, perky breasts sitting a bit above and to the sides of your genitals"; [ body change text. format as "Your body feels funny as (your text)" ]
@@ -71,8 +71,8 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 14;
 	now sex entry is "Female";          [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 35;                 [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 4;                 [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 35;                 [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 4;                 [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 6;                [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Nowhere";        [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -117,7 +117,7 @@ Section 3 - Endings
 [
 when play ends:
 	if bodyname of player is "Cowboy Cuntboy":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if level of player > 10:
 				say "     A";
 			else:

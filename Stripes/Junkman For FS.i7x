@@ -15,15 +15,15 @@ to say junkmandesc:
 	let zz be ( a random number between 1 and 6 ) + ( a random number between 1 and 6 );
 	if hardmode is true and level of player > 6:		[Heavy Duty Model!]
 		increase qq by level of player - 7;
-		now hp entry is ( ( ( 13 times qq ) divided by 2 ) + zz + a random number between 0 and qq );
-		now monsterhp is hp entry;
+		now HP entry is ( ( ( 13 times qq ) divided by 2 ) + zz + a random number between 0 and qq );
+		now monsterHP is HP entry;
 		now wdam entry is 4 + ( qq / 3 );
 		now lev entry is qq;
 		now dex entry is 12 + ( qq / 6 ) + ( square root of qq + 5 ); [faster initial growth, but slows down more]
 	else:								[Standard Model]
-		now hp entry is ( ( ( 13 times qq ) divided by 2 ) plus zz );
-		if hp entry > 60, now hp entry is 60;
-		now monsterhp is hp entry;
+		now HP entry is ( ( ( 13 times qq ) divided by 2 ) plus zz );
+		if HP entry > 60, now HP entry is 60;
+		now monsterHP is HP entry;
 		now wdam entry is qq;
 		now lev entry is qq;
 		now dex entry is ( qq + 10 + a random number between 0 and 2 );
@@ -45,7 +45,7 @@ to say losetojunkman:
 	choose row monster from the table of random critters;
 	now lev entry is 6; [ reset level for random encounter availability ]
 	say "     Victorious, the scrapyard cyborg raises its arms in the air and emits another grinding groan. After this cry, he grabs you and pushes you down across a [one of]stray car seat[or]old washer[or]rusty engine block[in random order] and moves in behind you. ";
-	say "     As you hear an odd whirring sound, you manage to glance back for a moment before you're pushed back down. You catch a glimpse of the panel over his groin folding up, uncovering his blessedly human dick made of pure flesh and blood. As he lines it up with your [if cunts of player > 0]wet pussy[else]tight pucker[end if], you [if hp of player > 0]moan softly in anticipation[else]struggle a little in vain[end if] before he sinks it into you. You grip your improvised seat as he starts thrusting into you repeatedly, quickly making you grow excited and lustful. The feel of his seemingly human penis thrusting into you feels quite enjoyable, making your [if cunts of player > 0]pussy[else]asshole[end if] squeeze and tug at it as you long more and more for his hot seed in you.";
+	say "     As you hear an odd whirring sound, you manage to glance back for a moment before you're pushed back down. You catch a glimpse of the panel over his groin folding up, uncovering his blessedly human dick made of pure flesh and blood. As he lines it up with your [if cunts of player > 0]wet pussy[else]tight pucker[end if], you [if HP of player > 0]moan softly in anticipation[else]struggle a little in vain[end if] before he sinks it into you. You grip your improvised seat as he starts thrusting into you repeatedly, quickly making you grow excited and lustful. The feel of his seemingly human penis thrusting into you feels quite enjoyable, making your [if cunts of player > 0]pussy[else]asshole[end if] squeeze and tug at it as you long more and more for his hot seed in you.";
 	say "     Thinking of his seed makes you notice that his balls feel strange against [if cocks of player > 0]yours[else]you[end if] as they bump into you with each thrust. Reaching back, you grab his sac to fondle him and find [one of]his balls have a plastic cover[or]it protected by what feels like a brass shell[or]it reinforced by several metal plates[or]some hard, rubber tubes leading into it[at random]. The creature atop you releases a grinding moan as you rub over his ballsac, clearly enjoying your touch despite their strange form. You can feel his balls start to throb warmly inside his odd scrotum and you are rewarded moments later by a steady stream of thick, oily cum. His slick seed pumps into you as some internal pump chugs away inside him, sending large amounts of his semen into you. Much of it flows up into your [if cunts of player > 0]waiting womb[else]sexy ass[end if] while the rest overflows around his cock to run down your thighs, with more gushing out as he withdraws and paints your ass with his last few spurts. Finished, he gives your sticky rear end a pat and wanders off.[impregchance]";
 
 to say beatthejunkman:
@@ -55,7 +55,7 @@ to say beatthejunkman:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -82,7 +82,7 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 14;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 42; [ The monster's starting hit points. ]
+	now HP entry is 42; [ The monster's starting HP. ]
 	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6; [ Monster's average damage when attacking. ]
 	now area entry is "Junkyard"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -110,7 +110,7 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Junkman":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Drawn back to the scrapyard by your corrupted instincts, you join the other junkmen in wandering around the piles of junk, satisfying your lusts on each other and others you find. Your people have little ambition or organization, only existing in the moment, enjoying short lives corrupting a handful of creatures and siring a few offspring before eventually breaking down and rejoining their scrapyard home.";
 		else:
 			say "     Your body is upsetting to several of the soldiers who find you during the rescue operation, but you are able to convince them that you are still sane. Taken from the outbreak city, you are scrutinized by several of the military scientists, intrigued by your haphazard cybernetics. They are unfortunately able to learn little from you, as what they discover about your anatomy makes no sense and they conclude that it is purely cosmetic.";

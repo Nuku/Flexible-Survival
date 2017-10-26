@@ -100,20 +100,20 @@ Carry out pigfeeding:
 To pigfeed:
 	setmonster "Piggy";
 	choose row monster from the table of random critters;
-	if pigfed is greater than 0 and tailname of player is not "Piggy":
+	if pigfed > 0 and tailname of player is not "Piggy":
 		say "     Philip frowns as he take a close look at you, then he grins and smears a handful of mud above your butt as he yells, 'Suuuueeeyyy, pig, pig, pig!'  You're not sure if it's the mud or his words that cause it, but your curly pig tail suddenly regrows.";
 		now tailname of player is "Piggy";
 		now tail of player is tail entry;
-	if pigfed is greater than 1 and facename of player is not "Piggy":
+	if pigfed > 1 and facename of player is not "Piggy":
 		say "     'Oh no, your face has been hideously mutated! Don't worry, I'll fix it!' Philip exclaims, as he approaches you and quickly licks his thick pig tongue across your face before you can react. Brief pain flares as his infection spreads to you rapidly, regaining your bald head, floppy pig ears, and upturned pig nose. Philip admires his work for a moment, then says, 'Much better.'";
 		now facename of player is "Piggy";
 		now face of player is face entry;
-	if pigfed is greater than 2 and bodyname of player is not "Piggy":
+	if pigfed > 2 and bodyname of player is not "Piggy":
 		say "     As you approach Philip, you accidentally step in some mud. Your feet begin to itch as they once more transform into pig hooves while your body plumps back up to piggy proportions.";
 		now bodyname of player is "Piggy";
 		now body of player is "quite big, plump and fat with pig hooves instead of feet";
 		attributeinfect;
-	if lastpigfed - turns is less than 8:
+	if lastpigfed - turns < 8:
 		if pigfed is 3:
 			say "     'That's okay, I finally figured out how to scavenge safely on my own. You don't have to get food for me any more.'  He oinks.";
 		else:
@@ -132,7 +132,7 @@ To pigfeed:
 			now lastpigfed is 250;
 	else if pigfed is 1:
 		now lastpigfed is turns;
-		say "     'I'm still digesting the food you gave me before. However, I did find some other food a few minutes ago. You fed me, so I want to pay you back by feeding you. You can eat it if you want.'  He says as he holds out a strange box.";
+		say "     'I'm still digesting the food you gave me before. However, I did find some other food a few minutes ago. You fed me, so I want to pay you back by feeding you. You can eat it if you want,' he says as he holds out a strange box.";
 		say "     You take a look at the box and notice that it is different from all the other packages of food that you've found. There is a picture of a cartoon pig on the front. The name of the product is too faded for you to read.";
 		say "     [bold type]Will you accept his offer and eat the food?[roman type][line break]";
 		LineBreak;
@@ -170,7 +170,7 @@ To pigfeed:
 					move philip to Bunker;
 					move player to bunker;
 					now pigfed is 3;
-					say "     'Thank you!' he snorts and then follows you back to the bunker. When you arrive, he quickly makes himself at home, i.e. the bunker starts to smell as bad as he does. He does at least add two bottles of water to your bunker supplies.";
+					say "     'Thank you!' he snorts and then follows you back to the bunker. When you arrive, he quickly makes himself at home, i.e., the bunker starts to smell as bad as he does. He does at least add two bottles of water to your bunker supplies.";
 					say "     After he settles in, he approaches you and smiles a little as he says, 'You know, you've been so nice to me that I've realized that you must want to be more than friends. You want to become my piggy lover, don't you? Let's rut like pigs in heat!'";
 					increase score by 5;
 					now lust of philip is turns;	[starts availability counter on Philip + Sandra]
@@ -214,7 +214,7 @@ To Mudwrestle:
 		now PlayerPigBodied is true;
 	else:
 		now PlayerPigBodied is false;
-	if lastfuck of Philip - turns is less than 6:
+	if lastfuck of Philip - turns < 6:
 		say "     'I know I'm a sexy stud and all,' the boar says, rubbing his big gut, 'but even I need to rest up a while after having sex. Don't worry, we can have some fun in the mud soon.'";
 	else:
 		say "     As you step up to Philip and ask to wrestle him, the boar says 'A challenger for the champion of this mud pit, hm? I've got to warn you, no one's ever beaten me. I mean - how would they, with this hot bod.' Grinning, he rubs his big gut, then shows off a thick flabby arm. 'Go on and strip, real wrestling is done naked!' With that, Philip throws himself into the mud, wallowing in it and smearing it all over himself as he waits for you.";
@@ -509,7 +509,7 @@ to say sexwithphilip:
 	if Philip is not visible:
 		say "Who?";
 		stop the action;
-	if lastfuck of Philip - turns is less than 6:
+	if lastfuck of Philip - turns < 6:
 		say "     'I know I'm a sexy stud and all,' the boar says, rubbing his big gut, 'but even I need to rest up before another go. Don't worry, you can be my sow again soon.'";
 		stop the action;
 	setmonster "Piggy";
@@ -517,7 +517,7 @@ to say sexwithphilip:
 	if pigfed < 3:
 		say "     'I know it's hard to resist my charmingly good looks,' Philip smiles, 'But the way to my heart is through my stomach and you simply haven't fed me enough times yet.'";
 		stop the action;
-	if Sandra is bunkered and hp of Philip is 0 and lust of philip - turns >= 16 and lastfuck of Philip < 255:
+	if Sandra is bunkered and HP of Philip is 0 and lust of philip - turns >= 16 and lastfuck of Philip < 255:
 		say "     Approaching Philip for some more of his big, sloppy loving, you find him in Sandra's company. She's chatting to him pleasantly, but clearly has her eyes on his enlarged cock. He's also eying her quite appreciatively, quite literally salivating at the bunny girl's breasts. Shall you encourage them to have some fun so you can join in or will you let them be alone together?";
 		if player consents:
 			say "     You smile as you go join them, moving in beside Philip and running your hands over him. He oinks and gives you a sloppy kiss as he welcomes you. 'Mmm... hello there,' he grunts. 'The bunny and I were just getting to know each other a li-' he starts to say before getting distracted as you give his pink shaft a playful stroke, causing him to oink loudly again. Glancing over, you catch Sandra glaring at you as you manhandle her prize.";
@@ -525,12 +525,12 @@ to say sexwithphilip:
 			say "     Pleased to see your two new friends going at it, you drift between them, your hands running over their bodies. Sandra's pussy drips with her juices, which you enjoy lapping up for a few minutes before fondling Philip's balls. When you swap to the bunny girl's breasts, you remember the pig's interest in them and get them to change positions so the big boar man's cock is pressed between those fuzzy globes. Between that, the eager sucking and your playful groping, it's not much longer before Philip's greasy cum is pumped into her muzzle and then sprayed across those lovely tits. You have fun helping to lick her clean[if thirst of player > 50] and suckling a delicious drink of her milk to wash it all down[end if] while Philip rolls over to rest in his muddy wallow.";
 			now lastfuck of Philip is turns;
 			now lastfuck of Sandra is turns;
-			now hp of Philip is 2;
+			now HP of Philip is 2;
 		else:
 			say "     Not wanting to interfere, you go find something else to do for a while, though it is difficult to ignore Philip's piggish grunts and the bunny girl's loud cries as they get better acquainted.";
-			now hp of Philip is 1;
+			now HP of Philip is 1;
 		continue the action;
-	else if Sandra is bunkered and hp of Philip is 2 and a random chance of 1 in 3 succeeds:
+	else if Sandra is bunkered and HP of Philip is 2 and a random chance of 1 in 3 succeeds:
 		say "     When you go to approach Philip for more sex, you find Sandra already there. On her knees and stroking the big pig's cock, she smiles up at you and offers for you to join her. Grinning happily, you get on your knees beside her and start licking and sucking alongside her. You take turns pushing that thick rod into your mouth while the other licks along its shaft or kisses the pig's messy balls. You and the bunny share sloppy kisses, your tongues heavy with the taste of the pig's cock as they slide against one another between exchanges of position. In your lustful eagerness, his dirty, musky scent doesn't bother either of you, if anything turning you on further.";
 		if cunts of player > 0 and a random chance of 1 in 2 succeeds:
 			say "     As much as the pig's enjoying the foreplay, he oinks that it's time to get porking. Moving it back, he gives it a few quick strokes, spurting some precum onto the two sexy girls out for his meat before choosing which will get it this time. Sandra's a little disappointed when he ends up moving in behind you, but happily spreads your pussy lips open for the big boar as he thrusts into you. As Philip grunts and oinks atop you, rutting you like a hog, the bunny girl's beneath you, licking at those juices dripping from your stuffed cunt. And when the boar cums and his excess cum overflows wet cunny, she's right there to lap it all up. When Philip pulls out, you all collapse into a sticky, sweaty heap in the mud.[fimpregchance]";
@@ -548,15 +548,15 @@ to say sexwithphilip:
 	if "Submissive" is listed in feats of player, increase piggymalefun by 2;
 	if "MPreg" is listed in feats of player, increase piggymalefun by 2;
 	increase piggymalefun by anallevel;
-	if pigfed is greater than 0 and tailname of player is not "Piggy":
+	if pigfed > 0 and tailname of player is not "Piggy":
 		say "     Philip frowns as he take a close look at you, then he grins and smears a handful of mud above your butt as he yells, 'Suuuueeeyyy, pig, pig, pig!'  You're not sure if it's the mud or his words that cause it, but your curly pig tail suddenly regrows.";
 		now tailname of player is "Piggy";
 		now tail of player is tail entry;
-	if pigfed is greater than 1 and facename of player is not "Piggy":
+	if pigfed > 1 and facename of player is not "Piggy":
 		say "     'Oh no, your face has been hideously mutated! Don't worry, I'll fix it!' Philip exclaims, as he approaches you and quickly licks his thick pig tongue across your face before you can react. Brief pain flares as his infection spreads to you rapidly, regaining your bald head, floppy pig ears, and upturned pig nose. Philip admires his work for a moment, then says, 'Much better.'";
 		now face of player is face entry;
 		now facename of player is "Piggy";
-	if pigfed is greater than 2 and bodyname of player is not "Piggy":
+	if pigfed > 2 and bodyname of player is not "Piggy":
 		say "     As you approach Philip, you accidentally step in some mud. Your feet begin to itch as they once more transform into pig hooves while your body plumps back up to piggy proportions.";
 		now bodyname of player is "Piggy";
 		now body of player is body entry;
@@ -613,7 +613,7 @@ to say sexwithphilip:
 	now lastfuck of Philip is turns;
 
 
-[ hp of philip - threesome w/Sandra ]
+[ HP of philip - threesome w/Sandra ]
 [ 0 = nothing yet ]
 [ 1 = no pairing w/Sandra ]
 [ 2 = pairing w/Sandra ]
@@ -624,7 +624,7 @@ Section 6 - Ending the Piggy
 When play ends:
 	if bodyname of player is not "Messy Pig" and bodyname of player is not "Piggy":
 		if Philip is in the Bunker:
-			if humanity of the player is less than 10:
+			if humanity of the player < 10:
 				say "     Despite your loss of humanity, Philip vows to care for you. But one day, he gets hungry and wanders off. Leaving you free to rape any unfortunate human that crosses your path.";
 			else if pigfucked > 0:
 				if cocks of player is 0:
@@ -646,7 +646,7 @@ When play ends:
 			else:
 				say "     Philip remains a loyal... if somewhat gluttonous, friend for the rest of your days.";
 	else if bodyname of player is "Messy Pig" or bodyname of player is "Piggy":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if pigfucked > 0:
 				if cunts of player > 0:
 					say "     As time wears on, you can't hold back against your growing urges. Your identity falls apart, leaving only your base needs for food and sex. Heading back to the bunker, you join Philip in a long and messy romp on the dirty floor, letting the sweat and the juices of your combined fluids add to the muck you both roll around in. The boar gets dirtier, smellier and all the more attractive to you. And more lustful as he joins you in succumbing to the infection. Together, happily filled with his seed, you head back to the [if restaurantpig is 1]posh restaurant[else]sewers below the mall[end if] to seek out the lovely sow there. Philip charges over and mounts you both in turn, rutting you over and over again in a marathon of sex. Together, the three of you set up a messy sty filled with the sounds of sows, sex and piglets. He adds several other sows to his sty as well, filling them with piglets as he ruts them in the muck.";

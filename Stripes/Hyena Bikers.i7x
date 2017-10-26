@@ -256,27 +256,27 @@ to say bikeattack:
 	let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 12: ";
-	if dice plus bonus is greater than 12:
+	if dice plus bonus > 12:
 		say "     You roll to the side, narrowly missing a kick as he rides past. You get up quickly, but another one is coming at you, swinging a length of chain over hir head.[line break]";
 	else:
-		decrease hp of player by 10;
-		say "     You are too slow to get away before the biker kicks you hard, knocking you down. (10 dmg)  As you try to get up quickly, another one is coming at you, swinging a length of chain over hir head.[line break]";
+		decrease HP of player by 10;
+		say "     You are too slow to get away before the biker kicks you hard, knocking you down. (10 dmg) As you try to get up quickly, another one is coming at you, swinging a length of chain over hir head.[line break]";
 	[WaitLineBreak]
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 13: ";
-	if dice plus bonus is greater than 13:
+	if dice plus bonus > 13:
 		say "     You dodge to the side just in time and hear the heavy chain whizz past just inches away. You turn to face your assailant, but find another hyena biker almost upon you, tire iron raised high.[line break]";
 	else:
-		decrease hp of player by 10;
-		say "     The hyena strikes you hard on the shoulder with the heavy length of chain, bruising you. (10 dmg)  You turn to face your assailant, but find another hyena biker almost upon you, tire iron raised high.[line break]";
+		decrease HP of player by 10;
+		say "     The hyena strikes you hard on the shoulder with the heavy length of chain, bruising you. (10 dmg) You turn to face your assailant, but find another hyena biker almost upon you, tire iron raised high.[line break]";
 	[WaitLineBreak]
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
-	if dice plus bonus is greater than 14:
+	if dice plus bonus > 14:
 		say "     You duck quickly and the tire iron passes over your head. You turn to face the biker, but shi's disappeared back into the whirling group. You growl in frustration and call them cowards. Most of them laugh, but one pulls to a stop and gets off to fight you hand to hand. As you get ready to fight hir, you see others getting off their bikes to take you on as well.";
 	else:
-		decrease hp of player by 10;
-		say "     You are clubbed in the head by the hard metal, making you see stars for a moment. (10 dmg)  You turn to face the biker, but shi's disappeared back into the whirling group. You growl in frustration and call them cowards. Most of them laugh, but one pulls to a stop and gets off to fight you hand to hand. As you get ready to fight hir, you see others getting off their bikes to take you on as well.";
+		decrease HP of player by 10;
+		say "     You are clubbed in the head by the hard metal, making you see stars for a moment. (10 dmg) You turn to face the biker, but shi's disappeared back into the whirling group. You growl in frustration and call them cowards. Most of them laugh, but one pulls to a stop and gets off to fight you hand to hand. As you get ready to fight hir, you see others getting off their bikes to take you on as well.";
 
 
 Section 3 - Sexy Subroutines
@@ -463,7 +463,7 @@ instead of fucking the grant:
 		now bikedest is 1;
 		enable the High Rise District;
 		disable the Stay option;
-	if lastfuck of grant - turns is less than 8:
+	if lastfuck of grant - turns < 8:
 		if matriarchdefeated is 2:
 			say "     The biker leader hops off the crate and push you against it roughly. He leans overtop you and nibbles your ear. As you start to hope he'll mount you, he swats you hard on the rear. 'You're overeager, little bitch. Come back later and I'll be in the mood to show you what a real male's like.'  He gives you another swat on the ass before shoving you back into the room. Many of the others around chuckle as the impressive male sends you off firmly. You blush and slink away, but long for [']later['] to come.";
 		else:

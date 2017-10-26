@@ -70,7 +70,7 @@ to say FoulS_PlayerVictory:
 		say "     Deciding that sex with this beast might not be worth the risk, you swiftly gather your things and leave the creature behind, hoping to not have to face one of those beasts anytime soon.";
 
 to say FoulS_PlayerDefeat:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Lowering yourself to the ground as non-threateningly as you can, you place your fate in the hands of the creature. Approaching you cautiously, the Foul Scuttler ambles to you, preparing for any sudden movements. Bowling you over onto your back, the beast repositions itself above you, placing its face inches from yours. Wafting its warm breath over your face, you are overwhelmed with the smell of meat, while a subtle musk begins to set your senses aflame. Inhaling your scent with deep, drawn-out sniffs, the creature seems to be trying to figure out what to do with you.";
 	else:
 		say "     While you put up your best effort, the Foul Scuttler proves to be too much for you, and you find yourself panting on the ground, exhausted and bleeding. Thundering up to you, each step he makes sending vibrations throughout the floor, the Scuttler ambles up to you, assured of its victory. Easily rolling you over onto your back, the beast positions itself over you, its muzzle of imposing teeth hovering inches from your face. You've no idea what the beast has in store for you, but you know that it's probably not going to be good.";
@@ -141,7 +141,7 @@ to say OuterSuck:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -154,7 +154,7 @@ When Play begins:
    now face entry is "a visage formed from the dark depths of space itself. Solid [one of]yellow[or]black[or]purple[or]red[or]grey[sticky random] eyes sit in sockets too large for humans, while your nostrils are just two small holes below your eyes, with no protruding structure. The same is true of your ears, with two holes acting as your ears. The maw currently occupying your lower jaw is horrifying and otherworldly; the sides of your mouth extend almost to your ears, impossibly wide for anything natural. Within your large gaping maw lie rows of razor-sharp teeth, while your tongue extends out a few feet. The stiff points on your head can barely be considered hair, more of sharp, malleable spikes growing out of your skull";
    now body entry is "an imposing mutant beast. Your original two arms are thick and long, with your fingers each becoming serrated claws, meant for walking or rending flesh. Below these original two arms lie a smaller set of arms with sharper, more agile finger-claws, meant only for rending and tearing. Your legs are triply-jointed, similar to the legs of a preying mantis or another insect. These slim legs end in claws, making your legs just as dangerous as your arms, should you choose to use them. Ridges of thick, sharp spines grow out of your back, running in five separate rows down your back, enhancing your fiendish look even more";
    now skin entry is "thick, plated carapace-like";
-   now tail entry is "Your tail isn't actually much of a tail. Protruding from your rear is more of a large nub, a wide base that rises up to a point, pointing out about six inches long";
+   now tail entry is "Your tail isn't actually much of a tail. Protruding from your rear is more of a large nub, a wide base that rises up to a point, pointing out about six inches long.";
    now cock entry is "otherworldly";
    now face change entry is "you feel your face reshaping itself. You feel your nose recede into your face, with two small holes being the only remnant of your original nose. Melting down into your head, your ears follow the same path as your nose, leaving only small holes as evidence of your auditory senses. Your mouth elongates, with the corners of your mouth now reaching close to your ears, while your teeth reshape and grow, filling your mouth with sharp incisors. Bony protrusions begin to form on the underside of your skull, and soon form into bony spikes, curving outwards and giving you an imposing, beastly visage. The hair on your head recedes and fuses together, forming sharp, bone-like spines. Feeling the changes cease, you find a broken mirror nearby, you take a look at yourself. Resembling a monster out of a Sci-Fi monster movie, you can't help but grin at your new inhuman visage";
    now body change entry is "changes begin to wrack your body simultaneously. Your arms thicken and elongate slightly, while your hands reshape into claws. Pain pierces your elbows as bone protrusions thrust out of them, curving out and back, the ends almost touching your shoulders. You hear your bones snapping and breaking in your legs, as your legs reshape to resemble the hind legs of a dog, but much more otherworldly. Your feet quickly follow the same path as your hands, reshaping into deadly claws, while ridges of thick spines erupt from your back forming symmetrical lines down it. Below your arms, fleshy masses begin to form, quickly gaining mass, and forming into vaguely recognizable shapes. They eventually take form and solidify, and you find yourself with another pair of hands. You quickly look over yourself to make sure these are the last of the changes, but they look to have stopped. You move around a bit and test out your new body, figuring out all of the intricacies of your new body";
@@ -168,7 +168,7 @@ When Play begins:
    now int entry is 10;
    now cha entry is 7;
    now sex entry is "Female";
-   now hp entry is 38;
+   now HP entry is 38;
    now lev entry is 6;
    now wdam entry is 10;
    now area entry is "Sealed";
@@ -197,7 +197,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Foul Scuttler":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if cocks of player > 0 and cunts of player is 0:
 				if "Sterile" is not listed in feats of player:
 					say "     Finding your way to the labs beneath the ground, you explore the endless corridors of these labs, looking for your brethren. Finally finding a nest deep in the labs, you're quickly accepted into the pack. You hunt the desolate halls for food and mates, taking survivors and explorers back to your ever-growing nest. Swelling the wombs of fertile survivors with your virile seed, their bellies bulge with your children, and they soon birth a new generation of ever-evolving magic beasts. Your children grow quickly as you teach them to live and hunt, with you always at the head of the pack, your screams echoing throughout the corridors of your home. The military tries again and again to remove you and your children, but they are never able to, every man and woman sent down into the labs disappearing forever. Your children soon seed a new generation of smarter, stronger Foul Scuttlers, but again and again, you prove to be the best among them, leading them forward without any conscious knowledge of it. Your children soon swarm the underground labs, an unstoppable force of life and evolution. Looking into the light of the surface, you let out a yell, reverberating it throughout the lab complex. The time has come, and soon, you and your children will swarm the outside world, taking it for yourself.";

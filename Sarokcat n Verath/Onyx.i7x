@@ -25,50 +25,50 @@ The description of Onyx is "[onyxappearance]".
 The conversation of Onyx is { "Help me!" }.
 
 instead of sniffing Onyx:		[results for currently uncoded outcomes included]
-	if xp of Onyx < 3 or xp of Onyx is 100:
+	if XP of Onyx < 3 or XP of Onyx is 100:
 		say "     The young man smells both human and equine.";
-	else if ( xp of Onyx >= 3 and xp of Onyx <= 9 ) or xp of Onyx is 50 or xp of Onyx is 51:
+	else if ( XP of Onyx >= 3 and XP of Onyx <= 9 ) or XP of Onyx is 50 or XP of Onyx is 51:
 		say "     The young man smells even more of horses than before, with his human scent fading further.";
-	else if xp of Onyx >= 30 and xp of Onyx <= 49:
+	else if XP of Onyx >= 30 and XP of Onyx <= 49:
 		say "     The young mare smells of arousal and sex, clearly enjoying her new life at the club.";
-	else if ( xp of Onyx >= 10 and xp of Onyx <= 29 ) or ( xp of Onyx >= 60 and xp of Onyx <= 79 ):
+	else if ( XP of Onyx >= 10 and XP of Onyx <= 29 ) or ( XP of Onyx >= 60 and XP of Onyx <= 79 ):
 		say "     The young stallion smells of growing male arousal.";
-	else if xp of Onyx >= 80 and xp of Onyx <= 99:
+	else if XP of Onyx >= 80 and XP of Onyx <= 99:
 		say "     The slutty mare smells strongly of arousal and equine sex.";
 
 To say onyxappearance:[his description at each stage, comments on what each stage is linked to will be in these brackets]
-	if xp of Onyx < 3 or xp of Onyx is 100:		[onyx trapped]
+	if XP of Onyx < 3 or XP of Onyx is 100:		[onyx trapped]
 		say "     Standing behind the barred door to his room is a teenage boy of about the right age to be a college freshman. His body already beginning to show the signs of his equine transformation. The young man is wearing nothing but a tight black thong that easily contains his obviously shrinking manhood. His face is slightly pushed out into a growing equine muzzle and his ears have elongated into points and have started moving to the top of his head. You can see that his legs are becoming longer and thinner, and his ankles have shifted upwards on them, forcing him to stand on the balls of his changing feet, his toes already starting to merge to form a rather equine hoof. The half fear half lust crazed look in his eyes makes you shudder slightly as you realize how easily that could have been you behind those bars, and possibly could still be.";
-	else if ( xp of Onyx >= 3 and xp of Onyx <= 5 ) or xp of Onyx is 50 or xp of Onyx is 51:	[onyx free - leave or stay?]
+	else if ( XP of Onyx >= 3 and XP of Onyx <= 5 ) or XP of Onyx is 50 or XP of Onyx is 51:	[onyx free - leave or stay?]
 		say "     Leaning up against the wall is a teenage horseboy, his transforming features are much more obvious now as his face is obviously pushing out into an equine muzzle, and his legs are shifting to the point where he can hardly stand on them without the help of the wall. His feet are nearly fully formed hooves however, and his hands are becoming slightly hoof-like as well, so you can tell it isn't going to be much longer before he finishes changing, though from the small bulge in his tight black thong, you can see that he is still holding on to his manhood, for however much longer that will last at least...";
-	else if xp of Onyx >= 6 and xp of Onyx <= 8:			[at Library - unsettled if will be stallion or mare]
+	else if XP of Onyx >= 6 and XP of Onyx <= 8:			[at Library - unsettled if will be stallion or mare]
 		say "     The tall horseboy is seated at one of the empty library desks, and is idly poking at several of the books stacked in front of him curiously. His features have continued to change from when you rescued him from the library, and his face is nearly a full equine muzzle now, and underneath the desk, you are all to well aware of how very equine his legs and body has become. Onyx doesn't seem to mind the changes at all anymore however, and he looks up at you with a rather sexy smile as you approach.";
-	else if xp of Onyx is 9:
+	else if XP of Onyx is 9:
 		if lastfuck of onyx - turns >= 16:
 			say "     'Hey, great to see you again, sweety!' Looking over Onyx, it's clear that his presence here has had quite and effect on him, seeing as he's now a she... Slender, ebony body sparsely dressed, it's apparent she's taken quite a liking to the other strippers, finding herself as a seductive beast to be gazed upon by patrons of the bar.";
 			say "     'As you can see, I found a way to fit in!' She laughs, gesturing to a quieter corner of the room to talk. You ask her how she's feeling.";
-			say "     'Oh, I'm feeling great! There's so much energy here, and I love to dance… I'm not quite as good as my brothers and sisters, but I'm quickly catching on!' She winks at you before moving in closer, 'Anyways, if you ever feel the need for a good time, don't be afraid to ask…' Grinning, she's called over to attend some patrons, leaving you to ponder the situation as she gives you a rather telling view of her exposed ass.";
-			now xp of onyx is 30;
+			say "     'Oh, I'm feeling great! There's so much energy here, and I love to dance... I'm not quite as good as my brothers and sisters, but I'm quickly catching on!' She winks at you before moving in closer, 'Anyways, if you ever feel the need for a good time, don't be afraid to ask...' Grinning, she's called over to attend some patrons, leaving you to ponder the situation as she gives you a rather telling view of her exposed ass.";
+			now XP of onyx is 30;
 		else:
 			say "     The tall horseboy is seated at one of the empty stalls, and is idly watches the strippers at the lounge. His features have continued to change from when you rescued him from the library, and his face is nearly a full equine muzzle now, and underneath the desk, you are all to well aware of how very equine his legs and body has become. Onyx doesn't seem to mind the changes at all anymore however, and he looks up at you with a rather sexy smile as you approach.";
-	else if xp of Onyx >= 10 and xp of Onyx <= 19:		[Onyx free - stallion at Library, wants player mare]
+	else if XP of Onyx >= 10 and XP of Onyx <= 19:		[Onyx free - stallion at Library, wants player mare]
 		say "     Onyx looks like a proper Stallion now, his handsome black equine features, and lovely pelt of jet black horse fur making him look extremely exotic and sexy as he wanders around the library. Noticing you looking at him, he shoots you a rather dominant equine grin, as he flexes slightly for your enjoyment. His obviously large and powerful stallionhood obviously far too large now to be contained in a thong, it hangs half erect between your stallion's legs as if teasing you to come over and worship it properly.";
-	else if xp of Onyx is 20:
+	else if XP of Onyx is 20:
 		say "     Onyx is well on his way to being a proper Stallion now. He has handsome black equine features and lovely pelt of jet black horse fur, making him look extremely exotic and sexy as he wanders around the library. His large and impressive stallionhood cannot be fully contained by his thong and partially pokes free. With your attention on him, it gives an eager twitch and drips a bit of precum. Noticing you looking at him and seeing that, he blushes a bit and turns away with a swish of his tail, as if his body is inviting you to complete your claim on him.";
-	else if xp of Onyx >= 21 and xp of Onyx <= 29:
+	else if XP of Onyx >= 21 and XP of Onyx <= 29:
 		say "     Onyx looks like a proper Stallion now: fit, strong and sexily submissive. He has handsome black equine features and lovely pelt of jet black horse fur, making him look extremely exotic and sexy as he wanders around the library. Noticing you looking at him, he smiles at your attention and [one of]runs a hand sensually over his body[or]licks his lips tantalizingly as he runs a finger along his half-exposed cock[or]turns and gives his ass a shake while flicking his tail up[or]leans over as he examines a book on a low shelf, toned ass swaying all the while[in random order]. His large and impressive stallionhood cannot be fully contained by his thong and partially pokes free. That's quite the fine stud you've got as your subby lover.";
-	else if xp of Onyx >= 30 and xp of Onyx <= 49:		[Onyx has become convinced to visit the palomino, where she is learning to be a female stripper.]
+	else if XP of Onyx >= 30 and XP of Onyx <= 49:		[Onyx has become convinced to visit the palomino, where she is learning to be a female stripper.]
 		say "     Onyx seems quite happy as she bobs her head to the beat of the bouncy music, the former teenage boy has obviously adapted well to her new role as a sexy mare. Her lush black equine pelt is draped in a leather harness with shiny silver buckles, and she has is wearing a tight red thong and bra that barely contain her obviously damp and needy mare pussy, and her pert and sexy breasts. You can tell just by the looks that several of the club goers are giving her that she is going to be quite a popular little stripper here at the club, and from the teasing glances she sends you from time to time, she certainly appears grateful for all your help in getting her here.";
-	else if xp of Onyx >= 60 and xp of Onyx <= 79:		[Onyx staying as stallion - wants player as replacement mare]
+	else if XP of Onyx >= 60 and XP of Onyx <= 79:		[Onyx staying as stallion - wants player as replacement mare]
 		say "     The formerly weak teenage boy has been replaced by a large and powerful black stallion, his proud muzzle and the wicked glint in his equine eyes promise a lot of fun as he eyes you with anticipation. He still hangs out in the hallway here, though at some point his name has been removed from the room he is standing in front of, and someone has hung the name 'Obsidian' in it's place. Looking at where the powerful stallion shifts his weight teasingly as he gestures you closer, you can't tell whether or not you feel sorry for the next captive they put in the room with him, or envious...";
-	else if xp of Onyx >= 80 and xp of Onyx <= 99:		[Onyx staying as mare]
+	else if XP of Onyx >= 80 and XP of Onyx <= 99:		[Onyx staying as mare]
 		say "     The transforming boy has finally become a proper mare, and certainly lives up to her new name now. Onyx has become a pure black mare, her lithe equine body seems perfectly proportioned for pleasure as she shifts her weight from hoof to hoof teasingly. She seems to have stopped worrying about anything other than being a properly slutty mare now, and from the looks she is shooting you from time to time, she is more than interested in letting you take her for a ride...";
 
 
 Section 2 - Conversation Tree
 
 instead of conversing the Onyx:
-	if xp of Onyx is 0:			[first time meeting]
+	if XP of Onyx is 0:			[first time meeting]
 		say "     'Oh hey,' the partially transformed guy says with a sigh as you approach his cell to talk with him. 'Come to tease me again and try to get me to give in and become a slutty little mare?' he says with a sigh, before shifting to turn and give you a closer look, and blinking in surprise. 'Hey wait, you seem different from the rest of them. You aren't with the horses here, are you?' he says with increasing excitement as he sits up and staggers to the door, obviously slightly unsteady on his legs as he tries to walk. 'It's good to see someone that isn't one of those horsemen, here to tell me what a fine filly I will make them. My name is Os... Os.. something. Dammit!' the transforming equine curses, his hands gripping the bars as he steadies himself on his obviously changing feet.";
 		say "     'Sorry, they told me to forget that name, and it kind of looks like I am. It has been getting harder and harder to remember things anyways since I arrived here.' He shudders for a second, before sighing and looking at you with his slightly larger than normal eyes pleadingly. 'I guess you can call me Onyx, I mean I know I have another name, and I don't really like answering to what they call me, but it looks like I don't have much choice until I can remember my old name,' Onyx says with resignation, staring at his changing feet for a minute, before focusing his attention fully on you again.";
 		WaitLineBreak;
@@ -80,36 +80,36 @@ instead of conversing the Onyx:
 		if guy is banned and girl is banned:
 			say "     Onyx shakes his head, suddenly coming back into focus just as you're about to leave. He looks at you with a rather sad expression. 'Oh, I just remembered that the guards holding my keys have locked them away. They said something about some kind of ban in effect. I guess I'm stuck in here. Thanks anyhow.'";
 			say "[italic type](This storyline cannot proceed with both guy and girl banned.)[roman type][line break]";
-			now xp of Onyx is 100;
+			now XP of Onyx is 100;
 		else:
-			increase xp of Onyx by 1;
+			increase XP of Onyx by 1;
 			now Equineguardpost is unresolved;
-	else if xp of Onyx is 1:	[convo while confined]
+	else if XP of Onyx is 1:	[convo while confined]
 		say "     [one of]'Hey again, made any progress so far on those keys?'[or]'I know I had a name.. and I think it began with an... O? Maybe it was Onyx? No wait, that's my current name...'[or]He whickers at you slightly, then seems embarrassed when he realizes what he did.[or]'Come to visit the prisoner again? You aren't the only one who likes to come look, plenty of the mares come by to tell me how much fun I can look forward too, and the men... well let's just not talk about what they talk about doing to me' Onyx says, and you notice him starting to blush.[or]'You should be careful hanging around talking to me like this, some of the horses come by here pretty often to keep an eye on me. You wouldn't want to end up in a cell next to mine now would you?'[or]'Why are you hanging around here talking to me so much? If you want to know what it is like in here, just lock yourself in one of the other cells why don't you, then you can find out what it is like to be a captive while they teach you about being a proper little horse.'[or]'This is getting to me, I keep thinking about how much fun it would be to be a big dumb horse... or better yet, be fucked by one...'[or]'I wonder if there is any way to reverse the changes at this point, or if I am going to end up a horse even if I get out of here...'[at random]";
-	else if xp of Onyx is 2:
+	else if XP of Onyx is 2:
 		say "     'Hey welcome back,' Onyx says with a smile on his increasingly equine face as he moves over to the bars again, standing much more easily on his changing feet as he does so. You take a minute to look at the boy and notice his transformation seems to have progressed farther, and he is almost more equine than he is human now. 'Did you find the keys?' The equine like boy asks eagerly, and you wonder whether you should actually set him free or not, still unsure, you hold up the keys where he can see them, and he claps his hands together happily as he looks at you. 'I knew you could do it!' He says happily, watching with his large equine eyes as you unlatch the cell door and swing it open carefully. Onyx grins as he staggers out of the room, seeming disoriented for a minute as he looks around himself.[line break]";
 		say "     'I'm free!' he says happily as he looks around himself, before blinking. 'I am finally out of that little cell. This means... I am finally a good little horsey?' he ponders with some confusion, as he looks at you for help. 'I know I had to be out of there for some reason, but they said I could come out when I was a proper horse, so does this mean I am a proper horse now?' Onyx asks as he rubs his head with his hands, obviously having trouble thinking straight right now.";
 		WaitLineBreak;
 		say "     'I think maybe I should just stay here for a minute and try to think. There was a boy I was supposed to rescue... or was it a girl? Someone else here... Maybe you could help me find out what it is I was supposed to do?' Onyx says hopefully as he looks back up at you again, 'It's just so hard to think about what happened before I ended up here... but I know it was important somehow... though I am not sure if it is as important as being a good little filly is...' he says with a confused sigh as he moves over to rest against one of the walls.";
 		say "     Looking at him like this, you are pretty sure that he could be pretty easy to manipulate if you could just figure out how to do so, which is probably what the horses here were counting on. Sighing, you resolve to look around to see what else you can find in this place to help get him moving again, you do recall he kept mentioning someone else brought in at the same time he was. Maybe you should try finding them. Although you get the feeling that you probably shouldn't leave him alone for too long in this strange place as he is now.";
-		now xp of Onyx is 3;
-	else if xp of Onyx is 3 or xp of Onyx is 4:		[freed onyx short messages]
+		now XP of Onyx is 3;
+	else if XP of Onyx is 3 or XP of Onyx is 4:		[freed onyx short messages]
 		say "     [one of]'Hey again, welcome back.'[or]'You look familiar. Are you going to be a horse, too?'[or]'I know I was supposed to be doing something... something important... but what could be more important than being a proper horse?'[or]'I think I was in something called college, though for some reason all I get when I try thinking more about it is a vague sense of boredom. Maybe it was so boring, I don't want to remember it?'[or]He neighs at you happily, a smile on his muzzle as he looks around the hallway.[or]'I think I could get the hang of this being a horse thing if I could only figure out whether I was supposed to be a stallion or a mare...'[or]'You haven't seen a stallion around here have you? They usually come by here pretty often, and I need to ask them what I was supposed to be doing...'[or]'Dammit, I just can't remember what I was supposed to be doing. Do you know?'[at random]";
-	else if xp of Onyx is 5:
+	else if XP of Onyx is 5:
 		say "     'Welcome back again,' the still changing horseboy says with a smile on his changing muzzle as he lifts a hand in greeting. 'You know some stallions just came by to talk to me while you were gone, and they seemed surprised I got out. They said I had some potential or something,' he says with a slight smile at the thought of the stallions before shaking his head and rubbing his forehead with his changing hands.";
 		say "     'Something still doesn't seem quite right though...' he says with a sad and confused sigh. His expression brightens however as you pull out the intricate silver necklace you went to all the trouble of finding. 'This... looks so familiar,' he mutters as you hand it to him and he runs the necklace over through his hands absently, before stopping to read the inscription on the back several times. His equine lips moving slightly as he mutters softly to himself, before blinking and looking at you.";
 		WaitLineBreak;
 		say "     'Now I remember!  We were captured... and they brought us here to make us like them...' Onyx says with a slightly panicked look on his partially formed muzzle, 'And I can't believe I almost forgot that and gave up. But what about Diana?  Did you find out what happened to her?' he asks nervously, as if afraid to hear the answer. His shoulders slump slightly when you explain that his girlfriend is now well on her way to being a happy slutty mare like all the rest, though he does perk up slightly when you tell him she said he should escape with you if he could. He seems ready to go rushing to her rescue for a minute, before sighing and giving up when you explain just how many mares there are in the area with her.";
 		say "     Sighing, Onyx admits that he is pretty sure that he can't actually bring himself to fight any of the more dominant equines right now, and with some persuasion agrees to follow you out of the Stables. It takes a bit of work for you to distract the two guards outside, but you manage to keep their attention long enough for Onyx to slip out unnoticed. Once free of the Stables, you lead your new and slightly unhappy new equine companion back to the safest place you know if in this crazy city, breathing a soft sigh of relief as the library comes into sight and you can both rest and relax for a bit.";
-		now xp of Onyx is 6;
+		now XP of Onyx is 6;
 		now the vmusings of Onyx is "[onyxmusing]";
 		now Onyx is in Grey Abbey Library;
 		move player to Grey Abbey Library;
-	else if xp of Onyx is 6:
+	else if XP of Onyx is 6:
 		say "     'Hey thanks again for your help,' the mostly changed equine teenager says with a soft smile as you approach him. 'I know I am going to keep changing, but at least I'm here with you instead of trapped with those crazies back at the Stables,' he says with a soft smile, before sighing slightly. 'I still wish I knew how to fit in properly though now. Everything is just so confusing, and I still am not sure if I am going to end up a stallion or a mare when all this is over with...' Onyx says with a sigh, before giving you a shy grin and a shrug. 'Heck I don't even feel sure about which one I want to end up as. Both ideas seem so sexy and appealing to me sometimes...'";
 		say "     He looks off into the distance with a smile on his face for a second, before shrugging and poking at the books in front of him again. Looking at the books yourself, you find yourself grinning as you note he has all sorts of books about horses spread out in front of him, with pictures of both mares and stallions spread out on the table. Glancing up at your new equine acquaintance, you find yourself wondering if maybe you can't find something, or someone out there, to help you finish transforming him into either a sexy stud, or a slutty mare for you to play with... to solve his personal dilemma, of course.";
-		now xp of onyx is 7;
-	else if xp of Onyx is 7 or xp of Onyx is 8:
+		now XP of onyx is 7;
+	else if XP of Onyx is 7 or XP of Onyx is 8:
 		if femonyxq is 1:
 			say "     Shall you tell Onyx about the Palomino?";
 			if player consents:
@@ -119,57 +119,57 @@ instead of conversing the Onyx:
 				move player to Topless Lounge;
 				now the vmusings of Onyx is "";
 				follow the turnpass rule;
-				now xp of onyx is 9;
+				now XP of onyx is 9;
 				now femonyxq is 2;
 				now lastfuck of onyx is turns;
 			else:
-				say "     [one of][if xp of Onyx is 7]'This is all very confusing. It's getting hard to cope with these urges, but I don't want to risk getting sex-crazed either.'[else]'I'm still pretty uncertain as to what I'm going to do about all this. But I do feel a little relieved that I didn't lose it after what you did. Thanks for showing me that I can still have some fun.'[end if][or]'Here I am with a cock the size of which most any man would envy and I'm too nervous to risk using it. Funny, eh?' he says, giving a weak laugh.[or]'It's too bad we weren't able to save Diana, but at least I know she's happy there.'[or]'I need to try and hang on to what little I have left of the old Oscar, though there's quite a lot more of Onyx now.'[or]'I still wish I knew how to fit in properly though now. Everything is just so confusing, and I still am not sure if I am going to end up a stallion or a mare when all this is over.'[or]'Do you think anyone can truly recover from all... This?'[or]'So how do you cope with everything that's going on out there?'[or]'At least it's pretty peaceful here at the library. I can focus more on my... dilemma... with fewer distractions.'  A quick glance shows he's looking over more books on horses.[or]'The old me wants me to try staying a man while all my training at the Stables makes being a mare sound really appealing too.'[at random]";
+				say "     [one of][if XP of Onyx is 7]'This is all very confusing. It's getting hard to cope with these urges, but I don't want to risk getting sex-crazed either.'[else]'I'm still pretty uncertain as to what I'm going to do about all this. But I do feel a little relieved that I didn't lose it after what you did. Thanks for showing me that I can still have some fun.'[end if][or]'Here I am with a cock the size of which most any man would envy and I'm too nervous to risk using it. Funny, eh?' he says, giving a weak laugh.[or]'It's too bad we weren't able to save Diana, but at least I know she's happy there.'[or]'I need to try and hang on to what little I have left of the old Oscar, though there's quite a lot more of Onyx now.'[or]'I still wish I knew how to fit in properly though now. Everything is just so confusing, and I still am not sure if I am going to end up a stallion or a mare when all this is over.'[or]'Do you think anyone can truly recover from all... This?'[or]'So how do you cope with everything that's going on out there?'[or]'At least it's pretty peaceful here at the library. I can focus more on my... dilemma... with fewer distractions.'  A quick glance shows he's looking over more books on horses.[or]'The old me wants me to try staying a man while all my training at the Stables makes being a mare sound really appealing too.'[at random]";
 		else:
-			say "     [one of][if xp of Onyx is 7]'This is all very confusing. It's getting hard to cope with these urges, but I don't want to risk getting sex-crazed either.'[else]'I'm still pretty uncertain as to what I'm going to do about all this. But I do feel a little relieved that I didn't lose it after what you did. Thanks for showing me that I can still have some fun.'[end if][or]'Here I am with a cock the size of which most any man would envy and I'm too nervous to risk using it. Funny, eh?' he says, giving a weak laugh.[or]'It's too bad we weren't able to save Diana, but at least I know she's happy there.'[or]'I need to try and hang on to what little I have left of the old Oscar, though there's quite a lot more of Onyx now.'[or]'I still wish I knew how to fit in properly though now. Everything is just so confusing, and I still am not sure if I am going to end up a stallion or a mare when all this is over.'[or]'Do you think anyone can truly recover from all... This?'[or]'So how do you cope with everything that's going on out there?'[or]'At least it's pretty peaceful here at the library. I can focus more on my... dilemma... with fewer distractions.'  A quick glance shows he's looking over more books on horses.[or]'The old me wants me to try staying a man while all my training at the Stables makes being a mare sound really appealing too.'[at random]";
-	else if xp of onyx is 9: [Female Onyx Addition]
+			say "     [one of][if XP of Onyx is 7]'This is all very confusing. It's getting hard to cope with these urges, but I don't want to risk getting sex-crazed either.'[else]'I'm still pretty uncertain as to what I'm going to do about all this. But I do feel a little relieved that I didn't lose it after what you did. Thanks for showing me that I can still have some fun.'[end if][or]'Here I am with a cock the size of which most any man would envy and I'm too nervous to risk using it. Funny, eh?' he says, giving a weak laugh.[or]'It's too bad we weren't able to save Diana, but at least I know she's happy there.'[or]'I need to try and hang on to what little I have left of the old Oscar, though there's quite a lot more of Onyx now.'[or]'I still wish I knew how to fit in properly though now. Everything is just so confusing, and I still am not sure if I am going to end up a stallion or a mare when all this is over.'[or]'Do you think anyone can truly recover from all... This?'[or]'So how do you cope with everything that's going on out there?'[or]'At least it's pretty peaceful here at the library. I can focus more on my... dilemma... with fewer distractions.'  A quick glance shows he's looking over more books on horses.[or]'The old me wants me to try staying a man while all my training at the Stables makes being a mare sound really appealing too.'[at random]";
+	else if XP of onyx is 9: [Female Onyx Addition]
 		if lastfuck of onyx - turns >= 16:
 			say "     'Hey, great to see you again, sweety!' Looking over Onyx, it's clear that his presence here has had quite and effect on him, seeing as he's now a she... Slender, ebony body sparsely dressed, it's apparent she's taken quite a liking to the other strippers, finding herself as a seductive beast to be gazed upon by patrons of the bar.";
 			say "     'As you can see, I found a way to fit in!' She laughs, gesturing to a quieter corner of the room to talk. You ask her how she's feeling.";
 			say "     'Oh, I'm feeling great! There's so much energy here, and I love to dance... I'm not quite as good as my brothers and sisters, but I'm quickly catching on!' She winks at you before moving in closer, 'Anyways, if you ever feel the need for a good time, don't be afraid to ask...' Grinning, she's called over to attend some patrons, leaving you to ponder the situation as she gives you a rather telling view of her exposed ass.";
-			now xp of onyx is 30;
+			now XP of onyx is 30;
 		else:
 			if femonyxq is 2:
 				say "     'Geez, it sure is loud in here.' You as if he'll be OK, to which he silently nods. 'It could be worse, the dancers are very entertaining. I... Strangely envy them, having the courage to be the center of attention like that...' He briefly seems lost in thought before returning his attention to you, blushing slightly, 'Anyways, Harold seems like a nice guy, and he think he can get me started off working at tables. Thank you!' Nodding, you decide to leave the equine to enjoy the show.";
 				now femonyxq is 3;
 			else:
 				say "     '[one of]This place is growing on me[or]You should see the dancers[or]I'm sure I'll fit in here eventually[or]Thanks again[at random]!'";
-	else if xp of Onyx >= 10 and xp of Onyx <= 19:
+	else if XP of Onyx >= 10 and XP of Onyx <= 19:
 		if onyxhappytalk is false and a random chance of 1 in 3 succeeds:
 			say "     'Hey, thank you again. I've grown to love my new form now, but I feel more in control; my mind feels a lot clearer, thanks to you.'";
 			now onyxhappytalk is true;
 		else:
 			say "     [one of]'I'm looking forward to thanking you again for all your help, sexy' the mature equine says with a soft pat on your rear.[or]'I think I'm starting to fit in rather well now, aren't I?' he says with a grin and a firm squeeze on your derriere.[or]'This new bod of mine's pretty impressive, isn't it?' he asks, showing off his studly stallion form and impressive stallionhood.[or]'I was wrong to try and suppress these urges entirely. I can handle it much better if I just decide when and how to let them out.'[or]'I may no longer be the old Oscar I used to be, but I'm not the sex-crazed pet they wanted to make out of me at that strange brothel either.'[or]'It's too bad we weren't able to save Diana. I'd sure like to have some fun with her now. But at least I know she's happy there. And if you can check up on her from time to time, at least I'll know she's safe.'[at random]";
-	else if xp of Onyx is 20:
+	else if XP of Onyx is 20:
 		if onyxhappytalk is false and a random chance of 1 in 3 succeeds:
 			say "     'Hey, thank you again. I'm really starting to like this new form now. I feel more at ease with my desires and my mind feels a lot clearer, thanks to you.'";
 			now onyxhappytalk is true;
 		else:
 			say "     [one of]'Is it strange that I'm looking forward to having another chance to [']thank you['] for all your help, sexy?' the maturing equine says while eyeing your body with desire and posing temptingly.[or]'I think I'm starting to fit in rather well now. Though I don't really fit in this quite so well,' he adds as he adjusts his ill-fitting thong that can only partly cover his studly equine meat.[or]'I was wrong to try and suppress these urges entirely. I can handle it much better with you helping me to let them out.'[or]'I may no longer be the old Oscar I used to be, but at least I'm not a sex slave at that strange brothel.'[or]'It's too bad we weren't able to save Diana. I'd sure like to have some fun with her now. But at least I know she's happy there.'[at random]";
-	else if xp of Onyx >= 21 and xp of Onyx <= 29:
+	else if XP of Onyx >= 21 and XP of Onyx <= 29:
 		if onyxhappytalk is false and a random chance of 1 in 3 succeeds:
 			say "     'Hey, thank you again. I've grown to love my new form now that I'm not stressing so much about staying in control with you in charge. I feel at ease with my desires and my mind feels a lot clearer, thanks to you.'";
 			now onyxhappytalk is true;
 		else:
 			say "     [one of]'I'm looking forward to having another chance to [']thank you['] for all your help, sexy,' the mature equine says while [if cocks of player > 0]pressing his rear to your crotch[else]posing alluringly[end if].[or]'I think I'm starting to fit in rather well now. Though I don't really fit in this quite so well,' he adds as he adjusts his ill-fitting thong that can only partly cover his studly equine meat.[or]'I was wrong to try and suppress these urges entirely. I can handle it much better with you helping me to let them out.'[or]'I may no longer be the old Oscar I used to be, but at least I'm not a sex slave at that strange brothel. I'd much rather be servicing my friends['] needs than those of strange, perverted monsters.'[or]'It's too bad we weren't able to save Diana, but at least I know she's happy there. And if you can check up on her from time to time, at least I'll know she's safe.'[at random]";
-	else if xp of Onyx >= 30 and xp of Onyx <= 49:
+	else if XP of Onyx >= 30 and XP of Onyx <= 49:
 		say "     '[one of]Stare all you like, don't worry about the tip!'[or]We can go out back, if you need something looked at.'[or]I hope you're having as much fun as I'm having!'[or]Okay, who stole my last thong?'[or]I'm still very inexperienced when it comes to dancing, but our patrons don't seem to mind!'[at random]";
-	else if xp of Onyx is 50:
+	else if XP of Onyx is 50:
 		say "     'Oh hey it's you again!' Onyx says happily as you approach the changing equine again where he leans up against the wall. 'A couple stallions came by while you were gone, and they seemed surprised about me being out for some reason.' He shrugs as he rubs his forehead with one of his changing hands absently, and you note that his changes seem to be continuing to progress though somewhat more slowly than before. 'Anyways, they stopped to talk, but they just left a bit ago... and now you show up!' he says with a rather equine smile as he grins at you happily. 'Did you figure out what I was supposed to be doing? I'm still pretty confused by everything going on here...' Onyx asks you hopefully, and you find yourself smiling as well as you nod to the changing equine.";
 		say "     Onyx listens raptly while you explain that his companion says he should stay and be a good little horsey just like she is, and stay in the Stables so he can eventually keep her company. Onyx seems to smile even broader than before as you slowly relate all the information you learned, and when you finish he nods happily.";
 		say "     'So the important thing I need to do is stay here and be the best horse I can be! That sounds a lot like what the stallions said too. And if so many different important people agree that Onyx should be a good horse, then I'll do my best to be the best horse around!' he declares happily as he shifts his weight slightly onto his almost fully formed hooves. 'And maybe you can help me and become a good little horsey too!' Onyx says with a smile as he looks right at you teasingly, and you get the feeling that maybe now you could have some 'fun' with the still changing horsey if you wanted to...";
-		now xp of Onyx is 51;
-	else if xp of Onyx is 51:
+		now XP of Onyx is 51;
+	else if XP of Onyx is 51:
 		say "     '[one of]Hey again handsome, welcome back.'[or]'You look like you would make a fine horsey too!'[or]'It's so good not to have to worry about having forgotten something anymore.'[or]I stopped worrying about remembering anything other than how to be a good horsey now. That other stuff wasn't important anyways after all.'[or]He neighs at you happily, a smile on his muzzle as he looks around the hallway.[or]'I think I could get the hang of this being a horse thing if I could only figure out whether I was supposed to be a stallion or a mare...'[or]'You haven't seen a stallion around here have you? They usually come by here pretty often, and I think they might like to meet you.'[or]'So did you want to have some fun yet?'[at random]";
-	else if xp of Onyx >= 60 and xp of Onyx <= 79:
+	else if XP of Onyx >= 60 and XP of Onyx <= 79:
 		say "     [one of]'Hey there again sexy, feel like another go?'[or]'Want to feel a real stallion again?'[or]'You should stay here more often...'[or]'Stable life suits me don't you think?'[or]'I feel so much better now, I can't even imagine why I was worried about this.'[or]'Know anyone interested in playing the mare for me?' he says teasingly.[or]'Those stallions were right, this feels amazing.'[or]'You will look so sexy walking around on hooves I think.'[or]'Ready to be my mare yet? You know it will be amazingly good.'[or]'I wonder if Daisy will like my new body?' Onyx says with a lascivious grin.[at random]";
-	else if xp of Onyx >= 80 and xp of Onyx <= 99:
+	else if XP of Onyx >= 80 and XP of Onyx <= 99:
 		say "     [one of]'Hello again, master!'[or]'I feel like such a sexy slut now![or]'I wonder if Daisy will like my new look?[or]'Mmmmm... stallions....'[or]'I love being a mare! Please let me thank you properly for making me so nice and slutty!'[or]'Can you believe I actually thought I wanted to be a stallion at one point? What would I ever do without this wonderfully sensitive pussy of mine?'[or]'Oh master, the Stables are such a wonderful place for a mare, just think of all that lovely thick stallion meat just waiting to fill a mare up!'[at random]";
-	else if xp of Onyx is 100:		[stuck in there, cannot be freed]
+	else if XP of Onyx is 100:		[stuck in there, cannot be freed]
 		say "     [one of]'I know I had a name.. and I think it began with an... O? Maybe it was Onyx? No wait, that's my current name...'[or]He whickers at you slightly, then seems embarrassed when he realizes what he did.[or]'Come to visit the prisoner again? You aren't the only one who likes to come look, plenty of the mares come by to tell me how much fun I can look forward too, and the men... well let's just not talk about what they talk about doing to me' Onyx says, and you notice him starting to blush.[or]'You should be careful hanging around talking to me like this, some of the horses come by here pretty often to keep an eye on me. You wouldn't want to end up in a cell next to mine now would you?'[or]'Why are you hanging around here talking to me so much? If you want to know what it is like in here, just lock yourself in one of the other cells why don't you, then you can find out what it is like to be a captive while they teach you about being a proper little horse. [or]'This is getting to me, I keep thinking about how much fun it would be to be a big dumb horse... or better yet, be fucked by one...'[or]'I wonder if there is any way to reverse the changes at this point, or if I am going to end up a horse even if I get out of here...'[at random]";
 
 Section 3 - Sexy Times
@@ -183,36 +183,36 @@ Instead of fucking the Onyx:
 		choose row monster from the table of random critters;
 	if cocks of player is 0 and cunts of player is 0:
 		say "     You consider offering to have sex with Onyx, but recall that you currently have no gender and are unable to satisfy the horse in such a manner.";
-	else if xp of Onyx is 9:
+	else if XP of Onyx is 9:
 		say "     'Oh? Sex is probably the last thing on my mind right now...' He says, perhaps dishonestly, while he gawks at the strippers... Peculiar fellow, it's perhaps best you ask him later.";
-	else if lastfuck of onyx - turns is less than 6:
-		say "     'Sorry there, friend,' Onyx says with a sad shake of [if ( xp of Onyx >= 30 and xp of Onyx <= 49 ) or ( xp of Onyx >= 80 and xp of Onyx <= 99 )]her[else]his[end if] equine head. 'I need a bit more time to recover after our last romp, maybe you could come back then?' the transformed equine says with a teasing look as [if ( xp of Onyx >= 30 and xp of Onyx <= 49 ) or ( xp of Onyx >= 80 and xp of Onyx <= 99 )]she goes back to what she[else]he goes back to what he[end if] was doing.";
-	else if xp of Onyx < 3 or xp of Onyx is 100:
+	else if lastfuck of onyx - turns < 6:
+		say "     'Sorry there, friend,' Onyx says with a sad shake of [if ( XP of Onyx >= 30 and XP of Onyx <= 49 ) or ( XP of Onyx >= 80 and XP of Onyx <= 99 )]her[else]his[end if] equine head. 'I need a bit more time to recover after our last romp, maybe you could come back then?' the transformed equine says with a teasing look as [if ( XP of Onyx >= 30 and XP of Onyx <= 49 ) or ( XP of Onyx >= 80 and XP of Onyx <= 99 )]she goes back to what she[else]he goes back to what he[end if] was doing.";
+	else if XP of Onyx < 3 or XP of Onyx is 100:
 		say "     'Great, another person teasing me with sex while I am stuck behind bars.' Onyx says with a sigh. 'Sorry but until I get out of here, the only sex I am getting is with my hoof, I mean hand.' he says before blushing slightly. 'I suppose that is another good reason to get me out of here, cause damn I am getting horny in here...'";
-	else if ( xp of Onyx >= 3 and xp of Onyx <= 5 ) or xp of Onyx is 50:	[at Stables, undecided]
+	else if ( XP of Onyx >= 3 and XP of Onyx <= 5 ) or XP of Onyx is 50:	[at Stables, undecided]
 		say "     'Sex?' Onyx says with some confusion, before giving you an equine smile. 'I think I would love some, cause damn I am soooo fucking horny,' He says as he reaches down to rub his small crotch absentmindedly. 'But I think if we do that, I won't be able to remember anything else, and I know there was something I had to do... or was it someone that had to do me?' the equine says, before shaking his head at the puzzling situation. 'Maybe we should wait till we figure out what we are going to do first, then we can have some hot heavy sex.... lots and lots of hot and heavy sex...";
-	else if xp of Onyx >= 6 and xp of Onyx <= 29:		[at Library]
-		if xp of Onyx is 6:
+	else if XP of Onyx >= 6 and XP of Onyx <= 29:		[at Library]
+		if XP of Onyx is 6:
 			say "     Given what he's been through, you should probably at least talk to him before making the moves on him.";
 		else:
 			say "[onyxbunkersex]";
 [		say "'Sorry friend,' Onyx says with a shy smile as he moves the pictures of horses around in front of him. 'But I haven't yet figured out what I should be yet, and I figure actually giving in and having sex would kind of make the decision for me... so I think I should pass for now..' He says with a sigh as he goes back to looking at the pictures, and you wonder if maybe there isn't something out there in the city you could find which would help him make the choice you want him to... perhaps in the red light district or one of the clubs in town..."; ]
 [		say "***INSERT NEW CONTENT HERE"; ]
-	else if xp of Onyx is 31 and cocks of player > 0 and cock length of player <= 15 and a random chance of 3 in 5 succeeds:
+	else if XP of Onyx is 31 and cocks of player > 0 and cock length of player <= 15 and a random chance of 3 in 5 succeeds:
 		[first time lap dance]
 		say "     Catching your look and returning it with a smile, the sexy mare saunters over to you sexily. 'Oh, I've been looking forward to showing you a good time again,' she says sensually. Taking your hand in hers, she leads you off to a private little boudoir and helps you strip down while making a show of baring herself as well.";
 		femonyxsex5;
-		now xp of Onyx is 32;
-	else if xp of Onyx >= 30 and xp of Onyx <= 49:		[at Palomino]
+		now XP of Onyx is 32;
+	else if XP of Onyx >= 30 and XP of Onyx <= 49:		[at Palomino]
 		now lastfuck of onyx is turns;
 		femonyxsex;
-	else if xp of Onyx is 51:
+	else if XP of Onyx is 51:
 		now lastfuck of onyx is turns;
 		say "     'Oh hey, you want to have some fun with me?' Onyx says with a smile as you approach the changing equine with obvious sexual intent. 'Of course if I am going to be sexy little horse I need to have lots and lots of sex, and you should too so you can be just as sexy a horse as me...' the black equine says with a teasing smile as he draws closer to you, rubbing his softly furred equine body up against your own teasingly, his scent seeming increasingly arousing as the transforming male pulls you close and whispers in your ear. 'Why don't I show you some of the tricks the stallions told me about, and teach you how much fun it is to be saddled up and ridden?' he says teasingly, while his arousing scent makes your head swim with desire, and your body warms up in response to his touch. Do you give in to your building desires and the increasingly arousing touch of the horseboy?'";
 		if the player consents:
 			say "     You find yourself nodding almost automatically in response to Onyx's surprisingly forceful words, though you don't have much time to think about that as Onyx grins happily at your surrender, and quickly presses your unresisting body up against the wall of the hallway.";
-			if cocks of player is greater than 0:
-				if cunts of player is greater than 0:
+			if cocks of player > 0:
+				if cunts of player > 0:
 					say "     'Good slut,' you hear Onyx mutter into your ear as he runs his hands over your body teasingly, his large equine fingers brushing your cock lightly, before finding your already damp cunt underneath. 'Looks like you don't really need that pathetic little man meat of yours now do you... what you need is a real stallion's meat in you isn't it?' Onyx says teasingly, as he rubs your damp passage, his touch making you whimper with desire even as you arch your body forward at his touch. 'A nice thick stallionhood like this.' He says, as he pushes your head down until his thick blunt equine cock is right in front of your face, one hand still holding your hands pinned, while his other strokes his surprisingly large changed cock teasingly. Your attention is quickly focused on his large equine member, even as the aroused musk of the dominant stallion fills your mind, your body responding almost automatically like a good little mares as your cock shrinks and your female sex burns with desire. Your eyes fixed on his hooftipped hand as it strokes over his sexy and powerful rod, which now shows no sign of the shrinking you noticed earlier, indeed it seems to have grown drastically, and is still growing to be on par with that of any of the stallions wandering the halls!";
 					say "     You find yourself panting with arousal at every sexy pump of his hand up that thick meat, and if you weren't so helpless and restrained you think you wouldn't be able to keep your hands from stroking the sexy equine meat in front of you as well. Soon enough though, Onyx grunts loudly above you, and the tip of his equine member erupts, spilling his thick stallionseed all over your helpless form. You moan with increased arousal and find yourself feeling increasingly needy and surprisingly happy to be covered in the cum of a powerful equine, the feel of it sinking into your skin and changing you is absolutely amazing, and somehow being held in place by the powerful stallion while it happens just makes everything better as well. Eventually he lets you go, and when you look up at the stallion that dominated you so easily, you are somewhat surprised to see that his changes have finished completely, and a powerful black stallion stands where the weak slutboi once stood, the sight of his large proud equine form making you feel even more submissive and horny just by looking at him.";
 				else:
@@ -229,28 +229,28 @@ Instead of fucking the Onyx:
 				infect "Stallionboi";
 				infect "Stallionboi";
 				now Onyxboislut is 1;
-			now xp of Onyx is 60;
-			if fancyquest is greater than 0:
+			now XP of Onyx is 60;
+			if fancyquest > 0:
 				increase score by 0; [do nothing action]
 			else:
 				now fancyaroused is 1;
 		else:
-			if cocks of player is greater than 0:
+			if cocks of player > 0:
 				say "     You shake your head slightly to clear it as you push the surprised Onyx back up against the wall, the changing equine surprised and helpless to react as you take charge of the situation. Onyx moans helplessly as your hands roam his already aroused and needy body teasingly, your cock growing increasingly excited as you stroke his soft black fur, even as his cock seems to shrink and vanish as you watch. As your hands rub over his almost completely flat crotch, you can feel his skin part under your touch and a small gush of wetness soaks his panties as a new feminine slit forms, even as her chest begins to swell slightly with newly budding breasts. You can feel yourself grinning eagerly as the new mares heat filled scent fills your head, the new mare moaning with arousal as she responds to your dominant touch with increasing submissiveness, the instincts of a mare in heat obviously already taking over as his body continues to change under your sexual assault. The sight of Onyx becoming a proper mare only serves to excite you and increase your arousal amazingly, your stiff [cock of player] cock rubbing up against her soft body even as one of your hands slowly tugs her soaked thong out of the way, exposing her lovely winking maresex for the first time.";
 				say "     You find yourself groaning with pleasure as you position yourself, before thrusting into the Stables newest black mare, filling her tight pussy up with your rod for the first time. She moans and throws her head back submissively, and you can see her muzzle shifting and becoming fully equine even as you pull back and thrust into her again, slowly building up a rhythm as she clutches you tightly to her body and whinnies with need. The feel of her velvety folds massaging your cock, and her now ample breasts rubbing up against your body is just too amazing, and before long you are crying out with pleasure yourself as you fill her eager body with your seed, sealing her fate as just another lusty little mareslut. Groaning as you try to recover from your orgasm, you pull yourself out of her sex, and let her slump down the wall with a happy and rather dazed look on her new fully equine muzzle, her hands roaming her new sexual body even as you gather up your equipment and prepare to head on about your business. Though the sight of her well fucked body leaning up against the wall does make you grin with amusement as you recover from your own powerful orgasm, quite glad you could show the former teenager the joys of being a proper mare like all the rest...";
 			else:
 				say "     You shake your head slightly to clear it as you push the surprised Onyx back up against the wall, the changing equine seemingly surprised as you take charge of the situation. He moans slightly as your hands roam his body teasingly, your touch lingering on his almost flat crotch and his slightly swelling chest even as you rub your already aroused body against the new equines increasingly sexy form. You can feel yourself grinning as the unsure equine begins to moan with arousal and respond to your dominant touch with increasing submissiveness, his instincts obviously taking over as his body begins to change under your sexual assault. He moans helplessly as he clutches you tight, the slight swellings on his chest blossoming forth into fully formed breasts under your hands, even as you can feel his already diminutive manhood shrink and vanish into his body. For some reason the feeling of Onyx becoming a mare under your touch only increases your arousal, your own pussy dampening with need as you rub your crotch against that of the Stables newest black mare. She moans and throws her head back submissively, and you can see her muzzle shifting and becoming fully equine even as you slip one of your fingers inside her newly formed pussy and begin to massage her velvety soft new mound teasingly. 'Now that's a good looking mare,' you find yourself whispering to the changing mare as her eyes drift closed and she gives herself over to the pleasure of your touch, your arousal growing even harder to contain as you rub your heat filled body up against the newly formed mares sexy black form.[line break]";
 				say "     Before long you are moaning almost as hard as Onyx is, as her hands begin to wander your form as well, as she gives herself over to the submissive desires of her new body completely, and you shudder with pleasure as she cries whinnys in pleasure as her first female orgasm wracks her body. The pleasure of taming the sexy mare, and the feel of her body shuddering helplessly against yours, is too much to contain, and you gasp in orgasm as well, pleasure shooting through your body even as the new female Onyx's form slips down the wall limply, with a dazed look in her fully equine new eyes. You find yourself feeling increasingly powerful and dominant as you look down on where Onyx is panting breathlessly against the wall, even as her new hooftipped hands roam her changed body happily. Feeling strangely satisfied with your work here, you gather your wits about you as you prepare to head out to continue roaming the Stables, although you do find yourself thinking that maybe you should come back to visit your own personal pet mare again as soon as she has recovered....";
-			Now xp of Onyx is 80;
+			Now XP of Onyx is 80;
 			now lastfuck of onyx is turns;
-			if fancyquest is greater than 0:
+			if fancyquest > 0:
 				increase score by 0; [do nothing action]
 			else:
 				now fancyaroused is 1;
-	else if xp of Onyx >= 60 and xp of Onyx <= 79:
+	else if XP of Onyx >= 60 and XP of Onyx <= 79:
 		if ( Onyxmareslut is 2 and cunts of player > 0 ) or ( Onyxboislut is 2 and cunts of player is 0 ):
 			now lastfuck of onyx is turns;
-			if cunts of player is greater than 0:	[FEMALE SUCCUMB]
+			if cunts of player > 0:	[FEMALE SUCCUMB]
 				say "     'Ah! I knew my slut would return to her stallion soon enough. You just can't help but lust after my rod, now can you?' Onyx says with a smirk on his equine muzzle as he reaches out and strokes your body with his hand teasingly, making you moan almost automatically as your well-trained body responds submissively to his touch. 'Now it's time for the real fun though, isn't it slut?' he says teasingly as he rubs your already damp pussy with his powerful hands, making you moan with desire at your stallion's touch, the scent of his heady musk filling your head, and reminding you of just how good it feels to submit and let him have his way with you. Your head swimming with lust, you pant eagerly as he slowly pulls you into the room he once occupied, and pushes you down onto the bed. Your thoughts already filling with images of the handsome black stallion fucking your increasingly eager body, you spread yourself for him eagerly as he climbs up onto the bed on top of you. His hands gather yours up and pin them above your head as his thick black and pink rod rubs up against your thighs. 'What a good little slutty mare you make. You want my cock so bad don't you, little mare?' he says teasingly as he shifts his weight above you, and you find yourself moaning and nodding eagerly, your damp pussy feeling horribly empty and needy as you stare down at his amazingly sexy stallionhood.";
 				say "     'Good mare. Time for you to get it in you then,' he says with a chuckle as he lowers his hands down to your hips and positions his cocktip at the entrance to your female passage. You moan and try to lower your hands to grip him to you tighter, only to find that while you were distracted, he managed to fasten the bed's restraints to your hands, keeping them locked above you. Somehow being unable to move your hands seems strangely erotic with a powerful stallion positioned right above you, your body completely at the mercy of his hands and cock as he chuckles and thrusts his wonderful rod right into you. You find yourself letting out a loud whinny of lust and need as his thick meat presses into your body, spreading you wide around him as he begins to thrust into you with increasing force, your needy passage gripping and massaging Onyx's meat with every thrust, as increasingly powerful bursts of pleasure shoot through your body. Before long you are moaning like a proper mare under the powerful stallion's attentions, begging him to fill your needy body with his seed and show you what it feels like to be a mare. Onyx needs little encouragement to do just that, and the black stallion easily fulfills his duties as a stud as he pounds into your body, before giving one last powerful thrust into you as his cock stiffens and fills your waiting womb with his seed, causing you to orgasm harder than ever before as you feel his fertile sperm floating around inside your body.";
 				say "     As you lie there with your mind floating blissfully free, you can dimly sense your amazing stallion pulling out of your body, and doing something with your still spread legs, though you find it hard to care about anything like that when you feel so very amazing right now. You do look up however when you hear Onyx's hooves clopping slightly on the floor as he leaves the small room, your needy body already missing a stallion's touch. Onyx grins as he looks back and sees you watching him, and you feel your heart jump slightly as he brandishes a familiar ring of keys, right before he slides the door to the cell you are in shut. Panic chasing away some of the pleasure of your recent mating, you try to struggle and sit up, only to realize that now not only are your hands bound, but he locked some sort of cuffs on your legs as well, completely trapping you spread-eagled on the bed. 'No getting away for you this time,' Onyx chuckles with amusement as you stare at the sexy stallion in shock. 'See the stallions['] deal was, I could stay a stallion as long as I found a mare to take my place here at the Stables... and well then you came along. Don't worry though, from what I've seen so far, you will love being a proper mare, once your training is done anyways,' he says with a chuckle as he walks away from the door taking all your equipment and the keys with him, and the worst part of it is, you aren't even sure if you want to call him back and make him let you go, or call him back and have him fuck your needy body again! Either way though, it looks like you will be staying here a while...";
@@ -282,7 +282,7 @@ Instead of fucking the Onyx:
 				follow the turnpass rule;
 		else if Onyxmareslut > 0 or onyxboislut > 0:	[For slut values of 1 and a slut value of 2 when gender doesn't match]
 			now lastfuck of onyx is turns;
-			if cunts of player is greater than 0:
+			if cunts of player > 0:
 				say "     'I knew you would be back soon,' Onyx says with a teasing grin as the new and powerful stallion stretches his black furred form teasingly, the sight of his body and the scent of an aroused stallion making your own body respond automatically. You moan as Onyx draws closer to you, your pussy clenching with desire as your body heats up at his soft touch. You swear you can see the increasingly dominant seeming stallion grin as he presses you into one of the open rooms, his powerful body pressed against yours as he guides you over to the bed, before pushing you down on your back. You barely have time to think before the large equine male is on top of you, his form you down underneath him, even as his thick equine cock rubs up between your legs. Helpless to resist the large equine on top of you, either physically or emotionally, you surrender to the moment and the sensations of being pinned underneath the large male, while the blunt tip of his cock strokes the outside of your feminine lips teasingly. You moan in need as he continues to tease you for several minutes with his soft equine lips and hands, and teasing strokes of his equine stallionhood, even as your body burns with increasingly equine heat, your empty slit begging to be filled by the strong powerful male above you. Eventually Onyx grins and you realize you have started begging him out loud for him to fill you, you have little time to think about it however, as the large black stud grunts and buries his thick rod inside of you.";
 				say "     The feeling of his warm equine rod filling you up is amazing, and you melt in the stallions arms as he continues to thrust himself into you, feeling increasingly submissive and helpless as the powerful male thrusts into your body. As you clutch Onyx close you find his presence makes you feel increasingly safe and sexy, like you were meant to be a slutty little mare for this powerful stallion, to have him hold you, fuck you, and make you his forever. You groan with pleasure as images of playing the mare for your stallion fill your head, though soon you groan for another reason, as your body explodes with pleasure as the powerful black stud above you lets out a loud whinny, and you feel his thick seed fill your body. You lie there limply as the pleasure washes through you, his cock twitching inside you and filling you up as he kisses and nibbles at your neck teasingly with his equine lips, before pulling himself off of you. Hauling yourself up, you barely manage to stagger out into the hallway after Onyx as he saunters out, the black equine giving you an amused grin as you realize your thighs are still coated in his seed, the realization making you blush, but feeling surprisingly good as well, and as Onyx gives you a knowing wink, you realize you will be back to visit your new found stud again soon enough...[impregchance]";
 				if girl is not banned and ( "Male Preferred" is not listed in feats of player or guy is banned ):
@@ -310,9 +310,9 @@ Instead of fucking the Onyx:
 					infect "Stallionboi";
 					if a random chance of 1 in 4 succeeds:
 						increase onyxboislut by 1;
-	else if xp of Onyx >= 80 and xp of Onyx <= 99:
+	else if XP of Onyx >= 80 and XP of Onyx <= 99:
 		now lastfuck of onyx is turns;
-		if cocks of player is greater than 0:
+		if cocks of player > 0:
 			say "     Onyx smiles happily and whinnies in greeting as you approach, seemingly unable to speak as she stares with desire at your erect [cock of player] rod. Her obvious need making you grin as she runs her hands over her sleek black mare's body, already anticipating the fun to come as she leans back against the wall with her legs widely spread for you. Her submissive actions make you feel increasingly powerful and dominant as you pin her to the wall, your stiff cock already probing at her damp passage even as she moans happily underneath you. You waste no time in burying yourself inside her new pussy, enjoying every submissive squeak and whinny of pleasure as you pound into her amazingly soft and sensual pussy. Soon you are gripping the little mareslut's hips tightly as she wraps her legs around you, her soft thighs pressing up against your body as you continue to fuck her needy body properly.";
 			say "     It isn't long though before her amazing passage has you crying out with pleasure as your body stiffens and you shoot your load into her waiting womb. Your new mare squeals with happiness as she shudders with orgasm as well as she receives your seed. Her needy pussy milks your cock of every last drop of cum as you hold her tight. Eventually though, you are both spent and unable to cum any more, and you reluctantly let your fun new plaything slump to the ground against the wall again, while you gather your stuff up and try to recover from your exertions. Glancing back at the happy and slutty little mare though, you make a note to come back here again once you have recovered, to give your newest mare another lovely taste of the meat she seems to like so much...";
 			if guy is not banned and ( "Female Preferred" is not listed in feats of player or girl is banned ):
@@ -329,7 +329,7 @@ Instead of fucking the Onyx:
 
 
 to say onyxbunkersex:
-	if xp of Onyx is 7:
+	if XP of Onyx is 7:
 		say "     You approach Onyx as he paces around the library, expression tinged with slight discontent after his departure from the Stables. You make an offer for sex, to which he seems reluctant.";
 		say "     'Er, well... I don't know. After all that, I'm not sure if I should. After what happened to Diana... I don't know if I want to end up like that, you know?'";
 		say "     Given his current position, you're fairly certain you can offer him oral sex as a means to ease him into the prospect. Should you?";
@@ -338,7 +338,7 @@ to say onyxbunkersex:
 			now lastfuck of Onyx is turns;
 		else:
 			say "     You decide that now isn't the best time for this, nodding to him and letting him return to his own troubles.";
-	else if xp of onyx is 8:
+	else if XP of onyx is 8:
 		if the player is dominant:
 			say "     Seeing how Onyx has started to become more accepting of sex and his equine form, you think it might be good to coax him into taking a more submissive role with you. Shall you [link]take charge (y)[as]y[end link] and steer him in that direction or let things with the stallion unfold with him being [link]more dominant (n)[as]n[end link]?";
 			if the player consents:
@@ -348,7 +348,7 @@ to say onyxbunkersex:
 		else:
 			say "[onyxboral1]";
 		now lastfuck of Onyx is turns;
-	else if xp of onyx >= 10 and xp of Onyx <= 19:
+	else if XP of onyx >= 10 and XP of Onyx <= 19:
 		let recanal_skip be 0;
 		let analchance be 5;
 		let recanalchance be 5;
@@ -396,12 +396,12 @@ to say onyxbunkersex:
 			else:
 				say "[onyxboral2]";
 		now lastfuck of Onyx is turns;
-	else if xp of onyx is 20:
+	else if XP of onyx is 20:
 		if cocks of player > 0:
 			say "[onyxbsubanal0]";
 		else:
 			say "[onyxbsubvag0]";
-	else if xp of Onyx >= 21 and xp of Onyx <= 29:
+	else if XP of Onyx >= 21 and XP of Onyx <= 29:
 		say "[onyxbsubtable]";
 
 to say onyxbsubtable:
@@ -486,7 +486,7 @@ to say onyxboral0:
 	say "     'Ah, thank you...' You're about to move on and do your own thing before he stops you. 'Wait... I really do mean it, I feel a lot better now.' You nod to him, expression tinged with a slight smile, before departing proper; he does seem to be in a brighter mood than when you started talking to him.";
 	increase libido of player by 10;
 	if libido of player > 100, now libido of player is 100;
-	now xp of onyx is 8;
+	now XP of onyx is 8;
 
 to say onyxboral1:
 	say "     Advancing upon him, you're already [if scalevalue of player > 3]doubled over[else]on the move[end if] to relinquish his member of its scant confines.";
@@ -498,7 +498,7 @@ to say onyxboral1:
 	increase libido of player by 10;
 	if a random chance of 1 in 3 succeeds or the player is dominant:
 		if libido of player > 100, now libido of player is 100;
-		now xp of Onyx is 10;
+		now XP of Onyx is 10;
 
 to say onyxboral2:
 	say "     As you advance upon him, he moves to grab a seat before he lets you [if scalevalue of player > 3]move down[else]get to work[end if] on his already-exposed member, now too large to possibly fit in such paltry attire.";
@@ -570,7 +570,7 @@ to say onyxbanal:
 				say "     Your behind is strained under his seemingly endless assault until the equine is finally struck with bliss, first made apparent by the feel of his virile seed flooding the depths of your bowels, [if scalevalue of player < 3]belly bloating almost immediately to accommodate the sizable load, though now your body's a bit better equipped to handle it, minimizing the subsequent mess of the escaping fluids[else]body bloating slightly to maintain such a virile load, though you've grown to handle the strain of his almost excessive fluids[end if]. Sweat slicked form resting briefly against you whilst he waits for his dick to soften a bit, he eventually pull himself free, leaving a trail of cum in its wake.";
 			say "     'You're quite the tight fit, love! Er... You might want to clean yourself off, though.' He helps you to your feet, offering a reasonably clean towel he scrounged up and leaving you to clean up after yourself.[mimpregchance]";
 		else:
-			say "     Bracing yourself, there's no doubt that your accomodating size will be his excuse to use you recklessly, and regardless of your [if scalevalue of player > 4]massive[else]larger[end if] scale he's certainly adept at making an entrance when you feel the blunted tip of his impressive cock thrust firmly into your exposed pucker. His wanton assault [if cocks of player > 1]quickly driving your own, [cock size desc of player] cocks erect[else if cocks of player > 0]quickly driving your own, [cock size desc of player] cock erect[else if cunts of player > 0]rapidly driving you wet with arousal[else]compelling you to watch as he goes on[end if], you derive a delightful pleasure in the occupancy of his flesh, and once he's satisfied with the leeway of your anal ring he begins fuck you in earnest.";
+			say "     Bracing yourself, there's no doubt that your accommodating size will be his excuse to use you recklessly, and regardless of your [if scalevalue of player > 4]massive[else]larger[end if] scale he's certainly adept at making an entrance when you feel the blunted tip of his impressive cock thrust firmly into your exposed pucker. His wanton assault [if cocks of player > 1]quickly driving your own, [cock size desc of player] cocks erect[else if cocks of player > 0]quickly driving your own, [cock size desc of player] cock erect[else if cunts of player > 0]rapidly driving you wet with arousal[else]compelling you to watch as he goes on[end if], you derive a delightful pleasure in the occupancy of his flesh, and once he's satisfied with the leeway of your anal ring he begins fuck you in earnest.";
 			If libido of player > 69:
 				say "     Driven by your overwhelming lust, you're soon forced to cry out, ";
 				if cocks of player > 0:
@@ -701,7 +701,7 @@ to say onyxbsuboral0:
 	else:
 		say "     Moving in even closer still, you press your hips to his, kissing the underside of his cock with your wet puss[yfn]. As your juices mingle with his precum, your folds and his balls grow damp with glistening fluids as you enjoy the moans he makes as you do this. Moving back again, you place a hand on his head and have him look at your hot cunn[yfn].";
 		say "     '[if cunts of player > 1]Don't they[else]Doesn't it[end if] look good?  Warm and wet with our juices. Delicious, even,' you whisper suggestively in his ear. Your hand gently but firmly guides his head lower until your [if cunts of player > 1]pussies are[else]pussy is[end if] before his muzzle. Very aroused at this point, his tongue slips out willingly and laps across [if cunts of player > 1]them[else]it[end if]. His tongue plays across your folds and clit[sfn] while you caress his mane and ears, telling him what a good stallion he is while grinding against his equine muzzle. Your words of praise are firm and commanding, instructing him how to best please you until you eventually cum with a satisfied groan. You tell him to lick it all up, which he does happily and hungrily, his broad tongue slathering across and into your quivering puss[yfn]. After he's licked the trails of juices that have run down your legs, you reward the obedient stallion by jacking him off to orgasm.";
-	now xp of Onyx is 20;
+	now XP of Onyx is 20;
 	now onyxhappytalk is false;
 	now the vmusings of Onyx is "";
 
@@ -711,7 +711,7 @@ to say onyxbsubanal0:
 	attempttowait;
 	say "     'Yes, I want your cock in me. I need it so bad. Come on!  Do me!  I'll be your cock-hungry slut if you'll stop teasing me and just pound me hard!'  His admission, once started reluctantly, quickly becomes quite emphatic. You drive your meat into him, turning the last of it into an elongated moan. You fuck the subby equine with confidence, your need for dominance satisfied with Onyx's conversion into your submissive lover.";
 	say "     With him having given in, you reinforce this good behaviour by providing the hard dicking he desires while stroking his stallionhood. You make sure to please your friend even as you lay claim to his ass. You playfully call him a slutty bottom, a cock-hungry stallion, a cum-thirsty horse and so on, enjoying how he squirms in shameful delight and pushes back all the harder at being called such things. Turned on by the whole process, you vigorously pound your increasingly submissive friend's toned ass, reaching your climax in short order after the foreplay and dominance play. You paint the black horse's insides white with your semen all while pumping blast after blast of his own seed from his horsecock. Once you're done and he's left [if cock width of player >= 30]bloated with your mighty output[else if cock width of player >= 20]stuffed and leaking from your impressive output[else]sticky and dribbling your cum[end if], you give that ass of his a firm squeeze as a final reminder that you'll be back for more fun with the obedient equine later.";
-	now xp of Onyx is 21;
+	now XP of Onyx is 21;
 	now onyxhappytalk is false;
 
 to say onyxbsubvag0:
@@ -720,7 +720,7 @@ to say onyxbsubvag0:
 	attempttowait;
 	say "     'Yes, I want to stuff your cunt. I need it so bad. Come on!  Take me!  I'll be your slutty stallion if you'll stop teasing me and take my cock in you!'  His admission, once started reluctantly, quickly becomes quite emphatic. You slam down onto his meat, turning the last of it into an elongated moan. You ride the subby equine with confidence, your need for dominance satisfied with Onyx's conversion into your submissive lover.";
 	say "     With him having given in, you reinforce this good behaviour by providing the hard ride he desires while fondling his plump balls with one hand and petting his chest with the other. You make sure to please your friend even as you lay claim to his cock and balls. You playfully call him a slutty bottom, a pussy-whipped stallion, your pony plaything and so on, enjoying how he squirms in shameful delight and throbs all the harder inside you at being called such things. Turned on by the whole process, you vigorously pound up and down on your increasingly submissive friend's crotch, reaching your climax in short order after the foreplay and dominance play. Telling him that he can now cum, you cry out in ecstasy as you feel the hot rush of his horsey cum blasting into you shortly after permission is given. Once you're done and have pulled off his spent shaft, you move up further, burying his face between your legs and getting him to lick up the excess spooge leaking out. That done, you give his balls a meaningful rub as a final reminder that you'll be back for more fun with the obedient equine later.[impregchance]";
-	now xp of Onyx is 21;
+	now XP of Onyx is 21;
 	now onyxhappytalk is false;
 
 to say onyxbsubanal1:
@@ -806,10 +806,10 @@ to femonyxsex:
 			say "(1) [link]Continue Oral[as]1[end link][line break]";
 			say "(2) [link]Fuck her[as]2[end link] [if cock length of player > 15][italic type]- Too large![roman type][end if][line break]";
 			say "(3) [link]Fuck her anally[as]3[end link][if cock length of player > 15][italic type]- Too large![roman type][end if][line break]";
-			if xp of Onyx >= 32:
+			if XP of Onyx >= 32:
 				say "(4) [link]Lap dance[as]4[end link][if cock length of player > 15][italic type]- Too large![roman type][end if][line break]";
 			while 1 is 1:
-				if xp of Onyx < 32:
+				if XP of Onyx < 32:
 					say "Choice? (1-3)>[run paragraph on]";
 					get a number;
 					if calcnumber >= 1 and calcnumber <= 3:
@@ -904,7 +904,7 @@ to femonyxsex2:
 			say "     ";
 		say "Her cunny squeezes and tugs at your manhood as you thrust it into her, her body clearly longing for a good fucking. And you're more than happy to give it to the lovely mare. Moving overtop of her, you cup one of her breasts in your hand while supporting yourself with the other arm. She gives a soft neigh as you tweak her nipple and you can feel her cunt spasm around you in delighted response.";
 		say "     As you fuck her, she moans about how you make her such a happy mare when you fuck her. 'I wouldn't even be a happy mmmm-mare if it weren't for you. I'd be some -nggg- brainless slut, getting fucked by anyone they told -ohhh yeah- told me to bang. Here I get to be banged by anyone [bold type]I[roman type] like. And I like being banged by you soooo much,' she neighs, grinding back against you harder as her vaginal walls tremble around you on the edge of orgasm. Smiling at how well things have worked out, your pace quickens and you unleash your hot [cum load size of player] load into the black beauty beneath you moments after her own climax hits. You nuzzle and nip at her neck as you send shot after shot into her[if cocks of player > 1] and across her thighs and belly[end if] until your balls are drained. You slip your softening member from her pussy and makes sure to lick it clean before letting you return to the club. She follows you out soon after, having made sure the room's ready for the next stripper girl who needs a private space.";
-	if xp of Onyx is 30, now xp of Onyx is 31;
+	if XP of Onyx is 30, now XP of Onyx is 31;
 	increase fonyxvagcount by 1;
 
 to femonyxsex3:
@@ -980,8 +980,8 @@ to femonyxsex4:
 	say "!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers";
 
 to femonyxsex5:
-	say "     After that very sexy warm-up, Onyx cuddles up close to you, running her hands over your [bodydesc of player] body. She nuzzles your ear and nibbles softly with her flat teeth. '[if xp of Onyx is 31]Here, let me show you one of the fun things I've learned from the other girls,' she whispers tantalizingly[else]And I think you were asking for another dance, weren't you, sexy?' she whispers teasingly[end if] as she gently presses you down into a seat. Sliding into your lap, she grinds her shapely buttocks down onto your manhood. You stiffen quickly as she continues to slide and grind down onto you.";
-	say "     As she gives you the lap dance, she stretches and sways her equine body in lovely ways. Sometimes she even raising up one leg in a very flexible stretch that puts her on erotic display for you. You're also treated to the tantalizingly lewd display of her shaking her breasts in front of your face[if xp of Onyx is 31]. You come to realize that her movements are partly in time to the music, making a dance out of this lap dance for her special patron. And while the timing's by no means perfect and her doesn't always match the rhythm, it is a profoundly arousing display nonetheless[else]. As before, she's doing her best to make a dance out of this lap dance for her special patron. She's gotten a little better at it as well, though this routine is still by no means completely refined[end if].";
+	say "     After that very sexy warm-up, Onyx cuddles up close to you, running her hands over your [bodydesc of player] body. She nuzzles your ear and nibbles softly with her flat teeth. '[if XP of Onyx is 31]Here, let me show you one of the fun things I've learned from the other girls,' she whispers tantalizingly[else]And I think you were asking for another dance, weren't you, sexy?' she whispers teasingly[end if] as she gently presses you down into a seat. Sliding into your lap, she grinds her shapely buttocks down onto your manhood. You stiffen quickly as she continues to slide and grind down onto you.";
+	say "     As she gives you the lap dance, she stretches and sways her equine body in lovely ways. Sometimes she even raising up one leg in a very flexible stretch that puts her on erotic display for you. You're also treated to the tantalizingly lewd display of her shaking her breasts in front of your face[if XP of Onyx is 31]. You come to realize that her movements are partly in time to the music, making a dance out of this lap dance for her special patron. And while the timing's by no means perfect and her doesn't always match the rhythm, it is a profoundly arousing display nonetheless[else]. As before, she's doing her best to make a dance out of this lap dance for her special patron. She's gotten a little better at it as well, though this routine is still by no means completely refined[end if].";
 	say "     She goes like this through a couple of songs, getting you good and rile up. And from the hot, wet juices dripping onto you, you can tell it's having a similar effect on her";
 	if onyxlapdance is even:
 		say ". And when she can't take any more, she drops to her knees between your legs just as the bass drops on the techno tune being played and plunges your [cock of player] meat into her equine muzzle. She sucks you to a moaning climax that blasts shot after shot down her throat while she fingers herself to orgasm. She makes sure to suck all your seed down and lick you clean before getting up and giving you a tongue-filled kiss.";
@@ -1001,7 +1001,7 @@ when play ends:
 
 
 [
-[ xp of Onyx = consolidated quest content ]
+[ XP of Onyx = consolidated quest content ]
 [ 0 = not met ]
 [ 1 = talked (keys available) ]
 [ 2 = got keys ]
@@ -1036,79 +1036,79 @@ when play ends:
 
 ***Previous variable system expanded out - for revision/testing - to be removed when proven functional***
 
-	xp of onyx is 0
+	XP of onyx is 0
 All 0's - not met
 
-	xp of onyx is 1
+	XP of onyx is 1
 met, keys unlocked
 onyxtalk = 1
 onyxkeys = 1
 equineguardpost unresolved
 
-	xp of onyx is 2
+	XP of onyx is 2
 got keys
 onyxkeys = 2
 equineguardpost resolved
 
-	xp of onyx is 3
+	XP of onyx is 3
 just freed
 onyxtalk = 2
 onyxquest = 1
 
 
 	Path B - opt to make him leave
-	xp of onyx is 4
+	XP of onyx is 4
 talked to Daisy - opt to make him leave
 onyxkeys = 3
 Stablestoreroom is unresolved
 
-	xp of onyx is 5
+	XP of onyx is 5
 got locket
 onyxkeys = 4
 Stablestoreroom is resolved
 
-	xp of onyx is 6
+	XP of onyx is 6
 show locket (move to Library)
 onyxquest = 2
 move Onyx to Grey Abbey Library
 now the vmusings of Onyx is "[onyxmusing]";
-(hp of Onyx is 0)
+(HP of Onyx is 0)
 
-	xp of onyx is 7
+	XP of onyx is 7
 talked at library
-hp of Onyx = 1
+HP of Onyx = 1
 
-	xp of onyx is 8
+	XP of onyx is 8
 gave oral sex (not Stallion locked)
-hp of Onyx = 2
+HP of Onyx = 2
 
 		Path B1 - Onyx stallion (free)
-	xp of onyx is 10 (10 - 29)
+	XP of onyx is 10 (10 - 29)
 gave oral again (may prompt this transition)
-hp of Onyx = 3
+HP of Onyx = 3
 onyxquest = 4 (stallion-locked)
 		END PATH B1
 
 
 		Path B2 - Onyx mare (free)
-	xp of onyx is 30 (30 - 49)
+	XP of onyx is 30 (30 - 49)
 Path does not exist yet, but slot should be prepared
 
 
 
 	Path A - opt to make him stay
 
-	xp of onyx is 50:
+	XP of onyx is 50:
 talked to Daisy - opt to make him stay
 onyxkeys = 5
 
-	xp of onyx is 51
+	XP of onyx is 51
 convince to stay (not yet sexed)
 onyxtalk = 4
 
 		Path A1 - Onyx stallion (Stables)
 
-	xp of onyx is 60 (60 - 79)
+	XP of onyx is 60 (60 - 79)
 sex w/Onyx (stallion)
 onyxquest = 6
 { Onyxmareslut or Onyxboislut = 1+ )
@@ -1116,7 +1116,7 @@ onyxquest = 6
 
 		Path A2 - Onyx mare (Stables)
 
-	xp of onyx is 80 (80 - 99)
+	XP of onyx is 80 (80 - 99)
 sex w/Onyx (mare)
 onyxquest = 5
 		END PATH A2
@@ -1127,7 +1127,7 @@ onyxquest = 5
 
 
 
-	xp of onyx is 100
+	XP of onyx is 100
 Ban locked - cleared and reset upon reloading (for fresh reminder)
 
 [ Onyxtalk ]
@@ -1147,7 +1147,7 @@ Ban locked - cleared and reset upon reloading (for fresh reminder)
 [ 5 = F at Stables ]
 [ 6 = M at Stables ]
 
-[ hp of Onyx ]
+[ HP of Onyx ]
 
 [ Onyxkeys ]
 [ 0 = not talked ]

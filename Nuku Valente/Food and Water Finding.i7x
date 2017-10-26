@@ -52,13 +52,13 @@ Instead of resolving a potential resources:
 		add y to the invent of the player;
 	else if x is 2:
 		say "It is up high, forcing you to climb up after it. It looks ";
-		if difficulty is less than 8:
+		if difficulty < 8:
 			say "easy";
-		else if difficulty is less than 10:
+		else if difficulty < 10:
 			say "not too bad";
-		else if difficulty is less than 12:
+		else if difficulty < 12:
 			say "hard";
-		else if difficulty is less than 14:
+		else if difficulty < 14:
 			say "very difficult";
 		else:
 			say "extremely difficult";
@@ -82,21 +82,21 @@ Instead of resolving a potential resources:
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
-			if difficulty is greater than dice:
+			if difficulty > dice:
 				say "You try your best to scale up, but only end up hurting yourself in the process.";
-				decrease hp of player by 10;
+				decrease HP of player by 10;
 			else:
 				say "Successfully shimmying up, you snag the [y] triumphantly and stuff it into your backpack.";
 				add y to the invent of the player;
 	else if x is 3:
 		say "It is up stuck under something heavy. It looks ";
-		if difficulty is less than 8:
+		if difficulty < 8:
 			say "easy";
-		else if difficulty is less than 10:
+		else if difficulty < 10:
 			say "not too bad";
-		else if difficulty is less than 12:
+		else if difficulty < 12:
 			say "hard";
-		else if difficulty is less than 14:
+		else if difficulty < 14:
 			say "very difficult";
 		else:
 			say "extremely difficult";
@@ -107,20 +107,20 @@ Instead of resolving a potential resources:
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
-		if difficulty is greater than dice:
+		if difficulty > dice:
 			say "You try your best to lift up the barrier, but to no avail, denying you the [y].";
 		else:
 			say "Successfully hoisting the obstacle up, you snag the [y] triumphantly and stuff it into your backpack.";
 			add y to invent of the player;
 	else if x is 4:
 		say "It is in the hands of a sentient!  Though mutant, perhaps you could convince them to give it up.  It looks like they have enough for themselves. They appear ";
-		if difficulty is less than 8:
+		if difficulty < 8:
 			say "easy";
-		else if difficulty is less than 10:
+		else if difficulty < 10:
 			say "not too bad";
-		else if difficulty is less than 12:
+		else if difficulty < 12:
 			say "hard";
-		else if difficulty is less than 14:
+		else if difficulty < 14:
 			say "very difficult";
 		else:
 			say "extremely difficult";
@@ -135,7 +135,7 @@ Instead of resolving a potential resources:
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
-		if difficulty is greater than dice:
+		if difficulty > dice:
 			say "Your arguments fall on deaf ears. Wait, does this guy even have ears?";
 		else:
 			say "After working out the specifics, you are handed the [y] and stuff it into your backpack";

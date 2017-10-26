@@ -184,8 +184,8 @@ To say Steven flattery:
 	if the player is bodily human:
 		if the player is skintone human:
 			if tailname is not "human":
-				if the breast size of player is less than 4:
-					if the Cock Length of player is less than 12 or the cock width of player is less than 12:
+				if the breast size of player < 4:
+					if the Cock Length of player < 12 or the cock width of player < 12:
 						say "You seem pretty reasonably human. Glad the disaster didn't take a hit out of you, eh?";
 					else:
 						say "Congratulations on that, um... package of yours.";
@@ -247,7 +247,7 @@ Check foodrequest:
 		say "He shakes his head. 'No, it's too late for that.'" instead;
 	if Stevenwater is 5:
 		say "He shakes his head. 'I can't. Our supplies are too low. Any more will definitely be noticed.'";
-	if lastfoodrun - turns is less than 4:
+	if lastfoodrun - turns < 4:
 		say "'Not all at once,' he whispers. 'The longest the guards will tolerate a missing food ration is 12 hours. Ask me then.'" instead;
 
 Carry out foodrequest:
@@ -269,7 +269,7 @@ Check waterrequest:
 		say "He shakes his head. 'No, it's too late for that.'" instead;
 	if Stevenwater is 5:
 		say "He shakes his head. 'I can't. Our supplies are too low. Any more will definitely be noticed.'";
-	if lastwaterrun - turns is less than 8:
+	if lastwaterrun - turns < 8:
 		say "'Sorry,' he hushes you, 'but water is even stricter than food here. I can sneak you some water once every 24 hours, but any more than that, and the boss'll chew everyone's head off for stealing water.'" instead;
 
 Carry out waterrequest:
@@ -312,7 +312,7 @@ to say sexwithSteven:
 			if Steventrust is 0:
 				say "You approach Steven, and give him a long, tender kiss. He seems astonished and tries to back away, but as you keep on kissing him, he slowly starts to let loose. Just as you get into it, and start tugging his shirt, he pulls away. 'I'm sorry, I can't,' he stands in the corner, looking at his bookshelf. 'I have a responsibility now. I can't give up on it. Not yet. Not now.'";
 				say "You hug him from behind and take off his trousers, exposing his cock. His black, 7-inch horse cock.";
-				say "'I was working at the station when I heard the sirens,' he says. 'I ran straight to my apartment, and everything was on fire. I tried to find Danny. All I found was my Father's Day gift, there on the bookshelf. As I was running back, I ran into this horse thing. It must've squirted me, or something, because after I arrived here, my dick looked like this. Every day, I feel like this thing is trying to control me. But I have to suppress everything. If I go the slightest thing loose, I'll lose everything. The job I have here, the ... friends I've made, my people...'";
+				say "'I was working at the station when I heard the sirens,' he says. 'I ran straight to my apartment, and everything was on fire. I tried to find Danny. All I found was my Father's Day gift, there on the bookshelf. As I was running back, I ran into this horse thing. It must've squirted me, or something, because after I arrived here, my dick looked like this. Every day, I feel like this thing is trying to control me. But I have to suppress everything. If I go the slightest thing loose, I'll lose everything. The job I have here, the... friends I've made, my people...'";
 				say "Do you want to continue fucking him?";
 				if the player consents:
 					say "'You've had some painful memories,' you say, as you walk over to him, and lean over to whisper in his ear. 'But I can help you forget.'";
@@ -391,7 +391,7 @@ To Stevenjunkfuck:
 		if name entry is "Red Horse":
 			now monster is y;
 			break;
-	if lastfuck of Steven - turns is less than 6:
+	if lastfuck of Steven - turns < 6:
 		say "You start to cuddle up against him, but the flame just isn't lighting for him. Perhaps you should try again later.";
 	else:
 		say "     You slide over and cuddle up against Steven, pulling you both down to the ground. You nuzzling at his chest as you slide your hand down to his crotch, taking hold of his flaccid equine shaft. He groans and shivers a little as you begin to gently stroking it";
@@ -483,7 +483,7 @@ to say Stevenonbottom:
 		increase bonus by Stevenmm;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus]: [dice + bonus] vs 15:[line break]";
-	if bonus + dice is greater than 14:
+	if bonus + dice > 14:
 		say "     You continue to tantalize him, not pressing the matter too fast. You tell him how sexy he is and how hard just looking at him makes you. As you move to get him to lay back, you silence a half-formed protest with a kiss and remind him that [if Stevenmm is 2]you've let him fuck you a few times, so it'd only be fair to let you have a turn[else]he seemed to enjoy it last time and that you just want to make him feel that good again[end if].";
 		say "     Your stiff, dribbling rod finds its place under his balls and against his dark red asshole. That horse pucker spreads open for you [if cock length of player < 20]readily, having little difficulty accommodating your [cock size desc of player] manhood[else]slowly, having a little trouble with your [cock size desc of player] manhood[end if]. His ass is hot and grips so nicely around your pulsing shaft that you have to hold yourself back from pounding him right away. He releases a nickering moan and blushes all the redder upon your next thrust. While it's a little tempting to tease him, you instead resume stroking his cock, further keeping the strong horse happy as you fuck him.";
 		attempttowait;
@@ -495,7 +495,7 @@ to say Stevenonbottom:
 
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When play begins:
@@ -508,7 +508,7 @@ When play begins:
 	now face entry is "flat-toothed, prehensile-lipped equine";
 	now body entry is "well-muscled";
 	now skin entry is "long red hairs up and down your";
-	now tail entry is "You have a long stringy tail that you can whisk as you please.";
+	now tail entry is "You have a long, stringy tail that you can whisk as you please.";
 	now cock entry is "horse";
 	now face change entry is "the bones in your face mold like putty into a long, equine snout. Your ears scurry to the top of your head as your hair flows down into a mane.";
 	now body change entry is "your body stretches and bends in places you didn't know existed. Muscles grow on your body, and your fingers thicken and blacken, but thankfully don't disappear. Your feet lengthen and both of your legs toughen up to support your sizable bulk.";
@@ -522,7 +522,7 @@ When play begins:
 	now int entry is 12;
 	now cha entry is 10;
 	now sex entry is "Both";
-	now hp entry is 45;
+	now HP entry is 45;
 	now lev entry is 5;
 	now wdam entry is 7;
 	now area entry is "nowhere";

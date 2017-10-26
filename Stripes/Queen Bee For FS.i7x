@@ -39,7 +39,7 @@ to say queenbeedesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -66,7 +66,7 @@ When Play begins:
 	now int entry is 15;
 	now cha entry is 20;
 	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 40; [ The monster's starting hit points. ]
+	now HP entry is 40; [ The monster's starting HP. ]
 	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6; [ Monster's average damage when attacking. ]
 	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -105,8 +105,8 @@ when play ends:
 	if bodyname of player is "Queen Bee":
 		if player is pure:
 			project the figure of QueenBee_icon;
-		if humanity of player is less than 10:
-			say "     With your mind losing itself to the buzz of the nanites in your mind, you slip further and further into your role as the queen bee. Together you and Honey set up a new hive together[if hp of Joanna > 0 and hp of Joanna < 90] in one of the buildings beside Joanna's flower garden[else]in an abandoned building at the edge of the park[end if], filling it with a honeycombed hive full of cute and hardworking bee girl drones and boytoy warriors to serve you. Honey becomes a second queen for the hive by consuming the remaining royal jelly, sharing in the royal duties and the breeding required to fill the new hive.";
+		if humanity of player < 10:
+			say "     With your mind losing itself to the buzz of the nanites in your mind, you slip further and further into your role as the queen bee. Together you and Honey set up a new hive together[if HP of Joanna > 0 and HP of Joanna < 90] in one of the buildings beside Joanna's flower garden[else]in an abandoned building at the edge of the park[end if], filling it with a honeycombed hive full of cute and hardworking bee girl drones and boytoy warriors to serve you. Honey becomes a second queen for the hive by consuming the remaining royal jelly, sharing in the royal duties and the breeding required to fill the new hive.";
 		else:
 			say "     When the military comes to rescue you and the other survivors they can find, your sexy body helps to charm the soldiers into letting Honey come along. Her small, girlish looks and her cute offer of honey from her precious bag further help to win over the gruff soldiers. As you're heading off, she grins and winks playfully to you, acting like an innocent little girl in front of the soldiers while you keep them distracted with your regal form. A sample of the honey is tested just to be safe, but it is clean and non-infectious, as you already know. Honey keeps up her little girl act, claiming to be orphaned and that you'd become infected while rescuing her (which is true enough), and is released into your custody.";
 			say "     Together, you and Honey look for the perfect place to set up your new hive. Eventually you find it in the form of a large factory next to a field of flowers. The flowers, enlarged and sexualized by the nanites, bloom all year round and are a delicious and fun source of pollen for the growing hive. Most of the factory is converted into the honeycomb hive, but the bottling section is left intact. When you start adding more and more drones (through breeding and the occasional [']volunteer[']), there is no shortage of hard work to get it up and running again so you can start bottling the hive's honey for sale. While not infectious, it is a mild aphrodisiac and tempts the occasional visitor to the factory hive to become another hardworking bee girl drone or boytoy warrior. For her loyalty and devotion, you have Honey eat the remaining royal jelly, becoming a sexy female queen to rule by your side and help with breeding workers.";

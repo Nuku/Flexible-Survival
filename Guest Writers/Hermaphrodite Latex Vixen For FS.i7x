@@ -126,7 +126,7 @@ hermlvconsent is a number that varies.
 
 to say hermaphrodite latex vixen victory:
 	if cocks of player > 0: [she prefers to get fucked as she likes to make more latex foxes]
-		say "     [if hp of player > 0]'So he wants to play with Mama? Good boy...' the red vixen purrs[else]You slump to the ground, too tired and sore to keep fighting. The fox bends over bringing her mouth right up to your ear and whispers 'Perhaps next time we can do this without all that unnecessary violence'[end if].[line break]'Now' she says, slowly removing your clothes 'let's see what we have to play with today.' Pulling your pants off reveals your [if cocks of player > 1]multiple [cock size desc of player] [cock of player] cocks[else][cock size desc of player] [cock of player] cock[end if].";
+		say "     [if HP of player > 0]'So he wants to play with Mama? Good boy...' the red vixen purrs[else]You slump to the ground, too tired and sore to keep fighting. The fox bends over bringing her mouth right up to your ear and whispers 'Perhaps next time we can do this without all that unnecessary violence'[end if].[line break]'Now' she says, slowly removing your clothes 'let's see what we have to play with today.' Pulling your pants off reveals your [if cocks of player > 1]multiple [cock size desc of player] [cock of player] cocks[else][cock size desc of player] [cock of player] cock[end if].";
 		if cocks of player > 2:
 			say "     'Ohh those look tasty!' she says while slowly licking her lips. She lowers her face to the first of your [cock of player] shafts and her tongue dances around the tip. 'Oooooh' she moans 'that's nice, but Mama wants more.' She gently lays you on your back, your throbbing cocks sticking straight up. Standing proud, the six foot Vixen lifts one digitigrade leg and steps over you, straddling your waist. She leans over, the lower pair of her massive jiggling tits pressing against your [breast size desc of player] chest and with both jet black hands she grabs all but one of your cocks and roughly shoves them up her warm squeaky pussy. 'Oh God that feels good' she squeals as her latex skin easily stretches to accommodate you multiple manhoods. She reaches back and grabs your remaining [cock size desc of player] rod and slowly starts to feed it into her puckered ass. 'Mmpf, can't let a good hole go to waste now can we?' she grunts as your remaining cock slowly works its way up her tight butthole. With you fully inside her, your latex lover starts to pump up and down on your shafts. Her pitch black balls slap against your stomach with every thrust, the apple sized orbs shuddering on impact.";
 			say "     She leans in pressing one of her dripping pink nipples into your mouth. 'Have some of Big Mama's milk, I know you'll love it,' she says seductively. The first drop touches your tongue and your mouth is immediately filled with a sensational warmth and a sweet cinnamon flavor. You suck greedily at her teat, wanting more of the candy like elixir. As you suck she quickens her pace, bringing you close to the edge. Sensing you're close she reaches back, and being careful not to scratch you with her needle like claws, starts to squeeze your balls. Your mouth drops open and you let out a huge moan as all [cocks of player] of your [cock of player] shafts start pumping the Latex Vixen full of your [bodyname of player] seed.";
@@ -140,7 +140,7 @@ to say hermaphrodite latex vixen victory:
 			say "     She leans in pressing one of her dripping pink nipples into your mouth. 'Have some of Big Mama's milk, I know you'll love it,' she says seductively. The first drop touches your tongue and your mouth is immediately filled with a sensational warmth and a sweet cinnamon flavor. You suck greedily at her teat, wanting more of the candy like elixir. As you suck she quickens her pace, bringing you close to the edge. Sensing you're close she reaches back, and being careful not to scratch you with her needle like claws, starts to squeeze your balls. Your mouth drops open and you let out a huge moan as your [cock of player] shaft starts pumping the Latex Vixen full of your [bodyname of player] seed.";
 			say "     She stands up, your [cock of player] cock dropping out of her. You are surprised that none of your cum seems to drip out. 'See you again soon honey' she says with a wink, and then blows you a kiss and walks away.";
 	else:
-		say "     [if hp of player > 0]'So she wants to play with Mama? Good girl...' the red vixen purrs[else]You slump to the ground, too tired and sore to keep fighting. The fox bends over bringing her mouth right up to your ear and whispers 'Perhaps next time we can do this without all that unnecessary violence'[end if].";
+		say "     [if HP of player > 0]'So she wants to play with Mama? Good girl...' the red vixen purrs[else]You slump to the ground, too tired and sore to keep fighting. The fox bends over bringing her mouth right up to your ear and whispers 'Perhaps next time we can do this without all that unnecessary violence'[end if].";
 		say "     'Now' she says, softly rolling you on to your stomach 'as I am not a sore winner I will give you a choice.' She hefts one of her apple-sized balls and squeezes it slightly. 'These boys are damn good at making babies, so if you don't want to get knocked up say so now.'";
 		say "     Her eyes seem to stare into your soul, a pleasant cinnamon odour hits your nostrils as she gets closer. 'Willing to take the risk?";
 		if the player consents:
@@ -164,7 +164,7 @@ to say hermaphrodite latex vixen victory:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -179,7 +179,7 @@ When Play begins:
 	now face entry is "short muzzle filled with very sharp carnivorous teeth set below deep brilliant green eyes and pointed fox-like ears, all giving you a slightly intimidating yet very alluring";
 	now body entry is "tall and nimble, with ample curves. You have fox-like digitigrade legs that end in sharp claws";
 	now skin entry is "shiny white rubber latex skin running from just above your nose all the way down your inner thighs, just covering your stomach. Glistening black latex covers your hands up to your elbows, and your feet up to your knees, giving you the appearance of long black gloves and boots. The rest of your body is covered in a bright rubbery red";
-	now tail entry is "You have a long red bushy fox tail. The most remarkable thing about the tail is the fur that covers it, instead of being fine strands of fur it is actually fine strands of rubber. Even though it must weigh over 20 pounds you find it doesn't affect your balance, in fact, it seems to help.";
+	now tail entry is "You have a long, red, bushy fox tail. The most remarkable thing about the tail is the fur that covers it. Instead of being fine strands of fur, it is actually fine strands of rubber. Even though it must weigh over twenty pounds, you find it doesn't affect your balance; in fact, it only seems to help.";
 	now cock entry is "[one of]bright pink[or]knotted[or]black sheathed[at random]";
 	now face change entry is "it starts to contort, drawing into a short muzzle. Your ears migrate to the top of your head pointing straight up, while your eyes change to a deep green";
 	now body change entry is "you start to lose muscle definition, accentuating your curves. You feel a tingling in your legs as you hear bone cracking and reshaping leaving you with digitigrade legs ending in sharp claws";
@@ -193,7 +193,7 @@ When Play begins:
 	now int entry is 16;
 	now cha entry is 12;
 	now sex entry is "Both";
-	now hp entry is 50;
+	now HP entry is 50;
 	now lev entry is 9;
 	now wdam entry is 14;
 	now area entry is "Red";
@@ -220,10 +220,10 @@ When Play begins:
 
 when play ends:
 	if bodyname is "Hermaphrodite Latex Vixen":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "The animal lust overcomes you and you spend the rest of your days working as one of the [one of]most expensive[or]dirtiest[or]sluttiest[or]most demanded[or]nastiest[at random] whores at 'Big Mama's House of Desire' a brothel opened up by the Hermaphrodite Latex Vixen that infected you. You are quite happy spending your days with your legs spread, being a cum dump for anyone who walks into the shop, especially given that if you are still not satisfied at the end of the day, Big Mama is more than happy to finish you off.";
 		else:
-			say "Finding it difficult to satisfy your wanton lust you decide that you may as well monetize it so you start a career in the sex trade. Spending the rest of your day's getting paid to satisfy your carnal desires is all you could have ever wished for[if intelligence of player is greater than 13] but your keen intellect makes you soon realize you can have much, much more! With the millions of incredibly horny infected all over the country the prostitution laws have all been revoked, so displaying hidden business savvy you open a small brothel named 'Big Mama's House of Desire' in tribute to the Hermaphrodite Latex Vixen that started you on your path to debauchery. Your business grows rapidly, in both clientele and employees. Soon you have shops all over the country catering to both infected and non-infected customers. You eventually retire to your own island, one of the richest people in the world, with a small army of staff dedicated to satisfying your every sexual whim[else]![end if]";
+			say "Finding it difficult to satisfy your wanton lust you decide that you may as well monetize it so you start a career in the sex trade. Spending the rest of your day's getting paid to satisfy your carnal desires is all you could have ever wished for[if intelligence of player > 13] but your keen intellect makes you soon realize you can have much, much more! With the millions of incredibly horny infected all over the country the prostitution laws have all been revoked, so displaying hidden business savvy you open a small brothel named 'Big Mama's House of Desire' in tribute to the Hermaphrodite Latex Vixen that started you on your path to debauchery. Your business grows rapidly, in both clientele and employees. Soon you have shops all over the country catering to both infected and non-infected customers. You eventually retire to your own island, one of the richest people in the world, with a small army of staff dedicated to satisfying your every sexual whim[else]![end if]";
 
 
 Hermaphrodite Latex Vixen for FS ends here.

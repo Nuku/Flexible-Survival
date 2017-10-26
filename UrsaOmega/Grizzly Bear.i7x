@@ -19,7 +19,7 @@ to say losetogrizzly:
 	let bearanal be anallevel - 1;
 	if cunts of player > 0 and a random chance of 1 in 3 succeeds:
 		say "     You collapse to your knees in front of the grizzly bear, submitting to his superior strength. The grizzly bear walks behind your kneeling form, firmly pushing your face into the dirt while stroking his hardening bearcock. 'Looks like I'll have to teach ya your place, cub...' Raising your hips up with one paw while guiding his cock to your moist, [cunt size desc of player] pussy with the other. ";
-		if cunt width of player is less than 3:
+		if cunt width of player < 3:
 			say "His thick cock stretches your lips open as you struggle to accommodate his substantial man-meat. With a grunt on his part and a moan from you he bottoms out inside you, his balls resting against your rear.";
 		else:
 			say "His thick cock spears your womanly folds with ease, smoothly sliding his shaft into your cunt with an approving grunt.";
@@ -108,7 +108,7 @@ to say gbearrideanal:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -121,7 +121,7 @@ When Play begins:
 	now face entry is "now the head of a grizzly bear, with a short muzzle tipped in a large, wet, black nose and a wide head topped by two round bearish ears"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a bipedal grizzly bear, thickly proportioned and muscled, with large ursine pawlike hands ending in sharp claws";
 	now skin entry is "[one of]thick brown fur covered[or]grizzly furred[or]shaggy brown furred[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a short ursine tail that hangs over your ass."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a short, ursine tail that hangs over your ass."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "ursine";
 	now face change entry is "your head widens and your face pushes out. Your nose becomes large and wet as it migrates to the end of your new bearlike muzzle and your ears move to the top of your head, becoming rounded and ursine"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands become more paw-like";
@@ -135,7 +135,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 96;
+	now HP entry is 96;
 	now lev entry is 14; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 18; [ Monster's average damage when attacking. ]
 	now area entry is "Zoo"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -166,7 +166,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Grizzly Bear":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your bear instincts, going completely feral. When the military finds you, you're almost entirely unable to communicate with them. You manage to defeat each squad that discovers you, using your unnatural strength and stamina to take them out one by one. You enjoy leaving the last one conscious so you can fuck them into big, strong bears like yourself. Your luck finally runs out one day when searching for your next victim. You feel a pinch at your neck; swatting your paw at the sensation you notice the tranquilizer dart. Already beginning to feel the effects, you turn to see two squads of soldiers descending upon you. You fight fiercely, but a second prick signals the end of the fight as your body becomes too heavy to lift. Before you slip into unconsciousness you hear one of the soldiers mention that the dose was practically enough to down an elephant...";
 			say "     You wake up in a government holding facility, where you are poked and prodded (under heavy restraint and anesthesia) for what feels like a month. The scientists must not have been optimistic about your prospects in the post-infection world, because after another elephant dose of tranquilizer you wake up somewhere heavily wooded and remote. You find a salmon-rich stream nearby and settle into a decidedly ursine lifestyle of mostly eating and sleeping.";
 			if cunts of player > 0:

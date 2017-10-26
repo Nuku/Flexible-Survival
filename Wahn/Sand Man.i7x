@@ -119,7 +119,7 @@ to say sandmanDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -132,7 +132,7 @@ When Play begins:
 	now face entry is "smooth, with sculpted angular features. A stylish pair of sunglasses sits over your eyes and flowing locks made of fine sand behaving like it was strands of hair surround your face";
 	now body entry is "that of an idealized male, with washboard abs and muscled arms and legs";
 	now skin entry is "fine white sand, making up your body and";[ format as the text "You have (your text) skin"]
-	now tail entry is "You have a round, firm bubble butt. A tight black speedo draws other's looks to it.";[ write a whole Sentence or leave blank. ]
+	now tail entry is "You have a round, firm bubble butt. A tight black speedo draws others['] looks to it.";[ write a whole Sentence or leave blank. ]
 	now cock entry is "human";[ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a chiseled male visage. A stylish pair of sunglasses coalesces out of a swirl of dust in front of your eyes"; [ format as "Your face feels funny as (your text)" ]
 	now body change entry is "it is reshaped into a muscled male form and your chest takes an idealized shape with washboard abs"; [  format as "Your body feels funny as (your text)" ]
@@ -146,7 +146,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Male";
-	now hp entry is 60;
+	now HP entry is 60;
 	now lev entry is 8;
 	now wdam entry is 8;
 	now area entry is "Beach";          [ Case sensitive]
@@ -175,7 +175,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Sand Man":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "As you succumb to the infection, you move to the beach and spend all your time there from then on, propositioning any person creature you find - and even mostly getting what you want given your good lucks and charming single-mindedness. When the military moves in a while later, you have some intimate contacts with a female soldier scouting the beach and later two of her friends, a man and a women, whom she brings to see you. Together, they decide to smuggle you out of the city to enjoy your company once they're back at their home base. So soon, after being given a shot to make you non-infectious, you find yourself in a shipping crate on a truck.";
 			say "Thankfully, your new form doesn't really need to breathe, otherwise this would be pretty uncomfortable. After arriving at your destination, they release you on a small beach, where you spend your time getting regular visits from your soldier friends and also have fun with anyone else who comes along.";
 			stop the action;   [no other succumb endings, as the player isn't in the city anymore]

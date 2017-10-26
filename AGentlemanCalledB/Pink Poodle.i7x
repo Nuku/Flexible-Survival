@@ -38,7 +38,7 @@ to say losetoPinkPoodle:
 	if poodleapproved is 0:
 		say "     Unable to fend off the aggressive pink poodle, she knocks you to the ground roughly, giving you a disdainful scowl as she stands over your beaten form. 'Either come back as a proper [one of]pooch[or]chienne[at random], or do not come back at all,' she says in her heavy french accent, giving you one last firm kick before turning and striding away.";
 	else:
-		if hp of player > 0:
+		if HP of player > 0:
 			say "     Unable or unwilling to resist the pretty pink poodle any longer, you raise your hands and signal your submission. ";
 			say "'I knew you would come around, darling. Now let's get down to business,' she says in her refined french accent as she gently pushes you to the ground.";
 			if cocks of player > 0 and a random chance of 2 in 3 succeeds:
@@ -72,7 +72,7 @@ To say beatthePinkPoodle:
 	if nopoodlesex > 2 and ( the remainder after dividing nopoodlesex by 5 is not 0 ):
 		say "     Defeated, the [if poodleapproved is 1]alluring[else]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog, but decide to leave her be as you have with her kind in the past.";
 		increase nopoodlesex by 1;
-	else if hp of Dominick >= 60 and hp of Dominick < 100 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ) and inasituation is false:
+	else if HP of Dominick >= 60 and HP of Dominick < 100 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ) and inasituation is false:
 		say "     Defeated, the [if poodleapproved is 1]alluring[else]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog.";
 		if cocks of player > 0:
 			say "     Looking over the pink poodle, you feel an urge to [link]send her to Dominick (1)[as]1[end link] to breed, though you're also tempted to [link]fuck her (2)[as]2[end link] yourself or [link]have her suck you off (3)[as]3[end link] instead.  You could also control your urges and [link]leave her be (0)[as]0[end link]?";
@@ -146,13 +146,13 @@ to say pinkpoodle_dom:
 	say "     From that point, your words shift to focusing on Dominick as the ideal stud - handsome, virile and deliciously well-hung.  You pepper this with comments on how he'd be the perfect lover for one as beautiful and well-bred as she.  With a nibble on her fuzzy ear, you add how he'd give her perfect puppies while caressing a [if player is breederslutbodied]paw[else]hand[end if] rubs her slender waist while the other continues to fingerfuck her as she grinds her hips hard into it.  He is a top-ranked breeder, after all.";
 	say "     By this point, she's panting on the edge of a powerful release, she practically begs you to tell her where to find this perfect stud.  As you drive her to a yipping orgasm, you give her directions to Dom's kennel home and tell her to go to him.  You reiterate one last time how a beauty such as she deserves the perfect breeding stud and that Dominick is that handsome hunk for her.  By the time her extended climax has finally waned, she's lost in an afterglow daze filled with only thoughts of seeking out this ideal lover.  Releasing her, you feel quite pleased with yourself in knowing you've provided your master with another lovely breeder pet.";
 	now libido of Dominick is 3;
-	increase xp of Dominick by 1
+	increase XP of Dominick by 1
 
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -179,7 +179,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 17;
 	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 60;			[ The monster's starting hit points. ]
+	now HP entry is 60;			[ The monster's starting HP. ]
 	now lev entry is 9;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 8;			[ Monster's average damage when attacking. ]
 	now area entry is "High";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -263,7 +263,7 @@ to say pinkpoodleheat:
 	if libido of player > 99, now libido of player is 99;
 	if (libido of player > 90) and (location of player is fasttravel or there is a dangerous door in location of player) and (slutfucked > 5):
 		say "[PoodleHeatSuccumb]";
-	else if libido of player is greater than 90:
+	else if libido of player > 90:
 		increase slutfucked by 1;
 
 to say PoodleHeatSuccumb:
@@ -303,7 +303,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Pink Poodle":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As you begin to lose yourself to the pink poodle infection, you find yourself drawn back to the high rise district and all its high class stores - and denizens. Soon you are working the district's streets as another high class call girl, servicing only the highest class of creatures roaming the district.";
 		else:
 			say "     When the military arrives to start evacuating survivors from the city, you are among the first to be rescued. You are processed through the quarantine relatively quickly, alongside many of the other common domestic infections so the military forces can focus their efforts on the more dangerous creatures. Life outside the city is difficult at first, but you soon find that even the infected still want to look good, and you discover you have quite a knack for helping them with that. Soon you're operating a very successful salon just outside the city, helping those who are so inclined to look their best in exchange for the day to day supplies you need.";

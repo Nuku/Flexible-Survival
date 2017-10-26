@@ -48,13 +48,13 @@ to say abbey desc:
 	say "     [if library computer is powered]Now that the building has power, the overhead lights glow, although they sometimes flicker and dim as whatever goes on in the rest of the city right now causes fluctuations. The computer on the front desk has power as well now and might be of some use[else]A computer sits on the front desk, although without power it isn't of any help right now[end if]. You came here because you remembered there was a disused bunker in the basement. It's kept you alive, so far.";
 	if Fang is booked and Alexandra is booked:
 		say "     Fang and Alexandra are on guard here, taking shifts watching by the door";
-		if hp of Fang < 3:
+		if HP of Fang < 3:
 			say ".  The wolf tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random]";
 		else:
 			say ".  The powerful male wolf watches in stoic silence";
 		say ".  The doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 	else if Fang is booked:
-		if hp of Fang < 3:
+		if HP of Fang < 3:
 			say "     Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
 		else:
 			say "     Fang is on guard here by the door, the powerful male wolf watching in stoic silence.";

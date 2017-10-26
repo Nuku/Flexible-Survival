@@ -17,7 +17,7 @@ to say latexmistressdesc:
 
 to say losetolatexmistress:
 	if a random chance of 1 in 2 succeeds:
-		say "     Having beaten you, this latex mistress pushes you roughly to the ground and grabs your head. Pinching your ear (or the closest equivalent thereof), she forces you between her latex-clad thighs and presses your face to her crotch[if hp of player > 0]. You need no further direction, but she still twists her fingers painfully and orders you to start licking[else]. Twisting her fingers painfully, she orders you to start licking[end if]. With a close-up view, you can see the that latex kinkwear opens across her mons, but is all part of her flesh. But even her bare pussy isn't normal, having black latex folds and dripping rubbery scented juices. That scent is strangely arousing and you take a deep whiff of it.";
+		say "     Having beaten you, this latex mistress pushes you roughly to the ground and grabs your head. Pinching your ear (or the closest equivalent thereof), she forces you between her latex-clad thighs and presses your face to her crotch[if HP of player > 0]. You need no further direction, but she still twists her fingers painfully and orders you to start licking[else]. Twisting her fingers painfully, she orders you to start licking[end if]. With a close-up view, you can see the that latex kinkwear opens across her mons, but is all part of her flesh. But even her bare pussy isn't normal, having black latex folds and dripping rubbery scented juices. That scent is strangely arousing and you take a deep whiff of it.";
 		if wslevel > 1 and a random chance of ( wslevel * wslevel ) in 12 succeeds:
 			say "     Getting whipped for the delay, you groan and start lapping across her clit. You run your tongue up and down those quivering lips and delve into her dark tunnel. Deciding to punish you for your delay, she grabs the back of your head with her free hand and holds you in place as she releases her bladder. You cough and sputter as that acrid fluid soaks your face and flows into your mouth. With another blow, she orders you to drink, so you find yourself licking across her pee hole and drinking her piss. It has a strong aftertaste of latex to it that clings to your tongue.";
 			say "     When the flow stops, she orders you back to licking, which you do eagerly, if for nothing else than to try and get that taste out of your mouth... or perhaps to get more of it, part of your confused mind thinks. As you eat her out, you get struck several more times and ordered to go faster, slower or deeper, or to suck her clit, or any other thing she desires of you. And you obey, moaning softly as the pain and pleasure blur. Eventually, your obedient licking pays off, your mistress flogging you hard as she cries out in orgasmic bliss. When she pushes you away, you tumble onto the ground, too sore from the whipping to rise. She grinds her heel down onto your shoulder, calling you a good slave. Reeking of her scent, you can't help but smile before passing out, having been complimented by your dark mistress.";
@@ -30,7 +30,7 @@ to say losetolatexmistress:
 			say "     Getting whipped for the delay, you groan and start lapping across her clit. You run your tongue up and down those quivering lips and delve into her dark tunnel. As you eat her out, you get struck several more times and ordered to go faster, slower or deeper, or to suck her clit, or any other thing she desires of you. And you obey, moaning softly as the pain and pleasure blur. Eventually, your obedient licking pays off, your mistress flogging you hard as she cries out in orgasmic bliss. When she pushes you away, you tumble onto the ground, too sore from the whipping to rise. She grinds her heel down onto your shoulder, calling you a good slave. You can't help but smile before passing out, having been complimented by your dark mistress.";
 	else if "Less Anal" is listed in feats of player:
 		say "     Having beaten you, this latex mistress pushes you roughly over [one of]some rubble[or]the back of a car[or]over a fallen garbage can[or]over a nearby bench[at random] and whips you several more times. Through this, she often humps against you, grinding her latex-clad body and exposed pussy against you. Having been slapped and whipped across it repeatedly, the flow of her hot juices across your thigh is delightfully soothing. As the line between pleasure and pain begins to blur, she continues whipping you with sadistic glee. She ignores your cries and continues until you eventually pass out from the pain. When you wake up later, you feel sore all over from her harsh discipline and especially so across your back and backside.";
-		now hp of player is hp of player / 2;
+		now HP of player is HP of player / 2;
 	else:
 		say "     Having beaten you, this latex mistress pushes you roughly over [one of]some rubble[or]the back of a car[or]over a fallen garbage can[or]over a nearby bench[at random] and whips you several more times. Through this, she often humps against you, grinding her latex-clad body and exposed pussy against you. Having been slapped and whipped across it repeatedly, the flow of her hot juices across your thigh is delightfully soothing.";
 		say "     As the line between pleasure and pain begins to blur, she pauses for a moment to roughly manhandle your [if cocks of player > 0 and cunts of player > 0][cock of player] cock and dripping pussy[else if cocks of player > 0][cock of player] cock[else if cunts of player > 0]dripping pussy[else]bare crotch[end if] while plunging the handle of her whip into her pussy. She rides it for a few thrusts while moaning. Now wet with her juices, she pulls it out and instead crams the handle of that toughened latex whip into your anus, ignoring your cries. She takes you roughly with it, driving it hard and fast into you or bending it awkwardly inside you to press uncomfortably against you sensitive inner walls. There's pleasured mixed in with her painful discipline, but you do eventually pass out from the ordeal, awakening some time later more sore than you've ever been.";
@@ -79,7 +79,7 @@ to say beatthelatexmistress:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -106,7 +106,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Female";
-	now hp entry is 25;
+	now HP entry is 25;
 	now lev entry is 2;
 	now wdam entry is 5;
 	now area entry is "Red";
@@ -159,7 +159,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Latex Mistress":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";

@@ -228,7 +228,7 @@ To set a graphlink in (g - a g-window) identified as (newlinkid - some text) fro
 		now p-left entry is gleft;
 		now p-right entry is gright;
 		now replacement entry is linkaction;
-	else if the number of blank rows in the Table of Graphlink Glulx Replacement Commands is greater than 0:
+	else if the number of blank rows in the Table of Graphlink Glulx Replacement Commands > 0:
 		choose a blank row in the Table of Graphlink Glulx Replacement Commands;
 		now linkid entry is newlinkid;
 		now g-win entry is g;
@@ -247,7 +247,7 @@ To set a graphlink in (g - a g-window) identified as (newlinkid - some text) fro
 		now p-left entry is gleft;
 		now p-right entry is gright;
 		now alt entry is linkref;
-	else if the number of blank rows in the Table of Graphlink Glulx Replacement Commands is greater than 0:
+	else if the number of blank rows in the Table of Graphlink Glulx Replacement Commands > 0:
 		choose a blank row in the Table of Graphlink Glulx Replacement Commands;
 		now linkid entry is newlinkid;
 		now g-win entry is g;
@@ -266,7 +266,7 @@ To set a graphlink in (g - a g-window) identified as (newlinkid - some text) fro
 		now p-left entry is gleft;
 		now p-right entry is gright;
 		now action entry is linkref;
-	else if the number of blank rows in the Table of Graphlink Glulx Replacement Commands is greater than 0:
+	else if the number of blank rows in the Table of Graphlink Glulx Replacement Commands > 0:
 		choose a blank row in the Table of Graphlink Glulx Replacement Commands;
 		now linkid entry is newlinkid;
 		now g-win entry is g;
@@ -303,7 +303,7 @@ To set a graphlink in (g - a g-window) identified as (newlinkid - an object) fro
 		now p-left entry is gleft;
 		now p-right entry is gright;
 		now replacement entry is linkaction;
-	else if the number of blank rows in the Table of Graphlink Glulx Replacement Commands is greater than 0:
+	else if the number of blank rows in the Table of Graphlink Glulx Replacement Commands > 0:
 		choose a blank row in the Table of Graphlink Glulx Replacement Commands;
 		now linkid entry is newlinkid;
 		now g-win entry is g;
@@ -322,7 +322,7 @@ To set a graphlink in (g - a g-window) identified as (newlinkid - an object) fro
 		now p-left entry is gleft;
 		now p-right entry is gright;
 		now alt entry is linkref;
-	else if the number of blank rows in the Table of Graphlink Glulx Replacement Commands is greater than 0:
+	else if the number of blank rows in the Table of Graphlink Glulx Replacement Commands > 0:
 		choose a blank row in the Table of Graphlink Glulx Replacement Commands;
 		now linkid entry is newlinkid;
 		now g-win entry is g;
@@ -341,7 +341,7 @@ To set a graphlink in (g - a g-window) identified as (newlinkid - an object) fro
 		now p-left entry is gleft;
 		now p-right entry is gright;
 		now action entry is linkref;
-	else if the number of blank rows in the Table of Graphlink Glulx Replacement Commands is greater than 0:
+	else if the number of blank rows in the Table of Graphlink Glulx Replacement Commands > 0:
 		choose a blank row in the Table of Graphlink Glulx Replacement Commands;
 		now linkid entry is newlinkid;
 		now g-win entry is g;
@@ -371,7 +371,7 @@ Part 7a - Debugging Commands (not for release)
 
 Chapter 7.1 - Debugging Graphlinks Table
 
-Debugging graphlinks is an action out of world.	Understand "graphlinks" or "graphlinks table" as debugging graphlinks.
+Debugging graphlinks is an action out of world. Understand "graphlinks" or "graphlinks table" as debugging graphlinks.
 
 Check debugging graphlinks:
 	say "[line break][bold type]Table of Graphlink Glulx Replacement Commands[roman type] (presented in reverse order)[line break]There are [number of filled rows in the Table of Graphlink Glulx Replacement Commands] entries in the table.";
@@ -556,6 +556,6 @@ Section: Contact info
 
 If you have comments about the extension, please feel free to contact me directly at ek.temple@gmail.com.
 
-Please report bugs on the Google Code project page, at http://code.google.com/p/glimmr-i7x/issues/list.
+Please report bugs on the Google Code project page, at https://code.google.com/archive/p/glimmr-i7x/issues.
 
-For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the intfiction forum (http://www.intfiction.org/forum/). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, please contact me directly via email (ek.temple@gmail.com).
+For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the intfiction forum (https://www.intfiction.org/forum/). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, please contact me directly via email (ek.temple@gmail.com).

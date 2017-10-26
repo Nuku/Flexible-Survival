@@ -24,7 +24,7 @@ to say losetoLiquidshifter:
 		WaitLineBreak;
 		say "     Suddenly, a phallic form shoves its way forcefully into your ass, the dildo-shaped, gluey form plugging you completely, turning your face into that of complete bliss. The wide grin on the face of the draconic-looking liquidshifter in front of you, eyes watching over your squirming form - the sight of having a new submissive toy to play with getting its own member to harden in front of you - its enjoyment of the situation obvious to you, even as your eyes roll to the back of your head in extreme pleasure. And so, you lay there, in a trap of complete bliss - the stickiness of the slime that covers you keeping you in your place - unable to move an inch as the liquidshifter does as he wants to your helpless body.";
 		WaitLineBreak;
-		say "     With such an advantageous position, the towering form of the dominant, grinning liquidshifter begins to push against you, encasing you in its form - the gelatinous form seeming to mold around your body, its member moving to your mouth, completely stuffing you with that musky, hard cock. The creature's balls droop over your chin, the scent overwhelming to you, forced to enjoy the masculine musk. 'Mmm, how's that for a real man...' he mutters with a lustful smile, before pulsing both the plug in your rear, and the goo around your cock powerfully. Over time, the lustful moans that escape your lips get louder, before you violently hump into the milking stimulation of the creature's encasement, spurting your seed against the sound in your cock. 'Thaaat's a good boy... You're so delicious.'it teasingly chuckles out - the weird sensation of having your cum soaked up through the sound making you whimper in need.";
+		say "     With such an advantageous position, the towering form of the dominant, grinning liquidshifter begins to push against you, encasing you in its form - the gelatinous form seeming to mold around your body, its member moving to your mouth, completely stuffing you with that musky, hard cock. The creature's balls droop over your chin, the scent overwhelming to you, forced to enjoy the masculine musk. 'Mmm, how's that for a real man...' he mutters with a lustful smile, before pulsing both the plug in your rear, and the goo around your cock powerfully. Over time, the lustful moans that escape your lips get louder, before you violently hump into the milking stimulation of the creature's encasement, spurting your seed against the sound in your cock. 'Thaaat's a good boy... You're so delicious,' it teasingly chuckles out - the weird sensation of having your cum soaked up through the sound making you whimper in need.";
 		WaitLineBreak;
 		say "     Slowly though, the liquidshifter begins to slide off your form, the sound seeming to pop out, plug disappearing into a mass of goo before you. Before long, you find that the creature simply forms back into its original state, walking away with a large grin.";
 	else:
@@ -37,8 +37,8 @@ to say losetoLiquidshifter:
 to say beattheLiquidshifter:
 	say "     The strange goo creature lies back on the floor, basically melted - having been defeated, it looks up at you with a whimper.";
 	LineBreak;
-	say "    ([link]Y[as]y[end link]) - Fuck the slimy creature??";
-	say "    ([link]N[as]n[end link]) - Leave him?";
+	say "     ([link]Y[as]y[end link]) - Fuck the slimy creature??";
+	say "     ([link]N[as]n[end link]) - Leave him?";
 	if player consents:
 		say "     With a grin, you move forward to the liquidshifter, licking your lips as your feet stick yet again in his mass. You trip up, enjoying the feeling of its gluey-form sticking you to the floor, the adhesion forcing you to stay there, wallowing in enjoyment of the blissful creature's secretions.";
 		if cunts of player > 0:
@@ -53,7 +53,7 @@ to say Liquidshifterdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
@@ -80,7 +80,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 52;
+	now HP entry is 52;
 	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6; [ Monster's average damage when attacking. ]
 	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -110,7 +110,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Liquidshifter":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "You succumb to your liquidshifter infection, your mind having been left into a pile of goo and corruption, the feeling of letting go into absolute bliss filling you with just that - perfect bliss. Over time, the liquidshifter's grasp on the area seemed to grow, the gluey substance that was left by their stride was covering the majority of the land, minds lost to the bliss of their new form.";
 		else:
 			say "You survive, but are infected by the liquidshifter. Through the days after escaping the infection, you are found to enjoy lazing around - having found a job where a company merely farms the adhesive off your form, you are left to enjoy life.";

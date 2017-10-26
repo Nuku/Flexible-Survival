@@ -8,26 +8,26 @@ Larissa is a woman. "[larissaview]". She is in Zephyr Lobby.
 The conversation of Larissa is { "$$$$$$$$!" }.
 
 To say Larissaballs:
-	if cock width of Larissa is less than 3:
+	if cock width of Larissa < 3:
 		say "[one of]marble-sized[or]tiny[or]very small[at random]";
-	else if cock width of Larissa is less than 6:
+	else if cock width of Larissa < 6:
 		say "[one of]plum-sized[or]golf-ball-sized[or]apricot-sized[or]average[at random]";
-	else if cock width of Larissa is less than 12:
+	else if cock width of Larissa < 12:
 		say "[one of]lemon-sized[or]large[at random]";
-	else if cock width of Larissa is less than 16:
+	else if cock width of Larissa < 16:
 		say "[one of]baseball-sized[or]orange-sized[or]hand-filling[at random]";
-	else if cock width of Larissa is less than 20:
+	else if cock width of Larissa < 20:
 		say "[one of]grapefruit-sized[or]massive[at random]";
-	else if cock width of Larissa is less than 25:
+	else if cock width of Larissa < 25:
 		say "[one of]cantaloupe-sized[or]giant[or]knee-knocking[at random]";
-	else if cock width of Larissa is less than 32:
+	else if cock width of Larissa < 32:
 		say "[one of]basketball-sized[or]ginormous[or]super-inflated[or]watermelon-huge[at random]";
 	else:
 		say "[one of]floor-dragging[or]beachball-sized[or]gargantuan[or]ground-hanging[at random]";
 	say " [one of]balls[or]testicles[or]gonads[at random]";
 
 to say larissaview:
-	if hp of Larissa <= 2:
+	if HP of Larissa <= 2:
 		say "Manning the counter is a female human with no clear signs of mutation. Her name badge declares her to be 'Larissa'.";
 	else:
 		say "Manning the counter is Larissa, now a [if cocks of Larissa > 0 and cunts of Larissa > 0]herm[else if cocks of Larissa > 0]male[else if cunts of Larissa > 0]female[else]neuter[end if] [form of larissa] who seems pretty pleased with [possadj of Larissa] new look.";
@@ -38,7 +38,7 @@ The description of Larissa is "[larissadesc]".
 
 the scent of Larissa is "Larissa arches her brow as you sniff the air around her, reaching for something in a nearby drawer. You do catch a faint hint of lilacs, probably a perfume.".
 
-the linkaction of Larissa is "Possible Actions: [link]talk[as]talk Larissa[end link], [link]smell[as]smell Larissa[end link], [link]fuck[as]fuck Larissa[end link][if hp of Larissa >= 2], [link]TF[as]transform Larissa[end link][end if][line break]";
+the linkaction of Larissa is "Possible Actions: [link]talk[as]talk Larissa[end link], [link]smell[as]smell Larissa[end link], [link]fuck[as]fuck Larissa[end link][if HP of Larissa >= 2], [link]TF[as]transform Larissa[end link][end if][line break]";
 
 
 [-----------------------------------------------------------------------------------------------------]
@@ -46,9 +46,9 @@ the linkaction of Larissa is "Possible Actions: [link]talk[as]talk Larissa[end l
 Section 2 - Appearance
 
 to say larissadesc:
-	if hp of Larissa < 3:				[base description]
+	if HP of Larissa < 3:				[base description]
 		say "     She is about five and a half feet, with suntanned flesh. She seems perfectly human - an oddness in this city. Her name badge, worn on her generous chest, reads 'Larissa'. She has straight brown hair that goes down a little past her shoulders. She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences. It certainly looks cute on her though. Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
-	else if hp of Larissa is 3:
+	else if HP of Larissa is 3:
 [		say "***human form, to be revised later.";]
 		say "     She is about five and a half feet, with suntanned flesh. She seems perfectly human - an oddness in this city. Her name badge, worn on her generous chest, reads 'Larissa'. She had brown straight hair that goes down a little past her shoulders. She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences. It certainly looks cute on her though. Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
 	else:
@@ -58,8 +58,8 @@ to say larissadesc:
 			say "     Poorly obscured by [possadj of Larissa] labcoat, you can see that Larissa has a pair of [breast size desc of Larissa][if breasts of Larissa is 4] with a second smaller pair beneath those[else if breasts of Larissa > 4] with [extrabreastrows] other pairs beneath those[end if]. Also half-hidden, almost as a tantalizing offer, Larissa has [if Larissa is herm]a [cock size desc of Larissa] [cock of Larissa] shaft, a pair of [Larissaballs] and a [cunt size desc of Larissa] wet cunt between her legs[else if Larissa is male]a [cock size desc of Larissa] [cock of Larissa] shaft with a pair of [Larissaballs] between his legs[else if Larissa is female]a [cunt size desc of Larissa] wet cunt between her legs[else if Larissa is neuter]a plain and featureless groin[end if]. [subjpro_cap of Larissa] gives you a playful grin and shifts to give you a better view of [possadj of Larissa] crotch while she works.";
 		else:									[no titties :(]
 			say "     Poorly obscured by [possadj of Larissa] labcoat, you can see that Larissa has [if Larissa is herm]a [cock size desc of Larissa] [cock of Larissa] shaft, a pair of [Larissaballs] and a [cunt size desc of Larissa] wet cunt between her legs[else if Larissa is male]a [cock size desc of Larissa] [cock of Larissa] shaft with a pair of [Larissaballs] between his legs[else if Larissa is female]a [cunt size desc of Larissa] wet cunt between her legs[else if Larissa is neuter]a plain and featureless groin[end if]. [subjpro_cap of Larissa] gives you a playful grin and shifts to give you a better view of [possadj of Larissa] crotch while she works.";
-	if hp of Larissa >= 2:
-		say "     If you want to do so, you may [link]transform Larissa[end link][if hp of Larissa > 2] [one of]again[or]further[at random][end if].";
+	if HP of Larissa >= 2:
+		say "     If you want to do so, you may [link]transform Larissa[end link][if HP of Larissa > 2] [one of]again[or]further[at random][end if].";
 
 
 [-----------------------------------------------------------------------------------------------------]
@@ -74,27 +74,27 @@ zephyrpests is a number that varies.
 instead of conversing Larissa:
 	let vialsnagging be false;
 	if scenario is "Researcher" or nanitemeter > 0, let vialsnagging be true;
-	if hp of doctor matt is 16:
+	if HP of doctor matt is 16:
 		say "[zephyrmatt1]"; [start task]
-	else if hp of doctor matt is 17 and number of entries in ndmlist > 0 and a random chance of 1 in 3 succeeds:
+	else if HP of doctor matt is 17 and number of entries in ndmlist > 0 and a random chance of 1 in 3 succeeds:
 		say "[zephyrmatt2]"; [task reminder]
-	else if hp of doctor matt is 17 and number of entries in ndmlist is 0:
+	else if HP of doctor matt is 17 and number of entries in ndmlist is 0:
 		say "[zephyrmatt3]"; [task completion]
-		if hp of Larissa is 0:
+		if HP of Larissa is 0:
 			say "     'So, cute stuff,' Larissa adds, 'What're you up to later?' Cha-ching!";
-			now hp of Larissa is 1;
+			now HP of Larissa is 1;
 	else if hospquest is 16:
 		say "[zephyrmouse1]"; [start task]
 	else if hospquest is 17 and number of entries in ndmlist > 0 and a random chance of 1 in 3 succeeds:
 		say "[zephyrmouse2]"; [task reminder]
 	else if hospquest is 17 and number of entries in ndmlist is 0:
 		say "[zephyrmouse3]"; [task completion]
-		if hp of Larissa is 0:
+		if HP of Larissa is 0:
 			say "     'So, cute stuff,' Larissa adds, 'What're you up to later?' Cha-ching!";
-			now hp of Larissa is 1;
-	else if hp of Larissa is 0:
+			now HP of Larissa is 1;
+	else if HP of Larissa is 0:
 		say "     'We are looking for extracted vial samples. If you obtain some, please bring it to me to ['][bold type]vialsell <name>[roman type]['] for a credited reward.'";
-		if ( hp of doctor matt < 17 or hp of doctor matt >= 100 ) and ( hospquest < 17 ):
+		if ( HP of doctor matt < 17 or HP of doctor matt >= 100 ) and ( hospquest < 17 ):
 			if zephyrtask is 0:
 				if furry is not banned and hermaphrodite is not banned:
 					say "     She flips through a few papers on her desk, trying to find something. 'We've also been experiencing a bit of a pest problem. Some of those panther taur creatures have been harassing us.' She holds a photo of a black feline creature with a furred human upper body and a panther's body instead of legs. It's fondling its breasts and smiling lewdly at the camera. 'The guards are able drive them off easily enough, but it does upset the other customers. We're in the business of helping you, but we'll need some help to do that. If you could go beat up some of them around here, it might discourage them from coming around again. We'd appreciate your assistance and will reward you for the completion of the task.'";
@@ -111,18 +111,18 @@ instead of conversing Larissa:
 			else if ( zephyrtask is 1 or zephyrtask is 2 or zephyrtask is 3 ) and zephyrpests >= 4:
 				say "     She sets down chips she's munching on. 'Thanks for your assistance with our pest problem. Our records show that you've confronted and defeated several of them and they've stopped coming around here. For your assistance, we'll be depositing [special-style-1]100[roman type] credits into your account on top of the standard reward you've been receiving. Nice work, cute stuff. What're you doing later?' she adds with a smile and a wink. Cha-ching!";
 				now zephyrtask is 4;
-				now hp of Larissa is 1;
+				now HP of Larissa is 1;
 				increase freecred by 100;
 				increase score by 20;
 			else if a random chance of 1 in 3 succeeds and ( zephyrtask is 1 or zephyrtask is 2 or zephyrtask is 3 ):
 				say "     She taps away at her computer briefly. 'We're still having a problem with those pesky [if zephyrtask is 1]panther taurs[else if zephyrtask is 2]German Shepherds[else]city sprites[end if]. Please be on the lookout for them. They're not that tough, but it's annoying to have them keep bothering us. Beating them up a few times should make them less bold about attacking us.";
-	else if hp of Larissa is 1:
+	else if HP of Larissa is 1:
 		try Larissatfing;
-	else if hp of Larissa is 2:
+	else if HP of Larissa is 2:
 		say "     [one of]'We are still looking for extracted vial samples. If you obtain some, please bring to me to ['][bold type]vialsell <name>[roman type]['] for a credited reward.' [subjpro_cap of Larissa] then grins and leans forward. 'Or you can use it to [link]transform[as]transform Larissa[end link] me if it's on my want list.'[or]'At first, I wasn't too keen on coming here and risking getting transformed. But the more I see the sexy creatures, the more I want to give it a try.'[or]'You guys are all lucky that Zephyr's such a great company that we were able come and help out so fast. I'm a little surprised how fast we've come up with a lot of this stuff.'[or]'You should know, this nanite thing isn't just happening here. It's happening all over the country. Sometimes it's just cities, but in a few places, it's whole states.'[or][if vialsnagging is true]'Don't forget to try getting samples from creatures on my want list.'[else]'If you want to [link]transform[end link] me, you'll need to use a nanite collector from the store here. Thankfully we're selling them fairly cheap,' [subjpro of Larissa] says.[end if][or]'Next time I can take a break, we should definitely have a little fun,' [subjpro of Larissa] says with a wink.'[at random]";
-	else if hp of Larissa is 3:
+	else if HP of Larissa is 3:
 		say "     [one of]'We are still looking for extracted vial samples. If you obtain some, please bring to me to ['][bold type]vialsell <name>[roman type]['] for a credited reward.' [subjpro_cap of Larissa] then grins and leans forward. 'Or you can use it to [link]transform[as]transform Larissa[end link] me if it's on my want list.'[or]'At first, I wasn't too keen on coming here and risking getting transformed. But the more I see the sexy creatures, the more I want to give it a try.'[or]'You guys are all lucky that Zephyr's such a great company that we were able come and help out so fast. It's quite surprising how fast we've come up with a lot of this stuff.'[or]'You should know, this nanite thing isn't just happening here. It's happening all over the country. Sometimes it's just cities, but in a few places, it's whole states.'[or][if vialsnagging is true]'Don't forget to try getting samples from creatures on my want list so I can [link]transform[as]transform Larissa[end link] again.'[else]'If you want to [link]transform[end link] me, you'll need to use a nanite collector from the store here. Thankfully we're selling them fairly cheap,' [subjpro of Larissa] says.[end if][or]'Next time I can take a break, we should definitely have a little fun,' [subjpro of Larissa] says with a wink.'[or]'I thought I might be happy sticking as a human for a while longer, but I'm already looking forward to changing again.'[at random]";
-	else if hp of Larissa is 4:
+	else if HP of Larissa is 4:
 		say "     [one of]'We are still looking for extracted vial samples. If you obtain some, please bring to me to ['][bold type]vialsell <name>[roman type]['] for a credited reward.' [subjpro_cap of Larissa] then grins and leans forward. 'Or you can use it to [link]transform[as]transform Larissa[end link] me if it's on my want list.'[or]'At first, I wasn't too keen on coming here and risking getting transformed. But the more I see the sexy creatures, the more I want to give it a try.'[or]'You guys are all lucky that Zephyr's such a great company that we were able come and help out so fast. I'm a little surprised how fast we've come up with a lot of this stuff.'[or]'You should know, this nanite thing isn't just happening here. It's happening all over the country. Sometimes it's just cities, but in a few places, it's whole states.'[or][if vialsnagging is true]'Don't forget to try getting samples from creatures on my want list so I can [link]transform[as]transform Larissa[end link] again.'[else]'If you want to [link]transform[end link] me, you'll need to use a nanite collector from the store here. Thankfully we're selling them fairly cheap,' [subjpro of Larissa] says.[end if][or]'Next time I can take a break, we should definitely have a little fun,' [subjpro of Larissa] says with a wink.'[or][if lasttf of Larissa - turns < 20]'I'm liking this new look for me. Don't you think I look [generallook of larissa]?' [subjpro of Larissa] asks with a happy smile[else]'I'm getting a little bored with this new form of mine. Maybe we should consider picking a new form I can [link]transform[as]transform Larissa[end link] into,' she says.'[end if][or]'What do you think of my [generallook of Larissa] look as a [form of Larissa]?'[at random]";
 	if Outside Trevor Labs is not known:
 		say "     Larissa grabs a sticky note from her desk. 'Oh, we also have a report of some scientist still operating in the city. Just a rumour, but you might want to check it out and see if you can get some extra work there.' She gives you some general directions to get to the area. It might be worth looking into.";
@@ -144,9 +144,9 @@ to say sexwithLarissa:
 		say "     'We'll have to put that on hold, hon. I'm not due to get another break for a while yet.'";
 	else if cocks of player is 0 and cunts of player is 0:
 		say "     You're ill-equipped to consider fooling around with [objpro of Larissa] at the moment.";
-	else if hp of Larissa is 0:
+	else if HP of Larissa is 0:
 		say "     Larissa pulls a spritz bottle out of a drawer under the counter, spraying you with diluted vinegar. You are driven back. 'Is everyone a horny freak now?  Why can't they just all leave me alone so I can work in peace?' she grumbles.";
-	else if hp of Larissa is 1 or hp of Larissa is 2:	[unchanged human form]
+	else if HP of Larissa is 1 or HP of Larissa is 2:	[unchanged human form]
 		now lastfuck of Larissa is turns;
 		say "     Larissa grins at your offer to have a little fun and, after getting someone to take over at her desk for a little while, she leads you into the back. She takes you to the break room and flips a little sign on the door. The room itself is rather sparse but does have a small cot available. Pulling off her lab coat, she stretches out, showing off her lovely human form, seemingly pure and unaffected by the nanite infection all around. She toss the coat and her other clothes over one of the chairs and pulls you into her arms, kissing you firmly while your hands run over each other's bodies.";
 		if cocks of player > 0:
@@ -158,7 +158,7 @@ to say sexwithLarissa:
 		else:
 			say "     You guide the woman down onto the cot and smile down at her as she spreads her legs for you. Her skin as lovely and unblemished with a light tan colour almost all over save for that spot you're most interested in exploring. You onto the bed with her, bringing your mouth to her breasts and kissing her nipples while your hand slides between her legs to rub her pussy. It feels so good to be with a human woman after so long with only those transformed to entice your lusts. She brings one of her delicate hands to stroke your wet folds in return, slipping a few fingers exploringly into your [cunt size desc of player] [if cunts of player > 1]pussies[else]pussy[end if], pumping them into you while you tease her dampening slit.";
 			say "     You tease and tantalize one another like this for quite a while[if breast size of player > 0], shifting position to let her suckle on your nipples as well[end if]. Once you're both quite worked up, she turns around on the cot, bringing her face between your legs and offering her muff to your mouth in return. You dig in eagerly, licking and lapping at her juicy pussy while she does the same for you. You lick and finger one another until you both have a powerful series of orgasms that leave you both satisfied and sticky with juices. After cuddling together for a while, she wipes up quickly before dressing and heading back to her desk with a happy grin on her face.";
-	else if hp of Larissa is 3:					[potentially changed human form]
+	else if HP of Larissa is 3:					[potentially changed human form]
 		now lastfuck of Larissa is turns;
 		[***new version to be added later.]
 		say "     Larissa grins at your offer to have a little fun and, after getting someone to take over at her desk for a little while, she leads you into the back. She takes you to the break room and flips a little sign on the door. The room itself is rather sparse but does have a small cot available. Pulling off her lab coat, she stretches out, showing off her lovely human form, seemingly pure and unaffected by the nanite infection all around. She toss the coat and her other clothes over one of the chairs and pulls you into her arms, kissing you firmly while your hands run over each other's bodies.";
@@ -427,12 +427,12 @@ this is the larissa_tfoption rule:
 	[Adds each list only if it is permitted. Removal also required because elements will be present multiple times.]
 
 check Larissatfing:
-	if hp of Larissa is 0, say "I don't know what you're talking about." instead;
+	if HP of Larissa is 0, say "I don't know what you're talking about." instead;
 	If Larissa is not visible, say "I don't see [objpro of Larissa] around." instead;
 
 carry out Larissatfing:
 	now calcnumber is -1;
-	if hp of Larissa is 1:
+	if HP of Larissa is 1:
 		say "     'I've been noticing all the interesting new creatures and forms out there that our various agents and researchers have been documenting. It's had me wondering if I might want to try out a new look. You know, a bit of a test drive before I settle on the new me,' she says quietly. Liking where this is going, you lean in a little closer. 'While a lot of samples come through here, I can't really snag them for myself. They're all logged in the inventory. But you've proven to be quite helpful and I thought you might want help me out,' she says with a sexy smile.";
 		say "     'So to pull this off, I'd need you to snag some vial samples. ";
 		if scenario is not "Researcher" and nanitemeter is 0:
@@ -445,8 +445,8 @@ carry out Larissatfing:
 			say "?'";
 		WaitLineBreak;
 		follow the larissa_tfoption rule;
-		now hp of Larissa is 2;
-	else if hp is 2:
+		now HP of Larissa is 2;
+	else if HP is 2:
 		say "     'I'm still looking forward to changing into some sexy creatures so we can have even more fun together. I'll need a vial for the creature and [lar_tfcost] credits to cover the various expenses and to make sure someone will cover my shift while we put the new me through the paces,' she says with a wink.";
 	else:
 		say "     'I'm still interested in trying on some other forms. Be on the lookout for interesting creatures and snag a vial from them, ";
@@ -505,7 +505,7 @@ to nanitecoll_discount:
 				break;
 
 to say Larissa pre-tf:
-	say "     Larissa takes the vial and debits the required credits with an grin. [subjpro_cap of Larissa] seems quite excited at the prospect of transforming[if hp of Larissa > 2] again[end if]. After getting one of [possadj of Larissa] co-workers to cover the front desk for [objpro of Larissa], the [form of Larissa] leads you into the break room. Rather sparse, it does have a small cot available. Pulling off [possadj of Larissa] lab coat, she stretches out, showing off [possadj of Larissa] [bodytype of Larissa] to you one last time before downing the vial in one big gulp.";
+	say "     Larissa takes the vial and debits the required credits with an grin. [subjpro_cap of Larissa] seems quite excited at the prospect of transforming[if HP of Larissa > 2] again[end if]. After getting one of [possadj of Larissa] co-workers to cover the front desk for [objpro of Larissa], the [form of Larissa] leads you into the break room. Rather sparse, it does have a small cot available. Pulling off [possadj of Larissa] lab coat, she stretches out, showing off [possadj of Larissa] [bodytype of Larissa] to you one last time before downing the vial in one big gulp.";
 	if cocks of Larissa > 0 and cunts of Larissa > 0:
 		now oldgender of Larissa is 3;
 	else if cocks of Larissa > 0:
@@ -531,7 +531,7 @@ to say Larissa post-tf:
 		say "[LarissaTFsex]";
 		now lastfuck of Larissa is turns;
 	else:
-		say "     You get [objpro of Larissa] to lie back on the cot while you run your hands over [possadj of Larissa] new [form of Larissa] body. Still very aroused from her transformation, [subjpro of Larissa][']s soon moaning in pleasure as you help acquaint [objpro of Larissa] with [possadj of Larissa] body's changes[if breast size of Larissa > 0 and breasts of Larissa > 2]. You bring your lips to [possadj of Larissa] bosom and start kissing [possadj of Larissa] numerous breasts and sucking on [possadj of Larissa] nipples[else if breast size of Larissa > 0]. You bring your lips to [possadj of Larissa] bosom and start kissing [possadj of Larissa] breasts and sucking on [possadj of Larissa] nipples[else]. You bring your lips to [possadj of Larissa] [mouth of Larissa] and kiss [objpro of Larissa] , welcoming [possadj of Larissa] [form of Larissa] tongue into your mouth.";
+		say "     You get [objpro of Larissa] to lie back on the cot while you run your hands over [possadj of Larissa] new [form of Larissa] body. Still very aroused from her transformation, [subjpro of Larissa][']s soon moaning in pleasure as you help acquaint [objpro of Larissa] with [possadj of Larissa] body's changes[if breast size of Larissa > 0 and breasts of Larissa > 2]. You bring your lips to [possadj of Larissa] bosom and start kissing [possadj of Larissa] numerous breasts and sucking on [possadj of Larissa] nipples[else if breast size of Larissa > 0]. You bring your lips to [possadj of Larissa] bosom and start kissing [possadj of Larissa] breasts and sucking on [possadj of Larissa] nipples[else]. You bring your lips to [possadj of Larissa] [mouth of Larissa] and kiss [objpro of Larissa], welcoming [possadj of Larissa] [form of Larissa] tongue into your mouth.";
 		if cunts of larissa > 0 and cocks of Larissa > 0:	[herm]
 			say "     Meanwhile, your hands have made their way down to [possadj of Larissa] [cock size desc of Larissa] [cock of Larissa] cock and [cunt size desc of Larissa] pussy. You slide your fingers over them both, stroking, pumping and fingering until she cums with a loud moan of delight[if cock width of Larissa >= 40]. [possadj_cap of Larissa] excessive load makes a considerable[else if cock width of Larissa >= 20]. Her large load makes a big[else]. [possadj_cap of Larissa] spurting shaft makes a sticky[end if] mess which you both have fun cleaning up before [subjpro of Larissa] heads back out front to show off [possadj of Larissa] new body to [possadj of Larissa] coworkers before returning to [possadj of Larissa] desk.";
 		else if cunts of Larissa > 0:				[female]
@@ -542,7 +542,7 @@ to say Larissa post-tf:
 			say "***Neuter Larissa - no content.";
 
 
-[	hp of Larissa	]
+[	HP of Larissa	]
 [ 0 = something		]
 [ 1 = open for sex	]
 [ 2 = explained tf	]
@@ -652,7 +652,7 @@ to say Larissaisnow-panda:
 			now tftext of Larissa is "becomes rounder, plumping out into a round, pudgy figure";
 			now generallook of Larissa is "[one of]sexy[or]cute[at random]";
 			now bodycat of Larissa is 0;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
 			follow the Larissa cuntdesc rule;
@@ -701,7 +701,7 @@ to say Larissaisnow-alphahusky:
 			now tftext of Larissa is "becomes fit and strong with an air of confidence";
 			now generallook of Larissa is "[one of]confident[or]sexy[or]cute[at random]";
 			now bodycat of Larissa is 0;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
 			follow the Larissa cuntdesc rule;
@@ -749,7 +749,7 @@ to say Larissaisnow-GSDmale:
 			now tftext of Larissa is "becomes that of an anthropomorphic German Shepherd";
 			now generallook of Larissa is "[one of]strong[or]sexy[or]attractive[at random]";
 			now bodycat of Larissa is 0;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
 			follow the Larissa cuntdesc rule;
@@ -792,7 +792,7 @@ to say Larissaisnow-tighooker:
 			now tftext of Larissa is "becomes that of a sexy and alluring [if cunts of Larissa > 0 and cocks of Larissa > 0]tigress herm[else if cunts of Larissa > 0]tigress femme[else]tiger[end if]";
 			now generallook of Larissa is "[one of]beautiful[or]sexy[or]attractive[or]hot[or]slutty[at random]";
 			now bodycat of Larissa is 0;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
 			follow the Larissa cuntdesc rule;
@@ -835,7 +835,7 @@ to say Larissaisnow-teddybear:
 			now tftext of Larissa is "becomes plump with soft stuffing as she becomes a cute teddy bear";
 			now generallook of Larissa is "[one of]soft[or]huggable[or]cute[at random]";
 			now bodycat of Larissa is 0;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
 			follow the Larissa cuntdesc rule;
@@ -878,7 +878,7 @@ to say Larissaisnow-latexmistress:
 			now tftext of Larissa is "gets coated in a layer of black latex which forms over [possadj of Larissa] human body";
 			now generallook of Larissa is "[one of]impressive[or]sexy[or]tough[or]kinky[at random]";
 			now bodycat of Larissa is 0;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
 			follow the Larissa cuntdesc rule;
@@ -921,7 +921,7 @@ to say Larissaisnow-naga:
 			now tftext of Larissa is "gains a human upper body, but with [possadj of Larissa] lower half melded into a snake's tail";
 			now generallook of Larissa is "[one of]impressive[or]sexy[or]imposing[or]wild[at random]";
 			now bodycat of Larissa is 3;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
 			follow the Larissa cuntdesc rule;
@@ -964,7 +964,7 @@ to say Larissaisnow-mammoth:
 			now tftext of Larissa is "becomes quite large and stocky, strong enough to carry [possadj of larissa] swelling endowments";
 			now generallook of Larissa is "[one of]impressive[or]powerful[or]imposing[or]primitive[or]mighty[or]massive[at random]";
 			now bodycat of Larissa is 0;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
 			follow the Larissa cuntdesc rule;
@@ -1007,7 +1007,7 @@ to say Larissaisnow-redkangaroo:
 			now tftext of Larissa is "gains wide, muscled hips and legs along with a marsupial pouch";
 			now generallook of Larissa is "[one of]sexy[or]impressive[or]bouncy[at random]";
 			now bodycat of Larissa is 0;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			now cocks of Larissa is 0;
 			now cock length of Larissa is 0;
 			now cock width of Larissa is 0;
@@ -1053,7 +1053,7 @@ to say Larissaisnow-panthertaur:
 			now tftext of Larissa is "gains four feline paws to support [possadj of larissa] tauric body and impressive endowments";
 			now generallook of Larissa is "[one of]alluring[or]imposing[or]powerful[or]graceful[or]sexy[at random]";
 			now bodycat of Larissa is 2;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
 			follow the Larissa cuntdesc rule;
@@ -1096,7 +1096,7 @@ to say Larissaisnow-baldeagle:
 			now tftext of Larissa is "becomes partially avian with winged arms and taloned feat";
 			now generallook of Larissa is "[one of]powerful[or]impressive[or]noble[or]graceful[at random]";
 			now bodycat of Larissa is 0;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			now cunts of Larissa is 0;
 			now cunt length of Larissa is 0;
 			now cunt width of Larissa is 0;
@@ -1144,7 +1144,7 @@ to say Larissaisnow-darkelf:
 			now tftext of Larissa is "becomes human-like, but shorter, more slender and sexier";
 			now generallook of Larissa is "[one of]sexy[or]alluring[or]exotic[or]sultry[or]hot[at random]";
 			now bodycat of Larissa is 0;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
 			follow the Larissa cuntdesc rule;
@@ -1187,7 +1187,7 @@ to say Larissaisnow-succubus:
 			now tftext of Larissa is "grows a pair of bat-like wings as [subjpro of Larissa] becomes a sexier version of [possadj of Larissa] human self";
 			now generallook of Larissa is "[one of]tempting[or]sultry[or]naughty[or]sexy[at random]";
 			now bodycat of Larissa is 0;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
 			follow the Larissa cuntdesc rule;
@@ -1230,7 +1230,7 @@ to say Larissaisnow-googirl:
 			now tftext of Larissa is "loses her legs as they fuse into a shifting column of slime";
 			now generallook of Larissa is "[one of]gooey[or]cute[or]jiggly[or]pretty[or]sexy[at random]";
 			now bodycat of Larissa is 3;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
 			follow the Larissa cuntdesc rule;
@@ -1273,14 +1273,14 @@ to say Larissaisnow-centaurmare:
 			now tftext of Larissa is "has her lower body shift and stretch until she has an equine body below her waist";
 			now generallook of Larissa is "[one of]athletic[or]sexy[or]pretty[or]exotic[at random]";
 			now bodycat of Larissa is 2;
-			now hp of Larissa is 4;
+			now HP of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
 			follow the Larissa cuntdesc rule;
 			say "[Larissa post-tf]";
 
 
-[	hp of Larissa	]
+[	HP of Larissa	]
 [ 0 = something		]
 [ 1 = open for sex	]
 [ 2 = explained tf	]
@@ -1298,17 +1298,17 @@ to say Larissaisnow-centaurmare:
 Part 4 - Size Evaluations
 
 This is the Larissa breastdesc rule:
-	if breast size of Larissa is less than 1:
+	if breast size of Larissa < 1:
 		now descr is "[one of]nonexistent[or]entirely flat[or]manly[at random]";
-	else if breast size of Larissa is less than 3:
+	else if breast size of Larissa < 3:
 		now descr is "[one of]palmable[or]small[or]dainty[or]slender[or]perky[at random] [character number breast size of Larissa in cupsize] cup";
-	else if breast size of Larissa is less than 5:
+	else if breast size of Larissa < 5:
 		now descr is "[character number breast size of Larissa in cupsize] cup";
-	else if breast size of Larissa is less than 7:
+	else if breast size of Larissa < 7:
 		now descr is "[one of]large[or]jiggling[or]well-shaped[or]plump[at random] [character number breast size of Larissa in cupsize] cup";
-	else if breast size of Larissa is less than 9:
+	else if breast size of Larissa < 9:
 		now descr is "[one of]massive[or]huge[or]heavy[at random] [character number breast size of Larissa in cupsize] cup";
-	else if breast size of Larissa is less than 12:
+	else if breast size of Larissa < 12:
 		now descr is "[one of]enormous[or]giant[or]hulking[or]head sized[or]basketball sized[at random] [character number breast size of Larissa in cupsize] cup";
 	else:
 		now descr is "[one of]gargantuan[or]beachball sized[or]mountainous[or]colossal[or]gigantic[at random] [character number breast size of Larissa in cupsize] cup";
@@ -1316,19 +1316,19 @@ This is the Larissa breastdesc rule:
 	rule succeeds;
 
 This is the Larissa cockdesc rule:
-	if cock length of Larissa is less than 3:
+	if cock length of Larissa < 3:
 		now descr is "[one of]tiny[or]very small[or]puny[at random]";
-	else if cock length of Larissa is less than 6:
+	else if cock length of Larissa < 6:
 		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
-	else if cock length of Larissa is less than 8:
+	else if cock length of Larissa < 8:
 		now descr is "[one of]average in size[or]normal sized[at random]";
-	else if cock length of Larissa is less than 12:
+	else if cock length of Larissa < 12:
 		now descr is "[one of]large[or]sizable[or]well-built[or]longer than average[at random]";
 	else if cock length of Larissa is 12:
 		now descr is "foot long";
-	else if cock length of Larissa is less than 18:
+	else if cock length of Larissa < 18:
 		now descr is "[one of]huge[or]heavy[or]ponderous[or]massive[or]forearm length[at random]";
-	else if cock length of Larissa is less than 25:
+	else if cock length of Larissa < 25:
 		now descr is "[one of]giant[or]hulking[or]hypertrophied[or]elephantine[or]monstrous[at random]";
 	else:
 		now descr is "[one of]mammoth[or]gigantic[or]colossal[or]titanic[or]third leg[at random]";
@@ -1336,17 +1336,17 @@ This is the Larissa cockdesc rule:
 	rule succeeds;
 
 This is the Larissa cuntdesc rule:
-	if cunt length of Larissa is less than 3:
+	if cunt length of Larissa < 3:
 		now descr is "[one of]infantile[or]extremely small[or]puny[at random]";
-	else if cunt length of Larissa is less than 6:
+	else if cunt length of Larissa < 6:
 		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
-	else if cunt length of Larissa is less than 8:
+	else if cunt length of Larissa < 8:
 		now descr is "[one of]average[or]normal sized[at random]";
-	else if cunt length of Larissa is less than 12:
+	else if cunt length of Larissa < 12:
 		now descr is "[one of]large[or]thick lipped[or]above average[at random]";
-	else if cunt length of Larissa is less than 18:
+	else if cunt length of Larissa < 18:
 		now descr is "[one of]belly bulgingly huge[or]inhumanly deep[or]forearm length[at random]";
-	else if cunt length of Larissa is less than 25:
+	else if cunt length of Larissa < 25:
 		now descr is "[one of]titanic[or]astonishingly deep[or]elephantine[at random]";
 	else:
 		now descr is "[one of]cavernous[or]seemingly bottomless[or]canyonlike[at random]";
@@ -1375,7 +1375,7 @@ carry out Larissatesting:
 	say "Tailed?: [if tailed of Larissa is true]Yes[else]No[end if]";
 	say "Cock: [cock of Larissa]";
 	say "Cocks: [if cocks of Larissa > 0][cocks of Larissa] cocks, [cock length of Larissa] inches long ([cock size desc of larissa]) with [cock width of Larissa]-sized balls ([Larissaballs])[else]No cocks: [cock length of Larissa] x [cock width of Larissa][end if].";
-	say "Cunts: [if cunts of Larissa > 0][cunts of Larissa] cunts , [cunt length of Larissa] inches deep and [cunt width of Larissa] inches wide([cock size desc of larissa])[else]No cunts: [cunt length of Larissa] x [cunt width of Larissa][end if].";
+	say "Cunts: [if cunts of Larissa > 0][cunts of Larissa] cunts, [cunt length of Larissa] inches deep and [cunt width of Larissa] inches wide([cock size desc of larissa])[else]No cunts: [cunt length of Larissa] x [cunt width of Larissa][end if].";
 	say "Breasts: [breasts of Larissa] breasts. Size: [breast size of Larissa] ([breast size desc of Larissa]).";
 	say "Size: [scalevalue of Larissa]";
 	say "Body descriptor: [bodydesc of Larissa]";

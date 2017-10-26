@@ -17,15 +17,15 @@ to say skunk_desc:
 		setmongender 4;		[creature is female]
 		say "A very female anthropomorphic skunk with hints of animal, its curves and breasts leave you wanting, without any reservations, to fuck it senseless.";
 		now Skunk_type is 1;
-		now hp entry is 28 + ( debit * 4 );			[- How many HP has the monster got? -]
-		now monsterhp is 28 + ( debit * 4 );
+		now HP entry is 28 + ( debit * 4 );			[- How many HP has the monster got? -]
+		now monsterHP is 28 + ( debit * 4 );
 		now wdam entry is 6 + ( debit / 3 );		[-Amount of Damage monster Does when attacking.-]
 	else: [male skunk]
 		setmongender 3;		[creature is male]
 		say "This skunkbeast would easily pass for a normal animal, if it weren't for two things.  One, the creature is the size of a small horse, and two, it's sporting the biggest erection you've ever seen as it waddles around on all fours.  Which is a bit less than comforting, with the way it looks into your eyes.";
 		now Skunk_type is 2;
-		now hp entry is 64 + ( debit * 5 );			[- How many HP has the monster got? -]
-		now monsterhp is 64 + ( debit * 5 );
+		now HP entry is 64 + ( debit * 5 );			[- How many HP has the monster got? -]
+		now monsterHP is 64 + ( debit * 5 );
 		now wdam entry is 10 + ( ( 4 * debit ) / 11 );		[-Amount of Damage monster Does when attacking.-]
 	if bodyname of player is "Skunkbeast Lord":	[skunkbeast player auto-loses]
 		now wdam entry is 0;
@@ -95,7 +95,7 @@ to say skunkg defeat:
 	now skunkfight is 1;
 	if skunkbeaststatus is 1:	[skunkbeast lord]
 		say "[sblvictorysex]";
-	else if a random number from 1 to 100 is greater than 2:
+	else if a random number from 1 to 100 > 2:
 		say "     The skunk girl looks up at you, smiling even as her body seems to turn to liquid, 'I may be gone, but you can still carry His kittens...' she mutters cryptically as she collapses, dissolving completely.";
 	else:
 		say "     The skunk girl turns to run from you and you relax thinking the fight over, suddenly you realize your error as one last gob of oily musk hits you.  Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
@@ -159,7 +159,7 @@ to say sblsex4:		[cunnilingus]
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -187,8 +187,8 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 19;
 	now sex entry is "Female";       [- Defines which sex the infection will try and make you. current options are "Male" "Female" "Both"-]
-	now hp entry is 64;              [- How many HP has the monster got? -]
-	now lev entry is 5;              [- Level of the Monster, you get this much hp if you win, or this much hp halved if you loose -]
+	now HP entry is 64;              [- How many HP has the monster got? -]
+	now lev entry is 5;              [- Level of the Monster, you get this much HP if you win, or this much HP halved if you loose -]
 	now wdam entry is 10;            [-Amount of Damage monster Does when attacking.-]
 	now area entry is "Forest";      [- Current options are "Outside" and "Mall"  Case sensitive-]
 	now cocks entry is 0;            [- How many cocks will the infection try and cause if sex is "Male" or "Both"-]
@@ -246,14 +246,14 @@ to skspray:						[ignores defenses, requires no hit, hum/lib check instead to re
 			let dam be ( dam * 3 ) / 4;
 			let libdam be libdam / 2;
 		say "The skunk turns around and flashes its tail moments before releasing its spray at you.  You move away from the thick, oily musk, but end up breathing in the rich scent[if face mask is equipped].  Your mask helps block some of it, dampening the effects, though you still find[else], finding[end if] it very arousing.  You find yourself tempted by the creature's alluring body and consider just stopping fighting.  Your will to keep fighting drops ( [special-style-2][dam][roman type] ) and your lustful, instinctual urges become more powerful.";
-		decrease hp of player by dam;
+		decrease HP of player by dam;
 		increase libido of player by a random number between 3 and libdam;
 		decrease humanity of player by a random number between 2 and ( ( libdam + 1 ) / 2 );
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
 	now peppereyes is 0;										[pepperspray wears off]
-	if libido of player >= 110 or hp of player <= 0 or humanity of player < 10:
-		if hp of player <= 0, now fightoutcome is 20;
+	if libido of player >= 110 or HP of player <= 0 or humanity of player < 10:
+		if HP of player <= 0, now fightoutcome is 20;
 		if libido of player >= 110, now fightoutcome is 21;
 		if humanity of player < 10, now fightoutcome is 21;
 		lose;
@@ -291,7 +291,7 @@ to say skunk heat end:
 
 
 to say skunk in heat:
-	say "[one of]You ache constantly for a male, preferably skunk, but as you think about a large rod pushing into you, you realize that any would do.[or]You need to fuck, again and again and again and again.[or]You need to be filled by a skunk's breeding tool.[or]Thinking becomes harder as the need to mate pushes everything else from your mind.[or]You NEED to fill your cunt NOW![or]'Skunk kittens...', your mind tells you, 'Skunk kittens would be fun to have.'[at random]";
+	say "[one of]You ache constantly for a male, preferably skunk, but as you think about a large rod pushing into you, you realize that any would do.[or]You need to fuck, again and again and again and again.[or]You need to be filled by a skunk's breeding tool.[or]Thinking becomes harder as the need to mate pushes everything else from your mind.[or]You NEED to fill your cunt NOW![or]'Skunk kittens...' your mind tells you, 'Skunk kittens would be fun to have.'[at random]";
 	increase skunkready by 1;
 	increase libido of player by a random number between 5 and 10;
 

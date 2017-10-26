@@ -14,7 +14,7 @@ Section 1 - Monster Responses
 to say HHNerd wins:
 	setmonster "Horseman";
 	choose row monster from the table of random critters;
-	if hp of player > 0: [player submits]
+	if HP of player > 0: [player submits]
 		if anallevel is 0 or (cocks of player is 0): [blowjob for females, neuters and those who don't like anal]
 			say "     As you submit and fall to your knees, Clyde grins down at you and says, 'So you do know how to treat your betters after all. This is how it should be - with the smartest people at the top, not the most violent. Good that you've seen the light.' Chuckling, he grabs hold of his cock, jerking its long shaft with both hands. As it quickly gets fully hard, Clyde steps up to you and says 'Now open wide...'";
 			say "     [HHNerd Sucking]";
@@ -149,7 +149,7 @@ to say HHNerdDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -176,7 +176,7 @@ When Play begins:
 	now int entry is 24;
 	now cha entry is 12;
 	now sex entry is "Male";
-	now hp entry is 45;
+	now HP entry is 45;
 	now lev entry is 5;
 	now wdam entry is 8;
 	now area entry is "Campus";         [ Case sensitive]
