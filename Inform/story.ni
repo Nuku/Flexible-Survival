@@ -11,17 +11,17 @@ Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
-use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
-use MAX_NUM_STATIC_STRINGS of 200000. [ Code 10 ]
-use SYMBOLS_CHUNK_SIZE of 26000. [ Code 10 ]
+use MAX_SYMBOLS of 14000000. ["Compiler finished with code 10"]
+use MAX_NUM_STATIC_STRINGS of 250000. [ Code 10 ]
+use SYMBOLS_CHUNK_SIZE of 30000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
-use MAX_OBJECTS of 2000.
-use MAX_ACTIONS of 2000.
-use MAX_VERBS of 2000.
+use MAX_OBJECTS of 3000.
+use MAX_ACTIONS of 3000.
+use MAX_VERBS of 3000.
 use MAX_VERBSPACE of 50000.
 use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
-Use MAX_DICT_ENTRIES OF 2400.
+Use MAX_DICT_ENTRIES OF 3000.
 Use maximum text length of at least 2000.
 Use Scoring.
 [ End compiler settings. ]
