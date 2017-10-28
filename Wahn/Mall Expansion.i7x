@@ -10,7 +10,7 @@ lastMallInteriorScene is a number that varies. lastMallInteriorScene is usually 
 FullLitterVar is a number that varies.
 BullTerrierSiblingsVar is a number that varies.
 
-instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 4 and FullLitterVar is 0 and a random chance of 1 in 3 succeeds):
+instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 0 and FullLitterVar is 0 and a random chance of 1 in 3 succeeds):
 	move player to Mall Atrium;
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event around the mall - Misc atmosphere setting[line break]";
@@ -18,7 +18,7 @@ instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns 
 	now FullLitterVar is 1; [did the event once]
 	now lastMallInteriorScene is turns;
 
-instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 4 and gshep is companion of player and gsd_pet >= 60 and BullTerrierSiblingsVar is 0 and a random chance of 1 in 3 succeeds):
+instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 0 and gshep is companion of player and gsd_pet >= 60 and BullTerrierSiblingsVar is 0 and a random chance of 1 in 3 succeeds):
 	move player to Mall Atrium;
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event - Korvin sniffs out a fertile bull terrier - BullTerrierSiblingsVar: [BullTerrierSiblingsVar][line break]";
@@ -59,7 +59,7 @@ instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns 
 		now BullTerrierSiblingsVar is 100; [stopped things cold]
 	now lastMallInteriorScene is turns;
 
-instead of going northwest from Smith Haven Mall Lot South while (HP of Zoe is 0):
+instead of going northwest from Smith Haven Mall Lot South while (HP of Zoe is 0 and a random chance of 1 in 3 succeeds):
 	move player to Smith Haven Mall Lot West;
 	if debugactive is 1:
 		say "     DEBUG: Zoe gets caught; HP of Zoe: [HP of Zoe][line break]";
@@ -117,7 +117,7 @@ lastABEncounter is a number that varies. lastABEncounter is usually 10000.
 AmirRelationship is a number that varies.
 ByronRelationship is a number that varies.
 
-instead of going north from Smith Haven Mall Lot South while (findwires is 2 and fixedgens is 2 and AmirRelationship is 0 and (lastABEncounter - turns > 10) and a random chance of 1 in 3 succeeds):
+instead of going north from Smith Haven Mall Lot South while (lastMallInteriorScene - turns > 0 and findwires is 2 and fixedgens is 2 and AmirRelationship is 0 and (lastABEncounter - turns > 10) and a random chance of 1 in 3 succeeds):
 	move player to Mall Foodcourt;
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the food court - Amir and Byron (Bison and Mall-Rat)[line break]";

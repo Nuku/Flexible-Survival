@@ -4,24 +4,23 @@ Version 1 of Gerty by Qazarar begins here.
 [ GertyRelationship                                          ]
 [   0: Gerty unlocked                                        ]
 [ 	1: Talked with                                           ]
-[	2: Still talking with                                    ]
-[	3: Sexable                                               ]
-[	4: Sexed, secret available                               ]
-[	5: Kyle threesome available (If sexing Kyle)             ]
-[	6: did threesome                                         ]
+[	2: Still talking with                                      ]
+[	3: Sexable                                                 ]
+[	4: Sexed, secret available                                 ]
+[	5: Kyle threesome available (If sexing Kyle)               ]
+[	6: did threesome                                           ]
 
 [ hp of Gerty                                                ]
 [   0: NPC not placed                                        ]
 [   1: NPC in the mall lockerroom                            ]
 [   2: NPC in the library                                    ]
 
-
 GertyRelationship is a number that varies. GertyRelationship is usually 0.
-	
+
 Section 1 - Basic Setup
-	
+
 Gerty is a man. The hp of Gerty is usually 0.
-remove Gerty from play. [Gerty will be moved to the Tenvale College Library through Kyle content]
+[Gerty will be moved to the Tenvale College Library through Kyle content]
 The description of Gerty is "[GertyDesc]".
 The conversation of Gerty is { "<This is nothing but a placeholder!>" }.
 The scent of Gerty is "     Gerty smells like X.".
@@ -30,14 +29,14 @@ to say GertyDesc:
 	if debugactive is 1:
 		say "DEBUG -> GertyRelationship: [GertyRelationship], HP: [hp of Gerty] <- DEBUG[line break]";
 	say "     Gerty seems to essentially be an extremely large snake, when positioned upright his head being about as high up as an average person. His scales are mostly green, with a yellow pattern on the top of his head that seems to go back and down. Unlike most of the transformed you have seen, he lacks natural arms entirely on his new form. However, he has a slightly ragged looking harness about relative to his head as you would expect a torso to be, attached to some rather impressive mechanical prostheses that seem to replace them. His mechanical arms and snake-like torso give him the overall appearance of a Naga.";
-	
-Section 2 - Talk [{]
+
+Section 2 - Talk
 
 instead of conversing the Gerty:
 	say "     As you walk up to Gerty, the eccentric snakeman notices you. 'Ah, you again, I see. Don't you have somebody else to bother?' Despite his unkind commentary, there is no real heat in his voice. Having dealt with Gerty before, you know he means little by it.";
 	WaitLineBreak;
 	say "[GertyTalkMenu]";
-	
+
 to say GertyTalkMenu:
 	say "[line break]";
 	say "What do you want to talk with Gerty about?";	
@@ -59,7 +58,7 @@ to say GertyTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Ask about his interesting arms";
 	[]
-	if GertyRelationship is > 2:
+	if GertyRelationship > 2:
 		choose a blank row in the table of fucking options;
 		now title entry is "His Success";
 		now sortorder entry is 4;
@@ -92,7 +91,7 @@ to say GertyTalkMenu:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
-				say "     You step back from the Gerty, shaking your head slightly as he gives a questioning look.";
+				say "     You step back from Gerty, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
@@ -115,25 +114,25 @@ to say GertyTalk3: [talk about his arms]
 	say "     'I'd already been something of a tinker before, and had a few ideas for something like these. With my lack of appendages, I couldn't exactly put it together myself, so I grabbed a few of the mechanical engineering students. Getting those college students to properly assemble my arm was like herding cats, literally in some cases, but I kept them in line. And eventually, I had this fantastic harness created, all according to my specifications. Now I'm back to being as mobile and dextrous as I ever was, maybe more.' Gerty wiggles his robotic fingers at you. 'Impressive, isn't it?'";
 	if GertyRelationship < 3:
 		increase GertyRelationship by 1;
-		
+
 to say GertyTalk4: [talk about his success, and learn secret]
 	say "     You ask Gerty about how he was able to live so comfortably after graduation. 'Ah, so you've decided it's time to learn my deepest secret. You understand me better than most, so I'm willing to tell you. Just don't go spreading it around, or I'll have to utilize a rather large Tolstoy I've been saving for a special occasion.' Gerty looks around, and then grabs your arm in his own mechanical one, and pulling you a ways off to the side. 'Most times an artist needs to get quite a lot of skill and following in order to be anywhere near livable on that income. However, some focuses can become much more profitable much more quickly. So right out of the gate I started drawing pornographic content, which makes much more significant monetary amounts than most. Now, away with you, I have work to do.'";
 	if GertyRelationship is 4:
 		now GertyRelationship is 5;
-[}]
-Section 3 - Sex [{]
+
+Section 3 - Sex 
 
 instead of fucking the Gerty:
 	if (lastfuck of Gerty - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     'I only have so much time in my day for distractions. Bother me about it later.'";
-	else if GertyRelationship < 3): [relationship not high enough]
+	else if (GertyRelationship < 3): [relationship not high enough]
 		say "     'I like you and all, but I think we should get to know each other a bit better first.'";
 	else: [ready for sex]
 		say "     'Ah, so you want some action? I'll allow it. Just watch out for the books. There's already enough hooligans cluttering the library with their sexual acts, I don't need another.'";
 		WaitLineBreak;
 		say "[GertySexMenu]";
-		
-	to say GertySexMenu:
+
+to say GertySexMenu:
 	say "[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -149,7 +148,7 @@ instead of fucking the Gerty:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the snakeman's ophidian shaft";
 	[]
-	[if cocks of player > 0: [only males and herms can fuck him]
+	[if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the lizardman";
 		now sortorder entry is 3;
@@ -167,7 +166,7 @@ instead of fucking the Gerty:
 	say "[link]100 - Nevermind[as]100[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
-		get a number;	
+		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
@@ -196,28 +195,28 @@ instead of fucking the Gerty:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
 	
-	to say GertySex1: [Get blown]
-		say "     Gerty slides downward, no longer holding himself up on his own coils, until his face is level with your crotch. His long, ophidian tongue darts out and gives your hardening cock a quick lick. Then he leans forward, and opens his mouth, resting it around the head of your shaft. You look down at the snakeman, eagerly awaiting his performance, but he simple holds that position. Then, right as you are about to speak up, his tongue begins to move. The lengthy appendage wraps around your member, coiling and sliding along the length, bringing a strange feeling that is nonetheless immensely pleasurable. Gerty then adds a more traditional oral technique along with his tongue work, sliding his mouth up and down your shaft as his tongue continues to perform incredible serpentine motions.";
-		say "     Soon the pleasure begins to overwhelm you, and you feel yourself nearing climax. The snakeman finally brings you over the peak when his tongue extends further and begins to tease your balls, even as he works your shaft. The sensastions explode, and your dick starts pulsing, unleashing shot after shot of release. Gerty swallows it all as it unleashes, furthering the feeling of pleasure on all of your member, his eyes closed as he does so. Eventually the waves of ecstasy subside, and the snake tongue around your cock releases its grip before its owner rises up. 'An enjoyable experience, I must say. Feel free to come back if you wish to repeat the performance.' Gerty wastes no time in getting back to his duties, leaving you to collect yourself.";
-		if GertyRelationship is 3:
-			now GertyRelationship is 4;
-		
-	to say GertySex2: [Blow him]
-		say "     You waste no time in starting, quickly dropping to your knees, your eyes level with Gerty's shaft. You can see it has begun to harden in front of you. You reach forward and grasp it in a hand, beginning to stroke slightly up and down, encouraging it to full hardness. Soon the dick is fully firm, and you quickly replace your hand with your mouth, your lips reaching about halfway down the shaft in the first lunge. For a moment you simply hold your position there, feeling the warmth of his member on your tongue, enjoying the sensation. Then you truly begin, slowly moving back and forth along his cock, pressing your tongue against the bottom as you move. You can hear Gerty let out a small moan above you as you work.";
-		say "     The snakeman continues to let out quiet, breathy moans as you pleasure his shaft, and at the same time you can feel the slight throbbing of the member increasing in intensity. You can tell that he will soon release his load, and speed up your oral performance, bobbing harder along his cock. Soon you can feel tightening of the organ, and you push further forward, and hold your lips against the base of his ophidian cock, awaiting his orgasm. You aren't waiting long before he moans again, louder this time, and you start to feel spurts of cum firing down your throat. A few moments later the time has passed, and you pull back off of Gerty's dick, the taste of his seed lingering on the back of your tongue.";
-		WaitLineBreak;
-		say "     You stand up, and Gerty seems as if he is about to set back to work. However, you can see that he is moving somewhat more clumsily than before, and is slightly flustered. A group of students are looking at him, whispering to each other, and he stops to shout at them. 'What are you looking at? Don't you have studying to do?' Hearing his voice only confirms that he is not quite as composed as he would perhaps like you to believe right now. He turns to face you, and speaks again. 'Well, um, anyways. That was quite nice, thank you. Hopefully we can do something like that again sometime. Do come back when you have the time.' He then goes back to his task, still slightly out of sorts.";
-		if GertyRelationship is 3:
-			now GertyRelationship is 4;
-	
-	[to say GertySex3: [Fuck him]
-		say "     <text>";
-		if GertyRelationship is 3:
-			now GertyRelationship is 4;
-	
-	to say GertySex4: [Get fucked]
-		say "     <text>";
-		if GertyRelationship is 3:
-			now GertyRelationship is 4;]
-[}]
+to say GertySex1: [Get blown]
+	say "     Gerty slides downward, no longer holding himself up on his own coils, until his face is level with your crotch. His long, ophidian tongue darts out and gives your hardening cock a quick lick. Then he leans forward, and opens his mouth, resting it around the head of your shaft. You look down at the snakeman, eagerly awaiting his performance, but he simple holds that position. Then, right as you are about to speak up, his tongue begins to move. The lengthy appendage wraps around your member, coiling and sliding along the length, bringing a strange feeling that is nonetheless immensely pleasurable. Gerty then adds a more traditional oral technique along with his tongue work, sliding his mouth up and down your shaft as his tongue continues to perform incredible serpentine motions.";
+	say "     Soon the pleasure begins to overwhelm you, and you feel yourself nearing climax. The snakeman finally brings you over the peak when his tongue extends further and begins to tease your balls, even as he works your shaft. The sensastions explode, and your dick starts pulsing, unleashing shot after shot of release. Gerty swallows it all as it unleashes, furthering the feeling of pleasure on all of your member, his eyes closed as he does so. Eventually the waves of ecstasy subside, and the snake tongue around your cock releases its grip before its owner rises up. 'An enjoyable experience, I must say. Feel free to come back if you wish to repeat the performance.' Gerty wastes no time in getting back to his duties, leaving you to collect yourself.";
+	if GertyRelationship is 3:
+		now GertyRelationship is 4;
+
+to say GertySex2: [Blow him]
+	say "     You waste no time in starting, quickly dropping to your knees, your eyes level with Gerty's shaft. You can see it has begun to harden in front of you. You reach forward and grasp it in a hand, beginning to stroke slightly up and down, encouraging it to full hardness. Soon the dick is fully firm, and you quickly replace your hand with your mouth, your lips reaching about halfway down the shaft in the first lunge. For a moment you simply hold your position there, feeling the warmth of his member on your tongue, enjoying the sensation. Then you truly begin, slowly moving back and forth along his cock, pressing your tongue against the bottom as you move. You can hear Gerty let out a small moan above you as you work.";
+	say "     The snakeman continues to let out quiet, breathy moans as you pleasure his shaft, and at the same time you can feel the slight throbbing of the member increasing in intensity. You can tell that he will soon release his load, and speed up your oral performance, bobbing harder along his cock. Soon you can feel tightening of the organ, and you push further forward, and hold your lips against the base of his ophidian cock, awaiting his orgasm. You aren't waiting long before he moans again, louder this time, and you start to feel spurts of cum firing down your throat. A few moments later the time has passed, and you pull back off of Gerty's dick, the taste of his seed lingering on the back of your tongue.";
+	WaitLineBreak;
+	say "     You stand up, and Gerty seems as if he is about to set back to work. However, you can see that he is moving somewhat more clumsily than before, and is slightly flustered. A group of students are looking at him, whispering to each other, and he stops to shout at them. 'What are you looking at? Don't you have studying to do?' Hearing his voice only confirms that he is not quite as composed as he would perhaps like you to believe right now. He turns to face you, and speaks again. 'Well, um, anyways. That was quite nice, thank you. Hopefully we can do something like that again sometime. Do come back when you have the time.' He then goes back to his task, still slightly out of sorts.";
+	if GertyRelationship is 3:
+		now GertyRelationship is 4;
+
+to say GertySex3: [Fuck him]
+	say "     <text>";
+	if GertyRelationship is 3:
+		now GertyRelationship is 4;
+
+to say GertySex4: [Get fucked]
+	say "     <text>";
+	if GertyRelationship is 3:
+		now GertyRelationship is 4;
+
 Gerty ends here.

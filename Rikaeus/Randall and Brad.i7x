@@ -14,13 +14,23 @@ Version 1 of Randall and Brad by Rikaeus begins here.
 [   1: met in Randall's Second Event                       ]
 [   2: Has seen helping Randall seduce Brad into having sex]
 
-instead of going northeast from Athletic Street while StewartRelationship > 0 and RandallBradRelationship < 1:
+RandallBradRelationship is a number that varies.
+CocoRelationship is a number that varies.
+
+Hanging out on the Green is a situation.
+Hanging out on the Green is resolved.
+The sarea of Hanging out on the Green is "Campus".
+
+when play begins:
+	add Hanging out on the Green to badspots of guy;
+	add Hanging out on the Green to badspots of furry;
+
+instead of going to College Walkway West while (Hanging out on the Green is not resolved and LastCampusWalkin - turns > 0 and StewartRelationship > 0 and RandallBradRelationship < 1 and a random chance of 1 in 3 succeeds):
+	move player to College Walkway West;
 	FirstRandallEvent;
 
-instead of going west from College Campus Entrance while StewartRelationship > 0 and RandallBradRelationship < 1:
-	FirstRandallEvent;
-
-instead of going southeast from Lecture Street while StewartRelationship > 0 and RandallBradRelationship < 1:
+instead of resolving Hanging out on the Green:
+	move player to College Walkway West;
 	FirstRandallEvent;
 
 to FirstRandallEvent:
@@ -30,11 +40,23 @@ to FirstRandallEvent:
 	say "     'You don't mind me going after him?' Randall asks. Stewart shakes his head with a shrug of his shoulders. 'You don't throw around the word date haphazardly so I trust that you're serious about this, so, what's your plan?' He questions. The bunny boy switches to a sitting position as well before he speaks up himself. 'I was going to spy on his girlfriend to see if there's a reason she's not giving him sex.' He explains. The harpy raises a brow at his friend, prompting further explanation. 'With me being a bunny like Brad, I can tell he hasn't had sex in a long while and it's driving him crazy. We bunnies can't go that long without jumping on the nearest available and willing person, sometimes not willing though...' He trails off. Stewart sighs before nodding his head. 'Alright, I guess that's a good start.' The male says before he spots you looking at them. He quickly waves you over.";
 	say "     'Hey! Nice to see you here!' The harpy boy says with a smile. Randall looks at his friend with a curious look. 'Oh, yeah. Randall this is the person I told you I ran into a while back.' He says, gesturing to you. The bunny boy 'ahh's before standing up and holding out his hand. You promptly take it and give it a firm shake. [if cocks of player > 0 and cunts of player < 1]As this is happening he seems to give your clothed dick a lusty look before promptly focusing back on you.[end if] 'Nice to meet ya, I'm Randall.' He says shaking your hand back. You smile at him and let the guy know it's great to meet him. Stewart quickly looks towards the direction of the belltower when it begins to ring, causing him to nudge the bunny. 'Come on, we're late for class.' He says, causing the other to swear as the two run towards Lecture Street. You on the other hand get back to what you were doing.";
 	now RandallBradRelationship is 1;
+	now Hanging out on the Green is resolved;
+	now Bunny Eavesdropper is not resolved;
 
-instead of going northwest from College Walkway Northwest while RandallBradRelationship is 1:
+Bunny Eavesdropper is a situation.
+Bunny Eavesdropper is resolved.
+The sarea of Bunny Eavesdropper is "Campus".
+
+when play begins:
+	add Bunny Eavesdropper to badspots of guy;
+	add Bunny Eavesdropper to badspots of furry;
+
+instead of going to College Walkway West while (Bunny Eavesdropper is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 1 and a random chance of 1 in 3 succeeds):
+	move player to College Belltower;
 	SecondRandallEvent;
 
-instead of going down from The Clouds while RandallBradRelationship is 1:
+instead of resolving Bunny Eavesdropper:
+	move player to College Belltower;
 	SecondRandallEvent;
 
 to SecondRandallEvent:
@@ -45,8 +67,26 @@ to SecondRandallEvent:
 	say "     'So... Randall, I see you heard everything.' The girl says, crossing her arms and looking intrigued at him. This causes the bunny boy to chuckle nervously and rub the back of his head. 'Yeah... what of it Coco?' He asks sheepishly, clearly knowing the wolf. 'Oh come off it I know you're interested in Brad? Are you going to do anything about it?' She questions. The male sighs before standing up. 'I want to make him mine.' He says firmly. That appears to be what the chocolate wolf wanted as she smiles victoriously before nodding. 'Good! I have a plan then. Normally after Brad's physics class he meets up with Jen but I can distract her so you can... seduce him.' She says. Randall's shocked for a moment before he nods at the plan. However, after that they get further into planning, causing you to shrug and leave them to their plotting.";
 	now RandallBradRelationship is 2;
 	now CocoRelationship is 1;
+	now Bunny Eavesdropper is resolved;
+	now Operation Horny Bunny is not resolved;
 
-instead of going northwest from College Walkway West while RandallBradRelationship is 2:
+Operation Horny Bunny is a situation.
+Operation Horny Bunny is resolved.
+The sarea of Operation Horny Bunny is "Campus".
+
+when play begins:
+	add Operation Horny Bunny to badspots of guy;
+	add Operation Horny Bunny to badspots of furry;
+
+instead of going to Lecture Street while (Operation Horny Bunny is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 2 and a random chance of 1 in 3 succeeds):
+	move player to College Belltower;
+	ThirdRandallEvent;
+
+instead of resolving Operation Horny Bunny:
+	move player to College Belltower;
+	ThirdRandallEvent;
+
+to ThirdRandallEvent:
 	say "     On your way to the street that held all the lecture buildings you spot two familiar faces. The first is Randall who's looking rather nervous and the other is Coco who's just rolling her eyes. She sees you rather quickly, waving you over promptly. When you reach them, you ask her what's going on. 'Bunny boy here is having a nervous breakdown about today's plan. I'm surprised because he's usually a cockslut, at least that's the word on campus.' The chocolate wolf says. The lapine male groans. 'Yeah but this is a guy I actually like.' He says, but whatever the female was going to reply with was stopped when people started to file out. Soon after that she located Jennifer and walked over to distract her. Seeing the bunny boy still hesitant, you give him a shove in the direction of the lecture building. When you do this, something pops in your head.";
 	say "     [bold type]Do you want to spy on Randall and Brad?[roman type][line break]";	
 	LineBreak;
@@ -61,13 +101,31 @@ instead of going northwest from College Walkway West while RandallBradRelationsh
 	else:
 		say "     You shake your head and decide against it. You'd rather not interrupt a moment for the bunny boy himself. Instead you turn and make your way elsewhere. Perhaps you'll see them later.";
 	now RandallBradRelationship is 3;
+	now Operation Horny Bunny is resolved;
 
 instead of going northeast from College Walkway Northeast while RandallBradRelationship is 3:
 	say "     Upon entering the library you notice a familiar pair of bunnies talking next to a bookshelf. Randall appears to have a frustrated look on his face whereas Brad looks to be having an existential crisis. 'Come on Brad, you should leave her.' The bunny boy begs. The jock, who still appears to be having no clue what to do, speaks up. 'But she's my girlfriend.' He tries countering. However, your friend immediately bites back with an argument. 'Girlfriend?! The chick who's been blue-balling you and trying to manipulate you for the past two-three weeks?!' He quietly yells. That prompts a whine of protest from the bun that Randall is trying to seduce. It's very clear that he agrees with the shorter boy's statement but still appears hesitant.";
 	say "     The bunny boy then decides to make a dirty move, as you see him slip his paw into Brad's shorts, grasping a hold of his slowly hardening cock. 'Come on, just think about it. You know I'll take care of you.' He mutters, starting to plant kisses on the jock's neck. Said male lets out a groan of appreciation before his resistance finally crumbles. 'F-fine.' The basketball player says, causing Randall to cheer before giving his new boyfriend a big sloppy kiss on the lips. After that the conversation dies down to your friend telling Brad it'd be best for him to move in with the bunny boy as he does currently live with Jen. The jock sighs and nods at that, the two of them heading off to the Dorms to start moving everything.";
 	now RandallBradRelationship is 4;
+	now New Roommates is not resolved;
 
-instead of going northeast from College Walkway East while RandallBradRelationship is 4:
+New Roommates is a situation.
+New Roommates is resolved.
+The sarea of New Roommates is "Campus".
+
+when play begins:
+	add New Roommates to badspots of guy;
+	add New Roommates to badspots of furry;
+
+instead of going to Dorm Street while (New Roommates is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 4 and a random chance of 1 in 3 succeeds):
+	move player to Dorm Street;
+	FourthRandallEvent;
+
+instead of resolving New Roommates:
+	move player to Dorm Street;
+	FourthRandallEvent;
+
+to FourthRandallEvent:
 	say "     When you make your way to Dorm Street out of the corner of your eye you catch something familiar. Making your way to it, you come upon a window and through that window are two faces you've seen before, your bunny boy friend and his jock boyfriend. They're currently moving what you assume to be Brad's stuff into Randall's room. You figure it's his things as it consists of a basketball, some trophies, and a box filled with jockstraps, shorts, and wife beaters. The scene before you is rather domestic as the smaller male is happily moving aside half of his clothes in his dresser, making room for his boyfriend's stuff. They trade smiles towards each other that show you that despite the fact that the relationship was built on bunny boy seducing the jock, they do care for each other. However, you see Randall moving his hand down to Brad's crotch.";
 	say "     [bold type]Do you want to watch what's going to happen?[roman type][line break]";	
 	LineBreak;
@@ -84,5 +142,6 @@ instead of going northeast from College Walkway East while RandallBradRelationsh
 	else:
 		say "     You shake your head. You're in a public place and would rather not be spotted spying on a couple having sex. Instead you turn and head back the way you came, maybe you'll visit later.";
 	now RandallBradRelationship is 5;
+	now New Roommates is resolved;
 
 Randall and Brad ends here.

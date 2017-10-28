@@ -8,9 +8,9 @@ Version 1 of Kyle by Qazarar begins here.
 [   3: talking to                                            ]
 [   4: GertyQuest available                                  ]
 [   5: GertyQuest completed                                  ]
-[	6: Accepted date                                         ]
+[	6: Accepted date                                           ]
 [  10: dating                                                ]
-[  99: date not accpted yet                                  ] 
+[  99: date not accpted yet                                  ]
 [ 100: met, refused                                          ]
 
 [ GertyQuest                                                 ]
@@ -26,22 +26,21 @@ Version 1 of Kyle by Qazarar begins here.
 [   1: sexable                                               ]
 
 [ hp of Kyle                                                 ]
-[	0: not on date                                           ]
+[	0: not on date                                             ]
 [   1: on a date                                             ]
 
-
 [ thirst of Kyle                                             ]
-[	0: not sexed yet                                         ]
-[	1: had sex                                               ]
+[	0: not sexed yet                                           ]
+[	1: had sex                                                 ]
 
-[ hunger of Kyle                                             ]
-[	0: no threesome set                                      ]
+[ Thirst of Kyle                                             ]
+[	0: no threesome set                                        ]
 [   1: threesome set                                         ]
 
 KyleRelationship is a number that varies. KyleRelationship is usually 0.
 GertyQuest is a number that varies. GertyQuest is usually 0.
 
-Section 1 - Basic Setup [{]
+Section 1 - Basic Setup
 
 Kyle is a man. The hp of Kyle is usually 0.
 The description of Kyle is "[KyleDesc]".
@@ -54,8 +53,8 @@ to say KyleDesc:
 		say "DEBUG -> KyleRelationship: [KyleRelationship], HP: [hp of Kyle] <- DEBUG[line break]";
 	else:
 		say "     The lizardman before you is covered in small, bright green scales on all of his visible skin, which is more than a little owing to his lack of shirt. He is taller than average, making him stand out even more against the numerous mall rats inhabiting this place. The only item of clothing he is wearing on his lithe frame is a pair of cargo pants. Perched on his reptilian face are a pair of glasses, through which his eyes peer at you intently.";
-[}]
-Section 2 - Talk [{]
+
+Section 2 - Talk
 
 instead of conversing the Kyle:
 	if KyleRelationship < 1: [First time meeting Kyle]
@@ -93,11 +92,11 @@ instead of conversing the Kyle:
 		
 to say KyleIntroTalk:
 	say "     Kyle seems to perk up when you acquiesce. 'Excellent. Well, follow me, please.' The lizardman leads you past the rows bookshelves into an area further back in the store. He stops, and you notice an unremarkable door you hadn't paid any attention to before. 'Just through here. I've known the owner for a while now, and she usually lets me use the back room for any more serious efforts. Less chance of me cluttering up the aisles in here that way, I'm sure.' He smiles before opening the door, and stepping through. A moment later, you follow, into a cozy looking back room. The room is fairly small, but has smaller bookshelves lining one wall, and a table with comfortable chairs set up in the middle. Atop the table are several books stacked on top of each other, and even more scattered open alongside papers and notebooks. Looks like somebody has used the table for an intense studying session lately. 'So this is where I spend a lot of my time around here. Go on, have a seat. I don't mind.'";
-	say "     You take a seat at the table, and on the opposite side, Kyle does the same. 'Well, like I already told you, my name is Kyle. Before all of this happened,' he says, gesturing broadly outward, 'I was just living in the city, getting by with part time jobs after I graduated from Tenvale. I was an English major, if you were wondering. In my free time, I was trying to write a novel, and make a career as a writer. This whole mess shot that down somewhat, though I'm not giving up completely.' He pauses, and looks more intently at you. 'And what about you? What's your story?' You take a few moments and summarize your experience to Kyle. 'That sounds like quite the experience, friend. I'm glad you came into the store, and that we had this talk. If you ever want to talk more, just stop by, and we can come back here again.' After your conversation, both you and Kyle leave the back room, returning to the bookstore.";	
-	
+	say "     You take a seat at the table, and on the opposite side, Kyle does the same. 'Well, like I already told you, my name is Kyle. Before all of this happened,' he says, gesturing broadly outward, 'I was just living in the city, getting by with part time jobs after I graduated from Tenvale. I was an English major, if you were wondering. In my free time, I was trying to write a novel, and make a career as a writer. This whole mess shot that down somewhat, though I'm not giving up completely.' He pauses, and looks more intently at you. 'And what about you? What's your story?' You take a few moments and summarize your experience to Kyle. 'That sounds like quite the experience, friend. I'm glad you came into the store, and that we had this talk. If you ever want to talk more, just stop by, and we can come back here again.' After your conversation, both you and Kyle leave the back room, returning to the bookstore.";
+
 to say KyleTalkMenu:
 	LineBreak;
-	say "What do you want to talk with Kyle about?";	
+	say "What do you want to talk with Kyle about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -128,19 +127,19 @@ to say KyleTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Talk to him about a relationship";
 	[]
-	if KyleRelationship = 10 and libido of Kyle = 0:
+	if KyleRelationship is 10 and libido of Kyle is 0:
 		choose a blank row in the table of fucking options;
 		now title entry is "Having Sex";
 		now sortorder entry is 6;
 		now description entry is "Talk to Kyle about progressing your relationship";
 	[]
-	if KyleRelationship = 10:
+	if KyleRelationship is 10:
 		choose a blank row in the table of fucking options;
 		now title entry is "Date";
 		now sortorder entry is 7;
 		now description entry is "Ask Kyle on another date";
 	[]
-	if GertyRelationship = 6:
+	if GertyRelationship is 6:
 		choose a blank row in the table of fucking options;
 		now title entry is "Threesome";
 		now sortorder entry is 8;
@@ -183,14 +182,14 @@ to say KyleTalkMenu:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
-				say "     You step back from the Kyle, shaking your head slightly as he gives a questioning look.";
+				say "     You step back from Kyle, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say KyleTalk1: [talk about him]
 	say "     'So you want to know more about me? Well, there's only so much to say, I suppose. I studied at Tenvale for a while until I graduated as an English major. After that I spent a while working various small jobs while trying to write my novel. I was mostly just stable while doing that, at least until the world basically ended. That was definitely something.' Kyle pauses for a moment, and moves a few books around. 'I thought it was just a normal day, and I'd been looking a few things up in the library for reference. On my way back from the library though, that's when it all started. Everything was going crazy, people transforming around me, it was a disconcerting time. I ran back to my apartment to try and get away from it, and was lucky enough to make it there safely. But when I got there, that luck ran out. I opened my door and was attacked by what I suspect used to be my pet snake.";
 	say "     He pauses his story, and gestures down at himself. 'It wasn't long until I looked like this. Thankfully I'd read enough apocalyptic novels to have the idea to take refuge at the mall, and managed to get here safely before I had a minor breakdown.' Kyle shuffles around some of the papers in front of him before continuing. 'Besides, I've made out a lot better than some. I'm still mostly humanoid, I have my sanity, and my eyes work perfectly now.' He taps one of his scaled fingers against his glasses. 'These are actually plain glass lenses. I only wear them because I feel strange without them. Plus, they look great on me.' He grins at you. 'So that's my story, far as I can remember.'";
@@ -215,33 +214,33 @@ to say KyleTalk4: [talk about his friend]
 		say "     'Ah, Gerty. Definitely an interesting individual. He's one of my best friends, but he's often a bit... much for most people. He takes his literature very seriously, and is similarly serious about his art. He doesn't let anything keep him away from those things, that's for sure. When he was changed in the disaster, he ended up without arms. Instead he worked with an acquaintance of his to design some prosthetic limbs he could still manipulate, and even though it's barely been any time, he can already handle himself about as well as he could before.' Kyle looks fairly contented talking about his friend, but pauses, and stares off to the side for several moments. His expression grows somewhat concerned.";
 		say "     'Now that I think about it, Gerty was supposed to come back here with some books he was going to collect a while ago. He's usually very punctual. I'm worried that something may have happened to him. I'm not really suited to going out and making sure he's all right, but I can ask you. Would you mind looking for Gerty, and helping him out if he's in trouble? He's almost certainly at a bookstore in the [bold type]High Rise District[roman type] if he's in trouble.'";
 		say "     [bold type]Do you tell him you'll look for Gerty?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Accept the task.";
+		say "     ([link]N[as]n[end link]) - No, it's too dangerous.";
+		if player consents:
 			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Accept the task.";
-			say "     ([link]N[as]n[end link]) - No, it's too dangerous.";
-			if player consents:
-				LineBreak;
-				say "     Some of Kyle's worry instantly fades from his face. 'Oh, thank goodness. I'm sure you'll be able to help him out. Just come back and talk to me again once you've found him, alright? I'll be waiting.'";
-				now GertyQuest is 1;
-				now Angry Snake is not resolved;
-			else:
-				LineBreak;
-				say "     Kyle looks crestfallen. 'I understand, the city out there is dangerous, and I'm sure you're a busy person. Just... think about it, okay?'";
-				now GertyQuest is 99;
+			say "     Some of Kyle's worry instantly fades from his face. 'Oh, thank goodness. I'm sure you'll be able to help him out. Just come back and talk to me again once you've found him, alright? I'll be waiting.'";
+			now GertyQuest is 1;
+			now Angry Snake is not resolved;
+		else:
+			LineBreak;
+			say "     Kyle looks crestfallen. 'I understand, the city out there is dangerous, and I'm sure you're a busy person. Just... think about it, okay?'";
+			now GertyQuest is 99;
 	if GertyQuest is 99: [if player refused before]
 		say "     Kyle looks at you pleadingly. 'Have you reconsidered looking for Gerty?'";
 		say "     [bold type]Do you tell him you'll look for Gerty?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Accept the task.";
+		say "     ([link]N[as]n[end link]) - No, it's too dangerous.";
+		if player consents:
 			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Accept the task.";
-			say "     ([link]N[as]n[end link]) - No, it's too dangerous.";
-			if player consents:
-				LineBreak;
-				say "     Some of Kyle's worry instantly fades from his face. 'Oh, thank goodness. I'm sure you'll be able to help him out. Just come back and talk to me again once you've found him, alright? I'll be waiting.'";
-				now GertyQuest is 1;
-				now Angry Snake is not resolved;
-			else:
-				LineBreak;
-				say "     Kyle looks crestfallen. 'I understand, the city out there is dangerous, and I'm sure you're a busy person. Just... think about it, okay?'";
-				now GertyQuest is 99;
+			say "     Some of Kyle's worry instantly fades from his face. 'Oh, thank goodness. I'm sure you'll be able to help him out. Just come back and talk to me again once you've found him, alright? I'll be waiting.'";
+			now GertyQuest is 1;
+			now Angry Snake is not resolved;
+		else:
+			LineBreak;
+			say "     Kyle looks crestfallen. 'I understand, the city out there is dangerous, and I'm sure you're a busy person. Just... think about it, okay?'";
+			now GertyQuest is 99;
 	if GertyQuest is 1: [player accepted GertyQuest]
 		say "     Kyle looks at you, concerned. 'Please, you should be looking for Gerty right now. Time with me can wait until I know he's not in danger.'";
 	if GertyQuest is 2: [player completed GertyQuest]
@@ -296,25 +295,24 @@ to say KyleTalk7: [ask for date]
 		now hp of Kyle is 1;
 	else:
 		say "     'Yep, I'm pretty excited for our next date. Can't wait to meet up in the Atrium for it soon. Don't keep me waiting, alright?'";
-		
+
 to say KyleTalk8: [ask for threesome]
-	if hunger of Kyle is 0:
+	if Thirst of Kyle is 0:
 		say "     'You're right, the last time we did that was pretty great, and I wouldn't mind another time like that. I'll see about inviting Gerty over. Come by later, and we can have some fun.'";
-		now hunger of Kyle is 0:
+		now Thirst of Kyle is 0;
 	else:
 		say "     'As soon as Gerty makes it here, definitely. Until then, you'll have to wait.'";
-	
-[}]
-Section 3 - Sex [{]
+
+Section 3 - Sex
 	
 instead of fucking the Kyle:
 	if (lastfuck of Kyle - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     Kyle looks somewhat apologetic. 'Sorry, I'm still worn out from last time. You're almost more than I can handle. Definitely later though.'";
-	else if KyleRelationship < 3): [relationship not high enough]
+	else if (KyleRelationship < 3): [relationship not high enough]
 		say "     'Sorry, I'm not ready to just go and sleep with somebody I still don't know very well.'";
-	else if libido of Kyle = 0: [not convinced yet]
+	else if libido of Kyle is 0: [not convinced yet]
 		say "     'I know you pretty well now and all, but I don't think I'm quite ready for that.'";
-	else if thirst of Kyle = 0: [first time]
+	else if thirst of Kyle is 0: [first time]
 		say "     When you broach the subject again, Kyle becomes visibly both nervous and excited. 'Okay, I think I'm ready for this. Let's head to the back room, okay?' The lizardman turns around and walks through the bookshop towards the back room, his pace faster than usual. Just as excited as Kyle, you follow. Once the two of you are together in the privacy of the rear area of the store, he turns back towards you. For a moment, he closes his eyes and breathes deeply. 'Alright, whenever you're ready.' You don't give Kyle the chance to be nervous, and you press right up against him, kissing him deeply. You put your arms around him, holding tight as he reciprocates. The intense lip locking is only broken occasionally to breathe.";
 		say "     You pull back slightly, and grin at Kyle. From his expression, you can tell he would be blushing if he were capable. At the same time, you let go of Kyle with one of your hands, and reach downwards to his pants. You take a few moments to fiddle with the button on the front as you make out with him, until eventually it comes open. Wasting no time, you grab the side of the waistline and yank, lowering his pants just enough that his now-hard member becomes partially visible. After that it is a simple task for you to reach in and quickly grasp his shaft, pulling it free of the legwear. For a time, you simply stand there, your hand wrapped around Kyle's reptilian cock, and your lips locked with his.";
 		WaitLineBreak;
@@ -358,7 +356,7 @@ to say KyleSexMenu:
 	now sortorder entry is 4;
 	now description entry is "Offer sex to the lizardman";]
 	[]
-	sort the table of fucking options in sortorder order;	
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -395,7 +393,7 @@ to say KyleSexMenu:
 	clear the screen and hyperlink list;
 
 to say KyleSex1: [oral on the player]
-	say "     It doesn't take long after you enter the room before Kyle has already taken a hold of your erection. He strokes it a few times, and sinks to his knees. He smiles up at you from his lowered position, and then starts licking up and down your shaft with his lengthy tongue, performing some rather impressive feats of dexterity with it as he does so. Soon he shifts forward, and engulfs your dick in his reptilian mouth, starting to bob up and down, adding the the sensation offered by his skilled tongue. He looks up, and you lock eyes as he pleasures you, the feelings only growing more intense. Kyle is the one to break your eye contact, as he pushes down further onto your [cock of player in lowercase] cock, and reaches below to tease your sack as well.";
+	say "     It doesn't take long after you enter the room before Kyle has already taken a hold of your erection. He strokes it a few times, and sinks to his knees. He smiles up at you from his lowered position, and then starts licking up and down your shaft with his lengthy tongue, performing some rather impressive feats of dexterity with it as he does so. Soon he shifts forward, and engulfs your dick in his reptilian mouth, starting to bob up and down, adding the the sensation offered by his skilled tongue. He looks up, and you lock eyes as he pleasures you, the feelings only growing more intense. Kyle is the one to break your eye contact, as he pushes down further onto your [cock of player in lower case] cock, and reaches below to tease your sack as well.";
 	say "     In no time at all, your pleasure peaks, and your shaft begins to pulse just as Kyle looks back up at you, sending strands of cum down the lizardman's throat. Just as they start to slow, he pulls back off of your dick, and the last few spurts end up on his face, and on his glasses. He stands up, and takes his glasses off, and wipes them off with a cloth from the nearby table before putting them back on. 'I hope you liked that, love. I certainly did, even if the cleanup might be a bit messy.' He steps forward once again, and plants a quick kiss on your lips. 'We've probably spent enough time back here for now though. Let's do this again sometime.' You nod, and the two of you head back out into the bookstore, though you can't help but notice Kyle still has a streak of seed on his cheek.";
 
 to say KyleSex2: [oral on Kyle]
@@ -408,18 +406,18 @@ to say KyleSex2: [oral on Kyle]
 	say "     Eventually he breaks off, and pulls back just enough that he can breathe. 'Thanks for that. You're a real treasure, love.' He smiles at you warmly, only looking away to gather his discarded pants, and slip them back on. Once he looks presentable again, he walks over towards the door. 'We're definitely going to have to do this again, you and me.' He gives a grin, and leaves the back room. You smile to yourself, and follow him.";
 
 to say KyleSex3: [Kyle fucked]
-	say "     Moments after you've entered the back room, Kyle has already stripped off his pants and thrown them off to the side. As you move closer, he directs you towards one of the chairs. 'Take a seat there, please.' You comply, and sit down. Kyle comes over to you, and reaches down, grasping your [cock of player in lowercase] member, teasing it to full hardness with his scaled hands. Once you're fully erect, he leans in and gives it a single lick before standing up. Kyle steps forward, now standing over you, and sits down on your lap. With his new position, your dick is right behind him, pressed against his rear. The two of you lock eyes, as you sit together, and the lizardman speaks. 'Alright, I'm gonna take this slow, okay?'";
+	say "     Moments after you've entered the back room, Kyle has already stripped off his pants and thrown them off to the side. As you move closer, he directs you towards one of the chairs. 'Take a seat there, please.' You comply, and sit down. Kyle comes over to you, and reaches down, grasping your [cock of player in lower case] member, teasing it to full hardness with his scaled hands. Once you're fully erect, he leans in and gives it a single lick before standing up. Kyle steps forward, now standing over you, and sits down on your lap. With his new position, your dick is right behind him, pressed against his rear. The two of you lock eyes, as you sit together, and the lizardman speaks. 'Alright, I'm gonna take this slow, okay?'";
 	say "     You nod, and Kyle lifts himself up slightly, and then back just enough that he is holding himself up above your erect cock. Slowly, he lowers himself downward, until the tip of your dick is pressed against his rear hole. The lizardman edges himself further down, spreading himself open around the head of your erection. You can feel his ring sliding down around your shaft, gripping you tightly as you sink deeper into him. After what seems like an eternity, he comes to a stop, sitting back on your lap again, the few inches change making all the difference in the world. You look into Kyle's eyes as he sits there, impaled on your cock, and he looks back into yours, and you can see that he is just as awash in pleasure as you.";
 	WaitLineBreak;
 	say "     Soon enough the pleasure intensifies as Kyle begins to properly ride you, rising up and down on your shaft. You can feel the warm tightness of his ass around you, the friction bringing ever greater sensations. The lizardman seems to be feeling similarly, as his bouncing pace increases, and he starts to let out moans, a slight peaking in the tone each time his cheeks slap back against your thighs. Time seems to get away from you, blurring into a sexual haze as Kyle continues to ride your cock like there's no tomorrow. Eventually the growing pleasure begins to surge, cutting through the haze, and bringing the scene back into sharp clarity just as you start to come. Your erection throbs, and you can feel yourself releasing deep into Kyle, as he holds himself pressed down all the way, taking your shaft completely. As you cry out in orgasm, Kyle follows soon after, his member jerking and firing spurts of seed across each of your chests.";
 	say "     The two of you remain sitting there for a short while, panting from the exertion, Kyle leaning draped across you and holding tight. Eventually you both fully catch your breath, and extricate yourselves from your emrace, starting to clean up from your exploits. After you've cleaned off, Kyle finally picks up his pants, and slips them back on. Then the lizardman walks back over to you and embraces you. 'That was wonderful, love. I'd probably be a bit more verbose about it, but I don't think I'll be able to concentrate properly for a while yet.' He laughs. 'Anyway, can't wait to do this again, so come back soon, okay?' You nod to Kyle, and he squeezes you once more before letting go, and the two of you leave the back room.";
 	
-[to say KyleSex4: [Kyle fucks player ass]
-	say "     <text to be added later";]
-[}]
-Section 4 - Events [{]
+to say KyleSex4: [Kyle fucks player ass]
+	say "     <text to be added later";
 
-Angry Snake is a situation. [{]
+Section 4 - Events
+
+Angry Snake is a situation.
 The level of Angry Snake is 4.
 The sarea of Angry Snake is "High Rise District".
 Angry Snake is resolved.
@@ -442,11 +440,11 @@ instead of resolving a Angry Snake:
 			say "     Gerty frowns at you. 'Well, since you're here, you may as well go tell Kyle that I'm fine, and that I'll deliver his books soon. Even if I didn't need the help, I appreciate the thought.' He picks up a small bag you hadn't noticed before, and from the view through the opening you can clearly tell that the bag is full of books, Gerty's haul on this expedition. 'I'll just be sure to pack more dictionaries next time, in case more pests decide to try and stop me.' With his goods clasped firmly in his mechanical hands, he turns around to leave, and stops when he sees you're still there. 'What are you waiting for? Get a move on!' In no time at all you're turned around and out the door, very much not wanting another book thrown at you. Time to talk to Kyle.";
 			now GertyQuest is 2;
 			move Gerty to Tenvale College Library;
-			now Angry Snake is resolved.
-		if fightoutcome > 19 and fightoutcome < 30:
+			now Angry Snake is resolved;
+		else if fightoutcome > 19 and fightoutcome < 30:
 			say "     As you collapse, exhausted and injured, the [if GroupFightCounter is 1]trio of german shepherds prowl[else if GroupFightCounter is 2]remaining pair of german shepherds prowl[else]final german shepherd prowls[end if] towards your prone form, clearly preparing to do unspeakable things. However, their concentration is interrupted by another barrage from Gerty, distracting them momentarily. You quickly take advantage of your opening to get away before their attention is brought to you again. Hopefully Gerty will be fine for now.";
 			now GertyQuest is 100;
-		if fightoutcome is 30:
+		else if fightoutcome is 30:
 			say "     You decide to cut your losses and get out of the bookstore before you are defeated by your canine adversaries. You turn around and run, fleeing out the door of the building to the sound of Gerty hurling both books and insults at your foes. Hopefully he'll be fine for now.";
 			now GertyQuest is 100;
 		now inasituation is false;
@@ -464,31 +462,21 @@ instead of resolving a Angry Snake:
 			say "     Gerty frowns at you. 'Well, since you're here, you may as well go tell Kyle that I'm fine, and that I'll deliver his books soon. Even if I didn't need the help, I appreciate the thought.' He picks up a small bag you hadn't noticed before, and from the view through the opening you can clearly tell that the bag is full of books, Gerty's haul on this expedition. 'I'll just be sure to pack more dictionaries next time, in case more pests decide to try and stop me.' With his goods clasped firmly in his mechanical hands, he turns around to leave, and stops when he sees you're still there. 'What are you waiting for? Get a move on!' In no time at all you're turned around and out the door, very much not wanting another book thrown at you. Time to talk to Kyle.";
 			now GertyQuest is 2;
 			move Gerty to Tenvale College Library;
-			now Angry Snake is resolved.
+			now Angry Snake is resolved;
 		if fightoutcome > 19 and fightoutcome < 30:
 			say "     As you collapse, exhausted and injured, the [if GroupFightCounter is 1]trio of german shepherds prowl[else if GroupFightCounter is 2]remaining pair of german shepherds prowl[else]final german shepherd prowls[end if] towards your prone form, clearly preparing to do unspeakable things. However, their concentration is interrupted by another barrage from Gerty, distracting them momentarily. You quickly take advantage of your opening to get away before their attention is brought to you again. Hopefully Gerty will be fine for now.";
 		if fightoutcome is 30:
 			say "     You decide to cut your losses and get out of the bookstore before you are defeated by your canine adversaries. You turn around and run, fleeing out the door of the building to the sound of Gerty hurling both books and insults at your foes. Hopefully he'll be fine for now.";
 		now inasituation is false;
-[}]
-[]
-[]		
-instead of going west from Mall East Wing while hp of Kyle is 1: [Kyle date event] [{]
-	KyleDateEvent;
-	
-instead of going east from Mall West Wing while hp of Kyle is 1:
-	KyleDateEvent;
-	
-instead of going north from Mall Foodcourt while hp of Kyle is 1:
-	KyleDateEvent;
-	
-instead of going south from Mall Foyer while hp of Kyle is 1:
+
+
+instead of going to Mall Atrium while hp of Kyle is 1: [Kyle date event] [{]
 	KyleDateEvent;
 
 to KyleDateEvent:
 	move player to Mall Atrium;
 	say "     As you enter the main room of the mall, you see Kyle leaning up against the wall, slightly out of the way of the main crowds. You walk over to him, dodging out of the way of a mall rat as you go. When you get close, Kyle notices you, and smiles. 'Glad to see you. Now, we should probably decide what we're actually going to do for the date.' He stteps away from the wall, and glances around the atrium. 'I'm not entirely sure about leaving the mall for it, since it can be pretty dangerous out there, and I'm not really good at the whole danger thing. And I'm sure we could have an excellent time here in the mall. But I'll leave the decision to you. Where do you want to go?'";
-	if KyleRelationship <10:
+	if KyleRelationship < 10:
 		now KyleRelationship is 10;
 		now hp of Kyle is 0;
 		say KyleDate1;
@@ -496,7 +484,7 @@ to KyleDateEvent:
 		now hp of Kyle is 0;
 		say "[KyleDateMenu]";
 		
-	to say KyleDateMenu:
+to say KyleDateMenu:
 	LineBreak;
 	say "Where do you want to go on a date with Kyle?";	
 	now sextablerun is 0;
@@ -544,30 +532,32 @@ to KyleDateEvent:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options]";
 	clear the screen and hyperlink list;
 	
-	to say KyleDate1: [first mall date]
-		say "     You tell Kyle that you're fine with staying in the mall, and spending some time with him there. He smiles in response. 'It may not be the most spectacular, but hey, it'll be a pretty great date no matter what, as long as we're spending it together, right?' You nod at Kyle in affirmation. 'Great. Now, I've spent enough time here to know my way around fairly well, so come on. I'll give you a tour.' For the next while, Kyle leads you around the mall, showing you the various points of interest, and telling you things about them that only a mall local would know. Some time is spent at the various mall stores that are still functional, browsing collections, discussing items, and generally having an enjoyable time. Finally, the two of you come back to the atrium of the mall, and the two of you sit in the center, looking at the fountain. Though it's now just a stagnant pool of water, you can still see clearly how it used to look.";
-		say "     As the two of you lean into each other in front of the fountain, Kyle speaks. 'Hey, I had a really good time, even without leaving the mall. Spending time with you is nice, and I'd definitely like to do it more.' Kyle looks away from the still water of the fountain, and meets your gaze. 'I think that I'm ready for this to be a relationship, now. I was nervous before, I'd never really done anything of the sort. Always too much of an introvert, never looked very hard. But this? This is good. I definitely want to do this again.' Kyle's voice is somewhat tense, a measure of nervous energy putting him on edge. You smile at the lizardman, agreeing on may of those points. Rather than let him engage further in his nervous speech, however, you answer him affirmatively, by leaning forward and catching his lips with a kiss.";
-		WaitLineBreak;
-		say "     As the kiss goes on, Kyle relaxes, and leans further into you. After a short while, you finally break apart to breathe properly, and Kyle smiles. 'Well, I suppose I can take that as an agreement, can't I? Well, I may have said it already, but it bears saying again. The date was wonderful, and you were wonderful. I'm glad we did it, and I can't wait for more.' Kyle suddenly shoots forwards and gives you a hug. 'I'll see you soon, I hope, back at the shop, love. Oh, that sounds great. Love. Anyway, even the best date has to end somewhere, so see you later, love.' Kyle stands up and walks back towards the east wing of the mall, leaving you sitting by the fountain in the atrium, enjoying the warm feeling you still have.";
-		
-	[to say KyleDate2: [mall date]
-		say "     A";]
+to say KyleDate1: [first mall date]
+	say "     You tell Kyle that you're fine with staying in the mall, and spending some time with him there. He smiles in response. 'It may not be the most spectacular, but hey, it'll be a pretty great date no matter what, as long as we're spending it together, right?' You nod at Kyle in affirmation. 'Great. Now, I've spent enough time here to know my way around fairly well, so come on. I'll give you a tour.' For the next while, Kyle leads you around the mall, showing you the various points of interest, and telling you things about them that only a mall local would know. Some time is spent at the various mall stores that are still functional, browsing collections, discussing items, and generally having an enjoyable time. Finally, the two of you come back to the atrium of the mall, and the two of you sit in the center, looking at the fountain. Though it's now just a stagnant pool of water, you can still see clearly how it used to look.";
+	say "     As the two of you lean into each other in front of the fountain, Kyle speaks. 'Hey, I had a really good time, even without leaving the mall. Spending time with you is nice, and I'd definitely like to do it more.' Kyle looks away from the still water of the fountain, and meets your gaze. 'I think that I'm ready for this to be a relationship, now. I was nervous before, I'd never really done anything of the sort. Always too much of an introvert, never looked very hard. But this? This is good. I definitely want to do this again.' Kyle's voice is somewhat tense, a measure of nervous energy putting him on edge. You smile at the lizardman, agreeing on may of those points. Rather than let him engage further in his nervous speech, however, you answer him affirmatively, by leaning forward and catching his lips with a kiss.";
+	WaitLineBreak;
+	say "     As the kiss goes on, Kyle relaxes, and leans further into you. After a short while, you finally break apart to breathe properly, and Kyle smiles. 'Well, I suppose I can take that as an agreement, can't I? Well, I may have said it already, but it bears saying again. The date was wonderful, and you were wonderful. I'm glad we did it, and I can't wait for more.' Kyle suddenly shoots forwards and gives you a hug. 'I'll see you soon, I hope, back at the shop, love. Oh, that sounds great. Love. Anyway, even the best date has to end somewhere, so see you later, love.' Kyle stands up and walks back towards the east wing of the mall, leaving you sitting by the fountain in the atrium, enjoying the warm feeling you still have.";
 
-	[to say KyleDate3: [park date]
-		say "     You tell Kyle that you'd like to take him on a date to the park. 'Oh, man, the city park was a nice one. I bet it'd be a great place for a date. But isn't it kind of dangerous now?' You reassure him that you know what you're doing, and that you'll make sure to protect him while you're there. He looks slightly worried, but nods regardless. 'Alright. I trust you. Let's go to the park, then.' You spend a short while escorting Kyle to the park, avoiding confrontations with several ferals along the way. Finally you both arrive, safely at the entrance to the city park.";
-		say "     <text>";]
-		
-	[to say KyleDate4: [beach date]
-		say "     <text>";]
-[}]
-[instead of going north from Mall East Wing while GertyRelationship is 5 and a random chance of 1 in 3 succeeds: [First Gerty threesome event]
+to say KyleDate2: [mall date]
+	say "     A";
+
+to say KyleDate3: [park date]
+	say "     You tell Kyle that you'd like to take him on a date to the park. 'Oh, man, the city park was a nice one. I bet it'd be a great place for a date. But isn't it kind of dangerous now?' You reassure him that you know what you're doing, and that you'll make sure to protect him while you're there. He looks slightly worried, but nods regardless. 'Alright. I trust you. Let's go to the park, then.' You spend a short while escorting Kyle to the park, avoiding confrontations with several ferals along the way. Finally you both arrive, safely at the entrance to the city park.";
+	say "     <text>";
+
+to say KyleDate4: [beach date]
+	say "     <text>";
+
+
+[instead of going to Brookstone Books while (GertyRelationship is 5 and a random chance of 1 in 3 succeeds): [First Gerty threesome event]
 	move player to Brookstone Books;
 	say "     <Gerty Threesome Event Text>";]
 	
-[instead of going north from Mall East Wing while hunger of Kyle is 1:
+[
+instead of going to Brookstone Books while (Thirst of Kyle is 1):
 	move player to Brookstone Books;
 	say "     <Second Threesome Text>";
-	now hunger of Kyle is 0;]
+	now Thirst of Kyle is 0;
+]
 
-[}]
 Kyle ends here.
