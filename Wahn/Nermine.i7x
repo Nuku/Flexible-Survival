@@ -1660,22 +1660,27 @@ Instead of resolving a Hyena Challenge:
 			now Hyena Challenge is resolved;
 		else:
 			say "     Following the trail of clues leads you to the edges of the territory claimed by the gang of herm hyenas and though you are pretty sure they have what you are looking for somewhere in their territory, you have no clue where to begin your search. It seems pretty obvious that you are going to need to ask some of the gang members for help in that regards, although you doubt they will cooperate without a fight. After some searching you do manage to find a pair of the anthro hermaphrodites lounging around the area, and while they seem friendly enough at first as they try to convince you to join their gang, their mood swiftly changes when they realize you have other plans. Changing their behaviour in an instant, they turn and attack, striking at you before you can respond!";
-			say "[bold type]You lose 15 HP![roman type][line break]";			
+			say "[bold type]You lose 15 HP![roman type][line break]";
 			decrease HP of player by 15;
 			let HyenaFightCounter be 0;
+			now fightoutcome is 0; [reset]
 			while fightoutcome < 20 and HyenaFightCounter < 2: [runs for 2 times or until the player loses or flees]
 				now inasituation is true;
 				challenge "Herm Hyena";
 				increase HyenaFightCounter by 1;
+			now inasituation is false; [reset]
 			if fightoutcome < 20: [player won]
 				say "     After defeating the hyenas, they are more than willing to admit your dominance, and with a pair of matching grins easily agree to lead you to their hideout. Given how cheerful the tricky beasts are about the whole situation, you suspect you are walking right into a trap, but since it is probably the only way you will find out what happened to the items Nermine wants, you have no choice but to follow along. Eventually after quite a bit of walking, you find yourself outside one of the large warehouses in the area, and looking around you realize you could have been here much quicker if they had brought you directly here. All the extra walking was just buying time so that a large number of hyenas could gather here and be ready for you, all of them grinning at chuckling at you as the two hyenas you beat earlier quickly duck away from you to join the crowd.";
 				say "     Sighing as you look around, you realize there is no way you could beat all of these hyenas in combat, so you try calling out and telling them you are only looking for three very specific pieces of jewelry from the museum, and hoping they are in the mood to listen. The air is filled with the laughter of the hyenas at your bold questioning, the noise making you feel somewhat less human as it echoes throughout the area. Then suddenly, their laughter stops as quickly as if someone had flipped a switch. From the jostling crowd of gang-members, a much larger hyena steps into sight, her muscular body adorned with many loops of jewelry and necklaces. As she sizes you up, you do the same - and realize that what is obviously the leader of the hyenas is wearing the items you came her for!";
 				WaitLineBreak;
 				say "     The large hyena grins as she sees you have recognized her jewelry, and in a mocking tone of voice introduces herself as the matriarch of the gang, and that while the items you want are only the least part of her treasure, they are still hers. You sigh and turn away to leave, only to be stopped cold by the fact that the crowd of hyenas has closed all the way around while your back was turned. Hearing a particularly cruel chuckle by the matriarch, you turn to face her once more, 'Aww - poor little treasure-seeker. You've come so far, I couldn't just let you leave without giving you the chance to win your baubles, could I?' Grinning broadly and showing her sharp teeth, she gestures to two hyenas standing by her side and points you out to them. Looking around at unbroken ring of hyenas, you see that there is no way out - especially as they start to chant, 'Fight! Fight! Fight!' with eager expressions. An impromptu arena forms in seconds, with you in the center.";
+				now fightoutcome is 0; [reset]
+				now HyenaFightCounter is 0; [reset]
 				while fightoutcome < 20 and HyenaFightCounter < 2: [runs for 2 times or until the player loses or flees]
 					now inasituation is true;
 					challenge "Herm Hyena";
 					increase HyenaFightCounter by 1;
+				now inasituation is false; [reset]
 				if fightoutcome < 20: [player won]
 					if cocks of player > 0:
 						say "     Looking down at the matriarch's defeated guards, you are surprised to hear the crowd of hyenas cheer your victory as loudly as they cheered for their own kind, their praise making you feel slightly more dominant as you straighten up and stretch from your hard-won victory. After several minutes of cheering, and jesting, the crowd grows silent again in anticipation as the matriarch herself steps forward with a grin, and looking around you realize that win or lose, this particular fight is definitely a unique opportunity. If you lose now, you are pretty sure you won't have another chance at getting the items back for Nermine, and so you resolve to fight your hardest to prove your dominance over the powerful matriarch.";
@@ -1755,10 +1760,12 @@ Instead of resolving a Bestial Pheromones:
 	else if anubisrequest is 1:
 		say "     Hunting through the zoo, you follow the signs and with some luck manage to find the medical lab that is supposed to house the pheromones and chemicals the jackal-like man sent you to fetch. Unfortunately you don't seem to be the only one who has found the place, as a couple of felines are basking outside in the powerful scent emanating from within.";
 		let CheetahFightCounter be 0;
+		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and CheetahFightCounter < 2: [runs for 2 times or until the player loses or flees]
 			now inasituation is true;
 			challenge "Cheetah Woman";
 			increase CheetahFightCounter by 1;
+		now inasituation is false; [reset]
 		if fightoutcome < 20: [player won]
 			say "     Driving off the pair of sleek cheetahs, you look inside the room carefully, finding it to be full of several large coolers, several of which are standing open, their contents spilled out upon the floor. You now realize why the felines were so attracted to this place - the mingled musk and pheromones of numerous animals filling the air is quite a potent mixture, making your thoughts wander as you look around. Realizing you can't stay here long without giving in to your primal urges, you quickly pull out the paper the jackal-man gave you and begin to search the area, hoping the vials you need aren't lying among those smashed on the floor.";
 			let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
@@ -1788,10 +1795,12 @@ Instead of resolving a Twisted fruit grove:
 	if FelinoidRescued is 1: [player lost the fight to save the Felinoid]
 		say "     Traveling through the twists and turns of the park, you notice the scenery seems to slowly be twisting and changing, again becoming even more vine-covered and lewd with every step you take. Remembering the last time you were here, you grip your weapon tightly as you hurry quickly down the path, eager to get this over with. The landscape seems to grow increasingly disturbing as you travel, until eventually you are back at the thin curtain of vines from before, the strange twisted glade mostly quiet now, save for a large mass of vines near the area where the felinoid who saved you before was dragged off. You can still see some movement as the beast struggles within his viney prison, and hope you aren't too late to help return the favor. Stepping forward you realize as the glade explodes into motion again that without a distraction in the form of a large cat, this is going to be a much harder fight indeed...";
 		let PlantFightCounter be 0;
+		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and PlantFightCounter < 5: [runs for 5 times or until the player loses or flees]
 			now inasituation is true;
 			challenge "Parasitic Plant";
 			increase PlantFightCounter by 1;
+		now inasituation is false; [reset]
 		if fightoutcome < 20: [player won]
 			Say "     Finally beating off the barrage of plants, you look up and realize that you have managed to reach the tree itself, leaving a trail of devastated plants behind you. You waste no time in filling the small basket Nermine gave you with the soft, fleshy fruits, their strangely tempting smell washing over you as you stuff the basket in your backpack to make sure you won't lose any of the fruit after all the trouble you went through to get them. After zipping it up, you look around the glade. It looks like the path of destruction you cut through the plant creatures is still open and you could probably make it back out easily if you hurried. But at the same time... the bundle of vines where the felinoid is trapped is now writhing as the beast inside makes one last valiant effort to escape.";
 			say "     You can hear a piteous yowl, which is suddenly muffled, likely by one of the plants finally managing to work its way into the beast's mouth. A vague twinge of guilt fills you as you glance at the way out again, before looking back at the trapped felinoid. The beast did help you when you needed it before... but there are several fresh plants in the way you would have to fight through before you could manage to free the cat. On one hand, now that you have what you came for, there really isn't any more reason for you to stick around... but then, returning the favor by freeing the trapped felinoid would be a worthy task in and of itself.";
@@ -1802,10 +1811,12 @@ Instead of resolving a Twisted fruit grove:
 			if player consents:
 				LineBreak;
 				let PlantFightCounter be 0;
+				now fightoutcome is 0; [reset]
 				while fightoutcome < 20 and PlantFightCounter < 2: [runs for 2 times or until the player loses or flees]
 					now inasituation is true;
 					challenge "Parasitic Plant";
 					increase PlantFightCounter by 1;
+				now inasituation is false; [reset]
 				if fightoutcome < 20: [player won]
 					say "     Beating back the plant creatures, you quickly begin to hack and cut away at the vines encasing the trapped felinoid. The beast clearly notices that something is going on, as it lashes out vaguely in concert with your own efforts, struggling and gnawing at its viney prison as he struggles desperately to get free. Finally managing to cut the large feline loose, you see the proud (if a bit worse for wear) creature stagger out of the now limp vine cocoon. He seems somewhat disoriented as he takes in great gulps of fresh air, his sides heaving mightily. Realizing that the grove is on the move again apparently angered at being robbed of its trapped prey, you quickly push and prod the felinoid until he gets the idea, the two of you staggering down the path you hacked on the way in, your combined might quickly making short work of the few plants that send shoots sprouting up in your way to entangle and trip the two of you.";
 					say "     Once you are far enough outside the glade to have left the outermost offshoots behind, you practically collapse to the ground. That was one tiring adventure - and the massive amount of effort to fight off so many of the plants, as well as cutting the large cat free catches up to you all at once. Lying there on the ground panting helplessly, you blink as suddenly the large felinoid's face is right above yours, and you freeze as you realize that you are practically helpless in this position with the large beast standing above you. The feline looks down at you with his strangely intelligent eyes for a minute, lowering his muzzle down to sniff your face several times, before sticking his tongue out and giving you a long lick on your cheek. You blink as the beast backs off, sitting up as the male cat slowly weaves his way through the thankfully regular plants in the rest of the park, obviously still unsteady on his feet. He shoots you one last grateful look over his shoulder before vanishing between two bushes.";
@@ -1832,7 +1843,6 @@ Instead of resolving a Twisted fruit grove:
 					LineBreak;
 					say "[bold type]Your sanity decreases by 25![roman type][line break]";
 					decrease humanity of player by 25;
-					now inasituation is false;
 					stop the action;
 			else:
 				LineBreak;
@@ -1869,10 +1879,12 @@ Instead of resolving a Twisted fruit grove:
 		say "[bold type]You lose 25 HP![roman type][line break]";
 		decrease HP of player by 15;
 		let PlantFightCounter be 0;
+		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and PlantFightCounter < 3: [runs for 3 times or until the player loses or flees]
 			now inasituation is true;
 			challenge "Parasitic Plant";
 			increase PlantFightCounter by 1;
+		now inasituation is false; [reset]
 		if fightoutcome < 20: [player won]
 			say "     You pant in victory as the last of the green vine-like menaces are defeated, and waste no time closing up to the tree at least. It seems to creak in outrage as you begin filling the basket with strange fruit in a hasty rush to get out of here. Hearing a roar makes you glance over to the large felinoid that gave you this chance, and you see that it is still struggling against the plants - but the inevitable end result is clear as more and more tendrils latch onto it. Soon, they will immobilize the cat and those plants that are just 'helping' their brethren will no doubt turn your way. Realizing you don't have much time left, you quickly close the lid of the basket, hoping you have managed to get enough of the strange fruit to satisfy Nermine, since you certainly don't intend to return to any place this dangerous again if you can help it.";
 			say "     Your muscles tense to start running, but then a pityable mewl draws your attention once more to the felinoid. Vines are levering open its maw while a tendril with a cock-like fruit rears up before it, ready to plunge itself down its throat. No - you can't just leave the feral beast. Unintentional or not, it helped you greatly in your task, so you dash towards the writhing cocoon of vines. Kicking, wrenching and tearing a few of the main trunks where they sprout from the ground, you leave the green menaces injured - gushing clear sap that should have gone to strengthen their vines. Between the fact that the damaged plants partly let go of the felinoid to lash out at you in retaliation and several of the their remaining vines having gone limp, this gives the feline beast another chance to get out.";
@@ -1884,7 +1896,6 @@ Instead of resolving a Twisted fruit grove:
 			now FelinoidRescued is 2; [player won the fight to save the Felinoid]
 			now RareQuesting is 2;
 			now Twisted fruit grove is resolved;
-			now inasituation is false;
 			stop the action;
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     You moan as the vines wrap around you as tightly as they have the newly trapped felinoid, his fight having been lost sometime during your own harsh battle. The vine's cock like flowers invade your every orifice as the plants begin to cocoon your helpless body with their green leafy tendrils, anchoring you in place, unable to even lift a finger to escape. You can feel the scent of the area invading your mind as your body continues to become more and plant like, your mind starting to fade as you realize that before much longer you will be more plant then animal, rooted here in the glade like several of the other strange plants. But then suddenly the vines around you rip and tear, and you blink and gasp at your sudden freedom, and a new wave of strong masculine musk washes over you as you fight to pull your way out of your viney cocoon.";
@@ -1897,7 +1908,6 @@ Instead of resolving a Twisted fruit grove:
 			say "[bold type]Your sanity decreases by 25![roman type][line break]";
 			decrease humanity of player by 25;
 			now FelinoidRescued is 1; [player lost the fight to save the Felinoid]
-			now inasituation is false;
 			stop the action;
 		else if fightoutcome is 30: [fled]
 			say "     Abandoning the fight, you tear loose from the vines that already have begun to wind their way around your body and simply run. As you scramble away in a wild sprint, you look over your shoulder and see that while some of the plants are following you, most have focused back on the felinoid. There is barely anything left to see of the large feline, most of him being hidden in a cocoon of vines. You feel vaguely guilty as you tear through the curtain of hanging vines without stopping, leaving the cat to fend for himself and be entrapped by the plants.";
@@ -1908,7 +1918,6 @@ Instead of resolving a Twisted fruit grove:
 			say "[bold type]Your sanity decreases by 25![roman type][line break]";			
 			decrease humanity of player by 25;
 			now FelinoidRescued is 1; [player lost the fight to save the Felinoid]
-			now inasituation is false;
 			stop the action;
 	else: [the rare item quest is not active and neither is the captured felinoid available]
 		say "     Traveling through the twists and turns of the park, you notice that the scenery is starting to change and becoming more and more twisted and vine-covered with every step. Eventually you reach a thin curtain of vines blocking entry to an overgrown glade, you can see a number of those strange twisted plants moving around through the vines, seeming to congregate around some kind of warped tree. You can smell a soft tempting odor coming from within the glade, and almost find yourself stepping through the vines to investigate closer. Backing off you shake your head to try to clear it, and quickly turn and run down the path back the way you came, somehow sure that the entire situation is some kind of trap.";
