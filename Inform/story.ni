@@ -29,6 +29,12 @@ Use Scoring.
 Include Version 4 of Menus by Emily Short.
 Include Basic Help Menu by Emily Short.
 Include Basic Screen Effects by Emily Short.
+[dependencies]
+Include Glulx Entry Points by Emily Short.
+Include Glulx Text Effects by Emily Short.
+Include Simple Graphical Window by Emily Short.
+[new graphics handler]
+Include New Graphics by Executaball.
 
 [To decide which number is the absolute value of (N - a number):
 	if N < 0:
@@ -243,6 +249,8 @@ Child can be born. Child is not born.
 Childrenfaces is a list of text that varies.
 Childrenskins is a list of text that varies.
 Childrenbodies is a list of text that varies.
+NewGraphics is a truth state that varies.
+NewGraphicsInteger is a number that varies. NewGraphicsInteger is usually 1.
 
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
@@ -2373,7 +2381,7 @@ To ClearMoreFunction:
 	now clearnomore is 0; [returns clearing to normal]
 	say "Screen clearing occurs frequently.";
 
-Section Color
+[Section Color
 
 Include Glulx Text Effects by Emily Short.
 
@@ -2438,7 +2446,7 @@ special-style-1	--	"#00CC00"	--	--	bold-weight	--	--	--	--	--
 special-style-2	--	"#CC0000"	--	--	bold-weight	--	--	--	--	--
 
 
-
+]
 Part 3 - Item Code
 
 Understand the command "get" as something new.
@@ -5941,7 +5949,7 @@ To regularstart: [normal start method]
 		say "(14) [link]Hyperlinks[as]14[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
 		say "(15) [link]Waiting for Input[as]15[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(16) [link]Screen Clearing[as]16[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
-		say "(17) [link]Graphics[as]17[end link] - [bold type][if graphics is true]On[else]Off[end if][roman type][line break]";
+		say "(17) [link]Graphics[as]17[end link] - [bold type][if NewGraphicsInteger is 1]OLD[else if NewGraphicsInteger is 2]NEW[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
 		say "(18) [link]Inventory Columns[as]18[end link] - [bold type][invcolumns][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Restore a save[as]99[end link][line break]";
@@ -5997,10 +6005,17 @@ To regularstart: [normal start method]
 				else:
 					now clearnomore is 0;
 			-- 17:
-				if graphics is true:
+				if NewGraphicsInteger is 1:
+					now NewGraphics is true;
+					now NewGraphicsInteger is 2;
+				else if NewGraphicsInteger is 2:
 					now graphics is false;
-				else:
+					now NewGraphics is false;
+					now NewGraphicsInteger is 0;
+				else if NewGraphicsInteger is 0:
 					now graphics is true;
+					now NewGraphics is false;
+					now NewGraphicsInteger is 1;
 			-- 18:
 				say "[set_invcolumns]";
 			-- 99:
@@ -6406,3 +6421,10 @@ When play begins:
 	now monster is a random number from 1 to number of filled rows in the table of random critters;
 	choose row monster in table of random critters;
 	regularstart; [original start method.  easier to move everything then leave here]
+
+When play begins (this is the graphics window construction rule):
+	[if NewGraphics is true:][Build window regardless in case player decides to turn it on later]
+	build graphics window;
+	[now the graphics window pixel count is 1;]
+	now the graphics window proportion is 1;
+	follow the current graphics drawing rule.

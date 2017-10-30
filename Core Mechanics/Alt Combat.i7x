@@ -180,6 +180,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	repeat through the table of game art:
 		if title entry is nam:
 			now found is 1;
+			follow the ngraphics_open rule;
 			project icon entry;
 			break;
 [	if found is 0:
@@ -1308,6 +1309,7 @@ to win:
 			if gshep_fights > 2 and inasituation is false and lastscene of gshep - turns >= 4:
 				say "[gshep_postfightargue]";
 	rule succeeds;
+	follow the ngraphics_close rule.
 
 To lose:
 	choose row monster from the table of random critters;
@@ -1335,6 +1337,8 @@ To lose:
 	decrease the score by 1;
 	decrease the morale of the player by 3;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
+	[get ride of graphics window]
+	follow the ngraphics_close rule.
 
 
 Section 5 - Critter Combat
