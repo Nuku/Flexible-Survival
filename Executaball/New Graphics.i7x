@@ -33,7 +33,7 @@ carry out graphicmoding:
 	while trixieexit is 0:
 		clear the screen;
 		say "[bold type]Graphic Settings:[roman type][line break]";
-		say "NOTE: To disable the NEW graphics display, you must restart your interpreter. You may do a [restore] after launching to resume your game.";
+		say "NOTE: To disable the NEW graphics display, you must restart your interpreter. You may do a [bold type]restore[roman type] after launching to resume your game.";
 		say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 1]OLD[otherwise if NewGraphicsInteger is 2]NEW[otherwise if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
 		say "(2) [link]EXIT[as]2[end link][line break]";
 		while 1 is 1:

@@ -5081,7 +5081,7 @@ Include Zoo by Hellerhound.
 
 [Quests & Events]
 Include Ancient Tome by Wahn.
-Include Ancient Tome Expansion by Dys.
+Include Additional Tome Scenes by Dys.
 Include Apartment 319 by Kaleem Mcintyre.
 Include Assorted Events by Stripes.
 Include Beach Events by Sarokcat.
