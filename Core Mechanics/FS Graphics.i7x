@@ -277,34 +277,81 @@ Figure of RaneSavingEric_icon is the file "Rane&Eric2.jpg".   [after the Hellhou
 [maps]
 Figure of Map_Smith_Haven_Mall_icon is the file "Map_Mall.jpg".
 
+[emap - special]
+Figure of emap_special_loading_icon is the file "emap_special_loading.png".
+Figure of emap_special_signalnotfound_icon is the file "emap_special_signalnotfound.png".
+
+[emap - mall]
+Figure of emap_mall_alley_icon is the file "emap_mall_alley.png".
+Figure of emap_mall_atrium_icon is the file "emap_mall_atrium.png".
+Figure of emap_mall_bodyshop_icon is the file "emap_mall_bodyshop.png".
+Figure of emap_mall_bransonpartner_icon is the file "emap_mall_bransonpartner.png".
+Figure of emap_mall_brookstonebooks_icon is the file "emap_mall_brookstonebooks.png".
+Figure of emap_mall_christmasvillage_icon is the file "emap_mall_christmasvillage.png".
+Figure of emap_mall_eastwing_icon is the file "emap_mall_eastwing.png".
+Figure of emap_mall_foodcourt_icon is the file "emap_mall_foodcourt.png".
+Figure of emap_mall_foyer_icon is the file "emap_mall_foyer.png".
+Figure of emap_mall_guardpost_icon is the file "emap_mall_guardpost.png".
+Figure of emap_mall_lockers_icon is the file "emap_mall_lockers.png".
+Figure of emap_mall_loteast_icon is the file "emap_mall_loteast.png".
+Figure of emap_mall_lotnorth_icon is the file "emap_mall_lotnorth.png".
+Figure of emap_mall_lotsouth_icon is the file "emap_mall_lotsouth.png".
+Figure of emap_mall_lotwest_icon is the file "emap_mall_lotwest.png".
+Figure of emap_mall_nermines_icon is the file "emap_mall_nermines.png".
+Figure of emap_mall_pkboutique_icon is the file "emap_mall_pkboutique.png".
+Figure of emap_mall_restrooms_icon is the file "emap_mall_restrooms.png".
+Figure of emap_mall_shagshack_icon is the file "emap_mall_shagshack.png".
+Figure of emap_mall_westwing_icon is the file "emap_mall_westwing.png".
+
 A thing has a figure name called icon.
 The icon of a thing is usually figure of pixel.
 graphics is a truth state that varies.
-[graphics is usually true.]
 
 before examining a thing(called t):
 	if the icon of t is figure of pixel:
 		continue the action;
 	project the icon of t;
 
+[OLD BACKUP]
+[to project (x - a figure name):
+	if graphics is true and NewGraphics is false:
+		repeat with y running from 1 to number of filled rows in table of game art:
+			choose row y in table of game art;
+			if icon entry is x and artist entry is not listed in BlockList of player:
+				display x;
+				break;]
+[NEW]
 to project (x - a figure name):
-	if graphics is true:
+	if graphics is true and NewGraphics is true:
+		repeat with y running from 1 to number of filled rows in table of game art:
+			choose row y in table of game art;
+			if icon entry is x and artist entry is not listed in BlockList of player:
+				now the currently shown picture is x;
+				follow the current graphics drawing rule;
+	if graphics is true and NewGraphics is false:
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
 			if icon entry is x and artist entry is not listed in BlockList of player:
 				display x;
 				break;
 
-graphicmoding is an action applying to nothing.
-understand "graphics" as graphicmoding.
+[COMPOUND -> nproject]
+to nproject (x - a figure name):
+	if graphics is true and NewGraphics is true:
+		repeat with y running from 1 to number of filled rows in table of game art:
+			choose row y in table of game art;
+			if icon entry is x and artist entry is not listed in BlockList of player:
+				follow the ngraphics_open rule;
+				now the currently shown picture is x;
+				follow the current graphics drawing rule;
+	if graphics is true and NewGraphics is false:
+		repeat with y running from 1 to number of filled rows in table of game art:
+			choose row y in table of game art;
+			if icon entry is x and artist entry is not listed in BlockList of player:
+				display x;
+				break;
 
-carry out graphicmoding:
-	if graphics is true:
-		say "Graphics are now disabled.";
-		now graphics is false;
-	else:
-		say "Graphics are now enabled.";
-		now graphics is true;
+
 
 Table of game art
 title	icon(figure name)	artist
@@ -545,6 +592,30 @@ title	icon(figure name)	artist
 "Yuppie Mink_F"	Figure of YuppieMink_icon	"Anymouse1968"	[only shown for female version]
 "Zebra"	Figure of Zebra_icon	"Purplepardus"
 "Zigor"	Figure of Zigor_icon	"AugurMew"
+[emap - special]
+"Navigation - Loading Screen"	Figure of emap_special_loading_icon	"executaball"
+"Navigation - Signal Lost Screen"	Figure of emap_special_signalnotfound_icon	"executaball"
+[emap - mall]
+"Navigation - Mall - Alley"	Figure of emap_mall_alley_icon	"executaball"
+"Navigation - Mall - Atrium"	Figure of emap_mall_atrium_icon	"executaball"
+"Navigation - Mall - Bodyshop"	Figure of emap_mall_bodyshop_icon	"executaball"
+"Navigation - Mall - Branson & Partner"	Figure of emap_mall_bransonpartner_icon	"executaball"
+"Navigation - Mall - Brookstone Books"	Figure of emap_mall_brookstonebooks_icon	"executaball"
+"Navigation - Mall - Christmas Village"	Figure of emap_mall_christmasvillage_icon	"executaball"
+"Navigation - Mall - East Wing"	Figure of emap_mall_eastwing_icon	"executaball"
+"Navigation - Mall - FoodCourt"	Figure of emap_mall_foodcourt_icon	"executaball"
+"Navigation - Mall - Foyer"	Figure of emap_mall_foyer_icon	"executaball"
+"Navigation - Mall - Guardpost"	Figure of emap_mall_guardpost_icon	"executaball"
+"Navigation - Mall - Lockers"	Figure of emap_mall_lockers_icon	"executaball"
+"Navigation - Mall - Lot East"	Figure of emap_mall_loteast_icon	"executaball"
+"Navigation - Mall - Lot North"	Figure of emap_mall_lotnorth_icon	"executaball"
+"Navigation - Mall - Lot South"	Figure of emap_mall_lotsouth_icon	"executaball"
+"Navigation - Mall - Lot West"	Figure of emap_mall_lotwest_icon	"executaball"
+"Navigation - Mall - Nermine's"	Figure of emap_mall_nermines_icon	"executaball"
+"Navigation - Mall - PK Boutique"	Figure of emap_mall_pkboutique_icon	"executaball"
+"Navigation - Mall - Restrooms"	Figure of emap_mall_restrooms_icon	"executaball"
+"Navigation - Mall - ShagShack"	Figure of emap_mall_shagshack_icon	"executaball"
+"Navigation - Mall - West Wing"	Figure of emap_mall_westwing_icon	"executaball"
 
 artistcredits is an action applying to nothing.
 

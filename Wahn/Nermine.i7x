@@ -13,6 +13,13 @@ Version 4 of Nermine by Wahn begins here.
 [  1: the fennec walked off with the ritual supplies                 ]
 [  2: the bet was declared                                           ]
 
+[ JackalBoyTF                            ]
+[  1: Jackalboy Tail                     ]
+[  2: Jackalboy Skin                     ]
+[  3: Jackalboy Head                     ]
+[  4: Jackalboy Body                     ]
+[  5:                                    ]
+
 RomanceBooksFound is a number that varies.
 NermineTalk is a number that varies.
 NermineAroused is a number that varies.
@@ -83,9 +90,9 @@ instead of conversing the Nermine:
 	now description entry is "Talk about Nermine and her strange shop";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "The possibility of her helping you";
+	now title entry is "Ask her help for becoming a jackal";
 	now sortorder entry is 2;
-	now description entry is "Discuss with the jackaless if she can help you deal with your troubles";
+	now description entry is "Talk to Nermine about becoming more like her";
 	[]
 	if (wrcursestatus >= 3 and wrcursestatus < 100 and wrcurseNermine < 14):
 		choose a blank row in table of fucking options;
@@ -135,7 +142,7 @@ instead of conversing the Nermine:
 				now sextablerun is 1;
 				if (nam is "Her and her store"):
 					say "[NermineTalk1]";
-				if (nam is "The possibility of her helping you"):
+				if (nam is "Ask her help for becoming a jackal"):
 					NermineRequestHelp;
 				if (nam is "The wereraptor curse"):
 					say "[NermineTalk2]";
@@ -451,10 +458,12 @@ to say sexwithnermine:
 							say "     Do you pimp out Nermine and allow the jaguarman to make use of her mouth?";
 							if player consents:
 								LineBreak;
+								say "[bold type]You gain 1 food![roman type][line break]";
 								increase carried of food by 1;
+								say "[bold type]You gain 1 water bottle![roman type][line break]";
 								increase carried of water bottle by 1;
 								say "     Agreeing to take payment for Nermine's services, you let the jaguarman put both items on a small table in the store, then wave him closer. ";
-								say "     [NermineSucksJ]";
+								say "[NermineSucksJ]";
 							else:
 								LineBreak;
 								say "     Again declining the jaguar's request, you instead allow him the chance to watch as you yourself have some more fun with Nermine. Despite a slight sigh of disappointment, the male nevertheless is quite happy to take up jerking off to another coupling between you and your pet, stepping closer to get a better look. With the excitement of knowing you're being watched starting to get your cock fully hard and ready again, you pull Nermine up against your chest and whisper in her ear to give a good show, combined with softly pinching her nipples. Then you push her back down again, bent over the counter with her full breasts pressed against it. After putting both hands on her hips, you hold her tightly and pull your hips back, the movement making your knotted cock pull against her pussy, then slip out of it with a wet slurping sound and a gasp from your jackal pet.";
@@ -535,7 +544,7 @@ to say sexwithnermine:
 				stop the action;
 			else:
 				say "     Nermine grins eagerly as she pulls aside the dark curtains leading into the back room. You find your own muzzle stretching in a grin as you watch how eager she is to please you now, and step forward to look into the back room of the shop. Looking around, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is a small writing desk with a laptop on it, and a large comfy looking chair positioned next to it.";
-				say "     Your examination of the room is interrupted, by Nermine stepping in the room behind you, her soft breasts pressing up against your back as she runs the tips of her claws through your fur teasingly, 'Does Nermine's mistress like?' The sexy jackal whispers lustily into your ears as she rubs her body up against your back, her hands reaching around to stroke and tease your own soft nipples as she does so. 'Nermine wishes her mistress to make herself right at home in Nermine's house, everything she owns is her mistress's after all, including Nermine herself...' she pants in your ear, obviously getting even more excited as she breathes in your strong dominant scent. You find yourself panting as well, from the jackal-woman's soft experienced touches, as she strokes her hands needily over your body. Your lust rising, it is all you can do to lead your eager little pet jackal over to the mattress, where you can sprawl out comfortably. ";
+				say "     Your examination of the room is interrupted, by Nermine stepping in the room behind you, her soft breasts pressing up against your back as she runs the tips of her claws through your fur teasingly, 'Does Nermine's mistress like?' The sexy jackal whispers lustily into your ears as she rubs her body up against your back, her hands reaching around to stroke and tease your own soft nipples as she does so. 'Nermine wishes her mistress to make herself right at home in Nermine's house, everything she owns is her mistress's after all, including Nermine herself...' She pants in your ear, obviously getting even more excited as she breathes in your strong dominant scent. You find yourself panting as well, from the jackal-woman's soft experienced touches, as she strokes her hands needily over your body. Your lust rising, it is all you can do to lead your eager little pet jackal over to the mattress, where you can sprawl out comfortably. ";
 				WaitLineBreak;
 				say "Lying down on the bed, you position yourself on your back on the cushions, so you can watch with amusement as Nermine lowers herself down to all fours like an animal, as she crawls into bed with you. Deciding to see just how much fun you can have with this, you spread your legs slightly, giving her a glimpse of your soft jackal pussy, and are amused to see how her tongue immediately begins to lick along the sides of her mouth with desire. Grinning, your own body almost as aroused as hers is by this point, you spread your legs all the way so she can crawl up between them and service you properly, which the newly submissive jackal bitch wastes no time in doing.";
 				say "     The feel of her long canine tongue as it licks over your own needy pussy is a small taste of heaven, as you lean back into the silk covered cushions and groan in pleasure, soon her tongue is teasing the edges of your pussy as it licks over your crotch, making you lift your hips up in excitement with each pass of her flexible tongue. Nermine helps by shifting so you can rest your legs up on her shoulders, the feel of her head between your soft furry thighs is amazing, and you lose yourself for a minute in the pleasure of her soft fur rubbing up against your own, the silk sheets underneath you feeling amazing on your back, even as your canine hindpaws rub up against Nermine's soft back. Once she has you positioned comfortably, she wastes no time lavishing your pussy with her attentions, her hands stroking your thighs even as you gasp at the feel of tongue pushing into your body.";
@@ -543,36 +552,32 @@ to say sexwithnermine:
 				say "     Her narrow canine muzzle rubs up against your lips as she works her tongue in as far as it can go, shifting and teasing it around within you as you groan and clench the cushions underneath you in pleasure, the feel of her eagerly licking and nibbling on your clit as she laps up your juices is indescribably amazing, and after what seems like no time at all, and an eternity of pleasure at the same time, your body is shaking in a mind blowing orgasm as you let out a long canine howl which echoes around the room. Nermine's body shudders as well as you rub your feet on her shoulders, as she laps at your pussy, eager to clean every bit of your juices up, before eventually sitting back on her haunches, your feet settling back down on the mattress as you relax in the afterglow. Looking at your eager pet, and how happy she seems to be with her new role makes you smile, and you pet the mattress next to you, and she eagerly takes the invitation to lie down and tuck herself up against your side. You smile as you drift pleasantly in and out of consciousness for a while, enjoying the new situation and your new pet immensely.";
 				jackalmanify;
 				stop the action;
-	if JackalManTF is 4:
-		say "     'Oh my, Nermine sees her lovely jackal guest found another ankh on [PosAdj] own!' The jackal-woman says with a smile as she looks you up and down eagerly, 'She should have expected no less from someone as obviously resourceful and handsome,' Nermine says as she leans forward to look your changed body over, blinking slightly as she gets a whiff of your strong jackal scent. 'Amazing,' She says as she begins to pant eagerly, 'Nermine has never seen anything so wonderful, just looking at such a strong, handsome jackal is making her feel all sorts of aroused,' the shopkeeper says with a lusty moan as she begins to rub her breasts through her t-shirt, her reaction causing you to grin as she moans like a bitch in heat. Seeing your eyes on where she is rubbing her breasts, Nermine slowly reaches down to the bottom of her shirt, and teasingly begins to draw it up inch by inch.";
+	else if JackalManTF is 4:
+		say "     'Oh my, Nermine sees her lovely jackal guest found another ankh on [PosAdj of player] own!' The jackal-woman says with a smile as she looks you up and down eagerly, 'She should have expected no less from someone as obviously resourceful and handsome,' Nermine says as she leans forward to look your changed body over, blinking slightly as she gets a whiff of your strong jackal scent. 'Amazing,' She says as she begins to pant eagerly, 'Nermine has never seen anything so wonderful, just looking at such a strong, handsome jackal is making her feel all sorts of aroused,' the shopkeeper says with a lusty moan as she begins to rub her breasts through her t-shirt, her reaction causing you to grin as she moans like a bitch in heat. Seeing your eyes on where she is rubbing her breasts, Nermine slowly reaches down to the bottom of her shirt, and teasingly begins to draw it up inch by inch.";
 		say "     The sight of the formerly proper shopkeeper stripping before you somehow only makes the situation seem even better, as her shirt is soon tossed aside while she rubs her hands over her soft black breasts for your amusement. 'Mmm Nermine think maybe she should just work like this from now on, if nice handsome jackal-likes her breasts so much,' Nermine says lustily, as she stretches to give you a good view of her own full jackal body, one of her hands straying down to the clasp of her jeans as you watch. Seeing your obvious approval, she wastes no time in unclasping her jeans and slowly stripping them off as well, eagerly displaying her now naked body before you as she poses. 'Nermine never knew this could feel so good, or that she could want to please someone so much...' The jackal-woman moans eagerly as she runs her hands through her now naked black fur.";
 		WaitLineBreak;
-		say "     'Please won't the proud jackalman help [PosAdj] little jackal out? Nermine needs to be fucked so very very badly, she wants to please her new jackal master...' The shopkeeper says, eagerly, seeming almost surprised at her own begging words, before grinning as she realizes their truth, 'Yes... a master, nice strong powerful jackal master, just what Nermine always needed...' She moans eagerly as she stares up at you with adoration, the sight making you grin as you realize the scent laden ankh is working exactly the way the strange jackal man promised it would, you just can't wait to see what kind of fun you can have with this in the back room...";
+		say "     'Please won't the proud jackalman help [PosAdj of player] little jackal out? Nermine needs to be fucked so very very badly, she wants to please her new jackal master...' The shopkeeper says, eagerly, seeming almost surprised at her own begging words, before grinning as she realizes their truth, 'Yes... a master, nice strong powerful jackal master, just what Nermine always needed...' She moans eagerly as she stares up at you with adoration, the sight making you grin as you realize the scent laden ankh is working exactly the way the strange jackal man promised it would, you just can't wait to see what kind of fun you can have with this in the back room...";
 		now RareQuesting is 13;
 		now NermineTalk is 4;
-		stop the action;
-	if JackalManTF is 3:
+	else if JackalManTF is 3:
 		now lastfuck of Nermine is turns;
 		if cocks of the player > 0:
 			say "     'Ah yes! Nermine's new friend is ready to play?' The happy jackal-woman says with a canine grin on her silver and black muzzle, 'And such a handsome looking jackal too,' She says as she reaches out and strokes the tip of her claw along the side of your own jackal-like muzzle, idly tracing the swirls of gold the ankh left in your fur. Her soft touch makes your cock harden even as you nod, and Nermine licks her lips as she looks down at your stiff rod, one of her hands tugging at the neck of her t-shirt slightly as if she was hot. 'Mmm, it has been so long since Nermine has had a proper partner to play with, Nermine is so looking forward to this,' she says teasingly as she leans forward and kisses the tip of your muzzle teasingly, 'Maybe the back room would be a better place for this, so there will not be any interruptions to an enjoyable time.' The jackal-woman says teasingly, as she steps back from the counter, running her hands along her sides teasingly before pulling aside the dark curtain behind her and stepping through.";
-			say "     You can see her glance teasingly over her shoulder at you as her tail wags invitingly behind her, giving you a teasing glimpse of her legs underneath her soft skirt as she vanishes into the darkness beyond. You grin as you move around the counter, to follow, your cock stiff and eager to play with the constantly teasing jackal. Pushing aside the curtains you step forward to find yourself in the back room of the shop. Looking around, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is a small writing desk with a laptop on it, and a large comfy looking chair positioned next to it. However your attention is immediately drawn to where Nermine is lying teasingly on the bed, clothed in only her soft black fur as she grins at you.";
+			say "     You can see her glance teasingly over her shoulder at you as her tail wags invitingly behind her, giving you a teasing glimpse of her legs underneath her soft skirt as she vanishes into the darkness beyond. You grin as you move around the counter, to follow, your cock stiff and eager to play with the constantly teasing jackal. Pushing aside the curtains you step forward to find yourself in the back room of the shop. Looking around, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is a small writing desk with a laptop on it,and a large comfy looking chair positioned next to it. However your attention is immediately drawn to where Nermine is lying teasingly on the bed, clothed in only her soft black fur as she grins at you.";
 			WaitLineBreak;
-			say "Feeling an answering grin stretching across your own canine muzzle, you waste no time in discarding your pack as you stalk over to the bed yourself, your cock rock hard as she licks the tip of her claw as you approach, before tracing her claw down the edge of her full breasts. Easing yourself down onto the bed beside her, you can feel yourself growing even more aroused as she reaches out and pulls you closer to her, rubbing her own dark fur up against your own. 'Let's play,' she whispers in your ear, before covering your jackal muzzle with her own, her eyes closed as she pulls you tight up against her body. You moan into her mouth as you can feel her damp pussy rubbing up against your [cock of player] cock, and you can feel her grin against your mouth as she begins to position herself so you can enter her.";
+			say "     Feeling an answering grin stretching across your own canine muzzle, you waste no time in discarding your pack as you stalk over to the bed yourself, your cock rock hard as she licks the tip of her claw as you approach, before tracing her claw down the edge of her full breasts. Easing yourself down onto the bed beside her, you can feel yourself growing even more aroused as she reaches out and pulls you closer to her, rubbing her own dark fur up against your own. 'Let's play,' she whispers in your ear, before covering your jackal muzzle with her own, her eyes closed as she pulls you tight up against her body. You moan into her mouth as you can feel her damp pussy rubbing up against your [cock of player] cock, and you can feel her grin against your mouth as she begins to position herself so you can enter her.";
 			say "     You groan into her mouth as your tongues dance together eagerly, as you feel your cock sink into her body at last, her warm heat engulfing your shaft, even as her hands roam over your body. Letting your own hands wander, you begin to thrust into her eager passage, the kiss breaking as she begins to pant and yip needily, your own canine voice soon mingling with hers as your pleasure builds quickly. Soon you are kissing and groping each other eagerly as you roll around on the mattress, enjoying each other sexually in an act somewhere between making love, and rutting like animals. Eventually your cock explodes in pleasure as you spill your load of seed deep into her body, while she clutches you close and groans in her own orgasm. The two of you clutch each other tight, still locked together in passion even as your orgasm begins to fade, Nermine kissing you deeply several more times, eventually though she pulls herself away, leaving you to groan as you flop back on the soft mattress completely spent.";
 			WaitLineBreak;
 			say "     As she pulls herself up and begins to slip her clothes on, she looks back at you teasingly to make sure you are watching, sauntering sexily over to the curtain with her tail lifting her skirt up teasingly. Pausing at the curtain, she looks back at you for a minute with a smile on her face. 'Nermine thanks you for the most amazing time, It is so rare for her to find a real partner these days, all of them are so submissive they are only fit for little pet in bed not partner. You though,' She says with a wink, 'You are best sex Nermine has had in long time, Nermine thinks we will have to do this again soon yes?' The jackal-woman says with a teasing lick of her lips, before she vanishes through the curtain, leaving you lying there on the bed with a large smile on your muzzle, already anticipating the next time...";
-			stop the action;
 		else:
-			say "     'Ah yes! Nermine's new friend is finally ready to play?' The happy jackal-woman says with a canine grin on her silver and black muzzle, 'And such a beautiful looking jackal lady too,' She says as she reaches out and strokes the tip of her claw along the side of your own jackal-like muzzle, idly tracing the swirls of gold the ankh left in your fur. Her soft touch makes your body grow warm as your pussy dampens in arousal even as you nod, and Nermine licks her lips as she looks over your body, one of her hands tugging at the neck of her t-shirt slightly as if she was hot. 'Mmm It has been so long since Nermine has had a proper partner to play with, Nermine is so looking forward to this,' She says teasingly as she leans forward and kisses the tip of your muzzle teasingly, 'Maybe we should go to back room so we won't have any interruptions Nermine is thinking.' The jackal-woman says teasingly, as she steps back from the counter, running her hands along her sides teasingly before pulling aside the dark curtain behind her and stepping through.";
-			say "     You can see her glance teasingly over her shoulder at you as her tail wags invitingly behind her, giving you a teasing glimpse of her legs underneath her soft skirt as she vanishes into the darkness beyond. You grin as you move around the counter to follow, your body hot with need, as you follow the feminine scent of the constantly teasing jackal-woman. Pushing aside the curtains you step forward to find yourself in the back room of the shop. Looking around, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is a small writing desk with a laptop on it, and a large comfy looking chair positioned next to it. However your attention is immediately drawn to where Nermine is lying teasingly on the bed, clothed in only her soft black fur as she grins at you.";
+			say "     'Ah yes! Nermine's new friend is finally ready to play?' The happy jackal-woman says with a canine grin on her silver and black muzzle, 'And such a beautiful looking jackal lady too,' She says as she reaches out and strokes the tip of her claw along the side of your own jackal-like muzzle, idly tracing the swirls of gold the ankh left in your fur. Her soft touch makes your body grow warm as your pussy dampens in arousal even as you nod, and Nermine licks her lips as she looks over your body, one of her hands tugging at the neck of her t-shirt slightly as if she was hot. 'Mmm! It has been so long since Nermine has had a proper partner to play with, Nermine is so looking forward to this,' She says teasingly as she leans forward and kisses the tip of your muzzle teasingly, 'Maybe one should move to back room - no interruptions there, Nermine is thinking.' The jackal-woman says teasingly, as she steps back from the counter, running her hands along her sides teasingly before pulling aside the dark curtain behind her and stepping through.";
+			say "     You can see her glance teasingly over her shoulder at you as her tail wags invitingly behind her, giving you a teasing glimpse of her legs underneath her soft skirt as she vanishes into the darkness beyond. You grin as you move around the counter to follow, your body hot with need, as you follow the feminine scent of the constantly teasing jackal-woman. Pushing aside the curtains you step forward to find yourself in the back room of the shop. Looking around, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is a small writing desk with a laptop on it,and a large comfy looking chair positioned next to it. However your attention is immediately drawn to where Nermine is lying teasingly on the bed, clothed in only her soft black fur as she grins at you.";
 			WaitLineBreak;
 			say "     Feeling an answering grin stretching across your own canine muzzle, you waste no time in discarding your pack as you stalk over to the bed yourself, your arousal spiking as she licks the tip of her claw at your approach, before tracing her claw down the edge of her full breasts. Easing yourself down onto the bed beside her, you can feel yourself need growing even more desperate as she reaches out and pulls you closer to her, rubbing her own dark fur up against your own. 'Let's play,' she whispers in your ear, before covering your jackal muzzle with her own, her eyes closed as she pulls you tight up against her body. You moan into her mouth as you can feel her damp pussy rubbing up against the soft fur of your leg, and you can feel her grin against your mouth as she begins to move teasingly up against you, one of her fingers tracing along the outside of your own damp pussy teasingly.";
 			say "     You groan into her mouth as your tongues dance together eagerly, as you feel her soft furred hands roam over your body teasingly, lingering on your pussy and breasts as she rubs herself up against you. Letting your own hands wander, you begin to rub your body against hers as well, your own hands returning the favor as you tease her swollen clit with your fingers, the kiss finally breaking as she begins to pant and yip needily, your own canine voice soon mingling with hers as your own pleasure builds just as quickly. Soon you are kissing and groping each other eagerly as you roll around on the mattress, enjoying each other sexually in an act somewhere between making love, and rutting like animals. Your hands pushing into each other as your softly furred bodies twine together on the soft silken sheets of the mattress. Finally the feeling of her claws tracing lighting along the inside of your damp passage is just too much to take, and you let out a jackal-like bark as you orgasm around her hand, shuddering in ecstasy even as she clutches you close and groans with her own orgasm, her passage clenching your own fingers tight as her damp fluids spill over your hand. The two of you clutch each other tight, still locked together in passion even as your orgasm begins to fade, Nermine kissing you deeply several more times, eventually though she pulls herself away, leaving you to groan as you flop back on the soft mattress completely spent.";
 			WaitLineBreak;
 			say "     As she pulls herself up and begins to slip her clothes on, she looks back at you teasingly to make sure you are watching, sauntering sexily over to the curtain with her tail lifting her skirt up teasingly. Pausing at the curtain, she looks back at you for a minute with a smile on her face. 'Nermine thanks you for the most amazing time, It is so rare for her to find a real partner these days, all of them are so submissive they are only fit for little pet in bed not partner. You though,' She says with a wink, 'You are best sex Nermine has had in long time, Nermine thinks we will have to do this again soon yes?' The jackal-woman says with a teasing lick of her lips, before she vanishes through the curtain, leaving you lying there on the bed with a large smile on your muzzle, already anticipating the next time...";
-			stop the action;
-	if JackalBoyTF is 4:
-		now lastfuck of Nermine is turns;
+	else if JackalBoyTF is 4:
 		if cocks of the player > 0:
 			if cunts of the player > 0: [herm]
 				say "     'Ah Nermine's new little pet wants to pleasure her mistress like a good little jackal pet?' The jackal-woman asks with an amused smile as she looks over your slim body. Her gaze lingers on your male and female parts, making your soft body tingle with desire and your cock twitch in its sheath while your sex dampens with desire. ";
@@ -581,9 +586,9 @@ to say sexwithnermine:
 		else: [female]
 			say "     'Ah Nermine's new little pet wants to pleasure her mistress like a good little jackal slut?' The jackal-woman asks with an amused smile as she looks over your slim body. Her gaze lingers on your female parts, making your soft body tingle with desire. ";
 		say "Eagerly, you nod to the beautiful woman. 'Well, Nermine is always happy to reward her little pet for such loyal service,' the jackal-woman says as she gives you a wink, 'Perhaps if the delightful little thing would follow her into the back room she can see about a proper reward.' With a sultry smile, she then turns and lifts the dark curtains behind her, gesturing for you to follow as she steps through herself, her long jackal's tail swaying temptingly in front of you as you eagerly hurry after your mistress.";
-		say "     Pushing aside the curtains, you find yourself in a rather large back room with boxes piled high along one side. However, your attention is immediately drawn to the other side of the room, where a soft mattress lies on the floor, piled high with blankets. Next to the mattress is a small writing desk with a laptop on it, and a large comfy looking chair. Walking up to the soft matress, Nermine slowly tugs her t-shirt off, letting her well-rounded black breasts slip free as she tosses it to the side, her skirt soon following suit. You find your muzzle watering with desire as she sprawls back across the mattress, allowing you to feast your eyes on the gorgeous sight of her spread out before you. Her soft pink nipples and damp slit make your canine tail wag eagerly even as your cock extends out of its sheath and you begin to pant in excitement.";
+		say "     Pushing aside the curtains, you find yourself in a rather large back room with boxes piled high along one side. However, your attention is immediately drawn to the other side of the room, where a soft mattress lies on the floor, piled high with blankets. Next to the mattress is a small writing desk with a laptop on it, and a large comfy looking chair. Walking up to the soft mattress, Nermine slowly tugs her t-shirt off, letting her well-rounded black breasts slip free as she tosses it to the side, her skirt soon following suit. You find your muzzle watering with desire as she sprawls back across the mattress, allowing you to feast your eyes on the gorgeous sight of her spread out before you. Her soft pink nipples and damp slit make your canine tail wag eagerly even as your cock extends out of its sheath and you begin to pant in excitement.";
 		WaitLineBreak;
-		say "     A smug smile crosses Nermine's muzzle as she enjoys your obvious adoration of her sexy body. 'Well,' she says in a teasing voice as you find yourself slowly drifting closer, your mind filled with lust. Nermine smiles and continues, 'Is the little jackal just going to stand there and stare, or will the good pet come play with [PosAdj] mistress?' You need no second invitation to give in to your building desires, and soon find yourself down on all fours and crawling up onto the mattress where your lovely owner is waiting. Crawling up to her, you find yourself savoring her excited scent, and the way your new body so eagerly responds to her. 'Ah yes, if the sweet pet takes care of Nermine, she will respond in kind, as well,' Your mistress pants and lifts her hind-paw up to brush against your ";
+		say "     A smug smile crosses Nermine's muzzle as she enjoys your obvious adoration of her sexy body. 'Well,' she says in a teasing voice as you find yourself slowly drifting closer, your mind filled with lust. Nermine smiles and continues, 'Is the little jackal just going to stand there and stare, or will the good pet come play with [PosAdj of player] mistress?' You need no second invitation to give in to your building desires, and soon find yourself down on all fours and crawling up onto the mattress where your lovely owner is waiting. Crawling up to her, you find yourself savoring her excited scent, and the way your new body so eagerly responds to her. 'Ah yes, if the sweet pet takes care of Nermine, she will respond in kind, as well,' Your mistress pants and lifts her hind-paw up to brush against your ";
 		if cocks of player > 0 and cunts of player > 0:
 			say "stiff erect cock, stroking up and down along its length several times. Soon, she also teases your damp slit, her soft touch making you quiver with need.";
 		else if cocks of player > 0:
@@ -598,45 +603,63 @@ to say sexwithnermine:
 		say "     [if cocks of player > 0]When the kiss is over, Nermine pushes your head down to the mess you made on her stomach. Quickly licking it up like a good pet, you smile up at her pleased face with the taste of your own cum and her soft fur still filling your muzzle. [end if]Smiling benevolently, she draws you down next to her on the soft blankets. There, you feel nice and safe tucked up against her side as you both relax and cuddle quietly, letting your respective orgasms run their course, lust and arousal ebbing off slowly while clawed hands idly run over your fur in petting motions. As you lie there cuddling with your strong and dominant owner, you find yourself enjoying how nice it is just to be a lovely little jackal pet, your greatest reward the pleasure of serving and bringing pleasure to your new wonderful mistress. After a while of lying there softly together, Nermine's soft touches grow more sensual, and you happily respond and return the favor, kissing and pleasuring her wonderful body until soon you are both crying out in orgasm yet again.";
 		say "     Eventually she licks the top of her head a few times with her tongue before pulling herself up off of the mattress and looking back down at you. 'Nermine just knew from the first moment that the eager visitor walked into her store that deep down [SubjectPro of player] wanted to be a pet. To have someone big and strong take care of [ObjectPro of player]. Nermine is so happy she was asked for her help in making the happy little jackal [if cunts of player > 0]pet[else]boy[end if] that [SubjectPro of player] was destined to be. Now Nermine has such an amazing pet to have fun with, and a helper around the store, and the happy pet has Nermine to help and pleasure. Everyone is happy.' She says with a canine grin, then gathers up her clothing before heading out into the shop, leaving her happy jackal pet nodding behind her. You realize just how lucky you are to have such a wonderful and caring owner, and feel happy and eager to become even more the perfect little jackal toy for your mistress...";
 		Jackalboyify;
-		stop the action;
-	if JackalBoyTF is 3: [----------------------]
 		now lastfuck of Nermine is turns;
+	else if JackalBoyTF is 3:
 		if cocks of the player > 0:
 			if cunts of the player > 0: [herm]
-				say "     'Ah Nermine's new little pet wants to pleasure her mistress?' The jackal-woman asks with a soft smile as she looks over your male body. Her gaze lingers on your male and female parts, making your soft body tingle with desire and your cock twitch in its sheath while your sex dampens with desire. ";
+				say "     'Ah Nermine's new little pet wants to pleasure her mistress?' The jackal-woman asks with a soft smile as she looks over your male body, your cock erect with need even as your pussy clenches in excitement. Her gaze lingers on your crotch, making you tingly with desire. ";
 			else: [male]
-				say "     'Ah Nermine's new little pet wants to pleasure her mistress like a good little jackal boy?' The jackal-woman asks with an amused smile as she looks over your slim body. Her gaze lingers on your manhood, making your soft body tingle with desire and your cock twitch in its sheath. ";
+				say "     'Ah Nermine's new little pet wants to pleasure her mistress like a good little jackal boy?' The jackal-woman asks with an amused smile as she looks over your male body, your cock erect with need. Her gaze lingers on your crotch, making you tingly with desire. ";
 		else: [female]
-			say "     'Ah Nermine's new little pet wants to pleasure her mistress like a good little jackal slut?' The jackal-woman asks with an amused smile as she looks over your slim body. Her gaze lingers on your female parts, making your soft body tingle with desire. ";
-		now lastfuck of Nermine is turns;
+			say "     'Ah Nermine's new little pet wants to pleasure her mistress like a good little jackal slut?' The jackal-woman asks with an amused smile as she looks over your female body. Her gaze lingers on your female parts, making you tingly with desire. ";
+		say "'Well...' the lovely jackal lady says thoughtfully as she glances around the store for a moment, 'It does look like Nermine has some time to kill, and her little helper is starting to look very sexy... Perhaps she will allow [ObjectPro of player] to you help her out for a minute.' With that said, Nermine turns and lifts the dark curtains behind her, gesturing for you to follow as she steps through herself. Her long jackal's tail sways temptingly in front of you as you hurry after her.";
+		say "     Pushing aside the curtains, you find yourself in a rather large back room with boxes piled high along one side. However, your attention is immediately drawn to the other side of the room, where a soft mattress lies on the floor, piled high with blankets. Next to the mattress is a small writing desk with a laptop on it, and a large comfy looking chair. Your eyes however, are immediately drawn to your mistress, as she moves over to the chair and begins to teasingly lift the front of her short skirt up. You find yourself riveted to the sight of her soft pussy as it slowly comes into view, your jackal tail wagging behind you as she exposes herself to you one inch at a time.";
+		WaitLineBreak;
+		say "     Seeing that she has your full attention, the sexy jackaless carefully sits down in her comfy chair, making sure to keep her lovely pink lips in sight at all times as she adjusts her position slightly before spreading her legs. Somewhat surprised and excited at her position, you find your eyes glancing at the soft mattress for a second before they refocus on your mistress's onyx form. The enticing woman seems to notice your glance though, as a smile tugs at the corner of her muzzle while she tsks at you, 'Nermine's bed is for proper jackals and their fully jackal pets only,' she teases with a smile as she crooks one of her furred fingers to draw you closer. 'If the little pet wants to play on the bed, [SubjectPro of player] will have to earn it by being even more helpful and nice to Nermine. A start would be to put that sexy new muzzle to good use,' Nermine tells you as you step forward, lightly tracing one of her claws along the outside of her damp lips, leaving no question as to what she means for you to do.";
+		say "     You find yourself smiling eagerly as you sink to your knees in front of her, a proper position for the worship of her divine-looking sex. Slowly lowering your long muzzle down to her crotch you revel in her powerful female musk. You lick your lips slightly in anticipation, before letting your canine tongue trace along her lovely pink nether lips, her taste filling your mouth as you draw your tongue across her lips again. Your sexy jackal mistress reaches down one of her hands and begins to pet and stroke your head in encouragement. That tangible sign of her approval makes you shudder with delight as ";
 		if cocks of the player > 0:
-			if cunts of the player > 0:
-				say "'Ah Nermine's new little pet wants to pleasure her mistress?' The jackal-woman asks with a soft smile as she looks over your male body, your cock erect with need even as your pussy clenches in excitement. 'Well...' the lovely jackal lady says thoughtfully as she glances around the store for a moment, 'It does look like Nermine has some time to kill, and her little helper is starting to look very sexy... Perhaps she will let you help her out for a minute.' Nermine says as she turns and lifts the dark curtains behind her, gesturing for you to follow as she steps through herself, her long jackals tail swaying temptingly in front of you as you hurry after her. Pushing aside the curtains, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is a small writing desk with a laptop on it, and a large comfy looking chair. Your eyes however, are immediately drawn to your mistress, as she moves over to the chair and begins to teasingly stroke lift the front of her short skirt up. You find yourself riveted to the sight of her soft pussy as it slowly comes into view, your jackal tail wagging behind you as she exposes herself to you one inch at a time.[line break]";
-				say "Seeing she has your full attention, the sexy jackaless carefully sits down in her comfy chair, making sure to keep her lovely pink lips in sight at all times as she adjusts her position slightly before spreading her legs. Somewhat surprised and excited at her position, you find your eyes glancing at the soft mattress for a second before they refocus on your mistresses onyx form. Nermine seems to notice your glance though, as a smile tugs at the corner of her muzzle while she tsks at you, 'Bed is for proper jackals and their fully jackal pets only,' She says teasingly as she crooks one of her furred fingers at you to entice you to come closer. 'If the little pet wants to play on the bed, they will have to earn it by being even more helpful and nice to Nermine.' The jackal-woman says as you find yourself moving closer, 'And Nermine thinks you can start being nice and helpful by putting that sexy new muzzle of yours to good use,' She says as you reach her, lightly tracing one of her claws along the outside of her damp lips, leaving no question as to what she means for you to do.[line break]";
-				say "You find yourself smiling eagerly as you sink to your knees in front of her, a proper position for the worship of her divine looking sex, slowly lowering your long muzzle down to her crotch, reveling in her powerful female musk. You lick your lips slightly in anticipation, before letting your canine tongue trace along her lovely pink lips, her beautiful taste filling your mouth as you draw your tongue across her lips again. Your sexy jackal mistress reaches down one of her hands and begins to pet and stroke your head in encouragement, the tangible sign of her approval making you shudder with delight as your own cock grows harder even as your pussy floods with wetness in response to her touch. Happy to be able to serve her in this manner, you waste no time in renewing your attention to her damp sex, your tongue pressing deeper into the body with every stroke as you lap happily at her like a good little pet. Your eyes close and you moan into her slit as you feel one of her soft paws rubbing up against the inside of your legs, and you can't help but spread them slightly as you lean forward, allowing her soft footpaw to stroke up and down your inner thighs. A soft stroke on your headfur as well reminds you to return your attentions to the task at hand, and you begin to put your new canine muzzle to its proper use as you use your long tongue to tease and probe her depths.[line break]";
-				say "Soon your mistresses footpaw is rubbing up against your damp slit, even as it teases your balls with each stroke, your orbs dancing pleasantly under her attentions. The top of her foot slowly strokes even higher, its long teasing strokes letting your mistress rub her soft jackal furred paw against your both your needy clit and stroke along the bottom of your cock with each pass of her canine paw, making you shudder and groan in pleasure. Your eyes drift closed as your world narrows down to the feeling of pleasuring the jackal's delicious slit with your mouth, and the feeling of her soft hand on your head and her teasing paw between your legs. Your eager attentions soon bear fruit, as suddenly your Nermine moans above you, and your mouth is flooded with the amazing taste of her warm juices, even as her hand clenches your head tightly and her foot rubs up against your female sex eagerly, the fur of her leg teasing your rod as it rubs against it lightly. The taste, the sensations of her soft touches, combined with the realization that you brought your mistress pleasure like a good little pet, all swirl around pleasurably in your head, triggering your body to shudder in its own powerful orgasm as well, shooting your thick canine seed all over your mistresses leg even as your female sex coats her paw in its juices, as you shudder in orgasm underneath her hands. Panting heavily you slowly draw your muzzle out of her crotch, licking your lips slightly to savor her flavor as you look up at your mistress to see how pleased she is by your actions.[line break]";
-				say "'That was very very nice, my little pet was certainly a good little helper today.' She pants, her mouth still hanging open in pleasure, and her praise making your soul sing happily. 'But now Nermine has one more problem...' She continues teasingly, her voice trailing off as you wait eagerly to hear how you can help her with this new problem of hers. 'Now Nermine's paw is all wet and sticky,' she says as she lifts her hindpaw up to show you, its dark fur soaked with the evidence of your own orgasm. 'Would some good little pet be a dear and help lick it clean for her?' She asks you with a soft grin, and you eagerly nod in response, happy to be able to be of service again so soon. Dropping to your hands and knees in front of her as she lowers her paw once again to the floor, you waste no time in licking your own mingled juices off her perfectly formed paw, the taste of cum and female pleasure mixing deliciously on your tongue as you apply yourself to your task. A smile stretches across your muzzle as her other hindpaw rubs along your arm and chest, happy of the soft wonderful touch of your mistress. As you lick the last bit of fur on her paw in place, you sit back happily to let your mistress inspect your work, feeling joy at how pleased she seems to be with her little pet, as she pets you on the head a few times, before heading back out to the store. You get up and follow along behind the lovely jackal-woman happily, glad she saw fit to reward you with your own orgasm, but now realizing deep down, that being of service to your mistress is its own even better reward, and you find yourself feeling even happier in your new role as her pet.";
-				stop the action;
-			else:
-				say "'Ah Nermine's new little pet wants to pleasure her mistress?' The jackal-woman asks with a soft smile as she looks over your male body, your cock erect with need. 'Well...' the lovely jackal lady says thoughtfully as she glances around the store for a moment, 'It does look like Nermine has some time to kill, and her little helper is starting to look very sexy... Perhaps she will let you help her out for a minute.' Nermine says as she turns and lifts the dark curtains behind her, gesturing for you to follow as she steps through herself, her long jackals tail swaying temptingly in front of you as you hurry after her. Pushing aside the curtains, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is a small writing desk with a laptop on it, and a large comfy looking chair. Your eyes however, are immediately drawn to your mistress, as she moves over to the chair and begins to teasingly stroke lift the front of her short skirt up. You find yourself riveted to the sight of her soft pussy as it slowly comes into view, your jackal tail wagging behind you as she exposes herself to you one inch at a time.[line break]";
-				say "Seeing she has your full attention, the sexy jackaless carefully sits down in her comfy chair, making sure to keep her lovely pink lips in sight at all times as she adjusts her position slightly before spreading her legs. Somewhat surprised and excited at her position, you find your eyes glancing at the soft mattress for a second before they refocus on your mistresses onyx form. Nermine seems to notice your glance though, as a smile tugs at the corner of her muzzle while she tsks at you, 'Bed is for proper jackals and their fully jackal pets only,' She says teasingly as she crooks one of her furred fingers at you to entice you to come closer. 'If the little pet wants to play on the bed, they will have to earn it by being even more helpful and nice to Nermine.' The jackal-woman says as you find yourself moving closer, 'And Nermine thinks you can start being nice and helpful by putting that sexy new muzzle of yours to good use,' She says as you reach her, lightly tracing one of her claws along the outside of her damp lips, leaving no question as to what she means for you to do.[line break]";
-				say "You find yourself smiling eagerly as you sink to your knees in front of her, a proper position for the worship of her divine looking sex, slowly lowering your long muzzle down to her crotch, reveling in her powerful female musk. You lick your lips slightly in anticipation, before letting your canine tongue trace along her lovely pink lips, her beautiful taste filling your mouth as you draw your tongue across her lips again. Your sexy jackal mistress reaches down one of her hands and begins to pet and stroke your head in encouragement, the tangible sign of her approval making you shudder with delight as your own cock grows even harder in response to her touch. Happy to be able to serve her in this manner, you waste no time in renewing your attention to her damp sex, your tongue pressing deeper into the body with every stroke as you lap happily at her like a good little pet. Your eyes close and you moan into her slit as you feel one of her soft paws rubbing up against the inside of your legs, and you can't help but spread them slightly as you lean forward, allowing her soft footpaw to stroke up and down your inner thighs. A soft stroke on your headfur as well reminds you to return your attentions to the task at hand, and you begin to put your new canine muzzle to its proper use as you use your long tongue to tease and probe her depths.[line break]";
-				say "Soon your mistresses footpaw is rubbing up against your balls with each stroke, your orbs dancing pleasantly under her attentions. The top of her foot slowly strokes even higher, teasing and rubbing its soft jackal fur against the bottom of your cock with each new touch making you shudder in pleasure. Your eyes drift closed as your world narrows down to the feeling of pleasuring the jackal's delicious slit with your mouth, and the feeling of her soft hand on your head and her teasing paw between your legs. Your eager attentions soon bear fruit, as suddenly your Nermine moans above you, and your mouth is flooded with the amazing taste of her warm juices, even as her hand clenches your head tightly and her foot rubs over your stiff rod eagerly. The taste, the sensations of her soft touches, combined with the realization that you brought your mistress pleasure like a good little pet, all swirl around pleasurably in your head, triggering your body to shudder in its own powerful orgasm as well, shooting your thick canine seed all over your mistresses paw as you shudder underneath her hand. Panting heavily you slowly draw your muzzle out of her crotch, licking your lips slightly to savor her flavor as you look up at your mistress to see how pleased she is by your actions.[line break]";
-				say "'That was very very nice, my little pet was certainly a good little helper today.' She pants, her mouth still hanging open in pleasure, and her praise making your soul sing happily. 'But now Nermine has one more problem...' She continues teasingly, her voice trailing off as you wait eagerly to hear how you can help her with this new problem of hers. 'Now Nermine's paw is all wet and sticky,' she says as she lifts her hindpaw up to show you, its dark fur soaked with the evidence of your own orgasm. 'Would some good little pet be a dear and help lick it clean for her?' She asks you with a soft grin, and you eagerly nod in response, happy to be able to be of service again so soon. Dropping to your hands and knees in front of her as she lowers her paw once again to the floor, you waste no time in licking your own thick cum off her perfectly formed paw, a smile stretching your muzzle as her other hindpaw rubs along your arm and chest, happy of the soft wonderful touch of your mistress. As you lick the last bit of fur on her paw in place, you sit back happily to let your mistress inspect your work, feeling joy at how pleased she seems to be with her little pet, as she pets you on the head a few times, before heading back out to the store. You get up and follow along behind the lovely jackal-woman happily, glad she saw fit to reward you with your own orgasm, but now realizing deep down, that being of service to your mistress is its own even better reward, and you find yourself feeling even happier in your role as her pet.";
-				stop the action;
-		else:
-			say "'Ah Nermine's new little pet wants to pleasure her mistress?' The jackal-woman asks with a soft smile as she looks over your female body. 'Well...' the lovely jackal lady says thoughtfully as she glances around the store for a moment, 'It does look like Nermine has some time to kill, and her little helper is starting to look very sexy... Perhaps she will let you help her out for a minute.' Nermine says as she turns and lifts the dark curtains behind her, gesturing for you to follow as she steps through herself, her long jackals tail swaying temptingly in front of you as you hurry after her. Pushing aside the curtains, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is a small writing desk with a laptop on it, and a large comfy looking chair. Your eyes however, are immediately drawn to your mistress, as she moves over to the chair and begins to teasingly stroke lift the front of her short skirt up. You find yourself riveted to the sight of her soft pussy as it slowly comes into view, your jackal tail wagging behind you as she exposes herself to you one inch at a time.[line break]";
-			say "Seeing she has your full attention, the sexy jackaless carefully sits down in her comfy chair, making sure to keep her lovely pink lips in sight at all times as she adjusts her position slightly before spreading her legs. Somewhat surprised and excited at her position, you find your eyes glancing at the soft mattress for a second before they refocus on your mistresses onyx form. Nermine seems to notice your glance though, as a smile tugs at the corner of her muzzle while she tsks at you, 'Bed is for proper jackals and their fully jackal pets only,' She says teasingly as she crooks one of her furred fingers at you to entice you to come closer. 'If the little pet wants to play on the bed, they will have to earn it by being even more helpful and nice to Nermine.' The jackal-woman says as you find yourself moving closer, 'And Nermine thinks you can start being nice and helpful by putting that sexy new muzzle of yours to good use,' She says as you reach her, lightly tracing one of her claws along the outside of her damp lips, leaving no question as to what she means.[line break]";
-			say "You find yourself smiling eagerly as you sink to your knees in front of her, a proper position for the worship of her divine looking sex, slowly lowering your long muzzle down to her crotch, reveling in her powerful female musk. You lick your lips slightly in anticipation, before letting your canine tongue trace along her lovely pink lips, her beautiful taste filling your mouth as you draw your tongue across her lips again. Your sexy jackal mistress reaches down one of her hands and begins to pet and stroke your head in encouragement, the tangible sign of her approval making you shudder with delight as your own sex grows damp in response to her touch. Happy to be able to serve her in this manner, you waste no time in renewing your attention to her damp sex, your tongue pressing deeper into the body with every stroke as you lap happily at her like a good little pet. Your eyes close and you moan into her slit as you feel one of her soft paws rubbing up against the inside of your legs, and you can't help but spread them slightly as you lean forward, allowing her soft footpaw to stroke up and down your inner thighs. A soft stroke on your headfur as well reminds you to return your attentions to the task at hand, and you begin to put your new canine muzzle to its proper use as you use your long tongue to tease and probe her depths.[line break]";
-			say "Soon your mistresses footpaw is rubbing up against your own damp sex, making you shudder slightly as she brushes over your clit with every soft stroke. Your eyes drift closed as your world narrows down to the feeling of pleasuring the jackal's delicious slit with your mouth, and the feeling of her soft hand on your head and her teasing paw between your legs. Your eager attentions soon bear fruit, as suddenly your Nermine moans above you, and your mouth is flooded with the amazing taste of her warm juices, even as her hand clenches your head tightly and her foot presses up against your own needy slit. The taste, the sensations of her soft touches, combined with the realization that you brought your mistress pleasure like a good little pet, all swirl around pleasurably in your head, triggering your body to shudder in its own powerful orgasm as well, coating your mistresses paw with your own juices as you shudder underneath her hand. Panting heavily you slowly draw your muzzle out of her crotch, licking your lips slightly to savor her flavor as you look up at your mistress to see how pleased she is by your actions.[line break]";
-			say "'That was very very nice, my little pet was certainly a good little helper today.' She says, her mouth still hanging open in pleasure, and her praise making your soul sing happily. 'But now Nermine has one more problem...' She continues teasingly, her voice trailing off as you wait eagerly to hear how you can help her with this new problem of hers. 'Now Nermine's paw is all wet and sticky,' she says as she lifts her hindpaw up to show you, its dark fur soaked with the evidence of your own orgasm. 'Would some good little pet be a dear and help lick it clean for her?' She asks you with a soft grin, and you eagerly nod in response, happy to be able to be of service again so soon. Dropping to your hands and knees in front of her as she lowers her paw once again to the floor, you waste no time in licking your own sweet juices off her perfectly formed paw, a smile stretching your muzzle as her other hindpaw rubs along your arm and chest, happy of the soft wonderful touch of your mistress. As you lick the last bit of fur on her paw in place, you sit back happily to let your mistress inspect your work, feeling joy at how pleased she seems to be with her little pet, as she pets you on the head a few times, before heading back out to the store. You get up and follow along behind the lovely jackal-woman happily, glad she saw fit to reward you with your own orgasm, but now realizing deep down, that being of service to your mistress is its own even better reward, and you find yourself once feeling even happier in your role as her pet.";
-			stop the action;
+			if cunts of the player > 0: [herm]
+				say "your own cock grows harder even as your pussy floods with wetness in response to her touch. ";
+			else: [male]
+				say "your own cock grows even harder in response to her touch. ";
+		else: [female]
+			say "your own sex grows damp in response to her touch. ";
+		say "Happy to be able to serve her in this manner, you waste no time in renewing your attention to her damp sex.";
+		WaitLineBreak;
+		say "     Your tongue presses deeper into the body with every stroke as you lap happily at her like a good little pet. Closing your eyes, you moan into her slit as you feel one of her soft paws rubbing up against the inside of your legs. You can't help but spread them slightly as you lean forward, allowing her soft footpaw to stroke up and down your inner thighs. A soft pat on your head-fur as well reminds you to return your attentions to the task at hand, and you begin to put your new canine muzzle to its proper use as you use your long tongue to tease and probe her depths. ";
+		if cocks of the player > 0:
+			if cunts of the player > 0: [herm]
+				say "Soon your mistress's footpaw is rubbing up against your damp slit, even as it teases your balls with each stroke, your orbs dancing pleasantly under her attentions. The top of her foot slowly moves even higher, its long teasing strokes letting your mistress rub her soft jackal-furred paw against you. Both your needy clit and and the bottom of your cock get caressed with each pass of her paw, making you shudder and groan in pleasure.";
+				say "     Your eyes drift closed as your world narrows down to the feeling of pleasuring the jackal's delicious slit with your mouth, the sensations of her soft hand on your head and her teasing paw between your legs. The eager attention you are giving her soon bear fruit, as suddenly Nermine moans above you, and your mouth is flooded with an amazing taste. Her warm juices flow freely to meet your tongue, even as her hand clenches your head tightly and her foot rubs up against your female sex eagerly. The fur of her leg teases your rod as it rubs against it lightly too. The taste, the sensations of her soft touches, combined with the realization that you brought your mistress pleasure like a good little pet, all swirl around pleasurably in your head, triggering a powerful orgasm in your own body as well.";
+				WaitLineBreak;
+				say "     You shudder and tremble, shooting your thick canine seed all over your mistress's leg even as your female sex coats her paw in its juices. Panting heavily, you slowly draw your muzzle away from her crotch, licking your lips slightly to savor her flavor as you look up at your mistress to see how pleased she is by your actions. ";
+			else: [male]
+				say "Soon your mistress's footpaw is rubbing up against your balls with each stroke, your orbs dancing pleasantly under her attentions. The top of her foot slowly moves even higher, its long teasing strokes letting your mistress rub her soft jackal-furred paw against you. Your cock gets caressed with each pass of her paw, each new touch making you shudder and groan in pleasure.";
+				say "     Your eyes drift closed as your world narrows down to the feeling of pleasuring the jackal's delicious slit with your mouth, the sensations of her soft hand on your head and her teasing paw between your legs. The eager attention you are giving her soon bear fruit, as suddenly Nermine moans above you, and your mouth is flooded with an amazing taste. Her warm juices flow freely to meet your tongue, even as her hand clenches your head tightly and her foot rubs up against your stiff rod eagerly. The taste, the sensations of her soft touches, combined with the realization that you brought your mistress pleasure like a good little pet, all swirl around pleasurably in your head, triggering a powerful orgasm in your own body as well.";
+				WaitLineBreak;
+				say "     You shudder and tremble, shooting your thick canine seed all over your mistress's paw and lower leg. Panting heavily, you slowly draw your muzzle away from her crotch, licking your lips slightly to savor her flavor as you look up at your mistress to see how pleased she is by your actions. ";
+		else: [female]
+			say "Soon your mistress's footpaw is rubbing up against your own damp sex, making you shudder slightly as she brushes over your clit with every soft stroke.";
+			say "     Your eyes drift closed as your world narrows down to the feeling of pleasuring the jackal's delicious slit with your mouth, the sensations of her soft hand on your head and her teasing paw between your legs. The eager attention you are giving her soon bear fruit, as suddenly Nermine moans above you, and your mouth is flooded with an amazing taste. Her warm juices flow freely to meet your tongue, even as her hand clenches your head tightly and her foot presses up against your own needy slit. The taste, the sensations of her soft touches, combined with the realization that you brought your mistress pleasure like a good little pet, all swirl around pleasurably in your head, triggering a powerful orgasm in your own body as well.";
+			WaitLineBreak;
+			say "     You shudder and tremble, coating your mistresses paw with your own juices as you shudder underneath her hand. Panting heavily, you slowly draw your muzzle away from her crotch, licking your lips slightly to savor her flavor as you look up at your mistress to see how pleased she is by your actions. ";
+		say "'That was very very nice, my little pet was certainly a good little helper today!' Nermine pants out, her mouth still hanging open in pleasure. Your soul sings happily as it hears those words, filling you with joy. 'But now Nermine has one more problem...' She continues teasingly, voice trailing off as you wait eagerly to hear how you can help her with this new problem of hers. 'Her paw is all wet and sticky,' she says as she lifts her hind-paw up to show you, its dark fur soaked with the evidence of your own orgasm.";
+		say "     'Would some good little pet be a dear and help lick it clean for Nermine?' she asks you with a soft grin, and you eagerly nod in response, happy to be able to be of service again so soon. Dropping to your hands and knees in front of her as she lowers her paw once again to the floor, you waste no time in licking your own ";
+		if cocks of the player > 0:
+			if cunts of the player > 0: [herm]
+				say "mingled juices off her perfectly formed paw, the taste of cum and female pleasure mixing deliciously on your tongue as you apply yourself to your task. ";
+			else: [male]
+				say "thick cum off her perfectly formed paw, the taste of potent seed filling your mouth before you swallow it all down. ";
+		else: [female]
+			say "sweet juices off her perfectly formed paw, the taste of female sex filling your mouth before you swallow it all down. ";
+		say "A smile stretches across your muzzle as her other hind-paw rubs along your arm and chest, happy of the soft and wonderful touch of your mistress. As you lick the last bit of fur on her paw, you sit back happily to let your mistress inspect your work, feeling joy at how pleased she seems to be with her little pet. She pets you on the head a few times, before heading back out to the store. You get up and follow along behind the lovely jackal-woman, glad she saw fit to reward you with your own orgasm. But deep down, you now realize that being of service to your mistress is its own even better reward, and you find yourself feeling even happier in your new role as her pet.";
+		now lastfuck of Nermine is turns;
 	else:
-		say "'Ah sorry my friend,' Nermine says with a soft wink as you approach her, 'But Nermine is watching store right now and has to pay attention to business.' The dark furred jackal-woman says with a smile as she gestures at the empty store around you. 'Besides, Nermine does not generally get involved with customers, or at least, not just any customers anyways, she sometimes does make exceptions for the especially handsome ones,' She says teasingly as she leans over the counter to get a better look at you. 'Hmm Nermine prefers customers with a more, jackal-like look to them shall we say, now perhaps Nermine could help you out with that if you want.' The jackal-woman says with a wink of one of her silver painted lashes, 'Just be sure to Ask for help, and Nermine will be sure to help you as much as you could ever want.' She says with a canine grin, before returning to her position leaning up against the counter, as she watches you to see just what your reaction to her offer will be.";
+		say "     'Ah sorry, dear friend,' Nermine says with a soft wink as you approach her, 'But Nermine has to watch the store right now. Business before pleasure.' The dark-furred jackal-woman smiles as she gestures at the empty store around you. 'Besides, Nermine does not generally get involved with customers - or at least, not just any customer. There may be some exceptions for the especially handsome ones,' she says teasingly as she leans over the counter to get a better look at you. 'Hmm, Nermine prefers customers with a more... jackal-like look to them shall we say. Perhaps Nermine could help her dear visitor to archieve that?' With a wink of her silver-painted lashes, she adds, 'If the eager candidate would just ask for help, Nermine will be sure to assist as much as [SubjectPro of player] could ever want...' Letting the words fade away, she gives you a canine grin, then returns to her position of leaning up against the counter, watching to see what your reaction will be.";
 
 to say NermineSucksJ:
 	say "As your lucky spectator puts down his backpack and then starts walking towards the counter, you start to get excited, eager to make use of Nermine again. With your cock quickly getting fully hard and ready again, you pull Nermine up against your chest and whisper in her ear to give your guest a really nice blowjob, combined with softly pinching her nipples. Then you walk her out behind the corner, panting and moaning from the movement of your shaft inside her with each step, and push her upper body down again to just the right height for the horny jaguar. As he holds out his erect cock and the jackal bitch starts to lick it, the anthro feline gives a satisfied, deep purr from his chest. While Nermine takes care of him on one end, you set both hands on her hips and hold her tightly, then pull your hips back, slowly but surely. The movement makes your knotted cock pull against her pussy, then slip out of it with a wet slurping sound and a gasp from your jackal pet.";
-	say "     Not giving Nermine even a second to re-gain her composure, you immediately thrust all the way back into her again, making her scream in lust from being penetrated by a knot that's only just soft enough to fit. 'Yes master! Use your...' She groans as you pull out again, snatching a breath before continuing, 'needy pet. Use Nermine like the bitch she issSSS-YES!' Her plea is answered as your knot pops back in past her nether lips. 'Yes! More! AaahhH!' Under the eager eyes of your jaguarman guest, you fuck Nermine's pussy with long strokes that stretch her opening around your half-hard knot. Even though he's getting excellent service from your jackaless pet's mouth, you do notice some small flashes of jealousy flaring up in the other man's eyes - which gives you a nice little stimulation in and of itself. You can't help but grin as you see him push his cock down her throat, clearly imagining it was her pussy and he could be the one to fuck and breed her. Life surely is good if you own such a prime bitch like Nermine...";
+	say "     Not giving Nermine even a second to re-gain her composure, you immediately thrust all the way back into her again, making her scream in lust from being penetrated by a knot that's only just soft enough to fit. 'Yes master! Use the...' She groans as you pull out again, snatching a breath before continuing, 'needy pet. Use Nermine like the bitch she issSSS-YES!' Her plea is answered as your knot pops back in past her nether lips. 'Yes! More! AaahhH!' Under the eager eyes of your jaguarman guest, you fuck Nermine's pussy with long strokes that stretch her opening around your half-hard knot. Even though he's getting excellent service from your jackaless pet's mouth, you do notice some small flashes of jealousy flaring up in the other man's eyes - which gives you a nice little stimulation in and of itself. You can't help but grin as you see him push his cock down her throat, clearly imagining it was her pussy and he could be the one to fuck and breed her. Life surely is good if you own such a prime bitch like Nermine...";
 	WaitLineBreak;
 	say "     Pounding your shaft into the wantonly panting jackaless, you feel your knot growing larger once more, soon locking your bodies together again. With your hips tightly pressed against her sex, you slow down for a moment, nuzzling Nermine's neck and telling her how proud you are of her being such an amazing pet - sexy, obedient and a great fuck. Pulling off the jaguarman's cock with a slurp and setting both hands on his hips to brace herself, she answers 'Nermine thanks her master, she loves serving him and fulfilling all his desires.' A moment later, the panting shopkeeper adds 'May his obedient pet now have a little reward? She craves being bred by such a handsome and strong male jackal...'";
 	say "     Not one to deny such a pleasurable request, you speed up your thrusts into her, each of them met by Nermine rocking back against you. Reveling in the feeling of your swollen knot pulling against the sides of her pussy and your previous load squishing around your member in the jackal's tight sex, you feel the inescapable need to cum rise quickly inside you. As you're getting quite close, your relentless pounding pushes your jackal bitch over the edge and she suddenly howls in lust, writhing in orgasm. Her inner muscles tremble and twitch around your pointed canine cock, giving you a very pleasant feeling that makes you climax with her. Gripping Nermine's hips tightly, you shoot a second big load of cum straight into her willing womb.";
@@ -644,95 +667,91 @@ to say NermineSucksJ:
 	say "     Meanwhile, your jaguar spectator abandons all restraint after seeing the culmination of your coupling, his paw-hand almost a blur as he jerks off, reaching his own orgasm just moments later. Giving a low, lusty grunt with each shot from his spined cock, he blasts his load all over Nermine's face and breasts, painting her fur with white streaks. 'Thanks man,' he pants to you, continuing with 'If you ever change your mind about letting others tap that bitch, just put a sign in the window - there'll be a line all the way through the mall, I bet. With me right at the start of it.' After that, the jaguar stalks back to the door with a spring in his step, grabs the backpack he dropped there and leaves the shop.";
 	say "     Having totally worn out your sexy pet, so far that she's about ready to doze off, you find yourself with a very groggy jackaless tied to you by your knot. Not wanting to stand here until it goes down, you have a look around in the store. Ah, perfect - there's a large bean-bag chair between all the clutter, and not too far away either. Guiding Nermine to it, you sink down on it with her, then spend a nice little time resting and holding the well-bred bitch against your chest. Some while later, your knot goes down far enough for you to pull out, allowing you to stand up and collect your clothes and gear. You leave the now sleeping Nermine sprawled on the bean-bag chair, a grin spreading on your face as you imagine someone coming in and finding her like that, naked and with your cum dripping out of her pussy.";
 
-NermineHelping is an action applying to nothing.
-
-understand "help me" as NermineHelping.
-understand "nermine help" as NermineHelping.
-understand "ask nermine for help" as NermineHelping.
-understand "help nermine" as NermineHelping.
-understand "helping nermine" as NermineHelping.
-understand "ask for help" as NermineHelping.
-
-check NermineHelping:
-	if Nermine is not visible, say "You certainly do need help, possibly psychiatric help, but sadly there isn't anyone here who can help you." instead;
-
-carry out NermineHelping:
-	NermineRequestHelp;
-
 to NermineRequestHelp:
-	if JackalManTF > 0:
-		say "'Oh my, with those fine looks you are getting there, it is certainly not you that needs the help here, but Nermine!' the Jackaless says with a smile as she looks you up and down. 'Why doesn't handsome person finish up their questing and wandering in city so they can 'help' Nermine into her bed in her back room?' She says as she winks at you and licks her soft black muzzle in anticipation.";
+	if JackalManTF > 2: [already partly Jackalman at least]
+		say "     'Oh my, with such fine looks her visitor is getting, it is certainly not [ObjectPro of player] that needs the help here, but rather the other way around!' the Jackaless says with a smile as she looks you up and down. 'How about finishing up questing and wandering in the city for now - to help Nermine into her bed in her back room?' She says as and winks at you, licking her soft black muzzle in anticipation.";
 		stop the action;
-	if RareQuesting > 0:
-		say "'Do not be backing out of promise to be helping Nermine with the rare items she needs. You should be focusing on that instead.";
+	else if RareQuesting > 0: [rare item quest started, not transformed far enough yet]
+		say "     Raising an eyebrow, Nermine says, 'The storekeeper's visitor should remember that [SubjectPro of player] promised to help Nermine gain the rare items she desires. That should be the focus of [ObjectPro of player] thoughts right now.'";
 		stop the action;
-	if wrcursestatus >= 7 and wrcursestatus < 100:
-		say "'A wereraptor is not good for being a helper around Nermine's store and her very breakable collection.'";
+	else if wrcursestatus >= 7 and wrcursestatus < 100:
+		say "     Shaking her head, the jackaless says, 'A wereraptor is no good for being a helper around Nermine's store and her very breakable collection. She sadly must ask to keep some distance.'";
 		stop the action;
-	if JackalBoyTF is 4:
-		say "'Ah handsome little Jackal toy is offering to help Nermine some more? Or is it they want Nermine to help them out?' The sultry jackal-woman says as she runs her clawed hands over your soft and sleek body, your eyes closing in pleasure as she gives you a soft scratch behind your canine ears. 'It is good to have an eager little Jackal pet around the place to help Nermine out whenever she needs it, she is glad you are accepting your new place here as happily as she knew you would.' She says as she pets you a few more times, her soft words music to your submissive jackal soul, 'And her little helper doesn't need to worry about any of the other infections in the city any more now, Nermine has made sure that your lovely new form is nice and permanent, so you can be her lusty little pet from now on! Isn't that nice?' Your mistress asks you as she rubs your head a few more times, and you find yourself nodding happily at her question, glad to be able to please your lovely dominant mistress in whatever way she wants. 'Nermine doesn't need any more help in store right now, but maybe if she has time later, you can help her in back room sometime,' The wonderful jackal says as she stops petting you and goes back to leaning on the store counter, and you realize you can't wait for another chance to help her out, whether in the back room or doing whatever else she asks of you!";
+	else if JackalBoyTF is 4:
+		say "     'Ah, but Nermine already helped her handsome little jackal toy become just what [SubjectPro of player] was meant to be. Or is it that [SubjectPro of player] wants to help Nermine out in turn now?' The sultry jackal-woman says as she runs her clawed hands over your soft and sleek body, your eyes closing in pleasure as she gives you a soft scratch behind your canine ears. 'It is good to have an eager little jackal pet around the place to help Nermine out whenever she needs it. She is glad her pet accepts [PosAdj of player] new place here as happily as she knew [SubjectPro of player] would.' Petting you a few more times, the next soft words are music to your submissive jackal soul, 'And the little helper doesn't need to worry about any of the other infections in the city any more now, Nermine has made sure that the lovely new form is nice and permanent. For [ObjectPro of player] to always be her lusty little pet from now on! Isn't that nice?'";
+		say "     Your mistress smiles as she rubs your head a few more times, and you find yourself nodding happily at her question, glad to be able to please your lovely dominant mistress in whatever way she wants. 'Nermine doesn't need any more help in store right now, but maybe if she has time later, her pet can help her in back room sometime,' the wonderful jackal says as she stops petting you and goes back to leaning on the store counter. You realize you can't wait for another chance to help her out, whether in the back room or doing whatever else she asks of you!";
 		now NermineTalk is 1;
 		stop the action;
-	if Nerminehelpstatus is 5:
+	else if Nerminehelpstatus is 5:
 		if carried of peacock feather > 2:
-			say "'Yes you brought them!' the jackal-woman says as she snatches the large shiny feathers from you. 'Now Nermine can have a pretty new peacock feather necklace to wear!' She says as she places the glittering feathers in several different positions on her dark neck and glances into a mirror beside the counter as if to see which position she likes best. She notices you watching in amusement, and flashes you a soft grin, 'What, not everything is about other customers, sometimes Nermine likes to get pretty things herself too. Still you are being such a good helper,' She says as she reaches out to caress the side of your new muzzle gently, 'So very nice and always so happy to help Nermine out with the shop, maybe you would like to help her out with her other needs as well?' She says with a wink as she runs her hand slowly down your black furred chest. 'Nermine has one last bit of help to give you first though,' The sleek Jackal says as she reaches behind the counter and produces another of those familiar looking jackal totems and hands it to you. 'You let totem finish helping you become even better, and then maybe Nermine will let her lovely little helper help her out of clothes in back room?' The thought of helping the sultry shopkeeper out in a more intimate manner makes your body flush with desire, and you look down at the totem in your hand with anticipation...'";
-			delete peacock feather;
-			delete peacock feather;
-			delete peacock feather;
-			increase carried of Jackal totem by 1;
+			say "     'Yes, there they are!' the jackal-woman says as she snatches the large shiny feathers from you. 'Now Nermine can have a pretty new peacock feather necklace to wear!' she adds as she places the glittering feathers in several different positions on her dark neck and glances into a mirror beside the counter as if to see which position she likes best. She notices you watching in amusement, and flashes you a soft grin, 'What, not everything is about other customers, sometimes Nermine likes to get pretty things herself too. Still, with her friend being such a good helper,' she says as she reaches out to caress the side of your new muzzle gently, 'So very nice and always so happy to help Nermine out with the shop, maybe [SubjectPro of player] would like to help her out with her other needs as well?'";
+			say "     Wining, the jackaless runs her hand slowly down your black-furred chest. 'Nermine has one last bit of help to give first though,' the sleek jackal says as she reaches behind the counter and produces another of those familiar-looking jackal totems and hands it to you. 'Just let the totem finish helping become even more attractive, and then maybe Nermine will let her lovely little helper help her out of clothes in back room.' The thought of serving the sultry shopkeeper in a more intimate manner makes your body flush with desire, and you look down at the totem in your hand with anticipation...";
+			LineBreak;
+			say "[bold type]You lose 3 peacock feathers![roman type][line break]";
+			decrease carried of peacock feather by 3;
+			say "[bold type]You gain a jackal totem![roman type][line break]";
+			increase carried of jackal totem by 1;
+			say "[bold type]You gain 30 Xp![roman type][line break]";
 			increase XP of player by 30;
 			stop the action;
 		else:
-			say "'You are needing help in remembering what you is asked to do?' Nermine says with an amused look in her eye, 'Nermine asked her friendly little helper to find her some of those large peacock feathers from the big birds wandering around the city, 3 or so should do.' The jackal-woman says with a smile, 'Of course Nermine thinks it is more likely her little jackal just wanted to talk to her some more, you obviously love being near her so much, maybe she will let you play at her feet in back room at some point...' The jackaless says as she leans back on the counter, enjoying how much her words have obviously aroused you.";
+			say "     'Does Nermine's helper need help in remembering what she asked of [ObjectPro of player]?' Nermine says with an amused look in her eye, 'Nermine requested that [SubjectPro of player] find her some of those large peacock feathers from the big birds wandering around the city, three or so should do.' The jackal-woman smiles, then continues, 'Of course, Nermine thinks it is more likely her little jackal just wanted to talk to her some more, as [SubjectPro of player] obviously desire being near her so much, maybe she will allow for some play at her feet in the back room at some point...' With that said, she leans back on the counter, enjoying how much her words have obviously aroused you.";
 			stop the action;
-	if JackalBoyTF is 3:
-		say "'What a perfect new face! Nermine loves it!' The happy jackal-woman says as she comes around the counter to get a better look at your new jackal face, her attention making you blush in pleasure, strangely happy that your new face is to your mistresses liking. As she reaches up and strokes her soft furred hand along the fur of your muzzle, and then reaches up to scratch behind your new ears, you realize that somehow, during all the work you have done for her, the strange jackal-woman truly has become your mistress. Somehow seeing your jackal mistress happy has become one of the most important things to you, and you realize that helping her with her little quests is almost as much fun as changing yourself into a lovely little jackal pet for her enjoy is! Looking up into her smiling eyes, you wonder for a minute if you should really feel this happy just by making her smile... your thought fades away though as she brings her sleek dark muzzle down next to yours... 'Nermine likes this new face so much, and now that her little helper has a proper little muzzle, and she can do this...' She says, as she tilts her head to the side, and wraps her muzzle around your own! Your own canine muzzle automatically under hers, allowing your tongues to mingle in a deep kiss, the taste of her lovely mouth filling your own as she presses you close to her. Your mind seems to fog over with lust and pleasure, and you lose track of anything other the wonderful moment, and pleasing your mistress. Eventually she breaks the kiss, leaving you panting with need as she licks her lips softly, and then smiles and winks at you as she moves back behind the counter.[line break]";
-		say "You stand there panting, your tail wagging absently as she settles herself behind the counter, before leaning forward to address you again. 'Is obvious you want Nermine to finish helping you become just perfect little Jackal boy, and Nermine can't wait to see how wonderful her new little helper will look too. But she needs just one more thing first, well three more things actually.' The lovely shopkeeper says as she fiddles with the collar of her tight t shirt, 'Nermine has heard there are peacocks in this city with beautiful sparkling feathers, bring her three of these large feathers, and then both Nermine and her little helper can be very very happy.' She says with a wink as she licks her lips, the action making you lick your lips in response, the soft taste of her mouth still lingering on your tongue.";
+	else if JackalBoyTF is 3:
+		say "     'What a perfect new face! Nermine loves it!' the happy jackal-woman says as she comes around the counter to get a better look at you. Her attention makes you blush in pleasure, strangely happy that your new look is to her liking. As she reaches up and strokes her soft-furred hand along your muzzle and then reaches up to scratch behind your ears, you realize that somehow, during all the work you have done for her, the strange jackal-woman truly has become your mistress. Somehow seeing your jackal mistress happy has become one of the most important things to you. Helping her with her little quests is almost as much fun as changing yourself into a lovely little jackal pet for her enjoy is! Looking up into her smiling eyes, you wonder for a minute if you should really feel this happy just by making her smile... but your thought fades away as she brings her sleek dark muzzle down next to yours...";
+		say "     'Nermine likes this new face so much, and that her little helper has a proper little muzzle, and that she can do this...' she says, then tilts her head to the side and wraps her muzzle around your own! Your own canine muzzle automatically under hers, allowing your tongues to mingle in a deep kiss, the taste of her lovely mouth fills your own as she presses you close to her. Your mind seems to fog over with lust and pleasure, and you lose track of anything other than pleasing your mistress in this wonderful moment. Eventually she breaks the kiss, leaving you panting with need as she licks her lips softly, and then smiles and winks at you as she moves back behind the counter. You stand there panting, your tail wagging left and right as she settles herself in her usual position, leaning forward over the counter to address you again.";
+		say "      'It is obvious Nermine's helper wants to become her very own perfect little jackal pet. The happy shopkeeper can't wait to see how wonderful the new look will be once it is complete. But she needs just one more thing first, well three more things actually,' the lovely shopkeeper says as she fiddles with the collar of her tight t-shirt. 'Nermine has heard there are peacocks in this city with beautiful sparkling feathers. Bring her three of these large feathers, and then both Nermine and her little helper can be very very happy,' she adds in a teasing tone and winks, then licks her lips enticingly. The action makes you lick your lips in response, the soft taste of her mouth still lingering on your tongue.";
 		now Nerminehelpstatus is 5;
 		stop the action;
-	if Nerminehelpstatus is 4:
-		say "'Now now,' Nermine says teasingly, 'Nermine already help you out, you use totem and then come talk to Nermine again ok my pretty little almost Jackal?'";
+	else if Nerminehelpstatus is 4:
+		say "     'Nermine already gave her visitor help! She hopes [SubjectPro of player] did not lose the precious totem?! It should be used soon to avoid that possibility,' Nermine says with exasperation.";
 		stop the action;
-	if Nerminehelpstatus is 3:
+	else if Nerminehelpstatus is 3:
 		if WineFound is 2:
-			say "'How wonderful!' Nermine says as you proudly hold out the small vial of dark liquid to her. 'And you got it so nice and fast too! You are just the best helper ever!' The jackal-woman exclaims as she reaches over and runs her clawed hand through your fur several times. You find yourself groaning in pleasure under her soft touch, both at the feel of her hand on your fur, but from the sheer joy of making your lovely Jackal mistress so very happy. Before you can examine that thought more closely, Nermine stops petting you and carefully begins to stow the heady wine safely away. 'Nermine has customer seeking the best party wine ever, and asked her for help. Nermine is sure that a few drops of this wine in drink and her customer and his guests will enjoy their best party ever. She just knows he will love being happy drunk Nymph chasing Satyr.' The jackal-woman says with a grin on her face as she turns back to you, pulling an item out from under the counter as she does so. 'And Nermine has a lovely reward for her wonderful helper as well!' She says happily as she hands you another of those strangely carved Jackal totems. 'You use that to get some help from the Jackal, and then maybe you and Nermine can celebrate helping customers in back room together sometime...";
-			increase carried of Jackal totem by 1;
-			Now Nerminehelpstatus is 4;
+			say "     'How wonderful!' Nermine says as you proudly hold out the small vial of dark liquid to her. 'And Nermine's eager visitor got it so nice and fast too! Just the best helper ever!' The jackal-woman exclaims as she reaches over and runs her clawed hand through your fur several times. You find yourself groaning in pleasure under her soft touch, both at the feel of her hand on your fur, but also from the sheer joy of making your lovely Jackal mistress so very happy. Before you can examine that thought more closely, Nermine stops petting you and carefully begins to stow the heady wine safely away. 'Nermine has a customer seeking the best party wine ever, who asked her for help. She is sure that with a few drops of this wine in his drink, her customer and his guests will enjoy their best party ever. She just knows he will love being happy drunk Nymph-chasing Satyr.' The jackal-woman says with a grin on her face as she turns back to you, pulling an item out from under the counter as she does so. 'And Nermine has a lovely reward for her wonderful helper as well!' She says happily as she hands you another of those strangely carved jackal totems. 'Just use that to become more like a jackal, and then maybe Nermine and her friend can celebrate helping customers - together in the back room sometime...";
+			LineBreak;
+			say "[bold type]You gain a jackal totem![roman type][line break]";
+			increase carried of jackal totem by 1;
+			say "[bold type]You gain 30 Xp![roman type][line break]";
 			increase XP of player by 20;
+			Now Nerminehelpstatus is 4;
 			stop the action;
 		else:
-			say "'Did you need reminding of what you need to do?' The jackal-woman says with a soft grin, 'It's nice to see someone so eager to help a Jackal out, but you should really try to remember better what Nermine needs.' She says as she shakes her canine head from side to side slowly, and makes a soft tsking noise. For some reason you feel vaguely disappointed in yourself at failing your mistress in even so minor a manner. 'Nermine ask you to fetch wine from Satyr in museum, it must be from cask or other fresh source, not cup, when you find the wine, return here and we can see about helping you become even more... attractive.' She says as she runs her long tongue over her lips in anticipation, the sight making you shudder with desire.";
+			say "     'Does Nermine's helper need help in remembering what she asked of [ObjectPro of player]?' Nermine says with an amused look in her eye, 'It is nice to see someone so eager to help a jackal out, but [SubjectPro of player] should really try to remember better what Nermine needs.' Shaking her canine head from side to side, she makes a soft tsking noise. For some reason you feel vaguely disappointed in yourself at failing your mistress in even so minor a manner. 'Nermine asked to fetch wine from the satyrs in the museum. From a cask or other fresh source - not a cup. It has been found, Nermine's helper should return here to get a reward, making [ObjectPro of player] even more... attractive.' That said, she runs her long tongue over her lips in anticipation, the sight making you shudder with desire.";
 			stop the action;
-	if JackalBoyTF is 2:
-		say "'Oh my!' Nermine says as she eyes your handsome new coat of fur, 'Nermine thinks you are starting to look absolutely wonderful now!' She exclaims happily, her obvious appreciation of your changing body making you smile happily. 'Nermine almost can't wait to help you become even an better and sharper person,' She says before pausing slightly to let the idea of becoming even better sink in before she continues. 'Sadly, this is a store after all, and Nermine can only do so much for her handsome little helper without getting something in return...' The jackal-woman says, as she reaches out one of her black, claw-tipped hands to stroke your new fur lightly several times, making your eyes close in pleasure at the sensations. 'Nermine has to tell you something,' She says as she leans back behind the counter, 'She has easy task you can help her with, and then she can help you out even more!' Seeing she has your attention, she pulls a small vial out from behind the counter, 'In museum of this city Nermine has heard satyrs are gathering again, and where the goat men are, so too is their unique wine. Find one of the places they store the wine, and fill the vial up, and then Nermine can help you become an even better handsome helper, doesn't that sound nice?' She says as she hands you the vial, her sexy voice sending shivers down your spine and making your jackal tail wag as you think about becoming a better helper than ever before!";
+	else if JackalBoyTF is 2:
+		say "     'Oh my!' Nermine says as she eyes your handsome new coat of fur. 'Nermine thinks her visitor is starting to look absolutely wonderful now!' she exclaims happily, her obvious appreciation of your changing body making you smile happily. 'Nermine almost can't wait to help [ObjectPro of player] become an even better and more so much more attractive person.' Pausing slightly to let the idea of transforming further sink in, she continues , 'Sadly, this is a store after all, and Nermine can only do so much for her handsome little helper without getting something in return...' Then she reaches out one of her black, claw-tipped hands to stroke your new fur lightly several times, making your eyes close in pleasure at the sensations. 'Nermine has an easy task to help her with, and then she can help assist an eager helper even more!' Seeing she has your attention, she pulls a small vial out from behind the counter, 'In the museum of this city, satyrs are gathering. And where the goat men are, so too is their unique wine. She would love it if her friend found one of the places they store the wine, and filled the vial up. Then Nermine will have a nice reward to award. Does that not sound nice?' she says as she hands you the vial, her sexy voice sending shivers down your spine and making your jackal tail wag as you think about becoming a better helper than ever before!";
 		now WineFound is 1; [player is tasked to get satyr wine]
 		now Nerminehelpstatus is 3;
 		stop the action;
-	if Nerminehelpstatus is 6:
-		say "'Nermine already is helping you! You use totem again and see!', Nermine says with a twinkle in her eye.";
+	else if Nerminehelpstatus is 6:
+		say "     'Nermine already gave her visitor help! She hopes [SubjectPro of player] did not lose the precious totem?! It should be used soon to avoid that possibility,' Nermine says with exasperation.";
 		stop the action;
-	if Nerminehelpstatus is 2:
+	else if Nerminehelpstatus is 2:
 		if carried of wyvern goop > 2:
-			say "'Yes you bring Nermine the samples!' Nermine says with a smile on her muzzle as she takes the samples from you. 'Now Nermine can make several charms to trap one of the beasts for customer who wants little pet wyvern, Nermine think he will make handsome mate for trapped wyvern when she is done. Not that helpful little friend here needs to worry about that,' She says as she reaches over to trace one of her short claws along your cheek in a soft teasing manner. 'Now Nermine promised you to help you in return, and she keeps her bargains.' The jackal-woman says as she reaches underneath the counter again and pulls out another of those polished onyx statues.";
-			delete wyvern goop;
-			delete wyvern goop;
-			delete wyvern goop;
-			increase carried of Jackal totem by 1;
+			say "     'Nermine thanks her visitor for the samples!' the jackaless says with a smile on her muzzle as she takes the goop from you. 'Now Nermine can make several charms to trap one of the beasts for a customer who wants a little pet wyvern. She thinks he will make a handsome mate for the trapped wyvern, as such are things bound to go. Not that her helpful little friend here needs to worry about that,' she says as she reaches over to trace one of her short claws along your cheek in a soft teasing manner. 'Nermine promised to help in return, and she keeps her bargains,' the jackal-woman adds as she reaches underneath the counter again and pulls out another of those polished onyx statues.";
+			LineBreak;
+			say "[bold type]You lose 3 wyvern goop![roman type][line break]";
+			decrease carried of wyvern goop by 3;
+			say "[bold type]You gain a jackal totem![roman type][line break]";
+			increase carried of jackal totem by 1;
+			say "[bold type]You Gain 10 XP![roman type][line break]";
 			increase XP of player by 10;
 			now Nerminehelpstatus is 6;
 			stop the action;
 		else:
-			say "'You need help remembering what Nermine told you?' The jackal-woman says as she folds her arms across her chest, pushing her breasts up and causing her nipples to show up against the soft fabric. 'Nermine say, if you want her to help you more, you must help her out in payment, bring Nermine 3 samples of the strange goop from the drake-like creatures roaming the skies.' Her slender muzzle parts in a grin as she looks at you, 'And you know you want Nermine to help you become better.'";
+			say "     'The forgetful visitor needs help remembering what Nermine asked for?' the jackal-woman says as she folds her arms across her chest, pushing her breasts up and causing her nipples to show up against the soft fabric. 'Nermine said to bring her three samples of the strange goop the dragon-creatures ruling the skies outside.' Her slender muzzle parts in a grin as she looks at you, 'And she promised a really nice reward for those too...'";
 			stop the action;
-	if JackalBoyTF is 1:
-		say "     'Ah yes!' Nermine exclaims with a smile as she spots your new jackal tail, 'This is a great start already! Does the visitor see how helpful Nermine is being? Now her new customer will not have to worry about strange or ugly changes to their rear, [SubjectPro of player] will always have a nice and handsome tail instead!' Seeing your hesitation, the jackal-woman grins and continues, 'Besides, a nice tail like that is sure to be attractive to the right kind of person...' The shopkeeper says with a lusty wink at you, before finishing. 'And there is nothing like a nice fine tail to help one to balance better! You must admit, Nermine is a very helpful shopkeeper, of course there is more help Nermine could give you, to make you even better and faster...' She trails off for a moment with a grin as she sees that she has your full attention. 'but Nermine would need you to help her in return first, to pay the shop for her help of course' You can't help but nod at the sense of this and she smiles back at you in response. 'Nermine needs some samples of the goo from one of those flying drakes, Wyverns she thinks they are called. In order to make a charm for another customer, If you bring her three samples she would be very appreciative...' The jackal-woman lets her last word hang in the air for a minute, leaving the choice of what to do now up to you.";
+	else if JackalBoyTF is 1:
+		say "     'Ah yes!' Nermine exclaims with a smile as she spots your new jackal tail, 'This is a great start already! Does the visitor see how helpful Nermine is being? Now her new customer will not have to worry about strange or ugly changes to their rear, [SubjectPro of player] will always have a nice and handsome tail instead!' Seeing your hesitation, the jackal-woman grins and continues, 'Besides, a nice tail like that is sure to be attractive to the right kind of person...' The shopkeeper says with a lusty wink at you, before finishing. 'And there is nothing like a nice fine tail to help one to balance better! The dear visitor must admit, Nermine is a very helpful shopkeeper, but of course there is more help Nermine could give, to make [ObjectPro of player] even better and faster...'";
+		say "     She trails off for a moment with a grin as she sees that she has your full attention. 'But Nermine would need some help in return first, to pay the shop for her help of course.' You can't help but nod at the sense of this and she smiles back at you in response. 'Nermine needs some samples of the goo from one of those flying drakes, Wyverns she thinks they are called, in order to make a charm for another customer. If brought three samples would be very appreciative...' The jackal-woman lets her last word hang in the air for a minute, leaving the choice of what to do now up to you.";
 		Now Nerminehelpstatus is 2;
 		Now NermineTalk is 2;
-		stop the action;[--------------------]
-	if Nerminehelpstatus is 1:
-		say "     'Nermine already gave her visitor help! She hopes [SubjectPro of player] did not lose the precious totem?! It should be used soon to avoid that possibility', Nermine says with exasperation.";
 		stop the action;
-	if JackalBoyTF is 0: [not transformed at all]
+	else if Nerminehelpstatus is 1:
+		say "     'Nermine already gave her visitor help! She hopes [SubjectPro of player] did not lose the precious totem?! It should be used soon to avoid that possibility,' Nermine says with exasperation.";
+		stop the action;
+	else if JackalBoyTF is 0: [not transformed at all]
 		say "     'Indeed. Say no more!' The jackal-woman says with a smile as you ask her for some help. 'Nermine can obviously see that much help is indeed needed, looking like that,' she adds as she gestures to your body. 'Nermine has just the items to help, and maybe in return the needy visitor could help Nermine out with a few chores she has to take care of, yes?' The jackal asks this with a sly look in her eye, making you wonder if agreeing is a good idea.";
 		say "     [bold type]Should you really accept?[roman type][line break]";
 		LineBreak;
@@ -745,11 +764,13 @@ to NermineRequestHelp:
 				say "[bold type](The helping quest requires guy, girl and furry content to be available.)[roman type]";
 			else:
 				say "     'Excellent!' The jackaless says as she claps her hands happily, before reaching underneath the counter. 'Nermine loves to help out her customers!' She says as she brings a small item up from beneath and holds it out to you. Closer inspection reveals the object to be a small black statue of a jackalman with his arms crossed across his chest. Glancing up at Nermine you see the jackal-woman give you a sly wink, then add, 'Nermine thinks this will help her new friend look much better, and get in touch with the power of the jackal. Go on, give it a try!' She says as she hands you the small totem, 'It is no charge for this one. A gift from Nermine to help get started.' The canine shopkeeper says with a grin on her muzzle, as you look down at the little item in your hands with curiosity.";
-				increase carried of Jackal totem by 1;
+				LineBreak;
+				say "[bold type]You gain a jackal totem![roman type][line break]";
+				increase carried of jackal totem by 1;
 				Now Nerminehelpstatus is 1;
 		else:
 			LineBreak;
-			say "     'This is too bad,' The Jackal shopkeeper says with a sigh, 'Nermine does so enjoy helping people find themselves, and she had such very high hopes for her guest. If [SubjectPro of player] would change [PosAdj] mind though, just come see Nermine again.' Nermine says with a soft wink as she goes back to watching the store.";
+			say "     'This is too bad,' The Jackal shopkeeper says with a sigh, 'Nermine does so enjoy helping people find themselves, and she had such very high hopes for her guest. If [SubjectPro of player] would change [PosAdj of player] mind though, just come see Nermine again.' Nermine says with a soft wink as she goes back to watching the store.";
 
 Section 3- Magic Bargain Bin
 
@@ -784,10 +805,10 @@ carry out bargainhunting:
 		say "     Pulling out a small bit of food and a water bottle you set them out on the counter where Nermine quickly makes them disappear. Having paid your fee you eagerly begin to sort through the bargain bin to see what you can find...";
 		LineBreak;
 		say "[bold type]You lose 1 food![roman type][line break]";
+		decrease carried of food by 1;
 		say "[bold type]You lose 1 water bottle![roman type][line break]";
+		decrease carried of water bottle by 1;
 		LineBreak;
-		delete food;
-		delete water bottle;
 		increase bargainbinusagetotal by 1;
 		let Z be a random number between 1 and 30;
 		if Z is 1: [funeral urn /kiss]
@@ -795,10 +816,12 @@ carry out bargainhunting:
 			say "     Before you know it, her tongue is exploring your mouth even as her muzzle rubs up against your face, in what is actually a surprisingly pleasant kiss. After a second, she pulls her tongue out of your mouth, leaving you standing there slightly stunned as she gives you another soft lick across the cheek. 'There. That should counter any bad luck the urn might have caused. Nermine would suggest to let her know immediately if the sneaky urn starts appearing at other places once more,' the sexy jackaless says with a wink as she returns to her normal place at the counter.";
 			LineBreak;
 			say "     After a second, you realize that you now don't have anything to show for your hunt through the bargain bin, but at least you got a nice kiss for your efforts? That's something of a bargain, isn't it?";
+			LineBreak;
+			say "[bold type]Your score rises by 5![roman type][line break]";
 			increase score by 5;
 		else if Z is 2: [magic drink]
 			If strangebottledrink < 3:
-				Say "     Looking through the bin, you spot a small vial labeled [']Drink Me[']. Amused at the old Alice in Wonderland reference, you decide to pull the small vial out and take a sip. You are somewhat disappointed when nothing magical seems to happen immediately and your size remains the same, although your body does seem to be strangely invigorated by the unusual drink, and you realize that you are no longer hungry or thirsty.";
+				Say "     Looking through the bin, you spot a small vial labeled [']Drink Me[']. Amused at the old Alice in Wonderland reference, you decide to pull the small vial out and take a sip. You are somewhat disappointed when nothing magical seems to happen immediately and your size remains the same, although your body does seem to be strangely invigorated by the unusual drink, and you realize that [bold type]you are no longer hungry or thirsty[roman type].";
 				now thirst of player is 0;
 				now hunger of player is 0;
 				increase strangebottledrink by 1;
@@ -829,6 +852,8 @@ carry out bargainhunting:
 			if "Like Attracts Like" is listed in feats of the player:
 				if "Kinky" is listed in feats of the player:
 					say "     Sorting through the strange bin, you feel a small static shock from one of the items buried in it. Curiosity makes you grasp whatever that was and pull it out. You find yourself holding a [bold type]metal pendant of some kind[roman type], an unusual occult design stamped on one side, while on the other is the image of some undetermined beast. While the amulet is actually kind of eerie, you did just buy it so you slip it over your head as you look around the shop, somehow seeming almost instantly in tune with your inner instincts.";
+					LineBreak;
+					say "[bold type]Your sanity has decreased by 25![roman type][line break]";
 					decrease humanity of player by 25;
 				else:
 					say "     Rummaging around in the strange bin, you find your hands rustling up against several small folded pieces of paper. Curious you pull the sheaf of paper out and unfold it so you can get a better look at what is written on it. Much to your surprise, you see the papers are filled with [bold type]detailed stories and images of beasts and humans copulating[roman type] in all sorts of strange and twisted manners. As you slowly look through the papers, you find yourself growing increasingly more and more aroused by the strange scenes you find depicted there, wondering just how it would feel to take part in some of those actions. Hearing movement behind you, you quickly fold the papers up and stick them in your pack with a blush as you notice Nermine leaning over curiously to see what you are staring at so intently. Perhaps you should study your purchase later and in private. Strange, before now, you never realized just how kinky you really are...";
@@ -851,8 +876,8 @@ carry out bargainhunting:
 				say "     Poking absently through the bin, your eye catches on a [bold type]small cat-like charm[bold type], tucked away in the corner. Pulling the litle piece of jewelry out you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers. Then suddenly Nermine snatches the golden charm from your hand with a handkerchief and carefully puts it into a jewelry box. 'Nermine can tell that her customer will not want this item. She is sorry, but the bargain bin can be unpredictable at the best of times. Full of apologies, the jackaless offers her guest the paid items in return, as well as a suggestion. Maybe Nermine's dear customer should be thinking to not be so picky. More fun is to be had that way,' she adds philosophically.";
 				LineBreak;
 				say "[bold type]You gain 1 food![roman type][line break]";
-				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of food by 1;
+				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
 		else if Z is 7: [magpie jewelry]
 			Say "     Sorting through the bin, your eye is caught by a [bold type]sparkly piece of jewelry[roman type] half-hidden under other items. The pretty little thing is making you smile at finding it as you pull it out. Closer inspection reveals that the shiny item is piece of costume jewelry - certainly not worth all that much, but it looks pretty, so you're happy nontheless at calling it your own.";
@@ -874,18 +899,21 @@ carry out bargainhunting:
 		else if Z is 9: [biting monster]
 			Say "     Reaching deep into the bin, you feel something moving under all of those strange items piled in it! A heartbeat later, whatever it is chumps down on your searching fingers, making you withdraw your hand immediately. Looking down at it, you can't help but stare as blood slowly drips from your fingers, trickling down from a [bold type]nasty bite-wound[roman type] on your hand. Nermine seems rather embarrassed by the whole affair as she helps you bandage up your new wound, and the jackal glares at the bin for a minute as if reprimanding whatever bit you. 'Nermine is sorry, sometimes things are not happy to end up in bargain bin. The jackaless apologizes and decides to make good for such a sad misunderstanding,' the jackal says with a shrug, then quickly refunds your food and water, and even places an extra packet of food and bottle of water out for the inconvenience.";
 			LineBreak;
-			say "[bold type]You gain 2 food![roman type][line break]";
-			say "[bold type]You gain 2 water bottles![roman type][line break]";
-			increase carried of food by 2;
-			increase carried of water bottle by 2;
+			say "[bold type]You lose 25 HP![roman type][line break]";
 			decrease HP of player by 25;
 			if HP of player < 0:
 				now HP of player is 1;
+			say "[bold type]You gain 2 food![roman type][line break]";
+			increase carried of food by 2;
+			say "[bold type]You gain 2 water bottles![roman type][line break]";
+			increase carried of water bottle by 2;
 		else if Z is 10: [pocket watch]
 			say "     Sorting through the bin, you come across an [bold type]old-fashioned pocket watch[roman type]. Your curiosity getting the better of you, you pull the antique out of the bin to examine it closer. The unusual brass watch seems to feel slightly warm in your hands as you wind it up, and you are hit with a sudden dizzy spell as soon as you finish winding the watch, making you stagger slightly. Blinking, you catch yourself and stare around you feeling slightly befuddled, before realizing the watch is no longer in your hands. Sighing at the loss of the interesting looking timepiece, you prepare to move on, though you feel like something has changed, even if you can't quite put your finger on what...";
 			extend game by 16;
 		else if Z is 11: [FS Game Box]
 			say "     Pushing items around in the bin, you feel a cardboard box move beneath your hands. Deciding to give this a closer look, you pull it out of the bin. You blink in surprise as you stare at the image of one of those blue-furred gryphons grinning back at you from what appears to be a computer game. Looking at the box title, you see it says, 'Flexible Society, the best-selling transformative strategy game in years!' Blinking at that strange proclamation, you look at the box some more, before deciding to take it with you. Maybe once you get out of here and find a working computer you can find out just what all the fuss is about...";
+			LineBreak;
+			say "[bold type]Your score increased by 100![roman type][line break]";
 			increase score by 100;
 			stop the action;
 		else if Z is 12: [full transformation items]
@@ -893,6 +921,8 @@ carry out bargainhunting:
 		else if Z is 13: [Mag-iphone]
 			say "     Rummaging through the bin, you find yourself blinking as you feel the familiar sleekness of a cell phone. Pulling the small phone out, you note that it appears to be labeled as a Mag-iPhone, causing you to wonder about what kind of strange knock-off phone you managed to find. Poking at the device a little closer, you find out much to your surprise that not only does it still have some power, it seems to have a signal as well! Feeling excited you quickly try dialing to try to get someone outside of the containment area for help. You grin as the phone begins to ring, only to blink and stare at the phone as someone answers in a strange almost purring voice...";
 			say "     You aren't quite sure what the purring voice is saying, the thick accent of the female speaker making it hard to understand. Though you think she is telling you that you have reached someplace called Siz'Calit in the land of Nimin, and wants to know if you are calling about the large delivery of pus fruit she ordered... Feeling very confused, you apologize to the strange woman about the obviously wrong number, before hanging up and staring at the phone for several minutes. Deciding maybe it would be best to not try calling any other random numbers, you slip the Mag-iphone back into the bargain bin where it belongs, before continuing on your way.";
+			LineBreak;
+			say "[bold type]Your score increased by 20![roman type][line break]";			
 			increase score by 20;
 		else if Z is 14: [infection samples]
 			say "     Hunting through strange bin full of items, you find yourself touching what appears to be some sort of plastic bag. Overcome with curiosity, you quickly pull it out of the bin and take a look inside. You are surprised to see that the bag contains several [bold type]neatly labeled samples taken from creatures inside the city[roman type]. 'Ah Nermine was looking for those!' you can hear the jackal-like shopkeeper say as you inspect the items, making you look up at her instead. 'If the fine-looking customer doesn't want to keep those, Nermine is more than willing to buy them found items,' she says with a grin on her soft, silver-painted muzzle while you try to decide what to do with the items.";
@@ -900,8 +930,8 @@ carry out bargainhunting:
 				say "     Taking another quick glance at the contents, you decide that you have no interest in any of the bestially infected items and return the bag to Nermine while she puts your earlier payment back on the counter. Checking the items she lays out, you find yourself grinning as you realize the sly jackal-woman slipped you an extra package of food as well.";
 				LineBreak;
 				say "[bold type]You gain 2 food![roman type][line break]";
-				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of food by 2;
+				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
 			else:
 				say "     [bold type]Do you give them back to the jackaless?[roman type][line break]";
@@ -913,8 +943,8 @@ carry out bargainhunting:
 					say "     Deciding you definitely don't need any more of the infectious items from creatures within the city, you quickly hand the bag full of stuff over to Nermine while she puts your earlier payment back on the counter. Checking the items she lays out, you find yourself grinning as you realize the sly jackal-woman slipped you an extra package of food as well.";
 					LineBreak;
 					say "[bold type]You gain 2 food![roman type][line break]";
-					say "[bold type]You gain 1 water bottle![roman type][line break]";
 					increase carried of food by 2;
+					say "[bold type]You gain 1 water bottle![roman type][line break]";
 					increase carried of water bottle by 1;
 				else:
 					LineBreak;
@@ -922,13 +952,13 @@ carry out bargainhunting:
 					LineBreak;
 					if girl is not banned:
 						say "[bold type]You gain 1 tuft of chin fur![roman type][line break]";
-						say "[bold type]You gain 1 skunk goo![roman type][line break]";
 						increase carried of tuft of chin fur by 1;
+						say "[bold type]You gain 1 skunk goo![roman type][line break]";
 						increase carried of skunk goo by 1;
 					if guy is not banned:
 						say "[bold type]You gain 1 chipped tooth![roman type][line break]";
-						say "[bold type]You gain 1 pirate bandana goo![roman type][line break]";
 						increase carried of chipped tooth by 1;
+						say "[bold type]You gain 1 pirate bandana goo![roman type][line break]";
 						increase carried of pirate bandana by 1;
 					if hermaphrodite is not banned:
 						say "[bold type]You gain 1 dog milk![roman type][line break]";
@@ -949,11 +979,11 @@ carry out bargainhunting:
 				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
 				if hermaphrodite is not banned and furry is not banned:
-					increase carried of gryphon milk by 2;
 					say "[bold type]You gain 2 gryphon milk![roman type][line break]";
+					increase carried of gryphon milk by 2;
 				if girl is not banned:
-					increase carried of glob of goo by 2;
 					say "[bold type]You gain 2 glob of goo![roman type][line break]";
+					increase carried of glob of goo by 2;
 		else if Z is 16: [strange doll]
 			if dollfound is 0:
 				say "     Reaching into the bin, you find your hand meeting some kind of plush stuffed toy, its soft form almost seeming to jump into your hand as you pull the strange thing out. Looking at what you found, you blink as you find yourself holding a miniature version of yourself, the [bold type]little plush doll appearing to be an exact replica of your current self[roman type], down to the smallest detail. Eyeing the unusual doll carefully, it seems almost alive, which is strangely disconcerting in a way...";
@@ -971,11 +1001,13 @@ carry out bargainhunting:
 					say "     Uncomfortable by even touching the thing, you drop the creepy doll back into the bargain bin, shaking your head the wasted opportunity at finding something actually useful that won't murder you in your sleep. As you turn away, you see that Nermine decided to take pity on you, and your payment is sitting back up there on the counter while she busies herself a little ways away. Nodding gratefully and feeling a bit better about the event, you tuck the food and water back away in your pack carefully, not sure if you will try your luck again in the strange bin or not...";
 					LineBreak;
 					say "[bold type]You gain 1 food![roman type][line break]";
-					say "[bold type]You gain 1 water bottle![roman type][line break]";
 					increase carried of food by 1;
+					say "[bold type]You gain 1 water bottle![roman type][line break]";
 					increase carried of water bottle by 1;
 			else:
 				say "     Searching through the bin again, you blink as your hand finds a small doll-sized pack and some accessories. Pulling them out, you stare at the items in puzzlement for a minute, before passing them along to your miniature doll self to play with. It never hurts to accessorize right?";
+				LineBreak;
+				say "[bold type]The dexterity of your strange doll increases by 1![roman type][line break]";
 				increase dexterity of strange doll by 1;
 		else if Z is 17: [strength pill]
 			say "     Sorting through the bin, you come across a strange folded piece of paper. Pulling it out and unwrapping it, you barely manage to catch the [bold type]small pill[roman type] that was wrapped in the paper before it falls out. Looking at the pill in confusion for a second, you then notice there seems to be something written on the paper. As it turns out, the pill is some kind of miracle muscle enhancer, though it does warn of side effects...";
@@ -988,10 +1020,11 @@ carry out bargainhunting:
 				say "     Shrugging off the possibility of side effects, you eagerly pop the pill in your mouth and swallow. As your muscles begin to burn slightly, you nevertheless can't help but wonder if that was the smartest thing you could have done. You moan as the strange pill works its changes on your body, your muscles spasming with pleasure as you hold onto the counter... Eventually the changes stop, and you stand there panting for several minutes, before realizing you should probably be moving on soon. You can't help but pause to admire your new muscles for a minute however, although for some reason thinking clearly about anything other than your muscles and sex seems to be harder than ever...";
 				LineBreak;
 				say "[bold type]Your strength has increased by 2![roman type][line break]";
-				say "[bold type]Your intelligence has decreased by 1![roman type][line break]";
 				increase strength of player by 2;
 				increase capacity of player by 10;
+				say "[bold type]Your intelligence has decreased by 1![roman type][line break]";
 				decrease intelligence of player by 1;
+				say "[bold type]Your sanity has decreased by 5![roman type][line break]";
 				decrease humanity of player by 5;
 			else:
 				LineBreak;
@@ -1001,16 +1034,20 @@ carry out bargainhunting:
 				say "     Sorting through the strange bin, you feel a small shiver after touching one of the items in the bin and reflexively release it, protecting yourself from the influence the [bold type]little piece of jewelry[roman type] might have. You withdraw your hand and clutch it tightly as the shivers run up your arm and then down your body, filling your loins with heat and arousal. Nermine, noticing your odd expression, slides back the water and food. 'Some items in the bargain bin do not agree with some people. Nermine's eager customer may try again or leave matters be.'";
 				LineBreak;
 				say "[bold type]You gain 1 food![roman type][line break]";
-				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of food by 1;
+				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
+				say "[bold type]Your libido has increased by 25![roman type][line break]";
 				increase libido of player by 25;
 			else if "Horny Bastard" is listed in feats of the player:
 				say "     Pushing through the strange piles of unusual items stuffed into the overflowing bin, you find a [bold type]small silver charm shaped like a [one of]feline[or]canine[or]demonic[or]equine[or]goat[or]dolphin[or]bestial[or]bear[at random] cock[roman type]. The small piece of jewelry glints in your hand as you pull it out of the bin, the lewd appearance of the finely detailed miniature cock making you grin. Somehow owning it leaves you feeling hornier and perhaps more bestial than ever, and you slip the little thing onto a charm bracelet so you can wear it at all times. Now if only you could go out and find a real cock just like it...";
+				LineBreak;
+				say "[bold type]Your libido has increased to 100![roman type][line break]";
 				now libido of player is 100;
+				say "[bold type]Your sanity has decreased by 10![roman type][line break]";
 				decrease humanity of player by 10;
 			else:
-				say "     Pushing through the strange piles of unusual items stuffed into the overflowing bin, you blink as you come across a [bold type]shiny silver charm[bold type] on a charm bracelet [bold type]shaped a bit like a canine cock[roman type]. Grinning you pull the small piece of jewelry out of the bin, feeling slightly amused that someone would actually go to such great effort to make and design such a thing. With a chuckle, you experimentally slip the bracelet onto your arm where it seems to fit perfectly. Somehow the feel of the silver cock-charm against your skin makes you feel slightly more aroused almost immediately. You can feel your body warming up in arousal as your libido goes into high gear, and somehow thoughts of all sorts of bestial sex seem to become even more attractive to your increasingly lust-fogged mind. Your hands stray down to rub your groin needfully as you begin to pant, finding it impossible to think of anything other than sex anymore, lovely, hot, bestial, sex... mmmmm yum...";
+				say "     Pushing through the strange piles of unusual items stuffed into the overflowing bin, you blink as you come across a [bold type]shiny silver charm[roman type] on a charm bracelet [bold type]shaped a bit like a canine cock[roman type]. Grinning you pull the small piece of jewelry out of the bin, feeling slightly amused that someone would actually go to such great effort to make and design such a thing. With a chuckle, you experimentally slip the bracelet onto your arm where it seems to fit perfectly. Somehow the feel of the silver cock-charm against your skin makes you feel slightly more aroused almost immediately. You can feel your body warming up in arousal as your libido goes into high gear, and somehow thoughts of all sorts of bestial sex seem to become even more attractive to your increasingly lust-fogged mind. Your hands stray down to rub your groin needfully as you begin to pant, finding it impossible to think of anything other than sex anymore, lovely, hot, bestial, sex... mmmmm yum...";
 				LineBreak;
 				say "[bold type]'Horny Bastard' has been added to your feats![roman type][line break]";
 				add "Horny Bastard" to feats of the player;
@@ -1027,8 +1064,8 @@ carry out bargainhunting:
 					say "     Letting go of the books as she pulls them out of your grasp and tugs them close to her chest, you smile a little at Nermine's obvious embarrassment. The jackaless quickly moves behind her counter again and lets the novels vanish under it, then slides double your payment back over the glass top. Collecting it with a grin, you think to yourself that you must have picked up some tips on getting the most out of your victories from the heroes of the books you skimmed.";
 					LineBreak;
 					say "[bold type]You gain 2 food![roman type][line break]";
-					say "[bold type]You gain 2 water bottles![roman type][line break]";
 					increase carried of food by 2;
+					say "[bold type]You gain 2 water bottles![roman type][line break]";
 					increase carried of water bottle by 2;
 					now RomanceBooksFound is 1; [books found and returned]
 				else:
@@ -1049,8 +1086,8 @@ carry out bargainhunting:
 					say "     Letting go of the books as she pulls them out of your grasp and tugs them close to her chest, you smile a little at Nermine's obvious embarrassment. The jackaless quickly moves behind her counter again and lets the novels vanish under it, then slides double your payment back over the glass top. Collecting it with a grin, you think to yourself that you must have picked up some tips on getting the most out of your victories from the heroes of the books you skimmed.";
 					LineBreak;
 					say "[bold type]You gain 2 food![roman type][line break]";
-					say "[bold type]You gain 2 water bottles![roman type][line break]";
 					increase carried of food by 2;
+					say "[bold type]You gain 2 water bottles![roman type][line break]";
 					increase carried of water bottle by 2;
 					Now RomanceBooksFound is 1; [books found and returned]
 				else:
@@ -1071,8 +1108,8 @@ carry out bargainhunting:
 					say "     Letting go of the books as she pulls them out of your grasp and tugs them close to her chest, you smile a little at Nermine's obvious embarrassment. The jackaless quickly moves behind her counter again and lets the novels vanish under it, then slides double your payment back over the glass top. Collecting it with a grin, you think to yourself that you must have picked up some tips on getting the most out of your victories from the heroes of the books you skimmed.";
 					LineBreak;
 					say "[bold type]You gain 2 food![roman type][line break]";
-					say "[bold type]You gain 2 water bottles![roman type][line break]";
 					increase carried of food by 2;
+					say "[bold type]You gain 2 water bottles![roman type][line break]";
 					increase carried of water bottle by 2;
 					Now RomanceBooksFound is 1; [books found and returned]
 				else:
@@ -1121,6 +1158,7 @@ carry out bargainhunting:
 				LineBreak;
 				say "[bold type]You have gained 5 soda cans![roman type][line break]";
 				increase carried of soda by 5;
+				say "[bold type]You lose 50 HP![roman type][line break]";
 				decrease HP of player by 50;
 				if HP of player < 0:
 					now HP of player is 1;
@@ -1178,12 +1216,15 @@ carry out bargainhunting:
 				increase stamina of player by 1;
 				if remainder after dividing stamina of player by 2 is 0:
 					increase maxHP of player by level of player plus 1;
+				say "[bold type]You lose 10 HP![roman type][line break]";
 				decrease HP of player by 10;
 				if HP of player < 0:
 					now HP of player is 1;
 			else if "Resistant" is listed in feats of the player:
 				say "     Poking through the rather unusual bargain bin cautiously, you come across a strange-looking stone statue, which looks like some kind of primitive idol. Pulling the idol out of the bin for a better look, you see that it appears to be a squat humanoid made up of many different animals mixed together, the melding of the different beasts remarkably smoothly done for such a sculpture. As you look it over, you are surprised to see that its visage has changed all of a sudden to one of displeasure. You yelp softly and push the thing away out of fear to see as the small stone figuring stretches its misshapen limbs out, before seeming to fade away as a small nimbus of dark haze envelops the idol. The sensation of oncoming changes builds in your hands as the strange idol's effects cause several random infections to affect you.";
 				say "     'Ah! It seems to Nermine that [bold type]Horguth the Changeable is upset[roman type] with her bargain-hunting customer. Perhaps at trying to avoid his influence?' The jackaless says with no little amusement, as you stare at your now empty hand in disbelief as the tingles spread up your arms.";
+				LineBreak;
+				say "[bold type]You lose some sanity![roman type][line break]";
 				decrease humanity of player by a random number between 8 and 15;
 				now AngryHorguth is 1;
 				randominfect;
@@ -1215,6 +1256,8 @@ carry out bargainhunting:
 				say "     As you read about all the pleasures of being at the feet of your master, and the proper way to wear rubber paws and tail-buttplugs, and especially tips on how to move properly on all fours when being walked on a leash, you find it harder and harder to hold onto your sense of self. Before long you are almost panting with desire and arousal as you flip through the pages as fast as you can, as eager to learn the next lesson as any good pet would be. Eventually though the small volume is finished, and you find yourself standing there with a happy smile on your face for several minutes before you turn back to the front to read the book again...";
 				WaitLineBreak;
 				say "     Fortunately you manage to catch yourself and realize what you are doing before you actually open the cover and begin your next round of slavery training. Shuddering slightly you toss the rather strange training manual back in the bargain bin, though you know that if you come across it in the bin again, you will end up reading again... somehow that thought just seems to be increasingly erotic the longer you think about it.";
+				LineBreak;
+				say "[bold type]You lose some sanity![roman type][line break]";
 				decrease humanity of player by a random number between 10 and 25;
 				if HP of player < 0:
 					now HP of player is 1;
@@ -1232,40 +1275,40 @@ carry out bargainhunting:
 			choose row minorbargain from the table of random critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
-					add loot entry to invent of player;
 					say "[bold type]You acquired 1 [loot entry]![roman type][line break]";
-					increase carried of dirty water by 1;
+					add loot entry to invent of player;
 					say "[bold type]You acquired some dirty water![roman type][line break]";
+					increase carried of dirty water by 1;
 				else:
 					if guy is not banned and furry is not banned:
-						increase carried of Chipped tooth by 1;
 						say "[bold type]You acquired a Chipped tooth![roman type][line break]";
+						increase carried of Chipped tooth by 1;
 					else if girl is not banned and furry is not banned:
-						increase carried of Skunk Goo by 1;
 						say "[bold type]You acquired some Skunk Goo![roman type][line break]";
+						increase carried of Skunk Goo by 1;
 					else if hermaphrodite is not banned and furry is not banned:
 						increase carried of panther milk by 1;
 						say "[bold type]You acquired some panther milk![roman type][line break]";
 					else:
-						increase carried of dirty water by 1;
 						say "[bold type]You acquired some dirty water![roman type][line break]";
-					increase carried of dirty water by 1;
+						increase carried of dirty water by 1;
 					say "[bold type]You acquired some dirty water![roman type][line break]";
+					increase carried of dirty water by 1;
 			else:
 				if guy is not banned and furry is not banned:
-					increase carried of Chipped tooth by 1;
 					say "[bold type]You acquired a Chipped tooth![roman type][line break]";
+					increase carried of Chipped tooth by 1;
 				else if girl is not banned and furry is not banned:
-					increase carried of Skunk Goo by 1;
 					say "[bold type]You acquired some Skunk Goo![roman type][line break]";
+					increase carried of Skunk Goo by 1;
 				else if hermaphrodite is not banned and furry is not banned:
-					increase carried of panther milk by 1;
 					say "[bold type]You acquired some panther milk![roman type][line break]";
+					increase carried of panther milk by 1;
 				else:
-					increase carried of dirty water by 1;
 					say "[bold type]You acquired some dirty water![roman type][line break]";
-				increase carried of dirty water by 1;
+					increase carried of dirty water by 1;
 				say "[bold type]You acquired some dirty water![roman type][line break]";
+				increase carried of dirty water by 1;
 	else:
 		say "     Sorting through your pack, you are ashamed to realize you can't afford to draw something out of the bargain bin right now. You blush under Nermine's curious gaze, as you casually move off to look through the rest of the store instead.";
 	if bargainbinusagetotal > 41: [ie 42 or greater, arbitrary number chosen to limit bin usage. should allow most (possible all) things to be found.]
@@ -1277,7 +1320,10 @@ carry out bargainhunting:
 to say plrtcl:
 	if humorous is banned or furry is banned or ( guy is banned and girl is banned and hermaphrodite is banned):
 		say "     As you start to dig in one corner of the bin, Nermine steps up to you and lays a slender paw-hand on your arm. 'Nermine can tell that her bargain-hunting customer will not be wanting anything from that corner. She is sorry, but the bargain bin is like that some times. As not to leave her hopeful visitor dissatisfied, Nermine will gladly refund the items paid - maybe to be held ready for another go at finding something desirable?' With that, the jackaless gives you back your food and the water bottle. 'But Nermine also has to comment that maybe her dear customer should be thinking to not be so picky. More fun is to be had that way,' she adds philosophically.";
+		LineBreak;
+		say "[bold type]You gain 1 food![roman type][line break]";
 		increase carried of food by 1;
+		say "[bold type]You gain 1 water bottle![roman type][line break]";
 		increase carried of water bottle by 1;
 	else:
 		let Q be a list of numbers;
@@ -1351,23 +1397,28 @@ the usedesc of jackal romance novels is "[jackal romance novels use]";
 
 to say jackal romance novels use:
 	say "     You page through one of the novels and start reading about the adventures of the hero of the book, a dashing jackalman who is a devil with his sword - and an amazing lover too, as it turns out. For books that are really quite explicit and hardcore, you have to say that you do enjoy the writing in its own right as well. Nermine certainly has a good taste in her special literature...";
+	LineBreak;
+	say "[bold type]Your libido increases by 10![roman type][line break]";
 	increase libido of player by 10;
+	if libido of player > 100:
+		now libido of player is 100;
 
 instead of trading the jackal romance novels when the current action involves the Nermine:
 	say "     As you offer the books to her, Nermine instantly snatches them from your grasp and quickly hides them under her counter. Then she tells you, 'The humble storekeeper is grateful for the return of her private property. As she has offered her vistior before, she will pay twice the buying price.' With a slightle embarrassed expression, she quickly hands you two packets of food and also two water bottles, then acts as if the whole deal didn't happen.";
 	LineBreak;
 	say "[bold type]You gain 2 food![roman type][line break]";
-	say "[bold type]You gain 2 water bottles![roman type][line break]";
 	increase carried of food by 2;
+	say "[bold type]You gain 2 water bottles![roman type][line break]";
 	increase carried of water bottle by 2;
+	say "[bold type]You lose jackal romance novels![roman type][line break]";
 	decrease carried of jackal romance novels by 1;
 	now RomanceBooksFound is 1; [gave them back to Nermine]
 
-Section 4- Jackal totem
+Section 4 - Jackal Totem
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Jackal totem"	"A small statue of a jackal posing proudly made out of some shiny black stone. It feels slightly warm in your hands."	1	jackal totem
+"Jackal Totem"	"A small statue of a jackal posing proudly made out of some shiny black stone. It feels slightly warm in your hands."	1	jackal totem
 
 jackal totem is a grab object. It is part of the player. Understand "totem" and "jackal" as jackal totem.
 
@@ -1404,8 +1455,8 @@ To say jackaltotemmagic:
 		say "     While you are feeling the sides of this new jackal-like face, even as the bones settle and it finishes forming, new scents explode through your brain as your nose finishes shifting into place atop your narrow canine muzzle. You blink several times as you focus on something else than your own face for a second, finding that you see the world through new sharper eyes, and all sounds around you intensify as your new black canine ears finish shifting to stand straight up on your changed head. A feral grin stretches your new muzzle wide as you think of how happy Nermine will be to see your newest change, your mind filled with thoughts of Nermine and the need to please the wonderful jackal-woman. As you take in the world through your new heightened senses, you find yourself hoping she will be pleased enough with you to help you on your way to becoming even more the happy little Jackal you just know you need to be.";
 		now facename of player is "Jackalboy";
 		now face of player is "narrow canine head, with a long sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's";
-		increase perception of player by 3;
 		say "[bold type]Your perception has increased by 3![roman type][line break]";
+		increase perception of player by 3;
 		now JackalBoyTF is 3;
 	else if JackalBoyTF is 3:
 		say "     Pulling this small jackal totem out, you find yourself grinning along with the statue as you realize that surely this figurine will be the last one you will need. Rubbing the little statue eagerly you feel a surge of warmth as it seems to melt under your hands, not crumbling like the others but melding with your body to become part of you. You don't have much time to think about this however, as your entire body starts to tingle and shift this time, your muscles seeming to ripple and smooth out, to give you a softer and more delicate appearance. You can feel the sharp claws of a jackal pushing out of your hands and feet, even as your body begins to take on a slightly more animalistic shape. Your heels lift slightly off the ground as your rear legs crack and shift to a more stable stance and your feet seem to spread apart on new jackal paws.";
@@ -1418,18 +1469,11 @@ To say jackaltotemmagic:
 		now cockname of player is "Jackalboy";
 		now cock of player is "[one of]canine[or]Jackalboy[or]jackal-like[or]knotted[at random]";
 		say "[bold type]Your strength has decreased by 2![roman type][line break]";
-		say "[bold type]Your dexterity has increased by 4![roman type][line break]";
 		decrease strength of player by 2;
 		decrease capacity of player by 10;
+		say "[bold type]Your dexterity has increased by 4![roman type][line break]";
 		increase dexterity of player by 4;
 		now JackalBoyTF is 4;
-
-[ JackalBoyTF                            ]
-[  1: Jackalboy Tail                     ]
-[  2: Jackalboy Skin                     ]
-[  2: Jackalboy Head                     ]
-[  4: Jackalboy Body                     ]
-[  5:                                    ]
 
 An everyturn rule:
 	if JackalBoyTF is 5:
@@ -1503,6 +1547,7 @@ Instead of resolving a Bacchus Wine:
 			say "     The hefty scent of the strange drink filling your nostrils, you dip the quickly collected flagon into the cask and fill it. The rich red liquid smells delightful as you bring it up to your lips to drink. A fantastic taste rolls over your tongue in an explosion of sweet tartness, followed by a pleasant burn on the way down. You can't help but swoon for a second as your head gets filled with arousal and the images of dancing nymphs and satyrs. OH! This must be pure satyr wine - more potent than what they usually carry and drink. Seems like they dilute it a bit.";
 			say "     Getting more than a bit drunk and giddy as you drink, you can't bring yourself to stop swallowing more of the amazing dark wine. You guzzle the rest of the delicious liquid gold as fast as possible, and stare blearily at your now empty cup. Looking over the cask once more, you are about to walk up to it and get a refill when the sounds of several carousing satyrs reach your ear. Uh-oh, they're on their way here! Realizing you are poaching their booze, you quickly drop the flagon and stagger back out into the museum halls. Eventually your head clears up enough and you manage to find your way back to the museum foyer, feeling much more like partying and drinking wine then you did before finding the cask.";
 			PlayerDrink 10;
+			say "[bold type]Your sanity has been reduced by 5![roman type][line break]";
 			decrease humanity of player by 5;
 			infect "Satyr";
 			infect "Satyr";
@@ -1523,7 +1568,8 @@ Instead of resolving a Bacchus Wine:
 			say "     Sadly your clumsy feet are not up to following the nimble beasts quietly enough, and while the rest continue on, two of them turn back to see what the noise was.";
 			challenge "Satyr";
 			challenge "Satyr";
-
+
+
 Stolen Jewelry is a situation.
 The Sarea of Stolen Jewelry is "Museum".
 HyenaTrailing is a number that varies.
@@ -1608,25 +1654,33 @@ Instead of resolving a Hyena Challenge:
 			say "     Grinning and commending your eager gang for their service, you slip on all but the items that Nermine asked for, then drag Gina off to thank her properly for her thoughtfulness. As you push her to lie back on a sofa right in the middle of the main room, then start to strip, the rest of the hyenas present in the hideout laugh and cheer, aroused by the show. Eventually after several hours, you lie in a comfortable heap of exhausted hyenas cuddling up to their matriarch after the orgy that followed. Several of them are stroking and admiring your new soft black fur, and the comfort of your position makes you wonder if you really want to give up even a small part of your new pretties. With the thought still active in your mind, you gather up the shiny trophies and get dressed. They do make you feel so much better-looking, so maybe you should just talk to Nermine about quitting while you are ahead...";
 			now NermineTalk is 3;
 			now RareQuesting is 9;
+			LineBreak;
+			say "[bold type]Your charisma has increased by 2![roman type][line break]";			
 			increase charisma of player by 2;
 			now Hyena Challenge is resolved;
 		else:
 			say "     Following the trail of clues leads you to the edges of the territory claimed by the gang of herm hyenas and though you are pretty sure they have what you are looking for somewhere in their territory, you have no clue where to begin your search. It seems pretty obvious that you are going to need to ask some of the gang members for help in that regards, although you doubt they will cooperate without a fight. After some searching you do manage to find a pair of the anthro hermaphrodites lounging around the area, and while they seem friendly enough at first as they try to convince you to join their gang, their mood swiftly changes when they realize you have other plans. Changing their behaviour in an instant, they turn and attack, striking at you before you can respond!";
+			say "[bold type]You lose 15 HP![roman type][line break]";
 			decrease HP of player by 15;
 			let HyenaFightCounter be 0;
+			now fightoutcome is 0; [reset]
 			while fightoutcome < 20 and HyenaFightCounter < 2: [runs for 2 times or until the player loses or flees]
 				now inasituation is true;
 				challenge "Herm Hyena";
 				increase HyenaFightCounter by 1;
+			now inasituation is false; [reset]
 			if fightoutcome < 20: [player won]
 				say "     After defeating the hyenas, they are more than willing to admit your dominance, and with a pair of matching grins easily agree to lead you to their hideout. Given how cheerful the tricky beasts are about the whole situation, you suspect you are walking right into a trap, but since it is probably the only way you will find out what happened to the items Nermine wants, you have no choice but to follow along. Eventually after quite a bit of walking, you find yourself outside one of the large warehouses in the area, and looking around you realize you could have been here much quicker if they had brought you directly here. All the extra walking was just buying time so that a large number of hyenas could gather here and be ready for you, all of them grinning at chuckling at you as the two hyenas you beat earlier quickly duck away from you to join the crowd.";
 				say "     Sighing as you look around, you realize there is no way you could beat all of these hyenas in combat, so you try calling out and telling them you are only looking for three very specific pieces of jewelry from the museum, and hoping they are in the mood to listen. The air is filled with the laughter of the hyenas at your bold questioning, the noise making you feel somewhat less human as it echoes throughout the area. Then suddenly, their laughter stops as quickly as if someone had flipped a switch. From the jostling crowd of gang-members, a much larger hyena steps into sight, her muscular body adorned with many loops of jewelry and necklaces. As she sizes you up, you do the same - and realize that what is obviously the leader of the hyenas is wearing the items you came her for!";
 				WaitLineBreak;
 				say "     The large hyena grins as she sees you have recognized her jewelry, and in a mocking tone of voice introduces herself as the matriarch of the gang, and that while the items you want are only the least part of her treasure, they are still hers. You sigh and turn away to leave, only to be stopped cold by the fact that the crowd of hyenas has closed all the way around while your back was turned. Hearing a particularly cruel chuckle by the matriarch, you turn to face her once more, 'Aww - poor little treasure-seeker. You've come so far, I couldn't just let you leave without giving you the chance to win your baubles, could I?' Grinning broadly and showing her sharp teeth, she gestures to two hyenas standing by her side and points you out to them. Looking around at unbroken ring of hyenas, you see that there is no way out - especially as they start to chant, 'Fight! Fight! Fight!' with eager expressions. An impromptu arena forms in seconds, with you in the center.";
+				now fightoutcome is 0; [reset]
+				now HyenaFightCounter is 0; [reset]
 				while fightoutcome < 20 and HyenaFightCounter < 2: [runs for 2 times or until the player loses or flees]
 					now inasituation is true;
 					challenge "Herm Hyena";
 					increase HyenaFightCounter by 1;
+				now inasituation is false; [reset]
 				if fightoutcome < 20: [player won]
 					if cocks of player > 0:
 						say "     Looking down at the matriarch's defeated guards, you are surprised to hear the crowd of hyenas cheer your victory as loudly as they cheered for their own kind, their praise making you feel slightly more dominant as you straighten up and stretch from your hard-won victory. After several minutes of cheering, and jesting, the crowd grows silent again in anticipation as the matriarch herself steps forward with a grin, and looking around you realize that win or lose, this particular fight is definitely a unique opportunity. If you lose now, you are pretty sure you won't have another chance at getting the items back for Nermine, and so you resolve to fight your hardest to prove your dominance over the powerful matriarch.";
@@ -1688,6 +1742,8 @@ Instead of resolving a Anubis Statue:
 		say "     Returning to the museum with the samples the strange man sent you to retrieve, you luckily manage to retrace your steps to the empty pedestal, and are unsurprised to find the jackal-like man leaning up against it with an amused grin. 'Found them I see?' he says with a smirk as he takes the bundle of vials from you eagerly. 'Trust me, these little beauties will make it more than worth your while,' the jackalman says as he begins to carefully mix the pheromones together, the scent of some strange sort of musk filling your nose as he does so. 'Ah there we go!' he says happily as he takes a whiff of the completed project, seeming satisfied as he pulls out a familiar looking ankh with a jackal embossed on it.";
 		say "     The man gives you a wink as he slowly pours the mixture over the ankh, and the metal seems to almost absorb the liquid into itself. 'There we go now, once you use this little beauty, that little shopkeep won't be able to keep her hands off of you. The jackal musk and enhanced pheromone mix should make sure of that.' The man says with a grin as he hands you the strangely scented ankh. 'I told you this little side trip of yours would be beneficial to both of us now didn't I? I look forward to seeing how it works out,' he says in a voice filled with amusement as he turns and wanders off into the dark museum halls again.";
 		now statuequest is 0;
+		LineBreak;
+		say "[bold type]You gain a strange ankh![roman type][line break]";
 		increase carried of strange ankh by 1;
 
 
@@ -1704,10 +1760,12 @@ Instead of resolving a Bestial Pheromones:
 	else if anubisrequest is 1:
 		say "     Hunting through the zoo, you follow the signs and with some luck manage to find the medical lab that is supposed to house the pheromones and chemicals the jackal-like man sent you to fetch. Unfortunately you don't seem to be the only one who has found the place, as a couple of felines are basking outside in the powerful scent emanating from within.";
 		let CheetahFightCounter be 0;
+		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and CheetahFightCounter < 2: [runs for 2 times or until the player loses or flees]
 			now inasituation is true;
 			challenge "Cheetah Woman";
 			increase CheetahFightCounter by 1;
+		now inasituation is false; [reset]
 		if fightoutcome < 20: [player won]
 			say "     Driving off the pair of sleek cheetahs, you look inside the room carefully, finding it to be full of several large coolers, several of which are standing open, their contents spilled out upon the floor. You now realize why the felines were so attracted to this place - the mingled musk and pheromones of numerous animals filling the air is quite a potent mixture, making your thoughts wander as you look around. Realizing you can't stay here long without giving in to your primal urges, you quickly pull out the paper the jackal-man gave you and begin to search the area, hoping the vials you need aren't lying among those smashed on the floor.";
 			let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
@@ -1720,6 +1778,8 @@ Instead of resolving a Bestial Pheromones:
 				now Bestial Pheromones is resolved;
 			else:
 				say "     You search the area as fast as you can, rummaging through the different vials even as your mind grows more and more clouded with lust. The musk of many different species fills your brain as your jackal nose inhales them happily, causing you to be more and more aroused and focused on touching and stroking your sensuous fur instead of searching the area as time goes on. Eventually you are so aroused that you barely can stop yourself from downing a vial or two of obviously recently collected lion seed, your body so sexually needy that you can think of little else. Forcing yourself to put the vials down you stagger back out into the zoo, running through the overgrown pathways in a vain attempt to clear your head and put some distance between you and the tempting musk-filled room. If you stayed there any longer, that would surely have put your remaining humanity at risk. Once your head has cleared slightly, you realize that if you want to find the items the Jackal man asked for, you will need to return, hopefully being more careful this time though...";
+				LineBreak;
+				say "[bold type]Your sanity decreases by 15![roman type][line break]";
 				decrease humanity of player by 15;
 		else if fightoutcome > 19: [lost or fled]
 			say "     Driven back by the sleek powerful felines, you are forced to retrace your steps down the zoo pathways, needing to rest and relax before you can try again... if you try again anyways.";
@@ -1735,10 +1795,12 @@ Instead of resolving a Twisted fruit grove:
 	if FelinoidRescued is 1: [player lost the fight to save the Felinoid]
 		say "     Traveling through the twists and turns of the park, you notice the scenery seems to slowly be twisting and changing, again becoming even more vine-covered and lewd with every step you take. Remembering the last time you were here, you grip your weapon tightly as you hurry quickly down the path, eager to get this over with. The landscape seems to grow increasingly disturbing as you travel, until eventually you are back at the thin curtain of vines from before, the strange twisted glade mostly quiet now, save for a large mass of vines near the area where the felinoid who saved you before was dragged off. You can still see some movement as the beast struggles within his viney prison, and hope you aren't too late to help return the favor. Stepping forward you realize as the glade explodes into motion again that without a distraction in the form of a large cat, this is going to be a much harder fight indeed...";
 		let PlantFightCounter be 0;
+		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and PlantFightCounter < 5: [runs for 5 times or until the player loses or flees]
 			now inasituation is true;
 			challenge "Parasitic Plant";
 			increase PlantFightCounter by 1;
+		now inasituation is false; [reset]
 		if fightoutcome < 20: [player won]
 			Say "     Finally beating off the barrage of plants, you look up and realize that you have managed to reach the tree itself, leaving a trail of devastated plants behind you. You waste no time in filling the small basket Nermine gave you with the soft, fleshy fruits, their strangely tempting smell washing over you as you stuff the basket in your backpack to make sure you won't lose any of the fruit after all the trouble you went through to get them. After zipping it up, you look around the glade. It looks like the path of destruction you cut through the plant creatures is still open and you could probably make it back out easily if you hurried. But at the same time... the bundle of vines where the felinoid is trapped is now writhing as the beast inside makes one last valiant effort to escape.";
 			say "     You can hear a piteous yowl, which is suddenly muffled, likely by one of the plants finally managing to work its way into the beast's mouth. A vague twinge of guilt fills you as you glance at the way out again, before looking back at the trapped felinoid. The beast did help you when you needed it before... but there are several fresh plants in the way you would have to fight through before you could manage to free the cat. On one hand, now that you have what you came for, there really isn't any more reason for you to stick around... but then, returning the favor by freeing the trapped felinoid would be a worthy task in and of itself.";
@@ -1749,10 +1811,12 @@ Instead of resolving a Twisted fruit grove:
 			if player consents:
 				LineBreak;
 				let PlantFightCounter be 0;
+				now fightoutcome is 0; [reset]
 				while fightoutcome < 20 and PlantFightCounter < 2: [runs for 2 times or until the player loses or flees]
 					now inasituation is true;
 					challenge "Parasitic Plant";
 					increase PlantFightCounter by 1;
+				now inasituation is false; [reset]
 				if fightoutcome < 20: [player won]
 					say "     Beating back the plant creatures, you quickly begin to hack and cut away at the vines encasing the trapped felinoid. The beast clearly notices that something is going on, as it lashes out vaguely in concert with your own efforts, struggling and gnawing at its viney prison as he struggles desperately to get free. Finally managing to cut the large feline loose, you see the proud (if a bit worse for wear) creature stagger out of the now limp vine cocoon. He seems somewhat disoriented as he takes in great gulps of fresh air, his sides heaving mightily. Realizing that the grove is on the move again apparently angered at being robbed of its trapped prey, you quickly push and prod the felinoid until he gets the idea, the two of you staggering down the path you hacked on the way in, your combined might quickly making short work of the few plants that send shoots sprouting up in your way to entangle and trip the two of you.";
 					say "     Once you are far enough outside the glade to have left the outermost offshoots behind, you practically collapse to the ground. That was one tiring adventure - and the massive amount of effort to fight off so many of the plants, as well as cutting the large cat free catches up to you all at once. Lying there on the ground panting helplessly, you blink as suddenly the large felinoid's face is right above yours, and you freeze as you realize that you are practically helpless in this position with the large beast standing above you. The feline looks down at you with his strangely intelligent eyes for a minute, lowering his muzzle down to sniff your face several times, before sticking his tongue out and giving you a long lick on your cheek. You blink as the beast backs off, sitting up as the male cat slowly weaves his way through the thankfully regular plants in the rest of the park, obviously still unsteady on his feet. He shoots you one last grateful look over his shoulder before vanishing between two bushes.";
@@ -1776,8 +1840,9 @@ Instead of resolving a Twisted fruit grove:
 					WaitLineBreak;
 					say "     Finally reaching the entrance, you collapse in exhaustion from your flight, barely feeling human anymore as the musk of the parasitic plants lingers in your brain. Eventually you stand back up and look back the way you came, knowing that it is too late to try again now. The cat would surely have been fully transformed if you ever went back...";
 					infect "Parasitic Plant";
+					LineBreak;
+					say "[bold type]Your sanity decreases by 25![roman type][line break]";
 					decrease humanity of player by 25;
-					now inasituation is false;
 					stop the action;
 			else:
 				LineBreak;
@@ -1799,6 +1864,8 @@ Instead of resolving a Twisted fruit grove:
 			WaitLineBreak;
 			say "     Finally reaching the entrance, you collapse in exhaustion from your flight, barely feeling human anymore as the musk of the parasitic plants lingers in your brain. Eventually you stand back up and look back the way you came, knowing that if you don't return soon, the felinoid that distracted the plant creatures will end up joining their ranks...";
 			infect "Parasitic Plant";
+			LineBreak;
+			say "[bold type]Your sanity decreases by 25![roman type][line break]";
 			decrease humanity of player by 25;
 			now inasituation is false;
 			stop the action;
@@ -1808,12 +1875,16 @@ Instead of resolving a Twisted fruit grove:
 		WaitLineBreak;
 		say "     Blinking, you realize how narrowly you avoided the plant's trap - if you had been as unsuspecting as the large predatory cat was, you probably would already be completely trapped by now. But then of course... you also realize the felinoid has just provided you with a perfect distraction. All of the greenery is busy with him, giving you the best chance you'll ever get to snatch up some of the fruit Nermine desires! Before you can stop to think, you dart through the curtain of hanging vines, which try to cling to and rip at you as you push through them, almost as if sensing your purpose. Quickly charging across the glade at a run, you pull the basked from where you had it strapped to your back, your eyes on the fruit hanging temptingly from the tree. The large plant sways its branches as you near it, its leaves rustling in alarm, followed by what seems to be a commanding creak and crack of the wood.";
 		say "     Reacting to the commotion, part of the more mobile plant creatures focus their attention more on you, with one or two actually letting go of the felinoid and sending their writhing tendrils worming your way. Glancing their way, you feel cautiusly confident that you can make the snatch and grab before they intercept you - and you would have... if the tree hadn't forced a snare-like root through the surface at that moment. Catching your ankle, it tips you up and causes you to sprawl painfully across the ground just a little bit away from your goal. You roll over and prepare for a fight as the vines begins reach you several heartbeats later, intending to entrap you.";
+		LineBreak;
+		say "[bold type]You lose 25 HP![roman type][line break]";
 		decrease HP of player by 15;
 		let PlantFightCounter be 0;
+		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and PlantFightCounter < 3: [runs for 3 times or until the player loses or flees]
 			now inasituation is true;
 			challenge "Parasitic Plant";
 			increase PlantFightCounter by 1;
+		now inasituation is false; [reset]
 		if fightoutcome < 20: [player won]
 			say "     You pant in victory as the last of the green vine-like menaces are defeated, and waste no time closing up to the tree at least. It seems to creak in outrage as you begin filling the basket with strange fruit in a hasty rush to get out of here. Hearing a roar makes you glance over to the large felinoid that gave you this chance, and you see that it is still struggling against the plants - but the inevitable end result is clear as more and more tendrils latch onto it. Soon, they will immobilize the cat and those plants that are just 'helping' their brethren will no doubt turn your way. Realizing you don't have much time left, you quickly close the lid of the basket, hoping you have managed to get enough of the strange fruit to satisfy Nermine, since you certainly don't intend to return to any place this dangerous again if you can help it.";
 			say "     Your muscles tense to start running, but then a pityable mewl draws your attention once more to the felinoid. Vines are levering open its maw while a tendril with a cock-like fruit rears up before it, ready to plunge itself down its throat. No - you can't just leave the feral beast. Unintentional or not, it helped you greatly in your task, so you dash towards the writhing cocoon of vines. Kicking, wrenching and tearing a few of the main trunks where they sprout from the ground, you leave the green menaces injured - gushing clear sap that should have gone to strengthen their vines. Between the fact that the damaged plants partly let go of the felinoid to lash out at you in retaliation and several of the their remaining vines having gone limp, this gives the feline beast another chance to get out.";
@@ -1825,7 +1896,6 @@ Instead of resolving a Twisted fruit grove:
 			now FelinoidRescued is 2; [player won the fight to save the Felinoid]
 			now RareQuesting is 2;
 			now Twisted fruit grove is resolved;
-			now inasituation is false;
 			stop the action;
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     You moan as the vines wrap around you as tightly as they have the newly trapped felinoid, his fight having been lost sometime during your own harsh battle. The vine's cock like flowers invade your every orifice as the plants begin to cocoon your helpless body with their green leafy tendrils, anchoring you in place, unable to even lift a finger to escape. You can feel the scent of the area invading your mind as your body continues to become more and plant like, your mind starting to fade as you realize that before much longer you will be more plant then animal, rooted here in the glade like several of the other strange plants. But then suddenly the vines around you rip and tear, and you blink and gasp at your sudden freedom, and a new wave of strong masculine musk washes over you as you fight to pull your way out of your viney cocoon.";
@@ -1834,18 +1904,20 @@ Instead of resolving a Twisted fruit grove:
 			say "     Finally reaching the entrance, you collapse again, barely feeling human anymore, as the musk of the parasitic plants and the musk of the strange felinoid linger in your brain. Eventually you stand back up and look back the way you came, knowing that if you don't return soon, the felinoid that helped you will end up meeting the fate it saved you from...";
 			infect "Parasitic Plant";
 			infect "Felinoid";
+			LineBreak;
+			say "[bold type]Your sanity decreases by 25![roman type][line break]";
 			decrease humanity of player by 25;
 			now FelinoidRescued is 1; [player lost the fight to save the Felinoid]
-			now inasituation is false;
 			stop the action;
 		else if fightoutcome is 30: [fled]
 			say "     Abandoning the fight, you tear loose from the vines that already have begun to wind their way around your body and simply run. As you scramble away in a wild sprint, you look over your shoulder and see that while some of the plants are following you, most have focused back on the felinoid. There is barely anything left to see of the large feline, most of him being hidden in a cocoon of vines. You feel vaguely guilty as you tear through the curtain of hanging vines without stopping, leaving the cat to fend for himself and be entrapped by the plants.";
 			WaitLineBreak;
 			say "     Finally reaching the entrance, you collapse in exhaustion from your flight, barely feeling human anymore as the musk of the parasitic plants lingers in your brain. Eventually you stand back up and look back the way you came, knowing that if you don't return soon, the felinoid that distracted the plant creatures will end up joining their ranks...";
 			infect "Parasitic Plant";
+			LineBreak;
+			say "[bold type]Your sanity decreases by 25![roman type][line break]";			
 			decrease humanity of player by 25;
 			now FelinoidRescued is 1; [player lost the fight to save the Felinoid]
-			now inasituation is false;
 			stop the action;
 	else: [the rare item quest is not active and neither is the captured felinoid available]
 		say "     Traveling through the twists and turns of the park, you notice that the scenery is starting to change and becoming more and more twisted and vine-covered with every step. Eventually you reach a thin curtain of vines blocking entry to an overgrown glade, you can see a number of those strange twisted plants moving around through the vines, seeming to congregate around some kind of warped tree. You can smell a soft tempting odor coming from within the glade, and almost find yourself stepping through the vines to investigate closer. Backing off you shake your head to try to clear it, and quickly turn and run down the path back the way you came, somehow sure that the entire situation is some kind of trap.";
@@ -1913,6 +1985,8 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 	else if RareQuesting is 2: [player got the fruit]
 		say "     'Ah, Nermine thanks her brave guest gratefully!' The jackal-woman says with bright grin on her silver-painted muzzle as she takes the basket full of strange fruit from you. 'These are very rare fruit indeed, and will certainly fetch a very high price to the right buyer!' She says brightly as she sets the basket down on the counter next to her, before reaching underneath it to produce the shiny golden ankh she showed you earlier. 'And speaking of price, here is the one that was agreed upon as well,' with a purr in her voice, she hands you the golden ankh, its weight feeling surprisingly good in your hands as you hold it up to inspect the gleaming metal in the candlelight. 'It is more than just a golden trinket,' the jackalwoman says teasingly as she gathers up the basket and heads towards the back room.";
 		say "     You are almost entranced by the beauty of the craftsmanship on your new posession, barely registering anything but the ankh until Nermine's eventual return. Stepping up close beside you, she leans forward and whispers into your ear, 'The treasure Nermine's friend is holding is a very special and powerful ankh indeed. Some might just value it for its gold, but this humble shopkeeper is sure that her visitor will go beyond such trivialities. If [heshe] uses its true power, [heshe] will become ready for further helping Nermine out and earn more rewards.' A sly smile on her muzzle, the jackaless strokes a finger gently along your arm, brushing against the side of your hand holding the ankh, then withdrawing. As she moves back behind the counter afterwards, you can't help but be very curious about what she meant...";
+		LineBreak;
+		say "[bold type]You gain a strange ankh![roman type][line break]";
 		increase carried of strange ankh by 1;
 		now RareQuesting is 3; [first ankh awarded]
 	else if RareQuesting is 3: [no further progress after the first ankh]
@@ -1928,6 +2002,8 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 		if TreasureFound is 1:
 			say "     'Ah, the brave adventurer found [hisher] treasure!' Nermine says with a large smile on her muzzle as she eagerly takes the small handful of golden coins you are holding out from you, leaving you feeling vaguely sad as those precious golden circles disappear behind the counter. When you point out that that was all there was in the pirate stash, she blinks at you in surprise. 'Only so few coins left? Well, then it is especially fortunate that Nermine's helper managed to find them! This makes them far more precious and she will have to adjust the price accordingly.' The jackalwoman says, a smile tugging at the corners of her muzzle. Then she pulls out the small golden ankh she promised you earlier and hands it to you. 'Nermine thinks this was more than earned then, though she also believes there might still be further coins left out there if one were to go and look again,' she says with a grin. As you weigh the warm golden ankh in your hands and wonder whether it was worth the handful of treasure you just traded for it...";
 			now RareQuesting is 6; [gold coins delivered]
+			LineBreak;
+			say "[bold type]You gain a strange ankh![roman type][line break]";
 			increase carried of strange ankh by 1;
 			now TreasureFound is 0;
 		else:
@@ -1946,6 +2022,8 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 		WaitLineBreak;
 		say "     After a moment, Nermine grins again before reaching under the counter. 'Nermine thinks she still needs to pay her tireless helper for all [hisher] help, and she has one last ankh to share now,' the shopkeeper says as she places the golden ankh into your hands. 'Nermine also thinks she has other promise to fulfill as well. Though that can wait until after her new friend has used ankh to look even more handsome,' She smiles as she says those words and runs her tongue along the sides of her muzzle, licking her lips eagerly as she stares at you in anticipation.";
 		now RareQuesting is 10; [museum treasures delivered - ankh #3 awarded]
+		LineBreak;
+		say "[bold type]You gain a strange ankh![roman type][line break]";
 		increase carried of strange ankh by 1;
 	else if RareQuesting is 10: [third ankh not yet used]
 		say "     'Nermine hopes her new friend will use the ankh sometime soon,' the sultry jackaless says, as she traces the tip of her claw along the edge of her breasts slowly. 'She just can't wait to see how much better her friend will look with a nice proud muzzle of [hisher] own.' Nermine adds, her voice starting to come out in soft lusty breaths, as she stares at you in eager anticipation.";
@@ -1990,7 +2068,7 @@ Section 7- Jackal ankh
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"strange ankh"	"a small golden ankh with an image of a jackal headed beastman set into the base, it feels oddly warm in your hands"	5	 strange ankh
+"Strange Ankh"	"a small golden ankh with an image of a jackal headed beastman set into the base, it feels oddly warm in your hands"	5	 strange ankh
 
 strange ankh is a grab object. It is part of the player. Understand "ankh" and "strange" as strange ankh.
 
@@ -2001,19 +2079,23 @@ the scent of strange ankh is "The golden ankh smells faintly of desert sand and 
 To say jackalankhmagic:
 	if Nightmaretf > 0:
 		say "     You rub the small golden ankh curiously, only to feel a strange burning sensation in your body as if two great forces were warring within. Letting out a gasp of surprise of surprise as the ankh seems to heat up - enough to sear flesh - you drop the item instinctively. Waving your hand and looking down at it, you realize that there is no trace of any damage after all, not even any reddending. Could it be that you've just imagined the feeling? But no, glancing down at the ankh, you see that it has molten into a small puddle of molten gold, sizzling a bit on the ground. Somehow you don't think that was what was supposed to happen...";
-		delete strange ankh;
+		say "[bold type]You lose a strange ankh![roman type][line break]";
+		decrease carried of strange ankh by 1;
 		now JackalManTF is 5;
 		now NermineTalk is 1;
 		stop the action;
 	if wrcursestatus >= 7 and wrcursestatus < 100:
 		say "     You rub the small, golden ankh curiously and hiss in pain as it starts to heat up, scalding your hand. You toss it aside. Something about you seems to be incompatible with it.";
 		now NermineTalk is 1;
-		delete strange ankh;
+		say "[bold type]You lose a strange ankh![roman type][line break]";
+		decrease carried of strange ankh by 1;
 		stop the action;
 	if JackalManTF is 0:
 		say "     You smile as you rub the small golden ankh between your hands, the warm metal feeling nice and almost soft as you rub at it. Suddenly the small ankh almost seems to melt into your hands, leaving a soft tingling dusting of gold where the small trinket was before. As you stare at your palms, you feel a strange shifting sensation in your body, seeming to center on your rear. Glancing over your shoulder, you are surprised to see your ass starting to stretch and change, your rear flattening out as a long predatory black jackal-like tail forms behind you. In a strangely pleasant stretching sensation, your new tail grows until its tip is hanging just below your knees. You stare down at the appendage and can't help but try it out - moving the tail from side to side a little a few times, with it reacting with surprising dexterity. Next, you take a few steps and are pleased to note that it helps your balance greatly. Thinking to yourself, the though of how hot and sexy the jackal tail looks comes unbidden to your mind...";
 		now tailname of player is "Jackalman";
-		now tail of player is "You have a long sleek jackal's tail attached to your rear. It seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
+		now tail of player is "You have a long sleek jackal's tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
+		say "[bold type]You lose a strange ankh![roman type][line break]";
+		decrease carried of strange ankh by 1;
 		say "[bold type]Your dexterity has increased by 4![roman type][line break]";
 		increase dexterity of player by 4;
 		now RareQuesting is 4;
@@ -2024,9 +2106,11 @@ To say jackalankhmagic:
 		say "     Feeling over your new thick black jackal pelt, you are somehow sure your nice new fur will appeal to more than just the shopkeeper as well, and quite possibly provide a handsome defense from attackers.[line break]";
 		now skin of player is "[one of]dark black[or]sleek black furred[or]jackal-furred[at random]";
 		now skinname of player is "Jackalman";
+		say "[bold type]You lose a strange ankh![roman type][line break]";
+		decrease carried of strange ankh by 1;
 		say "[bold type]Your charisma has increased by 3![roman type][line break]";
-		say "[bold type]Your stamina has increased by 3![roman type][line break]";
 		increase charisma of player by 3;
+		say "[bold type]Your stamina has increased by 3![roman type][line break]";
 		increase stamina of player by 3;
 		increase maxHP of player by level of player plus 1;  [guaranteed HP boost once]
 		if remainder after dividing stamina of player by 2 is 0:
@@ -2041,9 +2125,11 @@ To say jackalankhmagic:
 		now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seems both predatory and strangely sexy at the same time.";
 		now RareQuesting is 11;
 		now statuequest is 1;
+		say "[bold type]You lose a strange ankh![roman type][line break]";
+		decrease carried of strange ankh by 1;
 		say "[bold type]Your charisma has increased by 4![roman type][line break]";
-		say "[bold type]Your perception has increased by 4![roman type][line break]";
 		increase charisma of player by 4;
+		say "[bold type]Your perception has increased by 4![roman type][line break]";
 		increase perception of player by 4;
 		now JackalManTF is 3;
 		stop the action;
@@ -2058,16 +2144,17 @@ To say jackalankhmagic:
 		attributeinfect "Jackalman";
 		now cockname of player is "Jackalman";
 		now cock of player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
-		increase capacity of player by 20;
+		say "[bold type]You lose a strange ankh![roman type][line break]";
+		decrease carried of strange ankh by 1;
 		say "[bold type]Your strength has increased by 4![roman type][line break]";
-		say "[bold type]Your dexterity has increased by 2![roman type][line break]";
 		increase strength of player by 4;
+		increase capacity of player by 20;
+		say "[bold type]Your dexterity has increased by 2![roman type][line break]";
 		increase dexterity of player by 2;
 		now JackalManTF is 4;
 	if JackalManTF is 5:
 		say "     You examine the strange ankh in your hand, but it seems to slip out of your fingers. When you look for it, you can't seem to find it. Oh well, you'd already asked Nermine to reverse its effects, so that's probably for the best.";
 		now carried of strange ankh is 0;
-
 
 An everyturn rule:
 	if JackalManTF is 5:
