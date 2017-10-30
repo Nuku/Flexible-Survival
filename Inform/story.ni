@@ -29,6 +29,12 @@ Use Scoring.
 Include Version 4 of Menus by Emily Short.
 Include Basic Help Menu by Emily Short.
 Include Basic Screen Effects by Emily Short.
+[dependencies]
+Include Glulx Entry Points by Emily Short.
+Include Glulx Text Effects by Emily Short.
+Include Simple Graphical Window by Emily Short.
+[new graphics handler]
+Include New Graphics by Executaball.
 
 [To decide which number is the absolute value of (N - a number):
 	if N < 0:
@@ -243,6 +249,8 @@ Child can be born. Child is not born.
 Childrenfaces is a list of text that varies.
 Childrenskins is a list of text that varies.
 Childrenbodies is a list of text that varies.
+NewGraphics is a truth state that varies.
+NewGraphicsInteger is a number that varies. NewGraphicsInteger is usually 1.
 
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
@@ -720,6 +728,7 @@ Humorous is a flag.
 Hermaphrodite is a flag.
 Hellspawn is a flag.
 Feral is a flag.
+Transgender is a flag.
 [Cub is a flag.  Cub is usually warded.	]
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
@@ -2373,7 +2382,7 @@ To ClearMoreFunction:
 	now clearnomore is 0; [returns clearing to normal]
 	say "Screen clearing occurs frequently.";
 
-Section Color
+[Section Color
 
 Include Glulx Text Effects by Emily Short.
 
@@ -2438,7 +2447,7 @@ special-style-1	--	"#00CC00"	--	--	bold-weight	--	--	--	--	--
 special-style-2	--	"#CC0000"	--	--	bold-weight	--	--	--	--	--
 
 
-
+]
 Part 3 - Item Code
 
 Understand the command "get" as something new.
@@ -5031,6 +5040,7 @@ Include Zoo by Hellerhound.
 
 [Quests & Events]
 Include Ancient Tome by Wahn.
+Include Additional Tome Scenes by Dys.
 Include Apartment 319 by Kaleem Mcintyre.
 Include Assorted Events by Stripes.
 Include Beach Events by Sarokcat.
@@ -5179,6 +5189,7 @@ Include Cute Chinchilla Girl For FS by Guest Writers.
 Include Dalmatian by Kaleem mcintyre.
 Include Dark Elf for FS by Stripes.
 Include Demon Brute For Fs by Wahn.
+Include Demon Fox by Dys.
 Include Doberman for FS by Stripes.
 Include Dolphin for FS by Hellerhound.
 Include Donkeyman by Sarokcat n Verath.
@@ -5491,6 +5502,7 @@ Include Paula by Stripes.
 Include Phantom Dolphin by Blue Bishop.
 Include Phantom Pony by Blue Bishop.
 Include Pretty Kitty by Xenophiliac.
+Include Randall and Brad by Rikaeus.
 Include Rane by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
 Include Richard by Rikaeus.
@@ -5570,6 +5582,7 @@ instead of going through a dangerous door(called X):
 
 gsgl is a number that varies. gsgl is usually 1.
 glstart is a number that varies. glstart is usually 2.
+glshiftstart is a number that varies. glshiftstart is usually 0.
 
 to genderlockmenu:
 	now calcnumber is -1;
@@ -5607,12 +5620,14 @@ to genderlockmenu:
 		if calcnumber is not 0:
 			now gsgl is calcnumber;
 			now gsexit is 1;
-			if glstart is 2:
+			if gsgl > 1 and glshiftstart is 0:
 				say "Would you like to start as your chosen gender lock?";
 				if player consents:
 					now glstart is 1;
 				else:
 					now glstart is 2;
+			else:
+				now glstart is 2;
 		else:
 			now gsexit is 1;
 
@@ -5620,7 +5635,7 @@ to startgenderlockget:
 	say "Locking Gender...";
 	if gsgl is 2:
 		now gsgl is a random number between 3 and 11;
-	if gsgl is not 1 or gsgl is not 0:
+	if gsgl > 1:
 		if gsgl is 3:
 			say "Locked to male gender.";
 			add "Male Preferred" to feats of player;
@@ -5660,9 +5675,14 @@ to startgenderlockget:
 			add "Flat Chested" to feats of player;
 
 To startgenderlockshift:
-	while gsgl < 2:
-		say "You need to choose a gender lock!";
-		genderlockmenu;
+	now glshiftstart is 1;
+	if gsgl < 2 and glstart is 1:
+		say "You chose to start as your gender lock option, but have not selected one. Would you like to do so now?";
+		say "     [line break]";
+		say "     ([link]Y[as]y[end link]) - Choose a gender lock.";
+		say "     ([link]N[as]n[end link]) - Start game without lock.";
+		if player consents:
+			genderlockmenu;
 	if gsgl is:
 		-- 3:	[male]
 			now the cocks of the player is 1;
@@ -5939,7 +5959,7 @@ To regularstart: [normal start method]
 		say "(14) [link]Hyperlinks[as]14[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
 		say "(15) [link]Waiting for Input[as]15[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(16) [link]Screen Clearing[as]16[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
-		say "(17) [link]Graphics[as]17[end link] - [bold type][if graphics is true]On[else]Off[end if][roman type][line break]";
+		say "(17) [link]Graphics[as]17[end link] - [bold type][if NewGraphicsInteger is 1]OLD[else if NewGraphicsInteger is 2]NEW[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
 		say "(18) [link]Inventory Columns[as]18[end link] - [bold type][invcolumns][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Restore a save[as]99[end link][line break]";
@@ -5995,10 +6015,17 @@ To regularstart: [normal start method]
 				else:
 					now clearnomore is 0;
 			-- 17:
-				if graphics is true:
+				if NewGraphicsInteger is 1:
+					now NewGraphics is true;
+					now NewGraphicsInteger is 2;
+				else if NewGraphicsInteger is 2:
 					now graphics is false;
-				else:
+					now NewGraphics is false;
+					now NewGraphicsInteger is 0;
+				else if NewGraphicsInteger is 0:
 					now graphics is true;
+					now NewGraphics is false;
+					now NewGraphicsInteger is 1;
 			-- 18:
 				say "[set_invcolumns]";
 			-- 99:
@@ -6404,3 +6431,10 @@ When play begins:
 	now monster is a random number from 1 to number of filled rows in the table of random critters;
 	choose row monster in table of random critters;
 	regularstart; [original start method.  easier to move everything then leave here]
+
+When play begins (this is the graphics window construction rule):
+	[if NewGraphics is true:][Build window regardless in case player decides to turn it on later]
+	build graphics window;
+	[now the graphics window pixel count is 1;]
+	now the graphics window proportion is 1;
+	follow the current graphics drawing rule.
