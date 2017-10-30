@@ -4,15 +4,19 @@ Version 2 of Latex Wolf for FS by Stripes begins here.
 
 "Adds a Latex Wolf to Flexible Survival's Wandering Monsters table"
 
-
-
 when play begins:
 	add { "Latex Wolf" } to infections of guy;
 	add { "Latex Wolf" } to infections of furry;
 
 Section 1 - Monster Responses
 
-To say latex wolf defeat:
+To say latex wolf loses:
+	if inasituation is true:
+		say ""; [dealt with at the event source]
+	else:
+		say "[RegularLatexWolfLoses]";
+
+to say RegularLatexWolfLoses:
 	if libido of player <= 50:
 		Say "     The latex wolf collapses, its head slumped against the ground, and begins to melt away down a nearby storm drain.";
 	if libido of player > 50 and cocks of player > 0:
@@ -27,7 +31,13 @@ To say latex wolf defeat:
 		else:
 			say "This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
 
-To say latex wolf attack:
+To say latex wolf wins:
+	if inasituation is true:
+		say ""; [dealt with at the event source]
+	else:
+		say "[RegularLatexWolfWins]";
+
+To say RegularLatexWolfWins:
 	if ( a random chance of 1 in 4 succeeds or ( "Kinky" is listed in feats of player and a random chance of 1 in 4 succeeds ) ) and inasituation is false:
 		say "     As you go down in front of the wolf creature, [if HP of player > 0]unwilling[else]unable[end if] to continue to oppose it, you are pounced upon by the latex creature. As it climbs atop you, it seems to lose structural integrity, melting and flowing down over you. You try to struggle as the black fluid flows over you, gradually engulfing you, but it clings to you tightly and makes it hard to move[if cocks of player > 1]. As the dark goo flows over your cocks, it squeezes at them, making you aroused despite yourself[else if cocks of player is 1]. As the dark goo flows over your cock, it squeezes at it, making you aroused despite yourself[end if][if cunts of player > 1]. The goo forms phallic bulges that are pressed into your cunts, stuffing them full of flowing black latex that throbs inside you, making your vaginae quiver with arousal[else if cunts of player is 1]. The goo forms phallic bulges that are pressed into your cunt, stuffing it full of flowing black latex that throbs inside you, making your vagina quiver with arousal[end if][if anallevel > 1]. More of the thick, flowing latex presses its way into your anus, stuffing your rear with a swelling cock and knot tying it inside you[end if].";
 		say "     As your body is subject to this abuse, the black goo continues to spread over you, covering your [bodydesc of player] body and over your [facename of player] head. Your head is engulfed and your mouth and nose covered in flowing latex, cutting off your air supply momentarily. As you begin to grow woozy from lack of oxygen, an air passage is opened and you are allowed to breathe. Having seized control of your [bodytype of player] body, the latex wolf works its flowing, rubbery goo over [if cunts of player > 0 or anallevel > 1]and inside [end if]your flesh, using your body for its own pleasure. It eventually cums, spraying gooey black semen [if cunts of player > 0 or anallevel > 1]inside you[else]over you[end if][if cocks of player > 0] while pumping out your own seed onto the ground. Your balls drained, it sends a tendril of black goo flowing along your urethra and flowing into your testes, claiming them with its own dark cum until they're full and swollen with it[end if].[impregchance]";
@@ -69,8 +79,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Latex Wolf"; [Name of your new Monster]
 	now attack entry is "The Latex Wolf [one of]slaps you with a rubbery pad[or]claws you with plastic nails[or]bites with rubbery teeth[or]pounces forward and bodyslams you[at random].";
-	now defeated entry is "[latex wolf defeat]";
-	now victory entry is "[latex wolf attack]";
+	now defeated entry is "[latex wolf loses]";
+	now victory entry is "[latex wolf wins]";
 	now desc entry is "[mongendernum 3]     You are startled when you hear a rubbery, skidding noise [if a random chance of 1 in 2 succeeds]from behind you[else if a random chance of 1 in 2 succeeds]to your left[else]to your right[end if]. Turning to face the noise, you spot a black and white latex wolf whipping around the corner."; [ Description of the creature when you encounter it.]
 	now face entry is "elongated with a muzzle and sharp teeth"; [ Face description, format as the text "Your face is (your text)."]
 	now body entry is "small and lupine, bent onto all fours. Your insides feel strange, as if they are made of something shifting and changing"; [ Body Description, format as the text "Your Body is (your text)"]
@@ -113,9 +123,6 @@ When Play begins:
 	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
-
-
-
 
 Section 3 - Progressive Infection
 
@@ -226,6 +233,5 @@ when play ends:
 					now cunt width of player is cunt width of player * 10;
 					now breast size of player is breast size of player * 10;
 					if breast size of player > 26, now breast size of player is 26;
-
 
 Latex Wolf for FS ends here.
