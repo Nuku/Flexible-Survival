@@ -5582,6 +5582,7 @@ instead of going through a dangerous door(called X):
 
 gsgl is a number that varies. gsgl is usually 1.
 glstart is a number that varies. glstart is usually 2.
+glshiftstart is a number that varies. glshiftstart is usually 0.
 
 to genderlockmenu:
 	now calcnumber is -1;
@@ -5619,12 +5620,14 @@ to genderlockmenu:
 		if calcnumber is not 0:
 			now gsgl is calcnumber;
 			now gsexit is 1;
-			if glstart is 2:
+			if gsgl > 1 and glshiftstart is 0:
 				say "Would you like to start as your chosen gender lock?";
 				if player consents:
 					now glstart is 1;
 				else:
 					now glstart is 2;
+			else:
+				now glstart is 2;
 		else:
 			now gsexit is 1;
 
@@ -5632,7 +5635,7 @@ to startgenderlockget:
 	say "Locking Gender...";
 	if gsgl is 2:
 		now gsgl is a random number between 3 and 11;
-	if gsgl is not 1 or gsgl is not 0:
+	if gsgl > 1:
 		if gsgl is 3:
 			say "Locked to male gender.";
 			add "Male Preferred" to feats of player;
@@ -5672,9 +5675,14 @@ to startgenderlockget:
 			add "Flat Chested" to feats of player;
 
 To startgenderlockshift:
-	while gsgl < 2:
-		say "You need to choose a gender lock!";
-		genderlockmenu;
+	now glshiftstart is 1;
+	if gsgl < 2 and glstart is 1:
+		say "You chose to start as your gender lock option, but have not selected one. Would you like to do so now?";
+		say "     [line break]";
+		say "     ([link]Y[as]y[end link]) - Choose a gender lock.";
+		say "     ([link]N[as]n[end link]) - Start game without lock.";
+		if player consents:
+			genderlockmenu;
 	if gsgl is:
 		-- 3:	[male]
 			now the cocks of the player is 1;
