@@ -633,33 +633,32 @@ to say DoranSexMenu: [Doran Sex Protocol]
 				choose row calcnumber from table of fucking options;
 				say "[title entry]: [description entry]?";
 				if player consents:
-					let nam be title entry;
+					let indexval be sortorder entry;
 					now sextablerun is 1;
-					if nam is:
-						-- "69 with the [gdragon]":
+					if indexval is:
+						-- 1:
 							say "[DoranNeutral_69]"; [69 Scene]
-						-- "Have [ghim] sit on your face":
+						-- 2:
 							say "[DoranDom_FaceSitting]"; [rimjob scene]
-						-- "Worship [ghis] balls":
+						-- 3:
 							say "[DoranDom_BallWorship]"; [Ball Worship]
-						-- "Worship [ghis] cum":
+						-- 4:
 							say "[DoranDom_CumWorship]"; [Cum Worship]
-						-- "Get fucked by the [gdragon] anally":
+						-- 5:
 							say "[DoranDom_Anal]"; [anal sex scene]
-						-- "Get fucked by the [gdragon]":
+						-- 6:
 							say "[DoranDom_Vaginal]"; [cunt sex scene]
-						-- "Let [ghim] jerk you off":
+						-- 7:
 							say "[DoranDom_CockHandjob]"; [Cock-Focused Iteration]
-						-- "Get fingered by [ghim]":
+						-- 8:
 							say "[DoranDom_CuntHandjob]"; [Cunt-Focused Iteration]
-						-- "Get Doran to ride your cock":
+						-- 9:
 							if cock length of player > 18 and a random chance of 2 in 3 succeeds:
 								say "[DoranDom_RidingPlayer]"; [Riding on Top]
 							else:
 								say "[DoranDom_RidingBehind]"; [Riding Behind]
-						-- "Pleasure [ghim] orally":
+						-- 10:
 							say "[DoranDom_Oral]"; [oral sex scene]
-					WaitLineBreak;
 			else if calcnumber is 0:
 				say "     Change your mind and do something else?";
 				if player consents:
