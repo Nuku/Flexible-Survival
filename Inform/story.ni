@@ -249,8 +249,8 @@ Child can be born. Child is not born.
 Childrenfaces is a list of text that varies.
 Childrenskins is a list of text that varies.
 Childrenbodies is a list of text that varies.
-NewGraphics is a truth state that varies.
-NewGraphicsInteger is a number that varies. NewGraphicsInteger is usually 1.
+NewGraphics is a truth state that varies. NewGraphics is usually true.
+NewGraphicsInteger is a number that varies. NewGraphicsInteger is usually 2.
 
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
@@ -729,7 +729,7 @@ Hermaphrodite is a flag.
 Hellspawn is a flag.
 Feral is a flag.
 Transgender is a flag.
-[Cub is a flag.  Cub is usually warded.	]
+
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
 	add { "Slut Rat", "Female Husky", "Black Equinoid", "Ashen Breeder", "Lizard Girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "Sewer Gator", "Deer", "Sea Otter", "Ebonflame Draken", "Red Kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
@@ -4604,6 +4604,7 @@ To Plot:
 
 After going:
 	try looking;
+	project the figure of pixel_icon;
 	plot;
 
 This is the finish stats rule:
@@ -5165,7 +5166,7 @@ Include Bobcat for FS by Stripes.
 Include Bottlenose Toy For Fs by Stripes.
 Include Bovine For Fs by Damaged.
 Include Breederslut by Stripes.
-Include Bunny Jock For Fs by Stripes.
+Include Bunny Jock by Rikaeus.
 Include Butterfly for FS by Guest Writers.
 Include Candy Striper by Stripes.
 Include Cannon by Hiccup.
