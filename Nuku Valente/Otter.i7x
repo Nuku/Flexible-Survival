@@ -159,7 +159,7 @@ When Play begins:
 	now defeated entry is "[Otter loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Otter attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[otterdesc]";[ Description of the creature when you encounter it.]
-	now face entry is "blunt nose of an otter, with small round ears set over your cute face";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "blunt nose of an otter, with small round ears set over your cute face";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "sleek and athletic. Almost androgynous in a way, with the curves subsumed in the trim musculature of a born swimmer. Your hands and feet are webbed with flaps of skins between fingers and toes that are quite ticklish when touched by another";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]sleek pelted[or]smooth furred[or]waterproofed[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a thick rudder of a tail, [skin of player] and swaying lightly behind you. It could help a lot while swimming.";[ Tail description, write a whole Sentence or leave blank. ]

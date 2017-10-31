@@ -217,7 +217,7 @@ When Play begins:
 	now defeated entry is "[Tiger Shark loses]";
 	now victory entry is "[Tiger Shark wins]";
 	now desc entry is "[TigerSharkDesc]";
-	now face entry is "triangular, streamlined face. You still breathe normally in and out of your nostrils that happen to be at the end of your snout. When you open your mouth you show several rows of razor sharp teeth, fit to bite off anything.";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "triangular, streamlined face. You still breathe normally in and out of your nostrils that happen to be at the end of your snout. When you open your mouth you show several rows of razor sharp teeth, fit to bite off anything.";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "bulky, but still flexible enough to manoeuvre well in the water. Your form is a sight to behold with its chiseled and well-toned form, adorned with a large fin on your back and anal fins on your crotch. Your thick arms end in clawed hands. [if breast size of player > 0]Your feminity is still accentuated with your hourglass-shape and your breasts.[end if] Your body is held up by two equally strong legs in a digitigrade stance. Your legs ends in elongated feet that are armed with three clawed toes";
 	now skin entry is "[one of]striped, ochre[or]smooth[or]tough[or]slippery[at random]"; [ format as the text "You have (your text) skin"]
 	now tail entry is "You have a large, finned tail dragging along from behind. It feels a little unnatural to not be using the tail to manoeuvre around.";[ write a whole Sentence or leave blank. ]

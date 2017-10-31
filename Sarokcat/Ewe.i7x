@@ -46,7 +46,7 @@ When Play begins:
 	now defeated entry is "[ewe loss]";
 	now victory entry is "[ewe attack]";
 	now desc entry is "[mongendernum 4]     Travelling through the streets of the city, you come across a strange sheep-like person wandering around without aim, absently running her hands over her soft, fleece-covered body as she looks around. Before you can do more than wonder what an ewe is doing out here all alone, the female sheep spots you and bleats eagerly before charging right at you, her slightly-crazed eyes full of lust.";
-	now face entry is "short black muzzle";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "short black muzzle";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "stocky, but feminine, with lovely curves to your body. Your arms are thinner, ending in dainty, hoof-like hands which struggle to handle items at times. Your legs have strong thighs for leaping and crossing rough terrain and slender calves ending in dark hooves";
 	now skin entry is "[one of]woolly[or]soft wool[or]white fleeced[at random]";
 	now tail entry is "A short, round, sheep-like nub of a tail sits right over your ass, occasionally flicking one way or another in response to some stimulus, often lifting up teasingly above your rear.";[ Tail description, write a whole Sentence or leave blank. ]

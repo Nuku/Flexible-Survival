@@ -524,7 +524,7 @@ When Play begins:
 	now defeated entry is "[fsdf loss]";
 	now victory entry is "[fsdf attack]";
 	now desc entry is "[fsdf desc]";
-	now face entry is "very much draconic in shape, adorned with a set of barbed and savage teeth.  Clearly aquatic in design, ridges and fins adorn the sides of your head, and you find it a challenge to maneuver any building with such an elongated neck";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "very much draconic in shape, adorned with a set of barbed and savage teeth.  Clearly aquatic in design, ridges and fins adorn the sides of your head, and you find it a challenge to maneuver any building with such an elongated neck";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "distinctly bloated and bulky fare, though somewhat streamlined in presentation, inferring that you'd be better suited for hauling it underwater, if your webbed and finned limbs were any indication";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]light blue, smoothly scaled[or]light blue, softly scaled[or]light blue, delicately scaled[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a long, somewhat bulky tail, top adorned with a sail-like fin.";[ Tail description, write a whole Sentence or leave blank. ]
