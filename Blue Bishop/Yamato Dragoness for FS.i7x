@@ -592,7 +592,7 @@ When Play begins:
 	now skin entry is "smooth, [if ydcolour is 0]red[else if ydcolour is 1]blue[else if ydcolour is 2]green[end if]-scaled with a coarse yellow underside adorning your";
 	now tail entry is "You wield a very long, reptilian tail with an impressive, fin-like mane of golden hair at the end.";
 	now cock entry is "draconic, pink, and [one of]strange[or]bulbous[at random]ly ribbed";
-	now face change entry is "you suddenly feel overwhelmed by a sudden change, face elongating into a proud, draconic snout, a pair of very lengthy whiskers sprouting from it's tip. Two short antlers and a mane of golden hair growing from the back of your head";
+	now face change entry is "you suddenly feel overwhelmed by a sudden change, face elongating into a proud, draconic snout, a pair of very lengthy whiskers sprouting from its tip. Two short antlers and a mane of golden hair grow out from the back of your head";
 	now body change entry is "you soon double over, frame shifting into something now much more elongated, arms and legs shifting in shape to something much more stout and less equipped to walk around. As you recover, you see that you're quite large, too, though you're likely only a little over two-thirds the size from which this strain originates, and you can't fly -- only able to hover with limited efficacy. A golden mane now runs across the entire length of your serpentine torso";
 	now skin change entry is "[ydskinchange]";
 	now ass change entry is "a lengthy tail sprouts forth from it.  It takes some time to adjust to it, limb adorned in a golden, fin-like mane, culminating in a flattened tuft at the tip";
