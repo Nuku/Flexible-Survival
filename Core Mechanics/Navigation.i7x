@@ -299,6 +299,7 @@ carry out navigating:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	if HP of Velos > 2, move Velos to the noun;
 	move the player to the noun;
+	project the figure of pixel_icon;
 	follow turnpass rule;
 
 NavCheckReturn is a truth state that varies.
