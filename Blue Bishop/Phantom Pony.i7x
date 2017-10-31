@@ -373,7 +373,7 @@ to blotbindorgasm:
 			else:
 				say ". Warmth of your hot release awash against you, you feel it gradually flow into your maw through the rubbery tube, pumping its occupant with the slight excess";
 		else:
-			say "cunt[sfn] ache[sfv] against the toy, pounding vinyl milking you for as long as it can. Warmth of your hot honey awash against you, It seems compelled to make you taste your own juices, flooding your senses through the rubbery tube";
+			say "cunt[sfn] ache[sfv] against the toy, pounding vinyl milking you for as long as it can. Warmth of your hot honey awash against you, it seems compelled to make you taste your own juices, flooding your senses through the rubbery tube";
 		say ". Barely seeming to respond to your ecstasy, it's clear the thing has reached the apex of its purpose, seemingly more than happy to continue abusing its encased prisoner.";
 
 to blotlust:

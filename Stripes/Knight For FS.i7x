@@ -163,7 +163,7 @@ to say knightwins_vaginal:
 	if kpstatus is 1:
 		say "     'Is this not the finest way to end a battle, my lady knight?' ";
 	else if kpstatus is 2:
-		say "     'This is the kind of treatment and training you shall receive as my squire, lass' ";
+		say "     'This is the kind of treatment and training you shall receive as my squire, lass.' ";
 	else if kpstatus is 3:
 		say "     'How fortunate for you, as a mere commoner, to be able to aid a noble knight such as I,' ";
 	else:

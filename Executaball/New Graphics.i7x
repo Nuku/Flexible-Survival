@@ -8,7 +8,7 @@ The graphics window pixel count is 450. The graphics window position is g-above.
 [Rule for starting the virtual machine:
 	now the current graphics drawing rule is the bland graphics drawing rule.]
 
-[The graphics-window is a graphics g-window spawned by the main-window. The position of the graphics-window is g-placeabove.   Every turn: follow the refresh windows rule.
+[The graphics-window is a graphics g-window spawned by the main-window. The position of the graphics-window is g-placeabove. Every turn: follow the refresh windows rule.
 
 When play begins: open up the graphics-window.
 

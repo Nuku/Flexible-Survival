@@ -11,12 +11,12 @@ North of Training centre is Old Hall.
 North of Old Hall is Masters Room.
 East of Old Hall is Old Lounge.
 
-The description of Old Hall is "a hallway that looks like it should be condemned[line break][if corgitalk > 1]Max[else]The angry corgi[end if] stormed down the eastern passage.[line break]you can also hear sounds of an orgy coming from the north".
+The description of Old Hall is "A hallway that looks like it should be condemned. [if corgitalk > 1]Max[else]The angry corgi[end if] stormed down the eastern passage. You can also hear sounds of an orgy coming from the north.".
 The description of Masters Room is "[meetthemaster]".
 
 The description of Old Lounge is "[corgilounge]".
 
-The description of Training centre is "a make shift prison cell, its bars have been torn apart by the enraged corgi ".
+The description of Training centre is "A makeshift prison cell, its bars have been torn apart by the enraged corgi.".
 
 corgihelp is a number that varies. corgihelp is usually 0.
 mistresswon is a number that varies. mistresswon is usually 0.
@@ -25,9 +25,9 @@ to say meetthemaster: [fight without max]
 	challenge "The Mistress";
 
 to say fight the mistress: [fight with max]
-	say "as you enter the masters chamber you see what can only be described as a abomination of nature, numerous dominators and sluts are sloppily merged together into one giant mass of abominable sex, constantly fucking and being fucked.[line break]";
+	say "As you enter the master's chamber you see what can only be described as an abomination of nature. Numerous dominators and sluts are sloppily merged together into one giant mass of abominable sex, constantly fucking and being fucked.[line break]";
 	if corgihelp is 1:
-		say "With a quick nod to max you launch yourselves at the abomination";
+		say "With a quick nod to max you launch yourselves at the abomination.";
 		choose row monster from the table of random critters;
 		now monsterHP is 100;
 		now wdam entry is 9;
@@ -35,17 +35,17 @@ to say fight the mistress: [fight with max]
 		now libido entry is 20;
 		now dex entry is 5;
 	else:
-		say "Gathering your courage you launch yourself at the abomination ";
+		say "Gathering your courage you launch yourself at the abomination.";
 
 
 to say corgilounge:
 	if corgitalk < 0:
-		say "as you enter the room, you find [if corgitalk > 1]Max[else]the Corgi[end if] standing over a pile of groaning dominators and sluts, all of which are covered in bruises and bleeding heavily.[line break]Noticing your entrance [if corgitalk > 1]Max[else]the corgi[end if] turns towards you and growls, 'get the fuck out of here before I tear you apart'";
-		say "deciding that running would be the best option, you quickly back out of the room";
+		say "As you enter the room, you find [if corgitalk > 1]Max[else]the Corgi[end if] standing over a pile of groaning dominators and sluts, all of which are covered in bruises and bleeding heavily.[line break]Noticing your entrance [if corgitalk > 1]Max[else]the corgi[end if] turns towards you and growls, 'get the fuck out of here before I tear you apart'";
+		say "Deciding that running would be the best option, you quickly back out of the room.";
 		move player to Old Hall;
 	else:
-		say "as you enter the room, you find [if corgitalk > 1]Max[else]the Corgi[end if] standing over a pile of groaning dominators and sluts, all of which are covered in bruises and bleeding heavily.[line break]Noticing your entrance [if corgitalk > 1]Max[else]the Corgi[end if] turns towards you and rubs the back of his head sheepishly, 'sorry bout that, I have a bit of a temper problem, especially when idiots like these keep trying to steal my stuff'.[line break][if corgitalk < 2]'Anyway, the names Max nice to meet ya'.[end if][line break]";
-		say "'Now we have to get out of here, from what I've managed to get out off these' he says gesturing to the pile of bloody dominators 'their master is planning to induct us into its service' he shivers 'not something I want to happen, but we could also use this opportunity to take it down, if I have your help that is, when you decide what to do come talk to me again '";
+		say "As you enter the room, you find [if corgitalk > 1]Max[else]the Corgi[end if] standing over a pile of groaning dominators and sluts, all of which are covered in bruises and bleeding heavily.[line break]Noticing your entrance, [if corgitalk > 1]Max[else]the Corgi[end if] turns towards you and rubs the back of his head sheepishly. 'Sorry bout that, I have a bit of a temper problem, especially when idiots like these keep trying to steal my stuff.'[line break][if corgitalk < 2]'Anyway, the names Max nice to meet ya.'[end if][line break]";
+		say "'Now we have to get out of here, from what I've managed to get out off these,' he says, gesturing to the pile of bloody dominators, 'their master is planning to induct us into its service.' He shivers. 'Not something I want to happen, but we could also use this opportunity to take it down, if I have your help that is, when you decide what to do come talk to me again.'";
 		now corgitalk is 2;
 
 
@@ -114,7 +114,7 @@ to say massdomfightloses:
 	say "[slutden]";
 
 to say slutden:
-	say "when you next awaken you're in a small cell being looked over by a group of dominators, [if corgitalk is 2]Max[else]the corgi from before[end if] unconscious on the ground next to you.[line break]Deciding to wake the corgi is a good idea, you manage to rouse him into consciousness.[line break][if corgitalk > 1]well it looks like they finally caught me, at least I have some company' he flashes you a smile before frowning at the guards 'though seriously we need to get out of here, I've head some rumours about their master and it's not pretty, first things first we ha...[else]This is all your fault, I normally handle them no sweat but you just had to get involved, yes it's a nice trying to help, but I didn't expect a body thrown on me' he growls at you. You back away from the angry corgi and try to appease him 'whatever, let's get out of here first then we can ta...'[end if]  [if corgitalk > 1]Max [else]The corgi[end if] suddenly cuts himself off and stares at his wrist, 'they took it... they fucking took it, I'M GOING TO FUCKING KILL THEM' you watch in shock as a enraged corgi rips the bars apart and begins using them to beat the guards into a bloody mess.[line break]After the [']massacre['] is over, the corgi storms off elsewhere, to presumably to massacre the rest of the building's inhabitants.";
+	say "when you next awaken you're in a small cell being looked over by a group of dominators, [if corgitalk is 2]Max[else]the corgi from before[end if] unconscious on the ground next to you.[line break]Deciding to wake the corgi is a good idea, you manage to rouse him into consciousness.[line break][if corgitalk > 1]'Well it looks like they finally caught me, at least I have some company.' He flashes you a smile before frowning at the guards. 'Though seriously we need to get out of here, I've head some rumours about their master and it's not pretty, first things first we ha...'[else]'This is all your fault, I normally handle them no sweat but you just had to get involved, yes it's a nice trying to help, but I didn't expect a body thrown on me,' he growls at you. You back away from the angry corgi and try to appease him. 'Whatever, let's get out of here first then we can ta...'[end if] [if corgitalk > 1]Max[else]The corgi[end if] suddenly cuts himself off and stares at his wrist. 'They took it... they fucking took it, I'M GOING TO FUCKING KILL THEM!' You watch in shock as a enraged corgi rips the bars apart and begins using them to beat the guards into a bloody mess.[line break]After the [']massacre['] is over, the corgi storms off elsewhere, to presumably to massacre the rest of the building's inhabitants.";
 	Now Domincounter is resolved;
 	move Max to Old Lounge;
 	move player to Training centre;

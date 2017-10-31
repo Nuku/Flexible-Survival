@@ -175,18 +175,18 @@ An everyturn rule:
 
 To say centaur attack:
 	if cocks of the player is not 0:
-		say "The centaur flips you over, and then looks you over as you go limp. he snarls at the sight of your cock. 'Little bastard' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [cock of player] member. They tighten, slowly at first, then faster until your poor cock is bleeding from every hole, trying to relieve the pressure. [compresscock]The centaur leaves you like that. 'Never come with one of those again.'";
+		say "The centaur flips you over, and then looks you over as you go limp. he snarls at the sight of your cock. 'Little bastard,' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [cock of player] member. They tighten, slowly at first, then faster until your poor cock is bleeding from every hole, trying to relieve the pressure. [compresscock]The centaur leaves you like that. 'Never come with one of those again.'";
 		[male fury, centaur wants mate, not a companion!]
 	if cunts of player > 0:
 		Say "[centaur rape female]";
 	if cocks of player is 0 and cunts of player is 0 and "Male Preferred" is not listed in feats of player:
-		say "The centaur looks at you with apprehension. 'Nothing at all?' He groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lose it.'";
+		say "The centaur looks at you with apprehension. 'Nothing at all?' he groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lose it.'";
 		now the cunts of the player is 1;
 		now the cunt length of the player is 2;
 		now the cunt width of the player is 1;
 		infect "Mutant Centaur";
 	else if cocks of player is 0 and cunts of player is 0:
-		say "The centaur looks at you with apprehension. 'Nothing at all?' He groans, and kicks his front hoof, knocking you over.  He looks at you as if expecting something to happen, but it doesn't.  He huffs and turns around, kicking dirt and dry grass onto you before riding off.  'Useless creature.'";
+		say "The centaur looks at you with apprehension. 'Nothing at all?' he groans, and kicks his front hoof, knocking you over.  He looks at you as if expecting something to happen, but it doesn't.  He huffs and turns around, kicking dirt and dry grass onto you before riding off.  'Useless creature.'";
 
 
 to say centaurgrowtorso:

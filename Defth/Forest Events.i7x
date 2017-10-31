@@ -10,7 +10,7 @@ When play begins:
 
 Instead of resolving a Small cave:
 	if glowing mushroom is owned:
-		say "     Walking around the forest you find what appears to be a hole in a rock, it does have sound coming from the other side so it might be worth exploring. But the hole is too small for you size, you would need to shrink before getting in there.";
+		say "     Walking around the forest, you find what appears to be a hole in a rock. It does have sound coming from the other side, so it might be worth exploring. Unfortunately, the hole is too small for you size, so you would need to shrink before going in there.";
 		WaitLineBreak;
 		say "     ([link]Y[as]y[end link]) - Eat the shrooms and try to scavenge the place.";
 		say "     ([link]N[as]n[end link]) - Could be dangerous, better not give fate a chance.";
