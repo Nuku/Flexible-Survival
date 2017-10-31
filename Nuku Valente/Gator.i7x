@@ -11,7 +11,7 @@ gatordefeat is a number that varies.
 gatorconsent is a number that varies.
 
 to say gator attack:
-	say "'Weak little thing, too bad. I thought you had more in you,' She growls as she pushes you to the ground roughly, 'I suppose I can still have some fun with you...' She crawls up on top of you, peeling off your clothes as she goes. You try to wriggle free, but a soft but painful bite to your shoulder stills you. She wraps her arms around you and hefts your ass up into the air. Her angry looking manhood juts up from her groin, dripping thin streams of lubricant as she moves you into position.";
+	say "'Weak little thing. Too bad, I thought you had more in you,' she growls as she pushes you to the ground roughly. 'I suppose I can still have some fun with you...' She crawls up on top of you, peeling off your clothes as she goes. You try to wriggle free, but a soft but painful bite to your shoulder stills you. She wraps her arms around you and hefts your ass up into the air. Her angry looking manhood juts up from her groin, dripping thin streams of lubricant as she moves you into position.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 	if cunts of player > 0:

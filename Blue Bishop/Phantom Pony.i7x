@@ -12,7 +12,7 @@ Instead of conversing the Blot:
 to say blotlook:
 	project the figure of Blot_icon;
 	if blotintense is -1:
-		say "     Standing there quietly in a corner of the stall, the else rustic aesthetic of the area is clashed harshly against a seemingly cartoonish, inflatable horse toy. Looking it over closely, it seems relatively harmless, and it's 'purpose' is seemingly revealed by a lewdly placed hole between its hind legs.";
+		say "     Standing there quietly in a corner of the stall, the else rustic aesthetic of the area is clashed harshly against a seemingly cartoonish, inflatable horse toy. Looking it over closely, it seems relatively harmless, and its 'purpose' is seemingly revealed by a lewdly placed hole between its hind legs.";
 		say "     You're not sure why anyone would make such a thing -- assuming it isn't somehow the byproduct of this nanite plague -- as the seemingly flimsy thing couldn't possibly support the weight of an adult horse -- if it's meant as a standin for breeding. The tail of the toy is molded to be swept sideways, to ensure easy access, so it's clear it was designed to facilitate this purpose.";
 		say "     There seems to be the word 'Blot' crudely carved into the wood next to it, so you imagine that's what it's called. It's entirely possible someone left it in this room, since nobody seems to go back here. In any case, you could probably use it yourself for 'relief', but the way things are you have no idea what might happen if you do...";
 	else:
@@ -373,7 +373,7 @@ to blotbindorgasm:
 			else:
 				say ". Warmth of your hot release awash against you, you feel it gradually flow into your maw through the rubbery tube, pumping its occupant with the slight excess";
 		else:
-			say "cunt[sfn] ache[sfv] against the toy, pounding vinyl milking you for as long as it can. Warmth of your hot honey awash against you, It seems compelled to make you taste your own juices, flooding your senses through the rubbery tube";
+			say "cunt[sfn] ache[sfv] against the toy, pounding vinyl milking you for as long as it can. Warmth of your hot honey awash against you, it seems compelled to make you taste your own juices, flooding your senses through the rubbery tube";
 		say ". Barely seeming to respond to your ecstasy, it's clear the thing has reached the apex of its purpose, seemingly more than happy to continue abusing its encased prisoner.";
 
 to blotlust:

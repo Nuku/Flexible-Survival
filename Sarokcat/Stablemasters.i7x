@@ -75,7 +75,7 @@ Carry out Slavelearning:
 			now monster is y;
 			break;
 	if LastSlutslavelearned minus turns < 10:
-		say "Your slave glances down at the ground sadly, and shakes her head slightly apologetically. 'Your Slut is truly sorry master, but she doesn't think either of us are ready for another training session so soon... maybe her gorgeous master should come back a little later? And maybe even punish their slut for not being ready sooner?' She says in a rather sad tone, though you can see from the slight dampness on her black thighs that the idea of being punished has already made your little pet hot and needy...";
+		say "Your slave glances down at the ground sadly, and shakes her head slightly apologetically. 'Your Slut is truly sorry master, but she doesn't think either of us are ready for another training session so soon... maybe her gorgeous master should come back a little later? And maybe even punish their slut for not being ready sooner?' she says in a rather sad tone, though you can see from the slight dampness on her black thighs that the idea of being punished has already made your little pet hot and needy...";
 	else:
 		let T be a random number between 1 and 6;
 		if T is 1:
