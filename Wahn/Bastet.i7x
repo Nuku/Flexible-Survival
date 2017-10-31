@@ -275,7 +275,7 @@ to say BastetLustyEyes:
 	if BastetSexOrTalk is true: [the affection message was called up by the sex menu]
 		say " with the now-familiar glimmer of lust in your eyes";
 
-to say BastetApprovalMessage
+to say BastetApprovalMessage:
 	if BastetApproval < -6:
 		say "     Seeing you approach[BastetLustyEyes], Bastet's tail twitches and jerks through the air behind her. The lioness glances at you and one sleek paw-hand automatically wanders down to her crotch, rubbing her pubic mound through her dress. Then she says, 'Back for more... [master]? Want to use me as your slut and whore again?!' There still is that little pause before she acknowledges your power over her fate, but otherwise the divinely infused lioness has accepted that you have the right to take her whenever you want. Lust and arousal are clearly audible in the rumbling purr of her voice, and she arches her back a little to present those shapely breasts of hers, barely hidden by her mostly sheer dress!";
 	else if BastetApproval < -3: [annoyed, but aroused]
