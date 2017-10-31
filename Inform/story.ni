@@ -5166,7 +5166,7 @@ Include Bobcat for FS by Stripes.
 Include Bottlenose Toy For Fs by Stripes.
 Include Bovine For Fs by Damaged.
 Include Breederslut by Stripes.
-Include Bunny Jock For Fs by Stripes.
+Include Bunny Jock by Rikaeus.
 Include Butterfly for FS by Guest Writers.
 Include Candy Striper by Stripes.
 Include Cannon by Hiccup.
