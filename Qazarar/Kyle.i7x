@@ -431,7 +431,7 @@ instead of resolving a Angry Snake:
 		let GroupFightCounter be 0;
 		while fightoutcome < 20 and GroupFightCounter < 3: [runs three times or until loss/flee]
 			now inasituation is true;
-			challenge "German Shepard";
+			challenge "German Shepherd";
 			increase GroupFightCounter by 1;
 		if fightoutcome < 20:
 			say "     You stand victorious, the canines cowed before you. With another yell, Gerty throws a large encyclopedia at them from his fort. This proves to be the final straw for the dogs, and they flee, whimpering. You turn towards the fort, and narrowly dodge another tome sent your way. 'Back off, pal! I have dictionary, and I'm not afraid to use it!' You quickly throw your hands up in a gesture of surrender, and explain that Kyle sent you to make sure he was okay. The snake-like head once again pokes out of the fort. 'Bah, clearly I'm fine. And what's more, I had it handled. I had the entire contents of the reference section ready to discipline any more strays with.' The metallic appendage you had noticed before shakes at you like a fist.";
@@ -453,7 +453,7 @@ instead of resolving a Angry Snake:
 		let GroupFightCounter be 0;
 		while fightoutcome < 20 and GroupFightCounter < 3: [runs three times or until loss/flee]
 			now inasituation is true;
-			challenge "German Shepard";
+			challenge "German Shepherd";
 			increase GroupFightCounter by 1;
 		if fightoutcome < 20:
 			say "     You stand victorious, the canines cowed before you. With another yell, Gerty throws a large encyclopedia at them from his fort. This proves to be the final straw for the dogs, and they flee, whimpering. You turn towards the fort, and narrowly dodge another tome sent your way. 'Back off, pal! I have dictionary, and I'm not afraid to use it!' You quickly throw your hands up in a gesture of surrender, and explain that Kyle sent you to make sure he was okay. The snake-like head once again pokes out of the fort. 'Bah, clearly I'm fine. And what's more, I had it handled. I had the entire contents of the reference section ready to discipline any more strays with.' The metallic appendage you had noticed before shakes at you like a fist.";
