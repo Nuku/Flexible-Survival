@@ -46,8 +46,7 @@ To say DiegoDesc:
 
 Instead of conversing the Diego:
 	if Diegotalk is 0:
-		if graphics is true:
-			project the figure of Diego_face_icon;
+		project the figure of Diego_face_icon;
 		say "     'Hey there,' the coyote-like man says with a grin. 'The name is Diego, my friend, and I have to say this is an unexpected surprise. Haven't seen too many people in these parts that haven't completely given into the pleasure.' Diego says as he readjusts his position against the wall to get a better look at you. 'Can't say how long that will last, of course. You look like you like to enjoy yourself as much as anyone else around here. And well, I'd be lying if I said this wasn't the most fun I've had in my life,' he says with a grin playing across his muzzle. 'Never been so glad to have a coyote nip me in my backyard. Course, everything seems much more amusing to me now also. Must be that whole trickster thing, eh?' The coyote man chuckles as he leans back against the wall happily.";
 		say "     'Guess we will see how long you last here. Course, if ya need any advice about the creatures in the park feel, free to talk to me as much as you want. Of course I can't guarantee it will be GOOD advice - that whole trickster thing and all, ya ken?' he adds with a sly wink. 'Course, ya could always just wait here until the military finally gets itself together and comes to visit. Course, if I felt like it, I could always pull out a few more coyote tricks on them. That would be sure to slow them down a bit, if ya know what I mean. I'd only do something like that as a favor to a fellow trickster,' Diego snickers at the thought of the poor, tricked military fools.";
 		increase Diegotalk by 1;
@@ -131,25 +130,22 @@ to say DiegoTalkMenu:
 
 to say DiegoTalk1:
 	if DiegoChanged is 2: [female]
-		if graphics is true:
-			project the figure of DiegoFem_face_icon;
+		project the figure of DiegoFem_face_icon;
 		say "     [one of]'I think I'm in heat!'[or]'God what I wouldn't give for a nice, thick, coyote cock right about now... to fill my empty pussy...'[or]'Hell I'm almost too horny to think about tricking anyone... almost.'[or]'This was the best trick I ever had played on me!' Diego says with a happy grin on her muzzle as she rubs her new body.[or]'You know, I hear there is an alpha wolf out there in the city looking for bitches... maybe we should go check it out together?' she asks with a twinkle in her eye.[or]'Where did you get that wonderful milk from anyways? Not that I won't be making some milk of my own as soon as I can find a nice stud to knock me up...' Diego says with a smile as she rubs her breasts eagerly.[or]'I wonder if there is any nice canine studs around who want to play hide the knot?'[or]'If you play with the felinoids in the park, you could end up a slutty little pussy for their amusement, doesn't that sound fun?'[or]'The skunk girls are all pets of the larger skunk-beasts. Nice little submissive pets for the strong skunks to fill up with their fertile seed... mmm' Diego moans and rubs herself, obviously aroused by the thought of being a beast's pet.[or]The coyote bitch pants and yips softly, obviously too busy masturbating to bother talking to a boring person like yourself.[or]'I saw a woman riding a horse go by here a while back, I'm pretty sure though the horse would be the one doing the riding eventually though, if you know what I mean.'[or]'God I never knew being a bitch was so much fun, I'm so glad this happened!'[or]'I wonder if any of those nice German Shepherds in town would like to play with a coyote,' she says with a speculative look on her face.[or]'I heard there was a woman caught by some huskies recently to be turned into a nice little submissive husky bitch. I can kind of envy her now,' she says with a smile.[at random]";
 	else if DiegoChanged is 1: [herm]
-		if graphics is true:
-			project the figure of DiegoFem_face_icon;
+		project the figure of DiegoFem_face_icon;
 		say "     [one of]'Damn fine trick you pulled there!'[or]'Thank God I still have my nice thick coyote cock' Diego says with a grin as he rubs said cock suggestively.[or]'Hell I can't decide whether I should pull a trick on you, or thank you for this,' she says as she gestures at her changed body.[or]'You know, I hear there is an alpha wolf out there in the city looking for pack-members, maybe you should go see if he has room for you?' She suggests with a twinkle in her eye.[or]'Where did you get that wonderful milk from anyways?' Diego says with a grin as she licks her lips.[or]'I saw a woman riding a horse go by here a while back, I'm pretty sure though the horse was the one doing the riding eventually though if you know what I mean.'[or]'There was a deer around here recently at some point, she looked kinda lonely if you know what I mean...'[or]'I wonder what's bigger...' Diego muses with a thoughtful expression on her muzzle, 'The horse cocks here in the park, or the zebra cocks in the zoo...'[or]'Careful around the cute chinchilla in the park, they are almost as tricky sometimes as I am.'[or]'I wonder how much those strange cock plants are going to keep spreading.'[or]'Cock and pussy, best of both worlds!'[or]'I heard there was a woman caught by some huskies recently to be turned into a nice little submissive husky bitch,' she says with a smile.[at random]";
 	else: [male]
-		if graphics is true:
-			project the figure of Diego_face_icon;
+		project the figure of Diego_face_icon;
 		say "     Diego says, '[one of]Hmm, advice eh? How's this, always remember to brush your teeth after giving a blowjob, good hygiene is still important!'[or]Have you tried looking in some of the small lairs in the park? You might find something worthwhile, just be careful to wait until no ones home before you take a peek.'[or]Don't mess with badgers, seriously even I wouldn't kid you about those dangerous buggers.'[or]I hear there was a doe hanging around here at some point, if ya want her to go with ya just make sure to grab her right away.'[or]Have you seen those handsome felinoids out there? Maybe you should try petting one a few times, I'm sure you will find it educational.'[or]I hear if you play with the small felines enough, a big strong alpha lion will show up.'[or]If you see some wyverns fighting in the park, you should probably just watch and not interfere, not your business right?'[or]There's some weird skunks out there, but I hear the bigger beasts are lots of fun to play with.'[or]Happy with your current look? Then this is definitely not the place to be.'[or]Don't worry about any of the plants you see moving around the park, just go give them a pet they are pretty much harmless.'[or]Have you seen any little yellow rodents in the park? Seems to me like something you might be interested in.'[or]Don't hit the chinchillas! Hurting something that cute has to be against some kinda law, you wouldn't want to get in trouble now would you?'[or]The bitches love the nice thick coyote cock.'[or]Feel like a real trickster today? Why not try tricking me and see what happens?'[or]I bet you can't trick old Diego here, just give it a try!'[at random]";
 
 to say DiegoTalk2:
 	try Diegotricking;
 
 to say DiegoTalk3:
-	if DiegoChanged > 0 and graphics is true:
+	if DiegoChanged > 0:
 		project the figure of DiegoFem_face_icon;
-	else if graphics is true:
+	else:
 		project the figure of Diego_face_icon;
 	say "     Accepting your water bottle with eager paw-hands, Diego gives you a wide grin and says, 'That's downright neighbourly of you my friend. Thanks!' With that said, the coyote unscrews the lid, giving an almost imperceptible nod at the fact that it was still properly sealed. Leaning back his head, the anthro canine pours the water into [if DiegoChanged is 0]his[else]her[end if] open muzzle, chugging it down thirstily. 'Aaah, now that hit the spot! Makes me feel more ready for playing tricks right away,' [if DiegoChanged is 0]he[else]she[end if] says with a grin, tail wagging left to right.";
 	decrease carried of water bottle by 1;
@@ -157,8 +153,7 @@ to say DiegoTalk3:
 
 to say DiegoTalk4: [transform Diego towards being female]
 	if DiegoChanged is 1: [herm Diego]
-		if graphics is true:
-			project the figure of DiegoFem_face_icon;
+		project the figure of DiegoFem_face_icon;
 		say "     'Hey you have more of that wonderful milk.' Diego says with a grin on her new muzzle as she sniffs the air, her coyote tail wagging behind the herm coyote eagerly. 'Well the damage is already done, and that stuff tasted amazing so one more drink couldn't hurt - right?' Diego says as she looks at you hopefully, eyeing the bottle of milk you are holding out teasingly.";
 		say "     [bold type]Do you give Diego some more of the milk?[roman type][line break]";
 		LineBreak;
@@ -177,8 +172,7 @@ to say DiegoTalk4: [transform Diego towards being female]
 		else:
 			say "     'Aw, still your probably right, best not to push my luck.' The coyote herm says as she shoots your backpack a longing look as you put the milk away, before settling back up against the wall with a sigh.";
 	else if DiegoChanged is 0: [male Diego]
-		if graphics is true:
-			project the figure of Diego_face_icon;
+		project the figure of Diego_face_icon;
 		say "     Deciding to play a whole different sort of trick - on Diego, this time - you rummage around in your backpack until you find the milk from the canine you fought earlier. 'Hey something smells good there,' the tricky coyote says as you set down the bottle on the low wall surrounding the park, then proceed to flash it through his line of sight a few more times as you re-arrange the packing order of your supplies.";
 		say "     'Damn,' Diego says with a sad smile as he looks at you with large coyote eyes. 'It's just so much work tricking the man, very very thirsty work if you know what I mean,' the trickster says with a smile on his muzzle. 'Why not help a fellow out, if you know what I mean?' he says hopefully as he eyes the bottle of milk right on top of your still open backpack.";
 		say "     [bold type]Do you decide to continue and give him the changing milk?[roman type][line break]";
@@ -196,8 +190,7 @@ to say DiegoTalk4: [transform Diego towards being female]
 			say "     'Damn, what a tease.' Diego says sadly as you slip the milk back into your pack, 'I taught you too damn well it seems.' The coyote says with a sigh as he watches the milk vanish back into your pouch.";
 
 to say DiegoTalk5: [transform Diego towards being open for anal]
-	if graphics is true:
-		project the figure of Diego_face_icon;
+	project the figure of Diego_face_icon;
 	if DiegoButtSlut is 1 or DiegoButtSlut is 2: [already open for anal, virgin or not]
 		say "     As you start digging in your backpack, Diego raises his head and sniffs the air. 'I think I know what you're up to my friend. Got some more 'nut milk' you wanna share with your coyote buddy, don't you?' he says with a grin his tail wagging eagerly. 'Well, with how great it tasted last time, you don't have to trick me into taking it...' the canine trickster adds with a hopeful look, licking his lips as you pull out your bottle of orc cum, waving it around teasingly.";
 		say "     [bold type]Do you give Diego some more orc cum to drink?[roman type][line break]";
@@ -268,9 +261,9 @@ Check Diegotricking:
 	If Diego is not visible, say "Who?" instead;
 
 carry out Diegotricking:
-	if DiegoChanged > 0 and graphics is true:
+	if DiegoChanged > 0 :
 		project the figure of DiegoFem_face_icon;
-	else if graphics is true:
+	else:
 		project the figure of Diego_face_icon;
 	if LastDiegoTricked - turns < 6:
 		say "     'Sorry bud, only so much time for tricking people in the day,' Diego says as [if DiegoChanged is 0]he shakes his[else]she shakes her[end if] head sadly, 'Trick people too much and it just gets stale, so come back and try again later.'";
@@ -333,10 +326,10 @@ to say SexWithDiego:
 
 to say DiegoSexMenu:
 	setmonster "Coyote";
-	if DiegoChanged > 0 and graphics is true:
-		project the figure of DiegoFem_face_icon;
-	else if graphics is true:
-		project the figure of Diego_face_icon;
+	if DiegoChanged > 0:
+		project the figure of DiegoFem_icon;
+	else:
+		project the figure of Diego_icon;
 	choose row monster from the table of random critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

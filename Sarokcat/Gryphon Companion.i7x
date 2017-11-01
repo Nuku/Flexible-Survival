@@ -4,6 +4,8 @@ Version 3 of Gryphon companion by Sarokcat begins here.
 
 "Adds a special event to Flexible Survival with a potential pet."
 
+gryphoncomforted is a number that varies.
+
 Section 1- Gryphoness
 
 Gryphoness is a pet. The description of gryphoness is "[gryphonessdesc]". Gryphoness is a part of the player.
@@ -21,12 +23,14 @@ understand "Denise" as gryphoness.
 to say gryphonessdesc:
 	now tempnum is the remainder after dividing libido of gryphoness by 4;
 	let T be ( libido of gryphoness / 4 );
+	project Figure of BlueGryphon_icon;
 	say "     The blue gryphon you helped earlier is staying with you happily, her golden feline lower body blending beautifully with her blue avian upper body, she whistles happily as she follows you through the city[if tempnum is 1]. She seems particularly pleased right now[else if tempnum is 2]. She has a full, rounded belly from a growing pregnancy within her. Empowered by the infection, she seems almost as agile as before and her love for you seems only stronger. Despite, or perhaps because of, her pregnancy, Denise is still quite aroused and horny[else if tempnum is 3]. ERROR-Denise-3L: You should not be able to see Denise right now[end if][if T is 1]. Accompanying her now is your gryphon child, a cute version of Denise in miniature[else if T >= 2]. Accompanying her right now is a pair of your gryphlets, cute versions of Denise in miniature[end if].";
 
 to say summongryphoness:
 	now tempnum is the remainder after dividing libido of gryphoness by 4;
 	let T be ( libido of gryphoness / 4 );
 	remove Denise from play;
+	project Figure of BlueGryphon_icon;
 	if player is not in Grey Abbey 2F: [regular summoning]
 		say "     You sing out several notes of the song the way the gryphon you encountered taught you, your voice echoing through the empty city, and before long you hear an answering voice responding, and with flap of wings from above, and you look up just in time to see the herm gryphon you helped hurl herself into your arms, cooing and rubbing up against your body eagerly.";
 		if ( tempnum is 0 or tempnum is 1 ) and T is 1:
@@ -117,6 +121,7 @@ to say sexwithgryphoness:
 		if name entry is "Hermaphrodite Gryphon":
 			now monster is y;
 			break;
+	project Figure of BlueGryphon_icon;
 	if lastfuck of gryphoness - turns < 4:
 		say "You shouldn't pressure the gryphoness too much for it. Give her a short break.";
 	else if bodyname of player is "Hermaphrodite Gryphon" or bodyname of player is "Feral Gryphon":
@@ -250,15 +255,15 @@ when play begins:
 	add Gryphoness nest to badspots of hermaphrodite;
 	add Gryphoness nest to badspots of furry;
 
-
 gryphoncomforted is a number that varies.
 
 Instead of resolving Lonely Gryphoness:
 	if gryphoncomforted is 0:
-		say "Traveling through the deserted streets, you hear a strange and rather sad song echoing through the empty streets, its strange beautiful notes making you feel somewhat sad and lonely yourself. Looking around for the source, you think the sound is coming from the top of a nearby apartment building. You are torn between the idea of climbing up the fire escape to see who is making the noise or just standing here and basking in the music.";
+		say "     Traveling through the deserted streets, you hear a strange and rather sad song echoing through the empty streets, its strange beautiful notes making you feel somewhat sad and lonely yourself. Looking around for the source, you think the sound is coming from the top of a nearby apartment building. You are torn between the idea of climbing up the fire escape to see who is making the noise or just standing here and basking in the music.";
 		say "     [bold type]Do you climb up to see who is singing?[roman type]";
-		If player consents:
+		if player consents:
 			say "     [line break]";
+			project Figure of BlueGryphon_icon;
 			say "     Carefully climbing up the fire escape, you find yourself enjoying the strange, haunting song more and more, and you grow increasingly curious as to just who, or what, is creating the music. Eventually reaching the top, you pull yourself up onto the roof, where you are surprised to see one of those blue furred gryphons is staring out over the city with her back to you, soft sweet notes spilling out of her beak as she stares out over the changed city.";
 			say "     The sight of one of the changed gryphons singing such a lonely song is rather startling, and you almost can't help but move forward for a closer look. The song cuts off mid note as you slide forward, as the gryphon apparently notices you and whirls around in surprise. ";
 			if bodyname of player is "Hermaphrodite Gryphon":
@@ -294,10 +299,8 @@ Instead of resolving Lonely Gryphoness:
 	else:
 		say "     You hear the soft strains of a familiar music once more echoing faintly through the city, and pause to enjoy them for a minute, and look around wondering where the singer is this time. Sadly they don't seem to be nearby, but you still enjoy the music for a bit before continuing on your way.";
 
-
-gryphoncomforted is a number that varies.
-
 Instead of resolving Gryphoness nest:
+	project Figure of BlueGryphon_icon;	
 	if gryphoncomforted is 1:
 		say "     Wandering along the beach, you hear a few haunting notes drifting over the waves, and recalling that strange gryphon from earlier, hurry down the beach to see if she is more willing to stay and talk this time. After a short distance, you round one of the dunes to see what is likely the same gryphon, idly tossing small stones in the waves as they lap up against the beach soothingly. Looking down, you can't help but wonder just what this particular Hermaphrodite Gryphon is thinking, even as she hums and sings softly and stares out over the water. Deciding to approach carefully so as not to startle her this time, you carefully make a bit of noise even as you slowly begin crossing the dunes to where she is sitting.";
 		say "     The gryphon stops singing again and scrambles up as you approach, but seems to relax slightly when she sees it is you, though she does back up slightly, the surf beginning to wash at her leonine hindpaws as she stares at you curiously. You are almost within easy reach of her, and are opening your mouth to begin to say something, only to stare as you see several beasts rising up from the water right behind the gryphon, reaching for her. You try shouting out a warning, but with a startled cry the gryphoness is still jumped by the changed aquatic beasts...";
