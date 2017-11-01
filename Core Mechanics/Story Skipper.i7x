@@ -968,6 +968,8 @@ Carry out savetrix2:
 			if name entry is "nanite collector":
 				now weight entry is 25;
 				break;
+	if carried of ancient tome > 1:
+		now carried of ancient tome is 1;
 
 [
 testsven is an action applying to nothing.
@@ -2104,7 +2106,7 @@ to restorepart2:	[values 60 - 161]
 	now Angel vs Demons is unresolved;
 	now Burned-Out Chapel is unknown;
 	if HP of Elijah is 1 or HP of Elijah is 2:
-		now the icon of Elijah is Figure of Elijah_naked_icon;
+		now the icon of Elijah is Figure of Elijah_good_naked_icon;
 	else if HP of Elijah is 3:
 		now the icon of Elijah is Figure of Elijah_virgin_icon;
 	else if HP of Elijah is 4:

@@ -7,6 +7,7 @@ BryceFucked is a number that varies.
 RyanFucked is a number that varies.
 SethFucked is a number that varies.
 ZieraFucked is a number that varies.
+NatalieRelationship is a number that varies.
 
 Section 1 - Jerome
 
@@ -314,6 +315,12 @@ to say ShagShackSexMenu:
 		now sortorder entry is 16;
 		now description entry is "Get used and slapped about by an otter with a mean streak";
 	[]
+	if NatalieRelationship is 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Investigate Natalie's latex-splattered mattresses fort";
+		now sortorder entry is 17;
+		now description entry is "Seek out the latex mistress and get pleasurably stretched";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -362,6 +369,8 @@ to say ShagShackSexMenu:
 						say "[ShagShackSex15]"; [by CrimsonAsh]
 					-- "Obey Mysti, the otter dominatrix":
 						say "[ShagShackSex16]"; [by Fwuffymouse]
+					-- "Investigate Natalie's latex-splattered mattresses fort":
+						say "[ShagShackSex17]"; [by Mirvanna]
 				wait for any key;
 		else if calcnumber is 100:
 			say "Change your mind after all and go out?";
@@ -938,5 +947,34 @@ to say ShagShackSex16: [Small otter dominatrix]
 	waitlinebreak;
 	Say "     The demanding sea-mammal stands up, walking down over your torso and kneeling on your belly. Tiny paws grasp at your waistband and she's quickly got your leggings just far enough down to expose your leaking cock. [if cock length of player < 6]'Should have known, tiny dicks like yours only get off on abuse,' she comments, chuckling without even bothering to touch your cock[else if cock length of player > 5 and cock length of player < 8]'Nothing special, huh? If this were a fish, I'd throw it back,' she says, waving your hard shaft about[else if cock length of player > 7 and cock length of player < 12]'Hmm, could be better. You might be able to impress someone with low standards,' she comments, holding your stiff shaft in her paws[else if cock length of player > 11 and cock length of player < 18]'Hmm, not too shabby, but you aren't fooling anyone. Nobody with a dick this big has the guts to use it,' she comments snidely, rubbing your hard cock with her paws[else if cock length of player > 17]The otteress hefts your shaft, which is comparable to the length of her body, and busts out laughing! 'You're a freak, a god-damned sideshow act! Did nobody tell you that this'd just scare people off? No wonder you're so dumb, all your blood's left your head!' she says through laughter. Turning around, the pint-sized dominatrix presses her sleek, leather-clad body against your shaft[end if]. Regardless of her less than stellar opinion of your equipment, your mistress decides to humour you and presses her lithe body against yours, laying on your chest. She slides herself back, lining herself up over your cock and sliding down over it. With slow twisting of her hips and those commanding eyes of hers locked with your own, the small dominatrix intends to draw your desperation out as long as she wants. Her tight, velvety insides squeeze your length as it slides fully into her.";
 	say "     Your [cock of player] almost seems to vanish into her, and the tiny otter's inner walls squeeze your shaft well enough that her sensual gyrations aren't really necessary. It doesn't take long before you cum inside her, your [if cock width of player > 10]absurdly large load flowing into the pint-sized girl's cunt. No matter how much you put out, her slim body captures it all. Her belly bulges a bit as your cum sprays inside her. The otteress's normally hard facade drops for a second, replaced by surprise. Shaking her head, the stuffed otter pulls off your cumming shaft. 'Fucking cow!' She yells, whipping you several more times across the chest and legs before roughly gripping your shaft and pointing it at your face to let the remains of your excessive load spray onto your head and body. [else]cum squirting into the pint-sized domme's body. The otteress shoots you a cold look, one of disappointed anger. 'Finished already, runt? Too bad, I wasn't,' she barks, sliding off your shaft and standing aside you. [end if]That crop of hers strikes your chest and thighs a few more times, which is starting to feel pretty damn good to your wasted and used body. You're treated to a look of smug satisfaction from your mistress, and she merely clicks her tongue and motions for you to get up. 'Now what'd I tell you, punk? These eyes tell all, and you're the kind of boy that's all too willing to let a little gal like me use you all she wants, right?' Not letting you answer, she continues, 'Now get off of my bed. There's too many folks in need of a beating, and I don't have time to cuddle,' she commands. As you turn from the bed and start to leave she whips you across the ass and you jump, breaking into a jog that leaves a couple of idle patrons chuckling.";
+	
+to say ShagShackSex17: [Natalie, by Mirvanna]
+	if NatalieRelationship is 0: [first meeting]
+		say "     Surveying the room is fun and all, but you are into exploring and moving quickly into the thick of things. Looking around, you find a large mattress-fort in one corner, built out of quite a few of them stacked, standing and leaning in the structure. Then suddenly, as you are still taking it all in, a strong set of powerful jaws close on your neck and shoulder - inhibiting your movement in a secure grasp, but not tight enough to do you any harm. You are guided back into a strong set of muscular, darkly spotted arms. 'Hello there,' a voice says, followed by a jet-black tongue flicking up and along your ear, coating it in equally black saliva - not that you are seeing much of it out the corner of your eye. Though you can make out the grinning muzzle of one of those numerous herm hyenas that are in the streets. This one isn't entirely like the others though...";
+		say "     'Where are my manners? Come sit with me little tasty one. I've already bitten, so what's left to be afraid about?' You feel her arms slowly slide down your front sensually, tempting you closer, ";
+		if cocks of player > 0:
+			say "one paw shamelessly giving your cock a squeeze, so you'll be feeling its imprint for a time. ";
+		else:
+			say "one paw shamelessly sliding around to squeeze your ass firm enough that you'll wear a mark for a time. ";
+		say "Meanwhile the other takes hold of your arm so you won't be escaping as the huge hyena drags you into the fort and onto a latex-soaked mattress, splattering it about everywhere as the springs wheeze under the pressure.";
+		WaitLineBreak;
+		say "     Your captor looks a bit like a latex fox and hyena having fused, her entire body the same rubbery inky blank as the foxes, yet with some darker spots, prominent muscles and the glinting teeth of a hyena. An erection that looks large enough that it needed multiple foremen to put up awaits you in her lap. But the foundation is plenty solid, a huge bulbous double knot waiting at the base, ready to stretch out those daring enough to take it. She pulls you closer by the arm ";
+		if cocks of player > 0:
+			say "until your cock is pressed right against the hot spire. You can feel it throb.";
+		else:
+			say "until your face is pressed right against the hot spire. You can feel it throb.";
+		say "     'I'm Natalie,' she says lustfully, 'And the pleasure is all mine.' Exhaling slow and deep, her hot breath washes over you as she undresses you with eager determination. Her voluminous breasts jiggle over you, and she half pulls, half tears off your remaining clothes, using her teeth as much as her large paws. Black latex droplets form at her teats continuously, rolling down the curves and dripping all over you and coating your front.";
+		WaitLineBreak;
+		say "     At the same time, you are being drenched by her cock too. Watching latex cum bubble forth from it in a ludicrous volume, it is easy to see how the mattress has gotten soaked the way it is. You feel the liquid latex covering your skin, feeling delightfully warm, stretchy and tight across your body like a embrace, much like the muscular spotted arms around you. She guides you to place your lips on her cock-tip, giving you litte choice but to kiss it firmly. You stroke your tongue through the black ooze, dipping in the urethra slightly and Natalie yowls in surprise and pleasure. She strokes your head encouragingly to continue and draws you a bit closer to that heat-radiating shaft.";
+		say "     Her heavy, slightly squeaky paws grip your cheeks lovingly, and she growls with hunger and fervor, bringing your lips down over her spire's tip, using you like a fuck-toy. 'You'll do just fine... make sure you visit our fine establishment plenty!' She tugs you down further, ramming her cock all the way into your throat for emphasis. 'Because you may have chosen the venue... but I chose you...' Her pre-cum now spills almost directly into your belly, coating your insides in that same slippery thick hot goop. 'And I don't choose bitches lightly...' Her claws press into your jowls, the huge predatory latex herm bobbing your head roughly up and down her shaft, with lewd squeaks and slurps that bring more than a few people to the mattress fort's entrance, looking in at you and the latex hyena. Never for long though, as few want to meet her hungry gaze and draw the attention you currently are getting - which makes you wonder what you've walked yourself into.";
+		WaitLineBreak;
+		say "     Her breath is getting ragged with your captor clearly enjoying you a lot, yipping mid-pant every time you get your tongue in the right spot. Tentatively you stroke her knot, and she presses firmly against you, knocking you sideways onto the sticky mattress while she starts fucking your throat in earnest. You try to move your hand to see better, but she grabs your hand and puts it right back on her heavy balls, squeezing it against them until you get the idea and stroke those sloshing cum-factories for your mistress. That huge cock somehow pushes into your belly, making you feel stretched and distended - but maybe that is just the sheer volume of latex-infused cum you've swallowed. 'Aaah.. almost there dear bitch,' Natalie groans as she closes her eyes. Without them, her teeth and claws are the only bit of light on her.";
+		say "     Taking some initiative, you do what you can to stretch your lips wider, eager to take the knot that has been slapping your face for some time now and which is dripping with delicious spunk you don't want to be missing out on. You bounce from the wheezing springs of the mattress propelling you forward, suddenly engulfing that gourd and locking lips to a latex sheath, stinking of hyena musk and rubber. Your efforts are rewarded with Natalie's roar, the hyena disgorging thick ropes of blackened tainted jizz into your belly which inflates comically. Her balls throb hard as they launch their contents up into you, and you swear you can feel rubbery tadpoles in your gut, for how thick and hot the sperm is. Spots dance across your vision, you need oxygen! You try to wiggle your nose out of that plush hyena sheath, squeaking in more ways than one. Then the world goes dark, and the latex hyena grins above you.";
+		WaitLineBreak;
+		say "    You awake a little while later. Apparently someone was taking care of you as you are lying on an only slightly used mattress outside the fort and a cup of sweet-smelling aromatic tea has been placed on the ground next to it. Must have been one the other Shag Shack workers being nice to Natalie's latest captive. From head to toe, you are encrusted with black latex, her goop having dried and covering your body like a second skin Groaning and feeling hung over, you sit up, reaching down to take the tea. As you take the first sip, you glance down to your naked chest and see that traced aggressively in the latex coating is the word 'MINE!' The lettering sprawls from your chest to your full belly - maybe a warning to other brothel residents? Evidently Natalie likes you, although she is back in the shadows of her fort right now apparently. You take your time, drink the tea, then slowly peel off the layer of latex and drop it in large pieces before starting to pick up your clothes and gear from a pile on the ground.";
+		PlayerDrink 15;
+		increase NatalieRelationship by 1; [first meeting resolved]
+	else if NatalieRelationship > 0: [repeat visits]
+		say "     ...";
 
 Shag Shack ends here.

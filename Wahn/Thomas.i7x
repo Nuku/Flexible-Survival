@@ -477,6 +477,7 @@ instead of navigating Dry Plains while ((libido of Thomas is 1 or libido of Thom
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
 	move player to Dry Plains;
+	project the Figure of Jill_icon;
 	say "     At the same time as your arrival at the meeting place with Thomas, a centaur mare walks up out of the plains too. She's beautiful, with sun-bronzed skin, flowing blond hair and a nice pair of breasts. 'Hello there, I'm Jill. I heard talk about what you did to Raul and his buddies, and... can I please join your herd?' She gives Thomas a pleading smile, then nervously looks back over her shoulder. 'You see, today's my birthday - and father invited all the stallions far and wide to... sell me to the highest bidder. I got to warn you, they're most likely tracking me right now...'";
 	say "     Thomas thinks for a short moment, then nods to Jill 'Of course you're welcome. Let's get ready for the search party.' He calls over [if libido of Thomas is 1 or libido of Thomas is 21]Sandy and sends her away so she'll be safe[else if libido of Thomas is 11]Sandy and Felix, sending them away so she'll be safe[end if], then turns to you. 'Are you with us, my friend? This is gonna be a tough one - we have...' He gives a questioning look to Jill and she answers, 'Eight, at least.' '...centaurs coming in. We really could use your help.'";
 	LineBreak;
@@ -556,8 +557,7 @@ Instead of fucking the Thomas:
 
 to say ThomasSexMenu:
 	LineBreak;
-	if graphics is true:
-		project the figure of Thomas_face_icon;
+	project the figure of Thomas_erect_icon;
 	say "What sort of fun do you want to have with Thomas?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

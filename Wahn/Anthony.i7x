@@ -32,8 +32,7 @@ to say AnthonyDesc:
 	say "     Another thing of note are the long and curved claws on his hands and feet, longer than the fingers themselves. Looking at them makes you recall something you once read about a regular giant anteater being able to kill a jaguar in a stand-up fight...";
 
 instead of conversing the Anthony:
-	if graphics is true:
-		project the figure of Anthony_face_icon;
+	project the figure of Anthony_face_icon;
 	say "     What do you want to talk to him about? [bold type]You could chat with him a bit [link](1)[as]1[end link], ask if there are any problems you could help with [link](2)[as]2[end link], or just change your mind and not say anything [link](3)[as]3[end link]?[roman type][line break]";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
@@ -80,6 +79,7 @@ instead of conversing the Anthony:
 		say "     You wave Anthony off and excuse yourself.";
 
 instead of fucking the Anthony:
+	project the figure of Anthony_face_icon;
 	say "     Anthony looks at you with interest as you make him your amorous offer, then sighs and shakes his head. 'I'd love to take you up on that, but right now isn't such a good time, sorry. With all the things that I have to worry about, sudden emergencies coming up and so on, I... can't just take time off right now. People on the farm count on me and grandfather would spin in his grave if I started fucking around with someone before sorting out the problems we have.'";
 
 instead of going northwest from Central Farm Square while (HP of Anthony is 0 or HP of Anthony is 1 or HP of Anthony is 3 or HP of Anthony is 4 or HP of Anthony is 5):
@@ -164,6 +164,7 @@ instead of going northwest from Central Farm Square while (HP of Anthony is 0 or
 ]
 
 to say AnthonyRewardSex:
+	project the figure of Anthony_naked_icon;
 	if libido of Anthony is 0: [first time]
 		say "     Quickly stepping forward, you put a hand on Anthony's arm and pull him against you, finding his lips with yours. The sudden kiss startles him at first, but he quickly gets into it and eagerly replies, sliding an arm around you while making out. After some hot and hungry kisses, the giant anteater comes back up for air and pants 'So you want... something else as your reward, I gather?', looking down towards your crotch as he does so. Before you can do anything more than nod, he starts to pull off your clothes, guiding you step by step towards the nearest couch as he does so. Soon, you're completely naked and find yourself softly pushed to sit down and lean back, with Anthony kneeling between your legs. 'Just relax and enjoy,' he says in a seductive voice, smiling up at you as he sticks out his long, long tongue and leans forward.";
 		WaitLineBreak;
@@ -189,6 +190,7 @@ to say AnthonyRewardSex:
 		say "[AnthonySexMenu]";
 
 to say AnthonySexMenu:
+	project the figure of Anthony_naked_icon;
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

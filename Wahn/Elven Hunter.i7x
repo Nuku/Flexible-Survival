@@ -1,4 +1,4 @@
-Version 1 of Elven Hunter for FS by Wahn begins here.
+Version 1 of Elven Hunter by Wahn begins here.
 [Version 1.1 - Lembas Bread drop item]
 
 "Adds an Elven Hunter to Flexible Survival's Wandering Monsters table, With Impreg chance"
@@ -198,4 +198,4 @@ to say lembas bread use:
 
 lembas bread is infectious. The strain of lembas bread is "Elven Hunter".
 
-Elven Hunter for FS ends here.
+Elven Hunter ends here.

@@ -2384,16 +2384,14 @@ To ClearMoreFunction:
 	now clearnomore is 0; [returns clearing to normal]
 	say "Screen clearing occurs frequently.";
 
-[Section Color
-
-Include Glulx Text Effects by Emily Short.
+Section Color
 
 To say special-style-1: [name can be changed if desired, just adjust calls to it as well]
-	(- glk_set_style(style_User1); -)
+	say first custom style;
 
 To say special-style-2: [name can be changed if desired, just adjust calls to it as well]
-	(- glk_set_style(style_User2); -)
-
+	say second custom style;
+[
 To say alert-style: [already used for end game text]
 	(- glk_set_style(style_Alert); -)
 
@@ -2408,9 +2406,14 @@ To say blockquote-style:
 
 To say input-style:
 	(- glk_set_style(style_Input); -)
+]
 
-[
-Table of Common Color Values [(continued)]
+Table of User Styles (continued)
+style name (a special-style)	justification (a text-justification)	obliquity (an obliquity)	indentation (a number)	first-line indentation (a number)	boldness (a boldness)	fixed width (a fixity)	relative size (a number)	glulx color (a glulx color value)
+special-style-1	--	--	--	--	bold-weight	--	1	g-dark-green
+special-style-2	--	--	--	--	bold-weight	--	1	g-medium-red
+
+Table of Common Color Values (continued)
 glulx color value	assigned number
 g-pure-blue	255		[== $0000FF]
 g-bright-cyan	39423		[== $0099FF]
@@ -2424,9 +2427,7 @@ g-pure-yellow	16776960		[== $FFFF00]
 g-pure-magenta	16711935		[== $FF00FF]
 g-pure-red	16711680		[== $FF0000]
 [names can be changed if desired, also need to change matching name in table below.  choose color in hex, then convert to decimal for assigned number.]
-]
 
-Table of User Styles (continued)
 [
 style name	justification	obliquity	indentation	first-line indentation	boldness	fixed width	relative size	glulx color
 special-style-1	--	--	--	--	bold-weight	--	1	g-dark-green
@@ -2444,12 +2445,7 @@ bold-style	--	--	--	--	--	--	--	--[allows redefining of bold style]
 [alert, header, and note are used for a few game functions.  if you wanted to change those you could]
 [italics and bold are currently in a variety of places.  just a few italics, but bold is all over the place.  be aware if you choose to change them]
 ]
-style name (a glulx text style)	background color (a text)	color (a text)	first line indentation (a number)	fixed width (a truth state)	font weight (a font weight)	indentation (a number)	italic (a truth state)	justification (a text justification)	relative size (a number)	reversed (a truth state)
-special-style-1	--	"#00CC00"	--	--	bold-weight	--	--	--	--	--
-special-style-2	--	"#CC0000"	--	--	bold-weight	--	--	--	--	--
 
-
-]
 Part 3 - Item Code
 
 Understand the command "get" as something new.
@@ -5106,7 +5102,7 @@ Include Murder Mystery by Rikaeus.
 Include Museum Events by Sarokcat.
 Include Museum Rounds for FS by Stripes.
 Include New Events by Sarokcat.
-Include Odd Weapons for FS by Hellerhound.
+Include Odd Weapons by Hellerhound.
 Include Old BoomBox by Kaleem mcintyre.
 Include Park Events by Sarokcat.
 Include Patreon Menu by Stripes.
@@ -5191,7 +5187,7 @@ Include Cum Girl by AGentlemanCalledB.
 Include Cute Chinchilla Girl For FS by Guest Writers.
 Include Dalmatian by Kaleem mcintyre.
 Include Dark Elf for FS by Stripes.
-Include Demon Brute For Fs by Wahn.
+Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
 Include Doberman for FS by Stripes.
 Include Dolphin for FS by Hellerhound.
@@ -5207,7 +5203,7 @@ Include Ebonflame Draken by Blue Bishop.
 Include Ebonflame Whelp by Blue Bishop.
 Include Elf by Nuku Valente.
 Include Elk for FS by Stripes.
-Include Elven Hunter For Fs by Wahn.
+Include Elven Hunter by Wahn.
 Include Enhanced Chimera by Stripes.
 Include Equine for FS by Nuku Valente.
 Include Erica by Wahn.

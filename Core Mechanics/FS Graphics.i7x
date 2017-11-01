@@ -36,7 +36,8 @@ Figure of FireSpriteMale_icon is the file "FireSprite_male.jpg".
 Figure of FrPony_icon is the file "fs_afriendshippony.jpg".
 Figure of Giraffe_icon is the file "Giraffe_ig.jpg".
 Figure of GooGirl_icon is the file "GooGirl.jpg".
-Figure of griffon_icon is the file "bluegriffon.jpg".
+Figure of BlueGryphon_icon is the file "BlueGryphon.jpg".
+Figure of BlueGryphon_face_icon is the file "BlueGryphon_face.jpg".
 Figure of Gunbunny_icon is the file "Gunbunny_ig.jpg".
 Figure of Helot_icon is the file "Helot.jpg".
 Figure of Helot_face_icon is the file "Helot_face.jpg".
@@ -65,7 +66,8 @@ Figure of MessyPig_icon is the file "FS_MessyPig.jpg".
 Figure of Naga_icon is the file "Naga.jpg".
 Figure of NinjaCat_F_icon is the file "CatNinja_F_ig.jpg".
 Figure of NinjaCat_M_icon is the file "NinjaCat_M_ig.jpg".
-Figure of Orcwarrior_random_icon is the file "Orcwarrior.jpg".
+Figure of OrcBreeder_random_icon is the file "OrcBreeder.jpg".
+Figure of OrcWarrior_random_icon is the file "OrcWarrior.jpg".
 Figure of PinkGel_icon is the file "PinkGel.jpg".
 Figure of PinkPoodle_icon is the file "fs_poodle.jpg".
 Figure of PlushLion_icon is the file "FS_PlushLion.jpg".
@@ -103,8 +105,10 @@ Figure of Alex_icon is the file "Alex_ig.jpg".
 Figure of Amy_icon is the file "Amy.jpg".
 Figure of Amy_face_icon is the file "Amy_face.jpg".
 Figure of Andre_icon is the file "Andre.jpg".
+Figure of Andre_face_icon is the file "Andre_face.jpg".
 Figure of Andrew_icon is the file "andrew_ig.jpg".
 Figure of Angie_icon is the file "FS_Angie.jpg".
+Figure of Anthony_naked_icon is the file "Anthony_naked.jpg".
 Figure of Anthony_clothed_icon is the file "Anthony_clothed.jpg".
 Figure of Anthony_face_icon is the file "Anthony_face.jpg".
 Figure of Artemis_icon is the file "artemisengulf_ig.jpg".
@@ -134,10 +138,13 @@ Figure of Carl_Eric_sofa_fuck_2_icon is the file "Carl_Eric_sofa_fuck_2.jpg".
 Figure of Carl_Eric_sofa_fuck_3_icon is the file "Carl_Eric_sofa_fuck_3.jpg".
 Figure of Carl_Eric_sofa_fuck_4_icon is the file "Carl_Eric_sofa_fuck_4.jpg".
 Figure of Chris_clothed_icon is the file "Chris_clothed.jpg".
+Figure of Chris_naked_icon is the file "Chris_naked.jpg".
 Figure of Chris_face_icon is the file "Chris_face.jpg".
 Figure of Christy_pregnant_icon is the file "ChristyPregnant.jpg".
+Figure of Danny_naked_icon is the file "Danny_naked.jpg".
 Figure of Danny_clothed_icon is the file "Danny_clothed.jpg".
 Figure of Danny_face_icon is the file "Danny_face.jpg".
+Figure of David_naked_icon is the file "David_naked.jpg".
 Figure of David_clothed_icon is the file "David_clothed.jpg".
 Figure of David_hurt_icon is the file "David_hurt.jpg".
 Figure of David_barechest_icon is the file "David_barechest.jpg".
@@ -156,9 +163,12 @@ Figure of DrMoffatt1_icon is the file "drmoffatt_ig1.jpg".
 Figure of DrMoffatt2_icon is the file "drmoffatt_ig2.jpg".
 Figure of DrMouse_icon is the file "drmouse_ig.jpg".
 Figure of Elijah_evil_icon is the file "Elijah_evil.jpg".
+Figure of Elijah_evil_naked_icon is the file "Elijah_evil_naked.jpg".
+Figure of Elijah_evil_face_icon is the file "Elijah_evil_face.jpg".
 Figure of Elijah_good_icon is the file "Elijah_good.jpg".
+Figure of Elijah_good_face_icon is the file "Elijah_good_face.jpg".
+Figure of Elijah_good_naked_icon is the file "Elijah_good_naked.jpg".
 Figure of Elijah_virgin_icon is the file "Elijah_good.jpg".
-Figure of Elijah_naked_icon is the file "Elijah_naked.jpg".
 Figure of Eric_clothed_icon is the file "Eric_clothed.jpg".
 Figure of Eric_face_icon is the file "Eric_face.jpg".
 Figure of Eric_naked_icon is the file "Eric_naked.jpg".
@@ -166,6 +176,7 @@ Figure of Eric_sofa_icon is the file "Eric1.jpg".
 Figure of Fiona_icon is the file "Fiona.jpg".
 Figure of Fancy_icon is the file "FSTF_Fancy_ig.jpg".
 Figure of Felix_icon is the file "Felix.jpg".
+Figure of Felix_face_icon is the file "Felix_face.jpg".
 Figure of Francois_icon is the file "Francois_ig.jpg".
 Figure of Frank_icon is the file "Frank_paw_ig.jpg".
 Figure of Gabriel_icon is the file "Gabriel.jpg".
@@ -184,6 +195,7 @@ Figure of James_icon is the file "james_ig.jpg".
 Figure of Janice_icon is the file "FS_Janice_ig.jpg".
 Figure of Jason_clothed_icon is the file "Jason_clothed.jpg".
 Figure of Jason_naked_icon is the file "Jason_naked.jpg".
+Figure of Jill_icon is the file "Jill.jpg".
 Figure of Jimmy_icon is the file "Jimmy_ig.jpg".
 Figure of Koghh_clothed_icon is the file "Koghh_clothed.jpg".
 Figure of Korvin_blackcollar_icon is the file "Korvin_blackcollar.jpg".
@@ -223,6 +235,7 @@ Figure of Rod_icon is the file "rod.jpg".
 Figure of RondaSR_icon is the file "ronda_ig.jpg".
 Figure of Ryousei_face_icon is the file "Ryousei_face.jpg".
 Figure of Ryousei_fundoshi_icon is the file "Ryousei_fundoshi.jpg".
+Figure of Ryousei_naked_icon is the file "Ryousei_naked.jpg".
 Figure of Ryousei_wink_icon is the file "Ryousei_wink.jpg".
 Figure of Sally_icon is the file "sally_ig.jpg".
 Figure of sandy_icon is the file "sandra.jpg".
@@ -267,6 +280,7 @@ Figure of Corbin_Felinoid_icon is the file "Corbin_Felinoid.jpg".   [riding the 
 Figure of DukeShawnFuck_icon is the file "Duke&Shawn.jpg".	[Shawn topping Duke scene.]
 Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg".	[The Down Under Pub's floor show.]
 Figure of EricRidingRane_icon is the file "Rane&Eric3.jpg".   [make-up sex]
+Figure of Eric_Urik_naked_icon is the file "Eric_Urik_naked.jpg".
 Figure of Fang_Candy_icon is the file "Fang_Candy_ig.jpg".	[Fang topping Candy scene.]
 Figure of Mammoth_CV1_icon is the file "Mammoth_CV_1_ig.jpg".	[Mammoth cock-vore scene 1.]
 Figure of Mammoth_CV2_icon is the file "Mammoth_CV_2_ig.jpg".	[Mammoth cock-vore scene 2.]
@@ -278,6 +292,7 @@ Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".			[Sam's Bad End to ass
 Figure of SkunkbeastLord_icon is the file "SkunkbeastLord_ig.jpg".		[Skunkbeast Lord battle.]
 Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".   [mid-sex scene graphic.]
 Figure of Talov_Kerr_Barrel_icon is the file "Talov_Kerr_Barrel.jpg".   [satyrs with barrel]
+Figure of Talov_Kerr_Party_icon is the file "Talov_Kerr_Party.jpg".   [satyrs in the frat party]
 Figure of RaneDefendingEric_icon is the file "Rane&Eric1.jpg".   [Hellhound fight]
 Figure of RaneSavingEric_icon is the file "Rane&Eric2.jpg".   [after the Hellhound fight]
 
@@ -374,8 +389,10 @@ title	icon(figure name)	artist
 "Amy"	Figure of Amy_icon	"Sususmiles"
 "Amy_face"	Figure of Amy_face_icon	"Sususmiles"
 "Andre"	Figure of Andre_icon	"Wemd"
+"Andre_face"	Figure of Andre_face_icon	"Wemd"
 "Andrew"	Figure of Andrew_icon	"Rukis"
 "Angie"	Figure of Angie_icon	"Anymouse1968"
+"Anthony_naked"	Figure of Anthony_naked_icon	"FsMaverick"
 "Anthony_clothed"	Figure of Anthony_clothed_icon	"Laylo"
 "Anthony_face"	Figure of Anthony_face_icon	"Laylo"
 "Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon	"TwilightMaster"
@@ -416,11 +433,14 @@ title	icon(figure name)	artist
 "Catgirl"	Figure of Fiona_icon	"Valen"
 "Chocolate Lab"	Figure of ChocoLab_icon	"SparklePens"
 "Chris_clothed"	Figure of Chris_clothed_icon	"Kupo Klein"
+"Chris_naked"	Figure of Chris_naked_icon	"Kupo Klein"
 "Chris_face_icon"	Figure of Chris_face_icon	"Kupo Klein"
 "Christy_pregnant"	Figure of Christy_pregnant_icon	"Anymouse1968"
 "Cougar"	Figure of Cougar_icon	"catnamedfish"
+"Danny_naked"	Figure of Danny_naked_icon	"Laylo"
 "Danny_clothed"	Figure of Danny_clothed_icon	"Dragonpunk"
 "Danny_face_icon"	Figure of Danny_face_icon	"Dragonpunk"
+"David_naked"	Figure of David_naked_icon	"Keitaro87"
 "David_clothed"	Figure of David_clothed_icon	"Keitaro87"
 "David_hurt"	Figure of David_hurt_icon	"Keitaro87"
 "David_barechest"	Figure of David_barechest_icon	"Keitaro87"
@@ -444,18 +464,23 @@ title	icon(figure name)	artist
 "DrMoffatt2"	Figure of DrMoffatt2_icon	"MadTurtle"
 "DrMouse"	Figure of DrMouse_icon	"JaxxBlackFox"
 "Elijah_evil"	Figure of Elijah_evil_icon	"Banni"
+"Elijah_evil_naked"	Figure of Elijah_evil_naked_icon	"Banni"
+"Elijah_evil_face"	Figure of Elijah_evil_face_icon	"Banni"
 "Elijah_good"	Figure of Elijah_good_icon	"Banni"
+"Elijah_good_face"	Figure of Elijah_good_face_icon	"Banni"
 "Elijah_virgin"	Figure of Elijah_virgin_icon	"Banni"
-"Elijah_naked"	Figure of Elijah_naked_icon	"Banni"
+"Elijah_good_naked"	Figure of Elijah_good_naked_icon	"Banni"
 "Elven Hunter"	Figure of ElvenHunter_icon	"Aosuka"
 "Eric_clothed"	Figure of Eric_clothed_icon	"Kupo Klein"
 "Eric_face"	Figure of Eric_face_icon	"Kupo Klein"
 "Eric_naked"	Figure of Eric_naked_icon	"Kupo Klein"
 "Eric_sofa"	Figure of Eric_sofa_icon	"Bludwing"
+"Eric & Urik Naked"	Figure of Eric_Urik_naked_icon	"Kupo Klein"
 "Ewe"	Figure of Ewe_icon	"Anymouse1968"
 "Fancy"	Figure of Fancy_icon	"Anymouse1968"
 "Feline_F1"	Figure of Feline_F1_icon	"Anymouse1968"	[shows one of these two for female Feline]
 "Feline_F2"	Figure of Feline_F2_icon	"Anymouse1968"	[shows one of these two for female Feline]
+"Felix_face"	Figure of Felix_face_icon	"Geir"
 "Felix"	Figure of Felix_icon	"Geir"
 "Francois"	Figure of Francois_icon	"Xenotropos"
 "Frank"	Figure of Frank_icon	"Dolphpup"
@@ -477,7 +502,8 @@ title	icon(figure name)	artist
 "Harold_naked"	Figure of Harold_naked_icon	"Hufnaar"
 "Hayato"	Figure of Hayato_icon	"Darian821"
 "Helot"	Figure of Helot_icon	"Obieblu"
-"Hermaphrodite Gryphon"	Figure of griffon_icon	"dbd"
+"Hermaphrodite Gryphon"	Figure of BlueGryphon_icon	"dbd"
+"Hermaphrodite Gryphon Face"	Figure of BlueGryphon_face_icon	"dbd"
 "Hermaphrodite Latex Vixen"	Figure of LatexVixen_icon	"Anymouse1968"
 "Homo Sapiens"	Figure of HomoSapiens_icon	"Astro"
 "Honey"	Figure of Honey_icon	"SandySchreiber"
@@ -491,8 +517,9 @@ title	icon(figure name)	artist
 "Janice"	Figure of Janice_icon	"Anymouse1968"
 "Jason_clothed"	Figure of Jason_clothed_icon	"Kupo Klein"
 "Jason_naked"	Figure of Jason_naked_icon	"Kupo Klein"
+"Jill"	Figure of Jill_icon	"Sususmiles"
 "Jimmy"	Figure of Jimmy_icon	"Redragon"
-"Kangaroo"	Figure of kangaroo_icon	"Anonymous"
+"Red Kangaroo"	Figure of kangaroo_icon	"Anonymous"
 "Koghh_clothed"	Figure of Koghh_clothed_icon	"Kupo Klein"
 "Korvin_blackcollar"	Figure of Korvin_blackcollar_icon	"Lyttathebug"
 "Korvin_blackcollar_face"	Figure of Korvin_blackcollar_face_icon	"Lyttathebug"
@@ -542,6 +569,8 @@ title	icon(figure name)	artist
 "Ninja Cat_F"	Figure of NinjaCat_F_icon	"Bix707"	[only shown for female succumb ending]
 "Ninja Cat"	Figure of NinjaCat_M_icon	""
 "Orbul_clothed"	Figure of Orbul_clothed_icon	"Kupo Klein"
+"Orc Breeder"	Figure of OrcBreeder_random_icon	"Gene Lightfoot"
+"Orc Warrior"	Figure of OrcWarrior_random_icon	"Gene Lightfoot"
 "Orthas"	Figure of Orthas_icon	"The_Negative"
 "Paula"	Figure of Paula_icon	"Kikeri-arts"
 "Plush Lion"	Figure of PlushLion_icon	"Anymouse1968"
@@ -554,6 +583,7 @@ title	icon(figure name)	artist
 "RondaSR"	Figure of RondaSR_icon	"uniformvixen"
 "Ryousei_face"	Figure of Ryousei_face_icon	"ValdericBlackstag"
 "Ryousei_fundoshi"	Figure of Ryousei_fundoshi_icon	"ValdericBlackstag"
+"Ryousei_naked"	Figure of Ryousei_naked_icon	"ValdericBlackstag"
 "Ryousei_wink"	Figure of Ryousei_wink_icon	"ValdericBlackstag"
 "Sally"	Figure of Sally_icon	"Furball"
 "Sand Man"	Figure of SandMan_icon	"Rastear"
@@ -582,6 +612,8 @@ title	icon(figure name)	artist
 "Spartan"	Figure of Spartan_icon	"Obieblu"
 "Stella"	Figure of Stella_icon	"Furball"
 "Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"
+"Talov_Kerr_Barrel"	Figure of Talov_Kerr_Barrel_icon	"Kupo Klein"
+"Talov_Kerr_Party"	Figure of Talov_Kerr_Party_icon	"Kupo Klein"
 "Thomas_erect"	Figure of Thomas_erect_icon	"Inkydemon"
 "Thomas_face"	Figure of Thomas_face_icon	"Inkydemon"
 "Thomas_soft"	Figure of Thomas_soft_icon	"Inkydemon"
@@ -695,6 +727,7 @@ carry out artistcredits:
 	say "     Ninja Cat (female) by Bix707 @ furaffinity.net[line break]";
 	say "     Ninja Cat (male) by <redacted>[line break]";
 	say "     Naga by Rastear @ y-gallery.net[line break]";
+	say "     Orc Breeder by Genelightfoot @ y-gallery.net[line break]";
 	say "     Orc Warrior by Genelightfoot @ y-gallery.net[line break]";
 	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
 	say "     Pink Poodle by Anymouse1968 @ furaffinity.net[line break]";
@@ -728,7 +761,8 @@ carry out artistcredits:
 	say "     Adam by Kadel @ y-gallery.net[line break]";
 	say "     Alex by canned @ weasyl.com (6cans @ furaffinity.net)[line break]";
 	say "     Andre by Wemd @ furaffinity.net[line break]";
-	say "     Anthony by Laylo @ http://laylol.deviantart.com/[line break]";
+	say "     Anthony (dressed) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
+	say "     Anthony (design, naked) by FsMaverick @ http://www.furaffinity.net/user/fsmaverick/[line break]";
 	say "     Artemis by FaroreNightclaw @ furaffinity.net[line break]";
 	say "     Athanasia by SandySchreiber @ furaffinity.net[line break]";
 	say "     Blanche (colour) by The_Negative @ furaffinity.net[line break]";
@@ -746,7 +780,8 @@ carry out artistcredits:
 	say "     Carl + Eric by Lyttathebug @ deviantart.com[line break]";
 	say "     Chris by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Christy by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Danny by Dragonpunk @ furaffinity.net[line break]";
+	say "     Danny (naked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
+	say "     Danny (design + dressed) by Dragonpunk @ furaffinity.net[line break]";
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
 	say "     Diego by valdericblackstag @ furaffinity.net[line break]";
 	say "     Diego by Anonymous/Damdidoo[line break]";
@@ -777,6 +812,7 @@ carry out artistcredits:
 	say "     James by Anyare @ furaffinity.net[line break]";
 	say "     Janice by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Jason by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Jill by Sususmiles @ furaffinity.net[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Korvin by Lyttathebug @ deviantart.com[line break]";
@@ -785,7 +821,7 @@ carry out artistcredits:
 	say "     Lindsey by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
-	say "     Marc (fucked) by Laylo @ http://laylol.deviantart.com/[line break]";
+	say "     Marc (fucked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
 	say "     Micaela by Kattzie @ furaffinity.net[line break]";
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
 	say "     Moreau by Lyttathebug @ deviantart.com[line break]";	
@@ -858,7 +894,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version, unfinished.]
-	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "TheWhiteWolfen", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Sharei", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Wemd", "Xenotropos"};
+	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Sharei", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;

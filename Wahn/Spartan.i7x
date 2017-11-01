@@ -258,8 +258,7 @@ to HistoryLectureVisit:
 				decrease humanity of player by 5;
 				WaitLineBreak;
 				say "     Some time later, the professor calls for a quick break and turns to a young man in a loincloth standing over at the door of a side room. 'Get the other slaves, it's time for some refreshments.' With a nod the Helot servant goes through the door, soon to return with several others, carrying platters with food and drink. The gathered Spartans take what their slaves offer them, eating and drinking heartily and chatting amongst themselves.";
-				if graphics is true:
-					project the figure of SpartanHelot_dressed_icon;
+				project the figure of SpartanHelot_dressed_icon;
 				say "     Meanwhile, the professor takes a drink from the mug of wine he's offered, then sets it aside and opens up his tunic at the front. Pulling out his cock, he tells the Helot to take care of it, which leads to the young man immediately going down on his knees and starting to suck him off.";
 				LineBreak;
 				if cocks of player > 0 or cunts of player > 0:[genitals needed]
