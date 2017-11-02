@@ -168,7 +168,7 @@ When Play begins:
 	now defeated entry is "[Alpha Wolf loss]";
 	now victory entry is "[Alpha Wolf attack]";
 	now desc entry is "[alphawolfdesc]";
-	now face entry is "a long canine muzzle sticking out of your feral lupine countenance. Your mouth hangs open in a lupine grin, revealing your sharp teeth. If it weren't for the intelligence sparking in your eyes and the slightly bigger forehead, it would be hard to tell your face from a regular wolf's";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "a long canine muzzle sticking out of your feral lupine countenance. Your mouth hangs open in a lupine grin, revealing your sharp teeth. If it weren't for the intelligence sparking in your eyes and the slightly bigger forehead, it would be hard to tell your face from a regular wolf's";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "lean and equally well-suited to life in the wild or the streets, your canine form stands easily on its new digitigrade legs. Your paw-like hands are still as dexterous as ever, though you know that you could drop to all fours in an instant if the situation called for it or your alpha came along to mount you";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]black[or]roughly[or]thickly[at random]-furred";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a thick canine tail wagging happily behind you, its presence somehow feeling so very right.";[ Tail description, write a whole Sentence or leave blank. ]

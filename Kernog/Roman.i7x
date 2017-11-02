@@ -43,6 +43,12 @@ instead of conversing the Team Captain Roman:
 		now sortorder entry is 2;
 		now description entry is "Tell Roman that you want to join the team.";
 	[]
+	if (GorillasMember is 2 and Roman is in Astroslide Football Field):
+		choose a blank row in table of fucking options;
+		now title entry is "Results";
+		now sortorder entry is 2;
+		now description entry is "Ask Roman about the results of the tryouts.";
+	[]
 	if (GorillasMember is 3 and Roman is in Astroslide Football Field):
 		choose a blank row in table of fucking options;
 		now title entry is "Laundry";
@@ -112,6 +118,8 @@ instead of conversing the Team Captain Roman:
 						say "[RomanTalk2]";
 				if nam is "Join":
 					say "[JoiningTheTeam]";
+				if nam is "Results":
+					say "[FootballTryoutsResults]";
 				if nam is "Laundry":
 					if the player is a laundry sniffer:
 						say "[GorillaLaundryService2]";
@@ -160,12 +168,26 @@ to say JoiningTheTeam:
 		say "     Roman glances up and down at you, and nods slowly. 'So you want to join the big leagues huh?' he asks, putting one of his big hands on your arm to feel your muscles. 'Fine, we can always use more members... but it's got to be the right people, you understand? We'll have another try-out in which you can and the other hopefuls can show their stuff. Come back sometime tomorrow and remind me that you want to [bold type]join[roman type], and you can have a go.' The gorilla pats your shoulder, then turns back to supervize the ongoing game.";
 		now GorillasMember is 1; [quest to join started]
 		now GorillasMemberQuestCounter is turns;
-	else if GorillasMember is 1 and GorillasMemberQuestCounter - turns <= 8:
+	else if GorillasMemberQuestCounter - turns <= 8:
 		say "     'Yeah, I remember, don't worry,' Roman replies. 'We are not ready yet. Come back later.'";
-	else if GorillasMember is 1:
+	else :
 		say "[FootballTryouts]";
-	else:
-		say "[FootballTryoutsResults]";
+		
+[TryoutScore is in Tenvale Gorillas Football Team extension]
+to say FootballTryoutsResults:
+	say "     'Just in time. I was just done with the results.' The team captain shouts some instructions to the unruly throng of football players all around, sending some of them to train on the field while cheering on those who're currently involved in a gangbang on near the door to the locker-room. After calling out, 'I'll be over in a moment, hold me a place in the line to fuck her!' he walks over and turns his attention to you. 'Okay. Let's see...'";
+	WaitLineBreak;
+	now GorillasMember is 3;
+	if TryoutScore is 7: [maximum points]
+		say "     'You really wowed us out there,' the primate says with a broad grin and holds out his hand in congratulation. Accepting a firm grip on your forearm and returning the same on his powerful furry limb, you are told, 'When we put everyone's data on the planning board, it immediately became clear that we had to have you on the team. Hell, you were at the top in front of everyone else. That'll make a fine addition to our team!' Waving his hand to indicate the entrace to the locker-room, he goes on to say, 'Be sure to come by regularly to either train or play a match. The Fourmont Wolves got stuck on the campus with the infection, and they are always eager for a play-off.' You thank him and walk away, and into the midst of the gathered football players, getting a very warm welcome (and a few friendly gropes) from the guys.";
+		now GorillasRep is 9; [star player]
+	else if TryoutScore > 4: [okay results]
+		say "     'Congratulations you made it into the team,' the primate says with a grin and holds out his hand in congratulation. Accepting a firm grip on your forearm and returning the same on his powerful furry limb, you are told, 'When we put everyone's data on the planning board, you rated well in the upper third. Didn't take much convincing for everyone to agree that you deserve a shot on the team.' Waving his hand to indicate the large locker room, he goes on to say, 'Be sure to come by regularly to train. You should make it to the main team in no time.' You thank him and walk away, and into the midst of the gathered football players, getting a very warm welcome (and a few friendly gropes) from the guys.";
+		now GorillasRep is 4;  [b team player]
+	else: [moderate to bad results]
+		say "     'Listen, we had a look at your results and... made a team decision that you will not be joining as a player,' the primate tells you with a somewhat apologetic expression. Yet as you bow your head in shame and begin turning to walk away, he grabs hold of your arm and adds, 'Wait I haven't finished yet. I thought it was brave of you to do the tryouts, no matter what came of it, so... I have an offer for you. A way you can still be part of the team and help out. You could be either a [if player is female]water girl or a laundry girl[else]water boy or a laundry boy[end if].' Roman gives you a supportive slap on the shoulder. 'It will be no small job, managing all these boys' laundry, but every effort counts, and for that you have my thanks. [bold type]If you work for the team enough times, I am certain that someone will put a good word for you, and put your name forward for the next drafy[roman type]. Come back anytime you want, champ, I'm sure that I'll see you on the football field in no time.'";
+		now GorillasRep is 0;
+
 
 to say RomanConfront:
 	say "     You ask Roman to talk with him in private. 'Okay. One moment, boys!' he tells the other players, while you guide him to an isolated area of the football field. 'What's the problem? Some of the boys making trouble?' he asks.";
@@ -207,7 +229,7 @@ to say RomanEncourage:
 		say "       Everyone goes back to their business, and once Roman finishes to say goodbye to the last group, he traps you in a very, very tight hug. 'I cannot find the words to thank you,' he says. 'It's like a weight just lifted from my shoulders. If I can do anything... [italic type]anything[roman type] to repay you, tell me. I consider you one of my closest friends.'";
 		now romanPeeped is 5;
 	else:
-		say "     You give your best arguments to Roman. 'Thank you for your concern, but I don't think I am ready yet,' he replies. Nonetheless, your words had some effect on him";
+		say "     You give your best arguments to Roman. 'Thank you for your concern, but I don't think I am ready yet,' he replies. Nonetheless, your words had some effect on him.";
 		increase romanEncouraged by 1;
 
 instead of fucking Team Captain Roman:

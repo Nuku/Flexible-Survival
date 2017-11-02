@@ -27,9 +27,12 @@ Before starting the virtual machine:
 	initialize user styles.
 	
 Table of User Styles
-style name	justification	obliquity	indentation	first-line indentation	boldness	fixed width	relative size	glulx color
-a special-style		a text-justification	an obliquity	a number	a number	a boldness	a fixity	a number	a glulx color value
+style name (a special-style)	justification (a text-justification)	obliquity (an obliquity)	indentation (a number)	first-line indentation (a number)	boldness (a boldness)	fixed width (a fixity)	relative size (a number)	glulx color (a glulx color value)
+--	--	--	--	--	--	--	--	--	
 
+[
+a special-style	a text-justification	an obliquity	a number	a number	a boldness	a fixity	a number	a glulx color value
+]
 
 To initialize user styles:
 	repeat through the Table of User Styles

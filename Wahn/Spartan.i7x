@@ -167,7 +167,7 @@ to say SpartanDesc:
 	if bodyname of player is "Spartan" and facename of player is "Spartan":
 		say "		  'Welcome, brother - I see I'm not the only one selected for this test. Let us measure our strength against each other and see who is superior.'";
 	else:
-		say "		  'Ah, a Helot. Some welcome relief for my aching balls.' he says to himself, lowering a hand to fondle them and stroke his long cock. 'Get over here, slave - I have need of you.'";
+		say "		  'Ah, a Helot. Some welcome relief for my aching balls,' he says to himself, lowering a hand to fondle them and stroke his long cock. 'Get over here, slave - I have need of you.'";
 
 Section 2 - Monster Insertion
 
@@ -258,8 +258,7 @@ to HistoryLectureVisit:
 				decrease humanity of player by 5;
 				WaitLineBreak;
 				say "     Some time later, the professor calls for a quick break and turns to a young man in a loincloth standing over at the door of a side room. 'Get the other slaves, it's time for some refreshments.' With a nod the Helot servant goes through the door, soon to return with several others, carrying platters with food and drink. The gathered Spartans take what their slaves offer them, eating and drinking heartily and chatting amongst themselves.";
-				if graphics is true:
-					project the figure of SpartanHelot_dressed_icon;
+				project the figure of SpartanHelot_dressed_icon;
 				say "     Meanwhile, the professor takes a drink from the mug of wine he's offered, then sets it aside and opens up his tunic at the front. Pulling out his cock, he tells the Helot to take care of it, which leads to the young man immediately going down on his knees and starting to suck him off.";
 				LineBreak;
 				if cocks of player > 0 or cunts of player > 0:[genitals needed]
@@ -324,7 +323,7 @@ to HistoryLectureVisit:
 						say "     Finally satisfied, he says 'There, that's that', then continues 'Now leave us, these young men have a lot to learn about strategy and tactics. He turns back to the group of Spartans sitting in the first rows of the lecture hall, leaving you to walk to the exit and quietly slip out of the room.";
 						infect "Helot";
 				else:[forced blowjob]
-					say "     Shaking your head, you turn to get out of there, only to be brought down by several of the young Spartans sprinting after you. Your struggling against their grip is quickly brought to an end by a blow to the chest that drives the air out of your lungs and you're dragged to the front of the lecture theater. With a Spartan at your left and right holding your arms bent backwards, you find yourself on your knees in front of the professor. 'Open up, or I'll have you beaten.' he says and roughly shoves his manhood into your mouth. Fucking your face in a harsh and fast pace, he sometimes pushes his cock into your throat and keeps it there until you start seeing stars from lack of air and have to gasp for breath.";
+					say "     Shaking your head, you turn to get out of there, only to be brought down by several of the young Spartans sprinting after you. Your struggling against their grip is quickly brought to an end by a blow to the chest that drives the air out of your lungs and you're dragged to the front of the lecture theater. With a Spartan at your left and right holding your arms bent backwards, you find yourself on your knees in front of the professor. 'Open up, or I'll have you beaten,' he says and roughly shoves his manhood into your mouth. Fucking your face in a harsh and fast pace, he sometimes pushes his cock into your throat and keeps it there until you start seeing stars from lack of air and have to gasp for breath.";
 					say "     After far too long of this ordeal, the old man finally moans and blasts his cum directly down your throat. The two younger Spartans let you go as he pulls out, and you collapse on the floor, rubbing your hurting joints. 'I'm in half a mind to let all of my pupils have a go at your sorry ass, but we've wasted enough time on the likes of you. Leave, now!' As fast as you can, you limp up to the exit and slip out through the door.";
 					infect "Helot";
 					infect "Helot";

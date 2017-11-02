@@ -3,6 +3,7 @@ Version 1 of Denise by Wahn begins here.
 Denise is a woman.
 The description of Denise is "[DeniseDesc]".
 The conversation of Denise is { "Mew!" }.
+The icon of Denise is Figure of BlueGryphon_icon;
 
 instead of sniffing Denise:
 	if the remainder after dividing libido of gryphoness by 4 is 0:
@@ -26,6 +27,7 @@ to say DeniseDesc:
 
 instead of conversing the Denise:
 	say "What do you want to talk with Denise about?";
+	project Figure of BlueGryphon_face_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -104,6 +106,7 @@ Instead of fucking the Denise:
 		say "     Denise puts a hand on your chest, giggling lightly as she says, 'Oh dear - you're just insatiable. I like it. Give me one moment to catch my breath, then I'm game for more fun.'";
 	else:
 		now sextablerun is 0;
+		project Figure of BlueGryphon_icon;
 		blank out the whole of table of fucking options;
 		[]
 		if cocks of player > 0:

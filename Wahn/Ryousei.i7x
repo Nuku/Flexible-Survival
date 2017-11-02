@@ -29,8 +29,7 @@ instead of going northwest from Park Trail while (level of player > 10 and RTWin
 	if debugactive is 1:
 		say "     DEBUG -> RYOUSEI SHRINE MEETING <- DEBUG [line break]";
 	say "     Passing the last tall bamboo plants, you realize that there's already someone at the shrine. A muscular male tiger is kneeling before the large mirror disc forming the center of the shrine, dressed in a traditional Japanese kimono. A long striped tail gently waves through the air behind him as the being murmurs to the shrine, then eventually puts his hands together and bows before it. After finishing his prayer, the tiger rises to his feet, standing imposingly tall with a quite regal bearing.";
-	if graphics is true:
-		project the figure of Ryousei_face_icon;
+	project the figure of Ryousei_face_icon;
 	say "     'Hajimemashite, stranger. I was just finished...' he says, indicating the spot in front of the shrine with a flourish of his clawed hand. 'It is... refreshing, to see that not all creatures in this land are base beasts. Maybe there is still hope for this nether-realm. So do not let me stand in your way to enlightenment - but before I go, know that you have met Ryousei, first general of the mighty shogun Aki. Which I will be again, once I have escaped this banishment plane.' And with that, the tiger brushes past you without waiting for a reply, walking over the gravel path to the rest of the park and leaving you standing alone at the Shinto shrine.";
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
@@ -166,8 +165,7 @@ instead of fucking Ryousei:
 to say RyouseiDesc:
 	if debugactive is 1:
 		say "DEBUG -> RyouseiEricInteraction: [RyouseiEricInteraction], lastRyouseiEricInteraction: [lastRyouseiEricInteraction], RyouseiXerxes: [RyouseiXerxes], RyouseiHayato: [RyouseiHayato], RyouseiRane [RyouseiRane] <- DEBUG[line break]";
-	if graphics is true:
-		project the figure of Ryousei_face_icon;
+	project the figure of Ryousei_face_icon;
 	say "     Ryousei is an anthro tiger - and not just any tiger, but a magnificent example of his species. Standing quite tall and strong, corded muscles ripple under his luscious, well-groomed fur and he has an undeniable air of confidence and power around him. Truly, if there is royalty among tiger-folk, this is it. Something in his proud bearing and in the somewhat out of place mannerisms he often uses tells you that this male really isn't a transformed human, but came here from someplace else. He wears an exceedingly well made blue kimono, consisting of smooth, very durable fabric. A green jade disc hangs on a leather string around his neck, the amulet bearing the sigil of two dragons flanking a radiant pearl.";
 	if player is in Grey Abbey Library:
 		say "     Having made himself at home in the library, the large cat usually hangs out on the ground floor - doing Tai Chi exercises, browsing books or meditating while sitting cross-legged on a sofa. He never is far from the front door though, and you notice that he frequently glances over to it, ready to react in case someone - or something - might invade your refuge. As he notices your attention on himself, the tiger gives you a companionable nod and a wink. Seems like he's more than ready to chat - or do other things...";
@@ -201,8 +199,7 @@ instead of conversing royal tiger:
 
 to say RyouseiTalkMenu:
 	LineBreak;
-	if graphics is true:
-		project the figure of Ryousei_face_icon;
+	project the figure of Ryousei_face_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -263,6 +260,7 @@ to say sexwithRyousei:
 
 to say RyouseiSexMenu:
 	LineBreak;
+	project the Figure of Ryousei_naked_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -376,8 +374,7 @@ to say RyouseiSex3: [player fucks Ryo]
 	say "     Sliding your hands down behind his back, you place them on the muscular tiger's firm buttocks and give them a squeeze through the thin fabric of his kimono. A rumbling chuckle comes from your feline partner as you tell him that you want to fuck. 'Sure of yourself, are you not, my friend?! More than one of my enemies had to learn that attempts to dominate Ryousei are perilous at best!' Showing his impressive set of fangs and teeth in a wide smile, the tiger leans his head towards your ear and adds in an amused whisper, 'But for my compatriots, other rules apply. I am not averse to enjoying a proud warrior's hard spear in my tail-hole.' With a lust-filled mrowl, Ryousei licks the side of your neck and allows you to fondle him some more, then gently extracts himself from your embrace and starts to strip.";
 	WaitLineBreak;
 	say "     It is quite a nice show to watch the tall feline undress. First, he undoes the obi belt of his outfit, pulling the broad band of fabric from around his hips and allowing his kimono to fall open, revealing his cream-colored chest with its firm pecs and rock hard abs. Further down, the crotch of the sexy tiger is covered by a fundoshi - traditional Japanese underwear consisting of a twisted fabric bands and a relatively skimpy pouch for the family jewels. You can see it bulge with the virile male's balls and there is a noticeable bump in the white cloth from his cock starting to push out from his sheath.";
-	if graphics is true:
-		project the figure of Ryousei_fundoshi_icon;
+	project the figure of Ryousei_fundoshi_icon;
 	say "     Sliding the kimono off his shoulders with a supple and smooth movement, the tiger folds the garment once, then drops it to the ground. Muscles ripple under his short fur as he stands tall and straight after that, smiling at you with his hands on his hips. 'Wanna unwrap your companion, my warrior friend?' he says in a teasing tone and winks, waiting for you to make the next move. Eager to touch the anthro tiger, you step up to him and slide a hand down his abs, then cup his bulge and give it an appreciative squeeze. It is an easy task to tug the ends of the single strip of cloth forming the fundoshi underwear out and unravel its tie, allowing the garment to fall to the ground between Ryousei's feet.";
 	WaitLineBreak;
 	say "     Using a hand to cup the now free-swinging furry balls of your feline friend, you gleefully fondle Ryousei, making the tiger become fully erect in just a few moments. His well-sized shaft quickly pushes out of the furred sheath of his, brushing hotly against your wrist. Reddish-pink in color, with a pointy head and a number of small nubby spikes along its length, the certainly looks interesting and even has a pair of bulges near the base - not quite a full canine knot, but certainly something erection to give extra pleasure as it slides in and out of someone. You're almost tempted to feel that hot shaft inside you right now, but no - you've already got a date with this tiger's tight hole!";

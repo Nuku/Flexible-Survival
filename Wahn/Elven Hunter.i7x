@@ -1,4 +1,4 @@
-Version 1 of Elven Hunter for FS by Wahn begins here.
+Version 1 of Elven Hunter by Wahn begins here.
 [Version 1.1 - Lembas Bread drop item]
 
 "Adds an Elven Hunter to Flexible Survival's Wandering Monsters table, With Impreg chance"
@@ -52,7 +52,7 @@ To say Hunter loses:
 		else if calcnumber is 2: [punch him]
 			say "     The boundless arrogance this elf shows really gets your blood boiling and in a second, you have your fist balled and land a punch right in his face. Catching himself after stumbling back a few steps, the pointy-eared hunter wipes a small trickle of blood from under his nose and gives you an annoyed look. 'I had hoped people in this world had evolved a bit, but I see you're as barbaric as ever. Oh well, even primitives will provide some sport...' With that, he vanishes between the trees.";
 		else: [break off]
-			say "     You shake your head and tell the elf that it was reward enough to face such a worthy adversary. He seems a little disappointed, but smiles readily enough and performs a flourished bow before vanishing back into to trees.";
+			say "     You shake your head and tell the elf that it was reward enough to face such a worthy adversary. He seems a little disappointed, but smiles readily enough and performs a flourished bow before vanishing back into the trees.";
 
 to say ElvenHunterSex:
 	if cocks of player > 0 and cunts of player > 0: [herms may choose]
@@ -198,4 +198,4 @@ to say lembas bread use:
 
 lembas bread is infectious. The strain of lembas bread is "Elven Hunter".
 
-Elven Hunter for FS ends here.
+Elven Hunter ends here.

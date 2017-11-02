@@ -34,8 +34,10 @@ to say Dobermandesc:
 		else:
 			say "     '[one of]Halt, mutant[or]Freeze! Police[or]Surrender, creature[or]Come quietly[or]I order you to stand down, mutant[at random]!' she calls out one last time, pulling out her nightstick.";
 	else if dobielibido < 100 or inasituation is true:
+		project the figure of DobermanCop_icon;
 		say "     The female Doberman cop has found you again and growls angrily, pulling out her nightstick. She's looking more disheveled and wild-eyed than before, her lusts starting to take hold of her. She still has her uniform on, but her shirt's half unbuttoned to show off her breasts better and you can see moist juices soaking her thighs. Despite her attempts to restrain it, her tail wags excitedly at having found you again, regardless of her apparent anger at you.";
 	else:
+		project the figure of DobermanCop_icon;
 		say "     The female Doberman cop has found you again and snarls at you. She's looking rather rougher now, with her shirt hanging open to expose her bare breasts and the crotch of her pants soaked and stained with her fluids. From the wild look in her eyes and the way she slaps her palm with her nightstick, it looks like she's through being the good cop and intends to come down on you hard. Her tail wags and you catch the scent of fresh arousal coming from her, clearly her body wanting to play some more - one way or another.";
 		increase str entry by 2;
 		if hardmode is false, now lev entry is 9;
@@ -346,7 +348,7 @@ to say weaponconf:
 to say beattheDoberman:
 	project the figure of DobermanCop_icon;
 	if dobielibido < 1, now dobielibido is 1;
-	say "     Your last attack knocks away the policewoman's nightstick, sending it skittering across the ground as she's knocked down. She releases a canine whimper that she quickly stifles as she fails to get back up";
+	say "     Your last attack knocks away the policewoman's nightstick, sending it skittering across the ground as she's knocked down. She releases a canine whimper that she quickly stifles as she fails to get back up.";
 	if dobielibido < 50:			[low-lust cop]
 		say "[beatthedobie1]";
 	else if dobielibido < 100 or inasituation is true:	[mid-lust cop]
@@ -386,7 +388,6 @@ to say beatthedobie1:			[low-lust cop player victory]
 			say "     Resisting the temptation to have sex with the canine cop, you give her a final kick to make sure she won't bother you further for the moment before walking away.";
 	else:
 		say "     Satisfied that she won't bother you further for the moment, you give her a final kick before walking away.";
-
 
 to say beatthedobie2:			[mid-lust cop player victory]
 	say "     The female Doberman moans and sags to the ground, her increased lust taking hold. She pulls open her pants, revealing her lack of panties as she starts fingering herself. She looks up at you with a mix of apprehension and longing. Pleased with what you've done to the stuffy cop, you consider fooling around with her further. Clearly she needs some more attention. ";

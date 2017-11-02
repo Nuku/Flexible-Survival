@@ -473,7 +473,7 @@ Charming Picnic is a situation.
 The level of Charming Picnic is 0.
 The sarea of Charming Picnic is "Campus".
 
-instead of going to College Walkway East while (SylviaConv is 4 and hp of Sylvia > 3 and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (hp of Sylvia > 3 and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	CharmingPicnicEvent;
 	
@@ -489,7 +489,7 @@ Badminton One is a situation.
 The level of Badminton One is 0.
 The sarea of Badminton One is "Campus".
 
-instead of going to College Walkway East while (SylviaConv is 4 and hp of Sylvia > 3 and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (hp of Sylvia > 3 and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	BadmintonOneEvent;
 	
