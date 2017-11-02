@@ -404,7 +404,7 @@ to LibrarySexEvent:
 				say "      [bold type]Do you wish to talk to the student?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) [if Girl is banned or Girl is warded]He[else]She[end if] acts funny. You should talk to [if Girl is banned or Girl is warded]him[else]her[end if].";
-				say "     ([link]N[as]n[end link]) - Something fishy must be going on, you would better focus on your reading .";
+				say "     ([link]N[as]n[end link]) - Something fishy must be going on, you would better focus on your reading.";
 				if player consents:
 					LineBreak;
 					say "     You turn towards her, about to tell her that the noise is getting on your nerves too, when you notice notice that something's wrong. She is panting, and her cheeks are flushing red under her cream-colored fur. Then, the buzzing returns, startling the girl. You notice that the noise comes from her pants. Her empty-pockets pants. Antoher buzzing, the student shuts her eyes tight and squeezes her legs. 'Nnnnnn.' She looks around, and realizes that you have been looking at her the whole time. 'N-no, d-don't look at m-me like that...'";
@@ -420,7 +420,7 @@ to LibrarySexEvent:
 				say "     ([link]N[as]n[end link]) - Better leave these two guys alone.";
 				if player consents:
 					LineBreak;
-					say "     You find two male students busy around one of the copiers. One of them is an anteater, the other is a donkey. From where you stand, you can hear their chatter.[Line Break]'Hey, don't try to cheat.'[Line Break]'Why would I? Do we even need to-'[Line Break]'We made a bet: one week of blowjobs [italic type]with[roman type] swallowing, and I won't let you get off the hook.'[Line Break]'If you win.'[Line Break] The flash of the photocopier interrupts the teenagers, and a printed paper comes out a few seconds after. The donkey holds him in the air, and you can see that it is a photocopy of the anteater and the donkey's dicks, aligned side to side. The donkey's is bigger, just barely.[Line Break]'Heh, see?', the ass gloats. The anteater groans loudly, but nonetheless, the two share a small, loving kiss.[Line Break]'Well?'[Line Break]'Well what?'[Line Break]'Now that I'm hard, I think I'll start cashing on this bet.'[Line Break] The donkey's buddy groans even louder, then gets on his knees. You decide to give the two of them some privacy.";
+					say "     You find two male students busy around one of the copiers. One of them is an anteater, the other is a donkey. From where you stand, you can hear their chatter.[Line Break]'Hey, don't try to cheat.'[Line Break]'Why would I? Do we even need to-'[Line Break]'We made a bet: one week of blowjobs [italic type]with[roman type] swallowing, and I won't let you get off the hook.'[Line Break]'If you win.'[Line Break] The flash of the photocopier interrupts the teenagers, and a printed paper comes out a few seconds after. The donkey holds him in the air, and you can see that it is a photocopy of the anteater and the donkey's dicks, aligned side to side. The donkey's is bigger, just barely.[Line Break]'Heh, see?' the ass gloats. The anteater groans loudly, but nonetheless, the two share a small, loving kiss.[Line Break]'Well?'[Line Break]'Well what?'[Line Break]'Now that I'm hard, I think I'll start cashing on this bet.'[Line Break] The donkey's buddy groans even louder, then gets on his knees. You decide to give the two of them some privacy.";
 				else:
 					LineBreak;
 					say "     You resume your perusing, doing your best to ignore the noises.";
@@ -465,7 +465,7 @@ to BrutusLibraryEvent:
 		now CollegeLibraryBrutusEncounter is 1;
 	else:
 		LineBreak;
-		say "      You  quickly walk away, and take the opportunity to think about expanding your own base's collection with the campus. Your constructive train of thoughts is interrupted when Brutus pats you on the shoulder. You look at his cum-covered body, and he returns [if DBCaptureQuestVar is 5]an unapologetic grin[else]a content shrug[end if].";
+		say "      You quickly walk away, and take the opportunity to think about expanding your own base's collection with the campus. Your constructive train of thoughts is interrupted when Brutus pats you on the shoulder. You look at his cum-covered body, and he returns [if DBCaptureQuestVar is 5]an unapologetic grin[else]a content shrug[end if].";
 
 to RyouseiLibraryEvent:
 	say "     You take advantage of being on campus to stop by the library and browse a few books. Next to you, Ryousei is, funnily, quieter than usual. You turn your head, and realise that he has left, probably to wander the library on his own. You explore the alleys, letting the faint noises of sex guide you. After a couple of false leads, you eventually recognize his meek protests, coming from the photocopy room.";

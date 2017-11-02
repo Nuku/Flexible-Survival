@@ -69,7 +69,7 @@ instead of trading the orc brew when the current action involves the Chris:
 
 instead of trading the orc cum when the current action involves the Chris:
 	if libido of Chris is 0:
-		say "     You hand Chris the bottle of orc cum, which the young man accepts and looks at with interest. Taking off the cap of the plastic water bottle he sniffs at it, then licks his lips, obviously tempted to drink the light green, thick and creamy liquid. His hand starts to rise a bit with the bottle, then he stops himself. Biting his lip as he looks at you, Chris says 'Thanks, but.. Dad warned me about doing this. I shouldn't - or should I? It smells really nice...'";
+		say "     You hand Chris the bottle of orc cum, which the young man accepts and looks at with interest. Taking off the cap of the plastic water bottle he sniffs at it, then licks his lips, obviously tempted to drink the light green, thick and creamy liquid. His hand starts to rise a bit with the bottle, then he stops himself. Biting his lip as he looks at you, Chris says 'Thanks, but... Dad warned me about doing this. I shouldn't - or should I? It smells really nice...'";
 		say "     [bold type]Do you convince Chris to drink the orc cum, knowing that it'll most likely transform him into a submissive orc breeder?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
