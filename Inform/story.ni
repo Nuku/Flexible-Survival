@@ -5065,6 +5065,7 @@ Include Extra Added Scenes by Kaleem mcintyre.
 Include Extra College Events by Speedlover.
 Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
+Include Female Dorm Events by Prometheus.
 Include Fire House by Kaleem Mcintyre.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
@@ -5276,6 +5277,7 @@ Include Kangaroo by Guest Writers.
 Include Killer Whale For Fs by Stripes.
 Include Knight for FS by Stripes.
 Include Koballoon by Stripes.
+Include Kobold Gang by Closerhenry.
 Include Komodo Dragon for FS by Stripes.
 Include Latex Ermine for FS by Stripes.
 Include Latex Fox by Nuku Valente.
@@ -5462,6 +5464,7 @@ Include Hayato by Stripes.
 Include HornyHorsey by femtoAmpere.
 Include Hungry Boar Man by Closerhenry.
 Include Hyper Squirrel by Nuku Valente.
+Include HypnoGeeks by Wasp.
 Include Icarus by Stripes.
 Include Ice Fox by Wahn.
 Include Inflatable Orca by Song.
@@ -5520,7 +5523,7 @@ Include Stella by Stripes.
 Include Stewart by Rikaeus.
 Include Stuck Dragon by Stripes.
 Include Sven by Stripes.
-Include Sylvia by Prometheus. [WIP]
+Include Sylvia by Prometheus. 
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
 Include Tenvale Gorillas Football Team by Kernog.

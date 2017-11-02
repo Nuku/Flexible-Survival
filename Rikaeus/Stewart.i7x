@@ -186,11 +186,12 @@ to say StewartStudying:
 
 instead of fucking Stewart:
 	if Stewart is in The Clouds or Stewart is in Tenvale College Library:
-		say "     Stewart starts blushing beet red before shaking his head vigoriously. 'No! Not here where everyone can see.' He stutters out.";
+		say "     Stewart starts blushing beet red before shaking his head vigoriously. 'No! Not here where everyone can see,' he stutters out.";
 	else if (lastfuck of Stewart - turns < 3): [he got fucked in the last 9 hours = 3 turns]
 		say "     Stewart apologizes to you rather profusely. 'While I did like last time, I do need time to rest,' he says, waving you off.";
 	else if Stewart is in Stewart's Room:
 		say "     He blushes but gives you an eager look, as if expecting you to suggest something.";
+		say "[StewartSexMenu]";
 
 to say StewartSexMenu:
 	LineBreak;

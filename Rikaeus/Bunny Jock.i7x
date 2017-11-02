@@ -126,7 +126,7 @@ When Play begins:
 	now cunt length entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 40; [ Target libido the infection will rise towards. ]
-	now loot entry is "Bunweiser Beer"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "bunweiser beer"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 12; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]super-buff[or]muscular[or]hyper-muscled[at random]";
