@@ -1,5 +1,5 @@
 Version 1 of Thunderbolt by CrimsonAsh begins here.
-[ Version 1 - new file              ] 
+[ Version 1 - new file              ]
 
 [ ThunderTrackingVariable                               ]
 [   0: never met yet                                    ]
@@ -16,11 +16,11 @@ The sarea of Campus Thunder is "Campus". [Fountain]
 instead of going south from College Administration Building while (Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
 	move player to College Fountain;
 	ThunderboltEncounter1;
-	
+
 instead of going north from College Campus Entrance while (Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
 	move player to College Fountain;
 	ThunderboltEncounter1;
-	
+
 instead of going east from College Walkway Northwest while (Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
 	move player to College Fountain;
 	ThunderboltEncounter1;
@@ -36,13 +36,13 @@ Instead of resolving Campus Thunder:
 		ThunderboltEncounter2;
 
 to ThunderboltEncounter1:
-	say "     Whilst wandering the campus grounds you spot a large brown horse with school colors depicted on a sash across his equine body. In big letters you read, 'Westside Stallions'. The horse whom had previously been drinking peacefully the central fountain spots you and locks his dark eyes with yours. He starts trotting over to you after giving a friendly snort. You take a step back, looking for signs of... something on the beast. Aggression? Infection? You don't know, but there is nothing that seems dangerous at all, so in the end you just shrug and let him walk right up to you. The fairly large horse stands before you seemingly examining your body before he nuzzles his large head into your side affectionately. Before you can really, a long and thick horse tongue licks across your neck covering it in warm saliva. It's then you hear someone yell, 'Thunderbolt! Leave [ObjPro of player] alone!' You look over your shoulder to see two lioness girls in soccer uniforms with identical writing on their outfits as the horse. Must be the team name... 'Westside Stallions.'"; 
+	say "     Whilst wandering the campus grounds you spot a large brown horse with school colors depicted on a sash across his equine body. In big letters you read, 'Westside Stallions'. The horse whom had previously been drinking peacefully the central fountain spots you and locks his dark eyes with yours. He starts trotting over to you after giving a friendly snort. You take a step back, looking for signs of... something on the beast. Aggression? Infection? You don't know, but there is nothing that seems dangerous at all, so in the end you just shrug and let him walk right up to you. The fairly large horse stands before you seemingly examining your body before he nuzzles his large head into your side affectionately. Before you can really, a long and thick horse tongue licks across your neck covering it in warm saliva. It's then you hear someone yell, 'Thunderbolt! Leave [ObjPro of player] alone!' You look over your shoulder to see two lioness girls in soccer uniforms with identical writing on their outfits as the horse. Must be the team name... 'Westside Stallions.'";
 	say "     The taller of the lioness girls whom had just spoken pads forward to gently pat the large equine mammal on the head. 'Sorry, he's a bit too friendly sometimes,' the pretty lioness says flashing you a toothy grin. 'I'm Ariana and this is my sister Eres.' She explains, gesturing to the clearly younger lioness behind her who shuffles forward anxiously to raise a delicate paw to wave nervously at you. 'Hey...' she pauses as she looks to you and then to the horse still standing next to you. Giving a light kiss on the side of the horse's head Ariana speaks up again, 'And this big fella is Thunderbolt, our team mascot.' Thunderbolt nuzzles into Ariana as you too introduce yourself to the two lioness sisters. 'It's good to meet someone new, but we really have to be going. Gotta take care of the big fella here,' she adds in a friendly tone, patting the large equine on the side as she turns away with Thunderbolt in tow. Eres follows with a light blush on her face and a smile in your direction.";
 	LineBreak;
 	say "     As you watch the three leave, you spot under the brown horse's undercarriage a large equine phallus, rapidly gaining in length and getting harder by the second. An eyeblink or two later, they all disappear behind some buildings... Interesting.";
 	now ThunderTrackingVariable is 1;
 	now LastCampusWalkin is turns;
-	
+
 instead of going southeast from College Walkway East while (Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 1):
 	move player to Greek Street;
 	ThunderboltEncounter2;
@@ -68,7 +68,7 @@ to ThunderboltEncounter2:
 			say "     Pressing forward the massive length strains to enter but with your beforehand preparation a single strong thrust is all it takes to penetrate your eager hole. Moaning loudly as nearly half of Thunderbolt's equine cock is forced into your tight anus, you press back against his shaft and dig your hands into the dirt below. Neighing in pleased passion the soccer mascot pushes more of his thick, veiny member into your rear...";
 			WaitLineBreak;
 			say "     Feeding nearly every inch into your ass, Thunderbolt bottoms up inside you before drawing back and thrusting into you again. The sheer force and pleasure of the first few thrusts nearly knocks you out, but you manage to get used to taking the feral member, greatly enjoying it pounding you into the soft ground below. Bottoming in and out of you, you can feel a trickle of drool run down your chin whilst more pre spurts into your colon. Grunting and neighing Thunderbolt gradually speeds up until he's thrusting with wild abandon, really hammering into you. Feeling his cock stiffen and twitch you can feel his full testicals slapping against your ass as with one final thrust into your ass he bottoms every inch inside you and cums. With a slight bulge pressing out of your tummy you feel him unload into you, triggering your own almost mind-shattering orgasm. Thick streams of horse seed spill into your bulging insides as you clench like a vice around his spurting equine member. Your whole world goes black as the intensity of your climax knocks you unconscious.";
-		say "     When you awaken you feel sore but relieved, and... surrounded by warmth? Opening your eyes you see sitting above you with your head in her lap the lioness Ariana, still in her uniform and smiling down at you. 'Hey sweetie, you alright? I know Bolt can be... rough but as I'm sure you've experienced, he's worth it.' She says gazing over to her favorite feral horse, who is contently sleeping in the same area you remember him in. You notice a rather impressive puddle of mixed juices below him and you can still feel some of his seed sloshing in your full tummy. Although looking down you notice your legs and lower body have been washed off and re-clothed. 'I... hope you don't mind sweetie but I cleaned you off and dressed you, Bolt was on top of you when I came by to get him.' You're dazed but manage a smile and thank the pretty lioness. She returns the smile and gently helps you to wobbly feet, it's certainly going to be sore for a while but you feel so amazing that you can't complain. Giving you an arm Ariana speaks again, 'Feels good right? You know, you should join me and sis sometime, we come by every now and again to... relive Bolt here, could be a grand time with the four of us.' She gives you a soft swat on the backside and bids you goodbye, watching you slightly limp away.";
+		say "     When you awaken you feel sore but relieved, and... surrounded by warmth? Opening your eyes you see sitting above you with your head in her lap the lioness Ariana, still in her uniform and smiling down at you. 'Hey sweetie, you alright? I know Bolt can be... rough, but as I'm sure you've experienced, he's worth it,' she says, gazing over to her favorite feral horse, who is contently sleeping in the same area you remember him in. You notice a rather impressive puddle of mixed juices below him and you can still feel some of his seed sloshing in your full tummy. Although looking down you notice your legs and lower body have been washed off and re-clothed. 'I... hope you don't mind sweetie but I cleaned you off and dressed you, Bolt was on top of you when I came by to get him.' You're dazed but manage a smile and thank the pretty lioness. She returns the smile and gently helps you to wobbly feet, it's certainly going to be sore for a while but you feel so amazing that you can't complain. Giving you an arm Ariana speaks again, 'Feels good right? You know, you should join me and sis sometime, we come by every now and again to... relive Bolt here, could be a grand time with the four of us.' She gives you a soft swat on the backside and bids you goodbye, watching you slightly limp away.";
 		now ThunderTrackingVariable is 2; [horse sex for the player completed]
 	else:
 		LineBreak;

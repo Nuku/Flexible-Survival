@@ -140,11 +140,10 @@ The description of Sarah is "[SarahDesc]";
 to say SarahDesc:
 	if debugactive is 1:
 		say "     DEBUG -> SarahSlut: [SarahSlut], SarahTalk: [SarahTalk], SarahCured: [SarahCured], CarlSarahInteraction: [CarlSarahInteraction], lastCarlSarahInteraction: [lastCarlSarahInteraction], CarlSarahSex: [CarlSarahSex], ColeenSarahInteraction: [ColeenSarahInteraction], lastColeenSarahInteraction: [lastColeenSarahInteraction], EricSarahInteraction: [EricSarahInteraction], cboyEricSarahInteraction: [cboyEricSarahInteraction], lastEricSarahInteraction: [lastEricSarahInteraction], FangSarahInteraction: [FangSarahInteraction], lastFangSarahInteraction: [lastFangSarahInteraction]  <- DEBUG[line break]";
-	if graphics is true:
-		if SarahSlut < 1:
-			project the figure of Sarah_clothed_icon;
-		else:
-			project the figure of Sarah_naked_icon;
+	if SarahSlut < 1:
+		project the figure of Sarah_clothed_icon;
+	else:
+		project the figure of Sarah_naked_icon;
 	say "     Sarah is a lithe and thin woman with grey-white husky fur, plus anthro paw-hands and feet. A canine head and bushy tail complete her look of an anthro dog. There are white scar lines down her side where the alpha husky that you rescued her from slashed her during your fight. [SarahSlutState][SarahPupState]";
 
 The conversation of Sarah is { "Woof!" }.
@@ -177,16 +176,14 @@ instead of conversing the Sarah:
 	else if SarahSlut > 3: [End of Slut Path]
 		say "[one of]'Fuck me again master!'[or]'Please take me now!'[or]Sarah moans, rubbing her slit and dripping everywhere.[or]'Fill me!'[or]'Use me like the bitch I am.'[or]'Master, please use your slut!'[or]'I just love being your bitch.'[at random]";
 	else if SarahTalk is 0: [Sane]
-		if graphics is true:
-			project the figure of Sarah_face_icon;
+		project the figure of Sarah_face_icon;
 		say "     'Hello. My name is Sarah, and thanks for rescuing me from those darn huskies back there. I really do appreciate the help. After running into that pack of bitches and their alpha male, I had almost given up hope and thought I'd be another dumb slut soon. Not that I don't look the part already now.' Looking down over herself, she runs a hand over the curve of her breasts, moaning loudly before yanking the hand away and letting out some swear words as she regains control of herself. 'Damn those huskies,' the young husky hybrid says, then turns her train of thought back to you. Looking up and smiling, she adds, 'I'm a medical student and used to work at the hospital, in the ER general ward. You know, where they treated those who hadn't hurt themselves so badly they needed a specialist,' she says as she runs her new paw-like hands down her body, 'so I'm sure I can be of great help to you as well.'";
 		increase SarahTalk by 1;
 	else: [after the initial talk]
 		say "[SarahTalkMenu]";
 
 to say SarahTalkMenu:
-	if graphics is true:
-		project the figure of Sarah_face_icon;
+	project the figure of Sarah_face_icon;
 	LineBreak;
 	say "What do you want to talk with Sarah about?";
 	now sextablerun is 0;
@@ -447,7 +444,7 @@ to say SarahFucking:
 		now lastfuck of Sarah is turns;
 		if cocks of player > 0:
 			if cunts of player > 0:
-				say "     You grin as you reach down to stroke your erect member a few times, Sarah's eyes locked on your stiff rod only inches from her face. Deciding to tease her even further, you lean forward slightly and slowly rub the tip of your cock over her nose, filling her husky senses with the scent of a strong erect male. Sarah moans, her eyes half closing as your musky scent works its way through her body, and you grin as the sight of her on her knees before you in such a submissive manner makes your own pussy clench eagerly in response. You continue to slowly stroke your member, teasing her with it's nearness even as you enjoy her response, her bodies desires quickly overcoming any possible mental objections as she slowly moves forward and stretches her tongue out to taste your shaft.";
+				say "     You grin as you reach down to stroke your erect member a few times, Sarah's eyes locked on your stiff rod only inches from her face. Deciding to tease her even further, you lean forward slightly and slowly rub the tip of your cock over her nose, filling her husky senses with the scent of a strong erect male. Sarah moans, her eyes half closing as your musky scent works its way through her body, and you grin as the sight of her on her knees before you in such a submissive manner makes your own pussy clench eagerly in response. You continue to slowly stroke your member, teasing her with its nearness even as you enjoy her response, her bodies desires quickly overcoming any possible mental objections as she slowly moves forward and stretches her tongue out to taste your shaft.";
 				say "     The husky girl's wonderfully soft tongue makes you groan as it licks over the tip of your member several times, before she leans forward to take your shaft into her eager muzzle. The feel of her mouth wrapping around your member is heavenly, made all the sweeter by having your pet submit and worship your cock with hardly any encouragement from you at all. You reward the sexy little husky by beginning to stroke her soft head-fur with your hands, rubbing and scratching her head in encouragement even as she focuses on licking and sucking at your cock. You can't help but groan in pleasure as she brings her front paws up, one of her hand-like paws slowly fondling your full sac, teasing your balls with her soft touches.";
 				WaitLineBreak;
 				say "     You find yourself throwing your head back, eyes rolling up in pleasure as Sarah's other paw finds its way to your own wet needy slit underneath your balls. You pant and grip her head tightly as she begins to tease your female passage with her paw, even as she suckles wantonly on your thick cock. The combined pleasure is too much for you to stand for long, and before you know it, your body is shuddering as you flood her eager mouth with your seed, your pussy clenching around her paw-fingers as your juices coat them thoroughly as well. You pant in the aftershock of the powerful orgasm, even as the talented bitch tries to lick up and swallow as much of your glorious seed as possible. Coming down from the intense pleasure, you realize that even though that experience was absolutely amazing, it still shows a bit of defiance in your new pet that you might need to deal with properly.";
@@ -549,6 +546,7 @@ to say SarahFirstSlutFuck:
 
 to say SarahSexMenu:
 	LineBreak;
+	project the figure of Sarah_naked_icon;
 	say "What do you want to do with Sarah?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -896,6 +894,7 @@ instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Sa
 	say "[SarahOffersAnal]";
 
 to say SarahOffersAnal:
+	project the Figure of Sarah_clothed_icon;
 	say "you find yourself suddenly approached by Sarah, who bears an apologetic expression and wags her tail softly as she walks up to you. 'I wanted to talk to you. Sorry if I... squashed your idea of sex a bit too... energetically. With the story and all. It is just something that kinda freaks me out. Getting pregnant, here and now.' Stopping herself from rambling again, the young woman throws her arms around you and gives a tight hug, then goes on to say, 'It's not your fault that things are like this, and I really like being with you - doing stuff together too. So... I hope you can forget me being a buzz-kill earlier. You know - there is another option that I know for a fact can't get me pregnant...'";
 	say "     Taking your hands in hers, she pulls them down behind her and places them on her perky behind. As her by now more quickly wagging tail brushes against your fingers, she says, 'I think you get my drift, don't you? Just... putting it out there that we can still do stuff. No need to treat me like a wallflower just because of certain hangups.' And with that, the young woman slips out of your grasp and walks back over to her bunk - all the while wiggling her ass at you a few times and demonstratively bending over to pick something up from the ground at the end.";
 	now SarahCured is 8;
@@ -906,6 +905,7 @@ instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Sa
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: Sarah thanks the player for the showers working - SaraCured: [SarahCured][line break]";
+	project the Figure of Sarah_clothed_icon;
 	say "     As you enter the bunker, Sarah the husky is already waiting there for you, a big smile on her face. 'Hey there,' she says happily and walks up to you, then throws her arms around you and gives you a big hug. 'I wanted to thank you - a lot - for getting the power going down here. The showers are working again!' The last words are said in a happy squeal, after which she does her best to calm herself down again. 'Ooh, just to feel clean again and not so hot and sticky...' The young woman sighs with contentment and gives you another squeeze, then wanders back over to her own bed to sit down on it.";
 	now SarahShower is 1;
 
@@ -919,6 +919,7 @@ instead of going north from Bunker while (Sarah is in Bunker and SarahCured > 3 
 	say "     ([link]N[as]n[end link]) - Nah, peeping on someone showering isn't nice.";
 	if player consents:
 		LineBreak;
+		project the Figure of Sarah_naked_icon;
 		say "     Glancing around the corner into the actual shower room, you see the grey and white furred shape of Sarah standing under one of the big spraying nozzles. Her fur is thoroughly wet and plastered to the slender canine's body, leaving absolutely nothing to the imagination. Reveling in the pleasure to get clean, the young woman has her eyes closed and head leaned back, letting her hands wander over her own body as she rubs in a generous helping of shampoo. Gaze drawn by Sarah's naked form, you enjoy the show for a moment, then eventually pull back from peeking around the corner. Best not to get caught, peeking at her like this...";
 	else:
 		LineBreak;
@@ -930,6 +931,7 @@ instead of navigating Grey Abbey Library while (Sarah is in Bunker and Carl is i
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
+	project the Figure of Sarah_clothed_icon;
 	if debugactive is 1:
 		say "     DEBUG -> SARAH & CARL MEET - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
 	say "     Coming into the library, your arrival coincides with someone opening the door to the subterranean bunker below from the inside. A flash of white-furred paw-hands lets you guess it is Sarah even before you see the young woman fully, stepping into the open library in her jeans and t-shirt. She notices you in turn and gives a friendly smile and a little wave, then walks over to a nearby bookshelf and starts browsing. Looks like she got bored down in the bunker and needs something new to read. Closing the entrance door securely, you set down your pack and mentally go through what you want to do next - during which you glimpse Carl at the edge of your vision, jogging through the library as part of his exercise regime.";
@@ -952,12 +954,14 @@ instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl i
 		say "[SarahCarlScene2]";
 
 to say SarahCarlScene1:
+	project the Figure of Carl_face_icon;
 	say "     As you walk up the stairs to the upper floor of the library, your attention is drawn by a pair of wagging tails over near the street-side windows. Next to the little camp that Carl has made for himself here, the husky soldier and Sarah are standing at an open window, leaning on the windowsill as they have a friendly chat with one another. Of course, this doesn't mean Carl isn't also keeping an eye out for trespassers - he sweeps the street with his gaze regularly, in between trading comments with Sarah. The two of them seem to have gotten over their somewhat tumultuous first meeting and now are on friendly terms, chatting away.";
 	say "     Straining your ears a bit, you overhear some words that tell you they're talking about his time in the military boot camp and her studies at university. They look pretty content and happy to just talk to another transformed (yet sane) human, so you decide against walking up and joining the conversation. Best to just let them have this peaceful moment...";
 	now CarlSarahInteraction is 2; [talked]
 	now lastCarlSarahInteraction is turns;
 
 to say SarahCarlScene2:
+	project the Figure of Carl_face_icon;
 	say "     As you walk up the stairs to the upper floor of the library, your attention is drawn by a pair of wagging tails over near the street-side windows. Carl and Sarah are sitting at a table of the study area over there and from the looks of it, they're having fun playing poker. The table between them holds the stacks of cards as well as several piles of colorful chocolate-covered nuts. Looks like Carl went out scavenging sometime and found a bag or two of them. Your anthro husky friends are using the candy as play-money now, betting some and from time to time throwing one in their mouths.";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Join them for a round or three.";
@@ -996,11 +1000,12 @@ instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl i
 		say "     ([link]N[as]n[end link]) - Let them have their fun without spectators.";
 		if player consents:
 			LineBreak;
+			project the Figure of Carl_knot_icon;
 			say "     Hurrying after the husky, you find Sarah and Carl on the sofa together - but this time she is sitting on his lap and giving the male husky a doggie kiss with lots and lots of tongue. Pulling away from the breathless and panting man a moment later, Sarah puts her hands on his shoulders and looks him in the eyes, then says, 'Okay soldier - here's what's what. You can smell me and know that I'm in heat and I can smell how tightly wound you are. Your dick's been throbbing out precum since I climbed on top of you. So... wanna do something about it? Just some casual fun. Oral, you know.' Meanwhile, Carl's nostrils have been flaring wide, taking in deep breaths of Sarah being so very close to himself.";
 			say "     Almost high from huffing Sarah's pheromones, Carl doesn't notice that she asked him a question for several seconds, then blinks and replies, 'Oh god, YES! Couldn't help but pant after you, to be honest.' Sarah grins as she says, 'I noticed.' Then she shimmies back on the sofa to get into position kneeling between Carl's legs and pulls down his zipper with a quick tug. The male husky's red-skinned shaft springs up to stand up straight, the pointy top of it glistening with pre-cum. 'Ngghh,' Carl moans as Sarah closes her hand around his member, feeling its warmth between her fingers. She moves down to touch the little bulge of what will swell up to be his knot, then even further downwards to his sheath.";
 			WaitLineBreak;
 			say "     Stroking along the rim of the furry sack, Sarah says in a playful tone, 'Hard to believe all that was in here. But then again, your dick was soft and this is really stretchy...' With that said, the medical student slips a finger under the rim of Carl's sheath, probing the inside with a careful touch. 'Man, that feels weird. Not bad, but... definitively weird. Never thought I'd have a pretty woman finger-fuck a hole I didn't even have a short while ago,' Carl replies, then grunts in arousal as Sarah rubs her finger against the very base of his erection, inside the flexible sheath. A thick throb of pre-cum comes out of his cum-slit at that moment, then starts to run down the canine's cock.";
-			say "     It doesn't get far, as Sarah leans forward to lick Carl's pre off, slurping his whole dick with her floppy tongue. Humming in pleasure at the nice taste, she grins up at the panting male, then slides her muzzle over his manhood and starts to suck on it. Carl enjoys her oral service immensely and is more than ready to tell the world about it - moaning, barking and grunting loudly and calling out how good his dick feels in her mouth. He puts a hand on her head too, but not to control her, but rather just touch and stroke the female husky, caressing her and rubbing behind her ears. Happily suckling on his cock, Sarah soon pulls her finger out of his shaft too and instead wraps a hand tightly around the base of his cock, giving Carl the feeling of having his knot resting inside a partner's tightly stretched insides.";
+			say "     It doesn't get far, as Sarah leans forward to lick Carl's pre off, slurping his whole dick with her floppy tongue. Humming in pleasure at the nice taste, she grins up at the panting male, then slides her muzzle over his manhood and starts to suck on it. Carl enjoys her oral service immensely and is more than ready to tell the world about it - moaning, barking and grunting loudly and calling out how good his dick feels in her mouth. He puts a hand on her head too, but not to control her, but rather just touch and stroke the female husky, caressing her and rubbing behind her ears. Happily suckling on his cock, Sarah soon pulls her finger out of his sheath too and instead wraps a hand tightly around the base of his cock, giving Carl the feeling of having his knot resting inside a partner's tightly stretched insides.";
 			WaitLineBreak;
 			say "     With everything that Sarah is doing to him, it is no big surprise that Carl soon starts to give more and more urgent grunts and the knot in Sarah's hand starts to swell up rapidly. Then the point of no return is reached - he reflexively bucks his hips upwards, rubbing the head of his shaft against the ribbed roof of her mouth as it erupts with a first big splash of cum, covering the back of her throat with creamy goodness. Sarah is prepared for this and swallows immediately, gulping down his seed without hesitation, just as she does for the next and the next blast. The female husky stays leaning over her partner for quite a long moment, tail beating wildly left and right as she drinks the heavy load pent up in his full balls.";
 			say "     When Sarah eventually pulls away from the exhausted husky's crotch, she licks her lips in satisfaction, then grins at Carl and says, 'So, soldier boy - what did you think of that?' Carl just pants for a few more seconds, stretched out on the sofa as he now is, giving Sarah the time to crawl forward and soon straddle his body on all fours. Looking directly into the other anthro canine's eyes, she plants a peck of a kiss on his nose. 'Amazing,' he pants, still totally out of breath, then goes on to say, 'That was so good. I feel completely drained right now.' Raising an arm weakly to caress the underside of Sarah's muzzle, he starts to say, 'Give me... a second... and I'll -' But then Sarah shushes him with a finger on the front of his muzzle. 'It's alright. Get your rest now. You can pay me back next time.'";
@@ -1030,6 +1035,7 @@ to say SarahCarlOral2F:
 	say "     ([link]N[as]n[end link]) - Let them have their fun without spectators.";
 	if player consents:
 		LineBreak;
+		project the Figure of Carl_knot_icon;
 		say "     Getting closer, it soon becomes obvious to you that Carl is on all fours on the sofa, his tail raised high and wagging as he has his muzzle between Sarah's legs. Lapping away at the young woman's folds, he teases her clit with great enthusiasm while pumping two fingers in and out of her vagina. 'Yeaahh! Just like that,' the medical student groans in lust and wraps her slender legs around Carl's torso, pulling him even closer against her crotch. You don't know how long they've been at it already, but one thing is clear - the soldier really knows what he's doing as he makes Sarah yip and moan in lust. Before much longer, her sounds of arousal build to an almost shouted crescendo, accompanying a breathtaking orgasm for the young woman.";
 		say "     Carl just keeps his muzzle buried between Sarah's legs, never wavering in his licking as she trembles in lust. The female husky moans and pants loudly as she rides out her climax, clearly the sounds of a very well satisfied woman. When Sarah calms down a bit, Carl shows off his muscles by doing an effortless push-up and then crawls on top of the other canine to give her an intimate kiss. After a long moment of sharing each other's breath and exploring their mouths with floppy tongues, Sarah says, 'You're good with that tongue of yours, soldier boy. Now that is what I call letting off some steam! But speaking of which... better watch out where you're poking that thing. A litter of puppies isn't part of my plans for the foreseeable future.'";
 		WaitLineBreak;
@@ -1077,6 +1083,7 @@ instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Al
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG -> Alexandra & SARAH MEET - AlexandraSarahInteraction: [AlexandraSarahInteraction] <- DEBUG[line break]";
+	project the Figure of Alexandra_clothed_icon;
 	say "     Walking down the stairwell to the bunker, you notice the sound of the lower bunker door falling shut. Someone must just have passed this way before you. You don't think much of it and just continue on your way in a normal tempo, which means you're almost at the door yourself when you hear someone call out, 'Hey! Ow! What are you doing?!' Alarmed, you take the last few steps down in a jump and burst through the door into the bunker.";
 	say "     The scene that awaits you is interesting, to say the least - it was Alexandra who came down here, and the former cop is standing just a short distance from the entrance, holding Sarah pinned against the concrete bunker wall with a paw-hand to her chest. 'I knew I smelled some bitch down here,' the doberwoman says in a belligerent tone and sniffs at the anthro husky's body. 'Lady, let go of-' Sarah starts, only to be interrupted by a low growl from Alexandra, who draws her lips back from sharp canine teeth. 'Listen, you stupid mutt! I wanna make one thing clear to you - I'm Alexandra and this pack's alpha bitch! You'd better remember that, or we'll have a problem with each other.'";
 	WaitLineBreak;
@@ -1107,6 +1114,7 @@ instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Er
 		say "[SarahEricScene3]";
 
 to say SarahEricScene1:
+	project the Figure of Eric_clothed_icon;	
 	say "     As you enter the bunker, you see Eric sitting cross-legged on his bed, totally focused on a book on his lap - so much so that he doesn't even look up as you come in. And neither does he notice Sarah, who walks up to him on her slender paws moments later. Her tail gives a slow and friendly beat as she clears her throat and says, 'Hello there. Nice to meet another human down here... err, you know what I mean.' After the last words, she raises her paw-hand and looks down at it thoughtfully, almost as if she had forgotten that she can't quite count herself as human anymore. Dropping a bookmark between the pages and setting his novel aside, Eric rises from the bed with the grace of a natural gymnast and steps right up to Sarah, taking her paw to shake it in greeting.";
 	say "     'Hey, I'm Eric,' the college athlete greets Sarah with a shy smile. She is momentarily baffled at the nonchalant greeting and the fact that he didn't hesitate one moment to touch her. 'I - I'm Sarah. Aren't you concerned about... catching something? Fur, for example.' Eric shakes his head slowly and replies, 'I don't think that'll be a problem. This... thing that is going on doesn't seem to affect me. That much.' He pauses at that and blushes a little bit, then quickly adds, 'And I'm really happy that you seem like a normal person. Not trying to tear someone's clothes off and mount them, like some of my former classmates at college.'";
 	WaitLineBreak;
@@ -1116,6 +1124,7 @@ to say SarahEricScene1:
 	now lastEricSarahInteraction is turns;
 
 to say SarahEricScene2:
+	project the Figure of Eric_clothed_icon;
 	say "     Coming down the stairs from the library, you open the door leading from the stairwell into the main bunker room - and suddenly, two people flash past the opening at a full sprint. Looking through the door and after them you see that it was Eric and Sarah, apparently having a friendly race along the long side of the room. The college athlete arrives at the far wall several steps before Sarah, slapping one hand against it and turning to her with a grin. Tongue hanging out as she reaches the end and loudly pants, Sarah tells him, 'Wow, you're really are good at this! I mean... I was no slouch before, and the muscle density in the new body this infection has saddled me with is kinda amazing. But you still beat me. Oh well, at least it was close.'";
 	say "     In reply to her comment, Eric's cheeks redden a bit and he rubs the back of his neck. 'Well, umm... about that,' he starts to say, but Sarah interrupts him with the words, 'No way! Really? You were going easy on me?! Oh my god!' Her paw-hands grab Eric and pull him into a hug, then she gives his cheek a friendly lick and looks at him with a grin. 'That's so sweet. Thanks for not just making me eat your dust in a roadrunner kind of way, hah. But all kidding aside - you can color me impressed.' Walking back towards the rows of beds where they started their little race, the two of them keep chatting with one another about athletics. Sarah keeps her arm around Eric the whole way and with the topic being something close to his heart, she gets the usually rather shy guy to open up more and more.";
 	LineBreak;
@@ -1124,6 +1133,7 @@ to say SarahEricScene2:
 	now lastEricSarahInteraction is turns;
 
 to say SarahEricScene3:
+	project the Figure of Eric_clothed_icon;
 	say "     Coming into the bunker, you see Sarah and Eric hanging out together. They are sitting cross-legged on Eric's bed, chatting about this and that. Between them, there is a small pile of oranges that both pick from and happily eat while they talk. Looks like one of them - or both together - went out to find some supplies and now they're enjoying the literal fruits of that labour with one another. It is nice to see that your rescuees from out in the chaos-ridden city get along so well. With a smile on your face, you wander over and say hello, earning you happy smiles and an excitedly wagging tail from Sarah. 'Hey there my hero,' the female husky calls out to you and tosses you an orange that you easily catch. As you exchange some words with them, you peel and munch on the orange fruit, finding it nice and juicy.";
 	decrease hunger of player by 5;
 	if hunger of player < 5:
@@ -1143,6 +1153,7 @@ instead of navigating Grey Abbey Library while (Sarah is in Bunker and Eric is i
 		say ""; [currently not used]
 
 to say SarahCboyEricScene0:
+	project the Figure of Eric_clothed_icon;
 	say "     Coming into the library after braving the dangerous streets outside, you take a moment to catch your breath and calm down. The quiet and peaceful surroundings of this former abbey do tempt you to take a stroll between the shelves, letting your gaze wander over the books as you go along. One or another title tickles your interest, but not enough to actually pull the book from its place. Then suddenly, you hear voices - there is someone behind the shelf on your left. Leaning forward a little, you glance through the small gap above the books and see that Sarah and Eric had a similar idea to your own, strolling along between the bookshelves and talking about things to read.";
 	say "     You go keep walking, quietly moving along on the other side of the bookshelf and listen to the two of them chatting in a friendly tone. Seems like they have gotten fairly comfortable with one another - both relieved to have someone to keep them company down in the bunker. But then, as they're about to reach the end of the row, Sarah pulls Eric aside a little, putting a paw on his arm, 'Listen, I wanted to ask you about... um. How long have you known that you were - you know, trans? I hope I'm not going too far in asking this... seeing how you dress, it's obvious that you don't want to appear... girly. And you have the whole act down really well.'";
 	WaitLineBreak;
@@ -1178,6 +1189,7 @@ to say SarahCboyEricScene1:
 	say "     ([link]N[as]n[end link]) - Quietly walking away, leaving them to finish their business in peace.";
 	if player consents: [watch]
 		LineBreak;
+		project the Figure of Eric_naked_icon;
 		say "     You're just in time getting into position before Eric quietly tells Sarah, 'O-okay then, we - erm, you - can do it.' With that, the shy young man starts to lift his t-shirt, pulling it off to reveal a lithe and slim upper body. His husky friend wags her tail and nods supportively, prompting him to keep going with his shorts. A pair of skimpy black panties is revealed as he slips the garment down his legs, leaving the college student almost naked as he sits on the bed. Then he lifts his hips, allowing for the last shred of fabric to be pushed down over his small and firm buttocks. As Sarah helps pull the last garment off, she says, 'Just lay back and relax.'";
 		say "     Eric leans back, stretching his upper body out on the bed, while his legs still hang over the edge of it. He pants a little, trying but not quite managing to be calm. Meanwhile, Sarah slides a paw-hand into the pocket of her jeans, withdrawing a slim audio recorder from it. She presses a button to record, then speaks into the microphone, 'Continuing my observations about the effects of the nanite contagion, I am just examining an affected patient. The subject is a college-age male, Caucasian, of slender build. Secondary sexual characteristics are clearly male, although body hair appears minimal.'";
 		WaitLineBreak;
@@ -1210,12 +1222,11 @@ Idea: Interaction with Alexandra and/or Korvin - the bad girl/boy dogs
 One of them could be all "Yo bitch!" to Sarah, with her getting miffed at Alexandra or being all "What do you want asshole? Can't be anything with sex - in my experience losers with big mouths have the smallest dicks. Or do you need help opening a can of dog food that you're too stupid to get the hang of?"
 ]
 
-
-
 instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is in Grey Abbey Library and FangSarahInteraction is 0 and SarahCured > 3):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
+	project the figure of Sarah_clothed_icon;
 	if debugactive is 1:
 		say "     DEBUG -> SARAH & FANG MEET - FangSarahInteraction: [FangSarahInteraction], HP of Fang: [HP of Fang] <- DEBUG[line break]";
 	if HP of Fang < 3: [Beta Fang]
@@ -1255,12 +1266,14 @@ instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Da
 		say "[SarahDavidScene3]";
 
 to say SarahDavidScene1:
+	project the Figure of David_clothed_icon;
 	say "     As you walk down the stairwell into the bunker, you come upon an interesting scene. Sarah is sitting cross-legged on her bed, reading a book, as the human soldier David walks up to her with a friendly smile on his face. Holding out a hand to her, he says, 'Hey there ma'am. Since I guess we're in the same boat - holed up down here and all that - I wanted to say introduce myself. David Jackson, private first class, US army.' Looking up from her book, Sarah gives him a smile in return and her tail starts wagging. She is already halfway to taking his hand before she suddenly hesitates, pulling her hand-paw back a little. 'Um... are you sure you want to do that? I mean - you're still human and I'm... a dog. Aren't you worried it'll rub off on you? These nanites are pretty easy to transmit from what I've seen.'";
 	say "     David gives a little shrug, then enthusiastically slides her hand into his and shakes Sarah's furred appendage. 'Well, it's only polite to treat you like any other person. My grandma always said you should be friendly when meeting someone - no matter what they look like. Of course she only meant our Latino neighbours, but I think one can apply that to anyone. As for the other thing... haven't had any problems so far, and I've been here a while. Guess eating all your greens does pay off in the end, eh?' The canine medical student is almost blown away by her new friend's very open demeanour, and soon they're sitting side by side on her bed together, happily chatting with one another.";
 	now DavidSarahInteraction is 1;
 	now lastDavidSarahInteraction is turns;
 
 to say SarahDavidScene2:
+	project the Figure of David_clothed_icon;
 	say "     Coming down the stairs to the bunker, you pull open the door leading into its main chamber... and see David sprint past the opening all of a sudden. Stepping into the room, you look after him with a curious expression. Looks like the man has decided to jog a bit, down here in the bunker. The athletic soldier soon reaches the end of the room, slaps the wall lightly and turns around, then sprints back towards you. You hear a friendly, 'Hey there,' as he passes you without stopping, going on with his run till he arrives next to Sarah. The young husky female stands waiting for him, a stopwatch in hand and with a stethoscope around her neck. As you watch, she writes down David's time on a small notepad, then puts her hand on his neck to feel his pulse.";
 	say "     Casually strolling over to the two of them, you ask what's going on, and the somewhat sweaty soldier replies, 'Oh, I'm just helping the doc here with her project.' Sarah's tail wags happily as she hears him say that, but she does raise a finger to clarify, 'I'm not a doctor yet - but I'm getting there, especially if I can figure out why David here has such a high resistance to the nanite infection. Other people seem to transform with the slightest touch, but he's... well, human through and through. And that is after being out on the streets for days and weeks.' She gives her soldier friend a smile and pats his arm - and you notice her hand lingering just a little bit long there, feeling and squeezing his firm bicep.";
 	WaitLineBreak;
@@ -1269,6 +1282,7 @@ to say SarahDavidScene2:
 	now lastDavidSarahInteraction is turns;
 
 to say SarahDavidScene3:
+	project the Figure of David_clothed_icon;
 	say "     Coming down the stairs to the bunker, you spot David and Sarah standing a bit off to the side, in a far corner of the room - with the soldier just in his underwear and standing at attention as Sarah examines him. She strokes gently over the claw-marks marring the left side of his chest and left thigh, her tail stiff in attention. 'How long ago did you say you got wounded here?' the medical student says, puzzlement audible in her voice. David replies and gives a short accounting of the events in the bar, with the captured demon breaking free and then you coming in and saving his ass. Eyebrows raised, Sarah looks at him as if she expects him to correct himself, then glances down at the scars again, tracing them with the tip of a finger.";
 	say "     'There is no way these should be healed this well. Or at all - these slashes here, right over your heart... they're life-threatening. I'm sorry to tell you this, but without medical attention - and I'm talking an ambulance here - you should have bled out in that bar,' the anthro husky tells her friend in a somber tone. David swallows visibly, putting a hand on the healed wounds on his chest - as if to make sure he's not imagining being healthy. 'Hey, calm down. It's alright,' Sarah tells him, lifting the man's head with a finger under his chin so he's looking at her, not himself. 'I've got a theory... You see, you might not actually be resistant or immune to the nanites. It could be that you're just lucky enough to actually have caught a strain that simply wants to... make you whole. You know, not mess with anything else, only heal. Fascinating.'";
 	WaitLineBreak;

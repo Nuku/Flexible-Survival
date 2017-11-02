@@ -198,6 +198,7 @@ to say sexwithAlexandra_bg:
 to say badAlexandrasex:
 	if debugactive is 1:
 		say "[badAlexandra_debug]";
+	project the figure of Alexandra_naked_icon;
 	if lust of Alexandra > 12:
 		say "     You grab Alexandra in your arms and run your hands over the pregnant Doberwoman, making her moan with lust. She pants excitedly [if lastdobiemess is 3 or lastdobiemess is 4 or lastdobiemess is 6 or lastdobiemess is 7 or lastdobiemess is 97 or lastdobiemess is 98]and licks her muzzle for lingering traces of your cum [end if]as you help her squirm out of her jeans and jacket[if lastdobiemess is 1 or lastdobiemess is 2]. The denim, still stained from your last fucking, is damp and musky with the scents of sex and arousal, old and fresh[else if lastdobiemess is 5 or lastdobiemess is 7]. The denim, still stained with her juices, is damp and musky with the scents of sex and arousal, old and fresh[else if lastdobiemess is 97 or lastdobiemess is 98 or lastdobiemess is 99]. The denim, still stained with signs of a recent fucking, is damp and musky with the scents of sex and arousal, old and fresh, canine and lupine[else if lastdobiemess is 6]. Her chest fur, still marked with streaks of your cum, is marked with white on her breasts[end if]. With her heavy with pups, how shall you take your canine bitch this time?";
 	else:

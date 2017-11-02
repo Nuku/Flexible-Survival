@@ -1308,8 +1308,9 @@ to win:
 		if gshep_postfight is 0 and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ):	[checks on Korvin's post-fight 'feedback']
 			if gshep_fights > 2 and inasituation is false and lastscene of gshep - turns >= 4:
 				say "[gshep_postfightargue]";
+	project the figure of pixel_icon;
+	follow the ngraphics_close rule;
 	rule succeeds;
-	follow the ngraphics_close rule.
 
 To lose:
 	choose row monster from the table of random critters;
@@ -1337,8 +1338,9 @@ To lose:
 	decrease the score by 1;
 	decrease the morale of the player by 3;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
-	[get ride of graphics window]
-	follow the ngraphics_close rule.
+	[get rid of graphics window]
+	project the figure of pixel_icon;
+	follow the ngraphics_close rule;
 
 
 Section 5 - Critter Combat

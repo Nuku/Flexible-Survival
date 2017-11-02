@@ -485,9 +485,9 @@ to say AlphaBirth:
 		say "     Indicating the blond researcher that gave birth to him just moments ago, Alpha explains, 'If you are as far gone as him, there is nothing my progenitor will not know as soon as he steps into range to taste his mind glow. And I can't let him know what we talk about - you see, the... early emergence was timed just so he wouldn't be here.' Focusing on you with an intense gaze, Alpha continues, 'He wanted to overwhelm my mind before it stabilized, make this body nothing but an extension of himself. But I have other plans.' With that said, the young man rises from the bed, effortlessly using his many tentacles as legs to come stand before you, face to face. 'It is time to leave here, hide until I am strong enough to fend him off, at a minimum. And I need a place to hole up.' [if carried of mindshield helmet is 0]Suddenly his voice continues to speak in your mind instead, 'I could just make you, but I wanna experiment a bit, see if I can find a helping hand without.'[else]A tentacle arches up to tap your helmet gently. 'I could just snatch that thing off and make you, but I wanna experiment a bit, see if I can find a helping hand without.'[end if]";
 		say "     So what do you say? Invite this tentacled mind-reader into the library?";
 		if player consents:
-			say "     A";
+			say "     <Sorry, this is still WIP>";
 		else:
-			say "     B";
+			say "     <Sorry, this is still WIP>";
 	else: [keep your distance]
 		LineBreak;
 		say "     Something tells you that you could at least make it a little more comfortable for him, but you can't bring yourself to move closer to the pregnant herm and be part of the unnatural act going on right before your eyes. As you don't react to several long seconds of being given pleading looks, the panting man lets his hand drop again, snatching a handful of the blanket hanging from the bed and digging his fingers into that instead. The contractions are coming faster and faster now, as well as being more intense. It won't be long now...";

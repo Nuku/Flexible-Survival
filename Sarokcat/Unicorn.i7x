@@ -33,7 +33,7 @@ When Play begins:
 	now defeated entry is "[Unicorn loss]";
 	now victory entry is "[Unicorn attack]";
 	now desc entry is "Sexy barkeep of DUUUUM.";
-	now face entry is "sexy equine muzzle, with a beautiful spiraling horn which almost seems to catch and reflect the light extending from your forehead above your new unicorn-like";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "sexy equine muzzle, with a beautiful spiraling horn which almost seems to catch and reflect the light extending from your forehead above your new unicorn-like";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "slim and lithe, it is almost the very picture of perfection as you balance easily on your beautiful silvery hooves, their soft chiming noise when you walk seeming to fill the air around you with beauty, even as your dainty hoof tipped hands trace over your soft and lovely new curves";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]Beautiful white furred[or]silvery[or]unicorn furred[or]shimmering white fur[or]short brilliant fur covered[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have an amazing equine tail flicking behind you softly, its beautiful silvery white hair seeming to ripple with a rainbow of reflected colours with every move you make, even as it swishes teasingly behind you.";[ Tail description, write a whole Sentence or leave blank. ]

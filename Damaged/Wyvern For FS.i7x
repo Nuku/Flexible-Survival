@@ -103,7 +103,7 @@ to say WYVATK:
 	if WYVLEV is 0:
 		say "[one of]Again the beast sprays you, slowly building up more and more layers of the goop[or]More of the adhesive, thickening stuff hits you.  You can barely stand as the weight starts to drag you down[or]You are assaulted by a volley of the wyvern's goop[at random].";
 	else:
-		say "The [one of]wyvern[or]massive beast[at random] [one of]slashes at you with it's vicious wing-talons[or]swipes at you with it's impressive tail[or]bites at you with its fierce teeth[or]assaults you with a barrage of its goop[at random]";
+		say "The [one of]wyvern[or]massive beast[at random] [one of]slashes at you with its vicious wing-talons[or]swipes at you with its impressive tail[or]bites at you with its fierce teeth[or]assaults you with a barrage of its goop[at random]";
 
 to say WYVDEF:
 	if WYVLEV is 0:
@@ -460,7 +460,7 @@ to say wyvgen_1: [Anal Pitching]
 	say "     [if scalevalue of player < 5]Given how massive the wyvern is, it takes you a bit of effort to properly position the beast[else]With a little work, you manage to position the wyvern[end if] for your entry, whose exhausted form can only abide your preparations. Rough, chitinous scales obfuscating the hole, you're forced to use a digit to find where it's hiding, your exploration soon rewarded as they eventually part around your appendage to expose soft, supple flesh to your touch.";
 	say "     Your bit of exploration causes the monster to writhe and growl in impotent protest, soon betrayed by [if WYVGEN is 0]his own arousal, his impressive dick beginning to emerge from its housing[else]her own arousal, her unattended hole beginning to ooze sexual fluids[end if]. Ready for you, shall you engage in a bit of foreplay? Else you'll get straight to the point.";
 	if player consents:
-		say "     Exploiting the wyvern's apparent arousal, your attention momentarily moves away from [ghis] ass and to [ghis] dripping, bestial [if WYVGEN is 0]dick, rubbing up along it's length[else]cunt, lightly caressing across its entrance[end if]. Unable to resist your touch, the monster can't help but groan loudly and writhe against the earth, further making an embarrassing mess of [ghim]self. Satisfied with your brief tease, you move onto the more pressing matter.";
+		say "     Exploiting the wyvern's apparent arousal, your attention momentarily moves away from [ghis] ass and to [ghis] dripping, bestial [if WYVGEN is 0]dick, rubbing up along its length[else]cunt, lightly caressing across its entrance[end if]. Unable to resist your touch, the monster can't help but groan loudly and writhe against the earth, further making an embarrassing mess of [ghim]self. Satisfied with your brief tease, you move onto the more pressing matter.";
 		now tempnum2 is 1;
 	else:
 		now tempnum2 is 0;

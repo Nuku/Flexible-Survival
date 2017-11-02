@@ -160,7 +160,7 @@ When Play begins:
 	now defeated entry is "[domdef]";
 	now victory entry is "[domvictory]";
 	now desc entry is "[domdesc]";
-	now face entry is "is that of a wolf's with a pair of pointed wolf ears covered in [skin of player], a metal chain is rapped around your neck ";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "is that of a wolf's with a pair of pointed wolf ears covered in [skin of player], a metal chain is rapped around your neck ";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "that of a muscular wolf's and covered in [skin of player]";
 	now skin entry is "short,[one of]velvety[or]soft[or]shiny[at random]deep black fur";
 	now tail entry is "You have a long wolf's tail.";[ Tail description, write a whole Sentence or leave blank. ]

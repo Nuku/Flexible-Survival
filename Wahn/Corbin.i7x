@@ -65,9 +65,9 @@ to say CorbinDesc:
 
 instead of conversing the Corbin:
 	if HP of Corbin < 4:
-		say "     [one of]'Did anyone tell you yet that I'm the resident cocksucker here?' He gives a resigned shrug and adds 'I'm good at it too - although it sometimes can get a bit annoying when everyone just thinks they can walk up and whip it out at any time. Blow one guy in the barn and suddenly there's a line... good that I like the like the taste.' He winks to you at that last bit.[or]'The farm is a nice place to be, with all that's going on. Not that we don't have our share of problems, but it's a far cry from what I've seen out there...'[at random]";
+		say "     [one of]'Did anyone tell you yet that I'm the resident cocksucker here?' He gives a resigned shrug and adds, 'I'm good at it too - although it sometimes can get a bit annoying when everyone just thinks they can walk up and whip it out at any time. Blow one guy in the barn and suddenly there's a line... good that I like the like the taste.' He winks to you at that last bit.[or]'The farm is a nice place to be, with all that's going on. Not that we don't have our share of problems, but it's a far cry from what I've seen out there...'[at random]";
 	else if HP of Corbin is 4:
-		say "     'Damn, now everyone knows about me. It's just a question of time till they act on that. And I don't think I can resist becoming a total slut - just thinking about it makes me wet.' he says with a disconcerted frown.";
+		say "     'Damn, now everyone knows about me. It's just a question of time till they act on that. And I don't think I can resist becoming a total slut - just thinking about it makes me wet,' he says with a disconcerted frown.";
 	else if HP of Corbin is 5:
 		say "     [one of]'Thanks for helping me against the others, I really appreciate it. Now they know I'm not just a slut to be used when they want.'[or]'The farm is a nice place to be, with all that's going on. Not that we don't have our share of problems, but it's a far cry from what I've seen out there...'[at random]";
 	else if HP of Corbin is 90:

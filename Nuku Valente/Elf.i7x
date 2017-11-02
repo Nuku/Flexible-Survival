@@ -89,7 +89,7 @@ When Play begins:
 	now defeated entry is "[Elf loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Elf attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[Elf description]";[ Description of the creature when you encounter it.]
-	now face entry is "otherwise human-looking, except the set of deep, soul piercing, blue eyes framed in a face that seems somewhat oriental. Your ears are quite long and tapered, inhumanly so.";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "otherwise human-looking, except the set of deep, soul piercing, blue eyes framed in a face that seems somewhat oriental. Your ears are quite long and tapered, inhumanly so.";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "largely slender and agile, with long arms and slim fingers. Your legs are shapely and athletic";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "smooth and flawless";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a large, firm buttocks, waiting to be grabbed.";[ Tail description, write a whole Sentence or leave blank. ]

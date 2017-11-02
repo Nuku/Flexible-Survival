@@ -20,12 +20,10 @@ Instead of resolving a Captured Demon:
 	say "     After waiting some minutes so be sure they're gone, you go back to the window and look in. Now there's only that one soldier in there, looking from the demon to the entrance door and back again. He looks rather nice, slender but muscular and with a handsome face. While you're still wondering if you could perhaps go in and talk to him, the demon brute makes a snorting sound, startling the soldier and you as a slight movement runs through his bound body. Private Jackson raises his weapon and steps closer, poking the demon in the chest to check if he's still unconscious.";
 	say "     ...which is exactly what the brute has been waiting for. With a metallic screech the chains holding him rip apart as he flexes his muscles, then grips the barrel of the rifle and bends it to a right angle. His other hand quickly grabs the young soldier around the throat and stops any attempt to escape.";
 	WaitLineBreak;
-	if graphics is true:
-		project the figure of Brutus_evil_face_icon;
+	project the figure of Brutus_evil_face_icon;
 	say "     Chuckling in a deep gravelly voice, the demon says 'Did you really think it'd be that easy to capture a soldier of the infernal legion? You'll pay for your insolence!' and rips the soldier's uniform off his body. With an evil chuckle, the brutish demon uses his sharp nails to give him some shallow, bleeding scratches, then murmurs something you can't quite make out and there is a short purple flash between them. Carrying his captive to the bar, the creature then bends him over it and gives his ass a hard slap, leaving a reddening hand-print on the pale flesh of the young soldier's right bun. 'If you try running, I'll disembowel you. But feel free to struggle and scream - I like it.' the demon says, then grabs his massive erection and strokes it.";
 	WaitLineBreak;
-	if graphics is true:
-		project the figure of David_face_hurt_icon;
+	project the figure of David_face_hurt_icon;
 	say "     [bold type]Seeing the demon prepare to rape the young soldier, you wonder if you should step in and stop him. The safer option would be to just watch it happen, but can you just leave Private Jackson to his fate?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - What's going on in there isn't your problem. Watch, but don't intervene.";
 	say "     ([link]N[as]n[end link]) - You can't let the beast just violate this poor man. Get in there now!";
@@ -65,8 +63,7 @@ Instead of resolving a Thankful Soldier:
 	if (LastTSEvent - turns < 4):
 		say "     You walk through the alley where you last met David and check the surrounding area - no luck. Seems like your soldier-friend is patrolling or scouting somewhere else right now. Maybe you should try a bit later again...";
 	else:
-		if graphics is true:
-			project the figure of David_clothed_icon;
+		project the figure of David_clothed_icon;
 		if TSEventCounter is 0: [first meeting]
 			say "     Moving through the city, you run into a lone soldier patrolling an alley near a small military encampment. It's Private Jackson, the young soldier you saved from that demon brute in the red light district. He's got a slender but still muscular build and a nice-looking face with a boyish charm.";
 			say "     At first raising his weapon in alarm, he then lowers it again as he recognizes you in turn. 'Hello there. You saved me from that hellish thing in the bar. Thanks a lot for that - sorry I didn't say anything then, but I was pretty groggy after that beating. I'm David, by the way.' He pulls his backpack off and digs around in it for a moment, then turns to you holding three MREs and a water bottle. 'Please accept these as thanks.'";
@@ -290,6 +287,7 @@ Instead of fucking David:
 		if David is in Parade Ground:
 			say "     You walk up to David and tell him you want to 'talk' to him - alone. [if thirst of David < 2]He salutes and leads you to a nearby tent. Soon you're standing between several bunk beds, alone in the tent with the handsome soldier..[else]He gives you a knowing wink and leads you to a nearby tent. Soon you're standing between several bunk beds, alone in the tent with the handsome soldier...[end if]";
 		now sextablerun is 0;
+		project Figure of David_naked_icon;
 		blank out the whole of table of fucking options;
 		[]
 		choose a blank row in table of fucking options;
@@ -414,8 +412,7 @@ Instead of fucking David:
 instead of conversing David:
 	if HP of David < 2:
 		say "     Error! He shouldn't be talking yet - please report on the forum how you saw this.";
-	if graphics is true:
-		project the figure of David_face_icon;
+	project the figure of David_face_icon;
 	if HP of David is 2:
 		say "     David says 'I'm still waiting for my number to come up. Doesn't seem as frightening as before though - maybe it's the strange smell in the air here...'";
 	else if HP of David > 2:
@@ -546,7 +543,7 @@ to say DavidTalk4: [talk about Brutus]
 			say "     Slowly stepping around David, Brutus looks closely at him, lightly touching the scars the other demon left. Then he has the young man raise his right arm, and brushes his clawed fingers over a bit of scar tissue there. 'This is it - the seal. This will make you amplify your fear, almost paralyze you with it, while at the same time craving to serve, being degraded, everything like that. You would follow your master everywhere, even to hell.'";
 			say "     Concentrating, murmuring a chain words that you couldn't even pronounce while holding his hand in place over David, Brutus draws some purple smoke out of the young soldier. It coalesces into a faintly glowing, eye-twisting rune in the air above David's skin. You notice that there seems to be quite a bit of effort involved - judging from the beads of sweat forming on Brutus skin and dripping off the demon's brow. In an earnest tone, he says 'I'm sorry for all the innocents I too bound like this. You, at least, will be free.' then slashes his claws through the glowing symbol.";
 			WaitLineBreak;
-			say "     With a loud crack of power, Brutus is thrown several feet backwards, where he crumples to the ground. The smell of burned flesh rises in the air. For a second of shocked silence, no one moves - not you, and not David, who stands where he was, not affected or hurt at all by what happened. Then both of you rush forward to kneel beside the fallen demon brute. Thankfully, he's okay - mostly. With a groan, Brutus starts moving again and opens his eyes. He lifts his head a bit so he can look at his hand as he raises it with a pained hiss, grunting at the view of blistered, burned skin. 'Mh - it will heal.' he says, his head slumping back as he takes a deep breath.";
+			say "     With a loud crack of power, Brutus is thrown several feet backwards, where he crumples to the ground. The smell of burned flesh rises in the air. For a second of shocked silence, no one moves - not you, and not David, who stands where he was, not affected or hurt at all by what happened. Then both of you rush forward to kneel beside the fallen demon brute. Thankfully, he's okay - mostly. With a groan, Brutus starts moving again and opens his eyes. He lifts his head a bit so he can look at his hand as he raises it with a pained hiss, grunting at the view of blistered, burned skin. 'Mh - it will heal,' he says, his head slumping back as he takes a deep breath.";
 			say "     Next, Brutus eyes focus on David, mostly on his face but wandering down to gaze at the young man's naked body too. 'It is done. You should be free. Do you still fear me, human?' David looks down at the demon's prone form, meeting his eyes for a moment before replying 'No', a thoughtful expression on his face. Brutus lips form what can be called a smile, even if it looks rather frightening with all the teeth it shows. He turns his head to you, not quite suppressing a pained wince as he tries lowering his hand to rest on the ground at the same time. 'Master, may I rest?' Not wanting to see your companion suffer any longer, you immediately intone the magic words to send him back into the amulet.";
 			if companion of player is demon brute:
 				now companion of player is nullpet;
@@ -1027,15 +1024,13 @@ after of going to Parade Ground while HP of David is 1:
 	now HP of David is 2;
 	say "     As you enter Camp Bravo, you see a familiar face standing on the parade ground - it's David Jackson, your handsome Private from out in the city. He's watching the minotaur with a bit of a wide-eyed expression. Moving up to him, you say hello.";
 	LineBreak;
-	if graphics is true:
-		project the figure of David_face_icon;
+	project the figure of David_face_icon;
 	say "     'Hello again. I was told there might be a special agent coming to talk to us, but I never thought it'd be you. You never told me you're with the government...' You apologize, giving him some airy explanation about needed secrecy and gathering unbiased information. Quickly leading over to another topic, you ask him about what he thinks about the Camp.";
 	say "     David points over at the minotaur, saying 'Just look at the thing - it's huge. Almost couldn't believe it when the first group of men came out and it stuck its cock up their asses and fucked them. And the whole story about why we're doing this sounds a bit fishy to me... but orders are orders.' He gives the minotaur another look and rubs his ass. 'I worry a bit that it'll be my turn soon...'";
 
 after of going to Parade Ground while thirst of David is 5 and HP of David is 3:
 	say "     As you step on the parade ground of Camp Bravo, David walks up to you and pulls you aside, saying he has something important to talk to you about. He looks a bit embarrassed about it, hesitating before he says 'Listen, you saved me from minotaur duty, and I like being with you and... you know. I wanted to ask how you see - you and me - us.' He looks at you with an earnest and hopeful expression.";
-	if graphics is true:
-		project the figure of David_face_icon;
+	project the figure of David_face_icon;
 	say "     [bold type]What do you tell him?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - You think there's something more between him and you...";
 	say "     ([link]N[as]n[end link]) - You just see him as a fuck buddy.";
@@ -1105,8 +1100,7 @@ after of going to Bunker while thirst of David is 5 and HP of David is 4:
 	if debugactive is 1:
 		say "     DEBUG: DAVID (THIRST 5) RELATIONSHIP WALKIN[line break]";
 	say "     As you step on the parade ground of Camp Bravo, David walks up to you and pulls you aside, saying he has something important to talk to you about. He looks a bit embarrassed about it, hesitating before he says 'Listen, you saved me from minotaur duty, and I like being with you and... you know. I wanted to ask how you see - you and me - us.' He looks at you with an earnest and hopeful expression.";
-	if graphics is true:
-		project the figure of David_face_icon;
+	project the figure of David_face_icon;
 	say "     [bold type]What do you tell him?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You think there's something more between him and you...";
@@ -1123,8 +1117,7 @@ after of going to Bunker while thirst of David is 5 and HP of David is 4:
 after of going to Bunker while Eric is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 0: [David spots Eric's genitals and wants to talk about them]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERIC (LUST [lust of DAVID]) 1 WALKIN[line break]";
-	if graphics is true:
-		project the figure of David_face_icon;
+	project the figure of David_face_icon;
 	say "     As you enter the bunker, David walks up to you and pulls you to the side, whispering he has something talk to you about. He looks a bit embarrassed about it, and you notice his eyes straying over to where Eric sits on his bunk (reading something with his back to you) before he continues. 'I - I accidentally saw Eric when he changed his clothes. I didn't spy on him or anything, it just happened, and... he's...'";
 	if HP of Eric is 1:
 		say "     '...a woman, down below. I didn't know the infections could do that - change only your gender and nothing else. It must be very strange for him.'";
@@ -1162,8 +1155,7 @@ after of going to Bunker while Eric is in bunker and thirst of David > 5 and HP 
 after of going to Bunker while Erica is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric is 200 and (lust of Erica is 0 or lust of Erica is 50): [David finds out about Erica]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERICA (LUST [lust of DAVID]) 1 WALKIN[line break]";
-	if graphics is true:
-		project the figure of David_face_icon;
+	project the figure of David_face_icon;
 	if lust of Erica is 0:
 		say "     As you enter the bunker, David walks up to you and pulls you to the side, whispering he has something talk to you about. He looks a bit embarrassed about it, and you notice his eyes straying over to where Erica sits on her bunk (reading something with her back to you) before he continues. 'I - I accidentally found Erica's student ID, and it... says she - he - is named Eric and a guy. It was just lying on the ground over there, must have fallen out of his pocket. Just so you know I didn't dig through his stuff, but...' David gets somewhat red-faced as he searches for words, then clears his throat suddenly and brings out, 'He's - she's - really cute, but... is she a transvestite?'";
 		say "     You shake your head and reply that that's not quite it and make some vague mentions of Erica's extraordinary transformations, as compared to the regular stuff going on these days. David looks over to Erica and opens his mouth to ask for specifics, but you put a hand on his arm and shake your head. After all, Erica might not want just anyone to know everything about her, so David will just have to ask her himself if he is curious enough. That explanation seems enough for the young man... for now, but the interested gleam in his eye shows you that it won't be the end of it with him.";
@@ -1207,8 +1199,7 @@ instead of going to Bunker while HP of David is 4 and (libido of David is 57): [
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: DAVID/BRUTUS TRIP INTERACTION[line break]";
-	if graphics is true:
-		project the figure of David_face_icon;
+	project the figure of David_face_icon;
 	say "     As you enter the bunker, David is already waiting for you and waves you over. When you come closer, he says, 'I've been thinking... about Brutus, you know. He's never had a normal life, has he? Just forever as a rampaging beast like that one demon who attacked me.' The young man shudders, rubbing the healed claw-mark on his side as he thinks back to it, then catches himself and continues, 'So - how about we take Brutus out for a nice trip or two, show him what he's been missing. Come on, it'll be good for him and between the three of us, there shouldn't be too much danger in going outside. I bet you know a few nice places to visit. Just talk to me if you wanna go out...'";
 	now libido of David is 58;
 
@@ -1556,7 +1547,7 @@ to say DavidSex3: [player pussy fucked]
 		if thirst of David is 10: [fuck buddy]
 			say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. 'You're an amazing fuck-buddy, you know. I'll miss you after all this is over.'";
 		else if thirst of David is 20: [boy/girlfriend]
-			say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. 'I love having you as my [if cocks of player > 0]boyfriend[else]girlfriend[end if]. You're just amazing.' he says and gives you another deep kiss.";
+			say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. 'I love having you as my [if cocks of player > 0]boyfriend[else]girlfriend[end if]. You're just amazing,' he says and gives you another deep kiss.";
 		else: [worrying about cheating on his girlfriend]
 			say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... I just cheated on Ann - again!'";
 
@@ -1577,7 +1568,7 @@ to say DavidSex4: [player ass fucked]
 	if thirst of David is 10: [fuck buddy]
 		say "     You lay there for a while, with him resting on your back and his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Nice ass, it's really tight' and you feel his manhood twitch inside you once. 'You're an amazing fuck-buddy, you know. I'll miss you after all this is over.'";
 	else if thirst of David is 20: [boy/girlfriend]
-		say "     You lay there for a while, with him resting on your back and his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. 'I love having you as my [if cocks of player > 0]boyfriend[else]girlfriend[end if]. You're just amazing.' he says and slides over to lie beside you, giving you another deep kiss.";
+		say "     You lay there for a while, with him resting on your back and his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. 'I love having you as my [if cocks of player > 0]boyfriend[else]girlfriend[end if]. You're just amazing,' he says and slides over to lie beside you, giving you another deep kiss.";
 	else: [worrying about cheating on his girlfriend]
 		say "     You lay there for a while, with him resting on your back and his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... I just cheated on Ann - again!'";
 
@@ -1730,7 +1721,7 @@ to say DavidSex11: [Brutus & David Threesome (Brutus gets DP'd)]
 	say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the material of his pants you feel his manhood already filling out, as his body reacts to your kiss and touch. As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's urgent moans, he's ready for some action.";
 	say "     Smiling, you whirl David around and wrap your arms around his chest from behind, then move a hand down to his crotch. Sliding it under the band of his pants, you fondle your soldier boy's cock and balls, making him pant and groan in lust some more, then ask him if he'd like to make this a threesome. [if companion of player is demon brute]Following a little nod of your head with his gaze, David's eyes get wide as he sees Brutus standing not too far away, already sporting a massive erection from just watching you fondle David. With a boyish grin, the young soldier tells you 'Sure, let's have some fun together', then waves Brutus closer with an eager expression. [else] Following a little nod of your head with his gaze, David's eyes get wide as he focuses on the demontooth amulet around your neck. He runs a finger along the leather band and over the blackened tooth, then tells you with a boyish grin 'Sure, let's have some fun together.' Smiling at the eagerness of the young soldier, you intone the magic words to summon Brutus, who materializes in his full naked glory moments later. [end if]The three of you end up touching, kissing and undressing each other, which is so much fun that you almost have to force yourself to stop and guide your two friends over to David's bed.";
 	WaitLineBreak;
-	say "     Sliding a hand down Brutus back, you give his left buttcheek an appreciative squeeze, then playfully brush your fingers over his pucker and tell the demon that you want to fuck his ass - together with David. With a pleased rumble, he answers 'Of course, Master', his cock twitching a bit in anticipation. 'Anything for you - and for you too' he says, the last bit directed to David and immediately followed by a deep kiss with the young soldier. Leaning down, Brutus picks David up bodily, then gently lowers him on his bed and climbs on it himself, moving into position on all fours over him. Brutus slides his hips down a bit, then a bit more until he feels David's hard cock against himself. Without any hesitation, he sinks his hole down over the human's erection, groaning in pleasure as it fills his tight hole.";
+	say "     Sliding a hand down Brutus back, you give his left buttcheek an appreciative squeeze, then playfully brush your fingers over his pucker and tell the demon that you want to fuck his ass - together with David. With a pleased rumble, he answers, 'Of course, Master,' his cock twitching a bit in anticipation. 'Anything for you - and for you, too,' he says, the last bit directed to David and immediately followed by a deep kiss with the young soldier. Leaning down, Brutus picks David up bodily, then gently lowers him on his bed and climbs on it himself, moving into position on all fours over him. Brutus slides his hips down a bit, then a bit more until he feels David's hard cock against himself. Without any hesitation, he sinks his hole down over the human's erection, groaning in pleasure as it fills his tight hole.";
 	say "     Watching your infernal companion fuck himself on David's manhood has you spellbound for a moment - such a big creature so eagerly riding a smaller male - until your throbbing erection reminds you to get involved yourself. Stepping up on the bed, you move into position behind Brutus and kneel down, taking hold of the base of his tail to get him to hold still for a moment. Then you line up your cock with his pucker and press in beside David's hard shaft. There is a groan from Brutus as you pop in and force his already stretched pucker to open even wider, though as you hold still for a moment and ask if he's okay, the demon just grunts 'Yes. Just fuck me. Hard. Now!' Obliging the urgent request, you go on and thrust in, stuffing Brutus ass with your cock.";
 	WaitLineBreak;
 	say "     The demon's hole is hot and tight around your [cock of player] manhood and the pulsing and grinding of your friend David's cock against your own only makes it even better[if cock length of player < 6]. When compared to David's nicely long shaft, your own his a bit shorter, but it still adds more to a well-stuffed hole. Brutus pants and moans loudly as his two favorite persons fuck him, really enjoying the full feeling it gives him.[else if cock length of player < 11]. Further adding your [cock length of player] inch shaft alongside David's further stretches an already well-stuffed hole. The two of you are roughly the same length and you vie with him for who can thrust deeper into Brutus. The demon himself just pants and moans loudly as his two favorite persons fuck him, really enjoying the full feeling it gives him.[else]. The addition of your cock, even longer than David's well-sized one, further stretches an already well-stuffed hole. Being the shorter one of you two just animates David to thrust even harder into Brutus ass, while the demon himself just pants and moans loudly as his two favorite persons fuck him, really enjoying the full feeling it gives him.[end if]";

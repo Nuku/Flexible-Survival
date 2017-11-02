@@ -22,6 +22,7 @@ The description of Val is "[ValDesc]".
 The conversation of Val is { "Mew!" }.
 ValPregCounter is a number that varies.
 ValPregnancy is a number that varies.
+The icon of Val is Figure of OrcBreeder_random_icon.
 
 instead of sniffing Val:
 	say "     Val has got an attractive male scent, with a definite undertone of orc cum - no wonder, with how often he gets fucked.";
@@ -153,6 +154,7 @@ Instead of fucking the Val:
 
 to say ValSexMenu:
 	LineBreak;
+	project the Figure of OrcBreeder_random_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

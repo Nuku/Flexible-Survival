@@ -52,6 +52,9 @@ instead of trading the orc brew when the current action involves the Chris:
 			LineBreak;
 			say "     It doesn't take all that much effort to lay his concerns to rest, talking the young orc into taking 'just a sip' - and then another, and another. Before long, he's chugging away the alcoholic beverage like a true orc warrior - which is just what he's becoming right before your eyes. A bit tipsy from his first contact with alcohol, the young man grunts the words, 'Hmm... I want more!', while at the same time his body changes, getting bigger, wider and more muscular. The previously pretty, if masculine, features of his face take on a harder, gruff look, with a square jaw, protruding tusks and thickly pronounced brow. Meanwhile, the flowing black hair that gave Chris much of his handsome aura just disintegrates into a small shower of dust, leaving behind bristly short hair on his head. As all those bodily changes stabilize and set into place, you can almost see the shift of his thought processes in the depth of his eyes, the need and desire to dominate others and turn them into breeders he can pound hard and knock up.";
 			now libido of Chris is 2;
+			now the icon of Chris is Figure of OrcWarrior_random_icon;
+			LineBreak;
+			say "[bold type]You lose 1 orc brew![roman type][line break]";
 			decrease carried of orc brew by 1;
 		else:
 			LineBreak;
@@ -60,6 +63,8 @@ instead of trading the orc brew when the current action involves the Chris:
 		say "     You hand Chris the mug of orc brew, which the young man accepts and looks at with interest. Opening the lid, he sniffs at it, and watches the liquid slosh around in the mug as he shakes it slightly. 'No thanks, I don't think I'd like to drink that. Do you have any delicious orc cum instead?'";
 	else if libido of Chris is 2:
 		say "     Accepting the mug of orc brew from you, Chris hefts the heavy container and carelessly rips the lid off, then quaffs its contents greedily. Spilling at least a third of it, the orc warrior drains the whole tankard, then gives a resounding belch and throws the mug aside. 'Just what I needed. A drink for real men!'";
+		LineBreak;
+		say "[bold type]You lose 1 orc brew![roman type][line break]";
 		decrease carried of orc brew by 1;
 
 instead of trading the orc cum when the current action involves the Chris:
@@ -73,20 +78,29 @@ instead of trading the orc cum when the current action involves the Chris:
 			LineBreak;
 			say "     It doesn't take all that much effort to lay his concerns to rest, talking the young orc into setting the bottle to his lips. A moment later, he's busy drinking down the flavourful orc cum, hungrily swallowing it all. His first taste of orc cum does make him rather tipsy, causing him to slur the words 'Hmm... tasty. I wanna more.' At the same time, a subtle but noticeable change goes through his body - features becoming a bit more rounded and slightly feminine, his body still lithe and muscled, but with wider hips fitting to the child-bearing role of orc breeders. The bulge at the front of his pants gets a bit smaller too, as he won't need that massive a cock in his new fate as a submissive bottom. Further up, the sharp tusks in Chris's mouth shrink in size, becoming rather cute little ones instead. As all those bodily changes stabilize and set into place, you can almost see the shift of his thought processes in the depth of his eyes, the need and desire to get mounted and bred rising to the forefront.";
 			now libido of Chris is 1;
-			decrease carried of Orc Cum by 1;
+			now the icon of Chris is Figure of OrcBreeder_random_icon;
+			LineBreak;
+			say "[bold type]You lose 1 orc cum![roman type][line break]";
+			decrease carried of orc cum by 1;
 		else:
 			LineBreak;
 			say "     Acknowledging that his father didn't want this for Chris, you let him give the bottle back to you and pack it away.";
 	else if libido of Chris is 1:
 		say "     You hand Chris the bottle of orc cum, which the young man accepts and with eager hands, already licking his lips. Immediately taking the cap off, he puts the bottle to his lips and chugs down the light green, thick and creamy liquid, only stopping when it's all gone. 'Hmmm... tasty!' he hums, lightly shaking the bottle to get the last drops out of it. Chris then asks, in the typical manner of an insatiable orc breeder, 'Do you have more?'";
+		LineBreak;
+		say "[bold type]You lose 1 orc cum![roman type][line break]";
 		decrease carried of Orc Cum by 1;
 	else if libido of Chris is 2:
 		say "     Accepting the plastic bottle of orc cum from you, Chris weighs it in his big hand, looking at the light green, thick and creamy liquid within. He screws the cap off and sniffs it, then hands it back to you. 'No thanks, I'd rather have something with some booze in it. A drink for real men!'";
 
 to say ChrisTalkMenu:
 	LineBreak;
-	if libido of Chris is 0 and graphics is true:
+	if libido of Chris is 0:
 		project the figure of Chris_face_icon;
+	else if libido of Chris is 1:
+		project the figure of Orcbreeder_random_icon;
+	else if libido of Chris is 2:
+		project the figure of Orcwarrior_random_icon;
 	say "What do you want to talk with Chris about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -160,6 +174,12 @@ Instead of fucking the Chris:
 		say "     Chris puts a hand on your chest to hold you back and says 'Please, I need a break for a moment, okay?";
 	else:
 		now sextablerun is 0;
+		if libido of Chris is 0:
+			project the figure of Chris_naked_icon;
+		else if libido of Chris is 1:
+			project the figure of Orcbreeder_random_icon;
+		else if libido of Chris is 2:
+			project the figure of Orcwarrior_random_icon;
 		blank out the whole of table of fucking options;
 		[]
 		if cocks of player > 0:
