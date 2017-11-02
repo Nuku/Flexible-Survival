@@ -5,7 +5,7 @@ Version 3 of Random Shemale Smooth Collie For FS by Guest Writers begins here.
 "Adds a Shemale Smooth Collie to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
 when play begins:
-	add { "Shemale Smooth Collie" } to infections of herm;
+	add { "Shemale Smooth Collie" } to infections of hermaphrodite;
 	add { "Shemale Smooth Collie" } to infections of furry;
 	add { "Shemale Smooth Collie" } to infections of Knotlist;
 	add { "Shemale Smooth Collie" } to infections of Caninelist;
