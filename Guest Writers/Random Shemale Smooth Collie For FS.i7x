@@ -4,6 +4,12 @@ Version 3 of Random Shemale Smooth Collie For FS by Guest Writers begins here.
 
 "Adds a Shemale Smooth Collie to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
+when play begins:
+	add { "Shemale Smooth Collie" } to infections of herm;
+	add { "Shemale Smooth Collie" } to infections of furry;
+	add { "Shemale Smooth Collie" } to infections of Knotlist;
+	add { "Shemale Smooth Collie" } to infections of Caninelist;
+
 Section 1 - Monster Responses
 
 colliedefeat is a number that varies.
@@ -174,6 +180,9 @@ to say CollieAnalRide:
 
 
 Section 2 - Monster Insertion
+
+
+
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
