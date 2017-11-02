@@ -88,8 +88,7 @@ AlexandraAmySex is a number that varies.
 CarlAmySex is a number that varies.
 
 instead of conversing the Amy:
-	if graphics is true:
-		project the figure of Amy_face_icon;
+	project the figure of Amy_face_icon;
 	if (HP of Amy is 1): [child-like]
 		say "     Amy says [one of]'This place is soo big. I wouldn't have believed it can exist if you hadn't brought me here.'[or]'You're really nice.'[or]'Woof!'[or]'I like you.'[or]'Some of the books here smell funny.'[at random]";
 	else if HP of Amy is 2 or HP of Amy is 10: [matured]
@@ -1050,8 +1049,7 @@ to say AmyFirstFuck:
 
 to say AmySexMenu:
 	LineBreak;
-	if graphics is true:
-		project the figure of Amy_face_icon;
+	project the figure of Amy_icon;
 	say "     You walk over to Amy, who immediately starts smiling and stroking her breasts as she sees the lust-filled twinkle in your eyes.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

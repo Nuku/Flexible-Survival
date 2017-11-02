@@ -3,7 +3,7 @@ Version 1 of New Graphics by Executaball begins here.
 "Provides functions that link the new window based graphics."
 [New Graphics modifier]
 [The graphics window pixel count is 1. The graphics window position is g-above.]
-The graphics window pixel count is 450. The graphics window position is g-above.
+The graphics window position is g-right. The graphics window pixel count is 450.
 
 [Rule for starting the virtual machine:
 	now the current graphics drawing rule is the bland graphics drawing rule.]
@@ -23,7 +23,7 @@ This is the ngraphics_close rule:
 This is the ngraphics_open rule:
 	if graphics is true and NewGraphics is true:
 		now the graphics window pixel count is 450;
-		[now the graphics window proportion is 30;]
+		[now the graphics window proportion is 20;]
 
 graphicmoding is an action applying to nothing.
 understand "graphics" as graphicmoding.

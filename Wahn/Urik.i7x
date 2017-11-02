@@ -36,8 +36,7 @@ Instead of fucking Urik:
 		say "     Urik says, 'I need a break for a moment [master]. Please...'";
 	else:
 		LineBreak;
-		if graphics is true:
-			project the figure of Urik_face_icon;
+		project the figure of Urik_face_icon;
 		if Urik is in Main Hall:
 			say "     You walk up to Urik and loudly announce that you'll take him now. A number of the other orcs chuckle and laugh at seeing the former orc warrior reduced to this, while others throw you envious looks. The large brute that has become your slave gives a grunt at being called out so openly, then groans in arousal as you slap his bare buttocks affectionately. His cock hardens quickly and starts to bulge out the front of his stripper pants, with the orc admitting grudgingly, 'I need it boss, please.'";
 		else:
@@ -167,8 +166,7 @@ to say UrikSex5: [player fucks Urik]
 
 instead of conversing Urik:
 	LineBreak;
-	if graphics is true:
-		project the figure of Urik_face_icon;
+	project the figure of Urik_naked_icon;
 	say "What do you want to talk with Urik about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -288,6 +286,7 @@ instead of navigating Grey Abbey Library while (Urik is in Grey Abbey 2f and Can
 		say "     ([link]N[as]n[end link]) - Nah, not right now.";
 		if player consents:
 			LineBreak;
+			project the figure of Urik_naked_icon;
 			say "     Following Urik as he walks up the stairs, you face Candy on the way, who keeps smiling happily and making kissy faces at you. Soon, the three of you arrive at Urik's camp, with the orc kicking a few strewn-about possessions of his aside to walk up to the comfy sofa he claimed as his resting place. He pulls Candy off his shoulder and drops him on the cushions, then almost rips off his own loincloth, revealing the thick shaft of his orcish manhood. 'Oh wow, you really are a big boy all over,' Candy comments gleefully and sits up, reaching out to touch Urik's erection. The raccoon strokes it with both hands, prompting a satisfied grunt from Urik at being jerked off. Soon, a glistening drop of pre-cum forms at the tip of the orc's shaft.";
 			say "     'Taste it, slut!' the green-skinned brute groans and puts a hand on Candy's furred head, pushing him closer. The boy-toy obeys without hesitation, sticking his tongue out to lick over Urik's cum-slit. His eyes go wide as he tastes the aphrodisiac-laden pre his dominant partner produces. 'Mmmmhh!' Candy groans in pleasure, his lips immediately enveloping the orc's dickhead and sucking on it some more while he milks the big man's cock. 'That's it little breeder! Amazing stuff, isn't it?!' Urik grunts in a mixture of lust and amusement, shoving Candy's further down on his girthy shaft. He face-fucks the raccoon with little restraint, managing to force quite a bit of his length down the girly-boy's throat as he uses Candy like a living fleshlight.";
 			WaitLineBreak;

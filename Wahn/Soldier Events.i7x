@@ -191,8 +191,7 @@ Instead of resolving a Soldier Squad:
 		say "     Passing through the neighbourhood where you last saw Allen, the newly minted alpha husky and his bitch Davies, you decide to check the building out again. Hopefully someone will still be there...";
 		WaitLineBreak;
 		say "     You make your way through the empty streets as covertly as you can, moving from hiding spot to hiding spot and watching your surroundings closely before you move. And it works - you make your way in the direction of the house unnoticed by anyone or anything ready to pick a fight. Then, as you are still several streets away from your destination and hidden in a very narrow gap between two buildings, you suddenly hear barking and the scrape of canine claws running on asphalt, coming closer quickly. A voice that you recognize as Allen the alpha husky calls out 'Come back, you stupid mutt! You're mine!' Seconds later, an anthro husky in a ragged military uniform enters your field of vision, moving in a dash that slows down just a few steps past your hiding spot as he pants and desperately looks around for a way to escape pursuit.";
-		if graphics is true:
-			project the figure of Carl_clothed_icon;
+		project the figure of Carl_clothed_icon;
 		say "     It's Carl, the man you saw Allen infect the last time you were here. He's panting heavily and looking in just the wrong direction to miss seeing your own good hiding spot, which makes you think that he'll be caught pretty soon. Do you want to take the risk to try to help him out?";
 		if player consents: [help Carl]
 			LineBreak;
