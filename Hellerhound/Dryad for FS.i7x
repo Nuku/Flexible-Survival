@@ -59,7 +59,7 @@ To say dryad attack:
 		say "You watch as she strokes her clit, and stare as it grows into a 6 inch long wooden cock that she begins to stroke. You watch with growing lust and horror as it spasms, and white, thick, reeking spunk sprays all over your [bodydesc of player] body and face. She breathes out in a long sigh, and the tendrils bring you closer as she waits for the changes.";
 		repeat with n running from one to three:
 			infect "Dryad";
-		say "After you finish, she shoves one of her breasts into your face. 'still not had a drink, eh?', she quips as one of the green tendrils twining around her body squeezes the tit, milk spraying into your face and down your throat.";
+		say "After you finish, she shoves one of her breasts into your face. 'Still not had a drink, eh?' she quips as one of the green tendrils twining around her body squeezes the tit, milk spraying into your face and down your throat.";
 		infect "Dryad";
 		say "You collect the cum on you and place it into an empty water bottle. Maybe there is a use for it?";
 		increase carried of dryad cum by 1;

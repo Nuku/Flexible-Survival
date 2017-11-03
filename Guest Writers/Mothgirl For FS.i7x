@@ -13,7 +13,7 @@ Mothdefeat is a number that varies.
 to say Moth attack:
 	now mothgirlnosex is 0;
 	if Mothdefeat is 0: [ first time losing to a moth ]
-		say "     The Mothgirl, grinning at its newfound victim, rubs her hands together, conjuring a mote of light blue dust into her palms before she blows it over your exposed face. Inhaling the dust you feel tipsy and aroused, the girl exploiting your vulnerable state to grind her breasts against your [if breasts of player > 0]own [breast size desc of player] curvature[else][bodydesc of player] torso[end if] before sharing a light kiss on your lips, immediately departing thereafter. She leaves you only with the soft whisper 'enjoy', and as you regain your senses it becomes clear that her ill-meaning affection has had some influence upon you, clouding your mind and leaving you more aroused.";
+		say "     The Mothgirl, grinning at its newfound victim, rubs her hands together, conjuring a mote of light blue dust into her palms before she blows it over your exposed face. Inhaling the dust you feel tipsy and aroused, the girl exploiting your vulnerable state to grind her breasts against your [if breasts of player > 0]own [breast size desc of player] curvature[else][bodydesc of player] torso[end if] before sharing a light kiss on your lips, immediately departing thereafter. She leaves you only with the soft whisper of 'enjoy', and as you regain your senses it becomes clear that her ill-meaning affection has had some influence upon you, clouding your mind and leaving you more aroused.";
 		increase libido of player by 5;
 		decrease humanity of player by 3;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;

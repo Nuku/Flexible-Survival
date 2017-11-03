@@ -40,7 +40,7 @@ Instead of Resolving a Hyper Squirrel Girl:
 			say "You find a good spot to hide, and as she tries to locate you, she walks right past your hiding spot. You dive at her, pinning her to the ground... where she giggles again. 'That was fun! It's been far too long since someone's played with me.' Before you can ask her what she means, in the blink of an eye, she's out of your grasp, in front of you.[line break][line break]You get up, in a sitting position, and ask how she became a squirrel. 'Well,' she begins, 'I was on my way to classes, when two squirrel herms that looked kinda like I do now appeared... Anyway, one pinned me down, while the other forced me to suck her off...' Her eyes glaze over as her erection, ever present, seems to grow another inch, forcing her pants ever-tighter. She rubs you with her breasts, arousal showing on your own parts.";
 			increase libido of player by 10;
 			if libido of player < 50:
-				say "'You are cute and all', she says, sighing, 'But I get the feeling you wouldn't keep up with me. Learn to be half as hungry as I am and we can talk, ok?' She rises up and leans over, kissing your forehead before she departs with a wink.";
+				say "'You are cute and all,' she says, sighing, 'But I get the feeling you wouldn't keep up with me. Learn to be half as hungry as I am and we can talk, ok?' She rises up and leans over, kissing your forehead before she departs with a wink.";
 				stop the action;
 			say "She sits and talks with you for a short time, explaining who she is, 'I'm Snow. I was a nice normal student before it all went down... Could be worse though. Most of the varmints around here are pretty braindead if you know what I mean. The huskies are kind of fun, but banging pure sluts gets old. Say, you seem like you have something between your ears.' She reaches and rubs the top of your head lightly, 'What say I come with you? I promise to not leave the toilet up and clean up after myself. It will be fun!";
 			say "Do you permit her to come?";
@@ -60,7 +60,7 @@ Instead of Resolving a Hyper Squirrel Girl:
 				else:
 					say "'Well fine, play that way. I need a bigger chest. You want me, find me, and bring the goods,' she says, vanishing back into the city.";
 			else:
-				say "'Well shoot then, I can do just fine on my own', she insists, and is gone in a trail of hyperactivity.";
+				say "'Well shoot then, I can do just fine on my own,' she insists, and is gone in a trail of hyperactivity.";
 				now hyper squirrel girl is resolved;
 		else:
 			say "You think she won`t be able to find you here, in this dark corridor. You hear her footsteps echoing ever-closer, when they fall silent. Suddenly, she appears behind you, lightly tapping your back. As you curse in surprise, she laughs at your feeble attempt to grab her. 'Too slow again! Come on, catch me...' You follow her giggles outside, as she turns a corner, and vanishes.";

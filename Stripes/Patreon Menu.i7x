@@ -201,7 +201,7 @@ name	desc	weight	object
 "hard hat"	"A yellow construction hard hat you've found to help protect your noggin."	2	hard hat
 
 [Dildo Club]
-dildo club is an armament. It is part of the player. It has a weapon "[one of]your phallic club[or]your purple latex club[or]your dildo club with a resounding 'Wubba-!Wubba-Wubba-Thwack!' sound[or]the three-foot purple schlong[or]the floppy dildo club[or]your oversized dildo[at random]". The weapon damage of dildo club is 6. The weapon type of dildo club is "Melee". It is not temporary. the objsize of dildo club is 4.
+dildo club is an armament. It is part of the player. It has a weapon "[one of]your phallic club[or]your purple latex club[or]your dildo club with a resounding 'Wubba-Wubba-Wubba-Thwack!' sound[or]the three-foot purple schlong[or]the floppy dildo club[or]your oversized dildo[at random]". The weapon damage of dildo club is 6. The weapon type of dildo club is "Melee". It is not temporary. the objsize of dildo club is 4.
 
 the scent of the dildo club is "The sex toy club smells of latex and your humiliated foes."
 

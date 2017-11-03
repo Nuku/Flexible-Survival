@@ -11,7 +11,7 @@ Roman by Kernog begins here.
 romanPeeped is a number that varies.
 romanEncouraged is a number that varies.
 
-Team Captain Roman is a man. Understand "Roman" as Team Captain Roman. 
+Team Captain Roman is a man. Understand "Roman" as Team Captain Roman.
 
 The description of Team Captain Roman is "[RomanDesc]";
 
@@ -159,7 +159,7 @@ to say RomanTalk2:
 
 to say RomanTalk3:
 	say "      You sadistically ask Roman how he is doing. Roman recognizes your voice, and tilts his head to look at you. His broken stare slowly turns into hate. 'Whm? Whm... Mhm hhmm muuuh!' It seems Roman does not appreciate his current treatement. Then again, he should not have been so careless about his secret, didn't he?";
-	
+
 to say RomanTalk4:
 	say "      'Hey, if it isn't my best friend! Come here for a hug, buddy! [one of]You should show me your place, one of these days.[or]We should hang around, one of these days.[or]As you can see, I lost the bottom. The cotton was always tickling me, anyway![at random]'";
 
@@ -170,9 +170,9 @@ to say JoiningTheTeam:
 		now GorillasMemberQuestCounter is turns;
 	else if GorillasMemberQuestCounter - turns <= 8:
 		say "     'Yeah, I remember, don't worry,' Roman replies. 'We are not ready yet. Come back later.'";
-	else :
+	else:
 		say "[FootballTryouts]";
-		
+
 [TryoutScore is in Tenvale Gorillas Football Team extension]
 to say FootballTryoutsResults:
 	say "     'Just in time. I was just done with the results.' The team captain shouts some instructions to the unruly throng of football players all around, sending some of them to train on the field while cheering on those who're currently involved in a gangbang on near the door to the locker-room. After calling out, 'I'll be over in a moment, hold me a place in the line to fuck her!' he walks over and turns his attention to you. 'Okay. Let's see...'";

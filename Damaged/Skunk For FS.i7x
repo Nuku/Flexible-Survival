@@ -171,7 +171,7 @@ When Play begins:
 	now victory entry is "[skunk_vict]";
 	now desc entry is "[skunk_desc]";[ Description of the creature when you encounter it.]
 	now face entry is "that of a large-muzzled female skunk's";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "curvaceous and screams 'female and needs IT', men want to fuck you women want to be you... and fuck you";[ Body Description, format as the text "Your Body is (your text)."]
+	now body entry is "curvaceous and screams 'female and NEEDS it'. Men want to fuck you, women want to be you... and fuck you";[ Body Description, format as the text "Your Body is (your text)."]
 	now skin entry is "[if looknow is 1]dark black fur contrasting with pure white down your front and a matching stripe down your back, completely covering your[else]black and white furred[end if]";[ skin Description, format as the text "You have (your text) skin."]
 	now tail entry is "A thick, black mass of fur blossoms from your rear, growing in size until it's reached just above your head and then bending gracefully near the tip.  A pair of white stripes travel up its length, completing the effect.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human shaped";[- Cock Description, format as you have a "size" (your text) cock-]
