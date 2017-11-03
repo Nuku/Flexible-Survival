@@ -1623,7 +1623,7 @@ To say appropriate spacing for (N - a number):
 
 
 Chapter - Graphlink preview
-[This would be better implemented as a debugging command, perhaps, but is presented as a use option for performance reasons. With a use option, we can use an #ifdef block to define the debugging behavior;  in other words, when the use option is not in use, no code at all related to it is compiled into the game, and thus no need to waste time checking a conditional.]
+[This would be better implemented as a debugging command, perhaps, but is presented as a use option for performance reasons. With a use option, we can use an #ifdef block to define the debugging behavior; in other words, when the use option is not in use, no code at all related to it is compiled into the game, and thus no need to waste time checking a conditional.]
 
 Use image-map graphlink preview translates as (- Constant Glimmr_GRAPHLINK_PREVIEW; -).
 

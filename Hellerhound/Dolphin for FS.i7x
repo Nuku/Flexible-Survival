@@ -54,7 +54,7 @@ To say dolphin loss:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "[bold type] AND closer[roman type]";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			say "She then whips her body up, and sprays you with a different bunch of clicks, totally stunning your body. 'Now it is my turn to play with you...' She mutters.";
+			say "She then whips her body up, and sprays you with a different bunch of clicks, totally stunning your body. 'Now it is my turn to play with you...' she mutters.";
 			say "[dolphin fuck]";
 		else:
 			say "You decide against exploiting this opportunity, leaving the creature as she is.";

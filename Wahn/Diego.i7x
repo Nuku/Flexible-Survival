@@ -261,7 +261,7 @@ Check Diegotricking:
 	If Diego is not visible, say "Who?" instead;
 
 carry out Diegotricking:
-	if DiegoChanged > 0 :
+	if DiegoChanged > 0:
 		project the figure of DiegoFem_face_icon;
 	else:
 		project the figure of Diego_face_icon;

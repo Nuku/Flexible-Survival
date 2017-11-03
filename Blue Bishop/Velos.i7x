@@ -294,7 +294,7 @@ Part 2 - Candy
 the vmusings of Candy is "[candymusing]";
 
 to say candymusing:
-	say "     'I'm not sure why you're so tense like that, hon', maybe you should--Oh geez!' Candy bounces backwards at the sight of Velos emerging from your behind.";
+	say "     'I'm not sure why you're so tense like that, hon. Maybe you should--Oh geez!' Candy bounces backwards at the sight of Velos emerging from your behind.";
 	say "     '...Surprise!'  The serpent seems to revel in the raccoon's shock, who is relegated into cowering in his presence.  He does eventually calm down, and rather sheepishly moves closer when it becomes clear that he's not about to get attacked.";
 	say "     'That would explain the bulge.  I just assumed you were pregnant, or something.'";
 	say "     'Who's to say I'm not your child?  Hello, father!'  Candy regards this joke with a slight scowl.";
@@ -306,7 +306,7 @@ to say candymusing:
 	say "     'Don't worry about it then,' the serpent states, slipping back towards you and curving into an S-shape.  'I generally don't like company and one look at you suggests I'd get that in spades.'";
 	say "     'Oh, you!' Candy giggles, seeming rather amused by this jab, picking up on Velos's sardonic inflection, by now a fair bit more at ease with his presence.";
 	say "     'You're a nice kid. Try to stay out of trouble.'";
-	say "     'I'd say the same to you, hon', but I doubt you could, with that mouth of yours.'  This is enough to elicit a slight chuckle from Velos, and he decides to conclude the conversation at that, letting you return to your own matters.";
+	say "     'I'd say the same to you, hon, but I doubt you could, with that mouth of yours.'  This is enough to elicit a slight chuckle from Velos, and he decides to conclude the conversation at that, letting you return to your own matters.";
 
 
 Part 3 - Dr Moffatt
