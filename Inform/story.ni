@@ -5455,6 +5455,7 @@ Include Finn by Wahn.
 Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
 Include Garrett by Stripes.
+Include Gerty by Qazarar.
 Include Gordon by Rikaeus.
 Include G-Shep Squad by Rikaeus.
 Include Gwen by Stripes.
@@ -5476,6 +5477,7 @@ Include Joanna by Stripes.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Kristen by Stripes.
+Include Kyle by Qazarar.
 Include Kyrverth by Speedlover.
 Include Lance by Verath.
 Include Larissa for FS by Stripes.
