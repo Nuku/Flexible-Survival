@@ -43,7 +43,7 @@ Include New Graphics by Executaball.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 62.
+The release number is 63.
 The story creation year is 2010.
 The maximum score is 2500.
 
