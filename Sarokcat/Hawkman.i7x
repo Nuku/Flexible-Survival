@@ -79,7 +79,7 @@ When Play begins:
 	now defeated entry is "[Hawkman loss]";
 	now victory entry is "[Hawkman attack]";
 	now desc entry is "[hawkmandesc]";
-	now face entry is "narrow hawk-like head, with a sharp curved raptor-like beak and two sharp piercing hawk-like eyes in your new avian";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "narrow hawk-like head, with a sharp curved raptor-like beak and two sharp piercing hawk-like eyes in your new avian";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "lithe and slim, with powerful taloned feet and rather claw-like taloned hands, your avian body sports two large, powerful wings, which catch the air behind you and make you almost feel like you could fly";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]soft feathered[or]brown feathered[or]hawk-like[or]feathered[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a rather large tail made of feathers folded neatly behind you, its patterned feathers seeming to shine and shimmer as it flexes and spreads out with every step you take.";[ Tail description, write a whole Sentence or leave blank. ]

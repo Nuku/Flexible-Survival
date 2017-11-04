@@ -13,7 +13,7 @@ Mothdefeat is a number that varies.
 to say Moth attack:
 	now mothgirlnosex is 0;
 	if Mothdefeat is 0: [ first time losing to a moth ]
-		say "     The Mothgirl, grinning at its newfound victim, rubs her hands together, conjuring a mote of light blue dust into her palms before she blows it over your exposed face. Inhaling the dust you feel tipsy and aroused, the girl exploiting your vulnerable state to grind her breasts against your [if breasts of player > 0]own [breast size desc of player] curvature[else][bodydesc of player] torso[end if] before sharing a light kiss on your lips, immediately departing thereafter. She leaves you only with the soft whisper 'enjoy', and as you regain your senses it becomes clear that her ill-meaning affection has had some influence upon you, clouding your mind and leaving you more aroused.";
+		say "     The Mothgirl, grinning at its newfound victim, rubs her hands together, conjuring a mote of light blue dust into her palms before she blows it over your exposed face. Inhaling the dust you feel tipsy and aroused, the girl exploiting your vulnerable state to grind her breasts against your [if breasts of player > 0]own [breast size desc of player] curvature[else][bodydesc of player] torso[end if] before sharing a light kiss on your lips, immediately departing thereafter. She leaves you only with the soft whisper of 'enjoy', and as you regain your senses it becomes clear that her ill-meaning affection has had some influence upon you, clouding your mind and leaving you more aroused.";
 		increase libido of player by 5;
 		decrease humanity of player by 3;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
@@ -78,7 +78,7 @@ When Play begins:
 	now defeated entry is "The mothgirl slumps onto the ground with a sigh and tries to protect herself with her fragile wings."; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Moth attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 4]     In your travels, you are suddenly accosted by a diminutive girl adorned in only a pair of moth wings and similarly moth-like fur around her neck. [one of]Blue[or]Grey[or]Hazel[or]Green[or]Lavender[or]Brown[at random] eyes agleam like jewels, the grey-skinned creature advances upon you, intent on attacking you, though you imagine she'd be a bit more intimidating if she wasn't stark naked.";[ Description of the creature when you encounter it.]
-	now face entry is "feminine visage looking with bright eyes";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "feminine visage looking with bright eyes";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "has been reduced down to about 5 feet tall and has a light, curvy form. You have moth that, wings with each flap, leave a trail of small dust behind you";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "glimmering grey";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]

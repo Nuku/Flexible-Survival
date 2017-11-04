@@ -142,7 +142,7 @@ When Play begins:
 	now defeated entry is "[Satyress loses]";
 	now victory entry is "[Satyress wins]";
 	now desc entry is "[SatyressDesc]";
-	now face entry is "beautiful, mostly human-like face, though with small goat horns sticking up from your forehead. The lusty look filling your eyes shows it to truly be a satyress's";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "beautiful, mostly human-like face, though with small goat horns sticking up from your forehead. The lusty look filling your eyes shows it to truly be a satyress's";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "short, lithe and pretty flexible. Your upper body is that of a young woman, maybe a gymnast, while your lower body rests on two slender goat-like legs, your nimble goat hooves ringing off the floor with every step";
 	now skin entry is "[one of]goat furred[or]smooth[or]pale[at random]"; [ format as the text "You have (your text) skin"]
 	now tail entry is "You have a short, stubby goat tail positioned behind you, seeming to move jauntily with every step you take.";[ write a whole Sentence or leave blank. ]

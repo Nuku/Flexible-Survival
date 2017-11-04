@@ -303,9 +303,9 @@ to say OrcFemVictorious:
 		if bodyname of player is "Orc Breeder" and facename of player is "Orc Breeder" and skinname of player is "Orc Breeder":
 			say "     'Did you lose your master, little breeder?' the female orc says in a gruff voice as you surrender. Then she grasps your chin and bends your head left and right, inspecting you with a snort. 'Well, you won't find a thick green prick here either, that's for sure! But I think I'll have fun with you nonetheless.' ";
 		else if bodyname of player is "Orc Warrior" and facename of player is "Orc Warrior" and skinname of player is "Orc Warrior":
-			say "     'Pathetic,' snorts as she steps up to you, giving you a shove. 'I'm three times the orc you are and still those bastards call me a 'dick-less freak'! Pah, who needs them! As for you - if you got the temperament of a breeder, then I'll just use you as one!' ";
+			say "     'Pathetic,' snorts as she steps up to you, giving you a shove. 'I'm three times the orc you are and still those bastards call me a [']dick-less freak[']! Pah, who needs them! As for you - if you got the temperament of a breeder, then I'll just use you as one!' ";
 		else:
-			say "     'Weakling. I'm surprised you even made it far enough to stumble into my camp', the female orc says in a gruff voice as you surrender. Then she grasps your chin and bends your head left and right, inspecting you with a snort. 'Better leave the fighting to those made for it. I'll show you your place.' ";
+			say "     'Weakling. I'm surprised you even made it far enough to stumble into my camp,' the female orc says in a gruff voice as you surrender. Then she grasps your chin and bends your head left and right, inspecting you with a snort. 'Better leave the fighting to those made for it. I'll show you your place.' ";
 		say "With that said, Katya pushes you further and further backwards, then hooks a foot behind yours and gives a hard shove. You fall only a short distance before her other hand slid under your back slows your descent, softening the impact so you land relatively softly on her sleeping bag, stretched out on your back. The green-skinned woman stands over you and looks down with a lusty grin after that.";
 		say "     Katya's hands move to her hips and start undoing her loincloth, loosening the knots that secure the ragged fabric. Within moments the fabric falls away and is casually thrown aside to reveal her glistening nether lips. Clearly, she got worked up and in the mood by assuming dominance over you.";
 	else:  [player beaten]
@@ -607,7 +607,7 @@ to say KatyaResistanceMessage:
 	else if KatyaResistance is 3 or KatyaResistance is 2: [lost 3/4 times]
 		say "'You just won't leave me alone, will you?!' she growls, her face marked by annoyance. The orc takes on a more defensive posture overall this time, no doubt remembering all of the times you whupped her ass before.";
 	else if KatyaResistance is 1: [lost 5 or more times]
-		say "'You know, I am SICK AND TIRED of this bullshit!', she growls, baring her sharp tusks to you. 'Coming into my camp no matter what I do, wanting to kick my ass and satisfy yourself. So FINE. Let's settle this once and for all. If you beat me this time, I'll give in - become your slut to fuck when you feel like it.'";
+		say "'You know, I am SICK AND TIRED of this bullshit!' she growls, baring her sharp tusks to you. 'Coming into my camp no matter what I do, wanting to kick my ass and satisfy yourself. So FINE. Let's settle this once and for all. If you beat me this time, I'll give in - become your slut to fuck when you feel like it.'";
 
 to say KatyaFriendshipPath:
 	if HP of Katya is 0: [second visit]

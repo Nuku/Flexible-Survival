@@ -13,7 +13,7 @@ use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 200000. [ Code 10 ]
-use SYMBOLS_CHUNK_SIZE of 26000. [ Code 10 ]
+use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 2000.
 use MAX_ACTIONS of 2000.
@@ -43,7 +43,7 @@ Include New Graphics by Executaball.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 62.
+The release number is 63.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -51,20 +51,22 @@ Section Help Menu
 
 Table of Basic Help Options (continued)
 title	description
-"Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://blog.flexiblesurvival.com/"
-"Hunting"	"You can hunt for specific creatures. Go to a place you can explore from, like the library.[line break][line break]You there? Ok, now type [bold type]hunt (creature)[roman type].[line break][line break]You are not assured success, but a critter is 3 times more likely to show up when actively looked for.[line break][line break]You can also hunt for locations, if you know their name."
+"Getting Started"	"Welcome to Flexible Survival! To get started with playing there are a few commands you need to know. [line break] In order to move around, you can use the compass directions (north, south, east, west, etc), move 'in' and 'out' of buildings, and 'nav' or 'navigate' between areas. [line break]  You can 'explore' the world to find events, monsters, and new areas, or 'hunt' for something specific. [line break] To interact with things around you, you can 'look', 'get', 'smell', 'fuck', 'talk' to, or 'drop' items. If you do pick things up, you can access you inventory with 'inv'.[line break]If you find yourself running low on food or water, you may need to 'scavenge' around the city."
+"Hunting"	"You can hunt for specific creatures. Go to a place you can explore from, like the library.[line break]You there? Ok, now type [bold type]hunt (creature)[roman type].[line break]You are not assured success, but a critter is 3 times more likely to show up when actively looked for.[line break]You can also hunt for locations, if you know their name.[line break] Hunting for something doesnt require that you use the entire name, and can sometimes have multiple results, for example 'hunt dragon' in the park would hunt for both yamato dragon and yamato dragoness, but 'hunt dragoness' would only hunt for the yamato dragoness."
 "Trading"	"You can trade with certain denizens of the city. Simple [bold type]give x to y[roman type], like give soda to bob. If they want it, they'll give you something back for it. Trades are final, but usually worth it."
 "Scoring"	"Staying alive, making friends, and unearthing the mysteries of the city get you points. Losing battles saps points. See how high a score you can manage!"
-"Items"	"You will come to have a variety of items. Here are some useful commands.[line break][line break]Item: See a list of items you own.[line break]look (item): Look at a specific item.[line break]use (item): Use an item[line break]get (item): grab a specific item.[line break]get all: get everything in the room.[line break]junk (item): destroy an item forever."
+"Items"	"You will come to have a variety of items. Here are some useful commands.[line break][line break]Item: See a list of items you own.[line break]look (item): Look at a specific item.[line break]use (item): Use an item[line break]get (item): grab a specific item.[line break]get all: get everything in the room.[line break]junk (item): destroy an item forever.[line break]drop (item): drop the item on the floor, so you can pick it up later."
 "Weapons"	"Some items you find make good weapons! Be sure to [bold type]use (weapon)[roman type] before a battle to have them at hand."
 "Graphics"	"Graphics can be enabled or disabled by typing [bold type]graphics[roman type]."
 "Scavenging"	"Type [bold type]scavenge[roman type] in any room you can fast travel from to hunt for food and water."
-"Socializing"	"You can [bold type]talk (person)[roman type] to chat it up. If they are of more personal interest with you, you can also [bold type]fuck (person)[roman type]"
-"Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early."
+"Socializing"	"You can [bold type]talk (person)[roman type] to chat. If they are of more personal interest with you, you can also [bold type]fuck (person)[roman type]"
+"Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early. Alternatively you can [bold type]give in[roman type] to the infection."
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
 "Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]Waits Off[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]Waits On[roman type] to return to the default."
 "Clear Less"	"Don't like the page clearing of text?  Want the combat interface at the bottom of the screen?  Type [bold type]Clears Off[roman type] to stop screen clearing.[line break]Don't like the change and want to go back?  Type [bold type]Clears On[roman type] to return to the default."
 "Auto Attack"	"If you have the [']Instinctive Combat['] feat you can use different automatic attacks.  These are the same as picking the same option over and over again during combat.  No different results, just less typing for faster gameplay.[line break]Type [bold type]auto attack normal[roman type] for the default method of combat (choose each action).[line break]Type [bold type]auto attack berserk[roman type] to always attack in combat.[line break]Type [bold type]auto attack pass[roman type] to always pass in combat.[line break]Type [bold type]auto attack coward[roman type] to always flee in combat.[line break]Type [bold type]auto attack submit[roman type] to always submit in combat."
+"Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://blog.flexiblesurvival.com/ ."
+"Further Help"	"For further help and information, check out the wiki at: http://wiki.flexiblesurvival.com/w/Main_Page or join the Discord at: https://discord.gg/b54Mbkb ."
 "Patron Credits"	"[patroncredits]"
 
 To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to better fit this game, without changing that extension, as it may be used by other games]
@@ -2382,16 +2384,14 @@ To ClearMoreFunction:
 	now clearnomore is 0; [returns clearing to normal]
 	say "Screen clearing occurs frequently.";
 
-[Section Color
-
-Include Glulx Text Effects by Emily Short.
+Section Color
 
 To say special-style-1: [name can be changed if desired, just adjust calls to it as well]
-	(- glk_set_style(style_User1); -)
+	say first custom style;
 
 To say special-style-2: [name can be changed if desired, just adjust calls to it as well]
-	(- glk_set_style(style_User2); -)
-
+	say second custom style;
+[
 To say alert-style: [already used for end game text]
 	(- glk_set_style(style_Alert); -)
 
@@ -2406,9 +2406,14 @@ To say blockquote-style:
 
 To say input-style:
 	(- glk_set_style(style_Input); -)
+]
 
-[
-Table of Common Color Values [(continued)]
+Table of User Styles (continued)
+style name (a special-style)	justification (a text-justification)	obliquity (an obliquity)	indentation (a number)	first-line indentation (a number)	boldness (a boldness)	fixed width (a fixity)	relative size (a number)	glulx color (a glulx color value)
+special-style-1	--	--	--	--	bold-weight	--	1	g-dark-green
+special-style-2	--	--	--	--	bold-weight	--	1	g-medium-red
+
+Table of Common Color Values (continued)
 glulx color value	assigned number
 g-pure-blue	255		[== $0000FF]
 g-bright-cyan	39423		[== $0099FF]
@@ -2422,9 +2427,7 @@ g-pure-yellow	16776960		[== $FFFF00]
 g-pure-magenta	16711935		[== $FF00FF]
 g-pure-red	16711680		[== $FF0000]
 [names can be changed if desired, also need to change matching name in table below.  choose color in hex, then convert to decimal for assigned number.]
-]
 
-Table of User Styles (continued)
 [
 style name	justification	obliquity	indentation	first-line indentation	boldness	fixed width	relative size	glulx color
 special-style-1	--	--	--	--	bold-weight	--	1	g-dark-green
@@ -2442,12 +2445,7 @@ bold-style	--	--	--	--	--	--	--	--[allows redefining of bold style]
 [alert, header, and note are used for a few game functions.  if you wanted to change those you could]
 [italics and bold are currently in a variety of places.  just a few italics, but bold is all over the place.  be aware if you choose to change them]
 ]
-style name (a glulx text style)	background color (a text)	color (a text)	first line indentation (a number)	fixed width (a truth state)	font weight (a font weight)	indentation (a number)	italic (a truth state)	justification (a text justification)	relative size (a number)	reversed (a truth state)
-special-style-1	--	"#00CC00"	--	--	bold-weight	--	--	--	--	--
-special-style-2	--	"#CC0000"	--	--	bold-weight	--	--	--	--	--
 
-
-]
 Part 3 - Item Code
 
 Understand the command "get" as something new.
@@ -5067,6 +5065,7 @@ Include Extra Added Scenes by Kaleem mcintyre.
 Include Extra College Events by Speedlover.
 Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
+Include Female Dorm Events by Prometheus.
 Include Fire House by Kaleem Mcintyre.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
@@ -5104,7 +5103,7 @@ Include Murder Mystery by Rikaeus.
 Include Museum Events by Sarokcat.
 Include Museum Rounds for FS by Stripes.
 Include New Events by Sarokcat.
-Include Odd Weapons for FS by Hellerhound.
+Include Odd Weapons by Hellerhound.
 Include Old BoomBox by Kaleem mcintyre.
 Include Park Events by Sarokcat.
 Include Patreon Menu by Stripes.
@@ -5189,7 +5188,7 @@ Include Cum Girl by AGentlemanCalledB.
 Include Cute Chinchilla Girl For FS by Guest Writers.
 Include Dalmatian by Kaleem mcintyre.
 Include Dark Elf for FS by Stripes.
-Include Demon Brute For Fs by Wahn.
+Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
 Include Doberman for FS by Stripes.
 Include Dolphin for FS by Hellerhound.
@@ -5205,7 +5204,7 @@ Include Ebonflame Draken by Blue Bishop.
 Include Ebonflame Whelp by Blue Bishop.
 Include Elf by Nuku Valente.
 Include Elk for FS by Stripes.
-Include Elven Hunter For Fs by Wahn.
+Include Elven Hunter by Wahn.
 Include Enhanced Chimera by Stripes.
 Include Equine for FS by Nuku Valente.
 Include Erica by Wahn.
@@ -5278,6 +5277,7 @@ Include Kangaroo by Guest Writers.
 Include Killer Whale For Fs by Stripes.
 Include Knight for FS by Stripes.
 Include Koballoon by Stripes.
+Include Kobold Gang by Closerhenry.
 Include Komodo Dragon for FS by Stripes.
 Include Latex Ermine for FS by Stripes.
 Include Latex Fox by Nuku Valente.
@@ -5455,6 +5455,7 @@ Include Finn by Wahn.
 Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
 Include Garrett by Stripes.
+Include Gerty by Qazarar.
 Include Gordon by Rikaeus.
 Include G-Shep Squad by Rikaeus.
 Include Gwen by Stripes.
@@ -5464,6 +5465,7 @@ Include Hayato by Stripes.
 Include HornyHorsey by femtoAmpere.
 Include Hungry Boar Man by Closerhenry.
 Include Hyper Squirrel by Nuku Valente.
+Include HypnoGeeks by Wasp.
 Include Icarus by Stripes.
 Include Ice Fox by Wahn.
 Include Inflatable Orca by Song.
@@ -5475,6 +5477,7 @@ Include Joanna by Stripes.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Kristen by Stripes.
+Include Kyle by Qazarar.
 Include Kyrverth by Speedlover.
 Include Lance by Verath.
 Include Larissa for FS by Stripes.
@@ -5522,7 +5525,7 @@ Include Stella by Stripes.
 Include Stewart by Rikaeus.
 Include Stuck Dragon by Stripes.
 Include Sven by Stripes.
-Include Sylvia by Prometheus. [WIP]
+Include Sylvia by Prometheus. 
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
 Include Tenvale Gorillas Football Team by Kernog.

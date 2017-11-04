@@ -86,7 +86,7 @@ When Play begins:
 	now defeated entry is "[beatthemegakitty]";
 	now victory entry is "[losetomegakitty]";
 	now desc entry is "[megakittydesc]";
-	now face entry is "a small feline head with large feline eyes and small pointed feline ears."; [ Face description, format as the text "You have a (your text) face."]
+	now face entry is "a small feline head with large feline eyes and small pointed feline ears."; [ Face description, format as the text "Your face is (your text)."]
 	now body entry is "quite large and VERY elastic in the belly, allowing you to move freely despite your size. Your body feels quite stretchable, and almost eager to take something large and filling inside you. Your arms are motherly feline arms with human-style hands featuring retractable claws. Your legs are plantigrade legs with plenty of jiggle and firmly toned muscles. They end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads";
 	now skin entry is "a lovely, spotted patterned coat of fur over your";
 	now tail entry is "You have very wide hips and a very full, plump behind. It's completed by a thick and leg-length feline tail covered in golden brown fur with black markings.";

@@ -132,7 +132,7 @@ to say GorillaLaundryService2:
 	say "     You head for the locker-room and begin your new laundry shift. The team heads out for practice, their horde of horny fans following closely. You are once again alon, with a big pile of dirty clothes and underclothes from all genders waiting to be picked up. You sigh in front of this general lack of tidiness, but consolate yourself and decide that you would 'borrow' a few of these jock-straps and thongs for your personal use.";
 	say "     Suddenly, someone arrives from behind and grab your [face of player], pressing something against your nose and startling you. As you inhale, a strong smell of sweat reaches your nostrils, making your shudder. 'How's my sniffer buddy doing?' a familiar voice asks.";
 	LineBreak;
-	say "     You recognize the  voice of the gorilla from earlier, and relax somewhat. 'Yup, it's me,' the ape confirms after you voiced your thought. 'So, fond of my smell?' You take another, bigger breath through the used thong that the footballer keeps pressed on your face, groaning in pleasure. Grinning, the male lowers his other hand towards your crotch and [if player is male]fondles your growing endowment[else]grinds his large fingers against your [cunt size desc of player] pussy[end if].";
+	say "     You recognize the voice of the gorilla from earlier, and relax somewhat. 'Yup, it's me,' the ape confirms after you voiced your thought. 'So, fond of my smell?' You take another, bigger breath through the used thong that the footballer keeps pressed on your face, groaning in pleasure. Grinning, the male lowers his other hand towards your crotch and [if player is male]fondles your growing endowment[else]grinds his large fingers against your [cunt size desc of player] pussy[end if].";
 	say "     'Looks like I'm late for training. A hyena friend came to visit and we lost track of time as we 'caught up' with each other. Someone is filling in for me for today's session, so I guess we could hang out here until training ends. [bold type]What do you say?[roman type]'";
 	LineBreak;
 	say "     ([link]Yes[as]y[end link]) - You hungrily accept the offer for kinky sex.";
@@ -159,7 +159,7 @@ to say GorillaLaundryService2:
 	else:
 		LineBreak;
 		say "     You explain to the gorilla, through his big primate hand, that you do not feel up for [italic type]this[roman type] kind of fun today.";
-		say "     'Really? It's a shame. But hey, I understand. Everyone needs a pause from this 24/7 fuck-fest, from time to time'. The football player gives your neck a mischievous lick, and lets you go, after handing you a bag of chips. 'Good luck with your laundry, then. I'm gonna join the training. See you around!";
+		say "     'Really? It's a shame. But hey, I understand. Everyone needs a pause from this 24/7 fuck-fest, from time to time.' The football player gives your neck a mischievous lick, and lets you go, after handing you a bag of chips. 'Good luck with your laundry, then. I'm gonna join the training. See you around!";
 		say "     You say goodbye too, and go back to your duty. Meeting the team captain has put you in a good mood, and you manage to handle the rest of the clothes way before the team comes back from training. You are even able to take some time to sit on a bench and take some whiffs at the thong that he gave you. It's not the same smell than the other time. Is it his hyena friend's? Your thoughts are interrupted by the hubbub of the team and its groupie escort. After another round of sweaty clothes collection, Roman tells you that you are done for today and free to go.";
 		increase GorillasRep by 1;
 
@@ -338,7 +338,7 @@ to say FootballMatchOffense:
 		say "     The two wolves spitroast you, and they do not miss the chance to play with your nipples [if cocks of player > 0]and your cock [end if]while you are lying between them and unable to do anything about it. On each other's signal, they force their knots inside of you, and you moan loudly around the one blocking your mouth. The two lupines cum shortly afterwards, and their knots force you to take every single drop of their load inside your body.";
 		WaitLineBreak;
 		say "     Their lust satiated, they stand there while their knot half-deflates, and pull out. You yelp at the feeling of having the thick knots stretch you once more, and start protesting, as they did not even have the fairness to make you cum too.";
-		say "     But the wolves are already jogging away from you on their furry legs. Grunting, you stand up too with the help of your teammates. 'Acting as jerks, as usual', you can hear one of them lament.";
+		say "     But the wolves are already jogging away from you on their furry legs. Grunting, you stand up too with the help of your teammates. 'Acting as jerks, as usual,' you can hear one of them lament.";
 		increase libido of player by 50;
 		decrease hunger of player by 5;
 		decrease thirst of player by 5;

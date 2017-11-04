@@ -9,8 +9,7 @@ BoghrimHuntingTrip is a number that varies.
 Section 1 - Meeting Event
 
 to say BoghrimSlaveDeal:
-	if graphics is true:
-		project the figure of Boghrim_clothed_icon;
+	project the figure of Boghrim_clothed_icon;
 	if BoghrimMet is 0:
 		say "     A really big and powerful orc walks into your line of sight, effortlessly carrying a naked human over his shoulder. The man is very well built and muscular, but compared to the larger orc, he looks almost like a twink-boy, explaining how he ended up in this position. Noticing your eyes on his prize, the orc turns to you and grunts 'A new guy, hm? I'm Boghrim, and this is...' His brows draw together as he draws a blank, then gives his captive a light slap on the ass and asks 'What's your name anyways?', getting a somewhat groggy and slurred 'Jason' as an answer. 'There you have it. My newest slave boy, Jason. A bit feisty at first - but that changed right quick when he got a proper filling of orc cum. You wouldn't believe how tight he was when I fucked him the first time after catching him.'";
 		say "     Clearly in a good mood and willing to show off, Boghrim pulls apart Jason's cheeks and rubs a thick finger over the man's cum-dripping hole, then pushes it inside, provoking a lust-filled moan from the human. 'You know, being a new brother and all... I'll offer you a deal. You could be the second orc ever to pound this little slut. Ride that butt before it gets too stretched. Give me some chow and he's yours for a while. Deal?'";
@@ -46,15 +45,14 @@ to say BoghrimSlaveDeal:
 		now BoghrimMet is 1;
 	else:
 		say "     You meet Boghrim again - the monstrously powerful orc that stands out even among these muscled brutes. And walking just beside him is Jason, the young man he had freshly captured the last time. Surprisingly he's still exactly that - a muscular and ruggedly handsome human, untouched by any sign of green skin or other transformation. Like before, he's naked and draws your eye with that perfectly shaped body - oh wait, not totally naked... there's a skimpy leather harness around his chest, basically just a few straps and a black collar around his neck. Seeing you ogle his slave, Boghrim says 'Pretty little thing, hm? He's even more valuable than I thought... you're looking at a genuine transformation-immune human. Believe me, with all the cum he's had blasted into him, anyone else would be a full-breeder now and popping out babies left and right.' Drawing his slave closer, Boghrim fondles his ass and body, making Jason pant in lust as he feels his pucker being teased by a large finger.";
-		say "     'The guys have been asking me to sell him - but no way I'm gonna do that! It's far too much fun to pound that tight ass,' Boghrim says, then addresses Jason, 'Isn't it, pet?' The slave answers immediately, 'Yeah! Er.. yes master! It feels so good!' And from the tone of his voice, you can see that he really means it, thoroughly happy in his role as Boghrim's pussyboy. Grunting in satisfaction, the orc turns back to you. 'With everyone hungry for a piece of that ass, I've been making a boatload just renting him out. Say, wanna have a go at him too? Just one packet of food and he's yours - for a time.";
+		say "     'The guys have been asking me to sell him - but no way I'm gonna do that! It's far too much fun to pound that tight ass,' Boghrim says, then addresses Jason, 'Isn't it, pet?' The slave answers immediately, 'Yeah! Er... yes master! It feels so good!' And from the tone of his voice, you can see that he really means it, thoroughly happy in his role as Boghrim's pussyboy. Grunting in satisfaction, the orc turns back to you. 'With everyone hungry for a piece of that ass, I've been making a boatload just renting him out. Say, wanna have a go at him too? Just one packet of food and he's yours - for a time.";
 		WaitLineBreak;
 		if carried of food is 0:
 			say "     As you don't actually have any food on you, there is little choice but declining the offered trade. 'Your loss,' Boghrim grunts, then starts walking away, accompanied by his slave. He calls over his shoulder 'I'll be in the main hall if you change your mind...'";
 		else if cocks of player is 0:
 			say "     As you don't currently have a cock, you have little choice but declining the offered trade. Who knows how Boghrim would react if he learned you're not a 'real' orc. Giving a shrug at your refusal, the green man grunts, 'Your loss,' Boghrim grunts, then starts walking away, accompanied by his slave. He calls over his shoulder 'I'll be in the main hall if you change your mind...'";
 		else:
-			if graphics is true:
-				project the figure of Jason_naked_icon;
+			project the figure of Jason_naked_icon;
 			say "     Do you agree to the orc's terms and pay for sex with Jason with some food?";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
@@ -99,8 +97,7 @@ instead of sniffing Boghrim:
 
 instead of conversing the Boghrim:
 	LineBreak;
-	if graphics is true:
-		project the figure of Boghrim_face_icon;
+	project the figure of Boghrim_face_icon;
 	say "What do you want to talk with Boghrim about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -186,8 +183,7 @@ to say BoghrimTalk2:    [talk about Jason]
 	else if cocks of player is 0:
 		say "     As you don't currently have a cock, you have little choice but declining the offered trade. Who knows how Boghrim would react if he learned you're not a 'real' orc. Giving a shrug at your refusal, the green man grunts, 'Your loss,' accompanied by a shrug. 'You know where to find us, if you change your mind...'";
 	else:
-		if graphics is true:
-			project the figure of Jason_clothed_icon;
+		project the figure of Jason_clothed_icon;
 		say "     Do you agree to the orc's terms and pay for sex with Jason with some food?";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
@@ -222,6 +218,7 @@ to say BoghrimTalk3:     [go hunting]
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		LineBreak;
+		project the figure of Boghrim_naked_icon;
 		say "     More than happy to forget about hunting and just get a good dicking, you tell Boghrim exactly that. He gives a satisfied, hungry grunt at the reply and quickly guides you over to the nearby car, pushing your upper body to bend over its hood. The orc's hands work at baring your ass from clothing and gear in just a few moments, then you can feel the tip of his thick index finger push against your pucker. Leaning in close as his digit slides into you, Boghrim whispers into your ear in a husky tone, 'I really like having you as a fuck-buddy. Needy bitches are great, of course, but knowing that you're thrusting into a real man who decided he wants to give his ass up - that's something else.' That said, he intensifies fingering your rear entrance, soon drawing lusty moans from you, then asks, 'Ready to take my thick cock now, buddy?'";
 		say "     As horny as his foreplay made you, the reply you give is little more than a loud moan - more than enough to satisfy the big orc, who immediately steps up behind you. The feeling of his thick shaft being smacked against your butt, on first one cheek then the other, before it is slid up and down in your crack makes you tremble in arousal. You slide your hands down to your hips and spread both cheeks apart, eagerly waiting to have the big orc enter you - and you don't have to wait long. Soon, the broad, fleshy head of Boghrim's shaft brushes against your pucker, increasing in pressure until the muscle yields and your green-skinned companion's massive cock slides into you.";
 		WaitLineBreak;
@@ -331,6 +328,7 @@ to say BoghrimTalk3:     [go hunting]
 		now inasituation is false;
 
 to say BoghrimHydraSex1:
+	project the figure of Boghrim_naked_icon;
 	say "     Giving Boghrim a broad grin, you nod and quickly strip off your clothes, then step back up to the large reptile in front of you. You grab its primary head with both hands and pull it close to yours, then give the beast a hungry kiss. A surprised rumble goes through its throat, echoed by all the other heads as they turn into position to look at you with big eyes from all around. Faced with a clearly unexpected, pretty pleasant situation, the hydra makes no attempt to resist and even starts to reply in kind a moment later, sliding its slick tongue into your mouth. The two of you share a moment of companionable tongue-wrestling, until you eventually break the kiss - and find a number of its other heads stretched close, with somewhat hopeful expressions on their faces.";
 	say "     You guess that someone should have just told Hercules that snogging the beast would have been a viable option - or at least in your case it was, as the creature seems far more at ease and compliant now. Well, now that you have the hydra calmed down, you're more than ready to have your fun with it. Ordering to keep that ass raised, you move around behind the large creature and can't help but chuckle at how eagerly it raises its tail, willingly granting access to its ass for its captor. You run your hands over its meaty backside, feeling the firm muscles under its scaly hide. And between the firm buttocks under its tail, there is the dark green ring that is your target.";
 	WaitLineBreak;
@@ -347,6 +345,7 @@ to say BoghrimHydraSex1:
 		say "     As you make your way back to the orc lair, and when you share a drink soon after, you realize that the orc boss gives you... interested looks, and his cock stays half-hard the whole time. It seems you've impressed him today, proved that you're a 'real man' - he now might be more open to the possibility of getting fucked by you.";
 
 to say BoghrimHydraSex2:
+	project the figure of Boghrim_naked_icon;
 	say "     Giving Boghrim a broad grin, you nod and quickly strip off your clothes, then step back up to the large reptile in front of you. You grab its primary head with both hands and pull it close to yours, then give the beast a hungry kiss. A surprised rumble goes through its throat, echoed by all the other heads as they turn into position to look at you with big eyes from all around. Faced with a clearly unexpected, pretty pleasant situation, the hydra makes no attempt to resist and even starts to reply in kind a moment later, sliding its slick tongue into your mouth. The two of you share a moment of companionable tongue-wrestling, until you eventually break the kiss - and find a number of its other heads stretched close, with somewhat hopeful expressions on their faces.";
 	say "     You guess that someone should have just told Hercules that snogging the beast would have been a viable option - or at least in your case it was, as the creature seems far more at ease and compliant now. Well, now that you have the hydra calmed down, you're more than ready to have your fun with it and guide its head down to your crotch, ordering it to start licking. [if cocks of player > 1]Faced with your multiple loins, it rumbles softly and licks across them before you slide one of your cocks into its open muzzle[else]Faced with your throbbing manhood, the big reptile rumbles softly and licks over your erect shaft before sliding its muzzle over it. Working that long, forked tongue quite adeptly, your scaly partner plays it across your sensitive flesh and increases your arousal quickly. The creature shows considerable skill while sucking your cock, likely having lots of practice on itself and others.";
 	WaitLineBreak;
@@ -364,6 +363,7 @@ to say BoghrimTalk4:     [talk about x]
 
 instead of fucking Boghrim:
 	LineBreak;
+	project the figure of Boghrim_naked_icon;
 	setmonster "Orc Warrior";
 	if cocks of player is 0 or cockname of player is not "Orc Warrior" or player is not pure:
 		say "     You're currently not quite 'man enough' to have sex with Boghrim. Brazenly approaching the mighty orc right in the middle of the drinking hall and under the eyes of the gathered orcs... seems something that only a true orc warrior would do - which you're not... right now.";

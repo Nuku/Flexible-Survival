@@ -60,8 +60,7 @@ instead of sniffing Lilith:
 to say LilithDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Lilith], LILITHPREGNANCY: [LilithPregnancy], KIDCOUNTER: [LilithKidCounter], PREGCOUNTER: [LilithPregCounter] <- DEBUG[line break]";
-	if graphics is true:
-		project the figure of Lilith_naked_icon;
+	project the figure of Lilith_naked_icon;
 	if (HP of Lilith is 0):   [starting state]
 		say "ERROR-Lilith-001A: She should not be around yet anywhere where players can see her.";
 	else:
@@ -80,12 +79,10 @@ instead of conversing the Lilith:
 to say LilithTalkMenu:
 	LineBreak;
 	if a random chance of 2 in 3 succeeds:
-		if graphics is true:
-			project the figure of Lilith_boobs_icon;
+		project the figure of Lilith_boobs_icon;
 		say "     Your eyes are inevitably drawn to the demoness's bare breasts as you approach her and for a moment you totally forget that you wanted to talk to her and just stare. Lilith takes this with great amusement and wiggles her boobs in your face teasingly. Your hand is halfway outstretched to touch them before you remember that you... wait - what DID you want to say to her anyways?";
 	else:
-		if graphics is true:
-			project the figure of Lilith_face_icon;
+		project the figure of Lilith_face_icon;
 		say "     What do you want to talk about with the sexy demoness?";
 	wait for any key;
 	now sextablerun is 0;
@@ -229,6 +226,7 @@ to say LilithTalk5:
 				say "Invalid choice. Type [link]1[end link] to let Brutus agree to the fuck, [link]2[end link] to refuse, or [link]3[end link] to free Liam.";
 		if calcnumber is 1:      [fuck]
 			LineBreak;
+			project the Figure of BrutusGood_icon;
 			say "     It only takes a little nod from you for Brutus to give into his lust and step forward towards Liam, much to Lilith's amusement. 'Pound him hard, I want that boy broken to a real slut,' the demoness gleefully tells him and moves a hand down to her crotch, rubbing herself. But instead of just throwing down the man and fucking him, your demonic companion puts his large hands almost delicately on his shoulders and says, 'Listen to me, Liam. I'm not gonna hurt you. You'll like it. Believe me.' Still in his spellbound trance, the human replies dreamily, 'Yes of course. I trust you. We're in a church after all. But... what is this all about?' Moving a muscled arm down so he can grab Liam's behind, Brutus picks the man up and grunts, 'This,' as he plants a kiss on his lips. And it is not just a quick peck, but the real deal, with Brutus tongue invading the human's mouth and him stroking Liam's body. There is only a slight moment of surprised hesitation from the man, then his own instincts make him reply in kind - may they be natural or helped along by magic or nanites, you can't tell.";
 			say "     [BrutusLiamFuck]";
 			now libido of David is 66; [Ritual ready]
@@ -345,6 +343,7 @@ to say LilithPregCheck:
 
 instead of going northeast from Burned-Out Chapel while HP of Lilith is 0:[first meeting]
 	move player to Sacristy;
+	project the Figure of Lilith_naked_icon;
 	say "     As you enter the sacristy, you find a breathtakingly beautiful succubus there, lounging on a large bed. She stretches and flexes her naked body to give you quite a show as she stands up from the bed and comes to stand before you. 'Hello there, brave traveller. You walk right into a building inhabited by demons to visit me - that has to be rewarded. Come on, why don't you share this bed with me...' As she talks, she gives you little touches and caresses, inevitably heightening your arousal a bit.";
 	increase libido of player by 5;
 	now HP of Lilith is 1;   [has met the player, not the demon brute yet]
@@ -352,6 +351,7 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith is 0:[first
 instead of going northeast from Burned-Out Chapel while HP of Lilith > 0:   [not the first meeting]
 	if LilithPregnancy is 4:
 		move player to Sacristy;
+		project the Figure of Incubus_naked_icon;
 		say "     As you enter the sacristy, you find Lilith there, with a young incubus nuzzling her breasts and her hand on his hard cock. The male demon, looking about eighteen years old in human terms, looks up to you and with a small shock you recognize his features as very similar to your own. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
 		now LilithPregnancy is 0;
 	else if HP of Lilith is 1 and companion of player is demon brute:   [first time the player takes the demon brute pet where she can see him]
@@ -367,6 +367,7 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0:   [not
 		now HP of Lilith is 2;   [met the demon brute pet]
 	else if HP of Elijah is 99 and lastfuck of Elijah - turns > 12 and lastfuck of Lilith - turns > 6 and a random chance of 1 in 3 succeeds:[Evil Elijah is horny (hasn't had sex that day) and visits her for a fuck]
 		move player to Sacristy;
+		project the Figure of Elijah_evil_naked_icon;
 		if Dexterity of Lilith is 0:
 			say "     As you walk over to the door of the sacristy, you hear the moaning of at least two persons from inside, one of them clearly Lilith, the other one a man's voice that seems... familiar. Your curiosity leads you forward and into the room without delay, putting a hot little scene into view. On top of the large bed in the middle of the room is Lilith, her sexy curves shimmering in the candlelight with a slight sheen of sweat as she rides Elijah's shaft. Lying on his back with black wings spread wide, the dark angel's hands meanwhile roam his demonic partner's body, often cupping and squeezing her shapely breasts. 'I was wondering when you'd come by' Lilith purrs to you without even stopping her gyrations on Elijah's hard cock. She chuckles and says 'Very nice work with angel-boy here by the way. No more stuffy and boring Seraphim, is he?', underlining her last words by slamming herself down on the angel's cock and grinding her crotch against his. Then Lilith gives you a seductive smile and purrs 'Come on, join us - there's always room for three in my bed.'";
 			now Dexterity of Lilith is 1;
@@ -379,7 +380,7 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0:   [not
 			say "     Eager to join in for the sexy fun, you drop your gear right where you stand, then leave a trail of hurriedly stripped-off clothing all the way to the bed. Stepping up on the soft, silky expanse of the succubus's large bed, you're greeted by the two aroused beings already on it, with Elijah stroking a hand up the inside of your leg and Lilith giving your buttcheeks a welcoming squeeze.";
 			if cocks of player > 0:
 				LineBreak;
-				say "     Licking her lips, Lilith moves a hand to take hold of your by now fully erect manhood, giving it a soft pull to make you move closer. Sticking out her tongue, she runs it up the underside of your shaft, then teasingly brushes it over just the edge of your cockhead before finally taking it between her soft lips and gently sucking on it. 'Mmmh', she hums in obvious satisfaction as she tastes the precum leaking out of your slit and gives your balls an appreciative squeeze. Pulling off your cock with a pop a moment later, the demoness looks up at you and says 'You're gonna be tasty', then adds with a little nod over her shoulder '...or did you want to take the back door instead?'";
+				say "     Licking her lips, Lilith moves a hand to take hold of your by now fully erect manhood, giving it a soft pull to make you move closer. Sticking out her tongue, she runs it up the underside of your shaft, then teasingly brushes it over just the edge of your cockhead before finally taking it between her soft lips and gently sucking on it. 'Mmmh,' she hums in obvious satisfaction as she tastes the precum leaking out of your slit and gives your balls an appreciative squeeze. Pulling off your cock with a pop a moment later, the demoness looks up at you and says 'You're gonna be tasty', then adds with a little nod over her shoulder '...or did you want to take the back door instead?'";
 				LineBreak;
 				say "     Which shall it be? Get a blow-job from Lilith ([link]Y[as]y[end link]), or butt-fuck her ([link]N[as]n[end link])?";
 				if player consents:   [bj from Lilith]
@@ -405,7 +406,7 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0:   [not
 					say "     You stay like that for a moment, revelling in the warm, wet feeling of being inside the succubus and holding on to her until you catch your breath. Some moments later you lean over a bit, grinning past her to the exhausted angel lying on the bed and high five your partner in fucking Lilith. Then you pull out slowly, allowing her to pucker to pull tight again and not even lose a drop of cum. The satisfied demoness pulls off Elijah's shaft in turn and flops down on the bed herself. Lying on her back, she smiles up at you while her hand moves down to her crotch, a finger running through the slow trickle of angelic cum leaking out of her pussy. Bringing it to her mouth and tasting Elijah's seed, Lilith gives a content sigh and says 'Wasn't that fun, boys? We'll have to do it again... often.'";
 			else if cunts of player > 0:
 				LineBreak;
-				say "     Licking her lips, Lilith snakes a hand around your hips and gives you a soft pull to make you move closer. Sticking out her tongue, she runs it up the inside of your thighs, then teasingly brushes it very lightly over your sensitive pussy lips before spreading them with her fingers going for a deeper lick. 'Mmmh', she hums in obvious satisfaction as she tastes the female juices already starting to moisten your pussy and gives your clit a little nibble. Pulling back a moment later, the demoness looks up at you and says 'Want me to go on?' Perfectly happy to have this hot seductress give you some oral attention, you just put a hand on her head as an answer and pull her back against your crotch. Lilith's fingers immediately start softly brushing over your sensitive pussy lips and you feel her spread them a bit, then she puts her mouth to your pussy, licking and teasing with her tongue.";
+				say "     Licking her lips, Lilith snakes a hand around your hips and gives you a soft pull to make you move closer. Sticking out her tongue, she runs it up the inside of your thighs, then teasingly brushes it very lightly over your sensitive pussy lips before spreading them with her fingers going for a deeper lick. 'Mmmh,' she hums in obvious satisfaction as she tastes the female juices already starting to moisten your pussy and gives your clit a little nibble. Pulling back a moment later, the demoness looks up at you and says 'Want me to go on?' Perfectly happy to have this hot seductress give you some oral attention, you just put a hand on her head as an answer and pull her back against your crotch. Lilith's fingers immediately start softly brushing over your sensitive pussy lips and you feel her spread them a bit, then she puts her mouth to your pussy, licking and teasing with her tongue.";
 				WaitLineBreak;
 				say "     Lilith really knows all the tricks in pleasing a woman with her mouth and fingers, driving you to ever new heights as she licks you and fondles with her fingers. Her expert ministrations keep you at the edge of orgasm for you don't know - or care - how long, your mind lost in a lust-filled haze. Then finally, she goes for the finish line, taking out all the stops. Within moments, you feel your climax approaching, a pleasant tingly feeling spreading through your whole body and femcum starting to drip from your pussy. Lilith keeps her head between your legs, eagerly licking it all up, then demonstratively swallows it all and croons 'Nice and tasty, lover-girl.'";
 				say "     After a little kiss on your wet and swollen folds, the demoness then softly pushes you aside and turns her attention back to the fallen angel under her. Looking down on Elijah, you clearly see the urgent need to cum written in his face - no wonder, with him being balls-deep in Lilith's hot cave all this time and her keeping him just at the edge of sweet release. Lazily circling her hips on his pole, she asks 'Do you want to cum, my sweet little angel?' - and when Elijah immediately groans out 'Yes!' ...she just stops. 'Beg for it' Lilith demands, relishing in the power she has over yet another male, getting him to whimper and call her mistress before she finally starts rocking back and forth again and allows him to climax. Elijah shakes and twitches as his load blasts up into the female demon's womb, and he moans loudly while his hands tightly grip the sheets of the bed.";
@@ -427,6 +428,7 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0:   [not
 		now lastfuck of Lilith is turns;
 	else if lastfuck of Lilith - turns > 6 and a random chance of 1 in 3 succeeds:
 		move player to Sacristy;
+		project the Figure of Lilith_naked_icon;
 		if Level of Lilith is 0:
 			say "     As you walk over to the door of the sacristy, you hear pants and yips from inside, in a clearly female voice that doesn't belong to Lilith. Your curiosity leads you forward and into the room without delay, putting a hot little scene into view. On top of the large bed in the middle of the room is Lilith, bent over on all fours, with her head right over the crotch of a beautiful golden retriever girl and lapping away at her pussy. Neither of them has noticed you yet, as the young canine woman's head is lying back with closed eyes while she shudders in pleasure and Lilith is completely focused on giving her oral attention. The clear view of the demoness's own moist pussy between her slightly spread legs awakens your libido and makes you think about just joining them on the bed for some fun. Lilith would almost definitively be down for it - she is a succubus after all.";
 			now Level of Lilith is 1;
@@ -499,6 +501,7 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0:   [not
 				say "     <leave>";
 	]
 	else if LilithKidCounter > 0 and a random chance of 1 in 3 succeeds:[Lilith is out when the player comes, though her firstborn Incubus son is there...]
+		project the Figure of Incubus_naked_icon;
 		say "     As you walk into the sacristy, you're treated with the sight of a young and handsome incubus waiting for you on the bed. He's lying half on his side, propping up his upper body with an elbow on the bed, grinning as he gives you a suggestive wink. Posing like that, he's showing off all of his naked glory, and you can't stop your eyes from wandering over bis slender but beautifully muscled body. Bathed in the light of the many candles, his tan skin shines, dark and perfect. Your gaze catches on his shapely and erect manhood, only moving on after a moment of reluctance, then comes to rest on his face - his very familiar looking face, with a close resemblance to your own.";
 		say "     'Welcome,' he says, in a honeyed voice that makes you all tingly inside. '[if AtticusCounter is 0]I'm Atticus. [end if]Mother isn't here right now, as you can see.' His free arm moves to sensuously stroke his chest. 'It'll be a while till she's back. How about we... have some fun in the meantime?'";
 		LineBreak;
@@ -556,6 +559,7 @@ Instead of fucking the Lilith:
 
 to say LilithSexMenu:
 	LineBreak;
+	project the figure of Lilith_naked_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

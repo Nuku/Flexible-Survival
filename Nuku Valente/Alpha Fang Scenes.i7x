@@ -52,7 +52,7 @@ to say fangplayerlust:
 
 
 to say fangrapeplayer:
-	say "'Late', says Fang as he approaches you. His scent is intoxicatingly strong and his [one of]puppy pecker[or]doggy dong[at random] is jutting from his sheath, heavy and ready. Any word of complaint you may have had is lost as the wolf gives you a penetrating look, brokering no argument. There is a punishment to be had and a service to be rendered, and that is all there is to it. He grabs at you with his teeth, tugging you along and bringing you to a desk, pushing you against it so you're bent over it.";
+	say "'Late,' says Fang as he approaches you. His scent is intoxicatingly strong and his [one of]puppy pecker[or]doggy dong[at random] is jutting from his sheath, heavy and ready. Any word of complaint you may have had is lost as the wolf gives you a penetrating look, brokering no argument. There is a punishment to be had and a service to be rendered, and that is all there is to it. He grabs at you with his teeth, tugging you along and bringing you to a desk, pushing you against it so you're bent over it.";
 	if breast size of player > 0 and breasts of player > 0:
 		say "Your [breast size desc of player] breasts are squished against the smooth wood of the desk as he moves you into position, rubbing your nipples against the grain.";
 	say "He reaches around and removes any barrier to your bottom, tossing it aside for later with a soft, eager, growl. Though you weren't very aroused when you walked in, his intense scent sends warm tingles through your form now, making you pant as you begin to warm up. [run paragraph on]";

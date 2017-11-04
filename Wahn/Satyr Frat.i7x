@@ -186,6 +186,7 @@ to SatyrFratPartyVisit:
 	if daytimer is day:
 		say "     When you make your way to Phi Alpha Nu you see a lot of passed out people in the yard. You realize that the party is on hold for now, as everyone is getting over their killer headaches. It might be best for you to return at night when everyone's alive and awake.";
 	else:
+		project the figure of Talov_Kerr_Party_icon;
 		say "     Making your way back to the Phi Alpha Nu frat house, you find that the party is still going on - and it's wilder than ever. There is no trace of [if SatyrFratRichardRelationship > 97]the guy who was guarding the entrance before[else]Richard[end if], maybe he joined the crowd inside at some point. In a bit of a partying mood yourself as you think back to the support you gave to those friendly satyrs, you walk up to the large house, up the stairs and into the open entrance door. Inside, the frat party is in full swing, with handsome guys and gals moving to the beat of loud music, drinks in their hands as they have fun dancing and talking. You do notice a definite prevalence of goatees among the men... might be that type of beard is 'in' right now - or the result of smuggling in two satyrs with a whole barrel full of changing wine.";
 		say "     While your eyes are still wandering over the crowd of attractive young adults, someone calling your name draws your attention suddenly. It's Kerr, standing behind an improvised bar on the other side of the room. After gleefully filling two more plastic cups with drinks and handing them to already somewhat buzzed students, he waves you closer. Talov, the other satyr you met before, isn't in sight as you walk up to the bar - at least not until you're right at it and lean in to talk to Kerr - which is when you notice the two curved horns poking up in front of Kerr's crotch. Rhythmically moving horns, as their owner's head bobs up and down on his friend's hard shaft. Gripping Talov by the horns and giving their sensitive base a teasing rub, the standing satyr says, 'Hey T, our friend is back.' Creating a deliberate loud pop that can be heard even above the loud music, Talov pulls off the cock in his mouth and stands up, licking his lips demonstratively before giving you a beaming smile.";
 		WaitLineBreak;
@@ -197,9 +198,11 @@ to SatyrFratPartyVisit:
 		else:
 			LineBreak;
 			say "     Replying that you can't, not right now, and that you only wanted to see how they were doing, you excuse yourself and leave the somewhat disappointed Talov standing at the bar. Making your way back to the entrance, you leave the crowd of young adults and the beat of their music behind and get back to the center of the campus.";
+			project the figure of pixel_icon;
 
 to say SatyrFratSexMenu:
 	say "Replying that you're of course in on that, you turn around and let your gaze wander over the room. There's definitively a lot of possibilities here. Now where to start...";
+	project the figure of pixel_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

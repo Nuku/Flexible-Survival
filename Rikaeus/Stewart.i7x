@@ -186,11 +186,12 @@ to say StewartStudying:
 
 instead of fucking Stewart:
 	if Stewart is in The Clouds or Stewart is in Tenvale College Library:
-		say "     Stewart starts blushing beet red before shaking his head vigoriously. 'No! Not here where everyone can see.' He stutters out.";
+		say "     Stewart starts blushing beet red before shaking his head vigoriously. 'No! Not here where everyone can see,' he stutters out.";
 	else if (lastfuck of Stewart - turns < 3): [he got fucked in the last 9 hours = 3 turns]
 		say "     Stewart apologizes to you rather profusely. 'While I did like last time, I do need time to rest,' he says, waving you off.";
 	else if Stewart is in Stewart's Room:
 		say "     He blushes but gives you an eager look, as if expecting you to suggest something.";
+		say "[StewartSexMenu]";
 
 to say StewartSexMenu:
 	LineBreak;
@@ -248,7 +249,7 @@ to say StewartSexMenu:
 	clear the screen and hyperlink list;
 
 to say StewartSex1:
-	say "     You hum before saying out loud that you'd love a taste of his ass. Stewart's cheeks light up with a dusting of red from blushing as he stutters out a response. 'A-a-uh. I've never had someone rim me..' He mutters. You chuckle and tell him that there's a first time for everything. Though, you do say that there will be foreplay, as not everyone can cum from their ass being eaten out. 'Oh, alright... what do I do?' he asks. You tell him just to lay there and you'll take care of everything, promptly straddling his lap after you finish speaking. Just from doing that, the harpy boy's breath hitches and you can feel his cock begin to harden against your ass.";
+	say "     You hum before saying out loud that you'd love a taste of his ass. Stewart's cheeks light up with a dusting of red from blushing as he stutters out a response. 'A-a-uh. I've never had someone rim me...' he mutters. You chuckle and tell him that there's a first time for everything. Though, you do say that there will be foreplay, as not everyone can cum from their ass being eaten out. 'Oh, alright... what do I do?' he asks. You tell him just to lay there and you'll take care of everything, promptly straddling his lap after you finish speaking. Just from doing that, the harpy boy's breath hitches and you can feel his cock begin to harden against your ass.";
 	say "     Poor Stewart, as his dick isn't the focus this time, bringing your lips to his and starting a soft make-out session. From the moan that the male lets out you can tell that he's not entirely experienced with sex, though he's definitely not a virgin. Quite quickly you move the kiss from being chaste to rough, pushing your mouth harshly against the harpy boy's. By now you can feel Stewart's manhood at full mast, straining in his pants and up against your own tush. To mess with the well endowed male, you grind your ass up against his manhood. That prompts him to groan out loud, adding the sounds that he's already making. Deciding that you've already spent enough time on his lips, you start to move down his body.";
 	WaitLineBreak;
 	say "     Your first destination is his chest. You position your mouth over one of the male's perky nipples, your breath on it making him shudder. Tentatively, you trace your tongue around it before pulling at the nipple with your teeth. 'Fuck!' Stewart gasps cursing for the first time during the foreplay. Taking that as proof that he is enjoying this, you continue to toy with his chest, switching it up between pulling and licking. When you've decided that you've done enough, you move down further. The harpy boy lets out a grunt of disappointment when you completely ignore his rock hard dick. Instead you ease his shorts off of him, his cock springing out and standing tall. You take a moment to admire your partner's dick as well as the amount of precum leaking from it before you move your mouth to your next location.";
