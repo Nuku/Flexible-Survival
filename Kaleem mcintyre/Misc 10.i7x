@@ -203,7 +203,7 @@ When play begins:
 	Add Free Catch to badspots of furry;
 
 Instead of resolving a Free Catch:
-	Say "'Fresh fish!' The words make you pause even as you think how odd they sound given the limited amount of supplies there are here in the city. Turning you search for the area in which the voice had come from you look to find a black furred otter holding up a fish in one of her webbed hands. Thinking that maybe having a little extra variety in today's meal might be good for your stomach you head over to the otter to ask how much. 'There's no charge dear. I'm giving away what I have to those who don't have much. So here,' The otter hands you two fish. 'take these and take care of yourself.' Nodding to the kind mustelid you smile as you think about how nice some people can be, despite the craziness going on in the city.";
+	Say "'Fresh fish!' The words make you pause even as you think how odd they sound given the limited amount of supplies there are here in the city. Turning you search for the area in which the voice had come from you look to find a black furred otter holding up a fish in one of her webbed hands. Thinking that maybe having a little extra variety in today's meal might be good for your stomach you head over to the otter to ask how much. 'There's no charge dear. I'm giving away what I have to those who don't have much. So here,' the otter hands you two fish, 'take these and take care of yourself.' Nodding to the kind mustelid you smile as you think about how nice some people can be, despite the craziness going on in the city.";
 	increase carried of Fish by 2;
 	Now Free Catch is resolved;
 

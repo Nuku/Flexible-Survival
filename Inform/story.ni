@@ -1805,7 +1805,7 @@ To say time of day:
 	if remainder after dividing turns by 8 is 5:
 		say "noon";
 	if remainder after dividing turns by 8 is 4:
-		say "mid after noon";
+		say "mid afternoon";
 	if remainder after dividing turns by 8 is 3:
 		say "evening";
 	if remainder after dividing turns by 8 is 2:
@@ -1821,7 +1821,7 @@ To say time of day:
 	if remainder after dividing turns by 8 is -3:
 		say "noon";
 	if remainder after dividing turns by 8 is -4:
-		say "mid after noon";
+		say "mid afternoon";
 	if remainder after dividing turns by 8 is -5:
 		say "evening";
 	if remainder after dividing turns by 8 is -6:

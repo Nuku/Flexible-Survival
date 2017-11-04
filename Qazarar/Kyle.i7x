@@ -176,7 +176,7 @@ to say KyleTalkMenu:
 					say "[KyleTalk7]";
 				if (nam is "Threesome"):
 					say "[KyleTalk8]";
-				say "      Kyle gets up and heads for the door out of the back room, and you follow. 'Well, it was nice talking to you. Come back soon when you have some time, and we can chat some more.'";
+				say "     Kyle gets up and heads for the door out of the back room, and you follow. 'Well, it was nice talking to you. Come back soon when you have some time, and we can chat some more.'";
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";

@@ -142,7 +142,7 @@ An everyturn rule:
 	if AmyMaturityCounter > 1:
 		decrease AmyMaturityCounter by 1;
 
-instead of going outside from Bunker while (HP of Amy is 1 and lastAmySpotted - turns > 3):
+instead of going up from Bunker while (HP of Amy is 1 and lastAmySpotted - turns > 3):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: AMY SOLO WALKIN [line break]";
@@ -168,7 +168,7 @@ instead of navigating Grey Abbey Library while (HP of Amy is 1 and lastAmySpotte
 	else if AmyMaturityCounter > 1:
 		say "     As you enter the library, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";
 
-instead of going outside from Bunker while ((HP of Amy > 1 and HP of Amy < 90) and (lastfuck of Amy - turns) > 12):
+instead of going up from Bunker while ((HP of Amy > 1 and HP of Amy < 90) and (lastfuck of Amy - turns) > 12):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: AMY LUST WALKIN [line break]";
@@ -563,7 +563,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				say "     Being dominated by Icarus is one thing, watching him take Amy another, so you turn away and decide to stroll deeper into the library. As you pass row after row of shelves, the sounds of their coupling get a bit muffled, but even as you reach the back wall, still some of the moans and grunts reach you. In the end, you pick a book at random and read a bit of it to distract yourself before going back, where you find the freshly fucked Amy dozing on her mattress, with Icarus cum slowly leaking out of her pussy.";
 				now IcarusAmySex is 51; [not watching Icarus/Amy sex in the future]
 		else if HP of Icarus > 0 and HP of Icarus < 50: [sub Icarus]
-			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny and has taken to masturbation, her head resting on a pillow with closed eyes as she imagines... well, most likely you. As you stand there, eyes riveted on her naked form, a sudden flutter of wings in the air above you heralds the arrival of Icarus. The submissive blue chaffinch lands right next to you and gives Amy an appreciative look. 'She's really hot. I'd love to take that doggie for a ride.' he chirps and you notice his avian cock quickly hardening. As you're looking at him, Icarus suddenly remembers that he's now just supposed to be your slutty pet bird and gets a bit flustered, chirping nervously as he adds 'I - I mean...'";
+			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny and has taken to masturbation, her head resting on a pillow with closed eyes as she imagines... well, most likely you. As you stand there, eyes riveted on her naked form, a sudden flutter of wings in the air above you heralds the arrival of Icarus. The submissive blue chaffinch lands right next to you and gives Amy an appreciative look. 'She's really hot. I'd love to take that doggie for a ride,' he chirps, and you notice his avian cock quickly hardening. As you're looking at him, Icarus suddenly remembers that he's now just supposed to be your slutty pet bird and gets a bit flustered, chirping nervously as he adds 'I - I mean...'";
 			LineBreak;
 			say "     [bold type]Do you want to allow Icarus to indulge in some of his old behaviour, or do you send him off to await your pleasure when you want to make use of him?[roman type][line break]";
 			LineBreak;

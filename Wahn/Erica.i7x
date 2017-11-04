@@ -60,7 +60,7 @@ Version 1 of Erica by Wahn begins here.
 
 CarlEricaInteraction is a number that varies.
 
-instead of going inside from the Grey Abbey Library while (Dexterity of Erica is 0 and (HP of Eric > 9 and HP of Eric < 16)):
+instead of going down from the Grey Abbey Library while (Dexterity of Erica is 0 and (HP of Eric > 9 and HP of Eric < 16)):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC/ERICA QUESTION[line break]";
@@ -736,7 +736,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 [   6: Carl fucked Erica                                             ]
 [  50: player told Carl to stop pursuing Erica                       ]
 
-instead of going outside from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+instead of going up from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Erica MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
@@ -755,7 +755,7 @@ to say EricaMeetsCarl:
 	now CarlEricInteraction is 1;
 	now lastCarlEricInteraction is turns;
 
-instead of going outside from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
+instead of going up from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
 	move player to Grey Abbey Library;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
