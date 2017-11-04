@@ -43,7 +43,7 @@ Include New Graphics by Executaball.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 62.
+The release number is 63.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -5455,6 +5455,7 @@ Include Finn by Wahn.
 Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
 Include Garrett by Stripes.
+Include Gerty by Qazarar.
 Include Gordon by Rikaeus.
 Include G-Shep Squad by Rikaeus.
 Include Gwen by Stripes.
@@ -5476,6 +5477,7 @@ Include Joanna by Stripes.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Kristen by Stripes.
+Include Kyle by Qazarar.
 Include Kyrverth by Speedlover.
 Include Lance by Verath.
 Include Larissa for FS by Stripes.
