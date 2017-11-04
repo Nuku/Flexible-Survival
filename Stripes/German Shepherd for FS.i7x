@@ -757,7 +757,7 @@ When Play begins:
 	now face change entry is "it draws forward into a canine muzzle, which rapidly fills with teeth and a broad, lolling tongue. At the same time, your ears become more pointed and expressive and migrate towards the top of your now canine head";
 	now body change entry is "your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw-like and your hands become somewhat paw-like with dull black claws in the tips";
 	now skin change entry is "fur begins to push through from underneath, soon covering you in a coarse, protective coat of brown and black fur";
-	now ass change entry is "a long tail pushes from your spine. It rushes straight out, then curles between your legs at the feeling of shock as you study the appendage";
+	now ass change entry is "a long tail pushes from your spine. It rushes straight out, then curls between your legs at the feeling of shock as you study the appendage";
 	now cock change entry is "your shaft tapers out, becoming slender, though a huge swelling comes into being towards the base, a knot. The skin turns reddish before the whole thing slowly withdraws into a sheath you didn't have a moment ago";
 	now str entry is 12;
 	now dex entry is 13;

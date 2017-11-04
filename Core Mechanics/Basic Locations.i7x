@@ -7,16 +7,9 @@ The invent of Bunker is { "face mask","medkit","medkit","water bottle","water bo
 Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
 East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
 East of library door is Grey Abbey Library.
-Inside of Grey Abbey Library is Bunker.
 Bunker is below Grey Abbey Library.
 The player is in Bunker.
 The marea of library door is "Outside".
-
-Instead of going down from Grey Abbey Library:
-	try going inside;
-
-Instead of going up from Bunker:
-	try going outside;
 
 to say bunker desc:
 	say "     Sparsely appointed, this bunker was built as a fallout shelter back during the Cold War, then abandoned to become a forgotten curiosity at best. You are standing in the main bunker room, a rectangular chamber measuring about 60 feet in length and 30 feet in width. Its walls are solid concrete and long rows of shelves are built into the back wall. There are several large storage lockers in the bunker as well. They look like a good place to store all your extra stuff. A long double row of simple metal beds is bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";

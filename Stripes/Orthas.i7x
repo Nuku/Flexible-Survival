@@ -14,7 +14,7 @@ the scent of orthas is "Orthas smells like a strong, powerful dragoness[if HP of
 the fuckscene of orthas is "[orthasfuck]".
 
 to say orthasNPCdesc:
-	say "     Orthas is a black-scaled dragon woman. She stands about six and a half feet tall, with wings that are about three feet long each folded to her back. She watches the area intently, her arms crossed half the time. Behind her, a slender reptilian tail sways slowly. Her overall shape is human, especially those huge, F cup knockers that heave distractingly with every breath she takes. Her overall build is quite strong, enough so that the clothes she's wearing have trouble fitting, making for an impressive guard.";
+	say "     Orthas is a black-scaled dragon woman. She stands about six and a half feet tall, with wings that are about three feet long, each folded to her back. She watches the area intently, her arms crossed half the time. Behind her, a slender reptilian tail sways slowly. Her overall shape is human, especially those huge, F cup knockers that heave distractingly with every breath she takes. Her overall build is quite strong, enough so that the clothes she's wearing have trouble fitting, making for an impressive guard.";
 
 
 Section 1 - Conversation

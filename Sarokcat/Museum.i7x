@@ -131,7 +131,7 @@ instead of fucking Valerie:
 				say "     Quite worked up now after all the teasing, you moan in delight as that feline tongue of hers slides across your already excited folds. She takes several more licks across your pussy before pushing it right into your needy cunt, lapping into you to get your feminine juices. You run your hands over the sphinx's head, moaning in pleasure and encouraging her to continue. She turns out to be a very clever lover, using her mouth and paws in many interesting and pleasurable ways. She is also very teasing about it, drawing you back from the edge of your peak several times, leaving you almost begging for her for more before she finally drives you to a crashing orgasm with some particularly artful tonguework. You are left exhausted and panting on the floor as the grinning sphinx climbs back onto the information desk. She grins smugly as she rests atop it, licking her lips and grooming her paws clean of your juices.";
 			infect "sphinx";
 	else:
-		say "     'Sorry dear,' Valerie says with a sigh, 'I prefer my partners, a bit more... intellectually motivated if you know what I mean,' The sphinx says as she shakes her head sadly, 'I simply couldn't bring myself to submit to someone who hasn't bested me at riddles several times, maybe you should work on that first and get back to me?' Valerie says with a hopeful look.";
+		say "     'Sorry dear,' Valerie says with a sigh, 'I prefer my partners a bit more... intellectually motivated, if you know what I mean,' the sphinx says as she shakes her head sadly. 'I simply couldn't bring myself to submit to someone who hasn't bested me at riddles several times, maybe you should work on that first and get back to me?' Valerie says with a hopeful look.";
 
 
 Museum ends here.

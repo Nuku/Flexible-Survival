@@ -122,7 +122,7 @@ to say SylviaTalkMenu:
 					say "[SylviaTalk5]";
 					if SylviaConv < 5:
 						increase SylviaConv by 1;
-				say "      Sylvia sits patiently, waiting to see whether you wish to continue the conversation";
+				say "     Sylvia sits patiently, waiting to see whether you wish to continue the conversation";
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";

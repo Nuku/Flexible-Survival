@@ -337,7 +337,7 @@ to say SarahFucking:
 		if SarahCured > 1:
 			say "     'Sorry stud,' Sarah pants and looks at you with an impish grin on her muzzle. 'I just can't keep up with your stamina. Can't just fuck the day away either. Give me a moment to catch my breath, okay?'";
 		else:
-			say "     'Sorry master,' Sarah moans as she looks at you with her lust-filled eyes, the husky bitch moaning as she slowly rubs herself. 'But even I can't manage to recover this fast, I wouldn't be able to do our time together justice.' She pants out even as she rubs herself. 'I should be ready for you soon though, so please don't leave me here alone for long.' Your new bitch says as she tries to relax some so she can be ready to please you sooner.";
+			say "     'Sorry master,' Sarah moans as she looks at you with her lust-filled eyes, the husky bitch moaning as she slowly rubs herself. 'But even I can't manage to recover this fast, I wouldn't be able to do our time together justice,' she pants out even as she rubs herself. 'I should be ready for you soon though, so please don't leave me here alone for long,' your new bitch says as she tries to relax some so she can be ready to please you sooner.";
 		stop the action;
 	else if SarahCured > 4:
 		say "     As you approach Sarah, she smiles at you warmly and wags her tail. 'Hah, don't I know that look in your eye,' the female husky tells you with a bit of a teasing wink, stepping close to stroke her hand down your side. Putting on a coy, playful expression, she asks, 'So... what did you have in mind this time?'";

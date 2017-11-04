@@ -50,7 +50,7 @@ to say greenflight:
 		say "There is nothing else interesting about it at the moment.";
 
 
-Bright Alley is a room. "     A dark alley, with a silvery blue glow coming from the deeper reaches.  You can faintly see that the back of the alley opens to a small hill.  [brightflight]". It is fasttravel.
+Bright Alley is a room. "     An alley with a silvery blue glow coming from the deeper reaches.  You can faintly see that the back of the alley opens to a small hill.  [brightflight]". It is fasttravel.
 Bright Alley Exit is a door. Bright Alley Exit is dangerous. The marea of Bright Alley Exit is "Outside". Bright Alley Exit is undescribed. Bright Alley Exit is west of Bright Alley. West of Bright Alley Exit is Outside Exploration.
 
 to say brightflight:

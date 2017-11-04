@@ -57,13 +57,13 @@ Instead of Resolving a Needy Rabbit Girl:
 			now needy rabbit girl is resolved;
 			stop the action;
 		else:
-			say "     You approach whispering soft things to her and she permits you to come up to her. Something about her expression seems disappointed, but it fades fast. She reaches for your hand, 'It's been so long since I talked to anyone, or even saw anyone that looked human.' she murmurs, 'I just feel so lonely. Can I hold you?'";
+			say "     You approach whispering soft things to her and she permits you to come up to her. Something about her expression seems disappointed, but it fades fast. She reaches for your hand, 'It's been so long since I talked to anyone, or even saw anyone that looked human,' she murmurs. 'I just feel so lonely. Can I hold you?'";
 			say "     Do you let her?";
 			if player consents:
 				say "     She wraps her arms around you and is soon hugging to you quietly. Her breasts, now pressed against your front, feel warm and soft. There are too many of them, six gently rubbing against your [skin of player] chest. Her hands slowly dip, reaching for your ass for a squeeze as she looks up into your eyes, 'I am so... lonely,' she whispers. 'Will you be my sister?'";
 				say "     Do you let her continue?";
 				if player consents:
-					say "     She slowly lies you down with a smile, looking quite relieved at your consent. She has you take off your clothes, then puts her hands on her hips, looking you over. 'What?' she asked, flashing a grin. 'You thought we were going to make out in the middle of the street? Get real. Come on!' she waves excitedly, and barely waits for you to stand back up again before she leads you hurriedly through the devastated city to a small basement door. She fishes out a key and has the door open quickly, leading you inside.";
+					say "     She slowly lies you down with a smile, looking quite relieved at your consent. She has you take off your clothes, then puts her hands on her hips, looking you over. 'What?' she asks, flashing a grin. 'You thought we were going to make out in the middle of the street? Get real. Come on!' She waves excitedly and barely waits for you to stand back up again before she leads you hurriedly through the devastated city to a small basement door. She fishes out a key and has the door open quickly, leading you inside.";
 					move the player to Rabbit Den;
 					now the rabbit den is known;
 					now rabbitsibling is 1;

@@ -1801,7 +1801,7 @@ To say time of day:
 	if remainder after dividing turns by 8 is 5:
 		say "noon";
 	if remainder after dividing turns by 8 is 4:
-		say "mid after noon";
+		say "mid afternoon";
 	if remainder after dividing turns by 8 is 3:
 		say "evening";
 	if remainder after dividing turns by 8 is 2:
@@ -1817,7 +1817,7 @@ To say time of day:
 	if remainder after dividing turns by 8 is -3:
 		say "noon";
 	if remainder after dividing turns by 8 is -4:
-		say "mid after noon";
+		say "mid afternoon";
 	if remainder after dividing turns by 8 is -5:
 		say "evening";
 	if remainder after dividing turns by 8 is -6:
@@ -5523,7 +5523,7 @@ Include Stella by Stripes.
 Include Stewart by Rikaeus.
 Include Stuck Dragon by Stripes.
 Include Sven by Stripes.
-Include Sylvia by Prometheus. 
+Include Sylvia by Prometheus.
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
 Include Tenvale Gorillas Football Team by Kernog.
