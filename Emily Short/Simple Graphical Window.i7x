@@ -122,7 +122,7 @@ Include (-
              	graph_width  = gg_arguments-->0;
              	graph_height = gg_arguments-->1;
 
-	glk_window_fill_rect(gg_picwin, color, 0, 0, graph_width, graph_height);
+	glk_window_fill_rect(gg_picwin, color , 0, 0, graph_width, graph_height);
 	}
 ];
 

@@ -26,16 +26,6 @@ Use maximum text length of at least 2000.
 Use Scoring.
 [ End compiler settings. ]
 
-Include Version 4 of Menus by Emily Short.
-Include Basic Help Menu by Emily Short.
-Include Basic Screen Effects by Emily Short.
-[dependencies]
-Include Glulx Entry Points by Emily Short.
-Include Glulx Text Effects by Emily Short.
-Include Simple Graphical Window by Emily Short.
-[new graphics handler]
-Include New Graphics by Executaball.
-
 [To decide which number is the absolute value of (N - a number):
 	if N < 0:
 		let N be 0 minus N;
@@ -46,6 +36,17 @@ Include New Graphics by Executaball.
 The release number is 63.
 The story creation year is 2010.
 The maximum score is 2500.
+
+
+Include Version 4 of Menus by Emily Short.
+Include Basic Help Menu by Emily Short.
+Include Basic Screen Effects by Emily Short.
+[Dependencies] [Important - must get loaded early here]
+Include Glulx Entry Points by Emily Short.
+Include Glulx Text Effects by Emily Short.
+Include Simple Graphical Window by Emily Short.
+[New Graphics Handler]
+Include Graphics Director by Executaball.
 
 Section Help Menu
 
@@ -253,6 +254,8 @@ Childrenskins is a list of text that varies.
 Childrenbodies is a list of text that varies.
 NewGraphics is a truth state that varies. NewGraphics is usually true.
 NewGraphicsInteger is a number that varies. NewGraphicsInteger is usually 2.
+NewGraphicsDebugMode is a truth state that varies. NewGraphicsDebugMode is usually false.
+NewGraphicsRatio is a number that varies. NewGraphicsRatio is usually 30.
 
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
@@ -1783,6 +1786,7 @@ Carry out resolving a situation(called X):
 
 After resolving a situation:
 	try looking;
+	[follow the ngraphics_blank rule;]
 
 to delete (X - a grab object):
 	decrease the carried of x by 1;
@@ -4602,7 +4606,7 @@ To Plot:
 
 After going:
 	try looking;
-	project the figure of pixel_icon;
+	[follow the ngraphics_blank rule;]
 	plot;
 
 This is the finish stats rule:
@@ -6261,6 +6265,19 @@ to say gsopt_start:
 		randominfect;
 		randominfect;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+	[Code for letting player select graphics window size]
+	if NewGraphics is true:
+		say "You have enabled the new graphics window. This will be on the right side of your screen and will always take up a proportion of the main screen.[line break]";
+		say "Please choose this value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+		while 1 is 1:
+			say "(5-90)>[run paragraph on]";
+			get a number;
+			if calcnumber > 4 and calcnumber < 91:
+				break;
+			else:
+				say "Invalid Entry. Please enter a number between 5 and 90";
+		now NewGraphicsRatio is calcnumber;
+		clear the screen;
 	say "Want more details on the game and updates? ----- [bold type]http://blog.flexiblesurvival.com/[roman type]  ------[line break][line break]";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -6437,8 +6454,9 @@ When play begins:
 	regularstart; [original start method.  easier to move everything then leave here]
 
 When play begins (this is the graphics window construction rule):
-	[if NewGraphics is true:][Build window regardless in case player decides to turn it on later]
-	build graphics window;
-	[now the graphics window pixel count is 1;]
-	now the graphics window proportion is 1;
-	follow the current graphics drawing rule.
+	if NewGraphics is true:[Build window regardless in case player decides to turn it on later]
+		now the graphics window proportion is NewGraphicsRatio;
+		build graphics window;
+		[now the graphics window pixel count is 1;]
+		follow the ngraphics_blank rule;
+		follow the current graphics drawing rule;

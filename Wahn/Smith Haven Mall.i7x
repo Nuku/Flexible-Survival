@@ -55,6 +55,7 @@ To say mallnorthlot:
 		say "     You carefully make your way along the dark parking lot's main access road, staying alert for any traps or surprises. Of what you can see, there aren't as many cars on this side of the mall as compared to the south side, but there they all still show signs of the former owners['] fates. To the south you can just discern the glass door entrance to the mall's foyer in the low light. Just across the street to the north, a multi-story office building stretches up and blocks out a patch of the starlit sky.";
 	If emap_mall is 1:
 		project the figure of emap_mall_lotnorth_icon;
+		now TempClearBypass is 1;
 
 the scent of Smith Haven Mall Lot North is "The light breeze blowing around you carries the still lingering scent of messy sex and cum.".
 
@@ -72,6 +73,7 @@ To say malleastlot:
 		say "     You slowly and carefully make your way along the dark parking lot's main access road, watching all around you for anything that might surprise you. Finally making it to the east lot, you can just make out more of the same destruction that was in the north lot. Remembering that there is supposed to be a gym in the mall's east lot, you continue walking until you are able to just discern a large building to the southeast. Some light shines from the interior of another big structure in the northeast. East of where you stand lies the opening of a small alley. You can see trash scattered on the ground within.";
 	If emap_mall is 1:
 		project the figure of emap_mall_loteast_icon;
+		now TempClearBypass is 1;
 
 the scent of Smith Haven Mall Lot East is "The light breeze blowing around you carries the still lingering scent of messy sex.".
 
@@ -89,6 +91,7 @@ To say mallwestlot:
 		say "     You slowly and carefully make your way along the dark parking lot's main access road, keeping an eye peeled for anything that might try to surprise you. Finally making it to the west lot, it's hard to tell if there is anything much different. You find on the northwest corner of the lot what looks like a large gas station with a convenience store. The lingering scent of gasoline wafting towards you on the breeze confirms it. Curiosity spurning you on, you continue exploring the west lot until spotting a building, which you know is the China South Buffet.";
 	If emap_mall is 1:
 		project the figure of emap_mall_lotwest_icon;
+		now TempClearBypass is 1;
 
 the scent of Smith Haven Mall Lot West is "The light breeze blowing around you carries the lingering scent of messy sex tinged with the light smell of gasoline.".
 
@@ -106,6 +109,7 @@ To say mallsouthlot:
 		say "     By what you can see around you in the dark, you're pretty sure you're in Smith Haven Mall's vast parking lot. The full, pregnant, moon hanging in the night sky brilliantly casts its light upon a good portion of the mall's lot. With the stars dancing along with the moon in the night sky and the eerie silence of the abandoned cars you can see, the devastation around you is almost serene. To the east and west you know the parking lot continues and ahead of you is the entrance to the mall's food court.";
 	If emap_mall is 1:
 		project the figure of emap_mall_lotsouth_icon;
+		now TempClearBypass is 1;
 
 the scent of Smith Haven Mall Lot South is "The light breeze blowing around you carries the lingering scent of cum and messy sex.".
 
@@ -129,6 +133,7 @@ To say mallfoyer:
 		say "     Your footsteps echo off the marble floor as you walk into the foyer. With it being dark outside right now, the only light in the area is coming from a few lanterns sitting on tables in a coffee shop. You see sitting around them [one of]two[or]three[or]four[at random] wolverines, all of them watching as you walk by the shop.";
 	If emap_mall is 1:
 		project the figure of emap_mall_foyer_icon;
+		now TempClearBypass is 1;
 
 South of Mall Foyer is Mall Atrium.
 
@@ -145,8 +150,9 @@ To say mallatrium:
 		say "     Sunlight streams in from the east and west wing skylights, giving enough light to see inside the atrium. It is a large rotunda, four massive columns rising towards the ceiling and seeming to support the large domed roof. It's hard to see into the semi-dark dome, though you are able to just make out statues of the twelve Olympian gods. Dominating the center of the atrium is a large fountain. You've learned in the past that it's a faithful recreation of the Morosini fountain found in a village in Crete. Dirty, standing water partially fills the fountain's pool, and with the HVAC system down, the light stench of the stagnant water fills the stuffy air around you. To the north is the mall foyer. To the south is the entrance to the food court. To the east and west are the main wings of the mall.";
 	else:
 		say "     The dark, spacious, atrium is barely lit by the few lanterns some rats have set up on the edges of the large fountain sitting in the middle of the rotunda. Their quiet chatter can be heard echoing off the domed roof as they idly sit by the silent fountain, though you don't want to seem rude by eavesdropping on their conversation. With the HVAC system down, the air is stuffy and you can smell the light stench of stagnant water coming from the fountain's pool. To the north is the mall foyer. To the south is the entrance to the food court. To the east and west are the main wings of the mall.";
-	[If emap_mall is 1:
-		project the figure of emap_mall_atrium_icon;]
+	If emap_mall is 1:
+		project the figure of emap_mall_atrium_icon;
+		now TempClearBypass is 1;
 
 East of Mall Atrium is Mall East Wing.
 South of Mall Atrium is Mall Foodcourt.
@@ -171,6 +177,7 @@ To say malleastwing:
 		say "     [bold type]To the east, something that looks like snowfall forms a white curtain cutting you off from the easternmost part of the mall.[roman type]";
 	If emap_mall is 1:
 		project the figure of emap_mall_eastwing_icon;
+		now TempClearBypass is 1;
 
 the scent of Mall East Wing is "It smells like the mallrats.".
 
@@ -190,6 +197,7 @@ To say mfcourt:
 	say "     There is a sign with a temporary notice standing in the hallway, stating that you enter the restrooms at your own risk. Strange - makes you wonder what exactly is in those rooms to the [bold type]east[roman type].";
 	If emap_mall is 1:
 		project the figure of emap_mall_foodcourt_icon;
+		now TempClearBypass is 1;
 
 East of Mall Foodcourt is Mall Restroom.
 
@@ -212,6 +220,7 @@ To say mallwestwing:
 		say "     With it currently dark outside, the only source of illumination in the mall is from the various candles and lanterns spread about. The warm glow of the lights, while not cheery, is far from being gloomy. But even with the low light it's still hard to see very far into the wing. As you carefully walk along, you can see the mallrats either sleeping, cuddling, gathered around some of the lanterns playing varied board and card games, or playing games on the tablets some of the rats have.";
 	If emap_mall is 1:
 		project the figure of emap_mall_westwing_icon;
+		now TempClearBypass is 1;
 
 the scent of Mall West Wing is "It smells like the mallrats milling about.".
 
@@ -234,6 +243,7 @@ To say mallrestroom:
 		say "     With just the light of you lantern, it's hard to see very far around you, and it's hard to shake the feeling that you are not alone in the dark. You occasionally hear [one of]soft growls[or]the scraping of something hard on concrete[or]what sounds like passionate squeaking[or]loud growling and several splashes[or]the squeaking of rusty hinges[at random] coming from the depths of the hole. Who knows what's down there...";
 	If emap_mall is 1:
 		project the figure of emap_mall_restrooms_icon;
+		now TempClearBypass is 1;
 
 the scent of Mall Restroom is "It smells kind of bad in here with the open hole to the sewers.".
 
@@ -252,6 +262,7 @@ To say ShagShackEntranceDesc:
 		say "     Four wolverine watchmen stand guard at the entrance of the large and very open brothel, harshly deflecting those who just want to rush in or anyone who gets too unruly. A few infected lying in a groaning heap in a corner seem to have been the previous targets of the wolverine's fierce protectiveness. Between them stands what might be the caricature of a loan shark - it is an actual anthro shark, wearing a suit that is surprisingly well-tailored for his not quite human body. From the looks of it, the guy is the boss here.";
 	If emap_mall is 1:
 		project the figure of emap_mall_shagshack_icon;
+		now TempClearBypass is 1;
 
 the scent of Shag Shack Entrance is "Scent of messy sex hangs in the air - which isn't surprising, as you can see numerous people humping on the sales floor right now.".
 
@@ -274,6 +285,7 @@ to say BPReceptionDesc:
 		say "     Surprisingly, the reception is staffed even in the midst of everything going on - a pretty anthro doe wearing a pristine white shirt is sitting behind the desk, giving you a well-practiced welcoming smile. On second look, you notice that the glass front of the desk is only very lightly frosted, allowing a teasing view of the woman's long, cream-colored legs behind it.";
 	If emap_mall is 1:
 		project the figure of emap_mall_bransonpartner_icon;
+		now TempClearBypass is 1;
 
 [Further content in the file Wahn/Branson & Partner.i7x]
 
