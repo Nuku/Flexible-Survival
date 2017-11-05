@@ -121,6 +121,9 @@ to say feralwolffemalesex:
 
 
 to say FeralWolfVictorySex:
+	if inasituation is true and FeralWolfSpecialFightNumber < 1: [dealt with in the event]
+		say "";
+		stop the action:
 	if inasituation is false: [standard text]
 		Say "You watch the feral wolf drop to the ground in defeat, slumped over on his side. You can see that he is still very hard, his cock dripping with pre. You realize that this feral wolf is completely at your mercy.";
 	say "     [bold type]You could easily have your way with him if you want.[roman type][line break]";
@@ -157,10 +160,12 @@ to say FeralWolfDesc:
 	if inasituation is false: [regular text]
 		say "     A large canine on all fours. A feral looking wolf on four feet, almost three quarts your height, with great muscles under dense black fur. He has dark [one of]red[or]yellow[or]blue[at random] eyes and white, sharp, canine, teeth. His legs a thick and powerful looking, his whole form obviously built for hunting fast prey. His fur is matted with grime, muck, and some other substance, giving him a very rugged look. When he sees you, his lips peel in a snarl, expose those deadly teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], charging at you with feral rage in his eyes.";
 	else:
-		if FeralWolfSpecialFightNumber is 1: [description of one of the wolves of the wolf pack in the forest]
+		if FeralWolfSpecialFightNumber is 0:
+			say ""; [dealt with at the source]
+		else if FeralWolfSpecialFightNumber is 1: [description of one of the wolves of the wolf pack in the forest]
 			say "     A member of the wolf-pack steps forward, growling as he closes up to you. He is a feral looking wolf on four feet, almost three quarts your height, with great muscles under dense black fur. He has dark [one of]red[or]yellow[or]blue[at random] eyes and white, sharp, canine, teeth. His legs are thick and powerful looking, his whole form obviously built for hunting fast prey. His fur is matted with grime, muck, and some other substance, giving him a very rugged look.";
 			say "     As his pack's chosen prey, the beast doesn't hesitate one second before he pounces on you, lips peeled back to expose his dangerous teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], a look of feral rage in his eyes.";
-		else if FeralWolfSpecialFightNumber is 2: [description of the leader of the wolf pakc in the forest]
+		else if FeralWolfSpecialFightNumber is 2: [description of the leader of the wolf pack in the forest]
 			say "     Finally the last member steps foward, growling as he closes up to you. He looks bigger than the other ones, almost a third of your height, with great muscles under dense white fur. He has icy blue eyes and white, sharp, canine, teeth. His legs are thick and powerful looking, his whole form obviously built for hunting fast prey. His fur is almost as dark as coal, it doesn't shine, almost af if absorbing all the light around him.";
 			say "     As his pack's last standing predator, the beast doesn't hesitate one second before he pounces on you, lips peeled back to expose his dangerous teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], a look of feral rage in his eyes.";
 
