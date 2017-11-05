@@ -42,6 +42,7 @@ Instead of resolving a HypnoGeeks:
 			if player consents: [SAVE]
 				LineBreak;
 				let GroupFightCounter be 0;
+				now fightoutcome is 0; [reset]
 				while fightoutcome < 20 and GroupFightCounter < 2: [runs for 2 times or until the player loses or flees]
 					now inasituation is true; [suppresses the standard texts for the creature - be sure to set that up in the creature file too]
 					challenge "Nerdy Mouse";

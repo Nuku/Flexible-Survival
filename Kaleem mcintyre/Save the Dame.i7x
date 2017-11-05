@@ -16,6 +16,7 @@ Instead of resolving a Save the Dame:
 		say "When the sounds of splashing and yelping begin to play through your ears your curiosity gets the best of you. Padding almost ten yards from where you had been you find yourself growling in anger as you watch a salt and peppered haired female swinging a bat around in an attempt to fend off the pack of labs you had just befriended. You ire though, is not at the woman for trying to hurt the others, but at the others for trying to hurt her as the woman matches the exact description of one of the firefighter that you were supposed to have been looking for. When you see one of the labs get up to rush itself underneath the woman's feet to unbalance her you find yourself moving without thought.";
 		WaitLineBreak;
 		let GroupFightCounter be 0;
+		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and GroupFightCounter < 6: [runs for 6 times or until the player loses or flees]
 			now inasituation is true;
 			challenge "Chocolate Lab";
@@ -74,6 +75,7 @@ To say battleon:
 	say "Split up as they are now, you think you can handle the few labs that are circling you.";
 	WaitLineBreak;
 	let GroupFightCounter be 0;
+	now fightoutcome is 0; [reset]
 	while fightoutcome < 20 and GroupFightCounter < 3: [runs for 3 times (for example) or until the player loses or flees]
 		now inasituation is true;
 		challenge "Chocolate Lab";

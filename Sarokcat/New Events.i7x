@@ -75,7 +75,7 @@ HYG is a number that varies.
 
 Instead of Resolving a Hyena Gang:
 	if hyg is 0:
-		say "Traveling along the empty streets of the city, a large patch of graffiti catches your eye. Pausing for a minute to decipher the large markings you realize that it appears to advertise that you are coming up on some hyena pack's territory. And they appear looking for more people to join...";
+		say "Traveling along the empty streets of the city, a large patch of graffiti catches your eye. Pausing for a minute to decipher the large markings, you realize that it appears to advertise that you are coming up on some hyena pack's territory, and they appear looking for more people to join...";
 		Increase hyg by 1;
 	else if hyg is 1:
 		Say "Searching the mostly empty streets of the city, you come across several familiar graffiti markings in the area. It seems like the territory claimed by that group of Hyenas is spreading rapidly, all of a sudden you feel like someone is watching you intently. Glancing around you don't see anyone near by, but the uneasy feeling of being watched won't leave you alone. Deciding not to continue going in this direction, you turn and head back the way you came, trying not to break into a run as you leave.";

@@ -259,6 +259,7 @@ to say defeatedbywolf:
 		LineBreak;
 		say "Never one to turn away a friend who has helped to save your ass before, you pop your shoulders and then dash off to help the Doberman to fight. Getting to where Tyr is fighting you find the other surrounded by numerous guardsmen and a couple of mean looking pimps, but surprisingly the Dobie is an oasis of calm despite the circle of angry mutants around him. When the group begins to descend on Tyr you're moving to help the Doberman before you know it.";
 		let GroupFightCounter be 0;
+		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and GroupFightCounter < 6: [runs for 6 times (for example) or until the player loses or flees]
 			now inasituation is true;
 			if GroupFightCounter is 1:
