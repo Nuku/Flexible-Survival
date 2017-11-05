@@ -201,7 +201,7 @@ to UndieRaceEvent:
 	say "     As you trek down the walkway, you notice that the paved alley is almost deserted, and that people begin to assemble on the side. You eventually reach a gorilla, who looks busy directing people to stay away from the path, while others install a table and put water bottles on them. [if GorillasMember is 3]'Hey, nice to see you,' the ape greets you. 'A race is going to pass through here. Can you wait on the side for a few moments?'[else]'Hey, you!' the ape hailed. 'Stay out of the walkway! Racers are going to pass through here in a few moments.'[end if]";
 	say "     You follow the instructions and, as the gorilla said, a pack of sportsmen jog down the road. They do not wear the usual running garb: they are all in their undergarnments and running shoes - for those who do not have pawed feet. Virile bulges and bare breasts jiggle with each stride, under the applause and the cheers of the the crowd, on each side of the walkway, cheers on the runners, and some wave their hands in response. The runners pass by the table and pick a water bottle. The first to do so is a young, albinos lizard in a red speedo. He grabs the nearest bottle, then sprinkles its content over his scaly body in order to cool off. His wet scales glisten under the light [if daytimer is night]of the lamp posts[else]of the sun[end if], and several onlookers around you cheer him on even more. The reptile winks at the audience, then begins to run away.";
 	if demon brute is companion of player:
-		say "    You hear a grunt beside you and as you glance to the side, see Brutus['] thick purple shaft standing at full erection. Clearly, the runners - and especially that lizard has aroused the big demon. [if DBCaptureQuestVar is 5]He looks ready to snatch away one of the passing runners, in order to satiate his lust, but your disapproving look discourages him to do so[else]You pat his side amicably, praising him on his self-control[end if].";
+		say "     You hear a grunt beside you and as you glance to the side, see Brutus['] thick purple shaft standing at full erection. Clearly, the runners - and especially that lizard has aroused the big demon. [if DBCaptureQuestVar is 5]He looks ready to snatch away one of the passing runners, in order to satiate his lust, but your disapproving look discourages him to do so[else]You pat his side amicably, praising him on his self-control[end if].";
 	if royal tiger is companion of player:
 		say "     Ryousei looks at the scene, dismayed. 'Poor souls! What is their crime, for being punished like this?' he asks. Stiffling a laugh, you explain to the tiger that this is a race, and they do it willingly. 'Oh, I see. I was wondering that it was a lot of criminals. But why are they barely clothed?' You smile, then shrug.";
 	say "     A few minutes later, every runner passed, and the crowd begins to disperse, and so do you.";
@@ -375,33 +375,40 @@ to LibrarySexEvent:
 		say "     Taking advantage of being on campus, you stop by the library and browse a little. ";
 		if randomnumber is:
 			-- 1:
-				say "      As you wander between the rows of bookshelves, you hear feminine giggles coming from the alley on the other side of the shelf.[Line Break]'Ha ha... S-stop, the-the librarian w-will hear us,' one of them whispers.[Line Break]'She will hear [italic type]you[roman type]. Keep these legs spread.'";
-				say "      [bold type]Do you wish to investigate?[roman type][line break]";
+				say "     As you wander between the rows of bookshelves, you hear feminine giggles coming from the alley on the other side of the shelf.";
+				say "     'Ha ha... S-stop, the-the librarian w-will hear us,' one of them whispers.";
+				say "     'She will hear [italic type]you[roman type]. Keep these legs spread.'";
+				say "     [bold type]Do you wish to investigate?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Curiosity has not killed you (yet).";
 				say "     ([link]N[as]n[end link]) - Lesbian sex is not your thing.";
 				if player consents:
 					LineBreak;
 					say "     Curiosity encourages you to peep on whatever happens on the other side. You walk around the book shelf discretly, and find a couple of girls; a cat and a dog. The feline holds to the bookshelf for her dear life while the canine is kneeling under her and has her snout buried in her friend's crotch. Books and a pair of shorts are sprawled on the carpetted floor.  The cat is panting heavily. 'W-why is it always the same story, e-each time I go to the library to f-fetch some b-booooooh...'";
-					say "     The cat's final words are lost, as her friend's lapping makes her cum, hard. Her claws scratch the wood, thankfully sparing the books. 'Y-You're a bitch, Suz,' the feline chastizes the other girl.[Line Break]'Yup, 'tis what I am,' Suz giggles. Trying not to giggle too, you slip away unnoticed.";
+					say "     The cat's final words are lost, as her friend's lapping makes her cum, hard. Her claws scratch the wood, thankfully sparing the books. 'Y-You're a bitch, Suz,' the feline chastizes the other girl.";
+					say "     'Yup, 'tis what I am,' Suz giggles. Trying not to giggle too, you slip away unnoticed.";
 				else:
 					LineBreak;
 					say "     You resume your perusing, doing your best to ignore the noises.";
 			-- 2:
-				say "As you wander between the rows of bookshelves, you hear a pair of female moans coming from the alley on the other side of the shelf.[Line Break]'F-fuck. It feels s-so good.'[Line Break]'Y-yeah. Keep going.'";
-				say "      [bold type]Do you wish to investigate?[roman type][line break]";
+				say "     As you wander between the rows of bookshelves, you hear a pair of female moans coming from the alley on the other side of the shelf.";
+				say "     'F-fuck. It feels s-so good.'";
+				say "     'Y-yeah. Keep going.'";
+				say "     [bold type]Do you wish to investigate?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Curiosity has not killed you (yet).";
 				say "     ([link]N[as]n[end link]) - Lesbian sex is not your thing.";
 				if player consents:
 					LineBreak;
-					say "     Curiosity encourages you to peep on whatever happens on the other side. You walk around the book shelf discretly, and find a couple of girls; a cat and a dog. The two of them are on the floor, naked, and scissoring each other. Their clothes are sprawled on the carpet, alongside an open book. You cannot see the content from where you are, but the two students seem to check it from time to time. 'L-Liz, how come we never did this before,' the dog pants. 'N-no idea, Suz. I g-guess you can call it 'experimenting'?' The girls keep at it, until they cum at almost the same time. Panting, they help each other standing up, and admire the small pool of cyprine which soaks the spot of the carpet which were under their conjoined crotches. 'Whoops?' Suz asks her friend[Line Break]'Whoops. Let's scram before someone notices this.'[Line Break]You decide to follow the cat's advice as well, and get back to your own business.";
+					say "     Curiosity encourages you to peep on whatever happens on the other side. You walk around the book shelf discretly, and find a couple of girls; a cat and a dog. The two of them are on the floor, naked, and scissoring each other. Their clothes are sprawled on the carpet, alongside an open book. You cannot see the content from where you are, but the two students seem to check it from time to time. 'L-Liz, how come we never did this before,' the dog pants. 'N-no idea, Suz. I g-guess you can call it 'experimenting'?' The girls keep at it, until they cum at almost the same time. Panting, they help each other standing up, and admire the small pool of cyprine which soaks the spot of the carpet which were under their conjoined crotches. 'Whoops?' Suz asks her friend.";
+					say "     'Whoops. Let's scram before someone notices this.'";
+					say "     You decide to follow the cat's advice as well, and get back to your own business.";
 				else:
 					LineBreak;
 					say "     You resume your perusing, doing your best to ignore the noises.";
 			-- 3:
 				say "You decide to wander around between the rows of bookshelves. Picking out one book that interests you, taking a seat at one of the reading tables is almost automatic right after. You find yourself next to an androgynous goat student. [if Girl is banned or Girl is warded]He[else]She[end if] has the complete look of the quiet, nerdy collegian, including the large glasses and the timid look given when your eyes catch each other. After ten minutes or so of reading, you hear something buzz. You look around, but you can not see any mobile phone around. You go back to your reading, but the buzzing comes back at regular intervals, until it becomes rather annoying. You are about to go look for the guilty party, when you hear your carpine neighbour groan. 'E-enough.'";
-				say "      [bold type]Do you wish to talk to the student?[roman type][line break]";
+				say "     [bold type]Do you wish to talk to the student?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) [if Girl is banned or Girl is warded]He[else]She[end if] acts funny. You should talk to [if Girl is banned or Girl is warded]him[else]her[end if].";
 				say "     ([link]N[as]n[end link]) - Something fishy must be going on, you would better focus on your reading.";
@@ -411,16 +418,26 @@ to LibrarySexEvent:
 					say "     Just as she says these words, another buzzing shook her body. She cowered on her chair, trembling. You swear you can hear her moan. 'C-cummm...' She looks up at you again. Her groin area looks damp. 'E-excuse me. I-I need to go to the restroom,' she suddenly says, and she hurries off, the buzzing noise accompanying her on her way out.";
 				else:
 					LineBreak;
-					say "     You resume your reading, doing your best to ignore the vibrating noise. Eventually, the student leaves in a hurry, the buzzing going away with [if Girl is banned or Girl is warded]him[else]her[end if] .";
+					say "     You resume your reading, doing your best to ignore the vibrating noise. Eventually, the student leaves in a hurry, the buzzing going away with [if Girl is banned or Girl is warded]him[else]her[end if].";
 			-- 4:
 				say "You make a round in the library, checking the various sections, when you hear a pair of virile grunts coming from the photocopy room.";
-				say "      [bold type]Do you wish to investigate?[roman type][line break]";
+				say "     [bold type]Do you wish to investigate?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Check what the boys are up to.";
 				say "     ([link]N[as]n[end link]) - Better leave these two guys alone.";
 				if player consents:
 					LineBreak;
-					say "     You find two male students busy around one of the copiers. One of them is an anteater, the other is a donkey. From where you stand, you can hear their chatter.[Line Break]'Hey, don't try to cheat.'[Line Break]'Why would I? Do we even need to-'[Line Break]'We made a bet: one week of blowjobs [italic type]with[roman type] swallowing, and I won't let you get off the hook.'[Line Break]'If you win.'[Line Break] The flash of the photocopier interrupts the teenagers, and a printed paper comes out a few seconds after. The donkey holds him in the air, and you can see that it is a photocopy of the anteater and the donkey's dicks, aligned side to side. The donkey's is bigger, just barely.[Line Break]'Heh, see?' the ass gloats. The anteater groans loudly, but nonetheless, the two share a small, loving kiss.[Line Break]'Well?'[Line Break]'Well what?'[Line Break]'Now that I'm hard, I think I'll start cashing on this bet.'[Line Break] The donkey's buddy groans even louder, then gets on his knees. You decide to give the two of them some privacy.";
+					say "     You find two male students busy around one of the copiers. One of them is an anteater, the other is a donkey. From where you stand, you can hear their chatter.";
+					say "     'Hey, don't try to cheat.'";
+					say "     'Why would I? Do we even need to-'";
+					say "     'We made a bet: one week of blowjobs [italic type]with[roman type] swallowing, and I won't let you get off the hook.'";
+					say "     'If you win.'";
+					say "     The flash of the photocopier interrupts the teenagers, and a printed paper comes out a few seconds after. The donkey holds him in the air, and you can see that it is a photocopy of the anteater and the donkey's dicks, aligned side to side. The donkey's is bigger, just barely.";
+					say "     'Heh, see?' the ass gloats. The anteater groans loudly, but nonetheless, the two share a small, loving kiss.";
+					say "     'Well?'";
+					say "     'Well what?'";
+					say "     'Now that I'm hard, I think I'll start cashing on this bet.'";
+					say "     The donkey's buddy groans even louder, then gets on his knees. You decide to give the two of them some privacy.";
 				else:
 					LineBreak;
 					say "     You resume your perusing, doing your best to ignore the noises.";
@@ -437,12 +454,12 @@ to CollegeLibraryBJ:
 	if player consents:
 		LineBreak;
 		say "     'Okay. Make your bits accessible, and stay quiet, then. Don't wanna get busted by the librarian.' You oblige the unknown student. You are curious to know what he or she looks like, but the table prevents you from seeing anything.";
-		if player is male:
+		if player is herm:
+			say "     You feel a tongue kiss your [cockname of player] penis, and roll along his length. It quickly grows hard, and the mysterious stress reliever sucks its tip down their mouth. You contain your moans the best you can, while you feel the wet and warm embrace bob down on your dick, taking its [Cock Size Desc of player] length with surprising ease. Meanwhile, their hand plays with your clit, then slips inside your pussy and starts fingering you, progressively adding fingers until you cannot take anymore. You notice that some of your table neighbours look at you with the same puzzlement as you with the horse, and you look down on your magazine so hard that you do not realize that, for the last ten minutes, you did not have turn the pages a single time. The kinkiness of your exhibitionism brings you quickly over the edge, and you tense on your seat, as you send your load of cum directly into an inviting maw and squirts fem-cum somewhere, either on them or on the floor.";
+		else if player is male:
 			say "     You feel a tongue kiss your [cockname of player in lower case] penis, and roll along its length. It quickly grows hard, and the mysterious stress-reliever sucks the tip into their mouth. You contain your moans the best you can, while you feel the wet and warm embrace bob down on your dick, taking its [Cock Size Desc of player] length with surprising ease. Meanwhile, a hand fondles your balls, adding to the pleasure of the impromptu fellatio. You notice that some of your table neighbours look at you with the same puzzlement as you with the horse, and you look down on your magazine so hard that you do not realize that, for the last ten minutes, you did not have turn the pages a single time. The kinkiness of your exhibitionism brings you quickly over the edge, and you tense on your seat, muffling your grunts as you send your load of cum directly into an inviting maw.";
 		else if player is female:
 			say "     You feel a tongue pass against your [Cunt Size Desc of player] pussy. Its owner is visibly experienced. First, they circle around your pleasure button, playing with it with the tip of their tongue, then sucking it with their mouths, and making you see stars by the same occasion. Then, the tongue slips between your labia, and wastes no time exploring inside. The tongue scouts, tests, and once it has found your g-spot, assaults him relentlessly until you are about to reach your limits, before suddenly stopping and going back to harassing your clit. You notice that some of your table neighbours look at you with the same puzzlement as you with the horse, and you look down on your magazine so hard that you do not realize that, for the last ten minutes, you did not have turn the pages a single time. The kinkiness of your exhibitionism brings you quickly over the edge, and you tense on your seat, muffling your grunts as the mysterious stress-reliever laps down every drop of femcum they can gather.";
-		else if player is herm:
-			say "     You feel a tongue kiss your [cockname of player] penis, and roll along his length. It quickly grows hard, and the mysterious stress reliever sucks its tip down their mouth. You contain your moans the best you can, while you feel the wet and warm embrace bob down on your dick, taking its [Cock Size Desc of player] length with surprising ease. Meanwhile, their hand plays with your clit, then slips inside your pussy and starts fingering you, progressively adding fingers until you cannot take anymore. You notice that some of your table neighbours look at you with the same puzzlement as you with the horse, and you look down on your magazine so hard that you do not realize that, for the last ten minutes, you did not have turn the pages a single time. The kinkiness of your exhibitionism brings you quickly over the edge, and you tense on your seat, as you send your load of cum directly into an inviting maw and squirts fem-cum somewhere, either on them or on the floor.";
 		say "     While you catch your breath, the person under the table wipes your groin clean. 'Felt good, right? Come back anytime. I'm not the only one doing this, anyway.' You look around the reading room, and, effectively, notices several tense faces around the tables, and more-or-less-quiet moans. Once you hear the student crawl towards another visitor, you leave your seat, which is promptly taken by another person.";
 	else:
 		LineBreak;
@@ -465,7 +482,7 @@ to BrutusLibraryEvent:
 		now CollegeLibraryBrutusEncounter is 1;
 	else:
 		LineBreak;
-		say "      You quickly walk away, and take the opportunity to think about expanding your own base's collection with the campus. Your constructive train of thoughts is interrupted when Brutus pats you on the shoulder. You look at his cum-covered body, and he returns [if DBCaptureQuestVar is 5]an unapologetic grin[else]a content shrug[end if].";
+		say "     You quickly walk away, and take the opportunity to think about expanding your own base's collection with the campus. Your constructive train of thoughts is interrupted when Brutus pats you on the shoulder. You look at his cum-covered body, and he returns [if DBCaptureQuestVar is 5]an unapologetic grin[else]a content shrug[end if].";
 
 to RyouseiLibraryEvent:
 	say "     You take advantage of being on campus to stop by the library and browse a few books. Next to you, Ryousei is, funnily, quieter than usual. You turn your head, and realise that he has left, probably to wander the library on his own. You explore the alleys, letting the faint noises of sex guide you. After a couple of false leads, you eventually recognize his meek protests, coming from the photocopy room.";
@@ -475,8 +492,16 @@ to RyouseiLibraryEvent:
 	say "     ([link]N[as]n[end link]) - He is a big boy. He will manage.";
 	if player consents:
 		LineBreak;
-		say "     '[if Girl is not banned and Girl is not warded]Sir[else]Madam[end if], please go slower. I am... Aaah...'[Line Break]The door is locked, but you can peek through the keyhole. You see Ryousei, lying on his back, straddled by one of the library employees, a middle-aged [if Girl is not banned and Girl is not warded]fox[else]vixen[end if].[Line Break]'Tut, tut... No discussing a staff's order. Now, stay still, and be quieter. You would not want someone to catch us together, would you?'[Line Break]The both of them go like this for some time, with the poor Ryousei trying to stiffle his moans of pleasure and doing poorly at it. He does not last long, as you can hear him grunt 'Ah! [if Girl is not banned and Girl is not warded]Sir[else]Madam[end if], I am gonna... gonna....' followed by a long series of lustful grunts and mrowls.";
-		say "     The librarian caresses the tiger's soft fur, and eventually stands back up.[Line Break]'Well, that was a good way to relieve tension. You would not believe how horny hearing all these teenagers fuck in the library is.'[Line Break]Ryousei gets back on his feet as well: 'I, er, guess?' he comments, while he fetches his kimono. 'So, are we even?'[Line Break]'What do you mean?'[Line Break]'The fine? For making noise in this place?'[Line Break]'Oh, right. Sure, sure. Just, don't do it again. Or, do it again, and let's work this out together, hm?'";
+		say "     '[if Girl is not banned and Girl is not warded]Sir[else]Madam[end if], please go slower. I am... Aaah...'";
+		say "     The door is locked, but you can peek through the keyhole. You see Ryousei, lying on his back, straddled by one of the library employees, a middle-aged [if Girl is not banned and Girl is not warded]fox[else]vixen[end if].";
+		say "     'Tut, tut... No discussing a staff's order. Now, stay still, and be quieter. You would not want someone to catch us together, would you?'";
+		say "     The both of them go like this for some time, with the poor Ryousei trying to stiffle his moans of pleasure and doing poorly at it. He does not last long, as you can hear him grunt 'Ah! [if Girl is not banned and Girl is not warded]Sir[else]Madam[end if], I am gonna... gonna....' followed by a long series of lustful grunts and mrowls.";
+		say "     The librarian caresses the tiger's soft fur, and eventually stands back up.";
+		say "     'Well, that was a good way to relieve tension. You would not believe how horny hearing all these teenagers fuck in the library is.'";
+		say "     Ryousei gets back on his feet as well: 'I, er, guess?' he comments, while he fetches his kimono. 'So, are we even?'";
+		say "     'What do you mean?'";
+		say "     'The fine? For making noise in this place?'";
+		say "     'Oh, right. Sure, sure. Just, don't do it again. Or, do it again, and let's work this out together, hm?'";
 		say "     You have barely the time to jump away from the door before Ryousei walks out from the room, his tail waving in the air behind him. It seems he has a new fan. You go back at the entrance of the library, and find him waiting for you. You ask him innocently why he looks discheveld all of a sudden. 'Well, this place of knowledge is so, er, admirable,' the feline begins while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You silently sympathize with the tiger, as you see the librarian walk back to [if Girl is not banned and Girl is not warded]his[else]her[end if] desk and blow him a kiss from her chair.";
 		now CollegeLibraryRyouseiEncounter is 1;
 	else:

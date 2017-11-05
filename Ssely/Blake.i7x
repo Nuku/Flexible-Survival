@@ -77,7 +77,7 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 100):
 			-- 3:
 				say "     'Oh for gods sake, kid. I've already messed with you recently. Give me a while, I've got shit to do other than humiliate you, ahhaha!' You walk away, whining in submission.";
 	else if HP of Blake is 3: [returning again after one rejection]
-		say "     'Hah, there you are.' the trashy rat chuckles out. 'I've been waiting to use you for a while, kid.' Grinning, he lures you closer, his finger twitching in response to your presence. Of course, you came closer - your past introduction to his methods of forcing you into subservience carrying along - your mind already littered with thoughts of serving the big, dominant leather-clad rat. Instantly, you fall to your knees.";
+		say "     'Hah, there you are,' the trashy rat chuckles out. 'I've been waiting to use you for a while, kid.' Grinning, he lures you closer, his finger twitching in response to your presence. Of course, you came closer - your past introduction to his methods of forcing you into subservience carrying along - your mind already littered with thoughts of serving the big, dominant leather-clad rat. Instantly, you fall to your knees.";
 		let randomnumber be a random number from 1 to 3;
 		if randomnumber is:
 			-- 1:

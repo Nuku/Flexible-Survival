@@ -194,7 +194,7 @@ to say gshep_sexargue:				[Sex role argument]
 	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 ) or ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_inactive > 0 ) or ( gshep_postfight > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ) or ( gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 		say "[gshep_collar_prompt]";
 
-instead of going inside from the Grey Abbey Library while gshep is tamed and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ) and lastscene of gshep - turns >= 4 and ( cocks of player > 0 or cunts of player > 0 ) and (gshep_bed_scene is 0 or gshep_inactive is 0) and a random chance of 2 in 3 succeeds: [Discipline argument / inactivity argument]
+instead of going down from the Grey Abbey Library while gshep is tamed and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ) and lastscene of gshep - turns >= 4 and ( cocks of player > 0 or cunts of player > 0 ) and (gshep_bed_scene is 0 or gshep_inactive is 0) and a random chance of 2 in 3 succeeds: [Discipline argument / inactivity argument]
 	move player to bunker;
 	if debugactive is 1:
 		say "     DEBUG -> Korvin scene on bunker entry - Gsd_pet: [Gsd_pet] <- DEBUG[line break]";

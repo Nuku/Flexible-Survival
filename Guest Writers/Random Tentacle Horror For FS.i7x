@@ -136,7 +136,7 @@ to say horror victory:
 				say "A slimy tentacle forces itself into your mouth, and begins to pump chemicals directly into your stomach,";
 		if cunts of player is 0:
 			say " causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits,";
-		say "[if hascunt is 1]A[else]a[end if] tentacle twice the size of the others forces its way inside of you. Filling you [if cuntsmall is 1]far beyond your orifice's capacity, and stretching you deeper and wider than your cunt could initially contain.[else]to your limit.[end if] It pounds within you, battering your cervix, before finally gaining entrance.[if multicunt is 1] Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into.";
+		say "[if hascunt is 1]A[else]a[end if] tentacle twice the size of the others forces its way inside of you. Filling you [if cuntsmall is 1]far beyond your orifice's capacity, and stretching you deeper and wider than your cunt could initially contain[else]to your limit[end if]. It pounds within you, battering your cervix, before finally gaining entrance.[if multicunt is 1] Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into.";
 		if cocks of player is 1:
 			say "A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you.";
 		if cocks of player > 1:

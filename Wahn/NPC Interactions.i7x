@@ -7,7 +7,7 @@ instead of navigating Grey Abbey Library while (Xerxes is in Grey Abbey Library 
 	move player to Grey Abbey Library;
 	say "[XerxesSnowInteraction]";
 
-instead of going outside from Bunker while (Xerxes is in Grey Abbey Library and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Xerxes is in Grey Abbey Library and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[XerxesSnowInteraction]";
 
@@ -32,7 +32,7 @@ instead of navigating Grey Abbey Library while (Helen is in Grey Abbey Library a
 	move player to Grey Abbey Library;
 	say "[HelenSnowInteraction]";
 
-instead of going outside from Bunker while (Helen is in Grey Abbey Library and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Helen is in Grey Abbey Library and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[HelenSnowInteraction]";
 
@@ -57,7 +57,7 @@ instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and
 	move player to Grey Abbey Library;
 	say "[AmySnowInteraction]";
 
-instead of going outside from Bunker while (Amy is in Grey Abbey Library and HP of Amy > 1 and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Amy is in Grey Abbey Library and HP of Amy > 1 and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[AmySnowInteraction]";
 
@@ -77,7 +77,7 @@ instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and
 	move player to Grey Abbey Library;
 	say "[AmyFelinoidInteraction]";
 
-instead of going outside from Bunker while (Amy is in Grey Abbey Library and HP of Amy > 1 and Felinoid companion is tamed and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Amy is in Grey Abbey Library and HP of Amy > 1 and Felinoid companion is tamed and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[AmyFelinoidInteraction]";
 
@@ -98,7 +98,7 @@ instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and
 	move player to Grey Abbey Library;
 	say "[AmyAlexandraInteraction]";
 
-instead of going outside from Bunker while (Amy is in Grey Abbey Library and Alexandra is in Grey Abbey Library and HP of Amy > 1 and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Amy is in Grey Abbey Library and Alexandra is in Grey Abbey Library and HP of Amy > 1 and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[AmyAlexandraInteraction]";
 
@@ -119,7 +119,7 @@ instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and HP 
 	move player to Grey Abbey Library;
 	say "[CarlXerxesInteraction]";
 
-instead of going outside from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Xerxes is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Xerxes is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[CarlXerxesInteraction]";
 
@@ -147,7 +147,7 @@ instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and HP 
 	move player to Grey Abbey Library;
 	say "[CarlHelenInteraction]";
 
-instead of going outside from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Helen is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Helen is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[CarlHelenInteraction]";
 
@@ -176,7 +176,7 @@ instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and HP 
 	move player to Grey Abbey Library;
 	say "[CarlDavidInteraction]";
 
-instead of going outside from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and David is in Bunker and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and David is in Bunker and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[CarlDavidInteraction]";
 

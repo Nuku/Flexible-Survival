@@ -16,6 +16,7 @@ Instead of resolving a Save the Dame:
 		say "When the sounds of splashing and yelping begin to play through your ears your curiosity gets the best of you. Padding almost ten yards from where you had been you find yourself growling in anger as you watch a salt and peppered haired female swinging a bat around in an attempt to fend off the pack of labs you had just befriended. You ire though, is not at the woman for trying to hurt the others, but at the others for trying to hurt her as the woman matches the exact description of one of the firefighter that you were supposed to have been looking for. When you see one of the labs get up to rush itself underneath the woman's feet to unbalance her you find yourself moving without thought.";
 		WaitLineBreak;
 		let GroupFightCounter be 0;
+		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and GroupFightCounter < 6: [runs for 6 times or until the player loses or flees]
 			now inasituation is true;
 			challenge "Chocolate Lab";
@@ -74,6 +75,7 @@ To say battleon:
 	say "Split up as they are now, you think you can handle the few labs that are circling you.";
 	WaitLineBreak;
 	let GroupFightCounter be 0;
+	now fightoutcome is 0; [reset]
 	while fightoutcome < 20 and GroupFightCounter < 3: [runs for 3 times (for example) or until the player loses or flees]
 		now inasituation is true;
 		challenge "Chocolate Lab";
@@ -101,7 +103,7 @@ to say fallenone:
 	say "With her attention captured you inform the other firefighter about how you've helped to rescue both Dagaz and Birch, at the behest of Kenaz. You then let the female firefighter know that they should, more than likely, be on their way to the firehouse to meet up with Kenaz and that she should probably go there to meet up with them. 'And I'm supposed to believe you, because what?' Her suspicion is valid, so you can't fault the woman for that, but in reasoning with her about how you wouldn't have known she was part of the fire station crew if you weren't actively looking for them the woman begins to reconsider her mistrustful thoughts. 'And you're doing all of this out of the kindness of your heart?' She snorts disbelievingly at that point.";
 	WaitLineBreak;
 	say "You remind the woman on how you just put yourself in danger to try and save her kester. 'Oh, right. Never mind. Well, I guess I've got me a new place to stay then. Heh, and here I was just complaining about the smell in my basement,' she mutters this part under her breath. 'Alright, if you're the real deal then go and tell Kenaz that I'll be on my over soon.' Trying to ask the other if she needs any help in getting back to... wherever she had come from... gets you an idle wave of the hand.";
-	say "'You probably need to get patched up more than me,' The fire fighter says and you look down at your flowing chocolate body before lifting an eye brow in curiosity. 'Ok, so maybe not, but I don't need any help.' The female firefighter smiles to you somewhat tiredly before turning and then limping away off about her way. At seeing the other in such obvious pain you silently shadow the salt and pepper haired firefighter just to make sure that the other is truly going to be alright. When you see the woman knock off some trash bags hiding a motor scooter, and then subsequently watch as the firefighter gets onto the machine, kicks the engine into gear and then drive off, you chuckle some before turning to go about your way.";
+	say "'You probably need to get patched up more than me,' the fire fighter says and you look down at your flowing chocolate body before lifting an eye brow in curiosity. 'Ok, so maybe not, but I don't need any help.' The female firefighter smiles to you somewhat tiredly before turning and then limping away off about her way. At seeing the other in such obvious pain you silently shadow the salt and pepper haired firefighter just to make sure that the other is truly going to be alright. When you see the woman knock off some trash bags hiding a motor scooter, and then subsequently watch as the firefighter gets onto the machine, kicks the engine into gear and then drive off, you chuckle some before turning to go about your way.";
 	WaitLineBreak;
 	say "With that bat of hers placed precariously across her lap you don't think you'll have to worry about the other woman anytime too soon as you head off about your way to try and find a place to rest up. Maybe going back to the firehouse to [bold type]check on Kenaz[roman type] would be a good refuge for you...";
 

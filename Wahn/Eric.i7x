@@ -164,7 +164,7 @@ to say lroomdesc:
 	else if (HP of Eric is 100): [Eric never came back from Stacy's dorm]
 		say "     This is the men's lockerroom of the sports arena in the Tenvale campus. Looks like someone has made camp here - you see an improvised bed out of lots and lots of towels and empty bottles and wrappers of energy drinks and bars. Not a bad defensive spot either - the few existing windows are high up on the walls and pushing one of the lockers in front of the door should keep out all but the most determined intruders.";
 
-instead of going inside from the Grey Abbey Library while (libido of Eric is 0 and bodyname of player is "Furling"):
+instead of going down from the Grey Abbey Library while (libido of Eric is 0 and bodyname of player is "Furling"):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FURLING FRIGHT WALKIN [line break]";
@@ -1007,7 +1007,7 @@ to say EricSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Have Eric fuck David";
 		now sortorder entry is 10;
-		now description entry is "Make the soldier boy ride Eric's [if HP of Eric is 22]horsecock.[else if HP of Eric is 32]satyr cock.[end if]";
+		now description entry is "Make the soldier boy ride Eric's [if HP of Eric is 22]horsecock[else if HP of Eric is 32]satyr cock[end if].";
 	[]
 	if lust of Eric is 3 and (HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15) and HP of David is 4 and lastfuck of David - turns >= 6: [Eric ready for sex with David, non-virgin cuntboy, David in the bunker and ready]
 		choose a blank row in table of fucking options;
@@ -1265,7 +1265,7 @@ to say EricSex8: [player's ass fucked by Eric]
 		say "			[WaitLineBreak]";
 		say "     He looks a bit dumbstruck at you for a second, then has to bend over to take the strain off his rapidly growing erection trapped inside his shorts. You don't think he had any gay encounters before all this, but after the temporary gender confusion and new urges to mount anyone from behind he inherited from the centaur donor of his 'cure', it seems his body is ready for it. And with the fun you're having together and him being incredibly thankful for saving him, you're sure he'll get over his last hangups soon too. After getting over the first moment of restraint, he almost rips his shirt off, then slides down his shorts and undies to free the massive erection dangling between his legs.";
 		say "     Turning you over a bit so your butt is right at the edge of the bed, he stands behind you and rubs his horsecock up and down your crack. Taking hold of his shaft, he then aims the flared tip at your opening and pushes against it slow and steady until it opens up and he pops inside. You gasp as he enters your body, then quickly start moaning as the pain of the initial penetration fades against the feelings of his thick cock rubbing against your inner walls as he slides deeper. Holding on to your hips with both hands, Eric sinks himself into you, holding still a moment as he bottoms out. Then he starts fucking in and out of you - first slowly, then faster and faster as his arousal rises.";
-		say "     Grunting in satisfaction of mounting someone from behind, he puts his arms around you, feeling up your chest and kissing your neck as he sinks his shaft all the way inside. Then he starts all-out rutting, the thick horsecock sliding in and out of your tight hole in hard and deep moves. You quickly climax from this animalistic fuck, your body shaking as you [if cocks of player > 0]shoot spurt after spurt of cum onto the sheets[else if cunts of player > 0]drip a copious amount of femcum onto the sheets[else]have an orgasm.[end if]. Not too long after, Eric follows suit, filling your hole with a massive load of his fertile seed from his large horse balls.[mimpregchance]";
+		say "     Grunting in satisfaction of mounting someone from behind, he puts his arms around you, feeling up your chest and kissing your neck as he sinks his shaft all the way inside. Then he starts all-out rutting, the thick horsecock sliding in and out of your tight hole in hard and deep moves. You quickly climax from this animalistic fuck, your body shaking as you [if cocks of player > 0]shoot spurt after spurt of cum onto the sheets[else if cunts of player > 0]drip a copious amount of femcum onto the sheets[else]have an orgasm[end if]. Not too long after, Eric follows suit, filling your hole with a massive load of his fertile seed from his large horse balls.[mimpregchance]";
 		say "			[WaitLineBreak]";
 		say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'Wow. You're the best.' followed by a last little thrust of his manhood into you.";
 	else if HP of Eric is 32 and bodyname of player is "Satyr": [satyr-cock Eric + satyr-body player]
@@ -1888,7 +1888,7 @@ instead of going inside from Grey Abbey Library while (Level of Eric > 0 and Lev
 	say "     So, what do you tell him? That there's no shame in having some fun, even without you and with... exotic partners ([link]Y[as]y[end link])? Or do you just console him and tell him to avoid the felinoid in the future ([link]N[as]n[end link])?";
 	if player consents: [more felinoid scenes]
 		LineBreak;
-		say "     Putting your arms around Eric and holding him, you console him with calm words, explaining to him that you're not angry or anything. After all, it's a whole new world with the nanites and all, so why should anyone be restrained by the morals of the old one. The young athlete's eyes get wide in realization as you remind him that you brought the felinoid home with you, even after knowing its lusty character. Pulling him close again, you squeeze Eric's tight ass and whisper in his ear that [if Level of Eric is 1 or Level of Eric is 2]you saw the felinoid follow him in the library and were okay with it.[else]you were there and did watch the hot little scene of the felinoid mounting him.[end if] A visibly relieved Eric stutters 'So you did... you let... he did...', then takes a deep breath before admitting 'He felt so good - so right - inside me, having his hard cock fuck me, the soft fur of his belly against my back...' His breathing becomes quicker as he relives his experience with the felinoid in memory, clearly getting aroused by it.";
+		say "     Putting your arms around Eric and holding him, you console him with calm words, explaining to him that you're not angry or anything. After all, it's a whole new world with the nanites and all, so why should anyone be restrained by the morals of the old one. The young athlete's eyes get wide in realization as you remind him that you brought the felinoid home with you, even after knowing its lusty character. Pulling him close again, you squeeze Eric's tight ass and whisper in his ear that [if Level of Eric is 1 or Level of Eric is 2]you saw the felinoid follow him in the library and were okay with it[else]you were there and did watch the hot little scene of the felinoid mounting him[end if]. A visibly relieved Eric stutters 'So you did... you let... he did...', then takes a deep breath before admitting 'He felt so good - so right - inside me, having his hard cock fuck me, the soft fur of his belly against my back...' His breathing becomes quicker as he relives his experience with the felinoid in memory, clearly getting aroused by it.";
 		LineBreak;
 		say "     Do you want to seize the moment for some hot action between the sheets with Eric ([link]Y[as]y[end link]), or do you just leave him to dwell on his lusty thoughts ([link]N[as]n[end link])?";
 		now Level of Eric is 4;
@@ -1910,17 +1910,17 @@ instead of going inside from Grey Abbey Library while (Level of Eric is 4 and Er
 	say "     The animalistic coupling of the felinoid and his eager and willing partner is quite a show, driving your arousal to new heights as you watch. Mostly content to let Eric ride his cock, the felinoid nevertheless sometimes humps his crotch up without warning and shafts Eric deeply, drawing ecstatic howls from the young man. Eventually, the student athlete's moans and pants rise up to a climactic shout, announcing his orgasm far and wide. Purring even louder in obvious satisfaction at having made Eric come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat rolls over on his side to lounge in satisfaction, taking Eric with him, still impaled on his shaft and soon held against soft belly fur with a muscular forelimb.";
 	now lastfuck of Eric is turns;
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and Rane is in Grey Abbey 2F and Dexterity of Eric is 0):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and Rane is in Grey Abbey 2F and Dexterity of Eric is 0):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC RANE TALK EVENT [line break]";
 	if HP of Eric < 99:
 		project the figure of Eric_face_icon;
-	say "     As you come down the stairway and walk into the main room of the bunker, you find that Eric is already waiting for you. He gets moving from where he was leaning against a wall nearby and approaches with some hint urgency in his step. 'Welcome back,' he greets you, putting a hand on your arm, then bites his lip for a second before he continues to say, 'I - I wanted to ask you about... the demon. The blue one, up there.' The young man waves a hand to the ceiling, indicating the library building above your heads. He's talking about Rane, you realize, and so you tell your red-headed friend about him, and that he's very different than the rampaging demon brutes[if demon brute is tamed and DBCaptureQuestVar > 5] like Brutus once was.[else if demon brute is tamed] like Brutus.[else].[end if]. Eric calmly listens to your explanation and at least some of the tension leaves his body, expelled as the student takes a deep breath and lets it out again. You also realize that up till now, he had been making sidelong glances at the bunker entrance, almost as if he expected for Rane to suddenly burst through it.";
+	say "     As you come down the stairway and walk into the main room of the bunker, you find that Eric is already waiting for you. He gets moving from where he was leaning against a wall nearby and approaches with some hint urgency in his step. 'Welcome back,' he greets you, putting a hand on your arm, then bites his lip for a second before he continues to say, 'I - I wanted to ask you about... the demon. The blue one, up there.' The young man waves a hand to the ceiling, indicating the library building above your heads. He's talking about Rane, you realize, and so you tell your red-headed friend about him, and that he's very different than the rampaging demon brutes[if demon brute is tamed and DBCaptureQuestVar > 5] like Brutus once was[else if demon brute is tamed] like Brutus[end if]. Eric calmly listens to your explanation and at least some of the tension leaves his body, expelled as the student takes a deep breath and lets it out again. You also realize that up till now, he had been making sidelong glances at the bunker entrance, almost as if he expected for Rane to suddenly burst through it.";
 	say "     'So - he's an oni. Called Rane,' Eric says toughtfully, then asks, 'And you're sure he's... safe, to be around? Hm, you must have - otherwise you wouldn't have brought him, right? Guess I should learn not to judge people by their looks. It is just... he looks pretty fierce. So tall, and muscle-packed, plus there's the horns too.' The young man gives a little helpless shrug, and you can feel that he can't help but hold some reservation still - not after his previous encounters with some of the bigger and fiercer infected, like the furling that bit him, or his ex-girlfriend now being a cheerleader hulk with a massive dick between her legs. You spend a few more minutes trying to calm Eric further, explaining in a soft voice that Rane just isn't the type to get violent about sexual matters. Eventually, the college athlete gives a relieved sigh, then says, 'Okay, thanks. I'll get some jogging done between the rows of bookshelves in the library then. Gotta stay in shape, and I've hidden down here for long enough.' A moment later, he's gone after giving a friendly smile, leaving you standing in the room on your own.";
 	now Dexterity of Eric is 1;
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 10 or HP of Eric is 11 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 1 and Rane is in Grey Abbey 2F and findwires is 2 and fixedgens is 2):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 10 or HP of Eric is 11 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 1 and Rane is in Grey Abbey 2F and findwires is 2 and fixedgens is 2):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC RANE SHOWER EVENT - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -1941,7 +1941,7 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 		if player consents:
 			LineBreak;
 			say "     Not wasting a second, you hurry into the room and loudly clear your throat, drawing the attention of both the oni and human. Rane's expression goes from surprise to a playful grin, nodding to you and then to Eric - offering to double-team the cuntboy between you, from your guess. But no, you're here to rescue Eric, so you shake your head, then calmly tell Rane that you want to talk with him outside. It is obvious that he isn't all that pleased about this, and Rane's muscles ripple as he tenses, only to relax again as he shrugs. The oni leans in even closer to Eric and takes in a deep breath of the college athlete's smell, then says, 'See you later, sweet-cheeks.' And with that, he moves to casually pick up his discarded clothes and walks out with you. Left behind, Eric slumps against the wall in relief, panting as he works to regain his composure. Part of which means taking a cold shower, so he pulls a lever on the wall all the way to one side and steps under the spray.";
-			say "     Leaving the student alone in the shower area, you and Rane step out and as soon as you can hear the water running from behind you, the oni whirls to confront you, 'What the hell? Why did you cock-block me? He wanted it - I mean, go in there and take a sniff if you don't believe me. His body is screaming that he's ripe for the picking!' Reaching down to grab his hard shaft and wag it towards you, the oni then smacks the wall beside himself in frustration, cracking one of the tiles into several pieces. 'Damn it - cute and sexy, the perfect little cuntboy and you... oh. You got dibs on him, am I right?[if Dexterity of Eric is 11] Took that pussy for a ride, claimed him?[else if Dexterity of Eric is 10] Got something planned to pop his cherry in a special occasion?[end if]' The oni's slitted eyes flash at you, just for a second, hinting at his inner demon's rage at not being unleashed on the young man he had already thought his. There is jealousy there, and lust without bounds. But then, the impression is gone, with Rane smoothing out his expression to a grudging smile. With about the same tone as a frat guy lamenting over a friend taking the last beer, he then says, 'Aww man - you're one lucky dog. Can't you share him? No? Fine.' Rane deflates a bit as you shake your head, then makes a fist and tugs his hand-wraps into position before leaving. Something about that tells you that even though he may have given in now, the matter is far from resolved for him. And that you definitively wouldn't want to be whatever he finds first outside and takes his frustration out on...";
+			say "     Leaving the student alone in the shower area, you and Rane step out and as soon as you can hear the water running from behind you, the oni whirls to confront you, 'What the hell? Why did you cock-block me? He wanted it - I mean, go in there and take a sniff if you don't believe me. His body is screaming that he's ripe for the picking!' Reaching down to grab his hard shaft and wag it towards you, the oni then smacks the wall beside himself in frustration, cracking one of the tiles into several pieces. 'Damn it - cute and sexy, the perfect little cuntboy and you... oh. You got dibs on him, am I right[if Dexterity of Eric is 11]? Took that pussy for a ride, claimed him[else if Dexterity of Eric is 10]? Got something planned to pop his cherry in a special occasion[end if]?' The oni's slitted eyes flash at you, just for a second, hinting at his inner demon's rage at not being unleashed on the young man he had already thought his. There is jealousy there, and lust without bounds. But then, the impression is gone, with Rane smoothing out his expression to a grudging smile. With about the same tone as a frat guy lamenting over a friend taking the last beer, he then says, 'Aww man - you're one lucky dog. Can't you share him? No? Fine.' Rane deflates a bit as you shake your head, then makes a fist and tugs his hand-wraps into position before leaving. Something about that tells you that even though he may have given in now, the matter is far from resolved for him. And that you definitively wouldn't want to be whatever he finds first outside and takes his frustration out on...";
 			now Dexterity of Eric is 50;
 		else:
 			LineBreak;
@@ -1982,7 +1982,7 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 		say "     Nah, it'll be alright. Rane isn't a bad guy. And anyways, you can't babysit Eric all the time. With a shrug, you turn your attention to other matters.";
 		now Dexterity of Eric is 2;
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 2):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 2):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC RANE AFTERMATH TALK - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -2029,7 +2029,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eri
 	now Dexterity of Eric is 5;
 	now EricFleeingCountdown is turns; [12 turns from now, he'll have run off, leaving a note]
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns < 13):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns < 13):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FLEEING FROM RANE - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -2038,7 +2038,7 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 	now Dexterity of Eric is 6; [Eric's gone!]
 	remove Eric from play;
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns > 12):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns > 12):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FLED FROM RANE - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -2046,7 +2046,7 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 	now Dexterity of Eric is 6; [Eric's gone!]
 	remove Eric from play;
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 7 and EricFleeingCountdown - turns > 12):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 7 and EricFleeingCountdown - turns > 12):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC RESCUED AFTERMATH - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -2114,7 +2114,7 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 		now Dexterity of Eric is 8; [Eric and Rane Talked]
 	now lastRaneEricInteraction is turns;
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric is 8 or Dexterity of Eric is 9)):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric is 8 or Dexterity of Eric is 9)):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC POST MAKE-UP SEX WITH RANE - CHAT - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -2185,7 +2185,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eri
 [   6: Carl fucked Eric                                              ]
 [  50: player told Carl to stop pursuing Eric                        ]
 
-instead of going outside from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+instead of going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
@@ -2204,7 +2204,7 @@ to say EricMeetsCarl:
 	now CarlEricInteraction is 1;
 	now lastCarlEricInteraction is turns;
 
-instead of going outside from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
+instead of going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
 	move player to Grey Abbey Library;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
@@ -2662,7 +2662,7 @@ instead of going down from Grey Abbey 2F while (Eric is in Bunker and (HP of Eri
 		say "     DEBUG: ERIC MEETS ALEXANDRA - AlexandraEricInteraction: [AlexandraEricInteraction][line break]";
 	say "[EricMeetsAlexandra]";
 
-instead of going outside from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
+instead of going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS ALEXANDRA - AlexandraEricInteraction: [AlexandraEricInteraction][line break]";
@@ -2719,7 +2719,7 @@ to say EricMeetsAlexandra:
 		say "     Stepping forward and clearing your throat loudly, you draw the attention of Alexandra and Eric. While the young man gives you a shame-faced 'hand in the cookie jar' expression, the doberwoman grins broadly, wagging her tail as she gives Eric's clit another rub that makes him moan out loud. 'Hey boss,' she calls out to you, then licks the side of Eric's face playfully. Only after you flat out order her to leave the young trans man in peace does she stop groping and playing with Eric, giving a little huff as she lets go of him. 'Fine, fine, you're the boss,' the doberwoman half-growls, after which Eric pants out, 'I'm sorry for staring,' and runs off, snatching up his book as he goes along. 'Guess you brought that one here as a special pet, eh? Okay, I'll keep my hands off him, even if he is a cute lil bitch.' With that said, the anthro canine walks over to the sofa, bends forward to pick up her jeans in the most provocative way possible, her dripping pussy in full view. Clothing in hand, she walks off after that.";
 		now AlexandraEricInteraction is 99; [Eric + Alexandra interaction stopped]
 
-instead of going outside from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Grey Abbey 2F and UrikEricInteraction is 0):
+instead of going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Grey Abbey 2F and UrikEricInteraction is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS URIK - UrikEricInteraction: [UrikEricInteraction][line break]";
@@ -2987,7 +2987,7 @@ to say EricUrikLibraryFuck:
 
 [ Ryousei Interactions                 ]
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and RyouseiEricInteraction < 1 and companion of player is royal tiger):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and RyouseiEricInteraction < 1 and companion of player is royal tiger):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: Eric meets Ryousei [line break]";
@@ -2995,7 +2995,7 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 	say "     'No harm done, young one,' Ryousei says in his deep voice, smiling at Eric and showing his muzzle full of sharp teeth. The impressive sight makes Eric gulp, drawing a chuckle from the anthro tiger. 'Be calm, little human. You have nothing to fear from me,' he continues and Eric replies, 'Thank you, sir. I'm Eric.' The slender hand of the athletic student vanishes almost completely in the much larger paw-hand of the tiger as they shake hands in greeting. 'I am Ryousei, first general of the mighty shogun Aki.' The two of them exchange a few words, Ryousei telling the tale how he was thrown into your dimension through a foul trick of his enemies, while Eric explains that he's a student. 'The pursuit of knowledge - always a noble endeavour,' Ryousei replies, then remembers something and glances down to the ground.";
 	WaitLineBreak;
 	say "     'Ah, you dropped your book earlier,' he says, then crouches down, picking up the hardcover book Eric had been holding. Glancing at its title, the tiger nods, then holds it out for Eric to take. You notice his nostrils flaring a little bit while doing so, apparently taking in the human student's scent. 'Thank you. I hope we can talk again sometime. The place you're from seems amazing,' Eric replies as he takes the book, then bids his farewell and steps through the doorway to go up into the library. Ryousei looks after him for a moment, tail twitching a little. Then he turns to you and remarks, 'What an interesting young man with the most peculiar scent. I certainly wouldn't mind spending some time with him.'";
-	say "     'Of course, the needs of our current situation come first - I will gladly accompany you on your travel through the city, but maybe if its time to rest at some point, we could return here? I have always liked being around knowledge seekers and students,' the tall anthro says in a friendly tone, then steps close to you again, ready to go into battle by your side.";
+	say "     'Of course, the needs of our current situation come first - I will gladly accompany you on your travel through the city, but maybe if it's time to rest at some point, we could return here? I have always liked being around knowledge seekers and students,' the tall anthro says in a friendly tone, then steps close to you again, ready to go into battle by your side.";
 	now RyouseiEricInteraction is 1;
 	now lastRyouseiEricInteraction is turns;
 
@@ -3075,7 +3075,7 @@ to say RyouseiAndEricDoTaiChi:
 
 [ Sven Interactions                    ]
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and HP of Sven >= 30 and HP of Sven < 50 and ConfSvenEricInteraction < 1):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and HP of Sven >= 30 and HP of Sven < 50 and ConfSvenEricInteraction < 1):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: Eric meets Confident Sven [line break]";

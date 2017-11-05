@@ -681,6 +681,7 @@ This is the flee rule:
 		if there is a continuous in row monstercom of the table of Critter Combat:
 			follow the continuous entry;
 		if combat abort is 0, follow the combat entry;
+	project the figure of pixel_icon;
 
 Chapter 6 - Throw the Fight
 

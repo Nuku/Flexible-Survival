@@ -21,7 +21,7 @@ Instead of resolving a Captured Demon:
 	say "     ...which is exactly what the brute has been waiting for. With a metallic screech the chains holding him rip apart as he flexes his muscles, then grips the barrel of the rifle and bends it to a right angle. His other hand quickly grabs the young soldier around the throat and stops any attempt to escape.";
 	WaitLineBreak;
 	project the figure of Brutus_evil_face_icon;
-	say "     Chuckling in a deep gravelly voice, the demon says 'Did you really think it'd be that easy to capture a soldier of the infernal legion? You'll pay for your insolence!' and rips the soldier's uniform off his body. With an evil chuckle, the brutish demon uses his sharp nails to give him some shallow, bleeding scratches, then murmurs something you can't quite make out and there is a short purple flash between them. Carrying his captive to the bar, the creature then bends him over it and gives his ass a hard slap, leaving a reddening hand-print on the pale flesh of the young soldier's right bun. 'If you try running, I'll disembowel you. But feel free to struggle and scream - I like it.' the demon says, then grabs his massive erection and strokes it.";
+	say "     Chuckling in a deep gravelly voice, the demon says 'Did you really think it'd be that easy to capture a soldier of the infernal legion? You'll pay for your insolence!' and rips the soldier's uniform off his body. With an evil chuckle, the brutish demon uses his sharp nails to give him some shallow, bleeding scratches, then murmurs something you can't quite make out and there is a short purple flash between them. Carrying his captive to the bar, the creature then bends him over it and gives his ass a hard slap, leaving a reddening hand-print on the pale flesh of the young soldier's right bun. 'If you try running, I'll disembowel you. But feel free to struggle and scream - I like it,' the demon says, then grabs his massive erection and strokes it.";
 	WaitLineBreak;
 	project the figure of David_face_hurt_icon;
 	say "     [bold type]Seeing the demon prepare to rape the young soldier, you wonder if you should step in and stop him. The safer option would be to just watch it happen, but can you just leave Private Jackson to his fate?[roman type][line break]";
@@ -1729,7 +1729,7 @@ to say DavidSex11: [Brutus & David Threesome (Brutus gets DP'd)]
 	WaitLineBreak;
 	say "     Looking back over his shoulder, Brutus says 'Thank you, master', then he turns back to David ands tarts to lap at his chest and face, slurping up his own cum and playing a long forked tongue over David's muscles. Brutus method of 'cleaning up' soon escalates into a hot make-out session, and after a while the two of them move around a bit so they can stretch out on the bed together, with David half draped over Brutus large form.";
 
-instead of going inside from the Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction is 0 and companion of player is royal tiger):
+instead of going down from the Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction is 0 and companion of player is royal tiger):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: David meets Ryousei; RyouseiDavidInteraction: [RyouseiDavidInteraction][line break]";

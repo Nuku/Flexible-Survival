@@ -1567,12 +1567,12 @@ Carry out dumping imap:
 		now image-map-width is the number of entries of entry 1 of the tile-array of the noun;
 		now image-map-height is the number of entries in the tile-array of the noun;
 		now total-length is image-map-width * image-map-height;
-		say "Showing data for [i][noun][/i], a tileset image-map assigned to [the associated canvas of the noun]. Map ([image-map-width] x [image-map-height] = [total-length] tiles) rendered using tileset [associated tileset]; tiles measure [desired tile-width of noun] x [desired tile-height of noun] canvas units. [if the noun is graphlinked] Graphlink [quotation mark][linked replacement-command of noun][quotation mark] applies to entire map.[end if][line break]Tile-array data:[paragraph break]";
+		say "Showing data for [i][noun][/i], a tileset image-map assigned to [the associated canvas of the noun]. Map ([image-map-width] x [image-map-height] = [total-length] tiles) rendered using tileset [associated tileset]; tiles measure [desired tile-width of noun] x [desired tile-height of noun] canvas units[if the noun is graphlinked]. Graphlink [quotation mark][linked replacement-command of noun][quotation mark] applies to entire map[end if].[line break]Tile-array data:[paragraph break]";
 	if the noun is a direct image-map:
 		now image-map-height is the number of entries in the figure-array of the noun;
 		now image-map-width is the number of entries in entry 1 of the figure-array of the noun;
 		now total-length is image-map-width * image-map-height;
-		say "[>console][CBD]Showing data for [i][noun][/i], a direct image-map assigned to [associated canvas of the noun]. Map ([image-map-width] x [image-map-height] = [total-length] tiles) rendered using tileset [associated tileset]; tiles measure [desired tile-width of noun] x [desired tile-height of noun] canvas units.[if the noun is graphlinked] Graphlink [quotation mark][linked replacement-command of noun][quotation mark] applies to entire map.[end if] Figure-array data:[paragraph break][<]";
+		say "[>console][CBD]Showing data for [i][noun][/i], a direct image-map assigned to [associated canvas of the noun]. Map ([image-map-width] x [image-map-height] = [total-length] tiles) rendered using tileset [associated tileset]; tiles measure [desired tile-width of noun] x [desired tile-height of noun] canvas units. [if the noun is graphlinked]Graphlink [quotation mark][linked replacement-command of noun][quotation mark] applies to entire map. [end if]Figure-array data:[paragraph break][<]";
 	let scan be 0;
 	let row-count be 1;
 	say "[fixed letter spacing][run paragraph on]";
@@ -2665,7 +2665,7 @@ The scenario definition is followed by the list of figures. The list of figures 
 
 	Entrance Chamber is a room. "A stair spirals upward, and there is a doorway in the south wall."
 
-	The heavy door is an open door. "[if the heavy door is open]The heavy wooden door is open.[else]The heavy wooden door is closed.[end if]". It is south of Entrance Chamber and north of Hall.
+	The heavy door is an open door. "[if the heavy door is open]The heavy wooden door is open[else]The heavy wooden door is closed[end if].". It is south of Entrance Chamber and north of Hall.
 
 	Guard Room is east of Hall. "An exit leads west."
 

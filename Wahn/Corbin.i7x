@@ -187,6 +187,7 @@ instead of going southwest from Central Farm Square while (HP of Corbin is 4 and
 		say "     Getting a grip on the shoulder of the farmhand preparing to fuck Corbin, you pull him back, much to the annoyance of the muscled equine. Enraged at you cock-blocking him, he comes at you with balled fists.";
 		LineBreak;
 		let GroupFightCounter be 0;
+		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and GroupFightCounter < 3: [runs for 3 times (for example) or until the player loses or flees]
 			if GroupFightCounter is 1:
 				say "     One of the group of horsemen is out of the fight, though another steps right up.";
