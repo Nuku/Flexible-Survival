@@ -256,6 +256,8 @@ NewGraphics is a truth state that varies. NewGraphics is usually true.
 NewGraphicsInteger is a number that varies. NewGraphicsInteger is usually 2.
 NewGraphicsDebugMode is a truth state that varies. NewGraphicsDebugMode is usually false.
 NewGraphicsRatio is a number that varies. NewGraphicsRatio is usually 30.
+[For use with new safe restore]
+RestoreMode is a truth state that varies. RestoreMode is usually false.
 
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
@@ -6038,10 +6040,11 @@ To regularstart: [normal start method]
 				say "[set_invcolumns]";
 			-- 99:
 				now trixieexit is 1;
-				try restoring the game;
-				if maxHP of player is 0:
-					now trixieexit is 0;
-					try restarting the game;
+				say "Confirm restore?";
+				if player consents:
+					now RestoreMode is true;
+					say "[silent_start]";
+					now trixieexit is 1;
 			-- 0:
 				say "Confirm game start?";
 				if player consents:
@@ -6336,6 +6339,118 @@ to say gsopt_start:
 	[display the figure of title_graphic;]
 	zephyrad rule in 1 turn from now;
 
+[Silent starting protocol that launches restore game. Included as part of restore on the main menu because of issues with the graphical window creation.]
+to say silent_start:
+	say "	Please wait while we complete some background work prior to restoring."
+	WaitLineBreak;
+	now started is 1;
+	if gspg is 1:	[male]
+		now the cocks of the player is 1;
+		now the cock length of the player is 6;
+		now the cock width of the player is 4;
+		now the breasts of the player is 2;
+		now the breast size of the player is 0;
+	else:		[defaults to female]
+		now the cunts of the player is 1;
+		now the cunt length of the player is 6;
+		now the cunt width of the player is 4;
+		now the breasts of the player is 2;
+		now the breast size of the player is 2;
+	if glstart is 1:
+		startgenderlockshift;
+	gs_stats;
+	now the morale of the player is the charisma of the player plus the perception of the player;
+	now the HP of the player is the stamina of the player times two;
+	increase the HP of the player by 5;
+	now the maxHP of the player is the HP of the player;
+	now the capacity of the player is five times the strength of the player;
+	now humanity of player is 100;
+	if gsgl > 1, startgenderlockget;
+	follow the SetPlayerPronouns rule;
+	startfreefeats;
+	startcreatureban;
+	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+	sort table of random critters in lev order;
+	if scenario is "Caught Outside":	[processes infection data first, then clears so intro text can remain intact]
+		randominfect;
+		randominfect;
+		randominfect;
+		randominfect;
+	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+	[Code for letting player select graphics window size]
+	say "[bold type]Graphic Settings[roman type][line break]";
+	say "Before restoring, please specify the graphic settings.[line break]";
+	say "[bold type] No graphics - 1 [roman type][line break]";
+	say "[bold type] Old inline graphics only - 2 [roman type][line break]";
+	say "[bold type] New graphics side-window - 3 [roman type][line break]";
+	while 1 is 1:
+		say "Please enter the number that matches your choice (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber < 4:
+			break;
+		else:
+			say "Invalid Entry. Please enter a number between 1 and 3";
+	now NewGraphicsInteger is calcnumber - 1; [Direct set]
+	if NewGraphicsInteger is 1: [now evalutate]
+		now graphics is true;
+		now NewGraphics is false;
+	else if NewGraphicsInteger is 2:
+		now graphics is true;
+		now NewGraphics is true;
+	else if NewGraphicsInteger is 0:
+		now graphics is false;
+		now NewGraphics is false;
+	clear the screen;
+	if NewGraphics is true:
+		say "[bold type]Graphic Window Proportion[roman type][line break]";
+		say "You have enabled the new graphics window. This will be on the right side of your screen and will always take up a proportion of the main screen.[line break]";
+		say "Please choose this value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+		while 1 is 1:
+			say "(5-90)>[run paragraph on]";
+			get a number;
+			if calcnumber > 4 and calcnumber < 91:
+				break;
+			else:
+				say "Invalid Entry. Please enter a number between 5 and 90";
+		now NewGraphicsRatio is calcnumber;
+		clear the screen;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+	if scenario is not "Bunker":
+		if scenario is "Caught Outside":
+			add "Spartan Diet" to feats of player;
+		if scenario is "Rescuer Stranded":
+			now invent of bunker is { };
+			add "cot" to invent of bunker;
+			increase score by 300;
+		if scenario is "Forgotten":
+			now invent of bunker is { };
+			add "cot" to invent of bunker;
+			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
+			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now the HP of doctor matt is 100;
+			now the icon of doctor matt is figure of pixel;
+			remove orthas from play;
+			increase score by 600;
+			extend game by 240;
+	if gshm is true: [Hard mode alteration]
+		increase score by 300;
+		now hardmode is true;
+		now levelwindow is 99999;
+	if gsnhm is true: [No-heal mode alteration]
+		increase score by 150;
+		now nohealmode is true;
+	if gsbm is true: [Blind mode alteration]
+		increase score by 100;
+		now blindmode is true;
+	say "	Just a moment. Few more things to prepare...";
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+	say "[line break]";
+	now zephyr lobby is known;
+	say "	Done. Thank you for your patience. Please choose a file to restore now."
+	WaitLineBreak;
 
 to say set_invcolumns:
 	now calcnumber is -1;
