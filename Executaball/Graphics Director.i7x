@@ -70,40 +70,42 @@ g-ice-blue	15645627		[== $EEBBBB]
 graphicmoding is an action applying to nothing.
 understand "graphics" as graphicmoding.
 carry out graphicmoding:
-	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	if NewGraphics is true:
 		clear the screen;
-		say "[bold type]Graphic Settings:[roman type][line break]";
-		say "NOTE: To disable the new graphics display, you MUST restart your interpreter. You may do a [bold type]restore[roman type] after launching to resume your game.";
-		say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 1]OLD[otherwise if NewGraphicsInteger is 2]NEW[otherwise if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
-		say "(2) [link]EXIT[as]2[end link][line break]";
-		while 1 is 1:
-			say "(1-2)>[run paragraph on]";
-			get a number;
-			if calcnumber is 1 or calcnumber is 2:
-				break;
-			else:
-				say "Invalid Entry";
-		if calcnumber is:
-			-- 1:
-				if NewGraphicsInteger is 1:
-					now NewGraphics is true;
-					now NewGraphicsInteger is 2;
-				else if NewGraphicsInteger is 2:
-					now graphics is false;
-					now NewGraphics is false;
-					now NewGraphicsInteger is 0;
-				else if NewGraphicsInteger is 0:
-					now graphics is true;
-					now NewGraphics is false;
-					now NewGraphicsInteger is 1;
-			-- 2:
-				say "Exit graphics menu?";
-				if player consents:
-					[now the graphics window proportion is 1;]
-					follow the current graphics drawing rule; [cleanup here needs no condition check because even NewGraphics enabled players will need the window gone.]
-					now trixieexit is 1;
+		say "[bold type]Graphics Settings Unavailable:[roman type][line break]";
+		say "You are running the new graphics side window :3 ! If you would like to disable the new graphics display (revert to inline graphics or disable completely), simply save your game right now, close your game completely, then do select [bold type]restore[roman type] at the start menu. You will then be prompted for graphic modifications.[line break]";
+		say "We apologize for this inconvenience, this is a technical limitation of our graphics system.[line break]";
+		WaitLineBreak;
+	else:
+		now calcnumber is -1;
+		let trixieexit be 0;
+		while trixieexit is 0:
+			clear the screen;
+			say "[bold type]Graphic Settings:[roman type][line break]";
+			say "NOTE: You are running the old in-line graphics only mode. To enable the new side-window graphics, simply save your game right now, close your game completely, then do select [bold type]restore[roman type] at the start menu. You will then be prompted for graphic modifications.[line break]";
+			say "We apologize for this inconvenience, this is a technical limitation of our graphics system.[line break]";
+			say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 1]Inline Mode[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
+			say "(2) [link]EXIT[as]2[end link][line break]";
+			while 1 is 1:
+				say "(1-2)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2:
+					break;
+				else:
+					say "Invalid Entry";
+				if calcnumber is:
+					-- 1:
+						if NewGraphicsInteger is 1:
+							now graphics is false;
+							now NewGraphicsInteger is 0;
+						else if NewGraphicsInteger is 0:
+							now graphics is true;
+							now NewGraphics is false;
+							now NewGraphicsInteger is 1;
+					-- 2:
+						say "Exit graphics menu?";
+						if player consents:
+							now trixieexit is 1;
 
 [DEBUG Commands]
 [Cheat for enabling inline debug stuff]

@@ -18,6 +18,13 @@ to say bunker desc:
 	say ". The small sink taking up a corner of the room seems to be broken, producing no water no matter how much the knob is turned. Two doorways to the north and northeast lead to adjoining rooms - showers and a small restroom, while a thicker, secure-looking door opens to the stairwell used to go [bold type]outside[roman type].";
 	if "old boombox" is listed in invent of Bunker:
 		say "     You have set up the old boombox in one corner where it continues to play despite not being plugged into anything. Maybe it has really amazing batteries - or draws energy some other way. No matter what, it provides a mix of tunes and the occasional weather report on the continuing heat wave. Fiddling with the dials can get different songs and genres of music, but no actual news or broadcast radio. The radio broadcaster you hear seems the same across the stations, though his tone and delivery suits the format of the current [']station[']. Its dials and settings change on their own from time to time as if to provide music to suit the situation or dropping its volume when you're taking a nap.";
+	if RestoreMode is true:
+		[WaitLineBreak;]
+		now RestoreMode is false;
+		try restoring the game;
+		if maxHP of player is 0:
+			try restarting the game;
+
 
 North of Bunker is Communal Shower.
 Communal Shower is a room. The description of Communal Shower is "[bshower desc]".
