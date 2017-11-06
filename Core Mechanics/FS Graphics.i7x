@@ -287,7 +287,7 @@ Figure of Mammoth_CV2_icon is the file "Mammoth_CV_2_ig.png".	[Mammoth cock-vore
 Figure of Mammoth_CV3_icon is the file "Mammoth_CV_3_ig.png".	[Mammoth cock-vore scene 3.]
 Figure of Mammoth_CV4_icon is the file "Mammoth_CV_4_ig.png".	[Mammoth cock-vore scene 4.]
 Figure of Mammoth_CV5_icon is the file "Mammoth_CV_5_ig.png".	[Mammoth cock-vore scene 5.]
-Figure of Mammoth_CVF_icon is the file "Mammoth_CV_F_ig.png".	[Mammoth pure succumb ending - bonus CV pic.]
+Figure of Mammoth_CVF_icon is the file "Mammoth_CV_F_ig.jpg".	[Mammoth pure succumb ending - bonus CV pic.]
 Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".			[Sam's Bad End to assault and infection.]
 Figure of SkunkbeastLord_icon is the file "SkunkbeastLord_ig.jpg".		[Skunkbeast Lord battle.]
 Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".   [mid-sex scene graphic.]
