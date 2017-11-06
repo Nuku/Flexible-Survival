@@ -138,7 +138,7 @@ to say GuardLie: [lie to get into the camp]
 		now Back at the Camp is resolved;
 		now battleground is "void";
 	else:
-		say "     'Yeah, right - listen buddy, your story doesn't ring even remotely true in my ears. Get lost.' one of the soldiers scoffs at you. Can't be helped, you won't be getting any further here right now. Although there might be some hope of getting someone else on guard duty next time you come along here...";
+		say "     'Yeah, right - listen buddy, your story doesn't ring even remotely true in my ears. Get lost,' one of the soldiers scoffs at you. Can't be helped, you won't be getting any further here right now. Although there might be some hope of getting someone else on guard duty next time you come along here...";
 
 to say GuardBeg: [mooch some food from a guard]
 	if(lastGuardBeg - turns < 12):

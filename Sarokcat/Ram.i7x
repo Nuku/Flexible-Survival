@@ -74,12 +74,12 @@ to say ram_attack:
 				infect "Ram";
 	else if "Male Preferred" is listed in feats of player:
 		say "     The beast pushes you down to the ground roughly, pinning you there as he pumps his own cock eagerly. You are forced to watch as his hoof-hands rub at his balls and cock, an impressive set of genitals on the woolly victor, unable to look away even as he starts to pump harder. You groan in defeat as he shoots his sticky seed all over your body, marking you as his.";
-		say "     'Ah, that was good,' the ram says happily as he rubs his cock some more. 'Almost nothing feels as good as defeating a trespasser in my territory.' The ram says as he gets off you, before turning to depart, leaving you to contend with the mess he left in his wake.";
+		say "     'Ah, that was good,' the ram says happily as he rubs his cock some more. 'Almost nothing feels as good as defeating a trespasser in my territory,' the ram says as he gets off you, before turning to depart, leaving you to contend with the mess he left in his wake.";
 		if guy is not banned:
 			infect "Ram";
 	else:
 		say "     The beast pushes you down to the ground roughly, pinning you there as he pumps his own cock eagerly. You are forced to watch as his hoof-hands rub at his balls and cock, an impressive set of genitals on the woolly victor, unable to look away even as he starts to pump harder. You groan in defeat as he shoots his sticky seed all over your body, marking you as his.";
-		say "     'Ah that was good,' the ram says happily as he rubs his cock some more. 'Almost nothing feels as good as defeating a trespasser in my territory.' The ram says as he gets off you, before grinning evilly as he looks down at your helpless form. 'Now once you're done transforming into a proper ewe for me, you come find me right away. That's an order from your ram,' the powerful ram says, before chuckling as he heads back into the city. You are left lying there covered in his seed, and with a surprisingly strong desire to hunt him down again, just like he told you to...";
+		say "     'Ah that was good,' the ram says happily as he rubs his cock some more. 'Almost nothing feels as good as defeating a trespasser in my territory,' the ram says as he gets off you, before grinning evilly as he looks down at your helpless form. 'Now once you're done transforming into a proper ewe for me, you come find me right away. That's an order from your ram,' the powerful ram says, before chuckling as he heads back into the city. You are left lying there covered in his seed, and with a surprisingly strong desire to hunt him down again, just like he told you to...";
 		if girl is not banned:
 			infect "Ewe";
 		else:
