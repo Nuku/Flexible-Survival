@@ -53,7 +53,7 @@ to say losetoymg:
 
 to say losetoymgirl:
 	if HP of player > 0:
-		say "     Unable to resist the mink gal's insistent arrogance, you sink to your knees. Your fingers go slack, gear falling to the deck as she closes in to rest one foot on your shoulder. With a smirk, she pushes you onto your back. 'At least you have the sense to take your place.' She muses quietly, gesturing for you to strip.";
+		say "     Unable to resist the mink gal's insistent arrogance, you sink to your knees. Your fingers go slack, gear falling to the deck as she closes in to rest one foot on your shoulder. With a smirk, she pushes you onto your back. 'At least you have the sense to take your place,' she muses quietly, gesturing for you to strip.";
 	else:
 		say "     Beaten senseless by the yachting mink, you collapse to the wooden slats of the dock. At the snap of her fingers, deckhands yank your gear and clothes of without ceremony, leaving you bare to her. 'You locals are so unfriendly! This is worse than that trip to Peru!'";
 	if cocks of player > 0:

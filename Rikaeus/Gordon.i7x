@@ -87,7 +87,7 @@ to say GordonTalkMenu:
 
 to say GordonFurEvidence:
 	if GordonFurSuspicion is 0: [never talked about it]
-		say "     You take out the fur and set it onto the table before proceeding to tell the monkey that this was found in the victim's hand. 'What are you showing me this for? Is this your way of saying you want to bed me?' he asks, wagging his eyebrows. You shake your head at his horny response and tell him that you'd figure that you'd ask if it was his. 'Ahahah! It's obviously not mine as I do have black fur here.' Gordon says, gesturing to his fur. However, that isn't all the guy says as the lewd look returns to his face. 'Of course... you could always check down below with your mouth.' The monkey says.";
+		say "     You take out the fur and set it onto the table before proceeding to tell the monkey that this was found in the victim's hand. 'What are you showing me this for? Is this your way of saying you want to bed me?' he asks, wagging his eyebrows. You shake your head at his horny response and tell him that you'd figure that you'd ask if it was his. 'Ahahah! It's obviously not mine as I do have black fur here,' Gordon says, gesturing to his fur. However, that isn't all the guy says as the lewd look returns to his face. 'Of course... you could always check down below with your mouth,' the monkey says.";
 		say "     [bold type]Do you want to blow him or take him by his word?[roman type][line break]";
 		say "     [line break]";
 		say "     ([link]Y[as]y[end link]) - Yes, you have to know for sure.";
