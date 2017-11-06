@@ -58,7 +58,7 @@ Figure of LatexErminePink_icon is the file "FSTF_LatexErminePink_ig.jpg".
 Figure of LatexErmineRed_icon is the file "FSTF_LatexErmineRed_ig.jpg".
 Figure of LatexErmineTeal_icon is the file "FSTF_LatexErmineTeal_ig.jpg".
 Figure of LatexVixen_icon is the file "FS_LatexVixen.jpg".
-Figure of Mammoth_icon is the file "Mammoth_ig.jpg".
+Figure of Mammoth_icon is the file "Mammoth_ig.png".
 Figure of Mannequin_icon is the file "Mannequin.jpg".
 Figure of Megakitty_icon is the file "Megakitty_ig.jpg".
 Figure of MentalMice_icon is the file "FS_MentalMice.jpg".
@@ -86,7 +86,7 @@ Figure of SpartanHelot_naked_icon is the file "SpartanHelot_naked.jpg".
 Figure of Spartan_icon is the file "Spartan.jpg".
 Figure of Succubus_clothed_icon is the file "Succubus_clothed.jpg".
 Figure of ThoughtEater_icon is the file "ThoughtEater.jpg".
-Figure of TigressHooker_icon is the file "tigresshooker_ig.jpg".
+Figure of TigressHooker_icon is the file "tigresshooker_ig.png".
 Figure of Triceratops_icon is the file "triceratops_ig.jpg".
 Figure of VixenNurse_icon is the file "VixenNurse_ig.jpg".
 Figure of Vixentaur_icon is the file "vixentaur_ig.jpg".
@@ -178,7 +178,7 @@ Figure of Fancy_icon is the file "FSTF_Fancy_ig.jpg".
 Figure of Felix_icon is the file "Felix.jpg".
 Figure of Felix_face_icon is the file "Felix_face.jpg".
 Figure of Francois_icon is the file "Francois_ig.jpg".
-Figure of Frank_icon is the file "Frank_paw_ig.jpg".
+Figure of Frank_icon is the file "Frank_paw_ig.png".
 Figure of Gabriel_icon is the file "Gabriel.jpg".
 Figure of Garrett_icon is the file "garrett_ig.jpg".
 Figure of Gillian_icon is the file "Gillian_ig.jpg".
@@ -248,7 +248,7 @@ Figure of Septus_face_icon is the file "Septus_face.jpg".
 Figure of SgtMarks_icon is the file "sgtmarks_ig.jpg".
 Figure of Sidney_wusky_Icon is the file "Sidney_wusky.jpg".
 Figure of Sidney_vixen_Icon is the file "Sidney_vixen.jpg".
-Figure of Sidney_clothed_Icon is the file "Sidney_otteress.jpg".
+Figure of Sidney_clothed_Icon is the file "Sidney_otteress.png".
 Figure of Sonny_halfwool_jeans_icon is the file "Sonny_halfwool_jeans.jpg".
 Figure of Sonny_halfwool_nude_icon is the file "Sonny_halfwool_nude.jpg".
 Figure of Sonny_shaved_jeans_icon is the file "Sonny_shaved_jeans.jpg".
@@ -282,12 +282,12 @@ Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg".	[The Down Under
 Figure of EricRidingRane_icon is the file "Rane&Eric3.jpg".   [make-up sex]
 Figure of Eric_Urik_naked_icon is the file "Eric_Urik_naked.jpg".
 Figure of Fang_Candy_icon is the file "Fang_Candy_ig.jpg".	[Fang topping Candy scene.]
-Figure of Mammoth_CV1_icon is the file "Mammoth_CV_1_ig.jpg".	[Mammoth cock-vore scene 1.]
-Figure of Mammoth_CV2_icon is the file "Mammoth_CV_2_ig.jpg".	[Mammoth cock-vore scene 2.]
-Figure of Mammoth_CV3_icon is the file "Mammoth_CV_3_ig.jpg".	[Mammoth cock-vore scene 3.]
-Figure of Mammoth_CV4_icon is the file "Mammoth_CV_4_ig.jpg".	[Mammoth cock-vore scene 4.]
-Figure of Mammoth_CV5_icon is the file "Mammoth_CV_5_ig.jpg".	[Mammoth cock-vore scene 5.]
-Figure of Mammoth_CVF_icon is the file "Mammoth_CV_F_ig.jpg".	[Mammoth pure succumb ending - bonus CV pic.]
+Figure of Mammoth_CV1_icon is the file "Mammoth_CV_1_ig.png".	[Mammoth cock-vore scene 1.]
+Figure of Mammoth_CV2_icon is the file "Mammoth_CV_2_ig.png".	[Mammoth cock-vore scene 2.]
+Figure of Mammoth_CV3_icon is the file "Mammoth_CV_3_ig.png".	[Mammoth cock-vore scene 3.]
+Figure of Mammoth_CV4_icon is the file "Mammoth_CV_4_ig.png".	[Mammoth cock-vore scene 4.]
+Figure of Mammoth_CV5_icon is the file "Mammoth_CV_5_ig.png".	[Mammoth cock-vore scene 5.]
+Figure of Mammoth_CVF_icon is the file "Mammoth_CV_F_ig.png".	[Mammoth pure succumb ending - bonus CV pic.]
 Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".			[Sam's Bad End to assault and infection.]
 Figure of SkunkbeastLord_icon is the file "SkunkbeastLord_ig.jpg".		[Skunkbeast Lord battle.]
 Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".   [mid-sex scene graphic.]
