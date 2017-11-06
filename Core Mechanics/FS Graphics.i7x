@@ -1,6 +1,11 @@
 FS Graphics by Core Mechanics begins here.
 [- Originally Authored By: Nuku Valente -]
 
+
+[Please Note!]
+[Unix filesystem names can be case sensitive. Try to match the letter case here with the actual filename case]
+
+
 Figure of title_graphic is the file "title.jpg".
 Figure of pixel is the file "pixel.jpg".
 Figure of pixel_icon is the file "pixel.jpg".
@@ -9,7 +14,7 @@ Figure of pixel_icon is the file "pixel.jpg".
 Figure of AlphaHusky_icon is the file "FS_AlphaHusky.jpg".
 Figure of AnthroShaftBeast_icon is the file "AnthroSB_ig.jpg".
 Figure of Bear_icon is the file "fs_bear.jpg".
-Figure of Beaver1_icon is the file "beaver_ig1.jpg".
+Figure of Beaver1_icon is the file "Beaver_ig1.jpg".
 Figure of Beaver2_icon is the file "Beaver_ig2.jpg".
 Figure of BlackEquinoid_icon is the file "FSTF_blackEquinoid_ig.jpg".
 Figure of BlueGel_icon is the file "BlueGel.jpg".
