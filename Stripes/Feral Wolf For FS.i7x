@@ -121,7 +121,7 @@ to say feralwolffemalesex:
 to say FeralWolfVictorySex:
 	if inasituation is true and FeralWolfSpecialFightNumber < 1: [dealt with in the event]
 		say "";
-		stop the action:
+		stop the action;
 	if inasituation is false: [standard text]
 		Say "You watch the feral wolf drop to the ground in defeat, slumped over on his side. You can see that he is still very hard, his cock dripping with pre. You realize that this feral wolf is completely at your mercy.";
 	say "     [bold type]You could easily have your way with him if you want.[roman type][line break]";
