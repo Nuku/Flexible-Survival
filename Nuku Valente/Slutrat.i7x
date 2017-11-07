@@ -169,7 +169,7 @@ To Say slutratdenscene:
 	now lastratvisit is turns;
 	if visittimes of SlutRat Den is 0:
 		say "     You follow your memory back through the sewers, pulling yourself along the, sometimes frighteningly narrow, pipes. At points you have to crawl on hands and knees for what feels like an hour. You wonder to yourself how the rat managed to haul you so effortlessly all this way, but you are determined. The scent of them hits you first, and you hasten your steps.[line break]     Heart pounding, you start to run down the tunnel, skidding on the slimy floor and almost falling as you turn sharply, and half dive into the den. The rats are there, and look up at you with clear surprise.";
-		say "     'Fresh bitch just can't wait for more', says one of the rats as she smoothly slides to her feet. A hand dips between her shapely thighs to grab at the obscenely swollen package there as she eyes you with an intense desire burning in her eyes, 'Bitch doesn't know her place. I'll show her how things work around here...' She advances towards you with a leer.";
+		say "     'Fresh bitch just can't wait for more,' says one of the rats as she smoothly slides to her feet. A hand dips between her shapely thighs to grab at the obscenely swollen package there as she eyes you with an intense desire burning in her eyes, 'Bitch doesn't know her place. I'll show her how things work around here...' She advances towards you with a leer.";
 		now inasituation is true;
 		Challenge "Slut Rat";
 		now inasituation is false;

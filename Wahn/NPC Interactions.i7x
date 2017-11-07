@@ -7,7 +7,7 @@ instead of navigating Grey Abbey Library while (Xerxes is in Grey Abbey Library 
 	move player to Grey Abbey Library;
 	say "[XerxesSnowInteraction]";
 
-instead of going outside from Bunker while (Xerxes is in Grey Abbey Library and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Xerxes is in Grey Abbey Library and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[XerxesSnowInteraction]";
 
@@ -32,7 +32,7 @@ instead of navigating Grey Abbey Library while (Helen is in Grey Abbey Library a
 	move player to Grey Abbey Library;
 	say "[HelenSnowInteraction]";
 
-instead of going outside from Bunker while (Helen is in Grey Abbey Library and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Helen is in Grey Abbey Library and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[HelenSnowInteraction]";
 
@@ -57,7 +57,7 @@ instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and
 	move player to Grey Abbey Library;
 	say "[AmySnowInteraction]";
 
-instead of going outside from Bunker while (Amy is in Grey Abbey Library and HP of Amy > 1 and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Amy is in Grey Abbey Library and HP of Amy > 1 and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[AmySnowInteraction]";
 
@@ -77,7 +77,7 @@ instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and
 	move player to Grey Abbey Library;
 	say "[AmyFelinoidInteraction]";
 
-instead of going outside from Bunker while (Amy is in Grey Abbey Library and HP of Amy > 1 and Felinoid companion is tamed and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Amy is in Grey Abbey Library and HP of Amy > 1 and Felinoid companion is tamed and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[AmyFelinoidInteraction]";
 
@@ -98,7 +98,7 @@ instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and
 	move player to Grey Abbey Library;
 	say "[AmyAlexandraInteraction]";
 
-instead of going outside from Bunker while (Amy is in Grey Abbey Library and Alexandra is in Grey Abbey Library and HP of Amy > 1 and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Amy is in Grey Abbey Library and Alexandra is in Grey Abbey Library and HP of Amy > 1 and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[AmyAlexandraInteraction]";
 
@@ -119,7 +119,7 @@ instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and HP 
 	move player to Grey Abbey Library;
 	say "[CarlXerxesInteraction]";
 
-instead of going outside from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Xerxes is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Xerxes is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[CarlXerxesInteraction]";
 
@@ -130,7 +130,7 @@ to say CarlXerxesInteraction:
 	if randomnumber is:
 		-- 1:       [playing ball]
 			if HP of Carl is 10:   [normal Carl]
-				say "     Entering the library, you suddenly see a tennis ball fly past your nose, instantly followed by Xerxes and Carl dashing after it on all fours. Your human dog just keeps going, totally focused on the ball, while Carl skids to a stop and gets to his feet, a sheepish expression on his face. 'Oh - er.. hi,' he says, looking at you before returning his attention to Xerxes, who finally catches the ball and starts to carry it over in his teeth. 'You must be wondering what we - what I am doing. Well, Xerxes came to me with that ball and wanted to play...' In that moment, the buck-naked teenage human arrives at your side, sitting down and obediently offering his [if cocks of player is 0 and cunts of player > 0]mistress[else]master[end if] the tennis ball. Carl continues while you take the toy from Xerxes, 'You can't believe how tempted I was to run after that thing myself when I threw it for him. So... I did, after a few times. It's really quite a bit of fun to just let go for a while, feel the ground under all four paws as you chase something.'";
+				say "     Entering the library, you suddenly see a tennis ball fly past your nose, instantly followed by Xerxes and Carl dashing after it on all fours. Your human dog just keeps going, totally focused on the ball, while Carl skids to a stop and gets to his feet, a sheepish expression on his face. 'Oh - er... hi,' he says, looking at you before returning his attention to Xerxes, who finally catches the ball and starts to carry it over in his teeth. 'You must be wondering what we - what I am doing. Well, Xerxes came to me with that ball and wanted to play...' In that moment, the buck-naked teenage human arrives at your side, sitting down and obediently offering his [if cocks of player is 0 and cunts of player > 0]mistress[else]master[end if] the tennis ball. Carl continues while you take the toy from Xerxes, 'You can't believe how tempted I was to run after that thing myself when I threw it for him. So... I did, after a few times. It's really quite a bit of fun to just let go for a while, feel the ground under all four paws as you chase something.'";
 				say "     Both your eyes drop to the yellow ball in your hand, bearing obvious bite-marks from sharper teeth than Xerxes in his human form can call his own. Carl clears his throat, then continues with, 'I'm not going feral on you, if that's your worry. Just a bit of fun - running and chasing. Xerxes has a bit of a lead in experience as a dog, but... well, I'm the one with paws here so it's a close thing mostly.' Weighing the ball in your hand, you can't help but agree - given what most of the other infected are doing out in the city, playing around like a dog really is pretty unremarkable. A smile spreads over your face as you look at first the husky soldier, then the human dog... and shake the hand with the ball to draw their attention to it. Then you fling the tennis ball with some force, making it fly, then bounce along an aisle between the bookshelves. Your two canine friends dash after it without delay, hands and claws scrabbling on the carpet.";
 			else if HP of Carl is 30:    [subby Carl]
 				say "     Entering the library, you suddenly see a tennis ball fly past your nose, instantly followed by Xerxes and Carl dashing after it on all fours. Your human dog just keeps going, totally focused on the ball, while Carl skids to a stop and gets to his feet, a sheepish expression on his face. 'Sorry Alpha,' he says, looking at the ground at your feet before returning his attention to Xerxes, who finally catches the ball and starts to carry it over in his teeth. 'I really didn't want to hit you or anything. It's just that Xerxes came to me with that ball and wanted to play...' In that moment, the buck-naked teenage human arrives at your side, sitting down and obediently offering his [if cocks of player is 0 and cunts of player > 0]mistress[else]master[end if] the tennis ball. Carl continues while you take the toy from Xerxes, 'You can't believe how tempted I was to run after that thing myself when I threw it for him. So... I did. It's really quite a bit of fun to just let go for a while, feel the ground under all four paws as you chase something.'";
@@ -147,7 +147,7 @@ instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and HP 
 	move player to Grey Abbey Library;
 	say "[CarlHelenInteraction]";
 
-instead of going outside from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Helen is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Helen is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[CarlHelenInteraction]";
 
@@ -158,7 +158,7 @@ to say CarlHelenInteraction:
 	if randomnumber is:
 		-- 1:       [playing ball]
 			if HP of Carl is 10:   [normal Carl]
-				say "     Entering the library, you suddenly see a tennis ball fly past your nose, instantly followed by Helen and Carl dashing after it on all fours. Your human dog just keeps going, totally focused on the ball, while Carl skids to a stop and gets to his feet, a sheepish expression on his face. 'Oh - er.. hi,' he says, looking at you before returning his attention to Helen, who finally catches the ball and starts to carry it over in her teeth. 'You must be wondering what we - what I am doing. Well, Helen came to me with that ball and wanted to play...' In that moment, the buck-naked teenage human arrives at your side, sitting down and obediently offering her [if cocks of player is 0 and cunts of player > 0]mistress[else]master[end if] the tennis ball. Carl continues while you take the toy from Helen, 'You can't believe how tempted I was to run after that thing myself when I threw it for her. So... I did, after a few times. It's really quite a bit of fun to just let go for a while, feel the ground under all four paws as you chase something.'";
+				say "     Entering the library, you suddenly see a tennis ball fly past your nose, instantly followed by Helen and Carl dashing after it on all fours. Your human dog just keeps going, totally focused on the ball, while Carl skids to a stop and gets to his feet, a sheepish expression on his face. 'Oh - er... hi,' he says, looking at you before returning his attention to Helen, who finally catches the ball and starts to carry it over in her teeth. 'You must be wondering what we - what I am doing. Well, Helen came to me with that ball and wanted to play...' In that moment, the buck-naked teenage human arrives at your side, sitting down and obediently offering her [if cocks of player is 0 and cunts of player > 0]mistress[else]master[end if] the tennis ball. Carl continues while you take the toy from Helen, 'You can't believe how tempted I was to run after that thing myself when I threw it for her. So... I did, after a few times. It's really quite a bit of fun to just let go for a while, feel the ground under all four paws as you chase something.'";
 				say "     Both your eyes drop to the yellow ball in your hand, bearing obvious bite-marks from sharper teeth than Helen in her human form can call her own. Carl clears his throat, then continues with, 'I'm not going feral on you, if that's your worry. Just a bit of fun - running and chasing. Helen has a bit of a lead in experience as a dog, but... well, I'm the one with paws here so it's a close thing mostly.' Weighing the ball in your hand, you can't help but agree - given what most of the other infected are doing out in the city, playing around like a dog really is pretty unremarkable. A smile spreads over your face as you look at first the husky soldier, then the human dog... and shake the hand with the ball to draw their attention to it. Then you fling the tennis ball with some force, making it fly, then bounce along an aisle between the bookshelves. Your two canine friends dash after it without delay, hands and claws scrabbling on the carpet.";
 			else if HP of Carl is 30:    [subby Carl]
 				say "     Entering the library, you suddenly see a tennis ball fly past your nose, instantly followed by Helen and Carl dashing after it on all fours. Your human dog just keeps going, totally focused on the ball, while Carl skids to a stop and gets to his feet, a sheepish expression on his face. 'Sorry Alpha,' he says, looking at the ground at your feet before returning his attention to Helen, who finally catches the ball and starts to carry it over in her teeth. 'I didn't want to hit you or anything. It's just that Helen came to me with that ball and wanted to play...' In that moment, the buck-naked teenage human arrives at your side, sitting down and obediently offering her [if cocks of player is 0 and cunts of player > 0]mistress[else]master[end if] the tennis ball. Carl continues while you take the toy from Helen, 'You can't believe how tempted I was to run after that thing myself when I threw it for her. So... I did. It's really quite a bit of fun to just let go for a while, feel the ground under all four paws as you chase something.'";
@@ -176,7 +176,7 @@ instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and HP 
 	move player to Grey Abbey Library;
 	say "[CarlDavidInteraction]";
 
-instead of going outside from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and David is in Bunker and a random chance of 1 in 8 succeeds):
+instead of going up from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and David is in Bunker and a random chance of 1 in 8 succeeds):
 	move player to Grey Abbey Library;
 	say "[CarlDavidInteraction]";
 

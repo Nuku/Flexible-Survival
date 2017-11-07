@@ -99,7 +99,7 @@ to say TomeExpansionUse:
 	else: [Influenced thrice, can finally read]
 		if TomeTimer - turns >= 4:
 			if TomeInteractions is 0: [First use]
-				say "     You look over the ancient book, examining it closely as you ponder, what exactly, you can do with it. [if TomeFound is 4]You saw what happened to Eric. Even still, you could give it a read...[else if TomeFound is 20]You saw what nearly happened to Eric. Even still, you could give it a read...[else if TomeFound is 3]Something just doesn't feel right about it, even though Eric seemed relatively unaffected by it. Even still, you could give it a read...[else]Perhaps you could give it a read?[end if] It [italic type]is[roman type] a book, after all.";
+				say "     You look over the ancient book, examining it closely as you ponder, what exactly, you can do with it. [if TomeFound is 4]You saw what happened to Eric. Even still, you could give it a read... [else if TomeFound is 20]You saw what nearly happened to Eric. Even still, you could give it a read... [else if TomeFound is 3]Something just doesn't feel right about it, even though Eric seemed relatively unaffected by it. Even still, you could give it a read... [else]Perhaps you could give it a read? [end if]It [italic type]is[roman type] a book, after all.";
 				LineBreak;
 				say "     [link](Y)[as]y[end link] - Give it a quick read.";
 				say "     [link](N)[as]n[end link] - It's probably best not to.";

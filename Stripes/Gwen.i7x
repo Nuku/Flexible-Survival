@@ -45,7 +45,7 @@ to say sexwithGwen:
 	else if HP of Gwen <= 20:
 		say "     'Oh, don't be silly. I'm just a little filly.' She starts to giggle at her rhyme.";
 	else if HP of Gwen <= 35:
-		say "     'I know I'm looking hot, but I'm still 'jailbait', she says with a giggle[if HP of Gwen < 30].[else]. 'Almost though. Mom says I won't need to wait much longer.'[end if]";
+		say "     'I know I'm looking hot, but I'm still [']jailbait['],' she says with a giggle[if HP of Gwen < 30].[else]. 'Almost though. Mom says I won't need to wait much longer.'[end if]";
 	else if lastfuck of Gwen - turns < 4:
 		say "     'Mmm... as much as I had fun last time, I do need a bit of a break. I've got to help Momma Mare and Aunt Vanessa with a few things.'";
 	else if cocks of player is 0 and cunts of player is 0:

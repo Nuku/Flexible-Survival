@@ -710,7 +710,7 @@ to say hospquestpt7:
 			now sabtoothed is 1;
 	if nerminepackage < 5:
 		if package is not owned:
-			say "     The shopkeeper at the mall has a collection of... ahh... [']occult and mystical items[']', he says with a bit of disdain. 'But she does have some historically significant items and I wanted to obtain something from her. She may want something of similar value in return,' he adds.";
+			say "     'The shopkeeper at the mall has a collection of... ahh... [']occult and mystical items['],' he says with a bit of disdain, 'but she does have some historically significant items, and I wanted to obtain something from her. She may want something of similar value in return,' he adds.";
 		if package is owned:
 			say "     The mouse takes the package from you with a smile and puts it on his sample table quietly.";
 			delete package;

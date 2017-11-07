@@ -12,7 +12,7 @@ when play begins:
 instead of resolving a Gryphons Plot:
 	if GryphPlotTracking is 0 or GryphPlotTracking is 1: [first time or repeat after failing to find them]
 		say "     Somewhere in the vicinity, you hear the screeching of... you think a gryphon, then another and another. They sound pretty excited and/or aggressive, with further noises on top that seem to belong to a fight. You wonder what is going on, and if you should check it out. Could be difficult to actually find out where exactly they are - the sound could be bouncing off the surrounding buildings... so it is easy to accidentally get going in exactly the wrong direction.";
-		say "     [bold type]Do you want to try to find the gryphons?[roman type][line break]";	
+		say "     [bold type]Do you want to try to find the gryphons?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure! You want to know what's going on!";
 		say "     ([link]N[as]n[end link]) - Nah, better not. Who knows what you'll find.";
@@ -41,6 +41,7 @@ instead of resolving a Gryphons Plot:
 					LineBreak;
 					say "     <text for storming up to help>";
 					let GroupFightCounter be 0;
+					now fightoutcome is 0; [reset]
 					while fightoutcome < 20 and GroupFightCounter < 3: [runs for 3 times or until the player loses or flees]
 						now inasituation is true;
 						challenge "Hermaphrodite Gryphon";
@@ -71,7 +72,7 @@ instead of resolving a Gryphons Plot:
 				say "     You set out in search of where the gryphons are, but while you still wander through the deserted streets, skirting around piles of trash, rubble and crashed cars, the sounds stop eventually. Hm, seems like you won't find that group of gryphons today. Maybe if you were a bit more perceptive, you might have found a quicker way to get to them...";
 				now GryphPlotTracking is 1; [player failed to find them]
 		else: [refused to investigate]
-			LineBreak; 
+			LineBreak;
 			say "     With a shug, you try to ignore the noises and concentrate on your immediate surroundings instead. Surviving in the city is difficult enough without actively going out to find trouble...";
 			now GryphPlotTracking is 100; [player had no interest]
 			now Gryphons Plot is Resolved; [event will not come up again]
@@ -81,16 +82,16 @@ instead of resolving a Gryphons Plot:
 		say "     <meeting a transformed soldier who wants to pay the player back for their transformation (angry or thankful), or meeting the gryphons again who ask if the player could play decoy for a new plan of theirs>";
 	else if GryphPlotTracking is 90: [player tried to help, failed, gryphons are pissed]
 		say "     <meeting a transformed soldier who thanks the player for their try at helping (maybe saying they enjoy the gryphon shape after all and want to let the player be a gryphon too) or meeting the pissed gryphons>";
-			
+
 to say PlayerWinsVsGryphonPlot1: [player beat up the 3 gryphons]
 	say "     <postcombat resolution>";
-	
+
 to say PlayerLosesVsGryphonPlot1: [player lost to the 3 gryphons]
 	say "     <soldiers get transformed, player gets... fucked?>";
-	
+
 to say PlayerFleesVsGryphonPlot1: [player fled the 3 gryphons]
 	say "     <soldiers left behind, can be assumed to be transformed, guilt the player a bit maybe>";
-	
+
 to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 	say "     <soldiers get transformed, a gryphon player may join in, nongryphons may be set upon too>";
 
@@ -99,7 +100,7 @@ to say PlayerWatchesGryphonPlot1: [player observes the gryphons]
 
 -------------------------
 Original text for Intervening on the soldier's behalf:
-	
+
 	if the bodyname of the player is not "Hermaphrodite Gryphon":
 		say "You leap in front of one of the gryphons gathering something to throw in another round of dive bombing, to the rescue and surprise of the soldiers. All of the gryphons react with furious screeches to your intrusion and attack you with singleminded intensity.";
 		challenge "Hermaphrodite Gryphon";
@@ -119,9 +120,9 @@ Original text for Intervening on the soldier's behalf:
 		say "     As you pick up the food, you hear someone groan nearby - it's the gryphon that crashed into one of the buildings around you earlier, looking only somewhat bruised though still rather out of it. Seems like her fall was slowed by the car roof she landed on and dented in, and the nanites are now doing their usual quick work of quickly fixing anything that doesn't kill instantly. Seeing the trickle of milk running down the windscreen of the car the semiconscious gryphon lies on and starting at her generous bosom, you decide to be pragmatic and use the chance to milk her, filling up an empty plastic bottle from your pack before you move on.";
 		increase carried of food by 2;
 		increase carried of gryphon milk by 1;
-		
+
 Original text for helping the gryphons: (this was just available for grpyhon players, but I'd love to see that opened for others too)
-	
+
 	say "Do you join in on the gryphons attack and help them?";
 	if the player consents:
 		say "With your help on top of the three other gryphons, the men in the jeep are quickly overwhelmed. Accompanied by gryphon screeches of victory, the soldiers are dragged out of their seats and stripped, then pinned to the ground by your lusty compatriots. Your own pick from among the men is the driver, a handsome guy with short-cut black hair whom you take from behind on the back seats. Fucking his ass hard and deep, you see him changing under you, tail extending and blue fur growing. As you blow your load into his rear you notice he now has a pussy. Good. It was time you took some...";
@@ -134,10 +135,10 @@ Original text for helping the gryphons: (this was just available for grpyhon pla
 		say "You pass out after she leaves, lying on the cum-stained back seats of the jeep when you come to later.";
 		follow turnpass rule;
 		now milsave is -1;
-			
+
 Original Option of watching:
 
-	say "Standing back and not interfering, you watch as the three gryphons do several more bombardment runs before they switch tactics and land instead of just dropping their loads. Before the soldiers leaning away from the windows to not get hit realize what's going on, the blue-feathered attackers are right at the jeep, ripping open the doors to get at them. Some quick hand to clawed hand wrangling later, the humans - being the losers - are dragged out of the car, stripped and fucked."; 
+	say "Standing back and not interfering, you watch as the three gryphons do several more bombardment runs before they switch tactics and land instead of just dropping their loads. Before the soldiers leaning away from the windows to not get hit realize what's going on, the blue-feathered attackers are right at the jeep, ripping open the doors to get at them. Some quick hand to clawed hand wrangling later, the humans - being the losers - are dragged out of the car, stripped and fucked.";
 	say "Do you join the soldiers in their submission?";
 	if the player consents:
 		say "You run towards the small free-for-all orgy, removing any clothing on the go, and jump right in.";
@@ -152,6 +153,6 @@ Original Option of watching:
 	else:
 		say "You leave the soldiers in a state of sexual frenzy and transformation, fucking and being fucked by the three gryphons while they themselves start sprouting blue fur.";
 		now milsave is -1;
-	
+
 
 Gryphons Plot for fs ends here.

@@ -28,11 +28,7 @@ Instead of resolving a Pack Bang:
 			say "You manage to make your escape from the wolf, leaving him and the rest of his pack behind.";
 		else if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 			say "     As you beat the wolf that attacked you, and he collapses with a loud pityable whine, you hear the rustling in the underbrush behind you suddenly stop. Glancing into the woods, you spot one of the pack wolves, looking at you with a hostile stare but not daring to come forward alone. Seems like you frightened the beast by defeating his pack's alpha... which is something you make use of a second later, running at him, shouting and waving your arms - which sends the wolf fleeing out of sight. You wait a moment to see if others are coming, but it looks like you're rid of them for now. This leaves you behind, alone with the dazed wolf.";
-			say "     [bold type]What do you want to do with the beast?[roman type][line break]";
-			say "     [line break]";
-			say "     ([link]Y[as]y[end link]) - Fuck him!";
-			say "     ([link]N[as]n[end link]) - Let him go.";
-			say "[FeralWolfVictorySex]";
+			say "[FeralWolfVictorySex]"; [No need for a prompt, as there's already a prompt where this is defined]
 		now Pack bang is resolved;
 	else:
 		say "     [line break]";
@@ -70,11 +66,7 @@ Instead of resolving a Pack Bang:
 							say "You finally run away from the wolves, leaving this part of the forest for good this time.";
 						else if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 							say "     As you beat the pack leader, the bedraggled rest of the pack breaks, fleeing into the forest. A moment later, you are left behind, standing over the dazed wolf.";
-							say "     [bold type]What do you want to do with the beast?[roman type][line break]";
-							say "     [line break]";
-							say "     ([link]Y[as]y[end link]) - Fuck him!";
-							say "     ([link]N[as]n[end link]) - Let him go.";
-							say "[FeralWolfVictorySex]";
+							say "[FeralWolfVictorySex]"; [No need for a prompt, as there's already a prompt where this is defined]
 		now Pack bang is resolved;
 		move player to bunker;
 		wait for any key;
@@ -85,6 +77,6 @@ to say FeralWolfGangBang:
 	say "     With both trying to knot you. The one fucking you face pushes his knot against your lips forcing your maw to open almost unhinging and snapping. Your eyes tear with the pain and your throat burns with the huge dick throbbing as it spill hot cum directly in your gullet. The other one turns around now that he has knotted you and with this another dog jumps at you, penetrating your asshole. The sudden penetration makes you get away from the one knotting your mouth. Your face finally free and dripping with your attackers cum.";
 	WaitLineBreak;
 	say "     The other wolves look angry and are fighting the one knotted in your pussy. You are pulled and pushed to your limits, and in a vain struggle to scream the pain your mouth is penetrated by another of the dog who hadn't a turn yet. You feel hot cum filling your intestines as the one on your ass finally cums, but he doesn't get a chance to knot you as both dogs on your back are pushed from you. Your holes gape without a cock, especially a knotted cock, and the cold wind of the forest send chills down your spine. The dogs fighting for a turn is now but a background noise. But your rest doesn't last long as other dogs finally fuck you.";
-	say "     You are always used by at least two of the horny wolves, in fact sometimes you felt more than two cocks penetrating your now loose asshole[if cunts of player > 0] and another one inside your drenched pussy[else].[end if] Your mouth hurts from all the use and all you can taste right now is the taste of wolf's cum, you stomach aching with how it's full, since it was filled from both ends. But the wolves are now long gone, leaving you in a pool of cum. But this finally gives you enough time to rest, until you are finally good enough to go back to your adventures.";
+	say "     You are always used by at least two of the horny wolves, in fact sometimes you felt more than two cocks penetrating your now loose asshole[if cunts of player > 0] and another one inside your drenched pussy[end if]. Your mouth hurts from all the use and all you can taste right now is the taste of wolf's cum, you stomach aching with how it's full, since it was filled from both ends. But the wolves are now long gone, leaving you in a pool of cum. But this finally gives you enough time to rest, until you are finally good enough to go back to your adventures.";
 
 Forest Gang Bang ends here.

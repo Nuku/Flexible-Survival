@@ -25,7 +25,7 @@ to say PKDesc:
 			LineBreak;
 			say "Well hey there, welcome back. Did you come to shop, talk, or did you wanna play some more?' the not-so-innocent proprietor quietly says to you. 'Just give me a hollar if you need anything, beautiful.'";
 		else:
-			say "	'Hi [if player is female]miss[else if player is male]mister[else]there![end if] Nice to see you back here. Did you come to chat with little me, or are you looking to change up your [Italic type]horrid[roman type] attire?' the perky catgirl says, winking slyly at you. 'Either way, welcome back!'";
+			say "	'Hi [if player is female]miss[else if player is male]mister[else]there[end if]! Nice to see you back here. Did you come to chat with little me, or are you looking to change up your [italic type]horrid[roman type] attire?' the perky catgirl says, winking slyly at you. 'Either way, welcome back!'";
 
 the scent of The Pretty Kitty is "Inhaling deeply, the smell of clean clothes rushes into your nose, reminding you of clean laundry.".
 
