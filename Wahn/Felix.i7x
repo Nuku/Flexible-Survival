@@ -26,7 +26,7 @@ Section 1 - Walk-in Event to put him into the dry plains room
 instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 and libido of Thomas > 9 and libido of Thomas < 20 and (FelixSaved - turns > 8) and HP of Felix is 0):
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
-	project the Figure of Felix_face_icon;		
+	project the Figure of Felix_face_icon;
 	say "     As you come out into the dry plains, you see a centaur at your usual meeting spot with Thomas - though it isn't him, but Felix, the young centaur colt you helped save. He smiles and waves as he notices you, then trots closer. 'Hello there, nice to see you again. [if libido of Thomas is 10]Thomas is[else if libido of Thomas is 11]Thomas and Sandy are[else if libido of Thomas is 12]Thomas and the others are[end if] out gathering supplies and I offered to wait here in case you came along. I - I wanted to speak with you privately anyways.' He hesitates a moment, biting his lip before continuing. 'You see - I think there's... something stalking me, hiding out in the high grass. I feel like - whatever it is - watches me from time to time. But then, it might just be paranoia and I don't want to alarm everyone for nothing. Could you maybe help me out with this? There might be tracks or something...'";
 	LineBreak;
 	say "     What do you answer? Do you want to try looking for Felix mysterious stalker ([link]Y[as]y[end link]), or wave it off as just his imagination ([link]N[as]n[end link]) ?";
@@ -144,7 +144,7 @@ to say AndreMeeting:
 		challenge "Plains Lizard";
 		now Libido of Felix is 99;
 	else:
-		project the Figure of Andre_face_icon;	
+		project the Figure of Andre_face_icon;
 		say "     Standing behind the horse-sized lizard, you clear your throat. With a shocked expression, he turns his head, then whirls around to fully face you and starts to stutter 'What? B-but you left - I saw - you were -' His head whips around towards the distant centaurs, then back to you. 'I - er - was just - em -' While looking pretty ferocious with his claws and teeth, the lizard guy seems very flustered at getting caught by you. Finally, you tell him to take a deep breath and explain what he's doing here.";
 		say "     'I'm Andre. I was on a break from college when I changed, and everything around changed.' *he indicates the grassland around you* 'And I was doing my best to survive and I - I saw... Him' *he nods towards the distant centaurs* '...a while ago, and he looked so cute, and I wanted to talk to him - but - but then that behemoth found him and he had to run and I couldn't help against something like that and he lost this.' He shows you a leather pouch with a long carrying leather strap and takes another deep breath. 'I kept it to give it back to him, but then I didn't know if he'd like me and if I should just go to him and...'";
 		LineBreak;
@@ -191,7 +191,7 @@ instead of conversing the Felix:
 		say "[FelixTalkMenu]";
 
 to say FelixTalkMenu:
-	project the Figure of Felix_face_icon;	
+	project the Figure of Felix_face_icon;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
 	now title entry is "Just chat a bit";
@@ -625,7 +625,7 @@ Instead of fucking the Andre:
 			say "[AndreSexMenu]";
 
 to say AndreSexMenu:
-	project the Figure of Andre_icon;	
+	project the Figure of Andre_icon;
 	blank out the whole of table of fucking options;
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
@@ -708,7 +708,7 @@ to say AndreSex3: [cunt licked by Andre]
 	infect "Plains Lizard";
 
 to say AndreSex4: [fingering Andre ass]
-	say "     Walking up to Andre, you run a hand over his long scaled neck, then along his body until you come to his hind legs. Smiling at the big lizard as he cranes his neck to see what you're doing, you move your hand further back under his tail and find the his pucker. Rubbing it and hearing the surprised hiss he makes, you say 'Relax, I just want to play a bit with your ass. You'll like it - and you want to train your muscles back here for Felix, don't you?' 'Err - of course.' he answers, and you can see his opening relax a bit.";
+	say "     Walking up to Andre, you run a hand over his long scaled neck, then along his body until you come to his hind legs. Smiling at the big lizard as he cranes his neck to see what you're doing, you move your hand further back under his tail and find the his pucker. Rubbing it and hearing the surprised hiss he makes, you say 'Relax, I just want to play a bit with your ass. You'll like it - and you want to train your muscles back here for Felix, don't you?' 'Err - of course,' he answers, and you can see his opening relax a bit.";
 	LineBreak;
 	say "     You bring your hand to his hole and start to massage it, rubbing it and the surprisingly sensitive underside of his long tail. Starting slow, you push one, then two fingers inside his ass, working them in and out a bit until he relaxes his muscles even more and you can add another finger. After a while, you got him loosened up enough that you can slip four fingers in - followed by your whole hand. Pushing deeper into the big lizard's body, you stroke his inner passage, grinning at the lust-filled hisses and moaning you create with that. Feeling around a bit, you find a spot that seems especially sensitive judging from the joyful gasps it makes Andre do every time you stroke over it. Concentrating on that, it doesn't take much longer until the big lizard orgasms, his sphincter gripping your arm tightly as spurt after spurt of cum blasts from his ridged cock and hits the ground.";
 	infect "Plains Lizard";

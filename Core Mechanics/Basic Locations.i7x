@@ -7,16 +7,9 @@ The invent of Bunker is { "face mask","medkit","medkit","water bottle","water bo
 Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
 East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
 East of library door is Grey Abbey Library.
-Inside of Grey Abbey Library is Bunker.
 Bunker is below Grey Abbey Library.
 The player is in Bunker.
 The marea of library door is "Outside".
-
-Instead of going down from Grey Abbey Library:
-	try going inside;
-
-Instead of going up from Bunker:
-	try going outside;
 
 to say bunker desc:
 	say "     Sparsely appointed, this bunker was built as a fallout shelter back during the Cold War, then abandoned to become a forgotten curiosity at best. You are standing in the main bunker room, a rectangular chamber measuring about 60 feet in length and 30 feet in width. Its walls are solid concrete and long rows of shelves are built into the back wall. There are several large storage lockers in the bunker as well. They look like a good place to store all your extra stuff. A long double row of simple metal beds is bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
@@ -25,6 +18,13 @@ to say bunker desc:
 	say ". The small sink taking up a corner of the room seems to be broken, producing no water no matter how much the knob is turned. Two doorways to the north and northeast lead to adjoining rooms - showers and a small restroom, while a thicker, secure-looking door opens to the stairwell used to go [bold type]outside[roman type].";
 	if "old boombox" is listed in invent of Bunker:
 		say "     You have set up the old boombox in one corner where it continues to play despite not being plugged into anything. Maybe it has really amazing batteries - or draws energy some other way. No matter what, it provides a mix of tunes and the occasional weather report on the continuing heat wave. Fiddling with the dials can get different songs and genres of music, but no actual news or broadcast radio. The radio broadcaster you hear seems the same across the stations, though his tone and delivery suits the format of the current [']station[']. Its dials and settings change on their own from time to time as if to provide music to suit the situation or dropping its volume when you're taking a nap.";
+	if RestoreMode is true:
+		[WaitLineBreak;]
+		now RestoreMode is false;
+		try restoring the game;
+		if maxHP of player is 0:
+			try restarting the game;
+
 
 North of Bunker is Communal Shower.
 Communal Shower is a room. The description of Communal Shower is "[bshower desc]".

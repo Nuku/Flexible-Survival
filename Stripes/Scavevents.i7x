@@ -168,10 +168,10 @@ Instead of resolving a Protected Supplies:
 		let scavfight be 0;
 		say "But as you move to get it, a [name entry] moves to cut you off, probably wanting to take it for themselves. ";
 		if a random chance of 1 in 2 succeeds:
-			say "     The creature charges to attack before you have a chance to consider falling back.";
+			say "The creature charges to attack before you have a chance to consider falling back.";
 			let scavfight be 1;
 		else:
-			say "     The creature remains watchful, but keeps you from moving towards your desired supplies.";
+			say "The creature remains watchful, but keeps you from moving towards your desired supplies.";
 			say "     [bold type]Shall you attack to get them or leave?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Attack.";

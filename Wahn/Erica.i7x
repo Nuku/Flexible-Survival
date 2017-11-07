@@ -60,7 +60,7 @@ Version 1 of Erica by Wahn begins here.
 
 CarlEricaInteraction is a number that varies.
 
-instead of going inside from the Grey Abbey Library while (Dexterity of Erica is 0 and (HP of Eric > 9 and HP of Eric < 16)):
+instead of going down from the Grey Abbey Library while (Dexterity of Erica is 0 and (HP of Eric > 9 and HP of Eric < 16)):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC/ERICA QUESTION[line break]";
@@ -626,7 +626,7 @@ instead of going inside from Grey Abbey Library while (Level of Erica > 0 and Le
 	say "     So, what do you tell her? That there's no shame in having some fun, even without you and with... exotic partners ([link]Y[as]y[end link])? Or do you just console her and tell her to avoid the felinoid in the future ([link]N[as]n[end link])?";
 	if player consents: [more felinoid scenes]
 		LineBreak;
-		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining that you're not angry or anything. After all, it's a whole new world with the nanites and everything going on, so why should people be restrained by the morals of the old one. The young athlete's eyes get wide in realization as you remind her that you brought the felinoid home with you, even after knowing his lusty character. Pulling her close again, you squeeze Erica's tight ass and whisper in her ear that [if Level of Erica is 1 or Level of Erica is 2]you saw the felinoid follow her in the library and were okay with it.[else]you were there and did watch the hot little scene of the felinoid mounting her.[end if] A visibly relieved Erica stutters 'So you did... you let... he did...', then takes a deep breath before admitting 'He felt so good - so right - inside me, having his hard cock fuck me, that soft belly-fur against my back...' Her breathing becomes quicker as she relives her experience with the felinoid in memory, clearly getting aroused by it.";
+		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining that you're not angry or anything. After all, it's a whole new world with the nanites and everything going on, so why should people be restrained by the morals of the old one. The young athlete's eyes get wide in realization as you remind her that you brought the felinoid home with you, even after knowing his lusty character. Pulling her close again, you squeeze Erica's tight ass and whisper in her ear that [if Level of Erica is 1 or Level of Erica is 2]you saw the felinoid follow her in the library and were okay with it[else]you were there and did watch the hot little scene of the felinoid mounting her[end if]. A visibly relieved Erica stutters 'So you did... you let... he did...', then takes a deep breath before admitting 'He felt so good - so right - inside me, having his hard cock fuck me, that soft belly-fur against my back...' Her breathing becomes quicker as she relives her experience with the felinoid in memory, clearly getting aroused by it.";
 		LineBreak;
 		say "     Do you want to seize the moment for some hot action between the sheets with Erica ([link]Y[as]y[end link]), or do you just leave her to dwell on those lusty thoughts ([link]N[as]n[end link])?";
 		now Level of Erica is 4;
@@ -736,7 +736,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 [   6: Carl fucked Erica                                             ]
 [  50: player told Carl to stop pursuing Erica                       ]
 
-instead of going outside from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+instead of going up from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Erica MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
@@ -755,7 +755,7 @@ to say EricaMeetsCarl:
 	now CarlEricInteraction is 1;
 	now lastCarlEricInteraction is turns;
 
-instead of going outside from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
+instead of going up from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
 	move player to Grey Abbey Library;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
@@ -1222,7 +1222,7 @@ instead of going inside from Grey Abbey Library while (XP of Erica > 0 and XP of
 	say "     So, what do you tell her? That there's no shame in having some fun, even without you and with... exotic partners ([link]Y[as]y[end link])? Or do you just console her and tell her to avoid Fang in the future ([link]N[as]n[end link])?";
 	if player consents: [more Fang scenes]
 		LineBreak;
-		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining that you're not angry or anything. After all, it's a whole new world with the nanites and everything going on, so why should people be restrained by the morals of the old one. The young athlete's eyes get wide in realization as you remind her that you brought Fang home with you, even after knowing his lusty character. Pulling her close again, you squeeze Erica's tight ass and whisper in her ear that [if XP of Erica is 1 or XP of Erica is 2]you saw Fang follow her in the library and were okay with it.[else]you were there and did watch the hot little scene of Fang mounting her.[end if] A visibly relieved Erica stutters 'So you did... you let... he did...', then takes a deep breath before admitting 'He felt so good - so right - inside me, having his hard cock fuck me, that soft belly-fur against my back...' Her breathing becomes quicker as she relives her experience with Fang in memory, clearly getting aroused by it.";
+		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining that you're not angry or anything. After all, it's a whole new world with the nanites and everything going on, so why should people be restrained by the morals of the old one. The young athlete's eyes get wide in realization as you remind her that you brought Fang home with you, even after knowing his lusty character. Pulling her close again, you squeeze Erica's tight ass and whisper in her ear that [if XP of Erica is 1 or XP of Erica is 2]you saw Fang follow her in the library and were okay with it[else]you were there and did watch the hot little scene of Fang mounting her[end if]. A visibly relieved Erica stutters 'So you did... you let... he did...', then takes a deep breath before admitting 'He felt so good - so right - inside me, having his hard cock fuck me, that soft belly-fur against my back...' Her breathing becomes quicker as she relives her experience with Fang in memory, clearly getting aroused by it.";
 		LineBreak;
 		say "     Do you want to seize the moment for some hot action between the sheets with Erica ([link]Y[as]y[end link]), or do you just leave her to dwell on those lusty thoughts ([link]N[as]n[end link])?";
 		now XP of Erica is 4;

@@ -167,7 +167,7 @@ to say fangsex5:		[assfuck Fang]
 
 Section 3 - Fang and Sandra
 
-instead of going outside from Bunker while ( lastfuck of Sandra - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and libido of Fang < 2 and ( HP of Fang is 1 or HP of Fang is 2 ) ):
+instead of going up from Bunker while ( lastfuck of Sandra - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and libido of Fang < 2 and ( HP of Fang is 1 or HP of Fang is 2 ) ):
 	now lastfuck of Sandra is turns;
 	now lastfuck of Fang is turns;
 	move player to Grey Abbey Library;
@@ -472,7 +472,7 @@ to say fangalphatrio:
 
 Chapter 2 - w/o Sandra	[Only available if 'girl' is banned, removing Sandra from the game]
 
-instead of going outside from Bunker while ( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and girl is banned) and ( cocks of player > 0 or cunts of player > 0 ):	[ignored for 3+ days]
+instead of going up from Bunker while ( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and girl is banned) and ( cocks of player > 0 or cunts of player > 0 ):	[ignored for 3+ days]
 	now lastfuck of Fang is turns;
 	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something. As you start to struggle, you are surprised to find that it's Fang atop you. From his growls and the hard cock rubbing against you, you surmise that the wolf's not playing around. It's been some time since you've given the beast some attention and it looks like he's intent on satisfying his lusts with you whether you like it or not. As his throbbing shaft grinds against you while he tries to get a better grip on you, the scent from the powerful beast is quite enticing. It could be fun to just give in and let the big wolf have his way with you.";
 	say "     [bold type]Shall you let him or reassert your dominance?[roman type][line break]";

@@ -30,14 +30,14 @@ Instead of conversing the doctor matt:
 		say "'God Speed and Good Luck,' says the recording before clicking off.";
 		stop the action;
 	if HP of doctor matt is 0:
-		say "'Welcome to Trevor Labs,' says the man in the hazmat suit, 'I am Doctor Salacious, but most just call me Doctor Matt. Since I didn't hear any scuffling, I presume Orthas let you in, so you are probably not a crazy mutant.'";
+		say "'Welcome to Trevor Labs,' says the man in the hazmat suit. 'I am Doctor Salacious, but most just call me Doctor Matt. Since I didn't hear any scuffling, I presume Orthas let you in, so you are probably not a crazy mutant.'";
 		if scenario is "Researcher":
 			say "He looks you over a moment, 'You don't look nearly as lost and confused as most.' He turns back to his computer a moment, tapping quickly, 'Are you another researcher? Excellent. I'm looking into a cure for this plague, but I haven't made much progress. But I did find something else...";
 		else:
 			say "He laughs a little, nervous and forced. 'Anyway, before you ask, no, we did not have anything to do with the nanite infestation. You didn't know it was nanites? Now you do. I have been studying them for some time since the grid went dark. I'm not much closer to a cure... but I did find something you're probably interested in,' he says, pausing for effect.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
-		say "'I can manipulate existing strains, just a little, for those already infected, like you. Don't look at me like that. Anyone not in a fully sealed environment is infected by now.[if humanity of player < 80] In fact I'd say you've already been pretty badly infected, interesting...[end if] But now for the good news. As you develop resistances to the nanite infection and your system becomes stronger, I can redirect that growth to amazing, and planned, almost superhuman abilities,' he declares, sounding quite proud of himself, 'Only one catch...'";
+		say "'I can manipulate existing strains, just a little, for those already infected, like you. Don't look at me like that. Anyone not in a fully sealed environment is infected by now. [if humanity of player < 80]In fact I'd say you've already been pretty badly infected, interesting... [end if]But now for the good news. As you develop resistances to the nanite infection and your system becomes stronger, I can redirect that growth to amazing, and planned, almost superhuman abilities,' he declares, sounding quite proud of himself. 'Only one catch...'";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 		say "'I haven't had any test subjects. Until you. So you come in here, [bold type]volunteer[roman type], and we'll make you better than when you started. In return, you can help us save the city. A fair deal, right?' he says, but he's already turning back to his monitors, not actually listening for your reply.";

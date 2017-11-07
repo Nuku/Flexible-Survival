@@ -84,7 +84,7 @@ Include (-
              	graph_width  = gg_arguments-->0;
              	graph_height = gg_arguments-->1;
 
-	result = glk_image_get_info( cur_pic, gg_arguments,  gg_arguments+WORDSIZE);
+	result = glk_image_get_info( cur_pic, gg_arguments, gg_arguments+WORDSIZE);
 	img_width  = gg_arguments-->0;
 	img_height = gg_arguments-->1;
 
@@ -141,7 +141,7 @@ Include (-
              	graph_width  = gg_arguments-->0;
              	graph_height = gg_arguments-->1;
 
-	result = glk_image_get_info( cur_pic, gg_arguments,  gg_arguments+WORDSIZE);
+	result = glk_image_get_info( cur_pic, gg_arguments, gg_arguments+WORDSIZE);
 	img_width  = gg_arguments-->0;
 	img_height = gg_arguments-->1;
 
@@ -231,7 +231,7 @@ To color the/-- graphics window (gcv - a glulx color value) from (x - a number) 
 	color graphics window numerical gcv from x by y to xx by yy.
 
 To color the/-- graphics window (gcv - a number) from (x - a number) by (y - a number) to (xx - a number) by (yy - a number):
-	 (- glk_window_fill_rect(gg_picwin, {gcv} , {X}, {Y}, {XX}, {YY}); -)
+	 (- glk_window_fill_rect(gg_picwin, {gcv}, {X}, {Y}, {XX}, {YY}); -)
 
 To draw (fig - a figure-name) from (x - a number) by (y - a number) to (xx - a number) by (yy - a number):
 	(- glk_image_draw_scaled(gg_picwin, ResourceIDsOfFigures-->{fig}, {x}, {y}, {xx}, {yy}); -)

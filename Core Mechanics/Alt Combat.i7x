@@ -180,7 +180,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	repeat through the table of game art:
 		if title entry is nam:
 			now found is 1;
-			follow the ngraphics_open rule;
+			[follow the ngraphics_open rule;]
 			project icon entry;
 			break;
 [	if found is 0:
@@ -681,6 +681,7 @@ This is the flee rule:
 		if there is a continuous in row monstercom of the table of Critter Combat:
 			follow the continuous entry;
 		if combat abort is 0, follow the combat entry;
+	project the figure of pixel_icon;
 
 Chapter 6 - Throw the Fight
 
@@ -1308,8 +1309,7 @@ to win:
 		if gshep_postfight is 0 and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ):	[checks on Korvin's post-fight 'feedback']
 			if gshep_fights > 2 and inasituation is false and lastscene of gshep - turns >= 4:
 				say "[gshep_postfightargue]";
-	project the figure of pixel_icon;
-	follow the ngraphics_close rule;
+	follow the ngraphics_blank rule;
 	rule succeeds;
 
 To lose:
@@ -1339,8 +1339,7 @@ To lose:
 	decrease the morale of the player by 3;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
 	[get rid of graphics window]
-	project the figure of pixel_icon;
-	follow the ngraphics_close rule;
+	follow the ngraphics_blank rule;
 
 
 Section 5 - Critter Combat

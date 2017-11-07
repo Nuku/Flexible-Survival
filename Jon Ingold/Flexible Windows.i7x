@@ -1061,7 +1061,7 @@ Any text window can be cleared at any time using
 	clear main-window;
 	clear side-window;
 
-Note that Version 9's handling of drawing rules is different from earlier versions', and will require some changes to existing source code:
+Note that Version 9's handling of drawing rules is different from earlier versions, and will require some changes to existing source code:
 
 	1) The "drawing rule" property for windows no longer exists. References to this property should be removed.
 

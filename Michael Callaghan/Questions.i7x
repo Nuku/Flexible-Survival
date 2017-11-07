@@ -1002,6 +1002,6 @@ Example: * Quiz Night - A short example to show creating a multiple choice quiz.
 			if the table of quiz questions is not empty:
 				say "Well done.  You have survived to the next round.";
 			else:
-				end the story finally saying "Congratulations you have won!" ;
+				end the story finally saying "Congratulations you have won!";
 		else:
-			end the story finally saying "You have been barred from the pub for getting a question wrong." .
+			end the story finally saying "You have been barred from the pub for getting a question wrong.".

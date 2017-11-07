@@ -270,7 +270,7 @@ to say NermineTalk4:
 		say "     DEBUG-> HELLGATHERQUEST [hellgatherquest] <- DEBUG[line break]";
 	if hellgatherquest is 5:
 		say "     'Welcome back again, Nermine sees you have acquired the items she needs,' the jackal-woman says with a sly smile as you set the bag from Harold out on the counter. 'Now Nermine has finished dealing with the collar as you requested, and should have these items ground and mixed and properly ready for little white mare soon enough, now all that remains is for Nermine to talk about payment with sexy equine stud here...' she says with a teasing wink as she looks you up and down for a minute, her request making you quite nervous, before she sighs slightly, her black furred shoulders slumping a bit. 'Unfortunately, Sexy equine has little Nermine wants right now, and is far too busy to send off on long quest to fetch items for a lonely jackaless, so it looks like Nermine will have to ask for same thing she did of earlier stablemaster at this point. Access to the stables when Nermine wants it, and a favor of Nermine's choosing in the future,' she says with a shrug and a smile as she cocks her head at you inquiringly.[line break]";
-		say "     Hardly believing your luck you nod in agreement eagerly, and the jackal-woman grins slightly before heading to the back room for a while after telling you to stay there and touch nothing. Not wanting to get in trouble, or to be more honest, be turned into anything embarrassing given what you have learned so far about this strange shop, you wait for quite a while in her shop without messing with anything, until eventually Nermine returns with a small box and a pouch. 'Now Nermine warns would be Nightmare to be careful with the choker, it will prove just as effective on you as it will on current stablemaster, so be careful not to try it on yourself,' she says teasingly as she hands you the items, her words sending a shiver down your spine as you stow them away carefully and turn to leave. Though just as you are about to leave, you hear the shopkeeper say 'And Nermine hopes this one will remember their agreement better than the last one did, though maybe Nermine will still get to use curse she was preparing after all..' you hear her mutter, and quickly duck out of the shop before the creepy and strange shopkeeper decides to try cursing you just in case...";
+		say "     Hardly believing your luck you nod in agreement eagerly, and the jackal-woman grins slightly before heading to the back room for a while after telling you to stay there and touch nothing. Not wanting to get in trouble, or to be more honest, be turned into anything embarrassing given what you have learned so far about this strange shop, you wait for quite a while in her shop without messing with anything, until eventually Nermine returns with a small box and a pouch. 'Now Nermine warns would be Nightmare to be careful with the choker, it will prove just as effective on you as it will on current stablemaster, so be careful not to try it on yourself,' she says teasingly as she hands you the items, her words sending a shiver down your spine as you stow them away carefully and turn to leave. Though just as you are about to leave, you hear the shopkeeper say 'And Nermine hopes this one will remember their agreement better than the last one did, though maybe Nermine will still get to use curse she was preparing after all...' you hear her mutter, and quickly duck out of the shop before the creepy and strange shopkeeper decides to try cursing you just in case...";
 		now hellgatherquest is 6;
 	else if hellgatherquest is 4:
 		say "     'Back again? Collar is not done yet, it must be strong indeed to bind a Nightmare after all, and you still do not have the ingredients for your next mixture from the barkeep at the palomino either. Perhaps handsome equine was entranced by Nermine's beauty and wished to admire her some more?' the jackal-woman says with a teasing grin as she winks at you, before going back to dealing with the items in the shop, some of which seem to be trying to make a break for the door...";
@@ -414,7 +414,7 @@ to say sexwithnermine:
 						say "     Your knot pulls and teases at her pussy with every thrust, and soon she is writhing underneath you in orgasm, howling in lust. Her walls clenching tight around your pointed canine cock gives you the last push you needed yourself, triggering your own powerful orgasm. Your mind explodes in pleasure as you shoot your load into her all too willing womb, with Nermine groaning and panting as she feels your jackal seed painting her insides and claiming her body.";
 						say "     Eventually you come down from the heights of pleasure and find yourself standing there gripping the counter, your knot slowly shrinking in Nermine's body. Looking down, you notice that the jackal bitch is all but unconscious underneath you, a look of well fucked pleasure on her face as she lies sprawled out on her shop counter, your fertile seed bottled up in her pussy by your canine knot. The loud jingling of bells pulls your attention away from the needy bitch impaled on your shaft and as you look up, you see a wide-eyed fennec stand at the door, a large bag clutched to his slender frame.";
 						WaitLineBreak;
-						say "     'I - er - I got the items you wanted.' he says in a hesitant tone, shyly stepping forward. Seeing that your pet bitch is still a bit out of it, you give the fennec a nod to acknowledge him, then pull Nermine up against your chest and whisper in her ear that she's got a customer, combined with softly pinching her nipples. Doing so pulls her out of her lust-filled haze, and as the bitch sees the visitor in front of her, she immediately goes into shopkeeper mode, eager to finish her deal with the man. 'The gentle desert fox has gotten it for Nermine? All of it?' she inquires, to which the fennec replies 'Yes, yes - of course. I would never try to cheat you.' He offers Nermine the bag and as she leans forward to take it, the movement makes your knotted cock pull against her pussy, causing your pet to moan loudly.";
+						say "     'I - er - I got the items you wanted,' he says in a hesitant tone, shyly stepping forward. Seeing that your pet bitch is still a bit out of it, you give the fennec a nod to acknowledge him, then pull Nermine up against your chest and whisper in her ear that she's got a customer, combined with softly pinching her nipples. Doing so pulls her out of her lust-filled haze, and as the bitch sees the visitor in front of her, she immediately goes into shopkeeper mode, eager to finish her deal with the man. 'The gentle desert fox has gotten it for Nermine? All of it?' she inquires, to which the fennec replies 'Yes, yes - of course. I would never try to cheat you.' He offers Nermine the bag and as she leans forward to take it, the movement makes your knotted cock pull against her pussy, causing your pet to moan loudly.";
 						say "     Re-gaining her composure after a moment of panting in lust, Nermine does her best to continue with the business deal. Setting the bag down on the floor behind the counter after only a casual inspection of its contents, she tells her customer to get an ancient-looking stone urn standing in one of the store shelves. As he takes the urn with shaking hands and brings it to the counter, the jackaless starts to explain something - and you decide to have a bit of fun, seeing how good she'll do as you grind your crotch against her sex...";
 						WaitLineBreak;
 						say "     'What Nermine's dear customer *pant* *pant* now holds is *moan* the urn of Bastet, very rare and old. As the desert fox asked, this can - Ah. AH! Harder, my master... yess! - this can be used to call his goddess's attention back fully into this world. *moan* It speaks highly of his dedication that he went so far for his faith. Nermine wishes him well, and is sure he will succeed.' She silently whimpers at this point, her pussy trembling around your thrusting cock from a miniature orgasm. 'Times are auspicious to do so, as my customer will need the milk of a bull-man to add to the herbs already inside - and those are much, much easier to find recently. *pant* Then he must share the urn's draught with *gasp* a willing feline and finish the ritual by coupling with her...'";
@@ -700,7 +700,7 @@ to NermineRequestHelp:
 	else if JackalBoyTF is 3:
 		say "     'What a perfect new face! Nermine loves it!' the happy jackal-woman says as she comes around the counter to get a better look at you. Her attention makes you blush in pleasure, strangely happy that your new look is to her liking. As she reaches up and strokes her soft-furred hand along your muzzle and then reaches up to scratch behind your ears, you realize that somehow, during all the work you have done for her, the strange jackal-woman truly has become your mistress. Somehow seeing your jackal mistress happy has become one of the most important things to you. Helping her with her little quests is almost as much fun as changing yourself into a lovely little jackal pet for her enjoy is! Looking up into her smiling eyes, you wonder for a minute if you should really feel this happy just by making her smile... but your thought fades away as she brings her sleek dark muzzle down next to yours...";
 		say "     'Nermine likes this new face so much, and that her little helper has a proper little muzzle, and that she can do this...' she says, then tilts her head to the side and wraps her muzzle around your own! Your own canine muzzle automatically under hers, allowing your tongues to mingle in a deep kiss, the taste of her lovely mouth fills your own as she presses you close to her. Your mind seems to fog over with lust and pleasure, and you lose track of anything other than pleasing your mistress in this wonderful moment. Eventually she breaks the kiss, leaving you panting with need as she licks her lips softly, and then smiles and winks at you as she moves back behind the counter. You stand there panting, your tail wagging left and right as she settles herself in her usual position, leaning forward over the counter to address you again.";
-		say "      'It is obvious Nermine's helper wants to become her very own perfect little jackal pet. The happy shopkeeper can't wait to see how wonderful the new look will be once it is complete. But she needs just one more thing first, well three more things actually,' the lovely shopkeeper says as she fiddles with the collar of her tight t-shirt. 'Nermine has heard there are peacocks in this city with beautiful sparkling feathers. Bring her three of these large feathers, and then both Nermine and her little helper can be very very happy,' she adds in a teasing tone and winks, then licks her lips enticingly. The action makes you lick your lips in response, the soft taste of her mouth still lingering on your tongue.";
+		say "     'It is obvious Nermine's helper wants to become her very own perfect little jackal pet. The happy shopkeeper can't wait to see how wonderful the new look will be once it is complete. But she needs just one more thing first, well three more things actually,' the lovely shopkeeper says as she fiddles with the collar of her tight t-shirt. 'Nermine has heard there are peacocks in this city with beautiful sparkling feathers. Bring her three of these large feathers, and then both Nermine and her little helper can be very very happy,' she adds in a teasing tone and winks, then licks her lips enticingly. The action makes you lick your lips in response, the soft taste of her mouth still lingering on your tongue.";
 		now Nerminehelpstatus is 5;
 		stop the action;
 	else if Nerminehelpstatus is 4:
@@ -1725,7 +1725,7 @@ Instead of resolving a Anubis Statue:
 		say "     Wandering through the twisting (and possibly shifting) corridors of the museum, you find yourself face to face with a large statue of a jackal-man. The statue seems to be made out of some strange black stone and you almost get the feeling that it is looking straight at you. A helpful museum info-plaque tells you that this depicts the god Anubis, who was worshiped in ancient egypt...";
 	else if statuequest is 1:
 		say "     Traveling through the mind-bending jumble of museum halls that seem to be connected with one another more or less randomly (and with shifting sequences of what room leads where), you find your feet leading you through the halls until you reach an empty pedestal, occupying a prominent position in one of the egyptian exhibits. A helpful museum info-plaque tells you that a statue depicting the god Anubis is supposed to be there. Weird. It seems to have vanished without a trace. Well, at least it's not smashed to pieces by some transformed people rutting and knocking it over but still... the situation seems strange, and you find yourself looking around carefully in case it is some sort of trap.";
-		say "     You almost don't spot the strange jackal-headed man standing over in the shadows watching you, his eyes gleaming with amusement. He is garbed in an egyptian-style and quite elaborate tunic, its golden thread creating an impressive contrast to the deeply tanned skin on his muscular form, as well as the night-black fur of his canine head. 'Ah there you are, I have been keeping an eye on you for a little while now,' The man says in a rich and powerful voice, walking up to you with a grin on his muzzle. 'It's been fun watching you turn the tables on that little jackaless, but at this point she isn't about to let you get any stronger or get any more power over her now, is she?' the jackal-man says with amusement as you are forced to agree with his statement. 'Well I find the whole situation amusing enough I might be willing to help you out instead. What do you say?' he asks you with an even wider grin on his canine face.";
+		say "     You almost don't spot the strange jackal-headed man standing over in the shadows watching you, his eyes gleaming with amusement. He is garbed in an egyptian-style and quite elaborate tunic, its golden thread creating an impressive contrast to the deeply tanned skin on his muscular form, as well as the night-black fur of his canine head. 'Ah there you are, I have been keeping an eye on you for a little while now,' the man says in a rich and powerful voice, walking up to you with a grin on his muzzle. 'It's been fun watching you turn the tables on that little jackaless, but at this point she isn't about to let you get any stronger or get any more power over her now, is she?' the jackal-man says with amusement as you are forced to agree with his statement. 'Well I find the whole situation amusing enough I might be willing to help you out instead. What do you say?' he asks you with an even wider grin on his canine face.";
 		say "     [bold type]Take the deal?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure. For a stranger you just met, he seems to be surprisingly trustworthy.";
@@ -1740,7 +1740,7 @@ Instead of resolving a Anubis Statue:
 			say "     'That's too bad,' the strange man says with a sad look on his face. 'I was so looking forward to watching you play with that lovely little jackaless some more.' With a teasing look on his jackal muzzle, he turns and begins to walk away. Before he vanishes through a tall archway, he looks back over his shoulder, throwing you a casual, 'If you change your mind, you know where to find me.'";
 	else if statuequest is 2:
 		say "     Returning to the museum with the samples the strange man sent you to retrieve, you luckily manage to retrace your steps to the empty pedestal, and are unsurprised to find the jackal-like man leaning up against it with an amused grin. 'Found them I see?' he says with a smirk as he takes the bundle of vials from you eagerly. 'Trust me, these little beauties will make it more than worth your while,' the jackalman says as he begins to carefully mix the pheromones together, the scent of some strange sort of musk filling your nose as he does so. 'Ah there we go!' he says happily as he takes a whiff of the completed project, seeming satisfied as he pulls out a familiar looking ankh with a jackal embossed on it.";
-		say "     The man gives you a wink as he slowly pours the mixture over the ankh, and the metal seems to almost absorb the liquid into itself. 'There we go now, once you use this little beauty, that little shopkeep won't be able to keep her hands off of you. The jackal musk and enhanced pheromone mix should make sure of that.' The man says with a grin as he hands you the strangely scented ankh. 'I told you this little side trip of yours would be beneficial to both of us now didn't I? I look forward to seeing how it works out,' he says in a voice filled with amusement as he turns and wanders off into the dark museum halls again.";
+		say "     The man gives you a wink as he slowly pours the mixture over the ankh, and the metal seems to almost absorb the liquid into itself. 'There we go now, once you use this little beauty, that little shopkeep won't be able to keep her hands off of you. The jackal musk and enhanced pheromone mix should make sure of that,' the man says with a grin as he hands you the strangely scented ankh. 'I told you this little side trip of yours would be beneficial to both of us now didn't I? I look forward to seeing how it works out,' he says in a voice filled with amusement as he turns and wanders off into the dark museum halls again.";
 		now statuequest is 0;
 		LineBreak;
 		say "[bold type]You gain a strange ankh![roman type][line break]";
@@ -1987,7 +1987,7 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 		say "     You are almost entranced by the beauty of the craftsmanship on your new posession, barely registering anything but the ankh until Nermine's eventual return. Stepping up close beside you, she leans forward and whispers into your ear, 'The treasure Nermine's friend is holding is a very special and powerful ankh indeed. Some might just value it for its gold, but this humble shopkeeper is sure that her visitor will go beyond such trivialities. If [heshe] uses its true power, [heshe] will become ready for further helping Nermine out and earn more rewards.' A sly smile on her muzzle, the jackaless strokes a finger gently along your arm, brushing against the side of your hand holding the ankh, then withdrawing. As she moves back behind the counter afterwards, you can't help but be very curious about what she meant...";
 		LineBreak;
 		say "[bold type]You gain a strange ankh![roman type][line break]";
-		increase carried of strange ankh by 1;
+		now carried of strange ankh is 1;
 		now RareQuesting is 3; [first ankh awarded]
 	else if RareQuesting is 3: [no further progress after the first ankh]
 		say "     As you bring up the rare items laid out under the glass counter again, the jackaless looks you up and down, as if searching for something. She appears slightly disappointed for a second, then brushes the expression aside and gives you a friendly smile more typical of the strange shopkeeper. 'Nermine thinks her brave helper should try using the power of the ankh she has provided. It will surely help [himher] in the tasks ahead if [heshe] wants to assist the jackaless further.' She doesn't go into any more detail than that as you ask what the ankh will actually do, only giving you a sly smile and answering, 'There is no explaining about these matters, only doing and seeing.'";
@@ -2001,11 +2001,11 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 	else if RareQuesting is 5: [pirate gold stage active]
 		if TreasureFound is 1:
 			say "     'Ah, the brave adventurer found [hisher] treasure!' Nermine says with a large smile on her muzzle as she eagerly takes the small handful of golden coins you are holding out from you, leaving you feeling vaguely sad as those precious golden circles disappear behind the counter. When you point out that that was all there was in the pirate stash, she blinks at you in surprise. 'Only so few coins left? Well, then it is especially fortunate that Nermine's helper managed to find them! This makes them far more precious and she will have to adjust the price accordingly,' the jackal-woman says, a smile tugging at the corners of her muzzle. Then she pulls out the small golden ankh she promised you earlier and hands it to you. 'Nermine thinks this was more than earned then, though she also believes there might still be further coins left out there if one were to go and look again,' she says with a grin. As you weigh the warm golden ankh in your hands and wonder whether it was worth the handful of treasure you just traded for it...";
-			now RareQuesting is 6; [gold coins delivered]
 			LineBreak;
 			say "[bold type]You gain a strange ankh![roman type][line break]";
-			increase carried of strange ankh by 1;
+			now carried of strange ankh is 1;
 			now TreasureFound is 0;
+			now RareQuesting is 6; [gold coins delivered]
 		else:
 			say "     'Back again so soon? And with empty hands, disappointing the poor jackal shopkeeper?' Nermine says in a teasing voice as you address her over the rare item counter again. 'If Nermine knew where to find the coins, she would not be needing her helper to look for them... but one would think that the beach might be a good place to start looking. After all, where else would one find the way to pirate treasure?' she says with an amused grin as she turns back to her work, her tail waving teasingly at you as she leaves.";
 	else if RareQuesting is 6: [second ankh not yet used]
@@ -2024,7 +2024,7 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 		now RareQuesting is 10; [museum treasures delivered - ankh #3 awarded]
 		LineBreak;
 		say "[bold type]You gain a strange ankh![roman type][line break]";
-		increase carried of strange ankh by 1;
+		now carried of strange ankh is 1;
 	else if RareQuesting is 10: [third ankh not yet used]
 		say "     'Nermine hopes her new friend will use the ankh sometime soon,' the sultry jackaless says, as she traces the tip of her claw along the edge of her breasts slowly. 'She just can't wait to see how much better her friend will look with a nice proud muzzle of [hisher] own,' Nermine adds, her voice starting to come out in soft lusty breaths, as she stares at you in eager anticipation.";
 	else if RareQuesting is 11: [third ankh used]
@@ -2068,7 +2068,7 @@ Section 7- Jackal ankh
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Strange Ankh"	"a small golden ankh with an image of a jackal headed beastman set into the base, it feels oddly warm in your hands"	5	 strange ankh
+"Strange Ankh"	"a small golden ankh with an image of a jackal headed beastman set into the base, it feels oddly warm in your hands"	5	strange ankh
 
 strange ankh is a grab object. It is part of the player. Understand "ankh" and "strange" as strange ankh.
 
@@ -2080,7 +2080,7 @@ To say jackalankhmagic:
 	if Nightmaretf > 0:
 		say "     You rub the small golden ankh curiously, only to feel a strange burning sensation in your body as if two great forces were warring within. Letting out a gasp of surprise of surprise as the ankh seems to heat up - enough to sear flesh - you drop the item instinctively. Waving your hand and looking down at it, you realize that there is no trace of any damage after all, not even any reddending. Could it be that you've just imagined the feeling? But no, glancing down at the ankh, you see that it has molten into a small puddle of molten gold, sizzling a bit on the ground. Somehow you don't think that was what was supposed to happen...";
 		say "[bold type]You lose a strange ankh![roman type][line break]";
-		decrease carried of strange ankh by 1;
+		now carried of strange ankh is 0;
 		now JackalManTF is 5;
 		now NermineTalk is 1;
 		stop the action;
@@ -2088,14 +2088,14 @@ To say jackalankhmagic:
 		say "     You rub the small, golden ankh curiously and hiss in pain as it starts to heat up, scalding your hand. You toss it aside. Something about you seems to be incompatible with it.";
 		now NermineTalk is 1;
 		say "[bold type]You lose a strange ankh![roman type][line break]";
-		decrease carried of strange ankh by 1;
+		now carried of strange ankh is 0;
 		stop the action;
 	if JackalManTF is 0:
 		say "     You smile as you rub the small golden ankh between your hands, the warm metal feeling nice and almost soft as you rub at it. Suddenly the small ankh almost seems to melt into your hands, leaving a soft tingling dusting of gold where the small trinket was before. As you stare at your palms, you feel a strange shifting sensation in your body, seeming to center on your rear. Glancing over your shoulder, you are surprised to see your ass starting to stretch and change, your rear flattening out as a long predatory black jackal-like tail forms behind you. In a strangely pleasant stretching sensation, your new tail grows until its tip is hanging just below your knees. You stare down at the appendage and can't help but try it out - moving the tail from side to side a little a few times, with it reacting with surprising dexterity. Next, you take a few steps and are pleased to note that it helps your balance greatly. Thinking to yourself, the though of how hot and sexy the jackal tail looks comes unbidden to your mind...";
 		now tailname of player is "Jackalman";
 		now tail of player is "You have a long sleek jackal's tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
 		say "[bold type]You lose a strange ankh![roman type][line break]";
-		decrease carried of strange ankh by 1;
+		now carried of strange ankh is 0;
 		say "[bold type]Your dexterity has increased by 4![roman type][line break]";
 		increase dexterity of player by 4;
 		now RareQuesting is 4;
@@ -2107,7 +2107,7 @@ To say jackalankhmagic:
 		now skin of player is "[one of]dark black[or]sleek black furred[or]jackal-furred[at random]";
 		now skinname of player is "Jackalman";
 		say "[bold type]You lose a strange ankh![roman type][line break]";
-		decrease carried of strange ankh by 1;
+		now carried of strange ankh is 0;
 		say "[bold type]Your charisma has increased by 3![roman type][line break]";
 		increase charisma of player by 3;
 		say "[bold type]Your stamina has increased by 3![roman type][line break]";
@@ -2126,7 +2126,7 @@ To say jackalankhmagic:
 		now RareQuesting is 11;
 		now statuequest is 1;
 		say "[bold type]You lose a strange ankh![roman type][line break]";
-		decrease carried of strange ankh by 1;
+		now carried of strange ankh is 0;
 		say "[bold type]Your charisma has increased by 4![roman type][line break]";
 		increase charisma of player by 4;
 		say "[bold type]Your perception has increased by 4![roman type][line break]";
@@ -2145,7 +2145,7 @@ To say jackalankhmagic:
 		now cockname of player is "Jackalman";
 		now cock of player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
 		say "[bold type]You lose a strange ankh![roman type][line break]";
-		decrease carried of strange ankh by 1;
+		now carried of strange ankh is 0;
 		say "[bold type]Your strength has increased by 4![roman type][line break]";
 		increase strength of player by 4;
 		increase capacity of player by 20;

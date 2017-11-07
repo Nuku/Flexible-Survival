@@ -63,7 +63,7 @@ Instead of conversing the Dominick:
 		now Happy Puppy Kennel is known;
 	else if HP of Dominick is 1:
 		say "     'Well look at you,' he says with a confident smile. 'If you're coming in here, you must be looking for something. And I think it's more than just a safe place to hide...' He cups his balls and his cock twitches meaningfully.";
-		say "     'I'm Dominick, but you can call me Dom. Or Master[if player is herm]. You might make for a good bitch with a little work.' Moving in close, he runs a paw over your ass[else if player is female]. You have a makings of a fine bitch in you, I'd say.' He moves in close and runs a paw possessively over your ass and then across your crotch[else]. I don't have much need for males around here. I'm a top-ranked, A-1 breeding stud. Though if you want to stay here and be safe, you can always try [']sucking up['] a little.' He grins lewdly holding his dick out[end if].";
+		say "     'I'm Dominick, but you can call me Dom. Or Master[if player is herm]. You might make for a good bitch with a little work.' Moving in close, he runs a paw over your ass[else if player is female]. You have a makings of a fine bitch in you, I'd say.' He moves in close and runs a paw possessively over your ass and then across your crotch[else]. I don't have much need for males around here. I'm a top-ranked, A-1 breeding stud. Though if you want to stay here and be safe, you can always try [']sucking up['] a little.' He grins lewdly, holding his dick out[end if].";
 		now HP of Dominick is 2;
 	else:	[***]
 [	else if HP of Dominick is 2 or HP of Dominick is 3:	]
