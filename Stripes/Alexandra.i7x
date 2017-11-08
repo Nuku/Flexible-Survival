@@ -555,6 +555,8 @@ to say badAlexandraFang1: [let Fang fuck her]
 		increase HP of Alexandra by 1;
 		now lust of Alexandra is 1;
 		now AlexandraPupDaddy	is 2; [Fang knocked her up]
+	now lastfuck of Alexandra is turns;
+	now lastfuck of Fang is turns;	
 	WaitLineBreak;
 
 to say badAlexandraFang2: [male player stops Fang and establishes dominance]
@@ -578,11 +580,12 @@ to say badAlexandraFang2: [male player stops Fang and establishes dominance]
 		increase HP of Alexandra by 1;
 		now lust of Alexandra is 1;
 		now AlexandraPupDaddy	is 1; [player knocked her up]
+	now lastfuck of Alexandra is turns;
 	WaitLineBreak;
 
 to say badAlexandraFang3: [herm player stops Fang and establishes dominance]
 	say "     Growling angrily at your wolf, you grab him by the scruff of the neck as he's preparing to make the leap onto the doberman's back. He waves his paws in the air, as if trying to grab at the bitch so close. His cock is hard and throbbing, dribbling with precum. You hold him and give him a shake before shoving him aside. 'No, Fang, you don't get to cum in my favourite bitch,' you add, making the beta wolf slink back a couple of yards.";
-	say "     During this, Alexandra's risen to her feet and is quite angry that you've denied her a good and proper fucking from the wolf. 'Oh?  And if I'm not to get it from the wolf here,' she growls, pulling off her jacket to get herself completely nude, 'where'm I going to get it, miss bossy?' Clearly goading you in search of the rough sex you've denied her, you grab her nightstick and tell her that if she wants a cock so badly, you'll just have to improvise.";
+	say "     During this, Alexandra's risen to her feet and is quite angry that you've denied her a good and proper fucking from the wolf. 'Oh? And if I'm not to get it from the wolf here,' she growls, pulling off her jacket to get herself completely nude, 'where'm I going to get it, miss bossy?' Clearly goading you in search of the rough sex you've denied her, you grab her nightstick and tell her that if she wants a cock so badly, you'll just have to improvise.";
 	WaitLineBreak;
 	say "     A brief struggle ensues with you trying to pin the obstinate bitch down which ends with her tumbling out the door of the library and into the open street. You pounce on her before she can get back up, fighting to pin her down. She continues to resist, barking for you to fucking take her if you're going to take her and freeing your crotch between trying to push you off. Frustrated by your prize bitch being such a bad girl, you pin down her shoulders and push her legs apart before stuffing a few fingers into her, making her cry out in pleasure. Growling dominantly down at her, you replace those fingers with the shaft of the nightstick, pushing it unceremoniously into her cunt.";
 	say "     The sex gets wild and rough once you shift positions and lower yourself down onto the handle of the nightstick, stuffing the ridged grip into your pussy. With a hand to steady it, it makes for an improvised strap-on for fucking her out in the plain view of the city for all to see as you stake your claim on her once again. Your free hand gropes lustfully at her breasts and hips while you pound away at her. She pants and moans, her legs locked around your hips and her paws clawing and scratching at your back. These scratches leave deep red marks that will take time for even the nanites to heal, but the pain of them only reinvigorates your drive to pound her bitch cunt to reminder her why you're the boss. As you're fucking her, Fang can only watch on as you stake a fresh claim on the Doberwoman and so knows she's yours, cock hard but untended.";
@@ -592,6 +595,7 @@ to say badAlexandraFang3: [herm player stops Fang and establishes dominance]
 	WaitLineBreak;
 	say "     As you're taking a moment before getting on to other tasks, you hear some soft growling coming from over at the library entrance. Heading over, you notice that Fang's sniffing around Alexandra again. His canine shaft is dangling erect between the wolf's legs and it is clear what he intends to do with the bitch. As the former cop sees that you're watching, she grins and looks right into your eyes as her hands move to undo the button of her pants. Sliding them down over her long legs, she bares her lower half for everyone to see - and Fang immediately circles around her to stick his muzzle between those legs and lap at her crotch.";
 	say "     Panting in arousal at the wolf licking her, Alexandra smirks at you and shrugs out of her leather jacket in a very provocative way, baring her breasts shaking them in your direction. Seems like she enjoys teasing you while being with another male quite a bit. After having already allowed for them to mate before, you can't help but feel aroused at the sight and drift even closer.";
+	now lastfuck of Alexandra is turns;
 
 to say badAlexandraFang4: [repeat mounting for Alexandra by Fang]
 	say "     With yourself just a few steps away from the two of them now, almost close enough to touch, you have an excellent view of what is going on. Your naked dobie bitch panting in arousal and using one hand to play with her nipples, the other on Fang's head as he laps at her crotch. 'That's right, you big, bad wolf. You've found yourself a juicy bitch,' she barks out, half to Fang and half to you as a challenge. But then, it's already been established that you won't or can't stop the two of them from mating. With a grin on her muzzle, the former cop lowers herself to all fours, tail wagging as she raises her hips for Fang to mount her.";
@@ -633,6 +637,8 @@ to say badAlexandraFang4: [repeat mounting for Alexandra by Fang]
 		now lust of Alexandra is 1;
 		now AlexandraPupDaddy	is 2; [Fang knocked her up]
 	now lastdobiemess is 99; [last used by Fang]
+	now lastfuck of Alexandra is turns;
+	now lastfuck of Fang is turns;
 	WaitLineBreak;
 
 Section 4 - Sarah and Alexandra
@@ -677,15 +683,15 @@ an everyturn rule:
 		else if Fang is booked and Alexandra is booked and player is in Grey Abbey Library:
 			if XP of Alexandra is 0, now XP of Alexandra is turns; [starts counter on any turn (except turn 0, which will start next turn)]
 			if level of Alexandra is 0: [first time]
-				if lastfuck of Fang - turns >= 8 and lastfuck of Alexandra - turns >= 6 and XP of Alexandra - turns >= 16: [horny wolf, horny dobie, last scene 2 days back]
+				if (lastfuck of Fang - turns >= 8) and (lastfuck of Alexandra - turns >= 6) and (XP of Alexandra - turns >= 16): [horny wolf, horny dobie, last scene 2 days back]
 					say "[badAlexandraFang0]";
 			else if level of Alexandra is 1 and HP of Fang is 3 or HP of Fang is 4: [non-shared bitch and Alpha Fang]
-				if lastfuck of Fang - turns >= 8 and lastfuck of Alexandra - turns >= 6 and XP of Alexandra - turns >= 16: [horny wolf, horny dobie, last scene 2 days back]
+				if (lastfuck of Fang - turns >= 8) and (lastfuck of Alexandra - turns >= 6) and (XP of Alexandra - turns >= 16): [horny wolf, horny dobie, last scene 2 days back]
 					say "     As you're taking a moment before getting on to other tasks, you hear some soft growling coming from the door. Heading over, you notice that Fang's sniffing around Alexandra again. She's lightly trying to push him away at first, but soon relents and is squirming out of her jeans. This rankles you a little after having gone through the trouble to stake your claim on her earlier, but with Fang as your alpha, you're no longer in a position to keep her exclusively to yourself. Soon enough, she's dropped onto all fours and is mounted by the big, strong wolf. Seeing you there, he growls 'watch' at you before turning his attention back to her. It seems like you'll have to witness Fang using your prize bitch and accept him using her whenever he wants to lay claim to her.";
 					say "     What's yours is yours, but what's yours is his, it seems.";
 					say "[badAlexandraFang1]";
 			else if level of Alexandra is 2: [shared bitch]
-				if lastfuck of Fang - turns >= 8 and lastfuck of Alexandra - turns >= 6 and XP of Alexandra - turns >= 16 and a random chance of 1 in 5 succeeds: [horny wolf, horny dobie, last scene 2 days back]
+				if (lastfuck of Fang - turns >= 8) and (lastfuck of Alexandra - turns >= 6) and (XP of Alexandra - turns >= 16) and a random chance of 1 in 5 succeeds: [horny wolf, horny dobie, last scene 2 days back]
 					say "     As you're taking a moment before getting on to other tasks, you hear some soft growling coming from over at the library entrance. Heading over, you notice that Fang's sniffing around Alexandra again. His canine shaft is dangling erect between the wolf's legs and it is clear what he intends to do with the bitch. As the former cop sees that you're watching, she grins and looks right into your eyes as her hands move to undo the button of her pants. Sliding them down over her long legs, she bares her lower half for everyone to see - and Fang immediately circles around her to stick his muzzle between those legs and lap at her crotch.";
 					say "     Panting in arousal at the wolf licking her, Alexandra smirks at you and shrugs out of her leather jacket in a very provocative way, baring her breasts shaking them in your direction. Seems like she enjoys teasing you while being with another male quite a bit. After having already allowed for them to mate before, you can't help but feel aroused at the sight and drift even closer, ready to watch them go at it.";
 					say "[badAlexandraFang4]";

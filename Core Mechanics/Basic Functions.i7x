@@ -67,11 +67,15 @@ to LineBreak:
 	say "[line break]";
 
 to PlayerEat (N - number):
+	LineBreak;
+	say "[bold type]Your hunger is reduced by [N]![roman type][line break]";
 	decrease hunger of player by N;
 	if hunger of player < 0:
 		now hunger of player is 0;
 
 to PlayerDrink (N - number):
+	LineBreak;
+	say "[bold type]Your thirst is reduced by [N]![roman type][line break]";
 	decrease thirst of player by N;
 	if thirst of player < 0:
 		now thirst of player is 0;
