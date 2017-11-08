@@ -248,7 +248,7 @@ an everyturn rule:
 				now TomeTimer is turns;
 	if DemonFoxRead is true and DemonFoxInteractions is 0 and (cocks of player is not 0 and cunts of player is 0) and TomeTimer - turns >= 4 and daytimer is night:
 		say "[DemonFoxFirstEncounter]";
-	if TentacleRead is true and TentacleInteractions is 0 and (cocks of player is not 0 and cunts of player is 0) and TomeTimer - turns >= 8 and a random chance of 1 in 3 succeeds:
+	if TentacleRead is true and TentacleInteractions is 0 and (cocks of player is not 0 and cunts of player is 0) and TomeTimer - turns >= 8 and (a random chance of 1 in 3 succeeds) or (TomeTimer - turns >= 11):
 		say "[TentaclesFirstEncounter]";
 
 

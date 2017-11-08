@@ -698,7 +698,7 @@ to say DoranSexMenu: [Doran Sex Protocol]
 				if cocks of player is 0:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 				else:
-					say "[DoranSub_CatchAnal]"; [fuck the dragon]
+					say "[DoranSub_AnalFuck]"; [fuck the dragon]
 					now trixieexit is 1;
 			else if calcnumber is 2:
 				if cocks of player is 0:

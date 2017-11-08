@@ -214,7 +214,7 @@ understand "size change" as PlayerSizeChange.
 
 carry out PlayerSizeChange:
 	LineBreak;
-	say "     [bold type]What size do you want your character to be??[roman type][line break]";
+	say "     [bold type]What size do you want your character to be?[roman type][line break]";
 	say "     [link](1)[as]1[end link] Tiny.";
 	say "     [link](2)[as]2[end link] Small.";
 	say "     [link](3)[as]3[end link] Average.";
@@ -271,7 +271,7 @@ carry out InfectionOverview:
 		now cocks of player is 1;
 		now cunts of player is 1;
 		now cock length of player is 10;
-		now cunt length of player is 8; 
+		now cunt length of player is 8;
 		now tail of player is the tail entry;
 		now face of player is the face entry;
 		now skin of player is the skin entry;

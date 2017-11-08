@@ -28,11 +28,7 @@ Instead of resolving a Pack Bang:
 			say "You manage to make your escape from the wolf, leaving him and the rest of his pack behind.";
 		else if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 			say "     As you beat the wolf that attacked you, and he collapses with a loud pityable whine, you hear the rustling in the underbrush behind you suddenly stop. Glancing into the woods, you spot one of the pack wolves, looking at you with a hostile stare but not daring to come forward alone. Seems like you frightened the beast by defeating his pack's alpha... which is something you make use of a second later, running at him, shouting and waving your arms - which sends the wolf fleeing out of sight. You wait a moment to see if others are coming, but it looks like you're rid of them for now. This leaves you behind, alone with the dazed wolf.";
-			say "     [bold type]What do you want to do with the beast?[roman type][line break]";
-			say "     [line break]";
-			say "     ([link]Y[as]y[end link]) - Fuck him!";
-			say "     ([link]N[as]n[end link]) - Let him go.";
-			say "[FeralWolfVictorySex]";
+			say "[FeralWolfVictorySex]"; [No need for a prompt, as there's already a prompt where this is defined]
 		now Pack bang is resolved;
 	else:
 		say "     [line break]";
@@ -70,11 +66,7 @@ Instead of resolving a Pack Bang:
 							say "You finally run away from the wolves, leaving this part of the forest for good this time.";
 						else if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 							say "     As you beat the pack leader, the bedraggled rest of the pack breaks, fleeing into the forest. A moment later, you are left behind, standing over the dazed wolf.";
-							say "     [bold type]What do you want to do with the beast?[roman type][line break]";
-							say "     [line break]";
-							say "     ([link]Y[as]y[end link]) - Fuck him!";
-							say "     ([link]N[as]n[end link]) - Let him go.";
-							say "[FeralWolfVictorySex]";
+							say "[FeralWolfVictorySex]"; [No need for a prompt, as there's already a prompt where this is defined]
 		now Pack bang is resolved;
 		move player to bunker;
 		wait for any key;

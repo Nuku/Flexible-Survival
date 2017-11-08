@@ -74,7 +74,7 @@ to say beatferalwolf:
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				WaitLineBreak;
+				LineBreak;
 				say "     Against your better judgment, you take pity on this battered wolf and decide to take him as your own. You decide it best to show this wolf creature who's in charge right away and grab his nape roughly, holding him down while ";
 				if cocks of player > 0 and cunts of player > 0:
 					say "you decide what to do with him. You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours. But being both male and female, there are options open to you.";
@@ -83,17 +83,15 @@ to say beatferalwolf:
 					say "     ([link]Y[as]y[end link]) - Fuck the wolf.";
 					say "     ([link]N[as]n[end link]) - Ride his cock.";
 					if the player consents:
-						WaitLineBreak;
+						LineBreak;
 						say "[feralwolfmalesex]";
 					else:
-						WaitLineBreak;
+						LineBreak;
 						say "[feralwolffemalesex]";
 				else if cocks of player > 0:
-					WaitLineBreak;
 					say "you stroke your swelling cock. You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours.";
 					say "[feralwolfmalesex]";
 				else:
-					WaitLineBreak;
 					say "you rub your fingers over your damp pussy. You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours.";
 					say "[feralwolffemalesex]";
 				now HP of Fang is 1;
@@ -101,7 +99,7 @@ to say beatferalwolf:
 				move player to the Grey Abbey Library;
 				now lastfuck of Fang is turns;
 			else:
-				WaitLineBreak;
+				LineBreak;
 				say "     Not wanting to risk bringing such a beast back to your safehouse, you strike the cowering cur again and continue on your way.";
 				now HP of Fang is 100; [Fang refused]
 		else:
@@ -123,7 +121,7 @@ to say feralwolffemalesex:
 to say FeralWolfVictorySex:
 	if inasituation is true and FeralWolfSpecialFightNumber < 1: [dealt with in the event]
 		say "";
-		stop the action:
+		stop the action;
 	if inasituation is false: [standard text]
 		Say "You watch the feral wolf drop to the ground in defeat, slumped over on his side. You can see that he is still very hard, his cock dripping with pre. You realize that this feral wolf is completely at your mercy.";
 	say "     [bold type]You could easily have your way with him if you want.[roman type][line break]";
