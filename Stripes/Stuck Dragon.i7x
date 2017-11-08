@@ -254,7 +254,7 @@ Instead of conversing the Christy:
 			say "     'Anyway, I think I can get free if I had something slimy to grease myself with. If you have something like that, could you please FREE me?' Christy asks.";
 		now HP of Christy is 1;
 	else if HP of Christy is 1:
-		say "     'Did you find something slimy I can use to free myself with? If you have something like that, please FREE me.' Christy says.";
+		say "     'Did you find something slimy I can use to free myself with? If you have something like that, please FREE me,' Christy says.";
 	else if christysausage is false and HP of Christy < 50 and a random chance of 1 in 3 succeeds:
 		say "     'Things feel so different now,' she says, stretching out one of her taloned paws and wiggling the digits. 'And I can't help thinking it's because of that bottle of strange hot sauce I found at the [bold type]food court[roman type]. The other nuns kept telling me I'd get heartburn if I kept eating stuff like that, but I doubt they imagined it'd be anything like this,' she says, firing a short plume of fiery breath from her maw. 'I mean, how crazy is that?  Or what if I'd actually ordered that [bold type]super spicy sausage[roman type] while I was there?  Oh mmm... now I'm getting hungry[if cocks of player > 0] for some hot and juicy meat[end if],' she rumbles[if libido of Christy is even and the remainder after dividing lust of Christy by 3 is 0]. 'How about you help fill me up, hon?  And I don't mean my belly,' she says with a wiggle of her rear - only to bury her muzzle under her paws once she's realized what she's said[end if].";
 		now christysausage is true;

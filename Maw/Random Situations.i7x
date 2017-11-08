@@ -39,7 +39,7 @@ Chapter 4 - Situation Code
 Part 1 - Husky Group + Husky Group Take Two (Inter-linked)
 
 Instead of resolving Husky Group:
-	say "When your scouts return from their patrol, the head of the group informs you about a pack of mentally lost Husky Bitches that nearly jumped them from the bush. The lead scout blushing some with a wag of his new-found curled tail. Oh dear... oh dear indeed! You insist that he go to the your science adviser to have the nanites overpowered by your species['] own. Unless of course, they wanted to keep the tail, and likely other changes. You assure them that they cannot stay if things get out of hand with their new infection.[line break][line break]";
+	say "When your scouts return from their patrol, the head of the group informs you about a pack of mentally lost Husky Bitches that nearly jumped them from the bush. The lead scout blushing some with a wag of his newfound curled tail. Oh dear... oh dear indeed! You insist that he go to the your science adviser to have the nanites overpowered by your species['] own. Unless of course, they wanted to keep the tail, and likely other changes. You assure them that they cannot stay if things get out of hand with their new infection.[line break][line break]";
 	now Husky Group is resolved;
 	now Husky Group Take Two is not resolved;
 

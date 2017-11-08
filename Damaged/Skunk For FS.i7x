@@ -139,7 +139,7 @@ to say sblsex1:		[fuck skunkgirl]
 
 
 to say sblsex2:		[fellatio]
-	say "     The skunk runs her paws over your stiff cock, licking and kissing at it before opening her muzzle wide and giving you a blow job[if skrp is 1].  Your lower head moans in pleasure.  '[one of]Mmmm... open wide[run paragraph on][or]Take it all, slut,[or]Suck us good, girl,[at random]' she says excitedly[end if].  The skunk's talented muzzle works over your dripping shaft, lavishing attention upon it[if cock length of player > 12] and eventually managing to get the whole big thing stuffed down her throat[end if].  You moan and growl in pleasure at her expert work, eventually cumming hard and blasting your hot seed down her throat, feeding your buxom servant a heavy load of skunk cum.";
+	say "     The skunk runs her paws over your stiff cock, licking and kissing at it before opening her muzzle wide and giving you a blow job[if skrp is 1].  Your lower head moans in pleasure.  '[one of]Mmmm... open wide[or]Take it all, slut[or]Suck us good, girl[at random],' she says excitedly[end if].  The skunk's talented muzzle works over your dripping shaft, lavishing attention upon it[if cock length of player > 12] and eventually managing to get the whole big thing stuffed down her throat[end if].  You moan and growl in pleasure at her expert work, eventually cumming hard and blasting your hot seed down her throat, feeding your buxom servant a heavy load of skunk cum.";
 
 
 to say sblsex3:		[skunkbeast tops player]

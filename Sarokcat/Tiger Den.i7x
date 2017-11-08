@@ -41,7 +41,7 @@ instead of conversing the Chase:
 			decrease carried of water bottle by 5;
 			decrease carried of food by 8;
 			if a random chance of 1 in 2 succeeds:
-				Say "	'Woah, thanks a lot for this! This should keep the rest of us going for a while longer!' Chase nuzzles the side of your neck and then licks you across your throat. A shiver racks down your spine from the rough wet feel of the tiger's tongue sliding along your [facename of player] throat. When the feline pulls back Chase says, 'Hey why don't I show you some neat tricks we tigers like to pull off? It may help you to fight and run away better when your outside foraging or whatever.";
+				Say "	'Whoa, thanks a lot for this! This should keep the rest of us going for a while longer!' Chase nuzzles the side of your neck and then licks you across your throat. A shiver racks down your spine from the rough wet feel of the tiger's tongue sliding along your [facename of player] throat. When the feline pulls back Chase says, 'Hey why don't I show you some neat tricks we tigers like to pull off? It may help you to fight and run away better when your outside foraging or whatever.";
 				Increase XP of player by 40 + ( 3 * level of player );
 				Now HP of Chase is 3;
 			else:
@@ -101,7 +101,7 @@ to say sexwithchase:
 		infect "Tiger";
 		now sex entry is "Female";
 	else:
-		say "     'Hmm that's a tempting offer,' Chase says as he runs his eyes over your body, pausing to shake his head at your aroused cock. 'But I think I'll have to pass on it right now.' Chase says with a shrug, before grinning, 'I'll make you a pretty good counteroffer though,' Chase says, before leaning forward and rubbing the sides of his head along your face and body, his whiskers tickling you as they trace along your sides, and his furred cheeks feeling soft and sleek, and leaving a strange tingling sensation behind where he rubbed against you. 'I think you would make a great tigress,' the tiger man says with a grin as he leans back against the wall and you feel the tingling intensify within you where he scent marked you, 'So why don't you come back and make your offer again when you are one?' Chase adds in amusement.";
+		say "     'Hmm, that's a tempting offer,' Chase says as he runs his eyes over your body, pausing to shake his head at your aroused cock. 'But I think I'll have to pass on it right now,' Chase says with a shrug, then grins. 'I'll make you a pretty good counteroffer though,' Chase says before leaning forward and rubbing the sides of his head along your face and body. His whiskers tickle you as they trace along your sides, and his furred cheeks feel soft and sleek, leaving a strange tingling sensation behind where he rubbed against you. 'I think you would make a great tigress,' the tiger man says with a grin as he leans back against the wall, and you feel the tingling intensify within you where he marked you with his scent. 'So why don't you come back and make your offer again when you are one?' Chase adds in amusement.";
 		infect "Tiger";
 
 
