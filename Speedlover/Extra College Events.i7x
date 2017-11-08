@@ -507,5 +507,30 @@ to RyouseiLibraryEvent:
 	else:
 		say "     You walk back to the bookshelves, and, inspired by Ryousei, decide to check the asian history section. Shortly after, the tiger is back at your sides, but looks discheveld.  'Well, this place of knowledge is so, er, admirable,' the feline replies your query, while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You follow his look to the information desk, and notice a middle-aged vulpine employee oogling at the tiger, and licking [if Girl is not banned and Girl is not warded]his[else]her[end if] chops. Ryousei makes a beeline for the exit, almost losing you again.";
 
+Campus Patrol is a situation.
+Campus Patrol is resolved.
+The sarea of Campus Patrol is "Campus".
+
+instead of going to College Walkway West while (Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	move player to College Walkway West;
+	CampusPatrolEvent;
+
+instead of going to College Walkway East while (Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	move player to College Walkway East;
+	CampusPatrolEvent;
+
+instead of going to College Campus Entrance while (Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	move player to College Campus Entrance;
+	CampusPatrolEvent;
+
+Instead of resolving Campus Patrol :
+	CampusPatrolEvent;
+
+to CampusPatrolEvent:
+	say "     As you walk along the pathway at the edge of the central green of Tenvale college campus, your gaze falls upon a fairly large anthro wolfhound, leaning against the side of a car in the adjoining parking lot. Shirtless and showing an impressive set of abs and pecs, the canine is dressed in nothing more but a pair of cargo pants and a spiked collar. He holds a bottle of whisky in his paw-hand, taking a swig from time to time while he watches people walk past. Soon, a young golden retriever passes by his position, which is when the dog gives her a lewd gaze and calls out, 'Hey babe, you seem like just the right bitch for me! Come on, let's make some puppies right here and now!' And with that, he steps up to the young woman and forcefully grabs her by the arm. The books the young woman was carrying are sent flying as the transformed man starts to drag her off in the direction of the parking lot, ignoring her struggles to get free.";
+	say "     The start of a shout for help is quelled by his other hand wrapping around her muzzle and clamping it shut (dropping the whisky bottle in the process and leaving it to shatter on the asphalt of the parking lot). Before you can decide if you want to intervene or not, three strapping young Spartans in nothing more than sandals, red cloaks and helmets are already sprinting towards the scene. Within moments, they surround the kidnapper, the spear-points of their weapons an inch from his throat. Freezing in place, the wolfhound releases his grip on the girl and she wrenches herself free. 'Thanks guys,' she tells the spartan with a relieved expression, then slips out of the circle of combative young men and goes to collect her books. Meanwhile, the Spartans guide their captive to the edge of the campus at spear-point, then let him go with a dire warning not to return if he values his life... or his anal virginity.";
+	now Campus Patrol is resolved;
+	now LastCampusWalkin is turns;
+
 
 Extra College Events ends here.

@@ -11,6 +11,8 @@ when play begins:
 goocolour is a number that varies;
 
 to say goovictory:
+	if inasituation is true;
+		stop the action;	
 	if HP of player > 0:
 		say "     Surrendering to the goo girl, you allow the creature to move in closer, looking as giddy as ever.";
 		say "     '[one of]Oh[or]Hm[or]Ah[at random], [one of]eager for a bit of fun, are we?[run paragraph on][or]it's play time![run paragraph on][or]how nice of you to offer![run paragraph on][at random]' ";
@@ -36,6 +38,8 @@ to say goovictory:
 	now tempnum2 is 0;
 
 To say goodefeat:
+	if inasituation is true;
+		stop the action;
 	say "     Fending the goo girl off she reels back, compressing herself lowly before you and pouting in submission";
 	if libido of player > 30 or "Dominant" is listed in feats of player:
 		say ". Perhaps you could have a bit of fun with her?";
@@ -80,6 +84,8 @@ to say goodesc:
 	else:
 		now sex entry is "Female";
 	now tempnum2 is a random number between 1 and 3;
+	if inasituation is true;
+		stop the action;
 	say "     A jiggling girl of [if tempnum2 is 1]blue[else if tempnum2 is 2]green[else]purple[end if] colour appears from the darkness, having spotted you. You can see through her, mostly, her gelatin-like flesh tinting the dim light behind her with its lustrous shade. Her upper torso is well defined, with large breasts somehow jiggling just a little more noticeably than the rest of her. Her lower body seems to meld into a grand base of goop just past her thighs, her legs permanently held together. With soft slurping sounds, she propels herself at you like an incoming wave, hands outstretched for you with an unwavering smile.";
 
 
