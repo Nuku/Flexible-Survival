@@ -1322,7 +1322,7 @@ to say DoranDom_RidingPlayer: [Riding Player] [BODY MODDED]
 		say " as [ghe] shares [ghis] tongue's[if DoranRoleIntensity is 0] firm[end if] affection across your [bodydesc of player] frame[if scalevalue of player < 4], a feat not particularly easy for someone of your size[end if].";
 		say "     '[one of]Mm[or]Ah[or]Oh[at random], ";
 		if DoranRoleIntensity is 0:
-			say "my [DoranPlayerRegard] [one of]likes being used as a slutty[or] is such a challenging[or]makes for such a good[at random][if scalevalue of player < 4] little[end if] [one of]toy[or]plaything[at random]";
+			say "my [DoranPlayerRegard] [one of]likes being used as a slutty[or]is such a challenging[or]makes for such a good[at random][if scalevalue of player < 4] little[end if] [one of]toy[or]plaything[at random]";
 		else:
 			say "[one of]I can see my [DoranPlayerRegard] enjoying being ridden[or]my [DoranPlayerRegard] is so very challenging[or]don't worry, my [DoranPlayerRegard], their [gdragon] will be gentle[at random]";
 		say ".' [if player is knotted]It takes the [gdragon] a fair bit of time to engulf your dick in its entirety, contending for a fair amount of time to deal with your knot[else]Several prolonged minutes filled with the sound [ghis] grunting the [gdragon] eventually manages to engulf your dick in its entirety[end if]. [if DoranRoleIntensity is 0]Takes some time[else]Shows little interest in trying to acclimate[end if] to your size before [ghe] begins bouncing against you, [ghis] prior lubrication [if DoranRoleIntensity is 0]at least a slight balm to [ghis] rough treatment[else]making the whole affair a lot easier on you[end if].";

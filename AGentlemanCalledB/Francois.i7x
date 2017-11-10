@@ -60,7 +60,7 @@ to say BakeryHusky:
 		say "     After dealing with the first husky, you turn your attention to the other two. The large alpha gives you a smug smirk as he swats the ass of the female beside him, sending her running towards you, barking eagerly.";
 		challenge "Female Husky";
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			say "     With the second bitch dealt with, you scan the room for the remaining canine, realizing too late that he has circled around you while you were dealing with his female companion. The large male leaps towards you as you turn";
+			say "     With the second bitch dealt with, you scan the room for the remaining canine, realizing too late that he has circled around you while you were dealing with his female companion. The large male leaps towards you as you turn.";
 			let bonus be (( perception of player + dexterity of player minus 20 ) divided by 2 );
 			if "Wary Watcher" is listed in feats of player, increase bonus by 3;
 			if "Bad Luck" is listed in feats of player, decrease bonus by 2;
@@ -1093,7 +1093,7 @@ to say cheesecake Use:
 			cheesecakeinfect;
 			decrease carried of cheesecake by 2;
 			if cheesecakemode is 1 and player is cheesecakebodied:
-				say " After your large serving of the delicious cake, your belly rumbles as your cheesecake body shifts and swells, becoming plump and rubenesque.";
+				say "     After your large serving of the delicious cake, your belly rumbles as your cheesecake body shifts and swells, becoming plump and rubenesque.";
 			now cheesecakemode is 0;
 			decrease hunger of player by 3;
 		else:
