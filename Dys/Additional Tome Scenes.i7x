@@ -242,7 +242,7 @@ an everyturn rule:
 				say "     You blink, suddenly aware that your hand is reaching into your bag, seemingly on its own accord. Wondering what could possibly be going on, you grab the first thing you touch and pull it out. It just so happens to be the [bold type]ancient tome[roman type]! You glance over its leather cover, running your fingers across its surface for a second before you flip the cover open, going to a random page. Much to your amazement, you can actually read the words there! [bold type]Perhaps you could give it a read, now that you can actually do so?[roman type]";
 				now TomeTimer is turns;
 				now TomeInfluence is 3;
-		else if TomeInfluence is 3: [Tempted fully]
+		else if TomeInfluence is 3 and a random chance of 1 in 3 succeeds: [Tempted fully]
 			if TomeTimer - turns >= 8:
 				say "     You can't help but feel drawn to the book inside your bag. The [bold type]ancient tome[roman type] really seems like it wants you to [if TomeInteractions is 0]read it, now that you finally can[else]read it once more[end if].";
 				now TomeTimer is turns;
