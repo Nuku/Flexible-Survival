@@ -121,9 +121,9 @@ to say cow attack:
 to say cow desc:
 	project the figure of Bovine_F_icon;
 	if Mooed is 0:
-		say "A twelve foot tall cow beast stands before you, 'Mmmmoooo' it says, 'Are you thirsty? I have all the milk you will ever want.' it exclaims, holding one of its four large breasts, milk slowly dribbling from its teat-like nipple.";
+		say "A twelve foot tall cow beast stands before you. 'Mmmmoooo,' it says. 'Are you thirsty? I have all the milk you will ever want,' it exclaims, holding one of its four large breasts, milk slowly dribbling from its teat-like nipple.";
 	else:
-		say "A twelve foot tall cow beast stands before you, 'Mmmmoooo' it says, 'Oh he found you then? Come here little one, I have all the milk you will ever want.' it exclaims, holding one of its four large breasts, milk slowly dribbling from its teat-like nipple.";
+		say "A twelve foot tall cow beast stands before you. 'Mmmmoooo,' it says. 'Oh, he found you then? Come here little one, I have all the milk you will ever want,' it exclaims, holding one of its four large breasts, milk slowly dribbling from its teat-like nipple.";
 
 to say bull attack:
 	choose row monster from the table of random critters;

@@ -205,55 +205,72 @@ to say badAlexandrasex:
 		say "     You grab Alexandra in your arms and grope the Doberwoman, making her moan with lust. She pants excitedly[if lastdobiemess is 3 or lastdobiemess is 4 or lastdobiemess is 6 or lastdobiemess is 7 or lastdobiemess is 97 or lastdobiemess is 98]and licks her muzzle for lingering traces of your cum [end if] and squirms out of her jeans and jacket[if lastdobiemess is 1 or lastdobiemess is 2]. The denim, still stained from your last fucking, is damp and musky with the scents of sex and arousal, old and fresh[else if lastdobiemess is 5 or lastdobiemess is 7]. The denim, still stained with her juices, is damp and musky with the scents of sex and arousal, old and fresh[else if lastdobiemess is 97 or lastdobiemess is 98 or lastdobiemess is 99]. The denim, still stained with signs of a recent fucking, is damp and musky with the scents of sex and arousal, old and fresh, canine and lupine[else if lastdobiemess is 6]. Her chest fur, still marked with streaks of your cum, is marked with white on her breasts[end if]. Just what do you feel like doing with your canine bitch this time?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if cocks of player > 0 and lust of Alexandra <= 12:
 		choose a blank row in table of fucking options;
 		now title entry is "Bend her over";
 		now sortorder entry is 1;
 		now description entry is "Bend her over a table and fuck the bitch.";
+	[]
 	if cocks of player > 0 and lust of Alexandra <= 12:
 		choose a blank row in table of fucking options;
 		now title entry is "Against the wall";
 		now sortorder entry is 2;
 		now description entry is "Press your bitch against the wall and fuck her hard.";
+	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "All fours";
 		now sortorder entry is 3;
 		now description entry is "Fuck your bitch on all fours.";
+	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
 		now description entry is "Take her up the ass.";
+	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now sortorder entry is 5;
 		now description entry is "Have Alexandra suck you off.";
+	[]
 	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Get cunnilingus";
 		now sortorder entry is 6;
 		now description entry is "Have Alexandra lick your snatch.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Lick Alexandra";
 	now sortorder entry is 7;
 	now description entry is "Lick Alexandra's snatch.";
+	[]
 	if cunts of player > 0 or cocks of player > 0 and lust of Alexandra <= 12:
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 8;
 		now description entry is "69 with the dobie.";
+	[]
 	if cocks of player > 0 and ( HP of Alexandra > 3 or lust of Alexandra > 12 ):
 		choose a blank row in table of fucking options;
 		now title entry is "Titty fuck";
 		now sortorder entry is 9;
 		now description entry is "Fuck those lovely melons of hers.";
+	[]
 	if ( cocks of player > 0 or cunts of player > 0 ) and level of Alexandra is 2 and lastfuck of Fang - turns >= ( 9 - HP of Fang):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Fang";
 		now sortorder entry is 10;
 		now description entry is "Share her with the wolf.";
+	[]
+	if vorelevel > 2 and glowing mushroom is owned:
+		choose a blank row in table of fucking options;
+		now title entry is "Let her tease and vore you";
+		now sortorder entry is 11;
+		now description entry is "Let Alex tease you with her tongue while you are in your micro-state";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -288,6 +305,8 @@ to say badAlexandrasex:
 					say "[badAlexandrasex9]";
 				else if nam is "Threesome with Fang":
 					say "[badAlexandrasex10]";
+				else if nam is "Let her tease and vore you":
+					say "[badAlexandrasex11]";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Alexandra is turns;
@@ -467,6 +486,30 @@ to say badAlexandrasex10:		[Threesome with Fang]
 		say "     Alexandra releases a [if cunt length of player > 12 and cunt width of player > 8]muffled moan from inside your clenching pussy[else]long moan[end if] as her hips quiver and her tonguework becomes more frantic. Grinning and knowing she's cumming from the humiliating fuck she's getting, you scritch her ears and call her your good, bad girl through gritted teeth, cumming moments later with a gush of juices. You soak the [if lust of Alexandra > 12]pregnant [end if]bitch's muzzle as she tries her best to lap it all up as Fang starts to howl as he pumps his hot wolf semen into her, having tied with the doggy bitch. This sends you into another orgasm, drawing out your pleasure even further. As you're panting and trying to recover you push her back, popping that tongue out of you with a wet slurp. She smiles up at you and slowly licks your juices from her muzzle while still tied to the wolf cumming inside her.";
 	now lastdobiemess is 98;
 
+to say badAlexandrasex11: [mostly micro play with soft-vore scene]
+	say "     Looking at you with hunger in her eyes Alexandra comes with a proposition. 'You know, maybe you should fill me some other way' you tilt your head in puzzlement, 'Yeah, I saw that you have those mushrooms with you, and I do know what they do, since I saw that weird place when I used to roam the city looking for bad people' the anthro dog gets lost in her own thoughts, reminiscing about those days. With a heavy sigh she keeps talking 'Oh those innocent days, but enough about me we are here to talk about the future, and how you should treat me better'";
+	say "     You are asked to pull one of the shrooms and give it to her, the ex-police dog examines the item for a bit - smelling it, just like you would expect from a search dog. After making sure that the item is exactly what she asked for the the girl offers it back to you, slightly puzzled but nonetheless you get it back. But when you are getting ready to put it back inside your pack, your hand is stopped by her paw. 'No, you dumbass' You are reprimanded by her authority 'Now you are going to eat it, so i can play with you' the gal tells you with an impish smile.";
+	WaitLineBreak;
+	say "     Not wanting to see what would happen if you disobey her you eat the shroom you were offered back. Your body diminishes in size and your clothes outgrow you in an awesome time, until you are in the darkness of a cave created by your stuff with the only light source showing the feet of your mistress. But you don't have time to muse at those as you are grabbed by the same paw that offered you the shrooms 'You are so cute now' the ex-cop says as she licks her lips 'Oh, i'm getting hungrier for you by the second'.";
+	say "     Her saliva glisten and drips as the hungry gal opens her mouth wide enough for you to fit inside, as you are finally put inside without a chance to answer. The inside of her mouth is as you would expect wet, not as slippery as an aroused vagina, but enough for you to feel the eroticism of this act.";
+	decrease carried of glowing mushroom by 1;
+	WaitLineBreak;
+	say "     Sitting on her tongue all her movements are send straight to your genitals, specially when she laughs at your own moans. The horny girl moves her tongue like an electric bull, making you hold on her teeth, gums or anything you can get your hands on so you can at least stay sitting. With your position of cowgirl, [if cunts of player > 0]your pussy keeps being teased, and your arousal leaks and spreads on her mouth and she probably tasted as more vibrations travel to your body[else if cocks of player > 0]your cock is teased and prodded by her curious tongue making yourself hard but not enough to relieve yourself of this feeling of denial the dog-woman has over you[else]your ass is licked everywhere, normally it would be just your asshole but with her size your whole butt is licked and teased[end if], making your body shiver with the clash of feeling as you feel the pleasure and the fear of being swallowed whole.";
+	say "     This all makes you cum hard inside her mouth, [if cocks of player > 0]spilling your insignificant seed on her tongue[else]trembling as you spill any liquid lust you had on her tongue[end if], you crash inside her muzzle resting in the glowing daze of your orgasm. But the crafty girl doesn't appear to share your idea, as you are soon robed of you 'floor' and crash on her palate with her tongue looming above you with what appears to be a foreboding thought.";
+	WaitLineBreak;
+	if cunts of player > 0:[tongue vagina]
+		say "     The tongue soon penetrates your folds, making you scream with the sudden invasion. You shiver in pain as the giant appendage forces its way inside you bulging your stomach outward inch by inch, even reaching your cervix - that makes you jump in surprise. Trying to hold on her teeth or anything there, so you can keep yourself in place as the alien organ is attacking your cunny, your own tongue hangs out of your mouth without the rest of the last orgasm and the new pleasure. Her force crashes you on the 'ground' as she keeps violating your - now gaping cunt, but she doesn't appear to be happy with just that in soon your violator pushes the rest of her tongue inside you, penetrating you cervix and exploring your womb. That floods your mind with pain and pleasure as it goes straight to your brain but left you still denied of a climax - it's as if the bitch knows when you are going to cum and deliberated leaves you wanting, you stain her mouth with your unsatisfied juices and the bad cop fills your poor womb with her saliva.";
+	else if cocks of player > 0:[tongue penis]
+		say "     The tongue licks your penis teasing it as she keeps rubbing anyway she can, even your ass is licked again even being prodded with the tip. You are denied endlessly, it's almost as if Alexandra can read your body movements, and every time you are close to another orgasm she stops letting you starved for any kind of release. Your body gets to a point where even the mere touch on your genitals send electric shocks to your brain, but without the orgasm you left to only mutter 'Please...' in hopes of any kind of compassion from your captor. But most of your pleas fall in deaf ears; the bad girl only wants to see you suffer in a state of build-up, anticipation but no climax. In to time you fall exhausted on her palate, breathing heavily with the only saving grace that it's not a cold floor.";
+	else: [tongue anal]
+		say "     The tongue soon violates your ass, forcing your way inside your tight hole. You scream in pain as the giant 'tentacle' buries all the way to your colon, [if cocks of player > 0]making you jolt backwards as it slams against your male 'love-button' mixing a huge pleasure with the giant pain of this forceful penetration[else]the pain keeps building up against your pleasure[end if]. Your stomach bulges and deforms making way for your invader, and soon you look like you are pregnant with the child of the appendage that is violating you. Your mind wanders for a bit with the idea of giving birth to a tentacled monster but with your thoughts in disarray from the pain the dream is a fleeting one. And you soon is dropped on the wet 'ground' trembling with pain and half-ecstasy.";
+		WaitLineBreak;
+	if a random chance of 1 in 2 succeeds:
+		say "     Without any strength left in your body from all this teasing, and in this slippery surface you start sliding down her muzzle. Traveling through her gullet you are pressed against her flesh, pushing you down and you let it since you don't have the strength left in your body. Her inner walls squeeze and trap you, the liquid inside make it all hard to breath - your lungs burn without oxygen. The slippery sensation makes it feels so erotic, and the descent is easy on your body. So your mind is in a hazy state of pain and pleasure, until you can't hold it anymore and cum hard inside her digestive system.";
+		say "     The anthro bitch wheezes and cough, finally pushing you back the way you came until you are thrown back in the floor. 'You really want to be my meal huh?' she coy with the idea before cleaning the side of her mouth from the liquids it had, 'even if that idea is quite alluring, I don't want to get rid of you, not while I can still have some fun with you' the voracious bitch smiles at you 'But in the future you might be a great snack' she winks at you. When you finally grow back to normal Alex gets grumpy, making you ask why 'You were so cute that size' the cranky dog goes back to what she was doing. Feeling sad for the cute pet she lost.";
+	else:
+		say "     The satisfied woman takes you out of her mouth putting you back on a your bed inside the library, you can finally rest for a bit while she gets comfy beside you. Acting in a more sweet way now the now calm bitch strokes your body, running her index along your neck, chest and stomach. It looks like The dog is treating you like a cat, 'You know, maybe I should keep you as my pet' the anthro woman says with a grin 'A little horny pet, that can even be a snack for me when I get tired of'. Her smile starts to leak some of her saliva, looks like This girl is still hungry. You shiver in anticipation as her muzzle gets closer to your own body, it's over she is going to eat you for real now. But outside of your expectations the hungry dog just kisses you.";
+		say "     'I'm hungry, but not that hungry' the jokester tells you with a coy smile 'And besides... You can still be fun' the hunter jumps of the bad and runs away looking for something to feed her for real this time. You rest on the bed for a while just waiting to grow back to normal.";
 
 Part 3 - Event Scenes w/Fang
 
@@ -512,6 +555,8 @@ to say badAlexandraFang1: [let Fang fuck her]
 		increase HP of Alexandra by 1;
 		now lust of Alexandra is 1;
 		now AlexandraPupDaddy	is 2; [Fang knocked her up]
+	now lastfuck of Alexandra is turns;
+	now lastfuck of Fang is turns;
 	WaitLineBreak;
 
 to say badAlexandraFang2: [male player stops Fang and establishes dominance]
@@ -535,11 +580,12 @@ to say badAlexandraFang2: [male player stops Fang and establishes dominance]
 		increase HP of Alexandra by 1;
 		now lust of Alexandra is 1;
 		now AlexandraPupDaddy	is 1; [player knocked her up]
+	now lastfuck of Alexandra is turns;
 	WaitLineBreak;
 
 to say badAlexandraFang3: [herm player stops Fang and establishes dominance]
 	say "     Growling angrily at your wolf, you grab him by the scruff of the neck as he's preparing to make the leap onto the doberman's back. He waves his paws in the air, as if trying to grab at the bitch so close. His cock is hard and throbbing, dribbling with precum. You hold him and give him a shake before shoving him aside. 'No, Fang, you don't get to cum in my favourite bitch,' you add, making the beta wolf slink back a couple of yards.";
-	say "     During this, Alexandra's risen to her feet and is quite angry that you've denied her a good and proper fucking from the wolf. 'Oh?  And if I'm not to get it from the wolf here,' she growls, pulling off her jacket to get herself completely nude, 'where'm I going to get it, miss bossy?' Clearly goading you in search of the rough sex you've denied her, you grab her nightstick and tell her that if she wants a cock so badly, you'll just have to improvise.";
+	say "     During this, Alexandra's risen to her feet and is quite angry that you've denied her a good and proper fucking from the wolf. 'Oh? And if I'm not to get it from the wolf here,' she growls, pulling off her jacket to get herself completely nude, 'where'm I going to get it, miss bossy?' Clearly goading you in search of the rough sex you've denied her, you grab her nightstick and tell her that if she wants a cock so badly, you'll just have to improvise.";
 	WaitLineBreak;
 	say "     A brief struggle ensues with you trying to pin the obstinate bitch down which ends with her tumbling out the door of the library and into the open street. You pounce on her before she can get back up, fighting to pin her down. She continues to resist, barking for you to fucking take her if you're going to take her and freeing your crotch between trying to push you off. Frustrated by your prize bitch being such a bad girl, you pin down her shoulders and push her legs apart before stuffing a few fingers into her, making her cry out in pleasure. Growling dominantly down at her, you replace those fingers with the shaft of the nightstick, pushing it unceremoniously into her cunt.";
 	say "     The sex gets wild and rough once you shift positions and lower yourself down onto the handle of the nightstick, stuffing the ridged grip into your pussy. With a hand to steady it, it makes for an improvised strap-on for fucking her out in the plain view of the city for all to see as you stake your claim on her once again. Your free hand gropes lustfully at her breasts and hips while you pound away at her. She pants and moans, her legs locked around your hips and her paws clawing and scratching at your back. These scratches leave deep red marks that will take time for even the nanites to heal, but the pain of them only reinvigorates your drive to pound her bitch cunt to reminder her why you're the boss. As you're fucking her, Fang can only watch on as you stake a fresh claim on the Doberwoman and so knows she's yours, cock hard but untended.";
@@ -549,6 +595,7 @@ to say badAlexandraFang3: [herm player stops Fang and establishes dominance]
 	WaitLineBreak;
 	say "     As you're taking a moment before getting on to other tasks, you hear some soft growling coming from over at the library entrance. Heading over, you notice that Fang's sniffing around Alexandra again. His canine shaft is dangling erect between the wolf's legs and it is clear what he intends to do with the bitch. As the former cop sees that you're watching, she grins and looks right into your eyes as her hands move to undo the button of her pants. Sliding them down over her long legs, she bares her lower half for everyone to see - and Fang immediately circles around her to stick his muzzle between those legs and lap at her crotch.";
 	say "     Panting in arousal at the wolf licking her, Alexandra smirks at you and shrugs out of her leather jacket in a very provocative way, baring her breasts shaking them in your direction. Seems like she enjoys teasing you while being with another male quite a bit. After having already allowed for them to mate before, you can't help but feel aroused at the sight and drift even closer.";
+	now lastfuck of Alexandra is turns;
 
 to say badAlexandraFang4: [repeat mounting for Alexandra by Fang]
 	say "     With yourself just a few steps away from the two of them now, almost close enough to touch, you have an excellent view of what is going on. Your naked dobie bitch panting in arousal and using one hand to play with her nipples, the other on Fang's head as he laps at her crotch. 'That's right, you big, bad wolf. You've found yourself a juicy bitch,' she barks out, half to Fang and half to you as a challenge. But then, it's already been established that you won't or can't stop the two of them from mating. With a grin on her muzzle, the former cop lowers herself to all fours, tail wagging as she raises her hips for Fang to mount her.";
@@ -590,6 +637,8 @@ to say badAlexandraFang4: [repeat mounting for Alexandra by Fang]
 		now lust of Alexandra is 1;
 		now AlexandraPupDaddy	is 2; [Fang knocked her up]
 	now lastdobiemess is 99; [last used by Fang]
+	now lastfuck of Alexandra is turns;
+	now lastfuck of Fang is turns;
 	WaitLineBreak;
 
 Section 4 - Sarah and Alexandra
@@ -634,15 +683,15 @@ an everyturn rule:
 		else if Fang is booked and Alexandra is booked and player is in Grey Abbey Library:
 			if XP of Alexandra is 0, now XP of Alexandra is turns; [starts counter on any turn (except turn 0, which will start next turn)]
 			if level of Alexandra is 0: [first time]
-				if lastfuck of Fang - turns >= 8 and lastfuck of Alexandra - turns >= 6 and XP of Alexandra - turns >= 16: [horny wolf, horny dobie, last scene 2 days back]
+				if (lastfuck of Fang - turns >= 8) and (lastfuck of Alexandra - turns >= 6) and (XP of Alexandra - turns >= 16): [horny wolf, horny dobie, last scene 2 days back]
 					say "[badAlexandraFang0]";
 			else if level of Alexandra is 1 and HP of Fang is 3 or HP of Fang is 4: [non-shared bitch and Alpha Fang]
-				if lastfuck of Fang - turns >= 8 and lastfuck of Alexandra - turns >= 6 and XP of Alexandra - turns >= 16: [horny wolf, horny dobie, last scene 2 days back]
+				if (lastfuck of Fang - turns >= 8) and (lastfuck of Alexandra - turns >= 6) and (XP of Alexandra - turns >= 16): [horny wolf, horny dobie, last scene 2 days back]
 					say "     As you're taking a moment before getting on to other tasks, you hear some soft growling coming from the door. Heading over, you notice that Fang's sniffing around Alexandra again. She's lightly trying to push him away at first, but soon relents and is squirming out of her jeans. This rankles you a little after having gone through the trouble to stake your claim on her earlier, but with Fang as your alpha, you're no longer in a position to keep her exclusively to yourself. Soon enough, she's dropped onto all fours and is mounted by the big, strong wolf. Seeing you there, he growls 'watch' at you before turning his attention back to her. It seems like you'll have to witness Fang using your prize bitch and accept him using her whenever he wants to lay claim to her.";
 					say "     What's yours is yours, but what's yours is his, it seems.";
 					say "[badAlexandraFang1]";
 			else if level of Alexandra is 2: [shared bitch]
-				if lastfuck of Fang - turns >= 8 and lastfuck of Alexandra - turns >= 6 and XP of Alexandra - turns >= 16 and a random chance of 1 in 5 succeeds: [horny wolf, horny dobie, last scene 2 days back]
+				if (lastfuck of Fang - turns >= 8) and (lastfuck of Alexandra - turns >= 6) and (XP of Alexandra - turns >= 16) and a random chance of 1 in 5 succeeds: [horny wolf, horny dobie, last scene 2 days back]
 					say "     As you're taking a moment before getting on to other tasks, you hear some soft growling coming from over at the library entrance. Heading over, you notice that Fang's sniffing around Alexandra again. His canine shaft is dangling erect between the wolf's legs and it is clear what he intends to do with the bitch. As the former cop sees that you're watching, she grins and looks right into your eyes as her hands move to undo the button of her pants. Sliding them down over her long legs, she bares her lower half for everyone to see - and Fang immediately circles around her to stick his muzzle between those legs and lap at her crotch.";
 					say "     Panting in arousal at the wolf licking her, Alexandra smirks at you and shrugs out of her leather jacket in a very provocative way, baring her breasts shaking them in your direction. Seems like she enjoys teasing you while being with another male quite a bit. After having already allowed for them to mate before, you can't help but feel aroused at the sight and drift even closer, ready to watch them go at it.";
 					say "[badAlexandraFang4]";

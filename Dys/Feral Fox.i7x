@@ -109,7 +109,7 @@ instead of sniffing fox cum:
 the usedesc of fox cum is "[FoxCumUse]";
 
 to say FoxCumUse:
-	say "You pop the lid off the container before chugging it down. Dropping the now empty vial, you start scratching all over yourself as you body suddenly heats up.";
+	say "You pop the lid off the container before chugging it down. Dropping the now empty vial, you start scratching all over yourself as your body suddenly heats up.";
 	if libido of player < 75:
 		now libido of player is 75;
 

@@ -140,7 +140,7 @@ carry out browsebooks:
 			say "[thab]";
 	else if X is 5:
 		If fsnovel is 1:
-			say "     While passing a table loaded with children's books you notice one titled [bold type]Boris the Lion's African Adventure[roman type], and not even knowing why, you pause to read it. It's a simple tale, like any preschooler book, about Boris' misadventure of trying to capture Andy the Antelope with no success. But the words at the end manage to inspire you. 'He may be faster. He may be smarter. But I always, always will try harder. One day, one day he will be too slow. One day, one day I will catch him, I know.' You close the book with a smile, your mood lightened.";
+			say "     While passing a table loaded with children's books you notice one titled [bold type]Boris the Lion's African Adventure[roman type], and not even knowing why, you pause to read it. It's a simple tale, like any preschooler book, about Boris's misadventure of trying to capture Andy the Antelope with no success. But the words at the end manage to inspire you. 'He may be faster. He may be smarter. But I always, always will try harder. One day, one day he will be too slow. One day, one day I will catch him, I know.' You close the book with a smile, your mood lightened.";
 			Increase humanity of player by 1;
 			if morale of player < 20, increase morale of player by 1;
 		else:
@@ -256,7 +256,7 @@ To say myse:
 
 To say hfgb:
 	If hfgbread - turns < 12 and hagfeat is 1:
-		say "     Your interest in [bold type]How to Find a Good Bargain[roman type] returning, you head back to the shelf were you left it. Not finding it, you spend a few minutes carefully scanning the books to make sure you haven't missed it. Still not finding it, you look around the store to see if maybe one of the rats has it, and find a couple of them sitting at a table reading a book. Wanting to see if it's the one you are looking for, you walk by them, take a glance, and see that it is. Disappointed, you head to the magazine rack to grab a magazine instead to read.";
+		say "     Your interest in [bold type]How to Find a Good Bargain[roman type] returning, you head back to the shelf where you left it. Not finding it, you spend a few minutes carefully scanning the books to make sure you haven't missed it. Still not finding it, you look around the store to see if maybe one of the rats has it, and find a couple of them sitting at a table reading a book. Wanting to see if it's the one you are looking for, you walk by them, take a glance, and see that it is. Disappointed, you head to the magazine rack to grab a magazine instead to read.";
 		Follow the turnpass rule;
 	else:
 		If hagfeat is 1:

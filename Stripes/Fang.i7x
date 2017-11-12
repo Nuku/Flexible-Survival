@@ -161,7 +161,7 @@ to say fangsex5:		[assfuck Fang]
 		say "     That animalistic corner of your mind is quite pleased to be, as your co-inhabitor teases Fang, 'fucking one of the forest wolves' and 'staking territory for the skunks.' Fang can only give a soft whimper at this and dips his ears lower even as he keeps his tail raised and feet planted firmly so his strange alpha can keep pounding him.";
 	else:
 		say "     That animalistic corner of your mind is quite pleased to be fucking one of the forest wolves, dominating a member of your territorial rivals. Fang, like a good beta to his strange alpha, keeps his tail raised and feet planted firmly as you pound into him.";
-	say "     Your scent grows strong in the air and clings to the wolf for some time after you're done with him. And by the time you're are done, you've cum hard a few times. Having drained your mephit balls into the cowed wolf, you've once again staked your position over him. The wolf, also having enjoyed the bestial mating by his alpha that's left him sated and sore, has left several sticky stains on the floor.";
+	say "     Your scent grows strong in the air and clings to the wolf for some time after you're done with him. And by the time you're done, you've cum hard a few times. Having drained your mephit balls into the cowed wolf, you've once again staked your position over him. The wolf, also having enjoyed the bestial mating by his alpha that's left him sated and sore, has left several sticky stains on the floor.";
 	now libido of player is libido of player / 2;
 
 
@@ -173,7 +173,7 @@ instead of going up from Bunker while ( lastfuck of Sandra - turns > 15 and Sand
 	move player to Grey Abbey Library;
 	say "     As you're preparing to head back out, you catch sight of Sandra slipping through the door to the Library[if libido of Fang is 1] again. Once again, there's[else]. There's[end if] something furtive about her actions and so you remain quiet and follow out shortly after her. Outside in the library, you stay hidden among the stacks, watching her move towards the big wolf on guard[if the number of booked people > 1]. They are alone in here right now, or at least so they think[end if][if libido of Fang is 1]. With a few quiet whispers,[else]. It becomes clear what she's after when[end if] she puts her arms around him and starts stroking his cock, getting the big, feral wolf hard. After a little teasing and some slobbery kisses from the lupine's tongue, she moves onto all fours and waves her rump for him.";
 	say "     'Oh, take me, you big beast! I want to be fucked like an animal!' the usually shy and quiet bunny cries out as the wolf's moving atop her. It seems she's becoming more lustful with her time waiting in the bunker, giving into her hidden lusts more and more. Clearly the rabbit girl is much kinkier than she lets on. You grin as you watch the wolf's cock spreading the bunny's wet, dripping folds before pounding and thrusting into her like a wild, feral wolf. Getting quite aroused by the erotic display before you, you rub your hands over your body.";
-	say "     [bold type] Shall you head over to join them [if libido of Fang is 1]this time [end if] or remain watching quietly?[roman type][line break]";
+	say "     [bold type]Shall you head over to join them [if libido of Fang is 1]this time [end if] or remain watching quietly?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Join them.";
 	say "     ([link]N[as]n[end link]) - Watch.";
