@@ -126,6 +126,17 @@ To get typed command as (S - a snippet): (-
 To get next key as (S - a snippet): (-
 	{S} = VM_KeyChar();  -)
 
+Include (-
+
+[ Serial s;
+	for (s=0 : s<6 : s++) print (char) ROM_GAMESERIAL->s;
+];
+
+-)
+
+To say serial number: (- Serial(); -).
+[Added function for outputting FS serial number]
+
 Book 1 - Variable Definitions
 
 The file of flexiblestory is called "flexible1".
