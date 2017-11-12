@@ -40,7 +40,7 @@ to say rabpackvictory:
 		decrease libido of player by 50;
 	else:
 		say "The rabbit creatures lift you in unison and transport you into a nearby abandoned building, before any unwanted guest shows up.[line break]They lay you gently on the ground and admire your body, obviously pleased by what they got; they crawl on you, caressing, licking gently...[line break][rabpacka][rabpackb][rabpackc]";
-		say "Your body can't resist their attentions, and you orgasm, matting a few of them. This doesn't stop them, as they keeps stimulating you, themselves, and each other, indifferently, no matter how spent any of you is...[line break]When it finally ends, those who can still stand guide the others somewhere else. You curl on the ground and fall asleep, trying to recover.";
+		say "Your body can't resist their attentions, and you orgasm, matting a few of them. This doesn't stop them, as they keeps stimulating you, themselves, and each other, indifferently, no matter how spent any of you are...[line break]When it finally ends, those who can still stand guide the others somewhere else. You curl on the ground and fall asleep, trying to recover.";
 
 to say rabpacka:
 	if breast size of player > 6:
@@ -51,7 +51,7 @@ to say rabpacka:
 to say rabpackb:
 	if cocks of player > 0:
 		if cock length of player > 10:
-			say "Meanwhile, you feel someone grabbing your cock and pressing it against its body. It must be a[one of]he, as you can feel his own penis and balls being rubbed against your member[or]she, since you feel two soft breasts being pressed against it[at random]. Sure it feels good...";
+			say "Meanwhile, you feel someone grabbing your cock and pressing it against its body. It must be a [one of]he, as you can feel his own penis and balls being rubbed against your member[or]she, since you feel two soft breasts being pressed against it[at random]. Sure it feels good...";
 		else:
 			say "Meanwhile, you feel someone grabbing your cock and slowly jerking it while [one of]licking across its length[or]sucking its tip[or]massaging your balls[at random]. Sure it feels good...";
 

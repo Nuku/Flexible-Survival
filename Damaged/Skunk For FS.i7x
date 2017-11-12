@@ -139,7 +139,7 @@ to say sblsex1:		[fuck skunkgirl]
 
 
 to say sblsex2:		[fellatio]
-	say "     The skunk runs her paws over your stiff cock, licking and kissing at it before opening her muzzle wide and giving you a blow job[if skrp is 1].  Your lower head moans in pleasure.  '[one of]Mmmm... open wide[run paragraph on][or]Take it all, slut,[or]Suck us good, girl,[at random]' she says excitedly[end if].  The skunk's talented muzzle works over your dripping shaft, lavishing attention upon it[if cock length of player > 12] and eventually managing to get the whole big thing stuffed down her throat[end if].  You moan and growl in pleasure at her expert work, eventually cumming hard and blasting your hot seed down her throat, feeding your buxom servant a heavy load of skunk cum.";
+	say "     The skunk runs her paws over your stiff cock, licking and kissing at it before opening her muzzle wide and giving you a blow job[if skrp is 1].  Your lower head moans in pleasure.  '[one of]Mmmm... open wide[or]Take it all, slut[or]Suck us good, girl[at random],' she says excitedly[end if].  The skunk's talented muzzle works over your dripping shaft, lavishing attention upon it[if cock length of player > 12] and eventually managing to get the whole big thing stuffed down her throat[end if].  You moan and growl in pleasure at her expert work, eventually cumming hard and blasting your hot seed down her throat, feeding your buxom servant a heavy load of skunk cum.";
 
 
 to say sblsex3:		[skunkbeast tops player]
@@ -274,7 +274,7 @@ When Play begins:
 	now heat duration entry is 2;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
 	now trigger text entry is "Your need seems to swell suddenly, an ache between your legs causing you to fall down to all fours at its intensity. As you stand there, propped, rear in the air, drooling, only one thought consumes your mind, find a skunk and let fuck it you until you can't move."; [ This is the text that is written to the screen when the player comes into heat]
 	now heat start entry is "[skunk heat start]";		[this is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider.  Delete entire line if you wish nothing to happen.]
-	now heat end entry is "[skunk heat end]";		[this is the same as heat start only it"s for ending the cycle. GSSD her sex is reduced back to it"s previous size. Delete entire line if you wish nothing to happen. ]
+	now heat end entry is "[skunk heat end]";		[this is the same as heat start only it's for ending the cycle. GSSD her sex is reduced back to its previous size. Delete entire line if you wish nothing to happen. ]
 	now inheat entry is "[skunk in heat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 	now fheat entry is true;
 	now mpregheat entry is false;

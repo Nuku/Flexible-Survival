@@ -161,7 +161,7 @@ when play ends:
 				say "     Eventually when the military moves through the city they are greeted at the door by Rex, who manages to convince them none of you are dangerous. After a short stay at their camp you are allowed to leave and you move to a small, quiet home outside the city where you continue your peaceful existence for many years.";
 				if cunts of player > 0:
 					if "Sterile" is not listed in feats of player:
-						say "     You frequently find you belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
+						say "     You frequently find your belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
 					else:
 						say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off to new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
 				else:
@@ -173,7 +173,7 @@ when play ends:
 				say "     This turns out to be the final push your mind needed, and as you reach to accept the collar the last of your resistance fades away, finally surrendering yourself t a simple life as one of Rex's happy pets.";
 				if cunts of player > 0:
 					if "Sterile" is not listed in feats of player:
-						say "     You frequently find you belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
+						say "     You frequently find your belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
 					else:
 						say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off to new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
 				else:

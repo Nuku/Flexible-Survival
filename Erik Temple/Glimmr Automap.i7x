@@ -582,7 +582,7 @@ Carry out dumping automap data:
 			say "[map glyph of count] ";
 	say "[variable letter spacing][line break]".
 
-Dumping automap links is an action out of world applying to nothing. Understand "automap link/links dump" or "dump links" or "dump map links"or "dump automap links" as dumping automap links. Understand "map link dump" as dumping automap links when glulx graphics is supported.
+Dumping automap links is an action out of world applying to nothing. Understand "automap link/links dump" or "dump links" or "dump map links" or "dump automap links" as dumping automap links. Understand "map link dump" as dumping automap links when glulx graphics is supported.
 
 Carry out dumping automap links:
 	say "Map measures [map width] by [map height], totalling [map height * map width] tiles.[line break]Window measures [width of the assigned window of the map-renderer] x [height of the assigned window of the map-renderer] px.[line break]Scaled tile measures [tile-width of associated tileset of the map-renderer * arbitrary scaling factor of the assigned window of the map-renderer] x [tile-height of associated tileset of the map-renderer * arbitrary scaling factor of the assigned window of the map-renderer] px.[line break]Canvas measures [canvas-width of the associated canvas of the map-renderer] x [canvas-height of the associated canvas of the map-renderer] canvas units.";

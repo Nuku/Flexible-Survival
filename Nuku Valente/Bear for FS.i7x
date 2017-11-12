@@ -101,7 +101,7 @@ When Play begins:
 	now skin entry is "[one of]shaggy-furred[or]coarsely furred[or]honey-scented furry[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a short black tail hidden mostly by the sheer size of you.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]pink bulbous[or]ribbed[or]usually sheathed[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your nose changes and darkens as you face draws forward into a bear like muzzle, and your ears become rounded and furry as they move into their new position."; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "your nose changes and darkens as your face draws forward into a bear like muzzle, and your ears become rounded and furry as they move into their new position."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you swell with the sudden appearance of more muscles and height, growing taller and heavier by the moment."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "coarse, shaggy, dark brown fur spreads rapidly over your form."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "the forming of your stubby tail almost goes unnoticed."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]

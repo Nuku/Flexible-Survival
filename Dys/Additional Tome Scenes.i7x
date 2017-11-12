@@ -46,7 +46,7 @@ to say TomeSexMenu:
 		choose a blank row from table of fucking options;
 		now title entry is "Summon a tentacle monster";
 		now sortorder entry is 1;
-		now description entry is "Perhaps you could get the tentacle monster to have it's way with you";
+		now description entry is "Perhaps you could get the tentacle monster to have its way with you";
 	[]
 	if DemonFoxInteractions > 0:
 		choose a blank row from table of fucking options;
@@ -120,7 +120,7 @@ to say TomeExpansionUse:
 			say "     You contemplate using the dark book for only a moment before shaking your head. Using it too often may be a bad idea.";
 
 to say TomeReadMenu:
-	say "     You pull the tome out of your pack once more, looking over it's leather cover for a moment before deciding that giving it another read wouldn't hurt too much. After all, you only read about half of it, previously! You should at least finish what you started.";
+	say "     You pull the tome out of your pack once more, looking over its leather cover for a moment before deciding that giving it another read wouldn't hurt too much. After all, you only read about half of it, previously! You should at least finish what you started.";
 	say "     Opening the book to the portion you've yet to read, you are greeted with a few options. The page on the left depicts a sort of mass of tentacles[if TomeFound is 4], though these are different than the ones that assaulted Eric[else if TomeFound is 20], though these are different than the ones that nearly took Eric[end if]. Each of the tendrils is a sort of bluish-purple, and they all seem to be covered in some sort of clear slime. The adjacent page depicts a demonic looking feral fox. It stands larger than a horse with jet black and yellow fur. Two curved horns poke out of the top of its skull, and it has a series of spikes along its back, almost like a dragon. It has three long tails, each of which appear to be burning with a yellow flame. Underneath its hulking form, you see a massive cock, an interesting mixture of both vulpine and draconic, featuring a tapered tip and a wide knot, as well as several protruding ridges along its underside. The shaft itself fades from a dark metallic gold at the base to a bright yellow near the tip. It's leaking a stream of what almost looks like lava.";
 	say "     [bold type]Seeing your two options, which of them do you read about[roman type]?";
 	LineBreak;
@@ -141,7 +141,7 @@ to say TomeReadMenu:
 		now TentacleRead is true;
 		now TomeInteractions is 2;
 	else if calcnumber is 2 and DemonFoxRead is false:
-		say "     Looking over the page about the fox, you manage to learn a few things. The demon fox is apparently able to change it's size to whatever it desires. In addition, it's cum is said to glow a bright orange, almost like lava. The fox is also supposedly very possesive and domineering, desiring to have others submitting to it. Anyone who has encountered the beast has reaffirmed that fact.";
+		say "     Looking over the page about the fox, you manage to learn a few things. The demon fox is apparently able to change its size to whatever it desires. In addition, its cum is said to glow a bright orange, almost like lava. The fox is also supposedly very possesive and domineering, desiring to have others submitting to it. Anyone who has encountered the beast has reaffirmed that fact.";
 		now DemonFoxRead is true;
 		now TomeInteractions is 2;
 	else if DemonFoxRead is true or TentacleRead is true:
@@ -182,7 +182,7 @@ to say DemonFoxMenu:
 
 to say DemonFoxFirstEncounter:
 	say "     Out of nowhere, you're tackled to the ground! A large weight is pressing down upon your back and feel the hot breath of something along the back of your neck. Pinned as you are, you're unable to get a good look at your assailant, even as you feel sharp claws rip through your clothing, leaving you fully exposed to whatever it is that's attacking you. Suddenly, you feel a long, fluffy object wrapping around your midsection before it hoists you into the air, tossing you back onto the ground on your back. You're eyes widen and you let out a gasp as you see the huge demonic fox you read about earlier standing over you.";
-	say "     Before you get a chance to react, the fox has you pinned once more, it's massive forepaws pinning you to the ground as it snarls in your face. 'Seems like I've finally got something to play with,' he says, surprising you slightly. 'I'm going to enjoy [if player is mpreg_ok]breeding[else]fucking[end if] you like the bitch you [if player is submissive]are[else]should be[end if].'";
+	say "     Before you get a chance to react, the fox has you pinned once more, its massive forepaws pinning you to the ground as it snarls in your face. 'Seems like I've finally got something to play with,' he says, surprising you slightly. 'I'm going to enjoy [if player is mpreg_ok]breeding[else]fucking[end if] you like the bitch you [if player is submissive]are[else]should be[end if].'";
 	WaitLineBreak;
 	say "     Mustering your strength, you manage to throw the beast off of you, causing him to let out a surprised grunt. You quickly scramble to your feet and ready yourself for a fight. 'Oh, so you're a feisty one, eh?' he asks, licking his chops and narrowing his eyes at you. 'I like that...'";
 	now inasituation is true;
@@ -200,7 +200,7 @@ to say DemonFoxFirstEncounter:
 	now DemonFoxInteractions is 1;
 
 to say TentaclesFirstEncounter:
-	say "     As you're going about your business, something suddenly wraps around you legs. You're harshly yanked backwards, and you fling out your arms in a desperate attempt to avoid smashing your face on the ground. Once that's been taken care of, you whirl around to look at what's ensnared you. The sight that greets you makes you skin go cold. A writhing mass of purple tentacles are jutting out of the ground, each coated in a slick, sticky slime. Desperately, you yank your foot away, manages to get it out of the tendrils grasp.";
+	say "     As you're going about your business, something suddenly wraps around your legs. You're harshly yanked backwards, and you fling out your arms in a desperate attempt to avoid smashing your face on the ground. Once that's been taken care of, you whirl around to look at what's ensnared you. The sight that greets you makes you skin go cold. A writhing mass of purple tentacles are jutting out of the ground, each coated in a slick, sticky slime. Desperately, you yank your foot away, manages to get it out of the tendrils grasp.";
 	say "     [bold type]You need to take advantage of you momentary freedom! What do you do?";
 	say "     [link]Run away as fast as you can![as]y[end link] - (Y)[line break]";
 	say "     [link]See if you can find some sort of central mass.[as]n[end link] - (N)[line break]";
@@ -239,7 +239,7 @@ an everyturn rule:
 				now TomeInfluence is 2;
 		else if TomeInfluence is 2: [Tempted by the book twice]
 			if TomeTimer - turns >= 8 and a random chance of 1 in 3 succeeds:
-				say "     You blink, suddenly aware that your hand is reaching into your bag, seemingly on it's own accord. Wondering what could possibly be going on, you grab the first thing you touch and pull it out. It just so happens to be the [bold type]ancient tome[roman type]! You glance over its leather cover, running your fingers across its surface for a second before you flip the cover open, going to a random page. Much to your amazement, you can actually read the words there! [bold type]Perhaps you could give it a read, now that you can actually do so?[roman type]";
+				say "     You blink, suddenly aware that your hand is reaching into your bag, seemingly on its own accord. Wondering what could possibly be going on, you grab the first thing you touch and pull it out. It just so happens to be the [bold type]ancient tome[roman type]! You glance over its leather cover, running your fingers across its surface for a second before you flip the cover open, going to a random page. Much to your amazement, you can actually read the words there! [bold type]Perhaps you could give it a read, now that you can actually do so?[roman type]";
 				now TomeTimer is turns;
 				now TomeInfluence is 3;
 		else if TomeInfluence is 3: [Tempted fully]
