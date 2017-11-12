@@ -384,7 +384,7 @@ to say BastetSexMenu:
 		now title entry is "Make her stand facing the wall and finger her mercilessly";
 		now sortorder entry is 4;
 		now description entry is "Shove your fingers up the lioness's pussy";
-		[]		
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -424,7 +424,7 @@ to say BastetSexMenu:
 		clear the screen and hyperlink list;
 
 to say BastetSex1: [player licks Bastet]
-	say "    You let your gaze wander over her tight sheath-dress and its semitransparent sections. Then, you step up to the lioness and kneel down - an act that makes her eyebrows rise. From your new position, she looks even more divine than usual, and you can definitively see why Anktepi worships the ground she walks upon. These proud and noble features, the edges and curves of her feline head, and its large slit-pupiled eyes looking down at you... And everything put into exactly the right light in the mixture of deep shadows and warm candlelight that fills Nermine's store. All of this makes you desire her even more, and you feast your eyes on her body, whose beauty is barely hidden by the mostly sheer fabric of her dress.";
+	say "     You let your gaze wander over her tight sheath-dress and its semitransparent sections. Then, you step up to the lioness and kneel down - an act that makes her eyebrows rise. From your new position, she looks even more divine than usual, and you can definitively see why Anktepi worships the ground she walks upon. These proud and noble features, the edges and curves of her feline head, and its large slit-pupiled eyes looking down at you... And everything put into exactly the right light in the mixture of deep shadows and warm candlelight that fills Nermine's store. All of this makes you desire her even more, and you feast your eyes on her body, whose beauty is barely hidden by the mostly sheer fabric of her dress.";
 	say "     'Worship me,' comes an eager purr from the trapped cat goddess. You slide both hands up the outside of her slender legs, stroking over their soft fur. A little gasp from somewhere to the side reaches your ears when you slip your fingers under her dress, lifting and pushing it upwards, revealing the pussy of this beautiful anthro lioness. Glancing around for a second, you realize that this gasp must have come from Anktepi. Bastet's devoted priest and servant never strays far from her side, after all. He looks a bit drooped right now, since you are basically taking his place as a willing servitor to his goddess, and intent to please her. The corners of your mouth rise a little as you meet his gaze. You give him a smug wink, then turn back to your waiting partner.";
 	WaitLineBreak;
 	say "     Bastet's pussy is perfectly formed, as befitting to a goddess, with slightly open, curving nether lips and a little hooded button of a clit at the top. Raising your muzzle, the tip of your nose bumps against her folds, earning a chuckle from the sexy feline. You begin to lap at her sex, playing your long tongue over the curved slit, then giving her clit special attention. You lick the small bump, and circle around with the tip of your tongue. 'Very good,' Bastet adds and pats your head with her hand-paw, purring some more as she goes on to say, 'Your service pleases me.' Eager to show her that this is merely the beginning, you attack her pussy in earnest now. You nudge apart these pussy lips with your nose, and stick your muzzle right between them, allowing to huff the entrancing aroma of her arousal with every breath. Once settled, you stick out your tongue in order to explore the lioness's depths.";
@@ -490,7 +490,7 @@ ah, if its a focus on a female PC you want, I should make a variant of the BJ sc
 Savriss - Today at 9:49 PM
 I would definitely like that.
 
-] 
+]
 
 to say BastetSexBattleRepeats:
 	now BastetSexBattleCount is 0;

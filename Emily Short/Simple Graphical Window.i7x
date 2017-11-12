@@ -56,7 +56,7 @@ Section 3 - Inform 6 Routines for Drawing In Window
 
 Include (-
 
-[ FindHeight  result graph_height;
+[ FindHeight result graph_height;
 	if (gg_picwin)
 	{	result = glk_window_get_size(gg_picwin, gg_arguments, gg_arguments+WORDSIZE);
              		graph_height  = gg_arguments-->1;
@@ -64,7 +64,7 @@ Include (-
 	return graph_height;
 ];
 
-[ FindWidth  result graph_width;
+[ FindWidth result graph_width;
 	if (gg_picwin)
 	{	result = glk_window_get_size(gg_picwin, gg_arguments, gg_arguments+WORDSIZE);
              		graph_width  = gg_arguments-->0;

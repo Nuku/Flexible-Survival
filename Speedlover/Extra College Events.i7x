@@ -66,7 +66,7 @@ Instead of resolving CatsVSDogs:
 
 to CatsVSDogsEvent:
 	if CatsVSDogsCounter is 1:
-		say "     On your travels you spot a tennis court between buildings. There seems to be a game going on – between cats and dogs. One one side, a panther and a lynx. On the other side a husky and a Labrador retriever. Anthro dogs and cats of many types are standing to one side watching the game. The game looks pretty intense, dogs loping around, hitting hard and trying to wear out the cats. On the other side the cats are playing tactically. Each of them stick to their positions like glue and they keep aiming for spots they think the dogs cant defend.";
+		say "     On your travels you spot a tennis court between buildings. There seems to be a game going on – between cats and dogs. One one side, a panther and a lynx. On the other side a husky and a Labrador retriever. Anthro dogs and cats of many types are standing to one side watching the game. The game looks pretty intense, dogs loping around, hitting hard and trying to wear out the cats. On the other side the cats are playing tactically. Each of them stick to their positions like glue and they keep aiming for spots they think the dogs can't defend.";
 		say "     You watch the yellow ball go from one side to the other a dozen times, both sides giving as good as they get, but nothing lasts forever. One of the cats hits high, causing the ball to go near the Labrador's head. Unfortunately for him, his instincts take over and [bold type]CHOMP[roman type]. Immediately the animals in the crowd yell in victory or defeat depending on their team and everyone starts to walk off. As they leave you hear the husky say to his teammate 'Again? That's the third ball this week!'";
 		now CatsVSDogsCounter is 2;
 	else if CatsVSDogsCounter is 2:
@@ -506,6 +506,31 @@ to RyouseiLibraryEvent:
 		now CollegeLibraryRyouseiEncounter is 1;
 	else:
 		say "     You walk back to the bookshelves, and, inspired by Ryousei, decide to check the asian history section. Shortly after, the tiger is back at your sides, but looks discheveld.  'Well, this place of knowledge is so, er, admirable,' the feline replies your query, while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You follow his look to the information desk, and notice a middle-aged vulpine employee oogling at the tiger, and licking [if Girl is not banned and Girl is not warded]his[else]her[end if] chops. Ryousei makes a beeline for the exit, almost losing you again.";
+
+Campus Patrol is a situation.
+Campus Patrol is resolved.
+The sarea of Campus Patrol is "Campus".
+
+instead of going to College Walkway West while (Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	move player to College Walkway West;
+	CampusPatrolEvent;
+
+instead of going to College Walkway East while (Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	move player to College Walkway East;
+	CampusPatrolEvent;
+
+instead of going to College Campus Entrance while (Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	move player to College Campus Entrance;
+	CampusPatrolEvent;
+
+Instead of resolving Campus Patrol :
+	CampusPatrolEvent;
+
+to CampusPatrolEvent:
+	say "     As you walk along the pathway at the edge of the central green of Tenvale college campus, your gaze falls upon a fairly large anthro wolfhound, leaning against the side of a car in the adjoining parking lot. Shirtless and showing an impressive set of abs and pecs, the canine is dressed in nothing more but a pair of cargo pants and a spiked collar. He holds a bottle of whisky in his paw-hand, taking a swig from time to time while he watches people walk past. Soon, a young golden retriever passes by his position, which is when the dog gives her a lewd gaze and calls out, 'Hey babe, you seem like just the right bitch for me! Come on, let's make some puppies right here and now!' And with that, he steps up to the young woman and forcefully grabs her by the arm. The books the young woman was carrying are sent flying as the transformed man starts to drag her off in the direction of the parking lot, ignoring her struggles to get free.";
+	say "     The start of a shout for help is quelled by his other hand wrapping around her muzzle and clamping it shut (dropping the whisky bottle in the process and leaving it to shatter on the asphalt of the parking lot). Before you can decide if you want to intervene or not, three strapping young Spartans in nothing more than sandals, red cloaks and helmets are already sprinting towards the scene. Within moments, they surround the kidnapper, the spear-points of their weapons an inch from his throat. Freezing in place, the wolfhound releases his grip on the girl and she wrenches herself free. 'Thanks guys,' she tells the spartan with a relieved expression, then slips out of the circle of combative young men and goes to collect her books. Meanwhile, the Spartans guide their captive to the edge of the campus at spear-point, then let him go with a dire warning not to return if he values his life... or his anal virginity.";
+	now Campus Patrol is resolved;
+	now LastCampusWalkin is turns;
 
 
 Extra College Events ends here.

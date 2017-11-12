@@ -334,7 +334,7 @@ to say FootballMatchOffense:
 		increase morale of player by 20;
 		increase humanity of player by 20;
 	else:
-		say "     The impact makes you fall on the ground with the ball. The safety is almost instantly on you, and you feel his pointy canine dick push into your [if cunts of player > 0]pussy[else]ass[end if]. You open the mouth, but the cornerback, who was standing behind you, kneels down, tilts you head up, and buries his own maleness down your [face of player] throat.";
+		say "     The impact makes you fall on the ground with the ball. The safety is almost instantly on you, and you feel his pointy canine dick push into your [if cunts of player > 0]pussy[else]ass[end if]. You open the mouth, but the cornerback, who was standing behind you, kneels down, tilts your head up, and buries his own maleness down your [face of player] throat.";
 		say "     The two wolves spitroast you, and they do not miss the chance to play with your nipples [if cocks of player > 0]and your cock [end if]while you are lying between them and unable to do anything about it. On each other's signal, they force their knots inside of you, and you moan loudly around the one blocking your mouth. The two lupines cum shortly afterwards, and their knots force you to take every single drop of their load inside your body.";
 		WaitLineBreak;
 		say "     Their lust satiated, they stand there while their knot half-deflates, and pull out. You yelp at the feeling of having the thick knots stretch you once more, and start protesting, as they did not even have the fairness to make you cum too.";

@@ -212,7 +212,7 @@ to say beesexmale2:
 	now libido of player is ( libido of player + 1 ) / 2;
 
 to say beesexfemale1:
-	say "     Sensing [if HP of bee girl >= 5]her queen's[else]your[end if] arousal, Honey snuggles up to you and nuzzles you crotch. Her tongue, long and thin, slides out to tease at your wet pussy. Pressing her lips to your dripping folds, she slides that wriggling tongue down into you, making you moan in delight. Her tongue quite skillfully delves to your very depths to taste your[if HP of bee girl >= 5 and player is queenbeecocked] honeyed[end if] nectar. You cum several times and she happily drinks down your sweet waters until you're both satisfied.";
+	say "     Sensing [if HP of bee girl >= 5]her queen's[else]your[end if] arousal, Honey snuggles up to you and nuzzles your crotch. Her tongue, long and thin, slides out to tease at your wet pussy. Pressing her lips to your dripping folds, she slides that wriggling tongue down into you, making you moan in delight. Her tongue quite skillfully delves to your very depths to taste your[if HP of bee girl >= 5 and player is queenbeecocked] honeyed[end if] nectar. You cum several times and she happily drinks down your sweet waters until you're both satisfied.";
 	now libido of player is ( libido of player + 1 ) / 2;
 
 to say beesexfemale2:

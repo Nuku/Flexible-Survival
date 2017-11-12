@@ -98,7 +98,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Cum Girl";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "The cum girl[one of]'s arm quickly elongates as she strikes at you with a whip-like motion[or] pulls you into a warm, sticky hug, planting several kisses on your face before you manage to push her away[or]'s arousing aroma of sex distracts you momentarily, allowing her to strike you quickly[or] lashes out with both arms, quickly forming long gooey tendrils that wrap themselves around your legs, tripping you[at random]!";	[Text used when the monster succeeds on an attack]
+	now attack entry is "[one of]The cum girl's arm quickly elongates as she strikes at you with a whip-like motion[or]The cum girl pulls you into a warm, sticky hug, planting several kisses on your face before you manage to push her away[or]The cum girl's arousing aroma of sex distracts you momentarily, allowing her to strike you quickly[or]The cum girl lashes out with both arms, quickly forming long gooey tendrils that wrap themselves around your legs, tripping you[at random]!";	[Text used when the monster succeeds on an attack]
 	now defeated entry is "[beattheCumGirl]";				[ Text when monster loses.  Change 'Cum Girl' as above. ]
 	now victory entry is "[losetoCumGirl]";					[ Text when monster wins.  Change 'Cum Girl' as above. ]
 	now desc entry is "[CumGirldesc]";						[ Description of the creature when you encounter it. ]

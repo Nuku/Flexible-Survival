@@ -39,7 +39,7 @@ instead of conversing the Gerty:
 
 to say GertyTalkMenu:
 	say "[line break]";
-	say "What do you want to talk with Gerty about?";	
+	say "What do you want to talk with Gerty about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -98,7 +98,7 @@ to say GertyTalkMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say GertyTalk1: [talk about him]
 	say "     'Well, I used to be a freelance artist, and as you may know, I was planning on working with Kyle on the novel he was writing. Things had been pretty alright for me since I graduated a while back, really, and I never had to work so many odd jobs as Kyle did to make ends meet. I did spend some part time helping out in the library here, but mostly I was able to get by with the art, with enough money to not always be concerned about the money. I didn't hang out with many people, for some reason they find me abrasive, but I had a few friends, and a few hobbies to keep me busy. Those are the big things, I suppose.'";
 	if GertyRelationship < 3:
@@ -108,7 +108,7 @@ to say GertyTalk2: [talk about the city]
 	say "     'Bah, this city's gone downhill since all of this started. It used to be noisy and distracting, but now it's full of a bunch of disgraceful ruffians. That's why I mostly stay around the library here. It's kind of like a window to an easier time. Though really, the students in here could stand to be a little less disruptive.' Gerty shoots a heated glare towards a group of students clustered around a study table. You can see that at least one of the students has stopped their studying, unless perhaps they're taking an anatomy class. 'Ungrateful, the lot of them. Anyway, Usually I save expeditions outwards to favors for friends, though I can handle myself just fine out there, so I don't know too terribly much more.'";
 	if GertyRelationship < 3:
 		increase GertyRelationship by 1;
-	
+
 to say GertyTalk3: [talk about his arms]
 	say "     'Oh, these?' Gerty flexes one of his robotic limbs. 'They are quite the contraption, if I do say so myself. When this whole mess happened, I had run into Kyle shortly after his own... transformation, if you will. At the point, we didn't know very much about what was going on, so we never really realized the risk it posed. His infection ended up spreading to me, though for some reason altered. Kyle doesn't like to talk about it, I've noticed, and I think he feels guilty. I don't think it's worth worrying about really, since it's all resolved now. The form I ended up with had no arms, a most inconvenient thing, you may have noticed. I simply wasn't willing to stand for that. I wasn't going to live an existence where I couldn't create art, read books, and the like. So I solved the problem.";
 	say "     'I'd already been something of a tinker before, and had a few ideas for something like these. With my lack of appendages, I couldn't exactly put it together myself, so I grabbed a few of the mechanical engineering students. Getting those college students to properly assemble my arm was like herding cats, literally in some cases, but I kept them in line. And eventually, I had this fantastic harness created, all according to my specifications. Now I'm back to being as mobile and dextrous as I ever was, maybe more.' Gerty wiggles his robotic fingers at you. 'Impressive, isn't it?'";
@@ -120,7 +120,7 @@ to say GertyTalk4: [talk about his success, and learn secret]
 	if GertyRelationship is 4:
 		now GertyRelationship is 5;
 
-Section 3 - Sex 
+Section 3 - Sex
 
 instead of fucking the Gerty:
 	if (lastfuck of Gerty - turns < 6): [he got fucked in the last 18 hours = 6 turns]
@@ -159,7 +159,7 @@ to say GertySexMenu:
 	now sortorder entry is 4;
 		now description entry is "Offer sex to the snakeman";]
 	[]
-	sort the table of fucking options in sortorder order;	
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -194,9 +194,9 @@ to say GertySexMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say GertySex1: [Get blown]
-	say "     Gerty slides downward, no longer holding himself up on his own coils, until his face is level with your crotch. His long, ophidian tongue darts out and gives your hardening cock a quick lick. Then he leans forward, and opens his mouth, resting it around the head of your shaft. You look down at the snakeman, eagerly awaiting his performance, but he simple holds that position. Then, right as you are about to speak up, his tongue begins to move. The lengthy appendage wraps around your member, coiling and sliding along the length, bringing a strange feeling that is nonetheless immensely pleasurable. Gerty then adds a more traditional oral technique along with his tongue work, sliding his mouth up and down your shaft as his tongue continues to perform incredible serpentine motions.";
+	say "     Gerty slides downward, no longer holding himself up on his own coils, until his face is level with your crotch. His long, ophidian tongue darts out and gives your hardening cock a quick lick. Then he leans forward, and opens his mouth, resting it around the head of your shaft. You look down at the snakeman, eagerly awaiting his performance, but he simply holds that position. Then, right as you are about to speak up, his tongue begins to move. The lengthy appendage wraps around your member, coiling and sliding along the length, bringing a strange feeling that is nonetheless immensely pleasurable. Gerty then adds a more traditional oral technique along with his tongue work, sliding his mouth up and down your shaft as his tongue continues to perform incredible serpentine motions.";
 	say "     Soon the pleasure begins to overwhelm you, and you feel yourself nearing climax. The snakeman finally brings you over the peak when his tongue extends further and begins to tease your balls, even as he works your shaft. The sensastions explode, and your dick starts pulsing, unleashing shot after shot of release. Gerty swallows it all as it unleashes, furthering the feeling of pleasure on all of your member, his eyes closed as he does so. Eventually the waves of ecstasy subside, and the snake tongue around your cock releases its grip before its owner rises up. 'An enjoyable experience, I must say. Feel free to come back if you wish to repeat the performance.' Gerty wastes no time in getting back to his duties, leaving you to collect yourself.";
 	if GertyRelationship is 3:
 		now GertyRelationship is 4;
