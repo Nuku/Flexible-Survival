@@ -226,8 +226,8 @@ To reciting2:
 					else:
 						now hyper squirrel girl is not resolved;
 						remove Snow from play;
-			-- 31:	[redundant - removed]
-				now tempnum is 0;		[Duplicate removed]
+			-- 31:	[Version Reporting - (Dummy, no actions)]
+				now tempnum is 0;		[#31 is only exported, not restored.]
 			-- 32:	[Coleen]
 				repeat with Y running through rooms:
 					if the printed name of Y matches the text b, case insensitively:
