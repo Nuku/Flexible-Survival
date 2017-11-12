@@ -1174,7 +1174,7 @@ to say SuckVentFoxCock:[Player gives Vent a blowjob.]
 	say "     Placeholder.";
 
 to say VentFoxSuckCock:[Vent gives player a blowjob.]
-	say "     Placeholder."
+	say "     Placeholder.";
 
 Chapter 3 - Watersports
 
