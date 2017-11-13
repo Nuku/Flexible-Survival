@@ -9,6 +9,7 @@ Version 2 of Campus Lovers by Closerhenry begins here.
 CampusLoversTrackingVariable is a number that varies.
 CampusLoversProgressTurn is a number that varies.
 CampusCoupleRelationship is a number that varies.
+
 Campus Lovers is a situation.
 The sarea of Campus Lovers is "Campus".
 
@@ -16,19 +17,11 @@ when play begins:
 	add Campus Lovers to badspots of guy;
 	add Campus Lovers to badspots of furry;
 
-instead of going north from College Campus Entrance while (Campus Lovers is not resolved and CampusLoversTrackingVariable is 1 and CampusLoversProgressTurn - turns > 3):
+instead of going to College Fountain while (Campus Lovers is not resolved and CampusLoversTrackingVariable is 1 and CampusLoversProgressTurn - turns > 3):
 	move player to College Fountain;
 	CampusLoversEvent;
 
-instead of going east from College Walkway Northwest while (Campus Lovers is not resolved and CampusLoversTrackingVariable is 1 and CampusLoversProgressTurn - turns > 3):
-	move player to College Fountain;
-	CampusLoversEvent;
-
-instead of going west from College Walkway Northeast while (Campus Lovers is not resolved and CampusLoversTrackingVariable is 1 and CampusLoversProgressTurn - turns > 3):
-	move player to College Fountain;
-	CampusLoversEvent;
-
-instead of going northeast from College Walkway East while (Campus Lovers is not resolved and CampusLoversTrackingVariable is 2 and CampusLoversProgressTurn - turns > 3):
+instead of going to Dorm Street while (Campus Lovers is not resolved and CampusLoversTrackingVariable is 2 and CampusLoversProgressTurn - turns > 3):
 	move player to Dorm Street;
 	CampusLoversEvent;
 

@@ -80,6 +80,13 @@ to PlayerDrink (N - number):
 	if thirst of player < 0:
 		now thirst of player is 0;
 
+to PlayerWounded (N - number): [wounded, not killed - this won't kill a player]
+	LineBreak;
+	say "[bold type]Your hitpoints are reduced by [N]![roman type][line break]";
+	decrease HP of player by N;
+	if HP of player < 0:
+		now HP of player is 0;
+
 to say NonCombatError:
 	say "ERROR! This is a noncombat creature that you should never see in a fight. Please report how you saw this on the FS Discord or Forum.";
 
