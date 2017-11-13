@@ -1,4 +1,4 @@
-Version 2 of Monkey King by Kln begins here.
+Version 2 of Monkey King by Kernog begins here.
 
 "Adds a Monkey (King) creature to Flexible Survival's Wandering Monsters table"
 
