@@ -328,7 +328,6 @@ name	desc	weight	object
 
 signal flag is a grab object.
 the usedesc of signal flag is "[SignalFlagUse]".
-the usedesc of signal flag  is "[SignalFlagUse]".
 it is part of the player.
 It is temporary.
 
