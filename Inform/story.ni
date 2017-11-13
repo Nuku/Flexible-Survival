@@ -1822,6 +1822,7 @@ To say time of day:
 	if remainder after dividing turns by 8 is 0:
 		say "pre dawn";
 	if remainder after dividing turns by 8 is -1:
+		say "early morning";
 	if remainder after dividing turns by 8 is -2:
 		say "mid morning";
 	if remainder after dividing turns by 8 is -3:
@@ -1836,25 +1837,6 @@ To say time of day:
 		say "midnight";
 	if remainder after dividing turns by 8 is -8:
 		say "pre dawn";
-			say "midnight";
-		-- 0:
-			say "pre dawn";
-		-- -1:
-			say "early morning";
-		-- -2:
-			say "mid morning";
-		-- -3:
-			say "noon";
-		-- -4:
-			say "mid afternoon";
-		-- -5:
-			say "evening";
-		-- -6:
-			say "early night";
-		-- -7:
-			say "midnight";
-		-- -8:
-			say "pre dawn";
 
 To say short time of day:
 	if TimekeepingVar is:
