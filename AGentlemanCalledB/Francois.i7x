@@ -60,7 +60,7 @@ to say BakeryHusky:
 		say "     After dealing with the first husky, you turn your attention to the other two. The large alpha gives you a smug smirk as he swats the ass of the female beside him, sending her running towards you, barking eagerly.";
 		challenge "Female Husky";
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			say "     With the second bitch dealt with, you scan the room for the remaining canine, realizing too late that he has circled around you while you were dealing with his female companion. The large male leaps towards you as you turn";
+			say "     With the second bitch dealt with, you scan the room for the remaining canine, realizing too late that he has circled around you while you were dealing with his female companion. The large male leaps towards you as you turn.";
 			let bonus be (( perception of player + dexterity of player minus 20 ) divided by 2 );
 			if "Wary Watcher" is listed in feats of player, increase bonus by 3;
 			if "Bad Luck" is listed in feats of player, decrease bonus by 2;
@@ -113,7 +113,7 @@ to say BakeryGShep:
 		else:
 			say "     The thought passes however, as your lust-filled mind can only register the approach of a lovely cock towards your needy body. Chuckling slightly at the stupefied look on your face, the shepherd grabs your legs and tosses them over his shoulder. He rubs his cock over your [if cunts of player > 0]pussy[else]ass[end if] to make sure it's well lubed, then pushes inside of you with a painful slowness. You whimper and moan as he teases your innards with his member, turning you into a begging slut by the time he finally bottoms out. The shepherd that had formerly been holding your arms shifts his grip as his companion starts to thrust into you, then resumes his licking, adding a few whispers about what a needy bitch you are to cause you to blush in shame. After a few minutes of this treatment, the canine behind you growls slightly in frustration before he pushes you onto the one fucking you.";
 			say "     Without missing a beat, the shepherd pulls out and quickly repositions your body before driving his cock straight back into you. He roughly bounces you up and down on his shaft, and after the first few thrusts, your arms and legs are wrapped around him as he continues his rough fucking. Your mind dimly registers the sound of something heavy being dragged, but you're too busy yipping like a bitch in heat to pay attention. That is probably why you don't expect when your partner suddenly detaches your arms from around his body and you fall backwards. You flail in midair for a moment before your back slams into a table that the other shepherd moved over to where you were being fucked. As you gasp in pain, one of the other two shepherds grabs your head and shoves his meat down your throat. You can feel your mind slipping a bit thanks to the lack of oxygen combined with the pleasure of the two canines['] brutal fucking. It becomes hard to think about anything besides finishing this before you pass out. You can feel the third Shepherd grab one of your hands and rub it up and down his meat. Your feeble mind manages to grip your hand around it as he pumps it up and down, and before long you're stroking his pulsing shaft without his encouragement.";
-			say "     Soon you can feel each of their knots as they pound your mouth and [if cunts of player > 0]pussy[else]ass[end if], their thrusts getting harder and faster as they get close, the third thrusting into your hand as you pump up and down his shaft. Finally, they cum, shooting their loads into your body from both ends. You feel their thick knots pressing against your mouth and [if cunts of player > 0]cunt[else]ass[end if], but they hold them just outside as they fill you up. After a few pumps of cum, they both pull out and start painting you face and body with their cum along with the shepherd you've been stroking off.[impregchance]";
+			say "     Soon you can feel each of their knots as they pound your mouth and [if cunts of player > 0]pussy[else]ass[end if], their thrusts getting harder and faster as they get close, the third thrusting into your hand as you pump up and down his shaft. Finally, they cum, shooting their loads into your body from both ends. You feel their thick knots pressing against your mouth and [if cunts of player > 0]cunt[else]ass[end if], but they hold them just outside as they fill you up. After a few pumps of cum, they both pull out and start painting your face and body with their cum along with the shepherd you've been stroking off.[impregchance]";
 			infect "German Shepherd";
 			infect "German Shepherd";
 			attempttowait;
@@ -1093,7 +1093,7 @@ to say cheesecake Use:
 			cheesecakeinfect;
 			decrease carried of cheesecake by 2;
 			if cheesecakemode is 1 and player is cheesecakebodied:
-				say " After your large serving of the delicious cake, your belly rumbles as your cheesecake body shifts and swells, becoming plump and rubenesque.";
+				say "     After your large serving of the delicious cake, your belly rumbles as your cheesecake body shifts and swells, becoming plump and rubenesque.";
 			now cheesecakemode is 0;
 			decrease hunger of player by 3;
 		else:

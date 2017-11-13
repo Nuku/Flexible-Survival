@@ -236,7 +236,7 @@ Instead of fucking the Fancy:
 			say "'Well that's a wonderful offer and I would love to take you up on it actually, but as you can see the author is lazy and hasn't finished this increasingly smexy side quest, so you will just have to enjoy helping me patch the place up until they do,' the mare says with a teasing smile as she goes back to what she was working on, leaving you to curse this unknown author's laziness.";
 		else:
 			now fancyaroused is 5;
-			say "That's just too bad then, but seeing as I have all these delicious equines to choose from for casual fun, I think I will just have to decline your offer for now.' Fancy says with a slightly dismissive shrug of her large shoulders."; ]
+			say "'That's just too bad then, but seeing as I have all these delicious equines to choose from for casual fun, I think I will just have to decline your offer for now,' Fancy says with a slightly dismissive shrug of her large shoulders."; ]
 	else:
 		say "     'Sorry, there friend, but I think we should keep things professional between us. For now anyways,' the sexy white mare says with a teasing wink. 'Maybe after we get to know each other better, we can really 'Get to know each other,' but until that happens...' She shrugs softly and gives you an equine grin as she leans back on her stool, her long equine tail swishing across the ground absently behind her.";
 

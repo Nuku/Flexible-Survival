@@ -103,7 +103,7 @@ the fuckscene of Randy is "[randysex]".
 
 to say randysex:
 	if HP of Randy < 2:
-		say " 'Woah, hey - slow down there a bit. Can't say I'm not flattered, but I hardly know ya!'";
+		say " 'Whoa, hey - slow down there a bit. Can't say I'm not flattered, but I hardly know ya!'";
 	else if (lastfuck of Randy - turns < 6):
 		say "'Gosh, I'm still tired from last time. Give me a bit more recovery time, would ya?'";
 	else:

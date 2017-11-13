@@ -87,7 +87,7 @@ The blueprint has a Construct called current2.
 cur is a text that varies.
 
 Agricultural Zone is a Construct.
-The description of it is "A massive, flat area filled with rows upon rows of[one of] wheat[or] corn[or] tomato stalks[or] apple trees[or] grape vines[or] marijuana.[sticky random] You feel at peace here, the wildlife of the area unperterbed and singing happily. The rustic look quite an eyesore for the city-folk. (Increases farmers' efficency by offering organized plot of farmland (No effect on hunters))".
+The description of it is "A massive, flat area filled with rows upon rows of [one of]wheat[or]corn[or]tomato stalks[or]apple trees[or]grape vines[or]marijuana[sticky random]. You feel at peace here, the wildlife of the area unperterbed and singing happily. The rustic look quite an eyesore for the city-folk. (Increases farmers' efficency by offering organized plot of farmland (No effect on hunters))".
 The cost of it is 60.
 The completion of it is Agricultural Zone.
 	if the value of direction is east;

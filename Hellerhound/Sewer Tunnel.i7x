@@ -46,7 +46,7 @@ North Sewer Tunnel is a room. "This sewer tunnel is one of the largest you've se
 
 Sewer River is a thing. "The underground river of muck[if the perception of the player > 12].  It has a distinct lack of infected[end if].  The water flows clear and swift, and you spot several brightly colored food wrappers washing down towards the southern darkness.".
 Sewer River is in South Sewer Tunnel.
-Sewer River North is a thing. " The underground river of muck[if the perception of the player > 12].  It has a distinct lack of infected[end if].  The water flows clear and swift, and you spot several brightly colored food wrappers washing down towards the southern darkness.".
+Sewer River North is a thing. "The underground river of muck[if the perception of the player > 12].  It has a distinct lack of infected[end if].  The water flows clear and swift, and you spot several brightly colored food wrappers washing down towards the southern darkness.".
 Sewer River North is in North Sewer Tunnel. [aww, can't be in two places @ once]
 
 

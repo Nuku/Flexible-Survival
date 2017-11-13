@@ -204,7 +204,7 @@ Instead of fucking Ammy:
 	If affection of Ammy <= 2:
 		say "     'Uhm. I'm flattered by your offer... and I know things tend to go very fast here... but... NO!' the equine states slightly annoyed and pushes you away.";
 	else if affection of Ammy <= 4:
-		say "     'Oh... oh my, I... I don't know. You're sure kinda cute! But... no, I'm sorry.' Ammy tells you in her sweet voice, obviously being not completely uninterested.";
+		say "     'Oh... oh my, I... I don't know. You're sure kinda cute! But... no, I'm sorry,' Ammy tells you in her sweet voice, obviously being not completely uninterested.";
 	else:
 		if lastfuck of Ammy is not turns:
 			say "     As you approach the equine, she gets your intention immediately and only answers 'Ooh you little kinky thing you!' with a wink of her left eye. She takes you by the wrist and guides you into her private flatlet behind the 'Employees Only' door, placing you gently on the bed there.";

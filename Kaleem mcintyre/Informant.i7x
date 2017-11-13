@@ -89,7 +89,7 @@ instead of conversing the Homaru:
 			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				LineBreak;
-				say "'Alright. Once you get into the place you'll be shown to a viewer's area to watch the live sex shows. Now it's during this time that you'll need to sneak away and then head downstairs to where they keep both the mutants and [']people['] locked up. From what I have gathered so far from my contacts around the city, the man you are looking for -- Birch if I remember correctly -- he's one of the few that haven't changed completely. I'm not sure exactly why, but because of this he has become something of a celebrity there. If I remember correctly Birch has dark brown hair, a strong jaw line and almond brown eyes.' Homaru says while placing his hand onto his head and tapping a finger against his brow.[line break]";
+				say "'Alright. Once you get into the place you'll be shown to a viewer's area to watch the live sex shows. Now it's during this time that you'll need to sneak away and then head downstairs to where they keep both the mutants and [']people['] locked up. From what I have gathered so far from my contacts around the city, the man you are looking for -- Birch if I remember correctly -- he's one of the few that haven't changed completely. I'm not sure exactly why, but because of this he has become something of a celebrity there. If I remember correctly Birch has dark brown hair, a strong jaw line and almond brown eyes,' Homaru says while placing his hand onto his head and tapping a finger against his brow.[line break]";
 				say "'You may be able to sneak him out if you've got the skills for that clandestine sort of espionage or you can just fight the guards there and bust him out. Whichever you decide to do, if you go, go well prepared because getting caught might find you in a cage along with the others, and trust me on this, [italic type] you don't want that[roman type].' Homaru's words are dire enough that you actually shiver some from the intensity he puts behind them. Asking Homaru why he hasn't done a thing about this illicit sex ring if he's already known about it, the spiky brown haired informant simply shrugs his shoulders at you.[line break]";
 				WaitLineBreak;
 				say "'I'm an information dealer. I collect intelligence from certain places and then make a profit off of it. I'm not in the business of helping people out who I have no use for or ties to.' Homaru gives you a somewhat bored look after saying that. 'Anyway, you can go anytime you want to, but I would suggest that you do so soon because if the military rolls in then Birch and the rest of the imprisoned [italic type]people[roman type] there might get shipped away before you can help the firefighter.'[line break]";
@@ -140,7 +140,7 @@ carry out delaymilitary:
 		stop the action;
 	now lastDelaymilitary is turns;
 	increase delaymilcount by 1;
-	say "Alright. I'll see what I can do, but just remember, what I tell them will take the military a little longer to come in and rescue those people who actually need help. If you're not looking to help the people here then please don't ask me to make things more difficult for those in need of help.' Homaru says somberly, and despite his willingness to aid you he seems adamant about conviction for the sake of others. An odd thing indeed. 'Also, be aware that things might not go as planned...' Homaru says somewhat cryptically.";
+	say "Alright. I'll see what I can do, but just remember, what I tell them will take the military a little longer to come in and rescue those people who actually need help. If you're not looking to help the people here then please don't ask me to make things more difficult for those in need of help,' Homaru says somberly, and despite his willingness to aid you he seems adamant about conviction for the sake of others. An odd thing indeed. 'Also, be aware that things might not go as planned...' Homaru says somewhat cryptically.";
 	let DEL be a random number between 1 and 7;
 	if DEL is 1:
 		say "Alright! This job was a success!' Homaru shouts. 'I managed to hack into their system computers and rearrange some times and dates. That should keep them away from here for a while!'";
@@ -158,7 +158,7 @@ carry out delaymilitary:
 		say "'I was able to buy off one of the soldiers to get them to spread a couple of rumors around to confuse the rest of the military with. That should keep them out of our hair for a while.'";
 		extend game by 4;
 	if DEL is 6:
-		say "'I think I better learn to quit while I'm ahead.' Homaru says while nursing his head in between his hands. 'One of the guys I tried to bargain with roughed me up a little before tossing me out on my head. I think they are going to be more cautious about me for now on. Oh, and they sped up their evacuation time a little.' Homaru says the last a bit off handedly.";
+		say "'I think I better learn to quit while I'm ahead,' Homaru says while nursing his head in between his hands. 'One of the guys I tried to bargain with roughed me up a little before tossing me out on my head. I think they are going to be more cautious about me for now on. Oh, and they sped up their evacuation time a little,' Homaru says the last a bit off handedly.";
 		extend game by -4;
 	if DEL is 7:
 		say "'I'm getting a feeling. Not a strong one, but one that tells me that I won't be able to get far in dealing with the military right now. I don't think I'm going to try my luck at the moment.'";
@@ -212,7 +212,7 @@ Carry out Homarusearching:
 
 
 To say findfirefighter1:
-	Say "'Remember, Birch is going to be within the Gloomy Warehouse down at the [bold type]Warehouse[roman type] District. He should be a part of the [bold type]DogHouse[roman type], if what my information tells me is correct. Make sure you find him before the military rolls in or else you'll never be able to.' Homaru says somewhat direly.";
+	Say "'Remember, Birch is going to be within the Gloomy Warehouse down at the [bold type]Warehouse[roman type] District. He should be a part of the [bold type]DogHouse[roman type], if what my information tells me is correct. Make sure you find him before the military rolls in or else you'll never be able to,' Homaru says somewhat direly.";
 
 to say findfirefighter2:
 	say "'Welcome back!' Homaru chirps from where he is busy eating something that both looks and smells like lettuce and ham on rye. 'Glad to know that everything worked out okay for you.' Putting down his [if daytimer is day]after meal snack[else]midnight snack[end if] and then wiping his lips off with a napkin Homaru shakes his head before smiling at you. 'So how did it work out with Birch?'[line break]";
@@ -242,8 +242,8 @@ to say findfirefighter5:
 	say "'Remember, you're looking for a [bold type]Dame[roman type] in the [bold type]high rise[roman type] district with salt and pepper hair. If you [bold type]take on a chocolate Lab body and face[roman type] then you should be able to find her without too much trouble. Saving her after that...well...I hope you're strong enough to face off a bunch of angry doggies!' Homaru chirps with a menacing smile on his face.";
 
 to say findfirefighter6:
-	say "'You've found three firefighters already, congratulations!' Homaru chuckles at you while saying this. 'There's only one other still here in the city, but he'll be by on his own time.' Homaru says cryptically.  'Anyway why don't you go back and check to see how Kenaz is? You might be surprised if you do.' And with that Homaru waves you off. Maybe going to the firehouse would be wise?
-	[bold type]There are no more firefighters to find now! So head back to the Fire House![roman type]";
+	say "'You've found three firefighters already, congratulations!' Homaru chuckles at you while saying this. 'There's only one other still here in the city, but he'll be by on his own time,' Homaru says cryptically. 'Anyways, why don't you go back and check to see how Kenaz is? You might be surprised if you do.' And with that Homaru waves you off. Maybe going to the firehouse would be wise?";
+	say "[bold type]There are no more firefighters to find now! Head back to the Fire House![roman type]";
 
 
 Informant ends here.
