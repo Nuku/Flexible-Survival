@@ -58,7 +58,7 @@ Instead of resolving a Lone Survivor:
 			LineBreak;
 			say "     [bold type]What now?[roman type][line break]";
 			say "     [link](1)[as]1[end link] - Try to start a conversation. You're both sane, that has to count for something even during the nanite apocalypse!";
-			say "     [link](2)[as]2[end link] - You (probably) picked the pileup to loot first! Take back what he's stolen from you!";
+			say "     [link](2)[as]2[end link] - You (probably) picked the car-pileup to loot first! Take back what he's stolen from you!";
 			say "     [link](3)[as]3[end link] - Neither of you need a fight right now. Just back away and avoid any possible clashes.";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
@@ -103,7 +103,7 @@ Instead of resolving a Lone Survivor:
 			now BrennanRelationship is 99; [skipped out on the event, end of content]
 			now Lone Survivor is resolved;
 	else if BrennanRelationship is 1: [chatted to him before]
-		say "     Moving through the streets of the inner city, you walk past piles of trash and ripped clothing that are scattered over the sidewalk. Glass crunches under your feet as you pass some stores - a bar, little grocery store, and the third one you can't even tell anymore what it was - all of them vandalized and thoroughly looted. Hmpf, nothing left for you here - these places must have been targeted within a few days of society breaking down when shit really hit the fan at the start of the nanite spread. With a resigned shrug, you glance over to the other side of the street, past a car that has been crushed into the asphalt (wyvern landing on it maybe?). There is a corner gas station, clearly looted and with a grinning hyena head spray-painted on one cracked window, then an empty lot filled with yellow grass and a bicycle store. With the state the streets are in, you don't think a bike would be all that useful either. You're about to leave when many-voiced yipping sounds reach your ears - followed by some thuds and pained squeals. There's something going on in that bike shop!";
+		say "     Moving through the streets of the inner city, you walk past piles of trash and ripped clothing that are scattered over the sidewalk. Glass crunches under your feet as you pass some stores - a bar, little grocery store, and the third one you can't even tell anymore what it was - all of them vandalized and thoroughly looted. Hmpf, nothing left for you here - these places must have been targeted within a few days of society breaking down when shit really hit the fan at the start of the nanite spread. With a resigned shrug, you glance over to the other side of the street, past a car that has been crushed into the asphalt (wyvern landing on it maybe?). There is a corner gas station, clearly looted and with a grinning hyena head spray-painted on one cracked window, then an empty lot filled with yellow grass, and a bicycle store. With the state the streets are in, you don't think a bike would be all that useful either. You're about to leave when many-voiced yipping sounds reach your ears - followed by some thuds and pained squeals. There's something going on in that bike shop!";
 		say "     [bold type]Do you want to go in and check it out?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure! Curiosity never hurt anyone!";
@@ -731,7 +731,7 @@ Survivor Refuge is a room. Survivor Refuge is above Green Lobby.
 The description of Survivor Refuge is "[SurvivorRefugeDesc]".
 
 to say SurvivorRefugeDesc:
-	say "     The apartment that Brennan has claimed as his base of operations has a fairly nice loft setup, with one big room containing the living space, kitchen and dining area. Only the bedroom and bathroom are separated off, with the former lying towards the west, the latter to the south. The apartment has floors made out of walnut wood, shining in a rich reddish-brown, as well as simple but elegant furniture in similar earthen tones. Looks like the original owner had a fair bit of money and good taste - as did Brennan, when he picked this to move into. You also can't help but think that it fits his friendly character quite well. Even at the height of the nanite apocalypse, he apparently keeps his living space neat and orderly, which included bringing in a row of of sorting boxes now well-filled with useful salvage.";
+	say "     The apartment that Brennan has claimed as his base of operations has a fairly nice loft setup, with one big room containing the living space, kitchen and dining area. Only the bedroom and bathroom are separated off, with the former lying towards the west, the latter to the south. The apartment has floors made out of walnut wood, shining in a rich reddish-brown, as well as simple but elegant furniture in similar earthen tones. Looks like the original owner had a fair bit of money and good taste - as did Brennan, when he picked this to move into. You also can't help but think that it fits his friendly character quite well. Even at the height of the nanite apocalypse, he apparently keeps his living space neat and orderly, which included bringing in a row of of sorting boxes now well-filled with useful salvage. Additionally, a weight-lifting bench has been set up, including numerous weights - clearly not part of the original setup.";
 
 Brennan's Microwave is an object. It is in Survivor Refuge. It is fixed in place. Understand "microwave" as Brennan's Microwave.
 The description of Brennan's Microwave is "A mid-sized white microwave stands on one of the work surfaces of the kitchen, clashing a bit with the decor. But who cares about that as long as you can [bold type]microwave[roman type] stuff with it.".
@@ -742,7 +742,7 @@ The description of Brennan's Bedroom is "[BrennansRoomDesc]".
 to say BrennansRoomDesc:
 	say "     Brennan's bedroom is fairly large and kept in the same style as the main part as the loft - walnut floor and elegant furniture also made from wood in rich tones of red and brown. One of those is an expansive double bed, fairly low to the ground but with a really big mattress. That definitively allows a lot of room for... all sots of things. The bed is standing on an even bigger carpet, white and very fluffy. You see more signs of Brennan's practical nature in here, beginning at the spare baseball bat leaning against the wall just beside the bed, a telescope for scouting and observation set up near the window and the writing desk in one corner, which has a cleanly organized collection of medkits, immunity boosters and all sorts of other emergency items.";
 
-Brennan's Bathroom is a room. Brennan'sBathroom is south of Survivor Refuge.
+Brennan's Bathroom is a room. Brennan's Bathroom is south of Survivor Refuge.
 The description of Brennan's Bathroom is "[BrennansBathroomDesc]".
 
 to say BrennansBathroomDesc:
@@ -769,9 +769,9 @@ The scent of Brennan is "     Brennan smells nicely masculine, with a little hin
 to say BrennanDesc:
 	if debugactive is 1:
 		say "DEBUG -> BrennanRelationship: [BrennanRelationship], HP: [HP of Brennan] <- DEBUG[line break]";
-	say "     Brennan is a caucasian twenty-something man, usually dressed in a pair of army boots, cargo pants and a sleeveless shirt clinging tightly to his muscular chest. He has got a friendly face, lightly bearded and with short brown hair. Being one of the rare un-transformed humans in the city, he kept himself from catching the nanite infection through caution and resourcefulness. But of course, now that he has immunity booster shots that he regularly takes, that's less of an issue...";
+	say "     Brennan is a Caucasian twenty-something man, usually dressed in a pair of army boots, cargo pants and a sleeveless shirt clinging tightly to his muscular chest. He has got a friendly face, lightly bearded and with short brown hair. Being one of the rare un-transformed humans in the city, he kept himself from catching the nanite infection through caution and resourcefulness. But of course, now that he has immunity booster shots that he regularly takes, that's less of an issue...";
 	say "     As he notices your attention, Brennan smiles back at you and lets his gaze wander over your form as well. Then he gives you a charming wink and turns back to what he was doing before.";
-	
+
 an everyturn rule:
 	if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
 		move Brennan to Brennan's Bedroom;
@@ -781,8 +781,8 @@ an everyturn rule:
 			say "     The front door is unlocked with the key and Brennan opens it, letting in his two wolves Romulus and Remus. The feral canines beat their tails, happy to arrive back home and make a beeline for you, sniffing a little before they move on. A short moment later, when Brennan is done closing the door and re-locking it securely, he greets you, but quickly makes clear that he's fairly tired and needs some rest. Yawning, he adds that you of course can feel free to stay longer, just to please not wake him. And with that, he vanishes into his bedroom, together with the two wolves.";
 		else if player is in Brennan's Bathroom:
 			say "     You hear the front door open and close, then the barks of Romulus and Remus as they happily arrive back home. A little while later, you hear another door - that will have been the one to the bedroom. Sounds like the three of them came back and went straight to bed.";
-	[else if TimekeepingVar is 7 or TimekeepingVar is -1:] 
-		[early morning - unused, Brennan sleeps in]
+	[else if TimekeepingVar is 0 or TimekeepingVar is -8:] [pre dawn - unused, Brennan sleeps]
+	[else if TimekeepingVar is 7 or TimekeepingVar is -1:] [early morning - unused, Brennan sleeps in]
 	else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
 		if player is in Brennan's Bedroom:
 			say "     Waking up after a restful night, Brennan sits up between the two wolves cuddled up against him and stretches his arms, which gives you a good view of his broad-shouldered chest and trained body. He yawns and says good morning to you, then gently shakes Romulus and Remus awake and goes into the main room of the apartment to feed them before returning, still in nothing but his baggy boxer shorts. 'Did I miss anything exciting going on out there?' he asks with a nod to the city outside the large windows and his telescope specifically. As you shake your head, he smiles and goes to grab his usual outfit, getting dressed before he sits down at his desk.";
@@ -790,41 +790,102 @@ an everyturn rule:
 			say "     Suddenly, the door to the bedroom opens and Brennan steps out of it, dressed in nothing more than some baggy boxer shorts and followed by some very eager wolves. He wishes you a good morning, then quickly stops by the kitchen to feed his feral canines, ducking back into the bedroom while they're still wolfing down their food.";
 		else if player is in Brennan's Bathroom:
 			say "     You hear the front door open and close, then happy barks by Romulus and Remus. Sounds like Brennan woke up and just went to feed them.";
-
-[
-		if TimekeepingVar is:
-		-- 5:
-			say "noon";
-		-- 4:
-			say "mid afternoon";
-		-- 3:
-			say "evening";
-		-- 2:
-			say "early night";
-		-- 0:
-			say "pre dawn";
-		-- -3:
-			say "noon";
-		-- -4:
-			say "mid afternoon";
-		-- -5:
-			say "evening";
-		-- -6:
-			say "early night";
-		-- -8:
-			say "pre dawn";
-]
+	else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
+		move Brennan to Survivor Refuge;
+		if player is in Brennan's Bedroom:
+			say "     Sitting up from working at his desk, where he was updating some lists and his journal, Brennan stretches himself and goes into the main room of the loft apartment.";
+		else if player is in Survivor Refuge:
+			say "     Brennan comes out of the bedroom and nods to you, then sits down on the lifting bench and starts to pump a weight up and down. He keeps at it tirelessly for quite a while too - no wonder he has such a physique.";
+		else if player is in Brennan's Bathroom:
+			say "     You hear a door open and close somewhere nearby - the bedroom maybe? Then some fairly low, rhythmic grunting starts up in the main room of the loft apartment.";
+	else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
+		if player is in Survivor Refuge:
+			say "     Finishing with a fairly well-rounded exercise routine, Brennan moves over to the comfortable sofa in the front half of the room and sits down on it. As he leans forward to grab a book, Romulus and Remus are already on the way to join him on the sofa, soon flanking the muscular man on both sides and pressing up against him. They sniff him happily and lap at any exposed skin, licking his salty sweat off. After a minute or two of this, with Brennan stroking his companions['] fur, the three of them quiet down and sit quietly to read - the wolves either understanding what is written in the book too, or simply enjoying the companionship with their master.";
+	else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
+		now Brennan is nowhere; [stashed in another dimension]
+		if player is in Brennan's Bedroom or player is in Brennan's Bathroom:
+			say "     You hear Brennan say, 'Come on guys, time for some scavenging!' The happy barks of his two wolves follow, and soon after, you hear the front door open and close.";
+		else if player is in Survivor Refuge:
+			say "     Going to collect his gear - backpack, baseball bat and taser - Brennan then waves the wolves up from where they have been lounging around and says, 'Come on guys, time for some scavenging!' Both Romulus as well as Remus give happy barks, tails wagging eagerly to go out with their master. Brennan bids you farewell, saying that you can stay and keep an eye on the place while he's out, then leads his companion to the door and leaves.";
+	[else if TimekeepingVar is 2 or TimekeepingVar is -6:] [early night - unused, Brennan is out scavenging]
 
 instead of conversing the Brennan:
-	say "     ...";
+	say "     What do you want to talk to Brennan about?";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "The Apartment";
+	now sortorder entry is 1;
+	now description entry is "Ask where Brennan got the place from";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "His Background";
+	now sortorder entry is 2;
+	now description entry is "Try to learn a bit more about Brennan himself";
+	[
+	choose a blank row in table of fucking options;
+	now title entry is "Having Sex";
+	now sortorder entry is 3;
+	now description entry is "Offer the man a good time";
+	]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "The Apartment"):
+					say "[BrennanTalk1]";
+				if (nam is "His Background"):
+					say "[BrennanTalk2]";
+				if (nam is "Having Sex"):
+					say "[BrennanTalk3]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the bearded man, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
+
+to say BrennanTalk1: 
+	say "     Clearing his throat, Brennan rubs the back of his neck, then replies, 'Ehm, actually... this place belongs to a client of mine. I was here once or twice, as his personal trainer. And when I saw him get pulled from his sports car by a gryphon, then fucked right then and there till he had breasts and a beak, I snatched his keys and ran. Not something to be proud of, but it just was too late to save him. If I had tried - I bet those two would have double-teamed me.' He grimaces a little, clearly uncomfortable by the man's fate, then shrugs. 'Since this place was empty, I made my way here and... made the best of it.'";
+
+to say BrennanTalk2: 
+	say "     'Oh, I'm nothing special,' Brennan says with a little shrug. 'Just a boy born in the southwest, raised in the land of tumbleweed and deserts. I had... plans to join the army at one point, but after that fell through, I came to the coast. To start fresh, be myself. Actually made halfway good money as a personal trainer lately.' He grunts to himself and grimaces, 'Then a literal water buffalo kicked in my door - and even worse, it was my neighbour, transformed and in full rut. Guess all the training for the army recruiter paid off after all since that day...'";
+
+to say BrennanTalk3: 
+	say "     'I'm flattered,' he says and looks at you, ";
 
 instead of fucking the Brennan:
 	if (lastfuck of Brennan - turns < 6): [he got fucked in the last 18 hours = 6 turns]
-		say "     'Let a guy have a chance to catch his breath, alright?' Brennan replies with a chuckle ";
+		say "     'Let a guy have a chance to catch his breath, alright?' Brennan replies with a chuckle.";
+	else: 
+		say "     Something tells you that just stepping forward and demanding sex isn't exactly the right way to go here. Maybe talking to him about it first would be a good idea.";
+[	
 	else: [ready for sex]
+		say "     <WIP, sorry about that>";
+
 		say "     As you walk up to Brennan, <positive reaction at being approached for sex>";
 		wait for any key;
 		say "[BrennanSexMenu]";
+]
 
 to say BrennanSexMenu:
 	LineBreak;

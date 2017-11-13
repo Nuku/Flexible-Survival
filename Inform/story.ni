@@ -125,7 +125,6 @@ To get typed command as (S - a snippet): (-
 
 To get next key as (S - a snippet): (-
 	{S} = VM_KeyChar();  -)
-
 	
 Include (-
 
@@ -1817,25 +1816,20 @@ an everyturn rule:
 	now TimekeepingVar is remainder after dividing turns by 8;
 
 To say time of day:
-	if remainder after dividing turns by 8 is 1:
-		say "midnight";
-	if remainder after dividing turns by 8 is 0:
-		say "pre dawn";
-	if remainder after dividing turns by 8 is -1:
-	if remainder after dividing turns by 8 is -2:
-		say "mid morning";
-	if remainder after dividing turns by 8 is -3:
-		say "noon";
-	if remainder after dividing turns by 8 is -4:
-		say "mid afternoon";
-	if remainder after dividing turns by 8 is -5:
-		say "evening";
-	if remainder after dividing turns by 8 is -6:
-		say "early night";
-	if remainder after dividing turns by 8 is -7:
-		say "midnight";
-	if remainder after dividing turns by 8 is -8:
-		say "pre dawn";
+	if TimekeepingVar is:
+		-- 7:
+			say "early morning";
+		-- 6:
+			say "mid morning";
+		-- 5:
+			say "noon";
+		-- 4:
+			say "mid afternoon";
+		-- 3:
+			say "evening";
+		-- 2:
+			say "early night";
+		-- 1:
 			say "midnight";
 		-- 0:
 			say "pre dawn";
@@ -1871,6 +1865,7 @@ To say short time of day:
 		-- 2:
 			say "evening";
 		-- 1:
+			say "evening";
 		-- 0:
 			say "evening";
 		-- -1:
@@ -1887,6 +1882,7 @@ To say short time of day:
 			say "evening";
 		-- -7:
 			say "evening";
+		-- -8:
 			say "evening";
 
 daytimer is a thing.
@@ -5330,7 +5326,7 @@ Include Mental Mouse For Fs by Stripes.
 Include Messy Pig for Fs by Guest Writers.
 Include Minotaur by Kaleem mcintyre.
 Include Mismatched Chimera For Fs by Stripes.
-Include Monkey King by Kln.
+Include Monkey King by Kernog.
 Include MothGirl for Fs by Guest Writers.
 Include Mpreg Platypus by Sapphire.
 Include Mul by Wahn.
@@ -5450,7 +5446,7 @@ Include Blake by Ssely.
 Include Blanche by Stripes.
 Include Boghrim by Wahn.
 Include Bradford by Stripes.
-Include Brennan by Wahn.
+Include Brennan by Wahn. [WIP]
 Include Brian by Sarokcat.
 Include Brooke by Stripes.
 Include Bubble by Stripes.

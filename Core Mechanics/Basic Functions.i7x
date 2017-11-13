@@ -87,6 +87,16 @@ to PlayerWounded (N - number): [wounded, not killed - this won't kill a player]
 	if HP of player < 0:
 		now HP of player is 0;
 
+to SanLoss (N - number):
+	LineBreak;
+	say "[bold type]Your sanity has decreased by [N]![roman type][line break]";
+	decrease humanity of player by N;
+
+to SanBoost (N - number):
+	LineBreak;
+	say "[bold type]Your sanity has increased by [N]![roman type][line break]";
+	increase humanity of player by N;
+
 to say NonCombatError:
 	say "ERROR! This is a noncombat creature that you should never see in a fight. Please report how you saw this on the FS Discord or Forum.";
 
