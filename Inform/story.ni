@@ -1791,7 +1791,6 @@ Carry out massusing:
 			say "You don't see any [second noun] in your backpack.";
 ]
 
-
 Resolving is an action applying to one thing.
 
 Carry out resolving a situation(called X):
@@ -1849,28 +1848,6 @@ To say time of day:
 			say "midnight";
 		-- -8:
 			say "pre dawn";
-=======
-	if remainder after dividing turns by 8 is 1:
-		say "midnight";
-	if remainder after dividing turns by 8 is 0:
-		say "pre dawn";
-	if remainder after dividing turns by 8 is -1:
-		say "early morning";
-	if remainder after dividing turns by 8 is -2:
-		say "mid morning";
-	if remainder after dividing turns by 8 is -3:
-		say "noon";
-	if remainder after dividing turns by 8 is -4:
-		say "mid afternoon";
-	if remainder after dividing turns by 8 is -5:
-		say "evening";
-	if remainder after dividing turns by 8 is -6:
-		say "early night";
-	if remainder after dividing turns by 8 is -7:
-		say "midnight";
-	if remainder after dividing turns by 8 is -8:
-		say "pre dawn";
->>>>>>> upstream/master
 
 To say short time of day:
 	if TimekeepingVar is:
