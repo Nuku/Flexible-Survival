@@ -125,6 +125,17 @@ To get typed command as (S - a snippet): (-
 
 To get next key as (S - a snippet): (-
 	{S} = VM_KeyChar();  -)
+	
+Include (-
+
+[ Serial s;
+	for (s=0 : s<6 : s++) print (char) ROM_GAMESERIAL->s;
+];
+
+-)
+
+To say serial number: (- Serial(); -).
+[Added function for outputting FS serial number]
 
 Book 1 - Variable Definitions
 
@@ -1780,7 +1791,6 @@ Carry out massusing:
 			say "You don't see any [second noun] in your backpack.";
 ]
 
-
 Resolving is an action applying to one thing.
 
 Carry out resolving a situation(called X):
@@ -1799,73 +1809,80 @@ to delete (X - a grab object):
 instead of waiting:
 	follow the turnpass rule;
 
+TimekeepingVar is a number that varies.
+
+an everyturn rule:
+	now TimekeepingVar is remainder after dividing turns by 8;
+
 To say time of day:
-	if remainder after dividing turns by 8 is 7:
-		say "early morning";
-	if remainder after dividing turns by 8 is 6:
-		say "mid morning";
-	if remainder after dividing turns by 8 is 5:
-		say "noon";
-	if remainder after dividing turns by 8 is 4:
-		say "mid afternoon";
-	if remainder after dividing turns by 8 is 3:
-		say "evening";
-	if remainder after dividing turns by 8 is 2:
-		say "early night";
-	if remainder after dividing turns by 8 is 1:
-		say "midnight";
-	if remainder after dividing turns by 8 is 0:
-		say "pre dawn";
-	if remainder after dividing turns by 8 is -1:
-		say "early morning";
-	if remainder after dividing turns by 8 is -2:
-		say "mid morning";
-	if remainder after dividing turns by 8 is -3:
-		say "noon";
-	if remainder after dividing turns by 8 is -4:
-		say "mid afternoon";
-	if remainder after dividing turns by 8 is -5:
-		say "evening";
-	if remainder after dividing turns by 8 is -6:
-		say "early night";
-	if remainder after dividing turns by 8 is -7:
-		say "midnight";
-	if remainder after dividing turns by 8 is -8:
-		say "pre dawn";
+	if TimekeepingVar is:
+		-- 7:
+			say "early morning";
+		-- 6:
+			say "mid morning";
+		-- 5:
+			say "noon";
+		-- 4:
+			say "mid afternoon";
+		-- 3:
+			say "evening";
+		-- 2:
+			say "early night";
+		-- 1:
+			say "midnight";
+		-- 0:
+			say "pre dawn";
+		-- -1:
+			say "early morning";
+		-- -2:
+			say "mid morning";
+		-- -3:
+			say "noon";
+		-- -4:
+			say "mid afternoon";
+		-- -5:
+			say "evening";
+		-- -6:
+			say "early night";
+		-- -7:
+			say "midnight";
+		-- -8:
+			say "pre dawn";
 
 To say short time of day:
-	if remainder after dividing turns by 8 is 7:
-		say "morning";
-	if remainder after dividing turns by 8 is 6:
-		say "morning";
-	if remainder after dividing turns by 8 is 5:
-		say "day";
-	if remainder after dividing turns by 8 is 4:
-		say "afternoon";
-	if remainder after dividing turns by 8 is 3:
-		say "evening";
-	if remainder after dividing turns by 8 is 2:
-		say "evening";
-	if remainder after dividing turns by 8 is 1:
-		say "evening";
-	if remainder after dividing turns by 8 is 0:
-		say "morning";
-	if remainder after dividing turns by 8 is -1:
-		say "morning";
-	if remainder after dividing turns by 8 is -2:
-		say "morning";
-	if remainder after dividing turns by 8 is -3:
-		say "day";
-	if remainder after dividing turns by 8 is -4:
-		say "afternoon";
-	if remainder after dividing turns by 8 is -5:
-		say "evening";
-	if remainder after dividing turns by 8 is -6:
-		say "evening";
-	if remainder after dividing turns by 8 is -7:
-		say "evening";
-	if remainder after dividing turns by 8 is -8:
-		say "morning";
+	if TimekeepingVar is:
+		-- 7:
+			say "morning";
+		-- 6:
+			say "morning";
+		-- 5:
+			say "day";
+		-- 4:
+			say "afternoon";
+		-- 3:
+			say "evening";
+		-- 2:
+			say "evening";
+		-- 1:
+			say "evening";
+		-- 0:
+			say "evening";
+		-- -1:
+			say "evening";
+		-- -2:
+			say "evening";
+		-- -3:
+			say "day";
+		-- -4:
+			say "afternoon";
+		-- -5:
+			say "evening";
+		-- -6:
+			say "evening";
+		-- -7:
+			say "evening";
+		-- -8:
+			say "evening";
 
 daytimer is a thing.
 daytimer can be day or night.  [daytimer is normally true.	[True/False variable for to indicate if day or night] ]
@@ -5308,7 +5325,7 @@ Include Mental Mouse For Fs by Stripes.
 Include Messy Pig for Fs by Guest Writers.
 Include Minotaur by Kaleem mcintyre.
 Include Mismatched Chimera For Fs by Stripes.
-Include Monkey King by Kln.
+Include Monkey King by Kernog.
 Include MothGirl for Fs by Guest Writers.
 Include Mpreg Platypus by Sapphire.
 Include Mul by Wahn.
@@ -5428,6 +5445,7 @@ Include Blake by Ssely.
 Include Blanche by Stripes.
 Include Boghrim by Wahn.
 Include Bradford by Stripes.
+Include Brennan by Wahn. [WIP]
 Include Brian by Sarokcat.
 Include Brooke by Stripes.
 Include Bubble by Stripes.
@@ -5499,6 +5517,7 @@ Include Micaela by Stripes.
 Include Midnight by Sarokcat.
 Include Mouse Taur by Nuku Valente.
 Include Nadia by Wahn.
+Include Nala by CrimsonAsh.
 Include Nermine by Wahn.
 Include Newt by Stripes.
 Include NPC Interactions by Wahn.
@@ -5509,6 +5528,7 @@ Include Orc Lair by Wahn.
 Include Orthas by Stripes.
 Include Palomino by Verath.
 Include Paula by Stripes.
+Include Pericles by Rikaeus.
 Include Phantom Dolphin by Blue Bishop.
 Include Phantom Pony by Blue Bishop.
 Include Pretty Kitty by Xenophiliac.

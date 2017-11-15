@@ -94,7 +94,6 @@ Instead of conversing the doctor matt:
 		now HP of doctor matt is 4;
 	if HP of doctor matt is 4:
 		say "'Oh, one thing of more immediate use. I discovered how to neutralize the nanites. A limited area of them at least. They do not like being microwaved. I have one in the corner there, feel free to [bold type]microwave[roman type] anything you want to bake the infection out.'";
-		move the microwave to the location of doctor matt;
 		now HP of doctor matt is 5;
 	if HP of doctor matt is 5:
 		say "'Up for another task? Good. Orthas spotted something interesting while hunting. A singular creature. You must understand, one of the standard impulses the infection seems to give on its infectees is the desire to spread the infection. To see just one is unusual. A trait I have only seen in Orthas so far. Go to the park and find this creature, bring it to me for study.'";
