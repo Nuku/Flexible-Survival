@@ -3249,7 +3249,7 @@ carry out DoranDiscuss:
 		now DoranLastDiscussion is turns;
 		now DoranDiscussionProgress is 2;
 	else if DoranDiscussionProgress is 2 and player is submissive:
-		say "DoranDiscuss_3]"; [Of Masters and Pets]
+		say "[DoranDiscuss_3]"; [Of Masters and Pets]
 		now DoranLastDiscussion is turns;
 		now DoranDiscussionProgress is 3;
 	else:
