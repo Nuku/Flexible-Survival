@@ -150,7 +150,7 @@ When Play begins:
 	now face entry is "that of a very beautiful woman, with aquamarine blue eyes. Long strands of golden blond hair flow down over your shoulders";
 	now body entry is "a well-shaped young woman's, with a slender and flexible build that seems made for swimming, darting and gliding through the water. Perfectly rounded perky breasts complete the picture that will take many a man's breath away with its supernatural beauty";
 	now skin entry is "[one of]perfect[or]soft and sleek[or]beautiful[at random]";
-	now tail entry is "You shapely ass has just the right amount of pert buttcheeks to make it deliciously grab-able.";
+	now tail entry is "Your shapely ass has just the right amount of pert buttcheeks to make it deliciously grab-able.";
 	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
 	now face change entry is "it flows like water and reshapes itself, creating a woman's face of exquisite beauty. Long strands of golden blond hair flow down over your shoulders and complete the picture";
 	now body change entry is "your flesh flows like water, become more slender and flexible before finally stabilizing in the shape of a beautiful woman. Your breasts and curves now are absolutely perfect, one could say supernaturally so";
