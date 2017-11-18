@@ -10,8 +10,6 @@ Version 1 of Farm by Wahn begins here.
 
 "Adds a farm and npc, or alternatively a Cowboy to Flexible Survival's Wandering Monsters table."
 
-when play begins:
-	add { "Cowboy" } to infections of hermaphrodite;
 
 Section 1 - Farm Rooms
 
