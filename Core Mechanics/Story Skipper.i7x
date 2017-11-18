@@ -2872,7 +2872,6 @@ to restorepart2:	[values 60 - 161]
 		now Missing Cow is resolved;
 		move Wendy to McDermott Barn;
 	else:
-		now Missing Cow is unresolved;
 		remove Wendy from play;
 [158: [HP of Duke]]
 	if HP of Duke > 9:

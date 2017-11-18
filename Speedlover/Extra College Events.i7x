@@ -20,7 +20,7 @@ The sarea of Cheetah Cheater is "Campus".
 
 instead of going to College Walkway West while (Cheetah Cheater is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
-	PregnantFriendEvent;
+	CheetahCheaterEvent;
 
 Instead of resolving a Cheetah Cheater:
 	CheetahCheaterEvent;
@@ -59,14 +59,14 @@ The sarea of CatsVSDogs is "Campus".
 
 instead of going to Athletic Street while (CatsVSDogs is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to Athletic Street;
-	CampusLoversEvent;
+	CatsVSDogsEvent;
 
 Instead of resolving CatsVSDogs:
 	CatsVSDogsEvent;
 
 to CatsVSDogsEvent:
 	if CatsVSDogsCounter is 1:
-		say "     On your travels you spot a tennis court between buildings. There seems to be a game going on – between cats and dogs. One one side, a panther and a lynx. On the other side a husky and a Labrador retriever. Anthro dogs and cats of many types are standing to one side watching the game. The game looks pretty intense, dogs loping around, hitting hard and trying to wear out the cats. On the other side the cats are playing tactically. Each of them stick to their positions like glue and they keep aiming for spots they think the dogs can't defend.";
+		say "     On your travels you spot a tennis court between buildings. There seems to be a game going on – between cats and dogs. One one side, a panther and a lynx. On the other side a husky and a Labrador retriever. Anthro dogs and cats of many types are standing to one side watching the game. The game looks pretty intense, dogs loping around, hitting hard and trying to wear out the cats. On the other side the cats are playing tactically. Each of them stick to their positions like glue and they keep aiming for spots they think the dogs cant defend.";
 		say "     You watch the yellow ball go from one side to the other a dozen times, both sides giving as good as they get, but nothing lasts forever. One of the cats hits high, causing the ball to go near the Labrador's head. Unfortunately for him, his instincts take over and [bold type]CHOMP[roman type]. Immediately the animals in the crowd yell in victory or defeat depending on their team and everyone starts to walk off. As they leave you hear the husky say to his teammate 'Again? That's the third ball this week!'";
 		now CatsVSDogsCounter is 2;
 	else if CatsVSDogsCounter is 2:
@@ -523,7 +523,7 @@ instead of going to College Campus Entrance while (Campus Patrol is not resolved
 	move player to College Campus Entrance;
 	CampusPatrolEvent;
 
-Instead of resolving Campus Patrol :
+Instead of resolving Campus Patrol:
 	CampusPatrolEvent;
 
 to CampusPatrolEvent:
@@ -531,6 +531,5 @@ to CampusPatrolEvent:
 	say "     The start of a shout for help is quelled by his other hand wrapping around her muzzle and clamping it shut (dropping the whisky bottle in the process and leaving it to shatter on the asphalt of the parking lot). Before you can decide if you want to intervene or not, three strapping young Spartans in nothing more than sandals, red cloaks and helmets are already sprinting towards the scene. Within moments, they surround the kidnapper, the spear-points of their weapons an inch from his throat. Freezing in place, the wolfhound releases his grip on the girl and she wrenches herself free. 'Thanks guys,' she tells the spartan with a relieved expression, then slips out of the circle of combative young men and goes to collect her books. Meanwhile, the Spartans guide their captive to the edge of the campus at spear-point, then let him go with a dire warning not to return if he values his life... or his anal virginity.";
 	now Campus Patrol is resolved;
 	now LastCampusWalkin is turns;
-
 
 Extra College Events ends here.
