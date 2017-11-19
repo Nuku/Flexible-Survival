@@ -109,7 +109,7 @@ to say TomeExpansionUse:
 				say "     [link](N)[as]n[end link] - It's probably best not to.";
 				if player consents:
 					say "     You open the tome to a random page, deciding that no real harm can come from just quick glance at it. Your eyes skim over page after page of text and drawings depicting all sorts of monsters and demons, taking all the information in eagerly. For some reason you can't quite comprehend, the contents of the book have really piqued your interest. Nearly two hours later, you find that you've read more than half of the large books contents, and you suddenly blink, realizing how much time you've spent doing this. Shutting the book, you heave a sigh as you place it in your pack before moving on. There's some part of you that eagerly awaits further reading.";
-					noe TomeTimer is turns;
+					now TomeTimer is turns;
 					now TomeInteractions is 1;
 				else:
 					say "     You shake your head, deciding that there's not really any benefit to reading the contents of the book, before you place it back in your pack and move along.";
