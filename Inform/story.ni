@@ -1791,6 +1791,7 @@ Carry out massusing:
 			say "You don't see any [second noun] in your backpack.";
 ]
 
+
 Resolving is an action applying to one thing.
 
 Carry out resolving a situation(called X):
@@ -5366,6 +5367,7 @@ Include Reindeer by Stripes.
 Include Reptaur by Kaleem mcintyre.
 Include Retriever by AGentlemanCalledB.
 Include Rhino For Fs by Stripes.
+Include Robed Cultist by Wahn.
 Include Rodeo Clown For Fs by Stripes.
 Include Rubber Drake by Stripes.
 Include Rubber Tigress by Sarokcat.

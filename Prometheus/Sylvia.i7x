@@ -468,12 +468,14 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 		else: [not interested]
 			say "     You shake your head, helping her was enough. You wish them well and leave them to their coupling. As you close the door, you hear a yip of pleasure.";
 	now hp of Sylvia is 4; [helped with heat]
+	now Charming Picnic is not resolved;
 
 Charming Picnic is a situation.
+Charming Picnic is resolved.
 The level of Charming Picnic is 0.
 The sarea of Charming Picnic is "Campus".
 
-instead of going to College Walkway East while (hp of Sylvia > 3 and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (Charming Picnic is not resolved and hp of Sylvia > 3 and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 0):
 	move player to College Walkway East;
 	CharmingPicnicEvent;
 
