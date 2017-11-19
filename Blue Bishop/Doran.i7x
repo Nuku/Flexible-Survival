@@ -3248,7 +3248,7 @@ carry out DoranDiscuss:
 		say "[DoranDiscuss_2]"; [Of Hobbies and Imagination]
 		now DoranLastDiscussion is turns;
 		now DoranDiscussionProgress is 2;
-	else if DoranDiscussionProgress is 2 and player is submissive:
+	else if DoranDiscussionProgress is 2 and player is submissive and DoranRoleIntensity is 0: [Player must be submissive and Doran must be at max intensity]
 		say "[DoranDiscuss_3]"; [Of Masters and Pets]
 		now DoranLastDiscussion is turns;
 		now DoranDiscussionProgress is 3;
