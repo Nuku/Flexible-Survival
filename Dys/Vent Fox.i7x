@@ -1174,7 +1174,7 @@ to say SuckVentFoxCock:[Player gives Vent a blowjob.]
 	say "     Placeholder.";
 
 to say VentFoxSuckCock:[Vent gives player a blowjob.]
-	say "     Placeholder."
+	say "     Placeholder.";
 
 Chapter 3 - Watersports
 
@@ -1189,7 +1189,18 @@ to say VentAnalWS:
 		else if VentFluidAmount is 3: [Extreme levels of urine.]
 			say "     Vent takes a leak in your ass, making you look like you're ready to give birth.";
 	else: [No WS.]
-		say "     With his knot still engorged, your latex fox friend lays down on top of you, snuggling up against you as you both come down from your high. While you wait for the bulb of rubber to shrink, he goes about cleaning your spilling cum, darting his extendable tongue out of his mouth to lap up the mess. After he finishes with that, he simply opts to curl around you, waiting for his body to calm down. You can't help the feeling of safety that comes over you as you relax in his embrace.";
+		if VentDomSize is 3 and scalevalue of player > 1: [Vent is average sized and player is not tiny]
+			say "     With his knot still engorged, your latex fox friend lays down on top of you, snuggling up against you as you both come down from your respective highs. While you wait for the bulb of rubber to shrink, he goes about cleaning your spilled cum, darting his extendable tongue out of his mouth to lap up the mess. After he finishes with that, he simply opts to curl around you, waiting for his body to calm down. You can't help the feeling of safety that comes over you as you relax in his embrace.";
+		else if VentDomSize is 3 and scalevalue of player is 1: [Vent is average sized and player is tiny]
+			say "     With your tiny form still stuck on his knot and your belly swollen with his seed, Vent places a relatively large paw on your chest, holding you gently as the two of you come down from your bliss. He gives you a few gentle licks with his rubbery tongue as you both wait for his knot to come down. You can't help but relax from the feeling of comfort you get from being with your latex friend.";
+		else if VentDomSize is 4 and scalevalue of player > 2: [Vent is large and player is not small]
+			say "     Vent lays atop your form, sighing as he comes down from his climax. His tail sways gently behind him.";
+		else if VentDomSize is 4 and scalevalue of player <= 2: [Vent is large and player is small]
+			say "     With your tiny body still stuck on his knot, Vent holds you close until his knot deflates.";
+		else if VentDomSize is 5 and scalevalue of player > 3: [Vent is huge and player is not average]
+			say "     Vent lays atop your form, sighing as he comes down from his climax. His tail sways gently behind him.";
+		else if VentDomSize is 5 and scalevalue of player <= 3: [Vent is huge and player is average]
+			say "     With your tiny body still stuck on his knot, Vent holds you close until his knot deflates.";
 
 to say VentPostSexWS:
 	if (VentWSAmount is 2 and a random chance of 1 in 3 succeeds) or (VentWSAmount is 3):

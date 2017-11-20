@@ -5,14 +5,15 @@ Version 1 of Microwave by Core Mechanics begins here.
 
 Section 1 - Basic Functionality
 
-Microwave is a thing. "A small microwave lays, almost hidden, in the corner, perhaps you could [bold type]microwave[roman type] something."
+Lab Microwave is an object. It is in Primary Lab. It is fixed in place. Understand "microwave" as Lab Microwave.
+The description of Lab Microwave is "A small microwave lays, almost hidden, in the corner, perhaps you could [bold type]microwave[roman type] something.".
 
 Purifying is an action applying to one thing.
 
 understand "microwave [owned grab object]" as purifying.
 
 Check Purifying:
-	if the microwave is not visible, say "Now where do you want to microwave that?" instead;
+	if Lab Microwave is not visible and Brennan's Microwave is not visible, say "Now where do you want to microwave that?" instead;
 
 Carry out Purifying:
 	if purified of noun is empty:

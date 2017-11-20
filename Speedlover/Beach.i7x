@@ -153,35 +153,42 @@ to say BeachEndDesc:
 instead of sniffing the BeachEnd:
 	say "     All you can smell out here is the strong scent of the ocean.";
 
-before going to the Coral Ring:
-	say "     You can't just walk around in the ocean. You'll have to [bold type]swim[roman type] to the [bold type]coral ring[roman type].";
-	stop the action;
+[Rock Arch - *****Swimming is defined in Hellerhounds file - Underwater zone for FS*****]
+Southwest of BeachEnd is Rock Arch.
+Rock Arch is a Room.
+The description of Rock Arch is "[RockArchDesc]".
 
-[Coral Ring - *****Swimming is defined in Hellerhounds file - Underwater zone for FS*****]
-Southwest of BeachEnd is Coral Ring.
-Coral Ring is a Room.
-The description of Coral Ring is "[CoralRingDesc]".
+to say RockArchDesc:
+	say "     You're in the ocean close to the coast, right where the water gets deeper than the relatively shallow bay closer to the public beach. Jagged cliffs rise up in the north, northwest and west, while a large arch of weathered rock stretches over the sea in the southern directions. It allows passage through the choppy waters and jagged rocks that otherwise cut the bay off the open ocean. By passing through there, you would be able to move to and from the deeper reaches of the sea. Through the arch and to the south, you can see a shadowy shape beneath the water. Looks like a sunken ship, its broken mast helping you distinguish the shape. There's a [bold type]shipwreck[roman type] to explore! Of course, out there in the open sea, you'd really have to [bold type]swim[roman type] against the waves and currents to get to it.";
 
-to say CoralRingDesc:
-	say "A huge ring of red coral arches over your head, allowing you passage through the choppy waters by the jagged rocks. By passing through here, you are able to move to and from the deeper reaches of the sea. To the south from here, you can see a shadowy shape beneath the water, barely at the limits of your restricted vision in the deeper waters. It seems like a sunken ship, its broken mast helping you distinguish the shape. There's a [bold type]shipwreck[roman type] to explore! Or you could just [bold type]swim[roman type] back to the [bold type]end[roman type] of the beach.";
+instead of sniffing the Rock Arch:
+	say "     All you can smell out here is the strong scent of the ocean.";
 
-instead of sniffing the Coral Ring:
-	say "All you can smell out here is the strong scent of the ocean.";
-
-after entering the Coral Ring:
-	say "You look up with awe, sure this accomplishment was great.";
+after entering the Rock Arch:
+	say "     You look up with awe at the natural rock formation. Not everyone can say that they visited this place.";
 	increase score by 5;
+	
+Wyvern Nest is a room. Wyvern Nest is above Rock Arch.
+the description of Wyvern Nest is "[WyvernNestDesc]".
+
+to say WyvernNestDesc:
+	say "     ...";
+	
+instead of going up from Rock Arch:
+	say "     strength check!";
+	say "     Fail: Slip, scrape for some damage and splash into the water";
+	say "     Success: move to the nest";
 
 [Sunken Ship]
 before going to the Sunken Ship:
 	say "You shouldn't just swim out into the open sea, you'll get lost out here! Maybe just [bold type]swim[roman type] to the [bold type]shipwreck[roman type] instead, that's close enough to find the way back.";
 	stop the action;
 
-Sunken Ship is south of Coral Ring.
+Sunken Ship is south of Rock Arch.
 Sunken Ship is a Room.
 understand "Shipwreck" as Sunken Ship.
 understand "Wreck" as Sunken Ship.
-The description of Sunken Ship is "A large ship lays sunken and rotting here. From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago. It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea. There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast. You'd best be careful. From here, you can barely make out the lighter spot in the rocks that is the [bold type]coral ring[roman type] you passed through to get here. You could [bold type]swim[roman type] to it if you want to get back to the beach.".
+The description of Sunken Ship is "A large ship lays sunken and rotting here. From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago. It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea. There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast. You'd best be careful. From here, you can barely make out the lighter spot in the rocks that is the [bold type]Rock Arch[roman type] you passed through to get here. You could [bold type]swim[roman type] to it if you want to get back to the beach.".
 
 The invent of Sunken Ship is { "sea dragon cum" , "sea dragon cum" }.
 

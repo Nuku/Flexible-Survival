@@ -43,7 +43,7 @@ Instead of resolving a Cow Hunting:
 				now non-infectious entry is false;
 				break;
 		challenge "Cowboy Cuntboy";
-	else: [seriously?]
+	else if calcnumber is 3: [seriously?]
 		LineBreak;
 		say "     He shrugs 'Why the hell not? Even if I now look like this, it's my job. And a farm isn't the worst place to wait out these strange times - plenty of food, you know. So what about the cow? Have you seen her? No? Well, time to keep searching for me then. If you see her by any chance later - bring the old gal to the [bold type]McDermott farm[roman type] - a few miles that way. There's a reward.' With that, the horsey cowboy walks off to keep searching for the missing cow.";
 		now Missing Cow is unresolved;
@@ -52,7 +52,6 @@ Instead of resolving a Cow Hunting:
 		now thirst of Duke is 1; [starting the day/night movement of Duke]
 		now thirst of Corbin is 1; [starting the day/night movement of Corbin]
 	now Cow Hunting is resolved; [event resolved, either peacefully or through combat]
-	now battleground is "Void";[avoids random fights after]
 
 Missing Cow is a situation. The level of Missing Cow is 5. Missing Cow is resolved.
 The sarea of Missing Cow is "Plains".

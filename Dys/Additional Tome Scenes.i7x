@@ -23,6 +23,8 @@ Version 1 of Additional Tome Scenes by Dys begins here.
 [   0  = Never encountered                                                  ]
 [   10 = Encountered and fled                                               ]
 [   12 = Encountered and got raped                                          ]
+[ TomeEventPending flags if a tome event is waiting to fire.                ]
+
 
 Section 1 - Variables
 
@@ -34,6 +36,8 @@ DemonFoxInteractions is a number that varies. DemonFoxInteractions is usually 0.
 DemonFoxRead is a truth state that varies. DemonFoxRead is usually false.
 TentacleRead is a truth state that varies. TentacleRead is usually false.
 TentacleStatus is a number that varies. TentacleStatus is usually 0.
+TomeEventPending is a truth state that varies. TomeEventPending is usually false.
+
 
 Section 2 - Menus
 
@@ -105,6 +109,7 @@ to say TomeExpansionUse:
 				say "     [link](N)[as]n[end link] - It's probably best not to.";
 				if player consents:
 					say "     You open the tome to a random page, deciding that no real harm can come from just quick glance at it. Your eyes skim over page after page of text and drawings depicting all sorts of monsters and demons, taking all the information in eagerly. For some reason you can't quite comprehend, the contents of the book have really piqued your interest. Nearly two hours later, you find that you've read more than half of the large books contents, and you suddenly blink, realizing how much time you've spent doing this. Shutting the book, you heave a sigh as you place it in your pack before moving on. There's some part of you that eagerly awaits further reading.";
+					now TomeTimer is turns;
 					now TomeInteractions is 1;
 				else:
 					say "     You shake your head, deciding that there's not really any benefit to reading the contents of the book, before you place it back in your pack and move along.";
@@ -140,10 +145,12 @@ to say TomeReadMenu:
 		say "     As you read about the mass of tentacles, your eyes widen in horror. Apparently, the tentacles will not only rape the player, they also sometimes lay eggs in their victims. No one is exactly sure why the tentacles do this, or who they'll do it to, as it seems to be random. If there's one good thing to note, it's that the tentacles don't usually fertilize the eggs. Instead, they leave them there for the victim to do with as they please. You shut the book after reading the page, shaking your head in attempt to get thought of egg-laying tentacles out of your head.";
 		now TentacleRead is true;
 		now TomeInteractions is 2;
+		now TomeEventPending is true;
 	else if calcnumber is 2 and DemonFoxRead is false:
 		say "     Looking over the page about the fox, you manage to learn a few things. The demon fox is apparently able to change its size to whatever it desires. In addition, its cum is said to glow a bright orange, almost like lava. The fox is also supposedly very possesive and domineering, desiring to have others submitting to it. Anyone who has encountered the beast has reaffirmed that fact.";
 		now DemonFoxRead is true;
 		now TomeInteractions is 2;
+		now TomeEventPending is true;
 	else if DemonFoxRead is true or TentacleRead is true:
 		say "     You've already read about that!";
 	else if calcNumber is 0:
@@ -198,6 +205,7 @@ to say DemonFoxFirstEncounter:
 		say "[DemonFoxFirstVictory]";
 	now inasituation is false;
 	now DemonFoxInteractions is 1;
+	UpdateTomeEventPending;
 
 to say TentaclesFirstEncounter:
 	say "     As you're going about your business, something suddenly wraps around your legs. You're harshly yanked backwards, and you fling out your arms in a desperate attempt to avoid smashing your face on the ground. Once that's been taken care of, you whirl around to look at what's ensnared you. The sight that greets you makes you skin go cold. A writhing mass of purple tentacles are jutting out of the ground, each coated in a slick, sticky slime. Desperately, you yank your foot away, manages to get it out of the tendrils grasp.";
@@ -222,11 +230,23 @@ to say TentaclesFirstEncounter:
 			say "     A new tentacle finds its way into your ass and begins thrusting wildly into you. The writhing appendage forces itself deep into you, only to yank itself out again. Another tendril slips into your mouth and starts thrusting into your throat roughly. This ritual continues for quite some time, before the tentacles stop, with their tips buried deep inside you. Each of the tendrils quiver before a fluid suddenly bursts from them. You can only guess it's the monster's cum, if the taste is anything to go by. You do your best to drink down all the fluids, and by the time the erruption of fluids has ended, your belly is distended almost comically. The two tendrils suddenly yank themselves out of you, and a flood of bluish semen leaks out of your abused holes.";
 		WaitLineBreak;
 		say "     The tentacles seem to be done with you, and you can't do anything to stop them anyway, so they just recede back into the ground. You're unsure if you'll ever see them again, or if you even want to...";
+		now TentacleInteractions is 1;
+		now TentacleStatus is 12; [got raped]
+		UpdateTomeEventPending;
+
+to UpdateTomeEventPending:
+	if TomeEventPending is true:
+		if DemonFoxRead is true and TentacleRead is true and (TentacleInteractions is 0 or DemonFoxInteractions is 0): [One event completed, but another is pending.]
+			now TomeEventPending is true;
+		else:
+			now TomeEventPending is false;
+	else:
+		now TomeEventPending is true;
 
 Section 5 - Influence system
 
 an everyturn rule:
-	if carried of ancient tome > 0 and (cocks of player is not 0 and cunts of player is 0):
+	if carried of ancient tome > 0 and (cocks of player is not 0 and cunts of player is 0) and TomeEventPending is false:
 		if TomeInfluence is 0: [Never tempted by the book]
 			if TomeTimer - turns >= 8 and a random chance of 1 in 3 succeeds:
 				say "     As you go about your business, you mind keeps going to the book inside your bag. You can't help but be tempted to pull out the [bold type]ancient tome[roman type], just to see why you're so drawn to it.";

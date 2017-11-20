@@ -102,4 +102,27 @@ The description of a faint trail is "A faint trail that heads eastwards into the
 Faint Trail is dangerous.
 The marea of Faint Trail is "Park".
 
+
+Green Apartment Building is a room. It is fasttravel.
+The description of Green Apartment Building  is "[GreenAptDesc]".
+The earea of Green Apartment Building  is "Outside".
+
+to say GreenAptDesc:
+	say "     Standing in a somewhat out of the way neighborhood, a green-tinted apartment building rises before you, six stories tall. A fire escape clings to the outside of its structure, its retracting lowest set of stairs weighted down with a number of cement blocks, allowing easy access to the roof. The place and its surroundings seem fairly quiet - while the streets around here are filled with the usual abandoned cars, sacks of uncollected trash and scattered clothes, you haven't actually seen any large groups of infected hanging around or roaming the streets. The petrified herm hyena standing in front of the entrance door might have something to do with that...";
+
+Overgrown Rooftop is a room. Overgrown Rooftop is above Green Apartment Building.
+The description of Overgrown Rooftop is "[GreenRoofDesc]";
+
+to say GreenRoofDesc:
+	say "     The roof of this apartment building is at least partially covered in soil, allowing a rooftop garden to grow on it. You see a large section of green grass (getting a bit long, now that no one is taking care of it anymore), some bushes and even a large planter with a cherry tree next to a vegetable garden. Must have been quite a nice spot to hang out on for the inhabitants. Looking over to the rooftop access to the interior of the building, you find that it has been thoroughly barricaded - from the inside, it seems. Thus the only way to get down again is the fire escape attached to one outside face of the freestanding building.";
+	if staircaselocation is 2:
+		say "     There appears to be a ghostly staircase just a step away from the back right corner of the building. You'd have missed it if you hadn't known it was there. Maybe you could go even further by using it up? (Or plunge to your death as you step off the roof... it does look incredibly transparent to the eyes.)";
+
+Green Lobby is a room. Green Lobby is inside from Green Apartment Building.
+The description of Green Lobby is "[GreenLobbyDesc]";
+
+to say GreenLobbyDesc:
+	say "     Just inside the building is a small lobby, with numerous post-boxes on one wall and a (surprisingly) still powered elevator. It opens up freely as you push the dimly glowing button, revealing a generous cabin, complete with a control panel that only has one button, for the lobby. Everything else is keyholes, four to a each floor. Someone sure liked their privacy. Checking the interior stairway access door right next to it, you find it jammed; a glance through its little window reveals that about 20 feet of the stairway are completely barricaded by mixed pieces of furniture. Four doorways lead off into what must be the ground floor apartments - 1A, 1B, 1C and 1D. The first two and the last all have been nailed shut and the words 'Carnivorous Furniture' spray-painted on them, while the door of apartment 1C is just leaned to.";
+
+
 Basic Locations ends here.
