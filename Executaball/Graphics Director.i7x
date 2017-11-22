@@ -79,8 +79,8 @@ carry out graphicmoding:
 	if NewGraphics is true:
 		clear the screen;
 		say "[bold type]Graphics Settings Unavailable:[roman type][line break]";
-		say "You are running the new graphics side window :3 ! If you would like to disable the new graphics display (revert to inline graphics or disable completely), simply save your game right now, close your game completely, then do select [bold type]restore[roman type] at the start menu. You will then be prompted for graphic modifications.[line break]";
-		say "We apologize for this inconvenience, this is a technical limitation of our graphics system.[line break]";
+		say "You are running the new graphics side window :3 ! If you would like to disable the new graphics display (revert to inline graphics or disable completely), simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. You will then be prompted for graphic modifications.[line break]";
+		say "We apologize for this inconvenience, this is a technical limitation of Inform.[line break]";
 		WaitLineBreak;
 	else:
 		now calcnumber is -1;
@@ -88,8 +88,8 @@ carry out graphicmoding:
 		while trixieexit is 0:
 			clear the screen;
 			say "[bold type]Graphic Settings:[roman type][line break]";
-			say "NOTE: You are running the old in-line graphics only mode. To enable the new side-window graphics, simply save your game right now, close your game completely, then do select [bold type]restore[roman type] at the start menu. You will then be prompted for graphic modifications.[line break]";
-			say "We apologize for this inconvenience, this is a technical limitation of our graphics system.[line break]";
+			say "NOTE: You are running the old in-line graphics only mode. To enable the new side-window graphics, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. You will then be prompted for graphic modifications.[line break]";
+			say "We apologize for this inconvenience, this is a technical limitation of Inform.[line break]";
 			say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 1]Inline Mode[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
 			say "(2) [link]EXIT[as]2[end link][line break]";
 			while 1 is 1:
@@ -117,9 +117,9 @@ Section 5 - Debug Commands
 
 [DEBUG Commands]
 [Cheat for enabling inline debug stuff]
-graphisdebugtoggle is an action applying to nothing.
-understand "devgraphicsdebug" as graphisdebugtoggle.
-carry out graphisdebugtoggle:
+graphicsdebugtoggle is an action applying to nothing.
+understand "devgraphicsdebug" as graphicsdebugtoggle.
+carry out graphicsdebugtoggle:
 	if NewGraphicsDebugMode is false:
 		say "[bold type]DEBUG:[roman type] Graphics debug information is now [bold type]enabled[roman type] (NewGraphicsDebugMode = True)[line break]";
 		now NewGraphicsDebugMode is true;
@@ -127,9 +127,9 @@ carry out graphisdebugtoggle:
 		say "[bold type]DEBUG:[roman type] Graphics debug information is now [bold type]disabled[roman type] (NewGraphicsDebugMode = False)[line break]";
 		now NewGraphicsDebugMode is false;
 
-graphisdebugreport is an action applying to nothing.
-understand "devgraphicsreport" as graphisdebugreport.
-carry out graphisdebugreport:
+graphicsdebugreport is an action applying to nothing.
+understand "devgraphicsreport" as graphicsdebugreport.
+carry out graphicsdebugreport:
 	say "[bold type]Grabbing Graphics Variables, please standby.[roman type][line break]";
 	clear the screen;
 	say "[bold type]Graphics[roman type][line break]";
