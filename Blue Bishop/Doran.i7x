@@ -253,7 +253,7 @@ to say beatdoran:
 				say "Invalid selection made. Please pick an option from 0 to [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
 	else:
-		say "     You point out that you lack the proper equipment, and thusly have little to gain from such an interaction. This revelation seems to confuse him a fair bit, but he else concedes.";
+		say "     You point out that you lack the proper equipment, and thusly have little to gain from such an interaction. This revelation seems to confuse him a fair bit, but he otherwise concedes.";
 		say "     'Very well; however, if things change for my victor, I'm always available.' He goes on to explain where he resides. Apparently there's a cave within a not-too-distant [bold type]Rocky Outcropping[roman type], and his instructions are clear enough that you should have no issue getting there, 'Doran's the name, by the way.'";
 		say "     Once he's done, he makes to leave in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
 	now the rocky outcropping is known;
@@ -456,7 +456,7 @@ instead of sniffing Rocky Outcropping:
 	say "     It has the obvious scent of earth and burnt wood, which more than overpowers any scent the generally fastidious Doran leaves behind.";
 
 instead of sniffing Doran:
-	say "     [one of]There's a slightly [gmasculine] air about [ghim], though [ghe] else remains fairly well-kept[or]There's a slightly [gmasculine] air about [ghim], though [ghe] else remains fairly well-kept[or]I hope there isn't something off-putting about my smell, else I appreciate the affection[or]There's a slightly [gmasculine] air about [ghim], though [ghe] else remains fairly well-kept[stopping].";
+	say "     [one of]There's a slightly [gmasculine] air about [ghim], though [ghe] else remains fairly well-kept[or]There's a slightly [gmasculine] air about [ghim], though [ghe] else remains fairly well-kept[or]I hope there isn't something off-putting about my smell, else I appreciate the affection[or]There's a slightly [gmasculine] air about [ghim], though [ghe] otherwise remains fairly well-kept[stopping].";
 
 to say DoranLook:
 	if graphics is true:
