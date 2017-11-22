@@ -125,7 +125,7 @@ To get typed command as (S - a snippet): (-
 
 To get next key as (S - a snippet): (-
 	{S} = VM_KeyChar();  -)
-	
+
 Include (-
 
 [ Serial s;
@@ -722,7 +722,7 @@ left	central	right
 "Location: [the player's surroundings]"	"Time: [time of day] Lvl: [level of player]"	"HP:[HP of player]/[maxHP of player]"
 "Freecred: [freecred]"	"Hunger: [hunger of player] Thirst: [thirst of player] Libido: [libido of player]"	"Score:[score]/[maximum score]"
 "Sanity: [humanity of player]/100"	"Evac: [( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[if number of entries in childrenfaces > 0]  Kids: [number of entries in childrenfaces][end if]"	"XP:[XP of player]/[level up needed]"
-""	"Current image artist:[ngraphics_currentartist]"	""
+""	"[if NewGraphicsInteger is 0] [else]Current image artist:[ngraphics_currentartist][end if]"	""
 
 to say exitlist:
 	repeat with nam running through valid directions:
