@@ -6291,8 +6291,8 @@ to say gsopt_start:
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	[Code for letting player select graphics window size]
 	if NewGraphics is true:
-		say "You have enabled the new graphics window. This will be on the right side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose this value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+		say "You have enabled the graphics side window. This will be on the right side of your screen and will always take up a proportion of the main screen.[line break]";
+		say "Please choose this proportion now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side window will take up. We recommend somewhere around 30.[line break]";
 		while 1 is 1:
 			say "(5-90)>[run paragraph on]";
 			get a number;
