@@ -1,33 +1,21 @@
 Version 2 of Graphics Director by Executaball begins here.
 
 "Provides functions that link the new window based graphics."
+
+Section 1 - Declarations and variables
+
 [New Graphics modifier]
-[The graphics window pixel count is 1. The graphics window position is g-above.]
 The graphics window position is g-right. The graphics window proportion is 30.
-[Now the graphics window proportion is NewGraphicsRatio.]
-
-[Rule for starting the virtual machine:
-	now the current graphics drawing rule is the bland graphics drawing rule.]
-
-[The graphics-window is a graphics g-window spawned by the main-window. The position of the graphics-window is g-placeabove. Every turn: follow the refresh windows rule.
-
-When play begins: open up the graphics-window.
-
-The roomview-canvas is a g-canvas. The associated canvas of the graphics-window is the roomview-canvas. The canvas-width is 640. The canvas-height is 480.]
-
-		[now the graphics window proportion is 20;]
-		[now the graphics window proportion is 1;]
-		[now the graphics window pixel count is 1;]
-
-[- Master Override Function -]
-[Instead of looking:
-	follow the ngraphics_blank rule;
-	try looking;]
-
+ngraphics_currentartist is a text that varies. ngraphics_currentartist is usually "None".
 TempClearBypass is a number that varies. TempClearBypass is usually 0.
 [Because of new system, setting this to 1 is needed for making projections work when applied in a 'look' order]
 
+Section 2 - Rules and Functions
+
 After looking:
+	follow the ngraphics_clearcheck rule;
+
+This is the ngraphics_clearcheck rule:
 	if TempClearBypass is 0:
 		follow the ngraphics_blank rule;
 		if NewGraphicsDebugMode is true:
@@ -54,6 +42,13 @@ This is the ngraphics_phone rule:
 	if graphics is true and NewGraphics is true:
 		follow the current graphics drawing rule;
 
+Section 2.1 - Combat Runtime rules
+
+To ngraphics_combat_statusoverride:
+	follow the ngraphics_statusprocess rule;
+	[fill status bar with table of art status;]
+
+Section 3 - Tables
 
 [Graphics Color Table]
 [NOTICE: To add new values, please take notice that these values are REVERSE of normal hex/html. Therefore 'AA0000' should be '0000AA'... Except for non-primary colors... I dunno, try it out, no idea how inform handles colors. Different for each interpreter too. Best to stick to simple web colors.]
@@ -66,6 +61,17 @@ g-light-grey	14540253	[== $DDDDDD]
 g-white	16777215		[== $FFFFFF]
 g-yellow-orange	39423		[== $0099FF]
 g-ice-blue	15645627		[== $EEBBBB]
+
+Section 3.1 - Artist Status
+
+This is the ngraphics_statusprocess rule:
+	let CurrentGraphic be the currently shown picture;
+	repeat with n running from 1 to number of filled rows in table of game art:
+		choose row n in table of game art;
+		if icon entry is CurrentGraphic:
+			now ngraphics_currentartist is artist entry;
+
+Section 4 - User Commands
 
 graphicmoding is an action applying to nothing.
 understand "graphics" as graphicmoding.
@@ -106,6 +112,8 @@ carry out graphicmoding:
 						say "Exit graphics menu?";
 						if player consents:
 							now trixieexit is 1;
+
+Section 5 - Debug Commands
 
 [DEBUG Commands]
 [Cheat for enabling inline debug stuff]
@@ -149,4 +157,29 @@ carry out graphisdebugreport:
 	else:
 		say "NewGraphicsInteger = STATE_ERROR";
 
+
 Graphics Director ends here.
+
+---- DOCUMENTATION ----
+
+[Now the graphics window proportion is NewGraphicsRatio.]
+
+[Rule for starting the virtual machine:
+	now the current graphics drawing rule is the bland graphics drawing rule.]
+
+[The graphics-window is a graphics g-window spawned by the main-window. The position of the graphics-window is g-placeabove. Every turn: follow the refresh windows rule.
+
+When play begins: open up the graphics-window.
+
+The roomview-canvas is a g-canvas. The associated canvas of the graphics-window is the roomview-canvas. The canvas-width is 640. The canvas-height is 480.]
+
+		[now the graphics window proportion is 20;]
+		[now the graphics window proportion is 1;]
+		[now the graphics window pixel count is 1;]
+
+[- Master Override Function -]
+[Instead of looking:
+	follow the ngraphics_blank rule;
+	try looking;]
+
+Legacy code -
