@@ -20,6 +20,7 @@ when play begins:
 [   true = female                                                            ]
 
 [ DoranRole - Integer, determines Doran Dom/Sub role                         ]
+[  -1 = Dominant Locked Doran                                                ]
 [   0 = Dominant Doran                                                       ]
 [   1 = Random/Neutral                                                       ]
 [   2 = Submissive Doran                                                     ]
@@ -2189,16 +2190,16 @@ to say DoranNeutral_69: [BODY MODDED]
 					if libido of player < 41, now tempnum2 is 2;
 					say "     Shall you aim away from you? Else you'll get painted by the stuff.";
 					if player consents:
-						say "     Directing the rod away from you, it takes only a few more seconds before you [if libido of player > 40] finally[end if] set the [gdragon] off, [ghis] roar in bliss muffled against your [bodytype of player] form as the rocky wall is[if DoranBallModStatus > 0] utterly[end if] drenched with wave after [if DoranBallModStatus > 0]excessive[else]successive[end if] wave of [ghis] [if DoranBallModStatus > 0]seemingly endless[else]substantial[end if] load[if libido of player > 40].[run paragraph on] Eventually, things begin to die down, and you're given a moment to catch your breath[end if].";
+						say "     Directing the rod away from you, it takes only a few more seconds before you[if libido of player > 40] finally[end if] set the [gdragon] off, [ghis] roar in bliss muffled against your [bodytype of player] form as the rocky wall is[if DoranBallModStatus > 0] utterly[end if] drenched with wave after [if DoranBallModStatus > 0]excessive[else]successive[end if] wave of [ghis] [if DoranBallModStatus > 0]seemingly endless[else]substantial[end if] load[if libido of player > 40].[run paragraph on] Eventually, things begin to die down, and you're given a moment to catch your breath[end if].";
 					else:
-						say "     You only have to stare down [ghis] barrel for a few more seconds before you [if libido of player > 40] finally[end if] set the [gdragon] off, [ghis] roar in bliss muffled against your [bodytype of player] as you're immediately[if DoranBallModStatus > 0] and utterly[end if] drenched with wave after [if DoranBallModStatus > 0]excessive[else]successive[end if] wave of [ghis] [if DoranBallModStatus > 0]seemingly endless[else]substantial[end if] load[if DoranBallModStatus > 0].[run paragraph on] You're quickly dazed by the sheer volume, practically bathing in [ghis] seed[end if][if libido of player > 40].[run paragraph on] Eventually, things begin to die down, and you're given a moment to catch your breath[end if].";
+						say "     You only have to stare down [ghis] barrel for a few more seconds before you[if libido of player > 40] finally[end if] set the [gdragon] off, [ghis] roar in bliss muffled against your [bodytype of player] form as you're immediately[if DoranBallModStatus > 0] and utterly[end if] drenched with wave after [if DoranBallModStatus > 0]excessive[else]successive[end if] wave of [ghis] [if DoranBallModStatus > 0]seemingly endless[else]substantial[end if] load[if DoranBallModStatus > 0].[run paragraph on] You're quickly dazed by the sheer volume, practically bathing in [ghis] seed[end if][if libido of player > 40].[run paragraph on] Eventually, things begin to die down, and you're given a moment to catch your breath[end if].";
 			else:
 				if player consents:
 					say "     Shall you aim away from you? Else you'll get painted by the stuff.";
 					if player consents:
-						say "     Pulling out directing the rod away from you, it takes only a few more seconds before you [if libido of player > 40] finally[end if] set the [gdragon] off, [ghis] roar in bliss muffled against your [bodytype of player] form as the rocky wall is[if DoranBallModStatus > 0] utterly[end if] drenched with wave after [if DoranBallModStatus > 0]excessive[else]successive[end if] wave of [ghis] [if DoranBallModStatus > 0]seemingly endless[else]substantial[end if] load[if libido of player > 40].[run paragraph on] Eventually, things begin to die down, and you're given a moment to catch your breath[end if].";
+						say "     Pulling out directing the rod away from you, it takes only a few more seconds before you[if libido of player > 40] finally[end if] set the [gdragon] off, [ghis] roar in bliss muffled against your [bodytype of player] form as the rocky wall is[if DoranBallModStatus > 0] utterly[end if] drenched with wave after [if DoranBallModStatus > 0]excessive[else]successive[end if] wave of [ghis] [if DoranBallModStatus > 0]seemingly endless[else]substantial[end if] load[if libido of player > 40].[run paragraph on] Eventually, things begin to die down, and you're given a moment to catch your breath[end if].";
 					else:
-						say "     Pulling away, you only have to stare down [ghis] barrel for a few more seconds before you [if libido of player > 40] finally[end if] set the [gdragon] off, [ghis] roar in bliss muffled against your [bodytype of player] as you're immediately[if DoranBallModStatus > 0] and utterly[end if] drenched with wave after [if DoranBallModStatus > 0]excessive[else]successive[end if] wave of [ghis] [if DoranBallModStatus > 0]seemingly endless[else]substantial[end if] load[if DoranBallModStatus > 0].[run paragraph on] You're quickly dazed by the sheer volume, practically bathing in [ghis] seed[end if][if libido of player > 40].[run paragraph on] Eventually, things begin to die down, and you're given a moment to catch your breath[end if].";
+						say "     Pulling away, you only have to stare down [ghis] barrel for a few more seconds before you[if libido of player > 40] finally[end if] set the [gdragon] off, [ghis] roar in bliss muffled against your [bodytype of player] form as you're immediately[if DoranBallModStatus > 0] and utterly[end if] drenched with wave after [if DoranBallModStatus > 0]excessive[else]successive[end if] wave of [ghis] [if DoranBallModStatus > 0]seemingly endless[else]substantial[end if] load[if DoranBallModStatus > 0].[run paragraph on] You're quickly dazed by the sheer volume, practically bathing in [ghis] seed[end if][if libido of player > 40].[run paragraph on] Eventually, things begin to die down, and you're given a moment to catch your breath[end if].";
 				else:
 					if libido of player < 41, now tempnum2 is 1;
 					say "     Plunging [ghis] gushing rod down your hole as far as you can muster, it's more than enough to[if libido of player > 40] finally[end if] set the [gdragon] off, [ghis] roar in bliss muffled against your [bodytype of player] form as your maw is quickly flooded with wave after successive wave of [ghis] substantial load, quickly [if scalevalue of player < 4]sputtering from your lips[else]making your dizzy with how much you're driven to swallow[end if][if libido of player > 40].[run paragraph on] Eventually, things begin to die down, and you're given a moment to catch your breath[end if].";
@@ -2781,80 +2782,83 @@ to say dorspec_1: [Breastfeeding scene]
 Section 3.6 - Doran Request Pool
 
 to say DoranPosition: [Demeanour Option]
-	if DoranDominanceTopic < 2: [Explanation for non-submissive players who didn't get that intro in his first talk]
-		say "     You bring up the matter of [ghis] overt submissiveness to the [gdragon].";
-		say "     'Oh, [DoranPlayerRegard], is that not to their liking? I have no problem with being on top, if they are so inclined.'";
-		let trixieexit be 0;
-		while trixieexit is 0:
-			say "[bold type]Sexual Position:[roman type][line break]";
-			say "(1) [link]'Go on top.'[as]1[end link][line break]";
-			say "(2) [link]'Stay on bottom.'[as]2[end link][line break]";
-			say "(3) [link]'I'd rather we not have domineering or submissive positions.'[as]3[end link][line break]";
-			say "[line break]";
-			say "(0) [link]Nevermind[as]0[end link][line break]";
-			while 1 is 1:
-				say "Choice? (0-3)>[run paragraph on]";
-				get a number;
-				if calcnumber >= 0 and calcnumber <= 3:
-					break;
+	if DoranRole is not -1:
+		if DoranDominanceTopic < 2: [Explanation for non-submissive players who didn't get that intro in his first talk]
+			say "     You bring up the matter of [ghis] overt submissiveness to the [gdragon].";
+			say "     'Oh, [DoranPlayerRegard], is that not to their liking? I have no problem with being on top, if they are so inclined.'";
+			let trixieexit be 0;
+			while trixieexit is 0:
+				say "[bold type]Sexual Position:[roman type][line break]";
+				say "(1) [link]'Go on top.'[as]1[end link][line break]";
+				say "(2) [link]'Stay on bottom.'[as]2[end link][line break]";
+				say "(3) [link]'I'd rather we not have domineering or submissive positions.'[as]3[end link][line break]";
+				say "[line break]";
+				say "(0) [link]Nevermind[as]0[end link][line break]";
+				while 1 is 1:
+					say "Choice? (0-3)>[run paragraph on]";
+					get a number;
+					if calcnumber >= 0 and calcnumber <= 3:
+						break;
+					else:
+						say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
+				if calcnumber is 1:
+					say "     'Certainly, my [DoranPlayerRegard]";
+					if DoranDominanceTopic is 1:
+						say ". I shouldn't be surprised, as I recall they tried to offer themself when I challenged them--Not that I didn't find the prospect tempting there as I do now";
+					say ". When next they ask for sex, they'll find my regard to be quite different.' [gche] grins mischievously at you.";
+					now DoranRole is 0;
+					now trixieexit is 1;
+					increase DoranDominanceTopic by 2;
+				else if calcnumber is 2:
+					say "     'My mistake, but don't be afraid to ask if they change their mind.'";
+					now DoranRole is 2;
+					now trixieexit is 1;
+					increase DoranDominanceTopic by 2;
+				else if calcnumber is 3:
+					if DoranNeutralRole is 0, now DoranNeutralRole is a random number between 1 and 2;
+					say "     'Oh? Hmm, well, [DoranPlayerRegard] commands it... I'm rather disinclined to alter the established roles, but I can switch between them on whatever whim fancies me at the moment. I hope that better suits them.'";
+					now DoranRole is 1;
+					now trixieexit is 1;
+					increase DoranDominanceTopic by 2;
 				else:
-					say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
-			if calcnumber is 1:
-				say "     'Certainly, my [DoranPlayerRegard]";
-				if DoranDominanceTopic is 1:
-					say ". I shouldn't be surprised, as I recall they tried to offer themself when I challenged them--Not that I didn't find the prospect tempting there as I do now";
-				say ". When next they ask for sex, they'll find my regard to be quite different.' [gche] grins mischievously at you.";
-				now DoranRole is 0;
-				now trixieexit is 1;
-				increase DoranDominanceTopic by 2;
-			else if calcnumber is 2:
-				say "     'My mistake, but don't be afraid to ask if they change their mind.'";
-				now DoranRole is 2;
-				now trixieexit is 1;
-				increase DoranDominanceTopic by 2;
-			else if calcnumber is 3:
-				if DoranNeutralRole is 0, now DoranNeutralRole is a random number between 1 and 2;
-				say "     'Oh? Hmm, well, [DoranPlayerRegard] commands it... I'm rather disinclined to alter the established roles, but I can switch between them on whatever whim fancies me at the moment. I hope that better suits them.'";
-				now DoranRole is 1;
-				now trixieexit is 1;
-				increase DoranDominanceTopic by 2;
-			else:
-				say "     'My mistake, but don't be afraid to ask if they change their mind.'";
-				now trixieexit is 1;
-				increase DoranDominanceTopic by 2;
-	else: [Explanation for non-submissive players who didn't get that intro in his first talk]
-		say "     'In a different mood? Would [if DoranRole is 0]my [end if][DoranPlayerRegard] prefer to [if DoranRole is 0]be on top again[else if DoranRole is 2]be on bottom[else]alter our arrangement[end if]?'";
-		let trixieexit be 0;
-		while trixieexit is 0:
-			say "[bold type]Sexual Position:[roman type][line break]";
-			say "(1) [link]'[if DoranRole is 0]Stay[else]Go[end if] on top.'[as]1[end link]";
-			say "(2) [link]'[if DoranRole is 2]Stay[else]Go[end if] on bottom.'[as]2[end link]";
-			say "(3) [link]'Let's [if DoranRole is 1]keep[else]make[end if] things random.'[as]3[end link]";
-			say "[line break]";
-			say "(0) [link]'Nevermind.'[as]0[end link][line break]";
-			while 1 is 1:
-				say "Choice? (0-3)>[run paragraph on]";
-				get a number;
-				if calcnumber >= 0 and calcnumber <= 3:
-					break;
+					say "     'My mistake, but don't be afraid to ask if they change their mind.'";
+					now trixieexit is 1;
+					increase DoranDominanceTopic by 2;
+		else:
+			say "     'In a different mood? Would [if DoranRole is 0]my [end if][DoranPlayerRegard] prefer to [if DoranRole is 0]be on top again[else if DoranRole is 2]be on bottom[else]alter our arrangement[end if]?'";
+			let trixieexit be 0;
+			while trixieexit is 0:
+				say "[bold type]Sexual Position:[roman type][line break]";
+				say "(1) [link]'[if DoranRole is 0]Stay[else]Go[end if] on top.'[as]1[end link]";
+				say "(2) [link]'[if DoranRole is 2]Stay[else]Go[end if] on bottom.'[as]2[end link]";
+				say "(3) [link]'Let's [if DoranRole is 1]keep[else]make[end if] things random.'[as]3[end link]";
+				say "[line break]";
+				say "(0) [link]'Nevermind.'[as]0[end link][line break]";
+				while 1 is 1:
+					say "Choice? (0-3)>[run paragraph on]";
+					get a number;
+					if calcnumber >= 0 and calcnumber <= 3:
+						break;
+					else:
+						say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
+				if calcnumber is 1:
+					say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], my [DoranPlayerRegard] will [if DoranRole is 0]be kept[else]now be put[end if] in their place.'";
+					now DoranRole is 0;
+					now trixieexit is 1;
+				else if calcnumber is 2:
+					say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], [DoranPlayerRegard]'s [gdragon] will [if DoranRole is 2]keep[else]learn[end if] [ghis] place.'";
+					now DoranRole is 2;
+					now trixieexit is 1;
+				else if calcnumber is 3:
+					if DoranNeutralRole is 0, now DoranNeutralRole is a random number between 1 and 2;
+					say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], [DoranPlayerRegard]'s [gdragon] will [if DoranRole is 1]keep surprising[else]surprise[end if] them.'";
+					now DoranRole is 1;
+					now trixieexit is 1;
 				else:
-					say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
-			if calcnumber is 1:
-				say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], my [DoranPlayerRegard] will [if DoranRole is 0]be kept[else]now be put[end if] in their place.'";
-				now DoranRole is 0;
-				now trixieexit is 1;
-			else if calcnumber is 2:
-				say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], [DoranPlayerRegard]'s [gdragon] will [if DoranRole is 2]keep[else]learn[end if] [ghis] place.'";
-				now DoranRole is 2;
-				now trixieexit is 1;
-			else if calcnumber is 3:
-				if DoranNeutralRole is 0, now DoranNeutralRole is a random number between 1 and 2;
-				say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], [DoranPlayerRegard]'s [gdragon] will [if DoranRole is 1]keep surprising[else]surprise[end if] them.'";
-				now DoranRole is 1;
-				now trixieexit is 1;
-			else:
-				say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].";
-				now trixieexit is 1;
+					say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].";
+					now trixieexit is 1;
+	else:
+		say "     Ah, my [DoranPlayerRegard] does realize they don't have any say it the matter, do they not? Alas, your chance to change your mind has long since passed.";
 
 to say DoranPlayerGenderSetting: [Gender Option]
 	if DoranPlayerGenderRegard is false:
@@ -3244,6 +3248,10 @@ carry out DoranDiscuss:
 		say "[DoranDiscuss_2]"; [Of Hobbies and Imagination]
 		now DoranLastDiscussion is turns;
 		now DoranDiscussionProgress is 2;
+	else if DoranDiscussionProgress is 2 and player is submissive and DoranRoleIntensity is 0: [Player must be submissive and Doran must be at max intensity]
+		say "[DoranDiscuss_3]"; [Of Masters and Pets]
+		now DoranLastDiscussion is turns;
+		now DoranDiscussionProgress is 3;
 	else:
 		say "     'I'd like to talk more, but there's nothing I can think of off the top of my head that would be interesting to discuss. My apologies.'";
 
@@ -3403,15 +3411,16 @@ to say DoranDiscuss_2: [Of Hobbies and Imagination]
 	say "     You approach Doran, who--oddly enough--seems to be huddled in one of the cave's corners, facing away from you, all the while distracted with something. Quietly, you approach the [gdragon], who appears to be muttering something to [ghim]self, before tapping [ghim] on the side. [gche]'s set off with a right jolt and you see what [ghe]'s been doing.";
 	say "     'A-ah, [DoranPlayerRegard], I didn't hear them come in. Um, er...' Apparently [ghe] managed to find a number of children's toys and [ghe]'s been playing with them. Embarrassment streaks [ghis] face, red hot with the reveal of this peculiar pastime.";
 	say "     'I should, well, uh...' [gche] scuttles about to clean up the toys, no doubt a fair bit shamed by their presence, '...They never say how boring the post-apocalyptic scene can be, and I'm never short on free time.'";
+	LineBreak;
 	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
-		say "[bold type][link]1) 'Shouldn't you be out scavenging, or something?' I assume something of your size would have to eat a lot.[as]1[end link][roman type]";
-		say "[bold type][link]2) 'Alright, but why dolls?'[as]2[end link][roman type]";
-		say "[bold type][link]3) 'You worry too much about what I think of your pastime.'[as]3[end link][roman type]";
-		say "[bold type][link]4) 'Perhaps you could move over and have me join you?'[as]4[end link][roman type][line break]";
+		say "[bold type][link]1) 'Shouldn't you be out scavenging, or something?' I assume something of your size would have to eat a lot.[as]1[end link][roman type][line break]";
+		say "[bold type][link]2) 'Alright, but why dolls?'[as]2[end link][roman type][line break]";
+		say "[bold type][link]3) 'You worry too much about what I think of your pastime.'[as]3[end link][roman type][line break]";
+		say "[bold type][link]4) 'Perhaps you could move over and have me join you?'[as]4[end link][roman type][line break][line break]";
 		if DoranDiscussion_var1 is 0:
-			say "[bold type][link]5) 'Well, alright then... I'll be over here.' (Exit)[as]5[end link][roman type][line break]";
+			say "[bold type][link]5) 'Well, alright then... I'll be over here.' (Exit)[as]5[end link][roman type][line break][line break]";
 		else:
 			say "[bold type][link]5) 'I'm certain you'd like some time alone, then?' (Exit)[as]5[end link][roman type][line break]";
 		while 1 is 1:
@@ -3566,6 +3575,27 @@ to say DoranDiscuss_2: [Of Hobbies and Imagination]
 				say "     'Yeah... Please forgive me, I never intended to harm your impression of me. I would ask that you try to overlook this irregularity.' [gche] lets you off, quickly scurrying back to stow away [ghis] toys.";
 			say "[line break][bold type][bracket]Interaction Unlocked: Request Roleplay[close bracket][roman type]";
 			now trixieexit is 1;
+
+to say DoranDiscuss_3: [Of Masters and Pets]
+	say "     As you approach the [gdragon], [ghe] watches your form closely, a smile spreading across [ghis] draconic visage. 'Ah! Greetings [DoranPlayerRegard]! Is there something you would like to discuss today?' [ghe] asks, tilting [ghis] head sideways curiously.";
+	say "     Well, now that he mentions it, there is one thing you can think of; that being the [ghis] dominance over you. You like how he regards you now, but your submissive nature yearns for something [italic type]more[roman type]... You could bring it up to [ghim], if you so desire.";
+	LineBreak;
+	say "     [bold type]Do you talk to him about dominating you further?[roman type][line break]";
+	say "     [link](Y)[as]y[end link] - Yes.";
+	say "     [link](N)[as]n[end link] - No.";
+	LineBreak;
+	if player consents:
+		say "     You tentatively bring up your desires, asking Doran if there's any way that [ghe] can be more dominating towards you. [gche] seems to cotemplate this, rubbing his scaled chin in thought before giving a slow nod. 'Well, I suppose there are some things we can change. I [italic type]could[roman type] always be dominant towards you. I could also call you something other than [DoranPlayerRegard] if you so desire.'";
+		say "     [link](Y)[as]y[end link] - Agree to [ghis] proposal.";
+		say "     [link](N)[as]n[end link] - Decline the offer.";
+		if player consents:
+			say "     Doran nods, a happy look coming across his muzzle. It seems all the time he's spent dominating you has made him much more eager to continue doing so, despite his initial hesitation. 'Very well! I shall continue calling you [DoranPlayerRegard] unless you tell me you'd like another name, of sorts.'";
+			say "     With that, you're now cemented as Doran's sub, forever locked into this particular arrangement with the [gdragon].";
+			now DoranRole is -1;
+		else:
+			say "     Doran nods and frowns slightly, seemingly disappointed by your decision. 'Very well, [DoranPlayerRegard]. I shall remain [']flexible['], as requested!";
+	else:
+		say "     You lightly shake your head, clearing your mind of your previous thoughts. Doran has made it clear in the past that [ghe] doesn't particularly enjoy dominating you, based on his past claims.";
 
 Chapter 4 - Doran Roleplay Protocol
 

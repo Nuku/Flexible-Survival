@@ -5,6 +5,9 @@ Version 1 of Cowboy Cuntboy by Wahn begins here.
 
 Section 1 - Monster Responses
 
+when play begins:
+	add { "Cowboy Cuntboy" } to infections of hermaphrodite;
+
 to say Cowboy_Wins:
 	say "     As you go down, the cowboy gives you a hard kick in the side with his right hoof that drives the air out of your lungs. 'I don't want to see you out here again, do you hear me, fucker?' You can only groan, in answer to which he gives you another kick and walks off.";
 

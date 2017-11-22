@@ -12,7 +12,7 @@ Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
-use MAX_NUM_STATIC_STRINGS of 200000. [ Code 10 ]
+use MAX_NUM_STATIC_STRINGS of 220000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 2000.
@@ -1790,6 +1790,7 @@ Carry out massusing:
 		else:
 			say "You don't see any [second noun] in your backpack.";
 ]
+
 
 Resolving is an action applying to one thing.
 
@@ -5366,6 +5367,7 @@ Include Reindeer by Stripes.
 Include Reptaur by Kaleem mcintyre.
 Include Retriever by AGentlemanCalledB.
 Include Rhino For Fs by Stripes.
+Include Robed Cultist by Wahn.
 Include Rodeo Clown For Fs by Stripes.
 Include Rubber Drake by Stripes.
 Include Rubber Tigress by Sarokcat.
