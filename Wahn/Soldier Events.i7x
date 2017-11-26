@@ -469,5 +469,29 @@ Instead of resolving a Lone Soldier:
 	now battleground is "void";
 	now Lone Soldier is resolved;
 
+Containment Barrier is a situation.
+The sarea of Containment Barrier is "Nowhere". [for now - WIP]
+
+ContainmentBarrierEncounters is a number that varies.
+
+Instead of resolving a Containment Barrier:
+	if ContainmentBarrierEncounters is 0:
+		say "     Moving on and on through the city, you eventually come upon an area where the city just stops suddenly. And not just in one spot, but a wide band extending left and right. Beyond the alley you are standing in, a solid block's worth of buildings has been flattened - through the use of explosives, from the scorched looks of it. Several excavators are actively moving around, pushing rubble to fill the caved-in roads. Seems like someone remembered that the sewers were also a possible access path and destroyed them through the use of more explosives. The question of who is doing all this is easy enough to answer, as there are numerous soldiers visible on the other side of this line cutting through the outer city. And not only that - there's a tank at a street-crossing a little ahead too!";
+		say "     You are still contemplating maybe walking out of the alley and letting them take you in for quarantine or something, when a prerecorded message starts to blare from a series of set-up speakers: 'Please remain in your homes. A red-code quarantine is under effect. We will be forced to shoot at anyone approaching the containment zone.' Well, that's clear enough - you keep your distance and quietly wander back up the alley you are in. Seems like you'll have to survive within the city after all, with this easy out denied to you.";
+		now ContainmentBarrierEncounters is 1;
+	else:
+		say "     Exploring the city, you come upon another section of the military 'containment barrier' - a block-wide band of cleared ground that encircles the city, separating the dangerous streets with roaming infected from the rest of the country. Countless buildings have been demolished to create this open expanse, leaving little room for anything to approach unseen. An enormous contingent of troops stand guard upon the affected zone, ready to hold back any and all tries to break the quarantine - meaning that you won't be getting to safety this way. Staying outside the danger zone of where one is likely to be shot at by unrelenting soldiers, you watch the movements of patrolling men on the far side. They keep throwing watchful glances to the city and yourself.";
+		let randomnumber be a random number from 1 to 3;
+		if randomnumber is:
+			-- 1:
+				say "     Suddenly, a gleeful shriek sounds out over the city, followed by the appearance of a [italic type]very[roman type] big wyvern that swoops in barely ten feet above the roofs all around you. The creature passes right over your position, allowing you to make out that it is a [one of]female[or]male[at random], and also clearly aroused by the wide range of prey it sees spread out ahead. As the beast starts to beat its massive wings to brake and land, the patrols begin to shoot at it, sending short bursts of bullets streaking towards the great reptile. Some do tear bleeding holes in the wyvern's skin, but most are deflected by the armored plates of its hide, and even the wounds that were inflicted start to close instantly, doing little but annoying it.";
+				WaitLineBreak;
+				say "     Wading through the barrage of bullets, the creature snaps for the nearest soldier, forcing him to jump aside and flee. For a moment it seems like the wyvern is unstoppable, but the tide turns in an instant when another man raises a rocket launcher and takes aim. With a 'Whoosh', the missile flies straight at giant reptile. The wyvern has only a sliver of a second time before being hit - not enough to evade, but just fitting to interpose its arm/wing. Targeted with an anti-tank weapon, even the tough plating of its hide doesn't protect the attacking beast and its whole limb is torn apart in the resulting explosion, leaving a shredded mess of flesh and bone.";
+				say "     With an almost eardrum-piercing shriek, the wyvern scrambles backwards. The stump of its wing closes up enough to stop bleeding within moments, but even so it is missing a whole limb right now. Further bullets are fired at it, amplifying the creature's suffering enough for it to call it quits for now. Huge claws dig deep grooves into the field of rubble that the soldiers have created as a free-fire range, with the earth shaking as the massive reptile flees. It jeers off course a bit, still reeling from the unexpected pain and its grievous wound, actually impacting the front of some buildings with one shoulder and sending showers of bricks raining down on the street. Then it catches itself and keeps going, vanishing into the expanse of the infected city.";
+			-- 2:
+				say "     Wyvern gets shot down";
+			-- 3:
+				say "     People getting turned away";
+
 
 Soldier Events ends here.

@@ -109,7 +109,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		increase pldamagebonus by damagebonus of x;
 	if weapon object of player is unwieldy:
 		decrease plhitbonus by the absolute value of ( scalevalue of player - objsize of weapon object of player) to the nearest whole number;
-	if weapon object of player is bo staff:
+	if weapon object of player is bo staff or weapon object of player is wukongStaff:
 		if "Martial Artist" is listed in feats of player, increase plhitbonus by 1;
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	if weapon object of player is chair and name entry is "Wrestling Wolf":

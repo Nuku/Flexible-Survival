@@ -126,6 +126,12 @@ instead of conversing the Nermine:
 	now sortorder entry is 7;
 	now description entry is "Ask Nermine about the counter with rare treasures she has laid out";
 	[]
+	if libido of Brennan is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Helping Brennan";
+		now sortorder entry is 8;
+		now description entry is "Ask Nermine if she has some way of helping Brennan with his little problem";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -154,6 +160,8 @@ instead of conversing the Nermine:
 					say "[NermineTalk5]";
 				if (nam is "The rare items counter"):
 					say "[RareItemQuestTalk]";
+				if (nam is "Helping Brennan"):
+					say "[NermineBrennanTalk]";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -382,6 +390,16 @@ to say BrutusCassimFuck:
 	say "     With your deal concluded, the jackaless walks over to Cassim on her slender paws, then says to the elf, 'Nermine is proud to see that the gentle elf has learned his instructions so well. She will let him rest a moment, then the next lesson will commence. There is much to learn yet.'";
 	LineBreak;
 	say "     Meanwhile, your thoughs wander ahead, playing through what has to happen next. You should definitively go talk with David about this, in a private place like the bunker under the library.";
+
+to say NermineBrennanTalk:
+	say "     Nermine raises an eyebrow as you bring up the topic of Brennan (without naming names for right now), his 'problem' and the fact that he is violently opposed to being transformed. 'The humble shopkeeper would suggest that her customer talk to their friend again about that. It is so sad to see someone deny themselves such fun. She is sure that the dear customer's friend would enjoy being a nice little jackal for example. He would just have to try.' Her ears perk up in a hopeful expression, then she shrugs as you shake your head in a more definite negation. Nermine gives a little sigh, then goes on to say, 'There is one other option that the helpful shopkeeper could offer.' You can almost hear an edge of avarice creep into the tone of her voice as she prepares to hook you with a deal. With a friendly smile, she crouches down, pulling a lacquered box from under the counter.";
+	say "     Setting the box on the counter-top with a flourish, Nermine goes on to say, 'This is a very precious item that Nermine herself can guarantee in its functionality.' Undoing a little catch, she opens the box and presents it to you: On a bed of red velvet, a shining golden object rests inside, formed in the characteristic shape of a canine erection. Where the base of a 'normal' dildo would be, it continues on in a fluid curve, finally ending in an elongated oval. This part of it seems to be designed to be slid into a woman's vagina. Stroking along the shimmering shaft's length almost lovingly, the jackaless adds, 'The user of this unique artifact will be able to enjoy [italic type]full[roman type] functionality in all matters like a male. It is quite comfortable to wear, with no limits in the duration - after a while, one can mostly forget it wasn't naturally part of oneself.' Her tone makes you wonder how long Nermine spent as a futanari to experiment. Those comments seem quite specific for anything else to have happened.";
+	WaitLineBreak;
+	say "     Animalistic shape aside, you can't help but think that Brennan would simply love to own Nermine's magic cock. Almost as if she heard you think, the canny female speaks up, 'Of course, with the item being so very rare and a prized personal possession too, Nermine would have to ask for a piece of at least equal worth in trade. The humble storekeeper has something in mind already. She knows of a small group - a cult really - who recently abandoned their previously very secretive manner, in light of the current developments. This provides an opportunity of possibly obtaining the idol they worship. Nermine always was interested in possessing one of those, yet was unable to obtain or even find it. But now, things are clearly different.' With that, she slides a small sheet of folded blue paper over the counter for you to take, then shuts the box once more and stores it away.";
+	LineBreak;
+	say "[bold type]You gain a cult flyer![roman type][line break]";
+	increase carried of cult flyer by 1;
+	now libido of Brennan is 2;
 
 the fuckscene of Nermine is "[sexwithnermine]".
 
