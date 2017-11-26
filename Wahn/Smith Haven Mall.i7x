@@ -27,19 +27,6 @@ Instead of examining the Mall Foyer entrance:
 Instead of examining the Mall Food Court entrance:
 	say "Through the glass doors, you make out [the other side of the Mall Food Court entrance].";
 
-[Zephyr Navigation systems @executaball (referenced as 'emap' in code)]
-
-[Emap Variables]
-emap_mall is a number that varies. emap_mall is usually 0
-[ 0 = Nav Map for Mall not enabled ]
-[ 1 = Nav Map for Mall is enabled ]
-
-[Cheat for enabling variable]
-emap_mall_cheat is an action applying to nothing.
-understand "emap_mall_cheat" as emap_mall_cheat.
-carry out emap_mall_cheat:
-	say "CHEAT: Map Navigation is now enabled (emap_mall = 1)";
-	now emap_mall is 1;
 
 Section 2 - Mall Lot North
 
