@@ -1,4 +1,4 @@
-Version 1 of Tiger Shark by Lone_Wanderer begins here.
+Version 1 of Tiger Shark by Lone Wanderer begins here.
 [Version 1 - New Creature]
 
 "Adds a unique Tiger Shark character to Flexible Survival's Monsters table"
