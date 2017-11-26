@@ -555,7 +555,7 @@ to say DoranSexMenu: [Doran Sex Protocol]
 		say "[DoranRoleplayProtocol]"; [Doran Roleplay Sex Protocol]
 	else if DoranAutofired is true:
 		say "[DoranAutoSexProtocol]";
-	else if DoranRole is 0 or (DoranRole is 1 and DoranNeutralRole is 1): [Dom sex pool]
+	else if DoranRole < 1 or (DoranRole is 1 and DoranNeutralRole is 1): [Dom sex pool]
 		now DoranPlayerCumFilled is false;
 		now DoranCumFilled is false;
 		now DoranAnnoyed is false;
@@ -2429,7 +2429,7 @@ carry out DoranRequest:
 		while trixieexit is 0:
 			dorangendercheck;
 			say "[bold type]Options:[roman type][line break]";
-			say "(1) [link]Sexual Position[as]1[end link] - [bold type][if DoranRole is 0]Dominant[else if DoranRole is 2]Submissive[else]Neutral[end if][roman type][line break]";
+			say "(1) [link]Sexual Position[as]1[end link] - [bold type][if DoranRole is 0]Dominant[else if DoranRole is 2]Submissive[else if DoranRole is -1]Dominant (LOCKED)[else]Neutral[end if][roman type][line break]";
 			say "(2) [link]Your Regarded Gender[as]2[end link] - [bold type][if DoranPlayerGenderRegard is true]Female[else]Male[end if][roman type][line break]";
 			say "(3) [link]Doran's Regarded Gender[as]3[end link] - [bold type][if DoranSelfGender is true]Female[else]Male[end if][roman type][line break]";
 			say "(4) [if DoranRoleIntensity is not 0]Interaction Locked - Requires Max Domination[else][link]Sex Auto-fire[as]4[end link] - [end if][bold type][if DoranAutofireIntensity is 1 and DoranRoleIntensity is 0]Strict[else if DoranAutofireIntensity is 2 and DoranRoleIntensity is 0]Loose[else if DoranRoleIntensity is 0]Off[end if][roman type][line break]";
@@ -2458,7 +2458,7 @@ carry out DoranRequest:
 			else if calcnumber is 3:
 				say "[DoranGenderSetting]"; [NEW! Doran's Gender Option]
 			else if calcnumber is 4:
-				if DoranRole is 0 and DoranRoleIntensity is 0:
+				if DoranRole < 1 and DoranRoleIntensity is 0:
 					say "[DoranAutofireSetting]"; [Sex Auto-fire]
 				else:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
