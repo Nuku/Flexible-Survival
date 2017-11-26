@@ -5407,6 +5407,7 @@ Include Tenrec by StripeGuy.
 Include Thought Eater by Wahn.
 Include Tiger by Sarokcat.
 Include Tiger Cop for FS by Stripes.
+Include Tiger Shark by Lone_Wanderer.
 Include Tigertaur by Sarokcat.
 Include Tigress Hooker for FS by Stripes.
 Include Trash Coon For FS by Stripes.
