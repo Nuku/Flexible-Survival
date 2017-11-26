@@ -663,7 +663,7 @@ to say drinkponycider:
 		now sex entry is "Female";
 	say "     Deciding to drink down the cider, you pop the top off and start downing it. It has a strong, sharp taste to it, heavy with apple and equine flavour. As well, there is a faint plastic taste despite being stored in a glass bottle.";
 	increase libido of player by 5;
-	decrease thirst of player by 8;
+	PlayerDrink 8;
 
 the scent of pony cider is "The cider smells strongly of apples and equines.".
 

@@ -910,9 +910,7 @@ to say SarahCarlScene2:
 	if player consents:
 		say "     Walking up to the two of them, you are readily welcomed by Carl and Sarah and join them at the poker table. The three of you play for a while, having a nice and relaxing time while eating some candy on the side.";
 		increase humanity of player by 10;
-		decrease hunger of player by 5;
-		if hunger of player < 0:
-			now hunger of player is 0;
+		PlayerEat 5;
 	else:
 		say "     Not wanting to disturb their play, you turn your attention to other things. Still, it is good to see that the people you saved are getting along nicely.";
 		increase humanity of player by 5;
@@ -1070,9 +1068,7 @@ to say SarahEricScene2:
 
 to say SarahEricScene3:
 	say "     Coming into the bunker, you see Sarah and Eric hanging out together. They are sitting cross-legged on Eric's bed, chatting about this and that. Between them, there is a small pile of oranges that both pick from and happily eat while they talk. Looks like one of them - or both together - went out to find some supplies and now they're enjoying the literal fruits of that labour with one another. It is nice to see that your rescuees from out in the chaos-ridden city get along so well. With a smile on your face, you wander over and say hello, earning you happy smiles and an excitedly wagging tail from Sarah. 'Hey there my hero,' the female husky calls out to you and tosses you an orange that you easily catch. As you exchange some words with them, you peel and munch on the orange fruit, finding it nice and juicy.";
-	decrease hunger of player by 5;
-	if hunger of player < 5:
-		now hunger of player is 0;
+	PlayerEat 5;
 	now EricSarahInteraction is 3;
 	now lastEricSarahInteraction is turns;
 

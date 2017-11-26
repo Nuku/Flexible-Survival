@@ -1316,11 +1316,9 @@ instead of conversing the Orc Mob:
 			if HP of Orc Mob is 0: [first time]
 				say "     Joining the orc warriors in their reveling, you soon find yourself in their midst with an orc brew in your hand, listening to boastful stories how this one [one of]fucked a minotaur[or]fucked a latex fox till it was ballooned up to a cream-filled sphere[or]made an incubus drink his cum[or]punched out a shaft beast with one hit[or]got sucked off by a weird anime fan-girl[or]humped an orca[at random] or that one [one of]brought down a behemoth[or]had a poodle lap his dick[or]pounded a wyvern into submission[or]used a rubber tigress as a fleshlight[at random]. To fit in, you make up a story about turning [one of]an alpha husky[or]a German Shepherd[or]a hyena[or]a centaur[at random] into your private bitch and get cheers as you finish the imaginary conquest. All in all, you have a pretty good time with the other orcs, then eventually leave them to get back to other matters. But even as you do, the story you invented is still at the forefront of your mind, with your inner orc pushing hard against your will to accept him and put those thoughts into reality.";
 				now HP of Orc Mob is 1;
-				decrease humanity of player by 10;
-				decrease thirst of player by 20;
+				SanLoss 10;
+				PlayerDrink 20;
 				infect "Orc Warrior";
-				if thirst of player < 0:
-					now thirst of player is 0;
 			else if HP of Orc Mob is 1: [second time]
 				say "     Again joining the orc warriors in their reveling, you soon find yourself in their midst with an orc brew in your hand, listening to boastful stories how this one [one of]fucked a minotaur[or]fucked a latex fox till it was inflated into a cream-filled sphere[or]made an incubus drink his cum[or]knocked out a shaft beast with one hit[or]got sucked off by a weird anime fan-girl[or]humped an orca[at random] or that one [one of]brought down a behemoth[or]had a poodle lap at his dick[or]pounded a wyvern into submission[or]used a rubber tigress as a fleshlight[at random]. To fit in, you make up a similar story - but before you're more than a few words in, shouting breaks out on the other side of the drinking hall. Looks like there's a sort of 'tug of war' for a breeder slave, with one orc holding the smaller green-skinned man to his chest and another especially big orc warrior wanting to pull the breeder back over to him.";
 				if graphics is true:
@@ -1649,11 +1647,9 @@ instead of conversing the Orc Mob:
 				now HP of Orc Mob is 8;
 			else if HP of Orc mob is 8:
 				say "     Joining the orc warriors in their reveling, you soon find yourself in their midst with an orc brew in your hand, listening to boastful stories how this one [one of]fucked a minotaur[or]fucked a latex fox till it was ballooned up to a cream-filled sphere[or]made an incubus drink his cum[or]punched out a shaft beast with one hit[or]got sucked off by a weird anime fan-girl[or]humped an orca[at random] or that one [one of]brought down a behemoth[or]had a poodle lap his dick[or]pounded a wyvern into submission[or]used a rubber tigress as a fleshlight[at random]. To fit in, you make up a story about turning [one of]an alpha husky[or]a German Shepherd[or]a hyena[or]a centaur[at random] into your private bitch and get cheers as you finish the imaginary conquest. All in all, you have a pretty good time with the other orcs, then eventually leave them to get back to other matters. But even as you do, the story you invented is still at the forefront of your mind, with your inner orc pushing hard against your will to accept him and put those thoughts into reality.";
-				decrease humanity of player by 10;
-				decrease thirst of player by 20;
+				SanLoss 10;
+				PlayerDrink 20;
 				infect "Orc Warrior";
-				if thirst of player < 0:
-					now thirst of player is 0;
 		else: [refuse to participate]
 			say "     Remembering the ease with which one can let their humanity slip and give in to the nanites that mess with people's heads, as well as their bodies, you hesitate to plunge right into orc 'culture'. The risk to actually become one of the brutes, not just look like one, is very real so maybe that was a wise choice.";
 

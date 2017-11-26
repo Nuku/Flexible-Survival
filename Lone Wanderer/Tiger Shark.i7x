@@ -188,7 +188,7 @@ To say Tiger Shark loses:
 		say "[TSWSexSelection]";
 	else:
 		say "     REMOVE ME";
-		
+
 to say TSWSexSelection:	[The Sex menu that shows up]
 	LineBreak;
 	now sextablerun is 0;
@@ -243,7 +243,7 @@ to say TSWSexSelection:	[The Sex menu that shows up]
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-	
+
 Section 3 - Dominant Sex Scenes
 
 To say tsw_oral:
@@ -297,7 +297,7 @@ To say tsw_ride:
 			impregchance;
 		else:
 			mimpregchance;
-		
+
 Section 4 - Monster Insertion
 
 Table of random critters (continued)
@@ -352,19 +352,19 @@ When Play begins:
 	now non-infectious entry is true;
 	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
-	
+
 when play ends:
 	if bodyname of player is "Tiger Shark":
 		if humanity of player < 10:
 			say "     REMOVE ME";
 		else:
 			say "     REMOVE ME";
-			
+
 Section 5 - Items
-	
+
 Table of Game Objects (continued)
 name	desc	weight	object
-"Devil's Purse"	"A black casing resembling the egg capsule of a shark. It's empty but it still seems warms despite its slippery touch."	1	Devil's Purse
+"Devil's Purse"	"A black casing resembling the egg capsule of a shark. It's empty, but it still seems warms despite its slippery touch."	1	Devil's Purse
 "Teeth Necklace"	"It's a cord with several teeth of feral sea dragons tied to it. It's the necklace you stole from the wandering, proud tiger shark warrior."	2	Teeth Necklace
 
 Devil's Purse is a grab object. It is part of the player. Understand "dpurse" as Devil's Purse.
@@ -372,13 +372,13 @@ Devil's Purse is a grab object. It is part of the player. Understand "dpurse" as
 The usedesc of Devil's Purse is "[DevilsPurseUsing]";
 
 to say DevilsPurseUsing:
-	say "You take out the empty egg casing, and give it an experimental lick. Despite the smell its taste is pretty pleasant, like a mix of fish and something sweet that you cannot quite pin. You engulf it entirely in your mouth and are invested in licking and chewing along the rubbery membrane. After some time you end up swallowing the tough and slippery skin, content with the effects it may have on you.";
+	say "You take out the empty egg casing and give it an experimental lick. Despite the smell, its taste is pretty pleasant, like a mix of fish and something sweet that you cannot quite place. You engulf it entirely in your mouth and are invested in licking and chewing along the rubbery membrane. After some time you end up swallowing the tough and slippery skin, content with whatever effects it may have on you.";
 	TigerSharkInfect;
-	decrease hunger of player by 5;
+	PlayerEat 5;
 
 instead of sniffing Devil's Purse:
 	say "Like any remains you'd pick up on the beach, the egg shell smells like fish and of the sea. It's not entirely pleasant.";
-	
+
 Teeth Necklace is equipment.
 It is not temporary.
 The AC of Teeth Necklace is 12.

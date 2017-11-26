@@ -32,8 +32,7 @@ Instead of Resolving a Mouse Taur:
 		say "     'They never bit me or anything,' she explained, 'I'm pretty certain their fur got onto a bit of my food. It took a long time to change.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself, 'Or so I did. Hey, here's my address. You come by anytime, say hello, ok?'";
 		say "     Meal time over, you both rise. She gives you a firm parting hug, and turns to walk off into the red light area, long furry tail swaying behind her.";
 		increase mtrp by 1;
-		decrease hunger of player by 20;
-		if hunger of player < 0, now hunger of player is 0;
+		PlayerEat 20;
 		now Porn Store is known;
 		now mouse taur is resolved;
 		now find porn store is resolved;

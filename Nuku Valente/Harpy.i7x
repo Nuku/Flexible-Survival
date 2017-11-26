@@ -43,7 +43,7 @@ to say Harpy wins:
 				now harpyconsent is 0;
 			else if cunts of player > 0:
 				say "     Once up on the roof, she presses you down on your back and moves atop you. She presses her bosom to your face, pushing one of her nipples to your lips. Still catching the arousing scent of lust from your earlier lovemaking on it and quickly wrap your lips around it, starting to suckle at it. She slips a taloned hand between your thighs and presses a [if cunt width of player > 10]trio of fingers[else if cunt width of player > 5]pair of fingers[else]finger[end if] into your juicy cunt. You moan loudly and suckle all the harder, soon rewarded with the harpy's milk. 'Yes, my sweet. Drink up and soon you'll be another beautiful harpy like me. Wouldn't that be wonderful,' she says in a crooning voice. You moan and chirp in response, your besotted mind willing to agree to nearly anything for your feathered lover. You switch to her other breast for more of her delicious milk. You nurse from her until she has no more milk to give and you've had several powerful orgasms from her continuous attention to your quivering cunt. You are still in a daze as she takes you back to the ground and gropes you, urging you to become a lovely harpy quickly so you can join her and the others.";
-				decrease thirst of player by 10;
+				PlayerDrink 10;
 				decrease humanity of player by 10;
 				infect "Harpy";
 			else:
@@ -60,7 +60,7 @@ to say Harpy wins:
 [ [Harpy loss] ]
 To say Harpy loses:
 	if inasituation is true:
-		stop the action; [text taken care of at the source]	
+		stop the action; [text taken care of at the source]
 	if harpyfight is not 3 and cocks of player > 0 and libido of player > 40 and a random chance of 1 in 3 succeeds:
 		say "     Your final blow sends the harpy tumbling to the ground momentarily. You have a brief moment to decide if you'll take advantage of her while you can. Shall you fuck the harpy?";
 		if the player consents:

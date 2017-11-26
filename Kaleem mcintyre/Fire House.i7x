@@ -109,10 +109,8 @@ instead of conversing the Kenaz:
 			WaitLineBreak;
 			say "A nearly inaudible rumble of a growl pours out of Kenaz's throat making you smile somewhat nervously over at the green eyed man as you listen to the deep sounding grumble of displeasure. It's only when you cough in your own throat that Kenaz quickly picks up on what he's doing. 'S-sorry, that's been happening a lot as of late. I think the virus or whatever is getting to me, but thankfully it's not that bad. Not unless I get upset or...' Kenaz shrugs somewhat helplessly. 'Anyway, Birch and I were the last guys here who stuck around to see about the place before the station got closed down. But, as cliché as it sounds, Birch did stop showing up a few days before the crisis hit the city. [line break]";
 			say "I went to check his girlfriend's apartment -- that's the place where he usually hangs out when not off duty -- but the landlady said she hadn't seen either in a while.' Kenaz smiles haphazardly after saying this. Nodding to the other you realize what he might have been thinking. Thanking Kenaz for the food you decide that maybe asking around town might net you some information about the other firefighters. Maybe trying an informer might help?[line break]";
-			decrease hunger of player by 30;
-			if hunger of player < 0, now hunger of player is 0;
-			decrease thirst of player by 25;
-			if thirst of player < 0, now thirst of player is 0;
+			PlayerEat 30;
+			PlayerDrink 25;
 			now smf is 1;
 			now Kenaztalk is 1;
 			increase score by 10;
@@ -157,8 +155,7 @@ instead of conversing the Kenaz:
 				WaitLineBreak;
 				say "'Heh, I didn't know that. Oh well, makes sense, I guess.' Kenaz sighs and then lowers his head in silent, his right hand is all that keeps the ice pack from falling onto the floor. Asking Kenaz what happened with the others the firefighter can only shrug. 'Don't know, everyone was supposed to be going out of town or something so that only left me and Birch around to watch over the place. Since the two of us basically live here we didn't really mind it. But after he left and didn't come back I went to his girlfriend's apartment to check on him.[line break]";
 				say "I got told by the land lady that she hadn't seen either of them in a while. Maybe one of those things out there caught him?' Seeing the other man's despondence as he mournfully shakes his head you wonder if you could find out some information about the other firefighters.";
-			decrease thirst of player by 25;
-			if thirst of player < 0, now thirst of player is 0;
+			PlayerDrink 25;
 			now smf is 1;
 			now Kenaztalk is 1;
 			increase score by 10;

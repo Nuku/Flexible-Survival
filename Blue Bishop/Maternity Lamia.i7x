@@ -52,13 +52,11 @@ to say losetolamia:
 			say "     You moan softly as you suckle from the caring wet nurse, your mind clouded with affection for her.  She lets you drink your fill, shifting you from one breast to the next when the flow starts to taper off even a little.  You nurse happily, thinking of little more than the delicious milk you're getting and your growing love for the maternal lamia feeding you.  Eventually, she decides you've had your fill, or at least more than your fair share, and pulls you away from her bosom, giving you a milky kiss instead.  Having a belly full of warm milk has made you tired and so you start to drift off for a nap.  You're sleepily aware of the lamia singing a soft lullaby as she tucks you in before leaving you to digest your meal.";
 			increase libido of player by 10;
 		say "     You awaken some time later, thankfully having been left undisturbed during your short nap.  You weren't moved far, having been put on a nearby [one of]bed[or]gurney[or]examination table[at random] under of a [one of]milk-stained sheet[or]milk-stained blanket[or]cum-stained blanket[or]slightly torn sheet[or]white sheet[or]small blanket[or]few towels[at random].  Moving cautiously, you go recover your gear and head off with a lingering affection for your milk mother.";
-		decrease thirst of player by 12;
-		decrease hunger of player by 3;
+		PlayerDrink 12;
+		PlayerEat 3;
 		decrease humanity of player by 10;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 1 and 3;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 1 and 3;
-		if thirst of player < 0, now thirst of player is 0;
-		if hunger of player < 0, now hunger of player is 0;
 		infect;
 	increase mlamialoss by 1;
 
@@ -139,13 +137,11 @@ to say mlamiavsex04:
 	say "     Feeling thirsty after the fight, you feel she should be the one the slake your thirst.  You stride over to the serpent woman as she slithers away and grab her breasts from behind.  She releases a moan in surprise, but doesn't resist the groping beyond her initial surprise.  '[one of]Oh, so now you want them.  Make up your mind[or]Such a naughty [if cocks of player > 0]boy[else if cunts of player > 0]girl[else]thing[end if][or]If you just wanted a drink, you should have just said so[or]Alright then, if you insist[or]Don't!  That's for the babies... Well, I guess there's enough to go around[at random],' she says teasingly as you press her back to a wall.";
 	say "     You start by groping and fondling her many tits, getting the white-skinned lamia good and worked up.  She's so full with milk that it dribbles from her perky nipples constantly and squirts out when you squeeze them.  She hisses and moans happily as you play with her heavy breasts, her satisfied sounds growing stronger when you wrap your lips around one of those big nipples and start suckling.  Her rich cream is warm and flavourful, making you want more.  At first, you swap from nipple to nipple the moment the flow from one starts to wane, but eventually the soothing caresses and her lovely milk help relax you.  In the end, you settle down to nursing from one fat nipple.";
 	say "     Feeling you settling down, the wet nurse moves to slide her coils around you.  But rather than let her ensnare you, you push your arms down to her scaled lower body.  Finding a trio of juicy cunts waiting there, you stuff your fingers into a pair of them to keep her from coiling around you.  Thus remaining in charge of the situation, you finger-fuck the maternal lamia to a moaning, hissing orgasm that brings an added surge to her milk flow while she's in the throws of her release.  Your sexy drink finished, you wipe your lips and end up sucking her femme cum from your fingers as you leave her to slither off back to her duties.  You feel the infectious milk in your belly spread its warmth through you.";
-	decrease thirst of player by 12;
-	decrease hunger of player by 3;
+	PlayerDrink 12;
+	PlayerEat 3;
 	decrease humanity of player by 5;
 	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
-	if thirst of player < 0, now thirst of player is 0;
-	if hunger of player < 0, now hunger of player is 0;
 	infect;
 
 

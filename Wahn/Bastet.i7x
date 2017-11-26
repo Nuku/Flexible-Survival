@@ -486,7 +486,7 @@ to say BastetSex3:
 [
 I think after that, laying with her face to face.
 
-ah, if its a focus on a female PC you want, I should make a variant of the BJ scene were she licks a pussy
+ah, if it's a focus on a female PC you want, I should make a variant of the BJ scene were she licks a pussy
 Savriss - Today at 9:49 PM
 I would definitely like that.
 

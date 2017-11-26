@@ -439,9 +439,8 @@ the usedesc of orc femcum is "[orc femcum use]";
 
 to say orc femcum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the thick orc femcum run over your tongue and down your throat. Mmmmh, this stuff has a really great taste that calls for more. You can't help yourself and keep drinking until all of it is gone, filling your mind with a giddy, pleasant buzz. Now where do you get more of this stuff? You're really tempted to return to Katya and milk some more from her.";
-	decrease thirst of player by 6;
-	if thirst of player < 0, now thirst of player is 0;
-	decrease humanity of player by 10;
+	PlayerDrink 6;
+	SanLoss 10;
 	infect "Orc Female";
 
 

@@ -189,9 +189,8 @@ to say hgryphon_pw_01:
 	say "     The combined stimulation is too much for the gryphon as her body is wracked with orgasm. Gob after gob of the most delicious cum starts pouring down your throat, while at the same time milk gushes from the gryphon's massive breasts, soaking the both of you. Your blue partner's orgasm causes her muscles to involuntarily clamp down on your throbbing cock, this increased friction is all it takes as you start to pump her full of your seed.";
 	say "     Spent and exhausted you get dressed and walk away, leaving the Hermaphrodite Gryphon to lie in a pool of her own milk.";
 	decrease libido of player by 30;
-	decrease hunger of player by 5;
+	PlayerEat 5;
 	if libido of player < 0, now libido of player is 0;
-	if hunger of player < 0, now hunger of player is 0;
 
 to say hgryphon_pw_02:
 	say "     Approaching the defeated gryphon with confidence, you approach her and eye that stiff cock of hers.  You straddle your fallen blue playmate and start to ease the tip of the long black shaft past your moistening lips.  You feel every inch as you slide all the way down to the knot.  Unable to take the cock in any further, you start to move your hips, grinding against the gryphon's mighty black knot.  The gryphon's eyes start to roll back, your opponent lost in bliss from your grinding, occasionally emitting a low, rolling squawk.";
@@ -206,7 +205,7 @@ to say hgryphon_pw_02:
 		attempttowait;
 		say "     'It's alright baby, mama's here,' the gryphon coos as she softly wraps her furry blue arms around you, placing her leaking nipple back into your mouth. As you resume suckling, the gryphon starts to rock her hips back and forth, causing her knot to stretch you to your limits. The pleasure is so intense that you barely register achieving orgasm after orgasm thanks to your lover's exceptional skills. After what seems like seconds (although you realize it's more like half an hour), the gryphon herm lets out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.[ovichance]";
 	say "     You lie there for a few minutes, not wanting to move after that marathon fucking, and also enjoying the softness of your partner's massive furry blue breasts. Eventually, the gryphon's swollen knot shrinks down and she finishes filling you with seed. You slowly get to your feet, still impaled on gryphon cock. You start gingerly sliding the bulbous black shaft out, and as it passes your abused nether lips, a torrent of cum spills out, drenching the almost unconscious gryphon below. You get dressed and leave, the gryphon still on the ground, eyes closed, moaning, and idly fondling her ample breasts.";
-	decrease thirst of player by 5;
+	PlayerDrink 5;
 	decrease libido of player by 30;
 	if thirst of player < 0, now thirst of player is 0;
 	if libido of player < 0, now libido of player is 0;
@@ -223,8 +222,7 @@ to say hgryphon_pw_04:
 	attempttowait;
 	say "     You absentmindedly start sucking on one of your lover's dark blue nipples and your tongue is greeted with the sweetest, most delicious milk you have ever tasted. You start suckling greedily, taking your fill of the gryphon's magnificent nectar. Once your thirst has been quenched, you notice that the gryphon's cock has shrunk down and can now be easily removed. As you rise to your feet, the gryphon's cock pops out of you like the cork on a champagne bottle, your gaping pussy spraying gryphon seed everywhere.[ovichance]";
 	say "     'Call me!' the gryphon squawks plaintively as you stumble away, dressing yourself as you go.";
-	decrease thirst of player by 5;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerDrink 5;
 
 to say hgryphon_pw_05:
 	say "***blow job";

@@ -846,10 +846,10 @@ to wyvore:
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 					increase humanity of player by 3;
 					if a random chance of 2 in 3 succeeds:
-						decrease thirst of player by 2;
-						decrease hunger of player by 1;
+						PlayerDrink by 2;
+						PlayerEat 1;
 					else:
-						decrease thirst of player by 1;
+						PlayerDrink 1;
 					now boundrecover is false;
 					if humanity of player > 100, now humanity of player is 100;
 				else:
@@ -1958,13 +1958,9 @@ the scent of wyvern goop is "     The sticky gel has an acrid, spicy scent.";
 
 To say wyvern goop use:
 	say "     Consuming the goop does seem to sate your hunger slightly, though you quickly find your thoughts wracked with a more feral need.";
-	decrease hunger of player by 3;
-	if hunger of player < 0:
-		now hunger of player is 0;
-	decrease thirst of player by 4;
-	if thirst of player < 0:
-		now thirst of player is 0;
-	decrease humanity of player by 4;
+	PlayerEat 3;
+	PlayerDrink 4;
+	SanLoss 4;
 	increase libido of player by 1;
 
 wyvern goop is a grab object. wyvern goop is infectious. The strain of wyvern goop is "Wyvern".

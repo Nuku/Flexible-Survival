@@ -1214,11 +1214,9 @@ to win:
 			increase HP of player by ( 2 * lev entry ) / 3;
 		else:
 			increase HP of player by lev entry;
-		decrease thirst of player by 3;
-		decrease hunger of player by 1;
+		PlayerDrink 3;
+		PlayerEat 1;
 		if HP of player > maxHP of player, now HP of player is maxHP of player;
-		if thirst of player < 0, now thirst of player is 0;
-		if hunger of player < 0, now hunger of player is 0;
 	if ok is 1 and "Control Freak" is listed in feats of player:
 		say "Do you want to perform after combat scene?";
 		if the player consents:

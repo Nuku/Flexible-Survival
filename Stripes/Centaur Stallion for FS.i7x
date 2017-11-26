@@ -51,10 +51,8 @@ to say beatthecentaurstallion:
 				increase libido of player by 5;
 				if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
 				if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
-				decrease hunger of player by 3;
-				if hunger of player < 0, now hunger of player is 0;
-				decrease thirst of player by 6;
-				if thirst of player < 0, now thirst of player is 0;
+				PlayerEat 3;
+				PlayerDrink 6;
 				decrease humanity of player by 5;
 				if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
 				if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
@@ -174,8 +172,7 @@ It is temporary.
 
 to say centaurcumuse:
 	say "     With a little shrug, you tilt your head back and slam down the centaur cum, letting the thick, gooey contents of the jar slide down your throat. While it does slake your thirst a little, it also floods your body with infection.";
-	decrease thirst of player by 6;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerDrink 6;
 	if "Female Preferred" is listed in feats of player and girl is not banned:		[change target to Mare for infection]
 		infect "Centaur Mare";
 	else:

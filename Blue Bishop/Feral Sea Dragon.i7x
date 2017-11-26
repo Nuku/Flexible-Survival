@@ -856,7 +856,7 @@ to fsdmvore:
 						follow the turnpass rule;
 				else if boundsegment is 1:
 					if struggleatt < 3:
-						say "     [if tempnum2 is 2]Properly righting your orientation, y[else]Y[end if]ou writhe and shimmy your way up the beast's gullet, against his muscle's endeavour. You [if struggleatt is 1]don't seem to be getting anywhere[else]think you might be seeing light[end if]...";
+						say "     [if tempnum2 is 2]Properly righting your orientation, you[else]You[end if] writhe and shimmy your way up the beast's gullet, against his muscle's endeavour. You [if struggleatt is 1]don't seem to be getting anywhere[else]think you might be seeing light[end if]...";
 						increase lustatt by 7 + (lustadjust * 2);
 						if tempnum2 is 2, now tempnum2 is 0;
 						wyvhumanityroll;

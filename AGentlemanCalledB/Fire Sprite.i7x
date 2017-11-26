@@ -236,7 +236,7 @@ When Play begins:
 	now tail entry is "";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "glowing orange human-like";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "slim elfin features overtake it, framed by long orange and red hair"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "it fills with a strange, unnatural heat. [if scalevalue of player > 1]The world seems to grow around you and y[else]Y[end if]ou take on a slim, human-like shape";	[ Body TF text, format as "Your body feels funny as (your text)." ]
+	now body change entry is "it fills with a strange, unnatural heat. [if scalevalue of player > 1]The world seems to grow around you and you[else]You[end if] take on a slim, human-like shape";	[ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "you begin sweating, heat seeming to radiate off you as your flesh takes on a smooth orange appearance";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it becomes tight and firm";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it begins to radiate with warmth, taking on a warm orange hue";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
