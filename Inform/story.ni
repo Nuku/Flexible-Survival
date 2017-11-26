@@ -5159,6 +5159,7 @@ Include Walkinmall by Ssely.
 Include Warehouse District by Kaleem Mcintyre.
 Include Warehouse Events by StripeGuy.
 Include Wereraptor for FS by Stripes.
+Include Zephyr Phone by Executaball.
 Include Zoo Events by Sarokcat.
 Include Zoo Events by Wahn.
 
