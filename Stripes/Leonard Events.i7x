@@ -546,7 +546,7 @@ Instead of resolving PridePark:
 				increase libido of player by 2;
 				decrease humanity of player by 2;
 			else:
-				say ", kneading her paws over your [bodytype of player] until your matronly figure is restored and she can begin nursing from your milk. She purrs happily as she does while you rumble to her [one of]about what an good and loyal kitty she is[or]about what a pretty kitty she is[or]that you and Leonard love her[or]about how much her pride cares for her[as decreasingly likely outcomes]. You pet her lovely, leonine body, patting her bottom and fingering her pussy to get her worked up for another session with Leonard. After she's been fed and her bond with the pride has been renewed, you release her back in the park with a reminder that Leonard would welcome another visit from her soon.";
+				say ", kneading her paws over your [bodytype of player] body until your matronly figure is restored and she can begin nursing from your milk. She purrs happily as she does while you rumble to her [one of]about what an good and loyal kitty she is[or]about what a pretty kitty she is[or]that you and Leonard love her[or]about how much her pride cares for her[as decreasingly likely outcomes]. You pet her lovely, leonine body, patting her bottom and fingering her pussy to get her worked up for another session with Leonard. After she's been fed and her bond with the pride has been renewed, you release her back in the park with a reminder that Leonard would welcome another visit from her soon.";
 				felinebodyshift;
 				increase libido of player by 2;
 				decrease humanity of player by 2;
@@ -688,7 +688,7 @@ Instead of resolving PridePark:
 				increase libido of player by 2;
 				decrease humanity of player by 2;
 			else:
-				say ", kneading her paws over your [bodytype of player] until your matronly figure is restored and she can begin nursing from your milk. She purrs happily as she does while you rumble to her [one of]about what a good and loyal kitty she is[or]about what a resourceful kitty she is[or]that you and Leonard love her[or]about how much her pride cares for her[as decreasingly likely outcomes]. You pet her lovely, leonine body, patting her bottom and fingering her pussy to get her worked up for her upcoming session with Leonard. After she's been fed and she's too excited to wait any longer, you release her back in the park, sending her hurrying on her way back to her master with her gift.";
+				say ", kneading her paws over your [bodytype of player] body until your matronly figure is restored and she can begin nursing from your milk. She purrs happily as she does while you rumble to her [one of]about what a good and loyal kitty she is[or]about what a resourceful kitty she is[or]that you and Leonard love her[or]about how much her pride cares for her[as decreasingly likely outcomes]. You pet her lovely, leonine body, patting her bottom and fingering her pussy to get her worked up for her upcoming session with Leonard. After she's been fed and she's too excited to wait any longer, you release her back in the park, sending her hurrying on her way back to her master with her gift.";
 				felinebodyshift;
 				increase libido of player by 2;
 				decrease humanity of player by 2;

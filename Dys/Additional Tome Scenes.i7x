@@ -109,6 +109,7 @@ to say TomeExpansionUse:
 				say "     [link](N)[as]n[end link] - It's probably best not to.";
 				if player consents:
 					say "     You open the tome to a random page, deciding that no real harm can come from just quick glance at it. Your eyes skim over page after page of text and drawings depicting all sorts of monsters and demons, taking all the information in eagerly. For some reason you can't quite comprehend, the contents of the book have really piqued your interest. Nearly two hours later, you find that you've read more than half of the large books contents, and you suddenly blink, realizing how much time you've spent doing this. Shutting the book, you heave a sigh as you place it in your pack before moving on. There's some part of you that eagerly awaits further reading.";
+					now TomeTimer is turns;
 					now TomeInteractions is 1;
 				else:
 					say "     You shake your head, deciding that there's not really any benefit to reading the contents of the book, before you place it back in your pack and move along.";
@@ -204,7 +205,7 @@ to say DemonFoxFirstEncounter:
 		say "[DemonFoxFirstVictory]";
 	now inasituation is false;
 	now DemonFoxInteractions is 1;
-	now TomeEventPending is false;
+	UpdateTomeEventPending;
 
 to say TentaclesFirstEncounter:
 	say "     As you're going about your business, something suddenly wraps around your legs. You're harshly yanked backwards, and you fling out your arms in a desperate attempt to avoid smashing your face on the ground. Once that's been taken care of, you whirl around to look at what's ensnared you. The sight that greets you makes you skin go cold. A writhing mass of purple tentacles are jutting out of the ground, each coated in a slick, sticky slime. Desperately, you yank your foot away, manages to get it out of the tendrils grasp.";
@@ -231,7 +232,16 @@ to say TentaclesFirstEncounter:
 		say "     The tentacles seem to be done with you, and you can't do anything to stop them anyway, so they just recede back into the ground. You're unsure if you'll ever see them again, or if you even want to...";
 		now TentacleInteractions is 1;
 		now TentacleStatus is 12; [got raped]
-		now TomeEventPending is false;
+		UpdateTomeEventPending;
+
+to UpdateTomeEventPending:
+	if TomeEventPending is true:
+		if DemonFoxRead is true and TentacleRead is true and (TentacleInteractions is 0 or DemonFoxInteractions is 0): [One event completed, but another is pending.]
+			now TomeEventPending is true;
+		else:
+			now TomeEventPending is false;
+	else:
+		now TomeEventPending is true;
 
 Section 5 - Influence system
 

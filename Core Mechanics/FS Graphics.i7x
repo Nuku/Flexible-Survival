@@ -355,6 +355,8 @@ to inline_project (x - a figure name):
 			choose row y in table of game art;
 			if icon entry is x and artist entry is not listed in BlockList of player:
 				display x;
+				now ngraphics_currentartist is artist entry; [graphics processing]
+				update the status line;
 				break;
 
 [New Hybrid Project (Reverts to inline if NewGraphics disabled)]
@@ -373,13 +375,17 @@ to project (x - a figure name):
 						say "Graphics Debug - ICON ENTRY : [bold type][icon entry][roman type] [line break]";
 						say "Graphics Debug - ARTIST ENTRY : [bold type][artist entry][roman type] [line break]";
 						say "Graphics Debug - COLOR : [bold type][backgroundcolor entry][roman type] [line break]";
-						say "This is debug function, if you are seeing this by accident try typing 'graphics_debug' to toggle this off.[line break]";
+						say "This is developer debug information, if you are seeing this by accident try typing 'graphics_debug' to toggle this off.[line break]";
 					now the currently shown picture is x;
 					follow the current graphics drawing rule;
+					now ngraphics_currentartist is artist entry; [graphics processing]
+					update the status line;
 				else if formatrule entry is "inline_only":
 					if NewGraphicsDebugMode is true:
 						say "Graphics Debug - Inline Mode";
 					display x;
+					now ngraphics_currentartist is artist entry; [graphics processing]
+					update the status line;
 					break;
 				else:
 					if NewGraphicsDebugMode is true:
@@ -389,6 +395,8 @@ to project (x - a figure name):
 			choose row y in table of game art;
 			if icon entry is x and artist entry is not listed in BlockList of player:
 				display x;
+				now ngraphics_currentartist is artist entry; [graphics processing]
+				update the status line;
 				break;
 
 		[else if icon entry is x and formatrule entry is window_only:
