@@ -8,12 +8,8 @@ Version 1 of Zephyr Phone by Executaball begins here.
 Section 1 - Declarations and variables
 
 emap is a number that varies. emap is usually 0.
-[ 0 = Nav Map for Mall not enabled ]
-[ 1 = Nav Map for Mall is enabled ]
-
-emap_mall is a number that varies. emap is usually 0.
-[ 0 = Nav Map for Mall not enabled ]
-[ 1 = Nav Map for Mall is enabled ]
+[ 0 = Nav Map not enabled ]
+[ 1 = Nav Map is enabled ]
 
 zpc_inzone is a truth state that varies. zpc_inzone is false.
 [ true if player is currenting displaying an image. This is referenced to display the no signal 'error' message when the player leaves ]
