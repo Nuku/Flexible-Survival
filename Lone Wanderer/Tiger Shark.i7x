@@ -1,4 +1,4 @@
-Version 1 of Tiger Shark by Lone_Wanderer begins here.
+Version 1 of Tiger Shark by Lone Wanderer begins here.
 [Version 1 - New Creature]
 
 "Adds a unique Tiger Shark character to Flexible Survival's Monsters table"
@@ -178,7 +178,6 @@ to say Tiger Shark wins:
 		say "'Alright, that'll teach you to walk around this area you fucking lizard.'";
 	else:
 		say "     REMOVE ME";
-
 
 To say Tiger Shark loses:
 	if ts_warrior is true:
@@ -375,7 +374,7 @@ The usedesc of Devil's Purse is "[DevilsPurseUsing]";
 to say DevilsPurseUsing:
 	say "You take out the empty egg casing, and give it an experimental lick. Despite the smell its taste is pretty pleasant, like a mix of fish and something sweet that you cannot quite pin. You engulf it entirely in your mouth and are invested in licking and chewing along the rubbery membrane. After some time you end up swallowing the tough and slippery skin, content with the effects it may have on you.";
 	TigerSharkInfect;
-	decrease hunger of player by 5;
+	PlayerEat 5;
 
 instead of sniffing Devil's Purse:
 	say "Like any remains you'd pick up on the beach, the egg shell smells like fish and of the sea. It's not entirely pleasant.";
