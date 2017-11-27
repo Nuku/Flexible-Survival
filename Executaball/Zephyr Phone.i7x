@@ -146,5 +146,14 @@ carry out cheat_zpc_give:
 	say "CHEAT: ZPC added to inventory";
 	now carried of zpc is 1;
 
+[Cheat that gives freecred]
+cheat_freecred_give is an action applying to nothing.
+understand "freecred_cheat" as cheat_freecred_give.
+carry out cheat_freecred_give:
+	say "CHEAT: Added 100 freecred.";
+	increase freecred by 200;
+
+
+
 
 Zephyr Phone ends here.
