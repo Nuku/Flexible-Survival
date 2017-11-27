@@ -162,7 +162,7 @@ Carry out zephbuying:
 		say "You can't afford the [name entry], it costs [price entry] freecred.";
 		continue the action;
 	say "You purchase [name entry] for [price entry] creds.";
-	add name entry to invent of player;
+	add object entry to invent of player;
 	if name entry is "nanite collector", now nanitemeter is 2;
 	if name entry is "pepperspray", increase pepped by 1;
 	decrease freecred by price entry;
