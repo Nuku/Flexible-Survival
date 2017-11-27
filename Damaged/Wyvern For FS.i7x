@@ -846,7 +846,7 @@ to wyvore:
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 					increase humanity of player by 3;
 					if a random chance of 2 in 3 succeeds:
-						PlayerDrink by 2;
+						PlayerDrink 2;
 						PlayerEat 1;
 					else:
 						PlayerDrink 1;
