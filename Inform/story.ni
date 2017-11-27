@@ -722,8 +722,7 @@ left	central	right
 "Location: [the player's surroundings]"	"Time: [time of day] Lvl: [level of player]"	"HP:[HP of player]/[maxHP of player]"
 "Freecred: [freecred]"	"Hunger: [hunger of player] Thirst: [thirst of player] Libido: [libido of player]"	"Score:[score]/[maximum score]"
 "Sanity: [humanity of player]/100"	"Evac: [( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[if number of entries in childrenfaces > 0]  Kids: [number of entries in childrenfaces][end if]"	"XP:[XP of player]/[level up needed]"
-[" You are:[Player_Status],[Player_Gender_Status]"	""	""]
-
+""	"[if NewGraphicsInteger is 0] [else]Current image artist:[ngraphics_currentartist][end if]"	""
 
 to say exitlist:
 	repeat with nam running through valid directions:
@@ -5147,6 +5146,7 @@ Include Walkinmall by Ssely.
 Include Warehouse District by Kaleem Mcintyre.
 Include Warehouse Events by StripeGuy.
 Include Wereraptor for FS by Stripes.
+Include Zephyr Phone by Executaball.
 Include Zoo Events by Sarokcat.
 Include Zoo Events by Wahn.
 
@@ -5394,6 +5394,7 @@ Include Tenrec by StripeGuy.
 Include Thought Eater by Wahn.
 Include Tiger by Sarokcat.
 Include Tiger Cop for FS by Stripes.
+Include Tiger Shark by Lone Wanderer.
 Include Tigertaur by Sarokcat.
 Include Tigress Hooker for FS by Stripes.
 Include Trash Coon For FS by Stripes.
@@ -6279,8 +6280,8 @@ to say gsopt_start:
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	[Code for letting player select graphics window size]
 	if NewGraphics is true:
-		say "You have enabled the new graphics window. This will be on the right side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose this value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+		say "You have enabled the graphics side window. This will be on the right side of your screen and will always take up a proportion of the main screen.[line break]";
+		say "Please choose this proportion now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side window will take up. We recommend somewhere around 30.[line break]";
 		while 1 is 1:
 			say "(5-90)>[run paragraph on]";
 			get a number;
