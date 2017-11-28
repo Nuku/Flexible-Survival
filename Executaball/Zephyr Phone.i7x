@@ -1,5 +1,5 @@
 Version 1 of Zephyr Phone by Executaball begins here.
-[Incomplete - Not to be released]
+[v1 - 11/28/2017]
 
 "Adds a Zephyr mobile device to the game for navigation"
 
@@ -8,12 +8,8 @@ Version 1 of Zephyr Phone by Executaball begins here.
 Section 1 - Declarations and variables
 
 emap is a number that varies. emap is usually 0.
-[ 0 = Nav Map for Mall not enabled ]
-[ 1 = Nav Map for Mall is enabled ]
-
-emap_mall is a number that varies. emap is usually 0.
-[ 0 = Nav Map for Mall not enabled ]
-[ 1 = Nav Map for Mall is enabled ]
+[ 0 = Nav Map not enabled ]
+[ 1 = Nav Map is enabled ]
 
 zpc_inzone is a truth state that varies. zpc_inzone is false.
 [ true if player is currenting displaying an image. This is referenced to display the no signal 'error' message when the player leaves ]
@@ -145,6 +141,15 @@ understand "zpc_cheat" as cheat_zpc_give.
 carry out cheat_zpc_give:
 	say "CHEAT: ZPC added to inventory";
 	now carried of zpc is 1;
+
+[Cheat that gives freecred]
+cheat_freecred_give is an action applying to nothing.
+understand "freecred_cheat" as cheat_freecred_give.
+carry out cheat_freecred_give:
+	say "CHEAT: Added 100 freecred.";
+	increase freecred by 200;
+
+
 
 
 Zephyr Phone ends here.
