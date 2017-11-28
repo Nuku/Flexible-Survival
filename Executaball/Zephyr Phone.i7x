@@ -1,5 +1,5 @@
 Version 1 of Zephyr Phone by Executaball begins here.
-[Incomplete - Not to be released]
+[v1 - 11/28/2017]
 
 "Adds a Zephyr mobile device to the game for navigation"
 
