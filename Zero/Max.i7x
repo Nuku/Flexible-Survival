@@ -108,7 +108,7 @@ instead of conversing the Max:
 				now Complex is known;
 				move Max to Rec room;
 			else if maxq is 0:
-				say "Max waves you over as you enter the mall. 'How you being doing, good, well I've got a favor to ask of you.'[line break]'A while ago I was attacked by the hyena gang and they managed to steal something from me, trouble is, I'm busy with another job that has to be done quickly, would you mind getting it back for me, its a pendant like mine, only its blue instead of red.'";
+				say "Max waves you over as you enter the mall. 'How you being doing, good, well I've got a favor to ask of you.'[line break]'A while ago I was attacked by the hyena gang and they managed to steal something from me. Trouble is, I'm busy with another job that has to be done quickly. Would you mind getting it back for me? It's a pendant like mine, only it's blue instead of red.'";
 				now maxq is 1;
 			else if maxq is 1:
 				say "'Apologizing for your lack of progress you quickly head out once again to try and find the corgi's missing pendant, maybe if you hunt for the pendant you'll have more luck?'";

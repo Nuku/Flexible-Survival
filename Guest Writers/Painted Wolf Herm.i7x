@@ -47,23 +47,20 @@ to say beatpwh:
 				if cunts of player > 0:
 					say "     Lost in the lust of hir arousing milk, you don't protest as shi rolls you over and lines up hir throbbing cock with your pussy and mounts you. Hir throbbing, lupine meat sinks into you, spreading your wet folds open around hir animalistic penis. Shi growls softly and drives hirself fully into you, tying with you before unleashing hir lupine seed deep inside you. You moan loudly, drifting into a lustful haze. When you finally recover, shi has gone, leaving you with a warm, full feeling deep inside.[impregchance]";
 					infect "Painted Wolf Herm";
-					decrease thirst of player by 5;
+					PlayerDrink 5;
 					decrease libido of player by a random number between 5 and 15;
-					if thirst of player < 0, now thirst of player is 0;
 					if libido of player < 0, now libido of player is 0;
 				else:
 					say "     Lost in the lust of hir arousing milk, you don't protest as shi pulls off your cock and brings your mouth to hir throbbing, lupine cock. Shi rubs hir paws over your head as shi slides it into your mouth and starts fucking your face. The shi-wolf growls softly and drives hirself fully into you, stuffing hir knot in your mouth and pushing hir cock down your throat before unleashing hir lupine seed to flow down into your belly to mix with hir milk. You moan softly around it, drifting into a lustful haze. When you finally recover, shi has gone, leaving you with a warm, full feeling deep inside.";
 					infect "Painted Wolf Herm";
-					decrease thirst of player by 5;
+					PlayerDrink 5;
 					decrease libido of player by a random number between 5 and 15;
-					if thirst of player < 0, now thirst of player is 0;
 					if libido of player < 0, now libido of player is 0;
 			else:
 				say "     You press hir onto hir back and straddle hir hips, grinding your wet pussy down onto hir throbbing shaft. The shi-wolf howls in delight as you sink down onto hir cock. Shi does not resist your riding hir and squeezes hir paws over your hands as you start fondling hir four large breasts. Hir black nipples are plump and hard and you find yourself playing with them eagerly. As your arousal builds as hir scent gets thicker, you are drawn to lean in and licks those nipples, then start nursing from them. You taste hir milk leaking onto your tongue and you drink it down thirstily, feeling it warm your [bodytype of player] belly. The mottled wolf moves hir paws, bringing one to stroke your head as you nurse from hir as the other grabs your rear. Hir paws urge you to keep nursing and sliding over hir black rod, not that you need any encouragement for either. As you satisfy your thirst on hir milk, you drive yourself down hard onto hir cock, forcing hir knot into you so this sexy beast can tie with you. Your [cunt size desc of player] pussy clamps down around that thick bulb, milking at hir cock as you cum, drawing out as much seed as you can from hir. You can feel it flowing up into you, stuffing your pussy with hir heated semen as shi seeks to breed you. You moan softly as your orgasms pass, drifting into a lustful haze. When you finally recover, shi has gone, leaving you with a warm, full feeling deep inside.[impregchance]";
 				infect "Painted Wolf Herm";
-				decrease thirst of player by 5;
+				PlayerDrink 5;
 				decrease libido of player by a random number between 5 and 15;
-				if thirst of player < 0, now thirst of player is 0;
 				if libido of player < 0, now libido of player is 0;
 		else:
 			say "With a dominant howl, you throw your opponent to the ground, straddling the wolf herm's mouth as your hips wiggle in preparation. Smiling with seductive, passionate lust, you lower your hips to hir face and bury your own snout in the thick, pungent aroma lifting from the creature's groin. [if player is female]You smile sweetly as your tongue strokes hir length, your mouth filled with that masculine flavor. Your nethers tingle as they are tended to, your mind filling with the bliss of having a thick, meaty length to suckle upon. With a moan, you press forward, managing to take hir cock all the way inside your mouth, slowly savoring that wonderful sensation until, with a long, delightful spurt, your mouth is flooded with semen that tingles as it works into your [bodytype of player] belly[else]You slowly lap at hir feminine lips, grinding your nethers against the herm's face as you taste the sweet fluids the creature offers. Nestling deep into that slit, the slightest taste is enough to make you moan, craving more as you spread hir thick, slimy lips around your tongue. With a happy moan you press several fingers deeper into hir, probing hir most sensitive spots as shi takes four fingers inside of hir. Shi growls and grips your head as hir walls clench down on your fingers and your mouth is filled with the sweet, passionate, feminine nectar you crave[end if]. Hir long, lupine tongue plays across your groin, lapping up your cum as you orgasm while swallowing down hir herm juices.";

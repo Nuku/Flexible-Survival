@@ -255,10 +255,9 @@ to say eatroastednuts:
 		say "You feel a little better having eaten[if jfj is 1] a tasty snack[end if].";
 	if "Junk Food Junky" is listed in feats of player:
 		if hunger of player > 14, increase score by 1;
-		decrease hunger of player by 3;
-	decrease hunger of player by 12;
+		PlayerEat 3;
+	PlayerEat 12;
 	increase thirst of player by 3;
-	if hunger of player < 0, now hunger of player is 0;
 
 
 [	HP of Macadamia		]

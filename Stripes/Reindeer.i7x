@@ -146,10 +146,8 @@ The usedesc of egg nog is "[nogging]";
 
 to say nogging:
 	say "[line break]     You drink down the tasty egg nog, feeling the warmth of the brandy-rich flowing into you. You are filled with a burst of the holiday spirit and a lustful longing for someone to share this feeling with. You feel a little better all around because of it even as the warmth changes from that of the alcohol to the warmth of your activated infection.";
-	decrease hunger of player by 3;
-	if hunger of player < 0, now hunger of player is 0;
-	decrease thirst of player by 6;
-	if thirst of player < 0, now hunger of player is 0;
+	PlayerEat 3;
+	PlayerDrink 6;
 	increase HP of player by ( Stamina of player / 2 );
 	if HP of player > maxHP of player, now HP of player is maxHP of player;
 	increase morale of player by a random number from 0 to 1;

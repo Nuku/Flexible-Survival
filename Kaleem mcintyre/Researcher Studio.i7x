@@ -128,39 +128,38 @@ carry out Omioteatime:
 	if TEA is 1:
 		say "Omio nearly starts to dance around the living room in joy as you ask for some tea. Quickly going into her kitchen the redhead puts on a pot just as you settle down onto Omio's comfy sofa in wait for the tea to boil. Almost ten minutes later Omio returns with two small cups of steaming brew settled on top of a large silver tray with a smile gracing her face. 'I hope you like my homemade brand of mixed ginger, chamomile and honey.' Graciously thanking the redhead for her kind offer you wait for your hostess to sit next to you, placing the tray on her lap, before grabbing one of the ceramic cups and then casually blowing across the surface steaming amber liquid. Once you are certain that the heat won't scald your tongue you tip the porcelain up to your lips to taste the herbal liquid.";
 		say "The pleasant taste of herbs mixed with the spicy tang of ginger has you murring contently as you let the lukewarm tea flow soothingly down your throat. Settling yourself back further into the sofa you sigh happily as you find your thoughts all but fading away as you let the cool wind of the plains blow in from the open window. Omio quietly sits beside you sipping her own tea. Her fond gaze slips right by your notice.";
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		decrease libido of player by 5;
 		increase humanity of player by 3;
 		increase score by 1;
 	else if TEA is 2:
 		say "Omio nods to you and then goes to fix the tea, though curiously enough, she does so very, very quietly. Not sure of what has happen to upset the redhead you cautiously sit down onto her couch and then settle back while waiting for the tea to be made. The sounds of bubbling and hissing coming from the kitchen helps your senses to calm down a little bit, but it's only when Omio returns with a smile onto her face that you know that all is well. Or close enough to it. 'I hope you like this combination of peach and lemon mixed with a touch of vanilla. I used the fruits from my garden to make this particular blend.' Omio blushes at that and you nod in gratefulness before accepting the cup she hands you.";
 		say "Breathing in the warm vapors you let your mind drift for a moment before blowing over the tea to cool it off. Once you are sure you won't burn your tongue on the liquid you tip the porcelain up to your lips and then begin drinking your offered beverage. The warmth of the tea mixed with the sweetness of fruit and honey has you chuckling as your insides feel like they're receiving a tender massage. Omio decorously smiles over at you from where she has sat herself onto the sofa, but you don't take much notice at the moment as you hum quietly into your drink.";
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		decrease libido of player by 8;
 		increase humanity of player by 4;
 		increase score by 1;
 	else if TEA is 3:
 		say "Omio chuckles at you somewhat playfully before skipping her way into the kitchen to fix you your tea. Feeling slightly embarrassed by the girlishly way the other is behaving you drop yourself down onto the sofa and then hum to yourself in wonder. It's not but a few minutes later when Omio returns with two cups placed on a silver tray and goofy grin held tightly onto her face. 'Please enjoy this offered cup of chamomile, strawberry, pineapple mixed with rock sugar crystals.' You cautiously smile to the redhead and then carefully take one of the cups of tea.";
 		say "Seeing Omio's bright golden eyes shining down at you from where she stands you flip your eyes to the steaming orangey coloured liquid and then blow over it to cool it off. Opening your mouth and then flipping the ceramic cup upwards you swallow down the tea... and to your surprise you find that the taste is wonderful! The fruity taste mixed with the saccharine sweetness of the rock sugar has you chuckling despite not exactly feeling so giddy just a moment ago. Omio giggles herself and then sits down besides you with her own cup. Before long the two of you are snickering like two children sharing a secret as you look back and forth at each other from over the rims of your respective cups.";
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		decrease libido of player by 10;
 		increase humanity of player by 6;
 		increase score by 1;
 	else if TEA is 4:
 		say "Omio hums into the back of her throat as she goes to the kitchen to fix you your tea. Settling yourself down onto the redhead's couch you silently wonder what's going through the Omio's mind at the moment as her silence is somewhat... unusual. It takes barely ten minutes before the tea is done, but that proves just enough time for you to fall close to sleep as you let the billowing wind coming in from the open patio door caress over and across your [facename of player] face. Sighing in pleasant harmony you barely notice it when Omio comes over to place a cup of steaming tea into your face. However, the warm scents of cloves, honey, jasmine and raspberries all mixed together wafting underneath your nose has you blinking as you suddenly come back to earth.";
 		say " Turning you look up at Omio and then down to the offered cup you thank the redhead for her the beverage and the take the ceramic drinking utensil into hand. Blowing over the surface of the crimson liquid you smile when the warm scent seeps down into your chest. Looking to Omio and thanking her once again with your eyes instead of your lips you pour the tea down into your throat and then let the warm drink pool into your belly. The taste is almost divine and licking inside of the inner dimension of the ceramic cup you find yourself blushing slightly when you unexpectedly hear a playful giggle echo next to you. Not even having to look up to know that the redhead is laughing at you, you finish off your tea and then turn your head away from Omio to look out at the wind rolling across the grass of the open plains.";
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		decrease libido of player by 5;
 		increase humanity of player by 4;
 		increase score by 1;
 	else if TEA is 5:
 		say "Omio seems to be in somewhat of a sour mood, but that doesn't stop the redhead from smiling at you as she walks off to make that requested tea. Sitting back onto the redhead's plush sofa you wait quietly for the tea to be ready, silently you hope that the redhead will be in better spirits when she returns. When the smell of brewing herbs starts to waft throughout the air you find yourself humming pleasurably as the scent flows into you. When the redhead returns to the living room it's with two cups placed carefully onto a small tray perched in between her tanned hands. 'This is a mixed blend of peppermint and jasmine and sugar. I hope you like.' There's something in the redhead's words that make you nod somewhat hesitantly, before taking one of the twin porcelain cups.";
 		say "Sniffing the brew and then blowing over the steaming liquid you carefully lift the cup up to your lips and then take a sip. Though slightly bitter you find yourself not minding in the least as the sweet taste of the sugar that follows makes up for it. Omio chuckles when you smack your lips in delight of the sweet aftertaste. When you turn to regard the redhead you blush slightly when you notice her golden eyes gazing at you fondly. 'Thank you for having tea with me right now, I really appreciate the company.' Omio whispers before taking a swallow of her own teal coloured drink.";
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		decrease libido of player by 5;
 		increase humanity of player by 5;
 		increase score by 1;
-	if thirst of player < 0, now thirst of player is 0;
 	if libido of player < 0, now libido of player is 0;
 	if humanity of player > 100, now humanity of player is 100;
 

@@ -109,7 +109,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		increase pldamagebonus by damagebonus of x;
 	if weapon object of player is unwieldy:
 		decrease plhitbonus by the absolute value of ( scalevalue of player - objsize of weapon object of player) to the nearest whole number;
-	if weapon object of player is bo staff:
+	if weapon object of player is bo staff or weapon object of player is wukongStaff:
 		if "Martial Artist" is listed in feats of player, increase plhitbonus by 1;
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	if weapon object of player is chair and name entry is "Wrestling Wolf":
@@ -1214,11 +1214,9 @@ to win:
 			increase HP of player by ( 2 * lev entry ) / 3;
 		else:
 			increase HP of player by lev entry;
-		decrease thirst of player by 3;
-		decrease hunger of player by 1;
+		PlayerDrink 3;
+		PlayerEat 1;
 		if HP of player > maxHP of player, now HP of player is maxHP of player;
-		if thirst of player < 0, now thirst of player is 0;
-		if hunger of player < 0, now hunger of player is 0;
 	if ok is 1 and "Control Freak" is listed in feats of player:
 		say "Do you want to perform after combat scene?";
 		if the player consents:

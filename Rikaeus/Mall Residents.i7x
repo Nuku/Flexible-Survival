@@ -149,17 +149,13 @@ to say ANewFriend:
 			say "     [line break]";
 			say "     With a gentle movement, you lay your hand upon Scotty's, surprising him and causing the guy to look at you in confusion. You give him a nice warm smile and tell him that it doesn't matter now, that he has you as a friend now, doesn't he? The goat boy's face appears to brighten up quickly as a matching smile shows up on his face. 'You're right, I do have you now,' he says, turning his hand over to grasp a hold of yours. He squeezes your hand softly, as if to confirm that you're there, that you're real. You don't really know exactly how lonely Scotty must have been back in Britain, but you're here for him now. Shortly after you two finish eating and head back to the lockerroom, the both of you holding hands the entire time. You tell him that you two should do something else next time, spice it up. 'Sure! That'd be fun,' he says with a happy smile. You then say your goodbyes and leave the lockerroom.";
 			now ScottyRelationship is 3; [met, went on lunch date + held hands]
-			decrease hunger of player by 30;
-			if hunger of player < 0:
-				now hunger of player is 0;
+			PlayerEat 30;
 			move player to Mall West Wing;
 		else:
 			say "     [line break]";
 			say "     You mentally shake your head, deciding against it. So instead you two sit there quietly, the mood suddenly somber with nothing to talk about. Scotty and you eat your food and then clean up, heading back to the lockerroom shortly after. There he gives you a soft smile and apologizes. 'I'm sorry that our lunch date became a bit awkward,' the goat boy says. You tell him it's fine and say that you should do it again some day. That appears to brighten his smile up as he nods his head. 'Yeah that would be great,' he says before you leave shortly after.";
 			now ScottyRelationship is 2; [met, went on lunch date]
-			decrease hunger of player by 30;
-			if hunger of player < 0:
-				now hunger of player is 0;
+			PlayerEat 30;
 			move player to Mall West Wing;
 	else if ScottyRelationship is 2: [met, went on lunch date, repeatable]
 		say "     Deciding now would be a good time to ask Scotty for that lunch date, you enter the lockerroom. The goat boy is in his spot, seemingly reading a book in his pajamas. When you approach him he turns towards you with a smile. 'Hey there, what brings you here?' he asks. You ask him if he's up for a lunch date which prompts him to smile at you and nod eagerly. 'Sure! Just let me get ready,' the guy says, moving to go behind the lockers with clothes in hand to change. Two to three minutes later he returns, dressed in a shirt and jeans. The two of you then head off to the food court where you both get what you had last time. While eating, you notice the same sad smile on Scotty's face from before.";
@@ -171,17 +167,13 @@ to say ANewFriend:
 			say "     [line break]";
 			say "     You promptly grab a hold of Scotty's hand and squeeze it softly. This surprises him for a second, him turning a confused look at you. You elaborate, saying that he shouldn't feel sad, after all he has you for a friend. The transition on his face is rather instantaneous. The sad smile instantly vanishes, replaced by a blissful, happy one. '...Thanks for that,' Scotty says warmly. Instead of saying anything, you just smile and nod at him. The two of you sit like that, eating you food and just enjoying the warmth that both of you feel in your chests. When you finish and leave, the two of you can be seen holding hands on your way back to the lockerroom. Once there, the goat boy turns to you, a smile that you're coming to like on his face. 'Maybe next time we could do something different?' he asks you tentatively. You tell him that you'd love to, which appears to make his eyes brighten up in even more joy. The two of you say your goodbyes to each other before you leave the lockerroom.";
 			now ScottyRelationship is 3; [met, went on lunch date + held hands]
-			decrease hunger of player by 30;
-			if hunger of player < 0:
-				now hunger of player is 0;
+			PlayerEat 30;
 			move player to Mall West Wing;
 		else:
 			say "     [line break]";
 			say "     You once more decide against it and much like last time, the entire date is filled with and awkward silence and a somber mood. The two of you finish your food and clean up, heading back to the lockeroom when you're done. Scotty once more gives you an apologetic look. 'I'm really sorry that the same thing happened on this date. I just can't stop thinking about what I'd do if I didn't have you,' he murmurs. You don't really know what to say so instead you tell him it's okay. The goat boy just nods and you say goodbye before leaving the lockerroom.";
 			move player to Mall West Wing;
-			decrease hunger of player by 30;
-			if hunger of player < 0:
-				now hunger of player is 0;
+			PlayerEat 30;
 
 to say SheepShaving:
 	if SonnyRelationship is 0 or SonnyRelationship is 1 or SonnyRelationship is 100: [introduction + having refused before]

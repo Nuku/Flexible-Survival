@@ -74,20 +74,20 @@ Instead of Resolving Domincounter:
 	if sc is 2:
 		Say "Hearing the sounds of a large fight going on nearby, you decide to check it out. What you find, however, is not what you were expecting. The corgi from before[if corgitalk > 1], Max,[end if] is surrounded by a group of twenty sluts and dominators. While it looks like he's handling himself pretty well, you could help?[line break](NOTE: Consenting can lead to a end of game situation if you are on the corgi's bad side.)[line break]";
 		if the player consents:
-			say "Deciding to help the corgi out you ram a dominator that was trying to sneak behind the corgi, knocking it to the floor, [if corgitalk > 1]Max flashes you a grin before slamming his fist into a rabbit's gut [else]the corgi flashes you a suspicious look but gives you a quick nod before slamming his fist into a rabbit's gut [end if] turning back to your own opponent you find a very ticked off dominator staring back at you.[line break]";
+			say "Deciding to help the corgi out, you ram a dominator that was trying to sneak behind the corgi, knocking it to the floor. [if corgitalk > 1]Max flashes you a grin[else]the corgi flashes you a suspicious look but gives you a quick nod[end if] before slamming his fist into a rabbit's gut. Turning back to your own opponent, you find a very ticked off dominator staring back at you.[line break]";
 			now massdomfightwin is 1;
 			challenge "Male Dominator";
 			if lost is 1:
 				say "[massdomfightloss]";
 				now massdomfightwin is 0;
 			else:
-				say "Having dealt with the first dominator you barely dodge out of the way as a slut comes barreling towards you![line break]";
+				say "Having dealt with the first dominator, you barely dodge out of the way as a slut comes barreling towards you![line break]";
 				challenge "Male Slut";
 				if lost is 1:
 					say "[massdomfightloss]";
 					now massdomfightwin is 0;
 				else:
-					say "Moving towards another slut, however before you can get to it a small black whip wraps around it pulling it behind you, turning around you find that the whip is attached to [if corgitalk > 1]Max[else]the corgi[end if][']s wrist, as the slut comes sailing towards him, he flicks his wrist and begins using the slut as a makeshift wrecking ball,[line break]before you can think on this however another dominator comes barreling towards you!";
+					say "Moving towards another slut, however before you can get to it a small black whip wraps around it pulling it behind you, turning around you find that the whip is attached to [if corgitalk > 1]Max's[else]the corgi's[end if] wrist, as the slut comes sailing towards him, he flicks his wrist and begins using the slut as a makeshift wrecking ball,[line break]before you can think on this however another dominator comes barreling towards you!";
 					challenge "Male Dominator";
 					if lost is 1:
 						say "[massdomfightloss]";

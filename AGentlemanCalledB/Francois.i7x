@@ -805,8 +805,7 @@ to say lollicockGet:
 				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 		else:
 			say "a rumbling builds in your belly. Clearly your body doesn't agree with something about the treat.";
-		decrease hunger of player by 5;
-		if hunger of player < 0, now hunger of player is 0;
+		PlayerEat 5;
 		if lollicockCheck is 0:
 			say "	When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
@@ -882,8 +881,7 @@ to say boysenberry blossom Use:
 		increase cock length of player by a random number from 1 to 2;
 		Follow the cock descr rule;
 		say " you savor the fruity pastry as a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin, your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random] [one of]engorging[or]swelling[or]throbbing[at random] as it gains[else][one of]cocks[or]penises[or]shafts[or]malenesses[at random] [one of]engorging[or]swelling[or]throbbing[at random] as they gain[end if] in length, becoming [descr]";
-	decrease hunger of player by 5;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 5;
 
 bleuettonne is a grab object. It is a part of the player.
 bleuettonne has a usedesc "[bleuettonne Use]".
@@ -903,8 +901,7 @@ to say bleuettonne Use:
 		increase cock width of player by a random number from 1 to 2;
 		Follow the cock descr rule;
 		say " as you savor the mingling chocolate and fruit flavors a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as your [one of]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] and grow larger, your flesh growing taught with the expansion, leaving you with [ball size]";
-	decrease hunger of player by 5;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 5;
 
 crème abondante is a grab object. It is a part of the player.
 crème abondante has a usedesc "[crème abondante Use]".
@@ -929,8 +926,7 @@ to say crème abondante Use:
 			follow the breast descr rule;
 			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]";
 		say ".";
-	decrease hunger of player by 5;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 5;
 
 muffin muffin is a grab object. It is a part of the player.
 muffin muffin has a usedesc "[muffin muffin Use]".
@@ -952,8 +948,7 @@ to say muffin muffin Use:
 			increase cunt width of player by 1;
 		Follow the cunt descr rule;
 		say ". As you swallow the last bite, a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin, your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorging[or]swelling[or]throbbing[at random] as it grows[else][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorging[or]swelling[or]throbbing[at random] as they grow[end if], becoming [descr].";
-	decrease hunger of player by 5;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 5;
 
 lollicock is a grab object. It is a part of the player.
 lollicock has a usedesc "[lollicock Use]".
@@ -988,8 +983,7 @@ to say lollicock Use:
 				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 		else:
 			say "you are filled with a pleasant warmth, a subtle afterglow filling your body after the tasty treat.";
-	decrease hunger of player by 5;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 5;
 
 dragon moelleux is a grab object. It is a part of the player. it is not temporary. it is fast.
 The usedesc of dragon moelleux is "[dragonmoelleuxuse]".
@@ -1067,8 +1061,7 @@ the scent of gingerbread is "The gingerbread cookie smells like cinnamon and gin
 to say gingerbread Use:
 	say "You bite into the cookie with a satisfying crunch, devouring the small gingerbread man in a few quick bites.";
 	gingerbreadinfect;
-	decrease hunger of player by 3;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 3;
 
 to gingerbreadinfect:
 	repeat with y running from 1 to number of filled rows in table of random critters:
@@ -1095,7 +1088,7 @@ to say cheesecake Use:
 			if cheesecakemode is 1 and player is cheesecakebodied:
 				say "     After your large serving of the delicious cake, your belly rumbles as your cheesecake body shifts and swells, becoming plump and rubenesque.";
 			now cheesecakemode is 0;
-			decrease hunger of player by 3;
+			PlayerEat 3;
 		else:
 			say "     Keeping your gluttony in check, you pull only one slice of the tempting cheesecake from your bag, carefully unwrapping it and savoring the rich strawberry flavour in a few small bites.";
 			cheesecakeinfect;
@@ -1110,8 +1103,7 @@ to say cheesecake Use:
 		if cheesecakemode is 0 and player is cheesecakebodied:
 			say "     Indulging in only a small serving of the rich cheesecake, your belly rumbles as your plump confectionary body slims down to become thin and sexy.";
 		now cheesecakemode is 1;
-	decrease hunger of player by 3;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 3;
 
 to cheesecakeinfect:
 	repeat with y running from 1 to number of filled rows in table of random critters:
