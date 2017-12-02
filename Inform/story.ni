@@ -722,6 +722,7 @@ left	central	right
 "Location: [the player's surroundings]"	"Time: [time of day] Lvl: [level of player]"	"HP:[HP of player]/[maxHP of player]"
 "Freecred: [freecred]"	"Hunger: [hunger of player] Thirst: [thirst of player] Libido: [libido of player]"	"Score:[score]/[maximum score]"
 "Sanity: [humanity of player]/100"	"Evac: [( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[if number of entries in childrenfaces > 0]  Kids: [number of entries in childrenfaces][end if]"	"XP:[XP of player]/[level up needed]"
+""	"[if NewGraphicsInteger is 0] [else]Current image artist: [ngraphics_currentartist][end if]"	""
 
 to say exitlist:
 	repeat with nam running through valid directions:
@@ -834,6 +835,10 @@ Flightlist is a marker. [list of infections w/flight capability]
 when play begins:
 	add { "Wyvern", "Reindeer", "Pegasus", "Dragontaur", "Dracovixentaur", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame Draken", "Fire Sprite", "Yamato Dragoness", "Yamato Dragon", "Snow Bat", "Bald Eagle", "Fluffy Owl", "Hermaphrodite Gryphon", "Hawkman", "Harpy", "Vulpogryph", "Bird of Paradise", "Black Wasp", "Drone Wasp", "Butterfly", "Mothgirl" } to infections of Flightlist;
 
+Swimlist is a marker. [list of infections capable of swimming underwater]
+when play begins:
+	add { "Feral Sea Dragon", "Feral Sea Dragoness", "Sewer Gator", "Sea Otter", "Bottlenose Toy", "Platypus", "Pirate Shark" } to infections of Swimlist;
+
 Part 2 - Rules
 
 First for constructing the status line (this is the bypass status line map rule):
@@ -871,6 +876,7 @@ carry out hunting:
 	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and companion of player is not mouse girl:		[hunted by the mouse collective]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
+			if name entry matches the text "Mental Mouse", case insensitively:
 				add y to q;
 				add y to q;
 				if "Like Attracts Like" is listed in feats of player:
@@ -883,6 +889,7 @@ carry out hunting:
 		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
+				if name entry matches the text "Black Wasp", case insensitively:
 					add y to q;
 					if "Like Attracts Like" is listed in feats of player:
 						add y to q;
@@ -1454,6 +1461,7 @@ carry out vialing:
 	now monster is 0;
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
+		if name entry matches the text target, case insensitively:
 			now monster is y;
 			break;
 	if monster is 0:
@@ -1948,8 +1956,6 @@ To process (X - a grab object):
 			if hunger of player > 8:
 				increase score by 2;
 			PlayerEat 9;
-			decrease hunger of player by 9;
-			if hunger of player < 0, now hunger of player is 0;
 			say "You eat the food, feeling a little disappointed it's not junk food!";
 			if morale of player < 0:
 				increase morale of player by 10;
@@ -1959,8 +1965,6 @@ To process (X - a grab object):
 			if hunger of player > 11:
 				increase score by 4;
 			PlayerEat 12;
-			decrease hunger of player by 12;
-			if hunger of player < 0, now hunger of player is 0;
 			say "You feel less hungry after wolfing down some food, yum!";
 			if morale of player < 0:
 				increase morale of player by 30;
@@ -1968,14 +1972,11 @@ To process (X - a grab object):
 				say "You feel better having eaten.";
 	if x is chips:
 		if labhost > 0 and bodyname of player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
-			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something. There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole. You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body. Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
 			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something.  There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole.  You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body.  Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
 		else if "Junk Food Junky" is listed in feats of player:
 			if hunger of player > 14:
 				increase score by 5;
 			PlayerEat 15;
-			decrease hunger of player by 15;
-			if hunger of player < 0, now hunger of player is 0;
 			say "Snack time!  You wolf down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random] with delight.  YUM!";
 			if morale of player < 0:
 				increase morale of player by 36;
@@ -1986,8 +1987,6 @@ To process (X - a grab object):
 			if hunger of player > 5:
 				increase score by 2;
 			PlayerEat 6;
-			decrease hunger of player by 6;
-			if hunger of player < 0, now hunger of player is 0;
 			say "You feel less hungry after wolfing down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random], yum!";
 			if morale of player < 0:
 				increase morale of player by 15;
@@ -1997,8 +1996,6 @@ To process (X - a grab object):
 		if hunger of player > 5:
 			increase score by 2;
 		PlayerEat 6;
-		decrease hunger of player by 6;
-		if hunger of player < 0, now hunger of player is 0;
 		say "You slurp up the neon colored goo and find that it tastes delicious, and even helps slake your hunger somewhat as you chew at it, mmm...";
 		if morale of player < 0:
 			increase morale of player by 15;
@@ -2011,8 +2008,6 @@ To process (X - a grab object):
 				if thirst of player > 15:
 					decrease score by ( thirst of player minus 15 ) divided by 3;
 			PlayerDrink 15;
-			decrease thirst of player by 15;
-			if thirst of player < 0, now thirst of player is 0;
 			say "You feel a little less thirty after drinking some bland water!";
 			if morale of player < 0:
 				increase morale of player by 20;
@@ -2024,8 +2019,6 @@ To process (X - a grab object):
 				if thirst of player > 25:
 					decrease score by ( thirst of player minus 25 ) divided by 3;
 			PlayerDrink 25;
-			decrease thirst of player by 25;
-			if thirst of player < 0, now thirst of player is 0;
 			say "You feel less thirsty after guzzling some water, yum!";
 			if morale of player < 0:
 				increase morale of player by 62;
@@ -2038,8 +2031,6 @@ To process (X - a grab object):
 				if thirst of player > 15:
 					decrease score by ( thirst of player minus 15 ) divided by 3;
 			PlayerDrink 15;
-			decrease thirst of player by 15;
-			if thirst of player < 0, now thirst of player is 0;
 			say "You feel a little less thirty after drinking some bland water!";
 			if morale of player < 0:
 				increase morale of player by 20;
@@ -2051,8 +2042,6 @@ To process (X - a grab object):
 				if thirst of player > 25:
 					decrease score by ( thirst of player minus 25 ) divided by 3;
 			PlayerDrink 25;
-			decrease thirst of player by 25;
-			if thirst of player < 0, now thirst of player is 0;
 			say "You feel less thirsty after guzzling some water, yum!";
 			if morale of player < 0:
 				increase morale of player by 62;
@@ -2068,9 +2057,6 @@ To process (X - a grab object):
 				if thirst of player > 30:
 					decrease score by ( thirst of player minus 30 ) divided by 3;
 			PlayerDrink 30;
-			say "Awesome! Soda! You down the delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if].  YUM!";
-			decrease thirst of player by 30;
-			if thirst of player < 0, now thirst of player is 0;
 			say "Awesome!  Soda!  You down the delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if].  YUM!";
 			if morale of player < 0:
 				increase morale of player by 75;
@@ -2082,10 +2068,8 @@ To process (X - a grab object):
 				increase score by thirst of player divided by 3;
 				if thirst of player > 12:
 					decrease score by ( thirst of player minus 12 ) divided by 3;
-			decrease thirst of player by 12;
-			if thirst of player < 0, now thirst of player is 0;
-			say "You feel less thirsty after guzzling some soda, [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if] yum!";
 			PlayerDrink 12;
+			say "You feel less thirsty after guzzling some soda, [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if] yum!";
 			if morale of player < 0:
 				increase morale of player by 30;
 				if morale of player > 0, now morale of player is 0;
@@ -2094,13 +2078,9 @@ To process (X - a grab object):
 	if x is gryphon milk:
 		say "The milk is thick, like a shake, but warmer, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
 		PlayerDrink 15;
-		decrease thirst of player by 15;
-		if thirst of player < 0, now thirst of player is 0;
 	if x is dog milk:
 		say "Somehow still warm, you guzzle it down without thinking too hard about its origins. A prickly warmth fills your belly as the cream flows along your gullet.";
 		PlayerDrink 15;
-		decrease thirst of player by 15;
-		if thirst of player < 0, now thirst of player is 0;
 		repeat with Z running from 1 to number of filled rows in table of random critters:
 			choose row Z from the table of random critters;
 			let zed be "collie";
@@ -3256,6 +3236,7 @@ to attributeinfect:		[sets the player values from the new attributes]
 To attributeinfect (x - text):
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
+		if name entry matches the text x, case insensitively:
 			now monster is y;
 			attributeinfect;
 			break;
@@ -3458,6 +3439,7 @@ To fight:
 	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not tamed:		[hunted by the mouse collective]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
+			if name entry matches the text "Mental Mouse", case insensitively:
 				add y to q;
 				add y to q;
 				if "Like Attracts Like" is listed in feats of player:
@@ -3470,6 +3452,7 @@ To fight:
 		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
+				if name entry matches the text "Black Wasp", case insensitively:
 					add y to q;
 					if "Like Attracts Like" is listed in feats of player:
 						add y to q;
@@ -3896,6 +3879,7 @@ This is the turnpass rule:
 		if z is 1:
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y from the table of random critters;
+				if name entry matches the text bodyname of player, case insensitively:
 					if ( there is no resbypass in row monster of table of random critters or resbypass entry is false ) and ( there is no non-infectious in row monster of table of random critters or non-infectious entry is false ):
 						now monster is y;
 						say "You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
@@ -3958,14 +3942,17 @@ This is the turnpass rule:
 	if ( a random number from 1 to 20 ) > ( a random number between 1 and ( stamina of player + 1 ) ):
 		increase hunger of player by 1;
 		if number of entries in childrenfaces > 0 and a random chance of 1 in 2 succeeds, increase hunger of player by 1;
-		if "Spartan Diet" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease hunger of player by 1;
+		if "Spartan Diet" is listed in feats of player and a random chance of 1 in 2 succeeds:
+			PlayerEat 1;
 	if "Vore Predator" is listed in feats of player:
 		increase hunger of player by a random number between 1 and 5;
-		if "Spartan Diet" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease hunger of player by 1;
+		if "Spartan Diet" is listed in feats of player and a random chance of 1 in 2 succeeds:
+			PlayerEat 1;
 	if a random number from 1 to 25 > ( a random number between 1 and ( stamina of player + 1 ) ):
 		increase thirst of player by 3;
 		if number of entries in childrenfaces > 0, increase thirst of player by 1;
-		if "Spartan Diet" is listed in feats of player, decrease thirst of player by 1;
+		if "Spartan Diet" is listed in feats of player:
+			PlayerDrink 1;
 	if "Automatic Survival" is listed in feats of player:
 		now thirst of player is 0;
 		now hunger of player is 0;
@@ -4781,6 +4768,7 @@ carry out scavenging:
 To Challenge (x - text):
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y from the table of random critters;
+		if name entry matches the text x, case insensitively:
 			now monster is y;
 			now monsterHP is HP entry;
 			challenge;
@@ -4792,6 +4780,7 @@ To Infect (x - text):
 		continue the action;
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
+		if name entry matches the text x, case insensitively:
 			now monster is y;
 			let reset be 0;
 			if researchbypass is 1 and non-infectious entry is true:
@@ -4822,10 +4811,12 @@ to weakrandominfect:			[does not bypass researcher protection]
 to setmonster ( x - text ):		[puts an infection (named x) as lead monster for later use]
 	let found be 0;
 	choose row monster in the table of random critters;
+	if name entry matches the text x, case insensitively:
 		now found is 1;
 	else:
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
+			if name entry matches the text x, case insensitively:
 				now found is 1;
 				now monster is y;
 				break;
@@ -5020,6 +5011,7 @@ Include Patron Credits by Nuku Valente.
 Include Pets by Core Mechanics.
 Include Pregnancy by Core Mechanics.
 Include Presets by Core Mechanics.
+Include Status View by Core Mechanics.
 Include Text Capture by Eric Eve.
 
 [Locations]
@@ -5027,6 +5019,7 @@ Include Apocalypse Store by DrGryphon.
 Include Approaching the Capitol Building for FS by Guest Writers.
 Include Astroslide Field Locker-room by Kernog.
 Include Astroslide Football Field by Kernog.
+Include Atlantis by Rikaeus.
 Include Beach by Speedlover.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
@@ -5064,6 +5057,7 @@ Include Zephyr Inc by Nuku Valente.
 Include Zoo by Hellerhound.
 
 [Quests & Events]
+Include AG Beach Events by Aureas Gigas.
 Include Ancient Tome by Wahn.
 Include Additional Tome Scenes by Dys.
 Include Apartment 319 by Kaleem Mcintyre.
@@ -5080,6 +5074,7 @@ Include Catapult Encounter by Hellerhound.
 Include Central Library by Stripes.
 Include CEOutside by Stripes.
 Include CEPark by Stripes.
+Include Chance Meetings by Kernog.
 Include Combat Helmet by Nuku Valente.
 Include Control Pills by Hellerhound.
 Include Disorganization by Kaleem mcintyre.
@@ -5156,6 +5151,7 @@ Include Stable Related Quests by Sarokcat.
 Include Storage Locker for FS by Core Mechanics.
 Include Story Skipper by Core Mechanics.
 Include Sugar Feud by AGentlemanCalledB.
+Include Tidepool Event by FwuffyMouse.
 Include Toy Store by Hellerhound.
 Include Underground Events by Wahn.
 Include Walkinmall by Ssely.
@@ -5364,6 +5360,7 @@ Include Rabbit Pack for FS by Guest Writers.
 Include Ram by Sarokcat.
 Include Random Shemale Smooth Collie For Fs by Guest Writers.
 Include Random Tentacle Horror For Fs by Guest Writers.
+Include Rat Twins by Kernog.
 Include Razorback Boar by Wahn.
 Include Red Oni for FS by Stripes.
 Include Reindeer by Stripes.
@@ -5504,6 +5501,7 @@ Include Janice by Sarokcat.
 Include Jenna by Rikaeus.
 Include Jimmy by Stripes.
 Include Joanna by Stripes.
+Include Julian by Prometheus.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Kristen by Stripes.
@@ -5573,6 +5571,7 @@ Include Vent Fox by Dys.
 Include Wendy by Wahn.
 Include Wild Mustang by Wahn.
 Include Yolanda by Stripes.
+Include Zeke by Qazarar.
 Include Zephias by Wahn.
 Include Zigor by Stripes.
 
