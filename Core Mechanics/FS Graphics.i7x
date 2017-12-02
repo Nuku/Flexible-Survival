@@ -286,6 +286,8 @@ Figure of DukeShawnFuck_icon is the file "Duke&Shawn.jpg".	[Shawn topping Duke s
 Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg".	[The Down Under Pub's floor show.]
 Figure of EricRidingRane_icon is the file "Rane&Eric3.jpg".   [make-up sex]
 Figure of Eric_Urik_naked_icon is the file "Eric_Urik_naked.jpg".
+Figure of Boy_To_Fox_Shampoo1_icon is the file "Boy_To_Fox_Shampoo1.jpg".
+Figure of Boy_To_Fox_Shampoo2_icon is the file "Boy_To_Fox_Shampoo2.jpg".
 Figure of Fang_Candy_icon is the file "Fang_Candy_ig.jpg".	[Fang topping Candy scene.]
 Figure of Mammoth_CV1_icon is the file "Mammoth_CV_1_ig.png".	[Mammoth cock-vore scene 1.]
 Figure of Mammoth_CV2_icon is the file "Mammoth_CV_2_ig.png".	[Mammoth cock-vore scene 2.]
@@ -293,7 +295,9 @@ Figure of Mammoth_CV3_icon is the file "Mammoth_CV_3_ig.png".	[Mammoth cock-vore
 Figure of Mammoth_CV4_icon is the file "Mammoth_CV_4_ig.png".	[Mammoth cock-vore scene 4.]
 Figure of Mammoth_CV5_icon is the file "Mammoth_CV_5_ig.png".	[Mammoth cock-vore scene 5.]
 Figure of Mammoth_CVF_icon is the file "Mammoth_CV_F_ig.jpg".	[Mammoth pure succumb ending - bonus CV pic.]
+Figure of Parasol_Nap_icon is the file "Parasol_Nap.jpg". [female canine lying on the beach]
 Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".			[Sam's Bad End to assault and infection.]
+Figure of Shy_Vixen_icon is the file "Shy_Vixen.jpg".
 Figure of SkunkbeastLord_icon is the file "SkunkbeastLord_ig.jpg".		[Skunkbeast Lord battle.]
 Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".   [mid-sex scene graphic.]
 Figure of Talov_Kerr_Barrel_icon is the file "Talov_Kerr_Barrel.jpg".   [satyrs with barrel]
@@ -475,6 +479,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Boghrim_face"	Figure of Boghrim_face_icon	"Kupo Klein"	g-black	"normal"
 "Bottlenose Toy_Human"	Figure of Bottlenose_icon	"Anymouse1968"	g-black	"normal"	[only shown for humanoid version]
 "Bovine_F"	Figure of Bovine_F_icon	""	g-black	"normal"	[only shown for female version]
+"Boy_To_Fox_Shampoo1"	Figure of Boy_To_Fox_Shampoo1_icon	"Watsup"	g-white	"normal"
+"Boy_To_Fox_Shampoo2"	Figure of Boy_To_Fox_Shampoo2_icon	"Watsup"	g-white	"normal"
 "Bradford"	Figure of Bradford_icon	"Anymouse1968"	g-black	"normal"
 "Brooke"	Figure of Brooke_icon	"Otterbits"	g-black	"normal"
 "Brian"	Figure of Brian_icon	"dhstein"	g-black	"normal"
@@ -636,6 +642,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Orc Breeder"	Figure of OrcBreeder_random_icon	"Gene Lightfoot"	g-black	"normal"
 "Orc Warrior"	Figure of OrcWarrior_random_icon	"Gene Lightfoot"	g-black	"normal"
 "Orthas"	Figure of Orthas_icon	"The_Negative"	g-black	"normal"
+"Parasol_Nap"	Figure of Parasol_Nap_icon	"Watsup"	g-white	"normal"
 "Paula"	Figure of Paula_icon	"Kikeri-arts"	g-black	"normal"
 "Plush Lion"	Figure of PlushLion_icon	"Anymouse1968"	g-black	"normal"
 "Pink Gel"	Figure of PinkGel_icon	"Rastear"	g-black	"normal"
@@ -661,6 +668,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "SgtMarks"	Figure of SgtMarks_icon	"Anyare"	g-black	"normal"
 "Shadow Beast"	Figure of ShadowBeast_icon	"Hioshiru"	g-black	"normal"
 "Shemale Smooth Collie"	Figure of SSCollie_icon	"Anymouse1968"	g-black	"normal"
+"Shy_vixen"	Figure of Shy_Vixen_icon	"Watsup"	g-white	"normal"
 "Siamese Cat"	Figure of SiameseCat_icon	"RedCoatCat"	g-black	"normal"
 "Sidney_wusky"	Figure of Sidney_wusky_Icon	"Anymouse1968"	g-black	"normal"
 "Sidney_vixen"	Figure of Sidney_vixen_Icon	"Anymouse1968"	g-black	"normal"
@@ -923,6 +931,7 @@ carry out artistcredits:
 	say "Scenes:[line break]";
 	say "     Bottlenose Trapped by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Brutus & David by Rocketman @ http://rocketmenstudio.tumblr.com/[line break]";
+	say "     Boy to Fox Shampoo by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Christy (tourist ending) by maxblackrabbit @ furaffinity.net[line break]";
 	say "     Corbin & Felinoid by ValdericBlackstag @ https://www.furaffinity.net/user/valdericblackstag/[line break]";
 	say "     Duke & Shawn by Hufnaar @ furaffinity.net[line break]";
@@ -930,8 +939,10 @@ carry out artistcredits:
 	say "     Floor Show by MoT @ furaffinity.net[line break]";
 	say "     Mammoth Cock Vore Sequence by Boo3 @ furaffinity.net[line break]";
 	say "     Mammoth Pure Succumb by Boo3 @ furaffinity.net[line break]";
+	say "     Parasol Nap by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Rane & Eric Scenes by Lyttathebug @ deviantart.com[line break]";
 	say "     Sam's Bad End by The_Negative @ furaffinity.net[line break]";
+	say "     Shy Vixen by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Skunkbeast Lord Battle by MoT @ furaffinity.net[line break]";
 	say "     Spidertaur by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Talov & Kerr by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";

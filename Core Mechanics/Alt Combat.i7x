@@ -122,13 +122,13 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	if "Know Thyself" is listed in feats of player:
 		let mmb be 0;
-		if bodyname of player is name entry:
+		if bodyname of player matches the text name entry, case insensitively:
 			increase ktspeciesbonus by 3;
 			increase mmb by 1;
-		if facename of player is name entry:
+		if facename of player matches the text name entry, case insensitively:
 			increase ktspeciesbonus by 2;
 			increase mmb by 1;
-		if cockname of player is name entry:
+		if cockname of player matches the text name entry, case insensitively:
 			increase mmb by 2;
 			now ktcockmatch is true;
 		if ktspeciesbonus > 4, now ktspeciesbonus is 4;
@@ -141,7 +141,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		increase plmindbonus by 1;
 	if companion of player is mouse girl:
 		increase plmindbonus by 2;
-		if name entry is "Mental Mouse", decrease plmindbonus by 1;
+		if name entry matches the text "Mental Mouse", decrease plmindbonus by 1;
 	if HP of Velos > 2 and scalevalue of player < 3:
 		decrease plfleebonus by 5 - ( scalevalue of player * 2 );
 	if ducky swimring is equipped:
@@ -190,7 +190,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 				project icon entry;
 				break;		]
 	choose row monster from table of random critters;
-	say "You run into a [name entry].[line break][desc entry][line break]";
+	say "You run into a [name entry in lower case].[line break][desc entry][line break]";
 
 
 Section 2 - Combat
@@ -336,7 +336,7 @@ this is the monster combat mode rule:
 		let searchparam be altcombat entry;
 	repeat with y running from 1 to number of filled rows in table of Critter Combat:
 		choose row y in table of Critter Combat;
-		if name entry is searchparam:
+		if name entry matches the text searchparam, case insensitively:
 			now monstercom is y;
 			now foundcom is 1;
 			break;
@@ -387,7 +387,7 @@ This is the player attack rule:
 			if "Natural Armaments" is listed in feats of player and bodyname of player is not "human":
 				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;
-					if name entry is bodyname of player:
+					if name entry matches the text bodyname of player, case insensitively:
 						now z is y;
 						break;
 				if z is 0:		[creature not listed]
@@ -423,16 +423,16 @@ This is the player attack rule:
 			say "Filled with sudden motivation, your attack scores particularly well!  ";
 			increase dam by dam;
 		if wmstrike is 1:			[Weaponsmaster used]
-			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapons knowledge, you attack with[or]Like the veteran fighter you are, you strike with[or]You strike with[or]You attack with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
+			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapons knowledge, you attack with[or]Like the veteran fighter you are, you strike with[or]You strike with[or]You attack with[at random] [weapon of player], hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 		else if weapon object of player is journal:
 			if z is not 0:	[Natural Armaments used]
-				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodytype of player] body[or]Drawing strength from your [bodyname of player] body, you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player] form's natural defences[at random], hitting [name entry] for [special-style-2][dam][roman type] damage!";
+				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodytype of player] body[or]Drawing strength from your [bodyname of player] body, you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player] form's natural defences[at random], hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 			else if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
-				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa!  You know kung-fu! [at random]hitting [name entry] for [special-style-2][dam][roman type] damage!";
+				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa!  You know kung-fu! [at random]hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 			else:
-				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
+				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 		else:
-			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
+			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 		let bonusattacks be 0;		[max 2 bonus attacks in a round]
 		let specattchance be 4;
 		if peppereyes > 0, increase specattchance by 1;
@@ -442,7 +442,7 @@ This is the player attack rule:
 				let z be 0;
 				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;
-					if name entry is tailname of player:
+					if name entry matches the text tailname of player, case insensitively:
 						now z is y;
 						break;
 				choose row z in table of random critters;
@@ -464,7 +464,7 @@ This is the player attack rule:
 				increase dammy by a random number between 0 and 2;
 				say "[line break]Your tailcock swings in to [one of]smack[or]swat[or]slap[or]ejaculate[or]cum[purely at random] at your enemy, splattering a spray of your [one of]seed[or]semen[at random] onto them, for [special-style-2][dammy][roman type] additional damage!";
 			else:
-				say "[line break]You give [one of]your opponent[or]your enemy[or]the [name entry][purely at random] a [one of]hard swat[or]fleshy smack[or]wet slap[or]firm jab[purely at random] with your [cock size desc of player] [one of]wang[or]cock[or]prick[purely at random][if cocks of player > 1]s[end if] for [special-style-2][dammy][roman type] additional damage!";
+				say "[line break]You give [one of]your opponent[or]your enemy[or]the [name entry in lower case][purely at random] a [one of]hard swat[or]fleshy smack[or]wet slap[or]firm jab[purely at random] with your [cock size desc of player] [one of]wang[or]cock[or]prick[purely at random][if cocks of player > 1]s[end if] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
 		if a random chance of specattchance in 20 succeeds and "Ball Crush" is listed in feats of player and cock width of player >= 16 and bonusattacks < 2 and player is not internal:
 			increase bonusattack by 1;
@@ -486,21 +486,21 @@ This is the player attack rule:
 			increase dam by dammy;
 		if a random chance of petchance in 1000 succeeds and "Spirited Youth" is listed in feats of player:
 			let y be a random number from 4 to 6;
-			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [special-style-2][y][roman type] damage!";
+			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at the [name entry in lower case] for [special-style-2][y][roman type] damage!";
 			increase dam by y;
 		else if a random chance of petchance in 4000 succeeds and "Youthful Tides" is listed in feats of player:
 			let y be 0;
 			repeat with s running from 1 to number of entries in childrenfaces:
 				increase y by a random number from 2 to 4;
 			increase dam by y;
-			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at [name entry] for [special-style-2][y][roman type] damage!";
+			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at the [name entry in lower case] for [special-style-2][y][roman type] damage!";
 		decrease monsterHP by dam;
 	else:
 		say "You miss!";
 	if player is not lonely:
 		if a random chance of petchance in 4000 succeeds and "The Horde" is listed in feats of player:
 			LineBreak;
-			say "Your many pets, always close by, come pouring out en masse and swarm your enemy, battering the [name entry] from all sides!";
+			say "Your many pets, always close by, come pouring out en masse and swarm your enemy, battering the [name entry in lower case] from all sides!";
 			LineBreak;
 			repeat with z running through tamed pets:
 				now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
@@ -1214,11 +1214,9 @@ to win:
 			increase HP of player by ( 2 * lev entry ) / 3;
 		else:
 			increase HP of player by lev entry;
-		decrease thirst of player by 3;
-		decrease hunger of player by 1;
+		PlayerDrink 3;
+		PlayerEat 1;
 		if HP of player > maxHP of player, now HP of player is maxHP of player;
-		if thirst of player < 0, now thirst of player is 0;
-		if hunger of player < 0, now hunger of player is 0;
 	if ok is 1 and "Control Freak" is listed in feats of player:
 		say "Do you want to perform after combat scene?";
 		if the player consents:
@@ -1309,7 +1307,6 @@ to win:
 		if gshep_postfight is 0 and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ):	[checks on Korvin's post-fight 'feedback']
 			if gshep_fights > 2 and inasituation is false and lastscene of gshep - turns >= 4:
 				say "[gshep_postfightargue]";
-	follow the ngraphics_blank rule;
 	rule succeeds;
 
 To lose:
@@ -1338,8 +1335,6 @@ To lose:
 	decrease the score by 1;
 	decrease the morale of the player by 3;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
-	[get rid of graphics window]
-	follow the ngraphics_blank rule;
 
 
 Section 5 - Critter Combat
