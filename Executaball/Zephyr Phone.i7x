@@ -31,7 +31,7 @@ Christmas Village	Figure of emap_mall_christmasvillage_icon
 Mall East Wing	Figure of emap_mall_eastwing_icon
 Mall Foodcourt	Figure of emap_mall_foodcourt_icon
 Mall Foyer	Figure of emap_mall_foyer_icon
-Game Store	Figure of emap_mall_gamestore_icon
+[Game Store	Figure of emap_mall_gamestore_icon]
 Maintenance Garage	Figure of emap_mall_garage_icon
 Wolverine Guard Station	Figure of emap_mall_guardpost_icon
 Mall Lockerroom	Figure of emap_mall_lockers_icon
