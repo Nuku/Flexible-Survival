@@ -167,32 +167,41 @@ instead of sniffing the Rock Arch:
 after entering the Rock Arch:
 	say "     You look up with awe at the natural rock formation. Not everyone can say that they visited this place.";
 	increase score by 5;
-	
-Wyvern Nest is a room. Wyvern Nest is above Rock Arch.
+
+Wyvern Nest is a room. [Wyvern Nest is above Rock Arch.]
 the description of Wyvern Nest is "[WyvernNestDesc]".
+
 
 to say WyvernNestDesc:
 	say "     ...";
-	
+[
 instead of going up from Rock Arch:
 	say "     strength check!";
 	say "     Fail: Slip, scrape for some damage and splash into the water";
 	say "     Success: move to the nest";
+]
 
-[Sunken Ship]
-before going to the Sunken Ship:
-	say "You shouldn't just swim out into the open sea, you'll get lost out here! Maybe just [bold type]swim[roman type] to the [bold type]shipwreck[roman type] instead, that's close enough to find the way back.";
-	stop the action;
+Open Ocean is a room. Open Ocean is south of Rock Arch.
+The description of Open Ocean is "[AboveShip]";
 
-Sunken Ship is south of Rock Arch.
+to say AboveShip:
+	say "     Below you is a large sunken ship and you can see multiple underwater creatures swimming around down there. If you needed to you could go down there but you would need some way to breathe. Of course, if you decided against that then there is the rock arch to the north. You could always swim back.";
+
 Sunken Ship is a Room.
+Sunken Ship is below Open Ocean.
 understand "Shipwreck" as Sunken Ship.
 understand "Wreck" as Sunken Ship.
-The description of Sunken Ship is "A large ship lays sunken and rotting here. From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago. It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea. There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast. You'd best be careful. From here, you can barely make out the lighter spot in the rocks that is the [bold type]Rock Arch[roman type] you passed through to get here. You could [bold type]swim[roman type] to it if you want to get back to the beach.".
+The description of Sunken Ship is "A large ship lays sunken and rotting here. From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago. It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea. There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast. You'd best be careful. Although in the distance to your west you can see a sparkling sight in the distance. From here, you can barely make out the lighter spot in the rocks that is the [bold type]Rock Arch[roman type] you passed through to get here. You could [bold type]swim[roman type] to it if you want to get back to the beach.".
 
 The invent of Sunken Ship is { "sea dragon cum" , "sea dragon cum" }.
 
 the scent of Sunken Ship is "You can't smell anything while underwater.".
+
+Atlantis City Entrance is a room.
+The description of Atlantis City Entrance is "[CityEntrance]";
+
+to say CityEntrance:
+	say "     The entrance to the underwater city is rather gorgeous, filled with golden and coral buildings. Behind you are the magical golden gates of the utopian city that create the amazing bubble that prevents the ocean waters from flooding the city. Standing at the entrance are a merman and a mermaid wearing fancy armor and holding spears. However, out of the two of them, only the merman looks approachable. The female appears to be too focused on her job to even notice you. To the west you see a cobblestone path leading to the center of the city.";
 
 [--------------------------------------------------------------------------------------------------------------------]
 [CHURCH HALL]
