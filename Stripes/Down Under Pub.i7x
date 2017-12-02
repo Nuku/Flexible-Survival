@@ -42,14 +42,10 @@ Instead of resolving a Aussie Pub:
 			say "     Eventually, the party winds down, appetites (both carnal and more mundane) are sated and you head off with several of the others. As you're heading out though, the barmaid pulls you in close for another kiss. Grabbing your ass, she whispers that you should come back again in a few days and she'll let you in. You'd heard from the crowd that roos are allowed a visit a week because of the need for supplies and the popularity of the location. But it seems the serving girl's taken a liking to you and let you come every two or three days. Part of you feels quite drawn to the rambunctious roos and you look forward to finding more to have fun with in the future and looking forward to another visit to the pub.";
 			infect "Red Kangaroo";
 			infect "Red Kangaroo";
-			decrease humanity of player by 18;
-			decrease thirst of player by 30;
-			decrease hunger of player by 12;
+			SanLoss 18;
+			PlayerDrink 30;
+			PlayerEat 12;
 			increase score by 25;
-			if hunger of player < 0:
-				now hunger of player is 0;
-			if thirst of player < 0:
-				now thirst of player is 0;
 			increase pubvisit by 1;
 			increase HP of Gillian by 1;
 			now lastpubvisit is turns;
@@ -151,12 +147,8 @@ to say downunderpubvisit:
 		decrease humanity of player by 8;
 		increase morale of player by 3;
 		now libido of player is ( libido of player * 4 ) / 5;
-	decrease thirst of player by 15;
-	decrease hunger of player by 12;
-	if hunger of player < 0:
-		now hunger of player is 0;
-	if thirst of player < 0:
-		now thirst of player is 0;
+	PlayerDrink 15;
+	PlayerEat 12;
 	increase pubvisit by 1;
 	LineBreak;
 	if HP of Gillian is 3:

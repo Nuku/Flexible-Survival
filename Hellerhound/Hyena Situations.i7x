@@ -22,10 +22,8 @@ instead of resolving an intact fountain:
 		say "You drink deeply from the fountain, quenching your thirst no matter what the cost.";
 		while the thirst of the player >= 10:
 			say "You feel less thirsty and hungry after guzzling some thick, infected, tasty water, yum!";
-			decrease thirst of player by 10;
-			decrease hunger of player by 4;
-			if thirst of player < 0, now thirst of player is 0;
-			if hunger of player < 0, now hunger of player is 0;
+			PlayerDrink 10;
+			PlayerEat 4;
 			if morale of player < 0:
 				increase morale of player by 62;
 				if morale of player > 0, now morale of player is 0;

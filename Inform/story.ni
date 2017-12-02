@@ -1951,8 +1951,7 @@ To process (X - a grab object):
 		if "Junk Food Junky" is listed in feats of player:
 			if hunger of player > 8:
 				increase score by 2;
-			decrease hunger of player by 9;
-			if hunger of player < 0, now hunger of player is 0;
+			PlayerEat 9;
 			say "You eat the food, feeling a little disappointed it's not junk food!";
 			if morale of player < 0:
 				increase morale of player by 10;
@@ -1961,8 +1960,7 @@ To process (X - a grab object):
 		else:
 			if hunger of player > 11:
 				increase score by 4;
-			decrease hunger of player by 12;
-			if hunger of player < 0, now hunger of player is 0;
+			PlayerEat 12;
 			say "You feel less hungry after wolfing down some food, yum!";
 			if morale of player < 0:
 				increase morale of player by 30;
@@ -1970,12 +1968,11 @@ To process (X - a grab object):
 				say "You feel better having eaten.";
 	if x is chips:
 		if labhost > 0 and bodyname of player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
-			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something.  There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole.  You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body.  Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
+			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something. There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole. You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body. Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
 		else if "Junk Food Junky" is listed in feats of player:
 			if hunger of player > 14:
 				increase score by 5;
-			decrease hunger of player by 15;
-			if hunger of player < 0, now hunger of player is 0;
+			PlayerEat 15;
 			say "Snack time!  You wolf down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random] with delight.  YUM!";
 			if morale of player < 0:
 				increase morale of player by 36;
@@ -1985,8 +1982,7 @@ To process (X - a grab object):
 		else:
 			if hunger of player > 5:
 				increase score by 2;
-			decrease hunger of player by 6;
-			if hunger of player < 0, now hunger of player is 0;
+			PlayerEat 6;
 			say "You feel less hungry after wolfing down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random], yum!";
 			if morale of player < 0:
 				increase morale of player by 15;
@@ -1995,8 +1991,7 @@ To process (X - a grab object):
 	if x is glob of goo:
 		if hunger of player > 5:
 			increase score by 2;
-		decrease hunger of player by 6;
-		if hunger of player < 0, now hunger of player is 0;
+		PlayerEat 6;
 		say "You slurp up the neon colored goo and find that it tastes delicious, and even helps slake your hunger somewhat as you chew at it, mmm...";
 		if morale of player < 0:
 			increase morale of player by 15;
@@ -2008,8 +2003,7 @@ To process (X - a grab object):
 				increase score by thirst of player divided by 3;
 				if thirst of player > 15:
 					decrease score by ( thirst of player minus 15 ) divided by 3;
-			decrease thirst of player by 15;
-			if thirst of player < 0, now thirst of player is 0;
+			PlayerDrink 15;
 			say "You feel a little less thirty after drinking some bland water!";
 			if morale of player < 0:
 				increase morale of player by 20;
@@ -2020,8 +2014,7 @@ To process (X - a grab object):
 				increase score by thirst of player divided by 3;
 				if thirst of player > 25:
 					decrease score by ( thirst of player minus 25 ) divided by 3;
-			decrease thirst of player by 25;
-			if thirst of player < 0, now thirst of player is 0;
+			PlayerDrink 25;
 			say "You feel less thirsty after guzzling some water, yum!";
 			if morale of player < 0:
 				increase morale of player by 62;
@@ -2033,8 +2026,7 @@ To process (X - a grab object):
 				increase score by thirst of player divided by 3;
 				if thirst of player > 15:
 					decrease score by ( thirst of player minus 15 ) divided by 3;
-			decrease thirst of player by 15;
-			if thirst of player < 0, now thirst of player is 0;
+			PlayerDrink 15;
 			say "You feel a little less thirty after drinking some bland water!";
 			if morale of player < 0:
 				increase morale of player by 20;
@@ -2045,8 +2037,7 @@ To process (X - a grab object):
 				increase score by thirst of player divided by 3;
 				if thirst of player > 25:
 					decrease score by ( thirst of player minus 25 ) divided by 3;
-			decrease thirst of player by 25;
-			if thirst of player < 0, now thirst of player is 0;
+			PlayerDrink 25;
 			say "You feel less thirsty after guzzling some water, yum!";
 			if morale of player < 0:
 				increase morale of player by 62;
@@ -2061,9 +2052,8 @@ To process (X - a grab object):
 				increase score by thirst of player divided by 3;
 				if thirst of player > 30:
 					decrease score by ( thirst of player minus 30 ) divided by 3;
-			decrease thirst of player by 30;
-			if thirst of player < 0, now thirst of player is 0;
-			say "Awesome!  Soda!  You down the delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if].  YUM!";
+			PlayerDrink 30;
+			say "Awesome! Soda! You down the delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if].  YUM!";
 			if morale of player < 0:
 				increase morale of player by 75;
 				if morale of player > 0, now morale of player is 0;
@@ -2074,9 +2064,8 @@ To process (X - a grab object):
 				increase score by thirst of player divided by 3;
 				if thirst of player > 12:
 					decrease score by ( thirst of player minus 12 ) divided by 3;
-			decrease thirst of player by 12;
-			if thirst of player < 0, now thirst of player is 0;
 			say "You feel less thirsty after guzzling some soda, [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if] yum!";
+			PlayerDrink 12;
 			if morale of player < 0:
 				increase morale of player by 30;
 				if morale of player > 0, now morale of player is 0;
@@ -2084,12 +2073,10 @@ To process (X - a grab object):
 		sfsodadrink;
 	if x is gryphon milk:
 		say "The milk is thick, like a shake, but warmer, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
-		decrease thirst of player by 15;
-		if thirst of player < 0, now thirst of player is 0;
+		PlayerDrink 15;
 	if x is dog milk:
 		say "Somehow still warm, you guzzle it down without thinking too hard about its origins. A prickly warmth fills your belly as the cream flows along your gullet.";
-		decrease thirst of player by 15;
-		if thirst of player < 0, now thirst of player is 0;
+		PlayerDrink 15;
 		repeat with Z running from 1 to number of filled rows in table of random critters:
 			choose row Z from the table of random critters;
 			let zed be "collie";
@@ -5159,6 +5146,7 @@ Include Walkinmall by Ssely.
 Include Warehouse District by Kaleem Mcintyre.
 Include Warehouse Events by StripeGuy.
 Include Wereraptor for FS by Stripes.
+Include Zephyr Phone by Executaball.
 Include Zoo Events by Sarokcat.
 Include Zoo Events by Wahn.
 
@@ -5406,6 +5394,7 @@ Include Tenrec by StripeGuy.
 Include Thought Eater by Wahn.
 Include Tiger by Sarokcat.
 Include Tiger Cop for FS by Stripes.
+Include Tiger Shark by Lone Wanderer.
 Include Tigertaur by Sarokcat.
 Include Tigress Hooker for FS by Stripes.
 Include Trash Coon For FS by Stripes.

@@ -15,7 +15,7 @@ Instead of Resolving a Military presence:
 		say "     You encounter what appears to be a military jeep parked by the side of the road, and your heart jumps as you think about the potential for rescue or some military equipment. Approaching cautiously, you notice that the interior is covered in what appears to be dried cum. There are no signs of the former occupants, and they sadly appear to have taken anything of use with them.";
 		increase mtp by 1;
 	else if mtp is 1:
-		say "      While traveling through the deserted city all of a sudden a glint of light catches your eye on one of the nearby rooftops. Hoping to find signs of another survivor you start moving to get a better view of the roof, straining your eyes to see what it might have been.";
+		say "     While traveling through the deserted city all of a sudden a glint of light catches your eye on one of the nearby rooftops. Hoping to find signs of another survivor you start moving to get a better view of the roof, straining your eyes to see what it might have been.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";

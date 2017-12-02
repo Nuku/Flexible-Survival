@@ -263,9 +263,8 @@ instead of sniffing musky cock flower:
 
 to say facerape use:
 	say "You begin to suck on the cock in the center of the flower. It surprises you as the flower part closes, taking hold of your face and gripping impossibly tight! It thrusts in and out, raping you for a while before pumping a load of cum-like liquid down your throat!";
-	decrease hunger of player by 5;
+	PlayerEat 5;
 	increase libido of player by 20;
-	if hunger of player < 0, now hunger of player is 0;
 	if libido of player > 100, now libido of player is 100;
 
 

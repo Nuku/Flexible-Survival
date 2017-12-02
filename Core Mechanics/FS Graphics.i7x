@@ -309,8 +309,8 @@ Figure of RaneSavingEric_icon is the file "Rane&Eric2.jpg".   [after the Hellhou
 Figure of Map_Smith_Haven_Mall_icon is the file "Map_Mall.jpg".
 
 [emap - special]
-Figure of emap_special_loading_icon is the file "emap_special_loading.png".
 Figure of emap_special_signalnotfound_icon is the file "emap_special_signalnotfound.png".
+Figure of emap_special_shutdown_icon is the file "emap_special_shutdown.png".
 
 [emap - mall]
 Figure of emap_mall_alley_icon is the file "emap_mall_alley.png".
@@ -712,29 +712,29 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Zebra"	Figure of Zebra_icon	"Purplepardus"	g-black	"normal"
 "Zigor"	Figure of Zigor_icon	"AugurMew"	g-black	"normal"
 [emap - special]
-"Navigation - Loading Screen"	Figure of emap_special_loading_icon	"executaball"	g-white	"normal"
-"Navigation - Signal Lost Screen"	Figure of emap_special_signalnotfound_icon	"executaball"	g-white	"normal"
+"Navigation - Signal Lost Screen"	Figure of emap_special_signalnotfound_icon	"executaball"	g-black	"normal"
+"Navigation - Shutdown Screen"	Figure of emap_special_shutdown_icon	"executaball"	g-black	"normal"
 [emap - mall]
-"Navigation - Mall - Alley"	Figure of emap_mall_alley_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Atrium"	Figure of emap_mall_atrium_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Bodyshop"	Figure of emap_mall_bodyshop_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Branson & Partner"	Figure of emap_mall_bransonpartner_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Brookstone Books"	Figure of emap_mall_brookstonebooks_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Christmas Village"	Figure of emap_mall_christmasvillage_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - East Wing"	Figure of emap_mall_eastwing_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - FoodCourt"	Figure of emap_mall_foodcourt_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Foyer"	Figure of emap_mall_foyer_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Guardpost"	Figure of emap_mall_guardpost_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Lockers"	Figure of emap_mall_lockers_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Lot East"	Figure of emap_mall_loteast_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Lot North"	Figure of emap_mall_lotnorth_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Lot South"	Figure of emap_mall_lotsouth_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Lot West"	Figure of emap_mall_lotwest_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Nermine's"	Figure of emap_mall_nermines_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - PK Boutique"	Figure of emap_mall_pkboutique_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Restrooms"	Figure of emap_mall_restrooms_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - ShagShack"	Figure of emap_mall_shagshack_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - West Wing"	Figure of emap_mall_westwing_icon	"executaball"	g-white	"normal"
+"Navigation - Mall - Alley"	Figure of emap_mall_alley_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Atrium"	Figure of emap_mall_atrium_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Bodyshop"	Figure of emap_mall_bodyshop_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Branson & Partner"	Figure of emap_mall_bransonpartner_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Brookstone Books"	Figure of emap_mall_brookstonebooks_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Christmas Village"	Figure of emap_mall_christmasvillage_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - East Wing"	Figure of emap_mall_eastwing_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - FoodCourt"	Figure of emap_mall_foodcourt_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Foyer"	Figure of emap_mall_foyer_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Guardpost"	Figure of emap_mall_guardpost_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Lockers"	Figure of emap_mall_lockers_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Lot East"	Figure of emap_mall_loteast_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Lot North"	Figure of emap_mall_lotnorth_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Lot South"	Figure of emap_mall_lotsouth_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Lot West"	Figure of emap_mall_lotwest_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Nermine's"	Figure of emap_mall_nermines_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - PK Boutique"	Figure of emap_mall_pkboutique_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Restrooms"	Figure of emap_mall_restrooms_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - ShagShack"	Figure of emap_mall_shagshack_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - West Wing"	Figure of emap_mall_westwing_icon	"executaball"	g-black	"normal"
 
 artistcredits is an action applying to nothing.
 

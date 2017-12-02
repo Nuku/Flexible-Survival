@@ -564,14 +564,12 @@ The usedesc of Pan's Special Reserve is "[SpecialWineUsing]";
 
 to say SpecialWineUsing:
 	say "Taking out the small bottle of wine, you pull the cork keeping it sealed and let the precious liquid breathe, smelling its aroma while you wait. Something about it fills you with the feeling of boundless energy, like you could dance away all night and day, give yourself to endless revels and never stop enjoying yourself. With a last look at the rich, red wine, you take a mouthful and feel the sweet, heady liquid run down your throat - gasping as it overwhelms your taste-buds and you feel a comfortable warmth fill your body and mind. With another, and another gulp, you thirstily drink the rest right away, as the amazing wine's allure is too tempting to hold back even a little. Arousal flares up brightly in your mind and you [if cocks of player > 0]realize that you've become fully erect in barely an eye-blink[else if cunts of player > 0]realize that your pussy is very, very wet and swollen, ready to be fucked hard[else]feel your skin tingle for someone else's touch[end if]. It's about time you found someone to fuck!";
-	decrease thirst of player by 20;
+	PlayerDrink 20;
 	infect "Satyr";
 	infect "Satyr";
 	infect "Satyr";
 	infect "Satyr";
 	infect "Satyr";
-	if thirst of player < 0:
-		now thirst of player is 0;
 
 instead of sniffing Pan's Special Reserve:
 	say "The wine is aromatic and quite powerful. Something about it fills you with the feeling of boundless energy, like you could dance away all night and day, give yourself to endless revels and never stop enjoying yourself.";

@@ -134,8 +134,7 @@ to say drinkacidmilk:
 	else:
 		say "     You are able to drink down the acidic milk thanks to your altered mouth and your infected body is able to deal with it. It still stings and burns inside you, but does restore a small amount of thirst in return.";
 		decrease HP of player by level of player;
-		decrease thirst of player by 3;
-		if thirst of player < 3, now thirst of player is 0;
+		PlayerDrink 3;
 
 the scent of acid milk is "The milk has a sharp, acidic scent and doesn't seem very appetizing.".
 

@@ -157,8 +157,7 @@ It is temporary.
 
 to say sportsdrinkuse:
 	say "You open up the bottle and put it to your mouth. The drink tastes pretty nice, and you practically feel new energy running through your body.";
-	decrease thirst of player by 8;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerDrink 8;
 	wolfmaninfect;
 
 instead of sniffing sports drink:

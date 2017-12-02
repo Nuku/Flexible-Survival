@@ -56,11 +56,10 @@ Instead of resolving a Pigging Out:
 				say "     Your romp with her continues for several hours. Between gorging and fucking, you feel quite full and satisfied when you both finally part ways, with you munching on your half of the sticky cucumber and she doing the same with hers.";
 			infect "Messy Pig";
 			infect "Messy Pig";
-			decrease hunger of player by 30;
-			if hunger of player < 0, now hunger of player is 0;
+			PlayerEat 30;
 			decrease libido of player by 18;
 			if libido of player < 0, now libido of player is 0;
-			decrease humanity of player by 10;
+			SanLoss 10;
 			increase score by 25;
 			now restaurantpig is 1;
 		else:
@@ -504,8 +503,7 @@ Instead of resolving a Cameo:
 				say "     Having defeated the last of them, you pant for breath as the chocolate dogs slink off like beaten curs. They press themselves to the ground so much that their legs melt away beneath them and flow out as dog-shaped blobs. With them dispatched, you are free to look around the remains of the store. It seems that much of the merchandise has already been consumed by the dogs or tainted by them during their lustful gorging. The boxes of chocolates and cameos on display at the back are thankfully still good, so you snatch them up and exit the store before the strong scent of chocolates and sex arouses you into sampling from the tainted wares.";
 				if "Junk Food Junky" is listed in feats of player:
 					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. Your junk food fueled metabolism finds the chocolates quite satisfying and you still have enough chocolates and almond bark to be equivalent to roughly two more snacks.";
-					decrease hunger of player by 15;
-					if hunger of player < 0, now hunger of player is 0;
+					PlayerEat 15;
 					if morale of player < 0:
 						increase morale of player by 36;
 						if morale of player > 0, now morale of player is 0;
@@ -515,8 +513,7 @@ Instead of resolving a Cameo:
 					increase score by 15;
 				else:
 					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. While not very nutritious, you still have enough chocolates and almond bark to be equivalent to roughly one meal.";
-					decrease hunger of player by 6;
-					if hunger of player < 0, now hunger of player is 0;
+					PlayerEat 6;
 					if morale of player < 0:
 						increase morale of player by 15;
 						if morale of player > 0, now morale of player is 0;
