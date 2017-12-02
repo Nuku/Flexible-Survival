@@ -318,6 +318,8 @@ Figure of emap_mall_christmasvillage_icon is the file "emap_mall_christmasvillag
 Figure of emap_mall_eastwing_icon is the file "emap_mall_eastwing.png".
 Figure of emap_mall_foodcourt_icon is the file "emap_mall_foodcourt.png".
 Figure of emap_mall_foyer_icon is the file "emap_mall_foyer.png".
+Figure of emap_mall_gamestore_icon is the file "emap_mall_gamestore.png".
+Figure of emap_mall_garage_icon is the file "emap_mall_garage.png".
 Figure of emap_mall_guardpost_icon is the file "emap_mall_guardpost.png".
 Figure of emap_mall_lockers_icon is the file "emap_mall_lockers.png".
 Figure of emap_mall_loteast_icon is the file "emap_mall_loteast.png".
@@ -716,6 +718,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Navigation - Mall - East Wing"	Figure of emap_mall_eastwing_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - FoodCourt"	Figure of emap_mall_foodcourt_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Foyer"	Figure of emap_mall_foyer_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Game Store"	Figure of emap_mall_gamestore_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Garage"	Figure of emap_mall_garage_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Guardpost"	Figure of emap_mall_guardpost_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Lockers"	Figure of emap_mall_lockers_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Lot East"	Figure of emap_mall_loteast_icon	"executaball"	g-black	"normal"
