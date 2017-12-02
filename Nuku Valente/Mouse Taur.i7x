@@ -24,7 +24,7 @@ Instead of Resolving a Mouse Taur:
 		else if cocks of player > 0:
 			say "     She looks you over critically, placing her paw like hands on her hips and leaning a bit. 'I was hoping for something a little more...' she trails off, then shakes her head. 'Nevermind that, I am being rude. You will be just fine, I'm sure, with some work.' She smiles brilliantly and offers a hand. 'Lisa. You are?'";
 		else if cunts of player > 0:
-			say "     She approaches closer, reaching to embrace you. You flinch with worry, but no harm befalls as she hugs you softly to her soft and warm body. Your face is drawn against her soft tits as her hand rubs your back quietly a moment.'Poor little dear, lost in all this ruin and chaos. I'm Lisa, but you can call me mom if you prefer, or sis, that works.'";
+			say "     She approaches closer, reaching to embrace you. You flinch with worry, but no harm befalls as she hugs you softly to her soft and warm body. Your face is drawn against her soft tits as her hand rubs your back quietly a moment. 'Poor little dear, lost in all this ruin and chaos. I'm Lisa, but you can call me mom if you prefer, or sis, that works.'";
 		else:
 			say "     She sniffs the air lightly and looks at you with some confusion. 'You must have had such a hard time of it,' she says with some sympathy. 'I am Lisa, nice to meet you.'";
 		attempttowait;
@@ -32,8 +32,7 @@ Instead of Resolving a Mouse Taur:
 		say "     'They never bit me or anything,' she explained, 'I'm pretty certain their fur got onto a bit of my food. It took a long time to change.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself, 'Or so I did. Hey, here's my address. You come by anytime, say hello, ok?'";
 		say "     Meal time over, you both rise. She gives you a firm parting hug, and turns to walk off into the red light area, long furry tail swaying behind her.";
 		increase mtrp by 1;
-		decrease hunger of player by 20;
-		if hunger of player < 0, now hunger of player is 0;
+		PlayerEat 20;
 		now Porn Store is known;
 		now mouse taur is resolved;
 		now find porn store is resolved;

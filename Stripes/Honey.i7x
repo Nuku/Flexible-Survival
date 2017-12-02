@@ -110,8 +110,7 @@ Instead of resolving a Smashed Hive:
 						now body of player is body entry;
 						now cock of player is cock entry;
 						if libido of player < libido entry, now libido of player is libido entry;
-						decrease hunger of player by 25;
-						if hunger of player < 0, now hunger of player is 0;
+						PlayerEat 25;
 						increase thirst of player by 4;
 						now lastfuck of bee girl is turns;
 					else if fightoutcome >= 20 and fightoutcome <= 29:
@@ -222,8 +221,7 @@ to say beesexfemale2:
 to say beesexhoneypot:
 	say "     The bee girl's antennae twitch, sensing you a moment before you pounce her into a hug. Buzzing playfully, you roll [if HP of bee girl >= 5]your loving drone[else]her[end if] onto her back and bury your face between her legs. You nuzzle at the soft, golden hair covering her pussy and start lapping at her honeypot. And how appropriate that name is for it, for her juices are thick, sweet and rich like honey. Loving her taste, you drive her to several orgasms before finally stopping. She hugs you tightly and uses her long, slender tongue to lick away the sticky honey from your face.";
 	now libido of player is ( ( libido of player + 1 ) * 2 ) / 3;
-	decrease hunger of player by 6;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 6;
 	increase thirst of player by 1;
 
 to say beesexqueen:

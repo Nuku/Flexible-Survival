@@ -434,10 +434,8 @@ The usedesc of pink gel is "[gel1]";
 
 to say gel1:
 	say "Eating the cup of pink jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
-	decrease hunger of player by 6;
-	if hunger of player < 0, now hunger of player is 0;
-	decrease thirst of player by 3;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerEat 6;
+	PlayerDrink 3;
 	if "Female Preferred" is listed in feats of player and girl is not banned: [Changes target to Pink Gel for infection.]
 		infect "Pink Gel";
 	else if "Herm Preferred" is listed in feats of player and hermaphrodite is not banned: [Changes target to Purple Gel for infection.]
@@ -462,10 +460,8 @@ The usedesc of blue gel is "[gel2]";
 
 to say gel2:
 	say "Eating the cup of blue jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
-	decrease hunger of player by 6;
-	if hunger of player < 0, now hunger of player is 0;
-	decrease thirst of player by 3;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerEat 6;
+	PlayerDrink 3;
 	if "Male Preferred" is listed in feats of player and guy is not banned: [Changes target to Blue Gel for infection.]
 		infect "Blue Gel";
 	else if "Herm Preferred" is listed in feats of player and hermaphrodite is not banned: [Changes target to Herm Gel for infection.]
@@ -490,10 +486,8 @@ The usedesc of purple gel is "[gel3]";
 
 to say gel3:
 	say "Eating the cup of purple jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
-	decrease hunger of player by 6;
-	if hunger of player < 0, now hunger of player is 0;
-	decrease thirst of player by 3;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerEat 6;
+	PlayerDrink 3;
 	if "Male Preferred" is listed in feats of player and guy is not banned: [Changes target to Blue Gel for infection.]
 		infect "Blue Gel";
 	else if "Female Preferred" is listed in feats of player and girl is not banned: [Changes target to Pink Gel for infection.]

@@ -353,7 +353,7 @@ to say FSDF_1: [Cunt Pitching]
 	if tempnum2 is not 2:
 		say "[if tempnum2 is 1 and cocks of player > 2]the head of two of them[else if tempnum2 is 1]the head of both of them[else]its head[end if] into the monster's[if cock length of player > 18 or tempnum2 is 1] tight[end if] hole";
 	else:
-		say "the head of one of them into the monster's[if cock length of player > 18]tight [end if] hole, [if cocks of player > 2]another[else]the other[end if] down her ass";
+		say "the head of one of them into the monster's[if cock length of player > 18] tight[end if] hole, [if cocks of player > 2]another[else]the other[end if] down her ass";
 	if tempnum is 1:
 		say ". [if cock length of player > 18 or tempnum2 is 1]Giving you no resistance, your earlier work seems to have made inching yourself in deeper a fair bit easier[else]She gives you virtually no resistance, given your earlier work[end if], especially given her clear enjoyment from it.";
 	else:
@@ -405,7 +405,7 @@ to say FSDF_2: [Anal Pitching]
 	if tempnum2 is not 2:
 		say "[if tempnum2 is 1 and cocks of player > 2]the head of two of them[else if tempnum2 is 1]the head of both of them[else]its head[end if] into the monster's[if cock length of player > 18 or tempnum2 is 1] tight[end if] asshole";
 	else:
-		say "the head of one of them into the monster's[if cock length of player > 18]tight [end if] asshole, [if cocks of player > 2]another[else]the other[end if] down her cunt";
+		say "the head of one of them into the monster's[if cock length of player > 18] tight[end if] asshole, [if cocks of player > 2]another[else]the other[end if] down her cunt";
 	if tempnum is 1:
 		say ". [if cock length of player > 18 or tempnum2 is 1]Giving you no resistance, your earlier work seems to have made inching yourself in deeper a fair bit easier[else]She gives you virtually no resistance, given your earlier work[end if], especially given her clear enjoyment from it.";
 	else:
@@ -444,7 +444,7 @@ to say FSDF_3: [Oral Receiving Cock]
 	say "     [if tempnum is 1]Eager to begin[else if tempnum is 2]Eager and drooling to begin[else]With little effort[end if], she obliges your need, scaled lips parting to envelop [if cocks of player > 1]one of your tools[else]your tool[end if] within its depths. Thick tongue slathering along its[if cock length of player > 11] substantive[end if] length, [if cock length of player > 19]the dragoness's elongated neck easily handles your impressive organ[else]the dragoness shows no difficulty in handling your throbbing organ[end if]. The touch of her saliva[if tempnum is 2], along with that lingering in your maw,[end if] [one of]seeming to intensify[or]intensifying[stopping] your arousal, you can't help but thrust against her snout, the dragoness churring in approval.";
 	say "     Writhing against the beast's touch, happily [if cock length of player > 14]bobbing along[else]attending to[end if] your organ, you find it difficult to keep a clear head as you rapidly approach ecstasy. You don't think you'll be able to hold back for any longer, shall you pull out at the last second? Otherwise you'll reward the obedient little sea dragoness.";
 	if player consents:
-		say "     Immediately, you wrench your dick free of her lips, strings of precum and saliva trailing from the creature's maw. A couple seconds of grinding against her snout, and you cry out, unleashing your [cum load size of player] against the beast's obliging and lust-hazed visage.Whining softly, the beast idly licks at its face as she's shamed like this.";
+		say "     Immediately, you wrench your dick free of her lips, strings of precum and saliva trailing from the creature's maw. A couple seconds of grinding against her snout, and you cry out, unleashing your [cum load size of player] against the beast's obliging and lust-hazed visage. Whining softly, the beast idly licks at its face as she's shamed like this.";
 	else:
 		say "     It's not long before you finally cry out in bliss, firing your [cum load size of player] load into the creature's obliging maw. Whining softly, she's gulps audibly in an eager desire to swallow your cum[if cock width of player > 20], the sheer volume of which quickly causing it to ooze from her lips[end if].";
 	say "     Satisfied, you step away from the dragon, writhing against the sand with a need to satisfy her own, lingering lust in the wake of your task. No doubt the beast will have to attend to her own need after your turn and depart.";
@@ -660,7 +660,7 @@ to fsdfvore:
 						follow the turnpass rule;
 				else if boundsegment is 1:
 					if struggleatt < 3:
-						say "     [if tempnum2 is 2]Properly righting your orientation, y[else]Y[end if]ou writhe and shimmy your way up the beast's gullet, against er muscle's endeavour. You [if struggleatt is 1]don't seem to be getting anywhere[else]think you might be seeing light[end if]...";
+						say "     [if tempnum2 is 2]Properly righting your orientation, you[else]You[end if] writhe and shimmy your way up the beast's gullet, against er muscle's endeavour. You [if struggleatt is 1]don't seem to be getting anywhere[else]think you might be seeing light[end if]...";
 						increase lustatt by 7 + (lustadjust * 2);
 						if tempnum2 is 2, now tempnum2 is 0;
 						wyvhumanityroll;

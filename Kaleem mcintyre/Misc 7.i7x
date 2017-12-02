@@ -193,10 +193,8 @@ Instead of Resolving a Chocolate Treat:
 		say "     It isn't long before the one in your mouth explodes and, without missing a beat, you suck down the Lab's creamy treat while rolling your hand over the canine's pulsing balls to get every delicious drop. Once the other is done though, another Lab is quick to come over and then stuff himself deep inside of you slightly still full mouth to give you an extra added helping of the white chocolate delight you just had. This wouldn't have been so bad except in the next moment one of the Labradors behind you takes it upon himself to mount you. By the time you come think that maybe you've made a bad decision, the entire pack is circling around with many of the other Chocolate Labs humping at your sides and leaking milk chocolate precum onto your [bodyname of player] body while waiting for their chance to get at you as the one atop you slowly begins to slide its gooey, flowing hips against across backside while its flowing cock pulses inside you.";
 		WaitLineBreak;
 		say "     The fucking and sucking and creaming over and into your body lasts for almost an hour and before you know it you find that your own body has taken on the form of the Chocolate Labs around you.  It almost seems as if part of you flowed and mingled with their molten chocolate bodies such that you lost part of yourself even as their confectionary canine instincts spread into you. By the time the orgy is done with you are no longer hungry for a taste of Chocolate as your belly is literally sloshing with milky cocoa goodness. Burping slightly when the last two Labradors flow away from both your face and ass, you pant gratefully as you watch the pack come over to lick you across the face and then slowly begin to move away from you one by one by one. Finding yourself alone soon after you chuckle slightly as you think about how your desires have finally gotten the best of you on this day.";
-		decrease hunger of player by 20;
-		if hunger of player < 0, now hunger of player is 0;
-		decrease thirst of player by 10;
-		if thirst of player < 0, now thirst of player is 0;
+		PlayerEat 20;
+		PlayerDrink 10;
 		if bodyname of player is "Chocolate Lab" or facename of player is "Chocolate Lab":
 			decrease humanity of player by a random number between 25 and 35;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;

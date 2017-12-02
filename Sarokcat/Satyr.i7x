@@ -169,7 +169,7 @@ The usedesc of satyr wine is "[wineusing]";
 
 to say wineusing:
 	say "Taking out the small mouthful of dark wine, you swirl the liquid around in the small cup for a minute, before tossing it back, gasping as the heady stuff burns its way down your throat, and makes your head spin. That's definitely the good stuff!";
-	decrease thirst of player by 10;
+	PlayerDrink 10;
 
 instead of sniffing satyr wine:
 	say "The wine is aromatic and quite powerful. And after everything you've seen in this strange city, you could definitely go for a drink.";

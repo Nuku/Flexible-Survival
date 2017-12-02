@@ -1214,11 +1214,9 @@ to win:
 			increase HP of player by ( 2 * lev entry ) / 3;
 		else:
 			increase HP of player by lev entry;
-		decrease thirst of player by 3;
-		decrease hunger of player by 1;
+		PlayerDrink 3;
+		PlayerEat 1;
 		if HP of player > maxHP of player, now HP of player is maxHP of player;
-		if thirst of player < 0, now thirst of player is 0;
-		if hunger of player < 0, now hunger of player is 0;
 	if ok is 1 and "Control Freak" is listed in feats of player:
 		say "Do you want to perform after combat scene?";
 		if the player consents:
@@ -1309,7 +1307,6 @@ to win:
 		if gshep_postfight is 0 and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ):	[checks on Korvin's post-fight 'feedback']
 			if gshep_fights > 2 and inasituation is false and lastscene of gshep - turns >= 4:
 				say "[gshep_postfightargue]";
-	follow the ngraphics_blank rule;
 	rule succeeds;
 
 To lose:
@@ -1338,8 +1335,6 @@ To lose:
 	decrease the score by 1;
 	decrease the morale of the player by 3;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
-	[get rid of graphics window]
-	follow the ngraphics_blank rule;
 
 
 Section 5 - Critter Combat

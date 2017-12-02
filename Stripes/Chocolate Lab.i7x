@@ -94,9 +94,7 @@ to say losetolab:
 		else:	[male]
 			say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you. You can feel the firm press of its body at your asshole, spreading you open with a cock of hard chocolate. Its body also grips around your cock[if cocks of player > 1]s[end if] with a soft, wet pussy[if cocks of player > 1] for each[end if]. Its fluid form flows and ripples, rubbing all over your body and teasing your nipples. The amorous confection stimulates you inside and out until finally it shoots its white chocolate cream into your mouth and rear, and you pump your hot cum into it in return.[impregchance]";
 		say "     Once it's done, it flows off of you slowly, splatters of white chocolate landing on your chest. It flows out of your body, but leaves you with a warm mess of white, creamy filling inside. You pant as you try to catch your breath after the brief, but intensely body-wide, sex you've just had.";
-		decrease hunger of player by 12;
-		if hunger of player < 0:
-			now hunger of player is 0;
+		PlayerEat 12;
 		say "[chococheck]";
 
 
@@ -105,9 +103,7 @@ to say beatthelab:
 	say "     You manage to fend off the strange canine, exhausting it to the point that it has trouble maintaining enough physical consistency to keep fighting. It whimpers softly, looking up at you with large, puppydog eyes of dark chocolate as it flows onto its back, exposing itself to you. It has a brown, canine cock that dribbles enticingly fragrant white chocolate and a wet, dripping pussy that looks deliciously ready to be filled. Along its body are three rows of breasts, each with hard, chocolate-brown nipples. It whimpers again, offering itself to you.";
 	if hunger of player > 24:
 		say "     That rich, chocolaty scent becomes too much for you. You are so hungry and your stomach grumbles with the need to fill yourself with the doggy's cream. You stuff that hard cock into your mouth, finding it delicious. You lick and suck the leaking shaft while your hands play with its six leaking tits. They dribble white chocolate cream, much like what you're soon rewarded with in great quantity from the dog. You gulp it all down to satisfy your hunger a little. You lick your lips as you pull your head back, smiling down at the generous canine that's filled your tummy. It seems to smile back up at you. You lean forward and enjoy some slobbery doggy kisses before getting up and heading off.";
-		decrease hunger of player by 12;
-		if hunger of player < 0:
-			now hunger of player is 0;
+		PlayerEat 12;
 		say "[chococheck]";
 		infect "Chocolate Lab";
 		increase libido of player by 10;
@@ -227,9 +223,7 @@ this is the Choclab piggyback rule:
 			else:
 				say "     As the rumbling continues to intensify you realize your body is turning the tables on the intruder, and apparently the lab realizes the same thing as it begins violently pushing and flailing inside you. Unfortunately for the lab, it is no longer able to escape the same way it entered your body, and it quickly tires itself out fruitlessly trying to escape. You feel the pressure and movement slowly dissipate as the last of the lab's strength wanes and with a final muffled whine from deep inside you the movement stops.";
 			say "     [if labhost is 2]You feel a wave of emotion roll through your mind from the other lab, mostly sadness, but there's a hint of fear as well. [end if]As the action inside you finally settles down you find yourself feeling quite full, releasing a loud belch as you continue on your way you feel somewhat at ease, taking solace in the knowledge that the lab's strange attempt to convert you has failed.";
-			decrease hunger of player by 15;
-			if hunger of player < 0:
-				now hunger of player is 0;
+			PlayerEat 15;
 		else:
 			if bodyname of player is "Chocolate Lab":
 				say "     You feel your body rolling and churning around the trapped lab, turning the tables on the unwanted intruder. Realizing this, the lab suddenly begins to struggle, pushing and flailing against your body. You feel the lab's movement begin to focus at a single point in your chest, and watch as a canine muzzle slowly pushes through your chocolate flesh. Slowly but surely the lab drags itself out of your body in much the same way as it forced itself in. Landing on the ground with a wet smack the lab pulls itself together into a familiar canine shape before turning to face you. The lab's dark chocolate orbs stare into your eyes for a few moments before it releases several wet barks and licks your cheek. Soon after the lab turns away and begins happily padding down the street, leaving you alone to gather your wits and continue on your way.";
@@ -286,9 +280,7 @@ this is the Choclab piggyback rule:
 		else:
 			say "     A sudden rumbling in your stomach draws your attention to the fact that the [if labhost is 2]s stowed away in your body have[else] stowed away in your body has[end if] been less active recently. You feel [if labhost is 2]one of the dogs['] liquid chocolate forms[else]the dog's liquid chocolate form[end if] churning inside your body and hear a weak, muffled whimper from inside your belly. You feel the dog pushing weakly against the inside of your body, as if trying to escape. Unfortunately for the lab, weakened by its ongoing effort to convert you, it no longer has the strength to escape your body. You feel the pressure and movement slowly dissipate as the last of the lab's strength wanes and with a final muffled whine from deep inside you the movement stops.";
 		say "     [if labhost is 2]You feel a wave of emotion roll through your mind from your other passenger, mostly sadness, but there's a hint of fear as well. [end if]As the action inside you finally settles down you find yourself feeling quite full, releasing a loud belch. As you continue on your way you feel somewhat at ease, taking solace in the knowledge that the lab's strange attempt to convert you has failed.";
-		decrease hunger of player by 15;
-		if hunger of player < 0:
-			now hunger of player is 0;
+		PlayerEat 15;
 		now labtimerB is 0;
 		decrease labhost by 1;
 	if labtimerA > 0:
@@ -299,9 +291,7 @@ this is the Choclab piggyback rule:
 		else:
 			say "     A sudden rumbling in your stomach draws your attention to the fact that the [if labhost is 2]s stowed away in your body have[else] stowed away in your body has[end if] been less active recently. You feel [if labhost is 2]one of the dogs['] liquid chocolate forms[else]the dog's liquid chocolate form[end if] churning inside your body and hear a weak, muffled whimper from inside your belly. You feel the dog pushing weakly against the inside of your body, as if trying to escape. Unfortunately for the lab, weakened by its ongoing effort to convert you, it no longer has the strength to escape your body. You feel the pressure and movement slowly dissipate as the last of the lab's strength wanes and with a final muffled whine from deep inside you the movement stops.";
 		say "     [if labhost is 2]You feel a wave of emotion roll through your mind from your other passenger, mostly sadness, but there's a hint of fear as well. [end if]As the action inside you finally settles down you find yourself feeling quite full, releasing a loud belch. As you continue on your way you feel somewhat at ease, taking solace in the knowledge that the lab's strange attempt to convert you has failed.";
-		decrease hunger of player by 15;
-		if hunger of player < 0:
-			now hunger of player is 0;
+		PlayerEat 15;
 		now labtimerA is labtimerB;
 		now labtimerB is 0;
 		decrease labhost by 1;

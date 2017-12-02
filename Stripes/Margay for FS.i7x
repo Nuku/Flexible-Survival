@@ -30,8 +30,8 @@ to say losetomargay:
 		say "     The female margay looms over you, purring happily at her new prize. You are grabbed by the ample feline and your face pressed to her bosom. With your lips at her large nipple, you can't help but taste the dribbles of milk coming from it and that first taste is enough to set you to nursing. As you drink it down, it becomes all you can focus on.";
 		say "     'Oh, such a good [if cunts of player > 0]girl[else]boy[end if]. Drink it all down for your new mama,' she purrs while running her paws over your [bodydesc of player] body.";
 		say "     She holds you even closer and runs her paws along your back, reaching down to grab your ass in a most un-motherly way. With a paw kneading your rear and the other [if cocks of player > 0]stroking your cock[else if cunts of player > 0]fingering your pussy[else if anallevel is not 1]fingering your asshole[else]rubbing your bare crotch[end if], you can't help but moan and mewl softly and suckle all the harder[if cocks of player > 0 or cunts of player > 0]. You're pushed to climax just as you're emptying her plentiful milkjugs of the last few drops[else]. You're snuggled and caressed until you've emptied her plentiful milkjugs of every last drop[end if]. With your belly full of her warm milk, you end up drifting off in the big kitty's arms, only to awaken some time later [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your intimate meal. You stagger to your feet and leave the private spot where your feline mother left you to be safely hid until you awoke and soon find your way back to where you were.";
-		decrease humanity of player by 5;
-		decrease thirst of player by 6;
+		SanLoss 5;
+		PlayerDrink 6;
 	else if margayubed is not 0 and margayubed is even:
 		say "     The female margay looms over you, purring happily at her new prize. You are grabbed by the ample feline and your face pressed to her bosom. With your lips at her large nipple, you can't help but taste the dribbles of milk coming from it and that first taste is enough to set you to nursing. As you drink it down, it becomes all you can focus on.";
 		say "     'Oh, such a good [if cunts of player > 0]girl[else]boy[end if]. Drink it all down for your new mama,' she purrs while running her paws over your [bodydesc of player] body.";
@@ -51,13 +51,13 @@ to say losetomargay:
 		increase margayubed by 1;
 		decrease humanity of player by 10;
 		increase libido of player by 5;
-		decrease thirst of player by 6;
+		PlayerDrink 6;
 	else:
 		say "     The female margay looms over you, purring happily at her new prize. You [if margayubed > 2]are almost looking forward to it as[else]aren't prepared for what happens next as[end if] the feline turns around and flashes her two vaginas in your face. 'Oh you'll make a FINE member of my family,' she purrs before squatting on your head, pressing her large body down atop you.";
 		say "     You[if margayubed > 2] raise your head into position and lick at her wet folds as she kisses them to your face[else][']re too paralyzed to move[end if], her posterior cunt easily stretching around your head and swallowing you up as her bulk forces her down over you. Within moments you feel the rest of your body getting sucked up into her second yet very warm uterus[if cocks of player > 1]. As your cocks are pressed between your body and[else if cocks of player is 1]. As your cock is pressed between your body and[else]. As your pussy grinds against[end if] her rippling vaginal walls, you cannot help but climax, cumming hard from the stimulation and the arousing taste and scent of female juices surrounding you. You are fully forced into her womb and are pressed into a fetal position as you struggle to remain conscious. Your captor's walls grow a placenta and an umbilical cord snakes its way down to your navel area to connect with a warm tingling that is somehow pleasant. Feeling her paws rubbing over her full belly, your struggles grow weaker until you pass out.";
 		say "     When you come to, you're curled up [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your unusual experience. You stagger to your feet and leave the private spot where your feline mother left you safely hidden while you napped and soon find your way back to where you were.";
 		increase margayubed by 1;
-		decrease humanity of player by 5;
+		SanLoss 5;
 		increase libido of player by 5;
 
 
@@ -229,7 +229,7 @@ The usedesc of margay milk is "[drinkmargaymilk]";
 
 to say drinkmargaymilk:
 	say "     Feeling suddenly thirsty for the feline milk, you drink it down, releasing a soft purring soft as you do.";
-	decrease thirst of player by 6;
+	PlayerDrink 6;
 
 
 Section 5 - Endings

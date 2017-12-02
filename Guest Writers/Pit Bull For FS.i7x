@@ -285,7 +285,7 @@ to say pitbull_vsex4:		[give anal]
 		say ". Growls growing louder as you grind [if cocks of player > 1]one of [end if]your [cock size desc of player], hardening dick[smn] between her exposed cheeks, no doubt she challenges the prospect of being impaled by such an impressive thing";
 	else:
 		say ". Grinding [if cocks of player > 1]one of [end if]your [cock size desc of player], hardening dick[smn] against these exposed cheeks you elucidate upon your tainted plans for the beast, much to their ill-regard to the prospect";
-	say ". Readied, you thrust the tip of your [cock of player] cock into [if pitbullgender is 2]his[else]her[end if] [if cock length of player > 11]ill-abiding [end if] pucker. Strained grunts escaping your lips, it takes a measure of work until the tight hole will yield to such an irreverent intrusion, the canine groaning against your tainted endeavour.";
+	say ". Readied, you thrust the tip of your [cock of player] cock into [if pitbullgender is 2]his[else]her[end if] [if cock length of player > 11]ill-abiding [end if]pucker. Strained grunts escaping your lips, it takes a measure of work until the tight hole will yield to such an irreverent intrusion, the canine groaning against your tainted endeavour.";
 	say "     [if scalevalue of player > 3]Ground against the earth under your weight[else]Rocking against the earth[end if], you thrust upon the beast with a rising fervor, alight with this twisted compulsion. Lingering [if pitbullgender is 2]whimpers his[else]growls her[end if] regard, [if pitbullgender is 2]he[else]she[end if] can't help but be influenced by your endeavours, [if pitbullgender is 2]his unattended dick grinding against the ground[else]her unattended cunt staining the ground with its honey[end if]. Pounding [if pitbullgender is 2]his[else]her[end if] ass for a fair measure of time before you find your bliss, [if cockname of player is listed in infections of knotlist]tying your knotted[else]hilting your[end if] organ within [if pitbullgender is 2]his[else]her[end if] bowels[if cock length of player > 11], their cries its punctuation when forced to abide the whole of the impressive thing[end if] as you flood [if pitbullgender is 2]his[else]her[end if] depths with your [cum load size of player] load.";
 	say "     You require a moment to recover before you audibly pull your rod from the canine's hole, letting [if pitbullgender is 2]him[else]her[end if] off, still [if pitbullgender is 2]whimpering as he[else]grumbling as she[end if] nurses [if pitbullgender is 2]his[else]her[end if] [if cock length of player > 11]very [end if]sore and cum-stained ass before you yourself head on your merry way.";
 
@@ -415,7 +415,7 @@ this is the balltit rule:
 	if cocks of player > 0:			[powerful ball kick]
 		now multiplier is 120 + ( ( square root of ( cock width of player + 6 ) ) * 20 );
 		now dam is ( dam * multiplier ) / 100;
-		say "The [name entry] decides to play dirty and drives their foot into your groin, kicking you square in the nuts! You clutch your aching [ball size] testes, having taken [special-style-2][dam][roman type] damage!";
+		say "The [name entry] decides to play dirty and drives their foot into your groin, kicking you square in the nuts! You clutch your aching [short ball size] testes, having taken [special-style-2][dam][roman type] damage!";
 	else:					[strong tit punch]
 		now multiplier is 110 + ( ( square root of ( breast size of player + 1 ) ) * 6 );
 		now dam is ( dam * multiplier ) / 100;

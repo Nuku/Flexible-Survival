@@ -109,10 +109,8 @@ instead of conversing the Kenaz:
 			WaitLineBreak;
 			say "A nearly inaudible rumble of a growl pours out of Kenaz's throat making you smile somewhat nervously over at the green eyed man as you listen to the deep sounding grumble of displeasure. It's only when you cough in your own throat that Kenaz quickly picks up on what he's doing. 'S-sorry, that's been happening a lot as of late. I think the virus or whatever is getting to me, but thankfully it's not that bad. Not unless I get upset or...' Kenaz shrugs somewhat helplessly. 'Anyway, Birch and I were the last guys here who stuck around to see about the place before the station got closed down. But, as cliché as it sounds, Birch did stop showing up a few days before the crisis hit the city. [line break]";
 			say "I went to check his girlfriend's apartment -- that's the place where he usually hangs out when not off duty -- but the landlady said she hadn't seen either in a while.' Kenaz smiles haphazardly after saying this. Nodding to the other you realize what he might have been thinking. Thanking Kenaz for the food you decide that maybe asking around town might net you some information about the other firefighters. Maybe trying an informer might help?[line break]";
-			decrease hunger of player by 30;
-			if hunger of player < 0, now hunger of player is 0;
-			decrease thirst of player by 25;
-			if thirst of player < 0, now thirst of player is 0;
+			PlayerEat 30;
+			PlayerDrink 25;
 			now smf is 1;
 			now Kenaztalk is 1;
 			increase score by 10;
@@ -149,7 +147,7 @@ instead of conversing the Kenaz:
 				fight;
 				say "Having dealt with that lot, you make your way back inside of the firehouse and to check on Kenaz. Seeing him gone makes a surge of panic shoot throughout your spine, that is, right before you feel something hard and heavy hit you across the back of the head. Yelping in dismay, you grab the top of your scalp and then flip your head around to have a look at whoever just assaulted you. 'Now you know how I feel,' Kenaz says somewhat smugly before dropping the thing in his hand to let it clatter loudly down onto the ground.";
 				WaitLineBreak;
-				say "You try and apologize to the other man, but Kenaz simply waves you off. The rueful smile on his face tells you of the firefighter's appreciation for what you did. 'Want some water?'You nod to Kenaz at his offer. It takes the other man a minute to return but once he does Kenaz has both a bottle of water and two ice packs in hand, though one of the packs is covering the firefighter's own head. 'I thank you for the save, but seriously?' You can only shrug after Kenaz hands you the water and ice pack. Twisting the cap of the bottle open you swallow the water while at the same time pressing the offered ice pack over you throbbing head. The two of you say nothing for a long while, simply enjoying each other's company, even though the both of you are in shared pain.";
+				say "You try and apologize to the other man, but Kenaz simply waves you off. The rueful smile on his face tells you of the firefighter's appreciation for what you did. 'Want some water?' You nod to Kenaz at his offer. It takes the other man a minute to return but once he does Kenaz has both a bottle of water and two ice packs in hand, though one of the packs is covering the firefighter's own head. 'I thank you for the save, but seriously?' You can only shrug after Kenaz hands you the water and ice pack. Twisting the cap of the bottle open you swallow the water while at the same time pressing the offered ice pack over you throbbing head. The two of you say nothing for a long while, simply enjoying each other's company, even though the both of you are in shared pain.";
 				WaitLineBreak;
 				say "'I wish the others were here,' Kenaz sighs all of a sudden. You look over to the other man and then ask him what he's on about. 'The guys, I mean the other firefighters, I kinda miss them.' You chuckle as you ask him to elaborate a bit more. 'We all were supposed to be getting some time off before being relocated since the station is going to be closing soon because of the damn mayor. The fatass captain and his crony in the downtown office decided that there doesn't need to be a more than one firehouse per burrow and since station 83 is just three miles away from here...' Kenaz let's that sentence die, but not before growling like an angry mutt.";
 				WaitLineBreak;
@@ -157,8 +155,7 @@ instead of conversing the Kenaz:
 				WaitLineBreak;
 				say "'Heh, I didn't know that. Oh well, makes sense, I guess.' Kenaz sighs and then lowers his head in silent, his right hand is all that keeps the ice pack from falling onto the floor. Asking Kenaz what happened with the others the firefighter can only shrug. 'Don't know, everyone was supposed to be going out of town or something so that only left me and Birch around to watch over the place. Since the two of us basically live here we didn't really mind it. But after he left and didn't come back I went to his girlfriend's apartment to check on him.[line break]";
 				say "I got told by the land lady that she hadn't seen either of them in a while. Maybe one of those things out there caught him?' Seeing the other man's despondence as he mournfully shakes his head you wonder if you could find out some information about the other firefighters.";
-			decrease thirst of player by 25;
-			if thirst of player < 0, now thirst of player is 0;
+			PlayerDrink 25;
 			now smf is 1;
 			now Kenaztalk is 1;
 			increase score by 10;
