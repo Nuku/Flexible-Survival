@@ -65,14 +65,14 @@ title	description
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
 "Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]Waits Off[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]Waits On[roman type] to return to the default."
 "Clear Less"	"Don't like the page clearing of text?  Want the combat interface at the bottom of the screen?  Type [bold type]Clears Off[roman type] to stop screen clearing.[line break]Don't like the change and want to go back?  Type [bold type]Clears On[roman type] to return to the default."
-"Auto Attack"	"If you have the [']Instinctive Combat['] feat you can use different automatic attacks.  These are the same as picking the same option over and over again during combat.  No different results, just less typing for faster gameplay.[line break]Type [bold type]auto attack normal[roman type] for the default method of combat (choose each action).[line break]Type [bold type]auto attack berserk[roman type] to always attack in combat.[line break]Type [bold type]auto attack pass[roman type] to always pass in combat.[line break]Type [bold type]auto attack coward[roman type] to always flee in combat.[line break]Type [bold type]auto attack submit[roman type] to always submit in combat."
+"Auto Attack"	"If you have the [']Instinctive Combat['] feat you can use different automatic attacks. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type]auto attack normal[roman type] for the default method of combat (choose each action).[line break]Type [bold type]auto attack berserk[roman type] to always attack in combat.[line break]Type [bold type]auto attack pass[roman type] to always pass in combat.[line break]Type [bold type]auto attack coward[roman type] to always flee in combat.[line break]Type [bold type]auto attack submit[roman type] to always submit in combat."
 "Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://blog.flexiblesurvival.com/ ."
 "Further Help"	"For further help and information, check out the wiki at: http://wiki.flexiblesurvival.com/w/Main_Page or join the Discord at: https://discord.gg/b54Mbkb ."
 "Patron Credits"	"[patroncredits]"
 
 To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to better fit this game, without changing that extension, as it may be used by other games]
 	now the title in row 2 of Table of Instruction Options is "What to do with >";
-	now the description in row 2 of Table of Instruction Options is "The > sign is where the game says, 'Okay, what do you want to do now?'  You may respond by typing an instruction -- usually an imperative verb, possibly followed by prepositions and objects.  So, for instance, LOOK, LOOK AT FISH, TAKE FISH.";
+	now the description in row 2 of Table of Instruction Options is "The > sign is where the game says, 'Okay, what do you want to do now?'  You may respond by typing an instruction -- usually an imperative verb, possibly followed by prepositions and objects. So, for instance, LOOK, LOOK AT FISH, TAKE FISH.";
 	now the title in row 1 of Table of Basic Help Options is "Q to quit help, enter to select entry";
 	now the description in row 1 of Table of Basic Help Options is "Use arrows to navigate the help menu.[line break]Enter selects the entry that is marked with the >[line break]Q will take you back one level of help, or leave the help system if your at the top.";
 
@@ -199,9 +199,9 @@ A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a list of text called conversation.
 
 [See the BFandI extension for an explanation on these new variables.]
-The player has a number called scalevalue.  The scalevalue is usually 3.						[value for body size]
-The player has a text called bodydesc.  The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
-The player has a text called bodytype.  The bodytype is usually "human".						[broad adjective for species]
+The player has a number called scalevalue. The scalevalue is usually 3.						[value for body size]
+The player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
+The player has a text called bodytype. The bodytype is usually "human".						[broad adjective for species]
 The player has a number called daycycle.												[day/night bias]
 
 freecred is a number that varies.
@@ -231,10 +231,10 @@ Equipment has a text called descmod. The descmod of equipment is usually "".
 Equipment has a text called placement. The placement of equipment is usually "end".
 Equipment has a text called slot. The slot of equipment is usually "".
 Equipment has a number called AC. The AC of equipment is usually 0.
-Equipment has a number called effectiveness.  The effectiveness of equipment is usually 0.
-Equipment has a number called dodgebonus.  The dodgebonus of equipment is usually 0.	[Rare, usually magic]
-Equipment has a number called damagebonus.  The damagebonus of equipment is usually 0.	[Rare, usually magic]
-Equipment has a number called fleebonus.  The fleebonus of equipment is usually 0.		[Usually a penalty]
+Equipment has a number called effectiveness. The effectiveness of equipment is usually 0.
+Equipment has a number called dodgebonus. The dodgebonus of equipment is usually 0.	[Rare, usually magic]
+Equipment has a number called damagebonus. The damagebonus of equipment is usually 0.	[Rare, usually magic]
+Equipment has a number called fleebonus. The fleebonus of equipment is usually 0.		[Usually a penalty]
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious.
@@ -256,7 +256,7 @@ Targetturns is a number that varies.
 Started is a number that varies.
 Freefeats is a number that varies.
 Lost is a number that varies.
-showlocale is a truth state that varies.  showlocale is usually true.
+showlocale is a truth state that varies. showlocale is usually true.
 Child is a person.
 Child has a number called Gestation.
 Child can be born. Child is not born.
@@ -276,7 +276,7 @@ A situation has a text called sarea. The sarea of a situation is usually "Outsid
 A situation has a number called level. The level of a situation is usually 0.
 A situation has a number called minscore. The minscore of a situation is usually -2147483648.
 A featset is a kind of thing.
-inasituation is a truth state that varies.  inasituation is normally false.
+inasituation is a truth state that varies. inasituation is normally false.
 
 Definition: A grab object(called X) is wielded:
 	if weapon object of player is x, yes;
@@ -287,19 +287,19 @@ Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
 	if the absolute value of ( scalevalue of player - objsize of x ) > 1, yes;
 	no;
 
-A person can be submissive.  A person is usually not submissive.
+A person can be submissive. A person is usually not submissive.
 
 Definition: A person (called x) is submissive:
 	if "Submissive" is listed in feats of x, yes;
 	no;
 
-A person can be dominant.  A person is usually not dominant.
+A person can be dominant. A person is usually not dominant.
 
 Definition: A person (called x) is dominant:
 	if "Dominant" is listed in feats of x, yes;
 	no;
 
-A person can be twistcapped.  A person is usually not twistcapped.
+A person can be twistcapped. A person is usually not twistcapped.
 
 Definition: A person (called x) is twistcapped:
 	if "Twisted Capacity" is listed in feats of x, yes;
@@ -404,7 +404,7 @@ A door has a text called marea.
 A room can be known or unknown. A room is usually unknown.
 A room can be fasttravel. A room is usually not fasttravel.
 A room can be private. A room is usually not private.
-A room can be sleepsafe.  A room is usually not sleepsafe.
+A room can be sleepsafe. A room is usually not sleepsafe.
 A room has a text called earea. earea is usually "void". [exploration area]
 The player is wearing a watch.
 The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
@@ -444,8 +444,8 @@ WSlevel is a number that varies.
 vorelevel is a number that varies.
 UBlevel is a number that varies.
 ovipreglevel is a number that varies.
-ovipregnant is a truth state that varies.  ovipregnant is usually false.		[marks if ovi-pregnant now]
-ovipregalways is a truth state that varies.  ovipregalways is usually false.	[marks if allowed to pick always ovi]
+ovipregnant is a truth state that varies. ovipregnant is usually false.		[marks if ovi-pregnant now]
+ovipregalways is a truth state that varies. ovipregalways is usually false.	[marks if allowed to pick always ovi]
 
 Book 2 - Places
 [ Moved to Basic Locations.i7x in Core Mechanics ]
@@ -600,18 +600,18 @@ name	desc	weight	object	sortname (indexed text)
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
 "cot"	"A folding cot. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
 "dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
-"face mask"	"A basic filtered face mask.  Maybe it will help?  Probably not[first time].  You doubt it was designed with this madness in mind[only]."	3	face mask
+"face mask"	"A basic filtered face mask. Maybe it will help?  Probably not[first time]. You doubt it was designed with this madness in mind[only]."	3	face mask
 [
-"heuristic processor"	"A small electronic circuit.  You've been told it's amazingly adaptive and can learn anything.  Probably nonsense, but maybe you can find a use for it, somehow."	1	heuristic processor
-"reprogramming device"	"An attempt by Dr. Mouse to build a device to reprogram the nanites.  It's too bulky, and doesn't have the processing capacity to be of any use in the field.  Perhaps you could find a way around those limitations?"	13	reprogramming device
-"infection scanner"	"Upgraded Infection Monitor.  Or it would have been, it's clearly not finished.  It's missing any sort of display to show what it finds.  Perhaps you could use it's scanner parts elsewhere?"	7	infection scanner
+"heuristic processor"	"A small electronic circuit. You've been told it's amazingly adaptive and can learn anything. Probably nonsense, but maybe you can find a use for it, somehow."	1	heuristic processor
+"reprogramming device"	"An attempt by Dr. Mouse to build a device to reprogram the nanites. It's too bulky, and doesn't have the processing capacity to be of any use in the field. Perhaps you could find a way around those limitations?"	13	reprogramming device
+"infection scanner"	"Upgraded Infection Monitor. Or it would have been, it's clearly not finished. It's missing any sort of display to show what it finds. Perhaps you could use it's scanner parts elsewhere?"	7	infection scanner
 ]
 
 face mask is equipment. It is a part of the player. It is not temporary.
 The descmod of face mask is "A filtered mask covers nose and mouth in a vain attempt to help. ".
 The placement of face mask is "face".
 journal is a grab object. It is a part of the player. It is not temporary. The carried of journal is 1.
-journal has a number called hitbonus.  hitbonus of journal is usually 0.
+journal has a number called hitbonus. hitbonus of journal is usually 0.
 cot is a grab object. It is a part of the player. It is not temporary.
 understand "Bed" as cot.
 Understand "book" as journal.
@@ -622,17 +622,17 @@ water bottle is a grab object. It is a part of the player. The trade of water bo
 Does the player mean using the dirty water: it is unlikely.
 Does the player mean stashing the dirty water: it is unlikely.
 Does the player mean retrieving the dirty water: it is unlikely.
-dog milk is a grab object. It is a part of the player.  it is milky.
+dog milk is a grab object. It is a part of the player. it is milky.
 soda is a grab object. It is a part of the player.
 chips is a grab object. It is a part of the player.
 glob of goo is a grab object. It is a part of the player. glob of Goo is infectious. The strain of glob of goo is "Goo Girl".
 food is a grab object. It is a part of the player. The trade of food is "soda".
-pocketknife is a armament. It is a part of the player. It has a weapon "[one of]your large knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]". The weapon damage of pocketknife is 5. The weapon type of pocketknife is "Melee". It is not temporary.  the objsize of pocketknife is 2.
+pocketknife is a armament. It is a part of the player. It has a weapon "[one of]your large knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]". The weapon damage of pocketknife is 5. The weapon type of pocketknife is "Melee". It is not temporary. the objsize of pocketknife is 2.
 understand "knife" as pocketknife.
-chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary.  the objsize of chair is 4.
+chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary. the objsize of chair is 4.
 understand "seat" as chair.
-gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon". The trade of Gryphon Milk is "distilled milk".  gryphon milk is milky.
-distilled milk is a grab object. It is a part of the player.  it is not milky.
+gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon". The trade of Gryphon Milk is "distilled milk". gryphon milk is milky.
+distilled milk is a grab object. It is a part of the player. it is not milky.
 
 
 The invent of the player is { "journal" }.
@@ -805,7 +805,7 @@ when play begins:
 Taurlist is a marker.	[list of tauric infections]
 when play begins:
 	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "Tigertaur", "Wolftaur", "Skunk Taur" } to infections of Taurlist;
-[Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional.  It also does not include the Spidergirl and Spidertaur forms, as their genitals are located in the front where the human pelvis would be, and therefore would not match with scenes specifically designed for taur anatomy.]
+[Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional. It also does not include the Spidergirl and Spidertaur forms, as their genitals are located in the front where the human pelvis would be, and therefore would not match with scenes specifically designed for taur anatomy.]
 
 Knotlist is a marker.	[list of infections w/knotted cock]
 when play begins:
@@ -852,13 +852,13 @@ battleground is a text that varies.
 Lusting is a text that varies.
 
 Hunting is an action applying to one topic.
-ishunting is a truth state that varies.  ishunting is usually false.
+ishunting is a truth state that varies. ishunting is usually false.
 
 understand "hunt [text]" as hunting.
 
 check hunting:
 	if blindmode is true:
-		say "You're playing in blind-mode, so hunting is not allowed.  You'll have to try exploring to find what you seek." instead;
+		say "You're playing in blind-mode, so hunting is not allowed. You'll have to try exploring to find what you seek." instead;
 	else if there is a dangerous door in the location of the player: [danger door]
 		let y be a random dangerous door in the location of the player;
 		now battleground is the marea of y;
@@ -1544,7 +1544,7 @@ understand "inventory columns" as settinginvcolumns.
 understand "set inventory" as settinginvcolumns.
 understand "set columns" as settinginvcolumns.
 
-invcolumns is a number that varies.  [invcolumns is usually 2. - set as part of Presets in Core Mechanics]
+invcolumns is a number that varies. [invcolumns is usually 2. - set as part of Presets in Core Mechanics]
 
 carry out settinginvcolumns:
 	say "[set_invcolumns]";
@@ -1559,7 +1559,7 @@ understand "i" as Inventorying.
 understand "inv" as Inventorying.
 understand "inventory" as Inventorying.
 
-invcolumns is a number that varies.  invcolumns is usually 2.
+invcolumns is a number that varies. invcolumns is usually 2.
 
 does the player mean doing something with the medkit: it is very likely.
 
@@ -1808,7 +1808,7 @@ to delete (X - a grab object):
 	decrease the carried of x by 1;
 	if carried of x < 0:
 		now carried of x is 0;
-		say "ERROR: There was no [x] to remove.  Please report where this occurred.";
+		say "ERROR: There was no [x] to remove. Please report where this occurred.";
 
 instead of waiting:
 	follow the turnpass rule;
@@ -1889,7 +1889,7 @@ To say short time of day:
 			say "evening";
 
 daytimer is a thing.
-daytimer can be day or night.  [daytimer is normally true.	[True/False variable for to indicate if day or night] ]
+daytimer can be day or night. [daytimer is normally true.	[True/False variable for to indicate if day or night] ]
 
 definition: Daytimer is day:
 	if remainder after dividing turns by 8 > 3 or ( remainder after dividing turns by 8 < 0 and remainder after dividing turns by 8 > -5 ):
@@ -1941,12 +1941,12 @@ To Extend game by (x - a number):
 
 To process (X - a grab object):
 	if x is temporary and x is owned:
-		say "You eagerly use up the [x]! ";
+		say "You eagerly use the [x]!";
 		let found be 0;
 		let num be 0;
 		delete x;
 	else:
-		say "You use the [x]. ";
+		say "You use the [x].";
 	if usedesc of x is empty:
 		now x is x;
 	else:
@@ -1972,12 +1972,12 @@ To process (X - a grab object):
 				say "You feel better having eaten.";
 	if x is chips:
 		if labhost > 0 and bodyname of player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
-			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something.  There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole.  You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body.  Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
+			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something. There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole. You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body. Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
 		else if "Junk Food Junky" is listed in feats of player:
 			if hunger of player > 14:
 				increase score by 5;
 			PlayerEat 15;
-			say "Snack time!  You wolf down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random] with delight.  YUM!";
+			say "Snack time!  You wolf down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random] with delight. YUM!";
 			if morale of player < 0:
 				increase morale of player by 36;
 				if morale of player > 0, now morale of player is 0;
@@ -2057,7 +2057,7 @@ To process (X - a grab object):
 				if thirst of player > 30:
 					decrease score by ( thirst of player minus 30 ) divided by 3;
 			PlayerDrink 30;
-			say "Awesome!  Soda!  You down the delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if].  YUM!";
+			say "Awesome!  Soda!  You down the delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if]. YUM!";
 			if morale of player < 0:
 				increase morale of player by 75;
 				if morale of player > 0, now morale of player is 0;
@@ -2136,9 +2136,9 @@ To process (X - a grab object):
 			say "You ready your [x]";
 			if x is unwieldy:
 				if scalevalue of player > objsize of x:
-					say ".  Your [if scalevalue of player is 3]normal-size[else if scalevalue of player is 4]large[else]massive[end if] [bodyname of player] hand dwarfs the [x], making it [if scalevalue of player - objsize of x > 3]very[else if scalevalue of player - objsize of x is 3]rather[else]somewhat[end if] [one of]unwieldy[or]awkward[or]difficult[at random] to use accurately";
+					say ". Your [if scalevalue of player is 3]normal-size[else if scalevalue of player is 4]large[else]massive[end if] [bodyname of player] hand dwarfs the [x], making it [if scalevalue of player - objsize of x > 3]very[else if scalevalue of player - objsize of x is 3]rather[else]somewhat[end if] [one of]unwieldy[or]awkward[or]difficult[at random] to use accurately";
 				else:
-					say ".  Your [if scalevalue of player is 3]normal-size[else if scalevalue of player is 2]small[else]tiny[end if] [bodyname of player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of player > 3]very[else if objsize of x - scalevalue of player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
+					say ". Your [if scalevalue of player is 3]normal-size[else if scalevalue of player is 2]small[else]tiny[end if] [bodyname of player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of player > 3]very[else if objsize of x - scalevalue of player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
 			say ".";
 	if x is equipment:
 		if x is equipped:		[unequip]
@@ -2188,7 +2188,7 @@ To process (X - a grab object):
 		if inafight is 1:
 			say "[line break][usepepperspray]";
 		else:
-			say "It would not be good idea to use that on yourself.  Spicy eyes!";
+			say "It would not be good idea to use that on yourself. Spicy eyes!";
 	if x is a healing booster:
 		let healed be 20;
 		if "Expert Medic" is listed in the feats of the player:
@@ -2205,7 +2205,7 @@ To process (X - a grab object):
 		if HP of player > maxHP of player:
 			decrease healed by HP of player minus maxHP of player;
 			now HP of player is maxHP of player;
-		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate.  You regain [special-style-1][healed][roman type] HP.";
+		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate. You regain [special-style-1][healed][roman type] HP.";
 		delete healing booster;
 
 
@@ -2270,7 +2270,7 @@ carry out autoattackberserk:
 carry out autoattackpass:
 	if "Instinctive Combat" is listed in feats of player:
 		now autoattackmode is 3; [autopass, no choice, always pass]
-		say "You feel calm.  Your sure everything will work out in the end.  Don't mind the monsters attacking you.";
+		say "You feel calm. Your sure everything will work out in the end. Don't mind the monsters attacking you.";
 	else:
 		say "You feel you are missing the instincts to do this.";
 
@@ -2331,7 +2331,7 @@ To AttemptToWaitBeforeClear: [use where you want a wait, which happens directly 
 	if waiterhater plus hypernull is 0:
 		say "[line break]"; [adds a break after the 'more']
 
-To AttemptToWaitAndClearHyper: [use where you want a wait and clear.  Much like AttemptToWaitBeforeClear, but this includes the clear as part of it]
+To AttemptToWaitAndClearHyper: [use where you want a wait and clear. Much like AttemptToWaitBeforeClear, but this includes the clear as part of it]
 	if clearnomore plus waiterhater is not 2: [waits if either waiting or clearing is active, only skips them if both are turned off]
 		wait for any key;
 		clear the screen;
@@ -2341,7 +2341,7 @@ To AttemptToWaitAndClearHyper: [use where you want a wait and clear.  Much like 
 Section Waithate
 
 [creates (and sets) flag for skipping many wait for any key;]
-[i had difficulty setting it so that the player could directly toggle this, as well as have other chunks of code do the same thing.  made a command, which is for when the player types it out, and a function, which is for when code calls it.  the command just calls the code.  i'm sure there is a better way to do this, but it seems to work properly.]
+[i had difficulty setting it so that the player could directly toggle this, as well as have other chunks of code do the same thing. made a command, which is for when the player types it out, and a function, which is for when code calls it. the command just calls the code. i'm sure there is a better way to do this, but it seems to work properly.]
 waiterhater is a number that varies.
 
 WaitHateFunction is an action applying to nothing.
@@ -2440,7 +2440,7 @@ g-peach	15645627		[== $EEBBBB]
 g-pure-yellow	16776960		[== $FFFF00]
 g-pure-magenta	16711935		[== $FF00FF]
 g-pure-red	16711680		[== $FF0000]
-[names can be changed if desired, also need to change matching name in table below.  choose color in hex, then convert to decimal for assigned number.]
+[names can be changed if desired, also need to change matching name in table below. choose color in hex, then convert to decimal for assigned number.]
 
 [
 style name	justification	obliquity	indentation	first-line indentation	boldness	fixed width	relative size	glulx color
@@ -2454,10 +2454,10 @@ header-style	--	--	--	--	--	--	--	--[also does starting title]
 note-style	--	--	--	--	--	--	--	--[also does scores]
 italic-style	--	--	--	--	--	--	--	--[allows redefining of italic style]
 bold-style	--	--	--	--	--	--	--	--[allows redefining of bold style]
-[to change style: replace -- with desired change.  see Glulx Text Effects.i7x for options]
-[blockquote, input, and fixed letter appear to be unused.  they could be redefined as desired for more colors/formating.]
-[alert, header, and note are used for a few game functions.  if you wanted to change those you could]
-[italics and bold are currently in a variety of places.  just a few italics, but bold is all over the place.  be aware if you choose to change them]
+[to change style: replace -- with desired change. see Glulx Text Effects.i7x for options]
+[blockquote, input, and fixed letter appear to be unused. they could be redefined as desired for more colors/formating.]
+[alert, header, and note are used for a few game functions. if you wanted to change those you could]
+[italics and bold are currently in a variety of places. just a few italics, but bold is all over the place. be aware if you choose to change them]
 ]
 
 Part 3 - Item Code
@@ -2536,23 +2536,23 @@ carry out allburninating something(called x):
 					if found is 1:
 						say "You're wielding that, so you'd best stop using it first.";
 					else:
-						say "You trash all of them but the [x] you're using.  Bye-bye.";
+						say "You trash all of them but the [x] you're using. Bye-bye.";
 						now carried of x is 1;
 				else:
-					say "You trash them all.  Bye-bye.";
+					say "You trash them all. Bye-bye.";
 					now carried of x is 0;
 			else if x is an equipment:
 				if x is equipped:
 					if found is 1:
-						say "You're using that right now.  You need to take it off to trash it.";
+						say "You're using that right now. You need to take it off to trash it.";
 					else:
-						say "You trash all of them but the [x] you're wearing.  Bye-bye.";
+						say "You trash all of them but the [x] you're wearing. Bye-bye.";
 						now carried of x is 1;
 				else:
-					say "You trash them all.  Bye-bye.";
+					say "You trash them all. Bye-bye.";
 					now carried of x is 0;
 			else:
-				say "You trash them all.  Bye-bye.";
+				say "You trash them all. Bye-bye.";
 				now carried of x is 0;
 		else:
 			say "You change your mind.";
@@ -2635,7 +2635,7 @@ Carry out trading:
 	let num be 0;
 	delete noun;
 
-skipcockchange is a truth state that varies.  skipcockchange is usually false.
+skipcockchange is a truth state that varies. skipcockchange is usually false.
 
 This is the sex change rule:
 	choose row monster from the table of random critters;
@@ -2691,7 +2691,7 @@ This is the sex change rule:
 			now cock width of player is 5;
 		if prevcock > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if player is internal]internal[else]impressive[end if] [cockname of player] [one of]balls[or]testes[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection.  You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
+			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if player is internal]internal[else]impressive[end if] [cockname of player] [one of]balls[or]testes[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection. You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
 	if cocks of player < cocks entry and ( the sex entry is "Male" or the sex entry is "Both" ) and "Female Preferred" is not listed in feats of player:
 		let prevcock be cocks of player;
 		if cocks of player is 0:
@@ -2783,7 +2783,7 @@ This is the sex change rule:
 			now cunt width of player is 5;
 		if prevcunt > cunt width of player:		[did cock actually shrink?]
 			follow the cunt descr rule;
-			say "You can feel a [one of]tightening[or]snugness[or]clenching[at random] from your accommodating [if cunts of player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random][else][one of]cunt[or]pussy[or]vagina[or]cleft[at random][end if] as you are hit by an unexpected orgasm.  The squeezing does not release fully as your wet hole[sfn] shrink[sfv] somewhat to better suit your new infection by becoming tighter.";
+			say "You can feel a [one of]tightening[or]snugness[or]clenching[at random] from your accommodating [if cunts of player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random][else][one of]cunt[or]pussy[or]vagina[or]cleft[at random][end if] as you are hit by an unexpected orgasm. The squeezing does not release fully as your wet hole[sfn] shrink[sfv] somewhat to better suit your new infection by becoming tighter.";
 	if cunts of player < cunts entry and ( the sex entry is "Female" or the sex entry is "Both" ) and "Male Preferred" is not listed in feats of player:
 		let prevcunt be cunts of player;
 		if cunts of player is 0 or cunt length of player is 0 or cunt width of player is 0:
@@ -3619,12 +3619,12 @@ carry out punying:
 
 Resting is an action applying to nothing.
 understand "Rest" as resting.
-roughing is a truth state that varies.  roughing is usually false.
+roughing is a truth state that varies. roughing is usually false.
 
 check resting:
 	now roughing is false;
 	if caffeinehigh of player > 0:
-		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest.  Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink.";
+		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest. Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink.";
 		stop the action;
 	if location of player is Palomino or location of player is Private Booths:
 		say "Why are you even trying to sleep here?  Everyone's partying like it's the end of the world.";
@@ -3894,12 +3894,12 @@ This is the turnpass rule:
 		now cocks of player is 1;
 		now cock length of player is 5;
 		now cock width of player is 3;
-		say "You feel a pressure at your groin that soon bursts forth as a brand new cock.  This [cock of player] shaft spurts and dribbles with cum from its orgasmic formation.";
+		say "You feel a pressure at your groin that soon bursts forth as a brand new cock. This [cock of player] shaft spurts and dribbles with cum from its orgasmic formation.";
 	else if "Always A Pussy" is listed in feats of player and cunts of player is 0:
 		now cunts of player is 1;
 		now cunt length of player is 5;
 		now cunt width of player is 3;
-		say "You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy.  This dripping cunny with sopping with feminine juices from its orgasmic formation.";
+		say "You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy. This dripping cunny with sopping with feminine juices from its orgasmic formation.";
 	if balloversize is 0:
 		if ( scalevalue of player is 1 or scalevalue of player is 2 ) and cock width of player >= 25:
 			if cockname of player is not "Tanuki" and player is not internal:
@@ -3920,7 +3920,7 @@ This is the turnpass rule:
 		if ( ( scalevalue of player is 1 or scalevalue of player is 2 ) and cock width of player < 25 ) or ( ( scalevalue of player is 3 or scalevalue of player is 4 ) and cock width of player < 32 ) or ( cock width of player < 40 ):
 			increase dexterity of player by balloversize;
 			now balloversize is 0;
-			say "     Your balls, no longer quite so huge compared to your [if scalevalue of player is not 3][body size of player] [end if]body, no longer hinder you.  Your legs definitely feel better for not having to drag them around anymore.";
+			say "     Your balls, no longer quite so huge compared to your [if scalevalue of player is not 3][body size of player] [end if]body, no longer hinder you. Your legs definitely feel better for not having to drag them around anymore.";
 		else if cockname of player is "Tanuki":
 			increase dexterity of player by balloversize;
 			now balloversize is 0;
@@ -3928,7 +3928,7 @@ This is the turnpass rule:
 		else if player is internal:
 			increase dexterity of player by balloversize;
 			now balloversize is 0;
-			say "     Your massive balls, having become internalized, no longer hinder your movement quite so much.  You can still feel them there, heavily resting inside you, but they're no longer in the way at least.";
+			say "     Your massive balls, having become internalized, no longer hinder your movement quite so much. You can still feel them there, heavily resting inside you, but they're no longer in the way at least.";
 	follow the check heat rule;
 	if libido of player >= 99 and humanity of player > 0 and skipturnblocker is 0:
 		say "[spontaneousorgasm]";
@@ -3942,17 +3942,17 @@ This is the turnpass rule:
 	if ( a random number from 1 to 20 ) > ( a random number between 1 and ( stamina of player + 1 ) ):
 		increase hunger of player by 1;
 		if number of entries in childrenfaces > 0 and a random chance of 1 in 2 succeeds, increase hunger of player by 1;
-		if "Spartan Diet" is listed in feats of player and a random chance of 1 in 2 succeeds:
-			PlayerEat 1;
+		if "Spartan Diet" is listed in feats of player and hunger of player > 0 and a random chance of 1 in 2 succeeds:
+			decrease hunger of player by 1;
 	if "Vore Predator" is listed in feats of player:
 		increase hunger of player by a random number between 1 and 5;
-		if "Spartan Diet" is listed in feats of player and a random chance of 1 in 2 succeeds:
-			PlayerEat 1;
+		if "Spartan Diet" is listed in feats of player and hunger of player > 0 and a random chance of 1 in 2 succeeds:
+			decrease hunger of player by 1;
 	if a random number from 1 to 25 > ( a random number between 1 and ( stamina of player + 1 ) ):
 		increase thirst of player by 3;
 		if number of entries in childrenfaces > 0, increase thirst of player by 1;
-		if "Spartan Diet" is listed in feats of player:
-			PlayerDrink 1;
+		if "Spartan Diet" is listed in feats of player and thirst of player > 0:
+			decrease thirst of player by 1;
 	if "Automatic Survival" is listed in feats of player:
 		now thirst of player is 0;
 		now hunger of player is 0;
@@ -3965,39 +3965,39 @@ This is the turnpass rule:
 				increase Strength of player by 1;
 				increase capacity of player by 5;
 				increase hunger of player by 6;
-				say "Your body strives to restore its lost might and rebuilds your muscles.  Your stomach grumbles with hunger at this sudden effort.  [bold type]Strength increased by 1.[roman type][line break]";
+				say "Your body strives to restore its lost might and rebuilds your muscles. Your stomach grumbles with hunger at this sudden effort. [bold type]Strength increased by 1.[roman type][line break]";
 				now restoration is 1;
 			if Stamina of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Stamina of player by 1;
 				if remainder after dividing stamina of player by 2 is 0:
 					increase maxHP of player by level of player plus 1;
 				increase hunger of player by 6;
-				say "Your body strives to restore its lost hardiness and toughens your body.  Your stomach grumbles with hunger at this sudden effort.  [bold type]Stamina increased by 1.[roman type][line break]";
+				say "Your body strives to restore its lost hardiness and toughens your body. Your stomach grumbles with hunger at this sudden effort. [bold type]Stamina increased by 1.[roman type][line break]";
 				now restoration is 1;
 			if Dexterity of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Dexterity of player by 1;
 				increase hunger of player by 6;
-				say "Your body strives to regain its lost agility and restores your flexibility.  Your stomach grumbles with hunger at this sudden effort.  [bold type]Dexterity increased by 1.[roman type][line break]";
+				say "Your body strives to regain its lost agility and restores your flexibility. Your stomach grumbles with hunger at this sudden effort. [bold type]Dexterity increased by 1.[roman type][line break]";
 				now restoration is 1;
 		if "Mental Booster" is listed in feats of player and wrcursestatus is not 5:
 			if Intelligence of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Intelligence of player by 1;
 				increase hunger of player by 3;
 				increase thirst of player by 5;
-				say "Your body strives to restore your mental functions.  You stomach churns and you sweat profusely from the effort of this process.  [bold type]Intelligence increased by 1.[roman type][line break]";
+				say "Your body strives to restore your mental functions. You stomach churns and you sweat profusely from the effort of this process. [bold type]Intelligence increased by 1.[roman type][line break]";
 				now restoration is 1;
 			if Charisma of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Charisma of player by 1;
 				increase hunger of player by 3;
 				increase thirst of player by 5;
 				now restoration is 1;
-				say "Your body strives to restore your natural charm and allure.  You stomach churns and you sweat profusely from the effort of this process.  [bold type]Charisma increased by 1.[roman type][line break]";
+				say "Your body strives to restore your natural charm and allure. You stomach churns and you sweat profusely from the effort of this process. [bold type]Charisma increased by 1.[roman type][line break]";
 				now restoration is 1;
 			if Perception of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Perception of player by 1;
 				increase hunger of player by 3;
 				increase thirst of player by 5;
-				say "Your body strives to restore your enhance perceptive abilities.  You stomach churns and you sweat profusely from the effort of this process.  [bold type]Perception increased by 1.[roman type][line break]";
+				say "Your body strives to restore your enhance perceptive abilities. You stomach churns and you sweat profusely from the effort of this process. [bold type]Perception increased by 1.[roman type][line break]";
 				now restoration is 1;
 		if hunger of player > 90:
 			say "You will die if you don't eat soon.";
@@ -4074,13 +4074,13 @@ This is the turnpass rule:
 
 to say spontaneousorgasm:
 	if cocks of player > 0 and cunts of player > 0:
-		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees.  Your [if cocks of player is 1]cock sprays[else]cocks spray[end if] your hot seed across your clothes and the ground while your hot, feminine juices soak your thighs.  You leave a [if cock width of player + ( 2 * cunt width of player ) < 18]messy splotch[else if cock width of player + ( 2 * cunt width of player ) < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
+		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees. Your [if cocks of player is 1]cock sprays[else]cocks spray[end if] your hot seed across your clothes and the ground while your hot, feminine juices soak your thighs. You leave a [if cock width of player + ( 2 * cunt width of player ) < 18]messy splotch[else if cock width of player + ( 2 * cunt width of player ) < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
 	else if cocks of player > 0:
-		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees.  Your [if cocks of player is 1]cock sprays[else]cocks spray[end if] your hot seed across your clothes and the ground.  Your blasted cum leaves a [if cock width of player < 18]messy splotch[else if cock width of player < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
+		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees. Your [if cocks of player is 1]cock sprays[else]cocks spray[end if] your hot seed across your clothes and the ground. Your blasted cum leaves a [if cock width of player < 18]messy splotch[else if cock width of player < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
 	else if cunts of player > 0:
-		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees.  Your [if cunts of player is 1]cunt overflows[else]cunts overflow[end if] with hot, feminine juices that soak your thighs.  You leave a [if ( 2 * cunt width of player ) < 18]messy splotch[else if ( 2 * cunt width of player ) < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
+		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees. Your [if cunts of player is 1]cunt overflows[else]cunts overflow[end if] with hot, feminine juices that soak your thighs. You leave a [if ( 2 * cunt width of player ) < 18]messy splotch[else if ( 2 * cunt width of player ) < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
 	else:		[neuter]
-		say "     Your body, consumed with a lust it is unable to satisfy, drops to its knees and trembles with an painful, aching need.  Lacking any other means, you rub over your [bodytype of player] body until it finally passes, leaving you weak, tired and largely unsatisfied.";
+		say "     Your body, consumed with a lust it is unable to satisfy, drops to its knees and trembles with an painful, aching need. Lacking any other means, you rub over your [bodytype of player] body until it finally passes, leaving you weak, tired and largely unsatisfied.";
 		now HP of player is ( 3 * HP of player ) / 4;
 
 This is the monster injury rule:
@@ -4335,16 +4335,16 @@ This is the self examine rule:
 	follow the cock descr rule;
 	if the cocks of the player > 0:
 		if the cocks of the player > 1:
-			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random].  They are [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if].  [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
+			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
 		else:
-			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random].  It is [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if].  [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
+			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if the cunts of the player > 0:
 		if the cunts of the player > 1:
-			now cunttext is " have [cunts of the player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random].  Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around.  They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
+			now cunttext is " have [cunts of the player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 		else:
-			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around.  It is [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
+			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. It is [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 	say "Looking at yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
@@ -4366,7 +4366,7 @@ This is the self examine rule:
 	if weapon object of player is not journal:
 		say "  You are carrying a/an [weapon object of player] just in case of trouble";
 		if weapon object of player is unwieldy:
-			say ".  Due to its comparatively [if scalevalue of player > objsize of weapon object of player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of player - objsize of weapon object of player ) > 3]very unwieldy[else if absolute value of ( scalevalue of player - objsize of weapon object of player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment";
+			say ". Due to its comparatively [if scalevalue of player > objsize of weapon object of player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of player - objsize of weapon object of player ) > 3]very unwieldy[else if absolute value of ( scalevalue of player - objsize of weapon object of player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment";
 		say ".[run paragraph on]";
 	if tail of player is empty:
 		say "";
@@ -4717,7 +4717,7 @@ understand "Scav [text]" as tscavenging.
 
 check tscavenging:
 	if location of player is not fasttravel, say "You can only scavenge from quick travel points." instead;
-	if blindmode is true, say "You're playing in blind-mode, so hunting is not allowed - even scavenge-hunting.  You'll have to try scavenging normally to find what you seek." instead;
+	if blindmode is true, say "You're playing in blind-mode, so hunting is not allowed - even scavenge-hunting. You'll have to try scavenging normally to find what you seek." instead;
 
 Carry out tscavenging:
 	now scavengetarget is the topic understood;
@@ -4855,7 +4855,7 @@ carry out levelcheat:
 
 Section Lists of Tables - Not for release
 
-[intends to list stuff for debugging (or any other activity needing a list of what's in the game).  output is formatted as CSV to simplify exporting.  appears to be working properly.]
+[intends to list stuff for debugging (or any other activity needing a list of what's in the game). output is formatted as CSV to simplify exporting. appears to be working properly.]
 TableListing is an action applying to one topic.
 Understand "tlist [text]" as TableListing.
 
@@ -5769,7 +5769,7 @@ To startgenderlockshift:
 			now the breast size of the player is 0;
 
 To startFeatget: [alternate featget used for start] [Checkpoint-]
-	say "Select a basic feat.  This represents a skill or innate ability you have.";
+	say "Select a basic feat. This represents a skill or innate ability you have.";
 	blank out the whole of table of gainable feats;
 	repeat with x running through functional featsets:
 		try addfeating x;
@@ -5800,7 +5800,7 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 				say "Invalid Feat.";
 
 To startFunFeatget: [alternate funfeatget used for start]
-	say "Select a fun feat.  This represents some strange quirk or effect induced by the nanites.";
+	say "Select a fun feat. This represents some strange quirk or effect induced by the nanites.";
 	blank out the whole of table of gainable feats;
 	repeat with x running through not functional featsets:
 		try addfeating x;
@@ -6223,8 +6223,8 @@ to say gsopt_4:
 	while gsexit is 0:
 		say "[bold type]Difficulty Modes:[roman type][line break]";
 		say "(1) [link]Hard Mode[as]1[end link]: [bold type][if gshm is true]On[else]Off[end if][roman type][line break]     Hard Mode causes the powerful monsters to be randomly roaming, levels the monsters up alongside you, limits your use of the journal and adds other difficulties to further challenge you.";
-		say "(2) [link]No-Heal Mode[as]2[end link]: [bold type][if gsnhm is true]On[else]Off[end if][roman type][line break]     No-Heal Mode turns off the accelerated healing at the end of the turn.  Medkits and healing boosters heal more though.";
-		say "(3) [link]Blind Mode[as]3[end link]: [bold type][if gsbm is true]On[else]Off[end if][roman type][line break]     Blind Mode prevents hunting and scavenging for specific supplies.  You have a significantly increased chance of encountering something of interest while exploring though.";
+		say "(2) [link]No-Heal Mode[as]2[end link]: [bold type][if gsnhm is true]On[else]Off[end if][roman type][line break]     No-Heal Mode turns off the accelerated healing at the end of the turn. Medkits and healing boosters heal more though.";
+		say "(3) [link]Blind Mode[as]3[end link]: [bold type][if gsbm is true]On[else]Off[end if][roman type][line break]     Blind Mode prevents hunting and scavenging for specific supplies. You have a significantly increased chance of encountering something of interest while exploring though.";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-3)>[run paragraph on]";
@@ -6341,19 +6341,19 @@ to say gsopt_start:
 		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. You managed to escape to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		say "You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";
 	else if scenario is "Caught Outside":
-		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. Some fought back. You tried to resist, but did not escape unscathed.  In the end, you managed to get to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
+		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. Some fought back. You tried to resist, but did not escape unscathed. In the end, you managed to get to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		say "You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";
 	else if scenario is "Rescuer Stranded":
-		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. There were growing reports of monsters and freaks spreading across the city, attacking the citizens. You had been part of the military's fast response team sent in just hours after the outbreak. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors.  You were sent in with little preparation and no idea at all of what you were truly in for.";
+		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. There were growing reports of monsters and freaks spreading across the city, attacking the citizens. You had been part of the military's fast response team sent in just hours after the outbreak. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors. You were sent in with little preparation and no idea at all of what you were truly in for.";
 		say "Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
 		say "You awoke in what appears to be a disused bunker. You have no idea how you even got here or how long you've been out of it, but you are uninfected. In your panicked flight, you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your backpack and your watch.";
 		say "Heaven only knows what awaits you outside but, you have to find a way back.";
 	else if scenario is "Forgotten":
 		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. You managed to escape to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
-		say "Terrified, you've waited in the dark, subsisting as long as you've can on your supplies for as long as you've been able.  While the noise of chaos died away for a long time, they picked up again with the addition of explosions and gunfire.  Fearing to exit, you remained in the safety of the bunker until it was peaceful again.  You wish you could continue to remain hidden, but you're finished off the very last of your supplies and you'll have to risk venturing out with only your [bold type]backpack[roman type], and your [bold type]watch[roman type].";
+		say "Terrified, you've waited in the dark, subsisting as long as you've can on your supplies for as long as you've been able. While the noise of chaos died away for a long time, they picked up again with the addition of explosions and gunfire. Fearing to exit, you remained in the safety of the bunker until it was peaceful again. You wish you could continue to remain hidden, but you're finished off the very last of your supplies and you'll have to risk venturing out with only your [bold type]backpack[roman type], and your [bold type]watch[roman type].";
 		say "Still... how bad could it be?";
 	else if scenario is "Researcher":
-		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go.  Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos.  Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor.  The city's been cordoned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
+		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go. Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos. Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor. The city's been cordoned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
 		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they'd take it back. You only have so much time to investigate, and you plan to make the most of it.";
 		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they'd pick you up when it was over. You should be scared, but you just can't seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
 	say "No one else ever arrived, so you're on your own out here. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what you have, you break the seal and prepare to set out.";
@@ -6591,7 +6591,7 @@ When play begins:
 	let pointlessbump be 0;
 	now monster is a random number from 1 to number of filled rows in the table of random critters;
 	choose row monster in table of random critters;
-	regularstart; [original start method.  easier to move everything then leave here]
+	regularstart; [original start method. easier to move everything then leave here]
 
 When play begins (this is the graphics window construction rule):
 	if NewGraphics is true:[Build window regardless in case player decides to turn it on later]

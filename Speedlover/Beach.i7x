@@ -148,7 +148,7 @@ BeachEnd is a Room.
 earea of BeachEnd is "Beach".
 
 to say BeachEndDesc:
-	say "     The sand here curves sharply towards the cliff-side, meeting it a little further south, just where the cliff actually ends in the cean. Beyond, the water gets deeper quickly, and numerous craggy rocks stick out of the ocean, constantly trashed by crashing waves. That looks like a rather unhealthy area to get into the water - but wait, at one spot, there is a kind of coral-encrusted arch allowing passage through the rocks. Maybe you could brave the ocean after all and [bold type]swim[roman type] that way? Of course, if you just want to get wet, why not head east instead - inside the bay, the waters are shallow and much calmer. Otherwise, you can head northeast to the public beach or north to the foot of the rocky cliff where it gets much taller and more jagged.";
+	say "     The sand here curves sharply towards the cliff-side, meeting it a little further south, just where the cliff actually ends in the cean. Beyond, the water gets deeper quickly, and numerous craggy rocks stick out of the ocean, constantly trashed by crashing waves. That looks like a rather unhealthy area to get into the water - but wait, at one spot, there is a kind of coral-encrusted arch allowing passage through the rocks. Maybe you could brave the ocean after all and swim that way? Of course, if you just want to get wet, why not head east instead - inside the bay, the waters are shallow and much calmer. Otherwise, you can head northeast to the public beach or north to the foot of the rocky cliff where it gets much taller and more jagged.";
 
 instead of sniffing the BeachEnd:
 	say "     All you can smell out here is the strong scent of the ocean.";
@@ -159,7 +159,7 @@ Rock Arch is a Room.
 The description of Rock Arch is "[RockArchDesc]".
 
 to say RockArchDesc:
-	say "     You're in the ocean close to the coast, right where the water gets deeper than the relatively shallow bay closer to the public beach. Jagged cliffs rise up in the north, northwest and west, while a large arch of weathered rock stretches over the sea in the southern directions. It allows passage through the choppy waters and jagged rocks that otherwise cut the bay off the open ocean. By passing through there, you would be able to move to and from the deeper reaches of the sea. Through the arch and to the south, you can see a shadowy shape beneath the water. Looks like a sunken ship, its broken mast helping you distinguish the shape. There's a [bold type]shipwreck[roman type] to explore! Of course, out there in the open sea, you'd really have to [bold type]swim[roman type] against the waves and currents to get to it.";
+	say "     You're in the ocean close to the coast, right where the water gets deeper than the relatively shallow bay closer to the public beach. Jagged cliffs rise up in the north, northwest and west, while a large arch of weathered rock stretches over the sea in the southern directions. It allows passage through the choppy waters and jagged rocks that otherwise cut the bay off the open ocean. By passing through there, you would be able to move to and from the deeper reaches of the sea. Through the arch and to the south, you can see a shadowy shape beneath the water. Looks like a sunken ship, its broken mast helping you distinguish the shape. There's a [bold type]shipwreck[roman type] to explore! Of course, out there in the open sea, you'd really have to swim against the waves and currents to get to it.";
 
 instead of sniffing the Rock Arch:
 	say "     All you can smell out here is the strong scent of the ocean.";
@@ -191,7 +191,7 @@ Sunken Ship is a Room.
 Sunken Ship is below Open Ocean.
 understand "Shipwreck" as Sunken Ship.
 understand "Wreck" as Sunken Ship.
-The description of Sunken Ship is "A large ship lays sunken and rotting here. From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago. It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea. There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast. You'd best be careful. Although in the distance to your west you can see a sparkling sight in the distance. From here, you can barely make out the lighter spot in the rocks that is the [bold type]Rock Arch[roman type] you passed through to get here. You could [bold type]swim[roman type] to it if you want to get back to the beach.".
+The description of Sunken Ship is "A large ship lays sunken and rotting here. From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago. It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea. There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast. You'd best be careful. Although in the distance to your west you can see a sparkling sight in the distance. From here, you can barely make out the lighter spot in the rocks that is the [bold type]Rock Arch[roman type] you passed through to get here. You could surface and swim to it if you want to get back to the beach.".
 
 The invent of Sunken Ship is { "sea dragon cum" , "sea dragon cum" }.
 

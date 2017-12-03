@@ -125,6 +125,7 @@ Figure of Boghrim_clothed_icon is the file "Boghrim_clothed.jpg".
 Figure of Boghrim_naked_icon is the file "Boghrim_naked.jpg".
 Figure of Boghrim_face_icon is the file "Boghrim_face.jpg".
 Figure of Bradford_icon is the file "Bradford_ig.jpg".
+Figure of Brennan_face_icon is the file "Brennan_face.jpg".
 Figure of Brooke_icon is the file "Brooke.jpg".
 Figure of Brian_icon is the file "Brian_ig.jpg".
 Figure of Buster_icon is the file "Buster_ig.jpg".
@@ -482,6 +483,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Boy_To_Fox_Shampoo1"	Figure of Boy_To_Fox_Shampoo1_icon	"Watsup"	g-white	"normal"
 "Boy_To_Fox_Shampoo2"	Figure of Boy_To_Fox_Shampoo2_icon	"Watsup"	g-white	"normal"
 "Bradford"	Figure of Bradford_icon	"Anymouse1968"	g-black	"normal"
+"Brennan"	Figure of Brennan_face_icon	"Sinealas"	g-black	"normal"
 "Brooke"	Figure of Brooke_icon	"Otterbits"	g-black	"normal"
 "Brian"	Figure of Brian_icon	"dhstein"	g-black	"normal"
 "BrutusGood"	Figure of BrutusGood_icon	"Inkydemon"	g-black	"normal"
@@ -842,6 +844,7 @@ carry out artistcredits:
 	say "     Blot by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Boghrim by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Bradford by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Brennan by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Brian by dhstein @ furaffinity.net[line break]";
 	say "     Brooke by Otterbits @ https://www.furaffinity.net/user/otterbits/[line break]";
 	say "     Brutus by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
@@ -969,7 +972,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version, unfinished.]
-	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Sharei", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Wemd", "Xenotropos"};
+	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Sharei", "Sinealas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;

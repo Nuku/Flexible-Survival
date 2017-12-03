@@ -11,6 +11,7 @@ NatalieFucked is a number that varies.
 CliveFuck is a number that varies.
 DylanSucked is a number that varies.
 DylanFucked is a number that varies.
+ArcherFucked is a number that varies.
 
 Section 1 - Jerome
 
@@ -318,11 +319,10 @@ to say ShagShackSexMenu:
 		now sortorder entry is 16;
 		now description entry is "Get used and slapped about by an otter with a mean streak";
 	[]
-	if NatalieFucked is 0:
-		choose a blank row in table of fucking options;
-		now title entry is "Investigate Natalie's latex-splattered mattresses fort";
-		now sortorder entry is 17;
-		now description entry is "Seek out the latex mistress and get pleasurably stretched";
+	choose a blank row in table of fucking options;
+	now title entry is "Investigate Natalie's latex-splattered mattresses fort";
+	now sortorder entry is 17;
+	now description entry is "Seek out the latex mistress and get pleasurably stretched";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Use toys with Clive, the ballsy goblin";
@@ -332,9 +332,20 @@ to say ShagShackSexMenu:
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Have some fun with the heavily muscled minotaur, Dylan";
-		now sortorder entry is 18;
-		now description entry is "See what the big guy proposes"; 
-	[]	
+		now sortorder entry is 19;
+		now description entry is "See what the big guy proposes";
+	[]
+	if ArcherFucked is 0: [initial scene only right now]
+		choose a blank row in table of fucking options;
+		now title entry is "Submit to the musky hound, Archer the Great Dane";
+		now sortorder entry is 20;
+		now description entry is "Enter his sweetly smelling room";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Spend Time with Alyona, a herm feline war veteran";
+	now sortorder entry is 21;
+	now description entry is "Have a bit of fun with the kitty";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -389,6 +400,10 @@ to say ShagShackSexMenu:
 						say "[ShagShackSex18]"; [by ErFinite]
 					-- "Have some fun with the heavily muscled minotaur, Dylan":
 						say "[ShagShackSex19]"; [by Vinickus]
+					-- "Submit to the musky hound, Archer the Great Dane":
+						say "[ShagShackSex20]"; [by Mendo]
+					-- "Spend Time with Alyona, a herm feline war veteran":
+						say "[ShagShackSex21]"; [by Shay]
 				wait for any key;
 		else if calcnumber is 100:
 			say "Change your mind after all and go out?";
@@ -1165,7 +1180,103 @@ to say ShagShackSex19: [Dylan the minotaur by Vinickus]
 		say "     Only when you start to feel lightheaded from having your airways blocked by a giant, flared cock, does he starts to pull out. His dick never quite stops throbbing as it leaves your throat though, and soon enough, the engorged flair sits on your tongue, unloading the musky, sweet tasting seed right onto your taste-buds.";
 		say "     You manage to catch your breath while still guzzling down as much of the nectar as you can. So distracted with drinking it all down, you don't notice the warmth gathering in your groin until the essence of your better starts to taper off. Nevertheless, you just barely manage to pull out your [cock of player] penis in time, your balls suddenly unloading their own share of seed all over the floor between Dylan's legs. The minotaur begins to chuckle at this, 'there's always been something special about my cum.' You look up, watching as he glares down, past you, and at your lurching dick as it unloads spurts of your [cum load size of player] load. Everything combines to fill you with orgasmic pleasure, the feelings of insane ecstasy only receding to a mere bliss when your ejaculation ebbs down to a trickle.";
 		WaitLineBreak;
-		say "     Once you tuck your cock back into your pants, you give Dylan's shaft a goodbye kiss, dragging your tongue from the base to the flare in hopes of gathering up more cum or musk, and swallowing anything you can get. You stand up, share a sloppy kiss with the wide-tongued minotaur, and turn around, feeling a calloused palm slap across your ass as you walk away."; 
+		say "     Once you tuck your cock back into your pants, you give Dylan's shaft a goodbye kiss, dragging your tongue from the base to the flare in hopes of gathering up more cum or musk, and swallowing anything you can get. You stand up, share a sloppy kiss with the wide-tongued minotaur, and turn around, feeling a calloused palm slap across your ass as you walk away.";
 
+to say ShagShackSex20: [Archer the Great Dane]
+	if ArcherFucked is 0: [first time]
+		say "     Eager to see what Jerome keeps for his customers in the few side rooms available in the very open building, you step through a door into a relatively large and dimly lit room. Mind wandering, itching for an exciting partner, you start looking around. Then suddenly, a glimmer of light in your peripheral vision draws your attention. Looking over, you spot a large figure bounding towards you in a rapid dash. You can't help but instinctively bracing for impact, a bit shaken from the sudden appearance. The dark outline of the pouncing beast is nearly taller than you and keeps going without any sign of stopping - causing you to step back from it... right onto an empty bottle lying abandoned on the floor. The glass vessel slips out from under your foot, sending you stumbling and falling onto one of the messily laid mattresses that litter the room.";
+		say "     Clutching your foot and cursing your clumsiness, you realize that it has put you in quite a precarious situation right now - disoriented and on the ground, right in front of whatever creature lives in this room. Feeling that it is close, you slowly lift your head and meet the gaze of the enormous beast, looking into two glowing eyes that are visible though the thick shade. The sheer size of the animal is enough to make you quiver, even though you can still only see an outline of it. No matter what, the heavy breaths and scrape of claws on the floorboards are enough to tell you that it is big and powerful.";
+		WaitLineBreak;
+		say "     Looming tall over your form, the black figure steps forward. With your eyes finally adjusting to the dim light in the room, you now get a good look at it: it is a monstrously sized dog, with dark grey and black fur covering it from head to toe, as well as bright pale-orange eyes still locked to yours. A glance further back tells you that 'it' is a 'he' - with a large canine cock partially visible and only slightly poking out of his thick sheath, but still vividly aromatic to your senses. Obvious from the wagging tail behind the monstrous dog, he does not intend to lay harm to you. Instead, he's intent on the same thing that everyone is these days - quelling a primal instinct of his.";
+		say "     Immediately upon realizing this you instinctively shuffle backwards, scrambling to get away from the increasingly objectionable hound. However, now that you know just what it is, the beast is not abnormal in size after all, just on the very end of the spectrum for canines - a great Dane. Attempting to stand and hold your ground against the Dane, he gives a slightly challenging bark and pounces, which you manage to duck - but not without getting a whiff of his musky scent. The intense wave of strangely sharp odours hits your senses like a wrecking ball, making you feel delirious and light-headed. Colours, bright lights and warping shapes fill your vision. In what thoughts you can still grasp despite the muddled state of your mind, you realize that some kind of chemical or pheromones must be secreted from the great Dane's fur!";
+		WaitLineBreak;
+		say "     Falling to the ground as your sense of balance goes haywire for a second, the scent and chemicals continue to mix in your brain, making you feel increasingly unhinged. Meanwhile, the canine comes to stand over you, eyeing your weak and quaking body, and decides that now is as good a time as any to get exactly what he wants. Licking his lips, he starts to paw at your body, relatively roughly dealing with the clothing that is in the way of his desire. Then the large dog turns you over with a shove of his muzzle, until you lie belly up beneath him, pinned to the mattress by a heavy paw on your chest. This of course exposes you to more musk, forcing you into heavy coughs and sputtering as you breathe it in.";
+		say "     The thick gasses whirl in your nostrils and droplets of an acidic substance fall from his sticky coat, creating steam and vapours wherever they land. The weight of the immensely heavy beast pushing forcefully on your ribcage and the distracting scents surrounding you combine to completely paralyse you. Body falling limp, you nevertheless feel no dread at all - instead, arousal begins to wrack your body as your hands spring to life and drift towards your loins[if cocks of player > 0]. Your needy rod stiffens and you happily oblige it, kneading your cock like your life depended on it[end if][if cunts of player > 0]. While the beast begins to shift his body towards your head, you are too pre-occupied brushing over your abused pleasure button and sinking your fingers into your gushing feminine folds[end if].";
+		WaitLineBreak;
+		say "     Now with the great Dane's head over your stomach, and his crotch looming above your eyes you can now see his stiffening and raging erection. Small beads of silvery pre forms at the end of his pointed veiny shaft, dripping to your nose for the maximum scent exposure. It sends you manic with need, you [bold type]need[roman type] that sweet liquid in you right the fuck now. Lowering his hind legs so that his cock drags across your lips, nose and brow, the musky hound teases you with what you can't help but desire. Greedily you roll the slippery dick with your tongue in past your lips and resting inside your salivating mouth. The dog taking his opportunity he rams home, lodging his member securely in your throat, and your drugged body wouldn't have it any other way. Retrieving his phallus after nearly a half minute of suffocating you with dick. He swiftly plunges it back in with even greater force, repeating this process and thoroughly throat-fucking you for what feels like hours.";
+		say "     Panting with ever-increasing fervor, the beast does his best to go balls-deep in your gullet. You can feel the curve of his knot hit your straining lips, with him trying to wedge the softball-sized bulge into your mouth too. Clearly, it will never fit - but somehow, you feel yourself wishing it would! To have this glorious musky beast knot your mouth and have you tied for ages, your nose buried in his crotch-fur. The heady chemicals literally dripping from him fooling with your perception, you just take anything the 100 pound hound wants to do as right and proper, happy to have him relieve his urges in your oesophagus.";
+		WaitLineBreak;
+		say "     The canine increases his pace and force quickly, soon really pushing the limit of what your frame can take. Heavy thrusts cram as much of the saliva-lubricated manhood inside you as he can. His bulb expands to double its size, telling of what is to come. For a second or two everything stops, with the dog's shaft deep in your throat yet no longer moving, and both of you motionless in silence. Then his large shaft throbs wildly, sending a deluge of thick and creamy liquid rushing down your throat and into your stomach. The sheer volume of each blast he is dumping inside you is staggering - and they just keep coming! The pulse of his load filling you and its even more intense aroma reaching your nose too sends you over the edge yourself in short notice. Shuddering all over, spurt after spurt of your sexual fluids stain the floor.";
+		say "     You see stars dancing before your eyes as the beast has his 10 inches of doggy cock lodged in your throat, continuing to flood your stomach with his massive load. You feel completely stuffed by the time the canine's cock finally deflates at least a little and he pulls out of your suckling mouth. As the thick, slimy member slips out of your gullet, you pant for breath, shaking and shivering. Lying on the mattress, which is thoroughly soaked in your own fluids and the dog's, as well as who knows how many others, you realize that you are far from the only one to fall victim to this horny pooch. He trots off without a passing grace, done with you for now. A part of you wants to reach out to him and make him take you for another round, but you regain at least some semblance of clear thoughts and quickly gather your clothes to leave before he he changes your mind.";
+		now ArcherFucked is 1; [first time completed]
+	else: [repeat]
+		say "     Knowing what to expect inside the side room of the shag shack this time, you strip down before even entering. Nearby whores and their johns look over and chuckle as they see you, and you can hear comments of 'Another dog-slut for Archer!' being exchanged. Tuning them out while you get fully naked, you then step into the room with your bundled-up gear and clothes under one arm. As the door clicks shut behind you and leaves you seemingly alone in the large and dimly-lit room, you set your stuff on the ground next to the entrance so it doesn't get dirty. <...>";
+
+to say ShagShackSex21: [Alyona by Shay]
+	say "     You survey the room, your eyes landing on a lone feline who seems out of place. An anthro housecat, she stands tall and proud in her tattered old army uniform. At the same time, the woman conveys an aura of submissiveness as she meets your gaze with a shy, inquisitive stare. A smirk finds its way to your mouth as you give her body an appreciative look over, your eyes hungrily taking in her every curve. They map everything from the soft muscular form of her body to those full, pouty lips and her incredibility silky calico fur that begs to see your touch. You stride towards your newly bought prize, loosening your clothes as you go. The feline steps forward eagerly to meet you, licking her lips as her face gains a sultry grin, followed by the words, [one of]'The name's Alyona, how about I show you a fun time?'[or]'Welcome back. Ready for a fun time?'[stopping]";
+	say "     You watch attentively as she strips off the tattered remains of her army uniform in an incredibly sexy manner, exposing herself fully to you and revealing that she is a hermaphrodite. Taking in the sight, your arousal flares sharply, prompting you to pull the naked feline into a sloppy kiss. She leans into your touch, quickly becoming semi-erect. Deepening the kiss, you gently rub your hands across her decently sized shaft, brushing her pussy with each downward stroke. It isn't long before you find yourself pushing the feline roughly onto the provided bed, unable to hold back anymore. Alyona lets out a surprised yelp as you do so - but you can see that she likes being manhandled, her member going fully erect in response, just as the folds of her slightly flushed pussy become slick with moisture.";
+	WaitLineBreak;
+	say "[AlyonaSexMenu]";
+
+to say AlyonaSexMenu:
+	LineBreak;
+	say "     You stick your fingers inside of her slick wetness, marveling at just how soaked she has gotten. She is certainly ready for you, the only question is: Just what do you wish to do with her?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Give the sexy herm a blowjob";
+	now sortorder entry is 1;
+	now description entry is "Blow Alyona's well-sized shaft for a sticky reward";
+	[]
+	if cocks of player > 0: [Option only visible for males and herms]
+		choose a blank row in table of fucking options;
+		now title entry is "Pound her needy cunt";
+		now sortorder entry is 2;
+		now description entry is "Fuck the sexy herm to your heart's content";
+	[]
+	if cunts of player > 0: [Option only visible for females and herms]
+		choose a blank row in table of fucking options;
+		now title entry is "Ride Alyona's decently-sized prick";
+		now sortorder entry is 3;
+		now description entry is "Take charge and impale your wet cunt on her shaft";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Give the sexy herm a blowjob"):
+					say "[AlyonaBlowjob]";
+				if (nam is "Pound her needy cunt"):
+					say "[AlyonaPussyFuck]";
+				if (nam is "Ride Alyona's decently-sized prick"):
+					say "[AlyonaRide]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from Alyona, shaking your head as she gives you a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say AlyonaBlowjob: 
+	say "     Your mouth waters as you loom above her feline prick, taking in its strong, pleasant musk. You wrap your lips around the herms bulbus tip, being met with the tangy, pleasant taste of her precum. Alyona moans in appreciation of your actions, lightly placing her paw on the back of your head in soft encouragement. Urged on, you fully encompass the herm's tip, using your tounge to lightly caress the place where shaft and glands meet. It isn't long before you find that you have taken Alyona's cock to the base, blowing her cock with wild abandon as you stroke [if player is male]your cock with fervent jerks of your hand. [else if player is female]yourself with a finger rubbing your clit. [else]your sexless crotch, rubbing where it feels good. [end if][line break]";
+	say "     Alyona's pussy soaks the dingy matress below as you work hard to satisfy her, creating a mess of pre-cum and sweat. It isn't long before Alyona tells you she is ready to cum, the muscular feline slut at this point moaning your name as she begs you for release. You smirk, proud of what you have turned the before completly composed feline into. In defiance of Alyona's request, you slow down your pace as she whines with a strong sexual need. You bring the herm to the edge once more, and this time you grant it. Cumming along with the sexy anthro cat, as you swallow every last drop of her sweet, strong seed.";
+
+to say AlyonaPussyFuck:
+	say "     You line your cock up to the herm's soaking wet cunt, her cock letting out a visible twitch as she looks at yours with a wanton need. Playfully giving her painfully erect nipples a flick, you delve balls deep into her needy snatch without warning. Alyona's eyes roll to the back of her head as slutty cat has a powerful orgasm, the contractions of her cunt massaging as you let out a decent sized load of pre-cum into her now thoroughly soaked snatch. Picking up your pace, Alyona moans like a bitch in heat, causing the heads of other customers to turn to her with an aroused interest. You feel yourself nearing the edge as you fuck the herm's pussy with wild abandon, squelching noises filling the room as you breed the feline as though she were your bitch.";
+	say "     Soon enough, you find yourself diving inside the pussy cat to the hilt, unloading your seed into her deepest depths as the herm comes once more, milking your cock for each and every drop. Your cock deflates as you pull away from her cunt, some cum leaking out of her pussy and onto the matress. You admire your work proudly, as Alyona pants, trying to scoop the lost seed back inside of her well-used hole. Walking away satisfied, you find yourself already thinking of fucking the hermaphrodite feline again.";
+
+to say AlyonaRide:
+	say "     You eye the feline's cock with interest as you lean over the herm's attractively exposed form on the bed. Catching the feline in another sloppy kiss, you rub your clit as you take Alyona's cock into your thoroughly soaked snatch. You moan as you seek to accept her to the hilt, the barbs of her cock massaging your pussy more with each and every inch. Alyona grips the thin sheets of the bed as you ride her with a undeniable passion, your cunt squelching as it fully encompasses her cock. The pussy cat releases a decent sized load of pre-cum into your soaked snatch as you moan with pleasure, feeling yourself become closer and closer to the edge. You speed up the pace, rubbing your clit as you roughly take her cock with wild abandon, a feeling of pleasure steadily rising in your gut. Burying Alyona's cock inside you to the hilt, you cum milking the herm for her seed as she follows suit, depositing a load into the deepest recesses of your cunt. You smile as the sexy feline's cock is removed from your pussy, cum leaking from your well used hole.";
 
 Shag Shack ends here.

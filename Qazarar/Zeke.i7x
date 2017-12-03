@@ -12,7 +12,7 @@ Section 1 - Basic Setup
 Zeke is a man. The hp of Zeke is usually 0.
 The description of Zeke is "[ZekeDesc]".
 The conversation of Zeke is { "<This is nothing but a placeholder!>" }.
-The scent of Zeke is "     Zeke smells like X.".
+The scent of Zeke is "     Zeke smells like a little bit musky and furry, kinda like a humanoid fox is always bound to be.".
 Zeke is in Gaming Den.
 
 to say ZekeDesc:

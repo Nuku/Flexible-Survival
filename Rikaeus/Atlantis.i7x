@@ -65,6 +65,7 @@ Instead of resolving a Lost Trident:
 						increase score by 10;
 						now PoseidonRelationship is 1;
 						change west exit of Sunken Ship to Atlantis City Entrance;
+						change east exit of Atlantis City Entrance to Sunken Ship;
 						now Lost Trident is resolved;
 		if fightoutcome >= 20:
 			say "     Having lost to one of the feral sea dragons you find yourself being stripped of your newfound weapon and then casually dumped onto the beach by the creature you had just been defeated by. Grunting in utter humiliation you rest on the muddy sands for a minute while lamenting your own weakness. Looks like you know truly understand the meaning about the [italic type]one that got away[roman type] as you listen to the chatter of the feral sea dragons as the reptiles dive back into the sea with your commandeered treasure. Better luck next time.";
@@ -99,7 +100,7 @@ The description of Atlantis City Market is "[AtlantisMarket]".
 to say AtlantisMarket:
 	say "     Upon entering the market you are met with sounds of people talking and bartering. At a stall selling weapons you hear a Pirate Shark trying to reduce the price of the sword they're attempting to buy but to no avail. Over towards another one you see what you assume to be a mermaid couple wondering whether or not they should have fish for dinner. You're sure that at some point you can find something to buy here as well. To the east is the city center that you arrived from.";
 
-South of Atlantis City Center is Atlantis City Reisdential.
+South of Atlantis City Center is Atlantis City Residential.
 Atlantis City Residential is a room.
 The description of Atlantis City Residential is "[AtlantisResidential]".
 
@@ -115,27 +116,31 @@ to say RoyalPalace:
 	say "     The entrance to the royal palace of Atlantis is, in your opinion, the most beautiful thing in the world. It's appears to be made of dark blue stone and sapphire gems. The gates to the north are guarded by a couple of mermaid and merman guards, though they appear to be unconcerned about you, as if they were allowing you to go ahead. To the south of the palace is the center of the city.";
 
 North of Royal Palace Entrance is Royal Throne Room.
-South of Royal Bed Chambers is Royal Throne Room.
 Royal Throne Room is a room.
 The description of Royal Throne Room is "[ThroneRoom]".
 
 to say ThroneRoom:
 	say "     The throne room of the entire palace is as oppulent as the rest of the place, although at the back is a simple sapphire throne, as odd as that sounds. [if Poseidon is in Royal Throne Room]The friendly yet powerful god is sitting on said throne, overlooking the entire area.[end if] Behind it is a large golden trident that is hung on the wall Across the walls are various murals of ocean scenery. To your back is the hallway that leads to the outside, and just like the entrance is guarded by a couple guards. [if Poseidon is not in Royal Throne Room and PoseidonRelationship is 2]It appears that Poseidon is not here, perhaps he is in his room?[end if]";
+	
+North of Royal Throne Room is Royal Bed Chambers.
+The description of Royal Bed Chambers is "[PoseidonBedroom]".
+
+to say PoseidonBedroom:
+	say "     The room around you seems a bit vague and indistinct, as if the forces that are shaping reality are still undecided what it shall look like.";
 
 Section 3 - Events
 
 instead of going west from Sunken Ship while FirstAtlantisVisit is 0 and PoseidonRelationship is 1:
+	move player to Atlantis City Entrance;
 	say "     Upon swimming to the west you come upon a gigantic gorgeous city encased in a magical looking bubble on the ocean floor. You see hundreds of what look to be mermaids and mermen swimming around outside the bubble, having fun and playing around. Out of the corner of the eye you see some of them dive towards what looks to be a enormous golden gate. The gate opens up when they reach it and to your utter surprise, the mermen and mermaids' tails vanish and are replaced with legs. Upon closer examination you also notice they don't stay naked for long, putting on clothing that is handed to them by the guards. Intrigued by the whole thing, as you swore you saw that merman head in this direction, you swim down towards the gates.";
 	say "     When you reach them, you are stopped by large spears that block your way and are held by an armored mermaid and merman who are standing inside the city. 'Halt stranger! You can't come in here without being vetted!' The female orders. Before you could say anything a deep voice interrupts them. 'That's enough Alana, Triton. Let them through,' the male-like voice says. You direct your attention to where the sound came from and are shocked to find a familiar looking face staring at you. It's the merman you saw staring at you when you got the trident! 'Yes King Poseidon!' 'Yes Father!' The mermaid and merman say respectively, causing you to raise a brow at the male. Poseidon nods and heads off, not before throwing you an interested look. Perhaps you should see him later.";
 	WaitLineBreak;
 	say "     Upon stepping into the city the gates close and you are beset upon by Triton. He gives you a friendly smile before speaking up. 'Welcome to the utopian City of Atlantis, that was my father Poseidon, God of the Sea,' he says, flourishing his hand in the direction of the beautiful city. You look around in awe before redirecting your attention to the man in front of you. You are able to take a closer look at him and see that he has long bright orange hair that goes down to just below his shoulderblades. You're also able to see that his weapon is not a spear but a trident, one that looks oddly familiar to you. The female on the other hand has vibrant red hair and dark brown eyes that look a bit serious to you. Her weapon however is still a spear. 'I'm not exactly sure why father has an interest in you but I do hope you enjoy your stay,' he says to you. You blurt out that you had been following him ever since you had acquired a trident from fighting feral sea dragons.";
 	say "     That causes Triton to sputter out and stare at you in shock. 'T-that's why he's intrigued by you?' He stutters out, clearly surprised by this information. You swear that you hear Alana chuckling behind you as the prince blushes. You ask him why but it appears that what you said has temporarily put him out of commission. Instead it is the mermaid that answers your question. 'It's... probably better if you go see King Poseidon himself. Easier for him to explain,' she says, sighing. By the time the woman finishes, Triton has recovered and manages to say one last thing before you're on your way. 'If... you ever need me to explain things, I'll be glad to,' he manages to get out before waving you off.";
 	now PoseidonRelationship is 2;
-	move Triton to Atlantis City Entrance;
 	now TritonRelationship is 1;
 	now AlanaRelationship is 1;
 	now FirstAtlantisVisit is 1;
-	move Alana to Atlantis City Entrance;
 
 instead of going to Royal Palace Entrance while PoseidonRelationship is 2:
 	say "     Upon approaching the royal residence of the leader of this city, you are beset upon by two guards. 'Halt! You must be the person that King Poseidon is looking for,' one says, his stance firm, showing that he's going to hold his ground. You tilt your head curiously at them wondering what they're talking about. However, before you can voice your questions, the two step apart and gesture for you to continue on in. Shrugging your shoulders, you continue on into the palace. You soon come to a gorgeous throne room with a sapphire throne whose design could simply pass as a dining chair if the back and armrests weren't so high. Sitting on that seat is a familiar face, the merman you followed to this city, and the king of the place, Poseidon. Upon seeing you the man appears to be rather happy.";
@@ -155,7 +160,7 @@ instead of going to Royal Palace Entrance while PoseidonRelationship is 2:
 
 Section 4 - NPCs
 
-Triton is a man.
+Triton is a man. Triton is in Atlantis City Entrance.
 The description of Triton is "[TritonDesc]".
 The conversation of Triton is { "<This is nothing but a placeholder!>" }.
 The scent of Triton is "He smells of the ocean and a bit of musk. Though he has an underlying smell of spice.".
@@ -237,7 +242,7 @@ to say TritonTalk3:
 instead of fucking Triton:
 	say "     The buff male raises a brow at you, not offended by your offer but rather intrigued. 'As much as I would love to, Alana here would murder me if I scampered off to have fun with you,' he says.";
 
-Alana is a woman.
+Alana is a woman. Alana is in Atlantis City Entrance.
 The description of Alana is "[AlanaDesc]".
 The conversation of Alana is { "<This is nothing but a placeholder!>" }.
 The scent of Alana is "     Alana smells like sweat and lavender oddly enough.".
