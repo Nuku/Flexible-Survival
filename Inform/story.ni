@@ -5422,7 +5422,7 @@ Include Werewolf Costume For Fs by Stripes.
 Include Wildcat For Fs by Stripes.
 Include Wolfman by Wahn.
 Include Wolftaur by Sarokcat.
-Include Wolverine Guard for FS by Stripes.
+Include Wolverine Guard by Stripes.
 Include Wrestling Wolf For Fs by Guest Writers.
 Include Wyvern For Fs by Damaged.
 Include Xeno for FS by Stripes.

@@ -48,7 +48,7 @@ Part C - Sex scenes
 
 
 instead of fucking Erin:
-	if (lastfuck of Erin - turns < 3): [he got fucked in the last 18 hours = 6 turns]
+	if (lastfuck of Erin - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     'Ho ho, hey, easy tiger! I'm all for going another round, but some other time. I have things to do.'";
 	else: [ready for sex]
 		say "     'That's a smile I know well,' Erin says as you come up to him. While not directly looking at you, you also notice Violet's ears perking up and trying to eavesdrop your conversation. 'What are your plans this time?'";
@@ -139,8 +139,8 @@ to say ErinFuckBottom:
 	say "     Erin smiles warmly at your proposition. 'With pleasure. I will make sure the entire restaurant hears us,' he jokes, affably slapping your shoulder at your [if isVoyeur is 0]embarassed[else]flustered[end if] reaction. The teenager rat points at the storage room behind him. 'Let's make ourselves comfortable.'";
 	say "[ErinVoyeurProposal]";
 	say "     [bold type]Do you agree to let Violet watch you and Erin make love?[roman type][line break]";
-	say "     ([link]Y[as]y[end link]) Sounds hot";
-	say "     ([link]N[as]n[end link]) [if isVoyeur is 0]This would feel awkward[else]Not this time[end if]";
+	say "     ([link]Y[as]y[end link]) Sounds hot.";
+	say "     ([link]N[as]n[end link]) [if isVoyeur is 0]This would feel awkward[else]Not this time[end if].";
 	if player consents:
 		LineBreak;
 		say "[ErinVoyeurOk]";
@@ -177,11 +177,11 @@ to say ErinVoyeurOk:
 to say ErinVoyeurKo:
 	if isVoyeur is 0:
 		say "     'Oh... Um... Yes, I guess,' Violet mumbles, visibly embarassed. You reassure her, and Erin too, that you do not mind the implications or the kink itself, but that you would feel uncomfortable, knowing that you are being watched. 'This was worth a try, sis,' Erin says, patting his twin's arm.";
-		say "     'Yeah, I guess,' Violet replies. 'Have fun, both of you.' Erin affectuously kisses his sister on the forehead, before inviting you, once again, to enter the small storage room.";
+		say "'Yeah, I guess,' Violet replies. 'Have fun, both of you.' Erin affectuously kisses his sister on the forehead, before inviting you, once again, to enter the small storage room.";
 	else:
-		say "     'It's okay,' Violet reassures you. 'Even me and my brother need some privacy. From each other I mean, not... Stop it, you're making me dig even deeper'.";
-		say "     'Sssh, sis, it's okay,' Erin reassures his sibling with an affectuous kiss on the forehead, before inviting you, once again, to enter the small storage room.";
-		say "     'Have fun, both of you,' you can hear Violet say just before the door closes.";
+		say "'It's okay,' Violet reassures you. 'Even me and my brother need some privacy. From each other I mean, not... Stop it, you're making me dig even deeper'.";
+		say "'Sssh, sis, it's okay,' Erin reassures his sibling with an affectuous kiss on the forehead, before inviting you, once again, to enter the small storage room.";
+		say "'Have fun, both of you,' you can hear Violet say just before the door closes.";
 
 [to say ErinThreeSome:
 	say "     Erin and Violet's rat ears twitch with perfect synchronicity as you make your proposition.";
@@ -229,11 +229,11 @@ instead of conversing Violet:
 	
 Part C - Sex scenes
 
-instead of fucking Erin:
-	if (lastfuck of Erin - turns < 3): [he got fucked in the last 18 hours = 6 turns]
+instead of fucking Violet:
+	if (lastfuck of Violet - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     'Aren't you the pervert... I'm not in the mood right now, try again later.'";
 	else: [ready for sex]
-		say "     As you walk up to TemplateNPC, <positive reaction at being approached for sex>";
+		say "     'Definitely. It'll help to stave off the heat. What do you propose we do?'";
 		WaitLineBreak;
 		say "[VioletSexMenu]";
 		
@@ -248,11 +248,10 @@ to say VioletSexMenu:
 		now sortorder entry is 1;
 		now description entry is "Use the cute rat's bottom. With her and her brother's permission, of course.";
 	[]
-	if cunts of player > 0:
-		choose a blank row in table of fucking options;
-		now title entry is "Strap-on";
-		now sortorder entry is 2;
-		now description entry is "[']Experiment['] with Violet. It's what young people are calling it nowadays, right?";
+	choose a blank row in table of fucking options;
+	now title entry is "Strap-on";
+	now sortorder entry is 2;
+	now description entry is "[']Experiment['] with Violet. It's what young people are calling it nowadays, right?";
 	[]
 	[if isVoyeur is 1 and lastfuck of Erin - turns < 3:
 		choose a blank row in table of fucking options;
@@ -308,9 +307,9 @@ to say VioletFuck:
 		LineBreak;
 		say "[VioletVoyeurKo]";
 	WaitLineBreak;
-	say "      Violet jumps on you as soon as the door is closed and strips your [body of player] body. You peel off her own clothes while she presses against you, enjoying your naked shape, [if isTwinHere is 1] while Erin, true to her word, sits in a corner, and watches the show with eagerness[end if]. You return her hug and feel your arms sink into the soft, grey-white fur. Giving you no time to rest, Violet grabs your neck, and press your [face of player] against hers in a passionate french kiss.[if isTwinHere is 1] Erin scoffs, clearly enjoying his sibling's endaevour. The sound of pants unzipping makes your glance at him for a second, and you catch him already stroking the bulge of his underpants.[end if] The feeling of Violet's bosom brushing against your [Breast Size Desc of player] chest fills you too with arousal and anticipation. 'I can feel your [cockname of player] cock down there. Should I take care of it?' she asks, before play-biting your neck. You nod[if isTwinHere is 1]; you can also hear Erin mumble 'Yeah, totally...'[end if].";
+	say "      Violet jumps on you as soon as the door is closed and strips your [body of player] body. You peel off her own clothes while she presses against you, enjoying your naked shape, [if isTwinHere is 1] while Erin, true to her word, sits in a corner, and watches the show with eagerness[end if]. You return her hug and feel your arms sink into the soft, grey-white fur. Giving you no time to rest, Violet grabs your neck, and press your [face of player] against hers in a passionate french kiss.[if isTwinHere is 1] Erin scoffs, clearly enjoying his sibling's endaevour. The sound of pants unzipping makes your glance at him for a second, and you catch him already stroking the bulge of his underpants.[end if] The feeling of Violet's bosom brushing against your [Breast Size Desc of player] chest fills you too with arousal and anticipation. 'I can feel your [cockname of player] cock down there. Should I take care of it?' she asks, before play-biting your neck. You nod[if isTwinHere is 1]; you can also hear Erin mumble 'Yeah, totally...'.[else].[end if]";
 	if cocks of player is 1:
-		say "     Violet makes you lean on one of the walls, then drops down on her knees. She spends the next few minutes worshipping your crotch, licking eagerly at your [ball size ] and your [cockname of player] shaft. Eventually, as her tongue lashes reach your sensitive glans, she goes down on you. her long muzzle allows her to take most of your [cock size desc of player] without difficulty, and bob up and down, from the tip to the base and back. You groan [if isTwinHere is 1]and Erin groans for you as well[end if] under the female rat's relentless assault. At the same time, she prepares her pussy for you, slipping one then several fingers inside and pumping slowly. Once she is ready, she rises back up and whispers in your ear: 'I want you to pin me on this wall and fuck. My. Brains. Out.[if isTwinHere is 1] In front of my brother.[end if]' Her excitation reaches you, and you promptly oblige her request.";
+		say "     Violet makes you lean on one of the walls, then drops down on her knees. She spends the next few minutes worshipping your crotch, licking eagerly at your [ball size ] and your [cockname of player] shaft. Eventually, as her tongue lashes reach your sensitive glans, she goes down on you. her long muzzle allows her to take most of your [cock size desc of player] without difficulty, and bob up and down, from the tip to the base and back. You groan [if isTwinHere is 1]and Erin groans for you as well[end if] under the female rat's relentless assault. At the same time, she prepares her pussy for you, slipping one then several fingers inside and pumping slowly. Once she is ready, she rises back up and whispers in your ear: 'I want you to pin me on this wall and fuck. My. Brains. Out[if isTwinHere is 1]. In front of my brother[end if].' Her excitation reaches you, and you promptly oblige her request.";
 	else:
 		say "     Violet makes you lean on one of the walls, then drops down on her knees. She spends the next few minutes worshipping your crotch, licking eagerly at your [ball size] and your [cock size desc of player] shafts. Eventually, as her tongue lashes reach one of your sensitive glans, she goes down on you. her long muzzle allows her to take most of your [cock size desc of player] without difficulty, and bob up and down, from the tip to the base and back. After a moment, she pops it out and swallons another length. You groan [if isTwinHere is 1]and Erin groans for you as well[end if] under the female rat's relentless assault, especially when she attempts to take several of your cocks at once, and pretty much succeeds thanks to her rodent physiology. At the same time, she prepares her pussy for you, slipping one then several fingers inside and pumping slowly. She uses the lubrication to relax her anus as well, knowing full well that you want to make the most use of your unorthodox package, and so did she. Once she is ready, she rises back up and whispers in your ear: 'I want you to pin me on this wall and spread. My holes. Open. Both of them.[if isTwinHere is 1] I want my brother to see inside my gaping holes once you're done.[end if]' Her excitation reaches you, and you promptly oblige her request.";
 	WaitLineBreak;
@@ -321,11 +320,12 @@ to say VioletFuck:
 		say "     You turn around, pinning Violet's back against the concrete. She raises one of her legs up high, giving you access to her pussy. She parts away her pinky red lower lips, letting you guide your uppermost cock inside. You push in slowly, letting the velvety insides swallow your entire length in one go. Biting her lips, Violet then gives you access to her ass, where you slip another one. Violet gives out a long moan as her two holes get speared at the time by your [cock size desc of player] shafts. Once you are completely in in both, you grab her other leg, and let her wrap her limbs around the small of your back. 'Come on you beast, ruin me!' she says. You are already at it, and she has barely the time to finish her sentence before your cocks slam against her crotch like a jackhammer in an exciting double-penetration. 'Ah! Ah fuck! Ahn! Ah!' Her moans encourage you to go harder and faster, until she tries to qualm them by forcing her tongue down your mouth into a sloppy kiss.[if isTwinHere is 1] Her brother gives you additional encouragements from his own moans, and the wet sounds of his masturbation.[end if]";
 	  if cocks of player is 3:
 		say "     A twisted idea crosses your mind. you take the opportunity of a pull to line your third cock against the entrance of her pussy, then slam in again. Violet's eyes open wide as her vagina are forced to stretch even more to accomodate the second entry. 'Oh my gawd! Oh fuck! Too much! Ah! Ah! Aaah!' Her shouts only serve to fuel the sexual beast inside of you, as you give Violet a pounding for the ages[if isTwinHere is 1] with her sibling's vocal approval[end if].";
+		say "     Several times, you feel her inner muscles contract, and you could swear that she had cummed each of these times, but your own explosive climax would only come after several minutes of intense sex. Your vision flashes white, and you press Violet against the wall so hard that, in a corner of your brain, you worry that you are not squeeshing her. The spasms of your cocks reverberate throughout your entire body, as every single drop of your semen is dutifuly taken in by the female rat's womb and ass.";
 	  if cocks of player >= 4:
 		say "     A twisted idea crosses your mind. you take the opportunity of a pull to line an additional cock against each entrance, then slam in again. Violet's eyes open wide as her two holes are forced to stretch even more to accomodate the second entry. 'Oh my gawd! Oh fuck! Too much! My ass! So big! Aaaah!' Her shouts only serve to fuel the sexual beast inside of you, as you give Violet a pounding for the ages[if isTwinHere is 1] with her sibling's vocal approval[end if].";
-	  say "     Several times, you feel her inner muscles contract, and you could swear that she had cummed each of these times, but your own explosive climax would only come after several minutes of intense sex. Your vision flashes white, and you press Violet against the wall so hard that, in a corner of your brain, you worry that you are not squeeshing her. The spasms of your cocks reverberate throughout your entire body, as every single drop of your semen is dutifuly taken in by the female rat's womb and ass."
+		say "     Several times, you feel her inner muscles contract, and you could swear that she had cummed each of these times, but your own explosive climax would only come after several minutes of intense sex. Your vision flashes white, and you press Violet against the wall so hard that, in a corner of your brain, you worry that you are not squeeshing her. The spasms of your cocks reverberate throughout your entire body, as every single drop of your semen is dutifuly taken in by the female rat's womb and ass."
 	WaitLineBreak;
-	say "     You let Violet get off from you. Your arms are trembling a little from the effort, her legs are shaking like crazy from the pleasure. 'B-Best. Sex. Ever,' is all she has to say. [if isTwinHere is 1]Erin gives out a faint yes. He came hard too, judging by the ropes of cum which paint the floor all the way to you[end if]. Violet grabs a roll of kitchen paper, and give a couple for you to clean up. Putting a finger at her crotch, she pulls up a strand of mixed cum and vaginal fluid.[first time] 'A good thing I looted that stash of birth control pills at the drugstore' she notes.[only] 'I think I'll need some rest.[if isTwinHere is 1] Erin too, mind ya.[end if] My legs are still shaking from this one. Take care, tiger.'";
+	say "     You let Violet get off from you. Your arms are trembling a little from the effort, her legs are shaking like crazy from the pleasure. 'B-Best. Sex. Ever,' is all she has to say. [if isTwinHere is 1]Erin gives out a faint yes. He came hard too, judging by the ropes of cum which paint the floor all the way to you[end if]. Violet grabs a roll of kitchen paper, and give a couple for you to clean up. Putting a finger at her crotch, she pulls up a strand of mixed cum and vaginal fluid.[first time] 'A good thing I looted that stash of birth control pills at the drugstore' she notes.[only] 'I think I'll need some rest[if isTwinHere is 1]. Erin too, mind ya[end if]. My legs are still shaking from this one. Take care, tiger.'";
 	now isTwinHere is 0;
 
 to say VioletStrapOn:
@@ -407,9 +407,9 @@ The sarea of Pirate Standoff is "Beach".
 
 Instead of resolving a Pirate Standoff:
 	say "     You hear a commotion in the distance, behind a dune. Curious what it may be, you climb the small hill prudently, crouching as you reach the top. On the other side, you see a pair of young-looking anthro rats, one male and the other female looking like two peas in a pod, surrounded by a gang of pirate sharks. The aquatic predators growl at the pair of rodents, who stand in the middle, back-to-back. 'Arrr, ye sea rats shouldn't [']ave been snoopin['] around,' one of the sharks says. She seems to be the [']captain['] of the group.";
-	say "     'I told you, stupid,' the female rat says, ignoring the pirate. 'We should have thought twice when Smee mentioned [']pirate booties['].'";
-	say "     'Har, Har! Talking [']bout these, girl?' the pirate asks, as she slaps his generous butt. 'Too bad for ye, rattie. The only bootie that'd get plundered today is your and your brother's.'";
-	say "     'Whelp, this sucks, Sis,' the male rat says. 'And so will we in a moment, unless [italic type]someone[roman type] passes by and gives us some kind of distraction.'";
+	say "'I told you, stupid,' the female rat says, ignoring the pirate. 'We should have thought twice when Smee mentioned [']pirate booties['].'";
+	say "'Har, Har! Talking [']bout these, girl?' the pirate asks, as she slaps his generous butt. 'Too bad for ye, rattie. The only bootie that'd get plundered today is your and your brother's.'";
+	say "'Whelp, this sucks, Sis,' the male rat says. 'And so will we in a moment, unless [italic type]someone[roman type] passes by and gives us some kind of distraction.'";
 	say "      You suddenly realize that, during the entire conversation, this [']Bro['] person was continously glancing in your direction. Those big ears of his are not for show it seems. [bold type]Do you help the rats?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Aye. Time to make new friends.";
@@ -422,7 +422,9 @@ Instead of resolving a Pirate Standoff:
 			say "'Ye freshwater pirate!' the pirate shark says. 'Praise the sea gods that we don't meet again!' And with that, she goes after the siblings as well, leaving you with the pride of having done a good deed. Just as you are about to leave, you notice a crumpled piece of paper where the male rat stood. You pick it up, and read: [italic type]Thks dude. Meet up @ food pl.[roman type]. The message has been hurriedly written, but you suppose that the food place is the restaurant upstairs.";
 		else:
 			say "'Ye freshwater pirate!' The pirate shark shakes her fist angrily at you, and begins to climb the hill to teach you a lesson.";
+			now inasituation is true;
 			challenge "Pirate Shark";
+			now inasituation is false;
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     'Arrr! Ye won't get away with this, ye cachinnating cockatoo!' the defeated shark says, visibly straining her repertoire of Captain Haddock curses. She makes a hasty retreat, leaving you with the pride of having done a good deed. Just as you were about to leave, you notice a crumpled piece of paper where the male rat stood. You pick it up, and read: [italic type]Thks dude. Meet up @ food pl.[roman type]. The message has been hurriedly written, but you suppose that the food place is the restaurant upstairs.";
 			else if fightoutcome >= 20 and fightoutcome <= 29:
@@ -436,19 +438,19 @@ Instead of resolving a Pirate Standoff:
 			say "     'Mmm, good, good. But [']fore we share, we should check which booty is the finest. Don't ye agree, mates?'";
 			say "     And with these words, the shark captain gives each rodent a slap on the butt, making them yowl and, in the case of the girl, make her spout choice words about their captors. 'Come on, me maties! Help me.'";
 			say "     After several minutes of spanking, the siblings['] buttcheeks are stinging red under the snow-white fur. And this seems to have excited them as well: The brother's cock is rock hard, while his sister is drippingly wet. 'Naughty sea rats, are ye?' the pirate shark asks. 'Bitches, give 'em a show.' The two shark goons pull each rodent into their laps, making sure that they have a nice view of their sibling's naked body, and their ass held dangerously close to a thick shark cock. At the captain's signal, the two rodents['] asses get speared by fish meat.";
-			say "     'A-Ah!'";
-			say "     'Ah. Such a lew rattie. Moans even louder than his sister.'";
-			say "     'N-No. Erin!'";
-			say "     'Yer bro is taking cock like a champ, and so do you, ya little cunt.'";
+			say "'A-Ah!'";
+			say "'Ah. Such a lew rattie. Moans even louder than his sister.'";
+			say "'N-No. Erin!'";
+			say "'Yer bro is taking cock like a champ, and so do you, ya little cunt.'";
 			WaitLineBreak;
-			say "     The two rats gets their asses spread apart again and again, as the sharks take their sweet time fucking them. To their delight, it seems that the sight of their sibling's fate excite them very much, and the sharks accelerate the process by masturbating them. The rats squirm almost synchronously as they cum around the shark cocks buried in their asses. 'Yar! Cumming already? We havn't even got to tha serious stuff!' the sharks laugh.";
-			say "     'M-Mercy.'";
-			say "     'I-I'm gonna kill you. I swear!'";
-			say "     'Shut yer traps,' the pirate leader says, as he plants himself between the two forced pairs. Her hands grab each sibling's head, and press them against her two genitals. 'Use 'em properly. Get to it!' Encouraged by the sharks, the two rats submit and begin to suck the shark's oddly-shaped cock and lick her moist pussy.";
+			say "The two rats gets their asses spread apart again and again, as the sharks take their sweet time fucking them. To their delight, it seems that the sight of their sibling's fate excite them very much, and the sharks accelerate the process by masturbating them. The rats squirm almost synchronously as they cum around the shark cocks buried in their asses. 'Yar! Cumming already? We havn't even got to tha serious stuff!' the sharks laugh.";
+			say "'M-Mercy.'";
+			say "'I-I'm gonna kill you. I swear!'";
+			say "'Shut yer traps,' the pirate leader says, as he plants himself between the two forced pairs. Her hands grab each sibling's head, and press them against her two genitals. 'Use 'em properly. Get to it!' Encouraged by the sharks, the two rats submit and begin to suck the shark's oddly-shaped cock and lick her moist pussy.";
 			say "      After some more impromptu coitus, and the sharks' collective orgasm, the gang decides to [']share the booty['] at their hideout. They tie up the two knocked-out rats, then take them away to some grim, sex-slave fate. As you watch them leave, you feel like you somehow missed an opportunity to something.";
 		now ratTwinsStatus is 99;
 	now Pirate Standoff is resolved;
-		
+
 
 Part C - Meeting the Twins again
 
@@ -457,21 +459,22 @@ The sarea of Rat Twins Invitation is "Nowhere".
 
 instead of going to Restaurant while Rat Twins Invitation is not resolved and ratTwinsStatus is 1:
 	move player to Restaurant;
+	move Erin to Restaurant;
+	move Violet to Restaurant;
 	say "     As you enter the restaurant, a pair of waving arms catch your attention. 'Hey, it's our good samaritan!' a familair voice says. The two rats are here, just like the message said. They seem to have made a corner of the restaurant theirs: a pair of cots are rolled up next to the table, alongside a bag of supplies, and a map of the city is sprawled on the table, held together by empty glasses and a mustard pot.";
-	say "     'A good thing someone was a curious as us. Did you follow this [']pirate booty['] rumour too?' the brother says hurriedly.'";
-	say "     'Maybe he'd want your name first?' his sibling asks. 'Unless you still want to be known as [']Bro Rat['] around these parts.'";
-	say "     'Oh right, right. My name's Erin, and this is my sister...'";
-	say "     'Violet. Don't laugh.'";
-	say "     'Who'd laugh at you, sweetie. And since we're on politness... We own you a meal!'";
+	say "'A good thing someone was a curious as us. Did you follow this [']pirate booty['] rumour too?' the brother says hurriedly.'";
+	say "'Maybe he'd want your name first?' his sibling asks. 'Unless you still want to be known as [']Bro Rat['] around these parts.'";
+	say "'Oh right, right. My name's Erin, and this is my sister...'";
+	say "'Violet. Don't laugh.'";
+	say "'Who'd laugh at you, sweetie. And since we're on politness... We owe you a meal!'";
 	say "     The restaurant's supplies had been sacked when the city fell into anarchy, and only the smell of oil and burger meat remained; but the power generator was still working, and so did the microwave oven. Erin and Violet picked a shepherd's pie, a delicacy these days, and put it in the oven. You shared the meal, alongside a can of soda, while making the acquaintance of your new friends.";
-	decrease hunger of player by 12;
-	decrease thirst of player by 12;
-	increase humanity of player by 10;
+	PlayerEat 12;
+	PlayerDrink 12;
+	SanBoost 10;
 	say "[bold type]Your hunger and thirst decreases, thanks to the meal the siblings offered. Having a normal social interaction allows you to recover some humanity.[roman type]";
 	now ratTwinsStatus is 2;
 	now Rat Twins Invitation is resolved;
-	
-	
+
 
 Part D - Restaurant Events
 
@@ -482,8 +485,8 @@ instead of going to Restaurant while ratTwinsStatus is 2 and Rat Twincest is not
 	move player to Restaurant;
 	say "     As you enter the restaurant, you head towards Erin and Violet's shelter, to say hi. The siblings do not seem to be at their usual spot at the moment. However, the door to the nearby storage room, is ajar, and light peers from the opening. You approach from the door, only to hear familiar voices on the other side. 'Oh... Oh, Erin.'";
 	say "     [bold type]Do you peep on the rodent twins?[roman type][line break]";
-	say "     ([link]Y[as]y[end link]) - This kind of show turns you on";
-	say "     ([link]N[as]n[end link]) - Not really your cup of tea";
+	say "([link]Y[as]y[end link]) - This kind of show turns you on.";
+	say "([link]N[as]n[end link]) - Not really your cup of tea.";
 	if player consents:
 		LineBreak;
 		say "      You try to close in as stealthily as you can. However, you trip on one of the siblings['] bags, and the momentum carries you towards the door, which open on Erin and Violet in the middle of a 69. The twins are lying on a makeshift bed made of old cardboxes, Violet on top of Erin. After you barge in, Erin stops eating out her sister and begins to wiggle, embarassed: 'Th-this is not what it looks like!'";
@@ -511,9 +514,8 @@ instead of going to Restaurant while ratTwinsStatus is 2 and Rat Twincest is not
 to say TwinsRoleplay:
 	say "     You notice a piece of paper scotched to the door of the restaurant. You recognize Erin's hurried writing. It reads: [italic type]To ppl walking in: don't worry, everything is consensual. Enjoy the show. E & V[roman type]. You do hear a big commotion inside, that would have definitely made you barge in, if you had not read the note: 'Come on, bitch! Time to squeeze out the money, or else!' a loud voice boomed from inside the restaurant.";
 	say "     [bold type]Do you go in and see what this is about?[roman type][line break]";
-	LineBreak;
-	say "     ([link]Y[as]y[end link]) - This kind of show turns you on.";
-	say "     ([link]N[as]n[end link]) - Not really your cup of tea.";
+	say "([link]Y[as]y[end link]) - This kind of show turns you on.";
+	say "([link]N[as]n[end link]) - Not really your cup of tea.";
 	if player consents:
 		LineBreak;
 	else:
@@ -529,8 +531,8 @@ instead of resolving Tied Rat Twins:
 		say "     During your exploration, you come upon what looks like an abandoned sex-shop. The place looks deserted, but there is this permanent buzzing sound coming from inside. This is odd.";
 		say "     [bold type]Do you wish to investigate?[roman type]";
 		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Who would use a sex toy? You are curious";
-		say "     ([link]N[as]n[end link]) - You'd better give whoever it is some private time";
+		say "([link]Y[as]y[end link]) - Who would use a sex toy? You are curious";
+		say "([link]N[as]n[end link]) - You'd better give whoever it is some private time";
 		if player consents:
 			LineBreak;
 			say "     You walk inside the shop, if only to check what is the source of all this buzzing. It is even louder when in the shop, as if several toys had been set off at once. And, more worringly, you hear several persons scream through a gag. You head towards the source of the noise, behind the counter. You stumble upon Eric and Violet. The twins seem to have been caught in the middle of their own patrol, and they have been bound together sturdily with leather cuffs and ropes. They have been forced face-to-face, a vibrating wand stuck against their conjoined crotches. As a 'bonus', Violet got her holes spread apart by dildos, while you recognize the shape of a prostate massager stuck into Erin's ass. For added humliation, their rodent muzzles have been taped to each other, having them share an embarassing kiss.";
@@ -543,6 +545,6 @@ instead of resolving Tied Rat Twins:
 		else:
 			LineBreak;
 			say "      You have better things to do. You walk away and continue your exploration";
-		now Tied Rat Twins is resolved;	
+		now Tied Rat Twins is resolved;
 
 Rat Twins ends here.
