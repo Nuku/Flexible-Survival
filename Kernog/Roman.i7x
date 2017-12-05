@@ -79,9 +79,9 @@ instead of conversing the Team Captain Roman:
 	[]
 	if (GorillasMember is 3 and GorillasRep > 8 and Roman is in Astroslide Football Field):
 		choose a blank row in table of fucking options;
-		now title entry is "Special training";
+		now title entry is "Match";
 		now sortorder entry is 6;
-		now description entry is "Join the main team for a special training session.";
+		now description entry is "Play a match.";
 	[]
 	if (romanPeeped is 1 ):
 		choose a blank row in table of fucking options;

@@ -25,12 +25,14 @@ carry out destinationcheck:
 			say "| [link][bracket]Orc Lair[close bracket][as]nav Orc Lair Side Entrance[end link] ";
 		LineBreak;
 	[a subsection of the 'outside' area (named Central City here)]
-	if Camp Bravo Entrance is known or Green Apartment is known or Fire Station 86 is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
+	if Camp Bravo Entrance is known or Green Apartment is known or Gaming Den is known or Fire Station 86 is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
 		say "[bold type]Central City[roman type]: ";
 		if Camp Bravo Entrance is known:
 			say "| [link][bracket]Camp Bravo[close bracket][as]nav Camp Bravo Entrance[end link] ";
-		if Green Apartment is known:
-			say "| [link][bracket]Green Apartment[close bracket][as]nav Green Apartment[end link] ";
+		if Gaming Den is known:
+			say "| [link][bracket]Gaming Den[close bracket][as]nav Gaming Den[end link] ";
+		if Green Apartment Building is known:
+			say "| [link][bracket]Green Apartment Building[close bracket][as]nav Green Apartment Building[end link] ";
 		if Fire Station 86 is known:
 			say "| [link][bracket]Fire Station 86[close bracket][as]nav Fire Station 86[end link] ";
 		if Mini-Lab is known:
@@ -224,8 +226,6 @@ carry out destinationcheck:
 		say "[bold type]Tenvale College[roman type]: ";
 		if College Campus is known:
 			say "[link][bracket]College Campus[close bracket][as]nav College Campus[end link] - ";
-		if Astroslide Field Locker-room is known:
-			say "| [link][bracket]Astroslide Field Locker-room[close bracket][as]nav Astroslide Field Locker-room[end link] ";
 		if Campus Gym is known:
 			say "| [link][bracket]Campus Gym[close bracket][as]nav Campus Gym[end link] ";
 		if Paleontology Office is known:

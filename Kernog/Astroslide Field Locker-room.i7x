@@ -265,6 +265,7 @@ to say GorillaTeamSex3: [chain fuck]
 PeepingRoman is a situation.
 
 instead of going to Astroslide Field Locker-room while (PeepingRoman is not resolved and Furry is not banned and Furry is not warded and a random chance of 1 in 3 succeeds):
+	move player to Astroslide Field Locker-room;
 	PeepingRomanEvent;
 
 to PeepingRomanEvent:

@@ -15,7 +15,7 @@ to say Feral Wolf attack:
 	now wolffight is 2; [lost]
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
-	else:
+	else: [regular scene]
 		if FeralWolfdefeat is 0:
 			say "     The Feral Wolf roars as he slams you down onto your back. He then sits back and lets out a howl of victory into the [if daytimer is night]night [end if]sky before padding over to your head and [if scalevalue of player > 3]briefly lording over his victory[else]standing above you[end if]. Your position forcing you to look up into the strong[if bodyname of player is listed in infections of caninelist]er[end if] canine's crotch, your eyes widening as you see his thick canine shaft quickly swelling up, getting rather hard. A few drops of musky pre dripping off his shaft, landing in your mouth and on your face. The strong smell of his musk makes you shiver and groan slightly as he continues to slowly paint your face with his pre, drop by drop.";
 			say "     After a few minutes of this treatment, the wolf shifts his stance, lying down on your [bodydesc of player] chest, his cock resting on your face. Once he is properly situated on top of you, he pulls his hips back, lifting his shaft off of you. The tip of his length slides up your face until it reaches your lips, where it slips between them as spurts a few good pumps of pre before the wolf slams his shaft down into your mouth, snarling and growling in dominance.";

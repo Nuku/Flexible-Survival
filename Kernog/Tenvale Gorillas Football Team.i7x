@@ -23,8 +23,8 @@ TryoutScore is a number that varies.
 A person can be a laundry sniffer.
 
 to say FootballTryouts:
-	say "     'Hey, you arrive just in time,' Roman tells you, a smile on his face. So, [bold type]ready to start the tryouts? Be careful, since we only got so much candidacies, you can only pass them once.[roman type]";
-	say "     ([link]Y[as]y[end link]) - You're as ready as one can be..";
+	say "     'Hey, you arrive just in time,' Roman tells you, a smile on his face. So, [bold type]ready to start the tryouts? Be careful, since we only got so much candidacies, you can only pass them once.[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - You're as ready as one can be.";
 	say "     ([link]N[as]n[end link]) - You do not feel ready yet for taking the test. You'd rather try another time, when you're in better shape.";
 	if player consents: [do the tryout]
 		now TryoutScore is 1;
@@ -171,7 +171,7 @@ to say GorillaWaterService:
 	LineBreak;
 	say "     [bold type]Which group should you [roman type][line break]";
 	say "     [link](1)[as]1[end link] - A large, bully-looking ape, whose dirty look gives you bad vibes.";
-	say "     [link](2)[as]2[end link] - Two players who look very close to each other and with an air of family";
+	say "     [link](2)[as]2[end link] - Two players who look very close to each other and with an air of family.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 2:
 		say "Choice? (1-2)>[run paragraph on]";
@@ -225,8 +225,8 @@ to say GorillaWater2:
 [Training scenes]
 to say GorillaTraining:
 	say "     'Okay, champ. [first time]I assigned you a locker, and asked the staff to put a helmet and shoulder-pads in it[only]. Go Gear up and come back here,' Roman instructs you. You jog to the locker-room, and [one of]after a couple of minutes of search while evading the various sex piles spread through the room, you manage to find your locker[or]head towards your locker, while evading the various sex piles spread through the room[stopping]. You put on your gear, and hurry back to Roman with a dozen other players. 'Okay, team. I guess that the others are either coming back at another time, or busy in the locker-room. I will make several groups, as usual. Choose one and have fun.'";
-	say "[bold type]Which group do you want to join?[roman type]";
-	say "     [link](1)[as]1[end link] - Reception and interception";
+	say "[bold type]Which group do you want to join?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Reception and interception.";
 	say "   More options coming soon.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 1:
@@ -245,10 +245,9 @@ to say GorillaTraining:
 
 to say GorillaTraining1:
 	say "     You join the group that practices throws. One of your seniors take the lead, and grabs a ball. 'Okay, one of you goes to throw, another one heads over there for catching, and the others act as defenders,' the experienced footballer explains. 'We will rotate with each throw, so don't worry, everyone will have a turn, so to speak. Burt, Zach, you start.' You go take your own place, [one of]wondering why everyone has to practice throws, and why one at a time[or]smiling as you anticipate what will comes next[stopping].";
-	say "     The senior player gives the signal. Burt throws the ball for Zach as he runs forward, while your group tries to intercept the ball from either. [one of]But you seem to be the only one interested by the ball[or]But your focus is obviously not the ball[stopping]. Their asses are spread open by hungry cocks, and their own package is manhandled by another player. [one of]After a short moment of confusion, you[or]You[stopping] eagerly join the fray. [bold type]Would you rather top, or bottom?[roman type]";
-	LineBreak;
-	say "     ([link]Y[as]y[end link]) - Top";
-	say "     ([link]N[as]n[end link]) - Bottom";
+	say "     The senior player gives the signal. Burt throws the ball for Zach as he runs forward, while your group tries to intercept the ball from either. [one of]But you seem to be the only one interested by the ball[or]But your focus is obviously not the ball[stopping]. Their asses are spread open by hungry cocks, and their own package is manhandled by another player. [one of]After a short moment of confusion, you[or]You[stopping] eagerly join the fray. [bold type]Would you rather top, or bottom?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Top.";
+	say "     ([link]N[as]n[end link]) - Bottom.";
 	if player consents:
 		LineBreak;
 		if cocks of player > 0:
