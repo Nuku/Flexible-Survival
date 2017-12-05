@@ -296,8 +296,7 @@ The usedesc of cheese is "[eatcheese]";
 
 to say eatcheese:
 	say "     You pull out the wedge of cheese and, after double-checking its continued freshness, you take a small nibble of it. That nibble becomes a bite, and then another and another until it's completely gone before you know it.";
-	decrease hunger of player by 9;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 9;
 	if morale of player < 0:
 		increase morale of player by 20;
 		if morale of player > 0, now morale of player is 0;

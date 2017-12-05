@@ -14,6 +14,7 @@ Section 2 - Rules and Functions
 
 After looking:
 	follow the ngraphics_clearcheck rule;
+	follow the zpc_lookoverride rule; [zephyr phone logic]
 
 This is the ngraphics_clearcheck rule:
 	if TempClearBypass is 0:

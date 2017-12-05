@@ -115,63 +115,7 @@ The slot of Sailor Outfit is "body".
 Instead of smelling Sailor Outfit:
 	say "The Sailor Outfit smells like something from out of this world mixed with determination to find your one true love.";
 
-
-
-Section 4 - Triton
-
-Triton is a situation. The level of Triton is 9.
-
-The sarea of Triton is "Beach".
-When play begins:
-	Add Triton to badspots of furry;
-	Add Triton to badspots of guy;
-
-Instead of resolving a Triton:
-	Say "Walking along the beach you watch as the crashing waves of the sea bounce across the shore as the [if daytimer is day]sun rides along the sky[else]moon dances along the night skyline[end if] while listening to the soft intelligible sounds of marine life reverberate all around you. As the minutes pass by, the soothing sounds of the water lapping along the sands makes a sense of nostalgia surge up throughout you, mind lulling you almost to sleep. However, before you can become too lost in the all-encompassing feelings of sleep about to overtake you, you find your gaze drifting over to what looks like a bronze coloured trident free-floating like a abandoned surfboard along the waterline.";
-	WaitLineBreak;
-	Say "Curious as to where this strange thing came from, you shrug your backpack off and then walk into the sea to grab the weapon before it can drift further out into the [if daytimer is day]blue[else]black[end if] wonder of the ocean. Testing its weight you find that the trident is fairly light and has a well-worn grip around its smooth handle that fits your hand almost perfectly. Not sure, but not questioning the proverbial gift horse you begin to turn about your way to head back to the shore, but before you can get too far you hear the roar of a sea dragon behind you. Whipping your head around you find several sea dragons glaring at you as they raise themselves up out of the waters, the menacing looks on their faces makes you swallow thickly in turn.";
-	WaitLineBreak;
-	Say "The instinctual need to run has your legs tensing and before you know it your trying to swim/run back to the shore, but before you can get too far you find the trident in your hands tugging you backwards to the way the sea dragons are. Blinking you look down at the weapon, then up to the oncoming dragons and then back to the beach.";
-	say "     [bold type]Maybe you should just toss the thing and continue that run you were trying to go for?[roman type][line break]";
-	LineBreak;
-	say "     ([link]Y[as]y[end link]) - Toss it.";
-	say "     ([link]N[as]n[end link]) - Keep it.";
-	If the player consents:
-		LineBreak;
-		Say "Chucking the trident as far as you can you don't stop to watch what happens next with the sea dragons as you continue to swim/run to the shore. Grabbing your backpack and then beating feet as quick as you can you don't turn back even once to see what happens with the feral sea guardians. Had you, you would have seen a half naked male figure with a long white rising up out of the sea to take the trident into one of his meaty bronze hands.";
-	else:
-		LineBreak;
-		Say "Clutching the trident a little tighter into your grip you feel the strongest sense of possessiveness overcome you all of sudden making you unwilling to relinquish your newfound weapon. It would seem that the sea dragons can sense this and are about to make you regret your choice, however.";
-		Challenge "Feral Sea Dragon";
-		if fightoutcome >= 10 and fightoutcome <= 19:
-			Challenge "Feral Sea Dragon";
-			if fightoutcome >= 10 and fightoutcome <= 19:
-				Challenge "Feral Sea Dragon";
-				if fightoutcome >= 10 and fightoutcome <= 19:
-					Challenge "Feral Sea Dragon";
-					if fightoutcome >= 10 and fightoutcome <= 19:
-						say "Having beaten back the pack of feral dragons you experience a sense of well deserve pride overcome you as you watch the group of feral reptiles scampering away back into the sea. Turning to head back to the beach with a smug smirk lining your face you never notice a half naked masculine figure with a long white beard rise up out of the sea to look at you inquisitively. Too busy enjoying your triumph you also never notice the trident you are still holding glowing with a faint golden light as you get ready to head off about your way.";
-						now carried of trident is 1;
-						increase score by 10;
-		if fightoutcome >= 20:
-			say "Having lost to one of the feral sea dragons you find yourself being stripped of your newfound weapon and then casually dumped onto the beach by the creature you had just been defeated by. Grunting in utter humiliation you rest on the muddy sands for a minute while lamenting your own weakness. Looks like you know truly understand the meaning about the [italic type]one that got away[roman type] as you listen to the chatter of the feral sea dragons as the reptiles dive back into the sea with your commandeered treasure. Better luck next time.";
-	now Triton is resolved;
-
-
-Section 4a - Trident (Weapon)
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"trident"	"A large, bronze three-pronged spear that is as lightweight as it is deadly."	5	trident
-
-trident is an armament. It is part of the player. It has a weapon "[one of]your three-pronged spear[or]your deadly trident[or]your bronze spear[or]your majestic weapon of doom[at random]". The weapon damage of trident is 10. The weapon type of trident is "Melee". It is not temporary. the objsize of trident is 4.
-
-instead of sniffing trident:
-	say "The trident smells like the sea, the moon, the stars and...a little mermaid? Weird.";
-
-
-
-Section 5 - June Mermaid
+Section 4 - June Mermaid
 
 June Mermaid is a situation.
 The sarea of June Mermaid is "Warehouse".
@@ -183,7 +127,7 @@ Instead of resolving a June Mermaid:
 
 
 
-Section 6 - Anomaly
+Section 5 - Anomaly
 
 Anomaly is a situation.
 The sarea of Anomaly is "Warehouse".
@@ -195,7 +139,7 @@ Instead of resolving a Anomaly:
 
 
 
-Section 7 - Free Catch!
+Section 6 - Free Catch!
 
 Free Catch is a situation.
 The sarea of Free Catch is "Warehouse".
@@ -209,7 +153,7 @@ Instead of resolving a Free Catch:
 
 
 
-Section 8 - Rumors
+Section 7 - Rumors
 
 Rumors is a situation.
 The sarea of Rumors is "Warehouse".
@@ -221,7 +165,7 @@ Instead of resolving a Rumors:
 
 
 
-Section 9 - Diving contest
+Section 8 - Diving contest
 
 Diving Contest is a situation.
 The sarea of Diving Contest is "Warehouse".
@@ -232,7 +176,7 @@ Instead of resolving a Diving Contest:
 
 
 
-Section 10 - Lackadaisical
+Section 9 - Lackadaisical
 
 Lackadaisical is a situation.
 The sarea of Lackadaisical is "Warehouse".

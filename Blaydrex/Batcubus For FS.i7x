@@ -116,8 +116,7 @@ the usedesc of batcubus milk is "[batcubus milk use]";
 
 to say batcubus milk use:
 	say "Taking the cap of the bottle of milk, you greedily drink down its contents, swallowing the tasty milk.";
-	decrease thirst of player by 6;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerDrink 6;
 	infect "Batcubus";
 
 Section 4 - Endings

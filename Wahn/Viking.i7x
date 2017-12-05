@@ -1455,8 +1455,7 @@ the usedesc of mead horn is "[mead horn use]";
 
 to say mead horn use:
 	say "Taking the stopper out of the horn's opening, you put it to your mouth and take a swallow of the mead. Mjam - tasty and alcoholic. Before long, the horn is empty and you're lightly buzzed. A thought comes up in the back of your head, and you wonder if it's such a good idea to share drinking utensils with other people these days... but then, becoming more like Sonya wouldn't be so bad, would it?";
-	decrease thirst of player by 6;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerDrink 6;
 	VikingInfect;
 
 to VikingInfect:

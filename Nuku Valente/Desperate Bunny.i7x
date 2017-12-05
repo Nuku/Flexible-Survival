@@ -281,7 +281,7 @@ to say sandrasex_leadin: [devnote: amend]
 		say "     She starts to strip naked in front of you, exposing the smooth flesh of her skin to your hungry eyes. She only has fur in a few places, across her short tail, long ears, and covering her large pouting vulva. She smiles, running hands across her six breasts, starting at the small B cups and working up towards her hefty Ds as she waits for you. Catching up to her, and feeling ready yourself, you start to follow, exposing your [skin of player] body to her. She eyes you appraisingly...";
 	if the thirst of the player > 50:
 		say "     Sandra frowns at you, 'You look like you haven't had a drink in over a day[if rabbitsibling > 0], [sangr][end if].' She grabs for your face and buries you against a firm breast, teat brushing against your lips as she lays back with you. Feeling quite thirsty, you have no good reason to deny her and begin to gulp up the thick cream that pours out at command of your firm suckles. You nuzzle your [skin of player] face against the life giving breast, filling your belly with sweet cream as the rabbit pets and coos at you encouragingly. When your thirst has abated somewhat, she gently pushes you back, 'Now where were we...'";
-		decrease thirst of player by 15;
+		PlayerDrink 15;
 
 
 to say sandrasex1:		[fuck the bunny]

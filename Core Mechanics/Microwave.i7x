@@ -45,11 +45,10 @@ to say DistilledCumUse:
 
 to say DistilledBoozeUse:
 	say "The liquid burns your throat as you swallow it down, but a very pleasant warmth spreads through your body as it hits your stomach, making you shudder as you grow more aroused and are hit by a small urge to giggle. Strong stuff, this.";
-	decrease thirst of player by 5;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerDrink 5;
 	increase libido of player by 10;
 	if libido of player > 100, now libido of player is 100;
-	decrease humanity of player by 5;
+	SanLoss 5;
 
 instead of sniffing distilled cum:
 	say "You might want to be careful about sniffing this, you don't want to snort this stuff.";

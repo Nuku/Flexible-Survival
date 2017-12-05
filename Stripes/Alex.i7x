@@ -367,10 +367,8 @@ to say alexbrunchtime:
 		say "     Once again waking up in Alex's bed with the morning light streaming down onto you, you can smell the scent of food being made. You stretch and are about to rise when Alex comes in wearing only a grin, carrying two bed trays with brunch on it. He kisses you good morning as he puts your tray down, then joins you in bed with his. You share a lovely morning with him, nuzzling and kissing as you eat your breakfast.";
 		say "     During your breakfast in bed, [pillowtalk]";
 		say "     Once your breakfast is finished and set aside, you both have a quick romp on the bed. It's mainly just rolling around with each other while nibbling and nuzzling, through there are a few gropes thrown in for fun. Afterwards, with that last boost to your spirits, you get your stuff together and get ready to head out into the city again.";
-	decrease hunger of player by 12;
-	if hunger of player < 0, now hunger of player is 0;
-	decrease thirst of player by 12;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerEat 12;
+	PlayerDrink 12;
 	if morale of player < 0:
 		increase morale of player by 50; [meal+drink morale boost]
 		if morale of player > 0, now morale of player is 0;

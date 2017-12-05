@@ -114,10 +114,9 @@ carry out ssvending:
 					increase morale of player by 36;
 					if morale of player > 0, now morale of player is 0;
 					say "     You feel much better after having had your snack.";
-				decrease hunger of player by 9;
+				PlayerEat 9;
 				if "Junk Food Junky" is listed in feats of player:
-					decrease hunger of player by 11;
-				if hunger of player < 0, now hunger of player is 0;
+					PlayerEat 11;
 				decrease freecred by 120;
 				now sextablerun is 1;
 		else if calcnumber is 4:
@@ -129,10 +128,9 @@ carry out ssvending:
 					increase morale of player by 36;
 					if morale of player > 0, now morale of player is 0;
 					say "     You feel much better after having had your snack.";
-				decrease hunger of player by 9;
+				PlayerEat 9;
 				if "Junk Food Junky" is listed in feats of player:
-					decrease hunger of player by 11;
-				if hunger of player < 0, now hunger of player is 0;
+					PlayerEat 11;
 				decrease freecred by 120;
 				now sextablerun is 1;
 		else if calcnumber is 5:
@@ -144,10 +142,9 @@ carry out ssvending:
 					increase morale of player by 36;
 					if morale of player > 0, now morale of player is 0;
 					say "     You feel much better after having had your snack.";
-				decrease hunger of player by 9;
+				PlayerEat 9;
 				if "Junk Food Junky" is listed in feats of player:
-					decrease hunger of player by 11;
-				if hunger of player < 0, now hunger of player is 0;
+					PlayerEat 11;
 				decrease freecred by 150;
 				increase morale of player by 2;
 				now sextablerun is 1;

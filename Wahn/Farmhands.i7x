@@ -125,12 +125,8 @@ to say Farmhand HorsemenSex1: [Gangbang - Oral and Cum Shower]
 	WaitLineBreak;
 	say "     Being bathed in warm, creamy seed is definitively an interesting experience - you kinda like being the center of all this attention, and the fact that half a dozen strapping hunks got off just because of you. In mere moments, you're literally drenched in their cum, with more and more splattering you by the second. You can't help but be curious about the different guys and wipe up some dollops of sperm to taste - or capture a spurt directly with your mouth. The different workers actually have their own taste, similar but with slight differences. Seems like someone's diet truly adjusts the taste - and no matter what they might prefer to eat, it certainly is all grown right here on the farm, healthy and fresh... which results in tasty cum too.";
 	say "     By the time the last of the guys has gotten his rocks off, the circle around you has mostly disbanded, most guys peeling off in singles or twos. Your original horseman stud nevertheless stays with you until the end, giving you a hand to help you stand up before guiding you to the communal showers. 'That was amazing! I think you may just be our new favourite visitor in the barracks,' he says and gives you a playful swat on the ass, then leaves you to clean up under the spray of clean water. A few minutes later, he returns with a large towel and the small pile of your clothes and gear, setting it all down on a dressing bench. The horseman then takes position against a nearby wall, casually watching you dry off and get dressed, clearly enjoying the show.";
-	decrease thirst of player by 30;
-	if thirst of player < 0:
-		now thirst of player is 0;
-	decrease hunger of player by 30;
-	if hunger of player < 0:
-		now hunger of player is 0;
+	PlayerDrink 30;
+	PlayerEat 30;
 
 to say Farmhand HorsemenSex2: [Gangbang - Ass and Mouth]
 	say "     As you say out loud that you want to take some big, equine cocks, the horseman gives a satisfied whinny and draws you close for a kiss right on the lips. Then his strong hands start to strip you of your clothes and gear, dropping them messily on the nearest bunk bed as piece by piece is pulled off. The fact that the two of you get going right in the middle of the barracks immediately draws everyone's attention, with farm workers who had been lounging around, playing cards or eating quickly getting up and gravitating towards you and your stud. He gropes your soon completely naked body, grunting in rising lust. As you are pressed against his front while he touches you all over, you can smell his attractive scent - the masculine aroma of a stud in his prime, underlain with hints of straw and a little honest sweat.";
@@ -162,12 +158,8 @@ to say Farmhand HorsemenSex2: [Gangbang - Ass and Mouth]
 	infect "Horseman";
 	infect "Zebra";
 	infect "Horseman";
-	decrease thirst of player by 30;
-	if thirst of player < 0:
-		now thirst of player is 0;
-	decrease hunger of player by 30;
-	if hunger of player < 0:
-		now hunger of player is 0;
+	PlayerDrink 30;
+	PlayerEat 30;
 
 to say Farmhand HorsemenSex3: [Gangbang - Pussy and Mouth]
 	say "     As you say out loud that you want to take some big, equine cocks, the horseman gives a satisfied whinny and draws you close for a kiss right on the lips. Then his strong hands start to strip you of your clothes and gear, dropping them messily on the nearest bunk bed as piece by piece is pulled off. The fact that the two of you get going right in the middle of the barracks immediately draws everyone's attention, with farm workers who had been lounging around, playing cards or eating quickly getting up and gravitating towards you and your stud. He gropes your soon completely naked body, grunting in rising lust. As you are pressed against his front while he touches you all over, you can smell his attractive scent - the masculine aroma of a stud in his prime, underlain with hints of straw and a little honest sweat.";
@@ -199,12 +191,8 @@ to say Farmhand HorsemenSex3: [Gangbang - Pussy and Mouth]
 	infect "Horseman";
 	infect "Zebra";
 	infect "Horseman";
-	decrease thirst of player by 30;
-	if thirst of player < 0:
-		now thirst of player is 0;
-	decrease hunger of player by 30;
-	if hunger of player < 0:
-		now hunger of player is 0;
+	PlayerDrink 30;
+	PlayerEat 30;
 
 to say Farmhand HorsemenSex4: [Shower Fuck]
 	say "     A";

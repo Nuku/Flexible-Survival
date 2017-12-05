@@ -323,7 +323,7 @@ to say eatEasteregg:
 		decrease humanity of player by 3;
 	say ".";
 	increase libido of player by 3;
-	decrease hunger of player by 6;
+	PlayerEat 6;
 
 the scent of Easter egg is "The candy and chocolate egg smells appealingly sweet.".
 

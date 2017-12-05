@@ -175,8 +175,7 @@ the usedesc of mammoth jerky is "[mammoth jerky use]";
 
 to say mammoth jerky use:
 	say "Taking the mammoth jerky in hand, you start gnawing on it. It's pretty chewy - as dried meat is prone to be - and could use some seasoning or salt. Nevertheless, it has a certain primitive charme and you can't stop eating till the first strip is gone, then immediately start on the next. All in all you end up sated and feel like you just connected with your pre-historic ancestors.";
-	decrease hunger of player by 20;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 20;
 	infect "Homo Sapiens";
 
 Section 4 - Endings

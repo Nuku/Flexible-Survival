@@ -434,8 +434,7 @@ to say sexwithDrMoffatt:
 
 
 to say thirstdecrease:
-	decrease thirst of player by 10;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerDrink 10;
 
 
 Section 4 - Active Effects

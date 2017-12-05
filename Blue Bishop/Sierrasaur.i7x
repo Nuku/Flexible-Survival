@@ -390,12 +390,10 @@ to sierrasex:
 		say "     After that, it pulls away, slowly stepping back and letting you depart. It just... Stands there, and only watches you passively as you get up and step away, strangely indifferent to your departure as you gather your things and leave.";
 	else:
 		say "     Pulling back away from you, it's clearly set on consuming you once more[if HP of player < 1]. You try to fight back, but you're still too weak and exhausted to really do anything, and as such the creature entirely ignores you protests[else if sierrapure is true], your infection compelling a jovial regard at the thought being brought back into your room again[else], that familiar, gaping abyss exposed to you[end if] before his maw gently wraps around your [bodytype of player] form. Shoving you gradually back down the slick hole, each successive, ponderous gulp sucks you into these unyielding confines until you're forced to reconvene with your [if humanity of player < 51]new home[else]twisted prison[end if].";
-		decrease hunger of player by 3; [Effect is doubled for abducted players]
-		decrease thirst of player by 6;
-	decrease hunger of player by 3;
-	decrease thirst of player by 6;
-	if hunger of player < 0, now hunger of player is 0;
-	if thirst of player < 0, now thirst of player is 0;
+		PlayerEat 3; [Effect is doubled for abducted players]
+		PlayerDrink 6;
+	PlayerEat 3;
+	PlayerDrink 6;
 
 to say beathesierra:
 	say "     After struggling with the beast for a while, it disengages from you entirely. Looking it over, it doesn't seem you've put a dent into it, but it does at least appear to have conceded to your will. If you step closer to it, its demeanour is mildly sheepish, inferring a slight submissive gesture from the otherwise indifferent-appearing creature. Matter resolved, you choose to depart."; [Victory sex NYI]
@@ -480,10 +478,8 @@ to say usesierraseed:		[only alters sizes, not gender]
 	else:
 		now sex entry is "Both";
 	say "     Downing the vial of thick seed, you feel mildly rejuvenated, though your body churns with the strains lingering influence.";
-	decrease hunger of player by 2;
-	if hunger of player < 0, now hunger of player is 0;
-	decrease thirst of player by 4;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerEat 2;
+	PlayerDrink 4;
 	increase libido of player by 1;
 
 Section 4 - Endings

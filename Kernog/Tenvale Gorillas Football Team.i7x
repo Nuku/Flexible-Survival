@@ -23,8 +23,8 @@ TryoutScore is a number that varies.
 A person can be a laundry sniffer.
 
 to say FootballTryouts:
-	say "     'Hey, you arrive just in time,' Roman tells you, a smile on his face. So, [bold type]ready to start the tryouts? Be careful, since we only got so much candidacies, you can only pass them once.[roman type]";
-	say "     ([link]Y[as]y[end link]) - You're as ready as one can be..";
+	say "     'Hey, you arrive just in time,' Roman tells you, a smile on his face. So, [bold type]ready to start the tryouts? Be careful, since we only got so much candidacies, you can only pass them once.[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - You're as ready as one can be.";
 	say "     ([link]N[as]n[end link]) - You do not feel ready yet for taking the test. You'd rather try another time, when you're in better shape.";
 	if player consents: [do the tryout]
 		now TryoutScore is 1;
@@ -171,7 +171,7 @@ to say GorillaWaterService:
 	LineBreak;
 	say "     [bold type]Which group should you [roman type][line break]";
 	say "     [link](1)[as]1[end link] - A large, bully-looking ape, whose dirty look gives you bad vibes.";
-	say "     [link](2)[as]2[end link] - Two players who look very close to each other and with an air of family";
+	say "     [link](2)[as]2[end link] - Two players who look very close to each other and with an air of family.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 2:
 		say "Choice? (1-2)>[run paragraph on]";
@@ -191,7 +191,7 @@ to say GorillaWaterService:
 	increase GorillasRep by 2;
 
 to say GorillaWater1:
-	say "     'Hey, [if player is male]boy[else]girl[end if]!' the player calls rudely as you walk towards him. Looking at him from head to toe, you notice that his belly and his crotch are covered in residues of cum from the field.  'You think we're on vacation? Faster!' he orders you, even though you are already only a dozen feet away from him. Grunting, he snatches a bottle in your bucket, drink about half of it in one go, then pours the rest on his head, crushing the plastic bottle as he does so. 'Ew. It feels better. Hey, water boy, scratch this off,' he sighs, pointing at his dirty belly.  You try to ignore the primate's uncouth attitude, and, grabbing your hose and your soap bar, you start to wash him. You notice right away that, if his chest is messy, his back is only slightly sweaty, and his butt squeaky clean. You extrapolate easily what kind of person the jock is, and decide to do your job as quickly and fusslessly as possible. But, as you were about to rinse the ape's, black fur, the football player grabs your wrist. 'Oi, oi. Not so quick. [one of] You are new here, aren't you?[or]Haven't seen you much here, have I?[stopping] Wanna have a taste of a champ's cock?'";
+	say "     'Hey, [if player is male]boy[else]girl[end if]!' the player calls rudely as you walk towards him. Looking at him from head to toe, you notice that his belly and his crotch are covered in residues of cum from the field.  'You think we're on vacation? Faster!' he orders you, even though you are already only a dozen feet away from him. Grunting, he snatches a bottle in your bucket, drink about half of it in one go, then pours the rest on his head, crushing the plastic bottle as he does so. 'Ew. It feels better. Hey, water boy, scratch this off,' he sighs, pointing at his dirty belly.  You try to ignore the primate's uncouth attitude, and, grabbing your hose and your soap bar, you start to wash him. You notice right away that, if his chest is messy, his back is only slightly sweaty, and his butt squeaky clean. You extrapolate easily what kind of person the jock is, and decide to do your job as quickly and fusslessly as possible. But, as you were about to rinse the ape's, black fur, the football player grabs your wrist. 'Oi, oi. Not so quick. [one of]You are new here, aren't you?[or]Haven't seen you much here, have I?[stopping] Wanna have a taste of a champ's cock?'";
 	if player is submissive:
 		say "     Your cheeks flush red when you hear the ape's lewd comment. Grinning, you let go of your hose, and let the jock pull you to his lap and force a kiss from your lips. 'I knew it. You little hands are a bunch of horny bitches, after all. Scooping some soap with his hand, he reaches down and runs a finger down your [if cunts of player > 0][Cunt Size Desc of player] slit, before slipping it in, quickly joined by a second. 'It's been days since I got myself some pussy. I'm starting to get tired of the boys' asses,' the jock says before pushing a little further inside of you[else]ass, turning it inside and pressing against your prostate, before a second joins in. 'Nice tight ass. I would have prefered a pussy, but at least, yours'll feel new,' the jock says before pushing a little further inside of you[end if]. The feeling of these big fingers prodding you put you on your toes, and you must bite your lips to prevent a big moan from drawing the attention of the team captain. 'I can feel your muscles squeeze tight around my fingers. What an eager slut you are. Let's get to business then, shall we?' You nod affirmatively and, laughing the jock pulls you closer to him, aligning his manhood with your hole. Then, he lowers you down.";
 		WaitLineBreak;
@@ -225,8 +225,8 @@ to say GorillaWater2:
 [Training scenes]
 to say GorillaTraining:
 	say "     'Okay, champ. [first time]I assigned you a locker, and asked the staff to put a helmet and shoulder-pads in it[only]. Go Gear up and come back here,' Roman instructs you. You jog to the locker-room, and [one of]after a couple of minutes of search while evading the various sex piles spread through the room, you manage to find your locker[or]head towards your locker, while evading the various sex piles spread through the room[stopping]. You put on your gear, and hurry back to Roman with a dozen other players. 'Okay, team. I guess that the others are either coming back at another time, or busy in the locker-room. I will make several groups, as usual. Choose one and have fun.'";
-	say "[bold type]Which group do you want to join?[roman type]";
-	say "     [link](1)[as]1[end link] - Reception and interception";
+	say "[bold type]Which group do you want to join?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Reception and interception.";
 	say "   More options coming soon.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 1:
@@ -240,15 +240,14 @@ to say GorillaTraining:
 		LineBreak;
 		say "[GorillaTraining1]";
 	say "[GorillaTrainingEnd]";
-	decrease thirst of player by 25;
+	PlayerDrink 25;
 	increase GorillasRep by 3;
 
 to say GorillaTraining1:
 	say "     You join the group that practices throws. One of your seniors take the lead, and grabs a ball. 'Okay, one of you goes to throw, another one heads over there for catching, and the others act as defenders,' the experienced footballer explains. 'We will rotate with each throw, so don't worry, everyone will have a turn, so to speak. Burt, Zach, you start.' You go take your own place, [one of]wondering why everyone has to practice throws, and why one at a time[or]smiling as you anticipate what will comes next[stopping].";
-	say "     The senior player gives the signal. Burt throws the ball for Zach as he runs forward, while your group tries to intercept the ball from either. [one of]But you seem to be the only one interested by the ball[or]But your focus is obviously not the ball[stopping]. Their asses are spread open by hungry cocks, and their own package is manhandled by another player. [one of]After a short moment of confusion, you[or]You[stopping] eagerly join the fray. [bold type]Would you rather top, or bottom?[roman type]";
-	LineBreak;
-	say "     ([link]Y[as]y[end link]) - Top";
-	say "     ([link]N[as]n[end link]) - Bottom";
+	say "     The senior player gives the signal. Burt throws the ball for Zach as he runs forward, while your group tries to intercept the ball from either. [one of]But you seem to be the only one interested by the ball[or]But your focus is obviously not the ball[stopping]. Their asses are spread open by hungry cocks, and their own package is manhandled by another player. [one of]After a short moment of confusion, you[or]You[stopping] eagerly join the fray. [bold type]Would you rather top, or bottom?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Top.";
+	say "     ([link]N[as]n[end link]) - Bottom.";
 	if player consents:
 		LineBreak;
 		if cocks of player > 0:
@@ -306,8 +305,8 @@ to say FootballMatchDefense:
 		say "     Not to be outdone, you give the wolf's knot a hearty stroking, which makes him jolt in surprise and makes him cum quickly. The wolf pumps his hips in the air several times, as he launches rope after rope of cum into your mouth. Once he is done, you take your time [if cunts of player > 0]grinding your pussy against his submissive face[else]pumping your cock in and out of his submissive mouth[end if], before reaching your own climax";
 		say "     After taking a minute to rest, you stand back up, and help your opponent do the same. Fair-play, he congratulates you, while licking your sexual fluids from his chops. Turning around, you notice that everyone, from the other players to the crowd, have been watching the two of you; some had already begun to masturbate from your little show. Blushing, you take your position, as the referee announces that your team goes on offense, thanks to your interception.";
 		decrease libido of player by 20;
-		decrease hunger of player by 10;
-		decrease thirst of player by 5;
+		PlayerEat 10;
+		PlayerDrink 5;
 	else:
 		say "     You run the best you can, but the wolf is already far away, and has the time to receive the ball safely. Fortunately, your side's safety blindsides the Fourmont player, preventing this from turning into a touchdown. You watch as your gorilla teammate pins the wolf under him for some victory-sex while you chastise yourself for your lack of performance. You go fetch some water, while the Tenvale safety fucks the Fourmont receiver doggystyle, under the applause of the crowd, and replaces yourself on your line for the next down.";
 		say "     By luck, the next downs are either intercepted, or fumbled by the Wolves, and your team eventually switches to the offense.";
@@ -340,8 +339,8 @@ to say FootballMatchOffense:
 		say "     Their lust satiated, they stand there while their knot half-deflates, and pull out. You yelp at the feeling of having the thick knots stretch you once more, and start protesting, as they did not even have the fairness to make you cum too.";
 		say "     But the wolves are already jogging away from you on their furry legs. Grunting, you stand up too with the help of your teammates. 'Acting as jerks, as usual,' you can hear one of them lament.";
 		increase libido of player by 50;
-		decrease hunger of player by 5;
-		decrease thirst of player by 5;
+		PlayerEat 5;
+		PlayerDrink 5;
 	say "     After this first down, your team progress little by little, but eventually spends all of its attempts, only to get twenty yards away from the Wolves' goal.";
 
 to say FootballMatchEnd:

@@ -23,6 +23,7 @@ Figure of Bobcat2_icon is the file "FS-bobbibob2rs.jpg".
 Figure of Bottlenose_icon is the file "FS_BottlenoseToy.jpg".
 Figure of Bovine_F_icon is the file "FS_Bovine_F.jpg".
 Figure of BunnyJock_icon is the file "Bunny Jock.jpg".
+Figure of Cerberus_icon is the file "Cerberus.jpg".
 Figure of ChocoLab_icon is the file "ChocoLab_ig.jpg".
 Figure of SSCollie_icon is the file "FSTF_SSCollie_ig.jpg".
 Figure of Cougar_icon is the file "Cougar_ig.jpg".
@@ -63,7 +64,7 @@ Figure of LatexErminePink_icon is the file "FSTF_LatexErminePink_ig.jpg".
 Figure of LatexErmineRed_icon is the file "FSTF_LatexErmineRed_ig.jpg".
 Figure of LatexErmineTeal_icon is the file "FSTF_LatexErmineTeal_ig.jpg".
 Figure of LatexVixen_icon is the file "FS_LatexVixen.jpg".
-Figure of Mammoth_icon is the file "Mammoth_ig.png".
+Figure of Mammoth_icon is the file "Mammoth_ig.jpg".
 Figure of Mannequin_icon is the file "Mannequin.jpg".
 Figure of Megakitty_icon is the file "Megakitty_ig.jpg".
 Figure of MentalMice_icon is the file "FS_MentalMice.jpg".
@@ -91,7 +92,7 @@ Figure of SpartanHelot_naked_icon is the file "SpartanHelot_naked.jpg".
 Figure of Spartan_icon is the file "Spartan.jpg".
 Figure of Succubus_clothed_icon is the file "Succubus_clothed.jpg".
 Figure of ThoughtEater_icon is the file "ThoughtEater.jpg".
-Figure of TigressHooker_icon is the file "tigresshooker_ig.png".
+Figure of TigressHooker_icon is the file "tigresshooker_ig.jpg".
 Figure of Triceratops_icon is the file "triceratops_ig.jpg".
 Figure of VixenNurse_icon is the file "VixenNurse_ig.jpg".
 Figure of Vixentaur_icon is the file "vixentaur_ig.jpg".
@@ -125,6 +126,7 @@ Figure of Boghrim_clothed_icon is the file "Boghrim_clothed.jpg".
 Figure of Boghrim_naked_icon is the file "Boghrim_naked.jpg".
 Figure of Boghrim_face_icon is the file "Boghrim_face.jpg".
 Figure of Bradford_icon is the file "Bradford_ig.jpg".
+Figure of Brennan_face_icon is the file "Brennan_face.jpg".
 Figure of Brooke_icon is the file "Brooke.jpg".
 Figure of Brian_icon is the file "Brian_ig.jpg".
 Figure of Buster_icon is the file "Buster_ig.jpg".
@@ -183,7 +185,7 @@ Figure of Fancy_icon is the file "FSTF_Fancy_ig.jpg".
 Figure of Felix_icon is the file "Felix.jpg".
 Figure of Felix_face_icon is the file "Felix_face.jpg".
 Figure of Francois_icon is the file "Francois_ig.jpg".
-Figure of Frank_icon is the file "Frank_paw_ig.png".
+Figure of Frank_icon is the file "Frank_paw_ig.jpg".
 Figure of Gabriel_icon is the file "Gabriel.jpg".
 Figure of Garrett_icon is the file "garrett_ig.jpg".
 Figure of Gillian_icon is the file "Gillian_ig.jpg".
@@ -253,7 +255,7 @@ Figure of Septus_face_icon is the file "Septus_face.jpg".
 Figure of SgtMarks_icon is the file "sgtmarks_ig.jpg".
 Figure of Sidney_wusky_Icon is the file "Sidney_wusky.jpg".
 Figure of Sidney_vixen_Icon is the file "Sidney_vixen.jpg".
-Figure of Sidney_clothed_Icon is the file "Sidney_otteress.png".
+Figure of Sidney_clothed_Icon is the file "Sidney_otteress.jpg".
 Figure of Sonny_halfwool_jeans_icon is the file "Sonny_halfwool_jeans.jpg".
 Figure of Sonny_halfwool_nude_icon is the file "Sonny_halfwool_nude.jpg".
 Figure of Sonny_shaved_jeans_icon is the file "Sonny_shaved_jeans.jpg".
@@ -286,14 +288,18 @@ Figure of DukeShawnFuck_icon is the file "Duke&Shawn.jpg".	[Shawn topping Duke s
 Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg".	[The Down Under Pub's floor show.]
 Figure of EricRidingRane_icon is the file "Rane&Eric3.jpg".   [make-up sex]
 Figure of Eric_Urik_naked_icon is the file "Eric_Urik_naked.jpg".
+Figure of Boy_To_Fox_Shampoo1_icon is the file "Boy_To_Fox_Shampoo1.jpg".
+Figure of Boy_To_Fox_Shampoo2_icon is the file "Boy_To_Fox_Shampoo2.jpg".
 Figure of Fang_Candy_icon is the file "Fang_Candy_ig.jpg".	[Fang topping Candy scene.]
-Figure of Mammoth_CV1_icon is the file "Mammoth_CV_1_ig.png".	[Mammoth cock-vore scene 1.]
-Figure of Mammoth_CV2_icon is the file "Mammoth_CV_2_ig.png".	[Mammoth cock-vore scene 2.]
-Figure of Mammoth_CV3_icon is the file "Mammoth_CV_3_ig.png".	[Mammoth cock-vore scene 3.]
-Figure of Mammoth_CV4_icon is the file "Mammoth_CV_4_ig.png".	[Mammoth cock-vore scene 4.]
-Figure of Mammoth_CV5_icon is the file "Mammoth_CV_5_ig.png".	[Mammoth cock-vore scene 5.]
+Figure of Mammoth_CV1_icon is the file "Mammoth_CV_1_ig.jpg".	[Mammoth cock-vore scene 1.]
+Figure of Mammoth_CV2_icon is the file "Mammoth_CV_2_ig.jpg".	[Mammoth cock-vore scene 2.]
+Figure of Mammoth_CV3_icon is the file "Mammoth_CV_3_ig.jpg".	[Mammoth cock-vore scene 3.]
+Figure of Mammoth_CV4_icon is the file "Mammoth_CV_4_ig.jpg".	[Mammoth cock-vore scene 4.]
+Figure of Mammoth_CV5_icon is the file "Mammoth_CV_5_ig.jpg".	[Mammoth cock-vore scene 5.]
 Figure of Mammoth_CVF_icon is the file "Mammoth_CV_F_ig.jpg".	[Mammoth pure succumb ending - bonus CV pic.]
+Figure of Parasol_Nap_icon is the file "Parasol_Nap.jpg". [female canine lying on the beach]
 Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".			[Sam's Bad End to assault and infection.]
+Figure of Shy_Vixen_icon is the file "Shy_Vixen.jpg".
 Figure of SkunkbeastLord_icon is the file "SkunkbeastLord_ig.jpg".		[Skunkbeast Lord battle.]
 Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".   [mid-sex scene graphic.]
 Figure of Talov_Kerr_Barrel_icon is the file "Talov_Kerr_Barrel.jpg".   [satyrs with barrel]
@@ -305,8 +311,8 @@ Figure of RaneSavingEric_icon is the file "Rane&Eric2.jpg".   [after the Hellhou
 Figure of Map_Smith_Haven_Mall_icon is the file "Map_Mall.jpg".
 
 [emap - special]
-Figure of emap_special_loading_icon is the file "emap_special_loading.png".
 Figure of emap_special_signalnotfound_icon is the file "emap_special_signalnotfound.png".
+Figure of emap_special_shutdown_icon is the file "emap_special_shutdown.png".
 
 [emap - mall]
 Figure of emap_mall_alley_icon is the file "emap_mall_alley.png".
@@ -318,6 +324,8 @@ Figure of emap_mall_christmasvillage_icon is the file "emap_mall_christmasvillag
 Figure of emap_mall_eastwing_icon is the file "emap_mall_eastwing.png".
 Figure of emap_mall_foodcourt_icon is the file "emap_mall_foodcourt.png".
 Figure of emap_mall_foyer_icon is the file "emap_mall_foyer.png".
+Figure of emap_mall_gamestore_icon is the file "emap_mall_gamestore.png".
+Figure of emap_mall_garage_icon is the file "emap_mall_garage.png".
 Figure of emap_mall_guardpost_icon is the file "emap_mall_guardpost.png".
 Figure of emap_mall_lockers_icon is the file "emap_mall_lockers.png".
 Figure of emap_mall_loteast_icon is the file "emap_mall_loteast.png".
@@ -475,7 +483,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Boghrim_face"	Figure of Boghrim_face_icon	"Kupo Klein"	g-black	"normal"
 "Bottlenose Toy_Human"	Figure of Bottlenose_icon	"Anymouse1968"	g-black	"normal"	[only shown for humanoid version]
 "Bovine_F"	Figure of Bovine_F_icon	""	g-black	"normal"	[only shown for female version]
+"Boy_To_Fox_Shampoo1"	Figure of Boy_To_Fox_Shampoo1_icon	"Watsup"	g-white	"normal"
+"Boy_To_Fox_Shampoo2"	Figure of Boy_To_Fox_Shampoo2_icon	"Watsup"	g-white	"normal"
 "Bradford"	Figure of Bradford_icon	"Anymouse1968"	g-black	"normal"
+"Brennan"	Figure of Brennan_face_icon	"Sinealas"	g-black	"normal"
 "Brooke"	Figure of Brooke_icon	"Otterbits"	g-black	"normal"
 "Brian"	Figure of Brian_icon	"dhstein"	g-black	"normal"
 "BrutusGood"	Figure of BrutusGood_icon	"Inkydemon"	g-black	"normal"
@@ -495,6 +506,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Carl_Eric_sofa_fuck_3"	Figure of Carl_Eric_sofa_fuck_3_icon	"Lyttathebug"	g-black	"normal"
 "Carl_Eric_sofa_fuck_4"	Figure of Carl_Eric_sofa_fuck_4_icon	"Lyttathebug"	g-black	"normal"
 "Catgirl"	Figure of Fiona_icon	"Valen"	g-black	"normal"
+"Cerberus"	Figure of Cerberus_icon	"Anonymous"	g-white	"normal"
 "Chocolate Lab"	Figure of ChocoLab_icon	"SparklePens"	g-black	"normal"
 "Chris_clothed"	Figure of Chris_clothed_icon	"Kupo Klein"	g-black	"normal"
 "Chris_naked"	Figure of Chris_naked_icon	"Kupo Klein"	g-black	"normal"
@@ -636,6 +648,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Orc Breeder"	Figure of OrcBreeder_random_icon	"Gene Lightfoot"	g-black	"normal"
 "Orc Warrior"	Figure of OrcWarrior_random_icon	"Gene Lightfoot"	g-black	"normal"
 "Orthas"	Figure of Orthas_icon	"The_Negative"	g-black	"normal"
+"Parasol_Nap"	Figure of Parasol_Nap_icon	"Watsup"	g-white	"normal"
 "Paula"	Figure of Paula_icon	"Kikeri-arts"	g-black	"normal"
 "Plush Lion"	Figure of PlushLion_icon	"Anymouse1968"	g-black	"normal"
 "Pink Gel"	Figure of PinkGel_icon	"Rastear"	g-black	"normal"
@@ -661,6 +674,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "SgtMarks"	Figure of SgtMarks_icon	"Anyare"	g-black	"normal"
 "Shadow Beast"	Figure of ShadowBeast_icon	"Hioshiru"	g-black	"normal"
 "Shemale Smooth Collie"	Figure of SSCollie_icon	"Anymouse1968"	g-black	"normal"
+"Shy_vixen"	Figure of Shy_Vixen_icon	"Watsup"	g-white	"normal"
 "Siamese Cat"	Figure of SiameseCat_icon	"RedCoatCat"	g-black	"normal"
 "Sidney_wusky"	Figure of Sidney_wusky_Icon	"Anymouse1968"	g-black	"normal"
 "Sidney_vixen"	Figure of Sidney_vixen_Icon	"Anymouse1968"	g-black	"normal"
@@ -704,29 +718,31 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Zebra"	Figure of Zebra_icon	"Purplepardus"	g-black	"normal"
 "Zigor"	Figure of Zigor_icon	"AugurMew"	g-black	"normal"
 [emap - special]
-"Navigation - Loading Screen"	Figure of emap_special_loading_icon	"executaball"	g-white	"normal"
-"Navigation - Signal Lost Screen"	Figure of emap_special_signalnotfound_icon	"executaball"	g-white	"normal"
+"Navigation - Signal Lost Screen"	Figure of emap_special_signalnotfound_icon	"executaball"	g-black	"normal"
+"Navigation - Shutdown Screen"	Figure of emap_special_shutdown_icon	"executaball"	g-black	"normal"
 [emap - mall]
-"Navigation - Mall - Alley"	Figure of emap_mall_alley_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Atrium"	Figure of emap_mall_atrium_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Bodyshop"	Figure of emap_mall_bodyshop_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Branson & Partner"	Figure of emap_mall_bransonpartner_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Brookstone Books"	Figure of emap_mall_brookstonebooks_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Christmas Village"	Figure of emap_mall_christmasvillage_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - East Wing"	Figure of emap_mall_eastwing_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - FoodCourt"	Figure of emap_mall_foodcourt_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Foyer"	Figure of emap_mall_foyer_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Guardpost"	Figure of emap_mall_guardpost_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Lockers"	Figure of emap_mall_lockers_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Lot East"	Figure of emap_mall_loteast_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Lot North"	Figure of emap_mall_lotnorth_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Lot South"	Figure of emap_mall_lotsouth_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Lot West"	Figure of emap_mall_lotwest_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Nermine's"	Figure of emap_mall_nermines_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - PK Boutique"	Figure of emap_mall_pkboutique_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - Restrooms"	Figure of emap_mall_restrooms_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - ShagShack"	Figure of emap_mall_shagshack_icon	"executaball"	g-white	"normal"
-"Navigation - Mall - West Wing"	Figure of emap_mall_westwing_icon	"executaball"	g-white	"normal"
+"Navigation - Mall - Alley"	Figure of emap_mall_alley_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Atrium"	Figure of emap_mall_atrium_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Bodyshop"	Figure of emap_mall_bodyshop_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Branson & Partner"	Figure of emap_mall_bransonpartner_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Brookstone Books"	Figure of emap_mall_brookstonebooks_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Christmas Village"	Figure of emap_mall_christmasvillage_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - East Wing"	Figure of emap_mall_eastwing_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - FoodCourt"	Figure of emap_mall_foodcourt_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Foyer"	Figure of emap_mall_foyer_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Game Store"	Figure of emap_mall_gamestore_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Garage"	Figure of emap_mall_garage_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Guardpost"	Figure of emap_mall_guardpost_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Lockers"	Figure of emap_mall_lockers_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Lot East"	Figure of emap_mall_loteast_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Lot North"	Figure of emap_mall_lotnorth_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Lot South"	Figure of emap_mall_lotsouth_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Lot West"	Figure of emap_mall_lotwest_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Nermine's"	Figure of emap_mall_nermines_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - PK Boutique"	Figure of emap_mall_pkboutique_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Restrooms"	Figure of emap_mall_restrooms_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - ShagShack"	Figure of emap_mall_shagshack_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - West Wing"	Figure of emap_mall_westwing_icon	"executaball"	g-black	"normal"
 
 artistcredits is an action applying to nothing.
 
@@ -752,6 +768,7 @@ carry out artistcredits:
 	say "     Bottlenose Toy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Catgirl by Valen @ ?[line break]";
 	say "     Cat Ninja (female) by Bix707 @ furaffinity.net[line break]";
+	say "     Cerberus by Anonymous[line break]";
 	say "     Chocolate Lab by SparklePens @ furaffinity.net[line break]";
 	say "     Cougar by catnamedfish @ furaffinity.net[line break]";
 	say "     Dark Elf by Nokturnalkittie @ https://www.furaffinity.net/user/nokturnalkittie/[line break]";
@@ -834,6 +851,7 @@ carry out artistcredits:
 	say "     Blot by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Boghrim by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Bradford by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Brennan by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Brian by dhstein @ furaffinity.net[line break]";
 	say "     Brooke by Otterbits @ https://www.furaffinity.net/user/otterbits/[line break]";
 	say "     Brutus by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
@@ -923,6 +941,7 @@ carry out artistcredits:
 	say "Scenes:[line break]";
 	say "     Bottlenose Trapped by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Brutus & David by Rocketman @ http://rocketmenstudio.tumblr.com/[line break]";
+	say "     Boy to Fox Shampoo by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Christy (tourist ending) by maxblackrabbit @ furaffinity.net[line break]";
 	say "     Corbin & Felinoid by ValdericBlackstag @ https://www.furaffinity.net/user/valdericblackstag/[line break]";
 	say "     Duke & Shawn by Hufnaar @ furaffinity.net[line break]";
@@ -930,8 +949,10 @@ carry out artistcredits:
 	say "     Floor Show by MoT @ furaffinity.net[line break]";
 	say "     Mammoth Cock Vore Sequence by Boo3 @ furaffinity.net[line break]";
 	say "     Mammoth Pure Succumb by Boo3 @ furaffinity.net[line break]";
+	say "     Parasol Nap by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Rane & Eric Scenes by Lyttathebug @ deviantart.com[line break]";
 	say "     Sam's Bad End by The_Negative @ furaffinity.net[line break]";
+	say "     Shy Vixen by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Skunkbeast Lord Battle by MoT @ furaffinity.net[line break]";
 	say "     Spidertaur by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Talov & Kerr by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
@@ -958,7 +979,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version, unfinished.]
-	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Sharei", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Wemd", "Xenotropos"};
+	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Sharei", "Sinealas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;

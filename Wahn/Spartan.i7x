@@ -382,8 +382,7 @@ the usedesc of pita bread is "[pita bread use]";
 
 to say pita bread use:
 	say "Taking the bread into your hands, you bite into it and... it's really good. Bread, salad, sauce - and the meat is even still warm. Something tells you that it has to be packed with nanites through and through to keep it in this state, but you don't really care at the moment as you devour the tasty treat...";
-	decrease hunger of player by 15;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 15;
 
 pita bread is infectious. The strain of pita bread is "Spartan".
 

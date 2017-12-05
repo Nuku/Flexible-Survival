@@ -127,8 +127,7 @@ Carry out Marefeeding:
 		say "     You wander over to the table filled with food for the mares again, only to see several of the mares shooting you rather dirty looks as you look over the food. Sighing slightly, you decide that being greedy about the food isn't worth annoying the so far polite horsewomen, and decide to try to snag some of the food again at a later time.";
 	else:
 		say "     Wandering over to the table filled with food on the side of the room, you notice several of the mares seem quite amused as you browse the selection, several of them coming over to help. The mares select several different bits of food for you to try, all the while they are giggling to themselves as you enjoy the strangely flavorful food selections. By the time the mares let you go after you have sampled at least a bite or two of most of the dishes set out on the table, you are definitely starting to feel a bit strange yourself, and definitely horny from all the attention the mares have been giving you.";
-		decrease hunger of player by 10;
-		if hunger of player < 0, now hunger of player is 0;
+		PlayerEat 10;
 		infect "Mareslut";
 		increase libido of player by 20;
 		if libido of player > 100, now libido of player is 100;

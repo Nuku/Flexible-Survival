@@ -250,8 +250,7 @@ The usedesc of sticky sushi is "[eatstickysushi]";
 
 to say eatstickysushi:
 	say "     Deciding to risk eating the sushi despite how old it probably is, you tentatively pop a piece into your mouth. Finding it quite tasty, if having a somewhat odd flavour, you rapidly consume the rest of the tray. It feels good to eat something, though there's an odd rumbling noise in your tummy that makes you giggle cutely.";
-	decrease hunger of player by 8;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 8;
 
 
 Section 5 - Endings
