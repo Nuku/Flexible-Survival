@@ -77,7 +77,7 @@ Instead of resolving Shark Warrior:
 			say "     The fish-guy lets out a vocal 'Yes!' before he practically jumps atop you, pressing his hard body against yours. His skin gets your clothes wet, making them stick a bit to his body, but you can also feel his hard pecs and abs through the fabric. His elongated muzzle finds your own, tilting to adjust for its altered shape as he catches your mouth in a lustful kiss. Surprisingly enough, his teeth aren't as prominent as you expected, and you even end up seeking them out with your tongue to convince yourself that they are truly there. All the while, the eager fish-man begins to peel off your clothes, tugging off each layer with increasing impatience as you kiss. 'Alright, pal. How about we skip to the good stuff? I've got some nice cocks that need some attention, too.' You sneak a peek towards his uncovered groin. He's sporting two pointed, glistening erections, each throbbing hard against your thighs.";
 			[say "     How would you like to pleasure the big guy?";]
 			if cocks of player > 0:
-				say "     Do you want to [link]suck him off (0)[as]1[end link], [link]fuck him (1)[as]2[end link] or [link]ride him(2)[as]2[end link]?";
+				say "     Do you want to [link]suck him off (0)[as]0[end link], [link]fuck him (1)[as]1[end link] or [link]ride him(2)[as]2[end link]?";
 				now calcnumber is -1;
 				while calcnumber < 0 or calcnumber > 2:
 					say "Choice? (0-2)>";
@@ -189,7 +189,7 @@ To say Tiger Shark loses:
 		say "[TSWSexSelection]";
 	else:
 		say "     REMOVE ME";
-		
+
 to say TSWSexSelection:	[The Sex menu that shows up]
 	LineBreak;
 	now sextablerun is 0;
@@ -244,7 +244,7 @@ to say TSWSexSelection:	[The Sex menu that shows up]
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-	
+
 Section 3 - Dominant Sex Scenes
 
 To say tsw_oral:
@@ -299,7 +299,7 @@ To say tsw_ride:
 			impregchance;
 		else:
 			mimpregchance;
-		
+
 Section 4 - Monster Insertion
 
 Table of random critters (continued)
@@ -354,16 +354,16 @@ When Play begins:
 	now non-infectious entry is true;
 	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
-	
+
 when play ends:
 	if bodyname of player is "Tiger Shark":
 		if humanity of player < 10:
 			say "     REMOVE ME";
 		else:
 			say "     REMOVE ME";
-			
+
 Section 5 - Items
-	
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "Devil's Purse"	"A black casing resembling the egg capsule of a shark. It's empty but it still seems warm despite its slippery touch."	1	Devil's Purse
@@ -380,7 +380,7 @@ to say DevilsPurseUsing:
 
 instead of sniffing Devil's Purse:
 	say "Like any remains you'd pick up on the beach, the egg shell smells like fish and of the sea. It's not entirely unpleasant.";
-	
+
 Teeth Necklace is equipment.
 It is not temporary.
 The AC of Teeth Necklace is 12.
