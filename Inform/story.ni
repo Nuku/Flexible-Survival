@@ -267,6 +267,7 @@ NewGraphics is a truth state that varies. NewGraphics is usually true.
 NewGraphicsInteger is a number that varies. NewGraphicsInteger is usually 2.
 NewGraphicsDebugMode is a truth state that varies. NewGraphicsDebugMode is usually false.
 NewGraphicsRatio is a number that varies. NewGraphicsRatio is usually 30.
+NewGraphicsOpened is a truth state that varies. NewGraphicsOpened is usually false. [set to true for entire playthrough if graphics window opened - unless inline/disabled specified at start]
 [For use with new safe restore]
 RestoreMode is a truth state that varies. RestoreMode is usually false.
 
@@ -6600,3 +6601,4 @@ When play begins (this is the graphics window construction rule):
 		[now the graphics window pixel count is 1;]
 		follow the ngraphics_blank rule;
 		follow the current graphics drawing rule;
+		now NewGraphicsOpened is true;
