@@ -37,7 +37,7 @@ DemonFoxRead is a truth state that varies. DemonFoxRead is usually false.
 TentacleRead is a truth state that varies. TentacleRead is usually false.
 TentacleStatus is a number that varies. TentacleStatus is usually 0.
 TomeEventPending is a truth state that varies. TomeEventPending is usually false.
-
+TomeInfluenceTimer is a number that varies. TomeInfluenceTimer is usually 5000.
 
 Section 2 - Menus
 
@@ -248,24 +248,24 @@ Section 5 - Influence system
 an everyturn rule:
 	if carried of ancient tome > 0 and (cocks of player is not 0 and cunts of player is 0) and TomeEventPending is false:
 		if TomeInfluence is 0: [Never tempted by the book]
-			if TomeTimer - turns >= 8 and a random chance of 1 in 3 succeeds:
+			if TomeInfluenceTimer - turns >= 8 and a random chance of 1 in 3 succeeds:
 				say "     As you go about your business, you mind keeps going to the book inside your bag. You can't help but be tempted to pull out the [bold type]ancient tome[roman type], just to see why you're so drawn to it.";
-				now TomeTimer is turns;
+				now TomeInfluenceTimer is turns;
 				now TomeInfluence is 1;
 		else if TomeInfluence is 1: [Tempted by the book once]
-			if TomeTimer - turns >= 8 and a random chance of 1 in 3 succeeds:
+			if TomeInfluenceTimer - turns >= 8 and a random chance of 1 in 3 succeeds:
 				say "     You glance at your bag, a sudden desire to read the [bold type]ancient tome[roman type] entering your mind. Something about the book seems to be calling to you, and you can't help but be just a bit fearful of the thing.";
-				now TomeTimer is turns;
+				now TomeInfluenceTimer is turns;
 				now TomeInfluence is 2;
 		else if TomeInfluence is 2: [Tempted by the book twice]
-			if TomeTimer - turns >= 8 and a random chance of 1 in 3 succeeds:
+			if TomeInfluenceTimer - turns >= 8 and a random chance of 1 in 3 succeeds:
 				say "     You blink, suddenly aware that your hand is reaching into your bag, seemingly on its own accord. Wondering what could possibly be going on, you grab the first thing you touch and pull it out. It just so happens to be the [bold type]ancient tome[roman type]! You glance over its leather cover, running your fingers across its surface for a second before you flip the cover open, going to a random page. Much to your amazement, you can actually read the words there! [bold type]Perhaps you could give it a read, now that you can actually do so?[roman type]";
-				now TomeTimer is turns;
+				now TomeInfluenceTimer is turns;
 				now TomeInfluence is 3;
 		else if TomeInfluence is 3: [Tempted fully]
-			if TomeTimer - turns >= 8:
+			if TomeInfluenceTimer - turns >= 8:
 				say "     You can't help but feel drawn to the book inside your bag. The [bold type]ancient tome[roman type] really seems like it wants you to [if TomeInteractions is 0]read it, now that you finally can[else]read it once more[end if].";
-				now TomeTimer is turns;
+				now TomeInfluenceTimer is turns;
 	if DemonFoxRead is true and DemonFoxInteractions is 0 and (cocks of player is not 0 and cunts of player is 0) and TomeTimer - turns >= 4 and daytimer is night:
 		say "[DemonFoxFirstEncounter]";
 	if TentacleRead is true and TentacleInteractions is 0 and (cocks of player is not 0 and cunts of player is 0) and TomeTimer - turns >= 8 and (a random chance of 1 in 3 succeeds) or (TomeTimer - turns >= 11):
