@@ -77,19 +77,50 @@ Section 4 - User Commands
 graphicmoding is an action applying to nothing.
 understand "graphics" as graphicmoding.
 carry out graphicmoding:
-	if NewGraphics is true:
-		clear the screen;
-		say "[bold type]Graphics Settings Unavailable:[roman type][line break]";
-		say "You are running the new graphics side window :3 ! If you would like to disable the new graphics display (revert to inline graphics or disable completely), simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. You will then be prompted for graphic modifications.[line break]";
-		say "We apologize for this inconvenience, this is a technical limitation of Inform.[line break]";
-		WaitLineBreak;
+	if NewGraphicsOpened is true:
+		follow the ngraphics_blank rule;
+		now calcnumber is -1;
+		let trixieexit be 0;
+		while trixieexit is 0:
+			clear the screen;
+			say "[bold type]Graphics Settings:[roman type][line break]";
+			say "Please note that the graphics side window will remain on screen despite any of these settings! If you are bothered by the blank space, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. Selecting 'INLINE ONLY' or 'OFF' will no longer generate a side window.[line break]";
+			say "We apologize for this inconvenience, this is a technical limitation of Inform.[line break]";
+			say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 2]Side-Window Graphics[else if NewGraphicsInteger is 1]Inline Mode[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
+			say "(2) [link]EXIT[as]2[end link][line break]";
+			while 1 is 1:
+				say "(1-2)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2:
+					break;
+				else:
+					say "Invalid Entry";
+				if calcnumber is:
+					-- 1:
+						if NewGraphicsInteger is 2:
+							now graphics is true;
+							now NewGraphicsInteger is 1;
+							now NewGraphics is false;
+						else if NewGraphicsInteger is 1:
+							now graphics is false;
+							now NewGraphicsInteger is 0;
+							now NewGraphics is false;
+						else if NewGraphicsInteger is 0:
+							now graphics is true;
+							now NewGraphicsInteger is 2;
+							now NewGraphics is true;
+					-- 2:
+						say "Exit graphics menu?";
+						if player consents:
+							now trixieexit is 1;
+
 	else:
 		now calcnumber is -1;
 		let trixieexit be 0;
 		while trixieexit is 0:
 			clear the screen;
 			say "[bold type]Graphic Settings:[roman type][line break]";
-			say "NOTE: You are running the old in-line graphics only mode. To enable the new side-window graphics, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. You will then be prompted for graphic modifications.[line break]";
+			say "NOTE: The graphics window has not been opened yet. To enable the new side-window graphics, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. You will then be prompted for graphic modifications.[line break]";
 			say "We apologize for this inconvenience, this is a technical limitation of Inform.[line break]";
 			say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 1]Inline Mode[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
 			say "(2) [link]EXIT[as]2[end link][line break]";
