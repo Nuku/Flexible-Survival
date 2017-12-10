@@ -33,7 +33,6 @@ Use Scoring.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 64.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -5056,6 +5055,7 @@ Include Underwater Zone For Fs by Hellerhound.
 Include Urban Forest For Fs by Stripes.
 Include Zephyr Inc by Nuku Valente.
 Include Zoo by Hellerhound.
+Include Zoo by Wahn.
 
 [Quests & Events]
 Include AG Beach Events by Aureas Gigas.
@@ -5995,7 +5995,6 @@ To regularstart: [normal start method]
 		say "(14) [link]Hyperlinks[as]14[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
 		say "(15) [link]Waiting for Input[as]15[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(16) [link]Screen Clearing[as]16[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
-		say "(17) [link]Graphics[as]17[end link] - [bold type][if NewGraphicsInteger is 1]Inline[else if NewGraphicsInteger is 2]Side-Window[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
 		say "(18) [link]Inventory Columns[as]18[end link] - [bold type][invcolumns][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Restore a save[as]99[end link][line break]";
