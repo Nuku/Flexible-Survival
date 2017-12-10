@@ -113,7 +113,6 @@ carry out graphicmoding:
 						say "Exit graphics menu?";
 						if player consents:
 							now trixieexit is 1;
-
 	else:
 		now calcnumber is -1;
 		let trixieexit be 0;
