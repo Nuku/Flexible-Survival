@@ -33,6 +33,7 @@ Use Scoring.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
+The release number is 63.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -266,7 +267,6 @@ NewGraphics is a truth state that varies. NewGraphics is usually true.
 NewGraphicsInteger is a number that varies. NewGraphicsInteger is usually 2.
 NewGraphicsDebugMode is a truth state that varies. NewGraphicsDebugMode is usually false.
 NewGraphicsRatio is a number that varies. NewGraphicsRatio is usually 30.
-NewGraphicsOpened is a truth state that varies. NewGraphicsOpened is usually false. [set to true for entire playthrough if graphics window opened - unless inline/disabled specified at start]
 [For use with new safe restore]
 RestoreMode is a truth state that varies. RestoreMode is usually false.
 
@@ -5054,7 +5054,6 @@ Include Tyr's Club by Kaleem mcintyre.
 Include Underwater Zone For Fs by Hellerhound.
 Include Urban Forest For Fs by Stripes.
 Include Zephyr Inc by Nuku Valente.
-Include Zoo by Hellerhound.
 Include Zoo by Wahn.
 
 [Quests & Events]
@@ -5995,6 +5994,7 @@ To regularstart: [normal start method]
 		say "(14) [link]Hyperlinks[as]14[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
 		say "(15) [link]Waiting for Input[as]15[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(16) [link]Screen Clearing[as]16[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
+		say "(17) [link]Graphics[as]17[end link] - [bold type][if NewGraphicsInteger is 1]OLD[else if NewGraphicsInteger is 2]NEW[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
 		say "(18) [link]Inventory Columns[as]18[end link] - [bold type][invcolumns][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Restore a save[as]99[end link][line break]";
@@ -6600,4 +6600,3 @@ When play begins (this is the graphics window construction rule):
 		[now the graphics window pixel count is 1;]
 		follow the ngraphics_blank rule;
 		follow the current graphics drawing rule;
-		now NewGraphicsOpened is true;
