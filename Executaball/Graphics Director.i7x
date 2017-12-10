@@ -95,24 +95,24 @@ carry out graphicmoding:
 					break;
 				else:
 					say "Invalid Entry";
-				if calcnumber is:
-					-- 1:
-						if NewGraphicsInteger is 2:
-							now graphics is true;
-							now NewGraphicsInteger is 1;
-							now NewGraphics is false;
-						else if NewGraphicsInteger is 1:
-							now graphics is false;
-							now NewGraphicsInteger is 0;
-							now NewGraphics is false;
-						else if NewGraphicsInteger is 0:
-							now graphics is true;
-							now NewGraphicsInteger is 2;
-							now NewGraphics is true;
-					-- 2:
-						say "Exit graphics menu?";
-						if player consents:
-							now trixieexit is 1;
+			if calcnumber is:
+				-- 1:
+					if NewGraphicsInteger is 2:
+						now graphics is true;
+						now NewGraphicsInteger is 1;
+						now NewGraphics is false;
+					else if NewGraphicsInteger is 1:
+						now graphics is false;
+						now NewGraphicsInteger is 0;
+						now NewGraphics is false;
+					else if NewGraphicsInteger is 0:
+						now graphics is true;
+						now NewGraphicsInteger is 2;
+						now NewGraphics is true;
+				-- 2:
+					say "Exit graphics menu?";
+					if player consents:
+						now trixieexit is 1;
 	else:
 		now calcnumber is -1;
 		let trixieexit be 0;
@@ -130,19 +130,19 @@ carry out graphicmoding:
 					break;
 				else:
 					say "Invalid Entry";
-				if calcnumber is:
-					-- 1:
-						if NewGraphicsInteger is 1:
-							now graphics is false;
-							now NewGraphicsInteger is 0;
-						else if NewGraphicsInteger is 0:
-							now graphics is true;
-							now NewGraphics is false;
-							now NewGraphicsInteger is 1;
-					-- 2:
-						say "Exit graphics menu?";
-						if player consents:
-							now trixieexit is 1;
+			if calcnumber is:
+				-- 1:
+					if NewGraphicsInteger is 1:
+						now graphics is false;
+						now NewGraphicsInteger is 0;
+					else if NewGraphicsInteger is 0:
+						now graphics is true;
+						now NewGraphics is false;
+						now NewGraphicsInteger is 1;
+				-- 2:
+					say "Exit graphics menu?";
+					if player consents:
+						now trixieexit is 1;
 
 Section 5 - Debug Commands
 
