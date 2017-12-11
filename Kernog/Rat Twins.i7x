@@ -209,7 +209,7 @@ Violet is a person.
 the description of Violet is "[VioletDesc]".
 
 to say VioletDesc:
-	say "     Violet is one half of the pair of adventuring rats whom you saved from the pirate sharks. She looks fairly young, maybe eighteen if you had to guess, and shares a lean and energetic build with her brother. Her youthful face seems always alert for some mischief, azure eyes scanning the surroundings and throwing longing looks at her brother whenever their eyes meet. Like his false twin, his fur is mostly snow white, like her hair,  with dark grey patches here and there. Her hair are arranged in unruly dreadlocks, dyed in several neon colors, although the color looks worn out, hair dyes must be rare in these times. Violet wears a black bra, assorted to used denims. She seems also found of leather accessories: she wears a choker, a spiked wristband, and adorned her tail with bangles made of old leather belts. Noticing that you look at her, Violet grins, then flashes her breasts at you: 'Izzat what you want to see? Ha ha... Perv['].' She winks at you and pulls up her bra.";
+	say "     Violet is one half of the pair of adventuring rats whom you saved from the pirate sharks. She looks fairly young, maybe eighteen if you had to guess, and shares a lean and energetic build with her brother. Her youthful face seems always alert for some mischief, azure eyes scanning the surroundings and throwing longing looks at her brother whenever their eyes meet. Like his false twin, his fur is mostly snow white, like her hair,  with dark grey patches here and there. Her hair is made up in unruly dreadlocks, dyed in several neon colors, although the color looks worn out, hair dyes must be rare in these times. Violet wears a black bra, assorted to used denims. She seems also found of leather accessories: she wears a choker, a spiked wristband, and adorned her tail with bangles made of old leather belts. Noticing that you look at her, Violet grins, then flashes her breasts at you: 'Izzat what you want to see? Ha ha... Perv['].' She winks at you and pulls up her bra.";
 instead of sniffing Violet:
 	say "      Violet's fur smells of sea salt, despite visibly taking great care of her fur.";
 
@@ -462,17 +462,19 @@ instead of going to Restaurant while Rat Twins Invitation is not resolved and ra
 	move Erin to Restaurant;
 	move Violet to Restaurant;
 	say "     As you enter the restaurant, a pair of waving arms catch your attention. 'Hey, it's our good samaritan!' a familair voice says. The two rats are here, just like the message said. They seem to have made a corner of the restaurant theirs: a pair of cots are rolled up next to the table, alongside a bag of supplies, and a map of the city is sprawled on the table, held together by empty glasses and a mustard pot.";
-	say "'A good thing someone was a curious as us. Did you follow this [']pirate booty['] rumour too?' the brother says hurriedly.'";
+	say "'A good thing someone was as curious as us. Did you follow this [']pirate booty['] rumour too?' the brother says hurriedly.'";
 	say "'Maybe he'd want your name first?' his sibling asks. 'Unless you still want to be known as [']Bro Rat['] around these parts.'";
 	say "'Oh right, right. My name's Erin, and this is my sister...'";
 	say "'Violet. Don't laugh.'";
-	say "'Who'd laugh at you, sweetie. And since we're on politness... We owe you a meal!'";
-	say "     The restaurant's supplies had been sacked when the city fell into anarchy, and only the smell of oil and burger meat remained; but the power generator was still working, and so did the microwave oven. Erin and Violet picked a shepherd's pie, a delicacy these days, and put it in the oven. You shared the meal, alongside a can of soda, while making the acquaintance of your new friends.";
+	say "'Who'd laugh at you, sweetie. And since we're on politeness... We owe you a meal!'";
+	say "     The restaurant's supplies had been sacked when the city fell into anarchy, and only the smell of oil and burger meat remained. However, the power generator was still working, and so did the microwave oven. Erin and Violet picked a shepherd's pie, a delicacy these days, and put it in the oven. You shared the meal with your new friends alongside a can of soda.";
 	PlayerEat 12;
 	PlayerDrink 12;
 	SanBoost 10;
-	say "[bold type]Your hunger and thirst decreases, thanks to the meal the siblings offered. Having a normal social interaction allows you to recover some humanity.[roman type]";
+	say "[bold type]Your hunger and thirst decrease thanks to the meal the siblings offered. Having a normal social interaction allows you to recover some humanity.[roman type]";
 	now ratTwinsStatus is 2;
+	[Twins meeting events unlocked by this event are unresolved here]
+	now Tied Rat Twins is unresolved;
 	now Rat Twins Invitation is resolved;
 
 
@@ -524,27 +526,28 @@ to say TwinsRoleplay:
 Part E - Outside Events
 
 Tied Rat Twins is a scavevent.
-The sarea of Tied Rat Twins is "Outside".
+When play begins:
+	now Tied Rat Twins is resolved;
+[The sarea of Tied Rat Twins is "Outside".]
 
 instead of resolving Tied Rat Twins:
-	if ratTwinsStatus >= 2:
-		say "     During your exploration, you come upon what looks like an abandoned sex-shop. The place looks deserted, but there is this permanent buzzing sound coming from inside. This is odd.";
-		say "     [bold type]Do you wish to investigate?[roman type]";
+	say "     During your exploration, you come upon what looks like an abandoned sex-shop. The place looks deserted, but there is this permanent buzzing sound coming from inside. This is odd.";
+	say "     [bold type]Do you wish to investigate?[roman type][line break]";
+	LineBreak;
+	say "([link]Y[as]y[end link]) - Who would use a sex toy? You are curious.";
+	say "([link]N[as]n[end link]) - You'd better give whoever it is some private time.";
+	if player consents:
 		LineBreak;
-		say "([link]Y[as]y[end link]) - Who would use a sex toy? You are curious";
-		say "([link]N[as]n[end link]) - You'd better give whoever it is some private time";
-		if player consents:
-			LineBreak;
-			say "     You walk inside the shop, if only to check what is the source of all this buzzing. It is even louder when in the shop, as if several toys had been set off at once. And, more worringly, you hear several persons scream through a gag. You head towards the source of the noise, behind the counter. You stumble upon Eric and Violet. The twins seem to have been caught in the middle of their own patrol, and they have been bound together sturdily with leather cuffs and ropes. They have been forced face-to-face, a vibrating wand stuck against their conjoined crotches. As a 'bonus', Violet got her holes spread apart by dildos, while you recognize the shape of a prostate massager stuck into Erin's ass. For added humliation, their rodent muzzles have been taped to each other, having them share an embarassing kiss.";
-			say "     Just as you are coming around, the twins squirm ineffecitvely against each other, they climax together, probably another of a long series. You hurriedly help them get out of their bounds, and toys. 'Thanks, pal,' Erin says weakly.  'It was one hell of an hour. I think I came enough for... Like... A whole week,' Violet comments. 'We were attacked by looters and they caught up with us as we ran away inside,' Erin says. 'Bad idea,' Violet agrees. 'Thankfully, we had stashed our loot before these fuckers get to us. Let us share something with you.'";
-			say "     True to her word, Violet and Erin guide you to a bin just outside the shop, and pull out a bag of chips and an already used bottle of water. 'Watch out on the streets,' Erin says before parting with you.";
-			say "[bold type]You gain 1 bag of chips.[roman type]";
-			say "[bold type]You gain 1 bottle of dirty water.[roman type]";
-			increase carried of chips by 1;
-			increase carried of dirty water by 1;
-		else:
-			LineBreak;
-			say "      You have better things to do. You walk away and continue your exploration";
-		now Tied Rat Twins is resolved;
+		say "     You walk inside the shop, if only to check what is the source of all this buzzing. It is even louder when in the shop, as if several toys had been set off at once. And, more worringly, you hear several persons scream through a gag. You head towards the source of the noise, behind the counter. You stumble upon Eric and Violet. The twins seem o have been caught in the middle of their own patrol, and they have been bound together sturdily with leather cuffs and ropes. They have been forced face-to-face, a vibrating wand stuck against their conjoined crotches. As a 'bonus', Violet got her holes spread apart by dildos, while you recognize the shape of a prostate massager stuck into Erin's ass. For added humliation, their rodent muzzles have been taped to each other, having them share an embarassing kiss.";
+		say "     Just as you are coming around, the twins squirm ineffecitvely against each other, they climax together, probably another of a long series. You hurriedly help them get out of their bounds, and toys. 'Thanks, pal,' Erin says weakly.  'It was one hell of an hour. I think I came enough for... Like... A whole week,' Violet comments. 'We were attacked by looters and they caught up with us as we ran away inside,' Erin says. 'Bad idea,' Violet agrees. 'Thankfully, we had stashed our loot before these fuckers get to us. Let us share something with you.'";
+		say "     True to her word, Violet and Erin guide you to a bin just outside the shop, and pull out a bag of chips and an already used bottle of water. 'Watch out on the streets,' Erin says before parting with you.";
+		say "[bold type]You gain 1 bag of chips.[roman type]";
+		say "[bold type]You gain 1 bottle of dirty water.[roman type]";
+		increase carried of chips by 1;
+		increase carried of dirty water by 1;
+	else:
+		LineBreak;
+		say "      You have better things to do. You walk away and continue your exploration";
+	now Tied Rat Twins is resolved;
 
 Rat Twins ends here.
