@@ -295,7 +295,7 @@ instead of resolving Crashing the Satyr Party:
 			WaitLineBreak;
 			say "     Once everyone had a go, the tired and cum-covered monkey was untied, and allowed to leave. 'Now, learn your lesson and don't try any more cheap tricks. Otherwise, the broomstick in your ass will be a literal one!' the leading satyr threatened.' Wukong shuffles away, his head low, but when he passes by you, he gives you a silent, furious glare. 'Pray we never meet again, you dirty pile of manure. I will show them and make this museum mine,' he says to you, his voice filled with tranquil fury.";
 			now acquaintedWithWukong is 3;
-			follow the monkeyAcquaintancesCheck rule;
+			[follow the monkeyAcquaintancesCheck rule;]
 			now Take My Royal Word For Granite is unresolved;
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     'That was some nice romp,' the satyr says to no one in particular. You hear other orgy goers approaching, attracted by the noises of your struggle. Ditching your original plan, you run away to the museum lobby.";
@@ -349,7 +349,7 @@ instead of resolving Hunt Of Mammoth Proportions:
 					increase dexterity of player by 1;
 				say "     You part ways with the monkey king, and in good terms, for once. You hope that it will last.";
 				now acquaintedWithWukong is 3;
-				follow the monkeyAcquaintancesCheck rule;
+				[follow the monkeyAcquaintancesCheck rule;]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     'You little scamps!' the mammoth says, as she holds you and Wukong at the level of her eyes. You definitely need a little [']time out['].'";
 				if vorelevel > 1:
@@ -376,7 +376,7 @@ instead of resolving Hunt Of Mammoth Proportions:
 				say "     'Mmmg! C-can't breath...'";
 				say "     Eventually, the voices fade away as you leave the prehistory wing. Hopefully Wukong will not be mad at you for this. Well, not madder at least.";
 				now acquaintedWithWukong is 4;
-				follow the monkeyAcquaintancesCheck rule;
+[				follow the monkeyAcquaintancesCheck rule;]
 			now the companion of player is nullpet;
 		else:
 			LineBreak;
@@ -424,7 +424,7 @@ instead of resolving Take My Royal Word For Granite:
 			say "     You pitifully beat a hasty retreat, with Wukong on your heels. 'You're right to run, peasant!' you can hear him, a few meters behind you, until you manage to reach the main door of the museum and rushes outside. 'You better not show your dirty face around these parts, scum!' you can hear the Monkey King shout, as a final warning. Distraught by your defeat, you go back to the library.";
 			move player to Library;
 		now acquaintedWithWukong is 4;
-		follow the monkeyAcquaintancesCheck rule;
+		[follow the monkeyAcquaintancesCheck rule;]
 	else:
 		LineBreak;
 		say "Valerie is understandably disappointed by your decision. 'Very well. I guess that I cannot force our problems on you. I will find a way, eventually...'";
@@ -452,7 +452,7 @@ The dismissdesc of monkey king is "[DismissWukong]".]
 The assault of wukong is "[one of]Wukong hits the enemy in the head with his staff![or]The agile primate swipes your opponent's legs with his weapon.[or]The monkey uses his staff as support and delivers a flying kick in the foe's stomach.[or]The dexterous creature jumps and, with a somersault, lands behind the enemy. As theu turn back a furry palm hits them in the face and makes them stagger.[at random]".
 [the fuckscene of monkey king is "[sexwithRyousei]".]
 
-Section 7 - Monkey Duel events (Wukong victorious)
+[Section 7 - Monkey Duel events (Wukong victorious)
 
 Monkey King Harem is a situation.
 The sarea of Monkey King Harem is "Museum".
@@ -463,5 +463,5 @@ when play begins:
 instead of resolving Monkey King Harem:
 	say "";
 	now Monkey King Harem is resolved;
-
+]
 Monkey King ends here.
