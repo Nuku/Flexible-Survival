@@ -205,11 +205,9 @@ to say LuciferSex5:    [suck him off]
 		LineBreak;
 		say "     As you get out from under Lucifer and stand up, the horse turns his head towards you and gives you an appreciative snort, followed by a stomp of his hoof on the ground - as if to say, 'You're okay, but that doesn't mean anyone else who comes in here won't get what's coming to them.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. You decide to interpret that as a, 'The mares are MINE. Don't go messing with them.'";
 	infect "Wild Mustang";
-	decrease hunger of player by 3;
-	if hunger of player < 0, now hunger of player is 0;
-	decrease thirst of player by 6;
-	if thirst of player < 0, now thirst of player is 0;
-	decrease humanity of player by 5;
+	PlayerEat 3;
+	PlayerDrink 6;
+	SanLoss 5;
 	if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 [
@@ -241,10 +239,8 @@ to say LuciferSex6:    [watch him breed a mare]
 		now SelenaLucifer is 1; [Selena will hear from this]
 ]
 	infect "Wild Mustang";
-	decrease hunger of player by 3;
-	if hunger of player < 0, now hunger of player is 0;
-	decrease thirst of player by 6;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerEat 3;
+	PlayerDrink 6;
 	decrease humanity of player by 5;
 	if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
@@ -287,10 +283,8 @@ to say LuciferSex7:    [player strapped under Lucifer with his cock inside them]
 				now SelenaLucifer is 1; [Selena will hear from this]
 			]
 			infect "Wild Mustang";
-			decrease hunger of player by 3;
-			if hunger of player < 0, now hunger of player is 0;
-			decrease thirst of player by 6;
-			if thirst of player < 0, now thirst of player is 0;
+			PlayerEat 3;
+			PlayerDrink 6;
 			decrease humanity of player by 5;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;

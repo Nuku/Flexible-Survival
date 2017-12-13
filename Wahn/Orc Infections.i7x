@@ -351,8 +351,7 @@ the usedesc of orc brew is "[orc brew use]";
 
 to say orc brew use:
 	say "Lifting the beer stein in one hand, you thumb the lid open and take a deep quaff of the liquid within. Hmm, tasty in a strange spicy way, and good against thirst. You can't help yourself and keep drinking until all of it is gone, leaving you wanting for more. The empty mug you throw away, it being too heavy to lug around as an empty container.";
-	decrease thirst of player by 6;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerDrink 6;
 	OrcInfect;
 
 to OrcInfect:
@@ -430,9 +429,8 @@ the usedesc of orc cum is "[orc cum use]";
 
 to say orc cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy orc cum run over your tongue and down your throat. Mmmmh, this stuff has a really great taste that calls for more. You can't help yourself and keep drinking until all of it is gone, filling your mind with a giddy, pleasant buzz. Now where do you get more of this stuff? You're really tempted to find an orc and just suck it right out of his cock.";
-	decrease thirst of player by 6;
-	if thirst of player < 0, now thirst of player is 0;
-	decrease humanity of player by 10;
+	PlayerDrink 6;
+	SanLoss 10;
 	infect "Orc Breeder";
 
 

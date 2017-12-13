@@ -293,11 +293,11 @@ rfponybm - booty mark
 
 
 to say beatthefpony:
-	say "     After your last blow, you slam yourself against the staggering pony's side, knocking her over. The [rfponycolour1] [if rfponytype is 1]equine[else if rfponytype is 2]pegasus[else if rfponytype is 3]unicorn[end if] lands in the dirt with a groan. '[one of]Why are you being such a meany?' [or]That's not how friends should act!' [or]I think you need to learn a lesson about friendship,' [at random] she whines. ";
+	say "     After your last blow, you slam yourself against the staggering pony's side, knocking her over. The [rfponycolour1] [if rfponytype is 1]equine[else if rfponytype is 2]pegasus[else if rfponytype is 3]unicorn[end if] lands in the dirt with a groan. '[one of]Why are you being such a meany?' [or]That's not how friends should act!' [or]I think you need to learn a lesson about friendship,' [at random]she whines. ";
 	if nofponysex > 2:
-		say "     As with the others of your kind, you [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
+		say "As with the others of your kind, you [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 	else if cocks of player > 0:
-		say "     As you look over her, your eyes wander back to that rear of her and the juicy pussy under her [rfponycolour2] tail. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
+		say "As you look over her, your eyes wander back to that rear of her and the juicy pussy under her [rfponycolour2] tail. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
 		say "     [bold type]Shall you grab those flanks and mount her?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
@@ -312,7 +312,7 @@ to say beatthefpony:
 			say "     Resisting the impulse, you decide to instead [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 			increase nofponysex by 1;
 	else if cunts of player > 0:
-		say "     As you look over her, your eyes wander back to that cute face of her. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
+		say "As you look over her, your eyes wander back to that cute face of her. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
 		say "     [bold type] Shall you grab that pretty [rfponycolour2] hair of hers and make her eat you out?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
@@ -326,7 +326,7 @@ to say beatthefpony:
 			say "     Resisting the impulse, you decide to instead [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 			increase nofponysex by 1;
 	else:
-		say "     With no gender of your own, you don't really feel like taking advantage of this opportunity. You decide to instead [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
+		say "With no gender of your own, you don't really feel like taking advantage of this opportunity. You decide to instead [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 
 
 Section 2 - Monster Insertion
@@ -663,7 +663,7 @@ to say drinkponycider:
 		now sex entry is "Female";
 	say "     Deciding to drink down the cider, you pop the top off and start downing it. It has a strong, sharp taste to it, heavy with apple and equine flavour. As well, there is a faint plastic taste despite being stored in a glass bottle.";
 	increase libido of player by 5;
-	decrease thirst of player by 8;
+	PlayerDrink 8;
 
 the scent of pony cider is "The cider smells strongly of apples and equines.".
 

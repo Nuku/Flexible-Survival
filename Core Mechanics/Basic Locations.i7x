@@ -104,8 +104,8 @@ The marea of Faint Trail is "Park".
 
 
 Green Apartment Building is a room. It is fasttravel.
-The description of Green Apartment Building  is "[GreenAptDesc]".
-The earea of Green Apartment Building  is "Outside".
+The description of Green Apartment Building is "[GreenAptDesc]".
+The earea of Green Apartment Building is "Outside".
 
 to say GreenAptDesc:
 	say "     Standing in a somewhat out of the way neighborhood, a green-tinted apartment building rises before you, six stories tall. A fire escape clings to the outside of its structure, its retracting lowest set of stairs weighted down with a number of cement blocks, allowing easy access to the roof. The place and its surroundings seem fairly quiet - while the streets around here are filled with the usual abandoned cars, sacks of uncollected trash and scattered clothes, you haven't actually seen any large groups of infected hanging around or roaming the streets. The petrified herm hyena standing in front of the entrance door might have something to do with that...";

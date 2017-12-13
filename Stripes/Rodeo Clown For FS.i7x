@@ -17,8 +17,7 @@ to say rodeoclowndesc:
 to say losetorodeoclown:
 	if HP of player > 0:		[SUBMIT]
 		say "     Unwilling to keep fighting against the quick-moving clown, you give in and drop to your knees. The rodeo clown grins even more broadly and rushes over to you. 'That's a good [if cocks of player > 0]steer[else]cow[end if]! No more fighting for you,' she says soothingly as she kneels down in front of you. Rubbing your head, she guides your mouth to her ample bosom. With the colourful shirt open, you can see the large nipples on her huge breasts and lick your lips at the sight of them. 'Go on now, drink up! You had a rough ride, but it's all over now,' the rodeo clown says softly as you start nursing, drinking down her milk. It is quite delicious and soothing, though it does little to quell your thirst.";
-		decrease thirst of player by 6;
-		if thirst of player < 0, now thirst of player is 0;
+		PlayerDrink 6;
 		increase libido of player by 6;
 		if libido of player > 100, now libido of player is 100;
 		say "     With your drink in you, you feel rather muddleheaded and horny, submitting to the strange creature as she runs her hands over you, sliding off your clothes and pack. ";

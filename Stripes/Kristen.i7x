@@ -460,10 +460,8 @@ to say kristentf_phase4_3:		[seductive]
 				increase score by 10;
 			now loversbench is 2;
 		now Park Entrance is known;
-		decrease hunger of player by 12;
-		decrease thirst of player by 12;
-		if hunger of player < 0, now hunger of player is 0;
-		if thirst of player < 0, now thirst of player is 0;
+		PlayerEat 12;
+		PlayerDrink 12;
 	else:		[nighttime - Ferris wheel]
 		say ". After checking to make sure the coast is clear, the two of you exit down the ladder. Praising her lovely appearance and reiterating that you'll protect her on the journey, you make your way towards the state fair.";
 		say "     [if State Fair is unknown]Fortunately, your half-remembered details on how to get there turn out to be correct and you luckily avoid any significant trouble on the way[else]Fortunately, you encounter no significant trouble on the way[end if]";

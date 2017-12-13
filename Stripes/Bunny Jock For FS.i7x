@@ -72,11 +72,9 @@ to say bjockvicsex01:
 to say bjockvicsex02:
 	now bunnyjocknosex is 0;
 	say "     Moving over to the big bunny, you grab his crotch and start tugging down his shorts. Pulling them off, you free his huge cock, which soon rises to roughly two and a half feet in length. Wrapping both hands around it, you start stroking it up and down, grinning as you watch the jock's face melt into one of bliss. You lick and kiss all over his massive glans, even playing your tongue against his slit to lap up the precum leaking quickly from it. You grind your body against his shaft while you stroke him. As he's about to blow, you press your lips to his glans and catch the first few blasts in your mouth, gulping them down. But you can't keep up with his prodigious output and let the rest blast across him and the ground. Leaving him like that, you head on your way, rubbing your full tummy. You find the bunny's load quite satisfying, though you later find yourself growing increasingly aroused.";
-	decrease thirst of player by 8;
-	decrease hunger of player by 4;
+	PlayerDrink 8;
+	PlayerEat 4;
 	increase libido of player by 5;
-	if thirst of player < 0, now thirst of player is 0;
-	if hunger of player < 0, now hunger of player is 0;
 	if libido of player > 100, now libido of player is 100;
 
 

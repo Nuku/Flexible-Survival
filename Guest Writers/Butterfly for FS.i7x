@@ -67,10 +67,8 @@ To say butterfly defeat:
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				say "As you pull her in close, your arms wrapped around her midriff, you begin to suck at her breast, squeezing and tugging at her stiff nipple between your tongue and your lip. To your surprise, a thick, sugary liquid sprays into your mouth from her teat. You continue to feed as she moans, and flexes her large colorful wings at the sensation. Soon you begin to feel tired, but as you start to fall asleep she lays your head down gently on the ground. 'Is your thirst satisfied?' she asks, speaking up for the first time as she caresses your full belly. The butterfly smiles and leans in to give your lips a heartfelt kiss. She affectionately cups your cheek in her palm as you drift off. By the time you awake once again, she is nowhere to be seen.[line break]";
 				now ButterflyForeplay is True;
-				decrease hunger of player by 25;
-				if hunger of player < 0, now hunger of player is 0;
-				decrease thirst of player by 25;
-				if thirst of player < 0, now thirst of player is 0;
+				PlayerEat 25;
+				PlayerDrink 25;
 		else:
 			Say "Having taken one too many blows, the butterfly girl flaps her wings hysterically in dismay and flies off as fast as she can manage.[line break][line break]";
 	else if ButterflyPregnant is True:
@@ -844,10 +842,8 @@ to say butterfly grove scene:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy][line break][line break]";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "The butterfly girl approaches you affectionately, looking more full figured than when you last met. She greets you with a caring hug and a tender kiss. Looking into your eyes, she purrs, 'You're going to be a daddy,' flapping her wings proudly. She draws your hands towards her protruding belly, and you sense the living form inside as you feel a little kick. Your lover notices your eyes on her engorged [ButterflyBreastDesc] breast and smiles, offering it to you. 'Daddy can have the first taste if he wants.' You begin to suckle at her swollen nipple as her thick and sweet milk froths in your mouth. As you enjoy her tasty liquid your thirst and hunger is quenched. Continuing to suck away you feel her hand stroking your throbbing [cocktext]shaft[if cocks of player > 1]s[end if].[line break][line break]";
-		decrease hunger of player by 25;
-		if hunger of player < 0, now hunger of player is 0;
-		decrease thirst of player by 25;
-		if thirst of player < 0, now thirst of player is 0;
+		PlayerEat 25;
+		PlayerDrink 25;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say " 'Let me...' she offers as she carefully descends to her knees, the milky residue from the teat you just surrendered trickling down the curve of her breast. She releases your cock[if cocks of player > 1]s[end if] from your pants massaging your [ball size] with her hands. She starts to suck you off, her antennae bouncing cheerfully and her wings mesmerizing you with their flutter. Looking down at your lactating mate, pregnant with your baby, her warm and oily mouth slobbering over your dick makes you stiffen like a rock. As your balls begin to spasm you close your eyes only to once again feel the sensation of her proboscis racing down the opening in the tip of your penis. Strength faltering you stumble forward and catch your lover's head for balance, your fingers entwining in her blonde locks as she guzzles your seed. Careful not to spill a drop she positions her open mouth directly below your drooping member delighting in every drip she finds. 'Delicious!' she exclaims, smacking her lips as she savors and swallows the left-overs.[line break][line break]After spending many enjoyable hours together you go to head home. Just as you're about to leave you find your face squeezed between her [ButterflyBreastDesc] tits and covered in kisses as she bids you farewell.";
 		now ButterflyBreastDesc is "plump and bouncy D-cup";

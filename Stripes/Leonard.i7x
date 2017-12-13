@@ -63,7 +63,7 @@ Instead of conversing the Leonard:
 		else:
 			say "     'You must find it quite difficult out there,' he says with a soft rumble, passing you a drink from a small bar to one side of the [']room[']. You smile and take the drink, relaxing into the plush chair. 'Perhaps you should stay here for a time, under my protection. You could take a break and we could get to know each other better,' the lion says with a smile, taking a seat of his own. You can see that his sheath has grown fuller and the tip of his feline cock is poking free. The scent of his strong, feline musk increases, beginning to arouse you.";
 		increase libido of player by 10;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now HP of Leonard is 1;
 	else if HP of Leonard is 1:
 		say "     [one of]'I hope you've reconsidered my offer of sharing my company,' he says with a rumble, running a paw along your side.[or]'I do hope you'll say for a while,' he purrs with a smile.[or]'You should relax and stay. Let a big, strong male take care of you,' he rumbles in your ear.[or]'Wouldn't things be simpler if you had a big, strong lion watching over you?' the powerful feline rumbles.[or][if cunts of player > 0]'I hope you'll consider staying and enjoying my company, my dear,' the sexy lion rumbles. 'A sexy girl like you deserves a handsome male like myself.'[else]'I hope you'll consider staying and enjoying my company,' the sexy lion rumbles. 'I can tell you need a proper, strong male to take care of you.'[end if][at random]";

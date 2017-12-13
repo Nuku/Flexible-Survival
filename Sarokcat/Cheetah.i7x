@@ -102,9 +102,8 @@ The usedesc of cheetah milk is "[drinkcheetahmilk]";
 to say drinkcheetahmilk:
 	say "     You drink down the cheetah milk. It has a strangely pleasant taste and it helps quench your thirst a little. You feel a little more lustful and excited.";
 	if bodyname of player is "Cheetah Woman" and inheat is true, increase slutfucked by 1;
-	decrease thirst of player by 5;
+	PlayerDrink 5;
 	increase libido of player by 5;
-	if thirst of player < 0, now thirst of player is 0;
 
 the scent of cheetah milk is "The milk has a strongly feline scent that's rather enticing.".
 

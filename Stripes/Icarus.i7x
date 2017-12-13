@@ -401,8 +401,7 @@ to say icarussex5_ap_x:	[extreme version of scene 5]
 	say "     It is some time after you've finished cumming that you start to realize that you're starting to chew into the unmoving bird's shoulder. Your humanity struggles to pull itself out of the instinctual haze you've been in. It takes some effort, the wild rush of the hunt and the raw pleasure of succumbing to those dark impulses is strong and has filled you with an excitement that you lingers. The rush of adrenaline, the taste of his blood, the ecstasy of your release, the completion of the hunt - all alluring dark pleasures you want to sink into again.";
 	say "     Regaining some control, you quickly push yourself away, eyes locked on his torn throat and still tasting his bloody flesh in your beak. You swallow it down without thinking, your human mind causing your stomach to shudder, but your predatory body manages to hold down your sinister meal. When you look back at him, your eyes lock with his unblinking eyes. You can't be sure how long you stare into them and it takes considerable effort to avert your gaze, reaching over to brush them closed.";
 	say "     You grab a stray sheet and pull it over his body and mess of blood and semen leaking from it, not wanting to look at it any longer to help bury those instincts you can still feel inside you. You clean yourself up as best you can with some rags and leave the room, closing the door behind you, trying to hide this dark deed you've done[if ( the number of booked people + the number of bunkered people ) > 2] from the others[end if]. But you can't hide it from yourself and you head back downstairs with a heavy conscience. All the while, the dark recesses of your avian mind eagerly await another such release.";
-	decrease hunger of player by 6;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 6;
 	now libido of player is libido of player / 2;
 	now humanity of player is humanity of player / 2;
 	remove Icarus from play;
@@ -417,10 +416,9 @@ to say icarussex5_ap_x2:	[repeating extreme version of scene 5]
 	attempttowait;
 	say "     The taste of your prey's flesh and the scent of his release sends a rush of wild excitement through you. You bite down harder, tearing into his neck as you cum. Even as you pound as his feathery ass, blasting shot after shot of your seed into him, his struggles grow weaker, his lifeblood flowing across your tongue. With nary a thought to what you're doing, only seeking to sate your instinctual hungers upon your captured prey, you bite down harder. Even as he's sagging weakly beneath you, he continues to cum, shooting splatters of his semen into the growing pool of blood beneath him until he gives a weak, gurgling, and strangely contented sigh before collapsing.";
 	say "     Your dark impulses and the songbird's perverse desire satisfied, you pull out, pumping the last few spurts of your seed across his crumpled body. You swallow down the chunk of torn flesh, your predatory tongue loving the taste of it. As the haze starts to lift, you can't help but feel a little ill at ease with what you've done, but part of your infected mind relishes the rush of it and is reluctant to let your humanity reassert itself. Knowing (hoping?) that he'll recover in time, you nuzzle him tenderly and brush his eyes closed. After pulling the bloody sheet across his body, you leave his still body in the dark, secluded attic.";
-	decrease hunger of player by 6;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 6;
 	decrease libido of player by libido of player / 5;
-	decrease humanity of player by 20;
+	SanLoss 20;
 	remove Icarus from play;
 	now HP of Icarus is 9;
 	now ttIcarus is turns;
@@ -461,8 +459,7 @@ to say icarussex5_fel_x:	[extreme version of scene 5 - feline]
 	say "     It is some time after you've finished cumming that you start to realize that you're starting to chew into the unmoving bird's shoulder. Your humanity struggles to pull itself out of the instinctual haze you've been in. It takes some effort, the wild rush of the hunt and the raw pleasure of succumbing to those dark impulses is strong and has filled you with an excitement that you lingers. The rush of adrenaline, the taste of his blood, the ecstasy of your release, the completion of the hunt - all alluring dark pleasures you want to sink into again.";
 	say "     Regaining some control, you quickly push yourself away, eyes locked on his torn throat and still tasting his bloody flesh in your muzzle. You swallow it down without thinking, your human mind causing your stomach to shudder, but your predatory body manages to hold down your sinister meal. When you look back at him, your eyes lock with his unblinking eyes. You can't be sure how long you stare into them and it takes considerable effort to avert your gaze, reaching over to brush them closed.";
 	say "     You grab a stray sheet and pull it over his body and mess of blood and semen leaking from it, not wanting to look at it any longer to help bury those instincts you can still feel inside you. You clean yourself up as best you can with some rags and leave the room, closing the door behind you, trying to hide this dark deed you've done[if ( the number of booked people + the number of bunkered people ) > 2] from the others[end if]. But you can't hide it from yourself and you head back downstairs with a heavy conscience. All the while, the dark recesses of your feline mind eagerly await another such release.";
-	decrease hunger of player by 6;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 6;
 	now libido of player is libido of player / 2;
 	now humanity of player is humanity of player / 2;
 	remove Icarus from play;
@@ -477,8 +474,7 @@ to say icarussex5_fel_x2:	[repeating extreme version of scene 5 - feline]
 	attempttowait;
 	say "     The taste of your prey's flesh and the scent of his release sends a rush of wild excitement through you. You bite down harder, tearing into his neck as you cum. Even as you pound as his feathery ass, blasting shot after shot of your seed into him, his struggles grow weaker, his lifeblood flowing across your tongue. With nary a thought to what you're doing, only seeking to sate your instinctual hungers upon your captured prey, you bite down harder. Even as he's sagging weakly beneath you, he continues to cum, shooting splatters of his semen into the growing pool of blood beneath him until he gives a weak, gurgling, and strangely contented sigh before collapsing.";
 	say "     Your dark impulses and the songbird's perverse desire satisfied, you pull out, pumping the last few spurts of your seed across his crumpled body. You swallow down the chunk of torn flesh, your predatory tongue loving the taste of it. As the haze starts to lift, you can't help but feel a little ill at ease with what you've done, but part of your infected mind relishes the rush of it and is reluctant to let your humanity reassert itself. Knowing (hoping?) that he'll recover in time, you nuzzle him tenderly and brush his eyes closed. After pulling the bloody sheet across his body, you leave his still body in the dark, secluded attic while grooming the bloody mess from your paws and face.";
-	decrease hunger of player by 6;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 6;
 	decrease libido of player by libido of player / 5;
 	decrease humanity of player by 20;
 	remove Icarus from play;
@@ -506,8 +502,7 @@ to say icarussex6_ap:		[violent avian sex]
 				decrease libido of player by libido of player / 3;
 			else:
 				say "     With your lust satiated enough for now, your predatory instincts take the fore once again. Grabbing his head roughly, one hand clamped firmly around his beak and the other digging into his shoulder, you keep his upper body pressed firmly against the floor. Knowing what's coming, the passarine's eyes are wide with fear and excitement, heart racing in his chest as you bring your beak to his throat and tear into him. You can taste his bloody flesh in your mouth, seasoned with your cum leaking from his ripped esophagus. With his throat torn out, the little birdie's wet, gurgling struggles soon grow weak and, with a final shudder, stop. You tear out a few more chunks, swallowing your bloody feast before pulling your spent shaft from his cooling body. You spread the sheet over him, leaving the nanites to do their work.";
-				decrease hunger of player by 6;
-				if hunger of player < 0, now hunger of player is 0;
+				PlayerEat 6;
 				decrease libido of player by libido of player / 5;
 		else:
 			say "     The chase eventually drives your songbird prey into the attic where you corner him. Wide eyed and panting at having been trapped again, you stalk closer and closer, eventually leaping atop the little bird and bearing him down under your weight. Grabbing both his arms, you pull them tightly behind his back, pinning his wings down as you do, and pull him into his lap. Feeling your stiff member beneath him, his tail fans and raises, letting you get your pulsing rod lined up with his tight hole. With a hard, painful yank on his arms, you pull him downwards, forcing him onto your [cock size desc of player] [cock of player] shaft. He gives pained chirp, but he also moans in pleasure, especially when you force him fully down so he's seated on your large, heavy balls.";
@@ -526,8 +521,7 @@ to say icarussex6_ap:		[violent avian sex]
 			else:
 				say "     With your lust satiated enough for now, your predatory instincts take the fore once again. You push the bloated bird off of you and onto his back. Knowing what's coming, the passarine's eyes are wide with fear and excitement, struggling to rise even as you leap atop him. Your talons dig into his bloated belly, tearing into it and sending his entrails spilling out. Blood, guts and cum pour from the wound as he chirps in pain. With the scent of your prey's blood in the air, you dig your beak into his torn belly, dining upon his cum-stained viscera even as he watches. He reaches up weakly, brushing his hand across your head in a caress before his head slumps down and the light fades from his eyes. You enjoy a few last bites before swallowing your bloody feast. You spread the sheet over him, leaving the nanites to do their work.";
 				decrease libido of player by libido of player / 5;
-			decrease hunger of player by 6;
-			if hunger of player < 0, now hunger of player is 0;
+			PlayerEat 6;
 			decrease libido of player by libido of player / 5;
 		increase icarus_cumstuff by 1;
 	else:	[add cycling/random variations here]
@@ -553,8 +547,7 @@ to say icarussex6_ap:		[violent avian sex]
 			say "     Your beak sinks deeper into his wing, biting into the meaty flesh. As you tear a chunk of raw meat from his shattered wing, the weak passarine releases a long moan and cums, spraying splatters of white cum onto the bloody floor. This quivering asshole around your cock draws a few more spurts of semen from you, adding to your instinct-addled enjoyment of your grisly meal. Even as the little bird's orgasm wanes, so does his consciousness, passing out from blood loss as you dine upon the raw white meat of his wing. It is only once he starts to grow cold that you pull out and release him.";
 			now icarussex6_variant is 1;
 		say "     Your dark impulses satiated in giving the songbird his perverse release, you wipe the blood from your beak and your hands. You shift his body into a more comfortable position and drape the sheet over it like a blanket. Were it not for the crimson stains and the coppery scent, one could almost believe he was just resting. And given the microscopic nanites working to restore him, in a way he is. As you leave close the secluded room behind you, you hope your latest assault upon him was not too much to recover from. Still feeling the excitement of the hunt and the kill, your concern is tainted by the longing for the next time you can snare your pretty prey bird.";
-		decrease hunger of player by 6;
-		if hunger of player < 0, now hunger of player is 0;
+		PlayerEat 6;
 		decrease libido of player by libido of player / 5;
 	decrease humanity of player by 20;
 	remove Icarus from play;
@@ -581,8 +574,7 @@ to say icarussex6_fel:		[violent feline sex]
 				decrease libido of player by libido of player / 3;
 			else:
 				say "     With your lust satiated enough for now, your predatory instincts take the fore once again. Grabbing his head roughly, one paw clamped firmly around his beak and the other digging into his shoulder, you keep his upper body pressed firmly against the floor. Knowing what's coming, the passarine's eyes are wide with fear and excitement, heart racing in his chest as you bring your jaws to his throat and tear into him. You can taste his bloody flesh in your mouth, seasoned with your cum leaking from his ripped esophagus. With his throat torn out, the little birdie's wet, gurgling struggles soon grow weak and, with a final shudder, stop. You tear out a few more chunks, swallowing your bloody feast before pulling your spent shaft from his cooling body. You spread the sheet over him, leaving the nanites to do their work even as you lick your paws clean and use them to wipe the tell-tale blood from your muzzle as well.";
-				decrease hunger of player by 6;
-				if hunger of player < 0, now hunger of player is 0;
+				PlayerEat 6;
 				decrease libido of player by libido of player / 5;
 		else:
 			say "     The chase eventually drives your songbird prey into the attic where you corner him. With him wide-eyed and panting at having been trapped again, you stalk closer and closer on all fours, eventually pouncing atop the little bird and bearing him down under your weight. Grabbing both his arms, you pull them tightly behind his back, pinning his wings down as you do, and pull him into his lap. Feeling your stiff member beneath him, his tail fans and raises, letting you get your pulsing rod lined up with his tight hole. With a hard, painful yank on his arms, you pull him downwards, forcing him onto your [cock size desc of player] [cock of player] shaft. He gives pained chirp, but he also moans in pleasure, especially when you force him fully down so he's seated on your large, heavy balls.";
@@ -601,8 +593,7 @@ to say icarussex6_fel:		[violent feline sex]
 			else:
 				say "     With your lust satiated enough for now, your predatory instincts take the fore once again. You push the bloated bird off of you and onto his back. Knowing what's coming, the passarine's eyes are wide with fear and excitement, struggling to rise even as you pounce atop him. Your claws dig into his bloated belly, tearing into it and sending his entrails spilling out. Blood, guts and cum pour from the wound as he chirps in pain. With the scent of your prey's blood in the air, you dig your muzzle into his torn belly, dining upon his cum-stained viscera even as he watches. He reaches up weakly, brushing his hand across your head in a caress before his head slumps down and the light fades from his eyes. You enjoy a few last bites before swallowing your bloody feast. You spread the sheet over him, leaving the nanites to do their work even as you lick your paws clean and use them to wipe the tell-tale blood from your muzzle as well.";
 				decrease libido of player by libido of player / 5;
-			decrease hunger of player by 6;
-			if hunger of player < 0, now hunger of player is 0;
+			PlayerEat 6;
 			decrease libido of player by libido of player / 5;
 		increase icarus_cumstuff by 1;
 	else if a random chance of icarus_cbt in 12 succeeds:	[cbt option]
@@ -653,8 +644,7 @@ to say icarussex6_fel:		[violent feline sex]
 			say "     Another hard chomp snaps the top of his arm bone free, leaving the limb to hang at an odd angle from the remaining scraps of flesh. The wounded bird gives a whimpering cry, eyes wide with fear and looking around frantically. As his strength wanes, his body sag down to the floor beneath you. You remain atop him on all fours even after he passes out from blood loss as you continue your grisly feast, still pounding into his ass and cumming as you do. It's only after he's fully gone that you pull your spent shaft from his unmoving, lifeless body and swallow down the last visceral muzzleful of bird meat.";
 			now icarussex6_variant is 1;
 		say "     Your dark impulses satiated in giving the songbird his perverse release, you lick the blood from your muzzle and your hands. You shift his body into a more comfortable position and drape the sheet over it like a blanket. Were it not for the crimson stains and the coppery scent, one could almost believe he was just resting. And given the microscopic nanites working to restore him, in a way he is. As you leave close the secluded room behind you, you hope your latest assault upon him was not too much to recover from. Still feeling the excitement of the hunt and the kill, your concern is tainted by the longing for the next time you can snare your pretty prey bird.";
-		decrease hunger of player by 6;
-		if hunger of player < 0, now hunger of player is 0;
+		PlayerEat 6;
 		decrease libido of player by libido of player / 5;
 	decrease humanity of player by 20;
 	remove Icarus from play;

@@ -250,10 +250,8 @@ to say leodenspecial1:
 	now lastdenevent is turns;
 	now lastfuck of Leonard is turns;
 	remove 1 from leodenlist;
-	decrease hunger of player by 30;
-	decrease thirst of player by 12;
-	if hunger of player < 0, now hunger of player is 0;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerEat 30;
+	PlayerDrink 12;
 	now leodinner is true;
 
 
@@ -279,8 +277,7 @@ to say leodenspecial2:
 	increase XP of player by ( intelligence of player * 2 ) + level of player;
 	now lastdenevent is turns;
 	remove 2 from leodenlist;
-	decrease thirst of player by 6;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerDrink 6;
 	now leoshadowmet is true;
 	add 11 to leoparklist; [opens Shadow #2 in Park Events]
 
@@ -914,8 +911,7 @@ to say leoparkscene11:
 		infect "Feline";
 	now lastfuck of leonard is turns + 8;
 	now battleground is "void";
-	decrease hunger of player by 12;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 12;
 	remove 11 from leoparklist;
 	now leonardcaraway is true; [***]
 	move player to Lion's Den;

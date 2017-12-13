@@ -177,8 +177,8 @@ The description of Western Parapets is "[bcwestparapets]".
 The Eastern Parapets is a room. The Eastern Parapets is east from Upper Hall.
 The description of Eastern Parapets is "[bceastparapets]".
 
-The Throne Room is a room. The Throne Room is northeast of Western Parapets. The Throne Room is northwest of Eastern Parapets.
-The description of Throne Room is "[bcthroneroom]".
+The Castle Throne Room is a room. The Castle Throne Room is northeast of Western Parapets. The Castle Throne Room is northwest of Eastern Parapets.
+The description of Castle Throne Room is "[bcthroneroom]".
 
 BouncyCastleExit is a room. "Leaving the bouncy castle."  BouncyCastleSlideExit is east of Eastern Parapets. BouncyCastleSlideExit is west of Western Parapets. BouncyCastleExit is north of Bouncy Castle.
 
@@ -213,7 +213,7 @@ the scent of Eastern Parapets is "This place smells of rubber and the ocean.".
 
 the scent of Upper Hall is "This place smells of rubber and the ocean.".
 
-the scent of Throne Room is "This place smells of rubber and the ocean.".
+the scent of Castle Throne Room is "This place smells of rubber and the ocean.".
 
 
 Section 4 - Inside the Bouncy Castle
@@ -855,7 +855,7 @@ to say bcwestparapets:
 			say "Choice? (1-3)>";
 			get a number;
 		if calcnumber is 1:
-			move player to Throne Room;
+			move player to Castle Throne Room;
 		else if calcnumber is 2:
 			move player to Upper Hall;
 		else if calcnumber is 3:
@@ -883,7 +883,7 @@ to say bcwestparapets:
 					say "Choice? (1-3)>";
 					get a number;
 				if calcnumber is 1:
-					move player to Throne Room;
+					move player to Castle Throne Room;
 				else if calcnumber is 2:
 					move player to Upper Hall;
 				else if calcnumber is 3:
@@ -903,7 +903,7 @@ to say bcwestparapets:
 				say "Choice? (1-3)>";
 				get a number;
 			if calcnumber is 1:
-				move player to Throne Room;
+				move player to Castle Throne Room;
 			else if calcnumber is 2:
 				move player to Upper Hall;
 			else if calcnumber is 3:
@@ -1015,7 +1015,7 @@ to chairboundstate:
 						get a number;
 					if calcnumber is 1:
 						say "     Stepping carefully, you move around the deflating sex chair and avoid the other red spots in case this castle had more surprises. You head to the separating wall and move through the archway into the other room.";
-						move player to Throne Room;
+						move player to Castle Throne Room;
 						follow the turnpass rule;
 					else if calcnumber is 2:
 						say "     Stepping carefully, you move around the deflating sex chair and avoid the other red spots in case this castle had more surprises. You head to the separating wall and return to the safety of the upper hall to consider your next course of action.";
@@ -1243,7 +1243,7 @@ to chairpassivelosses:
 			get a number;
 		if calcnumber is 1:
 			say "     Stepping carefully, you move around the deflating sex chair and avoid the other red spots in case this castle had more surprises. You head to the separating wall and move through the archway into the other room.";
-			move player to Throne Room;
+			move player to Castle Throne Room;
 			follow the turnpass rule;
 		else if calcnumber is 2:
 			say "     Stepping carefully, you move around the deflating sex chair and avoid the other red spots in case this castle had more surprises. You head to the separating wall and return to the safety of the upper hall to consider your next course of action.";
@@ -1325,7 +1325,7 @@ to say bcduofight:
 			say "     Not to be left out, the orca moves up beside you and presses her crotch to your face. Presented with her juicy pussy, your eyes run over her milky white folds and the soft, magenta interior of her cunt. At the top of it, poking partway out of the ivory lips is an air nozzle where her clit should be and wet and juicy with her arousal. Licking your lips and drawn to the unusual pussy, you run your tongue over her strange clit and can't help but smile as she trills happily. Soon you're digging it, licking at her eagerly and pushing your tongue past those yielding folds to get more of her juices.";
 			say "     They go at it for quite a while until the sea lion is pushed past his limits and shoots jet after jet of air-driven semen deep inside you with barks of excitement. The orca goes off moments later, a squirt of her own juices soaking your face as her nozzle sprays a mist of latex-scented air across your face. The gas, the semen and the juices all work to leave you momentarily dazed and weak, unable to resist as they push you into the [if bcseenthroneroom is true]throne room[else]next room[end if].";
 		now libido of player is ( libido of player + libido of player + 100 ) / 3;
-		move player to Throne Room;
+		move player to Castle Throne Room;
 		WaitLineBreak;
 		now bcduofightlost is true;
 		say "[dolcheckA]";
@@ -1341,13 +1341,13 @@ to say bcduofight:
 		else:
 			say "     Having gotten all turned around during the fight, you end up diving through one of the doorways and find yourself tumbling out into the [if bcseenthroneroom is true]throne room[else]final upper room[end if].";
 			WaitLineBreak;
-			move player to Throne Room;
+			move player to Castle Throne Room;
 			now bcduofightfled is true;
 			say "[dolcheckA]";
 
 
 
-Chapter 16 - Throne Room
+Chapter 16 - Castle Throne Room
 
 to say bcthroneroom:
 	now bcseenthroneroom is true;
@@ -1387,7 +1387,7 @@ understand "dolphin list" as dolchecklisting.
 dolchecklisting is an action applying to nothing.
 
 check dolchecklisting:
-	if location of player is not Throne Room, say "You don't see those here." instead;
+	if location of player is not Castle Throne Room, say "You don't see those here." instead;
 
 carry out dolchecklisting:
 	say "check dolphin: [link][bracket]1[close bracket][as]check dolphin 1[end link] [link][bracket]2[close bracket][as]check dolphin 2[end link] [link][bracket]3[close bracket][as]check dolphin 3[end link] [link][bracket]4[close bracket][as]check dolphin 4[end link] [link][bracket]5[close bracket][as]check dolphin 5[end link] [link][bracket]6[close bracket][as]check dolphin 6[end link] [link][bracket]7[close bracket][as]check dolphin 7[end link] [link][bracket]8[close bracket][as]check dolphin 8[end link] [link][bracket]9[close bracket][as]check dolphin 9[end link] [link][bracket]10[close bracket][as]check dolphin 10[end link] [link][bracket]11[close bracket][as]check dolphin 11[end link] [link][bracket]12[close bracket][as]check dolphin 12[end link][line break]";
@@ -1398,7 +1398,7 @@ understand "check dolphin [number]" as dolchecking.
 dolchecking is an action applying to one number.
 
 check dolchecking:
-	if location of player is not Throne Room, say "You don't see those here." instead;
+	if location of player is not Castle Throne Room, say "You don't see those here." instead;
 
 carry out dolchecking:
 	let x be the number understood;
@@ -2132,7 +2132,7 @@ Instead of scavenging while player is in Bouncy Castle:
 	say "There is nowhere to scavenge out here.";
 
 an everyturn rule:
-	if HP of Bubble is 2 and the player is in Throne Room:
+	if HP of Bubble is 2 and the player is in Castle Throne Room:
 		now dolcastleturn is 0;
 		decrease vixcountdown by 1;
 		if vixcountdown <= 0:

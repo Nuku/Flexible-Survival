@@ -97,16 +97,13 @@ to say drinkflavor:
 	let T be a random number between 1 and 8;
 	if T is 1 or T is 2:
 		say "     Right away you find that the flavor of the unknown drink is relatively sweet on your tongue. Licking your [facename of player] lips you nod up to the unicorn before swallowing down the rest of the fluid in a single gulp. Letting the sweet, if not somewhat tangy, liquor settle into the back of your throat you savor the unique flavor of the alcoholic beverage for several seconds before swallowing happily. 'I'm glad you enjoyed that,' Harold whickers, very much pleased with himself. 'I'm making a new drink to put up on the drink bar's menu, but I think I need to refine this little concoction of mine some more before I do that,' Harold proudly neighs. You nod to the other, thanking him for his, as of yet, unnamed concoction and then go about your business for the day.";
-		decrease thirst of player by 8;
-		if thirst of player < 0, now thirst of player is 0;
+		PlayerDrink 8;
 	if T is 3 or T is 4:
 		say "     On first taste you find that the flavor of the drink is rather bland on your palate. A second sip doesn't help your opinion of concoction any and quickly you find yourself shaking your head up at Harold. Smacking your lips you can't stop yourself from flinching in distaste as your tongue seems to go numb for a minute. Noting the sheepish smile on Harold's face you shrug and then down the rest of the liquor as quickly as possible. Setting the glass back down onto the counter you give the unicorn another shake of your head before giving the drink a big thumbs down. 'No good, huh? Damn, guess I'm going to have to fine tune it some more. Maybe if I add some sugar instead of salt?' Harold asks you while curling his lips up into a concentrated frown as he looks at the now empty wine glass. You nod and then give the unicorn your opinion, watching as he stares at you somewhat sagely, before slowly taking your leave of the bar to go about your business.";
-		decrease thirst of player by 4;
-		if thirst of player < 0, now thirst of player is 0;
+		PlayerDrink 4;
 	if T is 5:
 		say "     The first taste of the unsavory drink immediately makes you spit it out. Coughing and hacking the putrid tasting beverage back up you completely miss out on the fact that Harold has jumped back out of the way so as not to be splashed by your [']review['] of his latest concoction. 'No good, huh?' the unicorn asks somewhat nervously and it takes everything in you to keep from telling the equine man off. Placing the wine glass back down onto the bar you gaze at the disgusting pink liquor for a second before informing Harold of your thoughts on his latest concoction. 'I-I see...well I'm sorry about that. Guess, I need to work on it some more?' Harold asks nervously after reaching up to stroke his long pearlescent horn somewhat sheepishly.";
-		decrease thirst of player by 1;
-		if thirst of player < 0, now thirst of player is 0;
+		PlayerDrink 1;
 	if T is 6:
 		say "     The first taste of the drink has you pulling back and then staring at Harold somewhat incredulously. The big unicorn blinks at you in some confusion and prepares to open his muzzle to ask what the matter is, but you beat him to the punch as you ask him how much alcohol he put into this unknown beverage. 'About the same amount you'll find in your average Piña colada. Why? Is it too strong?' You look to the unicorn and then down to the pink alcoholic concoction in front of you before bringing your thumb and forefinger fingers up to pinch them together ever so slightly. The unicorn apologetically sighs and then nods his head, but when he tries to get the drink back from you, you are already downing the wine glass so as to polish off the rest. Harold whickers happily once you set the glass onto the bar and you nod at the man before turning to go about your business, stumbling just a tad bit as you do.";
 		increase thirst of player by 2;
@@ -122,8 +119,8 @@ to say drinkflavor:
 		attempttowait;
 		weakrandominfect;
 		infect;
-		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		SanLoss 5;
+		PlayerDrink 5;
 	now lastrandomharold is turns;
 
 
@@ -296,7 +293,7 @@ carry out Aledrinking:
 		infect "Black Equinoid";
 		infect "Black Equinoid";
 		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
 Beerdrinking is an action applying to nothing.
@@ -315,7 +312,7 @@ carry out Beerdrinking:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a frothing mug of dark, spicy smelling beer in front of you. Raising your mug to Harold, you take a long drink, the rich, flavorful beer going down easily. Its smooth taste evokes images of wolves partying and hunting in packs. Draining the mug, you nod with appreciation as you set it back down on the bar. You find yourself grinning with amusement as you note that the canny bartender already has another mug of the frothy beer set out on the bar for you. Saluting him again with your glass, you drink some more of the amazingly smooth beer as you enjoy the sights of the busy club. A pleasant buzz starts to set in, even as you realize that your body is beginning to change slightly. Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
 		andrewinfect;
 		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
 
@@ -336,7 +333,7 @@ carry out Chaserdrinking:
 		infect "cheetah woman";
 		infect "cheetah woman";
 		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
 
@@ -359,7 +356,7 @@ carry out Delightdrinking:
 		infect "Succubus";
 		infect "Succubus";
 		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
 
@@ -380,7 +377,7 @@ carry out Gryphondrinking:
 		infect "Hermaphrodite Gryphon";
 		infect "Hermaphrodite Gryphon";
 		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
 Heavendrinking is an action applying to nothing.
@@ -400,7 +397,7 @@ carry out Heavendrinking:
 		infect "Harpy";
 		infect "Harpy";
 		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
 
@@ -421,7 +418,7 @@ carry out Specialdrinking:
 		infect "Satyr";
 		infect "Satyr";
 		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
 
@@ -443,7 +440,7 @@ carry out pintdrinking:
 		infect "Panda";
 		infect "Panda";
 		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
 
@@ -465,7 +462,7 @@ carry out Lagerdrinking:
 		infect "Jaguar";
 		infect "Jaguar";
 		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
 
@@ -487,7 +484,7 @@ carry out Sabredrinking:
 		infect "Sabretooth";
 		infect "Sabretooth";
 		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
 
@@ -508,7 +505,7 @@ carry out Rumdrinking:
 		infect "Chocolate Lab";
 		infect "Chocolate Lab";
 		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
 
@@ -529,7 +526,7 @@ carry out Vodkadrinking:
 		infect "Zebra";
 		infect "Zebra";
 		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
 
@@ -550,7 +547,7 @@ carry out Tequiladrinking:
 		infect "Tigress Hooker";
 		infect "Tigress Hooker";
 		decrease humanity of player by 5;
-		decrease thirst of player by 5;
+		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
 Harold ends here.

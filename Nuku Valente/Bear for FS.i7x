@@ -67,8 +67,8 @@ to say ursine attack:
 		if libido of player < 0, now libido of player is 0;
 	else:
 		say "She hugs you against her honey-scented body and presses you deep into her warm dark fur. Through the dark fur you hear her sigh. 'Why must we always fight so?' You feel her nipples leaking honeyed milk and it feels natural to suck at them. Incredibly sweet milk flows into your mouth and into your body, each sweet spurt making you more and more aroused. You feel if you can just get enough milk you can cum over and over. You move from one dark nipple to the next and suck and suck to get more milk. You can hear the bear purring deeply with pleasure. Your hand snakes down between the bears huge thighs as yous suckle and you rub her drenched slippery pussy increasing the flow of milk. You can feel and taste her orgasm approaching. With one last big spurt of milk into your mouth you both orgasm hard. Feeling somewhat refreshed and with a feeling of great satisfaction, you head on your way.";
-		decrease thirst of player by 3;
-		decrease hunger of player by 2;
+		PlayerDrink 3;
+		PlayerEat 2;
 		increase morale of player by 2;
 		decrease libido of player by 6;
 		increase HP of player by 5;

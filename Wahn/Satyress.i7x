@@ -194,7 +194,7 @@ The usedesc of Satyress Wine is "[SatyressWineUsing]";
 
 to say SatyressWineUsing:
 	say "Taking out the cup with its small mouthful of dark wine, you swirl the liquid around in the cup for a second then toss it back, gasping as the heady wine burns its way down your throat and makes your head spin. That's definitely the good stuff!";
-	decrease thirst of player by 10;
+	PlayerDrink 10;
 
 instead of sniffing Satyress Wine:
 	say "The wine is aromatic and quite powerful. And after everything you've seen in this strange city, you could definitely go for a drink.";
