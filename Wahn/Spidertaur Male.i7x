@@ -317,8 +317,6 @@ to say AeliasDesc:
 instead of sniffing Aelias:
 	say "     Aelias has a nice smell, strong and masculine, with a bit of a spicy undertone.";
 
-
-
 Instead of fucking Aelias:
 	setmonster "Spidertaur";
 	choose row monster from the table of random critters;
