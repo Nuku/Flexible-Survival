@@ -5169,6 +5169,7 @@ Include Alien Felinoid by Damaged.
 Include Alpha Husky by Sarokcat.
 Include Alpha Wolf by Sarokcat.
 Include Amazonian for FS by Stripes.
+Include Ancient Tentacles by Dys.
 Include Anime Babe for FS by Stripes.
 Include Anthro Shaft Beast for FS by Guest Writers.
 Include Arctic Fox by Sarokcat.
