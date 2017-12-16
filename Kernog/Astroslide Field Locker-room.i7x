@@ -263,6 +263,7 @@ to say GorillaTeamSex3: [chain fuck]
 
 [Events]
 PeepingRoman is a situation.
+The sarea of PeepingRoman is "Nowhere".
 
 instead of going to Astroslide Field Locker-room while (PeepingRoman is not resolved and Furry is not banned and Furry is not warded and a random chance of 1 in 3 succeeds):
 	move player to Astroslide Field Locker-room;

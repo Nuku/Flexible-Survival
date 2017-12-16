@@ -5055,7 +5055,7 @@ Include Tyr's Club by Kaleem mcintyre.
 Include Underwater Zone For Fs by Hellerhound.
 Include Urban Forest For Fs by Stripes.
 Include Zephyr Inc by Nuku Valente.
-Include Zoo by Hellerhound.
+Include Zoo by Wahn.
 
 [Quests & Events]
 Include AG Beach Events by Aureas Gigas.

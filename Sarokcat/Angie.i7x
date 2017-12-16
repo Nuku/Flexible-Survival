@@ -297,7 +297,6 @@ to say AngieTalkMenu:
 			say "[title entry]: [description entry]?";
 			if player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if (nam is "Ask about her past"):
 					say "[AngieTalk1]";
@@ -338,6 +337,7 @@ to say AngieTalk1:   [talking about her past]
 			say "     Angie explains 'There were some reports about strange occurrences on the radio the morning of the day everything went to hell, but I didn't listen too closely and just switched over to some nice music. Who was I to know what would happen next...'";
 		-- 4:
 			say "     Angie muses 'I think us zookeepers must have been the first to be transformed, with almost everyone in the animal enclosures when this chaos started. Or maybe it was someone in the petting zoo area - I can only imagine the scenes when the animals suddenly started petting back...'";
+			
 to say AngieTalk2: 		[talking about the zoo]
 	if AngieTalk is 0:   [giving the player a reward medkit in here]
 		say "     Looking around in the gift-shop, Angie says 'It's sad to see this place is in such a state, still it's no surprise considering what the rest of the Zoo is like.' She sighs wistfully as she looks over the devastation before turning her golden eyes back to you. 'Thanks again for your help out there, I really appreciate it,' Angie says, a grateful smile crossing her muzzle. 'I'm still getting used to all the changes, both in me and in the Zoo itself, but I'll help you out any way I can to pay you back for earlier. There might still be some useful supplies out in the zoo as well.' She pats her forehead with a paw and says, 'Oh, that reminds me - I recovered a couple med-kits from the employees room. You should take one of them,' she says, then she hands you a medkit.";

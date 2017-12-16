@@ -54,4 +54,4 @@ to say TentaclesFirstRead:
 	now TomeInteractions is 2;
 	now TomeEventPending is true;
 
-Ancient Tnetacles ends here.
+Ancient Tentacles ends here.
