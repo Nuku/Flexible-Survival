@@ -555,7 +555,7 @@ to say DoranSexMenu: [Doran Sex Protocol]
 		say "[DoranRoleplayProtocol]"; [Doran Roleplay Sex Protocol]
 	else if DoranAutofired is true:
 		say "[DoranAutoSexProtocol]";
-	else if DoranRole is 0 or (DoranRole is 1 and DoranNeutralRole is 1): [Dom sex pool]
+	else if DoranRole < 1 or (DoranRole is 1 and DoranNeutralRole is 1): [Dom sex pool]
 		now DoranPlayerCumFilled is false;
 		now DoranCumFilled is false;
 		now DoranAnnoyed is false;
@@ -2429,25 +2429,25 @@ carry out DoranRequest:
 		while trixieexit is 0:
 			dorangendercheck;
 			say "[bold type]Options:[roman type][line break]";
-			say "(1) [link]Sexual Position[as]1[end link] - [bold type][if DoranRole is 0]Dominant[else if DoranRole is 2]Submissive[else]Neutral[end if][roman type][line break]";
+			say "(1) [link]Sexual Position[as]1[end link] - [bold type][if DoranRole is 0]Dominant[else if DoranRole is 2]Submissive[else if DoranRole is -1]Dominant (LOCKED)[else]Neutral[end if][roman type][line break]";
 			say "(2) [link]Your Regarded Gender[as]2[end link] - [bold type][if DoranPlayerGenderRegard is true]Female[else]Male[end if][roman type][line break]";
-			say "(3) [link]Doran's Regarded Gender[as]3[end link] - [bold type][if DoranSelfGender is true]Female[else]Male[end if][roman type][line break]";
-			say "(4) [if DoranRoleIntensity is not 0]Interaction Locked - Requires Max Domination[else][link]Sex Auto-fire[as]4[end link] - [end if][bold type][if DoranAutofireIntensity is 1 and DoranRoleIntensity is 0]Strict[else if DoranAutofireIntensity is 2 and DoranRoleIntensity is 0]Loose[else if DoranRoleIntensity is 0]Off[end if][roman type][line break]";
+			say "(4) [link]Doran's Regarded Gender[as]3[end link] - [bold type][if DoranSelfGender is true]Female[else]Male[end if][roman type][line break]";
+			say "(5) [if DoranRoleIntensity is not 0]Interaction Locked - Requires Max Domination[else][link]Sex Auto-fire[as]4[end link] - [end if][bold type][if DoranAutofireIntensity is 1 and DoranRoleIntensity is 0]Strict[else if DoranAutofireIntensity is 2 and DoranRoleIntensity is 0]Loose[else if DoranRoleIntensity is 0]Off[end if][roman type][line break]";
 			say "[line break]";
 			say "[bold type]Requests:[roman type][line break]";
 			if DoranTitModStatus > 1:
-				say "(5) [link]Breastfeed[as]5[end link] - Feed off Doran[line break]";
+				say "(6) [link]Breastfeed[as]5[end link] - Feed off Doran[line break]";
 			else:
-				say "(5) [link]Scavenge[as]5[end link] - Request Doran's aid[line break]";
-			say "(6) [if DoranDiscussionProgress < 2]Interaction Locked - Try Discussing with Doran[else][link]Roleplay Session[as]6[end link][end if][bold type][if DoranRoleplayInSession > 0] - Roleplay Queued[end if][roman type][line break]";
-			say "(7) [link]Body Modification[as]7[end link][if DoranTitModStatus > 0 or DoranBallModStatus > 0] - [end if][if DoranTitModStatus > 0][bold type]+Breasts [roman type][end if][if DoranBallModStatus > 0 and DoranInternal is false][bold type]+Balls[roman type][else if DoranBallModStatus > 0 and DoranInternal is true][bold type]+Cum[roman type][end if][line break]";
-			say "(8) [link]Vore Extension[as]8[end link] - [bold type][if DoranVoreStatus is 0]Uninquired[else if DoranVoreStatus is 2]Active[else]Inactive[end if][roman type] [italic type][if DoranVoreStatus is 2 and scalevalue of player > 3]Player too large![else if DoranVoreStatus is 2 and DoranRole is 2]Doran is Submissive![end if][roman type][line break]";
+				say "(6) [link]Scavenge[as]5[end link] - Request Doran's aid[line break]";
+			say "(7) [if DoranDiscussionProgress < 2]Interaction Locked - Try Discussing with Doran[else][link]Roleplay Session[as]6[end link][end if][bold type][if DoranRoleplayInSession > 0] - Roleplay Queued[end if][roman type][line break]";
+			say "(8) [link]Body Modification[as]7[end link][if DoranTitModStatus > 0 or DoranBallModStatus > 0] - [end if][if DoranTitModStatus > 0][bold type]+Breasts [roman type][end if][if DoranBallModStatus > 0 and DoranInternal is false][bold type]+Balls[roman type][else if DoranBallModStatus > 0 and DoranInternal is true][bold type]+Cum[roman type][end if][line break]";
+			say "(9) [link]Vore Extension[as]8[end link] - [bold type][if DoranVoreStatus is 0]Uninquired[else if DoranVoreStatus is 2]Active[else]Inactive[end if][roman type] [italic type][if DoranVoreStatus is 2 and scalevalue of player > 3]Player too large![else if DoranVoreStatus is 2 and DoranRole is 2]Doran is Submissive![end if][roman type][line break]";
 			say "[line break]";
 			say "(0) [link]Exit[as]0[end link][line break]";
 			while 1 is 1:
-				say "Choice? (0-8)>[run paragraph on]";
+				say "Choice? (0-9)>[run paragraph on]";
 				get a number;
-				if calcnumber >= 0 and calcnumber <= 8:
+				if calcnumber >= 0 and calcnumber <= 9:
 					break;
 				else:
 					say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
@@ -2455,31 +2455,31 @@ carry out DoranRequest:
 				say "[DoranPosition]"; [Demeanour Option]
 			else if calcnumber is 2:
 				say "[DoranPlayerGenderSetting]"; [Player Gender Option]
-			else if calcnumber is 3:
-				say "[DoranGenderSetting]"; [NEW! Doran's Gender Option]
 			else if calcnumber is 4:
-				if DoranRole is 0 and DoranRoleIntensity is 0:
+				say "[DoranGenderSetting]"; [NEW! Doran's Gender Option]
+			else if calcnumber is 5:
+				if DoranRole < 1 and DoranRoleIntensity is 0:
 					say "[DoranAutofireSetting]"; [Sex Auto-fire]
 				else:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
-			else if calcnumber is 5:
-				say "[DoranGetFood]"; [Food Requisition/NEW! Breastfeeding]
 			else if calcnumber is 6:
+				say "[DoranGetFood]"; [Food Requisition/NEW! Breastfeeding]
+			else if calcnumber is 7:
 				if DoranDiscussionProgress < 2:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 				else:
 					say "[DoranRPMenu]"; [Roleplay Session]
-			else if calcnumber is 7:
-				say "[doropt_6]"; [New! Body Modification]
 			else if calcnumber is 8:
-				say "[doropt_4]"; [Vore Implementation]
+				say "[DoranBodyModMenu]"; [New! Body Modification]
+			else if calcnumber is 9:
+				say "[DoranVoreMenu]"; [Vore Implementation]
 			else:
-				say "[doropt_0]"; [End]
+				say "[DoranRequestExit]"; [End]
 				now trixieexit is 1;
 
 
 
-to say doropt_6: [NEW! Body Modification]
+to say DoranBodyModMenu: [NEW! Body Modification]
 	say "     Considering the way the world is right now, you ponder the possibility of altering Doran's physical attributes. You presume you'll need some sort of infected item to cause the desired change. Doran looks at you quizzically.";
 	let trixieexit be 0;
 	while trixieexit is 0:
@@ -2563,7 +2563,7 @@ to say doropt_6: [NEW! Body Modification]
 							say "     You consider offering some tainted seed to Doran again, who grins at the display.";
 							say "     'Ah, [DoranPlayerRegard] has reconsidered, by the looks of it! As I said before, I suppose a particularly virile strain of seed would augment my own. I imagine it'd take a lot longer to clean up the messes afterwards! [if DoranInternal is false]I'm guessing it would also alter the size of certain 'assets', as an additional side effect.[run paragraph on][end if] Does this prospect excite [DoranPlayerRegard]?'";
 						if player consents:
-							say "[dormod_1]"; [Modify Balls/Cum]
+							say "[DoranModBallsMenu]"; [Modify Balls/Cum]
 							delete tappeditem;
 						else:
 							say "     'Very well, [DoranPlayerRegard]. Don't be afraid to ask me about it again if you change your mind.'";
@@ -2628,7 +2628,7 @@ to say doropt_6: [NEW! Body Modification]
 							say "     You consider offering some milk to Doran again.";
 							say "     'Hm? ...Oh! This again. Yes, I'm certain these will give me breasts, if that's what [DoranPlayerRegard] wishes.'";
 						if player consents:
-							say "[dormod_2]"; [Modify Tits]
+							say "[DoranModTitsMenu]"; [Modify Tits]
 							delete tappeditem;
 						else:
 							say "     'Very well, [DoranPlayerRegard]. Don't be afraid to ask me about it again if you change your mind.'";
@@ -2646,13 +2646,13 @@ to say doropt_6: [NEW! Body Modification]
 				else:
 					say "     'Ah, yes. I can have [if DoranInternal is true]exposed[else]hidden[end if] naughty bits with this coin, if that's what [DoranPlayerRegard] wants. Is it?'";
 				if player consents:
-					say "[dormod_3]";
+					say "[DoranModInternalMenu]";
 				else:
 					say "     'Very well, [DoranPlayerRegard]. Don't be afraid to ask me about it again if you change your mind.'";
 		else:
 			now trixieexit is 1;
 
-to say dormod_1: [Modify Balls/Cum]
+to say DoranModBallsMenu: [Modify Balls/Cum]
 	now DoranBallModStatus is 1;
 	if DoranInternal is true:
 		say "     Taking the container, [ghe] briefly inspects it before consuming its entire contents. Groaning softly, there doesn't appear to be any immediate visual differences...";
@@ -2700,7 +2700,7 @@ to say dormod_1: [Modify Balls/Cum]
 			say "     '...I imagine any more of the stuff will have no effect, or else become exceedingly inconvenient. [DoranPlayerRegard] is such a slut, I imagine they're happy simply to enjoy more of their [gdragon]'s seed!' Slowly sitting back down, [ghe] briefly adjusts [ghim]self to handle the alteration.";
 
 
-to say dormod_2: [Modify Tits]
+to say DoranModTitsMenu: [Modify Tits]
 	say "     You hand the container to the [gdragon], who briefly considers drinking it before returning [ghis] attention to you.";
 	say "     '...Er, slight question... Do you think a reptile should be able to lactate?'";
 	if player consents:
@@ -2749,7 +2749,7 @@ to say dormod_2: [Modify Tits]
 		else:
 			say "eventually choosing to sit back down next to the fire before [ghe] continues [ghis] curious inspection.";
 
-to say dormod_3: [Internal/External Genitals]
+to say DoranModInternalMenu: [Internal/External Genitals]
 	say "     [one of]Taking the coin, Doran takes a moment to inspect it before flipping[or]Taking the coin once more, Doran carefully flips[stopping] it. It lands on the ground with an audible clank";
 	if DoranInternal is true:
 		say ", leaf-side up. [gche] wheels around to give you a clear view of [ghis] nethers, groaning softly as a pair of[if DoranBallModStatus > 0] oversized[end if] balls bulge out from between [ghis] legs, filling out nicely while an ill-fitting sheath grows out from [ghis] scaled slit, barely able to contain [ghis][if DoranBallModStatus > 0] perpetually-drooling[end if] cock. The growth gradually subsides until [ghe]'s left with a full set of exposed genitals.";
@@ -2760,7 +2760,7 @@ to say dormod_3: [Internal/External Genitals]
 	say "     'Whew! I'm a little worn out after all that. It may take a few days before I'm fully recovered, should [DoranPlayerRegard] decides to change me that way again!'";
 	now DoranLastInternalMod is turns;
 
-to say dorspec_1: [Breastfeeding scene]
+to say DoranBreastfeeding: [Breastfeeding scene]
 	if DoranRoleIntensity is 0:
 		say "     You practically don't have to say anything before Doran grabs a hold of you and buries your face between [ghis] ample, scaled cleavage.";
 		say "     '[one of]Tsk[or]Hmpf[or]Well[at random], [one of]Drink[or][DoranPlayerRegard] needs their [gdragon]'s milk[or]I shouldn't let [DoranPlayerRegard] leave the cave if they're just going to go hungry[at random]!' Scolding you, likely for the mere joy of being able to, [ghe] eventually lets you pull back just enough so [ghe] can press your face firmly against one of [ghis] breasts. Quite firm, the dripping nipple yields well enough against your lip's embrace.";
@@ -2879,7 +2879,7 @@ to say DoranPlayerGenderSetting: [Gender Option]
 to say DoranGetFood: [Food requisition/NEW! Breastfeeding]
 	if DoranFoodTimer - turns >= 16:
 		if DoranTitModStatus > 1:
-			say "[dorspec_1]"; [Breastfeeding scene]
+			say "[DoranBreastfeeding]"; [Breastfeeding scene]
 		else:
 			if DoranFoodType is 1:
 				say "     'Ah, yes! I found some water, maybe it will help [DoranPlayerRegard]?' [gche] hands it over to you.";
@@ -2978,12 +2978,12 @@ to say DoranGenderSetting: [NEW! Doran's regarded gender]
 			else:
 				say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
 
-to say doropt_0: [End]
+to say DoranRequestExit: [End]
 	say "     '[one of]Don't be afraid to ask of me anything[or]I'll be here[or]Come again[at random], [DoranPlayerRegard].'";
 
 Chapter 3.6.1 - Vore Option Extension
 
-to say doropt_4: [Doran Vore Extension]
+to say DoranVoreMenu: [Doran Vore Extension]
 	if DoranVoreStatus is 0:
 		if DoranRole is 2:
 			say "     You get the impression that such a request would only be ideal if Doran was in a dominant position. You may want to ask [ghim] to be in such a position first, if you're interested in this particular thing.";

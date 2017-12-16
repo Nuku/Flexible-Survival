@@ -40,7 +40,7 @@ instead of going to College Walkway East while (Pregnant Friend is not resolved 
 	move player to College Walkway East;
 	PregnantFriendEvent;
 
-Instead of resolving Pregnant Friend:
+Instead of resolving a Pregnant Friend:
 	PregnantFriendEvent;
 
 to PregnantFriendEvent:
@@ -61,7 +61,7 @@ instead of going to Athletic Street while (CatsVSDogs is not resolved and LastCa
 	move player to Athletic Street;
 	CatsVSDogsEvent;
 
-Instead of resolving CatsVSDogs:
+Instead of resolving a CatsVSDogs:
 	CatsVSDogsEvent;
 
 to CatsVSDogsEvent:
@@ -87,7 +87,7 @@ instead of going to College Fountain while (SharkFountain is not resolved and La
 	move player to College Fountain;
 	SharkFountainEvent;
 
-Instead of resolving SharkFountain:
+Instead of resolving a SharkFountain:
 	SharkFountainEvent;
 
 to SharkFountainEvent:
@@ -97,26 +97,27 @@ to SharkFountainEvent:
 	else if SharkFountainCounter is 2:
 		let randomnumber be a random number from 1 to 2;
 		say "     It's getting late and there only seems to be one person around at the fountain as you approach it. A [if randomnumber is 1]female[else]male[end if] husky sits on the side of large structure, scribbling on a notepad. Just like earlier, the same shark anthro circles in the water of the fountain and bursts through the surface, but this time he grabs [if randomnumber is 1]her[else]him[end if] and drags [if randomnumber is 1]her[else]him[end if] in. You rush over, thinking to save [if randomnumber is 1]her[else]his[end if] life, but as you approach you see them lying in the water, the shark's twin shafts [if randomnumber is 1]each taking one hole, with his 'victim' moaning in euphoric pleasure. [else]squeezed together, being shoved into the husky's ass while the anthro dog is moaning in pleasure. [end if]You decide to leave them to it.[if humanity of player <= 50] Seeing the two of them go at it makes you wonder what those dual shafts could do for you...[end if]";
+		now SharkFountain is resolved;
 	now LastCampusWalkin is turns;
 
-Naiad in the Fountain is a situation.
-The sarea of Naiad in the Fountain is "Campus".
+Fountain Naiad is a situation.
+The sarea of Fountain Naiad is "Campus".
 
 when play begins:
-	add Naiad in the Fountain to badspots of girl;
+	add Fountain Naiad to badspots of girl;
 
-instead of going to College Fountain while (Naiad in the Fountain is not resolved and LastCampusWalkin - turns > 0):
+instead of going to College Fountain while (Fountain Naiad is not resolved and LastCampusWalkin - turns > 0):
 	move player to College Fountain;
 	NaiadFountainEvent;
 
-instead of resolving Naiad in the Fountain:
+instead of resolving a Fountain Naiad:
 	NaiadFountainEvent;
 
 to NaiadFountainEvent:
 	say "     Walking along the campus grounds you come across a large fountain still shooting streaks of water into the air before falling back down into a large pool below. Taking a moment to appreciate the sight you gaze into the waterfall of flowing liquid and see a most unusual sight. There in the fountain, naked as the day she was born is a strikingly beautiful young woman with long blond hair. She raises her arms as the water cascades over her flawless skin and perky breasts. She is seemingly content with her public bath as she catches your gaze through the flowing water.";
 	say "     Giving a wink and turning around to show her gropable cheeks off she runs her hands over her firm buns as you feel your arousal flaring up. You're not the only to notice either, a few other campus goers have stopped what they were doing to ogle the bathing beauty. A few even start to stroke stiffening members or finger moistening lips in their trousers as they watch. You're half-tempted to do the same as your eyes are transfix on this unnaturally gorgeous woman bathing in public. Barely managing to pull your gaze away from her luscious figure you see many others entirely hypnotized by her soaking pale body, noticing a few of the onlookers inching closer to the fountain's edge. Deciding it's probably best to move on before this gets out of hand you turn around and leave the woman to her bath and adoring audience.";
 	now LastCampusWalkin is turns;
-	now Naiad in the Fountain is resolved;
+	now Fountain Naiad is resolved;
 
 Campus Racing is a situation.
 Campus Racing is resolved.
@@ -126,7 +127,7 @@ instead of going to Athletic Street while (Campus Racing is not resolved and Las
 	move player to Athletic Street;
 	CampusRacingEvent;
 
-instead of resolving Campus Racing:
+instead of resolving a Campus Racing:
 	CampusRacingEvent;
 
 to CampusRacingEvent:
@@ -158,7 +159,7 @@ instead of going to College Walkway Northwest while (Frat Party Recruiter is not
 	move player to College Walkway Northwest;
 	FratPartyRecruiterEvent;
 
-instead of resolving Frat Party Recruiter:
+instead of resolving a Frat Party Recruiter:
 	FratPartyRecruiterEvent;
 
 to FratPartyRecruiterEvent:
@@ -277,7 +278,7 @@ instead of going northeast from College Walkway Northwest while (Course Advice i
 instead of going northwest from College Walkway Northeast while (Course Advice is not resolved):
 	AdminIntro;
 
-instead of resolving Course Advice:
+instead of resolving a Course Advice:
 	AdminIntro;
 
 to AdminIntro:
@@ -523,7 +524,7 @@ instead of going to College Campus Entrance while (Campus Patrol is not resolved
 	move player to College Campus Entrance;
 	CampusPatrolEvent;
 
-Instead of resolving Campus Patrol:
+Instead of resolving a Campus Patrol:
 	CampusPatrolEvent;
 
 to CampusPatrolEvent:

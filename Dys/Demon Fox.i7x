@@ -9,8 +9,15 @@ Version 1 of Demon Fox by Dys begins here.
 [   30 = encountered and fled                                             ]
 [   40 = encountered and won, but refused sex                             ]
 [   41 = encountered and won, let him fuck you                            ]
+[ DemonFoxInteractions tracks the number of times the player interacted     ]
+[ with the demon fox.                                                       ]
+[ DemonFoxRead indicates whether or not the player has read about the       ]
+[ demon fox.                                                                ]
+
 
 DemonFoxStatus is a number that varies. DemonFoxStatus is usually 0.
+DemonFoxInteractions is a number that varies. DemonFoxInteractions is usually 0.
+DemonFoxRead is a truth state that varies. DemonFoxRead is usually false.
 
 Section 0 - Flags
 
@@ -118,6 +125,51 @@ demon fox fur is infectious. The strain of demon fox fur is "Demon Fox".
 
 Section 4 - Tome Specific Scenes
 
+to say DemonFoxMenu:
+	say "     You recite the incantation shown in the book, albeit with a little difficulty. With a flash of light, you see the demon fox from before standing in front of you.";
+	if DemonFoxStatus is 10:
+		say "     'Well, if it isn't my pet from before...' the beast purrs out. 'You gonna try fighting me again? If so, I'm really not in the mood. I hate to break it to you, but I'm actually not always interested in sex and fighting.' You blink at him incredulously. 'I'm really not. It might have appeared that way from our first encounter, but I'll be the first to admit that I... didn't make a great first impression.'";
+		say "     'Perhaps we can try this again. I'm Kal['] Ren, but you can just call me Ren,' he nods in introduction. Tentatively you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I do believe that's enough chit-chat for now. Perhaps sometime in the future we can have another go.' With that, the fox disappears in another flash of light, leaving you slightly confused at everything that just transpired.";
+		now DemonFoxStatus is 11; [met after losing to him, he apologized]
+		now TomeTimer is turns;
+	else if DemonFoxStatus is 11 or DemonFoxStatus is 21 or DemonFoxStatus is 31 or DemonFoxStatus is 42:
+		say "     Ren looks over you before he shakes his head. 'I already told you, kid, I'm not looking for another go just yet. Maybe sometime in the future.' With that abrupt dismissal, the fox disappears once more.";
+	else if DemonFoxStatus is 20:
+		say "     'Well, if it isn't my pet from before...' the beast purrs out. 'You wanna try actually fighting me this time? If so, I'm really not in the mood. I hate to break it to you, but I'm actually not always interested in sex and fighting.' You blink at him incredulously. 'I'm really not. It might have appeared that way from our first encounter, but I'll be the first to admit that I... didn't make a great first impression.'";
+		say "     'Perhaps we can try this again. I'm Kal['] Ren, but you can just call me Ren,' he nods in introduction. Tentatively you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I do believe that's enough chit-chat for now. Perhaps sometime in the future we can have another go.' With that, the fox disappears in another flash of light, leaving you slightly confused at everything that just transpired.";
+		now DemonFoxStatus is 21; [met after submitting, he apologized]
+		now TomeTimer is turns;
+	else if DemonFoxStatus is 30:
+		say "     'Well, if it isn't the kit from before...' the beast purrs out. 'You gonna run away again? If so, I hate to break it to you, but I'm actually not always interested in sex and fighting.' You blink at him incredulously. 'I'm really not. It might have appeared that way from our first encounter, but I'll be the first to admit that I... didn't make a great first impression.'";
+		say "     'Perhaps we can try this again. I'm Kal['] Ren, but you can just call me Ren,' he nods in introduction. Tentatively you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I do believe that's enough chit-chat for now. Perhaps sometime in the future we can have another go.' With that, the fox disappears in another flash of light, leaving you slightly confused at everything that just transpired.";
+		now DemonFoxStatus is 31; [met after fleeing, he apologized]
+		now TomeTimer is turns;
+	else if DemonFoxStatus is 40 or DemonFoxStatus is 41:
+		say "     'Well, if it isn't you,' the demon greets in a surprisingly happy tone. 'You know, it's rare for a mortal to beat me in combat, but you managed it, amazingly. I respect you for that,' he says. 'The name's Kal['] Ren, by the way. You can just call me Ren.' You tentatively introduce yourself as well.";
+		say "     'I know I said you could summon me if you were ever in the mood for a good breeding, but funnily enough, I'm actually not really feeling up to it right now. Sorry to say that.' He hesitates for just a moment before continuing, 'Maybe sometime in the future, though. I'll admit that you've piqued my interest.' Without giving you a chance to reply, he disappears in a flash of light, leaving you somewhat dumbfounded at the whole interaction.";
+		now DemonFoxStatus is 42;
+		now TomeTimer is turns;
+
+to say DemonFoxFirstEncounter:
+	say "     Out of nowhere, you're tackled to the ground! A large weight is pressing down upon your back and feel the hot breath of something along the back of your neck. Pinned as you are, you're unable to get a good look at your assailant, even as you feel sharp claws rip through your clothing, leaving you fully exposed to whatever it is that's attacking you. Suddenly, you feel a long, fluffy object wrapping around your midsection before it hoists you into the air, tossing you back onto the ground on your back. You're eyes widen and you let out a gasp as you see the huge demonic fox you read about earlier standing over you.";
+	say "     Before you get a chance to react, the fox has you pinned once more, its massive forepaws pinning you to the ground as it snarls in your face. 'Seems like I've finally got something to play with,' he says, surprising you slightly. 'I'm going to enjoy [if player is mpreg_ok]breeding[else]fucking[end if] you like the bitch you [if player is submissive]are[else]should be[end if].'";
+	WaitLineBreak;
+	say "     Mustering your strength, you manage to throw the beast off of you, causing him to let out a surprised grunt. You quickly scramble to your feet and ready yourself for a fight. 'Oh, so you're a feisty one, eh?' he asks, licking his chops and narrowing his eyes at you. 'I like that...'";
+	now inasituation is true;
+	challenge "Demon Fox";
+	if fightoutcome >= 20 and fightoutcome <= 30: [lost or submitted]
+		if HP of player > 0: [submitted]
+			say "[DemonFoxFirstSubmit]";
+		else: [lost]
+			say "[DemonFoxFirstLoss]";
+	else if fightoutcome > 30: [fled]
+		say "[DemonFoxFirstFlee]";
+	else if fightoutcome < 20: [player won]
+		say "[DemonFoxFirstVictory]";
+	now inasituation is false;
+	now DemonFoxInteractions is 1;
+	UpdateTomeEventPending;
+
 to say DemonFoxFirstLoss:
 	setmonster "Demon Fox";
 	say "     Now that he's beaten the fight out of you, the demon fox pins you once more, his heavy weight pressing down onto you. 'You should've just submitted. Now I'm going to have to punish you,' he growls out. It's then that you notice his entire body expanding, growing large enough to make you look rather small. Only a single paw rests on your chest now, as that's all he needs to keep you in place. He cocks his head to the side, contemplating his next move. Suddenly, you feel one of his long tails wrapping around your torso, lifting you into the air. He roughly tosses you down stomach first before his paw finds its place on your back once more, forcing your head down and your ass up.";
@@ -176,5 +228,11 @@ to say DemonFoxFirstVictory:
 		say "     You tell the demon that you're simply not interested, and he gives a nod. 'A pity really. You looked like you'd be a fun partner,' he laments. 'I'll respect your wishes, however. If you ever change your mind, you know where to find me.' In a blinding flash of light, the fox is suddenly gone, the tome laying where he once stood.";
 		now DemonFoxStatus is 40; [won, but refused sex]
 	WaitLineBreak;
+
+to say DemonFoxFirstRead:
+	say "     Looking over the page about the fox, you manage to learn a few things. The demon fox is apparently able to change its size to whatever it desires. In addition, its cum is said to glow a bright orange, almost like lava. The fox is also supposedly very possesive and domineering, desiring to have others submitting to it. Anyone who has encountered the beast has reaffirmed that fact. [if cocks of player > 0 and cunts of player is 0]Interestingly[else]Thankfully[end if], it only seem to be attracted to [italic type]males[roman type].";
+	now DemonFoxRead is true;
+	now TomeInteractions is 2;
+	now TomeEventPending is true;
 
 Demon Fox ends here.

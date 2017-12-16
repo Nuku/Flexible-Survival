@@ -1,5 +1,5 @@
 Version 1 of Zephyr Phone by Executaball begins here.
-[Incomplete - Not to be released]
+[v1 - 11/28/2017]
 
 "Adds a Zephyr mobile device to the game for navigation"
 
@@ -8,12 +8,8 @@ Version 1 of Zephyr Phone by Executaball begins here.
 Section 1 - Declarations and variables
 
 emap is a number that varies. emap is usually 0.
-[ 0 = Nav Map for Mall not enabled ]
-[ 1 = Nav Map for Mall is enabled ]
-
-emap_mall is a number that varies. emap is usually 0.
-[ 0 = Nav Map for Mall not enabled ]
-[ 1 = Nav Map for Mall is enabled ]
+[ 0 = Nav Map not enabled ]
+[ 1 = Nav Map is enabled ]
 
 zpc_inzone is a truth state that varies. zpc_inzone is false.
 [ true if player is currenting displaying an image. This is referenced to display the no signal 'error' message when the player leaves ]
@@ -35,6 +31,8 @@ Christmas Village	Figure of emap_mall_christmasvillage_icon
 Mall East Wing	Figure of emap_mall_eastwing_icon
 Mall Foodcourt	Figure of emap_mall_foodcourt_icon
 Mall Foyer	Figure of emap_mall_foyer_icon
+Game Store	Figure of emap_mall_gamestore_icon
+Maintenance Garage	Figure of emap_mall_garage_icon
 Wolverine Guard Station	Figure of emap_mall_guardpost_icon
 Mall Lockerroom	Figure of emap_mall_lockers_icon
 Smith Haven Mall Lot East	Figure of emap_mall_loteast_icon
@@ -46,6 +44,7 @@ The Pretty Kitty	Figure of emap_mall_pkboutique_icon
 Mall Restroom	Figure of emap_mall_restrooms_icon
 Shag Shack Entrance	Figure of emap_mall_shagshack_icon
 Mall West Wing	Figure of emap_mall_westwing_icon
+
 
 [Other]
 [Table of Zpc Location Reference (continued)
@@ -145,6 +144,15 @@ understand "zpc_cheat" as cheat_zpc_give.
 carry out cheat_zpc_give:
 	say "CHEAT: ZPC added to inventory";
 	now carried of zpc is 1;
+
+[Cheat that gives freecred]
+cheat_freecred_give is an action applying to nothing.
+understand "freecred_cheat" as cheat_freecred_give.
+carry out cheat_freecred_give:
+	say "CHEAT: Added 100 freecred.";
+	increase freecred by 200;
+
+
 
 
 Zephyr Phone ends here.

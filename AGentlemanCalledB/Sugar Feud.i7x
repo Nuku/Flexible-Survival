@@ -64,8 +64,8 @@ Instead of resolving a Sugar Shack:
 				end the story saying "Having given in to the sweet, sweet desire, there is nothing left in your head but sugary fluff.";
 			else:
 				say "     Deciding you need to get out of this sickly sweet dream while you still have a mind to, you do your best to shake your head clear of the sugary haze and quickly gather your gear to leave before the sugar glider can recover from her afterglow and tempt you with more sweet fun.";
-				PlayerEat 3;
-				if "Junk Food Junky" is listed in feats of player, PlayerEat 3;
+				decrease hunger of player by 3;
+				if "Junk Food Junky" is listed in feats of player, decrease hunger of player by 3;
 	else:
 		say "     Deciding not to risk spending anymore time with this giggling sugar glider, you push her hand away and make for the exit. As you're leaving the sugar glider blows a long raspberry just before something strikes you sharply in the back of the head. Turning around you see her still sticking her tongue out at you with a cute scowl, having had enough of her silly antics, you pick up the broken pieces of the lollipop she threw at you and leave the stall.";
 		increase carried of crushed candies by 1;
