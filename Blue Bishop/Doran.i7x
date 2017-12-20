@@ -2431,6 +2431,7 @@ carry out DoranRequest:
 			say "[bold type]Options:[roman type][line break]";
 			say "(1) [link]Sexual Position[as]1[end link] - [bold type][if DoranRole is 0]Dominant[else if DoranRole is 2]Submissive[else if DoranRole is -1]Dominant (LOCKED)[else]Neutral[end if][roman type][line break]";
 			say "(2) [link]Your Regarded Gender[as]2[end link] - [bold type][if DoranPlayerGenderRegard is true]Female[else]Male[end if][roman type][line break]";
+			say "(3) [link]Your title[as]3[end link] - [bold type][DoranPlayerRegard][roman type][line break]";
 			say "(4) [link]Doran's Regarded Gender[as]3[end link] - [bold type][if DoranSelfGender is true]Female[else]Male[end if][roman type][line break]";
 			say "(5) [if DoranRoleIntensity is not 0]Interaction Locked - Requires Max Domination[else][link]Sex Auto-fire[as]4[end link] - [end if][bold type][if DoranAutofireIntensity is 1 and DoranRoleIntensity is 0]Strict[else if DoranAutofireIntensity is 2 and DoranRoleIntensity is 0]Loose[else if DoranRoleIntensity is 0]Off[end if][roman type][line break]";
 			say "[line break]";
@@ -2455,6 +2456,8 @@ carry out DoranRequest:
 				say "[DoranPosition]"; [Demeanour Option]
 			else if calcnumber is 2:
 				say "[DoranPlayerGenderSetting]"; [Player Gender Option]
+			else if calcnumber is 3:
+				say "[DoranPlayerTitle]"; [Player Title Options]
 			else if calcnumber is 4:
 				say "[DoranGenderSetting]"; [NEW! Doran's Gender Option]
 			else if calcnumber is 5:
@@ -2478,6 +2481,39 @@ carry out DoranRequest:
 				now trixieexit is 1;
 
 
+to say DoranPlayerTitle:
+	if DoranRole is -1:
+		let calcnumber be 0;
+		say "     You tentatively bring up that you'd like for Doran to call you something other than [DoranPlayerRegard]. The [gdragon] nods in understanding before speaking. 'Well, what shall I call [DoranPlayerRegard], then, hmm?'";
+		LineBreak;
+		say "[link](1)[as]1[end link] - Pet.";
+		say "[link](2)[as]2[end link] - Slave.";
+		say "[link](3)[as]3[end link] - Bitch.";
+		say "[link](4)[as]4[end link] - Master / Mistress.";
+		while calcnumber < 1 or calcnumber > 4:
+			say "Choice? (1-4)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 1 and calcnumber <= 4:
+				break;
+			else:
+				say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
+		if calcnumber is:
+			-- 1:
+				now DoranPlayerRegard is "Pet";
+			-- 2:
+				now DoranPlayerRegard is "Slave";
+			-- 3:
+				now DoranPlayerRegard is "Bitch";
+			-- 4:
+				if cocks of player > 0 and cunts of player is 0:
+					now DoranPlayerRegard is "Master";
+				else if cocks of player is 0 and cunts of player > 0:
+					now DoranPlayerRegard is "Mistress";
+				else:
+					now DoranPlayerRegard is "Master";
+		say "     Very well, then! It is done, [DoranPlayerRegard]!";
+	else:
+		say "     You briefly consider asking Doran to call you something else, but change your mind after a bit of deliberation. Maybe once you get him in a more dominant mood you can ask him.";
 
 to say DoranBodyModMenu: [NEW! Body Modification]
 	say "     Considering the way the world is right now, you ponder the possibility of altering Doran's physical attributes. You presume you'll need some sort of infected item to cause the desired change. Doran looks at you quizzically.";
@@ -2859,22 +2895,38 @@ to say DoranPosition: [Demeanour Option]
 		say "     Ah, my [DoranPlayerRegard] does realize they don't have any say it the matter, do they not? Alas, your chance to change your mind has long since passed.";
 
 to say DoranPlayerGenderSetting: [Gender Option]
-	if DoranPlayerGenderRegard is false:
-		say "     'Has something come up? Would [DoranPlayerRegard] prefer to be regarded as a female?'";
-		if player consents:
-			now DoranPlayerGenderRegard is true;
-			now DoranPlayerRegard is "Mistress";
-			say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], I will now regard Master as [DoranPlayerRegard].'";
+	if DoranPlayerRegard is "Master" or DoranPlayerRegard is "Mistress":
+		if DoranPlayerGenderRegard is false:
+			say "     'Has something come up? Would [DoranPlayerRegard] prefer to be regarded as a female?'";
+			if player consents:
+				now DoranPlayerGenderRegard is true;
+				now DoranPlayerRegard is "Mistress";
+				say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], I will now regard Master as [DoranPlayerRegard].'";
+			else:
+				say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
 		else:
-			say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
+			say "     'Has something come up? Would [DoranPlayerRegard] prefer to be regarded as a male?'";
+			if player consents:
+				now DoranPlayerGenderRegard is false;
+				now DoranPlayerRegard is "Master";
+				say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], I will now regard Mistress as [DoranPlayerRegard].'";
+			else:
+				say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
 	else:
-		say "     'Has something come up? Would [DoranPlayerRegard] prefer to be regarded as a male?'";
-		if player consents:
-			now DoranPlayerGenderRegard is false;
-			now DoranPlayerRegard is "Master";
-			say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], I will now regard Mistress as [DoranPlayerRegard].'";
+		if DoranPlayerGenderRegard is true:
+			say "     'Has something come up? Would [DoranPlayerRegard] prefer to be regarded as a male?'";
+			if player consents:
+				now DoranPlayerGenderRegard is false;
+				say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], I will now regard you as a man.'";
+			else:
+				say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
 		else:
-			say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
+			say "     'Has something come up? Would [DoranPlayerRegard] prefer to be regarded as a female?'";
+			if player consents:
+				now DoranPlayerGenderRegard is true;
+				say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], I will now regard you as a woman.'";
+			else:
+				say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
 
 to say DoranGetFood: [Food requisition/NEW! Breastfeeding]
 	if DoranFoodTimer - turns >= 16:
