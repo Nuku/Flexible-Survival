@@ -65,14 +65,14 @@ The description of The Mists is "[LostOceanDesc]".
 To say LostOceanDesc:
 	say "     Floating with your back on the surface of a vast ocean, you see that the sky above is clouded and leaves this place feel rather moody. There is nothing here.";
 	
-as an everyturn rule:
+an everyturn rule:
 	if location of player is Lost Ocean:
 		if tds_tt - turns < 2:
 			say "     Why is there nothing here? Are you... dreaming? This is probably the most vivid dream you've ever had; when you find that you're unable to move you confirm your fear. But... what are you supposed to do?";
 		else if tds_tt - turns < 3:
 			say "     Despite the water feeling real your ears don't feel stuffed with the water splashing against it, in fact you can still hear perfectly despite how slowly buyoncaing in the water. It feels soothing. To be doing nothing but floating in this large ocean.";
 		else if tds_tt - turns < 4:
-			say "     You are left wondering, when are you going to wake up?";
+			say "     You are left wondering, when are you going to wake up? Maybe instead you could try to sleep in this area. ";
 			
 	
 The Pagoda is a room.
@@ -82,6 +82,16 @@ To say PagodaDesc:
 	say "REMOVE ME";
 
 Section 4 - Tome scenes
+
+To say DragonSpiritMenu:
+	say "REMOVE ME";
+
+To say DragonSpiritFirstRead:
+	say "     While the symbols on the tome previously appeared foreign now they are easily readable for you. The being that has been depicted on the page seems to be a dragon spirit. One of a dragon from far away lands, that has lived many life times by appearing before and accompanying mortals. The page has an excerpt of another persons work apparently which are instructions for summoning the being and tips on how to give it control over your body. The tone of these instructions is unsettling, romanticizing giving it control and agency over yourself. The possession seems to be a great and fulfilling duty, saying that this entity deserves to be in control over anyone. The conclusion that the person who wrote this entry was possessed by this entity doesn't seem too far off.";
+	say "     The rest of the page explains that this entity apparently does not have a corporeal form, only being able to manifest in somebody's dreams. When you turn the page to continue reading, you see captivating symbols and runes drawn on a circle. You can't take your eyes away from these pages, it feels like you are practically staring at something that is hidden within the ink. Finally you're able to rip away your gaze and slam the book closed.";
+	now DragonSpiritRead is true;
+	now TomeInteractions is 2;
+	now TomeTimer is turns;
 
 Section 5 - Transformation routine
 

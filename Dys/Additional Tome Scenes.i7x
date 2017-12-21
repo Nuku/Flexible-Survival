@@ -46,6 +46,11 @@ to say TomeSexMenu:
 		now sortorder entry is 2;
 		now description entry is "The demon fox sounds like it could be fun";
 	[]
+	choose a blank row from table of fucking options;
+	now title entry is "Summon a dragon spirit";
+	now sortorder entry is 3;
+	now description entry is "You're not sure what a dragon spirit would do but could give it a shot.";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows from table of fucking options:
 		choose row y from the table of fucking options;
@@ -66,6 +71,8 @@ to say TomeSexMenu:
 						say "[TentacleSex]";
 					-- "Summon a demon fox":
 						say "[DemonFoxMenu]";
+					--	"Summon a dragon spirit":
+						say "[DragonSpiritMenu]";
 				WaitLineBreak;
 		else if calcnumber is 0:
 			say "     Change your mind and do something else?";
@@ -115,17 +122,19 @@ to say TomeExpansionUse:
 to say TomeReadMenu:
 	say "     You pull the tome out of your pack once more, looking over its leather cover for a moment before deciding that giving it another read wouldn't hurt too much. After all, you only read about half of it, previously! You should at least finish what you started.";
 	say "     Opening the book to the portion you've yet to read, you are greeted with a few options. The page on the left depicts a sort of mass of tentacles[if TomeFound is 4], though these are different than the ones that assaulted Eric[else if TomeFound is 20], though these are different than the ones that nearly took Eric[end if]. Each of the tendrils is a sort of bluish-purple, and they all seem to be covered in some sort of clear slime. The adjacent page depicts a demonic looking feral fox. It stands larger than a horse with jet black and yellow fur. Two curved horns poke out of the top of its skull, and it has a series of spikes along its back, almost like a dragon. It has three long tails, each of which appear to be burning with a yellow flame. Underneath its hulking form, you see a massive cock, an interesting mixture of both vulpine and draconic, featuring a tapered tip and a wide knot, as well as several protruding ridges along its underside. The shaft itself fades from a dark metallic gold at the base to a bright yellow near the tip. It's leaking a stream of what almost looks like lava.";
+	say "      Turning over the page you find a graphite drawing of what looks like smoke forming a shape, it looks like the upper body of a creature with clawed arms and an elongated neck. While the head is sleek, it does look reminiscent of a reptilian visage. Despite the diffuse material it's supposed to consist of you can see that its body is fairly toned with a manly chest. Some wafts of smoke also leave its nostrils, as if to signify its ability to breathe fire. Odd, the entry below the drawing specifies that this is a dragon spirit from far away lands.";
 	say "     [bold type]Seeing your two options, which of them do you read about[roman type]?";
 	LineBreak;
 	say "     [if TentacleRead is false][link](1)[as]1[end link] - Read about the tentacle monster.[else](1) - You've already read about the tentacle monster.[end if]";
 	say "     [if DemonFoxRead is false][link](2)[as]2[end link] - Read about the demon fox.[else](2) - You've already read about the fox.[end if]";
+	say "     [if DemonFoxRead is false][link](3)[as]3[end link] - Read about the dragon spirit.[else](3) - You've already read about the spirit.[end if]";
 	LineBreak;
 	say "     [link](0)[as]0[end link] - Change your mind.";
 	now calcnumber is -1;
-	while calcnumber < 0 or calcnumber > 2:
-		say "Choice? (0-2)>[run paragraph on]";
+	while calcnumber < 0 or calcnumber > 3:
+		say "Choice? (0-3)>[run paragraph on]";
 		get a number;
-		if calcnumber >= 0 and calcnumber <= 2:
+		if calcnumber >= 0 and calcnumber <= 3:
 			break;
 		else:
 			say "Invalid choice.";
@@ -133,16 +142,18 @@ to say TomeReadMenu:
 		say "[TentaclesFirstRead]";
 	else if calcnumber is 2 and DemonFoxRead is false:
 		say "[DemonFoxFirstRead]";
-	else if DemonFoxRead is true or TentacleRead is true:
+	else if calcnumber is 3 and DragonSpiritRead is false:
+		say "[DragonSpiritFirstRead]";
+	else if DemonFoxRead is true or TentacleRead is true or DragonSpiritRead is true:
 		say "     You've already read about that!";
 	else if calcNumber is 0:
-		say "     You shake your head before slamming the book closed. Both of the ideas don't appeal to you, and honestly, you're not entirely sure why you opened the damn thing in the first place.";
+		say "     You shake your head before slamming the book closed. The idea of summoning otherworldy beings doesn't appeal to you, and honestly, you're not entirely sure why you opened the damn thing in the first place.";
 
 Section 4 - Other Stuff
 
 to UpdateTomeEventPending:
 	if TomeEventPending is true:
-		if DemonFoxRead is true and TentacleRead is true and (TentacleInteractions is 0 or DemonFoxInteractions is 0): [One event completed, but another is pending.]
+		if (DemonFoxRead is true and TentacleRead is true and DragonSpiritRead is true) and (TentacleInteractions is 0 or DemonFoxInteractions is 0 or tds_r is 0): [One event completed, but another is pending.]
 			now TomeEventPending is true;
 		else:
 			now TomeEventPending is false;
@@ -176,7 +187,11 @@ an everyturn rule:
 		say "[DemonFoxFirstEncounter]";
 	if TentacleRead is true and TentacleInteractions is 0 and (cocks of player is not 0 and cunts of player is 0) and TomeTimer - turns >= 8 and (a random chance of 1 in 3 succeeds) or (TomeTimer - turns >= 11):
 		say "[TentaclesFirstEncounter]";
-
+	if DragonSpiritRead is true and tds_r is 0 and (TomeTimer - turns) >= 4 and a random chance of 1 in 3 succeeds:
+		say "     A yawn takes you over. The continuous struggles in this world are in fact pretty tiring. Your own body starts to feel really heavy all of a sudden and your eyes give have that slight burn, signaling you that they'd prefer rest in this moment. Why are you feeling really fatigued right now, just a moment ago you were fully alert? Despite wanting to go rest, an odd sense of dread overcomes you, as if somebody was lurking in the shadows; watching and waiting for you to do something. But no matter where you look, you cannot find anything out of the usual.";
+		PlayerWounded(100);
+		now sleepHijack is 2;
+		now tds_pl is 1;
 
 Section 6 - Dev Cheats
 

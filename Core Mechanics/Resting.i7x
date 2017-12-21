@@ -4,6 +4,7 @@ Section 0 - Variables
 
 roughing is a truth state that varies.  roughing is usually false.
 sleepHijack is a number variable. [This is a flag for whether your sleep has been hijacked.]
+FrozenNeeds is a truth state that varies. FrozenNeeds is usually false.	[Flag marking whether or not needs and time are frozen during dreaming.]
 
 [				sleepHijack					]
 [0 = Nothing, you have a dreamless rest		]
@@ -100,11 +101,21 @@ To SleepHijackedCharacter:
 		else if tds_dl > 0:
 			TDS_RepeatDream;
 
-Section 2 - Debug commands
+Section 2 - Dream commands
 
+To DreamInit:
+	now command prompt is "[DreamPrompt]";
+	
+To say DreamPrompt:
+	say "REMOVE ME";
+	
+To StopDream:
+	say "REMOVE ME";
+	now the command prompt is "[promptsay]";
 
+Section 3 - Debug commands
 			
-Section 3 - Deprecated Code
+Section 4 - Deprecated Code
 
 [  --old version - to be removed--
 	if cot is owned:
