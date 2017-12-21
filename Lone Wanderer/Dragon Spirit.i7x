@@ -1,4 +1,4 @@
-Version 1 of Dragon Spirit by Lone_Wanderer begins here.
+Version 1 of Dragon Spirit by Lone Wanderer begins here.
 [This adds the Dragon Spirit as an NPC to the Ancient Tome.]
 
 Section 0 - Variables

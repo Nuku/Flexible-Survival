@@ -1,4 +1,4 @@
-Version 1 of Wyvern Nest by Lone_Wanderer begins here.
+Version 1 of Wyvern Nest by Lone Wanderer begins here.
 [Version 1 - New location, NPC, items and everything associated with it]
 
 Section 0 - Variables
