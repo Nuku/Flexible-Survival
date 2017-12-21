@@ -5054,6 +5054,7 @@ Include Tiger Den by Sarokcat.
 Include Tyr's Club by Kaleem mcintyre.
 Include Underwater Zone For Fs by Hellerhound.
 Include Urban Forest For Fs by Stripes.
+Include Wyvern Nest by Lone Wanderer.
 Include Zephyr Inc by Nuku Valente.
 Include Zoo by Wahn.
 
@@ -5469,6 +5470,7 @@ Include Desperate Bunny by Nuku Valente.
 Include Diego by Wahn.
 Include Dominick by Stripes.
 Include Doran by Blue Bishop.
+Include Dragon Spirit by Lone Wanderer.
 Include DrMoffatt by Stripes.
 Include DrUtah by Stripes.
 Include Duke by Wahn.
