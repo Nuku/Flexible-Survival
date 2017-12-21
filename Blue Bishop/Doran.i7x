@@ -759,7 +759,7 @@ to say DoranSexMenu: [Doran Sex Protocol]
 		else:
 			if libido of player > 25:
 				decrease libido of player by ((libido of player / 20) + 1);
-		if DoranVoreStatus > 1 and DoranRole is 0 and DoranRoleplayInSession is 0, follow the turnpass rule;
+		if DoranVoreStatus > 1 and DoranRole <= 0 and DoranRoleplayInSession is 0, follow the turnpass rule;
 		now DoranRoleplayInSession is 0;
 		now DoranRP_var1 is 0;
 		now DoranRP_var2 is 0;
