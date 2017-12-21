@@ -227,6 +227,7 @@ Instead of resolving a Cream stand:
 		increase carried of gryphon milk by 2;
 	else:
 		say "Being cautious by nature, you decide to forgo the tasty beach treat, and keep to your own supplies.";
+	WN_AddRow "Cream Stand" with 20;
 	Now Cream stand is resolved;
 
 
