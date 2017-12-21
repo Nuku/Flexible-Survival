@@ -2432,17 +2432,17 @@ carry out DoranRequest:
 			say "(1) [link]Sexual Position[as]1[end link] - [bold type][if DoranRole is 0]Dominant[else if DoranRole is 2]Submissive[else if DoranRole is -1]Dominant (LOCKED)[else]Neutral[end if][roman type][line break]";
 			say "(2) [link]Your Regarded Gender[as]2[end link] - [bold type][if DoranPlayerGenderRegard is true]Female[else]Male[end if][roman type][line break]";
 			say "(3) [link]Your title[as]3[end link] - [bold type][DoranPlayerRegard][roman type][line break]";
-			say "(4) [link]Doran's Regarded Gender[as]3[end link] - [bold type][if DoranSelfGender is true]Female[else]Male[end if][roman type][line break]";
-			say "(5) [if DoranRoleIntensity is not 0]Interaction Locked - Requires Max Domination[else][link]Sex Auto-fire[as]4[end link] - [end if][bold type][if DoranAutofireIntensity is 1 and DoranRoleIntensity is 0]Strict[else if DoranAutofireIntensity is 2 and DoranRoleIntensity is 0]Loose[else if DoranRoleIntensity is 0]Off[end if][roman type][line break]";
+			say "(4) [link]Doran's Regarded Gender[as]4[end link] - [bold type][if DoranSelfGender is true]Female[else]Male[end if][roman type][line break]";
+			say "(5) [if DoranRoleIntensity is not 0]Interaction Locked - Requires Max Domination[else][link]Sex Auto-fire[as]5[end link] - [end if][bold type][if DoranAutofireIntensity is 1 and DoranRoleIntensity is 0]Strict[else if DoranAutofireIntensity is 2 and DoranRoleIntensity is 0]Loose[else if DoranRoleIntensity is 0]Off[end if][roman type][line break]";
 			say "[line break]";
 			say "[bold type]Requests:[roman type][line break]";
 			if DoranTitModStatus > 1:
-				say "(6) [link]Breastfeed[as]5[end link] - Feed off Doran[line break]";
+				say "(6) [link]Breastfeed[as]6[end link] - Feed off Doran[line break]";
 			else:
-				say "(6) [link]Scavenge[as]5[end link] - Request Doran's aid[line break]";
-			say "(7) [if DoranDiscussionProgress < 2]Interaction Locked - Try Discussing with Doran[else][link]Roleplay Session[as]6[end link][end if][bold type][if DoranRoleplayInSession > 0] - Roleplay Queued[end if][roman type][line break]";
-			say "(8) [link]Body Modification[as]7[end link][if DoranTitModStatus > 0 or DoranBallModStatus > 0] - [end if][if DoranTitModStatus > 0][bold type]+Breasts [roman type][end if][if DoranBallModStatus > 0 and DoranInternal is false][bold type]+Balls[roman type][else if DoranBallModStatus > 0 and DoranInternal is true][bold type]+Cum[roman type][end if][line break]";
-			say "(9) [link]Vore Extension[as]8[end link] - [bold type][if DoranVoreStatus is 0]Uninquired[else if DoranVoreStatus is 2]Active[else]Inactive[end if][roman type] [italic type][if DoranVoreStatus is 2 and scalevalue of player > 3]Player too large![else if DoranVoreStatus is 2 and DoranRole is 2]Doran is Submissive![end if][roman type][line break]";
+				say "(6) [link]Scavenge[as]7[end link] - Request Doran's aid[line break]";
+			say "(7) [if DoranDiscussionProgress < 2]Interaction Locked - Try Discussing with Doran[else][link]Roleplay Session[as]7[end link][end if][bold type][if DoranRoleplayInSession > 0] - Roleplay Queued[end if][roman type][line break]";
+			say "(8) [link]Body Modification[as]8[end link][if DoranTitModStatus > 0 or DoranBallModStatus > 0] - [end if][if DoranTitModStatus > 0][bold type]+Breasts [roman type][end if][if DoranBallModStatus > 0 and DoranInternal is false][bold type]+Balls[roman type][else if DoranBallModStatus > 0 and DoranInternal is true][bold type]+Cum[roman type][end if][line break]";
+			say "(9) [link]Vore Extension[as]9[end link] - [bold type][if DoranVoreStatus is 0]Uninquired[else if DoranVoreStatus is 2]Active[else]Inactive[end if][roman type] [italic type][if DoranVoreStatus is 2 and scalevalue of player > 3]Player too large![else if DoranVoreStatus is 2 and DoranRole is 2]Doran is Submissive![end if][roman type][line break]";
 			say "[line break]";
 			say "(0) [link]Exit[as]0[end link][line break]";
 			while 1 is 1:
