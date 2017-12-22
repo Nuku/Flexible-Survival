@@ -482,7 +482,7 @@ to say DoranLook:
 		if DoranBallModStatus > 0:
 			say ". The thing is prone to leaking, even when left completely alone";
 		say ".";
-		say "     [italic type]Doran presently regards you as [if DoranPlayerGenderRegard is true]female[else]male[end if][if DoranSelfGender is true] and themself as female[end if]. [gchis] sexual demeanour remains [if DoranRole is 0]domineering[else if DoranRole is 2]submissive[else]reasonable[end if] towards you, as you've commanded[if DoranRoleIntensity is 0 and DoranRole is 0], the severity of which being intense[else if DoranRoleIntensity is 4 and DoranRole is 2], the severity of which being intense[else if DoranRole is not 1], the severity of which being fairly restrained[end if].[roman type]";
+		say "     [italic type]Doran presently regards you as [if DoranPlayerGenderRegard is true]female[else]male[end if][if DoranSelfGender is true] and themself as female[end if]. [gchis] sexual demeanour remains [if DoranRole <= 0]domineering[else if DoranRole is 2]submissive[else]reasonable[end if] towards you, as you've commanded[if DoranRoleIntensity is 0 and DoranRole is 0], the severity of which being intense[else if DoranRoleIntensity is 4 and DoranRole is 2], the severity of which being intense[else if DoranRole is not 1], the severity of which being fairly restrained[end if].[roman type]";
 
 Instead of conversing the Doran:
 	if graphics is true:
@@ -527,9 +527,9 @@ Instead of conversing the Doran:
 	else:
 		say "     '";
 		if a random chance of 1 in 6 succeeds:
-			say "[if DoranRole is 0][one of]Perhaps my [DoranPlayerRegard] can be mine for a little longer[or]How is my [DoranPlayerRegard][at random][else][one of]Perhaps [DoranPlayerRegard] can stay a little longer[or]How is [DoranPlayerRegard][at random][end if]?'";
+			say "[if DoranRole <= 0][one of]Perhaps my [DoranPlayerRegard] can be mine for a little longer[or]How is my [DoranPlayerRegard][at random][else][one of]Perhaps [DoranPlayerRegard] can stay a little longer[or]How is [DoranPlayerRegard][at random][end if]?'";
 		else if a random chance of 3 in 10 succeeds:
-			say "[if DoranRole is 0][one of]My [DoranPlayerRegard] is looking particularly slutty today[or]My hope is that I might get to use my [DoranPlayerRegard][or]My [DoranPlayerRegard] makes for a great toy[at random][else][one of][DoranPlayerRegard] is looking particularly entrancing today[or]My hope is that I might please [DoranPlayerRegard][or][DoranPlayerRegard] treats me well[at random][end if].'";
+			say "[if DoranRole <= 0][one of]My [DoranPlayerRegard] is looking particularly slutty today[or]My hope is that I might get to use my [DoranPlayerRegard][or]My [DoranPlayerRegard] makes for a great toy[at random][else][one of][DoranPlayerRegard] is looking particularly entrancing today[or]My hope is that I might please [DoranPlayerRegard][or][DoranPlayerRegard] treats me well[at random][end if].'";
 		else:
 			say "[one of]On a particularly windy day, the whistling sound made here can be quite calming[or]Getting wood around here can be rather difficult--oh don't give me that look, I mean the trees[or]Moving around in the city is a bit too much trouble for me; not much to scavenge in the streets and few buildings are '[gdragon]-accessible'[or]I'd take care when wandering out there[or][DoranPlayerRegard] might want to ask me first before eating any of the fruit around here; better yet, just avoid the stuff altogether[or]Local monsters usually stay away from around here, thankfully[or]I find a good sense of humor or a good love of fun can get one through the hardest days[at random].'";
 
@@ -540,7 +540,7 @@ to say DoranSex:
 	else if DoranFirstTalk is false:
 		say "     You should probably talk to the [gdragon] first before you get down to any sort of business.";
 	else if lastfuck of Doran - turns <= 4:
-		if DoranRole >= 0:
+		if DoranRole <= 0:
 			say "     'Oh, my [DoranPlayerRegard] is interested in another go, so soon? I'm afraid I'm still too tired from the last bout. I'll be more than eager to have my fun with them when I'm up to it.'";
 		else:
 			say "     'Again, [DoranPlayerRegard]? Oh, they must forgive me, I'm still absolutely exhausted! I don't mean to turn tail, I just wouldn't be any good at pleasing them, I'm sorry.'";
@@ -741,7 +741,7 @@ to say DoranSexMenu: [Doran Sex Protocol]
 				say "[DoranSub_Refused]"; [turn down]
 				now trixieexit is 1;
 	if DoranRefusedSex is false:
-		if DoranRole is 0 and DoranRoleIntensity > 0:
+		if DoranRole <= 0 and DoranRoleIntensity > 0:
 			decrease DoranRoleIntensity by 1;
 		else if DoranRole is 2 and DoranRoleIntensity < 4:
 			increase DoranRoleIntensity by 1;
@@ -759,7 +759,7 @@ to say DoranSexMenu: [Doran Sex Protocol]
 		else:
 			if libido of player > 25:
 				decrease libido of player by ((libido of player / 20) + 1);
-		if DoranVoreStatus > 1 and DoranRole is 0 and DoranRoleplayInSession is 0, follow the turnpass rule;
+		if DoranVoreStatus > 1 and DoranRole <= 0 and DoranRoleplayInSession is 0, follow the turnpass rule;
 		now DoranRoleplayInSession is 0;
 		now DoranRP_var1 is 0;
 		now DoranRP_var2 is 0;
@@ -798,7 +798,7 @@ to say DoranAutoSexProtocol:
 
 an everyturn rule:
 	if player is in Rocky Outcropping and Doran is visible: [Auto-Fire Protocol]
-		if DoranRoleIntensity is 0 and DoranRole >= 0 and DoranAutofireIntensity > 0 and (cunts of player > 0 or cocks of player > 0) and DoranRoleplayInSession is 0:
+		if DoranRoleIntensity is 0 and DoranRole <= 0 and DoranAutofireIntensity > 0 and (cunts of player > 0 or cocks of player > 0) and DoranRoleplayInSession is 0:
 			increase score by 0;
 		else:
 			continue the action;
@@ -814,7 +814,7 @@ check DoranRimming:
 	if Doran is not visible, say "That's not a verb I recognise." instead;
 
 carry out DoranRimming:
-	if DoranRole is 0 and anallevel is 3:
+	if DoranRole <= 0 and anallevel is 3:
 		if DoranRimmingStatus is -1:
 			say "     You approach Doran, advising against having [ghim] force you to attend of [ghis] ass when having sex, which appears to briefly confuse the [gdragon].";
 			say "     'Oh... My apologies, I got the impression you might be into that sort of thing, perhaps I misperceived your obsession with ass?' You ask if this is a problem, to which [ghe] shakes [ghis] head in response, 'Of course not, the last thing I'd want to do is make my [DoranPlayerRegard] uncomfortable... Well, uncomfortable in a way they don't enjoy. If they command it, then it shall be done.' Shall you?";
@@ -1070,7 +1070,7 @@ to say DoranDom_Oral: [Oral Sex] [BODY MODDED]
 		say "     [if DoranRoleIntensity is 0]Pleading with[else]Gesturing to[end if] Doran for sex, [ghe] briefly ponders what [ghe] might subject you to, scratching [ghis] chin as [ghe] lays there next to the[if daytimer is day] smoldering[end if] campfire before finally coming to [ghis] decision. [gche] stands upright, rigid, poised silhouette partially outlined against the [if daytimer is day]creeping daylight[else]fire[end if].";
 		say "     '[if DoranRoleIntensity is 0][one of]I think my [DoranPlayerRegard]'s best suited for sucking off their [gdragon][or]My dick's eager for my [DoranPlayerRegard]'s attention[or]I know my [DoranPlayerRegard] longs for a taste of their [gdragon][at random][else][one of]I think it's only fair that my [DoranPlayerRegard] offers me some oral satisfaction[or]I want my [DoranPlayerRegard] to grant their [gdragon]'s dick some much-needed attention[or]I long for the touch of my [DoranPlayerRegard]'s lips[at random][end if]";
 		say ".' With [ghis] [if DoranRoleIntensity is 0]command appointed[else]request made[end if] you approach [ghim], [if scalevalue of player > 3]head [end if][if DoranRoleIntensity is 0]eagerly [end if]descending";
-	say " upon the [gdragon]'s muscular, scaled undercarriage. Well-toned frame heaving with each excited breath, you're given ample view of the beast's[if DoranRole is 0] enticing[end if] cock[if DoranBallModStatus > 0 and DoranInternal is false] and oversized balls[end if], already peeking from it's [if DoranInternal is true]slit[else]sheath[end if] with barely containable anticipation[if DoranBallModStatus > 0], dripping as it's perpetually want to do[end if]. [if DoranRole is 0]Immediately[else]Soon enough[end if] your lips descend upon its exposed tip, tongue's affection inviting its growth within their embrace, much to [ghis] moaning approval.";
+	say " upon the [gdragon]'s muscular, scaled undercarriage. Well-toned frame heaving with each excited breath, you're given ample view of the beast's[if DoranRole <= 0] enticing[end if] cock[if DoranBallModStatus > 0 and DoranInternal is false] and oversized balls[end if], already peeking from it's [if DoranInternal is true]slit[else]sheath[end if] with barely containable anticipation[if DoranBallModStatus > 0], dripping as it's perpetually want to do[end if]. [if DoranRole <= 0]Immediately[else]Soon enough[end if] your lips descend upon its exposed tip, tongue's affection inviting its growth within their embrace, much to [ghis] moaning approval.";
 	say "     '[one of]Mmm[or]Ah[or]Yes[at random], [if DoranRoleIntensity is 0][one of]my [DoranPlayerRegard] is such a good little slut[or]my [DoranPlayerRegard] can't resist the sight of dick[or]I don't think anybody would make a better pet than my [DoranPlayerRegard][at random][else][one of]my [DoranPlayerRegard]'s tongue feels so nice[or]I wish only for more, my [DoranPlayerRegard][or]please don't stop, my [DoranPlayerRegard][at random][end if].' Compelled to work harder, your [if scalevalue of player > 3]tongue shifts to attend[else]digits rise to caress[end if] [ghis] [if DoranInternal is true]organ's ill-fitting home[else if DoranBallModStatus > 0]greatly oversized, scaled ballsack[else]ponderous, scaled ballsack[end if], further inviting [ghis] dick's countenance, until it hangs fully exposed before you";
 	if scalevalue of player > 3:
 		say ". [if DoranRoleIntensity is 0]Entranced by the tool, you're inclined to immediately plunge it down your maw, rapidly[else]Lips slowly enveloping the head, you descend upon its length, gradually building a motion until you're eagerly[end if] bobbing against";
@@ -2432,17 +2432,17 @@ carry out DoranRequest:
 			say "(1) [link]Sexual Position[as]1[end link] - [bold type][if DoranRole is 0]Dominant[else if DoranRole is 2]Submissive[else if DoranRole is -1]Dominant (LOCKED)[else]Neutral[end if][roman type][line break]";
 			say "(2) [link]Your Regarded Gender[as]2[end link] - [bold type][if DoranPlayerGenderRegard is true]Female[else]Male[end if][roman type][line break]";
 			say "(3) [link]Your title[as]3[end link] - [bold type][DoranPlayerRegard][roman type][line break]";
-			say "(4) [link]Doran's Regarded Gender[as]3[end link] - [bold type][if DoranSelfGender is true]Female[else]Male[end if][roman type][line break]";
-			say "(5) [if DoranRoleIntensity is not 0]Interaction Locked - Requires Max Domination[else][link]Sex Auto-fire[as]4[end link] - [end if][bold type][if DoranAutofireIntensity is 1 and DoranRoleIntensity is 0]Strict[else if DoranAutofireIntensity is 2 and DoranRoleIntensity is 0]Loose[else if DoranRoleIntensity is 0]Off[end if][roman type][line break]";
+			say "(4) [link]Doran's Regarded Gender[as]4[end link] - [bold type][if DoranSelfGender is true]Female[else]Male[end if][roman type][line break]";
+			say "(5) [if DoranRoleIntensity is not 0]Interaction Locked - Requires Max Domination[else][link]Sex Auto-fire[as]5[end link] - [end if][bold type][if DoranAutofireIntensity is 1 and DoranRoleIntensity is 0]Strict[else if DoranAutofireIntensity is 2 and DoranRoleIntensity is 0]Loose[else if DoranRoleIntensity is 0]Off[end if][roman type][line break]";
 			say "[line break]";
 			say "[bold type]Requests:[roman type][line break]";
 			if DoranTitModStatus > 1:
-				say "(6) [link]Breastfeed[as]5[end link] - Feed off Doran[line break]";
+				say "(6) [link]Breastfeed[as]6[end link] - Feed off Doran[line break]";
 			else:
-				say "(6) [link]Scavenge[as]5[end link] - Request Doran's aid[line break]";
-			say "(7) [if DoranDiscussionProgress < 2]Interaction Locked - Try Discussing with Doran[else][link]Roleplay Session[as]6[end link][end if][bold type][if DoranRoleplayInSession > 0] - Roleplay Queued[end if][roman type][line break]";
-			say "(8) [link]Body Modification[as]7[end link][if DoranTitModStatus > 0 or DoranBallModStatus > 0] - [end if][if DoranTitModStatus > 0][bold type]+Breasts [roman type][end if][if DoranBallModStatus > 0 and DoranInternal is false][bold type]+Balls[roman type][else if DoranBallModStatus > 0 and DoranInternal is true][bold type]+Cum[roman type][end if][line break]";
-			say "(9) [link]Vore Extension[as]8[end link] - [bold type][if DoranVoreStatus is 0]Uninquired[else if DoranVoreStatus is 2]Active[else]Inactive[end if][roman type] [italic type][if DoranVoreStatus is 2 and scalevalue of player > 3]Player too large![else if DoranVoreStatus is 2 and DoranRole is 2]Doran is Submissive![end if][roman type][line break]";
+				say "(6) [link]Scavenge[as]7[end link] - Request Doran's aid[line break]";
+			say "(7) [if DoranDiscussionProgress < 2]Interaction Locked - Try Discussing with Doran[else][link]Roleplay Session[as]7[end link][end if][bold type][if DoranRoleplayInSession > 0] - Roleplay Queued[end if][roman type][line break]";
+			say "(8) [link]Body Modification[as]8[end link][if DoranTitModStatus > 0 or DoranBallModStatus > 0] - [end if][if DoranTitModStatus > 0][bold type]+Breasts [roman type][end if][if DoranBallModStatus > 0 and DoranInternal is false][bold type]+Balls[roman type][else if DoranBallModStatus > 0 and DoranInternal is true][bold type]+Cum[roman type][end if][line break]";
+			say "(9) [link]Vore Extension[as]9[end link] - [bold type][if DoranVoreStatus is 0]Uninquired[else if DoranVoreStatus is 2]Active[else]Inactive[end if][roman type] [italic type][if DoranVoreStatus is 2 and scalevalue of player > 3]Player too large![else if DoranVoreStatus is 2 and DoranRole is 2]Doran is Submissive![end if][roman type][line break]";
 			say "[line break]";
 			say "(0) [link]Exit[as]0[end link][line break]";
 			while 1 is 1:
@@ -2859,11 +2859,11 @@ to say DoranPosition: [Demeanour Option]
 					now trixieexit is 1;
 					increase DoranDominanceTopic by 2;
 		else:
-			say "     'In a different mood? Would [if DoranRole is 0]my [end if][DoranPlayerRegard] prefer to [if DoranRole is 0]be on top again[else if DoranRole is 2]be on bottom[else]alter our arrangement[end if]?'";
+			say "     'In a different mood? Would [if DoranRole <= 0]my [end if][DoranPlayerRegard] prefer to [if DoranRole <= 0]be on top again[else if DoranRole is 2]be on bottom[else]alter our arrangement[end if]?'";
 			let trixieexit be 0;
 			while trixieexit is 0:
 				say "[bold type]Sexual Position:[roman type][line break]";
-				say "(1) [link]'[if DoranRole is 0]Stay[else]Go[end if] on top.'[as]1[end link]";
+				say "(1) [link]'[if DoranRole <= 0]Stay[else]Go[end if] on top.'[as]1[end link]";
 				say "(2) [link]'[if DoranRole is 2]Stay[else]Go[end if] on bottom.'[as]2[end link]";
 				say "(3) [link]'Let's [if DoranRole is 1]keep[else]make[end if] things random.'[as]3[end link]";
 				say "[line break]";
@@ -2876,7 +2876,7 @@ to say DoranPosition: [Demeanour Option]
 					else:
 						say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
 				if calcnumber is 1:
-					say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], my [DoranPlayerRegard] will [if DoranRole is 0]be kept[else]now be put[end if] in their place.'";
+					say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], my [DoranPlayerRegard] will [if DoranRole <= 0]be kept[else]now be put[end if] in their place.'";
 					now DoranRole is 0;
 					now trixieexit is 1;
 				else if calcnumber is 2:
@@ -3377,7 +3377,7 @@ to say DoranDiscuss_1: [Of One's Past]
 					now DoranDiscussionExit is 1;
 		else if calcnumber is 2:
 			now DoranDiscussion_var1 is 1;
-			say "     'The answer to that question is fairly straightforward: We benefit from a simplistic relationship. You use me[if DoranRole is 0]--On top though I may be--[else] [end if]and that brings me a joy. Anything else would get in the way of that.'";
+			say "     'The answer to that question is fairly straightforward: We benefit from a simplistic relationship. You use me[if DoranRole <= 0]--On top though I may be--[else] [end if]and that brings me a joy. Anything else would get in the way of that.'";
 			now calcnumber is -1;
 			let DoranDiscussionExit be 0;
 			while DoranDiscussionExit is 0:
