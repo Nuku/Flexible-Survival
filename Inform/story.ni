@@ -142,7 +142,7 @@ Book 1 - Variable Definitions
 The file of flexiblestory is called "flexible1".
 
 monster is a number that varies.
-The player has text called name.
+The player has text called name. The name of player is usually "Player".
 The player has a number called Energy.
 A person has a number called HP.
 The player has a number called MaxHP.
@@ -208,6 +208,7 @@ freecred is a number that varies.
 playon is a number that varies.
 the player has a list of text called invent.
 the player has a list of text called vials.
+the player has a list of text called tapes.
 Rooms has a list of text called invent.
 The player has a list of text called feats.
 The player has a list of text called BlockList.
@@ -287,6 +288,12 @@ Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
 	if grab object is journal, no;
 	if the absolute value of ( scalevalue of player - objsize of x ) > 1, yes;
 	no;
+	
+A person can be defaultnamed. A person is usually defaultnamed.
+
+Definition: A person (called x) is defaultnamed:
+	if name of player is "Player", yes;
+	no;
 
 A person can be submissive. A person is usually not submissive.
 
@@ -325,6 +332,7 @@ Definition: A person (called x) is perminfected:
 	no;
 
 Definition: A situation(called X) is available:
+	if sarea of x is "Nowhere", no;
 	if x is resolved, no;
 	if x is close:
 		if score < minscore of x:
@@ -336,12 +344,12 @@ Definition: A situation(called X) is available:
 	no;
 
 Definition: A situation(called X) is close:
-	if ( sarea of X matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of X is "Allzones" or the sarea of x is "allzones" ) ):
+	if ( sarea of X exactly matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of X is "Allzones" or the sarea of x is "allzones" ) ):
 		yes;
 	no;
 
 Definition: A scavevent(called X) is scavable:
-	if ( sarea of X matches the text battleground, case insensitively ) or ( sarea of X is "Allzones" or the sarea of X is "allzones" ):
+	if ( sarea of X exactly matches the text battleground, case insensitively ) or ( sarea of X is "Allzones" or the sarea of X is "allzones" ):
 		if score < minscore of x:
 			no;
 		else if hardmode is true:
@@ -747,6 +755,9 @@ Hermaphrodite is a flag.
 Hellspawn is a flag.
 Feral is a flag.
 Transgender is a flag.
+Incest is a flag.
+Noncon is a flag.
+Mindcontrol is a flag.
 
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
@@ -877,7 +888,7 @@ carry out hunting:
 	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and companion of player is not mouse girl:		[hunted by the mouse collective]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
-			if name entry matches the text "Mental Mouse", case insensitively:
+			if name entry exactly matches the text "Mental Mouse", case insensitively:
 				add y to q;
 				add y to q;
 				if "Like Attracts Like" is listed in feats of player:
@@ -890,7 +901,7 @@ carry out hunting:
 		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
-				if name entry matches the text "Black Wasp", case insensitively:
+				if name entry exactly matches the text "Black Wasp", case insensitively:
 					add y to q;
 					if "Like Attracts Like" is listed in feats of player:
 						add y to q;
@@ -907,7 +918,7 @@ carry out hunting:
 [		if area entry is "Everywhere":		[***]
 			if there is a nocturnal in row X of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night), next;
-			if name entry matches the text topic understood, case insensitively:
+			if name entry exactly matches the text topic understood, case insensitively:
 				say "You are almost certain you saw some [name entry] tracks...";
 				now found is 1;
 				add x to q;
@@ -936,13 +947,13 @@ carry out hunting:
 				if skinname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
 				if tailname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
 				if cockname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;	]
-		if area entry matches the text battleground, case insensitively:
+		if area entry exactly matches the text battleground, case insensitively:
 			if there is a nocturnal in row X of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
-					if name entry matches the text topic understood, case insensitively:
+					if name entry exactly matches the text topic understood, case insensitively:
 						now foundbadtime is 1;
 					next;		[skips if day/night doesn't match]
-			if name entry matches the text topic understood, case insensitively:
+			if name entry exactly matches the text topic understood, case insensitively:
 				say "You are almost certain you saw some [name entry] tracks...";
 				now found is 1;
 				add x to q;
@@ -983,7 +994,7 @@ carry out hunting:
 		repeat with Z running through q:
 			choose row z from the table of random critters;
 			if "Unerring Hunter" is listed in the feats of the player and there is a name entry:
-				if name entry matches the text topic understood, case insensitively:
+				if name entry exactly matches the text topic understood, case insensitively:
 					increase score by 0;
 				else:
 					next;
@@ -994,7 +1005,7 @@ carry out hunting:
 			break;
 		choose row monster from the table of random critters;
 		now monsterHP is HP entry;
-		if name entry matches the text topic understood, case insensitively:
+		if name entry exactly matches the text topic understood, case insensitively:
 			now ishunting is true;
 		challenge;
 		now ishunting is false;
@@ -1006,7 +1017,7 @@ carry out hunting:
 		now found is 0;
 		repeat with z running through unknown fasttravel rooms:
 			if z is private, next;
-			if printed name of z matches the text topic understood, case insensitively:
+			if printed name of z exactly matches the text topic understood, case insensitively:
 				say "It should be somewhere...";
 				now found is 1;
 				let dice be a random number from 1 to 20;
@@ -1028,14 +1039,14 @@ carry out hunting:
 			repeat with z running through unresolved situations:
 				if z is not close:
 					if sitfound is 0:
-						if printed name of z matches the text topic understood, case insensitively:
+						if printed name of z exactly matches the text topic understood, case insensitively:
 							now sitfound is 1;
 					next;
 				if score < minscore of z:
 					if scorefound is 0:
-						if printed name of z matches the text topic understood, case insensitively:
+						if printed name of z exactly matches the text topic understood, case insensitively:
 							now scorefound is 1;
-				if printed name of z matches the text topic understood, case insensitively:
+				if printed name of z exactly matches the text topic understood, case insensitively:
 					say "It should be somewhere...";
 					now found is 1;
 					let dice be a random number from 1 to 20;
@@ -1462,7 +1473,7 @@ carry out vialing:
 	now monster is 0;
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry matches the text target, case insensitively:
+		if name entry exactly matches the text target, case insensitively:
 			now monster is y;
 			break;
 	if monster is 0:
@@ -1663,9 +1674,11 @@ carry out Inventorying:
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum] lbs)";
 				increase weight by weightnum;
 		say "[line break]";
-		say "[variable letter spacing]Total Weight: [weight]/[capacity of player] lbs. [if the player is overburdened]*OVERBURDENED*[line break][end if]";
+		say "[variable letter spacing]Total Weight: [weight]/[capacity of player] lbs. [if the player is overburdened]*OVERBURDENED*[line break][end if][line break]";
 	if scenario is "Researcher" or nanitemeter > 0:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
+	if the number of entries in tapes of player > 0:
+		say "(You may see your collection of video tapes using [link][bold type]tape inventory[roman type][end link] or [link][bold type]tinv[roman type][end link] for short.)";
 	now invlinklistfilled is one;
 
 [used to speed up link command lookup inbetween clears on the hyperlink list, because we know something about the list:
@@ -2085,7 +2098,7 @@ To process (X - a grab object):
 		repeat with Z running from 1 to number of filled rows in table of random critters:
 			choose row Z from the table of random critters;
 			let zed be "collie";
-			if name entry matches the text zed, case insensitively:
+			if name entry exactly matches the text zed, case insensitively:
 				now monster is Z;
 				break;
 		if "Iron Stomach" is not listed in feats of player, follow the sex change rule;
@@ -3237,7 +3250,7 @@ to attributeinfect:		[sets the player values from the new attributes]
 To attributeinfect (x - text):
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry matches the text x, case insensitively:
+		if name entry exactly matches the text x, case insensitively:
 			now monster is y;
 			attributeinfect;
 			break;
@@ -3440,7 +3453,7 @@ To fight:
 	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not tamed:		[hunted by the mouse collective]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
-			if name entry matches the text "Mental Mouse", case insensitively:
+			if name entry exactly matches the text "Mental Mouse", case insensitively:
 				add y to q;
 				add y to q;
 				if "Like Attracts Like" is listed in feats of player:
@@ -3453,7 +3466,7 @@ To fight:
 		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
-				if name entry matches the text "Black Wasp", case insensitively:
+				if name entry exactly matches the text "Black Wasp", case insensitively:
 					add y to q;
 					if "Like Attracts Like" is listed in feats of player:
 						add y to q;
@@ -3880,7 +3893,7 @@ This is the turnpass rule:
 		if z is 1:
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y from the table of random critters;
-				if name entry matches the text bodyname of player, case insensitively:
+				if name entry exactly matches the text bodyname of player, case insensitively:
 					if ( there is no resbypass in row monster of table of random critters or resbypass entry is false ) and ( there is no non-infectious in row monster of table of random critters or non-infectious entry is false ):
 						now monster is y;
 						say "You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
@@ -4346,6 +4359,8 @@ This is the self examine rule:
 			now cunttext is " have [cunts of the player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 		else:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. It is [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
+	if name of player is not "Player":
+		say "Your name is [name of player].";
 	say "Looking at yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
@@ -4769,7 +4784,7 @@ carry out scavenging:
 To Challenge (x - text):
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y from the table of random critters;
-		if name entry matches the text x, case insensitively:
+		if name entry exactly matches the text x, case insensitively:
 			now monster is y;
 			now monsterHP is HP entry;
 			challenge;
@@ -4781,7 +4796,7 @@ To Infect (x - text):
 		continue the action;
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry matches the text x, case insensitively:
+		if name entry exactly matches the text x, case insensitively:
 			now monster is y;
 			let reset be 0;
 			if researchbypass is 1 and non-infectious entry is true:
@@ -4812,12 +4827,12 @@ to weakrandominfect:			[does not bypass researcher protection]
 to setmonster ( x - text ):		[puts an infection (named x) as lead monster for later use]
 	let found be 0;
 	choose row monster in the table of random critters;
-	if name entry matches the text x, case insensitively:
+	if name entry exactly matches the text x, case insensitively:
 		now found is 1;
 	else:
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
-			if name entry matches the text x, case insensitively:
+			if name entry exactly matches the text x, case insensitively:
 				now found is 1;
 				now monster is y;
 				break;
@@ -4837,7 +4852,7 @@ understand "spawn [text]" as spawnmonster.
 carry out spawnmonster:
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
-		if name entry matches the text topic understood, case insensitively:
+		if name entry exactly matches the text topic understood, case insensitively:
 			now monster is X;
 			now monsterHP is HP entry;
 			challenge;
@@ -5013,6 +5028,7 @@ Include Pets by Core Mechanics.
 Include Pregnancy by Core Mechanics.
 Include Presets by Core Mechanics.
 Include Status View by Core Mechanics.
+Include Tape Inventory by Core Mechanics.
 Include Text Capture by Eric Eve.
 
 [Locations]
@@ -5134,6 +5150,7 @@ Include Pet Shop Event by Stripes.
 Include Pursuit of Science by Kaleem Mcintyre.
 Include Qytat Shifters by Hellerhound.
 Include Random Events by Hiccup.
+Include Recordings by Wahn.
 Include Red Events by Stripes.
 Include Researcher Studio by Kaleem Mcintyre.
 Include Reservoir by Kaleem Mcintyre.
@@ -6095,6 +6112,14 @@ to say menuwardlist:
 			say "Humorous ";
 		if hellspawn is warded:
 			say "Hellspawn ";
+		if transgender is warded:
+			say "Transgender ";
+		if incest is warded:
+			say "Incest ";
+		if noncon is warded:
+			say "Noncon ";
+		if mindcontrol is warded:
+			say "Mindcontrol ";
 		say "[close bracket][roman type]";
 	else:
 		say "[bold type]None Warded[roman type]";
@@ -6116,6 +6141,14 @@ to say menubanlist:
 			say "Humorous ";
 		if hellspawn is banned:
 			say "Hellspawn ";
+		if transgender is banned:
+			say "Transgender ";
+		if incest is banned:
+			say "Incest ";
+		if noncon is banned:
+			say "Noncon ";
+		if mindcontrol is banned:
+			say "Mindcontrol ";
 		say "[close bracket][roman type]";
 	else:
 		say "[bold type]None Banned[roman type]";

@@ -12,7 +12,7 @@ to say Hunter wins:
 	if HP of player > 0:
 		say "     'Pathetic,' he sneers and shoves you to the ground. 'We had hoped this world would have finally brought forth something worthy of The Hunt again. A true warrior never surrenders.' He leaves you lying there, saying, 'You're not even worth sullying my blade. Do something useful with yourself - like serving as food for more worthy creatures.' He then silently vanishes into the shadows between the trees.";
 	else:
-		if bodyname of player is "elf" or bodyname of player is "Elven Hunter":
+		if bodyname of player is "Woof Elf" or bodyname of player is "Elven Hunter":
 			say "     'And you want to call yourself an elf? Any novice hunter would have lasted longer in his first summer,' he scoffs at you. Pulling off your clothes, the hunter looks you over and touches your naked body, then remarks 'The tiny machines of this realm made you look the part, enough to fool pixies and lower fey. But believe me - you'll never be a true elf unless you get accepted for The Hunt.'";
 		else if ( bodyname of player is listed in infections of Reptilelist and skinname of player is listed in infections of Reptilelist ):
 			say "     The elf looks over your [bodytype of player] form with disdain. 'You're already beaten? How disappointing. I had remembered those big lizards this world had a while ago with more cunning and strength. Oh well, maybe you're just an especially frail and sickly specimen. But you're certainly waking the hope for the existence of worthy prey in this realm.'";

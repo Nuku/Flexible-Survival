@@ -38,7 +38,9 @@ to say demonbrutedesc:
 		say "You see a massive beast ahead, with dark purple skin, a frightening face with slits for nostrils, yellow eyes with red irises, and sharp, intimidating teeth. Three matched pairs of horns crown his head, curved and getting smaller front to back. His entire body is gigantic and muscle-bound, and between his legs hangs a thick cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum. He also has a long, spade-tipped tail protruding from his tailbone, which is constantly flicking back and forth. He wears nothing but a grin.";
 
 to say demon brute wins:
-	if DBCaptureQuestVar is 4: [as part of the Brutus quest]
+	if inasituation is true:
+		say ""; [dealt with at the source]
+	else if DBCaptureQuestVar is 4: [as part of the Brutus quest]
 		say "[DemonBruteVictoryFuck]";
 	else if a random chance of 3 in 6 succeeds: [50% chance]
 		say "[DemonBruteVictoryFuck]";
@@ -192,7 +194,9 @@ to say DemonBruteFaceFuck:
 	say "     With the demon's cock finally having stopped filling your bloated stomach, he pulls his softening purple dick from your gaping maw. He was right, all you can taste is his cum as you burp and cough up globs of his thick white load from your painfully stretched belly. The terrible brute laughs as he inspects your pathetic, bloated body. 'Not bad as a cum-dump, slave. I'll enjoy taking you again when I catch you next time!' With that he disappears into a cloud of smoke leaving you panting, coughing up hot hell-seed, and nursing your swollen gut. Despite the healing effects of the nanites, you feel that your body is not made to take such violent abuse from hellish creatures.";
 
 to say demon brute loses:
-	if DBCaptureQuestVar is 0:
+	if inasituation is true:
+		say ""; [dealt with at the event source]
+	else if DBCaptureQuestVar is 0:
 		say "     With a rather loud thud, the demon brute collapses to the ground, defeated. It proceeds to vanish into a fine purple mist, and is blown away by the wind.";
 		increase DBCaptureQuestVar by 1;
 	else if DBCaptureQuestVar is 1:
@@ -211,7 +215,7 @@ to say demon brute loses:
 		if inasituation is true or a random chance of 2 in 7 succeeds:
 			say "     With a rather loud thud, the demon brute collapses to the ground, defeated. Brutus lunges forward to grab it, but your demonic [if DBCaptureQuestVar is 5]slave[else]companion[end if] is moments too late - the last wisps of the purple cloud slipping through his clawed fingers. A deep chuckle can be heard as a sudden wind blows the mist away and the demon escapes.";
 			if a random chance of 3 in 5 succeeds:
-				say "     All that is left behind is one of the demon's fangs, knocked out during the fight. Seeing it, Brutus growls in frustration and crushes it to dust under his heel";
+				say "     All that is left behind is one of the demon's fangs, knocked out during the fight. Seeing it, Brutus growls in frustration and crushes it to dust under his heel.";
 		else:
 			say "[Brutus_DBCapture]";
 	else if DBCaptureQuestVar > 2:
@@ -477,6 +481,7 @@ instead of trading the demon tooth when the current action involves the Nermine:
 					challenge "Demon Brute";
 					now inasituation is false;
 					if fightoutcome >= 20 and fightoutcome <= 29:  [lost]
+						say "[DemonBruteVictoryFuck]";
 						now bodyname of player is "Captured";
 						now facename of player is "Captured";
 						now skinname of player is "Captured";
@@ -487,7 +492,9 @@ instead of trading the demon tooth when the current action involves the Nermine:
 						end the story saying "An enraged demon brute dragged you off to hell.";
 					else if fightoutcome >= 30:  [fled]
 						say "     Seems like this was a bit too much for you to take on. Running out of the building, closely followed by the enraged demon, you flee for your life and only barely make an escape. Well, there goes your one and only try for this ritual. But then, maybe that's for the best...";
+						now DBCaptureQuestVar is 99;   [ritual failed]
 					else if fightoutcome >= 10 and fightoutcome <= 19:  [won]
+						say "     With a rather loud thud, the demon brute collapses to the ground, defeated. It proceeds to turn into a fine purple mist - but instead of dispersing in the air as before, it swirls around as one tight mass. The cloud of mist wavers as if it's fighting against some pull, then is drawn towards the pentagram in an elongated stream. Whirling around in an ever-tightening spiral, the purple mist finally is absorbed by the now blackened demon tooth in the brazier. As the last bit of it vanishes, the fire and surrounding candles are blown out by a sudden wind, silence falling over the room only disturbed by quiet ticking sounds of the slowly cooling brazier.";
 						WaitLineBreak;
 						say "     Looks like it worked. You carefully fish out the tooth from amongst the ashes and put it in your pocket, then make your way back to Nermine's shop. The jackalwoman seems just a bit surprised when you hand her the demon tooth. 'Congratulations. Nermine is glad you were not eaten. Rare to see business with demons work out.' She looks closely at the tooth, then continues 'One can feel it struggling to get out, your captive. Might even break free over time - let me put a stop to that.' Opening a box in one of the many shelves, the jackalwoman grabs a rough chunk of clear crystal, then touches it with the sharp end of the tooth and murmurs something. A swirl of dark purple flows from the contact point, filling the center of the crystal with a wavering cloud. Setting the changed crystal back into its box, Nermine says 'There, this is the demon power your captive no longer has - and payment for Nermine. He is controllable now.'";
 						say "     With skilled fingers, Nermine clamps the tooth into a small metal socket with a loop on the back and pulls a leather string through that. She hands you your new demontooth amulet and leans close to whisper some magical words you can use to summon the captured demon from within.";

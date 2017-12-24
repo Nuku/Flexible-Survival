@@ -126,6 +126,7 @@ Figure of Boghrim_clothed_icon is the file "Boghrim_clothed.jpg".
 Figure of Boghrim_naked_icon is the file "Boghrim_naked.jpg".
 Figure of Boghrim_face_icon is the file "Boghrim_face.jpg".
 Figure of Bradford_icon is the file "Bradford_ig.jpg".
+Figure of Brennan_clothed_icon is the file "Brennan_clothed.jpg".
 Figure of Brennan_face_icon is the file "Brennan_face.jpg".
 Figure of Brooke_icon is the file "Brooke.jpg".
 Figure of Brian_icon is the file "Brian_ig.jpg".
@@ -215,6 +216,7 @@ Figure of Lilith_naked_icon is the file "Succubus_naked.jpg".
 Figure of Lilith_face_icon is the file "Succubus_face.jpg".
 Figure of Lilith_boobs_icon is the file "Succubus_boobs.jpg".
 Figure of Lindsey_icon is the file "Lindsey_ig.jpg".
+Figure of Malakhi_icon is the file "Malakhi.jpg".
 Figure of MasterMind_icon is the file "MasterMind_ig.jpg".
 Figure of MarcOrwell_icon is the file "MarcOrwell.jpg".
 Figure of Marc_face_icon is the file "Marc_face.jpg".
@@ -291,6 +293,8 @@ Figure of Eric_Urik_naked_icon is the file "Eric_Urik_naked.jpg".
 Figure of Boy_To_Fox_Shampoo1_icon is the file "Boy_To_Fox_Shampoo1.jpg".
 Figure of Boy_To_Fox_Shampoo2_icon is the file "Boy_To_Fox_Shampoo2.jpg".
 Figure of Fang_Candy_icon is the file "Fang_Candy_ig.jpg".	[Fang topping Candy scene.]
+Figure of Malakhi_Barnabas_icon is the file "Malakhi_Barnabas.jpg".
+Figure of Malakhi_Kano_icon is the file "Malakhi_Kano.jpg".
 Figure of Mammoth_CV1_icon is the file "Mammoth_CV_1_ig.jpg".	[Mammoth cock-vore scene 1.]
 Figure of Mammoth_CV2_icon is the file "Mammoth_CV_2_ig.jpg".	[Mammoth cock-vore scene 2.]
 Figure of Mammoth_CV3_icon is the file "Mammoth_CV_3_ig.jpg".	[Mammoth cock-vore scene 3.]
@@ -486,7 +490,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Boy_To_Fox_Shampoo1"	Figure of Boy_To_Fox_Shampoo1_icon	"Watsup"	g-white	"normal"
 "Boy_To_Fox_Shampoo2"	Figure of Boy_To_Fox_Shampoo2_icon	"Watsup"	g-white	"normal"
 "Bradford"	Figure of Bradford_icon	"Anymouse1968"	g-black	"normal"
-"Brennan"	Figure of Brennan_face_icon	"Sinealas"	g-black	"normal"
+"Brennan_clothed"	Figure of Brennan_clothed_icon	"Sinealas"	g-black	"normal"
+"Brennan_face"	Figure of Brennan_face_icon	"Sinealas"	g-black	"normal"
 "Brooke"	Figure of Brooke_icon	"Otterbits"	g-black	"normal"
 "Brian"	Figure of Brian_icon	"dhstein"	g-black	"normal"
 "BrutusGood"	Figure of BrutusGood_icon	"Inkydemon"	g-black	"normal"
@@ -584,6 +589,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Homo Sapiens"	Figure of HomoSapiens_icon	"Astro"	g-black	"normal"
 "Honey"	Figure of Honey_icon	"SandySchreiber"	g-black	"normal"
 "Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-black	"normal"	[only shown for males]
+"Human Survivor"	Figure of Brennan_clothed_icon	"Sinealas"	g-black	"normal"
 "Imp"	Figure of Imp_clothed_icon	"Kupo Klein"	g-black	"normal"
 "Imp_naked"	Figure of Imp_naked_icon	"Kupo Klein"	g-black	"normal"
 "Imp_face"	Figure of Imp_face_icon	"Kupo Klein"	g-black	"normal"
@@ -616,6 +622,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Lilith_naked"	Figure of Lilith_naked_icon	"Kupo Klein"	g-black	"normal"
 "Lindsey"	Figure of Lindsey_icon	"Anymouse1968"	g-black	"normal"
 "Magic Drake"	Figure of MagicDrake_icon	"Anymouse1968"	g-black	"normal"
+"Malakhi"	Figure of Malakhi_icon	"Jahi"	g-black	"normal"
+"Malakhi & Barnabas"	Figure of Malakhi_Barnabas_icon	"Jahi"	g-black	"normal"
+"Malakhi & Kano"	Figure of Malakhi_Kano_icon	"Jahi"	g-black	"normal"
 "Mall Map"	Figure of Map_Smith_Haven_Mall_icon	"Anonymous"	g-black	"inline_only"
 "Mammoth"	Figure of Mammoth_icon	"Boo3"	g-black	"normal"
 "Mannequin"	Figure of Mannequin_icon	"Rastear"	g-black	"normal"
@@ -901,6 +910,7 @@ carry out artistcredits:
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
 	say "     Lilith by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Lindsey by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Malakhi by Jahi @ https://www.furaffinity.net/user/jahi/[line break]";
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Marc (fucked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
@@ -947,6 +957,8 @@ carry out artistcredits:
 	say "     Duke & Shawn by Hufnaar @ furaffinity.net[line break]";
 	say "     Fang and Candy by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Floor Show by MoT @ furaffinity.net[line break]";
+	say "     Malakhi & Barnabas by Jahi @ https://www.furaffinity.net/user/jahi/[line break]";
+	say "     Malakhi & Kano by Jahi @ https://www.furaffinity.net/user/jahi/[line break]";
 	say "     Mammoth Cock Vore Sequence by Boo3 @ furaffinity.net[line break]";
 	say "     Mammoth Pure Succumb by Boo3 @ furaffinity.net[line break]";
 	say "     Parasol Nap by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
