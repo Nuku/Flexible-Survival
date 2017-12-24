@@ -11,7 +11,7 @@ when play begins:
 	add { "Peculiar Dragon" } to infections of feral;
 
 [ DoranPlayerRegard - raw string, determines what Doran calls the player.    ]
-[   Varies between "Master" and "Mistress", or "Pet" / "Slave"               ]
+[   Varies between "Master" and "Mistress", or "Pet", "Slave", "Bitch"       ]
 
 [ DoranFoodTimer - turn that Doran last gave the player food                 ]
 
@@ -3640,12 +3640,12 @@ to say DoranDiscuss_3: [Of Masters and Pets]
 		say "     [link](N)[as]n[end link] - Decline the offer.";
 		if player consents:
 			say "     Doran nods, a happy look coming across his muzzle. It seems all the time he's spent dominating you has made him much more eager to continue doing so, despite his initial hesitation. 'Very well! I shall continue calling you [DoranPlayerRegard] unless you tell me you'd like another name, of sorts.'";
-			say "     With that, you're now cemented as Doran's sub, forever locked into this particular arrangement with the [gdragon].";
+			say "     'Oh! Considering this turn of events, I do believe there's another roleplay we could give a go, if you'd like,' he states enthusiastically. With that, you're now cemented as Doran's sub, forever locked into this particular arrangement with the [gdragon].";
 			now DoranRole is -1;
 		else:
 			say "     Doran nods and frowns slightly, seemingly disappointed by your decision. 'Very well, [DoranPlayerRegard]. I shall remain [']flexible['], as requested!";
 	else:
-		say "     You lightly shake your head, clearing your mind of your previous thoughts. Doran has made it clear in the past that [ghe] doesn't particularly enjoy dominating you, based on his past claims.";
+		say "     You lightly shake your head, clearing your mind of your previous thoughts. Doran has made it clear in the past that [ghe] doesn't particularly enjoy dominating you, based on [ghis] past claims.";
 
 Chapter 4 - Doran Roleplay Protocol
 
@@ -3668,21 +3668,24 @@ to say DoranRPMenu:
 			say "[bold type]Main Roleplay Categories:[roman type][line break]";
 			say "(1) [link]Matters of a Feral Nature[as]1[end link][line break]";
 			say "(2) [link]Dragons and Similar Fantasy Fare[as]2[end link][line break]";
-			say "(-) ----[line break]";
-			say "(-) ----[line break]";
+			say "(3) [link]Miscellaneous[as]3[end link][line break]";
 			say "[line break]";
-			say "(3) [link]Suspend Current Session[as]3[end link] -[bold type][if DoranRoleplayInSession is 0] No[end if] RP in Session[line break][roman type]";
+			say "(4) [link]Suspend Current Session[as]4[end link] -[bold type][if DoranRoleplayInSession is 0] No[end if] RP in Session[line break][roman type]";
 			say "(0) [link]Return to Main Menu[as]0[end link][line break]";
 			while 1 is 1:
-				say "Choice? (0-3)>[run paragraph on]";
+				say "Choice? (0-4)>[run paragraph on]";
 				get a number;
-				if calcnumber >= 0 and calcnumber <= 3:
+				if calcnumber >= 0 and calcnumber <= 4:
 					break;
 				else:
 					say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
 			if calcnumber is 1:
 				say "[dorrpmfn]"; [Doran RP: Matters of a Feral Nature Submenu]
+			else if calcnumber is 2:
+				say "[dorrpdsff]"; [Doran RP: Dragons and Similar Fantasy Fare Submenu]
 			else if calcnumber is 3:
+				say "[DoranRP_Misc]"; [Doran RP: Miscellaneous scenes]
+			else if calcnumber is 4:
 				if DoranRoleplayInSession > 0:
 					say "     'Right, [DoranPlayerRegard], want to cancel what we've currently have planned?'";
 					if player consents:
@@ -3696,8 +3699,6 @@ to say DoranRPMenu:
 						say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[at random].'";
 				else:
 					say "     'Ah, I'm sorry [DoranPlayerRegard], I don't believe any roleplay is in session right now.";
-			else if calcnumber is 2:
-				say "[dorrpdsff]"; [Doran RP: Dragons and Similar Fantasy Fare Submenu]
 			else:
 				say "     'It's no issue, [DoranPlayerRegard], don't be shy if you're feeling creative.'";
 				now trixieexit is 1;
@@ -3750,6 +3751,31 @@ to say dorrpdsff: [Doran RP: Dragons and Similar Fantasy Fare Submenu]
 				say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
 		if calcnumber is 1:
 			say "[dorrptk]"; [Doran RP: The Knight Query]
+		else:
+			say "     '[one of]Alright[or]Moving on[or]Very well[or]Got it[at random].'";
+			now trixieexit is 1;
+
+to say DoranRP_Misc: [Doran RP: Miscellaneous Scenes]
+	say "     'Ah, so my [DoranPlayerRegard] has something else in mind, do they? Very well. What would that be?' the [gdragon] asks you, head tilted ever-so-slightly, betraying his curiousity.";
+	now calcnumber is -1;
+	let trixieexit be 0;
+	while trixieexit is 0:
+		say "[bold type]Miscellaneous[roman type][line break]";
+		say "(1) [link]A Dragon's Toy[as]1[end link][line break]";
+		say "(-) ----[line break]";
+		say "(-) ----[line break]";
+		say "(-) ----[line break]";
+		say "[line break]";
+		say "(0) [link]Return to Main Categories[as]0[end link][line break]";
+		while 1 is 1:
+			say "Choice? (0-1)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 1:
+				break;
+			else:
+				say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
+		if calcnumber is 1:
+			say "[DoranRP_DragonsPetMenu]"; [Doran RP: The Virile Beast Query]
 		else:
 			say "     '[one of]Alright[or]Moving on[or]Very well[or]Got it[at random].'";
 			now trixieexit is 1;
@@ -3872,6 +3898,22 @@ to say dorrptk: [Doran RP: The Knight Query]
 			say "     'That's all I need from them. I'll roll this session out when everyone is ready.'";
 		else:
 			say "     'My mistake, I'm certain I have something else they'd prefer.'";
+
+to say DoranRP_DragonsPetMenu: [Doran RP: A Dragon's Pet Menu]
+	if DoranRole is -1 and (DoranPlayerRegard is not "Master" or DoranPlayerRegard is not "Mistress":
+		say "     You explain your desires for Doran to treat you like his pet, and your desires for him to be [italic type]your[roman type] master for a bit. He gives a hum of thought before nodding his large head. 'I do believe I can do that for my [DoranPlayerRegard].'";
+		say "     'Now,' he says, 'There are some details we should get out of the way before hand. Do you want me to ravage your behind, or would you rather service your Master's [']equipment[']? Yes for ravaging, no for servicing.'";
+		say "([link]y[as]y[end link]/[link]n[as]n[end link])>";
+		if player consents: [Anal / Vaginal Sex]
+			now DoranRP_var1 is 0;
+			say "     'Very well then! I hope you're ready for a good fucking, [DoranPlayerRegard]!' Doran exclaims cheerfully. 'With that sorted, I'll be ready to start as soon as you are!'";
+			now DoranRoleplayInSession is 10;
+		else: [Oral Sex]
+			now DoranRP_var1 is 1;
+			say "     'Very well then! I hope you're ready for a mouthful, [DoranPlayerRegard]!' Doran exclaims cheerfully. 'With that sorted, I'll be ready to start as soon as you are!'";
+			now DoranRoleplayInSession is 10;
+	else:
+		say "     'I'm not too sure I'm comfortable with that, [DoranPlayerRegard],' the [gdragon] admits sheepishly. Perhaps you need to get him in a more dominant role?";
 
 Section 4.3 - Doran Roleplay Sex Protocol
 
