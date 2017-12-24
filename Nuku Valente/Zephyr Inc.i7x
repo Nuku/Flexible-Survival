@@ -7,6 +7,7 @@ Section 1 - Zephyr Office
 
 This is the zephyrad rule:
 	say "     Playing around with your radio in a try of maybe gaining some information about what is going on, you find a channel that seems to have a cycling message. 'Good day to anyone listening. This is Zephyr Incorporated. We wanted to you know that even during this current crisis, our branch office in this fine city remains open. Coordinates follow.' After making a mental note of the description, you listen on to the rest of their recording. 'We here are Zephyr Inc are dedicated to the betterment of mankind through science. And of course we also want to help people outlast what is currently going on. Therefore we are going to award company credit - also known as freecreds - to those who contribute to keeping the more aggressive infected in check. A number of ways of observation are in effect in the city, and you will be credited for every hostile you pacify. Swing on by and spend your freecreds on useful survival gear. We look forward to meeting you shortly.'";
+	say "      The radio continues, 'Please be advised that your Zephyr local branch now stocks our newest technological advancement - the Zephyr Personal Communicator, featuring satellite navigation in a device that fits in your pockets! Never get lost again, with the ZPC. Available now at a limited time offer of only 350 freecred. Visit your Zephyr branch now for more information!''";
 [	attempttowait;
 	say "There is a brief pause and then a three-tone chime. A new voice comes in. 'As an added announcement, a recent creature migration has taken place. The fact that this coincides with Zephyr's planned lupine relocation program is purely coincidental. We shall provide information on this occurrence, but take no responsibility for those inconvenienced by ferals moving into their new habitats. Details follow. Deet-deet-deet.'";
 	say "- Feral and Alpha Wolves successfully relocated to the Urban Forest.";
@@ -137,7 +138,7 @@ to say price list:
 		follow allowed entry;
 		if rule failed:
 			next;
-		say "[link]Buy[as]buy [name entry][end link] ";
+		say "[link]Buy[as]buy [object entry][end link] ";
 		say "[name entry] - [price entry] Creds[line break]";
 
 understand the command "buy" as something new.
@@ -188,6 +189,7 @@ to say nanitecolldesc:
 Table of Zephyr Goods
 name	price	object	allowed
 "nanite collector"	360	nanite collector	noresearch rule
+"Zephyr Personal Communicator"	350	zpc	true rule
 "medkit"	275	medkit	true rule
 "pistol"	550	pistol	true rule
 "pepperspray"	320	pepperspray	pepper rule

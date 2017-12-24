@@ -482,7 +482,7 @@ to say DoranLook:
 		if DoranBallModStatus > 0:
 			say ". The thing is prone to leaking, even when left completely alone";
 		say ".";
-		say "     [italic type]Doran presently regards you as [if DoranPlayerGenderRegard is true]female[else]male[end if][if DoranSelfGender is true] and themself as female[end if]. [gchis] sexual demeanour remains [if DoranRole is 0]domineering[else if DoranRole is 2]submissive[else]reasonable[end if] towards you, as you've commanded[if DoranRoleIntensity is 0 and DoranRole is 0], the severity of which being intense[else if DoranRoleIntensity is 4 and DoranRole is 2], the severity of which being intense[else if DoranRole is not 1], the severity of which being fairly restrained[end if].[roman type]";
+		say "     [italic type]Doran presently regards you as [if DoranPlayerGenderRegard is true]female[else]male[end if][if DoranSelfGender is true] and themself as female[end if]. [gchis] sexual demeanour remains [if DoranRole <= 0]domineering[else if DoranRole is 2]submissive[else]reasonable[end if] towards you, as you've commanded[if DoranRoleIntensity is 0 and DoranRole is 0], the severity of which being intense[else if DoranRoleIntensity is 4 and DoranRole is 2], the severity of which being intense[else if DoranRole is not 1], the severity of which being fairly restrained[end if].[roman type]";
 
 Instead of conversing the Doran:
 	if graphics is true:
@@ -527,9 +527,9 @@ Instead of conversing the Doran:
 	else:
 		say "     '";
 		if a random chance of 1 in 6 succeeds:
-			say "[if DoranRole is 0][one of]Perhaps my [DoranPlayerRegard] can be mine for a little longer[or]How is my [DoranPlayerRegard][at random][else][one of]Perhaps [DoranPlayerRegard] can stay a little longer[or]How is [DoranPlayerRegard][at random][end if]?'";
+			say "[if DoranRole <= 0][one of]Perhaps my [DoranPlayerRegard] can be mine for a little longer[or]How is my [DoranPlayerRegard][at random][else][one of]Perhaps [DoranPlayerRegard] can stay a little longer[or]How is [DoranPlayerRegard][at random][end if]?'";
 		else if a random chance of 3 in 10 succeeds:
-			say "[if DoranRole is 0][one of]My [DoranPlayerRegard] is looking particularly slutty today[or]My hope is that I might get to use my [DoranPlayerRegard][or]My [DoranPlayerRegard] makes for a great toy[at random][else][one of][DoranPlayerRegard] is looking particularly entrancing today[or]My hope is that I might please [DoranPlayerRegard][or][DoranPlayerRegard] treats me well[at random][end if].'";
+			say "[if DoranRole <= 0][one of]My [DoranPlayerRegard] is looking particularly slutty today[or]My hope is that I might get to use my [DoranPlayerRegard][or]My [DoranPlayerRegard] makes for a great toy[at random][else][one of][DoranPlayerRegard] is looking particularly entrancing today[or]My hope is that I might please [DoranPlayerRegard][or][DoranPlayerRegard] treats me well[at random][end if].'";
 		else:
 			say "[one of]On a particularly windy day, the whistling sound made here can be quite calming[or]Getting wood around here can be rather difficult--oh don't give me that look, I mean the trees[or]Moving around in the city is a bit too much trouble for me; not much to scavenge in the streets and few buildings are '[gdragon]-accessible'[or]I'd take care when wandering out there[or][DoranPlayerRegard] might want to ask me first before eating any of the fruit around here; better yet, just avoid the stuff altogether[or]Local monsters usually stay away from around here, thankfully[or]I find a good sense of humor or a good love of fun can get one through the hardest days[at random].'";
 
@@ -540,7 +540,7 @@ to say DoranSex:
 	else if DoranFirstTalk is false:
 		say "     You should probably talk to the [gdragon] first before you get down to any sort of business.";
 	else if lastfuck of Doran - turns <= 4:
-		if DoranRole >= 0:
+		if DoranRole <= 0:
 			say "     'Oh, my [DoranPlayerRegard] is interested in another go, so soon? I'm afraid I'm still too tired from the last bout. I'll be more than eager to have my fun with them when I'm up to it.'";
 		else:
 			say "     'Again, [DoranPlayerRegard]? Oh, they must forgive me, I'm still absolutely exhausted! I don't mean to turn tail, I just wouldn't be any good at pleasing them, I'm sorry.'";
@@ -741,7 +741,7 @@ to say DoranSexMenu: [Doran Sex Protocol]
 				say "[DoranSub_Refused]"; [turn down]
 				now trixieexit is 1;
 	if DoranRefusedSex is false:
-		if DoranRole is 0 and DoranRoleIntensity > 0:
+		if DoranRole <= 0 and DoranRoleIntensity > 0:
 			decrease DoranRoleIntensity by 1;
 		else if DoranRole is 2 and DoranRoleIntensity < 4:
 			increase DoranRoleIntensity by 1;
@@ -759,7 +759,7 @@ to say DoranSexMenu: [Doran Sex Protocol]
 		else:
 			if libido of player > 25:
 				decrease libido of player by ((libido of player / 20) + 1);
-		if DoranVoreStatus > 1 and DoranRole is 0 and DoranRoleplayInSession is 0, follow the turnpass rule;
+		if DoranVoreStatus > 1 and DoranRole <= 0 and DoranRoleplayInSession is 0, follow the turnpass rule;
 		now DoranRoleplayInSession is 0;
 		now DoranRP_var1 is 0;
 		now DoranRP_var2 is 0;
@@ -798,7 +798,7 @@ to say DoranAutoSexProtocol:
 
 an everyturn rule:
 	if player is in Rocky Outcropping and Doran is visible: [Auto-Fire Protocol]
-		if DoranRoleIntensity is 0 and DoranRole >= 0 and DoranAutofireIntensity > 0 and (cunts of player > 0 or cocks of player > 0) and DoranRoleplayInSession is 0:
+		if DoranRoleIntensity is 0 and DoranRole <= 0 and DoranAutofireIntensity > 0 and (cunts of player > 0 or cocks of player > 0) and DoranRoleplayInSession is 0:
 			increase score by 0;
 		else:
 			continue the action;
@@ -814,7 +814,7 @@ check DoranRimming:
 	if Doran is not visible, say "That's not a verb I recognise." instead;
 
 carry out DoranRimming:
-	if DoranRole is 0 and anallevel is 3:
+	if DoranRole <= 0 and anallevel is 3:
 		if DoranRimmingStatus is -1:
 			say "     You approach Doran, advising against having [ghim] force you to attend of [ghis] ass when having sex, which appears to briefly confuse the [gdragon].";
 			say "     'Oh... My apologies, I got the impression you might be into that sort of thing, perhaps I misperceived your obsession with ass?' You ask if this is a problem, to which [ghe] shakes [ghis] head in response, 'Of course not, the last thing I'd want to do is make my [DoranPlayerRegard] uncomfortable... Well, uncomfortable in a way they don't enjoy. If they command it, then it shall be done.' Shall you?";
@@ -1070,7 +1070,7 @@ to say DoranDom_Oral: [Oral Sex] [BODY MODDED]
 		say "     [if DoranRoleIntensity is 0]Pleading with[else]Gesturing to[end if] Doran for sex, [ghe] briefly ponders what [ghe] might subject you to, scratching [ghis] chin as [ghe] lays there next to the[if daytimer is day] smoldering[end if] campfire before finally coming to [ghis] decision. [gche] stands upright, rigid, poised silhouette partially outlined against the [if daytimer is day]creeping daylight[else]fire[end if].";
 		say "     '[if DoranRoleIntensity is 0][one of]I think my [DoranPlayerRegard]'s best suited for sucking off their [gdragon][or]My dick's eager for my [DoranPlayerRegard]'s attention[or]I know my [DoranPlayerRegard] longs for a taste of their [gdragon][at random][else][one of]I think it's only fair that my [DoranPlayerRegard] offers me some oral satisfaction[or]I want my [DoranPlayerRegard] to grant their [gdragon]'s dick some much-needed attention[or]I long for the touch of my [DoranPlayerRegard]'s lips[at random][end if]";
 		say ".' With [ghis] [if DoranRoleIntensity is 0]command appointed[else]request made[end if] you approach [ghim], [if scalevalue of player > 3]head [end if][if DoranRoleIntensity is 0]eagerly [end if]descending";
-	say " upon the [gdragon]'s muscular, scaled undercarriage. Well-toned frame heaving with each excited breath, you're given ample view of the beast's[if DoranRole is 0] enticing[end if] cock[if DoranBallModStatus > 0 and DoranInternal is false] and oversized balls[end if], already peeking from it's [if DoranInternal is true]slit[else]sheath[end if] with barely containable anticipation[if DoranBallModStatus > 0], dripping as it's perpetually want to do[end if]. [if DoranRole is 0]Immediately[else]Soon enough[end if] your lips descend upon its exposed tip, tongue's affection inviting its growth within their embrace, much to [ghis] moaning approval.";
+	say " upon the [gdragon]'s muscular, scaled undercarriage. Well-toned frame heaving with each excited breath, you're given ample view of the beast's[if DoranRole <= 0] enticing[end if] cock[if DoranBallModStatus > 0 and DoranInternal is false] and oversized balls[end if], already peeking from it's [if DoranInternal is true]slit[else]sheath[end if] with barely containable anticipation[if DoranBallModStatus > 0], dripping as it's perpetually want to do[end if]. [if DoranRole <= 0]Immediately[else]Soon enough[end if] your lips descend upon its exposed tip, tongue's affection inviting its growth within their embrace, much to [ghis] moaning approval.";
 	say "     '[one of]Mmm[or]Ah[or]Yes[at random], [if DoranRoleIntensity is 0][one of]my [DoranPlayerRegard] is such a good little slut[or]my [DoranPlayerRegard] can't resist the sight of dick[or]I don't think anybody would make a better pet than my [DoranPlayerRegard][at random][else][one of]my [DoranPlayerRegard]'s tongue feels so nice[or]I wish only for more, my [DoranPlayerRegard][or]please don't stop, my [DoranPlayerRegard][at random][end if].' Compelled to work harder, your [if scalevalue of player > 3]tongue shifts to attend[else]digits rise to caress[end if] [ghis] [if DoranInternal is true]organ's ill-fitting home[else if DoranBallModStatus > 0]greatly oversized, scaled ballsack[else]ponderous, scaled ballsack[end if], further inviting [ghis] dick's countenance, until it hangs fully exposed before you";
 	if scalevalue of player > 3:
 		say ". [if DoranRoleIntensity is 0]Entranced by the tool, you're inclined to immediately plunge it down your maw, rapidly[else]Lips slowly enveloping the head, you descend upon its length, gradually building a motion until you're eagerly[end if] bobbing against";
@@ -1083,13 +1083,13 @@ to say DoranDom_Oral: [Oral Sex] [BODY MODDED]
 			say ". Detecting your need, the [gdragon] exploits this opportunity to return the favour, head moving to offer [ghis] own tongue's affection in turn, slick appendage caressing [if cocks of player > 1]one of them[else if cocks of player > 0]it[else if cunts of player > 1]them[else]it[end if]; however, [ghis] endeavours are somewhat reserved, more intended to tease you than anything else.";
 		else:
 			say ". Detecting your need, the [gdragon] exploits this opportunity to return the favour, head moving to offer [ghis] own tongue's affection in turn, scaled [if cocks of player > 1]maw enveloping one of them[else if cocks of player > 0]maw enveloping it[else if cunts of player > 1]lips embracing one of them[else]lips embracing it[end if].";
-		say "     'M-[DoranPlayerRegard]...!' [if DoranRoleIntensity is not 0]Doran's remark muffled against your flesh as you[else]Doran mutters under [ghis] breath before your affections[end if] are richly rewarded, the creature suddenly going rigid as your maw's flooded with surge after successive, [if DoranBallModStatus > 0]torrential[else]voluminous[end if] surge of the beast's carnal batter. [if DoranRoleIntensity is 0 and DoranBallModStatus > 0]Quickly overwhelmed by the sheer volume, the [gdragon]'s persistent teasing is eventually enough[else if DoranRoleIntensity is 0]Driven by your overwhelming need to consume as much as you can, the [gdragon]'s persistent teasing is eventually enough[else if DoranBallModStatus > 0]Quickly overwhelmed by the sheer volume, the [gdragon]'s reciprocation is more than enough[else]The [gdragon]'s reciprocation is more than enough[end if] to drive you to bliss, [if DoranRoleIntensity is 0]your own sexual fluids left as a puddle on the floor[else]eagerly consuming your own flood of sexual fluids[end if].";
+		say "     '[DoranPlayerRegard]...!' [if DoranRoleIntensity is not 0]Doran's remark muffled against your flesh as you[else]Doran mutters under [ghis] breath before your affections[end if] are richly rewarded, the creature suddenly going rigid as your maw's flooded with surge after successive, [if DoranBallModStatus > 0]torrential[else]voluminous[end if] surge of the beast's carnal batter. [if DoranRoleIntensity is 0 and DoranBallModStatus > 0]Quickly overwhelmed by the sheer volume, the [gdragon]'s persistent teasing is eventually enough[else if DoranRoleIntensity is 0]Driven by your overwhelming need to consume as much as you can, the [gdragon]'s persistent teasing is eventually enough[else if DoranBallModStatus > 0]Quickly overwhelmed by the sheer volume, the [gdragon]'s reciprocation is more than enough[else]The [gdragon]'s reciprocation is more than enough[end if] to drive you to bliss, [if DoranRoleIntensity is 0]your own sexual fluids left as a puddle on the floor[else]eagerly consuming your own flood of sexual fluids[end if].";
 	else:
 		if DoranRoleIntensity is 0:
 			say "; however, the [gdragon] is intent on ensuring you remain painfully unattended, forced to focus entirely on sucking [ghim] off at the expense of your own, overwhelming need.";
 		else:
 			say ". Succumbing to your own, overwhelming need you relinquish one of your hands to desperately [if cocks of player > 0]jerk yourself off[else]fondle yourself[end if], attention now split between your own need and continuing to pump the [gdragon]'s tool.";
-		say "     'M-[DoranPlayerRegard]...!' Doran mutters under [ghis] breath before your affections are richly rewarded, the creature suddenly going rigid as you're painted with surge after successive, [if DoranBallModStatus > 0]torrential[else]voluminous[end if] surge of the beast's carnal batter";
+		say "     '[DoranPlayerRegard]...!' Doran mutters under [ghis] breath before your affections are richly rewarded, the creature suddenly going rigid as you're painted with surge after successive, [if DoranBallModStatus > 0]torrential[else]voluminous[end if] surge of the beast's carnal batter";
 		if DoranBallModStatus > 0:
 			say ". [if DoranRoleIntensity is 0]Driven by your voracious need to consume as much as you can, you are made dizzy by the overwhelming amount of seed [ghe] offers you, quickly outpacing your ability, sputtering out of your mouth and down your [bodytype of player] frame[else]This particularly lewd circumstance more than enough to drive you to bliss, though the excessive amount of seed [ghe] offers quickly overwhelms you, sputtering out of your mouth and down your [bodydesc of player] frame, mixing with your own sexual fluids[end if].";
 		else:
@@ -1312,7 +1312,7 @@ to say DoranDom_RidingPlayer: [Riding Player] [BODY MODDED]
 	if DoranRoleIntensity is 0 and ((DoranAutofired is false and a random chance of 1 in 3 succeeds) or (DoranAutofired is true and a random chance of 2 in 3 succeeds)):
 		say "     Suddenly, [ghe] rises to [if scalevalue of player > 3]tower[else]climb[end if] over you, aiming[if cocks of player > 1] one of[end if] your cock[smn] towards [ghis] scaled ass before descending on it, feeling particularly inclined to have a go with you sans any lubricant.";
 		say "     Strained grunts escaping [ghis] lips, [ghe] shows almost no restraint in forcing it within [ghis] fleshy depths, eager to exploit you for [ghis] own personal pleasure. [if scalevalue of player < 4]You're forced to abide more and more of the [gdragon]'s ponderous weight, eager to push you to the limits of what you can take[else]The [gdragon] keeps the full of [ghis] weight on you, pinning you firmly to the ground[end if] as [ghe] shares [ghis] tongue's firm affection across your [bodydesc of player] frame[if scalevalue of player < 4], a feat not particularly easy for someone of your size[end if].";
-		say "     '[one of]Nfm[or]Mmf[or]Urgh[at random], [one of]my M-[DoranPlayerRegard] likes being used as a slutty[or]m-my [DoranPlayerRegard] is such a challenging[or]my [DoranPlayerRegard] m-makes for such a good[at random][if scalevalue of player < 4] little[end if] [one of]t-toy[or]p-plaything[at random].' [if player is knotted]It takes the [gdragon] a fair bit of time to engulf your dick in its entirety, contending for a fair amount of time to deal with your knot[else]Several prolonged minutes filled with the sound [ghis] grunting the [gdragon] eventually manages to engulf your dick in its entirety[end if]; however, shows little interest in trying to acclimate to your size before [ghe] begins bouncing against you, this rough treatment doubtlessly a bit of a strain on you.";
+		say "     '[one of]Nfm[or]Mmf[or]Urgh[at random], [one of]my [DoranPlayerRegard] likes being used as a slutty[or]m-my [DoranPlayerRegard] is such a challenging[or]my [DoranPlayerRegard] m-makes for such a good[at random][if scalevalue of player < 4] little[end if] [one of]t-toy[or]p-plaything[at random].' [if player is knotted]It takes the [gdragon] a fair bit of time to engulf your dick in its entirety, contending for a fair amount of time to deal with your knot[else]Several prolonged minutes filled with the sound [ghis] grunting the [gdragon] eventually manages to engulf your dick in its entirety[end if]; however, shows little interest in trying to acclimate to your size before [ghe] begins bouncing against you, this rough treatment doubtlessly a bit of a strain on you.";
 	else:
 		say "     [gchis] sleek appendage takes a fair bit of care to fondle along[if cocks of player > 1] one of[end if] your cock's length, this patient reverence easily pulling out a moan from your lips as your emergent precum mixes with [ghis] saliva. Eventually satisfied in [ghis] preparation, Doran rises to [if scalevalue of player > 3]tower[else]climb[end if] over you, aiming the dripping member towards [ghis] scaled ass. The beast takes some time to tease you, grinding it between [ghis] substantive, scaled cheeks before [ghe] finally attempting to squeeze it through [ghis] tight ring.";
 		say "     Brief, strained grunts illustrative of [ghis] endeavours, [ghe] shows [if DoranRoleIntensity is 0]almost no[else]some[end if] restraint in forcing the organ within [ghis] fleshy confines, [if DoranRoleIntensity is 0]eager to exploit you for [ghis] own personal pleasure[else]his prior lubrication diminishing some of the strain [ghis] work puts on you[end if]";
@@ -1467,14 +1467,14 @@ to say DoranDom_CumWorship: [Cum Worship]
 		say "     '[one of]Start sucking, [DoranPlayerRegard][or][DoranPlayerRegard] made this mess, they'll have to attend to it[or][DoranPlayerRegard] is such a massive cum slut[at random]. [one of]Their [gdragon] won't be satisfied until they're full to the brim[or]I bet they want nothing more than to feed off their [gdragon][at random]!' Briefly teasing you, [ghe] firmly presses [ghis] [if DoranInternal is true]flush, leaking slit[else]bulging, leaking sheath[end if] against your lips, taste immediately flooded with the heady, [gmasculine] flavour of the [gdragon]'s precum. It takes almost no effort to make the creature sputter with [ghis] sticky fluid, forcing you to swallow it down in stride.";
 		say "     Strangely disciplined, Doran [one of]seems[or]remains all the[stopping] able to get off from your attendance without ever getting hard, your embarrassing, almost infant-like suckling causing [ghim] to moan and pant. As your efforts become more deliberate, so too does the flood of [ghis] thick ooze become more substantive. You at least have some power in preventing it from getting too out of hand, but this becomes harder with each passing second while the [gdragon] gets off from it.";
 		say "     '[one of]I love seeing my slutty [DoranPlayerRegard] feed off their [gdragon][or]Oh, I just want to see how much my [DoranPlayerRegard] can hold in at once[or]I bet [DoranPlayerRegard] longs to taste their [gdragon] every day[at random]!' Overwhelmingly aroused by [ghis] task, Doran keeps your arms gently pinned to the ground by [ghis] hind legs, forcing you to writhe in an increasingly desperate need. As time goes on it becomes increasingly difficult to keep up, your stuffed, [bodytype of player] body begging more and more for relent with every passing second.";
-		say "     '[one of]J-just a little more[or]M-[DoranPlayerRegard] needs it all[or]Keep s-sucking[at random]...' Slightly trembling against your touch, [ghe] seems finally overtaken by bliss, [ghis] still barely-present immediately overtaking you with a torrent of [ghis] bestial fluid. [if scalevalue of player > 4]After maybe three gulps[else if scalevalue of player is 4]After maybe two gulps[else]You get off maybe one gulp[end if] before it starts sputtering from your maw, forcing it free from your lip's embrace and causing each successive gout to drench your [bodytype of player] torso.";
+		say "     '[one of]J-just a little more[or][DoranPlayerRegard] needs it all[or]Keep s-sucking[at random]...' Slightly trembling against your touch, [ghe] seems finally overtaken by bliss, [ghis] still barely-present immediately overtaking you with a torrent of [ghis] bestial fluid. [if scalevalue of player > 4]After maybe three gulps[else if scalevalue of player is 4]After maybe two gulps[else]You get off maybe one gulp[end if] before it starts sputtering from your maw, forcing it free from your lip's embrace and causing each successive gout to drench your [bodytype of player] torso.";
 		say "     There, covered in the [gdragon]'s voluminous jizz, you're able to free and arm and [if cocks of player > 0]jerk yourself off[else]fondle yourself[end if], motion slicked by the abundant fluid. Made so sensitive by your endeavour, it doesn't take much effort to set yourself off, [if cocks of player > 0]your own, [cum load size of player] load mixing with [ghis]s[else]your juices mixing with [ghis] own[end if]. Doran, no doubt amused by the display, allows you to revel in the throes of your ecstasy while laying drenched in [ghis] cum.";
 	else:
 		say "     '[one of]I think [DoranPlayerRegard] needs a bath[or]Shame [DoranPlayerRegard] didn't bring a bathing suit[or]I'm going to make such a mess of [DoranPlayerRegard][at random]...' Musing over you, the [gdragon]'s impressive dick starts to slip free from its ill-fitting [if DoranInternal is true]slit[else]sheath[end if], hard and throbbing above you almost immediately. Gently pinned to the ground by [ghis] hind legs, you remain tantalizingly out of reach of [ghis] [if DoranInternal is true]nethers[else]rod[end if], Doran teasing you by its mere presence, eagerly drooling all over your [bodytype of player] body.";
 		say "     The creature seems particularly skilled -- or perhaps just really sensitive. [gche] groans faintly, twitching cock rocking slightly against the open air, more than enough to get its flow of precum really going, each heady spurt staining you below. The flow gradually picks up, as if Doran could get off by humping the air alone, and forcing you to watch as you become increasingly drenched by [ghis] sticky fluid. Air filled with [ghis] overpowering, [gmasculine] scent, you can't help but revel in the thick warmth [ghis] precum bathes you in.";
 		say "     '[one of]Such an obedient, sluttly little [DoranPlayerRegard][or]I bet [DoranPlayerRegard] is so depraved, they could get off simply by the feel of their [gdragon]'s cum[or]I think this look is appropriate for [DoranPlayerRegard], an embarrassing mess under their [gdragon][at random].' As if to [']reward['] you, [ghe] lowers [ghim]self just enough to lightly grind [ghis] terribly hot, throbbing dick against your slippery body, occasionally moving high up enough for it to reach your face where [ghe] can briefly force you to drink from the sputtering tip. You're so painfully aroused by this point, you can only moan impotently, your bound, slick writhing weakly against [ghim].";
 		say "     [gche] pulls away from you once more, again subject to the seemingly hypnotic motion of [ghis] rigid, thrusting assets, now much more desperate for release. Practically drowning in [ghis] fluid, it becomes hard to not be lost in a haze of [ghis] overwhelming scent and taste, until [ghe] finally goes rigid and cries out in bliss. Immediately hit with a gout of [ghis] more potent cum, [ghe] spares no inch of you when it comes to drenching you with the stuff.";
-		say "     '[one of]A-ah, cum for your [gdragon], [DoranPlayerRegard][or]I-I won't stop until you show me how much of a slut [DoranPlayerRegard] is[or]M-[DoranPlayerRegard] won't be able to resist their dragon[at random].' [gche] finishes [ghis] orgasm by aiming squarely at your crotch, the force of [ghis] sticky barrages more than enough to set your terribly sensitive form off, [if cocks of player > 0]your own cock[smn] mixing your [cum load size of player] load with [ghis] own[else]your own cunt[sfn] aching painfully against the assault[end if]. Doran looks down at you with amusement as lets you revel in the throes of ecstasy, drenched in [ghis] cum.";
+		say "     '[one of]A-ah, cum for your [gdragon], [DoranPlayerRegard][or]I-I won't stop until you show me how much of a slut [DoranPlayerRegard] is[or][DoranPlayerRegard] won't be able to resist their dragon[at random].' [gche] finishes [ghis] orgasm by aiming squarely at your crotch, the force of [ghis] sticky barrages more than enough to set your terribly sensitive form off, [if cocks of player > 0]your own cock[smn] mixing your [cum load size of player] load with [ghis] own[else]your own cunt[sfn] aching painfully against the assault[end if]. Doran looks down at you with amusement as lets you revel in the throes of ecstasy, drenched in [ghis] cum.";
 	say "     Once your need dies down, and you catch your breath a bit, [one of]you think you're done here, but Doran seems to think differently[or]Doran chuckles at you[stopping], a smug look across [ghis] face.";
 	say "     '[one of]Now for part two[or]I'm going to enjoy this[or]This is going to be fun[at random]...!' [gche] releases [ghis] hold on you, only to press and grind your fluid-drenched body against [ghim]. The motion of [ghis] coarse plates slicked, [ghis] [if tempnum is 1]now-hardening[else]still-hard[end if] dick presses firmly against you, making a worse mess for both of you now. Both your arms are free now, allowing you to smear your soaked digits against [ghis] underside and thighs. [if DoranInternal is true][gche] seems to really enjoy lodging you between [ghis] legs deeply, until you're made lick and kiss along [ghis] perineum and the base of [ghis] rod[else][gche]'s rather fond of smothering you with [ghis] oversized sack, inviting you to lavish your affection on them[end if].";
 	say "     You're still quite exhausted[if tempnum is 2] and bloated[end if] from the ordeal, but Doran seems relentless, and [ghis] persistence is enough to arouse you a second time. [gche]'s at least very forgiving towards your somewhat slower pace. Vision now somewhat obscured, you're given a bit of a jolt when you feel the [gdragon]'s tongue caress along aching [if cocks of player > 0]cock[smn][else]cunt[sfn][end if]. You can feel [ghis] dick throb powerfully against your [bodydesc of player] torso, a flood of fresh precum following with each one, to the point where it becomes increasingly difficult for your companion to keep you from slipping out from under [ghim].";
@@ -1524,10 +1524,10 @@ to say DoranSub_SelfMilking: [Self-milking]
 						say "     Now that things have died down, it looks like Doran might have trouble getting around, stomach almost bulging past [ghis] limbs. [gche], basically, has to roll onto [ghis] front and inch [ghim]self near the campfire. [gche]'s still a bit of a mess, but by this point [ghe]'s pretty much done. Maybe you should help [ghim]?";
 						if player consents:
 							say "     You decide to move in and clean the dragon off. This seems like a rare occasion where [ghe]'s totally spent, so at least [ghe]'s not making any more of a mess. [gche]'s still catching [ghis] breath, but seems grateful nonetheless.";
-							say "     'M-[DoranPlayerRegard] is... Thank you.' [gche] seems to be nodding off a bit, so you leave [ghim] at that. You imagine [ghe][']ll be back on [ghis] feet in no time. Worst case scenario, [ghe][']ll probably have to roll everywhere now.";
+							say "     '[DoranPlayerRegard] is... Thank you.' [gche] seems to be nodding off a bit, so you leave [ghim] at that. You imagine [ghe][']ll be back on [ghis] feet in no time. Worst case scenario, [ghe][']ll probably have to roll everywhere now.";
 						else:
 							say "     You decide to leave [ghim] to [ghis] own devices, catching [ghis] breath next to the fire.";
-							say "     '[one of]M-[DoranPlayerRegard] really tests their dragon's limits[or]I beg [DoranPlayerRegard] we don't do that often[or]I-I'm sure I'll be fine, [DoranPlayerRegard][at random]...' You imagine [ghe]'ll be back on [ghis] feet in no time. Worst case scenario, [ghe][']ll probably have to roll everywhere now.";
+							say "     '[one of][DoranPlayerRegard] really tests their dragon's limits[or]I beg [DoranPlayerRegard] we don't do that often[or]I-I'm sure I'll be fine, [DoranPlayerRegard][at random]...' You imagine [ghe]'ll be back on [ghis] feet in no time. Worst case scenario, [ghe][']ll probably have to roll everywhere now.";
 				else: [blueball]
 					say "     Before [ghe] can go on any longer, you push [ghis] head free of [ghis] cock, slick thing slipping from between [ghis] lips easily, ";
 					if tempnum is 1:
@@ -1602,10 +1602,10 @@ to say DoranSub_SelfMilking: [Self-milking]
 							say "     Now that things have died down, it looks like Doran might have trouble getting around, stomach almost bulging past [ghis] limbs. [gche], basically, has to roll onto [ghis] front and inch [ghim]self near the campfire. [gche]'s still a bit of a mess, but by this point [ghe]'s pretty much done. Maybe you should help [ghim]?";
 							if player consents:
 								say "     You decide to move in and clean the dragon off. This seems like a rare occasion where [ghe]'s totally spent, so at least [ghe]'s not making any more of a mess. [gche]'s still catching [ghis] breath, but seems grateful nonetheless.";
-								say "     'M-[DoranPlayerRegard] is... Thank you.' [gche] seems to be nodding off a bit, so you leave [ghim] at that. You imagine [ghe][']ll be back on [ghis] feet in no time. Worst case scenario, [ghe][']ll probably have to roll everywhere now.";
+								say "     '[DoranPlayerRegard] is... Thank you.' [gche] seems to be nodding off a bit, so you leave [ghim] at that. You imagine [ghe][']ll be back on [ghis] feet in no time. Worst case scenario, [ghe][']ll probably have to roll everywhere now.";
 							else:
 								say "     You decide to leave [ghim] to [ghis] own devices, catching [ghis] breath next to the fire.";
-								say "     '[one of]M-[DoranPlayerRegard] really tests their dragon's limits[or]I beg [DoranPlayerRegard] we don't do that often[or]I-I'm sure I'll be fine, [DoranPlayerRegard][at random]...' You imagine [ghe][']ll be back on [ghis] feet in no time. Worst case scenario, [ghe][']ll probably have to roll everywhere now.";
+								say "     '[one of][DoranPlayerRegard] really tests their dragon's limits[or]I beg [DoranPlayerRegard] we don't do that often[or]I-I'm sure I'll be fine, [DoranPlayerRegard][at random]...' You imagine [ghe][']ll be back on [ghis] feet in no time. Worst case scenario, [ghe][']ll probably have to roll everywhere now.";
 					else: [blueball]
 						if tempnum is 1 and cocks of player > 0:
 							say "     You don't think you'll be able to hold back your own bliss, however. Shall you use it to shame [ghim]?";
@@ -1649,7 +1649,7 @@ to say DoranSub_AnalFuck: [Anal Catching] [BODY MODDED]
 		say "     [gche] shows absolutely no difficulty in taking your member[if player is knotted], even tying with it almost immediately[end if]. [gche] doesn't seem to mind your ease, revelling in being [if DoranRoleIntensity is 4]shamelessly used[else]ridden by[end if] you, supple abyss almost overwhelming in how [if DoranRoleIntensity is 4]obligingly[else]assertively[end if] it milks the organ.";
 		say "     '[one of]Fuck me, [DoranPlayerRegard][or]Harder, [DoranPlayerRegard], harder[at random]!' [gche] [if DoranRoleIntensity is 4]plead[else]demand[end if]s, the creature greedy for your throbbing meat as you're compelled to start fucking [ghim] proper.";
 	say "     [If scalevalue of player > 3]Body visibly rocking against each successive thrust[else]Larger body barely moved by[end if] each successive thrust, [if player is not internal]your balls audibly slap against [ghim], a wordless remark on[else]overtaken by[end if] your rising, wanton fervor. Your embrace on the reptile grows increasingly slick, coated by a thin veneer of sweat. [if DoranBallModStatus > 0]You hear wet sounds with each motion, as [ghe] seems to fire off a considerable gout of precum with each one.[end if]";
-	say "     '[one of]P-please[or]M-more[or]A-ah[at random], [if DoranRoleIntensity is 4][one of]use me like the s-slutty cum dumpster I am[or]fill me with M-[DoranPlayerRegard]'s cum[or]I n-need [DoranPlayerRegard]'s cum[at random][else][one of]M-[DoranPlayerRegard][or]d-don't hold back, [DoranPlayerRegard][or]don't s-stop, [DoranPlayerRegard][at random][end if]...!' At the very cusp of your bliss, your mind is still clear enough to determine if you'd like to pull out at the last second, shall you? Else you will give the greedy [gdragon] what [ghe] wants.";
+	say "     '[one of]P-please[or]M-more[or]A-ah[at random], [if DoranRoleIntensity is 4][one of]use me like the s-slutty cum dumpster I am[or]fill me with [DoranPlayerRegard]'s cum[or]I n-need [DoranPlayerRegard]'s cum[at random][else][one of][DoranPlayerRegard][or]d-don't hold back, [DoranPlayerRegard][or]don't s-stop, [DoranPlayerRegard][at random][end if]...!' At the very cusp of your bliss, your mind is still clear enough to determine if you'd like to pull out at the last second, shall you? Else you will give the greedy [gdragon] what [ghe] wants.";
 	if player consents:
 		say "     Before you are completely overtaken, you wrench your [cock size desc of player] cock from the beast, quickly jacking it[if cocks of player > 2] and one of its brothers[else if cocks of player is 2] and its brother[end if] off before you cry out, coating [ghis] ass[if scalevalue of player > 3] and back[end if] with [if cock width of player > 24]voluminous [end if]gouts of your thick, virile seed[if cock width of player > 24]; so substantial your payload that you render the beast a shameful, coated mess of cum[end if]. It takes you some time to recover, eventually [if scalevalue of player < 4]climbing[else]pulling yourself[end if] off. The [gdragon] lays there for a bit, panting [ghim]self in the wake of being ravaged. [gche] eventually does crawl back to [ghis] feet, looking satisfied";
 		if DoranRoleIntensity is 4:
@@ -1856,7 +1856,7 @@ to say DoranSub_CatchCunt: [Cunt Catching] [BODY MODDED]
 			say "     You cheekily reject [ghis] offer, dead set on taking care of this on your own terms as you begin to ease yourself down on [ghis] throbbing organ, slowing once you start to contend with its flared head. [if cunt length of player > 11]Your difficulty is only brief before you envelope the head within your depths entirely, your subsequent ease much to the [gdragon]'s enjoyment[else]After some work and strained grunts, you manage to envelope the head within your depths[end if], the rest taking somewhat less work, up to the knot.";
 	else:
 		say "     Now ready, you move over the [gdragon]'s scaled undercarriage, carefully aiming the dripping rod for [if cunts of player > 0]one of your exposed cunts[else]your exposed cunt[end if]. Briefly teasing the tip against your slick lips, much to the groans of the [gdragon]'s approval, you slowly ease yourself down on [ghis] throbbing organ, flared head slowly sinking past your soft, yielding folds of flesh. [if cunt length of player < 12]After much work and strained grunts, you manage to envelop the head within your depths, the rest taking somewhat less work, up to the knot[else if cunt length of player > 17]Struck by a rather impish urge, you abruptly plunge down on [ghis] tool in its entirety, so pliable that you envelop [ghis] knot with almost no difficulty.[run paragraph on] This shock is enough to cause [ghim] to briefly howl out, a gout of pre spurting from [ghis] suddenly engulfed tool[else]Past [ghis] head your descent is a fair bit easier, up to [ghis] knot, which is large enough to make you avoid dealing with just yet[end if].";
-	say "     '[one of]Oh[or]Nrgh[or]Nnf[at random], [one of]M-[DoranPlayerRegard] is so [if cunt length of player < 12]t-tight[else if cunt length of player < 17]s-skilled[else]f-firm[end if][or]I-I can't hold back, M-[DoranPlayerRegard][or]M-[DoranPlayerRegard][at random]...' [gchis] mutterings are mixed with deep moans, made all the more prevalent as you build a motion of riding the [gdragon]'s powerful dick, [if cocks of player > 1]your own bouncing against the open air, staining the [gdragon]'s scales with their slick fluids[else if cocks of player is 1]your own bouncing against the open air, staining the [gdragon]'s scales with its slick fluids[else if cunts of player > 2]unstuffed cunts aching against the open air, staining the [gdragon]'s scales with their honey[else if cunts of player is 2]unstuffed cunt aching against the open air, staining the [gdragon]'s scales with its honey[else]stuffed portal eagerly milking the beast for what [ghe]'s worth[end if][if scalevalue of player < 3 or cunt length of player < 12] while stretched to the limits of your ability to contain the organ[end if]. [if DoranBallModStatus > 0]Each descent causes yet another gout of precum to shoot from [ghim], causing you to flinch.[run paragraph on] [gchis] supply almost seems endless![end if]";
+	say "     '[one of]Oh[or]Nrgh[or]Nnf[at random], [one of][DoranPlayerRegard] is so [if cunt length of player < 12]t-tight[else if cunt length of player < 17]s-skilled[else]f-firm[end if][or]I-I can't hold back, [DoranPlayerRegard][or][DoranPlayerRegard][at random]...' [gchis] mutterings are mixed with deep moans, made all the more prevalent as you build a motion of riding the [gdragon]'s powerful dick, [if cocks of player > 1]your own bouncing against the open air, staining the [gdragon]'s scales with their slick fluids[else if cocks of player is 1]your own bouncing against the open air, staining the [gdragon]'s scales with its slick fluids[else if cunts of player > 2]unstuffed cunts aching against the open air, staining the [gdragon]'s scales with their honey[else if cunts of player is 2]unstuffed cunt aching against the open air, staining the [gdragon]'s scales with its honey[else]stuffed portal eagerly milking the beast for what [ghe]'s worth[end if][if scalevalue of player < 3 or cunt length of player < 12] while stretched to the limits of your ability to contain the organ[end if]. [if DoranBallModStatus > 0]Each descent causes yet another gout of precum to shoot from [ghim], causing you to flinch.[run paragraph on] [gchis] supply almost seems endless![end if]";
 	say "     Writhing against the ground, completely lost in the pleasure you offer [ghim], it doesn't take long before [ghe] looks like [ghe]'s about to erupt! It might be ideal to pull out just before then. Shall you, lest you take the full brunt of [ghis] carnal fury?";
 	if player consents:
 		say "     Just as the beast is about to blow, you [if cunt length of player < 12]wrench[else]pull[end if] yourself free of [ghis] cock, rapidly frotting your [if cocks of player > 0]own[else]cunt[sfn][end if] against the throbbing, pre-slicked tool just before [ghe] cries out, gout after [if DoranBallModStatus > 0]overwhelming gout drowning[else]successive gout painting[end if] the [gdragon]'s torso and face with [ghis] own jizz[if DoranSelfBlueballing > 0], the volume of which intensified by [ghis] prior neglect[end if]. Soon after, your desperate fervour is rewarded when you find your own bliss, [if cocks of player > 0]dick[smn] unloading your [cum load size of player] payload against [ghim][else if cunts of player > 1]pussies staining [ghis] crotch with your juices[else]pussy staining [ghis] crotch with your juices[end if], mixing with [ghis] own until the reptile is an embarrassing mess.";
@@ -1914,7 +1914,7 @@ to say DoranSub_CatchAnal: [Anal Catching] [BODY MODDED]
 			say "     You cheekily reject [ghis] offer, dead set on taking care of this on your own terms as you begin to ease yourself down on [ghis] throbbing organ, slowing once you start to contend with its flared head. [if scalevalue of player is 3 and player is twistcapped]Your difficulty is only brief before you envelope the head within your depths entirely, your subsequent ease much to the [gdragon]'s enjoyment[else if scalevalue of player < 3]Much in spite your peculiar talent, it takes quite a bit of work for you to effectively envelope the head within your depths, though the [gdragon] is glad you can even take [ghim] in the first place[else]After much work and strained grunts, you manage to envelope the head within your depths[end if], the rest taking somewhat less work, up to the knot.";
 	else:
 		say "     Now ready, you move over the [gdragon]'s scaled undercarriage, carefully aiming the dripping rod for your ass. Briefly teasing the tip against your supple ring, much to the groans of the [gdragon]'s approval, you slowly ease yourself down on [ghis] throbbing organ, flared head slowly sinking past your soft, yielding flesh. [if player is twistcapped]Struck by a rather impish urge, you abruptly plunge down on [ghis] tool in its entirety, so pliable that you envelop [ghis] knot with almost no difficulty.[run paragraph on] This shock is enough to cause [ghim] to briefly howl out, a gout of pre spurting from [ghis] suddenly engulfed tool[else]Past [ghis] head your descent is a fair bit easier, up to [ghis] knot, which is large enough to make you avoid dealing with just yet[end if].";
-	say "     '[one of]Oh[or]Nrgh[or]Nnf[at random], [one of]M-[DoranPlayerRegard] is so [if scalevalue of player < 4]t-tight[else if player is twistcapped]s-skilled[else]f-firm[end if][or]I-I can't hold back, M-[DoranPlayerRegard][or]M-[DoranPlayerRegard][at random]...' [gchis] mutterings are mixed with deep moans, made all the more prevalent as you build a motion of riding the [gdragon]'s powerful dick, [if cocks of player > 1]your own bouncing against the open air, staining the [gdragon]'s scales with their slick fluids[else if cocks of player is 1]your own bouncing against the open air, staining the [gdragon]'s scales with its slick fluids[else]unstuffed cunt[sfn] aching against the open air, staining the [gdragon]'s scales with their honey[end if][if scalevalue of player < 3]while stretched to the limits of your ability to contain the organ[end if]. [if DoranBallModStatus > 0]Each descent causes yet another gout of precum to shoot from [ghim], causing you to flinch.[run paragraph on] [gchis] supply almost seems endless![end if]";
+	say "     '[one of]Oh[or]Nrgh[or]Nnf[at random], [one of][DoranPlayerRegard] is so [if scalevalue of player < 4]t-tight[else if player is twistcapped]s-skilled[else]f-firm[end if][or]I-I can't hold back, [DoranPlayerRegard][or][DoranPlayerRegard][at random]...' [gchis] mutterings are mixed with deep moans, made all the more prevalent as you build a motion of riding the [gdragon]'s powerful dick, [if cocks of player > 1]your own bouncing against the open air, staining the [gdragon]'s scales with their slick fluids[else if cocks of player is 1]your own bouncing against the open air, staining the [gdragon]'s scales with its slick fluids[else]unstuffed cunt[sfn] aching against the open air, staining the [gdragon]'s scales with their honey[end if][if scalevalue of player < 3]while stretched to the limits of your ability to contain the organ[end if]. [if DoranBallModStatus > 0]Each descent causes yet another gout of precum to shoot from [ghim], causing you to flinch.[run paragraph on] [gchis] supply almost seems endless![end if]";
 	say "     Writhing against the ground, completely lost in the pleasure you offer [ghim], it doesn't take long before [ghe] looks like [ghe]'s about to erupt! It might be ideal to pull out just before then. Shall you, lest you take the full brunt of [ghis] carnal fury?";
 	if player consents:
 		say "     Just as the beast is about to blow, you [if scalevalue of player < 4]wrench[else]pull[end if] yourself free of [ghis] cock, rapidly frotting your [if cocks of player > 0]own[else]cunt[sfn][end if] against the throbbing, pre-slicked tool just before [ghe] cries out, gout after [if DoranBallModStatus > 0]overwhelming gout drowning[else]successive gout painting[end if] the [gdragon]'s torso and face with [ghis] own jizz[if DoranSelfBlueballing > 0], the volume of which intensified by [ghis] prior neglect[end if]. Soon after, your desperate fervour is rewarded when you find your own bliss, [if cocks of player > 0]dick[smn] unloading your [cum load size of player] payload against [ghim][else if cunts of player > 1]pussies staining [ghis] crotch with your juices[else]pussy staining [ghis] crotch with your juices[end if], mixing with [ghis] own until the reptile is an embarrassing mess.";
@@ -2061,7 +2061,7 @@ to say DoranSub_SuckCock: [Oral Giving] [BODY MODDED]
 	if player consents:
 		now DoranRP_var2 is 1;
 		say "     Reaching a hand between [ghis] scaled thighs, [if scalevalue of player < 3]you're a bit strained to properly reach [ghim], attention split as you are, digits [else]your digits[end if] soon push past [ghis] supple anal ring. [gchis] prostate is quite deep in there, [if scalevalue of player < 4] and you're ultimately forced to pushed the whole of your hand in to reach it[else]but you manage to reach it with little difficulty[end if]. The [gdragon] clearly approves of all this, your lewd, internal caress causing [ghim] to tense with every motion.";
-	say "     '[one of]A-ah[or]O-oh[or]N-nng[at random], [if DoranRoleIntensity is 4][one of]Milk y-your [gdragon] dry, M-[DoranPlayerRegard][or]I beg f-for bliss, [DoranPlayerRegard][or]I can't c-control myself, M-[DoranPlayerRegard][at random][else][one of]I-I can't hold of any longer, M-[DoranPlayerRegard][or][DoranPlayerRegard], I'm g-gonna blow[or]M-[DoranPlayerRegard][at random][end if]...!' Panting audibly in the wake of your continued affection, ";
+	say "     '[one of]A-ah[or]O-oh[or]N-nng[at random], [if DoranRoleIntensity is 4][one of]Milk y-your [gdragon] dry, [DoranPlayerRegard][or]I beg f-for bliss, [DoranPlayerRegard][or]I can't c-control myself, [DoranPlayerRegard][at random][else][one of]I-I can't hold of any longer, [DoranPlayerRegard][or][DoranPlayerRegard], I'm g-gonna blow[or][DoranPlayerRegard][at random][end if]...!' Panting audibly in the wake of your continued affection, ";
 	if DoranRoleIntensity is 4:
 		say "you can deny [ghim] orgasm, shall you? Else you'll sate the [gdragon]'s rising lust.";
 		if player consents:
@@ -2431,23 +2431,24 @@ carry out DoranRequest:
 			say "[bold type]Options:[roman type][line break]";
 			say "(1) [link]Sexual Position[as]1[end link] - [bold type][if DoranRole is 0]Dominant[else if DoranRole is 2]Submissive[else if DoranRole is -1]Dominant (LOCKED)[else]Neutral[end if][roman type][line break]";
 			say "(2) [link]Your Regarded Gender[as]2[end link] - [bold type][if DoranPlayerGenderRegard is true]Female[else]Male[end if][roman type][line break]";
-			say "(3) [link]Doran's Regarded Gender[as]3[end link] - [bold type][if DoranSelfGender is true]Female[else]Male[end if][roman type][line break]";
-			say "(4) [if DoranRoleIntensity is not 0]Interaction Locked - Requires Max Domination[else][link]Sex Auto-fire[as]4[end link] - [end if][bold type][if DoranAutofireIntensity is 1 and DoranRoleIntensity is 0]Strict[else if DoranAutofireIntensity is 2 and DoranRoleIntensity is 0]Loose[else if DoranRoleIntensity is 0]Off[end if][roman type][line break]";
+			say "(3) [link]Your title[as]3[end link] - [bold type][DoranPlayerRegard][roman type][line break]";
+			say "(4) [link]Doran's Regarded Gender[as]4[end link] - [bold type][if DoranSelfGender is true]Female[else]Male[end if][roman type][line break]";
+			say "(5) [if DoranRoleIntensity is not 0]Interaction Locked - Requires Max Domination[else][link]Sex Auto-fire[as]5[end link] - [end if][bold type][if DoranAutofireIntensity is 1 and DoranRoleIntensity is 0]Strict[else if DoranAutofireIntensity is 2 and DoranRoleIntensity is 0]Loose[else if DoranRoleIntensity is 0]Off[end if][roman type][line break]";
 			say "[line break]";
 			say "[bold type]Requests:[roman type][line break]";
 			if DoranTitModStatus > 1:
-				say "(5) [link]Breastfeed[as]5[end link] - Feed off Doran[line break]";
+				say "(6) [link]Breastfeed[as]6[end link] - Feed off Doran[line break]";
 			else:
-				say "(5) [link]Scavenge[as]5[end link] - Request Doran's aid[line break]";
-			say "(6) [if DoranDiscussionProgress < 2]Interaction Locked - Try Discussing with Doran[else][link]Roleplay Session[as]6[end link][end if][bold type][if DoranRoleplayInSession > 0] - Roleplay Queued[end if][roman type][line break]";
-			say "(7) [link]Body Modification[as]7[end link][if DoranTitModStatus > 0 or DoranBallModStatus > 0] - [end if][if DoranTitModStatus > 0][bold type]+Breasts [roman type][end if][if DoranBallModStatus > 0 and DoranInternal is false][bold type]+Balls[roman type][else if DoranBallModStatus > 0 and DoranInternal is true][bold type]+Cum[roman type][end if][line break]";
-			say "(8) [link]Vore Extension[as]8[end link] - [bold type][if DoranVoreStatus is 0]Uninquired[else if DoranVoreStatus is 2]Active[else]Inactive[end if][roman type] [italic type][if DoranVoreStatus is 2 and scalevalue of player > 3]Player too large![else if DoranVoreStatus is 2 and DoranRole is 2]Doran is Submissive![end if][roman type][line break]";
+				say "(6) [link]Scavenge[as]7[end link] - Request Doran's aid[line break]";
+			say "(7) [if DoranDiscussionProgress < 2]Interaction Locked - Try Discussing with Doran[else][link]Roleplay Session[as]7[end link][end if][bold type][if DoranRoleplayInSession > 0] - Roleplay Queued[end if][roman type][line break]";
+			say "(8) [link]Body Modification[as]8[end link][if DoranTitModStatus > 0 or DoranBallModStatus > 0] - [end if][if DoranTitModStatus > 0][bold type]+Breasts [roman type][end if][if DoranBallModStatus > 0 and DoranInternal is false][bold type]+Balls[roman type][else if DoranBallModStatus > 0 and DoranInternal is true][bold type]+Cum[roman type][end if][line break]";
+			say "(9) [link]Vore Extension[as]9[end link] - [bold type][if DoranVoreStatus is 0]Uninquired[else if DoranVoreStatus is 2]Active[else]Inactive[end if][roman type] [italic type][if DoranVoreStatus is 2 and scalevalue of player > 3]Player too large![else if DoranVoreStatus is 2 and DoranRole is 2]Doran is Submissive![end if][roman type][line break]";
 			say "[line break]";
 			say "(0) [link]Exit[as]0[end link][line break]";
 			while 1 is 1:
-				say "Choice? (0-8)>[run paragraph on]";
+				say "Choice? (0-9)>[run paragraph on]";
 				get a number;
-				if calcnumber >= 0 and calcnumber <= 8:
+				if calcnumber >= 0 and calcnumber <= 9:
 					break;
 				else:
 					say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
@@ -2456,30 +2457,65 @@ carry out DoranRequest:
 			else if calcnumber is 2:
 				say "[DoranPlayerGenderSetting]"; [Player Gender Option]
 			else if calcnumber is 3:
-				say "[DoranGenderSetting]"; [NEW! Doran's Gender Option]
+				say "[DoranPlayerTitle]"; [Player Title Options]
 			else if calcnumber is 4:
+				say "[DoranGenderSetting]"; [NEW! Doran's Gender Option]
+			else if calcnumber is 5:
 				if DoranRole < 1 and DoranRoleIntensity is 0:
 					say "[DoranAutofireSetting]"; [Sex Auto-fire]
 				else:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
-			else if calcnumber is 5:
-				say "[DoranGetFood]"; [Food Requisition/NEW! Breastfeeding]
 			else if calcnumber is 6:
+				say "[DoranGetFood]"; [Food Requisition/NEW! Breastfeeding]
+			else if calcnumber is 7:
 				if DoranDiscussionProgress < 2:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 				else:
 					say "[DoranRPMenu]"; [Roleplay Session]
-			else if calcnumber is 7:
-				say "[doropt_6]"; [New! Body Modification]
 			else if calcnumber is 8:
-				say "[doropt_4]"; [Vore Implementation]
+				say "[DoranBodyModMenu]"; [New! Body Modification]
+			else if calcnumber is 9:
+				say "[DoranVoreMenu]"; [Vore Implementation]
 			else:
-				say "[doropt_0]"; [End]
+				say "[DoranRequestExit]"; [End]
 				now trixieexit is 1;
 
 
+to say DoranPlayerTitle:
+	if DoranRole is -1:
+		now calcnumber is -1;
+		say "     You tentatively bring up that you'd like for Doran to call you something other than [DoranPlayerRegard]. The [gdragon] nods in understanding before speaking. 'Well, what shall I call [DoranPlayerRegard], then, hmm?'";
+		LineBreak;
+		say "[link](1)[as]1[end link] - Pet.";
+		say "[link](2)[as]2[end link] - Slave.";
+		say "[link](3)[as]3[end link] - Bitch.";
+		say "[link](4)[as]4[end link] - Master / Mistress.";
+		while calcnumber < 1 or calcnumber > 4:
+			say "Choice? (1-4)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 1 and calcnumber <= 4:
+				break;
+			else:
+				say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
+		if calcnumber is:
+			-- 1:
+				now DoranPlayerRegard is "Pet";
+			-- 2:
+				now DoranPlayerRegard is "Slave";
+			-- 3:
+				now DoranPlayerRegard is "Bitch";
+			-- 4:
+				if cocks of player > 0 and cunts of player is 0:
+					now DoranPlayerRegard is "Master";
+				else if cocks of player is 0 and cunts of player > 0:
+					now DoranPlayerRegard is "Mistress";
+				else:
+					now DoranPlayerRegard is "Master";
+		say "     Very well, then! It is done, [DoranPlayerRegard]!";
+	else:
+		say "     You briefly consider asking Doran to call you something else, but change your mind after a bit of deliberation. Maybe once you get him in a more dominant mood you can ask him.";
 
-to say doropt_6: [NEW! Body Modification]
+to say DoranBodyModMenu: [NEW! Body Modification]
 	say "     Considering the way the world is right now, you ponder the possibility of altering Doran's physical attributes. You presume you'll need some sort of infected item to cause the desired change. Doran looks at you quizzically.";
 	let trixieexit be 0;
 	while trixieexit is 0:
@@ -2563,7 +2599,7 @@ to say doropt_6: [NEW! Body Modification]
 							say "     You consider offering some tainted seed to Doran again, who grins at the display.";
 							say "     'Ah, [DoranPlayerRegard] has reconsidered, by the looks of it! As I said before, I suppose a particularly virile strain of seed would augment my own. I imagine it'd take a lot longer to clean up the messes afterwards! [if DoranInternal is false]I'm guessing it would also alter the size of certain 'assets', as an additional side effect.[run paragraph on][end if] Does this prospect excite [DoranPlayerRegard]?'";
 						if player consents:
-							say "[dormod_1]"; [Modify Balls/Cum]
+							say "[DoranModBallsMenu]"; [Modify Balls/Cum]
 							delete tappeditem;
 						else:
 							say "     'Very well, [DoranPlayerRegard]. Don't be afraid to ask me about it again if you change your mind.'";
@@ -2628,7 +2664,7 @@ to say doropt_6: [NEW! Body Modification]
 							say "     You consider offering some milk to Doran again.";
 							say "     'Hm? ...Oh! This again. Yes, I'm certain these will give me breasts, if that's what [DoranPlayerRegard] wishes.'";
 						if player consents:
-							say "[dormod_2]"; [Modify Tits]
+							say "[DoranModTitsMenu]"; [Modify Tits]
 							delete tappeditem;
 						else:
 							say "     'Very well, [DoranPlayerRegard]. Don't be afraid to ask me about it again if you change your mind.'";
@@ -2646,13 +2682,13 @@ to say doropt_6: [NEW! Body Modification]
 				else:
 					say "     'Ah, yes. I can have [if DoranInternal is true]exposed[else]hidden[end if] naughty bits with this coin, if that's what [DoranPlayerRegard] wants. Is it?'";
 				if player consents:
-					say "[dormod_3]";
+					say "[DoranModInternalMenu]";
 				else:
 					say "     'Very well, [DoranPlayerRegard]. Don't be afraid to ask me about it again if you change your mind.'";
 		else:
 			now trixieexit is 1;
 
-to say dormod_1: [Modify Balls/Cum]
+to say DoranModBallsMenu: [Modify Balls/Cum]
 	now DoranBallModStatus is 1;
 	if DoranInternal is true:
 		say "     Taking the container, [ghe] briefly inspects it before consuming its entire contents. Groaning softly, there doesn't appear to be any immediate visual differences...";
@@ -2700,7 +2736,7 @@ to say dormod_1: [Modify Balls/Cum]
 			say "     '...I imagine any more of the stuff will have no effect, or else become exceedingly inconvenient. [DoranPlayerRegard] is such a slut, I imagine they're happy simply to enjoy more of their [gdragon]'s seed!' Slowly sitting back down, [ghe] briefly adjusts [ghim]self to handle the alteration.";
 
 
-to say dormod_2: [Modify Tits]
+to say DoranModTitsMenu: [Modify Tits]
 	say "     You hand the container to the [gdragon], who briefly considers drinking it before returning [ghis] attention to you.";
 	say "     '...Er, slight question... Do you think a reptile should be able to lactate?'";
 	if player consents:
@@ -2749,7 +2785,7 @@ to say dormod_2: [Modify Tits]
 		else:
 			say "eventually choosing to sit back down next to the fire before [ghe] continues [ghis] curious inspection.";
 
-to say dormod_3: [Internal/External Genitals]
+to say DoranModInternalMenu: [Internal/External Genitals]
 	say "     [one of]Taking the coin, Doran takes a moment to inspect it before flipping[or]Taking the coin once more, Doran carefully flips[stopping] it. It lands on the ground with an audible clank";
 	if DoranInternal is true:
 		say ", leaf-side up. [gche] wheels around to give you a clear view of [ghis] nethers, groaning softly as a pair of[if DoranBallModStatus > 0] oversized[end if] balls bulge out from between [ghis] legs, filling out nicely while an ill-fitting sheath grows out from [ghis] scaled slit, barely able to contain [ghis][if DoranBallModStatus > 0] perpetually-drooling[end if] cock. The growth gradually subsides until [ghe]'s left with a full set of exposed genitals.";
@@ -2760,7 +2796,7 @@ to say dormod_3: [Internal/External Genitals]
 	say "     'Whew! I'm a little worn out after all that. It may take a few days before I'm fully recovered, should [DoranPlayerRegard] decides to change me that way again!'";
 	now DoranLastInternalMod is turns;
 
-to say dorspec_1: [Breastfeeding scene]
+to say DoranBreastfeeding: [Breastfeeding scene]
 	if DoranRoleIntensity is 0:
 		say "     You practically don't have to say anything before Doran grabs a hold of you and buries your face between [ghis] ample, scaled cleavage.";
 		say "     '[one of]Tsk[or]Hmpf[or]Well[at random], [one of]Drink[or][DoranPlayerRegard] needs their [gdragon]'s milk[or]I shouldn't let [DoranPlayerRegard] leave the cave if they're just going to go hungry[at random]!' Scolding you, likely for the mere joy of being able to, [ghe] eventually lets you pull back just enough so [ghe] can press your face firmly against one of [ghis] breasts. Quite firm, the dripping nipple yields well enough against your lip's embrace.";
@@ -2823,11 +2859,11 @@ to say DoranPosition: [Demeanour Option]
 					now trixieexit is 1;
 					increase DoranDominanceTopic by 2;
 		else:
-			say "     'In a different mood? Would [if DoranRole is 0]my [end if][DoranPlayerRegard] prefer to [if DoranRole is 0]be on top again[else if DoranRole is 2]be on bottom[else]alter our arrangement[end if]?'";
+			say "     'In a different mood? Would [if DoranRole <= 0]my [end if][DoranPlayerRegard] prefer to [if DoranRole <= 0]be on top again[else if DoranRole is 2]be on bottom[else]alter our arrangement[end if]?'";
 			let trixieexit be 0;
 			while trixieexit is 0:
 				say "[bold type]Sexual Position:[roman type][line break]";
-				say "(1) [link]'[if DoranRole is 0]Stay[else]Go[end if] on top.'[as]1[end link]";
+				say "(1) [link]'[if DoranRole <= 0]Stay[else]Go[end if] on top.'[as]1[end link]";
 				say "(2) [link]'[if DoranRole is 2]Stay[else]Go[end if] on bottom.'[as]2[end link]";
 				say "(3) [link]'Let's [if DoranRole is 1]keep[else]make[end if] things random.'[as]3[end link]";
 				say "[line break]";
@@ -2840,7 +2876,7 @@ to say DoranPosition: [Demeanour Option]
 					else:
 						say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
 				if calcnumber is 1:
-					say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], my [DoranPlayerRegard] will [if DoranRole is 0]be kept[else]now be put[end if] in their place.'";
+					say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], my [DoranPlayerRegard] will [if DoranRole <= 0]be kept[else]now be put[end if] in their place.'";
 					now DoranRole is 0;
 					now trixieexit is 1;
 				else if calcnumber is 2:
@@ -2859,27 +2895,43 @@ to say DoranPosition: [Demeanour Option]
 		say "     Ah, my [DoranPlayerRegard] does realize they don't have any say it the matter, do they not? Alas, your chance to change your mind has long since passed.";
 
 to say DoranPlayerGenderSetting: [Gender Option]
-	if DoranPlayerGenderRegard is false:
-		say "     'Has something come up? Would [DoranPlayerRegard] prefer to be regarded as a female?'";
-		if player consents:
-			now DoranPlayerGenderRegard is true;
-			now DoranPlayerRegard is "Mistress";
-			say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], I will now regard Master as [DoranPlayerRegard].'";
+	if DoranPlayerRegard is "Master" or DoranPlayerRegard is "Mistress":
+		if DoranPlayerGenderRegard is false:
+			say "     'Has something come up? Would [DoranPlayerRegard] prefer to be regarded as a female?'";
+			if player consents:
+				now DoranPlayerGenderRegard is true;
+				now DoranPlayerRegard is "Mistress";
+				say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], I will now regard Master as [DoranPlayerRegard].'";
+			else:
+				say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
 		else:
-			say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
+			say "     'Has something come up? Would [DoranPlayerRegard] prefer to be regarded as a male?'";
+			if player consents:
+				now DoranPlayerGenderRegard is false;
+				now DoranPlayerRegard is "Master";
+				say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], I will now regard Mistress as [DoranPlayerRegard].'";
+			else:
+				say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
 	else:
-		say "     'Has something come up? Would [DoranPlayerRegard] prefer to be regarded as a male?'";
-		if player consents:
-			now DoranPlayerGenderRegard is false;
-			now DoranPlayerRegard is "Master";
-			say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], I will now regard Mistress as [DoranPlayerRegard].'";
+		if DoranPlayerGenderRegard is true:
+			say "     'Has something come up? Would [DoranPlayerRegard] prefer to be regarded as a male?'";
+			if player consents:
+				now DoranPlayerGenderRegard is false;
+				say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], I will now regard you as a man.'";
+			else:
+				say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
 		else:
-			say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
+			say "     'Has something come up? Would [DoranPlayerRegard] prefer to be regarded as a female?'";
+			if player consents:
+				now DoranPlayerGenderRegard is true;
+				say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], I will now regard you as a woman.'";
+			else:
+				say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
 
 to say DoranGetFood: [Food requisition/NEW! Breastfeeding]
 	if DoranFoodTimer - turns >= 16:
 		if DoranTitModStatus > 1:
-			say "[dorspec_1]"; [Breastfeeding scene]
+			say "[DoranBreastfeeding]"; [Breastfeeding scene]
 		else:
 			if DoranFoodType is 1:
 				say "     'Ah, yes! I found some water, maybe it will help [DoranPlayerRegard]?' [gche] hands it over to you.";
@@ -2978,12 +3030,12 @@ to say DoranGenderSetting: [NEW! Doran's regarded gender]
 			else:
 				say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].'";
 
-to say doropt_0: [End]
+to say DoranRequestExit: [End]
 	say "     '[one of]Don't be afraid to ask of me anything[or]I'll be here[or]Come again[at random], [DoranPlayerRegard].'";
 
 Chapter 3.6.1 - Vore Option Extension
 
-to say doropt_4: [Doran Vore Extension]
+to say DoranVoreMenu: [Doran Vore Extension]
 	if DoranVoreStatus is 0:
 		if DoranRole is 2:
 			say "     You get the impression that such a request would only be ideal if Doran was in a dominant position. You may want to ask [ghim] to be in such a position first, if you're interested in this particular thing.";
@@ -3325,7 +3377,7 @@ to say DoranDiscuss_1: [Of One's Past]
 					now DoranDiscussionExit is 1;
 		else if calcnumber is 2:
 			now DoranDiscussion_var1 is 1;
-			say "     'The answer to that question is fairly straightforward: We benefit from a simplistic relationship. You use me[if DoranRole is 0]--On top though I may be--[else] [end if]and that brings me a joy. Anything else would get in the way of that.'";
+			say "     'The answer to that question is fairly straightforward: We benefit from a simplistic relationship. You use me[if DoranRole <= 0]--On top though I may be--[else] [end if]and that brings me a joy. Anything else would get in the way of that.'";
 			now calcnumber is -1;
 			let DoranDiscussionExit be 0;
 			while DoranDiscussionExit is 0:

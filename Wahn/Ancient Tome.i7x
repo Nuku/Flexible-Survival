@@ -169,11 +169,8 @@ name	desc	weight	object
 
 to say TomeUse:
 	LineBreak;
-	if cocks of player is 0 and cunts of player > 0:
-		say "     You open the old book and flip through a few pages. Sadly, it seems to be written in a squiggly script that you can make no heads or tails of, and the images in it are mildly disturbing, full of weird creatures and situations. A shiver runs down your spine as you close the book again.";
-	else:
-		say "[TomeExpansionUse]";
-		
+	say "[TomeExpansionUse]";
+
 to say TomeExpansionUse:
 	say "This appears to be not coded yet, so says Nuku/David.";
 

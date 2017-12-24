@@ -1,8 +1,9 @@
 Version 2 of Vent Fox by Dys begins here.
 [VERSION 2:                                                          ]
 [v2.0 Adds Dominant Vent scenes                                      ]
+[v2.1 He's an actual NPC now. No need to the quotes in the desc.     ]
 
-"Adds a random encounter in the mall, and an 'NPC' that can be interacted with."
+"Adds a random encounter in the mall, and an NPC that can be interacted with."
 
 [ VentFoxRelationship                                                ]
 [   0 = not met                                                      ]
