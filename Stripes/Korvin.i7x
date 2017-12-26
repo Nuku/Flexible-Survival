@@ -1,6 +1,22 @@
 Version 2 of Korvin by Stripes begins here.
 [Version 2.1 - Korvin training/collaring]
 
+[ GSD_pet                                    ]
+[   0 = not met                              ]
+[   1 = met him                              ]
+[   2 = player lost                          ]
+[   3 = lost again                           ]
+[   4 = player locked                        ]
+[  10 = player won                           ]
+[  11 = won again                            ]
+[  12 = recruited                            ]
+[  13 = sexed up                             ]
+[  14 = sexed up again                       ]
+[  15 = pending collar                       ]
+[  20-59 - subby                             ]
+[  60-99 - confident                         ]
+[ 100 = banished                             ]
+
 "Adds character specific info for Korvin the GSD pet."
 
 Section 0 - GShep Pet
@@ -369,33 +385,33 @@ to say conf_Korvin_sexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him doggy-style";
 		now sortorder entry is 1;
-		now description entry is "get the buff dog on all fours and mount that tight ass of his";
+		now description entry is "Get the buff dog on all fours and mount that tight ass of his";
 	[]
 [		choose a blank row in table of fucking options;
 		now title entry is "Fuck him on his back";
 		now sortorder entry is 2;
-		now description entry is "get the buff dog to roll over and take it";]
+		now description entry is "Get the buff dog to roll over and take it";]
 	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job (receiving)";
 		now sortorder entry is 8;
-		now description entry is "have him put that muzzle of his to use on your cock";
+		now description entry is "Have him put that muzzle of his to use on your cock";
 	[]
 	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride that doggy pole (vaginal)";
 		now sortorder entry is 4;
-		now description entry is "have a round bouncing on his canine cock";
+		now description entry is "Have a round bouncing on his canine cock";
 	[]
 [	choose a blank row in table of fucking options;
 	now title entry is "Ride that doggy pole (anal)";
 	now sortorder entry is 7;
-	now description entry is "stuff that canine cock of his into your ass";
+	now description entry is "Stuff that canine cock of his into your ass";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Blow job (giving)";
 	now sortorder entry is 9;
-	now description entry is "reward your loyal dog by sucking his canine cock";]
+	now description entry is "Reward your loyal dog by sucking his canine cock";]
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -432,6 +448,7 @@ to say conf_Korvin_sexmenu:
 to say conf_Korvin_sex01:
 	say "     Wanting a go at the hot ass of his, you move a hand to his butt and give it a squeeze. Clipping his leash on with your other hand, you tell him to get on all fours[one of]. His ears dip a bit, knowing what's coming, but his tail raises and he moves obediently enough into position[or]. 'Alright, ya big fag,' he grumbles as he moves into position with his tail already up and swaying[or]. 'Alpha's privilege,' he says with a nod and a sigh, though he's certainly speedy getting down onto the ground[at random]. You tease a finger across his pucker in a slow circle, coaxing the tight ring to relax a little. Moving into position, you line your [cock of player] cock up with the target and ease your [cock size desc of player] meat into him.";
 	say "     He gives a [if cock length of player > 24]moaning whimper at your great size, but his ass accepts you anyway[else if cock length of player > 16]moaning whimper at your impressive size as you push into his ass[else if cock length of player > 8]long moan as you push inch after inch into his ass[else]soft moan as your shaft slides into his ass[end if]. His insides are hot and tight, but yield to his alpha's cock. You reach around to fondle his manhood as you tell him how great he feels. His ass gives your meat a squeeze at this and his hips push back a little. Knowing he's ready for more, you smile and start thrusting. His inner walls clench warmly around your dick at the end of every thrust.";
+	WaitLineBreak;
 	say "     While fucking him, you work your hand over that canine rod of his. You brush your fingertips across his pointed glans, glide them along his shaft and squeeze them around his knot. As the lustful romp progresses, his rod dribbles and more and more precum, which you smear over his red pole. You can tell he's really enjoying it, and more than just the hand job from the way his dick pulses at every prod across his prostate.";
 	say "     Feeling your release coming, you hasten your pace and thrust energetically. He'd mostly been able to stifle his moans and panting before this, but with you driving your meat hard and fast into him, he can no longer restrain himself. He chews his lip a little and manages to hold back his own orgasm until your own. As your hot cum floods his ass, he responds by cumming hard as well. His ass practically milks at your cock with every hard spurt of canine seed he shoots out onto the floor. You end up leaving your studly dog [if cock width of player > 30]with a bloated belly of your cum by the time you're done and pull out[else if cock width of player > 20]with a visible tummy bump because of all your cum by the time you pull out[else if cock width of player > 11]stuffed and leaking your hot cum by the you're done and pull out[else]panting and sticky by the time you pull out[end if]. You make sure to pet his head and thank him for being such a good dog and such a good fuck. He can't help but smile and give a tail wag.";
 
@@ -451,6 +468,7 @@ to say conf_Korvin_sex05:
 to say conf_Korvin_sex08:
 	say "     Taking hold of your dick with one hand, you clip his leash on with the other and tell him to 'sit.'  He does so [one of]readily[or]obediently[or]after arching his brow and giving you a look[or]with a little grumble[or]with a hungry look in his eyes[or]while licking his muzzle[at random] and gives your cock a nuzzle. Placing your hand on his head, you scritch his ear as he starts to lick your shaft. His doggy tongue slides along your hard pole, slathering it up and down.";
 	say "     After some preliminary licking, his tongue plays across your glans before he takes your [cock size desc of player] shaft into his muzzle. His canine maw [if cock length of player > 24]has to stretch considerably to be able to fit your mighty cock, but he works at it until he's able to do it[else if cock length of player > 16]has to open wide to be able to fit your mighty cock, but he does it to get that meaty treat in his mouth[else if cock length of player > 8]provides extra depth to be able to fit your big cock, letting him get all that meaty treat in his mouth[else]welcomes your cock into it, enveloping it in wet warmth[end if]. While his doggy tongue continues to slide about, he starts bobbing his head and sucking your cock. The buff dog gets into it quickly, doing his best to suck off his alpha.";
+	WaitLineBreak;	
 	say "     You let the gshep work his muzzle over your [cock of player] dick, quite pleased with how he's doing. There's no sign of any earlier reluctance he's shown about cocksucking, the dog clearly into it now that he's got your manhood in his muzzle. You continue to scritch and pet his head, telling him how good it feels and what a great job he's doing. That gets a tail wag from him and a paw fondling your nuts. With him working your shaft over like this, you're built up to a strong orgasm that has you groan loudly";
 	if a random chance of 3 in 5 succeeds:
 		say ". Your penis pulses hard with every shot, [if cock width of player > 30]blasting your [cum load size of player] load down his throat and bulging that toned tummy of his [else if cock width of player > 20]blasting your [cum load size of player] load down his throat to fill his stomach with a feast of your rich, hot semen[else if cock width of player > 11]firing your [cum load size of player] load down his throat and providing him with a nice, hot meal of your semen[else]pumping the tasty treat of your hot load down his throat[end if]. He gulps it all down, releasing muffled moans while his tail wags wildly[if cocks of player > 2] and your other dicks hose him down with white streaks[else if cocks of player is 2] and your other dick hoses him down with white streaks[end if].";
@@ -460,7 +478,6 @@ to say conf_Korvin_sex08:
 
 to say conf_Korvin_sex09:
 	say "***Blow job (giving)";
-
 
 Section 5 - Subby Korvin Sex
 
@@ -497,7 +514,6 @@ Growls wants to go out and fight (if no combat in several rounds)
 
 [ *** DEBUGGER ]
 
-
 Section 8 - Debugger - Not for release
 
 gsdpettesting is an action applying to nothing.
@@ -518,23 +534,5 @@ carry out gsdpettesting:
 	now gshep_sexscene is 0; [sex-role argument]
 	now gshep_bed_scene is 0; [discipline argument]
 	now gshep_inactive is 0; [inactivity argument]
-
-
-[        gsd_pet        ]
-[ 0 = not met           ]
-[ 1 = met him           ]
-[ 2 = player lost       ]
-[ 3 = lost again        ]
-[ 4 = player locked     ]
-[ 10 = player won       ]
-[ 11 = won again        ]
-[ 12 = recruited        ]
-[ 13 = sexed up			    ]
-[ 14 = sexed up	again   ]
-[ 15 = pending collar   ]
-[ 20-59 - subby         ]
-[ 60-99 - confident     ]
-[ 100 = banished        ]
-
 
 Korvin ends here.
