@@ -421,9 +421,9 @@ The descmod of Torn Swim Trunks is "REMOVE ME".
 		
 Section 5 - NPC definition of Wyvern Patriatch
 
-Wyvern Patriatch is a man.
+Wyvern Patriarch is a man. Understand "King" as Wyvern Patriarch.
 The description of Wyvern Patriarch is "[WyvernPDesc]".
-[The conversation of Wyvern Patriarch is { "Breathing heavily." }.]
+The conversation of Wyvern Patriarch is { "Breathing heavily." }.
 The scent of Wyvern Patriarch is "     The wyvern smells like the sea but with a spicy undertone.".
 [Wyvern Patriarch is in Wyvern Nest. This doesn't need to be defined, it's already handled in section 1.]
 
