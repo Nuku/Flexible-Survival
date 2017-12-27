@@ -1072,7 +1072,7 @@ carry out hunting:
 		repeat with Z running through q:
 			choose row z from the table of random critters;
 			if "Unerring Hunter" is listed in the feats of the player and there is a name entry:
-				if name entry exactly matches the text topic understood, case insensitively:
+				if name entry matches the text topic understood, case insensitively:
 					increase score by 0;
 				else:
 					next;
