@@ -948,6 +948,7 @@ carry out hunting:
 				if tailname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
 				if cockname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;	]
 		if area entry exactly matches the text battleground, case insensitively:
+			if found is 1, next;
 			if there is a nocturnal in row X of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
 					if name entry exactly matches the text topic understood, case insensitively:
