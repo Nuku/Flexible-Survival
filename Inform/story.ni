@@ -5361,13 +5361,12 @@ Include Dark Elf for FS by Stripes.
 Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
 Include Doberman for FS by Stripes.
-Include Dolphin for FS by Hellerhound.
 Include Donkeyman by Sarokcat n Verath.
 Include Donkeywoman by Sarokcat n Verath.
 Include Dracovixentaur for FS by Stripes.
 Include Dragontaur for FS by Stripes.
 Include Drone Wasp by Nuku Valente.
-Include Dryad for FS by Hellerhound.
+Include Dryad by Hellerhound.
 Include Easter Bunny by Stripes.
 Include Ebonflame Dragator by Blue Bishop.
 Include Ebonflame Draken by Blue Bishop.
@@ -5384,6 +5383,7 @@ Include Female Husky by Nuku Valente.
 Include Fennec For Fs by Stripes.
 Include Feral Cheetah for FS by Hellerhound.
 Include Feral Gryphon by UrsaOmega.
+Include Feral Mutt by CrimsonAsh.
 Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
 Include Feral Shaft Beast for FS by Guest Writers.
@@ -5419,6 +5419,7 @@ Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
 Include Helot by Wahn.
 Include Hentai Fan for FS by Stripes.
+Include Herm Dolphin by Hellerhound.
 Include Herm Hyena for FS by Guest Writers.
 Include Hermaid by Xenophiliac.
 Include Hermaphrodite Gryphon by Nuku Valente.
@@ -5576,7 +5577,7 @@ Include Xeno for FS by Stripes.
 Include Yamato Dragon For FS by Blue Bishop.
 Include Yamato Dragoness For FS by Blue Bishop.
 Include Yuppie Mink by StripeGuy.
-Include Zebra by Sarokcat.
+Include Zebra by Vervaine.
 
 [NPCs]
 Include Alex by Stripes.
