@@ -948,7 +948,6 @@ carry out hunting:
 				if tailname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
 				if cockname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;	]
 		if area entry exactly matches the text battleground, case insensitively:
-			if found is 1, next;
 			if there is a nocturnal in row X of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
 					if name entry exactly matches the text topic understood, case insensitively:
@@ -990,90 +989,12 @@ carry out hunting:
 				if skinname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
 				if tailname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
 				if cockname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-	if found is 0:
-		repeat with X running from 1 to number of filled rows in table of random critters:
-			choose row X from the table of random critters;
-			if there is no area entry, next;
-	[		if area entry is "Everywhere":		[***]
-				if there is a nocturnal in row X of table of random critters:
-					if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night), next;
-				if name entry exactly matches the text topic understood, case insensitively:
-					say "You are almost certain you saw some [name entry] tracks...";
-					now found is 1;
-					add x to q;
-					let zed be perception of player / 4;
-					if zed > 8, now zed is 8;
-					repeat with N running from 1 to zed:
-						add x to q;
-					if "Curious" is listed in feats of player:
-						add x to q;
-					if "Expert Hunter" is listed in feats of player:
-						add x to q;
-						add x to q;
-					if "Master Baiter" is listed in feats of player:
-						repeat with N running from 1 to ( perception of player / 3 ):
-							add x to q;
-				else:
-					if there is a lev entry:
-						if lev entry > level of player plus levelwindow, next;
-					else:
-						next;
-					add x to q;
-					add x to q;
-				if "Like Attracts Like" is listed in the feats of the player:
-					if bodyname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if facename of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if skinname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if tailname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if cockname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;	]
-			if area entry exactly matches the text battleground, case insensitively:
-				if there is a nocturnal in row X of table of random critters:
-					if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
-						if name entry exactly matches the text topic understood, case insensitively:
-							now foundbadtime is 1;
-						next;		[skips if day/night doesn't match]
-				if name entry matches the text topic understood, case insensitively:
-					say "You are almost certain you saw some [name entry] tracks...";
-					now found is 1;
-					add x to q;
-					let zed be perception of player / 3;
-					if zed > 8, now zed is 8;
-					repeat with N running from 1 to zed:
-						add x to q;
-					if "Curious" is listed in feats of player:
-						add x to q;
-					if "Expert Hunter" is listed in feats of player:
-						add x to q;
-						add x to q;
-					if "Master Baiter" is listed in feats of player:
-						repeat with N running from 1 to ( perception of player / 3 ):
-							add x to q;
-				else:
-					if there is a lev entry:
-						if lev entry > level of player plus levelwindow, next;
-					else:
-						next;
-					if "Expert Hunter" is listed in feats of player and a random chance of 1 in 3 succeeds:
-						next;
-					let skipit be 0;
-					repeat with s running through warded flags:
-						if name entry is listed in infections of s:
-							now skipit is 1;
-							break;
-					if skipit is 1, next;
-					add x to q;
-				if "Like Attracts Like" is listed in the feats of the player:
-					if bodyname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if facename of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if skinname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if tailname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if cockname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
 	if the number of entries in q is not 0 and found is 1:
 		sort Q in random order;
 		repeat with Z running through q:
 			choose row z from the table of random critters;
 			if "Unerring Hunter" is listed in the feats of the player and there is a name entry:
-				if name entry matches the text topic understood, case insensitively:
+				if name entry exactly matches the text topic understood, case insensitively:
 					increase score by 0;
 				else:
 					next;
@@ -1141,55 +1062,6 @@ carry out hunting:
 						now inasituation is false;
 						say "Despite your searches, you fail to find it.[line break]";
 						huntingfightchance;
-					break;
-		if found is 0:
-			repeat with z running through unresolved situations:
-				if z is not close:
-					if sitfound is 0:
-						if printed name of z matches the text topic understood, case insensitively:
-							now sitfound is 1;
-					next;
-				if score < minscore of z:
-					if scorefound is 0:
-						if printed name of z exactly matches the text topic understood, case insensitively:
-							now scorefound is 1;
-				if printed name of z  matches the text topic understood, case insensitively:
-					say "It should be somewhere...";
-					now found is 1;
-					let dice be a random number from 1 to 20;
-					let the bonus be (( the perception of the player minus 10 ) divided by 2);
-					if "Curious" is listed in feats of player, increase bonus by 2;
-					increase dice by bonus;
-					if dice >= 15 or "Unerring Hunter" is listed in feats of player:
-						now inasituation is true;
-						say "You manage to find your way to [z]!";
-						try resolving z;
-						now inasituation is false;
-					else:
-						now inasituation is false;
-						say "Despite your searches, you fail to find it.[line break]";
-						huntingfightchance;
-					break;
-		if found is 0:
-			repeat with z running through unknown fasttravel rooms:
-				if z is private, next;
-				if printed name of z matches the text topic understood, case insensitively:
-					say "It should be somewhere...";
-					now found is 1;
-					let dice be a random number from 1 to 20;
-					let the bonus be (( the perception of the player minus 10 ) divided by 2);
-					if "Curious" is listed in feats of player, increase bonus by 2;
-					increase dice by bonus;
-					if dice >= 15 or "Unerring Hunter" is listed in feats of player:
-						say "You manage to find your way towards [z]!";
-						huntingfightchance;
-						move the player to z;
-						now z is known;
-						now battleground is "void";
-					else:
-						say "Despite your searches, you fail to find it.[line break]";
-						huntingfightchance;
-						now battleground is "void";
 					break;
 		if found is 0:
 			if foundbadtime is 1:
