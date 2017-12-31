@@ -5135,6 +5135,7 @@ Book 9 - Add-Ons
 Include Alt Combat by Core Mechanics.
 Include Alt Vore by Core Mechanics.
 Include Assorted Items by Stripes.
+Include Banning by Core Mechanics.
 Include Basic Functions by Core Mechanics.
 Include Basic Locations by Core Mechanics.
 Include BFandI by Core Mechanics.
@@ -5635,6 +5636,7 @@ Include Gordon by Rikaeus.
 Include G-Shep Squad by Rikaeus.
 Include Gwen by Stripes.
 Include Hadiya by Stripes.
+Include Hanu by Kernog.
 Include Harold by Sarokcat.
 Include Hayato by Stripes.
 Include HornyHorsey by femtoAmpere.
@@ -6129,28 +6131,29 @@ To regularstart: [normal start method]
 		say "(5) [link]Main Feat[as]5[end link] - [bold type][freefeatgeneral][roman type][line break]";
 		say "(6) [link]Fun Feat[as]6[end link] - [bold type][freefeatfun][roman type][line break]";
 		say "(7) [link]Gender Lock[as]7[end link] - [bold type][if gsgl is 1]None[else if gsgl is 2]Random[else if gsgl is 3]Male[else if gsgl is 4]Female[else if gsgl is 5]Shemale[else if gsgl is 6]Cuntboy[else if gsgl is 7]Male Herm[else if gsgl is 8]Herm[else if gsgl is 9]Always Cocky[else if gsgl is 10]Always a Pussy[else if gsgl is 11]Single Sexed[else if gsgl is 12]Flat Chested[else if gsgl is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
-		say "(8) [link]Player Pronouns[as]8[end link] - [bold type][PronounChoice of player][roman type][line break]";
+		say "(8) [link]Player Name[as]8[end link] - [bold type][name of player][roman type][line break]";
+		say "(9) [link]Player Pronouns[as]8[end link] - [bold type][PronounChoice of player][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Gameplay Options:[roman type][line break]";
-		say "(9) [link]Banned/Warded Types[as]9[end link] - [menuwardlist] & [menubanlist] [line break]";
-		say "(10) [link]Anal Content[as]10[end link] - [bold type][if anallevel is 1]Less[else if anallevel is 2]Normal[else if anallevel is 3]More[end if][roman type][line break]";
-		say "(11) [link]WS Content[as]11[end link] - [bold type][if wslevel is 1]None[else if wslevel is 2]Normal[else if wslevel is 3]Full[end if][roman type][line break]";
-		say "(12) [link]Vore/UB Content[as]12[end link] - Vore: [bold type][if vorelevel is 1]None[else if vorelevel is 2]Normal[else if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if ublevel is 1]None[else if ublevel is 2]Normal[else if ublevel is 3]Full[end if][roman type][line break]";
-		say "(13) [link]Ovi Pregnancy[as]13[end link] - [bold type][if ovipreglevel is 1]Never[else]Normal[end if][roman type][line break]";
+		say "(10) [link]Banned/Warded Types[as]9[end link] - [menuwardlist] & [menubanlist] [line break]";
+		say "(11) [link]Anal Content[as]10[end link] - [bold type][if anallevel is 1]Less[else if anallevel is 2]Normal[else if anallevel is 3]More[end if][roman type][line break]";
+		say "(12) [link]WS Content[as]11[end link] - [bold type][if wslevel is 1]None[else if wslevel is 2]Normal[else if wslevel is 3]Full[end if][roman type][line break]";
+		say "(13) [link]Vore/UB Content[as]12[end link] - Vore: [bold type][if vorelevel is 1]None[else if vorelevel is 2]Normal[else if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if ublevel is 1]None[else if ublevel is 2]Normal[else if ublevel is 3]Full[end if][roman type][line break]";
+		say "(14) [link]Ovi Pregnancy[as]13[end link] - [bold type][if ovipreglevel is 1]Never[else]Normal[end if][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Display Options:[roman type][line break]";
-		say "(14) [link]Hyperlinks[as]14[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
-		say "(15) [link]Waiting for Input[as]15[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
-		say "(16) [link]Screen Clearing[as]16[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
-		say "(17) [link]Graphics[as]17[end link] - [bold type][if NewGraphicsInteger is 1]Inline[else if NewGraphicsInteger is 2]Side-Window[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
-		say "(18) [link]Inventory Columns[as]18[end link] - [bold type][invcolumns][roman type][line break]";
+		say "(15) [link]Hyperlinks[as]14[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
+		say "(16) [link]Waiting for Input[as]15[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
+		say "(17) [link]Screen Clearing[as]16[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
+		say "(18) [link]Graphics[as]17[end link] - [bold type][if NewGraphicsInteger is 1]Inline[else if NewGraphicsInteger is 2]Side-Window[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
+		say "(19) [link]Inventory Columns[as]18[end link] - [bold type][invcolumns][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Restore a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
 			say "(0-18)>[run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 18 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 19 ) or calcnumber is 99:
 				break;
 			else:
 				say "Invalid Entry";
@@ -6170,34 +6173,36 @@ To regularstart: [normal start method]
 			-- 7:
 				genderlockmenu;
 			-- 8:
-				try pronounsetting;
+				playernaming;
 			-- 9:
+				try pronounsetting;
+			-- 10:
 				if clearnomore is 0, clear the screen;
 				new ban menu;
-			-- 10:
-				try analadjusting;
 			-- 11:
-				try WSadjusting;
+				try analadjusting;
 			-- 12:
-				try voremenuing;
+				try WSadjusting;
 			-- 13:
-				try oviadjusting;
+				try voremenuing;
 			-- 14:
+				try oviadjusting;
+			-- 15:
 				if hypernull is 0:
 					now hypernull is 1;
 				else:
 					now hypernull is 0;
-			-- 15:
+			-- 16:
 				if waiterhater is 0:
 					now waiterhater is 1;
 				else:
 					now waiterhater is 0;
-			-- 16:
+			-- 17:
 				if clearnomore is 0:
 					now clearnomore is 1;
 				else:
 					now clearnomore is 0;
-			-- 17:
+			-- 18:
 				if NewGraphicsInteger is 1:
 					now NewGraphics is true;
 					now NewGraphicsInteger is 2;
@@ -6209,7 +6214,7 @@ To regularstart: [normal start method]
 					now graphics is true;
 					now NewGraphics is false;
 					now NewGraphicsInteger is 1;
-			-- 18:
+			-- 19:
 				say "[set_invcolumns]";
 			-- 99:
 				now trixieexit is 1;
@@ -6223,6 +6228,11 @@ To regularstart: [normal start method]
 				if player consents:
 					say "[gsopt_start]";
 					now trixieexit is 1;
+
+to playernaming:
+	say "[bold type]Please enter new name: [roman type]";
+	get typed command as playerinput;
+	now name of player is playerinput;
 
 to say menuwardlist:
 	if furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded:

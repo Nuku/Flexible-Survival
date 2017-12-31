@@ -32,14 +32,14 @@ instead of sniffing Gorilla Team-Members:
 	say "     The attractive scents of gorillas hang in the air, with slight undertones of furry musk, cum and sweat.";
 
 instead of conversing the Gorilla Team-Members:
-	if (romanPeeped is 3):
+	if HP of Roman is 3:
 		say "     You have a heavy secret concerning the team captain. [bold type]Do you wish you wish to share it? This decision will certainly break Roman, and without him you will probably not be able to work for the team anymore. Then again, free bitch to play with the other boys.[roman type]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) 'Hey, guys! You won't believe what I saw the other day!'";
 		say "     ([link]N[as]n[end link]) No. You are not this cruel.";
 		if player consents:
 			say "[RomanHumiliation]";
-			now romanPeeped is 4;
+			now HP of Roman is 4;
 			move Roman to Astroslide Field Locker-room;
 		else:
 			say "     No. You are here to have a normal conversation with the other gorillas, or what passes for normal these days. You join the gorilla team-members in their reveling, what you wanted to say or ask is soon forgotten and you find yourself embroiled in [one of]a discussion about new strategies on the field. Despite them having a lot more experience in those matters, your attempts to contribute something worthwhile are readily accepted, making you feel welcomed and almost as part of the team.[or]a group of the guys retelling raunchy stories about past conquests. This escalates after a short while, then a gorilla draws an eager fan-girl to his chest from the crowd and proceeds to... demonstrate his technique. Before long, there's a proper little orgy going on as more fans eagerly flock towards the group or the hunky males just pair up with each other.[at random]";
@@ -280,7 +280,7 @@ to PeepingRomanEvent:
 		say "     You tiptoe to the door of the private changing room, and take a look inside. You can see Roman. His shorts are already down, exposing his slightly bubbly, furry ass to you. But what interests you is the other side. If only he could rotate just slightly, just enough to see what kind of package he has. Answering your silent prayers, Roman turns to the right in order to fetch a clean pair of shorts. He has... Nothing?";
 		say "     You are taken aback. There is no massive maleness, no large ballsack, totally contradicting the permanent bulge his shorts were giving him. Oblivious to your spying, Roman sits on a bench, and spreads his legs. You can see the unmistakable folds of a vagina, and the plump clit just over it. Roman nonchalently pulls a large tuft of cotton from a bag, and packs it into his new shorts without pulling them up. So that's the reason he always wears shorts, and looks hung like a horse.";
 		say "     Roman hoists himself up from the bench, making you hurriedly retreat. However, you ponder about confronting Roman about his secret, the next time you will talk to him.";
-		now romanPeeped is 1;
+		now HP of Roman is 1;
 		now PeepingRoman is resolved;
 	else:
 		say "     Privacy is a rare leisure in his city, much more in this place. You decide to give the team captain some much needed privacy. A couple minutes after, he leaves the changing room with a new pair of shorts, just as bulgy as the previous one. As you wonder why he did not choose a bigger size, you notice a tuft of cotton falling from the pair of pants. Weird.";

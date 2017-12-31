@@ -1,30 +1,5 @@
 Misc 9 by Kaleem mcintyre begins here.
 
-Section 1 - Stranger
-
-Hanu is a situation. The sarea of Hanu is "Zoo".
-
-Instead of resolving a Hanu:
-	Say "Coming to one of the less exposed area of the zoo you find yourself coming across a large... monkey mutant... sitting quietly on top of a rock meditating. 'About time you showed up.' The voice of the simian catches you slightly off guard as you find the other speaking to you while keeping his eyes close. 'Yes, I'm talking to you. Come on over here so we can start training.'";
-	Say "Looking at the other, with his long tail curled around the left side of his body, his tanned fur groomed perfectly into place along his lithe, but powerful body, and his face lightly smirking into your direction do you want to [italic type]train[roman type] with this strange simian?";
-	LineBreak;
-	say "     ([link]Y[as]y[end link]) - Yes.";
-	say "     ([link]N[as]n[end link]) - No.";
-	If player consents:
-		LineBreak;
-		Say "Deciding what the hey you move over to where the other creature is, hopping over the fence that separates you both as you do, and then step over to the monkey man. What happens next turns out to be something you hadn't been expecting because instead of sex... you wind up finding yourself being asked several strange questions by the other, whose name happens to Hanu, and then being shown several strange yoga positions, which you find yourself going through with some problems. The next hour and a half of your life ends up being spent with Hanu meditating, a strange practice in and of itself, all things considered. However, end up finding yourself very refreshed once the moment is done.";
-		Say "'That was fun.' Hanu slowly uncrosses his legs and then uses his tail to lift himself up onto his feet. 'I think that I'm going to go and head back for home now. I hope you take well care of yourself.' And with that Hanu springs up over your head up onto the concrete wall that divides the zoo from the outside world, turns to wave at you and then disappears out of sight. Not sure what that was about you mildly wonder who that crazy monkey guy was.";
-		decrease libido of player by 10;
-		if libido of player < 0, now libido of player is 0;
-		increase humanity of player by 20;
-		if humanity of player > 100, now humanity of player is 100;
-		Increase maxHP of player by 5;
-		Increase score by 5;
-	else:
-		LineBreak;
-		Say "Waving the other off you turn and head about your way without another word spoken.";
-	Now Hanu is resolved;
-
 
 Section 2 - Mysterious
 
