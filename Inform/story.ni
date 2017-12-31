@@ -5499,7 +5499,6 @@ Include Zigor by Stripes.
 [Pets]
 Include Artemis by Stripes.
 Include Aurora by Stripes.
-Include Claw by Lone Wanderer.
 Include Exotic Bird by Sarokcat.
 Include Felinoid Companion by Sarokcat.
 Include Gryphon Companion by Sarokcat.
