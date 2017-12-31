@@ -45,6 +45,7 @@ Figure of GooGirl_icon is the file "GooGirl.jpg".
 Figure of BlueGryphon_icon is the file "BlueGryphon.jpg".
 Figure of BlueGryphon_face_icon is the file "BlueGryphon_face.jpg".
 Figure of Gunbunny_icon is the file "Gunbunny_ig.jpg".
+Figure of Ebonflame_Draken_icon is the file "Ebonflame_Draken.jpg".
 Figure of Helot_icon is the file "Helot.jpg".
 Figure of Helot_face_icon is the file "Helot_face.jpg".
 Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
@@ -544,6 +545,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "DrMoffatt1"	Figure of DrMoffatt1_icon	"The_Negative"	g-black	"normal"
 "DrMoffatt2"	Figure of DrMoffatt2_icon	"MadTurtle"	g-black	"normal"
 "DrMouse"	Figure of DrMouse_icon	"JaxxBlackFox"	g-black	"normal"
+"Ebonflame Draken"	Figure of Ebonflame_Draken_icon	"Anonymous"	g-white	"normal"
 "Elijah_evil"	Figure of Elijah_evil_icon	"Banni"	g-black	"normal"
 "Elijah_evil_naked"	Figure of Elijah_evil_naked_icon	"Banni"	g-black	"normal"
 "Elijah_evil_face"	Figure of Elijah_evil_face_icon	"Banni"	g-black	"normal"
@@ -785,6 +787,7 @@ carry out artistcredits:
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
 	say "     Donkeywoman by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Dracovixentaur by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Ebonflame Draken by Anonymous[line break]";	
 	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
 	say "     Ewe by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Feline (females) by Anymouse1968 @ furaffinity.net[line break]";
