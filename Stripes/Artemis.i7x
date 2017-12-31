@@ -1307,19 +1307,6 @@ to say artemisSF_sex_mod:		[***]
 
 Chapter 6 - Modified Napping Scenes
 
-[Addition by Lone Wanderer]
-instead of calling the rubber tigress:
-	now sleepHijack is 2;
-	if companion of player is not rubber tigress:
-		if player is not lonely:
-			say "[dismissdesc of companion of player]";
-			LineBreak;
-		now the companion of player is rubber tigress;
-		say "[summondesc of rubber tigress]";
-	else:
-		say "They are already your current companion.";
-[The addition by Lone Wanderer ends here]
-
 to say artemisnap_mod:
 	if HP of rubber tigress < 11:
 		artemisnap; [return to standard version]
