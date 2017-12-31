@@ -52,7 +52,7 @@ carry out tapeing:
 			say "[FamilyFunTape1]";
 		-- "Wayne's Tape 2":
 			say "[FamilyFunTape2]";
-		-- "Rat Twin Tape"
+		-- "Rat Twin Tape":
 			say "[ErinConsolesViolet]";
 [Template - see below the end of file]
 

@@ -5654,6 +5654,7 @@ Include Joanna by Stripes.
 Include Julian by Prometheus.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
+Include Krampus by Wahn.
 Include Kristen by Stripes.
 Include Kyle by Qazarar.
 Include Kyrverth by Speedlover.
