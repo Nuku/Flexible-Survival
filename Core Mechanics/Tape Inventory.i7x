@@ -52,6 +52,8 @@ carry out tapeing:
 			say "[FamilyFunTape1]";
 		-- "Wayne's Tape 2":
 			say "[FamilyFunTape2]";
+		-- "Rat Twin Tape"
+			say "[ErinConsolesViolet]";
 [Template - see below the end of file]
 
 to deletetape (x - text):	[removes 1 tape of a given type from the player's inventory]
