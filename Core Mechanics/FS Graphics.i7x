@@ -272,6 +272,10 @@ Figure of Thomas_soft_icon is the file "Thomas_soft.jpg".
 Figure of Toven_clothed_icon is the file "Toven_clothed.jpg".
 Figure of Toven_naked_icon is the file "Toven_naked.jpg".
 Figure of Tristian_icon	is the file "Tristian.jpg".
+Figure of TSW_icon is the file "TSW.jpg".
+Figure of TSW_headshot_icon is the file "TSW_headshot.png".
+Figure of TSW_naked_icon is the file "TSW_naked.jpg".
+Figure of TSW_sansNecklace_icon is the file "TSW_sansNecklace.jpg".
 Figure of Urik_ass_icon is the file "Urik_ass.jpg".
 Figure of Urik_clothed_icon is the file "Urik_clothed.jpg".
 Figure of Urik_face_icon is the file "Urik_face.jpg".
@@ -706,6 +710,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Thomas_soft"	Figure of Thomas_soft_icon	"Inkydemon"	g-black	"normal"
 "Thought Eater"	Figure of ThoughtEater_icon	"Rastear"	g-black	"normal"
 "Tiger Cop"	Figure of SgtMarks_icon	"Anyare"	g-black	"normal"
+"Tiger Shark"	Figure of TSW_icon	"Zealot"	g-black	"normal"
+"TSW_headshot"	Figure of TSW_headshot_icon	"Zealot"	g-black	"normal"
+"TSW_naked"	Figure of TSW_naked_icon	"Zealot"	g-black	"normal"
+"TSW_sansNecklace"	Figure of TSW_sansNecklace_icon	"Zealot"	g-black	"normal"
 "Tigress Hooker"	Figure of TigressHooker_icon	"Sharei"	g-black	"normal"
 "TinyTim"	Figure of TinyTim_icon	"Obieblu"	g-black	"normal"
 "Tiny_In_Action"	Figure of TinyTim_In_Action_icon	"Obieblu"	g-black	"normal"
@@ -940,6 +948,7 @@ carry out artistcredits:
 	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
+	say "     Tiger Shark Warrior by Zealot @ https://www.furaffinity.net/user/Drakosacerdos[line break]";
 	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
 	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Tristian by Enaya-TheWhiteWolfen @ https://www.furaffinity.net/user/enaya-thewhitewolfen/";
