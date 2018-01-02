@@ -37,7 +37,7 @@ to new ban menu:
 		say "[bold type]Warding a monster will mean you can only find them by hunting for them, banning them removes them from the game entirely. (Banning is sure to choke off MANY threads of the story and quests as well. Use with caution. You have been warned.)[roman type][line break]";
 		say "[line break]";
 		while countnumber <= number of entries in flaglist:
-			say "[link][countnumber]:[entry countnumber of flaglist][as][countnumber][end link]: [run paragraph on]";
+			say "[link][countnumber] - [entry countnumber of flaglist][as][countnumber][end link]: [run paragraph on]";
 			bancheck entry countnumber of flaglist;
 			increase countnumber by 1;
 		say "[line break]";

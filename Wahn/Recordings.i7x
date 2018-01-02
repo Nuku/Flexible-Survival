@@ -35,8 +35,10 @@ Instead of resolving a Demon Chase:
 				LineBreak;
 				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
+				LineBreak;
 				say "[bold type]Wayne's Tape 1 has been added to your tape inventory![roman type][line break]";
 				add "Wayne's Tape 1" to tapes of player;
+				LineBreak;
 				say "[bold type]Wayne's Tape 2 has been added to your tape inventory![roman type][line break]";
 				add "Wayne's Tape 2" to tapes of player;
 			else:

@@ -27,6 +27,7 @@ understand "tape [text]" as tapeing.
 Tapeing is an action applying to one topic.
 
 carry out tapeing:
+	sort tapes of player;
 	let t be the topic understood;
 	let target be text;
 	let found be 0;
@@ -41,19 +42,25 @@ carry out tapeing:
 	if found is 0:
 		say "     You don't seem to have any such tape.";
 		continue the action;
-[
-	if carried of Video Camera < 1:
-		say "     You do not have a camera to watch the tape with.";
+	if carried of video camera < 1:
+		say "     You do not have a camera with you that you could watch the tape on.";
+		if Lost Camera is resolved: [camera was found already]
+			say "     Thinking back to the lost camera you found, you wonder where you put it last...";
 		stop the action;
-]
 	say "     You dig out the tape from your backpack and get your camera ready, opening up its tape slot.";
 	if entry z of tapes of player is:
 		-- "Wayne's Tape 1":
-			say "[FamilyFunTape1]";
+			say "[FamilyFunTape1]"; [Source: Wahn/Recordings.i7x]
 		-- "Wayne's Tape 2":
-			say "[FamilyFunTape2]";
+			say "[FamilyFunTape2]"; [Source: Wahn/Recordings.i7x]
 		-- "Rat Twin Tape":
-			say "[ErinConsolesViolet]";
+			say "[ErinConsolesViolet]"; [Source: Kernog/Rat Twins.i7x]
+		-- "Grocery Store Tape":
+			say "[RomanTransformationFootage]"; [Source: Kernog/Roman.i7x]
+		-- "Gorilla Locker-room Tape 1":
+			say "[FootballTeamSlice1]";[Source: Kernog/Astroslide Field Locker-room.i7x]
+		-- "Carter's Tape":
+			say "[CartersRecording]"; [Source: Luneth/Origins.i7x]
 [Template - see below the end of file]
 
 to deletetape (x - text):	[removes 1 tape of a given type from the player's inventory]

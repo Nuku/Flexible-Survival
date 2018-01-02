@@ -179,8 +179,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Feral Mutt";
 	now attack entry is "[one of]The [FeralMuttFurColor] [FeralMuttCurrentBreed] snaps at you and wounds you with his teeth![or]Jumping up at you, the [FeralMuttFurColor] [FeralMuttCurrentBreed] leaves scratches with his claws.[or]The feral mutt bites you in the leg.[at random]";
-	now defeated entry is "[LoseToFeralDog]";
-	now victory entry is "[BeatTheFeralMutt]";
+	now defeated entry is "[BeatTheFeralMutt]";
+	now victory entry is "[LoseToFeralDog]";
 	now desc entry is "[FeralMuttDesc]";
 	now face entry is "";
 	now body entry is "";

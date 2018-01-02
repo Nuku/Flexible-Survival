@@ -44,8 +44,8 @@ to say beattheshadowbeast: [Victory scenes]
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
 	else:
-		say "     ([link]Y[as]y[end link]) - Grab the Shadow Beasts tail and drag it back for some fun";
-		say "     ([link]N[as]n[end link]) - Let the beast away to lick it's wounds";
+		say "     ([link]Y[as]y[end link]) - Grab the Shadow Beasts tail and drag it back for some fun.";
+		say "     ([link]N[as]n[end link]) - Let the beast away to lick it's wounds.";
 		if player consents: [sex!]
 			If cocks of player > 0:
 				say "     Just before the creature can escape, you lunge forward and wrap your hand with the panther tail, bringing it to a quick halt. Inky darkness surrounds your hand as the Shadow beast tries to escape into the darkness unsuccessfully in its wounded state. You reel it in closer, ironically catching one of its own grasping tentacles to pull it closer. There is a moment when you fear its claws will come out, but as you move over the snarling creature and cup its hefty feline balls, the intention becomes clear for it and the beast relaxes. You wrestle the creature gently, bringing it to the ground and spooning it from behind, pressing between its grasping tentacles and grinding into its sleek fur. You stroke its underside with your hands.";
