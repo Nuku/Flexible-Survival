@@ -205,10 +205,10 @@ to caughtthealphahusky:
 	say "[bold type]Do you feel like teaching the alpha a lesson?[roman type][line break]";
 	LineBreak;
 	if cocks of player > 0:
-		say "     [link]Mount him (1)[as]1[end link]";
-		say "     [link]Ride him (2)[as]2[end link]";
-		say "     [link]Beat him up (3)[as]3[end link]";
-		say "     [link]Leave (4)[as]4[end link]";
+		say "     [link]Mount him (1)[as]1[end link][line break]";
+		say "     [link]Ride him (2)[as]2[end link][line break]";
+		say "     [link]Beat him up (3)[as]3[end link][line break]";
+		say "     [link]Leave (4)[as]4[end link][line break]";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 4:
 			say "Choice? (1-4)>[run paragraph on]";
@@ -226,9 +226,9 @@ to caughtthealphahusky:
 		else if calcnumber is 4:
 			say "[alphahuskyreleased]";
 	else:
-		say "     [link]Ride him (1)[as]1[end link]";
-		say "     [link]Beat him up (2)[as]2[end link]";
-		say "     [link]Leave (3)[as]3[end link]";
+		say "     [link]Ride him (1)[as]1[end link][line break]";
+		say "     [link]Beat him up (2)[as]2[end link][line break]";
+		say "     [link]Leave (3)[as]3[end link][line break]";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)>[run paragraph on]";

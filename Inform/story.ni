@@ -1203,376 +1203,6 @@ carry out hunting:
 			huntingfightchance;
 		follow the turnpass rule;
 
-to new ban menu:
-	now calcnumber is -1;
-	let gsexit be 0;
-	while gsexit is 0:
-		say "[bold type]Select which categories you want banned/warded:[roman type][line break]";
-		say "[bold type]Warding a monster will mean you can only find them by hunting for them, banning them removes them from the game entirely.[roman type][line break]";
-		say "[line break]";
-		say "(1) [link]Feral[as]1[end link]: 		[bracket][if feral is not banned and feral is not warded][bold type]None[roman type][else][link]None[as]11[end link][end if][close bracket] [bracket][if feral is warded][bold type]Ward[roman type][else][link]Ward[as]12[end link][end if][close bracket] [if feral is banned][bold type]Ban[roman type][else][link]Ban[as]13[end link][end if][close bracket] [bold type][bracket]Caution: Early Implementation![close bracket][roman type][line break]";
-		say "(2) [link]Furry[as]2[end link]:		[bracket][if furry is not banned and furry is not warded][bold type]None[roman type][else][link]None[as]21[end link][end if][close bracket] [bracket][if furry is warded][bold type]Ward[roman type][else][link]Ward[as]22[end link][end if][close bracket] [if furry is banned][bold type]Ban[roman type][else][link]Ban[as]23[end link][end if][close bracket][line break]";
-		say "(3) [link]Guy[as]3[end link]:		[bracket][if guy is not banned and guy is not warded][bold type]None[roman type][else][link]None[as]31[end link][end if][close bracket] [bracket][if guy is warded][bold type]Ward[roman type][else][link]Ward[as]32[end link][end if][close bracket] [if guy is banned][bold type]Ban[roman type][else][link]Ban[as]33[end link][end if][close bracket][line break]";
-		say "(4) [link]Girl[as]4[end link]:		[bracket][if girl is not banned and girl is not warded][bold type]None[roman type][else][link]None[as]41[end link][end if][close bracket] [bracket][if girl is warded][bold type]Ward[roman type][else][link]Ward[as]42[end link][end if][close bracket] [if girl is banned][bold type]Ban[roman type][else][link]Ban[as]43[end link][end if][close bracket][line break]";
-		say "(5) [link]Hermaphrodite[as]6[end link]: 	[bracket][if hermaphrodite is not banned and hermaphrodite is not warded][bold type]None[roman type][else][link]None[as]61[end link][end if][close bracket] [bracket][if hermaphrodite is warded][bold type]Ward[roman type][else][link]Ward[as]62[end link][end if][close bracket] [if hermaphrodite is banned][bold type]Ban[roman type][else][link]Ban[as]63[end link][end if][close bracket][line break]";
-		say "(6) [link]Humanoid[as]6[end link]: 	[bracket]NYI[close bracket][line break]";
-		say "(7) [link]Humorous[as]7[end link]: 	[bracket][if humorous is not banned and humorous is not warded][bold type]None[roman type][else][link]None[as]71[end link][end if][close bracket] [bracket][if humorous is warded][bold type]Ward[roman type][else][link]Ward[as]72[end link][end if][close bracket] [if humorous is banned][bold type]Ban[roman type][else][link]Ban[as]73[end link][end if][close bracket][line break]";
-		say "(8) [link]Hellspawn[as]8[end link]: 	[bracket][if hellspawn is not banned and hellspawn is not warded][bold type]None[roman type][else][link]None[as]81[end link][end if][close bracket] [bracket][if hellspawn is warded][bold type]Ward[roman type][else][link]Ward[as]82[end link][end if][close bracket] [if hellspawn is banned][bold type]Ban[roman type][else][link]Ban[as]83[end link][end if][close bracket][line break]";
-		say "[line break]";
-		say "(0) [link]Return to main menu[as]0[end link][line break]";
-		while 1 is 1:
-			say "Choice? (0-83)>[run paragraph on]";
-			get a number;
-			if (calcnumber >= 0 and calcnumber <= 7) or (calcnumber >= 11 and calcnumber <= 13) or (calcnumber >= 21 and calcnumber <= 23) or (calcnumber >= 31 and calcnumber <= 33) or (calcnumber >= 41 and calcnumber <= 43) or (calcnumber >= 61 and calcnumber <= 63) or (calcnumber >= 71 and calcnumber <= 73) or (calcnumber >= 81 and calcnumber <= 83):
-				break;
-			else:
-				say "Invalid Entry";
-		if calcnumber is 1:
-			if clearnomore is 0, clear the screen;
-			if feral is not banned and feral is not warded:
-				now feral is warded;
-				if clearnomore is 0, clear the screen;
-				say "Warding Feral.";
-			else if feral is warded:
-				now feral is banned;
-				now feral is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Feral.";
-			else:
-				now feral is not banned;
-				now feral is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Unbanning/Warding Feral.";
-		else if calcnumber is 2:
-			if furry is not banned and furry is not warded:
-				now furry is warded;
-				if clearnomore is 0, clear the screen;
-				say "Warding Furry.";
-			else if furry is warded:
-				now furry is banned;
-				now furry is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Furry.";
-			else:
-				now furry is not banned;
-				now furry is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Unbanning/Warding Furry.";
-		else if calcnumber is 3:
-			if guy is not banned and guy is not warded:
-				now guy is warded;
-				if clearnomore is 0, clear the screen;
-				say "Warding Guy.";
-			else if guy is warded:
-				now guy is banned;
-				now guy is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Guy.";
-			else:
-				now guy is not banned;
-				now guy is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Unbanning/Warding Guy.";
-		else if calcnumber is 4:
-			if girl is not banned and girl is not warded:
-				now girl is warded;
-				if clearnomore is 0, clear the screen;
-				say "Warding Girl.";
-			else if girl is warded:
-				now girl is banned;
-				now girl is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Girl.";
-			else:
-				now girl is not banned;
-				now girl is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Unbanning/Warding Girl.";
-		else if calcnumber is 5:
-			say "Not yet Implemented!";
-		else if calcnumber is 6:
-			if hermaphrodite is not banned and hermaphrodite is not warded:
-				now hermaphrodite is warded;
-				if clearnomore is 0, clear the screen;
-				say "Warding Hermaphrodite.";
-			else if hermaphrodite is warded:
-				now hermaphrodite is banned;
-				now hermaphrodite is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Hermaphrodite.";
-			else:
-				now hermaphrodite is not banned;
-				now hermaphrodite is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Unbanning/Warding Hermaphrodite.";
-		else if calcnumber is 7:
-			if humorous is not banned and humorous is not warded:
-				now humorous is warded;
-				if clearnomore is 0, clear the screen;
-				say "Warding Humorous.";
-			else if humorous is warded:
-				now humorous is banned;
-				now humorous is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Humorous.";
-			else:
-				now humorous is not banned;
-				now humorous is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Unbanning/Warding Humorous.";
-		else if calcnumber is 8:
-			if hellspawn is not banned and hellspawn is not warded:
-				now hellspawn is warded;
-				if clearnomore is 0, clear the screen;
-				say "Warding Hellspawn.";
-			else if hellspawn is warded:
-				now hellspawn is banned;
-				now hellspawn is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Hellspawn.";
-			else:
-				say "Unbanning/Warding Hellspawn.";
-				if clearnomore is 0, clear the screen;
-				now hellspawn is not banned;
-				now hellspawn is not warded;
-		else if calcnumber is 11:
-			if feral is not banned and feral is not warded:
-				if clearnomore is 0, clear the screen;
-				say "Feral is already available!";
-			else:
-				now feral is not banned;
-				now feral is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Unbanning/Warding Feral.";
-		else if calcnumber is 12:
-			if feral is warded:
-				if clearnomore is 0, clear the screen;
-				say "Feral is already Warded!";
-			else:
-				now feral is warded;
-				now feral is not banned;
-				if clearnomore is 0, clear the screen;
-				say "Warding Feral.";
-		else if calcnumber is 13:
-			if feral is banned:
-				if clearnomore is 0, clear the screen;
-				say "Feral is already Banned!";
-			else:
-				now feral is banned;
-				now feral is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Feral.";
-		else if calcnumber is 21:
-			if furry is not banned and furry is not warded:
-				if clearnomore is 0, clear the screen;
-				say "Furry is already available!";
-			else:
-				now furry is not banned;
-				now furry is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Unbanning/Warding Furry.";
-		else if calcnumber is 22:
-			if furry is warded:
-				if clearnomore is 0, clear the screen;
-				say "Furry is already Warded!";
-			else:
-				now furry is warded;
-				now furry is not banned;
-				if clearnomore is 0, clear the screen;
-				say "Warding Furry.";
-		else if calcnumber is 23:
-			if furry is banned:
-				if clearnomore is 0, clear the screen;
-				say "Furry is already Banned!";
-			else:
-				now furry is banned;
-				now furry is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Furry.";
-		else if calcnumber is 31:
-			if guy is not banned and guy is not warded:
-				if clearnomore is 0, clear the screen;
-				say "Guy is already available!";
-			else:
-				now guy is not banned;
-				now guy is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Unbanning/Warding Guy.";
-		else if calcnumber is 32:
-			if guy is warded:
-				if clearnomore is 0, clear the screen;
-				say "Guy is already Warded!";
-			else:
-				now guy is warded;
-				now guy is not banned;
-				if clearnomore is 0, clear the screen;
-				say "Warding Guy.";
-		else if calcnumber is 33:
-			if guy is banned:
-				if clearnomore is 0, clear the screen;
-				say "Guy is already Banned!";
-			else:
-				now guy is banned;
-				now guy is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Guy.";
-		else if calcnumber is 41:
-			if girl is not banned and girl is not warded:
-				if clearnomore is 0, clear the screen;
-				say "Girl is already available!";
-			else:
-				now girl is not banned;
-				now girl is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Unbanning/Warding Girl.";
-		else if calcnumber is 42:
-			if girl is warded:
-				if clearnomore is 0, clear the screen;
-				say "Girl is already Warded!";
-			else:
-				now girl is warded;
-				now girl is not banned;
-				if clearnomore is 0, clear the screen;
-				say "Warding Girl.";
-		else if calcnumber is 43:
-			if girl is banned:
-				if clearnomore is 0, clear the screen;
-				say "Girl is already Banned!";
-			else:
-				now girl is banned;
-				now girl is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Girl.";
-		else if calcnumber is 61:
-			if hermaphrodite is not banned and hermaphrodite is not warded:
-				if clearnomore is 0, clear the screen;
-				say "Hermaphrodite is already available!";
-			else:
-				now hermaphrodite is not banned;
-				now hermaphrodite is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Unbanning/Warding Hermaphrodite.";
-		else if calcnumber is 62:
-			if hermaphrodite is warded:
-				if clearnomore is 0, clear the screen;
-				say "Hermaphrodite is already Warded!";
-			else:
-				now hermaphrodite is warded;
-				now hermaphrodite is not banned;
-				if clearnomore is 0, clear the screen;
-				say "Warding Hermaphrodite.";
-		else if calcnumber is 63:
-			if hermaphrodite is banned:
-				if clearnomore is 0, clear the screen;
-				say "Hermaphrodite is already Banned!";
-			else:
-				now hermaphrodite is banned;
-				now hermaphrodite is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Hermaphrodite.";
-		else if calcnumber is 71:
-			if humorous is not banned and humorous is not warded:
-				if clearnomore is 0, clear the screen;
-				say "Humorous is already available!";
-			else:
-				now humorous is not banned;
-				now humorous is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Unbanning/Warding Humorous.";
-		else if calcnumber is 72:
-			if humorous is warded:
-				if clearnomore is 0, clear the screen;
-				say "Humorous is already Warded!";
-			else:
-				now humorous is warded;
-				now humorous is not banned;
-				if clearnomore is 0, clear the screen;
-				say "Warding Humorous.";
-		else if calcnumber is 73:
-			if humorous is banned:
-				if clearnomore is 0, clear the screen;
-				say "Humorous is already Banned!";
-			else:
-				now humorous is banned;
-				now humorous is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Humorous.";
-		else if calcnumber is 81:
-			if hellspawn is not banned and hellspawn is not warded:
-				if clearnomore is 0, clear the screen;
-				say "Hellspawn is already available!";
-			else:
-				now hellspawn is not banned;
-				now hellspawn is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Unbanning/Warding Hellspawn.";
-		else if calcnumber is 82:
-			if hellspawn is warded:
-				if clearnomore is 0, clear the screen;
-				say "Hellspawn is already Warded!";
-			else:
-				now hellspawn is warded;
-				now hellspawn is not banned;
-				if clearnomore is 0, clear the screen;
-				say "Warding Hellspawn.";
-		else if calcnumber is 83:
-			if hellspawn is banned:
-				if clearnomore is 0, clear the screen;
-				say "Hellspawn is already Banned!";
-			else:
-				now hellspawn is banned;
-				now hellspawn is not warded;
-				if clearnomore is 0, clear the screen;
-				say "Banning Hellspawn.";
-		else:
-			now gsexit is 1;
-
-to ban menu:
-	blank out the whole of table of combat items;
-	let X be 1;
-	repeat with Q running through flags:
-		choose a blank row in table of combat items;
-		now title entry is printed name of Q;
-		now description entry is printed name of Q;
-		if q is banned:
-			now title entry is "BANNED";
-		if q is warded:
-			now title entry is "WARDED";
-		now toggle entry is flag ban rule;
-[	let z be the number of rows in table of combat items;
-	say "[Z].";]
-	if there is no title in row 1 of table of combat items:
-		say "There are no flags!";
-		wait for any key;
-	else:
-		choose a blank row in table of combat items;
-		now title entry is "Begin Game";
-		now description entry is "Begin Game";
-		now toggle entry is flag ban rule;
-		now the current menu is table of Combat Items;
-		carry out the displaying activity;
-
-This is the flag ban rule:
-	choose row Current Menu Selection in table of combat items;
-	let nam be description entry;
-	if nam is "Begin Game":
-		decrease the menu depth by 1;
-		rule succeeds;
-	let z be furry;
-	repeat with y running through flags:
-		if nam matches the text printed name of y:
-			now z is y;
-			break;
-	if z is banned:
-		now z is not banned;
-	else if z is warded:
-		now z is banned;
-		now z is not warded;
-	else:
-		now z is warded;
-	decrease the menu depth by 1;
-	ban menu;
-
 [ Fast Travel moved to Navigation.i7x in Core Mechanics ]
 
 understand "vial [text]" as vialing.
@@ -2189,9 +1819,13 @@ To process (X - a grab object):
 				increase morale of player by 62;
 				if morale of player > 0, now morale of player is 0;
 				say "After drinking something, you feel better.";
-		sort table of random critters in random order;
-		now monster is 1;
-		if "Iron Stomach" is not listed in feats of player, infect;
+		if "Iron Stomach" is not listed in feats of player:
+			let RandomRow be a random number from 1 to the number of rows in the table of random critters;
+			choose row RandomRow from the table of random critters;
+			while area entry is "Nowhere": [runs circles until it finds an available creature]
+				now RandomRow is a random number from 1 to the number of rows in the table of random critters;
+				choose row RandomRow from the table of random critters;
+			infect;
 	if x is soda:
 		if "Junk Food Junky" is listed in feats of player:
 			if thirst of player > 0:
@@ -5135,6 +4769,7 @@ Book 9 - Add-Ons
 Include Alt Combat by Core Mechanics.
 Include Alt Vore by Core Mechanics.
 Include Assorted Items by Stripes.
+Include Banning by Core Mechanics.
 Include Basic Functions by Core Mechanics.
 Include Basic Locations by Core Mechanics.
 Include BFandI by Core Mechanics.
@@ -5166,6 +4801,7 @@ Include Astroslide Field Locker-room by Kernog.
 Include Astroslide Football Field by Kernog.
 Include Atlantis by Rikaeus.
 Include Beach by Speedlover.
+Include Bargain Bin by Wahn.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
 Include Camp Bravo by Wahn.
@@ -5271,6 +4907,7 @@ Include Museum Rounds for FS by Stripes.
 Include New Events by Sarokcat.
 Include Odd Weapons by Hellerhound.
 Include Old BoomBox by Kaleem mcintyre.
+Include Origins by Luneth.
 Include Park Events by Sarokcat.
 Include Patreon Menu by Stripes.
 Include Pepperspray by Stripes.
@@ -5361,13 +4998,12 @@ Include Dark Elf for FS by Stripes.
 Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
 Include Doberman for FS by Stripes.
-Include Dolphin for FS by Hellerhound.
 Include Donkeyman by Sarokcat n Verath.
 Include Donkeywoman by Sarokcat n Verath.
 Include Dracovixentaur for FS by Stripes.
 Include Dragontaur for FS by Stripes.
 Include Drone Wasp by Nuku Valente.
-Include Dryad for FS by Hellerhound.
+Include Dryad by Hellerhound.
 Include Easter Bunny by Stripes.
 Include Ebonflame Dragator by Blue Bishop.
 Include Ebonflame Draken by Blue Bishop.
@@ -5384,6 +5020,7 @@ Include Female Husky by Nuku Valente.
 Include Fennec For Fs by Stripes.
 Include Feral Cheetah for FS by Hellerhound.
 Include Feral Gryphon by UrsaOmega.
+Include Feral Mutt by CrimsonAsh.
 Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
 Include Feral Shaft Beast for FS by Guest Writers.
@@ -5413,12 +5050,13 @@ Include Great Dane Rouge by Kaleem Mcintyre.
 Include Greek Nymph by Sarokcat.
 Include Grey Squirrel for FS by Stripes.
 Include Grizzly Bear by UrsaOmega.
-Include Gryphons Plot for FS by Hellerhound.
+[Include Gryphons Plot by Shay.] [incomplete yet]
 Include Gunbunny for FS by Stripes.
 Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
 Include Helot by Wahn.
 Include Hentai Fan for FS by Stripes.
+Include Herm Dolphin by Hellerhound.
 Include Herm Hyena for FS by Guest Writers.
 Include Hermaid by Xenophiliac.
 Include Hermaphrodite Gryphon by Nuku Valente.
@@ -5483,6 +5121,7 @@ Include Naughty Nurse by Stripes.
 Include Nerdy Mouse by McRabid.
 Include Nightmare by Sarokcat.
 Include Ocelot for FS by Stripes.
+Include Ogres by Lyall.
 Include Opossum Sailor by StripeGuy.
 Include Orc Infections by Wahn.
 Include otter by Nuku Valente.
@@ -5576,7 +5215,7 @@ Include Xeno for FS by Stripes.
 Include Yamato Dragon For FS by Blue Bishop.
 Include Yamato Dragoness For FS by Blue Bishop.
 Include Yuppie Mink by StripeGuy.
-Include Zebra by Sarokcat.
+Include Zebra by Vervaine.
 
 [NPCs]
 Include Alex by Stripes.
@@ -5634,6 +5273,7 @@ Include Gordon by Rikaeus.
 Include G-Shep Squad by Rikaeus.
 Include Gwen by Stripes.
 Include Hadiya by Stripes.
+Include Hanu by Kernog.
 Include Harold by Sarokcat.
 Include Hayato by Stripes.
 Include HornyHorsey by femtoAmpere.
@@ -5651,6 +5291,7 @@ Include Joanna by Stripes.
 Include Julian by Prometheus.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
+Include Krampus by Wahn.
 Include Kristen by Stripes.
 Include Kyle by Qazarar.
 Include Kyrverth by Speedlover.
@@ -5670,6 +5311,7 @@ Include Mouse Taur by Nuku Valente.
 Include Nadia by Wahn.
 Include Nala by CrimsonAsh.
 Include Nermine by Wahn.
+Include Nermine Quests by Wahn.
 Include Newt by Stripes.
 Include NPC Interactions by Wahn.
 Include Oliver by Rikaeus.
@@ -6128,28 +5770,29 @@ To regularstart: [normal start method]
 		say "(5) [link]Main Feat[as]5[end link] - [bold type][freefeatgeneral][roman type][line break]";
 		say "(6) [link]Fun Feat[as]6[end link] - [bold type][freefeatfun][roman type][line break]";
 		say "(7) [link]Gender Lock[as]7[end link] - [bold type][if gsgl is 1]None[else if gsgl is 2]Random[else if gsgl is 3]Male[else if gsgl is 4]Female[else if gsgl is 5]Shemale[else if gsgl is 6]Cuntboy[else if gsgl is 7]Male Herm[else if gsgl is 8]Herm[else if gsgl is 9]Always Cocky[else if gsgl is 10]Always a Pussy[else if gsgl is 11]Single Sexed[else if gsgl is 12]Flat Chested[else if gsgl is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
-		say "(8) [link]Player Pronouns[as]8[end link] - [bold type][PronounChoice of player][roman type][line break]";
+		say "(8) [link]Player Name[as]8[end link] - [bold type][name of player][roman type][line break]";
+		say "(9) [link]Player Pronouns[as]9[end link] - [bold type][PronounChoice of player][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Gameplay Options:[roman type][line break]";
-		say "(9) [link]Banned/Warded Types[as]9[end link] - [menuwardlist] & [menubanlist] [line break]";
-		say "(10) [link]Anal Content[as]10[end link] - [bold type][if anallevel is 1]Less[else if anallevel is 2]Normal[else if anallevel is 3]More[end if][roman type][line break]";
-		say "(11) [link]WS Content[as]11[end link] - [bold type][if wslevel is 1]None[else if wslevel is 2]Normal[else if wslevel is 3]Full[end if][roman type][line break]";
-		say "(12) [link]Vore/UB Content[as]12[end link] - Vore: [bold type][if vorelevel is 1]None[else if vorelevel is 2]Normal[else if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if ublevel is 1]None[else if ublevel is 2]Normal[else if ublevel is 3]Full[end if][roman type][line break]";
-		say "(13) [link]Ovi Pregnancy[as]13[end link] - [bold type][if ovipreglevel is 1]Never[else]Normal[end if][roman type][line break]";
+		say "(10) [link]Banned/Warded Types[as]10[end link] - [menuwardlist] & [menubanlist] [line break]";
+		say "(11) [link]Anal Content[as]11[end link] - [bold type][if anallevel is 1]Less[else if anallevel is 2]Normal[else if anallevel is 3]More[end if][roman type][line break]";
+		say "(12) [link]WS Content[as]12[end link] - [bold type][if wslevel is 1]None[else if wslevel is 2]Normal[else if wslevel is 3]Full[end if][roman type][line break]";
+		say "(13) [link]Vore/UB Content[as]13[end link] - Vore: [bold type][if vorelevel is 1]None[else if vorelevel is 2]Normal[else if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if ublevel is 1]None[else if ublevel is 2]Normal[else if ublevel is 3]Full[end if][roman type][line break]";
+		say "(14) [link]Ovi Pregnancy[as]14[end link] - [bold type][if ovipreglevel is 1]Never[else]Normal[end if][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Display Options:[roman type][line break]";
-		say "(14) [link]Hyperlinks[as]14[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
-		say "(15) [link]Waiting for Input[as]15[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
-		say "(16) [link]Screen Clearing[as]16[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
-		say "(17) [link]Graphics[as]17[end link] - [bold type][if NewGraphicsInteger is 1]Inline[else if NewGraphicsInteger is 2]Side-Window[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
-		say "(18) [link]Inventory Columns[as]18[end link] - [bold type][invcolumns][roman type][line break]";
+		say "(15) [link]Hyperlinks[as]15[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
+		say "(16) [link]Waiting for Input[as]16[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
+		say "(17) [link]Screen Clearing[as]17[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
+		say "(18) [link]Graphics[as]18[end link] - [bold type][if NewGraphicsInteger is 1]Inline[else if NewGraphicsInteger is 2]Side-Window[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
+		say "(19) [link]Inventory Columns[as]19[end link] - [bold type][invcolumns][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Restore a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
 			say "(0-18)>[run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 18 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 19 ) or calcnumber is 99:
 				break;
 			else:
 				say "Invalid Entry";
@@ -6169,34 +5812,36 @@ To regularstart: [normal start method]
 			-- 7:
 				genderlockmenu;
 			-- 8:
-				try pronounsetting;
+				playernaming;
 			-- 9:
+				try pronounsetting;
+			-- 10:
 				if clearnomore is 0, clear the screen;
 				new ban menu;
-			-- 10:
-				try analadjusting;
 			-- 11:
-				try WSadjusting;
+				try analadjusting;
 			-- 12:
-				try voremenuing;
+				try WSadjusting;
 			-- 13:
-				try oviadjusting;
+				try voremenuing;
 			-- 14:
+				try oviadjusting;
+			-- 15:
 				if hypernull is 0:
 					now hypernull is 1;
 				else:
 					now hypernull is 0;
-			-- 15:
+			-- 16:
 				if waiterhater is 0:
 					now waiterhater is 1;
 				else:
 					now waiterhater is 0;
-			-- 16:
+			-- 17:
 				if clearnomore is 0:
 					now clearnomore is 1;
 				else:
 					now clearnomore is 0;
-			-- 17:
+			-- 18:
 				if NewGraphicsInteger is 1:
 					now NewGraphics is true;
 					now NewGraphicsInteger is 2;
@@ -6208,7 +5853,7 @@ To regularstart: [normal start method]
 					now graphics is true;
 					now NewGraphics is false;
 					now NewGraphicsInteger is 1;
-			-- 18:
+			-- 19:
 				say "[set_invcolumns]";
 			-- 99:
 				now trixieexit is 1;
@@ -6222,6 +5867,11 @@ To regularstart: [normal start method]
 				if player consents:
 					say "[gsopt_start]";
 					now trixieexit is 1;
+
+to playernaming:
+	say "[bold type]Please enter new name: [roman type]";
+	get typed command as playerinput;
+	now name of player is playerinput;
 
 to say menuwardlist:
 	if furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded:

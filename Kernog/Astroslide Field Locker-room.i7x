@@ -18,6 +18,11 @@ The description of Astroslide Field Locker-room is "[FootFieldLockerdesc]".
 to say FootFieldLockerdesc:
 	say "     You are standing in the high-standard locker-room of the Tenvale Gorillas team, with quite a few players and fans all around you. The gorilla strain seems to have spread very easily among the athletically minded students of this college, swelling the ranks of the team to unprecedented numbers. In retrospect, it was a good thing that this place was built so generously sized, otherwise the bustling crowd would never fit in here, especially with the whole lot of activity that is going on right now.";
 	say "     Everything that can be done in a locker-room is being done, and at the same time: some players gearing up for play, while others come in from out on the field, drenched in sweat and pumped up from a good game; a lively discussion of tactics is going on in a corner of the room, regularly covered by the sounds of running water and laughing voices, which echo over from the showers. And, of course, there is a wild variety of sexual acts being performed in the midst of everything else: fan-girls and -boys sucking off gorillas or being fucked, but also players pounding each other on the benches or against the rows of lockers. No one is batting an eye at the piles of bodies and the constant cacophony of moans and grunts; instead, the many performers are cheered, sometimes joined in by more oncoming players and visitors.";
+	if "Gorilla Locker-room Tape 1" is not listed in tapes of player:
+		say "    You spot a cassette tape on one of the benches. Curious what may be on it, you pocket it right away.";
+		LineBreak;
+		say "[bold type]Locker-room Tape has been added to your tape inventory![roman type][line break]";
+		add "Gorilla Locker-room Tape 1" to tapes of player;
 	if Roman is in Astroslide Field Locker-room:
 		say "     Roman is also here, tied to one of the benches. From the incrusted cumstains covering his dark fur, you can tell that he has been used aplenty in your absence.";
 
@@ -32,14 +37,14 @@ instead of sniffing Gorilla Team-Members:
 	say "     The attractive scents of gorillas hang in the air, with slight undertones of furry musk, cum and sweat.";
 
 instead of conversing the Gorilla Team-Members:
-	if (romanPeeped is 3):
+	if HP of Roman is 3:
 		say "     You have a heavy secret concerning the team captain. [bold type]Do you wish you wish to share it? This decision will certainly break Roman, and without him you will probably not be able to work for the team anymore. Then again, free bitch to play with the other boys.[roman type]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) 'Hey, guys! You won't believe what I saw the other day!'";
 		say "     ([link]N[as]n[end link]) No. You are not this cruel.";
 		if player consents:
 			say "[RomanHumiliation]";
-			now romanPeeped is 4;
+			now HP of Roman is 4;
 			move Roman to Astroslide Field Locker-room;
 		else:
 			say "     No. You are here to have a normal conversation with the other gorillas, or what passes for normal these days. You join the gorilla team-members in their reveling, what you wanted to say or ask is soon forgotten and you find yourself embroiled in [one of]a discussion about new strategies on the field. Despite them having a lot more experience in those matters, your attempts to contribute something worthwhile are readily accepted, making you feel welcomed and almost as part of the team.[or]a group of the guys retelling raunchy stories about past conquests. This escalates after a short while, then a gorilla draws an eager fan-girl to his chest from the crowd and proceeds to... demonstrate his technique. Before long, there's a proper little orgy going on as more fans eagerly flock towards the group or the hunky males just pair up with each other.[at random]";
@@ -280,9 +285,20 @@ to PeepingRomanEvent:
 		say "     You tiptoe to the door of the private changing room, and take a look inside. You can see Roman. His shorts are already down, exposing his slightly bubbly, furry ass to you. But what interests you is the other side. If only he could rotate just slightly, just enough to see what kind of package he has. Answering your silent prayers, Roman turns to the right in order to fetch a clean pair of shorts. He has... Nothing?";
 		say "     You are taken aback. There is no massive maleness, no large ballsack, totally contradicting the permanent bulge his shorts were giving him. Oblivious to your spying, Roman sits on a bench, and spreads his legs. You can see the unmistakable folds of a vagina, and the plump clit just over it. Roman nonchalently pulls a large tuft of cotton from a bag, and packs it into his new shorts without pulling them up. So that's the reason he always wears shorts, and looks hung like a horse.";
 		say "     Roman hoists himself up from the bench, making you hurriedly retreat. However, you ponder about confronting Roman about his secret, the next time you will talk to him.";
-		now romanPeeped is 1;
+		now HP of Roman is 1;
 		now PeepingRoman is resolved;
 	else:
 		say "     Privacy is a rare leisure in his city, much more in this place. You decide to give the team captain some much needed privacy. A couple minutes after, he leaves the changing room with a new pair of shorts, just as bulgy as the previous one. As you wonder why he did not choose a bigger size, you notice a tuft of cotton falling from the pair of pants. Weird.";
+		
+to say FootballTeamSlice1:
+	say "     You put the tape that Roman gave you inside the recorder, and press [']play[']. The video starts on a close-up of a Black young man's face. 'How do you... Ah. There we go,' he says, before pulling the camera away from his face. It is a rather good-looking young man, clad in football gear. As he was about to speak, another player tugs him by his braids. 'Hey, Zach, is it rolling? Come on, man. Sighing, Zach turns the camera over, showing another, younger Black male. His naked chest still wet from the shower and a towel on his waist. 'You should get some clothes, Mike,' you can hear Zach say.";
+	say "     'Aw, but I wanted to give a little fan-service for the ladies,' Mike jokes.";
+	say "     'And the boys, too?' Zach asks.";
+	say "     '[italic type]Especially[roman type] the boys, Z,' Zach's brother adds in a softer voice.";
+	say "     'Zach, Mike, what are you doing with the camera?' someone says out of field. The camera turns, showing a strong-looking man in his thirties.";
+	WaitLineBreak;
+	say "     'This camera is for the team's blog. It's not a toy,' the older white-skinned male chastised.";
+	say "     'Sorry, coach Roman,' Zach says. Behind Roman, the locker-room is bristling with activity. Players come and go; some wave to the camera, before the feed stops. You realize that this is the morning before the start of the infection, and that there will not be any blog to upload to.";
+
 
 Astroslide Field Locker-room ends here.
