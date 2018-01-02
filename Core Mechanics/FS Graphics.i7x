@@ -82,6 +82,7 @@ Figure of Ram_icon is the file "FS_Ram.jpg".
 Figure of Reindeer_icon is the file "Reindeer_ig.jpg".
 Figure of SandMan_icon is the file "Sand Man.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.jpg".
+Figure of PirateShark_icon is the file "sharkpirate.png".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
 Figure of SnowBat_icon is the file "SnowBat_ig.jpg".
 Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
@@ -666,6 +667,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Plush Lion"	Figure of PlushLion_icon	"Anymouse1968"	g-black	"normal"
 "Pink Gel"	Figure of PinkGel_icon	"Rastear"	g-black	"normal"
 "Pink Poodle"	Figure of PinkPoodle_icon	"Anymouse1968"	g-black	"normal"
+"Pirate Shark"	Figure of PirateShark_icon	"Zealot"	g-black	"normal"
 "Rachel"	Figure of Rachel_icon	"o-kemono"	g-black	"normal"
 "Ram"	Figure of Ram_icon	"Anymouse1968"	g-black	"normal"
 "Reindeer"	Figure of Reindeer_icon	"MoT"	g-black	"normal"
@@ -829,6 +831,7 @@ carry out artistcredits:
 	say "     Orc Warrior by Genelightfoot @ y-gallery.net[line break]";
 	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
 	say "     Pink Poodle by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Pirate Shark by Zealot @  https://www.furaffinity.net/user/Drakosacerdos/[line break]";
 	say "     Plush Lion by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Queen Bee by Caltroplay @ furaffinity.net[line break]";
 	say "     Ram by Anymouse1968 @ furaffinity.net[line break]";
@@ -948,7 +951,7 @@ carry out artistcredits:
 	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
-	say "     Tiger Shark Warrior by Zealot @ https://www.furaffinity.net/user/Drakosacerdos[line break]";
+	say "     Tiger Shark Warrior by Zealot @ https://www.furaffinity.net/user/Drakosacerdos/[line break]";
 	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
 	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Tristian by Enaya-TheWhiteWolfen @ https://www.furaffinity.net/user/enaya-thewhitewolfen/";
