@@ -16,7 +16,7 @@ Instead of resolving Chance Meeting:
 	say "[link]N[as]n[end link] Curiosity killed the cat.";
 	if player consents:
 		LineBreak;
-		if (generationConflictFlag is 0 and ratTwinsStatus is 2 and BrennanRelationship > 11 and a random chance of 1 in 3 succeeds):
+		if generationConflictFlag is 0 and HP of Erin is 2 and BrennanRelationship > 11 and a random chance of 1 in 3 succeeds:
 			say "[Generation Conflict]";
 		else:
 			if (Girl is banned or Girl is Warded):
@@ -46,7 +46,7 @@ to say Generation Conflict:
 	say "     'Nah,' Violet replies after taking a gulp of sugary beverage. 'The rowdier bunch is downstairs, at the beach proper. The cliffside is calm. Most of the time.'";
 	say "     'We found the key of the restaurant's storage room, so we simply put our stuff there when we're out in the city,' Erin says. 'Besides, most visitors know our faces, and they tend to behave themselves. With some encouragement, of course.'";
 	say "     'He means sex,' Violet interjects, making Brennan cough out his soda, to the general hilarity. 'And so... you got a shelter, old man?'";
-	say "    'I'm not [italic type]that[roman type] old. And yes. I found myself an empty flat, downtown. Well isolated. It's as safe as it can be. If you two want to find a better place. Well... I would not mind having some company. [subjpro_cap of player] visits me from time to time, and you are welcome to do the same.'";
+	say "    'I'm not [italic type]that[roman type] old. And yes. I found myself an empty flat, downtown. Well isolated. It's as safe as it can be. If you two want to find a better place. Well... I would not mind having some company. [if player is not defaultnamed][name of player][else][subjpro_cap of player][end if] visits me from time to time, and you are welcome to do the same.'";
 	say "     'Neat,' Violet replies, as she absentmindedly pushes Remus' head from her crotch, as if it was no big thing. 'Well, don't be a stranger either, if you pass by the beach.' Violet suddenly turns towards you: 'Anyway, you've been quite silent, pal. How's it hanging on your end?'";
 	WaitLineBreak;
 	say "     The four of you keep talking for some time, and eventually, Brennan decides to keep moving. Erin and Violet take their leave as well, after offering you and Brennan a spare soda they salvaged from a vending machine ('It was like the giving tree: we kept kicking, we kept winning,' Erin tells you). On your own once again, you resume your exploration.";

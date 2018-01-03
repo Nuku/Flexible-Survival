@@ -40,13 +40,16 @@ instead of going east from Mall East Wing while HP of Santa Claws is 0:
 		say "     Nah, you step back from the curtain of snowfall and walk back towards the normal shops in the west.";
 
 East of Mall East Wing is Christmas Village.
-The description of Christmas Village is "Around you, a little winter wonderland occupies this section of the mall. There are evergreen conifer trees that sprout out of the snow-covered ground, mostly hiding the walls and letting things appear as if you're in a midwinter forest, with the front sides of the stores appearing as block houses built from round tree trunks. There are many petite Christmas elves dressed in green clothes going about their business here, following tracks through the snow, chatting and laughing. Among them, you see some visiting mall-rats and other species, but the majority of people are elves. In the center of it all stands a large cushioned throne, carved with many decorative designs, and on it sits Santa Claws, the master of this domain.[line break]To the west, behind a curtain of thickly falling snow, lies the rest of the mall. You wonder if you really should go back, or just stay in this nice and happy place...".
+The description of Christmas Village is "[CVillageDesc]".
+
+to say CVillageDesc:
+	say "     Around you, a little winter wonderland occupies this section of the mall. There are evergreen conifer trees that sprout out of the snow-covered ground, mostly hiding the walls and letting things appear as if you're in a midwinter forest, with the front sides of the stores appearing as block houses built from round tree trunks. Only the north side looks different, with what appears to be an unhewn rock-wall behind the trees, complete with a somewhat forbidding entrance to a cave. There are many petite Christmas elves dressed in green clothes going about their business here, following tracks through the snow, chatting and laughing. Among them, you see some visiting mall rats and other species, but the majority of people are elves. In the center of it all stands a large cushioned throne, carved with many decorative designs, and on it sits Santa Claws, the master of this domain.";
+	say "     To the west, behind a curtain of thickly falling snow, lies the rest of the mall. You wonder if you really should go back, or just stay in this nice and happy place...";
 
 Section 2 - Talking
 
 instead of conversing the Santa Claws:
 	say "[SantaTalkMenu]";
-
 
 to say SantaTalkMenu:
 	say "What do you want to talk with Santa Claws about?";
@@ -67,6 +70,12 @@ to say SantaTalkMenu:
 	now title entry is "Mall";
 	now sortorder entry is 3;
 	now description entry is "Talk about the mall";
+	[]
+	if HP of Krampus > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Krampus";
+		now sortorder entry is 4;
+		now description entry is "Ask him about the goat-demon";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -90,6 +99,8 @@ to say SantaTalkMenu:
 					say "[SantaTalk2]";
 				if nam is "Mall":
 					say "[SantaTalk3]";
+				if nam is "Krampus":
+					say "[SantaTalk4]";
 				wait for any key;
 				now lastfuck of Santa Claws is turns;
 		else if calcnumber is 100:
@@ -124,9 +135,11 @@ to say SantaTalk2:
 		say "     The polar bear rumbles, 'Now now - you've already had a present recently. Don't be greedy.'";
 	else:
 		now Dexterity of Santa Claws is turns;
-		say "     As you bring up the topic of a present, Santa Claws [if scalevalue of player > 3]waves you closer[else]leans back and waves you to sit on his lap, which you do[end if]. Putting a strong arm around your shoulders, the polar bear pulls you close and says, 'Ho ho ho - have you been naughty, or nice? I got just the right present for either...'";
+		say "     As you bring up the topic of a present, Santa Claws [if scalevalue of player > 3]waves you closer[else]leans back and waves you to sit on his lap, which you do[end if]. Putting a strong arm around your shoulders, the polar bear pulls you close and says, 'Ho ho ho - have you been naughty, or nice?'";
 		say "     Looking at his clawed hand that holds your shoulder, then into the blue eyes in the mall Santa's ursine face, you say...[line break]";
-		say "     [link](1)[as]1[end link] 'Naughty'[line break]     [link](2)[as]2[end link] 'Nice'[line break]     [link](3)[as]3[end link] Nothing, and rub his crotch instead.[line break]";
+		say "     [link](1)[as]1[end link] 'Naughty'[line break]";
+		say "     [link](2)[as]2[end link] 'Nice'[line break]";
+		say "     [link](3)[as]3[end link] Nothing, and rub his crotch instead.[line break]";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 4:
 			say "Choice? (1-3)>[run paragraph on]";
@@ -136,16 +149,9 @@ to say SantaTalk2:
 			else:
 				say "Invalid choice. Type [link]1[end link] to say 'Naughty', [link]2[end link] to say 'Nice' or [link]3[end link] to rub his crotch.";
 		if calcnumber is 1:[Naughty]
-			say "     'So... a naughty [if player is female]girl[else]boy!', Santa Claws booms in a loud voice, chuckling as he squeezes your shoulder affectionately. 'You're going to have lots of fun with my elves then - they're all pretty naughty too.' With a beaming smile, the large polar bear nods to what's behind you - and as you turn your head, you see a pair of attractive Christmas elves stand just a few steps away, eying you with eager expressions on their faces.";
-			say "     Do you want to have sex with one of them?";
-			if player consents:
-				LineBreak;
-				say "     [ChristmasElfSex]";
-			else:
-				LineBreak;
-				say "     Clearing your throat, you say... that you're not in the mood for any naughty fun right now after all. The two elves give you disappointed looks, then look at each other and the male draws his fellow elf close to kiss her. With a giggle, they vanish into one of the 'block-houses' along the walls, no doubt to satisfy each other's needs.";
+			say "     'So... a naughty [if player is female]girl[else]boy[end if] then!', Santa Claws says in a somewhat disappointed tone, pursing his lips as he slowly shakes his head. 'I fear you have come to the wrong man. There is another whose specialty is dealing with those who don't behave themselves...' Throwing a look at the somewhat forbidding cave entrance to the north, he leans in to whisper, 'It's never too late to turn yourself around and reclaim your place on the nice list. But if you really feel like you got something to repent, Krampus will be happy to [italic type]have[roman type] you - long and hard, if you know what I mean.'";
 		else if calcnumber is 2:[Nice]
-			say "     'So... a nice [if player is female]girl[else]boy!', Santa Claws booms in a loud voice, chuckling as he squeezes your shoulder affectionately. 'Let's give you something that's good for you then. Reaching down into the opening of a large red sack lying next to his throne, the large ursine then pulls out ";
+			say "     'So... a nice [if player is female]girl[else]boy![end if]', Santa Claws booms in a loud voice, chuckling as he squeezes your shoulder affectionately. 'Let's give you something that's good for you then. Reaching down into the opening of a large red sack lying next to his throne, the large ursine then pulls out ";
 			let randomnumber be a random number from 1 to 3;
 			if randomnumber is:
 				-- 1:
@@ -193,16 +199,13 @@ to say SantaTalk3:
 		-- 3:
 			say "     The polar bear leans back on his throne, then says in his deep voice, 'Watch out when you go to the main restrooms. I heard some critters came up through the sewer entrance there...'";
 
-to say ChristmasElfSex:
-	say "     Looking back and forth between the two elves, you try to decide which one you want - but before you can do so, a swirl of snow blocks your sight and a monotonous voice intones:[line break]";
-	say "     '<Sorry, didn't have any time left to give you naughty elf sex. This will have to be added at a later point.>'";
+to say SantaTalk4: [talking about Krampus]
+	say "     The polar bear glances over to the cave entrance in the north, then focuses on you again. 'Ah, Krampus. I hope you didn't form an opinion based on his appearance alone! He may look rather demonic, and he acts all mean and tough, I know know he's a good guy at heart. And while I may wish differently, his task remains a necessary evil. There is such wickedness in the world.' Letting out a short breath, Santa Claws shrugs and focuses on the happy bustle of the Christmas Village all around you. This seems to distract him from the earlier dark thoughts, though it becomes obvious that they are still on his mind when he quietly adds, 'If you do know someone who might going down a path that draws Krampus to get them, please pass along the message that redemption is always an option. Being on the Naughty List is not forever.'";
 
 Section 3 - Sex
 
 Instead of fucking the Santa Claws:
 	say "     The polar bear gives you an interested glance, looking you up and down. With a rumble in his broad chest, he tenses his arms as if to stand up, then huffs, 'No, I'm sorry. There are still so many presents to be given out. Don't want to disappoint anyone who comes to visit my domain.'";
-
-
 
 Section 4 - Infections
 

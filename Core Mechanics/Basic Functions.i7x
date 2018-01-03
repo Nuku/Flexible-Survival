@@ -99,7 +99,24 @@ to SanBoost (N - number):
 	if humanity of player > 100:
 		now humanity of player is 100;
 
+to ScoreLoss (N - number):
+	LineBreak;
+	say "[bold type]Your score decreases by [N]![roman type][line break]";
+	increase the score by N;
+
+to ScoreGain (N - number):
+	LineBreak;
+	say "[bold type]Your score rises by [N]![roman type][line break]";
+	increase the score by N;
+
 to say NonCombatError:
 	say "ERROR! This is a noncombat creature that you should never see in a fight. Please report how you saw this on the FS Discord or Forum.";
+
+understand "rename [text]" as PlayerRenaming.
+
+PlayerRenaming is an action applying to one topic.
+
+carry out PlayerRenaming:
+	now name of player is the topic understood;
 
 Basic Functions ends here.

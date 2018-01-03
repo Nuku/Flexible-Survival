@@ -139,7 +139,7 @@ instead of going Down from Frozen Cave Tunnel while (Miyuki is in Ice Fox's Den 
 			say "Invalid choice. Type [link]1[end link] to give her a BJ, [link]2[end link] to apologize or [link]3[end link] to squash her idea of dominating you.";
 	if calcnumber is 1:
 		LineBreak;
-		say "     You know how the world works these days, so you readily crouch down in front of her, taking in the dragon-fox's manhood. It is well-sized at about ten inches in length and light pink, tapering a little along its length till it reaches a pointy tip. The base of it just outside her scaled slit holds a noticeable bulge - no doubt, this swells up to a full-sized knot when she is balls-deep inside her partner and cums. Experimentally, you stroke the smooth scales between her legs, finding them warm to the touch and flexible. Miyuki may be scaly in parts, but she is far from cold-blooded, that's for sure. Your searching fingers dip into her slit too, feeling warm skin inside that forms the root of her cock. 'Someone is eager to explore,' the fox tells you from above, smiling down at you. 'You might just find something else that is fun in there sometime - but right now, I really feel like getting sucked.'";
+		say "     You know how the world works these days, so you introduce yourself [if player is not defaultnamed]as [name of player] [end if]and then readily crouch down in front of her, taking in the dragon-fox's manhood. It is well-sized at about ten inches in length and light pink, tapering a little along its length till it reaches a pointy tip. The base of it just outside her scaled slit holds a noticeable bulge - no doubt, this swells up to a full-sized knot when she is balls-deep inside her partner and cums. Experimentally, you stroke the smooth scales between her legs, finding them warm to the touch and flexible. Miyuki may be scaly in parts, but she is far from cold-blooded, that's for sure. Your searching fingers dip into her slit too, feeling warm skin inside that forms the root of her cock. 'Someone is eager to explore,' the fox tells you from above, smiling down at you. 'You might just find something else that is fun in there sometime - but right now, I really feel like getting sucked.'";
 		say "     Her cock throbs at that exclamation and you can see a glistening drop of pre form at its tip, tempting you to lean forward and lick the tasty treat off. Miyuki gives a pleased yip as your tongue brushes over her dickhead for the first time, followed by your lips closing around it and gently suckling the hard shaft. You proceed to go down on her, steadily sliding more and more of the erection into your mouth while exploring its fleshy length with your tongue, feeling every little ridge and vein. Her tip is halfway down your throat by the time you reach the pre-knot bulge, bumping its with your lips. 'Nnnghh - you're good at this,' your foxy host tells you in a pleased tone, stroking your head while her dick throbs in your throat.";
 		WaitLineBreak;
 		say "     Holding your position, you let Miyuki enjoy the feeling for as long as you can, then pull back and gasp for breath before starting to go down on her once more. The slick vulpine shaft slides easily into your mouth now, allowing you to bob up and down on it in a rapid pace. As you give the dragon-fox a blowjob that you hope she won't forget anytime soon, you can't help but chuckle around the dick in your mouth. It truly is amazing what situations the nanite apocalypse creates... here you are, blowing an anthro half-dragon half-fox sorceress in her icy den, bobbing on a nonhuman cock and now closing your fingers around her knot to squeeze and jerk it too. That last thing does make Miyuki go churr in pleasure, her paw-hands having to grip your shoulders tightly as she has to hold on.";
@@ -152,7 +152,7 @@ instead of going Down from Frozen Cave Tunnel while (Miyuki is in Ice Fox's Den 
 		now MiyukiRelationship is 5; [player gave her a BJ]
 	else if calcnumber is 2:
 		LineBreak;
-		say "     As you apologize for your intrusion and give her a little bow just to be sure (given the name and her appearance making you think Asian folklore, you think it fits), Miyuki nods gracefully and replies, 'Well, at least you're well mannered. Not that I wouldn't have preferred a... different apology.' She strokes her fox-like shaft demonstratively and gives you a wink before going on, 'But fine - you're forgiven for your intrusion. I do have to ask you to leave now though... since you don't seem to be interested in taking care of my 'little fox' down here, I guess I'll have to do it myself.' Friendly but determined, she ushers you out of her cave, leaving you a bit bewildered at what you just experienced that.";
+		say "     As you apologize for your intrusion, introduce yourself [if player is not defaultnamed]as [name of player] [end if]and give her a little bow just to be sure (given the name and her appearance making you think Asian folklore, you think it fits), Miyuki nods gracefully and replies, 'Well, at least you're well mannered. Not that I wouldn't have preferred a... different apology.' She strokes her fox-like shaft demonstratively and gives you a wink before going on, 'But fine - you're forgiven for your intrusion. I do have to ask you to leave now though... since you don't seem to be interested in taking care of my 'little fox' down here, I guess I'll have to do it myself.' Friendly but determined, she ushers you out of her cave, leaving you a bit bewildered at what you just experienced.";
 		move player to Forest Cave Entrance;
 		now MiyukiRelationship is 1; [player apologized to her]
 	else:
@@ -168,11 +168,49 @@ instead of going Down from Frozen Cave Tunnel while (Miyuki is in Ice Fox's Den 
 		move player to Snowy Forest Trail;
 		now MiyukiRelationship is 100; [she doesn't want to see the player again]
 
-[
-instead of going Down from Frozen Cave Tunnel while (Miyuki is in Ice Fox's Den): [she greets the player, at a minimum]
+instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRelationship > 99):
+	say "     A gale of frozen air blows you backwards as you try to enter the ice fox's den, chilling you to the bone. Seems like you are not welcome there.";
+
+after going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRelationship > 0): [she greets the player, at a minimum]
 	move player to Ice Fox's Den;
-	say "     <greeting or otherwise>";
-]
+	say "     The beautiful ice fox looks up as she sees you come in, greeting you with the words, 'Ah, welcome [name of player]. Always a pleasure to have you as a visitor. Come join me.'";
+
+instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRelationship > 0 and MiyukiRelationship < 100 and lust of Miyuki is 0):
+	if debugactive is 1:
+		say "     DEBUG: Miyuki Blessing Event Introduction - lust of Miyuki: [lust of Miyuki] [line break]";
+	move player to Ice Fox's Den;
+	say "     Walking into the den of Miyuki the ice fox, you see her standing next to an anthro corgi, caressing the young woman's large, bulging belly. 'I can't wait to see our cubs. You'll be an amazing mother, Leandra,' the dragon-fox tells her noticeably smaller partner, leaning down a little to plant a kiss on her muzzle. 'Me too,' the canine replies dreamily, her tail wagging as she leans in against Miyuki and licks her muzzle in turn. 'I do worry a bit though - I mean, you told me that all of this,' the corgi says and indicates her stomach, 'is only two of them. Two eggs that you've put into me in a [italic type]very[roman type] memorable night. They're clearly not that... um, small. That means I'll have a hell of a time to push the little ones out. Can I - can we - have them here? I read it helps with the pain if you are able to hold the father's hand during the birthing, you know?'";
+	say "     'Of course love,' Miyuki says in a very caring tone, caressing the corgi as she leads the young woman to the entrance and then making some introductions between yourself and the canine house-guest. After a little bit of casual discussion, Leandra says that she needs to go and get home, at which point the ice fox hands her a basket overstuffed with fish and other foodstuffs. That's one way to keep em fresh, you guess. Looks like the corgi and her growing offspring will be taken care of for some days with that load. Happy and quite heavily loaded with the basket, Leandra exchanges another kiss with Miyuki and leaves. After she vanishes, the ice fox sorceress waits for about a minute to make sure she is gone, then whirls around to face you, a quizzical expression on her face.";
+	WaitLineBreak;
+	say "     'Now what in the world did she mean about being afraid of pain and all of that?! I didn't want to frighten her so I kept quiet when Leandra mentioned it. It's good that you happened in at just the right time. Can you shed light on this for me?' the sorceress asks in a quite determined manner. Somewhat puzzled that she doesn't know about this basic fact of life, you begin laying out the details, as far as you remember them. How a woman's water breaks, contractions set in, hours upon hours of those sometimes, then finally a new life being pushed out into the world. From her shocked reaction, you have to assume that Miyuki must be white as a sheet under her fur right now, gaping at you speechlessly. 'But, but - I... I barely have any words. This is so primitive. Like animals out in the wilderness. I can't believe that anyone would be made to suffer like that. The priestesses of the All-Mother would never let it happen!'";
+	say "     Bidding her to slow down, you ask what exactly Miyuki means, so she tells you of the central nature goddess of her homeland, worshiped almost universally by all species and granting blessings to expectant mothers. You wisely postpone the question of why a goddess like that isn't revered on earth to another day (not wanting to get Miyuki started on tales of religious persecution), and instead ask her about the nature of those blessings. Apparently children, eggs, and the like are supposed to be delivered painlessly, and fairly instantly, in her experience. Still shaking her head about the fact that you never heard about her goddess, Miyuki adds, 'The prayer to beseech the goddess is common knowledge. Anyone in the faithful can recite it and be heard. I guess I know what I'll be doing with Leandra next time she comes by.'";
+	WaitLineBreak;
+	say "     The next words that come from Miyuki's mouth are, 'Okay, where is the local sacred grove? I - oh, wait. You do not [italic type]have one[roman type].' Ending in a groan, she puts on a frown and tells you, 'The one thing I need is the juice of a Mother's Star. It's a fruit. Yay big, with five lobes. You know, symbolizing the ways that the All-Mother created for things to be born.' Raising her hand, she counts them off finger by finger: 'Spontaneous Generation, Budding, Division, Egg-Laying and Live Birth. Come on, there must be something like that here. They're green, then turn yellow when ripe.' That last detail makes you pause for a second, remembering a tropical fruit that fits the description fairly well - a carambola, otherwise known as a starfruit. You mention it to Miyuki, who gets a quite relieved expression, and says, 'I would be very thankful if you could bring me one or more of those then please. If you want, I could even bless you too.";
+	say "     Something like a carambola tree can grow in the city, but that would be fairly hard to find in a random garden. [bold type]Maybe it'd be more worthwhile to check out a botanical garden, or the zoo actually.[roman type] You're fairly certain they have a lot of tropical plants of all sorts there...";
+	now lust of Miyuki is 1; [Carambola quest started]
+	now Carambola Tree is not resolved;
+	
+Carambola Tree is a situation.
+The sarea of Carambola Tree is "Zoo".
+
+instead of resolving a Carambola Tree:
+	say "     Remembering Miyuki's request, you keep an eye out for the tropical carambola tree during your exploration of the expansive City Zoo grounds. With all of the roaming infected, blocked pathways, and whatnot, it isn't easy at all, but eventually, you do spot the characteristic yellow fruit hanging from a tree not far away. You hurry over to it and pick those that look ripe and juicy and are hanging low enough. Yet just as you want to leave with the lucky find, a large tigertaur steps into your way from behind the nearby bushes. 'What do you think you are doing? That's my tree, and my fruit!' she growls, annoyed that you've intruded in what she sees as her territory. Without any further hesitation, the tigress attacks!";
+	challenge "Tigertaur";
+	if fightoutcome < 20: [player won]
+		say "     Having triumphed in the clash against the aggressive cat, you pack your hard-won fruit into your backpack. Now you just got to deliver them to Miyuki...";
+		now lust of Miyuki is 2; [Carambola acquired]
+		now Carambola Tree is resolved;
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "     On top of everything else that the tigertaur did to you, she also snatches up the fruit, stuffing them into a satchel carried over her shoulder. As you eventually get back to your feet and leave the tree afterwards, you refrain from picking another carambola - who knows, the tigress might be watching. Maybe you should come back another time when you're better prepared to clash with her.";
+	else if fightoutcome is 30: [fled]
+		say "     Legging it, you run off and shake the angry tigertaur off with some difficulty. Sadly, in the process of the wild chase, you lose all of the carambola you picked. Looks like all of this excitement was for nothing. You'll have to go back to the tree and pick some new ones if you want to help Miyuki out.";
+
+instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRelationship < 100 and lust of Miyuki is 2):
+	if debugactive is 1:
+		say "     DEBUG: Miyuki Fruit Delivery - lust of Miyuki: [lust of Miyuki] [line break]";
+	move player to Ice Fox's Den;
+	say "     Arriving in the ice fox sorceress's den, you greet Miyuki and carefully pull the star-shaped fruit you acquired for her out of your backpack. The dragon-fox smiles as she accepts them one by one, concentrating a little bit until a thin sheen of ice covers each of them before she sets them aside into a bowl in a nearby wall shelf. 'There, that should keep them fresh until it is time to use them,' Miyuki says with a happy expression, then walks back to you on her slender paws and gives you a kiss on the cheek. 'Thank you, my brave friend. This will help greatly, not only Leandra, but also several other new friends I have made since coming to this world.' Glancing down, you can see her scaled genital slit open a little, the tip of her cock poking out as Miyuki thinks of her sexual partners. 'And of course, if you want to receive the All-Mother's blessing yourself, just come to me, and I will perform the rite.'";
+	now lust of Miyuki is 3; [blessing ready]
 
 Section 6 - NPC
 
@@ -207,6 +245,12 @@ instead of conversing the Miyuki:
 	now sortorder entry is 3;
 	now description entry is "Talk to her about maybe becoming like her";
 	[]
+	if lust of Miyuki is 3:
+		choose a blank row in table of fucking options;
+		now title entry is "Be blessed by her";
+		now sortorder entry is 4;
+		now description entry is "Request that Miyuki perform a prayer to the All-Mother";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -228,6 +272,8 @@ instead of conversing the Miyuki:
 						say "[MiyukiTalk2]";
 					-- "Becoming an ice fox":
 						say "[MiyukiTalk3]";
+					-- "Be blessed by her":
+						say "[MiyukiTalk4]";
 					-- otherwise: say "Talk menu failed!";
 				wait for any key;
 		else if calcnumber is 100:
@@ -243,13 +289,13 @@ instead of conversing the Miyuki:
 	clear the screen and hyperlink list;
 
 to say MiyukiTalk1: [talk about her]
-	say "     As you ask Miyuki about herself, a sly smile crosses the ice fox's muzzle. 'Curious, aren't you? But a woman needs to have some secrets, you know. Let's just say I came here from... a different place. One that isn't so drearily warm all the time. Everything around these parts is in flux right now, and things are bound to stay quite interesting for a long time... so I decided to stay. It wasn't hard to set up a nice little den afterwards.' With a sweep of her arm, she indicates her warm nest, as well as the few pieces of frost-rimmed furniture in the icy cave. Then she glances up at the rotating snowstar, sending another stream of energy its way to ramp up the little snowstorm once more.";
+	say "     As you ask Miyuki about herself, a sly smile crosses the ice fox's muzzle. 'Curious, aren't you? But a woman needs to have some secrets, you know. Let's just say I came here from... a different place. One that isn't so drearily warm all the time. Everything around these parts is in flux right now, and things are bound to stay quite interesting for a long time... so I decided to stay. It wasn't hard to set up a nice little den afterwards.' With a sweep of her arm, she indicates her warm nest, as well as the few pieces of frost-rimmed furniture in the icy cave. Then she glances up at the rotating snow-star, sending another stream of energy its way to ramp up the little snowstorm once more.";
 
 to say MiyukiTalk2: [talk about the city]
 	let randomnumber be a random number from 1 to 3;
 	if randomnumber is:
 		-- 1:
-			say "     Miyuki nods sagely as you bring up the city, then says, 'You've got quite a few interested parties on the premises right now. Plenty of demons roaming this place or that, and I've seen a few of their winged opponents soar in the sky. And don't even ask me to how many deities realms that 'museum' place connects. Whoever thought it was a good idea to stack sacred items to the roof in one place?' She chukles a little as if the mere thought was ridiculous.";
+			say "     Miyuki nods sagely as you bring up the city, then says, 'You've got quite a few interested parties on the premises right now. Plenty of demons roaming this place or that, and I've seen a few of their winged opponents soar in the sky. And don't even ask me to how many deities realms that 'museum' place connects. Whoever thought it was a good idea to stack sacred items to the roof in one place?' She chuckles a little as if the mere thought was ridiculous.";
 		-- 2:
 			say "     Miyuki smiles a little as you bring up the city, one of her hands moving to idly stroke around the rim of one of her nipples. 'You know, it is refreshing to get to a place that isn't quite as... stuck up about its morals. Why, I was here barely five minutes before a bit of a loudmouth dog demanded that I spread myself for him. Typical for your customs, eh? So very direct...' She grins at your expression, and before you can decide if you want to tell her about what actually is going on, the ice fox goes on to say, 'Of course, I was direct too and showed the insistent puppy what a surprise I've got for guys like him. They usually hit quite a different tone once their tail is raised and ass fucked. I wonder if the eggs took and I got some kits with the guy. They'd be good for him - motherhood changes even the most hard-boiled man.";
 		-- 3:
@@ -263,6 +309,16 @@ to say MiyukiTalk3: [talk about becoming an ice fox]
 		now lastSnowStarGiven is turns;
 	else: [gave the player one already that day]
 		say "     As you start asking for another snow star, Miyuki shakes her head in a slow gesture of negation. 'I'm sorry, I gave you one today already. That little star was a piece of my personal magic, you know. As much as I wish it was, that is not limitless. So... maybe tomorrow, okay?'";
+
+to say MiyukiTalk4: [be blessed]
+	say "     As you make your request, Miyuki answers, 'Of course[if player is not defaultnamed] [name of player][end if]. It's the least I can do for your help. Come lay down, and please bare your stomach.' The ice fox sorceress leads you to her comfortable nest so that you can get comfortable, then retrieves one of the carambola fruit preserved in ice. Kneeling down next to you, she holds up one hand and concentrates until a bowl of clear ice forms in it. She then slowly squeezes the yellow fruit in her surprisingly strong hand, cracking its ice shell and pressing quite a bit of juice out to drip into the bowl. Miyuki dips two fingers into the juice and starts to paint on your belly, going back several times as she draws a five-pointed star on your skin. As she finishes it, the sorceress intones, 'Hear me, All-Mother! I beseech you to bless this being of your creation. Guide [ObjectPro of player] through bringing a new generation into this world, so that life may flourish.'";
+	say "     When Miyuki falls silent after the last words are spoken, you feel a pleasant warmth radiating out from the star painted on your belly, suffusing all of your form and making you feel very well and rested, more so than at any point since this whole mess started.";
+	LineBreak;
+	say "[bold type]Your stamina has increased by 2![roman type][line break]";
+	increase stamina of player by 2;
+	LineBreak;
+	say "[bold type]'All-Mother's Blessing' has been added to your feats![roman type][line break]";
+	add "All-Mother's Blessing" to feats of the player;
 
 instead of fucking the Miyuki:
 	if lastfuck of Miyuki - turns < 4:

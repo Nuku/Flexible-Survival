@@ -45,6 +45,7 @@ Figure of GooGirl_icon is the file "GooGirl.jpg".
 Figure of BlueGryphon_icon is the file "BlueGryphon.jpg".
 Figure of BlueGryphon_face_icon is the file "BlueGryphon_face.jpg".
 Figure of Gunbunny_icon is the file "Gunbunny_ig.jpg".
+Figure of Ebonflame_Draken_icon is the file "Ebonflame_Draken.jpg".
 Figure of Helot_icon is the file "Helot.jpg".
 Figure of Helot_face_icon is the file "Helot_face.jpg".
 Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
@@ -82,6 +83,7 @@ Figure of Ram_icon is the file "FS_Ram.jpg".
 Figure of Reindeer_icon is the file "Reindeer_ig.jpg".
 Figure of SandMan_icon is the file "Sand Man.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.jpg".
+Figure of PirateShark_icon is the file "sharkpirate.png".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
 Figure of SnowBat_icon is the file "SnowBat_ig.jpg".
 Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
@@ -126,6 +128,7 @@ Figure of Boghrim_clothed_icon is the file "Boghrim_clothed.jpg".
 Figure of Boghrim_naked_icon is the file "Boghrim_naked.jpg".
 Figure of Boghrim_face_icon is the file "Boghrim_face.jpg".
 Figure of Bradford_icon is the file "Bradford_ig.jpg".
+Figure of Brennan_clothed_icon is the file "Brennan_clothed.jpg".
 Figure of Brennan_face_icon is the file "Brennan_face.jpg".
 Figure of Brooke_icon is the file "Brooke.jpg".
 Figure of Brian_icon is the file "Brian_ig.jpg".
@@ -215,6 +218,7 @@ Figure of Lilith_naked_icon is the file "Succubus_naked.jpg".
 Figure of Lilith_face_icon is the file "Succubus_face.jpg".
 Figure of Lilith_boobs_icon is the file "Succubus_boobs.jpg".
 Figure of Lindsey_icon is the file "Lindsey_ig.jpg".
+Figure of Malakhi_icon is the file "Malakhi.jpg".
 Figure of MasterMind_icon is the file "MasterMind_ig.jpg".
 Figure of MarcOrwell_icon is the file "MarcOrwell.jpg".
 Figure of Marc_face_icon is the file "Marc_face.jpg".
@@ -270,6 +274,10 @@ Figure of Thomas_soft_icon is the file "Thomas_soft.jpg".
 Figure of Toven_clothed_icon is the file "Toven_clothed.jpg".
 Figure of Toven_naked_icon is the file "Toven_naked.jpg".
 Figure of Tristian_icon	is the file "Tristian.jpg".
+Figure of TSW_icon is the file "TSW.jpg".
+Figure of TSW_headshot_icon is the file "TSW_headshot.png".
+Figure of TSW_naked_icon is the file "TSW_naked.jpg".
+Figure of TSW_sansNecklace_icon is the file "TSW_sansNecklace.jpg".
 Figure of Urik_ass_icon is the file "Urik_ass.jpg".
 Figure of Urik_clothed_icon is the file "Urik_clothed.jpg".
 Figure of Urik_face_icon is the file "Urik_face.jpg".
@@ -291,6 +299,8 @@ Figure of Eric_Urik_naked_icon is the file "Eric_Urik_naked.jpg".
 Figure of Boy_To_Fox_Shampoo1_icon is the file "Boy_To_Fox_Shampoo1.jpg".
 Figure of Boy_To_Fox_Shampoo2_icon is the file "Boy_To_Fox_Shampoo2.jpg".
 Figure of Fang_Candy_icon is the file "Fang_Candy_ig.jpg".	[Fang topping Candy scene.]
+Figure of Malakhi_Barnabas_icon is the file "Malakhi_Barnabas.jpg".
+Figure of Malakhi_Kano_icon is the file "Malakhi_Kano.jpg".
 Figure of Mammoth_CV1_icon is the file "Mammoth_CV_1_ig.jpg".	[Mammoth cock-vore scene 1.]
 Figure of Mammoth_CV2_icon is the file "Mammoth_CV_2_ig.jpg".	[Mammoth cock-vore scene 2.]
 Figure of Mammoth_CV3_icon is the file "Mammoth_CV_3_ig.jpg".	[Mammoth cock-vore scene 3.]
@@ -486,7 +496,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Boy_To_Fox_Shampoo1"	Figure of Boy_To_Fox_Shampoo1_icon	"Watsup"	g-white	"normal"
 "Boy_To_Fox_Shampoo2"	Figure of Boy_To_Fox_Shampoo2_icon	"Watsup"	g-white	"normal"
 "Bradford"	Figure of Bradford_icon	"Anymouse1968"	g-black	"normal"
-"Brennan"	Figure of Brennan_face_icon	"Sinealas"	g-black	"normal"
+"Brennan_clothed"	Figure of Brennan_clothed_icon	"Sinealas"	g-black	"normal"
+"Brennan_face"	Figure of Brennan_face_icon	"Sinealas"	g-black	"normal"
 "Brooke"	Figure of Brooke_icon	"Otterbits"	g-black	"normal"
 "Brian"	Figure of Brian_icon	"dhstein"	g-black	"normal"
 "BrutusGood"	Figure of BrutusGood_icon	"Inkydemon"	g-black	"normal"
@@ -539,6 +550,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "DrMoffatt1"	Figure of DrMoffatt1_icon	"The_Negative"	g-black	"normal"
 "DrMoffatt2"	Figure of DrMoffatt2_icon	"MadTurtle"	g-black	"normal"
 "DrMouse"	Figure of DrMouse_icon	"JaxxBlackFox"	g-black	"normal"
+"Ebonflame Draken"	Figure of Ebonflame_Draken_icon	"Anonymous"	g-white	"normal"
 "Elijah_evil"	Figure of Elijah_evil_icon	"Banni"	g-black	"normal"
 "Elijah_evil_naked"	Figure of Elijah_evil_naked_icon	"Banni"	g-black	"normal"
 "Elijah_evil_face"	Figure of Elijah_evil_face_icon	"Banni"	g-black	"normal"
@@ -584,6 +596,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Homo Sapiens"	Figure of HomoSapiens_icon	"Astro"	g-black	"normal"
 "Honey"	Figure of Honey_icon	"SandySchreiber"	g-black	"normal"
 "Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-black	"normal"	[only shown for males]
+"Human Survivor"	Figure of Brennan_clothed_icon	"Sinealas"	g-black	"normal"
 "Imp"	Figure of Imp_clothed_icon	"Kupo Klein"	g-black	"normal"
 "Imp_naked"	Figure of Imp_naked_icon	"Kupo Klein"	g-black	"normal"
 "Imp_face"	Figure of Imp_face_icon	"Kupo Klein"	g-black	"normal"
@@ -616,6 +629,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Lilith_naked"	Figure of Lilith_naked_icon	"Kupo Klein"	g-black	"normal"
 "Lindsey"	Figure of Lindsey_icon	"Anymouse1968"	g-black	"normal"
 "Magic Drake"	Figure of MagicDrake_icon	"Anymouse1968"	g-black	"normal"
+"Malakhi"	Figure of Malakhi_icon	"Jahi"	g-black	"normal"
+"Malakhi & Barnabas"	Figure of Malakhi_Barnabas_icon	"Jahi"	g-black	"normal"
+"Malakhi & Kano"	Figure of Malakhi_Kano_icon	"Jahi"	g-black	"normal"
 "Mall Map"	Figure of Map_Smith_Haven_Mall_icon	"Anonymous"	g-black	"inline_only"
 "Mammoth"	Figure of Mammoth_icon	"Boo3"	g-black	"normal"
 "Mannequin"	Figure of Mannequin_icon	"Rastear"	g-black	"normal"
@@ -653,6 +669,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Plush Lion"	Figure of PlushLion_icon	"Anymouse1968"	g-black	"normal"
 "Pink Gel"	Figure of PinkGel_icon	"Rastear"	g-black	"normal"
 "Pink Poodle"	Figure of PinkPoodle_icon	"Anymouse1968"	g-black	"normal"
+"Pirate Shark"	Figure of PirateShark_icon	"Zealot"	g-black	"normal"
 "Rachel"	Figure of Rachel_icon	"o-kemono"	g-black	"normal"
 "Ram"	Figure of Ram_icon	"Anymouse1968"	g-black	"normal"
 "Reindeer"	Figure of Reindeer_icon	"MoT"	g-black	"normal"
@@ -697,6 +714,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Thomas_soft"	Figure of Thomas_soft_icon	"Inkydemon"	g-black	"normal"
 "Thought Eater"	Figure of ThoughtEater_icon	"Rastear"	g-black	"normal"
 "Tiger Cop"	Figure of SgtMarks_icon	"Anyare"	g-black	"normal"
+"Tiger Shark"	Figure of TSW_icon	"Zealot"	g-black	"normal"
+"TSW_headshot"	Figure of TSW_headshot_icon	"Zealot"	g-black	"normal"
+"TSW_naked"	Figure of TSW_naked_icon	"Zealot"	g-black	"normal"
+"TSW_sansNecklace"	Figure of TSW_sansNecklace_icon	"Zealot"	g-black	"normal"
 "Tigress Hooker"	Figure of TigressHooker_icon	"Sharei"	g-black	"normal"
 "TinyTim"	Figure of TinyTim_icon	"Obieblu"	g-black	"normal"
 "Tiny_In_Action"	Figure of TinyTim_In_Action_icon	"Obieblu"	g-black	"normal"
@@ -776,6 +797,7 @@ carry out artistcredits:
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
 	say "     Donkeywoman by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Dracovixentaur by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Ebonflame Draken by Anonymous[line break]";	
 	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
 	say "     Ewe by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Feline (females) by Anymouse1968 @ furaffinity.net[line break]";
@@ -812,6 +834,7 @@ carry out artistcredits:
 	say "     Orc Warrior by Genelightfoot @ y-gallery.net[line break]";
 	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
 	say "     Pink Poodle by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Pirate Shark by Zealot @  https://www.furaffinity.net/user/Drakosacerdos/[line break]";
 	say "     Plush Lion by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Queen Bee by Caltroplay @ furaffinity.net[line break]";
 	say "     Ram by Anymouse1968 @ furaffinity.net[line break]";
@@ -901,6 +924,7 @@ carry out artistcredits:
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
 	say "     Lilith by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Lindsey by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Malakhi by Jahi @ https://www.furaffinity.net/user/jahi/[line break]";
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Marc (fucked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
@@ -930,6 +954,7 @@ carry out artistcredits:
 	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
+	say "     Tiger Shark Warrior by Zealot @ https://www.furaffinity.net/user/Drakosacerdos/[line break]";
 	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
 	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Tristian by Enaya-TheWhiteWolfen @ https://www.furaffinity.net/user/enaya-thewhitewolfen/";
@@ -947,6 +972,8 @@ carry out artistcredits:
 	say "     Duke & Shawn by Hufnaar @ furaffinity.net[line break]";
 	say "     Fang and Candy by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Floor Show by MoT @ furaffinity.net[line break]";
+	say "     Malakhi & Barnabas by Jahi @ https://www.furaffinity.net/user/jahi/[line break]";
+	say "     Malakhi & Kano by Jahi @ https://www.furaffinity.net/user/jahi/[line break]";
 	say "     Mammoth Cock Vore Sequence by Boo3 @ furaffinity.net[line break]";
 	say "     Mammoth Pure Succumb by Boo3 @ furaffinity.net[line break]";
 	say "     Parasol Nap by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";

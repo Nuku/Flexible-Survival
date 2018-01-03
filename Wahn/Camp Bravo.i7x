@@ -46,7 +46,7 @@ Instead of resolving a Trickster's Masterpiece:
 	if libido of player > 100, now libido of player is 100;
 	increase score by 15;
 	extend game by 24;
-	now HP of Adam is 2;
+	now HP of Adam is 2; [intro event done]
 	Now Back at the Camp is unresolved;
 	Now Trickster's Masterpiece is resolved;
 
@@ -126,14 +126,14 @@ to say GuardLie: [lie to get into the camp]
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
 	if diceroll > 16:
-		say "     You walk up to them like confidently and totally wrap them around your finger with some quick talking. In the end, they salute you before one of them leads the way to their commanding officer's tent. You pass the hitching post you saw being used before, and also the huge minotaur sitting beside it right now munching on some food.";
+		say "     You walk up to them quite confidently and totally wrap Private Cooper around your finger with some quick talking. In the end, he salutes you before ordering the second guy - a blond man whose nametag reads Private Orwell - to lead you to their commanding officer's tent. You pass the hitching post you saw being used before, and also the huge minotaur sitting beside it right now munching on some food.";
 		WaitLineBreak;
 		say "     The commandant of the camp is Major Padgett, who stands up from his field desk to shake your hand before offering you a seat.";
 		say "     'So you're the special agent sent to check out the situation? Welcome to Camp Bravo. Let me brief you about what's been happening. We were lucky enough to have a top scientist in the city when the outbreak started - a doctor Diego Garcia who contacted scouting parties I sent out. [if Diegochanged is 0]He's been infected himself so he's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, he's been gathering data and looking into the infection himself. He pointed out Patient Zero for us - that large minotaur thing out in the camp - and explained the procedures necessary to gather and transport samples...' [else]She's been infected herself so she's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, she's been gathering data and looking into the infection herself. She pointed out patient zero for us and explained the procedures necessary to gather and transport samples...' [end if]He looks a bit embarrassed as he continues, saying 'You see, the samples can only be used if they're kept at human body temperature. So I've had to order the men to... carry the material inside their bodies to keep it valid.";
 		say "     'Several detachments of soldiers are on the way to the containment barrier, but I'm running out of men rapidly. I've already had to pull people out of other camps and scouting posts. Many of the remaining soldiers are women, and considering the potency of that creature's seed, I hesitate to expose any of them to it.'";
 		say "     'Please feel free to check out the camp and talk with everyone. And when you go back to report, please pass on that I need more people here to be able to send more people out with samples.'";
 		move player to Major's Tent;
-		now HP of Adam is 3;
+		now HP of Adam is 3; [player got access to the camp]
 		now Camp Bravo Entrance is known;
 		now Back at the Camp is resolved;
 		now battleground is "void";
@@ -360,6 +360,7 @@ to say MajorPartypooper: [try to make the Major see how he's been tricked]
 	say "     Not being able to accept having been duped, he has his soldiers throw you out of the camp, ordering them to drive you away if you return. Your body bruised from the rough handling, you slowly make your way back to the bunker and resolve not to return to Camp Bravo to avoid any further unpleasantness.";
 	now HP of player is HP of player / 2;
 	now Camp Bravo Entrance is not known;
+	now hp of Major Padgett is 100; [banned from Camp Bravo]
 	move player to bunker;
 
 to say MajorBreeding:
@@ -375,7 +376,7 @@ to say MajorBreeding:
 		if diceroll > 6:
 			say "     He nods at your explanation, clearly accepting it for the truth. 'I see your point. Spreading out the duty of obtaining and transporting research samples to all soldiers under my command would alleviate the shortage of people I can send off. I'll pass along orders to that effect. Thank you for bringing this to my attention.'";
 			now CampBravoWomenAllowed is 1;
-			now HP of Adam is 4;
+			now HP of Adam is 4; [female breeding allowed]
 			now ElainePregnant is 48; [48h till birth]
 		else:
 			say "     He looks doubtful at your explanation, unconvinced that sending his female soldiers to be impregnated by the huge minotaur outside is such a great idea. Maybe you should work at getting better at Ly- err, convincing him of the truth and try this again later.";
@@ -445,7 +446,7 @@ ElainePregnant is a number that varies.
 An everyturn rule:
 	if ElainePregnant is 1:
 		move Adam to Quartermaster's Tent;
-		now HP of Adam is 5;
+		now HP of Adam is 5; [Adam was born]
 		now ElainePregnant is 0;
 		now thirst of Elaine is 3;
 	if ElainePregnant is 24:
@@ -990,7 +991,7 @@ to say CampBravoFuckTTMale:
 		say "     You bring up the possibility of getting a chance to top the minotaur. The sergeant is a bit taken aback and is clearly unsure. 'I- but- huh?'  He holds up a hand to pause your comments while he tries to wrap his brain around your request. 'I... I honestly don't know how he'd take to that sort of thing. And this is supposed to be a serious operation here... despite how much sex is involved. How would that help the mis- Hmmm...'";
 		say "     He pauses for several moments, rubbing his chin as he thinks. 'Poor Tiny Tim has got a bit of a queue built up with the most recent group in. The patrol before was delayed in getting here, so they were still being processed when the next squad arrived. He's running out of steam trying to keep up. Your plan might just be the pick-me-up he needs to power through the last of them. But if the big guy's going to go for it, he's going to need to feel at ease. We'll need someone willing to be on bottom to start him, just so things don't go bad.'";
 		WaitLineBreak;
-		say "     It only takes you a moment before the ideal solution clicks into place. Telling the sergeant you know just the man for the job, you exit the tent and head to the camp entrance. Doing your best to look stoic and serious, you bark out 'Orwell. Front and center. And bring your gear.'  The young soldier looks up from his post, nods and grabs his rifle and pack.";
+		say "     It only takes you a moment before the ideal solution clicks into place. Telling the sergeant you know just the man for the job, you exit the tent and head to the camp entrance. Doing your best to look stoic and serious, you bark out 'Orwell. Front and center. And bring your gear.' The young soldier looks up from his post, nods and grabs his rifle and pack.";
 		say "     Private Cooper looks over at you with a bit of a scowl. 'What's going on?'";
 		say "     'Not that it's any of your business, [']Private['], but I'm taking Orwell for a special mission. Major's orders,' you add.";
 		say "     'Sorry, [if cunts of player > 0]ma'am... uh... sir[else]sir[end if]. It's just he'll probably take the chance to sneak some fun with the beast if he's not out here. Mark my words. God damn queers. Should never've let [']em in,' he grumbles the last bit under his breath.";
@@ -1051,7 +1052,7 @@ to say CampBravoFuckTTMale:
 
 to say CampBravoFuckTTFemale:
 	if thirst of Elaine is 4:[first time]
-		say "     Requesting another go at topping Tiny Tim, you suggest a group of the females this time. The sergeant is a little surprised at first by this, but quickly grabs his list of candidates. 'I... hadn't considered that[if lust of Tiny Tim > 1]. Given how all the other times had been gay orgies, [else]. I'd been thinking in terms of the men only for that method[end if]. But you're right, that'd certainly help with breeding the females as well. There are some women who haven't had their round with the big guy yet, as well as some who've even been requesting a second go. I've been denying the latter to keep us going through the main collection process. A round with you helping would let us get through a bunch of them in short order. If you know someone who can take the starting spot, I can definitely get a queue ready.'  He grows increasingly eager (and hard) as he talks to you, heading out to gather the female soldiers when you assure him you've got a starter already lined up.";
+		say "     Requesting another go at topping Tiny Tim, you suggest a group of the females this time. The sergeant is a little surprised at first by this, but quickly grabs his list of candidates. 'I... hadn't considered that[if lust of Tiny Tim > 1]. Given how all the other times had been gay orgies, [else]. I'd been thinking in terms of the men only for that method[end if]. But you're right, that'd certainly help with breeding the females as well. There are some women who haven't had their round with the big guy yet, as well as some who've even been requesting a second go. I've been denying the latter to keep us going through the main collection process. A round with you helping would let us get through a bunch of them in short order. If you know someone who can take the starting spot, I can definitely get a queue ready.' He grows increasingly eager (and hard) as he talks to you, heading out to gather the female soldiers when you assure him you've got a starter already lined up.";
 		WaitLineBreak;
 		say "     You head across the parade grounds to the quartermaster's tent. Elaine's got a group of male soldier's prepping for their round with the minotaur, things having again gotten hot and heated. The sight derails you momentarily as you watch the buff guys lubing each other up and practising with their assigned toys with considerable enthusiasm. You watch for a couple of minutes before remembering the reason you came and slip quietly over to talk to Elaine. Whispering to her that a female group romp with Tiny Tim's been arranged and that you want her to take the lead spot, she replies with an enthusiastic 'Hell yes!' before addressing the soldiers.";
 		say "     'Alright, men. It seems you guys have been given a short reprieve. I heartily recommend you use that time to continue your training. The more you're used to it and can stretch yourselves out, the better time you'll have of it. I know this special duty is unusual, but it doesn't mean you can't enjoy the assignment.'  They respond with a hearty 'Yes, ma'am!' and get back to their lustful training. With them taken care of, Elaine grabs some things and heads out with you to the hitching post.";

@@ -853,7 +853,7 @@ Instead of resolving a My Own Zoo Playset:
 	if "Stealth" is listed in feats of player, increase T by 3;
 	if T < 9:
 		say "     Knocking over several trees in his search, the giant spots you trying to hide. Forgetting about the zebra, he turns his attention on you.";
-		challenge "Giant";
+		challenge "Human Giant";
 	else if T < 17:
 		say "     Knocking over several trees in his search, the giant catches sight of the zebra trying to hide and grabs him roughly with both hands. The zebra struggles briefly, but is clearly too weak to put up much of a struggle and soon gives up with a weak sigh. The giant shakes him around roughly, telling him he's a bad zebra for trying to run away from playtime. Sitting back down, he buries the striped equine under his enormous manhood and reaches into the enclosure to grab a fresh pair of hapless victims. He sticks them in a car which has had its roof torn clean off and starts to make the car do doughnuts on the grass as the terrified pair scream and scramble to buckle up while being knocked around.";
 		say "     Having seen plenty and afraid of being caught by the giant while he's in the mood to [']play['] with the animals, you back out of the trees and try to get some distance between the two of you.";

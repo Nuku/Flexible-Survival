@@ -142,9 +142,9 @@ When Play begins:
 	now defeated entry is "[Satyress loses]";
 	now victory entry is "[Satyress wins]";
 	now desc entry is "[SatyressDesc]";
-	now face entry is "beautiful, mostly human-like face, though with small goat horns sticking up from your forehead. The lusty look filling your eyes shows it to truly be a satyress's";[ Face description, format as the text "Your face is (your text)."]
+	now face entry is "beautiful and mostly human-like, though with small goat horns sticking up from your forehead. The lusty look filling your eyes betrays the thoughts of sex and arousal that have become part of you";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "short, lithe and pretty flexible. Your upper body is that of a young woman, maybe a gymnast, while your lower body rests on two slender goat-like legs, your nimble goat hooves ringing off the floor with every step";
-	now skin entry is "[one of]goat furred[or]smooth[or]pale[at random]"; [ format as the text "You have (your text) skin"]
+	now skin entry is "[one of]goat-furred[or]smooth[or]pale[at random]"; [ format as the text "You have (your text) skin"]
 	now tail entry is "You have a short, stubby goat tail positioned behind you, seeming to move jauntily with every step you take.";[ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]goat-like[or]bestial[or]satyr[at random]";[ format as "You have a 'size' (your text) cock ]
 	now face change entry is "your face shifts and changes, taking on a feminine shape as horns grow out of your forehead. You can feel your mind filling up with images of wine and song, as well as all the naughty things you could do with other people that drink and dance with you"; [ format as "Your face feels funny as (your text)" ]

@@ -12,7 +12,12 @@ hospstairs is a number that varies.
 
 City Hospital is a room. It is fasttravel.
 
-The description of City Hospital is "     The exterior of the hospital is quite disheveled. It seems like a large number of people were here when the outbreak started. You can guess that several people, initially surprised by their changes, came to the hospital, leading to the rampant infection of everyone inside, patient and doctor alike. You have to wonder if it is wise to investigate here further[if hospquest > 0]. But looking up at the hospital, you can see several rooms in one corner on the third floor are fully illuminated. And not with the dim glow of the emergency lighting, nor the flicking flames of candles or fires, but the full, smooth light of electricity[end if].[line break]     Inside the lobby, there are further signs of the chaos of transformations while staff tried to figure out what was happening. The waiting area is presently clear of people and creatures, through there is a lot of scattered clothes, as well as gurneys, crutches and other medical items. In some cases, these are piled up in an attempt to barricade the doors. It appears that searching will have another difficulty to it, as you won't be able to simply follow the hospital floor plans[if hospquest > 0] to that corner[end if].[line break]     From the shadows of one hall, you catch the glimpse of a strange, misshapen form before it slips further into the shadows of the hospital, away from the emergency lighting. It moved quite unevenly on its two malformed legs. Perhaps this place will be even more disturbing than the others you've searched before and you may want to rethink coming here.".
+The description of City Hospital is "[CityHospitalDesc]";
+
+to say CityHospitalDesc:
+	say "     The exterior of the hospital is quite disheveled. It seems like a large number of people were here when the outbreak started. You can guess that several people, initially surprised by their changes, came to the hospital, leading to the rampant infection of everyone inside, patient and doctor alike. You have to wonder if it is wise to investigate here further[if hospquest > 0]. But looking up at the hospital, you can see several rooms in one corner on the third floor are fully illuminated. And not with the dim glow of the emergency lighting, nor the flicking flames of candles or fires, but the full, smooth light of electricity[end if].";
+	say "     Inside the lobby, there are further signs of the chaos of transformations while staff tried to figure out what was happening. The waiting area is presently clear of people and creatures, through there is a lot of scattered clothes, as well as gurneys, crutches and other medical items. In some cases, these are piled up in an attempt to barricade the doors. It appears that searching will have another difficulty to it, as you won't be able to simply follow the hospital floor plans[if hospquest > 0] to that corner[end if].";
+	say "     From the shadows of one hall, you catch the glimpse of a strange, misshapen form before it slips further into the shadows of the hospital, away from the emergency lighting. It moved quite unevenly on its two malformed legs. Perhaps this place will be even more disturbing than the others you've searched before and you may want to rethink coming here.";
 
 Hospital Halls is a door. "To the north are a pair of double-doors leading into the hospital.". It is dangerous.
 
@@ -904,46 +909,37 @@ hospfight is a number that varies.
 
 to say hospbigfight1:
 	now hospfight is 1;
-	now fightstatus is 3; [set to run away by default]
 	now inasituation is true;
 	challenge "Jaguar";
 	now inasituation is false;
-	if fightstatus is 3:
-		now fightstatus is 0;
+	if fightoutcome is 30:
 		say "[hospranaway]";
 		stop the action;
-	if fightstatus is 2:
-		now fightstatus is 0;
+	else if fightoutcome > 19 and fightoutcome < 30:
 		say "[hosploss]";
 		stop the action;
-	now fightstatus is 3;
 	say "     The second jaguar moves around the worktables steps past his fallen comrade to attack you as well.";
 	now inasituation is true;
 	challenge "Jaguar";
 	now inasituation is false;
-	if fightstatus is 3:	[reset to run away by default]
-		now fightstatus is 0;
-		say "[hospranaway]";
-		stop the action;
-	if fightstatus is 2:
-		now fightstatus is 0;
+	if fightoutcome > 19 and fightoutcome < 30:
 		say "[hosploss]";
+		stop the action;
+	else if fightoutcome is 30:
+		say "[hospranaway]";
 		stop the action;
 	say "     The two guards dealt with, you barely dodge in time as the mouse tries to jab you with a syringe. You knock it from his paw, sending it to shatter on the floor. The powerful scent of an array of hormones fills the air, having clearly intended to change you into a mindless sex beast before you could attack him. That option gone, the little mouse strikes out at you with his fists.";
 	say "[hospbigfight2]";
 
 to say hospbigfight2:
 	now hospfight is 1;
-	now fightstatus is 3; [set to run away by default]
 	now inasituation is true;
 	challenge "Albino Mouse";
 	now inasituation is false;
-	if fightstatus is 3:
-		now fightstatus is 0;
+	if fightoutcome is 30:
 		say "[hospranaway]";
 		stop the action;
-	if fightstatus is 2:
-		now fightstatus is 0;
+	else if fightoutcome > 19 and fightoutcome < 30:
 		say "[hosploss]";
 		stop the action;
 	say "     Battered and bloodied, the mad doctor turns and runs. For a moment, you think he's trying to escape and move to cut him off from the exit, but he instead veers off to his storage unit and searches inside for a vial.";
@@ -956,19 +952,15 @@ to say hospbigfight2:
 	say "     The mouse's maleness is not neglected either, gaining a large sheath and heavy balls. Thick, dark yellow grow to replace the white coat over them and this spreads up over the monstrous mouse's chest as well. Clearly excited by the power of the changes, his cock grows hard and starts to emerge. It is thick and blood red, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick.";
 	say "     He chuckles madly as he looks himself over, clearly pleased with the results. 'I am going to enjoy showing you how disappointed I am with you. In slow, agonizing detail,' he rumbles with a deep, threatening voice.";
 	now hospfight is 2;
-	now fightstatus is 3; [set to run away by default]
 	now inasituation is true;
 	challenge "Albino Mouse";
 	now inasituation is false;
-	if fightstatus is 3:
-		now fightstatus is 0;
+	if fightoutcome is 30:
 		say "[hospranaway]";
 		stop the action;
-	if fightstatus is 2:
-		now fightstatus is 0;
+	else if fightoutcome > 19 and fightoutcome < 30:
 		say "[hosploss]";
 		stop the action;
-	now fightstatus is 0;
 	say "[hospvictory]";
 
 to say hospranaway:
@@ -1186,19 +1178,15 @@ to say tlabsbigfight:
 	if Susan is visible:
 		WaitLineBreak;
 		say "     As Orthas steps forward to fight you, she is struck hard on the back of the head by Susan, surprising you both. The heavy oscilloscope the doe used to hit her falls to the ground as the dragoness shoves her back violently, stunning her. Without understanding the conflict, the doe has clearly sided with her mate. Your nanite bond with her fills you with a warm rush of affection for her.";
-	now fightstatus is 3;
 	now inasituation is true;
 	challenge "Dragon";
 	now inasituation is false;
-	if fightstatus is 3:
-		now fightstatus is 0;
-		say "[tlranaway]";
-	if fightstatus is 2:
-		now fightstatus is 0;
-		say "[tlloss]";
-	if fightstatus is 1:
-		now fightstatus is 0;
+	if fightoutcome < 20:
 		say "[tlvictory]";
+	else if fightoutcome > 19 and fightoutcome < 30:
+		say "[tlloss]";
+	else if fightoutcome is 30:
+		say "[tlranaway]";
 
 
 to say tlranaway:

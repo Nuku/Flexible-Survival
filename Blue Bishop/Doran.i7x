@@ -3900,7 +3900,7 @@ to say dorrptk: [Doran RP: The Knight Query]
 			say "     'My mistake, I'm certain I have something else they'd prefer.'";
 
 to say DoranRP_DragonsPetMenu: [Doran RP: A Dragon's Pet Menu]
-	if DoranRole is -1 and (DoranPlayerRegard is not "Master" or DoranPlayerRegard is not "Mistress":
+	if DoranRole is -1 and (DoranPlayerRegard is not "Master" or DoranPlayerRegard is not "Mistress"):
 		say "     You explain your desires for Doran to treat you like his pet, and your desires for him to be [italic type]your[roman type] master for a bit. He gives a hum of thought before nodding his large head. 'I do believe I can do that for my [DoranPlayerRegard].'";
 		say "     'Now,' he says, 'There are some details we should get out of the way before hand. Do you want me to ravage your behind, or would you rather service your Master's [']equipment[']? Yes for ravaging, no for servicing.'";
 		say "([link]y[as]y[end link]/[link]n[as]n[end link])>";

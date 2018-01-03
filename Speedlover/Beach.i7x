@@ -59,6 +59,23 @@ to say RestaurantDesc:
 instead of sniffing the Restaurant:
 	say "     The restaurant smells of hamburgers, french fries, and many other kinds of foods, something that makes your stomach rumble.";
 
+Rat Twins Stash is a container. It is closed. The description of Rat Twins Stash is "[RatTwinsTapeGet]".
+
+Instead of opening Rat Twins Stash:
+	say "[RatTwinsTapeGet]";
+
+to say RatTwinsTapeGet:
+	say "    You approach from the pile of cots and clothes[if HP of Erin >= 2] belonging to the twins[end if]. A note that reads 'Back shortly. Keep your hands off our stuff' is taped on one of the bags. ";
+	if "Rat Twin Tape" is not listed in tapes of player:
+		if Lost Camera is unresolved:
+			say "You notice a video tape sitting on a corner of the pile of stuff. You pick it up and examine it. It is labelled '1st day together in our new bodies'. If you find a compatible camera, this could prove an interesting watch.";
+		else:
+			say "You notice a video tape sitting on a corner of the pile of stuff. You pick it up and examine it. It is labelled '1st day together in our new bodies'. It seems compatible with the camera that you[if carried of video camera is 1]carry[else]put somewhere[end if].";
+		say "[if HP of Erin >= 2]You grab the tape while the twins are distracted by one of the patrons of the restaurant coming to chat with them[else]You grab the type while no one is here to watch you[end if].";
+		say "[bold type]Rat Twin Tape has been added to your tape inventory![roman type][line break]";
+		add "Rat Twin Tape" to tapes of player;
+		
+
 [Public Beach]
 Down of Boardwalk2 is Public Beach.
 Public Beach is northwest of Wild Fringe.

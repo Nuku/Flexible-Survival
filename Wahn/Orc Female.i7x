@@ -12,6 +12,9 @@ Version 1 of Orc Female by Wahn begins here.
 [                                                                        ]
 [ KatyaRelationship - friendly contact with the player                   ]
 [  0: starting value                                                     ]
+[  1: friendly path active                                               ]
+[  4: friendly to the player                                             ]
+[  6: had sexy times with her                                            ]
 [ 99: raped her, all friendly contact hope lost                          ]
 [                                                                        ]
 [ Libido of Katya - lust of the orc                                      ]
@@ -20,7 +23,7 @@ Version 1 of Orc Female by Wahn begins here.
 OrcFemSpecialFightNumber is a number that varies.
 
 KatyaResistance is a number that varies. KatyaResistance is usually 6.
-KatyaRelationship is a number that varies. KatyaResistance is usually 0.
+KatyaRelationship is a number that varies. KatyaRelationship is usually 0.
 KatyaDildoTaken is a number that varies.
 
 Section 1 - Events
