@@ -524,7 +524,7 @@ The sarea of Grocery Store Security Camera is "Outside".
 instead of resolving Grocery Store Security Camera:
 	say "     You find a grocery store on your way. The place has been looted until only the metallic shelves remain, but you still decide to give the place a quick check, just in case. As you have guessed, the store is totally empty. The floor is covered with cum stains, who go all the way to the back room. A soft whirr catches your attention to the ceiling, and your eye meet the one of a small motion-activated security camera. Taken by a sudden inspiration, you fetch a stool lying nearby, and open the security camera to grab its tape. This could prove useful[if Lost Camera is unresolved], provided you find some kind of viewing equipement, like a video camera[end if].";
 	say "[bold type]Grocery Store Tape has been added to your tape inventory![roman type][line break]";
-	add " Grocery Store Tape" to tapes of player;
+	add "Grocery Store Tape" to tapes of player;
 	now Grocery Store Security Camera is resolved;
 	
 to say RomanTransformationFootage:
