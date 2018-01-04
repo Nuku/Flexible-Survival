@@ -53,4 +53,108 @@ Instead of resolving a Dressing Room Rampage:
 		say "     Smiling about the men in the dressing booth that seem to be making the best of the whole refugee situation in the mall right now, you wish them well in your mind and turn around, quietly leaving the store again. The rest of your current trip through the building doesn't reveal any particularly interesting situations, so you eventually end up where you started.";
 	now Dressing Room Rampage is resolved;
 
+
+Size Envy is a situation.
+The sarea of Size Envy is "Smith Haven".
+
+when play begins:
+	add Size Envy to badspots of furry;
+
+Instead of resolving a Size Envy:
+	say "     Wandering the hallways of the Smith Haven Mall, you pass through crowds of all sorts of people. Lots of mall rats and countless other species, demi-human hybrids, as well as very rare pure humans. Curiosity makes you stroll in and out of the various stores - some are occupied by the refugees, others lay abandoned. Going into one of the places that is inhabited, your attention is drawn by a group of young men standing huddled in the far corner, with one of them suddenly calling out, 'No way! You're just pulling our leg.' Casually turning your steps to move closer, you inspect the little group of guys closer - there is a German shepherd human hybrid sporting paw-feet and a tail, a slender mall rat with spiky purple hair, a shirtless anthro donkey wearing jeans and a clockwork fox standing there in the nude, unconcerned about showing his metallic body in all its details.";
+	say "     'Nope, I'm not!' the mall rat says with a proud smirk on his face, then grabs the front of his baggy pants and gives his crotch a squeeze. 'You simply can't be bigger then Axel,' the clockwork fox interjects, raising his arm with a few soft clicks and pointing at the donkey-boy, who nods and adds, 'Not to toot my own horn, but us equines are just naturally bigger, you know. And you're... well, short. In height, I mean.' Crossing his arms in front of his chest, the partially canine young man (whose voice you recognize as being the one who called out) demands, 'So cut the tall tales, Nicholas! Just admit that you were making it up.' Nicholas the mall rat just keeps grinning, then wiggles his eyebrows and says, 'Wanna bet I'm bigger than all of you, Rob? A bottle of water each, winner takes all? You in too Axel, Milton?' Nods of agreement go through the little group, though when Nicholas pulls out a tape measure from his pocket, the guys pause as they realize that he planned this.";
+	WaitLineBreak;
+	say "[SizeEnvyMenu]";
+
+to say SizeEnvyMenu:
+	LineBreak;
+	say "     [bold type]Well, this certainly could get interesting. How do you want to deal with the development between the guys?[roman type][line break]";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Casually observe their competition";
+	now sortorder entry is 1;
+	now description entry is "Simply watch the action";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Step up and offer a blowjob for the winner, in trade for the water";
+	now sortorder entry is 2;
+	now description entry is "Trade a little mouth action for several bottles of clean water";
+	[]
+	if cocks of player > 0 and carried of water bottle > 0: [only males and herms can compete, and you need a bottle]
+		choose a blank row in table of fucking options;
+		now title entry is "Step up and ask to join the competition";
+		now sortorder entry is 3;
+		now description entry is "Compete with the guys in dick size";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Casually observe their competition"):
+					say "[SizeEnvy_Observe]";
+				if (nam is "Step up and offer a blowjob for the winner, in trade for the water"):
+					say "[SizeEnvy_BJ]";
+				if (nam is "Step up and ask to join the competition"):
+					say "[SizeEnvy_Compete]";
+				now Size Envy is resolved;
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the group of young men and simply walk out of their temporary home.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
+
+to say SizeEnvy_Observe:
+	say "     Quietly strolling closer, you lean against a nearby wall from where you have a good view of the four young men.";
+	say "[SizeEnvy_Strip]";
+	WaitLineBreak;
+	say "     'Okay, I win. Pay up guys. Much as I'd love to offer you a chance at having a rub and seeing it in action, but we've got some company and don't want to escalate things here, do we?' Nicholas nods in your direction, causing the other guys to become aware of your presence and shove their dicks back into their pants with startled expressions. Except Milton, that is - he just opens a little pressure valve on his clockwork body and with a little hiss, the shaft of his brass cock shrinks to its original size. Their mall rat friend stays fully naked from the hips down while the guys go grab the water bottles they lost and hand them over, only then going to collect his pants and putting them back on. With a grin to you, he puts them in a backpack, then tells his friends, 'Come on guys, lets hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
+	
+to say SizeEnvy_Strip:
+	say "     Milton is the easiest to measure as he doesn't wear any clothing at all. The clockwork fox wraps his fingers around the knotted cock hanging between his legs, pumping the flexible metal construct up and down and making quiet ticking and humming noises as he does so. The coppery flesh bends easily in his grasp and expands a little to reach a fully extended state, leaking clear lubricant from the tip that the mechanical young man rubs into his shaft. Nicholas smiles at his friend as he lays the tape measure on top of his dick, then announces, 'Nine inches. Nice one, man.' The clockwork fox grins back and gives his buddy a gentle fist-bump, then steps aside, still slowly stroking himself.";
+	say "    'You next Rob,' the mall rat tells the human hybrid, crooking his finger to make him step forward. Rob is a bit hesitant at first, looking to the other guys, then drops his trousers and reveals that his German shepherd infection reaches all the way from the foot-paws to just below the navel, including a furry canine sheath that already has the tip of his shaft poking out. With a little bit of rubbing and stroking, he gets himself fully hard too, then presents the red rocket of his canine shaft to Nicholas. 'Eight inches,' the mall rat gives as his verdict a moment later, to which Rob replies, 'Yeah, but it's got a really nice knot too - that counts in bed, if get my drift.' Nicholas raises his eyebrows and moves his hand to give his friend's knot a little squeeze, chuckling as the young man gives a moan. 'Let's call it nine, so you're even with Mil.'";
+	WaitLineBreak;
+	say "     Axel steps up confidently, rubbing a dick-shaped bulge in his jeans that stretches down one pants-leg. 'Time to finish this,' he says with a laugh, then pops the buttons of his jeans and shoves them down, making a massive equine shaft spring up as it is freed from confinement. The anthro donkey's dick is certainly an impressive piece of equipment, with weighty balls, a long black shaft and flared head. He wraps his hand around it and strokes up and down until a gleaming drop of pre forms at the tip. Only then does he allow his buddy to lay the tape measure along the top of his shaft, to announce a moment later, 'Thirteen inches! Hung like a horse, even though he's a donkey.' Axel gives him a beaming grin, putting his hands behind his head and standing in a proud pose.";
+	say "     'That doesn't mean you've won, you know,' Nicholas adds with a chuckle as he starts to undo his own baggy pants, drawing disbelieving glances from the other guys. 'See it and weep!' the mall rat calls in a teasing tone, then shoves his pants down his legs and kicks them off. The piece of man-meat hanging between his legs is almost monstrous, at least on a not quite five foot tall anthro rodent. It literally reaches his knee! Hanging his tape measure over one shoulder, the grinning mall rat strokes himself with both hands, getting the pinkish-white cock fully hard and erect. When he rolls out the measuring band over its top, everyone in the little group leans in to have a look - he's all of fifteen inches long. 'Damn, that's one big kahuna,' Milton says in a shocked tone, a sentiment that the other two guys fully share.";
+
+to say SizeEnvy_BJ:
+	say "     Quietly strolling closer, you lean against a nearby wall from where you have a good view of the four young men, then clear your throat. Rob, Axel and Milton are a bit startled as they see you, while Nicholas clearly was already aware of your presence. 'Yeah? What do you want?' he asks, a slight smile on his muzzle as he clearly expects a good answer. When you offer the four young men oral pleasure in exchange for the water they were originally betting, they are only too happy to say yes, at which point you move right up to them, eager to watch the competition from a ringside seat.";
+	say "[SizeEnvy_Strip]";
+	WaitLineBreak;
+	say "     'Okay, I win. Pay up guys. Let's give our new friend here [PosAdj of player] payment and get to the real fun!' The guys step out of their lowered pants and quickly go to grab the water bottles they lost and hand them over to you, then crowd around you with eager expressions. Sinking to your knees, you find yourself presented with four hard cocks. <sucking scene>";
+
+to say SizeEnvy_Compete:
+	say "     Quietly strolling closer, you lean against a nearby wall from where you have a good view of the four young men, then clear your throat. Rob, Axel and Milton are a bit startled as they see you, while Nicholas clearly was already aware of your presence. 'Yeah? What do you want?' he asks, a slight smile on his muzzle as he clearly expects a good answer. When you pull out a bottle of water from your pack and tell the young men that you wanna join in, they look surprised, but agree to let you compete after a little bit of murmuring between them. With a grin on your face, you move right up to them, eager to participate.";
+	say "[SizeEnvy_Strip]";
+	WaitLineBreak;
+	if cock length of player > 15: [player wins]
+		say "     ...";
+	else if cock length of player is 15: [evenly matched]
+		say "     ...";
+	else if cock length of player > 9: [third place]
+		say "     ...";
+	else if cock length of player > 8: [fourth place]
+		say "     ...";
+	else: [last place]
+		say "     ...";
+
 Inner Mall Events ends here.
