@@ -53,22 +53,26 @@ instead of conversing the Val:
 
 to say ValTalkMenu:
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Talk about him";
 	now sortorder entry is 1;
 	now description entry is "Let him tell you about himself.";
 	now toggle entry is ValTalk rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Offer to free him";
 	now sortorder entry is 2;
 	now description entry is "Offer him his freedom.";
 	now toggle entry is ValTalk rule;
+	[]
 	if ValPregnancy > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about his pregnancy";
 		now sortorder entry is 3;
 		now description entry is "Ask him how he feels about being with child.";
 		now toggle entry is ValTalk rule;
+	[]
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
 	carry out the displaying activity;

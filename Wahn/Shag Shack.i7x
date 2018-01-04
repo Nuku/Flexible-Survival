@@ -653,6 +653,7 @@ to say ShagShackSex7: [Ty the human breeder]
 		if player is impreg_able: [can become pregnant]
 			say "[fimpregchance]";
 			if player is impreg_now: [has become pregnant]
+				say "[bold type]'Human Carrier' has been added to your feats![roman type][line break]";
 				add "Human Carrier" to feats of player; [human baby, no matter what]
 	else: [male + neuter]
 		say "     Noticing your[if cocks of player > 0] dick and the[end if] absence of any sort of pussy, he raises an eyebrow and says, 'Oh? Normally I get those horny women who want to get a cute pink-skinned baby. I mean...' [if player is mpreg_ok]You interrupt him with a raised hand, telling the young man with a broad grin that one doesn't necessarily need a pussy to get pregnant. His eyes go a little bit wider as he looks at you and says, 'Ooooooh! I don't know why I am surprised... hell, I've fucked all sorts of people by now. So what's a little guy on guy action besides that.'[else]You interrupt him with a raised hand, telling the young man with a sly smile that you couldn't resist feeling the cock of such a sweet dude like him up your ass. 'Oooh! I - er, I'm glad you think so. Got a few gay friends actually, though I never really did anything with them except getting a blowjob once. But now... hell, I've fucked all sorts of species by now, so what's a little guy on guy action besides that.'[end if] With a chuckle, Ty guides you to get on the bed on all fours, ass raised a little.";
