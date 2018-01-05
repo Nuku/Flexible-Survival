@@ -122,7 +122,7 @@ Instead of resolving a Lone Survivor:
 			if calcnumber is 1:
 				LineBreak;
 				project the figure of Brennan_face_icon;
-				say "     Raising your hands to show that you're not out for any trouble, you slowly walk towards the guy and give him a friendly greeting. He reacts fairly well to your introduction, replying with the words, 'Hey there, I'm Brennan. Good to meet at least one person who doesn't instantly try to fuck me!' The wariness lifts from his gaze and he gives you a friendly smile, though still doesn't relinquish his secure grasp on that baseball bat. Man, he must have been through some things to be that cautious - not unfounded of course, from your own experiences. 'Stay back a bit please,' Brennan goes on to say as you come closer, and gives you an apologetic shrug. 'Sorry, but I've seen how quickly this - whatever it is - spreads. I've worked too long to... be the man I am to let anything take that from me.'";
+				say "     Raising your hands to show that you're not out for any trouble, you slowly walk towards the guy and give him a friendly greeting, introducing yourself[if player is not defaultnamed] as [name of player][end if]. He reacts fairly well to it, replying with the words, 'Hey there, I'm Brennan. Good to meet at least one person who doesn't instantly try to fuck me!' The wariness lifts from his gaze and he gives you a friendly smile, though still doesn't relinquish his secure grasp on that baseball bat. Man, he must have been through some things to be that cautious - not unfounded of course, from your own experiences. 'Stay back a bit please,' Brennan goes on to say as you come closer, and gives you an apologetic shrug. 'Sorry, but I've seen how quickly this - whatever it is - spreads. I've worked too long to... be the man I am to let anything take that from me.'";
 				say "     After pausing for a second or two, he continues, 'So. Here we are, survivors in the midst of all those horny beasts. Let's talk.' The two of you chat a little about the things you have seen, what to look out for and so on. One thing sticks out to you as particularly interesting - Brennan warns you about picking up any gun you might find. 'I think it's the metal, you know. Possibly in combination with all those trace materials from firing, and maybe even skin cells of the owner on the grip. From what I've seen, firearms serve as seedbeds for the infection. There was this one guy - a cop - who pulled a pistol, only to have it crumble to silvery dust - which enveloped him and almost instantly transformed him.' Now that you think of it... there is a definite lack of all the weapons you'd expect from an American city here.";
 				WaitLineBreak;
 				say "     'So - go with plastic, if you can find it. That's a safer bet,' Brennan tells you, then slowly pulls out a taser from a large pocket in his cargo pants, careful to not threaten you with it. Showing off the device, with its black plastic grip and bright yellow top, he gives you a companionable nod. 'Okay then, I think we should go - this lull in activity can't last forever. Wouldn't want to be picked off out here by a passing wyvern. Best of luck out there, and I hope we'll see each other again. Can't believe how good it felt to just talk to someone.' With a wave, the bearded man starts walking towards the nearest street corner, then dashes to it and vanishes in an alley. As you watch him go, you have to admit that he was right - this little chat really was good for your own sanity as well.";
@@ -889,50 +889,49 @@ to say BrennanDesc:
 		say "     As he notices your attention, Brennan smiles back at you and lets his gaze wander over your form as well. Then he gives you a charming wink and turns back to what he was doing before.";
 
 an everyturn rule:
-	if BrennanRelationship < 11 or BrennanRelationship > 11:
-		stop the action; [Brennan should not be availabl]
-	if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
-		move Brennan to Brennan's Bedroom;
-		if player is in Brennan's Bedroom:
-			project the figure of Brennan_face_icon;
-			say "     You hear the front door open and close, then the barks of Romulus and Remus as they happily arrive back home. A short moment later, the three of them come into the Bedroom and Brennan greets you, but quickly makes clear that he's fairly tired and needs some rest. Yawning, he adds that you of course can feel free to stay longer, just to please not wake him. And with that, the man sets down his gear next to the bed, quickly strips off and gets into bed, slipping under the covers dressed only in some baggy boxer shorts. His two wolves quickly follow, cuddling up to their master and getting some pats from him before all three of them doze off.";
-		else if player is in Survivor Refuge:
-			project the figure of Brennan_face_icon;
-			say "     The front door is unlocked with the key and Brennan opens it, letting in his two wolves Romulus and Remus. The feral canines beat their tails, happy to arrive back home and make a beeline for you, sniffing a little before they move on. A short moment later, when Brennan is done closing the door and re-locking it securely, he greets you, but quickly makes clear that he's fairly tired and needs some rest. Yawning, he adds that you of course can feel free to stay longer, just to please not wake him. And with that, he vanishes into his bedroom, together with the two wolves.";
-		else if player is in Brennan's Bathroom:
-			say "     You hear the front door open and close, then the barks of Romulus and Remus as they happily arrive back home. A little while later, you hear another door - that must have been the one to the bedroom. Sounds like the three of them came back and went straight to bed.";
-	[else if TimekeepingVar is 0 or TimekeepingVar is -8:] [pre dawn - unused, Brennan sleeps]
-	[else if TimekeepingVar is 7 or TimekeepingVar is -1:] [early morning - unused, Brennan sleeps in]
-	else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
-		if player is in Brennan's Bedroom:
-			project the figure of Brennan_face_icon;
-			say "     Waking up after a restful night, Brennan sits up between the two wolves cuddled up against him and stretches his arms, which gives you a good view of his broad-shouldered chest and trained body. He yawns and says good morning to you, then gently shakes Romulus and Remus awake and goes into the main room of the apartment to feed them. Brennan returns a little while later, still in nothing but his baggy boxer shorts. 'Did I miss anything exciting going on out there?' he asks with a nod to the city outside the large windows and his telescope specifically. As you shake your head, he smiles and goes to grab his usual outfit, getting dressed before he sits down at his desk.";
-		else if player is in Survivor Refuge:
-			say "     Suddenly, the door to the bedroom opens and Brennan steps out of it, dressed in nothing more than some baggy boxer shorts and followed by some very eager wolves. He wishes you a good morning, then quickly stops by the kitchen to feed his feral canines, ducking back into the bedroom while they're still wolfing down their food.";
-		else if player is in Brennan's Bathroom:
-			say "     You hear the front door open and close, then happy barks by Romulus and Remus. Sounds like Brennan woke up and just went to feed them.";
-	else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
-		move Brennan to Survivor Refuge;
-		if player is in Brennan's Bedroom:
-			project the figure of Brennan_face_icon;
-			say "     Sitting up from working at his desk, where he was updating some lists and his journal, Brennan stretches out and goes into the main room of the loft apartment.";
-		else if player is in Survivor Refuge:
-			project the figure of Brennan_face_icon;
-			say "     Brennan comes out of the bedroom and nods to you, then sits down on the lifting bench and starts to pump a weight up and down. He keeps at it tirelessly for quite a while too - no wonder he has such a physique.";
-		else if player is in Brennan's Bathroom:
-			say "     You hear a door open and close somewhere nearby - the bedroom maybe? Then some fairly low, rhythmic grunting starts up in the main room of the loft apartment.";
-	else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
-		if player is in Survivor Refuge:
-			project the figure of Brennan_face_icon;
-			say "     Finishing with a fairly well-rounded exercise routine, Brennan moves over to the comfortable sofa in the front half of the room and sits down on it. As he leans forward to grab a book, Romulus and Remus are already on the way to join him on the sofa, soon flanking the muscular man on both sides and pressing up against him. They sniff him happily and lap at any exposed skin, licking his salty sweat off. After a minute or two of this, with Brennan stroking his companions['] fur, the three of them quiet down and sit quietly to read - the wolves either understanding what is written in the book too, or simply enjoying the companionship with their master.";
-	else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
-		now Brennan is nowhere; [stashed in another dimension]
-		if player is in Brennan's Bedroom or player is in Brennan's Bathroom:
-			say "     You hear Brennan say, 'Come on guys, time for some scavenging!' The happy barks of his two wolves follow, and soon after, you hear the front door open and close.";
-		else if player is in Survivor Refuge:
-			project the figure of Brennan_face_icon;
-			say "     Going to collect his gear - backpack, baseball bat and taser - Brennan then waves the wolves up from where they have been lounging around and says, 'Come on guys, time for some scavenging!' Both Romulus as well as Remus give happy barks, tails wagging eagerly to go out with their master. Brennan bids you farewell, saying that you can stay and keep an eye on the place while he's out, then leads his companions to the door and leaves.";
-	[else if TimekeepingVar is 2 or TimekeepingVar is -6:] [early night - unused, Brennan is out scavenging]
+	if BrennanRelationship > 10 and BrennanRelationship < 90:
+		if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
+			move Brennan to Brennan's Bedroom;
+			if player is in Brennan's Bedroom:
+				project the figure of Brennan_face_icon;
+				say "     You hear the front door open and close, then the barks of Romulus and Remus as they happily arrive back home. A short moment later, the three of them come into the Bedroom and Brennan greets you, but quickly makes clear that he's fairly tired and needs some rest. Yawning, he adds that you of course can feel free to stay longer, just to please not wake him. And with that, the man sets down his gear next to the bed, quickly strips off and gets into bed, slipping under the covers dressed only in some baggy boxer shorts. His two wolves quickly follow, cuddling up to their master and getting some pats from him before all three of them doze off.";
+			else if player is in Survivor Refuge:
+				project the figure of Brennan_face_icon;
+				say "     The front door is unlocked with the key and Brennan opens it, letting in his two wolves Romulus and Remus. The feral canines beat their tails, happy to arrive back home and make a beeline for you, sniffing a little before they move on. A short moment later, when Brennan is done closing the door and re-locking it securely, he greets you, but quickly makes clear that he's fairly tired and needs some rest. Yawning, he adds that you of course can feel free to stay longer, just to please not wake him. And with that, he vanishes into his bedroom, together with the two wolves.";
+			else if player is in Brennan's Bathroom:
+				say "     You hear the front door open and close, then the barks of Romulus and Remus as they happily arrive back home. A little while later, you hear another door - that must have been the one to the bedroom. Sounds like the three of them came back and went straight to bed.";
+		[else if TimekeepingVar is 0 or TimekeepingVar is -8:] [pre dawn - unused, Brennan sleeps]
+		[else if TimekeepingVar is 7 or TimekeepingVar is -1:] [early morning - unused, Brennan sleeps in]
+		else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
+			if player is in Brennan's Bedroom:
+				project the figure of Brennan_face_icon;
+				say "     Waking up after a restful night, Brennan sits up between the two wolves cuddled up against him and stretches his arms, which gives you a good view of his broad-shouldered chest and trained body. He yawns and says good morning to you, then gently shakes Romulus and Remus awake and goes into the main room of the apartment to feed them. Brennan returns a little while later, still in nothing but his baggy boxer shorts. 'Did I miss anything exciting going on out there?' he asks with a nod to the city outside the large windows and his telescope specifically. As you shake your head, he smiles and goes to grab his usual outfit, getting dressed before he sits down at his desk.";
+			else if player is in Survivor Refuge:
+				say "     Suddenly, the door to the bedroom opens and Brennan steps out of it, dressed in nothing more than some baggy boxer shorts and followed by some very eager wolves. He wishes you a good morning, then quickly stops by the kitchen to feed his feral canines, ducking back into the bedroom while they're still wolfing down their food.";
+			else if player is in Brennan's Bathroom:
+				say "     You hear the front door open and close, then happy barks by Romulus and Remus. Sounds like Brennan woke up and just went to feed them.";
+		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
+			move Brennan to Survivor Refuge;
+			if player is in Brennan's Bedroom:
+				project the figure of Brennan_face_icon;
+				say "     Sitting up from working at his desk, where he was updating some lists and his journal, Brennan stretches out and goes into the main room of the loft apartment.";
+			else if player is in Survivor Refuge:
+				project the figure of Brennan_face_icon;
+				say "     Brennan comes out of the bedroom and nods to you, then sits down on the lifting bench and starts to pump a weight up and down. He keeps at it tirelessly for quite a while too - no wonder he has such a physique.";
+			else if player is in Brennan's Bathroom:
+				say "     You hear a door open and close somewhere nearby - the bedroom maybe? Then some fairly low, rhythmic grunting starts up in the main room of the loft apartment.";
+		else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
+			if player is in Survivor Refuge:
+				project the figure of Brennan_face_icon;
+				say "     Finishing with a fairly well-rounded exercise routine, Brennan moves over to the comfortable sofa in the front half of the room and sits down on it. As he leans forward to grab a book, Romulus and Remus are already on the way to join him on the sofa, soon flanking the muscular man on both sides and pressing up against him. They sniff him happily and lap at any exposed skin, licking his salty sweat off. After a minute or two of this, with Brennan stroking his companions['] fur, the three of them quiet down and sit quietly to read - the wolves either understanding what is written in the book too, or simply enjoying the companionship with their master.";
+		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
+			now Brennan is nowhere; [stashed in another dimension]
+			if player is in Brennan's Bedroom or player is in Brennan's Bathroom:
+				say "     You hear Brennan say, 'Come on guys, time for some scavenging!' The happy barks of his two wolves follow, and soon after, you hear the front door open and close.";
+			else if player is in Survivor Refuge:
+				project the figure of Brennan_face_icon;
+				say "     Going to collect his gear - backpack, baseball bat and taser - Brennan then waves the wolves up from where they have been lounging around and says, 'Come on guys, time for some scavenging!' Both Romulus as well as Remus give happy barks, tails wagging eagerly to go out with their master. Brennan bids you farewell, saying that you can stay and keep an eye on the place while he's out, then leads his companions to the door and leaves.";
+		[else if TimekeepingVar is 2 or TimekeepingVar is -6:] [early night - unused, Brennan is out scavenging]
 
 [***********************************************************]
 [***********************************************************]
