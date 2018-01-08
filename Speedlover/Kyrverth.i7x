@@ -345,7 +345,7 @@ Section 4 - Events
 
 Strange Sighting is a situation.
 The level of Strange Sighting is 5. [minimum level to find the event]
-The sarea of Strange Sighting is "High Rise District". [or "Park", or "Museum", ...]
+The sarea of Strange Sighting is "High". 
 
 when play begins: [flags for blocking this event]
 	add Strange Sighting to badspots of guy;
@@ -381,7 +381,7 @@ instead of going south from Overgrown Street while (KyrverthTimer - turns <= 6 a
 
 Jewel Heist is a situation.
 The level of Jewel Heist is 5. [minimum level to find the event]
-The sarea of Jewel Heist is "High Rise District". [or "Park", or "Museum", ...]
+The sarea of Jewel Heist is "High".
 Jewel Heist is resolved.
 
 when play begins: [flags for blocking this event]
