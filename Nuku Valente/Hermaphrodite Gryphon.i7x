@@ -15,49 +15,52 @@ hgryphon_TGcount is a number that varies.
 lasthgryphon_TG is a number that varies.  lasthgryphon_TG is usually 255.
 
 To say losetohgryphon:
-	now nohgryphonsex is 0;
-	let analchance be 5;
-	if "Submissive" is listed in feats of player, increase analchance by 2;
-	if "MPreg" is listed in feats of player, increase analchance by 2;
-	if anallevel is 2, now analchance is ( 2 * analchance ) / 3;
-	if anallevel is 1, now analchance is 0;
-	if cunts of player > 0 and cocks of player > 0:
-		if a random chance of 2 in 3 succeeds:	[fucking the player]
-			if cunt length of player >= 12:
+	if inasituation is true:
+		say ""; [taken care of at the event source]
+	else:
+		now nohgryphonsex is 0;
+		let analchance be 5;
+		if "Submissive" is listed in feats of player, increase analchance by 2;
+		if "MPreg" is listed in feats of player, increase analchance by 2;
+		if anallevel is 2, now analchance is ( 2 * analchance ) / 3;
+		if anallevel is 1, now analchance is 0;
+		if cunts of player > 0 and cocks of player > 0:
+			if a random chance of 2 in 3 succeeds:	[fucking the player]
+				if cunt length of player >= 12:
+					say "[gryphonfuck1]";
+				else:
+					say "[gryphonfuck5]";
+			else if a random chance of analchance in 18 succeeds:
+				say "[gryphonfuck7]";
+			else if cock length of player > 6:
+				say "[gryphonfuck3]";
+			else:
+				say "[gryphonfuck2]";
+		else if cocks of player > 0:
+			if a random chance of analchance in 15 succeeds:
+				if player is mpreg_able:
+					say "[gryphonfuck8]";
+				else:
+					say "[gryphonfuck7]";
+			else if cock length of player > 6:
+				say "[gryphonfuck3]";
+			else:
+				say "[gryphonfuck2]";
+		else if cunts of player > 0:
+			if a random chance of analchance in 20 succeeds:
+				say "[gryphonfuck7]";
+			else if cunt length of player >= 12:
 				say "[gryphonfuck1]";
 			else:
 				say "[gryphonfuck5]";
-		else if a random chance of analchance in 18 succeeds:
-			say "[gryphonfuck7]";
-		else if cock length of player > 6:
-			say "[gryphonfuck3]";
 		else:
-			say "[gryphonfuck2]";
-	else if cocks of player > 0:
-		if a random chance of analchance in 15 succeeds:
-			if player is mpreg_able:
-				say "[gryphonfuck8]";
+			if "Less Anal" is listed in feats of player:
+				say "[gryphonfuck6]";
 			else:
-				say "[gryphonfuck7]";
-		else if cock length of player > 6:
-			say "[gryphonfuck3]";
-		else:
-			say "[gryphonfuck2]";
-	else if cunts of player > 0:
-		if a random chance of analchance in 20 succeeds:
-			say "[gryphonfuck7]";
-		else if cunt length of player >= 12:
-			say "[gryphonfuck1]";
-		else:
-			say "[gryphonfuck5]";
-	else:
-		if "Less Anal" is listed in feats of player:
-			say "[gryphonfuck6]";
-		else:
-			if player is mpreg_able:
-				say "[gryphonfuck8]";
-			else:
-				say "[gryphonfuck7]";
+				if player is mpreg_able:
+					say "[gryphonfuck8]";
+				else:
+					say "[gryphonfuck7]";
 
 to say gryphonfuck1:
 	say "     The gryphon, victorious, pushes you onto your back and buries her face into your crotch. She pulls your clothes free before she starts to lap at your [cock size desc of player] [cock of player] shaft before moving on to your [cunt size desc of player] lips. Her soft tongue has you squirming in pleasure, growing wet under her skillful ministrations. Detecting you're ready, she slips up over you, pressing her large breasts to your [if breast size of player > 0][breast size desc of player][else][bodytype of player][end if] chest, smoothly slipping her black shaft into your eager and ready body. She kisses and licks at you, pressing that beak expertly to your lips, managing a fierce and passionate exchange despite it. You find your hands wandering over her sides, then drawing her closer as her love making becomes more and more intense. Her taloned hands grip your throbbing maleness and stroke it as she thrusts into you.  Your body grows tense before pleasure washes over you, but the gryphon is not yet sated, pistoning smoothly against you and crooning in an ear as she begins to bump you with the thick knot of her shaft. A firm shove, and it pops into place, locking her to you as your belly begins to swell with fertile seed. She shivers and buries her face into your neck as she peaks, remaining on top of you, hugging, for the minute it takes for her huge balls to unload.  You are stuck to her, snuggling quietly, for what feels like an hour before she slips from you, kisses one last time, and departs.[ovichance]";
@@ -97,85 +100,88 @@ to say gryphonfuck8:	[MPreg special]
 
 
 To say beatthehgryphon:
-	increase hgryphonwin by 1;
-	if cocks of player is 0 and cunts of player is 0:
-		say "[one of]The once proud beast is knocked to the ground, her wings drawn protectively. Victorious, you move on.[or]Succumbing to her wounds, the gryphon collapses at your feet, posing no further threat.[at random]";
-	else if nohgryphonsex > 2 and ( the remainder after dividing nohgryphonsex by 5 is not 0 ):
-		say "     Driven back by you, the herm gryphon whimpers with unsatisfied need.  She crawls over to a [one of]wall[or]pile of rubble[or]crashed car[at random] and sits against it while masturbating furiously in an attempt to sate her lust.  As with the others, you turn away, ignoring your urges to join in.";
-		increase nohgryphonsex by 1;
-	else:
-		say "     [if a random chance of 1 in 2 succeeds]Your opponent hits the ground with a loud *thud* and a squawk.  Lying defeated and on her back, the gryphon awaits her fate with more than a little anticipation[else]Driven back by you, the herm gryphon whimpers with unsatisfied need.  She crawls over to a [one of]wall[or]pile of rubble[or]crashed car[at random] and sits against it while masturbating furiously in an attempt to sate her lust[end if].  The sight of her like this is quite a tempting one.  Perhaps you might have some fun now that you've taken the fight out of her[if carried of gryphon cum > 0 and HP of Garrett >= 5 and inasituation is false].  You're also reminded that you have a bottle of Garrett's special gryphon cum milk.  It probably wouldn't take much coaxing to tempt her into drinking some[end if].";
-		now sextablerun is 0;
-		blank out the whole of table of fucking options;
-		if cocks of player > 0:
-			choose a blank row in table of fucking options;
-			now title entry is "Fuck her";
-			now sortorder entry is 1;
-			now description entry is "screw the defeated gryphon";
-		if cunts of player > 0:
-			choose a blank row in table of fucking options;
-			now title entry is "Ride her";
-			now sortorder entry is 2;
-			now description entry is "get that knotted cock in your pussy";
-[		if cunts of player is 0:
-			choose a blank row in table of fucking options;
-			now title entry is "Anal ride";
-			now sortorder entry is 3;
-			now description entry is "get that knotted cock in your ass"; ]
-		if cocks of player > 0 and cock length of player > 7 and cunts of player > 0 and cunt length of player > 5:
-			choose a blank row in table of fucking options;
-			now title entry is "Titty fuck + ride";
-			now sortorder entry is 4;
-			now description entry is "get a titty fuck while riding her cock";
-[		if cocks of player > 0:
-			choose a blank row in table of fucking options;
-			now title entry is "Blow job";
-			now sortorder entry is 5;
-			now description entry is "get her to suck you off"; ]
-[		choose a blank row in table of fucking options;
-		now title entry is "Blow her";
-		now sortorder entry is 6;
-		now description entry is "suck her off"; ]
-		if carried of gryphon cum > 0 and HP of Garrett >= 5 and inasituation is false:
-			choose a blank row in table of fucking options;
-			now title entry is "Garrett's special milk";
-			now sortorder entry is 99;
-			now description entry is "tempt her into consuming the manly drink";
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]0 - Leave her be[as]0[end link][line break]";
-		while sextablerun is 0:
-			say "Pick the corresponding number> [run paragraph on]";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry][line break]";
-				say "Is this what you want?";
-				if player consents:
-					let nam be title entry;
+	if inasituation is true:
+		say ""; [taken care of at the event source]
+	else:	
+		increase hgryphonwin by 1;
+		if cocks of player is 0 and cunts of player is 0:
+			say "[one of]The once proud beast is knocked to the ground, her wings drawn protectively. Victorious, you move on.[or]Succumbing to her wounds, the gryphon collapses at your feet, posing no further threat.[at random]";
+		else if nohgryphonsex > 2 and ( the remainder after dividing nohgryphonsex by 5 is not 0 ):
+			say "     Driven back by you, the herm gryphon whimpers with unsatisfied need.  She crawls over to a [one of]wall[or]pile of rubble[or]crashed car[at random] and sits against it while masturbating furiously in an attempt to sate her lust.  As with the others, you turn away, ignoring your urges to join in.";
+			increase nohgryphonsex by 1;
+		else:
+			say "     [if a random chance of 1 in 2 succeeds]Your opponent hits the ground with a loud *thud* and a squawk.  Lying defeated and on her back, the gryphon awaits her fate with more than a little anticipation[else]Driven back by you, the herm gryphon whimpers with unsatisfied need.  She crawls over to a [one of]wall[or]pile of rubble[or]crashed car[at random] and sits against it while masturbating furiously in an attempt to sate her lust[end if].  The sight of her like this is quite a tempting one.  Perhaps you might have some fun now that you've taken the fight out of her[if carried of gryphon cum > 0 and HP of Garrett >= 5 and inasituation is false].  You're also reminded that you have a bottle of Garrett's special gryphon cum milk.  It probably wouldn't take much coaxing to tempt her into drinking some[end if].";
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			if cocks of player > 0:
+				choose a blank row in table of fucking options;
+				now title entry is "Fuck her";
+				now sortorder entry is 1;
+				now description entry is "screw the defeated gryphon";
+			if cunts of player > 0:
+				choose a blank row in table of fucking options;
+				now title entry is "Ride her";
+				now sortorder entry is 2;
+				now description entry is "get that knotted cock in your pussy";
+	[		if cunts of player is 0:
+				choose a blank row in table of fucking options;
+				now title entry is "Anal ride";
+				now sortorder entry is 3;
+				now description entry is "get that knotted cock in your ass"; ]
+			if cocks of player > 0 and cock length of player > 7 and cunts of player > 0 and cunt length of player > 5:
+				choose a blank row in table of fucking options;
+				now title entry is "Titty fuck + ride";
+				now sortorder entry is 4;
+				now description entry is "get a titty fuck while riding her cock";
+	[		if cocks of player > 0:
+				choose a blank row in table of fucking options;
+				now title entry is "Blow job";
+				now sortorder entry is 5;
+				now description entry is "get her to suck you off"; ]
+	[		choose a blank row in table of fucking options;
+			now title entry is "Blow her";
+			now sortorder entry is 6;
+			now description entry is "suck her off"; ]
+			if carried of gryphon cum > 0 and HP of Garrett >= 5 and inasituation is false:
+				choose a blank row in table of fucking options;
+				now title entry is "Garrett's special milk";
+				now sortorder entry is 99;
+				now description entry is "tempt her into consuming the manly drink";
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Leave her be[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry][line break]";
+					say "Is this what you want?";
+					if player consents:
+						let nam be title entry;
+						now sextablerun is 1;
+						if nam is "Fuck her":
+							say "[hgryphon_pw_01]";
+						else if nam is "Ride her":
+							say "[hgryphon_pw_02]";
+	[					else if nam is "Anal ride":
+							say "[hgryphon_pw_03]"; ]
+						else if nam is "Titty fuck + ride":
+							say "[hgryphon_pw_04]";
+	[					else if nam is "Blow job":
+							say "[hgryphon_pw_05]"; ]
+	[					else if nam is "Blow her":
+							say "[hgryphon_pw_06]"; ]
+						else if nam is "Garrett's special milk":
+							say "[hgryphon_TG]";
+				else if calcnumber is 0:
+					say "     You resist the temptation of sex and turn away.  Having stopped her from assaulting you is sufficient.";
+					increase nohgryphonsex by 1;
 					now sextablerun is 1;
-					if nam is "Fuck her":
-						say "[hgryphon_pw_01]";
-					else if nam is "Ride her":
-						say "[hgryphon_pw_02]";
-[					else if nam is "Anal ride":
-						say "[hgryphon_pw_03]"; ]
-					else if nam is "Titty fuck + ride":
-						say "[hgryphon_pw_04]";
-[					else if nam is "Blow job":
-						say "[hgryphon_pw_05]"; ]
-[					else if nam is "Blow her":
-						say "[hgryphon_pw_06]"; ]
-					else if nam is "Garrett's special milk":
-						say "[hgryphon_TG]";
-			else if calcnumber is 0:
-				say "     You resist the temptation of sex and turn away.  Having stopped her from assaulting you is sufficient.";
-				increase nohgryphonsex by 1;
-				now sextablerun is 1;
-			else:
-				say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";
+				else:
+					say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";
 
 to say hgryphon_pw_01:
 	say "     Approaching the defeated gryphon with confidence, you nudge her legs apart with your feet to get a better look at that moist slit she has tucked under those balls of hers.  Seeing your interest, she raises her hips and holds her scrotum out of the way.  You move to your knees, positioning your [cock size desc of player] member at your victim's quivering slit.";
@@ -244,6 +250,12 @@ to say hgryphon_TG:
 	say "     Taking the opportunity, you run your fingers through his feathers sensually and tell him about Garrett, the sexy male stud who is making the special milk he's just enjoyed.  You describe the buff gryphon male in a way that makes the woozy gryphon lustful with gay thoughts.  You add that the milkman would enjoy meeting him and showing him just how much fun two sexy male gryphons can have together.  You finish by providing directions to the floating city and send him on his way, quite certain your friend will be very pleased to meet the newcomer.";
 	if HP of Garrett < 6, now HP of Garrett is 6;
 
+to say HermGryphonDesc:
+	setmongender 5;
+	if inasituation is true:
+		say ""; [taken care of at the event source]
+	else:	
+		say "     She is a tall and striking blue gryphon. She has wide hips and huge blue breasts, implying she leans more on her mammal half than her avian, though her large blue wings are quite a sight to behold. Between her white-furred thighs is a huge, knotted black cock and tightly drawn balls. From behind, the pinkened folds of her female gender are visible under the lion-like tail she sports. Her feet are digitigrade and sport huge, wicked claws that clack on hard surfaces.";
 
 Section 2 - Monster Insertion
 
@@ -257,7 +269,7 @@ When Play begins:
 	now attack entry is "She [one of]throws her impressive, and somewhat jiggly bulk against you[or]snaps at you with that razor sharp beak, leaving a thin red line as it cuts your [skin of player] body[or]presses up against you suddenly and grinds her huge shaft against your belly. While you are distracted, you can feel her grabbing at your sides, squeezing painfully[or]charges at you, wings pulling her free of the ground just moments before her body crashes into you[at random].";
 	now defeated entry is "[beatthehgryphon]";
 	now victory entry is "[losetohgryphon]";
-	now desc entry is "[mongendernum 5]She is a tall and striking blue gryphon. She has wide hips and huge blue breasts, implying she leans more on her mammal half than her avian, though her large blue wings are quite a sight to behold. Between her white-furred thighs is a huge, knotted black cock and tightly drawn balls. From behind, the pinkened folds of her female gender are visible under the lion-like tail she sports. Her feet are digitigrade and sport huge, wicked claws that clack on hard surfaces.";
+	now desc entry is "[HermGryphonDesc]";
 	now face entry is "powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered features"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [skin of player] feetpaws. Behind you, two large feathery wings flutter on occasion"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "[one of]soft, blue, and furry[or]softly furred[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
