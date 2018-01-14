@@ -52,6 +52,7 @@ when play begins:
 
 Instead of resolving Shark Warrior:
 	say "     As usual, you walk parallel to the open sea. The sound of a soft breeze permeates the area, keeping the sea in motion and whirling a bit of the dry sand near your feet around. It also brings the familiar, salty ocean smell to your nostrils. Enjoying the view, you take a moment to just stand there and let the sounds soothe you. Unfortunately, it doesn't last long; the silence is disturbed by a great splash in the water. A feral sea dragon surfaces with a loud and angry roar. Just a moment later you see that the dragon is flailing around, trying to hit something desperately before the struggling creature sinks back into the blue.";
+	project the Figure of TSW_icon;
 	say "     You can briefly spot an ochre humanoid on the creature's belly, wrestling with the angry monster. After a while of staring at the spot where both of them submerged into the water, a tiger shark surfaces. His naked body is pretty built and shows some scars along his hide, proof of his constant strife in this world. He's also adorned with a couple of trinkets; a selection of teeth, presumably some of the dragons' he beat, are braided together into a ligature around his neck, and there's also a rope tied around his hips. The rope is equipped with a couple of small bags and has a bit of kelp hanging from it. He turns towards you in the banks, appraising the witness of his battle.";
 	WaitLineBreak;
 	if (bodyname of player is "Feral Sea Dragon" and player is pure) or (bodyname of player is "Feral Sea Dragoness" and player is pure):	[Check if the player is a pure feral sea dragon/ess]
@@ -114,6 +115,7 @@ to say TigerSharkDesc:
 			now tsw_fsd is 1;
 		else:
 			now tsw_fsd is 2;
+		project the Figure of TSW_icon;
 		say "     You are faced with a [bold type]scarred[roman type] tiger shark. His front is white, while the rest is ochre and striped. If it wasn't obvious from his bulging muscles alone that he's a fighter, the rest of his body would be enough to convince anyone, as the guy bears a number of impressive scars. He doesn't wear anything that would cover the slit at his groin, almost daring you to check him out in the pose he strikes. A pair of small anal fins are paired around the genital slit to each side. Clothes-wise, the aquatic anthro is almost naked, with just a rope tied around his hips with a few small bags and some kelp fastened to it. What catches your eye in addition to that is a necklace around his neck - with the teeth of his past conquests strung up on a knotted cord";
 		if tsw_relationship is 1:
 			say ". You feel a shiver running down your spine; the familiar shark believes that you are nothing more than another sea dragon now. Before you get a chance to speak up, the dragon-wrestler grabs at his necklace and boasts, 'These aren't the only ones I beat. Many more have fallen before me, and you will too!'";
