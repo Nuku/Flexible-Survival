@@ -154,6 +154,7 @@ to say SizeEnvyMenu:
 				now sextablerun is 1;
 				say "     You step back from the group of young men and simply walk out of their temporary home.";
 				now Standard Maintenance is not resolved;
+				now Size Envy is resolved;
 				wait for any key;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
