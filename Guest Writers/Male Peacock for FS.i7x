@@ -212,7 +212,7 @@ instead of sniffing peacock feather:
 Section 6 - Endings
 
 when play ends:
-	if bodyname is "Peacock":
+	if bodyname of player is "Peacock":
 		if humanity of player < 10:
 			if cock length of player > cunt length of player:
 				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different...ahem...[']fruits['] to taste.";

@@ -102,6 +102,7 @@ to say Map_Smith_Haven_Mall_Desc:
 Section 6 - Mall Foyer
 
 The description of Mall Foyer is "[mallfoyer]".
+earea of Mall Foyer is "Smith Haven".
 
 To say mallfoyer:
 	If findwires is 2 and fixedgens is 2:
@@ -119,6 +120,7 @@ the scent of Mall Foyer is "The foyer smells heavily of male musk due to the wol
 Section 7 - Mall Atrium
 
 The description of Mall Atrium is "[mallatrium]".
+earea of Mall Atrium is "Smith Haven".
 
 To say mallatrium:
 	If findwires is 2 and fixedgens is 2:
@@ -138,6 +140,7 @@ West of Mall Atrium is Mall West Wing.
 Section 8 - Mall East Wing
 
 The description of Mall East Wing is "[malleastwing]".
+earea of Mall East Wing is "Smith Haven".
 
 To say malleastwing:
 	If findwires is 2 and fixedgens is 2:
@@ -157,6 +160,7 @@ the scent of Mall East Wing is "It smells like the mallrats.".
 Section 9 - Mall Food Court
 
 The description of Mall Foodcourt is "[mfcourt]".
+earea of Mall Foodcourt is "Smith Haven".
 
 To say mfcourt:
 	If findwires is 2 and fixedgens is 2:
@@ -179,6 +183,7 @@ The invent of Mall FoodCourt is { "chair", "food" }.
 Section 10 - Mall West Wing
 
 The description of Mall West Wing is "[mallwestwing]".
+earea of Mall West Wing is "Smith Haven".
 
 To say mallwestwing:
 	If findwires is 2 and fixedgens is 2:

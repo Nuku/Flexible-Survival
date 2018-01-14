@@ -4882,6 +4882,7 @@ Include Hyena Shoppers by Doots.
 Include Hyena Situations by Hellerhound.
 Include Important Research Quests by Kaleem Mcintyre.
 Include Infected Pool for FS by Hellerhound.
+Include Inner Mall Events by Wahn.
 Include Inventory Management Enhancements for FS by Core Mechanics.
 Include Junkyard Events by Stripes.
 Include Kitsune by Kaleem mcintyre.
@@ -5050,7 +5051,7 @@ Include Great Dane Rouge by Kaleem Mcintyre.
 Include Greek Nymph by Sarokcat.
 Include Grey Squirrel for FS by Stripes.
 Include Grizzly Bear by UrsaOmega.
-[Include Gryphons Plot by Shay.] [incomplete yet]
+Include Gryphons Plot by Shay.
 Include Gunbunny for FS by Stripes.
 Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
@@ -5285,6 +5286,7 @@ Include Ice Fox by Wahn.
 Include Inflatable Orca by Song.
 Include Informant by Kaleem mcintyre.
 Include Janice by Sarokcat.
+Include Jay by Wahn.
 Include Jenna by Rikaeus.
 Include Jimmy by Stripes.
 Include Joanna by Stripes.
@@ -5302,6 +5304,7 @@ Include Lilith by Wahn.
 Include Lindsey by Sarokcat.
 Include Lucy by Stripes.
 Include Mack for FS by Stripes.
+Include Mark by Wahn.
 Include Master Mind by Stripes.
 Include Matriarch NPC by Stripes.
 Include Meredith by Stripes.
