@@ -142,6 +142,7 @@ Instead of resolving a Meeting Malakhi:
 	else:
 		LineBreak;
 		say "     'Is that so?! I bet you couldn't catch me, even if you tried! Keep it to fuck-beasts like Sheera's ilk and we'll have no problems. Though if you wanna play at going for me, I [italic type]might[roman type] just allow you some fun if you can lay a hand on me,' comes the answer, with Malakhi sticking out his tongue. Then the young man swings himself back and forth a little, before seemingly falling off the branch - only to catch himself with one hand on its bark, whirling around the wood and landing easily on top in the blink of an eye. Now crouched on top of the tree branch, resting on nothing more than the toe-tips of his slender feet, he goes on to say, 'Okay then, happy hunting. But now, I'm kinda late for my training with mister Kano, so I gotta run. See ya another time maybe.' And with that, the naked youngster jumps up and dashes off, every rapid step secure and sure on the tree bark. He's off and away before you know what to say.";
+	now Meeting Malakhi is resolved;
 	now Tiger Trick is not resolved;
 	now MalakhiRelationship	is 2; [talked to Malakhi]
 
@@ -192,6 +193,7 @@ Instead of resolving a Tiger Trick:
 		LineBreak;
 		say "     With a shrug, you simply turn around and leave. For a little while, you hear the sounds of tiger sex still going on, then a lusty roar, followed by a lot of angry ones right after. You wonder what went on back there...";
 		now MalakhiRelationship is 98; [didn't watch Malakhi play his trick on Sheera]
+	now Tiger Trick is resolved;
 	now Zookeepers at Work is not resolved;
 
 Zookeepers at Work is a situation. Zookeepers at Work is resolved.

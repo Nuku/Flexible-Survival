@@ -419,7 +419,7 @@ Section 4 - Events
 
 Angry Snake is a situation.
 The level of Angry Snake is 4.
-The sarea of Angry Snake is "High Rise District".
+The sarea of Angry Snake is "High".
 Angry Snake is resolved.
 
 instead of resolving a Angry Snake:
