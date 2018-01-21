@@ -12,6 +12,7 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Feral Mutt" } to infections of guy;
 	add { "Feral Mutt" } to infections of furry;
+	add { "Feral Mutt" } to infections of feral;
 
 to RandomizeFeralMutt:
 	if a random chance of 1 in 2 succeeds: 

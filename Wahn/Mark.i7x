@@ -19,16 +19,16 @@ Section 1 - NPC
 [***********************************************************]
 [***********************************************************]
 
-Mark is a man. 
+Mark is a man.
 The description of Mark is "[MarkDesc]".
 The conversation of Mark is { "<This is nothing but a placeholder!>" }.
-The scent of Mark is "     Mark smells nicely masculine, a bit musky and there is also a definite undertone of... wood-smoke? Definitively a real man's scent!".
+The scent of Mark is "     Mark's fur, while well-kempt, is naturally slightly musky, a trait compounded by the undertone of woodsmoke and sawdust. It's a rustic, pleasant scent with a hint of ever-present arousal.".
 
 to say MarkDesc:
 	if debugactive is 1:
 		say "DEBUG -> XP of Mark: [XP of Mark] <- DEBUG[line break]";
-	say "     Mark is a big and burly polar bear, about seven feet tall and with very broad shoulders. He has the typical snow white fur of his species, with a somewhat anthropomorphic head and a muzzle full of a predator's teeth. Much of the big man's bulk is muscle, filling out the rugged jeans and checkered flannel shirt of his outfit quite well. Overall, the powerful bear has definite similarities to the stereotypical image of a woodcutter, although he clearly has no need for an axe to be reckoned with. The sharp claws on his paw-hands are plenty already.";
-	say "     Noticing your attention, Mark turns his gaze towards you in turn, meeting your eyes with his own dark amber ones. Then the man gives you a brief nod, acknowledging your presence.";
+	say "     Mark is a big and burly polar bear, about seven feet tall and with very broad shoulders. He has the typical snow white fur of his species, with a somewhat anthropomorphic head and a muzzle full of dangerous teeth. Much of the big man's bulk is muscle, filling out the rugged jeans and checkered flannel shirt of his outfit quite well. Overall, the powerful bear's attire is reminiscent of to the stereotypical image of a woodcutter, although he clearly has no need for an axe to be reckoned with - the sharp claws on his paw-hands are plenty already.";
+	say "     Noticing you looking at him, Mark turns his attention towards you, meeting your gaze with his dark amber eyes. The man then gives you a brief nod, acknowledging your presence";
 
 [***********************************************************]
 [***********************************************************]
@@ -55,11 +55,11 @@ an everyturn rule:
 		[else if TimekeepingVar is 4 or TimekeepingVar is -4:] [mid afternoon - unused, Mark scavenges]
 		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
 			if player is in Mall Foyer:
-				say "     Coming in through the entrance in the north, Mark the polar bear arrives in the Mall Foyer, his backpack stuffed with the loot he picked up out in the city during the day. Setting the heavy pack down on one of the tables in front of the coffee shop that the wolverines have occupied as their local headquarters, the large white-furred man chats with the mustelids and even hands out some choice items from his backpack - a reward for keeping the mall and his boyfriend safe another day, as he only half-jokingly says. Being offered a cup of coffee, Mark sits down and chats with the otherwise so grumpy mustelids for a long while.";
+				say "     Coming in through the entrance in the north, Mark the polar bear arrives in the Mall Foyer, his backpack stuffed with the loot he picked up out in the city during the day. Setting the heavy pack down on one of the tables in front of the coffee shop that the wolverines have occupied as their local headquarters, the large, white-furred man chats with the mustelids and even hands out some choice items from his backpack - a reward for keeping the mall (and by extension, his boyfriend) safe, as he only half-jokingly says. Being offered a cup of coffee, Mark sits down and chats with the otherwise so grumpy mustelids for a long while.";
 			move Mark to Mall Foyer;
 		else if TimekeepingVar is 2 or TimekeepingVar is -6: [early night - unused, Mark spends time with Jay]
 			if player is in Mall Foyer and Mark is in Mall Foyer:
-				say "     Finishing up his coffee and wishing the wolverines a quiet night day, Mark picks his heavy backpack up and walks deeper into the mall, soon vanishing in the bustling crowd of people there.";
+				say "     Finishing up his coffee and wishing the wolverines a quiet night, Mark picks his heavy backpack up and walks deeper into the mall, soon vanishing into the bustling crowd of people.";
 			now Mark is nowhere; [stashed in another dimension]
 
 
@@ -72,7 +72,7 @@ Section 3 - Talking
 [***********************************************************]
 
 instead of conversing the Mark:
-	if XP of Mark is 0: 
+	if XP of Mark is 0:
 		say "     ERROR: Mark shouldn't be available to talk to yet. Please report to Wahn on the FS Discord/Forum and quote this tracking number for easier bugfixing: [HP of Mark]";
 	else:
 		say "[MarkTalkMenu]"
@@ -104,7 +104,29 @@ to say MarkTalkMenu:
 		now title entry is "Ask Mark about his trips into the city";
 		now sortorder entry is 4;
 		now description entry is "Talk to the polar bear about his scavenging";
-	[]	
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ask him about the wolverines";
+	now sortorder entry is 5;
+	now description entry is "Talk to Mark about wolverine security";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ask him about the military";
+	now sortorder entry is 6;
+	now description entry is "Talk to Mark about the soldiers in the city";
+	[]
+	if HP of Santa Claws > 0: [player has been in the Christmas village]
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him about Santa Claws";
+		now sortorder entry is 7;
+		now description entry is "Talk to Mark about the polar bear Santa";
+	[]
+	if HP of Krampus > 0: [player has been to see Krampus]
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him about Krampus";
+		now sortorder entry is 8;
+		now description entry is "Talk to Mark about the goat demon";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -128,6 +150,16 @@ to say MarkTalkMenu:
 					say "[MarkScavengingTrip]";
 				if (nam is "Ask Mark about his trips into the city"):
 					say "[MarkScavengingTalk]";
+				if (nam is "Ask him about the wolverines"):
+					say "[MarkTalk3]";
+				if (nam is "Ask him about the military"):
+					say "[MarkTalk4]";
+				if (nam is "Ask him about Santa Claws"):
+					say "[MarkTalk5]";
+				if (nam is "Ask him about Krampus"):
+					say "[MarkTalk6]";
+				if (nam is "Talk about the suit for Jay"):
+					say "[MarkSuitQuest]";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -142,15 +174,29 @@ to say MarkTalkMenu:
 	clear the screen and hyperlink list;
 
 to say MarkTalk1: [talk about him]
-	say "     As you ask Mark about himself, he shrugs and is quiet for a few seconds, then says, 'Oh, I'm nothing special. Just another guy living in this city. Went through high school, got a job or three as a after that, until I ended up a waiter. And that's where I ended up meeting the love of my life while I was serving him... hmm, I think it was Ostropel. Romanian restaurant, you know.' Smiling to himself, he continues, 'Living with Jay has been amazing. We've been together five years now. Not in our current forms, of course. These transformations have brought some change, but we still feel as we always have about one another. It's just that I am now the big strong one, and he's my little sex kitten. Not that he isn't as headstrong as ever about getting what he wants - its just that he has different needs. And even if all this is completely upside-down to before, both of us love it.'";
-	say "     Changing to topic back to himself, the burly polar bear pats the bicep on his right arm and explains, 'As for what I'm doing these days: it's scavenging, out in the city. Not a glamorous job, but a necessary one. The mall may have a lot in its storerooms, but things won't last forever, so bringing in whatever I can find just makes sense. And if I can find something special for Jay, even better.' He stops for a moment and looks you up and down, then says, 'You know, there are some places and things I don't go for alone, even if I'm built like a brick house now. Wanna maybe head out together sometime? Meet me here in the morning, if you do.'";
+	say "     As you ask Mark about himself, he shrugs and is quiet for a few seconds, then says, 'Oh, I'm nothing special. Just another guy living in this city. Went through high school, got a job or three after that, until I ended up a waiter. And that's where I ended up meeting the love of my life while I was serving him... hmm, I think it was a dish called Ostropel. Romanian restaurant, you know.' Smiling to himself, he continues, 'Living with Jay has been amazing. We've been together five years now. Not in our current forms, of course. These transformations have brought some change, but we still feel the same way about each other. It's just that I am now the big strong one, and he's my little sex kitten. Not that he isn't as headstrong as ever about getting what he wants - it's just that he has different needs. Even though our roles are completely reversed now, we both still love it.'";
+	say "     Changing the topic back to himself, the burly polar bear pats the bicep on his right arm and explains, 'As for what I'm doing these days: it's scavenging, out in the city. Not a glamorous job, but a necessary one. The mall may have a lot in its storerooms, but things won't last forever, so bringing in whatever I can find just makes sense. And if I can find something special for Jay, even better.' He stops for a moment and looks you up and down, then says, 'You know, there are some places and things I don't go for alone, even if I'm built like a brick house now. Would you like to head out together sometime?[if TimekeepingVar is not 7 and TimekeepingVar is not -1] If you do, meet me here in the morning and we can talk about it some more.'[else]'[end if]";
 
 to say MarkTalk2: [talk about Jay]
-	say "     As you ask the large polar bear about his partner, the man grins broadly and replies, 'He is quite something, isn't he? The perfect little package - sexy, funny and strong in character. And what's best - Jay's a total slut for my cock. Hell, I fuck him a few times a day, and still wake up with my man's trembling hole stretched around my hard shaft. He just climbs on it and rides me. Best way to be woken up, I can tell you that!' The memories of being with his lover create a noticeable tent in Mark's pants, which he adjusts without any shyness, pushing his dick to the side and creating a clearly visible outline of a hard shaft. 'Fuck yeah, I love that man. Been doing that since the day we met, five years ago, even though things were quite different back then of course. I was his bottom boy, not the other way around.'";
-	say "     Waving a hand to indicate his muscular bulk, the man explains, 'Forget this bear you see for a moment, and imagine a slender dude. Neither a twink or a bodybuilder, just thin and fit. Anyways, I was working at a downtown restaurant - 'Tati's', a pretty nice Romanian place, little bit fancy - and there was this attractive hunk of a man with some older guy. Oh yeah, Jay was really hot that night, tailored suit and everything. Gave him some winks, and before I knew, he took me as dessert. Pushed me into the restrooms and fucked my mouth in the handicapped stall.' A pleased sigh crosses his lips, with Mark looking a bit dreamily. 'Barely took three months before he asked for my hand, and I gave it to him.' Raising a large and clawed paw-hand, the bear wiggles his pinkie finger - the only one small enough to fit the broad gold band of a human-sized ring that he proudly presents to you.";
+	say "     As you ask the large polar bear about his partner, the man grins broadly and replies, 'He is quite something, isn't he? The perfect little package - sexy, funny and strong in character. And what's best - Jay's a total slut for my cock. Hell, I fuck him a few times a day, and I [italic type]still[roman type] wake up with the guy's trembling hole stretched around my shaft. He just climbs on it and rides me. Best way to be woken up, I can tell you that!' The memories of being with his lover create a noticeable tent in Mark's pants, which he adjusts without any shyness, pushing his dick to the side and creating a clearly visible outline of his huge, hard shaft. 'Fuck yeah, I love that man. Been doing that since the day we met, five years ago, even though things were quite different back then of course. I was his bottom boy, not the other way around.'";
+	say "     Waving a hand to indicate his muscular bulk, the man explains, 'Forget this bear you see for a moment, and imagine a slender dude. Neither a twink nor a bodybuilder, just thin and fit. Anyways, I was working at a downtown restaurant - 'Tati's', a pretty nice Romanian place, little bit fancy - and there was this attractive hunk of a man with some older guy. Oh yeah, Jay was really hot that night, tailored suit and everything. Gave him some winks, and before I knew, he took me as dessert. Pushed me into the restrooms and fucked my mouth in the handicapped stall.' A pleased sigh crosses his lips, with Mark looking a bit dreamily. 'Barely took three months before he asked for my hand, and I gave it to him.' Raising a large and clawed paw-hand, the bear wiggles his pinkie finger - the only one small enough to fit the broad gold band of a human-sized ring that he proudly presents to you.";
+
+to say MarkTalk3: [talk about the wolverines]
+	say "     Mark glances over to the muscular mustelids stoically keeping an eye on the entrance for a second, then turns his attention back to you. 'I know some people do not like the guys because of their uncompromising stance on... just about anything, but let's face it: The Smith Haven Mall would not exist as the refuge it has become without them. Wolverine Security keeps everyone safe from being overrun by the beasts out there that think of nothing but sex anymore. And one should always remember that these men and women have needs too - amplified, burning lusts - and are more than strong enough to just take whomever they wanted from among the refugees. Discipline is what they live by, and the strength of will to stay true to their jobs should be admired.' Stretching out his arm and indicating the foyer, then the mall overall, he adds, 'You should have heard the bitching and moaning about no-littering rules being upheld, along with all other regulations the mall has on its books. I think enduring a bit of over-zealousness is a low price to pay for being kept safe, and I for one like the fact that we're not living in a pig-sty too.'";
+
+to say MarkTalk4: [talk about the military]
+	say "     Mark's expression darkens noticeably as you bring up the military, and with a frown on his face he replies, 'I met some of the men that were deployed to the city in an attempt to re-establish order during the first week. Good and brave men, all of them. No one knew anything back then, and things quickly went from bad, to worse, to totally fucked up. It was almost more than I - or rather he, the old Mark - could handle.' For a moment, he doesn't say anything more, his eyes filled with a far-away look. 'To this day, it always is disheartening for me to find the remnants of uniforms when I am scavenging. Just thinking what became of those brave men. Even had to fight off a number of creatures that still had their dog tags on. None of them remembered a sliver of the men they once were.'";
+	say "     Making a fist, then forcing himself to relax his clawed hand, the large polar bear clears his throat and adds, 'As much as it pains me to say this, with all of us trapped in the city, the army was right to quarantine us. Their initial approach wasn't getting anywhere, and an infection like this couldn't be allowed to spread. I've been at the containment barrier myself, and I know for a fact that they have to be merciless to maintain it. If there was any spot that allowed even a handful of people through, the whole remaining sane population would swamp and overrun them. And that's not counting all the beasts that would flock to such a crowd to have their fun. So for now, everyone is stuck here. Nothing to be done about it.'";
+
+to say MarkTalk5: [talk about Santa Claws]
+	say "     A broad grin spreads over the tall polar bear's face, and he rubs the white fur on his lower arm for a second, then replies, 'He's a really good man, I can tell you that. Funny thing is that I don't know his [italic type]real[roman type] name, even though we've become good friends these last weeks. He just has so completely stepped into the role of Saint Nick that I don't even know if there is much of a difference anymore. I think he's one of the reasons the mall actually can exist as it does, without boiling over from all of the people stuffed into it. Stepping into the Christmas village just... makes many people forget their troubles, if only for a little while, and Santa does his very best to be a force for good. Which includes being held - and fucked - by a big, warm and so very strong man for some.' Mark seems a little bit embarrassed as he adds that last sentence, and you're fairly sure that he is blushing under his fur.";
+	say "     Taking a deep breath, the broad-shouldered ursine calms himself down and explains, 'I wasn't taking things well, when the outbreak started. The initial days, then a hope of being evacuated, followed witnessing the fate of the soldiers who wanted to help us and fleeing in panic. Jay got us here to the mall, safely inside its walls and protection, but I just couldn't cope. To be honest, I don't remember much of it - mostly crying and despair. Then we met Santa, and he offered... you know. To make me feel better. Give me the fierceness I would need. And it worked.' Flexing his arms to show off the firm muscles of his ursine physique, Mark leaves things at that, clearly content with his new form. You sense that it wouldn't be a good idea to keep digging into that traumatic time for him, so you quietly let the matter drop.";
+
+to say MarkTalk6: [talk about Krampus]
+	say "     Raising his eyebrows as you mention the goat demon living in a cave adjoining the Christmas village, Mark says, 'You mean Santa's kinky friend? Oh boy, I'll admit that Jay and I did some role-play and maybe a little light bondage over the years, but that guy is [italic type]intense[roman type]. Total leather daddy, you know. He's got a whole collection of restraints and whips in that cave. Not really my cup of tea, but apparently he doesn't lack for partners. Sounds of mixed pain and pleasure can often be heard coming from his lair.'";
 
 to say MarkScavengingTalk:
-	say "     As you step up to the large polar bear and ask about details on his scavenging trips, Mark grins broadly and pats your back. 'Well, I can't just tell you where all the best spots for salvage are in the city, that's possibly make us compete. But hey, there are a number of spots out there that have plenty for both of us - you know, those places where one shouldn't really go alone anyways. So how about it - wanna meet me here in the morning and come with for an excursion sometime?' You reply that you'll think about it and the big man nods, giving you a thoughtful look.";
+	say "     As you step up to the large polar bear and ask about details on his scavenging trips, Mark grins broadly and pats your back. 'Well, I can't just tell you where all the best spots for salvage are in the city, that'd possibly make us compete. But hey, there are a number of spots out there that have plenty for both of us - you know, those places where one shouldn't really go alone anyways. So how about it - wanna meet me here in the morning and come with for an excursion sometime?' You reply that you'll think about it and the big man nods, giving you a thoughtful look.";
 
 to say MarkScavengingTrip:
 	say "     As you step up to the large polar bear and offer to accompany him on a scavenging trip, Mark grins broadly and puts his clawed hand-paw on your shoulder to give you a companionable squeeze. 'Good choice, friend. Together, we'll be able to go for some truly worthwhile targets.' Adjusting the straps of his backpack, the big man then leads you out through the doors of the mall, and the two of you wander across the parking lot to go explore the chaos-ruled city. Things are slow at first, with Mark guiding you past countless cars and houses that clearly have already been looted. After an hour or so, he suddenly stretches out his arm to the side, preventing you from walking any further, and nods to something a little distance ahead.";
@@ -332,12 +378,16 @@ to say MarkScavengingTarget5: [behemoth attack]
 	challenge "Behemoth";
 	now inasituation is false;
 	if fightoutcome < 20: [player won]
-		say "     Another heavy hit on the massive beast sends it flinching back from you, letting out a howl with spittle flying. Then the behemoth whirls around and runs off, having had enough of a beating for today. You let it go and turn back to Mark, who must have regained consciousness at some point during your fight, but is still sitting against the wall and holding his head. His white fur is stained with blood and he groans as he carefully feels his skull. At leas it isn't bleeding anymore, or showing any sign of a wound actually, so you guess his nanites are hard at work at fixing the ursine back to full health. 'Nice bit of fighting there,' your companion says with admiration audible in his voice, then eventually pushes himself up to his feet. 'Still, I think we should call it a day. Almost getting my head bashed in has put me off the mood for scavenging right now. Let's hope we'll have better luck next time.' Giving him a thoughtful nod, you accompany the bear back to the mall, then are given a companionable squeeze of your shoulder before the big man goes off to find his boyfriend Jay.";
+		say "     Another heavy hit on the massive beast sends it flinching back from you, letting out a howl with spittle flying. Then the behemoth whirls around and runs off, having had enough of a beating for today. You let it go and turn back to Mark, who must have regained consciousness at some point during your fight, but is still sitting against the wall and holding his head. His white fur is stained with blood and he groans as he carefully feels his skull. At least it isn't bleeding anymore, or showing any sign of a wound actually, so you guess his nanites are hard at work at fixing the ursine back to full health. 'Nice bit of fighting there,' your companion says with admiration audible in his voice, then eventually pushes himself up to his feet. 'Still, I think we should call it a day. Almost getting my head bashed in has put me off the mood for scavenging right now. Let's hope we'll have better luck next time.' Giving him a thoughtful nod, you accompany the bear back to the mall, then are given a companionable squeeze of your shoulder before the big man goes off to find his boyfriend Jay.";
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     The massive beast's attacks leave you swaying on your feet, at which point it knocks you down with a flick of its snout against your body. Howling in victory, the behemoth stomps closer, focusing on your helpless form with those large predator's eyes, as if trying to decide what to do with you now. The question is answered soon, as you can see its cock hardening to its full erect length, starting to drip pre-cum. Then the creature steps forward and starts to rub against you, in the mood for a good time. Mentally preparing yourself to be fucked by this giant beast, you are surprised by a flash of white that you see moving behind the behemoth, followed by a pained shriek from the creature, and it literally jumping over you in one reflexive leap. Looks like Mark is back up, and he got a running start, then kicked the giant monster in the balls!";
 		say "     All desire for sex banished from the behemoth's mind right now, it flees, leaving you and your companion behind. 'Phew, good that it was so focused on you. And had that obvious weak spot,' the large bear says in relief and comes up to give you a hand up. The fur on his palm is stained red with blood, as is the side of his head, but thankfully the nanites seem to have done their job of healing him back to full health by now. 'Still, I think we should call it a day. Almost getting my head bashed in has put me off the mood for scavenging right now. Let's hope we'll have better luck next time.' Giving him a thoughtful nod, you accompany the bear back to the mall, then are given a companionable squeeze of your shoulder before the big man goes off to find his boyfriend Jay.";
 	else if fightoutcome is 30: [fled]
 		say "     Turning around and running as fast as you can, you are chased by the massive beast for quite a while until you finally manage to shake it. Alone and exhausted in an area you don't really know, you make your way back to the mall afterwards, and run into Mark shortly before reaching the place. The fur on his palm is stained red with blood, as is the side of his head, but thankfully the nanites seem to have done their job of healing him back to full health by now. 'Ah, good to see that you made it. The last thing I remember is seeing that behemoth, then waking up against that wall. Did you lead it away or something? Anyways, I'll just call it a day. Almost getting my head bashed in has put me off the mood for scavenging right now. Let's hope we'll have better luck next time.' Giving him a thoughtful nod, you accompany the bear back to the mall, then are given a companionable squeeze of your shoulder before the big man goes off to find his boyfriend Jay.";
+
+to say MarkSuitQuest:
+	say "     You approach Mark and tell him about the surprise that Santa and yourself are preparing for Jay, which causes the large man to openly gape at you. 'You're having a suit for Jay [italic type]made[roman type]? I - um - never though of that. Now I feel stupid for carrying a measuring tape and a piece of paper with his sizes with me for a week and a half, trying to [italic type]find[roman type] something that will fit my little man in the midst of all this chaos out there.' Rubbing the back of his neck in embarrassment, Mark falls silent for a moment, then laughs about himself and throws an arm around your shoulders. The big man gives you a friendly squeeze and thanks you for your efforts, then asks, 'So, how long did they say it would take?'";
+	say "     ...";
 
 [***********************************************************]
 [***********************************************************]

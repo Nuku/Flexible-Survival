@@ -1,6 +1,26 @@
 Version 1 of Jay by Wahn begins here.
 [Version 1 - New NPC]
 
+[ JayMarkRelationship                                       ]
+[   0: not met yet                                          ]
+[   1: met the two of them                                  ]
+[   2: met the two of them, player knows their names        ]
+
+[ thirst of Jay - Suit Quest                                ]
+[   0: Suit Quest not started                               ]
+[   1: Santa gave the initial suggestion                    ]
+[   2: player got detailed info                             ]
+[   3: player got sent out to get chocolate milk            ]
+[   4: player with Aelias as lover just has to wait a bit   ]
+[   5: silk delivered to Santa                              ]
+[   6: special dinner talked about with Mark                ]
+[   7: trip to Tati's postponed                             ]
+[   8: trip to Tati's completed                             ]
+[   9: Suit Delivered                                       ]
+
+[ XP of Jay                                                 ]
+[   0: not yet moving                                       ]
+[   1: started his daily rhythm                             ]
 
 [***********************************************************]
 [***********************************************************]
@@ -10,10 +30,10 @@ Section 1 - NPC
 [***********************************************************]
 [***********************************************************]
 
-Jay is a man. 
+Jay is a man.
 The description of Jay is "[JayDesc]".
 The conversation of Jay is { "<This is nothing but a placeholder!>" }.
-The scent of Jay is "     Jay smells nicely masculine, and there is also a little hint of... cinnamon and spices, maybe gingerbread too. That must be because he is a Christmas elf.".
+The scent of Jay is "     Jay must wash regularly, as there is little discernible odor to his skin. What you do detect are motes of cinnamon, spices and a hint of gingerbread, the aroma complementing his appearance. There's also a faint trace of his ursine partner's musk, no doubt courtesy of their frequent lovemaking.".
 
 to say JayDesc:
 	if debugactive is 1:
@@ -21,17 +41,53 @@ to say JayDesc:
 	say "     Looking over to the slender male, it is immediately apparent that Jay is a Christmas elf, being all of four feet tall and dressed in a green and red outfit. He has long brown hair hanging down to below his shoulders, with sharply pointed ears sticking out of it to the sides. The elf has a well-toned physique despite his small stature, lithe and flexible enough to be a gymnast. He moves with feather-light steps, heels raised enough that he stands only on the balls of his feet and his toes. A handsome face bearing a confident expression completes the look of a capable and strong-willed person, no matter how tall or short he may be.";
 	say "     As the elfin man feels your gaze come to rest upon him, he looks right back at you and smiles, then raises one hand for a friendly wave.";
 
+[***********************************************************]
+[***********************************************************]
+[***********************************************************]
+Section 2 - Daily Rhythm
+[***********************************************************]
+[***********************************************************]
+[***********************************************************]
+
+
+an everyturn rule:
+	if XP of Jay > 0:
+		[if TimekeepingVar is 1 or TimekeepingVar is -7:] [midnight - unused, Jay sleeps]
+		[else if TimekeepingVar is 0 or TimekeepingVar is -8:] [pre dawn - unused, Jay sleeps]
+		if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning - Jay gets up early]
+			if player is in Mall East Wing:
+				say "     A fairly inconspicuous door in a little nook between two stores opens up and two men that you know come out: Jay the Christmas elf and his polar bear partner Mark. In the second before they shut and lock the door once more, you glimpse a narrow service corridor behind them. Lifting his much shorter lover to give him a goodbye kiss, Mark then leaves in the direction of the atrium, while Jay stays behind to chat with other residents who are also just getting up in the morning. People are clearly happy to see him, usually hanging around a little while before they eventually go on and start their own daily business.";
+			move Jay to Mall East Wing;
+		else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning, reading]
+			if player is in Mall East Wing and Jay is in Mall East Wing:
+				say "     Having made his rounds to talk to most of his 'neighbours', Jay eventually drifts over to the [']Brookstone Books['] store and goes inside.";
+			if player is in Brookstone Books:
+				say "     Jay the Christmas elf walks into the store and wishes Beverly a good morning, then picks up a paperback novel from a shelf and climbs onto a comfortable sofa in the seating area. Sitting down cross-legged, he starts to page through the book with interest.";
+			move Jay to Brookstone Books;
+		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon, class time]
+			if player is in Brookstone Books:
+				say "     As the morning progresses, teenagers of varied species and apparent ages gravitate into the bookstore, gathering around Jay. He smiles and greets each of them by name, then leads what is soon a dozen kids to a quiet corner of the store, where a narrow blackboard has been set up. An improvised, yet quite interesting and funny lesson for the young people plays out, at the end of which Jay sends his students off with the words, 'See you tomorrow.' After that, the elf himself leaves too, waving to Beverly as he goes.";
+			if player is in Mall Foodcourt:
+				say "    Jay the Christmas elf comes walking into the food court from the north, making a beeline for one of the stores. After a short and amicable conversation with the mall rat server on duty, he gets a tablet with a fairly nice lunch handed to him and goes over to a group of tables to eat, then stays sitting there to chat with people passing by.";
+			move Jay to Mall Foodcourt;
+		[else if TimekeepingVar is 4 or TimekeepingVar is -4:] [mid afternoon - Jay hangs out at the food court]
+		[else if TimekeepingVar is 3 or TimekeepingVar is -5:] [evening - Jay hangs out at the food court]
+		else if TimekeepingVar is 2 or TimekeepingVar is -6: [early night - unused, Jay spends time with Jay]
+			if player is in Mall Foodcourt and Jay is in Mall Foodcourt:
+				say "     Mark the polar bear comes into the food court and walks over to say hello to Jay, who climbs on the table he was sitting at to give his lover a kiss. Being picked up by the much larger male, the elf is then carried off while having a conversation about how Mark's day went.";
+			now Jay is nowhere; [stashed in another dimension]
+
 
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
-Section 2 - Talking
+Section 3 - Talking
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
 
 instead of conversing the Jay:
-	if HP of Jay is 0: 
+	if HP of Jay is 0:
 		say "     ERROR: Jay shouldn't be available to talk to yet. Please report to Wahn on the FS Discord/Forum and quote this tracking number for easier bug-fixing: [HP of Jay]";
 	else:
 		say "[JayTalkMenu]"
@@ -52,6 +108,23 @@ to say JayTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Talk to Jay about Mark";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ask him about the military";
+	now sortorder entry is 3;
+	now description entry is "Talk to Jay about the soldiers in the city";
+	[]
+	if HP of Santa Claws > 0: [player has been in the Christmas village]
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him about Santa Claws";
+		now sortorder entry is 4;
+		now description entry is "Talk to Jay about the polar bear Santa";
+	[]
+	if HP of Krampus > 0: [player has been to see Krampus]
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him about Krampus";
+		now sortorder entry is 5;
+		now description entry is "Talk to Jay about the goat demon";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -71,6 +144,12 @@ to say JayTalkMenu:
 					say "[JayTalk1]";
 				if (nam is "Mark"):
 					say "[JayTalk2]";
+				if (nam is "Ask him about the military"):
+					say "[JayTalk3]";
+				if (nam is "Ask him about Santa Claws"):
+					say "[JayTalk4]";
+				if (nam is "Ask him about Krampus"):
+					say "[JayTalk5]";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -92,10 +171,65 @@ to say JayTalk2: [talk about Mark]
 	say "     'Mark and I have been partners for five years now. He's everything I ever wanted,' Jay says with a somewhat dreamy expression, his right hand moving to the little bump in his clothing just above his breastbone. You remember that this is where he carries his commitment ring, the broad gold band held on a leather strap since it is much too big for his small fingers now. 'Let me tell you how we met. It was at a really fancy downtown restaurant called 'Tati's', with European specialities. There I was with the senior partner of a new client company, a dreadful bore of a man that cost all my self-control to smile and nod to. And then our waiter, Mark, brings the starters. Black shirt, dark red apron from the waist down, and the cutest smile you can imagine. Our eyes met for a second then, and when he brought the main course, he winked at me.'";
 	say "     A smile crosses Jay's face and he goes on to say, 'That was when I knew I had to have him. And I did. Intercepted his sexy little ass as he was coming out of the kitchen in the back and pulled him into the restrooms. A minute later he was on his knees in the handicap stall and blowing me.' Grabbing his crotch and wiggling his eyebrows, the elf adds, 'Then came dates, more racy moments in public, and eventually I asked him to move in with me and be mine. And now, with all of the changes this strange outbreak has brought with it, I guess I'm his. It's almost like this body is made to be a bottom, I can't get enough of it. Don't really care, as long as we are together.'";
 
+to say JayTalk3: [talk about the military]
+	say "     Pressing his lips together, Jay is in his thoughts for a second, then says, 'When the outbreak of this infection or whatever started, Mark and I ran into a group of soldiers. They did try to protect and evacuate us, but... things went awry fast. Please don't ask me to go into details, I still get the chills when I think back to it. Long story short, we escaped, but most others did not, including those brave men.' The slender elf grimaces and shakes his head as if to clear the mental image away. 'I haven't been outside the mall since, but Mark tells me that the army hasn't fared much better in other places either. I the end, they focused all their attention on setting up a quarantine belt around the city and that at least seems to be holding so far. Bad for all of us in here I guess, but I'm actually glad they did it. My brother and his family live just an hour's drive up the coast.'";
+
+to say JayTalk4: [talk about Santa Claws]
+	say "     As you mention to polar bear mall Santa, Jay smiles immediately, but also takes on a somewhat thoughtful expression. 'I owe that man [italic type]a lot[roman type]. Let me explain: after everything we saw before finding refuge in the Smith Haven Mall, Mark was at the end of his rope. Nothing I could do would calm him down... he was just crying and sobbing. Then we heard a deep voice ask if we were alright - and there he was, in his big, red suit, reaching out to lay a large clawed hand on Mark's shoulder. Somehow, that contact actually made him relax, and Santa then had Mark let it all out, talking through everything that had happened. He must have sat there with us for an hour, listening and gently encouraging my man, until Mark eventually dozed off in total exhaustion.'";
+	say "     Taking a deep breath, Jay hesitates for a second, then adds, 'I asked him, then. Asked Santa if he would be willing to take care of my man, in a way only he could in that moment. Even though there was a chance that Mark would simply forget about me - about us - I couldn't bear to see him like that for one more moment, a shell of himself. So I talked things through with Santa, and when he agreed, we made the offer to Mark, later when he woke up. Be comforted by the bear, and become one himself. He kissed me and said goodbye, just in case, and I went away to give them the privacy they needed. Some friendly Christmas elves kept me company, sharing their mulled wine to calm my nerves. Many, many cups of it.' Blushing a little, the slender elf goes on to say, 'It was the next morning when I woke up again, somewhat hung over and feeling, well - shorter. But the important thing were the two furry arms around me, belonging to this mighty white bear, who smiled at me and whispered he loved me...'";
+	WaitLineBreak;
+	say "     'Things actually worked out very well, that day. Mark was still Mark, and I myself, despite having become an elf through the little drinking episode. It has been an adventure to feel each other out with these new bodies ever since,' Jay says and looks a bit dreamily, no doubt imagining what he has been doing with Mark lately. You sense that despite whatever issues he might have with the new diminutive size of his own body in a societal setting, in terms of being together with his lover, there is a lot of pleasure and fun these two had with their great size difference to one another.";
+
+to say JayTalk5: [talk about Krampus]
+	say "     As you bring up the goat-demon and his cave adjoining the Christmas village, Jay's expression hardens a bit. He replies, 'Ah, him. Can't say I like the guy much, to be honest. I've been in the role of dom on and off for years with Mark, but there are some limits we never crossed. Sure, a bit of bondage, or pulling his hair and making him beg like a good little slut as I was thrusting into him, but Krampus... he sticks people in a sack to carry them into his lair and just keeps them there. Then the heavy-duty restraints and whips come out. He seems far too focused on [italic type]punishing[roman type] people, and that just is abuse, not some friendly play like I did with Mark.'";
+
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
-Section 3 - Fucking
+Section 4 - Events
+[***********************************************************]
+[***********************************************************]
+[***********************************************************]
+
+Harbor Swap Meet is a situation.
+Harbor Swap Meet is resolved.
+The sarea of Harbor Swap Meet is "Warehouse".
+
+Instead of resolving a Harbor Swap Meet:
+	if thirst of Jay is 2:
+		say "     Seeing a spray-painted sign that reads 'Swap Meet', with an arrow pointing to a nearby warehouse, you remember the request from Santa Claws about checking the place for fabric to make Jay a suit. What awaits you in the warehouse are a number of people of all sorts of species, mostly with tarps spread out on the floor in front of them, covered with various wares being presented. A moderate number of customers are scattered inside the hall, looking over what is on offer or already bartering for this or that. Joining them, you make a circuit through the room and ask around for any fabric or threat that the vendors might have. Sadly none of them can offer you anything usable. You are almost ready to call it a day when a friendly siren that overheard your request points you to a dark corner of the room and says, 'Maybe the taur will help you. Go ring for him.'";
+		say "     Thanking the woman, you walk the way she indicated, and after a few steps it becomes apparent that there is one more trader that you haven't yet spoken to. A small hand bell is hanging from a barely visible silk thread in the corner, connected to a sizable structure far above, strung up between the ceiling and wall of the warehouse. Looks like a vaguely oval spider's nest, fit to hold a horse. Taking hold of the bell, you ring it, which draws the inhabitant of the structure above from the inside, lowering himself to your level by a thick strand of silk. This gives you a few seconds to study the large male: his lower body consists of the legs and abdomen of a big spider, sheathed in gleaming black chitin, while his upper body looks human, with rippling muscles under black skin. He has pale-white hair, bound together as a long ponytail behind his back[if SpidertaurRelationship > 3] and you know him by name - it is Aelias, the very spidertaur that you had several encounters with before[end if].";
+		WaitLineBreak;
+		if SpidertaurRelationship > 3: [player knows him]
+			say "     'If it isn't my lovely little fly, coming for a visit,' Aelias says, his claws clicking on the concrete as he steps forward and draws you into his embrace to share a kiss. 'Were you just eager to see me, or is there something I can help you with?' As you explain that you need a spindle of very fine silk for making cloth out of it, the spidertaur gives you a thoughtful nod. 'Hm, that'll be quite a bit of work. Thick strands I can do quickly, but spooling up hundreds of feet of fine thread takes time. I'll do it, for you, but it'll take some time. Come back later and I'll hopefully have it done by then.' Stroking his hand along the side of your cheek, the spidertaur then starts to pull himself up the strand he slid down on, effortlessly reaching his home away from home above and vanishing inside.";
+			now thirst of Jay is 4; [player who is friends with Aelias just has to wait]
+		else:
+			say "     'Well well, what do we have here. Let me guess: you're a slaver, envious of his competition's unbreakable net or lasso, so you went to find who made it for them. Which is me. Here, let me give you an example - you just try tearing that.' Before you can say anything, he already has reached behind his back to pull a foot-long strand of silk out of a pouch, thick as your index finger. Somewhat amazed and distracted by his demonstration of a rope that will stretch and flex, but never break, no matter how strong the pull, you eventually manage to a word in edgewise and hastily explain that you're not actually here for that. This takes the wind out of the spidertaur's sails and he goes quiet, giving you a questioning look. 'Fine, what else shall it be then?' he asks, lifting one eyebrow as he looks at you.";
+			say "     As you explain that you need a spindle of very fine silk for making cloth out of it, the spidertaur gives you a thoughtful nod. 'Hm, that'll be quite a bit of work. Thick strands I can do quickly, but spooling up hundreds of feet of fine thread takes time. I'll do it, but you better be coming back here with my pay ready. For this job, I'll take... five bottles of chocolate milk. Pretty sought after trade good, that stuff. Yeah, that should do. I hear people have been milking some from critters in the high rise district, so now you know where to go.' Waving to you to get going, the spidertaur then starts to pull himself up the strand he slide down on, effortlessly reaching his home away from home above and vanishing inside.";
+			now thirst of Jay is 3; [regular players have to pay]
+	else if thirst of Jay is 3: [player coming back with the payment (hopefully)]
+		if carried of chocolate milk < 5:
+			say "     As you see the sign for the swap meet ahead, you remember that you do not actually have the chocolate milk that you agreed to trade to the spidertaur vendor there for his silk. Better come back when you actually have your trade goods together.";
+		else:
+			say "     Returning to the swap meet, you ring the little bell again and the spidertaur comes down from his nest. Under his arm, he holds a bulging spindle of silk thread. 'You better have my payment, because it was a pain in the ass to keep spinning for hour after hour to make this,' he tells you, an expectant expression on his face. Pulling your backpack off and opening it, you hand him the plastic bottles filled with chocolate milk right away, which he bundles together with a sticky strand of silk, then sticks the packet to the top of his carapace. 'Pleasure doing business with you,' the demi-human says, then hands you his load of silk and starts to pull himself up the strand he slid down on, effortlessly reaching his home away from home above and vanishing inside.";
+			say "[SilkDelivery]";
+			now thirst of Jay is 5; [silk obtained and delivered]
+			decrease carried of chocolate milk by 5;
+			now Harbor Swap Meet is resolved;
+	else if thirst of Jay is 4: [player who is friends with Aelias can pick up the silk easily]
+		say "     Returning to the swap meet, you ring the little bell again and the Aelias comes down from his nest. Under his arm, he holds a bulging spindle of silk thread. 'Hello my lovely little fly,' he tells you, leaning forward to plant a kiss on your lips, then hands over the load of silk with a smile. 'I hope this is exactly what you needed. I can tell you, it was a pain in the ass to keep spinning for hour after hour to make it. But what don't I do for my favorite prey. Have fun with it, and I hope to see you for some more action between us soon.' With a little grope of your ass, the spidertaur then starts to pull himself up the strand he slid down on, effortlessly reaching his home away from home above and vanishing inside.";
+		say "[SilkDelivery]";
+		now thirst of Jay is 5; [silk obtained and delivered]
+		now Harbor Swap Meet is resolved;
+
+to say SilkDelivery:
+	say "     Eager to deliver the silk, you make your way to the mall directly after that, taking care to avoid any chance of hostile encounters during your travel. It wouldn't do to see your precious load damaged or lost after all. Thankfully, the trip is uneventful, and you arrive at the Smith Haven Mall without any trouble. After a quick stroll through the crowded place afterwards, you present the thread to Santa, who accepts it with a broad smile on his furry face. 'Thank you for putting so much effort into our little project. I am sure that Jay will be thrilled by the end result.' He calls his elven foreman Walter over and hands the red-headed elf the spindle, after which both you and Santa watch for a few minutes as a bustle of activity immediately starts up, with Walter giving out assignments and the elves falling into line like an expertly drilled work crew. Santa nods in satisfaction, then says to you, 'They will take a while to prepare the suit itself, so I would suggest that you speak with Mark about arranging a fitting situation to give Jay his present.'";
+
+
+[***********************************************************]
+[***********************************************************]
+[***********************************************************]
+Section 5 - Fucking
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
@@ -166,7 +300,7 @@ Jay ends here.
 
 [ Collected Comments and ideas ]
 
-[ Song: Between the boyish figure and brazen desires of the bottoming elf, there's ample room for some content involving the player sharing the horny male with his far larger lover, spitroasting him on all fours while giving sawing, asynchornous thrusts back and forth into his well-stretched jaw and jealously gripping asshole. Letting out all those pesky inhibitions with every firm thrust as he moans and drools around throbbing dick, all too happy to wrap his arms around the waist of the one screwing his pretty face while his seizing rear massages the pole splitting it wide open. ]
+[ Song: Between the boyish figure and brazen desires of the bottoming elf, there's ample room for some content involving the player sharing the horny male with his far larger lover, spit-roasting him on all fours while giving sawing, asynchronous thrusts back and forth into his well-stretched jaw and jealously gripping asshole. Letting out all those pesky inhibitions with every firm thrust as he moans and drools around throbbing dick, all too happy to wrap his arms around the waist of the one screwing his pretty face while his seizing rear massages the pole splitting it wide open. ]
 
 [ Once everything is said and done, the two could even give an extended show of Mark pulling his still-trembling partner against his broad, snowy muzzle, tongue extending to draw several slow, firm licks through the valley of his buns before its tip presses sinuously against that circle-pet star, gliding into that cum-soaked passage with unwavering resolve. Knowing his lover inside and out, Mark's able to draw a cornucopia of pleasured sounds from his submissive mate, from gurgling moans to breathy cries as his tongue sweeps across every sensitive nerve of his clenching anal lining, only to dip below to grind roughly against his prostate, forcibly milking long strands of thick, stringy pre from the flaring tip of Jay's dick. ]
 

@@ -124,7 +124,7 @@ earea of Mall Atrium is "Smith Haven".
 
 To say mallatrium:
 	If findwires is 2 and fixedgens is 2:
-		say "     The mall's atrium is a large rotunda, four massive columns rising towards the ceiling and seeming to support the large domed roof. The lit dome itself is painted with a scene of Mount Olympus. Three foot tall statues depicting the twelve Olympian gods sit on a ring running around the upper half of the rotunda and are backlit with random colored lights. Dominating the center of the atrium is a large fountain. You've learned in the past that it's a faithful recreation of the Morosini fountain found in a village in Crete. The fountain is now working, though the water is still too dirty to drink, and in the pool of the fountain some [one of]red[or]orange[or]blue[or]green[or]violet[at random] lights are illuminated. To the north is the mall foyer. To the south is the entrance to the food court. To the east and west are the main wings of the mall.";
+		say "     The mall's atrium is a large rotunda, four massive columns rising towards the ceiling and seeming to support the large domed roof. The lit dome itself is painted with a scene of Mount Olympus. Three foot tall statues depicting the twelve Olympian gods sit on a ring running around the upper half of the rotunda and are backlit with random colored lights. Dominating the center of the atrium is a large fountain. You've learned in the past that it's a faithful recreation of the Morosini fountain found in a village in Crete. The fountain is now working, though the water is not actually suitable for drinking, despite being in motion. In the pool of the fountain some [one of]red[or]orange[or]blue[or]green[or]violet[at random] lights are illuminated. To the north is the mall foyer. To the south is the entrance to the food court. To the east and west are the main wings of the mall.";
 	else if daytimer is day:
 		say "     Sunlight streams in from the east and west wing skylights, giving enough light to see inside the atrium. It is a large rotunda, four massive columns rising towards the ceiling and seeming to support the large domed roof. It's hard to see into the semi-dark dome, though you are able to just make out statues of the twelve Olympian gods. Dominating the center of the atrium is a large fountain. You've learned in the past that it's a faithful recreation of the Morosini fountain found in a village in Crete. Dirty, standing water partially fills the fountain's pool, and with the HVAC system down, the light stench of the stagnant water fills the stuffy air around you. To the north is the mall foyer. To the south is the entrance to the food court. To the east and west are the main wings of the mall.";
 	else:
@@ -157,7 +157,7 @@ To say malleastwing:
 
 the scent of Mall East Wing is "It smells like the mallrats.".
 
-Section 9 - Mall Food Court
+Section 9 - Mall Foodcourt
 
 The description of Mall Foodcourt is "[mfcourt]".
 earea of Mall Foodcourt is "Smith Haven".

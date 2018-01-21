@@ -5338,6 +5338,7 @@ Include Sally by Stripes.
 Include Sam for FS by Stripes.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
+Include Serenity by Kurainyx.
 Include Sidney by Stripes.
 Include Skarnoth by Wahn.
 Include Solstice by Stripes.

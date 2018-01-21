@@ -250,13 +250,13 @@ to say RomanEncourage:
 
 instead of fucking Team Captain Roman:
 	if HP of Roman is 4:
-		if (lastFuck of Roman - turns <= 4):
+		if (lastFuck of Roman - turns > 4):
 			say "[RomanFuck1]";
 			decrease libido of player by 20;
 		else:
 			say "     Poor Roman is currently [one of]already taken by a couple of visitors[or]spitroasted by two horny wolfmen footballers[or]forced to rim one of his former teammates['] ass[or]having his pussy toyed with by a pair of cheerleaders.[at random] You will have to try again later.";
 	else if HP of Roman is 5:
-		if (lastFuck of Roman - turns <= 8):
+		if (lastFuck of Roman - turns > 8):
 			say "[RomanFuck2]";
 			decrease libido of player by 40;
 		else:

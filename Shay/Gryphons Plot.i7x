@@ -46,7 +46,7 @@ instead of resolving a Gryphon's Plot:
 				say "     Wandering through the debris of buildings, scattered trash-piles and past wrecked cars, you manage to find the right direction and from then on progress fairly quickly, soon finding the scene that all the noise was coming from. Just a short distance before you, three gryphons attack a group of soldiers in a military jeep. From the looks of it, the unlucky men were ambushed, their vehicle boxed in by an abandoned car that has been rolled behind it. The soldiers now stuck, and unable to drive away have now been forced to protect themselves from the near-constant aerial bombardment, the gryphons assaulting the men with trash and any else they can find. The soldiers, still unchanged grow increasingly desperate judging from the extreme amount of swearing you hear coming from the car. If you wish to interfere, no better time than now.";
 				LineBreak;
 				say "     [bold type]Do you wish to intervene?[roman type][line break]";
-				say "     [link](1)[as]1[end link] - Yes, to help the men fight off their feral attackers";
+				say "     [link](1)[as]1[end link] - Yes, to help the men fight off their feral attackers.";
 				say "     [link](2)[as]2[end link] - Yes, but you help the gryphons instead. They are after all the winning side.";
 				say "     [link](3)[as]3[end link] - Just... watch. Do not interfere.";
 				say "     [link](4)[as]4[end link] - Fuck this. You're out of here!";
@@ -319,19 +319,19 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck a soldier-gryphon's pussy";
 			now sortorder entry is 1;
-			now description entry is "Fuck the pussy of a newly transformed herm to your heart's content.";
+			now description entry is "Fuck the pussy of a newly transformed herm to your heart's content";
 		[]
 		if cocks of player > 0: [Option only visible for males and herms]
 			choose a blank row in table of fucking options;
 			now title entry is "Pound a soldier-gryphon's ass.";
 			now sortorder entry is 2;
-			now description entry is "Fuck a soldier's tight and most likely virgin pucker.";
+			now description entry is "Fuck a soldier's tight and most likely virgin pucker";
 		[]
 		if cunts of player > 0: [Option only visible for females and herms]
 			choose a blank row in table of fucking options;
 			now title entry is "Ride a soldier-gryphon's cock.";
 			now sortorder entry is 3;
-			now description entry is "Take charge and get a taste of a hard, gryphon shaft.";
+			now description entry is "Take charge and get a taste of a hard, gryphon shaft";
 		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:

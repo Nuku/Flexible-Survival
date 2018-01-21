@@ -77,6 +77,24 @@ to say SantaTalkMenu:
 		now sortorder entry is 4;
 		now description entry is "Ask him about the goat-demon";
 	[]
+	if JayMarkRelationship > 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Mark";
+		now sortorder entry is 5;
+		now description entry is "Ask him about the other polar bear";
+	[]
+	if JayMarkRelationship > 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Jay";
+		now sortorder entry is 6;
+		now description entry is "Ask him about the Christmas elf";
+	[]
+	if thirst of Jay > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "A Suit for Jay";
+		now sortorder entry is 7;
+		now description entry is "Talk about getting Jay a business suit";
+	[]	
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -101,6 +119,12 @@ to say SantaTalkMenu:
 					say "[SantaTalk3]";
 				if nam is "Krampus":
 					say "[SantaTalk4]";
+				if nam is "Mark":
+					say "[SantaTalk5]";
+				if nam is "Jay":
+					say "[SantaTalk6]";
+				if nam is "A Suit for Jay":
+					say "[SantaTalk7]";
 				wait for any key;
 				now lastfuck of Santa Claws is turns;
 		else if calcnumber is 100:
@@ -202,6 +226,25 @@ to say SantaTalk3:
 to say SantaTalk4: [talking about Krampus]
 	say "     The polar bear glances over to the cave entrance in the north, then focuses on you again. 'Ah, Krampus. I hope you didn't form an opinion based on his appearance alone! He may look rather demonic, and he acts all mean and tough, I know know he's a good guy at heart. And while I may wish differently, his task remains a necessary evil. There is such wickedness in the world.' Letting out a short breath, Santa Claws shrugs and focuses on the happy bustle of the Christmas Village all around you. This seems to distract him from the earlier dark thoughts, though it becomes obvious that they are still on his mind when he quietly adds, 'If you do know someone who might going down a path that draws Krampus to get them, please pass along the message that redemption is always an option. Being on the Naughty List is not forever.'";
 
+to say SantaTalk5: [talking about Mark]
+	say "     As you bring up the other polar bear, Santa smiles and nods to you, then says, 'Mark is a good and dependable man who loves his husband with all his heart. I am proud to call him a friend and can honestly say that there are few people I'd prefer to have by my side if a truly dire situation came up.' Letting his gaze wander over the happy and carefree Christmas elves living in his domain, the big white bear puts on a more serious expression for a second, then lets out a deep breath. Sometimes I wish I could just forget, like most of them did. But no, it is my responsibility, my duty, to protect them. Being aware of what grim realities the outside world entails is definitively part of that. When Jay and Mark came here, I recognized in him one of the worst examples of PTSD I'd seen since... ah, no. Don't let me get you down with a tale like that, And I shouldn't be gossiping about their private matters either. One thing I can say is that I am glad that their transformations went relatively well, and Mark is better for it now.'";
+	say "     Falling quiet after the last words, the large, white bear leans back in his throne and gives a welcoming smile to a newcomer who cautiously steps through the curtain of snow flakes demarcating the Christmas Village from the rest of the mall. He waves the person closer and wishes them a friendly welcome, then starts to chat a bit. Apparently, your talk about the current topic is over, and as you walk away, you can't help but wonder if that is because you almost got a snippet of Santa's past, or to protect the privacy of Mark and Jay. Maybe a bit of both...";
+	
+to say SantaTalk6: [talking about Jay]
+	say "     Stroking his furry white chin, Santa raises an eyebrow and glances to the small, fairly carefree inhabitants of the Christmas Village. 'Jay is actually a special case among the elves. Most of those who come and choose to stay as part of my domain are lost and just want to forget. He wasn't, and he didn't, with his transformation mostly an accident, caused by aftermath of the events that he and his partner Mark witnessed before fleeing to the mall. In the end, the two of them do not actually live in the Christmas Village and still have a life outside its bounds. They visit often though, and have become good friends of mine, which makes me glad that things worked out alright in the way they did.'";
+	if thirst of Jay is 0:
+		say "     'One thing that does concern me a little though is that Jay has some issues with certain aspects of his new form. There isn't much to be done about his size, not without excessive steps during which he may lose himself, but the other thing... that we can fix. I do know he despises the elf outfit, so I was wondering if you might like to help me improve at least on that part for him.' Raising a large paw-hand, the polar bear indicates the bustling crowd of elves all around you and lets out a chuckle. 'You know, all of my little charges here actually fulfill the complete stereotype of Santa's elves and have gained almost supernatural crafting skills. If [italic type]someone[roman type] brought them a good bolt of fabric, or even just the right thread, they could surely put together a proper buisiness suit for Jay in no time at all. Reclaiming such an important symbol of his old life would surely thrill Jay to no end. Let me know if you're interested, and we can talk about it, okay?'";
+		now thirst of Jay is 1;
+
+to say SantaTalk7: [Suit Quest info]
+	if thirst of Jay is 1:
+		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay leads to the polar bear waving over a nearby elf with fiery red hair and a goatee. 'Okay Walter, please tell our friend here what you will need.' The diminutive man standing before you looks young, in the ageless fashion that all of the elves inherently carry, but the rich tone and confidence in his voice tell a tale of a well-experienced person. He clears his throat and smiles at you, then says, 'Mostly, it is just the proper materials that we need. We elves aren't that big either, so a single bolt of fabric should do. Something nice, you know. Worsted wool, cashmere, maybe even silk. And please watch the thread count. Any good suit needs good fabric. Or, if you have trouble finding finished fabrics out there, we could even do with just thread. A loom isn't hard to put together or use.'";
+		say "     Thanking the elf and watching him get back to what he was doing before, Santa adds, 'I know that something this specific will be hard to find out there, so I asked around among the recent visitors to the Christmas Village. Maybe you could get fabric or thread at a [bold type]swap meet[roman type]. From what I was told, there should be a somewhat regular one in a [bold type]warehouse[roman type] near the harbor. Though if you do go there... take care. Those meetings are meant to be neutral ground, but one never knows exactly what will happen in these uncertain times.";
+		now thirst of Jay is 2; [initial info given]
+	else if thirst of Jay is 2:
+		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay again, he asks, 'Have you found a source for fabric or thread yet? As Walter said, they do need at least fabric, or enough thread to make fabric, for that suit. From what I was told, there should be a somewhat regular [bold type]swap meet[roman type] in a [bold type]warehouse[roman type] near the harbor. Though if you do go there... take care. Those meetings are meant to be neutral ground, but one never knows exactly what will happen in these uncertain times.";
+		[Swap meet event in the file Jay.i7x]
+		
 Section 3 - Sex
 
 Instead of fucking the Santa Claws:

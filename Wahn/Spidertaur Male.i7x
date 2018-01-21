@@ -2,7 +2,6 @@ Version 3 of Spidertaur Male by Wahn begins here.
 [Version 3 - Aelias npc and lair]
 
 "Adds a Spidertaur to Flexible Survival's Wandering Monsters table, with impregnation chance."
-[Description text for this Extension.]
 
 [ SpidertaurRelationship - relationship and quest variable         ]
 [   0: never met                                                   ]
