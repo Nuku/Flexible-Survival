@@ -891,15 +891,15 @@ to say BrennanDesc:
 an everyturn rule:
 	if BrennanRelationship > 10 and BrennanRelationship < 90:
 		if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
-			move Brennan to Brennan's Bedroom;
-			if player is in Brennan's Bedroom:
+			if player is in Brennan's Bedroom and Brennan is nowhere:
 				project the figure of Brennan_face_icon;
 				say "     You hear the front door open and close, then the barks of Romulus and Remus as they happily arrive back home. A short moment later, the three of them come into the Bedroom and Brennan greets you, but quickly makes clear that he's fairly tired and needs some rest. Yawning, he adds that you of course can feel free to stay longer, just to please not wake him. And with that, the man sets down his gear next to the bed, quickly strips off and gets into bed, slipping under the covers dressed only in some baggy boxer shorts. His two wolves quickly follow, cuddling up to their master and getting some pats from him before all three of them doze off.";
-			else if player is in Survivor Refuge:
+			else if player is in Survivor Refuge and Brennan is nowhere:
 				project the figure of Brennan_face_icon;
 				say "     The front door is unlocked with the key and Brennan opens it, letting in his two wolves Romulus and Remus. The feral canines beat their tails, happy to arrive back home and make a beeline for you, sniffing a little before they move on. A short moment later, when Brennan is done closing the door and re-locking it securely, he greets you, but quickly makes clear that he's fairly tired and needs some rest. Yawning, he adds that you of course can feel free to stay longer, just to please not wake him. And with that, he vanishes into his bedroom, together with the two wolves.";
-			else if player is in Brennan's Bathroom:
+			else if player is in Brennan's Bathroom and Brennan is nowhere:
 				say "     You hear the front door open and close, then the barks of Romulus and Remus as they happily arrive back home. A little while later, you hear another door - that must have been the one to the bedroom. Sounds like the three of them came back and went straight to bed.";
+			move Brennan to Brennan's Bedroom;
 		[else if TimekeepingVar is 0 or TimekeepingVar is -8:] [pre dawn - unused, Brennan sleeps]
 		[else if TimekeepingVar is 7 or TimekeepingVar is -1:] [early morning - unused, Brennan sleeps in]
 		else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
@@ -911,7 +911,6 @@ an everyturn rule:
 			else if player is in Brennan's Bathroom:
 				say "     You hear the front door open and close, then happy barks by Romulus and Remus. Sounds like Brennan woke up and just went to feed them.";
 		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
-			move Brennan to Survivor Refuge;
 			if player is in Brennan's Bedroom:
 				project the figure of Brennan_face_icon;
 				say "     Sitting up from working at his desk, where he was updating some lists and his journal, Brennan stretches out and goes into the main room of the loft apartment.";
@@ -920,17 +919,18 @@ an everyturn rule:
 				say "     Brennan comes out of the bedroom and nods to you, then sits down on the lifting bench and starts to pump a weight up and down. He keeps at it tirelessly for quite a while too - no wonder he has such a physique.";
 			else if player is in Brennan's Bathroom:
 				say "     You hear a door open and close somewhere nearby - the bedroom maybe? Then some fairly low, rhythmic grunting starts up in the main room of the loft apartment.";
+			move Brennan to Survivor Refuge;
 		else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
-			if player is in Survivor Refuge:
+			if player is in Survivor Refuge and Brennan is in Survivor Refuge:
 				project the figure of Brennan_face_icon;
 				say "     Finishing with a fairly well-rounded exercise routine, Brennan moves over to the comfortable sofa in the front half of the room and sits down on it. As he leans forward to grab a book, Romulus and Remus are already on the way to join him on the sofa, soon flanking the muscular man on both sides and pressing up against him. They sniff him happily and lap at any exposed skin, licking his salty sweat off. After a minute or two of this, with Brennan stroking his companions['] fur, the three of them quiet down and sit quietly to read - the wolves either understanding what is written in the book too, or simply enjoying the companionship with their master.";
 		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
-			now Brennan is nowhere; [stashed in another dimension]
-			if player is in Brennan's Bedroom or player is in Brennan's Bathroom:
+			if ((player is in Brennan's Bedroom or player is in Brennan's Bathroom) and Brennan is in Survivor Refuge):
 				say "     You hear Brennan say, 'Come on guys, time for some scavenging!' The happy barks of his two wolves follow, and soon after, you hear the front door open and close.";
-			else if player is in Survivor Refuge:
+			else if player is in Survivor Refuge and Brennan is in Survivor Refuge:
 				project the figure of Brennan_face_icon;
 				say "     Going to collect his gear - backpack, baseball bat and taser - Brennan then waves the wolves up from where they have been lounging around and says, 'Come on guys, time for some scavenging!' Both Romulus as well as Remus give happy barks, tails wagging eagerly to go out with their master. Brennan bids you farewell, saying that you can stay and keep an eye on the place while he's out, then leads his companions to the door and leaves.";
+			now Brennan is nowhere; [stashed in another dimension]
 		[else if TimekeepingVar is 2 or TimekeepingVar is -6:] [early night - unused, Brennan is out scavenging]
 
 [***********************************************************]
@@ -1031,6 +1031,18 @@ instead of conversing the Brennan:
 	now sortorder entry is 30;
 	now description entry is "Talk to him about Romulus and Remus";
 	[]
+	if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
+		choose a blank row in table of fucking options;
+		now title entry is "Going scavenging together";
+		now sortorder entry is 40;
+		now description entry is "Go out scavenging with Brennan and the wolves";
+	[]
+	if TimekeepingVar is not 4 and TimekeepingVar is not -4: [NOT mid afternoon]
+		choose a blank row in table of fucking options;
+		now title entry is "Maybe scavenging together";
+		now sortorder entry is 41;
+		now description entry is "Suggest to Brennan that you could go scavenging with him";
+	[]	
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -1074,6 +1086,10 @@ instead of conversing the Brennan:
 					say "[BrennanCultQuest3]";
 				if (nam is "His wolf companions"):
 					say "[BrennanWolfTalk]";
+				if (nam is "Going scavenging together"):
+					say "[BrennanScavTrip]";
+				if (nam is "Maybe scavenging together"):
+					say "[BrennanScavTalk]";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -1476,6 +1492,117 @@ to say BrennanWolfTalk:
 		say "     ...";
 ]
 
+to say BrennanScavTrip:
+	say "     Going to collect his gear - backpack, baseball bat and taser - Brennan then waves the wolves up from where they have been lounging around and says, 'Come on guys, time for some scavenging!' Both Romulus as well as Remus give happy barks, tails wagging eagerly to go out with their master. Within moments, they are standing at the entrance door, waiting to be let out, and the four of you begin your trip into the city. One quick elevator ride later, you set out from the apartment building. 'It is good to have you along,' Brennan tells you with an appreciative nod, then goes on to say, 'I've been holding off on exploring a number of places that seemed quite promising, yet were just too risky to chance alone. Romulus and Remus are great at sniffing out hidden supplies and do quite well in a fight, but they don't really have the temperament to keep standing guard for any length of time without straying a bit and getting into scuffles with who knows what.'";
+	say "     Acknowleding his concerns, you agree to serve as a lookout, and after a moderately long trip through the chaotic streets of the city, you find yourself ";
+	let randomnumber be a random number from 1 to 5;
+	if randomnumber is:
+		-- 1:
+			say "crouched behind an abandoned car at the entrance to an underground parking garage. Brennan and the wolves vanish down the ramp into the structure, with sporadic sounds of breaking glass starting up not long after - most likely from Brennan smashing windows to get into promising vehicles that might hold something of interest. On your end, things stay quiet for a long while, ";
+			say "[BrennanScaveningRandomEnemy]";
+		-- 2:
+			say "standing in the recessed entrance area of a small apartment complex, watching the street. Brennan and the wolves vanish into the building and you can soon hear some thumps and the noise of splintering wood as he makes an entrance into one apartment or another to check it out. On your end, things stay quiet for a long while, ";
+			say "[BrennanScaveningRandomEnemy]";
+		-- 3:
+			say "standing in a dark corner of the reception area in an out of the way motel. After raiding the key hanger behind the front desk for any keys that are left on it, Brennan and the wolves start making a round through all of the rooms while you keep watch. Things are quiet at first, with only the rare crashing sounds from the inside of the building when the human survivor has to kick in a door, ";
+			say "[BrennanScaveningRandomEnemy]";
+		-- 4:
+			say "standing in a dark corner at the entrance of a storage facility. Armed with a bolt cutter, Brennan leads his wolves into the structure and you soon start hearing the thunk of locks being cut and shutters raised. For a fair while, your post at the entrance stays quiet and peaceful, ";
+			say "[BrennanScaveningRandomEnemy]";
+		-- 5:
+			say "standing in a dark corner at the entrance of a loading dock. Multiple trucks are lined up inside the building, with no sign if they were waiting to be unloaded, or loaded. Armed with a bolt cutter, Brennan leads his wolves into the structure and you soon start hearing the thunk of locks being cut and doors opened. For a fair while, your post at the entrance stays quiet and peaceful, ";
+			say "[BrennanScaveningRandomEnemy]";
+
+to say BrennanScaveningRandomEnemy:
+	let randomnumber be a random number from 1 to 5;
+	if randomnumber is:
+		-- 1:
+			say "until you become aware of a creature on all fours making a beeline for the building. It is a latex wolf, apparently sniffing after the scent-trail your little party left when coming here. Wanting to make good use of the element of surprise, you attack it before the feral beast notices you.";
+			now inasituation is true;
+			challenge "Latex Wolf";
+			now inasituation is false;
+		-- 2:
+			say "until you hear the screech of a hawkman far above. Apparently he observed your little party's arrival and now sees his chance to pounce on you while the rest of your companions are busy scavenging. Swooping down, the bird-man attacks!";
+			now inasituation is true;
+			challenge "Hawkman";
+			now inasituation is false;
+		-- 3:
+			say "until you become aware of a twelve foot tall giant of an anthro collie strolling closer and closer, checking out whatever seems interesting to her. This apparently includes you, and the obvious shemale makes a beeline for your building after she catches sight of you!";
+			now inasituation is true;
+			challenge "Shemale Smooth Collie";
+			now inasituation is false;
+		-- 4:
+			say "until you suddenly hear a chuckle from somewhere behind you. Whirling around, you see a powerful feline man standing quite close. His strong body is covered with leopard-like fur, and he stands on two slender paws which obviously allowed him to sneak up on you. 'This should be fun,' the man says in a condescending tone of voice and steps forward, claws unsheathed.";
+			now inasituation is true;
+			challenge "Leopardman";
+			now inasituation is false;
+		-- 5:
+			say "until you become aware of a tall green-skinned orc warrior strolling down the street. He pokes his nose into every building as he goes along, searching for salvage or new slaves. As it is virtually guaranteed that the big brute will find your current scavenging ground interesting too, you prepare yourself and ambush him to make good use of the element of surprise.";
+			now inasituation is true;
+			challenge "Orc Warrior";
+			now inasituation is false;
+	if fightoutcome < 20: [player won]
+		say "     Beating down your adversary, you suddenly hear a voice calling your name from the interior of the building - it is Brennan, asking if you are alright since he heard the fighting noises. This little moment of distraction is enough for your weakened opponent to stumble out of your reach, then turn around and run to get away. Looking after them, you almost chase after the transformed person, but then remember that your actual task is standing guard here, so you just shrug your shoulders and stay put.";
+		say "[BrennanScavPayout]";
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "     As you sway back and forth, dangerously close to total exhaustion, you suddenly hear Brennan call your name, as well as the aggressive barks of his two wolves as they rush to your aid. After having deemed victory to already be theirs, your opponent growls at the sudden appearance of three new fighters. Not wanting to chance being overwhelmed, they flee and leave you behind.";
+		say "[BrennanScavPayout]";
+	else if fightoutcome is 30: [fled]
+		say "     Dashing out onto the street at a run, you are followed by your opponent, leading to a protracted chase. By the time you manage to chase them and make your way back to where you started, Brennan and the wolves have finished their trip through the building, and are standing near the entrance, looking around for where you might have ended up. The human survivor looks relieved when he sees that you are alright and that you led a dangerous opponent away from where he and his canine companions were scavening.";
+		say "[BrennanScavPayout]";
+
+to say BrennanScavPayout:
+	say "     'Thanks for guarding our back,' Brennan tells you, slapping the side of your arm in a friendly manner before going on to say, ";
+	let randomnumber be a random number from 1 to 5;
+	if randomnumber is:
+		-- 1:
+			say "'We found some useful stuff too. Not a lot, but enough to be worth the effort. Here, have your share of it.' With that said, the bearded man gives you two bottles of water and a medkit.";
+			LineBreak;
+			say "[bold type]You gain 2 water bottles![roman type][line break]";
+			increase carried of water bottle by 2;
+			LineBreak;
+			say "[bold type]You gain 1 medkit![roman type][line break]";
+			increase carried of medkit by 1;
+		-- 2:
+			say "'We found something useful too. A small box of energy bars, enough to share between us. Here, take these.' With that said, the bearded man gives you a handful of power bars.";
+			LineBreak;
+			say "[bold type]You gain 4 food![roman type][line break]";
+			increase carried of food by 4;
+		-- 3:
+			say "'We found a really good haul! Lots of useful stuff. Here, have your share of it.' With that said, the bearded man gives you some food, a bottle of water and a medkit.";
+			LineBreak;
+			say "[bold type]You gain 2 food![roman type][line break]";
+			increase carried of food by 2;
+			LineBreak;
+			say "[bold type]You gain 1 water bottle![roman type][line break]";
+			increase carried of water bottle by 1;
+			LineBreak;
+			say "[bold type]You gain 1 medkit![roman type][line break]";
+			increase carried of medkit by 1;
+		-- 4:
+			say "'We found some odds and ends that looked interesting. I wonder who may have stashed it in this place. Whoever it was, hope they're not too pissed about me finding it when they come back. Or well, [italic type]if[roman type] they come back. One never knows, with the state of things.'";
+			LineBreak;
+			say "[bold type]You gain 1 healing booster![roman type][line break]";
+			increase carried of healing booster by 1;
+			LineBreak;
+			say "[bold type]You gain 1 sports drink![roman type][line break]";
+			increase carried of sports drink by 1;
+			LineBreak;
+			say "[bold type]You gain 1 pepperspray![roman type][line break]";
+			increase carried of pepperspray by 1;
+		-- 5:
+			say "'Sadly, there wasn't anything usable to find in here. Everything edible had already gone bad, and it seems someone went through the place already too. Well, I guess you win some days and lose on others. Come on, let's get out of here.'";
+	WaitLineBreak;
+	say "     The four of you leave the building after that, moving out into the dangerous streets of the city. The trip back to the green apartment building is not without its own perils, including a few close encounters with aggressive infected, but between travelling in a group and taking stealthy side alleys whenever possible, you eventually arrive back at Brennan's home without having to fight again. A short elevator ride later, you are back where you started. 'Glad you joined us for scavenging today my friend,' the human survivor tells you with a smile, then yawns. 'I'm pretty beat though - so I hope you'll exuse me in going to bed now.'";
+	move Brennan to Brennan's Bedroom;
+	follow the turnpass rule;
+	follow the turnpass rule;
+	move Brennan to Brennan's Bedroom;
+	follow the turnpass rule;
+
+to say BrennanScavTalk:
+	say "     Stepping up to Brennan, you suggest that the two of you - or four, counting the wolves - might go out and scavenge the city together. The human survivor smiles and replies, 'Sure thing, that's a good idea [if player is not defaultnamed][name of player][else]my friend[end if]. I usually go out sometime in the afternoon, after most of the infected have fucked themselves out for the day and are sleeping off the high of sex. Feel free to join me then. I already got some ideas for good places we might hit together.'";
+	
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
@@ -1906,6 +2033,49 @@ to BrennanRomulusRemusThreesome:
 		say "     You decide to step away and busy yourself with other matters. After a while, a loud gasp is audible from the other room, followed by satisfied barking in two voices.";
 	now lust of Brennan is 7; [Romulus+Remus went for a threesome with Brennan]
 	now lastBrennanWolfScene is turns;
+
+an everyturn rule:
+	if (player is in Survivor Refuge and lust of Brennan > 6 and libido of Brennan > 0 and libido of Brennan < 101 and (TimekeepingVar is 6 or TimekeepingVar is -2) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex ok, mid-morning, 2 turn lockout, 50% chance]
+		BrennanWolfRepeatThreesome;
+
+after going to Survivor Refuge while (lust of Brennan > 6 and libido of Brennan > 0 and libido of Brennan < 101 and (TimekeepingVar is 6 or TimekeepingVar is -2) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex ok, mid-morning, 2 turn lockout, 50% chance]
+	BrennanWolfRepeatThreesome;
+
+to BrennanWolfRepeatThreesome:
+	say "     Standing in the main room of Brennan's apartment, you hear some unmistakable sounds from behind the bedroom door: moans, grunts, and the yips and barks of excited wolves. Sounds like Brennan and his two wolves are at it again. Curiosity makes you walk closer, and soon you see some movement through the leaned-to door - Brennan is lying naked on the bed, together with his canine companions.";
+	LineBreak;
+	say "     [bold type]Do you want to stick around and watch them have some fun together?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Watch some sexy wolf on trans-man action.";
+	say "     [link](2)[as]2[end link] - No. Let them have their privacy.";
+	say "     [link](3)[as]3[end link] - Actually, you'll open the door and walk in there.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to watch, [link]2[end link] to step away or [link]3[end link] to join them.";
+	if calcnumber is 1: 
+		LineBreak;
+		project the figure of Brennan_face_icon;
+		say "     Quietly walking closer, you give the door a tiny bit of a push, widening the gap to watch through. From your new position, you can see Brennan stretched out across the bed on his back, legs spread and presenting his pussy to Romulus, who is busy pounding into his folds with a big red doggy cock. The wolf is stretched out over the trans-man's chest in a bit of an odd position for a canine, but clearly, he'll do anything to make his master happy - and get his dick wet in a tight pussy of course. But that's not the only wolf on the bed, as Remus is standing next to his human master, making out with Brennan in sloppy licks and kisses. Both the feral's tails are beating up a storm, emphasizing how ecstatically happy they are to be allowed some intimate time with their alpha. Before long, Brennan can't restrain himself any more and pulls Remus head aside to almost shout out a climactic moan.";
+		say "     Thrashing under the humping wolf as he comes, Brennan wraps his arms and legs around Romulus, holding on to the feral beast to ride out his orgasm. Meanwhile, the wolf is intensely stimulated by the gush of wetness around his thrusting shaft, as well as the knowledge that he got his alpha off, and he goes wild with grinding against the stretched-out man. 'Fuuck yeah! Knot me Romulus! I want it all!' Brennan gasps out as he feels the wolf's bulge start to grow inside his pussy. Hands shooting up to catch the canine's furry head between them, the human survivor pulls his wolf companion into a kiss, sucking on his floppy tongue as the beast ties with his pussy and starts to unload a series of thick blasts of cum to flood his womb. For a moment, Brennan just lies on the bed with his eyes closed, still sucking on the wolf's tongue and taking in the full sensation of his beloved companion breeding him.";
+		WaitLineBreak;
+		say "     The bedroom is filled with excited barks as Remus seems to 'talk' with his compatriot, maybe cheering him on and congratulating him on fucking their alpha. Both of the canines definitively seem extatically happy to be allowed such fun with Brennan. Circling around the entwined human and wolf, Remus comes to stand between Brennan's legs, sticking his muzzle to the spot where his packmate is joined with the trans-man. Sniffing excitedly, he starts to lick the human's pussy as well as his pack-mate's balls. Romulus twitches at the stimulation, his erection grinding against Brennan's insides and making the man buck against his waist, opening his eyes and moaning loudly. The wolf twists his head to look back, giving his friend a happy bark as he rides out the ecstasy of being in Brennan at the same time as getting his balls lapped and teased.";
+		say "     Then Remus raises his muzzle a little more, licking Romulus trembling tailstar instead. The wolf clearly knows that Brennan will be knotted for some time, so he wants to make use of another hole to get off himself. Romulus takes this new development in good humor, his tail never stopping to wag in obvious happyness, and then even giving an encouraging bark to his packmate. With the scent of Brennan's juices in his nose and turning him on so very much, Remus eagerly takes the invitation and jumps on Romulus's back, hips thrusting to find his mark under the other wolf's tail. After just a few thrusts, he spears his dick into the back door of his packmate and starts to rut him like a wild beast, eager to join his two companions in their climaxes.";
+		WaitLineBreak;
+		say "     Growls, grunts and moans fill the bedroom as Remus thrusts in and out of Romulus, and this makes the other wolf's knotted shaft push deeper into Brennan, then pull against the lips of his pussy when the topping wolf pulls out. His knot is already starting to balloon outwards, and Romulus instinctively moves a little with him as the thick bulge is popped past his pucker again and again. A deep plunge by the canine rod follows soon after, finally tying the two canines together as Remus knot swells up fully and gets to big to pull out again. A second later, the wolf starts to unload into his pack-mate, flooding his hole with splashes of creamy white seed. As Remus howls loudly to proclaim his orgasm to the world, Brennan laughs happily and reaches up to rub the sides of his second wolf's body.";
+		say "     As the immediate high of their shared lust abates over time, its sizzling intensity is replaced by a comfortable togetherness at being knotted with one another in a chain of canine cocks. 'I love both of you guys,' Brennan says with a satisfied groan, sending both of his companions['] tails beating rapidly and earning him a happy lick by Romulus. The man's arms pet both of his lovers, just holding and gently stroking them now. With the main action over by now and all of them starting to mellow out and relax, you quietly step back from the bedroom door, taking care not to be seen.";
+	else if calcnumber is 2:
+		LineBreak;
+		say "     You decide to step away and busy yourself with other matters. After a while, a loud gasp is audible from the other room, followed by satisfied barking in two voices.";
+	else: 
+		LineBreak;
+		say "     <WIP>";
+		now lust of Brennan is 8; [player stepped into the open and revealed that he knows they fuck around]
+	now lastBrennanWolfScene is turns;
+
 
 [ Idea Collection
 

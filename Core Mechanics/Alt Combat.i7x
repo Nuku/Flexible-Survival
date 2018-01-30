@@ -190,7 +190,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 				project icon entry;
 				break;		]
 	choose row monster from table of random critters;
-	say "You run into a [name entry in lower case].[line break][desc entry][line break]";
+	say "[bold type]You run into a [name entry in lower case].[roman type][line break][desc entry][line break]";
 
 
 Section 2 - Combat

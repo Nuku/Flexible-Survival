@@ -119,4 +119,27 @@ PlayerRenaming is an action applying to one topic.
 carry out PlayerRenaming:
 	now name of player is the topic understood;
 
+HighestPlayerStat is a text that varies.
+
+to FindHighestPlayerStat:
+	let CurrentStat be 0;
+	if Strength of player > CurrentStat:
+		now CurrentStat is Strength of player;
+		now HighestPlayerStat is "strength";
+	if Dexterity of player > CurrentStat:
+		now CurrentStat is Dexterity of player;
+		now HighestPlayerStat is "dexterity";
+	if Stamina of player > CurrentStat:
+		now CurrentStat is Stamina of player;
+		now HighestPlayerStat is "stamina";
+	if Charisma of player > CurrentStat:
+		now CurrentStat is Charisma of player;
+		now HighestPlayerStat is "charisma";
+	if Intelligence of player > CurrentStat:
+		now CurrentStat is Intelligence of player;
+		now HighestPlayerStat is "intelligence";
+	if Perception of player > CurrentStat:
+		now CurrentStat is Perception of player;
+		now HighestPlayerStat is "perception";
+
 Basic Functions ends here.

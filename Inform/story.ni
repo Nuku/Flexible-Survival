@@ -4855,6 +4855,7 @@ Include Catapult Encounter by Hellerhound.
 Include Central Library by Stripes.
 Include CEOutside by Stripes.
 Include CEPark by Stripes.
+Include Chase by Luneth.
 Include Chance Meetings by Kernog.
 Include Combat Helmet by Nuku Valente.
 Include Control Pills by Hellerhound.
