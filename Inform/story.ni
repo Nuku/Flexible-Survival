@@ -3513,7 +3513,10 @@ This is the explore rule:
 	if something is 0 and a random number from 1 to 20 < ( bonus + 8 ) and there is an unresolved situation:
 		let L be a random available situation;
 		If L is not nothing:
-			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
+			if battleground is "Smith Haven":
+				say "Wandering around a bit, you find [L].";
+			else:
+				say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
 			now something is 1;
 			now inasituation is true;
 			try resolving L;
@@ -3541,7 +3544,11 @@ This is the explore rule:
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
-	if something is 0, say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
+	if something is 0:
+		if battleground is "Smith Haven":
+			say "Wandering around a bit, stroll through the Smith Haven Mall, but don't find anything that really draws your attention right now.";
+		else:
+			say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
 	follow the turnpass rule;
 [	wait for any key;
 	now the menu depth is 0;]
@@ -5101,6 +5108,7 @@ Include Magic Drake by Stripes.
 Include Male Peacock for FS By Guest Writers.
 Include Mall Rat For Fs by Stripes.
 Include Mammoth For Fs by Stripes.
+Include Man-eating Plant by Kernog.
 Include Mannequin by Wahn.
 Include Manticore by Kaleem mcintyre.
 Include Mareslut by Sarokcat.
@@ -5207,6 +5215,7 @@ Include Vixentaur for FS by Stripes.
 Include Voodoo Gecko for FS by Stripes.
 Include Vulpogryph For Fs by Stripes.
 Include Werewolf Costume For Fs by Stripes.
+Include Whiptail by Vervaine.
 Include Wildcat For Fs by Stripes.
 Include Wolfman by Wahn.
 Include Wolftaur by Sarokcat.

@@ -11,6 +11,12 @@ Version 1 of Mark by Wahn begins here.
 [   0: not yet moving                                       ]
 [   1: started his daily rhythm                             ]
 
+[ thirst of Mark - Dinner invite                            ]
+[   0: no invite                                            ]
+[   1: single dinner invite extended                        ]
+[   2: player had dinner with them                          ]
+[   3: permanent dinner invite                              ]
+
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
@@ -26,7 +32,7 @@ The scent of Mark is "     Mark's fur, while well-kempt, is naturally slightly m
 
 to say MarkDesc:
 	if debugactive is 1:
-		say "DEBUG -> XP of Mark: [XP of Mark] <- DEBUG[line break]";
+		say "DEBUG -> XP: [XP of Mark], Thirst: [thirst of Mark], JayMarkRelationship: [JayMarkRelationship] <- DEBUG[line break]";
 	say "     Mark is a big and burly polar bear, about seven feet tall and with very broad shoulders. He has the typical snow white fur of his species, with a somewhat anthropomorphic head and a muzzle full of dangerous teeth. Much of the big man's bulk is muscle, filling out the rugged jeans and checkered flannel shirt of his outfit quite well. Overall, the powerful bear's attire is reminiscent of a stereotypical woodcutter, although he clearly has no need for an axe to be reckoned with - the sharp claws on his paw-hands are plenty already.";
 	say "     Noticing you looking at him, Mark turns his attention towards you, meeting your gaze with his dark amber eyes. The man then gives you a brief nod, acknowledging your presence";
 
@@ -73,7 +79,7 @@ Section 3 - Talking
 
 instead of conversing the Mark:
 	if XP of Mark is 0:
-		say "     ERROR: Mark shouldn't be available to talk to yet. Please report to Wahn on the FS Discord/Forum and quote this tracking number for easier bugfixing: [HP of Mark]";
+		say "     ERROR: Mark shouldn't be available to talk to yet. Please report to Wahn on the FS Discord/Forum and quote this tracking number for easier bugfixing: [XP of Mark]";
 	else:
 		say "[MarkTalkMenu]"
 
@@ -93,38 +99,50 @@ to say MarkTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Talk to Mark about Jay";
 	[]
+	if thirst of Mark is 1 and TimekeepingVar is not 3 and TimekeepingVar is not -5: [evening - came back from scavenging and is in the Foyer]
+		choose a blank row in table of fucking options;
+		now title entry is "Ask about the dinner invite";
+		now sortorder entry is 3;
+		now description entry is "Talk to the polar bear about his invitation for dinner";
+	[]	
+	if thirst of Mark is 1 and (TimekeepingVar is 3 or TimekeepingVar is -5): [evening - came back from scavenging and is in the Foyer]
+		choose a blank row in table of fucking options;
+		now title entry is "Have dinner with him and Jay";
+		now sortorder entry is 3;
+		now description entry is "Take the polar bear up on his invitation";
+	[]
 	if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning - Mark is at the foyer and can be joined for scavenging]
 		choose a blank row in table of fucking options;
 		now title entry is "Accompany Mark into the city";
-		now sortorder entry is 3;
+		now sortorder entry is 4;
 		now description entry is "Join the polar bear on a trip";
 	[]
 	if TimekeepingVar is 3 or TimekeepingVar is -5: [evening - came back from scavenging and is in the Foyer]
 		choose a blank row in table of fucking options;
 		now title entry is "Ask Mark about his trips into the city";
-		now sortorder entry is 4;
+		now sortorder entry is 5;
 		now description entry is "Talk to the polar bear about his scavenging";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ask him about the wolverines";
-	now sortorder entry is 5;
+	now sortorder entry is 6;
 	now description entry is "Talk to Mark about wolverine security";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ask him about the military";
-	now sortorder entry is 6;
+	now sortorder entry is 7;
 	now description entry is "Talk to Mark about the soldiers in the city";
 	[]
 	if HP of Santa Claws > 0: [player has been in the Christmas Village]
 		choose a blank row in table of fucking options;
 		now title entry is "Ask him about Santa Claws";
-		now sortorder entry is 7;
+		now sortorder entry is 8;
 		now description entry is "Talk to Mark about the polar bear Santa";
 	[]
 	if HP of Krampus > 0: [player has been to see Krampus]
 		choose a blank row in table of fucking options;
 		now title entry is "Ask him about Krampus";
-		now sortorder entry is 8;
+		now sortorder entry is 9;
 		now description entry is "Talk to Mark about the goat demon";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -146,6 +164,10 @@ to say MarkTalkMenu:
 					say "[MarkTalk1]";
 				if (nam is "Chat about his elven lover Jay"):
 					say "[MarkTalk2]";
+				if (nam is "Ask about the dinner invite"):
+					say "[MarkDinnerTalk]";
+				if (nam is "Have dinner with him and Jay"):
+					say "[MarkDinnerInvite]";
 				if (nam is "Accompany Mark into the city"):
 					say "[MarkScavengingTrip]";
 				if (nam is "Ask Mark about his trips into the city"):
@@ -180,6 +202,26 @@ to say MarkTalk1: [talk about him]
 to say MarkTalk2: [talk about Jay]
 	say "     As you ask the large polar bear about his partner, the man grins broadly and replies, 'He is quite something, isn't he? The perfect little package - sexy, funny and strong in character. And what's best, Jay's a total slut for my cock. Hell, I fuck him a few times a day, and I [italic type]still[roman type] wake up with the guy's trembling hole stretched around my shaft. He just climbs on it and rides me. Best way to be woken up, I can tell you that!' The memories of being with his lover create a noticeable tent in Mark's pants, which he adjusts without any shyness, pushing his dick to the side and creating a clearly visible outline of his huge, hard shaft. 'Fuck yeah, I love that man. Been doing that since the day we met, five years ago, even though things were quite different back then of course. I was his bottom boy, not the other way around.'";
 	say "     Waving a hand to indicate his muscular bulk, the man explains, 'Forget this bear you see for a moment and imagine a slender dude. Neither a twink nor a bodybuilder, just thin and fit. Anyways, I was working at a downtown restaurant - 'Tati's', a pretty nice Romanian place, little bit fancy - and there was this attractive hunk of a man with some older guy. Oh yeah, Jay was really hot that night, tailored suit and everything. Gave him some winks, and before I knew it, he took me as dessert. Pushed me into the restrooms and fucked my mouth in the handicapped stall.' A pleased sigh crosses his lips, with Mark looking a bit dreamily. 'Barely took three months before he asked for my hand, and I gave it to him.' Raising a large and clawed paw-hand, the bear wiggles his pinkie finger - the only one small enough to fit the broad gold band of a human-sized ring that he proudly presents to you.";
+
+to say MarkDinnerTalk:
+	say "     Mark smiles and pats your shoulder in a friendly way. 'As I said, we owe you for the help you gave Jay. Feel free to meet me here in the evening and you'll be treated to a nice dinner. Just be sure you're hungry, alright?'";
+
+to say MarkDinnerInvite:
+	if thirst of Mark is 1: [single invite]
+		say "     As you bring up the dinner invitation, Mark smiles and nods, then gets up from where he is sitting and hefts the well-stuffed backpack onto his shoulder. 'Okay then, let's get going!' he says in a warm and companionable tone and leads you through the crowd of mall inhabitants, striding towards the food court. His partner Jay is already waiting there for Mark, standing up from a booth he was sitting in to welcome the polar bear with a kiss (after being lifted by strong, white-furred arms). 'We'll have some company for dinner today honey,' Mark explains to his lover when they pull apart again, nodding to you as he does so. 'Hello [if player is not defaultnamed][name of player][else]there[end if], nice to see you again and wanna have dinner with us,' the elf says to you, then asks Mark to put him down and goes to the nearest food counter to have a few words with one of the mall rats. Only a little while later, a large food carrier bag is pushed over the counter, to be picked up by Mark and caried off, with Jay and yourself following behind.";
+		say "     'You haven't been at our place yet, have you?' Jay asks conversationally as the two of you walk in the wake of Mark's passage through the busy mall. 'We've managed to negotiate the use of one of the administration offices. Given the circumstances, it is pretty nice and private, as compared to kist camping out in one of the stores.' Soon, the three of you arrive in the east wing and the elven man pulls a key from his pocket to unlock a fairly inconspicuous door between two stores. There is a 'Staff only' sign on it, and the doorknob apparently doesn't turn at all, making the key the only way to even open the door. Beyond lies a narrow service corridor, which has a stairway up to the second floor after a little bit. Your little group goes upstairs, passing an office or two until Jay and Mark guide you into a room that has been repurposed as a kind of loft, with living arrangements and a salvage storage area.";
+		WaitLineBreak;
+		say "     Mark busies himself with putting away his backpack and fresh salvage, leaving you free to look around a little. Relatively spartan as it is, the place still is filled with the atmosphere of being someone's home, and you recognize the effort that the polar bear put into making things comfortable for both of them. For example, the Mall didn't include a furniture store, but there is a large coffee table set up in front of the row of windows overlooking the interior of the east wing of the Smith Haven Mall. Mark must have salvaged it from some place out in the city and carried it here, simply to give his partner a place to sit at without feeling small. A very large mattress dominates the back of the room, complete with an unruly pile of blankets and a few pillows. It is clear that the two of them do make regular use of that, and not just for sleeping.";
+		say "     'Come on, you can put down your stuff over there, then sit down. You're our guest so just relax and let us take care of everything,' Jay tells you, then guides you to the coffee table, where you sit down cross-legged while he sets the table, laying out napkins and your choice of chopsticks or cutlery. Sitting down on a footstool just the right height to act as a chair for his diminutive form, the Christmas Elf has a little bit of small talk with you until Mark joins in, sitting down on the ground. 'Dig in everyone,' he says cheerfully, opening the isolated bag and setting box after box of chinese take out on the table. The polar bear, elf and yourself have a pleasant dinner together, sharing various dishes between each other and leaving everyone very well-sated.";
+		WaitLineBreak;
+		say "     Afterwards, you have a little more conversation about general themes of the Mall and what is going on in the city, before Jay and Mark eventually call it a night when things wind down. With the elf smiling and saying, 'Thanks again for your help. It was nice of you to step in,' you are led out of their private place.";
+		now hunger of player is 0;
+		now thirst of player is 0;
+		now thirst of Mark is 2; [single invite done]
+	else if thirst of Mark is 2:
+		say "     ERROR: Mark shouldn't be offering you dinner after the initial invite got expended. Please report to Wahn on the FS Discord/Forum and quote this tracking number for easier bugfixing: thirst of Mark: [thirst of Mark]";
+	else: [perma-invite]
+		say "     <WIP>";
 
 to say MarkTalk3: [talk about the wolverines]
 	say "     Mark glances over to the muscular mustelids stoically keeping an eye on the entrance for a second, then turns his attention back to you. 'I know that some people do not like the guys because of their uncompromising stance on... just about anything, but let's face it: The Smith Haven Mall would not exist as the refuge it has become without them. Wolverine Security keeps everyone safe from being overrun by the beasts out there that think of nothing but sex anymore, and one should always remember that these men and women have needs too - amplified, burning lusts - and are more than strong enough to just take whomever they wanted from among the refugees. Discipline is what the wolverines live by, and their strength of will to stay true to their jobs should be admired.' Stretching out his arm and indicating the foyer, then the Mall overall, he adds, 'You should have heard the bitching and moaning about the no-littering rules being upheld, along with all of the other regulations the Mall has on its books. I think enduring a bit of over-zealousness is a low price to pay for being kept safe, and I for one like the fact that we're not living in a pig sty too.'";
@@ -398,6 +440,12 @@ Section 4 - Fucking
 [***********************************************************]
 
 instead of fucking the Mark:
+	if cocks of player is 0:
+		say "     Sniffing the air a little and glancing down to your crotch, Mark gives a rumbling sound from the depth of his broad chest as he clears his throat, then shakes his head. 'Sorry, but I'm gay. Not really interested in anything but men, at least in terms of sex....'";
+	else:
+		say "     Sniffing the air a little and glancing down to your crotch, Mark gives a rumbling sound from the depth of his broad chest as he clears his throat, then shrugs a little. 'That's an interesting offer, my friend. Though my heart, and dick, belong to only one man - my husband Jay. Don't misunderstand me, we do threesomes sometimes, but only together. Well, and there were a few selected friends of ours that we gave one another permission to fuck around with too, admittedly. But those were special cases and people we knew for years.' As the big bear turns away, the topic over in his mind, you begin to wonder what you might do to reach that level of friendship with the elf and polar bear couple...";
+	
+[
 	if 2 > 1:
 		say "     <Sorry, this part of Mark is still WIP>";
 	else:
@@ -407,6 +455,7 @@ instead of fucking the Mark:
 			say "     As you walk up to Mark, <positive reaction at being approached for sex>";
 			wait for any key;
 			say "[MarkSexMenu]";
+]
 
 to say MarkSexMenu:
 	LineBreak;

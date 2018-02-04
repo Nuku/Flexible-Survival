@@ -114,6 +114,12 @@ to say FeralDogSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Impale yourself on the [FeralMuttFurColor] [FeralMuttCurrentBreed]'s cock";
 	[]
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck his ass";
+		now sortorder entry is 3;
+		now description entry is "Thrust your dick into the [FeralMuttFurColor] [FeralMuttCurrentBreed]'s ass";
+	[]	
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -133,6 +139,8 @@ to say FeralDogSexMenu:
 					say "[SuckFeralMutt]";
 				if (nam is "Ride his cock"):
 					say "[RideFeralMutt]";
+				if (nam is "Fuck his ass"):
+					say "[FuckFeralMutt]";					
 				now lastfuck of Brennan is turns;
 				wait for any key;
 		else if calcnumber is 100:
@@ -171,6 +179,14 @@ to say SuckFeralMutt:
 	else if cunts of player > 0 and cocks of player > 0:  			  [Yes = HERM Identified!]
 		say "     Striding up to the creature you grab hold of his doggy cock, squeezing it and feeling it pulse and grow as spurts of canine pre dribble out of its tip. You lick your lips looking hungrily at the exotic cock and ducking beneath the muscled feral's furry underbelly to get a taste. You lick the long dog rod from knot to tip before taking the tasty meat into your maw and sliding it slowly down your throat. The dog waivers to the side and falls over, cock still being suckled by you as he lays on his side whimpering in pleasure. You suck on the dog meat and rub the balls of the [FeralMuttCurrentBreed] before popping the raging hard red rocket out and trailing your tongue down to his large gonads. Taking in the musky smell of the male dog you can feel your head swimming and your desire growing as you press your nose to the ferals scrotum taking in his sexy masculine scent.";
 		say "     The dog for his part is on his side, tongue lolled out and panting in pleasure. You smile at the beast letting a testicle fall from your mouth before taking the dog's engorged member back into your mouth and sinking it all the way to his knot. Holding their for a minute letting your throat massage his canine cock. Suddenly a torrent of thick feral seed is flooding your stomach, so much so that it fills your mouth and oozes around your lips and mouth, trickling down your chin and onto the ground below. You swallow it down eagerly, making wet sucking and swallowing sounds you clean the canine thoroughly, drinking down every drop of musky seed. Letting the softening dog dong fall from your lips with a few final licks you look up to see the dog snoring soundly. You shake your head and smile, wiping a dribble of canine cum from your chin and swallowing it with a final smack of your lips before moving on.";
+
+to say FuckFeralMutt:
+	if cunts of player is 0 and cocks of player > 0:  	  [Yes = MALE Identified!]
+		say "     Seeing your opportunity for a display of dominance you position yourself behind the dazed mutt. Fishing out your hardening length you give yourself a few strokes whilst holding the flanks of the beaten mutt in place. Pressing the tip of your male-hood against the wild dog's anal ring, you slowly push into the tight warm confines, making the mutt below you whine in a mix of pain and pleasure. Before long though, after a few gentle thrusts the horny beast is panting and leaning back against your hips. You can feel his tight confines tighten around you as he shoots his load onto the cold ground below. His canine cock twitches and pulses as it slowly deflates, dripping a little more cum onto the soaked dirt beneath.";
+		say "     Far from satisfied though you don't let up, you pound the feral's ass until you reach your own pleasant climax and fill the barely conscious hound up with thick spunk. It fills his back passage to the brim and spurts out, drooling down the base of your slowly softening member. Pushing the beast off your cock you stand up triumphant over the creature. You take a few moments to enjoy the sight of the creamed and abused ass of the [FeralMuttCurrentBreed] before you continue on your way, quite satisfied.";
+	else if cunts of player > 0 and cocks of player > 0:  			  [Yes = HERM Identified!]
+		say "     Seeing your opportunity for a display of dominance you position yourself behind the dazed mutt. Fishing out your hardening length you give yourself a few strokes whilst holding the flanks of the beaten mutt in place. Pressing the tip of your male-hood against the wild dog's anal ring, you slowly push into the tight warm confines, making the mutt below you whine in a mix of pain and pleasure. Before long though, after a few gentle thrusts the horny beast is panting and leaning back against your hips. You can feel his tight confines tighten around you as he shoots his load onto the cold ground below. His canine cock twitches and pulses as it slowly deflates, dripping a little more cum onto the soaked dirt beneath.";
+		say "     Far from satisfied though you don't let up, you pound the feral's ass until you reach your own pleasant climax and fill the barely conscious hound up with thick spunk. It fills his back passage to the brim and spurts out, drooling down the base of your slowly softening member. Pushing the beast off your cock you stand up triumphant over the creature. You take a few moments to enjoy the sight of the creamed and abused ass of the [FeralMuttCurrentBreed] before you continue on your way, quite satisfied.";
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)

@@ -13,6 +13,10 @@ Instead of resolving a Strange Shop:
 	say "     The beasts are hot on your heels as you dart through alleyways and down the mostly deserted streets of the city. You just can't seem to shake your pursuers however, and as you run from them in a reckless sprint, you find that the chase is attracting a good deal of additional from other infected in the city. Glancing back, you are shocked to see that there are now a group of gryphons squabbling with a wyvern above, the only reason one of them hasn't swooped down yet being their disagreement of who gets to do it. Then a pair of harpies joins the throng, further heating up the shouting and screeching match. Man, you really built a train of predators eager to snatch you! And worse yet, the dragators are gaining ground on you too!";
 	WaitLineBreak;
 	say "     Your eyes dart around, looking desperately for any avenue of escape, only to spot an alley up ahead. Taking a chance, you make a hard turn into the alley and see a half-open door only twenty or so feet ahead. Putting on one last burst of speed, you waste no time in diving through it, slamming the wooden door shut behind you. Panting loudly, brace against the door from the inside - partially to hold it shut, partially so you don't collapse in exhaustion, not really registering what is around you. Indeed, you close your eyes to listen, dreading sounds of clawed paws thundering down the alley, followed by splintering wood. But... they don't actually materialize. All is silent on the other side of the door. Could it be that you have shaken your pursuers?";
+	if RareQuesting is 13: [naked jackal bitch for the jackalman player]
+		project the figure of Nermine_naked_icon;
+	else:
+		project the figure of Nermine_clothed_icon;
 	if NermineTalk is 0: [never met Nermine]
 		say "     'Well, that is interesting,' a feminine voice suddenly says close to you, making you flinch in shock at its sudden appearance. Blinking and looking around, for the first time taking in where you actually ended up, you see that it is a... store, maybe? The place is only partially lit, with a number of thick candles bathing the room in a soft glow. All around you, there are high shelves stuffed with all sorts of wondrous items, many of them looking ancient - from books to various masks, statues, and mystic paraphernelia. The person who spoke to you is a woman, an anthro jackaless from the looks of her, standing right in front of you and looking you up and down with interest. 'Welcome to Nermine's store. The friendly jackaless eagerly greets her prospective customer.'";
 		WaitLineBreak;
@@ -70,7 +74,6 @@ Instead of resolving a Bacchus Wine:
 			say "     Sadly your clumsy feet are not up to following the nimble beasts quietly enough, and while the rest continue on, two of them turn back to see what the noise was.";
 			challenge "Satyr";
 			challenge "Satyr";
-
 
 Stolen Jewelry is a situation.
 The Sarea of Stolen Jewelry is "Museum".

@@ -84,6 +84,7 @@ Instead of resolving a Mark's Dinner Invite:
 	say "     '[if JayMarkRelationship is 1]Hey there, I'm Mark [end if]I hear you've been helping out my man. Thank you. Things have been hard for him since the transformation. So, how about joining us for dinner sometime? Got some good hauls out in the city recently, and we'd be happy to share a little something with a nice person like yourself,' the bear offers with a smile that shows off his large, sharp fangs. 'When you have the time, just meet me at the north entrance of the mall in the evening. I always come in on that side after a day's scavenging and hang out a bit with the wolverines. And be sure you're hungry, it'll be a nice little feast.' The bear squeezes your shoulder in a friendly way, then walks off again, leaving you to dwell on his offer.";
 	now Mark's Dinner Invite is resolved;
 	now JayMarkRelationship is 2; [player knows their names (for sure)]
+	now thirst of Mark is 1; [dinner invite extended]
 	now XP of Mark is 1; [starting his daily rhythm]
 	now XP of Jay is 1; [starting his daily rhythm]
 

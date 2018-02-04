@@ -366,7 +366,7 @@ to ArmyConvoyEvent:
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 			break;
 		else:
-			say "Invalid choice. Type [link]1[end link] to A, [link]2[end link] to B or [link]3[end link] to C.";
+			say "Invalid choice. Type [link]1[end link] to go on the trip, [link]2[end link] to to postpone or [link]3[end link] to decline.";
 	if calcnumber is 1:
 		LineBreak;
 		say "[ArmyConvoyTrip]";
@@ -1548,7 +1548,7 @@ to say BrennanScaveningRandomEnemy:
 		say "     As you sway back and forth, dangerously close to total exhaustion, you suddenly hear Brennan call your name, as well as the aggressive barks of his two wolves as they rush to your aid. After having deemed victory to already be theirs, your opponent growls at the sudden appearance of three new fighters. Not wanting to chance being overwhelmed, they flee and leave you behind.";
 		say "[BrennanScavPayout]";
 	else if fightoutcome is 30: [fled]
-		say "     Dashing out onto the street at a run, you are followed by your opponent, leading to a protracted chase. By the time you manage to chase them and make your way back to where you started, Brennan and the wolves have finished their trip through the building, and are standing near the entrance, looking around for where you might have ended up. The human survivor looks relieved when he sees that you are alright and that you led a dangerous opponent away from where he and his canine companions were scavening.";
+		say "     Dashing out onto the street at a run, you are followed by your opponent, leading to a protracted chase. By the time you manage to shake them and make your way back to where you started, Brennan and the wolves have finished their trip through the building, and are standing near the entrance, looking around for where you might have ended up. The human survivor looks relieved when he sees that you are alright and that you led a dangerous opponent away from where he and his canine companions were scavening.";
 		say "[BrennanScavPayout]";
 
 to say BrennanScavPayout:
@@ -2034,12 +2034,15 @@ to BrennanRomulusRemusThreesome:
 	now lust of Brennan is 7; [Romulus+Remus went for a threesome with Brennan]
 	now lastBrennanWolfScene is turns;
 
+[ Commented out till I have time to finish the player involvement scene]
+[
 an everyturn rule:
 	if (player is in Survivor Refuge and lust of Brennan > 6 and libido of Brennan > 0 and libido of Brennan < 101 and (TimekeepingVar is 6 or TimekeepingVar is -2) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex ok, mid-morning, 2 turn lockout, 50% chance]
 		BrennanWolfRepeatThreesome;
 
 after going to Survivor Refuge while (lust of Brennan > 6 and libido of Brennan > 0 and libido of Brennan < 101 and (TimekeepingVar is 6 or TimekeepingVar is -2) and lastBrennanWolfScene - turns > 3 and a random chance of 1 in 2 succeeds): [wolf sex ok, mid-morning, 2 turn lockout, 50% chance]
 	BrennanWolfRepeatThreesome;
+]
 
 to BrennanWolfRepeatThreesome:
 	say "     Standing in the main room of Brennan's apartment, you hear some unmistakable sounds from behind the bedroom door: moans, grunts, and the yips and barks of excited wolves. Sounds like Brennan and his two wolves are at it again. Curiosity makes you walk closer, and soon you see some movement through the leaned-to door - Brennan is lying naked on the bed, together with his canine companions.";
