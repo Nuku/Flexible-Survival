@@ -15,7 +15,7 @@ Version 1 of Chase by Luneth begins here.
 [ dexterity of Chase - relationship type                         ]
 [   0: no long-term relationship type decided yet                ]
 [   1: monogamous mate with dom-Chase                            ]
-[   2: primal mate with dom-Chase                     ]
+[   2: primal mate with dom-Chase                                ]
 
 [ libido of Chase - M/F content progression                      ]
 [   0: no sex talk yet                                           ]
@@ -127,7 +127,7 @@ to say RegularChaseTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Just talk with the tiger";
 	[]
-	if ChaseSexCounter is 6:
+	if ChaseSexCounter is 6 and lust of Chase < 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Attack plan";
 		now sortorder entry is 2;
@@ -584,7 +584,7 @@ to say TigertaurQuestBattle: [conversation to begin tigertaur battle mission]
 	LineBreak;
 	say "     [bold type]Are you ready to take the fight to the tigertaurs?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - This is a long time coming, it's time to end this!";
-	say "     ([link]N[as]n[end link]) - Your not prepared for the fight just yet, better safe than sorry.";
+	say "     ([link]N[as]n[end link]) - You're not prepared for the fight just yet, better safe than sorry.";
 	if player consents:
 		LineBreak;
 		say "     Deciding that you are ready you give Chase a nod of confirmation. 'Alright sounds like we are gonna do this then!' Coming over the tiger places his finger under your chin, lifting your face close to his. 'We can do this. I know we can, but... just incase anything happens, I want the chance to to tell you how much you doing this means to me.' A chaste kiss is placed upon your lips which grows in intensity until you find your back being slammed against a wall. You feel furred paws groping every inch of you that they can and you're no better, hands feeling the soft fur covered muscles under your touch. You can't help but allow yourself to graze up against his sheath, the head already beginning to poke out.";
