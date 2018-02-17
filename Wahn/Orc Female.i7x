@@ -15,6 +15,8 @@ Version 1 of Orc Female by Wahn begins here.
 [  1: friendly path active                                               ]
 [  4: friendly to the player                                             ]
 [  6: had sexy times with her                                            ]
+[ 97: didn't have a medkit before                                        ]
+[ 98: didn't give a medkit before                                        ]
 [ 99: raped her, all friendly contact hope lost                          ]
 [                                                                        ]
 [ Libido of Katya - lust of the orc                                      ]
@@ -517,7 +519,7 @@ to say KatyasCampDesc:
 
 Section 5 - Events
 
-instead of going northeast from Inconspicuous Trail while (Katya is in Hidden Camp and KatyaResistance > 0 and KatyaRelationship < 4):
+instead of going northeast from Inconspicuous Trail while (Katya is in Hidden Camp and KatyaResistance > 0 and (KatyaRelationship < 4 or KatyaRelationship > 90)):
 	if KatyaRelationship is 0: [still got a possibility for friendly contact]
 		say "     Standing on the narrow trail through the high grass, you can't help but think of Katya, the proud orc woman you met not too far away from here. Sure, things kinda went awry on your first meeting, with a fight between the two of you before you quickly left her camp soon after, but... hm, maybe things could have gone differently - and could still be different. She didn't seem like the typical foaming-at-the-mouth aggressive infected, and while she did her best to clobber you, that was after just stepping into her camp unasked.";
 		say "     [bold type]This seems as good a time as any to decide what you want to do about the orc...[roman type][line break]";
@@ -712,6 +714,8 @@ instead of sniffing Katya:
 	say "     Katya has an interesting scent, combining masculine and feminine notes with a little bit of honest sweat. She gives a rough chuckle and grins at you with her tusks showing as you lean in and sniff her.";
 
 to say KatyaDesc:
+	if debugactive is 1:
+		say "     DEBUG: HP of Katya: [HP of Katya], KatyaResistance: [KatyaResistance], KatyaRelationship: [KatyaRelationship] [line break]";	
 	say "     Katya definitively is an orc to be reckoned with. About 7 feet tall, her build is broad-shouldered and packed with muscles. She has the typical features that define an orc - green skin, a pair of sharp tusks poking up from her lower mandible, slightly over-sized hands and feet, black somewhat bristly hair (which she wears as a mane that hangs down behind her back) - yet there are some differences too. For example the full orbs of her breasts proudly bulging out the fabric of a chest-wrap improvised from ragged cloth, as well as the fact that her loincloth is NOT bulging with a heavy cock dangling between her legs.";
 	say "     The female orc nods to you as she notices your attention, then grins and gives you a few lewd looks herself. Something tells you she's imagining you naked, possibly pinned to the ground underneath muscular body.";
 

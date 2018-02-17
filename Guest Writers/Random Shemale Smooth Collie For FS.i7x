@@ -15,7 +15,9 @@ Section 1 - Monster Responses
 colliedefeat is a number that varies.
 
 to say Shemale Smooth Collie attack:
-	if colliedefeat is 0:
+	if inasituation is true:
+		say ""; [dealt with at the event source]
+	else if colliedefeat is 0:
 		say "     The bitch quickly bowls you over as your body begins to go limp from the pain and battle weariness. She sniffs eagerly at your crotch while flipping you onto your hands and knees, her tongue slipping out to lap gently before she yanks your clothes off with disturbing ease. She wastes no time at all in foreplay beyond that, her massive cock already hard and dripping as she shoves it up against your [if cunts of player > 0]sensitive folds[else]tense sphincter[end if] and applies a little pressure while her precum serves to make this easier on both of you... if only slightly.";
 		say "     She only manages to squeeze a few inches into your tense body at first, but with each stroke the pleasure grows and your body responds by loosening up a bit. You find yourself moaning after only a minute of her slow fucking, the pleasure quickly building to a peak that has your hips bucking and jerking, your spread muscles clenching down on the thickness within, putting even more pressure on her sensitive glans. She arches her back and howls as her balls tighten up, that lengthy prick swelling slightly just before she unloads within you. In only a few seconds she pulls out and moans as her ongoing orgasm paints your back white. 'You're such a good lay. I can't wait to see how you turn out.'[impregchance]";
 		now colliedefeat is 1;
@@ -67,59 +69,61 @@ to say Shemale Smooth Collie attack:
 
 
 to say Shemale Smooth Collie defeat:
-	say "     The shemale falls to the ground with a thunderous thud and you can even feel the vibrations rolling up your feet as her large canine body hits the ground in defeat. Smirking to yourself while you look over the creature, you can't help but lick your lips and stare at that shapely rear presenting itself to you. The defeated Collie is groaning and writhing stomach down upon the ground, which gives you a nice view of the massive cum-factories between her legs and the overly immense, though slowly softening manmeat to go with them[if libido of player > 30]. Silently contemplating to yourself, you let out a thoughtful, 'Hrm...' as you gaze lustfully at that plump rear and heavy set of most definitely potent baby makers[end if].";
-	say "     Do you want to have some fun with the defeated collie?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	if cocks of player > 0:
+	if inasituation is true:
+		say ""; [dealt with at the event source]
+	else:	
+		say "     The shemale falls to the ground with a thunderous thud and you can even feel the vibrations rolling up your feet as her large canine body hits the ground in defeat. Smirking to yourself while you look over the creature, you can't help but lick your lips and stare at that shapely rear presenting itself to you. The defeated Collie is groaning and writhing stomach down upon the ground, which gives you a nice view of the massive cum-factories between her legs and the overly immense, though slowly softening manmeat to go with them[if libido of player > 30]. Silently contemplating to yourself, you let out a thoughtful, 'Hrm...' as you gaze lustfully at that plump rear and heavy set of most definitely potent baby makers[end if].";
+		say "     Do you want to have some fun with the defeated collie?";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		if cocks of player > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck her butt";
+			now sortorder entry is 1;
+			now description entry is "have your way with the shemale's ass";
 		choose a blank row in table of fucking options;
-		now title entry is "Fuck her butt";
-		now sortorder entry is 1;
-		now description entry is "have your way with the shemale's ass";
-	choose a blank row in table of fucking options;
-	now title entry is "Suck her off";
-	now sortorder entry is 2;
-	now description entry is "suck a load of hot cum from her big balls";
-	if cunts of player > 0 and ( cunt length of player >= 18 and cunt width of player >= 6 ):
-		choose a blank row in table of fucking options;
-		now title entry is "Ride her (vaginal)";
-		now sortorder entry is 3;
-		now description entry is "stuff your roomy cunny with that big doggy dick";
-	if scalevalue of player > 3 or player is twistcapped:
-		choose a blank row in table of fucking options;
-		now title entry is "Ride her (anal)";
-		now sortorder entry is 4;
-		now description entry is "sink your [if player is twistcapped]stretchy[else]enlarged[end if] ass down onto that big doggy dick";
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Leave her alone[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "Shall you [description entry]?";
-			if player consents:
-				let nam be title entry;
+		now title entry is "Suck her off";
+		now sortorder entry is 2;
+		now description entry is "suck a load of hot cum from her big balls";
+		if cunts of player > 0 and ( cunt length of player >= 18 and cunt width of player >= 6 ):
+			choose a blank row in table of fucking options;
+			now title entry is "Ride her (vaginal)";
+			now sortorder entry is 3;
+			now description entry is "stuff your roomy cunny with that big doggy dick";
+		if scalevalue of player > 3 or player is twistcapped:
+			choose a blank row in table of fucking options;
+			now title entry is "Ride her (anal)";
+			now sortorder entry is 4;
+			now description entry is "sink your [if player is twistcapped]stretchy[else]enlarged[end if] ass down onto that big doggy dick";
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Leave her alone[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "Shall you [description entry]?";
+				if player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if nam is "Fuck her butt":
+						say "[CollieFucking]";
+					else if nam is "Suck her off":
+						say "[CollieSucking]";
+					else if nam is "Ride her (vaginal)":
+						say "[CollieVagRide]";
+					else if nam is "Ride her (anal)":
+						say "[CollieAnalRide]";
+			else if calcnumber is 0:
 				now sextablerun is 1;
-				if nam is "Fuck her butt":
-					say "[CollieFucking]";
-				else if nam is "Suck her off":
-					say "[CollieSucking]";
-				else if nam is "Ride her (vaginal)":
-					say "[CollieVagRide]";
-				else if nam is "Ride her (anal)":
-					say "[CollieAnalRide]";
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     Striding away with your head held high, you leave the Collie to her fate.";
-		else:
-			say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
-	wait for any key;
-	clear the screen and hyperlink list;
-
+				say "     Striding away with your head held high, you leave the Collie to her fate.";
+			else:
+				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say CollieSucking:
 	LineBreak;
@@ -176,11 +180,14 @@ to say CollieAnalRide:
 	say "     Savouring this, you work inch after inch of the dog creature's dick into your rear as you continue to ride her, sinking just a little lower every time you go down. Happy for a hot hole to fill, her cock pulses and throbs inside you with an obvious need for release. And from the heft of those balls of hers, you know it'll be a big one - just what your sex-fuelled mind desires. The feel of it stuffing your ass and [if cocks of player > 0]throbbing against your prostate[else]stretching your bowels[end if] as it pushes deeper and deeper inside you is wonderful. Eventually you work your way down to her knot and you grind against the thick bulge. Your asshole[if player is not twistcapped] slowly[end if] stretches open, eventually reaching the point you're able to force the hard bulb into your rectum.";
 	say "     Your anal muscles clamp down around the base of the knot while your rectal walls squeeze down onto it, drawing a lustful howl from the collie. You can feel those hot, heavy orbs under your ass pull up and throb a moment before the first of a near-constant stream of doggy cum shoots into you. Her seed gushes into your bowels, flooding them [if player is mpreg_ok]and your hidden womb [end if]with a torrent of virile cum. She continues to cum even after you're full, stretching your belly as she pumps more and more of her thick, fertile seed into your belly. After what feels like gallons of cum has been stuffed into you, the worn out canine passes out and you're left stuck on her knot. It keeps it all trapped inside your ass, leaving your tummy rounded and your insides feeling warm and tingly[if scalevalue of player < 3], if more than a bit uncomfortably stretched as well[else], if a bit uncomfortable stretched[end if][if player is mpreg_able] while her cum does its best to knock you up[end if]. When it finally does go down enough to free you, you pull yourself off the flagging doggy dong, drooling a mess of her cum onto the shemale's manhood and down your thighs.";
 
-
+to say CollieDesc:
+	setmongender 6;
+	if inasituation is true:
+		say ""; [dealt with at the event source]
+	else:
+		say "     This canine beast looks quite a bit like Lassie, if Lassie were twelve feet tall, and walked upright and had the general shape of an attractive woman, and had eight rather large breasts and a dick that would probably cause a stallion some envy... oh, and much shorter fur. You know, I guess she doesn't look much like Lassie after all.";
+		
 Section 2 - Monster Insertion
-
-
-
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
@@ -192,7 +199,7 @@ When Play begins:
 	now attack entry is "[one of]The 'bitch' charges in quickly, barking as it runs at you before biting at your shoulder and trying to overbalance you in an attempt to subdue you quickly and with minimal pain.[or]The over-sized beast backs up slightly before running and leaping at you, throwing all of its weight at your stomach in an effort to knock you on your ass. She must be 90% muscle![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Shemale Smooth Collie Defeat]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Shemale Smooth Collie attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 6]This canine beast looks quite a bit like Lassie, if Lassie were twelve feet tall, and walked upright and had the general shape of an attractive woman, and had eight rather large breasts and a dick that would probably cause a stallion some envy... oh, and much shorter fur. You know, I guess she doesn't look much like Lassie after all.";[ Description of the creature when you encounter it.]
+	now desc entry is "[CollieDesc]";[ Description of the creature when you encounter it.]
 	now face entry is "drawn forward into a long muzzle that leads back into a flat canine skull. Your ears now stick straight up from your head most of the time, only shifting when you hear a particularly loud noise. New muscles easily change which way they";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "[rsscbodyentry]";
 	now skin entry is "[if looknow is 1]short, soft, dense fur in the sable pattern of a collie, completely covering your[else]short furred, sable patterned[end if]";[ skin Description, format as the text "You have (your text) skin"]

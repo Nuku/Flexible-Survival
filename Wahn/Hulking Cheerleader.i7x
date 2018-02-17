@@ -4,7 +4,7 @@ Version 2 of Hulking Cheerleader by Wahn begins here.
 "Adds a Hulking Cheerleader to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
 when play begins:
-	add { "Hulking Cheerleader" } to infections of hermaphrodite; [Futanari]
+	add { "Hulking Cheerleader" } to infections of Transgender; [Futanari]
 
 CheerleaderFirstEncounter is a number that varies. CheerleaderFirstEncounter is normally 0.
 

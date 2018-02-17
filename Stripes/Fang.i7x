@@ -3,6 +3,25 @@ Version 5 of Fang by Stripes begins here.
 
 "Adds Fang the Feral Wolf to the Flexible Survival game"
 
+[ HP of Fang                                 ]
+[ 0 - not found                              ]
+[ 1 - at Library                             ]
+[ 2 - locked as Beta                         ]
+[ 3 - Alpha w/Sandra                         ]
+[ 4 - Alpha w/o Sandra                       ]
+[ 100 - Fang refused                         ]
+
+[ Libido of Fang (Sandra)                    ]
+[ 0 - normal                                 ]
+[ 1 - watched once                           ]
+[ 2 - watched twice (closed)                 ]
+[ 3 - joined in (open)                       ]
+[ even = sex                                 ]
+[ odd = oral                                 ]
+[ 5 - dominance scene                        ]
+[ 6+ - done it often                         ]
+[ 8, rolled back to 6                        ]
+
 Section 1 - Fang the Feral Wolf
 
 Fang is a person.
@@ -67,10 +86,12 @@ to say sexwithFang:
 to say fangsex:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck wolf cock";
 	now sortorder entry is 1;
 	now description entry is "In the mood to taste the big wolf cock?";
+	[]
 	choose a blank row in table of fucking options;
 	if cunts of player > 0:
 		now title entry is "Wolf mating";
@@ -78,11 +99,13 @@ to say fangsex:
 		now title entry is "Anal";
 	now sortorder entry is 5;
 	now description entry is "Let Fang mount you.";
+	[]
 	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Wolf tongue";
 		now sortorder entry is 2;
 		now description entry is "Put your wolf's tongue to use.";
+	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Mount Fang";
@@ -93,11 +116,13 @@ to say fangsex:
 			now title entry is "SBL fuck";
 			now sortorder entry is 4;
 			now description entry is "Vent your skunkbeast urges by fucking Fang.";
+	[]
 	if libido of fang > 2 and lastfuck of Sandra - turns >= ( 9 - HP of Fang ) and Sandra is in the Bunker:
 		choose a blank row in table of fucking options;
 		now title entry is "Fang and Sandra";
 		now sortorder entry is 5;
 		now description entry is "See if Sandra wants to play with the big, bad wolf again.";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -223,6 +248,7 @@ to say fangsandratongue:
 
 to say fangsandrasex:
 	now lastfuck of Sandra is turns;
+	now lastfuck of Fang is turns;
 	increase lust of Fang by 1;
 	say "     Recalling that you haven't spent time with Sandra in a while, you lead Fang over to one of the side rooms before poking your head in the bunker long enough to call the bunny girl over[if ( number of booked people + number of bunkered people ) > 4 and libido of Fang > 5]. The others smile, having picked up on what's going on, but saying nothing as she heads out to join you[else if ( number of bunkered people + number of booked people ) > 4]. The others inside glance over for a moment, but largely ignore the brief intrusion and the bunny girl's exit[else]. The bunny girl exits the bunker to come join you[end if]. Once in the side room, the bunny girl [if libido of Fang > 5]grins playfully and[else]blushes a little to find Fang there, but[end if] rushes over to hug the big wolf around the neck. You slip off your pack and clothes, smiling to see that Sandra's already got her paw at the wolf's hard cock. Clearly she's been looking forward to this as much as your guard wolf has.";
 	WaitLineBreak;
@@ -357,28 +383,6 @@ to say fangsandracloser1:
 	now libido of player is libido of player / 4;
 	if thirst of player > 50, decrease thirst of player by 10;
 	wait for any key;
-
-
-[ HP of Fang			]
-[ 0 - not found			]
-[ 1 - at Library			]
-[ 2 - locked as Beta		]
-[ 3 - Alpha w/Sandra		]
-[ 4 - Alpha w/o Sandra		]
-[ 100 - Fang refused		]
-
-[ Libido of Fang (Sandra)	]
-[ 0 - normal			]
-[ 1 - watched once		]
-[ 2 - watched twice (closed)	]
-[ 3 - joined in (open)		]
-[ even = sex			]
-[ odd = oral			]
-[ 5 - dominance scene		]
-[ 6+ - done it often		]
-[ 8, rolled back to 6		]
-
-
 
 
 Section 5 - Fang Dominance

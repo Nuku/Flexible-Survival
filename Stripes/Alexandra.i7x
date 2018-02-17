@@ -1461,7 +1461,7 @@ to say A_NPC02:	[Sven]
 
 to say A_NPC03:	[Fang]
 	if level of Alexandra is 0:
-		say "     'How'd you manage to snag one of those wolves to guard this place, boss?' she asks, clearly impressed with you. 'He looks like a lot of fun. I might just bend over for him some time you're too busy to take care of your bitch,' she adds with a wink while rubbing a paw around in her shorts.";
+		say "     'How'd you manage to snag one of those wolves to guard this place, boss?' she asks, clearly impressed with you. 'He looks like a lot of fun. I might just bend over for him some time if you're too busy to take care of your bitch,' she adds with a wink while rubbing a paw around in her shorts.";
 	else if level of Alexandra is 1:
 		say "     'You don't need to worry, boss. That wolf's comes sniffing around from time to time, but that's it. Since you've staked your claim, we both understand whose bitch I am,' she says, remembering the scene with obvious delight.";
 	else:
@@ -1493,7 +1493,7 @@ to say A_NPC09:	[Sally]
 	now A_Sally is true;
 
 to say A_NPC10:	[Sarah]
-	say "     'Couldn't help noticing that you've got another doggy pet. Are you planning on being a playah and making a little harem of bitches for yourself, boss?  That's fine by me as long as they remember who's top dog around here,' she says with a growl while smacking a fist into her palm.";
+	say "     'Couldn't help noticing that you've got another doggy pet. Are you planning on being a playah and making a little harem of bitches for yourself, boss? That's fine by me as long as they remember who's top dog around here,' she says with a growl while smacking a fist into her palm.";
 	now A_Sarah is true;
 
 to say A_NPC12:	[Solstice]
@@ -1501,7 +1501,7 @@ to say A_NPC12:	[Solstice]
 	now A_Solstice is true;
 
 to say A_NPC13:	[David]
-	say "     'I tried to ask David, that boytoy soldier of yours, when the military is going to get off their asses and help us, but he got real cagey about it. He tried to claim the whole 'need-to-know-basis' and 'the-enemy-could-find-out' excuses, but I think he - like the whole god damned lot of them - just don't shit about what's goin['] on!' she growls, knocking a stack of books off the table before storming off.";
+	say "     'I tried to ask David, that boytoy soldier of yours, when the military is going to get off their asses and help us, but he got real cagey about it. He tried to claim the whole 'need-to-know-basis' and 'the-enemy-could-find-out' excuses, but I think he - like the whole god damned lot of them - just don't know shit about what's goin['] on!' she growls, knocking a stack of books off the table before storming off.";
 	now A_David is true;
 
 to say A_NPC16:	[Helen]

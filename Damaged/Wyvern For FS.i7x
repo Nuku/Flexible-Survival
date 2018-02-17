@@ -75,6 +75,7 @@ to say WYVDESC:
 			now sex entry is "Female";
 		if WYVGEN is 1:
 			setmongender 4;		[creature is female]
+			project the figure of Wyvern_female_icon;
 		else:
 			setmongender 3;		[creature is male]
 		say "     [if showlocale is true]As you explore the city, you suddenly[else]Suddenly, you[end if] [if ishunting is true]run into a wyvern[else]find yourself ambushed by a wyvern[end if], swooping down to confront you, the earth trembling as it lands. Looking at the beast proper, it appears to be slightly larger than a pickup truck, wings doubling as its foretalons, thick legs supporting its massive weight. From what you can tell it appears to be [bold type][if WYVGEN is 0]male[else]female[end if][roman type].";
