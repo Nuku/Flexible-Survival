@@ -3775,7 +3775,7 @@ to say DoranRP_Misc: [Doran RP: Miscellaneous Scenes]
 			else:
 				say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
 		if calcnumber is 1:
-			say "[DoranRP_DragonsPetMenu]"; [Doran RP: The Virile Beast Query]
+			say "[DoranRP_DragonsPetMenu]"; [Doran RP: Dragon's Toy Query]
 		else:
 			say "     '[one of]Alright[or]Moving on[or]Very well[or]Got it[at random].'";
 			now trixieexit is 1;
@@ -3901,8 +3901,8 @@ to say dorrptk: [Doran RP: The Knight Query]
 
 to say DoranRP_DragonsPetMenu: [Doran RP: A Dragon's Pet Menu]
 	if DoranRole is -1 and (DoranPlayerRegard is not "Master" or DoranPlayerRegard is not "Mistress"):
-		say "     You explain your desires for Doran to treat you like his pet, and your desires for him to be [italic type]your[roman type] master for a bit. He gives a hum of thought before nodding his large head. 'I do believe I can do that for my [DoranPlayerRegard].'";
-		say "     'Now,' he says, 'There are some details we should get out of the way before hand. Do you want me to ravage your behind, or would you rather service your Master's [']equipment[']? Yes for ravaging, no for servicing.'";
+		say "     You explain your desires for Doran to treat you like his pet and your desires for him to be [italic type]your[roman type] master for a while. He gives a contemplative hum, lost in thought for a moment, before nodding his large head. 'I do believe I can try that for my [DoranPlayerRegard]. However, I will make no assurances to your enjoyment, as I have little experience in such a role.'";
+		say "     'Now,' he says, 'there are some details we should discuss before we begin. Do you wish for me to ravage your behind, or would you rather service your Master's [']equipment[']? Yes for ravaging, no for servicing.'";
 		say "([link]y[as]y[end link]/[link]n[as]n[end link])>";
 		if player consents: [Anal / Vaginal Sex]
 			now DoranRP_var1 is 0;
