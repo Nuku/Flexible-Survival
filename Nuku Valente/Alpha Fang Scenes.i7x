@@ -1,8 +1,8 @@
 Alpha Fang Scenes by Nuku Valente begins here.
 "Adds another scene to Fang"
 
-Every turn when the player is in Grey Abbey Library and fang is visible:
-	if HP of fang is 3 or HP of fang is 4:
+Every turn when the player is in Grey Abbey Library and Fang is visible:
+	if HP of Fang is 3 or HP of Fang is 4: [alpha Fang]
 		increase score by 0;
 	else:
 		continue the action;
@@ -10,13 +10,13 @@ Every turn when the player is in Grey Abbey Library and fang is visible:
 		continue the action;
 	let qualify be 0;
 	let playerlust be 0;
-	let fanglust be 0;
+	let Fanglust be 0;
 	if libido of player > 60:
 		now qualify is 1;
 		now playerlust is 1;
 	if ( lastfuck of Fang - turns > ( 19 - HP of Fang ) ):
 		now qualify is 1;
-		now fanglust is 1;
+		now Fanglust is 1;
 	if qualify is 0:
 		continue the action;
 	repeat with y running from 1 to number of filled rows in table of random critters:
@@ -24,16 +24,22 @@ Every turn when the player is in Grey Abbey Library and fang is visible:
 		if name entry is "Feral Wolf":
 			now monster is y;
 			break;
-	if fanglust is 1 and playerlust is 0:
-		say "[fangrapeplayer]";
-	else if fanglust is 1 and playerlust is 1:
-		say "[fangmutuallust]";
+	if Fanglust is 1 and playerlust is 0:
+		say "[FangRapePlayer]";
+		decrease humanity of player by 3;
+		follow the turnpass rule;
+	else if Fanglust is 1 and playerlust is 1:
+		say "[FangMutualLust]";
+		decrease humanity of player by 3;
+		follow the turnpass rule;
+	else if a random chance of 1 in 3 succeeds:
+		say "[FangPlayerLust]";
+		decrease humanity of player by 3;
+		follow the turnpass rule;
 	else:
-		say "[fangplayerlust]";
-	decrease humanity of player by 3;
-	follow the turnpass rule;
-
-to say fangplayerlust:
+		continue the action;
+		
+to say FangPlayerLust:
 	say "Aching with need, you look around for Fang. He's laying by the door, watching the room with his usual alertness. As you walk towards him, he sits up on his haunches. When you reach for him, he lightly nips at your hand and chuffs disapproval. He remains seated, watching you penetratingly as you consider how to approach. A second reach to pat him gets another nip, then he suddenly rears up and knocks you over backwards flat. The oversized wolf clambers up on top of you, his shaggy coat rubbing against your belly as he takes the superior position. He licks your throat twice as he parts your legs and gets into comfortable position.";
 	let anal be 1;
 	if cunt length of player > 0 and cunts of player > 0:
@@ -51,7 +57,7 @@ to say fangplayerlust:
 	if libido of player < 0, now libido of player is 0;
 
 
-to say fangrapeplayer:
+to say FangRapePlayer:
 	say "'Late,' says Fang as he approaches you. His scent is intoxicatingly strong and his [one of]puppy pecker[or]doggy dong[at random] is jutting from his sheath, heavy and ready. Any word of complaint you may have had is lost as the wolf gives you a penetrating look, brokering no argument. There is a punishment to be had and a service to be rendered, and that is all there is to it. He grabs at you with his teeth, tugging you along and bringing you to a desk, pushing you against it so you're bent over it.";
 	if breast size of player > 0 and breasts of player > 0:
 		say "Your [breast size desc of player] breasts are squished against the smooth wood of the desk as he moves you into position, rubbing your nipples against the grain.";
@@ -70,13 +76,13 @@ to say fangrapeplayer:
 	if cock length of player > 0 and cocks of player > 0:
 		say "With dizzying force, you suddenly spray your own seed out against the desk, splattering its smooth surface with your seed as you groan with pleasure alongside Fang. His paws support you as you go weak kneed from the stimulation. [run paragraph on]";
 	say "Satisfied, Fang pants lightly as he relaxes on top of you for a few quiet minutes, gently nuzzling your back and sides with his muzzle. He gives a soft chuff in your ear, then pulls free of you with a wet pop, allowing some of the seed to run free as he goes to clean up while you sag to the floor, enjoying the feel of his semen filling you.";
-	say "[fangwscontent]";
+	say "[Fangwscontent]";
 	now lastfuck of Fang is turns;
 	decrease libido of player by 20;
 	if libido of player < 0, now libido of player is 0;
 
 
-to say fangmutuallust:
+to say FangMutualLust:
 	say "You feel something nuzzling at your groin and look down to see Fang looking back up at you. Bright red of his canine shaft dangles between his hind legs. The sight and smell of him sets your already needy body on fire with desire. [run paragraph on]";
 	if cocks of player > 0 and cock length of player > one:
 		say "You feel hot splashes of pre pouring from yourself as you grow more lustful by the moment. [if cock width of player > 0]Your [ball size] ache with the need to release. [end if][run paragraph on]";
@@ -96,7 +102,7 @@ to say fangmutuallust:
 		say "Your [bodydesc of player] body locks as climax arrives powerfully, trembling atop Fang as his skilled tongue works and cleans you even as you release. His knot swells, bumping against your lips before it starts to spray the creamy wolf spunk across your tongue. The rich taste pours smoothly as you swallow down his injection. You receive a large load from your alpha's swollen, virile balls. Even after the shaft stops powerfully twitching, a thin trickle continues to pour out. You draw back, letting the shaft pops free of your mouth and kiss the tip before reaching to caress his swollen knot. You are rewarded with a loud yip as the sensitive organ is jostled and a final spurt of seed across your lips.";
 	infect "Feral Wolf";
 	say "Both satisfied, Fang squirms out from under you and licks your face before moving back towards the door to resume his watch.";
-	say "[fangwscontent]";
+	say "[Fangwscontent]";
 	now lastfuck of Fang is turns;
 	now libido of player is libido of player / 2;
 

@@ -29,7 +29,7 @@ when play begins:
 	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Quilled Tousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 to new ban menu:
-	let flaglist be {"Furry", "Guy", "Girl", "Humorous", "Hellspawn", "Feral", "Transgender", "Incest", "Noncon", "Mindcontrol"};
+	let flaglist be {"Furry", "Guy", "Girl", "Humorous", "Hermaphrodite", "Hellspawn", "Feral", "Transgender", "Incest", "Noncon", "Mindcontrol"};
 	let countnumber be 1;
 	let nbmexit be 0;
 	while nbmexit is 0:
@@ -94,6 +94,8 @@ to oldflagban (flagname - text):
 			now Girl is banned;
 		-- "Humorous":
 			now Humorous is banned;
+		-- "Hermaphrodite":
+			now Hermaphrodite is banned;
 		-- "Hellspawn":
 			now Hellspawn is banned;
 		-- "Feral":
@@ -117,6 +119,8 @@ to oldflagward (flagname - text):
 			now Girl is warded;
 		-- "Humorous":
 			now Humorous is warded;
+		-- "Hermaphrodite":
+			now Hermaphrodite is warded;
 		-- "Hellspawn":
 			now Hellspawn is warded;
 		-- "Feral":
@@ -140,6 +144,8 @@ to oldflagunban (flagname - text):
 			now Girl is not banned;
 		-- "Humorous":
 			now Humorous is not banned;
+		-- "Hermaphrodite":
+			now Hermaphrodite is not banned;
 		-- "Hellspawn":
 			now Hellspawn is not banned;
 		-- "Feral":
@@ -163,6 +169,8 @@ to oldflagunward (flagname - text):
 			now Girl is not warded;
 		-- "Humorous":
 			now Humorous is not warded;
+		-- "Hermaphrodite":
+			now Hermaphrodite is not warded;
 		-- "Hellspawn":
 			now Hellspawn is not warded;
 		-- "Feral":

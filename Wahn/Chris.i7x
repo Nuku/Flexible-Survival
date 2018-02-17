@@ -589,6 +589,7 @@ instead of going up from Grey Abbey Library while (Chris is in Grey Abbey 2F and
 		infect "Orc Breeder";
 		say "[mimpregchance]";
 		if player is impreg_now: [has become pregnant]
+			say "[bold type]'Chris's Breeder Slut' has been added to your feats![roman type][line break]";
 			add "Chris's Breeder Slut" to feats of player; [orc baby, no matter what]
 		say "     You remember being carried and held, and when you eventually come to again fully, you find yourself in an interesting and fairly pleasant position - lying against Chris's broad chest as he lounges on the couch he claimed has his own. Looking down, you see the orc's half hard cock between your legs. Chris is slowly stroking you with one hand between your legs, the other one resting on your belly. He keeps brushing his finger over your pucker again and again, taking pleasure in feeling up his devoted breeder slut. 'Back awake, eh? You did good, breeder! Can't wait to see your belly bulge with my orcling.' The orc chuckles and leans his head forward to lick your cheek, then keeps you against his chest for a while longer, arms wrapped around your midriff. Eventually, he dozes off, giving you the opportunity of extracting yourself from his grasp and starting to collect the strewn about pieces of your gear.";
 	else if player is mpreg_now: [already mpregnant]

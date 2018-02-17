@@ -108,6 +108,7 @@ carry out TestMode:
 	increase carried of glob of goo by 5;
 	increase carried of honeycomb by 5;
 	increase carried of healing booster by 5;
+	now TestingActive is true;
 
 SubDomFlip is an action applying to nothing.
 understand "flip janus coin" as SubDomFlip.

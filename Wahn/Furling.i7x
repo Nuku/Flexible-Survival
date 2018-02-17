@@ -4,13 +4,13 @@ Version 1 of Furling by Wahn begins here.
 "Adds a Furling to Flexible Survival's Wandering Monsters table"
 
 when play begins:
-	add { "Furling" } to infections of hermaphrodite; [Cuntboy]
+	add { "Furling" } to infections of Transgender; [Cuntboy]
 	add { "Furling" } to infections of furry;
 
 Cheerleader vs Furling is a situation. The level of Cheerleader vs Furling is 5.
 The sarea of Cheerleader vs Furling is "Campus".
 when play begins:
-	add Cheerleader vs Furling to badspots of hermaphrodite; [shemale vs cuntboy]
+	add Cheerleader vs Furling to badspots of Transgender; [shemale vs cuntboy]
 	add Cheerleader vs Furling to badspots of furry; [Furling]
 
 Instead of resolving a Cheerleader vs Furling:

@@ -99,6 +99,7 @@ Figure of Triceratops_icon is the file "triceratops_ig.jpg".
 Figure of VixenNurse_icon is the file "VixenNurse_ig.jpg".
 Figure of Vixentaur_icon is the file "vixentaur_ig.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
+Figure of Wyvern_female_icon is the file "Wyvern_female.jpg".
 Figure of YuppieMink_icon is the file "FSTF_YuppieMink_ig.jpg".
 Figure of Zebra_icon is the file "Zebra.jpg".
 Figure of Zebra_face_icon is the file "Zebra_face.jpg".
@@ -235,7 +236,10 @@ Figure of Moreau_soft_icon is the file "Moreau_soft.jpg".
 Figure of Mul_clothed_icon is the file "Mul_clothed.jpg".
 Figure of Mul_face_icon is the file "Mul_face.jpg".
 Figure of Nadia_icon is the file "FS_Nadia_ig.jpg".
-Figure of Nermine_icon is the file "FSTF_Nermine_ig.jpg".
+Figure of Nermine_clothed_icon is the file "Nermine_clothed.jpg".
+Figure of Nermine_clothed_face_icon is the file "Nermine_clothed_face.jpg".
+Figure of Nermine_naked_icon is the file "Nermine_naked.jpg".
+Figure of Nermine_naked_face_icon is the file "Nermine_naked_face.jpg".
 Figure of Newt_icon is the file "Newt_ig.jpg".
 Figure of Micaela_icon is the file "micaela_ig.jpg".
 Figure of Orbul_clothed_icon is the file "Orbul_clothed.jpg".
@@ -656,7 +660,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Mul_face"	Figure of Mul_face_icon	"Kupo Klein"	g-black	"normal"
 "Nadia"	Figure of Nadia_icon	"Anymouse1968"	g-black	"normal"
 "Naga"	Figure of Naga_icon	"Rastear"	g-black	"normal"
-"Nermine"	Figure of Nermine_icon	"Anymouse1968"	g-black	"normal"
+"Nermine_clothed"	Figure of Nermine_clothed_icon	"Lytta"	g-black	"normal"
+"Nermine_clothed_face"	Figure of Nermine_clothed_face_icon	"Lytta"	g-black	"normal"
+"Nermine_naked"	Figure of Nermine_naked_icon	"Lytta"	g-black	"normal"
+"Nermine_naked_face"	Figure of Nermine_naked_face_icon	"Lytta"	g-black	"normal"
 "Newt"	Figure of Newt_icon	"Anyare"	g-black	"normal"
 "Ninja Cat_F"	Figure of NinjaCat_F_icon	"Bix707"	g-black	"normal"	[only shown for female succumb ending]
 "Ninja Cat"	Figure of NinjaCat_M_icon	""	g-black	"normal"
@@ -733,6 +740,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-black	"normal"
 "Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-black	"normal"
 "Wildcat"	Figure of Wildcat_icon	"Strype"	g-black	"normal"
+"Wyvern_female"	Figure of Wyvern_female_icon	"Anonymous"	g-white	"normale"
 "Yatur_clothed"	Figure of Yatur_clothed_icon	"Kupo Klein"	g-black	"normal"
 "Yolanda"	Figure of Yolanda_icon	"SandySchreiber"	g-black	"normal"
 "Yuppie Mink_F"	Figure of YuppieMink_icon	"Anymouse1968"	g-black	"normal"	[only shown for female version]
@@ -854,11 +862,12 @@ carry out artistcredits:
 	say "     Vixentaur by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Vixen Nurse by KV1NN4 @ furaffinity.net[line break]";
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
+	say "     Wyvern Female by Anonymous[line break]";
 	say "     Yuppie Mink by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
 	LineBreak;
 	say "NPCs:[line break]";
-	say "     Alexandra by Lyttathebug @ deviantart.com[line break]";
+	say "     Alexandra by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Amy by Sususmiles @ furaffinity.net[line break]";
 	say "     Andrew by Rukis @ furaffinity.net[line break]";
 	say "     Angie by Anymouse1968 @ furaffinity.net[line break]";
@@ -882,7 +891,7 @@ carry out artistcredits:
 	say "     Buster by Padunk @ furaffinity.net[line break]";
 	say "     Candy by uniformvixen @ furaffinity.net[line break]";
 	say "     Carl by Hufnaar @ furaffinity.net[line break]";
-	say "     Carl + Eric by Lyttathebug @ deviantart.com[line break]";
+	say "     Carl + Eric by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Chris by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Christy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Danny (naked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
@@ -920,7 +929,7 @@ carry out artistcredits:
 	say "     Jill by Sususmiles @ furaffinity.net[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Korvin by Lyttathebug @ deviantart.com[line break]";
+	say "     Korvin by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
 	say "     Lilith by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Lindsey by Anymouse1968 @ furaffinity.net[line break]";
@@ -930,10 +939,10 @@ carry out artistcredits:
 	say "     Marc (fucked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
 	say "     Micaela by Kattzie @ furaffinity.net[line break]";
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
-	say "     Moreau by Lyttathebug @ deviantart.com[line break]";
+	say "     Moreau by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Mul by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Nadia by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Nermine by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Nermine by Lyttathebug @ furaffinity.net[line break]";
 	say "     Newt by Anyare @ furaffinity.net[line break]";
 	say "     Orbul by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Orthas by The_Negative @ furaffinity.net[line break]";
@@ -946,7 +955,7 @@ carry out artistcredits:
 	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sam (as Vixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sandra by Trav @ ???[line break]";
-	say "     Sarah by Lyttathebug @ deviantart.com[line break]";
+	say "     Sarah by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Septus by Feralise @ furaffinity.net[line break]";
 	say "     Septus (face) by Cirrusthecloud @ https://www.furaffinity.net/user/cirrusthecloud/[line break]";
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";
@@ -977,7 +986,7 @@ carry out artistcredits:
 	say "     Mammoth Cock Vore Sequence by Boo3 @ furaffinity.net[line break]";
 	say "     Mammoth Pure Succumb by Boo3 @ furaffinity.net[line break]";
 	say "     Parasol Nap by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
-	say "     Rane & Eric Scenes by Lyttathebug @ deviantart.com[line break]";
+	say "     Rane & Eric Scenes by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Sam's Bad End by The_Negative @ furaffinity.net[line break]";
 	say "     Shy Vixen by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Skunkbeast Lord Battle by MoT @ furaffinity.net[line break]";
