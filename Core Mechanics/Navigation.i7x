@@ -11,7 +11,7 @@ carry out destinationcheck:
 	say "[bold type]Primary Rooms[roman type]: [link][bracket]Grey Abbey Library[close bracket][as]nav Grey Abbey Library[end link]";
 	if Outside Trevor Labs is known:
 		say "| [link][bracket]Trevor Labs[close bracket][as]nav Outside Trevor Labs[end link] ";
-	say "[line break]";
+	LineBreak;
 	[start of the capitol area]
 	if Approaching the Capitol Building is known or Disused Garage is known or Office Den is known or Orc Lair Side Entrance is known:
 		say "[bold type]Capitol District[roman type]: ";
@@ -23,14 +23,16 @@ carry out destinationcheck:
 			say "| [link][bracket]Office Den[close bracket][as]nav Office Den[end link] ";
 		if Orc Lair Side Entrance is known:
 			say "| [link][bracket]Orc Lair[close bracket][as]nav Orc Lair Side Entrance[end link] ";
-		say "[line break]";
+		LineBreak;
 	[a subsection of the 'outside' area (named Central City here)]
-	if Camp Bravo Entrance is known or Green Apartment is known or Fire Station 86 is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
+	if Camp Bravo Entrance is known or Green Apartment is known or Gaming Den is known or Fire Station 86 is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
 		say "[bold type]Central City[roman type]: ";
 		if Camp Bravo Entrance is known:
 			say "| [link][bracket]Camp Bravo[close bracket][as]nav Camp Bravo Entrance[end link] ";
-		if Green Apartment is known:
-			say "| [link][bracket]Green Apartment[close bracket][as]nav Green Apartment[end link] ";
+		if Gaming Den is known:
+			say "| [link][bracket]Gaming Den[close bracket][as]nav Gaming Den[end link] ";
+		if Green Apartment Building is known:
+			say "| [link][bracket]Green Apartment Building[close bracket][as]nav Green Apartment Building[end link] ";
 		if Fire Station 86 is known:
 			say "| [link][bracket]Fire Station 86[close bracket][as]nav Fire Station 86[end link] ";
 		if Mini-Lab is known:
@@ -47,7 +49,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Red Apartment[close bracket][as]nav Red Apartment[end link] ";
 		if Tyr's Club is known:
 			say "| [link][bracket]Tyr's Club[close bracket][as]nav Tyr's Club[end link] ";
-		say "[line break]";
+		LineBreak;
 	[start of the park area]
 	if Park Entrance is known or Equinoid Camp is known or Lion's Den is known:
 		say "[bold type]City Park[roman type]: ";
@@ -57,7 +59,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Equinoid Camp[close bracket][as]nav Equinoid Camp[end link] ";
 		if Lion's Den is known:
 			say "| [link][bracket]Lion's Den[close bracket][as]nav Lion's Den[end link] ";
-		say "[line break]";
+		LineBreak;
 	[another sub-section of the 'outside' area (named Commercial District here)]
 	if Smith Haven Mall Lot South is known or Back Alley is known or Comic Shop is known or Isolated Street is known or Kristen's Hideout is known or Lingerie Store is known or New Ewe Storeroom is known or The Palomino is known or SlutRat Den is known or K9 Vans is known:
 		say "[bold type]Commercial District[roman type]: ";
@@ -81,7 +83,7 @@ carry out destinationcheck:
 			say "| [link][bracket]The Palomino[close bracket][as]nav The Palomino[end link] ";
 		if SlutRat Den is known:
 			say "| [link][bracket]SlutRat Den[close bracket][as]nav SlutRat Den[end link] ";
-		say "[line break]";
+		LineBreak;
 	[start of the dry plains area]
 	if Dry Plains is known or McDermott Farm Entrance is known or Researcher Studio is known or Rocky Outcropping is known:
 		say "[bold type]Dry Plains[roman type]: ";
@@ -93,7 +95,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Researcher Studio[close bracket][as]nav Researcher Studio[end link] ";
 		if Rocky Outcropping is known:
 			say "| [link][bracket]Rocky Outcropping[close bracket][as]nav Rocky Outcropping[end link] ";
-		say "[line break]";
+		LineBreak;
 	[another sub-section of the 'outside' area (named Industrial Sector here)]
 [	if Nutso Factory is known or Plant Overview is known or Power Lines is known or Reservoir is known:	[*** - Kaleem]	]
 	if Nutso Factory is known or Plant Overview is known or Power Lines is known:
@@ -106,7 +108,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Power Lines[close bracket][as]nav Power Lines[end link] ";
 [		if Reservoir is known:
 			say "| [link][bracket]Reservoir[close bracket][as]nav Reservoir[end link] ";	]
-		say "[line break]";
+		LineBreak;
 	[start of the fairgrounds area]
 	if State Fair is known or Sweet Tooth is known:
 		say "[bold type]Fairgrounds[roman type]: ";
@@ -114,7 +116,7 @@ carry out destinationcheck:
 			say "| [link][bracket]State Fair[close bracket][as]nav State Fair[end link] ";
 		if Sweet Tooth is known:
 			say "| [link][bracket]Sweet Tooth[close bracket][as]nav Sweet Tooth[end link] ";
-		say "[line break]";
+		LineBreak;
 	[start of the high rise area]
 	if Entrance to the High Rise District is known or Agency is known or Alex's Condo is known or Bone-Appetit is known or Butterfly Grove is known or Butterfly Grove is known or Flower Garden is known or Lizard Parlor is known or Rex's Place is known or Zephyr Lobby is known:
 		say "[bold type]High Rise District[roman type]: ";
@@ -136,7 +138,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Rex's Place[close bracket][as]nav Rex's Place[end link] ";
 		if Zephyr Lobby is known:
 			say "| [link][bracket]Zephyr[close bracket][as]nav Zephyr Lobby[end link] ";
-		say "[line break]";
+		LineBreak;
 	[start of the Hospital area]
 	if City Hospital is known or Psych Department is known:
 		say "[bold type]Hospital[roman type]: ";
@@ -144,7 +146,7 @@ carry out destinationcheck:
 			say "[link][bracket]City Hospital[close bracket][as]nav City Hospital[end link] - ";
 		if Psych Department is known:
 			say "| [link][bracket]Psych Department[close bracket][as]nav Psych Department[end link] ";
-		say "[line break]";
+		LineBreak;
 	[start of Junkyard area]
 	if Abandoned Lot is known or Hyena Shack is known or Steven's home is known:
 		say "[bold type]Junkyard[roman type]: ";
@@ -154,7 +156,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Hyena Shack[close bracket][as]nav Hyena Shack[end link] ";
 		if Steven's home is known:
 			say "| [link][bracket]Steven's home[close bracket][as]nav Steven's home[end link] ";
-		say "[line break]";
+		LineBreak;
 	[start of the misc area]
 	if Foxy Hideaway is known or Shifting Room is known or Qytat Plaza is known:
 		say "[bold type]Misc[roman type]: ";
@@ -164,7 +166,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Qytat Plaza[close bracket][as]nav Qytat Plaza[end link] ";
 		if Shifting Room is known:
 			say "| [link][bracket]Shifting Room[close bracket][as]nav Shifting Room[end link] ";
-		say "[line break]";
+		LineBreak;
 	[start of the Museum area]
 	if Museum Foyer is known or Egypt Wing Entrance is known:
 		say "[bold type]Museum[roman type]: ";
@@ -172,7 +174,7 @@ carry out destinationcheck:
 			say "[link][bracket]Museum Foyer[close bracket][as]nav Museum Foyer[end link] - ";
 		if Egypt Wing Entrance is known:
 			say "| [link][bracket]Egypt Wing Entrance[close bracket][as]nav Egypt Wing Entrance[end link] ";
-		say "[line break]";
+		LineBreak;
 	[start of the red light area]
 	if Entrance to the Red Light District is known or Bradford's Camp is known or Bright Alley is known or Burned-Out Chapel is known or Cuero Lobo is known or Down Under Pub is known or Gillian's Flat is known or Police Car is known or Porn Store is known or Sven's Place is known or Tattoo Parlor is known:
 		say "[bold type]Red Light District[roman type]: ";
@@ -198,7 +200,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Sven's Place[close bracket][as]nav Sven's Place[end link] ";
 		if Tattoo Parlor is known:
 			say "| [link][bracket]Tattoo Parlor[close bracket][as]nav Tattoo Parlor[end link] ";
-		say "[line break]";
+		LineBreak;
 	[start of the seaside area]
 	if Beach Plaza is known or Bouncy Castle is known or Pirate Island is known or Viking Ship is known:
 		say "[bold type]Seaside[roman type]: ";
@@ -210,7 +212,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Pirate Island[close bracket][as]nav Pirate Island[end link] ";
 		if Viking Ship is known:
 			say "| [link][bracket]Viking Ship[close bracket][as]nav Viking Ship[end link] ";
-		say "[line break]";
+		LineBreak;
 	[start of the Stables area]
 	if Stables Hotel is known or Master's Office is known:
 		say "[bold type]The Stables[roman type]: ";
@@ -218,23 +220,21 @@ carry out destinationcheck:
 			say "[link][bracket]Stables Hotel[close bracket][as]nav Stables Hotel[end link] - ";
 		if Master's Office is known:
 			say "| [link][bracket]Master's Office[close bracket][as]nav Master's Office[end link] ";
-		say "[line break]";
+		LineBreak;
 	[start of the college area]
-	if College Campus is known or Campus Gym is known or Paleontology Office is known or Phi Iota Gamma is known or Sports Arena Lockerroom is known or Astroslide Field Lockerroom is known:
+	if College Campus is known or Campus Gym is known or Paleontology Office is known or Phi Iota Gamma is known or Astroslide Football Field is known:
 		say "[bold type]Tenvale College[roman type]: ";
 		if College Campus is known:
 			say "[link][bracket]College Campus[close bracket][as]nav College Campus[end link] - ";
-		if Astroslide Field Lockerroom is known:
-			say "| [link][bracket]Astroslide Field Lockerroom[close bracket][as]nav Astroslide Field Lockerroom[end link] ";
 		if Campus Gym is known:
 			say "| [link][bracket]Campus Gym[close bracket][as]nav Campus Gym[end link] ";
 		if Paleontology Office is known:
 			say "| [link][bracket]Paleontology Office[close bracket][as]nav Paleontology Office[end link] ";
 		if Phi Iota Gamma is known:
 			say "| [link][bracket]Phi Iota Gamma[close bracket][as]nav Phi Iota Gamma[end link] ";
-		if Sports Arena Lockerroom is known:
-			say "| [link][bracket]Sports Arena Lockerroom[close bracket][as]nav Sports Arena Lockerroom[end link] ";
-		say "[line break]";
+		if Astroslide Football Field is known:
+			say "| [link][bracket]Astroslide Football Field[close bracket][as]nav Astroslide Football Field[end link] ";
+		LineBreak;
 	[start of the forest area]
 	if Urban Forest is known or Bunny House is known or Happy Puppy Kennel is known:
 		say "[bold type]Urban Forest[roman type]: ";
@@ -244,7 +244,7 @@ carry out destinationcheck:
 			say "[link][bracket]Bunny House[close bracket][as]nav Bunny House[end link] ";
 		if Happy Puppy Kennel is known:
 			say "[link][bracket]Happy Puppy Kennel[close bracket][as]nav Happy Puppy Kennel[end link] ";
-		say "[line break]";
+		LineBreak;
 	[start of the warehouse area]
 	if Warehouse District is known or Hyena Hideout is known or Mike's Home is known or Wolfman Lair is known:
 		say "[bold type]Warehouse District[roman type]: ";
@@ -258,7 +258,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Spider's Web[close bracket][as]nav Spider's Web[end link] ";
 		if Wolfman Lair is known:
 			say "| [link][bracket]Wolfman Lair[close bracket][as]nav Wolfman Lair[end link] ";
-		say "[line break]";
+		LineBreak;
 	[start of the zoo area]
 	if Zoo Entrance is known or Gator Den is known or Tiger den is known:
 		say "[bold type]Zoo[roman type]: ";
@@ -268,8 +268,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Gator Den[close bracket][as]nav Gator Den[end link] ";
 		if Tiger den is known:
 			say "| [link][bracket]Tiger den[close bracket][as]nav Tiger den[end link] ";
-		say "[line break]";
-
+		LineBreak;
 
 navigating is an action applying to one thing.
 
@@ -290,7 +289,7 @@ carry out navigating:
 		stop the action;
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
 	now battleground is "Outside";
-	if a random number from 1 to 20 is less than 10 minus bonus and battleground is not "void":
+	if a random number from 1 to 20 < 10 minus bonus and battleground is not "void":
 		if there is a area of Battleground in the table of random critters:
 			Fight;
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
@@ -298,12 +297,13 @@ carry out navigating:
 				Fight;
 	else:
 		say "You travel to [the noun], avoiding trouble as best you can.";
-	if hp of Velos > 2, move Velos to the noun;
+	if HP of Velos > 2, move Velos to the noun;
 	move the player to the noun;
+	follow the ngraphics_blank rule;
 	follow turnpass rule;
-		
+
 NavCheckReturn is a truth state that varies.
-	
+
 to say NavCheck (CheckRoom - a room): [check if a nav attempt can go through]
 	if debugactive is 1:
 		say "DEBUG -> NavCheck just checked your travel route out! <- DEBUG";

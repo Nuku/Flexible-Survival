@@ -69,7 +69,7 @@ Version 1 of Nadia by Wahn begins here.
 
 Section 1 - Nadia, the bird of paradise
 
-Nadia is a woman. The hp of Nadia is normally 0.
+Nadia is a woman. The HP of Nadia is normally 0.
 The description of Nadia is "[NadiaDesc]".
 The conversation of Nadia is { "Mew!" }.
 
@@ -104,11 +104,11 @@ An everyturn rule:   [pregnancy progress every turn]
 		say "[NadiaEggBirth]";
 	if NadiaPregCounter1 > 0:              [she's pregnant, so let's recalculate her looks]
 		say "[NadiaPregVisibilityUpdate]";
-	if NadiaPregCounter1 is greater than 1:
+	if NadiaPregCounter1 > 1:
 		decrease NadiaPregCounter1 by 1;
-	if NadiaPregCounter2 is greater than 1:
+	if NadiaPregCounter2 > 1:
 		decrease NadiaPregCounter2 by 1;
-	if NadiaPregCounter3 is greater than 1:
+	if NadiaPregCounter3 > 1:
 		decrease NadiaPregCounter3 by 1;
 
 To npcNadiaintAlter (N - number) with (L - text):
@@ -218,7 +218,7 @@ to say NadiaPregVisibilityUpdate:   [pregnancy description update]
 			increase NadiaPregVisibility by 1;
 
 instead of sniffing Nadia:     [how she smells]
-	if (hp of Nadia is 0 or hp of Nadia is 99):   [not yet met or refused]
+	if (HP of Nadia is 0 or HP of Nadia is 99):   [not yet met or refused]
 		say "ERROR-Nadia-001S: She should not be around yet anywhere where players can smell her.";
 	else:
 		if NadiaDescription is 6:
@@ -236,8 +236,8 @@ instead of sniffing Nadia:     [how she smells]
 
 to say NadiaDesc:   [how she looks]
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Nadia], NADIADESCRIPTION: [NadiaDescription], NADIAFERTILITYCOUNTER: [NadiaFertilityCounter], NADIACHICKCOUNTER: [NadiaChickCounter], PREG1COUNTER: [NadiaPregCounter1], PREG2COUNTER: [NadiaPregCounter2], PREG3COUNTER: [NadiaPregCounter3], NADIAPREGVISIBILITY: [NadiaPregVisibility], NPCNADIAINT: [npcNadiaint] <- DEBUG[line break]";
-	if (hp of Nadia is 0 or hp of Nadia is 99):   [not yet met or refused]
+		say "DEBUG -> HP: [HP of Nadia], NADIADESCRIPTION: [NadiaDescription], NADIAFERTILITYCOUNTER: [NadiaFertilityCounter], NADIACHICKCOUNTER: [NadiaChickCounter], PREG1COUNTER: [NadiaPregCounter1], PREG2COUNTER: [NadiaPregCounter2], PREG3COUNTER: [NadiaPregCounter3], NADIAPREGVISIBILITY: [NadiaPregVisibility], NPCNADIAINT: [npcNadiaint] <- DEBUG[line break]";
+	if (HP of Nadia is 0 or HP of Nadia is 99):   [not yet met or refused]
 		say "ERROR-Nadia-001L: She should not be around yet anywhere where players can see her.";
 	else:
 		if NadiaDescription is 6:
@@ -257,7 +257,7 @@ to say NadiaDesc:   [how she looks]
 			say "     Nadia has now settled down somewhat within the library, the nest she's built suited better to her personal comforts after some adjustments. Noticing you approach, she looks up and gives you a small smile, then turns back to her reading. She's certainly getting more used to having talons instead of fingers.";
 			say "     She still wears no clothing, although you notice that the outlines of her nipples are now pushing out from under her feathers, and her hips are now better-proportioned. The red ribbon that once held her hair up has come partially undone, allowing locks of her crimson hair to spill out onto her feathers, which although still pale look less washed-out than they did when she first arrived.";
 		else if NadiaDescription is 1:
-			say "     Having escorted Nadia back from where she was holed up in Fairhaven College, you take a little while to look over her. Being transformed into bird of paradise has left her with feathers of every hue and stripe on a mostly red coat, although they look pretty pale and washed-out, perhaps due to the stressful conditions she was trapped in until recently. In addition to her feathers, she's kept her shoulder-length hair, a deep, vivid crimson that she keeps tied up with a red ribbon. It's the only article of clothing she now wears, having deemed her feathers enough to protect her modesty - which is largely true, especially considering her small breasts and girlish hips. Jutting from between her shoulder blades, her wings are wide and strong, although she keeps them folded about her body protectively most of the time.";
+			say "     Having escorted Nadia back from where she was holed up in Fairhaven College, you take a little while to look over her. Being transformed into a bird of paradise has left her with feathers of every hue and stripe on a mostly red coat, although they look pretty pale and washed-out, perhaps due to the stressful conditions she was trapped in until recently. In addition to her feathers, she's kept her shoulder-length hair, a deep, vivid crimson that she keeps tied up with a red ribbon. It's the only article of clothing she now wears, having deemed her feathers enough to protect her modesty - which is largely true, especially considering her small breasts and girlish hips. Jutting from between her shoulder blades, her wings are wide and strong, although she keeps them folded about her body protectively most of the time.";
 			say "     Following some strange instinct, Nadia's gathered a number of cushions and other furniture from around the library's second floor to form a nest of sorts about her, sorting through everything with the talons that've replaced her hands and feet and building a little refuge from the madness out in the city. Yet the avian looks a little sad - there has to be some way to cheer her up and bring warmth and colour into her person.";
 		if NadiaPregVisibility is 5:            [pregnancy appearance]
 			say "     Nadia's pregnancy is now positively monstrous, her feathers stretched thin over her gently pulsing belly, her breasts issuing forth constant trickles of milk from the sheer pressure of being so full. Heavy to the point where she can only walk a short distance before running out of breath, she keeps everything she needs - food, reading materials, the occasional box of tissues she's managed to scavenge up - within easy reach of her nest.";
@@ -280,7 +280,7 @@ to say NadiaDesc:   [how she looks]
 			say "     Nadia's single chick is the apple of her eye, and she keeps the little fellow well-wrangled and within sight most of the time. Despite having no one to show her the ins and outs of parenting, she's doing quite well, embracing her awakened maternal instincts to fill the gaps in her education.";
 
 instead of conversing the Nadia:   [talking to her]
-	if (hp of Nadia is 0 or hp of Nadia is 99):    [not yet met or refused]
+	if (HP of Nadia is 0 or HP of Nadia is 99):    [not yet met or refused]
 		say "ERROR-Nadia-001T: She should not be around yet anywhere where players can talk to her.";
 	else:
 		if NadiaDescription is 6:  [Fertility Goddess]
@@ -317,7 +317,7 @@ instead of conversing the Nadia:   [talking to her]
 Section 2 - Fucking Nadia
 
 Instead of fucking the Nadia:
-	if (hp of Nadia is 0 or hp of Nadia is 99):    [not yet met or refused]
+	if (HP of Nadia is 0 or HP of Nadia is 99):    [not yet met or refused]
 		say "ERROR-Nadia-001F: She should not be around yet anywhere where players can fuck her.";
 	else:
 		if(lastfuck of Nadia - turns < 6):
@@ -568,7 +568,7 @@ Instead of resolving a Bird Troubles:
 	say "     Well, at least she's not going to be dying now. You ask for her name, and she nods. 'My name is Nadia. I'm...' she looks down at her talons, seeming fit to burst into tears at any time. '...I was a student here. Are those things still out there? I've lost count of how many days I've spent trapped in these laboratories.";
 	say "'Do you have somewhere I could go?' she asks hopefully. 'I...I can't stay here anymore, and I don't think there's anywhere that's safe on campus, not after hearing some of the noises that go on outside all day and night.' ";
 	if player consents:
-		say "     [line break]";
+		LineBreak;
 		say "     'My full name is Nadia Sokolova,' the bird-woman explains as she limps after you through the city and back to the library. 'But just call me Nadia, if you will. I'm an education major, or at least, I was before all this started. I was hoping... well, there's no harm in saying it if I'm going to be staying with you, am I? We have to trust each other.";
 		say "     'I didn't want to go to college - didn't see the value in it when there aren't really any classes on how to be a wife and mother. What I wanted to do was to raise a family, then maybe later there would be time for everything else, but everyone pressured me to go, said I had no ambition, that I shouldn't...' she chokes back tears. 'I eventually gave in when my mother told me I could earn my Mrs. degree while studying as well, and I'd hoped that picking out education would let me work with children when I graduated.";
 		WaitLineBreak;
@@ -579,7 +579,7 @@ Instead of resolving a Bird Troubles:
 		say "     'Thank you for letting me stay here,' she chirps. 'It's the first time since this mess started that anything's happened to give me hope. I was watching, waiting for so long, afraid to call for help yet desperately hoping someone would come before I died... and you did. Again, thank you so much.'";
 		move Nadia to Grey Abbey 2F;
 		move player to Grey Abbey 2F;
-		now hp of Nadia is 1;
+		now HP of Nadia is 1;
 		now npcNadiaint is "0000000000000B";
 		now Char-A of Nadia is "0";
 		now Char-B of Nadia is "0";
@@ -597,9 +597,9 @@ Instead of resolving a Bird Troubles:
 		[Testing Fertile Pills]
 		[increase carried of fertile pill by 50;]
 	else:
-		say "     [line break]";
+		LineBreak;
 		say "     Tears begin to well up in Nadia's eyes. 'I'm sorry,' she says. 'I shouldn't have asked - of course you don't have anywhere to go, let alone let me stay. They're everywhere now, aren't they? I suspected as much, after all these days alone. There's nothing left to hope for. Thank you for saving my life, but goodbye.' With that, she speeds away from you. You shout and give chase, but she's gone by the time you round the corner to the now-opened door, with not even a feather left in sight.";
-		now hp of Nadia is 99;  [refused her]
+		now HP of Nadia is 99;  [refused her]
 		remove Nadia from play;
 	now Bird Troubles is resolved;
 
@@ -610,20 +610,20 @@ when play begins:
 	add Lost Chick to badspots of girl;     [female gymnasts]
 
 Instead of resolving a Lost Chick:
-	if hp of Nadia is 2:   [first attempt]
+	if HP of Nadia is 2:   [first attempt]
 		say "     Remembering Nadia's words, you decide to keep an eye out for her missing chick while exploring the college campus. Most of the small grocery stores that serviced the students living on-campus have long been looted, as have the cafeteria storerooms, but if Nadia's suspicions were right then the little one wouldn't have been very interested in finding anything on the empty shelves anyway. Still, you wander about a little while longer, and it's then that you're rewarded with the faint sound of a brief squawk and set out in that direction.";
 		say "     Indeed, a flash of colour greets you as you round a corner - one of Nadia's brood is perched on a high ledge, below which a trio of feline gymnasts prowl continuously, occasionally eyeing the colourful avian and trying various ways and means of getting up that seriously suggests that they must have failed the first round of tryouts. Nevertheless, they keep on trying to get at their prize despite their constant failures - those must have been some truly tenacious girls when they were human.";
 		say "     It would have been a comical sight, really, if it weren't your daughter who was perched so high up. The trio of feline gymnasts aren't exactly very successful in their repeated attempts to get at her, leaving her in no immediate danger, but they are preventing her from making an escape. The occasional angry shriek or kick keeps them down - it's a wonder that more mutants haven't been drawn by the spectacle.";
-		say "     [line break]";
+		LineBreak;
 		say "     Vera flutters as you approach, quickly recognising you. 'Daddy, help!'";
-		say "     [line break]";
+		LineBreak;
 		say "     [LostChickFight]";
-	else if hp of Nadia is 3:   [repeat attempt]
+	else if HP of Nadia is 3:   [repeat attempt]
 		say "     Making your way back to where you last saw Nadia's missing chick, a flash of colour greets you as you round a corner - Vera is still perched on a high ledge, below which the trio of feline gymnasts prowl continuously, occasionally eyeing the colourful avian and trying various ways and means of getting up. Looks like they're totally focused on their prize despite and just won't stop till they have her - those must have been some truly tenacious girls when they were human.";
 		say "     It would have been a comical sight, really, if it weren't your daughter who was perched so high up. The trio of feline gymnasts aren't exactly very successful in their repeated attempts to get at her, leaving her in no immediate danger, but they are preventing her from making an escape. The occasional angry shriek or kick keeps them down - it's a wonder that more mutants haven't been drawn by the spectacle.";
-		say "     [line break]";
+		LineBreak;
 		say "     Vera flutters as you approach, quickly recognising you. 'Daddy, help!'";
-		say "     [line break]";
+		LineBreak;
 		say "     [LostChickFight]";
 
 to say LostChickFight:
@@ -642,25 +642,25 @@ to say LostChickFight:
 				say "[LostChickLose]";
 			else if fightoutcome >= 10 and fightoutcome <= 19:        [won]
 				say "     With a yowl, the last of the feline gymnasts turns tail and flees, allowing Vera to flutter down and embrace you by way of thanks. Your daughter feels almost as warm and good as Nadia does, and it's probably only a matter of time until she's as beautiful as her mother. Thankfully, the trip back to the library is uneventful, and Vera has the good graces to remain silent, too. You're about a couple blocks away from the library when the sound of Nadia's singing echoes off the derelict buildings to your ears, and you take your daughter by the hand and quicken your pace. Just how long has she been calling and waiting?";
-				say "     [line break]";
+				LineBreak;
 				move player to Grey Abbey 2F;
-				say "     [line break]";
+				LineBreak;
 				say "     Upon seeing you return with Vera in tow, Nadia rises, gives Vera a hug, and then proceeds to sit the chick in her nest and give her a good scolding, her voice rising to the occasional angry chirrup. '...And there is a reason, young lady, that I always ask that you stick in pairs when you go out. Did it have to take something like this to happen and your father having to go out and rescue you before the lesson is driven home? I don't think...'";
 				WaitLineBreak;
 				say "     This looks like it's going to go on for a while, but Nadia shoots a pleading look at you, clearly asking you to stay. It's a little while before the lecture's over, though, and the broody bird finishes the little stretch of mother-daughter time with a stern '...and you may think you're smart, dear, but what you're lacking in is wisdom. There's a reason I ask you to do things in certain ways. Now, you may not agree with the reason, but there's one nonetheless. Now, I have a few things to discuss with your father, so leave us be for the moment.'";
 				say "     After Vera's left, Nadia urges you to sit down beside her and explain your side of the story, rubbing her feathery body against yours as you recount driving off the feline gymnasts. Her scent changes as you tell your tale, gaining an edge of arousal, and she lets out a sound that's halfway between a chirp and a chuckle. 'Oh, I knew those three. Tryhards, always thinking that if they made the team they'd be popular just like that. Can't say I cared much for them...but I can say I care a lot more for you.' She runs her talons across your body, her fingers trembling as she does so. 'A quality father, a quality mate...' she giggles. '...And quality seed. Since you're so good with children, why don't you go rest a little, and then we can make some more? Don't keep me waiting too long, okay?' With that, she rubs up against you one last time, humming pleasantly in the back of her throat, then turns to other matters.";
 				now Lost Chick is resolved;
-				now hp of Nadia is 4;
+				now HP of Nadia is 4;
 
 to say LostChickLose:
 	say "     Having being driven off by the trio of felines, you look up once more to find the situation having reverted to being as much as it was when you'd arrived - what some might call an impasse. You'll probably need to take a little time to catch your breath and regroup before trying again.";
 
 instead of trading the fertile pill when the current action involves the Nadia:   [giving her fertility pills]
 	say "     The moment you draw the fertile pill out of your pocket, Nadia perks up in her nest and looks around, her beak slightly open, her wings flapping slightly as she sniffs the air. At last, her eyes fall upon the pill in your palm and something in the back of her mind clicks, her gaze turning from searching to begging as she pants gently, inhaling deep of a scent only she can sense. 'Please...may I have it?' she croons.";
-	say "     [line break]";
+	LineBreak;
 	say "     Do you let the broody bird have the pill? (Y/N) ";
 	if player consents:
-		say "     [line break]";
+		LineBreak;
 		say "     Chirping with delight, Nadia grabs the fertile pill out of the air with her talons as you toss it to her. You're worried that she might devour it as-is, but she easily rips apart the foil package and tosses it aside before popping the pill into her beak and swallowing. Crooning softly, the broody bird settles back into her nest to wait for it to work, and work it does.";
 		decrease carried of fertile pill by 1;
 		if NadiaPregCounter1 is 0:[not pregnant yet]
@@ -717,12 +717,12 @@ instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and
 instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and Gryphoness is tamed and companion of player is Gryphoness) and (Char-A of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
 	move player to Grey Abbey 2F;
 	say "     As you enter the library's second floor, you leave Denise a little way away as you go and check in with Nadia to make sure she's all right, while the gryphoness passes the time by leaning against one of the second storey railings and singing to herself.";
-	say "     At the sound of Denise's singing, Nadia perks up from within her nest and eyes the gryphoness, her interest clearly sparked by the gryphoness' talents. Seeing that introductions are in order, you invite Denise over and introduce the two of them. The two quickly launch into an animated discussion over music and singing in particular, with the two of them comparing their tastes in music. The two are quite similar, although Nadia prefers soothing or upbeat tunes as opposed to Denise's lonely, haunting songs, and dislikes much of contemporary music, finding much of it too jarring for her tastes.";
+	say "     At the sound of Denise's singing, Nadia perks up from within her nest and eyes the gryphoness, her interest clearly sparked by the gryphoness's talents. Seeing that introductions are in order, you invite Denise over and introduce the two of them. The two quickly launch into an animated discussion over music and singing in particular, with the two of them comparing their tastes in music. The two are quite similar, although Nadia prefers soothing or upbeat tunes as opposed to Denise's lonely, haunting songs, and dislikes much of contemporary music, finding much of it too jarring for her tastes.";
 	say "     The conversation mostly stays on topic at first, although you catch Nadia giving Denise's cock the occasional embarrassed glance as they discuss the possibility of a recital and perhaps singing a duet some time in the future. Inevitably, though, the discussion slowly turns from music to their experiences of being fucked and bred by you. As with their vocal talents, although the two avians are in general consensus, they don't quite agree on the finer points, with Denise preferring the former and Nadia favouring the latter. Still, with all the talk on the details of your exploits with each of them and the two avian breeders giggling as they compare notes, you decide it's probably best to leave them be for now and come back a little later when they're done.";
 	now Char-A of Nadia is "1";
 	say "[npcNadiaintUpdate]";
 
-instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and Icarus is in Grey Abbey Library and hp of Icarus < 50 and hp of Icarus > 0 and NadiaDescription > 3 and Char-B of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
+instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and Icarus is in Grey Abbey Library and HP of Icarus < 50 and HP of Icarus > 0 and NadiaDescription > 3 and Char-B of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
 	move player to Grey Abbey 2F;
 	say "     As you walk up to the library's second floor, you're treated to a curious sight. Icarus isn't in his usual place in the rafters - instead, your little bird-slut is in Nadia's nest, a spot of blue amongst red, and he's suckling from her, the sight of a full-grown adult doing just that a little odd even in these times, especially when Nadia usually reserves her generous bounty for her own. Nadia, on the other hand, doesn't seem to mind, mothering the chaffinch and cradling him in her lap as if he were just a big baby. Neither of them seem to notice you as you step closer, and it's not until you're close enough to hear Nadia's soft murmurings that you realise what this is all about.";
 	say "     'Pain is not necessarily bad,' she whispers to Icarus as the chaffinch continues to nurse from her ample breasts. 'Each and every one of my brood was brought into the world with pain... and I love them all. At first, there was pain in the breeding, pain in the birthing, and now...I don't regret a single moment of it. Suffering changes us... sometimes for the better.'";
@@ -730,18 +730,18 @@ instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and
 	now Char-B of Nadia is "1";
 	say "[npcNadiaintUpdate]";
 
-instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and hp of Nadia is 1 and NadiaChickCounter > 9):
+instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and HP of Nadia is 1 and NadiaChickCounter > 9):
 	move player to Grey Abbey 2F;
 	say "     Stepping up to the library's second floor, you're greeted by the familiar sight of Nadia's nest - and the unfamiliar sight of her not in it. Instead, she's leaning against one of the open windows, singing a few notes every now and then into the city, her voice carrying out amongst the buildings. It's as if she's looking for something, but although she hurriedly waves you over the moment she sees you, you're clearly not the source of her agitation.";
 	say "     'Have you seen Vera while out in the city?' she asks you worriedly. 'Silly girl went out to check one of the older stores down by the campus, and hasn't come back yet. I told her not to go, especially all on her own, but I suppose she was curious about how her mother used to live. Her wings aren't strong enough for her to fly very much yet, so I'm worried that she can't make it back safely and may be stuck out there...'";
 	say "     Admittedly, it's a little hard to remember just which of Nadia's chicks is which, especially when the broody bird keeps on adding to their number, but it shouldn't be too hard to find one of them when avians, especially ones as colourful as birds of paradise, aren't exactly a common sight on the campus. You agree to keep an eye out for her lost chick when you're in the area; Nadia nods and turns back to the window, calling out every now and then in the hope that her lost daughter will return to her.";
 	now Lost Chick is unresolved;[event open now]
-	now hp of Nadia is 2;   [quest given]
+	now HP of Nadia is 2;   [quest given]
 
-instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and NadiaDescription is 6 and NadiaPregVisibility is 5 and NadiaChickCounter > 19 and hp of Nadia is 4):
+instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and NadiaDescription is 6 and NadiaPregVisibility is 5 and NadiaChickCounter > 19 and HP of Nadia is 4):
 	move player to Grey Abbey 2F;
 	say "     As you climb up the stairs to the library's second floor, Nadia waves you over, and leaves her nest to meet you halfway. Her enormously pregnant state weighs her down considerably and she's huffing and out of breath by the time she standing in front of you, but she still manages a smile and presents you with a soft, colourful bundle, which when unfolded turns out to be a feathered cloak, glimmering faintly with a rainbow sheen of colours as it catches the light of the library.";
-	say "     'I sewed my own feathers into it.' Nadia says shyly. 'I had some spare time and the children brought me something useful, so I didn't want the material to go to waste. beside, I wanted to thank you for saving Vera. Try it on, won't you?'";
+	say "     'I sewed my own feathers into it,' Nadia says shyly. 'I had some spare time and the children brought me something useful, so I didn't want the material to go to waste. Besides, I wanted to thank you for saving Vera. Try it on, won't you?'";
 	say "     It's hard to deny Nadia when she's looking so bright and hopeful, and you pull on the cloak about your body - it fits you perfectly, and you feel all warm and protected as it hangs about your shoulders, like a mother's embrace. All in all, it's very well-made, and she's obviously worked on this for a while.";
 	WaitLineBreak;
 	say "     'It's okay,' Nadia says when you thank her and begin leading her back to her nest. 'It's not much, compared to what you've done for me - given me a place to stay, and fathered so many beautiful children. I just want to feel this good forever...'";
@@ -752,7 +752,7 @@ instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and
 	WaitLineBreak;
 	say "     It's a little while later that you wake up and slowly disentangle yourself from the warm cocoon of fluff, careful not to wake any of Nadia's sleeping chicks gathered all around her as you gather up the cloak in your arms. Nadia herself is fast asleep with her youngest chick in her arms, doing what she does best, surrounded by everyone and everything she loves, a warm, happy mother goddess to her enormous brood.";
 	increase carried of feathered cloak by 1;
-	now hp of Nadia is 5;
+	now HP of Nadia is 5;
 
 instead of navigating Grey Abbey Library while (Nadia is in Grey Abbey 2F and NadiaChickCounter > 1 and Char-J of Nadia is "0"):
 	say "[NavCheck Grey Abbey Library]";
@@ -808,8 +808,8 @@ The slot of feathered cloak is "body".
 Section 4 - Endings
 
 when play ends:
-	if hp of Nadia > 0 and hp of Nadia < 99:  [player brought her in]
-		if humanity of player is less than 10:
+	if HP of Nadia > 0 and HP of Nadia < 99:  [player brought her in]
+		if humanity of player < 10:
 			say "     When you fail to return to the library, Nadia holds out hope until the very last, only deigning to leave with the military when they evacuate people from the city. Later, when the military is doing one final sweep of the city, a small troop of soldiers checks the now-empty library and bunker for any remaining evacuees.";
 			say "     They don't find anyone, but what they do find is Nadia's empty nest with a broad-leafed, tropical plant in a pot in its middle. The plant is still vibrant and blooming despite having been left indoors for some time now, displaying brilliant flowers in varying shades of red, orange and yellow, and a faint floral scent hangs in the air. The soldiers are strangely moved by the sight - enough that they take the plant along with them when they leave.";
 		else: [player char sane]
@@ -832,7 +832,7 @@ when play ends:
 					say "     On their part, Nadia's flock of children travel outward from her nest and across the country, caring for the lost, orphaned and abandoned and bringing them a small portion of their mother's love and hope. Their efforts make them well-recognised in some parts of the country, and help save many from despair in the dark times that immediately follow the outbreak.";
 				else if NadiaDescription is 6:
 					say "     When the military evacuates the city, Nadia decides to stick with you, unwilling to part with the father of her enormous brood. Her impressively maternal and fecund body draws comment from some of the soldiers when they're not kept busy with taking stock of her numerous children, but she makes it clear she only has eyes for you. It doesn't help that some of the more unhinged survivors seem to think of her as some kind of goddess, causing quite a bit of embarrassment for her before the two of you are finally cleared.";
-					say "     In the days to come, Nadia simply concentrates on being a good mate to you, and an equally excellent mother to her ever-growing brood - a full time job, to be sure. Ensuring that you always keep her filled and happy with eggs, the broody bird's infectious aura of hope and happiness prevails wherever you go, and you never want for a coffee and hot meal in the morning prepared by your fertile goddess' hands. Nadia's body only continues to grow more bountiful with each birth - her generous features make her quite the envy of some other mutants, but she takes it all in her innocent good humour. Nadia takes up a bit of gardening on the side, too, and it seems that everything she tends to, be it fruit, veggies or flowers, seems to grow exceptionally well. Word gets about that she can make flowers grow on barren earth just by having walked across it, but she laughs off the rumours as just that.";
+					say "     In the days to come, Nadia simply concentrates on being a good mate to you, and an equally excellent mother to her ever-growing brood - a full time job, to be sure. Ensuring that you always keep her filled and happy with eggs, the broody bird's infectious aura of hope and happiness prevails wherever you go, and you never want for a coffee and hot meal in the morning prepared by your fertile goddess's hands. Nadia's body only continues to grow more bountiful with each birth - her generous features make her quite the envy of some other mutants, but she takes it all in her innocent good humour. Nadia takes up a bit of gardening on the side, too, and it seems that everything she tends to, be it fruit, veggies or flowers, seems to grow exceptionally well. Word gets about that she can make flowers grow on barren earth just by having walked across it, but she laughs off the rumours as just that.";
 					say "     In time, Nadia's numerous children fan out across the country, helping other mutants cope with their changes and spreading their mother's love and warmth to others. There's always at least one or two of them visiting at any given time, and the gifts they keep on sending back are more than enough for you to live off on if you so desired.";
 
 Nadia ends here.

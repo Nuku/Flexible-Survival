@@ -1,16 +1,16 @@
 Giant for FS by Stripes begins here.
 
 "Adds Giant to Flexible Survival."
- 
+
 Section 1 - Monster Responses
 
 giantheight is a number that varies. giantheight is usually 18.
 
 when play begins:
-	add { "Giant" } to infections of guy;
+	add { "Human Giant" } to infections of guy;
 
 to say giantdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -22,11 +22,11 @@ to say giantdesc:
 
 
 to say losetogiant:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Unwilling to continue face off against the giant, you surrender to him. Laughing, he grabs you with both huge hands and grips you painfully tight. ";
 	else:
 		say "     Knocked down and unable to get back up after his last, powerful blow, you can only lie there as he reaches for you. Laughing at his success, he grabs you with both hands and grips you painfully tight";
-	if bodyname of player is "Giant" and facename of player is "Giant":
+	if bodyname of player is "Human Giant" and facename of player is "Human Giant":
 		say "     As if only realizing now that you're a giant like him, albeit much smaller, he lifts you up to your feet. '[one of]You must be that new recruit I was promised. It's about time you got here[or]It's about time someone else showed up to work. Things are a real mess here[or]About time someone showed up to give me a hand with rounding up all these animals[or]Look at you, small fry. They just keep hiring younger and younger here every year[at random],' he says loudly, slapping you hard on the back. 'But what're you doin['] out of uniform?  Don't you know we got work to do?' Before you can recover from the hard blow to respond, he wraps his arm around you, pulling you close. 'Oh! You must be on break. How about we take a break together?' he says with a big grin, pushing you back to the ground.";
 		if cunts of player > 0 and cunt length of player > 25 and cunt width of player > 20 and a random chance of 2 in 3 succeeds:
 			say "     Forced to lay on your back, the bigger giant moves over you, getting his earth-shaking cock lined up with your [cunt size desc of player] pussy. Despite the large size of your cunt, it is a unquestionably a tight fit, but he makes a game effort of it. While somewhat uncomfortable at first, you soon start to moan and squirm beneath him as at first your cunt and then your body starts to stretch to accommodate his massive girth. And while he's only able to get part of it in you, even that much feels wonderful inside you, making you moan and pant beneath him. And when he cums, he unleashes a veritable torrent of cum into your womb, flooding your insides as your belly swells and bulges to accommodate it all.";
@@ -61,7 +61,7 @@ to say losetogiant:
 		say "     He Pins you to the ground. '[one of]I've caught you now, back in your cage you go[or]Gotcha! Don't worry, you'll calm down once you're back in your pen[or]It's okay, little guy. Don't be scared. I'm just going to put you back in your cage where it's safe[at random],' he says in his booming voice, trying to sound reassuring. You try to protest that you're not a zoo animal, he just laughs. 'Oh, don't you try to trick me. Who's the zookeeper here?' he chuckles heartily.";
 		say "     'Mmm... you must be excited like the rest of them, that's all. Looking to run around, stretch your legs and have some fun, eh?  How about we have some fun then?' he asks. Not waiting for your response, he kneels down above you, pressing his huge cock down onto you and grinding you under its massive weight. Buried under his musky cock, you as soon covered in his leaking precum as he rubs the massive log of meat against you.";
 		say "     After a few minutes of this, he picks you up [if scalevalue of player > 4]with some effort [end if]and holds you against his pulsing rod. His strong hands press you hard against that hard flesh, stroking the whole of your [bodytype of player] body against his manhood while precum leaks down over you. Soaked in it, you make for a slick toy for him to rub along his shaft. Every throb and pulse of it with the beating of his massive heart is felt through your entire body, so you have no problem noticing it beating faster (slow as it is) as his excitement builds.";
-		say "     You can't help but grow aroused yourself as the scent of his manhood covers you and soon enough, you're rubbing, licking and kissing at his cock as best you can. You press your lips to his giant, gaping urethra, gulping down mouthfuls of his precum and diving your tongue into it. Heedless of the consequences, you keep this up even as his excitement continues to grow to the boiling point and he finally cums loudly, spraying his hot seed all over your face, much of it being forced down into your mouth by the blast, filling you [if scalevalue of player < 4]to the point that you're bloated and rounded from it[otherwise]until you're stuffed and have to push away[end if], unable to take any more. He continues to cum in massive arcs across the zoo, leaving huge streaks of white that sends the critters who'd gathered to watch fleeing.";
+		say "     You can't help but grow aroused yourself as the scent of his manhood covers you and soon enough, you're rubbing, licking and kissing at his cock as best you can. You press your lips to his giant, gaping urethra, gulping down mouthfuls of his precum and diving your tongue into it. Heedless of the consequences, you keep this up even as his excitement continues to grow to the boiling point and he finally cums loudly, spraying his hot seed all over your face, much of it being forced down into your mouth by the blast, filling you [if scalevalue of player < 4]to the point that you're bloated and rounded from it[else]until you're stuffed and have to push away[end if], unable to take any more. He continues to cum in massive arcs across the zoo, leaving huge streaks of white that sends the critters who'd gathered to watch fleeing.";
 		now libido of player is libido of player / 2;
 		if a random chance of 1 in 3 succeeds or inasituation is true:
 			say "     Spotting them, he drops you roughly to the ground and lumbers to his feet, narrowly missing stomping on you by accident. '[one of]More escapees[or]Oh no! More got out[or]No, don't run, little critters[at random],' he booms, stomping off after some other hapless creature. You're left to drain and absorb the massive load filling you until you're able to rise to your feet and head back on your way.";
@@ -77,8 +77,8 @@ to say losetogiant:
 				move player to Border Wall;
 			else if t is 3 or t is 4 or t is 5:
 				let holder be "beagle";
-				say "[randomdesc]";		[yields 'slutname' - bottom]
-				say "[randombodypart]";		[yields 'bodyselector' - top]
+				say "[randomdesc]"; [yields 'slutname' - bottom]
+				say "[randombodypart]"; [yields 'bodyselector' - top]
 				while bodyselector is slutname:
 					say "[randombodypart]";
 				now holder is slutname;
@@ -111,15 +111,15 @@ to say beatthegiant:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Giant"; [Name of your new Monster]
+	now name entry is "Human Giant"; [Name of your new Monster]
 	now attack entry is "The [one of]giant[or]giant man[or]lumbering brute[or]towering creature[at random] [one of]bashes you with a massive fist[or]slaps you with an enormous backhand, knocking you back[or]grabs you in his crushing grip before throwing you to the ground[or]clobbers you with his makeshift club[or]swings his massive club into you[or]stomps a giant foot down onto you[at random]!";
 	now defeated entry is "[beatthegiant]";
-	now victory entry is  "[losetogiant]";
+	now victory entry is "[losetogiant]";
 	now desc entry is "[giantdesc]";
 	now face entry is "a human head with coarse, brown hair, just significantly larger";
 	now body entry is "a normal human body, just grown to gigantic proportions. You have a strong, muscled body to help support your great height. At around fifteen feet tall, it's quite difficult for you to get in and out, requiring you find (or make) alternate entrances or squirm your way through doorways and move on all fours while exploring. Probably best to stick to open areas";
@@ -137,38 +137,38 @@ When Play begins:
 	now per entry is 16;
 	now int entry is 7;
 	now cha entry is 12;
-	now sex entry is "Female";	 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 99;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 12;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 22;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Zoo";	[ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 45;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 40;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 18;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 45;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 40;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 55;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
- 	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 99; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 22; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 45; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 40; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 18; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 45;
+	now cunt width entry is 40;
+	now libido entry is 55; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+ 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]towering[or]huge[at random]";
 	now type entry is "[one of]giant[or]human[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings
 
 when play ends:
-	if bodyname of player is "Giant":
-		if humanity of player is less than 10:
+	if bodyname of player is "Human Giant":
+		if humanity of player < 10:
 			say "     As your thoughts grow simpler and slower, you head out into the city and stumble around for a while, hardly noticing as everything gradually gets smaller and smaller. Unable to recognize the fact that you're actually growing, but finding the city increasingly confining, you make your way to the relative openness of the zoo. There you find a giant man being tied to the ground as military teams struggle to lash him down with steel cables. Growling at these pests, you come charging in, swatting them aside by the handful and tearing out the metal cables (which seem only as thick wires to you) to free the other giant. As he gets up, the military calls the retreat, forced to abandon their attempt. As you're helping the giant out of the last of the tangle, you can see groups of the zoo animals moving in on the injured soldiers you've left in your wake. Knowing they'll be taken care of, you turn your attention to the giant.";
 			say "     He's very grateful for the rescue and thanks you for finally coming to help him with the zoo. He claims to have been getting the situation under control until those little soldier people showed up, but is really glad that you're here now to help him with it. You settle down, living there with him, playing around with the animals, getting them back into their cages, giving them the occasional soldier you find as a treat";
 			if cocks of player > 0 and cunts of player > 0:

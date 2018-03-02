@@ -22,11 +22,11 @@ Featgetting is an action applying to nothing.
 understand "volunteer" as featgetting.
 
 Check featgetting:
-	if hp of doctor matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
-	if featgained of player is greater than ( ( level of player divided by 3 ) + foodwaterbonus + nerminefeat + boosterfeats ), say "You do not yet qualify for more feats." instead; 
-	if hp of doctor matt <= 100:
+	if HP of doctor matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
+	if featgained of player > ( ( level of player divided by 3 ) + foodwaterbonus + nerminefeat + boosterfeats ), say "You do not yet qualify for more feats." instead;
+	if HP of doctor matt <= 100:
 		if doctor matt is not visible, say "Only Doctor Matt knows how to do this." instead;
-	otherwise:
+	else:
 		if doctor mouse is not visible, say "You should see Dr Mouse about that." instead;
 
 carry out featgetting:
@@ -39,14 +39,14 @@ carry out featgetting:
 	if there is no title in row 1 of table of gainable feats:
 		say "There are no feats to gain!";
 		wait for any key;
-	otherwise:
+	else:
 		change the current menu to table of Gainable Feats;
 		carry out the displaying activity;
 ]
 
 Featqualified is a number that varies.
 Featqualified is usually 0.
- 
+
 To Featget:
 	blank out the whole of table of gainable feats;
 	repeat with x running through functional featsets:
@@ -54,7 +54,7 @@ To Featget:
 	if there is no title in row 1 of table of gainable feats:
 		say "There are no feats to gain!";
 		wait for any key;
-	otherwise:
+	else:
 		[change the current menu to table of Gainable Feats;
 		carry out the displaying activity;]
 		now featqualified is 1;
@@ -69,16 +69,16 @@ To Featget:
 				now current menu selection is calcnumber;
 				follow the gainfeat rule;
 				if featqualified is 0, break;
-			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+			else if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";
 				continue the action;
-			otherwise:
+			else:
 				say "Invalid Feat.";
 
 featgrabbing is an action applying to one topic.
 
 understand "featgrab [text]" as featgrabbing.
- 
+
  Check featgrabbing:
 	if featqualified is 0:
 		say "You are not ready to learn a new feat." instead;
@@ -95,7 +95,7 @@ To FunFeatget:
 	if there is no title in row 1 of table of gainable feats:
 		say "There are no feats to gain!";
 		wait for any key;
-	otherwise:
+	else:
 		change the current menu to table of Gainable Feats;
 		carry out the displaying activity;
 	decrease featgained of player by 1;
@@ -108,7 +108,7 @@ To FunFeatget:
 	if there is no title in row 1 of table of gainable feats:
 		say "There are no feats to gain!";
 		wait for any key;
-	otherwise:
+	else:
 		[change the current menu to table of Gainable Feats;
 		carry out the displaying activity;]
 		now featqualified is 1;
@@ -124,10 +124,10 @@ To FunFeatget:
 				follow the gainfeat rule;
 				decrease featgained of player by 1;
 				if featqualified is 0, break;
-			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+			else if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";
 				continue the action;
-			otherwise:
+			else:
 				say "Invalid Feat.";
 
 Addfeating is an action applying to one thing.
@@ -157,7 +157,7 @@ instead of addfeating the fun feats:
 			addfeat "Always A Pussy"  with "Outside of special circumstances, you will always keep a pussy.";
 	if "Male Preferred" is listed in feats of player:
 		if "Flat Chested" is not listed in feats of player, addfeat "Breasts" with "Despite being all male, you still grow breasts - curious.";
-	otherwise:
+	else:
 		if "Breasts" is not listed in feats of player, addfeat "Flat Chested" with "Your chest tends to remain flat.";]
 	if "Modest Organs" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
 		addfeat "One Way" with "You can only grow larger, not smaller, sexually - barring specific effects.";
@@ -198,7 +198,7 @@ instead of addfeating the fun feats:
 	if "Dominant" is not listed in feats of player:
 		addfeat "Submissive" with "Gain extra XP for submitting to monsters.  You may find submitting so much fun you do it spontaneously from time to time.  It may occasionally open new, submissive scene variations.";
 	if "Submissive" is not listed in feats of player:
-		addfeat "Dominant" with "Defeating monsters gets you excited, gaining a small libido, morale or xp boost from it.  It may occasionally open new, dominant scene variations.";
+		addfeat "Dominant" with "Defeating monsters gets you excited, gaining a small libido, morale or XP boost from it.  It may occasionally open new, dominant scene variations.";
 	if Strange Serpent is resolved or scenario is "Forgotten":
 		addfeat "Touched by Madness" with "On your travels you appear to have contracted some manner of strange aura which may cause some monsters to behave weirdly around you. (Caution, you may experience more extreme content by choosing this feat.)[line break]";
 	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight.  You may choose [bold type]auto attack normal/berserk/pass/coward/submit[roman type].";[put next to submissive because that seemed logical.  move elsewhere if so desired.]
@@ -219,19 +219,19 @@ instead of addfeating the basic feats:
 	if "Fertile" is not listed in feats of player, addfeat "Sterile" with "You are incapable of mothering a child.";
 	if "Fertile" is listed in feats of player:
 		addfeat "Maternal" with "You love children.  Faster gestation and improves morale from childbirth.";
-	if number of entries in childrenfaces is greater than 0:
+	if number of entries in childrenfaces > 0:
 		addfeat "Spirited Youth" with "Your child will lend their aid in combat, occasionally dealing damage to the enemy.";
-	if "Spirited Youth" is listed in feats of player and number of entries in childrenfaces is greater than 2:
+	if "Spirited Youth" is listed in feats of player and number of entries in childrenfaces > 2:
 		addfeat "Youthful Tides" with "Once in a while, all of your kids will swarm to your aid in battle.";
-	if charisma of player is greater than 14:
+	if charisma of player > 14:
 		addfeat "Haggler" with "You are an especially skilled haggler. Sometimes, you end up with two of what you are trading for!";
 		if player is not lonely:
 			addfeat "Good Teacher" with "Your pets gain levels much more quickly than normal.";
 	if featunlock is 1:	[available after hospital quest]
-		if charisma of player is greater than 14 and intelligence of player > 12:
+		if charisma of player > 14 and intelligence of player > 12:
 			if "Good Teacher" is listed in feats of player:
-				addfeat "Ringmaster" with "You will gain full xp while training your pets.";
-		if charisma of player is greater than 16 and number of entries in list of tamed pets > 2:
+				addfeat "Ringmaster" with "You will gain full XP while training your pets.";
+		if charisma of player > 16 and number of entries in list of tamed pets > 2:
 			addfeat "The Horde" with "Your pets will sometimes organize a full-on counterstrike.";
 		if charisma of player > 11:
 			addfeat "Flash" with "Your skin/fur/scales will occasionally flash bright light, reducing your foe's chance to hit.";
@@ -244,37 +244,37 @@ instead of addfeating the basic feats:
 		addfeat "Rapid Healing" with "Increased healing during recovery time and minor increase to healing items.";
 		if stamina of player > 16 and "Rapid Healing" is listed in feats of player:
 			addfeat "Regeneration" with "Further increased healing based on level and from healing items.";
-	if stamina of player is greater than 13:
+	if stamina of player > 13:
 		addfeat "Iron Stomach" with "Your belly has nano resistance! Eating or drinking infectious items fails to change you.";
-	if stamina of player is greater than 14 and "Automatic Survival" is not listed in feats of player:
+	if stamina of player > 14 and "Automatic Survival" is not listed in feats of player:
 		addfeat "Spartan Diet" with "You don't need 2 liters of water and great feasts to keep you going! You become thirsty and hungry slower.";
 	if featunlock is 1:	[available after hospital quest]
 		addfeat "Vore Predator" with "Your hunger has gone out of control.  Let your foes beware!";
 	if "Vore Predator" is listed in feats of player and "Iron Stomach" is listed in feats of player:
 		addfeat "Safe Appetite" with "You will not gain infection from consuming your foes.";
-	if stamina of player is greater than 14:
+	if stamina of player > 14:
 		addfeat "Toughened" with "You take less damage than others(-20% damage)";
 	if scenario is "Researcher" and ( intelligence of player > 14 or level of player >= 9 ):
 		addfeat "Expert Researcher" with "Your expert skills allow you a second opportunity to get an infection vial.";
-	if intelligence of player is greater than 14:
-		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% xp needed to level.";
+	if intelligence of player > 14:
+		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% XP needed to level.";
 		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and a 20% chance of saving a kit when it should be lost.";
-	if intelligence of player is greater than 12 and ( bodyname of player is not "human" or facename of player is not "human" ):
-		addfeat "Know Thyself" with "By thinking like an enemy that has infected you, you know better how to deal with them and gain a +0 to +2 bonus to hit matching enemies each round.  Thinking with your other head gradually gets your infected loins more excited as well.  You gain more xp from these fights as well.";
+	if intelligence of player > 12 and ( bodyname of player is not "human" or facename of player is not "human" ):
+		addfeat "Know Thyself" with "By thinking like an enemy that has infected you, you know better how to deal with them and gain a +0 to +2 bonus to hit matching enemies each round.  Thinking with your other head gradually gets your infected loins more excited as well.  You gain more XP from these fights as well.";
 	if intelligence of player > 15 and level of player > 5:
 		addfeat "Weaponsmaster" with "Your experience and knowledge allow you to assess a weapon's worth and wield it better.";
 	addfeat "Wary Watcher" with "Always on guard, creatures won't gain first strike on you.";
-	if perception of player is greater than 14:
+	if perception of player > 14:
 		addfeat "Magpie Eyes" with "You love shining things. Especially shining things on the defeated bodies of your enemies. Increased odds of drops.";
 		if "Magpie Eyes" is listed in feats of player:
 			addfeat "Mugger" with "You want it all!  A flat drop rate increase based on perception you can (de)activate.";
 		addfeat "Expert Hunter" with "Your chances of hunting a specific critter with the hunt command increases.";
 		if "Expert Hunter" is listed in feats of player:
 			addfeat "Master Baiter" with "You are virtually assured victory when hunting a specific creature.";
-	if dexterity of player is greater than 14:
+	if dexterity of player > 14:
 		if "Stealthy" is listed in feats of player or "Wary Watcher" is listed in feats of player or perception of player > 14:
 			addfeat "Experienced Scout" with "You have a chance of avoiding a random fight altogether if you so wish it.";
-	if dexterity of player is greater than 14:
+	if dexterity of player > 14:
 		addfeat "Stealthy" with "Your chance of running into a monster is decreased while you are scavenging or exploring.";
 		addfeat "Martial Artist" with "You have basic martial arts training, increasing the damage you cause when you have no weapon.";
 		if "Martial Artist" is listed in feats of player:
@@ -294,12 +294,12 @@ instead of addfeating the basic feats:
 			addfeat "Powerful" with "Boosts your potential damage by up to 25%.";
 		if dexterity of player > 16 and "Powerful" is listed in feats of player:
 			addfeat "Mayhem" with "Random increase in damage based on level.";
-	if strength of player is greater than 14:
+	if strength of player > 14:
 		addfeat "Strong Back" with "You can carry impressive amounts of stuff. +50 lb tolerance.";
-	if level of player is greater than 1:
+	if level of player > 1:
 		addfeat "More Time" with "You have some more precious time. Though who'd want to stay around here longer? Weirdo!";
 [	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern.";	]
-	if hp of doctor matt is greater than 4 or scenario is "Forgotten":
+	if HP of doctor matt > 4 or scenario is "Forgotten":
 		addfeat "Microwaved" with "Thanks to the good advice, you have a great idea! If you can clean water, why not yourself? Genius. Gives you a very potent resistance to species reassignment.";
 	if featunlock is 1:	[available after hospital quest]
 		if "Mutable" is not listed in feats of player:
@@ -330,8 +330,8 @@ This is the gainfeat rule:
 		if nam is "More Time", extend game by 24;
 		now Featqualified is 0;
 		if nam is "Hardy":
-			increase maxhp of player by 8;
-			increase hp of player by 8;
+			increase maxHP of player by 8;
+			increase HP of player by 8;
 		if nam is "City Map":
 			say "[bestowcitymapfeat]";
 		if nam is "Instinctive Combat":
@@ -340,7 +340,7 @@ This is the gainfeat rule:
 			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type]vore menu[roman type] command.  It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]).  It is used for adjusting vore-related game settings.";
 			now playercanvore is true;
 		if nam is "Mugger":
-			say "     You will now get a flat rate increase to item drops from monsters based on your perception.  This ability can be can turned on or off by using the [bold type]mugger[roman type] command and is currently [bold type][if muggerison is true]ON[otherwise]OFF[end if][roman type].";
+			say "     You will now get a flat rate increase to item drops from monsters based on your perception.  This ability can be can turned on or off by using the [bold type]mugger[roman type] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
 		if nam is "Vampiric":
 			say "     You will now recover a small amount of health, thirst and hunger after every victory as you get in a blood-sucking bite after your final blow or at some other point during the victory scene.";
 			now vampiric is true;
@@ -378,8 +378,8 @@ check muggering:
 carry out muggering:
 	if muggerison is false:
 		now muggerison is true;
-	otherwise:
+	else:
 		now muggerison is false;
-	say "The 'Mugger' feat is now [bold type][if muggerison is true]ON[otherwise]OFF[end if][roman type].  You will gain drop items [if muggerison is true]more frequently[otherwise]as normal[end if].";
+	say "The 'Mugger' feat is now [bold type][if muggerison is true]ON[else]OFF[end if][roman type].  You will gain drop items [if muggerison is true]more frequently[else]as normal[end if].";
 
 Feats ends here.

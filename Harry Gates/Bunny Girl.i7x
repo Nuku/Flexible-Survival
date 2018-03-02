@@ -68,7 +68,7 @@ Definition:  a person (called N) is fully bunny if N is fully infected and entry
 
 Section 2 - Bunny Girl Definition
 
-A Bunny Girl is a kind of monster.  The body of a Bunny Girl is usually  {Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene}.  A Bunny Girl is monstrous.  A Bunny Girl is fully infected.  A Bunny Girl is usually unsuited.  A Bunny Girl is female.  A Bunny Girl is tailed.  The monster gene of a Bunny Girl is Bunny_Girl_gene.
+A Bunny Girl is a kind of monster.  The body of a Bunny Girl is usually {Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene}.  A Bunny Girl is monstrous.  A Bunny Girl is fully infected.  A Bunny Girl is usually unsuited.  A Bunny Girl is female.  A Bunny Girl is tailed.  The monster gene of a Bunny Girl is Bunny_Girl_gene.
 
 The description of Bunny Girl is "This is an anthropomorphic bunny girl, her teeth bared and sharp claws ready to strike, laying eggs to share with all!"
 

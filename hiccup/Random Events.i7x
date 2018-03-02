@@ -5,15 +5,6 @@ Random Events by hiccup begins here.
 
 Section 1 - The Situations
 
-Film is a situation.
-the sarea of Film is "Plains".
-
-Instead of Resolving a Film:
-	say "While exploring the outskirts of the city, you spot a professional grade camera in the middle of the crumbling street.  It's covered in a strange, sticky juice and there is a local news channel logo on the side of it.  The camera is badly damaged, but the viewscreen on the side still works so you use it to view the last few minutes that the camera recorded.";
-	say "The footage starts with a blond woman on screen holding a microphone as she says, 'Hello, this is Kelly Richardson with Action News, reporting live from the city streets where a crisis has... Oh my God!'  The reporter gets cut off as a male minotaur charges out of a nearby alley, tackles her to the ground, and starts humping her.  Before the cameraman gets a chance to pull the creature off her, a centauress steps out of another alley and charges at the cameraman.  The last thing the camera sees before the footage cuts out, is the huge pussy lips of the centauress coming towards it.  You find nothing else of interest.";
-	increase the score by 1;
-	now Film is Resolved;
-
 
 Wet Clothes is a situation.
 the sarea of Wet Clothes is "Warehouse".

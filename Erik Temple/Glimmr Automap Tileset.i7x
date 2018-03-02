@@ -14,7 +14,7 @@ Section - Zoom levels (for use with Glimmr Automap by Erik Temple)
 The zoom-level set of the Glimmr Automap Tileset is usually {0.3600, 0.5600, 0.8000, 1.0000}.
 
 The initial zoom level of the Glimmr Automap Tileset is usually 2.
-		
+
 
 Section - Figure List
 [Mark Tilford's Automap does not yet utilize the automap dark and automap present dark tiles, so these have been commented out.]
@@ -34,7 +34,7 @@ Figure of ne sw path is the file "Automap_Tileset_035.png".
 Figure of nw se path is the file "Automap_Tileset_036.png".
 Figure of empty room center is the file "Automap_Tileset_037.png".
 Figure of diagonal cross is the file "Automap_Tileset_090.png".
-Figure of orthogonal cross is the file "Automap_Tileset_091.png". 
+Figure of orthogonal cross is the file "Automap_Tileset_091.png".
 Figure of south wall is the file "Automap_Tileset_038.png".
 Figure of north wall is the file "Automap_Tileset_039.png".
 Figure of east wall is the file "Automap_Tileset_040.png".
@@ -113,7 +113,7 @@ Char	Tile
 36	Figure of nw se path
 37	Figure of empty room center
 90	Figure of diagonal cross
-91	Figure of orthogonal cross 
+91	Figure of orthogonal cross
 38	Figure of south wall
 39	Figure of north wall
 40	Figure of east wall
@@ -169,11 +169,11 @@ Char	Tile
 Glimmr Automap Tileset ends here.
 
 
----- DOCUMENTATION ---- 
+---- DOCUMENTATION ----
 
 Section: About
 
-Glimmr Automap Tileset is a tileset extension intended for use with the Glimmr Automap extension. It requires a set of external images for use. This can be downloaded as part of the current Glimmr archive (http://code.google.com/p/glimmr-i7x/downloads/list).
+Glimmr Automap Tileset is a tileset extension intended for use with the Glimmr Automap extension. It requires a set of external images for use. This can be downloaded as part of the current Glimmr archive (https://code.google.com/archive/p/glimmr-i7x/downloads).
 
 The extension can also be used as a tileset for any standard image-map element (see Glimmr Drawing Commands and Glimmr Canvas-Based Drawing).
 
@@ -195,6 +195,6 @@ Section: Contact info
 
 If you have comments about the extension, please feel free to contact me directly at ek.temple@gmail.com.
 
-Please report bugs on the Google Code project page, at http://code.google.com/p/glimmr-i7x/issues/list.
+Please report bugs on the Google Code project page, at https://code.google.com/archive/p/glimmr-i7x/issues.
 
-For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the intfiction forum (http://www.intfiction.org/forum/). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, please contact me directly via email (ek.temple@gmail.com).
+For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the intfiction forum (https://www.intfiction.org/forum/). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, please contact me directly via email (ek.temple@gmail.com).

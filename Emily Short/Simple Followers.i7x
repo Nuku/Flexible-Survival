@@ -9,11 +9,11 @@ Section 1 - The shadowing relation
 Shadowing relates various people to one person (called the goal). The verb to shadow (he shadows, they shadow, he shadowed, he is shadowed, he is shadowing) implies the shadowing relation.
 
 Every turn:
-        repeat with pursuer running through on-stage people who are shadowing someone 
+        repeat with pursuer running through on-stage people who are shadowing someone
         begin;
                 let starting-space be the location of the pursuer;
                 let ending-space be the location of the goal of the pursuer;
-	if the starting-space is not the ending-space 
+	if the starting-space is not the ending-space
 	begin;
 	                let next-way be the best route from the starting-space to the ending-space, using doors;
           	     	if next-way is a direction, try the pursuer trying going next-way;
@@ -38,11 +38,11 @@ Carry out someone trying following (this is the standard shadowing rule):
 	now the person asked shadows the noun.
 
 Report someone trying following (this is the standard report someone trying following rule):
-	say "[The person asked] begins to follow [if the noun is the player]you[otherwise][the noun][end if]."
+	say "[The person asked] begins to follow [if the noun is the player]you[else][the noun][end if]."
 
 Unsuccessful attempt by someone trying following (this is the excuses for not following rule):
 	if the reason the action failed is the following only people rule, say "[The person asked] realizes [it-they] cannot follow anything inanimate.";
-	if the reason the action failed is the following people already followed rule, say "[The person asked] redoubles the effort to follow [if the noun is the player]you[otherwise][the noun][end if]."
+	if the reason the action failed is the following people already followed rule, say "[The person asked] redoubles the effort to follow [if the noun is the player]you[else][the noun][end if]."
 
 
 Section 3 - The STOP FOLLOWING action
@@ -54,12 +54,12 @@ Check ceasing to follow something (this is the block ceasing to follow rule):
 
 Check someone trying ceasing to follow (this is the can't stop following what isn't followed rule):
 	if the person asked is not shadowing the noun, stop the action.
-	
+
 Carry out someone trying ceasing to follow (this is the standard stop-shadowing rule):
 	now the person asked is not shadowing the noun.
-	
+
 Report someone trying ceasing to follow (this is the standard report someone trying ceasing to follow rule):
-	say "[The person asked] ceases to pursue [if the noun is the player]you[otherwise][the noun][end if]."
+	say "[The person asked] ceases to pursue [if the noun is the player]you[else][the noun][end if]."
 
 Unsuccessful attempt by someone trying ceasing to follow (this is the excuses for not ceasing to follow rule):
 	say "[The person asked] looks blank, since [it-they] [is-are] already not following anyone."
@@ -98,7 +98,7 @@ Two rules prevent the player from following or ceasing to follow someone else:
 
 	Check ceasing to follow something (this is the block ceasing to follow rule):
 		say "You aren't a follower anyhow." instead.
-	
+
 We may ignore or substitute these two rules if we would prefer some other behavior.
 
 Note also that this extension does not provide for the case where the player wants to follow another character who has just left the scene.
@@ -108,7 +108,7 @@ Version 4 lifts the arbitrary restriction that people do not follow through door
 Example: * Farmyard Chase - In which we amass a small procession.
 
 	*: "Farmyard Chase"
-	
+
 	Include Simple Followers by Emily Short.
 
 	Persuasion rule for asking people to try following something: persuasion succeeds. Persuasion rule for asking people to try ceasing to follow something: persuasion succeeds.

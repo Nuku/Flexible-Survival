@@ -13,9 +13,8 @@ Instead of resolving a Gill Fruits Tree:
 		increase carried of gill fruit by 1;
 		say "As you pick some of the fruit, the rest falls off into the water, overripe. Odd.";
 		now gill fruits tree is resolved;
-	otherwise:
+	else:
 		say "You leave the tree alone.";
-
 
 gill fruit is a grab object.
 gill fruit has a usedesc "[gill fruit use]".
@@ -33,115 +32,24 @@ to say gill fruit use:
 	if thirst of player < 0, now thirst of player is 0;
 	if hunger of player < 0, now hunger of player is 0;
 	increase score by 10;
-	say "Your neck feels odd as gills seem to sprout, tiny folds of skin that stay flat in the air.";
+	say "You feel a tingling in your neck, and somehow understand that if you were to go underwater you could breathe.";
 	follow the turnpass rule;
 
-after examining the player:
-	if hasgills is 1:
-		say "You have small gills on your neck, a result of eating strange fruit.";
-
 the scent of gill fruit is "The strange fruit has a faint, fishy scent.".
-	
 
 Section 2 - Underwater Beach
 
-swimtoing is an action applying to one thing.
-
-understand "swim [any room]" as swimtoing.
-understand "swim to [any room]" as swimtoing.
-
-		[Fight;]
-[if there is a area of Battleground in the table of random critters:]
-[now battleground is "Sea";]
-
-check swimtoing:
-	if hasgills is not 1:
-		if facename of player is not "Squid", say "You'll not be able to swim there without a way to breathe underwater. It's too far and too deep." instead;
-	if the noun is a direction, say "If you enter the water, how will you know you are going the right direction? Maybe you should try swimming towards the place itself." instead;
-	if the noun is not adjacent to the location of the player, say "That isn't nearby. Make sure that you're swimming to a specific location nearby." instead;
-	if the location of the player is noun, say "You're already there." instead;
-
-carry out swimtoing:
-	if a random number between 1 and 26 is greater than the perception of the player:[higher chance than normal]
-		swimmingfight;
-	otherwise:
-		say "You travel to [the noun], avoiding trouble as best you can. The gills on your neck prove their worth, gathering air for you underwater as you move beneath the waves.";		
-	move the player to the noun;
-	follow turnpass rule;
-
-to swimmingfight:
-	let T be a random number between one and 10;
-	if T is 1:
-		if furry is banned or guy is banned:
-			increase T by 1;
-		otherwise:
-			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
-			challenge "Feral Sea Dragon"; [duh case, all three ways]
-	if T is 2:
-		if furry is banned or girl is banned:
-			increase T by 1;
-		otherwise:
-			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
-			challenge "Feral Sea Dragoness";
-	if T is 3:
-		if furry is banned or hermaphrodite is banned:
-			increase T by 1;
-		otherwise:
-			challenge "Hermaphrodite Dolphin";
-	if T is 4:
-		if furry is banned or guy is banned:
-			increase T by 1;
-		otherwise:
-			challenge "Killer Whale";
-	if T is 5:
-		if furry is banned:
-			increase T by 1;
-		otherwise:
-			challenge "Otter";
-	if T is 6:
-		if guy is banned:
-			increase T by 1;
-		otherwise:
-			challenge "Siren";
-
-
-The Sloping Sand is a room. "The sand here slopes gently downward, with a few rising dunes under the water causing shallow and deep areas, but always progressively passing deeper into the ocean. From here, you have a better view of the rocky area with the crashing waves. It looks like a rather unhealthy area to get into the water - but at one spot, there is a kind of coral-encrusted arch allowing passage through the rocks. Maybe you could [bold type]swim[roman type] to the [bold type]coral ring[roman type]?  Otherwise, you can head east back to shore.".
-the Sloping Sand is west of public beach.
-
-the scent of Sloping Sand is "All you can smell out here is the strong scent of the ocean.".
-
-before going to the coral ring:
-	say "You can't just walk around in the ocean. You'll have to [bold type]swim[roman type] to the [bold type]coral ring[roman type].";
-	stop the action;
-
-Coral Ring is south of the Sloping Sand.
-
-The coral ring is a room. "A huge ring of red coral arches over your head, allowing you passage through the choppy waters by the jagged rocks. By passing through here, you are able to move to and from the deeper reaches of the sea. To the south from here, you can see a shadowy shape beneath the water, barely at the limits of your restricted vision in the deeper waters. It seems like a sunken ship, its broken mast helping you distinguish the shape. There's a [bold type]shipwreck[roman type] to explore! Or you could just [bold type]swim[roman type] back to the [bold type]sloping sand[roman type] of the beach.".
-
-the scent of Coral Ring is "All you can smell out here is the strong scent of the ocean.".
-
-after entering the coral ring:
-	say "You look up with awe, sure this accomplishment was great.";
-	increase score by 5;
-
-before going to the sunken ship:
-	say "You shouldn't just swim out into the open sea, you'll get lost out here! Maybe just [bold type]swim[roman type] to the [bold type]shipwreck[roman type] instead, that's close enough to find the way back.";
-	stop the action;
-
-Sunken Ship is south of Coral Ring.
-
-Sunken Ship is a room.
-understand "Shipwreck" as Sunken Ship.
-understand "Wreck" as Sunken Ship.
-The description of Sunken Ship is "A large ship lays sunken and rotting here. From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago. It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea. There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast. You'd best be careful. From here, you can barely make out the lighter spot in the rocks that is the [bold type]coral ring[roman type] you passed through to get here. You could [bold type]swim[roman type] to it if you want to get back to the beach.".
-
-The invent of Sunken Ship is { "sea dragon cum" , "sea dragon cum" }.
-
-the scent of Sunken Ship is "You can't smell anything while underwater.".
-
+instead of going down from Open Ocean:
+	if hasgills is 1:
+		say "     You dive into the water, making your way to the sunken ship, feeling the gills appear on your neck to allow you to breath. It doesn't take you that long to get their thankfully so you quite quickly arrive at the ship.";
+		move player to Sunken Ship;
+	else if facename of player is listed in infections of swimlist:
+		say "     With your natural ability to breathe underwater due to your infection, you dart under and swim towards the sunken ship. Thankfully for your patience it doesn't take you long to reach the ship.";
+		move player to Sunken Ship;
+	else:
+		say "     You shake your head furiously as you realize that you'd probably drown without any ability to breathe underwater. Perhaps you should find a way to do so before you start diving into deep waters.";
 
 Section 3 - Sea Dragon Cum
-
 
 Table of Game Objects(continued)
 name	desc	weight	object
@@ -155,23 +63,59 @@ to say sea dragon cum use:
 		if the player consents:
 			if a random chance of one in two succeeds and guy is not banned:
 				infect "Feral Sea Dragon";
-			otherwise:
+			else:
 				infect "Feral Sea Dragoness";
-		otherwise:
+		else:
 			say "You rub the thick stuff into your waiting cunt, massaging it in. You moan in pleasure as you work the thick cum deep inside you.";
 			if a random chance of one in two succeeds and guy is not banned:
 				infect "Feral Sea Dragon";
-			otherwise:
+			else:
 				infect "Feral Sea Dragoness";
 			impregnate with "Feral Sea Dragon[one of][or]ess[at random]";
-	otherwise:
+	else:
 		if a random chance of one in two succeeds and guy is not banned:
 			infect "Feral Sea Dragon";
-		otherwise:
-			infect "Feral Sea Dragoness";		
+		else:
+			infect "Feral Sea Dragoness";
 
 sea dragon cum is a grab object. sea dragon cum is cum.
 sea dragon cum has a usedesc "[sea dragon cum use]".
 
+Section 4 - Fighting
+
+to swimmingfight:
+	let T be a random number between one and 10;
+	if T is 1:
+		if furry is banned or guy is banned:
+			increase T by 1;
+		else:
+			say "As you [if rowing is true]row[else]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[else]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
+			challenge "Feral Sea Dragon"; [duh case, all three ways]
+	if T is 2:
+		if furry is banned or girl is banned:
+			increase T by 1;
+		else:
+			say "As you [if rowing is true]row[else]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[else]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
+			challenge "Feral Sea Dragoness";
+	if T is 3:
+		if furry is banned or hermaphrodite is banned:
+			increase T by 1;
+		else:
+			challenge "Hermaphrodite Dolphin";
+	if T is 4:
+		if furry is banned or guy is banned:
+			increase T by 1;
+		else:
+			challenge "Killer Whale";
+	if T is 5:
+		if furry is banned:
+			increase T by 1;
+		else:
+			challenge "Otter";
+	if T is 6:
+		if guy is banned:
+			increase T by 1;
+		else:
+			challenge "Siren";
 
 underwater zone for fs ends here.

@@ -41,13 +41,13 @@ understand "iwannatest" as TestMode.
 
 check TestMode:
 	if TestingActive is true, say "You're already in testing mode." instead;
-		
+
 carry out TestMode:
 	add "Bestial Power" to feats of player;
 	add "Black Belt" to feats of player;
 	add "Breeding True" to feats of player;
 	add "City Map" to feats of player;
-	say "[bestowcitymapfeat]";	
+	say "[bestowcitymapfeat]";
 	add "Curious" to feats of player;
 	add "Dazzle" to feats of player;
 	add "Dominant" to feats of player;
@@ -86,7 +86,7 @@ carry out TestMode:
 	add "The Horde" to feats of player;
 	add "Toughened" to feats of player;
 	add "Vampiric" to feats of player;
-	now vampiric is true;	
+	now vampiric is true;
 	add "Wary Watcher" to feats of player;
 	add "Weaponsmaster" to feats of player;
 	add "Youthful Tides" to feats of player;
@@ -97,8 +97,8 @@ carry out TestMode:
 	now charisma of player is 30;
 	now perception of player is 30;
 	now level of player is 30;
-	now maxhp of player is 300;
-	now hp of player is 300;
+	now maxHP of player is 300;
+	now HP of player is 300;
 	now capacity of player is 300;
 	increase carried of food by 15;
 	increase carried of water bottle by 15;
@@ -107,8 +107,9 @@ carry out TestMode:
 	increase carried of gryphon milk by 5;
 	increase carried of glob of goo by 5;
 	increase carried of honeycomb by 5;
-	increase carried of healing booster by 5;	
-	
+	increase carried of healing booster by 5;
+	now TestingActive is true;
+
 SubDomFlip is an action applying to nothing.
 understand "flip janus coin" as SubDomFlip.
 understand "flip Janus Coin" as SubDomFlip.
@@ -131,7 +132,7 @@ carry out SubDomFlip:
 	else:
 		say "you catch - no, try to catch it in your hand.";
 		say "     Somehow it slips through your fingers, bouncing off the ground and rolling around a little, until it comes to a sudden standstill. And that is how it remains, just standing on its side, falling over in neither direction. As you pick the little disc of metal off the ground, it is strangely cold between your fingers for a second. Almost seems like its giving you the cold shoulder since you fit neither of its different faces.";
-	
+
 PregTestMirror is an action applying to nothing.
 understand "preg test" as PregTestMirror.
 understand "pregtest" as PregTestMirror.
@@ -163,7 +164,7 @@ carry out PregTestMirror:
 		say "+";
 	else:
 		say "-";
-	say "[line break]";
+	LineBreak;
 	say "[line break]fpreg_ok: ";
 	if player is fpreg_ok:
 		say "+";
@@ -184,7 +185,7 @@ carry out PregTestMirror:
 		say "+";
 	else:
 		say "-";
-	say "[line break]";
+	LineBreak;
 	say "[line break]mpreg_ok: ";
 	if player is mpreg_ok:
 		say "+";
@@ -205,5 +206,166 @@ carry out PregTestMirror:
 		say "+";
 	else:
 		say "-";
+
+[Allows the player to change their body size without an infection. Useful for testing some scenes.]
+PlayerSizeChange is an action applying to nothing.
+understand "changesize" as PlayerSizeChange.
+understand "change size" as PlayerSizeChange.
+understand "size change" as PlayerSizeChange.
+
+carry out PlayerSizeChange:
+	LineBreak;
+	say "     [bold type]What size do you want your character to be?[roman type][line break]";
+	say "     [link](1)[as]1[end link] Tiny.";
+	say "     [link](2)[as]2[end link] Small.";
+	say "     [link](3)[as]3[end link] Average.";
+	say "     [link](4)[as]4[end link] Large.";
+	say "     [link](5)[as]5[end link] Huge.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 5:
+		say "Choice? (1-5)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
+			break;
+		else:
+			say "Invalid choice.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Set player size to tiny.";
+		now scalevalue of player is 1;
+	else if calcnumber is 2:
+		LineBreak;
+		say "     Set player size to small.";
+		now scalevalue of player is 2;
+	else if calcnumber is 3:
+		LineBreak;
+		say "     Set player size to average.";
+		now scalevalue of player is 3;
+	else if calcnumber is 4:
+		LineBreak;
+		say "     Set player size to large.";
+		now scalevalue of player is 4;
+	else if calcnumber is 5:
+		LineBreak;
+		say "     Set player size to huge.";
+		now scalevalue of player is 5;
+
+[Allows the player to add or remove the "Kinky" feat without leveling. Useful for testing some scenes.]
+AddRemoveKinky is an action applying to nothing.
+understand "add kinky" as AddRemoveKinky.
+understand "remove kinky" as AddRemoveKinky.
+
+carry out AddRemoveKinky:
+	if "Kinky" is listed in feats of player:
+		remove "Kinky" from feats of player;
+	else:
+		add "Kinky" to feats of player;
+
+
+InfectionOverview is an action applying to nothing.
+
+understand "infectionoverview" as InfectionOverview.
+
+carry out InfectionOverview:
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		now cocks of player is 1;
+		now cunts of player is 1;
+		now cock length of player is 10;
+		now cunt length of player is 8;
+		now tail of player is the tail entry;
+		now face of player is the face entry;
+		now skin of player is the skin entry;
+		now body of player is the body entry;
+		now cock of player is the cock entry;
+		say "[bold type][name entry][roman type]:";
+		LineBreak;
+		DescriptionDisplay;
+		LineBreak;
+
+to DescriptionDisplay:
+	now looknow is 1;
+	let cocktext be "";
+	follow the cock descr rule;
+	if the cocks of the player > 0:
+		if the cocks of the player > 1:
+			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size].";
+		else:
+			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size].";
+	let cunttext be "";
+	follow the cunt descr rule;
+	if the cunts of the player > 0:
+		if the cunts of the player > 1:
+			now cunttext is " have [cunts of the player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
+		else:
+			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. It is [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
+	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
+	repeat with x running through equipped owned equipment:
+		if descmod of x is "", next;
+		if placement of x is "face":
+			say " [descmod of x][run paragraph on]";
+	say " Your body is [body of the player].[run paragraph on]";
+	repeat with x running through equipped owned equipment:
+		if descmod of x is "", next;
+		if placement of x is "body":
+			say " [descmod of x][run paragraph on]";
+	repeat with x running through equipped owned equipment:
+		if descmod of x is "", next;
+		if placement of x is "waist":
+			say " [descmod of x][run paragraph on]";
+	if "Angie's Mate" is listed in feats of player:
+		say " Thin lines of healed claw-marks run down your back, marking you as Angie's mate.[run paragraph on]";
+	if "Boghrim's Mark" is listed in feats of player:
+		say " Two small scars from Boghrim's tusks mark your shoulder, a reminder of the first time the big orc fucked you.[run paragraph on]";
+	if weapon object of player is not journal:
+		say " You are carrying a/an [weapon object of player] just in case of trouble";
+		if weapon object of player is unwieldy:
+			say ". Due to its comparatively [if scalevalue of player > objsize of weapon object of player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of player - objsize of weapon object of player ) > 3]very unwieldy[else if absolute value of ( scalevalue of player - objsize of weapon object of player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment";
+		say ".[run paragraph on]";
+	if tail of player is empty:
+		say "";
+	else:
+		say " [tail of the player][run paragraph on]";
+	repeat with x running through equipped owned equipment:
+		if descmod of x is "", next;
+		if placement of x is "end":
+			say " [descmod of x]";
+	say "[line break]";
+	if cocktext is not empty:
+		if cunttext is empty:
+			say "A private peek shows that you [cocktext]";
+		else:
+			say "A private peek shows that you [cocktext]";
+			say " Also, you[cunttext]";
+	else if cunttext is not "":
+		say " You[cunttext]";
+	follow the breast descr rule;
+	if breasts of player > 0:
+		if breast size of player is 0:
+			say "You have [breasts of player] nipples on your [bodydesc of player] chest.";
+		else:
+			if breasts of player > 2:
+				say "You have [breasts of player] breasts on your [bodydesc of player] chest. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [(breast size of player times three) divided by five] inch[if ( breast size of player times three ) divided by 5 is not 1]es[end if] from your chest. ";
+				if breasts of player > 4, say "The rest jostle for space [breast size of player divided by three] inch[if breast size of player divided by 3 is not 1]es[end if] from your belly.";
+			else:
+				say "You have two [descr] breasts on your [bodydesc of player] chest, curving out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest.";
+	if child is not born and gestation of child > 0:
+		if gestation of child < 10:
+			now looknow is 0;
+			say "Your [skin of player] swollen belly looks ready to spill forth life at any moment.";
+			now looknow is 1;
+		else if gestation of child < 20:
+			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child.";
+		else if gestation of child < 30:
+			say "You feel a soft subtle glow somewhere in your belly.";
+	else if heat enabled is true:
+		if inheat is true:
+			say "You also feel [if heatlevel is 3]an intense[else]a[end if] need to be on the receiving end of a good, hard fuck because of your presently heated state.";
+		else if heatlevel is 1 and player is impreg_able and cockname of player is not "human":
+			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat.";
+		else if heatlevel is 3 and player is impreg_able and cockname of player is not "human":
+			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you.";
+	now looknow is 0;
+	rule succeeds;
 
 Debugging Tools ends here.

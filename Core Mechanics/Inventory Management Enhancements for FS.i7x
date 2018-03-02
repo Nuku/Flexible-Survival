@@ -4,9 +4,9 @@ Inventory Management Enhancements for FS by Core Mechanics begins here.
 After reading a command:
 	if the player's command matches "drop all":
 		replace the player's command with "dropitall";
-	otherwise if the player's command matches "drop everything":
+	else if the player's command matches "drop everything":
 		replace the player's command with "dropitall";
-	otherwise if the player's command includes "drop all ":
+	else if the player's command includes "drop all ":
 		replace the matched text with "dropall ";
 
 masslittering is an action applying to one thing.
@@ -20,14 +20,14 @@ Rule for printing a parser error while the latest parser error is the can't see 
 
 Carry out masslittering something(called x):
 	if x is wielded or x is equipped:
-		say "You're [if x is wielded]wielding[otherwise]wearing[end if] that.  Take it off first.";
+		say "You're [if x is wielded]wielding[else]wearing[end if] that.  Take it off first.";
 		stop the action;
-	otherwise if x is owned:
+	else if x is owned:
 		let found be carried of x;
 		repeat with z running from 1 to found:
 			add printed name of x to invent of location of player;
 		now carried of x is 0;
-		if found is greater than 0:
+		if found > 0:
 			say "You set down [found] x [x].";
 
 criminallittering is an action applying to nothing.
@@ -39,7 +39,7 @@ Carry out criminallittering:
 	repeat with x running through owned grab objects:
 		if x is journal or x is equipped or x is wielded:
 			next;
-		otherwise:
+		else:
 			let found be carried of x;
 			repeat with z running from 1 to found:
 				add printed name of x to invent of location of player;
@@ -47,8 +47,8 @@ Carry out criminallittering:
 			now carried of x is 0;
 	if droptotal is 0:
 		say "You don't have anything you're ready to drop.";
-	otherwise:
+	else:
 		say "You drop everything but your journal and any equipped items you have.  You get rid of [droptotal] item(s) in all[if droptotal > 4].  Ahhh!  Your back feels much better now[end if].";
-					
+
 
 Inventory Management Enhancements for FS ends here.

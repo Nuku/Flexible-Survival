@@ -15,12 +15,12 @@ sugferretjoke is truth state that varies. sugferretjoke is normally false.
 to say losetosugarferret:
 	if sugarferretfight is 3:
 		now sugarferretfight is 2;
-		if hp of player > 0:
+		if HP of player > 0:
 			say "     Unwilling to keep fighting, you give yourself over to the manic ferrets. Cheering, they bounce onto you, grabbing your limbs and body, pulling you down by sheer numbers. Even as you're going down, you're groped and fondled by the over-excited ferrets.";
 		else:
 			say "     As your strength wanes, you are tackled by several of the ferrets at once. They grab onto your arms, legs and body, pulling you down by sheer numbers. Even as you're going down, you're groped and fondled by the over-excited ferrets.";
 	else:
-		if hp of player > 0:
+		if HP of player > 0:
 			say "     Unwilling to keep fighting, you give yourself over to the manic ferrets. Cheering, they bounce onto you, grabbing your limbs and body, pulling you down by sheer numbers. Even as you're going down, you're groped and fondled by several of the over-excited ferrets while others pull off your backpack.";
 		else:
 			say "     As your strength wanes, you are tackled by several of the ferrets at once. They grab onto your arms, legs and body, pulling you down by sheer numbers. Even as you're going down, you're groped and fondled by several of the over-excited ferrets while others pull off your backpack.";
@@ -73,11 +73,11 @@ to say beatthesugarferret:
 		now sugarferretfight is 1;
 		say "     Over the course of your fight with them, you manage to temporarily daze several of the crazed ferrets attacking you and toss several others over to the others having lustful sex, where they're grabbed and pulled into playing with those couples. When the last of them dealt with, you have a brief moment to take in what's happening.";
 	else:
-		say "     Managing to daze several of the ferrets, the others retreat with their fallen comrades, yelling '[one of]Meanie[or]Stingy[or]Come on, let's try over here[or][if cunts of player > 0]She[otherwise]He[end if] plays too rough![at random]' as they leave. Victorious over the manic tube-rats, you are free to get on with your plans. ";
+		say "     Managing to daze several of the ferrets, the others retreat with their fallen comrades, yelling '[one of]Meanie[or]Stingy[or]Come on, let's try over here[or][if cunts of player > 0]She[else]He[end if] plays too rough![at random]' as they leave. Victorious over the manic tube-rats, you are free to get on with your plans. ";
 
 
 to say sugarferretdesc:
-	setmongender 19;	[creatures are mixed/variable]
+	setmongender 19; [creatures are mixed/variable]
 	choose row monster from table of random critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
@@ -103,59 +103,59 @@ to say sugarferretdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Sugar Ferret";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The crazed ferrets try to tackle you down en masse![or]One of the ferrets manages to bite your ankle with his sharp teeth! 'That's for being a meanie and not playing with us,' she says.[or]The colourful ferrets pelt debris at you while making demands for soda![or]The ferrets claw at you, leaving several deep gashes![or]One of the manic mustelids weaves in and around your legs at high speed, scratching and pinching you mercilessly![or]The multicolour mob tries to rush you as a hyperactive wave of fur, teeth and claws![or]One of the ferrets grabs your arm, pulling you towards it. 'Play with me!' 'No, me first!' another calls out, grabbing your other arm and pulling you in the other direction![or][if scalevalue of player > 3]Being carried piggy-backed by another to reach your height, a[otherwise]A[end if] ferret comes at you, swinging his arms in wild punches as he laughs maniacally.[at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthesugarferret]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetosugarferret]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[sugarferretdesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "[if caffeinehigh of player > 0]that of a wild ferret creature with bright red eyes. You have a wild, manic expression on your face, showing your pointy, saw-like grin[otherwise]that of a cute ferret creature with a happy smile[end if]";
-	now body entry is "[if caffeinehigh of player > 0]short, slender and elongated. You are filled with excitement and energy barely controlled at times. You have short arms and legs that end in little paws with large, sharp claws. Your ferret-like body is always in motion, twitching from the caffeine-high[otherwise]short, slender, elongated and filled with bouncy energy. You have short arms that end in cute, nimble paws with small claws at their tips. You have short legs that make your flexible body bound and sway whenever you run[end if]";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[if caffeinehigh of player > 0]brightly coloured purple fur that is scraggly and ill-groomed[otherwise]soft fur that is a soft, pastel purple in tone[end if] covers your";
-	now tail entry is "You have the long, slender tail of a [if caffeinehigh of player > 0]frantic[otherwise]cute[end if] ferret attached to your backside.";	[ Tail desc., written as a full sentence or left blank for none. ] 
-	now cock entry is "ferret";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "it warps and pulses, bulging and shifting in odd places as a sweet taste fills your mouth. Soon you are left with a head much like a ferret's, but with a [if caffeinehigh of player > 0]wild grin full of pointy teeth and bright red eyes[otherwise]friendly smile[end if]";
+	now name entry is "Sugar Ferret"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[one of]The crazed ferrets try to tackle you down en masse![or]One of the ferrets manages to bite your ankle with his sharp teeth! 'That's for being a meanie and not playing with us,' she says.[or]The colourful ferrets pelt debris at you while making demands for soda![or]The ferrets claw at you, leaving several deep gashes![or]One of the manic mustelids weaves in and around your legs at high speed, scratching and pinching you mercilessly![or]The multicolour mob tries to rush you as a hyperactive wave of fur, teeth and claws![or]One of the ferrets grabs your arm, pulling you towards it. 'Play with me!' 'No, me first!' another calls out, grabbing your other arm and pulling you in the other direction![or][if scalevalue of player > 3]Being carried piggy-backed by another to reach your height, a[else]A[end if] ferret comes at you, swinging his arms in wild punches as he laughs maniacally.[at random]"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beatthesugarferret]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetosugarferret]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[sugarferretdesc]"; [ Description of the creature when you encounter it. ]
+	now face entry is "[if caffeinehigh of player > 0]that of a wild ferret creature with bright red eyes. You have a wild, manic expression on your face, showing your pointy, saw-like grin[else]that of a cute ferret creature with a happy smile[end if]";
+	now body entry is "[if caffeinehigh of player > 0]short, slender and elongated. You are filled with excitement and energy barely controlled at times. You have short arms and legs that end in little paws with large, sharp claws. Your ferret-like body is always in motion, twitching from the caffeine-high[else]short, slender, elongated and filled with bouncy energy. You have short arms that end in cute, nimble paws with small claws at their tips. You have short legs that make your flexible body bound and sway whenever you run[end if]"; [ Body Description, format as the text "Your body is (your text)." ]
+	now skin entry is "[if caffeinehigh of player > 0]brightly coloured purple fur that is scraggly and ill-groomed[else]soft fur that is a soft, pastel purple in tone[end if] covers your";
+	now tail entry is "You have the long, slender tail of a [if caffeinehigh of player > 0]frantic[else]cute[end if] ferret attached to your backside."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "ferret"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now face change entry is "it warps and pulses, bulging and shifting in odd places as a sweet taste fills your mouth. Soon you are left with a head much like a ferret's, but with a [if caffeinehigh of player > 0]wild grin full of pointy teeth and bright red eyes[else]friendly smile[end if]";
 	now body change entry is "it stretches and grows more tube-like while becoming under five feet in height
-[if caffeinehigh of player > 0]. Your limbs reshape themselves into short arms and legs ending in paws with sharp claws on each digit. You are filled with a wild, rambunctious energy that makes it difficult for you to keep still[otherwise]. Your limbs reshape themselves into short arms and legs ending in cute, soft paws[end if]";
-	now skin change entry is "prickles spread across it as [if caffeinehigh of player > 0]bright purple[otherwise]pastel purple[end if] fur spreads all over you";
+[if caffeinehigh of player > 0]. Your limbs reshape themselves into short arms and legs ending in paws with sharp claws on each digit. You are filled with a wild, rambunctious energy that makes it difficult for you to keep still[else]. Your limbs reshape themselves into short arms and legs ending in cute, soft paws[end if]";
+	now skin change entry is "prickles spread across it as [if caffeinehigh of player > 0]bright purple[else]pastel purple[end if] fur spreads all over you";
 	now ass change entry is "you gain the long, slender tail of a twitchy ferret";
 	now cock change entry is "it changes shape, becoming elongated and tapered, much like that of a ferret";
-	now str entry is 10;			[ These are now the creature's stats... ]
-	now dex entry is 16;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 18;			[ These values may be used as part of alternate combat.]
+	now str entry is 10; [ These are now the creature's stats... ]
+	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 18; [ These values may be used as part of alternate combat.]
 	now per entry is 10;
 	now int entry is 10;
 	now cha entry is 16;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 90;			[ The monster's starting hit points. ]
-	now lev entry is 9;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 5;			[ Monster's average damage when attacking. ]
-	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 7;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 4;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 3;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 7;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 4;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 66;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 90; [ The monster's starting HP. ]
+	now lev entry is 9; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 5; [ Monster's average damage when attacking. ]
+	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 7; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 7; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 4; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 66; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]flexible[at random]";
 	now type entry is "[one of]mustelid[or]ferrety[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is true;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "sugferret";		[ Row used to designate any special combat features, "default" for standard combat. ]
-	
+	now magic entry is false;
+	now resbypass entry is true;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "sugferret"; [ Row used to designate any special combat features, "default" for standard combat. ]
+
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
 
@@ -175,24 +175,24 @@ this is the sugferret rule:		[continuous temptation]
 			let dam be ( ( square root of ( lev entry + wdam entry ) ) * ( a random number between 80 and 120 ) ) / 100;
 			say "The impulse to give in and join them eats away at your resolve. You take [special-style-2][dam][roman type] damage and grow a little more aroused!";
 			increase libido of player by 3;
-			if hp of player < 1 or libido of player >= 110:
+			if HP of player < 1 or libido of player >= 110:
 				lose;
 		else:
 			say "You manage to fight down the impulse to give in and play with them... for now.";
-		Line Break;
+		LineBreak;
 	else if a random chance of 1 in 2 succeeds:
 		say "     [one of]The bouncy ferrets poing around you. It'd be cute if it weren't for their demonic eyes and saw-toothed grins.[or]Hepped up on caffeine and sugar, the manic ferrets seem to have boundless energy.[or]'Yay! Playtime!' one of them calls out.[or]'Weeee! PopPopPopPopPop!' they babble frantically, lost in their caffeine-high.[or]'Soda! Give us soda!' a [one of]hob[or]jill[at random] yells.[or]'Woooo! Sugarrrrr!' one of the ferrets cries out.[or]'Let's play!' one of the ferrets says.[or]'Spoon!' a blue ferret yells, charging.[or]'Fork over the cola!' one of them yells.[or]'GimmeGimmeGimme!' one says, making grabby paws for your backpack.[or]'This is fun!' one of the brightly coloured ferrets laughs as poings in place.[at random]";
 
 
 when play ends:
 	if bodyname of player is "Sugar Ferret":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your humanity fades, you are overcome by an increasing longing for sugary treats. You roam around for a while, scavenging what candy you can find and guzzling down any soda you gather immediately, thirsty or not. After a few days of this, you remember another spot with lots of sweet treats and make your way back to the Sweet Tooth candy store where you are met by the other sugar ferrets. They happily greet you and welcome you to their group with another orgy of carbonated, over-caffeinated lust.";
 		else:
 			say "     You manage to survive your time in the city and are brought out to the military's holding facility. There you impatiently await your release, always tempted by the soda you see around the camp. You resist, knowing that your transformation into a wild, over-caffeinated creature of unbridled lustful energy would not improve your chances of getting out of there. It is very hard on you, but you manage to hold back your cravings.";
 			if alexbrunch >= 4:
 				say "     Once you're released, you manage to meet up with Alex, the ferrety lawyer, and move into his new place, becoming his lover and mate. You have a fun life with him, able to enjoy wild romps on cola whenever you like, playing with Lorenda and Lee in their guises as paid housekeepers while really being just well-paid lovers and permanent houseguests. Alex continues his career as a very successful lawyer and thankfully doesn't pick up your caffeine hyperness, though he does develop quite the sweet tooth.";
 			else:
-				say "     Once you're released, you do your best to settle down into a new life. Luckily, you meet a cute [if cocks of player > 0]jill[otherwise]hob[end if] among your release group and soon become their lover. In time, you move in together and have wild, over-caffeinated romps nearly every week-end. While your lover doesn't gain your reaction to cola and pop, they do develop quite the sweet tooth.";
+				say "     Once you're released, you do your best to settle down into a new life. Luckily, you meet a cute [if cocks of player > 0]jill[else]hob[end if] among your release group and soon become their lover. In time, you move in together and have wild, over-caffeinated romps nearly every week-end. While your lover doesn't gain your reaction to cola and pop, they do develop quite the sweet tooth.";
 
 Sugar Ferret For FS ends here.

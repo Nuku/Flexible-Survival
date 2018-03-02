@@ -11,7 +11,7 @@ instead of resolving a Secure Area:
 		say "     There is a large sign on the fence surrounding the facility which reads: [']Please be advised: This facility is now closed due to a lack of male content.[']";
 		now secure area is resolved;
 		continue the action;
-	if a random number between 5 and 20 is less than the perception of the player:
+	if a random number between 5 and 20 < the perception of the player:
 		say "     Oh my god. You realize that the doors are made of diamond. What needs that much protection?";
 	say "[line break][line break]";
 	say "Do you wish to get to the door?";
@@ -32,14 +32,14 @@ instead of resolving a Secure Area:
 					challenge "Gargoyle";
 					if lost is 1:
 						now dragatorwon is 1;
-					otherwise:
+					else:
 						challenge "Gargoyle";
 						if lost is 1, now dragatorwon is 1;
 					if dragatorwon is 1:
 						say "You collapse to their vicious defense, and you are carried off after being hit on the back of the head so hard you are knocked unconscious.";
 						say "You wake to the sight of the gargoyle filling your vision.";
 						say "[gargoyle attack]";
-					otherwise:
+					else:
 						say "     You stand, panting, as the last gargoyle collapses.";
 						say "     Catching your breath, you march up to the doors and see the hairline crack in the stone.";
 						say "     You shove your hands into the opening, cracking the stone while pulling the door with as much strength as your tired body can muster after all that.";
@@ -49,17 +49,17 @@ instead of resolving a Secure Area:
 							increase the score by 500;
 							now shiftable is 1;
 							now Secure Area is resolved;
-						otherwise:
+						else:
 							say "     The door refuses to budge, and you go on your way, disappointed that you couldn't get any further.";
-				otherwise:
+				else:
 					say "     You run, avoiding the menace behind.";
-			otherwise:
+			else:
 				say "     The halo resists all your efforts to break through, and you are forced to be on your way.";
-		otherwise:
+		else:
 			say "     You trip and fall onto one of the barbed wire fences! Yow!";
-			decrease the hp of the player by 20;
+			decrease the HP of the player by 20;
 			say "     An odd tingling runs through you, and with jarring suddenness you are back on the street, looking away from the secure house.";
-	otherwise:
+	else:
 		say "     You wisely avoid what could only be more trouble than it is worth.";
 
 Section 2 - Shifting
@@ -84,7 +84,7 @@ carry out shifting:
 	[say "You sense becoming human would be nearly impossible after doing this. Do you wish to continue anyway?";
 	if the player consents:
 		say "";
-	otherwise:
+	else:
 		stop the action;]
 	let critter be the topic understood;
 	let critter list be a list of text;
@@ -145,51 +145,51 @@ To transform:
 		now body of player is body entry;
 		if there is a scale in row monster of the table of random critters:
 			now scalevalue of player is scale entry;
-		otherwise:
+		else:
 			now scalevalue of player is 3;
 		if there is a body descriptor in row monster of the table of random critters:
 			now bodydesc of player is body descriptor entry;
-		otherwise:
+		else:
 			now bodydesc of player is name entry;
 		if there is a type in row monster of the table of random critters:
 			now bodytype of player is type entry;
-		otherwise:
+		else:
 			now bodytype of player is name entry;
 		if there is a nocturnal in row monster of the table of random critters:
 			if nocturnal entry is true:
-				now the daycycle of player is 2;		[night-preferred]
+				now the daycycle of player is 2; [night-preferred]
 			if nocturnal entry is false:
-				now the daycycle of player is 1;		[day-preferred]
-		otherwise:
-			now the daycycle of player is 0;			[standard]
+				now the daycycle of player is 1; [day-preferred]
+		else:
+			now the daycycle of player is 0; [standard]
 	follow the sex change rule;
 	follow the sex change rule;
 	if cockname of player is not name entry:
-		if cocks of player is greater than 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
+		if cocks of player > 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 		now cockname of player is name entry;
 		now cock of player is cock entry;
-	if strength of player is less than str entry:
+	if strength of player < str entry:
 		say "You feel your muscles swelling with [name entry] [one of]strength[or]physique[or]power[at random].";
 		increase strength of player by 1;
 		increase capacity of player by 5;
-	if Intelligence of player is less than Int entry:
+	if Intelligence of player < Int entry:
 		say "You feel your mind swelling with [name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
 		increase Intelligence of player by 1;
-	if Dexterity of player is less than Dex entry:
+	if Dexterity of player < Dex entry:
 		say "You feel your hand eye coordination swelling with [name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
 		increase Dexterity of player by 1;
-	if Stamina of player is less than Sta entry:
+	if Stamina of player < Sta entry:
 		say "You feel your body toughening with [name entry] [one of]Stamina[or]physique[or]power[at random].";
 		increase Stamina of player by 1;
 		if remainder after dividing stamina of player by 2 is 0:
-			increase maxhp of player by level of player plus 1;
-	if Perception of player is less than Per entry:
+			increase maxHP of player by level of player plus 1;
+	if Perception of player < Per entry:
 		say "You feel your senses swelling with [name entry] [one of]Perception[or]aptitude[or]feral attention[at random].";
 		increase Perception of player by 1;
-	if Charisma of player is less than Cha entry:
+	if Charisma of player < Cha entry:
 		say "You feel your social sense swelling with [name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
 		increase Charisma of player by 1;
-	if the libido of the player is less than libido entry:
+	if the libido of the player < libido entry:
 		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";
 		now the libido of the player is the libido entry;
 
@@ -197,7 +197,7 @@ when play ends:
 	if shiftable is 2:
 		if the humanity of the player > 50:
 			say "Your knowledge of how to shift aids you when you decide to help the rescue, and as a reward for your help, the army decides to replace the nanites you had with a new kind that do not spread.";
-		otherwise:
+		else:
 			say "Your feral impulses prevent the concentration required for shifting, and the knowledge doesn't return until the rescue comes.";
 			say "You are unable to choose a form and spend your days changing to whatever suits you. Within a few days of the revitalization of the city, the spy force contacts you, ringing your phone off the hook for hours until you finally return home. They offer you work and give such bonuses and pay that you can't resist. Your ability helps, and the only work you have to do is mimicking the knowledge of who you are impersonating, training yourself for future success.";
 		now body of player is "nothing";

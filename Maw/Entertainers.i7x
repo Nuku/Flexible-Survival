@@ -33,10 +33,10 @@ An everyturn rule(this is the entertainer rule):
 	if "Theatre" is listed in perks of tribe of player:
 		increase x by 20; [Not yet implemented]
 	now x is foragers * 20 * x;
-	now x is x divided by (population of tribe of player); [Keeps it at a fraction of a whole number, so 1-20 would be max . If 5% of population is entertainment, +1 moral.]
-	if x is greater than 0: [Public Relations Success]
-		if x is less than 1, now x is 1;
-		say "[if x is less than 5]Your entertainers yield a bonus of +[x] morale for your tribe.[otherwise]With an excellent team of entertainers working alongside each other, your people have gained an outstanding +[x] morale![end if]";
+	now x is x divided by (population of tribe of player); [Keeps it at a fraction of a whole number, so 1-20 would be max. If 5% of population is entertainment, +1 moral.]
+	if x > 0: [Public Relations Success]
+		if x < 1, now x is 1;
+		say "[if x < 5]Your entertainers yield a bonus of +[x] morale for your tribe.[else]With an excellent team of entertainers working alongside each other, your people have gained an outstanding +[x] morale![end if]";
 		increase morale of tribe of player by x;
 
 

@@ -26,7 +26,7 @@ to rival menu:
 	if there is no title in row 1 of table of combat items:
 		say "There are no species!";
 		wait for any key;
-	otherwise:
+	else:
 		choose a blank row in table of combat items;
 		now title entry is "Random";
 		now description entry is "Random";
@@ -37,7 +37,7 @@ to rival menu:
 		now toggle entry is rival select rule;
 		change the current menu to table of Combat Items;
 		carry out the displaying activity;
- 
+
  This is the rival select rule:
 	choose row Current Menu Selection in table of combat items;
 	let nam be description entry;
@@ -45,7 +45,7 @@ to rival menu:
 		repeat with y running through species:
 			if a random chance of 1 in 4 succeeds:
 				now y is active;
-			otherwise:
+			else:
 				now y is inactive;
 		decrease the menu depth by 1;
 		rival menu;
@@ -60,11 +60,11 @@ to rival menu:
 			break;
 	if z is active:
 		now z is inactive;
-	otherwise:
+	else:
 		now z is active;
 	decrease the menu depth by 1;
 	rival menu;
-	
+
 An everyturn rule(This is the Enemies Breed rule):
 	if the remainder after dividing turns by 2 is 0, continue the action;
 	repeat with enemy running through active species:
@@ -84,21 +84,21 @@ An everyturn rule(This is the Enemies Breed rule):
 		let x be a random number from 1 to 100;
 		let y be 0;
 		let crit be 0;
-		if x is greater than 90:
+		if x > 90:
 			now y is 3;
 			now crit is 1;
-		otherwise if x is greater than 60:
+		else if x > 60:
 			now y is 2;
-		otherwise:
+		else:
 			now y is 1;
-		now y is ( foragers * the Self Fertility of the enemy * y ) / 250 ;
+		now y is ( foragers * the Self Fertility of the enemy * y ) / 250;
 		let mor be morale of enemy;
-		if mor is less than 20, now mor is 20;
+		if mor < 20, now mor is 20;
 		now y is ( y * mor ) / 100;
-		if crit is 1 and y is less than 1, now y is 1;
-		if y is greater than 0:
+		if crit is 1 and y < 1, now y is 1;
+		if y > 0:
 			increase population of enemy by y;
-			if morale of enemy is less than 60:
+			if morale of enemy < 60:
 				let gain be 1;
 				increase gain by y times 2;
 				now gain is gain * mood of enemy;
@@ -125,23 +125,23 @@ An everyturn rule(This is the Enemy Expanding rule):
 			let enum be enemies;
 			now enemies is ( enemies * 100 ) / stamina of enemy;
 			let estimate be ( enemies * a random number from 66 to 150) / 100;
-			if estimate is greater than population of enemy:
+			if estimate > population of enemy:
 				continue the action;
-			otherwise:
+			else:
 				say "Scouts report that an enemy tribe is conquering wild territory, ";
 			if enemies is 0:
 				say " They manage to claim it and defeat the native mutants without losing a single soul.";
-			otherwise:
+			else:
 				if enemies > 0:
 					if enemies > population of enemy:
 						say "They fail to conquer the region!";
 						decrease population of enemy by enemies;
-						if population of enemy is less than 5, now population of enemy is 5;
+						if population of enemy < 5, now population of enemy is 5;
 						next;
-					otherwise:
+					else:
 						say " They claim the region!";
 						decrease population of enemy by enemies;
-						if population of enemy is less than 5, now population of enemy is 5;
+						if population of enemy < 5, now population of enemy is 5;
 			increase territory of enemy by 1;
 			decrease openland by 1;
 
@@ -163,21 +163,21 @@ An everyturn rule(This is the Enemy Attacking rule):
 				now foragers is ( foragers * 60 ) / 100;
 			if foragers < 1, now foragers is 1;
 			let enum be enemies;
-			now enemies is ( enemies * might of tribe of player   ) / stamina of enemy;
-			let backlash be ( foragers * might of enemy   ) / stamina of tribe of player;
-			let estimate be ( enemies * a random number from 66 to 150) / 100;
+			now enemies is ( enemies * might of tribe of player ) / stamina of enemy;
+			let backlash be ( foragers * might of enemy ) / stamina of tribe of player;
+			let estimate be ( enemies * a random number from 66 to 150 ) / 100;
 			if enemies is 0:
 				say " They manage to claim land and defeat us without losing a single soul.";
-			otherwise:
+			else:
 				if enemies > backlash:
 					say "They fail to conquer any territory, !";
 					decrease population of enemy by enemies;
-					if population of enemy is less than 5, now population of enemy is 5;
+					if population of enemy < 5, now population of enemy is 5;
 					next;
-				otherwise:
+				else:
 					say " They claim some land in a bloody conflict!";
 					decrease population of enemy by enemies;
-					if population of enemy is less than 5, now population of enemy is 5;
+					if population of enemy < 5, now population of enemy is 5;
 			if backlash > 0:
 				say "We lose [backlash] people.";
 				decrease population of tribe of player by backlash;
@@ -190,6 +190,6 @@ An everyturn rule(This is the Enemy Attacking rule):
 			decrease territory of tribe of player by 1;
 
 
-		
+
 
 Enemy Tribes ends here.

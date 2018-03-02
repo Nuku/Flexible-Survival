@@ -9,7 +9,7 @@ Use authorial modesty.
 
 Section - The font object
 
-Glimmr Lucidex is an image-based font. 
+Glimmr Lucidex is an image-based font.
 
 The font table of Glimmr Lucidex is the Table of Glimmr Lucidex Typeface Parameters.
 The colophon of Glimmr Lucidex is "The letterforms of Glimmr Lucidex are based on Lucida Grande, a member of the Lucida family of typefaces designed by Charles Bigelow and Kris Holmes."
@@ -341,7 +341,7 @@ Glimmr Image Font ends here.
 
 ---- DOCUMENTATION ----
 
-Glimmr fonts can be used in graphics windows, which otherwise don't allow text. This font requires a set of external images (PNG files) to function. You may download these from http://code.google.com/p/glimmr-i7x. It works by displaying an image for each character in your text string, and requires either Glimmr Drawing Commands or Glimmr Canvas-Based Drawing to work. 
+Glimmr fonts can be used in graphics windows, which otherwise don't allow text. This font requires a set of external images (PNG files) to function. You may download these from https://code.google.com/archive/p/glimmr-i7x/. It works by displaying an image for each character in your text string, and requires either Glimmr Drawing Commands or Glimmr Canvas-Based Drawing to work.
 
 This font, called Glimmr Lucidex, is based on Lucida Grande, designed by Charles Bigelow and Kris Holmes. Please see the documentation of Glimmr Drawing Commands or Glimmr Canvas-Based Drawing for instructions on using this font. For instructions on creating your own fonts for use with Glimmr, see Glimmr Drawing Commands.
 
@@ -364,9 +364,9 @@ Section: Contact info
 
 If you have comments about the extension, please feel free to contact me directly at ek.temple@gmail.com.
 
-Please report bugs on the Google Code project page, at http://code.google.com/p/glimmr-i7x/issues/list.
+Please report bugs on the Google Code project page, at https://code.google.com/archive/p/glimmr-i7x/issues.
 
-For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the intfiction forum (http://www.intfiction.org/forum/). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, please contact me directly via email (ek.temple@gmail.com).
+For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the intfiction forum (https://www.intfiction.org/forum/). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, please contact me directly via email (ek.temple@gmail.com).
 
 
 Chapter: Change Log

@@ -16,7 +16,7 @@ when play begins:
 	add { "Squid" } to infections of tailweapon;
 
 to say squiddesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	if a random chance of 1 in 2 succeeds:
 		say "     Rising from the waters is a female squid creature. Her sleek and smooth body, made for gliding through the water with ease, is covered in wet-looking yellow flesh. Her head is almost human, except for having an elongated crown and large, dark eyes. The squid girl's chest is a slightly lighter colour than the rest of her body and has a pair of small, flat breasts. Her arms are long tentacles lined with rows of suckers and ending in pad-like hands. Her legs are a collection of tentacles, eight in number, that twist and roll as she moves around. Her ass is small and compact, barely disturbing the silhouette of her body. Beneath the shifting tentacles, you spot her wet pussy, quivering with need.";
 	else:
@@ -26,20 +26,20 @@ to say squiddesc:
 		decrease plfleebonus by 3;
 		decrease pldodgebonus by 3;
 		decrease plmindbonus by 3;
-		now hp of player is ( 2 * hp of player ) / 3;
+		now HP of player is ( 2 * HP of player ) / 3;
 		now libido of player is ( 100 + libido of player + libido of player ) / 3;
 
 to say losetosquid:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     You stand down and throw your hands up in submission against the tentacled lady. Cautiously, she advances upon you, and once sufficiently satisfied with your compliance she starts to gently relinquish you of your attire before having her fun.";
 	else:
 		say "     Quickly moving, you find you're too weak to react before her suctioned tendrils grab hold of you and throw you to the ground, getting a faceful of sand. She then roughly exonerates your clothing from its beleaguered owner, its lewd intent made transparent to your vulnerable form.";
 	if cocks of player > 0:
 		say "     Partially engulfed in a writhing mass of tentacles, the girl descends her torso upon your crotch, the soft and affection caress of these appendages quickly influencing you into arousal, and though you cannot see past the mess of flesh you doubtlessly feel your [cock size desc of player] rod engulfed in the folds of the slinky creature's tight cunt[if cocks of player > 2]. In addition to the assault on your single organ, she's not one to let your additional equipment go neglected, and proceeds to let a couple tentacles attend to these tools, her proceeding kneads and strokes exasperated by the suctioned surface of such dextrous limbs[else if cocks of player is 2]. In addition to the assault on your single organ, she's not one to let your second rod go neglected, and proceeds to let a tentacle wrap around its length, her proceeding kneads and strokes exasperated by the suctioned surface of such a dextrous limb[end if].";
 	if cunts of player > 0:
-		say "     [If cunts of player > 2]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades one of your exposed cunts, more tentacles invading your additional feminine holes one by one. The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[else if cunts of player is 2]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades one of your exposed cunts, followed by another in your second female passage. The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[otherwise]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades your exposed cunt. The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[end if].";
+		say "     [If cunts of player > 2]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades one of your exposed cunts, more tentacles invading your additional feminine holes one by one. The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[else if cunts of player is 2]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades one of your exposed cunts, followed by another in your second female passage. The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[else]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades your exposed cunt. The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[end if].";
 	if breasts of player > 1 and breast size of player > 0:
-		say "[If breasts of player > 4]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of player] breasts, occasionally switching between the numerous sets. The audible noise of her suckers as they a pulled from your vulnerable flesh makes you twitch and jerk about, much to her amusement[else if breasts of player is 4]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of player] breasts, switching between the main set and the second on occasion. The audible noise of her suckers as they a pulled from your vulnerable flesh makes you twitch and jerk about, much to her amusement[otherwise]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of player] breasts, the audible noise of her suckers as they a pulled from your vulnerable flesh making you twitch and jerk about, much to her amusement[end if][if scalevalue of player > 3]. It's a little awkward for her to overpower a creature substantially larger than herself, but it's transparent that she enjoys the unique challenge of abusing such a sizeable beast[end if].";
+		say "[If breasts of player > 4]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of player] breasts, occasionally switching between the numerous sets. The audible noise of her suckers as they a pulled from your vulnerable flesh makes you twitch and jerk about, much to her amusement[else if breasts of player is 4]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of player] breasts, switching between the main set and the second on occasion. The audible noise of her suckers as they a pulled from your vulnerable flesh makes you twitch and jerk about, much to her amusement[else]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of player] breasts, the audible noise of her suckers as they a pulled from your vulnerable flesh making you twitch and jerk about, much to her amusement[end if][if scalevalue of player > 3]. It's a little awkward for her to overpower a creature substantially larger than herself, but it's transparent that she enjoys the unique challenge of abusing such a sizeable beast[end if].";
 	else:
 		say "     She bears down upon you, her suctioned 'hands' affectionately kneading your [bodydesc of player] chest, the audible noise of her suckers as they a pulled from your vulnerable flesh making you twitch and jerk about, much to her amusement[if scalevalue of player > 3]. It's a little awkward for her to overpower a creature substantially larger than her, but it's transparent that she enjoys the unique challenge of abusing such a sizeable beast[end if].";
 	if "More Anal" is listed in feats of player:
@@ -68,7 +68,7 @@ to say squidskinchange:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -94,40 +94,40 @@ When Play begins:
 	now per entry is 15;
 	now int entry is 16;
 	now cha entry is 10;
-	now sex entry is "Female";	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 32;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 6;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Beach";	[ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 1;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 5;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 33;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 32; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 6; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 1; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 8;
+	now cunt width entry is 5;
+	now libido entry is 33; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]soft[or]flexible[or]boneless[at random]";
 	now type entry is "[one of]cephalopod[or]squid-like[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Squid":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     With thoughts of the cool waters of the ocean, you head back to the beach area as your infection starts rewriting your mind. Discarding you pack, you slide your sleek body into the water and swim out to find the other squids. You join their underwater school, frolicking and fondling one another happily under the waves[if cocks of player > 0]. Having a cock, you are quite popular with the cute girls[end if].";
 		else:
 			say "     Being partially aquatic now, the military keep you in a special holding facility for those with aquatic transformations. There is some interest in you and the others and they get several marine biologists to study your group. Several members of the military speak to you as well. While several of the others are swayed and recruited by the military, you have little interests in their offers and are happy just to swim around and enjoy your sensitive, new form. You do make friends with one of the marine biologists though, and she helps you make contact to join a marine park's staff after your release. Given your extensive transformation, you are given work as part of the cleaning staff. Able to clean the tanks and scrub the walls from within while filled, that is your primary task. You don't mind though, as it lets you [']make friends['] with all the lovely whales and dolphins after hours.";
 
-Squid for FS ends here. 
+Squid for FS ends here.

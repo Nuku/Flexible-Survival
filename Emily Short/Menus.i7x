@@ -39,17 +39,17 @@ number	effect
 This is the quit rule:
 	if the current menu is table of start game or current menu is the table of sex choice or current menu is the table of basic combat:
 		rule fails;
-	otherwise:
+	else:
 		decrease the menu depth by 1;
-		rule succeeds. 
+		rule succeeds.
 
 This is the move down rule:
-	if current menu selection is less than the number of filled rows in the current menu, increase current menu selection by 1;
+	if current menu selection < the number of filled rows in the current menu, increase current menu selection by 1;
 	reprint the current menu;
 	make no decision.
 
 This is the move up rule:
-	if current menu selection is greater than 1, decrease current menu selection by 1;
+	if current menu selection > 1, decrease current menu selection by 1;
 	reprint the current menu;
 	make no decision.
 
@@ -58,14 +58,14 @@ This is the select rule:
 	if there is a toggle entry
 	begin;
 		follow the toggle entry; reprint the current menu;
-	otherwise;
+	else;
 		if there is a subtable entry
 		begin;
 			now the current menu title is title entry;
 			now the current menu selection is 1;
 			now the current menu is subtable entry;
 			show menu contents;
-		otherwise;
+		else;
 			let the temporary title be the current menu title;
 			now the current menu title is title entry;
 			now the endnode flag is 1;
@@ -78,7 +78,7 @@ This is the select rule:
 			reprint the current menu;
 		end if;
 	end if.
-	
+
 
 To redraw status line:
 	(- DrawStatusLine(); -)
@@ -92,7 +92,7 @@ To reprint (selected menu - a table-name):
 	clear only the main screen;
 	repeat through selected menu
 	begin;
-		if __index is current menu selection, say " >"; otherwise say " ";
+		if __index is current menu selection, say " >"; else say " ";
 		say " [title entry][line break]";
 		increase __index by 1;
 	end repeat;
@@ -134,7 +134,7 @@ Rule for displaying (this is the basic menu contents rule):
 Rule for constructing the status line while displaying (this is the constructing status line while displaying rule):
 	if the endnode flag is 0,
 		fill status bar with Table of Deep Menu Status;
-	otherwise fill status bar with Table of Shallow Menu Status;
+	else fill status bar with Table of Shallow Menu Status;
 	rule succeeds.
 
 Table of Shallow Menu Status
@@ -146,7 +146,7 @@ Table of Deep Menu Status
 left	central	right
 ""	"[current menu title]"	""
 ""	""	" "
-" N = Next"	""	"Q = [if menu depth > 1]Last Menu[otherwise]Quit Menu[end if]"
+" N = Next"	""	"Q = [if menu depth > 1]Last Menu[else]Quit Menu[end if]"
 " P = Previous"	""	"ENTER = Select"
 
 Table of Sample Hints
@@ -162,7 +162,7 @@ To say known hints from (hint booklet - table-name):
 		if there is a used entry
 		begin;
 			say "[__index]/[number of rows in hint booklet]: [hint entry][paragraph break]";
-		otherwise;
+		else;
 			if __index is 1
 			begin;
 				now used entry is turn count;
@@ -183,7 +183,7 @@ To say hints from (hint booklet - table-name):
 		if there is a used entry
 		begin;
 			do nothing;
-		otherwise;
+		else;
 			now used entry is turn count;
 			say "Press SPACE to return to the menu[if __index < number of rows in hint booklet] or H to reveal another hint[end if].";
 			make no decision;
@@ -208,7 +208,7 @@ This is the hint toggle rule:
 	end while;
 	now the current menu title is temporary title.
 
-Section 2 (for Glulx only) 
+Section 2 (for Glulx only)
 
 Table of Menu Commands (continued)
 number	effect
@@ -221,7 +221,7 @@ Menus ends here.
 
 ---- Documentation ----
 
-"Menus" provides a table-based way to display menus to the player. The menu takes over the main screen of the game and prevents parser input while it is active. 
+"Menus" provides a table-based way to display menus to the player. The menu takes over the main screen of the game and prevents parser input while it is active.
 
 "Menus" is not suitable for contexts where we want the player to be able to choose a numbered option during regular play (such as a menu of conversation choices when talking to another character). It is intended rather for situations where we wish to give the player optional instructions or hints separated from the main game.
 
@@ -233,9 +233,9 @@ Any given menu option may do one (and only one) of the following three things:
 
 3) carry out a rule. This might perform any action, including making changes to the game state.
 
-Menus are specified by tables, in which each row contains one of the menu options, together with instructions to Inform about how to behave when that option is selected. 
+Menus are specified by tables, in which each row contains one of the menu options, together with instructions to Inform about how to behave when that option is selected.
 
-Each menu table should have columns called "title", "subtable", "description", and "toggle". 
+Each menu table should have columns called "title", "subtable", "description", and "toggle".
 
 "Title" should be the name of the option we want the player to see: "Credits", "Hints", "About This Game", and so on.
 
@@ -254,18 +254,18 @@ would create an option entitled "Settings", which the player could select to vie
 	title	subtable	description	toggle
 	...
 
-If we do not want a given option to trigger a new submenu, we should leave it as "--", unless this is the first row of a new menu table. In that case, we should fill it in with "a table-name". 
+If we do not want a given option to trigger a new submenu, we should leave it as "--", unless this is the first row of a new menu table. In that case, we should fill it in with "a table-name".
 
 The "toggle" column contains the rule carried out when this option is chosen. In theory, this rule could be absolutely anything. In practice, the feature is mostly useful for giving the player a table of setting options which he can toggle on and off: for instance, we might provide the option "use verbose room descriptions", and then have the toggle rule change the game's internal settings about how room descriptions are displayed. (See the example attached for further guidance.)
 
-It is only useful for a given option to have one of these three features -- a description or a subtable or a toggle element. In the event that more than one column is filled out, the game will obey the toggle rule in preference to creating a submenu, and create a submenu in preference to displaying description text. 
+It is only useful for a given option to have one of these three features -- a description or a subtable or a toggle element. In the event that more than one column is filled out, the game will obey the toggle rule in preference to creating a submenu, and create a submenu in preference to displaying description text.
 
 Example: * Tabulation - A simple table of hints and help (see also Basic Help Menu).
 
 For instance our Table of Options might look like this:
 
 	*: "Tabulation" by Secretive J.
-	
+
 	Include Menus by Emily Short.
 
 	Table of Options
@@ -277,14 +277,14 @@ For instance our Table of Options might look like this:
 
 	Table of Setting Options
 	title	subtable	description	toggle
-	"[if notify mode is on]Score notification on[otherwise]Score notification off[end if]"	--	--	switch notification status rule
+	"[if notify mode is on]Score notification on[else]Score notification off[end if]"	--	--	switch notification status rule
 
 	To decide whether notify mode is on:
 		(- notify_mode -);
 
 	This is the switch notification status rule:
 		if notify mode is on, try switching score notification off;
-		otherwise try switching score notification on.
+		else try switching score notification on.
 
 	[After each activation of the toggle rule, the menu redraws itself, so the player will see "score notification on" change to "score notification off" (and vice versa).]
 
@@ -301,28 +301,28 @@ For instance our Table of Options might look like this:
 	hint	used
 	"Have you tried Dr. Seaton's Patent Arm-Lengthening Medication?"	a number
 	"It's in the pantry."
-	"Under some cloths."	
+	"Under some cloths."
 
 	Table of Leaky Hints
 	hint	used
 	"Perhaps it would help if you knew something about Leaky's personality."
-	"Have you read the phrenology text in the library?"	
-	"Have you found Dr. Seaton's plaster phrenology head?"	
-	"Now you just need a way to compare this to Leaky's skull."	
-	"Too bad he won't sit still."	
+	"Have you read the phrenology text in the library?"
+	"Have you found Dr. Seaton's plaster phrenology head?"
+	"Now you just need a way to compare this to Leaky's skull."
+	"Too bad he won't sit still."
 	"But he has been wearing a hat. Perhaps you could do something with that."
-	"You'll need to get it off his head first."	
-	"Have you found the fishing pole?"	
-	"And the wire?"	
-	"Wait on the balcony until Leaky passes by underneath on his way to the Greenhouse."	
-	"FISH FOR THE HAT WITH THE HOOK ON THE WIRE."	
-	"Now you'll have to find out what the hat tells you."	
-	"Putting it on the phrenology head might allow you to compare."	
+	"You'll need to get it off his head first."
+	"Have you found the fishing pole?"
+	"And the wire?"
+	"Wait on the balcony until Leaky passes by underneath on his way to the Greenhouse."
+	"FISH FOR THE HAT WITH THE HOOK ON THE WIRE."
+	"Now you'll have to find out what the hat tells you."
+	"Putting it on the phrenology head might allow you to compare."
 	"Of course, if you do that, you'll reshape the felt. Hope you saved a game!"
-	"You need a way to preserve the stiffness of the hat."	
-	"Have you found the plaster of paris?"	
-	"And the water?"	
-	"And the kettle?"	
+	"You need a way to preserve the stiffness of the hat."
+	"Have you found the plaster of paris?"
+	"And the water?"
+	"And the kettle?"
 
 	[...etc. (Hints 19-135 omitted for brevity.)]
 
@@ -333,13 +333,13 @@ For instance our Table of Options might look like this:
 	Understand "help" or "hint" or "hints" or "about" or "info" as asking for help.
 
 	Asking for help is an action out of world.
-	
+
 	Carry out asking for help:
 		now the current menu is the Table of Options;
 		carry out the displaying activity;
 		clear the screen;
 		try looking.
-		
+
 	The Cranial Capacity Calculation Chamber is a room. Leaky is a man in the Chamber. Leaky wears a pair of overalls and some muddy boots. He is carrying a fishing rod.
 
 The displaying activity displays whatever is set as the current menu, so we must set the current menu before activating the activity. Afterward it is a good idea to clear the screen before returning to regular play.

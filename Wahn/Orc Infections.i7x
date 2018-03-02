@@ -13,13 +13,13 @@ when play begins:
 
 to say OrcVictorious:
 	if inasituation is false:
-		if hp of player > 0:    [player submits]
+		if HP of player > 0:    [player submits]
 			if bodyname of player is "Orc Breeder" and facename of player is "Orc Breeder" and skinname of player is "Orc Breeder":
-				say "     'Can't wait to be fucked, little breeder?', the orc warrior says in his gruff voice as you surrender, then he roughly pushes on your shoulders, forcing you to your knees. Looking down on you, he says 'I'll give you what you need!' ";
+				say "     'Can't wait to be fucked, little breeder?' the orc warrior says in his gruff voice as you surrender, then he roughly pushes on your shoulders, forcing you to your knees. Looking down on you, he says 'I'll give you what you need!' ";
 			else if bodyname of player is "Orc Warrior" and facename of player is "Orc Warrior" and skinname of player is "Orc Warrior":
 				say "     As you collapse to your knees, the orc warrior gives a snarl and says 'Weakling! You're no real orc, you overgrown breeder! I'll show you your place.' ";
 			else:
-				say "     'Weakling', the orc warrior says in his gruff voice as you surrender, then he roughly pushes on your shoulders, forcing you to your knees. Looking down on you, he says 'Leave the fighting to real men, little piggy. I'll show you your place.' ";
+				say "     'Weakling,' the orc warrior says in his gruff voice as you surrender, then he roughly pushes on your shoulders, forcing you to your knees. Looking down on you, he says 'Leave the fighting to real men, little piggy. I'll show you your place.' ";
 		else:  [player beaten]
 			if bodyname of player is "Orc Breeder" and facename of player is "Orc Breeder" and skinname of player is "Orc Breeder":
 				say "     As you collapse to your knees, the orc warrior gives a snarl and says 'Wanted to try out being a warrior, little breeder? You can forget about that! Come on, I'll give you what you really need.' ";
@@ -39,19 +39,19 @@ to say OrcVictorious:
 			say "     Chuckling, he shakes his head and says 'Enough slobbering around. Time to fuck!' Then he manhandles you to a wrecked car standing not too far away and bends you over its hood. Trembling at the thought of taking his thick meat, you reach back and spread your cheeks, doing your best to relax your sphincter. Your orc master whacks his erection against your ass with a meaty thud, then slides the hot rod up and down your crack before finally lining up its tip with your hole. Gripping your hips with two large hands, he presses forward, giving a satisfied grunt as he pushes through your back door, stretching it tight around his invading member.";
 		say "     It's big - pretty big and thick and meaty, making you gasp from the initial penetration. But as the orc's shaft sinks deeper into your body, pleasant feelings prevail as its sides rub against your inner walls, touching sensitive spots deep inside you. Even though you relaxed as much as you could, it's still quite a lot to take - which the orc seems to know very well, moving deeper only slowly and with surprising patience, sometimes even stopping for a moment so you can get used to it. As he does so, you feel something warm and wet leak into you from the tip of his cock, accompanied by a soothing feeling of well-being. That must be more of his precum - feels a bit strange, but good, and it certainly helps taking his thick meat. Some time later, he finally bottoms out inside you, hard shaft buried all the way and his two large cum-factories resting against your skin.";
 		WaitLineBreak;
-		say "     After giving you a moment to get used to the stretching feeling of having a whole foot of hard cock inside your ass, he pulls back and thrusts back in  with a loud grunt - hard and deep, creating a slapping noise as his hips hit your ass. No wonder he went so slow before, or that'd have ripped you in two! And he just keeps on going like that, now taking out all the stops and really pounding into you like the big brute he is. The sensations of his thrusts make you moan and howl in lust, conscious thought pushed aside completely by the feelings of having that thick shaft deep inside you. Everything after that is just a haze of arousal and need, and you can't even remember how long it took for his wild fucking to drive you over the edge, [if cocks of player > 0]spraying your own cum against the side of the car under you[else if cunts of player > 0]squirting femcum all over the car under you and the ground below[otherwise]gripping the metal of the car's hood tightly as an orgasm wracks your body[end if].";
+		say "     After giving you a moment to get used to the stretching feeling of having a whole foot of hard cock inside your ass, he pulls back and thrusts back in with a loud grunt - hard and deep, creating a slapping noise as his hips hit your ass. No wonder he went so slow before, or that'd have ripped you in two! And he just keeps on going like that, now taking out all the stops and really pounding into you like the big brute he is. The sensations of his thrusts make you moan and howl in lust, conscious thought pushed aside completely by the feelings of having that thick shaft deep inside you. Everything after that is just a haze of arousal and need, and you can't even remember how long it took for his wild fucking to drive you over the edge, [if cocks of player > 0]spraying your own cum against the side of the car under you[else if cunts of player > 0]squirting femcum all over the car under you and the ground below[else]gripping the metal of the car's hood tightly as an orgasm wracks your body[end if].";
 		say "     Having your hole tremble and twitch around his orcish member while you come gives your partner the last little push he needed to reach his own climax, and with a loud and very satisfied grunt, the orc starts blasting a massive load of cum into your innermost depths. He keeps fucking you as he comes, clearly revelling in the feeling of his seed squishing around his thrusting shaft inside your body. With the amount of cum he pumps into you, quite a bit squirts out around his cock as he does so, to run down the inside of your legs and drip onto the ground.[mimpregchance]";
 		WaitLineBreak;
 		infect "Orc Breeder";
 		infect "Orc Breeder";
 		if bodyname of player is "Orc Breeder" and player is pure and "MPreg" is not listed in feats of player:
-			say "     [line break]";
+			LineBreak;
 			say "     You feel something change deep inside you, as all the cum the orc filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The [']MPreg['] feat has been added to your list.";
 			add "MPreg" to feats of player;
 		if player is in Breeder Lockup A or player is in Dark Hallway 1 or player is in Dark Hallway 2 or player is in Orc Lair Side Entrance:
-			say "     [line break]";
+			LineBreak;
 			say "     Satisfied at having gotten his rocks off, the orc drags you back to the cells and throws you into one. You can hear him murmur to himself as he walks off 'I'll have to offer the brothers one of my sluts to trade for this one. Damned fine ass...'";
-			now battleground is "void";[blocks a random fight after this]
+			now battleground is "void";
 			move player to Slave Cell 2;
 		decrease humanity of player by 5;
 	else:  [in an event]
@@ -66,7 +66,7 @@ to say OrcVictorious:
 				say "[MulFuck2]";
 		else if OrcSpecialFightNumber is 2:
 			say "     Feeling faint and with stars dancing in front of your eyes, you can only uncoordinately flail about as the big orc grabs you by the throat and lifts you off your feet. The last thing you see of this fight is his brutish face, combat-lust flaring in its yellow eyes, then the warrior gives you a resounding headbutt that sends you into unconsciousness.";
-			say "     [line break]";
+			LineBreak;
 			say "     You awake quite a while later, bruised and hurting all over, still lying on the floor of the drinking hall. Looks like Glarbuk just dropped your limp body where he stood after finishing you off, and no one bothered to help you up or even drag you aside since. In fact, you find yourself pretty wet and sticky, smelling of orc brew... someone must have stumbled over your prone form and spilled their drink all over you. After standing up and gingerly taking stock of where you hurt the most, your gaze turns to Boghrim. After your weak showing just now, he doesn't seem impressed, giving you only a casual glance before pulling Jason on his lap and making the human slave ride his thick, green cock.";
 		else if OrcSpecialFightNumber is 3 or OrcSpecialFightNumber is 4 or OrcSpecialFightNumber is 5 or OrcSpecialFightNumber is 6:
 			say ""; [dealt with in Orc Lair.i7x]
@@ -76,13 +76,13 @@ to say OrcVictorious:
 to say OrcBeaten:
 	if inasituation is false:
 		say "     After your last hit, the orc warrior staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. Seeing him lie on the ground, your eyes can't help but wander down to his crotch where the brute's loincloth has fallen aside, revealing the thick piece of man-meat between his legs.";
-		say "     [line break]";
+		LineBreak;
 		say "     Would you like to... have some fun with the orc ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			say "     [BeatenOrcSexMenu]";
 		else:
-			say "     [line break]";
+			LineBreak;
 			say "     You walk away after checking him over for loot.";
 	else:  [in an event]
 		if OrcSpecialFightNumber is 1:   [fighting Mul in the hallway in front of the Observation room - or out in the garage]
@@ -90,12 +90,12 @@ to say OrcBeaten:
 				say "     DEBUG: EVENT VICTORY OVER THE ORC ([OrcSpecialFightNumber])[line break]";
 			if MulAnalAcceptance > 4:
 				say "     After your last hit, the orc warrior staggers backwards, his eyes unfocused - bumping into the body of the motor-less car in the garage with you. Wiping a spot of green blood from his split lip, Mul says in a groggy murmur, 'Hey, that's not how it's supposed to go...' As you step closer with a grin on your face, he tries to stand straight - only to lose his balance and fall back against the car once more. 'I'll get you - just... need... to... catch... my... breath,' he growls, still a little defiant even though he's clearly out for the count.";
-				say "     [line break]";
+				LineBreak;
 				say "     What now?";
 				say "     ([link]Y[as]y[end link]) - Savour your victory - bend the orc over the car hood and make him spread those cheeks.";
 				say "     ([link]N[as]n[end link]) - Leave him there, trying to shore up his pride at having lost yet another fight.";
 				if player consents:
-					say "     Hah, let him talk. Actions are what counts - like your own just now, as you grab the orc by his thick arm and pull him around to stand with his ass towards you. Before he can do anything more then start to grunt, 'You bastar-,' you've shoved his chest forwards, making him slump forward on the car hood - bumping his head with a *thunk*. Not that should have any negative effects, orcs are tough after all. Busying your hands, you quickly undo the knots holding Mul's loincloth, pulling it away and letting the skimpy piece of fabric drop to the ground - revealing the orc's firm and muscled buttocks, the sweet crack between them and his cock and balls, dangling between the orc's strong legs.";
+					say "     Hah, let him talk. Actions are what counts - like your own just now, as you grab the orc by his thick arm and pull him around to stand with his ass towards you. Before he can do anything more than start to grunt, 'You bastar-,' you've shoved his chest forwards, making him slump forward on the car hood - bumping his head with a *thunk*. Not that should have any negative effects, orcs are tough after all. Busying your hands, you quickly undo the knots holding Mul's loincloth, pulling it away and letting the skimpy piece of fabric drop to the ground - revealing the orc's firm and muscled buttocks, the sweet crack between them and his cock and balls, dangling between the orc's strong legs.";
 					if cocks of player > 0:
 						say "     The sight of the vanquished orc has your cock hard and ready in mere moments, and you lose little time in wrenching off your clothes to line up with his well-trained hole. In the mood for a hard, no nonsense fuck, you thrust deep right away, sinking your shaft into the strong male's tight hole and making him roar at the sudden anal invasion. Thanks to already breaking him in very well, Mul's pucker readily expands to allow more and more of your shaft in, while at the same time still being nice and snug around your member. The big brute's hole feels fantastic to be in, and the fact that you're dominating the very orc that wanted to take you as a slave makes fucking him all the sweeter.";
 						say "     Being used to getting fucked by now - and unable to stop himself from getting of on it, Mul's anal muscles flex and twitch as you pound into him hard. Part of it is just him reacting to you hitting the prostate, but there are also some moments in which the orc's hole almost seems to jerk you off inside him. Apparently, your muscled green playmate has accepted this role so much now that he is experimenting with new techniques to make wild anal sex feel even better for you both. You can't help but give a very satisfied laugh at the situation - you, balls deep inside a mighty orc warrior and pounding into him hard so that he has to brace himself with both arms... against a car in an open garage, in sight of anyone who might walk by to check out the loud moans echoing out of your little fighting arena now being turned into a fuck-pad.";
@@ -117,7 +117,7 @@ to say OrcBeaten:
 					say "     Laughing into Mul's face, you tell him to take a good long look at himself. So much for the mighty orc warrior, beaten up by one such as you. The taunt is all it takes for the orc to lunge at you, snarling - only to stumble as you easily side-step him. Once in movement, his muscled mass is hard to stop - and Mul's try to grab you turns into a flat-out fall on his face. There is a loud thunk as his head hits the ground, knocking the orc unconscious. Judging by the low groaning coming from the orc, he's okay - or will be in a bit when his wounds heal. With a last look at his stretched-out form, you leave Mul behind and stroll back to the orc lair.";
 			else:
 				say "     After your last hit, the orc warrior staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. As just leaving him here for anyone to stumble over him doesn't seem to be a good idea, you drag the orc over into the nearby Observation Room, out of sight from other passing orcs. Once you've got him in the room, your eyes can't help but wander down to his crotch where the Mul's loincloth has fallen aside, revealing the thick piece of man-meat between his legs.";
-				say "     [line break]";
+				LineBreak;
 				if cocks of player > 0 and bodyname of player is "Orc Warrior" and player is pure:
 					say "     The urge to fuck Mul and show him what a REAL orc warrior is like rises inside you quickly. Do you do so ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?";
 					if player consents:
@@ -134,70 +134,79 @@ to say OrcBeaten:
 			say "     'You're not bad in a fight,' the orc boss says, while at the same time casually groping his human slave Jason's as he lies stretched out over his lap. Giving Jason's ass a playful slap that makes the young man pant in arousal, Boghrim pulls him aside, making his own orcish prick whip up, now that there isn't a submissive human lying on it anymore. While Jason automatically starts to worship his Master's shaft, stroking and licking it, Boghrim gives a telling look from the thick pole of man-meat to you and back. 'You do you still want to go through with the... arrangement we talked about?' he asks, chuckling at your eager nod a moment later.";
 			WaitLineBreak;
 			say "[BoghrimFirstFuck]";
-			now hp of Boghrim is 1; [fuck buddy status reached]
+			now HP of Boghrim is 1; [fuck buddy status reached]
 		else if OrcSpecialFightNumber is 3 or OrcSpecialFightNumber is 4 or OrcSpecialFightNumber is 5 or OrcSpecialFightNumber is 6:
 			if debugactive is 1:
 				say "     DEBUG: EVENT VICTORY OVER THE ORC ([OrcSpecialFightNumber]), DEALT WITH IN THE EVENT [line break]";[to be resolved in Orc Lair.i7x]
 		now inasituation is false;
 		now OrcSpecialFightNumber is 0;
-		
+
 to say BeatenOrcSexMenu:
+	LineBreak;
+	say "     What do you want to do with the orc?";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Milk him for some orc cum";
 	now sortorder entry is 1;
 	now description entry is "Collect a bottle of cum from him.";
-	now toggle entry is BeatenOrcSex rule;
-	choose a blank row in table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Blow him off";
 	now sortorder entry is 2;
 	now description entry is "Suck the orc warrior's cock.";
-	now toggle entry is BeatenOrcSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ride his cock";
 	now sortorder entry is 3;
 	now description entry is "Impale yourself on the orc warrior's cock.";
-	now toggle entry is BeatenOrcSex rule;
+	[]
 	if cocks of player > 0 and bodyname of player is "Orc Warrior" and player is pure:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
 		now sortorder entry is 4;
 		now description entry is "Take the orc warrior's ass.";
-		now toggle entry is BeatenOrcSex rule;
-	choose a blank row in table of fucking options;
-	now title entry is "Nothing";
-	now sortorder entry is 10;
-	now description entry is "Change your mind and just walk away.";
-	now toggle entry is BeatenOrcSex rule;
+	[]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the BeatenOrcSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Milk him for some orc cum"):
-			say "[BeatenOrcSex1]";
-		if (nam is "Blow him off"):
-			say "[BeatenOrcSex2]";
-		if (nam is "Ride his cock"):
-			say "[BeatenOrcSex3]";
-		if (nam is "Fuck his ass"):
-			say "[BeatenOrcSex4]";
-		else if (nam is "Nothing"):
-			say "     You just walk away after checking him over for loot.";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Milk him for some orc cum"):
+					say "[BeatenOrcSex1]";
+				if (nam is "Blow him off"):
+					say "[BeatenOrcSex2]";
+				if (nam is "Ride his cock"):
+					say "[BeatenOrcSex3]";
+				if (nam is "Fuck his ass"):
+					say "[BeatenOrcSex4]";
+				WaitLineBreak;
+		else if calcnumber is 100:
+			say "Just leave him?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You just walk away after checking him over for loot.";
+				WaitLineBreak;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
 
 to say BeatenOrcSex1:
 	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you kneel down beside the downed orc and take hold of his meaty shaft. Fingers around the thick member, you start jerking on it, causing the big brute to switch from pained groans to lust-filled moans in no time at all. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority. Setting down your other hand on the full, weighty globes of his balls, you stroke and fondle your helpless orc a bit, grinning as you push him closer and closer to orgasm. When he finally can't hold back any more, you quickly snatch up your prepared bottle and hold it to his cock, successfully catching one, two, three big spurts of his milky white cum before the bottle is full. The rest of the muscled brute's load just arcs high into the air as you pull your container out of the way, to splatter messily all over the orc's broad chest. Putting the cap on your bottle and stashing it away, you give the orc's balls a last quick fondle, then walk away and leave the panting brute to pick himself up later.";
-	say "     [line break]";
+	LineBreak;
 	say "     You gain a bottle of orc cum!";
 	increase carried of orc cum by 1;
 
@@ -215,7 +224,7 @@ to say BeatenOrcSex3:
 	say "     Wow, the taste of orc cum or pre-cum on your lips really goes to one's head quickly. It takes several minutes of bobbing down on his erection till you even remember that you did want to do something else right now, and you almost have to force yourself to pull off his shaft. Well, at least his cock should be pretty slick now, you think as you move into position to kneel over the orc's hips and slide his erection up and down between your asscheeks. Then you line up the tip of his cock with your pucker and slowly increase your downward pressure until the orcish dong pops into you.";
 	WaitLineBreak;
 	say "     It's big - pretty big and thick and meaty, making you gasp from the initial penetration. Though not one to give up so easily, you sink yourself deeper onto his hard shaft, and before long, more pleasant feelings prevail as its sides rub against your inner walls, touching sensitive spots deep inside you. Even though you relaxed as much as you could, it's still quite a lot to take - so you have to stop often and take a moment to get used to things as you impale yourself more and more on the orcish warrior's erection. As you do so, you feel something warm and wet leak into you from the tip of his cock, accompanied by a soothing feeling of well-being. That must be more of his precum - feels a bit strange, but good, and it certainly helps taking his thick meat. Some time later, you're finally all the way down on his prick, his hard shaft buried all the way in you and his two large cum-factories resting against your skin.";
-	say "     After taking a deep breath, you start sliding up and down on the orc's manhood, fucking yourself first slowly, then faster and faster as your insides stretch and more and more of his precum makes your hole pretty slick and wet. As good as riding the orc's thick shaft makes you feel, it doesn't take all that long until your frantic movements drive your arousal over all limits, making you almost shout out a pleased moan as you orgasm and [if cocks of player > 0]spray your cum all over the orc's broad chest[else if cunts of player > 0]femcum sprays from your pussy to splatter down on the orc's abs[otherwise]a tingly feeling spreads through your whole body[end if].";
+	say "     After taking a deep breath, you start sliding up and down on the orc's manhood, fucking yourself first slowly, then faster and faster as your insides stretch and more and more of his precum makes your hole pretty slick and wet. As good as riding the orc's thick shaft makes you feel, it doesn't take all that long until your frantic movements drive your arousal over all limits, making you almost shout out a pleased moan as you orgasm and [if cocks of player > 0]spray your cum all over the orc's broad chest[else if cunts of player > 0]femcum sprays from your pussy to splatter down on the orc's abs[else]a tingly feeling spreads through your whole body[end if].";
 	WaitLineBreak;
 	say "     Having your hole tremble and twitch around his orcish member while you come gives your partner the last little push he needed to reach his own climax, and with a loud and very satisfied grunt, the orc starts blasting a massive load of cum into your innermost depths. He bucks up against you as he comes, clearly revelling in the feeling of his seed squishing around his thrusting shaft inside your body. With the amount of cum he pumps into you, quite a bit squirts out around his cock as he does so, to drip down onto his own crotch and the ground below.[mimpregchance]";
 	say "     Exhausted but happy, you pull off your toy orc's still pretty hard shaft, then stand up on somewhat weak knees. After collecting your clothes and gear, you give the orc an affectionate pat on the chest, then walk away, leaving the panting brute to pick himself up later.";
@@ -240,7 +249,7 @@ to say OrcDesc:
 	if inasituation is false:
 		project the figure of Orcwarrior_random_icon;
 		if player is in Breeder Lockup A or player is in Dark Hallway 1 or player is in Dark Hallway 2 or player is in Orc Lair Side Entrance:
-			say "     A large and muscular orc comes along, grinning broadly as he sees you. 'You must be that new slave Mul and his brothers are boasting about - and out of your cell too.' The thick shaft between his legs twitches against the ragged loincloth that barely covers it as his eyes wander over your body. 'I'll put you back where you belong - after I fuck you, that is.' he ways in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
+			say "     A large and muscular orc comes along, grinning broadly as he sees you. 'You must be that new slave Mul and his brothers are boasting about - and out of your cell too.' The thick shaft between his legs twitches against the ragged loincloth that barely covers it as his eyes wander over your body. 'I'll put you back where you belong - after I fuck you, that is,' he says in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
 		else:
 			say "     A large, muscular creature crosses your path. It's an orc, no doubt about it - sporting the powerful build, green skin and brutish facial features that are described in any number of fantasy stories, this one is nevertheless quite real. As is the thick shaft between his legs, barely covered by a ragged loincloth, which grows and twitches a bit as the orc looks at you. He gives you a possessive grin around his protruding tusks, then adds 'Hello little piggy.' in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
 	else:  [in an event]
@@ -278,12 +287,12 @@ to say OrcDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Orc Warrior"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Orc Warrior";
 	now attack entry is "The [one of]orc[or]green-skinned brute[or]muscular orc[or]brutish orc[or]muscled brute[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]pounds you with a big fist[or]grabs you by the throat and throws you to the ground[or]grabs you with one of his hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
 	now defeated entry is "[OrcBeaten]";
 	now victory entry is "[OrcVictorious]";
@@ -294,7 +303,7 @@ When Play begins:
 	now tail entry is "";
 	now cock entry is "[one of]meaty[or]veined[or]green[at random]";
 	now face change entry is "a splitting headache has you hold your skull with both hands. Then the changes overtake you, jaw broadening into a square shape as two sharp tusks push up out of your mouth. Your nose flattens and becomes wider, then the rest of your features change into a pretty brutish visage with protruding brows above your eyes. As your face stabilizes in its new form, short bristles of black hair sprout on top of your head";
-	now body change entry is "your body shifts and changes, becoming larger than normal. You gain bulging muscles on a broad and powerful frame. As the transformation works its way down your limbs, making them ticker and stronger, it leaves you with somewhat larger than normal hand and feet";
+	now body change entry is "it shifts and changes, becoming larger than normal. You gain bulging muscles on a broad and powerful frame. As the transformation works its way down your limbs, making them ticker and stronger, it leaves you with somewhat larger than normal hand and feet";
 	now skin change entry is "a wash of green spreads across it, at first pretty dark, then lightening to an even, light green tone all over";
 	now ass change entry is "your glutes become firm and meaty";
 	now cock change entry is "it becomes a light green in colour, with a bush of black, slightly bristly hair at its base. A moment later, a cloud of dust-like nanites whirls around your waist, fading away as a ragged loincloth forms to cover your new manhood";
@@ -305,7 +314,7 @@ When Play begins:
 	now int entry is 6;
 	now cha entry is 6;
 	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 125;               [ The monster's starting hit points. ]
+	now HP entry is 125;
 	now lev entry is 14;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 15;              [ Monster's average damage when attacking. ]
 	now area entry is "Capitol";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -318,17 +327,17 @@ When Play begins:
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;         [ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 70;            [ Target libido the infection will rise towards. ]
+	now libido entry is 70;
 	now loot entry is "orc brew";      [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50;        [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]meaty[or]powerful[or]broad[or]bulky[at random]";
 	now type entry is "[one of]orc[at random]";
-	now magic entry is false;          [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;      [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
 	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -342,8 +351,7 @@ the usedesc of orc brew is "[orc brew use]";
 
 to say orc brew use:
 	say "Lifting the beer stein in one hand, you thumb the lid open and take a deep quaff of the liquid within. Hmm, tasty in a strange spicy way, and good against thirst. You can't help yourself and keep drinking until all of it is gone, leaving you wanting for more. The empty mug you throw away, it being too heavy to lug around as an empty container.";
-	decrease thirst of player by 6;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerDrink 6;
 	OrcInfect;
 
 to OrcInfect:
@@ -357,12 +365,12 @@ to OrcInfect:
 	now non-infectious entry is true;
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Orc Breeder"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Orc Breeder";
 	now attack entry is "Orc breeders should not fight. Please report how you saw this!";
 	now defeated entry is "Orc breeders should not fight. Please report how you saw this!";
 	now victory entry is "Orc breeders should not fight. Please report how you saw this!";
@@ -373,7 +381,7 @@ When Play begins:
 	now tail entry is "";
 	now cock entry is "[one of]meaty[or]veined[or]green[at random]";
 	now face change entry is "a painful headache has you hold your skull with both hands. Then the changes overtake you, jaw broadening into a square shape as two small tusks push up out of your mouth. The rest of your face soon takes on a relatively handsome male form, albeit with somewhat pronounced brow and yellow eyes. Finally, silky black hair sprouts from your head, flowing down till it reaches your shoulders";
-	now body change entry is "your body shifts and changes, becoming that of a relatively tall man. You gain nicely defined muscles, while at the same time your hips widen noticeably, into what one might call 'child-bearing' on a woman. As the transformation works its way down your limbs, it leaves you with slightly larger than normal hand and feet.";
+	now body change entry is "it shifts and changes, becoming that of a relatively tall man. You gain nicely defined muscles, while at the same time your hips widen noticeably, into what one might call 'child-bearing' on a woman. As the transformation works its way down your limbs, it leaves you with slightly larger than normal hand and feet.";
 	now skin change entry is "a wash of green spreads across it, at first pretty dark, then lightening to an even, light green tone all over";
 	now ass change entry is "your glutes become firm and meaty";
 	now cock change entry is "it becomes a light green in colour, with a bush of black, silky hair at its base. A moment later, a cloud of dust-like nanites whirls around your waist, fading away as a ragged loincloth forms to cover your new manhood";
@@ -384,7 +392,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 25;                [ The monster's starting hit points. ]
+	now HP entry is 25;
 	now lev entry is 4;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4;               [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -397,17 +405,17 @@ When Play begins:
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;         [ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 70;            [ Target libido the infection will rise towards. ]
+	now libido entry is 70;
 	now loot entry is "";                             [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;                   [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;                             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]well-built[at random]";
 	now type entry is "[one of]orc[at random]";
-	now magic entry is false;                     [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;             [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;   [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry;           [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -421,9 +429,8 @@ the usedesc of orc cum is "[orc cum use]";
 
 to say orc cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy orc cum run over your tongue and down your throat. Mmmmh, this stuff has a really great taste that calls for more. You can't help yourself and keep drinking until all of it is gone, filling your mind with a giddy, pleasant buzz. Now where do you get more of this stuff? You're really tempted to find an orc and just suck it right out of his cock.";
-	decrease thirst of player by 6;
-	if thirst of player < 0, now thirst of player is 0;
-	decrease humanity of player by 10;
+	PlayerDrink 6;
+	SanLoss 10;
 	infect "Orc Breeder";
 
 
@@ -439,7 +446,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Orc Breeder":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As you succumb to the infection, you feel an almost desperate hunger and need for... something awaken in you. No matter what you try, nothing really quenches that need, after a while all food just tastes a bit bland to you. Finally, after another sleepless night of fighting the cravings, your inner urges drive you to wander out onto the chaotic streets of the nanite-stricken city, making you wander towards the capitol district almost in a haze. As you go along, more than one creature you meet takes advantage of your entranced state, dragging you into alleys or fucking you right there in the middle of the street to satisfy their own desires.";
 			say "     Though no matter how good you might feel with them for a time, there's always the inner push for you to go on and find what you really need. Then finally, a muscular green-skinned person steps into your way. Smiling around his sharp tusks, the orc warrior says 'Lucky day for me. A handsome little breeder just wandering down the street alone.' He inspects your naked body, giving a deep chuckle as he sees the various other creatures cum dripping out of your ass. With a murmur of 'Even already lubed.' he just bends you over the nearby wreck of a car and proceeds to fuck you until flooding your insides with a massive load of his cum. Then, as he has you lick his thick cock clean afterwards, you find that this is what you craved all along. The orc's cum tastes like ambrosia, giving you a very strong, pleasant - and addictive - buzz. Not wanting to ever be without this feeling, you eagerly follow your new orcish master, soon joining several other docile breeders in his lair...";
 		else:

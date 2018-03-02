@@ -22,14 +22,14 @@ Instead of resolving a Beach bum:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "You acquired 1 [loot entry].";
-				otherwise:
+				else:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
 			increase bbum by 1;
-		otherwise:
+		else:
 			say "The bum seems to sigh sadly, as he waves you on your way, you get the feeling you probably won't be seeing him around here much longer...";
 			Now Beach bum is resolved;
-	otherwise if bbum is 1:
+	else if bbum is 1:
 		say "Traveling along the long beach you once again see the strange pile of junk and bits of ship wreckage that mark the location of the strange beach bum. Recalling your bargain with the strange person, you trudge over to see if you have anything he might want to trade for.";
 		if chips is owned:
 			say "Spying something he definitely wants, the beach bum moves more swiftly than you would normally have given him credit for, snatching your package of chips, and ripping it open before you can say a word. In seconds it is stuffing chips into its mouth, pieces of chips flying everywhere and covering its cloth wrappings in bits of chip and grease. Glancing up from its gruesome feast, the bum seems almost embarrassed as it offers you several items from its strange hoard.";
@@ -40,7 +40,7 @@ Instead of resolving a Beach bum:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "You acquired 1 [loot entry].";
-				otherwise:
+				else:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
@@ -49,10 +49,10 @@ Instead of resolving a Beach bum:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "You acquired 1 [loot entry].";
-				otherwise:
+				else:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
-		otherwise if food is owned:
+		else if food is owned:
 			say "Glancing through your stuff, the bum seems somewhat happy to have found some spare food, which they quickly swipe, before offering you a small item from their beach findings.";
 			delete food;
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
@@ -61,10 +61,10 @@ Instead of resolving a Beach bum:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "You acquired 1 [loot entry].";
-				otherwise:
+				else:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
-		otherwise:
+		else:
 			say " After taking a look at what you have available, the strange bum sighs and shakes its cloth wrapped head sadly, apparently finding nothing edible amongst your offerings. The strange creature waves you away, and feeling somewhat relieved you continue along the beach";
 
 
@@ -143,7 +143,7 @@ Instead of resolving a Dragon voyeurism:
 	Now Dragon voyeurism is resolved;
 
 
-Section 7-  relaxing scene
+Section 7- relaxing scene
 
 relaxing scene is a situation.
 The sarea of relaxing scene is "Beach".
@@ -181,7 +181,7 @@ Instead of resolving a Tainted yacht:
 		increase carried of dirty water by 2;
 		infect "Sewer Gator";
 		infect "Sewer Gator";
-	otherwise:
+	else:
 		say "Deciding some things are best left alone, you continue your nice walk along the sands.";
 	Now Tainted yacht is resolved;
 
@@ -220,12 +220,12 @@ Instead of resolving a Cream stand:
 	say "Wandering along the beach, you notice someone seems to have recently set up one of the ice cream stands, looking around curiously though you don't spot anyone nearby. It is something of a hot day, perhaps you should go help yourself to some ice cream?";
 	if player consents:
 		say "Deciding to have some ice cream, you move over to the small ice cream stand, and open up the cooler packed full of vanilla ice cream. Picking up a scooper, you place a hefty scoop on one of the cones and begin to eat the white flavorful treat. The taste of the ice cream makes you wonder for a second, as it doesn't taste quite like normal vanilla ice cream does, but since the taste is absolutely delicious, you eagerly finish off the cone anyways. Thinking about getting seconds, all of a sudden you moan as your stomach churns, and your body starts to writhe and change, before you can do more than wonder just what was in that ice cream, a shadow swoops down and takes advantage of your distraction!";
-		decrease hp of player by 20;
+		decrease HP of player by 20;
 		gryphonify;
 		challenge "Hermaphrodite Gryphon";
 		say "The gryphon being long gone, you shake your head as you begin to recover from the ice cream and the attack, and take a closer look at the back part of the ice cream stand while you are here. You find some small containers of gryphon milk which were obviously fed into the ice cream machine in order to bait the gryphon's little trap. Sighing at the waste, you continue on your way, though you do take a couple containers of the leftover milk, just in case it might come in handy later... or if you find another ice cream machine, that did taste pretty good after all...";
 		increase carried of gryphon milk by 2;
-	otherwise:
+	else:
 		say "Being cautious by nature, you decide to forgo the tasty beach treat, and keep to your own supplies.";
 	Now Cream stand is resolved;
 
@@ -242,19 +242,19 @@ Instead of resolving a Lucky seashell:
 	if T is 1:
 		say "Finding the shell makes you scour the beach and pay much more attention to your surroundings as you continue on your walk, just in case there are any other such treasures. And while you don't actually find any more treasures on your trip down the beach, you do feel as if your eyes have become a bit sharper from the experience.";
 		increase perception of player by 2;
-		say "your perception has increased by 2!";
-	otherwise if T is 2:
+		say "[bold type]Your perception has increased by 2![roman type][line break]";
+	else if T is 2:
 		say "Walking along the beach afterwards with a spring in your step, you scan the sands around you just in case something else useful turns up, and after just a short time, you spot a bottle of water! Wow this really must be your lucky day!";
 		increase carried of water bottle by 1;
-	otherwise if T is 3:
+	else if T is 3:
 		say "Walking along the beach with the shell in hand, you can't help but play at tossing the thing up and down in your hands as you travel, enjoying the look of it as it spins in the air, and the challenge of catching it quickly and accurately. Eventually you manage to drop it into the surf, and no matter how hard you look you don't find the shining shell again. Still you resolve to pay a bit more attention to how you move your hands from now on so you don't drop anything else important, and playing with the shell already made you more aware of their positioning, so it isn't a total loss";
+		say "[bold type]Your dexterity has increased by 2![roman type][line break]";
 		increase dexterity of player by 2;
-		say "your dexterity has increased by 2!";
-	otherwise if T is 4:
+	else if T is 4:
 		say "Traveling along with the shell, it seems like tripping over it was the least of your worries today! Your walk turns into a harrowing experience as you slip on the sand and fall several times, the wind blows sand into your face, and your feet seem to find every rock on the beach. Deciding maybe it was the shells fault after the fourth time you are nearly dragged out to sea by a sudden wave, you toss the shining pretty thing into the sea from whence it came. You feel much more ragged from the experience, though it has taught you a bit about stubbornly enduring things...";
+		say "[bold type]Your stamina has increased by 2![roman type][line break]";
 		increase stamina of player by 2;
-		say "your stamina has increased by 2!";
-	otherwise:
+	else:
 		say "taking the shell along with you, you find that it seems to make the day brighter as you carry it, and make you feel a bit more human just to have it with you, eventually reaching the end of your walk, you set the shell back down on the beach so it can brighten someone else's day up like it did yours'";
 		increase humanity of player by 20;
 

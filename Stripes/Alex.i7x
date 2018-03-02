@@ -34,8 +34,8 @@ Section 2 - Conversing with Alex
 Instead of conversing the Alex:
 	if progress of alex is 0:
 		say "     'Have you come back to reconsider my offer? I could certainly use your help on this. And remember, I'm willing to get you supplies for your assistance,' the mustelid lawyer says with a smile.";
-		say "     [bold type]  Do you agree to help him?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]  Do you agree to help him?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -52,11 +52,11 @@ Instead of conversing the Alex:
 		extend game by 2;
 		say "[line break]     'Alright, there's only one client left, and this one's gonna be a doozy, I'll wager. This last client of mine is an aide to a City Council Member - well, possibly ex-city council at this point. He doesn't have a whole lot of money, but his case'll be pretty big news if I can get a court to listen to him. So as far as publicity, this is a huge case for me. I need you to find him and bring him here.' He sighs a bit, and his nose wiggles, almost cutely, you think to yourself. 'I'm not sure where he is, honestly. He was a bit of an outdoorsman, so you might be able to find him at the park or the beach. Other than that, I can't offer you anything else, besides his name, which is Lee.'";
 		now progress of alex is 4;
-	else if alextalk is 0 and progress of alex is less than 5:
-		say "     Alex's whiskers twitch as he looks at you sternly. 'I need you back out there,' he grumbles before relaxing. 'Sorry, I'm just on edge lately. My clients may need your help out there, too. I'm worried about them.'[line break]     He points to his body. 'Besides, look at me. Once we get out of this mess, out there in the real world, I'll be a joke if I don't have some big clients to get me started again. I know there'll be a lot of legal ramifications from all this and I want to be poised to represent those who want a normal life despite their changes. And [if humanity of player is less than 100]from the looks of you[else]if something goes wrong out there before you're rescued[end if], you may even end up wanting my services. If you can come through, I'll even give you a big discount.";
+	else if alextalk is 0 and progress of alex < 5:
+		say "     Alex's whiskers twitch as he looks at you sternly. 'I need you back out there,' he grumbles before relaxing. 'Sorry, I'm just on edge lately. My clients may need your help out there, too. I'm worried about them.'[line break]     He points to his body. 'Besides, look at me. Once we get out of this mess, out there in the real world, I'll be a joke if I don't have some big clients to get me started again. I know there'll be a lot of legal ramifications from all this and I want to be poised to represent those who want a normal life despite their changes. And [if humanity of player < 100]from the looks of you[else]if something goes wrong out there before you're rescued[end if], you may even end up wanting my services. If you can come through, I'll even give you a big discount.";
 		now alextalk is 1;
 	else if progress of alex is 1 and a random chance of 3 in 5 succeeds:
-		say "     'Please continue looking for Lorenda. She's in the red light district. Given what's happening in the city, I think she needs your help first' he says meaningfully. You nod in understanding, as that part of town would be particularly vulnerable to this outbreak.";
+		say "     'Please continue looking for Lorenda. She's in the red light district. Given what's happening in the city, I think she needs your help first,' he says meaningfully. You nod in understanding, as that part of town would be particularly vulnerable to this outbreak.";
 	else if progress of alex is 2 and a random chance of 3 in 5 succeeds:
 		say "     'I need you to track down Darrell,' the weaselly lawyer says. 'Being a pro sports star, his case could be worth a lot to me. He should be at the Smith Haven Mall.' He points out his window, indicating the large shopping center in the distance and the main route leading to it.";
 		Now Smith Haven Mall Lot is known;
@@ -79,14 +79,14 @@ Alex has a number called alextalk.
 Instead of resolving Meet Alex:
 	say "((Quest arc written by Khabi - update & post-quest by Stripes))[line break]";
 	say "     As you explore the High Rise district, you hear a voice calling out to you. Spinning quickly, you see a man walking toward you, who is holding his hands up - he is wearing a business suit, and he is unarmed. Once you lower your hackles from being so surprised - this city has taught you to stay on your toes - he approaches you.";
-	say "     'Good [short time of day], [if breast size of player is greater than 0]Ma'am[else]Sir[end if]. My name is Alex... well, I don't suppose last names are important anymore, are they?'";
+	say "     'Good [short time of day], [if breast size of player > 0]Ma'am[else]Sir[end if]. My name is Alex... well, I don't suppose last names are important anymore, are they?'";
 	say "     Now that you get a better look at him, even though he initially appeared unchanged, it's become quite clear upon closer inspection that he too has a few changes. His ears have mutated to become somewhat pointed, and now rest near the top of his head. He has a small button nose, with prodigious whiskers on either side, and a furry tail swivels from behind him. You think it looks somewhat... mustelid, perhaps a ferret or weasel of some sort. You are about to ask him about it when he continues.";
 	[WaitLineBreak]
 	say "     'Look, it's hard to find friends in this city after the incident. And so since you seem to be somewhat sane still... [if player is not purehuman]despite your changes... [end if]I figure you might be able to help me. If you're out exploring the city, it means you can handle the monsters out there.' His nose twitches, as do his whiskers, as he seems to be pondering something. 'Before the incident, I was a high-priced lawyer, and once rescue comes, I plan on returning to that job. But I have three wealthy clients that won't be able to pay me if they get turned into creatures without a thought in their heads but sex.'";
 	say "     You feel like you're starting to get the gist of what the shorter man is leading up to. He speaks very quickly, probably having something to do with his profession. 'Here's my proposition,' he says. 'I have access to a pretty solid stockpile of food and water. For each of my clients you manage to bring back to me, to my condo in the high-rise over there,' he points, 'I'll give you one of each. How's that sound?'";
 	now Alex's Condo is known;
-	say "     [bold type]'I'll give you one of each. How's that sound?'[roman type][line break]";	
-	Line Break;
+	say "     [bold type]'I'll give you one of each. How's that sound?'[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -114,7 +114,7 @@ Instead of resolving Find Lorenda:
 		let bonus be (( perception of player minus 10 ) divided by 2 ) + 5;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
-		if bonus + dice is greater than 16:
+		if bonus + dice > 16:
 			say "With the help of Lisa's information, you manage to find her trail!";
 			now found is 1;
 		else:
@@ -123,7 +123,7 @@ Instead of resolving Find Lorenda:
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
-		if bonus + dice is greater than 16:
+		if bonus + dice > 16:
 			say "     You manage to find her trail!";
 			now found is 1;
 		else:
@@ -154,7 +154,7 @@ Instead of resolving Find Lorenda:
 
 [
 Instead of conversing the Rod while progress of alex is 2:
-	say "     'Darrell? Yeah, he was here when it all went down. But... you might be a little surprised.[if hp of ronda is 0]  Go talk to my girl, she knows where he is.'[else]' He shrugs, and points to the north. 'Go ask the others. They might know where he is.' He seems a little bummed.[end if]";
+	say "     'Darrell? Yeah, he was here when it all went down. But... you might be a little surprised.[if HP of ronda is 0] Go talk to my girl, she knows where he is.'[else]' He shrugs, and points to the north. 'Go ask the others. They might know where he is.' He seems a little bummed.[end if]";
 ]
 
 instead of going to Mall Atrium while progress of alex is 2:		[now works for getting there either from Nermine's shop or the food court]
@@ -188,29 +188,29 @@ Instead of going west from dirty sheds:
 	if progress of alex is 4:
 		say "     You come to a shed that has been barricaded shut. 'Stay away! I don't want any of you freaks coming in here!' You ask if the person inside is Lee, and you hear what might be a grunt in the affirmative, before he shouts again. 'Who's asking? Who sent you!?' You tell him that Alex sent you, but it appears that, with all the madness going on, it's something he's reluctant to believe. He starts mumbling that it's all some kind of setup.";
 		let success be 0;
-		say "     [bold type]Do you attempt to persuade him to come with you?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Do you attempt to persuade him to come with you?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
 			let bonus be (( charisma of player minus 10 ) divided by 2) + alexleeinfo;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
-			if dice + bonus is greater than 19:
+			if dice + bonus > 19:
 				say "[line break]     'Oh... he really did send you, didn't he?' You hear things being shoved aside, and the door opens a crack, a cat's eye peering out, trying to gauge if the coast is clear. Seeing that it is, Lee steps out, and he isn't a he anymore. In fact, he seems to have more in common with the gryphons and hyenas running around the city as far as her new gender at this point. 'C-come on, let's hurry. I don't want anyone to see me!' she says. She throws her coat over her head to cover her feline ears, holding it down with paw-like hands.";
 				now success is 1;
 			else:
 				say "[line break]     'Ha! As if I'd believe that!' He starts rambling on about lying monsters in his city, no longer listening to you. You get the feeling you'll have to try again later to convince him to come out once he's calmed down.";
 		if success is 0:
-			say "     [bold type]Do you attempt to break down the door?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Do you attempt to break down the door?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
 				let bonus be ( Strength of player minus 10 ) divided by 2;
 				let dice be a random number from 1 to 20;
 				say "You roll 1d20([dice])+[bonus] vs 22 and score [dice plus bonus]: ";
-				if dice + bonus is greater than 21:
+				if dice + bonus > 21:
 					 say "[line break]     'Ahhhh!!!' Upon breaking inside, you see for the first time that 'he' may not have been the correct way to call him. She has fainted on the floor, and her body is obviously feminine, though bulged in the crotch of her now too-tight pants. She has cute cat ears and paw-like hands. You gingerly pick her up, and hurry to the High Rise district, before she wakes up.";
 					now success is 1;
 				else:
@@ -226,7 +226,7 @@ Instead of going west from dirty sheds:
 			extend game by 10;
 			say "[line break]     The weaselly lawyer looks you up and down, sizing you up. 'You know... I have a reputation as a hell of a lover,' he says, leering a little bit but remaining professional. 'What I'm saying is,' he chuckles, 'if you come and visit, I'd be willing to show you a good time.'";
 			say "     He adjusts his tie. 'That wouldn't be professional to do while Lee and Lorenda still here,' he says. 'Give me about a day to find safe lodging for them in one of the other condos, and then we can see about those options.'";
-			now lastfuck of Alex is turns;		[creates the 1 day delay before sexy times]
+			now lastfuck of Alex is turns; [creates the 1 day delay before sexy times]
 		else:
 			increase gettinglee by 1;
 			if gettinglee > 5 and alexleeinfo is 0:
@@ -242,14 +242,14 @@ Instead of fucking the Alex:
 		say "     The mustelid lawyer rubs his cute, ferrety ears and shakes his head. 'Look! Right now I think you should focus more on finding my clients than on my changed body's hormone levels.'";
 		stop the action;
 	if alexbrunch < 4:		[Had 0 to 3 brunches]
-		if lastfuck of Alex - turns is less than 8:
+		if lastfuck of Alex - turns < 8:
 			say "The ferret-eared lawyer smiles at your advances, but shakes his head. 'I'm sorry, hon. I want to make our time together as enjoyable as possible, so a little time to recover from all this excitement and deal with other matters would be best. I do have to rest and prepare these cases. As soon as the military gets us out, I need to move on them since they've already been delayed by the outbreak.'";
 			stop the action;
 		else:
 			now lastfuck of Alex is turns;
 			say "[alexsexytimes1]";
 	else:				[4+ brunches]
-		if lastfuck of Alex - turns is less than 4:
+		if lastfuck of Alex - turns < 4:
 			say "The ferrety lawyer smiles at your advances, but shakes his head. 'I'm sorry, my dear. I want to make our time together as enjoyable as possible, so a little time to recharge would be best.' He rubs a paw over his mustelid head, chirring. 'But I do have a lot more pep now, so give me a few more hours and I should be ready for another ferrety romp. Besides, that'll give me a little more time to work on these papers before playtime.'";
 			stop the action;
 		else:
@@ -290,8 +290,8 @@ to say alexsexytimes2:
 	[WaitLineBreak]
 	if cocks of player > 0 and cunts of player > 0:		[HERM]
 		say "     Eventually, the smaller ferret moves his paws to your groin, taking your maleness in one and playing with your wet folds with the other. 'My dearest, what to do with you? You have this lovely cock, begging to fill your little ferret love. Does the big, sexy herm want to pin me down and have her way with my tight bottom? But you also have this cute, dripping puss, ready and waiting for your lover's ferret cock. Do you need him to fill you with his hot seed and breed you like an animal?' Both offers sound so delightful to you, but which do you prefer to take?";
-		say "     [bold type]Do you want to mount him or get fucked?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Do you want to mount him or get fucked?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Mount him.";
 		say "     ([link]N[as]n[end link]) - Get fucked.";
 		if the player consents:					[HERM - MALE OPTION]
@@ -338,7 +338,7 @@ Section 5 - Brunch!
 
 to say alexbrunchtime:
 	increase alexbrunch by 1;
-	Line Break;
+	LineBreak;
 	if alexbrunch < 4:				[First to third brunch]
 		say "     Upon waking up after the restful nap, you find yourself alone in the bed and the scent of bacon in the air. Drawn from the bed by its siren song, you pull on the bathrobe he's left for you and head to the kitchen. There you find Alex working over his camping stove, preparing a breakfast of bacon and eggs, along with juice and pancakes. The juice may be powdered, but the pancakes are covered in fresh berries and a white chocolate sauce. 'Good morning, my dear. Your brunch is almost ready. I hope you'll have time to eat before you head out.'";
 		say "     You enjoy your brunch in the dining room, enjoying a friendly meal with the weaselly lawyer who's become surprisingly generous with his food now. Perhaps with the stress of his missing clients behind him, he's more able to relax with you. You do find yourself gaining a growing fondness for the cute fellow as you discuss your adventures in the altered city. And besides, he certainly was good in the sack.";
@@ -367,15 +367,13 @@ to say alexbrunchtime:
 		say "     Once again waking up in Alex's bed with the morning light streaming down onto you, you can smell the scent of food being made. You stretch and are about to rise when Alex comes in wearing only a grin, carrying two bed trays with brunch on it. He kisses you good morning as he puts your tray down, then joins you in bed with his. You share a lovely morning with him, nuzzling and kissing as you eat your breakfast.";
 		say "     During your breakfast in bed, [pillowtalk]";
 		say "     Once your breakfast is finished and set aside, you both have a quick romp on the bed. It's mainly just rolling around with each other while nibbling and nuzzling, through there are a few gropes thrown in for fun. Afterwards, with that last boost to your spirits, you get your stuff together and get ready to head out into the city again.";
-	decrease hunger of player by 12;
-	if hunger of player is less than 0, now hunger of player is 0;
-	decrease thirst of player by 12;
-	if thirst of player is less than 0, now thirst of player is 0;
-	if morale of player is less than 0:
-		increase morale of player by 50;		[meal+drink morale boost]
-		if morale of player is greater than 0, now morale of player is 0;
+	PlayerEat 12;
+	PlayerDrink 12;
+	if morale of player < 0:
+		increase morale of player by 50; [meal+drink morale boost]
+		if morale of player > 0, now morale of player is 0;
 		say "You feel better having eaten.";
-	increase morale of player by 3;			[happy ferret morale boost]
+	increase morale of player by 3; [happy ferret morale boost]
 	wait for any key;
 
 
@@ -386,13 +384,17 @@ to say brunchtimechange:
 	if alexbrunch is 2:
 		now skinname of player is "Ferret";
 		now skin of player is "soft, white fur that covers your";
-[		increase charisma of player by 1;
-		say "[bold type]Your charisma has increased by 1.[roman type][line break]";	]
+[
+		say "[bold type]Your charisma has increased by 1![roman type][line break]";
+		increase charisma of player by 1;
+]
 	if alexbrunch is 3:
 		now facename of player is "Ferret";
 		now face of player is "that of an adorable mustelid with darting eyes that search for shinies. You have a cute, pink nose with plentiful whiskers on your ferrety muzzle";
-[		increase intelligence of player by 2;
-		say "[bold type]Your intelligence has increased by 2.[roman type][line break]";	]
+[
+		say "[bold type]Your intelligence has increased by 2![roman type][line break]";
+		increase intelligence of player by 2;
+]
 	if alexbrunch is 4:
 		now bodyname of player is "Ferret";
 		now body of player is "the slender and flexible form of a ferret. You constantly have the urge to weave and bob about playfully as you move";
@@ -402,25 +404,28 @@ to say brunchtimechange:
 		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
 		now the daycycle of player is 0;
-[		increase dexterity of player by 2;
+[
+		say "[bold type]Your dexterity has increased by 2![roman type][line break]";
+		say "[bold type]Your stamina has dropped by 1![roman type][line break]";
+		increase dexterity of player by 2;
 		decrease stamina of player by 1;
-		say "[bold type]Your dexterity has increased by 2 while your stamina has dropped by 1.[roman type][line break]";	]
+]
 
 
 to say alexbodyreset:
-	if alexbrunch is greater than 0 and tailname of player is not "Ferret":
+	if alexbrunch > 0 and tailname of player is not "Ferret":
 		say ". Seeing your changed tail, his hands move down to your rear, stroking and squeezing it until your ferret tail is restored";
 		now tailname of player is "Ferret";
 		now tail of player is "Emerging from the base of your spine is a slender tail covered in ivory fur. ";
-	if alexbrunch is greater than 1 and skinname of player is not "Ferret":
+	if alexbrunch > 1 and skinname of player is not "Ferret":
 		say ". His playful hands caress all over you, dooking happily as your soft, white fur is restored";
 		now skinname of player is "Ferret";
 		now skin of player is "soft, white fur that covers your";
-	if alexbrunch is greater than 2 and facename of player is not "Ferret":
+	if alexbrunch > 2 and facename of player is not "Ferret":
 		say ". He kisses and nuzzles at your face all over, nibbling your ears. You can feel your head changing, returning to its once-mustelid shape";
 		now facename of player is "Ferret";
 		now face of player is "that of an adorable mustelid with darting eyes that search for shinies. You have a cute, pink nose with plentiful whiskers on your ferrety muzzle.";
-	if alexbrunch is greater than 3 and bodyname of player is not "Ferret":
+	if alexbrunch > 3 and bodyname of player is not "Ferret":
 		say ". Alex rubs his slinky body against yours, chirring as your body becomes slender and ferret-like once more";
 		now bodyname of player is "Ferret";
 		now body of player is "the slender and flexible form of a ferret. You constantly have the urge to weave and bob about playfully as you move";
@@ -428,7 +433,7 @@ to say alexbodyreset:
 		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
 		now the daycycle of player is 0;
-	if alexbrunch is greater than 3 and cockname of player is not "Ferret":
+	if alexbrunch > 3 and cockname of player is not "Ferret":
 		say ". Rubbing his stiff cock against your loins, his precum leaks onto you. You can feel pleasant tingles as they are restored to their mustelid nature";
 		now cockname of player is "Ferret";
 		now cock of player is "ferret";

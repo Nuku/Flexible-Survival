@@ -14,7 +14,7 @@ when play begins:
 	add Adventurer to badspots of furry;
 
 Instead of resolving Adventurer:
-	if hp of Solstice is 0:
+	if HP of Solstice is 0:
 		say "     Travelling the city streets, you take a moment to glance behind you and, as you return your eyes to your path, you find it blocked by another figure. Before you is a female silver fox with several fluffy tails. She's dressed rather more unusually than most others you've met. Her red, sleeveless top is tight over her breasts and she has a pair of khaki shorts with some pouches belted to it. She has a pair of goggles on her head, worn resting above her brow. Slung over her back is a backpack. Her appearance, save for her sexy, vulpine nature would lead you to imagine her as a character in an adventure movie or video game, perhaps raiding tombs or hunting relics. Aside from her paw resting on the machete strapped to her hip, she doesn't seem aggressive.";
 		WaitLineBreak;
 		say "     'Well, hello there,' she says with a touch of a grin at the edge of her muzzle. 'I spotted you a while ago and have been keeping my eye on you. You might be able to help me with a little something.'  You try to think back on recent events, wondering what this vixen may have caught you doing. Warily, you ask her just what she had in mind. 'Oh, nothing like that, sweety. Well, not yet anyhow. If you're good, maybe,' she adds with a tilt of her hip and another sly grin, but you catch her paw back on the machete.";
@@ -24,8 +24,8 @@ Instead of resolving Adventurer:
 		say "     'Once you've got it, just find your way back here and I'll trade you some supplies for it.'  With a swish of her hips and numerous tails, she grins. 'And maybe throw in a special reward, too.'  With that, she runs off into an alley, disappearing and quickly as she came. You find yourself thinking about her offer, wondering if it's time to make a trip back to the museum.";
 		now Adventurer is resolved;
 		now Onyx Crow is unresolved;
-		now hp of Solstice is 1;
-	else if hp of Solstice is 2:
+		now HP of Solstice is 1;
+	else if HP of Solstice is 2:
 		say "     Managing to find your way through the chaos of the city, you make your way back to the intersection where you first met the vulpine adventurer. True to her word, she steps out from one of the alleyways as you arrive. 'Did you get it?' she asks quickly";
 		if Crow Artifact is owned:
 			say ". Nodding, you slip off your pack and remove the carving. She smiles happily and snatches it out of your hand, looking it over with a critical eye. 'Yes! I've got it all. I've finally struck it big this time!' she says with elation in her voice. She puts a paw over her mouth, suddenly wary that her raised voice will call undo attention. Grabbing your wrist, she leads you between a few buildings. 'You can call me Solstice by the way. I've been in the treasure hunting biz for a while, but this'll be my best find yet, thanks to you.'  She slips into a small, vacant shop and shuts the boarded up door behind you. It looks like it was closed down long before the outbreak, making it a fairly safe place to hide out.";
@@ -40,8 +40,8 @@ Instead of resolving Adventurer:
 			say "     Whatever just happened, whether some bizarre effect of the infection or some strange, magical power, it has left a profound impact on the vixen. Her upper body has been turned into that of a crow, with a largely corvid head, taloned hands like a bird's foot and black feathers across her upper half. There are still some subtle signs of her previous vulpine nature as well, with foxish ears on her head and mammalian breasts filling her red shirt. Her lower body is largely unchanged, though the tips of her tails now end in black plumage.";
 			WaitLineBreak;
 			say "     She groans and rubs her head. 'Stupid, stupid fox. Rule number one of treasure hunting: Artifacts are _always_ cursed.'  She gets back to her feet slowly, looking over her body. Her talons run through her feathers and she moans softly, clearly finding sensual pleasure in her new form. Stretching her wings and stroking her breasts, she turns back to you. 'Now, I do believe I promised you a reward, sweety,' she purrs sensually, a lustful glint in her eyes that wasn't there before.";
-			say "     [bold type]Do you want to take her up on her offer?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Do you want to take her up on her offer?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -56,7 +56,7 @@ Instead of resolving Adventurer:
 				say "     After some pleasant snuggling, you both get off the bedroll and carefully pack up the separate pieces of the statuary in bundles of cloth. While Solstice doesn't have plans to put it back together, you both certainly agree that you can't just leave it lying around for someone else to find and reassemble. Before you head out, she gives you another kiss and a pat on the behind, saying she'll see you again soon. It's not until you're well on your way that you remember that you never got those supplies from her. Though you can't say that you were displeased with the reward you ended up receiving instead even as you feel her infection starting to spread into you.";
 				vulpogryphinfect;
 				now Adventurer is resolved;
-				now hp of Solstice is 4;
+				now HP of Solstice is 4;
 				now lastfuck of Solstice is turns;
 				increase score by 25;
 			else:
@@ -70,7 +70,7 @@ Instead of resolving Adventurer:
 				say "     Before you head out, she gives you a big hug, folding her feathery wings around you. She runs her paws along your back, scritching under your backpack while kissing you. As she lets you go, she gives you a little nip with her beak on your neck. Solstice adds a pat on your behind, saying that she'll see you again soon. Walking off, you go a short distance before you feel a tingle start to spread through you. Feeling the encroaching change, you run your hands over your face and neck, looking for some fluid or break where the nanites might be affecting you, but can't find one. It's not until after the change has run its course that you find it, one of the vulpogryph's feathers having gotten stuck under your backpack.";
 				vulpogryphinfect;
 				now Adventurer is resolved;
-				now hp of Solstice is 3;
+				now HP of Solstice is 3;
 				now lastfuck of Solstice is turns;
 		else:
 			say ", but frowns as you shake your head, telling her you had to leave it somewhere. 'Look, there's no deal until you bring it to me.'  She growls a little and grinds her teeth before disappearing back between the buildings.";
@@ -89,7 +89,7 @@ when play begins:
 	add Onyx Crow to badspots of furry;
 
 Instead of resolving Onyx Crow:
-	if hp of Solstice is not 1:	[should not come up, but just in case, we have this.]
+	if HP of Solstice is not 1:	[should not come up, but just in case, we have this.]
 		say "     You find yourself in the Greek Artifacts wing, but are interrupted by the raucous arrival of a large band of Satyrs. Laden with wine and a few nymphs for them to share, they start up an orgy of drinking and sex. There are far too many of them to fight at one time and while it is tempting to join into their debauchery, you manage to pull yourself away lest you lose yourself to their drunken ways.";
 		now Onyx Crow is resolved;
 	else:
@@ -110,7 +110,7 @@ Instead of resolving Onyx Crow:
 			say "     While this trip to the museum has been interesting, you'd best just bring your find back to the vixen adventurer to receive your reward. You tuck the artifact into the bottom of your pack and leave the area, not wanting to get caught by Valerie in here with stolen goods.";
 			increase carried of Crow Artifact by 1;
 			increase score by 10;
-			now hp of Solstice is 2;
+			now HP of Solstice is 2;
 			now Onyx Crow is resolved;
 			now Adventurer is unresolved;
 
@@ -126,7 +126,7 @@ instead of using Crow Artifact:
 
 
 an everyturn rule:
-	if ( hp of Solstice is 3 or hp of Solstice is 4 ) and Solstice is not in Grey Abbey Library:
+	if ( HP of Solstice is 3 or HP of Solstice is 4 ) and Solstice is not in Grey Abbey Library:
 		if lastfuck of Solstice - turns >= 12:
 			move Solstice to Grey Abbey Library;
 			if the player is not in Grey Abbey Library:
@@ -134,13 +134,13 @@ an everyturn rule:
 
 
 an everyturn rule:
-	if ( hp of Solstice is 3 or hp of Solstice is 4 ) and Solstice is in Grey Abbey Library and the player is in the Grey Abbey Library:
-		say "     Returning to the central room of the library, you are startled to find a new person casually waiting for you. Solstice is here, leaning against one of the bookshelves, glancing through a book. The vulpogryph smiles and tucks the book back on the shelf as you come striding over[if hp of Fang is 1 or hp of Fang is 2]. Sparing a quick glance to Fang, who seems as surprised to find the intruder here, the guard wolf dips his ears and slinks back, clearly having failed in his guard duties somehow[else if hp of Fang is 3]. Fang growls a little from his post at the door, clearly upset the this intruder somehow managed to get past him unnoticed[end if].";
+	if ( HP of Solstice is 3 or HP of Solstice is 4 ) and Solstice is in Grey Abbey Library and the player is in the Grey Abbey Library:
+		say "     Returning to the central room of the library, you are startled to find a new person casually waiting for you. Solstice is here, leaning against one of the bookshelves, glancing through a book. The vulpogryph smiles and tucks the book back on the shelf as you come striding over[if HP of Fang is 1 or HP of Fang is 2]. Sparing a quick glance to Fang, who seems as surprised to find the intruder here, the guard wolf dips his ears and slinks back, clearly having failed in his guard duties somehow[else if HP of Fang is 3]. Fang growls a little from his post at the door, clearly upset that this intruder somehow managed to get past him unnoticed[end if].";
 		say "     'Hey there. Pretty nice setup [if ( number of booked people + number of bunkered people ) > 2]you and your pals have[else]you've[end if] got going here. Not much interest to the critters out there and a reinforced bunker in case things get really bad. Definitely need to get some more supplies for that, though. Things got rather hectic back at my old place, so I figured I could move in here with you, sweety.'  She runs a taloned paw along your side.";
-		if hp of Solstice is 3:
+		if HP of Solstice is 3:
 			say "     Still upset with her about the feather, you push her hand away. 'What? Oh, I'm so sorry, hon. I didn't mean for anything like that to happen. It must've fallen out,' she says apologetically[if the player is partvg]. 'It certainly looks good on you though,' she adds with a grin and another stroke to your altered body[end if]. You calm down, accepting that it could very well have been an accident.";
 		say "     You also don't recall telling her where you've been staying and, as if sensing your upcoming question, the vulpogryph grins. 'Oh, I was just keeping an eye on you and followed you back to your clubhouse. You should be a little more careful about that. And I can certainly be of help to you as well, sweety. Being a professional treasure hunter, I'm very good at finding stuff. I could give you some tips... for a price.'  She continues running her paw over you. 'A little playtime with my special sweety sounds fair. Though, if you want to skip the [bold type][link]lesson[as]Solstice lesson[end link][roman type] and get straight to the fun, that'd be even better,' she says with a grin at the corner of her long beak.";
-		now hp of Solstice is 5;
+		now HP of Solstice is 5;
 
 
 Section 2 - Solstice the Vulpogryph		[coming soon]
@@ -175,7 +175,7 @@ check lessontiming:
 	If Solstice is not visible, say "You can't listen to her stories if she's not around." instead;
 
 carry out lessontiming:
-	if lastfuck of Solstice - turns is less than 8:
+	if lastfuck of Solstice - turns < 8:
 		say "     'As much as I'd enjoy that,' Solstice replies, running her taloned paws over you. 'I'm not quite up for claiming my special payment afterwards for your lesson time. And we don't want to miss out on that, do we?'";
 	else:
 		now lessontime is 1;
@@ -184,10 +184,10 @@ carry out lessontiming:
 			let bonus be (( the intelligence of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			increase diceroll by bonus;
-			if diceroll is greater than 10:
+			if diceroll > 10:
 				say " and also picking up a few tips and pointers on how to be a good treasure hunter.";
+				say "[bold type]Your perception has increased by 1![roman type][line break]";
 				increase perception of player by 1;
-				say "     Your perception has increased by 1!";
 			else:
 				say " even if you didn't manage to learn anything useful from her [']lesson['] this time.";
 		else:
@@ -206,7 +206,7 @@ Section 4 - Fucking Solstice
 the fuckscene of Solstice is "[sexwithSolstice0]".
 
 to say sexwithSolstice0:
-	if lastfuck of Solstice - turns is less than 8:
+	if lastfuck of Solstice - turns < 8:
 		say "     'As much as I'd enjoy that,' Solstice replies, running her taloned paws over you. 'I'm not quite up for another go quite yet. Can I get a rain check on that?'";
 	else:
 		say "     Solstice grins at your offer and takes your hand in hers, rushing you off to the reading room she's claimed as her own. She wraps her wings and tails around you. Her taloned paws run over your body, kneading lightly. They move down to your hips and then around to your ass, gripping it as she pulls you tightly to her. 'Mmm... I've been looking forward to spending some quality time with you, sweety.'  She nuzzles her beak against your cheek and nips lightly at your neck.";
@@ -216,7 +216,7 @@ to say solsticesex:
 	if cocks of player is 0:
 		say "     Solstice runs her paws between your legs and walks her fingers across your wet folds. She seems a little disappointed that you don't have a penis to fill her, but continues to snuggle up to her chosen mate";
 		if solsticefsex is even:
-			say ". The vulpogryph lowers you onto your back and slips [if cunt width of player is 1]a finger[else if cunt width of player < 4]a pair of fingers[else if cunt width of player < 6]a trio of fingers[else]a trio of fingers and eventually her whole hand[end if] into your wet cunt. Meanwhile, you play with her feathered breasts, teasing her nipples as you kiss and nuzzle at her beak. She fingers herself with her other paw, but occasionally switches between them, spreading her hot juices onto you and rubbing your pussy juices onto hers. You feel a warm, pleasant tingle  every time she does this as if part of her is flowing into you. She pays particular attention to your clit, perhaps rubbing it in the hopes it will grow into a lovely cock for her.";
+			say ". The vulpogryph lowers you onto your back and slips [if cunt width of player is 1]a finger[else if cunt width of player < 4]a pair of fingers[else if cunt width of player < 6]a trio of fingers[else]a trio of fingers and eventually her whole hand[end if] into your wet cunt. Meanwhile, you play with her feathered breasts, teasing her nipples as you kiss and nuzzle at her beak. She fingers herself with her other paw, but occasionally switches between them, spreading her hot juices onto you and rubbing your pussy juices onto hers. You feel a warm, pleasant tingle every time she does this, as if part of her is flowing into you. She pays particular attention to your clit, perhaps rubbing it in the hopes it will grow into a lovely cock for her.";
 			say "     Eventually, the vulpogryph's playful fingers eventually send you over the edge as she switches again. You cum hard, soaking her hand in your juices as you climax. You moan and kiss her passionately over and over again as your cunt quivers in delight. As your climax wanes, she moves the soaked paw to her pussy and fingers herself hard and fast, soon peeking as your juices are rubbed into her vaginal walls. She caws loudly in pleasure and her sweet waters drip down onto your already sticky crotch. She gives you a few last playful nips and rolls over onto her back beside you, moaning softly after her powerful release.";
 			say "     'Mmmm... that was very nice, my dear. It felt so good to share myself with you like that. Though think how much better it would be if you had a nice, hard cock to fill me. You should get on that, sweety,' she purrs, running a feather across your sensitive pussy and flicking it across your clit. She rests her head on your chest and you put your arms around her, holding the lovely vulpogryph while feeling much closer to her after your time together.";
 		else if solsticefsex is 1:
@@ -243,11 +243,11 @@ to say solsticesex:
 			say "     Eventually it all becomes too much for [one of]her and she releases a caw of pleasure as you feel her pussy squeeze down onto your probing tongue and her hot juices soak your face. This sets you off and you cum moments after, shooting your hot seed into her beak. She swallows it down as best she can, but much of it flows down over your spurting loins[or]you and you cum, shooting your hot seed into her beak. She swallows it down as best she can, but much of it flows down over your spurting loins. This sets her off moments later, releasing a caw of pleasure as you feel her pussy squeezing down onto your probing tongue and her hot juices soaking your face[purely at random]. After licking up most of the overflowed semen from your crotch, she turns around to snuggle with you, pressing your face to her bosom to nurse from her again.";
 		increase solsticemsex by 1;
 	now lastfuck of Solstice is turns;
-	if lessontime is 1, vulpogryphinfect;	[double-infection from lesson-time]
+	if lessontime is 1, vulpogryphinfect; [double-infection from lesson-time]
 	vulpogryphinfect;
 	now lessontime is 0;
 
-[	hp of Solstice		]
+[	HP of Solstice		]
 [ 0 - Never met			]
 [ 1 - Wants artifact		]
 [ 2 - Playet got artifact	]
@@ -294,7 +294,7 @@ Definition: a person is fullyvg:
 Section 6 - Endings
 
 when play ends:
-	if hp of Solstice >= 5:
+	if HP of Solstice >= 5:
 		if bodyname of player is "Vulpogryph":
 			if humanity of player < 10:
 				if cocks of player > 0:

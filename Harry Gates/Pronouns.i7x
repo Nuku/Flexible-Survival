@@ -11,271 +11,271 @@ P_attacker is a person that varies.
 Section 1 - Verb phrasebooks
 
 To say Verb_s of/for (Verb_target - a person):
-	if Parse_debug is "true", say "([if Verb_target is the player]the player[otherwise][printed name of Verb_target][end if])";
+	if Parse_debug is "true", say "([if Verb_target is the player]the player[else][printed name of Verb_target][end if])";
 	if Verb_target is not the player:
 		say "s";
 
 To say Verb_es of/for (Verb_target - a person):
-	if Parse_debug is "true", say "([if Verb_target is the player]the player[otherwise][printed name of Verb_target][end if])";
+	if Parse_debug is "true", say "([if Verb_target is the player]the player[else][printed name of Verb_target][end if])";
 	if Verb_target is not the player:
 		say "es";
 
 To say Verb_y of/for (Verb_target - a person):
-	if Parse_debug is "true", say "([if Verb_target is the player]the player[otherwise][printed name of Verb_target][end if])";
+	if Parse_debug is "true", say "([if Verb_target is the player]the player[else][printed name of Verb_target][end if])";
 	if Verb_target is the player:
 		say "y";
-	otherwise:
+	else:
 		say "ies";
 
 To say Verb_have of/for (Verb_target - a person):
-	if Parse_debug is "true", say "([if Verb_target is the player]the player[otherwise][printed name of Verb_target][end if])";
+	if Parse_debug is "true", say "([if Verb_target is the player]the player[else][printed name of Verb_target][end if])";
 	if Verb_target is the player:
 		say "have";
-	otherwise:
+	else:
 		say "has";
 
 To say Verb_are of/for (Verb_target - a person):
-	if Parse_debug is "true", say "([if Verb_target is the player]the player[otherwise][printed name of Verb_target][end if])";
+	if Parse_debug is "true", say "([if Verb_target is the player]the player[else][printed name of Verb_target][end if])";
 	if Verb_target is the player:
 		say "are";
-	otherwise:
+	else:
 		say "is";
 
 Section 2 - Pronoun phrasebooks
 
 To say Poss_Name of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "your";
-	otherwise:
+	else:
 		say "[printed name of Pronoun_target]'s";
 
 To say Cap_Poss_Name of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "Your";
-	otherwise:
+	else:
 		say "[printed name of Pronoun_target]'s";
 
 To say Name of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "you";
-	otherwise:
+	else:
 		say "[printed name of Pronoun_target]";
 
 To say Des_Name of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "you";
-	otherwise:
+	else:
 		if Pronoun_target is on-stage:
 			say "[Pronoun_target]";
-		otherwise:
+		else:
 			say "[printed name of Pronoun_target]";
 
 To say Cap_Des_Name of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "You";
-	otherwise:
+	else:
 		if Pronoun_target is on-stage:
 			say "[Pronoun_target]";
-		otherwise:
+		else:
 			say "[printed name of Pronoun_target]";
 
 To say Obj_Name of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if P_target is P_attacker:
 		say "[Ref_Pronoun of Pronoun_target]";
-	otherwise:
+	else:
 		if Pronoun_target is the player:
 			say "you";
-		otherwise:
+		else:
 			say "[printed name of Pronoun_target]";
 
 To say Cap_Name of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "You";
-	otherwise:
+	else:
 		say "[printed name of Pronoun_target]";
 
 To say Subj_Pronoun of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "you";
-	otherwise:
+	else:
 		if Pronoun_target is herm:
 			say "shi";
-		otherwise:
+		else:
 			if Pronoun_target is male:
 				say "he";
-			otherwise:
+			else:
 				say "she".
 
 To say Cap_Subj_Pronoun of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "You";
-	otherwise:
+	else:
 		if Pronoun_target is herm:
 			say "Shi";
-		otherwise:
+		else:
 			if Pronoun_target is male:
 				say "He";
-			otherwise:
+			else:
 				say "She".
 
 To say Obj_Pronoun of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if P_target is P_attacker:
 		say "[Ref_Pronoun for Pronoun_target]";
-	otherwise:
+	else:
 		if Pronoun_target is the player:
 			say "you";
-		otherwise:
+		else:
 			if Pronoun_target is herm:
 				say "hir";
-			otherwise:
+			else:
 				if Pronoun_target is male:
 					say "him";
-				otherwise:
+				else:
 					say "her".
 
 To say NoRef_Obj_Pronoun of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "you";
-	otherwise:
+	else:
 		if Pronoun_target is herm:
 			say "hir";
-		otherwise:
+		else:
 			if Pronoun_target is male:
 				say "him";
-			otherwise:
+			else:
 				say "her".
 
 To say Cap_Obj_Pronoun of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if P_target is P_attacker:
 		say "[Cap_Ref_Pronoun for Pronoun_target]";
-	otherwise:
+	else:
 		if Pronoun_target is the player:
 			say "You";
-		otherwise:
+		else:
 			if Pronoun_target is herm:
 				say "Hir";
-			otherwise:
+			else:
 				if Pronoun_target is male:
 					say "Him";
-				otherwise:
+				else:
 					say "Her".
 
 To say Poss_Pronoun of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "yours";
-	otherwise:
+	else:
 		if Pronoun_target is herm:
 			say "hirs";
-		otherwise:
+		else:
 			if Pronoun_target is male:
 				say "his";
-			otherwise:
+			else:
 				say "hers".
 
 To say Cap_Poss_Pronoun of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "Yours";
-	otherwise:
+	else:
 		if Pronoun_target is herm:
 			say "Hirs";
-		otherwise:
+		else:
 			if Pronoun_target is male:
 				say "His";
-			otherwise:
+			else:
 				say "Hers".
 
 To say Poss_Det_Pronoun of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "your";
-	otherwise:
+	else:
 		if Pronoun_target is herm:
 			say "hir";
-		otherwise:
+		else:
 			if Pronoun_target is male:
 				say "his";
-			otherwise:
+			else:
 				say "her".
 
 To say Cap_Poss_Det_Pronoun of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "Your";
-	otherwise:
+	else:
 		if Pronoun_target is herm:
 			say "Hir";
-		otherwise:
+		else:
 			if Pronoun_target is male:
 				say "His";
-			otherwise:
+			else:
 				say "Her".
 
 To say Ref_Pronoun of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "yourself";
-	otherwise:
+	else:
 		if Pronoun_target is herm:
 			say "hirself";
-		otherwise:
+		else:
 			if Pronoun_target is male:
 				say "himself";
-			otherwise:
+			else:
 				say "herself".
 
 To say Cap_Ref_Pronoun of/for (Pronoun_target - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player:
 		say "Yourself";
-	otherwise:
+	else:
 		if Pronoun_target is herm:
 			say "Hirself";
-		otherwise:
+		else:
 			if Pronoun_target is male:
 				say "Himself";
-			otherwise:
+			else:
 				say "Herself".
 
 To say You_Both for (Pronoun_target - a person) and (Pronoun_attacker - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player or Pronoun_attacker is the player:
 		say "you both";
-	otherwise:
+	else:
 		say "they both";
 
 To say Cap_You_Both for (Pronoun_target - a person) and (Pronoun_attacker - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player or Pronoun_attacker is the player:
 		say "You both";
-	otherwise:
+	else:
 		say "They both";
 
 To say Obj_Both for (Pronoun_target - a person) and (Pronoun_attacker - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player or Pronoun_attacker is the player:
 		say "both of you";
-	otherwise:
+	else:
 		say "both of them";
 
 To say Cap_Obj_Both for (Pronoun_target - a person) and (Pronoun_attacker - a person):
-	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[otherwise][printed name of Pronoun_target][end if])";
+	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
 	if Pronoun_target is the player or Pronoun_attacker is the player:
 		say "Both of you";
-	otherwise:
+	else:
 		say "Both of them";
 
 Pronouns ends here.

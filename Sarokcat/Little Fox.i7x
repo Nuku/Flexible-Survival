@@ -28,21 +28,21 @@ Instead of resolving Abandoned Fox:
 				delete food;
 				say "Unable to bear hearing the poor things cries going unanswered, you carefully kneel down and pull out some food(-1 food), cautiously at first, then with increasing enthusiasm the half starved fox cub tears at the food, ripping and playing with it until it is all gone. You smile at the cute sight before standing up and getting ready to leave, though you haven't gone more than a few steps when you hear something behind you. Turning you see the fox cub you helped is valiantly trying to keep up with you, its large canine eyes staring at you adoringly. Trying to shoo it back to the empty den seems pointless, and the cute little fox seems to have taken a strong fancy to you now, shrugging you give in and let it come with you. The little fox cub bouncing along in your wake and occasionally darting off to pounce on and threaten one of the nearby leaves on the ground. It looks like you've acquired a little pet. As you head back to the park trail, you make it a little nest in your backpack, making sure it will be comfortable while you travel.";
 				now little fox is tamed;
-				say "(The little fox is now tamed! You can make it your active pet by typing [bold type][link]pet little fox[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+				say "(The little fox is now tamed! You can make it your active pet by typing [bold type][link]pet little fox[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 				now Abandoned Fox is resolved;
-			otherwise:
+			else:
 				say "Hardening your heart to its plaintive cries, you move back from the abandoned fox den and leave nature to take its course.";
 				now Abandoned Fox is resolved;
-		otherwise:
+		else:
 			say ". You have no food to feed the fox kit, so you quietly leave before its cries draw something dangerous.";
-	otherwise:
+	else:
 		say "Worried that you might be walking into some kind of trap, you turn your back on the noise and continue your walk through the park.";
 
 when play ends:
 	if little fox is tamed:
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "When you give in to your feral instincts, the little fox you rescued stays with you, traveling with you and helping as best it can, trying to help you hunt and teasing at you to play with it. Finally though it grows large enough that one day it leaves on its own, fully able to forage for itself now, and leaving you to your fate. You miss the little creature occasionally.... when you can remember it anyways.";
-		otherwise:
+		else:
 			say "After your rescue, you manage to convince the distracted military that the little fox isn't a threat, and he comes with you out into your new life. Being a mostly wild creature, he doesn't really fit in anywhere that you take him however, and so eventually you decide to find a wilderness preservation to release him into, where you hear there are several other foxes for the little fellow to play with. Several years later though, you are surprised to find someone has left another little baby fox at your door while you slept, a roughly scrawled note just says 'thanks mom,' with a little paw mark in the corner.";
 
 Little Fox ends here.

@@ -34,7 +34,7 @@ to say mouseapts:
 			now monster is y;
 			break;
 	say "     You step into the small apartment building and look around, still feeling oddly at ease. The main doors are unlocked and you enter the lobby. There is an apartment door slightly ajar at the back of the hall beside the steps up to the next floor and you head towards it. As you reach out and push it open, you are tackled from behind by someone. No, it's multiple someones. There is a mob of grey mice which slipped quietly from the other rooms to tackle out. More come out from the apartment ahead of you and you are pulled in. You struggle, but there are too many of them on top of you already, weighing you down and overpowering you. While they may only be three feet tall, they are already about a dozen grabbing you and you can sense many more in the hall behind you.";
-	say "     'We called and you have come. You will join us in mousedom. Join us in being of one mind. Accept us and be part of the mouse collective,' they say, speaking in unison. With so many of them around you, your mind throbs under the assault of thoughts that are not your own, hearing those words spoken both in your ears and in your brain. These mice, somehow all of one united mind, are trying to overpower your will. They drew you in here and now these beautiful, busty mice have you. These sexy herms pull you over to the couch, kissing and fondling you as they do. You find yourself growing increasingly aroused by their short, mouse-like bodies and faces. They have such lovely, feminine bodies, large breasts and sizeable cocks as well. Why were you be resisting them, you find yourself wondering.";
+	say "     'We called and you have come. You will join us in mousedom. Join us in being of one mind. Accept us and be part of the mouse collective,' they say, speaking in unison. With so many of them around you, your mind throbs under the assault of thoughts that are not your own, hearing those words spoken both in your ears and in your brain. These mice, somehow all of one united mind, are trying to overpower your will. They drew you in here and now these beautiful, busty mice have you. These sexy herms pull you over to the couch, kissing and fondling you as they do. You find yourself growing increasingly aroused by their short, mouse-like bodies and faces. They have such lovely, feminine bodies, large breasts and sizeable cocks as well. Why were you even resisting them, you find yourself wondering.";
 	WaitLineBreak;
 	say "     Sensing your increasing willingness, they release you and help you up onto the couch where you are snuggled by a bunch of them. Others set up in groups around the room, playing with one another. The mice run their paws over your [skinname of player] flesh while kissing and fondling you. One of them, somehow particularly beautiful despite looking pretty much the same as the rest, snuggles herself against you and starts kissing you passionately. She is meant to be with you, to be your mate. Your mind is so full of happiness, having found so many beautiful lovers and a perfect mate.";
 	if cocks of player > 0:
@@ -71,13 +71,13 @@ to say mouseapts:
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;
-	Line Break;
+	LineBreak;
 	WaitLineBreak;
 	if libido of player < 60, now libido of player is 60;
 	now libido of player is ( libido of player + 1 ) / 3;
 	if humanity of player < 10:
 		say "     For a moment you consider trying to leave while the mice are asleep, but your mate shifts a little and squeaks softly, squeezing you tighter. Unwilling to leave her, or them, you rest your head against hers, drifting further from yourself into the mouse collective.";
-		end the game saying "You give yourself up to the mouse collective, joining their united hive-mind in joyous mousedom.";
+		end the story saying "You give yourself up to the mouse collective, joining their united hive-mind in joyous mousedom.";
 		wait for any key;
 		follow the turnpass rule;
 		stop the action;
@@ -92,7 +92,7 @@ to say mouseapts:
 			say "     Rachel stares at your [companion of player], who had been hiding outside since you got here, and it slinks off. She smiles and takes your hand in hers, chirring softly.";
 		now mouse girl is tamed;
 		now the companion of the player is mouse girl;
-		say "     (The mouse girl is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type][link]pet mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck mouse girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], but then the mouse collective will be tracking you again.)";
+		say "     (The mouse girl is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type][link]pet mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck mouse girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], but then the mouse collective will be tracking you again.)";
 		increase score by 20;
 		wait for any key;
 
@@ -201,7 +201,7 @@ to say sexwithmousegirl:
 An everyturn rule:
 	if companion of player is mouse girl and skipturnblocker is 0:
 		increase libido of player by 5;
-		let diceroll be a random number from 40 to 200;			[lust check vs 200, player libido 40 or less auto-wins]
+		let diceroll be a random number from 40 to 200; [lust check vs 200, player libido 40 or less auto-wins]
 		if diceroll < libido of player and lastfuck of mouse girl - turns >= 4:
 			say "[sexwithmousegirl]";
 
@@ -223,7 +223,7 @@ to say rachelsexmale2:
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 to say rachelsexfemale1:
-	say "     Sensing your arousal, Rachel snuggles up to you and nuzzles you crotch. Her small tongue slides out to tease at your wet pussy. Pressing her lips to your dripping folds, she teases her tongue across your clit and nibbles lightly at your sensitive petals, making you moan in delight. You run your fingers over her head, stroking her sensitive ears and through her soft hair. With her mind touching yours, she is able to sense exactly what brings you the most pleasure and soon brings you to a crashing orgasm that makes you weak in the knees. Kneeling in front of her, the small mouse wraps her arms around you, giving you a kiss wet with your own juices.";
+	say "     Sensing your arousal, Rachel snuggles up to you and nuzzles your crotch. Her small tongue slides out to tease at your wet pussy. Pressing her lips to your dripping folds, she teases her tongue across your clit and nibbles lightly at your sensitive petals, making you moan in delight. You run your fingers over her head, stroking her sensitive ears and through her soft hair. With her mind touching yours, she is able to sense exactly what brings you the most pleasure and soon brings you to a crashing orgasm that makes you weak in the knees. Kneeling in front of her, the small mouse wraps her arms around you, giving you a kiss wet with your own juices.";
 	now libido of player is ( libido of player + 1 ) / 2;
 	decrease humanity of player by a random number between 1 and 3;
 	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
@@ -248,7 +248,7 @@ Section 4 - Endings
 
 when play ends:
 	if mouse girl is tamed:
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if bodyname of player is "Albino Mouse" or bodyname of player is "Mental Mouse":
 				say "     Giving into your musine urges, you fully accept Rachel, and the whole of the mouse collective, into your mind. Becoming one with them, your own mind recedes away to make room for the united minds of the mice. You love them all, but love Rachel the most of all. The mouse girl who was willing to accompany you into the city, to risk losing you to let you come to this point on your own, is your special mate among the group, though all those in the collective are your lovers. From your frequent matings, there comes several lovely children who are exceptionally powerful from your chosen union, helping the making the mouse collective even stronger. Several of them move to help be part of new nests, forming an interconnected web of hive-minds that cannot be resisted, growing slowly, secretly, around the world.";
 		else:

@@ -9,21 +9,21 @@ when play begins:
 	add { "Junkman" } to infections of guy;
 
 to say junkmandesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from the table of random critters;
 	let qq be a random number between 4 and 8;
 	let zz be ( a random number between 1 and 6 ) + ( a random number between 1 and 6 );
 	if hardmode is true and level of player > 6:		[Heavy Duty Model!]
 		increase qq by level of player - 7;
-		now hp entry is ( ( ( 13 times qq ) divided by 2 ) + zz + a random number between 0 and qq );
-		now monsterhp is hp entry;
+		now HP entry is ( ( ( 13 times qq ) divided by 2 ) + zz + a random number between 0 and qq );
+		now monsterHP is HP entry;
 		now wdam entry is 4 + ( qq / 3 );
 		now lev entry is qq;
-		now dex entry is 12 + ( qq / 6 ) + ( square root of qq + 5 );		[faster initial growth, but slows down more]
+		now dex entry is 12 + ( qq / 6 ) + ( square root of qq + 5 ); [faster initial growth, but slows down more]
 	else:								[Standard Model]
-		now hp entry is ( ( ( 13 times qq ) divided by 2 ) plus zz );
-		if hp entry > 60, now hp entry is 60;
-		now monsterhp is hp entry;
+		now HP entry is ( ( ( 13 times qq ) divided by 2 ) plus zz );
+		if HP entry > 60, now HP entry is 60;
+		now monsterHP is HP entry;
 		now wdam entry is qq;
 		now lev entry is qq;
 		now dex entry is ( qq + 10 + a random number between 0 and 2 );
@@ -43,10 +43,10 @@ to say junkmandesc:
 to say losetojunkman:
 	[reset creature stats for next encounter]
 	choose row monster from the table of random critters;
-	now lev entry is 6;		[ reset level for random encounter availability ]
+	now lev entry is 6; [ reset level for random encounter availability ]
 	say "     Victorious, the scrapyard cyborg raises its arms in the air and emits another grinding groan. After this cry, he grabs you and pushes you down across a [one of]stray car seat[or]old washer[or]rusty engine block[in random order] and moves in behind you. ";
-	say "     As you hear an odd whirring sound, you manage to glance back for a moment before you're pushed back down. You catch a glimpse of the panel over his groin folding up, uncovering his blessedly human dick made of pure flesh and blood. As he lines it up with your [if cunts of player > 0]wet pussy[otherwise]tight pucker[end if], you [if hp of player > 0]moan softly in anticipation[otherwise]struggle a little in vain[end if] before he sinks it into you. You grip your improvised seat as he starts thrusting into you repeatedly, quickly making you grow excited and lustful. The feel of his seemingly human penis thrusting into you feels quite enjoyable, making your [if cunts of player > 0]pussy[otherwise]asshole[end if] squeeze and tug at it as you long more and more for his hot seed in you.";
-	say "     Thinking of his seed makes you notice that his balls feel strange against [if cocks of player > 0]yours[otherwise]you[end if] as they bump into you with each thrust. Reaching back, you grab his sac to fondle him and find [one of]his balls have a plastic cover[or]it protected by what feels like a brass shell[or]it reinforced by several metal plates[or]some hard, rubber tubes leading into it[at random]. The creature atop you releases a grinding moan as you rub over his ballsac, clearly enjoying your touch despite their strange form. You can feel his balls start to throb warmly inside his odd scrotum and you are rewarded moments later by a steady stream of thick, oily cum. His slick seed pumps into you as some internal pump chugs away inside him, sending large amounts of his semen into you. Much of it flows up into your [if cunts of player > 0]waiting womb[otherwise]sexy ass[end if] while the rest overflows around his cock to run down your thighs, with more gushing out as he withdraws and paints your ass with his last few spurts. Finished, he gives your sticky rear end a pat and wanders off.[impregchance]";
+	say "     As you hear an odd whirring sound, you manage to glance back for a moment before you're pushed back down. You catch a glimpse of the panel over his groin folding up, uncovering his blessedly human dick made of pure flesh and blood. As he lines it up with your [if cunts of player > 0]wet pussy[else]tight pucker[end if], you [if HP of player > 0]moan softly in anticipation[else]struggle a little in vain[end if] before he sinks it into you. You grip your improvised seat as he starts thrusting into you repeatedly, quickly making you grow excited and lustful. The feel of his seemingly human penis thrusting into you feels quite enjoyable, making your [if cunts of player > 0]pussy[else]asshole[end if] squeeze and tug at it as you long more and more for his hot seed in you.";
+	say "     Thinking of his seed makes you notice that his balls feel strange against [if cocks of player > 0]yours[else]you[end if] as they bump into you with each thrust. Reaching back, you grab his sac to fondle him and find [one of]his balls have a plastic cover[or]it protected by what feels like a brass shell[or]it reinforced by several metal plates[or]some hard, rubber tubes leading into it[at random]. The creature atop you releases a grinding moan as you rub over his ballsac, clearly enjoying your touch despite their strange form. You can feel his balls start to throb warmly inside his odd scrotum and you are rewarded moments later by a steady stream of thick, oily cum. His slick seed pumps into you as some internal pump chugs away inside him, sending large amounts of his semen into you. Much of it flows up into your [if cunts of player > 0]waiting womb[else]sexy ass[end if] while the rest overflows around his cock to run down your thighs, with more gushing out as he withdraws and paints your ass with his last few spurts. Finished, he gives your sticky rear end a pat and wanders off.[impregchance]";
 
 to say beatthejunkman:
 	say "     You manage to drive off the junk creature, forcing it to flee back into the scrapyard.";
@@ -55,16 +55,16 @@ to say beatthejunkman:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Junkman";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Junkman"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The junkman bashes you with a fist covered in metal bits![or]The junkman kicks you with a heavy, metal foot![or]The scrapyard cyborg grabs you and tosses you roughly to the ground![or]The junk cyborg headbutts you with his metal-plated skull![at random]";
-	now defeated entry is "[beatthejunkman]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetojunkman]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[junkmandesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthejunkman]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetojunkman]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[junkmandesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "mostly human, but with a stainless steel panel across one side and under your chin. From the shape of it, you'd guess it belongs on some kind of kitchen appliance. You have three rows of mismatched bolts running over it, almost like a strange mohawk of metal";
 	now body entry is "human, but with numerous pieces of scrap protruding from or replacing body parts. There are some metal and plastic vanes attached to your shoulders, various external wires and cords, the handle to an old iron at your hip and metal pipes which sounds hollow replacing your left forearm, to name just a few. Your hands are thankfully normal save for a few wires embedded in the skin, allowing you full use of them. One foot has been replaced with the lower half of an iron and seems to match the handle at your hip[if cocks of player > 0]. A quartet of brass tubes run across the surface of your skin and flex with it. These lead from a valve which has replaced your navel to your balls[end if][if cunts of player > 0]. A trio of pink, plastic tubes run from your sides, starting just above the hip and across the surface of your skin. These lead down to your groin and link into your cunt, which is wet and slick with the oily lubricant flowing into it constantly[end if]";
 	now skin entry is "human skin covered in a mish-mash of metal and plastic plates, many of them old and dented. Random bits of junk protrude from your skin at odd places as well";
@@ -81,36 +81,36 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 14;
 	now cha entry is 14;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 42;			[ The monster's starting hit points. ]
-	now lev entry is 6;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 6;			[ Monster's average damage when attacking. ]
-	now area entry is "Junkyard";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 8;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 3;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 8;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 5;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 40;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 42; [ The monster's starting HP. ]
+	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 6; [ Monster's average damage when attacking. ]
+	now area entry is "Junkyard"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 8; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 5; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 40; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]mish-mashed[or]junk-riddled[or]haphazard[at random]";
-	now type entry is "cyborg";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "cyborg"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:
 	if bodyname of player is "Junkman":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Drawn back to the scrapyard by your corrupted instincts, you join the other junkmen in wandering around the piles of junk, satisfying your lusts on each other and others you find. Your people have little ambition or organization, only existing in the moment, enjoying short lives corrupting a handful of creatures and siring a few offspring before eventually breaking down and rejoining their scrapyard home.";
 		else:
 			say "     Your body is upsetting to several of the soldiers who find you during the rescue operation, but you are able to convince them that you are still sane. Taken from the outbreak city, you are scrutinized by several of the military scientists, intrigued by your haphazard cybernetics. They are unfortunately able to learn little from you, as what they discover about your anatomy makes no sense and they conclude that it is purely cosmetic.";

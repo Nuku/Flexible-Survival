@@ -14,14 +14,14 @@ when play begins:
 
 Instead of resolving a Eager Dal:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Stella]. Location: [location of Stella]. Alexandra's hint: [if AT_Stella is true]Given[else]Not given[end if]. <- DEBUG[line break]";
-	if hp of Stella is 0:
+		say "DEBUG -> HP: [HP of Stella]. Location: [location of Stella]. Alexandra's hint: [if AT_Stella is true]Given[else]Not given[end if]. <- DEBUG[line break]";
+	if HP of Stella is 0:
 		project the figure of Stella_icon;
 		say "     As you're sneaking through an alley between two buildings, you hear a cheerful British voice call out to you from behind. 'Hey there, hon. Care to bang?' Expecting it to be a sex-crazed monster by this point, you turn and take up a fighting stance. 'Whoa there, cowboy! Kind of touchy, aren't we?  No need to spaz out!' the cute dalmatian herm in front of you says, paws up as she takes a quick couple of steps back.";
 		say "     Realizing you'd misjudged the situation, you relax a little and try to strike up a conversation. As you do, you look her over more closely. Aside from having a nice figure and shapely breasts, the dog-woman's got a cute face with a happy smile on her muzzle. She's got shoulder-length white hair with a splash of black on her bangs. She's wearing a pair of glasses in front of her bright, blue eyes. And between her legs is an obviously canine cock.";
 		say "     Aside from learning that her name is Stella, most of your conversation's pretty vacuous babbling. She mainly talks about how she's been enjoying herself since she'd woken up as a dalmatian. Actually, her big thing's her new dick, which she's been trying out all around town. It's no wonder she's ended up in this neighbourhood with an attitude like that. When she mentions having been looking for somewhere safe to hang out when she needs to rest, you wonder about inviting her to come with you.";
-		say "     [bold type]Shall you do just that?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you do just that?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -39,16 +39,16 @@ to say convincestella:
 	let bonus2 be ( the number of booked people + the number of bunkered people ) / 2;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus]+[bonus2]: [dice + bonus + bonus2]: ";
-	if ( dice + bonus + bonus2 ) is greater than 14:
+	if ( dice + bonus + bonus2 ) > 14:
 		say "You tell Stella that you know [if Police Station is known]a couple of safe places[else]a safe place[end if] that she might stay[if number of bunkered people + number of booked people > 2], adding that you've got a few other friends there as well[end if]. It takes a little convincing to get her to trust you given your initial impression, but the prospect of somewhere safe (and maybe some sex as well) convinces her to go with you. ";
-		if Police Station is known and hp of Alexandra >= 52:
+		if Police Station is known and HP of Alexandra >= 52:
 			say "     The Police Station's somewhat closer than the bunker to here.";
-			say "     [bold type]Shall you take her there for now?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you take her there for now?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				say "     You and Stella travel together to the Police Station[if hp of Alexandra < 57]. She and Alexandra don't really hit it off that well, but the Doberwoman does promise to help keep her safe[else]. She and Alexandra don't really hit it off, but she finds Jimmy absolutely adorable in his little outfit. Jimmy seems quite captivated by her plump sh... ahhh... cute smile[end if]. Once introductions are done, she flops out on one of the bunks with a happy sigh, paw going to her cock.";
+				say "     You and Stella travel together to the Police Station[if HP of Alexandra < 57]. She and Alexandra don't really hit it off that well, but the Doberwoman does promise to help keep her safe[else]. She and Alexandra don't really hit it off, but she finds Jimmy absolutely adorable in his little outfit. Jimmy seems quite captivated by her plump sh... ahhh... cute smile[end if]. Once introductions are done, she flops out on one of the bunks with a happy sigh, paw going to her cock.";
 				move Stella to Police Lockerroom;
 				move player to Police Lockerroom;
 			else:
@@ -62,12 +62,12 @@ to say convincestella:
 			move player to Bunker;
 			increase morale of player by 2;
 		increase score by 20;
-		now hp of Stella is 2;
+		now HP of Stella is 2;
 		now laststellamove is turns;
 		now Eager Dal is resolved;
 	else:
 		say "You tell Stella that you have just the place in mind, but she's not sure about going with you. 'I mean, what if you lose the plot again?  I'm more of a lover than a fighter, you know,' she giggles. 'Anyway, thanks for the offer, but I think I'll keep looking around for now.' And with that, she waves and heads off.";
-		now hp of Stella is 1;
+		now HP of Stella is 1;
 
 
 Section 1 - Stella the Dalmatian
@@ -82,7 +82,7 @@ the scent of the Stella is "Stella smells of canine arousal, the scent of sex li
 
 to say stelladesc:
 	say "     Once a female exchange student from England, she's been transformed into a herm dalmatian by the outbreak. Aside from having a nice figure and shapely breasts, the dog-woman's got a cute face with a happy smile on her muzzle. Despite having a refined British accent, it seems like she's always been a bit of a ditzy slut even before coming here. She's got shoulder-length white hair with a splash of black on her bangs. She's wearing a pair of glasses in front of her bright, blue eyes. She's got a somewhat larger than normal cock, canine in form and lacking in sheath or balls. It grows from the top of her pussy, turning her clitoris into this dripping doggy dong she's so proud of.";
-	if Police Station is known and hp of Stella >= 52:
+	if Police Station is known and HP of Stella >= 52:
 		say "     Being no stranger to roaming the city, you can ask to [bold type]move Stella[roman type] between the police station and the library.";
 
 
@@ -92,13 +92,13 @@ stellapsurv is a truth state that varies. stellapsurv is usually false.
 
 Instead of conversing the Stella:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Stella]. Location: [location of Stella]. Alexandra's hint: [if AT_Stella is true]Given[else]Not given[end if]. <- DEBUG[line break]";
-	if hp of Stella is 0 or hp of Stella is 1:
-		say "ERROR-Stella-[hp of Stella]L: You should not be able to find her yet.";
-	else if hp of Stella is 2:
+		say "DEBUG -> HP: [HP of Stella]. Location: [location of Stella]. Alexandra's hint: [if AT_Stella is true]Given[else]Not given[end if]. <- DEBUG[line break]";
+	if HP of Stella is 0 or HP of Stella is 1:
+		say "ERROR-Stella-[HP of Stella]L: You should not be able to find her yet.";
+	else if HP of Stella is 2:
 		say "     'This place ain't too bad. It'll do fine for a place to take a kip when I need a break. I don't mind staying here for a while, though if you know another safe spot as good as this with some interesting folks, I could go hang there for a while too. Just ask me to [bold type]move[roman type].'";
 		say "     She stretches and rubs a paw over her groin. 'As it is, when I'm not faffing about here, I'll totally be wandering in and out. Places to go, people to see, holes to stuff - you know how it is,' she giggles. 'Oh, speaking of, I don't want you to be getting any funny ideas. If we're going to be banging - and I hope we will - I'm like totally going to be on top. I've been shagged plenty back when I was a girl; it's time to do the shagging!'";
-		now hp of Stella is 3;
+		now HP of Stella is 3;
 	else if Stella is in the Police Lockerroom and population of Police Station > 0 and stellapsurv is false:
 		say "     'I'm glad to see you've got some other people around here. I'm sure a few'll be up to polishing the silver or even a quick shag, if you get me,' she adds with a wink. 'It's better for [']em to get a spot of relief than to have [']em risk going round the bend, I'd say.'";
 		if infpop of Police Station < population of Police Station, increase infpop of Police Station by 1;
@@ -118,7 +118,7 @@ Understand "Stella move" as stellamoving.
 
 check stellamoving:
 	If Stella is not visible, say "Who?" instead;
-	if Police Station is not known or hp of Alexandra < 52, say "There's nowhere else to send her." instead;
+	if Police Station is not known or HP of Alexandra < 52, say "There's nowhere else to send her." instead;
 	if laststellamove - turns < 16, say "What?  I just got settled in here. Maybe later." instead;
 
 carry out stellamoving:
@@ -140,10 +140,10 @@ the fuckscene of Stella is "[sexwithStella]".
 
 to say sexwithStella:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Stella]. Location: [location of Stella]. Alexandra's hint: [if AT_Stella is true]Given[else]Not given[end if]. <- DEBUG[line break]";
-	if hp of Stella is 0 or hp of Stella is 1:
-		say "ERROR-Stella-[hp of Stella]L: You should not be able to find her yet.";
-	else if hp of Stella is 2:
+		say "DEBUG -> HP: [HP of Stella]. Location: [location of Stella]. Alexandra's hint: [if AT_Stella is true]Given[else]Not given[end if]. <- DEBUG[line break]";
+	if HP of Stella is 0 or HP of Stella is 1:
+		say "ERROR-Stella-[HP of Stella]L: You should not be able to find her yet.";
+	else if HP of Stella is 2:
 		say "     Perhaps you should talk to her first. She certainly seems eager enough, but it'd probably be best to chat a bit first.";
 	else if lastfuck of Stella - turns < 4:
 		say "     'I'm glad to see you're stoked for more, but [one of]I was thinking of popping out for a bit of variety[or]even I need a break from time to time[or]I'm knackered[at random],' the dalmatian responds.";
@@ -175,7 +175,7 @@ to say Stellasexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Missionary";
 		now sortorder entry is 4;
-		now description entry is "bang in the classic position";		]
+		now description entry is "bang in the classic position";]
 	choose a blank row in table of fucking options;
 	now title entry is "Anal";
 	now sortorder entry is 5;
@@ -185,8 +185,8 @@ to say Stellasexmenu:
 		now title entry is "Dominant doggy";
 		now sortorder entry is 7;
 		now description entry is "be this Brit's bitch";
-	if hp of Stella >= 4:	[threesomes]
-		if Jimmy is visible and lastfuck of Jimmy - turns >= 6 and hp of Jimmy >= 4 and cocks of player > 0:
+	if HP of Stella >= 4:	[threesomes]
+		if Jimmy is visible and lastfuck of Jimmy - turns >= 6 and HP of Jimmy >= 4 and cocks of player > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Oral threesome with Jimmy";
 			now sortorder entry is 10;
@@ -220,7 +220,7 @@ to say Stellasexmenu:
 					say "[stellajimmy01]";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	if hp of Stella is 3, now hp of Stella is 4;
+	if HP of Stella is 3, now HP of Stella is 4;
 	stellainfect;
 	now lastfuck of Stella is turns;
 	wait for any key;
@@ -251,7 +251,7 @@ to say stellasex5:
 	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you. Her canine seed, copious for one with no ballsac, splashes [if cocks of player > 0]against your prostate[else]around inside your bowels[end if]. As it builds up, having nowhere else to go, it can only flow deeper into you. While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paws roaming over your [bodytype of player] body appreciatively.[mimpregchance]";
 
 to say stellasex6:
-	say "     As you offer to let Stella fuck you, there's a little something in your voice that causes her canine ears to perk up. Sensing the submissive need in your tone, she gives a doggy grin and a sniff. 'Smells like someone's looking forward to their chance to be my bitch[if hp of Stella >= 4] again[end if]. Don't worry, I'll give you the proper shagging a slut like you deserves,' she says with a lustful growl in her voice. Pressing you down onto a bench, she gives your rear a couple of slaps with her cock, making you blush as you grow all the more aroused by her mistreatment of you.";
+	say "     As you offer to let Stella fuck you, there's a little something in your voice that causes her canine ears to perk up. Sensing the submissive need in your tone, she gives a doggy grin and a sniff. 'Smells like someone's looking forward to their chance to be my bitch[if HP of Stella >= 4] again[end if]. Don't worry, I'll give you the proper shagging a slut like you deserves,' she says with a lustful growl in her voice. Pressing you down onto a bench, she gives your rear a couple of slaps with her cock, making you blush as you grow all the more aroused by her mistreatment of you.";
 	say "     Having gotten herself quite worked up as well, precum drools from her cock onto your [if cunts of player > 0]pussy[else]tight pucker[end if] as she gets into position. Not in the mood to wait any long, she takes the nape of your neck in her muzzle and thrusts into you. Thankfully, she shows a little restraint, but is still steady and inexorable in her determination to stuff your [if cunts of player > 0]needy cunt[else]back passage[end if]. Her paws roam over your body, groping and teasing you as she pants in your ear about what a slutty bitch you are, lusting for dog cock so badly. You can only pant and moan beneath her, feeling like the dog herm's bitch and loving it as she pounds away at you.";
 	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you. Her canine seed, copious for one with no ballsac, splashes [if cunts of player > 0]against your cervix[else if cocks of player > 0]against your prostate[else]around inside your bowels[end if]. As it builds up, having nowhere else to go, it can only flow deeper into you. While waiting for her extended climax to end and her knot to go down, she continues to grope and fondle you, enjoying your whimpers of pleasure and lustful cries as her paws roam over your [bodytype of player] body appreciatively.[impregchance]";
 
@@ -287,7 +287,7 @@ to say stellajimmy01:
 	increase level of Stella by 1;
 	now lastfuck of Jimmy is turns;
 
-[  hp of Stella     ]
+[  HP of Stella     ]
 [ overall status     ]
 [ 0 = not met     ]
 [ 1 = failed invite    ]

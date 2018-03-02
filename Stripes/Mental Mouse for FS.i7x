@@ -16,7 +16,7 @@ when play begins:
 	add { "Mental Mouse" } to infections of Rodentlist;
 
 to say mousedesc:
-	setmongender 15;	[creatures are herm]
+	setmongender 15; [creatures are herm]
 	repeat with y running from 1 to number of rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry is "Mental Mouse":
@@ -26,7 +26,7 @@ to say mousedesc:
 	say "     As you are travelling along, you find your path cut off by a trio of small mice. Well, short mice would be more accurate, as these herms are quite well endowed, despite being only three feet tall. They have large breasts with perky nipples poking from their grey fur. Between their legs, they have a set of male organs that would be good size on a normal man. The mice have lovely, feminine bodies with slender waists and curvy hips. Their nipples and cocks are a soft pink and their ballsacs are covered in soft, grey fur like their bodies. The small rodents grin happily and start to move towards you, speaking in unison. '[one of]Join us!'[or]Come join us in mousedom.'[or]You shall be one of us.'[or]The mouse-lective has chosen you.'[or]Come, be a beautiful mousie with us.'[or]It is wonderful to be a mouse. As you will see.'[or]We shall welcome you into mousehood with us.'[at random]";
 	if level of player > 4:
 		say "[mousebuff]";
-		say "     As the mice draw nearer, there is a rustling behind you as another of these mice pops up behind you[if lev entry is 6 or lev entry is 7], and another[else if lev entry > 7], and then a few more start popping up from all around[end if]. With reinforcements now, this [if lev entry < 6]quartet of mice[else if lev entry < 21]group of [ (lev entry / two ) + one ] mice[otherwise]large group of mice[end if] move in to forcibly welcome you as member of this strange mouse-collective.";
+		say "     As the mice draw nearer, there is a rustling behind you as another of these mice pops up behind you[if lev entry is 6 or lev entry is 7], and another[else if lev entry > 7], and then a few more start popping up from all around[end if]. With reinforcements now, this [if lev entry < 6]quartet of mice[else if lev entry < 21]group of [ (lev entry / two ) + one ] mice[else]large group of mice[end if] move in to forcibly welcome you as member of this strange mouse-collective.";
 	if mousecurse is 1 and mouse girl is the companion of the player:
 		say "     Rachel moves in close beside you. 'I told you all that I'll bring this one in on my own,' she says to the other mice, clearly speaking aloud for your benefit. 'We should not wait any longer. This one is meant to be with us,' they others respond, moving in. It seems that your mate is more independent than most of the other mice in the collective, but is unable to sway the mouse hive-mind into waiting now that they've stumbled across you again.";
 
@@ -34,29 +34,29 @@ to say mousebuff:
 	choose row monster in table of random critters;
 	now lev entry is level of player minus 1;
 	if battleground is "Red" and ( bodyname of player is "Mental Mouse" or mousecurse is 1 ):
-		increase lev entry by ( ( a random number between 0 and 250 ) / 100 );	[ +0-2 lvls in Red, lower chance of +2 ]
+		increase lev entry by ( ( a random number between 0 and 250 ) / 100 ); [ +0-2 lvls in Red, lower chance of +2 ]
 	if lev entry < 15:
-		now dex entry is ( lev entry / 2 ) + 13;							[quick dex, int and hp growth early on]
+		now dex entry is ( lev entry / 2 ) + 13; [quick dex, int and HP growth early on]
 		now int entry is ( lev entry / 2 ) + 10;
-		now hp entry is ( lev entry times 7 );
-		increase hp entry by a random number between 1 and lev entry;
-		increase hp entry by a random number between 1 and lev entry;
-		increase hp entry by a random number between 1 and lev entry;
+		now HP entry is ( lev entry times 7 );
+		increase HP entry by a random number between 1 and lev entry;
+		increase HP entry by a random number between 1 and lev entry;
+		increase HP entry by a random number between 1 and lev entry;
 		now wdam entry is ( ( lev entry * 2 ) / 3 ) plus 4;
 	else:
-		now dex entry is 17 + ( lev entry / 5 );							[normal hard mode dex growth at lvl 15+]
-		now int entry is 14 + ( lev entry / 5 );							[same growth for int at lvl 15+]
-		now hp entry is 55 + ( lev entry times 4 );						[strong hp growth at lvl 15+]
-		increase hp entry by a random number between 1 and lev entry;
-		increase hp entry by a random number between 1 and lev entry;
-		increase hp entry by a random number between 1 and lev entry;
-		now wdam entry is ( lev entry / 3 ) + 9;							[normal dmg growth for lvl 15+]
-	now monsterhp is hp entry;
+		now dex entry is 17 + ( lev entry / 5 ); [normal hard mode dex growth at lvl 15+]
+		now int entry is 14 + ( lev entry / 5 ); [same growth for int at lvl 15+]
+		now HP entry is 55 + ( lev entry times 4 ); [strong HP growth at lvl 15+]
+		increase HP entry by a random number between 1 and lev entry;
+		increase HP entry by a random number between 1 and lev entry;
+		increase HP entry by a random number between 1 and lev entry;
+		now wdam entry is ( lev entry / 3 ) + 9; [normal dmg growth for lvl 15+]
+	now monsterHP is HP entry;
 
 
 to say losetomouse:
 	if mouse girl is tamed:
-		say "     The victorious mice squeak happily as they pull you into their arms and start snuggling and groping you lustfully. You look over and find Rachel by your side, snuggling up to you as her paw moves to your [if cocks of player > 0]stiffening cock[otherwise]wet pussy[end if]. Your hands make their way to her breasts as you tease her nipples. Your head is guided over to the stiff mousecock of another and you take it into your mouth readily, finding yourself becoming closer to the busty mice and eager to please them. Your head is stroked as she thrusts into your mouth, dripping her pre down your throat while your mouse mate teases you.";
+		say "     The victorious mice squeak happily as they pull you into their arms and start snuggling and groping you lustfully. You look over and find Rachel by your side, snuggling up to you as her paw moves to your [if cocks of player > 0]stiffening cock[else]wet pussy[end if]. Your hands make their way to her breasts as you tease her nipples. Your head is guided over to the stiff mousecock of another and you take it into your mouth readily, finding yourself becoming closer to the busty mice and eager to please them. Your head is stroked as she thrusts into your mouth, dripping her pre down your throat while your mouse mate teases you.";
 	else:
 		say "     The victorious mice squeak happily as they pull you into their arms and start snuggling and groping you lustfully. Their soft, small bodies rub against you, and you quickly start to become aroused as well. Your hands find their way to the breasts of one of the busty little herms and start to tease her nipples. Your head is guided over to a stiff mousecock and you take it into your mouth readily, finding yourself becoming closer to the busty mice and eager to please them. Your head is stroked as she thrusts into your mouth, dripping her pre down your throat while your grope her bosom.";
 	WaitLineBreak;
@@ -66,11 +66,11 @@ to say losetomouse:
 		else:
 			say "     Another of the mice, with her paws already stroking your cock, sets herself to licking and kissing along your large length. Too large for her to take in, she instead works her tongue and lips over it, working to please you in that way. Paws, probably hers, grope and stroke your penis and balls, enticing you to greater levels of arousal.";
 	else if cocks of player > 0:
-		say "     [if mouse girl is tamed]Rachel[otherwise]Another of the mice[end if], with her paws already stroking your cock, moves to climb atop it. She releases a soft squeak as her dripping cunt is lowered down over your meaty shaft, making her body quiver in delight. You can feel her wet cunt squeeze and grip around your cock, milking at it for your seed while she rides it.";
+		say "     [if mouse girl is tamed]Rachel[else]Another of the mice[end if], with her paws already stroking your cock, moves to climb atop it. She releases a soft squeak as her dripping cunt is lowered down over your meaty shaft, making her body quiver in delight. You can feel her wet cunt squeeze and grip around your cock, milking at it for your seed while she rides it.";
 	if cunts of player > 0:
-		say "     [if cocks of player is 0 and mouse girl is tamed]Rachel[otherwise]A third mouse[end if] moves in between your legs, boosting up your hips and getting her hard cock lined up with your pussy. At this point, as aroused as you are, you help as best you can and are soon rewarded with the thrust of her shaft into you, spreading open your wet petals. The small mouse strokes your legs and thighs as her hips rock, pumping her throbbing, leaking penis into you again and again. You moan in delight around your mouthful of mousemeat, as the two eager herms continue to thrust into you.";
+		say "     [if cocks of player is 0 and mouse girl is tamed]Rachel[else]A third mouse[end if] moves in between your legs, boosting up your hips and getting her hard cock lined up with your pussy. At this point, as aroused as you are, you help as best you can and are soon rewarded with the thrust of her shaft into you, spreading open your wet petals. The small mouse strokes your legs and thighs as her hips rock, pumping her throbbing, leaking penis into you again and again. You moan in delight around your mouthful of mousemeat, as the two eager herms continue to thrust into you.";
 	WaitLineBreak;
-	say "     You and the mice continue like this for some time, groping, grinding, rubbing and teasing as your excitement grows and grows. You and the mice work to please each other, moving more and more in synch as your lovemaking continues. You can [if mousecurse is 1]intensely [otherwise]almost [end if]feel their pleasure and joy as your closeness to them grows stronger and you all cum in unison. You gulp down the mouse's hot seed from her cock[if cocks of player > 0] while pumping your own load into the other eager mousie[end if][if cunts of player > 0] and get a warm blasts of mousecum to fill your womb as well from the other[end if].[impregchance]";
+	say "     You and the mice continue like this for some time, groping, grinding, rubbing and teasing as your excitement grows and grows. You and the mice work to please each other, moving more and more in synch as your lovemaking continues. You can [if mousecurse is 1]intensely [else]almost [end if]feel their pleasure and joy as your closeness to them grows stronger and you all cum in unison. You gulp down the mouse's hot seed from her cock[if cocks of player > 0] while pumping your own load into the other eager mousie[end if][if cunts of player > 0] and get a warm blasts of mousecum to fill your womb as well from the other[end if].[impregchance]";
 	WaitLineBreak;
 	if bodyname of player is "Mental Mouse" or mousecurse is 1:
 		say "     When this is all over, the mice back off, stroking your musine body. 'We look forward to you coming and joining with us permanently. Accept us and fully become one of us, of one mind, of one pleasure. Stop fighting it and accept your place among us,' they say softly. 'We will come find you again,' they add before heading off, confident that you will be theirs eventually. You do feel a pull to go off with them, your mouse body feeling the call to be among your own kind, to accept their minds into yours and join them in united mousedom. It takes you considerable effort to get refocused and continue on your way[if mouse girl is tamed], hand in hand with your mate, Rachel[end if].";
@@ -83,7 +83,7 @@ to say losetomouse:
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 			now libido of player is ( libido of player + 1 ) / 3;
 		decrease humanity of player by a random number between 1 and 4;
-		if hp of player is 0, decrease humanity of player by a random number between 1 and 2;
+		if HP of player is 0, decrease humanity of player by a random number between 1 and 2;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	else:
@@ -101,8 +101,8 @@ to say beatthemouse:
 			say "     You do spot a stray mouse dazed from the battle and left behind. Her short, sexy body spread out across the ground, on display for you. Rachel, moving up beside you, runs her paw over your body. You feel excited at the prospect of playing with the prone mouse and move in to take advantage of the opportunity.";
 		else:
 			say "     You do spot a stray mouse dazed from the battle and left behind. Her short, sexy body spread out across the ground, on display for you.";
-			say "     [bold type]Shall you take advantage of this opportunity?[roman type][line break]";	
-			line break;
+			say "     [bold type]Shall you take advantage of this opportunity?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -168,16 +168,16 @@ to say mouseyvicsex:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Mental Mouse";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Mental Mouse"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]While two of the mice, a third jumps onto you, trying to pull you down![or]The mice around you take turns slapping your ass and groping you![or]The herms make a tantalizing display of their bodies, trying to tempt and arouse you with their beautiful, musine forms![or]The horny mice tackle you, trying to pull you into their welcoming arms![at random]";
-	now defeated entry is "[beatthemouse]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetomouse]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[mousedesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthemouse]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetomouse]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[mousedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "now mouse-like, with large, rounded ears, a cute little nose and twitching whiskers. Your hair has grown back in, but is long, flowing and grey. Your ears, you find, are quite sensitive and seem to resonate slightly with the calls from distant mice";
 	now body entry is "quite small, barely three feet tall. Your body has clear, womanly curves to it, with a slender, feminine waist and hips. Your hands are cute, mouse-like paws with nimble digits";
 	now skin entry is "soft, grey fur over your";
@@ -194,38 +194,38 @@ When Play begins:
 	now per entry is 10;
 	now int entry is 12;
 	now cha entry is 15;
-	now sex entry is "Both";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 35;			[ The monster's starting hit points. ]
-	now lev entry is 4;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 6;			[ Monster's average damage when attacking. ]
-	now area entry is "Red";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 8;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 5;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 9;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 4;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 60;			[ Target libido the infection will rise towards. ]
-	now loot entry is "cheese";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 24;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 35; [ The monster's starting HP. ]
+	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 6; [ Monster's average damage when attacking. ]
+	now area entry is "Red"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 5; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 9; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 4; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 60; [ Target libido the infection will rise towards. ]
+	now loot entry is "cheese"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 24; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 1; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]curvy[or]cute[at random]";
 	now type entry is "[one of]musine[or]mouse-like[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "mmouse";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "mmouse"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
-"mmouse"	mentalmouse rule	--	--	--	--	--	--	--	--	--	
+"mmouse"	mentalmouse rule	--	--	--	--	--	--	--	--	--
 
 
 this is the mentalmouse rule:
@@ -244,7 +244,7 @@ this is the mentalmouse rule:
 				now dam is (dam * 150) divided by 100;
 				say "The enemy finds a particular vulnerability in your mental defenses - Critical Hit![line break]";
 			say "[one of]Being this close to them, you can feel their minds tugging at yours, weakening your resolve[or]You can feel what must be their united thoughts at the edge of your mind, whispering for you to give in and accept mousedom with them[or]The mice surround you and look at you funny. You thoughts get cloudy and it becomes harder to stay focused on resisting them[at random]! You take [special-style-2][dam][roman type] damage[if mousecurse is 1] and you grow more aroused[end if]!";
-			decrease hp of the player by dam;		[No armour protection from the mental whammy]
+			decrease HP of the player by dam; [No armour protection from the mental whammy]
 			if mousecurse is 1:
 				let libdam be 2;
 				increase libdam by a random number between 0 and ( lev entry / 2 );
@@ -256,10 +256,10 @@ this is the mentalmouse rule:
 		else:
 			say "You can feel the touch of their mousey minds at the edge of yours, but you manage to block them out for the moment!";
 		now peppereyes is 0;
-		if hp of the player is greater than 0 and libido of player < 110:
+		if HP of the player > 0 and libido of player < 110:
 			wait for any key;
 		else:
-			if hp of player <= 0, now fightoutcome is 20;
+			if HP of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
 			Lose;
 		rule succeeds;
@@ -296,8 +296,7 @@ The usedesc of cheese is "[eatcheese]";
 
 to say eatcheese:
 	say "     You pull out the wedge of cheese and, after double-checking its continued freshness, you take a small nibble of it. That nibble becomes a bite, and then another and another until it's completely gone before you know it.";
-	decrease hunger of player by 9;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 9;
 	if morale of player < 0:
 		increase morale of player by 20;
 		if morale of player > 0, now morale of player is 0;
@@ -312,7 +311,7 @@ Section 6 - Endings
 
 when play ends:
 	if bodyname of player is "Mental Mouse" or ( bodyname of player is "Albino Mouse" and mouse girl is tamed ):
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Something seems to click inside you and the mouse-like call you've been hearing in your mind comes in loud and clear. No longer resisting it, you welcome the other mice into your mind, feeling the joy and happiness of being united with them. There was nothing to fear at all from it, a wonderful union of your mind to theirs. As your own thoughts fade into the background - still there, but secondary - you follow their call back to the mouse nest. Welcomed by the beautiful mice, you snuggle up with them and share in their company, thoughts and sensations as you make love together, truly together.";
 		else:
 			say "     You resist the call of the mouse collective until the military comes into the city to rescue what survivors they can find. The call becomes more manageable once you are removed from the city, only troubling you at times in dreams. You do feel a shadow of their minds within you after sex as well, the mouse hive-mind peeking in past your lowered defenses and sharing in the pleasure of your orgasm. Your small, sexy body catches the eye of several lovers who find your appearance attractive.";

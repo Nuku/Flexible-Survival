@@ -50,12 +50,12 @@ Instead of resolving a Partial Ruin:
 	let bonus be ( Dexterity of player + Strength of player - 20 ) divided by 2;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]:";
-	if dice + bonus is greater than 14:
+	if dice + bonus > 14:
 		say "     You push and dodge your way past the debris to get out of the collapsing building before it all comes tumbling down atop you. From a safe distance, you watch the last of it collapse down. The strange rumble seemed more like a cave-in or sinkhole than an earthquake, so you start looking around for clues when suddenly you hear some barking sounds around you moments before the ground gives out beneath you.";
 	else:
 		say "     You try your best to dodge and push your way through the falling building, but are struck by some falling rubble on your way out (10 dmg). Rubbing your aching shoulder and side, you watch as the last of it comes tumbling down. The strange rumble seemed more like a cave-in or sinkhole than an earthquake, so you start looking around for clues when suddenly you hear some barking sounds around you moments before the ground gives out beneath you.";
-		decrease hp of player by 10;
-		if "Toughened" is listed in feats of player, increase hp of player by 1;
+		decrease HP of player by 10;
+		if "Toughened" is listed in feats of player, increase HP of player by 1;
 	challenge "Prairie Dog";
 	if lost is 1:
 		say "     Before leaving the area, the prairie dogs rummage through the ruins of the building, taking the last few items of value before disappearing back under the earth, leaving the rubble to be reclaimed by the plain and made into more pristine grasslands.";
@@ -128,8 +128,8 @@ when play begins:
 Instead of resolving a Pit Trap:
 	say "     Cresting a small hillock, you notice a large hole at the bottom of the hill and can hear a soft moan of pain coming from it. Cautiously approaching, you peek inside to find an injured soldier down at the bottom of a deep hole. The hole seems quite smoothly dug and has vertical sides, clearly dug by someone or something. Given its placement along the path between the hillocks and the pile of berries the soldier is munching on while trapped, it was clearly made as a pit trap and was successful. In the grass beside the pit is a small pack, probably dropped by the soldier when he fell.";
 	say "     Spotting you, the soldier starts calling up for you to help him. He tells you that there's some rope in the pack he lost up there and to get him out quick. Looking at the pack, you reach for it.";
-	say "     [bold type]Shall you grab it and run, leaving him to his fate?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you grab it and run, leaving him to his fate?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -151,8 +151,8 @@ Instead of resolving a Pit Trap:
 		say "     Quickly digging out the rope, you start securing it to a large rock nearby. The soldier keeps babbling his thanks to you. But as you try to warn him to be quiet, it is too late. Emerging from hidden holes in the ground come numerous three foot prairie dog creatures. One of them waves her shovel at you. 'Hey now! You leave that alone. We caught it fair and square! That one's ours,' she says, crossing her fluffy arms over her large breasts. ";
 		if bodyname of player is "Prairie Dog" and facename of player is "Prairie Dog" and skinname of player is "Prairie Dog":
 			say "     Looking you over, the rodent herm grins. 'But you know what, you're a fine looking burrower. How about we share him?'  The soldier, just having finished coming up the rope, whimpers at this suggestion.";
-			say "     [bold type]Shall you take her up on her offer?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you take her up on her offer?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -182,8 +182,8 @@ to say prairiedogsex:
 	setmonster "Prairie Dog";
 	say "     Looking from your fellow rodents to the human soldier, you nod at the offer and the reach to grab him. He struggles a little, but superior numbers have him down soon enough. Numerous little paws grab at his clothes and strip him bare. The one prairie dog you spoke with motions for you to pick a spot to have a go at him";
 	if cocks of player > 0 and cunts of player > 0:
-		say "     [bold type]Shall you ride his cock or stuff his ass?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you ride his cock or stuff his ass?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Ride his cock.";
 		say "     ([link]N[as]n[end link]) - Stuff his ass.";
 		if the player consents:
@@ -328,7 +328,7 @@ Instead of resolving a Treasure Hunters:
 				say "     Deciding not to waste your time and energy on these fools, you tell them that they should probably get back to work. They seem a little disappointed but nod and head back the way they came.";
 				increase score by 1;
 	else:		[non-gang-member]
-		say "     Reminded that you're there, they growl at you and wave their shovels menacingly. 'Don't you go messin['] with us. We're in the hyena gang and we'll fuck you up if you get in our way,' the second one growls. 'And don't you try and get our treasure,' the other adds. 'Yeah, we're watching you,' the questionable genius says, pointing to her eyes and then to you meaningfully. You chuckle a little at their posturing, but decide they're not worth the bother and simple let them walk off.";
+		say "     Reminded that you're there, they growl at you and wave their shovels menacingly. 'Don't you go messin['] with us. We're in the hyena gang and we'll fuck you up if you get in our way,' the second one growls. 'And don't you try and get our treasure,' the other adds. 'Yeah, we're watching you,' the questionable genius says, pointing to her eyes and then to you meaningfully. You chuckle a little at their posturing, but decide they're not worth the bother and simply let them walk off.";
 		increase score by 1;
 	now Treasure Hunters is resolved;
 

@@ -4,23 +4,23 @@ Events basic by Sarokcat begins here.
 Tribal Skirmish is a situation.
 
 Instead of resolving a tribal skirmish:
-	If population of tribe of player is greater than 20:
+	If population of tribe of player > 20:
 		let T be a random number between one and 50;
 		let q be a random active species;
 		if q is nothing, continue the action;
 		let z be the printed name of q;
 		if z is "", now z is "mutant";
-		If T is greater than workers of warrior:
+		If T > workers of warrior:
 			say "Your camp seems slightly emptier come morning, and you learn from several of your warriors that at some point last night, members of the [z] tribe managed to sneak into your encampment, and entice several of your people to slip away with them. You sigh as you look around your slightly smaller tribe, and resolve to make sure your sentries are keeping a better eye on things in the future.";
 			Let y be a random number between one and five;
 			Decrease the population of tribe of player by y;
 			stop the action;
-		otherwise:
+		else:
 			say "Your warriors capture several members of the [z] tribe, sneaking around your camp looking to kidnap and convert some of your tribe members. You find yourself grinning at the delicious irony of the situation, as that night your tribe holds a celebration to help convert and welcome your newest tribe members, even joining in to enjoy the changing bodies of your former rivals tribe, as they learn to embrace their new life of sexual bliss as happily fucked members of your own tribe.";
 			Let y be a random number between two and eight;
 			Increase the Population of Tribe of player by y;
 			stop the action;
-	otherwise:
+	else:
 		say "Several members of your tribe report seeing signs of other species sneaking around your camp, and you warn everyone to be careful and keep an eye out for any possible intruders looking for people to kidnap and covert.";
 
 
@@ -32,7 +32,7 @@ Instead of resolving a Silly strangeness:
 		say "You smile and commend your scouts for finding such a nice and safe location for your tribe, and quickly move to claim the rather cartoonlike stretch of land for your own, enjoying the way the place squeaks pleasantly when you stroke your own smooth skin against it.";
 		Increase Territory of Tribe of player by 10;
 		now Silly strangeness is resolved;
-	otherwise:
+	else:
 		say "Deciding that whatever this place is, it certainly isn't a safe place to be, you order your scouts to keep an eye on it to make sure it isn't actually spreading. And resolve to keep your people safely away from the rather cartoonlike stretch of territory, who knows what could happen if someone stayed in their long enough?";
 		now Silly strangeness is resolved;
 
@@ -94,7 +94,7 @@ Instead of resolving a Gatornapping:
 		say "One of your foragers returns from his day of scouting throughout the city, in a panic, babbling about large glowing eyes, and without his fellow scavenging partner. Once you finally have them calmed down enough to talk, you learn that they were foraging near a large sewer access, and heard a strange fascinating voice beckoning them to come closer. When your foragers looked, they saw a pair of large reptilian eyes staring at them from out of the sewer entry, the almost hypnotic voice calling to them and telling them about all sorts of depraved fun the beast would like to have with them. While your panicked forager managed to resist, their companion succumbed to the beasts teasing words, drawing closer to the opening, until the large reptile could reach out and haul them down into the sewers with them. Shuddering at your tribe members description of a powerful gator like beast, you sigh and order your tribe members to steer clear of the sewer openings from now on. Shaking your head, you continue about your daily business, wondering what's next now that you actually have gators in the sewer system, flying pigs?";
 		Decrease the population of Tribe of player by 1;
 		now Gatornapping is resolved;
-	otherwise:
+	else:
 		say "Several members of your tribe vanish while out foraging for supplies in what was supposed to be safe territory, and while you send scouts, there is no sign of a struggle, instead it merely looks like they just vanished on their own. Shuddering you order your foragers to be more careful in the still dangerous city.";
 		Decrease the population of Tribe of player by 2;
 

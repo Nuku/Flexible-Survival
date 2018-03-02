@@ -14,14 +14,14 @@ when play begins:
 	add Shipping Container to badspots of feral;
 
 Instead of resolving a Shipping Container:
-	say "     As you are exploring, you come across a semi turned onto its side with the shipping container shaken loose. Curious, you step up and find the driver's clothes in a sticky pile nearby, the trucking company's logo on both the jacket and the truck. A clipboard nearby has the shipping manifest for the load. Most of it has been faded by the sun, but the contents of the container seem to be something like [']La##x H##ky - 160 units.[']  You're not quite certain what it could be, but perhaps it's something useful. If there are only 160 of them in this one large container, one might be worth snagging. Besides, live contents aren't shipped in these containers, so it's probably safe.";
+	say "     As you are exploring, you come across a semi turned onto its side with the shipping container shaken loose. Curious, you step up and find the driver's clothes in a sticky pile nearby, the trucking company's logo on both the jacket and the truck. A clipboard nearby has the shipping manifest for the load. Most of it has been faded by the sun, but the contents of the container seem to be something like [']La##x H##ky - 160 units['].  You're not quite certain what it could be, but perhaps it's something useful. If there are only 160 of them in this one large container, one might be worth snagging. Besides, live contents aren't shipped in these containers, so it's probably safe.";
 	say "     [bold type]Shall you try opening up the container?[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
 		if guy is banned and girl is banned:
-			say "     You pull and pry at the handles to the steel container, but you can't get it to open. Frustrated, you bang the clipboard against the door a few times. You then notice a note written on next page of the shipping manifest stating: [']Contents locked by simultaneous use of both guy and girl flags.[']  You're not quite sure what that means, but it seems the container's locked. Maybe some other time.";
+			say "     You pull and pry at the handles to the steel container, but you can't get it to open. Frustrated, you bang the clipboard against the door a few times. You then notice a note written on next page of the shipping manifest stating: [']Contents locked by simultaneous use of both guy and girl flags.['] You're not quite sure what that means, but it seems the container's locked. Maybe some other time.";
 		else:
 			now latexhuskymode is true;
 			say "     It takes a bit of effort to push open the latches locking the overturned container, but eventually manage to do so by banging noisily to force the last one. When you do so, the doors flap open and several cardboard boxes tumble out onto you. Thankfully the boxes aren't that heavy, but the contents spill out. Hundreds of little, rubber, dog figurines pour out, inundating you in little latex huskies in various poses. Realizing too late what the contents are and that the manifest meant 160 boxes of them, you grumble in frustration, trying to pull yourself free of the shifting mass of two inch figurines and half-empty boxes. It is a struggle to find footing when every move you make seems to send another box of them over you.";

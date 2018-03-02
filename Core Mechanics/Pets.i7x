@@ -18,7 +18,7 @@ Definition: A person is not lonely:
 before examining a pet(called x):
 	if x is the companion of the player:
 		increase score by 0;
-	otherwise:
+	else:
 		say "I don't see any [x] around here at the moment.";
 		stop the action;
 
@@ -31,7 +31,7 @@ understand "pet dismiss" and "dismiss" as dismissing.
 carry out dismissing:
 	if player is lonely:
 		say "There is no pet around to dismiss.";
-	otherwise:
+	else:
 		say "[dismissdesc of companion of player]";
 		now companion of player is nullpet;
 
@@ -48,12 +48,12 @@ Carry out petcounting:
 	if hypernull is 0:
 		repeat with pet running through tamed pets:
 			say "[link][pet][as]pet [pet][end link] ";
-		say "[line break]";
-	otherwise:
+		LineBreak;
+	else:
 		say "[list of tamed pets]";
 	if companion of player is nullpet:
 		say "Active pet: NONE[line break]";
-	otherwise:
+	else:
 		say "Active pet: [companion of player]";
 	say "PET COMMANDS:[line break]";
 	say "[bold type]pet <name>[roman type] - Make the named pet your active one.";
@@ -63,10 +63,10 @@ carry out calling a pet(called x):
 	if companion of player is not x:
 		if player is not lonely:
 			say "[dismissdesc of companion of player]";
-			say "[line break]";
+			LineBreak;
 		now the companion of player is x;
 		say "[summondesc of x]";
-	otherwise:
+	else:
 		say "They are already your current companion.";
 
 Cute Crab is a pet. The description of Cute Crab is "It's so cute! It has huge eyes that seem to stare into your soul and big pincers that clackity clack.". Cute crab is a part of the player.
@@ -92,11 +92,11 @@ Instead of resolving lost crab:
 			delete food;
 			say "The crab munches quite happily at the food, blowing a few bubbles afterwards to show its appreciation.";
 			now cute crab is tamed;
-			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing [link]pet cute crab[as]pet cute crab[end link]. You can see all the pets you have tamed with the [link]pet[as]pet[end link] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [link]pet dismiss[as]pet dismiss[end link], or just [link]dismiss[as]dismiss[end link])[roman type]";
-		otherwise:
+			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing [link]pet cute crab[as]pet cute crab[end link]. You can see all the pets you have tamed with the [link]pet[as]pet[end link] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [link]pet dismiss[as]pet dismiss[end link], or just [link]dismiss[as]dismiss[end link])[roman type]";
+		else:
 			say "The crab scuttles away sadly.";
 		now lost crab is resolved;
-	otherwise:
+	else:
 		say "The crab peers at you for several quiet moments before scuttling away, mildly disappointed for some reason.";
 
 

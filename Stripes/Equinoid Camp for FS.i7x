@@ -91,7 +91,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 				say "     'To protect and guide our newest member, we shall send one of our young warriors with you.  Liliana is to accompany you, to protect you and to guide you back to us should you stray from the herd.'  The equinoid rises stiffly and walks to your side[if the player is not lonely], forcing your [companion of player] to step aside for her[end if].  Amaryllis gives her a bit of a jealous glance, but Liliana is either oblivious to it or ignores it entirely.  'We expect you to keep her with you.  This is to be a journey for her as well as protection for you.  We will not be pleased if you do not fulfill your duties in this regard.'  You glance over at your new equinoid companion and nod to the tribal leader before heading into the compound to look around.";
 				now equinoid warrior is tamed;
 				now the companion of the player is equinoid warrior;
-				say "     (The equinoid warrior is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type]pet equinoid warrior[roman type] and initiate sex with her while active by typing [bold type][link]fuck equinoid warrior[end link][roman type].  You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], though the herd may not be pleased about that.)[line break]";
+				say "     (The equinoid warrior is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type]pet equinoid warrior[roman type] and initiate sex with her while active by typing [bold type][link]fuck equinoid warrior[end link][roman type].  You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], though the herd may not be pleased about that.)[line break]";
 				increase score by 25;
 				wait for any key;
 				move player to Equinoid Camp;
@@ -137,10 +137,10 @@ to say sexwithliliana:
 		say "You just had some fun with her recently.  Try checking back with her a little later.";
 	else if bodyname of player is "Black Equinoid" and the player is pure:
 		say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your body.  She gives a sexy sigh as she looks over your impressive, equinoid form before kissing you, inflaming your passions further";
-		let qq be { 1, 1 };				[oral]
-		if cunts of player > 0, add 2 to qq;	[fucked]
-		if cocks of player > 0, add 3 to qq;	[fuck her]
-		if cunts of player is 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and "Submissive" is listed in feats of player, add 4 to qq;	[anal]
+		let qq be { 1, 1 }; [oral]
+		if cunts of player > 0, add 2 to qq; [fucked]
+		if cocks of player > 0, add 3 to qq; [fuck her]
+		if cunts of player is 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and "Submissive" is listed in feats of player, add 4 to qq; [anal]
 		sort qq in random order;
 		if entry 1 of qq is 1, say "[eqwarsex1]";
 		if entry 1 of qq is 2, say "[eqwarsex2]";
@@ -166,10 +166,10 @@ An everyturn rule:
 			increase libido of equinoid warrior by 20;
 			if libido of equinoid warrior + libido of player > 200 and lastfuck of equinoid warrior - turns >= 4:
 				say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your body.  She gives a sexy sigh as she looks over your impressive, equinoid form before kissing you, inflaming your passions further. ";
-				let qq be { 1, 1 };				[oral]
-				if cunts of player > 0, add 2 to qq;	[fucked]
-				if cocks of player > 0, add 3 to qq;	[fuck her]
-				if cunts of player is 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and "Submissive" is listed in feats of player, add 4 to qq;	[anal]
+				let qq be { 1, 1 }; [oral]
+				if cunts of player > 0, add 2 to qq; [fucked]
+				if cocks of player > 0, add 3 to qq; [fuck her]
+				if cunts of player is 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and "Submissive" is listed in feats of player, add 4 to qq; [anal]
 				sort qq in random order;
 				if entry 1 of qq is 1, say "[eqwarsex1]";
 				if entry 1 of qq is 2, say "[eqwarsex2]";

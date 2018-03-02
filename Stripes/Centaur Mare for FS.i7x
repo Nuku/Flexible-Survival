@@ -13,7 +13,7 @@ when play begins:
 	add { "Centaur Mare" } to infections of girl;
 
 to say centaurmaredesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	say "     A centaur approaches you, galloping across the plains and unslinging her bow. Her body is covered in tan, human flesh from the waist up. From the waist down, everything is covered in the short, brown hairs of a horse. Her head is mostly that of a human female at first glance, but with a broad flaring nose and pointed ears. Her upper body is human and leanly athletic. Slender and tapered at the waist, it sensually evokes the female form. She has a pair of small breasts bound in a strip of clothe, probably to keep them in check while galloping. Her arms are slender but muscular, and very human in appearance. Being a centaur, her legs are replaced in their entirety from the waist down by the body of a horse. Her muscled, equine body has slender legs leading to a set of four shiny black hooves. A long flowing tail trails behind.";
 
 to say losetocentaurmare:
@@ -21,7 +21,7 @@ to say losetocentaurmare:
 		say "     Seeing exactly what she wants, the centaur mare turns around and flicks her tail aside, giving you a clear view of her dripping, winking, equine cunt. Unable to help yourself, you dive forward and plunge your [cock of player] cock into the large centaur's equine body repeatedly. She whinnies and moans in pleasure as you fuck her, [if cock length of player < 15]your shaft underwhelming in size compared to her equine cunt, but you make up for it with your wild enthusiasm[else if cock length of player <= 30]your enlarged shaft a good fit for the needy mare's cunt[else]your [cock size desc of player] shaft able to more than fill the needy mare's cunt[end if]. Lost in the excitement of the scent of her heat, it is only after a few wild thrusts that you cum inside her. Snorting at the disappointingly short fuck, she gives a violent kick to your gut and she gallops off while you're stunned.";
 	else:
 		say "     Not seeing what she wants, the centaur mare knocks you roughly to the ground and cuffs you hard on the side of the head, ordering you to get licking. And with that, she turns around and flicks her tail aside, giving you a clear view of her dripping, winking, equine cunt. Unable to help yourself, you dive forward and press your face to her juicy folds, lapping at them as her aroused juices flow down your face. She whinnies and moans in pleasure as you eat her out, the scent of her heat driving you wild. The scent is so strong that you can't help but pleasure yourself as well[if cunts of player > 0]stuffing several fingers into your cunt[sfn][else]groping any sensitive or erogenous zone your neutered body still has[end if]. Eventually, you become so distracted by your arousal that you quickly neglect her pussy entirely in your lustful daze. Snorting at the disappointingly short licking, she gives you a violent kick to your gut and gallops off while you're stunned.";
-	decrease hp of player by 10;
+	decrease HP of player by 10;
 	if "Male Preferred" is listed in feats of player and guy is not banned:		[change target to Stallion for infection]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
@@ -38,7 +38,7 @@ to say beatthecentaurmare:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -46,7 +46,7 @@ When Play begins:
 	now name entry is "Centaur Mare";
 	now attack entry is "[one of]The centaur mare fires her bow at you, piercing your side with an arrow![or]The centaur mare charges at you, knocking you to the ground roughly![or]The centaur rears up and manages to land a heavy hoof on your shoulder![or]The centaur swings a punch at you, bashing you in the jaw![or]The mare turns around and whinnies, flicking her tail and winking her equine pussy at you tantalizingly![at random]";
 	now defeated entry is "[beatthecentaurmare]";
-	now victory entry is  "[losetocentaurmare]";
+	now victory entry is "[losetocentaurmare]";
 	now desc entry is "[centaurmaredesc]";
 	now face entry is "mostly human at first glance, but with a broad flaring nose and pointed ears. It has a female cast to it";
 	now body entry is "that of a centaur, with a human and leanly athletic upper torso. Slender and tapered at the waist, it sensually evokes the female form. Your arms are slender but muscular, and very human in appearance. Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of shiny black hooves";
@@ -65,33 +65,33 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 14;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 32;			[ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 5;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Plains";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 3;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 30;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 21;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "centaur hair";			[ Loot monster drops, ]
-	now lootchance entry is 33;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now HP entry is 32; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 5; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 3; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 30;
+	now cunt width entry is 21;
+	now libido entry is 30; [ Amount player Libido will go up if defeated ]
+	now loot entry is "centaur hair";
+	now lootchance entry is 33; [ Chance of loot dropping 0-100 ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[at random]";
-	now type entry is "centaur";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "hoofstomp";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "centaur"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "hoofstomp"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Endings
 
 [See Centaur Stallion for endings]
 
-Centaur Mare for FS ends here. 
+Centaur Mare for FS ends here.

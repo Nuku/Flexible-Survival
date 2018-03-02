@@ -26,7 +26,7 @@ to say animebabedesc:
 
 to say losetoanimebabe:
 	now noanimebabesex is 0;
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Unwilling to continue to fight the cute girl, you let her push you to the ground at her feet. ";
 	else:
 		say "     Beaten by the anime babe, she giggles happily and pushes you to the ground. ";
@@ -132,8 +132,8 @@ to say beattheanimebabe:
 		say "     Despite the temptation to use the girl for some sexual relief, you are able to restrain yourself as you have with the others of her kind. You instead let the beaten girl run away crying.";
 	else if cocks of player > 0:
 		say "     You look over the youthful anime babe, feeling quite tempted to go all hentai on her.";
-		say "     [bold type]Shall you do so?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you do so?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -158,21 +158,21 @@ to say beattheanimebabe:
 
 
 Section 2 - Monster Insertion
- 
+
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
- 
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Anime Babe"; [Name of your new Monster]
 	now attack entry is "[one of]The anime babe giggles as she punches you soundly, sending you flying![or]The anime babe whips out a paper fan and smacks you repeatedly until you're dizzy![or]The anime babe kicks you in the gut![or]The anime babe bends over, flashing her panties at you![or]The anime babe lunges at you, burying your face in her bosom![at random]";
 	now defeated entry is "[beattheanimebabe]";
-	now victory entry is  "[losetoanimebabe]";
+	now victory entry is "[losetoanimebabe]";
 	now desc entry is "[animebabedesc]";
-	now face entry is "fairly large in proportion to your body, with long, bright blue hair, a near invisibly small nose, and gargantuan shining eyes.";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "fairly large in proportion to your body, with long, bright blue hair, a near invisibly small nose, and gargantuan shining eyes."; [ Face description, format as the text "Your face is (your text)."]
 	now body entry is "rail thin, without any visible body fat or apparent room for most of your vital organs. When at rest, no part of you seems to move at all, saving on animation. Your arms are exceptionally scrawny, almost skeletal. Your elbows are extremely angular, and your hands are quite dainty. Your legs are disproportionately lengthy, making up a full two thirds of your height. Each is extremely slender, tapering down to feet so small it's a wonder they can stand. Your body has grown a school girl's outfit to tantalizingly cover your overly sexualized body";
-	now skin entry is "smooth, pink";[ skin Description, format as the text "You have (your text) skin"]
+	now skin entry is "smooth, pink"; [ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a tight little ass covered in cute panties that you can't help but flash at every opportunity.";
 	now cock entry is "[one of]idealized[or]smooth[or]vienless[or]hairless[at random]";
 	now face change entry is "your head swells as blue hair drifts down in front of your enlarged eyes. Blinking suddenly seems to take far more effort";
@@ -187,30 +187,30 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Female";
-	now hp entry is 63;			[ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 9;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 8;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Campus";	[ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 5;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 9;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "sticky sushi";			[ Loot monster drops, ]
-	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now HP entry is 63; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 9; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 8; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Campus"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 5; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 9;
+	now cunt width entry is 6;
+	now libido entry is 60; [ Amount player Libido will go up if defeated ]
+	now loot entry is "sticky sushi";
+	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]thin[or]slim[at random]";
-	now type entry is "human";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "animebabe";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "human"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "animebabe"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Alt Combat
 
@@ -221,19 +221,19 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the animehammer rule:		[double-damage]
 	choose row monster from the table of random critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 );	[+100% damage]
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 ); [+100% damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "The anime babe pulls a huge hammer out of nowhere, slamming it into your head and [one of]pummeling you into the ground[or]sending you flying[at random]. This powerful blow does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
-	say "[headabsorbancy]";		[blow to the head]
-	if absorb is greater than dam:
+	say "[headabsorbancy]"; [blow to the head]
+	if absorb > dam:
 		now absorb is dam;
-	if absorb is greater than 0:
+	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease hp of the player by dam;
-	increase hp of player by absorb;
+	decrease HP of the player by dam;
+	increase HP of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 
@@ -250,15 +250,14 @@ The usedesc of sticky sushi is "[eatstickysushi]";
 
 to say eatstickysushi:
 	say "     Deciding to risk eating the sushi despite how old it probably is, you tentatively pop a piece into your mouth. Finding it quite tasty, if having a somewhat odd flavour, you rapidly consume the rest of the tray. It feels good to eat something, though there's an odd rumbling noise in your tummy that makes you giggle cutely.";
-	decrease hunger of player by 8;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 8;
 
 
 Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Anime Babe":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if player is pure:
 				if cunts of player > 0:
 					say "     As your old life slips further and further away, you end up wandering off into the city in search of adventure and kawaii cuteness. You stumble around for a while, having many a misadventure - often seeming to involve tentacles - but always seem to come out of it okay in the end - though often with a sore end. Eventually, you wander onto campus and settle in there. You make friends with several of the other girls like you around, have sexy sleepovers and attend some of the intermittent (and often somehow erotic) classes that still go on[if cocks of player > 0]. Hiding something a little extra under your short dress, you make for a particularly popular student[end if].";

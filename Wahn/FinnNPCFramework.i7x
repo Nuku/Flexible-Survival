@@ -10,15 +10,15 @@ Version 1 of Finn by Wahn begins here.
 [   5: Finn rescued, centaur fucked him                  ]
 [  99: Finn's dead                                       ]
 [ 100: Finn joined the stables                           ]
-	
-Finn is a man. The hp of Finn is usually 0.
+
+Finn is a man. The HP of Finn is usually 0.
 The description of Finn is "[FinnDesc]".
 The conversation of Finn is { "<This is nothing but a placeholder!>" }.
 The scent of Finn is "     Finn smells nicely masculine, with a little bit of fur, straw and sweat in the mix. Seems like he's not adverse to doing some good and solid work for his boss at the farm.".
 
 to say FinnDesc:
 	if debugactive is 1:
-		say "DEBUG -> FINNTRACKINGPROGRESS: [FinnTrackingProgress], HP: [hp of Finn] <- DEBUG[line break]";
+		say "DEBUG -> FINNTRACKINGPROGRESS: [FinnTrackingProgress], HP: [HP of Finn] <- DEBUG[line break]";
 	say "     <This is the basic description of Finn. Body, Clothing, etc. can be laid out here>";
 	if FinnTrackingProgress is 3: [Finn rescued, no sex]
 		say "     The horseman notices your gaze on himself and looks up from what he was doing, then <Reaction of Finn at being approached by the guy that rescued him.>";
@@ -38,7 +38,7 @@ instead of conversing the Finn:
 		say "     <Talking with Finn - rescued, centaur-fucked>";
 	else if FinnTrackingProgress > 5: [as of yet undefined states]
 		say "     ERROR: Finn is in an undefined state. Please report to Wahn on the FS forum and quote this tracking number for easier bugfixing: [FinnTrackingProgress]";
-	
+
 instead of fucking the Finn:
 	if (lastfuck of Finn - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     <Reason why Finn doesn't feel like having sex right now. Exhaustion, duty, or otherwise>";
@@ -48,7 +48,7 @@ instead of fucking the Finn:
 		say "[FinnSexMenu]";
 
 to say FinnSexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -86,7 +86,7 @@ to say FinnSexMenu:
 	now sortorder entry is 5;
 	now description entry is "Offer sex to the hunky horseman";
 	[]
-	sort the table of fucking options in sortorder order;	
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";

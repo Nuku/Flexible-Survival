@@ -104,7 +104,7 @@ Include (-
 	(+ current glulx rock +) = rock;
 	(+ current glulx rock-ref +) = ref;
          switch (type) {
-            0: ! it's a window 
+            0: ! it's a window
                	FollowRulebook( (+ glulx resetting-windows rules +) );
 	 1 : ! it's a stream
                	FollowRulebook( (+ glulx resetting-streams rules +) );
@@ -146,13 +146,13 @@ To decide whether the current input context is line input:
 To decide whether the current input context is char/character input:
 	if the library input context is 1, decide yes;
 	decide no.
-	
+
 To decide which g-event is the current glk event:
 	(- gg_event-->0 -)
-	
+
 To decide what number is the window of the current glk event:
 	(- gg_event-->1 -)
-	
+
 To decide what number is the character code returned:
 	(- gg_event-->2 -)
 
@@ -184,11 +184,11 @@ To decide what number is the value returned by glk event handling (this is the h
 
 Section - HandleGlkEvent routine
 
-Include (- 
+Include (-
 
-  [ HandleGlkEvent ev context abortres newcmd cmdlen  ;
+  [ HandleGlkEvent ev context abortres newcmd cmdlen;
       (+ library input context +) = context;
-      return (+ value returned by glk event handling +) ;
+      return (+ value returned by glk event handling +);
   ];
 
 -) before "Glulx.i6t".
@@ -245,16 +245,16 @@ A command-counting rule (this is the ordinary checking for content rule):
 
 
 Section - Input-cancelling rules
-	
+
 The input-cancelling rules are a rulebook.
 
 An input-cancelling rule (this is the cancelling input in the main window rule):
 	cancel line input in the main window;
 	cancel character input in the main window;
-	
+
 To cancel line input in the/-- main window:
 	(- glk_cancel_line_event(gg_mainwin, GLK_NULL); -)
-	
+
 To cancel character input in the/-- main window:
 	(- glk_cancel_char_event(gg_mainwin); -)
 
@@ -270,11 +270,11 @@ A command-showing rule (this is the print text to the input prompt rule):
 
 To say input-style-for-Glulx:
 	(- glk_set_style(style_Input); -)
- 
+
 
 Section - Command pasting rules
 
-The command-pasting rules are a rulebook. 
+The command-pasting rules are a rulebook.
 
 A command-pasting rule (this is the glue replacement command into parse buffer rule):
 	change the text of the player's command to the Glulx replacement command;

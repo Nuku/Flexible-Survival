@@ -7,16 +7,9 @@ The invent of Bunker is { "face mask","medkit","medkit","water bottle","water bo
 Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
 East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
 East of library door is Grey Abbey Library.
-Inside of Grey Abbey Library is Bunker.
 Bunker is below Grey Abbey Library.
 The player is in Bunker.
 The marea of library door is "Outside".
-
-Instead of going down from Grey Abbey Library:
-	try going inside;
-
-Instead of going up from Bunker:
-	try going outside;
 
 to say bunker desc:
 	say "     Sparsely appointed, this bunker was built as a fallout shelter back during the Cold War, then abandoned to become a forgotten curiosity at best. You are standing in the main bunker room, a rectangular chamber measuring about 60 feet in length and 30 feet in width. Its walls are solid concrete and long rows of shelves are built into the back wall. There are several large storage lockers in the bunker as well. They look like a good place to store all your extra stuff. A long double row of simple metal beds is bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
@@ -25,6 +18,13 @@ to say bunker desc:
 	say ". The small sink taking up a corner of the room seems to be broken, producing no water no matter how much the knob is turned. Two doorways to the north and northeast lead to adjoining rooms - showers and a small restroom, while a thicker, secure-looking door opens to the stairwell used to go [bold type]outside[roman type].";
 	if "old boombox" is listed in invent of Bunker:
 		say "     You have set up the old boombox in one corner where it continues to play despite not being plugged into anything. Maybe it has really amazing batteries - or draws energy some other way. No matter what, it provides a mix of tunes and the occasional weather report on the continuing heat wave. Fiddling with the dials can get different songs and genres of music, but no actual news or broadcast radio. The radio broadcaster you hear seems the same across the stations, though his tone and delivery suits the format of the current [']station[']. Its dials and settings change on their own from time to time as if to provide music to suit the situation or dropping its volume when you're taking a nap.";
+	if RestoreMode is true:
+		[WaitLineBreak;]
+		now RestoreMode is false;
+		try restoring the game;
+		if maxHP of player is 0:
+			try restarting the game;
+
 
 North of Bunker is Communal Shower.
 Communal Shower is a room. The description of Communal Shower is "[bshower desc]".
@@ -39,7 +39,7 @@ to say bshower desc:
 
 Northeast of Bunker is Underground Restroom.
 Underground Restroom is a room. The description of Underground Restroom is "[brestroom desc]".
-		
+
 to say brestroom desc:
 	say "     This room is very bare bones - just a small chamber with several stalls containing toilets. Checking one out, you realize that it isn't a typical piece of bathroom installation. There is no water or anything really under the tightly closing lid... just what seems like a long drop into darkness. You try not to imagine how the lower end of the shaft might look like, or smell.";
 
@@ -48,13 +48,13 @@ to say abbey desc:
 	say "     [if library computer is powered]Now that the building has power, the overhead lights glow, although they sometimes flicker and dim as whatever goes on in the rest of the city right now causes fluctuations. The computer on the front desk has power as well now and might be of some use[else]A computer sits on the front desk, although without power it isn't of any help right now[end if]. You came here because you remembered there was a disused bunker in the basement. It's kept you alive, so far.";
 	if Fang is booked and Alexandra is booked:
 		say "     Fang and Alexandra are on guard here, taking shifts watching by the door";
-		if hp of Fang < 3:
+		if HP of Fang < 3:
 			say ".  The wolf tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random]";
 		else:
 			say ".  The powerful male wolf watches in stoic silence";
 		say ".  The doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 	else if Fang is booked:
-		if hp of Fang < 3:
+		if HP of Fang < 3:
 			say "     Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
 		else:
 			say "     Fang is on guard here by the door, the powerful male wolf watching in stoic silence.";
@@ -71,6 +71,7 @@ to say abbey 2F desc:
 Outside Trevor Labs is a room. "Like about everyone in this city, you've heard of Trevor Labs. They are - or were - a biopharm setup. Kind of new on the block, and the local news made a big stink a little while ago over accusations of skirting the edge of numerous laws in the name of science. The company's headquarters rise as a sleek and tall glass building to your west. You're not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious. Definitively something to investigate...".
 understand "lab" or "labs" as Outside Trevor Labs.
 Outside Trevor Labs is fasttravel.
+earea of Outside Trevor Labs is "Outside".
 
 Away from Labs is a door. "East of here lays the rest of the city." It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
 
@@ -87,14 +88,41 @@ There is an Infection Terminal in Primary Lab. "A glowing infection terminal qui
 
 Park Entrance is a room. "Ah, the city park. Smell that fresh pine air, and the scent of - wait no, that grass has not been mowed for quite a while. Just how long ago did all this trouble start anyway? Time seems fluid these days, making it hard for you to remember. No matter what, the grass has started to creep up onto the pavement that leads further into the park (north) and all the other plants seem pretty overgrown and untamed too. The park's boundary wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
 Park Entrance is fasttravel.
+
 Park Trail is a room. "Following this North/South trail, you can see the severely overgrown state of the park all around you. All this can't be purely natural - it'd take ages to have gotten this bad. Seems like some of the spreading nanites decided to create a section of untamed wilderness right in the middle of the city. There are dense woods in almost every direction, including to the North, where the paved trail ends at a tree that must have literally exploded out of the ground under it. In the Northwest, there is a small expanse of bamboo forest, with a Torii arch forming the start of a narrow gravel trail leading into it.[line break]The path northwest looks safe and strangely peaceful, but it'll be easy to become lost in the rest of the thick woods of the park - though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
+earea of Park Trail is "Park".
+
 North of Park Entrance is Park Trail.
 Park Exit is a door. Park Exit is dangerous. The marea of Park Exit is "Outside". Park Exit is undescribed. Park Exit is south of Park Entrance. South of Park Exit is Outside Exploration.
 East of Park Trail is Faint Trail.
 East of Faint Trail is Lost in the Woods.
+
 Faint Trail is a door.
 The description of a faint trail is "A faint trail that heads eastwards into the deep woods. Looks dangerous, who knows what is lurking out there...".
 Faint Trail is dangerous.
 The marea of Faint Trail is "Park".
+
+
+Green Apartment Building is a room. It is fasttravel.
+The description of Green Apartment Building is "[GreenAptDesc]".
+The earea of Green Apartment Building is "Outside".
+
+to say GreenAptDesc:
+	say "     Standing in a somewhat out of the way neighborhood, a green-tinted apartment building rises before you, six stories tall. A fire escape clings to the outside of its structure, its retracting lowest set of stairs weighted down with a number of cement blocks, allowing easy access to the roof. The place and its surroundings seem fairly quiet - while the streets around here are filled with the usual abandoned cars, sacks of uncollected trash and scattered clothes, you haven't actually seen any large groups of infected hanging around or roaming the streets. The petrified herm hyena standing in front of the entrance door might have something to do with that...";
+
+Overgrown Rooftop is a room. Overgrown Rooftop is above Green Apartment Building.
+The description of Overgrown Rooftop is "[GreenRoofDesc]";
+
+to say GreenRoofDesc:
+	say "     The roof of this apartment building is at least partially covered in soil, allowing a rooftop garden to grow on it. You see a large section of green grass (getting a bit long, now that no one is taking care of it anymore), some bushes and even a large planter with a cherry tree next to a vegetable garden. Must have been quite a nice spot to hang out on for the inhabitants. Looking over to the rooftop access to the interior of the building, you find that it has been thoroughly barricaded - from the inside, it seems. Thus the only way to get down again is the fire escape attached to one outside face of the freestanding building.";
+	if staircaselocation is 2:
+		say "     There appears to be a ghostly staircase just a step away from the back right corner of the building. You'd have missed it if you hadn't known it was there. Maybe you could go even further by using it up? (Or plunge to your death as you step off the roof... it does look incredibly transparent to the eyes.)";
+
+Green Lobby is a room. Green Lobby is inside from Green Apartment Building.
+The description of Green Lobby is "[GreenLobbyDesc]";
+
+to say GreenLobbyDesc:
+	say "     Just inside the building is a small lobby, with numerous post-boxes on one wall and a (surprisingly) still powered elevator. It opens up freely as you push the dimly glowing button, revealing a generous cabin, complete with a control panel that only has one button, for the lobby. Everything else is keyholes, four to a each floor. Someone sure liked their privacy. Checking the interior stairway access door right next to it, you find it jammed; a glance through its little window reveals that about 20 feet of the stairway are completely barricaded by mixed pieces of furniture. Four doorways lead off into what must be the ground floor apartments - 1A, 1B, 1C and 1D. The first two and the last all have been nailed shut and the words 'Carnivorous Furniture' spray-painted on them, while the door of apartment 1C is just leaned to.";
+
 
 Basic Locations ends here.

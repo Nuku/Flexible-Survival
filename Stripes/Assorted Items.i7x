@@ -107,17 +107,17 @@ check pillgiving someone (called x):
 		say "     'Umm... I don't think that'll work on me, given my current state. Besides, I'm kind of disturbed that you'd even offer it to me.'" instead;
 	else if x is Doctor Matt:
 		say "     Doctor Matt looks suspiciously at the pill you offer him. He takes a few steps towards the back wall of the room, hovering his hand over the intercom. 'You can't expect me to open my suit and take such a thing? You're not going feral on me, are you? Control yourself, or I'll have to call Orthas!'";
-	else if x is Elijah and hp of Elijah < 4:
+	else if x is Elijah and HP of Elijah < 4:
 		say "     Now is probably not a good time for that.";
-	else if x is Athanasia and hp of Athanasia < 5:
+	else if x is Athanasia and HP of Athanasia < 5:
 		say "     Now is probably not a good time for that.";
-	else if x is Solstice and hp of Solstice < 5:
+	else if x is Solstice and HP of Solstice < 5:
 		say "     Now is probably not a good time for that.";
-	else if x is Kristen and hp of Kristen > 10 and hp of Kristen < 16:
+	else if x is Kristen and HP of Kristen > 10 and HP of Kristen < 16:
 		say "     Now is probably not a good time for that.";
-	else if x is Onyx and hp of Onyx is 9:
+	else if x is Onyx and HP of Onyx is 9:
 		say "     Now is probably not a good time for that.";
-	else if x is Rod Mallrat and hp of Ronda < 100:
+	else if x is Rod Mallrat and HP of Ronda < 100:
 		say "     Rod has no interest in taking those or trading for them.";
 	[character specific restrictions, such as when the <lastfuck of x> variable is used for other things, would go here.]
 	else if x is a pet:
@@ -135,7 +135,7 @@ check pillgiving someone (called x):
 carry out pillgiving someone (called x):
 	say "     You give the libido pill to [x], who then consumes it, their arousal and their readiness for sex increasing.";
 	increase lastfuck of x by 8;
-[	say "TEST: lastfuck of [x]: [lastfuck of x][line break]";	]
+[	say "TEST: lastfuck of [x]: [lastfuck of x][line break]";]
 	if lastfuck of x >= 254:
 		now lastfuck of x is 254;
 		say "     They're as ready as they're going to be by this point.";

@@ -15,7 +15,7 @@ Instead of Resolving a A Stabled Situation:
 		say "     Wandering through the streets of the city, you hear a strange noise echoing through the streets, like the sound of numerous hooves hitting the sidewalk repeatedly. As the sound seems to be getting closer, you decide to take cover inside a nearby abandoned car, peeking out through the windows carefully to see just what is making such a racket. You appear to have gotten under cover just in the nick of time, as a small group of horse-like men come trotting down the street, their equine faces scanning the street carefully as they continue along, most likely looking for a new playmate or two.";
 		say "     The horsemen pass your hiding spot without noticing you fortunately, and continue on their way down the streets. Getting out of the car carefully, you find yourself curious as to just where such a group of horses came from, and consider briefly for a minute following them to find out, only to sigh as you realize that as alert as that group was, trying to follow them would likely only result in you getting caught by them.";
 		now Stablesearchstatus is 1;
-	otherwise if Stablesearchstatus is 1:
+	else if Stablesearchstatus is 1:
 		say "     As you wander throughout the city, you once again hear the clopping of a number of hooves on the pavement, and recalling the last group of horsemen you saw, you immediately begin looking for a safe hiding spot. You barely make it into cover before a smaller group of horsemen appear down the street, this group however appears much less vigilant, and more relaxed as they focus on something in the middle of the group. Looking out carefully as the group passes you, you find yourself staring at the group in surprise, as you realize why most of the equine men's attention is focused towards the center of the group.";
 		say "     In the middle of the group of beasts, is a relatively large group of captives bound together with leather harnesses being led down the street, many of the captives are already starting to display several equine features as they stumble along. A closer look at the captives as they stagger off has you realizing that they are wearing the remains of what were obviously military uniforms, obviously a patrol of some sort that the horsemen managed to capture. Not wanting to fight with a group that could manage to capture a military patrol, you let the beasts pass, however you also realize this is a perfect opportunity to follow the beasts to see where they are going, while their attention is focused on their captives.";
 		say "     You follow the horsemen and their captives at a discrete distance as they make their way through the dangerous streets of the city, sometimes having to duck down dark alleyways not to be noticed. Finally after what seems like forever the long nerve-wracking trip comes to an end near the red light district, as the horsemen lead their captives through the side entrance of what appears to be an old hotel complex.";
@@ -31,13 +31,13 @@ Instead of Resolving a A Stabled Situation:
 				now battleground is "void";
 				Now The Stables Hotel is known;
 				now A Stabled Situation is resolved;
-			otherwise:
+			else:
 				say "     Sighing as you search through your pack, the two guards looking on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don't have anything the guards would like right now, and that if you want to get into this strange looking place you will need to come back later. Maybe with some chips and soda or something. Everyone likes snack food right?";
 				now Stablesearchstatus is 2;
-		otherwise:
+		else:
 			say "     Deciding that it might be best just to leave while you can, you make note of the imposing buildings location, and head back to the library for now.";
 			now Stablesearchstatus is 2;
-	otherwise if Stablesearchstatus is 2:
+	else if Stablesearchstatus is 2:
 		say "     Wandering through the city, you find your mind increasingly drawn to those strange horsemen you encountered earlier, and on impulse decide to take another look at the strange building where they were taking their captives. Returning to the large fortress like hotel building, you wonder just how bad things were in this district that the owner would take such obvious security measures when they were building a 'Pleasure hotel' in this area, though the easy access to all the pleasures and perils of the red light district nearby probably is more than enough of an answer.";
 		say "     You note that the building and grounds still seem to be guarded by a couple of those powerful horsemen as you look things over again to see if you missed anything the last time you were here. Sighing as you investigate the area, you realize that the only way in appears to be the one the horses are guarding, and that from the numbers you saw heading into here earlier are any indication, fighting the guards will only get you overwhelmed by more of the horsemen, even if not at first, then on subsequent visits. Looking at the large building speculatively, you realize that if you want to get in, you will have to find some way to bribe the guards into looking the other way each time you visit. Do you try bribing the guards?";
 		if player consents:
@@ -49,9 +49,9 @@ Instead of Resolving a A Stabled Situation:
 				now battleground is "void";
 				Now The Stables Hotel is known;
 				now A Stabled Situation is resolved;
-			otherwise:
+			else:
 				say "     You begin searching through your pack as you approach the doors, the two horsemen eyeing you curiously, the two guards looking on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don't have anything the guards would like right now, and that if you want to get into this strange looking place you will need to come back later. Maybe with some chips and soda or something, everyone likes snack food right?";
-		otherwise:
+		else:
 			say "     Deciding that maybe it would be best to just ignore this place and whatever secrets lie inside for now, you shoulder your pack and continue on your way.";
 
 
@@ -123,12 +123,11 @@ Check Marefeeding:
 	If Feeding Table is not visible, say "huh?" instead;
 
 Carry out Marefeeding:
-	if Lastmarefed - turns is less than 8:
+	if Lastmarefed - turns < 8:
 		say "     You wander over to the table filled with food for the mares again, only to see several of the mares shooting you rather dirty looks as you look over the food. Sighing slightly, you decide that being greedy about the food isn't worth annoying the so far polite horsewomen, and decide to try to snag some of the food again at a later time.";
-	otherwise:
+	else:
 		say "     Wandering over to the table filled with food on the side of the room, you notice several of the mares seem quite amused as you browse the selection, several of them coming over to help. The mares select several different bits of food for you to try, all the while they are giggling to themselves as you enjoy the strangely flavorful food selections. By the time the mares let you go after you have sampled at least a bite or two of most of the dishes set out on the table, you are definitely starting to feel a bit strange yourself, and definitely horny from all the attention the mares have been giving you.";
-		decrease hunger of player by 10;
-		if hunger of player < 0, now hunger of player is 0;
+		PlayerEat 10;
 		infect "Mareslut";
 		increase libido of player by 20;
 		if libido of player > 100, now libido of player is 100;
@@ -137,7 +136,7 @@ Carry out Marefeeding:
 
 Holding Pens is a room.
 
-The description of Holding Pens is "     This area seems to be a rather large hallway, with several open doors leading into small cell like rooms, that are all mostly unoccupied, though the smell of equine musk lingers strongly in the air. Strangely enough, all the rooms seem to have been modified with small bars to make them hard to escape from. [if xp of Onyx < 3]Interestingly enough, one of the cells at the end of the hallway appears to be occupied[otherwise]Onyx's holding pen remains open as if awaiting a new occupant[end if]. Next to it someone has hung a handmade sign reading ['][if xp of Onyx >= 60 and xp of Onyx <= 79]Obsidian[otherwise]Onyx[end if]['].".
+The description of Holding Pens is "     This area seems to be a rather large hallway, with several open doors leading into small cell like rooms, that are all mostly unoccupied, though the smell of equine musk lingers strongly in the air. Strangely enough, all the rooms seem to have been modified with small bars to make them hard to escape from. [if XP of Onyx < 3]Interestingly enough, one of the cells at the end of the hallway appears to be occupied[else]Onyx's holding pen remains open as if awaiting a new occupant[end if]. Next to it someone has hung a handmade sign reading ['][if XP of Onyx >= 60 and XP of Onyx <= 79]Obsidian[else]Onyx[end if]['].".
 Onyx is in Holding Pens.
 
 instead of sniffing Holding Pens:

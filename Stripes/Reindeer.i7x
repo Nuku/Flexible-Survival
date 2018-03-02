@@ -10,7 +10,7 @@ when play begins:
 	add { "Reindeer" } to infections of furry;
 
 to say reindeerdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from the table of random critters;
 	now lootchance entry is 33;
 	say "     You can feel a disturbing chill in the air and even start to shiver as the temperature drops abruptly. As you try to bundle yourself up against the unexpected cold, you hear some jingling bells from above. Looking around you, you can see snow start to fall just as a reindeer begins to fly down. The reindeer has a few Christmas decorations hanging from its antlers and golden bells attached to red straps on his body. As he swoops lower, he laughs merrily, leaving another stream of light snow in his wake.";
@@ -28,7 +28,7 @@ to say reindeerattack:
 		if lootchance entry > 80, now lootchance entry is 80;
 		if libido of player >= 110:
 			say "grabs you and rubs his cock against your hip. You find yourself too aroused to resist the sexy reindeer further and give in to his lustful holiday spirit!";
-			now hp of player is 0;
+			now HP of player is 0;
 			continue the action;
 	else:
 		say "     The reindeer swoops in to attack and ";
@@ -69,8 +69,8 @@ to say losetoreindeer:
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	now libido of player is ( libido of player * 3 ) divided by 4;
-	increase hp of player by ( maxhp of player / 5 );
-	if hp of player > maxhp of player, now hp of player is maxhp of player;
+	increase HP of player by ( maxHP of player / 5 );
+	if HP of player > maxHP of player, now HP of player is maxHP of player;
 
 to say beatthereindeer:
 	say "     'Oh, you Scrooge. Where's your holiday spirit?' he whines as your continued resistance frustrates him. Having had enough, the holiday reindeer finally flies off, heading elsewhere for someone to fill with a load of his special holiday cheer.";
@@ -79,57 +79,57 @@ to say beatthereindeer:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Reindeer";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[reindeerattack]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthereindeer]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoreindeer]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[reindeerdesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "transformed into that of a reindeer, with a ruminant's muzzle, cute ears and arching antlers";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of an anthropomorphic reindeer with long, slender limbs. You have hoof-like hands and fully hoofed feet";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "warm, brown fur";	[ Skin desc., format as the text "Your body is covered in (your text)." ]
-	now tail entry is "Atop your ass, you have a cute, flagged caribou tail of white and brown fur.";	[ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]caribou[or]deer-like[or]reindeer[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "you grow a long muzzle. A strange tingle at your brow grows out into a small set of antlers";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "you become a shapely reindeer with an alluring, girlish figure. Your limbs are long and slender, able to walk on two or four legs. Your hands reshape themselves, gaining hoof-like fingers while your feet fully become hard hooves";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "warm, brown fur spreads across it";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you gain a short tail covered in brown and white fur, just like a caribou's";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it reshapes itself, becoming slender and reindeer-like";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now name entry is "Reindeer"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[reindeerattack]"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beatthereindeer]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoreindeer]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[reindeerdesc]"; [ Description of the creature when you encounter it. ]
+	now face entry is "transformed into that of a reindeer, with a ruminant's muzzle, cute ears and arching antlers"; [ Face Description, format as the text "Your face is (your text)." ]
+	now body entry is "that of an anthropomorphic reindeer with long, slender limbs. You have hoof-like hands and fully hoofed feet"; [ Body Description, format as the text "Your body is (your text)." ]
+	now skin entry is "warm, brown fur"; [ Skin desc., format as the text "Your body is covered in (your text)." ]
+	now tail entry is "Atop your ass, you have a cute, flagged caribou tail of white and brown fur."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "[one of]caribou[or]deer-like[or]reindeer[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now face change entry is "you grow a long muzzle. A strange tingle at your brow grows out into a small set of antlers"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now body change entry is "you become a shapely reindeer with an alluring, girlish figure. Your limbs are long and slender, able to walk on two or four legs. Your hands reshape themselves, gaining hoof-like fingers while your feet fully become hard hooves"; [ Body TF text, format as "Your body feels funny as (your text)." ]
+	now skin change entry is "warm, brown fur spreads across it"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "you gain a short tail covered in brown and white fur, just like a caribou's"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it reshapes itself, becoming slender and reindeer-like"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 20;
 	now sta entry is 14;
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 18;
-	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 60;			[ The monster's starting hit points. ]
-	now lev entry is 7;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 4;			[ Monster's average damage when attacking. ]
-	now area entry is "Outside";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 0;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 0;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 4;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 3;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 90;			[ Target libido the infection will rise towards. ]
-	now loot entry is "egg nog";		[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 33;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 60; [ The monster's starting HP. ]
+	now lev entry is 7; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 4; [ Monster's average damage when attacking. ]
+	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 4; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 12; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 3; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 90; [ Target libido the infection will rise towards. ]
+	now loot entry is "egg nog"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 33; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or]festive[at random]";
-	now type entry is "[one of]caribou[or]reindeer[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "[one of]caribou[or]reindeer[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Egg Nog
@@ -146,12 +146,10 @@ The usedesc of egg nog is "[nogging]";
 
 to say nogging:
 	say "[line break]     You drink down the tasty egg nog, feeling the warmth of the brandy-rich flowing into you. You are filled with a burst of the holiday spirit and a lustful longing for someone to share this feeling with. You feel a little better all around because of it even as the warmth changes from that of the alcohol to the warmth of your activated infection.";
-	decrease hunger of player by 3;
-	if hunger of player < 0, now hunger of player is 0;
-	decrease thirst of player by 6;
-	if thirst of player < 0, now hunger of player is 0;
-	increase hp of player by ( Stamina of player / 2 );
-	if hp of player > maxhp of player, now hp of player is maxhp of player;
+	PlayerEat 3;
+	PlayerDrink 6;
+	increase HP of player by ( Stamina of player / 2 );
+	if HP of player > maxHP of player, now HP of player is maxHP of player;
 	increase morale of player by a random number from 0 to 1;
 	increase morale of player by a random number from 0 to 1;
 	decrease humanity of player by a random number from 3 to 8;
@@ -180,7 +178,7 @@ to say nogging:
 		now skin of player is skin entry;
 		now body of player is body entry;
 		now cock of player is cock entry;
-		end the game saying "You gave in to the holiday spirit.";
+		end the story saying "You gave in to the holiday spirit.";
 		now battleground is "void";
 
 
@@ -200,7 +198,7 @@ Choose a blank row from Table of infection heat;
 	now trigger text entry is "Naughty, festive thoughts start to creep into your head. Thoughts of sugar plums and sodomy, of candy cane dildos and creamy reindeer egg nog. Your dripping cunny feels hot, like a warm fireplace in need of someone to stoke it. You start humming The Twelve Days of... Uh oh."; [ This is the text that is written to the screen when the player comes into heat]
 	now inheat entry is "[reindeerheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 	now fheat entry is true;
-	now mpregheat entry is false;	[no mpreg heat at present]
+	now mpregheat entry is false; [no mpreg heat at present]
 
 to say reindeerheat:
 	let diceroll be ( libido of player plus a random number between 0 and 100 );
@@ -275,7 +273,7 @@ Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Reindeer":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your mind fails, it empties of most things, filled instead with Christmas songs, holiday specials and festive recipes. You prance outside, feeling light on your feet even as the temperature starts to drop around you. Pulling the heat out of your environment, you use this energy to fly, taking to the air with natural ease. You trot merrily through the air, starting to laugh and cheer as the spirit of the season fills you. For it is the holiday season. It is always the holiday season now, in your mind.";
 			say "     You fly around the city, soon spotting the reindeer from before and move to join him. He is very pleased to see you joining him in the holiday spirit. He fits you with a festive harness festooned with bells. He then mounts you in mid-air, taking you as his mate and filling you with a large, thick load of caribou cum.";
 			say "     When the soldiers come into the city in force, you have fun sharing the spirit of the season with them for a while, but their particularly grinchy attitude is unpleasant. Together, you both decide to fly off into the night to spread your cheer elsewhere. There is soon a growing herd of flying reindeer roaming across the countryside, leaving special presents in good, big girls and boys.";

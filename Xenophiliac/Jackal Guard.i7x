@@ -5,7 +5,7 @@ Jackal Guard by Xenophiliac begins here.
 Section 1 - Monster Responses
 
 to say stoneguardiandesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     The beast standing before you is composed completely of stone, animated through some unseen force. It looks like a human man from the neck down; none of its body has any clothing carved into it, except for an Egyptian-style skirt shielding it down to its knees. The statue's head, however, is that of an Egyptian jackal, a very canine-esque face staring at you with stone eyes. Raising his massive metal sword, the statue marches purposefully forwards, intent on preventing your desecration of the altar. From the way these beasts are shambling forward, you're pretty sure that they are only animated guardians, not at all interested in sex.";
 
 
@@ -19,10 +19,9 @@ to say beatthestoneguardian:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Jackal Guard";
@@ -47,7 +46,7 @@ When Play begins:
    now int entry is 12;
    now cha entry is 12;
    now sex entry is "No Change";
-   now hp entry is 75;
+   now HP entry is 75;
    now lev entry is 15;
    now wdam entry is 13;
    now area entry is "Nowhere";

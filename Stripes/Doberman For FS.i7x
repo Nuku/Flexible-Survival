@@ -15,13 +15,13 @@ when play begins:
 	add { "Doberman" } to infections of Caninelist;
 
 to say Dobermandesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	choose row monster from the table of random critters;
 	let debit be 0;
 	if hardmode is true and level of player > 7, let debit be level of player - 7;
 	now dobieresist is 0;
 	now str entry is 14;
-	now hp entry is 60 + ( debit * 4 );
+	now HP entry is 60 + ( debit * 4 );
 	now lev entry is 7 + debit;
 	now wdam entry is 10 + ( debit / 4 );
 	if dobielibido < 0:
@@ -34,13 +34,15 @@ to say Dobermandesc:
 		else:
 			say "     '[one of]Halt, mutant[or]Freeze! Police[or]Surrender, creature[or]Come quietly[or]I order you to stand down, mutant[at random]!' she calls out one last time, pulling out her nightstick.";
 	else if dobielibido < 100 or inasituation is true:
+		project the figure of DobermanCop_icon;
 		say "     The female Doberman cop has found you again and growls angrily, pulling out her nightstick. She's looking more disheveled and wild-eyed than before, her lusts starting to take hold of her. She still has her uniform on, but her shirt's half unbuttoned to show off her breasts better and you can see moist juices soaking her thighs. Despite her attempts to restrain it, her tail wags excitedly at having found you again, regardless of her apparent anger at you.";
 	else:
+		project the figure of DobermanCop_icon;
 		say "     The female Doberman cop has found you again and snarls at you. She's looking rather rougher now, with her shirt hanging open to expose her bare breasts and the crotch of her pants soaked and stained with her fluids. From the wild look in her eyes and the way she slaps her palm with her nightstick, it looks like she's through being the good cop and intends to come down on you hard. Her tail wags and you catch the scent of fresh arousal coming from her, clearly her body wanting to play some more - one way or another.";
 		increase str entry by 2;
 		if hardmode is false, now lev entry is 9;
-		increase hp entry by lev entry;
-		increase monsterhp by lev entry;
+		increase HP entry by lev entry;
+		increase monsterHP by lev entry;
 		increase wdam entry by ( wdam entry / 7 );
 
 
@@ -67,8 +69,8 @@ to say losetodobie1:		[low-lust player loss]
 		if dobielibido is 0:
 			say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman. For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly. 'It's good to see that you've still got some control in there. Things are really crazy out there right now. Do you still remember your name?  Where you lived and worked?' She asks you some basic questions, not to get the information but to make sure you can still remember it.";
 			say "     Seeing how she seems at least somewhat stable, shall you risk talking to her some more or will you play it safe and keep your trap shut for now?";
-			say "     [bold type]  If you'd like to try making friends with her, you should talk to her. If you'd rather bide your time until you can deal with the strange Doberwoman, it'd be best to keep things to a minimum so she can't track you down later.[roman type][line break]";	
-			Line Break;
+			say "     [bold type]  If you'd like to try making friends with her, you should talk to her. If you'd rather bide your time until you can deal with the strange Doberwoman, it'd be best to keep things to a minimum so she can't track you down later.[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Try making friends.";
 			say "     ([link]N[as]n[end link]) - Bide your time.";
 			if the player consents:
@@ -83,7 +85,7 @@ to say losetodobie1:		[low-lust player loss]
 					now dobielibido is -100;
 					now fightoutcome is 19;
 					now Police Station is known;
-					now hp of Alexandra is 50;
+					now HP of Alexandra is 50;
 					now area entry is "nowhere";
 					increase score by 20;
 				else:
@@ -105,7 +107,7 @@ to say losetodobie1:		[low-lust player loss]
 				say "     She gives you some quick directions to the [bold type]Police Station[roman type] and tells you to stop by when you get a chance.";
 				now dobielibido is -100;
 				now Police Station is known;
-				now hp of Alexandra is 50;
+				now HP of Alexandra is 50;
 				now area entry is "nowhere";
 				increase score by 20;
 			else:
@@ -115,22 +117,22 @@ to say losetodobie1:		[low-lust player loss]
 			say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman. For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly. 'It's good to see that you've still got some control in there. Things are really crazy out there right now. Do you still remember your name?  Where you lived and worked?' She asks you some basic questions, not to get the information but to make sure you can still remember it. 'You need to keep it together until rescue can come,' she continues, tapping you firmly on the shoulder. 'I want you to return to your home, take cover and wait this thing out.";
 		say "     'You need to keep it together until rescue can come,' she continues, tapping you firmly on the shoulder. 'I want you to return to your home, take cover and wait this thing out";
 		say "[weaponconf]";
-		say "     ' And with that said, she turns and heads off, leaving you feeling a little more focused[if libido of player > 50] and maybe a little disappointed you didn't get any fun with the sexy cop[end if][if dobielibido is -2]. At least it seems you've made a new friend in this messed up world[end if].";
+		say "     And with that said, she turns and heads off, leaving you feeling a little more focused[if libido of player > 50] and maybe a little disappointed you didn't get any fun with the sexy cop[end if][if dobielibido is -2]. At least it seems you've made a new friend in this messed up world[end if].";
 		increase humanity of player by 12;
 		if humanity of player > 100, now humanity of player is 100;
 	else if libido of player >= 110:
 		if dobielibido < 1, now dobielibido is 1;
 		say "***Not written yet, but may be needed in the future. Player lost due to excess libido.";
-		let fine be 8 + ( dobieresist * 2 ) + ( hp entry - monsterhp );
+		let fine be 8 + ( dobieresist * 2 ) + ( HP entry - monsterHP );
 		let timepenalty be 3;
 		if dobieresist > 4, increase timepenalty by 1;
 		decrease freecred by fine;
 		if freecred < 0, now freecred is 0;
 		increase humanity of player by 10;
 		extend game by ( 0 - timepenalty );
-	else if hp of player > 0:
+	else if HP of player > 0:
 		if dobielibido < 1, now dobielibido is 1;
-		let fine be 4 + ( dobieresist * 2 ) + ( hp entry - monsterhp );
+		let fine be 4 + ( dobieresist * 2 ) + ( HP entry - monsterHP );
 		let timepenalty be 2;
 		if dobieresist > 4, increase timepenalty by 1;
 		say "     Deciding it'd be best to stop and surrender, you drop your fighting stance and put up your arms. She growls and keeps a close eye on you. For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she looks you over sternly. 'I can see that you've at least still got a little control in there. Still, you were resisting arrest. You need to get a grip on yourself and hold on until rescue comes.' She pulls out a pad and quickly writes something out. 'Since I can't really detain you right now, I'm giving you a ticket and ordering you back to your home. You need to keep it together, take cover and wait this mess out until rescue comes";
@@ -142,7 +144,7 @@ to say losetodobie1:		[low-lust player loss]
 		extend game by ( 0 - timepenalty );
 	else:
 		if dobielibido < 1, now dobielibido is 1;
-		let fine be 8 + ( dobieresist * 3 ) + ( hp entry - monsterhp );
+		let fine be 8 + ( dobieresist * 3 ) + ( HP entry - monsterHP );
 		let timepenalty be 3;
 		if dobieresist > 4, increase timepenalty by 1;
 		say "     After the Doberman cop strikes her final blow, she knocks you to the ground and presses her nightstick at the back of your neck to hold you down firmly. She growls deeply and knees you in the kidneys for good measure. For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she looks you over sternly. 'I'm not sure if you can understand me in there,' she growls as she holds you down, 'but you need to keep it together and hold out until rescue can come. I know things are crazy out there, but you can't give into it.' You are too sore from the fight to do more than groan in response as she gets off you and nudges you onto your back with her foot while pulling out a notepad.";
@@ -163,27 +165,27 @@ to say losttodobie2:		[mid-lust player loss]
 	let fine be 0;
 	let timepenalty be 0;
 	if dobieresist is 0:
-		say "     You drop your fighting stance and put your arms up, surrendering to the canine policewoman. From the way she looks at you and licks her muzzle, a part of you hopes she'll give into her lusts with you. She walks up to you with a sexy sway to her hips, but knocks your legs out from under you, pinning your arms behind your back. 'Rrrr! I'm tempted to really show you how much I appreciate your earlier stunt, but I'm trying to keep it together. And you should be too. Since you're obviously able to control yourself enough to not fight, there may still be hope for you.' You feel one of her paws grope your ass before it's pulled away quickly. 'Sh-  Look, we both need to keep it together until rescue can come,' she continues. 'I'm ordering you to take cover and wait this thing out'";
+		say "     You drop your fighting stance and put your arms up, surrendering to the canine policewoman. From the way she looks at you and licks her muzzle, a part of you hopes she'll give into her lusts with you. She walks up to you with a sexy sway to her hips, but knocks your legs out from under you, pinning your arms behind your back. 'Rrrr! I'm tempted to really show you how much I appreciate your earlier stunt, but I'm trying to keep it together. And you should be too. Since you're obviously able to control yourself enough to not fight, there may still be hope for you.' You feel one of her paws grope your ass before it's pulled away quickly. 'Sh- Look, we both need to keep it together until rescue can come,' she continues. 'I'm ordering you to take cover and wait this thing out'";
 		say "[weaponconf]";
 		say "     And with that said, she turns and heads off, leaving you feeling a little more focused[if libido of player > 50] and maybe a little disappointed you didn't get any fun with the sexy cop[end if].";
 		increase humanity of player by 12;
 	else if libido of player >= 110:
 		say "***Not written yet, but may be needed in the future. Player lost due to excess libido.";
 		say "[weaponconf]";
-		let fine be 8 + ( dobieresist * 2 ) + ( hp entry - monsterhp );
+		let fine be 8 + ( dobieresist * 2 ) + ( HP entry - monsterHP );
 		let timepenalty be 3;
 		if dobieresist > 4, increase timepenalty by 1;
 		increase humanity of player by 10;
-	else if hp of player > 0:
-		let fine be 4 + ( dobieresist * 2 ) + ( hp entry - monsterhp );
+	else if HP of player > 0:
+		let fine be 4 + ( dobieresist * 2 ) + ( HP entry - monsterHP );
 		let timepenalty be 2;
 		if dobieresist > 4, increase timepenalty by 1;
-		say "     Deciding it'd be best to stop and surrender, you drop your fighting stance and put up your arms. She growls and keeps a close eye on you, licking her muzzle with a grin of pleasure. From the look she give you, a part of you hopes she'll give into her lusts with you. She walks up to you with a sexy sway to her hips, but knocks your legs out from under you, pinning your arms behind your back. 'Rrrr! I'm tempted to really show you how much I appreciate your earlier stunt, but I'm trying to keep it together. And you should be too. But you've been resisting arrest,' she growls in your ear, giving your ass a squeeze. 'Sh-  Look, we both need to keep it together until rescue can come,' she continues. 'Since I can't really detain you right now, I'm giving you a ticket and ordering you back to your home. You need to keep it together, take cover and wait this mess out until rescue comes";
+		say "     Deciding it'd be best to stop and surrender, you drop your fighting stance and put up your arms. She growls and keeps a close eye on you, licking her muzzle with a grin of pleasure. From the look she give you, a part of you hopes she'll give into her lusts with you. She walks up to you with a sexy sway to her hips, but knocks your legs out from under you, pinning your arms behind your back. 'Rrrr! I'm tempted to really show you how much I appreciate your earlier stunt, but I'm trying to keep it together. And you should be too. But you've been resisting arrest,' she growls in your ear, giving your ass a squeeze. 'Sh- Look, we both need to keep it together until rescue can come,' she continues. 'Since I can't really detain you right now, I'm giving you a ticket and ordering you back to your home. You need to keep it together, take cover and wait this mess out until rescue comes";
 		say "[weaponconf]";
 		say "     She shoves the ticket into your hand, turns and heads off. More than a little confused[if libido of player > 50] and slightly disappointed sexually[end if], but feeling a bit calmer, you look it over the ticket. It says something about a fine of [special-style-2][fine][roman type] freecred and a penalty of [special-style-2][timepenalty * 3][roman type] hours of community service.";
 		increase humanity of player by 10;
 	else:
-		let fine be 8 + ( dobieresist * 3 ) + ( hp entry - monsterhp );
+		let fine be 8 + ( dobieresist * 3 ) + ( HP entry - monsterHP );
 		let timepenalty be 3;
 		if dobieresist > 4, increase timepenalty by 1;
 		say "     After the Doberman cop strikes her final blow, she knocks you to the ground and presses her nightstick at the back of your neck to hold you down firmly. She growls deeply and knees you in the kidneys twice for good measure. From the grin on her muzzle and the lustful licking of your muzzle, a part of you hopes she'll give into her lusts with you. 'Rrrr! I'm not sure if you can understand me in there,' she growls as she holds you down, 'but I'm really tempted to show you how much I appreciate your earlier stunt. But I'm trying to keep it together, and you should be too. 'I'm not sure if you can understand me in there,' she growls as she holds you down, 'but you need to keep it together and hold out until rescue can come. I know things are crazy out there, but you can't give into it.'";
@@ -229,10 +231,10 @@ to say losetodobie3:		[high-lust player loss]
 		if "More Anal" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			say "[dobiensanal]";
 		else:
-			decrease hp of player by wdam entry * 2;
+			decrease HP of player by wdam entry * 2;
 			say "     The female Doberman keeps you pinned to the ground with your ass in the air and gropes your crotch, but growls in frustration as she finds nothing there at all. She gives your ass a hard slap and starts to laugh. 'You do all that work to get me worked up and then you end up like this. Leaving me with nothing to play with at all,' she growls angrily, pushing you down hard. 'What god-damned use are you to me now, you scum?' Taking her nightstick, she strikes you with it several times, focusing on slapping blows across your increasingly tender rear. 'That, you stupid wretch. Maybe a proper spanking will slap some sense into you, you piece of trash";
 	say "[weaponconf]";
-	let fine be 8 + ( dobieresist * 3 ) + ( hp entry - monsterhp );
+	let fine be 8 + ( dobieresist * 3 ) + ( HP entry - monsterHP );
 	let timepenalty be 3;
 	if dobieresist > 4, increase timepenalty by 1;
 	say "     She then writes out a ticket for you, roughly pinching your jaw and stuffing it in your mouth before uncuffing you. She grabs you and drags you to your feet before shoving you away. 'Now get out of here, you trash. Slink back to your hole and don't come out until the rescue comes,' she growls. As you stumble off, you cough out the wad of paper and look it over. It says something about a fine of [special-style-2][fine][roman type] freecred and a penalty of [special-style-2][timepenalty * 3][roman type] hours of community service.";
@@ -249,7 +251,7 @@ to say dobieride:
 
 
 to say dobiensvag:
-	say "     The female Doberman keeps you pinned to the ground with your ass in the air and gropes your crotch, getting a moan from you as she rubs over your pussy. She drives a couple of fingers into you, getting your cunt to quiver and drip with juices. 'How does a little payback sound, you little slut?' she growls, fingering you harder until you moan again. As she's thrusting [if cunt width of player < 5]a pair of fingers[else if cunt width of player < 9]three fingers[otherwise]her whole fist[end if] into your [cunt size desc of player] cunt, she grinds her canine muff against her nightstick. You can see and smell her hot juices running down that hard, black rod.";
+	say "     The female Doberman keeps you pinned to the ground with your ass in the air and gropes your crotch, getting a moan from you as she rubs over your pussy. She drives a couple of fingers into you, getting your cunt to quiver and drip with juices. 'How does a little payback sound, you little slut?' she growls, fingering you harder until you moan again. As she's thrusting [if cunt width of player < 5]a pair of fingers[else if cunt width of player < 9]three fingers[else]her whole fist[end if] into your [cunt size desc of player] cunt, she grinds her canine muff against her nightstick. You can see and smell her hot juices running down that hard, black rod.";
 	say "     Noticing where you're looking, she grins and moves to slide the end of the nightstick slowly between your ass cheeks[if anallevel is 3], grinding it against your pucker[end if]. 'Looking for something long and hard to fill you, aren't you?' she teases before trailing it lower and sinking it into your cunt to replace her fingers. You groan as the cool length is pushed into you and she starts fucking you with it. You moan and start pushing back onto it despite yourself. While the nightstick is hard and you can feel the end sliding in and out, the length is too smooth and slick to provide proper stimulation and it is too hard to make it a fully enjoyable fit. Overall, it provides some satisfaction but also longing for more, making you ride it harder, much to the canine cop's enjoyment. She is more than happy to pound it into you hard and to call you a slut while doing it. Eventually, it all becomes too much and you cum hard, adding a rush of your own juices across the slick rod and sending them running down your thighs and her gripping paw[if cocks of player > 0] and you spray your hot seed across the dirty ground[end if].";
 	say "     She pulls the nightstick slowly from you and gives it a fast swing, splattering the juices from it across your back. Her own thighs, you notice, as also soaked, having fingered herself to orgasm while abusing your now aching pussy. 'Mmm... now that's much better. Now, while I'm tempted to just leave you there for the other creatures to use,' she says with a dark grin on her muzzle, 'I do need those cuffs back for my next vi... ah... perp. Besides, that only means I might get to track you down again if you need another reminder to stay off the streets,' she adds, giving you a hard kick to the ribs to punctuate her threat. 'You piece of trash";
 
@@ -262,7 +264,7 @@ to say dobiensanal:
 		say "     The female Doberman keeps you pinned to the ground with your ass in the air and gropes your crotch, getting a moan from you as she rubs over your cock. She strokes over your [cock size desc of player] [cock of player] shaft, getting you hard and dripping. 'How does a little payback sound, you asshole?' she growls as her paw fondles you harder until you moan again. As she's working her paw over you, she grinds her canine muff against her nightstick. You can see and smell her hot juices running down that hard, black rod.";
 		say "     Noticing where you're looking, she grins and grinds her juicy pussy against it harder. 'Mmm... you want that, don't you?' she moans sensually while taking a particularly slow slide against the black rod. You can see the way her folds grip that hard length and smell her aroused scent, making you want that juicy cunt of hers all the more. Moaning that you need it, she grins darkly. 'Remember, you asked for it,' she says, moving the nightstick away to give you a clear view of her canine cunt. But when you feel the hard press of the nightstick at your asshole, you cry out and shake your head. As she pushes harder, you groan at the sudden intrusion and pull at the cuffs securing you, her juices only slightly easing the passage of the cool, hard length into you. She grins sadistically pounds the nightstick into you in firm thrusts, growling 'You asked for it, scum!' as you groan in both pain and pleasure beneath her. The pounding against your prostate makes your cock twitch and dribble pre, but hard rod is too hard to make it fully enjoyable. Reaching around with her free paw, she strokes your dribbling [cock size desc of player] cock and calls you a slut for being hard while getting assfucked. Eventually, it all becomes too much and you cum hard, spraying your hot load across the ground beneath you as she gives your prostate a firm grind with the end of the nightstick, having zeroed in on that sensitive spot.";
 	else if cunts of player > 0:				[female version]
-		say "     The female Doberman keeps you pinned to the ground with your ass in the air and gropes your crotch, getting a moan from you as she rubs over your pussy. She drives a couple of fingers into you, getting your cunt to quiver and drip with juices. 'How does a little payback sound, you little slut?' she growls, fingering you harder until you moan again. As she's thrusting [if cunt width of player < 5]a pair of fingers[else if cunt width of player < 9]three fingers[otherwise]her whole fist[end if] into your [cunt size desc of player] cunt, she grinds her canine muff against her nightstick. You can see and smell her hot juices running down that hard, black rod.";
+		say "     The female Doberman keeps you pinned to the ground with your ass in the air and gropes your crotch, getting a moan from you as she rubs over your pussy. She drives a couple of fingers into you, getting your cunt to quiver and drip with juices. 'How does a little payback sound, you little slut?' she growls, fingering you harder until you moan again. As she's thrusting [if cunt width of player < 5]a pair of fingers[else if cunt width of player < 9]three fingers[else]her whole fist[end if] into your [cunt size desc of player] cunt, she grinds her canine muff against her nightstick. You can see and smell her hot juices running down that hard, black rod.";
 		say "     Noticing where you're looking, she grins and moves to slide the end of the nightstick slowly between your ass cheeks[if anallevel is 3], grinding it against your pucker[end if]. 'Looking for something long and hard to fill you, aren't you?' she teases. 'Well, here you go,' she growls, pushing harder on the nightstick and spreading your tight asshole open. You groan at the sudden intrusion and pull at the cuffs securing you, her juices only slightly easing the passage of the cool, hard length into you. She grins sadistically and pounds the nightstick into you in firm thrusts, that have you groaning in both pain and pleasure and trying to ride it harder, much to the canine cop's enjoyment. She is more than happy to pound it into you hard and to call you a slut while doing it. Between the hard thrusts of the rigid rod and her eager paw working your pussy, you find yourself overwhelmed. Your vagina clenches down around her fingers with every hard push of the nightstick into your abused anus. Even the discomfort of her fucking you with the smooth, slender club doesn't offset the pleasure from her working your dripping cunt to a crashing orgasm as the pain and the pleasure become one. You release a rush of your own juices that run down your thighs and over her paw.";
 	else:								[neuter version]
 		say "     The female Doberman keeps you pinned to the ground with your ass in the air and gropes your crotch, but growls in frustration as she finds nothing there at all. She gives your ass a hard slap and starts to laugh. 'You do all that work to get me worked up and then you end up like this. Leaving me with nothing to play with at all,' she growls angrily, pushing you down hard. 'Well, not quite nothing, it seems,' she adds, nipping at your neck as she grinds her pussy against the grip of her nightstick, shuddering in pleasure as the handle is pushed into her. Given her ease at taking it, it seems she's done this a few times recently in an attempt to relieve her aching loins and now you'll get to enjoy the show.";
@@ -275,19 +277,19 @@ to say weaponconf:
 		if dobielibido is -100:
 			say "     The policewoman's canine nose twitches and she quickly grabs you by the wrist, keeping you from going anywhere. 'That weapon you're carrying is infectious and therefore contraband. I cannot allow you to keep it.' A little reluctant to part with it, but not wanting to jeopardize the friendship you've just started to make with her, you give it up to her. ";
 		else if dobielibido < 1:
-			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back. 'That weapon you're carrying is infectious and therefore contraband. I cannot allow you to keep it.' As you start to protest, she twists your arm harder and pushes you down with a growl. ";
-			increase dobielibido by 2;		[lose some ground in convincing her]
+			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[else]grinds a knee into your lower spine while still[end if] twisting your arm behind your back. 'That weapon you're carrying is infectious and therefore contraband. I cannot allow you to keep it.' As you start to protest, she twists your arm harder and pushes you down with a growl. ";
+			increase dobielibido by 2; [lose some ground in convincing her]
 			if dobielibido >= 0, now dobielibido is -1;
 		else if dobielibido >= 100 and inasituation is false:
 			say "     The policewoman's canine nose twitches and she gives you another kick for good measure. 'That weapon you've got is infection and therefore contraband. I can't let someone like you keep it.' As you start to protest, pulling at your handcuffed arms, she grinds her heel into your face. 'Or what, scum?  Settle down, or I might even consider using them on you to see just what they do,' she growls as she reaches down and picks up your ";
 		else if dobieresist is 0:					[did not resist]
-			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back. 'That weapon you're carrying is infectious and therefore contraband. I cannot allow you to keep it.' As you start to protest, she twists your arm harder and pushes you down with a growl. ";
+			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[else]grinds a knee into your lower spine while still[end if] twisting your arm behind your back. 'That weapon you're carrying is infectious and therefore contraband. I cannot allow you to keep it.' As you start to protest, she twists your arm harder and pushes you down with a growl. ";
 		else if libido of player >= 110:		[lustfully submitted]
 			say "***Not written yet, but may be needed in the future. Player lost due to excess libido.";
-		else if hp of player > 0:			[resisted, then submitted]
-			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back. 'That weapon you're carrying is infectious and therefore contraband. I cannot allow you to keep it.' As you start to protest, she twists your arm harder and pushes you down with a growl. ";
+		else if HP of player > 0:			[resisted, then submitted]
+			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[else]grinds a knee into your lower spine while still[end if] twisting your arm behind your back. 'That weapon you're carrying is infectious and therefore contraband. I cannot allow you to keep it.' As you start to protest, she twists your arm harder and pushes you down with a growl. ";
 		else:							[lost the fight]
-			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back. 'That weapon you're carrying is infectious and therefore contraband. I cannot allow you to keep it.' As you start to protest, she twists your arm harder and pushes you down with a growl. ";
+			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[else]grinds a knee into your lower spine while still[end if] twisting your arm behind your back. 'That weapon you're carrying is infectious and therefore contraband. I cannot allow you to keep it.' As you start to protest, she twists your arm harder and pushes you down with a growl. ";
 		if dirty whip is owned and infected sword is owned:
 			if dobielibido >= 100 and inasituation is false:
 				say "whip and sword, making sure to use an evidence bag to get them. 'I appreciate your cooperation in this matter,' she says, giving you a final kick. 'Don't get in my way again";
@@ -295,10 +297,10 @@ to say weaponconf:
 				say "     She takes your whip and sword away, making sure to grab them using an evidence bag. 'I appreciate your cooperation, but I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
 			else if libido of player >= 110:		[lustfully submitted]
 				say "***Not written yet, but may be needed in the future. Player lost due to excess libido.";
-			else if hp of player > 0:			[resisted, then submitted]
-				say "    She takes your whip and sword away, making sure to grab them using an evidence bag. 'Just think about the damage you could have caused with these. You're too much of a loose cannon to be trusted with them. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
+			else if HP of player > 0:			[resisted, then submitted]
+				say "     She takes your whip and sword away, making sure to grab them using an evidence bag. 'Just think about the damage you could have caused with these. You're too much of a loose cannon to be trusted with them. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
 			else:							[lost the fight]
-				say "    She takes your whip and sword away, making sure to grab them using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
+				say "     She takes your whip and sword away, making sure to grab them using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
 			if weapon object of player is dirty whip:
 				now weapon damage of player is 4;
 				now weapon type of player is "Melee";
@@ -316,7 +318,7 @@ to say weaponconf:
 				say "     She takes your whip away, making sure to grab them using an evidence bag. 'I appreciate your cooperation, but I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
 			else if libido of player >= 110:		[lustfully submitted]
 				say "***Not written yet, but may be needed in the future. Player lost due to excess libido.";
-			else if hp of player > 0:			[resisted, then submitted]
+			else if HP of player > 0:			[resisted, then submitted]
 				say "     She takes your whip away, making sure to grab it using an evidence bag. 'Just think about the damage you could have caused with this. You're too much of a loose cannon to be trusted with it. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
 			else:							[lost the fight]
 				say "     She takes your whip away, making sure to grab it using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
@@ -332,7 +334,7 @@ to say weaponconf:
 				say "     She takes your sword away, making sure to grab them using an evidence bag. 'I appreciate your cooperation, but I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
 			else if libido of player >= 110:		[lustfully submitted]
 				say "***Not written yet, but may be needed in the future. Player lost due to excess libido.";
-			else if hp of player > 0:			[resisted, then submitted]
+			else if HP of player > 0:			[resisted, then submitted]
 				say "     She takes your sword away, making sure to grab it using an evidence bag. 'Just think about the damage you could have caused with this. You're too much of a loose cannon to be trusted with it. I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
 			else:							[lost the fight]
 				say "     She takes your sword away, making sure to grab it using an evidence bag. 'I can't let a half-crazed fool like you run around with something like this. You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked. We should be trying to slow the infection, not spread it faster";
@@ -346,7 +348,7 @@ to say weaponconf:
 to say beattheDoberman:
 	project the figure of DobermanCop_icon;
 	if dobielibido < 1, now dobielibido is 1;
-	say "     Your last attack knocks away the policewoman's nightstick, sending it skittering across the ground as she's knocked down. She releases a canine whimper that she quickly stifles as she fails to get back up";
+	say "     Your last attack knocks away the policewoman's nightstick, sending it skittering across the ground as she's knocked down. She releases a canine whimper that she quickly stifles as she fails to get back up.";
 	if dobielibido < 50:			[low-lust cop]
 		say "[beatthedobie1]";
 	else if dobielibido < 100 or inasituation is true:	[mid-lust cop]
@@ -358,14 +360,14 @@ to say beattheDoberman:
 to say beatthedobie1:			[low-lust cop player victory]
 	if ( cocks of player > 0 or cunts of player > 0 ) and libido of player > 25:
 		say "     Looking her over, you can't help but find the canine woman's body more than a little sexy, especially in that cop uniform.";
-		say "     [bold type]Shall you take advantage of his opportunity to have some fun with the hot policewoman?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you take advantage of his opportunity to have some fun with the hot policewoman?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
 			say "     Grabbing her firmly, you pin her down with one arm while the other roams over her body, groping her ass and breasts before sliding down her pants and panties. She bites her lip, but soon starts to moan despite herself as her canine body starts to respond as you pump a pair of fingers into her increasingly wet pussy. Soon she's panting lustfully and unable to resist your further advances.";
-			say "     [bold type]Now that you've got her worked up, shall you [if cocks of player > 0]fuck her[otherwise]keep fingering her[end if] or get that muzzle and long tongue of hers to work pleasing you?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Now that you've got her worked up, shall you [if cocks of player > 0]fuck her[else]keep fingering her[end if] or get that muzzle and long tongue of hers to work pleasing you?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Penetrate her.";
 			say "     ([link]N[as]n[end link]) - Put her tongue to work.";
 			if the player consents:
@@ -387,11 +389,10 @@ to say beatthedobie1:			[low-lust cop player victory]
 	else:
 		say "     Satisfied that she won't bother you further for the moment, you give her a final kick before walking away.";
 
-
 to say beatthedobie2:			[mid-lust cop player victory]
 	say "     The female Doberman moans and sags to the ground, her increased lust taking hold. She pulls open her pants, revealing her lack of panties as she starts fingering herself. She looks up at you with a mix of apprehension and longing. Pleased with what you've done to the stuffy cop, you consider fooling around with her further. Clearly she needs some more attention. ";
 	if cocks of player > 0 or cunts of player > 0:
-		say "     Shall you [if cocks of player > 0]fuck[otherwise]finger[end if] that juicy cunt of hers [link](1)[as]1[end link], [if cocks of player > 0]give her a titty-fuck[otherwise]get the doggy tongue of hers to please you[end if] [link](2)[as]2[end link] or just leave her [link](3)[as]3[end link] to her own lusts?";
+		say "     Shall you [if cocks of player > 0]fuck[else]finger[end if] that juicy cunt of hers [link](1)[as]1[end link], [if cocks of player > 0]give her a titty-fuck[else]get the doggy tongue of hers to please you[end if] [link](2)[as]2[end link] or just leave her [link](3)[as]3[end link] to her own lusts?";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)>";
@@ -399,7 +400,7 @@ to say beatthedobie2:			[mid-lust cop player victory]
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
 			else:
-				say "Invalid choice. Type [link]1[end link] to get some pussy, [link]2[end link] for [if cocks of player > 0]a titty-fuck[otherwise]oral[end if] and [link]3[end link] to leave.";
+				say "Invalid choice. Type [link]1[end link] to get some pussy, [link]2[end link] for [if cocks of player > 0]a titty-fuck[else]oral[end if] and [link]3[end link] to leave.";
 		if calcnumber is 1:
 			if cocks of player > 0:
 				say "     Stroking your stiff cock, you grab the Doberman and pull her up. With her eyes locked hungrily on your hard penis, she obediently lets you push her over to a nearby wall. You get her to spread herself against the wall like a criminal and are pleased as she does so and even offers her ass to you, tail raised and tongue lolling out of her mouth. You take a few moments to tease her, fingering her hot, wet folds and even teasing her dark pucker with a slick finger. She yips and wags her tail, grinding back against your touch. Deciding she's had enough and that you'd rather get on to the main event, you line your cock up with her dripping slit and drive your throbbing cock into her. The canine officer barks and moans as you fuck her, lost in her lust for sex. You take perverse delight in seeing the once upstanding policewoman debase herself in her need for your cock. And you don't disappoint, cumming hard into her, pumping a hot and heavy load into the increasingly slutty bitch. When you're finished, you pull out, leaving her slumped against the wall in a pool of sexual fluids.";
@@ -424,13 +425,13 @@ to say beatthedobie3:			[high-lust cop player victory]
 	choose row monster from the table of random critters;
 	say "     The female Doberman moans and sags to the ground, her increased lust taking hold. She pulls open her pants, revealing her lack of panties as she starts fingering herself. She looks up at you with a pure lust in her eyes as she spreads her legs and parts the dark lips of her canine pussy with fingers. 'Come on, take me! I don't care anymore. Just give it to me and make me yours,' she moans and pants while holding herself in wanton display for you. You can't help but smile at what a fine slut you've made this cop into and try to decide how you'd like to use her. ";
 	if cocks of player > 0 or cunts of player > 0:
-		say "     Shall you [if cocks of player > 0]fuck[otherwise]have her lick[end if] that juicy cunt of hers [link](1)[as]1[end link], [if cocks of player > 0]give her a titty-fuck[otherwise]get the doggy tongue of hers to please you[end if] [link](2)[as]2[end link] or enjoy a 69 [link](3)[as]3[end link] with the horny canine?";
+		say "     Shall you [if cocks of player > 0]fuck[else]have her lick[end if] that juicy cunt of hers [link](1)[as]1[end link], [if cocks of player > 0]give her a titty-fuck[else]get the doggy tongue of hers to please you[end if] [link](2)[as]2[end link] or enjoy a 69 [link](3)[as]3[end link] with the horny canine?";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)>";
 			get a number;
 			if calcnumber < 1 or calcnumber > 3:
-				say "Invalid choice. Type [link]1[end link] to get some pussy, [link]2[end link] for [if cocks of player > 0]a titty-fuck[otherwise]oral[end if] and [link]3[end link] for a 69.";
+				say "Invalid choice. Type [link]1[end link] to get some pussy, [link]2[end link] for [if cocks of player > 0]a titty-fuck[else]oral[end if] and [link]3[end link] for a 69.";
 		if calcnumber is 1:
 			if cocks of player > 0:
 				say "     Stroking your stiff cock, you move overtop of the doggy girl and let it brush against her wet folds. 'Does the bad doggy want her bone?' you ask, drawing a canine whimper and an eager nod from her. 'Then you guide it in,' you tell her, putting her paw on your [cock size desc of player] [cock of player] shaft. She strokes your maleness with her fingers before moving to get it lined up. 'Mmm... that's right. You're a bad dog, aren't you?  My. slutty. bad. doggy. bitch.' you tell her, thrusting into her hot and juicy cunt to punctuate each word. She releases a few panting yips of pleasure in response as you fuck her.";
@@ -466,26 +467,26 @@ to say beatthedobie3:			[high-lust cop player victory]
 	WaitLineBreak;
 	say "     As you're preparing to leave, the Doberman moans softly for you to wait. Curious as to what the slutty cop has to say, you turn back, wondering if you'll need to teach her another lesson. The dog fingers herself lightly, licking cum from her paws. 'I... I... give up,' she says with a resigned sigh. 'There's no law and order left and... there's no point in pretending otherwise. I... want the sex... the raw fucking... the lustful breeding,' she says with a few interspersed moans as her fingering grows more eager. 'And so help me God, I want you. After all of it, I want you so bad. I- I want to be your doggy bitch,' she moans, crawling towards you on all fours.";
 	say "     It seems you've finally completely broken the policewoman.";
-	say "     [bold type]Shall you take her to be your bad dog bitch?  She might make a good guard for the library[if hp of Fang > 0 and hp of Fang < 100] alongside Fang[end if] as well as a fun plaything.[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you take her to be your bad dog bitch?  She might make a good guard for the library[if HP of Fang > 0 and HP of Fang < 100] alongside Fang[end if] as well as a fun plaything.[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
 		say "     Excited at the prospect of having the Doberman cop as your personal slutty bitch, you run your hand over her head and scritch her ears, telling her that she can come with you if she accepts her proper place as your slutty bad dog bitch. She nods and licks at your hand. 'Oh yes, that's what I want. It was foolish of a bad bitch like me to ever try being a cop, boss.' Grinning, you help her up and lead her back to the library.";
-		now hp of Alexandra is 1;
+		now HP of Alexandra is 1;
 		now battleground is "void";
 		move Alexandra to Grey Abbey Library;
 		move player to Grey Abbey Library;
 	else:
 		say "     Not wanting to waste any more of your time on the policewoman, you kick her to the ground. 'Why would anyone want to keep a bad bitch like you?  Get out of here, you slut. I don't want to see you again.' She slinks away and you can't help but chuckle, darkly pleased at having broken the cop so fully and then just discarding her like trash. You doubt she'll be troubling you any more.";
-		now hp of Alexandra is 100;
+		now HP of Alexandra is 100;
 	now area entry is "nowhere";
 
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -495,47 +496,47 @@ When Play begins:
 	now defeated entry is "[beattheDoberman]";
 	now victory entry is "[losetoDoberman]";
 	now desc entry is "[Dobermandesc]";
-	now face entry is "now possesses the striking features of a cunningly handsome looking Dobie";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "fit and toned without a trace of fat anywhere in sight. No to mention pecs that bulge out almost half an inch from your chest and torso with, count 'em, eight hard and cut abs you are definitely a stud of a dog";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]brown and black fur[or]a dense and dark pelt[or]a heavy cropping of water resistant fur[at random]";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Your tail is long and thin, like a Dalmatian's, but pitch black in colour, oh and curved upwards.";	[ Tail desc., written as a full sentence or left blank for none. ] 
-	now cock entry is "[one of]knotted[or]tapered canine[or]dark crimson coloured[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your head shifts and then pops and then finally melts down into a point giving you a Doberman-like face while your ears push straight up onto your head and your eyes turn chocolate brown in colour";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your muscles suddenly balloon outwards while your bones and muscles pop and contort inside of your body starting from your neck going all the way down to your thighs, calves and feet. Back arching, spine tingling you have just enough time to appreciate the fact that the heels of your feet are pulling back to give you a digitigrade stance before you sigh as your body finishes its transmogrification";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "short, dark brown and black fur pushes out from the pores of your skin making you itch all over.";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your butt expands outwards and then suddenly pulls inwards as your spine lengths with the onset of you growing tail. The fact that your glutes now look like the stereotypical 'bubble butt' only works to heighten the cuteness of your new appendage.";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "the mass grows and then tapers off to a point while becoming crimson in colour. The small bulb at the end of your rod is the only indication that you possess a canine's knot";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 14;			[ These are now the creature's stats... ]
-	now dex entry is 18;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 13;			[ These values may be used as part of alternate combat.]
+	now face entry is "that of a cunningly handsome looking Dobie"; [ Face Description, format as the text "Your face is (your text)." ]
+	now body entry is "fit and toned without a trace of fat anywhere in sight. No to mention pecs that bulge out almost half an inch from your chest and torso with, count 'em, eight hard and cut abs you are definitely a stud of a dog"; [ Body Description, format as the text "Your body is (your text)." ]
+	now skin entry is "[one of]brown and black fur[or]a dense and dark pelt[or]a heavy cropping of water resistant fur[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now tail entry is "Your tail is long and thin, like a Dalmatian's, but pitch black in colour and curved upwards."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "[one of]knotted[or]tapered canine[or]dark crimson coloured[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now face change entry is "your head shifts and then pops and then finally melts down into a point giving you a Doberman-like face while your ears push straight up onto your head and your eyes turn chocolate brown in colour"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now body change entry is "your muscles suddenly balloon outwards while your bones and muscles pop and contort inside of your body starting from your neck going all the way down to your thighs, calves and feet. Back arching, spine tingling you have just enough time to appreciate the fact that the heels of your feet are pulling back to give you a digitigrade stance before you sigh as your body finishes its transmogrification"; [ Body TF text, format as "Your body feels funny as (your text)." ]
+	now skin change entry is "short, dark brown and black fur pushes out from the pores of your skin making you itch all over."; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "your butt expands outwards and then suddenly pulls inwards as your spine lengths with the onset of you growing tail. The fact that your glutes now look like the stereotypical 'bubble butt' only works to heighten the cuteness of your new appendage."; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "the mass grows and then tapers off to a point while becoming crimson in colour. The small bulb at the end of your rod is the only indication that you possess a canine's knot"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now str entry is 14; [ These are now the creature's stats... ]
+	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 13; [ These values may be used as part of alternate combat.]
 	now per entry is 15;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 60;			[ The monster's starting hit points. ]
-	now lev entry is 7;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 10;			[ Monster's average damage when attacking. ]
-	now area entry is "Outside";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 6;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 50;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 60; [ The monster's starting HP. ]
+	now lev entry is 7; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 10; [ Monster's average damage when attacking. ]
+	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 0; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 50; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]unrepentantly strong[or]dashing[or]sexy[at random]";
-	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "dobermancop";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "dobermancop"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat Rules
@@ -549,11 +550,11 @@ this is the dobermancop rule:		[combat rule]
 	if inafight is 0 and dobielibido < 100:			[doberman cop does not attack on first strike]
 		say "The Doberwoman police officer holds herself at the ready, nightstick raised but does not swing despite having the advantage. 'Last warning! Stand down!' she growls.";
 	else:
-		increase dobieresist by 1;	[turns the player did not surrender]
+		increase dobieresist by 1; [turns the player did not surrender]
 		retaliate;
 
 this is the dobercoppost rule:		[postattack rule]
-	if a random chance of 1 in 3 succeeds and hp of player > 0 and libido of player < 110:
+	if a random chance of 1 in 3 succeeds and HP of player > 0 and libido of player < 110:
 		if dobielibido < 100:		[low/mid lust]
 			say "The [one of]Doberman cop[or]canine cop[or]Doberwoman[or]dog policewoman[or]canine officer[or]Doberman[at random] [one of]growls[or]barks[or]says[as decreasingly likely outcomes] [one of]'Stand down[or]'Police[or]'You're only making it harder on yourself[or]'Come peacefully[or]'There's more where that came from[at random]!' after striking you.";
 		else:				[high lust]
@@ -563,7 +564,7 @@ Section 4 - Endings	[This portion deals with the Doberman infection for Kaleem's
 
 when play ends:
 	if bodyname of player is "Doberman":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if cunts of player > 0 and cocks of player < 0:
 				say "Falling prey to your feral instincts you find yourself sniffing around town to find Tyr to thank him for the sexy body he helped to give you. Your mind may have succumb to the madness that is the feral need to fuck and breed, but the face of that sexy and charming Doberman stands out like the sun against lustful fog covering your thoughts. Locating the other back at his pad you throw yourself at the Doberman to lavish him in warm and tender licks across the face just as soon as he opens his door to let you in. Seeing you the way you are now Tyr doesn't waste time in trying to regret what's happened to you as the buff and commanding canine tosses you down onto his floor, strips himself out of his jeans, and then proceeds to work his fat piece of Doberman meat into the depths of your leaking snatch.";
 				say " Rubbing your cleft up and down the growling and grunting Doberman you're happy to find that he accepts your submission to him as he spears you hard and then deep as he goes to work filling you up with pups. Somewhere in the back of your mind you hope that maybe later on, after the first of what you can only hope will be several long and forceful fucks, Tyr will let you help him out with his workload around the city. But that's for later on...";
@@ -578,7 +579,7 @@ when play ends:
 				say "Tyr doesn't try to hide it as he knows what you want and how you want it. Being that he's overseen both your training and the unit you're working for you feel almost indebted to the other man during the times when he lays you down on top of your bed and then gently strips you out of your evening attire. Of course, the other always reminds you that you owe him nothing, but you still feel that you do, especially when he lifts up your legs, rubs his meaty hands across your cock and balls, and then buries his face in between your legs to give you the most mind blowing blowjob in the world.";
 				say "The fact that he makes sure that you don't cum in his muzzle makes things all the more exciting as the bigger Doberman leaves you right on the edge before making his next move. Holding your hips up for him you watch and wait as Tyr prepares himself to take your tight tailhole, forever using his precum instead of lube, before wincing and hissing in slight pain as the Dobie takes you hard. Never like a bitch though, both you and he know that your [']relationship['] with each other is worth more than that. However, that does not stop him from hammering into your ass, driving across your prostate like mad, which then leaves you babbling and begging for more, as the bigger Dobie drives you to the edge of orgasm while knotting you good and tight.";
 				say "He finishes fast on the first of your trysts, he always does, but during the second, third, fourth and fifth, Tyr makes sure to make long and passionate love with you as he fills you to the brim with his canine spunk. By the time he's through and his knot finally pops out of you your ass is leaking so much that the other [']generously['] offers to lick you clean in order not to make a mess on your bed. As of to date, you've never told him no before.";
-			otherwise  if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
+			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "Having Tyr as your secret lover becomes less of a secret when your stomach swells with his brood. You never complain though when you mysteriously find yourself on desk duty instead of working out in the field. Your teammates, many of them mutants, some of them even females like yourself, are happy to congratulate you on your luck at finding companionship given these weird times. None of them ask who the father is. All of them know by both the scent that always travels along your fur when you return from your time off and by the fact that an unfamiliar Doberman is constantly seen hanging around the places where you are working who the lucky male is.";
 				say "One day during your pregnancy you find yourself scared out of your wits when someone comes up from behind you while you are in the break room to force you down onto a nearby table with your rump pushed high up into the air. Growling and cursing that someone could be strong enough to hold you down against your will you find yourself all but melting when a familiar voice chuckles inside of your cropped ear. Freezing when a hole is torn into your cargo pants by wickedly sharp claws, you spread your legs wide and hunch upwards as a thick Dobie shaft is stuffed up into your cunt with gentle, but forceful thrusts.";
 				say "Not knowing that your lover would be so kinky, as he never touched you in this manner before, at least, not while you're on the job surrounded by the others, you don't try to stop Tyr as he mounts you inside of the break room as though he owns you. Partially you realize that he does own you. Both body and heart. Grunting and growling as your pussy is forced wide on the other Doberman's dick neither you nor Tyr care when your coworkers come into the room to watch you get stuffed full. Many of them go about their business getting tea and coffee as though nothing weird is happening, but others, like Stu and Stacey, the hyena herm pair, let you know that you are doing a good thing as Stacey mounts Stu up against the wall to have at her husband.";

@@ -71,8 +71,8 @@ to say LoseToVixenNurse:
 		if the player consents:
 			say "     Deciding you'd prefer that throbbing cock of hers in your mouth than elsewhere, you lower yourself to your knees and start licking and kissing at it. She moans in pleasure and runs her paws over your head, pushing her leaking shaft against your lips and into your mouth. As you suck her off, you grow increasingly aroused and eager to get her off, soon lusting for the sexy herm's seed. As you bob your head over her meaty rod, she scribbles some distracted notes on her clipboard, mumbling about her patient's ['][one of]cooperative nature[or]arousal response[or]satisfying progress[at random]['] and ['][one of]eagerness to take [if cunts of player > 0]her[else if cocks of player > 0]his[else]their[end if] medicine[or]oral fixation[or]lingum activity[at random]['] before turning her full attention back to you as you bump against her growing knot. You rub her plump ballsac with one hand and slide a pair of fingers into her puss with the other, pumping in time to her thrusting, getting her to cum hard and spew her hot load down your throat. You eagerly swallow down the musky mess and suck her cock clean before letting it go, having gotten quite turned on by the whole experience.";
 			let x be libido of player;
-			if fightoutcome is 22, increase x by 15;		[submitted]
-			if cunts of player > 0, increase x by 15;		[F/H]
+			if fightoutcome is 22, increase x by 15; [submitted]
+			if cunts of player > 0, increase x by 15; [F/H]
 			if a random chance of x in 200 succeeds:
 				attempttowait;
 				say "     The vixen nurse, panting a little from her orgasm, takes in the scent of your arousal and smiles. Reminded of her initial plan, her cock starts to rise again. Getting hard in your mouth again. Lost in your lust, you help her along, licking and sucking it to restore her erection. With some help from you, soon she's up and ready to go again, which you are far more eager for than before.";
@@ -86,7 +86,7 @@ to say LoseToVixenNurse:
 				else:
 					say "[VixenHermNurseAssFuck]";
 					now libido of player is ( libido of player + libido of player + libido entry ) / 3;
-					infect "Vixen Nurse";		[extra infection for double-sex]
+					infect "Vixen Nurse"; [extra infection for double-sex]
 			else:
 				say "     The vixen nurse, panting a little from her orgasm, pushes you off her spent shaft and straightens her uniform and grins as she places her clipboard in front of the bulge in her skirt. She grins and heads off, perhaps to find another vict... ah... patient in need of her special brand of TLC.";
 				increase libido of player by 15;
@@ -184,26 +184,26 @@ to say VixenNurseDesc:
 	if hermaphrodite is banned:			[always female if herm banned]
 		now vixgender is 0;
 	else if hospquest > 5:
-		let hermvixchance be 30 + hospquest + hospquest;		[increasingly likely as hospquest progresses]
+		let hermvixchance be 30 + hospquest + hospquest; [increasingly likely as hospquest progresses]
 		if hermvixchance > 75, now hermvixchance is 75;
 		if a random chance of hermvixchance in 100 succeeds:
-			now vixgender is 1;		[now a herm]
+			now vixgender is 1; [now a herm]
 	if vixgender is 0:
-		setmongender 4;		[creature is female]
-		say "     You find yourself face to face with a sensually curved vixen in a tight, little nurse's outfit. She has a short cut, white apron with a black top under it. There's even a traditional, white nurse's cap with a red cross on it on the vixen's head. She has lustrous, gray fur, indicating that her infection originated from a silver fox. Glancing down those long, slender legs you see they end in digitigrade paws. To her ample chest, she holds a large clipboard. You can still see the bumps that the perky nipples on her four breasts make in the fabric, unblocked by the clipboard. She looks you over quickly and tut-tuts, saying '[one of]It looks like one patient's gotten out of bed[or]Bend over, sweety. It's time to take your temperature[or]You look like you need a little TLC[or]Please return to the waiting area. The doctor will see you shortly. Until then, let me take care of you[at random].'  She raises her clipboard, seemingly intent on clubbing you with it.";
+		setmongender 4; [creature is female]
+		say "     You find yourself face to face with a sensually curved vixen in a tight, little nurse's outfit. She has a short cut, white apron with a black top under it. There's even a traditional, white nurse's cap with a red cross on it on the vixen's head. She has lustrous, gray fur, indicating that her infection originated from a silver fox. Glancing down those long, slender legs you see they end in digitigrade paws. To her ample chest, she holds a large clipboard. You can still see the bumps that the perky nipples on her four breasts make in the fabric, unblocked by the clipboard. She looks you over quickly and tut-tuts, saying '[one of]It looks like one patient's gotten out of bed[or]Bend over, sweety. It's time to take your temperature[or]You look like you need a little TLC[or]Please return to the waiting area. The doctor will see you shortly. Until then, let me take care of you[at random].' She raises her clipboard, seemingly intent on clubbing you with it.";
 		if hardmode is true and level of player > 4, let debit be level of player - 4;
-		now hp entry is 36 + ( debit * 4 );
-		now monsterhp is 36 + ( debit * 4 );
+		now HP entry is 36 + ( debit * 4 );
+		now monsterHP is 36 + ( debit * 4 );
 		now lev entry is 4 + debit;
 		now wdam entry is 5 + ( debit / 3 );
 		now dex entry is 14 + ( lev entry / 5 );
 	else:
-		setmongender 5;		[creature is herm]
+		setmongender 5; [creature is herm]
 		say "     You find yourself face to face with one of those sensually curved vixen in the tight, little nurse's outfit. She has lustrous, gray fur, indicating that her infection originated from a silver fox. She has a traditional, white nurse's cap with a red cross on it on the vixen's head. She is wearing a short cut, white apron with a black top under it.";
 		say "     And there your eyes stop, finding that something is amiss with this naughty nurse. Her tight dress has a rather sizable bulge in it and it is growing larger as you watch. It's a trap! Grinning, she rubs the firm lump and says, '[one of]It looks like one patient's gotten out of bed. I'll tuck you in good and tight[or]Bend over, sweety. Mmm... I want to take your temperature[or]You look like you need a dose of my medicine[or]Let me give you a thorough examination, my pretty patient[at random].'  She rubs her four breasts and moans lustfully before charging at you.";
 		if hardmode is true and level of player > 7, now debit is level of player - 7;
-		now hp entry is 72 + ( debit * 4 );
-		now monsterhp is 72 + ( debit * 4 );
+		now HP entry is 72 + ( debit * 4 );
+		now monsterHP is 72 + ( debit * 4 );
 		now lev entry is 7 + debit;
 		now wdam entry is 8 + ( debit / 3 );
 		now dex entry is 18 + ( ( lev entry - 7 ) / 5 );
@@ -211,14 +211,14 @@ to say VixenNurseDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Vixen Nurse"; [Name of your new Monster]
-   now attack entry is "[one of]The naughty nurse gives you a hard slap![or]The vixen bonks you on the head with the clipboard she's carrying![or]The silver vixen gives you a scratch with her claws![or]The vixen nurse stomps her foot-paw down onto the top of your foot![or]Lunging at you, the nurse tries to smother you in her ample cleavage![or]The vixen nurse knees you in the side![or]The silver-furred nurse strikes you firmly at the temple, making your ear ring![or]The nurse moves in quick and grinds her body against you as she gives you a steaming kiss![or]The vixen swings wildly, managing to bop you on the nose with her clipboard![or]She sidesteps you as she grabs your upper arm in one paw and spanks you repeatedly with her clipboard![at random]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[BeatTheVixenNurse]"; [ Text or say command used when Monster is defeated.]
+   now attack entry is "[one of]The naughty nurse gives you a hard slap![or]The vixen bonks you on the head with the clipboard she's carrying![or]The silver vixen gives you a scratch with her claws![or]The vixen nurse stomps her foot-paw down onto the top of your foot![or]Lunging at you, the nurse tries to smother you in her ample cleavage![or]The vixen nurse knees you in the side![or]The silver-furred nurse strikes you firmly at the temple, making your ear ring![or]The nurse moves in quick and grinds her body against you as she gives you a steaming kiss![or]The vixen swings wildly, managing to bop you on the nose with her clipboard![or]She sidesteps you as she grabs your upper arm in one paw and spanks you repeatedly with her clipboard![at random]";
+   now defeated entry is "[BeatTheVixenNurse]";
    now victory entry is "[LoseToVixenNurse]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[VixenNurseDesc]"; [ Description of the creature when you encounter it.]
    now face entry is "a vulpine head with a long muzzle and teeth. You have steely-grey eyes and silver fur covers your face"; [ Face description, format as the text "Your face is (your text)."]
@@ -237,32 +237,32 @@ When Play begins:
    now per entry is 12;
    now int entry is 15;
    now cha entry is 18;
-   now sex entry is "Female";	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 36;	[ How many HP has the monster got? ]
-   now lev entry is 4;	[ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-   now wdam entry is 5;	[Amount of Damage monster Does when attacking.]
-   now area entry is "Hospital";	[ Location of monster, in this case the City Hospital]
-   now cocks entry is 0;	[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 0;	[ Length infection will make cock grow to if cocks]
-   now cock width entry is 0;	[ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 4;	[ Number of Breasts infection will give you. ]
-   now breast size entry is 4;	[Size of breasts infection will try to attain ]
-   now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1;	[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;	[ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 5;	[ Width of female sex  infection will try and give you ]
-   now libido entry is 60;	[ Set to zero in this monster to control elsewhere ]
-   now loot entry is "healing booster";	[ Dropped item. Key will be used later ]
-   now lootchance entry is 20;	[ Chance of loot dropping 0-100 ]
+   now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+   now HP entry is 36;
+   now lev entry is 4; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
+   now wdam entry is 5; [Amount of Damage monster Does when attacking.]
+   now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
+   now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+   now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+   now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
+   now breasts entry is 4; [ Number of Breasts infection will give you. ]
+   now breast size entry is 4; [Size of breasts infection will try to attain ]
+   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+   now cunt length entry is 12;
+   now cunt width entry is 5;
+   now libido entry is 60; [ Set to zero in this monster to control elsewhere ]
+   now loot entry is "healing booster"; [ Dropped item. Key will be used later ]
+   now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
    [ These represent the new additions to the table of random critters ]
-   now scale entry is 3;	[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+   now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]curvaceous[or]sexy[or]effeminate[at random]";
-   now type entry is "vulpine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-   now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-   now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-   blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "vixennurse";		[ Row used to designate any special combat features, "default" for standard combat. ]
+   now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+   now magic entry is false;
+   now resbypass entry is false;
+   now non-infectious entry is false;
+   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+   now altcombat entry is "vixennurse"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Table of Critter Combat (continued)
@@ -271,14 +271,14 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 this is the vixhealboost rule:
 	choose row monster from the table of random critters;
-	if monsterhp <= ( hp entry / 4 ) and lootchance entry > 0 and a random chance of 1 in 4 succeeds:	[weak and not used healing booster]
+	if monsterHP <= ( HP entry / 4 ) and lootchance entry > 0 and a random chance of 1 in 4 succeeds:	[weak and not used healing booster]
 		let healed be 25;
-		increase monsterhp by healed;
-		if monsterhp > hp entry:
-			decrease healed by hp entry - monsterhp;
-			now monsterhp is hp entry;
-		say "     The [one of]vixen nurse[or]vulpine nurse[or]silvery vixen[at random] falls back momentarily due to her injuries. She pulls a small syringe filled with blue fluid out and injects it quickly into her [one of]leg[or]thigh[or]arm[or]side[purely at random] before [one of]throwing the empty needle aside[or]tossing the needle away[or]breaking the empty needle on the ground[at random]. As her injuries start to rapidly heal, she then rushes back into the fray to face you again. She has recovered [special-style-1][healed][roman type] hit points.";
-		now lootchance entry is 0;		[used up potential healing booster]
+		increase monsterHP by healed;
+		if monsterHP > HP entry:
+			decrease healed by HP entry - monsterHP;
+			now monsterHP is HP entry;
+		say "     The [one of]vixen nurse[or]vulpine nurse[or]silvery vixen[at random] falls back momentarily due to her injuries. She pulls a small syringe filled with blue fluid out and injects it quickly into her [one of]leg[or]thigh[or]arm[or]side[purely at random] before [one of]throwing the empty needle aside[or]tossing the needle away[or]breaking the empty needle on the ground[at random]. As her injuries start to rapidly heal, she then rushes back into the fray to face you again. She has recovered [special-style-1][healed][roman type] HP.";
+		now lootchance entry is 0; [used up potential healing booster]
 		follow the monster injury rule;
 		say "[Name entry] is [descr].";
 		wait for any key;
@@ -296,7 +296,7 @@ the scent of the healing booster is "The healing booster smells of chemicals and
 
 when play ends:
 	if bodyname of player is "Vixen Nurse":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Falling to the instincts and reprogramming of the infection, you drift off into the city and eventual come to the city hospital. There you are taken in by the silvery vixen nurses of the hospital staff, feeling the urge to work alongside them. They welcome you happily, and lustfully, as do the other denizens of the large medical facility.";
 			if hospquest < 2:
 				if "Sterile" is not listed in feats of player and cunts of player > 0:
@@ -311,7 +311,7 @@ when play ends:
 					say "     On a trip to the beach, you are ambushed by a crew of pirate sharks after the helicopter. Successfully boarding the craft, they disable the pilot and manage to deal with the orderlies only by sheer numbers. They are all dumped overboard into the sea while you are kept as booty. The sharks celebrate that evening with drink, song and sex, all eager to take a turn with you. Being treated by the good doctor for your duties, you resist physically transforming to become another shark, but your mind unravels again. You are remade into a vixen pirate, lover to this band of air pirates.";
 				else:
 					say "     During a mission to an old hotel on the outskirts of the red light district, your team is assaulted by a herd of powerful equines. The ferocious orderlies manage to hold their own, but you are dragged off. The horses spend many weeks trying to turn you into another equine slave for their brothel, but the treatment given to you by the mouse doctor holds enough to keep your body intact. But your mind does not fare as well and succumbs to the constant training they give you, turning you into a slutty, silver fox. You act as their medical staff, helping them with their conversions when needed and the rare injuries that are too much for the nanites. When not performing these infrequent duties, you are there to provide a change of pace to anyone looking for something a little different from the otherwise equine whorehouse.";
-			else if hospquest is 13 and hp of doctor mouse is 1:
+			else if hospquest is 13 and HP of doctor mouse is 1:
 				say "     Driven by your new instincts as a member of the hospital staff, you report back to Dr Mouse. While you only vaguely remember the experiences that lead you to know him, he somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement";
 				if "Sterile" is not listed in feats of player and cunts of player > 0:
 					say ". You birth many bizarre, hybrid creatures from these matings";
@@ -319,7 +319,7 @@ when play ends:
 				if cunts of player > 0:
 					say ". It hurts you the most any time he takes you as a lover to slake his lust upon you. He is particularly cruel at these times, but you want it so badly from him and love it so much when your master fills you with his seed";
 				say ".";
-			else if hospquest is 13 and hp of doctor mouse is 2:
+			else if hospquest is 13 and HP of doctor mouse is 2:
 				say "     The hospital is in disarray when you arrive, more like a stirred up hornets nest than the orderly bee hive you feel it should be. The various factions strike out at each other at times, but cooperate at others. The maternity ward still runs, but the cafeteria is often host to in-fighting over mates.";
 				if intelligence of player >= 20 and charisma of player >= 15 and "Expert Medic" is listed in feats of player:
 					say "     It is only with the coming of the military that control is restored. The united threat of military action unifies the factions, at least temporarily. And you would see that order remain and start taking charge of the groups. Feeling the need to have someone in charge, the other groups begin to respond to your commands, beginning to rely on you to fill that void. Your familiarity and experience in the city helps counter the military incursion. You use your knowledge of the safe paths through the city and its havens to hide to command the medical staff into position over the radio. Using medical and anatomical terminology for your code, the staff understand it intrinsically and can act upon it instantly while the military code-breakers labour over it. The strikes are made with surgical precision, excising key elements from the military supply and support chain within the city until the point that they're driven back from the hospital. With the hospital left alone and a new collection of test subjects, you leave the remaining military forces largely alone.";

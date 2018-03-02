@@ -34,8 +34,8 @@ Instead of resolving a Pigging Out:
 	say "[piggycheck]";
 	if tempnum is 1:
 		say "     Eyeing both her and the food, you lick your lips hungrily. You feel the urge to join her in the restaurant. Besides, wouldn't the experience of eating at the best restaurant in town be better with an attractive date?";
-		say "     [bold type]Join her in the restaurant?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Join her in the restaurant?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -48,7 +48,7 @@ Instead of resolving a Pigging Out:
 				say "     When she's finished cleaning your face, you stuff another large pastry into her mouth and share it with her while kissing. Her plump body ripples with each hard thrust you make into her. You pound into her again and again until finally you climax, shooting your hot seed into her womb, making her squeal again.";
 				say "     Your romp with her continues for several hours. Between gorging and fucking, you feel quite full and satisfied when you both finally part ways.";
 			else:
-				say "     She presses you down to the floor, flattening several soft pastries beneath you. She moves her heavy bulk atop you, bringing her wet and dripping pussy over you face. You moan softly as she presses it to your mouth, smearing her juices onto you, which you quickly start lapping up from her pussy.";
+				say "     She presses you down to the floor, flattening several soft pastries beneath you. She moves her heavy bulk atop you, bringing her wet and dripping pussy over your face. You moan softly as she presses it to your mouth, smearing her juices onto you, which you quickly start lapping up from her pussy.";
 				say "     With her atop you, you barely catch sight of her grabbing a bottle of maple syrup. A few moments later, you feel the cool, sticky fluid flowing down between your legs. She spreads your petals and pours more over them before burying her snout between your thighs and licking hungrily at your sticky puss. You both moan and squeal in pleasure until you climax, adding more hot juices to the sticky mess.";
 				say "     She pauses to stuff several more pastries into her mouth, gobbling them down. She ends up dropping crumbs onto your sticky groin where they cling to the syrupy, slobbery film of your juices. After her quick gorging, she climbs off of you and goes to the back and into the food locker. At first you think she's going to come out with more food for you both, but when she comes out with only a cucumber and a grin, you realize she has something else in mind.";
 				say "     She plops herself down onto the messy floor, seating herself between your legs. Stroking your thigh, she moves her piggy hand up to your wet, messy cunny and spreads your lips. With a grin, she sinks the long, slender cucumber into you, making you squeal. She works the vegetable in and out several times before she lays back, one leg over yours and the other under. With considerable labour, she moves her heavy bulk closer, taking the other half of the cuke into her pussy.";
@@ -56,17 +56,16 @@ Instead of resolving a Pigging Out:
 				say "     Your romp with her continues for several hours. Between gorging and fucking, you feel quite full and satisfied when you both finally part ways, with you munching on your half of the sticky cucumber and she doing the same with hers.";
 			infect "Messy Pig";
 			infect "Messy Pig";
-			decrease hunger of player by 30;
-			if hunger of player is less than 0, now hunger of player is 0;
+			PlayerEat 30;
 			decrease libido of player by 18;
 			if libido of player < 0, now libido of player is 0;
-			decrease humanity of player by 10;
+			SanLoss 10;
 			increase score by 25;
 			now restaurantpig is 1;
 		else:
 			say "     You resist the urge to join her in the messy feast, but you would still like to opportunity to search the place for supplies.";
-			say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -87,8 +86,8 @@ Instead of resolving a Pigging Out:
 				increase score by 1;
 	else:
 		say "     You look at the disgusting mess that she's already made of the place and feel your hopes of some fine dining dashed. You would still like to opportunity to search the place for supplies.";
-		say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -141,8 +140,8 @@ when play begins:
 
 Instead of resolving a Small Park:
 	say "     While searching the area, you come across a small park. It is only about a hundred meters in each direction. From a distance, you spot what appear to be discarded piles of clothes, cum puddles and other signs of citizens being transformed. You don't spot any danger at the moment, so perhaps it's safe.";
-	say "     [bold type]Shall you enter the park and investigate further?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you enter the park and investigate further?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
@@ -187,8 +186,8 @@ to say dogparksearch:
 		say "[doggyinfect]";
 	if T is 9:
 		say "     You look around the park and are fortunately not spotted by any monsters. You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. While you walk through the park, you pass near the large tree at the center of the park and the dog smell is the strongest here. It is very thick in the air around it and you can see the trunk discoloured with markings and thick cum splashes. Despite its origins, the scent is very attractive, drawing you in.";
-		say "     [bold type]Do you want to examine it more closely?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Do you want to examine it more closely?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
@@ -217,7 +216,7 @@ to say dogparksearch:
 
 
 to say doggyinfect:
-	let tempnum  be a random number between 1 and 11; [adjust this for new dogs]
+	let tempnum be a random number between 1 and 11; [adjust this for new dogs]
 	if tempnum is 1:
 		infect "Female Husky";
 	else if tempnum is 2:
@@ -317,8 +316,8 @@ Instead of resolving a Veterinary Hospital:
 		now lust of Medea is 2;
 	else:
 		say "     You find a veterinary hospital at the ground level of one of the high rises. You don't hear any monsters within and consider entering. There could be some useful supplies within, but it is an animal hospital, so it does seem a somewhat risky venture.";
-		say "     [bold type]Shall you enter?[line break][roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you enter?[line break][roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
@@ -492,11 +491,11 @@ Instead of resolving a Cameo:
 			if bonus > 12, now bonus is 12;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
-			if bonus + dice is greater than 15:
+			if bonus + dice > 15:
 				say "     You manage to avoid the sneak attack, as the dog leaps past you and into the company logo, mashing its whole head into a slobbery kiss on the face of the store's namesake heroine. It flows and reshapes itself quickly, forming its tail into a new head and swapping its front and back legs around. This startling change shocks you long enough for it to complete the reversal and start snapping at you before you can take flight.";
 			else:
 				say "     The chocolate dog slams itself into you, flowing itself across your body. It squeezes around your chest, pushing out your breath even as its flowing body starts teasing at your nipples and groin. As you are forced to exhale, the chocolate canine presses its gooey face to yours, pushing its chocolatey tongue into your mouth and humping against your body. As its arousing taste fills your mouth, you moan softly and find yourself giving in before you snap back control of yourself and push the semi-solid dog back and off of you. It growls in frustration at you denying its lustful urges and charges to attack. But its assault on you has weakened you further as well as gotten you more aroused. (15 dmg taken)[line break]";
-				decrease hp of player by 15;
+				decrease HP of player by 15;
 				increase libido of player by 12;
 			now choclabfight is 0;
 			challenge "Chocolate Lab";
@@ -504,22 +503,20 @@ Instead of resolving a Cameo:
 				say "     Having defeated the last of them, you pant for breath as the chocolate dogs slink off like beaten curs. They press themselves to the ground so much that their legs melt away beneath them and flow out as dog-shaped blobs. With them dispatched, you are free to look around the remains of the store. It seems that much of the merchandise has already been consumed by the dogs or tainted by them during their lustful gorging. The boxes of chocolates and cameos on display at the back are thankfully still good, so you snatch them up and exit the store before the strong scent of chocolates and sex arouses you into sampling from the tainted wares.";
 				if "Junk Food Junky" is listed in feats of player:
 					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. Your junk food fueled metabolism finds the chocolates quite satisfying and you still have enough chocolates and almond bark to be equivalent to roughly two more snacks.";
-					decrease hunger of player by 15;
-					if hunger of player is less than 0, now hunger of player is 0;
-					if morale of player is less than 0:
+					PlayerEat 15;
+					if morale of player < 0:
 						increase morale of player by 36;
-						if morale of player is greater than 0, now morale of player is 0;
+						if morale of player > 0, now morale of player is 0;
 						say "You feel much better after having your snack.";
 					increase morale of player by 1;
 					increase carried of chips by 2;
 					increase score by 15;
 				else:
 					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. While not very nutritious, you still have enough chocolates and almond bark to be equivalent to roughly one meal.";
-					decrease hunger of player by 6;
-					if hunger of player is less than 0, now hunger of player is 0;
-					if morale of player is less than 0:
+					PlayerEat 6;
+					if morale of player < 0:
 						increase morale of player by 15;
-						if morale of player is greater than 0, now morale of player is 0;
+						if morale of player > 0, now morale of player is 0;
 						say "You feel better having eaten.";
 					increase carried of food by 1;
 					increase score by 5;

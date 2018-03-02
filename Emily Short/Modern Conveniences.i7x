@@ -15,7 +15,7 @@ Inclusion relates a thing (called X) to a thing (called Y) when Y is part of X. 
 A stove is a kind of supporter. It is usually scenery.
 An oven is a kind of container. An oven is usually openable and closed. One oven is a part of every stove.
 A switch is a kind of device. A switch is part of every stove. A switch is part of every oven.
-Understand "[something related by reversed incorporation] switch" as a switch. 
+Understand "[something related by reversed incorporation] switch" as a switch.
 
 Setting action variables for opening a stove (this is the stove-opening rule):
 	let relevant oven be a random oven which is part of the noun;
@@ -90,10 +90,10 @@ Instead of washing the player, try bathing.
 
 Check washing (this is the restrict washing to the proximity of sinks rule):
 	if the player can touch a sink, do nothing;
-	otherwise say "This isn't the place." instead.
+	else say "This isn't the place." instead.
 
 Check washing (this is the block washing rule):
-	say "It doesn't seem worth the bother." instead. 
+	say "It doesn't seem worth the bother." instead.
 
 Modern Conveniences ends here.
 
@@ -111,7 +111,7 @@ applying the description to the class as a whole since there will only be one in
 
 In a game that features multiple bathrooms and kitchens, this won't be enough; we might instead give the items descriptions that check their location (if there are only a couple of each):
 
-	The description of a stove is "[if in Industrial Kitchen]A massive stainless steel stove-top with six burners[otherwise]Your standard four-burner item[end if]."
+	The description of a stove is "[if in Industrial Kitchen]A massive stainless steel stove-top with six burners[else]Your standard four-burner item[end if]."
 
 or create an
 
@@ -143,4 +143,4 @@ Example: * Our House - A minimalist house consisting of two rooms.
 
 	The description of a refrigerator is "It is baby blue and has the contours of a 50's chevy. One of these days it really will break down, but it's been serving your family faithfully since your grandmother's honeymoon."
 
-	Test me with "x refrigerator / open fridge / x freezer / look in freezer / open freezer / turn on stove / turn on oven / x oven switch / turn off oven switch / turn off stove switch / turn on taps / x sink / w / x sink / turn on sink / take bath / use toilet". 
+	Test me with "x refrigerator / open fridge / x freezer / look in freezer / open freezer / turn on stove / turn on oven / x oven switch / turn off oven switch / turn off stove switch / turn on taps / x sink / w / x sink / turn on sink / take bath / use toilet".

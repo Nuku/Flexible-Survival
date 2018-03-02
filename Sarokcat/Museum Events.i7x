@@ -90,18 +90,18 @@ Instead of Resolving a Missing lamp:
 			say "     Looking at what lays inside the case, you're stunned by the beauty and magnificence of the treasure inside. A shining metal scarab sits inside the broken case, gleaming bright in the dim light of the Arabian display. It looks to be constructed of some beautiful green metal and embedded with gemstones along the scarab's body. This has to be the object that Amuran needs; there's no way that such a beautiful object isn't of divine make. Carefully reaching in and grabbing the shining scarab, you're immediately overwhelmed with the sheer amount of power this object contains; the powers of the gods are strong indeed! Quickly slipping the godly conduit into your bag, you turn around and prepare to make your way out.";
 			now Missing lamp is resolved;
 			increase carried of jade scarab by 1;
-		otherwise:
+		else:
 			say "     Seeing as there is nothing you can salvage, you move past the broken display case and continue on your way. ";
 			now LampVariable is 1;
-	otherwise:
+	else:
 		say "     Once again stumbling upon the display cave full of treasures, you take a moment to examine the treasures the museum had on display in this exhibit. While they do look pretty set up like this, there's nothing here that could really help you out.";
 		if AmuranAwoken is 2:
 			say "     A glint in the dim light catches your eye, however; there seems to be something inside the broken case! Whatever is in there definitely wasn't there the last time you were here. Jumping over the display rope and carefully avoiding the spilt treasures and broken glass, your curiosity easily gets the better of you.";
 			say "     Looking at what lays inside the case, you're stunned by the beauty and magnificence of the treasure inside. A shining metal scarab sits inside the broken case, gleaming bright in the dim light of the Arabian display. It looks to be constructed of some beautiful green metal and embedded with gemstones along the scarab's body. This has to be the object that Amuran needs; there's no way that such a beautiful object isn't of divine make. Carefully reaching in and grabbing the shining scarab, you're immediately overwhelmed with the sheer amount of power this object contains; the powers of the gods are strong indeed! Quickly slipping the godly conduit into your bag, you turn around and prepare to make your way out.";
 			now Missing lamp is resolved;
 			increase carried of jade scarab by 1;
-		otherwise:
-			say "    Deciding to move on, you put the exhibit out of your head as you continue forward.";
+		else:
+			say "     Deciding to move on, you put the exhibit out of your head as you continue forward.";
 
 
 

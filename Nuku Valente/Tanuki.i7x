@@ -10,12 +10,16 @@ Northwest of Park Trail is Shinto Shrine.
 
 instead of sniffing Shinto Shrine:
 	say "The shrine smells faintly of cherry blossoms and spring. The scent puts you at ease.";
-	
+
 The invent of Shinto Shrine is { "tanuki coin" }.
 
 SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
 Shinto Shrine has a Grab Object called Demand.
 The demand of Shinto Shrine is usually journal.
+
+tanukiList is a list of objects that varies.
+the tanukiList is {medkit, dirty water, water bottle, dog milk, soda, chips, glob of goo, food, gryphon milk, distilled milk, libido pill, acid milk, batcubus milk, cheetah milk, cow milk, margay milk, blue gel, cheese, musky cock flower, lembas bread, mammoth jerky, pink gel, pita bread, purple gel, psionic egg, psionic larva, skunk goo, sticky sushi, tentacle tip, awesome fruit, awesomer fruit, awesomest fruit, wyvern goop, centaur cum, earthen seed, demon seed, fennec semen, gecko cum, hawkman seed, orc cum, gryphon cum, pewter seed, rhino cum, sea dragon cum, silver semen, smilodon cum, wolf cum, orc femcum, mead horn, orc brew, pony cider, satyr wine, Satyress Wine, egg nog, sports drink, chocolate milk, tasty peach, birth control pill, fertile pill, pepperspray, glowing mushroom, estosterogen pill, eagle feather, honeycomb, behemoth horn, testosterone pill, centaur hair, corota venom, tuft of chin fur, dolphin milk, dryad cum, ebonflame scale, elk antler, lucky horseshoe, glowing ember, foul scuttler spit, red fur, hermaid kelp, libido suppressant, stray links, Spotted fur, peacock feather, nullifying powder, cock pill, healing booster, Fish, Pegasus Quill, pirate bandana, tousky quill, tainted wool, Tiger patch, Chipped tooth, spider webbing, spidertaur hair, pixie dust, crushed candies, estrogen pill, dragon scale, dragon hair, zebra fur, lizard juice}.
+demandIndex is a number that varies.
 
 ringing is an action applying to nothing.
 
@@ -34,13 +38,14 @@ Instead of taking the donation box:
 
 check ringing:
 	if the player is not in Shinto Shrine, say "I see nothing to ring here." instead;
-	if SatisfiedTanuki is less than 1, say "Nothing happens." instead;
+	if SatisfiedTanuki < 1, say "Nothing happens." instead;
 
 Carry out ringing:
 	say "You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
 	say "A spirit takes form before you, looking like some kind of strange raccoon like being. It studies you a moment before it speaks:";
 	if the demand of the Shinto Shrine is journal or demand of Shinto Shrine is gill fruit:
-		now the demand of Shinto Shrine is a random temporary grab object;
+		now demandIndex is a random number from 1 to the number of entries in tanukiList;
+		now the demand of Shinto Shrine is entry demandIndex of tanukiList;
 	say "'Bring me a [demand of shrine]! [bold type]sacrifice[roman type] it before me and I will be appeased!'";
 	say "With this said, the spirit grabs between its legs and pulls out its scrotum in a great furry blanket, curling up into it before vanishing in a puff.";
 
@@ -61,7 +66,7 @@ carry out sacrificing:
 	if SatisfiedTanuki is 0:
 		extend game by 40;
 		say "The spirit appears just in front of your nose, grinning. Its teeth sink into the tender flesh of your nose in a sharp bit of pain that is fortunately brief. 'Persistent mortal, I gift you for your sacrifices. You are now as a child to me. Simply concentrate on a [bold type]leaf[roman type] and you can take your, new, true form.' With that said, the spirit folds up on itself and is soon gone.";
-	otherwise:
+	else:
 		now the demand of the Shinto Shrine is journal;
 		try ringing;
 
@@ -70,7 +75,7 @@ leafing is an action applying to nothing.
 understand "leaf" as leafing.
 
 check leafing:
-	if SatisfiedTanuki is greater than 0, say "What?" instead;
+	if SatisfiedTanuki > 0, say "What?" instead;
 
 
 carry out leafing:
@@ -80,7 +85,7 @@ carry out leafing:
 		if name entry is "Tanuki":
 			now monster is y;
 			break;
-	now non-infectious entry is false;	[swap to allow infection...]
+	now non-infectious entry is false; [swap to allow infection...]
 	infect;
 	infect;
 	infect;
@@ -88,7 +93,7 @@ carry out leafing:
 	infect;
 	infect;
 	infect;
-	now non-infectious entry is true;	[...then close to prevent random infection]
+	now non-infectious entry is true; [...then close to prevent random infection]
 	say "With the changes complete, you feel you could [bold type]expand balls[roman type] and [bold type]contract balls[roman type] and also grow or contract your cock or breasts!";
 
 ballgrowing is an action applying to nothing.
@@ -115,13 +120,13 @@ check ballshrinking:
 
 carry out ballshrinking:
 	decrease cock width of player by a random number between 1 and 5;
-	if cock width of player is less than 1:
-		say "You have no more balls!  Your [if cocks of player > 1]cocks go[otherwise]cock goes[end if] away as well for now!";
+	if cock width of player < 1:
+		say "You have no more balls!  Your [if cocks of player > 1]cocks go[else]cock goes[end if] away as well for now!";
 		now cocks of player is 0;
 		now cock length of player is 0;
 		now cock width of player is 0;
 		follow the cock descr rule;
-	otherwise:
+	else:
 		say "Your tanuki magic surges down into your balls as they begin to shrink rapidly! Your balls feel like they have become [ball size]!";
 
 cockgrowing is an action applying to nothing.
@@ -149,13 +154,13 @@ check cockshrinking:
 
 carry out cockshrinking:
 	decrease cock length of player by a random number between 1 and 5;
-	if cock length of player is less than 1:
+	if cock length of player < 1:
 		now cock length of player is 0;
 		now cock width of player is 0;
 		now cocks of player is 0;
 		say "You have no more cock!";
 		follow the cock descr rule;
-	otherwise:
+	else:
 		follow the cock descr rule;
 		say "Your tanuki magic surges down into your male meat as it begin to shrink rapidly! Your [descr] [cock of player] cock settles with a last twitch!";
 
@@ -169,7 +174,7 @@ check breastgrowing:
 carry out breastgrowing:
 	if breasts of player is 0, now breasts of player is 2;
 	increase breast size of player by a random number between 1 and 2;
-	if breast size of player is greater than 26, now breast size of player is 26;
+	if breast size of player > 26, now breast size of player is 26;
 	follow the breast descr rule;
 	say "Your tanuki magic surges up into your chest as it begins to swell rapidly, leaving you with [descr] breasts!";
 
@@ -182,30 +187,29 @@ check breastshrinking:
 
 carry out breastshrinking:
 	decrease breast size of player by a random number between 1 and 2;
-	if breast size of player is less than 1:
+	if breast size of player < 1:
 		now breast size of player is 0;
 		say "You have no more breasts than nipples!";
 		follow the breast descr rule;
-	otherwise:
+	else:
 		follow the breast descr rule;
 		say "Your tanuki magic surges up into your chest as it begin to shrink rapidly, leaving you with [descr] breasts!";
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Tanuki"; [Name of your new Monster]
 	now attack entry is "";
 	now defeated entry is "";
-	now victory entry is  "";
+	now victory entry is "";
 	now desc entry is "";[ Description of the creature when you encounter it.]
-	now face entry is "sleek muzzled with a raccoon's mask and large expressive ears over your";[ Face description, format as the text "Your face is (your text)"]
-	now body entry is "somewhat pudgy and oddly animal like, like a cartoon rendition of some kind of raccoon perhaps.";[ Body Description, format as the text "Your Body is (your text)"]
+	now face entry is "sleek muzzled with a raccoon's mask and set of large expressive ears";[ Face description, format as the text "Your face is (your text)"]
+	now body entry is "somewhat pudgy and oddly animal-like, like a cartoon rendition of some kind of raccoon perhaps.";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]tanuki coloured[or]stripe furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "A thick and rounded tail sways behind you with black stripes along its length, covered in [skin of player] texture.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheathed[or]size changing[or]knotted[at random]";[- Cock Description, format as you have a "size" (your text) cock-]
@@ -220,37 +224,36 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 19;
-	now sex entry is "nochange";     [- Defines which sex the infection will try and make you. current options are "Male" "Female" "Both"-]
-	now hp entry is 64;            [- How many HP has the monster got? -]
-	now lev entry is 5;            [- Level of the Monster, you get this much hp if you win, or this much hp halved if you loose -]
-	now wdam entry is 10;            [-Amount of Damage monster Does when attacking.-]
-	now area entry is "Nowhere";    [- Current options are "Outside" and "Mall"  Case sensitive-]
-	now cocks entry is 0;            [- How many cocks will the infection try and cause if sex is "Male" or "Both"-]
-	now cock length entry is 0;        [- Length infection will make cock grow to if cocks-]
-	now cock width entry is 0;        [- Size of balls apparently ;) sneaky Nuku-]
-	now breasts entry is 2;            [- Number of Breasts infection will give you. -]
-	now breast size entry is 3;        [-Size of breasts infection will try to attain -]
-	now male breast size entry is 0;    [- Breast size for if Sex="Male", usually zero. -]
-	now cunts entry is 1;            [- if sex = "Female or both", indicates the number of female sexes infection will grant you.-]
-	now cunt length entry is 14;        [- Length of female sex  infection will attempt to give you. -]
-	now cunt width entry is 5;        [- Width of female sex  infection will try and give you -]
-	now libido entry is 10;            [- Amount player Libido will go up if defeated -]
-	now loot entry is "";            [- Loot monster drops, -]
-	now lootchance entry is 0;        [- Chance of loot dropping 0-100 -]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "nochange"; [- Defines which sex the infection will try and make you. current options are "Male" "Female" "Both"-]
+	now HP entry is 64; [- How many HP has the monster got? -]
+	now lev entry is 5; [- Level of the Monster, you get this much HP if you win, or this much HP halved if you loose -]
+	now wdam entry is 10; [-Amount of Damage monster Does when attacking.-]
+	now area entry is "Nowhere"; [- Current options are "Outside" and "Mall"  Case sensitive-]
+	now cocks entry is 0; [- How many cocks will the infection try and cause if sex is "Male" or "Both"-]
+	now cock length entry is 0; [- Length infection will make cock grow to if cocks-]
+	now cock width entry is 0; [- Size of balls apparently ;) sneaky Nuku-]
+	now breasts entry is 2; [- Number of Breasts infection will give you. -]
+	now breast size entry is 3; [-Size of breasts infection will try to attain -]
+	now male breast size entry is 0; [- Breast size for if Sex="Male", usually zero. -]
+	now cunts entry is 1; [- if sex = "Female or both", indicates the number of female sexes infection will grant you.-]
+	now cunt length entry is 14; [- Length of female sex infection will attempt to give you. -]
+	now cunt width entry is 5; [- Width of female sex infection will try and give you -]
+	now libido entry is 10; [- Amount player Libido will go up if defeated -]
+	now loot entry is ""; [- Loot monster drops, -]
+	now lootchance entry is 0; [- Chance of loot dropping 0-100 -]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]chubby[or]fat[at random]";
 	now type entry is "[one of]raccoon[or]tanuki[at random]";
-	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is true;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is true;
+	now resbypass entry is true; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if SatisfiedTanuki is 0:
 		say "Your tanuki blood serves you well. They say Tanuki are shapeshifters as well, but you never quite get past size shifting. A handy enough trick on its own? The ability to at least transition from tanuki form to human is quite useful at least!";
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			increase humanity of player by 20;
 			say "Your supernatural heritage burns off the worst of your insanity, granting you clarity!";
 
@@ -262,7 +265,7 @@ name	desc	weight	object
 
 to say tancoindesc:
 	say "     A strange, solid gold coin. It's fairly heavy and quite worn. On one side there appears to be a leaf, while on the other an eastern dragon, which circles around the outer edge of its face, with its tail curving at the bottem to go straight up and occupy the center. It's warm to the touch, but doesn't feel particularly infectious.";
-	
+
 the scent of tanuki coin is "It has a benign, metallic smell about it.";
 
 tanuki coin is a grab object. It is part of the player. It is fast.  It is not temporary.  The usedesc of tanuki coin is "[usetancoin]".
@@ -273,14 +276,14 @@ to say usetancoin:
 		say "... It lands leaf-side up";
 		if cocks of player is 0 or (cocks of player > 0 and cockname of player is not listed in infections of internallist):
 			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
-		otherwise:
+		else:
 			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have grown back, in spite of your previously internal anatomy!";
 		now internalbypass is true;
-	otherwise:
+	else:
 		say "... It lands dragon-side up";
 		if cocks of player is 0 or (cocks of player > 0 and cockname of player is not listed in infections of internallist):
 			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
-		otherwise:
+		else:
 			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have disappeared, receding once more in compliance with your internal infection!";
 		now internalbypass is false;
 

@@ -30,7 +30,7 @@ Instead of Resolving a Electric shockers:
 		now electric prod is fast;
 		increase eprecharge by 1;
 		say "     Finding the shack your electric weapon originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon. Glancing around, you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods. You are eventually able to cannibalize one of them in order to replace the burnt out parts in your own, but it takes a decent amount of time to perform the jury-rigged repair. At the end of it, you once more have a semi-functional electric prod[if eprecharge is 1], and while you aren't sure how much longer it can last, you are at least pretty sure that you can return here and fix it again should that happen[else if eprecharge is 2], but sadly doubt you'll be able to repair it again from the few meager parts and batteries remaining[else], and while it could fritz out on you at any moment, you are hopefully that you can return here and fix it again if you need to[end if].";
-		now eptarget is ( a random number between 5 and 10 ) - eprecharge;	[repairs are increasingly less effective]
+		now eptarget is ( a random number between 5 and 10 ) - eprecharge; [repairs are increasingly less effective]
 		if eprecharge >= 2:
 			now Electric Shockers is resolved;
 		now Electricprodstatus is 2;
@@ -55,7 +55,7 @@ electric prod is a grab object. It is part of the player. It is fast. It is not 
 the scent of the electric prod is "The electric stun rod smells faintly of ozone.".
 
 to say useelectricprod:
-	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
+	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
 	if inafight is 1:
 		if eprodused is true:
 			say "You've already successfully used the prod once this battle. It needs time to cool down and recharge the capacitors.";
@@ -66,14 +66,14 @@ to say useelectricprod:
 			let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
 			let the combat bonus be attack bonus - defense bonus;
 			if hardmode is true:
-				if the combat bonus is greater than 16:
+				if the combat bonus > 16:
 					now combat bonus is 16;
-				else if the combat bonus is less than -25:
+				else if the combat bonus < -25:
 					now combat bonus is -25;
 			else:
-				if the combat bonus is greater than 19:
+				if the combat bonus > 19:
 					now combat bonus is 19;
-				else if the combat bonus is less than -22:
+				else if the combat bonus < -22:
 					now combat bonus is -22;
 			let the roll be a random number from 1 to 50;
 			say "[line break]You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
@@ -83,13 +83,13 @@ to say useelectricprod:
 				now eprodused is true;
 				decrease mondodgebonus by 2;
 				decrease monhitbonus by 2;
-				let hpdamage be a random number between 30 and 50;
+				let HPdamage be a random number between 30 and 50;
 				let lvlresist be lev entry / 4;
 				if lvlresist > 5, now lvlresist is 5;
-				decrease hpdamage by lvlresist;
-				decrease hpdamage by eprecharge;
-				decrease monsterhp by ( hpdamage * monsterhp ) / 100;
-				say ". Enemy hp dropped by [special-style-2][hpdamage]%[roman type]!";
+				decrease HPdamage by lvlresist;
+				decrease HPdamage by eprecharge;
+				decrease monsterHP by ( HPdamage * monsterHP ) / 100;
+				say ". Enemy HP dropped by [special-style-2][HPdamage]%[roman type]!";
 				if eptarget is 0:
 					say "Your electric prod is now [if eprecharge >= 2]permanently dead and you toss it aside[else]dead until you can repair it[end if].";
 					now Electricprodstatus is 3;
@@ -99,13 +99,13 @@ to say useelectricprod:
 				decrease eptarget by 1;
 				say "Hit: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at the [name entry]. Getting a glancing blow, the electricity shocks it and makes it stagger back, taking some of the fight out of it. Ozone hangs in the air and your electric shocker [if eptarget is 0]sputters and sparks, burning out with the smell of magic smoke[else]is overheated. It will be a while before you can use it again[end if]";
 				now eprodused is true;
-				let hpdamage be a random number between 20 and 40;
+				let HPdamage be a random number between 20 and 40;
 				let lvlresist be lev entry / 3;
 				if lvlresist > 5, now lvlresist is 5;
-				decrease hpdamage by lvlresist;
-				decrease hpdamage by eprecharge;
-				decrease monsterhp by ( hpdamage * monsterhp ) / 100;
-				say ". Enemy hp dropped by [special-style-2][hpdamage]%[roman type]!";
+				decrease HPdamage by lvlresist;
+				decrease HPdamage by eprecharge;
+				decrease monsterHP by ( HPdamage * monsterHP ) / 100;
+				say ". Enemy HP dropped by [special-style-2][HPdamage]%[roman type]!";
 				if eptarget is 0:
 					say "Your electric prod is now [if eprecharge >= 2]permanently dead and you toss it aside[else]dead until you can repair it[end if].";
 					now Electricprodstatus is 3;
@@ -152,10 +152,10 @@ Instead of Resolving a Electric shockers:
 		say "Finding the shack your electric weapon originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon. Glancing around, you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods. You are eventually able to cannibalize one of them in order to replace the burnt out parts in your own, but it takes a decent amount of time to perform the jury-rigged repair. At the end of it, you once more have a semi-functional electric prod[if eprecharge is 2], and while it could still fritz out on you at any moment, you are at least pretty sure that you can return here and fix it again should that happen.[else if eprecharge is 8], but sadly doubt you'll be able to repair it again from the few meager parts and batteries remaining.[else], and while it could fritz out on you at any moment, you are hopefully that you can return here and fix it again if you need to.[end if]";
 		increase carried of electric prod by 1;
 		now epcountdown is 0;
-		now eptarget is a random number between 9 and ( 27 - eprecharge);	[repairs are increasingly less effective]
+		now eptarget is a random number between 9 and ( 27 - eprecharge); [repairs are increasingly less effective]
 		if eprecharge >= 4:
 			now Electric Shockers is resolved;
-		now Electricprodstatus is 2;		
+		now Electricprodstatus is 2;
 
 
 Table of Game Objects (continued)

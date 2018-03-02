@@ -35,7 +35,7 @@ Instead of resolving Lost house cat:
 				if the number of filled rows in table of itemselection is 1:
 					choose row 1 in table of itemselection;
 					now chosenmilk is object entry;
-				otherwise:
+				else:
 					sort table of itemselection in object order;
 					say "Which milk would you prefer to use? (no different results)[line break]";
 					repeat with y running from 1 to number of filled rows in table of itemselection:
@@ -48,7 +48,7 @@ Instead of resolving Lost house cat:
 						if calcnumber > 0 and calcnumber <= number of filled rows in table of itemselection:
 							choose row calcnumber in table of itemselection;
 							now chosenmilk is object entry;
-						otherwise if calcnumber is 0:
+						else if calcnumber is 0:
 							now chosenmilk is journal;
 				if chosenmilk is not journal:
 					say "Pulling out some of the milk you found earlier, you manage to find a small container to pour a little bit of it into. Setting the container down just outside the cat's narrow hiding place, you sit back and try to look nonthreatening as you wait. Slowly getting used to your presence, the cat eventually slips out of hiding, its whiskers twitching as it follows its nose over to the milk, eyeing you warily while it slowly begins to drink. You can almost hear it purr from where you are sitting as it enjoys the taste of the milk.";
@@ -56,26 +56,26 @@ Instead of resolving Lost house cat:
 					say "Having finished the milk, the cat looks up at you as if to see if you have any more, moving a bit closer as it does so. You cautiously extend your hand to it, which it thoroughly sniffs with its soft nose before sneezing. Apparently reaching some decision about you, the cat then walks right up to where you are sitting and begins rubbing itself against your legs. You begin stroking its fur as it does, managing to get the worst of the dirt and grime off of it before it gets tired of being petted and begins to examine your pack for signs of more milk. Stretching as you sit up, you are surprised when you look around and realize how much time has passed while you took care of the little cat. Deciding you should be heading back, you realize after a few steps that you seem to have a feline following you, but after thinking about it a second, you realize that the little cat probably wouldn't last much longer out here on the streets alone. You let the little house cat follow you all the way back to the library.";
 					delete chosenmilk;
 					now house cat is tamed;
-					say "(The house cat is now tamed! You can make it your active pet by typing [bold type][link]pet house cat[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+					say "(The house cat is now tamed! You can make it your active pet by typing [bold type][link]pet house cat[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 					now Lost house cat is resolved;
-				otherwise:
+				else:
 					say "Looking over your supplies, you decide you'd rather not part with the collected milk in the end. Wanting to keep your hard-earned supplies, you decide the cat will just have to fend for itself.";
 					now Lost house cat is resolved;
-			otherwise:
+			else:
 				say "Deciding to keep hold of your hard-earned supplies instead, you leave the cat alone and resolve not to stop by here again.";
 				now Lost house cat is resolved;
-		otherwise:
+		else:
 			say "Checking through your bag with the cat watching your every move, you don't seem to have anything that you think might tempt the cat out, and after a little bit of trying to coax it out anyways, you reluctantly give up and leave the alleyway and the cat alone. You resolve to come back after finding something the cat might like, perhaps some nice milk from one of the gryphons you have seen flying around town?";
-	otherwise:
+	else:
 		say "Deciding that with the city in its current state, chasing small furry things down dark alleyways with no idea what you will find at the end of them is probably the height of stupidity. You put the encounter out of your mind and continue searching the city for things of use instead.";
 	if a random chance of 1 in 2 succeeds, mallrecall;
 
 
 when play ends:
 	if house cat is tamed:
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "The house cat stays with you even after you surrender fully to the infection, its body seeming almost to become slightly more human-like as yours becomes more feral. While life near you is definitely still dangerous and rough, the little cat almost seems to thrive on the challenge and excitement this presents it. And even though the little cat teases and mocks you occasionally as cats tend to do, you retain enough of your old fondness for the little creature that you allow it its liberties.";
-		otherwise:
+		else:
 			say "Back in the outside world, the cat you found in that strange city seems to enjoy following you around and proves to be a nice companion to have around when he isn't wandering the streets at night with other cats. He seems mostly unaffected by the nanites that infested the city, although you swear he seems much smarter than normal cats, and you even think you have seen him using keys and manipulating objects with his paws on occasion. At one point he seems to take a strong fancy to one of your nearby neighbors, as she lavishes him with attention every time she gets a chance it is obvious she returns his affections. About a month or so later after a long night out your little house cat brings home a finely marked lady cat, and under the influence of his stare you take her in to care for as well. A few days later you find that the neighbor your cat was so fond of seems to have gone missing entirely, though there are signs that a few cats got into her apartment recently. Your little house cat stares at you innocently as you look at him and his fine new lady suspiciously, realizing the new cat was surprisingly comfortable with you and knew the layout of your place immediately. Still with no proof one way or another, you take care of your little cat and his obviously freshly-pregnant lady friend. Though you find yourself wondering sometimes just what gifts the nanite-laced city left your cat, as well as just what all he does wandering about the streets at night that he always seems so smug in the morning... you have seen more cats around lately. Mostly though, you find yourself wondering what you are going to be doing with his impending kittens, and if they will inherit whatever abilities he has gained...";
 
 Kitty Cat ends here.

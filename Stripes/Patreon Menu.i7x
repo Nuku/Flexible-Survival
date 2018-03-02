@@ -24,18 +24,18 @@ carry out supersponsor:
 		if "Sanity Saver" is listed in feats of player, now sanitysave is 1;
 		say "[bold type]Patreon Cheats:[roman type][line break]";
 		say "- Improvements -[line break]";
-		say "[if level of player < 12][link](1) Jump to lvl 12[as]1[end link] - Available[otherwise](1) Jump to lvl 12 - Inactive[end if][line break]";
-		say "[if ssmb is true](2) Maintenance boost - Active[otherwise][link](2) Maintenance boost[as]2[end link] - Inactive[end if][line break]";
+		say "[if level of player < 12][link](1) Jump to lvl 12[as]1[end link] - Available[else](1) Jump to lvl 12 - Inactive[end if][line break]";
+		say "[if ssmb is true](2) Maintenance boost - Active[else][link](2) Maintenance boost[as]2[end link] - Inactive[end if][line break]";
 		say "[link](3) Pet trainer[as]3[end link] - Reusable[line break]";
-		say "[if ssxpa is true](4) Experience accelerator - Active[otherwise][link](4) Experience accelerator[as]4[end link] - Inactive[end if][line break]";
+		say "[if ssxpa is true](4) Experience accelerator - Active[else][link](4) Experience accelerator[as]4[end link] - Inactive[end if][line break]";
 		say "- Stuff -[line break]";
-		say "[link](5) Food/Drink stash[as]5[end link] - [if ssstash > 0]Available[otherwise]Empty[end if][line break]";
-		say "[if ssgbii is true](6) Grab bag - Taken[otherwise][link](6) Grab bag[as]6[end link] of infected items - Available[end if][line break]";
-		say "[if ssgpd is true](7) Purple dildo club - Taken[otherwise][link](7) Purple dildo club[as]7[end link] - Available[end if][line break]";
-		say "[if ssbpg is true](8) Banana peel gun - Taken[otherwise][link](8) Banana peel gun[as]8[end link] - Available[end if][line break]";
-		say "[if sshh is true](9) Hard hat - Taken[otherwise][link](9) Hard hat[as]9[end link] - Available[end if][line break]";
-		say "[if ssos is true](10) Orange shield - Taken[otherwise][link](10) Orange shield[as]10[end link] - Available[end if][line break]";
-		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][otherwise][link](11) Sanity Saver[as]11[end link] - Available[end if][line break]";
+		say "[link](5) Food/Drink stash[as]5[end link] - [if ssstash > 0]Available[else]Empty[end if][line break]";
+		say "[if ssgbii is true](6) Grab bag - Taken[else][link](6) Grab bag[as]6[end link] of infected items - Available[end if][line break]";
+		say "[if ssgpd is true](7) Purple dildo club - Taken[else][link](7) Purple dildo club[as]7[end link] - Available[end if][line break]";
+		say "[if ssbpg is true](8) Banana peel gun - Taken[else][link](8) Banana peel gun[as]8[end link] - Available[end if][line break]";
+		say "[if sshh is true](9) Hard hat - Taken[else][link](9) Hard hat[as]9[end link] - Available[end if][line break]";
+		say "[if ssos is true](10) Orange shield - Taken[else][link](10) Orange shield[as]10[end link] - Available[end if][line break]";
+		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][else][link](11) Sanity Saver[as]11[end link] - Available[end if][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-10)> ";
@@ -51,7 +51,7 @@ carry out supersponsor:
 				now ssmb is true;
 			else:
 				now ssmb is false;
-			say "     The maintenance boost improves the effectiveness of medkits and using the journal by 50%. It is now [if ssmb is true]active[otherwise]inactive[end if]";
+			say "     The maintenance boost improves the effectiveness of medkits and using the journal by 50%. It is now [if ssmb is true]active[else]inactive[end if]";
 		else if calcnumber is 3:
 			if companion of player is nullpet:
 				say "     'How do you expect to train one of your pets if you don't have them here with you?' Trixie asks.";
@@ -60,10 +60,10 @@ carry out supersponsor:
 			else:
 				say "     During your conversation with Trixie, the [companion of player] has been confused and concerned as you talk to apparently no one. Trixie waggles here fingers in their direction and they fall into a trance. A set of VR goggles and headphones are magicked onto their head and start to play. They absorb the information from the VR session, auto-magically training them in mere minutes. Once the training session is over, the equipment disappears and your companion comes out of their trance with increased skill.";
 				let nn be ( level of player - level of companion of player ) - 3;
-				let xpfactor be 5;
+				let XPfactor be 5;
 				if "Good Teacher" is listed in feats of player:
-					now xpfactor is 3;
-				increase xp of companion of player by ( ( level of companion of player * 2 ) + ( nn - 1 ) ) * nn * xpfactor;
+					now XPfactor is 3;
+				increase XP of companion of player by ( ( level of companion of player * 2 ) + ( nn - 1 ) ) * nn * XPfactor;
 				repeat with x running from 1 to nn:
 					pet level up;
 		else if calcnumber is 4:
@@ -71,7 +71,7 @@ carry out supersponsor:
 				now ssxpa is true;
 			else:
 				now ssxpa is false;
-			say "     The experience accelerator increases XP gain from combat victory by 33%. It is now [if ssxpa is true]active[otherwise]inactive[end if]";
+			say "     The experience accelerator increases XP gain from combat victory by 33%. It is now [if ssxpa is true]active[else]inactive[end if]";
 		else if calcnumber is 5:
 			if ssstash > 0:
 				say "     Asking Trixie about some supplies, she nods and tells you about the head librarian's secret stash. Heading there, you open an old filing cabinet and push aside from papers to find a collection of food and drink. 'And since you've been such a nice person, you can use that an extra time for every odd level you reach.'";
@@ -171,7 +171,7 @@ carry out supersponsor:
 				remove "Sanity Saver" from feats of player;
 		else:
 			now trixieexit is 1;
-		Line Break;
+		LineBreak;
 
 
 to sslvl12:
@@ -182,12 +182,12 @@ to sslvl12:
 		if "Fast Learner" is listed in feats of player:
 			now val is 4;
 		say "[bold type]You feel empowered by your support of the game.[roman type][line break]";
-		now xp of player is val * 12 * 13;
-		[ say "XP set to [xp of player].";	]
-		decrease xp of player by val * ( level of player ) * ( level of player + 1 );
-		[ say "XP decreased to [xp of player].";	]
+		now XP of player is val * 12 * 13;
+		[ say "XP set to [XP of player].";]
+		decrease XP of player by val * ( level of player ) * ( level of player + 1 );
+		[ say "XP decreased to [XP of player].";]
 		now val is 12 - level of player;
-		[ say "Levelling up [value] times.";	]
+		[ say "Levelling up [value] times.";]
 		repeat with x running from 1 to val:
 			level up;
 		increase vetcheater by 1;
@@ -201,7 +201,7 @@ name	desc	weight	object
 "hard hat"	"A yellow construction hard hat you've found to help protect your noggin."	2	hard hat
 
 [Dildo Club]
-dildo club is an armament. It is part of the player. It has a weapon "[one of]your phallic club[or]your purple latex club[or]your dildo club with a resounding 'Wubba-!Wubba-Wubba-Thwack!' sound[or]the three-foot purple schlong[or]the floppy dildo club[or]your oversized dildo[at random]". The weapon damage of dildo club is 6. The weapon type of dildo club is "Melee". It is not temporary. the objsize of dildo club is 4.
+dildo club is an armament. It is part of the player. It has a weapon "[one of]your phallic club[or]your purple latex club[or]your dildo club with a resounding 'Wubba-Wubba-Wubba-Thwack!' sound[or]the three-foot purple schlong[or]the floppy dildo club[or]your oversized dildo[at random]". The weapon damage of dildo club is 6. The weapon type of dildo club is "Melee". It is not temporary. the objsize of dildo club is 4.
 
 the scent of the dildo club is "The sex toy club smells of latex and your humiliated foes."
 

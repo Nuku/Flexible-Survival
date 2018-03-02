@@ -13,33 +13,33 @@ when play begins:
 	add { "Jaguar" } to infections of guy;
 
 to say jaguardesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from the table of random critters;
 	let debit be 0;
-	now hp entry is 80;
+	now HP entry is 80;
 	now lev entry is 8;
 	now wdam entry is 10;
 	now int entry is 10;
-	if lev entry is less than level of player and hardmode is true:
+	if lev entry < level of player and hardmode is true:
 		now debit is ( level of player ) - lev entry;
 		increase lev entry by debit;
-		increase hp entry by debit * 4;
+		increase HP entry by debit * 4;
 		increase wdam entry by ( debit / 3 );
 	if sabtoothed is 1:		[permanent upgrade]
 		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly. But no man, this is a large jaguar creature. But unlike the ones you've seen earlier at the hospital, this one is bigger and has large, sabretoothed fangs protruding from its upper jaw. The devolved jaguarman growls and reaches to grab you with its powerful paws.";
-		increase hp entry by 15;
+		increase HP entry by 15;
 		increase lev entry by 1;
-		increase wdam entry by ( square root of lev entry ) - 1;		[minor increasing bonus]
+		increase wdam entry by ( square root of lev entry ) - 1; [minor increasing bonus]
 		now int entry is 8;
 	else:
 		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly. But no man, this is a large jaguar creature. He looks you over angrily and reaches to grab you, obviously feeling you are somewhere you don't belong.";
 	if triclamped is 1:		[permanent upgrade]
 		say "     Getting a closer look at the creature as it charges towards you, you can see traces of toughened scales at the top of its neck and there are three small horns on its head, one at the end of its muzzle and two over its brow. These poke just a little out from his fur.";
-		increase hp entry by 15 + debit;
-	now monsterhp is hp entry;
+		increase HP entry by 15 + debit;
+	now monsterHP is HP entry;
 
 to say losetojaguar:
-	now fightstatus is 2;		[required for hospital fight]
+	now fightstatus is 2; [required for hospital fight]
 	if cunts of player > 0:
 		if a random chance of 2 in 5 succeeds:
 			say "     The brutish, feline orderly growls and shoves you down, getting ready to continue wailing on you, but his muzzle twitches as a scent catches his notice. Growling, he climbs atop you, pinning you down with one paw while the other removes any remaining clothes between him and his prize, that female pussy he's scented. You can feel his large shaft as it rubs against your rear. It is quite large, perhaps a rather thick 9 inches of feline meat. His precum leaks onto your ass as he moves to get lined up, then thrusts into you.";
@@ -48,7 +48,7 @@ to say losetojaguar:
 			say "     His load spent, the big male withdraws his cock slowly from you, licks your cheek a few times and gets back up. He picks you up gently and lays you atop a nearby gurney to rest and recover from the powerful mating session. You can't help but smile up at him as he drapes a blanket over you and nuzzles you with a soft purr before leaving you as you drift off for a nap after the romp. The feel of the wild beastman's hot seed inside you fills you with a blissful warmth.";
 		else:
 			say "     You are battered by the brutish, feline orderly and left in a heap to recover.";
-			now hp of player is (( hp of player ) times 2 ) divided by 3;
+			now HP of player is (( HP of player ) times 2 ) divided by 3;
 	else:
 		if a random chance of 1 in 4 succeeds:
 			say "     The brutish, feline orderly growls and shoves you down, getting ready to continue wailing on you, but as a swipe of one clawed paw uncovers your rear end, he grins as he gets other ideas. Growling, he climbs atop you, pinning you down with one paw while the other removes any remaining clothes between him and his prize, that tight back door of yours. You can feel his large shaft as it rubs against your rear. It is quite large, perhaps a rather thick 9 inches of feline meat. His precum leaks onto your ass as he moves to get lined up, then thrusts into you.";
@@ -57,12 +57,12 @@ to say losetojaguar:
 			say "     His load spent, the big male withdraws his cock slowly from you, licks your cheek a few times and gets back up. He picks you up gently and lays you atop a nearby gurney to rest and recover from the powerful mating session. You can't help but smile up at him as he drapes a blanket over you and nuzzles you with a soft purr before leaving you as you drift off for a nap after the romp. The feel of the wild beastman's hot seed inside you fills you with a blissful warmth.";
 		else:
 			say "     You are battered by the brutish, feline orderly and left in a heap to recover.";
-			now hp of player is (( hp of player ) times 2 ) divided by 3;
+			now HP of player is (( HP of player ) times 2 ) divided by 3;
 
 
 to say beatthejaguar:
 	if fightstatus is 3:
-		now fightstatus is 1;		[required for hospital fight]
+		now fightstatus is 1; [required for hospital fight]
 		say "     You manage to knock the muscled jaguar out, at least for the moment.";
 	else if libido of player >= 30 or ( ( bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist ) and libido of player >= 15 ) or "Dominant" is listed in feats of player:
 		say "     Looking over the powerful feline, you find yourself considering taking advantage of the situation to have some quick fun. ";
@@ -84,7 +84,7 @@ to say beatthejaguar:
 				say "     Deciding you should focus on more important stuff right now, you turn away from the defeated orderly and return to the matter at hand.";
 		else:
 			say "     [bold type]You consider getting a ride on that cock of his or just letting him go.[roman type]";
-			line break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ride that cock.";
 			say "     ([link]N[as]n[end link]) - Let him go.";
 			if the player consents:
@@ -94,38 +94,38 @@ to say beatthejaguar:
 
 
 to say jagfuck:
-	say "     Pulling down the front of the orderly's scrubs, roll the big kitty onto his belly and raise up his rear. Flipping up his spotted tail, you grind your stiff erection against his fuzzy bottom before lining it up with his tailhole. He moans softly as you start pushing your [cock size desc of player] prick into his ass. You can tell from the tightness of his hole that he's not used to this kind of treatment so it takes you [if cock width of player > 6]quite some time[otherwise]a little while[end if] to work your rod into him and really start fucking at his meaty backside. He releases soft moans and mewls as you fuck him. Reaching around, you can feel his erection throbbing and pulsing, letting you know the kitty's enjoying the ride despite being unconscious from the battle. Determined to give the big, manly kitty a sticky wet dream while being buggered, you tease his cock and balls as you thrust into him, making sure to grind your glans hard against his prostate each time you push into him. Eventually you manage to get him to cum, clenching his muscled ass down deliciously over your cock as his load is blasted across the floor. This is enough to set you off after the long, drawn out fucking and you paint the kitty's insides with your hot semen. After draining most of your load, you pull out and paint the rest of it across his fuzzy ass. Finished and feeling quite proud of yourself, you leave him like that to display your handywork.";
+	say "     Pulling down the front of the orderly's scrubs, roll the big kitty onto his belly and raise up his rear. Flipping up his spotted tail, you grind your stiff erection against his fuzzy bottom before lining it up with his tailhole. He moans softly as you start pushing your [cock size desc of player] prick into his ass. You can tell from the tightness of his hole that he's not used to this kind of treatment so it takes you [if cock width of player > 6]quite some time[else]a little while[end if] to work your rod into him and really start fucking at his meaty backside. He releases soft moans and mewls as you fuck him. Reaching around, you can feel his erection throbbing and pulsing, letting you know the kitty's enjoying the ride despite being unconscious from the battle. Determined to give the big, manly kitty a sticky wet dream while being buggered, you tease his cock and balls as you thrust into him, making sure to grind your glans hard against his prostate each time you push into him. Eventually you manage to get him to cum, clenching his muscled ass down deliciously over your cock as his load is blasted across the floor. This is enough to set you off after the long, drawn out fucking and you paint the kitty's insides with your hot semen. After draining most of your load, you pull out and paint the rest of it across his fuzzy ass. Finished and feeling quite proud of yourself, you leave him like that to display your handywork.";
 
 
 to say jagride:
 	say "     Pulling down the front of the orderly's scrubs, you roll the big kitty onto his back and stroke his sheath, coaxing out his feline erection. As you run your hand over it, spreading his precum over it, you decide to grab a quick taste before getting onto the main event. You lick slowly up those thick nine inches of manmeat before plunging your mouth down over it, getting the unconscious jaguar to moan softly. Bobbing your head over it, you find his taste strong, but pleasant and you're tempted to finish him off like that.";
-	say "     [bold type] Shall you continue with your original plan or switch to sucking him off?[roman type][line break]";	
-	line break;
+	say "     [bold type] Shall you continue with your original plan or switch to sucking him off?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Get fucked.";
 	say "     ([link]N[as]n[end link]) - Suck him off.";
 	if the player consents:
-		say "     Focusing yourself on your original goal, you pull your head back and climb atop him. Getting your ass overtop of his slick prick, you lower yourself down onto it with a moan of pleasure with your defeated foe echoes. As you settle down into his lap, you run your hands through his rough fur, enjoying the feeling of having that feline cock stuffed inside your [if cunts of player > 0]cunt[otherwise]anus[end if]. You start riding up and down the kitty's meat, working to get the strong feline to cum for you[if cocks of player is 1]. You bring a hand to your cock and stroke it while stuffing yourself over and over with the jaguar's[else if cocks of player > 1]. You bring your hands to your cocks and stroke them while stuffing yourself over and over with the jaguar's[else if cunts of player is 1]. You bring your hand to your clit and rub it vigorously while stuffing yourself over and over with the jaguar's cock[else if cunts of player > 1]. You bring your hand to your clits and rub them vigorously while occasionally alternating which dripping pussy you have the jaguar's cock fill[otherwise]. You knead your paws into the strong feline's fur as you stuff yourself over and over with the jaguar's cock[end if]. After a nice, enjoyable ride on the feline's hard manmeat, you smile as he groans and his penis twitches inside you, blasting hot spurts of jaguar cum into you[if cocks of player > 0 or cunts of player > 0], giving you a wonderful orgasm in response[end if]. Once his balls are drained and his prick has softened, you ease yourself off of him, dripping some cum from your well-used hole and feeling much better for it.[impregchance]";
+		say "     Focusing yourself on your original goal, you pull your head back and climb atop him. Getting your ass overtop of his slick prick, you lower yourself down onto it with a moan of pleasure with your defeated foe echoes. As you settle down into his lap, you run your hands through his rough fur, enjoying the feeling of having that feline cock stuffed inside your [if cunts of player > 0]cunt[else]anus[end if]. You start riding up and down the kitty's meat, working to get the strong feline to cum for you[if cocks of player is 1]. You bring a hand to your cock and stroke it while stuffing yourself over and over with the jaguar's[else if cocks of player > 1]. You bring your hands to your cocks and stroke them while stuffing yourself over and over with the jaguar's[else if cunts of player is 1]. You bring your hand to your clit and rub it vigorously while stuffing yourself over and over with the jaguar's cock[else if cunts of player > 1]. You bring your hand to your clits and rub them vigorously while occasionally alternating which dripping pussy you have the jaguar's cock fill[else]. You knead your paws into the strong feline's fur as you stuff yourself over and over with the jaguar's cock[end if]. After a nice, enjoyable ride on the feline's hard manmeat, you smile as he groans and his penis twitches inside you, blasting hot spurts of jaguar cum into you[if cocks of player > 0 or cunts of player > 0], giving you a wonderful orgasm in response[end if]. Once his balls are drained and his prick has softened, you ease yourself off of him, dripping some cum from your well-used hole and feeling much better for it.[impregchance]";
 	else:
-		say "     Liking your new plan better, you knead and rub his ballsac while your lips and tongue work up and down his throbbing cock. Your unconscious foe moans in pleasure and leaks more precum. It has a strong taste, virile and arousing, that makes you want more. You bob your head up and down while lavishing attention upon the kitty's cock and eventually earning your reward. The jaguar releases another growling moan and his cock pulses in your mouth, sending shot after shot of his thick seed onto your tongue. Like his pre, it has a strong taste, but not unpleasantly so, speaking of the powerful feline's virility and strength as a breeder[if cunts of player is 1]. Your cunt quivers in response and you find yourself longing to have him fill your needy puss next time[else if cunts of player > 1]. Your cunts quiver in response and you find yourself longing to have him fill your needy pussies next time[otherwise]. You find yourself longing to take his meaty cock into you next time as you'd originally planned[end if]. Licking your lips as you enjoy the lingering traces of his taste in your mouth, you get up and leave the unconscious and spent kitty there.";
+		say "     Liking your new plan better, you knead and rub his ballsac while your lips and tongue work up and down his throbbing cock. Your unconscious foe moans in pleasure and leaks more precum. It has a strong taste, virile and arousing, that makes you want more. You bob your head up and down while lavishing attention upon the kitty's cock and eventually earning your reward. The jaguar releases another growling moan and his cock pulses in your mouth, sending shot after shot of his thick seed onto your tongue. Like his pre, it has a strong taste, but not unpleasantly so, speaking of the powerful feline's virility and strength as a breeder[if cunts of player is 1]. Your cunt quivers in response and you find yourself longing to have him fill your needy puss next time[else if cunts of player > 1]. Your cunts quiver in response and you find yourself longing to have him fill your needy pussies next time[else]. You find yourself longing to take his meaty cock into you next time as you'd originally planned[end if]. Licking your lips as you enjoy the lingering traces of his taste in your mouth, you get up and leave the unconscious and spent kitty there.";
 
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Jaguar"; [Name of your new Monster]
-   now attack entry is "[one of]The jaguar orderly strikes you firmly across the head![or]The orderly grabs his strong arms around you and squeezes you until you're able to slip free![or]The angry jaguar bites down on your arm with his powerful jaws![or]The vicious creature slashes at you with its sharp claws, leaving bloody gashes![or]Charges at you, slamming his shoulder into your chest and knocking you back several steps![or]The feline orderly grabs your arm and twists it behind your back in an attempt to painfully restrain you![or]The beast growls and headbutts you so hard that you're dizzy for a moment![or]The powerful jungle cat punches you hard in the chest, making you wheeze for breath![or]He clubs your sides repeatedly with his fists![at random]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[beatthejaguar]"; [ Text or say command used when Monster is defeated.]
+   now attack entry is "[one of]The jaguar orderly strikes you firmly across the head![or]The orderly grabs his strong arms around you and squeezes you until you're able to slip free![or]The angry jaguar bites down on your arm with his powerful jaws![or]The vicious creature slashes at you with its sharp claws, leaving bloody gashes![or]Charges at you, slamming his shoulder into your chest and knocking you back several steps![or]The feline orderly grabs your arm and twists it behind your back in an attempt to painfully restrain you![or]The beast growls and headbutts you so hard that you're dizzy for a moment![or]The powerful jungle cat punches you hard in the chest, making you wheeze for breath![or]He clubs your sides repeatedly with his fists![at random]";
+   now defeated entry is "[beatthejaguar]";
    now victory entry is "[losetojaguar]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[jaguardesc]"; [ Description of the creature when you encounter it.]
    now face entry is "feline head with dark spots covering your face"; [ Face description, format as the text "Your face is (your text)."]
    now body entry is "stocky, but strong. You can feel the powerful muscles under your skin. Your feline paws clench into hard fists when angry"; [ Body Description, format as the text "Your Body is (your text)."]
    now skin entry is "golden-yellow fur with black rosettes all over your"; [ skin Description, format as the text "You have (your text) skin"]
-   now tail entry is "Behind you lashes a spotted, feline tail."; [ Tail description, write a whole Sentence or leave blank. ] 
+   now tail entry is "Behind you lashes a spotted, feline tail."; [ Tail description, write a whole Sentence or leave blank. ]
    now cock entry is "deep, angry red"; [ Cock Description, format as you have a 'size' (your text) cock]
    now face change entry is "remolds itself into a blunt, feline muzzle with powerful jaws and sharp teeth"; [ face change text. format as "Your face feels funny as (your text)." ]
    now body change entry is "it tightens with strong muscles. Your body becomes short and stocky, but powerful. Your hands are now paw-like fists"; [ body change text. format as "Your body feels funny as (your text)." ]
@@ -134,36 +134,36 @@ When Play begins:
    now cock change entry is "turns a deep red in colour"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 16;
    now dex entry is 18;
-   now sta entry is 16;                    
+   now sta entry is 16;
    now per entry is 12;
    now int entry is 10;
    now cha entry is 10;
-   now sex entry is "nochange";     [ Invalid answer intentionally getting no change in gender]
-   now hp entry is 80;            [ How many HP has the monster got? ]
-   now lev entry is 8;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-   now wdam entry is 10;            [Amount of Damage monster Does when attacking.]
-   now area entry is "Hospital";    [ Location of monster, in this case the City Hospital]
-   now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 9;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 5;        [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2;            [ Number of Breasts infection will give you. ]
-   now breast size entry is 3;        [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 8;        [ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 3;        [ Width of female sex  infection will try and give you ]
-   now libido entry is 33;            [ Set to zero in this monster to control elsewhere ]
-   now loot entry is "libido suppressant";            [ Dropped item. Key will be used later ]
-   now lootchance entry is 30;        [ Chance of loot dropping 0-100 ]
+   now sex entry is "nochange"; [ Invalid answer intentionally getting no change in gender]
+   now HP entry is 80;
+   now lev entry is 8; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
+   now wdam entry is 10; [Amount of Damage monster Does when attacking.]
+   now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
+   now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+   now cock length entry is 9; [ Length infection will make cock grow to if cocks]
+   now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
+   now breasts entry is 2; [ Number of Breasts infection will give you. ]
+   now breast size entry is 3; [Size of breasts infection will try to attain ]
+   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+   now cunt length entry is 8;
+   now cunt width entry is 3;
+   now libido entry is 33; [ Set to zero in this monster to control elsewhere ]
+   now loot entry is "libido suppressant"; [ Dropped item. Key will be used later ]
+   now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
    [ These represent the new additions to the table of random critters ]
-   now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+   now scale entry is 4; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]muscled[or]strong[or]powerful[at random]";
-   now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-   now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-   now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-   blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+   now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+   now magic entry is false;
+   now resbypass entry is false;
+   now non-infectious entry is false;
+   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Libido Suppressant
@@ -191,7 +191,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Jaguar":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your human mind and experiences fade away, you give in to the instinctual urges of your body. You are drawn to the city hospital, feeling the need to work alongside your feline brethren in the corrupted medical facility. You are welcomed by the other jaguars as well as the other denizens.";
 			if hospquest < 2:
 				say "     You are given a task of patrolling the hospital and keeping any unwanted interlopers out by your superiors. Somewhere deep inside, you can feel that there is someone in charge, but you have not met them. At first, your duties are simple, as there are few who would approach the hospital and they are easily driven off or corrupted to join you. But later things get more difficult as the military moves in. You and the others manage to hold the hospital, but there are some losses. Thankfully, many of the defeated soldiers are added to the jaguar ranks.";
@@ -201,12 +201,12 @@ when play ends:
 					say "     You report back in to Dr Mouse, though only vaguely remembering the experiences that lead you to know him. He somehow recognizes you readily and happily welcomes you to his staff. He has you join one of his exploratory teams, collecting samples and test subjects for the doctor's research. On a trip to the zoo, your team is waylayed by an ambush of cheetah women. While not very strong, they are fast and the ambush takes out most of your support quickly. They get a net over you and manage to tie you up before you can get away. You, their intended prize, are dragged off to become their mate. While you remain a jaguar, the thoughts of the hospital fade from your mind as you fuck them over and over, filling them with jaguar-cheetah hybrid cubs. All in all, not an unpleasant fate.";
 				else:
 					say "     You report back to Dr Mouse, though only vaguely remembering the experiences that lead you to know him. He somehow recognizes you readily and happily welcomes you to his staff. He has you join one of his exploratory teams, collecting samples and test subjects for the doctor's research. On a trip to the zoo, your team is waylayed by a plush lion. While fairly strong, it is his cleverness that does you in. He managed to frighten a pack of lesser fair folk to flee right into your squad. During the chaos, he pushed you onto one of the rides and started fucking you. You soon gave in to the mating from the plush lion. As his hot seed flowed into you, you changed, becoming a plush jaguar and his mate. Thoughts of the hospital were driven from your cotton-filled head and you followed him to his lair deep in the fair.";
-			else if hospquest is 13 and hp of doctor mouse is 1:
+			else if hospquest is 13 and HP of doctor mouse is 1:
 				say "     Driven by your new instincts, you report back to Dr Mouse, though only vaguely remembering the experiences that lead you to know him. He somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement. ";
 				if "Sterile" is not listed in feats of player and cunts of player > 0:
 					say "     You birth many bizarre, hybrid creatures from these matings. ";
 				say "     You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower.";
-			else if hospquest is 13 and hp of doctor mouse is 2:
+			else if hospquest is 13 and HP of doctor mouse is 2:
 				say "     The hospital is in disarray when you arrive, like an ant hive where the queen has been killed. The various factions strike out at each other at times, but cooperate at others. The various labs remain a no man's land, but the cafeteria is often host to in-fighting over mates.";
 				if intelligence of player >= 20 and charisma of player >= 15 and "Expert Medic" is listed in feats of player:
 					say "     It is only with the coming of the military that control is restored. The united threat of military action unifies the factions, at least temporarily. And you would see that order remain and start taking charge of the groups. Feeling the need to have someone in charge, the other groups begin to respond to your commands, beginning to rely on you to fill that void. Your familiarity and experience in the city helps counter the military incursion into the hospital by personally leading several strikes against the soldiers. By attacking their squads and the field camps they've set up in the city using the experience you gained and your familiarity with its streets and its safe routes, you are able to put their lines into disarray. This soon forces them to back off from the hospital and continue their search for survivors elsewhere before pulling out of the city.";

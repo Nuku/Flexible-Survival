@@ -64,13 +64,13 @@ Instead of resolving a Tight Fit:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "The tunnel looks like it would be ";
-		if difficulty is less than 8:
+		if difficulty < 8:
 			say "easy";
-		else if difficulty is less than 10:
+		else if difficulty < 10:
 			say "not too bad";
-		else if difficulty is less than 12:
+		else if difficulty < 12:
 			say "hard";
-		else if difficulty is less than 14:
+		else if difficulty < 14:
 			say "very difficult";
 		else:
 			say "extremely difficult";
@@ -82,7 +82,7 @@ Instead of resolving a Tight Fit:
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
-		if difficulty is greater than dice:
+		if difficulty > dice:
 			say "You try your best to squeeze into the tunnel, but you aren't able make it more than a couple of feet before it becomes impossible to move forward. Rather than risk getting completely stuck and vulnerable to any lusty mutant who comes by, you work your way back out and head off.";
 		else:
 			say "It is a tight fit at a few spots, but you manage to wriggle your way in and out of the tunnel, snagging the [y] to add to your backpack's contents.";
@@ -137,14 +137,14 @@ Instead of resolving a Protected Supplies:
 	repeat with tt running from 1 to number of filled rows in table of random critters:
 		choose row tt from the table of random critters;
 		if there is a lev entry:
-			if lev entry is greater than level of player plus levelwindow and hardmode is false:
+			if lev entry > level of player plus levelwindow and hardmode is false:
 				next;
 		else:
 			next;
 		if area entry matches the text battleground:
 			if there is a nocturnal in row tt of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
-					next;		[skips if day/night doesn't match]
+					next; [skips if day/night doesn't match]
 			add tt to q;
 			if "Like Attracts Like" is listed in the feats of the player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
@@ -160,7 +160,7 @@ Instead of resolving a Protected Supplies:
 			now monster is Z;
 			break;
 		choose row monster from the table of random critters;
-		if lev entry is less than level of player and hardmode is true:
+		if lev entry < level of player and hardmode is true:
 			hardmodeboost;
 		say "In your searching through the city, you come across some [y] and move to get it.";
 		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
@@ -168,16 +168,16 @@ Instead of resolving a Protected Supplies:
 		let scavfight be 0;
 		say "But as you move to get it, a [name entry] moves to cut you off, probably wanting to take it for themselves. ";
 		if a random chance of 1 in 2 succeeds:
-			say "     The creature charges to attack before you have a chance to consider falling back.";
+			say "The creature charges to attack before you have a chance to consider falling back.";
 			let scavfight be 1;
 		else:
-			say "     The creature remains watchful, but keeps you from moving towards your desired supplies.";
-			say "     [bold type]Shall you attack to get them or leave?[roman type][line break]";	
-			line break;
+			say "The creature remains watchful, but keeps you from moving towards your desired supplies.";
+			say "     [bold type]Shall you attack to get them or leave?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Attack.";
 			say "     ([link]N[as]n[end link]) - Leave.";
 			if the player consents:
-				line break;
+				LineBreak;
 				let scavfight be 1;
 		if scavfight is 1:
 			now fightoutcome is 100;
@@ -206,12 +206,12 @@ the sarea of Dropped Handbag is "Allzones".
 
 Instead of resolving a Dropped Handbag:
 	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it. Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.";
-	say "     [bold type] Do you want to search it?  It doesn't seem like they'll be needing it anymore.[roman type][line break]";	
-	line break;
+	say "     [bold type] Do you want to search it?  It doesn't seem like they'll be needing it anymore.[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		line break;
+		LineBreak;
 		let T be a random number between 1 and 100;
 		if T < 41:
 			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum. You do manage a lucky find and dig out a small canister of pepperspray.";
@@ -226,7 +226,7 @@ Instead of resolving a Dropped Handbag:
 			increase score by 1;
 		else:
 			say "     You open the bag and put your hand in to rummage through its contents, but are met with a sticky surprise. Pulling it out, you find your hand covered in wet, sticky cum. You can feel the tingles from the infected cum on your hand. Someone, possibly the bag's original owner, filled it with their cum and left it for someone like you to find.";
-			Line Break;
+			LineBreak;
 			sort table of random critters in random order;
 			repeat with X running from 1 to number of filled rows in table of random critters:
 				choose row X from the table of random critters;
@@ -237,7 +237,7 @@ Instead of resolving a Dropped Handbag:
 			infect;
 			decrease humanity of player by 5;
 	else:
-		line break;
+		LineBreak;
 		say "     Deciding not to bother, you continue on your way.";
 	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 2 succeeds, mallrecall;
 	now Dropped Handbag is resolved;
@@ -257,7 +257,7 @@ Instead of resolving a Dented Bike:
 	if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
-	if bonus + dice is greater than difficulty:
+	if bonus + dice > difficulty:
 		let t be a random number between 1 and 3;
 		if t is 1:
 			say "You spot something under one of the shredded rags - it's an unopened bottle of water in a holder on the bike's frame! ";
@@ -290,7 +290,7 @@ Instead of resolving a Looted Supermarket:
 		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
-		if bonus + dice is greater than difficulty:
+		if bonus + dice > difficulty:
 			say "As you turn to head out of the store, you spot something interesting from the corner of your eye. There's a tin can that seems to have fallen down and rolled under a shelf - you pick it up and see it's [one of]dog[or]cat[at random] food. Not your first choice for a meal, but hey - it's in a sealed container so it'll be infection free!";
 		else:
 			say "You continue looking elsewhere for supplies, but aren't able to find any on this trip.";
@@ -301,7 +301,7 @@ Instead of resolving a Looted Supermarket:
 		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
-		if bonus + dice is greater than difficulty:
+		if bonus + dice > difficulty:
 			say "You get an idea and check the checkout section. The cashiers are people with needs too, so... you find an unopened soda bottle under the register.";
 			increase carried of soda by 1;
 		else:
@@ -313,7 +313,7 @@ Instead of resolving a Looted Supermarket:
 		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
-		if bonus + dice is greater than difficulty:
+		if bonus + dice > difficulty:
 			say "You get an idea and check the checkout section. The cashiers are people with needs too, so... you find an energy bar under the register.";
 			increase carried of food by 1;
 		else:
@@ -329,7 +329,7 @@ Instead of resolving a Looted Supermarket:
 			let x be 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
-		if bonus + dice is greater than difficulty:
+		if bonus + dice > difficulty:
 			say "You break open the door to a small room in the back[if x is 1] with the help of your crowbar[end if]. Aww - it's just the employees lockers and some cleaning supplies. At least one of them had a bag of chips in his locker.";
 			increase carried of chips by 1;
 		else:
@@ -356,8 +356,8 @@ Instead of resolving a Abandoned Cars:
 		let x be 1;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
-	if bonus + dice is greater than difficulty:
-		say "No problem - you grab the lid and wrench it open with [if x is 1]your crowbar[otherwise]your superior strength[end if]. Inside you find several shopping bags, filled with a smelly mess of mostly rotting food. At least you manage to salvage a can of [one of]tomato soup[or]baked beans[or]spaghetti[or]pineapple[at random] and a soda bottle from it.";
+	if bonus + dice > difficulty:
+		say "No problem - you grab the lid and wrench it open with [if x is 1]your crowbar[else]your superior strength[end if]. Inside you find several shopping bags, filled with a smelly mess of mostly rotting food. At least you manage to salvage a can of [one of]tomato soup[or]baked beans[or]spaghetti[or]pineapple[at random] and a soda bottle from it.";
 		increase carried of food by 1;
 		increase carried of soda by 1;
 	else:
@@ -441,13 +441,13 @@ Instead of resolving a Plains Scavenging:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "Sighing in annoyance you notice that there are some mutants lording over a few items, the [y] among them. Seeming peaceful enough folks, you head on over. The one in charge looks up at you with a grunt of annoyance at the interruption. From the looks of the creature, he should be ";
-		if difficulty is less than 8:
+		if difficulty < 8:
 			say "easy";
-		else if difficulty is less than 10:
+		else if difficulty < 10:
 			say "not too bad";
-		else if difficulty is less than 12:
+		else if difficulty < 12:
 			say "hard";
-		else if difficulty is less than 14:
+		else if difficulty < 14:
 			say "very difficult";
 		else:
 			say "extremely difficult";
@@ -462,22 +462,22 @@ Instead of resolving a Plains Scavenging:
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
-		if difficulty is greater than dice:
+		if difficulty > dice:
 			say "It would seem that negotiations have failed and the mutants now want you gone. By the looks on their faces, it would be wise for you to get lost... and fast!";
-		otherwise :
+		else:
 			say "Coming to a mutually beneficial agreement, you find that the other mutants are willing to give up the item to you in trade for some information. It would seem that there are still some decent [']people['] in the world after all[if petbonus is true]. Though having an intimidating guard by your side may have helped a little[end if]. You quickly add [y] to your satchel and then bob your head gratefully to the others before going about your way.";
 			add y to invent of player;
 	else if x is 3:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "It is perched precariously among some rubble of a collapsing building. It looks ";
-		if difficulty is less than 8:
+		if difficulty < 8:
 			say "easy";
-		else if difficulty is less than 10:
+		else if difficulty < 10:
 			say "not too bad";
-		else if difficulty is less than 12:
+		else if difficulty < 12:
 			say "hard";
-		else if difficulty is less than 14:
+		else if difficulty < 14:
 			say "very difficult";
 		else:
 			say "extremely difficult";
@@ -499,9 +499,9 @@ Instead of resolving a Plains Scavenging:
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
-			if difficulty is greater than dice:
+			if difficulty > dice:
 				say "You try your best to traverse the collapsing [one of]store[or]building[or]home[or]structure[at random], but end up setting off the collapse even further. Rubble falls and dust flies up as a portion of a wall falls onto you. Thankfully you're able to get yourself out from under it easily enough, but looking at the devastation, you find that the falling debris has crushed your intended prize as well.";
-				decrease hp of player by 10;
+				decrease HP of player by 10;
 			else:
 				say "You successfully manage to move across the collapsing [one of]store[or]building[or]home[or]structure[at random] and snag the [y], stuffing it into your backpack.";
 				add y to invent of the player;
@@ -550,9 +550,9 @@ Instead of resolving a Garden Veggies:
 			challenge "Ram";
 		now veggiegardenfight is 0;
 		if fightoutcome >= 10 and fightoutcome <= 19:			[player victory]
-			say "     Having beaten the [if guy is banned]ewe[otherwise]ram[end if], you are startled as a loud bang goes off and a chunk of the fence beside you is blown to pieces. Another sheep, a [if guy is banned]ram[otherwise]ewe[end if] this time, comes out wielding a shotgun. 'Now you back away from my [if guy is banned]husband... er... wife[otherwise]wife... er... husband[end if]... right now, or I won't miss next time.' You don't need to be told twice and flee the garden. You'll have to look elsewhere for food from now on.";
+			say "     Having beaten the [if guy is banned]ewe[else]ram[end if], you are startled as a loud bang goes off and a chunk of the fence beside you is blown to pieces. Another sheep, a [if guy is banned]ram[else]ewe[end if] this time, comes out wielding a shotgun. 'Now you back away from my [if guy is banned]husband... er... wife[else]wife... er... husband[end if]... right now, or I won't miss next time.' You don't need to be told twice and flee the garden. You'll have to look elsewhere for food from now on.";
 		else if fightoutcome >= 20 and fightoutcome <= 29:	[player loss]
-			say "     As you struggle to get back up after having been beaten by the sheep, you are startled as another sheep, this time a [if guy is banned]ram[otherwise]ewe[end if] comes out wielding a shotgun. Seeing the gun, you turn and flee before [if guy is banned]her[otherwise]his[end if] angry mate can shoot you. You'd best not return there... for a whole bunch of reasons.";
+			say "     As you struggle to get back up after having been beaten by the sheep, you are startled as another sheep, this time a [if guy is banned]ram[else]ewe[end if] comes out wielding a shotgun. Seeing the gun, you turn and flee before [if guy is banned]her[else]his[end if] angry mate can shoot you. You'd best not return there... for a whole bunch of reasons.";
 		else if fightoutcome >= 30:					[player fled]
 			say "     As you're making a break for it, you catch a glimpse of another sheep exiting the home, this time with a shotgun. As you push through the back gate, it goes off. 'You stay away, you veggie thief, or we'll fill you full of lead next time.'";
 		now Garden Veggies is resolved;
@@ -566,15 +566,14 @@ when play begins:
 	add Free Drink to badspots of guy;
 
 Instead of resolving a Free Drink:
-	if graphics is true:
-		project the figure of Talov_Kerr_Barrel_icon;	
+	project the figure of Talov_Kerr_Barrel_icon;
 	say "     As you're searching around the campus for some supplies, you spot a team of Satyr's rolling a heavy cask towards one of the dorm buildings. They seem in rather good spirits, if a little tired, and wave at you in a friendly manner. Deciding to risk it, you approach cautiously. They tell you they're bringing the wine in for an awesome party and are about to grab a quick drink for themselves before they get back to work. You're offered a swig as well.";
-	say "     [bold type]Would you like to take a drink to quench your thirst?[roman type][line break]";	
-	line break;
+	say "     [bold type]Would you like to take a drink to quench your thirst?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		line break;
+		LineBreak;
 		decrease thirst of player by 10;
 		if thirst of player < 0, now thirst of player is 0;
 		decrease humanity of player by 5;
@@ -585,25 +584,25 @@ Instead of resolving a Free Drink:
 			now winefound is 2;
 		if bodyname of player is "Satyr" and player is pure and cocks of player > 0:
 			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst and gets you in a rather nice mood, waking the need to party and enjoy yourself in you. And that's not the only thing it wakes - your cock starts to fill out a bit as you imagine drunken revels with some very shapely partners. Laughing at your obvious arousal, one of the satyrs slaps you on the back and asks 'Hey brother, wanna come with us to the Phi Alpha Nu frat-house? We're the surprise guests and it'll be... legendary!' He gives you a salacious look as he does so, eyes wandering down to your crotch, then winks meaningfully.";
-			Line Break;
+			LineBreak;
 			say "     Do you go with the satyrs?";
 			if player consents:
-				Line Break;
+				LineBreak;
 				say "     [Satyr Frat Party]"; [Further content in Wahn/Satyr Frat.i7x]
 			else:
-				Line Break;
+				LineBreak;
 				say "     You shake your head and tell the two of them that you can't come with em right now. The satyr who invited you looks a bit deflated at you declining his offer and tries to come up with a convincing reason to join them anyways - until he's interrupted by his friend. 'Let's get going Kerr, he doesn't want to come. I wanna go on and party with some hunky fratboys...' With a sigh, Kerr the satyr gives you a little wave, then gets back to rolling the cask along with his partner. Before they get too far away to understand it over the rumbling noise of the wooden barrel on the stone floor, you can hear him wonder 'Why would anyone not go to a party? Some people are strange...'";
 		else:
 			say "     Taking the drink, you swallow down the rich, flavourful wine. It quenches some of your thirst, but leaves you feeling a little strange as well. They laugh and slap you on the back after taking big drinks of their own. Their break done, one of the satyrs wipes his mouth with the back of his hand and says, 'Let's get going Kerr, we got a frat party to get to!' Corking the large cask back up, the second satyr gives you a friendly wave and they resume rolling it down the sidewalk.";
-			Line Break;
+			LineBreak;
 			say "     Looking at the jolly satyrs moving on, something inside makes you want to join them, find out what party they're aiming for. Do you go after them and try to score an invitation for the fun?";
 			if player consents:
-				Line Break;
+				LineBreak;
 				say "     In a quick sprint, you catch up to the satyrs and ask where they're going and if you can come along. One of the satyrs replies, 'Sure, the more the merrier. It's the Phi Alpha Nu frat-house that we're going for. As surprise guests, hah. It'll be legendary!' He gives you a salacious look as he does so, eyes wandering down to your crotch, then winks meaningfully.";
 				say "     [Satyr Frat Party]"; [Further content in Wahn/Satyr Frat.i7x]
 			else:
-				Line Break;
-				say "     Nah, that'll just be the wine talking. Shaking the idea off, you look around and turn to other matters.";			
+				LineBreak;
+				say "     Nah, that'll just be the wine talking. Shaking the idea off, you look around and turn to other matters.";
 			decrease thirst of player by 10;
 			if thirst of player < 0, now thirst of player is 0;
 			decrease humanity of player by 5;
@@ -613,7 +612,7 @@ Instead of resolving a Free Drink:
 				say "     You do manage to save some of the wine in a vial to give to Nermine.";
 				now winefound is 2;
 	else:
-		line break;
+		LineBreak;
 		say "     Deciding it'd be best not to drink, they shrug. 'Your loss,' the laugh and take hefty drinks before getting back to work.";
 	now Free Drink is resolved;
 
@@ -634,7 +633,7 @@ name	desc	weight	object
 "shoulder pad"	"An oversized, padded shoulderpad that juts out to the side too much. It won't cover much, but it might help."	2	shoulder pad
 
 shoulder pad is equipment.
-It is not temporary. 
+It is not temporary.
 The AC of shoulder pad is 13.
 The effectiveness of shoulder pad is 13.
 The placement of shoulder pad is "body".
@@ -757,8 +756,8 @@ Instead of resolving a Shattered House:
 		if dice >= 16:
 			say "     Taking a quick look inside, you luckily feel the kitchen floor starting to give way out from under you and manage to back away before the middle of the kitchen floor caves in and that section of the damaged house collapses into the basement. You move on after that unsuccessful venture and remind yourself to be more careful inside damaged buildings from now on.";
 		else:
-			let dam be ( ( hp of player + maxhp of player ) ) / 7;
-			decrease hp of player by dam;
+			let dam be ( ( HP of player + maxHP of player ) ) / 7;
+			decrease HP of player by dam;
 			say "     Taking a quick look inside, you yell in surprise as the kitchen floor collapses out from under you, dropping you into the basement as more of the room falls in around you. You avoid a close call as the appliances comes tumbling in. Once the dust settles, you grab a few items that fell out of the cubbard and climb out before the whole place collapses on top of you, much more wary about damaged buildings now.";
 			increase carried of food by 1;
 	else if x is 5:
@@ -772,15 +771,15 @@ Instead of resolving a Shattered House:
 		if dice >= 14:
 			say "     As you're searching through the rubble, you luckily notice some creaking and some plaster dust falling out of the corner of your eye. You get out quickly, avoiding the sudden collapse of the house. Scared but safe, you leave the place behind before the noise can attract anything dangerous.";
 		else:
-			let dam be ( ( hp of player + maxhp of player ) ) / 7;
-			decrease hp of player by dam;
+			let dam be ( ( HP of player + maxHP of player ) ) / 7;
+			decrease HP of player by dam;
 			say "     As you're searching through the rubble, you are too focused on looking for something you can take that you don't notice the growing groans of the building until it's too late and it starts collapsing around you. Debris falls down atop you, hurting you quite a bit and pinning you beneath it. You eventually dig yourself out, but you're left tired and bruised.";
 			if a random chance of 2 in 3 succeeds:
 				say "     As you're pulling yourself out, you see that the collapse has also attracted one of the local creatures, eager to take advantage of the situation.";
 				fight;
 	if battleground is "Outside", mallrecall;
 	now Shattered House is resolved;
-	
+
 Section 16 - Abandoned Milk (by cmacleod42)
 
 [Moved to Garrett.i7x file]

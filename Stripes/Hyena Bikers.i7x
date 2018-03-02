@@ -72,7 +72,7 @@ to say ridetimecheck:
 		say "[bikerbitchsex]";
 		wait for any key;
 		increase score by 1;
-		Move player to Hyena Hideout;		[dragged back to the hideout]
+		Move player to Hyena Hideout; [dragged back to the hideout]
 		now Hyena Bikers is resolved;
 	else:						[gang member]
 		say "     As the bikers circle around you, you spot one at the back pull up to another watching the group, telling him something. That biker, presumably their leader, calls off the riders and steps into the circle. 'It seems you're lucky and one of us heard about you from Gina. We've not been back to the hideout much recently and were just about to head back. Perhaps we could you give you a fun ride somewhere on the way?'";
@@ -214,7 +214,7 @@ This is the bikeride rule:
 			now ridemessage is "     You decide to get dropped off at the Capitol Building. He gives a rough, hyena laugh. 'Are you looking for some help from the governor? Ain't gonna happen. That place is all torn up. Some kinda volcano or meteor strike or something has made a mess of it. I'll drop you off as close as I can, but don't expect to find much.'[line break]";
 		Move player to Approaching the Capitol Building, without printing a room description;
 		Now Approaching the Capitol Building is known;
-		Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]
+		Now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
 		now Hyena Bikers is resolved;
 	else if title entry is "Power Plant":
 		if bikedest is 0:
@@ -223,7 +223,7 @@ This is the bikeride rule:
 			now ridemessage is "     You decide to get dropped off at the city's power plant. If he wonders why you want to go there, he holds his tongue. [line break]";
 		Move player to Plant Overview, without printing a room description;
 		Now Plant Overview is known;
-		now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
+		now Ravaged Power Plant is resolved; [removes the random event for discovering the power plant]
 		now Hyena Bikers is resolved;
 	else if title entry is "College Campus":
 		if bikedest is 0:
@@ -232,7 +232,7 @@ This is the bikeride rule:
 			now ridemessage is "     You decide to get dropped off at the city's college campus. 'We kept our distance from that spot. It doesn't look like those jocks and their steroids reacted well to this whole mess. You be careful.' [line break]";
 		Move player to College Campus, without printing a room description;
 		Now College Campus is known;
-		now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
+		now Reaching the College is resolved; [removes the random event for discovering the College Campus]
 		now Hyena Bikers is resolved;
 	else if title entry is "Warehouse District":
 		if bikedest is 0:
@@ -251,32 +251,32 @@ This is the bikeride rule:
 
 to say bikeattack:
 	[dodge three times - 10 dmg each]
-	say "[line break]   The hyena bikers laugh derisively as they circle around you as you try to find a way out of this mess. Suddenly one veers out and tries to charge you on hir bike.";
+	say "[line break]     The hyena bikers laugh derisively as they circle around you as you try to find a way out of this mess. Suddenly one veers out and tries to charge you on hir bike.";
 	[WaitLineBreak]
 	let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 12: ";
-	if dice plus bonus is greater than 12:
-		say "   You roll to the side, narrowly missing a kick as he rides past. You get up quickly, but another one is coming at you, swinging a length of chain over hir head.[line break]";
+	if dice plus bonus > 12:
+		say "     You roll to the side, narrowly missing a kick as he rides past. You get up quickly, but another one is coming at you, swinging a length of chain over hir head.[line break]";
 	else:
-		decrease hp of player by 10;
-		say "   You are too slow to get away before the biker kicks you hard, knocking you down. (10 dmg)  As you try to get up quickly, another one is coming at you, swinging a length of chain over hir head.[line break]";
+		decrease HP of player by 10;
+		say "     You are too slow to get away before the biker kicks you hard, knocking you down. (10 dmg) As you try to get up quickly, another one is coming at you, swinging a length of chain over hir head.[line break]";
 	[WaitLineBreak]
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 13: ";
-	if dice plus bonus is greater than 13:
-		say "   You dodge to the side just in time and hear the heavy chain whizz past just inches away. You turn to face your assailant, but find another hyena biker almost upon you, tire iron raised high.[line break]";
+	if dice plus bonus > 13:
+		say "     You dodge to the side just in time and hear the heavy chain whizz past just inches away. You turn to face your assailant, but find another hyena biker almost upon you, tire iron raised high.[line break]";
 	else:
-		decrease hp of player by 10;
-		say "   The hyena strikes you hard on the shoulder with the heavy length of chain, bruising you. (10 dmg)  You turn to face your assailant, but find another hyena biker almost upon you, tire iron raised high.[line break]";
+		decrease HP of player by 10;
+		say "     The hyena strikes you hard on the shoulder with the heavy length of chain, bruising you. (10 dmg) You turn to face your assailant, but find another hyena biker almost upon you, tire iron raised high.[line break]";
 	[WaitLineBreak]
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
-	if dice plus bonus is greater than 14:
-		say "   You duck quickly and the tire iron passes over your head. You turn to face the biker, but shi's disappeared back into the whirling group. You growl in frustration and call them cowards. Most of them laugh, but one pulls to a stop and gets off to fight you hand to hand. As you get ready to fight hir, you see others getting off their bikes to take you on as well.";
+	if dice plus bonus > 14:
+		say "     You duck quickly and the tire iron passes over your head. You turn to face the biker, but shi's disappeared back into the whirling group. You growl in frustration and call them cowards. Most of them laugh, but one pulls to a stop and gets off to fight you hand to hand. As you get ready to fight hir, you see others getting off their bikes to take you on as well.";
 	else:
-		decrease hp of player by 10;
-		say "   You are clubbed in the head by the hard metal, making you see stars for a moment. (10 dmg)  You turn to face the biker, but shi's disappeared back into the whirling group. You growl in frustration and call them cowards. Most of them laugh, but one pulls to a stop and gets off to fight you hand to hand. As you get ready to fight hir, you see others getting off their bikes to take you on as well.";
+		decrease HP of player by 10;
+		say "     You are clubbed in the head by the hard metal, making you see stars for a moment. (10 dmg) You turn to face the biker, but shi's disappeared back into the whirling group. You growl in frustration and call them cowards. Most of them laugh, but one pulls to a stop and gets off to fight you hand to hand. As you get ready to fight hir, you see others getting off their bikes to take you on as well.";
 
 
 Section 3 - Sexy Subroutines
@@ -289,8 +289,8 @@ to say beatenbyhb:
 	say "     The two hyenas continue to thrust themselves into your body as they spear you from each end. You can hear the sounds of the other bikers having fun together around you, further exciting you. You take it eagerly, moaning and squirming in pleasure until finally you feel the hot rush of cum down your throat, followed by another series of blasts into your [if cunts of player > 0]eager pussy[else]gripping asshole[end if]. [If cocks of player > 0]Your cock dangles beneath you as you cum, spraying your unwanted seed onto the pavement beneath you as the strong, dominant hyenas have their way with you.[end if]";
 	[WaitLineBreak]
 	say "     That pair done with you, you are pushed roughly into the hands of others. You are bent over one of their bikes and another pair take you again. Other stroke their cocks and cum all over your face. You lick up as much of it as you can get, much to their amusement.";
-	say "     Eventually, the orgy winds down once all hyenas feel quite sated and you quite full of hyena cum in every available hole. A shadow passes over you and you look up, still quite dazed with lust. The hyena leader is standing above you. 'You're certainly brave and resourceful, managing on your own up to this point. But you should really consider sticking with the hyenas instead of going solo after this.'  With that, he turns back to his group and gets on his bike. Following their leader, the bikers mount up once again and ride off, leaving you in a puddle of cum, with part of you longing to be used again.[impregchance]";			[another chance for impregnation]
-	infect "Herm Hyena";			[second dose of infection]
+	say "     Eventually, the orgy winds down once all hyenas feel quite sated and you quite full of hyena cum in every available hole. A shadow passes over you and you look up, still quite dazed with lust. The hyena leader is standing above you. 'You're certainly brave and resourceful, managing on your own up to this point. But you should really consider sticking with the hyenas instead of going solo after this.'  With that, he turns back to his group and gets on his bike. Following their leader, the bikers mount up once again and ride off, leaving you in a puddle of cum, with part of you longing to be used again.[impregchance]"; [another chance for impregnation]
+	infect "Herm Hyena"; [second dose of infection]
 	decrease humanity of player by 5;
 	increase libido of player by 12;
 	if libido of player > 100:
@@ -370,7 +370,7 @@ to say bikersubsex:
 	[WaitLineBreak]
 	say "     Eventually, the orgy winds down, everyone feeling quite sated and you quite full of hyena cum in every available hole. The hyenas mount up once again and ride off, leaving you to your own devices, but longing to be used again.[impregchance]";
 	infect "Herm Hyena";
-	infect "Herm Hyena";	
+	infect "Herm Hyena";
 	decrease humanity of player by 6;
 	increase libido of player by 12;
 	if libido of player > 100:
@@ -397,7 +397,7 @@ to say bikerbitchsex:
 		[WaitLineBreak]
 		say "     Eventually, the orgy winds down, everyone feeling quite sated and your ass full to overflowing with hyena cum. The hyena leader steps up to you and drags you over to his bike. He tosses you onto it like another prize and mounts it. You ride back to the hideout on his motorcycle, with him playing with your well-used asshole from time to time. The ride over, he tosses you off and tells you to be a good bitch and come back for more later.";
 	infect "Herm Hyena";
-	infect "Herm Hyena";	
+	infect "Herm Hyena";
 	decrease humanity of player by 8;
 	increase libido of player by 15;
 	if libido of player > 100:
@@ -463,7 +463,7 @@ instead of fucking the grant:
 		now bikedest is 1;
 		enable the High Rise District;
 		disable the Stay option;
-	if lastfuck of grant - turns is less than 8:
+	if lastfuck of grant - turns < 8:
 		if matriarchdefeated is 2:
 			say "     The biker leader hops off the crate and push you against it roughly. He leans overtop you and nibbles your ear. As you start to hope he'll mount you, he swats you hard on the rear. 'You're overeager, little bitch. Come back later and I'll be in the mood to show you what a real male's like.'  He gives you another swat on the ass before shoving you back into the room. Many of the others around chuckle as the impressive male sends you off firmly. You blush and slink away, but long for [']later['] to come.";
 		else:
@@ -574,7 +574,7 @@ to say grantbitchsex1:
 		say "     As he fucks you, the male doesn't neglect his bitch's needs either. Now that you're properly submitting to him, his paws can roam to tease your nipples and stroke your cock while he screws you. His sharp teeth and slobbery tongue play against your ear as he tells you again and again what a good bitch you are and that he'll fill you with what you need.";
 		[WaitLineBreak]
 		say "     The hard fucking feels wonderful, but all good things must come to an end. After fucking you through one orgasm that leaves a sticky stain on the side of the crate and getting you hard and ready to blow again, he buries his cock to just before the knot and unleashes his hot seed, blasting it deep inside your ass. You can feel his virile load shooting into your bowels, sending you into another crashing climax that leaves you exhausted and panting on the crate.[mimpregchance]";
-		say "    Grant pulls his spent shaft free with a wet pop before wiping it against your butt. Done with you, he pulls you roughly from the box and onto the floor. He teasingly grins down at you as he hops back onto the crate. 'You're in my seat.'  You moan softly and lower your ears at his playful admonishment, nuzzling at his sheath and cock, to finish licking him clean. He rubs your ears and strokes your muzzle lightly before sending you off with a light swat on your rear for your impertinence.";
+		say "     Grant pulls his spent shaft free with a wet pop before wiping it against your butt. Done with you, he pulls you roughly from the box and onto the floor. He teasingly grins down at you as he hops back onto the crate. 'You're in my seat.'  You moan softly and lower your ears at his playful admonishment, nuzzling at his sheath and cock, to finish licking him clean. He rubs your ears and strokes your muzzle lightly before sending you off with a light swat on your rear for your impertinence.";
 		wait for any key;
 
 
@@ -678,7 +678,7 @@ to say grantmtop:
 	say "     His paws move to your legs and spread them as he lines up his cock. You steady yourself with a soft moan of eagerness, pressing back as soon as he's in position. You whimper softly at the sudden penetration of his sizeable member. But it feels so good, thick and hard pressing into your tight rump, pressing delightfully against your prostate.";
 	[WaitLineBreak]
 	say "     You dig your paws at the bedding the big male fucks you hard and fast, leaking a steady flow of precum into your bottom to get you slick. You can feel his muscular chest against your back as he nibbles and nips at your nape and ears. He uses one paw to help support his weight while the other grips your [cockname of player] cock, squeezing it as he pounds into you.";
-	say "     'Mmm... your such a nice, tight fuck. So smooth and tight around my cock, [if matriarchdefeated is 1]you eager slut[else]my lovely[end if],' he rumbles before taking the nape of your neck into his muzzle and growling softly. You tilt your head back and pant in pleasure, enjoying the lustful fucking you're getting.";
+	say "     'Mmm... you're such a nice, tight fuck. So smooth and tight around my cock, [if matriarchdefeated is 1]you eager slut[else]my lovely[end if],' he rumbles before taking the nape of your neck into his muzzle and growling softly. You tilt your head back and pant in pleasure, enjoying the lustful fucking you're getting.";
 	[WaitLineBreak]
 	say "     The wet sounds of your sex from the hard, steady thrusts of the hyena into your pre-slick tailhole surround you. The slap of his heavy balls against your own makes you long more and more for the virile seed within them. Your own cock throbs and leaks precum in an ever-growing stain on the blankets. His panting grows heavier as his excitement builds, growing closer until finally he thrusts hard into you one last time, driving his cock fully into you and tying with you.";
 	say "     You can feel his cock throb inside you as it blasts shot after shot of thick semen into your bowels, making your tummy plump a little from its amount. The feel of so much virile heat shooting into you sends you over the edge and you climax moments later. He growls softly and pumps at your cock, shooting your [if matriarchdefeated is 1]unwanted, submissive [end if]load onto the sheets.[mimpregchance]";

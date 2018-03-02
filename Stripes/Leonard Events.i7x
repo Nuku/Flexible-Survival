@@ -18,19 +18,19 @@ lastleomidcoitus is a number that varies.
 leopocketwatch is a truth state that varies. leopocketwatch is usually false.
 
 
-after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 and lastdenevent - turns >= 12:
-	if hp of Leonard is 16:	[maids]
+after navigating Lion's Den while HP of Leonard >= 16 and HP of Leonard < 100 and lastdenevent - turns >= 12:
+	if HP of Leonard is 16:	[maids]
 		say "[leodenscene1]";
-	else if hp of Leonard is 17 and a random chance of 2 in 5 succeeds:
+	else if HP of Leonard is 17 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene2]";
-	else if hp of Leonard is 18 and a random chance of 2 in 5 succeeds:
+	else if HP of Leonard is 18 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene3]";
-	else if hp of Leonard is 19 and a random chance of 2 in 5 succeeds:
+	else if HP of Leonard is 19 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene4]";
-	else if hp of Leonard is 20 and a random chance of 2 in 5 succeeds:
+	else if HP of Leonard is 20 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene5]";
-[	else if hp of Leonard is 21 and a random chance of 2 in 5 succeeds:
-		say "[leodenscene6]";		]
+[	else if HP of Leonard is 21 and a random chance of 2 in 5 succeeds:
+		say "[leodenscene6]";]
 	else if leodenlist is not empty and a random chance of (the number of entries in leodenlist) in 5 succeeds:
 		sort leodenlist in random order;
 		if entry 1 of leodenlist is 1:
@@ -42,7 +42,7 @@ after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 an
 		else if entry 1 of leodenlist is 3:
 			say "[leodenspecial3]";
 [		else if entry 1 of leodenlist is 4:
-			say "[leodenspecial4]";			]
+			say "[leodenspecial4]";]
 	else if a random chance of 1 in 4 succeeds:	[repeatable]
 		if a random chance of 2 in 5 succeeds:
 			say "[leosupplyscene]";
@@ -76,7 +76,7 @@ to say leodenscene1:
 	increase libido of player by 5;
 	decrease humanity of player by 5;
 	if libido of player > 100, now libido of player is 100;
-	now hp of Leonard is 17;
+	now HP of Leonard is 17;
 	now lastdenevent is turns;
 
 
@@ -109,7 +109,7 @@ to say leodenscene2:
 	decrease libido of player by 10;
 	decrease humanity of player by 5;
 	if libido of player < 0, now libido of player is 0;
-	now hp of Leonard is 18;
+	now HP of Leonard is 18;
 	now lastdenevent is turns;
 	rest;
 	follow the turnpass rule;
@@ -147,7 +147,7 @@ to say leodenscene3:
 	else:
 		felinebodyshift;
 	now lastdenevent is turns;
-	now hp of Leonard is 19;
+	now HP of Leonard is 19;
 
 
 Part 4 - Special Gift
@@ -184,7 +184,7 @@ to say leodenscene4:
 	decrease libido of player by 10;
 	decrease humanity of player by 5;
 	if libido of player < 0, now libido of player is 0;
-	now hp of Leonard is 20;
+	now HP of Leonard is 20;
 	now lastdenevent is turns;
 	rest;
 	follow the turnpass rule;
@@ -212,7 +212,7 @@ to say leodenscene5:
 	WaitLineBreak;
 	say "     While the maids guide Leonard's stiff cock into their charge's muzzle, you move in between his legs and tug down his pants. Though [']his['] really won't be appropriate for much longer, his cock and balls already quite small even as a fresh, virgin pussy is forming to replace them. You lick your lips and start lapping across it, encouraging the change. You kiss the cock goodbye as it shrinks down to become the clitoris for her new vagina. As much as you may like to stuff [if cocks of player > 0]your cock or [end if]a few fingers into her pristine pussy, you content yourself with some light touching and a thorough licking, saving her deflowering for your mate.";
 	say "     During the blow job, Leonard rumbles to her about what a fine, brave kitty she is and how happy the pride is to have her in its service. Excited and wanting to get to the main event, Leonard goes for a quick finish to the oral prelude and releases a lustful roar along with his semen. The new kitty moans in pleasure as she swallows down the lion's first load. And by that point, you've gotten her so hot and bothered that she moves onto all fours and raises her tail unbidden as soon as the lion moves back. 'Do me, sir. Please, I need it,' she mrowls in heated need as she presents herself for his inspection.";
-	say "     Rumbling again what a fine kitty she is, Leonard stiffens right back up and thrusts into her, taking her new-found virginity. A shiver of pained delight runs through her as her hymen's broken, but the discomfort disappears almost immediately, leaving only the lustful need for more. Snuggling up beside her, you reach underneath the lioness to caress her stuffed pussy and Leonard's cock while they mate. You and the lion slide her partially atop you so she can start nursing for your matronly milk. As she nurses, you purr to her about how the pride needs brave, loyal lionesses like her. Adding that a strong, obedient lioness like her deserves to be rewarded, Leonard buries his rod deep inside her and drains his balls, claiming her womb with her virile reward. She mrowls loudly in climax in response, kissing you repeatedly as she swears her love and loyalty to her pride.";
+	say "     Rumbling again what a fine kitty she is, Leonard stiffens right back up and thrusts into her, taking her newfound virginity. A shiver of pained delight runs through her as her hymen's broken, but the discomfort disappears almost immediately, leaving only the lustful need for more. Snuggling up beside her, you reach underneath the lioness to caress her stuffed pussy and Leonard's cock while they mate. You and the lion slide her partially atop you so she can start nursing for your matronly milk. As she nurses, you purr to her about how the pride needs brave, loyal lionesses like her. Adding that a strong, obedient lioness like her deserves to be rewarded, Leonard buries his rod deep inside her and drains his balls, claiming her womb with her virile reward. She mrowls loudly in climax in response, kissing you repeatedly as she swears her love and loyalty to her pride.";
 	WaitLineBreak;
 	say "     After that, the mating winds down into playful snuggling while the maids lick the three of you clean before all of you enjoy a nap on the plush bed together. When you awaken, Leonard is seeing the newest member of the pride off. Now fully a cute lioness, she's also sporting an altered version of her military jacket that's been re-tailored by the maids into a sexy open top. She gives you both a sharp salute and heads off with a smile on her eager face.";
 	say "     Taking a seat with Leonard in the sitting room, he passes you a drink. 'I had an informative discussion with our new Olive when she awoke. She doesn't recall much and it's fading quickly, but I queried her on the soldiers coming into the city. The rank and file soldiers clearly aren't being told much, but I was able to glean much. A shrewd gentleman must be able to discern what's going on from the limited details available. If the pride's properly prepared, I think we things could turn out rather well for us. As for Olive, I believe she'll work out quite well for us if her training still holds. If so, her and a few like-minded recruits would make a good team to help protect the other, less combat-ready girls.";
@@ -223,7 +223,7 @@ to say leodenscene5:
 	decrease libido of player by 10;
 	decrease humanity of player by 20;
 	if libido of player < 0, now libido of player is 0;
-	now hp of Leonard is 21;
+	now HP of Leonard is 21;
 	now lastdenevent is turns;
 	rest;
 	follow the turnpass rule;
@@ -250,10 +250,8 @@ to say leodenspecial1:
 	now lastdenevent is turns;
 	now lastfuck of Leonard is turns;
 	remove 1 from leodenlist;
-	decrease hunger of player by 30;
-	decrease thirst of player by 12;
-	if hunger of player < 0, now hunger of player is 0;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerEat 30;
+	PlayerDrink 12;
 	now leodinner is true;
 
 
@@ -276,13 +274,12 @@ to say leodenspecial2:
 		infect "Feline";
 	else:
 		felinebodyshift;
-	increase xp of player by ( intelligence of player * 2 ) + level of player;
+	increase XP of player by ( intelligence of player * 2 ) + level of player;
 	now lastdenevent is turns;
 	remove 2 from leodenlist;
-	decrease thirst of player by 6;
-	if thirst of player < 0, now thirst of player is 0;
+	PlayerDrink 6;
 	now leoshadowmet is true;
-	add 11 to leoparklist;	[opens Shadow #2 in Park Events]
+	add 11 to leoparklist; [opens Shadow #2 in Park Events]
 
 
 Part 9 - Railway Watch
@@ -293,7 +290,7 @@ to say leodenspecial3:
 	say "     While pocket watches are rare these days, this one is larger than you're used to seeing and you get the feeling right away that it's an antique. Flipping it open, you find it still in working order, its second hand ticking away the time. Checking the markings on the inner cover and face, you figure it to be a classic railway company watch, the kind used by conductors or awarded to one upon his retirement. Based on this, you feel it a safely bet to guess it's at least a century old.";
 	WaitLineBreak;
 	say "     Passing the golden timepiece to Leonard, he takes it from you with only a quick glance. 'Little one, I recall mentioning the need for a clock so my whole household might know the time,' he rumbles with an edge of frustration in his voice. The little lioness wrings her paws and mumbles meekly. You give her another reassuring pat while glaring up at your mate. He coughs and continues, taking a proper appraisal of the watch at your prompting. 'Well yes, it is certainly a quality piece. As my mate says, it is quite lovely. An antique and likely a collector's item, at least. Does it keep proper time?' he asks, already clipping the chain to his suit coat.";
-	say "     The small lioness glances up at Leonard, a little less nervous now. 'I... I th-think so, sir. It was on display for sale at a watchmaker's with a sign saying it had been recently repaired. I didn't have a chance to test it against the clock bef-  Oh, the clock! There's this great clock there. A grandfather taller than me and-' she cuts herself off short after the short burst of enthusiasm, suddenly wringing paws and looking away again. 'I'm s-sorry I didn't get it. It was just so big and then there were m-monsters and...' she mumbles, staring at her feet.";
+	say "     The small lioness glances up at Leonard, a little less nervous now. 'I... I th-think so, sir. It was on display for sale at a watchmaker's with a sign saying it had been recently repaired. I didn't have a chance to test it against the clock bef- Oh, the clock! There's this great clock there. A grandfather taller than me and-' she cuts herself off short after the short burst of enthusiasm, suddenly wringing paws and looking away again. 'I'm s-sorry I didn't get it. It was just so big and then there were m-monsters and...' she mumbles, staring at her feet.";
 	WaitLineBreak;
 	say "     You put your arms around her and hug her tenderly while giving Leonard another prompting glare and nod. Knowing your mate's moods, you know he's certainly nowhere near as upset as the girl's reaction would warrant, only a touch frustrated by what must a familiar scenario with this one girl. He caresses her cheek with his large paw. 'The watch is very lovely, my dear Mimosa. It is a fine gift. Now why don't you come have a seat with me and tell us about your little adventure?' he purrs, guiding her over to his chair.";
 	say "     A little surprised at what seems like a reversal of fortune to the lioness, she's boosted up into Leonard's lap and cuddled into his arms. His paws roam over her body, lightly at first, though soon groping her ass and breasts. He does this while prompting her to relate what happened, asking the occasional question or getting her back on track when derailed with a casual comment. He also slyly prompts her to stroke his cock as a means to stop fidgeting with her hands. Eventually the recounting is put on hold as the heavy petting heats up. She's brought to a mrowling orgasm as Leonard's hot seed is splattered across her chest and tummy.";
@@ -317,7 +314,7 @@ to say leodenspecial3:
 	infect "Feline";
 	now leopocketwatch is true;
 	increase feline_meow by 1;
-	now lastfuck of Leonard is turns + 8;		[Leonard ready to go]
+	now lastfuck of Leonard is turns + 8; [Leonard ready to go]
 	now lastdenevent is turns;
 
 
@@ -345,9 +342,9 @@ to say leosupplyscene:
 		say "     After Leonard's taken his seat, you and he lift the eager little feline into his lap. She mewls happily and grinds her cute ass down onto his stiffening cock, sharing kisses with both of you. ";
 		if scalevalue of player >= 3 and ( cocks of player > 0 or cunts of player > 0):
 			say "     Given her position, you could either choose to be on the receiving end or the giving side of some oral fun with the hard-working kitty.";
-			say "     [bold type]Which would you prefer?[roman type][line break]";	
-			Line Break;
-			say "     ([link]Y[as]y[end link]) - Recieve oral.";
+			say "     [bold type]Which would you prefer?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Receive oral.";
 			say "     ([link]N[as]n[end link]) - Give oral.";
 			if the player consents:
 				say "[leosupplyoral1]";
@@ -418,8 +415,8 @@ to say leopracticesession:
 				increase morale of player by 2;
 		else if T is 2:
 			say "that some of your road weariness has lifted. The four of you clap politely for the musical lion, who smiles and bows before instructing the maids to put his instrument and stand away.";
-			increase hp of player by ( hp of player / 10 );
-			if hp of player > maxhp of player, now hp of player is maxhp of player;
+			increase HP of player by ( HP of player / 10 );
+			if HP of player > maxHP of player, now HP of player is maxHP of player;
 		else if T is 3:
 			say "aroused and eager to be with your loving mate. The four of you clap politely for the musical lion, who smiles and bows before instructing the maids to put his instrument and stand away.";
 			increase libido of player by 5;
@@ -546,7 +543,7 @@ Instead of resolving PridePark:
 				increase libido of player by 2;
 				decrease humanity of player by 2;
 			else:
-				say ", kneading her paws over your [bodytype of player] until your matronly figure is restored and she can begin nursing from your milk. She purrs happily as she does while you rumble to her [one of]about what an good and loyal kitty she is[or]about what a pretty kitty she is[or]that you and Leonard love her[or]about how much her pride cares for her[as decreasingly likely outcomes]. You pet her lovely, leonine body, patting her bottom and fingering her pussy to get her worked up for another session with Leonard. After she's been fed and her bond with the pride has been renewed, you release her back in the park with a reminder that Leonard would welcome another visit from her soon.";
+				say ", kneading her paws over your [bodytype of player] body until your matronly figure is restored and she can begin nursing from your milk. She purrs happily as she does while you rumble to her [one of]about what an good and loyal kitty she is[or]about what a pretty kitty she is[or]that you and Leonard love her[or]about how much her pride cares for her[as decreasingly likely outcomes]. You pet her lovely, leonine body, patting her bottom and fingering her pussy to get her worked up for another session with Leonard. After she's been fed and her bond with the pride has been renewed, you release her back in the park with a reminder that Leonard would welcome another visit from her soon.";
 				felinebodyshift;
 				increase libido of player by 2;
 				decrease humanity of player by 2;
@@ -576,7 +573,7 @@ Instead of resolving PridePark:
 			if cocks of player > 0 and a random chance of 2 in 5 succeeds:
 				say "     Taking your cock in paw, she strokes and caresses it, gradually working you up to full erection while grinning around your leaking nipple. She doesn't let up, continuing to nurse even as you bring her hips over your cock and lower her down onto your [cock size desc of player] [cock of player] penis[if cock length of player > 20]. She gives a soft mewl of discomfort initially as you work to press your impressive manhood into the little feline, but her cunt and belly stretch to accommodate you. From the way she's squirming in delight upon your shaft and purring up a storm, it's clear that the extra effort is well worth it to her[else if cock length of player > 12]. She gives a soft mewl as you work to press your enlarged manhood into the little feline, but her cunt stretched to accommodate you. From the way she's squeezing down around you and purring loudly, it's clear she's enjoying herself as well[else]. She mewls in pleasure as you slide your manhood into the little feline, stuffing that cute cunt of hers. From the way she's squeezing down around you and purring, it's clear she's enjoying herself as well[end if]. Keeping hold of her hips, you gently thrust into the cute kitty, fucking her even as she nurses from you. After she's been well fed and well fucked, you drive your cock deep inside her and cum hard, adding your semen to her already full belly[if cock width of player > 15] until she's so full she's sloshing with fluid[else if cock width of player > 8] to make it visibly plumped with fluid[end if]. You ease her off your shaft and back down onto the ground, letting her head on her way with another hug and a reminder to visit the den again soon.";
 			else if cocks of player > 0 and anallevel is 3 and a random chance of 3 in 5 succeeds:
-				say "     Taking your cock in paw, she strokes and caresses it, gradually working you up to full erection while grinning around your leaking nipple. She doesn't let up, pausing only briefly in her nursing to shift her hips after you move her into position atop your cock so you end up thrusting into her back door, much to your surprise. She moans loudly as your [cock size desc of player] [cock of player] cock pushes its way into her rectum, a smile of delight upon her little face[if cock length of player > 20] despite the effort involved in taking your impressive manhood into her tight hole[else if cock length of player > 12] despite the effort to taking your enlarged manhood into her tight hole[end if]. Rumbling that she's a  dirty little kitty, she only grins and latches back onto your nipple, suckling with added zeal. Knowing Leonard's lust for breeding his girls, you expect she hasn't gotten to satisfy that kinky itch of hers for a while. Keeping hold of her hips, you gently thrust into the cute kitty, fucking that tight ass of hers while she nurses while purring happily. After she's been well fed and well fucked, you drive your cock deep inside her bottom and cum hard, adding your semen to her already full belly[if cock width of player > 15] until she's so full she's sloshing with fluid[else if cock width of player > 8] to make it visibly plumped with fluid[end if]. You ease her off your shaft and back down onto the ground, giving her messy asshole a teasing fingering as you give her another hug and a reminder to visit the den again soon.";
+				say "     Taking your cock in paw, she strokes and caresses it, gradually working you up to full erection while grinning around your leaking nipple. She doesn't let up, pausing only briefly in her nursing to shift her hips after you move her into position atop your cock so you end up thrusting into her back door, much to your surprise. She moans loudly as your [cock size desc of player] [cock of player] cock pushes its way into her rectum, a smile of delight upon her little face[if cock length of player > 20] despite the effort involved in taking your impressive manhood into her tight hole[else if cock length of player > 12] despite the effort to taking your enlarged manhood into her tight hole[end if]. Rumbling that she's a dirty little kitty, she only grins and latches back onto your nipple, suckling with added zeal. Knowing Leonard's lust for breeding his girls, you expect she hasn't gotten to satisfy that kinky itch of hers for a while. Keeping hold of her hips, you gently thrust into the cute kitty, fucking that tight ass of hers while she nurses while purring happily. After she's been well fed and well fucked, you drive your cock deep inside her bottom and cum hard, adding your semen to her already full belly[if cock width of player > 15] until she's so full she's sloshing with fluid[else if cock width of player > 8] to make it visibly plumped with fluid[end if]. You ease her off your shaft and back down onto the ground, giving her messy asshole a teasing fingering as you give her another hug and a reminder to visit the den again soon.";
 			else if cocks of player > 0:
 				say "     Taking your cock in paw, she strokes and caresses it, gradually working you up to full erection while grinning around your leaking nipple. She doesn't let up, working to stroke you off even as she drinks down your milk. Her soft paw works up and down your [cock size desc of player] [cock of player] cock to please you while she feeds. You stroke and caress the cute kitty, rumbling happily as she jerks you off. And from the soft purring and the way she grinds her pussy against your thigh, you can tell she's enjoying herself as well. After getting well fed on your milk, she speeds up her stroking and gets you to cum, splattering your seed all over her cute body. Rubbing her milk-filled tummy (and working your semen into her fur), you give her another hug and a reminder to visit the den again soon.";
 			else if cunts of player > 0:
@@ -688,7 +685,7 @@ Instead of resolving PridePark:
 				increase libido of player by 2;
 				decrease humanity of player by 2;
 			else:
-				say ", kneading her paws over your [bodytype of player] until your matronly figure is restored and she can begin nursing from your milk. She purrs happily as she does while you rumble to her [one of]about what a good and loyal kitty she is[or]about what a resourceful kitty she is[or]that you and Leonard love her[or]about how much her pride cares for her[as decreasingly likely outcomes]. You pet her lovely, leonine body, patting her bottom and fingering her pussy to get her worked up for her upcoming session with Leonard. After she's been fed and she's too excited to wait any longer, you release her back in the park, sending her hurrying on her way back to her master with her gift.";
+				say ", kneading her paws over your [bodytype of player] body until your matronly figure is restored and she can begin nursing from your milk. She purrs happily as she does while you rumble to her [one of]about what a good and loyal kitty she is[or]about what a resourceful kitty she is[or]that you and Leonard love her[or]about how much her pride cares for her[as decreasingly likely outcomes]. You pet her lovely, leonine body, patting her bottom and fingering her pussy to get her worked up for her upcoming session with Leonard. After she's been fed and she's too excited to wait any longer, you release her back in the park, sending her hurrying on her way back to her master with her gift.";
 				felinebodyshift;
 				increase libido of player by 2;
 				decrease humanity of player by 2;
@@ -713,7 +710,7 @@ to say leoparkscene1:
 		infect "Feline";
 	now lastfuck of leonard is turns + 8;
 	remove 1 from leoparklist;
-[	add 7 to leoparklist;		[opens next walk]		]
+[	add 7 to leoparklist; [opens next walk]		]
 	now battleground is "void";
 	move player to Lion's Den;
 
@@ -815,7 +812,7 @@ to say leoparkscene7:
 	now battleground is "void";
 	move player to Lion's Den;
 	remove 7 from leoparklist;
-[	add 10 to leoparklist;		[opens next walk]	]
+[	add 10 to leoparklist; [opens next walk]	]
 
 
 Part 8 - Special Park Pride 8 - Infected Kitty #2
@@ -914,10 +911,9 @@ to say leoparkscene11:
 		infect "Feline";
 	now lastfuck of leonard is turns + 8;
 	now battleground is "void";
-	decrease hunger of player by 12;
-	if hunger of player < 0, now hunger of player is 0;
+	PlayerEat 12;
 	remove 11 from leoparklist;
-	now leonardcaraway is true;	[***]
+	now leonardcaraway is true; [***]
 	move player to Lion's Den;
 
 

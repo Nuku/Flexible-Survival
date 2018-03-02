@@ -17,7 +17,7 @@ Include (-
 #ifndef USE_NO_STATUS_LINE;
 Constant USE_NO_STATUS_LINE 0;
 #endif;
--). 
+-).
 
 Chapter 1 - Initialisations, windows and values
 
@@ -29,7 +29,7 @@ Include (-
 
 Attribute g_present;
 
--) after "Definitions.i6t". 
+-) after "Definitions.i6t".
 
 
 A g-window can be g-present or g-unpresent. A g-window can be g-required or g-unrequired.
@@ -84,9 +84,9 @@ To set main-window ref:
 (- MainWinRef(); -).
 
 Include
-(-  
+(-
 [ MainWinRef;
-     (+main-window+).rock_value = GG_MAINWIN_ROCK; 
+     (+main-window+).rock_value = GG_MAINWIN_ROCK;
      (+main-window+).ref_number = gg_mainwin;
      give (+main-window+) g_present;
 ];
@@ -116,7 +116,7 @@ The position of the main-window is g-placebelow.
 
 The rock-value of the main-window is 100.
 
-To decide if rocks are currently unassigned: 
+To decide if rocks are currently unassigned:
 	if rock-value of main-window is 100, yes; no.
 
 Section - Spawning relations
@@ -147,15 +147,15 @@ Peeping is an action applying to one visible thing.
 Understand "peep through [any g-window]" as peeping.
 
 Carry out peeping (this is the peep rule):
-	say "[noun]: spawns [a list of g-windows spawned by the noun]."; 
+	say "[noun]: spawns [a list of g-windows spawned by the noun].";
 	say "ancestors: [a list of g-windows ancestral to noun].";
 	say "descendants: [a list of g-windows descended from noun].";
 	if noun is paternal, say "(currently paternal) ";
-	otherwise say "(currently childless) ";
-	if noun is g-present, say "(present) "; otherwise say "(missing) ";
-	if noun is g-required, say "(required)."; otherwise say "(unneeded).";
+	else say "(currently childless) ";
+	if noun is g-present, say "(present) "; else say "(missing) ";
+	if noun is g-required, say "(required)."; else say "(unneeded).";
 
-tracking it to is an action applying to two visible  things.
+tracking it to is an action applying to two visible things.
 
 Understand "track [any g-window] to [any g-window]" as tracking it to.
 
@@ -163,8 +163,8 @@ Carry out tracking it to:
 	say "no. =>: [number of steps via the spawning relation from noun to second noun].";
 	say "no. <=: [number of steps via the spawning relation from second noun to noun].";
 
-Throwing open is an action applying to one visible  thing.
-Slamming shut is an action applying to one visible  thing.
+Throwing open is an action applying to one visible thing.
+Slamming shut is an action applying to one visible thing.
 
 Understand "slam shut [any g-window]" as slamming shut.
 Understand "throw open [any g-window]" as throwing open.
@@ -245,18 +245,18 @@ To g-make (g - a g-window):
 	begin the constructing activity with the pending g-window;
 	let p1 be the pos-val for g of the position of g + method-val of the scale method of g;
 	let p2 be 0;
-	if the scale method of g is g-using-minimum, now p2 is the minimum size of g; 
-	otherwise now p2 is the measurement of g;
+	if the scale method of g is g-using-minimum, now p2 is the minimum size of g;
+	else now p2 is the measurement of g;
 	let p3 be the kind-val of the type of g;
-	let p0 be the ref-number of the direct parent of g;	
-	now the  ref-number of g is the reference created from p0 with p1 and p2 and p3 and rock value rock-value of g;
+	let p0 be the ref-number of the direct parent of g;
+	now the ref-number of g is the reference created from p0 with p1 and p2 and p3 and rock value rock-value of g;
 	end the constructing activity with the pending g-window;
 
 To decide which number is the reference created from (p0 - a number) with (p1 - a number) and (p2 - a number) and (p3 - a number) and rock value (rock - a number):
 (- (glk_window_open({p0},{p1}, {p2}, {p3}, {rock}))
 -)
 
-To decide which number is the pos-val for (g - a g-window) of (N - a g-window-position): (-  (GetPos({N}, {g})) -).
+To decide which number is the pos-val for (g - a g-window) of (N - a g-window-position): (- (GetPos({N}, {g})) -).
 To decide which number is the method-val of (N - a g-window-type): (- (GetMethod({N})) -).
 To decide which number is the kind-val of (N - a g-window-kind): (- (GetKind({N})) -).
 
@@ -273,9 +273,9 @@ Include (-
 
 [ GetMethod type;
 	switch(type)
-	{	
+	{
 		(+g-proportional+): 	return winmethod_Proportional;
-		default:		  	return winmethod_Fixed;	
+		default:		  	return winmethod_Fixed;
 	}
 ];
 
@@ -286,7 +286,7 @@ Include (-
 		(+g-placebelow+): return winmethod_Below;
 		(+g-placeleft+): return winmethod_Left;
 		(+g-placeright+): return winmethod_Right;
-	} 
+	}
 
 ];
 
@@ -365,7 +365,7 @@ This is the refresh windows rule:
 		now current g-window is the old current;
 		set focus to the current g-window;
 	end if.
-	
+
 To refresh windows:
 	follow the refresh windows rule.
 
@@ -382,40 +382,40 @@ To decide which number is the width of (g - a g-window):
 To decide which number is the height of (g - a g-window):
 (-  	WindowSize({g}, 1) 	-).
 
-Include (-  
+Include (-
 
-[ WindowSize g  index result;
+[ WindowSize g index result;
 	if (g hasnt g_present) return 0;
 	result = glk_window_get_size(g.ref_number, gg_arguments, gg_arguments+WORDSIZE);
-            return  gg_arguments-->index;
+            return gg_arguments-->index;
 ];
 
 -)
 
 Chapter 4 - The constructing activity
 
-Section - Fixing problems with window scaling 
+Section - Fixing problems with window scaling
 
-Before constructing a g-window when the scale method of the pending g-window is g-using-minimum (this is the reset minimum rule): 
-	now the scale method of the pending g-window is g-proportional; 
+Before constructing a g-window when the scale method of the pending g-window is g-using-minimum (this is the reset minimum rule):
+	now the scale method of the pending g-window is g-proportional;
 
 The reset minimum rule is listed before the use minimum size instead rule in the Before constructing rulebook.
 
 Before constructing a g-window when the scale method of the pending g-window is g-proportional (this is the fix broken proportions rule):
-	if the measurement of the pending g-window > 100 or the measurement of the pending g-window < 0, 
-	now the scale method of the pending g-window is g-fixed-size;  
+	if the measurement of the pending g-window > 100 or the measurement of the pending g-window < 0,
+	now the scale method of the pending g-window is g-fixed-size;
 
 Before constructing a g-window when the position of the pending g-window is g-placenull (this is the tile automatically windows rule):
-	if the position of the direct parent of the pending g-window is at least g-placeabove, now the position of the pending g-window is g-placeright; 
-	otherwise now the position of the pending g-window is g-placeabove.
+	if the position of the direct parent of the pending g-window is at least g-placeabove, now the position of the pending g-window is g-placeright;
+	else now the position of the pending g-window is g-placeabove.
 
-Before constructing a g-window when the scale method of the pending g-window is g-proportional  (this is the use minimum size instead rule):
+Before constructing a g-window when the scale method of the pending g-window is g-proportional (this is the use minimum size instead rule):
 	let p1 be 100 multiplied by the minimum size of the pending g-window;
 [actually, this should be the size of the direct parent, shouldn't it? ]
 	let p2 be the measurement of the pending g-window multiplied by width of the direct parent of the pending g-window;
 	if p1 > p2, now the scale method of the pending g-window is g-using-minimum.
- 
-The first after constructing a g-window :
+
+The first after constructing a g-window:
 	if the ref-number of the pending g-window is zero, now the pending g-window is g-unpresent instead.
 
 The last after constructing a g-window (this is the draw window after construction rule):
@@ -434,7 +434,7 @@ the color of the padding between the application borders and the
 boundaries of the Glk window model.  This padding is not part of Glk's
 model and at best its behavior is undefined.  At worst, the very
 existence of such padding is disallowed by the spec.  (I don't
-actually know for sure.) 
+actually know for sure.)
 
 Gargoyle uses these hints to "guess" the appropriate color of the
 padding.  The above example would set it back to white, once you're
@@ -443,7 +443,7 @@ have no effect on any Glk windows until the next time you open a text
 buffer, so as a practical matter it should do nothing in other Glk
 implementations."
 
-( from http://groups.google.com/group/rec.arts.int-fiction/msg/b88316e2dcf1bb6b )
+( from https://groups.google.com/forum/#!msg/rec.arts.int-fiction/t2cYg_A5FMw/a7vx3OIWg7gJ )
 
 (The workaround as incorporated here accepts a glulx color value (see Glulx Text Effects) rather than defaulting to white as in the originally posted code.)
 
@@ -458,7 +458,7 @@ The phrase used to accomplish this could also be used to set the Gargoyle border
 After constructing a g-window when the type of the pending g-window is g-text-buffer (this is the Gargoyle text-buffer workaround rule):
 	if the back-colour of the main-window is g-placenullcol:
 		set the text-buffer background color to g-white;
-	otherwise:
+	else:
 		reset the text-buffer background color to the back-colour of the main-window.
 
 To set/reset the/-- Gargoyle/-- text/text-buffer/-- window/-- background color/-- to the/-- color/-- (color_value - a glulx color value):
@@ -478,15 +478,15 @@ Chapter 5 - Writing to different windows
 
 Section - Shifting and knowing where we are
 
-[ Updated code by Erik Temple. ] 
+[ Updated code by Erik Temple. ]
 
 The current g-window is a g-window that varies. The current g-window is the main-window.
 
 To set/move/shift the/-- focus to (g - a g-window), clearing the window:
-    if g is g-present 
+    if g is g-present
     begin;
         now the current g-window is g;
-        set cursor to ref-number of g;    
+        set cursor to ref-number of g;
         if clearing the window, clear the current g-window;
     end if.
 
@@ -496,9 +496,9 @@ To set cursor to the/-- (N - a number):
 To clear the/-- (win - a g-window):
 	if the type of win is g-graphics:
 		graphics-clear win;
-	otherwise:
+	else:
 		text-clear win.
-        
+
 To text-clear the/-- (g - a g-window):
 (-    if ({g} has g_present) glk_window_clear({g}.ref_number); -).
 
@@ -511,8 +511,8 @@ Include (-
 [ FWBlankWindowToColor g result graph_width graph_height col;
     col = ColVal(g.back_colour);
     result = glk_window_get_size(g.ref_number, gg_arguments, gg_arguments+WORDSIZE);
-                 graph_width  = gg_arguments-->0;
-                 graph_height = gg_arguments-->1; 
+                 graph_width = gg_arguments-->0;
+                 graph_height = gg_arguments-->1;
 
     glk_window_fill_rect(g.ref_number, col, 0, 0, graph_width, graph_height);
 ];
@@ -568,7 +568,7 @@ g-khaki		12433259
 g-silver		12632256
 g-crimson	14423100
 g-orangered	16729344
-g-gold		16766720	
+g-gold		16766720
 g-darkorange	16747520
 g-lavender	16773365
 g-yellow		16776960
@@ -576,8 +576,8 @@ g-pink		16761035
 
 A g-window has a glulx color value called back-colour. The back-colour of a g-window is usually g-placenullcol. The back-colour property translates into I6 as "back_colour".
 
-Before constructing  when the type of the pending g-window is g-text-buffer (this is the set text-colours rule):
-	set the background text-colour of the pending g-window; 
+Before constructing when the type of the pending g-window is g-text-buffer (this is the set text-colours rule):
+	set the background text-colour of the pending g-window;
 
 After constructing when the type of the pending g-window is g-text-buffer (this is the reset text-colours rule):
 	reset the background text-colour of the pending g-window;
@@ -594,20 +594,20 @@ To reset the background text-colour of (g - a g-window):
 -)
 
 To set the background colour of (g - a g-window):
-(-	if ({g} has g_present) SetBCol({g}.ref_number, {g}.back_colour);	
+(-	if ({g} has g_present) SetBCol({g}.ref_number, {g}.back_colour);
 -).
 
-Include 
-(- 
+Include
+(-
 
 Constant glulx_colour_table = (+Table of Common color Values+);
 
 [ ColVal c i max;
 	max=TableRows(glulx_colour_table);
 	for ( i=1:i<=max:i++ ) {
-		if (TableLookUpEntry(glulx_colour_table, 1, i) ==  c) 
+		if (TableLookUpEntry(glulx_colour_table, 1, i) ==  c)
 			return TableLookUpEntry(glulx_colour_table, 2, i);
-	} 
+	}
 ];
 
 [ ResetBTCol i;
@@ -636,7 +636,7 @@ Include
 (-
 	[ InitGlkWindow winrock i col;
 		switch(winrock){
-			GG_MAINWIN_ROCK:	
+			GG_MAINWIN_ROCK:
 				if ((+main-window+).back_colour ~=  (+g-placenullcol+))
 				{ 	col = ColVal((+main-window+).back_colour);
 					for (i = 0: i < style_NUMSTYLES : i++)
@@ -647,15 +647,15 @@ Include
 
 					rfalse;
 				}
-			GG_STATUSWIN_ROCK: 
+			GG_STATUSWIN_ROCK:
 				if (USE_NO_STATUS_LINE == 1) rtrue;		! - Aaron Reed
 		}
-		
+
 		rfalse;
 
 	];
 
--) after "Definitions.i6t". 
+-) after "Definitions.i6t".
 
 
 Section - Reverse-colouring windows
@@ -667,7 +667,7 @@ Include (-
 
 [ SetReverse flag i;
    for (i = 0: i < style_NUMSTYLES : i++)
-       if (flag)	
+       if (flag)
 	glk_stylehint_set(wintype_textgrid, i, stylehint_ReverseColor, 0);
       else
 	glk_stylehint_clear(wintype_textgrid, i, stylehint_ReverseColor);
@@ -682,7 +682,7 @@ Section - Bordered g-windows
 A bordered g-window is a kind of g-window. A bordered g-window has a glulx color value called border-colour.
 A bordered g-window has a number called border-measure. The border-measure of a bordered g-window is usually 3.
 
-A g-border is a kind of g-window. 
+A g-border is a kind of g-window.
 The type of a g-border is always g-graphics. The scale method of a g-border is always g-fixed-size.
 
 Every bordered g-window spawns four g-borders.
@@ -692,7 +692,7 @@ After constructing a bordered g-window (called the main-panel) (this is the plac
 
 To apply borders to (main-panel - a g-window):
 	let border piece be g-placeleft;
-	repeat with item running through g-borders spawned by the main-panel 
+	repeat with item running through g-borders spawned by the main-panel
 	begin;
 		now the back-colour of the item is the border-colour of the main-panel;
 		now the measurement of the item is the border-measure of the main-panel;
@@ -706,19 +706,19 @@ When play begins when the main-window is a bordered g-window:
 
 
 Chapter 6 - Echo streams
-	
+
 To set the/-- echo stream of (win1 - a g-window) to the/-- stream of (win2 - a g-window):
 	(- glk_window_set_echo_stream({win1}.ref_number, glk_window_get_stream({win2}.ref_number)); -)
-	
+
 To set the/-- echo stream of (win1 - a g-window) to the/-- echo stream of (win2 - a g-window):
 	(- if (glk_window_get_echo_stream({win2}.ref_number)) {glk_window_set_echo_stream({win1}.ref_number, glk_window_get_echo_stream({win2}.ref_number)); } -)
-	
+
 To echo the/-- stream of (win2 - a g-window) to the/-- stream of (win1 - a g-window):
 	(- glk_window_set_echo_stream({win1}.ref_number, glk_window_get_stream({win2}.ref_number)); -)
-	
+
 To shut down the/-- echo stream of (win - a g-window):
 	(- if (glk_window_get_echo_stream({win}.ref_number)) { glk_window_set_echo_stream({win}.ref_number, GLK_NULL); } -)
-	
+
 To decide whether (win - a g-window) has an/-- echo stream:
 	(- (glk_window_get_echo_stream({win}.ref_number)) -)
 
@@ -730,7 +730,7 @@ To decide whether (win - a g-window) has an/-- echo stream:
 
 To say echo stream of (win - a g-window):
 	(- if (glk_window_get_echo_stream({win}.ref_number)) { glk_stream_set_current( glk_window_get_echo_stream({win}.ref_number) ); } -)
-	
+
 To say stream of (win - a g-window):
 	(- glk_set_window({win}.ref_number); -)
 
@@ -739,7 +739,7 @@ Section - Echo streams and the transcript
 
 To decide whether we are writing to/-- the/a/-- transcript:
 	(- gg_scriptstr -)
-	
+
 To echo the/-- text/-- stream of (win - a g-window) to the/-- transcript:
 	(- if (gg_scriptstr) glk_window_set_echo_stream({win}.ref_number, gg_scriptstr); -)
 
@@ -761,7 +761,7 @@ The glulx timed activity rules	timer event
 ]
 
 [The following phrase will only work within the rules defined in the Glulx Entry Points extension. Specifically, it will only work with the following rulebooks:
-	
+
 The glulx redrawing rules
 The glulx arranging rules
 The glulx mouse input rules
@@ -772,14 +772,14 @@ The glulx hyperlink rules
 The phrase will return 0 for the timed activity and sound notification rules, which are not associated with any window.
 
 The phrase can be used with Flexible Windows like so:
-	
+
 	if the ref-number of the current window is the reference of the window in which the event was requested:
 		...do something with this information...
 ]
 
 To decide which number is the reference of the/-- window in/of/-- which/-- the/-- event was/-- requested/occurred/--:
 	(- (gg_event-->1) -)
-	
+
 [The following phrase can only be used within the glulx hyperlink rulebook.]
 
 To decide which number is the link/-- number of the/-- selected/clicked hyperlink:
@@ -797,7 +797,7 @@ To request character input in (win - a g-window):
 
 To cancel line input in (win - a g-window):
 	(- glk_cancel_line_event({win}.ref_number, GLK_NULL); -)
-	
+
 To cancel character input in (win - a g-window):
 	(- glk_cancel_char_event({win}.ref_number); -)
 
@@ -812,20 +812,20 @@ To decide what number is the character code entered in (win - a g-window):
 
 Include (-
 
-[ WinKeyPause win i ; 
-	i = VM_KeyChar(win); 
+[ WinKeyPause win i ;
+	i = VM_KeyChar(win);
 	rfalse;
 ];
 
 [ WinSPACEPause win i;
 	while (i ~= 13 or 31 or 32)
 	{
-		i = VM_KeyChar(win);	
+		i = VM_KeyChar(win);
 	}
 ];
 
 [ WinGetKey win i;
-	i = VM_KeyChar(win); 
+	i = VM_KeyChar(win);
 	return i;
 ];
 
@@ -843,10 +843,10 @@ The current hyperlink window is a g-window variable.
 When play begins (this is the initial hyperlink request rule):
 	request glulx hyperlink event in the main-window;
 	request glulx hyperlink event in the status window.
-	
+
 After constructing a g-window when the type of the pending g-window is not g-graphics (this is the look for links on opening rule):
 	request glulx hyperlink event in the pending g-window.
-	
+
 The look for links on opening rule is listed after the draw window after construction rule in after constructing.
 
 
@@ -861,7 +861,7 @@ A glulx hyperlink rule (this is the default hyperlink handling rule):
 		follow the hyperlink processing rules;
 	if the status window is the hyperlink source:
 		request glulx hyperlink event in status window;
-	otherwise:
+	else:
 		request glulx hyperlink event in the current hyperlink window.
 
 To request glulx hyperlink event in (win - a g-window):
@@ -871,8 +871,8 @@ To cancel glulx hyperlink request in (win - a g-window):
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)) glk_cancel_hyperlink_event({win}.ref_number); -)
 
 To request glulx hyperlink event in the/-- status window:
-	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)  && gg_statuswin) glk_request_hyperlink_event(gg_statuswin); -)
-	
+	(-  if (glk_gestalt(gestalt_Hyperlinks, 0) && gg_statuswin) glk_request_hyperlink_event(gg_statuswin); -)
+
 To cancel glulx hyperlink event in the/-- status window:
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0) && gg_statuswin) glk_cancel_hyperlink_event(gg_statuswin); -)
 
@@ -887,7 +887,7 @@ To decide which g-window is the window with (N - a number):
 
 
 Section - Placing hyperlinks
-	
+
 To say link (N - a number):
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)) glk_set_hyperlink({N}); -)
 
@@ -904,7 +904,7 @@ The current hyperlink ID is a number that varies.
 
 Section - Selecting the replacement command
 
-The last hyperlink processing rule (this is the default command replacement by hyperlink rule):  
+The last hyperlink processing rule (this is the default command replacement by hyperlink rule):
 	repeat through the Table of Glulx Hyperlink Replacement Commands:
 		if the current hyperlink ID is link ID entry:
 			now the glulx replacement command is replacement entry;
@@ -938,7 +938,7 @@ Note that as of version 9, the method of specifying drawing rules for windows ha
 
 	Section: Concepts
 
-All games start, by default, with a status bar along the top of the screen, and the main window below. Glulx windows are formed from the main window by carving off segments using either horizontal or vertical strokes, with each stroke creating one new window, from which further windows can be cut. This automatically creates a tree-structure for windows, with each new window being sliced from one that came before. The extension refers to this process as "spawning", and you set up your layout of windows by telling the game which window spawns which. 
+All games start, by default, with a status bar along the top of the screen, and the main window below. Glulx windows are formed from the main window by carving off segments using either horizontal or vertical strokes, with each stroke creating one new window, from which further windows can be cut. This automatically creates a tree-structure for windows, with each new window being sliced from one that came before. The extension refers to this process as "spawning", and you set up your layout of windows by telling the game which window spawns which.
 
 These relationships - which window spawns which - must be inflexible throughout the game: although they may be multiple structures which the game can chop and change between, altering which window spawns which will likely cause UNDO and RESTORE commands to fail in strange ways. However, in practice this isn't too much of a restriction, as two windows with different names can easily be made to do the same things (see the section on Using the Windows, below).
 
@@ -974,7 +974,7 @@ Finally, if we are using proportional windows, we can optionally set a "minimum 
 
 	Section: Specifying Window Type
 
-As mentioned above there are three types of Glulx window, text-buffer, text-grid and graphics. A text-buffer is a teletype-style stream of text (akin to the main window), a graphics screen cannot accept text but can render images, and a text-grid allows for flexible positioning of text characters using cursor-movement functions. 
+As mentioned above there are three types of Glulx window, text-buffer, text-grid and graphics. A text-buffer is a teletype-style stream of text (akin to the main window), a graphics screen cannot accept text but can render images, and a text-grid allows for flexible positioning of text characters using cursor-movement functions.
 
 There are two potential ways to define a window's type. One is to declare it to be of the appropriate kind:
 
@@ -994,7 +994,7 @@ Window type can be changed during the game, however, it will only take effect wh
 
 Opening a new window is an activity that gets called for the pending window. This activity is the "constructing something" activity, and it's used to set background colours, neatly arranged unpositioned new windows, and apply the minimum width rules. New rules can be written before and after this activity. These rules may refer to "the pending g-window"; note that before, this window will not yet be in existence on the screen but its properties can be changed, and after it should be present on the screen.
 
-Should you want to make changes to the styles for the windows, this is also the place to do it (see the Glk spec for more information on this). During the before phase, set the stylehint you want. During the after phase, remove it again, so that it doesn't affect other newly created windows. (See background colour rules for an example of this). 
+Should you want to make changes to the styles for the windows, this is also the place to do it (see the Glk spec for more information on this). During the before phase, set the stylehint you want. During the after phase, remove it again, so that it doesn't affect other newly created windows. (See background colour rules for an example of this).
 
 
 	Section: Rock values
@@ -1013,7 +1013,7 @@ If we set numbers ending in 5 for our manual rocks, we will never conflict with 
 
 
 	Chapter: Using Windows
-	
+
 	Section: Overview
 
 This extension provides little in the way of support for graphics windows or text-grid windows, both of which can display images and draw shapes in a full range of colours. Text-grids can also locate the cursor (so, say, could be used to make a pac-man game). A few useful phrases for text-buffer windows are supplied.
@@ -1026,7 +1026,7 @@ This extension provides little in the way of support for graphics windows or tex
 The only point to note is that the "open up" command will, if necessary, also open any sub-windows required to reach the window you've asked for. So if the side-window is a spawn of the banner-window, and the banner-window is currently not open, the "open up side-window" command will open both. As mentioned above, spawning order is not editable once the game has started, so if you need flexibility on this, you'll need to make multiple, identical-acting windows (see Window Rules, below).
 
 We set the cursor using
-		
+
 	set the cursor to the main-window;
 
 When writing and drawing to windows we should be careful they exist, otherwise the game will crash strangely. You can check the existence of a window at any time by testing for the g-present property.
@@ -1040,14 +1040,14 @@ Since a lot of I6 code comes along with Glulx windows, these attributes exist cl
 	if ((+banner-window+) hasnt g_present)...
 
 	Section: Closing Windows
-	
+
 	shut down side-window
 
 The point above applies here, in reverse: shutting a window will also shut all sub-windows contained by it.
 
 	Section: Window Rules
 
-When a window is opened or redrawn, the window-drawing rules for that window are consulted. The window-drawing rule should (ideally) be able to reconstruct entirely the contents of the window (otherwise, after an UNDO or a RESTORE, information will be lost). Rules for graphical drawing will want to use glk calls to place images--see Simple Graphical Window for examples. 
+When a window is opened or redrawn, the window-drawing rules for that window are consulted. The window-drawing rule should (ideally) be able to reconstruct entirely the contents of the window (otherwise, after an UNDO or a RESTORE, information will be lost). Rules for graphical drawing will want to use glk calls to place images--see Simple Graphical Window for examples.
 
 Text windows are supplied with three important phrases: one to move the focus to a different window, one to clear that window (if required), and one to shift the focus back. A drawing rule for a window designed to display the player's inventory would use all three, and take the following form:
 
@@ -1061,7 +1061,7 @@ Any text window can be cleared at any time using
 	clear main-window;
 	clear side-window;
 
-Note that Version 9's handling of drawing rules is different from earlier versions', and will require some changes to existing source code:
+Note that Version 9's handling of drawing rules is different from earlier versions, and will require some changes to existing source code:
 
 	1) The "drawing rule" property for windows no longer exists. References to this property should be removed.
 
@@ -1073,7 +1073,7 @@ Note that Version 9's handling of drawing rules is different from earlier versio
 
 		follow the window-drawing rules for the side-window
 
-	
+
 	Section: Locating the current window
 
 Side windows taking inventories and such-like might want to be able to tell the usual game rules that they're the ones doing so. Throughout the game, the variable "current g-window" tells the game where the output is going. So
@@ -1135,15 +1135,15 @@ and they are assigned by including a line like so:
 	The side-window has back-colour g-red.
 	The main-window has back-colour g-darkgreen.
 
-At present, colours in graphics windows are reasonably well-supported (and if not, are unlikely to do any harm). Background colours in text windows can cause a series of ugly effects; such as the colour only appearing behind printed characters, or the background colour copying itself into all other text windows. 
+At present, colours in graphics windows are reasonably well-supported (and if not, are unlikely to do any harm). Background colours in text windows can cause a series of ugly effects; such as the colour only appearing behind printed characters, or the background colour copying itself into all other text windows.
 
 The main-window can be supplied a background colour in the same way.
 
 	Section: Borders
 
-A window can be defined as a "bordered g-window", and it will then be produced with a border of "border-measure" thickness and "border-colour" colour. (This is wastefully done; it actually places four thin windows around the window constructed, but harmlessly so). 
+A window can be defined as a "bordered g-window", and it will then be produced with a border of "border-measure" thickness and "border-colour" colour. (This is wastefully done; it actually places four thin windows around the window constructed, but harmlessly so).
 
-The main-window can be bordered too, by declaring that "the main-window is a bordered g-window". 
+The main-window can be bordered too, by declaring that "the main-window is a bordered g-window".
 
     Section: Status Line
 
@@ -1162,7 +1162,7 @@ The built-in extension Basic Screen Effects already handles single keystroke inp
 	wait for the SPACE key in the side-window
 
 	...the character code entered in the side-window
-	
+
 The latter phrase both checks for a keypress and return a representation of the input as a numerical code. For example, the following would check for a keypress on startup, and print something if the key pressed was the spacebar:
 
 	When play begins:
@@ -1172,7 +1172,7 @@ The latter phrase both checks for a keypress and return a representation of the 
 
 	Section: Hyperlinked text
 
-Flexible Windows also offers the ability to place hyperlinks in text windows. The hyperlink functionality in Flexible Windows is based on that in Emily Short's Basic Hyperlinks extension. In fact, if you are moving an existing project to Flexible Windows, you may simply include Basic Hyperlinks to avoid making any changes to your existing hyperlink code. If you are starting a new project, though, it is recommended that you simply use the Flexible Windows commands (Though the functionality is similar, Flexible Windows uses a different namespace from Basic Hyperlinks.) 
+Flexible Windows also offers the ability to place hyperlinks in text windows. The hyperlink functionality in Flexible Windows is based on that in Emily Short's Basic Hyperlinks extension. In fact, if you are moving an existing project to Flexible Windows, you may simply include Basic Hyperlinks to avoid making any changes to your existing hyperlink code. If you are starting a new project, though, it is recommended that you simply use the Flexible Windows commands (Though the functionality is similar, Flexible Windows uses a different namespace from Basic Hyperlinks.)
 
 By default, Flexible Windows's response to a clicked hyperlink is to enter a replacement command at the prompt on behalf of the player. To set a hyperlink, enclose the text to be linked between "set link <number>" and "end link" phrases:
 
@@ -1223,7 +1223,7 @@ And we can directly set any window to write to the transcript:
 
 	echo the stream of the side-window to the transcript
 
-Any number of windows can be simultaneously echoed to the transcript. 
+Any number of windows can be simultaneously echoed to the transcript.
 
 We can also direct windows to echo to other windows--essentially, both windows will display the same text at the same time. This probably has no real use apart from brief special effects, but is available nonetheless. These two phrases set the echo stream of the side window so that it will echo the main window's content:
 
@@ -1252,7 +1252,7 @@ Version 11 - 30/10/10
 	To make it easier to assign rock values to windows manually (necessary for CSS styling in Quixe), a slight change was made to FW's automatic rock allocation routine—the author can now set a rock value manually (like this: "The rock-value of the graphics-window is 245"). Flexible Windows now checks for conflicts between manually assigned and automatically assigned rock values, and will throw a warning if it finds any (this code will not run in release versions of the software).
 
 Version 10 - 23/9/10
-	
+
 	Minor bug-fix to allow compatibility with Emily Short's Simple Graphical Window, as required by the Inventory Window extension. An I6 routine in Flexible Windows has been renamed "FWBlankWindowToColor" from "BlankWindowToColor". This should have no impact on your source code unless you have called this routine directly from an I6 inclusion (which you shouldn't need to do anyway.)
 
 Version 9 - 27/5/10
@@ -1320,7 +1320,7 @@ Example: ** Inventory Window and Picture - A more complex example, that also pro
 
 	Every turn when the side-window is g-present: follow the window-drawing rules for the side-window.
 
-Now we set up and open the graphics-window. Note that we don't need to open the inventory window, since it will be called into being by the graphics window that it has spawned. 
+Now we set up and open the graphics-window. Note that we don't need to open the inventory window, since it will be called into being by the graphics window that it has spawned.
 
 	*: The graphics-window is a graphics g-window spawned by the side-window.
 
@@ -1346,7 +1346,7 @@ This is enough to set up the graphics panel. Now let's give it some images.
 		follow the window-drawing rules for the graphics-window.
 
 Finally, here's the rule and routines to actually get the picture to display.
-	
+
 	*: Window-drawing rule for the graphics-window (this is the draw scaled image rule):
 		if graphics-window is g-unpresent, rule fails;
 		clear the graphics-window;
@@ -1357,12 +1357,12 @@ Finally, here's the rule and routines to actually get the picture to display.
 
 What follows is some I6 code for handling the glulx imagery. Note that you may need to copy and paste the I6 code directly from this page rather than use the paste button.
 
-	*: Include (-  
+	*: Include (-
 
 		! Doing scaling calculations in I6 lets us handle bigger numbers
 
 		[ GetImageSize curimg index result;
-			result = glk_image_get_info( ResourceIDsOfFigures-->curimg, gg_arguments,  gg_arguments+WORDSIZE);
+			result = glk_image_get_info( ResourceIDsOfFigures-->curimg, gg_arguments, gg_arguments+WORDSIZE);
 			return gg_arguments-->index;
 		];
 
@@ -1371,7 +1371,7 @@ What follows is some I6 code for handling the glulx imagery. Note that you may n
 		graph_width = gg_arguments-->0;
 		w_total = GetImageSize(figure, 0);
 		h_total = gg_arguments-->1;
-	
+
 		if (graph_height - h_total < 0) !	if the image won't fit, find the scaling factor
 		{
 			w_total = (graph_height * w_total)/h_total;
@@ -1387,11 +1387,10 @@ What follows is some I6 code for handling the glulx imagery. Note that you may n
 
 		w_offset = (graph_width - w_total)/2; if (w_offset < 0) w_offset = 0;
 		h_offset = (graph_height - h_total)/2; if (h_offset < 0) h_offset = 0;
-	
-		glk_image_draw_scaled(g.ref_number, ResourceIDsOfFigures-->figure, w_offset, h_offset, w_total, h_total); 
+
+		glk_image_draw_scaled(g.ref_number, ResourceIDsOfFigures-->figure, w_offset, h_offset, w_total, h_total);
 		];
-	
+
 	-).
 
 	Test me with "examine letter/z/attack letter".
-
