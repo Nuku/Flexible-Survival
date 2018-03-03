@@ -14,8 +14,8 @@ Version 1 of Jay by Wahn begins here.
 [   4: player with Aelias as lover just has to wait a bit   ]
 [   5: silk delivered to Santa                              ]
 [   6: special dinner talked about with Mark                ]
-[   7: trip to Tati's postponed                             ]
-[   8: trip to Tati's completed                             ]
+[   7: trip to Tati's completed                             ]
+[   8: player was told to distract Jay                      ]
 [   9: Suit Delivered                                       ]
 
 [ XP of Jay                                                 ]
@@ -213,19 +213,16 @@ Instead of resolving a Harbor Swap Meet:
 		else:
 			say "     Returning to the swap meet, you ring the little bell again and the spidertaur comes down from his nest. Under his arm, he holds a bulging spindle of silk thread. 'You better have my payment, because it was a pain in the ass to keep spinning for hour after hour to make this,' he tells you, an expectant expression on his face. Pulling your backpack off and opening it, you hand him the plastic bottles filled with chocolate milk right away, which he bundles together with a sticky strand of silk, then sticks the packet to the top of his carapace. 'Pleasure doing business with you,' the demi-human says, then hands you his load of silk and starts to pull himself up the strand he slid down on, effortlessly reaching his home away from home above and vanishing inside.";
 			say "[SilkDelivery]";
-			now thirst of Jay is 5; [silk obtained and delivered]
 			decrease carried of chocolate milk by 5;
 			now Harbor Swap Meet is resolved;
 	else if thirst of Jay is 4: [player who is friends with Aelias can pick up the silk easily]
 		say "     Returning to the swap meet, you ring the little bell again and Aelias comes down from his nest. Under his arm, he holds a bulging spindle of silk thread. 'Hello my lovely little fly,' he tells you, leaning forward to plant a kiss on your lips, then hands over the load of silk with a smile. 'I hope that this is exactly what you needed. I can tell you, it was a pain in the ass to keep spinning for hour after hour to make it, but what don't I do for my favorite prey. Have fun with it, and I hope to see you for some more action between us soon.' With a little grope of your ass, the spidertaur then starts to pull himself up the strand he slid down on, effortlessly reaching his home away from home above and vanishing inside.";
 		say "[SilkDelivery]";
-		now thirst of Jay is 5; [silk obtained and delivered]
 		now Harbor Swap Meet is resolved;
 
 to say SilkDelivery:
-	say "     Eager to deliver the silk, you make your way to the mall directly after that, taking care to avoid any chance of hostile encounters during your travel. It wouldn't do to see your precious load damaged or lost after all. Thankfully, the trip is uneventful, and you arrive at the Smith Haven Mall without any trouble. After a quick stroll through the crowded place, you present the thread to Santa, who accepts it with a broad smile on his furry face. 'Thank you for putting so much effort into our little project. I am sure that Jay will be thrilled by the end result.' He calls his elven foreman, Walter, over and hands the red-headed elf the spindle, after which both you and Santa watch for a few minutes as a bustle of activity immediately starts up, with Walter giving out assignments and the elves falling into line like an expertly drilled work crew. Santa nods in satisfaction, then says to you, 'They will take a while to prepare the suit itself, so I would suggest that you speak with Mark about arranging a fitting situation to give Jay his present.'";
-	LineBreak;
-	say "     <Note from Wahn: The next quest stage is still in development, please do have some patience.>";
+	say "     Eager to deliver the silk, you make your way to the mall directly after that, taking care to avoid any chance of hostile encounters during your travel. It wouldn't do to see your precious load damaged or lost after all. Thankfully, the trip is uneventful, and you arrive at the Smith Haven Mall without any trouble. After a quick stroll through the crowded place, you present the thread to Santa, who accepts it with a broad smile on his furry face. 'Thank you for putting so much effort into our little project. I am sure that Jay will be thrilled by the end result.' He calls his elven foreman, Walter, over and hands the red-headed elf the spindle, after which both you and Santa watch for a few minutes as a bustle of activity immediately starts up, with Walter giving out assignments and the elves falling into line like an expertly drilled work crew. Santa nods in satisfaction, then says to you, 'They will take a while to prepare the suit itself, so I would suggest that you speak with Mark about arranging a fitting situation to give Jay his present. Trust me, the suit will be ready when you need it.'";
+	now thirst of Jay is 5; [silk obtained and delivered]
 
 
 [***********************************************************]
@@ -240,7 +237,10 @@ instead of fucking the Jay:
 	if cocks of player is 0:
 		say "     Looking you up and down, Jay gives you a friendly smile, but at the same time shakes his head. 'Thanks for the offer, but I'm as gay as a three dollar bill. Got a husband to prove it, too. I'm flattered, but you're at the wrong address here I'm afraid...'";
 	else:
-		say "     Looking you up and down and letting his gaze rest on your crotch for a few seconds, Jay clears his throat and looks up at your face, 'That's an interesting offer, my friend. Mark and me only really do things together as a couple, with maybe an odd threesome from time to time. Although there might be exceptions for good friends that we both really like.' The sexy wink that Jay gives you after saying this makes you wonder about ways to get on that select list of people. Likely it wouldn't be easy, but quite rewarding indeed.";
+		if thirst of Jay < 9:
+			say "     Looking you up and down and letting his gaze rest on your crotch for a few seconds, Jay clears his throat and looks up at your face, 'That's an interesting offer, my friend. Mark and me only really do things together as a couple, with maybe an odd threesome from time to time. Although there might be exceptions for good friends that we both really like.' The sexy wink that Jay gives you after saying this makes you wonder about ways to get on that select list of people. Likely it wouldn't be easy, but quite rewarding indeed.";
+		else:
+			say "     <WIP: Sorry, sexing up either Jay or Mark isn't quite done yet>";
 	
 [	
 	if (lastfuck of Jay - turns < 6): [he got fucked in the last 18 hours = 6 turns]

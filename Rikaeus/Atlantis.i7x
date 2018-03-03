@@ -23,10 +23,28 @@ Version 1 of Atlantis by Rikaeus begins here.
 [   0: Hasnt met her                                       ]
 [   1: Has met her                                         ]
 
+[ CenterVists                                              ]
+[   0: Hasnt visited yet                                   ]
+[   1: First Visit                                         ]
+
+[ ResidentialVisits                                        ]
+[   0: Hasnt visited yet                                   ]
+[   1: First Visit                                         ]
+
+[ MarketVisits                                             ]
+[   0: Hasnt visited yet                                   ]
+[   1: First Visit                                         ]
+
 PoseidonRelationship is a number that varies.
 FirstAtlantisVisit is a number that varies.
 TritonRelationship is a number that varies.
 AlanaRelationship is a number that varies.
+CenterVisits is a number that varies.
+MarketVisits is a number that varies.
+ResidentialVisits is a number that varies.
+LastAtlantisCenterWalkin is a number that varies. LastAtlantisCenterWalkin is usually 10000.
+LastResidentialWalkin is a number that varies. LastResidentialWalkin is usually 10000.
+LastMarketWalkin is a number that varies. LastMarketWalkin is usually 10000.
 
 Section 1 - Poseidon's Trident?
 
@@ -158,6 +176,50 @@ instead of going to Royal Palace Entrance while PoseidonRelationship is 2:
 		move player to Royal Palace Entrance;
 		now PoseidonRelationship is 99;
 
+instead of going to Atlantis City Center while CenterVisits is 0:
+	say "     Upon entering the center of the utopian-esque city for the first time you notice the bustling crowd of the city. It is not this sight that catches your attention but the group of citizens talking in the corner of the area. When you examine them closer you notice that they are a bunch of mermaid women. Out of curiosity you inch nearer to them and listen in onto the conversation that the three of them are having. 'Jasmine, Tyra, do you think that little Jerry could play with Jemma and Zach?' The mermaid asks the other two. The one to the left you assume to be Jasmine while the one to the right to be Tyra, as the first woman had looked to each of them as she spoke their name.";
+	say "     Jasmine and Tyra both smiled happily at the woman before they both chuckled at her. 'I don[']t think little Jemma would mind a new friend at all Paula,' she says, mirth in her voice. The other lady nods as well at that too. 'Same here, Zach has been whining about not having any new to play with.' Tyra says, an amused smile to her face. When the two of them let their thoughts known, Paula sighed in relief. 'Thank god, I got a new job at the market and I needed some way to keep Jerry occupied while I work,' the mermaid explained. The other two nod and comfort her, promising that they'll help take care of her son when needed. From there the conversation changes subject and you decide it's time for you to stop eavesdropping.";
+	move player to Atlantis City Center;
+	now CenterVisits is 1;
+
+instead of going to Atlantis City Center while CenterVisits is 1 and (LastAtlantisCenterWalkin - turns < 4): [Has been there in the past 12 hours]
+	say "     When you enter the city center you notice three kids running past you, laughing and joking with each other. Upon closer examination you see that they are playing a game of tag and the boy in the front appears to be trying to avoid the other two. 'Come on Jerry! Just let us tag you!' Shouts one of the kids, who you recognize to be a young girl The little guy identified as Jerry shook his head as he dodged his way through the populated area. 'No, I won[']t let you make me become it Jemma!' He yells, ducking under and past the arms of a random person. This causes the other kid to groan as he has to slide under the legs of same person. 'You're lucky that acrobatics like this is in our blood,' he mutters, glaring half-heartedly at his friend. 'You know you love me Zach and you say this everytime we play tag,' you manage to hear the kid say before he dashes off to the market district, leaving you alone in the city center.";
+	move player to Atlantis City Center;
+	now LastAtlantisCenterWalkin is turns;
+
+instead of going to Atlantis City Market while MarketVisits is 0:
+	say "     The first thing you notice when you enter the Market is a tall male shark-morph wearing a simple t-shirt and swim trunks. What catches your attention more than his attire was the acoustic guitar on his back, something that you're not entirely sure how it survives the water. The large guy was currently talking to what you believe to be a female octopus-morph standing at a stall. By her clothing and the fact that her shop is positioned in the middle of the entire market you assume that she is pretty important. So, out of curioisty you edge closer to listen to their conversation. 'So, Josie, do you think I could perform here?' the tall shark asks her, a pleading look on his face.";
+	say "     The woman hums for a bit until she lets out a sigh, speaking her mind soon after. 'Very well Kurt, you've helped the Atlantean Merchant Guild enough that I don't see any problem letting you set up shop here,' Josie says to him, a hand on her chin in thought. As soon as she utters those words, the octopus woman is scooped into a large hug by the grinning shark man who is thanking her profusely. The lady just simply rolls her eyes and pats him on the head, all the while trying to get out of the hug with her tentacles. Thankfully, she's put down a minute later. 'I won't let you down! I'm sure my music will make everyone happy!' Kurt says with a bright toothy smile. Josie just nods and tells him that she expects him to do his best. From there the two part so you decide that you should probably continue on. Perhaps you can later see the shark perform?";
+	move player to Atlantis City Market;
+	now MarketVisits is 1;
+
+instead of going to Atlantis City Market while MarketVisits is 1 and (LastMarketWalkin - turns < 4): [Has been there in the past 12 hours]
+	say "     When walking past the entrance to the market you hear the wondrous sounds of an acoustic guitar. It's so good that you instantly are drawn to the location of where it originates from, taking you into the shopping area and to a large crowd of people. At the center of the crowd is a familiar shark man, Kurt, who is playing his instrument for everyone to hear. And boy does he play, the music permeating your body and soothing your emotions. Soon enough you find yourself just standing and listening to the amazing tunes coming from the male playing the guitar. Your worries go away and you can feel your sanity coming back bit by bit, thanks to the peaceful guitar sounds that you are hearing. A few hours later sadly, the song ends and everyone applauds Kurt, who promptly blushes and thanks everyone before the crowd parts, leaving you in the market trying to remember what you were doing before. As a stray thought you wonder if you can run into him playing again.";
+	move player to Atlantis City Market;
+	now LastMarketWalkin is turns;
+	increase humanity of player by 30;
+	if humanity of player > 100:
+		now humanity of player is 100;
+
+instead of going to Atlantis City Residential while ResidentialVisits is 0:
+	say "     Upon your entrance to the residential area you don't really notice much with your sight but with your smell you do. Following the scent that attacks your senses you soon come upon a large entrance leading to someone's backyard in the neighborhood. At the top of the arc is a sign that reads 'Residential Cookout - All Welcome!' Out of curiosity you wander on in and are set upon by what looks to be a female... humanoid cat-fish morph? Upon closer examination she doesn't appear to have any gills but does have a mix of traits from both feline and fish. Redirecting your attention to her face the woman is smiling at you widely, looking pretty inviting.";
+	say "     'Hey there! You must be new to the city! I'm Namazu, but most people call me Nama!' She says, holding out a hand for you to shake. You accept it, the cheerful nature of the woman contagious. You ask her what this event is and if all are really welcome. Nama returns your question with a nod before speaking up. 'This isn't so much an event, as something that's always on. It's a way to give back to the community and feed those who can't eat due to responsibilities they have or because of... well you know. And of course, everyone is welcome!' The cat-fish woman says happily, though her expression changes a bit as she turns towards the direction of the tables which are empty at the moment. ";
+	WaitLineBreak;
+	say "     'Though if you want to get something now, you'll have to wait. We just fed a large group and it exhausted the food we put out. So we're all making new food.' Nama tells you with a sigh. Out of curiosity and a tiny bit of nosiness you ask her who they fed, which causes her to chuckle. 'Oh, the Royal Guard. Apparently they were having a day of long training so they needed all the food they could get,' Is her response, something that makes you simply nod at the answer. With a shrug at having nothing else to do here for now you thank her for letting you know about the place before leaving to the main area of the residential area. She tells you to come back soon and leaves as well, possibly to help cook.";
+	now ResidentialVisits is 1;
+	move player to Atlantis City Residential;
+
+instead of going to Atlantis City Residential while ResidentialVisits is 1 and (LastResidentialWalkin - turns < 4): [Has been there in the past 12 hours]
+	say "     When you enter the living area of Atlantis you smell a very familiar scent that you follow to a destination that you've been to. Just as you thought, it brings you to the residential cookout but upon looking into it this time you notice that there are actually people in there and food on the table. Servng at the food tables is Namazu who notices you and waves you on to come in before she goes back to feeding others. Shrugging your shoulders, you walk on in and grab a plate at what you presume to be the beginning of the buffet line. Proceeding through the line you get what food you want, accompanied by a cup of something to drink. Once you have your food you sit at one of the many tables set out and talk and eat with the people. As the time passes by you finish your food and drink, as well as the random conversation with the people at your table. Getting up you go and throw away your trash, heading your way out of the cookout. A last though before you enter the residential area is that perhaps later you could visit once more.";
+	move player to Atlantis City Residential;
+	now LastResidentialWalkin is turns;
+	decrease thirst of player by 20;
+	decrease hunger of player by 20;
+	if hunger of player < 0:
+		now hunger of player is 0;
+	if thirst of player < 0:
+		now thirst of player is 0;
+
 Section 4 - NPCs
 
 Triton is a man. Triton is in Atlantis City Entrance.
@@ -235,7 +297,7 @@ to say TritonTalk1:
 to say TritonTalk2:
 	say "     'Ohohoh, you want to know more about the amazing race of mermaids and mermen?' he asks, flexing his muscles. To the right of him you can hear his female guard partner groaning. 'You do that everytime someone asks Triton!' she complains, the sound of her voice making you think she's rolling her eyes. The merman prince ignores her and continues to speak to you. 'Well, simply put, you could say the mermaids and mermen are a creation of my father, if you consider him trying to fix a curse of one of his many siblings. Although, I'm a creation of my father and my mother, may she rest in peace,' he tells you, though the last bit is probably just to let you know his mother has passed.";
 	say "     'Nevertheless, we're both aquatic and land based as a species, mostly for the sake of convenience since my father doesn't like to look like a merman twenty-four seven,' he says, shrugging his shoulders. You nod at that, as if you could change between certain forms you would rather not have a tail instead of legs all day everyday. He then follows up by explaining that because they change on the spot that they have to have a change of clothes so they're not running around nude. 'Despite how cool that'd be, it's frowned upon in public.' He says with a sigh. Suddenly a hand comes and hits him on the head. 'You're such a pervert Triton,' Alana says, rolling her eyes. That just causes the male to wiggle his brows at her. 'You know you like it,' he says suggestively. Once again the mermaid hits him. 'Ow! Abuse! I call abuse!' he shouts loudly at her. Seeing that this won't go away anytime soon, you head on your way.";
-	
+
 to say TritonTalk3:
 	say "     ...";
 

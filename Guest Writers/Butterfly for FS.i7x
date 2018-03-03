@@ -585,18 +585,18 @@ Section 7 - Monster Items
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"testosterone pill"	"This small potent looking object has a flower with a cross symbol over it."	1	testosterone pill
-"pristine negligee"	"[pristine negligee desc]"	2	pristine negligee
-"damaged negligee"	"[damaged negligee desc]"	2	damaged negligee
-"cute panties"	"They're dainty low-cut white panties with a colored butterfly pattern, and a butterfly emblem embroidered at the top."	1	cute panties
-"sexy nightie"	"The nightie you've picked out for Lance's boyfriend is a sexy number made of silk and lace."	2	sexy nightie
-"racy lingerie"	"This set of crimson red lingerie is very racy. It includes a bustier, bra, panties and stockings with garters."	2	racy lingerie
+"testosterone pill"	"This small potent looking object has a flower with a cross symbol over it."	0	testosterone pill
+"pristine negligee"	"[pristine negligee desc]"	0	pristine negligee
+"damaged negligee"	"[damaged negligee desc]"	0	damaged negligee
+"cute panties"	"They're dainty low-cut white panties with a colored butterfly pattern, and a butterfly emblem embroidered at the top."	0	cute panties
+"sexy nightie"	"The nightie you've picked out for Lance's boyfriend is a sexy number made of silk and lace."	0	sexy nightie
+"racy lingerie"	"This set of crimson red lingerie is very racy. It includes a bustier, bra, panties and stockings with garters."	0	racy lingerie
 
 rlingfound is a truth state that varies. rlingfound is usually false.
 racy lingerie is a grab object. racy lingerie is equipment. It is not temporary.
-The placement of racy lingerie is "body".
+The placement of racy lingerie is "crotch".
 The descmod of racy lingerie is "Over your [bodyname of player] body, you're wearing a very racy set of red lingerie.".
-The slot of racy lingerie is "body".
+The slot of racy lingerie is "crotch".
 the scent of racy lingerie is "While always smelling clean and fresh at first, smelling a little longer picks up a faint perfume and the scent of [if player is herm]male and female [else if player is female]female [else if player is male]male [end if]arousal.".
 
 to say pristine negligee desc:

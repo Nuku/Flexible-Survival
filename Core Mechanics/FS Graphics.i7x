@@ -740,7 +740,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-black	"normal"
 "Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-black	"normal"
 "Wildcat"	Figure of Wildcat_icon	"Strype"	g-black	"normal"
-"Wyvern_female"	Figure of Wyvern_female_icon	"Anonymous"	g-white	"normale"
+"Wyvern_female"	Figure of Wyvern_female_icon	"Anonymous"	g-white	"normal"
 "Yatur_clothed"	Figure of Yatur_clothed_icon	"Kupo Klein"	g-black	"normal"
 "Yolanda"	Figure of Yolanda_icon	"SandySchreiber"	g-black	"normal"
 "Yuppie Mink_F"	Figure of YuppieMink_icon	"Anymouse1968"	g-black	"normal"	[only shown for female version]

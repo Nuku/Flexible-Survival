@@ -2791,11 +2791,6 @@ to restorepart2:	[values 60 - 161]
 		now demon brute is tamed;
 	else:
 		now demon brute is not tamed;
-	if DBCaptureQuestVar is 5:
-		choose blank row from Table of confession entries;
-		now title entry is "Ask about the possibility of freeing a demon of his inner evil";
-		now description entry is "";
-		now toggle entry is demoncleansing rule;
 	if DBCaptureQuestVar > 5:
 		now the icon of demon brute is Figure of BrutusGood_icon;
 [141:	[demon brute pet - gender]]

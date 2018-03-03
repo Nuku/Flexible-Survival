@@ -239,6 +239,7 @@ to say MoreauBodySale:
 				say "     Your [one of][bodytype of player] [or][bodydesc of player] [or][bodydesc of player] [or][bodytype of player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 				now bodyname of player is name entry;
 				now body of player is body entry;
+				attributeinfect;			[sets the new attributes]
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -643,6 +644,7 @@ to say MoreauBodyBuyPayment:
 			now bodyname of player is name entry;
 			now body of player is body entry;
 			now BodyShopGuaranteedBody is name entry;
+			attributeinfect;			[sets the new attributes]
 			if "Body Shop Guarantee - Body" is not listed in feats of player:
 				add "Body Shop Guarantee - Body" to feats of player;
 		say "[line break][MoreauBuySuccessful]";
@@ -1101,6 +1103,7 @@ An everyturn rule:
 			say "     Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now bodyname of player is name entry;
 			now body of player is body entry;
+			attributeinfect;			[sets the new attributes]
 	if "Body Shop Guarantee - Skin" is listed in feats of player:
 		if (skinname of player is "Jackalman" or skinname of player is "Jackalboy" or skinname of player is "Nightmare" or skinname of player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";

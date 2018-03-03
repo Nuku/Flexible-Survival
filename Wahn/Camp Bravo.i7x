@@ -432,9 +432,15 @@ to say CampBravoRadioTalk:
 [   4: Okayed chain-fucking orgy w/Tiny Tim                          ]
 [   5: Performed chain-fucking orgy w/Tiny Tim                       ]
 [   6: Post-chain-fucking follow-up                                  ]
+
 [ hunger states of Elaine                                            ]
 [   0: hasn't had sex with the player                                ]
 [   1: had sex with the player                                       ]
+
+[ XP of Elaine                                                       ]
+[   0: player hasn't gotten an uniform yet                           ]
+[   1: player already got an uniform                                 ]
+
 [ ElainePregnant - timer for the birth (48h from start)              ]
 
 
@@ -470,36 +476,41 @@ to say CampBravoElaineTalk:
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Ask her for a status report.";
+	now title entry is "Ask her for a status report";
 	now sortorder entry is 1;
-	now description entry is "Get a report.";
+	now description entry is "Get a report";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Request an uniform";
+	now sortorder entry is 2;
+	now description entry is "Ask the quartermaster to give you a uniform";
 	[]
 	if thirst of Elaine is 3:
 		choose a blank row in table of fucking options;
-		now title entry is "Ask her about Adam.";
-		now sortorder entry is 2;
-		now description entry is "Talk about Elaine's son with the minotaur.";
+		now title entry is "Ask her about Adam";
+		now sortorder entry is 3;
+		now description entry is "Talk about Elaine's son with the minotaur";
 	[]
 	if lust of Tiny Tim > 0:
 		choose a blank row in table of fucking options;
-		now title entry is "Get her thoughts on you fucking Tiny Tim.";
-		now sortorder entry is 3;
-		now description entry is "See what she thought of the chain-fucking orgy.";
+		now title entry is "Get her thoughts on you fucking Tiny Tim";
+		now sortorder entry is 4;
+		now description entry is "See what she thought of the chain-fucking orgy";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Observe the next group of men getting their special supplies.";
-	now sortorder entry is 4;
-	now description entry is "Watch the dildos being handed out and used.";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Proposition Elaine Scott for sex.";
+	now title entry is "Observe the next group of men getting their special supplies";
 	now sortorder entry is 5;
-	now description entry is "Fuck her.";
+	now description entry is "Watch the dildos being handed out and used";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Do nothing, turn away.";
+	now title entry is "Proposition Elaine Scott for sex";
 	now sortorder entry is 6;
-	now description entry is "Break the conversation off.";
+	now description entry is "Fuck her";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Do nothing, turn away";
+	now sortorder entry is 7;
+	now description entry is "Break the conversation off";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -516,18 +527,20 @@ to say CampBravoElaineTalk:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Ask her for a status report."):
+				if (nam is "Ask her for a status report"):
 					say "[CampBravoElaineReport]";
-				if (nam is "Ask her about Adam."):
+				if (nam is "Request an uniform"):
+					say "[ElaineUniform]";
+				if (nam is "Ask her about Adam"):
 					say "[CampBravoElaineAdamTalk]";
-				if (nam is "Get her thoughts on you fucking Tiny Tim."):
+				if (nam is "Get her thoughts on you fucking Tiny Tim"):
 					say "[CampBravoElaineTTRush]";
-				if (nam is "Observe the next group of men getting their special supplies."):
+				if (nam is "Observe the next group of men getting their special supplies"):
 					say "[CampBravoMenPrepping]";
-				if (nam is "Proposition Elaine Scott for sex."):
+				if (nam is "Proposition Elaine Scott for sex"):
 					say "[ElaineFucking]";
-				if (nam is "Do nothing, turn away."):
-					say "     You wave Elaine Scott off as she looks at you inquisitively and turn away.";
+				if (nam is "Do nothing, turn away"):
+					say "     You wave Elaine Scott off as she looks at you inquisitively and turn away";
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -554,6 +567,38 @@ to say CampBravoElaineReport:
 		say "     She nods to the outside of the tent in the east. 'My own turn with our horny bull out there came up not too long ago...' Elaine says as she strokes her bulging belly. 'His kid grows faster than I had imagined - and I'm hornier than ever.'";
 	else if thirst of Elaine is 3:
 		say "     She nods to Adam, who's busy sorting the inventory of a storage box. 'It still amazes me how quickly my boy has grown. I mean - it's been only days from Tiny Tim fucking me to Adam's current size. The aging seems to have slowed down to human levels now, thankfully.'";
+
+to say ElaineUniform:
+	if XP of Elaine is 2: [player already got an uniform]
+		say "     She looks at you and frowns. 'I already gave you a set of clothing recently. Sorry, but with some of the men coming back pretty... sticky and splattered in fluids after their patrols, I really need to conserve the spares for those cases. It's not like we have an easy time getting anything washed in this situation...'";
+	else: [player has not gotten a uniform yet]
+		if scalevalue of player is 1: [tiny]
+			say "     The female quartermaster takes one look at you and replies, 'You're kidding, right? I pride myself on having a well-stocked inventory, but the US army just isn't in the habit of making child- or doll-sized uniforms.'";
+		else if scalevalue of player is 2: [small]
+			say "     The quartermaster glances at your form and then strides over to a nearby shelf, selecting several articles of clothing and a pair of boots. 'This is the best I can do, with your small size. Some things may be rather looks, but I'm sure you'll be able to manage, right?' She doesn't actually wait for an anser, just handing you the stack of gear right away.";
+			Linebreak;
+			UniformHandout;
+		else if scalevalue of player is 3: [normal]
+			say "     The quartermaster glances at your form and then strides over to a nearby shelf, selecting several articles of clothing and a pair of boots. 'Okay then, here's an uniform in your size.' With that, she hands you the stack of gear right away.";
+			Linebreak;
+			UniformHandout;
+		else if scalevalue of player is 4: [big]
+			say "     The quartermaster glances at your form and then strides over to a nearby shelf, selecting several articles of clothing and a pair of boots. 'Now then, this should mostly fit you, even if it will be a bit snug. I'm sure you'll be able to manage, right?' She doesn't actually wait for an anser, just handing you the stack of gear right away.";
+			Linebreak;
+			UniformHandout;
+		else: [giant]
+			say "     The female quartermaster takes one look at you and replies, 'You're kidding, right? I pride myself on having a well-stocked inventory, but the US army just isn't in the habit of making giant versions of any uniform.'";
+			
+to UniformHandout:
+	say "[bold type]You gain a camo shirt![roman type][line break]";
+	increase carried of camo shirt by 1;
+	say "[bold type]You gain camo pants![roman type][line break]";
+	increase carried of camo pants by 1;
+	say "[bold type]You gain boxer briefs![roman type][line break]";
+	increase carried of boxer briefs by 1;
+	say "[bold type]You gain combat boots![roman type][line break]";
+	increase carried of combat boots by 1;
+	now XP of Elaine is 2;
 
 to say CampBravoElaineAdamTalk:
 	say "     'My boy's grown up into a quite handsome charmer, hasn't he? And it only took a few hours. You know, I only let that big brute out there shag me to help fight the plague, but... now that I have him, I love my son. I couldn't bear to send him away, so I talked the Major into letting him stay here as my assistant. Wasn't too hard, once I showed him how disorganized things had gotten after he sent my two male subordinates out to the city quarantine barrier filled with minotaur cum a few days back.'";

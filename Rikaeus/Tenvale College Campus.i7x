@@ -92,6 +92,11 @@ to say dormstreetdesc:
 	say "     The first thing that catches your eye as you approach the strip of road that holds the student housing is the sign itself. It appears that someone has tried to scratch out the r in dorm so as to make it say Dom, something that makes you chuckle out loud before you direct your attention elsewhere. Compared to the rest of the campus, Dorm Street is a lot cleaner, only noticing maybe one or two pieces of stray clothing on the grass. The only building here that catches your attention is to your east, a dorm that seems to be lived in, if the lights in the windows say anything. If you wish to leave the area, you could always head back southwest, back to the walkway you came in from.";
 
 [Room Declaration]
+Second Floor Male Dorms is a room.
+Second Floor Male Dorms is above Tenvale College Male Dorms.
+The description of Second Floor Male Dorms is "...".
+
+[Room Declaration]
 East of Dorm Street is Tenvale College Male Dorms.
 The description of Tenvale College Male Dorms is "[collegedormdesc]".
 
@@ -192,6 +197,14 @@ The description of Satyr Frat Dummy Room is "";
 [Spartan Dummy Room]
 West of Lecture Street is Spartan Dummy Room.
 The description of Spartan Dummy Room is "";
+
+[Lecture Dummy Room]
+North of Lecture Street is Lecture Dummy Room.
+The description of Lecture Dummy Room is "";
+
+[Player Dorm Room]
+Your Dorm Room is a room.
+The description of Your Dorm Room is "...";
 
 [Room Declaration]
 Northeast of Campus Walkway Northeast is Tenvale College Library.

@@ -61,6 +61,12 @@ carry out tapeing:
 			say "[FootballTeamSlice1]";[Source: Kernog/Astroslide Field Locker-room.i7x]
 		-- "Carter's Tape":
 			say "[CartersRecording]"; [Source: Luneth/Origins.i7x]
+		-- "Francis Koenig Observation Video":
+			say "[HikingObservationVid]"; [Source: Wahn/Recordings.i7x]
+		-- "Bodycam Tape - L. Nielson":
+			say "[BodycamTape_Nielson]"; [Source: Wahn/Recordings.i7x]
+		-- "Pizza Delivery Dash Cam Vid":
+			say "[PizzaCarDashcamVid]";
 [Template - see below the end of file]
 
 to deletetape (x - text):	[removes 1 tape of a given type from the player's inventory]

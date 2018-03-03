@@ -44,7 +44,7 @@ to say Thought_Eater_Wins:
 		WaitLineBreak;
 		say "     Staying connected for a while longer, your body getting stroked and... kissed(?) on the back, as far as that's possible with four tentacles and a beak, you feel nothing but bliss at being together with your master. Then suddenly, his mental grip lessens, panic at being alone rising inside you, which he quickly sweeps away with a thought-tentacle and devours like a piece of candy. As his cock pulls out of you, followed by a gush of cum, you hear your master's voice in your head. 'You have pleased me, pet. I'll let you go back out into the city for now, to make more delightful memories I can feast upon. Return later with something that interests me.'";
 		say "     With that, you find yourself picking up your gear and clothes, putting them on and walking through the dark corridors to the entrance of the underground tunnels under the Trevor Labs. As you step outside and the door clicks closed behind you, the last of the strange hybrid's mental influence fades away. He let you go, this time, though you still have the gaping hole in your mind where the thought eater fed upon you.";
-		infect "herm human";
+	infect "herm human";
 
 to say Thought_Eater_Loses:
 	say "     As you land blow after blow on the creature, the thought eater retreats a bit each time, clearly having had enough of a beating from you. At one point, he looks to the side, his tentacles waving a bit as if he was doing a silent call for someone, then he goes back to dodging your attacks.";

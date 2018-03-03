@@ -252,37 +252,6 @@ Instead of examining the Church Notice Board:
 [Confession Booth]
 lastconfession is a number that varies. lastconfession is 248.
 
-This is the church description rule:
-	say "     As you ask about the church, you hear a friendly little laugh from the other side of the booth. 'Indeed! That truly is the question we are asked most!' you sense the priestess smiling even though you cannot see her.";
-	say "     'This is the place of the Great Mother, the Church of the Maternal Beast. Following her will, we have re-purposed this place to try and help those who suffer under the weight of the infection that runs rampant in the city. We try to offer peace and comfort, and to help other learn that while overwhelming, it does not need to control you.'";
-	WaitLineBreak;
-	clear the screen;
-	rule succeeds;
-
-this is the lustconfession rule:
-	say "     You hear a soft sigh. 'Indeed, you speak of one of the most dangerous aspects of the infection, for it leads towards loosing yourself. Please just listen, and I will attempt to help you overcome its controlling nature.'";
-	if ( lastconfession - 7 ) > turns:
-		say "     The priestess's words and advice do indeed help, granting you better control over your lusts, at least for now.";
-		Decrease libido of player by 20;
-		if libido of player < 0, now libido of player is 0;
-		now lastconfession is turns;
-	else:
-		say "     Unburdening yourself again, you sadly discover it has little effect as you had nothing to add since your last confession session.";
-	WaitLineBreak;
-	clear the screen;
-	rule succeeds;
-
-this is the leaveconfession Rule:
-	say "You mumble a soft goodbye and thank-you, then leave the confessional stepping back out into the church.";
-	WaitLineBreak;
-	decrease the menu depth by 1;
-
-Table of confession entries
-title	subtable	description	toggle
-"What is this place?"	--	""	church description rule
-"Confess about the sexual need that tries to overwhelm you."	--	""	lustconfession rule
-"Leave the confessional."	--	""	leaveconfession Rule
-
 instead of examining the confession booth:
 	Say "     It's quiet and nondescript, perhaps you should try to [bold type][link]enter[as]enter confession[end link][roman type] it and confess, or just talk to whomever is inside?";
 
@@ -291,10 +260,74 @@ instead of sniffing the confession booth:
 
 instead of entering the Confession Booth:
 	say "     As you close the door of the booth and kneel the best you can, a voice speaks slowly. It is warm, comforting, and unmistakably female. 'Welcome my child, you may not know but we do not follow the Christian tradition here. We simply are making use of what they left in place. Please feel free to ask questions, and if you have any troubles weighing heavily on your mind, please voice them. I will do my best to put your mind and spirit at ease.'";
-	WaitLineBreak;
-	change the current menu to Table of confession entries;
-	carry out the displaying activity;
-	clear the screen;
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ask about the church";
+	now sortorder entry is 1;
+	now description entry is "Learn more about the Church of the Maternal Beast";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Confess your sexual needs";
+	now sortorder entry is 2;
+	now description entry is "Talk about the urges that try to overwhelm you";
+	[]
+	if DBCaptureQuestVar is 5: [evil Brutus as pet]
+		choose a blank row in table of fucking options;
+		now title entry is "Ask about the possibility of freeing a demon of his inner evil";
+		now sortorder entry is 3;
+		now description entry is "Learn how to cleanse Brutus";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Ask about the church"):
+					say "[ChurchQuestion]";
+				if (nam is "Confess your sexual needs"):
+					say "[ChurchLustConfess]";
+				if (nam is "Ask about the possibility of freeing a demon of his inner evil"):
+					say "[ChurchDemonCleanse]";
+				now lastfuck of Brennan is turns;
+				wait for any key;
+		else if calcnumber is 100:
+			say "     Leave the confessional?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You mumble a soft goodbye and thank-you, then leave the confessional, stepping back out into the church.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
+
+to say ChurchQuestion:
+	say "     As you ask about the church, you hear a friendly little laugh from the other side of the booth. 'Indeed! That truly is the question we are asked most!' you sense the priestess smiling even though you cannot see her.";
+	say "     'This is the place of the Great Mother, the Church of the Maternal Beast. Following her will, we have re-purposed this place to try and help those who suffer under the weight of the infection that runs rampant in the city. We try to offer peace and comfort, and to help other learn that while overwhelming, it does not need to control you.'";
+
+to say ChurchLustConfess:
+	say "     You hear a soft sigh. 'Indeed, you speak of one of the most dangerous aspects of the infection, for it leads towards loosing yourself. Please just listen, and I will attempt to help you overcome its controlling nature.'";
+	if ( lastconfession - 7 ) > turns:
+		say "     The priestess's words and advice do indeed help, granting you better control over your lusts, at least for now.";
+		Decrease libido of player by 20;
+		if libido of player < 0, now libido of player is 0;
+		now lastconfession is turns;
+	else:
+		say "     Unburdening yourself again, you sadly discover it has little effect as you had nothing to add since your last confession session.";
 
 [--------------------------------------------------------------------------------------------------------------------]
 [CHURCH HALL ENDS HERE]

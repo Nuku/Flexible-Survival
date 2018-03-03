@@ -502,10 +502,6 @@ instead of trading the demon tooth when the current action involves the Nermine:
 						now demon brute is tamed;
 						LineBreak;
 						say "     (That demon brute is now controlled! You can make him your active companion by typing [bold type][link]pet demon brute[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck demon brute[end link][roman type]. You can see all the pets and followers you have with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to leave a companion home for a while and go out alone? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
-						choose blank row from Table of confession entries;
-						now title entry is "Ask about the possibility of freeing a demon of his inner evil";
-						now description entry is "";
-						now toggle entry is demoncleansing rule;
 				else:
 					say "     Getting cold feet at almost he last second, you blow out the candles and douse the brazier. Well, there goes your one and only try for this ritual. With the herbs already up in smoke, you won't have any for a second try. But then, maybe that's for the best...";
 					now DBCaptureQuestVar is 99;  [failed]
@@ -519,8 +515,7 @@ instead of trading the demon tooth when the current action involves the Nermine:
 	else if DBCaptureQuestVar is 99:
 		say "     The jackalwoman looks at the tooth, then says 'Sadly, as Nermine told you before, she only had enough for one try at the ritual. There is nothing more to do without new rare supplies that are not in this city.'";
 
-
-This is the demoncleansing rule:
+to say ChurchDemonCleanse:
 	say "     The priestess sighs, then answers 'With how deep in their innermost being it generally is anchored, that's usually very difficult. But tell me more...' You explain about the demon brute, how you captured him and bound him with the ritual, and Nermine drawing off his demonic powers. There is a pause as the priestess thinks about this, then she says 'With the beast weakened and you having bound it to yourself, I see a possibility. How about holy water? That is supposedly able to drive out evil in the Christian faith, and with your demon fitting the bill pretty well, it should work on him.' She hesitates again for a second, then continues 'We do have some here, the former Christian priest of this place blessed all the water bottles he had before he left and didn't return. But that's our emergency fresh water supply, with it in closed bottles and clean. While we're more than willing to help you with your plan, child, I sadly must ask that you [bold type]give us other clean water in exchange[roman type]. And with your companion so large, you will need at least [bold type]eight bottles[roman type] of holy water.'";
 	if carried of water bottle > 7:
 		say "     [bold type]Aware that you currently do have enough fresh water to make the exchange, do you trade them in?[roman type][line break]";
@@ -540,17 +535,10 @@ This is the demoncleansing rule:
 			now DBCaptureQuestVar is 6;
 			decrease carried of water bottle by 8;
 			now the icon of demon brute is Figure of BrutusGood_icon;
-			choose the row with a title of "Ask about the possibility of freeing a demon of his inner evil" from Table of confession entries;
-			blank out the whole row;
-			WaitLineBreak;
-			decrease the menu depth by 1;
 		else:
 			say "     You thank the priestess for her aid, but tell her that you can't afford trading in so much water right now.";
 	else:
 		say "     Since you don't have enough water, you can do nothing but to thank the priestess and maybe come back later once you've collected some more.";
-	WaitLineBreak;
-	clear the screen;
-	rule succeeds;
 
 Section 2 - Amulet, Pet & Sex
 

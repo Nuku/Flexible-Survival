@@ -179,7 +179,8 @@ pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[
 
 
 nanite collector is equipment. It is not temporary.
-The placement of it is "body".
+The placement of it is "back".
+The size of nanite collector is 0. [anyone can wear this]
 The descmod of it is " A great contraption rests across your back, with many valves and pipes. It looks more like a steampunk jetpack than anything else. Still, it has the Zephyr logo displayed boldly."
 
 to say nanitecolldesc:
