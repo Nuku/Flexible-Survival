@@ -231,6 +231,8 @@ Equipment can be equipped or not equipped. Equipment is usually not equipped.
 Equipment has a text called descmod. The descmod of equipment is usually "".
 Equipment has a text called placement. The placement of equipment is usually "end".
 Equipment has a text called slot. The slot of equipment is usually "".
+Equipment has a truth state called taur-compatible. The taur-compatible of equipment is usually false.
+Equipment has a number called size. The size of equipment is usually 3.
 Equipment has a number called AC. The AC of equipment is usually 0.
 Equipment has a number called effectiveness. The effectiveness of equipment is usually 0.
 Equipment has a number called dodgebonus. The dodgebonus of equipment is usually 0.	[Rare, usually magic]
@@ -241,6 +243,7 @@ A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious.
 A grab object can be milky. A grab object is usually not milky.
 A grab object can be cum. A grab object is usually not cum.
+A grab object has a truth state called plural. The plural of a grab object is usually false.
 A grab object has a text called strain.
 A grab object has a text called trade.
 A grab object has a text called purified.
@@ -814,10 +817,14 @@ Rodentlist is a marker.	[list of rodent infections]
 when play begins:
 	add { "Slut Rat", "Hyper Squirrel" } to infections of Rodentlist;
 
-Taurlist is a marker.	[list of tauric infections]
+TaurList is a marker.	[list of tauric infections]
 when play begins:
-	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "Tigertaur", "Wolftaur", "Skunk Taur" } to infections of Taurlist;
+	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "Tigertaur", "Wolftaur", "Skunk Taur" } to infections of TaurList;
 [Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional. It also does not include the Spidergirl and Spidertaur forms, as their genitals are located in the front where the human pelvis would be, and therefore would not match with scenes specifically designed for taur anatomy.]
+
+NoLegList is a marker.	[list of infections without legs]
+when play begins:
+	add { "Blue Gel", "Pink Gel", "Purple Gel" } to infections of NoLegList;
 
 Knotlist is a marker.	[list of infections w/knotted cock]
 when play begins:
@@ -1825,7 +1832,7 @@ To process (X - a grab object):
 			while area entry is "Nowhere": [runs circles until it finds an available creature]
 				now RandomRow is a random number from 1 to the number of rows in the table of random critters;
 				choose row RandomRow from the table of random critters;
-			infect;
+			infect name entry;
 	if x is soda:
 		if "Junk Food Junky" is listed in feats of player:
 			if thirst of player > 0:
@@ -1918,7 +1925,7 @@ To process (X - a grab object):
 			say ".";
 	if x is equipment:
 		if x is equipped:		[unequip]
-			say "You stop using the [x].";
+			say "     [bold type]You take off the [x].[roman type][line break]";
 			now x is not equipped;
 		else:
 			if slot of x is empty:
@@ -1926,10 +1933,30 @@ To process (X - a grab object):
 			else:
 				repeat with z running through equipped equipment:
 					if slot of z is slot of x:
-						say "Your [z] is in the way!";
+						say "     [bold type]Your [z] is in the way![roman type][line break]";
 						continue the action;
-			say "You start using the [x].";
-			now x is equipped;
+			if slot of x is "waist" and (bodyname of player is listed in infections of TaurList or bodyname of player is listed in infections of NoLegList):
+				say "     [bold type]Sadly, the [x] [if plural of x is true]are[else]is[end if] incompatible with your body type![roman type][line break]";
+				continue the action;
+			if size of x > 0: [objects with size restrictions]
+				if (scalevalue of player - size of x > 1): [clothing two size categories smaller]
+					say "     [bold type]You can't even begin to fit into the [x]. [if plural of x is true]They are meant for smaller beings than yourself[else]It is meant for smaller beings than yourself[end if].[roman type][line break]";
+					continue the action;
+				else if (scalevalue of player - size of x is 1): [clothing one size category smaller]
+					say "     [bold type]You start wearing the [x]. [if plural of x is true]They are quite small for your body size, but still barely fit[else]It is quite small for your body size, but still barely fits[end if].[roman type][line break]";
+					now x is equipped;
+				else if (scalevalue of player - size of x is 0): [clothing same size category]
+					say "     [bold type]You start wearing the [x]. [if plural of x is true]They fit fairly well[else]It fits fairly well[end if].[roman type][line break]";
+					now x is equipped;
+				else if (scalevalue of player - size of x is -1): [clothing one size category bigger]
+					say "     [bold type]You start wearing the [x]. [if plural of x is true]They are quite big for your body size, but fit more or less with some adjustments[else]It is quite big for your body size, but fits more or less with some adjustments[end if].[roman type][line break]";
+					now x is equipped;
+				else if (scalevalue of player - size of x < -1): [clothing two size categories bigger]
+					say "     [bold type]The [x] [if plural of x is true]are simply too big! They are meant for much larger beings than yourself[else]is simply too big! It is meant for much larger beings than yourself[end if].[roman type][line break]";
+					continue the action;
+			else:
+				say "     [bold type]You start wearing the [x].[roman type]";
+				now x is equipped;
 	if x is a medkit:
 		let healed be 10 + level of player + ( ( intelligence of player minus 10 ) divided by 2 );
 		if "Expert Medic" is listed in the feats of the player:
@@ -2256,7 +2283,10 @@ carry out grabbing something(called x):
 			now found is 1;
 			Add q to invent of player;
 			remove entry num from invent of the location of the player;
-			say "You pick up the [printed name of x] and tuck it in your backpack.";
+			if x is equipment:
+				say "You pick up the [printed name of x] and tuck [if plural of x is true]them[else]it[end if] in your backpack.";
+			else:
+				say "You pick up the [printed name of x] and tuck it in your backpack.";
 			break;
 	if found is 0:
 		say "You don't see any [x] around here.";
@@ -2989,8 +3019,25 @@ To Infect:
 
 to attributeinfect:		[sets the player values from the new attributes]
 	choose row monster from the table of random critters;
+	if bodyname of player is listed in infections of TaurList or bodyname of player is listed in infections of NoLegList:
+		repeat with z running through equipped equipment:
+			if taur-compatible of z is false:
+				say "     [bold type]Sadly, the [z] [if plural of z is true]are incompatible with your new body type, so you can do nothing but take them off[else]is incompatible with your new body type, so you can do nothing but take it off[end if].[roman type][line break]";
+				now z is not equipped;
 	if there is a scale in row monster of the table of random critters:
 		now scalevalue of player is scale entry;
+		repeat with z running through equipped equipment:
+			if size of z > 0: [size restricted equipment]
+				if (scalevalue of player - size of z > 1):
+					say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if] .[roman type][line break]";
+					now z is not equipped;
+				else if (scalevalue of player - size of z is 1):
+					say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
+				else if (scalevalue of player - size of z < -1):
+					say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
+					now z is not equipped;
+				else if (scalevalue of player - size of z is -1):
+					say "     [bold type]Your [z] hangs fairly loose on your now smaller frame.[roman type][line break]";
 	else:
 		now scalevalue of player is 3;
 	if there is a body descriptor in row monster of the table of random critters:
@@ -4114,6 +4161,47 @@ To showstats (x - Person):
 This is the self examine rule:
 	now looknow is 1;
 	showstats player;
+	if name of player is not "Player":
+		say "Your name is [name of player].";
+	[ Infection Descriptions Below   ]
+	say "Looking at yourself, your body is covered in [skin of the player] skin. Your face is [face of the player]. ";
+	say "Your body is [body of the player]. ";
+	follow the breast descr rule;
+	if breasts of player > 0:
+		if breast size of player is 0:
+			say "You have [breasts of player] nipples on your [bodydesc of player] chest. ";
+		else:
+			if breasts of player > 2:
+				say "You have [breasts of player] breasts on your [bodydesc of player] chest. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [(breast size of player times three) divided by five] inch[if ( breast size of player times three ) divided by 5 is not 1]es[end if] from your chest. ";
+				if breasts of player > 4, say "The rest jostle for space [breast size of player divided by three] inch[if breast size of player divided by 3 is not 1]es[end if] from your belly. ";
+			else:
+				say "You have two [descr] breasts on your [bodydesc of player] chest, curving out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. ";
+	if child is not born and gestation of child > 0:
+		if gestation of child < 10:
+			now looknow is 0;
+			say "Your [skin of player] swollen belly looks ready to spill forth life at any moment. ";
+			now looknow is 1;
+		else if gestation of child < 20:
+			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child. ";
+		else if gestation of child < 30:
+			say "You feel a soft subtle glow somewhere in your belly. ";
+	else if heat enabled is true:
+		if inheat is true:
+			say "You also feel [if heatlevel is 3]an intense[else]a[end if] need to be on the receiving end of a good, hard fuck because of your presently heated state. ";
+		else if heatlevel is 1 and player is impreg_able and cockname of player is not "human":
+			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat. ";
+		else if heatlevel is 3 and player is impreg_able and cockname of player is not "human":
+			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you. ";
+	if "Angie's Mate" is listed in feats of player:
+		say "Thin lines of healed claw-marks run down your back, marking you as Angie's mate. ";
+	if "Boghrim's Mark" is listed in feats of player:
+		say "Two small scars from Boghrim's tusks mark your shoulder, a reminder of the first time the big orc fucked you. ";
+	if tail of player is empty:
+		say "";
+	else:
+		say " [tail of the player] ";
+	[ ^^ Infection Descriptions Done ]
+	[ Genital Descriptions Below     ]
 	let cocktext be "";
 	follow the cock descr rule;
 	if the cocks of the player > 0:
@@ -4128,40 +4216,6 @@ This is the self examine rule:
 			now cunttext is " have [cunts of the player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 		else:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. It is [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
-	if name of player is not "Player":
-		say "Your name is [name of player].";
-	say "Looking at yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
-	repeat with x running through equipped owned equipment:
-		if descmod of x is "", next;
-		if placement of x is "face":
-			say "  [descmod of x][run paragraph on]";
-	say " Your body is [body of the player].[run paragraph on]";
-	repeat with x running through equipped owned equipment:
-		if descmod of x is "", next;
-		if placement of x is "body":
-			say "  [descmod of x][run paragraph on]";
-	repeat with x running through equipped owned equipment:
-		if descmod of x is "", next;
-		if placement of x is "waist":
-			say "  [descmod of x][run paragraph on]";
-	if "Angie's Mate" is listed in feats of player:
-		say "  Thin lines of healed claw-marks run down your back, marking you as Angie's mate.";
-	if "Boghrim's Mark" is listed in feats of player:
-		say "  Two small scars from Boghrim's tusks mark your shoulder, a reminder of the first time the big orc fucked you.";
-	if weapon object of player is not journal:
-		say "  You are carrying a/an [weapon object of player] just in case of trouble";
-		if weapon object of player is unwieldy:
-			say ". Due to its comparatively [if scalevalue of player > objsize of weapon object of player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of player - objsize of weapon object of player ) > 3]very unwieldy[else if absolute value of ( scalevalue of player - objsize of weapon object of player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment";
-		say ".[run paragraph on]";
-	if tail of player is empty:
-		say "";
-	else:
-		say " [tail of the player][run paragraph on]";
-	repeat with x running through equipped owned equipment:
-		if descmod of x is "", next;
-		if placement of x is "end":
-			say " [descmod of x]";
-	say "[line break]";
 	if cocktext is not empty:
 		if cunttext is empty:
 			say "A private peek shows that you [cocktext]";
@@ -4170,32 +4224,74 @@ This is the self examine rule:
 			say " Also, you[cunttext]";
 	else if cunttext is not "":
 		say " You[cunttext]";
-	follow the breast descr rule;
-	if breasts of player > 0:
-		if breast size of player is 0:
-			say "You have [breasts of player] nipples on your [bodydesc of player] chest.";
-		else:
-			if breasts of player > 2:
-				say "You have [breasts of player] breasts on your [bodydesc of player] chest. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [(breast size of player times three) divided by five] inch[if ( breast size of player times three ) divided by 5 is not 1]es[end if] from your chest. ";
-				if breasts of player > 4, say "The rest jostle for space [breast size of player divided by three] inch[if breast size of player divided by 3 is not 1]es[end if] from your belly.";
+	[ ^^ Genital Descriptions Done ]
+	[ Equipment Descriptions Below ]
+	LineBreak;
+	LineBreak;
+	repeat with x running through equipped owned equipment:
+		if placement of x is "helm":
+			if descmod of x is "":
+				break;
 			else:
-				say "You have two [descr] breasts on your [bodydesc of player] chest, curving out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest.";
-	if child is not born and gestation of child > 0:
-		if gestation of child < 10:
-			now looknow is 0;
-			say "Your [skin of player] swollen belly looks ready to spill forth life at any moment.";
-			now looknow is 1;
-		else if gestation of child < 20:
-			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child.";
-		else if gestation of child < 30:
-			say "You feel a soft subtle glow somewhere in your belly.";
-	else if heat enabled is true:
-		if inheat is true:
-			say "You also feel [if heatlevel is 3]an intense[else]a[end if] need to be on the receiving end of a good, hard fuck because of your presently heated state.";
-		else if heatlevel is 1 and player is impreg_able and cockname of player is not "human":
-			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat.";
-		else if heatlevel is 3 and player is impreg_able and cockname of player is not "human":
-			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you.";
+				say "[descmod of x] ";
+	repeat with x running through equipped owned equipment:
+		if placement of x is "eyes":
+			if descmod of x is "":
+				break;
+			else:
+				say "[descmod of x] ";
+	repeat with x running through equipped owned equipment:
+		if placement of x is "face":
+			if descmod of x is "":
+				break;
+			else:
+				say "[descmod of x] ";
+	repeat with x running through equipped owned equipment:
+		if placement of x is "chest":
+			if descmod of x is "":
+				break;
+			else:
+				say "[descmod of x] ";
+	let CrotchVisible be true;
+	repeat with x running through equipped owned equipment:
+		if placement of x is "waist":
+			if descmod of x is "":
+				break;
+			else:
+				say "[descmod of x] ";
+				now CrotchVisible is false;
+	if CrotchVisible is true: [no pants, so undies might be visible]
+		repeat with x running through equipped owned equipment:
+			if placement of x is "crotch":
+				if descmod of x is "":
+					break;
+				else:
+					say "[descmod of x] ";
+					now CrotchVisible is false;
+	if CrotchVisible is true: [no undies, so the actual crotch is visible]
+		say "Your [bodyname of player in lower case] waist and legs are bare-ass naked, exposing your privates for everyone to see. ";
+	let Barefoot be true;
+	repeat with x running through equipped owned equipment:
+		if placement of x is "feet":
+			if descmod of x is "":
+				break;
+			else:
+				say "[descmod of x] ";
+				now Barefoot is false;
+	if Barefoot is true:
+		say "You are barefoot right now. ";
+	LineBreak;
+	if weapon object of player is not journal:
+		say "You are carrying a/an [weapon object of player] just in case of trouble";
+		if weapon object of player is unwieldy:
+			say ". Due to its comparatively [if scalevalue of player > objsize of weapon object of player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of player - objsize of weapon object of player ) > 3]very unwieldy[else if absolute value of ( scalevalue of player - objsize of weapon object of player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment";
+		say ". ";
+	repeat with x running through equipped owned equipment:
+		if descmod of x is "", next;
+		if placement of x is "end":
+			say " [descmod of x]";
+	[ ^^ Eqipment Descriptions Done ]
+	[ Children Descriptions Below   ]
 	if the number of entries in childrenfaces > 0:
 		if the number of entries in childrenfaces is 1:
 			if ( entry 1 of childrenskins is not entry 1 of childrenbodies ) or ( entry 1 of childrenskins is not entry 1 of childrenfaces ):
@@ -4777,6 +4873,7 @@ Include Alt Combat by Core Mechanics.
 Include Alt Vore by Core Mechanics.
 Include Assorted Items by Stripes.
 Include Banning by Core Mechanics.
+Include Basic Clothing Items by Core Mechanics.
 Include Basic Functions by Core Mechanics.
 Include Basic Locations by Core Mechanics.
 Include BFandI by Core Mechanics.
@@ -4807,6 +4904,7 @@ Include Approaching the Capitol Building for FS by Guest Writers.
 Include Astroslide Field Locker-room by Kernog.
 Include Astroslide Football Field by Kernog.
 Include Atlantis by Rikaeus.
+Include Azrael by Rikaeus.
 Include Beach by Speedlover.
 Include Bargain Bin by Wahn.
 Include Body Shop by Wahn.
@@ -4884,6 +4982,7 @@ Include Forest Gang Bang by Defth.
 Include giving in by Core Mechanics.
 Include HellHound by Speedlover.
 Include High Rise Events by Stripes.
+Include High Rise Events by Wahn.
 Include How High by Kaleem mcintyre.
 Include Hyena Bikers by Stripes.
 Include Hyena Shoppers by Doots.
@@ -4932,6 +5031,7 @@ Include Satyr Frat by Wahn.
 Include Save the Dame by Kaleem Mcintyre.
 Include Scavevents by Stripes.
 Include Sea Lion and Orca for FS by Stripes.
+Include Sex Ed by Prometheus.
 Include Settings Menus by Core Mechanics.
 Include Shifting by Hellerhound.
 Include Shrinking Shrooms by Defth.
@@ -5042,6 +5142,7 @@ Include Fluffy Owl For Fs by Stripes.
 Include Foul Scuttler by Xenophiliac.
 Include Francois Infections by AGentlemanCalledB.
 Include Friendship Pony for FS by Stripes.
+Include Frost Drake by CrimsonAsh.
 Include Fruit Bat for FS by Stripes.
 Include Furling by Wahn.
 Include Gargoyle by Kaleem mcintyre.
@@ -6137,6 +6238,47 @@ to say gsopt_start:
 	say "Want more details on the game and updates? ----- [bold type]http://blog.flexiblesurvival.com/[roman type]  ------[line break][line break]";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+	if scenario is "Bunker":
+		increase carried of black t-shirt by 1;
+		now black t-shirt is equipped;
+		increase carried of sturdy jeans by 1;
+		now sturdy jeans are equipped;
+		increase carried of white briefs by 1;
+		now white briefs is equipped;
+		increase carried of brown loafers by 1;
+		now brown loafers is equipped;
+	else if scenario is "Caught Outside":
+		increase carried of white t-shirt by 1;
+		now white t-shirt is equipped;
+		increase carried of black jeans by 1;
+		now black jeans are equipped;
+	else if scenario is "Rescuer Stranded":
+		increase carried of camo shirt by 1;
+		now camo shirt is equipped;
+		increase carried of camo pants by 1;
+		now camo pants are equipped;
+		increase carried of boxer briefs by 1;
+		now boxer briefs are equipped;
+		increase carried of combat boots by 1;
+		now combat boots is equipped;
+	else if scenario is "Forgotten":
+		increase carried of sleeveless shirt by 1;
+		now sleeveless shirt is equipped;
+		increase carried of ripped jeans by 1;
+		now ripped jeans are equipped;
+		increase carried of white briefs by 1;
+		now white briefs is equipped;
+		increase carried of brown loafers by 1;
+		now brown loafers is equipped;
+	else if scenario is "Researcher":
+		increase carried of white t-shirt by 1;
+		now white t-shirt is equipped;
+		increase carried of sturdy jeans by 1;
+		now sturdy jeans are equipped;
+		increase carried of boxer briefs by 1;
+		now boxer briefs are equipped;
+		increase carried of combat boots by 1;
+		now combat boots is equipped;
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
 			add "Spartan Diet" to feats of player;
@@ -6269,6 +6411,31 @@ to say silent_start:
 		clear the screen;
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+	if scenario is "Bunker":
+		increase carried of sturdy jeans by 1;
+		now sturdy jeans are equipped;
+		increase carried of black t-shirt by 1;
+		now black t-shirt is equipped;
+	else if scenario is "Caught Outside":
+		increase carried of black jeans by 1;
+		now black jeans are equipped;
+		increase carried of white t-shirt by 1;
+		now white t-shirt is equipped;
+	else if scenario is "Rescuer Stranded":
+		increase carried of camo pants by 1;
+		now camo pants are equipped;
+		increase carried of camo shirt by 1;
+		now camo shirt is equipped;
+	else if scenario is "Forgotten":
+		increase carried of ripped jeans by 1;
+		now ripped jeans are equipped;
+		increase carried of sleeveless shirt by 1;
+		now sleeveless shirt is equipped;
+	else if scenario is "Researcher":
+		increase carried of camo pants by 1;
+		now camo pants are equipped;
+		increase carried of camo shirt by 1;
+		now camo shirt is equipped;
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
 			add "Spartan Diet" to feats of player;
@@ -6363,7 +6530,10 @@ to say promptsay:
 	say "Exits: ";
 	repeat with nam running through valid directions:
 		say "[link][printed name of nam][end link] ";
-	say "[if location of player is fasttravel][bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket][end if]";
+	if location of player is fasttravel:
+		say "[bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket]";
+	else if earea of location of player is not "void":
+		say "[bracket][link]scavenge[end link], [link]explore[end link][close bracket]";
 	say ", Visible Things: ";
 	repeat with y running through the things in the location of the player:
 		if y is a door, next;
