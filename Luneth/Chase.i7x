@@ -1,4 +1,5 @@
 Version 1 of Chase by Luneth begins here.
+[Version 1.1 - added help option, WS, petplay intro - Luneth]
 [ Original content by Sarokcat ]
 
 [ HP of Chase - content progression                              ]
@@ -11,6 +12,11 @@ Version 1 of Chase by Luneth begins here.
 [   6: M/M route (player has talked to mpreg Chase, sub)         ]
 [  99: chose to side with the tigertaur instead of Chase         ]
 [ 100: chose to not intervene in TigerVSTaur                     ]
+
+[ RegChaseHelp - reg-chase help status                           ]
+[   0: have not talked to reg-chase about helping him            ]
+[   1: have agreed to help reg-chase                             ]
+[   2: helped reg-chase                                          ]
 
 [ dexterity of Chase - relationship type                         ]
 [   0: no long-term relationship type decided yet                ]
@@ -43,19 +49,24 @@ Version 1 of Chase by Luneth begins here.
 [   4: player has opted to be Chase's mate (sub-Chase route)     ]
 [   5: player is Chase's mate while he's pregnant                ]
 
-[ ChaseRelationshipSettings                                      ]
+[ ChaseMarking - deals with Chase's watersport content           ]
 [   0: not discussed yet                                         ]
-[   1: marking +, pet play 0                                     ]
-[   2: marking 0, pet play +                                     ]
-[   3: marking -, pet play 0                                     ]
-[   4: marking 0, pet play -                                     ]
-[   5: marking +, pet play -                                     ]
-[   6: marking -, pet play +                                     ]
-[   7: marking +, pet play +                                     ]
-[   8: marking -, pet play -                                     ]
+[   1: turned Chase down for marking fun                         ]
+[   2: gave your approval for marking fun with Chase             ]
+
+[ ChasePetplay - deals with Chase's pet play content             ]
+[   0: not discussed yet                                         ]
+[   1: brought up the option for petplay                         ]
+
+[ ChasePetplayTraining - progression of petplay training         ]
+[   0: dont have access to petplay scenes yet                    ]
+[   1: completed intro talk with Chase                           ]
 
 ChaseSexCounter is a number that varies.
-ChaseRelationshipSettings is a number that varies.
+RegChaseHelp is a number that varies.
+ChaseMarking is a number that varies.
+ChasePetplay is a number that varies.
+ChasePetplayTraining is a number that varies.
 
 Section 1 - NPC
 
@@ -63,6 +74,7 @@ Chase is a man.
 The description of Chase is "[ChaseDesc]".
 The conversation of Chase is { "<This is nothing but a placeholder!>" }.
 Chase is in Tiger den.
+
 The scent of Chase is "[ChaseScent]";
 
 to say ChaseScent:
@@ -75,7 +87,7 @@ to say ChaseScent:
 
 to say ChaseDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP of Chase: [HP of Chase], Dexterity: [Dexterity of Chase], LIBIDO: [libido of Chase], LUST: [lust of Chase], STAMINA: [ChaseSexCounter], THIRST: [thirst of Chase] <- DEBUG[line break]";
+		say "DEBUG -> HP of Chase: [HP of Chase], Dexterity: [Dexterity of Chase], LIBIDO: [libido of Chase], LUST: [lust of Chase], ChaseSexCounter: [ChaseSexCounter], THIRST: [thirst of Chase], ChaseMarking: [ChaseMarking], ChasePetplay: [ChasePetplay] <- DEBUG[line break]";
 	if HP of Chase < 3: [regular Chase]
 		say "     The tall striped tiger-morph you helped out earlier is hanging around near the side of the den, watching over several of the other tiger-like people here as they go about their business. He's pretty fit looking with a swimmers build and seems well at ease with his new form. Chase's electric blue eyes sweep the room making sure that everyone under his care is safe and accounted for. Staring at him you also notice his stripes seem to differ from the other tigers. For the most part they all have matching markings, whereas Chase has prominent black stripes coming over his shoulders to almost meet at the center of his chest. Every so often he rubs the leather choker bearing a yin yang brand around his neck, that almost looks like a cute collar... but you doubt anyone would ever mention that to him. All in all, he seems strangely alluring, with a strong, masculine presence which you can't help but find attractive.";
 		say "     As you continue to stare at the friendly beastman he notices your gaze, giving you a cocky smirk. Acting as if you aren't watching he strikes a pose showing off compact muscles, making sure to put all of his assets on display. Forcing your eyes to be transfixed on those biceps and pecs, Chase flexes them for your perusal. Running a paw down the white fur of his washboard abs the tigers hand finally reaches his sheath and balls, to a casual observer it would appear that he's only adjusting himself but you know better. Casually rolling each ball around with his paw the great cat allows his cock to begin to harden only slightly. Turning his back to you showing off his sculpted ass, flexing it as he bends over to pick something up that your pretty sure isnt even there. Standing erect again he glances over his shoulder with wink, that same cocky smirk on his face. Heading over to a wall Chase leans up against it acting as if he hadn't just put on an enticing show for you. You can't help but giggle a little bit at the tiger-morphs antics. You have heard of guys peacocking, but this is the first time you have seen a cat do anything pertaining to something bird-like.";
@@ -133,10 +145,15 @@ to say RegularChaseTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Make final battle preparations and intercept the tigertaurs";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Help";
+	now sortorder entry is 3;
+	now description entry is "Offer to help the tiger";
+	[]
 	if companion of player is royal tiger and 1 > 2: [disabled for now]
 		choose a blank row in table of fucking options;
 		now title entry is "Chat with Ryousei and Chase";
-		now sortorder entry is 3;
+		now sortorder entry is 4;
 		now description entry is "Bla bla";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -158,6 +175,8 @@ to say RegularChaseTalkMenu:
 					say "[RegularChaseTalk1]";
 				if (nam is "Attack plan"):
 					say "[TigertaurQuestBattle]";
+				if (nam is "Help"):
+					say "[RegularChaseHelp]";
 				if (nam is "Chat with Ryousei and Chase"):
 					say "[RegularChaseRyoTalk]";
 				wait for any key;
@@ -186,6 +205,22 @@ to say RegularChaseTalk1: [just casual conversation]
 			say "     <scene for random number 3>";
 	]
 
+to say RegularChaseHelp:
+	if RegChaseHelp is 0:
+		say "     'Hey, I'm sorry to ask this of a friend, but could you do me a small favor?' Not sure what the tiger is on about, you ask Chase what he needs. 'Well, we're kind of running low on food and water around here. I was kind of hoping that if you happened to come across some extra supplies, you wouldn't mind sharing some with us?' Not seeing any reason why not as long as you can keep yourself supplied too, you nod and then ask Chase how much in the way of provisions he and the others would need. 'Not much maybe just 20 pounds of food (8 units) and maybe a couple gallons of water (5 units). The waters not that necessary though, but the food would be really appreciated.' The tiger smiles at you somewhat sheepishly. Gaping and then nodding somewhat bewilderedly at the feline man you tell Chase that you'll see what you can do. 'Thanks and sorry about the inconvenience.' Chase saunters up next to you and then licks his raspy tongue across your [facename of player] face.";
+		Now RegChaseHelp is 1;
+	else if RegChaseHelp is 1:
+		if carried of water bottle < 5 or carried of food < 8:
+			say "     [one of]'Hey, sorry to bug, but did you ever get that food? We need like 8 things of food and maybe 5 liters of water, if you can spare that much.'[or]'Did you have any luck finding those supplies I'd asked about?'[or]'Don't forget to keep your eyes open for some of the supplies we need here.'[or]'Did you see those small packs of rabbits roaming around? God they always make my mouth water...'[at random]";
+		else:
+			decrease carried of water bottle by 5;
+			decrease carried of food by 8;
+			Say "	'Whoa, thanks a lot for this! This should keep the rest of us going for a while longer!' Chase nuzzles the side of your neck and then licks you across your throat. A shiver racks down your spine from the rough wet feel of the tiger's tongue sliding along your [facename of player] throat. When the feline pulls back Chase says, 'Hey why don't I show you some neat tricks we tigers like to pull off? It may help you to fight and run away better when your outside foraging or whatever.";
+			Increase XP of player by 40 + ( 3 * level of player );
+			Now RegChaseHelp is 2;
+	else if RegChaseHelp is 2:
+		say "     Chase turns to you with beaming smile. 'I think we are good for now. You pulled us out of the fire that's for sure. We should be ok, as long as we stay vigilante with our scavenging.' Raising his fist up at you, the tiger raises an eyebrow in question. 'Pound it?' Smiling a bit to yourself, you raise your fist as well, meeting him in a pound.";
+
 to say RegularChaseRyoTalk:
 	say "     ...";
 
@@ -200,22 +235,23 @@ to say DomChaseTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Just talk with the tiger king";
 	[]
-	[choose a blank row in table of fucking options;
-	now title entry is "Discuss ways he can mark you as his";
-	now sortorder entry is 3;
-	now description entry is "Discuss whether or not your open to his new desire to mark you so everyone can scent who you belong too";
+	if ChaseMarking is 0 and WSlevel is not 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Discuss ways he can mark you as his";
+		now sortorder entry is 2;
+		now description entry is "Discuss whether or not your open to his new desire to mark you so everyone can scent who you belong too";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Discuss his wanting to excert further control of you";
-	now sortorder entry is 4;
-	now description entry is "Discuss his desire to treat you like a pet on occasion";
+	now title entry is "Learn more about his 'pet' history";
+	now sortorder entry is 3;
+	now description entry is "Find out more about his life before the infection";
 	[]
 	if companion of player is royal tiger and 1 > 2: [disabled for now]
 		choose a blank row in table of fucking options;
 		now title entry is "Chat with Ryousei and Chase";
 		now sortorder entry is 5;
 		now description entry is "Bla bla";
-	[]]
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -233,6 +269,10 @@ to say DomChaseTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Chat a bit"):
 					say "[DomChaseChitChat]";
+				if (nam is "Discuss ways he can mark you as his"):
+					say "[DomChaseMarking]";
+				if (nam is "Learn more about his 'pet' history"):
+					say "[DomChasePet]";
 				if (nam is "Chat with Ryousei and Chase"):
 					say "[DomChaseRyoTalk]";
 				wait for any key;
@@ -277,9 +317,6 @@ to say DomChaseRelationshipTalk:
 		say "     'I'm glad that we figured out a solution to that problem, but I should prolly get back to discussing with my advisers on better ways to protect our borders.' Getting off of his lap, you go to get ready to head out, only to be grabbed from behind. 'Just remember though, this means that I'm gonna knock up any pussy in this den that I want. Things may get a bit competitive, but you are still my number one slut!' With a parting smack on your ass, the king makes his way back to his advisers.";
 		now Dexterity of Chase is 2;
 
-to say DomChaseRyoTalk:
-	say "     ...";
-
 to say DomChaseChitChat:
 	let randomnumber be a random number from 1 to 3;
 	if dexterity of Chase is 1: [monogamous dom Chase]
@@ -297,7 +334,63 @@ to say DomChaseChitChat:
 			-- 2:
 				say "     'The tigresses in the den have been giving me some looks lately. Two of the sluts even came up to me and asked if I was interested in fucking them! Before they knew what was happening, I grabbed one and screwed her brains out, then the other, who just so happened to be her sister haha! They were decent fucks, but I've had better, and who knows, maybe I knocked both of 'em up!'";
 			-- 3:
-				say "      'Gotta tell ya, I hate when you're not knocked up! It makes me look like I'm not the virile stud that we both know I am. But when you are pregnant... haha, fuck, you smell so good like that! I can't even bring myself to pay attention to any of the other sluts in the den when you're preggers haha!'";
+				say "      'Gotta tell ya, I hate when you're not knocked up! It makes me look like I'm not the virile stud that we both know I am. But when you do get pregnant... haha, fuck, you smell so good like that! I can't even bring myself to pay attention to any of the other sluts in the den when you're preggers haha!'";
+
+to say DomChaseMarking:
+	if dexterity of Chase is 1: [monogamous dom Chase]
+		say "     Bringing up the fact that Chase is always sniffing you, followed by rubbing some part of himself over your body. The tiger chuckles warmly. 'Well, I like when you carry my scent. I mean, when you come in here and you smell like someone else... well let's just say it puts me on edge.' You decide to ask him if your scent is mingled with his, or if it's someone else? The tiger king leans in close, you feel the warm puffs of air from his nostrils hitting your throat. 'I'm there, but not as strongly as I would like.' You can see the disappointment evident on his handsome face. Asking the feline if there is a way to make his aroma cling to you longer? Cobalt-blue eyes fix you with a curious stare. 'There is a way, but... well it would require something that I'm not really sure you would enjoy. The easiest way, would be for me to mark you.' Remembering what you know about mammals, marking you more than likely referring to him peeing on you. They do it to claim territory or sometimes to assert dominance. In the end it all comes down to how you feel about it.";
+		LineBreak;
+		say "     [bold type]Would you really be ok with Chase urinating on you?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yeah, if this is something that would make your mate happy, your ready for it!";
+		say "     ([link]N[as]n[end link]) - Umm... no, you will have to pass on this offer.";
+		if player consents:
+			LineBreak;
+			say "     Smiling up at your lover, you explain to him that if it makes him happy and more comfortable with you going out into the city then your open to it. At first your mate stares at you almost as if he is trying to figure out if your joking or not. Obviously deciding that you are in fact being serious, Chase grabs you pulling you close to his furry chest. 'Really? I mean it [italic type]would[roman type] make me feel safer with you being out in the city, but... I just want you to know that it's alright if it's not really your thing.' Laughing a bit into the warm chest underneath your face, you tell the tiger that you want the world to know that your his. 'Well, anytime that you think you're losing my scent come back here and I will make you sure [italic type]everyone[roman type] knows exactly who your mate is[if player is not defaultnamed] [name of player][end if].";
+			now ChaseMarking is 2;
+		else:
+			say "     A bit uneasy, you explain to your lover that having someone pee on you isn't really something your into. The tiger king actually seems to be embarrassed by you coming right out and saying it like that. 'Well, I mean i've actually never really been into it either to be honest! It would just be the easiest way for me to leave a lasting scent on you. Your right though, now that I think about it, peeing on someone does seem kinda weird doesn't it?' The both of you are kinda quite for a few moments, before the two of you breakdown laughing. The bout of laughter over, it is decided to leave this topic behind as nothing more than a silly memory.";
+			now ChaseMarking is 1;
+	else if dexterity of Chase is 2: [PChase]
+		say "     Without warning, Chase grabs your head tilting it to the side and breathing in deeply at your jugular. 'Damn, you reek of other males! This is gonna be a problem. How the hell am I supposed to have a number one slut, if you keep coming back here smelling like the city bicycle, that's bending over for anyone that passes by!' The tiger king stops and thinks for a moment. Finally a glint fills his cobalt eyes, along with a wicked smile forming on his muzzle. 'Alright I know how to solve this problem. Ok here's how things are gonna work from now on, everytime you come to the den smelling like a whore, I will [italic type]fix[roman type] you!' Reaching down the feline cups himself, an acidic aroma emanating from him. Taking his paw away he smears it across your throat, it finally clicks in your head what he just did. He just wiped his urine across you, marking you as his territory!";
+		LineBreak;
+		say "     [bold type]Are you really ok with this?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Hell yeah, you would enjoy bearing only his scent!";
+		say "     ([link]N[as]n[end link]) - Forget that, you dont need to be fixed or corrected!";
+		if player consents:
+			LineBreak;
+			say "     Placing your hand over where Chase just marked you, and dragging it down. You begin to smear the tigers urine and by association his scent across the rest of your body. Keeping your gaze fixed on the cobalt-blue eyes of your master, you explain to him that you want to be fixed, if you're not marked as his then your not satisfied. A pleased rumble reverberates from within the great felines chest. 'It's always nice when a pretty lil slut knows their place.'";
+			now ChaseMarking is 2;
+		else:
+			LineBreak;
+			say "     Pulling back and gagging a bit, you inform Chase that in no way are you going to let him [italic type]mark[roman type] you! Before you are able to get very far though, a paw wraps around the back of your neck, with a grip like furry steel. 'It's cute that you think you have a say in this matter my lil slut. But the fact is, I'm not giving you a choice, I'm [italic type]telling[roman type] you what is going to happen from now on! If you don't like it, then you don't have to come back here. I will just have to find someone else to be my number one slutty mate. [italic type]That[roman type] is the choice I'm giving you!'";
+			now ChaseMarking is 2;
+
+to say DomChasePet:
+	if dexterity of Chase is 1 and ChasePetplay is 0: [monogamous dom Chase]
+		say "     Watching as Chase attends to his people, making sure each one's needs are met, it just goes to show you how a great a king the tiger has become. Watching your mate pat the head of one of the younger tigers of the streak with fondness, you wonder about his life before the infection. Not wanting to bring up any potentially painful memories like friends or family, deciding on something more appropriate, perhaps a pet in his past. After the teenager finishes explaining to the tiger king the importance of certain rules in some game, the guy runs back to his friends. Coming up behind your lover, you wrap your arms around his muscular stomach, telling him that he's really good with the other survivors here. 'Well they need someone to pay attention to them and listen. I remember when I was that age, I didn't really have any friends myself and my parents were always so busy that they didn't really have time for me either.'";
+		say "     You feel a pang of regret for little Chase and ask him if he was always alone. Closing one paw over your hands clasped across his abdomen, he chuckles warmly. 'Don't tell me your feeling bad for lil Alex now are you[if player is not defaultnamed] [name of player][end if]?' While his voice is filled with relaxed mirth, he still holds your hand tighter, letting you know that he must appreciate your concern. 'I wasn't [italic type]always[roman type] alone, growing up we had a few pets. We actually had three, a bloodhound named Scout, a cat named Snowball, and a rabbit named Flopsy. They were all the friends I ever needed... I have no idea what happened to them after the world went to hell though.' Contemplating what you were just told, a thought enters your mind, while not the most PG rated one in the world, you can't help but latch onto it. Whispering into your mates ear, you ask the feline if he would like to have a pet again?";
+		WaitLineBreak;
+		say "     'I would love too! I cant though, having a pet is a full-time job. You need to make sure you have enough time to give them everything they need, and with everything going on out in the city, my hands are full with taking care of everyone here.' You can't hold back the laugh that erupts out of you as your comment seems to have gone completely over your lovers head. You explain to him that you had a much easier method for having a pet in mind, namely you being the pet. The look on Chase's face is unreadable for a minute or two before he bursts out laughing. 'Good one! You had me going there for a minute!' You just stare at him blankly, waiting for the tiger to catch on that your not making some kind of joke. He finally stops laughing and just stares at you blankly for a few moments, you worry you may have just broken your mate.";
+		say "      'Oh! You were being serious... so you would want to be [italic type]my[roman type] pet. Do you mean like a sex pet? Or did you mean like a legitimate animal pet?' The poor guy looks so confused you can't help but snicker, before explaining to him that he could have both. While the felines face appears unreadable, one part of his body seems to like the idea, if the cock head poking out of his sheath is anything to go on. 'Umm... well I guess we could try that, y'know just to see what it's like. Mind you, we will prolly have to train you up for something like that.' Nodding your head, you give the tiger king a cocky smirk, informing him that you like the sound of that. Clearing his throat, Chase quickly begins to go back to what he was doing previously. His cock however still not fully receding back into his sheath.";
+		now ChasePetplay is 1;
+	else if dexterity of Chase is 1 and ChasePetplay is 1:
+		say "     Watching as Chase attends to his people, making sure each one's needs are met, it just goes to show you how a great a king the tiger has become. Watching your mate pat the head of one of the younger tigers of the streak with fondness, you wonder about his life before the infection. Not wanting to bring up any potentially painful memories like friends or family, deciding on something more appropriate, perhaps a pet in his past. After the teenager finishes explaining to the tiger king the importance of certain rules in some game, the guy runs back to his friends. Coming up behind your lover, you wrap your arms around his muscular stomach, telling him that he's really good with the other survivors here. 'Well they need someone to pay attention to them and listen. I remember when I was that age, I didn't really have any friends myself and my parents were always so busy that they didn't really have time for me either.'";
+		say "     You feel a pang of regret for little Chase and ask him if he was always alone. Closing one paw over your hands clasped across his abdomen, he chuckles warmly. 'Don't tell me your feeling bad for lil Alex now are you[if player is not defaultnamed] [name of player][end if]?' While his voice is filled with relaxed mirth, he still holds your hand tighter, letting you know that he must appreciate your concern. 'I wasn't [italic type]always[roman type] alone, growing up we had a few pets. We actually had three, a bloodhound named Scout, a cat named Snowball, and a rabbit named Flopsy. They were all the friends I ever needed... I have no idea what happened to them after the world went to hell though.' You place your hand gently on his shoulder in an attempt to console your mate.";
+	else if dexterity of Chase is 2 and ChasePetplay is 0: [primal dom Chase]
+		say "     You watch as Chase gives orders out to his people, completely in charge and in command. You can't help but feel an arousing attraction to the tiger king, all of that dominance and power. Walking up to him in what you hope is an sexually appealing way, you catch the felines eye. 'Ah and how is my pretty lil slut doing? Did you need me to [italic type]take[roman type] care of you?' Without waiting for your response, your master picks you up and plops himself down on his throne. 'I'm afraid im a bit busy at the moment, I have to make sure my orders are being followed. It is nice to have you come visit me though, why don't you stay and keep me company while I keep an eyes on these [italic type]lazy ass workers[roman type]!' The last bit obviously yelled out so the rest of the den can hear it.";
+		say "     The feel of the tigers soft fur definitely makes you wanna stay right where you are. Chase is silent for a while just watching as his underlings run back and forth. You decide to take this opportunity to try and learn more about your mate, although your enjoying his more subdued attitude at the moment, thinking of a topic that won't obviously place him in a bad mood. Deciding on something relatively simple, you ask him about if he had any pets before everything went crazy. 'Yeah, I mean don't most people at some point? I didn't really have friends growing up and my family... well lets just say they did what was necessary and not much else. I had a bloodhound name Scout, a cat named Snowball, and a rabbit named flopsy.' Obviously expecting you to comment on his pet choices or possibly the names, the felines cobalt eyes fix you with a stern gaze. 'You got a problem with that!?' You quickly shake your head in the negative, asking him to continue.";
+		WaitLineBreak;
+		say "     'They were better than most people in my opinion, animals will remain loyal no matter what, unlike humans.' You can't help but feel that there is a story there, but as you open your mouth to ask him to share more, the tiger cuts you off. 'Why are you asking me about stuff that no longer matters slut? Is this some sort of attempt to get something on me? Or possibly just some passive aggressive way of trying to get one over on me you little whore?' Hearing the anger begin to rise in your masters voice, you quickly attempt to calm him down. Wrapping your arms around him and holding him tight you immediately notice the feline freeze up, almost as if expecting some sort of punchline to be made. You explain to Chase that you simple wanted to get to know him better, and as his mate shouldn't that be part of the relationship the two of you share.";
+		say "     The tiger king slowly unfreezes, wrapping one furry around your waist. 'Yeah I guess that makes sense... so is there anything else you wanted to know about that part of my life?' Your mates cobalt eyes scan the room, still watching his workers. Wanting to put a smile back on your masters muzzle, you cant help the giggle that escapes your lips as an idea comes to mind. Hearing your laughing Chase glances over with a roll of his eyes. 'What is it now?' Leaning in close you whisper into his ear that it may not be the same, but what if you were his own personal pet from time to time. That gains a raised eyebrow, followed by a deep chuckle. 'Babe, aren't you [italic type]already[roman type] my lil fuck pet? Then again I suppose there are a few things we could try... alright but just remember this was your idea! Just let me know when you are ready to give it a go and we can start your training.' Sliding off of your mates lap, you give him a final wink before heading back to business.";
+		now ChasePetplay is 1;
+	else if dexterity of Chase is 2 and ChasePetplay is 1:
+		say "     You watch as Chase gives orders out to his people, completely in charge and in command. You can't help but feel an arousing attraction to the tiger king, all of that dominance and power. Walking up to him in what you hope is an sexually appealing way, you catch the felines eye. 'Ah and how is my pretty lil slut doing? Did you need me to [italic type]take[roman type] care of you?' Without waiting for your response, your master picks you up and plops himself down on his throne. 'I'm afraid im a bit busy at the moment, I have to make sure my orders are being followed. It is nice to have you come visit me though, why don't you stay and keep me company while I keep an eyes on these [italic type]lazy ass workers[roman type]!' The last bit obviously yelled out so the rest of the den can hear it. The feel of the tigers soft fur definitely makes you wanna stay right where you are. Chase is silent for a while just watching as his underlings run back and forth.";
+		say "     You decide to take this opportunity to try and learn more about your mate, although your enjoying his more subdued attitude at the moment, thinking of a topic that won't obviously place him in a bad mood. Deciding on something relatively simple, you ask him about if he had any pets before everything went crazy. 'Yeah, I mean don't most people at some point? I didn't really have friends growing up and my family... well lets just say they did what was necessary and not much else. I had a bloodhound name Scout, a cat named Snowball, and a rabbit named flopsy.' Obviously expecting you to comment on his pet choices or possibly the names, the felines cobalt eyes fix you with a stern gaze. 'You got a problem with that!?' You quickly shake your head in the negative, asking him to continue. 'They were better than most people in my opinion, animals will remain loyal no matter what, unlike humans.' You tighten your grip on your master to show your support, but remain silent, sometimes just being there and listening is all thats needed.";
+
+to say DomChaseRyoTalk:
+	say "     ...";
 
 to say SubChaseTalkMenu:
 	say "     ...";
@@ -461,20 +554,32 @@ to say DomChaseSexMenu:
 	[
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Chase off";
-	now sortorder entry is 2;
+	now sortorder entry is 1;
 	now description entry is "Blow Chase";
-	]
+
 	[if cunts of player > 0: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Chase's shaft in your pussy";
 		now sortorder entry is 5;
 		now description entry is "Offer sex to the hunky tiger.";]
-	[]
+	[]]
 	if "MPreg" is listed in feats of player:
 		choose a blank row in table of fucking options;
 		now title entry is "Use your ass to satisfy your king";
 		now sortorder entry is 2;
-		now description entry is "Offer sex to the hunky tiger";
+		now description entry is "Offer sex to the your mate";
+	[]
+	if ChaseMarking is 2 and WSlevel is not 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Allow Chase to mark you completely as his";
+		now sortorder entry is 5;
+		now description entry is "Offer to be marked by your mate";
+	[]
+	if ChasePetplay is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Have Chase turn you into his make-shift pet";
+		now sortorder entry is 6;
+		now description entry is "Offer to be used as your mates pet";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -501,7 +606,7 @@ to say DomChaseSexMenu:
 					say "[DomChaseSex4]";
 				if (nam is "Allow Chase to mark you completely as his"):
 					say "[DomChaseSex5]";
-				if (nam is "Let Chase parade you around as his obedient sex-pet "):
+				if (nam is "Let Chase train you as his obedient pet "):
 					say "[DomChaseSex6]";
 				wait for any key;
 		else if calcnumber is 100:
@@ -553,10 +658,29 @@ to say DomChaseSex4: [breeder special]
 	say "     A";
 
 to say DomChaseSex5: [marking shower]
-	say "     A";
+	if dexterity of Chase is 1 and ChaseMarking is 2: [MChase]
+		say "     Informing Chase that you want him to mark you. The feline gently takes your hand in his and leading you to a small bathroom, once inside you undress but can't help but feel a little nervous. The tiger sensing your unease pulls you close, tilting your head up and brushing his lips over your own. 'It's ok to be a lil on edge, I promise nothing that happens here will hurt. Trust me, just let me take care of everything.' Deciding to push your vulnerable emotions away, you deepen the kiss. Allowing your tongue to slide against the raspy one belonging to your mate, raising your arms up you circle them around his muscular neck. Apparently amused, your lover chuckles into your mouth, before wrapping his strong arms around your waist. 'Now don't get too over eager, there will be plenty of time for that later. Right now, I just want you to relax and let me take charge.' Without even realizing it, you notice that your swaying side to side with feline, almost as if the two of you are slow dancing together. A deep rumble begins in his chest, instantly helping you relax.";
+		say "     Finally calming down, you feel a sudden warm wetness on your stomach. Attempting to pull back and look, you are just held even tighter by the tiger who shushes you softly. The wetness begins to flow down to your groin, eventually cascading down your thighs as the pressure increases. Still purring, Chase removes one paw from your waist and brings it down to where you are already soaked. Caressing you softly, the tiger begins to rub the warm urine he collected over the rest of your body. In all honesty it's nice, almost like a bath mixed with a massage. The feeling of his wet pads pushing into your muscles, at the same time completely marking your body with his scent is intoxicating. You begin to feel drowsy from the felines ministrations, only to jump slightly when a light smack to your ass startles you. 'Hey now, I know this must feel great but that doesn't mean you can pass out on me!' The mirth in your mates voice causes you to giggle a bit.";
+		WaitLineBreak;
+		say "     Once you are completely covered, you can't suppress the shiver that runs down your spine due to the chilled air hitting your wet body. 'Don't worry, it will only take a few minutes for it sink in. After that we can get you cleaned up and in some fresh clothes.' Holding you close as humanly possible... err tigerly possible, you are able to soak in the heat that is radiating from Chase's soft fur. Eventually the warmth is too much for you, and you pass out. The next thing you know, you are back out in the main room being held by your mate, while the tiger sits on his throne. The feline having noticed you waking up gives a soft chuckle, his paws smoothing down your clothing. 'Bout time you woke up, after you passed out on me, I had to clean you up and get you dressed. I wonder if maybe I'm starting to spoil you too much.' Helping you to your feet, Chase plants one last kiss upon your lips, giving you a wink as he makes his way back to his council. Stepping away, you also notice that the tigers around you have all began to tip their heads, flashing their throats in a sign of submission. Obviously the scent thing worked.";
+	else if dexterity of Chase is 2 and ChaseMarking is 2: [PChase]
+		say "     Informing Chase that you need to be marked, the tiger leans in close scenting you, before recoiling back with a snarl on his lips. 'You smell like a whore! So what, you leave the den and just run around looking for anything to bend over for? Follow me!' With that the tiger king jumps off his throne, walking towards a door on the right side of the room. He doesn't even glance back at you, fully expecting you to chase after him. Once you are able to catch up with the pissed off cat waiting next to the door, he raises an eyebrow at the fact that you weren't hot on his heels in the first place. 'Get inside and take your clothes off, then I want you to get down on your knees and wait for me.' Without any further comment he leaves you standing there, as he goes to do something else. Opening the door slowly, you peek inside, seeing thats its nothing but a decent sized communal bathroom.";
+		say "     Stepping inside and shutting the door, you begin to slowly undress as you take in your surroundings. Finally naked, you find a relatively clean patch on the floor and kneel down on it, waiting for your masters return. After what feels like ages, but is honestly more than likely about ten minutes, Chase enters the room. Worried about if he still as pissed off as he was initially, you keep your gaze lowered, not wanting to provoke him. Slowly the tiger circles you, before stopping behind your back. The fact that he has out of your field of vision leaves you slightly uneasy. Quickly you feel your arms being pulled snugly behind your back, right before you feel what must be rope being tied around your wrists, holding them together. 'So, you insist on taking advantage of my affections for you, my lil slut. I made you my mate, I fuck you whenever you need it, and yet you insist on throwing all that back in my face! You go out there and act like a common whore, begging anyone to use you like the slut you are! Here's a newsflash bitch, you belong to me! Sadly, I think you have forgotten that, but don't worry I'm here to refresh your memory.'";
+		WaitLineBreak;
+		say "     Opening your mouth to give a response, you are quickly silenced with a paw. 'I don't think so, to my knowledge the only reason a slut has a mouth is to suck cock, and that's not what this is about.' Deciding it might be better to just remain silent, you lower your head in a subservient manner. 'See, now that's much better. A proper slutty mate like yourself should remain silent when you are being punished. However, don't worry, I have also taken into consideration that you came to me, asking me to correct you for being a naughty whore. Then again, maybe that's why you went out getting fucked by half the city, just so that you would be punished... hmmm.' Chase returns to circling, you can hear that he is doing something, but your not sure what. After about five minutes of just sitting there with him walking around you, your head is roughly grabbed and tilted up.";
+		say "     Raising your gaze from the floor, you are met with his hard cock shooting a load straight at your face. The initial shot hits you square in the center of your forehead, while the remaining spurts hit your cheeks, mouth, nose, and chest. 'See, I'm not without affection, that was your reward for coming to me and asking to be corrected for your mistakes. Now it's time to actually fix them!' Without warning you feel hot liquid hitting your face and chest. The wet assault almost seems endless, but eventually the warm golden shower begins to ebb. You are left covered in a mixture of urine and cum, raising your head, not sure how the tiger king will react. Chase's cobalt-blue eyes have mirth to them again thankfully. 'You need to stay like that for about five minutes for it to set in, after that you may get dressed again.'";
+		WaitLineBreak;
+		say "     Walking up behind you, the feline reaches down and unties the rope being used to restrain you. Without a further word he straightens up and walks through the door, leaving you kneeling on the ground alone. After awhile, you get up and find a towel, you're not sure if Chase left it for you, or if it was just previously discarded here. Shivering from the cold urine and cum still covering your body, you begin to wipe yourself down. Finally once you are relatively clean, its time to get dressed and head out the door back into the main room of the den.";
 
-to say DomChaseSex6: [sex-pet]
-	say "     A";
+to say DomChaseSex6: [pet training]
+	if dexterity of Chase is 1 and ChasePetplay is 1 and ChasePetplayTraining is 0: [MChase]
+		say "     Pressing your body up against Chase, you inform him that you are ready for your [italic type]training[roman type]. The tiger stops you though, holding you back looking deep into your eyes. 'Alright, well before we get started I think we should go over some stuff, that way there will be no surprises. If you were being serious about us having some... pet play fun, then we should go all the way. What I mean is embrace everything that is entailed. No talking, no walking upright, and I will be deciding when our [italic type]playtime[roman type] is over. Sound like a plan to you?' Nodding your head in agreement, your lover snickers. 'Getting into character a lil early aren't you? I just wanted us to set up the ground rules before we start doing this is all.' Laughing gently, you break your silence explaining that you totally understand and agree. Taking one of his furry paws, you tell Chase that you appreciate him making you feel so comfortable with all of this and that you will be back when you are ready to begin.";
+		say "     Future scenes WIP";
+		now ChasePetplayTraining is 1;
+	else if dexterity of Chase is 2 and ChasePetplay is 1 and ChasePetplayTraining is 0: [PChase]
+		say "     As you open your mouth to ask Chase about maybe setting up some [italic type]playtime[roman type], you are instantly silenced by a paw over your mouth. 'I have a feeling your about to ask about when we will be entertaining your deviant idea, am I right?' With the tigers paw still covering your mouth, all you can do is nod. 'Alright so let's set up some ground rules, and pay attention cuz I hate having to repeat myself. First, when we start this, you will not be speaking, I hear a single word out of you and we stop. Second, no walking on two legs, you wanna be treated like an animal then act like one. Third, I am in charge, I will be deciding when our session is over, no complaints or attitude. So you think you can live with those rules slut?' Not sure if you should be speaking or not right now, you simply nod your head. 'Very good, then when you are ready to start, just come back to me. We will get you trained up nicely, just you wait.' With that the tiger turns his back to you, clearly done with you for now.";
+		say "     Future scenes WIP";
+		now ChasePetplayTraining is 1;
 
 Section 4 - Chase Quests
 
@@ -567,7 +691,7 @@ instead of navigating Tiger Den while (ChaseSexCounter is 5):
 	if debugactive is 1:
 		say "     DEBUG: Chase TigertaurQuestBattle Walkin; ChaseSexCounter: [ChaseSexCounter] [line break]";
 	say "     As soon as you enter the tiger's den it is evident that something is wrong. People in orange and black fur are racing around everywhere, clearly in some sort of distress. You try to pinpoint Chase within all the chaos, but can't see him around the entrance, so you begin to make your way further in. After only a few steps one of the panicked felines brushes past you from behind, just knocking you to the ground as she doesn't pay any attention to you in her rush. Then all of a sudden, a loud roar can be heard throughout the tiger den, causing the all of the inhabitants to freeze in place. Still confused about what is going on, you suddenly feel a strong paw grip your arm, hoisting you to your feet and dragging you behind the tiger-person to a corner of the den.";
-	say "     The tigers that were frozen in place only a moment ago rush back into action. After you are placed back on the ground and prepared to thank the man that saved you, starting your hunt for your friend again. Before you can even open your mouth to speak a familiar scent enters your nostrils, [italic type]Chase[roman type]! You grab him and hold on tight, with the state the den is in right now you were worried what may have happened to cause such an uproar. At first the beast-man is shocked judging by the fact that his whole body freezes up, but then hear him give a short laugh wrapping his strong arms around you, You both stay like that as the panic continues to spread throughout the area.";
+	say "     The tigers that were frozen in place only a moment ago rush back into action. After you are placed back on the ground and prepared to thank the man that saved you, starting your hunt for your friend again. Before you can even open your mouth to speak a familiar scent enters your nostrils, [italic type]Chase[roman type]! You grab him and hold on tight, with the state the den is in right now you were worried what may have happened to cause such an uproar. At first the beast-man is shocked judging by the fact that his whole body freezes up, but then hear him give a short laugh wrapping his strong arms around you. You both stay like that as the panic continues to spread throughout the area.";
 	WaitLineBreak;
 	say "     Chase finally pulls back, his electric-blue eyes conveying both his familiarity with you but also his worry over recent events. 'I'm glad your safe[if player is not defaultnamed] [name of player][end if] I can honestly say that I was worried not knowing where you were during this... let's just say dangerous time.' Grabbing one of his paws you bring it close to your chest and ask the tiger to tell you what happened. 'The tigertaurs found us... one of our scouts didn't realize she was being tracked and led one straight to our doorstep. Out of the blue we heard a loud banging against the door, the scout opened it I can only assume thinking it was one of the others that was close behind her. The door flew open and the girl was grabbed around her throat, just being held in the air while this huge tigertaur addressed the rest of us.' For the first time you can actually see the fear on Chase's face, squeezing his paw you urge him to continue.";
 	say "     Shaking his head a bit he continues, this time however where there was fear tingeing his voice now you can only hear the tigers rage. 'That bitch had the nerve to tell us that we should be ashamed of hiding from them! That they were the next stage in evolution! She claimed they would be coming back soon to [italic type]uplift[roman type] us.' A look of disgust passes of Chase's face, like he had just eaten something that had gone bad long ago. 'That's why everyone is in a panic, we have to leave.' The tiger covers your cheek with one large paw. 'I don't even know if i'll ever see you again... this was just supposed to be about us having a bit of fun. Ya know make a friend, maybe pop out a few kids, and leave it at that haha easy right?' You can't help but wonder if that's Chase's opinion of a friend or Alex's. 'But... [italic type]I[roman type] don't wanna just move on, I want to be able to have you come back here whenever able. I guess i'm the one the screwed up our arrangement and got attached.'";
@@ -584,7 +708,7 @@ to say TigertaurQuestBattle: [conversation to begin tigertaur battle mission]
 	LineBreak;
 	say "     [bold type]Are you ready to take the fight to the tigertaurs?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - This is a long time coming, it's time to end this!";
-	say "     ([link]N[as]n[end link]) - You're not prepared for the fight just yet, better safe than sorry.";
+	say "     ([link]N[as]n[end link]) - Your not prepared for the fight just yet, better safe than sorry.";
 	if player consents:
 		LineBreak;
 		say "     Deciding that you are ready you give Chase a nod of confirmation. 'Alright sounds like we are gonna do this then!' Coming over the tiger places his finger under your chin, lifting your face close to his. 'We can do this. I know we can, but... just incase anything happens, I want the chance to to tell you how much you doing this means to me.' A chaste kiss is placed upon your lips which grows in intensity until you find your back being slammed against a wall. You feel furred paws groping every inch of you that they can and you're no better, hands feeling the soft fur covered muscles under your touch. You can't help but allow yourself to graze up against his sheath, the head already beginning to poke out.";

@@ -290,4 +290,34 @@ Instead of resolving a Zookeepers at Play:
 		say "     With a shrug, you turn from the pair as they start making out and touching further, then walk along the zoo pathways until you eventually reach the rest area again.";
 	now Zookeepers at Play is resolved;
 
+Escaped Wolf Pack is a situation.
+The sarea of Escaped Wolf Pack is "Zoo".
+
+Instead of resolving Escaped Wolf Pack:
+	EscapedWolfPackEvent;
+	
+to EscapedWolfPackEvent: [Bent bars in zoo]
+	say "     As you walk along the path between the exhibits, you reflect on how the Zoo sort of lacks a purpose now that so many of the animals have escaped into the city, mutating and fusing with the residents. Beside you, the bars on some of the fencing are bent and broken, and viewing windows are shattered, leaving debris lying on the concrete below. Reaching the barrier around a pit, you read the information panel about its previous occupants. 'The Gray Wolf ([italic type]Canis lupus [roman type]) is a canine native to the wilderness and remote areas of Eurasia and North America. They are the largest living member of the wolf family. Its winter fur is long and bushy and predominantly a mottled grey in color, although nearly pure white, red, or brown to black can also occur.' A large tree has collapsed against one side, crushing the surrounding fence and explaining the complete absence of wolves in there.";
+	say "     You debate whether or not to clamber down, but decide that there is little point for such an action with so much risk of injury. You might heal, but why risk the pain? As you circle around the wolf pit, you reach another information board giving more facts about wolves. 'Grey wolves are social animals, travelling in family groups consisting of a mated pair, accompanied by the pair's adult offspring. The leader of this pack is called the Alpha. The grey wolf is typically an apex predator, with only humans and tigers posing a serious threat to it.' You hadn't really thought about wolves and tigers being in the same place, but thinking about some stories, you suppose that it shouldn't be that much of a surprise. You lose interest in the enclosure and continue on your way through the Zoo.";
+	now Escaped Wolf Pack is resolved.
+	
+Meerkat Patrol is a situation.
+The sarea of Meerkat Patrol is "Zoo".
+
+Instead of resolving Meerkat Patrol:
+	MeerkatPatrolEvent;
+	
+to MeerkatPatrolEvent: [Meerkats returning from an excursion to the city]
+	say "     As you walk along the path, you notice an upright meerkat, alert for threats. It hasn't noticed you yet, which is surprising, but this gives you time to observe. It is a lot larger than a normal meerkat, about four feet tall, suggesting that it used to be a human but has now transformed. Casting your gaze around, you notice a procession of other meerkats approaching, bearing food, water, and basic medical items such as medkits and several syringes. With a loud cry, the sentry notices you. 'You there. Yes, I see you. Identify yourself and state your intent.' At the sound of his shout, the group falls into a defensive formation, guarding their spoils and the weaker members. 'If you do not answer, you will be treated as a threat,' the stern meerkat barks.";
+	say "     [bold type]Are your intentions towards the meerkats benevolent or hostile?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - You do not intend the meerkats any harm.";
+	say "     ([link]N[as]n[end link]) - They look like that they have enough spoils to share. Try and make the meerkats hand some over.";
+	if player consents: [Benevolent]
+		say "     'I'll take your word as truth for now, but know that we are watching you,' the sentry says with relief, though still cautiously. You back off a bit, allowing the convoy of successful herpestidae to return to their burrows with their spoils. Several give you curious glances, but they're mostly focused on storing their supplies before anyone or anything hostile tries to take them. They disappear into a large mound, and you realise that you are standing beside the meerkat enclosure, which explains the presence of the sentry nearby. No doubt that there are others watching too, but you haven't run across them. Now that his clan is safe, the vigilant watcher comes over to you, trusting any other guards to alert them all if a threat approaches.";
+		say "     'Thank you for not interfering with the returning party. We could have dealt with you, but who knows how many of us would have been hurt if that had been necessary. Some of the other zoo residents need constant reminders to keep away from our scavenging parties, and we really have to be careful with outsiders who may try to capture us for their pleasure or transform us. I'll try and remember your scent should you cross our path again, but the other sentries don't know you, so be prepared to be stopped in a similar fashion.' He gives you a wave before disappearing down the hole after the rest of the clan, probably so as to get his share of the loot. Smiling at how well that went, you continue on your way through the Zoo.";
+	else: [Malevolent]
+		say "    You shout 'hostile' as you run at them, which in hindsight was a particularly stupid idea. You make it about six steps before a stone is thrown with great accuracy, connecting with your knee, causing you to stumble and trip over a fence at the side into some mud. 'MOVE, MOVE, MOVE!' the sentry shouts, the scavenging party sprinting for the mound near the guard. You haul yourself from the mud, chastened, and hold your hands up in surrender. Who knew that the meerkats could defend themselves so effectively with the use of a single rock. 'Stay away, or we'll really hurt you,' growls the livid guard, a paw over a satchel of stones at his side. You back away quickly, not wanting to face his pebbley wrath any further, and retreat back along the path for some distance.";
+	now Meerkat Patrol is resolved.
+
 Zoo Events ends here.

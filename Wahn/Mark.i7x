@@ -6,6 +6,7 @@ Version 1 of Mark by Wahn begins here.
 [   0: net met yet                                          ]
 [   1: met the two of them                                  ]
 [   2: met the two of them, player knows their names        ]
+[   3: fucked around with, player knows the names           ]
 
 [ XP of Mark                                                ]
 [   0: not yet moving                                       ]
@@ -463,20 +464,24 @@ to say MarkSuitQuest:
 		now thirst of Jay is 8;
 	else if thirst of Jay is 8: [suit ready to be delivered]
 		if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
+			project the figure of Jay_elf_outfit_icon;
 			say "     Mark smiles eagerly as you tell him that you're ready for distracting Jay. 'Okay, great. Hope you're hungry too, it'll be an amazing dinner.Could you please take him anywhere but the food court, atrium and east wing? I don't want him to spot me carrying the food boxes by accident.' You reply that you'll do your best and set out from where he is sitting, weaving your way through the thick crowds of people to get to the food court. It isn't hard to find Jay sitting at one of the tables there, drinking a glass of soda. The Christmas elf is happy to see a friendly face and readily picks up on the conversation that you start with him, then accompanies you as you suggest a walk through the mall. Strolling along, you talk about theories on where the nanite infection came from and what it all means.";
 			say "     You angle your steps towards the west wing while having your fairly interesting conversation with the slender elf, all the while encountering a series of interesting situations among the teeming masses of refugees, including more than a few that know Jay and who say hello to him in passing. Therefore, it isn't too hard to keep your friend occupied for quite a while. Eventually, you double back at the far end and walk back, reaching  Nermine's shop. Your companion stops for a moment to check out the strange things laid out behind the shop window, giving you the opportunity to glance at a public clock: Perfect, it's been just a little over an hour since you left Mark to make his preparations, so you start out towards the east wing with Jay.";
 			WaitLineBreak;
 			say "     'It was really nice talking with you,' Jay says as you reach the inconspicuous 'Staff Only' door that leads to the non-public areas of the mall. The Christmas elf digs out his key and opens the door, then pauses and looks back at you. 'Hm, Mark will be back home by now and he usually picks up dinner for the two of us. Wanna come up and join us today? We've got lots of pre-packaged food from his scavenging, so I'm sure we can make the meal stretch for three.' You smile and accept his invitation, working hard to not show a grin until he turns around and starts leading the way down the service corridor and upstairs. Soon, Jay pushes open the door to the former office he and his husband now live in. He calls out, 'Honey, I'm home and I brought a ...' Further words are put on hold as he sees the low dinner table, with its elf-sized chair and sitting cushions for others, made up with a white linen tablecloth. Plates and gleaming cutlery is laid out on it, and a decorative glass bowl with a lit candle sets a very nice mood.";
 			say "     'Welcome to Tati's,' Mark's deep voice suddenly says, with the polar bear stepping forward from where he had been standing behind the door. 'Your table is waiting, sir.' Jay draws in a breath as he looks at his husband, dressed in the waiter's uniform of the place where they met. Glancing back at you too a moment later, he sees your broad grin and bursts out, 'Aha! So you've planned this together! Totally got me, I have to admit.' Then Mark gently picks him up in his arms and happily says, 'Surprise,' followed by a deep kiss. Setting his lover back down, Mark guides Jay and yourself over to the table and bids you to sit down, then serves up an excellent meal of Romanian dishes, complete with a fancy entree and a savoury main course. All three of you sit down and start to eat heartily, with Mark explaining the little adventure you and he went through to get the restaurant accessories. The two of them frequently hold hands while you eat, with Jay's hand almost vanishing in the much larger paw of his lover.";
 			WaitLineBreak;
+			project the figure of Jay_suit_quest_icon;
 			say "     Eventually, when the three of you have finished off all of the food and conversation has drifted on to some old stories of theirs being recounted for you, Mark clears his throat. 'So Jay, we've got another surprise for you. But I'll let our friend [if player is not defaultnamed][name of player] [end if] give it to you. After all, [SubjectPro of player] was the one who actually had it made.' With a grin to you, Mark nods towards a flat carton box that you quickly retrieve. Carrying it on both outstretched arms, you bring the box to the table and set it down in front of Jay. Visibly touched by yet another gift, the slender elf holds his breath and lifts the lid of the box. He swallows and then releases the gasp of air, then bursts out, 'Oh my god! Is that - yes, it is!' Lifting the jacket of his new suit out of the box, he runs a hand over the shiny black fabric and smiles broadly.";
 			say "     'It's perfect!' the elf says in a cheerful outburst, then lays the garment down carefully so he can stand up and peel the Christmas elf tunic and skin-tight green shirt off his body. The getup is carelessly thrown to the side and Jay slips the suit jacket on, closing its middle button over his slender, naked chest. 'Thank you so much!' a beaming Jay says to both of you, nodding to you and directing a lust-filled gaze at his husband. 'You don't know how much I missed being properly dressed.' Mark chuckles and nods his head, eyes resting on his lover's crotch, where a quickly hardening erection can be seen in the elf's skin-tight green leggings. 'Oh, I have a good guess if that's the indicator. Seems like it's time for dessert, my little hottie.' With that said, he starts to take off his waiter uniform, drawing Jay's full attention.";
 			WaitLineBreak;
+			project the figure of Jay_undies_icon;
 			say "     Not wanting to be the third wheel in them reliving that special day they met, you quietly rise and turn to the door. Yet before you have made more than a few steps, a voice from behind you calls out, 'Wait!' Glancing back, you see the two of them already half-undressed, with Mark having his arms around the elf as he stands next to his much larger lover. Jay looks down to the suit jacket that he carefully put back in the box, then over to you again. 'You're now officially our new best friend. You can count yourself invited for dinner, always. And... other things, maybe.' Mark meets Jay's gaze as the elf looks over to him in silent question, then the two of them smile and nod to each other. The polar bear adds, [if cocks of player is 0]'Too bad you're not a guy, but if that ever changes, we definitively could have some fun together[else]'Any guy who's this eager and friendly in helping out people he met only a short while ago is worth having some fun with. Hope you check back with us sometime[end if].'";
 			say "     The moment passes as Jay leans in to nibble Mark's furry ear a little and lets his hands wander over the large ursine's body. Mark replies in kind, and you're all but forgotten for now as the two of them start to make out and undress even further. Now actually making your way out of the room, you close the door behind you and start hearing moans from inside as you walk away. Leaving the polar bear and elf couple, you feel pretty good about yourself, not just because of the excellent meal filling your stomach, but also the good turn you arranged for your new friends. And maybe you'll make use of their other offer sometime too...'";
 			now hunger of player is 0;
 			now thirst of player is 0;
 			now thirst of Jay is 9; [suit delivered]
+			now the icon of Jay is Figure of Jay_suit_icon;
 		else:
 			say "     Mark looks at you and shakes his head. 'It's a bit early to think of dinner already, don't you think? Let's meet here in the evening.'";
 
@@ -576,6 +581,7 @@ to say TatiHyenaDrinking:
 	else:
 		say "     Downing drink after drink in unison with the other contenders, you join in for the laughter as the first hyena slumps face-first on the bar, passing out and snoring loudly. Yet sadly, the Romanian liquor they are pouring into those shot glasses holds quite a punch, meaning that you're not too far behind in seeing double and losing your balance, literally falling off your chair and landing on the floor with a thump hard enough to leave quite a bruise on your backside. After Mark quickly comes over to help you to your feet and into the corner of the room that is least used by the hyenas, you are given time to recover a little under his guard. Something tells you that things would be going a lot differently if you came here alone and showed weakness by getting drunk...";
 		PlayerWounded 30;
+		say "[TatiHyenaMenu]";
 
 to say TatiHyenaWrestle:
 	say "     You step up to the table with the arm-wrestling, focusing your attention on the bruiser of a hyena just demolishing a contender. The muscles of her arm bulge and flex as she holds her arm rock steady despite everything that the other hyena can do, until she thumps the back of their hand on the wooden table with a solid thunk that leaves the loser rubbing their smarting knuckles. As he stands up from the chair, you quickly move in and sit down yourself, kicking off a whole bunch of talk all around as the spectators start making bets (mostly against you). The arm-wrestling champion lets out a mocking laugh, then places her elbow on the table again, holding out a hand for you to take hold of.";
@@ -590,38 +596,58 @@ to say TatiHyenaWrestle:
 	else:
 		say "     As soon as one of the spectators shouts the word go, your opponent wrenches your hand toward herself, putting you at an iffy angle to keep your strength centered on not giving an inch. She capitalizes on this by keeping up a steady pressure against your hand and wearing you down in this uncomfortable position. Then finally, she overwhelms your strength and wrenches your hand to the side, thumping it down hard enough to bruise your knuckles. To add insult to injury, another hyena literally pushes you out of your chair to have a go herself, making you fall to the floor. After Mark quickly comes over to help you to your feet and into the corner of the room that is least used by the hyenas, you are given time to recover a little under his guard. Something tells you that things would be going a lot differently if you came here alone and showed weakness to the horny beasts in here...";
 		PlayerWounded 10;
+		say "[TatiHyenaMenu]";
 
 to say TatiHyenaJuggle:
-	say "     ...";
+	say "     You step up to the bar and just grab several empty shot glasses, then start juggling with them, sending the little things flying through the air in a high arch. Three glasses become four as you quickly snatch up another one, adding it to the glassware in the air and earning interested looks from some of the nearby hyenas. A small crowd forms around you and calls for even more glasses, or tricks being done rise in the group.";
 	let bonus be (( Dexterity of player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Dexterity Check):[line break]";
 	if diceroll + bonus >= 15:
-		say "     ...";
+		say "     Giving the anthro furries what they want, you soon add another glass to your aerial ballet, keeping five of them flying at all times. Several flashy tricks follow, like sending one especially high and catching it again while still juggling the others, or even snatching a filled glass from the bar and sending the splash of liquid in it flying through the air to land right in your mouth. It isn't an easy task, but cheered on by the number of impressed spectators you give them a nice show. By the time you catch the glasses again and line them up in a straight line on the bar counter, your crowd is in quite a good mood and you even get some fist-bumps in congratulations. Now that you've earned the respect of this bunch of gang-members, they readily step aside as you ask nicely, leaving your polar bear companion free to stroll right past them and fill the backpack he is carrying with everything he needs to create a genuine restaurant experience for his husband.";
 		say "     Mark's pack clatters a little from all the cutlery, dishes and whatnot stuffed inside as he lifts its heavy weight on his back. Then the two of you make your way out of the restaurant and leave the hyenas to continue with their partying. 'Thank you. Good thing that you've got those juggling skills, otherwise this could have gone quite differently. But let's get back to the mall now.'";
 		WaitLineBreak;
 		say "[TatiMallReturn]";
 	else:
-		say "     ...";
+		say "     Sadly, the very first trick shot you try fails spectacularly, with one hand missing a glass and it tumbling down, to smash down on your foot. The pain of the impact makes you jerk aside, completely de-railing your show and letting the whole rest of the glasses pelt down on you, creating further bruises. Derisive laughter spreads through the crowd of onlookers, followed by the Hyenas turning back to what they were doing before.";
 		PlayerWounded 10;
+		say "[TatiHyenaMenu]";
 
 to say TatiHyenaCharm:
-	say "     ...";
+	say "     Walking up to one hyena that seems to have some level of influence in their group, you strike up a conversation to negotiate access to the stuff you need.";
 	let bonus be (( Charisma of player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
 	if diceroll + bonus >= 15:
-		say "     ...";
+		say "     The hyena lieutenant isn't very interested in what you have to say at first, but you persist and keep the conversation going, making arguments why they should just allow you to take the non-edible supplies you came for. After a little while, the hyena seems a little annoyed with you just continuing to keep talking, and she eventually says, 'Fine, fine. If it'll get you out of my hair. Get your stuff and go.";
 		say "     Mark's pack clatters a little from all the cutlery, dishes and whatnot stuffed inside as he lifts its heavy weight on his back. Then the two of you make your way out of the restaurant and leave the hyenas to continue with their partying. 'Thank you. Good thing that you're good with words, otherwise this could have gone quite differently. But let's get back to the mall now.'";
 		WaitLineBreak;
 		say "[TatiMallReturn]";
 	else:
-		say "     ...";
+		say "     The hyena lieutenant isn't very interested in what you have to say, not at first and not later. She waves you off and turns to look at the arm-wrestling competition, then gets angry as you still persist with your arguments. 'I said fuck off,' the anthro furry then replies with raised voice and shoves you, sending you stumbling and then falling over, bumping your shoulder on the ground in the process.";
 		PlayerWounded 10;
+		say "[TatiHyenaMenu]";
 
 to say TatiHyenaFuck:
-	say "     ...";
-	say "     Mark's pack clatters a little from all the cutlery, dishes and whatnot stuffed inside as he lifts its heavy weight on his back. Then the two of you make your way out of the restaurant and leave the hyenas to continue with their partying. 'Thank you. I - um, hadn't expected you'd go this far to help me out. But let's get back to the mall now.'";
+	setmonster "Herm Hyena";
+	say "     Walking up to the hyenas fucking their new recruit, you step next to the one jerking his own cock and waiting his turn. The horny guy opens his mouth to warn you off and say that he's up next, only to let out a burst of laughter as you pull your clothes off and bend over the table instead, presenting yourself for him. 'Seems like I'm done waiting,' he tells his companion and shares a fist-bump with them, then steps up behind you and rubs his shaft up and down between the buns of your ass. ";
+	if cunts of player > 0:
+		say "Proceeding to brush the dickhead further down, your hyena moans in pleasure as he touches the soft folds of your sex. He pushes into your pussy without delay, grunting in satisfaction as he sheathes himself in a warm and tight hole. 'The newbie has a sweet pussy,' your fucker casually calls out to his friends as he begins to pound you from behind in a rapid tempo.";
+		say "     Being mated by this horn-dog of a hyena is a fairly straightforward affair of being deep-dicked with long and hard thrusts and him slapping your ass a few times. It doesn't take all that long before he builds up to a final quick push all the way into your pussy, unloading his seed right against the trembling ring of your cervix. You can feel his cock throb hard with spurt after spurt being deposited into your body. Yet before he even has the time to finish completely, another hyena pulls the guy away from your ass, making his dick slip out and splatter your back with a few splashes of cum. 'I wanna try out the new slut too,' the newcomer grunts, and before you know what, he's already thrust into you and starts pounding away. This is pretty much how the next hour or so goes for you, with one hyena after the other making use of your increasingly sloppy pussy and dumping their loads into it.";
+		infect "Herm Hyena";
+		infect "Herm Hyena";
+		fimpregchance;
+		fimpregchance;
+		WaitLineBreak;
+	else:
+		say "Proceeding to brush the dickhead up and down your crack, your hyena moans in pleasure as he touches the wrinkled ring of your pucker. Thankfully, his dickhead is slick with pre-cum, as he pushes into your ass without delay, grunting in satisfaction as he sheathes himself in a warm and tight hole. 'The newbie has a sweet ass,' your fucker casually calls out to his friends as he begins to pound you from behind in a rapid tempo.";
+		say "     Being mated by this horn-dog of a hyena is a fairly straightforward affair of being deep-dicked with long and hard thrusts and him slapping your ass a few times. It doesn't take all that long before he builds up to a final quick push all the way into your asshole, unloading his seed right and painting your inner passage white. You can feel his cock throb hard with spurt after spurt being deposited into your body. Yet before he even has the time to finish completely, another hyena pulls the guy away from your ass, making his dick slip out and splatter your back with a few splashes of cum. 'I wanna try out the new slut too,' the newcomer grunts, and before you know what, he's already thrust into you and starts pounding away. This is pretty much how the next hour or so goes for you, with one hyena after the other making use of your increasingly sloppy asshole and dumping their loads into it.";
+		infect "Herm Hyena";
+		infect "Herm Hyena";
+		mimpregchance;
+		mimpregchance;
+		WaitLineBreak;
+	say "     When the gang-bang eventually winds down, you're left bent over the table, your thighs covered in cum leaking out of your sore hole and with most of the hyenas having gone off to rest or drink. Then suddenly, Mark is by your side and helps you clean yourself up with a lot of paper towels and napkins, followed by the two of you quickly moving to get the supplies you came here for. After quickly stuffing Mark's pack full of all the cutlery, dishes and whatnot, he lifts its heavy weight on his back. Then the two of you make your way out of the restaurant and leave the hyenas to continue with their partying. 'Thank you. I - um, hadn't expected you'd go this far to help me out. But let's get back to the mall now.'";
 	WaitLineBreak;
 	say "[TatiMallReturn]";
 	

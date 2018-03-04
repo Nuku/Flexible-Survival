@@ -4,7 +4,7 @@ Version 1 of Orc Researcher by Luneth begins here.
 Section 1- Orc Researcher
 
 Orc Researcher is a situation.
-The sarea of Orc Researcher is "Warehouse District".
+The sarea of Orc Researcher is "Warehouse".
 
 Instead of resolving a Orc Researcher:
 	say "     As you make your way around the buildings in the Warehouse District, you stop in front of a dilapidated building that more than likely wasn't doing very well long before the nanite incident began. You notice a flickering light in one of the rooms on the second floor. Wondering if it might be a potential survivor hiding out, or at the very least a place that might have some supplies, you start heading to the front door. Sadly, the front door is a crumbling mess, almost as if someone or something smashed their way in. You step back and glance around to look for another potential entrance. However, you wonder if you should even attempt to enter this building after seeing the state of the door.";
@@ -14,7 +14,7 @@ Instead of resolving a Orc Researcher:
 	say "     ([link]N[as]n[end link]) - Something bad obviously happened here and should be avoided.";
 	if player consents:
 		LineBreak;
-		say "     Despite the fact that something very... large and powerful came through here at some point, you don't let it deter you from your goal, and you cast a glance around to find another point of entry. Circling around to the side of the building you find a broken window. [if scalevalue of player <= 3]You easily just slip inside with no problems thanks to your small size. [else]With some difficulty you are able to get inside, shattering the window in the process. [end if]Looking around the room that you are in, you see that it is a disaster with broken furniture and shattered glass littering the floor, and come to the conclusion that this must have been a condemned apartment building, or at the very least it should have been. As you turn down the hallway outside of the main door, you are able to make out the stairwell leading up to the second floor.";
+		say "     Despite the fact that something very... large and powerful came through here at some point, you don't let it deter you from your goal, and you cast a glance around to find another point of entry. Circling around to the side of the building you find a broken window. [if scalevalue of player <= 3]You easily just slip inside with no problems thanks to your small size. [else]With some difficulty you are able to get inside, shattering the window in the process, causing part of the wall to collapse as well. [end if]Looking around the room that you are in, you see that it is a disaster with broken furniture and shattered glass littering the floor, and come to the conclusion that this must have been a condemned apartment building, or at the very least it should have been. As you turn down the hallway outside of the main door, you are able to make out the stairwell leading up to the second floor.";
 		say "     Keeping an ear out for any sounds that could mean a potential threat, you finally reach the top of stairs. Directly in front of you is a door with that same flickering light blinking underneath it. As you approach an aroma exudes from within the room. It smells ";
 		if facename of player is "Orc Breeder" or facename of player is "Orc Warrior":
 			say "sweet and makes your mouth begin to water. ";
@@ -41,13 +41,14 @@ Instead of resolving a Orc Researcher:
 
 Section 2 - Orc Pill Case
 
+Table of Game Objects (continued)
 name	desc	weight	object
-"orc pill case"	"You had found this slender metal case in a makeshift lab in the Warehouse District. Based on the research found with it, the pills inside were made by distilling the essence of orc cum into an untainted form. With the help of them, a male could impregnate another male without having to worry about being infected with the orc nanite strain."	0	orc pill case
+"orc pill case"	"You have found this slender metal case in a makeshift lab in the Warehouse District. Based on the research found with it, the pills inside were made by distilling the essence of orc cum into an untainted form. With the help of them, a male could impregnate another male without having to worry about being infected with the orc nanite strain."	0	orc pill case
 
 orc pill case is a grab object.
-the usedesc of orc pill use is "[OrcPillCaseUse]".
 It is part of the player.
 It is not temporary.
+the usedesc of orc pill case is "[OrcPillCaseUse]".
 
 instead of sniffing orc pill case:
 	say "     The case itself doesn't have any real smell, but the pills inside have a very strong musky scent.";

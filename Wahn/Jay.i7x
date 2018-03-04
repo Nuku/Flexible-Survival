@@ -5,6 +5,7 @@ Version 1 of Jay by Wahn begins here.
 [   0: not met yet                                          ]
 [   1: met the two of them                                  ]
 [   2: met the two of them, player knows their names        ]
+[   3: fucked around with, player knows the names           ]
 
 [ thirst of Jay - Suit Quest                                ]
 [   0: Suit Quest not started                               ]
@@ -33,13 +34,18 @@ Section 1 - NPC
 Jay is a man.
 The description of Jay is "[JayDesc]".
 The conversation of Jay is { "<This is nothing but a placeholder!>" }.
+The icon of Jay is Figure of Jay_elf_outfit_icon.
 The scent of Jay is "     Jay must wash regularly, as there is little discernible odor to his skin. What you do detect are motes of cinnamon, spices and a hint of gingerbread, the aroma complementing his appearance. There's also a faint trace of his ursine partner's musk, no doubt courtesy of their frequent lovemaking.".
 
 to say JayDesc:
 	if debugactive is 1:
 		say "DEBUG -> Thirst: [thirst of Jay], JayMarkRelationship: [JayMarkRelationship], XP: [XP of Jay] <- DEBUG[line break]";
-	say "     Looking over to the slender male, it is immediately apparent that Jay is a Christmas Elf, being all of four feet tall and dressed in a green and red outfit. He has long brown hair hanging down to below his shoulders, with sharply pointed ears sticking out of it to the sides. The elf has a well-toned physique despite his small stature, lithe and flexible enough to be a gymnast. He moves with feather-light steps, heels raised enough that he stands only on the balls of his feet and his toes. A handsome face bearing a confident expression completes the look of a capable and strong-willed person, no matter how tall or short that he may be.";
-	say "     As the elfin man feels your gaze come to rest upon him, he looks right back at you and smiles, then raises one hand for a friendly wave.";
+	if thirst of Jay < 9:
+		say "     Looking over to the slender male, it is immediately apparent that Jay is a Christmas Elf, being all of four feet tall and dressed in a green and red outfit. He has long brown hair hanging down to below his shoulders, with sharply pointed ears sticking out of it to the sides. The elf has a well-toned physique despite his small stature, lithe and flexible enough to be a gymnast. He moves with feather-light steps, heels raised enough that he stands only on the balls of his feet and his toes. A handsome face bearing a confident expression completes the look of a capable and strong-willed person, no matter how tall or short that he may be.";
+		say "     As the elfin man feels your gaze come to rest upon him, he looks right back at you and smiles, then raises one hand for a friendly wave.";
+	else:
+		say "     Looking over to the slender male, it is immediately apparent that Jay is a Christmas Elf, being all of four feet tall. What isn't quite as stereotypical about him is the well-made business suit he is wearing, the result of quite a bit of effort on part of yourself and Mark, his polar bear husband. Jay has long brown hair hanging down to below his shoulders, with sharply pointed ears sticking out of it to the sides. The elf has a well-toned physique despite his small stature, lithe and flexible enough to be a gymnast. He moves with feather-light steps, heels raised enough that he stands only on the balls of his feet and his toes. A handsome face bearing a confident expression completes the look of a capable and strong-willed person, no matter how tall or short that he may be.";
+		say "     As the elfin man feels your gaze come to rest upon him, he looks right back at you and smiles, then raises one hand for a friendly wave.";
 
 [***********************************************************]
 [***********************************************************]
@@ -95,6 +101,10 @@ instead of conversing the Jay:
 to say JayTalkMenu:
 	LineBreak;
 	say "     What do you want to talk about with Jay?";
+	if thirst of Jay < 9:
+		project the figure of Jay_elf_outfit_icon;
+	else:
+		project the figure of Jay_suit_icon;
 	now Sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -164,8 +174,12 @@ to say JayTalkMenu:
 	clear the screen and hyperlink list;
 
 to say JayTalk1: [talk about him]
-	say "     As you ask Jay about himself, the slender elf takes a deep breath, then draws himself up to his full height of four feet and gives you a cautious look. 'Fine. I will tell you, but only if you swear to me that you will not laugh.' Seeing his serious expression, you agree to the request and wait for him to continue. Frowning as if he had just bitten into a lemon, Jay lets out a sigh and explains, 'I'm a security consultant. A damn good one. What a joke, eh? Who'll come to the skinny dwarf with such a ridiculous outfit and listen to him? No chance anyone'd take me serious at all.' Frustration is clearly visible on his face as the fine-boned male tugs at his colorful garments. 'I'd have burned this stupid thing days ago if I had any alternatives. Oh god, how I wish for a proper suit - or anything normal really. But no, it's either this or kid's clothes, and I'd rather streak around naked than put on Batman undies and such stuff. As stupid as the elf getup is, it at least fits me perfectly.'";
-	say "     You continue talking to Jay for a little while longer, learning what made him so successful at his job: a winning personality and the will to just go for what he wants, with little restraint to hold him back. Time will tell if he will be able to reclaim his status once all of you hopefully get out of the city alright. Something tells you that he'll likely make it, your mind putting together a mental image of the elf in a black power suit, bearing down on pale-faced businessmen as he stands [italic type]on top[roman type] of a conference table and dominates the conversation.";
+	if thirst of Jay < 9:
+		say "     As you ask Jay about himself, the slender elf takes a deep breath, then draws himself up to his full height of four feet and gives you a cautious look. 'Fine. I will tell you, but only if you swear to me that you will not laugh.' Seeing his serious expression, you agree to the request and wait for him to continue. Frowning as if he had just bitten into a lemon, Jay lets out a sigh and explains, 'I'm a security consultant. A damn good one. What a joke, eh? Who'll come to the skinny dwarf with such a ridiculous outfit and listen to him? No chance anyone'd take me serious at all.' Frustration is clearly visible on his face as the fine-boned male tugs at his colorful garments. 'I'd have burned this stupid thing days ago if I had any alternatives. Oh god, how I wish for a proper suit - or anything normal really. But no, it's either this or kid's clothes, and I'd rather streak around naked than put on Batman undies and such stuff. As stupid as the elf getup is, it at least fits me perfectly.'";
+		say "     You continue talking to Jay for a little while longer, learning what made him so successful at his job: a winning personality and the will to just go for what he wants, with little restraint to hold him back. Time will tell if he will be able to reclaim his status once all of you hopefully get out of the city alright. Something tells you that he'll likely make it, your mind putting together a mental image of the elf in a black power suit, bearing down on pale-faced businessmen as he stands [italic type]on top[roman type] of a conference table and dominates the conversation.";
+	else:
+		say "     As you ask Jay about himself, the slender elf takes a deep breath, then draws himself up to his full height of four feet and gives you a confident smile. 'I'm a security consultant. A damn good one.' Running a hand along the edge of his fine suit, the Christmas Elf continues after a second or two, 'It'll be difficult to re-stablish my contacts looking like this now, but I'm confident that I can do it. Clothes make the man, and with this awesome suit you and Mark got for me, I'm feeling very good about things. And who better to consult people on the outside about security dangers, if not a man who lived through what happened here in the city. That'll go a long way to build up my reputation.'";
+		say "     You continue talking to Jay for a little while longer, learning what made him so successful at his job: a winning personality and the will to just go for what he wants, with little restraint to hold him back. Time will tell if he will be able to reclaim his status once all of you hopefully get out of the city alright. He certainly seems sure that make it, and your mind brings up an image of the elf in his suit, bearing down on pale-faced businessmen as he stands [italic type]on top[roman type] of a conference table and dominates the conversation.";
 
 to say JayTalk2: [talk about Mark]
 	say "     'Mark and I have been partners for five years now. He's everything that I have ever wanted,' Jay says with a somewhat dreamy expression, his right hand moving to the little bump in his clothing just above his breastbone. You remember that this is where he carries his commitment ring, the broad gold band held on a leather strap since it is much too big for his small fingers now. 'Let me tell you how we met. It was at a really fancy downtown restaurant called 'Tati's', with European specialities. There I was with the senior partner of a new client company, a dreadful bore of a man that cost all of my self-control to smile and nod to. And then our waiter, Mark, brings the starters. Black shirt, dark-red apron from the waist down, and the cutest smile that you can imagine. Our eyes met for a second then, and when he brought the main course, he winked at me.'";
@@ -223,6 +237,8 @@ Instead of resolving a Harbor Swap Meet:
 to say SilkDelivery:
 	say "     Eager to deliver the silk, you make your way to the mall directly after that, taking care to avoid any chance of hostile encounters during your travel. It wouldn't do to see your precious load damaged or lost after all. Thankfully, the trip is uneventful, and you arrive at the Smith Haven Mall without any trouble. After a quick stroll through the crowded place, you present the thread to Santa, who accepts it with a broad smile on his furry face. 'Thank you for putting so much effort into our little project. I am sure that Jay will be thrilled by the end result.' He calls his elven foreman, Walter, over and hands the red-headed elf the spindle, after which both you and Santa watch for a few minutes as a bustle of activity immediately starts up, with Walter giving out assignments and the elves falling into line like an expertly drilled work crew. Santa nods in satisfaction, then says to you, 'They will take a while to prepare the suit itself, so I would suggest that you speak with Mark about arranging a fitting situation to give Jay his present. Trust me, the suit will be ready when you need it.'";
 	now thirst of Jay is 5; [silk obtained and delivered]
+	WaitLineBreak;
+	move player to Christmas Village;
 
 
 [***********************************************************]

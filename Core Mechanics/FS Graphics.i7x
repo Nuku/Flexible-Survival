@@ -213,6 +213,12 @@ Figure of Korvin_blackcollar_icon is the file "Korvin_blackcollar.jpg".
 Figure of Korvin_blackcollar_face_icon is the file "Korvin_blackcollar_face.jpg".
 Figure of Korvin_pinkcollar_icon is the file "Korvin_pinkcollar.jpg".
 Figure of Korvin_pinkcollar_face_icon is the file "Korvin_pinkcollar_face.jpg".
+Figure of Jay_elf_outfit_icon is the file "Jay_elf_outfit.jpg".
+Figure of Jay_leggins_icon is the file "Jay_leggins.jpg".
+Figure of Jay_naked_icon is the file "Jay_naked.jpg".
+Figure of Jay_suit_icon is the file "Jay_suit.jpg".
+Figure of Jay_suit_quest_icon is the file "Jay_suit_quest.jpg".
+Figure of Jay_undies_icon is the file "Jay_undies.jpg".
 Figure of LeonardViolin_icon is the file "leonardv_ig.jpg".
 Figure of Lilith_clothed_icon is the file "Succubus_clothed.jpg".
 Figure of Lilith_naked_icon is the file "Succubus_naked.jpg".
@@ -610,6 +616,12 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Janice"	Figure of Janice_icon	"Anymouse1968"	g-black	"normal"
 "Jason_clothed"	Figure of Jason_clothed_icon	"Kupo Klein"	g-black	"normal"
 "Jason_naked"	Figure of Jason_naked_icon	"Kupo Klein"	g-black	"normal"
+"Jay_elf_outfit"	Figure of Jay_elf_outfit_icon	"Lytta"	g-black	"normal"
+"Jay_leggins"	Figure of Jay_leggins_icon	"Lytta"	g-black	"normal"
+"Jay_naked"	Figure of Jay_naked_icon	"Lytta"	g-black	"normal"
+"Jay_suit"	Figure of Jay_suit_icon	"Lytta"	g-black	"normal"
+"Jay_suit_quest"	Figure of Jay_suit_quest_icon	"Lytta"	g-black	"normal"
+"Jay_undies"	Figure of Jay_undies_icon	"Lytta"	g-black	"normal"
 "Jill"	Figure of Jill_icon	"Sususmiles"	g-black	"normal"
 "Jimmy"	Figure of Jimmy_icon	"Redragon"	g-black	"normal"
 "Red Kangaroo"	Figure of kangaroo_icon	"Anonymous"	g-black	"normal"
@@ -926,6 +938,7 @@ carry out artistcredits:
 	say "     James by Anyare @ furaffinity.net[line break]";
 	say "     Janice by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Jason by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Jay by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";	
 	say "     Jill by Sususmiles @ furaffinity.net[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";

@@ -1,6 +1,18 @@
 Version 4 of Wereraptor For FS by Stripes begins here.
 [Version 4.3 - Tweak to loss scene probabilities - Stripes]
+[Version 4.4 - removal of banning content - Luneth]
 "Adds a special wereraptor creature/curse to Flexible Survival's Wandering Monsters table"
+
+[ wrcursestatus                                                                ]
+[ 0: no contact                                                                ]
+[ 1: freed                                                                     ]
+[ 2: latent                                                                    ]
+[ 3: activated                                                                 ]
+[ 4: resisted for the night                                                    ]
+[ 5: curse in effect                                                           ]
+[ 6: rampage in effect                                                         ]
+[ 7: curse accepted                                                            ]
+[ 100: curse purged                                                            ]
 
 Section 0 - Event Activation
 
@@ -18,54 +30,125 @@ Instead of resolving a Paleontology Professor:
 		say "(This content requires that at least one of Guy or Girl content be available in the game. - Mgmt)[line break]";
 	else:
 		if daytimer is day:
-			say "     Looking for answers or at least some supplies, you enter the biology building on campus and have a quick look around rather than stay out in the open during the day. In one disused section of the building, you hear some noise coming from behind one of the office doors. Labeled as 'Dr. R. Utah - Paleontology', you briefly wonder how many students such a professor could even get at such a sports-centric college.";
-			say "     You check the door and find it locked, but a [if girl is banned]man's[else]woman's[end if] voice responds to your presence. 'Is someone there?  Help! Can you help me get out?  My name is Dr. Utah and I locked myself in here when the changes started, but I can't get out now. If you can still understand me, please help me,' [if girl is banned]he[else]she[end if] pleads.";
-			say "     [bold type]Shall you free [if girl is banned]him[else]her[end if]?[roman type][line break]";
+			say "     Looking for answers or at least some supplies, you enter the biology building on campus and have a quick look around rather than stay out in the open during the day. In one disused section of the building, you hear some noise coming from behind one of the office doors. Labeled as 'Dr. R. Utah - Paleontology', you briefly wonder how many students such a professor could even get at such a sports-centric college. You check the door and find it locked, but a voice responds to your presence. 'Is someone there?";
+			say "     [bold type]While the voice is muffled, does it sound more like a man or a woman?[roman type][line break]";
 			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			say "     ([link]Y[as]y[end link]) - It sounds like a man.";
+			say "     ([link]N[as]n[end link]) - It sounds like a woman.";
+			if player consents:
 				LineBreak;
-				say "     You try pushing at the heavy wooden door, but it seems quite stuck. You bash your body against it a few times, feeling it start to give. You keep at it, always worried that some creature will hear you and arrive, but manage to break down the door, cracking and snapping the wood away from the numerous nails pounded into the frame from the inside. You land in the arms of a middle-aged [if girl is banned]man[else]woman[end if].";
-				say "     The office is a mess and [if girl is banned]his[else]her[end if] clothes are horribly torn, but [if girl is banned]he[else]she[end if] seem quite human. It seems [if girl is banned]he[else]she[end if] was lucky enough to make it to safety before anything could infect [if girl is banned]him[else]her[end if]. Their office also seems largely destroyed, with strange slashes on the walls and the door and most of the furniture overturned or completely broken. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Noticing your gaze, [if girl is banned]he[else]she[end if] wrings [if girl is banned]his[else]her[end if] hands nervously.";
-				say "     'I... it was so crazy. Out there, I mean. I nailed my door shut. When things calmed down later, I couldn't get out. I started to go stir crazy and threw around the furniture and beat at the walls trying to get someone to hear me. I'd almost completely given up hope by the time you came by. Thank you again for saving me. I don't know how much longer I would have been able to hold out. I had hoped someone would come to rescue us much sooner, but I'm guessing this is a much more widespread problem than just something on campus. I know none of my fellow professors here were working on anything even remotely like this... outbreak.'";
-				say "     [if girl is banned]He rubs to scratch a scar on his side[else]She rubs a scar on her side[end if] and starts moving outside the room. 'Look... as good as it is to talk to someone again, I really need to get out of this room after being cooped up in here. I'm sure we'll catch up again soon,' [if girl is not banned]she[else]he[end if] adds with a grin before leaving.";
-				say "     Now alone, you look over the room, but find little. Almost all the contents were destroyed or consumed, though you do find a stale bag of chips in the bottom of one drawer. Better than nothing and a little reward for being a good samaritan, you are left feeling a little better for having done the good deed.";
-				now utahmet is true;
-				increase score by 25;
-				increase morale of player by 2;
-				increment carried of chips;
-				raptorrelease;
-			else:
+				say "     Help! Can you help me get out? My name is Dr. Utah and I locked myself in here when the changes started, but I can't get out now. If you can still understand me, please help me,' he pleads.";
+				say "     [bold type]Shall you free him?[roman type][line break]";
 				LineBreak;
-				say "     Deciding not to risk letting out whatever creature may be lurking in there, you back away slowly and go looking elsewhere. There is some pleading and cursing, but you continue to go, feeling a little bad about your decision.";
-				decrease morale of player by 2;
-		else:
-			say "     Looking for answers or at least some supplies, you enter the biology building on campus and have a quick look around rather than stay outside to face the creatures roaming around at night. In one disused section of the building, you hear some noise coming from behind one of the office doors. Labeled as 'Dr. R. Utah - Paleontology', you briefly wonder how many students such a professor could even get at such a sports-centric college.";
-			say "     You check the door and find it locked, but a scratchy voice responds to your presence. 'Help! Trapped. So weak,' it moans, faintly scratching at the wooden door from the inside. It seems someone's become trapped. Concerned that they may starve or dehydrate before rescue finally arrives, you should probably help them out.";
-			say "     [bold type]Shall you let them out?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
-				LineBreak;
-				say "     You try pushing at the heavy wooden door, but it seems quite stuck. You bash your body against it a few times, feeling it start to give. You keep at it, always worried that some creature will hear you and arrive, but manage to break down the door, cracking and snapping the wood away from the numerous nails pounded into the frame from the inside. As the door gives way, you tumble into a destroyed office containing not a person as you'd expected, but a reptilian creature with a sinister grin on its face.";
-				challenge "Wereraptor";
-				raptorrelease;
-				if fightoutcome >= 10 and fightoutcome <= 19:
-					say "     Managing to drive off the raptor creature, you take a moment to survey the office. I has been destroyed by the clawed menace trapped inside. The furniture is largely destroyed, the walls and door covered in slashes and everything a mess. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Speaking of the door though, you are confused as you examine it, seeing the nails barring it were driven in from the inside as if the creature sealed itself away. Your search of the office does provide one small reward as you find a bag of stale chips in one of the drawers.";
+				say "     ([link]Y[as]y[end link]) - Yes.";
+				say "     ([link]N[as]n[end link]) - No.";
+				if the player consents:
+					LineBreak;
+					say "     You try pushing at the heavy wooden door, but it seems quite stuck. You bash your body against it a few times, feeling it start to give. You keep at it, always worried that some creature will hear you and arrive, but manage to break down the door, cracking and snapping the wood away from the numerous nails pounded into the frame from the inside. You land in the arms of a middle-aged man.";
+					say "     The office is a mess and his clothes are horribly torn, but he appears to be quite human. It seems he was lucky enough to make it to safety before anything could infect him. Their office also seems largely destroyed, with strange slashes on the walls and the door and most of the furniture overturned or completely broken. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Noticing your gaze, he wrings his hands nervously.";
+					say "     'I... it was so crazy. Out there, I mean. I nailed my door shut. When things calmed down later, I couldn't get out. I started to go stir crazy and threw around the furniture and beat at the walls trying to get someone to hear me. I'd almost completely given up hope by the time you came by. Thank you again for saving me. I don't know how much longer I would have been able to hold out. I had hoped someone would come to rescue us much sooner, but I'm guessing this is a much more widespread problem than just something on campus. I know none of my fellow professors here were working on anything even remotely like this... outbreak.'";
+					say "     He rubs to scratch a scar on his side and starts moving outside the room. 'Look... as good as it is to talk to someone again, I really need to get out of this room after being cooped up in here. I'm sure we'll catch up again soon,' he adds with a grin before leaving.";
+					say "     Now alone, you look over the room, but find little. Almost all the contents were destroyed or consumed, though you do find a stale bag of chips in the bottom of one drawer. Better than nothing and a little reward for being a good samaritan, you are left feeling a little better for having done the good deed.";
+					now UtahGender is 1;
+					now utahmet is true;
 					increase score by 25;
+					increase morale of player by 2;
 					increment carried of chips;
-				else if fightoutcome >= 20 and fightoutcome <= 29:
-					say "     After the raptor creature has had its fun with you, it runs a taloned paw over your face. 'You set me free, so I'll leave you with a gift instead of sating my hunger upon you,' it hisses, sinking its claws into your shoulders again and pulling you close to its snapping jaws, narrowly avoiding biting you. 'I look forward to seeing you again soon.' And with that it is off, running down the hall to freedom.";
-					say "     Weak and worried that it may return if you linger, you head out before it can decide you'd make a good snack after all and come back to find you.";
-					now wrcursestatus is 2;
-					now wrcursestart is turns;
+					raptorrelease;
 				else:
-					say "     Not expecting a fight with a feral raptor creature, you decide to make your escape. The raptor gives chase, easily keeping pace with you until you get outside. Once it bursts out the door and runs down the steps, it laughs maniacally. 'Freedom! I shall let you go for now as reward for freeing me, but I shall have you in time,' it hisses as you continue to run away across the moonlit campus.";
+					LineBreak;
+					say "     Deciding not to risk letting out whatever creature may be lurking in there, you back away slowly and go looking elsewhere. There is some pleading and cursing, but you continue to go, feeling a little bad about your decision.";
+					decrease morale of player by 2;
 			else:
 				LineBreak;
-				say "     Deciding not to risk letting out whatever creature may be lurking in there, you back away slowly and go looking elsewhere. As you move away, there is another plea for help, followed by growling and clawing at the door. 'Let me out or I'll find you. I will find you and come for you in the night, prey. And I will GUT you!' it hisses angrily, scratching wildly at the sturdy wooden door. The tirade descends into nothing but growls and hisses as whatever is inside vents its rage. Fearing that it may actually get out and find you, you flee quickly.";
+				say "     Help! Can you help me get out? My name is Dr. Utah and I locked myself in here when the changes started, but I can't get out now. If you can still understand me, please help me,' she pleads.";
+				say "     [bold type]Shall you free her?[roman type][line break]";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Yes.";
+				say "     ([link]N[as]n[end link]) - No.";
+				if the player consents:
+					LineBreak;
+					say "     You try pushing at the heavy wooden door, but it seems quite stuck. You bash your body against it a few times, feeling it start to give. You keep at it, always worried that some creature will hear you and arrive, but manage to break down the door, cracking and snapping the wood away from the numerous nails pounded into the frame from the inside. You land in the arms of a middle-aged woman.";
+					say "     The office is a mess and her clothes are horribly torn, but she appears quite human. It seems she was lucky enough to make it to safety before anything could infect her. Their office also seems largely destroyed, with strange slashes on the walls and the door and most of the furniture overturned or completely broken. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Noticing your gaze, she wrings her hands nervously.";
+					say "     'I... it was so crazy. Out there, I mean. I nailed my door shut. When things calmed down later, I couldn't get out. I started to go stir crazy and threw around the furniture and beat at the walls trying to get someone to hear me. I'd almost completely given up hope by the time you came by. Thank you again for saving me. I don't know how much longer I would have been able to hold out. I had hoped someone would come to rescue us much sooner, but I'm guessing this is a much more widespread problem than just something on campus. I know none of my fellow professors here were working on anything even remotely like this... outbreak.'";
+					say "     She rubs a scar on her side and starts moving outside the room. 'Look... as good as it is to talk to someone again, I really need to get out of this room after being cooped up in here. I'm sure we'll catch up again soon,' she adds with a grin before leaving.";
+					say "     Now alone, you look over the room, but find little. Almost all the contents were destroyed or consumed, though you do find a stale bag of chips in the bottom of one drawer. Better than nothing and a little reward for being a good samaritan, you are left feeling a little better for having done the good deed.";
+					now UtahGender is 2;
+					now utahmet is true;
+					increase score by 25;
+					increase morale of player by 2;
+					increment carried of chips;
+					raptorrelease;
+				else:
+					LineBreak;
+					say "     Deciding not to risk letting out whatever creature may be lurking in there, you back away slowly and go looking elsewhere. There is some pleading and cursing, but you continue to go, feeling a little bad about your decision.";
+					decrease morale of player by 2;
+		else:
+			say "     Looking for answers or at least some supplies, you enter the biology building on campus and have a quick look around rather than stay outside to face the creatures roaming around at night. In one disused section of the building, you hear some noise coming from behind one of the office doors. Labeled as 'Dr. R. Utah - Paleontology', you briefly wonder how many students such a professor could even get at such a sports-centric college. You check the door and find it locked, but a scratchy voice responds to your presence. 'Help! Trapped. So weak.'";
+			say "     [bold type]While the voice sounds raspy, does it sound more like a man or a woman?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - It sounds like a man.";
+			say "     ([link]N[as]n[end link]) - It sounds like a woman.";
+			if player consents:
+				LineBreak;
+				say "     A faint scratching at the wooden door from the inside bring to back to the situation at hand. It seems someone's become trapped. Concerned that he may starve or dehydrate before rescue finally arrives, you should probably help him out.";
+				say "     [bold type]Shall you let the guy out?[roman type][line break]";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Yes.";
+				say "     ([link]N[as]n[end link]) - No.";
+				if the player consents:
+					LineBreak;
+					say "     You try pushing at the heavy wooden door, but it seems quite stuck. You bash your body against it a few times, feeling it start to give. You keep at it, always worried that some creature will hear you and arrive, but manage to break down the door, cracking and snapping the wood away from the numerous nails pounded into the frame from the inside. As the door gives way, you tumble into a destroyed office containing not a person as you'd expected, but a reptilian creature with a sinister grin on its face.";
+					challenge "Wereraptor";
+					raptorrelease;
+					if fightoutcome >= 10 and fightoutcome <= 19:
+						say "     Managing to drive off the raptor creature, you take a moment to survey the office. I has been destroyed by the clawed menace trapped inside. The furniture is largely destroyed, the walls and door covered in slashes and everything a mess. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Speaking of the door though, you are confused as you examine it, seeing the nails barring it were driven in from the inside as if the creature sealed itself away. Your search of the office does provide one small reward as you find a bag of stale chips in one of the drawers.";
+						now UtahGender is 1;
+						increase score by 25;
+						increment carried of chips;
+					else if fightoutcome >= 20 and fightoutcome <= 29:
+						say "     After the raptor creature has had its fun with you, it runs a taloned paw over your face. 'You set me free, so I'll leave you with a gift instead of sating my hunger upon you,' it hisses, sinking its claws into your shoulders again and pulling you close to its snapping jaws, narrowly avoiding biting you. 'I look forward to seeing you again soon.' And with that it is off, running down the hall to freedom.";
+						say "     Weak and worried that it may return if you linger, you head out before it can decide you'd make a good snack after all and come back to find you.";
+						now UtahGender is 1;
+						now wrcursestatus is 2;
+						now wrcursestart is turns;
+					else:
+						say "     Not expecting a fight with a feral raptor creature, you decide to make your escape. The raptor gives chase, easily keeping pace with you until you get outside. Once it bursts out the door and runs down the steps, it laughs maniacally. 'Freedom! I shall let you go for now as reward for freeing me, but I shall have you in time,' it hisses as you continue to run away across the moonlit campus.";
+						now UtahGender is 1;
+				else:
+					LineBreak;
+					say "     Deciding not to risk letting out whatever creature may be lurking in there, you back away slowly and go looking elsewhere. As you move away, there is another plea for help, followed by growling and clawing at the door. 'Let me out or I'll find you. I will find you and come for you in the night, prey. And I will GUT you!' it hisses angrily, scratching wildly at the sturdy wooden door. The tirade descends into nothing but growls and hisses as whatever is inside vents its rage. Fearing that it may actually get out and find you, you flee quickly.";
+					now UtahGender is 1;
+			else:
+				say "     A faint scratching at the wooden door from the inside bring to back to the situation at hand. It seems someone's become trapped. Concerned that she may starve or dehydrate before rescue finally arrives, you should probably help her out.";
+				now UtahGender is 2;
+				say "     [bold type]Shall you let the woman out?[roman type][line break]";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Yes.";
+				say "     ([link]N[as]n[end link]) - No.";
+				if the player consents:
+					LineBreak;
+					say "     You try pushing at the heavy wooden door, but it seems quite stuck. You bash your body against it a few times, feeling it start to give. You keep at it, always worried that some creature will hear you and arrive, but manage to break down the door, cracking and snapping the wood away from the numerous nails pounded into the frame from the inside. As the door gives way, you tumble into a destroyed office containing not a person as you'd expected, but a reptilian creature with a sinister grin on its face.";
+					challenge "Wereraptor";
+					raptorrelease;
+					if fightoutcome >= 10 and fightoutcome <= 19:
+						say "     Managing to drive off the raptor creature, you take a moment to survey the office. I has been destroyed by the clawed menace trapped inside. The furniture is largely destroyed, the walls and door covered in slashes and everything a mess. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Speaking of the door though, you are confused as you examine it, seeing the nails barring it were driven in from the inside as if the creature sealed itself away. Your search of the office does provide one small reward as you find a bag of stale chips in one of the drawers.";
+						now UtahGender is 2;
+						increase score by 25;
+						increment carried of chips;
+					else if fightoutcome >= 20 and fightoutcome <= 29:
+						say "     After the raptor creature has had its fun with you, it runs a taloned paw over your face. 'You set me free, so I'll leave you with a gift instead of sating my hunger upon you,' it hisses, sinking its claws into your shoulders again and pulling you close to its snapping jaws, narrowly avoiding biting you. 'I look forward to seeing you again soon.' And with that it is off, running down the hall to freedom.";
+						say "     Weak and worried that it may return if you linger, you head out before it can decide you'd make a good snack after all and come back to find you.";
+						now UtahGender is 2;
+						now wrcursestatus is 2;
+						now wrcursestart is turns;
+					else:
+						say "     Not expecting a fight with a feral raptor creature, you decide to make your escape. The raptor gives chase, easily keeping pace with you until you get outside. Once it bursts out the door and runs down the steps, it laughs maniacally. 'Freedom! I shall let you go for now as reward for freeing me, but I shall have you in time,' it hisses as you continue to run away across the moonlit campus.";
+						now UtahGender is 2;
+				else:
+					LineBreak;
+					say "     Deciding not to risk letting out whatever creature may be lurking in there, you back away slowly and go looking elsewhere. As you move away, there is another plea for help, followed by growling and clawing at the door. 'Let me out or I'll find you. I will find you and come for you in the night, prey. And I will GUT you!' it hisses angrily, scratching wildly at the sturdy wooden door. The tirade descends into nothing but growls and hisses as whatever is inside vents its rage. Fearing that it may actually get out and find you, you flee quickly.";
+					now UtahGender is 2;
 	now Paleontology Professor is resolved;
 
 
@@ -112,17 +195,17 @@ to say wereraptordesc:
 		now fightoutcome is 19;
 		now combat abort is 1;
 		now wrmode is 0;
-	else if wrcursestatus is 0 and girl is not banned:
+	else if wrcursestatus is 0 and UtahGender is 2:
 		now wrmode is 1;
-	else if wrcurseNermine is 9 and girl is not banned:
+	else if wrcurseNermine is 9 and UtahGender is 2:
 		now wrmode is 1;
 		increase dex entry by 1;
 		increase lev entry by 1;
 		increase HP entry by lev entry;
 		now monsterHP is HP entry;
-	else if guy is banned:
+	else if UtahGender is 2:
 		now wrmode is 1;
-	else if girl is banned:
+	else if UtahGender is 1:
 		now wrmode is 2;
 	else if guy is warded and girl is warded:
 		now wrmode is a random number between 1 and 2;
@@ -614,7 +697,7 @@ Instead of resolving Greenhouse:
 		WaitLineBreak;
 		say "     Hearing footsteps approach, you clutch your find close and [if weapon object of player is not journal]ready your weapon with the other hand[else]take up a fighting stance with the other fist raised[end if]. You are surprised to see an unchanged human appear, coming towards you quickly.";
 		if utahmet is false:
-			if girl is banned:
+			if UtahGender is 1:
 				say "     'Stop,' the person wheezes as he tries to catch his breath after his frantic run into the greenhouse from the opposite end of the passageway. 'I... uhh... That aconitum is college property. You can't take it. Drop it and get out of here.' Dressed in torn clothes and looking a little ragged around the edges, he still seems fully human. He looks to be about in his late twenties, has dark hair and an average build. He would probably look pretty handsome if his suit weren't all torn and the scruff on his face were shaved.";
 				WaitLineBreak;
 				say "     Remaining at the ready, you ask him who he thinks he is to order you around like that. '[bold type]I[roman type] am Dr. Utah and [bold type]I[roman type] am a professor here. And [bold type]that[roman type] is college property. Now put the wolfsbane down and get out of here before you attract some unwanted trouble. I'm willing to be a little tolerant with you given the circumstances, but it won't last long.'";
@@ -625,7 +708,7 @@ Instead of resolving Greenhouse:
 				say "     Remaining at the ready, you ask her who she thinks she is to order you around like that. '[bold type]I[roman type] am Dr. Utah and [bold type]I[roman type] am a professor here. And [bold type]that[roman type] is college property. Now put the wolfsbane down and get out of here before you attract some unwanted trouble. I'm willing to be a little tolerant with you given the circumstances, but it won't last long.'";
 				say "     She tries to sound intimidating, but is clearly nervous and keeps several yards away from you. Figuring she's scared of a battle-hardened survivalist such as yourself, you [if weapon object of player is not journal]wave your [weapon object of player] in her direction[else]shake your fist menacingly at her[end if]. You growl that the college has already gone to hell and that you need this monkswood, wolfsbane or whatever it's called. You then slam the pot to the ground, shattering it beside the other one. You grab several of the plants by their stalks, shake the dirt from their roots and rush off, leaving the professor to cautiously advance once you move to escape.";
 		else:
-			if girl is banned:
+			if UtahGender is 1:
 				say "     'Stop,' the person wheezes as he tries to catch his breath after his frantic run into the greenhouse from the opposite end of the passageway. 'I... ohh... wait, it's you. What are you doing here?  And what do you want with that?  That aconitum is college property. You can't take it.' Dressed in torn clothes and still looking a little ragged around the edges, Dr. Utah has at least managed to remain human since you've freed him. Seeing him again, you take a moment to look him over. He looks to be about in his late twenties, has dark hair and an average build. He would probably look pretty handsome if his suit weren't all torn and the scruff on his face were shaved.";
 				WaitLineBreak;
 				say "     Relaxing a little, you tell him that you just want the plant and that he should let you have it in return for freeing him. 'I appreciate your assistance and I've been very tolerant, but you can't take that plant. It's very toxic and is quite dangerous. Just put the wolfsbane down and get out of here before you attract some unwanted trouble. I'm willing to be a little tolerant with you given the circumstances, but it won't last long.'";
@@ -670,35 +753,14 @@ The sarea of Getting the Knife is "Warehouse".
 wrknifefight is a truth state that varies. wrknifefight is usually false.
 
 Instead of resolving Getting the Knife:
-	if girl is banned:
-		say "     Doing your best to circumvent the creatures roaming around here, you make your way to the address Nermine provided. It is a non-descript warehouse like so many others in this area. You start looking around, trying to find a way into the building, only to be interrupted by a growl behind you. Turning around, you find yourself faced with a large, burly wolverine in a security guard uniform.";
-		now wrknifefight is true;
-		challenge "Wolverine Guard";
-		now wrknifefight is false;
-		if fightoutcome >= 10 and fightoutcome <= 19:
-			say "[wrgetknife]";
-		else:
-			say "     Driven off by the lumbering monstrosity, you will have to try coming back another time if you want to try getting the knife.";
+	say "     Doing your best to circumvent the creatures roaming around here, you make your way to the address Nermine provided. It is a non-descript warehouse like so many others in this area. You start looking around, trying to find a way into the building, only to be interrupted by a growl behind you. Turning around, you find yourself faced with a large, burly wolverine in a security guard uniform.";
+	now wrknifefight is true;
+	challenge "Wolverine Guard";
+	now wrknifefight is false;
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		say "[wrgetknife]";
 	else:
-		[puts Doberman as lead monster for check]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Doberman":
-				now monster is y;
-				break;
-		if area entry is "Outside":
-			say "     Doing your best to circumvent the creatures roaming around here, you make your way to the address Nermine provided. It is a non-descript warehouse like so many others in this area. You start looking around, trying to find a way into the building, only to be interrupted by a growl behind you. Turning around, you find yourself faced with a female doberman wearing a police uniform. 'Halt!' she barks. 'Get away from there. Getting supplies is one thing, but outright looting is unacceptable.' It looks like you'll need to deal with the cop before you'll be able to gain entry.";
-			challenge "Doberman";
-			if fightoutcome >= 10 and fightoutcome <= 19:
-				say "     Having dealt with the Doberwoman, you are free to turn your attention back to finding a means into the warehouse.";
-				say "[wrgetknife]";
-			else if fightoutcome >= 20 and fightoutcome <= 29:
-				say "     The Doberwoman makes sure to send you on your way before leaving the area. 'And I'm going to be keeping an eye on this place, just so you know,' she adds with an extra growl. 'I don't want to see you around here again.'";
-			else:
-				say "     The Doberwoman pursues you for some distance to ensure that you've been driven off. You'll have to try coming back later.";
-		else:
-			say "     Doing your best to circumvent the creatures roaming around here, you make your way to the address Nermine provided. It is a non-descript warehouse like so many others in this area. You start looking around, trying to find a way into the building. Thankfully, there doesn't appear to be anyone here to oppose you.";
-			say "[wrgetknife]";
+		say "     Driven off by the lumbering monstrosity, you will have to try coming back another time if you want to try getting the knife.";
 
 
 to say wrgetknife:
@@ -754,8 +816,8 @@ Instead of resolving Dinosaur Skeleton:
 		say "     As you travel through the museum, you end up finding yourself in one of the upper sections of the Dinosaur exhibit. There are several small- to mid-sized skeletons on display there, including one of a raptor. You approach the fossilized skeleton and prepare yourself to begin. Your stomach churns at the very thought of drinking down the repulsive fluid so you decide to keep the bottle closed until the last possible moment. Maybe if you open it and slam it back immediately, the revulsion won't have a chance to stop you.";
 		say "     Taking a last, deep breath, you hear a clickety sound behind you. 'Stop!' a voice growls. 'Don't be fooled by weakness.' Holding steady, you turn around and find one of the wereraptors there behind you. It steps forward slowly, its claws clacking on the hard floor. 'I showed restraint when you freed me and chose to see that you were blessssed. But when you took the aconite, I knew you were up to something. I could not stop you then, but I will stop you now.'";
 		WaitLineBreak;
-		say "     Realization sinks in as the wereraptor speaks. 'Dr... Utah?' you utter, steadying yourself on the nearby display plaque. Events seem to fall into place as that missing piece of the puzzle is revealed. The creature before you is the young professor you met earlier and both were released when you broke into [if girl is banned]his[else]her[end if] office.";
-		if girl is not banned:
+		say "     Realization sinks in as the wereraptor speaks. 'Dr... Utah?' you utter, steadying yourself on the nearby display plaque. Events seem to fall into place as that missing piece of the puzzle is revealed. The creature before you is the young professor you met earlier and both were released when you broke into [if UtahGender is 1]his[else]her[end if] office.";
+		if UtahGender is 2:
 			say "     'Yessss. And I was once like you,' the wereraptor says as she continues. 'Weak and fearful. When the chaos began and my curse started to take hold, I barred myself inside my office. I nailed the door shut from the inside and threw the hammer out the window. I had meant to save others from the beast within me,' she says with a chuckle. 'But I came to realize that I was wrong and that this blessing is not to be feared. The creature it frees is myself. Free from my fears, my inhibitions, my petty concerns for others. It has made me powerful... as it has made you powerful. Do not throw it away and embrace it instead. Embrace it and let the beast free, as it has freed me.' Her voice grows louder and more maniacal as she stalks closer to you.";
 			say "     'Rather than reject it and force the gift from your blood, accept my blood and the power of those bones and become stronger. The transformations which have affected the city have awakened this power and it can help it becomes greater. We shall resist the day and find power in the night,' she laughs. 'Come, join me and we shall spread our gift to those worthy of it and all others shall be our prey.'";
 		else:
@@ -797,7 +859,7 @@ to say wrcureattempt:
 		now wrcursestatus is 100;
 		increase score by 100;
 	else if fightoutcome >= 20 and fightoutcome <= 29:
-		if girl is not banned:
+		if UtahGender is 2:
 			say "     The wereraptor growls victoriously and grabs the potion with visible trepidation before racing headlong to the balcony overlooking the lower floors. With a hissing laugh, she tosses the vial down as you scream. There is a distance crash as your precious cure is destroyed. Dr. Utah clacks back across the tiled floor and runs her taloned hand across your body. 'Soon you will come to accept your proper nature and forsake your foolish reluctance. It is time for the saurians to rise again, new and stronger.' She leans in closer and runs her tongue along your face. 'I look forward to hunting with you,' she adds with a grope between your legs before turning and leaving.";
 		else:
 			say "     The wereraptor growls victoriously and grabs the potion with visible trepidation before racing headlong to the balcony overlooking the lower floors. With a hissing laugh, he tosses the vial down as you scream. There is a distance crash as your precious cure is destroyed. Dr. Utah clacks back across the tiled floor and runs his taloned hand across your body. 'Soon you will come to accept your proper nature and forsake your foolish reluctance. It is time for the saurians to rise again, new and stronger.' He leans in closer and runs his tongue along your face. 'I look forward to hunting with you,' he adds with a grope between your legs before turning and leaving.";
@@ -813,7 +875,7 @@ to say wrcureattempt:
 
 
 to say wrcurseaccept:
-	if girl is not banned:
+	if UtahGender is 2:
 		say "     Looking down at the bottle of poisonous aconite and the silver knife that makes your skin crawl just to look at it, you reject them. Your wereraptor body knows they are cursed and seek to kill you, not save you. You hurl the bottle fast and far, sending over the balcony to the floor far below. Dr. Utah gives a triumphant, hissing laugh and strides forward, running her taloned hands over your body.";
 		say "     'Excellent! Let us begin so the wereraptors may rise again, new and greater than before.' Saying this, she digs her claws into her own arm, causing her blood to flow down her arm before holding it out to you. 'Come, accept my blood into you. Accept the power of these bones into you. Become the wereraptor!'";
 		say "     With the scent of her blood and her arousal in the air, your excitement builds and you press your [if wrcursestatus is 4]mouth[else]muzzle[end if] to the wound, lapping up the flowing blood and feeling it seep into you. The wereraptor hisses as you drink, speaking too low for you to make out the words. The bones behind you rattle and you'd swear you hear the hiss of words from them as well. You open your body and mind up to the beast, the primitive, the raptor within you and it feels as if something is drawn into you as well as spreading throughout you. Dr. Utah moans as well and you sense somehow that she's undergoing a similar change [if wrcursestatus is 4]as your powerful wereraptor form restores itself, this time stronger than ever[else]though there is no visible difference on either of you[end if].";
@@ -848,17 +910,6 @@ to say wrcurseaccept:
 
 
 
-[	wrcursestatus		]
-[ 0: no contact			]
-[ 1: freed				]
-[ 2: latent				]
-[ 3: activated			]
-[ 4: resisted for the night	]
-[ 5: curse in effect		]
-[ 6: rampage in effect		]
-[ 7: curse accepted		]
-[ 100: curse purged		]
-
 
 when play ends:
 	if wrcursestatus is 2:
@@ -878,21 +929,21 @@ when play ends:
 	else if wrcursestatus is 7:
 		if bodyname of player is "Wereraptor":
 			if humanity of player < 10:
-				say "     As the last vestiges of your humanity are consumed by your wereraptor identity, you return to Dr. Utah and join [if girl is not banned]her[else]him[end if] in preparation for the rise of the new saurian people, remaining in the fallen city for a time. You, and others like yourselves, form into [']The Society of the Sickle[']. Training yourselves to gain partial control over your transformation, you are able to slip into society and hide yourselves among them, working in secret to infect others and add new members to your order. Seeming at first like other ferals, the spread of wereraptors goes largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers.";
+				say "     As the last vestiges of your humanity are consumed by your wereraptor identity, you return to Dr. Utah and join [if UtahGender is 1]him[else]her[end if] in preparation for the rise of the new saurian people, remaining in the fallen city for a time. You, and others like yourselves, form into [']The Society of the Sickle[']. Training yourselves to gain partial control over your transformation, you are able to slip into society and hide yourselves among them, working in secret to infect others and add new members to your order. Seeming at first like other ferals, the spread of wereraptors goes largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers.";
 			else:
 				say "     When you are taken to the military compound, you and Dr. Utah keep your more powerful night forms repressed with some effort. Your examination has you categorized both as an indeterminate lizard form. In time, you both are released and set up new lives together. Working in secret, you, and the others like yourselves you recruit, form into [']The Society of the Sickle[']. Training yourselves to gain partial control over your transformation, you are able to slip into society and hide yourselves among them, working in secret to infect others and add new members to your order.";
-				if girl is not banned and libido of Doctor Utah > 0:
+				if UtahGender is 2 and libido of Doctor Utah > 0:
 					say "     When the eggs Dr. Utah left in the city hatch, they seems like other ferals and go largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers. ";
 				else:
 					say "     Seeming at first like other ferals, the spread of wereraptors goes largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers. ";
 				say "     As the numbers of attacks from these 'night lizards' grow, you and Dr. Utah are pulled in as experts on prehistory and saurian creatures. But despite the many efforts and seemingly reasonable precautions you implement, the numbers continue to grow. With you both leading both sides, it is easy to ensure that your people rise in strength, pulling more people into your order and creating more sexy saurians to populate what will soon be your world.";
 		else:
 			if humanity of player < 10:
-				say "     As your infection takes hold, it tries to force out the ancient wereraptor curse, but cannot do so entirely. You spend much of your existence unaware of your dual identity, but every full moon, the hidden monster from the id rises and you transform into the Wereraptor to stalk the night. Often at these times, you meet with Dr. Utah in [if girl is not banned]her[else]his[end if] impressive night form and enjoy a lustful hunt together, adding others to your numbers.";
+				say "     As your infection takes hold, it tries to force out the ancient wereraptor curse, but cannot do so entirely. You spend much of your existence unaware of your dual identity, but every full moon, the hidden monster from the id rises and you transform into the Wereraptor to stalk the night. Often at these times, you meet with Dr. Utah in [if UtahGender is 1]his[else]her[end if] impressive night form and enjoy a lustful hunt together, adding others to your numbers.";
 			else:
 				say "     When rescue comes, your increased control over your curse allows you to hide your saurian affliction. It is takes some effort, but you manage to stay as you are while you're at the military compound. You hear the occasional mumble of anomalies with your testing, but nothing further seems to stem from it. In time, you are released and you make a new life for yourself. After the long stay at the facility, you find that your current form has managed to set itself as your regular, daytime form, though you are able to transform at will at night into a beautiful and sexy wereraptor. This allows you to integrate yourself into society and make a place for yourself from which to secretly live out your nightlife when you feel the urge to hunt.";
 				say "     With the help of Dr. Utah and the others who have joined you, you form into [']The Society of the Sickle[']. Training yourselves to gain partial control over your transformation, you are able to hide among society and work in secret to infect others, adding new members to your order.";
-				if girl is not banned and libido of Doctor Utah > 0:
+				if UtahGender is 2 and libido of Doctor Utah > 0:
 					say "     When the eggs Dr. Utah left in the city hatch, they seems like other ferals and go largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers. ";
 				else:
 					say "     Seeming at first like other ferals, the spread of wereraptors goes largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers. ";

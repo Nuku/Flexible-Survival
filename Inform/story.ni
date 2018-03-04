@@ -5015,6 +5015,8 @@ Include Museum Rounds for FS by Stripes.
 Include New Events by Sarokcat.
 Include Odd Weapons by Hellerhound.
 Include Old BoomBox by Kaleem mcintyre.
+Include Orc Events by Wahn.
+Include Orc Researcher by Luneth.
 Include Origins by Luneth.
 Include Park Events by Sarokcat.
 Include Patreon Menu by Stripes.
@@ -5347,7 +5349,7 @@ Include Blanche by Stripes.
 Include Boghrim by Wahn.
 Include Bradford by Stripes.
 Include Brennan by Wahn. [WIP]
-Include Brian by Sarokcat.
+Include Brian by Vinickus.
 Include Brooke by Stripes.
 Include Bubble by Stripes.
 Include Campus Gym by UrsaOmega.

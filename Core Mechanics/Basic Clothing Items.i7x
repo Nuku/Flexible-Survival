@@ -8,8 +8,10 @@ Version 1 of Basic Clothing Items by Core Mechanics begins here.
 
 When Play begins:
 	[testing drop of all items in the library]
+	[
 	add { "ripped jeans", "black jeans", "sturdy jeans", "skinny jeans", "hot pants", "grey pants", "camo pants", "jogging pants", "bermuda shorts", "black miniskirt", "pencil skirt", "floral skirt" } to invent of Grey Abbey Library;
 	add { "centaur cum", "centaur cum", "centaur cum", "centaur cum", "centaur cum", "behemoth horn", "behemoth horn", "behemoth horn", "behemoth horn", "behemoth horn" } to invent of Grey Abbey Library;
+	]
 	[not sure why setting the plural boolean does not work for the pants, but this should (for now) fix that after the fact, at the same start]
 	now plural of ripped jeans is true;
 	now plural of black jeans is true;
@@ -195,10 +197,11 @@ the scent of floral skirt is "The skirt has the typical faintly musky scent of c
 
 [ Section 2 - Chest Items ]
 
-
+[
 When Play begins:
 	add { "black t-shirt", "white t-shirt", "maroon pullover", "zephyr shirt", "camo shirt", "sleeveless shirt", "mesh shirt" } to invent of Grey Abbey Library;
-	
+]
+
 Table of Game Objects(continued)
 name	desc	weight	object
 "black t-shirt"	"A simple black t-shirt, without any pattern or frills to it."	1	black t-shirt
@@ -303,7 +306,9 @@ the scent of mesh shirt is "The fabric has the typical faintly musky scent cloth
 [ Section 3 - Shoes ]
 
 When Play begins:
+	[
 	add { "combat boots", "brown loafers", "leather sandals", "high heels", "stiletto heels", "jogging shoes", "cowboy boots" } to invent of Grey Abbey Library;
+	]
 	now plural of combat boots is true;
 	now plural of brown loafers is true;
 	now plural of leather sandals is true;
@@ -417,7 +422,9 @@ the scent of cowboy boots is "The boots smell like leather.".
 [ Section 4 - Underwear ]
 
 When Play begins:
+	[
 	add { "ragged loincloth", "simple loincloth", "boxer briefs", "white briefs", "orange jockstrap", "mesh undies", "pink panties" } to invent of Grey Abbey Library;
+	]
 	now plural of boxer briefs is true;
 	now plural of white briefs is true;
 	now plural of mesh undies is true;

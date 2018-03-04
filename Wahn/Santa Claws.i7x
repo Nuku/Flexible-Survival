@@ -83,7 +83,7 @@ to say SantaTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Ask him about the other polar bear";
 	[]
-	if JayMarkRelationship > 2:
+	if JayMarkRelationship > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Jay";
 		now sortorder entry is 6;
@@ -245,8 +245,11 @@ to say SantaTalk7: [Suit Quest info]
 	else if thirst of Jay > 1 and thirst of Jay < 5:
 		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay again, he asks, 'Have you found a source for fabric or thread yet? As Walter said, they do need at least fabric, or enough thread to make fabric, for that suit. From what I was told, there should be a somewhat regular [bold type]swap meet[roman type] in a [bold type]warehouse[roman type] near the harbor. Though if you do go there... take care. Those meetings are meant to be neutral ground, but one never knows exactly what will happen in these uncertain times.";
 		[Swap meet event in the file Jay.i7x]
-	else if thirst of Jay > 4:
-		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay again, he says, 'No not worry about the suit. Work is progressing on it, and my elves will have it ready by the time it is needed.'";
+	else if thirst of Jay > 4 and thirst of Jay < 8:
+		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay again, he says, 'Do not worry about the suit. Work is progressing on it, and my elves will have it ready by the time it is needed.'";
+	else:
+		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay again, he says, 'My elves finished it and it already has been delivered to Mark. He said something about wanting to talk to you again. I'd advise searching him out at the north entrance of the mall, in the mornings or afternoons.'";
+	
 		
 Section 3 - Sex
 

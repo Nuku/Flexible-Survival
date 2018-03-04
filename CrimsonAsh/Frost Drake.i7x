@@ -175,7 +175,7 @@ When Play begins:
 	now HP entry is 80; [ The monster's starting HP. ]
 	now lev entry is 9; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 10; [ Monster's average damage when attacking. ]
-	now area entry is "Urban Forest"; [ Case sensitive]
+	now area entry is "Forest"; [ Case sensitive]
 	now cocks entry is 1; [ number of cocks if sex is 'Male' or 'Both' ]
 	now cock length entry is 12;
 	now cock width entry is 8; [ Size of balls ]

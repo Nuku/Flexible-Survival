@@ -11,19 +11,16 @@ Version 1 of Joey by Qazarar begins here.
 
 [ libido of Joey                                             ]
 [   0: naive Joey, not sexable                               ]
-[	1: warrior Joey, sexable                                 ]
-[	2: slut Joey, sexable                                    ]
+[	1: warrior Joey, sexable                                   ]
+[	2: slut Joey, sexable                                      ]
 
-
-
-	
 Section 1 - Basic Setup
 	
 Joey is a man. The hp of Joey is usually 3.
 The libido of Joey is usually 0.
 The description of Joey is "[JoeyDesc]".
 The conversation of Joey is { "<This is nothing but a placeholder!>" }.
-The scent of Joey is "     Joey smells like X.".
+The scent of Joey is "     Joey has a nice, furry scent.".
 
 to say JoeyDesc:
 	say "     The catboy is of average height, with a thin frame. He has effeminate facial features, that nicely match his feline appearance, with fine orange fur covering the visible parts of his body, along with ears and a tail to match. The only piece of clothing he is wearing is a pair of tight shorts with a noticeable bulge.";
@@ -111,7 +108,8 @@ instead of fucking the Joey:
 	else: [ready for sex]
 		say "     As you ask about getting intimate, Joey immediately looks interested, and waits for you to say more.";
 		WaitLineBreak;
-		say "[JoeySexMenu]";]
+		say "[JoeySexMenu]";
+	]
 
 to say JoeySexMenu:
 	say "[line break]";
@@ -206,9 +204,9 @@ instead of resolving a Stray Catboy:
 			else: [Denying training]
 				say "     You shake your head and tell the catboy that you're too busy handling other things right now, and won't be able to train him. He looks crestfallen, and you think you see a glimmer of tears in the corners of his eyes, but he turns away before you can be sure. After that, he goes running off into the city. You doubt you'll be seeing him again soon.";
 				now Stray Catboy is resolved;
-		if fightoutcome > 19 and fightoutcome < 30: [Losing]
+		else if fightoutcome > 19 and fightoutcome < 30: [Losing]
 			say "     When you come to after failing to defeat your foe, you are alone. It seems the feline took the opportunity left when the wolf was distracted, and fled. Perhaps you'll see them again.";
-		if fightoutcome > 29: [Fleeing]
+		else if fightoutcome > 29: [Fleeing]
 			say "     You decide to cut your losses and flee from the wolf, unable to defeat it. As you run away, you take one glance back over your shoulder, and see the wolf advancing on the prone feline once more, this time with nobody to stop him. Maybe another day you'll see that feline again, but for now, you try not to think about what you've done, and continue fleeing.";
 	else: [Watching]
 		LineBreak;
@@ -217,13 +215,12 @@ instead of resolving a Stray Catboy:
 		now Stray Catboy is resolved;
 	now inasituation is false;
 	
-	
 to say JoeyTraining: [Training Joey]
 	if hp of Joey is 3:
 		say "     The first thing you do is explain to Joey exactly how the training is going to work. You'll definitely teach him some things the normal way, but that isn't enough to really learn how to fight. For that, he needs practical experience. Because of that, the main thing you'll be doing is taking him to fight creatures out in the city, and telling him how to improve, to let him put his skills to use. Once the catboy understands the purpose of the combat, you move on and explain the other major thing. If the fight doesn't feel real, if there are no consequences, he won't be able to learn anywhere near as well. Because of that, you won't step in for any of his fights or what may follow, unless his life is in serious danger. Joey is a bit more nervous about that, but you eventually convince him, and are ready to take him for his first day of training.";
 	say "     When you tell him you're going to take him out for training, it doesn't take long at all for Joey to get ready, and to meet you at the door. He looks at you expectantly, leaving the training up to you. You know that the best way for him to get better at fighting is to fight something he can beat, though the thought of taking him to fight something he can't handle to watch what would happen is tempting.";
-	say "[line break]";
-	say "What do you want to take Joey to fight?";	
+	LineBreak;
+	say "What do you want to take Joey to fight?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -275,7 +272,7 @@ to say JoeyTraining: [Training Joey]
 			if the player consents:
 				now sextablerun is 1;
 				say "     You tell Joey that you aren't going to be able to train him right now. He looks disappointed, but says he understands.";
-				WaitLineBreak;
+				wait for any key;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -291,10 +288,8 @@ to say FoxTraining:
 		say "     At last it comes to an end, as the fox presses right up against Joey, releasing a wave of seed into the depths of the catboy. At the same time, the tent in the front of his tight shorts seems to bob up and down, with the tip of that bulge soaking through. It seems the catboy came from the sensation of having his slutty ass filled with fox cum. Eventually the fox pulls out, and scampers off back into the city, leaving Joey in the same state you found him so long ago, prone on the ground. This time, however, he is truly the way his is meant to be, basking in the pleasure of the act he has just finished, and his needy hole dripping streaks of white. You smile, knowing you were the one who unleashed his inner slut. Time to let him enjoy it for a few more minutes before you bring him back to the library.";
 		if libido of Joey < 2:
 			now libido of Joey is 2;
-		WaitLineBreak;
 	else:
 		say "     Joey springs into action, rushing at the fox for a surprise attack, and sending it reeling when it connects. Following what he's learned from you, he doesn't give the fox a chance to recover, as he keeps attacking it. Soon enough the fox whimpers, and Joey lets up, allowing it to run away[if hp of Joey is 3]. Joey seems pleased at his first victory, and the fact that he was able to win that fight on his own[end if]. Joey returns to where you stood, watching the fight, ready to listen to what you have to say about it. You tell him he did well[if libido is 0], but point out what you noticed that could maybe help him improve[end if], and then bring him back to the library, training concluded for the moment[if hp of Joey is 4]. Next time, you think he'll be ready to face something harder[end if].";
-		WaitLineBreak;
 		if hp of Joey < 4:
 			increase hp of Joey by 1;
 	
@@ -307,13 +302,11 @@ to say CentaurTraining:
 		WaitLineBreak;
 		say "     For several moments, the catboy is still, drenched in lust. His eyes are closed, and he seems almost intoxicated by the scent. Then he licks his lips, perhaps partially out of nerves, and ends up with the taste of the centaur cum to accompany the scent. You can tell he likes it when his tongue darts out again, collecting more and more of the sticky coating. He soon remembers that the source is there for the taking, and he eagerly leans back towards the dangling equine dick, only partially flaccid from its release. Using his hands once again, Joey starts to urge the centaur back to full hardness, teasing up and down the length with his hands, and occasionally licking the head, growing used to the strong musky taste of it. Finally the shaft is fully erect once more, and the cum-splattered feline seems to be working up the courage to take it into his mouth.";
 		say "     Joey's focus is broken by the centaur getting impatient, and thrusting forward. Having the head of the massive dick bumping into his face is enough to prompt the feline into action, and he starts to work on the head, licking and sucking at it, trying and failing to fit it into his mouth. He pulls back for a moment, steeling himself, and then puts all his effort into getting the cock he wants so badly into his mouth. With his new resolve, he manages to stretch his mouth farther than he thought, and get his lips around the flare of the horsecock. No matter how much he struggles, he can't get any further than that down the shaft, but it proves to be sufficient, as the centaur comes once more. He releases less of a flood this time, partially drained from the earlier handjob, but it is more than enough to fill Joey's stomach with seed, leaving the catboy stunned and dazed. Finally satisfied, the centaur pulls out of his mouth, and canters back into the plains, leaving the slutty feline alone.";
-		WaitLineBreak;
 		if hp of Joey > 0:
 			decrease hp of Joey by 1;
 	else:
 		say "     Joey is confident, and rather than wait or hesitate, he seizes the initiative, striking at the centaur before it can start the fight. The sudden attack from the catboy catches the equine off guard, leaving him reeling when Joey darts under him and strikes low at one of his legs. The blow is strong enough to unbalance the quadruped, causing him to fall to his knees. The centaur is not yet defeated, however, and is visibly angered, making a swing at Joey as he comes back around to face the centaur. The catboy doesn't quite dodge, leaving him with some minor injuries from the attack. However, his training with you has paid off, and he doesn't let that injury distract him.";
 		say "     He unleashes several more blows at the centaur, wearing the larger creature down. Before Joey can completely knock him out, however, the centaur manages to trip the feline, and uses the brief moment to stand back up fully. Rather than press that momentary advantage, the centaur rears up, turns around, and flees. The catboy may not have completely beaten the centaur, but you can tell he has improved a great deal. He walks back over to where you were watching the fight, beaming widely, clearly satisfied with himself. Before he can get too full of himself, you give him all the feedback you can about his fight, making sure that he'll win the next time. As you teach him, you also escort him back to the library, musing about how you'll train him next.";
-		WaitLineBreak;
 		if hp of Joey < 6:
 			increase hp of Joey by 1;
 	
@@ -325,12 +318,10 @@ to say WolfTraining:
 		say "     For a few moments, he is impaled on the knotted shaft, breathlessly waiting for something else to happen. The wolf then breaks that silence by starting to move, thrusting in and out, the knot repeatedly slapping against the feline's flesh as the dick spreads him open. The expression on his face has become one of almost unwilling bliss as he is continually hammered by the feral beast above him. Eventually it comes to an end, and the wolf slams fully into the catboy, locking the knot into him, and finishing. He lets out a mewling moan as he is filled by the canine seed. The two remain in that position, enjoying the sensations. Several minutes later, the wolf has lost interest, and Joey is left panting on the ground. Once he recovers, you'll take him back to the library.";
 		if hp of Joey > 0:
 			decrease hp of Joey by 1;
-		WaitLineBreak;
 	else:
 		say "     The wolf doesn't hesitate to leap at Joey, a quick attack meant to catch prey off guard. However, the feline is prepared, and sidesteps the surprise attack. He takes advantage of the opportunity that leaves to attack the canine's open flank, causing it to scramble around to face him once more. For several moments, the two combatants simply circle each other, watching carefully. This time Joey makes the first move, darting forwards to attack the wolf, surprising it. The battle continues as such, with the catboy's speed and mindfulness allowing him to outmaneuver the wolf, until finally he defeats it. Victorious, he returns to you, ready to celebrate his victory. You let him enjoy it for now, knowing you'll help him correct the errors he made on the way back to the library.";
 		if hp of Joey < 9:
 			increase hp of Joey by 1;
-		WaitLineBreak;
 	
 to say MinotaurTraining:
 	say "     You decide that it's time to really put Joey's skills to the test. You lead him out of the main city, giving him as much advice as you can along the way. Once you reach the right area, you spend some time with the catboy searching the area, looking for the perfect opponent. After some time, you spot it: a hulking minotaur, striding along the plains. Defeating something like that is enough to prove anyone a true warrior, something Joey is looking forward to. But losing to something like that carries serious risks - something he might also end up looking forward to. Slightly nervous, but not overwhelmed, Joey leaves you standing where you are, and goes to meet the beast face to face.";
@@ -343,7 +334,6 @@ to say MinotaurTraining:
 		say "     Eventually the pace set by the minotaur increases further, even more furiously hammering into the catboy he holds, training his entrance to handle his cock's full length. The additional stimulation is finally enough, and Joey's much smaller dick unleashes his load, most of it catching on what's left of his pants, and the rest landing on his chest. The feline seems to be completely lost in pleasure, enough to not even notice when the minotaur finally follows his lead, depositing a significantly larger amount of seed into the catboy, before finally lifting him off of the cock he was riding. Sated, the minotaur leaves, and you end up needing to carry the catboy back to the library.";
 		if hp of Joey > 0:
 			decrease hp of Joey by 1;
-		WaitLineBreak;
 	else:
 		say "     The battle before you is going to be a difficult one, but you have faith in your pupil. The fragile catboy you first met is not nearly so helpless now. He is faster, stronger, and more experienced. You could go on, but your musings are cut short by the start of the fight. By now the feline knows better than to let his opponents have the initiative, so he darts in quickly. What follows is an incredible display of combat ability. Joey uses his agility to his advantage, outmaneuvering the larger and slower minotaur, ducking under its swings, sidestepping its charges, all the while connecting with minor blows. He seems completely in control of the battle, a combination of your lessons and all the experience he has gained under your watchful eyes.";
 		say "     The minotaur is growing angrier from the battle, and because of that is growing more careless as well. He sees what he thinks is a moment of weakness from the catboy, and tries to end the fight right there with a powerful overhead smash. However, Joey was ready for it, darting forward and sliding between the minotaur's legs, the massive cock that hangs there slapping against his face as he passes. The feline remains unfazed, and quickly turns and vaults up onto the back of the staggered minotaur. Once the catboy has a solid grip around the minotaur's neck, you know the match is decided. The large creature isn't flexible enough or clever enough to dislodge him.";
@@ -353,6 +343,5 @@ to say MinotaurTraining:
 		if hp of Joey < 10:
 			increase hp of Joey by 1;
 			now libido of Joey is 1;
-		WaitLineBreak;
 	
 Joey ends here.
