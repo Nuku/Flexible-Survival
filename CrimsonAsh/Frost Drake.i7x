@@ -109,6 +109,7 @@ to say FrostDrakeSexMenu:
 					say "[OralFrostDrake]";
 				if (nam is "Fuck his ass"):
 					say "[FuckFrostDrake]";
+				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:

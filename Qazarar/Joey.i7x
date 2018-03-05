@@ -267,6 +267,7 @@ to say JoeyTraining: [Training Joey]
 					say "[WolfTraining]";
 				if (nam is "A Minotaur"):
 					say "[MinotaurTraining]";
+				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
@@ -343,5 +344,5 @@ to say MinotaurTraining:
 		if hp of Joey < 10:
 			increase hp of Joey by 1;
 			now libido of Joey is 1;
-	
+
 Joey ends here.
