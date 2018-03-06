@@ -25,7 +25,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "2ndbest" as supersponsor.
+understand "marching" as supersponsor.
 
 When play ends:
 	clear the screen;
