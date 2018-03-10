@@ -1,5 +1,6 @@
 Version 1 of Urik by Wahn begins here.
 [Version 1 - New NPC]
+[Version 1.1 Character relocation - Luneth]
 
 Section 1 - NPC
 
@@ -127,7 +128,7 @@ to say UrikSex4: [Urik fucks player ass]
 	say "     <WIP>";
 
 to say UrikSex5: [player fucks Urik]
-	if Urik is in Grey Abbey 2F: [library sex]
+	if Urik is in Sitting Area: [library sex]
 		say "     Pushing down on the orc's shoulders, you make him kneel at your feet, then pull the front of your pants down impatiently. The rapidly hardening length of your manhood swings right in front of Urik's face, and a second later, you take hold of it and brush it over his lips. Urik grunts in a lusty tone as he slides his lips over your shaft, taking it into his mouth all the way without stopping even once. You really should thank Boghrim sometime - the time Urik spent as his cum-slut really did wonders for your muscular slut's oral skills. You look down upon Urik as he eagerly bobs his head over your dick, working his tongue along your hard length while giving you an expert blow-job.";
 		say "     Quite a fun situation, with this mighty warrior now being your obedient fuck-toy. And numerous other orcs think so too, laughing and stroking at the show. You almost want to take hold of Urik's head with both hands as you face-fuck him as hard as you can... but no, you have other plans right now. You pull your manhood out of his mouth, chuckling as he tries to follow it by stretching his neck, then slide your fingers between the strands of his shoulder-long black hair. Grabbing the orc's hair, you pull his head back somewhat roughly and look down into his face, then order him to turn around and present his ass to you.";
 		WaitLineBreak;
@@ -237,7 +238,7 @@ to say UrikTalk1: [chatting]
 
 to say UrikTalk2: [send him to the library]
 	say "     Urik listens to your instructions with a quiet intensity that makes it clear he commits the directions to the library to his memory. When you finish and ask if he understood, he hesitates for a second, then forces himself to say, 'Yes, [master].' You can see that he is still a bit uncomfortable at accepting his new reality of being your breeder. Well, he'd better learn to live with it, as having your own orc warrior is something you won't easily let go of. With a playful slap at his muscled buttocks, you send him off into the city.";
-	move Urik to Grey Abbey 2F;
+	move Urik to Sitting Area;
 	now HP of Urik is 1;
 
 to say UrikTalk3: [send him to the orc lair]
@@ -262,7 +263,7 @@ to say UrikTalk4: [talk about Eric]
 
 Section 3 - Events
 
-instead of navigating Grey Abbey Library while (Urik is in Grey Abbey 2f and Candy is in bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
+instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Candy is in bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

@@ -144,9 +144,9 @@ to say bluechaffcaught:
 		say "     Moving your [bodytype of player] body over his, you nip at his neck and grope his ass. 'Maybe. I might want a [']snack['] later,' you tease, pushing a few fingers into his creamy hole. He blushes and nods, his hips trembling. 'A-alright then... you've caught me, you sexy hunter,' he says with nervous excitement[if cock width of player > 25]. After letting him drain, you[else]. You[end if] help your new prize up and lead him back to the library to be your new caged songbird slut.";
 		now battleground is "void";
 		increase score by 20;
-		move Icarus to Grey Abbey Library;
+		move Icarus to Garden View;
 		now HP of Icarus is 1;
-		move player to Grey Abbey Library;
+		move player to Garden View;
 		now icarus_lastpred is 1;
 	else:
 		say "     Laughing, you give his ass a slap. Why would you want to keep him now that the fun of breaking him is over, you ask. He blushes at this and clutches at your leg, but you push him away, telling him that surely one of the big felines around would love to sink their claws into the songbird, if that's all he wants. His shoulders sag and he struggles to his feet, limping away slowly. You smile to yourself; it seems that's finally over with.";
@@ -206,9 +206,9 @@ to say bluechaffpounced:
 		say "     Moving your [bodytype of player] body over his, you nip at his neck and grope his ass. 'Maybe. I might want a [']scratching post['] later,' you tease, pushing a few fingers into his creamy hole. He blushes and nods, his hips trembling. 'A-alright then... you've caught me, you sexy cat,' he says with nervous excitement[if cock width of player > 25]. After letting him drain, you[else]. You[end if] help your new prize up and lead him back to the library to be your new caged songbird slut.";
 		now battleground is "void";
 		increase score by 20;
-		move Icarus to Grey Abbey Library;
+		move Icarus to Garden View;
 		now HP of Icarus is 1;
-		move player to Grey Abbey Library;
+		move player to Garden View;
 		now icarus_lastpred is 2;
 	else:
 		say "     Laughing, you give his ass a slap. Why would you want to keep him now that the fun of breaking him is over, you ask. He blushes at this and clutches at your leg, but you push him away, telling him that surely one of other the big felines around would love to sink their claws into the songbird, if that's all he wants. His shoulders sag and he struggles to his feet, limping away slowly. You smile to yourself; it seems that's finally over with.";

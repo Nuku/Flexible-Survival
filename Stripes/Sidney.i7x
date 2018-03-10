@@ -1,6 +1,38 @@
 Version 1 of Sidney by Stripes begins here.
 [ Version 1.1 - Pregnancy and children ]
+[Version 1.2 - Minor maintenance and character relocation - Luneth]
+
 "Adds a former soldier named Sidney to the Flexible Survival game."
+
+[        HP of Sidney                                                          ]
+[ 0 - not encountered	                                                         ]
+[ 1 - met, unconvinced                                                         ]
+[ 2 - convinced                                                                ]
+[ 3 - transformed                                                              ]
+[ 4 - spoke to post-tf                                                         ]
+[ 5 - had sex post-tf F/F                                                      ]
+[ 6 - had sex post-tf M/F                                                      ]
+[ 7 - M/F in another position                                                  ]
+[ 99 - happy tf end                                                            ]
+[ 100 - sent back to base                                                      ]
+[ 101 - failed all attempts                                                    ]
+
+[       level of Sidney                                                        ]
+[ 21-50 furries                                                                ]
+[ 21 = red fox vixen                                                           ]
+[ 22 = otteress (f)                                                            ]
+[ 23 = otteress (u)                                                            ]
+[ 71-80 = feral forms                                                          ]
+[ 71 = wusky                                                                   ]
+
+[     lust of Sidney                                                           ]
+[ 0 = not preggers                                                             ]
+[ 1-8 = early pregnancy                                                        ]
+[ 9-16 = late pregnancy                                                        ]
+[ 17+ = birthing time                                                          ]
+
+[        XP of Sidney                                                          ]
+[ # of offspring                                                               ]
 
 Section 0 - Basic NPC Setup
 
@@ -167,8 +199,8 @@ to say sidney_rfv_cap:
 		say "     With Sidney now transformed into a sultry vixen, there is no chance of her returning to the military base, so you offer to let her stay the library for safety until rescued.  She agrees happily even and follows you, unable to keep from touching and looking herself over in joyful awe at her dream come true - well, after a fashion, at least.  You doubt she'd dreamt of being a walking, talking fox femme back before this all started, but she certainly seems pleased with the results.";
 		now HP of Sidney is 3;
 		now level of Sidney is 21;
-		move Sidney to Grey Abbey 2F;
-		move player to Grey Abbey 2F;
+		move Sidney to Breakroom;
+		move player to Breakroom;
 		now battleground is "void";
 		now Meeting Sidney is resolved;
 	else:
@@ -202,8 +234,8 @@ to say sidney_otteress_cap:
 				say "     Sidney is quiet but happy as she follows you to the library.  She's unable to keep from touching and looking herself over in joyful awe at her dream come true - well, after a fashion, at least.  You doubt she'd dreamt of being a walking, talking otter femme back before this all started, but she certainly seems pleased with the results.";
 				now HP of Sidney is 3;
 				now level of Sidney is 22;
-				move Sidney to Grey Abbey 2F;
-				move player to Grey Abbey 2F;
+				move Sidney to Breakroom;
+				move player to Breakroom;
 				now battleground is "void";
 				now Meeting Sidney is resolved;
 			else:
@@ -234,8 +266,8 @@ to say sidney_otteress_cap:
 			say "     With Sidney now transformed into a sexy otteress, there is no chance of her returning to the military base, so you offer to let her stay at the library for safety until rescued.  She agrees happily even and follows you, unable to keep from touching and looking herself over in joyful awe at her dream come true - well, after a fashion, at least.  You doubt she'd dreamt of being a walking, talking otter femme back before this all started, but she certainly seems pleased with the results.";
 			now HP of Sidney is 3;
 			now level of Sidney is 23;
-			move Sidney to Grey Abbey 2F;
-			move player to Grey Abbey 2F;
+			move Sidney to Breakroom;
+			move player to Breakroom;
 			now battleground is "void";
 			now Meeting Sidney is resolved;
 		else:
@@ -256,8 +288,8 @@ to say sidney_wusky_cap:
 		say "     With Sidney now transformed into an animalistic wolf-husky, there is no chance of her returning to the military base, so you offer to let her stay at the library for safety until rescued.  She agrees happily even and follows you, unable to keep from touching and looking herself over in joyful awe at her dream come true - well, after a fashion, at least.  You doubt she'd dreamt of being reduced to an animal just to become female, but she seems satisfied with the price paid.";
 		now HP of Sidney is 3;
 		now level of Sidney is 71;
-		move Sidney to Grey Abbey 2F;
-		move player to Grey Abbey 2F;
+		move Sidney to Breakroom;
+		move player to Breakroom;
 		now battleground is "void";
 		now Meeting Sidney is resolved;
 	else if fightoutcome >= 20 and fightoutcome <= 29:
@@ -508,35 +540,5 @@ when play ends:
 			say "***";
 ]
 
-
-[        HP of Sidney         ]
-[ 0 - not encountered	      ]
-[ 1 - met, unconvinced        ]
-[ 2 - convinced               ]
-[ 3 - transformed             ]
-[ 4 - spoke to post-tf        ]
-[ 5 - had sex post-tf F/F     ]
-[ 6 - had sex post-tf M/F     ]
-[ 7 - M/F in another position ]
-[ 99 - happy tf end           ]
-[ 100 - sent back to base     ]
-[ 101 - failed all attempts   ]
-
-[       level of Sidney       ]
-[ 21-50 furries               ]
-[ 21 = red fox vixen          ]
-[ 22 = otteress (f)           ]
-[ 23 = otteress (u)           ]
-[ 71-80 = feral forms         ]
-[ 71 = wusky                  ]
-
-[     lust of Sidney      ]
-[ 0 = not preggers         ]
-[ 1-8 = early pregnancy    ]
-[ 9-16 = late pregnancy    ]
-[ 17+ = birthing time      ]
-
-[        XP of Sidney         ]
-[ # of offspring              ]
 
 Sidney ends here.

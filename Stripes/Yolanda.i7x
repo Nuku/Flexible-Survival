@@ -1,7 +1,32 @@
 Version 2 of Yolanda by Stripes begins here.
 [Version 2.2.1 - Another Yolanda & Dom Icarus threesomes]
+[Version 2.3 - Minor maintenance and character relocation - Luneth]
 
 "Adds a dominant Raven NPC named Yolanda to the Flexible Survival game."
+
+[ HP of Yolanda                                                                ]
+[ 0 = Nothing                                                                  ]
+[ 1 = Talked w/her                                                             ]
+[   + Raven Key Fob unresolved                                                 ]
+[ 2 = Had sex - no bondage                                                     ]
+[ 3 = Had sex - bondage                                                        ]
+[ 4 = Did not offer move                                                       ]
+[ 5 = Unsuccessfully offered move                                              ]
+[ 6 = Successfully moved                                                       ]
+[ 7 = Talked/fucked since moved                                                ]
+[ 8 = No pairing w/Icarus                                                      ]
+[ 9 = Paired w/Icarus                                                          ]
+[ 100 = lost                                                                   ]
+
+[ jbfound  = Jewelry Box                                                       ]
+[ 0 = Not found                                                                ]
+[ 1 = -nothing-                                                                ]
+[ 2 = Jewelry box found                                                        ]
+[ 3 = Jewelry box given to Yolanda                                             ]
+
+[ yolandaqytat = Yolanda gave Qy'tat hint                                      ]
+[ yolandajb = Yolanda gave Jewelry Box hint                                    ]
+[ yolandatreasure = Gave Yolanda pirate gold                                   ]
 
 Section 1 - Raven Nest
 
@@ -100,9 +125,9 @@ to say movingYolanda:
 				say "     Victorious in your fight, you're able to prevent another from snatching up the backpack of jewelry and geegaws you were carrying. Yolanda's not been so lucky in fending off the others, too overburdened by the multiple packs and bags she's trying to carry, several of the smaller of which are now in the talons of harpies and flying off. Your charge scatters the last pair before they can pull free the large duffel bag full of sex toys from the raven's back.";
 				say "     'Oh no! My collection!' the raven caws angrily, preparing to take flight after the stolen satchels, but you hold her back. Pointing out that she'll neither be able to keep up with them nor fight them if she did catch them, she caws angrily again, hurling a colourful mix of curses upon the escaping harpies. In the end, you're able to regain her focus enough by showing her a handful of glittery jewelry and junk from the pack you had saved. Reassuring her that most of her collections are intact, she calms down enough to continue the journey.";
 				say "     She's in a foul mood for the remainder of the trip, snappy and finding fault in everything until you finally make it to the library. Once there, her mood does improve fairly quickly as she discovers that the place is more or less as you'd described it. She continues to make snarky remarks and comments on how it's only a matter of time before some crazy creature comes to drag everyone away, but the tone's changed and more teasing than angry or spiteful. She even thanks you and gives you a tender nip on the neck for protecting her [']treasures[']. In the end, she selects a spot upstairs near a window to set up her new nest. You leave her a little time to get settled in and to finish cooling off.";
-				move Yolanda to Grey Abbey 2F;
+				move Yolanda to Darkened Alcove;
 				now HP of Yolanda is 6;
-				move player to Grey Abbey 2F;
+				move player to Darkened Alcove;
 				now lastfuck of Yolanda is turns + 8;
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Beaten and distracted by the victorious harpy, you are unable to stop the backpack you were carrying from being snatched up and carried off in the talons of another. Other packs have been torn from Yolanda's back and are similarly being carried off by the others. 'Oh no! My collection!' the raven caws angrily, taking flight clumsily under the remaining burden to give pursuit before you can stop her. 'Give me back my shinies! My playthings! You feathery thieves! Lice-ridden bandits! You... you... mythological robbers!' you hear her crying out as she flies off after the considerably faster harpies, leaving you behind. You wait a while, hoping she'll return, but she never does. Eventually, you have to give up and return back to the library on your own after this ill-fated venture.";
@@ -570,14 +595,14 @@ Instead of resolving a Raven Key Fob:
 
 Section 5 - Yolanda and Icarus
 
-instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Library and HP of Icarus >= 3 and HP of Icarus < 50 ) and ( Yolanda is in Grey Abbey 2F and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 ):
+instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Library and HP of Icarus >= 3 and HP of Icarus < 50 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 ):
 	say "     As you're coming up the stairs, you can hear the excited caws of Yolanda. Curious, you go to check on her and find her in lustful play with Icarus. Sitting atop him in avian posture, she's got your passarine pet tied up with his tail raised and her strap-on buried in his ass. She's even put something akin to a combination bird hood and ball gag onto him. Seeing you there, her first response is to give a few hard thrusts into this feathery bottom, drawing out some muffled chirps from his muzzled beak.";
 	say "     [bold type]Giving him a firm nip on the neck, she pauses, as if waiting to see if you'll come join them or leave.[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Join them.";
 	say "     ([link]N[as]n[end link]) - Leave.";
 	if the player consents:
-		move player to Grey Abbey 2F;
+		move player to Darkened Alcove;
 		let avpred be false;
 		if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
 			now avpred is true;
@@ -595,7 +620,7 @@ instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Libr
 		now HP of Yolanda is 8;
 
 an everyturn rule:
-	if player is in Grey Abbey Library and ( Icarus is in Grey Abbey Library and HP of Icarus >= 51 ) and ( Yolanda is in Grey Abbey 2F and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 or cunts of player > 0 ) and skipturnblocker is 0:
+	if player is in Grey Abbey Library and ( Icarus is in Grey Abbey Library and HP of Icarus >= 51 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 or cunts of player > 0 ) and skipturnblocker is 0:
 		let avpred be false;
 		if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
 			now avpred is true;
@@ -639,30 +664,6 @@ an everyturn rule:
 			move player to Bunker;
 			now HP of Yolanda is 8;
 
-
-[ HP of Yolanda                      ]
-[ 0 = Nothing                        ]
-[ 1 = Talked w/her                   ]
-[   + Raven Key Fob unresolved       ]
-[ 2 = Had sex - no bondage           ]
-[ 3 = Had sex - bondage              ]
-[ 4 = Did not offer move             ]
-[ 5 = Unsuccessfully offered move    ]
-[ 6 = Successfully moved             ]
-[ 7 = Talked/fucked since moved      ]
-[ 8 = No pairing w/Icarus            ]
-[ 9 = Paired w/Icarus                ]
-[ 100 = lost                         ]
-
-[ jbfound  = Jewelry Box             ]
-[ 0 = Not found                      ]
-[ 1 = -nothing-                      ]
-[ 2 = Jewelry box found              ]
-[ 3 = Jewelry box given to Yolanda   ]
-
-[ yolandaqytat = Yolanda gave Qy'tat hint ]
-[ yolandajb = Yolanda gave Jewelry Box hint ]
-[ yolandatreasure = Gave Yolanda pirate gold ]
 
 [ Notes:
 other shinnies:

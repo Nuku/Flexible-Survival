@@ -4,6 +4,14 @@ Version 1 of Stella by Stripes begins here.
 
 "Adds a dalmatian herm to Flexible Survival."
 
+[  HP of Stella                                                                ]
+[ overall status                                                               ]
+[ 0 = not met                                                                  ]
+[ 1 = failed invite                                                            ]
+[ 2 = rescued                                                                  ]
+[ 3 = talked                                                                   ]
+[ 4 = had sex                                                                  ]
+
 Section 0 - Event
 
 Eager Dal is a situation.

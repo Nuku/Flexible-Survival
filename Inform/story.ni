@@ -291,7 +291,7 @@ Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
 	if grab object is journal, no;
 	if the absolute value of ( scalevalue of player - objsize of x ) > 1, yes;
 	no;
-	
+
 A person can be defaultnamed. A person is usually defaultnamed.
 
 Definition: A person (called x) is defaultnamed:
@@ -399,12 +399,28 @@ Definition: A person(Called X) is booked:
 	if x is Velos, no;
 	if the location of x is Grey Abbey Library, yes;
 	if the location of x is Grey Abbey 2F, yes;
+	if the location of x is Half-Renovated Room, yes;
+	if the location of x is Breakroom, yes;
+	if the location of x is Pantry, yes;
+	if the location of x is Computer Lab, yes;
+	if the location of x is Back Of The Library, yes;
+	if the location of x is Makeshift Rec Room, yes;
+	if the location of x is Courtyard, yes;
+	if the location of x is Large Shed, yes;
+	if the location of x is Garden, yes;
+	if the location of x is Sitting Area, yes;
+	if the location of x is Garden View, yes;
+	if the location of x is Darkened Alcove, yes;
+	if the location of x is Attic, yes;
 	no;
 
 Definition: A person(Called X) is bunkered:
 	If x is the player, no;
 	if x is Velos, no;
 	if the location of x is Bunker, yes;
+	if the location of x is Communal Shower, yes;
+	if the location of x is Underground Restroom, yes;
+	if the location of x is Maintenance Closet, yes;
 	no;
 
 
@@ -763,100 +779,118 @@ Noncon is a flag.
 Mindcontrol is a flag.
 
 when play begins:
-	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
-	add { "Slut Rat", "Female Husky", "Black Equinoid", "Ashen Breeder", "Lizard Girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "Sewer Gator", "Deer", "Sea Otter", "Ebonflame Draken", "Red Kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
-	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "Feral Sea Dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
-	add { "Ashen Breeder", "Ebonflame Draken", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "Sewer Gator", "Deer", "Black Equinoid", "Spidergirl", "Mothgirl" } to infections of hermaphrodite;
-	add { "Female Husky", "Lizard Girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "Spidergirl", "Mothgirl", "Red Kangaroo", "City Sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
-	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Quilled Tousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
+	add { "Awesome tree", "Bottlenose Toy", "Cock Cannon", "Quilled Tousky" } to infections of humorous;
+	add { "Ashen Breeder", "Bear", "Black Equinoid", "Bovine", "Chinchilla", "Deer", "Doberman", "Ebonflame Draken", "Ewe", "Feline", "Female Husky", "Fruit Bat", "German Shepherd", "Harpy", "Herm Hyena", "Hermaphrodite Dolphin", "Hermaphrodite Gryphon", "Killer Whale", "Lizard Girl", "Painted Wolf Herm", "Pirate Shark", "Pit bull", "Platypus", "Ram", "Red Kangaroo", "Sea Otter", "Sewer Gator", "Shemale Smooth Collie", "Skunk", "Slut Rat", "Snow Bat", "Trash Coon", "Wildcat" } to infections of furry;
+	add { "Bovine", "Cock Cannon", "Demon Brute", "Feline", "Felinoid", "Feral Mutt", "Feral Sea Dragon", "Fruit Bat", "German Shepherd", "Junkman", "Killer Whale", "Latex Fox", "Latex Wolf", "Liquidshifter", "Ram", "Platypus", "Quilled Tousky", "Sandman", "Sea Otter", "Skunk", "Tentacle Horror" } to infections of guy;
+	add { "Ashen Breeder", "Black Equinoid", "Deer", "Ebonflame Draken", "Herm Hyena", "Hermaphrodite Dolphin", "Hermaphrodite Gryphon", "Painted Wolf Herm", "Panther Taur", "Parasitic Plant", "Pirate Shark", "Sewer Gator", "Sea Otter", "Slut Rat", "Spidergirl", "Wildcat" } to infections of hermaphrodite;
+	add { "Bear", "Bottlenose Toy", "Bovine", "City Sprite", "Doberman", "Ewe", "Feline", "Female Husky", "Feral Sea Dragoness", "Harpy", "Lizard Girl", "Mothgirl", "Red Kangaroo", "Sea Otter", "Skunk", "Spidergirl", "Tentacle Horror", "Trash Coon" } to infections of girl;
+	add { "Bovine", "Behemoth", "Cerberus", "Ebonflame Dragator", "Ebonflame Whelp", "Feral Cheetah", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Gryphon", "Feral Shaft Beast", "Feral Wolf", "Flaming Lynx", "Friendship Pony", "Hydra Beast", "Latex Fox", "Latex Wolf", "Manticore", "Peculiar Dragon", "Pegasus", "Quilled Tousky", "Sabretooth", "Shadow Beast", "Sierrasaur", "Snake", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of feral;
+	add { "Demon Brute" } to infections of hellspawn;
+	add { "Mothgirl", "Shemale Smooth Collie" } to infections of transgender;
 
 [corollary]
 marker is a kind of thing.
 A marker has a list of text called infections.
 Tailweapon is a marker.
 when play begins:
-	add { "Drone Wasp", "Red Kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "Hermaphrodite Dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "Sewer Gator", "Pirate Shark", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Spidergirl", "Feral Sea Dragon", "Feral Sea Dragoness", "Naga", "Lizard Girl" } to infections of Tailweapon;
+	add { "Anthro Shaft Beast", "Dragon", "Dragoness", "Drone Wasp", "Ebonflame Draken", "Ebonflame Dragator","Ebonflame Whelp", "Hermaphrodite Dolphin", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Shaft Beast", "Killer Whale", "Lizard Girl", "Naga", "Pirate Shark", "Red Kangaroo", "Sewer Gator", "Skunk", "Spidergirl", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of Tailweapon;
 
-Felinelist is a marker.	[list of feline infections]
+Felinelist is a marker. [list of feline infections]
 when play begins:
-	add { "Feral Cheetah", "cheetah woman", "Cougar", "Feline", "Felinoid", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Siamese Cat", "sphinx", "Snow Leopard", "Tiger", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
+	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
 
-Caninelist is a marker.	[list of canine/lupine infections]
+Caninelist is a marker. [list of canine/lupine infections]
 when play begins:
-	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmation", "Female Husky", "Feral Wolf", "German Shepherd", "Jackalboy", "Jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever", "Shemale Smooth Collie", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Caninelist;
+	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmation", "Doberman", "Female Husky", "Feral Wolf", "German Shepherd", "Jackalboy", "Jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever", "Shemale Smooth Collie", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Caninelist;
 
-Equinelist is a marker.	[list of equine infections]
+Equinelist is a marker. [list of equine infections]
 when play begins:
-	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra", "Red Horse" } to infections of Equinelist;
+	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Red Horse", "Stallionboi", "Unicorn", "Zebra" } to infections of Equinelist;
 
-Vulpinelist is a marker.	[list of vulpine infections]
+Vulpinelist is a marker. [list of vulpine infections]
 when play begins:
-	add { "Clockwork Fox", "Hermaphrodite Latex Vixen", "Latex Fox", "Vixen Nurse", "Arctic fox", "Vulpogryph", "Kitsune" } to infections of Vulpinelist;
+	add { "Arctic fox", "Clockwork Fox", "Hermaphrodite Latex Vixen", "Kitsune", "Latex Fox", "Vixen Nurse", "Vulpogryph" } to infections of Vulpinelist;
 
-Reptilelist is a marker.	[list of reptiles/snakes/dragons/dinosaurs/etc... infections]
+Reptilelist is a marker. [list of reptiles/snakes/dragons/dinosaurs/etc... infections]
 when play begins:
-	add { "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "Lizard Girl", "Sewer Gator", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness", "Slutty Dragoness", "Horny Dragon", "Dragon", "Dragoness", "Naga", "Snake", "Reptaur", "Sierrasaur" } to infections of Reptilelist;
+	add { "Dragon", "Dragoness", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "Horny Dragon", "Hydra Beast", "Lizard Girl", "Naga", "Reptaur", "Sewer Gator", "Sierrasaur", "Slutty Dragoness", "Snake", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness" } to infections of Reptilelist;
 
-Insectlist is a marker.	[list of insectile/arachnid/bug infections]
+Insectlist is a marker. [list of insectile/arachnid/bug infections]
 when play begins:
-	add { "Black Wasp", "Drone Wasp", "Butterfly", "Mothgirl", "Spidergirl", "Spidertaur" } to infections of Insectlist;
+	add { "Black Wasp", "Butterfly", "Drone Wasp", "Mothgirl", "Spidergirl", "Spidertaur" } to infections of Insectlist;
 
-Plantlist is a marker.	[list of plant infections]
+Plantlist is a marker. [list of plant infections]
 when play begins:
-	add { "Awesome tree", "Dryad", "Parasitic Plant", "Mushroom Men" } to infections of Plantlist;
+	add { "Awesome tree", "Dryad", "Mushroom Men", "Parasitic Plant" } to infections of Plantlist;
 
-Avianlist is a marker.	[list of avian/bird infections]
+Avianlist is a marker. [list of avian/bird infections]
 when play begins:
-	add { "Bald Eagle", "Fluffy Owl", "Harpy", "Hermaphrodite Gryphon", "Peacock", "Quilled Tousky", "Hawkman", "Siren", "Vulpogryph", "Bird of Paradise" } to infections of Avianlist;
+	add { "Bald Eagle", "Bird of Paradise", "Fluffy Owl", "Harpy", "Hawkman", "Hermaphrodite Gryphon", "Peacock", "Quilled Tousky", "Siren", "Vulpogryph" } to infections of Avianlist;
 
-Avianpredlist is a marker.	[list of predatory avian/bird infections]
+Avianpredlist is a marker. [list of predatory avian/bird infections]
 when play begins:
-	add { "Bald Eagle", "Fluffy Owl", "Hermaphrodite Gryphon", "Hawkman" } to infections of Avianpredlist;
+	add { "Bald Eagle", "Fluffy Owl", "Hawkman", "Hermaphrodite Gryphon" } to infections of Avianpredlist;
 
-Rodentlist is a marker.	[list of rodent infections]
+Rodentlist is a marker. [list of rodent infections]
 when play begins:
-	add { "Slut Rat", "Hyper Squirrel" } to infections of Rodentlist;
+	add { "Beaver", "Hyper Squirrel", "Slut Rat" } to infections of Rodentlist;
 
-TaurList is a marker.	[list of tauric infections]
+Latexlist is a marker. [list of infections w/latex/rubber/plastic skin]
 when play begins:
-	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "Tigertaur", "Wolftaur", "Skunk Taur" } to infections of TaurList;
+	add { "Bottlenose Toy", "Hermaphrodite latex vixen", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber tigress" } to infections of Latexlist;
+
+Slimelist is a marker.  [list of slime infections]
+when play begins:
+	add { "Liquidshifter" } to infections of Slimelist;
+
+Magicallist is a marker. [list of magic based infections]
+when play begins:
+	add { "Goblin", "Hydra Beast", "Mothgirl" } to infections of Magicallist;
+
+Machinelist is a marker. [list of machine infections]
+when play begins:
+	add { "Junkman", "Wildcat" } to infections of Machinelist;
+
+Humanishlist is a marker. [list of humanish infections]
+when play begins:
+	add { "Caveman", "Helot", "Spartan", "Viking" } to infections of Humanishlist;
+
+TaurList is a marker. [list of tauric infections]
+when play begins:
+	add { "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "Reptaur", "Skunk Taur", "Tigertaur", "Wolftaur" } to infections of TaurList;
 [Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional. It also does not include the Spidergirl and Spidertaur forms, as their genitals are located in the front where the human pelvis would be, and therefore would not match with scenes specifically designed for taur anatomy.]
 
-NoLegList is a marker.	[list of infections without legs]
+NoLegList is a marker. [list of infections without legs]
 when play begins:
 	add { "Blue Gel", "Pink Gel", "Purple Gel" } to infections of NoLegList;
 
-Knotlist is a marker.	[list of infections w/knotted cock]
+Knotlist is a marker. [list of infections w/knotted cock]
 when play begins:
-	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Doberman", "Jackalboy", "Jackalman", "Wolftaur", "Arctic fox", "Retriever", "Herm Hyena", "Coyote", "Latex Wolf", "Pit bull", "Hermaphrodite Gryphon", "Latex Fox", "Dalmation", "Painted Wolf Herm", "Female Husky", "Feral Wolf", "Vixen Nurse", "Werewolf Costume", "Vixentaur", "Vulpogryph", "Dracovixentaur", "Clockwork Fox", "Fennec", "Cerberus", "Chocolate Lab", "Black Wolf", "Hellhound", "German Shepherd", "hermaphrodite latex vixen", "Kitsune", "Shemale Smooth Collie", "Wrestling Wolf", "Football Wolfman" } to infections of Knotlist;
+	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Arctic fox", "Black Wolf", "Cerberus", "Chocolate Lab", "Clockwork Fox", "Coyote", "Dalmation", "Doberman", "Dracovixentaur", "Female Husky", "Fennec", "Feral Wolf", "Football Wolfman", "German Shepherd", "Hellhound", "Hermaphrodite Gryphon", "hermaphrodite latex vixen", "Herm Hyena", "Jackalboy", "Jackalman", "Kitsune", "Latex Fox", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Quilled Tousky", "Retriever", "Shemale Smooth Collie", "Vixen Nurse", "Vixentaur", "Vulpogryph", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Knotlist;
 
-Latexlist is a marker.	[list of infections w/latex/rubber/plastic skin]
+Internallist is a marker. [list of infections w/internal male genitals]
 when play begins:
-	add { "Latex Wolf", "Latex Fox", "hermaphrodite latex vixen", "Rubber tigress", "Bottlenose Toy", "Latex Mistress" } to infections of Latexlist;
-
-Internallist is a marker.	[list of infections w/internal male genitals]
-when play begins:
-	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake", "Naga", "Sierrasaur" } to infections of Internallist;
+	add { "Feral Sea Dragon", "Feral Sea Dragoness", "Hermaphrodite Dolphin", "Hydra Beast", "Naga", "Pirate Shark", "Sierrasaur", "Snake", "Yamato Dragon", "Yamato Dragoness", "Wyvern" } to infections of Internallist;
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
-	add { "Panther Taur", "Shadow Beast", "Ninja Cat", "cheetah woman", "Tigress Hooker", "Ashen Breeder", "Rubber tigress", "Cougar", "Tiger", "Margay", "Tiger Cop", "Plush lion", "Sabretooth", "Catgirl", "Tigertaur", "Leopardman", "Wildcat", "Feral Gryphon", "Pantherherm", "Ebonflame Dragator", "Manticore", "Feline Gymnast", "Jaguar Warrior", "Ebonflame Draken", "sphinx", "Ebonflame Whelp", "Snow Bat", "Anthro Shaft Beast", "Corota", "Feral Shaft Beast", "Fire Elemental", "Feral Cheetah", "Felinoid" } to infections of BarbedCocklist;
+	add { "Anthro Shaft Beast", "Ashen Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast", "Sphinx", "Snow Bat", "Tiger", "Tiger Cop", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of BarbedCocklist;
 
 Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:
-	add { "Wyvern", "Dracovixentaur", "Dragontaur", "Feral Sea Dragoness", "Feral Sea Dragon", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame Draken", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon" } to infections of Firebreathlist;
+	add { "Dragontaur", "Dracovixentaur", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Feral Sea Dragoness", "Feral Sea Dragon", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon", "Wyvern" } to infections of Firebreathlist;
 
-Bluntlist is a marker.	[list of infections w/blunt cock]
+Bluntlist is a marker. [list of infections w/blunt cock]
 when play begins:
-	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra", "Sierrasaur", "Wyvern", "Donkeyman", "Donkeywoman", "Giraffe", "Nightmare", "Palomino", "Friendship Pony", "Reindeer" } to infections of Bluntlist;
+	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Donkeyman", "Donkeywoman", "Friendship Pony", "Giraffe", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Palomino", "Pegasus", "Reindeer", "Sierrasaur", "Stallionboi", "Unicorn", "Zebra", "Wyvern" } to infections of Bluntlist;
 
 Flightlist is a marker. [list of infections w/flight capability]
 when play begins:
-	add { "Wyvern", "Reindeer", "Pegasus", "Dragontaur", "Dracovixentaur", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame Draken", "Fire Sprite", "Yamato Dragoness", "Yamato Dragon", "Snow Bat", "Bald Eagle", "Fluffy Owl", "Hermaphrodite Gryphon", "Hawkman", "Harpy", "Vulpogryph", "Bird of Paradise", "Black Wasp", "Drone Wasp", "Butterfly", "Mothgirl" } to infections of Flightlist;
+	add { "Bald Eagle", "Bird of Paradise", "Black Wasp", "Butterfly", "Dragontaur", "Dracovixentaur", "Drone Wasp", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame Draken", "Fire Sprite", "Fluffy Owl", "Hawkman", "Harpy", "Hermaphrodite Gryphon", "Mothgirl", "Fruit Bat", "Pegasus", "Reindeer", "Snow Bat", "Vulpogryph", "Yamato Dragon", "Yamato Dragoness", "Wyvern" } to infections of Flightlist;
 
 Swimlist is a marker. [list of infections capable of swimming underwater]
 when play begins:
-	add { "Feral Sea Dragon", "Feral Sea Dragoness", "Sewer Gator", "Sea Otter", "Bottlenose Toy", "Platypus", "Pirate Shark" } to infections of Swimlist;
+	add { "Bottlenose Toy", "Feral Sea Dragon", "Feral Sea Dragoness", "Hermaphrodite Dolphin", "Killer Whale", "Pirate Shark", "Platypus", "Sea Otter", "Sewer Gator" } to infections of Swimlist;
 
 Part 2 - Rules
 

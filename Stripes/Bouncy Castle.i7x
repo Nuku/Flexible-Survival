@@ -1,5 +1,6 @@
 Version 5 of Bouncy Castle by Stripes begins here.
 [Version 5.1 - Bound State Addition Phase 1]
+[Version 5.2 - Minor maintenance and character relocation - Luneth]
 "Save the vixen 'princess' from the 'castle'."
 
 Section 1 - Starting Event
@@ -2110,8 +2111,8 @@ to say bcfinalsuccess:
 			say "     Finding your crotch bare, gives it a few kisses, saying it's so sad that you're like this when there's so much sexy fun to be had. 'At least there's no shortage of people out there who'd be willing to help you solve your little problem,' she giggles. Kneading your rear, she continues to kiss and lick you, moving back to your crinkled hole instead[if anallevel is 1]. She gives it a few licks while fingering herself to a quick orgasm[else]. She brushes her latex tongue across your anal ring slowly before wriggling it into you. You moan at the slick, squirming penetration and unconsciously push your rear back, seeking more. She caresses your needy bottom with her inflatable paws and pushes her tongue deeper. It even feels like it's swelling up inside you. Trembles of undirected pleasure run through your body as you can only grind back against her muzzle and squeeze down around her tongue. Eventually, she pops her tongue free with a wet slurp. Looking back, you can see it was indeed inflated and stretched out like a long, thin balloon. 'Wooo! That was fun!' she giggles as soon as her tongue's deflated back to its normal size and she's able to speak again[end if].";
 		say "     'Say! I can't really remember my name anymore,' she says as cheerfully as everything else that bubbles out of her. 'That means I need a new one. Let's see... how about... Bubble?  Yeah! I'm Bubble,' she yips happily.";
 		now HP of Bubble is 4;
-		move Bubble to Grey Abbey 2F;
-		move player to Grey Abbey 2F;
+		move Bubble to Makeshift Rec Room;
+		move player to Makeshift Rec Room;
 		now battleground is "void";
 	else:
 		say "     'Oh... Well, thanks for saving me, I guess,' she says, briefly disappointed, before her mind wanders again. 'Maybe some else out there would like a little latex lovin[']. I know I do,' she yips merrily. 'Well, time for me to head off, sweety. Thanks for the rescue,' she says, giving your ass a squeeze before dashing off with a girlish giggle.";

@@ -474,7 +474,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of
 		say "     DEBUG: HP of Candy: [HP of Candy][line break]";
 	say "     You step into the library, relaxing slightly as you step into the familiar, safe building... until you notice an open door, labelled 'Employees Only', off to the side, and hear the sounds of someone rummaging around in the dark room. Carefully prepping your weapon, you carefully step into the room... and to your relief, discover it's only Candy, rummaging around the desks. He glances over at you, holding a few papers in his paws. 'Oh, hey, you!' he says, grinning. 'Sorry if I spooked you, but... I have a weird feeling about this room, that's all.' He says. 'Like I... used to spend a lot of time in here, when I was little. Probably nothing, but...' He tosses the papers onto a random desk, memos and job applications scattering onto the wooden surface. 'Well, you know where to find me. I don't think any of this is catching my eye.' He says, sashaying out past you [if cocks of player > 0]while running a hand across your thigh.[else]with a smile.[end if]";
 	now HP of Candy is 1;
-	
+
 instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Candy > 0 and HP of Candy < 2):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
@@ -495,7 +495,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of
 		LineBreak;
 		say "     Candy nods, though you see a bit of reluctance on his features. '...yeah. Yeah, it's probably better if I just... let this go.' He says, putting the photo down on the desk lightly. 'It doesn't really matter, does it? We're in such a different world, even if they were still around I probably wouldn't recognize them.' He says, though you can tell the raccoon seems more intent on convincing himself than anything. 'Besides, I'm happy now. [if cocks of player > 0]I've got you, for starters,[else]you're the best friend I could ever ask for,[end if] and I'm not going to let some woman who I probably didn't even know in the first place get in the way of that happiness. I'm... [italic type]we're[roman type] happy, now.' He says. You watch him place the picture frame face down as you both leave, the coon closing the door behind him.";
 		now HP of Candy is 100;
-		
+
 instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Candy > 1 and HP of Candy < 3 and LastCandyWalkin - turns > 1 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
@@ -537,7 +537,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and Lust 
 		say "     DEBUG: HP of Candy: [HP of Candy], Lust of Carl: [Lust of Carl][line break]";
 	say "     You let out a sigh of relief as you enter the library. A moment of peace, at least for now. You hear Candy's voice upstairs, from the second floor of the building. Figuring you might as well see what they're up to, you head upstairs... to discover Candy, seated on Carl's mattress, reading out loud from a book as the husky keeps watch out the window. They both turn to look at you as you come up the stairway. 'Oh, hey!' Candy says, smiling. 'I was just keeping Carl company. He wasn't really in the mood for anything, but I figured we could still spend time together.' Candy says and smiles at the husky, who's already returned to his vigilant watch. 'Isn't that right, Carl?' he asks, receiving a nod and a 'Hmhm' from the task-minded canine. You give the pair a thumbs up, deciding to leave the both of them to it while you attend to other business.";
 	now LastCandyWalkin is turns;
-	
+
 instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Candy >= 0 and Sarah is in the bunker and sarahslut < 4 and daytimer is night and LastCandyWalkin - turns > 8 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
@@ -552,7 +552,7 @@ after going to Grey Abbey 2F while (Candy is in the Bunker and CandyUrikInteract
 		say "     DEBUG: HP of Candy: [HP of Candy], CandyUrikInteraction: [CandyUrikInteraction][line break]";
 	say "     Coming up the stairs to the second floor of the library, you immediately discover Urik snoozing on his sofa... and Candy, almost fucked senseless and lying on the green brute's broad chest. He breathes like he just ran a marathon, visibly exhausted from the orc's vigorous fucking. 'Let [if HP of Candy > 2 and HP of Candy < 100]John[else]everyone[end if] know I died doing what I love,' the raccoon announces theatrically. You try not to roll your eyes too hard at his dramatics and inform him he's probably going to live, eliciting a huff from your flamboyant friend. 'You're no fun at all. Here I am having a moment and you have to rain on my parade.' You chuckle at the raccoon's behavior and head off to let him catch his breath.";
 	now LastCandyWalkin is turns;
-	
+
 instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Fang is 3 or HP of Fang is 4 and HP of Candy > 0 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
@@ -570,7 +570,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of
 		say "     DEBUG: HP of Candy: [HP of Candy], HP OF FANG: [HP of Fang][line break]";
 	say "     Candy seems a bit troubled as you arrive at the library, occasionally glancing at Fang as he generally pads around his territory. He approaches you as you enter. '...I wonder what John would say about this...' he says. 'Fang, I mean. I'm not going to pretend I haven't been enjoying every second of this, but... well, I'm me, yknow? Hopped up on nanites and my own flamboyant tendencies.' He says, pausing for a little while before shrugging. 'Well, it's a new world, and a new me. And I'm not going to go denying myself just for somebody else. Even if he doesn't like it, he'll have to live with it, right?' Candy says. He turns back to Fang, a devious grin on his face. 'Besides, he always said dogs were man's best friend. Really, he should've seen this coming.'";
 	now LastCandyWalkin is turns;
-	
+
 instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Candy > 0 and HP of Candy < 3 and Gryphoness is tamed and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
@@ -596,7 +596,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of
 	if debugactive is 1:
 		say "     DEBUG: HP of Candy: [HP of Candy], HP OF ALEXANDRA: [HP of Alexandra][line break]";
 	say "     Candy has an odd look on his face when you arrive at the library. 'Hey, uh, you know better than anyone that I'm definitely a bit of a libertine, but...' he frowns. 'You do realize the military might be a bit pissed if they barge in here and see you turned a law enforcement officer into an aggressive, sex-addled bitch, right?' he shakes his head. 'I mean, you do whatever you want with whoever you want, really, but... maybe try to figure out an alibi before the big men with the bigger guns roll into town?' he says. You're not entirely sure how you feel about Candy openly questioning your authority like that, but the raccoon goes off to do something else before you can formulate a response. You scowl a bit and decide you'll ignore it... this time.";
-	now LastCandyWalkin is turns;	
+	now LastCandyWalkin is turns;
 
 Section 7 - Total Coonification
 
@@ -781,7 +781,7 @@ when play ends:
 					say "     Your pet raccoon loyally accompanies you on your band's tours and is there to give you his obedient and lustful affection whenever wanted. He seems to legitimately love your band's music as well, dancing happily to it with your groupies whenever he can sneak away from his handlers during your shows. You aren't at all surprised when you start spotting a few fans with colourful raccoon tails in the audience.";
 				else:
 					say "     Denise and your raccoon pet seem to get along well, and one day you return home to be greeted with beautiful singing and amazing dancing by your two loving pets. You are so impressed, you urge them to continue working on music and choreography, and privately wonder if you should take this show on the road, and how to do so without breaking certain decency laws.";
-			if ( pigfucked > 0 ) or ( ( bodyname of player is "Messy Pig" or bodyname of player is "Piggy" ) and cunts of player > 0 and Philip is in the Bunker ):
+			if ( pigfucked > 0 ) or ( ( bodyname of player is "Messy Pig" or bodyname of player is "Piggy" ) and cunts of player > 0 and Philip is in the Large Shed ):
 				say "     Your raccoon pet seems jealous of the affection you give Philip. He mopes quietly if he sees you being affectionate with him or notices the boar's strong scent on you after you've had sex with him. He steadfastly refuses to play with the pig, though will happily enjoy any other lover you share with him. ";
 				if ( cocks of player is 0 and cunts of player > 0 ) or ( ( bodyname of player is "Messy Pig" or bodyname of player is "Piggy" ) and cunts of player > 0 ):	[Female at farm OR F/H Piggy at farm]
 					say "     When the coon gets even more sullen after the move to the pig farm and your oncoming litter, Philip has had enough. The next time the coon hisses at him when he strokes your pregnant belly, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
@@ -790,7 +790,7 @@ when play ends:
 						say "     When the coon gets even more sullen after the move to the pig farm and your repeated rutting with the boar, Philip has had enough. The next time the coon hisses at him when he squeezes your subby, cum-filled bottom, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
 					else:					[M Piggy lover]
 						say "     When the coon gets even more sullen after the move to the pig farm and your repeated rutting of the sows, Philip has had enough. The next time the coon hisses at him while watching you in the pen, siring more hogs, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
-			else if ( bodyname of player is "Messy Pig" or bodyname of player is "Piggy" ) and pigfucked is 0 and Philip is in the Bunker:
+			else if ( bodyname of player is "Messy Pig" or bodyname of player is "Piggy" ) and pigfucked is 0 and Philip is in the Large Shed:
 				say "     Your raccoon pet seems jealous of the friendship you have with Philip. He mopes quietly if he sees you with him or notices the boar's strong scent on you after you've hung out. He steadfastly refuses to play with the pig, though will happily enjoy any other lover you offer him."; [M Piggy friend]
 
 Candy Striper ends here.

@@ -1,6 +1,7 @@
 Version 3 of Gryphon companion by Sarokcat begins here.
 [Version 2.2 - Player initiated pet sex]
 [Version 3   - NPC/Pet double character]
+[Version 3.1 - Character relocation - Luneth]
 
 "Adds a special event to Flexible Survival with a potential pet."
 
@@ -31,7 +32,7 @@ to say summongryphoness:
 	let T be ( libido of gryphoness / 4 );
 	remove Denise from play;
 	project Figure of BlueGryphon_icon;
-	if player is not in Grey Abbey 2F: [regular summoning]
+	if player is not in Garden View: [regular summoning]
 		say "     You sing out several notes of the song the way the gryphon you encountered taught you, your voice echoing through the empty city, and before long you hear an answering voice responding, and with flap of wings from above, and you look up just in time to see the herm gryphon you helped hurl herself into your arms, cooing and rubbing up against your body eagerly.";
 		if ( tempnum is 0 or tempnum is 1 ) and T is 1:
 			say "     Landing moments after Denise is your gryphon child. She is a cute version of Denise in miniature, another blue gryphon herm with a pretty face and a happy smile. She runs up and shares in the hug with you both.";
@@ -88,8 +89,8 @@ to say summongryphoness:
 			say "     ERROR-Denise-3S: You should not able able to smell her right now.";
 
 to say dismissgryphoness:
-	move Denise to Grey Abbey 2F;
-	if player is not in Grey Abbey 2F: [regular dismiss]
+	move Denise to Garden View;
+	if player is not in Garden View: [regular dismiss]
 		say "     Pulling Denise the gryphoness close, you give her another deep kiss, then send her off on her own. With a happy, 'See you later, my love,' she swings herself into the air, flying off with strong beats of her large feathered wings.";
 	else: [dismissing her in the abbey, next to her nest]
 		say "     Pulling Denise the gryphoness close, you give her another deep kiss, then tell her she should stay home for now. With a happy, 'See you later, my love,' she strides over to her nest, then climbs into the comfortable and warm refuge.";
@@ -207,7 +208,7 @@ an everyturn rule:
 					say "with another new child. She is cradling the youngest gryphlet in her arms, nursing her from her bosom. Her pregnant belly is already going down, her child delivered while she had slipped away. You both stroke and hug your new child, looking her over. You feel a swell of happiness and love for this new child. Like her mother and siblings, the young herm has blue feathers and tawny, leonine fur. She grows quickly and is soon walking alongside her mother, a cute, younger version of Denise in miniature. As before, the eldest remaining sibling, now almost fully adult, snugs you all tightly and nuzzles before heading off into the city to seek her fortune and a loving mate of her own.";
 				increase libido of gryphoness by 1; [incease to tempnum 4 = 0 -> no birth message for next summon since player saw the kid already]
 				now knowpreg of gryphoness is 0;    [reset, pregnancy over]
-			else if player is in Grey Abbey 2F and Denise is in grey Abbey 2F: [player and Denise are in the library]
+			else if player is in Grey Abbey 2F and Denise is in Garden View: [player and Denise are in the library]
 				say "     Looking around, you notice that Denise is breathing pretty hard, a hand laying on her swollen stomach. Then she meets your gaze with an intense look and gasps, 'It's time - I can feel the egg coming!' Fortunately, she isn't far from her nest, so it is easy to lead her back to it and allow her to lay on the softer cushions with her wings spread, anticipating the egg's arrival. Thankfully, laying the egg isn't too hard on her transformed physique, as Denise's folds are quite... accommodating for something with large girth coming out - or going in. The effort still clearly tires her out, puffing and panting in time with the throbbing of her womb as her body prepares to release the fully-developed egg, but she doesn't look like she's in any serious pain. After about ten minutes of working up to it, the egg is eventually crowning and slides free of her stretched pussy to land on one of the cushions of her nest.";
 				say "     The moment the egg is clear of her body, it starts to rock and shake, a faint tapping coming from within. Denise croons, bending her own head down to tap at the eggshell from the other side with her beak. Soon enough cracks appear and widen before the eggshell finally splits, spilling a small gryphlet into Denise's arms, still damp with egg fluids. Humming happily, your sexy gryphoness cradles the newborn to her breast to nurse, the chick gripping her nipple with a still soft and flexible beak. Fluffy down falls to the floor as the little blue gryphon suckles greedily, growing and gaining an early-teen body, complete with bright blue feathers aand golden fur in a matter of moments. At last, the child pulls off the nipple and Denise gives her a soft pat on the head before setting her down.";
 				if T is 0:
@@ -235,7 +236,7 @@ an everyturn rule:
 			if companion of player is gryphoness and knowpreg of gryphoness is 0:
 				say "     Looking over at Denise, you notice that her belly's starting to swell rounder. She smiles happily at you, running her paws over her growing pregnancy. It seems you successfully knocked her up recently.";
 				now knowpreg of gryphoness is 1;
-			else if player is in Grey Abbey 2F and Denise is in grey Abbey 2F and knowpreg of gryphoness is 0:
+			else if player is in Grey Abbey 2F and Denise is in Garden View and knowpreg of gryphoness is 0:
 				say "     Looking over at Denise, you notice that her belly's starting to swell rounder. She smiles happily at you, running her paws over her growing pregnancy. It seems you successfully knocked her up recently.";
 				now knowpreg of gryphoness is 1;
 			increase libido of gryphoness by 1; [tempnum 1 increased to tempnum 2 for visible pregnancy]
@@ -362,7 +363,7 @@ Instead of resolving Gryphoness nest:
 						say "     Seeing no reason to deny such an earnest request, you nod and she hugs you again happily, her breasts already beginning to leak a little milk like a proper herm gryphons should as rubs her body up against yours. Smiling she teaches you a few notes of the song she was singing, so that no matter where she is in the city, you can always call her right to your side, and she leaves you to head out down the beach back to the city, while she cleans up the alcove and makes some more room in there for extra cushions for a proper nest, and gets rid of some of the unneeded items from her old life.";
 						say "     [line break]";
 						now Gryphoness is tamed;
-						move Denise to Grey Abbey 2F;
+						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Hermaphrodite Gryphon";
 						say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]and initiate sex with her while active by typing [bold type][link]fuck gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
@@ -376,7 +377,7 @@ Instead of resolving Gryphoness nest:
 						say "     Eventually you both recover enough to sit up again, Denise smiling at you eagerly as she thanks you for your help in making her understand just how much better being a gryphon is than being just another human. She hugs you eagerly, and the two of you sit there and talk for a bit longer about how much happier she will be as a gryphon, and she teaches you a bit of her favorite song. When you finally get up to leave, Denise asks tearfully if she can come with you, not ready to go back to her lonely lifestyle now that she has found companionship. She brightens up when you nod and tell her she can come along with you. She flies off to clean up and get ready, but lets you know eagerly that all you need to do is sing out a few notes of her song and she will find you.";
 						say "     [line break]";
 						now Gryphoness is tamed;
-						move Denise to Grey Abbey 2F;
+						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Hermaphrodite Gryphon";
 						say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
@@ -394,7 +395,7 @@ Instead of resolving Gryphoness nest:
 					say "     Finally able to slide free of her cock, you cuddle a bit longer before turning to leave, though Denise stops you before you can leave the cave and tells you that if you ever need her help for anything, she is more than happy to come wherever you are. You feel yourself grinning as you nod eagerly thinking of what kind of help the herm gryphon can bring you, and promise to sing out a few bars of her song if you ever can use her help.[ovichance]";
 					say "     [line break]";
 					now Gryphoness is tamed;
-					move Denise to Grey Abbey 2F;
+					move Denise to Garden View;
 					now gryphoncomforted is 3;
 					infect "Hermaphrodite Gryphon";
 					say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
@@ -421,7 +422,7 @@ Instead of resolving Gryphoness nest:
 						say "     'Sorry, it's just that, well, I can hardly wait to finally have someone to play with...' the shy gryphoness says as she smiles at you happily. 'Even if you aren't another gryphon... yet,' she says teasingly, as she proceeds to teach you a few notes of her song so you can call out for her to find you no matter where you are in the city. You find yourself leaving her small cave with a smile on your own face, as you wonder just what kind of new companion the strange gryphoness will make for you, and if you really would mind becoming a gryphon stud to keep her company as she is so obviously hoping you will...";
 						say "     [line break]";
 						now Gryphoness is tamed;
-						move Denise to Grey Abbey 2F;
+						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Hermaphrodite Gryphon";
 						say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
@@ -431,7 +432,7 @@ Instead of resolving Gryphoness nest:
 						say "     She teasingly runs one of her talons through her soft fur. 'And maybe if we are lucky you will end up as a gryphoness just like me,' she says with a wink as she rubs her breasts teasingly, before spreading her wings slightly. 'The flying alone is unbelievably amazing, and then we could go find the other gryphons together...' Denise says with excitement, her own eagerness contagious as you find yourself almost nodding along automatically. Seeing your eager response, she hugs you again happily before she proceeds to teach you a few notes of her song so you can call out for her to find you no matter where you are in the city. You find yourself leaving her small cave with a smile on your own face, as you wonder just what kind of wonderful new companion the Denise will be, and wondering if it would really be so bad to become a breeding gryphon just like her as she is so obviously hoping you will...";
 						say "     [line break]";
 						now Gryphoness is tamed;
-						move Denise to Grey Abbey 2F;
+						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Hermaphrodite Gryphon";
 						say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";

@@ -22,27 +22,47 @@ Version 2 of Korvin by Stripes begins here.
 Section 0 - GShep Pet
 
 gshep is a pet. gshep is a part of the player.
-The description of gshep is "[Korvin_desc]".
+understand "Korvin" as gshep.
+The description of gshep is "[Korvindesc]".
 The conversation of gshep is { "Bark!" }.
 The weapon damage of gshep is 5.
 The level of gshep is 3.
 The Dexterity of gshep is 13.
-The summondesc of gshep is "Calling for Korvin, the German Shepherd joins you at your side. He seems excited at the prospect of busting some heads.".
+The summondesc of gshep is "[SummonKorvin]".
+The dismissdesc of gshep is "[DismissKorvin]".
 The assault of gshep is "[gshep_attack]".
 the scent of the gshep is "Korvin has a masculine scent of canine arousal.".
 The fuckscene of gshep is "[korvinsexmenu]".
 gshep has a number called lastscene. lastscene is usually 255.
 
+to say SummonKorvin:
+	remove Korvin from play;
+	if player is in Makeshift Rec Room and Korvin is in Makeshift Rec Room: [summoning while standing next to him]
+		say "     Calling for Korvin, the German Shepherd joins you at your side. He seems excited at the prospect of busting some heads.";
+	else: [regular summoning]
+		say "     Calling for Korvin, the German Shepherd joins you at your side. He seems excited at the prospect of busting some heads.";
+
+to say DismissKorvin:
+	move Korvin to Makeshift Rec Room;
+	if player is not in Makeshift Rec Room: [regular dismiss]
+		say "     With a curt nod, Korvin begins the run back to the abbey.";
+	else: [dismissing him in the abbey]
+		say "     With a shrug of his shoulders, Korvin goes back to doing whatever it is he does when passing the time.";
+
 gshep_fights is a number that varies.
-gshep_postfight is a number that varies.	[post-fight argument]
-gshep_sexscene is a number that varies.		[sex-role argument]
-gshep_bed_scene is a number that varies.	[discipline argument]
-gshep_inactive is a number that varies.		[inactivity argument]
-gshep_scarscene is a truth state that varies. gshep_scarscene is usually false.		[scar dialog]
+gshep_postfight is a number that varies. [post-fight argument]
+gshep_sexscene is a number that varies. [sex-role argument]
+gshep_bed_scene is a number that varies. [discipline argument]
+gshep_inactive is a number that varies. [inactivity argument]
+gshep_scarscene is a truth state that varies. gshep_scarscene is usually false. [scar dialog]
 
-understand "Korvin" as gshep.
+Korvin is a man.
+The description of Korvin is "[Korvindesc]".
 
-to say Korvin_desc:
+instead of fucking Korvin:
+	say "[korvinsexmenu]";
+
+to say Korvindesc:
 	if debugactive is 1:
 		say "DEBUG - Korvin | LVL: [level of gshep], XP: [XP of gshep], DEX: [dexterity of gshep], DMG: [weapon damage of gshep].";
 		say "DEBUG - Korvin | gsd_pet: [gsd_pet], lastfuck: [lastfuck of gshep], lastscene: [lastscene of gshep].";
@@ -468,7 +488,7 @@ to say conf_Korvin_sex05:
 to say conf_Korvin_sex08:
 	say "     Taking hold of your dick with one hand, you clip his leash on with the other and tell him to 'sit.'  He does so [one of]readily[or]obediently[or]after arching his brow and giving you a look[or]with a little grumble[or]with a hungry look in his eyes[or]while licking his muzzle[at random] and gives your cock a nuzzle. Placing your hand on his head, you scritch his ear as he starts to lick your shaft. His doggy tongue slides along your hard pole, slathering it up and down.";
 	say "     After some preliminary licking, his tongue plays across your glans before he takes your [cock size desc of player] shaft into his muzzle. His canine maw [if cock length of player > 24]has to stretch considerably to be able to fit your mighty cock, but he works at it until he's able to do it[else if cock length of player > 16]has to open wide to be able to fit your mighty cock, but he does it to get that meaty treat in his mouth[else if cock length of player > 8]provides extra depth to be able to fit your big cock, letting him get all that meaty treat in his mouth[else]welcomes your cock into it, enveloping it in wet warmth[end if]. While his doggy tongue continues to slide about, he starts bobbing his head and sucking your cock. The buff dog gets into it quickly, doing his best to suck off his alpha.";
-	WaitLineBreak;	
+	WaitLineBreak;
 	say "     You let the gshep work his muzzle over your [cock of player] dick, quite pleased with how he's doing. There's no sign of any earlier reluctance he's shown about cocksucking, the dog clearly into it now that he's got your manhood in his muzzle. You continue to scritch and pet his head, telling him how good it feels and what a great job he's doing. That gets a tail wag from him and a paw fondling your nuts. With him working your shaft over like this, you're built up to a strong orgasm that has you groan loudly";
 	if a random chance of 3 in 5 succeeds:
 		say ". Your penis pulses hard with every shot, [if cock width of player > 30]blasting your [cum load size of player] load down his throat and bulging that toned tummy of his [else if cock width of player > 20]blasting your [cum load size of player] load down his throat to fill his stomach with a feast of your rich, hot semen[else if cock width of player > 11]firing your [cum load size of player] load down his throat and providing him with a nice, hot meal of your semen[else]pumping the tasty treat of your hot load down his throat[end if]. He gulps it all down, releasing muffled moans while his tail wags wildly[if cocks of player > 2] and your other dicks hose him down with white streaks[else if cocks of player is 2] and your other dick hoses him down with white streaks[end if].";
