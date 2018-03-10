@@ -35,7 +35,7 @@ to say MarkDesc:
 	if debugactive is 1:
 		say "DEBUG -> XP: [XP of Mark], Thirst: [thirst of Mark], JayMarkRelationship: [JayMarkRelationship] <- DEBUG[line break]";
 	say "     Mark is a big and burly polar bear, about seven feet tall and with very broad shoulders. He has the typical snow white fur of his species, with a somewhat anthropomorphic head and a muzzle full of dangerous teeth. Much of the big man's bulk is muscle, filling out the rugged jeans and checkered flannel shirt of his outfit quite well. Overall, the powerful bear's attire is reminiscent of a stereotypical woodcutter, although he clearly has no need for an axe to be reckoned with - the sharp claws on his paw-hands are plenty already.";
-	say "     Noticing you looking at him, Mark turns his attention towards you, meeting your gaze with his dark amber eyes. The man then gives you a brief nod, acknowledging your presence";
+	say "     Noticing you looking at him, Mark turns his attention towards you, meeting your gaze with his dark amber eyes. The man then gives you a brief nod, acknowledging your presence.";
 
 [***********************************************************]
 [***********************************************************]
