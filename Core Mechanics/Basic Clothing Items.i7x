@@ -531,4 +531,336 @@ The descmod of pink panties is "A skimpy and frilly pair of pink panties cover y
 The slot of pink panties is "crotch".
 the scent of pink panties is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
 
+[ Section 5 - Glasses ]
+
+When Play begins:
+	[
+	add { "" } to invent of Grey Abbey Library;
+	]
+	now plural of stylish sunglasses is true;
+	now plural of basic sunglasses is true;
+	now plural of horn-rimmed glasses is true;
+	now plural of aviator goggles is true;
+	now plural of lab goggles is true;
+	now plural of prop glasses is true;
+	now plural of rose-tinted glasses is true;
+	
+Table of Game Objects(continued)
+name	desc	weight	object
+"stylish sunglasses"	"A set of Lu-Beam sunglasses with a very stylish shape. Those are sure to make anyone look like a star."	0	stylish sunglasses
+"basic sunglasses"	"A set of fairly basic sunglasses with a black plastic frame. Nothing special, but they'll protect your eyes."	0	basic sunglasses
+"horn-rimmed glasses"	"A pair of dignified horn-rimmed glasses with slightly curved lenses."	0	horn-rimmed glasses
+"aviator goggles"	"A set of aviator goggles with a strap to keep them tightly pressed to someone's face. Perfect for situations like being in strong winds, or being in danger of getting cum-facials by lots of horny monster."	0	aviator goggles
+"lab goggles"	"A pair of clear plastic goggles that closely fit to someone's face. They're perfect to keep harmful chemicals (and spurting cum) out of your eyes."	0	lab goggles
+"prop glasses"	"A pair of stylish glasses with clear glass lenses in their frames. These are what you'd see on stage or in a movie, creating the right appearance without giving people headaches from wearing glasses even if they are not needed."	0	prop glasses
+"rose-tinted glasses"	"A pair of rose-tinted glasses with frilly edges. There even are some glass gemstones with reflective backing glued to them."	0	rose-tinted glasses
+
+stylish sunglasses is a grab object.
+stylish sunglasses is equipment.
+It is not temporary.
+The plural of stylish sunglasses is true.
+The taur-compatible of stylish sunglasses is true.
+The size of stylish sunglasses is 0.
+The AC of stylish sunglasses is 0.
+The effectiveness of stylish sunglasses is 0.
+The placement of stylish sunglasses is "eyes".
+The descmod of stylish sunglasses is "An expensive set of sunglasses sits on your nose, giving you a stylish look and protecting your eyes.".
+The slot of stylish sunglasses is "eyes".
+the scent of stylish sunglasses is "The glasses don't smell like anything really.".
+
+basic sunglasses is a grab object.
+basic sunglasses is equipment.
+It is not temporary.
+The plural of basic sunglasses is true.
+The taur-compatible of basic sunglasses is true.
+The size of basic sunglasses is 0.
+The AC of basic sunglasses is 0.
+The effectiveness of basic sunglasses is 0.
+The placement of basic sunglasses is "eyes".
+The descmod of basic sunglasses is "An cheap set of sunglasses sits on your nose, protecting your eyes from bright light.".
+The slot of basic sunglasses is "eyes".
+the scent of basic sunglasses is "The glasses don't smell like anything really.".
+
+horn-rimmed glasses is a grab object.
+horn-rimmed glasses is equipment.
+It is not temporary.
+The plural of horn-rimmed glasses is true.
+The taur-compatible of horn-rimmed glasses is true.
+The size of horn-rimmed glasses is 0.
+The AC of horn-rimmed glasses is 0.
+The effectiveness of horn-rimmed glasses is 0.
+The placement of horn-rimmed glasses is "eyes".
+The descmod of horn-rimmed glasses is "A pair of horn-rimmed glasses on your nose give you a dignified look.".
+The slot of horn-rimmed glasses is "eyes".
+the scent of horn-rimmed glasses is "The glasses don't smell like anything really.".
+
+aviator goggles is a grab object.
+aviator goggles is equipment.
+It is not temporary.
+The plural of aviator goggles is true.
+The taur-compatible of aviator goggles is true.
+The size of aviator goggles is 0.
+The AC of aviator goggles is 0.
+The effectiveness of aviator goggles is 0.
+The placement of aviator goggles is "eyes".
+The descmod of aviator goggles is "A pair of aviator goggles cover your eyes, protecting them from danger - like spurts of cum, for example.".
+The slot of aviator goggles is "eyes".
+the scent of aviator goggles is "The goggles don't smell like anything really.".
+
+lab goggles is a grab object.
+lab goggles is equipment.
+It is not temporary.
+The plural of lab goggles is true.
+The taur-compatible of lab goggles is true.
+The size of lab goggles is 0.
+The AC of lab goggles is 0.
+The effectiveness of lab goggles is 0.
+The placement of lab goggles is "eyes".
+The descmod of lab goggles is "A pair of lab goggles cover your eyes, protecting them from danger - like spurts of cum, for example.".
+The slot of lab goggles is "eyes".
+the scent of lab goggles is "The goggles don't smell like anything really.".
+
+prop glasses is a grab object.
+prop glasses is equipment.
+It is not temporary.
+The plural of prop glasses is true.
+The taur-compatible of prop glasses is true.
+The size of prop glasses is 0.
+The AC of prop glasses is 0.
+The effectiveness of prop glasses is 0.
+The placement of prop glasses is "eyes".
+The descmod of prop glasses is "A pair of prop glasses on your nose gives you an intelligent air.".
+The slot of prop glasses is "eyes".
+the scent of prop glasses is "The glasses don't smell like anything really.".
+
+rose-tinted glasses is a grab object.
+rose-tinted glasses is equipment.
+It is not temporary.
+The plural of rose-tinted glasses is true.
+The taur-compatible of rose-tinted glasses is true.
+The size of rose-tinted glasses is 0.
+The AC of rose-tinted glasses is 0.
+The effectiveness of rose-tinted glasses is 0.
+The placement of rose-tinted glasses is "eyes".
+The descmod of rose-tinted glasses is "A pair of somewhat kitschy glasses on your nose gives you a rose-tinted outlook of the world.".
+The slot of rose-tinted glasses is "eyes".
+the scent of rose-tinted glasses is "The glasses don't smell like anything really.".
+
+[ Section 6 - Helmets ]
+
+When Play begins:
+	[
+	add { "" } to invent of Grey Abbey Library;
+	]
+	
+Table of Game Objects(continued)
+name	desc	weight	object
+"motorcycle helmet"	"A black motorcycle helmet with a clear visor. Heavy, but protective."	3	motorcycle helmet
+"bike helmet"	"A plastic foam bicycle helmet, complete with a white shell and reflective stripes, as well as a strap to fasten it to the wearer's head."	1	bike helmet
+"protective helmet"	"A white protection helmet as might be worn by industrial workers. That should certainly ward off some bumps to the wearer's head."	2	protective helmet
+"tin-foil hat"	"A bunch of tin foil, bent into shape to cover a human's head. It might protect its wearer from alien mind control rays, or could possibly ensure that the head is still juicy and not burned on the outside when baked..."	0	tin-foil hat
+"grey fedora"	"A grey fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, or a hipster."	0	grey fedora
+"baseball cap"	"A blue baseball cap with the logo of the Tenvale Gorillas on its front."	0	baseball cap
+"knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull."	0	knitted skullcap
+
+motorcycle helmet is a grab object.
+motorcycle helmet is equipment.
+It is not temporary.
+The plural of motorcycle helmet is false.
+The taur-compatible of motorcycle helmet is true.
+The size of motorcycle helmet is 3.
+The AC of motorcycle helmet is 60.
+The effectiveness of motorcycle helmet is 80.
+The placement of motorcycle helmet is "head".
+The descmod of motorcycle helmet is "Your head is encased in the thick shell of a motorcycle helmet.".
+The slot of motorcycle helmet is "head".
+the scent of motorcycle helmet is "The helmet smells of plastic and fabric.".
+
+bike helmet is a grab object.
+bike helmet is equipment.
+It is not temporary.
+The plural of bike helmet is false.
+The taur-compatible of bike helmet is true.
+The size of bike helmet is 3.
+The AC of bike helmet is 20.
+The effectiveness of bike helmet is 40.
+The placement of bike helmet is "head".
+The descmod of bike helmet is "A plastic bike helmet encases the upper half of your head.".
+The slot of bike helmet is "head".
+the scent of bike helmet is "The helmet smells like plastic.".
+
+protective helmet is a grab object.
+protective helmet is equipment.
+It is not temporary.
+The plural of protective helmet is false.
+The taur-compatible of protective helmet is true.
+The size of protective helmet is 3.
+The AC of protective helmet is 30.
+The effectiveness of protective helmet is 60.
+The placement of protective helmet is "head".
+The descmod of protective helmet is "A white protective helmet sits on your head, providing some protection.".
+The slot of protective helmet is "head".
+the scent of protective helmet is "The helmet smells like plastic.".
+
+tin-foil hat is a grab object.
+tin-foil hat is equipment.
+It is not temporary.
+The plural of tin-foil hat is false.
+The taur-compatible of tin-foil hat is true.
+The size of tin-foil hat is 3.
+The AC of tin-foil hat is 0.
+The effectiveness of tin-foil hat is 0.
+The placement of tin-foil hat is "head".
+The descmod of tin-foil hat is "A tin-foil hat covers your head, providing a dubious level of protection against... something.".
+The slot of tin-foil hat is "head".
+the scent of tin-foil hat is "The hat smells a bit like metal".
+
+grey fedora is a grab object.
+grey fedora is equipment.
+It is not temporary.
+The plural of grey fedora is false.
+The taur-compatible of grey fedora is true.
+The size of grey fedora is 3.
+The AC of grey fedora is 0.
+The effectiveness of grey fedora is 0.
+The placement of grey fedora is "head".
+The descmod of grey fedora is "A grey fedora covers your head, making you look like a private detective from the prohibition days.".
+The slot of grey fedora is "head".
+the scent of grey fedora is "The hat smells like wool.".
+
+baseball cap is a grab object.
+baseball cap is equipment.
+It is not temporary.
+The plural of baseball cap is false.
+The taur-compatible of baseball cap is true.
+The size of baseball cap is 3.
+The AC of baseball cap is 0.
+The effectiveness of baseball cap is 0.
+The placement of baseball cap is "head".
+The descmod of baseball cap is "A blue baseball cap covers your head, providing some protection from the sun with its visor.".
+The slot of baseball cap is "head".
+the scent of baseball cap is "The cap smells like fabric and plastic".
+
+knitted skullcap is a grab object.
+knitted skullcap is equipment.
+It is not temporary.
+The plural of knitted skullcap is false.
+The taur-compatible of knitted skullcap is true.
+The size of knitted skullcap is 3.
+The AC of knitted skullcap is 0.
+The effectiveness of knitted skullcap is 0.
+The placement of knitted skullcap is "head".
+The descmod of knitted skullcap is "A knitted skullcap covers the top of your head.".
+The slot of knitted skullcap is "head".
+the scent of knitted skullcap is "The cap smells like wool.".
+
+[ Section 6 - Helmets ]
+
+When Play begins:
+	[
+	add { "" } to invent of Grey Abbey Library;
+	]
+	now plural of football pads is true;
+	
+Table of Game Objects(continued)
+name	desc	weight	object
+"leather jacket"	"A black leather jacket some shiny silver buttons and zippers. Stylish and protective."	4	leather jacket
+"sturdy greatcoat"	"A full-body coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight."	5	sturdy greatcoat
+"bulletproof vest"	"A heavy-duty bulletproof vest, complete with metal plates for extra protection."	14	bulletproof vest
+"medieval breastplate"	"A shiny medieval breastplate. It is either a historical artifact or a quite good reproduction - either way, this should allow for some serious protection for someone who wants to survive the nanite apocalypse."	20	medieval breastplate
+"roadsign breastplate"	"A breastplate that someone fairly large seems to have crafted from things that were available - namely roadsigns. The front is formed by a STOP sign that has been hammered into a slight curve, with further signs bolted to its edges to curve around the sides of the body. Heavy leather straps for over the shoulders hold another stop sign forming the back plate."	30	roadsign breastplate
+"football pads"	"Tough polymer football pads, sized to cover the shoulders and upper chest of a human player. There even is an extra plate attached to the front in order to cover the abdominal area of the wearer. You can see the logo of the Tenvale Gorillas emblazoned on the left pec."	9	football pads
+"life jacket"	"A bright orange life jacket. It'll help normal humans stay afloat and comes with an attached whistle and light."	2	life jacket
+
+leather jacket is a grab object.
+leather jacket is equipment.
+It is not temporary.
+The plural of leather jacket is false.
+The taur-compatible of leather jacket is true.
+The size of leather jacket is 3.
+The AC of leather jacket is 30.
+The effectiveness of leather jacket is 70.
+The placement of leather jacket is "body".
+The descmod of leather jacket is "A black leather jacket covers your upper body.".
+The slot of leather jacket is "body".
+the scent of leather jacket is "The jacket smells like leather.".
+
+sturdy greatcoat is a grab object.
+sturdy greatcoat is equipment.
+It is not temporary.
+The plural of sturdy greatcoat is false.
+The taur-compatible of sturdy greatcoat is true.
+The size of sturdy greatcoat is 3.
+The AC of sturdy greatcoat is 15.
+The effectiveness of sturdy greatcoat is 80.
+The placement of sturdy greatcoat is "body".
+The descmod of sturdy greatcoat is "A full length woolen greatcoat covers your body.".
+The slot of sturdy greatcoat is "body".
+the scent of sturdy greatcoat is "The coat smells like whool.".
+
+bulletproof vest is a grab object.
+bulletproof vest is equipment.
+It is not temporary.
+The plural of bulletproof vest is false.
+The taur-compatible of bulletproof vest is true.
+The size of bulletproof vest is 3.
+The AC of bulletproof vest is 70.
+The effectiveness of bulletproof vest is 60.
+The placement of bulletproof vest is "body".
+The descmod of bulletproof vest is "A reinforced bulletproof vest covers your upper body.".
+The slot of bulletproof vest is "body".
+the scent of bulletproof vest is "The vest smells slightly of sweat, which isn't too woundrous as these things usually are put on in times of great stress.".
+
+medieval breastplate is a grab object.
+medieval breastplate is equipment.
+It is not temporary.
+The plural of medieval breastplate is false.
+The taur-compatible of medieval breastplate is true.
+The size of medieval breastplate is 3.
+The AC of medieval breastplate is 65.
+The effectiveness of medieval breastplate is 60.
+The placement of medieval breastplate is "body".
+The descmod of medieval breastplate is "A medieval breastplate covers your chest and back with shiny metal.".
+The slot of medieval breastplate is "body".
+the scent of medieval breastplate is "The breastplate smells like metal".
+
+roadsign breastplate is a grab object.
+roadsign breastplate is equipment.
+It is not temporary.
+The plural of roadsign breastplate is false.
+The taur-compatible of roadsign breastplate is true.
+The size of roadsign breastplate is 4.
+The AC of roadsign breastplate is 60.
+The effectiveness of roadsign breastplate is 50.
+The placement of roadsign breastplate is "body".
+The descmod of roadsign breastplate is "A roadsign breastplate covers your chest and back in an improvised patchwork of metal.".
+The slot of roadsign breastplate is "body".
+the scent of roadsign breastplate is "The breastplate smells like metal".
+
+football pads is a grab object.
+football pads is equipment.
+It is not temporary.
+The plural of football pads is true.
+The taur-compatible of football pads is true.
+The size of football pads is 3.
+The AC of football pads is 30.
+The effectiveness of football pads is 50.
+The placement of football pads is "body".
+The descmod of football pads is "Blue football pads cover chest, abs and shoulders providing protective padding.".
+The slot of football pads is "body".
+the scent of football pads is "The pads smell of plastic, fabric and sweat.".
+
+life jacket is a grab object.
+life jacket is equipment.
+It is not temporary.
+The plural of life jacket is false.
+The taur-compatible of life jacket is true.
+The size of life jacket is 3.
+The AC of life jacket is 20.
+The effectiveness of life jacket is 40.
+The placement of life jacket is "body".
+The descmod of life jacket is "A bright orange life jacket covers your upper body.".
+The slot of life jacket is "body".
+the scent of life jacket is "The life jacket smells of synthetic fabrics.".
+
 Basic Clothing Items ends here.

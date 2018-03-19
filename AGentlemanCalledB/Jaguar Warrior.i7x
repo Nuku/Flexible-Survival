@@ -234,13 +234,16 @@ Section 3 - Jaguar Headdress
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Jaguar Headdress"	"A golden yellow hood and shawl, covered in the exotic rosettes and spots of a Jaguar."	4	Jaguar Headdress
+"Jaguar Headdress"	"A golden yellow hood and shawl, covered in the exotic rosettes and spots of a Jaguar."	2	Jaguar Headdress
 
 Jaguar Headdress is equipment.
 It is not temporary.
+The plural of Jaguar Headdress is false.
+The taur-compatible of Jaguar Headdress is true.
+The size of Jaguar Headdress is 0.
 The AC of Jaguar Headdress is 12.
 The effectiveness of Jaguar Headdress is 35.
-The placement of Jaguar Headdress is "face".
+The placement of Jaguar Headdress is "head".
 The descmod of Jaguar Headdress is "A golden yellow furred hood and shawl with black rosettes and spots is draped over your head.".
 The slot of Jaguar Headdress is "head".
 The damagebonus of Jaguar Headdress is 1.

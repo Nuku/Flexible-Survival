@@ -480,16 +480,19 @@ check LockerLooting:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"police vest"	"A black bulletproof vest, lightweight and with the word 'Police' printed in yellow on the front. It should provide good protection while worn."	1	police vest
+"police vest"	"A black bulletproof vest, lightweight and with the word 'Police' printed in yellow on the front. It should provide good protection while worn."	6	police vest
 
 police vest is equipment.
 It is not temporary.
+The plural of police vest is false.
+The taur-compatible of police vest is true.
+The size of police vest is 3.
 The AC of police vest is 50.
 The effectiveness of police vest is 55.
 The placement of police vest is "body".
 The descmod of police vest is "A black police vest bearing the word 'Police' protects your chest.".
 The slot of police vest is "body".
-
+The scent of police vest is "The vest smells slightly of sweat, which isn't too woundrous as these things usually are put on in times of great stress.".
 
 To LootLocker:
 	say "     The only way to get into the locker without tools that you don't have is through the door at the front, so you don't have much choice but to try to lift the heavy piece of furniture. After a moment of mentally preparing yourself for the hard task, you step up to where they're lying on the floor and grab the sides.";

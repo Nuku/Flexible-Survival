@@ -3037,7 +3037,7 @@ to say RyouseiTellsEricAStory:
 		LineBreak;
 		say "     You smile and thank the anthro tiger for his offer, but tell the two of them that you can't right now - things to do to ensure your survival in the city, as usual.";
 	if RyouseiEricInteraction is 1:
-		now RyouseiEricInteraction is 2;
+		now RyouseiEricInteraction is 2; [watched em have story time]
 
 instead of navigating Grey Abbey Library while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds):
 	say "[NavCheck Grey Abbey Library]";
@@ -3072,6 +3072,44 @@ to say RyouseiAndEricDoTaiChi:
 		increase humanity of player by 5;
 		if humanity of player > 100:
 			now humanity of player is 100;
+	if RyouseiEricInteraction is 2:
+	now RyouseiEricInteraction is 3; [watched em do tai chi]
+	
+[-------------]
+after going to Grey Abbey Library while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric > 9 and HP of Eric < 20 and RyouseiEricInteraction > 2 and (lastRyouseiEricInteraction - turns) > 8):
+	say "     As you walk into the front section of the library, you see Eric a little distance ahead of you, moving towards a somewhat out of the way corner of the expansive room. You know that this is where Ryousei has made his camp, so your curiosity drives you to follow the red-head college student and see what is going on. Walking along the curved row of bookselves that divides the otherworldly tiger's domain from the main room, you can see Eric through the gap between the books and selving. He looks happy and eager, most likely being out to continue his excercizes or story time with Ryousei. Yet as the young man reaches a certain spot along his route, he suddenly pauses in his steps, holding his breath for a moment as he looks ahead, then goes on more slowly, as if not to make a sound. As you move into a better position along the bookshelf to see what Eric is looking at, you see that it is Ryousei - sitting on the ground cross-legged, dressed in nothing more than his white fundoshi underwear and meditating with closed eyes.";
+	say "     The anthro tiger really is a sight to behold - regal and cultured even in just his underwear, he sits there with a serene expression on his face and breathes in and out slowly, his muscular chest expanding and contracting with each breath. Eric almost seems spell-bound at the sight, walking closer with soft steps and his gaze wandering over the tiger's almost naked form. Shily biting his lip, as if nervous about making a sound to disturb the otherworldly being, the young trans-man slowly drifts closer and closer. When only a few steps divide the two of them, you notice a change in Ryousei's breathing, with the tiger's nostrils flaring a little as he draws in a deeper breath, then another. A heartbeat later, he opens his eyes and gives Eric a warm smile, waving him closer. 'Welcome, young one. What brings you to me littler corner of this grand library? Shall we share stories, train, or are there... [italic type]other[roman type] desires you want to fulfill?'";
+	WaitLineBreak;
+	say "     Momentarily speechless from being caught staring at the tiger, as well as the implied offer, Eric freezes in motion, as if unsure if he should stay or run away. Ryousei keeps his hand outstretched to bid him closer and goes on to say, 'I knew there was something special about your scent but couldn't place it until getting a stronger dose just now. It is rare to encounter one of the All-Mothers's chose life-givers outside of a temple, or at least with numerous protectors. And you seem so nervous about revealing yourself at all. Tell me, is the faith persecuted in this savage land, and you had to go into hiding?' Ryousei keeps a friendly, caring tone as he asks Eric the last question, yet you can see fromt he twitch in his tail-tip that anger is brewing under the placid exterior of the mighty cat. 'You mean, you know that...' Eric stutters, waving a hand at his crotch and gaining a smiling nod from Ryousei. 'And there are more like me in your world?'";
+	say "     Another nod makes the young man relax and a curious expression appear on his face, which is answered by a chuckle from the sitting tiger. 'People like yourself are chosen by the All-Mother. She is the goddess of life, and it is by her will that life prevails, even in times of strife and death. Those who are the most worthy of a given tribe are chosen to renew their people, even if they were male originally. It is a great honor.' Clearing his throat, Eric haltingly gets out the reply, 'But - but I'm not from your world. And  I don't believe in that goddess. My gender was just an accident. I was bitten by someone infected.' Smiling, Ryousei adds, 'You do not need to believe in her. She believes in you - that you are special and will be the right parent to bring new life for your people. Tell me, from what you know about this contagion ravaging your city - is it normal that the only way you have changed is your gender? Believe it, you are chosen among the human tribe.' Eric stares at him wide-eyed, then slowly nods.";
+	WaitLineBreak;
+	say "     Silence stretches out between the two of them, with Eric trying to take in what the tiger said and Ryousei giving him the time he needs, before eventually saying, 'My earlier offer was a genuine one. If you have only recently been chosen, all of this will still be very new to you. I could show you some ways to enjoy your new form. And it would be my honor to fill your womb if you want me to.' Blushing deeply at the earnest expression on his anthro tiger friend, Eric looks at his muscular body again and steps closer, clearly about to give in to the lust he feels for Ryousei.";
+	LineBreak;
+	say "     [bold type]What do you want to do now?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Watch the tiger and transgendered human mate.";
+	say "     [link](2)[as]2[end link] - Quietly leave and give them their privacy.";
+	say "     [link](3)[as]3[end link] - Quickly step out from behind the bookshelf and interfere.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to watch them, [link]2[end link] to leave, or [link]3[end link] to interfere.";
+	if calcnumber is 1: [watch them]
+		LineBreak;	
+		say "     ...";
+		now RyouseiEricInteraction is 5; [player watched Eric and Ryo fuck]
+	else if calcnumber is 2: [leave them]
+		LineBreak;	
+		say "     Quietly stepping back from the spot from which you had been watching the two of them, you turn back to the entrance of the library. As you walk away, you can hear Eric's moans rise up behind you.";
+		now RyouseiEricInteraction is 4; [player didn't watch Eric and Ryo fuck]
+	else if calcnumber is 3: [interfere]
+		LineBreak;
+		say "     Walking to the end of the bookshelf, you turn the corner and step into sight of your two companions. Ryousei takes your sudden appearance with his usual friendly demeanour, while Eric gets quite flustered and red in the face. As the large tiger asks you if you need his assistance on another trip into the city, Eric quickly uses the chance to excuse himself and hurry off out of sight. Chatting a little with your otherworldly friend, you eventually leave Ryousei to get back to meditation, with him saying again that he'll be there when you call him.";
+		now RyouseiEricInteraction is 100; [player interfered in the 'moment' between em]
+
 
 [ Sven Interactions                    ]
 
