@@ -1721,12 +1721,20 @@ LastTurnDay is a truth state that varies.
 an everyturn rule:
 	if daytimer is day: [currently day]
 		if LastTurnDay is false: [last turn was night]
-			say "[bold type]The sun rises over the city.[roman type]";
+			say "[bold type]The sun rises over the city.[roman type][line break]";
 		now LastTurnDay is true;
 	else if daytimer is night: [currently night]
 		if LastTurnDay is true: [last turn was day]
-			say "[bold type]The sun sets and darkness covers the city.[roman type]";
+			say "[bold type]The sun sets and darkness covers the city.[roman type][line break]";
 		now LastTurnDay is false;
+		if player is in Urban Forest and LastWerewolfFuck - turns > 6: [not werewolf fucked during the same night]
+			if WerewolfWatching is false: [initial message]
+				say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resing on you can't be all in your head, can it?";
+				now WerewolfWatching is true;
+			else: [repeat message for following turns]
+				say "     You [italic type]still[roman type] can't shake the feeling that something is watching you. A cold shiver runs down your back.";
+		else:
+			now WerewolfWatching is false;
 
 to guesstimate time at (x - a number):
 	if x < 0:
@@ -3484,7 +3492,7 @@ check resting:
 		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest. Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink.";
 		stop the action;
 	if location of player is Palomino or location of player is Private Booths:
-		say "Why are you even trying to sleep here?  Everyone's partying like it's the end of the world.";
+		say "Why are you even trying to sleep here? Everyone's partying like it's the end of the world.";
 		stop the action;
 	if cot is owned:
 		say "You pull out your cot and lay it out before resting for a while.";
@@ -3503,10 +3511,13 @@ check resting:
 		say "You have nothing to rest on.";
 		stop the action;
 	if companion of player is not rubber tigress:
-		if ( there is a dangerous door in the location of the player or the location of player is fasttravel ) and location of player is not sleepsafe:
-			let l be a random visible dangerous door;
-			if l is not nothing, now battleground is the marea of l;
-			if l is nothing, now battleground is "Outside";	[***]
+		if ( there is a dangerous door in the location of the player or the location of player is fasttravel or the earea of location of player is not "void") and location of player is not sleepsafe:
+			now battleground is "Outside"; [standard setting]
+			if the earea of location of player is not "void":
+				now battleground is the earea of location of player;
+			else:
+				let l be a random visible dangerous door;
+				if l is not nothing, now battleground is the marea of l;
 			say "...";
 			attempttowait;
 			let intodds be 3;
@@ -3519,35 +3530,6 @@ check resting:
 				say "...and you thankfully complete your nap in peace.";
 		else if roughing is true:
 			say "You are thankfully able to complete your nap in peace.";
-
-[  --old version - to be removed--
-	if cot is owned:
-		say "You pull out your cot and lay it out before resting for a while.";
-		continue the action;
-	else if cot is present:
-		say "You rest on the cot.";
-		continue the action;
-	else if the player is in the bunker:
-		say "You rest on one of the cots available.";
-		continue the action;
-	else if "Roughing It" is listed in feats of player:
-		say "You hunker down somewhere secluded for a quick nap...";
-		if there is a dangerous door in the location of the player:
-			if a random chance of 3 in 20 succeeds:
-				say "...but your nap is interrupted by the arrival of a creature.";
-				fight;
-				stop the action;
-			else:
-				say "...and you complete your nap in peace.";
-				continue the action;
-		else:
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-			say "...and you complete your nap in peace.";
-			continue the action;
-	say "You have nothing to rest on.";
-	stop the action;
-]
 
 carry out resting:
 	if companion of player is rubber tigress:
@@ -5086,6 +5068,7 @@ Include Walkinmall by Ssely.
 Include Warehouse District by Kaleem Mcintyre.
 Include Warehouse Events by StripeGuy.
 Include Wereraptor for FS by Stripes.
+Include Werewolf by CrimsonAsh.
 Include Zephyr Phone by Executaball.
 Include Zoo Events by Sarokcat.
 Include Zoo Events by Wahn.

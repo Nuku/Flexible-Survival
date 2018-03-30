@@ -12,6 +12,7 @@ Version 1 of Ancient Tome by Wahn begins here.
 [  22: player told Eric he doesn't have the book                                       ]
 [  23: player told Eric the truth about him being tentacle fucked                      ]
 [  24: player told Eric he doesn't have the book (after tentacle fucking)              ]
+[  96: player gave Eric the book back after he got tentacle-fucked                     ]
 [  97: player gave Eric the book back after he got almost tentacle-fucked              ]
 [  98: player took the book after Eric was tentacle fucked (unknown to the player)     ]
 [  99: player took the book after Eric had a read                                      ]
