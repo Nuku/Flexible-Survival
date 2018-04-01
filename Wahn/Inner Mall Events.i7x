@@ -279,7 +279,7 @@ to FullLitterEvent:
 Cat Toy Vendors is a situation. 
 The sarea of Cat Toy Vendors is "Smith Haven".
 
-To say Cat Toy Vendors:
+instead of resolving Cat Toy Vendors:
 	say "      Wandering through the hallways of the expansive Smith Haven Mall, you spot some cat-morphs selling various custom cat toys to their feline kin. Apparently a surprising number of the transformed people in the crowd of regugees in here are captivated by an instinctual love of mice on string. It is charming to see their wide-eyed expressions as many a head tracks a toy mouse being demonstrated, with them instintually wiggling their butts as they get into a slightly pouncing stance. The vendors giggle to each other as a whole group of new customers line up and get ready to trade food and drinks for the small toys being sold.";
 	now Cat Toy Vendors is resolved;
 

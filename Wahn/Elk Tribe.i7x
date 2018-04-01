@@ -4,16 +4,16 @@ Version 1 of Elk Tribe by Wahn begins here.
 "Adds elk tribesmembers to Flexible Survival's Wandering Monsters table"
 
 when play begins:
-	add { "Elk Tribe Buck" } to infections of Guy;
-	add { "Elk Tribe Doe" } to infections of Girl;
+	add { "Elk Tribe Bull" } to infections of Guy;
+	add { "Elk Tribe Cow" } to infections of Girl;
 	add { "Elk Tribe Herm" } to infections of Hermaphrodite;
-	add { "Elk Tribe Trans Buck"} to infections of Transgender;
-	add { "Elk Tribe Trans Doe"} to infections of Transgender;
+	add { "Elk Tribe Trans Bull"} to infections of Transgender;
+	add { "Elk Tribe Trans Cow"} to infections of Transgender;
 
 
-Section 1 - Elk Tribe Buck
+Section 1 - Elk Tribe Bull
 
-to say ElkBuckVictorious:
+to say ElkBullVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
@@ -22,23 +22,23 @@ to say ElkBuckVictorious:
 		else:  [player beaten]
 			say "     ...";
 
-to say ElkBuckBeaten:
+to say ElkBullBeaten:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		say "     After your last hit, the elk buck staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. Seeing him lie on the ground, your eyes can't help but wander over his muscular form and down to his crotch.";
+		say "     After your last hit, the elk bull staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. Seeing him lie on the ground, your eyes can't help but wander over his muscular form and down to his crotch.";
 		say "     [bold type]What now?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
 		say "     ([link]N[as]n[end link]) - Just leave.";
 		if player consents:
 			LineBreak;
-			say "[BeatenElkBuckSexMenu]";
+			say "[BeatenElkBullSexMenu]";
 		else:
 			LineBreak;
 			say "     You walk away after checking him over for loot.";
 
-to say BeatenElkBuckSexMenu:
+to say BeatenElkBullSexMenu:
 	LineBreak;
 	say "     What do you want to do with the male elk?";
 	now sextablerun is 0;
@@ -81,13 +81,13 @@ to say BeatenElkBuckSexMenu:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "AAA"):
-					say "[BeatenElkBuckSex1]";
+					say "[BeatenElkBullSex1]";
 				if (nam is "BBB"):
-					say "[BeatenElkBuckSex2]";
+					say "[BeatenElkBullSex2]";
 				if (nam is "CCC"):
-					say "[BeatenElkBuckSex3]";
+					say "[BeatenElkBullSex3]";
 				if (nam is "DDD"):
-					say "[BeatenElkBuckSex4]";
+					say "[BeatenElkBullSex4]";
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Just leave him?";
@@ -101,19 +101,19 @@ to say BeatenElkBuckSexMenu:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
 
-to say BeatenElkBuckSex1:
+to say BeatenElkBullSex1:
 	say "     ...";
 
-to say BeatenElkBuckSex2:
+to say BeatenElkBullSex2:
 	say "     ...";
 
-to say BeatenElkBuckSex3:
+to say BeatenElkBullSex3:
 	say "     ...";
 
-to say BeatenElkBuckSex4:
+to say BeatenElkBullSex4:
 	say "     ...";
 
-to say ElkBuckDesc:
+to say ElkBullDesc:
 	setmongender 3;
 	if inasituation is true:
 		say ""; [dealt with in the origin event]
@@ -136,7 +136,7 @@ to say ElkBuckDesc:
 		[antlers]
 		say "A pair of [one of]spike-like antlers on each side of his head marks him as a quite young male[or]spindly four-point antlers on each side of his head marks him as a young male[or]five-point antlers on each side of his head marks him as a young but maturing male[or]proud six-point antlers on each side of his head marks him as a mature male[or]proud seven-point antlers on each side of his head marks him as an experienced male[or]impressive eight-point antlers on each side of his head marks him as a mature male[at random].";
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
-			say "     The elk buck looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
+			say "     The elk bull looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
 			[comment]
 			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his cock demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
 		else:
@@ -148,11 +148,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Elk Tribe Buck";
+	now name entry is "Elk Tribe Bull";
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribesman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]lowers his head and hits you with a sweep of his horns[or]grabs you by the throat and throws you to the ground[or]grabs you with one of his hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
-	now defeated entry is "[ElkBuckBeaten]";
-	now victory entry is "[ElkBuckVictorious]";
-	now desc entry is "[ElkBuckDesc]";
+	now defeated entry is "[ElkBullBeaten]";
+	now victory entry is "[ElkBullVictorious]";
+	now desc entry is "[ElkBullDesc]";
 	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if cocks of player > 0]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
 	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
@@ -184,7 +184,7 @@ When Play begins:
 	now cunt length entry is 15;
 	now cunt width entry is 6;
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
-	now loot entry is "elk buck fur"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "elk bull fur"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscled[or]powerful[or]buff[at random]";
@@ -197,22 +197,22 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"elk buck fur"	"A tuft of fur from one of the powerful elk tribe bucks."	0	elk buck fur
+"elk bull fur"	"A tuft of fur from one of the powerful elk tribe bulls."	0	elk bull fur
 
-instead of sniffing elk buck fur:
+instead of sniffing elk bull fur:
 	say "The tuft of fur smells a bit musky.";
 
-elk buck fur is a grab object.
-the usedesc of elk buck fur is "[elk buck fur use]";
+elk bull fur is a grab object.
+the usedesc of elk bull fur is "[elk bull fur use]";
 
-to say elk buck fur use:
+to say elk bull fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Elk Tribe Buck";
+	infect "Elk Tribe Bull";
 	
 	
-Section 2 - Elk Tribe Doe
+Section 2 - Elk Tribe Cow
 
-to say ElkDoeVictorious:
+to say ElkCowVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
@@ -221,24 +221,24 @@ to say ElkDoeVictorious:
 		else:  [player beaten]
 			say "     ...";
 
-to say ElkDoeBeaten:
+to say ElkCowBeaten:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		say "     After your last hit, the elk doe staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
+		say "     After your last hit, the elk cow staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
 		say "     [bold type]What now?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
 		say "     ([link]N[as]n[end link]) - Just leave.";
 		if player consents:
 			LineBreak;
-			say "[BeatenElkDoeSexMenu]";
+			say "[BeatenElkCowSexMenu]";
 		else:
 			LineBreak;
 			say "     You walk away after checking her over for loot.";
 
 
-to say BeatenElkDoeSexMenu:
+to say BeatenElkCowSexMenu:
 	LineBreak;
 	say "     What do you want to do with the female elk?";
 	now sextablerun is 0;
@@ -281,13 +281,13 @@ to say BeatenElkDoeSexMenu:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "AAA"):
-					say "[BeatenElkDoeSex1]";
+					say "[BeatenElkCowSex1]";
 				if (nam is "BBB"):
-					say "[BeatenElkDoeSex2]";
+					say "[BeatenElkCowSex2]";
 				if (nam is "CCC"):
-					say "[BeatenElkDoeSex3]";
+					say "[BeatenElkCowSex3]";
 				if (nam is "DDD"):
-					say "[BeatenElkDoeSex4]";
+					say "[BeatenElkCowSex4]";
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Just leave him?";
@@ -301,19 +301,19 @@ to say BeatenElkDoeSexMenu:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
 
-to say BeatenElkDoeSex1:
+to say BeatenElkCowSex1:
 	say "     ...";
 
-to say BeatenElkDoeSex2:
+to say BeatenElkCowSex2:
 	say "     ...";
 
-to say BeatenElkDoeSex3:
+to say BeatenElkCowSex3:
 	say "     ...";
 
-to say BeatenElkDoeSex4:
+to say BeatenElkCowSex4:
 	say "     ...";
 
-to say ElkDoeDesc:
+to say ElkCowDesc:
 	setmongender 4;
 	if inasituation is true:
 		say ""; [dealt with in the origin event]
@@ -334,7 +334,7 @@ to say ElkDoeDesc:
 		say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare[or]wears not a stitch of clothing, her female sex as openly presented as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare[at random]. ";
 		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh. ";
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
-			say "     The elk doe looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
+			say "     The elk cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
 			[comment]
 			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Cupping one of her breasts and giving its nipple a demonstrative pinch, the female elk steps forward to take her pleasure from you, if you want or not.";
 		else:
@@ -346,11 +346,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Elk Tribe Doe";
+	now name entry is "Elk Tribe Cow";
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribeswoman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]grabs you by the throat and throws you to the ground[or]grabs you with one of her hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
-	now defeated entry is "[ElkDoeBeaten]";
-	now victory entry is "[ElkDoeVictorious]";
-	now desc entry is "[ElkDoeDesc]";
+	now defeated entry is "[ElkCowBeaten]";
+	now victory entry is "[ElkCowVictorious]";
+	now desc entry is "[ElkCowDesc]";
 	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if cocks of player > 0]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
 	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
@@ -382,7 +382,7 @@ When Play begins:
 	now cunt length entry is 15;
 	now cunt width entry is 6;
 	now libido entry is 90; [ Target libido the infection will rise towards. ]
-	now loot entry is "elk doe fur"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "elk cow fur"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscled[or]powerful[or]buff[at random]";
@@ -395,17 +395,17 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"elk doe fur"	"A tuft of fur from one of the powerful elk tribe does."	0	elk doe fur
+"elk cow fur"	"A tuft of fur from one of the powerful elk tribe cows."	0	elk cow fur
 
-instead of sniffing elk doe fur:
+instead of sniffing elk cow fur:
 	say "The tuft of fur smells a bit musky.";
 
-elk doe fur is a grab object.
-the usedesc of elk doe fur is "[elk doe fur use]";
+elk cow fur is a grab object.
+the usedesc of elk cow fur is "[elk cow fur use]";
 
-to say elk doe fur use:
+to say elk cow fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Elk Tribe Doe";
+	infect "Elk Tribe Cow";
 	
 	
 Section 3 - Elk Tribe Herm
@@ -423,7 +423,7 @@ to say ElkHermBeaten:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		say "     After your last hit, the elk doe staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
+		say "     After your last hit, the elk cow staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
 		say "     [bold type]What now?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
@@ -606,9 +606,9 @@ to say elk herm fur use:
 	infect "Elk Tribe Herm";
 
 
-Section 4 - Elk Tribe Trans Buck [cuntboy]
+Section 4 - Elk Tribe Trans Bull [cuntboy]
 
-to say ElkTransBuckVictorious:
+to say ElkTransBullVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
@@ -617,23 +617,23 @@ to say ElkTransBuckVictorious:
 		else:  [player beaten]
 			say "     ...";
 
-to say ElkTransBuckBeaten:
+to say ElkTransBullBeaten:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		say "     After your last hit, the elk buck staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. Seeing him lie on the ground, your eyes can't help but wander over his muscular form and down to his crotch.";
+		say "     After your last hit, the elk bull staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. Seeing him lie on the ground, your eyes can't help but wander over his muscular form and down to his crotch.";
 		say "     [bold type]What now?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
 		say "     ([link]N[as]n[end link]) - Just leave.";
 		if player consents:
 			LineBreak;
-			say "[BeatenElkTransBuckSexMenu]";
+			say "[BeatenElkTransBullSexMenu]";
 		else:
 			LineBreak;
 			say "     You walk away after checking him over for loot.";
 
-to say BeatenElkTransBuckSexMenu:
+to say BeatenElkTransBullSexMenu:
 	LineBreak;
 	say "     What do you want to do with the transgendered elk?";
 	now sextablerun is 0;
@@ -676,13 +676,13 @@ to say BeatenElkTransBuckSexMenu:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "AAA"):
-					say "[BeatenElkTransBuckSex1]";
+					say "[BeatenElkTransBullSex1]";
 				if (nam is "BBB"):
-					say "[BeatenElkTransBuckSex2]";
+					say "[BeatenElkTransBullSex2]";
 				if (nam is "CCC"):
-					say "[BeatenElkTransBuckSex3]";
+					say "[BeatenElkTransBullSex3]";
 				if (nam is "DDD"):
-					say "[BeatenElkTransBuckSex4]";
+					say "[BeatenElkTransBullSex4]";
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Just leave him?";
@@ -696,19 +696,19 @@ to say BeatenElkTransBuckSexMenu:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
 
-to say BeatenElkTransBuckSex1:
+to say BeatenElkTransBullSex1:
 	say "     ...";
 
-to say BeatenElkTransBuckSex2:
+to say BeatenElkTransBullSex2:
 	say "     ...";
 
-to say BeatenElkTransBuckSex3:
+to say BeatenElkTransBullSex3:
 	say "     ...";
 
-to say BeatenElkTransBuckSex4:
+to say BeatenElkTransBullSex4:
 	say "     ...";
 
-to say ElkTransBuckDesc:
+to say ElkTransBullDesc:
 	setmongender 8;
 	if inasituation is true:
 		say ""; [dealt with in the origin event]
@@ -726,12 +726,12 @@ to say ElkTransBuckDesc:
 			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
 			say "elk tribesman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
 		[clothing]
-		say "[one of]wears just a simple leather loincloth, which hangs strangely flat over his crotch[or]wears not a stitch of clothing, revealing a pussy between his legs[or]wears a brown loincloth with red stripes, which hangs strangely flat over his crotch[or]wears a blue and white striped loincloth, which hangs strangely flat over his crotch[or]wears a simple black loincloth, which hangs strangely flat over his crotch[at random]. This doesn't seem to be a regular male elk. ";
+		say "[one of]wears just a simple leather loincloth, which hangs strangely flat over his crotch[or]wears not a stitch of clothing, revealing a pussy between his legs[or]wears a brown loincloth with red stripes, which hangs strangely flat over his crotch[or]wears a blue and white striped loincloth, which hangs strangely flat over his crotch[or]wears a simple black loincloth, which hangs strangely flat over his crotch[at random]. This cowsn't seem to be a regular male elk. ";
 		say "The rest of his body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up his muzzle to the top of his head and with what you assume is a symbol of rank on his left thigh. ";
 		[antlers]
 		say "A pair of [one of]spike-like antlers on each side of his head marks him as a quite young male[or]spindly four-point antlers on each side of his head marks him as a young male[or]five-point antlers on each side of his head marks him as a young but maturing male[or]proud six-point antlers on each side of his head marks him as a mature male[or]proud seven-point antlers on each side of his head marks him as an experienced male[or]impressive eight-point antlers on each side of his head marks him as a mature male[at random].";
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
-			say "     The elk trans buck looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
+			say "     The elk trans bull looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
 			[comment]
 			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his crotch demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
 		else:
@@ -743,11 +743,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Elk Tribe Trans Buck";
+	now name entry is "Elk Tribe Trans Bull";
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribesman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]lowers his head and hits you with a sweep of his horns[or]grabs you by the throat and throws you to the ground[or]grabs you with one of his hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
-	now defeated entry is "[ElkTransBuckBeaten]";
-	now victory entry is "[ElkTransBuckVictorious]";
-	now desc entry is "[ElkTransBuckDesc]";
+	now defeated entry is "[ElkTransBullBeaten]";
+	now victory entry is "[ElkTransBullVictorious]";
+	now desc entry is "[ElkTransBullDesc]";
 	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if cocks of player > 0]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
 	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
@@ -779,7 +779,7 @@ When Play begins:
 	now cunt length entry is 15;
 	now cunt width entry is 6;
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
-	now loot entry is "elk trans buck fur"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "elk trans bull fur"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscled[or]powerful[or]buff[at random]";
@@ -792,22 +792,22 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"elk trans buck fur"	"A tuft of fur from one of the powerful elk tribe trans bucks."	0	elk trans buck fur
+"elk trans bull fur"	"A tuft of fur from one of the powerful elk tribe trans bulls."	0	elk trans bull fur
 
-instead of sniffing elk trans buck fur:
+instead of sniffing elk trans bull fur:
 	say "The tuft of fur smells a bit musky.";
 
-elk trans buck fur is a grab object.
-the usedesc of elk trans buck fur is "[elk trans buck fur use]";
+elk trans bull fur is a grab object.
+the usedesc of elk trans bull fur is "[elk trans bull fur use]";
 
-to say elk trans buck fur use:
+to say elk trans bull fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Elk Tribe Trans Buck";
+	infect "Elk Tribe Trans Bull";
 	
 	
-Section 5 - Elk Tribe Trans Doe
+Section 5 - Elk Tribe Trans Cow
 
-to say ElkTransDoeVictorious:
+to say ElkTransCowVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
@@ -816,24 +816,24 @@ to say ElkTransDoeVictorious:
 		else:  [player beaten]
 			say "     ...";
 
-to say ElkTransDoeBeaten:
+to say ElkTransCowBeaten:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		say "     After your last hit, the elk doe staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
+		say "     After your last hit, the elk cow staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
 		say "     [bold type]What now?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
 		say "     ([link]N[as]n[end link]) - Just leave.";
 		if player consents:
 			LineBreak;
-			say "[BeatenElkTransDoeSexMenu]";
+			say "[BeatenElkTransCowSexMenu]";
 		else:
 			LineBreak;
 			say "     You walk away after checking her over for loot.";
 
 
-to say BeatenElkTransDoeSexMenu:
+to say BeatenElkTransCowSexMenu:
 	LineBreak;
 	say "     What do you want to do with the transgendered elk?";
 	now sextablerun is 0;
@@ -876,13 +876,13 @@ to say BeatenElkTransDoeSexMenu:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "AAA"):
-					say "[BeatenElkTransDoeSex1]";
+					say "[BeatenElkTransCowSex1]";
 				if (nam is "BBB"):
-					say "[BeatenElkTransDoeSex2]";
+					say "[BeatenElkTransCowSex2]";
 				if (nam is "CCC"):
-					say "[BeatenElkTransDoeSex3]";
+					say "[BeatenElkTransCowSex3]";
 				if (nam is "DDD"):
-					say "[BeatenElkTransDoeSex4]";
+					say "[BeatenElkTransCowSex4]";
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Just leave him?";
@@ -896,19 +896,19 @@ to say BeatenElkTransDoeSexMenu:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
 
-to say BeatenElkTransDoeSex1:
+to say BeatenElkTransCowSex1:
 	say "     ...";
 
-to say BeatenElkTransDoeSex2:
+to say BeatenElkTransCowSex2:
 	say "     ...";
 
-to say BeatenElkTransDoeSex3:
+to say BeatenElkTransCowSex3:
 	say "     ...";
 
-to say BeatenElkTransDoeSex4:
+to say BeatenElkTransCowSex4:
 	say "     ...";
 
-to say ElkTransDoeDesc:
+to say ElkTransCowDesc:
 	setmongender 6;
 	if inasituation is true:
 		say ""; [dealt with in the origin event]
@@ -929,7 +929,7 @@ to say ElkTransDoeDesc:
 		say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears not a stitch of clothing, revealing a thick cock hanging between her legs as openly as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[at random]. This is not a regular female elk it seems. ";
 		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh. ";
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
-			say "     The elk trans doe looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
+			say "     The elk trans cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
 			[comment]
 			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the transgendered elk steps forward to take her pleasure from you, if you want or not.";
 		else:
@@ -941,11 +941,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Elk Tribe Trans Doe";
+	now name entry is "Elk Tribe Trans Cow";
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribeswoman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]grabs you by the throat and throws you to the ground[or]grabs you with one of her hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
-	now defeated entry is "[ElkTransDoeBeaten]";
-	now victory entry is "[ElkTransDoeVictorious]";
-	now desc entry is "[ElkTransDoeDesc]";
+	now defeated entry is "[ElkTransCowBeaten]";
+	now victory entry is "[ElkTransCowVictorious]";
+	now desc entry is "[ElkTransCowDesc]";
 	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose. Your muzzle is slender and your features delicate, looking alluring and feminine";
 	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
@@ -977,7 +977,7 @@ When Play begins:
 	now cunt length entry is 0;
 	now cunt width entry is 0;
 	now libido entry is 90; [ Target libido the infection will rise towards. ]
-	now loot entry is "elk trans doe fur"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "elk trans cow fur"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscled[or]powerful[or]buff[at random]";
@@ -990,28 +990,28 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"elk trans doe fur"	"A tuft of fur from one of the powerful elk tribe trans does."	0	elk trans doe fur
+"elk trans cow fur"	"A tuft of fur from one of the powerful elk tribe trans cows."	0	elk trans cow fur
 
-instead of sniffing elk trans doe fur:
+instead of sniffing elk trans cow fur:
 	say "The tuft of fur smells a bit musky.";
 
-elk trans doe fur is a grab object.
-the usedesc of elk trans doe fur is "[elk trans doe fur use]";
+elk trans cow fur is a grab object.
+the usedesc of elk trans cow fur is "[elk trans cow fur use]";
 
-to say elk trans doe fur use:
+to say elk trans cow fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Elk Tribe Trans Doe";
+	infect "Elk Tribe Trans Cow";
 		
 
 Section 4 - Endings
 
 when play ends:
-	if bodyname of player is "Elk Tribe Buck":
+	if bodyname of player is "Elk Tribe Bull":
 		if humanity of player < 10:
 			say "     ...";
 		else:
 			say "     ...";
-	else if bodyname of player is "Elk Tribe Doe":
+	else if bodyname of player is "Elk Tribe Cow":
 		if humanity of player < 10:
 			say "     ...";
 		else:
@@ -1021,12 +1021,12 @@ when play ends:
 			say "     ...";
 		else:
 			say "     ...";
-	else if bodyname of player is "Elk Tribe Trans Buck":
+	else if bodyname of player is "Elk Tribe Trans Bull":
 		if humanity of player < 10:
 			say "     ...";
 		else:
 			say "     ...";
-	else if bodyname of player is "Elk Tribe Trans Doe":
+	else if bodyname of player is "Elk Tribe Trans Cow":
 		if humanity of player < 10:
 			say "     ...";
 		else:

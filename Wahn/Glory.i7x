@@ -92,20 +92,23 @@ to say GloryChoices:
 	now sortorder entry is 1;
 	now description entry is "Try to strengthen her resolve and say that the military will save all of you eventually";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Bring her to Santa Claws";
-	now sortorder entry is 2;
-	now description entry is "The Christmas Village should be safe and allow her to forget";
+	if HP of Santa Claws > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Bring her to Santa Claws";
+		now sortorder entry is 2;
+		now description entry is "The Christmas Village should be safe and allow her to forget";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Take her to Moreau";
-	now sortorder entry is 3;
-	now description entry is "Some naga hypnotherapy might work wonders";
+	if HP of Moreau > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Take her to Moreau";
+		now sortorder entry is 3;
+		now description entry is "Some naga hypnotherapy might work wonders";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Bring her to Tobias";
-	now sortorder entry is 4;
-	now description entry is "He'll surely protect her, in his own way";
+	if HP of Tobias > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Bring her to Tobias";
+		now sortorder entry is 4;
+		now description entry is "He'll surely protect her, in his own way";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

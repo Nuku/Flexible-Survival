@@ -13,6 +13,7 @@ after going to Smith Haven Mall Lot East while HP of Tobias is 0 and a random ch
 	say "     'Pleasure to meet you, I'm Tobias Black.' While you tell him your own name, he pulls a business card out of a breast pocket and hands it to you. It reads, 'Tobias Black - Animal Handler, Trainer, Breeder' and has a stylized paw-print in the upper left corner. 'Sorry that I didn't acknowledge you earlier. You know how it is with dogs in training, one has to address any disobedience immediately to avoid any bad habits forming. Dane here is about fully trained by now, but Cara still needs work. But don't you worry, she'll be an excellently obedient bitch in no time at all.' The man's behaviour towards you is markedly different from the side his pets experience, and he seems very friendly, even jovial. He seems to want to chat a bit with you, and is clearly waiting for you to say something.";
 	WaitLineBreak;
 	say "[TobiasTalkMenu]";
+	now hp of Tobias is 1; [initial event done]
 
 to say TobiasTalkMenu:
 	LineBreak;

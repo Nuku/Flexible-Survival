@@ -423,8 +423,6 @@ Definition: A person(Called X) is bunkered:
 	if the location of x is Maintenance Closet, yes;
 	no;
 
-
-
 A thing can be rooted in place. A thing is usually not rooted in place.
 A thing can be restful. A thing is usually not restful.
 A door can be dangerous.
@@ -1723,11 +1721,13 @@ an everyturn rule:
 		if LastTurnDay is false: [last turn was night]
 			say "[bold type]The sun rises over the city.[roman type][line break]";
 		now LastTurnDay is true;
+		if WerewolfWatching is true: [she's only out at night]
+			now WerewolfWatching is false;
 	else if daytimer is night: [currently night]
 		if LastTurnDay is true: [last turn was day]
 			say "[bold type]The sun sets and darkness covers the city.[roman type][line break]";
 		now LastTurnDay is false;
-		if player is in Urban Forest and LastWerewolfFuck - turns > 6: [not werewolf fucked during the same night]
+		if player is in Urban Forest and WerewolfRelationship is 0:
 			if WerewolfWatching is false: [initial message]
 				say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resing on you can't be all in your head, can it?";
 				now WerewolfWatching is true;
