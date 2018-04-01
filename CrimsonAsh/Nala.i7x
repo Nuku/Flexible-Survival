@@ -1,5 +1,6 @@
 Version 1 of Nala by CrimsonAsh begins here.
 [Version 1 - New file]
+[Version 1.1 - Character relocation - Luneth]
 
 [ HP of Nala                                           ]
 [  0: never met                                        ]
@@ -77,7 +78,7 @@ to say TalkNala:
 	say "     She crosses her arms, pushing out her perky breasts, 'Now can you let me up big [if cocks of player > 0]boy[else]girl[end if]?' She asks politely, 'I won't run, I promise.' Reluctantly you get off her blanket swaddled form and help untangle her. After freeing her she flaps her wings so that shes eye level with you. 'Thanks sweetie!' She says bubbly, 'Although you did trap me in the first place so only partial thanks.' She giggles to herself. 'I'm Nala by the by.' She says putting her small clawed hand out to shake.";
 	WaitLineBreak;
 	say "     You grasp her soft hand and introduce yourself as well. 'Good to meet ya friend!' She responds with glee before looking you up and down, only now taking in your form. 'Hehe maybe we should do this again, you pinning me down and such.' She covers her mouth with her clawed hand and laughs. 'I have some things to take care of but we should meet up again, you're nicer than most of these fools I play jokes on.' She announces before turning around and flapping out of the room. You have suspicions that these things she needs to take care are more pranks but you keep silent and watch her leave. Hearing echoing down the hall she shouts, 'This is a real swell place you've got here friend, I think I'll be sticking around for a while!' Wait, what? Before you can object she's off, out of the bunker and out of sight... this will prove interesting.";
-	move Nala to Grey Abbey Library;
+	move Nala to Makeshift Rec Room;
 
 to say RapeNala:
 	if cocks of player > 0:
