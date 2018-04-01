@@ -166,7 +166,6 @@ Section 2 - Bee Girl NPC/Pet
 bee girl is a pet. bee girl is a part of the player.
 understand "Honey" as bee girl.
 The description of bee girl is "[HoneyDesc]".
-"The bee drone has a youthful appearance despite her maturity. Her face, shoulders, arms and upper chest appear to be mostly human, though her lower body and hands are covered in insectile plating, looking like a tight-fitting yellow and black dress. She has a small pair of insect arms at her sides, which can be used to hold small things. The bee abdomen attached to her tight bottom lacks its stinger.".
 The weapon damage of bee girl is 3.
 The level of bee girl is 1.
 The Dexterity of bee girl is 16.

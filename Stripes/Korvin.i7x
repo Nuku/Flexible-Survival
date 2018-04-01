@@ -19,6 +19,11 @@ Version 2 of Korvin by Stripes begins here.
 
 "Adds character specific info for Korvin the GSD pet."
 
+the linkaction of Korvin is "[korvinlinkaction]".
+
+to say korvinlinkaction:
+	say "Possible Actions: [link]talk[as]talk Korvin[end link], [link]smell[as]smell Korvin[end link], [link]fuck[as]fuck Korvin[end link][line break]";
+
 Section 0 - GShep Pet
 
 gshep is a pet. gshep is a part of the player.
@@ -62,6 +67,25 @@ The description of Korvin is "[Korvindesc]".
 instead of fucking Korvin:
 	say "[korvinsexmenu]";
 
+instead of conversing the Korvin:
+	if player is in Makeshift Rec Room and Korvin is in Makeshift Rec Room:
+		say "[KorvinTalk]";
+	else if companion of player is gshep:
+		say "[KorvinTalk]";
+	else:
+		say "     Korvin isn't here.";
+
+instead of conversing gshep:
+	if gshep is not tamed:
+		say "     Who?";
+	else:
+		if player is in Makeshift Rec Room and Korvin is in Makeshift Rec Room:
+			say "[KorvinTalk]";
+		else if companion of player is gshep:
+			say "[KorvinTalk]";
+		else:
+			say "     Korvin isn't here.";
+
 to say Korvindesc:
 	if debugactive is 1:
 		say "DEBUG - Korvin | LVL: [level of gshep], XP: [XP of gshep], DEX: [dexterity of gshep], DMG: [weapon damage of gshep].";
@@ -71,12 +95,12 @@ to say Korvindesc:
 		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face. He's got the typical brown and black coat of the breed. He's buff and well-built, though not overly so. His most distinguishing feature is the ragged scar that runs along his cheek and muzzle. Such marks are rare, even with the amount of fighting between mutants in the city. He's also nude, wearing nothing save for the rope leash you've put around his neck[if gsd_pet is 15]. You should really look for a [bold type]pet shop[roman type] to find a replacement for that[else if gsd_pet is 16]. You recall that you've got a replacement for that. Go have a [bold type]talk[roman type] to him about it[end if]. Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life. Having put him in his place, he's come to accept you as his master and will follow your orders, even if does retain quite an independent streak.";
 	else if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
 		if graphics is true:
-			project the figure of Korvin_pinkcollar_face_icon;
+			project the figure of Korvin_pinkcollar_icon;
 		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face. He's got the typical brown and black coat of the breed. He's buff and well-built, though not overly so. His most distinguishing feature is the ragged scar that runs along his cheek and muzzle. Such marks are rare, even with the amount of fighting between mutants in the city. He's also nude, wearing nothing save for the cute pink collar you've embarrassingly given him. It is a reminder to him that he may look like a big, bad dog, but he's to be your subby puppy pet as well.";
 		say "     Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life. You've been able to train some of his bad habits out of him, making him obedient and sexually submissive to you. He still retains that aggressive streak toward others, but he accepts you as his alpha and master and will follow your orders like the trained dog he's become.";
 	else:	[Confident Korvin, gsd_pet >= 60]
 		if graphics is true:
-			project the figure of Korvin_blackcollar_face_icon;
+			project the figure of Korvin_blackcollar_icon;
 		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face. He's got the typical brown and black coat of the breed. He's buff and well-built, though not overly so. His most distinguishing feature is the ragged scar that runs along his cheek and muzzle. Such marks are rare, even with the amount of fighting between mutants in the city. He's also nude, wearing nothing save for the black studded collar you've given him, adding to his air of menace.";
 		say "     Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life. You've been able to help him better cope with that, letting him recover a little self-control. He still retains some of that independent streak of his, but he accepts you as his friend and master and will follow your orders fairly loyally.";
 
@@ -86,12 +110,8 @@ to say gshep_attack:
 
 Section 1 - Dialog
 
-Instead of conversing the gshep:
-	if gshep is not tamed:
-		say "Who do you want to talk to?";
-	else if gshep is not companion of player:
-		say "I don't see him around right now. You'll have to call him over first.";
-	else if gsd_pet < 16:
+to say KorvinTalk:
+	if gsd_pet < 16:
 		say "     [one of]'What do you want?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, oh wise and powerful Alpha?' he asks, rolling his eyes. A glare from you gets him to stop and hang his head.[or]'I can't wait for our next scrap, [if cunts of player > 0]Mistress[else]Master[end if]. It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[at random]";
 	else if gsd_pet is 16:
 		if cocks of player is 0 and cunts of player is 0:

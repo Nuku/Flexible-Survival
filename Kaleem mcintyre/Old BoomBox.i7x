@@ -175,7 +175,7 @@ To say jazzfriends:
 	if skunk kit is tamed:
 		say "     The little skunk kit is somewhat amused by the noise as it comes over and then plops down to listen to the smooth jazz.";
 	if helper dog is tamed:
-		say "     The helper dog seems to appreciate your taste in music as it comes over to lay across your lap. Maybe one of the people it once helped liked this kind of melody? The slight bob of the canine's head seems to give greater validation to this theory.";
+		say "     Hobo seems to appreciate your taste in music as it comes over to lay across your lap. Maybe one of the people it once helped liked this kind of melody? The slight bob of the canine's head seems to give greater validation to this theory.";
 	if little fox is tamed:
 		say "     The cute little fox you found seems to like the jazz music as it comes over to yip at the jam box while cocking its head from side to side, likely wondering who's making the pleasant noise. You are tempted to grab the cute thing to nuzzle it, but you decide not to bother the vulpine as the other is just having too much fun to disturb right now, especially as it starts to roll around while yipping adorably in front of the boom box.";
 	if Elijah is in the Bunker:
@@ -192,7 +192,7 @@ to say tangofriends:
 	if helper dog is tamed:
 		say "     Hobo moves over to the platform beside the door to the bunker, sitting there and watching as he seems to listen both to the outside and to the music with an air of appreciation.";
 	if cute crab is tamed:
-		say "     The cute little crab comes over and soon starts to boogie a path up and down and then back and forth in front the boom box as it dances its own crustacean dance. You find yourself tempted to laugh at the sight of this, but you hold back in order to not hurt the little thing's feelings. Besides, it's really too cute to watch.";
+		say "     The cute little crab comes over and soon starts to boogie a path up and down and then back and forth in front the boom box as it dances his own crustacean dance. You find yourself tempted to laugh at the sight of this, but you hold back in order to not hurt the little thing's feelings. Besides, it's really too cute to watch.";
 	if Sven is in the bunker:
 		if HP of Sven < 30:
 			say "     Without asking his permission, you go over to the shy snowmeow and take his paw, pulling him up to join you in dancing. He's timid and shy at first, but moves with considerable grace. With such a graceful partner, you pick up the pace, going for fancier and bolder moves. The kitty follows your lead, allowing you to perform a very energetic and sensual dance with him. Once you're done, you leave him on his bunk, blushing behind his tail and looking quite happy and excited.";
@@ -227,7 +227,7 @@ to say R&Bfriends:
 	if little fox is tamed:
 		say "     Your little fox companion comes over to nuzzle up against your leg and you smile somewhat reassuringly to the vulpine as you stare down at it warmly. The small kit yips at you before jumping up onto the cot you're sitting on to nuzzle your side. The little fox is soon asleep and snoring at you with its fluff tail wrapped around its masked face. You reach out to stroke the canid's diminutive body as you continue to listen to the music.";
 	if house cat is tamed:
-		say "     The small house cat comes up to rub around your legs twice before going on to sit by the boom box. You watch it carefully and then smile as the feline purrs quietly while rocking its head in time with the melody.";
+		say "     The small house cat comes up to rub around your legs twice before going on to sit by the boom box. You watch her carefully and then smile as the feline purrs quietly while rocking its head in time with the melody.";
 	if Gryphoness is tamed:
 		say "     Denise seems somewhat perturbed by this form of music which seems to rival her own voice. However, upon listening to the tunes for a longer period of time and growing accustomed to them, Denise seems to calm down and then quietly whispers in time with the melody. Soon enough, the gryphoness is almost mimicking the melody perfectly as she closes her eyes while singing in time with song coming from out of the boom box. You realize that you actually like the blue female's voice just a little more than the music as Denise seems to possess a strange, if not haunting echo to her warbling voice.";
 	if skunk kit is tamed:
@@ -272,7 +272,7 @@ to say RockandRollfriends:
 		say "     Feeling the rhythm getting to him, Candy moves around like a spring as the beat of the song coming from the jam box makes him somewhat of a loose cannon. Well, more than he already is as he spins around while skipping and then bobbing and weaving at the same time[if cocks of player > 0]. He even grinds himself back against your lap with a girlish giggle during one song[end if].";
 		say "     Nothing about his movements can be considered normal, but at the same time that gives the other an appearance of true freedom as he lets his effeminate body just roll around as it wishes. You chuckle some as the raccoon comes over to you to circle you twice before bumping up into you and then moving off again. Truly a carefree spirit if there ever was one to be found, you think silently before going back to your own dancing.";
 	if house cat is tamed:
-		say "     The little tabby house cat you found earlier rolls around the music box before purring and shaking its head somewhat wildly while yowling happily. You chuckle at this as you wonder if his former owner listened to this type of music a lot.";
+		say "     The little calico house cat you found earlier rolls around the music box before purring and shaking its head somewhat wildly while yowling happily. You chuckle at this as you wonder if her former owner listened to this type of music a lot.";
 	increase humanity of player by 4;
 	if humanity of player > 100, now humanity of player is 100;
 	increase libido of player by 15;
@@ -294,11 +294,11 @@ to say Oceanfriends:
 	If Coleen is in the bunker:
 		say "     Coleen makes her way over to [if sarah is bunkered]where Sarah is and then proceeds to snuggle up with the other husky woman[else]the bunk and sits on the floor beside you, leaning back against the cot[end if].";
 	if house cat is tamed:
-		say "     The small feline you rescued earlier meows as it moves into your lap to curl up.";
+		say "     The small feline you rescued earlier meows as she moves into your lap to curl up.";
 	if bee girl is tamed:
 		say "     Honey moves down by your feet to lay down beside you. Her buzzing wings make an interesting backdrop to the ocean shifting almost quietly around the room.";
 	if the cute crab is tamed:
-		say "     The small crustacean seems to utterly adore this music as it scurries itself back and forth around while [']smiling['] merrily.";
+		say "     The small crustacean seems to utterly adore this music as he scurries itself back and forth around while [']smiling['] merrily.";
 	if felinoid is tamed:
 		say "     Your felinoid companion is quick to go over and curl up at the small of your back. Purring distinctively inside of your ears, you chuckle some as its whiskers tickle you softly.";
 	if Candy is in bunker:
@@ -313,7 +313,7 @@ to say Oceanfriends:
 	if skunk kit is tamed:
 		say "     The little skunk goes to rest on top of your stomach and you can only laugh as you reach up to scratch at the other's black and white furred body.";
 	if helper dog is tamed:
-		say "     The helper dog makes his way over to you and then settles himself at your feet. Wagging its tail leisurely, you listen to the other yawn as he goes right to sleep, though his ears always remain perked.";
+		say "     Hobo makes his way over to you and then settles himself at your feet. Wagging its tail leisurely, you listen to the other yawn as he goes right to sleep, though his ears always remain perked.";
 	if Gryphoness is tamed:
 		say "     Denise seems somewhat fatigued as she listens to the soft sounds of the ocean. Having heard it before, the gryphoness makes her way over to you and then lays by your legs to coo and then snooze. It's almost cute the way her feathers puff up as she coos and snores at the same time.";
 	if Elijah is in the Bunker:

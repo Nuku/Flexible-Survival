@@ -329,6 +329,9 @@ Figure of RaneSavingEric_icon is the file "Rane&Eric2.jpg".   [after the Hellhou
 
 [maps]
 Figure of Map_Smith_Haven_Mall_icon is the file "Map_Mall.jpg".
+Figure of Bunker_icon is the file "Bunker.jpg".
+Figure of Library1stfloor_icon is the file "Library1stfloor.jpg".
+Figure of Library2ndfloor_icon is the file "Library2ndfloor.jpg".
 
 [emap - special]
 Figure of emap_special_signalnotfound_icon is the file "emap_special_signalnotfound.png".
@@ -514,6 +517,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Brutus_good_face"	Figure of Brutus_good_face_icon	"Inkydemon"	g-black	"normal"
 "BrutusEvil"	Figure of BrutusEvil_icon	"Inkydemon"	g-black	"normal"
 "Brutus_evil_face"	Figure of Brutus_evil_face_icon	"Inkydemon"	g-black	"normal"
+"Bunker"	Figure of Bunker_icon	"Luneth"	g-white	"inline_only"
 "Bunny Jock"	Figure of BunnyJock_icon	"Darian821"	g-black	"normal"
 "Buster"	Figure of Buster_icon	"Padunk"	g-black	"normal"
 "Candy"	Figure of Candy_icon	"uniformvixen"	g-black	"normal"
@@ -604,7 +608,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Hermaphrodite Gryphon Face"	Figure of BlueGryphon_face_icon	"dbd"	g-black	"normal"
 "Hermaphrodite Latex Vixen"	Figure of LatexVixen_icon	"Anymouse1968"	g-black	"normal"
 "Homo Sapiens"	Figure of HomoSapiens_icon	"Astro"	g-black	"normal"
-"Honey"	Figure of Honey_icon	"SandySchreiber"	g-black	"normal"
+"Honey"	Figure of Honey_icon	"SandySchreiber"	g-white	"normal"
 "Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-black	"normal"	[only shown for males]
 "Human Survivor"	Figure of Brennan_clothed_icon	"Sinealas"	g-black	"normal"
 "Imp"	Figure of Imp_clothed_icon	"Kupo Klein"	g-black	"normal"
@@ -639,6 +643,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Latex Ermine_Red"	Figure of LatexErmineRed_icon	"Anymouse1968"	g-black	"normal"
 "Latex Ermine_Teal"	Figure of LatexErmineTeal_icon	"Anymouse1968"	g-black	"normal"
 "LeonardViolin"	Figure of LeonardViolin_icon	"SandySchreiber"	g-black	"normal"
+"Library1stfloor"	Figure of Library1stfloor_icon	"Luneth"	g-white	"inline_only"
+"Library2ndfloor"	Figure of Library2ndfloor_icon	"Luneth"	g-white	"inline_only"
 "Lilith_boobs_icon"	Figure of Lilith_boobs_icon	"Kupo Klein"	g-black	"normal"
 "Lilith_clothed"	Figure of Lilith_clothed_icon	"Kupo Klein"	g-black	"normal"
 "Lilith_face"	Figure of Lilith_face_icon	"Kupo Klein"	g-black	"normal"
@@ -817,7 +823,7 @@ carry out artistcredits:
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
 	say "     Donkeywoman by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Dracovixentaur by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Ebonflame Draken by Anonymous[line break]";	
+	say "     Ebonflame Draken by Anonymous[line break]";
 	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
 	say "     Ewe by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Feline (females) by Anymouse1968 @ furaffinity.net[line break]";
@@ -938,7 +944,7 @@ carry out artistcredits:
 	say "     James by Anyare @ furaffinity.net[line break]";
 	say "     Janice by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Jason by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Jay by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";	
+	say "     Jay by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Jill by Sususmiles @ furaffinity.net[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
@@ -1007,6 +1013,7 @@ carry out artistcredits:
 	say "     Talov & Kerr by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "Maps:[line break]";
 	say "     Mall Map by Anonymous @ -[line break]";
+	say "     Library Maps by Luneth @ -[line break]";
 
 ArtistBanning is an action applying to nothing.
 
@@ -1028,7 +1035,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version, unfinished.]
-	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Sharei", "Sinealas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
+	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Sharei", "Sinealas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;
