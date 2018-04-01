@@ -1,6 +1,18 @@
 Version 1 of Gwen by Stripes begins here.
 [Version 1 - Basic event and NPC]
+[Version 1.1 - Minor maintenance and character relocation - Luneth]
+
 "Adds centaur 'foal' NPC named Gwen to the Flexible Survival game."
+
+[ HP of Gwen                                                                   ]
+[ 0 = not met                                                                  ]
+[ 1 = non-UB tf - sent to Dry Plains                                           ]
+[ 2 = UB'd                                                                     ]
+[ 3-20 = young foal                                                            ]
+[ 21-35 = teen foal                                                            ]
+[ 36-60 = mature                                                               ]
+[ 61 = mature - sent to Dry Plains                                             ]
+[ 62 = mature - player aware of departure                                      ]
 
 Section 1 - Event
 
@@ -155,27 +167,17 @@ Section 4 - Everyturn Rule (maturation and departure)
 an everyturn rule:
 	if HP of Gwen >= 3 and HP of Gwen <= 60:
 		increase HP of Gwen by 1;
-		if HP of Gwen is 61 and the player is in the Bunker or the player is in the Grey Abbey Library and skipturnblocker is 0:
+		if HP of Gwen is 61 and the player is in the Back Of The Library or the player is in the Grey Abbey Library and skipturnblocker is 0:
 			say "     You notice Meredith[if coleen is bunkered], Vanessa and Coleen[else] and Vanessa[end if] hugging Gwen repeatedly. This isn't too out of the ordinary, but Gwen's laden down with a pack of gear and has pulled on the top half of her jumpsuit loosely over top of her bikini. Heading over, you ask them what's up.";
 			say "     'Oh, I was just about to come see you,' Gwen says with a sexy smile. 'Aunt Van- I mean the sarge has a mission for me. So I'll be heading out. There's some... scouting she needs me to take care of. I probably won't be back here, but hopefully I'll still get to see you once this mess is all done,' she says, running her hands down your side before grabbing your ass.";
 			say "     There's another long round of goodbyes and tears are shed, mostly by the [']mother['] and [']daughter['], though there's a promise by Meredith to see her as soon her work's done. You try to get some more info out of Vanessa, but she says it's military secrets and winks coyly. Still, it doesn't sound like it's anything too dangerous for the sexy centaur - well, at least no more dangerous than any trip out into the city can be. You wish her the best of luck and hope to see her again, watching that sexy ass of hers as she leaves.";
 			now HP of Gwen is 62;
 		remove Gwen from play;
 
-after going to Bunker while HP of Gwen is 61:
-	say "     It takes you a few moment to notice that Gwen's not in the bunker. And more than not just being there, her stuff's gone as well. Aside from some of her childhood crayon drawings left on her bunk, she's cleared out. Asking Meredith about this, she's a little teary eyed, but says that Vanessa needed Gwen to go out on a very important mission. From how thoroughly she's cleared out and her mother's sad face, you know she won't be back here again. While neither of the centaurs will tell you what this mission is, it's clear they both feel it's important enough for her to go deal with it, but safe enough that she can handle it on her own. Meredith does talk about how she'll be seeing her sweet Gwenny again as soon as her own research is done.";
+after going to Back Of The Library while HP of Gwen is 61:
+	say "     It takes you a few moment to notice that Gwen's not in the library. And more than not just being there, her stuff's gone as well. Aside from some of her childhood crayon drawings left on her bunk, she's cleared out. Asking Meredith about this, she's a little teary eyed, but says that Vanessa needed Gwen to go out on a very important mission. From how thoroughly she's cleared out and her mother's sad face, you know she won't be back here again. While neither of the centaurs will tell you what this mission is, it's clear they both feel it's important enough for her to go deal with it, but safe enough that she can handle it on her own. Meredith does talk about how she'll be seeing her sweet Gwenny again as soon as her own research is done.";
 	now HP of Gwen is 62;
 	remove Gwen from play;
 
-
-[ HP of Gwen     ]
-[ 0 = not met    ]
-[ 1 = non-UB tf - sent to Dry Plains ]
-[ 2 = UB'd     ]
-[ 3-20 = young foal ]
-[ 21-35 = teen foal  ]
-[ 36-60 = mature     ]
-[ 61 = mature - sent to Dry Plains ]
-[ 62 = mature - player aware of departure ]
 
 Gwen ends here.

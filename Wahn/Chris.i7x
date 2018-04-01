@@ -1,4 +1,5 @@
 Version 1 of Chris by Wahn begins here.
+[Version 1.1 - Character relocation - Luneth]
 
 [ HP of Chris - location                           ]
 [   0: not born yet                                ]
@@ -430,7 +431,7 @@ to say ChrisSex5: [milk cum out of Chris]
 		say "     'Get a bigger bottle next time,' the orc teen says in an amused tone as he cums on your face, creaming you good with the ebbing-off orgasm. 'Or better yet - don't. I like that look on you,' he adds after a second or two, placing a large hand on your face to rub in the cum. Swiping up some, he playfully lets it stretch goopy lines between his fingers, then pushes the sticky digits into your mouth to be licked clean. 'Yeah, be the cum-slut that you deserve to be,' he grunts in satisfaction, amused about how eagerly you suck on his fingers. Then the teenage orc adds, 'Think of me when you drink this,' patting the bottle in your hands, then walking off to throw himself onto his sofa to rest. You're left behind, somewhat sticky and hungry for more. For a moment, you want to just chug the bottle right now, but manage to push down the instinct and pack it away instead.";
 	increase carried of orc cum by 1;
 
-instead of navigating Grey Abbey Library while (libido of Chris is 2 and Chris is in Grey Abbey 2F and Dexterity of Chris is 0):
+instead of navigating Grey Abbey Library while (libido of Chris is 2 and Chris is in Sitting Area and Dexterity of Chris is 0):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -476,8 +477,8 @@ instead of navigating Grey Abbey Library while (libido of Chris is 2 and Chris i
 		say "     Answering the zebra's pleading look with a shrug, you look away and walk over to the librarian's desk, from where there isn't a line of sight to that section of the upper floor railing. About time you sorted out your backpack a bit anyways, the better to find your stuff if you need it in a hurry. The gasps and sounds of rough fucking from above you just tune out, as you're used to by now from out on the streets.";
 	now Dexterity of Chris is 1;
 
-instead of going up from Grey Abbey Library while (Chris is in Grey Abbey 2F and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 0 and (lastfuck of Chris - turns) > 12):
-	move player to Grey Abbey 2F;
+instead of going up from Grey Abbey Library while (Chris is in Sitting Area and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 0 and (lastfuck of Chris - turns) > 12):
+	move player to Sitting Area;
 	if debugactive is 1:
 		say "     DEBUG: Chris dominance scene; libido of Chris: [libido of Chris], WarriorChrisDominance: [WarriorChrisDominance], WarriorChrisPlayerFucked: [WarriorChrisPlayerFucked][line break]";
 	say "     Coming up the library stairs, you find your gaze almost inevitably drawn over to the sofa Chris likes to hang out on - and before you know it, your feet follow suit and you're halfway over him already. With each step forward, the rippling muscles and masculine frame of the orc draw more and more of your attention. He really is quite a sight, with the typical and powerful body of an orc warrior now that has you biting your lip as you feast your eyes on him. Dimly, you remember the heartfelt request of Chris's orc breeder parent Val who told you to keep his kid away from the orc lifestyle. Somehow you're glad that you didn't - he looks so awe-inspiringly masculine now that you almost feel ready to just fall to your knees and muscle-worship him.";
@@ -515,8 +516,8 @@ instead of going up from Grey Abbey Library while (Chris is in Grey Abbey 2F and
 		now WarriorChrisDominance is 50; [player refused Chris]
 		now lastfuck of Chris is turns;
 
-instead of going up from Grey Abbey Library while (Chris is in Grey Abbey 2F and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 1 and (lastfuck of Chris - turns) > 12):
-	move player to Grey Abbey 2F;
+instead of going up from Grey Abbey Library while (Chris is in Sitting Area and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 1 and (lastfuck of Chris - turns) > 12):
+	move player to Sitting Area;
 	if debugactive is 1:
 		say "     DEBUG: Chris dominance scene; libido of Chris: [libido of Chris], WarriorChrisDominance: [WarriorChrisDominance], WarriorChrisPlayerFucked: [WarriorChrisPlayerFucked][line break]";
 	say "     Coming up the library stairs, you find your gaze almost inevitably drawn over to the sofa Chris likes to hang out on - and before you know it, your feet follow suit and you're halfway over him already. With each step forward, the rippling muscles and masculine frame of the orc draw more and more of your attention. He really is quite a sight, with the typical and powerful body of an orc warrior now that has you biting your lip as you feast your eyes on him. Memories well up in your mind of the time he took you out into the streets - naked, to fuck and publicly establish that you're his breeder slut. Fuck, that was a good time. Just thinking back to it has you almost ready to just fall to your knees and muscle-worship him.";
@@ -539,8 +540,8 @@ instead of going up from Grey Abbey Library while (Chris is in Grey Abbey 2F and
 	now WarriorChrisDominance is 2; [player got pushed to be Chris's breeder slut - twice]
 	now lastfuck of Chris is turns;
 
-instead of going up from Grey Abbey Library while (Chris is in Grey Abbey 2F and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 2 and (lastfuck of Chris - turns) > 12):
-	move player to Grey Abbey 2F;
+instead of going up from Grey Abbey Library while (Chris is in Sitting Area and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 2 and (lastfuck of Chris - turns) > 12):
+	move player to Sitting Area;
 	if debugactive is 1:
 		say "     DEBUG: Chris dominance scene; libido of Chris: [libido of Chris], WarriorChrisDominance: [WarriorChrisDominance], WarriorChrisPlayerFucked: [WarriorChrisPlayerFucked][line break]";
 	say "     Coming up the library stairs, you find Chris there waiting for you, casually leaning against one of the long bookshelves. He really is quite a sight, with the typical and powerful body of an orc warrior that has you biting your lip as you feast your eyes on him. Memories well up in your mind of the time he took you out into the streets - naked, to fuck and publicly establish that you're his breeder slut. Fuck, that was a good time! Just thinking back to it has you almost ready to just fall to your knees and muscle-worship him. Your gaze automatically wanders down to his crotch, drawn to the tight pair of shorts he is wearing, and the elongated bulge in its fabric. One of the orc's big hands is stroking the outline of his cock, and there is a wet spot where his pre-cum has soaked into the cloth.";
@@ -568,8 +569,8 @@ instead of going up from Grey Abbey Library while (Chris is in Grey Abbey 2F and
 	now WarriorChrisDominance is 3; [player got pushed to be Chris's breeder slut - three times]
 	now lastfuck of Chris is turns;
 
-instead of going up from Grey Abbey Library while (Chris is in Grey Abbey 2F and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 3 and (lastfuck of Chris - turns) > 8 and a random chance of 1 in 3 succeeds):
-	move player to Grey Abbey 2F;
+instead of going up from Grey Abbey Library while (Chris is in Sitting Area and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 3 and (lastfuck of Chris - turns) > 8 and a random chance of 1 in 3 succeeds):
+	move player to Sitting Area;
 	if debugactive is 1:
 		say "     DEBUG: Chris dominance scene; libido of Chris: [libido of Chris], WarriorChrisDominance: [WarriorChrisDominance], WarriorChrisPlayerFucked: [WarriorChrisPlayerFucked][line break]";
 	say "     Coming up the library stairs, you see that Chris has been waiting for you on his sofa, leaned back and slowly stroking his cock. The young orc gives an amused grunt as he stands up, then walks towards you with his hard shaft swinging freely. 'About time you come along, slut!' he tells you gruffly, sliding an arm around your body to pull you close. Grabbing your head and tilting it back, the orc warrior gives you a demanding kiss while his other hand gropes your body. Leaning into your master's touch, you feel a little bit giddy about how much you want him - how much you need him - and make out with him in eager bliss. Eventually, the green-skinned hunk pulls back from you a little, then goes on to lower his face to the crook of your neck and takes a deep breath.";

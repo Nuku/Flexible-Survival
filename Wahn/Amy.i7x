@@ -538,7 +538,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 			LineBreak;
 			say "     Moving over to the two of them, you greet Amy and Snow and chat a bit with them about mundane topics, breaking the mood building between them. After some minutes of talking, Snow gives Amy a friendly hug and excuses herself with wanting to get some fresh air outside. From the still pretty big bulge in her pants, you presume she'll go pick up one of the feral huskies out there and fuck the girl senseless.";
 			now SnowAmySex is 99;
-	else if HP of Amy > 10 and Icarus is in the Grey Abbey Library and IcarusAmySex is 0:[first interest of Icarus in her]
+	else if HP of Amy > 10 and Icarus is in the Garden View and IcarusAmySex is 0:[first interest of Icarus in her]
 		if HP of Icarus > 49: [dom Icarus]
 			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny and has taken to masturbation, her head resting on a pillow with closed eyes as she imagines... well, most likely you. As you stand there, eyes riveted on her naked form, a sudden flutter of wings in the air above you heralds the arrival of Icarus. The dominant blue chaffinch lands right next to you and gives Amy a hungry look. 'Horny little bitch you have there. I think I'll try her out and maybe make her mine instead.' Grabbing his balls suggestively while giving you an overbearing grin, Icarus then starts to strut towards the unsuspecting husky.";
 			LineBreak;
@@ -970,7 +970,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				now Lust of Amy is 24;
 		now lastfuck of Amy is turns;
 		now lastfuck of Snow is turns;
-	else if HP of Amy > 10 and Icarus is in the Grey Abbey Library and IcarusAmySex > 0 and IcarusAmySex < 99 and a random chance of 1 in 5 succeeds:[repeat sex between Icarus and Amy]
+	else if HP of Amy > 10 and Icarus is in the Garden View and IcarusAmySex > 0 and IcarusAmySex < 99 and a random chance of 1 in 5 succeeds:[repeat sex between Icarus and Amy]
 		if IcarusAmySex is 50: [dom Icarus]
 			say "     Entering the library, you see Amy - lying on her bedding and panting loudly as Icarus thrusts into her with his avian rod. The feathered fellow is drilling her hard with his tapered, slick cock, chirping occasionally as he does. With this having gone on for a while obviously, Amy is quite aroused by him mating her, with Icarus soft feathers rubbing against her thighs, crotch and pussy lips as he fucks her. She's not resisting his advances, just gripping the sheets with her paw-hands as waves of lust run through her body and Icarus is free to let his taloned hands roam over Amy's soft-furred body. Between the soft feathers rubbing against her and the hard cock pumping inside her needy pussy, it's not much longer until both of them finally climax loudly, his chirping and moaning joining her lust-filled barks. Icarus spreads his feathers a bit and gives you a smug nod as his hot seed pumps into Amy's cunt and flows into her womb.";
 			say "     When he's done, Icarus dismounts and gives Amy's breasts a grope before flying off with a chuckle. She's left lying there with his cum leaking from her stuffed pussy, exhausted by the hot fuck he just gave her.";

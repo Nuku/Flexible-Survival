@@ -19,30 +19,74 @@ Version 2 of Korvin by Stripes begins here.
 
 "Adds character specific info for Korvin the GSD pet."
 
+the linkaction of Korvin is "[korvinlinkaction]".
+
+to say korvinlinkaction:
+	say "Possible Actions: [link]talk[as]talk Korvin[end link], [link]smell[as]smell Korvin[end link], [link]fuck[as]fuck Korvin[end link][line break]";
+
 Section 0 - GShep Pet
 
 gshep is a pet. gshep is a part of the player.
-The description of gshep is "[Korvin_desc]".
+understand "Korvin" as gshep.
+The description of gshep is "[Korvindesc]".
 The conversation of gshep is { "Bark!" }.
 The weapon damage of gshep is 5.
 The level of gshep is 3.
 The Dexterity of gshep is 13.
-The summondesc of gshep is "Calling for Korvin, the German Shepherd joins you at your side. He seems excited at the prospect of busting some heads.".
+The summondesc of gshep is "[SummonKorvin]".
+The dismissdesc of gshep is "[DismissKorvin]".
 The assault of gshep is "[gshep_attack]".
 the scent of the gshep is "Korvin has a masculine scent of canine arousal.".
 The fuckscene of gshep is "[korvinsexmenu]".
 gshep has a number called lastscene. lastscene is usually 255.
 
+to say SummonKorvin:
+	remove Korvin from play;
+	if player is in Makeshift Rec Room and Korvin is in Makeshift Rec Room: [summoning while standing next to him]
+		say "     Calling for Korvin, the German Shepherd joins you at your side. He seems excited at the prospect of busting some heads.";
+	else: [regular summoning]
+		say "     Calling for Korvin, the German Shepherd joins you at your side. He seems excited at the prospect of busting some heads.";
+
+to say DismissKorvin:
+	move Korvin to Makeshift Rec Room;
+	if player is not in Makeshift Rec Room: [regular dismiss]
+		say "     With a curt nod, Korvin begins the run back to the abbey.";
+	else: [dismissing him in the abbey]
+		say "     With a shrug of his shoulders, Korvin goes back to doing whatever it is he does when passing the time.";
+
 gshep_fights is a number that varies.
-gshep_postfight is a number that varies.	[post-fight argument]
-gshep_sexscene is a number that varies.		[sex-role argument]
-gshep_bed_scene is a number that varies.	[discipline argument]
-gshep_inactive is a number that varies.		[inactivity argument]
-gshep_scarscene is a truth state that varies. gshep_scarscene is usually false.		[scar dialog]
+gshep_postfight is a number that varies. [post-fight argument]
+gshep_sexscene is a number that varies. [sex-role argument]
+gshep_bed_scene is a number that varies. [discipline argument]
+gshep_inactive is a number that varies. [inactivity argument]
+gshep_scarscene is a truth state that varies. gshep_scarscene is usually false. [scar dialog]
 
-understand "Korvin" as gshep.
+Korvin is a man.
+The description of Korvin is "[Korvindesc]".
 
-to say Korvin_desc:
+instead of fucking Korvin:
+	say "[korvinsexmenu]";
+
+instead of conversing the Korvin:
+	if player is in Makeshift Rec Room and Korvin is in Makeshift Rec Room:
+		say "[KorvinTalk]";
+	else if companion of player is gshep:
+		say "[KorvinTalk]";
+	else:
+		say "     Korvin isn't here.";
+
+instead of conversing gshep:
+	if gshep is not tamed:
+		say "     Who?";
+	else:
+		if player is in Makeshift Rec Room and Korvin is in Makeshift Rec Room:
+			say "[KorvinTalk]";
+		else if companion of player is gshep:
+			say "[KorvinTalk]";
+		else:
+			say "     Korvin isn't here.";
+
+to say Korvindesc:
 	if debugactive is 1:
 		say "DEBUG - Korvin | LVL: [level of gshep], XP: [XP of gshep], DEX: [dexterity of gshep], DMG: [weapon damage of gshep].";
 		say "DEBUG - Korvin | gsd_pet: [gsd_pet], lastfuck: [lastfuck of gshep], lastscene: [lastscene of gshep].";
@@ -51,12 +95,12 @@ to say Korvin_desc:
 		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face. He's got the typical brown and black coat of the breed. He's buff and well-built, though not overly so. His most distinguishing feature is the ragged scar that runs along his cheek and muzzle. Such marks are rare, even with the amount of fighting between mutants in the city. He's also nude, wearing nothing save for the rope leash you've put around his neck[if gsd_pet is 15]. You should really look for a [bold type]pet shop[roman type] to find a replacement for that[else if gsd_pet is 16]. You recall that you've got a replacement for that. Go have a [bold type]talk[roman type] to him about it[end if]. Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life. Having put him in his place, he's come to accept you as his master and will follow your orders, even if does retain quite an independent streak.";
 	else if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
 		if graphics is true:
-			project the figure of Korvin_pinkcollar_face_icon;
+			project the figure of Korvin_pinkcollar_icon;
 		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face. He's got the typical brown and black coat of the breed. He's buff and well-built, though not overly so. His most distinguishing feature is the ragged scar that runs along his cheek and muzzle. Such marks are rare, even with the amount of fighting between mutants in the city. He's also nude, wearing nothing save for the cute pink collar you've embarrassingly given him. It is a reminder to him that he may look like a big, bad dog, but he's to be your subby puppy pet as well.";
 		say "     Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life. You've been able to train some of his bad habits out of him, making him obedient and sexually submissive to you. He still retains that aggressive streak toward others, but he accepts you as his alpha and master and will follow your orders like the trained dog he's become.";
 	else:	[Confident Korvin, gsd_pet >= 60]
 		if graphics is true:
-			project the figure of Korvin_blackcollar_face_icon;
+			project the figure of Korvin_blackcollar_icon;
 		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face. He's got the typical brown and black coat of the breed. He's buff and well-built, though not overly so. His most distinguishing feature is the ragged scar that runs along his cheek and muzzle. Such marks are rare, even with the amount of fighting between mutants in the city. He's also nude, wearing nothing save for the black studded collar you've given him, adding to his air of menace.";
 		say "     Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life. You've been able to help him better cope with that, letting him recover a little self-control. He still retains some of that independent streak of his, but he accepts you as his friend and master and will follow your orders fairly loyally.";
 
@@ -66,12 +110,8 @@ to say gshep_attack:
 
 Section 1 - Dialog
 
-Instead of conversing the gshep:
-	if gshep is not tamed:
-		say "Who do you want to talk to?";
-	else if gshep is not companion of player:
-		say "I don't see him around right now. You'll have to call him over first.";
-	else if gsd_pet < 16:
+to say KorvinTalk:
+	if gsd_pet < 16:
 		say "     [one of]'What do you want?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, oh wise and powerful Alpha?' he asks, rolling his eyes. A glare from you gets him to stop and hang his head.[or]'I can't wait for our next scrap, [if cunts of player > 0]Mistress[else]Master[end if]. It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[at random]";
 	else if gsd_pet is 16:
 		if cocks of player is 0 and cunts of player is 0:
@@ -109,7 +149,7 @@ to say korvinsexmenu:
 		if cocks of player > 0:
 			say "     You let him go to town on your cock[smn] for a while[if cocks of player > 1], enjoying it as he swaps between them periodically[end if]. His slathering tongue and sucking muzzle are very nice, building your arousal higher. Eventually though, as your climax approaches, you're ready to set the pace. Grabbing his head with both hands now, you hold it steady and start thrusting. You rock your hips with increasing speed. Your [cock of player] manhood throbs in his [if cock length of player > 24]stretched muzzle and throat[else if cock length of player > 12]muzzle and throat[else]muzzle[end if] as precum leaks messily from your shaft. With a groan of release, your shaft is driven fully in and your [cum load size of player] load is [if cock width of player > 16]blasted[else if cock width of player > 8]shot[else]spurted[end if] into him[if cocks of player > 2]. Your additional cocks splatter semen onto him as well[else if cocks of player is 2]. Your additional cock splatters semen onto him as well[end if]. Once he's been fed your seed, you pull out and wipe your cock across his muzzle. He seems a bit grumpy about the rough treatment, but licks his dripping muzzle and wags his tail all the same.";
 		else:
-			say "     You let him go to town at your snatch[esfn] for a while[if cunts of player > 1], enjoying it as he swaps between them periodically[end if]. That lapping tongue of his is very enjoyable, building your arousal higher. Eventually though, as your climax is approaching, you're ready to set the pace and direct his actions. Pushing him back onto the ground, you kneel over his head and ride his face, grinding firmly. You hot juices leak messily onto his muzzle as you tell him to lick deeper, or harder, or over your clit, as your quivering cunn[yfn] demand[sfv]. With a moan of release, you cum hard, soaking his lapping tongue and canine muzzle with your feminine fluids. Once he's been made to lick you clean, you climb off of him. He seems a bit grumpy about the rough treatment, but licks his wet muzzle and wags his tail all the same.";
+			say "     You let him go to town at your snatch[esfn] for a while[if cunts of player > 1], enjoying it as he swaps between them periodically[end if]. That lapping tongue of his is very enjoyable, building your arousal higher. Eventually though, as your climax is approaching, you're ready to set the pace and direct his actions. Pushing him back onto the ground, you kneel over his head and ride his face, grinding firmly. Your hot juices leak messily onto his muzzle as you tell him to lick deeper, or harder, or over your clit, as your quivering cunn[yfn] demand[sfv]. With a moan of release, you cum hard, soaking his lapping tongue and canine muzzle with your feminine fluids. Once he's been made to lick you clean, you climb off of him. He seems a bit grumpy about the rough treatment, but licks his wet muzzle and wags his tail all the same.";
 		now gsd_pet is 13;
 		now lastfuck of gshep is turns;
 	else if gsd_pet is 13:
@@ -468,7 +508,7 @@ to say conf_Korvin_sex05:
 to say conf_Korvin_sex08:
 	say "     Taking hold of your dick with one hand, you clip his leash on with the other and tell him to 'sit.'  He does so [one of]readily[or]obediently[or]after arching his brow and giving you a look[or]with a little grumble[or]with a hungry look in his eyes[or]while licking his muzzle[at random] and gives your cock a nuzzle. Placing your hand on his head, you scritch his ear as he starts to lick your shaft. His doggy tongue slides along your hard pole, slathering it up and down.";
 	say "     After some preliminary licking, his tongue plays across your glans before he takes your [cock size desc of player] shaft into his muzzle. His canine maw [if cock length of player > 24]has to stretch considerably to be able to fit your mighty cock, but he works at it until he's able to do it[else if cock length of player > 16]has to open wide to be able to fit your mighty cock, but he does it to get that meaty treat in his mouth[else if cock length of player > 8]provides extra depth to be able to fit your big cock, letting him get all that meaty treat in his mouth[else]welcomes your cock into it, enveloping it in wet warmth[end if]. While his doggy tongue continues to slide about, he starts bobbing his head and sucking your cock. The buff dog gets into it quickly, doing his best to suck off his alpha.";
-	WaitLineBreak;	
+	WaitLineBreak;
 	say "     You let the gshep work his muzzle over your [cock of player] dick, quite pleased with how he's doing. There's no sign of any earlier reluctance he's shown about cocksucking, the dog clearly into it now that he's got your manhood in his muzzle. You continue to scritch and pet his head, telling him how good it feels and what a great job he's doing. That gets a tail wag from him and a paw fondling your nuts. With him working your shaft over like this, you're built up to a strong orgasm that has you groan loudly";
 	if a random chance of 3 in 5 succeeds:
 		say ". Your penis pulses hard with every shot, [if cock width of player > 30]blasting your [cum load size of player] load down his throat and bulging that toned tummy of his [else if cock width of player > 20]blasting your [cum load size of player] load down his throat to fill his stomach with a feast of your rich, hot semen[else if cock width of player > 11]firing your [cum load size of player] load down his throat and providing him with a nice, hot meal of your semen[else]pumping the tasty treat of your hot load down his throat[end if]. He gulps it all down, releasing muffled moans while his tail wags wildly[if cocks of player > 2] and your other dicks hose him down with white streaks[else if cocks of player is 2] and your other dick hoses him down with white streaks[end if].";

@@ -1,5 +1,6 @@
 Version 3 of Hayato by Stripes begins here.
 [Version 3.0 - Step 1 of oni lair assault]
+[Version 3.1 - Character relocation - Luneth]
 "Adds an Oni NPC named Hayato (Hal) to the Flexible Survival game."
 
 Section 1 - Event
@@ -243,8 +244,8 @@ to say sexwithHayato:
 		else:
 			say "     Moving back up, you pull yourself into his lap, [if scalevalue of player < 3]hugging your arms around as much of his broad chest as your small body can hold[else if scalevalue of player is 3]wrapping your arms around the larger fellow's broad chest[else]draping your arms around his shoulders and neck while you kiss him[end if]. You grind your ass down onto that pulsing rod of his and shift your hips to lower yourself down onto it. You watch as his gruff face is overcome with ecstasy as you stretch your anus down around his cock, taking the transformed man's virginity. With that thick rod inside you, you take it slow at first, mainly for the sake of making the pent-up oni last a little longer. Despite your efforts, it ends up being a little short, but you are treated to such a thick geyser of cum while the demon ogre cries out in lustful release after his self-imposed abstinence that it is well worth it. The feel of those seemingly unending pulses of his spurting rod as his tainted seed stuffs you full and overflows from your asshole sends you into orgasm as well, your needy hole milking the oni for more and more until he finally collapses backwards in a daze. You grin and pull off of him slowly, smiling smugly at the messy pool of cum covering his lower body and the garage floor between his legs. Your belly sloshes with his semen, stuffed full and hot with his demonic load.[mimpregchance][mimpregchance]";
 		say "     After he recovers, Hayato smiles up at you from the floor and releases a long, satisfied sigh of relief. 'Oh, that feels so much better. I was starting to ache so badly down there. I do hope you'll come and visit my dingy cave again soon,' he says with a bit of worry in his voice. Given how he's not gone crazy with lust after his release, you decide to invite him back to your safe haven. He seems a little surprised and very eager at the prospect of this to guess by the twitch his cock gives, his only concern one about whether he'll even fit inside. Helping him up, you grin and pat his shoulder, telling him you can probably squeeze him in somewhere.";
-		move Hayato to Grey Abbey 2F;
-		move player to Grey Abbey 2F;
+		move Hayato to Darkened Alcove;
+		move player to Darkened Alcove;
 		now HP of Hayato is 16;
 		increase score by 25;
 		unleashredoni;

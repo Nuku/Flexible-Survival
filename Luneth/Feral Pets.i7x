@@ -2,6 +2,7 @@ Version 1 of Feral Pets by Luneth begins here.
 
 the linkaction of Snips is "[snipslinkaction]".
 the linkaction of Dinah is "[dinahlinkaction]".
+the linkaction of Chirpy is "[chirpylinkaction]".
 the linkaction of Hobo is "[hobolinkaction]".
 
 to say snipslinkaction:
@@ -9,6 +10,9 @@ to say snipslinkaction:
 
 to say dinahlinkaction:
 	say "Possible Actions: [link]talk[as]talk Dinah[end link], [link]smell[as]smell Dinah[end link][line break]";
+
+to say chirpylinkaction:
+	say "Possible Actions: [link]talk[as]talk Chirpy[end link], [link]smell[as]smell Chirpy[end link][line break]";
 
 to say hobolinkaction:
 	say "Possible Actions: [link]talk[as]talk Hobo[end link], [link]smell[as]smell Hobo[end link][line break]";
@@ -223,9 +227,9 @@ Lost house cat is a situation.
 The sarea of Lost house cat is "Outside".
 
 Instead of resolving Lost house cat:
-	say "Heading through the streets of the city you spy a small form dart down an alleyway ahead of you, the shape moving too quickly for you to get anything more than an impression of four legs and fur. Curious, you pause for a minute, trying to decide whether you should investigate the shape further.";
+	say "     Heading through the streets of the city you spy a small form dart down an alleyway ahead of you, the shape moving too quickly for you to get anything more than an impression of four legs and fur. Curious, you pause for a minute, trying to decide whether you should investigate the shape further.";
 	If player consents:
-		say "Looking down the alleyway you don't see anything out of the usual at first, though the alley provides plenty of places for something to hide if it was small enough. Searching carefully down the alley, you are about to give up looking when you notice a small cardboard box trembling slightly as you pass close to it. Kneeling down and approaching the shaking box cautiously, you slowly lift the edge of the box up and look underneath it, only to be hissed at by a small cat, before it darts out from under the box and behind a nearby dumpster, its feline eyes shining out at you warily from the darkened space. You realize that the small cat seems to have been given a large enough scare recently that it is still terribly frightened. If you want it to calm down, perhaps you should offer it something cats like?";
+		say "     Looking down the alleyway you don't see anything out of the usual at first, though the alley provides plenty of places for something to hide if it was small enough. Searching carefully down the alley, you are about to give up looking when you notice a small cardboard box trembling slightly as you pass close to it. Kneeling down and approaching the shaking box cautiously, you slowly lift the edge of the box up and look underneath it, only to be hissed at by a small cat, before it darts out from under the box and behind a nearby dumpster, its feline eyes shining out at you warily from the darkened space. You realize that the small cat seems to have been given a large enough scare recently that it is still terribly frightened. If you want it to calm down, perhaps you should offer it something cats like?";
 		blank out the whole of table of itemselection;
 		repeat with Q running through owned milky grab objects:
 			choose a blank row in table of itemselection;
@@ -255,23 +259,25 @@ Instead of resolving Lost house cat:
 						else if calcnumber is 0:
 							now chosenmilk is journal;
 				if chosenmilk is not journal:
-					say "Pulling out some of the milk you found earlier, you manage to find a small container to pour a little bit of it into. Setting the container down just outside the cat's narrow hiding place, you sit back and try to look nonthreatening as you wait. Slowly getting used to your presence, the cat eventually slips out of hiding, its whiskers twitching as it follows its nose over to the milk, eyeing you warily while it slowly begins to drink. You can almost hear it purr from where you are sitting as it enjoys the taste of the milk.";
-					say "Looking the cat over, you realize that under the dust and grime of the city is actually a rather healthy-looking feline, far too well-groomed and taken care of to have been on the street for very long. Drawing a bit closer as it gets used to your presence, you see that it appears to be a fine-looking calico if it were only cleaned up a bit. You wonder for a minute what a cat like this is doing wandering though the city alone before realizing that, with the city the way it is now, the cat's former owners could possibly be some of the creatures roaming the streets themselves.";
-					say "Having finished the milk, the cat looks up at you as if to see if you have any more, moving a bit closer as it does so. You cautiously extend your hand to it, which it thoroughly sniffs with its soft nose before sneezing. Apparently reaching some decision about you, the cat then walks right up to where you are sitting and begins rubbing itself against your legs. You begin stroking its fur as it does, managing to get the worst of the dirt and grime off of it before it gets tired of being petted and begins to examine your pack for signs of more milk. Stretching as you sit up, you are surprised when you look around and realize how much time has passed while you took care of the little cat. Deciding you should be heading back, you realize after a few steps that you seem to have a feline following you, but after thinking about it a second, you realize that the little cat probably wouldn't last much longer out here on the streets alone. You let the little house cat follow you all the way back to the library.";
+					say "     Pulling out some of the milk you found earlier, you manage to find a small container to pour a little bit of it into. Setting the container down just outside the cat's narrow hiding place, you sit back and try to look nonthreatening as you wait. Slowly getting used to your presence, the cat eventually slips out of hiding, its whiskers twitching as it follows its nose over to the milk, eyeing you warily while it slowly begins to drink. You can almost hear it purr from where you are sitting as it enjoys the taste of the milk.";
+					say "     Looking the cat over, you realize that under the dust and grime of the city is actually a rather healthy-looking feline, far too well-groomed and taken care of to have been on the street for very long. Drawing a bit closer as it gets used to your presence, you see that it appears to be a fine-looking calico if it were only cleaned up a bit. You wonder for a minute what a cat like this is doing wandering though the city alone before realizing that, with the city the way it is now, the cat's former owners could possibly be some of the creatures roaming the streets themselves.";
+					WaitLineBreak;
+					say "     Having finished the milk, the cat looks up at you as if to see if you have any more, moving a bit closer as it does so. You cautiously extend your hand to it, which it thoroughly sniffs with its soft nose before sneezing. Apparently reaching some decision about you, the cat then walks right up to where you are sitting and begins rubbing itself against your legs. You begin stroking its fur as it does, managing to get the worst of the dirt and grime off of it before it gets tired of being petted and begins to examine your pack for signs of more milk. You are able get a better look at its neck, a small pink rhinestone collar slightly covered by its soft fur.";
+					say "     Fingering the tiny silver name tag you are able to read the name Dinah, obviously the cat is a pretty little girl going by the name at least. Stretching as you sit up, you are surprised when you look around and realize how much time has passed while you took care of the little cat. Deciding you should be heading back, you realize after a few steps that you seem to have a feline following you, but after thinking about it a second, you realize that the little house cat probably wouldn't last much longer out here on the streets alone. You let Dinah follow you all the way back to the library.";
 					delete chosenmilk;
 					now house cat is tamed;
 					say "(The house cat is now tamed! You can make it your active pet by typing [bold type][link]pet house cat[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 					now Lost house cat is resolved;
 				else:
-					say "Looking over your supplies, you decide you'd rather not part with the collected milk in the end. Wanting to keep your hard-earned supplies, you decide the cat will just have to fend for itself.";
+					say "     Looking over your supplies, you decide you'd rather not part with the collected milk in the end. Wanting to keep your hard-earned supplies, you decide the cat will just have to fend for itself.";
 					now Lost house cat is resolved;
 			else:
-				say "Deciding to keep hold of your hard-earned supplies instead, you leave the cat alone and resolve not to stop by here again.";
+				say "     Deciding to keep hold of your hard-earned supplies instead, you leave the cat alone and resolve not to stop by here again.";
 				now Lost house cat is resolved;
 		else:
-			say "Checking through your bag with the cat watching your every move, you don't seem to have anything that you think might tempt the cat out, and after a little bit of trying to coax it out anyways, you reluctantly give up and leave the alleyway and the cat alone. You resolve to come back after finding something the cat might like, perhaps some nice milk from one of the gryphons you have seen flying around town?";
+			say "     Checking through your bag with the cat watching your every move, you don't seem to have anything that you think might tempt the cat out, and after a little bit of trying to coax it out anyways, you reluctantly give up and leave the alleyway and the cat alone. You resolve to come back after finding something the cat might like, perhaps some nice milk from one of the gryphons you have seen flying around town?";
 	else:
-		say "Deciding that with the city in its current state, chasing small furry things down dark alleyways with no idea what you will find at the end of them is probably the height of stupidity. You put the encounter out of your mind and continue searching the city for things of use instead.";
+		say "     Deciding that with the city in its current state, chasing small furry things down dark alleyways with no idea what you will find at the end of them is probably the height of stupidity. You put the encounter out of your mind and continue searching the city for things of use instead.";
 	if a random chance of 1 in 2 succeeds, mallrecall;
 
 Section 2.4 - House Cat Ending
@@ -279,9 +285,9 @@ Section 2.4 - House Cat Ending
 when play ends:
 	if house cat is tamed:
 		if humanity of player < 10:
-			say "Dinah stays with you even after you surrender fully to the infection, her body seeming almost to become slightly more human-like as yours becomes more feral. While life near you is definitely still dangerous and rough, the little cat almost seems to thrive on the challenge and excitement this presents her. And even though she still teases and mocks you occasionally as cats tend to do, you retain enough of your old fondness for the little creature that you allow Dinah her liberties.";
+			say "     Dinah stays with you even after you surrender fully to the infection, her body seeming almost to become slightly more human-like as yours becomes more feral. While life near you is definitely still dangerous and rough, the little cat almost seems to thrive on the challenge and excitement this presents her. And even though she still teases and mocks you occasionally as cats tend to do, you retain enough of your old fondness for the little creature that you allow Dinah her liberties.";
 		else:
-			say "Back in the outside world, the cat you found in that strange city seems to enjoy following you around and proves to be a nice companion to have around when she isn't wandering the streets at night with other cats. She seems mostly unaffected by the nanites that infested the city, although you swear she seems much smarter than normal cats, and you even think you have seen her using keys and manipulating objects with her paws on occasion. At one point she seems to take a strong fancy to one of your nearby neighbors, as he lavishes Dinah with attention every time he gets a chance it is obvious he returns her affections. About a month or so later after a long night out your Dinah brings home a finely marked tom cat, and under the influence of her stare you take him in to care for as well. A few days later you find that the neighbor your cat was so fond of seems to have gone missing entirely, though there are signs that a few cats got into his apartment recently. Your Dinah stares at you innocently as you look at her and her fine new male suspiciously, realizing the new cat was surprisingly comfortable with you and knew the layout of your place immediately. Still with no proof one way or another, you take care of Dinah and her new mate who has obviously gotten her freshly pregnant. Though you find yourself wondering sometimes just what gifts the nanite-laced city left your cat, as well as just what all she does wandering about the streets at night that she always seems so smug in the morning... you have seen more cats around lately. Mostly though, you find yourself wondering what you are going to be doing with her impending kittens, and if they will inherit whatever abilities she has gained...";
+			say "     Back in the outside world, the cat you found in that strange city seems to enjoy following you around and proves to be a nice companion to have around when she isn't wandering the streets at night with other cats. She seems mostly unaffected by the nanites that infested the city, although you swear she seems much smarter than normal cats, and you even think you have seen her using keys and manipulating objects with her paws on occasion. At one point she seems to take a strong fancy to one of your nearby neighbors, as he lavishes Dinah with attention every time he gets a chance it is obvious he returns her affections. About a month or so later after a long night out your Dinah brings home a finely marked tom cat, and under the influence of her stare you take him in to care for as well. A few days later you find that the neighbor your cat was so fond of seems to have gone missing entirely, though there are signs that a few cats got into his apartment recently. Your Dinah stares at you innocently as you look at her and her fine new male suspiciously, realizing the new cat was surprisingly comfortable with you and knew the layout of your place immediately. Still with no proof one way or another, you take care of Dinah and her new mate who has obviously gotten her freshly pregnant. Though you find yourself wondering sometimes just what gifts the nanite-laced city left your cat, as well as just what all she does wandering about the streets at night that she always seems so smug in the morning... you have seen more cats around lately. Mostly though, you find yourself wondering what you are going to be doing with her impending kittens, and if they will inherit whatever abilities she has gained...";
 
 Section 3.1 - Exotic Bird NPC/Pet
 [Original content created by Sarokcat]
@@ -294,8 +300,7 @@ The level of Exotic Bird is 1.
 The Dexterity of Exotic Bird is 15.
 The summondesc of Exotic Bird is "[SummonChirpy]".
 The dismissdesc of Exotic Bird is "[SummonChirpy]".
-"Hearing you whistle, the exotic bird flaps over and takes up position overhead, keeping an eye out for any threats.".
-The assault of Exotic Bird is "[one of]The exotic bird dive bombs your opponent![or]The exotic bird flaps its wings in your adversary's face, blinding it![or]Diving down to engage, your bird friend scratches at your opponent with its talons![or]Your opponent jumps and twists around in pain with an exotic bird pecking at its scalp.[or]Taking advantage of your foe's momentary distraction, your pet bird manages to land a few quick attacks.[or]Your bird friend takes a moment to relieve itself, fortuitously right on your opponent.[at random]".
+The assault of Exotic Bird is "[one of]Chirpy dive bombs your opponent![or]Chirpy flaps her wings in your adversary's face, blinding it![or]Diving down to engage, your bird friend scratches at your opponent with her talons![or]Your opponent jumps and twists around in pain with Chirpy pecking at its scalp.[or]Taking advantage of your foe's momentary distraction, Chirpy manages to land a few quick attacks.[or]Your bird friend takes a moment to relieve herself, fortuitously right on your opponent.[at random]".
 The fuckscene of exotic bird is "The exotic bird is too small for that sort of thing.".
 
 to say SummonChirpy:
@@ -303,7 +308,7 @@ to say SummonChirpy:
 	if player is in Computer Lab and Chirpy is in Computer Lab: [summoning while standing next to her]
 		say "     ...";
 	else: [regular summoning]
-		say "     ...";
+		say "     Hearing you whistle, Chirpy flaps over and takes up position overhead, keeping an eye out for any threats.";
 
 to say DismissChirpy:
 	move Chirpy to Computer Lab;
@@ -337,9 +342,9 @@ Section 3.3 - Exotic Bird Event
 Scared bird is a situation.
 The sarea of Scared bird is "Zoo".
 Instead of resolving Scared bird:
-	say "Traveling along the zoo paths you hear a strange noise from up ahead, moving carefully to investigate the area where you heard the noise, you look around the tree there but don't actually see anything, you are about to turn to leave when you hear the sound again from up in the branches. Looking up you are surprised to see a rather scared looking exotic bird taking shelter up in the branches, its brilliant plumage obvious at this distance as it huddles nervously above you. You realize it must have escaped from one of the exotic bird exhibits, and sigh when you realize that its chances of survival in this violent city without help are pretty slim. Maybe you should try convincing it to come along with you instead of just hiding here?";
+	say "     Traveling along the zoo paths you hear a strange noise from up ahead, moving carefully to investigate the area where you heard the noise, you look around the tree there but don't actually see anything, you are about to turn to leave when you hear the sound again from up in the branches. Looking up you are surprised to see a rather scared looking exotic bird taking shelter up in the branches, its brilliant plumage obvious at this distance as it huddles nervously above you. You realize it must have escaped from one of the exotic bird exhibits, and sigh when you realize that its chances of survival in this violent city without help are pretty slim. Maybe you should try convincing it to come along with you instead of just hiding here?";
 	if carried of food is 0:
-		say "A quick glance shows you don't have any food with which to try and coax the bird down with. You'll have to try it again later once you've found some food.";
+		say "     A quick glance shows you don't have any food with which to try and coax the bird down with. You'll have to try it again later once you've found some food.";
 	else:
 		if player consents:
 			say "Making soft noises as the bird, you attempt to coax it down with a bit of food and friendly words, trying hard to convince it you want to be its friend.";
@@ -348,15 +353,15 @@ Instead of resolving Scared bird:
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
 			if diceroll > 17:
-				say "Your honeyed words and sweet tones eventually manage to coax the scared bird down out of the tree, where you feed it a bit of food as it begins to get used to your presence. Given a closer look you are impressed by the birds wonderfully bright feathers, but you still have no clue exactly what type of bird it is. Sighing you decide your knowledge of birds is just too insufficient for what is obviously a rare species of bird, and resolve to try to find out just what kind of bird it is if you ever manage to get out of this crazy city. After several hours of coaxing and calming the bird, it seems quite happy to go along with you as you head back into the city, obviously happy not to be alone any longer.";
+				say "     Your honeyed words and sweet tones eventually manage to coax the scared bird down out of the tree, where you feed it a bit of food as it begins to get used to your presence. Given a closer look you are impressed by the birds wonderfully bright feathers, but you still have no clue exactly what type of bird it is. Sighing you decide your knowledge of birds is just too insufficient for what is obviously a rare species of bird, and resolve to try to find out just what kind of bird it is, if you ever manage to get out of this crazy city that is. After several hours of coaxing and calming the bird, it seems quite happy to go along with you as you head back into the city, obviously happy not to be alone any longer. Landing on your shoulder, the chipper little bird cuddles up to your neck. You should prolly give your new little friend a name, hmm... a chipper bird name. Chirpy... that sounds like a good name for her, trying out the name for her, she seems to like it, singing her sweet melody happily.";
 				delete food;
 				now Exotic Bird is tamed;
 				say "(The exotic bird is now tamed! You can make it your active pet by typing [bold type][link]pet exotic bird[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 				now Scared bird is resolved;
 			else:
-				say "Sadly the bird seems too scared to heed your blandishments, and it stays up in the tree shaking and occasionally letting out a soft piteous cry. You obviously aren't going to convince it to trust you right now, maybe you should try again later.";
+				say "     Sadly the bird seems too scared to heed your blandishments, and it stays up in the tree shaking and occasionally letting out a soft piteous cry. You obviously aren't going to convince it to trust you right now, maybe you should try again later.";
 		else:
-			say "Deciding that you wouldn't have the least idea of how to care for a truly exotic bird yourself, and that you are having enough trouble keeping yourself alive, you decide to leave the bird to its fate, at least it has wings right?";
+			say "     Deciding that you wouldn't have the least idea of how to care for a truly exotic bird yourself, and that you are having enough trouble keeping yourself alive, you decide to leave the bird to its fate, at least it has wings right?";
 			now Scared bird is resolved;
 
 Section 3.4 - Exotic Bird Ending
@@ -364,9 +369,9 @@ Section 3.4 - Exotic Bird Ending
 when play ends:
 	if Exotic Bird is tamed:
 		if humanity of player < 10:
-			say "When you give in to your feral instincts, the exotic bird you rescued seems to sense your new state of mind, and keeps at a safe distance, though it never strays top far, often helping you out of trouble or calling out to warn you of danger. In thanks you often leave it little offerings of whatever is handy, it makes for a strange sort of partnership, but a happy enough one.";
+			say "     When you give in to your feral instincts, the exotic bird you rescued seems to sense your new state of mind, and keeps at a safe distance, though she never strays top far, often helping you out of trouble or calling out to warn you of danger. In thanks you often leave her little offerings of whatever is handy, it makes for a strange sort of partnership, but a happy enough one.";
 		else:
-			say "After your rescue, you take the bird you rescued to several specialists, who are amazed to find that a member of its rare species survived the city, and they thank you profusely for your help in bringing it back safely. Impressed at your ability to get the bird to trust you, not only do they offer you a reward for saving your bird friend, but they ask you to stop by occasionally not just to visit your now happy bird friend, but also to ask questions about any other strange birds and species you might have encountered in the city.";
+			say "     After your rescue, you take the bird you rescued to several specialists, who are amazed to find that a member of its rare species survived the city, and they thank you profusely for your help in bringing her back safely. Impressed at your ability to get the bird to trust you, not only do they offer you a reward for saving Chirpy, but they ask you to stop by occasionally not just to visit your now happy bird friend, but also to ask questions about any other strange birds and species you might have encountered in the city.";
 
 Section 4.1 - Helper Dog NPC/Pet
 [Original content created by Stripes]
@@ -387,7 +392,7 @@ to say SummonHobo:
 	if player is in Computer Lab and Hobo is in Computer Lab: [summoning while standing next to him]
 		say "     ...";
 	else: [regular summoning]
-		say "     Coming obediently to your call, the helper dog moves to your side, ready and eager to assist you.[hoboreset]";
+		say "     Coming obediently to your call, Hobo moves to your side, ready and eager to assist you.[hoboreset]";
 
 to say DismissHobo:
 	move Hobo to Computer Lab;
@@ -397,7 +402,7 @@ to say DismissHobo:
 		say "     ...";
 
 Hobo is a man.
-The description of Hobo is "[HobosDesc]".
+The description of Hobo is "[HoboDesc]".
 
 instead of sniffing the Helper Dog:
 	say "[HoboScent]";
@@ -406,15 +411,15 @@ instead of sniffing Hobo:
 	say "[HoboScent]"
 
 to say HoboScent:
-	say "     Your helper dog smells like a normal dog, surprisingly given the circumstances.";
+	say "     Your Hobo smells like a normal dog, surprisingly given the circumstances.";
 
 to say Hobodesc:
-	say "     The helper dog is a black and white shepherd with soulful and intelligent brown eyes. He will follow you and loyally assist you with your troubles.";
+	say "     Hobo is a black and white shepherd with soulful and intelligent brown eyes. He will follow you and loyally assist you with your troubles.";
 
 
-Section 4.2 - Stray Dog Menu
+Section 4.2 - Helper Dog Menu
 
-Section 4.3 - Stray Dog Event
+Section 4.3 - Helper Dog Event
 
 Mournful Dog is a situation.
 The sarea of Mournful Dog is "Hospital".
@@ -442,7 +447,7 @@ Instead of resolving a Mournful Dog:
 				let total be ( dice plus bonus plus dogfoodcount plus featbonus);
 				say "You roll 1d20([dice])+[bonus]+[dogfoodcount + featbonus] vs 22 and score [total]: ";
 				if total > 21:
-					say "     You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head and check its tag, finding only the name 'Hobo'. Reaching over, you pull the sheets over its former master's body, then you both leave together.";
+					say "     You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head and check its tag, finding only the name 'Hobo'. Reaching over, you pull the sheets over his former master's body, then you both leave together.";
 					now helper dog is tamed;
 					say "     (The helper dog is now tamed! You can make it your active pet by typing [bold type][link]pet helper dog[as]pet helper dog[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 					increase score by 10;
@@ -469,7 +474,7 @@ Instead of resolving a Mournful Dog:
 				let total be ( dice plus bonus plus dogfoodcount plus featbonus);
 				say "You roll 1d20([dice])+[bonus]+[dogfoodcount + featbonus] vs 22 and score [total]: ";
 				if total > 21:
-					say "     You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head. Reaching over, you pull the sheets over its former master's body, then you both leave together.";
+					say "     You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head. Reaching over, you pull the sheets over his former master's body, then you both leave together.";
 					now helper dog is tamed;
 					say "(The helper dog is now tamed! You can make it your active pet by typing [bold type]pet helper dog[roman type]. You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])";
 					now lastfuck of helper dog is turns;
@@ -499,13 +504,13 @@ an everyturn rule:
 	if companion of player is helper dog and skipturnblocker is 0:
 		if lastfuck of helper dog - turns >= 4:
 			if thirst of player > 50 and carried of water bottle is 0 and carried of soda is 0 and hobo-water-gift is false:
-				say "     Just as you're thinking once again that your mouth and throat are terribly dry, your helper dog pads up to you and drops something at your feet. Looking down, you see that it's a [bold type]bottle of water[roman type], clean and unopened. Surprised at the dog's cleverness, you pat Hobo's head as you pick up the drink.";
+				say "     Just as you're thinking once again that your mouth and throat are terribly dry, Hobo pads up to you and drops something at your feet. Looking down, you see that it's a [bold type]bottle of water[roman type], clean and unopened. Surprised at the dog's cleverness, you pat Hobo's head as you pick up the drink.";
 				increase carried of water bottle by 1;
 				now hobo-water-gift is true;
 				now hobo-water-reminder is turns;
 				now lastfuck of helper dog is turns;
 			else if hunger of player > 50 and carried of food is 0 and carried of chips is 0 and hobo-food-gift is false:
-				say "     Your stomach grumbles with hunger as you check your pack again for anything worth eating, or at least worth risking eating. Just as you set your pack back down, you here a second soft thump behind you. Turning, you see that your helper dog has dropped a plastic bag with some [bold type]food[roman type] in it on the ground. The black and white shepherd sits there giving you an odd look. You pick up the bag and pat his head, surprised at how clever he is.";
+				say "     Your stomach grumbles with hunger as you check your pack again for anything worth eating, or at least worth risking eating. Just as you set your pack back down, you here a second soft thump behind you. Turning, you see that Hobo has dropped a plastic bag with some [bold type]food[roman type] in it on the ground. The black and white shepherd sits there giving you an odd look. You pick up the bag and pat his head, surprised at how clever he is.";
 				increase carried of food by 1;
 				now hobo-food-gift is true;
 				now hobo-food-reminder is turns;
@@ -537,20 +542,20 @@ an everyturn rule:
 				now lastfuck of helper dog is turns;
 			else if medkit is not owned and healing booster is not owned and hobo-medical - turns >= 16 and hobo-medical-gift < 2:
 				if hobo-medical-gift is 0:
-					say "     You stop and look around when you notice that your helper dog has disappeared from your side. You take a quick look around the area for him, only to eventually find him back where you started with a [bold type]medkit[roman type] at his feet. You pet the clever dog on the head as you take the medkit.";
+					say "     You stop and look around when you notice that Hobo has disappeared from your side. You take a quick look around the area for him, only to eventually find him back where you started with a [bold type]medkit[roman type] at his feet. You pet the clever dog on the head as you take the medkit.";
 					increase carried of medkit by 1;
 				else if hobo-medical-gift is 1:
-					say "     Your helper dog reappears at your side before you even knew he was gone, holding something in his muzzle. Taking the syringe from him, you examine it. It is labeled as a [bold type]healing booster[roman type] and contains a clear blue fluid. You pat the dog's head, thanking the clever shepherd for it.";
+					say "     Hobo reappears at your side before you even knew he was gone, holding something in his muzzle. Taking the syringe from him, you examine it. It is labeled as a [bold type]healing booster[roman type] and contains a clear blue fluid. You pat the dog's head, thanking the clever shepherd for it.";
 					increase carried of healing booster by 1;
 				now hobo-medical is turns;
 				increase hobo-medical-gift by 1;
 				now lastfuck of helper dog is turns;
 			else if thirst of player > 40 and carried of water bottle > 0 and hobo-water-reminder - turns >= 12:
-				say "     While taking a short break, you catch your helper dog nosing around in your pack. He pulls out a bottle of water and drops it at your feet with a bark. Looking at it, you're reminded that you've gotten quite thirsty. You should really take better care of yourself.";
+				say "     While taking a short break, you catch Hobo nosing around in your pack. He pulls out a bottle of water and drops it at your feet with a bark. Looking at it, you're reminded that you've gotten quite thirsty. You should really take better care of yourself.";
 				now hobo-water-reminder is turns;
 				now lastfuck of helper dog is turns;
 			else if hunger of player > 40 and carried of water bottle > 0 and hobo-water-reminder - turns >= 12:
-				say "     While taking a short break, you catch your helper dog nosing around in your pack. He pulls out some food and drops it at your feet with a bark. Looking at it, you're reminded that you've gotten quite hungry. You should really take better care of yourself.";
+				say "     While taking a short break, you catch Hobo nosing around in your pack. He pulls out some food and drops it at your feet with a bark. Looking at it, you're reminded that you've gotten quite hungry. You should really take better care of yourself.";
 				now hobo-food-reminder is turns;
 				now lastfuck of helper dog is turns;
 			else if humanity of player <= 40 and humanity of player > 0 and journal is owned and hobo-journal - turns >= 16:
@@ -558,18 +563,18 @@ an everyturn rule:
 				now hobo-journal is turns;
 				now lastfuck of helper dog is turns;
 			else if HP of doctor matt is 2 and carried of gryphon milk < 2 and hobo-grmilk is false and hobo-grmilkhelp - turns >= 8 and furry is not banned and hermaphrodite is not banned:
-				say "     Before you've even noticed, your helper dog returns to your side carrying something in his mouth. As you take it from him, he gives a meaningful bark. Examining it, you find it to be an old-style glass bottle filled with milk. Surprisingly, it is still cold and smells delicious. You're about to taste a sample of it, when Hobo grabs your sleeve and pulls on your arm, keeping you from doing so. Reminded of the request from Dr. Matt for [bold type]gryphon milk[roman type], you cap the milk and tuck it away, wondering at just how smart this dog really is.";
+				say "     Before you've even noticed, Hobo returns to your side carrying something in his mouth. As you take it from him, he gives a meaningful bark. Examining it, you find it to be an old-style glass bottle filled with milk. Surprisingly, it is still cold and smells delicious. You're about to taste a sample of it, when Hobo grabs your sleeve and pulls on your arm, keeping you from doing so. Reminded of the request from Dr. Matt for [bold type]gryphon milk[roman type], you cap the milk and tuck it away, wondering at just how smart this dog really is.";
 				now hobo-grmilk is true;
 				now lastfuck of helper dog is turns;
 
-Section 4.4 - Stray Dog Ending
+Section 4.4 - Helper Dog Ending
 
 when play ends:
 	if helper dog is tamed:
 		if humanity of player < 10:
-			say "     As you give in to your feral instincts, your helper dog looks at you mournfully. He then turns and wanders off to find another poor, needy soul to help. Perhaps he will be more successful next time.";
+			say "     As you give in to your feral instincts, Hobo looks at you mournfully. He then turns and wanders off to find another poor, needy soul to help. Perhaps he will be more successful next time.";
 		else:
-			say "     After your rescue, you are able to convince the distracted military that the helper dog isn't a threat. He certainly seems quite normal to them and is an intelligent and helpful animal. Once you arrive at the safety of the military compound and disembark with the others extracted with you, you spot Hobo in the distance. He looks back at you once and, as if satisfied you are now safe, turns and continues on, perhaps to find another poor soul in need of his help.";
+			say "     After your rescue, you are able to convince the distracted military that Hobo isn't a threat. He certainly seems quite normal to them and is an intelligent and helpful animal. Once you arrive at the safety of the military compound and disembark with the others extracted with you, you spot Hobo in the distance. He looks back at you once and, as if satisfied you are now safe, turns and continues on, perhaps to find another poor soul in need of his help.";
 
 
 Feral Pets ends here.
