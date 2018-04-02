@@ -42,17 +42,17 @@ Instead of resolving a Family:
 
 Section 4 - Magic
 
-Magic is a situation.
-The sarea of Magic is "Mall".
+Ritual Location is a situation.
+The sarea of Ritual Location is "Mall".
 
-Instead of resolving a Magic:
+Instead of resolving a Ritual Location:
 	say "Heading to the underground sanctum of the mall, aka the sewers, and vehemently wishing it was because you getting paid to see about a lost dog, you find yourself stopping dead in your tracks as you notice someone standing a fifteen feet away from where you are while holding a crystal ball into their hands. Blinking just to be sure that you are seeing right you find yourself going over to the other just in time to watch as the foot wide orb rises up into the air between the cloaked creature hands all the way until it is levitating in front of their unknown person's face. Seeing the other a lot clearer, once you've narrowed the distance between you both to a mere five feet, you find that you can't exactly make out what the other persona exactly is as the cloak and crystal ball hides the other's body and face, respectively, almost perfectly. Opening your mouth to speak you find yourself snapping your jaw shut when a single hand comes up and then waves a single gloved finger at you in admonishment. Not knowing what you did wrong you feel slightly chastised, that is, before the floating orbs comes directly over to hover unswervingly in front of your face.";
 	WaitLineBreak;
 	say "Curiosity holds you still as you are not sure of what to do because of the oddity of the situation. You do manage to smile nervously into the beautifully polished ball however, as your reflection shows off your nervousness before gasping in trepidation as images of the city begin to pass over the rim of the ball. Like a TV screen flickering between channels you watch everything from mutants horses fucking each other in the park, to wanton and transformed police officers screwing feline prostitutes in the red light district, to doctors and nurses treating howling and transmogrifying patients in the nearby hospital, to wyverns flapping throughout the sky and getting shot down at by large cannons that the military have set up as a blockade to keep the creatures within the city limits until finally you see yourself again when the images come to a halt. 'This is your world as it is coming to be known by both those here and afar,' someone says, and instantly you find yourself trying to look at the cloaked figure in front of you. The crystal ball blocks off your sights of the other as you lift up and then down and then around to try and have a glance at the unknown person. The speaker, who you guess is the other person continues to talk, despite your humorous antics. 'How do you plan to go about surviving once the present danger has passed, I wonder? You have to know that those in power won't be able to keep this situation under control for too much longer...' A youthful voice asks and immediately you take a step back to have a look at the cloaked figure as the bubbling need to ask them what they mean surges throughout you.";
 	WaitLineBreak;
 	say "Fear runs throughout your spine when you don't see the person right where they had been just minutes before. Whipping your head from side to side you try and see if you can find any trace of the unnamed individual your blood begins to run cold as you can find none. The only remnant that the other had even been is the crystal ball still floating listlessly in front of your face, but soon that too takes its leave of you. Shining brightly with an aurora of colours the orb blinks and then pops out of existence. Tiny trails of starry lights float down in the wake of the crystal's departure before they too fade out of existence. The sudden feeling of apprehension makes you take several steps back before you turn and then run away from where you had been, your mind frantically trying to reason with you over what just happened. A playfully jubilant voice chuckles in your ears, the sound being strangely reminiscent of that of the person who had just spoken to you, and quickly you make even faster tracks away from where you had just been. You've totally forgotten why you had even come here in the sewers in the first place.";
 	increase score by 1;
-	now Magic is resolved;
+	now Ritual Location is resolved;
 
 Section 5 - Auto Shop
 

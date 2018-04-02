@@ -89,7 +89,7 @@ to say gbreakroom desc:
 
 
 Half-Renovated Room is a room.
-Northwest of Grey Abbey Library is Half-Renovated Room.
+North of Grey Abbey Library is Half-Renovated Room.
 Half-Renovated Room is sleepsafe.
 The description of Half-Renovated Room is "[LibrarySideRoomDesc]";
 

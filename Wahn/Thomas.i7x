@@ -5,13 +5,13 @@ Version 1 of Thomas by Wahn begins here.
 
 [ HP states of Thomas (localisation & gender)                        ]
 [   0: not yet met                                                   ]
-[   1: knows he's a herm												                     ]
-[   2: open to mare sex, virgin							                         ]
+[   1: knows he's a herm                                             ]
+[   2: open to mare sex, virgin                                      ]
 [   3: had mare sex                                                  ]
 [   4: invisibly pregnant by the player                              ]
 [   5: visibly pregnant by the player                                ]
-[  51: doesn't know he's got a pussy										             ]
-[  52: has become just a regular stallion								             ]
+[  51: doesn't know he's got a pussy                                 ]
+[  52: has become just a regular stallion                            ]
 [ 100: (removed from game)                                           ]
 
 [ ThomasPregnancy - timer since impregnation                         ]
@@ -32,9 +32,9 @@ Version 1 of Thomas by Wahn begins here.
 [   1: open to anal sex                                              ]
 [   2: had anal sex                                                  ]
 
-[ ThomasQuestVar																		                 ]
+[ ThomasQuestVar                                                     ]
 [   0: quest not started                                             ]
-[   1: player has to gather 5 soda bottles			                     ]
+[   1: player has to gather 5 soda bottles                           ]
 [   2: soda handed in	                                               ]
 [   3: trap has been dug                                             ]
 [   4: Sandy saved                                                   ]
@@ -54,12 +54,18 @@ Instead of resolving a Centaur Gangbang:
 	say "     'Look Raul, we caught ourselves a pervert. He was watching you fuck Sandy,' one of the centaurs tells the stallion still fucking the female. The other one holding their captive adds, 'Let's give him some action - another mare to share between us would be great to have.' They quickly strip the still somewhat dazed man naked, then lower him to the ground on all fours. Pulling his cheeks aside and pushing a finger inside the black man's ass, one of the centaurs remarks, 'Man, he's really tight... might be best if you go first, Raul - to get him wet, you now.'";
 	say "     With a sigh and a slurping noise, Raul the centaur pulls his long horsecock out of Sandy, then walks over to the captured human. His black shaft glistens in the [if daytimer is day]sunlight[else]moonlight[end if] with the mare's juices literally dripping from it. As one of his buddies takes his spot fucking the mare, he lines up his long shaft with the human's ass, then thrusts his flared head in deep.";
 	LineBreak;
-	say "     The semiconscious man's gasps as he's penetrated from behind bring you back to reality from your sexually induced stupor. Can you really just stand here and watch this man get raped by those centaurs?";
+	say "     The semiconscious man's gasps as he's penetrated from behind bring you back to reality from your sexually induced stupor.";
+	say "     [bold type]Can you really just stand here and watch this man get raped by those centaurs?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Watch them take him.";
+	say "     ([link]N[as]n[end link]) - Step in and fight the centaurs.";
 	if the player consents:
+		LineBreak;
 		say "     Bringing a hand down to your [if cocks of player > 0]cock[else if cunts of player > 0]cunt[else]genderless crotch[end if] you start stroking yourself, ready to enjoy the show. And what a show it is - Raul keeps fucking the black man with deep thrusts and soon he gives a lust-filled shout as he fills the human's ass with creamy centaur cum. Almost as soon as he pulls out, the third stallion moves up and plunges his shaft in and starts thrusting...";
 		LineBreak;
 		say "     The three centaurs take turns fucking the mare and the human male, then later the two mares as their captive transforms further and further with each load of cum dumped into his hole. Soon he's fully female, sporting a nice pair of breasts and a deep pussy undoubtedly already bearing a developing foal. Finally when they are too exhausted to get their cocks up another time, the stallions herd their well-fucked mares away from the ruins, out into the wide plain where you lose sight of them.";
 	else:
+		LineBreak;
 		say "     Making your way forward behind covering bits of walls and rubble, you almost get all the way to the little herd of centaurs before one of them notices you. The third centaur nods to his fucking buddies and says 'Look - another one. I'll take care of him...'";
 		challenge "Centaur Stallion";
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
@@ -356,12 +362,18 @@ to say ThomasTalk6:
 	say "     Thomas puts a hand on your shoulder and smiles, saying 'Nice to hear you want to help me. I've got a plan to deal with those three fuckers who made me a centaur and get their poor mare away from them - who knows who or what she was before. We'll trap them so they don't get away like last time...'";
 	say "     'A group of prairie dogs I've spoken to is willing to build a concealed pit for us - if we pay them with half a dozen cans of soda. The only problem is that I only had one can in my backpack when I fled out into the plains. Could you maybe scrounge up five more somewhere? I heard there's still some trading going on at the mall, it might be worth checking out...'";
 	if carried of soda >= 5:
-		say "     Aware that you have enough soda on you right now, you ([link]Y[as]y[end link]) give Thomas the cans or ([link]N[as]n[end link]) say that you'll look for soda later.";
+		LineBreak;
+		say "     [bold type]You actually have enough soda right now...[roman type][line break]";	
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Give Thomas the cans.";
+		say "     ([link]N[as]n[end link]) - Say that you'll look for soda later.";
 		if player consents:
+			LineBreak;
 			say "     With a surprised look on his face, the black centaur accepts the soda from you. 'Wow, thanks - that was quick. Are you psychic or something and saw this coming?'";
 			now ThomasQuestVar is 2;
 			decrease carried of soda by 5;
 		else:
+			LineBreak;
 			say "     Nodding, Thomas says 'Thanks a lot. I'm counting on you.'";
 	else:
 		now ThomasQuestVar is 1;
@@ -371,7 +383,11 @@ to say ThomasTalk7:
 		project the figure of Thomas_face_icon;
 	say "     Accepting the soda cans from you, Thomas smiles and says 'Thanks a lot. That's enough to pay off the prairie dogs. We can go meet them whenever. Just say when you're ready.'";
 	now ThomasQuestVar is 2;
-	say "     Do you want to go meet them right now ([link]Y[as]y[end link]) or at some later time ([link]N[as]n[end link]).";
+	LineBreak;
+	say "     [bold type]What is your reply?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Go meet them right now.";
+	say "     ([link]N[as]n[end link]) - Postpone the meeting for now.";
 	if player consents:
 		say "     'Great! Let's go.' Putting the soda into a backpack, Thomas leads you out into the plains.";
 		say "[ThomasTalk8]";
@@ -455,8 +471,12 @@ instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 
 	move player to Dry Plains;
 	say "     As you come out into the dry plains, a rather concerned looking Thomas gallops up to you. 'Someone needs our help - please hurry!' He dashes off again before you can say anything, so you hurry up and do your best to follow him. Soon, you come into sight of a slavering behemoth of a creature chasing after a teenage centaur. 'Please, can you help me save him? We can't let him get caught by that!'";
 	LineBreak;
-	say "     What's your answer to that? Do you want to try taking on the behemoth ([link]Y[as]y[end link]), or rather run away ([link]N[as]n[end link]) ?";
+	say "     [bold type]What's your reply?[roman type][line break]";	
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Take on the behemoth.";
+	say "     ([link]N[as]n[end link]) - Run away.";
 	if player consents:
+		LineBreak;
 		challenge "Behemoth";
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
 			say "     Even though you ended up losing, the distraction you provided was enough for the young centaur and Thomas to get away safely. When you finally make your way back to your usual meeting point, all wet and sticky from your time with the behemoth, you find the two centaurs waiting for you there. Thomas walks up to you and says 'Thank you for your help, my friend. Here, come meet Felix, whom you saved.' He leads you over to the other centaur, a pretty-looking young stallion with sandy coat and red hair.";
@@ -469,6 +489,7 @@ instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 
 		LineBreak;
 		say "     Shaking your hand, Felix smiles and says 'Thanks for saving me. I really thought I was a goner when that big thing went after me. I guess that was the plan when my herd kicked me out.' Thomas walks up beside him and puts a hand on Felix shoulder. 'Can you believe he came from a herd consisting of only one male and more than a dozen mares? And that fucked-up guy breeds 'em all, then keeps the girls and sends any of his male offspring out on their own all alone. Most don't make it very long, with all those critters out here...' Thomas looks around over the surrounding plains with a wary expression, then shrugs. 'Well, enough of that fucked up shit - you're very welcome to stay as part of my little herd, Felix.'";
 	else:
+		LineBreak;
 		say "     Shouting 'Sorry, I can't fight that.' you run away and only look back when you're in a somewhat safe distance. From there, you see Thomas attack the huge creature and get thrown aside with an almost casual slap. Not long after, the behemoth finally catches up with the young centaur it was chasing and... stuffs him into its pussy? Now that's a rather strange and somewhat disturbing sight. You doubt that what will emerge from those folds later will still be a centaur...";
 		say "     Having struggled to his feet, Thomas limps away from the scene towards you, a rather disappointed expression on his face. 'You were right - it's just too strong,' he sighs, then leaves.";
 		increase libido of Thomas by 20;
@@ -481,10 +502,14 @@ instead of navigating Dry Plains while ((libido of Thomas is 1 or libido of Thom
 	say "     At the same time as your arrival at the meeting place with Thomas, a centaur mare walks up out of the plains too. She's beautiful, with sun-bronzed skin, flowing blond hair and a nice pair of breasts. 'Hello there, I'm Jill. I heard talk about what you did to Raul and his buddies, and... can I please join your herd?' She gives Thomas a pleading smile, then nervously looks back over her shoulder. 'You see, today's my birthday - and father invited all the stallions far and wide to... sell me to the highest bidder. I got to warn you, they're most likely tracking me right now...'";
 	say "     Thomas thinks for a short moment, then nods to Jill 'Of course you're welcome. Let's get ready for the search party.' He calls over [if libido of Thomas is 1 or libido of Thomas is 21]Sandy and sends her away so she'll be safe[else if libido of Thomas is 11]Sandy and Felix, sending them away so she'll be safe[end if], then turns to you. 'Are you with us, my friend? This is gonna be a tough one - we have...' He gives a questioning look to Jill and she answers, 'Eight, at least.' '...centaurs coming in. We really could use your help.'";
 	LineBreak;
-	say "     What's your answer to that? Do you stay ([link]Y[as]y[end link]), or rather run away ([link]N[as]n[end link]) ?";
+	say "     [bold type]What do you decide to do?[roman type][line break]";	
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Stay and fight.";
+	say "     ([link]N[as]n[end link]) - Run away.";
 	if player consents:
+		LineBreak;
 		say "     'Thank you - let's go over there and wait for them.' Thomas leads Jill and twenty minutes to the east, saying 'Watch out, there's a lot of rabbit holes over here - let's hope some of those guys step into them and stumble.'";
-		say "     [line break]";
+		LineBreak;
 		say "     You don't have to wait too long before a group of centaurs comes into sight in the distance and veers right towards you. It's eleven stallions, and they don't look at all talkative. Shouting, they rush at you - and two of them find the rabbit holes the hard way. Stepping right into them, they stumble, and with the crunching sound of shattering bone two of your opponents are out of the fight. That only leaves nine to come at your little group...";
 		challenge "Centaur Stallion";
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
@@ -518,6 +543,7 @@ instead of navigating Dry Plains while ((libido of Thomas is 1 or libido of Thom
 						say "     Jill hugs Thomas and you, then says 'That was my dad you just beat up - and make no mistake, he deserves it. Thank you both for helping me.'";
 						increase libido of Thomas by 1;
 	else:
+		LineBreak;
 		say "     Apologizing and saying it's not your fight, you run away. Somehow you doubt that they'll be able to make a stand without you... so you likely won't see Thomas anymore.";
 		remove Thomas from play;
 		now HP of Thomas is 100;

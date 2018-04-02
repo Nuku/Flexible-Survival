@@ -36,7 +36,10 @@ Instead of resolving a Captured Soldier:
 		say "     'My, my - whom do we have here? Elijah's little pet. Hey Fucktoy.' says a voice from deeper in the alley. Turning that way, you see that it's a spidertaur - and one you know at that. With his handsome features, muscular upper body and a spider body with green body-paint, it's almost impossible not to recognize Zephias, the guy who fashioned a silken sex-nest for Elijah and got to fuck you as payment for that. A shiver of lust runs through your body as you think back to him dominating you, thrusting into your tied-up body - then you shake off the memory and focus on what Zephias is carrying. It's a humanoid shape, wrapped in many strands of silk, and you can see a military uniform through the gaps between the binding.";
 		say "     Giving you a wide grin as he sees you staring, Zephias says 'Ah, but where are my manners. Fucktoy, meet soldier boy.' He gives his captive's ass a grope, causing the man to struggle futilely for a second and mumble something into the silken gag in his mouth. 'Just caught him in one of my webs. Gonna take this little stud home and have some fun with him. Isn't he cute?' With that, he lowers the soldier from his shoulder, turning him around to face you. He's a good-looking young guy, pretty fit and well-built from what you can see, with a mane of somewhat longer than regulation black hair. He looks at you with an imploring gaze and murmurs something into his gag.";
 		LineBreak;
-		say "Do you want to do something about this situation? Zephias is a fairly reasonable guy from all accounts, he'd most likely let the soldier go if you offered yourself to take his place. Do you do so? ";
+		say "     [bold type]Do you want to do something about this situation?[roman type][line break]";	
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Offer yourself to take the soldier's place.";
+		say "     ([link]N[as]n[end link]) - Not your problem.";
 		if player consents: [random selection if Zephias or the soldier fucks the player]
 			LineBreak;
 			say "     [ZephiasJulioRandomSelection]";
@@ -48,7 +51,10 @@ Instead of resolving a Captured Soldier:
 		say "     As you make your way through the chaos of abandoned, sometimes smashed vehicles on the streets, you duck into an alley at one point to get around the wreck of a truck blocking the road ahead. Walking in the shadowy alley, you're halfway through when suddenly someone else enters from the other end, a large shape carrying a white bundle. It's Zephias, a cocooned body over his shoulder. Peeking out from under the silk strands binding the man, a military uniform can be seen, as well as his somewhat longer than regulation black hair. Could that be... the same soldier he had with him when you met last time in this area?";
 		say "     Giving you a wide grin, Zephias says 'What a coincidence, here we three meet again.' He gives his captive's ass a grope, causing the man to struggle futilely for a second and mumble something into the silken gag in his mouth. 'Julio here just can't stay out of my traps it seems. Or maybe he actually wants to be dragged off to my lair to be fucked...' Lowering the soldier from his shoulder, Zephias turns him to face you and says 'Do say hello to Fucktoy, my little soldier boy' - after which Private Vasquez murmurs something into his gag and gives you a nod. Then the large spidertaur puts his hands on his bound captive again, taking hold of several though silk strands to carry him away to his lair.";
 		LineBreak;
-		say "Do you want to do something about this situation? Zephias is a fairly reasonable guy from all accounts, he'd most likely let the soldier go if you offered yourself to take his place. Do you do so? ";
+		say "     [bold type]Do you want to do something about this situation?[roman type][line break]";	
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Offer yourself to take the soldier's place.";
+		say "     ([link]N[as]n[end link]) - Not your problem.";
 		if player consents:
 			LineBreak;
 			if lust of Zephias is 2 and cunts of player > 0 and cocks of player is 0:  [that Julio is gay is known, so the female sex option with him doesn't come up]

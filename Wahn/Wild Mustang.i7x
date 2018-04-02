@@ -29,10 +29,17 @@ to say WildMustangWins:
 		say "     Something inside you calls out for you to just stay, rest on the grass till your stallion comes by again to breed you, become a true mare - but no, you're not that far gone yet. Using the opening Lucifer's overconfidence of not even watching you too closely presents, you quickly snatch up your gear and clothes, then run off to the gate, quickly slipping through and locking back up before the feral mustang can follow.";
 
 to say WildMustangLoses:
-	say "     After giving Lucifer another good slap, the large horse takes a few dazed, hesitant steps and stops attacking. Looks like he's had enough for now. In all likely-hood, he'll return to his untamed ways once he's had time to rest and regain his strength, but... an idea springs to your mind that maybe there is a way of making peace with the large beast, now that you've got him pacified for the moment. He's used to people trying to ride him in - which clearly hasn't worked so far - so the opposite might do the trick. Do you want to show the feral mustang some physical affection as a willing partner?";
+	say "     After giving Lucifer another good slap, the large horse takes a few dazed, hesitant steps and stops attacking. Looks like he's had enough for now. In all likely-hood, he'll return to his untamed ways once he's had time to rest and regain his strength, but... an idea springs to your mind that maybe there is a way of making peace with the large beast, now that you've got him pacified for the moment. He's used to people trying to ride him in - which clearly hasn't worked so far - so the opposite might do the trick.";
+	LineBreak;
+	say "     [bold type]What do you want to do now?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Show the feral mustang some physical affection as a willing partner.";
+	say "     ([link]N[as]n[end link]) - Leave the paddock.";
 	if player consents:
+		LineBreak;
 		say "[LuciferSexMenu]";
 	else:
+		LineBreak;
 		say "     Where did that thought even come from? Getting sexual with a horse! Pfft - the nanites must be getting to you. Shaking your head to clear it, you quickly leave the paddock and lock its gate behind you.";
 		move player to Central Farm Square;
 
@@ -252,10 +259,13 @@ to say LuciferSex6:    [watch him breed a mare]
 to say LuciferSex7:    [player strapped under Lucifer with his cock inside them]
 	increase Dexterity of Lucifer by 1;
 	say "     You slowly step up to the large horse, stroking his long neck and patting his side. As he calms down a bit after the initial touch, you start walking around Lucifer's body, stroking along his muscled flank until you reach the rear end and let your hand slide under his furred body. Calmly telling the horse to relax, you take hold of his large balls and gently squeeze them, then move on to his equine cock as it emerges from its sheath. As you start jerking off the long tube of his shaft, the mustang give a curious and at the same time aroused whinny and he turns his head to look back at you. Continuing in the same nonthreatening manner, you let go of his erection a moment later, then pat him affectionately on the neck and tell him that you'd love to... be ridden by him. Feel his shaft inside you as he dashes forward. Strap yourself under him to be a receptacle for his equine cock.";
-	say "     The feral mustang turns a little to give you a suspicious look as you mention straps, but then snorts in amusement as he realizes you're serious and don't want to trick him into some sort of harness to break him to your will. A loud whinny follows, which you interpret as assent, as it is followed by a nod of his large head. Looking around, you spot Lee casually leaning against the fence not too far off, the bundled-up harness resting next to his hooves. With a wave, you indicate him to join you. After swinging himself over the wooden fence, the horseman pulls in the harness and picks it up, then strolls over to you. 'Time to get some stallion action, huh buddy? Sure thing, I can hook you up. You do have the payment I hope? One strand of hairs from a centaur mare for a ride-out with your stud, as I told you.'";
+	say "     The feral mustang turns a little to give you a suspicious look as you mention straps, but then snorts in amusement as he realizes you're serious and don't want to trick him into some sort of harness to break him to your will. A loud whinny follows, which you interpret as assent, as it is followed by a nod of his large head. Looking around, you spot Lee casually leaning against the fence not too far off, the bundled-up harness resting next to his hooves. With a wave, you indicate him to join you. After swinging himself over the wooden fence, the horseman pulls in the harness and picks it up, then strolls over to you. 'Time to get some stallion action, huh buddy? Sure thing, I can hook you up. You do have the payment I hope? A strand of hairs from a centaur mare for a ride-out with your stud, as I told you.'";
 	if carried of centaur hair > 0:
 		LineBreak;
-		say "     Remembering that you actually do have a bit of hair from a centaur mare in your pack, do you trade it to Lee?";
+		say "     [bold type]You already have the centaur air on hand. What do you want to do now?[roman type][line break]";	
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Trade it to Lee?";
+		say "     ([link]N[as]n[end link]) - Change your mind.";
 		if player consents:
 			LineBreak;
 			say "     As you pull the bundle of hair from your pack, the farmhand gives you a grin and takes an old snuff-box out of his jeans pocket, opening the tin can and letting you drop your trade into it. Careful not to touch it, he closes the box up and stuffs it into his pocket, then nods to the mounting block not too far away. 'Okay then, let's move over there everyone. We need you two to be in the right positions to set this thing up.'";

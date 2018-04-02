@@ -1,8 +1,6 @@
 Version 1 of Tobias by Wahn begins here.
 [Version 1 - New Character]
 
-
-
 Section 1 - Events
 
 after going to Smith Haven Mall Lot East while HP of Tobias is 0 and a random chance of 1 in 3 succeeds:
@@ -138,7 +136,7 @@ to say TobiasTalk1: [Ask him about himself]
 	say "     'Oh, I've been a dog trainer for close to ten years now. Started my business after coming back from the war. Which one, you ask? One of the shitty ones that no one even remembers, in the Kosovo. Stopping one group of asshole Europeans from stringing up their neighbours, and vice versa, at times.' He shrugs and brushes the topic aside, then says, 'Started with just two kennels and a bitch. Really good one, though. Purebred puppies go for quite a bit, and the ones I didn't sell got trained. Ever seen 'The Revivicator II', 'Mall Pig' or 'Inspector Gumbo'? All my dogs in those movies.' Reaching out to pat Dane on the head, the man adds, 'This current crisis hit out of the blue, but I was prepared for [italic type]something[roman type] to go down, so my place is well stocked. And apparently my skills are quite useful these days too.'";
 
 to say TobiasTalk2: [Ask what he is doing at the mall]
-	say "     'Oh, I'm just stopping by for some supplies and a good warm meal. This is one of the few places that one can relax and let your guard down. Also, at some point it is important to socialize newly trained pets with large groups of people. Than can bring some previously hidden issues to the forefront so they can be dealt with - like Cara's little hangup [if HP of Tobias is 0]just now[else]when we met[end if].";
+	say "     'Oh, I'm just stopping by for some supplies and a good warm meal. This is one of the few places that one can relax and let your guard down. Also, at some point it is important to socialize newly trained pets with large groups of people. That can bring some previously hidden issues to the forefront so they can be dealt with - like Cara's little hangup [if HP of Tobias is 0]just now[else]when we met[end if].";
 
 to say TobiasTalk3: [Talk about dog training]
 	say "     Tobias gives you a knowing nod and clears his throat. 'The difficult part about any training with canines isn't to get them started doing something. No, it's keeping them from being obsessed with things once they start. Here, let me demonstrate.' Stepping forward, the dog trainer loosens the straps of the leather muzzle on Dane and pulls it off, then tells him, 'Go on boy, lick your balls.' In reply, Dane gives a happy bark, followed by the submissive dobie curling up on the ground and lapping at his own crotch. Watching the naked young man pleasure himself, Tobias adds, 'It wouldn't do to have a movie dog actually go through with mauling an actor instead of just lightly biting them in the ass, so control is a [italic type]very[roman type] important thing. Even if they do not want to follow a command, it [italic type]must[roman type] be obeyed instantly. Just look at Dane for example.'";
@@ -187,7 +185,7 @@ instead of conversing the Tobias:
 	say "     ";
 
 instead of fucking the Tobias:
-	say "     A smile spreads over Tobias's face as he checks you out, folled by him giving a pleased nod. 'Definitively an interesting offer you're making. Not quite the time or place for it, right here and now, but I'll keep your interest in mind. There should be some opportunities for a hookup sometime, if you're still game then. But you better be prepared for a workout - I'm a fairly demanding partner in bed, just so you know.";
+	say "     A smile spreads over Tobias's face as he checks you out, followed by him giving a pleased nod. 'Definitively an interesting offer you're making. Not quite the time or place for it, right here and now, but I'll keep your interest in mind. There should be some opportunities for a hookup sometime, if you're still game then. But you better be prepared for a workout - I'm a fairly demanding partner in bed, just so you know.";
 	
 to say TobiasSexMenu:
 	LineBreak;

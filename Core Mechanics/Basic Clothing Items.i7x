@@ -650,6 +650,7 @@ the scent of rose-tinted glasses is "The glasses don't smell like anything reall
 
 [
 When Play begins:
+
 	add { "" } to invent of Grey Abbey Library;
 ]
 	
@@ -662,6 +663,7 @@ name	desc	weight	object
 "grey fedora"	"A grey fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, or a hipster."	0	grey fedora
 "baseball cap"	"A blue baseball cap with the logo of the Tenvale Gorillas on its front."	0	baseball cap
 "knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull."	0	knitted skullcap
+"football helmet"	"A white football helmet with the logo of the Tenvale Gorillas on both sides. Heavy, but protective."	3	football helmet
 
 motorcycle helmet is a grab object.
 motorcycle helmet is equipment.
@@ -753,6 +755,19 @@ The placement of knitted skullcap is "head".
 The descmod of knitted skullcap is "A knitted skullcap covers the top of your head.".
 The slot of knitted skullcap is "head".
 the scent of knitted skullcap is "The cap smells like wool.".
+
+football helmet is a grab object.
+football helmet is equipment.
+It is not temporary.
+The plural of football helmet is false.
+The taur-compatible of football helmet is true.
+The size of football helmet is 3.
+The AC of football helmet is 40.
+The effectiveness of football helmet is 80.
+The placement of football helmet is "head".
+The descmod of football helmet is "Your head is encased in the thick shell of a football helmet.".
+The slot of football helmet is "head".
+the scent of football helmet is "The helmet smells of plastic and fabric.".
 
 [ Section 6 - Helmets ]
 

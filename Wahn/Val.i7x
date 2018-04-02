@@ -114,7 +114,10 @@ An everyturn rule:
 			say "     The little orc seeks out his nipples and starts nursing, suckling hungrily as the orc breeder's body strives to complete its task and begins to lactate temporarily to feed his offspring. As the child drinks, it grows rapidly in Val's arms, rushing through the stages of toddler and little child in just moments, becoming a young boy next, then slowing down a little bit as he enters puberty. Before long, Val is sitting beside a second orc on the bed, his child having arrived at young adult development when he stopped drinking from the breeder's breast. Not only nutrition but personality and knowledge seem to have flowed through the nipple into the newborn, who's now become a young man.";
 			say "     The minutes-old orc gives his 'father' an affectionate hug, then stands up, looking into the world with new eyes and an intelligent, curious look on his face. After watching his son explore his surroundings for a moment, moving around totally unashamed by his nakedness, Val turns to you and says 'I want to call him Christopher - no, Chris... but he'll likely be 'Uglug the warrior brute' or just another breeder if he stays here for any time. Can you... take him away from the lair with you? Bring him somewhere safe?' He looks over at Chris with proud eyes, then sighs 'I want to be with him for a while, but if he's ever supposed to be... more, you know, he can't be here.'";
 			LineBreak;
-			say "     What's your answer? Do you take Chris with you to the library?";
+			say "     [bold type]What's your answer?[roman type][line break]";	
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Take Chris with you to the library.";
+			say "     ([link]N[as]n[end link]) - Refuse to take Chris.";
 			if player consents:
 				LineBreak;
 				say "     A look of incredible relief on his face, Val hugs you, saying 'Thank you, thank you, thank you.' while he does so. A moment later, he steps back from you again and takes Chris to the side, talking to him in quiet tones for a while, then embraces his son and says a bit louder 'My friend here will take you to a safer place. And remember - don't ever drink an orc brew or let an orc cum in your ass or mouth. Orc cum is... delicious, but you'll never want to stop afterwards. Now go, while there's still time.'";

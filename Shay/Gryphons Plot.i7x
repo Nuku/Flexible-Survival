@@ -369,8 +369,61 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 				clear the screen and hyperlink list;
 	else: [player is a gryphon himself]
-		say "     <WIP>";
-
+		say "     Stepping up and making it clear with just who you stand with, you watch as the soldiers become increasingly desperate, the odds now stacked even higher against them. In this situation, your gryphon appearance comes in handy, the assailants gladly accepting your help. Soon, with the combined efforts of you and your new allies, the uninfected men are converged upon. They climb into the stuck car in a last ditch attempt to save themselves from the fate that will befall them. Rushing forward in aggressive maneuvers, you and the other gryphons make quick work of the soldiers['] final effort to protect themselves. Ripping the metal doors off of the jeep as they reach in and pull the soldiers out, they roughly strip them of their clothes with an obvious lustful intent, their cocks dripping pre-cum as they bend the still struggling soldiers over and thrust in balls-deep. Ignoring you, they fuck the men ravenously as they begin to change, their once fully human forms gaining a feral look, as their feet shift into sharp talons, and their tanned skin turns into the gryphon's blue. The soldiers are fully transformed by the time the gryphons turn back to you, a contemplative look on their faces. Then they gesture to the newly transformed soldiers, most specifically the cum leaking from their every hole. Seems like that you're being offered their sloppy seconds. With that, the gryphons fly away, satisfied looks upon their blue, furred faces. Now the only thing that is left to do, is to decide whether or not you want to take them up on the offer...";
+		LineBreak;
+		say "     [bold type]What do you want to do?[roman type][line break]";
+		LineBreak;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if cocks of player > 0: [Option only visible for males and herms]
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck a soldier-gryphon's pussy";
+			now sortorder entry is 1;
+			now description entry is "Fuck the pussy of a newly transformed herm to your heart's content";
+		[]
+		if cocks of player > 0: [Option only visible for males and herms]
+			choose a blank row in table of fucking options;
+			now title entry is "Pound a soldier-gryphon's ass.";
+			now sortorder entry is 2;
+			now description entry is "Fuck a soldier's tight and most likely virgin pucker";
+		[]
+		if cunts of player > 0: [Option only visible for females and herms]
+			choose a blank row in table of fucking options;
+			now title entry is "Ride a soldier-gryphon's cock.";
+			now sortorder entry is 3;
+			now description entry is "Take charge and get a taste of a hard, gryphon shaft";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]100 - Just Leave[as]100[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if (nam is "Fuck a soldier-gryphon's pussy"):
+						say "[GryphonPussy]";
+					if (nam is "Pound a soldier-gryphon's ass"):
+						say "[GryphonAss]";
+					if (nam is "Ride a soldier-gryphon's cock"):
+						say "[GryphonRide]";
+			else if calcnumber is 100:
+				say "Are you sure you wish to leave?";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Yes.";
+				say "     ([link]N[as]n[end link]) - No.";
+				if the player consents:
+					now sextablerun is 1;
+					say "     Deciding that despite being a part of what led to the soldiers being transformed into their new gryphon state, you don’t wish to take advantage of the already thoroughly broken men you distance yourself from the scene, leaving the gryphons to clean themselves up and potentially explore their new shapes as you continue along on your merry way.";
+					wait for any key;
 to say GryphonPussy:
 	say "     Lining your cock up with the hermaphrodite gryphon's soaking wet cunt, you hear the newly transformed man let out a wanton moan. Taking the soldier's sound of need as a good of an invitation as any, you proceed to bury yourself balls-deep inside of the newly formed cunt of your temporary fuck toy, to his obvious and verbal enjoyment. Painfully erect inside of the gryphon's softly clenching vaginal walls, your cock lets out copious amounts of precum, lubricating the soldier's snatch for the pounding that is to come. The man, succumbing to the lustful needs of his new form, begins rocking his hips into you in time with your thrusts as you start to earnestly fuck him.";
 	LineBreak;

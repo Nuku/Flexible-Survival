@@ -21,7 +21,7 @@ use MAX_VERBS of 2000.
 use MAX_VERBSPACE of 50000.
 use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
-Use MAX_DICT_ENTRIES OF 2400.
+Use MAX_DICT_ENTRIES OF 5000.
 Use maximum text length of at least 2000.
 Use Scoring.
 [ End compiler settings. ]
@@ -4933,6 +4933,7 @@ Include Down Under Pub by Stripes.
 Include Equinoid Camp For FS by Stripes.
 Include Farm by Wahn.
 Include High Rise District by Guest Writers.
+Include Hitching Post by SgtPepper234.
 Include Hospital For Fs by Stripes.
 Include Hyena Hideout by Stripes.
 Include Junkyard and Warehouse by Wahn.
@@ -5453,6 +5454,7 @@ Include Onyx by Sarokcat n Verath.
 Include Orc Female by Wahn.
 Include Orc Lair by Wahn.
 Include Orthas by Stripes.
+Include Otto Fuchs by Prometheus.
 Include Palomino by Verath.
 Include Paula by Stripes.
 Include Pericles by Rikaeus.
@@ -5502,12 +5504,10 @@ Include Zigor by Stripes.
 [Pets]
 Include Artemis by Stripes.
 Include Aurora by Stripes.
-Include Exotic Bird by Sarokcat.
 Include Felinoid Companion by Sarokcat.
+Include Feral Pets by Luneth.
 Include Gryphon Companion by Sarokcat.
-Include Hobo by Stripes.
 Include Honey by Stripes.
-Include Kitty Cat by Sarokcat.
 Include Korvin by Stripes.
 Include Little Fox by Sarokcat.
 Include Rachel Mouse by Stripes.

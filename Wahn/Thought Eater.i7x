@@ -53,13 +53,18 @@ to say Thought_Eater_Loses:
 	WaitLineBreak;
 	say "     By the time you manage to push off the thought eater's slave and get your feet back under you, the creature is already well ahead of you, running down a darkened corridor. Before you can start chasing him, the Asian guy in the lab-coat steps in front of you again. 'Wait, don't hurt the master.' His arms twitch up a bit, then he lets them fall as he realizes that he's no match for you without surprise on his side. Instantly switching tactics, he runs his hands down his smooth chest, grasping his cock and holding it up to show the opening of a pussy right below where his balls hang. With a hopeful smile, the handsome guy pushes his naked body against yours, saying 'You can make use of me instead, just leave him and I'll do anything you wish!'";
 	LineBreak;
-	say "     What do you say to this offer? Do you let the slave's charms distract you?";
+	say "     [bold type]What is your decision?[roman type][line break]";	
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Let the slave's charms distract you.";
+	say "     ([link]N[as]n[end link]) - Keep going for the thought eater instead.";
 	if player consents:
+		LineBreak;
 		say "     Taking your eyes off the retreating shape of your opponent, you look closer at the slave he called to make his getaway. It's an Asian man in his mid-twenties you'd say, relatively tall and skinny. He's got a handsome face and hairless chest, with a quite respectable cock hanging between his legs, plus that pussy under it he showed you earlier. His only piece of clothing is a white lab-coat, loosely worn with an open front. A Trevor Labs name-plate on it makes the man out to be Lee Sato, junior researcher.";
 		say "     Relieved that his ploy is working, Lee gives you his best seductive look, stroking over his chest and abs, jerking his manhood demonstratively and then pulls his nether lips apart to show an already moist pussy. With a flowing movement, he also turns around and leans his upper body forward a bit, running a hand over a very nicely rounded and perky butt. 'I'm ready to please you,' he coos over his shoulder, then moves to stand directly in front of you, his hand rubbing your crotch.";
 		WaitLineBreak;
 		say "     [TESlaveSexMenu]";
 	else:
+		LineBreak;
 		say "     Brushing the almost naked herm aside, you dash after the fleeing thought eater. Running as fast as you can, you manage to catch up a little bit in the immensely long corridor, but then he dodges around a corner. As you come to it and look around, you see your quarry and... one, two, thr - you don't know how many - deformed creatures with tentacles further along that hallway. With a hiss, pointing his long and thin arm, the thought eater tells them to attack.";
 		say "     Faced with a mob of monstrosities coming your way, you decide that retreat might just be the best option and run. Thankfully, the creatures aren't all that quick and jostle each other for the spots at the front, so you make it to the exit well ahead of them. The heavy door to the underground closes behind you with a comforting thud.";
 

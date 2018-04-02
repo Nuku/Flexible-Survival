@@ -25,9 +25,12 @@ Version 4 of Nermine by Wahn begins here.
 [   8: Coura had sex twice                                           ]
 [   9: Coura had sex three times (getting used to it)                ]
 [  10: Cole wants control to be a girl freely                        ]
-
 [  99: refused the revenge offer                                     ]
 [ 100: refused the harness offer                                     ]
+
+[ CouraVirginity                                                     ]
+[   0: virgin                                                        ]
+[   1: taken by the player                                           ]
 
 [ JackalBoyTF                            ]
 [  1: Jackalboy Tail                     ]
@@ -50,6 +53,7 @@ wrlastNermine is a number that varies. wrlastNermine is normally 255.
 AngryHorguth is a number that varies.
 NermineFennecTurn is a number that varies.
 NermineBukkakeTurn is a number that varies.
+CouraVirginity is a number that varies.
 
 Section 1 - The Mysterious Shop
 
@@ -155,11 +159,17 @@ instead of conversing the Nermine:
 		now sortorder entry is 8;
 		now description entry is "Ask Nermine if she has some way of helping Brennan with his little problem";
 	[]
-	if (libido of Danny is 4 or libido of Danny is 4) and NermineBukkakeTurn - turns > 8; 
+	if (libido of Danny is 4 or libido of Danny is 5) and NermineBukkakeTurn - turns > 8:
 		choose a blank row in table of fucking options;
 		now title entry is "Starting her ritual to transform the mall rat";
 		now sortorder entry is 9;
 		now description entry is "Give your jackal bitch the go-ahead for her spell";
+	[]
+	if (libido of Danny > 5 and libido of Danny < 90):
+		choose a blank row in table of fucking options;
+		now title entry is "Let her turn Cole into a girl again";
+		now sortorder entry is 10;
+		now description entry is "Time for Coura to make another appearance";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -193,6 +203,8 @@ instead of conversing the Nermine:
 					say "[NermineBrennanTalk]";
 				if (nam is "Starting her ritual to transform the mall rat"):
 					say "[NermineRatRitual]";
+				if (nam is "Let her turn Cole into a girl again"):
+					say "[NermineCouraSpell]";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -1084,6 +1096,19 @@ to say NermineRatRitual:
 	say "     Nermine strokes a finger along the jawline of her visitor, then takes her by the hand and guides the gender-switched rodent to stand before you. Lifting the small anthro's head to look at you, the jackaless adds, 'There obviously isn't anything of material worth in the rodent's possession, that Nermine is certain of. So maybe the humble storekeeper's beloved [master] should decide about what would be a fitting service in [PosAdj of player] opinion instead.' A toothy smile is sown on her face as she looks at you expectantly.";
 	say "[MTFRatSexMenu]";
 
+to say NermineCouraSpell:
+	if libido of Danny > 5 and libido of Danny < 8: [still new to it]
+		say "     A smile spreads over the black jackaless's muzzle as Nermine listens to your command, then saunters over to the display case where she keeps the mall rat doll. Unlocking it with a small silver key, she reaches in and fastens the tiny orange skirt back around the little rat's hips, which changes it from a male rat to a female rat in the blink of an eye. Moving back around the counter, Nermine presses herself up against your side once more, nuzzling and caressing her beloved [master] so you don't get too bored with waiting. This is quite enjoyable in its own right, meaning that you're actually fairly aroused and focused on her, almost missing the ringing of the bell as the store entrance opens and closes in quick succession. Nermine kisses your mouth one last time, then turns her gaze towards the new arrival: Coura is back, panting from running here and looking at the two of you with frightened eyes.";
+		say "     Dressed in baggy shorts and an over-sized t-shirt, you have to look closely to spot the tiny bumps of breasts under the fabric of her shirt. 'Nermine welcomes the little mall rat back to her store. Does the breathless rattess have a wish she wants fulfilled?' your jackaless bitch says in a pointedly friendly tone. Speechlessly gaping at the sorceress for a few seconds, Coura eventually bursts out with the words, 'I-I thought you had... ended your spell. After I did what you wanted. And now I'm back like this!' The sorceress just stands there and smiles at him, letting the trembling mall rat sputter on a little until she runs out of steam. 'Magic can be unpredictable sometimes, the rodent visitor should know. There may exist a way to permanently shake off this spell. Though the humble storekeeper fears that such a precious secret is far too pricy for her visitor right now. But what she can afford is being turned back by rendering a little service. Who knows, maybe it will stick this time.'";
+		WaitLineBreak;
+		say "     Nermine strokes a finger along the jawline of her visitor, who trembles at the knowledge that she completely is in the jackaless's power. 'Oh. I see. Um... fine, I'll do what you ask. But please turn me back,' Coura says haltingly, and finds herself taken by the hand and guided to stand before you. Lifting the small anthro's head as if to show her off, the jackaless says, 'The humble storekeeper's beloved [master] should decide about what would be a fitting service in [PosAdj of player] opinion.' A toothy smile is sown on her face as she looks at you expectantly.";
+	else: [getting used to the transformations]
+		say "     A smile spreads over the black jackaless's muzzle as Nermine listens to your command, then saunters over to the display case where she keeps the mall rat doll. Unlocking it with a small silver key, she reaches in and fastens the tiny orange skirt back around the little rat's hips, which changes it from a male rat to a female rat in the blink of an eye. Moving back around the counter, Nermine presses herself up against your side once more, nuzzling and caressing her beloved [master] so you don't get too bored with waiting. This is quite enjoyable in its own right, meaning that you're actually fairly aroused and focused on her, almost missing the ringing of the bell as the store entrance opens and closes in quick succession. Nermine kisses your mouth one last time, then turns her gaze towards the new arrival: Coura is back, panting from running here and looking at the two of you with a cautious expression on her face.";
+		say "     Dressed in a tank top and a cute miniskirt, the anthro rat shows off her feminine side quite openly these days. You can see the enticing little bumps of her B-cup breasts under the fabric of her top, and all in all, Coura has also adapted to a different way of holding herself. Walking closer, she sways her hips just a little bit, giving you an enticing glimpse of the fact that all the transformations are leaving a lasting impact on what originally was a regular male rat. 'Nermine welcomes the little mall rat back to her store. Does she -' your jackaless bitch starts to say in a pointedly friendly tone, only to be interrupted by Coura clearing her throat. 'I - um, know what the deal is. No need to go through the motions again. So, what do I need to do for you to turn me back this time?' Raising her eyebrows, Nermine looks at the former male rat for a few seconds, then shrugs off the fact the Coura wants to skip her banter.";
+		WaitLineBreak;
+		say "     Reaching out to take her visitor by the hand, the black jackaless guides her to stand before you. Lifting the small anthro's head as if to show her off, the jackaless says, 'The humble storekeeper's beloved [master] should decide about what would be a fitting service in [PosAdj of player] opinion.' A toothy smile is sown on her face as she looks at you expectantly.";
+	say "[MTFRatSexMenu]";
+
 to say MTFRatSexMenu:
 	setmonster "Mall Rat";
 	say "     What kind of fun do you want to have with the young adult mall rat?";
@@ -1095,6 +1120,8 @@ to say MTFRatSexMenu:
 	now title entry is "She shall please Nermine orally";
 	now sortorder entry is 1;
 	now description entry is "Let Coura lick your bitch";
+[
+	[]
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "She will eat your pussy out";
@@ -1129,6 +1156,7 @@ to say MTFRatSexMenu:
 	now sortorder entry is 7;
 	now description entry is "Let some random person fuck Coura";
 	[]
+]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -1158,8 +1186,10 @@ to say MTFRatSexMenu:
 					say "[CouraSex6]";
 				else if (nam is "Offer Coura's pussy to the next customer who comes in"):
 					say "[CouraSex7]";
-				if libido of Danny < 10: 
-					increase libido of Danny by 1;
+				if libido of Danny < 6:
+					now libido of Danny is 6; [first transformation done]
+				else if libido of Danny < 10:
+					increase libido of Danny by 1; [counting up on the transformations]
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Just let Cole/Coura off scot free for now?";
@@ -1174,7 +1204,28 @@ to say MTFRatSexMenu:
 	clear the screen and hyperlink list;
 
 to say CouraSex1: [oral for Nermine]
-	say "     ...";
+	if libido of Danny > 4 and libido of Danny < 8: [still new to it]	
+		say "     Smiling at Coura, you pat her head and look into the fightful eyes of the gender-switched mall rat, then proclaim that she shall service Nermine. The young woman blinks in shock and surprise, opening her mouth as if to say something, but you simply wave for her to be quiet and tuck up her baggy t-shirt. A quick pull sees the garment in your hands, then dropped to the floor. This leaves Coura half-naked in front of you, revealing her slender body and the small B-cup breasts that Nermine's spell gave her. As you reach out to cup them and give her a little grope, the mall-rat lets out a sigh of pleasure, the expressison on her face showing surprise at how good it feels to be touched like this. Yet you decided that Nermine should be the one to make use of the young woman right now, so before much longer, you spin Coura around and give her a gentle push towards your jackaless bitch.";
+		say "     Nermine gives the victim of her spell a toothy smile and lays a hand on the mall rat's shoulder. 'The humble jackaless not only is a storekeeper but also delights in training servants sometime. Her apologetic visitor should remember well the lessons she will receive. Now start licking, little rodent.' Pushing down against Coura, she makes the young woman kneel and draws her head to her crotch, pressing her nose right against her furry mound. Watching with interest, you grin as the former male finds himself so very close to something he and his buddies lusted after - yet in a very different situation than they would ever have expected. Now as a sexy little mall rat girl, Coura starts lapping at Nermine's sex, controlled by the jackaless resting a hand on her head and telling her how to best please a woman.";
+		WaitLineBreak;
+		say "     Lick for lick, Coura services Nermine to the best of her ability, constantly huffing the aroused scent of the jackaless sorceress's pussy. This quite obviously has an effect on the young woman, as she squirms a little in her kneeling position, rubbing her thighs against each other and letting out muffled moans while eating out the black jackal. 'Does the little rodent enjoy servicing her betters?' Nermine asks in a sharp tone, digging her fingers into Coura's hair and pulling her head back to look into the mall rat's eyes. The enspelled rat hesitates for a second, then gives an eager nod in reply. 'Good. She should rise and follow her mistress now,' Nermine adds and turns around to walk over to the store counter, not even having to look back to make sure that Coura follows her close by.";
+		say "     Your sexy bitch lifts herself to sit on the edge of the counter, then spreads her legs and gives the mall rat an expectant glance with one raised eyebrow. Coura immediately steps up and starts to lean forward to get back to licking, but Nermine freezes her in motion with a raised hand. 'The trainee rodent really does have much to learn. She may be obedient enough when told, but did she even think about the [master]'s pleasure too?' Glancing your way as she follows Nermine's pointing finger, the anthro rat looks slightly puzzled until Nermine lets out a sigh and adds sharply, 'Strip, girl!' Gulping and nodding hurriedly, Coura turns your way and inexpertly shakes her chest and hips a little while opening the button and zipper of her shorts, letting them fall to the ground a moment later and revealing her slim legs and the matted fur around her pussy. She's wet from the treatment Nermine his putting her through!";
+		WaitLineBreak;
+		say "     'Better. The girl may resume licking now,' Nermine comments expectantly, letting out a pleased laugh as Coura gets her head between her legs and starts to service her. This leaves you with a nice little view of the young woman, bent over to please Nermine, with her [if CouraVirginity is 0]virgin[else]wet[end if] pussy visible between her legs. Wandering closer, you enjoy the show of having to sexy women naked at your command. With a grin that you share with Nermine, the next thing you do is reach between the mall rat's legs, stroking over her sex and pulling away your fingers with the wetness of her juices clinging to your fingers. The unexpected touching makes Coura pause again, though not for long, as Nermine simply pushes her head against her crotch and commands her to continue licking.";
+		say "     You play and tease with the young mall rat a little while Nermine enjoys her tongue, letting out loud moans and pleased yips. 'The rodent girl's mistress is getting quite close now,' Nermine soon groans, 'She should keep teasing the jackaless's clit throughout her orgasm, and be sure to lick up all the juices that her mistress shares with her for the service she provides.' Reacting to Nermine's command, the slender mall rat goes all out with tonguing the jackaless, quickly pushing her closer and closer to the edge, then over it. Now with both hands holding Coura's head down and grinding it against her crotch, Nermine lets out a pleased howl and throws her head back to ride out the sensations that course through her body.";
+		WaitLineBreak;
+		say "     Watching in satisfaction, you observe that while Coura is still being held tight against Nermine's pussy by the jackaless, her own hands quickly move between her legs, frigging the young woman in a rapid pace. It doesn't take long before her masturbation pushes the mall rat over the edge, legs trembling and hips bucking a little as she squirts out femcum over her stroking hands. After a few long moments in which the two of them slowly wind down from their orgasms, Coura stands up straight again and starts to rub the wet and matted fur on her body self-conciously. She looks pleadingly back and forth between Nermine and yourself, much to the amusement of the jackaless, who keeps her in suspense for a while before she eventually smirks and says, 'Very well. You have pleased us sufficiently.' Raising her hand, the sorceress snaps her fingers audibly, creating an immediate effect on the mall rat.";
+		say "     With the bumps of Coura's breasts smoothing out into a more masculine flat chest and her pubic mound being replaced by a soft cock, Cole is back and bursts out with an almost overly enthusiastic thanks to Nermine. As he moves to collect his clothes and get dressed again, you glance over to where you know the little doll of him is standing. It still is there, just with the little orange skirt now lying at its feet, the push-button that had held it up open. The smirk on Nermine's face as she nods towards it tells you that she can just put the garment back on to restore the spell to full effect. Thinking to what fun you might yet have with Coura/Cole, you barely notice as the mall rat flees from the store, leaving you and Nermine behind.";
+	else: [getting used to her new tasks]
+		say "     Smiling at Coura, you pat her head and look into the eyes of the gender-switched mall rat, then proclaim that she shall service Nermine. The young woman accepts your order readily and tucks up her tank top, pulling it over her head to reveal her naked breasts to you. As you reach out to cup them and give her a little grope, the mall-rat lets out a sigh of pleasure, the expressison on her face showing enjoyment at being touched like this. You're almost tempted to keep her for your own enjoyment, but that'd leave Nermine high and dry, so you eventually spin Coura around and give her a gentle push towards your jackaless bitch. Nermine gives the victim of her spell a toothy smile and lays a hand on the mall rat's shoulder. 'The jackaless is curious on how well her visitor has learned her place by now. Start licking, little rodent.' Pushing down against Coura, she makes the young woman kneel and draws her head to her crotch, pressing her nose right against her furry mound.";
+		say "     Watching with interest, you grin as the former male finds himself so very close to something he and his buddies lusted after - yet in a very different situation than they would ever have expected. Now being a sexy little mall rat girl and getting used to the new body too, Coura starts lapping at Nermine's sex, demonstrating enough skill at pleasing the woman that Nermine only gently rests a hand on her head. Lick for lick, Coura services Nermine to the best of her ability, constantly huffing the aroused scent of the jackaless sorceress's pussy. This quite obviously has an effect on the young woman, as she squirms a little in her kneeling position, rubbing her thighs against each other and letting out muffled moans while eating out the black jackal. 'Does the little rodent enjoy servicing her betters?' Nermine asks in a sharp tone, digging her fingers into Coura's hair and pulling her head back to look into the mall rat's eyes.";
+		WaitLineBreak;
+		say "     The enspelled rat hesitates for a second, then gives an eager nod in reply. 'Good. She should rise and follow her mistress now,' Nermine adds and turns around to walk over to the store counter, not even having to look back to make sure that Coura follows her close by. Your sexy bitch lifts herself to sit on the edge of the counter, then spreads her legs and gives the mall rat an expectant glance with one raised eyebrow. Coura glances from Nermine to yourself and gives you a little wave that is clearly meant to be enticing. Then she starts to sway her hips and chest, making the little bumps of her breasts shake in an interesting way. Her hands wander over her own body, drawing your eyes to sexy curves and erect nipples, then down to her hips where she slowly undoes the fastening of her skirt. A moment later, the garment falls to the ground, revealing her slim legs and the matted fur around her pussy. She's wet in anticipation for what will happen next!";
+		say "     'So the girl can learn her place. Very well. She may resume licking now,' Nermine comments expectantly, letting out a pleased laugh as Coura gets her head between her legs and starts to service her. This leaves you with a nice little view of the young woman, bent over to please Nermine, with her [if CouraVirginity is 0]virgin[else]wet[end if] pussy visible between her legs. Wandering closer, you enjoy the show of having to sexy women naked at your command. With a grin that you share with Nermine, the next thing you do is reach between the mall rat's legs, stroking over her sex and pulling away your fingers with the wetness of her juices clinging to your fingers. The teasing touch makes Coura tremble in lust, raising her ass a little as if begging for more.";
+		say "     You play with the young mall rat a little while Nermine enjoys her tongue, letting out loud moans and pleased yips. 'The rodent girl's mistress is getting quite close now,' Nermine soon groans, 'She should keep teasing the jackaless's clit throughout her orgasm, and be sure to lick up all the juices that her mistress shares with her for the service she provides.' Reacting to Nermine's command, the slender mall rat goes all out with tonguing the jackaless, quickly pushing her closer and closer to the edge, then over it. Now with both hands holding Coura's head down and grinding it against her crotch, Nermine lets out a pleased howl and throws her head back to ride out the sensations that course through her body.";
+		WaitLineBreak;
+		say "     Watching in satisfaction, you observe that while Coura is still being held tight against Nermine's pussy by the jackaless, her own hands quickly move between her legs, frigging the young woman in a rapid pace. It doesn't take long before her masturbation pushes the mall rat over the edge too, legs trembling and hips bucking a little as she squirts out femcum over her stroking hands. After a few long moments in which the two of them slowly wind down from their orgasms, Coura stands up straight again and starts to rub the wet and matted fur on her body. She looks back and forth between Nermine and yourself expectantly, confident in that she did a good enough job so that she'll be transformed back soon. The jackal sorceress seems a bit disappointed that Coura isn't as frightened as she was originally, nodding as she says, 'Very well. You have pleased us sufficiently.' Raising her hand, Nermine snaps her fingers audibly, creating an immediate effect on the mall rat.";
+		say "     With the bumps of Coura's breasts smoothing out into a more masculine flat chest and her pubic mound being replaced by a soft cock, Cole is back and thanks Nermine. As he moves to collect his clothes and get dressed again, you glance over to where you know the little doll of him is standing. It still is there, just with the little orange skirt now lying at its feet, the push-button that had held it up open. The smirk on Nermine's face as she nods towards it tells you that she can just put the garment back on to restore the spell to full effect. Then your attention is drawn back to Cole, who clears his throat as he stands at the door and is about to leave. Being a male again, he looks somewhat uncomfortable and almost sad in the feminine outfit. 'So, I guess that's it for now? I'll see you guys next time.' You can't quite tell if it is anticipation or trepidation in his voice - maybe a bit of both.";
 
 to say CouraSex2: [oral for player pussy]
 	say "     ...";

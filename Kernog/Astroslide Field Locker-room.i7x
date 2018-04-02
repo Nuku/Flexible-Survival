@@ -61,6 +61,9 @@ to say RomanHumiliation:
 	WaitLineBreak;
 	say "     The rest of the room watched the scene unfold. Some shocked, some aroused, all unwilling to help, as it often happens in these situations. Roman's howling was quickly muffled as one of the players slammed his cock down the former captain's throat. 'If I you bite it, we'll take one of the footballs and stretch your cunt with it,' the ape threatens. Roman whimpers, and does not bite. On the other side, another gorilla lined up his cock with Roman's hole. 'Bitch is ready to be [']initiated[']. Under the encouragements of the others, he pushes his member into Roman, who howls around the rod in his throat.[line break]'Rmmmf!'[line break]'Oh, fuck! He-no, she's extra tight!'";
 	say "     Minutes pass. The gorillas all take their turn into their former captain, and as the others arrive, see the scene, and learn of the captain's dirty secret, Roman's torment is prolonged for the whole part of an hour, then two. At first, Roman was struggling, but at his third penetration, and fourth forced blowjob, a powerful, forced orgasm shook his body, under the cheers of the crowd. After some time, the gorillas all decide to [']get some rest['], not before defacing Roman's body with a red marker. Now that the gorillas are not around him anymore, Roman's cum-covered body appears in all his glory. His belly is inflated with all the gorilla semen he was forced to intake, and some dripped out from his pussy and mouth. Roman pants, tears drying on his face. Your eyes and his meet. But there is nothing but broken lust in his expression. He's broken.";
+	say "    As you start to make your way out, you notice that the door to Roman's room is ajar. You take a look inside, and see a blue football helmet lying on a small bench. With a shrug, you opportunistically snag the helmet, and add it to your possessions.";
+	say "[bold type]You gain a football helmet![roman type][line break]";
+  increase carried of football helmet by 1;
 
 [General Sex menu]
 instead of fucking the Gorilla Team-Members:
@@ -289,7 +292,7 @@ to PeepingRomanEvent:
 		now PeepingRoman is resolved;
 	else:
 		say "     Privacy is a rare leisure in his city, much more in this place. You decide to give the team captain some much needed privacy. A couple minutes after, he leaves the changing room with a new pair of shorts, just as bulgy as the previous one. As you wonder why he did not choose a bigger size, you notice a tuft of cotton falling from the pair of pants. Weird.";
-		
+
 to say FootballTeamSlice1:
 	say "     You put the tape that Roman gave you inside the recorder, and press [']play[']. The video starts on a close-up of a Black young man's face. 'How do you... Ah. There we go,' he says, before pulling the camera away from his face. It is a rather good-looking young man, clad in football gear. As he was about to speak, another player tugs him by his braids. 'Hey, Zach, is it rolling? Come on, man. Sighing, Zach turns the camera over, showing another, younger Black male. His naked chest still wet from the shower and a towel on his waist. 'You should get some clothes, Mike,' you can hear Zach say.";
 	say "     'Aw, but I wanted to give a little fan-service for the ladies,' Mike jokes.";

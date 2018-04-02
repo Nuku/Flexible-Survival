@@ -26,15 +26,15 @@ Instead of resolving Jam Session:
 	say "     Having to give credit where its due you nod your head at the group for their ingenuousness before blinking as you notice that most of their instruments seem to be connected to wires that run the course along the ground and into makeshift generators. Thinking that the others must have rigged this up when the power to the city got cut you smirk in astonishment as, not only have the others survived this plague, but they have adapted to it so much that they have made it a gain rather than a loss. Not wanting to break up this happy moment you watch the group for a few more minutes before taking slow steps backwards, once you've had your feel of the music. Turning and then leaving you disappear through the barrier of smoke keeping the group safe, never noticing how the two wolves have their eyes cracked open just a tad bit as they watch you depart.";
 	now Jam Session is resolved;
 
-Section 3 - Friendship
+Section 3 - Blind Boy's Love
 
-Friendship is a situation.
-The sarea of Friendship is "Junkyard".
+Blind Boy's Love is a situation.
+The sarea of Blind Boy's Love is "Junkyard".
 when play begins:
-	add Friendship to badspots of furry;
-	add Friendship to badspots of guy;
+	add Blind Boy's Love to badspots of furry;
+	add Blind Boy's Love to badspots of guy;
 
-Instead of resolving Friendship:
+Instead of resolving Blind Boy's Love:
 	say "     You find yourself stopping abruptly as a familiar noise makes its way across your field of hearing. Turn your head towards the sounds general location and then concentrating you come to realize that you know exactly what the ruckus is on about. Ducking quickly behind a slightly beaten up old Lexus you manage to trace the panting and yelping noises of two forms fucking one another coming from around a beaten up truck three yards away from your current position. Curiosity makes you wonder if you should you go and try and see what's happening, after all someone might be in need of help. But then again, this might turn into an all out fuckfest if you happen to get caught up in a mutant orgy.";
 	say "     [bold type]So do you go over or turn tail and run away?[roman type][line break]";
 	LineBreak;
@@ -52,18 +52,18 @@ Instead of resolving Friendship:
 	else:
 		LineBreak;
 		say "     Deciding to err on the side of good common sense you make your way from the area you're in just as two howls fill out into the air behind you. Before you exit the vicinity completely you could have sworn that you heard someone shout 'I love you!' sometime after those twin howls tapered off into low croons, but that couldn't be right, could it?";
-	now Friendship is resolved;
+	now Blind Boy's Love is resolved;
 
 
-Section 4 - Dragon Boy
+Section 4 - Dragonian Trial
 
-Dragon Boy is a situation.
-The sarea of Dragon Boy is "Beach".
+Dragonian Trial is a situation.
+The sarea of Dragonian Trial is "Beach".
 
 when play begins:
-	add Dragon Boy to badspots of guy;
+	add Dragonian Trial to badspots of guy;
 
-Instead of resolving Dragon Boy:
+Instead of resolving Dragonian Trial:
 	say "     Upon making your way to the beach you end up stumbling across a young man with green hair standing in the middle of an empty area of the beach while looking out at the lapping waters. Thinking little of this, as this is the seaside after all and some people do come here to think, you find yourself almost passing the other without a second thought before you notice something bizarre about the youth. The fact the other is almost completely human seems to be the highlight of your befuddlement as you wonder how the other hasn't been changed into one of the numerous mutants that now all but dominant the city. Watching ivy green hair dance in the wind, a long pony tail swaying in time with the motions of the incoming salty sea air, you find yourself almost captivated by the young man as you notice all of the perfectly cut lines framing the youth's long body as he stands with his arms cross while gazing out at the ocean. The white tunic that he has on, draped down all the way pass the middle of his thighs, combine with the tight fitting black leggings give the other somewhat of a medieval feeling as you note an actually sword sheathed alongside the youth's belt.";
 	say "     Not really sure what's up with the other you find yourself curious to know more about the young man as you take a few cautious steps over to the green haired one. Yet, before you can get too close, you find that the other has sensed you as he quickly whips his head around into your direction -- one hand being placed carefully onto the hilt of his weapon. Reaching up to wave your hands defensively you try and tell the other that you don't mean in any harm, but the gleaming red eyes of the other seem not to believe you. Taking a step back to show your true intent you watch as the young man springs backwards into the air and then begins to hover slightly. Eyes nearly widening into the size of saucers you watch as the other curls in on himself until he's in a fetal ball-like position before spreading himself outwards with both of his arms spread wide into the air while his legs point straight down towards the ground.";
 	WaitLineBreak;
@@ -77,7 +77,7 @@ Instead of resolving Dragon Boy:
 	else:
 		say "     Knowing that this is it you decide to do the only thing you can. Sticking out your chest and standing straight in front of the reptilian creature you await its judgment without fail. There's really nothing else you can do since the beach is too wide open to find cover to run at. And strangely enough you have a feeling the thing can swim rather well with that serpentine body it possesses so diving into the ocean is out. Standing up and giving the dragon your most ferocious stare you let the other make the next move.";
 		say "     Astonishingly enough the dragon seems to approve of your bravado as it smirks at you with a mouth full of one too many sharp fangs and then clasps its forearms together to give you a small bow. Blinking in awe you watch as the magnificently frightening creature slowly turns away from you, after rising back up, and then flies away, off to somewhere you'll probably never be privy to in this life. A sense of awe comes over you as you sigh and then deflate as your knees slowly weaken and then collapse, sending you down onto the sandy floor.";
-	now Dragon Boy is resolved;
+	now Dragonian Trial is resolved;
 
 
 Section 5 - Grumpy Old Men
