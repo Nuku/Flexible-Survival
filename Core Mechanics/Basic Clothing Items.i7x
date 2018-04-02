@@ -648,10 +648,10 @@ the scent of rose-tinted glasses is "The glasses don't smell like anything reall
 
 [ Section 6 - Helmets ]
 
+[
 When Play begins:
-	[
 	add { "" } to invent of Grey Abbey Library;
-	]
+]
 	
 Table of Game Objects(continued)
 name	desc	weight	object
