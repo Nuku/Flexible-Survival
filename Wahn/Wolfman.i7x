@@ -245,6 +245,7 @@ instead of navigating Wolfman Lair while (Jenniferfucked > 0 and HP of Jennifer 
 	say "[NavCheck Wolfman Lair]";
 	if NavCheckReturn is false, stop the action;
 	say "     You turn the last corner and spot the warehouse occupied by the wolfmen a little distance away, with its large wolf's head painted on the facade. The two muscular males guarding the entrance are at their usual spots and give you a little wave, but your eyes are immediately drawn to the movement of a petite human form further to the left - it is Jennifer, the head cheerleader of the football team, strolling along the building exterior with a tall male with leopard spots and a black wolf's tail by her side. The beautiful young woman is completely naked, as usual for members of this little tribe of post-humanity, quite comfortable without a stitch of clothing on her. Watching her move along, with sunlight shining on her pale-skinned beauty, until she and the guy she's talking vanish behind the building, you can't help but wonder what exactly is going on over there.";
+	LineBreak;
 	say "     [bold type]Do you want to go after Jennifer and that other guy?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure! Let's see what goes on over there.";
@@ -255,6 +256,7 @@ instead of navigating Wolfman Lair while (Jenniferfucked > 0 and HP of Jennifer 
 		say "     'Five seconds twelve hundreds. Keefer, that's a world record! You'll be an amazing runner for the team!' Jennifer tells the feline male with a happy smile, throwing her arms around him as the young man comes up to her. 'See, you didn't need to be anxious about your performance at all. I told you that you'd be amazing.' The tall furred man chuckles darkly, wrapping his arms around the petite human in front of him and letting a hand wander down to grope her ass possessively. Then he says, 'Oh, I knew girlie. Of course I'm the fastest! It's just that I don't want to play subordinate in your little team here. Not if I can just get a sweet little puta like you to stupidly follow me outside, all alone. Who needs the other fuckers if I can just [italic type]take[roman type] you and keep you all for myself. You're gonna be a fine slut to knock up!'";
 		WaitLineBreak;
 		say "     'What? No!' Jennifer replies, pushing against Keefer's broad chest and trying to extract herself from his grasp, but the bigger male keeps a firm hold of her. His claws dig a little into her skin, leaving bloody scratches as the leopardman growls, 'Stop struggling! You're mi-' Further words are replaced by a pained shriek as Jennifer knees him in the balls HARD, taking full advantage of the fact that neither of them wears any clothing at all. She ducks out of his grasp and gains a few steps distance, never taking her eyes of the aggressive male. Letting out a furious yowl, the leopardman hybrid pushes aside the pain and straightens again, baring his fangs as he focuses on Jennifer. 'YOU FUCKING BITCH! Seems I gotta beat some obedience into you!' the guy shouts, totally focused on Jennifer. Seems like neither of them has spotted you get. Keefer more hisses than says the words, 'I'll deal with you, slut!'";
+		LineBreak;
 		say "     [bold type]What do you do now?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Rush forward to interpose yourself between Keefer and Jennifer.";
@@ -688,10 +690,15 @@ to say JenniferSex6:    [sharing Jennifer with Septus][***]
 		LineBreak;
 		say "     After getting his breath back, reason returns to Septus eyes and he looks down at his crotch pressed against Jennifer's backside, then over to you. 'Oh, sorry about that - I knotted inside. It's just... sometimes I can't hold back, not with Jennifer. No wonder father managed to knock up a whole busload of girls in one go if this is what he felt all the time.'";
 		LineBreak;
-		say "     With your balls aching to release their load, you don't think you can wait till Septus knot goes down. So what now? Do you want to give Jennifer a tasty snack ([link]Y[as]y[end link]), or fuck Septus ass instead ([link]N[as]n[end link])?";
+		say "     [bold type]With your balls aching to release their load, you don't think you can wait till Septus knot goes down. So what now?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Give Jennifer a tasty snack.";
+		say "     ([link]N[as]n[end link]) - Fuck Septus's ass instead.";
 		if player consents:
+			LineBreak;
 			say "     Eager to get off, you take hold of the cheerleaders head and face-fuck her, pumping your manmeat in and out between her warm lips and into her throat. Soon, you feel the urgent need to cum rise inside you and pull back a bit until just the tip of your cock is inside her mouth. Spurt after spurt of your cum shoot onto Jennifer's tongue and after you're done, she sticks it out to show it to you, then swallows your seed demonstratively.";
 		else:
+			LineBreak;
 			say "     Standing up, you walk around Septus and Jennifer, your eyes roaming over their somewhat sweaty bodies. Pulling the wolfman's tail up, you run your hands through the soft fur on his behind, groping and squeezing his buns before pulling them apart to have a look at his pucker. As you stroke a finger over it and poke a finger in, he gasps 'Please be gentle[if HP of Septus >= 7 and HP of Septus < 50], manager[end if], we usually don't fuck each other.' Reaching around to stroke his chest, you whisper in his ear 'Of course' then aim your cock and push forward, sinking your hard shaft into his hole. It's amazingly tight an warm, gripping you like a vice and allowing only slow progress deeper inside. It takes a moment for Septus to get used to your intruding member, but soon he's silently moaning at the feelings it brings him.";
 			say "     Already pretty close to blowing your load through Jennifer's oral attention, it doesn't take long at all until Septus tight hole gives you the rest. With a lustful groan, you grind your crotch against his ass, pushing your member deep inside him as it starts shooting long strands of your seed. After you finish coming, you stay inside him for a while longer, then pull out and keep the two of them company until they can disengage from each other[if HP of Septus >= 7 and HP of Septus < 50]. Jennifer, once off the knot, snuggles up to you, running her hands over your body while you squeeze your special girl's ass[end if].";
 	else:      [regular version]
@@ -708,11 +715,16 @@ to say JenniferSex6:    [sharing Jennifer with Septus][***]
 		LineBreak;
 		say "     After getting his breath back, reason returns to Septus eyes and he looks down at his crotch pressed against Jennifer's backside, then over to you. 'Oh, sorry about that - I knotted inside. It's just... sometimes I can't hold back, not with Jennifer. No wonder father managed to knock up a whole busload of girls in one go if this is what he felt all the time.'";
 		LineBreak;
-		say "     With your balls aching to release their load, you don't think you can wait till Septus knot goes down. So what now? Do you want to give Jennifer a tasty snack ([link]Y[as]y[end link]), or fuck Septus ass instead ([link]N[as]n[end link])?";
+		say "     [bold type]With your balls aching to release their load, you don't think you can wait till Septus knot goes down. So what now?[roman type][line break]";	
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Give Jennifer a tasty snack.";
+		say "     ([link]N[as]n[end link]) - Fuck Septus ass instead.";
 		if player consents:
+			LineBreak;
 			say "     Eager to get off, you take hold of the cheerleaders head and face-fuck her, pumping your manmeat in and out between her warm lips and into her throat. Soon, you feel the urgent need to cum rise inside you and pull back a bit until just the tip of your cock is inside her mouth. Spurt after spurt of your cum shoot onto Jennifer's tongue and after you're done, she sticks it out to show it to you, then swallows your seed demonstratively.";
 			increase lust of Jennifer by 1;
 		else:
+			LineBreak;
 			say "     Standing up, you walk around Septus and Jennifer, your eyes roaming over their somewhat sweaty bodies. Pulling the wolfman's tail up, you run your hands through the soft fur on his behind, groping and squeezing his buns before pulling them apart to have a look at his pucker. As you stroke a finger over it and poke a finger in, he gasps 'Please be gentle[if HP of Septus >= 7 and HP of Septus < 50], manager[end if], we usually don't fuck each other.' Reaching around to stroke his chest, you whisper in his ear 'Of course' then aim your cock and push forward, sinking your hard shaft into his hole. It's amazingly tight an warm, gripping you like a vice and allowing only slow progress deeper inside. It takes a moment for Septus to get used to your intruding member, but soon he's silently moaning at the feelings it brings him.";
 			say "     Already pretty close to blowing your load through Jennifer's oral attention, it doesn't take long at all until Septus tight hole gives you the rest. With a lustful groan, you grind your crotch against his ass, pushing your member deep inside him as it starts shooting long strands of your seed. After you finish coming, you stay inside him for a while longer, then pull out and keep the two of them company until they can disengage from each other[if HP of Septus >= 7 and HP of Septus < 50]. Jennifer, once off the knot, snuggles up to you, running her hands over your body while you squeeze your special girl's ass[end if].";
 			increase lust of Jennifer by 1;
@@ -1037,6 +1049,11 @@ to say CheerleaderPractice:
 		infect "Wolfman Cheerleader";
 		LineBreak;
 		say "     When the current training session ends and all the other cheerleaders disperse to rest, or eat, or spend some time with one of the wolfmen, you're left standing next to Jennifer, who smiles and hands you a towel. While you wipe the sheen of sweat off your body, she says 'Nice work on your poses, but being a part of our team isn't just knowing the moves. You have to be able to properly... motivate the players, make em give everything they have out of anticipation of the victory party. Wanna show me your skills in that regard?' Her gaze wanders through the room for a moment, then she nods towards two wolfmen standing some distance off and talking excitedly about game strategies. 'How about you try to charm Decimus out of his little discussion? If you can wrap him around your finger, you'll be almost ready to be a full cheerleader.'";
+		LineBreak;
+		say "     [bold type]What now?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Chat up Decimus.";
+		say "     ([link]N[as]n[end link]) - Postpone till later.";
 		if player consents:
 			LineBreak;
 			let bonus be (( the Charisma of the player minus 10 ) divided by 2);
@@ -1047,7 +1064,10 @@ to say CheerleaderPractice:
 			if diceroll > 16:
 				say "     Nodding to Jennifer, you saunter over towards the wolfman with the number 10 shown in red fur across his front and back. Donning your most seductive smile and doing some... stretches that show off your body to him, it doesn't take long till the conversation grinds to a halt, with Decimus whole attention riveted to your naked form and his cock quickly growing to full erection. As the horny wolfman gives a distracted excuse to his buddy and starts walking towards you, Jennifer steps up beside you and puts a hand on your shoulder. 'Very well done! I knew you could charm his socks off. Look at how hard you made him.' Giving the approaching wolfman's body a lust-filled look, she says 'You passed - now it's time to deal with the aftermath. Can't let our players get blue-balled, you know. Do you want to relieve him of some pressure, or should I?'";
 				LineBreak;
-				say "     (Y = Suck Decimus, N = Let Jennifer blow him off) ";
+				say "     [bold type]What do you want to do?[roman type][line break]";	
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Suck Decimus.";
+				say "     ([link]N[as]n[end link]) - Let Jennifer blow him off.";
 				if player consents:
 					LineBreak;
 					say "     Stepping forward to greet the aroused wolfman, you meet his muzzle for a deep kiss, both your hands touching and exploring each other's body while wrestling tongues. Taking hold of the two furry orbs you soon encounter, you fondle them with your fingers, making Decimus moan and pant in clear arousal. Your little show made him quite horny indeed.";
@@ -1072,7 +1092,10 @@ to say CheerleaderPractice:
 		LineBreak;
 		say "     When the current training session ends and all the other cheerleaders disperse to rest, or eat, or spend some time with one of the wolfmen, you're left standing next to Jennifer, who smiles and hands you a towel. While you wipe the sheen of sweat off your body, she says 'Nice work. Having shown your skill and your charm, I'd say you're worthy to really become one of us. How about we do your initiation right now? After seeing you during your training, all the boys are quite eager to fill you with your first cub...'";
 		LineBreak;
-		say "     Do you want to be the center of a gangbang right now? (Warning, this will commit you to cause, ensuring that all your future children will be wolfmen)";
+		say "     [bold type](Warning, this will commit you to cause, ensuring that all your future children will be wolfmen)[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Be the center of a gangbang.";
+		say "     ([link]N[as]n[end link]) - Postpone your initiation.";
 		if player consents:
 			LineBreak;
 			say "     Giving you a beaming smile, Jennifer puts two fingers between her lips and gives a loud whistle that draws the attention of everyone in the whole wolfman lair. She puts a hand on your shoulder and calls out, 'It's time to welcome a new member into our cheer-leading team,' which immediately results in a loud cacophony of congratulations and appreciative whistles. It doesn't take more than a moment for the wolfman players to gather around the two of you, their canine members already poking out of the sheathes. Before the question of who goes first can even come up, Jennifer grabs Septus hand and pulls him forward, saying 'Septus recruited [if cocks of player > 0]him[else]her[end if], so he'll start.'";

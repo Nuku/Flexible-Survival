@@ -155,6 +155,7 @@ to say DismissRyousei:
 
 Ryousei is a man.
 The description of Ryousei is "[RyouseiDesc]".
+The conversation of Ryousei is { "Placeholder!" }.
 
 instead of sniffing Ryousei:
 	say "[RyouseiScent]";

@@ -1,7 +1,45 @@
 Version 5 of Icarus by Stripes begins here.
 [Version 5.2 - Additional basement scene (avian pred only)]
+[Version 5.1 - Minor maintenance and character relocation - Luneth]
 
 "Adds Icarus the Blue Chaffinch as an NPC to the Flexible Survival game."
+
+[ HP of Icarus                                                                 ]
+[ 0 = untamed                                                                  ]
+[ 1 = at bunker, no talk                                                       ]
+[ 2 = talked                                                                   ]
+[ 3 = taught to suck cock                                                      ]
+[ 4 = sucked cock of pred again                                                ]
+[ 5 = rougher sex w/pred                                                       ]
+[ 6 = had attic sex, light version                                             ]
+[ 7 = had attic sex, dark version                                              ]
+[ 8 = back                                                                     ]
+[ 9 = gone                                                                     ]
+[ 10 = back again                                                              ]
+[ 50 = dom                                                                     ]
+[ 51 = dom - talked                                                            ]
+[ 52 = sex again                                                               ]
+[ 53 = did footplay scene                                                      ]
+[ 54 = sex again                                                               ]
+[ 55 = sex again/rim scene - ready for basement prompt                         ]
+[ 56 = avoided basement                                                        ]
+[ 57 = did basement                                                            ]
+
+[ lust of Icarus                                                               ]
+[ 0 - 6 = building frustration                                                 ]
+[ 7+ = attempt to dom                                                          ]
+[ 100 = sub male-only                                                          ]
+[ 101 = sub m/f allowed                                                        ]
+
+[ icarus_lastpred                                                              ]
+[ 1 = avian pred                                                               ]
+[ 2 = feline                                                                   ]
+
+[ icarus_cbt                                                                   ]
+[ 0 = refused                                                                  ]
+[ 2 = no data                                                                  ]
+[ 3 = consent                                                                  ]
+
 
 Section 1 - Icarus the Blue Chaffinch
 
@@ -1058,7 +1096,7 @@ an everyturn rule:
 				say "     He puts his little hands on your leg, stroking it gently. 'I'd like to feel that way again, too. I'm pretty much healed, so the next time you want to be the wild predator and tear into your prey, go right ahead,' he says with a grin. With that, he gets up slowly and heads out, leaving you with much to think about.";
 				now HP of Icarus is 8;
 				now morale of player is ( 2 * morale of player ) / 3;
-				move Icarus to Grey Abbey Library;
+				move Icarus to Garden View;
 			else:
 				say "     [one of]That uneasy feeling of being watched returns. You subconsciously wipe your hands[or]The sight of a blowing blue rag at the edge of your vision startles you[or]For a moment, you think you spot Icarus, but when you chase after the apparition, it is gone[or]You can't help but feel edgy around others, always worried they'll somehow know what you've done, smell the blood on your hands[or]A distant birdsong startles you, setting your heart racing[at random]. The stress of this is really getting to you. You consider heading back to the library to confront your guilt.";
 				decrease morale of player by 2;
@@ -1072,7 +1110,7 @@ an everyturn rule:
 			if tti_scene is 3, now tti_scene is 4;
 	else if HP of Icarus is 9:
 		if ttIcarus - turns >= 12:
-			move Icarus to Grey Abbey Library;
+			move Icarus to Garden View;
 			now HP of Icarus is 10;
 			if ( player is in bunker or player is in grey abbey library or player is in grey abbey 2F ) and skipturnblocker is 0:
 				say "     You hear the pleasant birdsong of your blue passarine up in the rafters again, signalling that he's recovered and returned to his perch[if player is in grey abbey library]. When you look up at him, he grins and gives his rear a tantalizing shake, eager for more[else if player is in grey abbey 2F]. When you look over at him, he grins and gives his rear a tantalizing shake, eager for more[end if]. Some dark part of you is excited at the prospect of running wild upon him again sometime soon.";

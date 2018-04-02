@@ -930,19 +930,4 @@ to felinebodyshift:
 	follow the breast change rule;
 	follow the sex change rule;
 
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"bulletproof vest"	"A bulletproof vest - a gift that might save your life."	10	bulletproof vest
-
-bulletproof vest is equipment. It is not temporary.
-The AC of bulletproof vest is 50.
-The effectiveness of bulletproof vest is 55.
-The placement of bulletproof vest is "body".
-The descmod of bulletproof vest is "You are wearing the bulletproof vest you were given.".
-The slot of bulletproof vest is "body".
-
-the scent of bulletproof vest is "The bulletproof vest has picked up a bit of your scent, but is else odourless.".
-
-
 Leonard Events ends here.

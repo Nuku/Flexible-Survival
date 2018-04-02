@@ -1,7 +1,49 @@
 Version 2 of Meredith by Stripes begins here.
 [Version 2 - Pregnancy and Gwen]
+[Version 2.1 - Minor maintenance and character relocation - Luneth]
 
 "Adds another member of the paratrooper squad triggered by Vanessa to Flexible Survival."
+
+[ HP of Meredith                                     ]
+[ 0 = unactivated                                    ]
+[ 1 = saved                                          ]
+[ 2 = talked to                                      ]
+[ 3 = lectured                                       ]
+[ 4 = first tf                                       ]
+[ 5 = second tf                                      ]
+[ 6 = complete tf                                    ]
+[ 7 = had sex after tf                               ]
+[ 8 = had sex again                                  ]
+[ 9 = prompted for Medea visit                       ]
+[ 10 = Medea visit completed (UB)                    ]
+[ 11 = ready to be bred (no-UB or UB done)           ]
+[ 12 = been knocked up                               ]
+[ 100 = not saved                                    ]
+
+[ libido of Meredith                                 ]
+[ 0 = M/F virgin                                     ]
+[ 1 = Had M/F                                        ]
+[ 2 = Had M/F w/player                               ]
+
+[ lust of Meredith                                   ]
+[ Meredith UB                                        ]
+[ 0 = inactive                                       ]
+[ 1 = used on Gwen                                   ]
+[ 2 = used on player                                 ]
+
+[ XP of Meredith                                     ]
+[ 0 = not preggers                                   ]
+[ 1-12 = early preggers                              ]
+[ 13-24 = late preggers                              ]
+[ 25+ birth time                                     ]
+
+[ level of Meredith                                  ]
+[ number of kids                                     ]
+
+[ HP of Gwen                                         ]
+[ 0 = not met                                        ]
+[ 1 = non-UB tf - sent to Dry Plains                 ]
+[ 2 = UB'd                                           ]
 
 meredith_coleen_fun1 is a truth state that varies. meredith_coleen_fun1 is usually false.
 meredith_anal is a truth state that varies. meredith_anal is usually false.
@@ -80,7 +122,7 @@ to say meredithrescue_succeed:
 	say "     While Vanessa trots after the fleeing mob of kangaroos, you're free to check of Vanessa's squadmate. This woman, the researcher they were to escort around while scouting, is clearly not a soldier[if coleen is bunkered] like the others[end if]. While not out of shape, she's not got the same physical strength one would expect from someone in the military. Instead she seems rather bookish with her nerdy glasses and the plain haircut her ginger hair's been given. While no model, she's fairly pretty in a geeky sort of way.";
 	say "     Still catching her breath after the extended chase and last-minute rescue, it takes her a moment to overcome her shock enough to stagger to her feet and start inching slowly along the wall she's backed up against. 'Umm... thanks for... dealing with those... ah... girls. I'll just be going now. If you don't mind, that is,' she says nervously, inching closer to the edge of the building.";
 	say "     'And after all the trouble we went through to find you, that's the thanks we get,' Vanessa teases as she canters back over to the woman.";
-	say "     'No, that's okay. I'll jus... Vanes... whaaaa!  Oh no!  My notes!' she exclaims first in surprise and then in panic as she spills her papers and they start to blow away. She scrambles to grab them while babbling her thanks for the rescue, surprise at Vanessa[if Coleen is bunkered and Sarah is bunkered] and Coleen's transformations[else][']s transformation[end if] and elation at having found some friendly faces. As she starts straightening up one handful, another bunch slip free from under her arm, spilling onto the ground. While you should probably be helping her, you can't help but watch and sneak peeks at her ass or bosom when she bends over to pick up papers[if coleen is bunkered]. From the way Vanessa and Coleen just roll their eyes and smile, such clumsiness is probably typical of her. Eventually you all do go over and help her deal with them so you can make your way back to the safety of the bunker[else]. From the way Vanessa just rolls her eyes and smiles, such clumsiness is probably typical of her. Eventually you both do go over and help her deal with them so you can make your way back to the safety of the bunker[end if].";
+	say "     'No, that's okay. I'll jus... Vanes... whaaaa!  Oh no!  My notes!' she exclaims first in surprise and then in panic as she spills her papers and they start to blow away. She scrambles to grab them while babbling her thanks for the rescue, surprise at Vanessa[if Coleen is bunkered and Sarah is bunkered] and Coleen's transformations[else][']s transformation[end if] and elation at having found some friendly faces. As she starts straightening up one handful, another bunch slip free from under her arm, spilling onto the ground. While you should probably be helping her, you can't help but watch and sneak peeks at her ass or bosom when she bends over to pick up papers[if coleen is bunkered]. From the way Vanessa and Coleen just roll their eyes and smile, such clumsiness is probably typical of her. Eventually you all do go over and help her deal with them so you can make your way back to the safety of the library[else]. From the way Vanessa just rolls her eyes and smiles, such clumsiness is probably typical of her. Eventually you both do go over and help her deal with them so you can make your way back to the safety of the library[end if].";
 	attempttowait;
 	if coleen is bunkered:
 		say "     While on the way back to the library, she's introduced to you as Meredith, which they shorten to Mere at times. She's given a quick explanation of the situation at the hidden bunker and what little is known about the rest of the team. Vanessa and Coleen also give quick summaries of their misadventures before asking what happened with her.";
@@ -89,7 +131,7 @@ to say meredithrescue_succeed:
 	say "     'Well, I was busy taking photos while parachuting down, so I didn't notice we'd gotten blown apart until we'd gotten separated. My landing was a little rough, but I'd thankfully ended up on top of a parking garage instead of out in the open with creatures. I headed down in the underground sections and found a service room a few floors down. The creatures went there infrequently and usually only in couples, so it was pretty easy to stay hidden. When they did come by, usually to make out in one of the cars, I hid and took notes on their behaviour,' she says, leafing through her papers. 'The El Camino was particularly popular for some reason,' she giggles, blushing a bit.";
 	say "     'I'd probably have waited this out down there as long as I could. It was a fascinating place to observe the... ummm... activities of the various infection subspecies in the area. But then those kangaroo girls came by. From what I overheard, one of them had spotted me while she and a male were down there and came back with her friends to catch me. They've been trying to get me for quite some time, even searching for me whenever I'd found a new hiding spot. I have to surmise they wanted me for more than the usual quick romp. According to my figures, without some further impetus, there's a 45% chance they'd have broken out into a spontaneous makeout session within the first hour and the probability rises to-wahhh!  Ooof!' she moans, having turned to walk backwards while showing you a graph she'd drawn, resulting in her falling on her ass as she stumbles onto the library steps. Vanessa kindly helps her up, though you do catch the centaur's hand running across the girl's rear while she does. You all head inside and Meredith flops herself out on one of the cots, clearly pleased to have a chance to rest on something even remotely resembling a bed.";
 	now HP of meredith is 1;
-	move meredith to bunker;
+	move meredith to Back Of The Library;
 	now lastfuck of meredith is turns;
 
 to say meredithrescue_fail:
@@ -104,7 +146,7 @@ to say meredithrescue_fail:
 	remove vanessa from play;
 
 to say meredithrescue_flee:
-	say "     Making your escape from the kangaroos, you have to withdraw and hope the others will be alright. You make your way back to the bunker to wait and recover. ";
+	say "     Making your escape from the kangaroos, you have to withdraw and hope the others will be alright. You make your way back to the library to wait and recover. ";
 	if coleen is bunkered:
 		say "     About a half-hour later, Coleen manages to make it back to the bunker, looking quite battleworn and exhausted as she stumbles inside[if sarah is bunkered]. She gives you a brief hug before staggering over to Sarah to be comforted[else]. She gives you a brief hug before staggering over to her bunk to pass out[end if]";
 	else:
@@ -151,7 +193,7 @@ to say meredithdesc:
 			else if level of Meredith > 1:
 				say ". Meredith's [level of Meredith] foals, having matured rapidly as most kids seem to be doing now, have gone off to the Dry Plains outside the city[if HP of Gwen is 1] with instructions to meet up with Gwen[else if HP of Gwen > 60] with instructions to meet up with their big sister Gwen[end if]";
 			say ".";
-		say "     She's moved her stuff over to a cot next to Vanessa's and the two of them can often be seen snuggling or making out together when not else busy[if Gwen is bunkered and HP of Gwen <= 20]. Her young foal, Gwen, is often snuggled up beside her or nursing from the mare's breast when Mare's not else occupied[else if Gwen is bunkered and HP of Gwen <= 35]. Her growing foal, Gwen, has taken the bunk on the opposite side and has taken an interest in her mother's research and notes[else if Gwen is bunkered and HP of Gwen <= 60]. Gwen's taken the bunk on the other side of Meredith and is often assisting her mother with her research and organizing her notes when she's not enjoying Vanessa's company[end if][if coleen is bunkered and ( coleenslut > 0 or coleenalpha > 0 or coleencollared > 0 )]. Coleen often visits them as well, joining in on the fun with her transformed teammates[end if].";
+		say "     She's moved her stuff over to a cot next to Vanessa's and the two of them can often be seen snuggling or making out together when not else busy[if Gwen is booked and HP of Gwen <= 20]. Her young foal, Gwen, is often snuggled up beside her or nursing from the mare's breast when Mare's not else occupied[else if Gwen is booked and HP of Gwen <= 35]. Her growing foal, Gwen, has taken the bunk on the opposite side and has taken an interest in her mother's research and notes[else if Gwen is booked and HP of Gwen <= 60]. Gwen's taken the bunk on the other side of Meredith and is often assisting her mother with her research and organizing her notes when she's not enjoying Vanessa's company[end if][if coleen is booked and ( coleenslut > 0 or coleenalpha > 0 or coleencollared > 0 )]. Coleen often visits them as well, joining in on the fun with her transformed teammates[end if].";
 
 
 Section 2 - Conversation
@@ -162,7 +204,7 @@ instead of conversing the Meredith:
 		remove Meredith from play;
 	else if HP of meredith is 1:
 		say "     'I want to thank you for helping Vanessa find me. I was really afraid those kangaroos would get me in the end. Aside from something about a pub, I didn't really catch what they were talking about when they came after me. I was too focused on avoiding spending the rest of my days as a horny marsupial.' Meredith adjusts her glasses, using the motion to try and obscure her blushing.";
-		say "     'But I should be pretty safe here,' she says, looking around the bunker. 'Secluded, fortified and built to house lots of survivors over the long term - this should be a secure place to await rescue. Staying here will limit my research... unless you can keep finding more survivors got me to examine and observe.'";
+		say "     'But I should be pretty safe here,' she says, looking around the library. 'Secluded, fortified and built to house lots of survivors over the long term - this should be a secure place to await rescue. Staying here will limit my research... unless you can keep finding more survivors got me to examine and observe.'";
 		now HP of Meredith is 2;
 		now lastfuck of Meredith is turns;
 	else if HP of meredith is 2 and lastfuck of meredith - turns >= 8:
@@ -186,10 +228,10 @@ instead of conversing the Meredith:
 	else if HP of meredith >= 6 and ( coleenslut > 0 or coleenalpha > 0 or coleencollared > 0 ) and coleen is bunkered and a random chance of 2 in 5 succeeds and meredith_coleen_fun1 is false:
 		say "     You head over to chat with Meredith to find her over at Coleen's cot";
 		say "[meredith_coleen_funscene1]";
-	else if HP of meredith >= 6 and vanessa is bunkered and a random chance of 2 in 5 succeeds and meredith_vanessa_fun1 is false:
+	else if HP of meredith >= 6 and vanessa is booked and a random chance of 2 in 5 succeeds and meredith_vanessa_fun1 is false:
 		say "     You head over to chat with Meredith to find her over at Vanessa's cot";
 		say "[meredith_vanessa_funscene1]";
-	else if HP of meredith >= 6 and vanessa is bunkered and a random chance of 2 in 5 succeeds and meredith_vanessa_fun1 is true and meredith_vanessa_fun2 is false:
+	else if HP of meredith >= 6 and vanessa is booked and a random chance of 2 in 5 succeeds and meredith_vanessa_fun1 is true and meredith_vanessa_fun2 is false:
 		say "     You head over to chat with Meredith to find her over at Vanessa's cot";
 		say "[meredith_vanessa_funscene2]";
 	else if HP of meredith is 6 or HP of meredith is 7:
@@ -228,18 +270,18 @@ instead of conversing the Meredith:
 		say "     [one of]'Please keep an eye out for more survivors. Aside from helping with my research, this place is probably much safer for them to await rescue.'[or]'It's nice to have Vanessa here for me as I transformed. She's so... ahh... supportive,' she says, blushing quite a bit.[or]'There are some very bizarre infections out there in the city. You should be careful you won't pick up anything you'd rather avoid. I mean, not everything out there are cute horseys[if coleen is bunkered and sarah is bunkered] and doggies[end if].'[or]'I've taken a few samples from Vanessa[if the number of bunkered people + the number of booked people > 3] and the others[end if] to perform some tests. And I'll be extra-careful with them from now on.'[or]'I've been enjoying the... ahh... more practical research into the physical and mental effects of the infection on intercourse. I look forward to... uh... continuing my research along those lines soon,' she adds with a nervous giggle and a wink.[or]'This centaur infection I picked up from Vanessa is quite to my liking. It's turned out splendidly,' she adds, looking at the transformed soldier with a mix of lust and admiration.[or][if coleen is bunkered][meredith_coleen_msg][else]'Please keep an eye out for any others from the squad. I'm worried about what may have happened to them.'[end if][or]'I'd undergone treatment to make me more resistant to the infection, so I should be quite safe from infection by other strains. As long as I'm careful to avoid direct contact again with a concentrated dose of infected nanites, that is'[or]'My own transformation has been very enlightening. While it wasn't planned, I wouldn't have understood how good the process can feel if it hadn't happened. I can't help but wonder how it'd feel to share that pleasure with others and show them how wonderful it is to be a centaur mare. I suspect this is a result of my own infection affecting my mind, though certainly they could do much worse than becoming centaurs. Empirically speaking, I would be helping them to avoid more unpleasant fates as other creatures,' she muses.[in random order]";
 	else if HP of Meredith is 10:
 		say "     [one of]'Please keep an eye out for more survivors. Aside from helping with my research, this place is probably much safer for them to await rescue.'[or]'It's nice to have Vanessa here for me as I transformed. She's so... ahh... supportive,' she says, blushing quite a bit.[or]'There are some very bizarre infections out there in the city. You should be careful you won't pick up anything you'd rather avoid. I mean, not everything out there are cute horseys[if coleen is bunkered and sarah is bunkered] and doggies[end if].'[or]'I've taken a few samples from Vanessa[if the number of bunkered people + the number of booked people > 3] and the others[end if] to perform some tests. And I'll be extra-careful with them from now on.'[or]'I've been enjoying the... ahh... more practical research into the physical and mental effects of the infection on intercourse. I look forward to... uh... continuing my research along those lines soon,' she adds with a nervous giggle and a wink.[or]'This centaur infection I picked up from Vanessa is quite to my liking. It's turned out splendidly,' she adds, looking at the transformed soldier with a mix of lust and admiration.[or][if coleen is bunkered][meredith_coleen_msg][else]'Please keep an eye out for any others from the squad. I'm worried about what may have happened to them.'[end if][or]'I'd undergone treatment to make me more resistant to the infection, so I should be quite safe from infection by other strains. As long as I'm careful to avoid direct contact again with a concentrated dose of infected nanites, that is'[or]'My own transformation has been very enlightening. While it wasn't planned, I wouldn't have understood how good the process can feel if it hadn't happened. And now getting to share that with Gwen is all the better,' she says, reaching back to rub her pregnant belly.[or]'Having Gwen inside me feels so wonderful.'[or]'I never knew I could do that thing with Gwen. It's not something I'd observed before.'[in random order]";
-	else if HP of Meredith > 10 and Gwen is bunkered and a random chance of 1 in 4 succeeds:
+	else if HP of Meredith > 10 and Gwen is booked and a random chance of 1 in 4 succeeds:
 		say "[meredith_gwen_msg]";
 	else if HP of Meredith is 11:
 		say "     [one of]'Please keep an eye out for more survivors. Aside from helping with my research, this place is probably much safer for them to await rescue.'[or]'It's nice to have Vanessa here for me as I transformed. She's so... ahh... supportive,' she says, blushing quite a bit.[or]'There are some very bizarre infections out there in the city. You should be careful you won't pick up anything you'd rather avoid. I mean, not everything out there are cute horseys[if coleen is bunkered and sarah is bunkered] and doggies[end if].'[or]'I've taken a few samples from Vanessa[if the number of bunkered people + the number of booked people > 3] and the others[end if] to perform some tests. And I'll be extra-careful with them from now on.'[or]'I've been enjoying the... ahh... more practical research into the physical and mental effects of the infection on intercourse. And now that I can get properly pregnant, I look forward to... uh... continuing my research along those lines soon,' she adds with a nervous giggle and a wink.[or]'I look forward to seeing how the infection will affect a pregnancy[if cocks of player > 0]. Perhaps you'd be able to help me with my research into that soon?' she asks, blushing[else]. It should be very... ah... informative,' she says, blushing[end if].[or]'This centaur infection I picked up from Vanessa is quite to my liking. It's turned out splendidly,' she adds, looking at the transformed soldier with a mix of lust and admiration.[or][if coleen is bunkered][meredith_coleen_msg][else]'Please keep an eye out for any others from the squad. I'm worried about what may have happened to them.'[end if][or]'I'd undergone treatment to make me more resistant to the infection, so I should be quite safe from infection by other strains. As long as I'm careful to avoid direct contact again with a concentrated dose of infected nanites, that is'[or][if HP of Gwen is 1]'It's too bad Gwen couldn't stay, but Vanessa needs her to- ah- on that important mission.'[else if Gwen is bunkered]'Gwen's turned into a lovely centaur.'[else]'I'll miss Gwen, but Vanessa needs her to- ah- on that important mission.'[end if][in random order]";
 	else if HP of Meredith is 12:
-		say "     [one of]'Please keep an eye out for more survivors. Aside from helping with my research, this place is probably much safer for them to await rescue.'[or]'It's nice to have Vanessa here for me as I transformed. She's so... ahh... supportive,' she says, blushing quite a bit.[or]'There are some very bizarre infections out there in the city. You should be careful you won't pick up anything you'd rather avoid. I mean, not everything out there are cute horseys[if coleen is bunkered and sarah is bunkered] and doggies[end if].'[or]'I've taken a few samples from Vanessa[if the number of bunkered people + the number of booked people > 3] and the others[end if] to perform some tests. And I'll be extra-careful with them from now on.'[or]'I've been enjoying the... ahh... more practical research into the physical and mental effects of the infection on intercourse. And now that I've had a chance to be properly pregnant, I look forward to... uh... continuing my research along those lines soon... and often,' she adds with a nervous giggle and a wink.[or]'I hope I can have lots of lovely foals during the course of my research.'[or]'This centaur infection I picked up from Vanessa is quite to my liking. It's turned out splendidly,' she adds, looking at the transformed soldier with a mix of lust and admiration.[or][if coleen is bunkered][meredith_coleen_msg][else]'Please keep an eye out for any others from the squad. I'm worried about what may have happened to them.'[end if][or]'I'd undergone treatment to make me more resistant to the infection, so I should be quite safe from infection by other strains. As long as I'm careful to avoid direct contact again with a concentrated dose of infected nanites, that is'[or][if XP of Meredith is 0]'I can feel my body getting ready to be pregnant again. It is a most interesting sensation,' she says, taking some quick notes.[else if XP of Meredith < 13]'I've managed to become pregnant[meredith_again]. There's that special tingle in my equine womb. It's a surprisingly... satisfying sensation,' she says, making some quick notes.[else]'My new foal's coming along nicely,' she says, reaching back to stroke the side of her rounded belly.[end if][or][if HP of Gwen is 1]'It's too bad Gwen couldn't stay, but Vanessa needs her to- ah- on that important mission.'[else if Gwen is bunkered]'Gwen's turned into a lovely centaur.'[else]'I'll miss Gwen, but Vanessa needs her to- ah- on that important mission.'[end if][in random order]";
+		say "     [one of]'Please keep an eye out for more survivors. Aside from helping with my research, this place is probably much safer for them to await rescue.'[or]'It's nice to have Vanessa here for me as I transformed. She's so... ahh... supportive,' she says, blushing quite a bit.[or]'There are some very bizarre infections out there in the city. You should be careful you won't pick up anything you'd rather avoid. I mean, not everything out there are cute horseys[if coleen is bunkered and sarah is bunkered] and doggies[end if].'[or]'I've taken a few samples from Vanessa[if the number of bunkered people + the number of booked people > 3] and the others[end if] to perform some tests. And I'll be extra-careful with them from now on.'[or]'I've been enjoying the... ahh... more practical research into the physical and mental effects of the infection on intercourse. And now that I've had a chance to be properly pregnant, I look forward to... uh... continuing my research along those lines soon... and often,' she adds with a nervous giggle and a wink.[or]'I hope I can have lots of lovely foals during the course of my research.'[or]'This centaur infection I picked up from Vanessa is quite to my liking. It's turned out splendidly,' she adds, looking at the transformed soldier with a mix of lust and admiration.[or][if coleen is bunkered][meredith_coleen_msg][else]'Please keep an eye out for any others from the squad. I'm worried about what may have happened to them.'[end if][or]'I'd undergone treatment to make me more resistant to the infection, so I should be quite safe from infection by other strains. As long as I'm careful to avoid direct contact again with a concentrated dose of infected nanites, that is'[or][if XP of Meredith is 0]'I can feel my body getting ready to be pregnant again. It is a most interesting sensation,' she says, taking some quick notes.[else if XP of Meredith < 13]'I've managed to become pregnant[meredith_again]. There's that special tingle in my equine womb. It's a surprisingly... satisfying sensation,' she says, making some quick notes.[else]'My new foal's coming along nicely,' she says, reaching back to stroke the side of her rounded belly.[end if][or][if HP of Gwen is 1]'It's too bad Gwen couldn't stay, but Vanessa needs her to- ah- on that important mission.'[else if Gwen is booked]'Gwen's turned into a lovely centaur.'[else]'I'll miss Gwen, but Vanessa needs her to- ah- on that important mission.'[end if][in random order]";
 
 to say meredith_again:
 	say "[if level of Meredith > 0] again[end if]";
 
 to say meredith_gwen_msg:
-	if Gwen is bunkered:
+	if Gwen is booked:
 		if HP of Gwen <= 20:
 			say "     [one of]'Gwen's such a sweet filly.'[or]'Doesn't Gwenny make such a cute foal?'[or]'Little Gwenny's growing up quickly. For some reason I've not yet been able to isolate, it's not as quickly as the rapid maturations that have been taking place, but it's still really fast.'[or]'Gwenny's growing like a weed. At this rate, she'll be a full-grown mare in about a week.'[or]Mare cuddles her filly while goin gover her recent notes.[or]'It feels so good to have a foal nursing from me,' she says, caressing her filly's head as she suckles for her momma's milk.[in random order]";
 		else if HP of Gwen <= 35:
@@ -261,7 +303,7 @@ to say meredith_coleen_msg:
 
 to say meredith_tfaccident:
 	say "     'I'm running some basic tests. Vanessa was kind enough to let me extract a nanite sample from her,' she says, holding up a vial of steel-grey slurry. 'The infection is actually caused by these nanites - microscopic machines capable of rearranging atoms and molecules. They're running amok with what seems like damaged or corrupted instructions. Their exact origins are unknown to me, but they are clearly designed to [']improve['] people. But either they got loose with faulty information or conflicting instructions, resulting in the many strains and bizarre anomalies as they attempt to fulfill their function. Often, it's like they're filling in gaps with whatever information or nearby reference they can latch onto. It makes analyzing them quite frustrating. Before this, I would have said some of the things I've observed to be impossible.'";
-	say "     She holds the vial up to look at it against the fluorescent lights of the bunker, examining the murky, metallic fluid. 'Regardless, it's humbling that something so small can cause such chaos, isn't it?  Tiny ma-ahhh!' While looking at the vial, it slips from her hand, breaking open and spilling out on the ground. Thankfully neither of you were hit. 'Oh, that was close. Better clean that up before someone steps in it.' Pulling on some thick gloves, she wipes the mess up with a rag and sets it aside.";
+	say "     She holds the vial up to look at it against the fluorescent lights of the library, examining the murky, metallic fluid. 'Regardless, it's humbling that something so small can cause such chaos, isn't it?  Tiny ma-ahhh!' While looking at the vial, it slips from her hand, breaking open and spilling out on the ground. Thankfully neither of you were hit. 'Oh, that was close. Better clean that up before someone steps in it.' Pulling on some thick gloves, she wipes the mess up with a rag and sets it aside.";
 	say "     'Now, where was I?' she mumbles, flipping through her extensive notes. Not finding what she's looking for, she sits back on her bunk and goes from one binder to the next. 'Ah, here we go. So as I was saying, the nanites are small machines only a few nanometers across. This means they're no room for them to house all the... ahhh... all the...' she trails off as she fidgets in her seat and tugs at the collar of her shirt as she gets quite flush in the face. 'You'll have to excuse me, I'm feeling quite out of sorts all of a sudden,' she mumbles before releasing a moan out of the blue. Looking at her behind, she eeps and sits up violently, revealing she'd sat on the nanite-suffused rag. From the silvery stain on the seat of her pants and the nub of an equine tail that's tearing its way free of them, it's clear she's accidentally infected herself.";
 	say "     She moans again, hand pressing at her crotch and rubbing firmly over the fabric covering it. 'Oh my!  I knew this could be intense, but it is most unexpectedly pleasurable.' As you watch, her tail slowly extends itself as chestnut hair covers it until it has blossomed into fullness. As this is happening, you almost miss the subtle changes to her ears as they become more pointed and their tips darken a little. She wobbles briefly and you quickly grab her for support before she falls. Raising the cuff of her pantleg as she shakes off a now ill-fitting shoe, it is revealed that her feet have become hooves and her ankles are equine in shape. Her skin is darker and a fine coat of furry hair grows to cover it, affecting the lower six inches or so of her leg before the process slows to a halt and her changes have run their course.";
 	say "     'This is quite the unfortunate turn of events. I'd hoped to remain uninfected at least until I'd had a chance to complete my observations.' She looks herself over as she wobbles on her unfamiliar hooves for a few steps. As infection strains go, it's not so bad though,' she says, giving her tail an experimental flick. 'By Newton, I should be chronicling this!' she exclaims loudly. 'I need to write down every detail of my transformation immediately.' And with that, she grabs a notepad and dashes off to the washroom, probably to give herself a more thorough examination in private.";
@@ -544,7 +586,7 @@ to say meredith_clinictrip:
 		say "     Vanessa, having moved to Meredith's front, encourages her on, reassuring the smaller mare that she's almost done. They kiss and fondle one another through Mare's struggle to draw the last of Gwen into her womb. And succeed she does with another orgasmic release. Her tauric belly is left rounded and heavy from its new occupant.";
 		attempttowait;
 		say "     After a rest filled with plenty of snuggling and caressing of the new pregnancy, you complete the journey to Dr. Medea's, though now with an extra reason for the visit.";
-		say "     The lizard doctor is very pleased to see her patient so plumply pregnant. After a quick description of what happened and a thorough examination by the elated doctor, both are pronounced healthy. Mare's pregnancy difficulties have been corrected and Gwen is on her way to becoming the centaur's foal. While some corner of you can't help but wonder if you've done the right thing, both centaurs and their doctor are quite happy with the results. The three of you return back to the bunker in high spirits after your expedition's (unusually) successful completion, the two centaur women exchanging conspiring, giggling exchanges during the hike.";
+		say "     The lizard doctor is very pleased to see her patient so plumply pregnant. After a quick description of what happened and a thorough examination by the elated doctor, both are pronounced healthy. Mare's pregnancy difficulties have been corrected and Gwen is on her way to becoming the centaur's foal. While some corner of you can't help but wonder if you've done the right thing, both centaurs and their doctor are quite happy with the results. The three of you return back to the library in high spirits after your expedition's (unusually) successful completion, the two centaur women exchanging conspiring, giggling exchanges during the hike.";
 		now HP of Meredith is 10;
 		now lust of Meredith is 1;
 		now XP of Meredith is 12;
@@ -559,7 +601,7 @@ to say meredith_clinictrip:
 		attempttowait;
 		say "     After your sex break and another feeding of Vanessa's milk to keep their squadmate compliant, you continue your journey. As you go, you can see the early signs of transformation showing on Gwen, her ears becoming equine like Meredith's and her feet shifting to hooves. At the clinic, you accompany Meredith in to see the lizard doctor. Quite pleased to have a patient looking for assistance in becoming pregnant, she gives the cute centaur a thorough examination. While you can't follow half of the jargon they say, Mere's busily taking notes both on the procedure and on the reptilian obstetrician's findings and the behaviour of the infection - at least as far as her focus on pregnancy are concerned. The procedure drags on for much longer than you would have initially expected, the lizard probably drawing it out after finally having found someone to discuss her interest in such detail.";
 		say "     Finally, after a little prompting from you, Dr. Medea declares that she's done, the issue corrected and Mare now able to become pregnant. Upon leaving the doctor's office, you are met with the surprising sight of Gwen nursing again from Vanessa's breast, but now fully transformed into a centaur herself. Well, almost fully - that demonic tail of hers persistently remains, currently buried in the new centaur's snatch and fucking herself as she nurses. She makes for quite the lovely sight, having retained her seductively sexy upper body, flawless chocolate skin and matching colour to her glossy equine coat. She's nearly as large as Vanessa, probably due to those lingering traces of her succubus infection, only about a half a hand or so shorter in height. Like Meredith, she's got horse ears atop her head, poking from her curly black hair.";
-		say "     After another session of [']getting reacquainted['] with their squadmate [if cocks of player > 0]during which you fuck the seductive new centaur alongside her tail[else]during which you finger and lick the seductive new centaur to orgasm alongside her tail[end if], you find that her earlier concerns over the state of her friends are gone. Eager to help out and looking to Vanessa for fresh orders, she's provided with some of her sergeant's equipment and given instructions. You're not privy to some of the details, the sergeant claiming it's military secrets and winking coyly, but it seems to be come sort of scouting mission. A little disappointed that the brown beauty will be leaving[if cocks of player > 0], you give her one last fuck for the road[else], you lustfully kiss her while playing with her bountiful bosom[end if] before she and your group part ways. You, Vanessa and Meredith return back to the bunker in high spirits after your expedition's (unusually) successful completion, the two centaur women exchanging conspiring, giggling exchanges during the hike.";
+		say "     After another session of [']getting reacquainted['] with their squadmate [if cocks of player > 0]during which you fuck the seductive new centaur alongside her tail[else]during which you finger and lick the seductive new centaur to orgasm alongside her tail[end if], you find that her earlier concerns over the state of her friends are gone. Eager to help out and looking to Vanessa for fresh orders, she's provided with some of her sergeant's equipment and given instructions. You're not privy to some of the details, the sergeant claiming it's military secrets and winking coyly, but it seems to be come sort of scouting mission. A little disappointed that the brown beauty will be leaving[if cocks of player > 0], you give her one last fuck for the road[else], you lustfully kiss her while playing with her bountiful bosom[end if] before she and your group part ways. You, Vanessa and Meredith return back to the library in high spirits after your expedition's (unusually) successful completion, the two centaur women exchanging conspiring, giggling exchanges during the hike.";
 		now HP of Meredith is 11;
 		now HP of Gwen is 1;
 		follow the turnpass rule;
@@ -568,13 +610,13 @@ to say meredith_clinictrip:
 Section 5 - Everyturn Rule (pregnancy & Gwen UB)
 
 an everyturn rule:
-	if Meredith is bunkered and HP of Meredith >= 10 and XP of Meredith > 0:
+	if Meredith is booked and HP of Meredith >= 10 and XP of Meredith > 0:
 		increase XP of Meredith by 1;
 		if XP of Meredith > 24 and skipturnblocker is 0:
 			say "Your thoughts drift back to Meredith and you feel a need to go check in on her.";
 			if HP of Meredith is 10:
 				now HP of Gwen is 3;
-				move Gwen to Bunker;
+				move Gwen to Back Of The Library;
 				now HP of Meredith is 11;
 				now XP of Meredith is 0;
 			else:
@@ -582,46 +624,5 @@ an everyturn rule:
 				now XP of Meredith is 0;
 				increase level of Meredith by 1;
 
-
-[ HP of Meredith ]
-[ 0 = unactivated ]
-[ 1 = saved ]
-[ 2 = talked to ]
-[ 3 = lectured ]
-[ 4 = first tf ]
-[ 5 = second tf ]
-[ 6 = complete tf ]
-[ 7 = had sex after tf ]
-[ 8 = had sex again ]
-[ 9 = prompted for Medea visit ]
-[ 10 = Medea visit completed (UB) ]
-[ 11 = ready to be bred (no-UB or UB done) ]
-[ 12 = been knocked up ]
-[ 100 = not saved ]
-
-[ libido of Meredith ]
-[ 0 = M/F virgin ]
-[ 1 = Had M/F ]
-[ 2 = Had M/F w/player ]
-
-[ lust of Meredith ]
-[ Meredith UB ]
-[ 0 = inactive ]
-[ 1 = used on Gwen ]
-[ 2 = used on player ]
-
-[ XP of Meredith ]
-[ 0 = not preggers ]
-[ 1-12 = early preggers ]
-[ 13-24 = late preggers ]
-[ 25+ birth time ]
-
-[ level of Meredith ]
-[ number of kids ]
-
-[ HP of Gwen ]
-[ 0 = not met ]
-[ 1 = non-UB tf - sent to Dry Plains ]
-[ 2 = UB'd ]
 
 Meredith ends here.

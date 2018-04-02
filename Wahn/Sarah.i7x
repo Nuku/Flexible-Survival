@@ -206,6 +206,12 @@ to say SarahTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Talk about finding a way to suppress those slutty husky impulses";
 	[]
+	if SarahCured > 3:
+		choose a blank row in table of fucking options;
+		now title entry is "Theories on the outbreak";
+		now sortorder entry is 4;
+		now description entry is "Talk about what she thinks caused the infection";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -227,6 +233,8 @@ to say SarahTalkMenu:
 					say "[SarahTalk2]";
 				if (nam is "Managing her urges"):
 					say "[SarahTalk3]";
+				if (nam is "Theories on the outbreak"):
+					say "[SarahTalk4]";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -343,6 +351,9 @@ to say SarahTalk3:
 	else if SarahCured > 3: [Sarah is "cured" - or in treatment at least]
 		say "     As you approach Sarah about the topic of managing her urges, the husky hybrid's tail wags excitedly and Sarah bounces over to you on her slender paws. 'It works! With the bigger stash I have now thanks to you, I experimented a little and found just the right dosage. Thank you, thank you, thank you!' Without any hesitation, she wraps her arms around your chest and even gives you a kiss on the cheek. Staying up close to you and with her fluffy tail still wagging up a storm, she gives you a confident smile. 'I feel like a real woman again - not a feral slut that will spread her legs for anyone who asks. You've been an amazing friend through all this.' With that said, she rubs the side of her lightly furred cheek against yours, then steps away and gets back to what she was doing before.";
 
+to say SarahTalk4:
+	say "     As you bring up the infection as a topic and the fact that you think it is nanites that are responsible, Sarah gives a nod in agreement. 'Yeah, that certainly fits the bill. I mean, I read in some current papers in medical science papers that people were working on medical use for such things. Nothing this drastic of course, but who knows what gets developed in secret labs and never reported to the world. Whoever might have cooked them up is one mystery, and the next one is why and how they got spread. I mean, they're certainly doing a bang-up job of healing wounds for some people, but others melted into puddles of goo. And the sudden species shifting makes no sense at all.' Running her fingers through her hair, Sarah glances down at her own muzzle and makes a grimace in frustration. 'All of this can't have been the intended purpose, can it? There are easier ways of bringing civilization to its knees, besides this total chaos. No, I think it must have been a mistake. Some sort of accidental spread of untested tech.'";
+		
 instead of fucking Sarah:
 	say "[SarahFucking]";
 

@@ -1,9 +1,24 @@
 Version 2 of Honey by Stripes begins here.
 [Version 2.2.1 - Queen Bee sex now affects libido. Neuter outcome selected]
+[Version 2.3 - Made Honey an NPC/pet located in the library garden - Luneth]
 
 "Adds a bee girl pet named Honey."
 
-Section 1 - Encounter
+[ HP of bee girl      ]
+[ 0 = not encountered ]
+[ 1 = saved           ]
+[ 2 = leave hive      ]
+[ 3 = found bear      ]
+[ 4 = lost/fled bear  ]
+[ 5 = won - queen bee ]
+[ 100 = not saved     ]
+
+the linkaction of Honey is "[honeylinkaction]".
+
+to say honeylinkaction:
+	say "Possible Actions: [link]talk[as]talk Honey[end link], [link]smell[as]smell Honey[end link], [link]fuck[as]fuck Honey[end link][line break]";
+
+Section 1 - Events
 
 Smashed Hive is a situation.
 The sarea of Smashed Hive is "Park".
@@ -143,23 +158,250 @@ to say beegirlsaved:
 	increase score by 20;
 	now bee girl is tamed;
 	now HP of bee girl is 1;
-	say "     (The bee girl is now tamed! You can make it your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck bee girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+	say "     (The bee girl is now tamed! You can make her your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck bee girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 
 
-Section 2 - Bee Girl Pet
+Section 2 - Bee Girl NPC/Pet
 
 bee girl is a pet. bee girl is a part of the player.
-The description of bee girl is "The bee drone has a youthful appearance despite her maturity. Her face, shoulders, arms and upper chest appear to be mostly human, though her lower body and hands are covered in insectile plating, looking like a tight-fitting yellow and black dress. She has a small pair of insect arms at her sides, which can be used to hold small things. The bee abdomen attached to her tight bottom lacks its stinger.".
+understand "Honey" as bee girl.
+The description of bee girl is "[HoneyDesc]".
 The weapon damage of bee girl is 3.
 The level of bee girl is 1.
 The Dexterity of bee girl is 16.
-The summondesc of bee girl is "Buzzing cheerily at your call, the bumblebee drone flies over to join your side.".
+The summondesc of bee girl is "[SummonHoney]".
+The dismissdesc of bee girl is "[DismissHoney]".
 The assault of bee girl is "[one of]The bee girl buzzes around, slapping and punching at your foe from behind![or]The bee girl dive bombs the enemy, jabbing with her stinger-less abdomen repeatedly and bashing her fists on their back, buzzing wildly![or]Buzzing angrily, the bumblebee scratches and claws at your foe with her hard, chitinous fingertips![or]The bee drone tosses globs of sticky honey onto your foe, slowing them down while they get unstuck![or]The buzzing drone drops an armload of small rocks and junk onto your enemy from above![at random]".
+the fuckscene of bee girl is "[sexwithHoney]".
 
-the icon of bee girl is figure of Honey_icon.
+to say SummonHoney:
+	remove Honey from play;
+	if player is in Garden and Honey is in Garden: [summoning while standing next to her]
+		say "     Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
+	else: [regular summoning]
+		say "     Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
 
-the scent of the bee girl is "Honey, unsurprisingly, smells of honey.".
+to say DismissHoney:
+	move Honey to Garden;
+	if player is not in Garden: [regular dismiss]
+		say "     Honey presses a quick kiss to your cheek before flying away.";
+	else: [dismissing her in the abbey]
+		say "      Honey just shrugs her shoulders, going back to work in the garden.";
 
+Honey is a woman.
+The description of Honey is "[HoneyDesc]".
+
+instead of sniffing Honey:
+	say "[HoneyScent]";
+
+instead of fucking Honey:
+	say "[sexwithHoney]";
+
+to say HoneyDesc:
+	if debugactive is 1:
+		say "DEBUG -> HP of bee girl: [HP of bee girl] <- DEBUG[line break]";
+	project the figure of Honey_icon;
+	say "     The bee drone has a youthful appearance despite her maturity. Her face, shoulders, arms and upper chest appear to be mostly human, though her lower body and hands are covered in insectile plating, looking like a tight-fitting yellow and black dress. She has a small pair of insect arms at her sides, which can be used to hold small things. The bee abdomen attached to her tight bottom lacks its stinger.";
+	if player is in Garden:
+		say "     At the moment the little bee girl is busy fixing up the garden.";
+	else:
+		say "     At the moment the little bee girl is flying around, buzzing contently.";
+
+instead of sniffing bee girl:
+	say "[HoneyScent]";
+
+to say HoneyScent:
+	say "     Honey, unsurprisingly, smells of honey.";
+
+instead of conversing the Honey:
+	if player is in Garden and Honey is in Garden:
+		say "[HoneyTalkMenu]";
+	else if companion of player is bee girl:
+		say "[HoneyTalkMenu]";
+	else:
+		say "     Honey isn't here.";
+
+instead of conversing bee girl:
+	if bee girl is not tamed:
+		say "     Who?";
+	else:
+		if player is in Garden and Honey is in Garden:
+			say "[HoneyTalkMenu]";
+		else if companion of player is bee girl:
+			say "[HoneyTalkMenu]";
+		else:
+			say "     Honey isn't here.";
+
+to say HoneyTalkMenu:
+	LineBreak;
+	project the figure of Honey_icon;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Chit Chat";
+	now sortorder entry is 1;
+	now description entry is "Just have some simple chit chat";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Chit Chat"):
+					say "[HoneyTalk1]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the bee girl, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
+
+to say HoneyTalk1:
+	let randomnumber be a random number from 1 to 2;
+	if HP of bee girl is 5: [you are viewed as the queen bee]
+		if randomnumber is:
+			-- 1:
+				say "     'I'm so glad we were able to avenge my hive.'";
+			-- 2:
+				say "     'What do you think about the garden? I think it looks just super now!";
+	else:
+		if randomnumber is:
+		-- 1:
+			say "     'I really hope we will be able to get justice for my hive soon...'";
+		-- 2:
+			say "     'I'm gonna work really hard to get this garden sorted, we need more pretty flowers here!'";
+
+to say sexwithHoney:
+	if lastfuck of Honey - turns < 4:
+		say "     You've had some fun with Honey quite recently. Perhaps you should give her a break for a little longer?";
+	else:
+		say "     Checking out your sexy drone, you are able to see her sweet nectar glistening over her pussy. She is obviously primed and ready to recieve your attentions.";
+		say "[HoneySexMenu]";
+
+to say HoneySexMenu:
+	LineBreak;
+	project the Figure of Honey_icon;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Eat out Honey";
+	now sortorder entry is 1;
+	now description entry is "Use your tongue to pleasure Honey";
+	[]
+	if cunts of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Get eaten out by Honey";
+		now sortorder entry is 2;
+		now description entry is "Have Honey eat you out";
+	[]
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Get Blown by Honey";
+		now sortorder entry is 3;
+		now description entry is "Have Honey suck your cock";
+	[]
+	if cunts of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Get fingered by Honey";
+		now sortorder entry is 4;
+		now description entry is "Have Honey finger your pussy";
+	[]
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck Honey";
+		now sortorder entry is 5;
+		now description entry is "Penetrate Honey with your cock";
+	[]
+	if HP of bee girl is 5 and bodyname of player is "Queen Bee":
+		choose a blank row in table of fucking options;
+		now title entry is "Queen bee fun";
+		now sortorder entry is 6;
+		now description entry is "Have some fun with your loyal drone";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Eat out Honey"):
+					say "[HoneySex1]";
+				if (nam is "Get eaten out by Honey"):
+					say "[HoneySex2]";
+				if (nam is "Get blown by Honey"):
+					say "[HoneySex3]";
+				if (nam is "Get fingered by Honey"):
+					say "[HoneySex4]";
+				if (nam is "Fuck Honey"):
+					say "[HoneySex5]";
+				if (nam is "Queen bee fun"):
+					say "[HoneySex6]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the bee girl, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
+
+to say HoneySex1: [player eats out Honey]
+	say "     The bee girl's antennae twitch, sensing you a moment before you pounce her into a hug. Buzzing playfully, you roll [if HP of bee girl >= 5]your loving drone[else]her[end if] onto her back and bury your face between her legs. You nuzzle at the soft, golden hair covering her pussy and start lapping at her honeypot. And how appropriate that name is for it, for her juices are thick, sweet and rich like honey. Loving her taste, you drive her to several orgasms before finally stopping. She hugs you tightly and uses her long, slender tongue to lick away the sticky honey from your face.";
+	if HP of bee girl >= 5, infect "Queen Bee";
+
+to say HoneySex2: [player gets gets eaten out by Honey]
+	say "     Sensing [if HP of bee girl >= 5]her queen's[else]your[end if] arousal, Honey snuggles up to you and nuzzles your crotch. Her tongue, long and thin, slides out to tease at your wet pussy. Pressing her lips to your dripping folds, she slides that wriggling tongue down into you, making you moan in delight. Her tongue quite skillfully delves to your very depths to taste your[if HP of bee girl >= 5 and player is queenbeecocked] honeyed[end if] nectar. You cum several times and she happily drinks down your sweet waters until you're both satisfied.";
+	if HP of bee girl >= 5, infect "Queen Bee";
+
+to say HoneySex3: [player gets blown by Honey]
+	say "     Sensing [if HP of bee girl >= 5]her queen's[else]your[end if] arousal, Honey snuggles up to you and nuzzles your crotch. Her tongue, long and thin, wraps around your shaft and wriggles over it. She takes you into her mouth and starts sucking hungrily while that [if HP of bee girl >= 5]wonderful[else]strange[end if] tongue teases you incessantly. Her upper arms run over your body, stroking and caressing you while her smaller ones cup your balls and knead them until you finally cum. She drinks down your seed, clearly loving the taste and always happy to [if HP of bee girl >= 5]service her queen's needs[else]repay you for your kindness[end if].";
+	if HP of bee girl >= 5, infect "Queen Bee";
+
+to say HoneySex4: [player gets fingered by Honey]
+	say "     The cute bee girl buzzes over to you and snuggles close. As you run your hands through her soft hair and caress her sensitive antennae, she runs the small hand from one of her lower arms across your wet pussy, teasing your sensitive folds. After a little stroking, she slips a finger into you, then another, then the whole of the little hand. The chitin is firm, but flexes and feels very nice stuffed inside your needy cunt. She drives it into you again and again until you orgasm loudly. As you get back on the move, you catch her licking and sucking your [if HP of bee girl >= 5 and player is queenbeecocked] honeyed[end if] juices from her little hand with a grin.";
+	if HP of bee girl >= 5, infect "Queen Bee";
+
+to say HoneySex5: [player fucks Honey]
+	say "     Drawn to her by her sweet scent, you take Honey into your arms and run your hands over her body. She buzzes happily and hugs [if HP of bee girl >= 5]her queen[else]you[end if] tightly. Lifting her small body up into your arms, you slide your cock into her warm pussy. Normally hidden under a puff of soft, golden hair, her honeypot is tight and wet around your [cock of player] cock. Her wings buzz excitedly as she bounces in your arms, riding your cock until you finally pump your thick[if HP of bee girl >= 5 and player is queenbeecocked], honeyed[end if] seed into her.";
+	if HP of bee girl >= 5, infect "Queen Bee";
+
+to say HoneySex6: [Queen bee fun with Honey]
+	if cocks of player > 0:
+		say "     Finding your attention drawn to the cute little bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and comes over, putting her arms around you. 'Oh, let me serve you, my queen,' she says playfully even as she takes hold of your stiff cock. She slides her long, thin tongue over your [cock of player] manhood before taking it into her mouth and sucking at it hungrily. You rub her head and moan about what a [one of]loyal[or]pretty[or]sexy[or]cute[or]eager[at random] drone she is as that delightful tongue of hers works you over. Her hands caress your sexy body and rub your [ball size] as she pushes you closer to orgasm.";
+		say "     Some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and stretches out, putting her juicy little muff on wanton display for you, cutely holding her folds open to bare her honeyed lovehole. 'I am yours to claim, my queen,' she says with a playful smile. Unable to turn down such an offer, you move atop her, lining up your cock with her lovely pussy and thrust it into her youthful body. Her upper hands run over your body while the smaller pair pull on your hips, urging you to fuck her ever harder. The feel of that honeyed hole around your [cock of player] penis is great. As you cum, thoughts of having a hive full of such sexy girls to breed and to serve you fill your mind. After pumping your [cum load size of player] load into her, you pull out and share several kisses with her before continuing on your way.";
+		infect "Queen Bee";
+	else if cunts of player > 0:
+		say "     Finding your attention drawn to the cute bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and comes over, putting her arms around you. 'Oh, let me serve you, my queen,' she says playfully even as she brushes her fingertips across your wet folds. Taking a seat, you spread your legs invitingly and have her move between them. She buries her face in your crotch, fingering your pussy before diving in and lapping up your [if player is queenbeecocked]honeyed [end if]juices like delicious nectar. As you cum, thoughts of finding a hive to breed many more such pretty and loyal bee girls play across your mind, turning you on greatly. Once she's done licking you clean, you caress her head softly and thank her for her fine service.";
+		infect "Queen Bee";
 
 Section 3 - Sexxxings
 
@@ -171,9 +413,9 @@ An everyturn rule:
 			if diceroll < libido of player and lastfuck of bee girl - turns >= 4:
 				say "[fuckscene of bee girl]";
 
-the fuckscene of bee girl is "[sexwithhoney]".
+the fuckscene of bee girl is "[sexwithHoney]".
 
-to say sexwithhoney:
+to say sexwithHoney:
 	if lastfuck of bee girl - turns < 4:
 		say "     You've had some fun with the bee girl quite recently. Perhaps you should give her a break for a little longer?";
 	else if cocks of player is 0 and cunts of player is 0:
@@ -239,15 +481,6 @@ to say beesexqueen:
 	if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
-
-[ HP of bee girl      ]
-[ 0 = not encountered ]
-[ 1 = saved           ]
-[ 2 = leave hive      ]
-[ 3 = found bear      ]
-[ 4 = lost/fled bear  ]
-[ 5 = won - queen bee ]
-[ 100 = not saved     ]
 
 
 Section 4 - Endings

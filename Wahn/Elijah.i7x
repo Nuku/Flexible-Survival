@@ -833,7 +833,7 @@ An everyturn rule:
 				now Char-D of Elijah is "1";
 				now NPCintCounter is turns;
 			else if (helper dog is tamed) and Char-E of Elijah is "0":
-				say "     While taking your break before heading back into the city, you see the helper dog adjust the angel's blanket. Hobo then takes a seat quietly beside your injured guest's bunk. He's watching him, ready to signal if there's something wrong or he needs assistance.";
+				say "     While taking your break before heading back into the city, you see Hobo adjust the angel's blanket. Hobo then takes a seat quietly beside your injured guest's bunk. He's watching him, ready to signal if there's something wrong or he needs assistance.";
 				now Char-E of Elijah is "1";
 				now NPCintCounter is turns;
 			else if (little fox is tamed) and Char-F of Elijah is "0":
@@ -868,7 +868,7 @@ An everyturn rule:
 				now Char-D of Elijah is "2";
 				now NPCintCounter is turns;
 			else if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1"):
-				say "     While taking your break before heading back into the city, you see the helper dog sitting quietly beside Elijah's bunk, getting stroked. As Elijah sees you looking at them, he pats the dog softly on the head and remarks 'A most dutiful and brave animal. You can count yourself lucky for receiving his assistance.'";
+				say "     While taking your break before heading back into the city, you see Hobo sitting quietly beside Elijah's bunk, getting stroked. As Elijah sees you looking at them, he pats the dog softly on the head and remarks 'A most dutiful and brave animal. You can count yourself lucky for receiving his assistance.'";
 				now Char-E of Elijah is "2";
 				now NPCintCounter is turns;
 			else if (little fox is tamed) and (Char-F of Elijah is "0" or Char-F of Elijah is "1"):
@@ -880,7 +880,7 @@ An everyturn rule:
 				now Char-G of Elijah is "2";
 				now NPCintCounter is turns;
 			else if (cute crab is tamed) and (Char-H of Elijah is "0" or Char-H of Elijah is "1"):
-				say "     While taking your break before heading back into the city, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab pet is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
+				say "     While taking your break before heading back into the city, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab Snips is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
 				now Char-H of Elijah is "2";
 				now NPCintCounter is turns;
 			else if (bee girl is tamed) and (Char-J of Elijah is "0" or Char-J of Elijah is "1"):
@@ -927,7 +927,7 @@ An everyturn rule:
 				now Char-D of Elijah is "2";
 				now NPCintCounter is turns;
 			else if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1" or Char-E of Elijah is "2"):
-				say "     While taking your break before heading back into the city, you see Elijah crouched in front of your helper dog. He waves you closer, saying 'Look at what he can do - give me your paw, dog.' ...and just as ordered, the dog raises his paw to have it shaken by Elijah. 'That's a good dog,' Elijah says and rewards him with a treat.";
+				say "     While taking your break before heading back into the city, you see Elijah crouched in front of Hobo. He waves you closer, saying 'Look at what he can do - give me your paw, dog.' ...and just as ordered, the dog raises his paw to have it shaken by Elijah. 'That's a good dog,' Elijah says and rewards him with a treat.";
 				now Char-E of Elijah is "3";
 				now NPCintCounter is turns;
 			else if (gryphoness is tamed) and (Char-G of Elijah is "0" or Char-G of Elijah is "1" or Char-G of Elijah is "2"):
@@ -935,7 +935,7 @@ An everyturn rule:
 				now Char-G of Elijah is "3";
 				now NPCintCounter is turns;
 			else if (cute crab is tamed) and (Char-H of Elijah is "0" or Char-H of Elijah is "1" or Char-H of Elijah is "2"):
-				say "     While taking your break before heading back into the city, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab pet is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
+				say "     While taking your break before heading back into the city, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab Snips is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
 				now Char-H of Elijah is "3";
 				now NPCintCounter is turns;
 			else if (bee girl is tamed) and (Char-J of Elijah is "0" or Char-J of Elijah is "1" or Char-H of Elijah is "2"):
@@ -995,7 +995,7 @@ An everyturn rule:
 				now NPCintCounter is turns;
 				now lastfuck of Elijah is turns;
 			else if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1" or Char-E of Elijah is "2"):
-				say "     While taking your break before heading back into the city, you see Elijah get your helper dog casually fetch a ball for him a few times. The dog seems more interested in keeping an eye on him than the ball, but does go retrieve it each time. After a few throws, Elijah pulls something and chucks the black oblong object across the room, where it bounces off the wall, shouting 'Go fetch, doggie.'  The helper dog seems into it this time, chasing after it, but then stops and detours to grab a towel from one of the cots. Confused by your dog's actions, you watch as the shepherd carries it over to where the black rod is rolling to a stop. The dog drops the cloth over it before picking it up in his mouth with care. Padding over to the nearby trash chute, Hobo depresses the foot lever with one paw and drops the towel-wrapped thing into the garbage while Elijah yells from across the room.";
+				say "     While taking your break before heading back into the city, you see Elijah get Hobo to casually fetch a ball for him a few times. The dog seems more interested in keeping an eye on him than the ball, but does go retrieve it each time. After a few throws, Elijah pulls something and chucks the black oblong object across the room, where it bounces off the wall, shouting 'Go fetch, doggie.' Hobo seems into it this time, chasing after it, but then stops and detours to grab a towel from one of the cots. Confused by your dog's actions, you watch as the shepherd carries it over to where the black rod is rolling to a stop. The dog drops the cloth over it before picking it up in his mouth with care. Padding over to the nearby trash chute, Hobo depresses the foot lever with one paw and drops the towel-wrapped thing into the garbage while Elijah yells from across the room.";
 				say "     'Stupid beast!' Elijah snarls. 'It's a lot of work to talk a succubus out of a dildo - and you won't even fetch it for me just this once. Gah!  Don't throw it out, you mutt!  You'd be a much more fun pet as a hellhound!'";
 				now Char-E of Elijah is "4";
 				now NPCintCounter is turns;
@@ -1009,7 +1009,7 @@ An everyturn rule:
 				now Char-G of Elijah is "4";
 				now NPCintCounter is turns;
 			else if (cute crab is tamed) and (Char-H of Elijah is "0" or Char-H of Elijah is "1" or Char-H of Elijah is "2"):
-				say "     While taking your break before heading back into the city, you see Elijah lift the blanket of his bunk and scowl at what he finds below. He grabs your cute crab pet and dumps it on the concrete floor, growling 'Can't you keep your stupid critters in a pen somewhere?'";
+				say "     While taking your break before heading back into the city, you see Elijah lift the blanket of his bunk and scowl at what he finds below. He grabs your cute crab Snips and dumps it on the concrete floor, growling 'Can't you keep your stupid critters in a pen somewhere?'";
 				now Char-H of Elijah is "4";
 				now NPCintCounter is turns;
 			else if (bee girl is tamed) and (Char-J of Elijah is "0" or Char-J of Elijah is "1" or Char-J of Elijah is "2"):
@@ -1087,7 +1087,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 1 or HP of
 		now Char-D of Elijah is "1";
 		now NPCintCounter is turns;
 	else if (helper dog is tamed) and Char-E of Elijah is "0":
-		say "     As you come down into the bunker, you see the helper dog adjust the angel's blanket. Hobo then takes a seat quietly beside your injured guest's bunk. He's watching him, ready to signal if there's something wrong or he needs assistance.";
+		say "     As you come down into the bunker, you see hobo adjust the angel's blanket. Hobo then takes a seat quietly beside your injured guest's bunk. He's watching him, ready to signal if there's something wrong or he needs assistance.";
 		now Char-E of Elijah is "1";
 		now NPCintCounter is turns;
 	else if (little fox is tamed) and Char-F of Elijah is "0":
@@ -1126,7 +1126,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 3 and NPCi
 		now Char-D of Elijah is "2";
 		now NPCintCounter is turns;
 	else if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1"):
-		say "     As you come down into the bunker, you see the helper dog sitting quietly beside Elijah's bunk, getting stroked. As Elijah sees you looking at them, he pats the dog softly on the head and remarks 'A most dutiful and brave animal. You can count yourself lucky for receiving his assistance.'";
+		say "     As you come down into the bunker, you see hobo sitting quietly beside Elijah's bunk, getting stroked. As Elijah sees you looking at them, he pats the dog softly on the head and remarks 'A most dutiful and brave animal. You can count yourself lucky for receiving his assistance.'";
 		now Char-E of Elijah is "2";
 		now NPCintCounter is turns;
 	else if (little fox is tamed) and (Char-F of Elijah is "0" or Char-F of Elijah is "1"):
@@ -1138,7 +1138,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 3 and NPCi
 		now Char-G of Elijah is "2";
 		now NPCintCounter is turns;
 	else if (cute crab is tamed) and (Char-H of Elijah is "0" or Char-H of Elijah is "1"):
-		say "     As you come down into the bunker, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab pet is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
+		say "     As you come down into the bunker, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab Snips is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
 		now Char-H of Elijah is "2";
 		now NPCintCounter is turns;
 	else if (bee girl is tamed) and (Char-J of Elijah is "0" or Char-J of Elijah is "1"):
@@ -1183,7 +1183,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 4 and NPCi
 		now Char-D of Elijah is "2";
 		now NPCintCounter is turns;
 	else if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1" or Char-E of Elijah is "2"):
-		say "     As you come down into the bunker, you see Elijah crouched in front of your helper dog. He waves you closer, saying 'Look at what he can do - give me your paw, dog.' ...and just as ordered, the dog raises his paw to have it shaken by Elijah. 'That's a good dog,' Elijah says and rewards him with a treat.";
+		say "     As you come down into the bunker, you see Elijah crouched in front of Hobo. He waves you closer, saying 'Look at what he can do - give me your paw, dog.' ...and just as ordered, the dog raises his paw to have it shaken by Elijah. 'That's a good dog,' Elijah says and rewards him with a treat.";
 		now Char-E of Elijah is "3";
 		now NPCintCounter is turns;
 	else if (gryphoness is tamed) and (Char-G of Elijah is "0" or Char-G of Elijah is "1" or Char-G of Elijah is "2"):
@@ -1191,7 +1191,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 4 and NPCi
 		now Char-G of Elijah is "3";
 		now NPCintCounter is turns;
 	else if (cute crab is tamed) and (Char-H of Elijah is "0" or Char-H of Elijah is "1" or Char-H of Elijah is "2"):
-		say "     As you come down into the bunker, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab pet is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
+		say "     As you come down into the bunker, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab Snips is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
 		now Char-H of Elijah is "3";
 		now NPCintCounter is turns;
 	else if (bee girl is tamed) and (Char-J of Elijah is "0" or Char-J of Elijah is "1" or Char-H of Elijah is "2"):
@@ -1249,7 +1249,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 99 and NPC
 		now NPCintCounter is turns;
 		now lastfuck of Elijah is turns;
 	else if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1" or Char-E of Elijah is "2"):
-		say "     As you come down into the bunker, you see Elijah get your helper dog casually fetch a ball for him a few times. The dog seems more interested in keeping an eye on him than the ball, but does go retrieve it each time. After a few throws, Elijah pulls something and chucks the black oblong object across the room, where it bounces off the wall, shouting 'Go fetch, doggie.'  The helper dog seems into it this time, chasing after it, but then stops and detours to grab a towel from one of the cots. Confused by your dog's actions, you watch as the shepherd carries it over to where the black rod is rolling to a stop. The dog drops the cloth over it before picking it up in his mouth with care. Padding over to the nearby trash chute, Hobo depresses the foot lever with one paw and drops the towel-wrapped thing into the garbage while Elijah yells from across the room.";
+		say "     As you come down into the bunker, you see Elijah get hobo to casually fetch a ball for him a few times. The dog seems more interested in keeping an eye on him than the ball, but does go retrieve it each time. After a few throws, Elijah pulls something and chucks the black oblong object across the room, where it bounces off the wall, shouting 'Go fetch, doggie.' Hobo seems into it this time, chasing after it, but then stops and detours to grab a towel from one of the cots. Confused by your dog's actions, you watch as the shepherd carries it over to where the black rod is rolling to a stop. The dog drops the cloth over it before picking it up in his mouth with care. Padding over to the nearby trash chute, Hobo depresses the foot lever with one paw and drops the towel-wrapped thing into the garbage while Elijah yells from across the room.";
 		say "     'Stupid beast!' Elijah snarls. 'It's a lot of work to talk a succubus out of a dildo - and you won't even fetch it for me just this once. Gah!  Don't throw it out, you mutt!  You'd be a much more fun pet as a hellhound!'";
 		now Char-E of Elijah is "4";
 		now NPCintCounter is turns;
@@ -1263,7 +1263,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 99 and NPC
 		now Char-G of Elijah is "4";
 		now NPCintCounter is turns;
 	else if (cute crab is tamed) and (Char-H of Elijah is "0" or Char-H of Elijah is "1" or Char-H of Elijah is "2"):
-		say "     As you come down into the bunker, you see Elijah lift the blanket of his bunk and scowl at what he finds below. He grabs your cute crab pet and dumps it on the concrete floor, growling 'Can't you keep your stupid critters in a pen somewhere?'";
+		say "     As you come down into the bunker, you see Elijah lift the blanket of his bunk and scowl at what he finds below. He grabs your cute crab Snips and dumps it on the concrete floor, growling 'Can't you keep your stupid critters in a pen somewhere?'";
 		now Char-H of Elijah is "4";
 		now NPCintCounter is turns;
 	else if (bee girl is tamed) and (Char-J of Elijah is "0" or Char-J of Elijah is "1" or Char-J of Elijah is "2"):

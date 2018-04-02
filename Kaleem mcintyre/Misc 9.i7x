@@ -36,15 +36,15 @@ Instead of resolving Atropis:
 	Now Atropis is resolved;
 
 
-Section 4 - The Cap
+Section 4 - The Magic Cap
 
-The Cap is a situation. The level of The Cap is 5.
-The sarea of The Cap is "Museum".
+The Magic Cap is a situation. The level of The Magic Cap is 5.
+The sarea of The Magic Cap is "Museum".
 When play begins:
-	Add The Cap to badspots of furry;
-	Add The Cap to badspots of hermaphrodite;
+	Add The Magic Cap to badspots of furry;
+	Add The Magic Cap to badspots of hermaphrodite;
 
-Instead of resolving a The Cap:
+Instead of resolving a The Magic Cap:
 	Say "Feeling as though something is drawing you inside of the museum you find yourself walking into the Egyptian exhibit area of the once prominent edifice without exactly knowing why. Looking around to make sure that nothing dangerous is lurking throughout the hallways, as something usually is given the craziness happening with the city, you find that luck is with you today as there is no one around. Breathing a sigh of relief you continue following this dogged sensation tugging at you all the way until you come to an ornamental Egyptian glass case... which just so happens to be open.";
 	WaitLineBreak;
 	Say "Not knowing why you reach a hand inside of the case for one of the statues and then pick it up. Looking over the falcon headed artifact you find yourself gaping at it in awe. Though you're not really an expert at hieroglyphs or anything, the characters wrapped around the statue seem... somewhat familiar to you. A growl from behind you has you whipping around just in time to see a large Cerberus Herm baring three sets of ivory fangs into your direction.";
@@ -88,7 +88,7 @@ Instead of resolving a The Cap:
 					Say "Losing to the Cerberus Herms you wind up getting the statue taken from you by one of the creatures while the other kicks you out of the Museum. Whatever might have been up with the statue you're not sure, but now you have a feeling that you'll never know.";
 			else:
 				Say "Losing to the Cerberus Herms you wind up getting the statue taken from you by one of the creatures while the other kicks you out of the Museum. Whatever might have been up with the statue you're not sure, but now you have a feeling that you'll never know.";
-	now The Cap is resolved;
+	now The Magic Cap is resolved;
 
 
 Section 5 - Fashion Statement
