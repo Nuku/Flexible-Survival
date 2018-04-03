@@ -210,6 +210,11 @@ to say skunkPathDialogue:
 		say "     With the changes continuing, but this time in an upward direction, your waist grows fuller. You'd not be called fat, but there's a little extra padding there to flow into those wide hips. Continuing up, your upper body again shifts to more normal proportions for your torso, shoulder and arms, again making your caboose stand out. They almost seem slender in comparison, but are quite lovely and would suit a model or actress, which you say to Dr. Moffatt. She continues to take note of your answers, only pausing on occasion to rub her cock and balls or tweak a nipple.";
 		wait for any key;
 		now bodyname of player is "Hyperskunk";
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Hyperskunk":
+				now monster is y;
+				break;
 		now body of player is body entry;
 		attributeinfect;
 		let cockstemp be cocks of player;
