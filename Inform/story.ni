@@ -400,7 +400,6 @@ Definition: A person(Called X) is booked:
 	if the location of x is Grey Abbey Library, yes;
 	if the location of x is Grey Abbey 2F, yes;
 	if the location of x is Half-Renovated Room, yes;
-[
 	if the location of x is Breakroom, yes;
 	if the location of x is Pantry, yes;
 	if the location of x is Computer Lab, yes;
@@ -413,7 +412,6 @@ Definition: A person(Called X) is booked:
 	if the location of x is Garden View, yes;
 	if the location of x is Darkened Alcove, yes;
 	if the location of x is Attic, yes;
-]
 	no;
 
 Definition: A person(Called X) is bunkered:
@@ -422,7 +420,7 @@ Definition: A person(Called X) is bunkered:
 	if the location of x is Bunker, yes;
 	if the location of x is Communal Shower, yes;
 	if the location of x is Underground Restroom, yes;
-[	if the location of x is Maintenance Closet, yes;]
+	if the location of x is Maintenance Closet, yes;
 	no;
 
 A thing can be rooted in place. A thing is usually not rooted in place.
@@ -5490,6 +5488,7 @@ Include Tenvale Gorillas Football Team by Kernog.
 Include Thomas by Wahn.
 Include Thunderbolt by CrimsonAsh.
 Include Timothy by Sarokcat.
+Include Tobias by Wahn.
 Include Tristian by Verath.
 Include Urik by Wahn.
 Include Val by Wahn.

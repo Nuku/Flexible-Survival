@@ -44,10 +44,11 @@ instead of going North from College Campus Entrance while BjornRelationship is 0
 	now Daily Training Session is not resolved;
 
 An everyturn rule:
-	if daytimer is night:
-		move Bjorn to Rocky Cliff;
-	else if daytimer is day:
-		move Bjorn to Viking Ship;
+	if BjornRelationship > 0 and BjornRelationship < 99:
+		if daytimer is night:
+			move Bjorn to Rocky Cliff;
+		else if daytimer is day:
+			move Bjorn to Viking Ship;
 
 Section 2 - Declaring Bjorn
 

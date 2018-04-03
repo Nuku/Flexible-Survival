@@ -60,6 +60,7 @@ Instead of resolving a Another Doctor:
 		WaitLineBreak;
 		say "     Having given you the limited pass card and some directions, the hyperskunk woman gives you another grin before heading out, her tail giving a broad swish as she sways her ample hips. 'Please don't keep me waiting too long, my dear. I could just about burst with excitement,' she says teasingly as she looks back at you over her shoulder. Still a little stunned by voluptuous skunk woman, it takes you a few moments to recover, grab your stuff and head out. As you debate going to visit her to see what she has in mind, you look over the pass card. At least this will make it a little easier to get around the hospital.";
 	now Psych Department is known;
+	now HP of Doctor Moffatt is 1;
 	increase hospnav by 1;
 	say "[hospprogress]";
 	increase score by 5;
@@ -86,10 +87,12 @@ to say psychfirstarrival:
 		if skunkbeaststatus is 1:
 			say "     'But it seems now that you've since become too tainted by those rather mundane forest skunks. You are no longer a suitable candidate for my testing.' She sighs and teases one of her nipples. 'You could provide help in another form, though. Hypnosis.' You look at the doctor with intrigued eyes. 'I would like to put you under trance, and watch the effects of implemented suggestions on a nanite infected body. Do you feel up to the task? Just ask me about [bold type]hypnosis[roman type] when you are ready to start,' she says, as she passes you a bottle of water. 'The water's for you. My way of saying thanks for helping me out,' she says with a smile.";
 			now XP of doctor moffatt is 2;
+			now HP of doctor moffatt is 2;
 			increase carried of water bottle by 1;
 		else if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
 			say "     'But it seems you've gone and become too tainted by some strangely persistent infection since I last saw you. It keeps you from being a suitable candidate at all.' She sighs and teases one of her nipples. 'You could provide help in another form, though. Hypnosis.' You look at the doctor with intrigued eyes. 'I would like to put you under trance, and watch the effects of implemented suggestions on a nanite infected body. Do you feel up to the task? Just ask me about [bold type]hypnosis[roman type] when you are ready to start,' she says, as she passes you a bottle of water. 'The water's for you. My way of saying thanks for helping me out,' she says with a smile.";
 			now XP of doctor moffatt is 2;
+			now HP of doctor moffatt is 2;
 			increase carried of water bottle by 1;
 		else:
 			say "     'It seems there's at least some psychological component to how nanite infection manifests itself. Or, at least, it can be a contributing factor in some cases. Take myself for instance,' she says, running her gloved paws over her breasts and cock with clear pleasure. 'My infection seems to have imprinted on my skunk decorations and a few of my own personal kinks. Yet others find their minds and sexual desires changed utterly by the infection instead.'";
@@ -110,6 +113,7 @@ to say psychfirstarrival:
 				say "     'Excellent. Just ask me about [bold type]hypnosis[roman type] when you are ready to start,' she says, as she passes you a bottle of water. 'The water's for you. My way of saying thanks for helping me out,' she says with a smile.";
 				increase carried of water bottle by 1;
 				now XP of Doctor Moffatt is 2;
+				now HP of doctor moffatt is 2;
 		now battleground is "void";
 
 
@@ -279,7 +283,7 @@ I must say, it's quite pleasant to be able to enjoy some kinks otherwise impossi
 ]
 
 the fuckscene of Doctor Moffatt is "[sexwithDrMoffatt]".
-	
+
 to say sexwithDrMoffatt:
 	if XP of Doctor Moffatt is 1:
 		say "[sexwithDrMoffattSkunkPath]";
