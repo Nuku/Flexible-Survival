@@ -15,6 +15,9 @@ Version 1 of Diana by Wahn begins here.
 [   2: gryphon/cat transformations met, starting to overlap  ]
 [   3: complete overlap of gryphon/cat -> anthro sphinx look ]
 
+DianaTransformationProgress is a number that varies.
+DianaRelationship is a number that varies.
+
 Section 1 - Events
 
 Dressing Room Crisis is a situation.
@@ -60,7 +63,7 @@ Instead of resolving a Dressing Room Crisis:
 			say "     Stepping up into the dressing booth and reaching out to gently stroke her cheek, you tell Diana that she's actually got things quite wrong - everyone would love to be with a cute girl like her, if she just gave them a chance. 'I - um, do you really mean that?' the shy young woman replies, wiping her eyes and looking at you in surprise. You smile back at her and tell her that she'll just have to meet the right person. In the end,  [italic type]she[roman type] is what counts, not her body or the specifics of her looks. And besides all of that, her infections actually are pretty neat and exotic, so she shouldn't worry about them either. Diana just eats up your words, putting a lot of faith in a person she just met. Before long, the young woman wraps her arms around you and gives you a tight hug. 'Thank you so much. I'll take that to heart!'";
 			say "     The smiling Siamese-gryphon hybrid looks at you with a new level of confidence clearly written on her face, as if trying to engrave your features into her memory, then suddenly blinks and glances at the drawn curtain, thinking of the rest of the mall for the first time since you stepped into her life. 'Oh! I should get back to the others, they might worry where I am for so long. The group of refugees I'm staying with, I mean. We're housed in the optician in the west wing, in case you want to... come visit me sometime. I hope you do.' She gives you a friendly smile, then leans forward to plant a peck on your cheek and leaves the store with a skip in her step.";
 			now DianaRelationship is 1; [player gave her a pep talk]
-			now Encounter with Diana is not resolved;
+			now Mall Optitian is not resolved;
 		else if calcnumber is 2: [make a move on her]
 			LineBreak;
 			say "     Stepping up into the dressing booth and reaching out to gently stroke her cheek, you tell Diana that she's actually got things quite wrong - everyone would love to be with a cute girl like her, if she just gave them a chance. 'I - um, do you really mean that?' the shy young woman replies, wiping her eyes and looking at you in surprise. You smile back at her and tell her you do, putting your arms around Diana and holding her. [if cocks of player is 0]'B-but you're a girl! Does that mean... oh! So you're a... Um, I have been curious about being with women, to be honest.'[end if] When she relaxes a little into your embrace, you tilt her head up with a finger under her chin, then kiss the young woman, making her almost melt into your touch. 'Oh! Wow!' she pants out in between making out with you, and you can tell she clearly is a novice in all of this. Who knows, maybe she was always this shy, or not as pretty as she is now in her part-cat form.";
@@ -91,7 +94,7 @@ Instead of resolving a Dressing Room Crisis:
 				say "     The smiling Siamese-gryphon hybrid looks at you with adoration and delight clearly written on her face, as if trying to engrave your features into her memory, then suddenly blinks and glances at the drawn curtain, thinking of the rest of the mall for the first time since you stepped into her life. 'Oh! I should get back to the others, they might worry where I am for so long. The group of refugees I'm staying with, I mean. We're housed in the optician in the west wing, in case you want to... come visit me sometime. I hope you do.' She gives you a dreamy smile, then slides herself out from between you and the dressing booth wall, quickly collecting her clothes and pulling them on. Moments later, Diana plants a peck on your cheek, then ducks behind the curtain and is gone.";
 			now DianaTransformationProgress is 1;
 			now DianaRelationship is 10; [player took her virginity]
-			now Encounter with Diana is not resolved;
+			now Mall Optitian is not resolved;
 		else if calcnumber is 3: [suggest putting on a paper bag - you monster!]
 			LineBreak;
 			say "     Stepping up into the dressing booth and reaching out to stroke her cheek, you tell Diana that she's actually got things quite wrong - a lot of people would love to get to know a cute girl like her quite closely. 'I - um, do you really mean that?' the shy young woman replies, wiping her eyes and looking at you in surprise. You smile lustily at her and tell her that you do, then let your gaze wander down to the small-ish bumps of her breasts and the slender physique of her body. Adding that guys would surely love to take her for a spin, you casually mention that a paper bag would always be an option if she feels so bad about her head - as long as her pussy is still accessible. This creates a completely gob-smacked expression on Diana's face, followed by a deep red flush and her shouting, 'You - you pig!' And with that, she gives your face a full-force slap that leaves your cheek red and stinging, then slips past you, running out of the store and sobbing all the way.";
@@ -107,10 +110,10 @@ Instead of resolving a Dressing Room Crisis:
 		now DianaRelationship is 101; [player ignored her]
 	now Dressing Room Crisis is resolved;
 	
-Encounter with Diana is a situation. Encounter with Diana is resolved.
-The sarea of Encounter with Diana is "Smith Haven".
+Mall Optitian is a situation. Mall Optitian is resolved.
+The sarea of Mall Optitian  is "Smith Haven".
 
-Instead of resolving a Encounter with Diana:
+Instead of resolving a Mall Optitian:
 	say "     Strolling through the hallways of the expansive Smith Haven Mall, your way brings you to the west wing and you remember what Diana said about living in an optician store somewhere hereabouts. Checking out one of the large floor-plans of the mall standing a certain places, you figure out just where you need to go and swing by to check the place out. Soon, you see the glass front of the store a little distance ahead, its doors open and a number of people visible inside. For a second, you think you're in the wrong place after all, as the men and women inside all seem to be senior citizens in the beginning states of transformation: mostly showing some characteristics of dog- and cat-morphs, but you can also see one woman with rainbow-colored feathers lining the sides of her arms. Then suddenly, Diana comes into sight, stepping out behind a large display of sunglasses, together with an old woman who has white fur like a Siamese cat, pointy feline ears and a long tail.";
 	say "     Walking closer, you overhear the old woman say, '...hope you'll have fun at the bookstore sweetie. Maybe you'll meet some new friends too.' Leaning forward, the pats Diana's head and kisses her forehead, smiling as the young woman replies, 'Maybe I will Nana. See you later.' The happy young woman walks out of the store after that, quickly spotting you and coming up to you with a smile on her face. An eye-blink later, you find yourself embraced by the feline/human/gryphon hybrid girl, and she says, 'Hello[if player is not defaultnamed] [name of player][end if], what a nice surprise to see you again! Come on, let's go to the bookstore together!' Before you really know what's going on, Diana has already dragged you along with her, leaving the optician (and especially its various inhabitants that were giving you curious glances) behind.";
 	WaitLineBreak;
@@ -180,6 +183,7 @@ to say DianaTalkMenu:
 			if the player consents:
 				now sextablerun is 1;
 				say "     You tell the young woman that you don't have time to hang out with her right now and say your goodbyes.";
+				now Mall Optitian is resolved;
 				wait for any key;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
@@ -208,6 +212,7 @@ to say DianaTalk4: [hang out at the bookstore]
 	say "     You accompany Diana to the East Wing of the Smith Haven Mall and go into Brookstone Books together The bookstore is a nice little oasis of peace in the midst of the bustling mall and the chaos-ridden city, allowing the two of you to browse and talk about books, your lives and the world in general. Overall, you have a fun and relaxing time together, making you feel more in touch with your humanity than before. When you come out of the bookstore again hours later, smiling and laughing, Diana gives you a tight hug, then waves goodbye and leaves for her current home.";
 	SanBoost 15;
 	follow the turnpass rule; [time advanced]
+	now Mall Optitian is resolved;
 
 to say DianaOral1: [Eat her out in public]
 	say "     Stepping up close to Diana, you gently push her back against the wall and tell her in a teasing tone that you got another idea what you could do together. The young woman looks surprised, but at the same time intrigued by the sudden implication of a more racy way to pass the time. 'Oh, what's that?' the young woman asks with a smile on her face and one eyebrow raised. In reply, you just grin and sink to your knees, hooking your fingers over the elastic of her skirt and pulling it down and exposing her panties. 'What?! You can't do that here! Someone might -' Diana's shocked outburst is interrupted by a high-pitched gasp as you pull her panties down too and move to lap your tongue over her nether lips. 'Oh god, yes!' she pants loudly as the tip of your tongue plays with her clit a few seconds, then draws back from her exposed sex.";
@@ -239,5 +244,6 @@ to say DianaOral1: [Eat her out in public]
 		say "     Diana happily accepts your words and viewpoint, still eager to put a lot of faith in the person she met only a little while ago and let claim her virginity. Arms wrapping around you, the naked young woman gives you a tight hug and says, 'Thank you so much. I'll take those words to heart. And... this was fun. A bit scandalous, but I kinda like that, if I think about it now.' Turning her head to look over to the spectators still watching the two of you, Diana hesitates for a second, then finds her voice and calls out, 'Okay, show's over folks. Go about your business.' With that said, she quickly collects her clothes from the ground and gets dressed again, with the little group of voyeurs melting away before much longer. 'You're amazing, you know that?' Diana says with a happy smile, then leans in to kiss you on the lips before stroking your cheek. 'I think I'll need some alone-time in the bookstore now to calm down from all of this. Can't come back to Nana and the others too soon, and smelling all aroused. See you soon.' With that said, Diana gives you a little wave of goodbye and walks out of the side passage.";
 		now DianaTransformationProgress is 2; [gryphon/cat transformations met, starting to overlap]
 	now DianaRelationship is 11; [public cunnilingus done]
+	now Mall Optitian is resolved;
 		
 Diana ends here.

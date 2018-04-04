@@ -8,11 +8,8 @@ Version 1 of Inner Mall Events by Wahn begins here.
 [ 100: freaked her out                          ]
 [ 101: player was not interested                ]
 
-
-
 JayMarkRelationship is a number that varies.
 MiltonRelationship is a number that varies.
-DianaRelationship is a number that varies.
 
 Dressing Room Rampage is a situation.
 The sarea of Dressing Room Rampage is "Smith Haven".

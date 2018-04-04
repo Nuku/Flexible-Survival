@@ -5382,6 +5382,7 @@ Include David by Wahn.
 Include Deer by Stripes.
 Include Denise by Wahn.
 Include Desperate Bunny by Nuku Valente.
+Include Diana by Wahn.
 Include Diego by Wahn.
 Include Dominick by Stripes.
 Include Doran by Blue Bishop.
@@ -5401,6 +5402,7 @@ Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
 Include Garrett by Stripes.
 Include Gerty by Qazarar.
+Include Glory by Wahn.
 Include Gordon by Rikaeus.
 Include G-Shep Squad by Rikaeus.
 Include Gwen by Stripes.

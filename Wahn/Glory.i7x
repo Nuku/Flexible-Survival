@@ -13,6 +13,7 @@ Version 1 of Glory by Wahn begins here.
 [  99: abandoned by the player                             ]
 [ 100: ignored by the player                               ]
 
+GloryFate is a number that varies.
 
 Section 1 - Events
 

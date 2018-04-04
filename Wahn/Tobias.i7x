@@ -12,6 +12,7 @@ after going to Smith Haven Mall Lot East while HP of Tobias is 0 and a random ch
 	WaitLineBreak;
 	say "[TobiasTalkMenu]";
 	now hp of Tobias is 1; [initial event done]
+	now Refugee Mare is not resolved;
 
 to say TobiasTalkMenu:
 	LineBreak;
@@ -123,7 +124,7 @@ to say TobiasTalkMenu:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
-				say "     You step back from the dobie, shaking your head slightly as he gives a questioning look.";
+				say "     You step back from the dobie, shaking your head slightly as he gives a questioning look. 'Oh well, have a nice day then. Maybe we'll see each other in the Food Court sometime,' he says and walks off, followed by his two pets.";
 				wait for any key;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
