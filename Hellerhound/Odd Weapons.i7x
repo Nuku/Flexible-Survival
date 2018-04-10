@@ -5,13 +5,13 @@ Section 1 - Garbage Can Shield (Fallen Survivor Event)
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Garbage Can Shield"	"This aluminium garbage can lid has been transformed into an improvised shield by riveting two loops of leather to the inside, perfect for sticking your forearm through. It is is painted gold with a bold crimson 'V' across the surface. Looks like the paint ran down its front a bit before drying, giving the 'V'a bleeding look."	4	garbage can shield
+"Garbage Can Shield"	"This aluminum garbage can lid has been transformed into an improvised shield by riveting two loops of leather to the inside, perfect for sticking your forearm through. It is painted gold with a bold, crimson 'V' across the surface. Looks like the paint ran down its front a bit before drying, giving the 'V' a bleeding look."	4	garbage can shield
 
 garbage can shield is equipment. It is not temporary.
 The AC of garbage can shield is 28.
 The effectiveness of garbage can shield is 30.
 The placement of garbage can shield is "body".
-The descmod of garbage can shield is "You hold an aluminium garbage can lid strapped to your forearm as an improvised shield. It is is painted gold with a bold crimson 'V' across the surface. Looks like the paint ran down its front a bit before drying, giving the 'V'a bleeding look.".
+The descmod of garbage can shield is "You hold an aluminum garbage can lid strapped to your forearm as an improvised shield. It is painted gold with a bold, crimson 'V' across the surface. Looks like the paint ran down its front a bit before drying, giving the 'V' a bleeding look.".
 The slot of garbage can shield is "shield".
 
 the scent of garbage can shield is "Despite everything that you try to do about it, a slight scent of garbage seems to be an inescapable part of this makeshift shield. But hey... one makes use of what you get.".

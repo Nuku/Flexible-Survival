@@ -15,7 +15,7 @@ to say Gorilla Wins:
 			if GorillasMember is 3 and GorillasRep < 4:
 				say "     As you stop fighting and tell the mighty gorilla that he can do what he wants to you, he chuckles heartily. 'Hah! I knew a scrub like you could not hold the distance!' he chuckles, flexing his muscled arms. 'Now, get to work, [if cocks of player is 0]girl[else]boy[end if]! That's what you joined the team for, right?'";
 			else if GorillasRep < 8:
-				say "     As you stop fighting and tell the mighty gorilla that he can do what he wants to you, he chuckles heartily. 'That's disappointing! A real Gorilla never gives up!' he chastises you, flexing his muscled arms. 'But I guess that you just can't wait to get a demonstration of my other skills. Okay then... Time to take one for the team. Litteraly.'";
+				say "     As you stop fighting and tell the mighty gorilla that he can do what he wants to you, he chuckles heartily. 'That's disappointing! A real Gorilla never gives up!' he chastises you, flexing his muscled arms. 'But I guess that you just can't wait to get a demonstration of my other skills. Okay then... Time to take one for the team. Literally.'";
 			else if GorillasRep > 8:
 				say "     As you stop fighting and tell the mighty gorilla that he can do what he wants to you, he chuckles heartily. 'I knew that you could not resist the sight of these babies,' he chuckles, flexing his muscled arms. 'I guess that, outside the locker room, you're horny for some cock, just like everyone else in this city. Let me give you what you want.";
 			else:

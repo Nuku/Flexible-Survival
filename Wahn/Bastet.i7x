@@ -342,7 +342,7 @@ to say BastetTalkMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-	
+
 [
 Can you add basic conversation nodes about Anktepi, Nermine and the player. I'd like each to become quite large depending on states but just existing will be good for now.
 Oh, and Bastet herself.
@@ -374,9 +374,9 @@ to say BastetTalk2:
 	else if calcnumber is 2:
 		LineBreak;
 		say "     You laugh about the haughty way she shows to her one and only worshiper, then tell the lioness in no uncertain terms that the only power she has right now is as a cock-tease. And stringing men along to serve her for sexual gratitifcation just means she's a slut. The lioness gives a little growl at these words, then chokes it down and refrains from giving a nasty reply. Still, you can tell that she is furious, seeing your comment as a direct attack on her way of life.";
-		say "    [bold type]Bastet's approval of yourself has decreased.[roman type]";
+		say "     [bold type]Bastet's approval of yourself has decreased.[roman type]";
 		decrease BastetApproval	by 1;
-	else: 
+	else:
 		LineBreak;
 		say "     You keep silent, letting her words stand as they were said. Bastet takes this as assent, smiling a little as she continues to believe that she is right about everything. Her [bold type]approval[roman type] of yourself has [bold type]risen a little[roman type].";
 		increase BastetApproval	by 1;
@@ -422,7 +422,7 @@ to say BastetSexMenu:
 			now title entry is "Fuck her pussy";
 			now sortorder entry is 5;
 			now description entry is "Enter the sexy lioness and come in her";
-		[]		
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -539,7 +539,7 @@ to say BastetSex4: [vaginal sex]
 		decrease BastetApproval by 1;
 	else: [joyful missionary]
 		say "     You let your gaze wander over her tight sheath-dress and its semitransparent sections. Then, you step up to the lioness and slide an arm around her body, pulling the attractive woman closer and giving her a demanding kiss on the muzzle. She melts into your grasp, leaning forward to brush her body against your front, with her arms wrapping around you all of their own and embracing you. Making out with Bastet for a moment or two longer, you then slide both hands up the sides of shapely form and give her breasts a little squeeze. The bound goddess purrs loudly as you man-handle her this way, well-amicable with letting you touch her by now. Leaning close to one of her pointy ears, you whisper into it that you want her under you, stretched out and with her legs spread. Bastet chuckles at the lust audible in your voice, and after only a slight moment of hesitation, she takes your hand and starts for the doorway leading into Nermine's back room.";
-		say "     This causes a little gasp to come from the side - glancing that way, you see Anktepi stand there, the devoted priest and servant of your bound goddess. You give him a grin and a wink, then step into the other room with Bastet, where the two of you gravitate towards the mattress Nermine has laid out there. As the sexy lioness starts to hike up the lower edge of her dress, sliding it up to reveal the shapely form of her furry buns and the base of her tail, you can her her mutter under her breath, 'Gonna fuck [ObjectPro of player] right on that bitch's bed.' Seems like the antipathy between the two females plays right into your cards right now. Bastet is naked underneath the kalasiris, most likely because the ancient Egyptian goddess isn't used to panties - or just maybe because she anticipated further sexual pleasures yet to come. With bated breath, you watch her strip slowly and enticingly, eventually dropping the sheer dress on the floor.";
+		say "     This causes a little gasp to come from the side - glancing that way, you see Anktepi stand there, the devoted priest and servant of your bound goddess. You give him a grin and a wink, then step into the other room with Bastet, where the two of you gravitate towards the mattress Nermine has laid out there. As the sexy lioness starts to hike up the lower edge of her dress, sliding it up to reveal the shapely form of her furry buns and the base of her tail, you can hear her mutter under her breath, 'Gonna fuck [ObjectPro of player] right on that bitch's bed.' Seems like the antipathy between the two females plays right into your cards right now. Bastet is naked underneath the kalasiris, most likely because the ancient Egyptian goddess isn't used to panties - or just maybe because she anticipated further sexual pleasures yet to come. With bated breath, you watch her strip slowly and enticingly, eventually dropping the sheer dress on the floor.";
 		WaitLineBreak;
 		say "     Running a hand up to her nipples and circling one of them with a finger, the lioness throws you a sexy look, then turns around and bends forward, presenting presenting her ass and the sweet pussy between her legs. The show arouses you more than just a little bit, and while you quickly get rid of your own clothes and gear, Bastet lays down on the comfortable blankets and pillows of Nermine's bed, stretching out luxuriously as she waits for you. Looking down at the proud lioness, naked and ready as she is, you tell her with conviction that she is the sexiest goddess you ever met. Bastet replies with a deep purr, looking at you and opening her legs a little bit more, inviting you to get between them. And that is exactly what you do, kneeling on the mattress in front of the sexy female, yearning to touch her.";
 		say "     Sliding a hand between Bastet's thighs, you stroke it up the inside of her leg until you reach the lioness's pussy waiting for you. Her soft-furred body feels warm to your touch, as do the slightly spread folds of her sex. Stroking over it, you hear the feline woman suck in a little breath, suppressing a moan at the touch. Seems like she intends to keep her composure as long as possible - she is a proud woman, after all. You idly wonder to yourself how long she will be able to last and give her another caress, from the sensitive nub of her clit over her folds all the way to the narrow valley between her furry buns. Pressing in against her pucker with the tip of a finger draws a gasp of surprise. With Bastet distracted a little, you abandon the feint at her back door to suddenly slip a finger knuckle-deep into her sex. 'Fuck,' she murmurs under her breath as you penetrate her body, the claws on both hands digging a little into the sheets and mattress beneath.";

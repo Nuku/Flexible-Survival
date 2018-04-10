@@ -1,15 +1,15 @@
 Version 1 of Sex Ed by Prometheus begins here.
- 
+
 [   AnatomyCourse                                                               ]
 [   0: Has not enrolled in class                                                ]
 [   1: Is enrolled in class (Humanoids)                             	          ]
 [   2: Has had introductory lesson on Humanoids (Canines, Felines, and Equines) ]
- 
+
 [   BehaviourandCustoms                                                         ]
 [   0: Has not enrolled in class                                                ]
 [   1: Is enrolled in class (Canines, Felines, and Equines)                     ]
 [   ...:                                                                        ]
- 
+
 [   KinksandFetishes  (Bondage, Vore, Dominance, Roleplay etc.                  ]
 [   0: Has not enrolled in class                                                ]
 [   1: Is enrolled in class (Roleplay)                                          ]
@@ -17,7 +17,7 @@ Version 1 of Sex Ed by Prometheus begins here.
 [   3: Has had introductory lesson on Dominance (Bondage)                       ]
 [   4: Has had introductory lesson on Bondage (Vore)                            ]
 [   ...:                                                                        ]
- 
+
 [   LectureCheck                                                                ]
 [   0: Not enrolled in any lectures                                             ]
 [   1: Enrolled, but no lectures attended yet                                   ]
@@ -40,7 +40,7 @@ to FirstLectureEvent: [Unlocks lecture hall]
 	WaitLineBreak;
 	LectureChoiceEvent;
 	now LectureCheck is 1; [Lecture Intro Done]
-	
+
 instead of going north from Lecture Street while LectureCheck is 1:
 	say "     This time, you know to go straight to the registrar. Stepping up to her desk, you are inspected by the elderly woman, glancing at you over the rim of her glasses. Then she says in a no-nonsense tone, 'New Student? Or just trying to figure out where you have to go? And yes, we know it is confusing that classes get moved around so much, but there has been an increased need for [italic type]thorough[roman type] cleaning after some lectures. You wouldn't want to get into those rooms before they are scrubbed.' It doesn't look like she recognizes you at all - but then, with how many people come through here every day, and the shifting nature of their bodies, it kinda makes sense that she just stopped trying.";
 	LectureChoiceEvent;
@@ -85,7 +85,7 @@ to LectureChoiceEvent: [Choose Lecture to attend]
 		now title entry is "Enroll in the Kinks and Fetishes Lecture";
 		now sortorder entry is 5;
 		now description entry is "Spend an enrollment token to join the Kinks and Fetishes Lecture";
-	[]	
+	[]
 	if KinksandFetishes > 0 and KinksandFetishes < 99:
 		choose a blank row in table of fucking options;
 		now title entry is "Kinks and Fetishes";
@@ -133,7 +133,7 @@ to LectureChoiceEvent: [Choose Lecture to attend]
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say LectureEnrollmentInfo:
 	say "     Stepping up to her desk and asking where to enroll, you are inspected by the elderly woman, glancing at you over the rim of her glasses. Then she replies, 'Go visit the Dean in the administration building. He will give you a token that shows that you have paid the tuition for a course. Bring one to me and we can see what courses still have openings for new students.'";
 
@@ -176,7 +176,7 @@ to say KinksLectures:
 
 to say AnatomyLectureEnrollment:
 	say "     As you say that you want to enroll in the course, the registrar checks a list and says, 'So you're interested in the Anatomy Lecture? We do have some openings for that, yes. Apparently some students dropped out since they couldn't handle the nudity and the lecturer's hands-on approach. You do understand that this is a comprehensive course, with mixed genders and species?' She glances over her glasses, as if expecting you to object and withdraw your interest.";
-	say "     [bold type]Do you really want to enroll in the Anatomy Lecture?[roman type][line break]";	
+	say "     [bold type]Do you really want to enroll in the Anatomy Lecture?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure! What's a little nudity these days?";
 	say "     ([link]N[as]n[end link]) - Hmm, maybe not...";
@@ -198,7 +198,7 @@ to say AnatomyLectureOne:
 	say "     [bold type]The screen at the front illuminates with a message. This course will deal with first hand experiences of all genders and many species - last chance to leave now, for anyone squeamish about that. Do you want to stay?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stay. You have enough interest to endure anything you may find distasteful.";
-	say "     ([link]N[as]n[end link]) - Leave. while you may have been initially interested, you aren't comfortable with everything involved.";
+	say "     ([link]N[as]n[end link]) - Leave. While you may have been initially interested, you aren't comfortable with everything involved.";
 	if player consents: [stay]
 		say "     'With current affairs, humans may seem to be the blandest creature wandering around the city and the college when compared to the mythical beasts that have developed recently. But even within humans, there is variety. Some have remained unaltered, either through isolation or care, while others appear human but have changed in other ways. Examples of this are the Spartans that are part of the college and the Vikings that some of you may have seen around the beach. As far as I am aware, these people still display normal human anatomy, though some may have swapped sex or had increased muscle mass and genital growth. But I'm getting ahead of myself as some of you may not have an advanced knowledge of the human anatomy, so I shall start there. Bear in mind that this is anatomy, not physiology, so most of the focus goes into appearance rather than function. I will however give a brief overview of some parts. For the purpose of education of course.'";
 		say "     'I hope that this won't make any of you uncomfortable, but we will be teaching this class naked in order to use our bodies as the anatomical models. This is your chance to leave if you don't feel comfortable with this, but the dean will not be giving you a refund.' Unsurprisingly, no one moves, their attention still focused on the lecturers at the front. However, one hand goes up, quickly noticed by Dr. Vayne, who indicates for them to ask their question. The young male student hesitantly speaks, 'Would it be helpful if some of the human students unclothed and mirrored your demonstration so that those further from the front can see what you are doing more clearly?' The lecturer beams at this show of student participation, nodding her approval. A few people throughout the class strip, appreciative hoots and whistles accompanying their actions.";
@@ -213,20 +213,20 @@ to say AnatomyLectureOne:
 		say "     'Onto the reproductive system,' Dr. Vayne announces to the applause of the hall, causing she and her husband to smile. 'Anyone would think that students had sex on the brain near constantly,' she says teasingly as the class quietens down. 'The primary male sexual organs are the penis and the testes. The testes are held in the scrotum to maintain a stable temperature and protect them from physical harm. The female primary sexual organs are the vagina, and arguably, the breasts. We covered a bit on arousal during the circulatory system, so I won't repeat myself on that.' She gets her husband to seat himself on the edge of her desk, his erect shaft bobbing about as he moves. 'As you are unlikely to all be able to see the front, could some of you stimulate the male audience volunteers please? Not too much, we want to observe the erection before orgasm.' Charged by the lecture, the eager class complies, wrapping hands, paws, and mouths around the willing subjects.";
 		WaitLineBreak;
 		say "     When every [']anatomical model['] is prepared, the lecturer continues with the class. 'Some of you may have noticed the change in size from flaccid to erect penis. This is due to the blood flowing into the shaft. A few of you may even have been observant enough to see the scrotum become tighter against the man's body. This becomes more pronounced as he gets closer to orgasm.' She wraps her hand around her husband's cock and begins to rub it up and down. 'While masturbation may be enjoyable, many people find it more thrilling for someone else to be the one stimulating them. This may be because they don't know exactly what is coming next,' she says squeezing the base, a groan breaking from her partner's mouth. 'So that those at the front can see this clearly, I shall continue with the handjob rather than switching to giving him oral sex. If the audience could do so too so that those around them can see.'";
-		say "     ‘Some have the misguided idea that sex follows the order of hand, to mouth, before the more conventional vaginal or anal penetration. This doesn't always have to be the case.' Her hand is still moving, bringing her husband closer and closer to release. 'This is because lubrication is important; no one wants anything to [italic type]tear [roman type]do they? If you use a bottle of lube then there is little reason that you can't start with penetrative sex and even finish them off by hand or mouth.' Clyde taps the top of the desk, signaling his nearing climax. 'I want those at the front to watch carefully. See how different parts tense up as he orgasms. Those whom are watching the student volunteers, do the same for them when they climax.' Her hand movement accelerates, speeding towards a satisfying finish. With an ecstatic outburst, her partner begins to cum, semen splattering over his body, the lecturer's hand, and the desk.";
+		say "     'Some have the misguided idea that sex follows the order of hand, to mouth, before the more conventional vaginal or anal penetration. This doesn't always have to be the case.' Her hand is still moving, bringing her husband closer and closer to release. 'This is because lubrication is important; no one wants anything to [italic type]tear [roman type]do they? If you use a bottle of lube then there is little reason that you can't start with penetrative sex and even finish them off by hand or mouth.' Clyde taps the top of the desk, signaling his nearing climax. 'I want those at the front to watch carefully. See how different parts tense up as he orgasms. Those whom are watching the student volunteers, do the same for them when they climax.' Her hand movement accelerates, speeding towards a satisfying finish. With an ecstatic outburst, her partner begins to cum, semen splattering over his body, the lecturer's hand, and the desk.";
 		WaitLineBreak;
 		say "     Around the class, progressively more volunteers are brought to a similar finish, cum collecting on students and chairs. The scent of fresh sperm permeates throughout the room, accompanied by the relieved sighs of those who have orgasmed. It would seem that some of those watching couldn't help themselves either and have been masturbating as they observe the lesson. The lecturer's voice cuts through the collective euphoria, 'If everyone could listen to me again just for a moment while I discuss the female genitalia. Thank you. While the clitoris is often discussed when talking about female sexual pleasure, there is much more to arousing us than just tweaking the clit. Stimulation of the breasts, the vulva, and the vagina are important too.'";
 		say "     Her husband allows her to sit on the edge of the desk, residual semen dripping from the tip of his cock. 'Once again, if volunteers could allow those near them to observe if they can't see the front clearly,' Clyde requests, taking over the lesson. 'To those of you with a clear view, my wife is obviously in a state of high arousal. This can be seen by the engorgement of the external lips of the vulva and the copious lubrication that is leaking in preparation for sexual intercourse. Some of the students in the class may be in a similar state, human or otherwise. If someone would be willing to manually stimulate each of the female volunteers with their hands, that would be greatly appreciated. The rest of you, please watch and take notes, either on paper or just mentally.' Throughout the room, several students that were closest to the volunteers crouch down and begin grazing their fingers over the vulvas of the volunteers.";
 		WaitLineBreak;
 		say "     Clyde continues the lecture as his fingers dance over his wife's slit, occasionally brushing over her clitoris, an occurrence that is signaled by a sharp intake of breath. 'With a bit of experimentation, you may find each person's favourite place to be touched. For many of you, this area will be internal, so if we insert a finger or two into the vagina, we can stimulate a greater area. Obviously, you will notice the difference in texture from the inside of an aroused vagina to that of the outside. I have heard the comparison between it and the inside of one's mouth. While you pleasure your partner internally, you can also continue outside with your thumb or other hand. You could also stimulate the area around the anus, or once again, penetrate it with your fingers. However, for this lecture, we shall not be covering that method. You could consider it extra credit,' he says, chuckling at his own joke.";
-		say "     'If everyone could please withdraw their fingers from the, to put it crassly, [']anatomical models['], we shall begin oral stimulation. Many of you may enjoy the flavours. Some of you will not, and we encourage that these people to let someone else take over. Alternate between licking over the external lips, clitoris, and penetrating her with your tongue. This will help vary what it feels like which should boost her pleasure.' The sound of slurping is broken only by the interspersed moan, grunt, or other sound of enjoyment. You would imagine that the lecturers have had plenty of practice at this as Dr. Vayne grips her husband’s head between her thighs, his greedy tongue flicking against her cunt. Fluid drips from the corner of the desk, and you are unsure whether it is fem-lube, saliva, or a mixture of both.";
+		say "     'If everyone could please withdraw their fingers from the, to put it crassly, [']anatomical models['], we shall begin oral stimulation. Many of you may enjoy the flavours. Some of you will not, and we encourage that these people to let someone else take over. Alternate between licking over the external lips, clitoris, and penetrating her with your tongue. This will help vary what it feels like which should boost her pleasure.' The sound of slurping is broken only by the interspersed moan, grunt, or other sound of enjoyment. You would imagine that the lecturers have had plenty of practice at this as Dr. Vayne grips her husband's head between her thighs, his greedy tongue flicking against her cunt. Fluid drips from the corner of the desk, and you are unsure whether it is fem-lube, saliva, or a mixture of both.";
 		WaitLineBreak;
 		say "     A cry of ecstasy makes you turn around, eager to watch the young woman brought to orgasm by whichever skilled student is between her legs. Much of the unoccupied class have followed suit and when the naga straightens up, he is greeted by the eyes of much of the class. He gives a sheepish smile and flicks his tongue a few times. 'Mmm, that tongue,' you hear his partner sigh as she comes down from her climax. It doesn't take much longer for the rest of the volunteers and Dr. Vayne to reach orgasm too, the scents of their fluids mixing with the earlier aroma. Breathing heavily, the female lecturer returns to taking the class. 'Someone managing to bring their partner to climax faster than my husband can, how exciting! But we've run out of time for this lecture. We hope to see you in the rest of the course. The next one's on Canine, Feline, and Equine anatomy.' As everyone shuffles around, packing bags, redressing, and chatting, she shouts over the din, 'I expect everyone to do some further study of humans. Remember, you may be tested on this.'";
 		now AnatomyCourse is 2;
 	else: [leave]
 		say "     Shaking your head, you quietly rise from your seat and leave through the side door. You hope some of the lectures won't be so broad in content.";
 		now AnatomyCourse is 99;
-		
+
 to say AnatomyLectureTwo:
 	say "     Having enjoyed the previous anatomy lecture and eager to see what you can further learn about the species detailed in the upcoming one, you quickly take a seat near the front again. You are curious whether the lecturers will call any volunteers up the front to act as the anatomical models, or whether they will just expect people to observe the nearest student of the correct species. Your musings are cut short by the arrival of the lecturers. [if hp of Sylvia > 4]A familiar voice from behind you calling your name in a hushed tone makes you turn around. You are not sure whether you are surprised to see Sylvia or not. You rather thought that she might be beyond this basic level of anatomy, and you question her about this. Julian and the cats wave as the collie replies, 'I wanted to have the post-apocalyptic version. More focus on the interesting bits. Oh, the lectures starting. I should get ready, talk to you later.' She begins rifling through her bag as you turn back to the front[else]As they reach the desk at the front of the room, they undress in preparation to begin. Despite the human form being less exotic than most of the infections of the city, much of the class still takes a break from their conversations to rove their eyes over the exposed flesh. The shameless students are rewarded with a smile as Dr. Vayne begins to boot the computer up, suggesting how she plans to demonstrate from the front[end if].";
 	say "     'I'm delighted, though not surprised, to see so many of you still here after the previous lecture. I realise that much of it was probably boring when most of you were human at some point. Attendance tends to slip over the course of the semester, so I thank you for continuing to come. It will help with your end of course test. Today's lecture is on the anatomy of mundane canines, felines, and equines. This means that we will not be specifically covering mythological beings and species similar to our own. Those may be covered in an extra credit lecture depending on how well the class does in the exam. There may be some similarities between our plane's animals and those of others, but be careful in applying this lesson to beings not native to our world. I wouldn't want something nasty to happen.'";
@@ -258,15 +258,15 @@ to say AnatomyLectureTwo:
 	say "     'Partner up again,' Clyde calls, his wife getting intimate with a stallion on the floor behind him. 'A reminder that there is to be no penetrative sex. We don't want someone requiring medical attention because they wanted to see how far they could fit a penis into them.' With that, he turns back to the pair behind him, kneeling to begin licking the horse's tail hole. Not being near any equines, you are free to look around the room for any groups that pique your interest. The donkey from earlier has four different students licking up and down his cock, the suggested group size all but forgotten. Between his thighs, a sleek male owl anthro brushes his wings over the equine's swollen testicles while he watches the others service the shaft. The zebra has a classmate nursing from her breasts, the milk dribbling down their chin showing that she is lactating.";
 	say "     You return to watching the Shetland pony, interested to see how he is faring. He is seated on the dragon's lap while the winged reptile strokes their shafts in one hand and cups the smaller male's cheek in the other as they make out. The husky is on her knees, alternating between licking one shaft or both at the same time. He may not be the largest of specimens, but it would seem he has some close friends. One after another, the equines around the room reach climax. The zebra woman orgasms around the fingers of an antelope, the donkey sprays semen into the air to land on his admirers, and the pony and dragon shove their cocks into the husky's eager maw, cumming together. At the front, Dr. Vayne climbs to her feet, covered in the spunk of the stallion and her husband. 'Lecture's over. See you next time. Now where did I leave that towel?' Satisfied with what you have learnt, you leave the lecture theatre, your mind on the different couplings that you have witnessed in class.";
 	now AnatomyCourse is 3;
-	
+
 to say AnatomyLectureThree:
 	say "     <WORK IN PROGRESS. Sorry>";
-	
+
 to say AnatomyLectureFour:
 	say "     <WORK IN PROGRESS. Sorry>";
-	
+
 to say AnatomyLectureFive:
-	say "     <WORK IN PROGRESS. Sorry>";	
+	say "     <WORK IN PROGRESS. Sorry>";
 
 [ BEHAVIOUR CLASSES BEHAVIOUR CLASSES BEHAVIOUR CLASSES ]
 
@@ -278,13 +278,13 @@ to say BehaviourLectureOne:
 
 to say BehaviourLectureTwo:
 	say "     <WORK IN PROGRESS. Sorry>";
-	
+
 to say BehaviourLectureThree:
 	say "     <WORK IN PROGRESS. Sorry>";
-	
+
 to say BehaviourLectureFour:
 	say "     <WORK IN PROGRESS. Sorry>";
-	
+
 to say BehaviourLectureFive:
 	say "     <WORK IN PROGRESS. Sorry>";
 
@@ -298,10 +298,10 @@ to say KinksLectureOne:
 
 to say KinksLectureTwo:
 	say "     <WORK IN PROGRESS. Sorry>";
-	
+
 to say KinksLectureThree:
 	say "     <WORK IN PROGRESS. Sorry>";
-	
+
 to say KinksLectureFour:
 	say "     <WORK IN PROGRESS. Sorry>";
 

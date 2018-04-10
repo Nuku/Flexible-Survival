@@ -153,7 +153,7 @@ When Play begins:
 	now body change entry is "it grows tougher, becoming tall, yet stocky in build. You have wide shoulders and a large body that is all coiled muscle. Your hands and feet become paw-like, with black claws at the ends of your digits. You become aware of your own growing scent, strong and mustelid in odor. You feel yourself filling with aggressive power, as well as an urge to protect... something"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "coarse fur spreads across your body. It is a dark brown with some lighter patches forming along your sides, flanks and rear"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you start to shift, gaining a short, thickly furred tail"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes brown in colour, but otherwise human-like in appearance. As you watch, your new shaft is bundled up in a coarse-furred sheath which spreads down to cover your ballsac as well"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it becomes brown in colour, but otherwise human-like in appearance. As you watch, your new shaft is bundled up in a coarse-furred sheath which spreads down to cover your ballsack as well"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 14;
 	now sta entry is 18;

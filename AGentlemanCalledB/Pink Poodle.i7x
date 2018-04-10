@@ -29,9 +29,9 @@ to say PinkPoodledesc:
 		now poodleapproved is 0;
 	say "     As you wander through the high rise district, a figure steps out of a [one of]designer clothing store[or]high end shop[or]salon[at random] into view just ahead of you. She is an elegant-looking poodle girl with bright pink fur. The pink fluff does little to conceal the presence of her ample breasts, and her shaven lower half exposes her shapely torso and wet canine cunt. Her fashionable appearance is completed by large fluffy pompons covering your forearms and calves as well as the tip of her tail.[run paragraph on]";
 	if poodleapproved is 1:
-		say "  As she returns your inspection, a sultry smile creeps across her muzzle. [one of]'Your place or mine?' she says with a refined French accent before striding forward confidently. 'How about right here?'[or]'Ah, mon cher,' she says with a refined French accent before striding forward confidently. 'Looking for some company?'[or]'Ah, my lonely one,' she says with a refined French accent before striding forward confidently. 'You look like you could use some company.'[at random]";
+		say " As she returns your inspection, a sultry smile creeps across her muzzle. [one of]'Your place or mine?' she says with a refined French accent before striding forward confidently. 'How about right here?'[or]'Ah, mon cher,' she says with a refined French accent before striding forward confidently. 'Looking for some company?'[or]'Ah, my lonely one,' she says with a refined French accent before striding forward confidently. 'You look like you could use some company.'[at random]";
 	else:
-		say "  As she returns your inspection she scoffs, turning up her nose at you. [one of]'Such riff-raff you find around here these days!'[or]'Another uncouth beast,'[or]'Such a boorish creature!'[at random] she says with a refined French accent before striding forward confidently. 'I suppose I shall have to deal with you before you put my clients off.'";
+		say " As she returns your inspection she scoffs, turning up her nose at you. [one of]'Such riff-raff you find around here these days!'[or]'Another uncouth beast,'[or]'Such a boorish creature!'[at random] she says with a refined French accent before striding forward confidently. 'I suppose I shall have to deal with you before you put my clients off.'";
 
 to say losetoPinkPoodle:
 	now nopoodlesex is 0;
@@ -40,7 +40,7 @@ to say losetoPinkPoodle:
 	else:
 		if HP of player > 0:
 			say "     Unable or unwilling to resist the pretty pink poodle any longer, you raise your hands and signal your submission. ";
-			say "'I knew you would come around, darling. Now let's get down to business,' she says in her refined french accent as she gently pushes you to the ground.";
+			say "     'I knew you would come around, darling. Now let's get down to business,' she says in her refined french accent as she gently pushes you to the ground.";
 			if cocks of player > 0 and a random chance of 2 in 3 succeeds:
 				say "[pinkpoodledefeatsex]";
 			else if cunts of player > 0 and a random chance of 2 in 3 succeeds:
@@ -49,7 +49,7 @@ to say losetoPinkPoodle:
 				say "[pinkpoodledefeatoral]";
 		else:
 			say "     Unable to fend off the aggressive pink poodle, you stumble and fall to the ground. ";
-			say "'Mmm, so you like to play rough? Usually that costs extra darling, but I suppose you could make up for it some other way,' she says in her refined french accent as she steps over your supine form.";
+			say "     'Mmm, so you like to play rough? Usually that costs extra darling, but I suppose you could make up for it some other way,' she says in her refined french accent as she steps over your supine form.";
 			if cocks of player > 0 and a random chance of 2 in 3 succeeds:
 				say "[pinkpoodledefeatsex]";
 			else:

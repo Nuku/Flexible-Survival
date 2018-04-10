@@ -155,7 +155,7 @@ The sarea of Slightly Sidetracked is "Reservoir".
 
 Instead of resolving Slightly Sidetracked:
 	If resevquest is 2:
-		say "Making your way from technical assistance room you find yourself cautiously listening to various noises that seem to be coming from all around you. Instantly you put yourself on guard as your pervasive sense of danger starts to ring through your spirit like a church bell of on Sunday. When a somewhat familiar sound comes from behind you your feet are running without you having to tell them to move as you find yourself moving throughout the reservoir at top speeds. The raw need to [italic type]be away[roman type] taking hold of you until soon your mind is all but screaming at you to flee.";
+		say "Making your way from technical assistance room you find yourself cautiously listening to various noises that seem to be coming from all around you. Instantly you put yourself on guard as your pervasive sense of danger starts to ring through your spirit like a church bell of on Sunday. When a somewhat familiar sound comes from behind you, your feet are running without you having to tell them to move as you find yourself moving throughout the reservoir at top speeds. The raw need to [italic type]be away[roman type] taking hold of you until soon your mind is all but screaming at you to flee.";
 		say "Sadly this leads you on a merry little romp throughout through the reservoir and directly into the arms of danger. Several forms all look at you with various smirks, scowls, leers and grins and instantaneously you're preparing yourself to fight as your feet skid to a halt roughly five yards between you and the creatures ahead of you.";
 		say "[resevfight2]";
 		say "[resevfight2]";

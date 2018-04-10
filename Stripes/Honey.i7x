@@ -186,7 +186,7 @@ to say DismissHoney:
 	if player is not in Garden: [regular dismiss]
 		say "     Honey presses a quick kiss to your cheek before flying away.";
 	else: [dismissing her in the abbey]
-		say "      Honey just shrugs her shoulders, going back to work in the garden.";
+		say "     Honey just shrugs her shoulders, going back to work in the garden.";
 
 Honey is a woman.
 The description of Honey is "[HoneyDesc]".

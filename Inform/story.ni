@@ -1192,7 +1192,7 @@ carry out hunting:
 					if scorefound is 0:
 						if printed name of z exactly matches the text topic understood, case insensitively:
 							now scorefound is 1;
-				if printed name of z  matches the text topic understood, case insensitively:
+				if printed name of z matches the text topic understood, case insensitively:
 					say "It should be somewhere...";
 					now found is 1;
 					let dice be a random number from 1 to 20;
@@ -2186,7 +2186,7 @@ To AttemptToWaitAndClearHyper: [use where you want a wait and clear. Much like A
 Section Waithate
 
 [creates (and sets) flag for skipping many wait for any key;]
-[i had difficulty setting it so that the player could directly toggle this, as well as have other chunks of code do the same thing. made a command, which is for when the player types it out, and a function, which is for when code calls it. the command just calls the code. i'm sure there is a better way to do this, but it seems to work properly.]
+[i had difficulty setting it so that the player could directly toggle this, as well as have other chunks of code do the same thing. made a command, which is for when the player types it out, and a function, which is for when code calls it. the command just calls the code. I'm sure there is a better way to do this, but it seems to work properly.]
 waiterhater is a number that varies.
 
 WaitHateFunction is an action applying to nothing.
@@ -5214,7 +5214,7 @@ Include Junkman For FS by Stripes.
 Include Kangaroo by Guest Writers.
 Include Killer Whale For Fs by Stripes.
 Include Knight for FS by Stripes.
-Include Koballoon by Stripes.
+Include Koballoon by Song.
 Include Kobold Gang by Closerhenry.
 Include Komodo Dragon for FS by Stripes.
 Include Latex Ermine for FS by Stripes.
@@ -5286,7 +5286,7 @@ Include Retriever by AGentlemanCalledB.
 Include Rhino For Fs by Stripes.
 Include Robed Cultist by Wahn.
 Include Rodeo Clown For Fs by Stripes.
-Include Rubber Drake by Stripes.
+Include Rubber Drake by Song.
 Include Rubber Tigress by Sarokcat.
 Include Saber Kitty by Blaydrex.
 Include Sabretooth by Sarokcat.

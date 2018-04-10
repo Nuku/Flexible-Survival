@@ -48,7 +48,7 @@ to say losetopinkgel: [Loss to Pink Gel.]
 to say beatthepinkgel: [Victory over Pink Gel.]
 	if inasituation is true:
 		say ""; [taken care of at the event source]
-	else:	
+	else:
 		say "     Defeated, the Pink Gel falls to the ground. Apparently aroused by the fight, she spreads her legs and begins playing with herself.";
 		if libido of player > 40:
 			say "     You are quite horny. Will you accept the pink girl's offer?";
@@ -58,7 +58,7 @@ to say beatthepinkgel: [Victory over Pink Gel.]
 					if cocks of player > 0: [Herm Player]
 						say "     Taking your [cock size desc of player] [cock of player] member in your hand, you begin stroking it as you decide how best to deal with the pink gel girl. Turning around you shove your [cunt size desc of player] cunt in the girl's face while you place your [cock size desc of player] rod between her massive mounds. As the girl begins licking your dripping twat, you fondle her tits as you fuck them. The gel girl uses one hand to play with your ass as the other plays with her own drenched pussy. After some time you reach your peak and spray your seed across her belly as you cover her face in your feminine juices. Reaching her peak at the same time the gel girl releases a blast of her pink juices across the ground. Having finished, you redress, gather your things, and continue on your way, leaving the pink girl in a puddle of your mixed fluids.";
 					else: [Female Player]
-						say "     As you play with your [cockname of player] sex you position yourself over the pink girl's face. As you drip on her face the gel girl starts licking your [cunt size desc of player] pussy as if her life depended on it. You let out a startled gasp at the girl's fervor. After recovering from the sudden attack on your sex you drop down and return the favor by putting just as much effort into eating out the gel girl as she is putting into doing the same to you. Using you tongue and fingers to pleasure the girl as much as you can, you are rewarded as her pink fluids spray across your face. Unable to hold back anymore you cover the girls face in your own juices. After you recover and redress you notice that the gel girl is busy wiping your juices off of her face and into her mouth. Letting out a slight chuckle you move along your way.";
+						say "     As you play with your [cockname of player] sex you position yourself over the pink girl's face. As you drip on her face the gel girl starts licking your [cunt size desc of player] pussy as if her life depended on it. You let out a startled gasp at the girl's fervor. After recovering from the sudden attack on your sex you drop down and return the favor by putting just as much effort into eating out the gel girl as she is putting into doing the same to you. Using your tongue and fingers to pleasure the girl as much as you can, you are rewarded as her pink fluids spray across your face. Unable to hold back anymore you cover the girls face in your own juices. After you recover and redress you notice that the gel girl is busy wiping your juices off of her face and into her mouth. Letting out a slight chuckle you move along your way.";
 				else if cocks of player > 0: [Male Player]
 					say "     Stroking your [cock size desc of player] [cock of player] shaft you spread the gel girl's legs. Placing your member at her opening you easily slide all the way in eliciting a moan. As you pick up the pace she begins moaning loader louder. Fucking her harder and harder the gel girl begins to thrust back into you, pushing you closer and closer to your peak. When the girl reaches her peak her cunt clamps down on your member as her pink juices spray across your groin. The added stimulation brings you to climax and you unload your [short ball size] nuts of their load into the girl's womb. Having finished you pull out and are surprised to see her body take on a cloudy pink colour as your seed is absorbed by it. Giving her ass a gentle swat, you redress and continue on your way.";
 				else: [Neuter Player]
@@ -121,7 +121,7 @@ to say losetobluegel: [Loss to Blue Gel.]
 to say beatthebluegel: [Victory over Blue Gel.]
 	if inasituation is true:
 		say ""; [taken care of at the event source]
-	else:	
+	else:
 		say "     Defeated, the Blue Gel falls to the ground. Apparently aroused by the fight, he spreads his legs and begins playing with himself.";
 		if libido of player > 40:
 			say "     You are quite horny. Will you accept the blue man's offer?";
@@ -150,13 +150,13 @@ to say bluegeldesc: [Blue Gel description]
 	if inasituation is true:
 		say ""; [taken care of at the event source]
 	else:
-		say "      A jiggling man of blue colour. You can see through him, mostly, his gelatin-like flesh tinting the area behind him with its lustrous shade. His upper torso is well defined, with his muscled abs somehow jiggling just a little more than you would expect. Between his legs his footlong flaccid member sways back and forth as he moves. Noticing you he charges with arms outstretched. Apparently he is happy to see you.";
+		say "     A jiggling man of blue colour. You can see through him, mostly, his gelatin-like flesh tinting the area behind him with its lustrous shade. His upper torso is well defined, with his muscled abs somehow jiggling just a little more than you would expect. Between his legs his footlong flaccid member sways back and forth as he moves. Noticing you he charges with arms outstretched. Apparently he is happy to see you.";
 
 
 to say losetopurplegel: [Loss to Purple Gel.]
 	if inasituation is true:
 		say ""; [taken care of at the event source]
-	else:	
+	else:
 		if HP of player > 0:
 			say "     Unwilling to fight the Purple Gel you remove your clothing and present yourself to the creature so that she can sate her sexual desires on you.";
 		else:
@@ -186,7 +186,7 @@ to say losetopurplegel: [Loss to Purple Gel.]
 to say beatthepurplegel: [Victory over Purple Gel.]
 	if inasituation is true:
 		say ""; [taken care of at the event source]
-	else:	
+	else:
 		say "     Defeated, the Purple Gel falls to the ground. Apparently aroused by the fight, she spreads her legs and begins playing with herself.";
 		if libido of player > 40:
 			say "     You are quite horny. Will you accept the purple girl's offer?";

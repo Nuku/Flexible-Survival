@@ -217,7 +217,7 @@ to say MaleDomheat:
 to say Domheat: []
 	if libido of player < 96, increase libido of player by 5;
 	if (libido of player > 90) and (location of player is fasttravel ) and (slutfucked > 8):
-		say "the desire to dominate grows to strong to for you to control and you begine searching for anything that you fuck. you and immediately upon catching one by surprise begine to dominate them";
+		say "The desire to dominate grows to strong to for you to control and you begin searching for anything that you fuck. You are immediately catch one by surprise and begin to dominate them";
 		now slutfucked is 0;
 		let hmonlist be a list of numbers;
 		repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear "outside" ]

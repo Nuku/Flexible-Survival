@@ -54,7 +54,7 @@ to say beatFireSpriteguy:
 		choose a blank row in table of fucking options;
 		now title entry is "Masturbation";
 		now sortorder entry is 1;
-		now description entry is "Have the sprite stroke you off";
+		now description entry is "have the sprite stroke you off";
 	if cocks of player > 0 and cock length of player < 24:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";

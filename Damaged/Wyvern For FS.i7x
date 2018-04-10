@@ -703,7 +703,7 @@ to say wyvorescene:
 		say ". However, not intent on being consumed so easily and now free from your prior bondage, you physically struggle to stop your descent, hands pushing yourself away from that final portal to [ghis] stomach. The wyvern growling and groaning in the wake of your discontent, it's become a fight to escape!";
 		now boundsegment is 1;
 	else:
-		say ". Not putting up a fight, even as you're now liberated from your prior bondage, all it one takes is one final, powerful gulp to squeeze you past that final portal to [ghis] stomach. Surrounded by supple, saliva-slicked walls, you begin to feel yourself slowly being drained. You don't imagine you'll last long in here...";
+		say ". Not putting up a fight, even as you're now liberated from your prior bondage, all it takes is one final, powerful gulp to squeeze you past that final portal to [ghis] stomach. Surrounded by supple, saliva-slicked walls, you begin to feel yourself slowly being drained. You don't imagine you'll last long in here...";
 		now boundsegment is 0;
 	if waiterhater is 0, wait for any key;
 	wyvore;

@@ -223,7 +223,7 @@ to say GorillaWater2:
 		say "     You try to return their cocks favour, but quickly turn into a quivering mess thanks to their relentless assault. They 'help' you as they can, pressing their large cocks against your lips, and frotting them with each other and the inside of your mouth. You climax first, and hard, sending simultaneously a large dose of cum, which each brother tries to swallow the most of; they only manage to cover their face with the stuff, but in their endaevour, they take pleasure in prolonging your orgasm as long as they can.  With this out of the way, they focus on pumping their cocks in your mouth, making out and exchanging your sexual fluids as they do so. They cum not long after, painting your face white with their semen.";
 	else:
 		say "[if cunts of player is 1]Mike and Zach share duties. Mike applies his mouth against your clit and give it a series of powerful sucks, and licks, while Zach explores each of your [Cunt Length] pussy with his tongue, making sure to let no square inch untouched[else]The siblings share your [cunts of player] pussies, exploring them with their dextrous tongue. They playfully try to feel each other's tongue inside of your body, which sends you all kind of sensations through your body[end if].";
-		say "     You try to return their cocks favour, but quickly turn into a quivering mess thanks to their relentless assault. They 'help' you as they can, pressing their large cocks against your lips, and frotting them with each other and the inside of your mouth. You climax first, and hard, sending simultaneously a large dose of cyprine, which each brother tries to swallow the most of; they only manage to cover their face with the stuff, but in their endaevour, they take pleasure in prolonging your orgasm as long as they can. With this out of the way, they focus on pumping their cocks in your mouth, making out and exchanging your sexual fluids as they do so. They cum not long after, painting your face white with their semen.";
+		say "     You try to return their cocks favour, but quickly turn into a quivering mess thanks to their relentless assault. They 'help' you as they can, pressing their large cocks against your lips, and frotting them with each other and the inside of your mouth. You climax first, and hard, sending simultaneously a large dose of cyprine, which each brother tries to swallow the most of; they only manage to cover their face with the stuff, but in their endeavor, they take pleasure in prolonging your orgasm as long as they can. With this out of the way, they focus on pumping their cocks in your mouth, making out and exchanging your sexual fluids as they do so. They cum not long after, painting your face white with their semen.";
 	say "     The three of you take a short rest, during which you realize that your activities had covered the three of you with various fluids. 'Guess we need another clean-up,' Mike says winking. You sigh, and Zach too. 'Don't worry, we'll keep to ourselves this time. Or at least I will.' Mike held his word, and you eventually manage to clean the two gorillas, who then take your leave after thanking you for indulging them.";
 
 [Training scenes]
@@ -231,7 +231,7 @@ to say GorillaTraining:
 	say "     'Okay, champ. [first time]I assigned you a locker [only]. Go Gear up and come back here,' Roman instructs you. You jog to the locker-room, and [one of]after a couple of minutes of search while evading the various sex piles spread through the room, you manage to find your locker[or]head towards your locker, while evading the various sex piles spread through the room[stopping]. You put on your gear, and hurry back to Roman with a dozen other players. 'Okay, team. I guess that the others are either coming back at another time, or busy in the locker-room. I will make several groups, as usual. Choose one and have fun.'";
 	say "[bold type]Which group do you want to join?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Reception and interception.";
-	say "   More options coming soon.";
+	say "     More options coming soon.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 1:
 		say "Choice? (1-x)>[run paragraph on]";
@@ -301,7 +301,7 @@ to say FootballMatchDefense:
 		say "     The receiver starts his sprint, but you have kept your eyes on him, and you put yourself in an interception course.";
 		increase bonus by 2;
 	else:
-		say "     Distracted by the scrub-turning-orgy in the corner of your vision, you notice to late the Wolves' receiver zooming past you, forcing you to run after him if you want to have any chance at keeping the ball.";
+		say "     Distracted by the scrub-turning-orgy in the corner of your vision, you notice too late the Wolves['] receiver zooming past you, forcing you to run after him if you want to have any chance at keeping the ball.";
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]20[roman type] (Stamina Check):[line break]";
 	if diceroll > 20:

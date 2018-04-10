@@ -94,7 +94,7 @@ to say dormstreetdesc:
 [Room Declaration]
 Second Floor Male Dorms is a room.
 Second Floor Male Dorms is above Tenvale College Male Dorms.
-The description of Second Floor Male Dorms is "Upon looking around you notice that the second floor of the male dorms looks pretty much the same as the first floor, at least aesthetically. There is another notice board on the wall but this one has sign up sheets for, surprisingly, the spartans on the campus. It is by then that you realize that there are a quite a few of them wandering around on this floor, making you muse that perhaps this is where they stay. Thankfully, at least for the atmosphere, the soldier-like college students aren[']t the only ones up here. Like below there are other students wandering around from room to room hanging out with their friends or just studying.".
+The description of Second Floor Male Dorms is "Upon looking around you notice that the second floor of the male dorms looks pretty much the same as the first floor, at least aesthetically. There is another notice board on the wall but this one has sign up sheets for, surprisingly, the spartans on the campus. It is by then that you realize that there are a quite a few of them wandering around on this floor, making you muse that perhaps this is where they stay. Thankfully, at least for the atmosphere, the soldier-like college students aren't the only ones up here. Like below there are other students wandering around from room to room hanging out with their friends or just studying.".
 
 [Room Declaration]
 East of Dorm Street is Tenvale College Male Dorms.

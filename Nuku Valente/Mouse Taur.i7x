@@ -78,7 +78,7 @@ lisaartemiscount1 is a number that varies.
 lisaartemiscount2 is a number that varies.
 
 instead of sniffing Lisa:
-	say "     The mousetaur smells very feminine and musine.  She wears a soft perfume and scented oils.  There is a strong scent of females and sex about her person.";
+	say "     The mousetaur smells very feminine and murine. She wears a soft perfume and scented oils. There is a strong scent of females and sex about her person.";
 
 instead of sniffing Porn Store:
 	say "     The porn store smells of scented oils and candles, lube, latex toys, secret desires and backroom sex.  There is also the smell of mouse [if HP of Sven > 49 and HP of Sven < 99]and snow leopard from its residents[else]from its resident[end if].";
@@ -111,7 +111,7 @@ to say pornstoredesc:
 instead of conversing the Lisa:
 	if lisaartemiscount1 is 5 or lisaartemiscount2 is 5:
 		say "     Having helped deal with her [if hellspawn is not banned]demoness[else][']roo[end if] problem, you tell Lisa that you've driven off several of them.  She smiles at the news and heads towards the counter.  'I thought that might be the case.  There's been a lot less trouble from them lately.  It's looking like the word's getting around among them not to harass my place.  I hate to resort to such tactics, but until they become more civil about it, I can't have them bugging me and my few customers just because it's a sex shop.'";
-		say "     As she's been talking to you, she's opened up the cabinet and taken out the toys reserved for Artemis[if companion of player is rubber tigress], much to the feline's mewling delight.  She nuzzles at your hip and winds around your legs, threatening to topple you over in her eagerness[end if].  You take the two boxes from Lisa, grumbling a little that it's a lot to do just so she can have a tasty treat.  The mousetaur giggles at this and leans over the counter.  'I couldn't help noticing that your feline friend's a little lacking under the tail.  Maybe your rubber kitty's wants a little more out of them than you think.'  [if companion of player is rubber tigress]As Artemis mrowls all the louder, [end if]Lisa slides a tube of rubber cement across the counter with a playful grin on her musine face.  Hmm... Maybe you'd best take a closer [bold type]look[roman type] at the rubber tigress.";
+		say "     As she's been talking to you, she's opened up the cabinet and taken out the toys reserved for Artemis[if companion of player is rubber tigress], much to the feline's mewling delight.  She nuzzles at your hip and winds around your legs, threatening to topple you over in her eagerness[end if].  You take the two boxes from Lisa, grumbling a little that it's a lot to do just so she can have a tasty treat.  The mousetaur giggles at this and leans over the counter.  'I couldn't help noticing that your feline friend's a little lacking under the tail.  Maybe your rubber kitty's wants a little more out of them than you think.'  [if companion of player is rubber tigress]As Artemis mrowls all the louder, [end if]Lisa slides a tube of rubber cement across the counter with a playful grin on her murine face.  Hmm... Maybe you'd best take a closer [bold type]look[roman type] at the rubber tigress.";
 		now HP of rubber tigress is 10;
 		now lisaartemiscount1 is 0;
 		now lisaartemiscount2 is 0;

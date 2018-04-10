@@ -24,10 +24,10 @@ to say Shemale Smooth Collie attack:
 	else if gestation of child > 0:	[player is preggers]
 		if cunts of player > 0:
 			say "     The bitch moves in as if to pounce on top of you before her nose begins twitching. She crouches down close to the ground after pushing you gently onto your back, her nostrils rubbing against your crotch as she inhales deeply. She gives a single lick across your folds, followed by a comforting growl as she nuzzles your stomach.";
-			say "     'I'll have to paw off later, you're carrying a child and I don't want to risk hurting you. I can offer you something to drink though, you do look thirsty.' She doesn't waste a second before pressing a breast you your face and forcing her nipple into your mouth. Milk begins flowing almost instantly, filling your stomach quite quickly as she forces you to suckle.";
+			say "     'I'll have to paw off later, you're carrying a child and I don't want to risk hurting you. I can offer you something to drink though, you do look thirsty.' She doesn't waste a second before pressing a breast against your face and forcing her nipple into your mouth. Milk begins flowing almost instantly, filling your stomach quite quickly as she forces you to suckle.";
 		else:
 			say "     The bitch moves in as if to pounce on top of you before her nose begins twitching. She crouches down close to the ground after pushing you gently onto your back, her nostrils rubbing against your ass as she inhales deeply. She then pulls back, giving you a look of surprise.";
-			say "     'Aren't you a strange one? Somehow you've got a bun in the oven. Don't know how that works, but I don't want to risk hurting you. I can offer you something to drink though, you do look thirsty.' She doesn't waste a second before pressing a breast you your face and forcing her nipple into your mouth. Milk begins flowing almost instantly, filling your stomach quite quickly as she forces you to suckle.";
+			say "     'Aren't you a strange one? Somehow you've got a bun in the oven. Don't know how that works, but I don't want to risk hurting you. I can offer you something to drink though, you do look thirsty.' She doesn't waste a second before pressing a breast against your face and forcing her nipple into your mouth. Milk begins flowing almost instantly, filling your stomach quite quickly as she forces you to suckle.";
 		if HP of player > 0 or a random number from 0 to 50 < libido of player:
 			say "     As you drink the shemale's breast milk, you can feel her cock growing hard and pressing against your chest. At first you go to push it away, but your hand lingers and soon you're holding and even stroking it. This arouses her all the more until finally, with an excited growl, she pops your suckling lips from her nipple and presses her cock into your mouth instead.";
 			say "     Already partially full from the milk, you try to hold the impatient canine back, but she won't be denied. She drives her thick rod into your mouth and down your throat, forcing you to take her throbbing meat. It stuffs your throat[if scalevalue of player < 3] painfully[end if] full, making it hard to breathe as she starts to thrust. The taste of her cock and the scent of her crotch are potent, strong with the creature's virility. Those copious balls of hers are already drooling precum down your throat, adding to the sloshing in your belly.";
@@ -71,7 +71,7 @@ to say Shemale Smooth Collie attack:
 to say Shemale Smooth Collie defeat:
 	if inasituation is true:
 		say ""; [dealt with at the event source]
-	else:	
+	else:
 		say "     The shemale falls to the ground with a thunderous thud and you can even feel the vibrations rolling up your feet as her large canine body hits the ground in defeat. Smirking to yourself while you look over the creature, you can't help but lick your lips and stare at that shapely rear presenting itself to you. The defeated Collie is groaning and writhing stomach down upon the ground, which gives you a nice view of the massive cum-factories between her legs and the overly immense, though slowly softening manmeat to go with them[if libido of player > 30]. Silently contemplating to yourself, you let out a thoughtful, 'Hrm...' as you gaze lustfully at that plump rear and heavy set of most definitely potent baby makers[end if].";
 		say "     Do you want to have some fun with the defeated collie?";
 		now sextablerun is 0;
@@ -186,7 +186,7 @@ to say CollieDesc:
 		say ""; [dealt with at the event source]
 	else:
 		say "     This canine beast looks quite a bit like Lassie, if Lassie were twelve feet tall, and walked upright and had the general shape of an attractive woman, and had eight rather large breasts and a dick that would probably cause a stallion some envy... oh, and much shorter fur. You know, I guess she doesn't look much like Lassie after all.";
-		
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)

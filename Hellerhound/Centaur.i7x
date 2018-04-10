@@ -41,7 +41,7 @@ Instead of resolving a Apple Tree:
 		choose row monster in table of random critters;
 		now area entry is "Plains";
 		now non-infectious entry is false;
-		say "     Noticing you, the centaur whinnies excitedly and pulls away from the tree roots with some effort.  The roots writhe on the ground, as if searching for their prey, before finally slipping back under the earth to await another hungry victim.  The centaur, not noticing what was starting to happen to him, trots over to you, cock swelling and tentacles writhing beside that throbbing, leaf-green meat.  His sheath and ballsac are a dark green in colour.  He looks you over and, with a booming voice, asks: 'Are you going to submit to me?'  You have a feeling that if you don't agree, he'll try to take what he wants by force.";
+		say "     Noticing you, the centaur whinnies excitedly and pulls away from the tree roots with some effort.  The roots writhe on the ground, as if searching for their prey, before finally slipping back under the earth to await another hungry victim.  The centaur, not noticing what was starting to happen to him, trots over to you, cock swelling and tentacles writhing beside that throbbing, leaf-green meat.  His sheath and ballsack are a dark green in colour.  He looks you over and, with a booming voice, asks: 'Are you going to submit to me?'  You have a feeling that if you don't agree, he'll try to take what he wants by force.";
 		if the player consents:
 			say "You bow down your head and he laughs, approaching you with lust in his eyes.";
 			now centaurmate is 1;

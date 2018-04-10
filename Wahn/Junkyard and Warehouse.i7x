@@ -469,7 +469,7 @@ to say Stevenanal:
 
 
 to say Stevenonbottom:
-	say "     Stroking his equine shaft in both hands, you lean in and give him a kiss. As your tongues fence with one another, you let one hand slip down to his ballsac briefly before continuing south. Before he knows it, you've got a finger lightly probing at his pucker. This surprises him and he breaks the kiss.";
+	say "     Stroking his equine shaft in both hands, you lean in and give him a kiss. As your tongues fence with one another, you let one hand slip down to his ballsack briefly before continuing south. Before he knows it, you've got a finger lightly probing at his pucker. This surprises him and he breaks the kiss.";
 	if Stevenmm is 2:
 		say "     'What do you think you're doing? I don't know if I'm ready for that sor- Uhh... I mean, I'm not really interested in that,' he says, trying to sound firm though with that same repressed desire you've heard from him before";
 	else:

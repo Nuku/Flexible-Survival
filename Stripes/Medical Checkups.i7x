@@ -500,11 +500,11 @@ to say medeaadjustments:
 									clear the screen and hyperlink list;
 								now sextablerun is 1;
 								if nam is "Trade medkit":
-									say "You take out a medkit from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.''";
+									say "You take out a medkit from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.'";
 									decrease carried of medkit by 1;
 									increase carried of cunt pill by 1;
 								if nam is "Trade healing booster":
-									say "You take out a healing booster from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.''";
+									say "You take out a healing booster from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.'";
 									decrease carried of healing booster by 1;
 									increase carried of cunt pill by 1;
 								wait for any key;
@@ -727,7 +727,7 @@ to say cunt pill use:
 		now cunts of player is 1;
 		now cunt length of player is 5;
 		now cunt width of player is 3;
-		say "A wave of pleasure washes over your crotch area as a cunt emerges from the once bare spot, dripping with arousal. The enjoyable sensations continue as your insides churn to make room for a womb, ready to accept a male's seed in the hopes of producing a child."; 
+		say "A wave of pleasure washes over your crotch area as a cunt emerges from the once bare spot, dripping with arousal. The enjoyable sensations continue as your insides churn to make room for a womb, ready to accept a male's seed in the hopes of producing a child.";
 	else if a random chance of 1 in 5 succeeds:
 		say "You are wracked with pleasure when your crotch heats up as your [if cunts of player > 1]cunts shift[else]cunt shifts[end if] to the side to make room for a new pussy.";
 		increase cunts of player by 1;
@@ -737,7 +737,7 @@ to say cunt pill use:
 		Follow the cunt descr rule;
 		say "A tingling sensation floods your [if cunts of player > 1]cunts before they grow[else]cunt before it grows[end if] in size, ready to take in bigger loads to inseminate you.";
 
-		
+
 [	HP of Doctor Medea	]
 [ Meeting & MPreg		]
 [ 0 = Not encountered	]
