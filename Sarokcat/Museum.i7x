@@ -103,7 +103,7 @@ instead of fucking Valerie:
 			say "     'Mmm sorry hun, unlike some people I still need some recovery time,' she says with a sly wink. 'Why don't you come back later and we can play?'";
 		else if cocks of player is 0 and cunts of player is 0:
 			say "     Lacking any gender of your own, you have little to offer the sphinx as a sexual partner right now.";
-		else if cocks of the player > 0:
+		else if cocks of player > 0:
 			now lastfuck of Valerie is turns;
 			say "     'Mmm finally, I thought you would never get to the good part,' Valerie says with an aroused look on her face, nimbly leaping down to the ground in front of you. Her wings spread out somewhat before settling up against her long leonine body as she stretches herself out in front of you, her tail lashing excitedly as she positions her feline rear facing you. 'I don't know about you, but after finally being outmatched, I just can't help but need you on top of me so badly,' Valerie murrs as she lifts her hindquarters up slightly, exposing her winking feline passage for you to see. 'While we can try another position if you want, I really want you on top of me...' she asks you with a coy look as she looks at you over her shoulders.";
 			if player consents:

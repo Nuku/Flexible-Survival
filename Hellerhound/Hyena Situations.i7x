@@ -20,7 +20,7 @@ instead of resolving an intact fountain:
 	say "Do you drink?";
 	if the player consents:
 		say "You drink deeply from the fountain, quenching your thirst no matter what the cost.";
-		while the thirst of the player >= 10:
+		while thirst of player >= 10:
 			say "You feel less thirsty and hungry after guzzling some thick, infected, tasty water, yum!";
 			PlayerDrink 10;
 			PlayerEat 4;

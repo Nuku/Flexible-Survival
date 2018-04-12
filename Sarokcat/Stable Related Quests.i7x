@@ -498,7 +498,7 @@ instead of resolving a Horsepitfight:
 				now scalevalue of player is 3;
 				now bodydesc of player is "sultry";
 				now bodytype of player is "[one of]equine[or]horse-like[at random]";
-				now the daycycle of player is 0;
+				now daycycle of player is 0;
 				follow the turnpass rule;
 		else:
 			say "The brutish horsemen snort derisively at you, but let you leave for now, though one of them comments snidely that you can prepare all you want, but if you aren't ready to handle them, you certainly aren't ready to handle a powerful stallion like the Stablemaster. Striding back down the halls of the Stables as the horsemen laugh in amusement, you resolve to return sometime soon to wipe the smirks off of their equine muzzles.";

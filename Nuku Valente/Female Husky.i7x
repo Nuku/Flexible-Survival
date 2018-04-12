@@ -66,7 +66,7 @@ to say fhuskybeaten:
 	now title entry is "Lick her cunt";
 	now sortorder entry is 9;
 	let luststuck be 0;
-	if the libido of player > humanity of player and the libido of the player > 75, now luststuck is 1;
+	if libido of player > humanity of player and libido of player > 75, now luststuck is 1;
 	now description entry is "eat out that juicy canine muff";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -96,7 +96,7 @@ to say fhuskybeaten:
 		else if calcnumber is 0:
 			say "Let her go: Shall you send poor creature on her way?";
 			if the player consents:
-				if the libido of player > humanity of player:
+				if libido of player > humanity of player:
 					say "You want to let go but can't!";
 					now luststuck is 1;
 				else:

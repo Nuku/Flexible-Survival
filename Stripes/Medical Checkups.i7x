@@ -74,7 +74,7 @@ instead of conversing the Doctor Medea:
 		say "[medeaadjustments]";
 	else if cunts of player > 0:
 		say "[medeaadjustments]";
-	else if the cunts of the player is 0:
+	else if cunts of player is 0:
 		if HP of Doctor Medea is 1:
 			if "MPreg" is listed in feats of player:
 				say "     'I cannot help you. I specialize in childbirth and minor illnesses. As the latter are not occurring with the nanite plague and you lack a womb...' You interrupt the reptilian doctor here as you start to explain your unusual ability to become pregnant rectally, she seems quite surprised and intrigued. 'I had started to consider such possibilities induced by the infection, but you're the first case I've been able to study. Please, you must let me examine you!' she says excitedly, taking your hands and rushing you towards the examination table.";

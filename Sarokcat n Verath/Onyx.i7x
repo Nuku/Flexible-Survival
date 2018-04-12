@@ -262,7 +262,7 @@ Instead of fucking the Onyx:
 				now scalevalue of player is 3;
 				now bodydesc of player is "sultry";
 				now bodytype of player is "[one of]equine[or]horse-like[at random]";
-				now the daycycle of player is 0;
+				now daycycle of player is 0;
 				end the story saying "You become another mareslut at the Stables and Onyx's special plaything.";
 				follow the turnpass rule;
 			else:						[MALE SUCCUMB]
@@ -277,7 +277,7 @@ Instead of fucking the Onyx:
 				now scalevalue of player is 3;
 				now bodydesc of player is "feminine";
 				now bodytype of player is "[one of]equine[or]horse-like[at random]";
-				now the daycycle of player is 0;
+				now daycycle of player is 0;
 				end the story saying "You become another slutty stallionboi at the Stables and Onyx's special plaything.";
 				follow the turnpass rule;
 		else if Onyxmareslut > 0 or onyxboislut > 0:	[For slut values of 1 and a slut value of 2 when gender doesn't match]

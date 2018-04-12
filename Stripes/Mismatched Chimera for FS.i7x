@@ -181,7 +181,7 @@ When Play begins:
    now face change entry is "it becomes that of a dog, but with long rabbit ears"; [ face change text. format as "Your face feels funny as (your text)." ]
    now body change entry is "it becomes that of a humanoid feline with saurian back spines"; [ body change text. format as "Your body feels funny as (your text)." ]
    now skin change entry is "it is covered in green scales over your body, but long white fur over your limbs"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-   now ass change entry is "a wet appendage starts to grow from it, shaping itself into a octopod's tentacle. It wiggles around behind you, largely beyond your control"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+   now ass change entry is "a wet appendage starts to grow from it, shaping itself into an octopod's tentacle. It wiggles around behind you, largely beyond your control"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
    now cock change entry is "it becomes equine in shape, but with a vulpine knot at its base"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 15;
    now dex entry is 15;

@@ -204,7 +204,7 @@ instead of resolving a Gryphon's Plot:
 					say "[bold type]You gain 2 units of food![roman type][line break]";
 					increase carried of food by 2;
 				else if fightoutcome > 19 and fightoutcome < 30: [lost]
-					say "     Not strong enough to single-handedly defeat the group of gryphons, you fall to your knees, the loser of the battle. With pleased smirks, the soldiers converge upon you, bending you over to have the best access to your holes. Taking turns, [if player is male]the gryphons shove themselves balls-deep into your ass.[else if player is female]the gryphons shove themselves balls-deep into your soaking wet pussy.[else]the gryphons rub themselves against the underside of your sexless crotch where it feels good.[end if] Soon, undeniably locked in a mix of sex and sweat, it isn't long before you lose all sense of consciousness.";
+					say "     Not strong enough to single-handedly defeat the group of gryphons, you fall to your knees, the loser of the battle. With pleased smirks, the soldiers converge upon you, bending you over to have the best access to your holes. Taking turns, the gryphons [if player is male]shove themselves balls-deep into your ass[else if player is female]shove themselves balls-deep into your soaking wet pussy[else]rub themselves against the underside of your sexless crotch where it feels good[end if]. Soon, undeniably locked in a mix of sex and sweat, it isn't long before you lose all sense of consciousness.";
 					if carried of food > 2:
 						say "     You wake three hours later, your body covered in large amounts of cum as you collect your pack, which you notice is three cans of food lighter...";
 						LineBreak;
@@ -218,7 +218,7 @@ instead of resolving a Gryphon's Plot:
 					else:
 						say "     You wake three hours later, your body covered in a bucket load of cum as you collect your pack, which you notice thankfully has the same heft as before. You guess that despite the gryphons having you in a vulnerable position, they had decided to leave your belongings alone. Shrugging your shoulders at the fact, you clean as much cum as you can off of your body, before slowly but surely continuing along your way...";
 				else if fightoutcome is 90: [fled]
-					say "     Not having much faith in your ability to fight the men off, you flee. The soldiers donning unattended hard ons shout curses in your direction in the wake of your successful escape...";
+					say "     Not having much faith in your ability to fight the men off, you flee. The soldiers donning unattended hard-ons shout curses in your direction in the wake of your successful escape...";
 					now Gryphon's Plot is Resolved; [event will not come up again]
 		else:
 			say "     With a shrug you turn you turn your back on the group of gryphons and walk off down the street.";

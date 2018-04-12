@@ -180,28 +180,28 @@ To reciting2:
 					now hospquest is the number understood;
 			-- 19:	[player cock]
 				if the player's command matches "[number]":
-					now the cocks of player is the number understood;
+					now cocks of player is the number understood;
 			-- 20:	[player breasts]
 				if the player's command matches "[number]":
-					now the breasts of player is the number understood;
+					now breasts of player is the number understood;
 			-- 21:	[player cunt]
 				if the player's command matches "[number]":
-					now the cunts of player is the number understood;
+					now cunts of player is the number understood;
 			-- 22:	[player cock]
 				if the player's command matches "[number]":
-					now the breast size of player is the number understood;
+					now breast size of player is the number understood;
 			-- 23:	[player cock]
 				if the player's command matches "[number]":
-					now the cock length of player is the number understood;
+					now cock length of player is the number understood;
 			-- 24:	[player cock]
 				if the player's command matches "[number]":
 					now the cock width of player is the number understood;
 			-- 25:	[player cunt]
 				if the player's command matches "[number]":
-					now the cunt length of player is the number understood;
+					now cunt length of player is the number understood;
 			-- 26:	[player cunt]
 				if the player's command matches "[number]":
-					now the cunt width of player is the number understood;
+					now cunt width of player is the number understood;
 			-- 27:	[equipped weapon]
 				repeat with y running through armaments:
 					if the printed name of y matches the text b, case insensitively:
@@ -1113,28 +1113,28 @@ Carry out reciting:
 					now hospquest is the number understood;
 			-- 19:	[player cock]
 				if the player's command matches "[number]":
-					now the cocks of player is the number understood;
+					now cocks of player is the number understood;
 			-- 20:	[player breasts]
 				if the player's command matches "[number]":
-					now the breasts of player is the number understood;
+					now breasts of player is the number understood;
 			-- 21:	[player cunt]
 				if the player's command matches "[number]":
-					now the cunts of player is the number understood;
+					now cunts of player is the number understood;
 			-- 22:	[player cock]
 				if the player's command matches "[number]":
-					now the breast size of player is the number understood;
+					now breast size of player is the number understood;
 			-- 23:	[player cock]
 				if the player's command matches "[number]":
-					now the cock length of player is the number understood;
+					now cock length of player is the number understood;
 			-- 24:	[player cock]
 				if the player's command matches "[number]":
 					now the cock width of player is the number understood;
 			-- 25:	[player cunt]
 				if the player's command matches "[number]":
-					now the cunt length of player is the number understood;
+					now cunt length of player is the number understood;
 			-- 26:	[player cunt]
 				if the player's command matches "[number]":
-					now the cunt width of player is the number understood;
+					now cunt width of player is the number understood;
 			-- 27:	[equipped weapon]
 				repeat with y running through armaments:
 					if the printed name of y matches the text b, case insensitively:

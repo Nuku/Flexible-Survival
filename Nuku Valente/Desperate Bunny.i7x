@@ -39,7 +39,7 @@ Instead of Resolving a Needy Rabbit Girl:
 		else:
 			say "You call out gently to the woman, but when she turns that panicked gaze on you, you fail to think of anything convincing to say, and she flees off into the ruins.";
 			stop the action;
-		if the cocks of the player > 0:
+		if cocks of player > 0:
 			say "     As you approach her, slowly, you speak in gentle tones. She seems to be relaxing a little bit. When you get within twelve feet, you see that her eyes have wandered down, not meeting your gaze, instead she's looking at your belly, or groin. When you reach easy conversational distance, she grabs at your hand, 'I thought I would die alone in this city!' she gasps out, 'I can't even tell you how happy I am to see you.'";
 			now battleground is "Outside";
 			choose row with a area of battleground in the Table of random critters;
@@ -279,7 +279,7 @@ to say sandrasex_leadin: [devnote: amend]
 				now tailname of player is "Rabbit Girl";
 				now tail of player is "You have a short white rabbit's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 		say "     She starts to strip naked in front of you, exposing the smooth flesh of her skin to your hungry eyes. She only has fur in a few places, across her short tail, long ears, and covering her large pouting vulva. She smiles, running hands across her six breasts, starting at the small B cups and working up towards her hefty Ds as she waits for you. Catching up to her, and feeling ready yourself, you start to follow, exposing your [skin of player] body to her. She eyes you appraisingly...";
-	if the thirst of the player > 50:
+	if thirst of player > 50:
 		say "     Sandra frowns at you, 'You look like you haven't had a drink in over a day[if rabbitsibling > 0], [sangr][end if].' She grabs for your face and buries you against a firm breast, teat brushing against your lips as she lays back with you. Feeling quite thirsty, you have no good reason to deny her and begin to gulp up the thick cream that pours out at command of your firm suckles. You nuzzle your [skin of player] face against the life giving breast, filling your belly with sweet cream as the rabbit pets and coos at you encouragingly. When your thirst has abated somewhat, she gently pushes you back, 'Now where were we...'";
 		PlayerDrink 15;
 
@@ -288,7 +288,7 @@ to say sandrasex1:		[fuck the bunny]
 	let lust be 0;
 	let oversized be 0;
 	let response1 be "";
-	if the cocks of the player > 0:
+	if cocks of player > 0:
 		let multicocks be 0;
 		if cocks of player > 1:
 			if rabbitmulticock is 0:
@@ -611,7 +611,7 @@ to say sandracoleentrio:
 		now tail of player is "You have a short white rabbit's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 	else if rabbitsibling > 1 and ( tailname of player is "Female Husky" or tailname of player is "Alpha Husky" ):
 		say "     Sandra runs a paw over your fluffy, husky tail.  'And a cute husky tail is nice and soft as well.  I'll let you hang onto it for now,' she says, winking to Coleen[if coleencollared > 0].  Your husky pet[else].  The stray husky slut[end if] barks in agreement, winking back.";
-	if the thirst of the player > 50:
+	if thirst of player > 50:
 		say "     The bunny girl puts her arms around you and pulls your face into her ample bosom, pressing you against her firm breasts and brushing her nipple against your lips.  'You should take better care to drink enough out there, hon.'  Feeling quite thirsty, you start to suckle from her breast, drinking down the milk it quickly starts giving you.  There is a bark beside you and Coleen nuzzles against you, going for the other breast.  'Oh, and I know how much you like my milk, sweety,' the bunny girl says, scritching the husky's ears.  You both nurse from her bosom, filling your bellies with her sweet cream as the bunny pets and coos at you both encouragingly.  After you've each had a good drink, she gently pushes you back.";
 	if cocks of player > 0:
 		say "[sctriomale]";
@@ -662,7 +662,7 @@ When play ends:
 			if cocks of player > 0 and bodyname of player is "Siren":
 				say "     The lovely bunnygirl is particularly excited by your ability to deposit eggs into her and readily has you stuff her full of them on several occasions.  She is particularly eager to do this around springtime, painting the eggs after she pushes them out and handing them out to others on Easter.  Many young sirens join new families to further spread your infection thanks to Sandra's lustful efforts.";
 				increase score by 25;
-			else if cocks of the player > 0:
+			else if cocks of player > 0:
 				say "     Eventually, she grows round and plump, and bears you a child.  The child emerges with rabbit ears, [one of]male[or]female[at random], and adorable.  The child grows up loving the both of you and is raised with fierce protectiveness.";
 				increase score by 5;
 			else:

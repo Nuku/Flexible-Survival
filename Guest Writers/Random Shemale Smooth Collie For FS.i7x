@@ -39,7 +39,7 @@ to say Shemale Smooth Collie attack:
 			infect; [additional infection result]
 		else:
 			say "     You drink her milk, somewhat unwillingly at first, but with increasing desire. Once she's decided you've had enough, you're left rather full indeed. She lowers you gently into a resting position and leaves you to recover. Her milk has put you into a somewhat dazed and groggy state, and it takes some time before you regain your senses.";
-		decrease thirst of the player by 10;
+		decrease thirst of player by 10;
 		if thirst of player < 0, now thirst of player is 0;
 		if hunger of player < 0, now hunger of player is 0;
 	else if cunts of player > 0 and ( cunt length of player < 18 or cunt width of player < 6 ):
@@ -136,8 +136,8 @@ to say CollieSucking:
 	say "     The intense force of her shooting cock even forces its way down your throat and directly into your stomach, causing it to round out quite quickly with the sheer amount of sperm going into it. After several more blasts, thankfully the flood lessens, going down in volume until it's only a normal sized load - a trickle, for the collie. As she finally stops cumming, all tension goes out of the large dog-morph, the tail above you flopping down over the shemale's side. Pulling your lips off of the slowly deflating cock, you cough and splutter up some seed that had managed to force its way down your wind-pipe, then take a deep breath. Rising from the ground with shaking arms, you look down at the pool of seed below. Raising an arm and wiping off your chin and chest, you shake your head at the truly impressive amount of cum the collie produced, wondering how much it'd be if she didn't get off for a few days.";
 	WaitLineBreak;
 	say "     With the collie pleasantly passed out, and not able to answer that question, you just smirk and rub at your distended stomach. Feeling very full and with your thirst sated, you leave the shemale to her fate...";
-	decrease thirst of the player by 10;
-	decrease the hunger of the player by 5;
+	decrease thirst of player by 10;
+	decrease hunger of player by 5;
 	increase libido of player by 10;
 	if thirst of player < 0, now thirst of player is 0;
 	if hunger of player < 0, now hunger of player is 0;
@@ -166,7 +166,7 @@ to say CollieFucking:
 		WaitLineBreak;
 		say "     Fucking this nicely submissive doggie, you can't hold back much longer! With a loud groan from your lips, an all too familiar feeling washes up your stomach and groin. Your shaft twitches inside of the collie's tight ass, your [short ball size] nuts throbbing, clenching and churning deep within. The spits of pre-spooge that you spilled into her depths offer a deliciously lewd squelching every time you slam yourself into her bottom, pushing your arousal even further along. Your body tenses up and a loud growl escapes your lips as you drive your massive member into the collie's taunt butt in a final thrust.";
 		say "     Your pent up orbs unleash their seed in heavy gouts, the burning hot spunk spilling into your newly claimed bitch wave after wave. With the amount of cream you pump into her upturned ass, even with what squirts out around your shaft, the collie's stomach starts to bulge quite a bit. After filling the speechless collie up rather nicely, you give a final jerk of your hips and pull your spent shaft from her rum. Looking down, you watch a literal waterfall of your thick white cream gush out of her gaping hole to splash down onto the ground. Rising to your feet, you wipe your cock off against the clean fur of her back, then leave the collie like that, feeling quite satisfied.";
-	decrease the libido of player by 20;
+	decrease libido of player by 20;
 
 
 to say CollieVagRide:

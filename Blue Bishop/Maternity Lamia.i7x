@@ -25,7 +25,7 @@ to say lamiadesc:
 to say losetolamia:
 	if HP of player > 0:
 		say "     Surrendering to the creature, she seems very quick to ease off and trust your compliance, giggling in excitement and pulling you in a tight embrace. Clothing practically bursting at the seams to contain her numerous breast, you're very firmly [one of][or]re[stopping]introduced to them as she practically tries to smother you in her cleavage.";
-		say "     '[one of]Oh[or]Eee[or]Ah[at random], [one of]it's so nice to find some company[or]everyone usually runs away[or]we're going to have so much fun[at random]!' Clearly giddy at the prospect of such a obliging victim, she pulls any attire or supplies from you and tosses them aside.";
+		say "     '[one of]Oh[or]Eee[or]Ah[at random], [one of]it's so nice to find some company[or]everyone usually runs away[or]we're going to have so much fun[at random]!' Clearly giddy at the prospect of such an obliging victim, she pulls any attire or supplies from you and tosses them aside.";
 	else:
 		say "     Collapsing from exhaustion, she cries out in almost overwrought despair, lunging forward to wrap you into a tight embrace. Clothing practically bursting at the seams to contain her numerous breasts, you're very firmly [one of][or]re[stopping]introduced to them as she practically tries to smother you with her cleavage, fussing obsessively over you.";
 		say "     '[one of]Oh no[or]Shh[or]Ah[at random], I'm so sorry, [one of]I didn't mean to be so rough[or]you gave me little choice[or]I'll take care of you[at random]!' Clearly, she seems to have twisted her victory into an opportunity to 'care' for you, pulling any attire or supplies from you and tossing them aside.";

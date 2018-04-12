@@ -293,7 +293,7 @@ to orcabindorgasm: [Orgasm description. Progresses to next bound segment.]
 		else if cocks of player > 0:
 			say "You fill the orca's depths with gout after gout of thick, sticky seed, only to tense all over again and stuff that rippling cetacean snatch with a double-dose of cum. Any form of refractory period withers away, and your happy, bestial trills fill the orca's maw. Pushing down against you, she milks you again and again, cementing your new lease in life as her favorite toy and plaything.";
 		else:
-			say "You eventually sag down beneath the orca, breathing weakly of the gas she continuously feeds you[if cunts of player > 0] while grinding her tailfin across your aching cunt[end if][if cunts of player > 1]s[end if]. The heat, scent, and taste of of the cetacean's sex becoming your whole world, your mind empties of all but pleasing this attractive orca, wanting nothing more than to indulge her every wanton whim";
+			say "You eventually sag down beneath the orca, breathing weakly of the gas she continuously feeds you[if cunts of player > 0] while grinding her tailfin across your aching cunt[end if][if cunts of player > 1]s[end if]. The heat, scent, and taste of the cetacean's sex becoming your whole world, your mind empties of all but pleasing this attractive orca, wanting nothing more than to indulge her every wanton whim";
 
 to orcaprogress: [Displays once when entering the next bound segment. 1 does not need to be checked since the bind starts at that value.]
 	if orcaintense is 2:

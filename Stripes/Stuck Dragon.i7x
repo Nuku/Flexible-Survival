@@ -142,7 +142,7 @@ Instead of fucking the Dragoness:
 		say "[dragonesssex]";
 
 to say dragonesssex:
-	if cocks of the player is 0:
+	if cocks of player is 0:
 		say "     You don't have a cock to fuck her with, but she just looks too tempting to leave alone. You set aside your clothes and gear and move up to her large rump. Running your fingers over her wet slit, she moans before realizing what's happening and shrieking. ";
 		if libido of Christy is 0:
 			if dragonessfuck is not 2, now dragonessfuck is 1;
@@ -357,7 +357,7 @@ to say dragonchange:
 		now scalevalue of player is 5;
 		now bodydesc of player is "[one of]fecund[or]bestial[at random]";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
-		now the daycycle of player is 0;
+		now daycycle of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if cocks of player > 0 and cunts of player > 0], gaping pussy lips and pendulous balls[else if cunts of player > 0] and gaping pussy lips[else if cocks of player > 0] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over 6 feet tall and 9 feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
@@ -433,7 +433,7 @@ to say dragonchange:
 		now scalevalue of player is 5;
 		now bodydesc of player is "bestial";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
-		now the daycycle of player is 0;
+		now daycycle of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if cocks of player > 0 and cunts of player > 0], gaping pussy lips and pendulous balls[else if cunts of player > 0] and gaping pussy lips[else if cocks of player > 0] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over 6 feet tall and 9 feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
@@ -646,7 +646,7 @@ to say christyoral:
 			say "     With the foreplay done, you and Christy get on to the main event when she wraps her paws around your legs, bringing your feet against her quivering, still orgasming cunt. 'Mmm... I think we'll have you go in this way this time,' she rumbles as her pussy lips start sliding over your feet as they're guided into her cunt. Eager to be inside the large and lovely dragoness again, you only playfully struggle, teasing your feet against her sensitive folds before you are plunged into her vagina to your knees. You make sure to squirm and wriggle about, making her moan and roar in ecstasy. Her inner walls squeeze and tug at you, drawing you inwards on their own.";
 			say "     Between the sensation of her vaginal walls squeezing and quivering over you and the sight of her approaching pussy as it pulls you in more and more, you are awash in ecstasy. The dragoness leans her head in to lick and nuzzle at you, sliding her tongue playfully over your exposed [bodytype of player] body. You feel no reluctance or trepidation now about this wonderfully unusual act of lust. 'Oh, that's just what I need... Mmm... Rub right there...' she moans between licks to your groin. 'Deeper now... I can't wait to have your big, big egg inside me again,' she cries out as she cums again, sending another flood of her juices over your [bodydesc of player] form as you climax as well as her folds are rippling past your groin. With your hands within reach of them now, you start rubbing at her pussy and clit, exciting her further until your arms get pulled in as well by those tugging inner muscles as pinned to your side. As the draws to a close, sliding over shoulders, you make sure to tell her how wonderful this feels and how much you're looking forward to being a nice, big egg for her before your head it pulled in as well. You are deposited slowly, pleasurably, back into the warm comfort of her womb and you curl up inside it, drifting off to sleep with the pleasant knowledge that you'll be an egg again soon.";
 		else:		[head first]
-			say "     With the foreplay done, you and Christy get on to the main event when her paws take a hold of you and gently press you against her quivering, still orgasming cunt. Knowing what's coming and eager for it by now, you lick and kiss eagerly at her pussy before her wet folds start to slip over your head and hands. You squirm and wriggle about, making her moan and roar in ecstacy. Her inner walls squeeze and tug at you, drawing you inwards.";
+			say "     With the foreplay done, you and Christy get on to the main event when her paws take a hold of you and gently press you against her quivering, still orgasming cunt. Knowing what's coming and eager for it by now, you lick and kiss eagerly at her pussy before her wet folds start to slip over your head and hands. You squirm and wriggle about, making her moan and roar in ecstasy. Her inner walls squeeze and tug at you, drawing you inwards.";
 			say "     Between the sensation of her vaginal walls squeezing and quivering over you, her heady scent and flavour flooding your senses and her playful tongue and muzzle at work over the rest of your exposed [bodytype of player] body, you are awash in ecstasy. You feel no reluctance or trepidation now about this wonderfully unusual act of lust. 'Oh, that's just what I need... Mmm... Rub right there...' she moans between licks to your groin. 'Deeper now... I can't wait to have your big, big egg inside me again,' she cries out as she cums again, sending another flood of her juices over your [bodydesc of player] form as you climax as well. Between your hot fluids and hers, you're sure you've left the lusty dragoness's muzzle thoroughly soaked in arousing juices. Your hips and legs are drawn in and you're pressed past her cervix into her warm, wet womb. It feels wonderful to be back inside it and you curl up in its warmth, drifting off to sleep with the pleasant knowledge that you'll be an egg again soon.";
 		now tempnum is 1;
 		say "[dragonchange]";
@@ -921,7 +921,7 @@ to say dragonchange2:
 		now scalevalue of player is 5;
 		now bodydesc of player is "[one of]fecund[or]bestial[at random]";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
-		now the daycycle of player is 0;
+		now daycycle of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if cocks of player > 0 and cunts of player > 0], gaping pussy lips and pendulous balls[else if cunts of player > 0] and gaping pussy lips[else if cocks of player > 0] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over 6 feet tall and 9 feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
@@ -997,7 +997,7 @@ to say dragonchange2:
 		now scalevalue of player is 5;
 		now bodydesc of player is "bestial";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
-		now the daycycle of player is 0;
+		now daycycle of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if cocks of player > 0 and cunts of player > 0], gaping pussy lips and pendulous balls[else if cunts of player > 0] and gaping pussy lips[else if cocks of player > 0] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over 6 feet tall and 9 feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";

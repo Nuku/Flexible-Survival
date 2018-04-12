@@ -261,7 +261,7 @@ To Mudwrestle:
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Stamina Check):[line break]";
 				if diceroll + bonus >= 18:
-					say "     You begin trudging through the mud, intent on giving Philip a chase before he can get to you. After you've been moving for awhile, you look back to see Philip following after you, panting for breath and visibly exhausted. As a last a attempt, he tries to lunge 	at you, but falls just short onto the muddy floor before you. He quickly rises, now eye to eye with you.";
+					say "     You begin trudging through the mud, intent on giving Philip a chase before he can get to you. After you've been moving for awhile, you look back to see Philip following after you, panting for breath and visibly exhausted. As a last attempt, he tries to lunge at you, but falls just short onto the muddy floor before you. He quickly rises, now eye to eye with you.";
 					increase PhilipMudWrestleCount by 1;
 				else:
 					say "     You begin trudging through the mud, intent on giving Philip a chase before he can get to you. After you've been moving for awhile, you look back, panting for breath, only to see Philip following you effortlessly! He doesn't even look slightly worn out! You mentally reprimand yourself, you should have known Philip would have an easier time moving in the mud than you due to experience! Now, Philip is close to you and you're out of breath.";

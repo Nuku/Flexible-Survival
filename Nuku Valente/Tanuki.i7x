@@ -46,7 +46,7 @@ Carry out ringing:
 	if the demand of the Shinto Shrine is journal or demand of Shinto Shrine is gill fruit:
 		now demandIndex is a random number from 1 to the number of entries in tanukiList;
 		now the demand of Shinto Shrine is entry demandIndex of tanukiList;
-	otherwise:
+	else:
 		say "You've already been asked for something. Do you want something new?";
 		if player consents:
 			now demandIndex is a random number from 1 to the number of entries in tanukiList;

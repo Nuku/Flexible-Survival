@@ -225,7 +225,7 @@ Chapter 1 - Entrance
 
 to say bcentrance:
 	if HP of Bubble is 1:
-		say "     As you approach your destination, you can see it's much larger than you'd originally guessed. Being the size of a good sized home, it could probably accommodate several dozen rambunctious, jumping kids at once. It even seems to be two tiered, with a waterslide coming down from the upper level on both the east and west sides. There is also a taller tower somewhere off at the back. You didn't think these things were made this large, but maybe. The exterior of the castle is sky blue, making it difficult to see at a distance. The large inflatable has been secured by two long ropes which lead to rocky outcroppings, mooring it safely inbetween them. But despite this, it does shift and sway around considerably. Coupling that with its bouncy floor makes movement inside rather difficult.";
+		say "     As you approach your destination, you can see it's much larger than you'd originally guessed. Being the size of a good sized home, it could probably accommodate several dozen rambunctious, jumping kids at once. It even seems to be two tiered, with a waterslide coming down from the upper level on both the east and west sides. There is also a taller tower somewhere off at the back. You didn't think these things were made this large, but maybe. The exterior of the castle is sky blue, making it difficult to see at a distance. The large inflatable has been secured by two long ropes which lead to rocky outcroppings, mooring it safely between them. But despite this, it does shift and sway around considerably. Coupling that with its bouncy floor makes movement inside rather difficult.";
 		say "     You pull yourself into the first room and look around the entrance room. It has a soft, bouncy floor and is a couple of feet above the water level, necessitating an easy climb up a mesh ladder that hangs from the entrance mouth. The interior of this room has a dark green floor, blue walls with yellow arches and columns and a ceiling of red. There's a couple of beach balls and pool noodles left scattered on the floor here, probably by the airheaded dolphin girls[if daytimer is night]. Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if].";
 		now HP of Bubble is 2;
 		increase score by 5;
@@ -1495,7 +1495,7 @@ to dolboundstate:
 				now scalevalue of player is 3;
 				now bodydesc of player is "inflatable";
 				now bodytype of player is "dolphin";
-				now the daycycle of player is 0;
+				now daycycle of player is 0;
 				now breasts of player is 2;
 				now breast size of player is 0;
 				if hellHoundLevel is 0:
@@ -1742,7 +1742,7 @@ to say dolcheckA:		[empty]
 		now scalevalue of player is 3;
 		now bodydesc of player is "inflatable";
 		now bodytype of player is "dolphin";
-		now the daycycle of player is 0;
+		now daycycle of player is 0;
 		now breasts of player is 2;
 		now breast size of player is 0;
 		if hellHoundLevel is 0:

@@ -278,7 +278,7 @@ carry out ColeenSpraying:
 					now scalevalue of player is 3;
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
-					now the daycycle of player is 0;
+					now daycycle of player is 0;
 					increase humanity of player by 20;
 					increase ColeenSpray by 1;
 				else:
@@ -296,7 +296,7 @@ carry out ColeenSpraying:
 					now scalevalue of player is 3;
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
-					now the daycycle of player is 0;
+					now daycycle of player is 0;
 					increase humanity of player by 20;
 					increase ColeenSpray by 1;
 					stop the action;
@@ -320,7 +320,7 @@ carry out ColeenSpraying:
 					now scalevalue of player is 3;
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
-					now the daycycle of player is 0;
+					now daycycle of player is 0;
 					increase humanity of player by 20;
 					increase ColeenSpray by 1;
 			else:
@@ -336,7 +336,7 @@ carry out ColeenSpraying:
 					now scalevalue of player is 3;
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
-					now the daycycle of player is 0;
+					now daycycle of player is 0;
 					increase humanity of player by 20;
 					increase ColeenSpray by 1;
 				else:
@@ -352,7 +352,7 @@ carry out ColeenSpraying:
 			now scalevalue of player is 3;
 			now bodydesc of player is "unchanged";
 			now bodytype of player is "human";
-			now the daycycle of player is 0;
+			now daycycle of player is 0;
 			increase humanity of player by 20;
 			increase ColeenSpray by 1;
 	else if ColeenSpray is 1:
@@ -362,7 +362,7 @@ carry out ColeenSpraying:
 		now scalevalue of player is 3;
 		now bodydesc of player is "unchanged";
 		now bodytype of player is "human";
-		now the daycycle of player is 0;
+		now daycycle of player is 0;
 		increase humanity of player by 20;
 		increase ColeenSpray by 1;
 	else if ColeenSpray is 2:
@@ -483,7 +483,7 @@ to say sexwithcoleen:
 				say "     'Don't worry though, I'll still come back here so you can use your stray bitch whenever you want,' she says as she pants eagerly at you, 'I mean the least I can do for you for helping me become such a wonderful slutty bitch, is let you play with me whenever you want to...' Coleen says as she gives you an eager canine smile, 'And speaking of playing, didn't you want to play with me just a second ago...' she says suggestively, her eyes locked on your crotch.";
 				WaitLineBreak;
 				if cocks of player > 0:
-					say "     Before you can respond, the new bitch has dropped to all fours, and has turned her rear to you, her tail lifting up eagerly in an unspoken invitation as she looks back at you over her shoulder. 'Why don't you come play hide the bone, with a bitch...' she says as her she wiggles her rear at you, her damp lips winking at you as the scent of a bitch in need fills the air. The invitation is just to perfect to decline, your rod stiffening eagerly as you move over to her needy body, and you rub the tip of your cock up against her heat swollen lips, making her moan. Her animalistic posture, and her acceptance of the bestial changes within, make you feel almost like a animal yourself as you sheath your [cock of player] cock in her warm silken passage, Coleen yipping and whining in pleasure underneath you.";
+					say "     Before you can respond, the new bitch has dropped to all fours, and has turned her rear to you, her tail lifting up eagerly in an unspoken invitation as she looks back at you over her shoulder. 'Why don't you come play hide the bone, with a bitch...' she says as her she wiggles her rear at you, her damp lips winking at you as the scent of a bitch in need fills the air. The invitation is just to perfect to decline, your rod stiffening eagerly as you move over to her needy body, and you rub the tip of your cock up against her heat swollen lips, making her moan. Her animalistic posture, and her acceptance of the bestial changes within, make you feel almost like an animal yourself as you sheathe your [cock of player] cock in her warm silken passage, Coleen yipping and whining in pleasure underneath you.";
 					say "     You grip her hips tightly as she lifts her rear up even higher to allow you better access to her body, her tail brushing across your chest as it wags eagerly, even as her body shifts to become a full husky bitch underneath you, nearly indistinguishable from all the other slutty little huskies roaming the city. The pleasure of the rough sex fills your mind as you take her from behind like an animal, thrusting into her again and again as she yips and pants underneath you, her every sound proof of your victory over her body and mind as she embraces her new role as a husky slut. Soon your eyes close and your head swims with pleasure as you shoot your seed into her waiting body, making her howl in pleasure underneath you as you fill her womb up with your fertile sperm.";
 					WaitLineBreak;
 					say "     Panting from the exertion, you slowly release the new husky slut as you pull yourself out of her, and she twists around to lick at her well used passage with her long canine tongue. You sit down to rest for a minute while she cleans herself up, before she turns to you and wags her tail happily. 'Thanks so much! I hope we can do this again lots!' she says with a happy look on her lust filled canine face. 'Now I'm going to go see what other kinds of fun I can find in the city! Don't worry though! I won't be far from here and your wonderful cock for long!' she says as she wanders out the bunker door, her tail wagging happily as she goes to explore, although you know that she will always end up back here whenever you return to the bunker, her needy cunt leading her right back to where your cock filled her up for the first time...'";
@@ -587,7 +587,7 @@ when play ends:
 	if bodyname of player is "Female Husky":
 		if ColeenAlpha > 2:
 			if humanity of player < 10:
-				if cocks of the player > 0:
+				if cocks of player > 0:
 					say "     Finally surrendering to the infection, and the joy of being a husky, you swiftly return to the bunker to join your pet bitch in celebrating your new found freedom as a husky stud. You are surprised to find that a small pack of huskies is waiting for you on your return instead of just your pet, and you almost immediately recognize the alpha leader of the pack as the changed Coleen, now fully embracing her role as head bitch. Spotting you the pack immediately surrounds you, and Coleen pads up to you with a smile on her husky face, 'I can see that the bitch treatment didn't work properly on you,' she says with a sad shake of her canine head, 'Lucky for you though, we have a lot of other horny bitches here that it did work on... I'd like to introduce you to my military squadmates,' she says as she gestures with her paw at the husky bitches surrounding you.";
 					say "     'They took a bit of work to find scattered out in the city, and a bit more work to make sure they ended up as proper husky bitches like me, but it was worth it,' the alpha bitch says as she smiles at her new packmembers, before looking back at you. 'I look forward to letting you get to know them all properly,' she says as she reaches down with her paw and strokes your cock a few times, making you whine in need. 'But alphas first, after all,' Coleen says as she turns and presents her damp sex to you, the smell of her heat filling your nose. You find yourself mounting your alpha instinctively, eager to give her the pups she obviously wants from you, your mind filling with a sea of pleasure and a sense of belonging as you take the first steps in joining the pack as its slutty male husky stud. Out of the corner of your eye you notice your slutty husky pet has joined the pack as well, and is now just as much the pack's pet as you are...";
 				else:
@@ -626,7 +626,7 @@ When play ends:
 				say "     You aren't surprised when he visits again soon, becoming a rather regular guest at your house, often with several other important people in tow, and while most of them are more than happy to be persuaded by your dominant attitude and the lusty scent of sex your pets always exude. On occasion you find one protesting enough that you need to train them personally and show them just how wonderful it is to be a slutty little husky spreading her legs for her alpha or anyone else the alpha wants. On the whole, you soon build up a rather large group of people who owe you favors, and enjoy their new pets as well as their visits to your own well trained pack immensely, these contacts enabling you and your fellow huskies to live nice and comfortable new lives, and even prepare for all the pups that are sure to follow any day now...";
 		else if ColeenAlpha > 2:
 			if humanity of player < 10:
-				if cocks of the player > 0:
+				if cocks of player > 0:
 					say "     Your mind fills with joy as you finally fully embrace the changes in your body and mind, and rush back to the bunker where you can show your fellow huskies just what a good alpha you can be for them. You are surprised to find a small pack of huskies has already formed outside the bunker where they are obviously waiting for you, you growl instinctively as you see that this strange pack has already found your pet Sarah, and she wags her tail at you happily from where she sits surrounded by unfamiliar husky bitches. Before you can protest, the head bitch of this pack strides forward, and with some surprise, you recognize the other alpha as Coleen, the military woman you helped to embrace her inner bitch. 'Welcome back,' Coleen says teasingly, as her pack closes around her, 'My you make a much more dominant husky than I would have thought,' she says with obvious approval as she stalks forward, and you find yourself grinning as you look her over as well, something about her dominant stance and her teasing walk intriguing you as you look over her own slightly more powerful alpha-like body.";
 					say "     'Do you like my new pack? I was going to try to add you to them as a slutty little bitch, but I think I kind of like the look you have going for you right now,' Coleen says with amusement as she gestures at the pack of huskies slowly circling the two of you, their noses twitching and their bodies growing warm with arousal as they catch hints of your dominant male husky scent. 'I think I could grow to really like the new you,' she says as she moves closer, rubbing her own strong body against your side teasingly and grinning as your cock grows hard in response. 'You make a pretty hot looking alpha male, and I could use a bit of help keeping everyone in line and well bred. It took some doing to find my squad scattered around the city... but they will make a good submissive pack for us I think... and then we can all be together...' Coleen pants out eagerly, obviously excited by the thought, and as your cock goes stiff, you realize you find the thought nice and exciting as well, a ready made pack with a hot and sexy alpha bitch just waiting for you to fuck her and make her your mate.";
 					say "     Looking around at all the other former soldiers, you feel a grin cross your muzzle at the thought of training them to be as properly needy and slutty as your pet Sarah is, a pack full of submissive bitches willing to do anything to please their alpha. You find your gaze drawn back to where Coleen is eyeing you teasingly, and realize you couldn't ask for more, as you look at the teasing alpha bitch who is obviously eager to play, and put up a bit of a fight before finally letting you mount her and fill her up with your pups, a lovely bit of challenge and fun to go with all the sexual pleasure that will fill your life as alpha. You grin at your new partner, and she shudders eagerly at your bodies nonverbal answer, as you begin to circle and tease her, beginning the dance of an alpha dog claiming his mate, as the rest of the pack watches on eagerly...";

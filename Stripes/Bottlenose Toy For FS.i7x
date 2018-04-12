@@ -199,7 +199,7 @@ to say losetodolphinflatable:
 				now scalevalue of player is 3;
 				now bodydesc of player is "inflatable";
 				now bodytype of player is "dolphin";
-				now the daycycle of player is 0;
+				now daycycle of player is 0;
 				now breasts of player is 2;
 				now breast size of player is 0;
 				if hellHoundLevel is 0:
@@ -339,7 +339,7 @@ to bottleboundstate:
 			now scalevalue of player is 3;
 			now bodydesc of player is "inflatable";
 			now bodytype of player is "dolphin";
-			now the daycycle of player is 0;
+			now daycycle of player is 0;
 			now breasts of player is 2;
 			now breast size of player is 0;
 			if hellHoundLevel is 0:

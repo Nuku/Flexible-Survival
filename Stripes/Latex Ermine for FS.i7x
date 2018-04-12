@@ -120,7 +120,7 @@ When Play begins:
 	now defeated entry is "[beatthelatexermine]"; [ Text when monster loses. Change 'latexermine' as above. ]
 	now victory entry is "[losetolatexermine]"; [ Text when monster wins. Change 'latexermine' as above. ]
 	now desc entry is "[latexerminedesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "that of a ermine with a sexy smile and bedroom eyes that give alluring glances to all you see. Atop your head is a coiffure of indigo hair formed of latex into a ponytail, matching your indigo eyes";
+	now face entry is "that of an ermine with a sexy smile and bedroom eyes that give alluring glances to all you see. Atop your head is a coiffure of indigo hair formed of latex into a ponytail, matching your indigo eyes";
 	now body entry is "slender and sexy[if cunts of player > 0] with curvy hips and long legs[else], but with a strong physique[end if]. Your body is quite flexible and will always strike a sexy, or even slutty, pose if you're not careful";
 	now skin entry is "seamless white latex";
 	now tail entry is "Attached to your rear is a long, tubular tail of white latex that seamlessly changes to indigo at the tip. Your stoat tail feels thick and padded, just right for snuggling in your arms or around someone.";

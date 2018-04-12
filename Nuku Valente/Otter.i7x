@@ -1,7 +1,7 @@
 Version 2 of Otter by Nuku Valente begins here.
 [Version 2.2 - Rimming scene and More/Less Anal checks - Stripes]
 
-"Adds a Otter to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Otter to Flexible Survival's Wandering Monsters table, with Impreg chance"
 
 Section 1 - Monster Responses
 
@@ -213,8 +213,8 @@ usedesc of Fish is "[Fish]".
 The purified of fish is "food".
 
 To say Fish:
-	decrease the hunger of the player by 15;
-	if the hunger of the player < 0, now the hunger of the player is 0;
+	decrease hunger of player by 15;
+	if hunger of player < 0, now hunger of player is 0;
 
 instead of sniffing Fish:
 	say "It smells like a fish, somehow still fresh if a little odd... strangely reminding you of otters.";

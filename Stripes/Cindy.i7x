@@ -25,7 +25,7 @@ the scent of the Cindy is "The scent of the beach and her various wares are what
 
 to say cindydesc:
 	cindycheck;
-	say "     The concession stand is run by a human woman called Cindy. Despite all the infected creatures out on the beach and coming up to her little restaurant, she seems completely uninfected. She's wearing what you can tell is a rather skimpy two-piece bikini under a white t-shirt emblazoned with the 'Sunny Snacks' name and sun-logo. She's got curly black hair, brown eyes and a olive skin. She has a Grecian look to her beautiful face and appears to be in her mid-twenties. By no means fat, she does look like she's put on a few pounds, though she carries it well.";
+	say "     The concession stand is run by a human woman called Cindy. Despite all the infected creatures out on the beach and coming up to her little restaurant, she seems completely uninfected. She's wearing what you can tell is a rather skimpy two-piece bikini under a white t-shirt emblazoned with the 'Sunny Snacks' name and sun-logo. She's got curly black hair, brown eyes and olive skin. She has a Grecian look to her beautiful face and appears to be in her mid-twenties. By no means fat, she does look like she's put on a few pounds, though she carries it well.";
 
 instead of conversing Cindy:
 	cindycheck;
@@ -232,7 +232,7 @@ the scent of the Circe is "The scent of the beach and her various wares are what
 to say circedesc:
 	cindycheck;
 	say "     The concession stand owner whom everyone knows as Cindy claims to actually be the mythical sorceress Circe. And given what you've seen her do, you're inclined to at least consider it a possibility. Despite all the infected creatures out on the beach and coming up to her little restaurant, she does seem completely uninfected and is unaffected by her many romps with them. She also takes a decidedly perverse enjoyment in the varied bestial forms her patrons have and always watches with keen interest should anyone on the beach be getting transformed.";
-	say "     Circe has curly black hair, brown eyes and a olive skin. She has a Grecian look to her beautiful face and appears to be in her mid-twenties. She's wearing what you can tell is a rather skimpy two-piece bikini under a white t-shirt emblazoned with the 'Sunny Snacks' name and sun-logo. By no means fat, she does look like she's put on a few pounds, though she carries it well.";
+	say "     Circe has curly black hair, brown eyes and olive skin. She has a Grecian look to her beautiful face and appears to be in her mid-twenties. She's wearing what you can tell is a rather skimpy two-piece bikini under a white t-shirt emblazoned with the 'Sunny Snacks' name and sun-logo. By no means fat, she does look like she's put on a few pounds, though she carries it well.";
 
 instead of conversing Circe:
 	cindycheck;

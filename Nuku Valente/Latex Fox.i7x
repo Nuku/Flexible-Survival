@@ -148,9 +148,9 @@ when play ends:
 	if bodyname of player is "Latex Fox":
 		if humanity of player < 10:
 			say "     Driven mad with your new, rubbery instincts, you leave the bunker and wander the city, looking for further victims";
-			if the cocks of the player > 0:
+			if cocks of player > 0:
 				say ". In time, you find plenty to play with, getting lots of practice with your knotted dick as you tie with them and they become another yapping fox beneath you";
-			if the cunts of the player > 0:
+			if cunts of player > 0:
 				say ". A strange pain paralyzes you a few days later and you squat. A small rubbery ball escapes your distended vulva, rapidly growing into another fox being. Driven mad with jealousy, you give the young thing a nip, and it flees off to find its own victims";
 			say ". You set up a den at an adult toy manufacturing plant.  The stores of latex are wonderfully tasty and you drink some down every day, making you extra [if cocks of player > 0]vir[else]fert[end if]ile, increasing the number of other latex foxes you are able to create.  The large collection of unshipped products are quite enjoyable as well, both as snacks and as playthings.  Despite being relatively weak, the surge in numbers help the latex foxes survive and spread.  And while you have little urge to leave your new den, you're quite certain many of your offspring have escaped to spread beyond the city and create dens of their own.";
 		else:

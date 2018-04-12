@@ -157,11 +157,11 @@ To transform:
 			now bodytype of player is name entry;
 		if there is a nocturnal in row monster of the table of random critters:
 			if nocturnal entry is true:
-				now the daycycle of player is 2; [night-preferred]
+				now daycycle of player is 2; [night-preferred]
 			if nocturnal entry is false:
-				now the daycycle of player is 1; [day-preferred]
+				now daycycle of player is 1; [day-preferred]
 		else:
-			now the daycycle of player is 0; [standard]
+			now daycycle of player is 0; [standard]
 	follow the sex change rule;
 	follow the sex change rule;
 	if cockname of player is not name entry:
@@ -189,9 +189,9 @@ To transform:
 	if Charisma of player < Cha entry:
 		say "You feel your social sense swelling with [name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
 		increase Charisma of player by 1;
-	if the libido of the player < libido entry:
+	if libido of player < libido entry:
 		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";
-		now the libido of the player is the libido entry;
+		now libido of player is the libido entry;
 
 when play ends:
 	if shiftable is 2:
@@ -205,7 +205,7 @@ when play ends:
 		now scalevalue of player is 3;
 		now bodydesc of player is "shapeshifting";
 		now bodytype of player is "shapeshifter";
-		now the daycycle of player is 0;
+		now daycycle of player is 0;
 		say "((Being a shapeshifter, your normal ending for your body type is suppressed))";
 
 Shifting ends here.

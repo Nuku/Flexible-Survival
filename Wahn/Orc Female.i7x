@@ -37,7 +37,7 @@ when play begins:
 
 Instead of resolving a Noteworthy Ruin:
 	if HP of Katya is 0: [first time]
-		say "     Roaming through the plains, you pass yet another of the small ruins left over from the city that stretched out in this area before the grass came. There are basically just a few sections of roofless wall still standing, as well as as a field of scattered stones and high mounds of rubble. Nothing too interesting - until you spot the [if daytimer is day]very faint line of smoke rising from somewhere between those walls[else]faint shine of firelight that illuminates one section of wall sticking up a little higher than the rest[end if]. It's not a lot - someone is being as careful as possible about giving away their location - but with your close proximity, you did notice it no matter what.";
+		say "     Roaming through the plains, you pass yet another of the small ruins left over from the city that stretched out in this area before the grass came. There are basically just a few sections of roofless wall still standing, as well as a field of scattered stones and high mounds of rubble. Nothing too interesting - until you spot the [if daytimer is day]very faint line of smoke rising from somewhere between those walls[else]faint shine of firelight that illuminates one section of wall sticking up a little higher than the rest[end if]. It's not a lot - someone is being as careful as possible about giving away their location - but with your close proximity, you did notice it no matter what.";
 		say "     [bold type]Seems like someone has set up camp in that ruin. Shall you go over and have a look who it may be?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, maybe it'll be a friendly survivor.";
@@ -59,7 +59,7 @@ Instead of resolving a Noteworthy Ruin:
 			say "     Deciding against exploring the camp, you do turn away from it and keep going. You do make a note of where it was though, in case you want to return to the [bold type]noteworthy ruin[roman type] sometime in the future.";
 			now HP of Katya is 1; [declined to investigate]
 	else if HP of Katya is 1: [didn't investigate before]
-		say "     Roaming through the plains, you come upon the section of ruins again where you made your observation about someone possibly living inside. There are basically just a few sections of roofless wall still standing, as well as as a field of scattered stones and high mounds of rubble. This time there is nothing obvious to draw your attention to it, but you remember it from the last time...";
+		say "     Roaming through the plains, you come upon the section of ruins again where you made your observation about someone possibly living inside. There are basically just a few sections of roofless wall still standing, as well as a field of scattered stones and high mounds of rubble. This time there is nothing obvious to draw your attention to it, but you remember it from the last time...";
 		say "     [bold type]Shall you go over and have a look at what might be between those walls?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, maybe you'll find a friendly survivor.";
@@ -715,7 +715,7 @@ instead of sniffing Katya:
 
 to say KatyaDesc:
 	if debugactive is 1:
-		say "     DEBUG: HP of Katya: [HP of Katya], KatyaResistance: [KatyaResistance], KatyaRelationship: [KatyaRelationship] [line break]";	
+		say "     DEBUG: HP of Katya: [HP of Katya], KatyaResistance: [KatyaResistance], KatyaRelationship: [KatyaRelationship] [line break]";
 	say "     Katya definitively is an orc to be reckoned with. About 7 feet tall, her build is broad-shouldered and packed with muscles. She has the typical features that define an orc - green skin, a pair of sharp tusks poking up from her lower mandible, slightly over-sized hands and feet, black somewhat bristly hair (which she wears as a mane that hangs down behind her back) - yet there are some differences too. For example the full orbs of her breasts proudly bulging out the fabric of a chest-wrap improvised from ragged cloth, as well as the fact that her loincloth is NOT bulging with a heavy cock dangling between her legs.";
 	say "     The female orc nods to you as she notices your attention, then grins and gives you a few lewd looks herself. Something tells you she's imagining you naked, possibly pinned to the ground underneath muscular body.";
 

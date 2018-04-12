@@ -220,7 +220,7 @@ instead of conversing the Elijah:
 			say "     You manage that well, but don't have another hand free to take hold of the chain, so it noisily clatters against the wall and other chains as it falls away from the angel's arm. Oh-oh, you hear some growls, then spot glowing red eyes open up in the darkness behind several doorways on the sides of the chapel.";
 			now inasituation is true;
 			if girl is banned:
-				say "     Leading the mob of demons rushing at you is a incubus. Its normally handsome face is distorted into one of demonic anger with twisted features, sharp teeth and burning eyes as it cries out. 'That's our prize, you thieving mortal. When I'm done with you, you'll be begging for the hellhounds to take you!";
+				say "     Leading the mob of demons rushing at you is an incubus. Its normally handsome face is distorted into one of demonic anger with twisted features, sharp teeth and burning eyes as it cries out. 'That's our prize, you thieving mortal. When I'm done with you, you'll be begging for the hellhounds to take you!";
 				challenge "Incubus";
 			else:
 				say "     Leading the mob of demons rushing at you is a busty succubus, who shrieks angrily. 'He's ours, you little thief. You'll become a bitch in the hellhound kennels for trying to steal him!'";

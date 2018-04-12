@@ -38,7 +38,7 @@ to say Dolphin wins:
 
 To say Dolphin loses:
 	say "You hit the blue dolphinoid human over the head with a final blow, and she floats in the water, unmoving. From here, however, you can see that she has at least three slits, and it looks like she wants you to take her. ";
-	if the libido of the player < 40 and "Dominant" is not listed in feats of player:
+	if libido of player < 40 and "Dominant" is not listed in feats of player:
 		say "You do not have the desire to mate with her though, so you leave her there.";
 	else if dolphintricked < 2:
 		say "[bold type]Do you want to have your way with the creature?[roman type][line break]";
@@ -63,33 +63,33 @@ To say Dolphin loses:
 		say "You are tempted by the sight of the prone dolphin, but you are wise to their tricks, so you manage to hold yourself back. Leaving it before it can make its final, sonic strike, you head off in search of another means to quell your raging hormones.";
 
 to say dolphin fuck:
-	if the cunts of the player is not 0: [prefer male action]
+	if cunts of player is not 0: [prefer male action]
 		say "The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. ";
 		if scalevalue of player > 3:
 			say "She eagerly slams her cock into your cunt. In spite of her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first. She continues to ram your eager hole. You can feel her prehensile member worming around in the depths of your cunt, but even this impressive rod can only barely fill your expansive hole. Up to her hilt, she can only just barely tickle your cervix. She seems a little surprised by this, suggesting that she might not be used to handling a beast of your magnitude. 'I should be - unf - enjoying this. It's - urgh - rare for someone - Ah! - to handle me so well...' she trails off. You get the impression that while she is certainly enjoying the ride, she's likely used to the 'challenge' of far less accommodating females.";
 			say "Regardless, her assault on your hole reaches a fever pitch, and it's not long before she lets out a chittering scream in climax, unloading her cum into your womb[impregchance]. You feel her passionate fluids flood the depths of your cunt, though her equally expansive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release. She's quick to yank her rod from your snatch and tends to you and her potential offspring only briefly before departing.";
 			continue the action;
-		if the cunt width of the player < 6:
+		if cunt width of player < 6:
 			say "She shoves her cock into you, more coming out of her top slit, but it is unable to go further than the tapered head. She looks at you with horror. 'Your cunt can't be that tight. Let's fix it.' She starts slamming her pointed cock into your small pussy, widening it by a bunch every smash, at the expense of your pleasure. Your mind is so full of pain that you are having trouble staying conscious, and as she finally manages to slam inside of you, you feel a twinge as the nanites 'fix' your cunt. ";
-			now the cunt width of the player is 6;
-		else if the cunt width of the player < 8:
+			now cunt width of player is 6;
+		else if cunt width of player < 8:
 			say "She shoves her cock head into you, but it is rough going, giving you much pleasure as she moans and groans. She continues to shove, turn, and wriggle the beginning of her large member inside of you. ";
-			increase the cunt width of the player by 1;
+			increase cunt width of player by 1;
 		else:
 			say "Her cock head slides into your lubricated tunnel with ease, and she prepares to pump the rest into you. ";
-		if the cunt length of the player < 10:[won't go in far, must extend you]
+		if cunt length of player < 10:[won't go in far, must extend you]
 			say "She slams her cock into you with a cry of success, but it is cut off as she realizes that she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles. 'I am going to have to lengthen your cunt, small one. It may hurt.' She begins to slam her cock into you and grunts when it smashes open your cervix. ";
 			if the humanity of the player < 60:
 				say "You wince and hope that your infected body can repair the damage she, no, it, is doing so that you may have children.";
 			else:
 				say "You wince and hope that the damage can be fixed if you wish not to miscarry.";
-			increase the cunt length of the player by 3;
-		if cunt length of the player < 10:[god, still too small]
+			increase cunt length of player by 3;
+		if cunt length of player < 10:[god, still too small]
 			say "She pulls out of you, looking saddened. You are too small still. You will have to come back again later.";
-		else if the cunt length of the player < 24:[won't go in far enough, will pry open womb for more space]
+		else if cunt length of player < 24:[won't go in far enough, will pry open womb for more space]
 			say "She then slams her overly long member into the wall of your womb, stretching your womb and pussy as deep as they can go, and further. The pain mixes with the pleasure of her inside of you, bringing you to climax as she keeps fucking. ";
-			increase the cunt length of the player by 2;
-			if the cunt length of the player < 14:
+			increase cunt length of player by 2;
+			if cunt length of player < 14:
 				say "She then pulls out of you, and you look at her, disappointed. You were halfway to another orgasm. She tells you, 'You are still too small. I will have to 'fix' you later as well. Anymore stretching, and you will rip. Since I need to do more, you can't have my child. She then blows her load all over your front, the thick cum spraying through the water as if in slow motion, landing and sticking to you.";
 			else:
 				say "She then moans and slams extra hard, as she manages to fit the rest of her member inside by doubling back and forming a ring in your womb. Her gargantuan cock seems to be making a huge, ring-shaped bulge in your belly, visible from the outside, as she begins to orgasm. She lets out a chittering scream as she cums hard inside of you, stunning you and leaving you floating in the water. You can only watch, unreasoningly, as your belly gets bigger and bigger until you look positively bloated. A little while and expansion later, she begins to remove her cock with much wriggling and squirming to watch the cum inside of you get forced out into a cloud in the water once your entrance is clear.";
@@ -99,9 +99,9 @@ to say dolphin fuck:
 	else if "Male Preferred" is not listed in feats of player:[do female next]
 		say "She looks at your male genitals, surprised. 'Why not a girl?' she mutters, and kisses the base of your cock. Maybe next time you will be ready for me. Make sure to be nice and large!";
 		say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
-		increase the cunts of the player by 1;
-		increase the cunt length of the player by 6;
-		increase the cunt width of the player by 4;
+		increase cunts of player by 1;
+		increase cunt length of player by 6;
+		increase cunt width of player by 4;
 	else:
 		say "The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. ";
 		if scalevalue of player is 1:
@@ -197,10 +197,10 @@ this is the dolattack rule:		[possible sonic attack and sets upcoming strike]
 		now attack entry is "The dolphin takes her small breasts and shoves your face into them roughly. You struggle, and she slams you harder before you manage to escape.";
 		now wdam entry is 14;
 	else if tempnum is 6:		[was closed in the original version, left closed]
-		if the cocks of the player > 0:
+		if cocks of player > 0:
 			now attack entry is "The dolphin darts down to your nethers, grabs your cock, and TWISTS IT OMG THAT HURT!";
 			now wdam entry is 18;
-		else if the cunts of the player > 0:
+		else if cunts of player > 0:
 			now attack entry is "The dolphin darts down to your nethers and chomps on your clit. YOWCH.";
 			now wdam entry is 10;
 		else:

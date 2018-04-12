@@ -371,7 +371,7 @@ to say helpingronda:
 	say "     You and Ronda fuck Rod a few more times, showing her many of the pleasures her new body has to offer. Ronda eventually decides to take her boyfriend turned fucktoy down to the den to show her off to the others. Rod seems much more coherent than most slut rats after their initiation and Ronda seems to still remember in part. You guess that having each other to support and remind one another of their identities has helped them remember a little better. But that romp you shared certainly proves that they're slut rats through and through now as well.";
 	WaitLineBreak;
 	say "     When you head back up to the Mall, you tell everyone that Rod dragged you both down under the Mall after he'd decided to finally go searching for Ronda. You tell them that you tried to help him, but that the big rats down there got him and that you barely got away yourself. Still high on the excitement of what happened below, you feel no guilt about your duplicitous actions, feeling much closer to your slut rat sisters now.";
-	say "     Nermine gives you a inscrutable look as you're explaining what happened to the sad mall rats around you, but she says nothing. She was asked to help reunite Rod and Ronda, and that's happened... after a fashion. Pretty much Nermine's usual stock and trade.";
+	say "     Nermine gives you an inscrutable look as you're explaining what happened to the sad mall rats around you, but she says nothing. She was asked to help reunite Rod and Ronda, and that's happened... after a fashion. Pretty much Nermine's usual stock and trade.";
 	decrease humanity of player by 20;
 	increase score by 100;
 	now HP of Ronda is 100;

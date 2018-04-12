@@ -465,7 +465,7 @@ to say SexWithSven:
 		increase HP of Sven by 1;
 		now lastfuck of Sven is turns;
 	else if HP of Sven >= 32 and HP of Sven < 50 and lastfuck of Sven - turns < 6:
-		say "     The snow leopard smiles and stretches out on his sex-scented bunk, letting his tail only partially hide the plump bulge in his crotch. 'While I'm really looking forward to that, I need to rest up a little more first. This is all so new and wonderful to me, but I do not want to spoil it by not being to perform my best,' he purrs softly in his Nordic accent as he traces a along his side.";
+		say "     The snow leopard smiles and stretches out on his sex-scented bunk, letting his tail only partially hide the plump bulge in his crotch. 'While I'm really looking forward to that, I need to rest up a little more first. This is all so new and wonderful to me, but I do not want to spoil it by not being to perform my best,' he purrs softly in his Nordic accent as he traces along his side.";
 	else if HP of Sven >= 32 and HP of Sven < 50:
 		say "[ConfidentSvenSex]";
 	[Sven at Porn Store:]

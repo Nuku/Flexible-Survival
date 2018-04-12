@@ -84,7 +84,7 @@ to say WYVDESC:
 		else if WYVLEV is 0:
 			say "     Being familiar with the great creature's tactics, you dodge as it makes its attempt to catch you with an opening volley of goop.  You feel a rush of excitement, of wild fervour and charge at the gigantic creature before you even realize what you're doing.  Perhaps you're tired of always running from them, perhaps it is some new madness brought on by the infection, but you feel compelled to stand and fight the enormous beast.  [bold type]From this point on, you will face the monster directly.[roman type]";
 		else:
-			say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. [if scalevalue of player < 4]You feel that same crazed compulsion to take on the creature so much larger than you.[end if] You raise your [if weapon object of player is journal]fists[else]weapon in the air[end if] and give a wild battle cry before rushing at it.";
+			say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. [if scalevalue of player < 4]You feel that same crazed compulsion to take on the creature so much larger than you. [end if]You raise your [if weapon object of player is journal]fists[else]weapon in the air[end if] and give a wild battle cry before rushing at it.";
 		if level of player >= 20:
 			let debit be 0;
 			if hardmode is true and level of player > 25:

@@ -180,7 +180,7 @@ Instead of resolving DogHouse:
 					now scalevalue of player is 3;
 					now bodydesc of player is "animalistic";
 					now bodytype of player is "canine";
-					now the daycycle of player is 0;
+					now daycycle of player is 0;
 					wait for any key;
 					end the story saying "Having lost you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later you wind up [if cocks of player > 0] losing any masculinity you might have had[else]succumbing to your feminine lusts[end if]as you become another nameless bitch along with the Doberman.";
 					wait for any key;
@@ -198,7 +198,7 @@ Instead of resolving DogHouse:
 				now scalevalue of player is 3;
 				now bodydesc of player is "animalistic";
 				now bodytype of player is "canine";
-				now the daycycle of player is 0;
+				now daycycle of player is 0;
 				wait for any key;
 				end the story saying "Having lost you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later you wind up [if cocks of player > 0]losing any masculinity you might have had[else]succumbing to your feminine lusts[end if]as you become another nameless bitch along with the Doberman.";
 				wait for any key;

@@ -184,8 +184,8 @@ To say Steven flattery:
 	if the player is bodily human:
 		if the player is skintone human:
 			if tailname is not "human":
-				if the breast size of player < 4:
-					if the Cock Length of player < 12 or the cock width of player < 12:
+				if breast size of player < 4:
+					if cock length of player < 12 or the cock width of player < 12:
 						say "You seem pretty reasonably human. Glad the disaster didn't take a hit out of you, eh?";
 					else:
 						say "Congratulations on that, um... package of yours.";
@@ -618,7 +618,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "crowbar"	"A big, heavy crowbar. It's not sharp, but it's heavy enough to strike a good blow."	3	crowbar
 "mallet"	"A heavy mallet. If you swung it hard enough, you could easily crack someone's head open."	5	mallet
-"iron pipe"	"A piece of iron pipe. It might make a adequate blunt weapon."	3	iron pipe
+"iron pipe"	"A piece of iron pipe. It might make an adequate blunt weapon."	3	iron pipe
 
 crowbar is a armament. It is a part of the player. It has a weapon "your crowbar". The weapon damage of crowbar is 6. The weapon type of crowbar is "Melee". It is not temporary.
 mallet is a armament. It is a part of the player. It has a weapon "your mallet". The weapon damage of mallet is 7. The weapon type of mallet is "Melee". It is not temporary.

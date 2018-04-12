@@ -158,13 +158,13 @@ to say Yamato Dragoness vic:
 				say "     Chilling wind lashing against you, it does little to cool the heat of this dragoness's fiery need. Her long, winding form easily eclipsing yours, you're nothing more than a twisted captive to her merciless hole's overwhelming hunger";
 				if libido of player > 33:
 					say ". The whole ordeal is more than enough to make you quickly reach your climax.";
-					say "     '[one of]Yes, yes[or]Yes, now[or]More, more[at random]! [one of]Offer yourself unto me[or]Do not relent[or]All that you have will be mine[at random]!' She cries out as you pump into her, strained gout after gout, full with your [cum load size of player] load";
+					say "     '[one of]Yes, yes[or]Yes, now[or]More, more[at random]! [one of]Offer yourself unto me[or]Do not relent[or]All that you have will be mine[at random]!' she cries out as you pump into her, strained gout after gout, full with your [cum load size of player] load";
 					if cocks of player > 2 or (cocks of player is 2 and cock length of player > 24):
 						say ", exposed dick[if cocks of player > 3]s[else if cocks of player is 3 and cock length of player > 24]s[end if] wasting your seed impotently across the open air, down to the trees below";
 					say ". It's more than enough to set her off as well, powerful form tight as a noose around your quickly spent frame, intent on squeezing you dry of every last drop.";
 				else:
 					say ". It seems like an eternity before she finally roars out in bliss, her powerful form tight as a noose around your exhausted frame, intent on squeezing you into climaxing.";
-					say "     '[one of]Yes, yes[or]Yes, now[or]More, more[at random]! [one of]Offer yourself unto me[or]Do not relent[or]All that you have will be mine[at random]!' She cries out as you forced into orgasm, pumping her, strained gout after gout, full with your [cum load size of player] load";
+					say "     '[one of]Yes, yes[or]Yes, now[or]More, more[at random]! [one of]Offer yourself unto me[or]Do not relent[or]All that you have will be mine[at random]!' she cries out as you're forced into orgasm, pumping her, strained gout after gout, full with your [cum load size of player] load";
 					if cocks of player > 2 or (cocks of player is 2 and cock length of player > 24):
 						say ", exposed dick[if cocks of player > 3]s[else if cocks of player is 3 and cock length of player > 24]s[end if] wasting your seed impotently across the open air, down to the trees below";
 					say ". Her overwhelming grip is relentless until you're milked dry of every last drop.";

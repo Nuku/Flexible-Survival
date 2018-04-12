@@ -27,8 +27,8 @@ name	desc	weight	object
 to say gill fruit use:
 	say "You eagerly gulp the fruit.";
 	now hasgills is 1;
-	decrease the thirst of the player by 10;
-	decrease the hunger of the player by 10;
+	decrease thirst of player by 10;
+	decrease hunger of player by 10;
 	if thirst of player < 0, now thirst of player is 0;
 	if hunger of player < 0, now hunger of player is 0;
 	increase score by 10;
@@ -58,7 +58,7 @@ name	desc	weight	object
 the scent of sea dragon cum is "The cum smells powerfully of a male sea dragon.".
 
 to say sea dragon cum use:
-	if the cunts of the player > 0:
+	if cunts of player > 0:
 		say "Do you wish to eat the seed (y), or impregnate yourself with it (n)?";
 		if the player consents:
 			if a random chance of one in two succeeds and guy is not banned:

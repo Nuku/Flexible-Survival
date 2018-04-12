@@ -143,7 +143,7 @@ Section 3 - Miscellaneous
 when play ends:
 	if bodyname of player is "Ebonflame Draken":
 		if humanity of player < 10:
-			say "     Overcome by your powerful, draconic infection, you're pulled inexorably towards the your kin, informed by your dark, fiery strain on how you must act";
+			say "     Overcome by your powerful, draconic infection, you're pulled inexorably towards your kin, informed by your dark, fiery strain on how you must act";
 			if player is submissive:
 				say ". However, you are twisted by your submissive inclinations to serve your sisters as their plaything, often abused when there's no proper victim to take your place. You take a deep thrill in being subjugated by your own kind.";
 			else:

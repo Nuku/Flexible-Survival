@@ -477,7 +477,7 @@ to fimpregchance:		[Female-particular Pregnancy Roll]
 			now pregtype is 1;
 			impregnate with name entry;
 			if libido of player > 49:
-				now the libido of player is (the libido of player) / 2;
+				now libido of player is (libido of player) / 2;
 			else if libido of player > 25:
 				decrease libido of player by (libido of player / 10);
 	now callovi is false;
@@ -503,7 +503,7 @@ to mimpregchance:		[MPreg-particular Pregnancy Roll]
 			now pregtype is 2;
 			impregnate with name entry;
 			if libido of player > 49:
-				now the libido of player is (the libido of player) / 2;
+				now libido of player is (libido of player) / 2;
 			else if libido of player > 25:
 				decrease libido of player by (libido of player / 10);
 	now callovi is false;
@@ -529,7 +529,7 @@ to selfimpregchance:
 			now ovipregnant is false;
 			selfimpregnate;
 			if libido of player > 49:
-				now the libido of player is (the libido of player) / 2;
+				now libido of player is (libido of player) / 2;
 			else if libido of player > 25:
 				decrease libido of player by (libido of player / 10);
 	now callovi is false;
