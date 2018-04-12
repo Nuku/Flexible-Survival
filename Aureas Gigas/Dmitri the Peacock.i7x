@@ -187,18 +187,18 @@ to say DmitriSexMenu:
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the captivating bird";
-		now sortorder entry is 4;
+		now sortorder entry is 3;
 		now description entry is "Take Dmitri's ass for a ride";
 	[]
 	if player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Dmitri's shaft in your pussy";
-		now sortorder entry is 5;
+		now sortorder entry is 4;
 		now description entry is "Offer sex to the entrancing anthro bird";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Take Dmitri's shaft in your ass";
-	now sortorder entry is 6;
+	now sortorder entry is 5;
 	now description entry is "Offer your butt to the lusty peacock";
 	[]
 	sort the table of fucking options in sortorder order;
