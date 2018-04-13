@@ -1380,7 +1380,6 @@
 |Stripes|Bouncy Castle|vixcountdown|value|
 |Stripes|Bouncy Castle|dolphinbundle|value|
 |Stripes|Bouncy Castle|dolphinlist|value|
-|Stripes|Bouncy Castle|dolcastleturn|value|
 |Stripes|Bouncy Castle|dolcastlefight|value|
 |Stripes|Bouncy Castle|bcending|value|
 |Stripes|Bouncy Castle|rowing|value|

@@ -90,7 +90,7 @@ to say sugarferretdesc:
 	else:
 		say "     You find yourself encountering a small group of the sugar ferrets all hepped up on caffeine again, probably still rampaging in search of more cola or candy. Their once pastel colours are now bright and vibrant. Their paws have elongated claws and their wide, manic grins show their saw-like teeth. While only four of five feet tall, there are several of the little bundles of energy here. Overcharged on caffeine and sugar, they have boundless energy and a wild thirst for more. Spotting you, they poing over, intent on ransacking your pack for any soda they can find. ";
 		if bodyname of player is "Sugar Ferret" and caffeinehigh of player > 0:
-			say "     Still in the throws of your own caffeine high, you clutch your pack possessively, wanting to protect your stash from them.";
+			say "     Still in the throes of your own caffeine high, you clutch your pack possessively, wanting to protect your stash from them.";
 		else:
 			if sugferretjoke is false:
 				say "     'Give us the cola and we'll hurt you!' one says.";

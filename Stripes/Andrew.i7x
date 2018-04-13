@@ -6,7 +6,7 @@ Version 2 of Andrew by Stripes begins here.
 
 Section 1 - Private Booths
 
-Private Booths is a room. Private Booths is east of PALOMINO. The description of Private Booths is "     Looking around the shadowy, semi-private booths in this corner of the club, you spot several signs of patrons having used them for some fun. Many of the vinyl padded seats of the booths, and even some of the round tables, have large splatters of cum on them. While the booths themselves look rather new, it's clear that they've suffered a lot of wear recently, with fresh claw marks in the wood and cushions alike from mutated patrons in the throws of lustful passion.".
+Private Booths is a room. Private Booths is east of PALOMINO. The description of Private Booths is "     Looking around the shadowy, semi-private booths in this corner of the club, you spot several signs of patrons having used them for some fun. Many of the vinyl padded seats of the booths, and even some of the round tables, have large splatters of cum on them. While the booths themselves look rather new, it's clear that they've suffered a lot of wear recently, with fresh claw marks in the wood and cushions alike from mutated patrons in the throes of lustful passion.".
 
 the scent of Private Booths is "The booths smell strongly of male lust of numerous varieties, though wolf is definitely omnipresent in the air in this area.".
 

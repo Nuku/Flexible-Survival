@@ -241,9 +241,9 @@ Instead of resolving Findingboat:
 					now tmapfound is 3;
 					now boatfound is 3;
 			if lost is 1:
-				say "Sadly, the rough battle with the sharks has practically wrecked your little boat, and you barely make it back to shore before it sinks, it looks like you will have to try again another time with a different boat...";
+				say "Sadly, the rough battle with the sharks has practically wrecked your little boat, and you barely make it back to shore before it sinks. It looks like you will have to try again another time with a different boat...";
 		else:
-			say "Sadly, you don't manage to find any useful boats here right now, and sighing you are forced to continue on your way, maybe you will have better luck another time.";
+			say "Sadly, you don't manage to find any useful boats here right now, and sighing you are forced to continue on your way. Maybe you will have better luck another time?";
 	else if boatfound is 1:
 		say "     You find a small rowboat that's been dragged up into the short strip of woods along this section of beach. It seems to have been here for a while, but still looks serviceable. You certainly wouldn't be able to take any long trips with it, but it should be capable of the trip out to the bouncy castle you found.";
 		now boatfound is 2;

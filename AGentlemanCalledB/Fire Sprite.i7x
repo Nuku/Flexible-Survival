@@ -182,7 +182,7 @@ to say FireSpritedesc:
 	choose row monster from the table of random critters;
 	now FireSpritemode is a random number between 0 and 1;
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
-		say "     Meet a fire sprite, but it runs away.";
+		say "     You meet a fire sprite, but it runs away.";
 		blank out the whole row;
 		now fightoutcome is 19;
 		now combat abort is 1;
