@@ -293,6 +293,7 @@ to GatorBind:
 				if name entry is "Sewer Gator":
 					now monster is y;
 					break;
+			now voreloss is true;
 			now bodyname of player is "Sewer Gator";
 			now facename of player is "Sewer Gator";
 			now tailname of player is "Sewer Gator";
