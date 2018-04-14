@@ -421,7 +421,7 @@ instead of conversing Amuran:
 				now HP of Amuran is 6;
 				say "[AmuranFinalQuest]";
 		else:
-			say "     Deciding to stay out of this, you thank him for the explanation and wish him luck in his endeavour. Amuran nods to you, and without further ado, marches stoically towards the open set of doors; soon enough, you're left alone in the mythic sanctum. You're almost sure that he'll be back soon, though; it'll just take some time.";
+			say "     Deciding to stay out of this, you thank him for the explanation and wish him luck in his endeavor. Amuran nods to you, and without further ado, marches stoically towards the open set of doors; soon enough, you're left alone in the mythic sanctum. You're almost sure that he'll be back soon, though; it'll just take some time.";
 			now HP of Amuran is 10;
 			now lust of Amuran is 0;
 	else if AmuranAwoken is 4:

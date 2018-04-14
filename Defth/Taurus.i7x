@@ -3,7 +3,7 @@ Version 1 of Taurus by Defth begins here.
 
 to say taurusdesc:
 	setmongender 3;		[creature is male]
-	say "     You spot a bull running around the plains and seemingly looking for something. His shaggy fur is coal-black, absorbing all of the colors of the [if daytimer is day]sun[else]moon[end if]. The bovine would be a giant, ebony block of muscles if it weren't for his silvery horns that almost seem to gleam with thirst for a victim. By his figure, you guess that the beast was used for breeding or exposition on some farm. His muscles - surely already plentiful even before the nanite apocalypse – have grown to an enormous bulk, making him look like a giant of his species, standing almost 6 foot tall on all fours. Between his legs, you can glimpse a mighty sack that was made to breed any cow with just one try, and his spear-like penis casually pokes out of his sheath, clearly hungering for a nice pussy. This bull is looking for someone to breed, and apparently, he doesn't differentiate much between candidates as he turns to you. Hitting the ground with mighty hooves, the oxen gets ready to run you down. Lowering his head to bring his horns into play, he charges a moment later, eager to beat and breed you. Looks like this fight won't be easy.";
+	say "     You spot a bull running around the plains and seemingly looking for something. His shaggy fur is coal-black, absorbing all of the colors of the [if daytimer is day]sun[else]moon[end if]. The bovine would be a giant, ebony block of muscles if it weren't for his silvery horns that almost seem to gleam with thirst for a victim. By his figure, you guess that the beast was used for breeding or exposition on some farm. His muscles - surely already plentiful even before the nanite apocalypse – have grown to an enormous bulk, making him look like a giant of his species, standing almost six foot tall on all fours. Between his legs, you can glimpse a mighty sack that was made to breed any cow with just one try, and his spear-like penis casually pokes out of his sheath, clearly hungering for a nice pussy. This bull is looking for someone to breed, and apparently, he doesn't differentiate much between candidates as he turns to you. Hitting the ground with mighty hooves, the oxen gets ready to run you down. Lowering his head to bring his horns into play, he charges a moment later, eager to beat and breed you. Looks like this fight won't be easy.";
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
@@ -34,10 +34,10 @@ When Play begins:
 	now int entry is 5;
 	now cha entry is 11;
 	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now HP entry is 150;[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now HP entry is 150;[ How much HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 15;[ Level of the Monster, you get this much HP if you win, or this much HP halved if you lose ]
 	now wdam entry is 15;[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Plains";[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Plains";[ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0;[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;[ Length infection will make cock grow to if cocks]
 	now cock width entry is 0;[ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
@@ -71,7 +71,7 @@ to say tauruswon:
 		say "     The bull sniffs your crotch, but with the lack of any female genitalia, he swiftly loses sexual interest in you. Problem is... if you're not a mate for him, you are competition. Kicking you with a large hoof, he throws you on the grass, and roll a few times before coming to a rest. Despite the pain, you count yourself lucky to have survived the encounter.";
 
 to say tauruslost:
-	say "     Almost losing consciousness, the instincts of the now-weak bull are everything that is pushing him now, and it looks like they were screaming at him to run away from you. Trying to ram you for a final time, he fails miserably as all the wounds from the fight make him slow and really easy to dodge. But the bull doesn't stop, running away to the horizon as he makes his escape.”;
+	say "     Almost losing consciousness, the instincts of the now-weak bull are everything that is pushing him now, and it looks like they were screaming at him to run away from you. Trying to ram you for a final time, he fails miserably as all the wounds from the fight make him slow and really easy to dodge. But the bull doesn't stop, running away to the horizon as he makes his escape.";
 	[Maybe there is a way to bound the bull instead, you could do something with him]
 
 

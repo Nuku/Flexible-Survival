@@ -1442,7 +1442,7 @@ carry out dolchecking: [Picks events from dolphinlist, defined earlier in the do
 		else if status is "E":
 			if HP of Bubble is 2: [No need to check for 1, since navigating to the castle inherently sets this to 2]
 				say "[dolcheckE]";
-			else if HP of Bubble is 3 or HP of Bubble is 4: [Adjusts event after Bubble is saved]
+			else if HP of Bubble > 2 and HP of Bubble < 99: [Adjusts event after Bubble is saved]
 				say "[dolcheckA]";
 			else: [Adjusts event after Bubble is lost]
 				say "[dolcheckD]";

@@ -107,7 +107,7 @@ to say losetopewter:
 				say "     Still furiously attending to yourself, the beast eggs you on by rubbing his oozing, spent dick against your face, eventually forcing you to finally cry out in bliss, [if cocks of player > 0]spending your [cum load size of player] load all over the ground[else]feminine portal throbbing achingly against your finger's influence[end if]. The beast responds by going tense, loudly hissing and growling, as though he too feels your bliss, before finally calming down.";
 		else:
 			say "too [if facecheck is true]overtaken by his radiant[else]trapped in your own[end if] lust to do anything but revel in it.";
-			say "     However, you eventually become too exhausted to continue. The beast doesn't seem particularly satisfied with this, and tries egging you on by rubbing his oozing, spend dick against your face. The whole endeavour proving to be fruitless, he eventually does concede, not pestering you with the matter any further.";
+			say "     However, you eventually become too exhausted to continue. The beast doesn't seem particularly satisfied with this, and tries egging you on by rubbing his oozing, spend dick against your face. The whole endeavor proving to be fruitless, he eventually does concede, not pestering you with the matter any further.";
 		say "     Appearing somewhat satisfied by making a mess of you, the creature eventually pulls off of you, leaving you an embarrassing, cum-stained mess. [if showlocale is true]You hear sounds in the distance, no doubt the sordid affair catching some attention, compelling you to gather your things and quickly flee[else]Eventually, you recover enough to gather your things, clean yourself off to the best of your ability, and depart[end if].";
 
 to say beattheconsort:
@@ -196,7 +196,7 @@ to pewterbind:
 				say "[line break]";
 				increase struggleatt by 1;
 				if struggleatt < 3:
-					say "     You deliberately endeavour to free yourself of their hold, [if struggleatt is 1]barely making any progress, as you're quickly pulled back within their slick depths[else]managing to make some headway before being pulled back, just a little bit more..[run paragraph on][end if].";
+					say "     You deliberately endeavor to free yourself of their hold, [if struggleatt is 1]barely making any progress, as you're quickly pulled back within their slick depths[else]managing to make some headway before being pulled back, just a little bit more..[run paragraph on][end if].";
 					now tempnum is 0;
 					pewterdisengage;
 					if bodyname of player is "Pewter Consort" and player is pure:
@@ -725,7 +725,7 @@ When Play begins:
 	now cunt length entry is 0;
 	now cunt width entry is 0;
 	now libido entry is 45;
-	now loot entry is "pewter seed";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "pewter seed";			[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 45;		[ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;
 	now body descriptor entry is "[one of]lean[or]feral[or]bestial[at random]";

@@ -381,9 +381,9 @@ to flotsanitypassive:
 	if flotintense > 7:
 		decrease humanity of player by (6 + (psycheadjust * 2)) / endureadj;
 	else if flotintense > 5:
-		decrease humanity of player by (4 + psycheadjust)  / endureadj;
+		decrease humanity of player by (4 + psycheadjust) / endureadj;
 	else if flotintense > 3:
-		decrease humanity of player by (3 + psycheadjust)  / endureadj;
+		decrease humanity of player by (3 + psycheadjust) / endureadj;
 	else if flotintense > 1:
 		let tempnum be (2 + psycheadjust);
 		if tempnum > 1 and enduring is true:
@@ -408,17 +408,17 @@ to flotsanityorgasm:
 		infect;
 		decrease humanity of player by (15 + (psycheadjust * 5)) / endureadj;
 	else if flotintense > 5:
-		decrease humanity of player by (9 + psycheadjust * 3)  / endureadj;
+		decrease humanity of player by (9 + psycheadjust * 3) / endureadj;
 		if a random chance of 2 in 3 succeeds:
 			infect;
 	else if flotintense > 3:
 		if a random chance of 1 in 3 succeeds:
 			infect;
-		decrease humanity of player by (7 + psycheadjust * 2)  / endureadj;
+		decrease humanity of player by (7 + psycheadjust * 2) / endureadj;
 	else if flotintense > 1:
-		decrease humanity of player by (5 + psycheadjust)  / endureadj;
+		decrease humanity of player by (5 + psycheadjust) / endureadj;
 	else:
-		decrease humanity of player by (3 + psycheadjust)  / endureadj;
+		decrease humanity of player by (3 + psycheadjust) / endureadj;
 
 to say flotstrugglebar:
 	say "[close bracket]";

@@ -159,8 +159,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Pink Poodle";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "The pink poodle [one of]strikes you sharply across the face with an open paw[or]squeezes her large breasts together tantalizingly, distracting you just long enough to get in a quick hit[or]scratches you with her well-manicured claws[or]teases you playfully as she strikes a sultry pose[at random]!";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthePinkPoodle]";				[ Text when monster loses.  Change 'Pink Poodle' as above. ]
-	now victory entry is "[losetoPinkPoodle]";					[ Text when monster wins.  Change 'Pink Poodle' as above. ]
+	now defeated entry is "[beatthePinkPoodle]";				[ Text when monster loses. Change 'Pink Poodle' as above. ]
+	now victory entry is "[losetoPinkPoodle]";					[ Text when monster wins. Change 'Pink Poodle' as above. ]
 	now desc entry is "[PinkPoodledesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "a slim and attractive canine muzzle, tipped with a bright pink nose, but the most striking feature is the puffy pink bouffant atop your canine head, which blends into your long, fluffy poodle ears";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "elegant and well proportioned, with an attractive canine figure and sharp features. Your paw-like hands and feet are accentuated by pink paw pads and short matching claws";	[ Body Description, format as the text "Your body is (your text)." ]
@@ -178,9 +178,9 @@ When Play begins:
 	now per entry is 13;
 	now int entry is 12;
 	now cha entry is 17;
-	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 60;			[ The monster's starting HP. ]
-	now lev entry is 9;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 9;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 8;			[ Monster's average damage when attacking. ]
 	now area entry is "High";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -193,7 +193,7 @@ When Play begins:
 	now cunt length entry is 10;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6;		[ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 80;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

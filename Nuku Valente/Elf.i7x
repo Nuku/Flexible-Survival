@@ -38,7 +38,7 @@ to say Elf attack:
 			say "she nonetheless teases your apparent arousal, fingers tracing along the length of [if cocks of player > 1]one of your [cock size desc of player] cocks[else if cocks of player > 0]your [cock size desc of player] cock[else if cunts of player > 1]one of your [cunt size desc of player] pussies[else]your [cunt size desc of player] pussy[end if], a meager balm she's eager to undermine with another lashing.";
 		else:
 			say "she teases your apparent arousal, fingers tracing along your [bodytype of player] thighs, since you lack anything of real interest to her for the elf to play with, a meager balm she's eager to undermine with another lashing.";
-		say "     The elf's endeavours persist for what seems like forever, until you finally cry out, finding twisted bliss after being rendered so sensitive[if cocks of player > 0], wasting your [cum load size of player] load onto the earth[else if cunts of player > 1], aching cunt[sfn] making a further mess of the earth[end if]. Mocking and chastising you, the elven lady does thankfully relent, pulling her bow free from you and giving one final, playful swat with it before parting. It takes a fair amount of time to recover, no doubt your behind very red and sore following the whole ordeal.";
+		say "     The elf's endeavors persist for what seems like forever, until you finally cry out, finding twisted bliss after being rendered so sensitive[if cocks of player > 0], wasting your [cum load size of player] load onto the earth[else if cunts of player > 1], aching cunt[sfn] making a further mess of the earth[end if]. Mocking and chastising you, the elven lady does thankfully relent, pulling her bow free from you and giving one final, playful swat with it before parting. It takes a fair amount of time to recover, no doubt your behind very red and sore following the whole ordeal.";
 
 To say Elf loss:
 	say "     You knock the elf back and she topples to her bottom.";
@@ -109,7 +109,7 @@ When Play begins:
 	now HP entry is 45;
 	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 9; [Amount of Damage monster Does when attacking.]
-	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]

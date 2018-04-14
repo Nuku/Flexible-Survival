@@ -4,7 +4,7 @@ Section 1 - Monster Responses
 
 when play begins:
 [These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
-[Delete the lines with unneeded flags and replace 'Behemoth' with your creature's name entry.  Case sensitive.]
+[Delete the lines with unneeded flags and replace 'Behemoth' with your creature's name entry. Case sensitive.]
 	add { "Behemoth" } to infections of hermaphrodite;
 	add { "Behemoth" } to infections of furry;
 	add { "Behemoth" } to infections of tailweapon;
@@ -96,8 +96,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Behemoth"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The Behemoth attacks with a bellowing roar, all but destroying your eardrums![or]The Behemoth sweeps its massive clawed forepaw into you sending you corkscrewing across the ground![or]The Behemoth batters with a mighty charge, knocking you across the ground![or]The Behemoth spins around to strike at you with its gargantuan tail![or]The Behemoth slams it forepaws into the ground causing and earthquake to upset your balance. It then flies into you to knock you into the ground![or]The Behemoth charges at you, hitting you directly into the chest with its toughened skull![at random]"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheBehemoth]"; [ Text when monster loses.  Change 'Behemoth' as above. ]
-	now victory entry is "[losetoBehemoth]"; [ Text when monster wins.  Change 'Behemoth' as above. ]
+	now defeated entry is "[beattheBehemoth]"; [ Text when monster loses. Change 'Behemoth' as above. ]
+	now victory entry is "[losetoBehemoth]"; [ Text when monster wins. Change 'Behemoth' as above. ]
 	now desc entry is "[Behemothdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is " lightly tinted with a greenish-blue hue with a long and angular muzzle, filled with twin rows of jagged fangs, protruding from the end of your face. With two sixteen inch onyx curved horns jutting out from your scalp, a shaggy white mane extending around your face and down to your back, fierce golden-orange almond shaped irises centered into your pitch black eyes and a pair of furry tri-pointed ears flicking back and forth beside both of your horns you are a fearsome-looking beast indeed"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "stacked on with massive muscles and thickly corded sinew. Because of your body's new physique you have acquired a slightly hunched over posture, symbolizing a better aptitude for you to walk and run on all fours instead of on two feet. Yet because of the density of your newly thickened bones you are able to walk without lumbering...too much. With your bestial eight foot frame there is no denying your ferocity as you now boast sharpened claws at the end of your four fingered hands and at the tips of your three toed feet. To complete your new body you now have two pure white fin-like wings, complete with greenish-blue membranes, fluttering at your backside"; [ Body Description, format as the text "Your body is (your text)." ]
@@ -115,9 +115,9 @@ When Play begins:
 	now per entry is 20;
 	now int entry is 22;
 	now cha entry is 10;
-	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 240; [ The monster's starting HP. ]
-	now lev entry is 20; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 20; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 35; [ Monster's average damage when attacking. ]
 	now area entry is "Plains"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -130,7 +130,7 @@ When Play begins:
 	now cunt length entry is 16; [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 10; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 90; [ Target libido the infection will rise towards. ]
-	now loot entry is "behemoth horn"; [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "behemoth horn"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]indomitable[or]ginormous[or]monstrous[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]

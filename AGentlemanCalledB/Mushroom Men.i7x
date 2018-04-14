@@ -45,8 +45,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Mushroom Men";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The group cheers as several of their members run out towards you, shouting lewd comments and offers as they strikes at your lower body.[or]Several of the larger mushrooms grab one of their smaller brethren and toss him at you. [']How [']bout a kiss hun?['] shouts the flying mushroom man, just before he bounces off your face.[or]Several of the larger mushrooms grab one of the smaller members of their group and fling him at you, much to his disapproval. He makes several rude comments and gestures at his brethren as he flies through the air before bouncing off the top of your head.[or][']Why don't you let us show you a good time hot stuff?['] one of the mushrooms asks with a smirk, before several of them leap out of the pack and grab onto your legs, pinching and squeezing you wherever they can.[or]There is a sharp wolf whistle behind you, and you realize some of the group have split off to flank you. Before you have a chance to react several fungi from each group are launched into the air towards you. While most of them miss their target, one lands safely on your shoulder, grabbing your face and pulling you into a rough kiss before you can shake him off.[at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheMushroomMen]";				[ Text when monster loses.  Change 'template' as above. ]
-	now victory entry is "[losetoMushroomMen]";					[ Text when monster wins.  Change 'template' as above. ]
+	now defeated entry is "[beattheMushroomMen]";				[ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoMushroomMen]";					[ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[MushroomMendesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "mostly human looking with cute[if cunts of player > 0], feminine[end if] features and a smooth, pale complexion. The large mushroom cap atop your head, however, is far more unusual. It has [if MMC is 1]white[else if MMC is 2]red[else if MMC is 3]pale yellow[else if MMC is 4]pale orange[else if MMC is 5]brown[end if] flesh[if MMP is 1] with off-white spots[else if MMP is 2] with off-white splotches[else if MMP is 3] of varying shades[end if]";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a small mushroom person, with a slim[if cunts of player > 0], feminine[end if] build and compact features. You are roughly three and a half feet tall from the ground to the top of your [if player is mushroomfaced]cap[else]head[end if]. While your hands are still mostly human, with the notable exception of your missing fingernails, your feet have lost much of their definition, leaving them looking not unlike the stalk of a mushroom";	[ Body Description, format as the text "Your body is (your text)." ]
@@ -64,9 +64,9 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 15;
-	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 24;			[ The monster's starting HP. ]
-	now lev entry is 3;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 3;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4;			[ Monster's average damage when attacking. ]
 	now area entry is "Park";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -79,7 +79,7 @@ When Play begins:
 	now cunt length entry is 9;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 3;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 70;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

@@ -227,8 +227,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Fire Sprite";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "The fire sprite [one of]prances about wildly, distracting you long enough to sneak in a quick strike[or]strikes you with a fiery fist[or]kicks you in the shin with a flaming foot[or]weaves under your defenses, landing a sharp blow[at random]!";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheFireSprite]";				[ Text when monster loses.  Change 'template' as above. ]
-	now victory entry is "[losetoFireSprite]";					[ Text when monster wins.  Change 'template' as above. ]
+	now defeated entry is "[beattheFireSprite]";				[ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoFireSprite]";					[ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[FireSpritedesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "mostly human with slim features and pointed elven ears. You have long locks of orange and red hair that seem to shimmer and flicker like fire.";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a small, energetic sprite";	[ Body Description, format as the text "Your body is (your text)." ]
@@ -246,9 +246,9 @@ When Play begins:
 	now per entry is 15;
 	now int entry is 10;
 	now cha entry is 15;
-	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 30;						[ The monster's starting HP. ]
-	now lev entry is 3;					[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 3;					[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5;					[ Monster's average damage when attacking. ]
 	now area entry is "Capitol";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;					[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -261,7 +261,7 @@ When Play begins:
 	now cunt length entry is 9;	[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6;		[ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 50;				[ Target libido the infection will rise towards. ]
-	now loot entry is "glowing ember";					[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "glowing ember";					[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 30;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 1;					[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

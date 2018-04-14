@@ -202,7 +202,7 @@ When Play begins:
 	now HP entry is 95;
 	now lev entry is 10;
 	now wdam entry is 15;
-	now area entry is "Campus";         [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Campus";         [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 12;        [ Length infection will make cock grow to if cocks]
 	now cock width entry is 5;          [ Size of balls ]

@@ -6,7 +6,7 @@ Section 1 - Monster Responses
 
 when play begins:
 [These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
-[Delete the lines with unneeded flags and replace 'Pegasus' with your creature's name entry.  Case sensitive.]
+[Delete the lines with unneeded flags and replace 'Pegasus' with your creature's name entry. Case sensitive.]
 	add { "Pegasus" } to infections of girl;
 	add { "Pegasus" } to infections of furry;
 
@@ -86,8 +86,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Pegasus"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The pegasus rushes forward to kick you with its cloven hooves![or]The pegasus flies up into the sky and then shoots some of its needle-like feather down onto you![or]The pegasus batters you as it knocks you down with its head and then stomp viciously onto your chest![or]The pegasus flies up into the sky and then power-dives into you![or]The pegasus raises up onto its back hooves and then flaps its wings hard enough to send a gale of wind shooting at you![or]The pegasus pushes up into the sky and then folds its wings tight before spinning. Sadly in its descent it directs itself unswervingly towards you![at random]"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthePegasus]"; [ Text when monster loses.  Change 'Pegasus' as above. ]
-	now victory entry is "[losetoPegasus]"; [ Text when monster wins.  Change 'Pegasus' as above. ]
+	now defeated entry is "[beatthePegasus]"; [ Text when monster loses. Change 'Pegasus' as above. ]
+	now victory entry is "[losetoPegasus]"; [ Text when monster wins. Change 'Pegasus' as above. ]
 	now desc entry is "[Pegasusdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "long and narrowed in a familiarly equine manner with a wide set of nostrils, a thick cerulean mane at the back of your head and a pair of cute, but thinly shaped ears atop your head"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "like that of an anthro horse, but instead of just being powerful muscular and attractively risque, like a normal equine's would be. You are also gifted with two lustrous white wings flapping at your back. Able to extend out about twice you height in width you have no problems taking minor bouts of flight as you use them to carry you around the city. Said wings bring out an almost majestic quality to you as they rest in a folded manner against your backside for right now though"; [ Body Description, format as the text "Your body is (your text)." ]
@@ -105,9 +105,9 @@ When Play begins:
 	now per entry is 20;
 	now int entry is 22;
 	now cha entry is 24;
-	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 90; [ The monster's starting HP. ]
-	now lev entry is 13; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 13; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 22; [ Monster's average damage when attacking. ]
 	now area entry is "Warehouse";
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -120,7 +120,7 @@ When Play begins:
 	now cunt length entry is 16; [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 8; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 55; [ Target libido the infection will rise towards. ]
-	now loot entry is "Pegasus Quill"; [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "Pegasus Quill"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 35; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]powerful[or]untameable[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]

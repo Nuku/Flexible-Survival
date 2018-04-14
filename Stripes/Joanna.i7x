@@ -629,7 +629,7 @@ Definition: a person is planttailed:
 [ 4 = more sex                    ] lust = 0
 [ 5 = more sex                    ]
 [ 6 = refused her seed on initial offer ] = joannaoffernum = 1  //  lust of joanna is 3+
-[ 7 = accepted her seed ]  =  lust of joanna is 3+
+[ 7 = accepted her seed ] = lust of joanna is 3+
 
 [ 90 = helped w/dogs          ]  Dog Chase resolved, joannadogsaved is true, Palomino is known
 [ 91 = asked Harold about her ]
