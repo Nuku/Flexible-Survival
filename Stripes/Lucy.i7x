@@ -58,7 +58,7 @@ the fuckscene of Lucy is "[sexwithLucy]".
 to say sexwithLucy:
 	if lastfuck of Lucy - turns < 6:
 		say "     'We just had some fun a little while ago. I know you can't keep your paws off your sexy girl, but [one of]I've other commitments, sweetums.'[or]I promised I'd... help Ronda with her nails.'[or]one of the cute guys broke up with his girl again and I want to see if I can console him,' she says with a wink.[purely at random]";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     Realizing that you're ill-equipped to play with your rat girlfriend, you find yourself wanting to rush off to find a means to correct that so you can have some fun with the sexy mall rat.";
 	else if bodyname of player is "Slut Rat" or facename of player is "Slut Rat" or skinname of player is "Slut Rat" or cockname of player is "Slut Rat" or tailname of player is "Slut Rat":
 		say "     'You'd best ditch that twisted rat infection if you want to come near me. I'm not risking becoming some stinky sewer dweller.'";

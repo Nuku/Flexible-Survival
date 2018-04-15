@@ -230,7 +230,7 @@ EweFucked is a number that varies. EweFucked is usually 0.
 to say sexwithLeon:
 	setmonster "Ram";
 	choose row monster from the table of random critters;
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     You're ill-equipped to play with him right now.";
 	else if EweFucked is 0 and RamFucked is 0:
 		say "     You should [bold type]talk[roman type] to him for a bit first.";
@@ -391,7 +391,7 @@ to say sexwithLeon:
 
 
 to say sexwithmary:
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "You're ill-equipped to play with her right now.";
 	else if EweFucked is 0 and RamFucked is 0:
 		say "     You should [bold type]talk[roman type] to her a bit first.";

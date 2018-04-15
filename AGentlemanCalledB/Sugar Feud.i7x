@@ -34,7 +34,7 @@ Instead of resolving a Sugar Shack:
 			say " pressing against your flesh and forming a thick [if cocks of player > 0]blue[else]pink[end if] cotton candy hide on your shifting head. As the changes roll through you[run paragraph on]";
 		say " the fluff seems to press right into your mind, further clouding your thoughts and pushing any lingering resistance out.";
 		say "     You groan with disappointment as you are pulled from your cotton candy filled dream but soon find yourself face to face with your giggling lover once again. [if player is not sugargliderskinned]'You look lovely,' she says with a[else]She stares deep into your large eyes with a loving[end if] smile, before pressing her muzzle to your own in a deep kiss. Her long, agile tongue darts around your mouth with practiced mastery, easily outmaneuvering your own and filling your mouth with her deliciously sweet flavour. Meanwhile her dexterous paws are roaming across your body, quickly stripping you of your clothing and gear as she presses you up against the stall wall.";
-		if cocks of player is 0 and cunts of player is 0:
+		if player is neuter:
 			say "     As the sugar glider's paws roam across your body, she gently brushes across your bare groin, massaging your tender flesh softly as waves of pleasure ripple through your pelvis.";
 			follow the sex change rule;
 		if cocks of player > 0:

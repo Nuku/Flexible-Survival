@@ -180,7 +180,7 @@ to theserpentchecks: [Invocation of validation for TBM scene]
 	if "Touched by Madness" is listed in feats of player and (player is fem_vacant or snakeocc > 0) and cunts of player > 0 and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
 		now fsnakevalid is true;
 		now msnakevalid is false;
-	else if "Touched by Madness" is listed in feats of player and (player is male_vacant or snakeocc > 0) and cunts of player is 0 and "MPreg" is listed in feats of player and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
+	else if "Touched by Madness" is listed in feats of player and (player is male_vacant or snakeocc > 0) and cunts of player is 0 and player is mpreg_ok and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
 		now msnakevalid is true;
 		now fsnakevalid is false;
 	else:

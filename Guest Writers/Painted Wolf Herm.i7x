@@ -13,7 +13,7 @@ wolfhermvictory is a number that varies.
 wolfhermdefeat is a number that varies.
 
 to say wolfherm attack:
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "Shi looks you over, seeing nothing that peaks hir interest shi walks away and leaves you lying on the ground.";
 	else:
 		if wolfhermdefeat is 0: [first time losing to wolf herm]

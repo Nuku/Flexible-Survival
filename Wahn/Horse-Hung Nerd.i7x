@@ -15,7 +15,7 @@ to say HHNerd wins:
 	setmonster "Horseman";
 	choose row monster from the table of random critters;
 	if HP of player > 0: [player submits]
-		if anallevel is 0 or (cocks of player is 0): [blowjob for females, neuters and those who don't like anal]
+		if anallevel is 1 or (cocks of player is 0): [blowjob for females, neuters and those who don't like anal]
 			say "     As you submit and fall to your knees, Clyde grins down at you and says, 'So you do know how to treat your betters after all. This is how it should be - with the smartest people at the top, not the most violent. Good that you've seen the light.' Chuckling, he grabs hold of his cock, jerking its long shaft with both hands. As it quickly gets fully hard, Clyde steps up to you and says 'Now open wide...'";
 			say "     [HHNerd Sucking]";
 		else: [random fuck/suck]
@@ -28,7 +28,7 @@ to say HHNerd wins:
 		LineBreak;
 		infect "Horseman";
 	else: [player loses]
-		if anallevel is 0 or (cocks of player is 0): [blowjob for females, neuters and those who don't like anal]
+		if anallevel is 1 or (cocks of player is 0): [blowjob for females, neuters and those who don't like anal]
 			say "     As you fall to your knees in front of him in exhaustion, Clyde grins down at you and says, 'See - I'm superior in every way. Mentally, as well as physically. Let this be a lesson how to treat your betters. This is how it should be - with the smartest people at the top.' Chuckling, he grabs hold of his cock, jerking its long shaft with both hands. As it quickly gets fully hard, Clyde steps up to you and says 'Now open wide...'";
 			say "     [HHNerd Sucking]";
 		else: [random fuck/suck]

@@ -175,7 +175,7 @@ to say sexwithMacadamia:
 		say "     You should check in with him and see how things are going first.";
 	else if lastfuck of Macadamia - turns < 6:
 		say "     'I could use a break before we have another go at it.'";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     You're ill-equipped to play with the squirrel right now.";
 	else:
 		[puts Grey Squirrel as lead monster in case of impregnation]

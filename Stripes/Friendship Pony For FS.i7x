@@ -502,10 +502,10 @@ to selectbootymark:
 	if "Proud Parent" is listed in feats of player, add 15 to pfpbmlist;
 	if "Black Belt" is listed in feats of player, add 16 to pfpbmlist;
 	if "One Way" is listed in feats of player, add 17 to pfpbmlist;
-	if "More Anal" is listed in feats of player, add 18 to pfpbmlist;
+	if anallevel is 3, add 18 to pfpbmlist;
 	if player is kinky, add 19 to pfpbmlist;
 	if "Wary Watcher" is listed in feats of player, add 20 to pfpbmlist;
-	if "MPreg" is listed in feats of player, add 21 to pfpbmlist;
+	if player is mpreg_ok, add 21 to pfpbmlist;
 	if "Sterile" is not listed in feats of player:
 		if "Litter Bearer" is listed in feats of player:
 			add 22 to pfpbmlist;
@@ -615,10 +615,10 @@ to selectbootymark:
 	if "Proud Parent" is listed in feats of player, add "a collection of puppies" to pfpbmlist;
 	if "Black Belt" is listed in feats of player, add "a gi and black belt" to pfpbmlist;
 	if "One Way" is listed in feats of player, add "a one-way street sign" to pfpbmlist;
-	if "More Anal" is listed in feats of player, add "a bottle of lube" to pfpbmlist;
+	if anallevel is 3, add "a bottle of lube" to pfpbmlist;
 	if player is kinky, add "a whip and chains" to pfpbmlist;
 	if "Wary Watcher" is listed in feats of player, add "the all-seeing eye" to pfpbmlist;
-	if "MPreg" is listed in feats of player, add "an egg stamped with the male symbol" to pfpbmlist;
+	if player is mpreg_ok, add "an egg stamped with the male symbol" to pfpbmlist;
 	if "Sterile" is not listed in feats of player:
 		if "Litter Bearer" is listed in feats of player:
 			add "several egg cells surrounded by sperm" to pfpbmlist;

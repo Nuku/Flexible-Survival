@@ -93,7 +93,7 @@ Instead of fucking the Tyr:
 				say "[TyrWon_Training]";
 			else if cunts of player > 0:
 				say "[TyrWon_Vaginal]";
-			else if cocks of player > 0 and cunts of player is 0 and ( a random chance of 2 in 5 succeeds or ( "More Anal" is listed in feats of player and a random chance of 1 in 3 succeeds ) ):
+			else if cocks of player > 0 and cunts of player is 0 and ( a random chance of 2 in 5 succeeds or ( anallevel is 3 and a random chance of 1 in 3 succeeds ) ):
 				say "[TyrWon_AnalPlay]";
 			else:
 				say "[TyrWon_NoSex]";
@@ -156,7 +156,7 @@ to tyrsexmenu:
 			now title entry is "Lose: Anal play + hand job";
 			now sortorder entry is 16;
 			now description entry is "let him win and jerk you off.";
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "Win: Neuter player";
 		now sortorder entry is 10;

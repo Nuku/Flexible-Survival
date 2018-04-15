@@ -9,7 +9,7 @@ to malemonstersex: [This is the most basic version of player loss routines for m
 		say "     This is an 'opener' for players who submitted, rather than lost. It's great for adjusting context, but not entirely necessary.";
 	else:
 		say "     This version is for player loss. Ideally, the player should act less compliant than if they had submitted.";
-	if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
+	if anallevel > 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
 		say "     This is for anal catching. It checks to see if the player has 'less anal' first, then checks to see that the player doesn't have a better hole (or, if they do, they have 'more anal'), before rolling a 1 in 2 to see if it happens and rolling again if they have more.";
 		say "     Remember to end the scene with a male pregnancy 'to say' command.[mimpregchance]";
 	else if cunts of player > 0 and a random chance of 1 in 2 succeeds:
@@ -24,7 +24,7 @@ to malebreedersex: [This is a variation of be above, for monsters who are strict
 		say "     Normally, you don't check female genitalia first so as to give everyone anal access, but in a strict 'breeder' build, you can get away with ignoring it.";
 		say "     We generally avoid strict breeders, but this is more due to a history of male-snubbing and not anything to do with the build itself.";
 		say "     You can add 'and player is impreg_able' if you only want the monster to attempt impregnation if it's possible.[impregchance]";
-	else if anallevel is not 1 and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds) or "Mpreg" is listed in feats of player):
+	else if anallevel > 1 and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds) or player is mpreg_ok):
 		say "     This anal scene is guaranteed if they have 'mpreg', but otherwise adheres to standard rolls.";
 		say "     If you're absolutely against m/m content, you can get away with cutting this, but it's generally ill-advised. Regardless, you MUST have the final scene option.[mimpregchance]";
 	else:
@@ -40,7 +40,7 @@ to femalemonstersex: [This is the most basic version of player loss routines for
 		say "     Otherwise, females are generally 'easier' to writer for, since they normally only run two scenes, barring special gimmickry or additionally butt stuff.";
 
 to hermmonstersex: [This is a 'robust' version of player loss routines for herm creatures]
-	if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
+	if anallevel > 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
 		say "     Due to the dominant nature of the scenes, herms behave more or less like males, since penetrative sex is more dominant than scenes where the monster is catching.[mimpregchance]";
 	else if cunts of player > 0 and a random chance of 1 in 2 succeeds:
 		say "     Second verse, same as the first.[impregchance]";

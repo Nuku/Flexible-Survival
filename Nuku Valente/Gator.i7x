@@ -198,7 +198,7 @@ to say gator den scene:
 		decrease the humanity of the player by a random number from 5 to 20;
 	else: [ Sex]
 		if a random chance of 1 in 2 succeeds and cocks of player > 0: [ She wants to be fucked]
-			say "     She rolls over and raises her thick tail over her back, exposing the pinkened lips nestled between her large thighs. 'Come show me just how much a stud you are,' she invites. Your [cock size desc of player] [cock of player] cock[if cocks of player > 1]s[end if] rise[if cocks of player is 1]s[end if] to attention quickly, and you scramble up to accept the offer, perhaps faster than you normally would. Something about her round rump just seems to call to you, and you heed the call, slamming home into her.";
+			say "     She rolls over and raises her thick tail over her back, exposing the pinkened lips nestled between her large thighs. 'Come show me just how much a stud you are,' she invites. Your [cock size desc of player] [cock of player] cock[smn] rise[if cocks of player is 1]s[end if] to attention quickly, and you scramble up to accept the offer, perhaps faster than you normally would. Something about her round rump just seems to call to you, and you heed the call, slamming home into her.";
 			if cock length of player < 4:
 				say "     She gets an odd expression when you sink into her, then looks over her shoulder. 'Mi amor, you need help,' she croons, curling her tail around you and squeezing. The warmth returns to you, filling you with hot tingles that slowly sink into your groin as things begin to change down there, swelling up inside of the gator as she gasps and coos. The pleasure of changing while sheathed in the fertile female burns at your mind, eroding your human sensibilities.";
 				follow the sex change rule;

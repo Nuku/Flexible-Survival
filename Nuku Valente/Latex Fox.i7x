@@ -26,7 +26,7 @@ to say latexfoxvictory:
 	else:
 		say "     Too exhausted to fight any longer, the monster exploits this by suddenly pouncing";
 	say " your [if scalevalue of player < 3]smaller, [bodytype of player] form, easily pinning you to the ground[else if scalevalue of player > 3]larger, [bodytype of player] form, bringing you to your knees, though he cannot properly pin you down[else][bodytype of player] form, pinning you to the ground[end if]. Yipping victoriously, he nips at his[if HP of player > 0] compliant[end if] [if scalevalue of player < 4]little[else]'little'[end if] toy, rubbery maw squeaking loudly with each bite.";
-	if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 3 succeeds or (anallevel is 3 and a random chance of 1 in 2 succeeds)):
+	if anallevel > 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 3 succeeds or (anallevel is 3 and a random chance of 1 in 2 succeeds)):
 		say "     The latex fox barely checks to see if there's anything obstructing his access before thrusting his tainted, precum-slicked dick between your cheeks, audibly squeaking as it's forced through your anal ring, causing you to squirm and writhe under his[if scalevalue of player > 3] diminutive[end if] weight.";
 		say "     Barely needing any time to get warmed up, the creature eagerly pounds your ass, air filled with the sound of his smooth form's creaking and squeaking, matched only by his incessant yipping. Unable to restrain yourself, your [if cocks of player > 0]own, unattended dick[smn] ache[smv] against the ground[else if cunts of player > 0]unattended cunt[sfn] ache[sfv] against the open air[else]genderless body aches with an insatiable need[end if].";
 		say "     The monster doesn't need long before his motion reaches a fever pitch[if scalevalue of player < 4], body visibly rocking against each motion[end if]. With one final thrust, he forces his thick knot through your hole, loudly yipping as your bowels are pumped full with the twisted fox's rubbery seed";
@@ -47,7 +47,7 @@ to say latexfoxvictory:
 		say "     Apparently satisfied, the monster runs off and leaves you, yipping happily. It takes you a while to recover from being used and your lingering, unsated lust. Eventually, you go about your business once more.";
 
 to say latexfoxdefeat:
-	if (libido of player > 30 or "Dominant" is listed in feats of player) and (cunts of player > 0 or (cocks of player > 0 and anallevel is not 1)):
+	if (libido of player > 30 or "Dominant" is listed in feats of player) and (cunts of player > 0 or (cocks of player > 0 and anallevel > 1)):
 		say "     Having subdued to the fox, perhaps you should use him to sate your need?";
 		if player consents:
 			latexfoxdefeatsex;

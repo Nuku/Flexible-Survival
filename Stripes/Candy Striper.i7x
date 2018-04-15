@@ -41,9 +41,9 @@ to say losetocandycoon:
 			say "     In the hopes of distracting the horny coon from your ass, you do the only thing you can hope will work and plunge your mouth over his cock, licking and sucking at it. He moans softly and grins at this. 'Oh, I knew you were going to be fun. With an attitude like that, you'll make for a sexy boytoy soon enough,' he giggles as he thrusts. His hard shaft leaks cotton candy flavoured pre onto your tongue. Its sweetness surprises you and makes you lick and suck more eagerly. As you work to suck him off, his sweet taste excites you more and more and you become increasingly eager to get a tasty treat from this gay boi. Your tongue plays over his cock as you fondle his balls, making him release more girly moans and squeaks until he finally does cum, shooting his sugary seed down your throat. He strokes your head and smiles down at you as he slips his cock from your lips. You can see that the dangling strand of cum connecting you has a light, rose tint to it before it snaps. ";
 			let x be libido of player;
 			if player is submissive, increase x by 15;
-			if "More Anal" is listed in feats of player, increase x by 15;
+			if anallevel is 3, increase x by 15;
 			if fightoutcome is 22, increase x by 15; [submitted]
-			if "Less Anal" is listed in feats of player, now x is x / 3;
+			if anallevel is 1, now x is x / 3;
 			if a random chance of x in 150 succeeds:
 				say "     Glancing down at you, he notices that you'd gotten hard while sucking him off and grins. 'Mmm... looks like someone's still up for more,' he giggles, pushing you down onto all fours. 'Now, where were we before you insisted on showing me how much you wanted my cock?'";
 				WaitLineBreak;

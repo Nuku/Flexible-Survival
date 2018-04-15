@@ -30,7 +30,7 @@ to say losetoorca:
 	else:
 		say "     You look reluctant to comply with such an order, and--perceiving this immediately--the orcaman grabs you by your head, carefully prying your [bodytype of player] maw loose so that he may so occupy this new void with his emergent cock, forcing you to taste his writhing, thick meat.";
 	if cunts of player > 0:
-		if "More Anal" is listed in feats of player and a random chance of 1 in 5 succeeds:
+		if anallevel is 3 and a random chance of 1 in 5 succeeds:
 			say "[orcadefeatsex1]";
 		else if a random chance of 3 in 5 succeeds:
 			say "[orcadefeatsex2]";
@@ -39,7 +39,7 @@ to say losetoorca:
 		else:
 			say "[orcadefeatsex4]";
 	else:
-		if "Less Anal" is not listed in feats of player and a random chance of 1 in 3 succeeds:
+		if anallevel > 1 and a random chance of 1 in 3 succeeds:
 			say "[orcadefeatsex1]";
 		else:
 			say "[orcadefeatsex4]";
@@ -78,7 +78,7 @@ to say orcadefeatsex4:		[oral sex]
 
 to say beattheorca:
 	if ( libido of player - humanity of player > 15 ) and bodyname of player is "Killer Whale" and ( cocks of player > 0 or cunts of player > 0 ):
-		if cocks of player > 0 and cunts of player > 0 and "Less Anal" is not listed in feats of player:
+		if cocks of player > 0 and cunts of player > 0 and anallevel > 1:
 			say "     Having beaten your foe, the heat of battle has gotten your blood pumping and your lustful orca instincts come to the fore.";
 			say "     [bold type] Being dual-gendered, does your male or female aspect take over to dominate this fallen male?[roman type][line break]";
 			LineBreak;
@@ -88,7 +88,7 @@ to say beattheorca:
 				say "[orcavicsex1]";
 			else:
 				say "[orcavicsex2]";
-		else if cocks of player > 0 and "Less Anal" is not listed in feats of player:
+		else if cocks of player > 0 and anallevel > 1:
 			say "[orcavicsex1]";
 		else if cunts of player > 0:
 			say "[orcavicsex2]";

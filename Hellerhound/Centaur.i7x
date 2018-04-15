@@ -178,13 +178,13 @@ To say centaur attack:
 		[male fury, centaur wants mate, not a companion!]
 	if cunts of player > 0:
 		Say "[centaur rape female]";
-	if cocks of player is 0 and cunts of player is 0 and "Male Preferred" is not listed in feats of player:
+	if player is neuter and "Male Preferred" is not listed in feats of player:
 		say "The centaur looks at you with apprehension. 'Nothing at all?' he groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lose it.'";
 		now cunts of player is 1;
 		now cunt length of player is 2;
 		now cunt width of player is 1;
 		infect "Mutant Centaur";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "The centaur looks at you with apprehension. 'Nothing at all?' he groans, and kicks his front hoof, knocking you over.  He looks at you as if expecting something to happen, but it doesn't.  He huffs and turns around, kicking dirt and dry grass onto you before riding off.  'Useless creature.'";
 
 

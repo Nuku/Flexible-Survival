@@ -133,7 +133,7 @@ to say sexwithPaula:
 		say "ERROR-Paula-[HP of Paula]L: You should not be able to find her yet.";
 	else if HP of Paula is 3:
 		say "     You haven't really had a chance to talk to Paula yet since she got here. You should probably start with that.";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     Lacking a proper gender of your own right now, perhaps you should deal with that before seeking sex from others.";
 	else if lastfuck of Paula - turns < 6:
 		say "     'You're back pretty quickly for more, don't you think? Probably means you're losing it, if you're back asking for sex again so soon. Try holding out a little longer before we knock boots again,' she adds, running her paws along her sides in a sultry manner in a clear invitation that you are indeed welcome back for more soon.";

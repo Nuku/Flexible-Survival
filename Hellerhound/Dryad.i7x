@@ -79,7 +79,7 @@ To say dryad attack:
 		infect "Dryad";
 		say "The dryad unceremoniously drops your cum-and-milk-covered form to the ground and leaves. As you clean yourself off, you collect the cum on you and place it into an empty water bottle. Maybe there is a use for it?";
 		increase carried of dryad cum by 1;
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "She looks at you with horror. 'Nothing? Nothing for me to play with?' She exclaims. Well, you will just have to fix that and come back later. She turns toward the trees with a huff, leaving you to pick yourself up.";
 		infect "Dryad";
 

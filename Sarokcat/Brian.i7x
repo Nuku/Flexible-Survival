@@ -24,7 +24,7 @@ Instead of conversing the Brian:
 the fuckscene of Brian is "[attemptsexwithbrian]".
 
 to say attemptsexwithbrian:
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     You consider asking the rhino man for sex, but you can't see yourself being able to tempt him away in your current, genderless state.";
 	else if HP of Brian is 0:
 		say "     The rhino is repeatedly charging headlong at the concrete wall with all his might. You should probably talk to him and see what's up before blindly offering sex to this strange and possibly dangerous fellow.";

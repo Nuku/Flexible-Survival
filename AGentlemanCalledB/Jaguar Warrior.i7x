@@ -30,11 +30,11 @@ hoodequipped is a number that varies.
 
 to say losetoJaguarWarrior:
 	say "     [if HP of player > 0]Unable to resist[else]Beaten by[end if] the jaguar warrior, you are helpless as he strips you of your gear. [run paragraph on]";
-	if "more anal" is listed in feats of player and a random chance of 1 in 3 succeeds:
+	if anallevel is 3 and a random chance of 1 in 3 succeeds:
 		say "[JagWarVic_Anal][mimpregchance]";
 	else if cunts of player > 0 and a random chance of 2 in 3 succeeds:
 		say "[JagWarVic_Vag][impregchance]";
-	else if "less anal" is not listed in feats of player and a random chance of 1 in 4 succeeds:
+	else if anallevel > 1 and a random chance of 1 in 4 succeeds:
 		say "[JagWarVic_Anal][mimpregchance]";
 	else:
 		say "[JagWarVic_Oral]";

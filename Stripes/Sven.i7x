@@ -349,7 +349,7 @@ to say SexWithSven:
 			break;
 	if HP of Sven < 4:
 		say "     Sven squirms a little in his seat and blushes as you start to bring up the subject of sex. He nibbles at the end of his tail and mumbles something about how he doesn't think that'd be a good idea. You do spot that telltale bulge in his shorts though, which makes you hopeful you can coax him into some fun once he settles down.";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     As you presently don't have a gender of your own, you should perhaps seek obtaining one before playing with the Nordic kitty.";
 	else if HP of Sven is 4:
 		say "     Sven squirms a little in his seat and blushes cutely as you bring up having sex with him. He nibbles at the end of his tail and eyes your crotch, mumbling something about suddenly getting thirsty again. A hand drifts to his crotch and rubs the bulge there. 'I... I do not know... I mean, I have not yet,' he says shyly, blushing even redder. 'But if it was with you,' he adds with audible longing and admiration in his quiet voice. You spot a little happy trail of white fur that you don't remember seeing before as he continues to subconsciously fondle himself. You suspect the shy fellow will continue changing if you start playing with him.";

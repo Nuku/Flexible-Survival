@@ -139,7 +139,7 @@ to pregprotocol:
 						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[else]neuter[end if], now [breast size desc of player] breasts.";
 					else:
 						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.";
-			if gestation of child < 1 and ( cunts of player > 0 or "MPreg" is listed in feats of the player ) and skipturnblocker is 0:
+			if gestation of child < 1 and ( cunts of player > 0 or player is mpreg_ok ) and skipturnblocker is 0:
 				if pregtype is 1 and cunts of player is 0:
 					now pregtype is 2;
 				say "[detailbirth]";
@@ -366,7 +366,7 @@ To Birth:
 Chapter 3-1 - Impregnation and Ovi-Impreg Subroutines
 
 To impregnate with (x - text):
-	if child is born or gestation of child > 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
+	if child is born or gestation of child > 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and player is not mpreg_ok ):
 		stop the action;
 	if cunts of player is 0 and "MPreg" is listed in feats of player and ( level of Velos is 1 and HP of Velos > 2 ):
 		stop the action;

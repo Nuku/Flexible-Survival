@@ -19,7 +19,7 @@ Instead of resolving Strange Serpent:
 			say "     You're not rightfully sure if you can trust the serpent, but for the sake of argument you infer that you might be up to the task, simple as it seems.";
 			say "     'Er, right, there's a catch--and before you roll your eyes and silently pat yourself on the back for your clever assumption, it's not as bad as you think... Depending on how you look at it.' Sighing, you decide to let him continue, for now.";
 			say "     'Thank you. Sadly, I can't really expose myself to light for more than a number of minutes at a time--Hell, even this dim light here tests me. No, I require a means of... Er... Obfuscation, shall we say?' You're not rightly sure what he's suggesting so you, reasonably enough, ask him to elaborate.";
-			if "Less Anal" is listed in feats of player:
+			if anallevel is 1:
 				say "     'Hm... Right...' He seems to stop briefly for a moment. 'There's something about you that suggests I'd get into all sorts of trouble if I beat around the bush with this... Alright, no games, then. I need your ass, in just about the worst way imaginable.'";
 				say "     His particular request is clearly incongruous with your general desires. Make him the exception (Y) or rightfully decline (N)?";
 			else:

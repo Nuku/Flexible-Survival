@@ -152,7 +152,7 @@ the fuckscene of Yolanda is "[sexwithYolanda]".
 to say sexwithYolanda:
 	if HP of Yolanda is 0:
 		say "     That's rather forward of you. You should probably introduce yourself first.";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     Lacking a gender, you doubt you'll be able to rouse much interest out of the cynical raven.";
 	else if lastfuck of Yolanda - turns < 6:
 		say "     'More already? If you're going to go sex crazy, run along and do it somewhere else,' she says, flapping her wing dismissively towards the [if HP of Yolanda >= 6]stairwell back to the ground floor[else]door[end if].";

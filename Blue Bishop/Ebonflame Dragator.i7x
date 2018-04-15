@@ -19,7 +19,7 @@ to say ebgatorvic:
 	else:
 		say "     Completely battered and beaten, you crumple onto the ground, left to the mercy of the beast as it lunges forward and continues to assault you.";
 		say "     Vicious gator hardly able to recognize that you're completely out of the fight, it continues to bite at your[if scalevalue of player > 3] larger,[end if] vulnerable form. It seems to get off on your feeble cries in pain, as it does eventually begin to mount you...";
-	if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds) or (Cunts of player is 0 and impregnatevalid is true)):
+	if anallevel > 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds) or (Cunts of player is 0 and impregnatevalid is true)):
 		say "     You soon feel the slightly flat head of the reptile's[if ebgatord is 0][else] peculiar,[end if] oversized dick press against your ass";
 		if ebgatord is 0:
 			say ", you're given a glimpse of the thing even as it's being forced past your[if scalevalue of player < 4 and player is not twistcapped] tight[end if] ring. The organ looks as though it was supposed to be two dicks instead of one, but it quit about half the way through, giving the tool and overly wide and flat girth, making you groan [if HP of player > 0]loudly[else]weakly[end if] as it's gradually plunged deeper into you.";
@@ -90,7 +90,7 @@ to say ebgatordesc:
 			else:
 				increase ebgatorcarrying by 1;
 	else if ebneuterswitch is false:
-		if player is male_vacant and anallevel is not 1 and ((anallevel is 2 and (player is kinky or "Mpreg" is listed in feats of player)) or anallevel is 3):
+		if player is male_vacant and anallevel > 1 and ((anallevel is 2 and (player is kinky or player is mpreg_ok)) or anallevel is 3):
 			if a random chance of ebgatorcarrying in 4 succeeds:
 				now impregnatevalid is true;
 				now ebgatorcarrying is 1;

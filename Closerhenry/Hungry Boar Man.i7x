@@ -546,7 +546,7 @@ to say sexwithphilip:
 		say "     'I knew you couldn't resist my -OINK!- studly physique,' Philip says as he jiggles his fat gut for emphasise while a grin spreads across his pig like face. 'Now, what should we do first?'  He takes a moment to look over your body, before he makes a decision.";
 	let piggymalefun be 8;
 	if player is submissive, increase piggymalefun by 2;
-	if "MPreg" is listed in feats of player, increase piggymalefun by 2;
+	if player is mpreg_ok, increase piggymalefun by 2;
 	increase piggymalefun by anallevel;
 	if pigfed > 0 and tailname of player is not "Piggy":
 		say "     Philip frowns as he take a close look at you, then he grins and smears a handful of mud above your butt as he yells, 'Suuuueeeyyy, pig, pig, pig!'  You're not sure if it's the mud or his words that cause it, but your curly pig tail suddenly regrows.";

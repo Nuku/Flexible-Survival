@@ -201,7 +201,7 @@ to say felinoidpet_puref:
 
 
 to say felinoidpet_purem:
-	if the remainder after dividing lust of felinoid companion by 3 is 1 and anallevel is not 1:
+	if the remainder after dividing lust of felinoid companion by 3 is 1 and anallevel > 1:
 		say "The large feline licks and laps at your cock, his rough tongue feeling wonderful across your barbed manhood. He lets his tongue trail up and down your [cock size desc of player] erection and over your balls. As he continues, you grow increasingly aroused, leaking precum steadily and losing yourself in the excitement. The scent of felinoid musk hangs heavy in the air, turning you on all the more and clouding your judgment.";
 		say "When he stops licking suddenly, you mewl in disappointment. He pads around behind you and, with a push of his powerful paws, knocks you down onto all fours. You moan as his nose finds its way under your tail and that rough tongue of his slathers across your anus this time. Lost in your lustful haze, you shift to a firmly quadrupedal stance and mewl again, this time with need.";
 		say "The big feline moves atop you, brushing his stiff and leaking penis between your cheeks. Taking the nape of your neck in his teeth, he humps a few times before getting lined up and driving that barbed rod of his into your tight back passage. Those stimulating bumps send shivers of pleasure through your feline body and you pant and moan as he fucks you hard and fast, taking you as he would a female. Your cock throbs between your legs, dribbling a growing pool of precum onto the ground as you're incredibly turned on by being fucked by the feral cat.";

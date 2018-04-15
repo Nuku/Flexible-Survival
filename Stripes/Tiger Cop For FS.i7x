@@ -545,7 +545,7 @@ to say losetotigercop:
 		else:
 			say "     'Well, I'll teach you a lesson you won't soon forget,' he says as he slides his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of the nightstick at your asshole, making you shiver. He teases you with it briefly and you try your best to relax it before he sinks it into you, using only a little spit for lubrication. He pounds you hard and fast with it, making your body shudder until you finally climax. He sprays his cum across your ass, and then removes the weapon from your aching hole. He picks you up roughly and gives you a hard shove. 'Get your dumb ass out of here. And if I catch you again, you'll get the real thing.'";
 	else:
-		if a random chance of 1 in 3 succeeds and ( cunts of player > 0 or "Less Anal" is not listed in feats of player ):
+		if a random chance of 1 in 3 succeeds and ( cunts of player > 0 or anallevel > 1 ):
 			say "     'It looks like you need another lesson in why you shouldn't mess with me,' he says as he grabs you roughly and shoves you face down onto a mound of rubble. 'Punks like you are nothin['] but trouble. Should've gotten a good, hard spankin['] from your dad to beat some respect into you.' With you pinned down, the tiger holds you down with one paw and bares your ass with the other.";
 			if cunts of player > 0:
 				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain. After another stinging slap, he runs his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of his nightstick against your pussy, making you shiver. He works it across your folds, sliding it back and forth, getting you wet despite yourself. Shifting its position, he thrusts it into your cunt, making you groan at the sudden, hard intrusion. The tiger cop pounds you hard and fast with it, making your [bodydesc of player] body shudder until you finally cum. Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching pussy.";
@@ -567,9 +567,9 @@ to say losetotigercop:
 		else:
 			let mchance be 4;
 			if player is submissive, increase mchance by 2;
-			if "More Anal" is listed in feats of player, increase mchance by 2;
-			if "MPreg" is listed in feats of player, increase mchance by 2;
-			if "Less Anal" is listed in feats of player, now mchance is 0;
+			if anallevel is 3, increase mchance by 2;
+			if player is mpreg_ok, increase mchance by 2;
+			if anallevel is 1, now mchance is 0;
 			if a random chance of mchance in 12 succeeds:
 				say "     The victorious tiger grabs you roughly and tosses you to the ground at his feet. He puts a heavy paw at your shoulder, pushing you to the ground. 'I warned you what would happen if I caught you,' he rumbles. Above you, you can hear the sound of him unzipping his pants.";
 				say "     Reaching down, he grabs you with his paws and pushes you onto all fours. One paw then holds you firmly by the neck while the other bares your bottom to him";

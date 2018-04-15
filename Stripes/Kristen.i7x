@@ -551,7 +551,7 @@ to say sexwithKristen:
 		say "     That's awfully forward of you. Perhaps you should talk to her a little first.";
 	else if lastfuck of Kristen - turns < 6:
 		say "     'I need a little more time to recover, hon.'";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     You're ill-equipped to play with her right now.";
 	else if HP of Kristen < 12:
 		say "[bracket]***Sorry, sex as human content not present at this time. - The Mgmt[close bracket][line break]";

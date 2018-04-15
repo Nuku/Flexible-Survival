@@ -535,7 +535,7 @@ Instead of conversing the Doran:
 
 to say DoranSex:
 	dorangendercheck;
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     Your lack of proper sexual outlet makes the prospect of such an interaction with the [gdragon] a little one-sided, and as such you decide against it.";
 	else if DoranFirstTalk is false:
 		say "     You should probably talk to the [gdragon] first before you get down to any sort of business.";
@@ -586,7 +586,7 @@ to say DoranSexMenu: [Doran Sex Protocol]
 			now sortorder entry is 4;
 			now description entry is "Give your praise to [ghis] wonderful cum";
 		[]
-		if anallevel is not 1 and (scalevalue of player > 1 or player is twistcapped):
+		if anallevel > 1 and (scalevalue of player > 1 or player is twistcapped):
 			choose a blank row from table of fucking options;
 			now title entry is "Get fucked by the [gdragon] anally";
 			now sortorder entry is 5;
@@ -779,7 +779,7 @@ to say DoranAutoSexProtocol:
 		say "[DoranDom_BallWorship]"; [Ball Worship]
 	else if DoranBallModStatus > 0 and ((player is kinky and a random chance of 1 in 3 succeeds) or (a random chance of 1 in 6 succeeds)):
 		say "[DoranDom_CumWorship]"; [Cum Worship]
-	else if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and ((cunts of player is 0 and ((anallevel is 3 and a random chance of 2 in 3 succeeds) or (anallevel is 2 and a random chance of 1 in 2 succeeds))) or (cunts of player > 0 and a random chance of 1 in 4 succeeds)) and (scalevalue of player > 1 or player is twistcapped):
+	else if anallevel > 1 and (cunts of player is 0 or anallevel is 3) and ((cunts of player is 0 and ((anallevel is 3 and a random chance of 2 in 3 succeeds) or (anallevel is 2 and a random chance of 1 in 2 succeeds))) or (cunts of player > 0 and a random chance of 1 in 4 succeeds)) and (scalevalue of player > 1 or player is twistcapped):
 		say "[DoranDom_Anal]"; [anal sex scene]
 	else if cunts of player > 0 and cunt length of player > 4 and a random chance of 1 in 3 succeeds:
 		say "[DoranDom_Vaginal]"; [cunt sex scene]
@@ -1148,7 +1148,7 @@ to say DoranDom_CockHandjob: [Cock-Focused Handjob] [BODY MODDED]
 	let titfuck be 0;
 	if DoranTitModStatus > 0 and a random chance of 4 in 5 succeeds:
 		now titfuck is 1;
-		say "[ghe] eventually stops to rear up and expose [ghis] ample, scaled breasts before you, [if DoranRoleIntensity is 0]allowing[else]inviting[end if] your touch as [ghis] other talon moves [if cocks of player > 2]to one of your other members, now attending two of them[else if cocks of player is 2]to your other member, now attending both of them[else if cunts of player > 1]to one of your cunts, briefly teasing its entrance as your member remains attended to in tandem[else if cunts of player is 1]your cunt, briefly teasing its entrance as your member remains attended to in tandem[else if anallevel is not 1]your anal ring, briefly teasing its entrance as your member remains attended to in tandem[else]to offer its reassuring caress along the length of your legs[end if]. Eventually shifting to embrace [if cocks of player > 2]two of your oozing rods[else if cocks of player is 2]both of your oozing rod[else]your oozing rod[end if] between [ghis] firm but yielding clevage, ";
+		say "[ghe] eventually stops to rear up and expose [ghis] ample, scaled breasts before you, [if DoranRoleIntensity is 0]allowing[else]inviting[end if] your touch as [ghis] other talon moves [if cocks of player > 2]to one of your other members, now attending two of them[else if cocks of player is 2]to your other member, now attending both of them[else if cunts of player > 1]to one of your cunts, briefly teasing its entrance as your member remains attended to in tandem[else if cunts of player is 1]your cunt, briefly teasing its entrance as your member remains attended to in tandem[else if anallevel > 1]your anal ring, briefly teasing its entrance as your member remains attended to in tandem[else]to offer its reassuring caress along the length of your legs[end if]. Eventually shifting to embrace [if cocks of player > 2]two of your oozing rods[else if cocks of player is 2]both of your oozing rod[else]your oozing rod[end if] between [ghis] firm but yielding clevage, ";
 		if cocks of player > 1:
 			say "[ghe] [if cock length of player > 17]frequently comments on how impressive your assets are[else if cock length of player < 6 and DoranRoleIntensity is 0]often teases you over how inadequate your assets are[else]offering cooing approval of your assets[end if] as [ghe] proceeds to squeeze and pump against them, fuelled by a twisted determination.";
 		else if cunts of player > 0:
@@ -1156,14 +1156,14 @@ to say DoranDom_CockHandjob: [Cock-Focused Handjob] [BODY MODDED]
 		else:
 			say "[ghe] [if cock length of player > 17]frequently comments on how impressive your asset is[else if cock length of player < 6 and DoranRoleIntensity is 0]often teases you over how inadequate your asset is[else]offering cooing approval of your asset[end if] as [ghe] proceeds to squeeze and pump against you, fuelled by a twisted determination.";
 	else:
-		say "[if DoranRoleIntensity is 0][ghe] uses [ghis] snout to keep you pinned down[else]slathering you with [ghis] saliva[end if] as [ghis] other talon moves [if cocks of player > 2]to one of your other members, now attending two of them[else if cocks of player is 2]to your other member, now attending both of them[else if cunts of player > 1]to one of your cunts, briefly teasing its entrance as your member remains attended to in tandem[else if cunts of player is 1]your cunt, briefly teasing its entrance as your member remains attended to in tandem[else if anallevel is not 1]your anal ring, briefly teasing its entrance as your member remains attended to in tandem[else]to offer its reassuring caress along the length of your legs[end if]. [gchis] endeavors quickly rise in fervour, ";
+		say "[if DoranRoleIntensity is 0][ghe] uses [ghis] snout to keep you pinned down[else]slathering you with [ghis] saliva[end if] as [ghis] other talon moves [if cocks of player > 2]to one of your other members, now attending two of them[else if cocks of player is 2]to your other member, now attending both of them[else if cunts of player > 1]to one of your cunts, briefly teasing its entrance as your member remains attended to in tandem[else if cunts of player is 1]your cunt, briefly teasing its entrance as your member remains attended to in tandem[else if anallevel > 1]your anal ring, briefly teasing its entrance as your member remains attended to in tandem[else]to offer its reassuring caress along the length of your legs[end if]. [gchis] endeavors quickly rise in fervour, ";
 		if cocks of player > 1:
 			say "[if cock length of player > 17]frequently commenting on how impressive your assets are[else if cock length of player < 6 and DoranRoleIntensity is 0]often teasing you over how inadequate your assets are[else]offering cooing approval of your assets[end if] as [ghe] proceeds to milk them, fuelled by a twisted determination.";
 		else if cunts of player > 0:
 			say "[if cock length of player > 17]frequently praising you for the size of your dick[else]offering cooing approval to your assets[end if] as [ghe] proceeds to support [ghis] endeavors by sinking [ghis] digit past the supple folds of your flesh, [if cunt length of player < 7]slight, strained grunts escaping [ghis] lips as [ghe] contends with your tight hole[else]meeting only brief resistance as you envelope the irreverent intrusion[end if]";
 		else:
 			say "[if cock length of player > 17]frequently commenting on how impressive your asset is[else if cock length of player < 6 and DoranRoleIntensity is 0]often teasing you over how inadequate your asset is[else]offering cooing approval of your asset[end if] as";
-			if anallevel is not 1:
+			if anallevel > 1:
 				say "[ghe] proceeds to support [ghis] endeavors by sinking [ghis] digit into the depths of your yielding hole, [if scalevalue of player < 4 and player is not twistcapped]slight, strained grunts escaping [ghis] lips as [ghe] contends with its tightness[else]meeting only brief resistance as you envelope the irreverent intrusion[end if].";
 			else:
 				say "his grip tightens around your leg, no doubt to keep you from being tossed about in the wake of [ghis] fierce pumping.";
@@ -1183,7 +1183,7 @@ to say DoranDom_CockHandjob: [Cock-Focused Handjob] [BODY MODDED]
 		else:
 			say ", dousing your torso with your";
 		say " [cum load size of player] payload";
-		if cocks of player is 1 and (cunts of player > 0 or anallevel is not 1) and titfuck is 0:
+		if cocks of player is 1 and (cunts of player > 0 or anallevel > 1) and titfuck is 0:
 			say ", each gout of jizz strained and prolonged by [ghis] intrusive talon's expert milking of your [if cunts of player > 0]stuffed portal[else]beleaguered prostate[end if].";
 		else if titfuck is 1:
 			say ", along with [ghis] ample breasts.";
@@ -1225,12 +1225,12 @@ to say DoranDom_CuntHandjob: [Cunt-Focused Handjob] [BODY MODDED]
 		say "     'My [DoranPlayerRegard] [one of]is so very needy[or]squirms so amusingly under their [gdragon][or]can't resist their [gdragon]'s touch[at random]...' Tongue's";
 	else:
 		say "     '[one of]I think my [DoranPlayerRegard] likes that[or]Mayhaps we kick this into high gear[or]One could say that my [DoranPlayerRegard]'s fun is just starting[at random], yes?' Tongue's";
-	say " affection rising to slide against your[if scalevalue of player < 4] diminutive,[end if] [bodytype of player] torso[if breast size of player > 0] and along the curvature of your [short breast size desc of player] breasts[end if], [if DoranRoleIntensity is 0][ghe] uses [ghis] snout to keep you pinned down[else]slathering you with [ghis] saliva[end if] as [ghis] other talon moves [if cocks of player > 1]to one of your dicks, claws now attending it in tandem[else if cocks of player is 1]to your dick, now attending to it in tandem[else if cunts of player > 2]to one of your other portals, now attending to the two of them in tandem[else if cunts of player > 1]your other portal, now attending to both of them in tandem[else if anallevel is not 1]your anal ring, briefly teasing its entrance as your feminine portal remains attended to in tandem[else]to offer its reassuring caress along the length of your legs[end if]. [gchis] endeavors quickly rise in fervour, ";
+	say " affection rising to slide against your[if scalevalue of player < 4] diminutive,[end if] [bodytype of player] torso[if breast size of player > 0] and along the curvature of your [short breast size desc of player] breasts[end if], [if DoranRoleIntensity is 0][ghe] uses [ghis] snout to keep you pinned down[else]slathering you with [ghis] saliva[end if] as [ghis] other talon moves [if cocks of player > 1]to one of your dicks, claws now attending it in tandem[else if cocks of player is 1]to your dick, now attending to it in tandem[else if cunts of player > 2]to one of your other portals, now attending to the two of them in tandem[else if cunts of player > 1]your other portal, now attending to both of them in tandem[else if anallevel > 1]your anal ring, briefly teasing its entrance as your feminine portal remains attended to in tandem[else]to offer its reassuring caress along the length of your legs[end if]. [gchis] endeavors quickly rise in fervour, ";
 	if cocks of player > 0:
 		say "[if cunt length of player < 7]slight, strained grunts escaping [ghis] lips[else]meeting only brief resistance[end if] as [ghe] forces [ghis] digit past the supple folds of your flesh, pumping your dick all the while in [ghis] endeavor to milk them, fuelled by a twisted determination.";
 	else:
-		say "[if cunt length of player < 7]slight, strained grunts escaping [ghis] lips[else]meeting only brief resistance[end if] as [ghe] forces [ghis] digit[if cunts of player > 1 or anallevel is not 1]s[end if] past the supple folds of your flesh";
-		if cunts of player is 1 and anallevel is not 1:
+		say "[if cunt length of player < 7]slight, strained grunts escaping [ghis] lips[else]meeting only brief resistance[end if] as [ghe] forces [ghis] digit[if cunts of player > 1 or anallevel > 1]s[end if] past the supple folds of your flesh";
+		if cunts of player is 1 and anallevel > 1:
 			say ", [ghis] endeavors to penetrate your ass [if cunt length of player < 7 and scalevalue of player < 4 and player is not twistcapped]equally[else if scalevalue of player < 4 and player is not twistcapped]noticably more[else if cunt length of player > 5]not nearly as[else]just as[end if] difficult";
 	say ".";
 	if DoranRoleIntensity is 0 and ((DoranAutofired is true and a random chance of 1 in 2 succeeds) or (DoranAutofired is false and a random chance of 1 in 5 succeeds)):
@@ -2152,11 +2152,11 @@ to say DoranNeutral_69: [BODY MODDED]
 				say "     Slowly, you wrap your hand around the dripping rod, gradually pumping the impressive organ until it grows to full attention. Digits quickly [if DoranBallModStatus > 0]drowing in[else]made slick with[end if] [ghis] thick, [gmasculine] precum, your";
 				now tempnum2 is 2;
 			say " attendance is quickly reciprocated, Doran";
-			if cocks of player > 0 and (((cunts of player > 0 or anallevel is 3) and a random chance of 1 in 2 succeeds) or (cunts of player is 0 and anallevel is not 3)):
+			if cocks of player > 0 and (((cunts of player > 0 or anallevel is 3) and a random chance of 1 in 2 succeeds) or (cunts of player is 0 and anallevel < 3)):
 				say " wrapping [ghis] tongue around[if cocks of player > 1] one of[end if] your [cock size desc of player] dick[smn], [ghis] slick affection easily driving you hard and";
 				now tempnum3 is 1;
 				if cock width of player > 24 and DoranVoreStatus is 2, now DoranCumFilled is true;
-			else if cunts of player > 0 and ((anallevel is 3 and a random chance of 1 in 2 succeeds) or anallevel is not 3):
+			else if cunts of player > 0 and ((anallevel is 3 and a random chance of 1 in 2 succeeds) or anallevel < 3):
 				say "'s tongue caressing along the entrance of[if cunts of player > 1] one of[end if] your cunt[sfn] before plunging the writhing appendage into your supple depths,";
 				now tempnum3 is 2;
 			else:
@@ -2166,11 +2166,11 @@ to say DoranNeutral_69: [BODY MODDED]
 		else:
 			now tempnum2 is 1;
 			say "     Subject to the[if scalevalue of player < 4] substantive[end if] weight of the [gdragon], [ghe] eagerly exploits this more dominant position to thrust [ghis] dripping rod between your lips, [if scalevalue of player < 3]quickly overwhelmed by its size, further exacerbated[else if scalevalue of player is 3]somewhat overwhelmed by its size, further exacerbated[else]easily handling the impressive organ, even as it[end if] grows to full attention. [if DoranBallModStatus > 0]Already forced to swallow down [ghis] abundant, [gmasculine] precum[else]Taste instantly awash in [ghis] [gmasculine] flavour[end if], Doran happily offers to reciprocate your attendance, ";
-			if cocks of player > 0 and (((cunts of player > 0 or anallevel is 3) and a random chance of 1 in 2 succeeds) or (cunts of player is 0 and anallevel is not 3)):
+			if cocks of player > 0 and (((cunts of player > 0 or anallevel is 3) and a random chance of 1 in 2 succeeds) or (cunts of player is 0 and anallevel < 3)):
 				say "wrapping [ghis] tongue around[if cocks of player > 1] one of[end if] your [cock size desc of player] dick[smn], [ghis] slick affection easily driving you hard and";
 				now tempnum3 is 1;
 				if cock width of player > 24 and DoranVoreStatus is 2, now DoranCumFilled is true;
-			else if cunts of player > 0 and ((anallevel is 3 and a random chance of 1 in 2 succeeds) or anallevel is not 3):
+			else if cunts of player > 0 and ((anallevel is 3 and a random chance of 1 in 2 succeeds) or anallevel < 3):
 				say "tongue caressing along the entrance of[if cunts of player > 1] one of[end if] your cunt[sfn] before plunging the writhing appendage into your supple depths,";
 				now tempnum3 is 2;
 			else:
@@ -3820,7 +3820,7 @@ to say dorrpovb: [Doran RP: The Virile Beast Query]
 		if calcnumber >= 0 and calcnumber <= 3:
 			now DoranRP_var2 is calcnumber;
 			say "'Alright, I see your [DoranRP_var2].'";
-		if cunts of player > 0 and cunt length of player > 6 and anallevel is not 1 and (scalevalue of player > 1 or player is twistcapped):
+		if cunts of player > 0 and cunt length of player > 6 and anallevel > 1 and (scalevalue of player > 1 or player is twistcapped):
 			say "     'One final matter. Obviously the pretense of this affair is procreation, but I can easily have myself go through the back door. We can handwave it as stupidity. Yes or no?'";
 			if player consents:
 				now DoranRP_var3 is 1;
@@ -3885,7 +3885,7 @@ to say dorrptk: [Doran RP: The Knight Query]
 					say "     'My mistake. Moving on, then...'";
 			else:
 				now DoranRP_var2 is 0;
-			if cunts of player > 0 and cunt length of player > 4 and anallevel is not 1:
+			if cunts of player > 0 and cunt length of player > 4 and anallevel > 1:
 				say "     '--Oh, would you prefer I take [DoranPlayerRegard] up the behind instead of the proper hole? Easy thing for me to do in this circumstance, so it's a choice I can freely provide.'";
 				if player consents:
 					now DoranRP_var3 is 1;

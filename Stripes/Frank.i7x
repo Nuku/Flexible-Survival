@@ -20,7 +20,7 @@ Instead of resolving a Mephitness:
 	say "     ([link]N[as]n[end link]) - Grab the backpack and run.";
 	if player consents:
 		if bodyname of player is "Skunkbeast Lord":
-			say "     Yelling for their attention, you charge the skunks. Seeing their skunkbeast [if cocks of player is 0 and cunts of player is 0]lady[else]lord[end if] approaching and demanding their attention, the girls quickly shove the poor fellow away. Running up to you, they start to lavish attention upon you, kissing and stroking you in welcome while telling you proudly how they caught a big meanie who tried to make fun of one of your skunkbeasts. To placate them, you tell the girls how pleased you are with them and that you'll enjoy dealing with him shortly, but first you want to reward them all for their fine service. They giggle happily at this, giving you more passionate kisses.";
+			say "     Yelling for their attention, you charge the skunks. Seeing their skunkbeast [if player is neuter]lady[else]lord[end if] approaching and demanding their attention, the girls quickly shove the poor fellow away. Running up to you, they start to lavish attention upon you, kissing and stroking you in welcome while telling you proudly how they caught a big meanie who tried to make fun of one of your skunkbeasts. To placate them, you tell the girls how pleased you are with them and that you'll enjoy dealing with him shortly, but first you want to reward them all for their fine service. They giggle happily at this, giving you more passionate kisses.";
 			if cocks of player > 0:
 				say "     Picking one of the girls, you get her to lie on her back. Lining up your cock, you drive it into her wet pussy and fuck her. Her cries of pleasure are lustful and loud as you pound into her with an animalist need[if skrp is 1]. The skunk head joined to you happily french-kisses the girl at you drive your leaking shaft into her muff[end if][if cunts of player > 0]. The other girls lavish attention upon your pussy and balls, licking your dripping folds and stroking your cum-filled orbs[else]. The other girls lavish attention upon your balls, rubbing your cum-filled orbs[end if].";
 				say "     After blasting your hot load into her, another swaps into position, this time on all fours and stuff her full of a fresh load of skunk semen as well. As you're mounting the third, you notice the first two have returned to their original victim and are having some fun with him. One girl's riding his cock while the other has pressed his growing muzzle to her creamy muff, forcing him to eat your hot load from her overflowing pussy. You are too lost in your lustful, skunkbeast instincts to stop this and are even proud of them as you watch him continue to change, skunk fur spreading across his body and his cock turning a lustrous ebon.";
@@ -116,7 +116,7 @@ to say sexwithFrank:
 			if name entry is "Skunk":
 				now monster is y;
 				break;
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     Having no sexual organs of your own, there seems to be little point in trying to have sex with the skunk.";
 	else if cunts of player is 0 and cocks of player > 0:
 		say "[Frank_MM_sex00]";

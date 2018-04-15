@@ -12,7 +12,7 @@ to say losetoFireSprite:
 		else:
 			say "[FemaleFireSpriteVicOral]";
 	else:		[guy]
-		if ( cunts of player is 0 and "Less Anal" is not listed in feats of player and a random chance of 3 in 5 succeeds ) or ( cunts of player > 0 and "Less Anal" is not listed in feats of player and a random chance of 1 in 8 succeeds ) or ( cunts of player > 0 and "More Anal" is listed in feats of player and a random chance of 3 in 5 succeeds):
+		if ( cunts of player is 0 and anallevel > 1 and a random chance of 3 in 5 succeeds ) or ( cunts of player > 0 and anallevel > 1 and a random chance of 1 in 8 succeeds ) or ( cunts of player > 0 and anallevel is 3 and a random chance of 3 in 5 succeeds):
 			say "[MaleFireSpriteVicAnal]";
 		else if cunts of player > 0 and a random chance of 4 in 5 succeeds:
 			say "[MaleFireSpriteVicAnal]";
@@ -338,7 +338,7 @@ when play ends:
 			say "     As your fire sprite infection spreads through your mind like wildfire, you soon desire little more than to share the gift of the flame inside you with the world, delighting in the havoc and destruction wrought by the beautiful cleansing flames.";
 			if cocks of player > 0:
 				say "     Occasionally your fiery dreamscape is broken by another like you, a female sprite who you share your flame with, filling her body with the warmth of life to further aid in the spread of your mischief.";
-			if ( cunts of player > 0 and "Sterile" is not listed in the feats of the player ) or "MPreg" is listed in the feats of the player:
+			if ( cunts of player > 0 and "Sterile" is not listed in the feats of the player ) or player is mpreg_ok:
 				say "     Eventually you happen upon an excited male sprite who is diligently working to set a large structure aflame. After a short time the structure is ablaze around you, and he is atop you, filling your needy body with his hot seed, his thrusts imbued with a burning passion that easily matches the inferno around you.";
 		else:
 			say "     After being evacuated from the city by military forces, you have a hard time finding a place for yourself in the outside world; your small form and affinity for fire both prove to be challenges to overcome. Eventually, however, you find yourself falling in with a small group of other infected citizens, working as mercs for the various factions that slowly begin to pop up in the days to come, engaging in everything from daring rescues to simple exterminations. While you don't provide the team much in the way of raw power, your small, agile body and resistance to extreme heat prove to be useful on more than one occasion, and a well-placed fire is often just as effective in chasing off a feral as an unnecessary beating.";

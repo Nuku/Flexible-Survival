@@ -411,7 +411,7 @@ instead of fucking the Chase:
 	else if HP of Chase is 3: [player has not talked to dominant Chase yet]
 		say "     You haven't even talked to Chase since agreeing to be his mate. Amazing sex is one thing, but your relationship will now be quite different, so it might be best to talk about that with your dominant top first.";
 	else if cunts of player is 0 and lust of Chase is 0:
-		if "MPreg" is not listed in feats of player:
+		if player is not mpreg_ok:
 			say "     'Hmm, that's a tempting offer,' Chase says as he runs his eyes over your body, pausing to shake his head at your aroused cock. 'But I think I'll have to pass on it right now,' Chase says with a shrug, then grins. 'I'll make you a pretty good counteroffer though,' Chase says before leaning forward and rubbing the sides of his head along your face and body. His whiskers tickle you as they trace along your sides, and his furred cheeks feel soft and sleek, leaving a strange tingling sensation behind where he rubbed against you. 'I think you would make a great tigress,' the tiger man says with a grin as he leans back against the wall, and you feel the tingling intensify within you where he marked you with his scent. 'So why don't you come back and make your offer again when you are one?' Chase adds in amusement.";
 			infect "Tiger";
 		else: [player has mpreg]
@@ -452,7 +452,7 @@ to say ChaseSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Offer sex to the hunky tiger.";
 	[]
-	if "MPreg" is listed in feats of player:
+	if player is mpreg_ok:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Chase's shaft in your ass";
 		now sortorder entry is 6;
@@ -562,8 +562,9 @@ to say DomChaseSexMenu:
 		now title entry is "Take Chase's shaft in your pussy";
 		now sortorder entry is 5;
 		now description entry is "Offer sex to the hunky tiger.";]
-	[]]
-	if "MPreg" is listed in feats of player:
+	]
+	[]
+	if player is mpreg_ok:
 		choose a blank row in table of fucking options;
 		now title entry is "Use your ass to satisfy your king";
 		now sortorder entry is 2;

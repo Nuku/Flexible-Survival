@@ -181,7 +181,7 @@ Instead of fucking the Onyx:
 	else:				[Using Mareslut in case guy is banned]
 		setmonster "Mareslut";
 		choose row monster from the table of random critters;
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     You consider offering to have sex with Onyx, but recall that you currently have no gender and are unable to satisfy the horse in such a manner.";
 	else if XP of Onyx is 9:
 		say "     'Oh? Sex is probably the last thing on my mind right now...' he says, perhaps dishonestly, while he gawks at the strippers... Peculiar fellow, it's perhaps best you ask him later.";
@@ -356,7 +356,7 @@ to say onyxbunkersex:
 			increase analchance by 2;
 			increase recanalchance by 2;
 		if player is submissive, increase analchance by 1;
-		if "MPreg" is listed in feats of player, increase analchance by 2;
+		if player is mpreg_ok, increase analchance by 2;
 		if anallevel is 1:
 			now analchance is 0;
 			now recanalchance is 0;
@@ -520,7 +520,7 @@ to say onyxbanal:
 			say "     [if cocks of player > 1]Your own [cock size desc of player] cocks driven hard[else if cocks of player > 0]Your own [cock size desc of player] cock driven hard[else if cunts of player > 0]Blatantly aroused[else]Writhing weakly[end if] as his flesh floods your bowels, he appears singularly intent on sating his fiery lust, even as you [if scalevalue of player < 2]begin to see the outline of dick bulge out from your belly[else]strain to remain clear-minded under such a considerable sensation[end if]. Regardless, you're quickly forced to acclimate to his thick intrusion before he begins to fuck you in earnest.";
 			If libido of player > 49:
 				If cocks of player > 0:
-					say "     Prostate so thoroughly ravaged by his assault, strained gouts of hot cum spurt from your cock[if cocks of player > 1]s[end if] in a staggered [if cock width of player > 12]and quite messy[end if] orgasm, forcing Onyx to taunt you.";
+					say "     Prostate so thoroughly ravaged by his assault, strained gouts of hot cum spurt from your cock[smn] in a staggered [if cock width of player > 12]and quite messy[end if] orgasm, forcing Onyx to taunt you.";
 					say "     'Aw, my little fucktoy is so sensitive, how adorable!' You can only help but blush in a mix of pleasure and embarrassment as you sully yourself with [if cock width of player > 12]numerous[end if] strings of your sexual fluids a mess across your [bodydesc of player] torso.";
 				else if cunts of player > 0:
 					say "     So thoroughly ravaged by his assault, you are overwhelmed with waves of ecstasy as you're wracked with the sensation of your orgasm, your writhes in pleasure becoming more deliberate as your neglected [if cunts of player > 1]pussies drip[else]pussy drips[end if] with sexual frustration. You try to fondle yourself, but Onyx pulls your arms away.";
@@ -559,7 +559,7 @@ to say onyxbanal:
 			say "[if cocks of player > 1]Your own, [cock size desc of player] cocks driven hard[else if cocks of player > 0]Your own [cock size desc of player] cock driven hard[else if cunts of player > 0]Blatantly aroused[else]Shifting to best suit him[end if] as his flesh floods your bowels, he appears singularly intent on sating his fiery lust, even as you [if scalevalue of player < 2]begin to see his dick protrude out from your belly[else]struggle to abide his expansive girth[end if]. It takes a little effort, but he finds immense pleasure in hilting his thick intrusion inside you.";
 			If libido of player > 49:
 				If cocks of player > 0:
-					say "     Prostate so thoroughly ravaged by his assault, strained gouts of hot cum spurt from your cock[if cocks of player > 1]s[end if] in a staggered [if cock width of player > 12]and quite messy[end if] orgasm, forcing Onyx to taunt you.";
+					say "     Prostate so thoroughly ravaged by his assault, strained gouts of hot cum spurt from your cock[smn] in a staggered [if cock width of player > 12]and quite messy[end if] orgasm, forcing Onyx to taunt you.";
 					say "     'Aw, my little fucktoy is so sensitive, how adorable!'  You can only help but blush in a mix of pleasure and embarrassment as you sully yourself with [if cock width of player > 12]numerous[end if] strings of your sexual fluids a mess across your [bodydesc of player] torso.";
 				else:
 					say "     So thoroughly ravaged by his assault, you are overwhelmed with waves of ecstasy as you're wracked with the sensation of your orgasm, your writhes in pleasure becoming more deliberate as your neglected [if cunts of player > 1]pussies drip[else]pussy drips[end if] with sexual frustration. You try to fondle yourself, but Onyx pulls your arms away.";

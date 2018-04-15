@@ -194,7 +194,7 @@ instead of conversing the Fancy:
 Section 3 - Fucking Fancy
 
 Instead of fucking the Fancy:
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     Currently lacking a gender, you don't really have much to tempt Fancy away from her duties at the moment.";
 	else if fancyquest >= 100:
 		say "     'While a little romp might be fun, I don't particularly feel you're what I'm looking for. Clearly I was wrong about you; you messed things up too much.";

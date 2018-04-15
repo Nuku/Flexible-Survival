@@ -319,7 +319,7 @@ to say sexwithMeredith:
 	if HP of meredith is 0 or HP of Meredith is 100:
 		say "ERROR-Meredith-[HP of Meredith]F: You should not be able to fuck me!";
 		remove Meredith from play;
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     Lacking a gender of your own, you see little point in making out with Meredith.";
 	else if HP of meredith is 3 and lastfuck of meredith - turns >= 4:
 		say "     Going over to see if you can entice the nerdy girl into some fun, you find Meredith in the midst of some work. You approach her and ask what's up.";

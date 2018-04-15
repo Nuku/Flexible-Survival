@@ -76,7 +76,7 @@ instead of conversing the Doctor Medea:
 		say "[medeaadjustments]";
 	else if cunts of player is 0:
 		if HP of Doctor Medea is 1:
-			if "MPreg" is listed in feats of player:
+			if player is mpreg_ok:
 				say "     'I cannot help you. I specialize in childbirth and minor illnesses. As the latter are not occurring with the nanite plague and you lack a womb...' You interrupt the reptilian doctor here as you start to explain your unusual ability to become pregnant rectally, she seems quite surprised and intrigued. 'I had started to consider such possibilities induced by the infection, but you're the first case I've been able to study. Please, you must let me examine you!' she says excitedly, taking your hands and rushing you towards the examination table.";
 				say "     Climbing up, she gets you onto all fours and starts with a cursory examination of your anus before spreading some cool gel over it and sinking a gloved finger into you. She probes around your backside, causing a few moans of pleasure. As her examination continues, you can hear her panting heavily as well as she stimulates [if cocks of player > 0]your prostate, making your cock hard and getting you to dribble pre onto the padded seat[else]you[end if]. She leans atop you, pounding her fingers hard and fast into you [if cocks of player > 0]until you cum messily[else]until you're left panting and moaning[end if] from the vigorous stimulation.";
 				if medeaget is 0 or medeaget is 1:
@@ -117,7 +117,7 @@ instead of conversing the Doctor Medea:
 		else if HP of Doctor Medea is 5:	[Able to check for M-Pregnancy]
 			say "[medeaadjustments]";
 		else if HP of Doctor Medea is 6:
-			if "MPreg" is listed in feats of player:
+			if player is mpreg_ok:
 				say "     'You are currently able to carry a male pregnancy.";
 				say "     [bold type]Would you like me to remove that ability?' the lizard doctor asks.[roman type][line break]";
 				LineBreak;
@@ -133,7 +133,7 @@ instead of conversing the Doctor Medea:
 				else:
 					LineBreak;
 					say "[medeaadjustments]";
-			else if "MPreg" is not listed in feats of player:
+			else if player is not mpreg_ok:
 				say "     'You are currently unable to carry a pregnancy as a male.";
 				say "     [bold type] Would you like me to grant you the ability to become pregnant as a male?' she asks.[roman type][line break]";
 				LineBreak;
@@ -559,7 +559,7 @@ to say medeaassistance_plot:
 				say "     Taking out the requested items from the veterinary clinic, you eagerly await her response while she looks it all over. 'Hmmm... yes... yes, this should be enough. I should now be able to perform examinations able to give rough estimates on how long before the patient go into heat or how long they'll remain in their current heat. More importantly, I should also be able influence their heat cycle as well.'";
 				now lust of Doctor Medea is 3;
 			if HP of Doctor Medea < 2:
-				if "MPreg" is listed in feats of player:
+				if player is mpreg_ok:
 					say "     The lizard doctor flips through an anatomy book, stopping on the page describing the male reproductive system. 'With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation. I have just started to look into those possibilities, but I need some more advanced supplies and specialized equipment to be able to accomplish this'";
 					say "     You cut her off there, informing her that you already possess this adaptation, much to her delight. 'This is very good fortune indeed. You're the first case of this I've been able to study. Please, you must let me examine you!' she says excitedly, taking your hands and rushing you towards the examination table.";
 					say "     Climbing up, she gets you onto all fours and starts with a cursory examination of your anus before spreading some cool gel over it and sinking a gloved finger into you. She probes around your backside, causing a few moans of pleasure. As her examination continues, you can hear her panting heavily as well as she stimulates [if cocks of player > 0]your prostate, making your cock hard and getting you to dribble pre onto the padded seat[else]you[end if]. She leans atop you, pounding her fingers hard and fast into you [if cocks of player > 0]until you cum messily[else]until you're left panting and moaning[end if] from the vigorous stimulation.";
@@ -623,7 +623,7 @@ to say medeapandafight:
 	else if fightoutcome >= 20 and fightoutcome <= 29:
 		choose row monster from the table of random critters;
 		say "     The horny, pregnant panda bears you down with the weight of her belly. Turning around, she plants her motherly hips and juicy snatch right in your face. Perhaps the jostling of your struggle has gotten her baby excited to get out because she groans loudly as her belly shifts noticeably atop you. The panda gives a groan and grinds her gaping pussy down onto your face, soaking you with a heady mix of amniotic fluid and femmecum. She continues to grind down onto you as her labour begins in earnest.";
-		say "     Given your position, you can't help but watch as the wet folds spread further and more juices leak from her pussy. The panda breathes and pushes under the doc's instructions, but adding [if cocks of player > 0]licking and sucking your cock[else if cunts of player > 0]licking and tonguefucking your hot snatch[else]licking and nipping at your bare crotch and thighs while fingering your asshole[end if] to the routine as well. Doing this requires her to essentially grind and roll her rounded belly over your chest, alternating between pressing her hot cunt to your face and having another go at your [if cocks of player is 0 and cunts of player is 0]thighs[else]groin[end if]. The mother-to-be's cries are a mix of effort and ecstasy more than of pain, the nanites and the fun distraction sparing the fecund female the bulk of that.";
+		say "     Given your position, you can't help but watch as the wet folds spread further and more juices leak from her pussy. The panda breathes and pushes under the doc's instructions, but adding [if cocks of player > 0]licking and sucking your cock[else if cunts of player > 0]licking and tonguefucking your hot snatch[else]licking and nipping at your bare crotch and thighs while fingering your asshole[end if] to the routine as well. Doing this requires her to essentially grind and roll her rounded belly over your chest, alternating between pressing her hot cunt to your face and having another go at your [if player is neuter]thighs[else]groin[end if]. The mother-to-be's cries are a mix of effort and ecstasy more than of pain, the nanites and the fun distraction sparing the fecund female the bulk of that.";
 		say "     As labour intensifies, the panda's focusing full-time on your [if cocks of player > 0]penis[else if cunts of player > 0]pussy[else]crotch[end if] rather than grinding into your face. Having a front-row seat for the action, you can't help but watch as the baby starts to crown. Staring raptly, you watch as the rounded and thinly furred head of the baby panda becomes briefly visible during one contraction. The following one reveals it a little more and a little longer, and the next one has it remain visible. A few more pushes after that while the momma [if cocks of player > 0]sucks you to orgasm[else if cunts of player > 0]tongues you to orgasm[else]fingers your butt wildly[end if] and the baby panda girl slides out into a towel held by Doctor Medea. She's quickly wiped and given over to the very happy mom, who sits back up - thus burying your face in her gaping snatch. She grinds herself to an orgasm of her own while nursing her newborn. By the time the mother panda rises up off you, her child's already matured rapidly and is just entering adolescence. After a final check-up, the two pandas leave, mother holding her new daughter's hand as they exit[if cocks of player > 0] and giving you a final wink on the way out[end if]. Meanwhile, you can feel the tingles of infection running through you after your uniquely messy experience.";
 		now non-infectious entry is false;
 		infect "Panda";

@@ -212,7 +212,7 @@ when play ends:
 			say "     You succumb fully to your impala instincts, joining up with a herd of other impalas roaming the plains.";
 			if cunts of player is 0 and player is submissive:
 				say "     Your submissive nature gets the better of you, and when the lead male moves to drive you out of his territory, you instead offer yourself up him. He's wary of you at first, but after he spends some time with you he realizes you're no more a threat to him than a doe. He spends almost as much time with you as he does with the females, you come to love the feeling of his cock filling you.";
-			else if cunts of player is 0 and "MPreg" is listed in the feats of the player:
+			else if cunts of player is 0 and player is mpreg_ok:
 				say "     When the lead male of the herd moves to drive you out, you instead offer yourself up him. He's wary of you at first, but after he spends some time with you he realizes you're no more a threat to him than a doe. Driven by a strange scent emanating from your rear, he mounts you right there, filling your ass up with his seed. He's surprised when he finds out you're pregnant with his fawn, but happy that you can be a productive member of his herd. In time, you become his favorite doe, bearing him many strong breeder-males like yourself.";
 			else if cocks of player > 0:
 				say "You eventually fight your way to the lead male position, fathering many fawns with your plentiful harem of slender impala women.";

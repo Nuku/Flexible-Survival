@@ -173,7 +173,7 @@ to say sexwithSandra:
 		say "     She flushes gently, 'It has not been long enough since last time. Even a girl needs to recharge a little, you animal you.' She leans in to kiss your cheek softly, but does not proceed with intimacy.";
 	else if rabbitsibling > 0 and rabbitsibling < 5:
 		say "[sandrasex2]";
-	else if cunts of player is 0 and cocks of player is 0:
+	else if player is neuter:
 		say "     'Uh, hon? No offense or nothing but you have nothing to play with. Fucking someone without any of that just feels weird to me, ok? Sorry.'";
 	else if HP of Sandra is 0 and cocks of player > 0:
 		say "[sandrasex_leadin]";

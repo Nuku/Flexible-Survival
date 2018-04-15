@@ -147,7 +147,7 @@ to say losetomagicdrake:
 			if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
 			if libido of player > 100, now libido of player is 100;
 	say "[mdscaletweak]";
-	if mdrakeanal >= 3 and "Twisted Capacity" is not listed in feats of player:
+	if mdrakeanal >= 3 and player is not twistcapped:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
 		say "     [bracket]You have gained the 'Twisted Capacity' feat and are now stretchy enough to take some astonishingly huge things inside you.[close bracket][line break]";
 		add "Twisted Capacity" to feats of player;
@@ -521,7 +521,7 @@ to say mdrake_pvictory_05:
 	say "     Only once your feel your back passage is sufficiently ready and your own arousal has gotten to be too much to keep teasingly waiting, you finally sink yourself down further onto her titanic pillar. Getting as much of it as you can, you wriggle yourself over the belly-stuffing log before slowly rising up again. You slide up and down it like this a few times, both letting you savour it and giving your body a final chance to adjust in the hopes of getting even just a few more inches in[if scalevalue of player < 3]. Her cock is so big compared to your [body size of player] [bodydesc of player] form that you end up stretched around her meat like a fleshy condom every time you lower yourself down[else if scalevalue of player < 5]. Her cock, nearly as big as a normal person on its own, stuffs you impossibly full and leaves clear impression of it against your bulging flesh[else]. Her cock, nearly as big as a normal person, stuffs you incredibly full, so much so there's a definite bulge formed by it[end if]. Your pace does pick up though and soon you're riding up and down it as quickly as your legs can manage, weak and shaky with the physical pleasure you're feeling. The dragoness isn't doing much better, panting and rumbling with unbridled lust as her meat pulses and throbs in you hot, tight ass.";
 	say "     Eventually, it ends up being too much for the both of you and she ends up cumming moments before you. The mighty blasts of her semen pumping into you and flooding your bowels are enough to send you over the edge into orgasmic bliss[if cocks of player > 0]. Your own cock[smn] blast[smv] messy streams of your seed across the dragoness's face and body[end if][if scalevalue of player < 3]. Her semen ends up filling you to the point of overflowing as your body sloshes beyond fullness[else if scalevalue of player < 5]. Her semen ends up filling you to the point of rounding your body with her fills you to the point of rounding your body with fullness[else]. Her semen ends up filling your belly to a sloshing fullness that leaves it visibly plumper[end if]. The sheer weight of the load stuffed into you drags you down further onto her firing cannon and leaves you stuck there while you recover your senses and strength enough to slide off. The draconess is left in a sticky, messy daze after her much-needed release.[mimpregchance][mimpregchance]";
 	increase mdrakeanal by 1;
-	if mdrakeanal >= 3 and "Twisted Capacity" is not listed in feats of player:
+	if mdrakeanal >= 3 and player is not twistcapped:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
 		say "     [bracket]You have gained the 'Twisted Capacity' feat and are now stretchy enough to take some astonishingly huge things inside you.[close bracket][line break]";
 		add "Twisted Capacity" to feats of player;
@@ -575,7 +575,7 @@ to say mdstaff_overgrown:
 	decrease mdrakebeaten by 1; [removing this win from the tally...]
 	increase mdrakeloss by 1; [...and counting it as a loss instead]
 	increase mdrakeanal by 1;
-	if mdrakeanal >= 3 and "Twisted Capacity" is not listed in feats of player:
+	if mdrakeanal >= 3 and player is not twistcapped:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
 		say "     [bracket]You have gained the 'Twisted Capacity' feat and are now stretchy enough to take some astonishingly huge things inside you.[close bracket][line break]";
 		add "Twisted Capacity" to feats of player;

@@ -170,7 +170,7 @@ Instead of conversing the Hayato:
 	else if HP of Hayato is 20:
 		say "     Seeing Hayato has reminded you that you'd located the oni lair and so you sit down to discuss the matter with him. You describe what you saw, including the rather grisly entrance. He gets quite disturbed by this, momentarily angry enough to smash a nearby chair with his club before reining in his anger.";
 		say "     'I am sorry about that,' he says, relinquishing his club and bowing his head in apology. 'It upsets me to think what the oni are doing - and that I could very well have been like them. But I do not know what can be done about them. You should also remember, oni are often depicted as solitary creatures, living in mountain caves or other remote lairs. If they are indeed in those ruins, then the great oni is likely there, ruling over them.' Fear creeps back into his voice, still scared of the monstrous oni that attacked him.";
-		if cocks of player is 0 and cunts of player is 0:
+		if player is neuter:
 			say "     Seeing how you lack a gender of your own at present, you find it hard to work up the gumption to go deal with the problem right away, if at all. Perhaps you should do something about your neutered state first.";
 			now HP of Hayato is 21;
 		else:

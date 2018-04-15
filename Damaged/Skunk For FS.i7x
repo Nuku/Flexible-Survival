@@ -117,7 +117,7 @@ to say skunk_vict:
 
 to say sblvictorysex:
 	now fightoutcome is 11;
-	say "     Feeling the instinctual urges of your skunkbeast side, you cannot resist and growl lustfully, welcoming the advances of the buxom skunk.  Her beautiful body presses against yours and she runs her paws across your bestial form.  Her nimble paws roam around, lavishing attention upon every sensitive spot they can find as she seeks to please her skunkbeast [if cocks of player is 0 and cunts of player > 0]lady[else]lord[end if][if skrp is 1].  Your lower head is given several kisses as well, the two skunk girls diving their tongues into each other's muzzle[end if][if cocks of player is 0 and cunts of player is 0].  The skunk girl snuggles with you, grooming your body, running her paws all over it and grinding her dripping crotch against your bare groin[end if].";
+	say "     Feeling the instinctual urges of your skunkbeast side, you cannot resist and growl lustfully, welcoming the advances of the buxom skunk.  Her beautiful body presses against yours and she runs her paws across your bestial form.  Her nimble paws roam around, lavishing attention upon every sensitive spot they can find as she seeks to please her skunkbeast [if cocks of player is 0 and cunts of player > 0]lady[else]lord[end if][if skrp is 1].  Your lower head is given several kisses as well, the two skunk girls diving their tongues into each other's muzzle[end if][if player is neuter].  The skunk girl snuggles with you, grooming your body, running her paws all over it and grinding her dripping crotch against your bare groin[end if].";
 	if cocks of player > 0 or cunts of player > 0:		[not neuter]
 		let randomskunksex be a list of numbers;
 		if cocks of player > 0, add 1 to randomskunksex;

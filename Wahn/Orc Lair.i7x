@@ -1043,7 +1043,7 @@ to say OrcGangbang1:
 	LineBreak;
 	infect "Orc Breeder";
 	infect "Orc Breeder";
-	if bodyname of player is "Orc Breeder" and player is pure and "MPreg" is not listed in feats of player:
+	if bodyname of player is "Orc Breeder" and player is pure and player is not mpreg_ok:
 		LineBreak;
 		say "     You feel something change deep inside you, as all the cum the three orcs filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The ['][bold type]MPreg[roman type]['] feat has been added to your list.";
 		add "MPreg" to feats of player;
@@ -1087,7 +1087,7 @@ to say OrcGangbang2:
 	LineBreak;
 	infect "Orc Breeder";
 	infect "Orc Breeder";
-	if bodyname of player is "Orc Breeder" and player is pure and "MPreg" is not listed in feats of player:
+	if bodyname of player is "Orc Breeder" and player is pure and player is not mpreg_ok:
 		LineBreak;
 		say "     You feel something change deep inside you, as all the cum the three orcs filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The ['][bold type]MPreg[roman type]['] feat has been added to your list.";
 		add "MPreg" to feats of player;

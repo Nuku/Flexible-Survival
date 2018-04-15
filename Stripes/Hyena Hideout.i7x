@@ -39,7 +39,7 @@ instead of fucking the gang members:
 	if lastfuck of Gang Members - turns < 4:
 		say "     While several of the hyena gang members seem interested in what your offering, it seems most of the ones still hanging out here in the den are still recovering from their last romp, perhaps you should try to excite them later.";
 	if matriarchowned is 1:
-		if cunts of player is 0 and cocks of player is 0:
+		if player is neuter:
 			say "     There's little point in finding a partner among the gang while you have no proper gender of your own. While several of the gang have become aware of this, being blatant about it might entice one of the more ambitious members to try deposing you. Without anything to offer, you would be deposed without a contest of dominance.";
 		else if the player is submissive and a random chance of 3 in 5 succeeds:
 			now lastfuck of Gang Members is turns;

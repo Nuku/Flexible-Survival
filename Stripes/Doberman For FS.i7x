@@ -213,22 +213,22 @@ to say losetodobie3:		[high-lust player loss]
 	if cunts of player > 0 and cocks of player > 0:
 		if a random chance of 3 in 5 succeeds:
 			say "[dobieride]";
-		else if "More Anal" is listed in feats of player and a random chance of 1 in 4 succeeds:
+		else if anallevel is 3 and a random chance of 1 in 4 succeeds:
 			say "[dobiensanal]";
 		else:
 			say "[dobiensvag]";
 	else if cocks of player > 0:
-		if "More Anal" is listed in feats of player and a random chance of 1 in 3 succeeds:
+		if anallevel is 3 and a random chance of 1 in 3 succeeds:
 			say "[dobiensanal]";
 		else:
 			say "[dobieride]";
 	else if cunts of player > 0:
-		if "More Anal" is listed in feats of player and a random chance of 1 in 4 succeeds:
+		if anallevel is 3 and a random chance of 1 in 4 succeeds:
 			say "[dobiensanal]";
 		else:
 			say "[dobiensvag]";
 	else:
-		if "More Anal" is listed in feats of player and a random chance of 1 in 3 succeeds:
+		if anallevel is 3 and a random chance of 1 in 3 succeeds:
 			say "[dobiensanal]";
 		else:
 			decrease HP of player by wdam entry * 2;

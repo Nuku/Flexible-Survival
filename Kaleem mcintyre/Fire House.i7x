@@ -489,7 +489,7 @@ Instead of fucking Kenaz:
 		if name entry is "Dalmatian":
 			now monster is y;
 			break;
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "Lacking a gender of your own, you doubt you'd be able to entice him into some fun until that's resolved.";
 	else if KTO is 0:
 		say "'I'm sorry, but no.' Kenaz's resolve is unwavering, something unusual in this town, and at the staunch rejection you back from trying to entice the other man.";
