@@ -20,7 +20,7 @@ To say losetohgryphon:
 	else:
 		now nohgryphonsex is 0;
 		let analchance be 5;
-		if "Submissive" is listed in feats of player, increase analchance by 2;
+		if player is submissive, increase analchance by 2;
 		if "MPreg" is listed in feats of player, increase analchance by 2;
 		if anallevel is 2, now analchance is ( 2 * analchance ) / 3;
 		if anallevel is 1, now analchance is 0;

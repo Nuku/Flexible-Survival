@@ -381,14 +381,14 @@ to say parasiticlust:
 				now cock of player is cock entry;
 			infect;
 			decrease the score by 3;
-			if "Kinky" is not listed in feats of the player:
-				say "Your deep, lustful hunger sated for the moment, you feel ashamed and depressed for what you have done.";
-				decrease the morale of the player by a random number from 5 to 10;
-				now libido of player is 0;
-			else:
+			if player is kinky:
 				say "With your deep, lustful hunger sated for the moment, you massage your abused holes and lick your cum-covered lips. Now that was a good fucking session!";
 				increase the morale of the player by 5;
 				now libido of player is (libido of player) / 2;
+			else:
+				say "Your deep, lustful hunger sated for the moment, you feel ashamed and depressed for what you have done.";
+				decrease the morale of the player by a random number from 5 to 10;
+				now libido of player is 0;
 		else if libido of player > 90:
 			increase timetillrampage by 1;
 			say "The sexual urges caused by the seed are harder and harder to suppress.[line break]";

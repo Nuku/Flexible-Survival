@@ -11,7 +11,7 @@ mateable is a number that varies.
 to say felinoid wins:
 	if HP of player > 0:
 		let mchance be 4;
-		if "Submissive" is listed in feats of player, increase mchance by 2;
+		if player is submissive, increase mchance by 2;
 		if "More Anal" is listed in feats of player, increase mchance by 2;
 		if "MPreg" is listed in feats of player, increase mchance by 2;
 		if "Less Anal" is listed in feats of player, now mchance is 0;
@@ -40,7 +40,7 @@ to say felinoid wins:
 			say "     At first he simply nuzzles against you, but pretty soon he begins pushing you around, trying to get you to move. You feel odd, his friendliness making something within you warm up and without thinking, you feel yourself move onto your hands and knees, breasts pushing down into the ground. He rips at your clothing, tearing it to shreds. His weight pins you down and you moan out loud, your body ready for what the feline was about to give you. Hips meet yours, but his aim was off and his cock messily smears pre across your inner thigh. On this third try he finds his mark and you cry out, feeling yourself filled and stretched around him. He didn't take it slow, he breeds you as though you were his very own mate. Your needy moans can only agree with him. You are his mate.";
 			say "     Deeper and faster, the barbs on his cock cause the growing friction to alternate between agony and bliss as they scrape and then soothe sensitive parts deep within you. You are panting heavily, unsure if you could take much more. After a few more blissful seconds, he thrust deep once more and roars above you, finally deigning it the right time to clamp his jaws down on your neck, extending your own orgasm as his seed floods into you. The cat pulls away from you and turns behind to clean your cleft, at his first blissful lick he pulls back and you hear a growl coming from him, without hesitation, and fearing for your life, you grab your things and run as fast as you can.";
 			increase catnum by 1;
-		if "Submissive" is listed in feats of player or "More Anal" is listed in feats of player or "MPreg" is listed in feats of player:
+		if player is submissive or "More Anal" is listed in feats of player or "MPreg" is listed in feats of player:
 			say "     At first he simply nuzzles against you, but pretty soon he begins pushing you around, trying to get you to move. You feel odd, his friendliness making something within you warm up and without thinking, you feel yourself move onto your hands and knees, chest pushing down into the ground. He rips at your clothing, tearing it to shreds. His weight pins you down and you moan out loud, your body ready for what the feline was about to give you. Hips meet yours, grinding against your rear.";
 			say "     As he drives into you, you cry out, feeling yourself filled and stretched around him. He doesn't take it slow, he fucks you as though you were his very own mate. Your needy moans can only agree with him.";
 			say "     Deeper and faster, the barbs on his cock cause the growing friction to alternate between agony and bliss as they scrape and then soothe sensitive parts deep within you. You are panting heavily, unsure if you could take much more. After a few more blissful seconds, he thrust deep once more and roars above you, finally deigning it the right time to clamp his jaws down on your neck, extending your own orgasm as his seed floods into you.";

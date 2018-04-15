@@ -90,7 +90,7 @@ to say ebgatordesc:
 			else:
 				increase ebgatorcarrying by 1;
 	else if ebneuterswitch is false:
-		if player is male_vacant and anallevel is not 1 and ((anallevel is 2 and ("Kinky" is listed in feats of player or "Mpreg" is listed in feats of player)) or anallevel is 3):
+		if player is male_vacant and anallevel is not 1 and ((anallevel is 2 and (player is kinky or "Mpreg" is listed in feats of player)) or anallevel is 3):
 			if a random chance of ebgatorcarrying in 4 succeeds:
 				now impregnatevalid is true;
 				now ebgatorcarrying is 1;

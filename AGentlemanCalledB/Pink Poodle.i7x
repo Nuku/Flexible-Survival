@@ -297,7 +297,7 @@ to say PoodleHeatSuccumb:
 	infect "Pink Poodle";
 	decrease the score by 5;
 	decrease the morale of the player by 3;
-	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
+	if player is kinky, increase the morale of the player by 6;
 
 Section 4 - Endings
 

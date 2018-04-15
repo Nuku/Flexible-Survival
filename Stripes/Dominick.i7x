@@ -234,7 +234,7 @@ to say dominick_sexmenu:
 	now sortorder entry is 9;
 	now description entry is "lavish that doggy cock with attention";
 	if HP of Dominick >= 5 and HP of Dominick < 10 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ):
-		if "Submissive" is not listed in feats of player and level of player > 3:
+		if player is not submissive and level of player > 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Beta training";
 			now sortorder entry is 98;

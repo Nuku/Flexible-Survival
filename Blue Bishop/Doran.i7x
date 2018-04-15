@@ -574,13 +574,13 @@ to say DoranSexMenu: [Doran Sex Protocol]
 			now sortorder entry is 2;
 			now description entry is "Service Doran's tailhole";
 		[]
-		if DoranBallModStatus > 0 and DoranInternal is false and DoranRoleIntensity is 0 and "Kinky" is listed in feats of player:
+		if DoranBallModStatus > 0 and DoranInternal is false and DoranRoleIntensity is 0 and player is kinky:
 			choose a blank row from table of fucking options;
 			now title entry is "Worship [ghis] balls";
 			now sortorder entry is 3;
 			now description entry is "Praise those massive balls";
 		[]
-		if DoranBallModStatus > 0 and "Kinky" is listed in feats of player:
+		if DoranBallModStatus > 0 and player is kinky:
 			choose a blank row from table of fucking options;
 			now title entry is "Worship [ghis] seed";
 			now sortorder entry is 4;
@@ -773,11 +773,11 @@ to say DoranSexMenu: [Doran Sex Protocol]
 to say DoranAutoSexProtocol:
 	if DoranRole is 1 and a random chance of 1 in 2 succeeds:
 		say "[DoranNeutral_69]"; [69 Scene]
-	else if anallevel is 3 and DoranRoleIntensity is 0 and (("Kinky" is listed in feats of player and a random chance of 1 in 5 succeeds) or (a random chance of 1 in 8 succeeds)) and DoranRimmingStatus is not 1:
+	else if anallevel is 3 and DoranRoleIntensity is 0 and ((player is kinky and a random chance of 1 in 5 succeeds) or (a random chance of 1 in 8 succeeds)) and DoranRimmingStatus is not 1:
 		say "[DoranDom_FaceSitting]"; [rimjob scene]
-	else if DoranBallModStatus > 0 and DoranInternal is false and DoranRoleIntensity is 0 and (("Kinky" is listed in feats of player and a random chance of 1 in 4 succeeds) or (a random chance of 1 in 7 succeeds)):
+	else if DoranBallModStatus > 0 and DoranInternal is false and DoranRoleIntensity is 0 and ((player is kinky and a random chance of 1 in 4 succeeds) or (a random chance of 1 in 7 succeeds)):
 		say "[DoranDom_BallWorship]"; [Ball Worship]
-	else if DoranBallModStatus > 0 and (("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds) or (a random chance of 1 in 6 succeeds)):
+	else if DoranBallModStatus > 0 and ((player is kinky and a random chance of 1 in 3 succeeds) or (a random chance of 1 in 6 succeeds)):
 		say "[DoranDom_CumWorship]"; [Cum Worship]
 	else if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and ((cunts of player is 0 and ((anallevel is 3 and a random chance of 2 in 3 succeeds) or (anallevel is 2 and a random chance of 1 in 2 succeeds))) or (cunts of player > 0 and a random chance of 1 in 4 succeeds)) and (scalevalue of player > 1 or player is twistcapped):
 		say "[DoranDom_Anal]"; [anal sex scene]
@@ -3977,7 +3977,7 @@ to say dorrpovbs:
 	say "     '...[run paragraph on][one of]Oh[or]Ah[or]Hm[at random], [DoranPlayerRegard], are they [one of]alright[or]OK[at random]? [one of]I hope they enjoyed this little exercise[or]I hope I wasn't too rough on them[or]I made such a mess[at random]...' Still a bit dizzy from the whole ordeal, Doran fusses over cleaning you up, eventually satisfied and setting you off once more. Funny, it feels like no time has passed at all...";
 
 to say dorrpovobss:
-	if DoranRP_var4 is 1 and (a random chance of 1 in 6 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 4 succeeds)): [WS Opener]
+	if DoranRP_var4 is 1 and (a random chance of 1 in 6 succeeds or (player is kinky and a random chance of 1 in 4 succeeds)): [WS Opener]
 		say "     You are awoken from your prior lapse in consciousness to feel of a hot liquid rushing against your face. It only takes a second for the acrid stench and taste to inform you that you're being marked again by the [gdragon], [if tempnum is 0]meekly obliging such harsh treatment, much to [ghis] approval[else]instinctively spitting it out and struggling once more to free yourself of [ghis] hold, to little avail[end if]. Satisfied with [ghis] little wake-up call, the beast continues going about the business [ghe] had planned for [ghis] little toy.";
 		now DoranDiscussion_var1 is 0;
 		now DoranRP_var4 is 2;
@@ -3995,7 +3995,7 @@ to say dorrpovobss:
 	else: [Sleeping Dragon]
 		say "     Roused once more from unconsciousness, you can feel the [gdragon] on top of you, though the limp manner in which [ghe] is splayed against you and the loud snoring [ghe] makes, it's clear [ghe]'s fallen asleep. It takes a second of shifting to realise that, in spite [ghis] state of rest, [ghe]'s still very much aroused and impaling you through your doubtlessly very worn hole. [if tempnum is 1]Weakly, you attempt to free yourself from under [ghim], but the activity[else]Beleaguered groans and protests in being forced to abide [ghis] weight[end if] seems to stir [ghim] partially awake once more, renewed thrusts against you--initially idle and half-hearted--grow increasingly deliberate, until a groggy roar from the sordid beast punctuates another gout of [ghis] heady seed. It looks to be a sufficient wake-up call for [ghim], anyways, and nips [ghis][if scalevalue of player < 4] little[end if] [if DoranRP_var1 is 0]trespasser[else]trophy[end if] in cheeky approval.";
 		now DoranDiscussion_var1 is 1;
-	if DoranRP_var4 is 1 and (a random chance of 1 in 4 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds)): [WS "Feeding"]
+	if DoranRP_var4 is 1 and (a random chance of 1 in 4 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)): [WS "Feeding"]
 		if DoranDiscussion_var1 is 1:
 			say "     Pulling free from you, [ghe] moves around to aim [ghis] softened and cum-dripping";
 		else:

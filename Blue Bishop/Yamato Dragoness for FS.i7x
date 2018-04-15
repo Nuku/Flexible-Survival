@@ -19,7 +19,7 @@ to say Yamato Dragoness vic:
 		say "     You ultimately choose to surrender yourself to the serpentine dragoness's mercy, dropping what you were carrying and offering yourself freely. When it's clear that this isn't some trick she pulls closer, a mouthless voice flooding your hearing.";
 	else:
 		say "     Overwhelmed by this massive dragoness, you're grabbed by her teeth, tearing you free of what attire you might have worn and slamming you against the dirt. Head spinning and too exhausted to contest her will, you feel her talons further expose you before herself, a mouthless voice flooding your hearing.";
-	if vorelevel is 3 and (a random chance of 1 in 3 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds)):
+	if vorelevel is 3 and (a random chance of 1 in 3 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)):
 		if HP of player > 0:
 			say "     '[one of]Oh, such an obliging little morsel[or]Ha, my meal delivers itself to me[or]I hunger[at random]...' Given little time to reconsider your circumstance, the dragoness grabs you and pulls you close to her maw.";
 		else:
@@ -39,7 +39,7 @@ to say Yamato Dragoness vic:
 			say "     '[one of]Very wise to back down, little one, lest you make a fool of yourself[or]You are not as foolish a little thing as I had expected.[run paragraph on] Very well[or]I see your need is just as great as mine[at random].' In the wake of her remark she demands that you free yourself of any other attire you might have on, forced to oblige, else she tear them free of you.";
 		else:
 			say "     '[one of]Impudent little whelp, you are now mine[or]It amuses me that you thought you could contest my will[or]Know your place, little thing[or]Such gall, you will suffer from more than defeat[at random]!' Taunting you, as she does, it's very clear that you're now at the mercy of this impressive, serpentine creature.";
-		if "Touched by Madness" is listed in feats of player and (("Kinky" is listed in feats of player and a random chance of 1 in 2 succeeds) or ("Kinky" is not listed in feats of player and a random chance of 1 in 4 succeeds)):
+		if "Touched by Madness" is listed in feats of player and ((player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 4 succeeds)):
 			if FYDTBMM is 0:
 				say "     As she's about to set herself upon you, the dragoness finds herself struck by an otherworldly notion, seemingly interrupting whatever she was planning for you. For a few brief moments she appears conflicted, before she looks at you with an almost insane glare, apparently inspired by some new plan for you.";
 				say "     'N-no... What you offer is not enough, I must have all of you!' Wanton need reignited by this twisted plot, the creature pulls you into the air, ";
@@ -75,14 +75,14 @@ to say Yamato Dragoness vic:
 			infect;
 			if waiterhater is 0, wait for any key;
 			say "[line break]";
-			if ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds) or ("Horny Bastard" is listed in feats of player and a random chance of 1 in 3 succeeds) or a random chance of 1 in 6 succeeds:
+			if (player is kinky and a random chance of 1 in 3 succeeds) or ("Horny Bastard" is listed in feats of player and a random chance of 1 in 3 succeeds) or a random chance of 1 in 6 succeeds:
 				say "     You're gradually roused from unconsciousness by the feel of something slick and scaled writhing against your [bodytype of player] form. Quickly realizing you're walled off within the translucent confines of an egg, the immediate and much more apparent issue is quickly brought to your attention. Another, much closer to your size, ";
 				if a random chance of 1 in 2 succeeds and guy is not banned:
 					say "dragon is wrapped around you. You can only assume that you weren't enough to satisfy your captor's mad need and left you another victim to keep you company. You can feel your body having long been impaled by his throbbing, ever-hard dick. Try to free yourself of him?";
 					if player consents:
 						let bonus be ( strength of player - 10 ) / 2;
 						let target be 14;
-						if "Submissive" is listed in feats of player, increase target by 1;
+						if player is submissive, increase target by 1;
 						let dice be a random number from 1 to 20;
 						if bonus + dice > target:
 							say "     Thankfully, you manage to pry the serpentine creature free of your form, soon breaking out of the egg and fleeing before he can crawl after you. Exhausted mess as you are, and it takes you some time to find your things and head back out from where you came.";
@@ -107,7 +107,7 @@ to say Yamato Dragoness vic:
 					if player consents:
 						let bonus be ( strength of player - 10 ) / 2;
 						let target be 14;
-						if "Submissive" is listed in feats of player, increase target by 1;
+						if player is submissive, increase target by 1;
 						let dice be a random number from 1 to 20;
 						if bonus + dice > target:
 							say "     Thankfully, you manage to pry the serpentine creature free of your form, soon breaking out of the egg and fleeing before he can crawl after you. Exhausted mess as you are, and it takes you some time to find your things and head back out from where you came.";

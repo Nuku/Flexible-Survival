@@ -397,7 +397,7 @@ to assaultonminilab:
 				say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if cocks of player > 0]. You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [short ball size] balls[end if][if cunts of player is 1]. With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[else if cunts of player > 1]. With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if]. As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together. You make your way back to the library feeling very sexually satisfied and with your thoughts obsessing over the idea of becoming a horny sex monster like them. The scene you've just witnessed has left you feeling ";
 			else:
 				say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together. You make your way back to the library with your thoughts obsessing over the idea of becoming a horny sex monster like them. The scene you've just witnessed has left you feeling ";
-			if "Kinky" is listed in feats of player:
+			if player is kinky:
 				say "quite pleased and aroused at having indulged your kinky urges";
 				increase morale of player by 3;
 				increase libido of player by 25;
@@ -436,7 +436,7 @@ to assaultonminilab:
 		else:
 			say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. ";
 		let surrender be 0;
-		if humanity of player < 50 or libido of player > 50 or "Kinky" is listed in feats of player or "Submissive" is listed in feats of player:
+		if humanity of player < 50 or libido of player > 50 or player is kinky or player is submissive:
 			Say "     Watching as the beautiful tauric feline that had once been Sam rumbles a pleased growl from out of her throat while looking adoringly at her new mistress. ";
 			say "     [bold type]You wonder if maybe you should give into the tigertaur and have her claim you as a pet as well?[roman type][line break]";
 			LineBreak;
@@ -466,7 +466,7 @@ to assaultonminilab:
 		else:
 			say "     Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together. You make your way back to the library with your thoughts obsessing over the idea of becoming a horny sex monster like them. The scene you've just witnessed has left you feeling ";
 		if surrender is 0:
-			if "Kinky" is listed in feats of player:
+			if player is kinky:
 				say "quite pleased and aroused at having indulged your kinky urges";
 				increase morale of player by 3;
 				increase libido of player by 25;

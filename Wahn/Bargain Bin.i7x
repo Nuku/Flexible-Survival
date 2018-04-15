@@ -80,7 +80,7 @@ carry out bargainhunting:
 			increase charisma of player by 1;
 		else if Z is 5: [kinky porn]
 			if "Like Attracts Like" is listed in feats of the player:
-				if "Kinky" is listed in feats of the player:
+				if player is kinky:
 					say "     Sorting through the strange bin, you feel a small static shock from one of the items buried in it. Curiosity makes you grasp whatever that was and pull it out. You find yourself holding a [bold type]metal pendant of some kind[roman type], an unusual occult design stamped on one side, while on the other is the image of some undetermined beast. While the amulet is actually kind of eerie, you did just buy it so you slip it over your head as you look around the shop, somehow seeming almost instantly in tune with your inner instincts.";
 					LineBreak;
 					say "[bold type]Your sanity has decreased by 25![roman type][line break]";
@@ -110,7 +110,7 @@ carry out bargainhunting:
 				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
 		else if Z is 7: [magpie jewelry]
-			Say "     Sorting through the bin, your eye is caught by a [bold type]sparkly piece of jewelry[roman type] half-hidden under other items. The pretty little thing is making you smile at finding it as you pull it out. Closer inspection reveals that the shiny item is piece of costume jewelry - certainly not worth all that much, but it looks pretty, so you're happy nontheless at calling it your own.";
+			Say "     Sorting through the bin, your eye is caught by a [bold type]sparkly piece of jewelry[roman type] half-hidden under other items. The pretty little thing is making you smile at finding it as you pull it out. Closer inspection reveals that the shiny item is piece of costume jewelry - certainly not worth all that much, but it looks pretty, so you're happy nonetheless at calling it your own.";
 			if "Magpie Eyes" is listed in feats of the player:
 				say "     Smiling at your new piece of jewelry, you tuck your newest acquisition away with the rest of your small collection of glittery and shiny things. Finding a new treasure to keep makes you feel even better about yourself as you look around the store, your keen eyes seeking out new treasures to add to your collection.";
 				LineBreak;
@@ -361,7 +361,7 @@ carry out bargainhunting:
 				add "City Map" to feats of the player;
 				say "[bestowcitymapfeat]";
 		else if Z is 22: [collar]
-			if "Submissive" is listed in feats of the player:
+			if player is submissive:
 				say "     Reaching down into the depths of the bargain bin, your hand touches on a rather familiar shape, pulling the item up, you find yourself smiling to see you have found a lovely little [bold type]slave's collar[roman type]. Looking at the collar reminds you of how much fun it can be to submit to a stronger more dominant mate, and your mind drifts to several of the sexy creatures in the city, lingering on just how much fun it could to be to just be theirs, their happy little slutty pet, happy to serve their every whim and need. Panting slightly as you think back on all your former submissions, you find yourself feeling increasingly happy and ready for thing to come, as you slip the collar into your pack as a happy reminder of all the submissive pleasure in your past, and hopefully all the lovely times in your future as well...";
 				LineBreak;
 				say "[bold type]You gain 25 XP![roman type][line break]";

@@ -25,7 +25,7 @@ to say fsdm attack:
 			now sex entry is "Both";
 		else:
 			now sex entry is "Female";
-	if vorelevel is not 1 and scalevalue of player < 4 and (A random chance of 1 in 5 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 4 succeeds) or (vorelevel is 3 and a random chance of 1 in 3 succeeds)):
+	if vorelevel is not 1 and scalevalue of player < 4 and (A random chance of 1 in 5 succeeds or (player is kinky and a random chance of 1 in 4 succeeds) or (vorelevel is 3 and a random chance of 1 in 3 succeeds)):
 		if HP of player > 0:
 			say "     You immediately throw up your arms and lower your guard, showing you don't wish to fight. He doesn't seem inclined to very much regard your submission as anything more than the opening for him, and he immediately dives for";
 		else:
@@ -85,7 +85,7 @@ to say fsdm attack:
 				say "     Slightly pinning yourself against the beach, you partially sink into the sand under the[if scalevalue of player < 4] massive[end if] beast's weight, though his underside is at least soft enough to not be a particular strain on you.  It would appear he's giving you a look-over, determining what fate to subject his new victim to.";
 			else:                            [full lead-in]
 				say "     Slightly pinning yourself against the beach, you partially sink into the sand under the[if scalevalue of player < 4] massive[end if] beast's weight, though his underside is at least soft enough to not be a particular strain on you.  You feel his thick tongue begin to probe your more private regions, that sickeningly slick organ having no shame in embarrassing you as much as it can[if cunts of player > 1], illuminating its clearly perverse intent by prodding your vulnerable cunts, perhaps testing their willingness to accommodate its girth before[else if cunts of player > 0], illuminating its clearly perverse intent by prodding your vulnerable cunt, perhaps testing its willingness to accommodate its girth before[else if cocks of player > 0].  He gives brief attention to your [cock size desc of player] cock[smn], certainly enough to make you go right hard, though that doesn't appear to be his main intent. Curiosity sated,[else].  His little exploration only leads him to find your asshole, to which he probes curiously, perhaps more surprised that such a strange, genitalia-devoid creature like yourself could even exist.  Curiosity sated,[end if] he pulls himself free, your exposed and saliva-[if scalevalue of player < 4]drenched[else]sullied[end if] behind chilled by the ocean air.";
-			if fsdfeedmemory >= 2 and lastfsdfeeding - turns >= 8 and (("Kinky" is listed in feats of player and a random chance of 1 in 4 succeeds) or (vorelevel is 1 and a random chance of 1 in 4 succeeds) or a random chance of 1 in 3 succeeds) and "Touched by Madness" is listed in feats of player:
+			if fsdfeedmemory >= 2 and lastfsdfeeding - turns >= 8 and ((player is kinky and a random chance of 1 in 4 succeeds) or (vorelevel is 1 and a random chance of 1 in 4 succeeds) or a random chance of 1 in 3 succeeds) and "Touched by Madness" is listed in feats of player:
 				If twistfsdfeedmemory is false:
 					say "     His exposure to you seems to have an oddly disorienting effect on the sea dragon, and he needs a moment to recover from it before he starts off once more. Oddly enough, he shifts a bit to give you a better view of his face, his expression strangely softened, a blatant contradiction to his normally harsher demeanour.";
 					say "     Before you can even try to determine the cause of this, he begins to make a hoarse, hacking sound, a sound you've become all-too familiar with by now, though never by a male of this species. Suddenly, your mouth is assailed by his lips, acrid breath compelling you to gasp for air, only for that now-gaping hole to be flooded with half-eaten fish.";
@@ -98,7 +98,7 @@ to say fsdm attack:
 				decrease hunger of player by a random number between 10 and 24;
 				now lastfsdfeeding is turns;
 				infect;
-			else if "Touched by Madness" is listed in feats of player and "MPreg" is listed in feats of player and (("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds) and scalevalue of player < 4 and inasituation is false:
+			else if "Touched by Madness" is listed in feats of player and "MPreg" is listed in feats of player and ((player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds) and scalevalue of player < 4 and inasituation is false:
 				If MFSDUBM is false:
 					say "     He pauses as if stopped by some unseen force, the power of which compelling him to move off of you. Baffled for a moment, the dragon is somehow affected by your presence. Before you might do anything with this newfound freedom, though, his perception of the situation returns. Looking at him now, his demeanour has radically shifted; harsh once was his regard; assertive, domineering, his expression now soft and abiding, almost matronly.";
 					say "     Bearing down upon you once more, his slick, dripping tongue slathering your smaller frame in an odd show of affection, until you are drenched in his saliva, blatantly arousing you. He doesn't even remotely seem interested in this; rather, he suddenly drags himself over you, soft underbelly and clearly erect cock grinding against your lubricated frame before he stops, showing no desire to spare you of his massive weight. Instinctively, you push against his pressure, but this only abides his tainted intent, and your endeavors backfire when you push yourself past his anal ring.";
@@ -109,18 +109,18 @@ to say fsdm attack:
 					say "     Blatantly aroused as you are, his satisfaction is met, [if HP of player is 0 and player is not submissive]forcing himself down on you once more, and you are offered no choice but to accept his aquatic ring's embrace, smaller form quickly disappearing entirely under him[else]compelling you to enter his hungering ring, though you might only comply with your head and torso before he slams himself upright once more, engulfing the remainder of you with ease[end if].";
 					say "     The sound of his conflicted mess of song and roar from such tainted need muffled within these confines, his passage tightens against your wholly engulfed frame, pulling you deeper into his slick depths as he seeks reprieve. This overwhelming heat; this hungry, supple abyss, now all too well-known to you, it [if cocks of player > 0 or cunts of player > 0]is but a moment before it sets you off, fate sealed when this is all that the dragon needs to reach his own climax[else]torments you to no end, your fate soon sealed as the dragon reaches climax[end if], pulling you into that familiar, final, and inevitable destination before your vision fades. The Dragon would no doubt recover and move on, even after soaking his underbelly with his own cum, the occupancy of his new captive not outwardly apparent to those who might see his large form, and doubtlessly happy that you are his...";
 				attempttowait;
-				if (("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds) and FSDOPEN < 2:
+				if ((player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds) and FSDOPEN < 2:
 					Say "     In due time you come to, the thick, hard walls of an egg surrounding you. However, you feel yourself slightly tumbling and shifting about and when you attempt to break free of the egg you find yourself unable to. The heat is overwhelming, [if cocks of player > 0 or cunts of player > 0]your arousal quickly rising once more, driving you to pleasure yourself uncontrollably within these confines, making a further mess of yourself[else]your arousal quickly rising once more, forced to abide the torment of these demented confines[end if].";
 					infect;
 					say "     After what seems like forever, you can see the familiar light of the outside coming through the translucent walls of your prison, compelling you to finally break free, and once you acclimate to the open air it's made very clear -why- you were forced within those confines longer than natural";
 					if a random chance of 1 in 2 succeeds and girl is not banned:
 						say ". A sea dragoness is before you, looking at her somewhat tired and lust-addled form, it's clear that she happened upon your egg and was compelled to use it for her own sexual gratification--much to your expense.";
-						if (("Kinky" is listed in feats of player and a random chance of 3 in 8 succeeds) or a random chance of 1 in 5 succeeds):
+						if ((player is kinky and a random chance of 3 in 8 succeeds) or a random chance of 1 in 5 succeeds):
 							say "     Looking at her now, she doesn't appear fully satisfied, and looks as though she might concede to using -you- instead of your prior residence. You don't think you can take another fight, so your choice is to run or submit. Run for it?";
 							If the player consents:
 								let bonus be ( dexterity of player - 10 ) / 2;
 								let target be 14;
-								if "Submissive" is listed in feats of player, increase target by 1;
+								if player is submissive, increase target by 1;
 								let dice be a random number from 1 to 20;
 								if bonus + dice > target:
 									say "     You make a run for it, successfully getting away from the beast with relative ease. Thankfully, you manage to find your things, strewn across the [if showlocale is true]beach[else]ground[end if].";
@@ -139,12 +139,12 @@ to say fsdm attack:
 							now FSDOPEN is 0;
 					else:
 						say ". Another sea dragon is before you, [one of]though you instinctively know that it's[or]fairly certain that it's not[at random] the same one that first trapped you. Looking at his somewhat tired and lust-addled form, it's clear that he was compelled to use your egg for his own sexual gratification--much to your expense.";
-						if (("Kinky" is listed in feats of player and a random chance of 3 in 8 succeeds) or a random chance of 1 in 5 succeeds):
+						if ((player is kinky and a random chance of 3 in 8 succeeds) or a random chance of 1 in 5 succeeds):
 							say "     Looking at him now, he doesn't appear fully satisfied, and looks as though he might concede to using -you- instead of your prior residence. You don't think you can take another fight, so your choice is to run or submit. Run for it?";
 							If player consents:
 								let bonus be ( dexterity of player - 10 ) / 2;
 								let target be 14;
-								if "Submissive" is listed in feats of player, increase target by 1;
+								if player is submissive, increase target by 1;
 								let dice be a random number from 1 to 20;
 								if bonus + dice > target:
 									say "     You make a run for it, successfully getting away from the beast with relative ease. Thankfully, you manage to find your things, strewn across the [if showlocale is true]beach[else]ground[end if].";
@@ -177,7 +177,7 @@ to say fsdm attack:
 				say "     His assault quickly becomes relentless in its pace, intent on using you with little regard to your well being. Any protests you might offer up rapidly diminish as you feel his pre incrementally spurt within your depth, what pain and discomfort you might have had driven away in favour of an immense and overwhelming desire to continue to be reamed by this powerful dragon, and soon you are drowning in ecstasy with every forceful thrust.";
 				say "     [if cocks of player > 0]You orgasm over and over again, sandy ground under you made sticky as your own, [cock size desc of player] cock[smn] make[smv] a mess of things, driving you into a manic and blinding lust-frenzy[else if cunts of player > 0]You orgasm over and over again, driving you into a manic and blinding lust-frenzy[else]You are driven into a manic and blinding lust-frenzy, exacerbated by the tormenting lack of any way to satiated it[end if].  The powerful beast begins pressing harder against your beleaguered form as he draws closer to his own release, and if you had any working sense of self-preservation you'd worry over your well-being but by now all you can feel is his flesh, his heat envelop you more and more.";
 				say "     You feel like you're going to pass out, the immense pleasure of this monster more than you can handle before he suddenly lets out a deafening roar. You begin to feel his massive load firing inside you, your [if scalevalue of player is 3]already-bulging belly quickly expanding[else]belly slowly bulging[end if] further and further with each progressive throb. Slowly, as he recovers, he crawls off of you, relinquishing you of his now-softened cock. Still in a lustful haze, you briefly attempt to lick yourself clean of his of his fluids before you collapse from exhaustion. When you come to the dragon's nowhere to be seen, no doubt satisfied with leaving you on this beach exposed and sore as you likely are now.[mimpregchance]";
-			else if "More Anal" is listed in feats of player and (a random chance of 1 in 4 succeeds or ("Kinky" is listed in feats of player and a random chance of 2 in 5 succeeds)): [rimjob]
+			else if "More Anal" is listed in feats of player and (a random chance of 1 in 4 succeeds or (player is kinky and a random chance of 2 in 5 succeeds)): [rimjob]
 				say "     Carefully, the beast shifts more of its weight over you.  [if HP of player < 1]Much in spite of what protests you can offer against him, he's simply too heavy for you to make any effort of pushing him off[else]Satisfied with his grip on you, he seems more intent on abusing you rather than fucking you properly, an intent of which he obligingly informs you when you feel his tongue begin to force its way past your anal ring[end if].";
 				say "     [if scalevalue of player < 4 and the player is not twistcapped]The slimy organ really puts the strain on you as it's too large to easily fit in that hole, but the beast is diligent if nothing else and in due time you feel it slowly worm its way in.  You're so diminutive relative to his own scale that your behind is easily eclipsed by his toothy maw, making you frightful that the beast may have half a mind to swallow you whole, though for now it only has the effect of coating your lower half in his saliva[else]It's initial efforts are probing, curious as to how pliable your hole might be, before the slimy organ begins to worm its way into the depths of your bowels with little obstruction.  With a huff and a rumble the unengulfed portion of his long frequently buckles and bends prior to its brief re-immersion, the organ making a mess of your [bodytype of player] thighs and groin as he fucks you with his tongue[end if].";
 				say "     Its fervent motion doubtlessly lubricated by copious amounts of the beast's saliva, you feel his wanton affections grab a hold of you, pulling you further and further into a compliant and aroused state until you are overwhelmed by the ecstasy of the beast's touch.";
@@ -889,7 +889,7 @@ to fsdmvore:
 							now struggleatt is 1;
 						else:
 							say "     Body loudly groaning, you feel it constrict around you as you're forced down past a tight ring, descending into the sea dragon's bowels. Twisted and pushed around the monster's labyrinth of flesh, your trip meets its inevitable destination as you're forced past that final ring and hit with a wall of cool seawater. Desperately climbing to the surface, you're exposed to the elements of the outside once more.";
-							if a random chance of 1 in 3 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds):
+							if a random chance of 1 in 3 succeeds or (player is kinky and a random chance of 1 in 3 succeeds):
 								say "     Roaring angrily at you as he wheels around, your captor isn't about to let his meal escape, even after being ejected so embarrassingly. You'll have to swim back before he catches up with you!";
 								now boundsegment is 2;
 								now boundcounter is 0;

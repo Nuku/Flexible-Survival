@@ -26,7 +26,7 @@ to say losetogiraffe:
 	say "     You can't help but moan into this kiss as her agile tongue squirms inside you, sending shivers of delight through your body. In a daze after the kiss, she pushes you down into a nearby room, onto a bed and leaps atop you.";
 	let raffesex be 0;
 	let mchance be 4;
-	if "Submissive" is listed in feats of player, increase mchance by 2;
+	if player is submissive, increase mchance by 2;
 	if "More Anal" is listed in feats of player, increase mchance by 2;
 	if "MPreg" is listed in feats of player, increase mchance by 2;
 	if "Less Anal" is listed in feats of player, now mchance is 0;

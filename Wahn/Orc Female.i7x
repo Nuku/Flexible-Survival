@@ -332,7 +332,7 @@ to say OrcFemVictorious:
 to say KatyaVictoryPussyEating:
 	say "Crouching down, the powerful woman grabs your arms and pushes them up over your head, pinning them to the ground. Then she swings her muscular leg over you, straddling your chest. 'Let's see how good you are with that tongue of yours,' she adds in an aroused grunt, using her other hand to grab your head and pull your head against her crotch.";
 	WaitLineBreak;
-	if "Submissive" is listed in feats of player:
+	if player is submissive:
 		say "     Nose buried in the trimmed pubes of Katya the orc, you eagerly submit to the strong woman and start to lap at her crotch. ";
 	else if "Dominant" is listed in feats of player:
 		say "     Nose buried in the trimmed pubes of Katya the orc, you don't see any other option but to grudgingly submit to the strong woman and start to lap at her crotch. ";
@@ -352,7 +352,7 @@ to say KatyaVictoryAssEating:
 	WaitLineBreak;
 	say "     'Let me ask you this, asshole. Can you move one inch if I don't want you to? No? Then remember that and don't try anything - I got other plans than pounding your face into the ground right now, but I will if you make me. Understood?' She gives a harsh laugh as you nod quickly, then lets go of your wrists, allowing you to pull down your arms and rub them. Even as you're still doing that, the green-skinned woman swings a muscular leg over you, straddling your chest with the firm globes of her buttocks filling most of your field of view. 'Let's see how good you are with that tongue of yours,' she adds in an aroused grunt while throwing you a demanding look over her shoulder.";
 	WaitLineBreak;
-	if "Submissive" is listed in feats of player:
+	if player is submissive:
 		say "     Eager to serve a firm-handed mistress like her, you wiggle your arms out from under her strong thighs, then plant both hands on the orc's ass and give it a good squeeze. ";
 	else if "Dominant" is listed in feats of player:
 		say "     Literally pinned to the ground now by the bulk of the muscular woman on top of you, and with your arms still aching from her 'object lesson', you don't see any other option but to grudgingly submit. Extracting your arms from under the strong thighs of this amazon, you plant both hands on the orc's ass and give it a squeeze. ";

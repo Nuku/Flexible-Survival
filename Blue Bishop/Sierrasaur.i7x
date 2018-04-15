@@ -495,7 +495,7 @@ when play ends:
 					say "and sire the beast's offspring";
 				say ".";
 				say "     Over time, the creature's pack grows in size, leaving you with others to deal with";
-				if "Submissive" is listed in feats of player:
+				if player is submissive:
 					say ". So innately inclined to this role, you eventually find yourself being tossed from beast to beast, like some manner of toy. You find yourself particularly useful as a tool for training the newer and less experienced of your kin";
 				else:
 					say ". You prove to be a little bit of a nuisance, as you're rather ill-inclined to share your adoptive parent's fleshy abode with new prospects. Your caretaker doesn't seem to mind all that much, even if it proves a bit inconvenient at times";

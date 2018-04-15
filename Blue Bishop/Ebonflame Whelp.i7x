@@ -33,7 +33,7 @@ to say ebwhelpvic:
 		else:
 			now tempnum is 0;
 	else:
-		if (cunts of player is 0 and anallevel is not 1 and player is male_vacant) and ((anallevel is 2 and ("Kinky" is listed in feats of player or "Mpreg" is listed in feats of player)) or anallevel is 3):
+		if (cunts of player is 0 and anallevel is not 1 and player is male_vacant) and ((anallevel is 2 and (player is kinky or "Mpreg" is listed in feats of player)) or anallevel is 3):
 			now tempnum is 2;
 		else if cunts of player > 0 and player is fem_vacant:
 			now tempnum is 1;

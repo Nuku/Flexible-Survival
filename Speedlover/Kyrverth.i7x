@@ -207,7 +207,7 @@ instead of fucking the Kyrverth:
 				say "[KyrverthMaleCheck]";
 			else if KyrverthMaleBoning is 1:
 				say "[KyrverthAnalSex]";
-		else if ((scalevalue of player <= 1 and "Kinky" is not listed in feats of player) or cunt length of player < 10): [Too small for sex]
+		else if ((scalevalue of player <= 1 and player is not kinky) or cunt length of player < 10): [Too small for sex]
 			say "     As you walk up to Kyrverth, he looks at you closely, then says, 'Sorry, you are nice and all, but I doubt it would fit.'";
 			WaitLineBreak;
 		else if cunts of player > 0: [Female player that is large enough]
@@ -241,7 +241,7 @@ to say KyrverthMaleCheck:
 
 to say KyrverthSex:
 	say "Just a placeholder for Kyrverth sex right now, maybe in a future update?";
-	if "Kinky" is listed in feats of player and scalevalue is 1:
+	if player is kinky and scalevalue is 1:
 		say "The rough sex on your small body has taken its toll, and has not done well for your health.";
 		decrease HP of player by (maxHP of player / 4);
 		if HP of player <= 0:
@@ -253,9 +253,7 @@ to say KyrverthSex:
 to say KyrverthAnalSex: [For null and male players]
 	if scalevalue of player is:
 		-- 1:
-			if "Kinky" is not listed in feats of player:
-				say "     The dragon looks over your tiny form as you make your offer before shaking his head in refusal. 'As much as I'd like to, you're too small. I don't want to hurt you, after all.'";
-			else:
+			if player is kinky:
 				say "     The dragon looks over your tiny form as you make your offer, and he hesitates for a moment before shaking his head. 'I don't think that's a very good idea. I could hurt you.'";
 				[say "     [bold type]He does have a valid point, but you can probably convince him to take you anyway. Shall you do so?[roman type]";
 				LineBreak;
@@ -265,6 +263,8 @@ to say KyrverthAnalSex: [For null and male players]
 					say "[KyrverthTinyPlayerAnal]";
 				else:
 					say "     You concede that the dragon has a good point and drop the matter for now.";]
+			else:
+				say "     The dragon looks over your tiny form as you make your offer before shaking his head in refusal. 'As much as I'd like to, you're too small. I don't want to hurt you, after all.'";
 		-- 2:
 			say "[KyrverthSmallPlayerAnal]";
 		-- 3:

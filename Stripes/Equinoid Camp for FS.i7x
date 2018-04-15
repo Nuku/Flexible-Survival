@@ -140,7 +140,7 @@ to say sexwithliliana:
 		let qq be { 1, 1 }; [oral]
 		if cunts of player > 0, add 2 to qq; [fucked]
 		if cocks of player > 0, add 3 to qq; [fuck her]
-		if cunts of player is 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and "Submissive" is listed in feats of player, add 4 to qq; [anal]
+		if cunts of player is 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and player is submissive, add 4 to qq; [anal]
 		sort qq in random order;
 		if entry 1 of qq is 1, say "[eqwarsex1]";
 		if entry 1 of qq is 2, say "[eqwarsex2]";
@@ -169,7 +169,7 @@ An everyturn rule:
 				let qq be { 1, 1 }; [oral]
 				if cunts of player > 0, add 2 to qq; [fucked]
 				if cocks of player > 0, add 3 to qq; [fuck her]
-				if cunts of player is 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and "Submissive" is listed in feats of player, add 4 to qq; [anal]
+				if cunts of player is 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and player is submissive, add 4 to qq; [anal]
 				sort qq in random order;
 				if entry 1 of qq is 1, say "[eqwarsex1]";
 				if entry 1 of qq is 2, say "[eqwarsex2]";

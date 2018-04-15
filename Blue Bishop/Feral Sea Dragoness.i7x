@@ -28,7 +28,7 @@ to say fsdf attack:
 			now sex entry is "Both";
 		else:
 			now sex entry is "Male";
-	if vorelevel is 3 and scalevalue of player < 4 and (A random chance of 1 in 4 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds)):
+	if vorelevel is 3 and scalevalue of player < 4 and (A random chance of 1 in 4 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)):
 		if HP of player > 0:
 			say "     You immediately throw up your arms and lower your guard, showing you don't wish to fight. She doesn't seem inclined to very much regard your submission as anything more than the opening for her and she betrays her innocent demeanor to immediately dive for";
 		else:
@@ -53,7 +53,7 @@ to say fsdf attack:
 		else if FSDOPEN is 0:
 			say "     Having enough of this fight, her head lunges towards you, maw agape only to grab a your [bodytype of player] body[if scalevalue of player < 4], engulfing your head and most of your upper torso within her slimey maw.[run paragraph on] You half expect her to swallow you whole before she lifts her head back up and spits you out, throwing your now saliva-soaked form across the beach and knocking you unconscious[else]. Her teeth are at least not biting down strong enough to really hurt you, but she nonetheless starts flailing you around in a display of fierce abandon until she flings you back onto the ground with enough for you knock you right out[end if]. When you come to you can feel the warm sea air across your exposed form, the beast having already relinquished you of your attire. She regards you with a cheerful chirp, now more than happy to treat her victim with affection when they're too weak to fight back.";
 		if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
-			if "Submissive" is listed in feats of player:
+			if player is submissive:
 				if a random chance of fsddom in 9 succeeds:
 					if cocks of player > 0 and a random chance of 1 in 2 succeeds:
 						say "     She seems particularly affectionate to one of her own kind, nipping you playfully before she moves to prepare you. No doubt this dragoness has been the subject of your submissive needs before. She forces you onto your side -- to which you comply -- before you watch as her thick tongue caresses[if cocks of player > 1] one of[end if] your emergent, [cock size desc of player] cock[smn].";
@@ -95,7 +95,7 @@ to say fsdf attack:
 					say "     Eventually, she crawls off you, her tainted need satisfied for now. Briefly attending to you, she eventually turns to dive back into the waters. It takes you a while to recover from the whole ordeal, before setting off once more.";
 		else:
 			say "     Carefully, she forces you onto your back by her snout, pinning you down in a same manner. She gives you a cute and affectionate look, much-maligned by her paradoxically bestial form[if intelligence of player > 14]. You wager she's trying to sway you into compliance by appearing non-threatening, to little success[else]. Uncertain of her intent, you remain cautious and wait[end if].";
-			If "Touched by Madness" is listed in feats of player and (("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds) and scalevalue of player < 4 and FSDOPEN < 2 and inasituation is false:
+			If "Touched by Madness" is listed in feats of player and ((player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds) and scalevalue of player < 4 and FSDOPEN < 2 and inasituation is false:
 				If FFSDUBM is false:
 					say "     Suddenly, she appears to become confused about these circumstances, some otherworldly influence throwing her off-kilter, going so far that she almost seems to have lost track of where she is; however, this absent-mindedness is only momentary before she snaps back to attention, feral eyes aglint with a new, twisted intent. Her affections become more fervent and insistent. Slick, dripping tongue absolutely drenching your smaller form with her salty saliva before she finally relents.";
 					say "     By now, you're clearly aroused from these tainted fluids, but she doesn't even remotely seem interested in that. Rather, she would instead pull herself over you, soft underbelly grinding against your lubricated, [bodydesc of player] frame before she stops, showing no desire to spare you of her massive weight, her reasoning by now very clear as you feel yourself pushed past the lips of her aquatic vent.";
@@ -106,19 +106,19 @@ to say fsdf attack:
 					say "     Blatantly aroused as you are, her satisfaction is met, [if HP of player is 0 and player is not submissive]forcing herself down on you once more, her body's inviting lips embracing your smaller form before you disappear entirely under her[else]compelling you to enter her hungering portal, though you might only comply with your head and torso before she returns upright once more, engulfing the remainder of you with ease[end if].";
 					say "     Wailing songs of her perverse need muffled within these confines, her portal tightens against your wholly engulfed frame, pulling you deeper into her slick depths as she seeks her wanton reprieve. This overwhelming heat; this hungry, demanding tunnel, now all-too familiar to you, it[if cocks of player > 0 or cunts of player > 0]'s but a moment before it elicits your orgasm, sealing your fate when this is all that this dragoness needs to find bliss[else] torments you to no end, your fate soon sealed as the dragoness finds her bliss[end if], pulling you into that final, inevitable destination before your senses fade. The dragoness would no doubt recover and move on, the occupancy of her new captive not outwardly apparent to those who might see her large form, and doubtlessly happy that you are hers...";
 				attempttowait;
-				if ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds:
+				if (player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds:
 					Say "     In due time you come to, the thick, hard walls of an egg surrounding you; however, you feel yourself slightly tumbling and shifting about, and when you attempt to break free of the egg you find yourself unable to. The heat is overwhelming, [if cocks of player > 0 or cunts of player > 0]your arousal quickly rising once more, driving you to pleasure yourself uncontrollably within these confines, making a further mess of yourself[else]your arousal quickly rising once more, forced to abide the torment of these demented confines[end if].";
 					infect;
 					infect;
 					say "     After what seems like forever, you can see the familiar light of the outside coming through the translucent walls of your prison, compelling you to finally break free, and once you acclimate to the open air it's made very clear -why- you were forced within those confines longer than natural";
 					if a random chance of 1 in 2 succeeds and guy is not banned:
 						say ". A male sea dragon is before you, looking at his somewhat tired and lust-addled form, it's clear that he happened upon your egg and was compelled to use it for his own sexual gratification--much to your expense.";
-						if ( ( "Kinky" is listed in feats of player and a random chance of 3 in 8 succeeds) or a random chance of 1 in 5 succeeds):
+						if ( ( player is kinky and a random chance of 3 in 8 succeeds) or a random chance of 1 in 5 succeeds):
 							say "     Looking at him now, he doesn't appear fully satisfied, and looks as though he might concede to using -you- instead of your prior residence. You don't think you can take another fight, so your choice is to run or submit. Run for it?";
 							If player consents:
 								let bonus be ( dexterity of player - 10 ) / 2;
 								let target be 14;
-								if "Submissive" is listed in feats of player, increase target by 1;
+								if player is submissive, increase target by 1;
 								let dice be a random number from 1 to 20;
 								if bonus + dice > target:
 									say "     You make a run for it, successfully getting away from the beast with relative ease. Thankfully, you manage to find your things, strewn across the [if showlocale is true]beach[else]ground[end if].";
@@ -137,12 +137,12 @@ to say fsdf attack:
 							now FSDOPEN is 0;
 					else:
 						say ". Another sea dragoness is before you, [one of]though you instinctively know that it's[or]fairly certain that it's not[at random] the same one that first trapped you. Looking at her somewhat tired and lust-addled form, it's clear that she was compelled to use your egg for her own sexual gratification--much to your expense.";
-						if (("Kinky" is listed in feats of player and a random chance of 1 in 2 succeeds) or ("Kinky" is not listed in feats of player and a random chance of 1 in 5 succeeds)):
+						if ((player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 5 succeeds)):
 							say "     Looking at her now, she doesn't appear fully satisfied, and looks as though she might concede to using -you- instead of your prior residence. You don't think you can take another fight, so your choice is to run or submit. Run for it?";
 							If player consents:
 								let bonus be ( dexterity of player - 10 ) / 2;
 								let target be 14;
-								if "Submissive" is listed in feats of player, increase target by 1;
+								if player is submissive, increase target by 1;
 								let dice be a random number from 1 to 20;
 								if bonus + dice > target:
 									say "     You make a run for it, successfully getting away from the beast with relative ease. Thankfully, you manage to find your things, strewn across the [if showlocale is true]beach[else]ground[end if].";
@@ -693,7 +693,7 @@ to fsdfvore:
 							now struggleatt is 1;
 						else:
 							say "     Body loudly groaning, you feel it constrict around you as you're forced down past a tight ring, descending into the sea dragoness's bowels. Twisted and pushed around the monster's labyrinth of flesh, your trip meets its inevitable destination as you're forced past that final ring and hit with a wall of cool seawater. Desperately climbing to the surface, you're exposed to the elements of the outside once more.";
-							if a random chance of 1 in 3 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds):
+							if a random chance of 1 in 3 succeeds or (player is kinky and a random chance of 1 in 3 succeeds):
 								say "     Whining at you, annoyed, she wheels around to face you. Your captor isn't about to let her meal escape, even after being ejected so embarrassingly. You'll have to swim back before she catches up with you!";
 								now boundsegment is 2;
 								now boundcounter is 0;

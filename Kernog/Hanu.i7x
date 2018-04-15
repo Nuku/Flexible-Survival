@@ -200,7 +200,7 @@ to say beatWukongThugs:
 		now title entry is "Use a cock";
 		now sortorder entry is 2;
 		now description entry is "You feel like using a cock.";
-		if "kinky" is listed in feats of player:
+		if player is kinky:
 			choose a blank row in table of fucking options;
 			now title entry is "Worship";
 			now sortorder entry is 3;
@@ -322,7 +322,7 @@ to say losetoWukongThugs:
 		let randomnumber be a random number between 1 and 3;
 		if randomnumber is 1:
 			say "     Another monkey takes advantage of the confusion and plunges his shaft inside your [cunt size desc of player] pussy, jackhammering your cervix with his member. ";
-		else if randomnumber is 2 and "kinky" is listed in feats of player:
+		else if randomnumber is 2 and player is kinky:
 			say "     Another monkey takes advantage of the confusion and slams a pair of fingers down your [cunt size desc of player] pussy. Two quickly become three, then four, until the primate eventually manages to slip the five fingers inside, and form a fist inside of you.";
 		else:
 			say "     Another monkey takes advantage of the confusion and dives head-first on your [cunt size desc of player] pussy, nibbling on your clit and licking inside, making a game to get as far as possible.";

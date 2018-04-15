@@ -332,7 +332,7 @@ when play ends:
 			say "     Eventually taken in by the military and processed, you're brought through with relatively little difficult, in spite of your rather strange state.";
 			say "     Finding a job as an infected that doesn't involve the sex trade is particularly difficult, especially when you're a giant snake-person.  Your strain compels you to work in a maternity ward, but social stigmas mean you'd never be hired for an uninfected ward, and the infected don't produced offspring in such a way that there's ever any need for one.";
 			say "     You eventually concede to a more scandalous job of merely 'playing' one for particularly deviant suitors, infected or otherwise";
-			if "Horny Bastard" is listed in feats of player or "Kinky" is listed in feats of player:
+			if "Horny Bastard" is listed in feats of player or player is kinky:
 				say ".  It pays well, and you find yourself rather fond of these twisted games...";
 			else:
 				say ".  As well as it pays, you feel the whole thing to be somewhat beneath your dignity...";

@@ -63,7 +63,7 @@ to say OrcPillCaseUse:
 			SanLoss 5;
 		else if "Weak Psyche" is listed in feats of player:
 			SanLoss 25;
-		else if "Kinky" is listed in feats of player:
+		else if player is kinky:
 			SanBoost 5;
 		else:
 			SanLoss 15;

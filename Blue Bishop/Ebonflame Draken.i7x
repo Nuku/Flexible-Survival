@@ -149,7 +149,7 @@ when play ends:
 			else:
 				say ". You are forced to fight with your sisters until you prove your worth, soon joining them afterwards to sate your need on the many remaining victims in the city.";
 			say "     There is a terrible need to move forward, as if to flee from your more feral kin. Dark whispers seem to compel your actions, but eventually there is only silence, punctuated by the cries of ecstasy.";
-			if player is submissive and "Kinky" is listed in feats of player:
+			if player is submissive and player is kinky:
 				say "     Your final, distinctive memories are that of no longer finding satisfaction in your sisters, instead turning inward to embrace to the more wild, virile influence of the terrible beasts that follow in your wake, more than eager to make your future eternally filled with a blur of constantly breeding...";
 			else:
 				say "     Eventually, everything blurs into a haze of constant sex, you're never even learn what dark powers compelled you, or if they achieved whatever it was that they sought...";

@@ -357,7 +357,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			now sortorder entry is 6;
 			now description entry is "Have Vent use his more dexterous organ to thoroughly rim you";
 		[]
-		if anallevel > 2 and VentFoxContentLevel > 2 and "Kinky" is listed in feats of player:
+		if anallevel > 2 and VentFoxContentLevel > 2 and player is kinky:
 			choose a blank row from table of fucking options;
 			now title entry is "Get tongue-fucked by Vent";
 			now sortorder entry is 7;
@@ -570,7 +570,7 @@ to say WSLevelMenu:[Menu for setting WS amount of Vent.]
 
 to say OviLevelMenu:[Menu for setting Oviposition amount of Vent.]
 	clear the screen and hyperlink list;
-	if "Kinky" is listed in feats of player:
+	if player is kinky:
 		say "     With his excellent control over his own body, Vent is capable of putting sterile gooey eggs inside you. How do you want this to be done?";
 		say "     [link](0)[as]0[end link] - No egging.";
 		say "     [link](1)[as]1[end link] - No egging unless requested.";

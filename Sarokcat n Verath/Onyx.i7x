@@ -355,7 +355,7 @@ to say onyxbunkersex:
 		if anallevel is 3:
 			increase analchance by 2;
 			increase recanalchance by 2;
-		if "Submissive" is listed in feats of player, increase analchance by 1;
+		if player is submissive, increase analchance by 1;
 		if "MPreg" is listed in feats of player, increase analchance by 2;
 		if anallevel is 1:
 			now analchance is 0;

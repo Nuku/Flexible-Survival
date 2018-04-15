@@ -566,7 +566,7 @@ to say losetotigercop:
 			say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
 		else:
 			let mchance be 4;
-			if "Submissive" is listed in feats of player, increase mchance by 2;
+			if player is submissive, increase mchance by 2;
 			if "More Anal" is listed in feats of player, increase mchance by 2;
 			if "MPreg" is listed in feats of player, increase mchance by 2;
 			if "Less Anal" is listed in feats of player, now mchance is 0;

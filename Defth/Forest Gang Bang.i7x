@@ -32,7 +32,7 @@ Instead of resolving a Pack Bang:
 		now Pack bang is resolved;
 	else:
 		LineBreak;
-		say "     You turn around, facing the pack of wolves that were hunting you. There are probably five feral wolves in different stages of the infection, with some looking almost like true wolves, while the smallest one still has some ripped clothes attached to his body as well as what looks like a normal tennager hairstyle. But they all look hungry, with their red cocks pointing out of their sheaths and right at you, almost as if saying they are going to use you for release, if you want it or not.";
+		say "     You turn around, facing the pack of wolves that were hunting you. There are probably five feral wolves in different stages of the infection, with some looking almost like true wolves, while the smallest one still has some ripped clothes attached to his body as well as what looks like a normal teenager hairstyle. But they all look hungry, with their red cocks pointing out of their sheaths and right at you, almost as if saying they are going to use you for release, if you want it or not.";
 		wait for any key;
 		challenge "Feral Wolf";
 		if fightoutcome >= 20 and fightoutcome <= 29:    [lost]

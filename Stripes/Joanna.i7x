@@ -69,7 +69,7 @@ Instead of resolving a Overrun Garden:
 	else:
 		LineBreak;
 		say "     Deciding not to risk it, you are drawn to continue watching. As she's pulled closer, you watch [if HP of Joanna >= 90]Joanna[else]her[end if] arch her back in climax as the plant creature cums inside her, pumping her full of fluids from all directions. Her belly swells up as more of the sticky white sap is sprayed onto her body while her freshly made balls drain their cum to feed the hungry flowers milking at her new cocks. As she's lowered into the flower, she only starts to realize what's happening as the large tentacles withdraw, but by then, the smaller tendrils are all around her, holding her bloated body inside the flower as it starts closing around her. She tries to hold the petals open, but her strength wanes quickly and soon she's tightly enclosed. There is a brief struggle, then the big flower is still and the tentacles, fruits and flowers move back into their positions, waiting to lure in their next victim. You are quite certain there'll be nothing left of [if HP of Joanna >= 90]Joanna[else]the girl[end if] but another of these parasitic plants to set root nearby. You move on, ";
-		if "Kinky" is listed in feats of player:
+		if player is kinky:
 			say "your kinky urges pleased and greatly aroused by the scene you just witnessed.";
 			increase morale of player by 3;
 			increase libido of player by 25;

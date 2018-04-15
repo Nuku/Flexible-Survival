@@ -310,6 +310,12 @@ Definition: A person (called x) is dominant:
 	if "Dominant" is listed in feats of x, yes;
 	no;
 
+A person can be kinky. A person is usually not kinky.
+
+Definition: A person (called x) is kinky:
+	if "Kinky" is listed in feats of x, yes;
+	no;
+
 A person can be twistcapped. A person is usually not twistcapped.
 
 Definition: A person (called x) is twistcapped:
@@ -5063,7 +5069,7 @@ Include Storage Locker for FS by Core Mechanics.
 Include Story Skipper by Core Mechanics.
 Include Sugar Feud by AGentlemanCalledB.
 Include Tidepool Event by FwuffyMouse.
-Include Toy Store by Hellerhound.
+Include Toy Store by Song.
 Include Underground Events by Wahn.
 Include Walkinmall by Ssely.
 Include Warehouse District by Kaleem Mcintyre.

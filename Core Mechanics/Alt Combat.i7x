@@ -634,8 +634,8 @@ This is the submit rule:
 	let temp be the HP of the player;
 	now fightoutcome is 22;
 	Lose;
-	if "Submissive" is listed in feats of the player, increase the XP of the player by ( ( 2 + lev entry ) / 5 );
-	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
+	if player is submissive, increase the XP of the player by ( ( 2 + lev entry ) / 5 );
+	if player is kinky, increase the morale of the player by 6;
 
 
 Chapter 5 - Flee

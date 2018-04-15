@@ -101,7 +101,7 @@ To say centaur defeat:
 	if libido of player > 50 and cocks of player is 0 and cunts of player > 0:
 		say "The centaur groans and falls to the ground, his legs crumpling and shoving him onto his side. You get a good view of a massive, green cock with vinelike bumps on the shaft. Its sheath is a darker green, and a matching ball sack hangs down half a foot from the powerful member, two giant round forms stretching the skin. What really gets to you is the two tentacles, like growths, that sprout from stump-like protrusions of the base of its sheath.";
 		if the humanity of the player < 40:
-			say "The sight of those tentacles drives you insane with lust. You grab them, and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain, that when mixed with your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock could fuck, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then you hear a moan, and the centaur climaxes, spraying thick green seed all over the dusty ground and its underside. The tendrils retract from your body, and you leave the centaur, accepting an apple that it offers you.";
+			say "The sight of those tentacles drives you insane with lust. You grab them and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain that when mixed with your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock could fuck, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then you hear a moan, and the centaur climaxes, spraying thick green seed all over the dusty ground and its underside. The tendrils retract from your body, and you leave the centaur, accepting an apple that it offers you.";
 			increase carried of fresh apple by 1;
 			now libido of player is 0;
 		else if the humanity of the player < 90:
@@ -122,18 +122,17 @@ To say centaur defeat:
 				if a random chance of one in two succeeds:
 					increase carried of fresh apple by 1;
 				increase carried of fresh apple by 1;
+		else if player is kinky:
+			say "The tentacles put your lust back where it came from, and you leave the stricken centaur where it is.";
+			say "You find an apple in its discarded backpack.";
+			decrease libido of player by 10;
+			increase carried of fresh apple by 1;
 		else:
-			if "Kinky" is not listed in the feats of the player:
-				say "The sight of the tentacles puts you off your lunch, and you lose it a short time later, heaving your guts all over the ground.";
-				increase hunger of player by 10;
-				decrease the HP of the player by 8;
-				say "You feel weaker after losing your lunch. Maybe you aren't good enough to survive the new world.";
-				now libido of player is 0;
-			else:
-				say "The tentacles put your lust back where it came from, and you leave the stricken centaur where it is.";
-				say "You find an apple in its discarded backpack.";
-				decrease libido of player by 10;
-				increase carried of fresh apple by 1;
+			say "The sight of the tentacles puts you off your lunch, and you lose it a short time later, heaving your guts all over the ground.";
+			increase hunger of player by 10;
+			decrease the HP of the player by 8;
+			say "You feel weaker after losing your lunch. Maybe you aren't good enough to survive the new world.";
+			now libido of player is 0;
 		[todo]
 
 to say centaur rape female:

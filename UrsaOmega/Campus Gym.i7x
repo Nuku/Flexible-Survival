@@ -223,7 +223,7 @@ to say wrestlesex:
 	if strength of player > 20, increase wrestlechance by 10;
 	if strength of player > 15, increase wrestlechance by 10;
 	if bodytype of player is "Wrestling Wolf", increase wrestlechance by 15;
-	if "Submissive" is listed in the feats of the player, decrease wrestlechance by 25;
+	if player is submissive, decrease wrestlechance by 25;
 	if player consents:
 		if a random chance of wrestlechance in 100 succeeds: [success - player tops]
 			say "     You return the grapple, but the rhino's strength is overwhelming, and your combined bodies fall to the mat with a soft thud. Randy rolls on top of you, rubbing his hardening cock against your [bodydesc of player] body as he attempts to pin you. Gathering your strength, you reverse the pin, ending up straddling his muscular form. [if cocks of player > 0]You take the opportunity to frot your cocks together a bit while giving him a lewd smile. [else if cunts of player > 0]You take the opportunity to rub your moist cunt against him while giving him a lewd smile. [end if]He manages to slip out from under you, retreating back a few steps and re-adopting his wide stance. You scramble to your feet and do the same. You and your opponent circle each other before lunging at each other again. You exchange grapples like this for several minutes until, finally, you have a sweating, panting Randy pinned beneath you. 'Yield! I yield. Jeez, yer a strong one,' he says with a dopy grin. Now that you've established your positions, you can get down to the good stuff.";

@@ -27,7 +27,7 @@ to say eagledesc:
 to say losetoeagle:
 	now noeaglesex is 0;
 	let T be 1;
-	if "Submissive" is listed in feats of player, increase T by 1;
+	if player is submissive, increase T by 1;
 	if "MPreg" is listed in feats of player, increase T by 1;
 	if anallevel is 3, increase T by 1;
 	if anallevel is 1, now T is 0;

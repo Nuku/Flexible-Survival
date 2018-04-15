@@ -24,7 +24,7 @@ to say losetoxeno:
 		say "     After the ovipositor is withdrawn and you're released, you stumble away as best you can being so laden down with eggs. Feeling your belly squirm and seeing the eggs already writhing and shifting inside you, you find somewhere secluded and deposit them, hoping you've managed to get them all out.[ovichance]";
 	else:
 		let mchance be 4;
-		if "Submissive" is listed in feats of player, increase mchance by 2;
+		if player is submissive, increase mchance by 2;
 		if "More Anal" is listed in feats of player, increase mchance by 2;
 		if "MPreg" is listed in feats of player, increase mchance by 2;
 		if "Less Anal" is listed in feats of player, now mchance is 0;

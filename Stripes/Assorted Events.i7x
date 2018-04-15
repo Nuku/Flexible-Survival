@@ -372,7 +372,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		else if companion of player is equinoid warrior:
 			say "     As you're finishing up your scavenging, Liliana strides up beside you to run her hoofed hands over your [bodytype of player] body. She smiles at you with a lustful hunger in her eyes[if player is blequinoidbodied]. 'Come, join me over here and I will remind you of the warm embrace of the herd[else]. 'We may be away from the herd, but we can still keep one another fulfilled[end if],' she says, guiding you towards the bench. Having gotten quite aroused by the scents of fulfilled lusts in the air, the sight of the aroused equinoid with her perky nipples, equine erection and dripping pussy entice you to take her up on her offer.";
-			if ( cocks of player is 0 and cunts of player > 0 ) or ( cunts of player > 0 and "Submissive" is listed in feats of player ):
+			if ( cocks of player is 0 and cunts of player > 0 ) or ( cunts of player > 0 and player is submissive ):
 				say "     The young warrior pushes you down onto the bench with an excited whinny, her hands moving down to spread your legs as you lean back on it. Divesting each other of your gear, you take a moment to kiss passionately while groping one another. One of her hands finds its way to your pussy and she plunges a pair of digits into you. Your [if player is blequinoidbodied]knicker[else]moan[end if] of pleasure is met with her tongue pressing past your lips to wrestle with yours.";
 				say "     Once her fingering has gotten you quite wet, she slips her fingers out and holds your pussy spread open for her equinoid cock to fill. With a slow, steady thrust, she buries most of it into you while you quiver with delight in your seat. Her hooves move to your ass and grip it firmly while you grab onto the bench for support before she starts fucking you in earnest, pounding into you like a stallion. The feel of that big horsecock of hers stuffed inside you, plunging in and out, has you panting and nickering for more even as you push back into her thrusts. Your nails dig into the wood as you try to hang on (in more than one sense of the word), adding fresh marks to those of the others who've used it.";
 				say "     She pounds into you with such energy, but is loving about it as well, as something about the bench makes this more like lovemaking than raw sex. 'Mmm... you're so strong, but also wonderfully eager to be ridden. When our journey's done, perhaps you'd enjoy being the first of my mares,' the sexy warrior says with a blush. 'You'd breed such mighty colts.'  She ends up neighing out the last word as she thrusts deep into you and blasts her hot seed into you, flooding your womb with her virile load. You cry out in climax as well, clenching your vagina down around that equine log to milk as much as your loving companion can give.[impregchance]";
@@ -405,7 +405,7 @@ Instead of resolving a Lovers Bench:
 				if cocks of player > 0: [male+herm]
 					if anallevel > 1:	 [anal sex not blocked]
 						let DBAnalScene be a random number from 1 to 10;
-						if "Submissive" is listed in feats of player:
+						if player is submissive:
 							increase DBAnalScene by 2;
 						if DBAnalScene < 5:
 							say "     [BenchAnalFuckDB]";

@@ -1372,7 +1372,7 @@ to say sldrheat:
 				infect;
 				decrease score by 5;
 				decrease morale of player by 3;
-				if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
+				if player is kinky, increase the morale of the player by 6;
 			else:
 				say "As your draconic heat courses through you, you call out your need with the roar of a dragoness looking to be bred, but the call goes unanswered. Your heat-filled desires make you want to head elsewhere in the hopes of finding some dragon, or barring that, a powerful lizard or reptile, to breed you.";
 				increase slutfucked by 1;

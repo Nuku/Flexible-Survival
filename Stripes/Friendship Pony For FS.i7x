@@ -493,7 +493,7 @@ to selectbootymark:
 	if "Male Preferred" is listed in feats of player, add 6 to pfpbmlist;
 	if "Female Preferred" is listed in feats of player, add 7 to pfpbmlist;
 	if "Herm Preferred" is listed in feats of player, add 8 to pfpbmlist;
-	if "Submissive" is listed in feats of player, add 9 to pfpbmlist;
+	if player is submissive, add 9 to pfpbmlist;
 	if "Cold Fish" is listed in feats of player, add 10 to pfpbmlist;
 	if "Physical Booster" is listed in feats of player, add 11 to pfpbmlist;
 	if "Mental Booster" is listed in feats of player, add 12 to pfpbmlist;
@@ -503,7 +503,7 @@ to selectbootymark:
 	if "Black Belt" is listed in feats of player, add 16 to pfpbmlist;
 	if "One Way" is listed in feats of player, add 17 to pfpbmlist;
 	if "More Anal" is listed in feats of player, add 18 to pfpbmlist;
-	if "Kinky" is listed in feats of player, add 19 to pfpbmlist;
+	if player is kinky, add 19 to pfpbmlist;
 	if "Wary Watcher" is listed in feats of player, add 20 to pfpbmlist;
 	if "MPreg" is listed in feats of player, add 21 to pfpbmlist;
 	if "Sterile" is not listed in feats of player:
@@ -606,7 +606,7 @@ to selectbootymark:
 	if "Male Preferred" is listed in feats of player, add "a blue male symbol" to pfpbmlist;
 	if "Female Preferred" is listed in feats of player, add "a pink female symbol" to pfpbmlist;
 	if "Herm Preferred" is listed in feats of player, add "a purple herm symbol" to pfpbmlist;
-	if "Submissive" is listed in feats of player, add "a leather collar" to pfpbmlist;
+	if player is submissive, add "a leather collar" to pfpbmlist;
 	if "Cold Fish" is listed in feats of player, add "a fish packed in ice" to pfpbmlist;
 	if "Physical Booster" is listed in feats of player, add "a muscly arm" to pfpbmlist;
 	if "Mental Booster" is listed in feats of player, add "a throbbing brain" to pfpbmlist;
@@ -616,7 +616,7 @@ to selectbootymark:
 	if "Black Belt" is listed in feats of player, add "a gi and black belt" to pfpbmlist;
 	if "One Way" is listed in feats of player, add "a one-way street sign" to pfpbmlist;
 	if "More Anal" is listed in feats of player, add "a bottle of lube" to pfpbmlist;
-	if "Kinky" is listed in feats of player, add "a whip and chains" to pfpbmlist;
+	if player is kinky, add "a whip and chains" to pfpbmlist;
 	if "Wary Watcher" is listed in feats of player, add "the all-seeing eye" to pfpbmlist;
 	if "MPreg" is listed in feats of player, add "an egg stamped with the male symbol" to pfpbmlist;
 	if "Sterile" is not listed in feats of player:

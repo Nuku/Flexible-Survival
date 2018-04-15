@@ -53,7 +53,7 @@ to say losetopewter:
 		say "     You choose to surrender to the lithe assailant, compelling him to back away for a second to assess your action";
 	else:
 		say "     Too exhausted to fight back any further, you fall to your knees, leaving yourself at the assailant's mercy";
-	if a random chance of 1 in 6 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds):
+	if a random chance of 1 in 6 succeeds or (player is kinky and a random chance of 1 in 3 succeeds):
 		say ". Pondering what to subject you to for a moment, his maw eventually widens into a bright grin, bouncing up and down with excitement. Circling around to your back, it shoves and nips at you until you're forced to move forward, pushed along down a ruined path by the creature's assertive insistence.";
 		say "     In the distance, you begin to hear cacophony of wanton, muffled sounds, suggesting that the beast intends to subject you to his kin";
 		if HP of player < 1 and player is not submissive:

@@ -20,7 +20,7 @@ to say Yamato Dragon attack:
 		say "     You ultimately choose to surrender yourself to the serpentine dragon's mercy, dropping what you were carrying and offering yourself freely. When it's clear that this isn't some trick he pulls closer, a mouthless voice flooding your hearing.";
 	else:
 		say "     Overwhelmed by this massive dragon, you are grabbed by his teeth, tearing you free of what attire you might have worn and slamming you against the dirt. Head spinning and too exhausted to contest his will, you feel his talons further expose you before himself, a mouthless voice flooding your hearing.";
-	if vorelevel is 3 and (a random chance of 1 in 3 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds)):
+	if vorelevel is 3 and (a random chance of 1 in 3 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)):
 		if HP of player > 0:
 			say "     '[one of]Oh, such an obliging little morsel[or]Ha, my meal delivers itself to me[or]I hunger[at random]...' Given little time to reconsider your circumstance, the dragon grabs you and pulls you close to his maw.";
 		else:
@@ -40,7 +40,7 @@ to say Yamato Dragon attack:
 			say "     '[one of]Very wise to back down, little one, lest you make a fool of yourself[or]You are not as foolish a little thing as I had expected.[run paragraph on] Very well[or]I see your need is just as great as mine[at random].' In the wake of his remark he demands that you free yourself of any other attire you might have on, forced to oblige, else he tear them free of you.";
 		else:
 			say "     '[one of]Impudent little whelp, you are now mine[or]It amuses me that you thought you could contest my will[or]Know your place, little thing[or]Such gall, you will suffer from more than defeat[at random]!' Taunting you, as he does, it's very clear that you're now at the mercy of this impressive, serpentine creature.";
-		if "Touched by Madness" is listed in feats of player and cocks of player > 0 and cock length of player < 20 and (("Kinky" is listed in feats of player and a random chance of 1 in 2 succeeds) or ("Kinky" is not listed in feats of player and a random chance of 1 in 5 succeeds)):
+		if "Touched by Madness" is listed in feats of player and cocks of player > 0 and cock length of player < 20 and ((player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 5 succeeds)):
 			If MYDTBMM is 0:
 				say "     Before he sets himself on you, the dragon stops dead in his tracks, apparently stricken by some sort of irreverent thought. Pondering for a moment, he seem to struggle with himself before the creature looks like he's come to some conclusion, demented grin across his scaled lips.";
 				say "     'N-no... I have something different in store for you...' To punctuate his foreboding remark, he pulls you closer, draconic snout descending to engulf your crotch. Caressed by his slick tongue's immediate and shameless affection, your [if cocks of player > 1]cocks are[else]cock is[end if] driven hard before he relents, appearing satisfied.";
@@ -1166,12 +1166,12 @@ when play ends:
 					say "     Once you encounter one, you engage in an intense battle until ";
 					if YDSF is 1 or YDSF is 2:
 						say "he finally concedes. It doesn't take much work after that until the dragon serves your every whim without question";
-						if player is submissive or "Kinky" is listed in feats of player:
+						if player is submissive or player is kinky:
 							say ", no matter how strange it might be";
 						say ". Over time, more join his ranks, the word of your strength spreading far and wide, until subjects start to come with the deliberate desire to serve you.";
 					else:
 						say "she finally concedes. It doesn't take much work after that until the dragoness serves your every whim without question";
-						if player is submissive or "Kinky" is listed in feats of player:
+						if player is submissive or player is kinky:
 							say ", no matter how strange it might be";
 						say ". Over time, more join her ranks, the word of your strength spreading far and wide, until subjects start to come with the deliberate desire to serve you.";
 					say "     As you settle into your new position, you find yourself growing in size until you're a match for any of your kin. Your every need attended to, you slowly forget everything about your past, until all that remains is your insatiable lust and unmatched power...";
@@ -1184,7 +1184,7 @@ when play ends:
 							say ". So eager you are to serve, that you quickly end up a plaything for the other consorts, until you're eventually regarded as the sluttiest and most pitiful in his harem";
 						say ".";
 						say "     Your memory becomes a blur of constant servitude under your master, satisfying his every, tainted need";
-						if "Kinky" is listed in feats of player:
+						if player is kinky:
 							say ", no matter how strange";
 						say ". Ultimately, you seem more than happy with your eternal fate as his plaything...";
 					else:
@@ -1193,7 +1193,7 @@ when play ends:
 							say ". So eager you are to serve, that you quickly end up a plaything for the other consorts, until you're eventually regarded as the sluttiest and most pitiful in her harem";
 						say ".";
 						say "     Your memory becomes a blur of constant servitude under your mistress, satisfying her every, tainted need";
-						if "Kinky" is listed in feats of player:
+						if player is kinky:
 							say ", no matter how strange";
 						say ". Ultimately, you seem more than happy with your eternal fate as her plaything...";
 		else:

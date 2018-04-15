@@ -336,7 +336,7 @@ to say collieinheat:
 			infect;
 			decrease the score by 5;
 			decrease the morale of the player by 3;
-			if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
+			if player is kinky, increase the morale of the player by 6;
 		else:
 			say "Hot juices flow down your legs as your body's need starts to become overwhelming. You moan and whimper, finding yourself sniffing at the air for something you don't catch wind of.";
 			increase slutfucked by 1;
