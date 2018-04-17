@@ -32,7 +32,7 @@ instead of resolving a loaded catapult:
 		say "You could drink some of the reeking liquids, though that would not be without consequences for your health.";
 		if the player consents:
 			say "Overcoming your disgust, you dip your [face of player] head into the mess, slurping it up.";
-			decrease the thirst of the player by 25;
+			decrease thirst of player by 25;
 			decrease humanity of player by 10;
 			if "Iron Stomach" is not listed in feats of player:
 				weakrandominfect;

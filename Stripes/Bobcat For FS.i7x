@@ -26,7 +26,7 @@ Section 2 - Monster Victory
 
 to say losetobobcat:
 	say "     [if HP of player > 0]Rather than keep fighting, you allow the latex-covered feline to push you to the ground beneath it[else]Unable to keep fighting, the latex-covered feline manages to push you to the ground beneath it[end if]. It's motor gives a happy, purr-like rumble as it runs its smoothly padded paws over your body. After shedding your gear, it looks you over one last time before ";
-	if cunts of player > 0 and ( anallevel is not 3 or a random chance of 3 in 4 succeeds ):
+	if cunts of player > 0 and ( anallevel < 3 or a random chance of 3 in 4 succeeds ):
 		say "getting you on your back and moving atop you. The vibrating dildo at its crotch slides across your pussy, the sensation getting you wet[if HP of player <= 0] despite yourself[end if] and a small moan escapes your lips.";
 		say "     Your moan only grows louder as the bobcat pushes that rumbling shaft into your cunt. Your hips raise up and tremble a little at the delight his manhood gives[if cunt length of player > 15] despite its comparatively small size[end if][if HP of player > 0]. You grab onto the sexbot's hips, urging to fuck you, which it readily responds by doing[else]. You try to push the sexbot's hips away, but it has no trouble continuing in its task to fuck you[end if]. As the sextoy creature picks up the pace and intensifies its vibrator functions, your [if HP of player > 0]attempts to think are[else]desire to resist is[end if] driven from your mind as the delight the sex toy provides overwhelms you.";
 		WaitLineBreak;

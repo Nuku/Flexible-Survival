@@ -440,7 +440,7 @@ to say TehuantlBunkerScenes:
 to say TehuantlHeatIntro:
 	say "     Tehuantl is laying on the ground as you approach her, mrowling and mewling as she furiously works several fingers in and out of her swollen cunt. By the look of the large wet spot on the carpet below her, and overwhelming scent of her feminine juices, it seems she been at this for a while.";
 	say "     Tehuantl squeaks in surprise as you reach down and place a hand on her shoulder. She releases a sigh of relief as she turns and sees you standing over her, quickly rising to her knees and wrapping her arms tightly around your leg. 'Oh master, please use me. My entire body aches to be filled. I've been trying to soothe the need myself, but it's just not enough... please.' As you look down upon the begging kitty you realize she must be in heat, and she doesn't seem to be handling it so well, perhaps due to her previous male form.";
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     Lacking any gender of your own, you remain quiet as you watch Tehuantl's fingers sink back into her slick opening. As her moans and mewls begin again she seems to forget you're even there, losing herself once again in her powerful lusts. Taking the opportunity to quietly slip away you carefully make your way back downstairs, leaving the lusty kitty alone for now. As you reach the main floor of the library once again, you find yourself wondering if there may be something out in the city to help the poor [bold type]feline[roman type] find some [bold type]relief[roman type].";
 	else:
 		say "     Even as her paws start to stray back to her groin, Tehuantl continues to whimper up at you, begging for some relief. Will you try to help sate the kitty's lusts? ";

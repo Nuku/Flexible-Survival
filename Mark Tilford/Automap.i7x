@@ -1007,7 +1007,7 @@ Use options:
 
 - Use automap hide paths through closed doors:  The program will not add paths that go through closed doors.
 
-- Use automap static allocation:  Causes a glulx game to allocate memory for the automap at compile time.  Reduces flexibility, but allows the game to run on more interpreters.  (Automatically set when compiling to zcode.)
+- Use automap static allocation:  Causes a glulx game to allocate memory for the automap at compile time.  Reduces flexibility, but allows the game to run on more interpreters. (Automatically set when compiling to zcode.)
 
 - Use automap reserved area of at least N:  Sets the amount of memory the game will use for drawing the map.  Must be at least (map rows)*(map columns).  This option is ignored when compiling to glulx, unless the "use static allocation" option is set.
 
@@ -1019,7 +1019,7 @@ New source code syntax:
 	decision: "(mappable room) is placed (number) and (number) from (mappable room)":
 If the player has visited both rooms, it will attempt to arrange the map so that they will appear in the given relative positions.
 Returns yes unless doing so creates an inconsistency.
-It will not be necessary to use this decision in your own code unless you want to have rooms that would not ordinarily be on the same map region together.  (For example, if a closet is connected to the main room by in / out, this would put it on the map with the rest of the rooms.)
+It will not be necessary to use this decision in your own code unless you want to have rooms that would not ordinarily be on the same map region together. (For example, if a closet is connected to the main room by in / out, this would put it on the map with the rest of the rooms.)
 
 	decision: "(room) is explored":
 Attempts to connect (room) with any adjacent rooms.  It probably will not be necessary to use this unless you want to add rooms the player hasn't visited, or you are using the manual exploration option.
@@ -1035,10 +1035,10 @@ Removes the room from the automap.  Will be needed if you want to change its pos
 Will print the calculated automap.  Should only be necessary if you are using the manual display option.
 
 	phrase: "reserve automap memory of (number) rows by (number) cols":
-Sets the size of the displayed map.  Must be called for any map to display.  May be changed at any time.  (Maps will center better if the height and width are 1 more than a multiple of 4: 1, 5, 9, 13, 17, ...)
+Sets the size of the displayed map.  Must be called for any map to display.  May be changed at any time. (Maps will center better if the height and width are 1 more than a multiple of 4: 1, 5, 9, 13, 17, ...)
 
 	phrase: "reserve automap memory of (number) rows":
-Sets the size of displayed map.  Width is the current width of the status line.  If using static allocation, and this would require more memory than is allocated, width is trimmed to what will fit.  (Maps will center better if the height and width are 1 more than a multiple of 4: 1, 5, 9, 13, 17, ...)
+Sets the size of displayed map.  Width is the current width of the status line.  If using static allocation, and this would require more memory than is allocated, width is trimmed to what will fit. (Maps will center better if the height and width are 1 more than a multiple of 4: 1, 5, 9, 13, 17, ...)
 
 
 New in-game commands:
@@ -1184,7 +1184,7 @@ Example: ** The Demonstration - A simple demonstration.
 			To fix the size at the start, use something like 'When play begins: Reserve automap memory of 13 rows by 17 cols;'.[line break]
 			Omitting the columns will have it allocate memory to fill the width of the screen, but you must readjust each time the status line is rebuilt.[line break]
 			In Glulx games, it will automatically allocate memory as needed.  In Zcode games, you must reserve that memory in advance:
-			Use automap reserved area of at least 400.  (It's okay to put such a line in a Glulx game; it will be ignored.)[line break]
+			Use automap reserved area of at least 400. (It's okay to put such a line in a Glulx game; it will be ignored.)[line break]
 			In ZCode mode, you must print at least as many blank lines as your map is high so that the text will start out below the automap.[line break]
 			Map sizes are in characters; a room is 1 character square in zoomed out mode, 3 characters square in zoomed in mode."
 

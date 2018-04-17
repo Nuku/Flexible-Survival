@@ -1,6 +1,15 @@
 Version 2 of Solstice by Stripes begins here.
 [Version 2 - NPC form added]
+[Version 2.1 - Minor maintenance and character relocation - Luneth]
 "Adds the NPC adventurer Solstice to the Flexible Survival game"
+
+[ HP of Solstice                                                               ]
+[ 0 - Never met                                                                ]
+[ 1 - Wants artifact                                                           ]
+[ 2 - Playet got artifact                                                      ]
+[ 3 - Played didn't sex                                                        ]
+[ 4 - Player sexed                                                             ]
+[ 5 - Booked and met                                                           ]
 
 Section 1 - Treasure Hunting
 
@@ -126,15 +135,15 @@ instead of using Crow Artifact:
 
 
 an everyturn rule:
-	if ( HP of Solstice is 3 or HP of Solstice is 4 ) and Solstice is not in Grey Abbey Library:
+	if ( HP of Solstice is 3 or HP of Solstice is 4 ) and Solstice is not in Makeshift Rec Room:
 		if lastfuck of Solstice - turns >= 12:
-			move Solstice to Grey Abbey Library;
-			if the player is not in Grey Abbey Library:
-				say "You get this odd feeling and consider checking back at the abbey.";
+			move Solstice to Makeshift Rec Room;
+			if the player is not in Makeshift Rec Room:
+				say "You get this odd feeling and consider further checking needs to be done at the abbey.";
 
 
 an everyturn rule:
-	if ( HP of Solstice is 3 or HP of Solstice is 4 ) and Solstice is in Grey Abbey Library and the player is in the Grey Abbey Library:
+	if ( HP of Solstice is 3 or HP of Solstice is 4 ) and Solstice is in Makeshift Rec Room and the player is in the Grey Abbey Library:
 		say "     Returning to the central room of the library, you are startled to find a new person casually waiting for you. Solstice is here, leaning against one of the bookshelves, glancing through a book. The vulpogryph smiles and tucks the book back on the shelf as you come striding over[if HP of Fang is 1 or HP of Fang is 2]. Sparing a quick glance to Fang, who seems as surprised to find the intruder here, the guard wolf dips his ears and slinks back, clearly having failed in his guard duties somehow[else if HP of Fang is 3]. Fang growls a little from his post at the door, clearly upset that this intruder somehow managed to get past him unnoticed[end if].";
 		say "     'Hey there. Pretty nice setup [if ( number of booked people + number of bunkered people ) > 2]you and your pals have[else]you've[end if] got going here. Not much interest to the critters out there and a reinforced bunker in case things get really bad. Definitely need to get some more supplies for that, though. Things got rather hectic back at my old place, so I figured I could move in here with you, sweety.'  She runs a taloned paw along your side.";
 		if HP of Solstice is 3:
@@ -238,7 +247,7 @@ to say solsticesex:
 			say "     As you fuck the sexy vulpogryph, she nips at your neck and brushes her beak against your cheek. Your cock throbs and pulses, leaking precum steadily as you pound into her. Her vulpine cunt grips and squeezes at your cock, milking at it[if player is vgcocked] and clamping down around your swelling knot[end if]. Feeling your coming climax, you switch to hard, fast strokes, making her release caws of pleasure with each one.";
 			say "     When you do cum, you thrust deep inside her and unleash your hot, thick load into her eager cunt. You pump blast after blast of your hot seed into her, making her caw loudly one last time as she orgasms[if cock width of player >= 20]. Her slender, vulpine tummy bloats up considerably as your excessively large balls drain into her. She moans happily at the sight of this and rubs her taloned paws over she overstuffed womb[else if cock width of player >= 12]. Her slender, vulpine tummy gains a plump bulge from the considerable output of your large balls. She smiles at the sight of this and rubs her taloned paws over the bulge of her filled womb[else]. She smiles in pleasure as she feels you drain your balls into her womb[end if]. Once your cock stops pulsing and your balls are empty, you slide your softening shaft from her and snuggle up beside her.";
 		else:											[Solstice 69]
-			say " before lowering herself to her knees between your legs. She nuzzles at your thighs and gives you soft nips with her beak while her paws continue to work over your shaft and ballsac. Opening her beak, she starts to lick over your shaft while carefully taking you into her mouth. Her tongue works eagerly to please you, showing a surprising amount of skill given her beaked mouth.";
+			say " before lowering herself to her knees between your legs. She nuzzles at your thighs and gives you soft nips with her beak while her paws continue to work over your shaft and ballsack. Opening her beak, she starts to lick over your shaft while carefully taking you into her mouth. Her tongue works eagerly to please you, showing a surprising amount of skill given her beaked mouth.";
 			say "     You stretch out across her bedroll, allowing her to turn around and bring her hips over your face. With her hot, juicy pussy right there in front of you, you can't help but lick your lips before diving into it with your tongue. She releases a murr of pleasure as you lick at her vulpine cunt, sending quivers of delight through her. As you enjoy your 69 with the exotic gryphoness, you run your hands over each other's body. The motion of her soft fur and feathers across your [bodydesc of player] body feels wonderful.";
 			say "     Eventually it all becomes too much for [one of]her and she releases a caw of pleasure as you feel her pussy squeeze down onto your probing tongue and her hot juices soak your face. This sets you off and you cum moments after, shooting your hot seed into her beak. She swallows it down as best she can, but much of it flows down over your spurting loins[or]you and you cum, shooting your hot seed into her beak. She swallows it down as best she can, but much of it flows down over your spurting loins. This sets her off moments later, releasing a caw of pleasure as you feel her pussy squeezing down onto your probing tongue and her hot juices soaking your face[purely at random]. After licking up most of the overflowed semen from your crotch, she turns around to snuggle with you, pressing your face to her bosom to nurse from her again.";
 		increase solsticemsex by 1;
@@ -246,14 +255,6 @@ to say solsticesex:
 	if lessontime is 1, vulpogryphinfect; [double-infection from lesson-time]
 	vulpogryphinfect;
 	now lessontime is 0;
-
-[	HP of Solstice		]
-[ 0 - Never met			]
-[ 1 - Wants artifact		]
-[ 2 - Playet got artifact	]
-[ 3 - Played didn't sex		]
-[ 4 - Player sexed		]
-[ 5 - Booked and met		]
 
 
 Section 5 - Definitions

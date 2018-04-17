@@ -1,7 +1,38 @@
 Version 2 of Vanessa by Stripes begins here.
 [Version 2 - Gwen addition]
+[Version 2.1 - Minor maintenance and character relocation - Luneth]
 
 "Adds a centaur-infected woman to Flexible Survival."
+
+[  HP of Vanessa                                        ]
+[ overall status                                        ]
+[ 0 = not met                                           ]
+[ 1 = no talk                                           ]
+[ 2 = talked                                            ]
+[ 3 = part tf                                           ]
+[ 4 = tf+sex                                            ]
+[ 5 = first foal                                        ]
+[ 6 = preg (again)                                      ]
+[ 7 = not preg                                          ]
+[ 50 = left on Plains                                   ]
+[ 51 = failed Meredith                                  ]
+
+
+[  lust of Vanessa                                      ]
+[  pregnancy                                            ]
+[  0 = not preggers                                     ]
+[  <= 12 = early preggers                               ]
+[  13-24 = late preggers                                ]
+[  25 = birthing time                                   ]
+[ *not yet implemented*                                 ]
+
+
+[  XP of Vanessa                                        ]
+[  number of pregnancies/offspring                      ]
+
+[  meredith_vanessa_fun1 - 1st special scene w/Meredith ]
+[  meredith_vanessa_fun2 - 2nd special scene w/Meredith ]
+
 
 Section 0 - Event
 
@@ -14,17 +45,17 @@ Instead of resolving a Paratrooper:
 	say "     After checking through the crumbling ruins of a building, you notice a figure approaching in the distance. Seeing as they're humanoid and not rushing wildly towards you, you head cautiously in their direction. As you draw closer, you make out additional details - she's female, is wearing a camo jacket and is nude below the waist. This last gives you pause, but she doesn't seem aggressive or lust-crazed, though she does seem to be quite dazed or in shock. Once you reach her, you can notice further details - ears growing pointed, the start of an equine tail and the strong scent of centaur musk coming from the semen staining her bare thighs. Given she's still got her heavy boots on, you surmise her pants were torn clean off her by the randy stallion. Her tummy's still a little rounded, probably with the centaur's load, and possibly even with a bun in the oven.";
 	say "     Keeping a little distance, you ask if she's alright. She blinks a few times, finally noticing you there. Scratching an itch on her lower belly, she looks you over. 'I... I guess... Blown off course... Was just trying to regroup... got interrupted.'  She smiles, still a little dazed, but getting a bit more clearheaded. 'Sorry, I'm Sgt Vanessa Harris. I was with a paratrooper team, but the drop went bad and we were scattered away from the objective. I've been trying to make my way back since then. Had a little run in a while ago. Bit of a rough ride at first, but at least he was hung like a horse,' she says with a laugh and a wry smile, tugging at her jacket as a fresh rivulet of cum and juices run down her leg as she recalling the event excites her.";
 	say "     Feeling her equine tail flick upwards, she seems to just notice her changes now and touches them cautiously. 'Oh no, my immunity boosters must've worn off. Fuck! They're not going to let me cross the lines now. Look, have you got somewhere safe I can hole up until the main force moves in?' she asks.";
-	say "     [bold type]Shall you take her back to the bunker?[roman type][line break]";
+	say "     [bold type]Shall you take her back to the Library?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
 		say "     'Thanks for the help. I'm glad I ran into you,' she says, eying you appreciatively. 'It looks like we'll have some time to get to know each other better.'  When you notice her slip a hand down to rub her groin, a part of you can't help but smile at the prospect of having some fun with the changing soldier.";
-		move Vanessa to bunker;
-		move player to bunker;
+		move Vanessa to Back Of The Library;
+		move player to Back Of The Library;
 		if coleen is bunkered:
 			LineBreak;
-			say "     You lead Vanessa back to the bunker and bring her inside. Before she can have a chance to pick a cot, Coleen rushes over excitedly";
+			say "     You lead Vanessa back to the library and bring her inside. Before she can have a chance to try and get settled, Coleen rushes over excitedly";
 			if coleenslut > 0 or coleenalpha > 0:		[stray or alpha-stray]
 				say ", tail wagging wildly. She comes to attention momentarily in front of her before relaxing. 'Stray Bitch Coleen Varna reporting for duty, sarge,' she says with a big grin. 'I've been scouting the surrounding area to... survey the canine population. My radio and most of my gear was damaged, so I haven't heard what happened to the others or reported in with Command. It's good to see you, sarge. This survivor found and rescued me[if the number of bunkered people + the number of booked people > 3]. Seems to have a knack for finding strays[end if].";
 				say "     'As you can see, I've gotten infected. Picked it up from one of the other survivors here. It's all good though, being a piece of hot husky action lets me move around outside without drawing any more attention than the other strays do.'  Knowing the sort of attention she draws out there, you try to keep your expression neutral at this admission, but the other soldier doesn't react untowards to it, probably as a result of her own infection. 'It seems you've picked up a bit of something as well,' the husky woman adds.";
@@ -44,9 +75,9 @@ Instead of resolving a Paratrooper:
 				say "     Vanessa nods. 'A brief run-in with a centaur shortly before encountering [if cunts of player > 0]her[else]him[end if]. The stallion was quite impressive, so at least I got my money's worth as it were,' she laughs and winks at Coleen[if sarahslut is 0]. Come over here and I'll fill you in on what I know until my radio ran out of juice,' she says, glancing at you. 'After that, you'd best keep a little distance so you don't get infected[else]. Come over here and I'll fill you in on what I know until my radio ran out of juice,' she says, glancing at you[end if].";
 				say "     Knowing they'll be discussing military matters and remembering their lost squadmates, you decide to give them some privacy for a little while.";
 		else:
-			say "     You lead Vanessa back to the bunker and bring her inside. She selects a cot and settles in. At least she's still got some supplies for herself, even putting some of her own onto the bunker's shelves.";
-			add "water bottle" to invent of bunker;
-			add "food" to invent of bunker;
+			say "     You lead Vanessa back to the library and bring her inside. She attempts to settle in and find a place of her own. At least she's still got some supplies for herself, even putting some of her own into the library's supply stash.";
+			add "water bottle" to invent of Back Of The Library;
+			add "food" to invent of Back Of The Library;
 		increase score by 20;
 		now battleground is "void";
 		now HP of Vanessa is 1;
@@ -101,10 +132,10 @@ Instead of conversing the Vanessa:
 			say "     [one of][if coleen is bunkered]'I'm glad to know at least one of my squad is safe,' she says. 'Thanks for helping Coleen out.'[else]'It'd be nice to know what happened to the rest of my squad,' she says with a sad sigh.[end if][or][if coleen is bunkered and ( coleenslut > 0 or coleenalpha > 0 or coleencollared > 0 )]'It's nice to know Coleen's safe and happy. She makes such a cute, sexy husky, too,' she says while brushing her fingers across her nipples.[else if coleen is bunkered and sarahslut > 0]'Coleen's doesn't seem to really mind those husky traits she's picked up. Good for her, I say. I'm sure she'd be even happier if you'd be able to help her change fully like you did for me,' she says while brushing her fingers across her nipples.[else if coleen is bunkered]'Coleen's been lucky up to now to avoid infection. I'm having her keep her distance from me to be on the safe side. Though now that I've done it, I don't really see why I was so worried about avoiding it.'[else]'Keep an eye out for another other soldiers in need of help. Several of the scouting teams have run into trouble and they might need a safe place to stay. I'm curious to see how sexy they've become. Some from my squad ended up in the park for example, which is a very active zone.'[end if][cycling]";
 		else:
 			say "     [one of]'Standing orders are for infected soldiers to hole up somewhere safe until the main recovery mission takes place. This seems like a nice, safe place to enjoy some pleasant company while waiting for rescue,' she says with a naughty grin.[or]'Look, I can't tell you about our plans to help rescue the civilians since I'm not privy to them. Rescue is coming, but the details are being kept from the soldiers so we can't divulge the info if we're corrupted.'[or]'I have a few supplies of my own and I've been going outside to find more now that I'm eating like a horse,' she laughs.[or]'Don't I look so much better now that I'm a proper mare? And my pregnancy went so well. It was one of the most erotic things I've ever experienced. I'm really looking forward to doing it again soon.'[or]'I had my foal and he was a lovely little colt. He's going to be quite the stud when he finishes growing up. He's gone off to the plains to search for his father to learn to be a proper stallion from him.'  She seems a little sad that he's left, but also seems quite proud of him.[or]'Given how nice this has all felt, I think I'd like to start work on another foal right away[if cocks of player > 0]. Any volunteers,' she adds with a wink.[else].'[end if][or]'I was never much of a girly girl growing up, but I always did love horses. Now I'm looking to loving some horses again,' she says with a wink and a flick of her tail.[or]'Thanks for letting me stay here. This place looks quite secure. We'll have plenty of opportunity to enjoy ourselves without having to worry about the monsters out there interrupting us.'[at random]";
-	else if HP of meredith >= 6 and meredith is bunkered and a random chance of 2 in 5 succeeds and meredith_vanessa_fun1 is false:
+	else if HP of meredith >= 6 and meredith is booked and a random chance of 2 in 5 succeeds and meredith_vanessa_fun1 is false:
 		say "     You head over to chat with Meredith to find her over at Vanessa's cot";
 		say "[meredith_vanessa_funscene1]";
-	else if HP of meredith >= 6 and meredith is bunkered and a random chance of 2 in 5 succeeds and meredith_vanessa_fun1 is true and meredith_vanessa_fun2 is false:
+	else if HP of meredith >= 6 and meredith is booked and a random chance of 2 in 5 succeeds and meredith_vanessa_fun1 is true and meredith_vanessa_fun2 is false:
 		say "     You head over to chat with Meredith to find her over at Vanessa's cot";
 		say "[meredith_vanessa_funscene2]";
 	else if HP of Vanessa >= 6 and XP of Vanessa > 1 and a random chance of 2 in 5 succeeds:
@@ -325,7 +356,7 @@ to say vanessasex5:
 Section 4 - Everyturn Rule (pregnancy)
 
 an everyturn rule:
-	if Vanessa is bunkered:
+	if Vanessa is booked:
 		if lust of Vanessa > 0:
 			increase lust of Vanessa by 1;
 			if lust of Vanessa >= 24 and skipturnblocker is 0:
@@ -336,36 +367,6 @@ an everyturn rule:
 					now HP of Vanessa is 5;
 				else:
 					now HP of Vanessa is 7;
-
-
-[  HP of Vanessa       ]
-[ overall status       ]
-[ 0 = not met          ]
-[ 1 = no talk          ]
-[ 2 = talked           ]
-[ 3 = part tf          ]
-[ 4 = tf+sex           ]
-[ 5 = first foal       ]
-[ 6 = preg (again)     ]
-[ 7 = not preg         ]
-[ 50 = left on Plains  ]
-[ 51 = failed Meredith ]
-
-
-[  lust of Vanessa        ]
-[  pregnancy              ]
-[  0 = not preggers       ]
-[  <= 12 = early preggers ]
-[  13-24 = late preggers  ]
-[  25 = birthing time     ]
-[ *not yet implemented*   ]
-
-
-[  XP of Vanessa                    ]
-[  number of pregnancies/offspring  ]
-
-[  meredith_vanessa_fun1 - 1st special scene w/Meredith ]
-[  meredith_vanessa_fun2 - 2nd special scene w/Meredith ]
 
 
 Vanessa ends here.

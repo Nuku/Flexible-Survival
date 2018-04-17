@@ -323,7 +323,7 @@ when play begins:
 	add Lazy River to badspots of furry;
 
 Instead of Resolving a Lazy River:
-	say "     Traveling through the zoo area, you spot something odd in the hippo enclosure. Sneaking up to the fence and peaking over, you spot a large hippo man relaxing on his back in the water. One of his large hands is wrapped around his massive shaft, gently stroking its thick length while his other kneads his large ballsac. Floating lazily along, he pumps and strokes his throbbing shaft. You can't seem to look away from this arousing scene, your knees feeling weak as your mind is filled with thoughts of sex with this beast.";
+	say "     Traveling through the zoo area, you spot something odd in the hippo enclosure. Sneaking up to the fence and peaking over, you spot a large hippo man relaxing on his back in the water. One of his large hands is wrapped around his massive shaft, gently stroking its thick length while his other kneads his large ballsack. Floating lazily along, he pumps and strokes his throbbing shaft. You can't seem to look away from this arousing scene, your knees feeling weak as your mind is filled with thoughts of sex with this beast.";
 	say "     You are shaken out of your fantasy when the large beast man roars out in orgasm, painting his belly and filling the nearby water with sticky white seed. Afterwards, he flops around in the water, looking relaxed and content as he bobs along. You shake your head clear and slip away quietly before something notices you, feeling quite aroused by the whole voyeuristic experience.";
 	increase libido of player by 30;
 	if libido of player > 100, now libido of player is 100;

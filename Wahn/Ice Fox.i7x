@@ -10,6 +10,13 @@ Version 1 of Ice Fox by Wahn begins here.
 [  10: player fucked by Miyuki                                ]
 [ 100: met, angered - no further contact                      ]
 
+[ lust of Miyuki - blessing quest                             ]
+[   0: not started                                            ]
+[   1: Carambola quest started                                ]
+[   2: Carambola acquired                                     ]
+[   3: blessing ready                                         ]
+[   4: blessing given                                         ]
+
 MiyukiRelationship is a number that varies.
 lastSnowStarGiven is a number that varies. lastSnowStarGiven is usually 10000.
 
@@ -319,7 +326,8 @@ to say MiyukiTalk4: [be blessed]
 	LineBreak;
 	say "[bold type]'All-Mother's Blessing' has been added to your feats![roman type][line break]";
 	add "All-Mother's Blessing" to feats of the player;
-
+	now lust of Miyuki is 4; [player blessed]
+	
 instead of fucking the Miyuki:
 	if lastfuck of Miyuki - turns < 4:
 		say "     As you step up to Miyuki and give her lewd looks, she smiles but then raises a hand, laying it against your chest to hold you back. 'As much as I'd love to have more fun with you... a woman does need a bit of time to catch her breath. Later, okay sweetie?'";

@@ -1380,7 +1380,6 @@
 |Stripes|Bouncy Castle|vixcountdown|value|
 |Stripes|Bouncy Castle|dolphinbundle|value|
 |Stripes|Bouncy Castle|dolphinlist|value|
-|Stripes|Bouncy Castle|dolcastleturn|value|
 |Stripes|Bouncy Castle|dolcastlefight|value|
 |Stripes|Bouncy Castle|bcending|value|
 |Stripes|Bouncy Castle|rowing|value|
@@ -1399,8 +1398,8 @@
 |Stripes|Bouncy Castle|bcduofightfled|value|
 |Stripes|Bouncy Castle|bcseenthroneroom|value|
 |Stripes|Bouncy Castle|bcseenpunchingpillars|value|
-|Stripes|Bouncy Castle|primarycolourlist|value|
-|Stripes|Bouncy Castle|ppcolour|value|
+|Stripes|Bouncy Castle|primarycolorlist|value|
+|Stripes|Bouncy Castle|ppcolor|value|
 |Stripes|Bouncy Castle|bcfinalpillarform|value|
 |Stripes|Bouncy Castle|floatertaken|value|
 |Stripes|Bouncy Castle|bcsliding|action|

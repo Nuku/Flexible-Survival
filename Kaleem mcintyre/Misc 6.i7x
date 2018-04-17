@@ -77,13 +77,13 @@ Instead of resolving a Scopaesthesia:
 	else if scopnum is 2:
 		say "Getting to the campus grounds you find yourself breathing a sigh as you walk underneath a large tree and then settle down for a quick rest. Hunkering down while looking around the somewhat lively college you smile to yourself at how the mutated students seem to be adjusting so easily to their new lives. Wondering if you'll ever be that calm with what's happening you close your eyes to rest. But you quickly snap them open wide when you get the sense that someone is watching you. Getting up and looking around you find yourself getting a few weird looks from the passing mutants as you whip your head back and forth while searching for danger. Eventually someone comes up to speak to you. 'Hey pal, you ok?' A large orca guy says while cocking an eyebrow at you. Shakily you tell him that you think someone is watching you. 'Really?' The large killer whale wearing the black mesh shirt looks around and quickly you feel the sense of someone staring at you fade. 'Well, I'd don't see anybody, well except those cute cheetah girls over there.'";
 		WaitLineBreak;
-		say "You turn to see who the larger male is talking about and then shake your head before telling the other that the feeling is gone now. 'Oh, well ok. If you don't feel comfortable being alone the you can to my dorm and stay with me a while. There's not a lot to eat or drink, but hey...' The other shrugs somewhat helplessly and all you can do is nod and smile at him before telling him that you have to go. 'Oh, ok. See ya around, pal.' The orca turns to leave and you grab your stuff to do the same, however the suddenly spine tingling sensation of being watched returns.";
+		say "You turn to see who the larger male is talking about and then shake your head before telling the other that the feeling is gone now. 'Oh, well ok. If you don't feel comfortable being alone, you can to my dorm and stay with me a while. There's not a lot to eat or drink, but hey...' The other shrugs somewhat helplessly, and all you can do is nod and smile at him before telling him that you have to go. 'Oh, ok. See ya around, pal.' The orca turns to leave and you grab your stuff to do the same, however the suddenly spine tingling sensation of being watched returns.";
 		now scopnum is 3;
 		now sarea of Scopaesthesia is "Park";
 		now level of Scopaesthesia is 9;
 		increase score by 5;
 	else if scopnum is 3:
-		say "Deciding to relax a bit at the park you find yourself quickly being accosted by several LeopardMen. The growling and snarling felines seem to have a bone to pick with you, preferably the ones both within your body.";
+		say "Deciding to relax a bit at the park you find yourself quickly being accosted by several Leopardmen. The growling and snarling felines seem to have a bone to pick with you, preferably the ones both within your body.";
 		challenge "Leopardman";
 		challenge "Leopardman";
 		challenge "Leopardman";

@@ -170,7 +170,7 @@ to say sexwithBlanche:
 		say "     That's awfully forward of you. Perhaps you should talk to her a little first.";
 	else if lastfuck of Blanche - turns < 6:
 		say "     'I need a little more time to recover, hon.'";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     You're ill-equipped to play with the white wolf right now.";
 	else if HP of Blanche < 7:
 		now lastfuck of Blanche is turns;

@@ -23,15 +23,15 @@ to say FeralFoxDefeat:
 to say FeralFoxVictory:
 	say "     You were victorious over the creature.";
 	if libido of player > 40:
-		say "     Additional paragraph for a player with a libido greater than 40.  Do they want sex?";
+		say "     Additional paragraph for a player with a libido greater than 40. Do they want sex?";
 		if the player consents:
-			say "     The player agreed to sex.  Fun times begin.";
+			say "     The player agreed to sex. Fun times begin.";
 			if cunts of player > 0:
 				say "     The player is female/herm, so sex goes like this for her.";
 			else:
 				say "     The player must be male, so sex goes like this for him.";
 		else:
-			say "     Awww!  The player refused the sex.  Party pooper.";
+			say "     Awww!  The player refused the sex. Party pooper.";
 
 to say FeralFoxDesc:
 	say "     Monster description paragraph 1.";

@@ -1,5 +1,6 @@
 Version 1 of Urik by Wahn begins here.
 [Version 1 - New NPC]
+[Version 1.1 Character relocation - Luneth]
 
 Section 1 - NPC
 
@@ -127,7 +128,7 @@ to say UrikSex4: [Urik fucks player ass]
 	say "     <WIP>";
 
 to say UrikSex5: [player fucks Urik]
-	if Urik is in Grey Abbey 2F: [library sex]
+	if Urik is in Sitting Area: [library sex]
 		say "     Pushing down on the orc's shoulders, you make him kneel at your feet, then pull the front of your pants down impatiently. The rapidly hardening length of your manhood swings right in front of Urik's face, and a second later, you take hold of it and brush it over his lips. Urik grunts in a lusty tone as he slides his lips over your shaft, taking it into his mouth all the way without stopping even once. You really should thank Boghrim sometime - the time Urik spent as his cum-slut really did wonders for your muscular slut's oral skills. You look down upon Urik as he eagerly bobs his head over your dick, working his tongue along your hard length while giving you an expert blow-job.";
 		say "     Quite a fun situation, with this mighty warrior now being your obedient fuck-toy. And numerous other orcs think so too, laughing and stroking at the show. You almost want to take hold of Urik's head with both hands as you face-fuck him as hard as you can... but no, you have other plans right now. You pull your manhood out of his mouth, chuckling as he tries to follow it by stretching his neck, then slide your fingers between the strands of his shoulder-long black hair. Grabbing the orc's hair, you pull his head back somewhat roughly and look down into his face, then order him to turn around and present his ass to you.";
 		WaitLineBreak;
@@ -237,7 +238,7 @@ to say UrikTalk1: [chatting]
 
 to say UrikTalk2: [send him to the library]
 	say "     Urik listens to your instructions with a quiet intensity that makes it clear he commits the directions to the library to his memory. When you finish and ask if he understood, he hesitates for a second, then forces himself to say, 'Yes, [master].' You can see that he is still a bit uncomfortable at accepting his new reality of being your breeder. Well, he'd better learn to live with it, as having your own orc warrior is something you won't easily let go of. With a playful slap at his muscled buttocks, you send him off into the city.";
-	move Urik to Grey Abbey 2F;
+	move Urik to Sitting Area;
 	now HP of Urik is 1;
 
 to say UrikTalk3: [send him to the orc lair]
@@ -262,13 +263,13 @@ to say UrikTalk4: [talk about Eric]
 
 Section 3 - Events
 
-instead of navigating Grey Abbey Library while (Urik is in Grey Abbey 2f and Candy is in bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
+instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Candy is in bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Urik grabs Candy - CandyUrikInteraction: [CandyUrikInteraction], lastCandyUrikInteraction: [lastCandyUrikInteraction], current turn: [turns][line break]";
-	say "     As you enter the library, you spot Candy lying stretched-out on his belly, occupying one of the sofas further back in the room. His upper body raised on the girly raccoon's elbows, he is intently reading a book - and at the same time has his lower legs raised, slowly rubbing them against one another. The skirt of his candy striper uniform has been pulled up at the back, revealing his pink lace-trimmed panties. Knowing the eager boy-slut, you don't believe for a second that that his pose is anything but intentional. Apparently it had the intended effect too - as your orc slave Urik is striding up towards Candy in a purposeful manner, showing a very respectable bulge in his stretchy stripper-pants.";
+	say "     As you enter the library, you spot Candy lying stretched-out on his belly, occupying one of the sofas further back in the room. His upper body raised on the girly raccoon's elbows, he is intently reading a book - and at the same time has his lower legs raised, slowly rubbing them against one another. The skirt of his candy striper uniform has been pulled up at the back, revealing his pink lace-trimmed panties. Knowing the eager boy-slut, you don't believe for a second that his pose is anything but intentional. Apparently it had the intended effect too - as your orc slave Urik is striding up towards Candy in a purposeful manner, showing a very respectable bulge in his stretchy stripper-pants.";
 	say "     Before you can do or say anything about it, Urik simply grabs Candy off the sofa and throws him over his shoulder, making the raccoon squeal in surprise. Seems he didn't expect anyone to just man-handle him. Meanwhile, Urik gives a content grunt as he cups Candy's ass with a large hand, squeezing his buttocks testingly. Then the orc hooks two fingers under the panties on the pink raccoon, ripping them away effortlessly and dropping the shredded fabric on the ground. This leads Candy to give Urik's back a light slap as he complains, 'Hey! Hon, I like the hands-on approach but you got to leave the outfit intact. Do you know how hard it is to - ooooohhhhhHHHHH!'";
 	WaitLineBreak;
 	say "     Having just pushed a spit-covered finger past Candy's pucker to try out the gay raccoon's fuck-hole, Urik thrusts his digit in and out rapidly a few times, making Candy writhe in his position over the orc's shoulder. Despite how much the moaning raccoon fidgets at the merciless stimulation, Urik holds him firmly with his other arm, making sure he doesn't fall off. Eventually, Urik relents, pulling out of Candy's hole again and slapping his captive's ass moderately hard. 'You'll do, breeder slut. And if you don't want that stupid girly shit ripped off you, don't wear it when flaunting your ass!' Panting for several more seconds after Urik stops finger-fucking him, Candy gasps out, 'Umm... okay. Whatever you say big guy.'";

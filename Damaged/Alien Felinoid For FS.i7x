@@ -17,10 +17,10 @@ mateable is a number that varies.
 to say felinoid attack:
 	if HP of player > 0:
 		let mchance be 4;
-		if "Submissive" is listed in feats of player, increase mchance by 2;
-		if "More Anal" is listed in feats of player, increase mchance by 2;
-		if "MPreg" is listed in feats of player, increase mchance by 2;
-		if "Less Anal" is listed in feats of player, now mchance is 0;
+		if player is submissive, increase mchance by 2;
+		if anallevel is 3, increase mchance by 2;
+		if player is mpreg_ok, increase mchance by 2;
+		if anallevel is 1, now mchance is 0;
 		if ( cunts of player > 0 and cunt length of player > 7 ) or ( a random chance of mchance in 12 succeeds and cunts of player is 0 ):
 			say "     The great cat, as if accepting your submission, pads up to you and nuzzles you firmly with its large head.  It butts you over onto all fours, purring and nuzzling softly.  With his strong, masculine scent filling your senses, you don't resist, wanting to keep the big cat pleased.  You gasp as he paces behind you and, reaching a foreleg over your shoulder, leans his weight into you.  He forces your [bodydesc of player] chest to lower down into the dirt and licks slowly along your neck, sending shivers along your spine.";
 			say "     He rumbles softly in your ear and you end up raising your rear as he moves to mount you fully, sinking his feline shaft into your [if cunts of player > 0]wet pussy[else]tight ass[end if], spreading you open with his feline member.  Keeping a paw at your back as a reminder of who is in charge, he starts thrusting, sliding those spines covering his cock along your inner walls.  They send shivers of pleasure through you as he pounds into you, thrusting harder and faster.";
@@ -36,14 +36,14 @@ to say felinoid attack:
 			increase catnum by 1;
 		else:
 			say "     The great cat, as if accepting your submission, pads up to you and nuzzles you firmly with its large head.  It butts you over onto all fours, purring and nuzzling softly.  With his strong, masculine scent filling your senses, you don't resist, wanting to keep the big cat pleased.  You gasp as he paces behind you and nuzzles your rear.  He gives a bit of a growl at this and moves cuffs you firmly with one paw, knocking you over onto your back.  Before you can get up to defend yourself, the big feline has pounced atop you and is pressing his groin into your face, burying you in his fuzzy crotch.";
-			say "     With his heady scent filling your senses, you don't resist as he grinds his swelling sheath and large ballsac against your face.  When his cock starts to emerge, you welcome it into your mouth, licking and sucking at it lightly.  The feline growls firmly, as if reminding you who is in charge and starts to thrust into your mouth.  You work your tongue over the pulsing shaft, teasing its barbs and pointed tip with your tongue.  You keep this up for several minutes as his heavy balls slap against your chin until finally the large feline releases his hot, musky seed into your mouth.  It tastes so powerful and virile that you can't help but swallow it down.";
+			say "     With his heady scent filling your senses, you don't resist as he grinds his swelling sheath and large ballsack against your face.  When his cock starts to emerge, you welcome it into your mouth, licking and sucking at it lightly.  The feline growls firmly, as if reminding you who is in charge and starts to thrust into your mouth.  You work your tongue over the pulsing shaft, teasing its barbs and pointed tip with your tongue.  You keep this up for several minutes as his heavy balls slap against your chin until finally the large feline releases his hot, musky seed into your mouth.  It tastes so powerful and virile that you can't help but swallow it down.";
 			say "     Done with you, the cat gets up and gives your rear a swat.  With a bit of a growl, it urges you on your way.  You grab your stuff and leave, still licking your lips for the last lingering traces of the male's seed.";
 			increase catnum by 1;
 	else if "Male Preferred" is listed in feats of player:
 		if cunts of player > 0:
 			say "At first he just starts nuzzling you, but pretty soon he begins pushing you around, trying to get you to move.[line break]You feel odd to begin with, his friendliness making something within you warm up and without thinking, without your conscious mind having a say in it at all, you feel yourself on your knees, breasts pushing down into the ground.[line break]He rips at your clothing, tearing it.[line break]His weight pins you down and you moan out loud, needing what he would give you.[line break]Hips meet yours, but his aim was off. His third try was successful though and you cry out, feeling yourself filled and stretched around him.[line break]He didn't take it slow, he breeds you as though you were his very own mate.[line break]You moan out loud.[line break]You are his mate.[line break]Deeper and faster, his spines cause the friction building to turn alternately from agony to bliss as they scrape and then soothe sensitive parts deep within you.[line break]You are panting heavily, unsure if you could take much more.[line break]Existence fades then, he thrust deep once more and roars above you, finally deigning to clamp his jaws down on your neck, extending your own orgasm as his seed floods into you.[line break]The cat pulls away from you and turns behind to clean your cleft, at his first blissful lick he pulls back and you hear a growl coming from him, without hesitating, fearing for your life, you grab your things and run as fast as you can.";
 			increase catnum by 1;
-		if "Submissive" is listed in feats of player or "More Anal" is listed in feats of player or "MPreg" is listed in feats of player:
+		if player is submissive or anallevel is 3 or player is mpreg_ok:
 			say "At first he just starts nuzzling you, but pretty soon he begins pushing you around, trying to get you to move.  You feel odd to begin with, his friendliness making something within you warm up and without thinking, without your conscious mind having a say in it at all, you feel yourself on your knees, chest pushing down into the ground.  He rips at your clothing, tearing it.  His weight pins you down and you moan out loud, needing what he would give you.  Hips meet yours, grinding against your rear.";
 			say "As he drives into you, you cry out, feeling yourself filled and stretched around him.  He doesn't take it slow, he fucks you as though you were his very own mate.  You moan out loud, growing to feel as if you are his mate.";
 			say "Deeper and faster, his spines cause the friction building to turn alternately from agony to bliss as they scrape and then soothe sensitive parts deep within you.  You are panting heavily, unsure if you could take much more.  Existence fades then, he thrust deep once more and roars above you, finally deigning to clamp his jaws down on your neck, extending your own orgasm as his seed floods into you.";
@@ -125,7 +125,7 @@ When Play begins:
 	now HP entry is 38;			[ How many HP has the monster got? ]
 	now lev entry is 6;			[ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 14;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Park";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Park";	[ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku]

@@ -784,4 +784,57 @@ Section 16 - Abandoned Milk (by cmacleod42)
 
 [Moved to Garrett.i7x file]
 
+Section 17 - Scattered Clothing
+
+RandomItemPick is a number that varies.
+
+Scattered Clothing is a scavevent.
+The sarea of Scattered Clothing is "Allzones".
+
+Instead of resolving a Scattered Clothing:
+	say "     Searching [one of]a small store[or]a convenience store[or]a gas station[or]a motel[or]a coffee shop[or]a newsstand[or]a taco truck[at random], you find that another scavenger has already been there before you. Poking around a little on the odd chance that something may have been missed, it sadly turns out that the place has been quite thoroughly ransacked. You're well out of luck for any food or drink to be found here. But then, just as you are about to give up on the location, your gaze falls upon an article of clothing that (for once) isn't torn, shredded, encrusted in dried cum or stained in some other horrible way. Given how hard it is to observe even the most basic levels of cleanliness in a situation like the nanite apocalypse, clean secondhand clothing is actually a quite lucky find, so you quickly add it to your pack.";
+	LineBreak;
+	let randomnumber be a random number from 1 to 4;
+	if randomnumber is:
+		-- 1: [Chest Item]
+			say "[GiveRandomChestItem]";
+		-- 2: [Waist Item]
+			say "[GiveRandomWaistItem]";
+		-- 3: [Crotch Item]
+			say "[GiveRandomCrotchItem]";
+		-- 4: [Feet Item]
+			say "[GiveRandomFeetItem]";
+
+WaistItemsList is a list of objects that varies.
+the WaistItemsList is {ripped jeans, black jeans, sturdy jeans, skinny jeans, hot pants, grey pants, camo pants, jogging pants, bermuda shorts, black miniskirt, pencil skirt, floral skirt}.
+
+to say GiveRandomWaistItem:
+	now RandomItemPick is a random number from 1 to the number of entries in WaistItemsList;
+	increase carried of entry RandomItemPick of WaistItemsList by 1;
+	say "[bold type]You gain [if plural of entry RandomItemPick of WaistItemsList is true][entry RandomItemPick of WaistItemsList][else]a [entry RandomItemPick of WaistItemsList][end if]![roman type][line break]";
+
+ChestItemsList is a list of objects that varies.
+the ChestItemsList is {black t-shirt, white t-shirt, maroon pullover, zephyr shirt, camo shirt, sleeveless shirt, mesh shirt}.
+
+to say GiveRandomChestItem:
+	now RandomItemPick is a random number from 1 to the number of entries in ChestItemsList;
+	increase carried of entry RandomItemPick of ChestItemsList by 1;
+	say "[bold type]You gain [if plural of entry RandomItemPick of ChestItemsList is true][entry RandomItemPick of ChestItemsList][else]a [entry RandomItemPick of ChestItemsList][end if]![roman type][line break]";
+
+FeetItemsList is a list of objects that varies.
+the FeetItemsList is {combat boots, brown loafers, leather sandals, high heels, stiletto heels, jogging shoes, cowboy boots}.
+
+to say GiveRandomFeetItem:
+	now RandomItemPick is a random number from 1 to the number of entries in FeetItemsList;
+	increase carried of entry RandomItemPick of FeetItemsList by 1;
+	say "[bold type]You gain [if plural of entry RandomItemPick of FeetItemsList is true][entry RandomItemPick of FeetItemsList][else]a [entry RandomItemPick of FeetItemsList][end if]![roman type][line break]";
+
+CrotchItemsList is a list of objects that varies.
+the CrotchItemsList is {ragged loincloth, simple loincloth, boxer briefs, white briefs, orange jockstrap, mesh undies, pink panties}.
+
+to say GiveRandomCrotchItem:
+	now RandomItemPick is a random number from 1 to the number of entries in CrotchItemsList;
+	increase carried of entry RandomItemPick of WaistItemsList by 1;
+	say "[bold type]You gain [if plural of entry RandomItemPick of CrotchItemsList is true][entry RandomItemPick of CrotchItemsList][else]a [entry RandomItemPick of CrotchItemsList][end if]![roman type][line break]";
+
 Scavevents ends here.

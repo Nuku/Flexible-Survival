@@ -180,28 +180,28 @@ To reciting2:
 					now hospquest is the number understood;
 			-- 19:	[player cock]
 				if the player's command matches "[number]":
-					now the cocks of player is the number understood;
+					now cocks of player is the number understood;
 			-- 20:	[player breasts]
 				if the player's command matches "[number]":
-					now the breasts of player is the number understood;
+					now breasts of player is the number understood;
 			-- 21:	[player cunt]
 				if the player's command matches "[number]":
-					now the cunts of player is the number understood;
+					now cunts of player is the number understood;
 			-- 22:	[player cock]
 				if the player's command matches "[number]":
-					now the breast size of player is the number understood;
+					now breast size of player is the number understood;
 			-- 23:	[player cock]
 				if the player's command matches "[number]":
-					now the cock length of player is the number understood;
+					now cock length of player is the number understood;
 			-- 24:	[player cock]
 				if the player's command matches "[number]":
 					now the cock width of player is the number understood;
 			-- 25:	[player cunt]
 				if the player's command matches "[number]":
-					now the cunt length of player is the number understood;
+					now cunt length of player is the number understood;
 			-- 26:	[player cunt]
 				if the player's command matches "[number]":
-					now the cunt width of player is the number understood;
+					now cunt width of player is the number understood;
 			-- 27:	[equipped weapon]
 				repeat with y running through armaments:
 					if the printed name of y matches the text b, case insensitively:
@@ -1113,28 +1113,28 @@ Carry out reciting:
 					now hospquest is the number understood;
 			-- 19:	[player cock]
 				if the player's command matches "[number]":
-					now the cocks of player is the number understood;
+					now cocks of player is the number understood;
 			-- 20:	[player breasts]
 				if the player's command matches "[number]":
-					now the breasts of player is the number understood;
+					now breasts of player is the number understood;
 			-- 21:	[player cunt]
 				if the player's command matches "[number]":
-					now the cunts of player is the number understood;
+					now cunts of player is the number understood;
 			-- 22:	[player cock]
 				if the player's command matches "[number]":
-					now the breast size of player is the number understood;
+					now breast size of player is the number understood;
 			-- 23:	[player cock]
 				if the player's command matches "[number]":
-					now the cock length of player is the number understood;
+					now cock length of player is the number understood;
 			-- 24:	[player cock]
 				if the player's command matches "[number]":
 					now the cock width of player is the number understood;
 			-- 25:	[player cunt]
 				if the player's command matches "[number]":
-					now the cunt length of player is the number understood;
+					now cunt length of player is the number understood;
 			-- 26:	[player cunt]
 				if the player's command matches "[number]":
-					now the cunt width of player is the number understood;
+					now cunt width of player is the number understood;
 			-- 27:	[equipped weapon]
 				repeat with y running through armaments:
 					if the printed name of y matches the text b, case insensitively:
@@ -2791,11 +2791,6 @@ to restorepart2:	[values 60 - 161]
 		now demon brute is tamed;
 	else:
 		now demon brute is not tamed;
-	if DBCaptureQuestVar is 5:
-		choose blank row from Table of confession entries;
-		now title entry is "Ask about the possibility of freeing a demon of his inner evil";
-		now description entry is "";
-		now toggle entry is demoncleansing rule;
 	if DBCaptureQuestVar > 5:
 		now the icon of demon brute is Figure of BrutusGood_icon;
 [141:	[demon brute pet - gender]]
@@ -2892,7 +2887,7 @@ to restorepart2:	[values 60 - 161]
 		if guy is not banned and girl is not banned and furry is not banned:
 			now Leather Wolves is unresolved;
 	if HP of Zigor >= 8:
-		if "Twisted Capacity" is not listed in feats of player, add "Twisted Capacity" to feats of player;
+		if player is not twistcapped, add "Twisted Capacity" to feats of player;
 [161: [thirst of Amy]]
 
 [ ---------------------------------------------------------- ]

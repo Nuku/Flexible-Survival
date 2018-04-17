@@ -97,9 +97,9 @@ instead of fucking Andromeda:
 	else if (lastfuck of Andromeda - turns < 6):
 		say "     'I know that you're looking for more fun, but you gotta give me a break sometimes, beautiful,' the perky catgirl says to you with a lighthearted wink.";
 	else:
-		say "     Heading over to the checkout counter, you jump up on it, planting your rear on the counter next to her. She lets out an [']EEP['] of surprise at your actions, but grinning happily as you plop down next to her, comfortable with your presence. Sitting there in silence for a few moments, you lean over and whisper in her ear, asking her if she's positively sure she doesn't want to have any fun. [if libido of Andromeda > 0] She smiles slyly at you, jumping off the counter and making a show of herself as she deftly flips on the closed sign, then walking to the storage room. Trailing behind her, you wonder just what kind of fun you'll have with the lanky girl.[else] Your question sends her into what looks to be deep thought and concentration, and you think that she might just truly be THAT innocent. That is, until Andromeda flips on the closed sign, grabbing your arm and almost pulling you off the counter, dragging you towards a storage room in the back[end if].";
+		say "     Heading over to the checkout counter, you jump up on it, planting your rear on the counter next to her. She lets out an [']EEP['] of surprise at your actions, but grinning happily as you plop down next to her, comfortable with your presence. Sitting there in silence for a few moments, you lean over and whisper in her ear, asking her if she's positively sure she doesn't want to have any fun. [if libido of Andromeda > 0]She smiles slyly at you, jumping off the counter and making a show of herself as she deftly flips on the closed sign, then walking to the storage room. Trailing behind her, you wonder just what kind of fun you'll have with the lanky girl[else]Your question sends her into what looks to be deep thought and concentration, and you think that she might just truly be THAT innocent. That is, until Andromeda flips on the closed sign, grabbing your arm and almost pulling you off the counter, dragging you towards a storage room in the back[end if].";
 		say "     Following her, you both find yourselves in the storage room, where Andromeda shuts and locks the door. Crates of what are probably excess clothes are stacked along the walls of this bare room, with the only other furnishings being a haphazard mess of blankets and pillows on the ground. You figure that Andromeda must sleep here at night. Turning around to you, her eyes have taken on a lustful look, and she is panting quietly, her tongue already lolling out of her mouth.";
-		say "     Under panted breaths, you hear Andromeda talking. [if libido of Andromeda > 0]'You just had to go and get me all worked up again, didn't you.[else]'If you've taken an interest in little ol['] me, I can't say no to a beautiful thing like you. Not anymore at least.' Already sneaking a hand down into her jeans, it's obvious that, even with such a little question, you've gotten her quite worked up. What do you propose to do with her?";
+		say "     Under panted breaths, you hear Andromeda talking. [if libido of Andromeda > 0]'You just had to go and get me all worked up again, didn't you?'[else]'If you've taken an interest in little ol['] me, I can't say no to a beautiful thing like you. Not anymore at least.'[end if] Already sneaking a hand down into her jeans, it's obvious that, even with such a little question, you've gotten her quite worked up. What do you propose to do with her?";
 		LineBreak;
 		now calcnumber is -1;
 		now XP of Andromeda is 0;
@@ -319,7 +319,7 @@ carry out TuxedoObtain:
 carry out SummerObtain:
 	say	"     Taking the loose-fitting summer clothes up to the counter, Andromeda smiles happily as you approach. Setting your purchase on the counter, you smile back at the bouncing proprietor and mention that you'd like to purchase the baggy outfit.";
 	if scalevalue of player >= 5 or scalevalue of player <= 1:
-		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] i'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
+		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face.";
 		if the player consents:
@@ -384,7 +384,7 @@ understand "procure nametag collar" as NametagCollarObtain.
 carry out SpikedCollarObtain:
 	say	"     Bringing the spiky collar up to the checkout counter, you're sure Andromeda is blushing slightly as you set the thick leather collar on the counter. Indicating that you'd like to purchase the collar, she smiles at you, doing her best to hide her embarrassment.";
 	if scalevalue of player >= 5 or scalevalue of player <= 1:
-		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] i'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
+		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face as her tail swishes behind her, probably from embarrassment.";
 		if the player consents:
@@ -424,7 +424,7 @@ carry out SpikedCollarObtain:
 carry out FuzzyCollarObtain:
 	say	"     Bringing the fuzzy collar up to the checkout counter, you're sure Andromeda is blushing slightly as you set the thick leather collar on the counter. Indicating that you'd like to purchase the collar, she smiles at you, doing her best to hide her embarrassment.";
 	if scalevalue of player >= 5 or scalevalue of player <= 1:
-		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] i'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
+		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face as her tail swishes behind her, probably from embarrassment.";
 		if the player consents:
@@ -464,7 +464,7 @@ carry out FuzzyCollarObtain:
 carry out NametagCollarObtain:
 	say	"     Bringing the spiky collar up to the checkout counter, you're sure Andromeda is blushing slightly as you set the thick leather collar on the counter. Indicating that you'd like to purchase the collar, she smiles at you, doing her best to hide her embarrassment.";
 	if scalevalue of player >= 5 or scalevalue of player <= 1:
-		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] i'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
+		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face as her tail swishes behind her, probably from embarrassment.";
 		if the player consents:

@@ -220,7 +220,7 @@ instead of conversing the Elijah:
 			say "     You manage that well, but don't have another hand free to take hold of the chain, so it noisily clatters against the wall and other chains as it falls away from the angel's arm. Oh-oh, you hear some growls, then spot glowing red eyes open up in the darkness behind several doorways on the sides of the chapel.";
 			now inasituation is true;
 			if girl is banned:
-				say "     Leading the mob of demons rushing at you is a incubus. Its normally handsome face is distorted into one of demonic anger with twisted features, sharp teeth and burning eyes as it cries out. 'That's our prize, you thieving mortal. When I'm done with you, you'll be begging for the hellhounds to take you!";
+				say "     Leading the mob of demons rushing at you is an incubus. Its normally handsome face is distorted into one of demonic anger with twisted features, sharp teeth and burning eyes as it cries out. 'That's our prize, you thieving mortal. When I'm done with you, you'll be begging for the hellhounds to take you!";
 				challenge "Incubus";
 			else:
 				say "     Leading the mob of demons rushing at you is a busty succubus, who shrieks angrily. 'He's ours, you little thief. You'll become a bitch in the hellhound kennels for trying to steal him!'";
@@ -587,7 +587,7 @@ Instead of resolving a Examination Room:
 		say "     You manage to move around the jaguar and make a run for it, heading back to the relative safety of the hospital entrance to rethink your next move.";
 	now Examination Room is resolved;
 
-instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 0 and "Submissive" is listed in feats of player and lastfuck of Elijah - turns > 6):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 0 and player is submissive and lastfuck of Elijah - turns > 6):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice say 'Ah, there you are' coming from right beside you. Turning, you see Elijah straighten up from where he was leaning against the wall next to the door. The dark angel in his tight black leather pants gives you an evaluating look, then continues with 'Come on, you can help me with something...' and starts up the stairs into the library. A shiver of arousal runs through you at being ordered around by the handsome man and you find yourself following him almost without thinking about it.";
@@ -668,7 +668,7 @@ instead of going down from the Grey Abbey Library while (Elijah is in the Bunker
 		say "     Shaking off the urge to just let the dark angel lead you to whatever he has planned, you plant your feet solidly on the ground and stop walking. It takes a moment until Elijah notices you're no longer behind him, then he turns and looks at you. 'Come on, keep going. I've got something to do for you,' he says, then adds, 'Get moving. NOW.', annoyance clearly in his voice and written all over his handsome face. Holding fast on the decision you made, you steel your will and shake your head. With an angry grunt, the fallen angel whirls around and walks to the exit. You can hear him muttering to himself '...not as subby as I thought, the little bitch. Now I have to catch a husky or someth-', then he's out the door and on the street, the closing door cutting off his further words.";
 		now thirst of Elijah is 100; [declined sub bondage sex with Elijah]
 
-instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 1 and "Submissive" is listed in feats of player and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 1 and player is submissive and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice call out 'About time you got back, slut. I've been waiting for you.' Looking around, you see that it's Elijah who spoke, who is just standing up from where he was lounging on one of the beds. Dressed only in his tight black leather pants, the dark angel casually strolls over to you, a superior smirk on his face as you stare at the rippling muscles of his upper body, then drop your gaze lower to see the bulge in his trousers. Stepping up to you while you're still checking out his crotch, Elijah lightly grips your chin and pulls your head up so he can look you in the eye with an evaluating gaze. 'I'm still amazed that a subby bitch like you hasn't been snatched up on the street to serve one or another master.' Letting a hand wander over your chest, groping and stroking you, he continues, 'And that even though you clearly want to please your betters. You like following my orders, don't you? Tell me!'";
@@ -746,7 +746,7 @@ instead of going down from the Grey Abbey Library while (Elijah is in the Bunker
 	now lastfuck of Elijah is turns;
 	now thirst of Elijah is 2;
 
-instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 2 and "Submissive" is listed in feats of player and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0 and DemonBruteStatus is 0):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 2 and player is submissive and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0 and DemonBruteStatus is 0):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice call out 'There you are, finally! It time to service me again, you little slut. Come here at once!' Looking around, you see that it's Elijah who spoke, who is just standing up from where he was lounging on one of the beds. Dressed only in his tight black leather pants, the dark angel waits for you impatiently with both hands on his hips, a superior smirk on his face as you stare at the rippling muscles of his upper body, then drop your gaze lower to see the bulge in his trousers. As you hurry over to him, all the while still checking out his crotch, Elijah tightly grips your chin and pulls your head up so he can look you in the eye with an evaluating gaze. 'I'm still amazed that a subby bitch like you hasn't been snatched up on the street to serve one or another master. Maybe I should just keep you here, naked and ready to take my cock. I'm getting tired of waiting for you to show up - getting blue-balled while you little whore roam the streets for guys who fuck.'";
@@ -833,7 +833,7 @@ An everyturn rule:
 				now Char-D of Elijah is "1";
 				now NPCintCounter is turns;
 			else if (helper dog is tamed) and Char-E of Elijah is "0":
-				say "     While taking your break before heading back into the city, you see the helper dog adjust the angel's blanket. Hobo then takes a seat quietly beside your injured guest's bunk. He's watching him, ready to signal if there's something wrong or he needs assistance.";
+				say "     While taking your break before heading back into the city, you see Hobo adjust the angel's blanket. Hobo then takes a seat quietly beside your injured guest's bunk. He's watching him, ready to signal if there's something wrong or he needs assistance.";
 				now Char-E of Elijah is "1";
 				now NPCintCounter is turns;
 			else if (little fox is tamed) and Char-F of Elijah is "0":
@@ -868,7 +868,7 @@ An everyturn rule:
 				now Char-D of Elijah is "2";
 				now NPCintCounter is turns;
 			else if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1"):
-				say "     While taking your break before heading back into the city, you see the helper dog sitting quietly beside Elijah's bunk, getting stroked. As Elijah sees you looking at them, he pats the dog softly on the head and remarks 'A most dutiful and brave animal. You can count yourself lucky for receiving his assistance.'";
+				say "     While taking your break before heading back into the city, you see Hobo sitting quietly beside Elijah's bunk, getting stroked. As Elijah sees you looking at them, he pats the dog softly on the head and remarks 'A most dutiful and brave animal. You can count yourself lucky for receiving his assistance.'";
 				now Char-E of Elijah is "2";
 				now NPCintCounter is turns;
 			else if (little fox is tamed) and (Char-F of Elijah is "0" or Char-F of Elijah is "1"):
@@ -880,7 +880,7 @@ An everyturn rule:
 				now Char-G of Elijah is "2";
 				now NPCintCounter is turns;
 			else if (cute crab is tamed) and (Char-H of Elijah is "0" or Char-H of Elijah is "1"):
-				say "     While taking your break before heading back into the city, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab pet is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
+				say "     While taking your break before heading back into the city, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab Snips is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
 				now Char-H of Elijah is "2";
 				now NPCintCounter is turns;
 			else if (bee girl is tamed) and (Char-J of Elijah is "0" or Char-J of Elijah is "1"):
@@ -927,7 +927,7 @@ An everyturn rule:
 				now Char-D of Elijah is "2";
 				now NPCintCounter is turns;
 			else if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1" or Char-E of Elijah is "2"):
-				say "     While taking your break before heading back into the city, you see Elijah crouched in front of your helper dog. He waves you closer, saying 'Look at what he can do - give me your paw, dog.' ...and just as ordered, the dog raises his paw to have it shaken by Elijah. 'That's a good dog,' Elijah says and rewards him with a treat.";
+				say "     While taking your break before heading back into the city, you see Elijah crouched in front of Hobo. He waves you closer, saying 'Look at what he can do - give me your paw, dog.' ...and just as ordered, the dog raises his paw to have it shaken by Elijah. 'That's a good dog,' Elijah says and rewards him with a treat.";
 				now Char-E of Elijah is "3";
 				now NPCintCounter is turns;
 			else if (gryphoness is tamed) and (Char-G of Elijah is "0" or Char-G of Elijah is "1" or Char-G of Elijah is "2"):
@@ -935,7 +935,7 @@ An everyturn rule:
 				now Char-G of Elijah is "3";
 				now NPCintCounter is turns;
 			else if (cute crab is tamed) and (Char-H of Elijah is "0" or Char-H of Elijah is "1" or Char-H of Elijah is "2"):
-				say "     While taking your break before heading back into the city, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab pet is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
+				say "     While taking your break before heading back into the city, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab Snips is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
 				now Char-H of Elijah is "3";
 				now NPCintCounter is turns;
 			else if (bee girl is tamed) and (Char-J of Elijah is "0" or Char-J of Elijah is "1" or Char-H of Elijah is "2"):
@@ -995,7 +995,7 @@ An everyturn rule:
 				now NPCintCounter is turns;
 				now lastfuck of Elijah is turns;
 			else if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1" or Char-E of Elijah is "2"):
-				say "     While taking your break before heading back into the city, you see Elijah get your helper dog casually fetch a ball for him a few times. The dog seems more interested in keeping an eye on him than the ball, but does go retrieve it each time. After a few throws, Elijah pulls something and chucks the black oblong object across the room, where it bounces off the wall, shouting 'Go fetch, doggie.'  The helper dog seems into it this time, chasing after it, but then stops and detours to grab a towel from one of the cots. Confused by your dog's actions, you watch as the shepherd carries it over to where the black rod is rolling to a stop. The dog drops the cloth over it before picking it up in his mouth with care. Padding over to the nearby trash chute, Hobo depresses the foot lever with one paw and drops the towel-wrapped thing into the garbage while Elijah yells from across the room.";
+				say "     While taking your break before heading back into the city, you see Elijah get Hobo to casually fetch a ball for him a few times. The dog seems more interested in keeping an eye on him than the ball, but does go retrieve it each time. After a few throws, Elijah pulls something and chucks the black oblong object across the room, where it bounces off the wall, shouting 'Go fetch, doggie.' Hobo seems into it this time, chasing after it, but then stops and detours to grab a towel from one of the cots. Confused by your dog's actions, you watch as the shepherd carries it over to where the black rod is rolling to a stop. The dog drops the cloth over it before picking it up in his mouth with care. Padding over to the nearby trash chute, Hobo depresses the foot lever with one paw and drops the towel-wrapped thing into the garbage while Elijah yells from across the room.";
 				say "     'Stupid beast!' Elijah snarls. 'It's a lot of work to talk a succubus out of a dildo - and you won't even fetch it for me just this once. Gah!  Don't throw it out, you mutt!  You'd be a much more fun pet as a hellhound!'";
 				now Char-E of Elijah is "4";
 				now NPCintCounter is turns;
@@ -1009,7 +1009,7 @@ An everyturn rule:
 				now Char-G of Elijah is "4";
 				now NPCintCounter is turns;
 			else if (cute crab is tamed) and (Char-H of Elijah is "0" or Char-H of Elijah is "1" or Char-H of Elijah is "2"):
-				say "     While taking your break before heading back into the city, you see Elijah lift the blanket of his bunk and scowl at what he finds below. He grabs your cute crab pet and dumps it on the concrete floor, growling 'Can't you keep your stupid critters in a pen somewhere?'";
+				say "     While taking your break before heading back into the city, you see Elijah lift the blanket of his bunk and scowl at what he finds below. He grabs your cute crab Snips and dumps it on the concrete floor, growling 'Can't you keep your stupid critters in a pen somewhere?'";
 				now Char-H of Elijah is "4";
 				now NPCintCounter is turns;
 			else if (bee girl is tamed) and (Char-J of Elijah is "0" or Char-J of Elijah is "1" or Char-J of Elijah is "2"):
@@ -1087,7 +1087,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 1 or HP of
 		now Char-D of Elijah is "1";
 		now NPCintCounter is turns;
 	else if (helper dog is tamed) and Char-E of Elijah is "0":
-		say "     As you come down into the bunker, you see the helper dog adjust the angel's blanket. Hobo then takes a seat quietly beside your injured guest's bunk. He's watching him, ready to signal if there's something wrong or he needs assistance.";
+		say "     As you come down into the bunker, you see hobo adjust the angel's blanket. Hobo then takes a seat quietly beside your injured guest's bunk. He's watching him, ready to signal if there's something wrong or he needs assistance.";
 		now Char-E of Elijah is "1";
 		now NPCintCounter is turns;
 	else if (little fox is tamed) and Char-F of Elijah is "0":
@@ -1126,7 +1126,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 3 and NPCi
 		now Char-D of Elijah is "2";
 		now NPCintCounter is turns;
 	else if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1"):
-		say "     As you come down into the bunker, you see the helper dog sitting quietly beside Elijah's bunk, getting stroked. As Elijah sees you looking at them, he pats the dog softly on the head and remarks 'A most dutiful and brave animal. You can count yourself lucky for receiving his assistance.'";
+		say "     As you come down into the bunker, you see hobo sitting quietly beside Elijah's bunk, getting stroked. As Elijah sees you looking at them, he pats the dog softly on the head and remarks 'A most dutiful and brave animal. You can count yourself lucky for receiving his assistance.'";
 		now Char-E of Elijah is "2";
 		now NPCintCounter is turns;
 	else if (little fox is tamed) and (Char-F of Elijah is "0" or Char-F of Elijah is "1"):
@@ -1138,7 +1138,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 3 and NPCi
 		now Char-G of Elijah is "2";
 		now NPCintCounter is turns;
 	else if (cute crab is tamed) and (Char-H of Elijah is "0" or Char-H of Elijah is "1"):
-		say "     As you come down into the bunker, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab pet is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
+		say "     As you come down into the bunker, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab Snips is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
 		now Char-H of Elijah is "2";
 		now NPCintCounter is turns;
 	else if (bee girl is tamed) and (Char-J of Elijah is "0" or Char-J of Elijah is "1"):
@@ -1183,7 +1183,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 4 and NPCi
 		now Char-D of Elijah is "2";
 		now NPCintCounter is turns;
 	else if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1" or Char-E of Elijah is "2"):
-		say "     As you come down into the bunker, you see Elijah crouched in front of your helper dog. He waves you closer, saying 'Look at what he can do - give me your paw, dog.' ...and just as ordered, the dog raises his paw to have it shaken by Elijah. 'That's a good dog,' Elijah says and rewards him with a treat.";
+		say "     As you come down into the bunker, you see Elijah crouched in front of Hobo. He waves you closer, saying 'Look at what he can do - give me your paw, dog.' ...and just as ordered, the dog raises his paw to have it shaken by Elijah. 'That's a good dog,' Elijah says and rewards him with a treat.";
 		now Char-E of Elijah is "3";
 		now NPCintCounter is turns;
 	else if (gryphoness is tamed) and (Char-G of Elijah is "0" or Char-G of Elijah is "1" or Char-G of Elijah is "2"):
@@ -1191,7 +1191,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 4 and NPCi
 		now Char-G of Elijah is "3";
 		now NPCintCounter is turns;
 	else if (cute crab is tamed) and (Char-H of Elijah is "0" or Char-H of Elijah is "1" or Char-H of Elijah is "2"):
-		say "     As you come down into the bunker, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab pet is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
+		say "     As you come down into the bunker, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab Snips is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature,' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
 		now Char-H of Elijah is "3";
 		now NPCintCounter is turns;
 	else if (bee girl is tamed) and (Char-J of Elijah is "0" or Char-J of Elijah is "1" or Char-H of Elijah is "2"):
@@ -1249,7 +1249,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 99 and NPC
 		now NPCintCounter is turns;
 		now lastfuck of Elijah is turns;
 	else if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1" or Char-E of Elijah is "2"):
-		say "     As you come down into the bunker, you see Elijah get your helper dog casually fetch a ball for him a few times. The dog seems more interested in keeping an eye on him than the ball, but does go retrieve it each time. After a few throws, Elijah pulls something and chucks the black oblong object across the room, where it bounces off the wall, shouting 'Go fetch, doggie.'  The helper dog seems into it this time, chasing after it, but then stops and detours to grab a towel from one of the cots. Confused by your dog's actions, you watch as the shepherd carries it over to where the black rod is rolling to a stop. The dog drops the cloth over it before picking it up in his mouth with care. Padding over to the nearby trash chute, Hobo depresses the foot lever with one paw and drops the towel-wrapped thing into the garbage while Elijah yells from across the room.";
+		say "     As you come down into the bunker, you see Elijah get hobo to casually fetch a ball for him a few times. The dog seems more interested in keeping an eye on him than the ball, but does go retrieve it each time. After a few throws, Elijah pulls something and chucks the black oblong object across the room, where it bounces off the wall, shouting 'Go fetch, doggie.' Hobo seems into it this time, chasing after it, but then stops and detours to grab a towel from one of the cots. Confused by your dog's actions, you watch as the shepherd carries it over to where the black rod is rolling to a stop. The dog drops the cloth over it before picking it up in his mouth with care. Padding over to the nearby trash chute, Hobo depresses the foot lever with one paw and drops the towel-wrapped thing into the garbage while Elijah yells from across the room.";
 		say "     'Stupid beast!' Elijah snarls. 'It's a lot of work to talk a succubus out of a dildo - and you won't even fetch it for me just this once. Gah!  Don't throw it out, you mutt!  You'd be a much more fun pet as a hellhound!'";
 		now Char-E of Elijah is "4";
 		now NPCintCounter is turns;
@@ -1263,7 +1263,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 99 and NPC
 		now Char-G of Elijah is "4";
 		now NPCintCounter is turns;
 	else if (cute crab is tamed) and (Char-H of Elijah is "0" or Char-H of Elijah is "1" or Char-H of Elijah is "2"):
-		say "     As you come down into the bunker, you see Elijah lift the blanket of his bunk and scowl at what he finds below. He grabs your cute crab pet and dumps it on the concrete floor, growling 'Can't you keep your stupid critters in a pen somewhere?'";
+		say "     As you come down into the bunker, you see Elijah lift the blanket of his bunk and scowl at what he finds below. He grabs your cute crab Snips and dumps it on the concrete floor, growling 'Can't you keep your stupid critters in a pen somewhere?'";
 		now Char-H of Elijah is "4";
 		now NPCintCounter is turns;
 	else if (bee girl is tamed) and (Char-J of Elijah is "0" or Char-J of Elijah is "1" or Char-J of Elijah is "2"):
@@ -1468,7 +1468,7 @@ to say ElijahSexMenu:
 		now sortorder entry is 10;
 		now description entry is "Elijah fucks your pussy while Candy fucks his ass";
 	if (( Char-I of Elijah is "3") or (Char-I of Elijah is "4")) and Fang is booked:
-		if ( HP of Fang is 3 or HP of Fang is 4 ) and "Submissive" is listed in feats of player: [Alpha Fang + Submissive feat]
+		if ( HP of Fang is 3 or HP of Fang is 4 ) and player is submissive: [Alpha Fang + Submissive feat]
 			choose a blank row in table of fucking options;
 			if cunts of player >= 2:
 				now title entry is "Get fucked by both Elijah and Fang at once";
@@ -1478,22 +1478,22 @@ to say ElijahSexMenu:
 				now title entry is "Double-penetration by Elijah and Fang";
 				now sortorder entry is 12;
 				now description entry is "Elijah and Fang stuff your [if cunts of player > 0]cunt[else]ass[end if] at the same time";
-	if (HP of Elijah is 99 and thirst of Elijah > 0 and "Submissive" is listed in feats of player):
+	if (HP of Elijah is 99 and thirst of Elijah > 0 and player is submissive):
 		choose a blank row in table of fucking options;
 		now title entry is "Submit to bondage by Elijah";
 		now sortorder entry is 13;
 		now description entry is "Have another bit of fun time in Elijah's sex nest";
-	if (HP of Elijah is 99 and thirst of Elijah > 0 and "Submissive" is listed in feats of player):
+	if (HP of Elijah is 99 and thirst of Elijah > 0 and player is submissive):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Elijah and Zephias the spidertaur";
 		now sortorder entry is 14;
 		now description entry is "Have another bit of fun time in Elijah's sex nest";
-	if (HP of Elijah is 99 and thirst of Elijah > 0 and thirst of Elijah < 50 and cocks of player > 0 and DemonBruteStatus < 2 and "Submissive" is listed in feats of player and demon brute is tamed):
+	if (HP of Elijah is 99 and thirst of Elijah > 0 and thirst of Elijah < 50 and cocks of player > 0 and DemonBruteStatus < 2 and player is submissive and demon brute is tamed):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Elijah dominate Brutus and you";
 		now sortorder entry is 15;
 		now description entry is "Get fucked by Brutus while Elijah rides his ass";
-	if (HP of Elijah is 99 and thirst of Elijah is 50 and cocks of player > 0 and DemonBruteStatus < 2 and "Submissive" is listed in feats of player and demon brute is tamed):
+	if (HP of Elijah is 99 and thirst of Elijah is 50 and cocks of player > 0 and DemonBruteStatus < 2 and player is submissive and demon brute is tamed):
 		choose a blank row in table of fucking options;
 		now title entry is "Make Brutus fuck Elijah";
 		now sortorder entry is 15;
@@ -1651,7 +1651,7 @@ to say ElijahSex5: [assfuck Elijah + Sven]
 	if (HP of Elijah < 99): [good guy]
 		say "     You decide to have some fun with both Elijah and Sven, so you call them over to your bunk and tell your snowmeow pet to get on it. Sven already sees what's coming, licking his muzzle and flirting his tail as he readily complies. You guide Elijah to one side of the bunk, sliding your hand into his tight jeans to fondle his cock a bit, then unzip them as his growing bulge starts to strain against the material. With a hard and ready angelic cock presented at just the right height, Sven only has to lean forward a bit to start licking and sucking on it...";
 		say "     After watching Sven blowing Elijah's cock for a moment, you step over to the other side of the bunk where Sven's tight asshole is just waiting for some attention. Pulling your own hard cock out, you stroke it and rub it against Sven's soft furry buns. Spreading the precum drooling from its tip along its length to make it a bit more slippery, you push against Sven's tight pucker and slowly sink yourself into his body as it allows you access. You hold still for a moment as you bottom out, running your hands through the warm fur of Sven's buns, then grab hold of his hips and start thrusting in and out of his body.";
-		say "     Seeing your willing snowmeow pet suck on your friend's cock while you're fucking him gives the whole experience a whole new level of excellence in your mind. You grin over at Elijah as he moans deeply when Sven sucks on his cock, then return your full attention back to Sven, pulling almost all the way out and thrusting back in in quick fluid motions. Since you don't want this to be over too fast, a while later you stop yourself from hammering into your furry pet and pull out of Sven's tight behind, then wave Elijah to come over to your side of the bunk. Grabbing his rock-hard cock in one hand, you give him a quick kiss, then align it with Sven's asshole and give Elijah's ass a soft push until he's sinking his cock into the snowmeow. Moving to Sven's head yourself, you present him with your hard cock, which he expertly starts to lick and suck.";
+		say "     Seeing your willing snowmeow pet suck on your friend's cock while you're fucking him gives the whole experience a whole new level of excellence in your mind. You grin over at Elijah as he moans deeply when Sven sucks on his cock, then return your full attention back to Sven, pulling almost all the way out and thrusting back in in quick, fluid motions. Since you don't want this to be over too fast, a while later you stop yourself from hammering into your furry pet and pull out of Sven's tight behind, then wave Elijah to come over to your side of the bunk. Grabbing his rock-hard cock in one hand, you give him a quick kiss, then align it with Sven's asshole and give Elijah's ass a soft push until he's sinking his cock into the snowmeow. Moving to Sven's head yourself, you present him with your hard cock, which he expertly starts to lick and suck.";
 		WaitLineBreak;
 		say "     As you spit-roast Sven with one cock in his ass and one in his mouth, you soon hear Sven groan around your shaft in his muzzle and feel his body shudder as he sprays his cum onto the bunk. Your own orgasm doesn't feel too far off either, so before your restraint is overwhelmed, you decide on a certain place to spend your seed and pull out of Sven's mouth. Then you move over to the other side again, hugging Elijah from behind and rubbing your cock against his ass. He eagerly bends forward, readying himself for your entrance. You thrust deep inside his tight ass, gasping at the feelings of need and lust coming over you from the tightness and warmth around your cock. And Elijah seems to be quite aroused by being taken from behind while fucking, as it doesn't take much longer until you hear him moan as he fills Sven with his seed. His spasming anal muscles around your cock take you over the edge with him, making you shoot spurt after spurt of your seed into his ass.";
 		LineBreak;
@@ -1659,7 +1659,7 @@ to say ElijahSex5: [assfuck Elijah + Sven]
 	else: [evil Elijah]
 		say "     You decide to have some fun with both Elijah and Sven, so you call them over to your bunk and motion for your snowmeow pet to get on it. Sven already sees what's coming, licking his muzzle and flirting his tail as he readily complies. Elijah's quick on the uptake too - he almost instantly slides his tight leather pants down and presents his hard cock to Sven. With a hard and ready angelic cock presented at just the right height, Sven only has to lean forward a bit to start licking and sucking on it...";
 		say "     After watching Sven blowing Elijah's cock for a moment, you step over to the other side of the bunk where Sven's tight asshole is just waiting for some attention. Pulling your own hard cock out, you stroke it a bit and rub it against Sven's soft furry buns. Spreading the precum drooling from its tip along its length to make it a bit more slippery, you push against Sven's tight pucker and slowly sink yourself into his body as it allows you access. You hold still for a moment as you bottom out, running your hands through the warm fur of Sven's buns, then grab hold of his hips and start thrusting in and out of his body.";
-		say "     Seeing your willing snowmeow pet suck on your friend's cock while you're fucking him gives the whole experience a whole new level of excellence in your mind. You grin over at Elijah as he moans deeply when Sven sucks on his cock, then return your full attention back to Sven, pulling almost all the way out and thrusting back in in quick fluid motions. Since you don't want this to be over too fast, you soon stop yourself from hammering into your furry pet and pull out of Sven's tight behind, then wave Elijah to come over to your side of the bunk. Grabbing his rock-hard cock in one hand, you give him a quick kiss, then align it with Sven's asshole and give Elijah's ass a soft push until he's sinking his cock into the snowmeow. Moving to Sven's head yourself, you present him with your hard cock, which he expertly starts to lick and suck.";
+		say "     Seeing your willing snowmeow pet suck on your friend's cock while you're fucking him gives the whole experience a whole new level of excellence in your mind. You grin over at Elijah as he moans deeply when Sven sucks on his cock, then return your full attention back to Sven, pulling almost all the way out and thrusting back in in quick, fluid motions. Since you don't want this to be over too fast, you soon stop yourself from hammering into your furry pet and pull out of Sven's tight behind, then wave Elijah to come over to your side of the bunk. Grabbing his rock-hard cock in one hand, you give him a quick kiss, then align it with Sven's asshole and give Elijah's ass a soft push until he's sinking his cock into the snowmeow. Moving to Sven's head yourself, you present him with your hard cock, which he expertly starts to lick and suck.";
 		WaitLineBreak;
 		say "     As you spit-roast Sven with one cock in his ass and one in his mouth, you soon hear Sven groan around your shaft in his muzzle and feel his body shudder as he sprays his cum onto the bunk. Your own orgasm doesn't feel too far off either, so before your restraint is overwhelmed, you decide on a certain place to spend your seed and pull out of Sven's mouth. Then you move over to the other side again, pushing against Elijah's back to make him bend over and rubbing your cock against his ass. He eagerly bends forward, readying himself for your entrance. You thrust deep inside his tight ass, gasping at the feelings of need and lust coming over you from the tightness and warmth around your cock. And Elijah seems to be quite aroused by being taken from behind while fucking, as it doesn't take much longer until you hear him moan as he fills Sven with his seed. His spasming anal muscles around your cock take you over the edge with him, making you shoot spurt after spurt of your seed into his ass.";
 		LineBreak;
@@ -1894,7 +1894,7 @@ to say ElijahSex11: [Get fucked by both Elijah and Fang at once]
 		say "     Feeling your submissive urges overtaking you, you decide to get a thorough fucking. Heading over to Elijah, you whisper your plan to him and he laughs and gives your ass a swat. 'You're such a horny slut. Let's go for it, honey,' he chuckles, pleased to indulge your lustful body's cravings. You and he head into the library, approaching your alpha wolf. Fang, as if smelling your need, accompanies you both into one of the side rooms.";
 		say "     Once you're undressed, Elijah gets into position on the floor, pulling you down into his arms as he lays back. Grabbing your hips, he thrusts onto it, making you release a lustful moan. This is echoed as Fang climbs atop you, sinking his hard rod into [if cunts of player > 2]another[else]your other[end if] wet pussy. You pant and groan in pleasure as the two start fucking you, Fang going a little slower so Elijah can keep pace with him, both thrusting hard into you again and again in synchronous fucking.";
 		WaitLineBreak;
-		say "     As the two horny males pound into you, your hot juices flow, your submissive urges loving the fact that you're letting yourself be used by the two sexy lovers at once. The fact that one is a hot guy and the other is a wild beast makes it all the better. As you're being stuffed, Elijah talks dirty to you about how sexy you look and what a slut you are for being Fang's fucktoy. In the throws of your submissive urges, his words turn you on all the more, echoing how you feel and loving it. You delight in the sounds of Elijah's grunts as he tries to keep pace with the feral wolf while Fang pants in your ear and nips at your shoulder. You tilt your head back, sharing a slobbery kiss with your lupine alpha before turning and kissing Elijah.";
+		say "     As the two horny males pound into you, your hot juices flow, your submissive urges loving the fact that you're letting yourself be used by the two sexy lovers at once. The fact that one is a hot guy and the other is a wild beast makes it all the better. As you're being stuffed, Elijah talks dirty to you about how sexy you look and what a slut you are for being Fang's fucktoy. In the throes of your submissive urges, his words turn you on all the more, echoing how you feel and loving it. You delight in the sounds of Elijah's grunts as he tries to keep pace with the feral wolf while Fang pants in your ear and nips at your shoulder. You tilt your head back, sharing a slobbery kiss with your lupine alpha before turning and kissing Elijah.";
 		say "     Feeling so deliciously full as Fang's knot swells and ties with you, you groan loudly in orgasm, your hot pussies clamping down around the pair of cocks stuffed inside you. The horny males cum shortly afterwards[if a random chance of 1 in 2 succeeds], first Elijah and then Fang[else], first Fang and then Elijah[end if]. The rush of having both their loads pumping into you makes you cum again, pushing you into multi-orgasmic bliss. Once you finally come down, you are left panting and soaked in feminine juices and leaking semen from your well-stuffed holes.[ElijahFangDoubleImpreg]";
 		decrease humanity of player by 3; [Additional humanity decrease from evil Elijah]
 		if FangWS is 1 and a random chance of 3 in 5 succeeds:
@@ -1917,7 +1917,7 @@ to say ElijahSex12:[Double-penetration by Elijah and Fang]
 		say "     Feeling your submissive urges overtaking you, you decide to get a thorough fucking. Heading over to Elijah, you whisper your plan to him and he laughs and gives your ass a swat. 'You're such a horny slut. Let's go for it, honey,' he chuckles, pleased to indulge your lustful body's cravings. You and he head into the library, approaching your alpha wolf. Fang, as if smelling your need, accompanies you both into one of the side rooms.";
 		say "     Once you're undressed, Elijah gets into position on the floor, pulling you down into his arms as he lays back. Grabbing your hips, he thrusts onto it, making you release a lustful moan. You bounce up and down in his lap as he pounds into you while you share some slobbery kisses with Fang, the wolf's long tongue sliding along yours. Once he's satisfied your [if cunts of player > 0]wet cunny[else]back door[end if] has had a chance to relax a little, he pulls you forward and pauses in the fucking to let Fang mount you. You groan softly as you feel his pointed glans slide between your cheeks[if cunts of player > 0]. Wanting to make sure it finds the intended hole[else]. Eager to get him inside you[end if], you reach back and get it lined up. You cry out as Fang thrusts into you, pushing his lupine cock into your [if cunts of player > 0]vagina[else]anus[end if] atop Elijah's, stretching your [if cunts of player > 0]cunt[else]asshole[end if] wide to take them both. Once in, Fang wastes no time and starts pounding into you right away. You pant and groan in pleasure as the two start fucking you, Fang going a little slower so Elijah can keep pace with him, both thrusting hard into you again and again in synchronous fucking.";
 		WaitLineBreak;
-		say "     As the two horny males pound into you, [if cunts of player > 0]your hot juices flow[else]you do your best to ignore the initial discomfort and focus on the pleasure[end if], your submissive urges loving the fact that you're letting yourself be used by the two sexy lovers at once in the same hole. The fact that one is a hot guy and the other is a wild beast makes it all the better. As you're being stuffed, Elijah talks dirty to you about how sexy you look and what a slut you are for being Fang's fucktoy. In the throws of your submissive urges, his words turn you on all the more, echoing how you feel and loving it. You delight in the sounds of Elijah's grunts as he tries to keep pace with the feral wolf while Fang pants in your ear and nips at your shoulder. You tilt your head back, sharing a slobbery kiss with your lupine alpha before turning and kissing Elijah.";
+		say "     As the two horny males pound into you, [if cunts of player > 0]your hot juices flow[else]you do your best to ignore the initial discomfort and focus on the pleasure[end if], your submissive urges loving the fact that you're letting yourself be used by the two sexy lovers at once in the same hole. The fact that one is a hot guy and the other is a wild beast makes it all the better. As you're being stuffed, Elijah talks dirty to you about how sexy you look and what a slut you are for being Fang's fucktoy. In the throes of your submissive urges, his words turn you on all the more, echoing how you feel and loving it. You delight in the sounds of Elijah's grunts as he tries to keep pace with the feral wolf while Fang pants in your ear and nips at your shoulder. You tilt your head back, sharing a slobbery kiss with your lupine alpha before turning and kissing Elijah.";
 		say "     Feeling so deliciously full as Fang's knot swells and ties with you, you groan loudly in orgasm, your [if cunts of player > 0]hot pussy[else]tight ass[end if] clamping down around the pair of cocks stuffed inside you, squeezing their cocks firmly against one another. The horny males cum shortly afterwards[if a random chance of 1 in 2 succeeds], first Elijah and then Fang[else], first Fang and then Elijah[end if]. The rush of having both their loads pumping into you makes you cum again, pushing you into multi-orgasmic bliss as their combined load fills your [if cunts of player > 0]womb[else]bowels[end if]. Once you finally come down, you are left panting[if cunts of player > 0], soaked in feminine juices[end if] and leaking semen from your well-stuffed hole.[ElijahFangDoubleImpreg]";
 		decrease humanity of player by 3; [Additional humanity decrease from evil Elijah]
 		if FangWS is 1 and a random chance of 3 in 5 succeeds:
@@ -1952,7 +1952,7 @@ to say ElijahSex13:[bondage and teasing by evil Elijah]
 		say "     Standing before you with folded arms, Elijah orders you to 'Strip - and make it a nice show'. You comply immediately, doing a little dance in which stretch and flex as you pull off your clothes piece by piece, showing off your body for the dark angel's enjoyment. And it obviously has some effect on him, judging from the bulge growing in his tight leather pants. The command 'Get your ass in the sling - now!' follows after you've pranced around in front of him in all your naked glory for a while. Going over to stand in front of the large spidersilk construct hanging in the air from its many tether-threads, you find yourself rather enthralled by the beauty of it. Its white silk shape looking soft and delicate while being immensely tough and flexible. You can't help but touch it, slowly stroking your fingers over its soft material.";
 		WaitLineBreak;
 		say "     You barely register the impatient harrumph from behind you, only realizing that you are letting your master wait when he grabs you by the arm and pulls you around. 'You're tardy, pet - I'll have to punish you for that' the fallen angel says in a tone betraying his arousal at dominating you. With a shove against your collarbone, Elijah pushes you to fall backwards onto the sling. Then he grabs your left arm, pulling it up and over your head to tie it at the wrist with one of the many tough silk strands available for that purpose. Your right arm quickly is fastened to another, then he lifts your legs to slide into loops of strands and tightens those around your ankles, leaving you all stretched out and helpless.";
-		if "Kinky" is listed in feats of player:
+		if player is kinky:
 			say "     Slap! Elijah hits one of your buttocks with his open hand, hard enough to sting a little. 'You've been a bad, bad pet,' he says with a chuckle, groping your other cheek before giving it another admonishing slap. Getting aroused by the spanking, you pant to Elijah that you deserve it, for him to hit you again, and harder, moaning loudly with each new slap. 'You're loving this, don't you, slut?' Elijah asks, then as you open your mouth gives you one a bit more powerful slap that makes you gasp in shared pain and lust. After that he says 'I'm gonna fuck you now' and moves his hands to open up the button of his tented leather trousers. They're quickly pushed down his legs, revealing an impressively long and perfectly shaped hard cock, ready and at attention.";
 		else:
 			say "     Slap! Elijah hits one of your buttocks with his open hand, hard enough to sting a little. 'You've been a bad, bad pet,' he says with a chuckle, groping your other cheek before giving it another admonishing slap. Feeling the sting of your master's displeasure on both of your buttcheeks, you beg for his forgiveness, declaring that you should have followed his wishes without delay. He gives you another, somewhat lighter slap on the butt, then says 'Good enough, for now' and moves his hands to open up the button of his tented leather trousers. They're quickly pushed down his legs, revealing an impressively long and perfectly shaped hard cock, ready and at attention.";

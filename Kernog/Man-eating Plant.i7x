@@ -98,10 +98,10 @@ this is the maneatingPlantCapture rule:			[player capture alternative attack]
 		let maneatingPlantnum be a random number between 50 and maneatingPlantnum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][maneatingPlantnum][roman type]: ";
 	if maneatingPlantcaught is 1 and playernum >= maneatingPlantnum:		[caught / escape attempt]
-		say "      With a quick torsion of the wrist, you manage to disentangle yourself. You promptly jump back out of reach.";
+		say "     With a quick torsion of the wrist, you manage to disentangle yourself. You promptly jump back out of reach.";
 		now maneatingPlantcaught is 0;
 	else if maneatingPlantcaught is 1:													[still caught]
-		say "      The man-eating plant forces you to take several steps forward, putting you in reach of more of its limbs. Your arm is caught by another vine, and the plant and you are engaged in a contest of strength.";
+		say "     The man-eating plant forces you to take several steps forward, putting you in reach of more of its limbs. Your arm is caught by another vine, and the plant and you are engaged in a contest of strength.";
 	if maneatingPlantcaught is 1:							[second attempt]
 		let playernum be a random number between 25 and playernum;
 		let maneatingPlantnum be a random number between 25 and maneatingPlantnum;
@@ -129,8 +129,8 @@ this is the maneatingPlantCapture rule:			[player capture alternative attack]
 		say "     In desperation, your legs kick franctically inside the plant. Your efforts pay off when the plant, under your struggle, decide to spit you out and weaken you a little more before attempting to swallow you.";
 		now maneatingPlantcaught is 0;
 	else if maneatingPlantcaught is 1:													[still caught]
-		say "      With one powerful contraction, the plant swallows your torso. [if breast size of player is 0]Your flat chest quickly follows[else if breast size of player <= 3]It takes the plant another suction to squeeze your [breast size desc of player] mammaries inside, squeezing them against your chest[else]It takes the plant several more suctions to squeeze your [breast size desc of player] inside, squeezing them against your chest[end if], and leaving only your neck free.";
-		say "     Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which streches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. Your brain urges you to push or claw your way out, before it is too late.";
+		say "     With one powerful contraction, the plant swallows your torso. [if breast size of player is 0]Your flat chest quickly follows[else if breast size of player <= 3]It takes the plant another suction to squeeze your [breast size desc of player] mammaries inside, squeezing them against your chest[else]It takes the plant several more suctions to squeeze your [breast size desc of player] inside, squeezing them against your chest[end if], and leaving only your neck free.";
+		say "     Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which stretches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. Your brain urges you to push or claw your way out, before it is too late.";
 		now fightoutcome is 23;
 		Lose;
 
@@ -139,9 +139,9 @@ Section 4 - Vore Bound state
 [Plays on loss]
 to say ManEatingPlantVoreScene:
 	if fightoutcome is 20:
-		say "     Vines coil around your knocked-out body and pushes you into the plant's gullet, little by little, until only your neck remains. Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which streches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. Your brain urges you to push or claw your way out, before it is too late.";
+		say "     Vines coil around your knocked-out body and pushes you into the plant's gullet, little by little, until only your neck remains. Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which stretches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. Your brain urges you to push or claw your way out, before it is too late.";
 	if fightoutcome is 22:
-		say "     You let the vines coil around you, and throw you legs-first into the plant's gullet. The vegetal swallows you, little by little, until only your neck remains. Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which streches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. A small voice in your brain urges you to get out of this dangerous situation.";
+		say "     You let the vines coil around you, and throw you legs-first into the plant's gullet. The vegetal swallows you, little by little, until only your neck remains. Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which stretches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. A small voice in your brain urges you to get out of this dangerous situation.";
 	say "start of scene";
 	if waiterhater is 0, wait for any key;
 	manEatingPlantVore;
@@ -247,6 +247,6 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Man-eating Plant":
-		say "    Three weeks after your capture, a military expedition lands on the island. As they progress through the forest, they come upon the plant that captured you. They watch with resignation at the outline of your body, trapped inside like many other victims before and after you throughout the island, unmoving and slowly digested by the plant. Sighing, the leader of the platoon signals one of the flamethrower-wielding troopers and has him burn the plant, the tree, and your half-digested, forever unidentified corpse.";
+		say "     Three weeks after your capture, a military expedition lands on the island. As they progress through the forest, they come upon the plant that captured you. They watch with resignation at the outline of your body, trapped inside like many other victims before and after you throughout the island, unmoving and slowly digested by the plant. Sighing, the leader of the platoon signals one of the flamethrower-wielding troopers and has him burn the plant, the tree, and your half-digested, forever unidentified corpse.";
 
 Man-eating Plant ends here.

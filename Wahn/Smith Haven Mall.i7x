@@ -102,6 +102,7 @@ to say Map_Smith_Haven_Mall_Desc:
 Section 6 - Mall Foyer
 
 The description of Mall Foyer is "[mallfoyer]".
+Mall Foyer is sleepsafe.
 earea of Mall Foyer is "Smith Haven".
 
 To say mallfoyer:
@@ -120,6 +121,7 @@ the scent of Mall Foyer is "The foyer smells heavily of male musk due to the wol
 Section 7 - Mall Atrium
 
 The description of Mall Atrium is "[mallatrium]".
+Mall Atrium is sleepsafe.
 earea of Mall Atrium is "Smith Haven".
 
 To say mallatrium:
@@ -140,6 +142,7 @@ West of Mall Atrium is Mall West Wing.
 Section 8 - Mall East Wing
 
 The description of Mall East Wing is "[malleastwing]".
+Mall East Wing is sleepsafe.
 earea of Mall East Wing is "Smith Haven".
 
 To say malleastwing:
@@ -160,6 +163,7 @@ the scent of Mall East Wing is "It smells like the mallrats.".
 Section 9 - Mall Foodcourt
 
 The description of Mall Foodcourt is "[mfcourt]".
+Mall Foodcourt is sleepsafe.
 earea of Mall Foodcourt is "Smith Haven".
 
 To say mfcourt:
@@ -175,14 +179,17 @@ To say mfcourt:
 
 
 East of Mall Foodcourt is Mall Restroom.
+The earea of Mall Restroom is "Mall".
+Mall Restroom is not sleepsafe.
 
-the scent of the Mall Foodcourt is "It smells a little like old, rotting food.".
+The scent of the Mall Foodcourt is "It smells a little like old, rotting food.".
 
 The invent of Mall FoodCourt is { "chair", "food" }.
 
 Section 10 - Mall West Wing
 
 The description of Mall West Wing is "[mallwestwing]".
+Mall West Wing is sleepsafe.
 earea of Mall West Wing is "Smith Haven".
 
 To say mallwestwing:
@@ -222,6 +229,7 @@ the scent of Mall Restroom is "It smells kind of bad in here with the open hole 
 Section 12 - Shag Shack
 
 Northeast of Smith Haven Mall Lot East is Shag Shack Entrance.
+Shag Shack Entrance is sleepsafe.
 The description of Shag Shack Entrance is "[ShagShackEntranceDesc]".
 
 To say ShagShackEntranceDesc:

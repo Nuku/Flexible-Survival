@@ -25,7 +25,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "2ndbest" as supersponsor.
+understand "fooledya" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -119,7 +119,7 @@ when play ends:
 		if "Fertile" is listed in feats of player and ( number of entries in childrenfaces + FeralBirths) > 5:
 			if cunts of player > 0:
 				say "You've been pregnant so many times and given birth to so many children that the nanites make a very strange change to your reproductive organs. Your body automatically stored a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life.";
-			else if "MPreg" is listed in feats of player and mpregcount >= 6:
+			else if player is mpreg_ok and mpregcount >= 6:
 				if "Breeding True" is not listed in feats of player and "They Have Your Eyes" is not listed in feats of player:
 					say "You've been pregnant so many times and given birth to so many children with your unusually altered body that the nanites make further changes to your reproductive organs.  Your body begins automatically storing some cum from anyone or anything that's screwed you.  Soon after you give birth, a small amount of the stored cum is automatically leaked out from a few of these storage chambers to be used to re-impregnate you if someone hasn't yet mated you.  This medley of semen is somehow mixed together to give you children from several sires.  You spend the rest of your life in a constant state of male pregnancy.  At first, you're alarmed by this, but soon you're seeking out diverse lovers to add their semen to your stores, loving the beautiful array of hybrid children you birth.  Your ever-growing brood cares for your every whim, allowing you to enjoy your new life as a male breeder.  Most of your children turn out as males as well, many capable of male pregnancy like you, though lacking your body's ability to be eternally pregnant.";
 				else:

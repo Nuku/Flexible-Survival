@@ -149,7 +149,7 @@ to say AresParkMounting:
 	if HP of Ares < 3:  [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around on you, proving that this was just what he planned - by mounting you from the back and starting to hump against you. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, though obviously the concept of clothing being in the way did escape Ares.";
 		LineBreak;
-		if "Submissive" is listed in feats of player:
+		if player is submissive:
 			say "     Feeling his hard shaft rub against your butt, a sudden shiver of arousal runs through you. With this man-like animal man trying to take you when he wants to, your submissive nature aches to... just let him do it. [bold type]Will you push down your pants and let Ares fuck you right here and now?[roman type][line break]";
 		else:
 			say "     Feeling his hard shaft rub against your butt, a sudden shiver of arousal runs through you. With this man-like animal trying to take you when he wants to, some submissive part of you brings up the idea of... just letting him do it. [bold type]Will you push down your pants and let Ares fuck you right here and now?[roman type][line break]";
@@ -238,7 +238,7 @@ to say AresHelenParkMounting:
 		say "     ([link]N[as]n[end link]) - Pull him off.";
 		if player consents:   [let Ares fuck her]
 			LineBreak;
-			say "     You think a moment about it, then decide to just let them go on. After all, Helen clearly seems to like it and you brought them out here for some exercise - which is what their wild coupling might be counted as. Ares fucks Helen with a untamed animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside her. Being mounted by this other animal in human form, Helen pants and yips in lust, obviously getting all her buttons pushed and being very happy at feeling his weight on her back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
+			say "     You think a moment about it, then decide to just let them go on. After all, Helen clearly seems to like it and you brought them out here for some exercise - which is what their wild coupling might be counted as. Ares fucks Helen with an untamed animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside her. Being mounted by this other animal in human form, Helen pants and yips in lust, obviously getting all her buttons pushed and being very happy at feeling his weight on her back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
 			LineBreak;
 			say "     [AresHelenParkFuck]";
 			now HP of Ares is 4;  [only had sex with Helen]
@@ -422,7 +422,7 @@ to say AresXerxesParkMounting:
 		say "     ([link]N[as]n[end link]) - Pull him off.";
 		if player consents:   [let Ares fuck him]
 			LineBreak;
-			say "     You think a moment about it, then decide to just let them go on. After all, Xerxes clearly seems to like it and you brought them out here for some exercise - which is what their wild coupling might be counted as. Ares fucks Xerxes with a untamed animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside your pet. Being mounted by this other animal in human form, Xerxes pants and yips in lust, obviously getting all his buttons pushed and being very happy at feeling Ares weight on his back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
+			say "     You think a moment about it, then decide to just let them go on. After all, Xerxes clearly seems to like it and you brought them out here for some exercise - which is what their wild coupling might be counted as. Ares fucks Xerxes with an untamed animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside your pet. Being mounted by this other animal in human form, Xerxes pants and yips in lust, obviously getting all his buttons pushed and being very happy at feeling Ares weight on his back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
 			LineBreak;
 			say "     [AresXerxesParkFuck]";
 			now HP of Ares is 4;  [only had sex with Xerxes]

@@ -1,7 +1,32 @@
 Version 2 of Yolanda by Stripes begins here.
 [Version 2.2.1 - Another Yolanda & Dom Icarus threesomes]
+[Version 2.3 - Minor maintenance and character relocation - Luneth]
 
 "Adds a dominant Raven NPC named Yolanda to the Flexible Survival game."
+
+[ HP of Yolanda                                                                ]
+[ 0 = Nothing                                                                  ]
+[ 1 = Talked w/her                                                             ]
+[   + Raven Key Fob unresolved                                                 ]
+[ 2 = Had sex - no bondage                                                     ]
+[ 3 = Had sex - bondage                                                        ]
+[ 4 = Did not offer move                                                       ]
+[ 5 = Unsuccessfully offered move                                              ]
+[ 6 = Successfully moved                                                       ]
+[ 7 = Talked/fucked since moved                                                ]
+[ 8 = No pairing w/Icarus                                                      ]
+[ 9 = Paired w/Icarus                                                          ]
+[ 100 = lost                                                                   ]
+
+[ jbfound  = Jewelry Box                                                       ]
+[ 0 = Not found                                                                ]
+[ 1 = -nothing-                                                                ]
+[ 2 = Jewelry box found                                                        ]
+[ 3 = Jewelry box given to Yolanda                                             ]
+
+[ yolandaqytat = Yolanda gave Qy'tat hint                                      ]
+[ yolandajb = Yolanda gave Jewelry Box hint                                    ]
+[ yolandatreasure = Gave Yolanda pirate gold                                   ]
 
 Section 1 - Raven Nest
 
@@ -100,9 +125,9 @@ to say movingYolanda:
 				say "     Victorious in your fight, you're able to prevent another from snatching up the backpack of jewelry and geegaws you were carrying. Yolanda's not been so lucky in fending off the others, too overburdened by the multiple packs and bags she's trying to carry, several of the smaller of which are now in the talons of harpies and flying off. Your charge scatters the last pair before they can pull free the large duffel bag full of sex toys from the raven's back.";
 				say "     'Oh no! My collection!' the raven caws angrily, preparing to take flight after the stolen satchels, but you hold her back. Pointing out that she'll neither be able to keep up with them nor fight them if she did catch them, she caws angrily again, hurling a colourful mix of curses upon the escaping harpies. In the end, you're able to regain her focus enough by showing her a handful of glittery jewelry and junk from the pack you had saved. Reassuring her that most of her collections are intact, she calms down enough to continue the journey.";
 				say "     She's in a foul mood for the remainder of the trip, snappy and finding fault in everything until you finally make it to the library. Once there, her mood does improve fairly quickly as she discovers that the place is more or less as you'd described it. She continues to make snarky remarks and comments on how it's only a matter of time before some crazy creature comes to drag everyone away, but the tone's changed and more teasing than angry or spiteful. She even thanks you and gives you a tender nip on the neck for protecting her [']treasures[']. In the end, she selects a spot upstairs near a window to set up her new nest. You leave her a little time to get settled in and to finish cooling off.";
-				move Yolanda to Grey Abbey 2F;
+				move Yolanda to Darkened Alcove;
 				now HP of Yolanda is 6;
-				move player to Grey Abbey 2F;
+				move player to Darkened Alcove;
 				now lastfuck of Yolanda is turns + 8;
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Beaten and distracted by the victorious harpy, you are unable to stop the backpack you were carrying from being snatched up and carried off in the talons of another. Other packs have been torn from Yolanda's back and are similarly being carried off by the others. 'Oh no! My collection!' the raven caws angrily, taking flight clumsily under the remaining burden to give pursuit before you can stop her. 'Give me back my shinies! My playthings! You feathery thieves! Lice-ridden bandits! You... you... mythological robbers!' you hear her crying out as she flies off after the considerably faster harpies, leaving you behind. You wait a while, hoping she'll return, but she never does. Eventually, you have to give up and return back to the library on your own after this ill-fated venture.";
@@ -127,7 +152,7 @@ the fuckscene of Yolanda is "[sexwithYolanda]".
 to say sexwithYolanda:
 	if HP of Yolanda is 0:
 		say "     That's rather forward of you. You should probably introduce yourself first.";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     Lacking a gender, you doubt you'll be able to rouse much interest out of the cynical raven.";
 	else if lastfuck of Yolanda - turns < 6:
 		say "     'More already? If you're going to go sex crazy, run along and do it somewhere else,' she says, flapping her wing dismissively towards the [if HP of Yolanda >= 6]stairwell back to the ground floor[else]door[end if].";
@@ -241,13 +266,13 @@ to say sexwithYolanda:
 
 
 to say yolandasex01:
-	if ( ( "Kinky" is listed in feats of player and a random chance of 1 in 5 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 5 succeeds ) or a random chance of 1 in 3 succeeds ) and HP of Yolanda < 3:
+	if ( ( player is kinky and a random chance of 1 in 5 succeeds ) or ( player is submissive and a random chance of 1 in 5 succeeds ) or a random chance of 1 in 3 succeeds ) and HP of Yolanda < 3:
 		say "[yolandasex02_b]"; [Yolanda opts for bondage version]
 	else:
 		say "     Feeling aroused enough to indulge the raven's interest, you get onto all fours for Yolanda. Offering up your juicy pussy by spreading your folds with a few fingers, you get an appreciative caw from the bird. After gently nuzzling your cunny with the curve of her beak, she grabs an appropriately [if cunt length of player < 5]small[else if cunt length of player < 10]sized[else if cunt length of player < 15]large[else]huge[end if] dildo from her collection with one of her feet. Using her rarely-seen hand talons, she affixes it into a [one of]black[or]red[or]pink[as decreasingly likely outcomes] harness and dons the strap-on. After taking a moment to adjust the fit, making sure you get a good look at the phallus that'll soon be filling you, she strides over to you.";
 		say "     'Mmm, yes. Look at you, so hot and ready,' she says with a sensual rumble as she brushes the tip of the toy across your juicy folds, making your cunt quiver inside. She gives you a nip with her beak and adjusts herself over you. Her soft feathers brush across your back as the hard dildo pushes into you, causing you to moan in dual pleasure. Returning to a more avian posture, she rests herself atop you and starts rocking her hips. She takes slow thrusts the first few times, but soon picks up the pace and is eventually pounding away at you hard and fast.";
 		say "     'Yeah, take it, you perv. Getting fucked by a girl, fucked by a bird,' she caws, nipping at your shoulders with her beak. She's right, you find; there is something strangely arousing about getting fucked by a woman/bird wearing a strap-on. The thought of you being so horny you'd settle for being screwed with a dildo becomes exciting in and of itself, enhancing your pleasure. And that's on top of the raven's clear experience with the role, working that phallus with practised skill and ease to sexually satisfy you both with a powerful orgasm. You cry out with much-needed release as the bird caws in orgasmic delight through your mutual climaxes";
-	if "Kinky" is listed in feats of player or "Submissive" is listed in feats of player:
+	if player is kinky or player is submissive:
 		say ". Finished, she pulls the sex toy out of you with a wet slurp and struts around to your front, getting to lick it clean of your own juices before removing and storing it.";
 	else:
 		say ". Finished, she pulls the sex toy out of you with a wet slurp, wipes it clean and stores it back in the box with the others.";
@@ -259,7 +284,7 @@ to say yolandasex01_b:
 		say "     'Rather trusting, aren't you? Letting a strange mutant tie you up. What's to stop me from leaving you like this? Or sharing you with those annoying gryphons until you're as feather-brained as them?'  She brushes her wingtip teasingly down your chest and over your crotch[if cocks of player > 0]. Your cock[smn] twitch[esmv] and stiffens[smv] further and your puss[yfn] grow[sfv] all the wetter[else]. Your puss[yfn] grow[sfv] all the wetter in response[end if], though you start to have second thoughts. You give your bonds a tug to test them, but you're secured tightly. She gives a chuckling caw at your struggle and fingers you once again to show she's the one in control.";
 		say "     'Mmm, yes. Feel that. You're so hot and juicy,' she says with a sensual rumble as she pumps her digits inside you, making your cunt quiver. She gives you a nip with her beak as she adjusts herself over you. Her soft feathers brush over your chest[if breast size of player > 0 and cocks of player > 0], tickling sensually at your breasts even as your stiff manhood is nestled into the ebon plumage between you. The textured dildo then pushes into you, causing you to moan from these myriad pleasures[else if cocks of player > 0] and your stiff manhood is nestled into the ebon plumage between you. The textured dildo then pushes into you, causing you to moan with pleasure[else if breasts of player > 0], tickling sensually at your nipples, as the textured dildo pushes into you, causing you to moan in dual pleasure[end if]. Returning to a more avian posture, she seats herself atop you and starts rocking her hips. The lower position means she can only take slower thrusts, but she doesn't seem to mind as this lets her draw it out all the longer.";
 		say "     'Getting fucked by a girl, fucked by a bird - such a perv,' she caws, nipping at your shoulders with her beak. She's right, you find; there is something strangely arousing about letting yourself get tied up and then fucked by a woman/bird wearing a strap-on. This turns you on all the more and you try to push up into her thrusts, but your bonds don't allow it well, giving you an additional reminder of your kinky predicament. This leaves the bird to set the pace, drawing it out for her own amusement. The raven's clearly had plenty of experience with the role, only letting you achieve small orgasms that leave you wanting more rather than properly satisfying you[if cunts of player > 1]. She even takes pauses to swap from one cunt to another, both ensuring you're thoroughly fucked and building your need all the higher[end if]. Yours is by no means the first pussy she's stuffed, working that stimulating phallus with practised skill and ease to ride you to the sexually edge while she savours her prize before finally bringing it to a head with a powerful orgasm from both of you. You cry out with much-needed release as the bird caws in orgasmic delight through your mutual climaxes.";
-		if "Kinky" is listed in feats of player or "Submissive" is listed in feats of player:
+		if player is kinky or player is submissive:
 			say "     Finished, she pulls the sex toy out of you with a wet slurp and struts around to your front, getting to lick it clean of your own juices before removing and storing it";
 		else:
 			say "     Finished, she pulls the sex toy out of you with a wet slurp, wipes it clean and stores it back in the box with the others";
@@ -269,7 +294,7 @@ to say yolandasex01_b:
 		say "     The raven nestles herself atop you with a caw, gliding the [if cunt length of player < 5]small[else if cunt length of player < 10]phallic[else if cunt length of player < 15]large[else]huge[end if] dildo between your thighs. Her soft feathers brush across your chest[if cocks of player > 0] and around your throbbing cock[smn] as the hard dildo pushes into you, causing you to moan in dual pleasure. Returning to a more avian posture, she seats herself atop you and starts rocking her hips. The lower position means she can only take slower thrusts, but she doesn't seem to mind as this lets her draw it out all the longer.";
 		say "     'Yeah, take it, you perv. Letting yourself get tied up and screwed senseless by a mutant bird girl. Such a kinky slut,' she caws, nipping at your shoulder with her beak as she grinds her feathered hips hard against you, pressing the dildo deep inside you. You can't help but agree, feeling like quite the slut for having allowed a bird/woman to tie you up and then stuff your pussy with a strap-on. This turns you on all the more and you try to push up into her thrusts, but your bonds don't allow it well, giving you an additional reminder of your kinky predicament. This leaves the bird to set the pace and play with your body as she will for her own amusement. She draws it out by alternating between thrusting into you, grinding down on your crotch, fondling your junk and pausing for light, feathery caresses[if cunts of player > 1]. She even alternates the textured toy from one cunt to another, both ensuring you're thoroughly fucked and building your need all the higher[end if] - all while only allowing you minor orgasms that make you all the hornier while she has her fun with her tied up [']plaything['].";
 		say "     After a long, drawn out session, she grinds her hips and works that stimulating dildo back and forth inside you in quick, short motions that finally build you up to a powerful orgasm. You cry out with much-needed release as the bird caws in orgasmic delight through your mutual climaxes";
-		if "Kinky" is listed in feats of player or "Submissive" is listed in feats of player:
+		if player is kinky or player is submissive:
 			say ". Finished, she pulls the sex toy out of you with a wet slurp and struts around to your front, getting to lick it clean of your own juices before removing and storing it";
 		else:
 			say ". Finished, she pulls the sex toy out of you with a wet slurp, wipes it clean and stores it back in the box with the others";
@@ -277,13 +302,13 @@ to say yolandasex01_b:
 	if HP of Yolanda < 3, now HP of Yolanda is 3;
 
 to say yolandasex02:
-	if ( ( "Kinky" is listed in feats of player and a random chance of 1 in 5 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 5 succeeds ) or a random chance of 1 in 3 succeeds ) and HP of Yolanda < 3:
+	if ( ( player is kinky and a random chance of 1 in 5 succeeds ) or ( player is submissive and a random chance of 1 in 5 succeeds ) or a random chance of 1 in 3 succeeds ) and HP of Yolanda < 3:
 		say "[yolandasex02_b]"; [Yolanda opts for bondage version]
 	else:
 		say "     Feeling particularly kinky, you get onto all fours for Yolanda. Offering up your tight back door by spreading your cheeks with both hands, you get an appreciative caw from the bird. After gently nuzzling your rump with the side of her beak while checking you out with a sidelong glance, she grabs an appropriately [if scalevalue of player < 3]small[else if scalevalue of player is 3]sized[else if scalevalue of player is 4]large[else]huge[end if] dildo from her collection with one of her feet. Using her rarely-seen hand talons, she affixes it into a [one of]black[or]red[or]pink[as decreasingly likely outcomes] harness and dons the strap-on. After taking a moment to adjust the fit, making sure you get a good look at the phallus that'll soon be filling you, she strides over to you.";
 		say "     'Now that's a sight I like to see. There's nothing quite like stuffing an ass,' she says with a swat of her wing across your bottom. After taking a moment to apply some lube, she gives you a nip with her beak and adjusts herself over you. Her soft feathers brush across your back as the hard dildo pushes into you, causing you to moan in dual pleasure. Returning to a more avian posture, she rests herself atop you and starts rocking her hips. She takes slow thrusts initially, allowing your crinkled hole to adjust to the penetration, but soon picks up the pace and is eventually pounding away at you hard and fast.";
 		say "     'Yeah, take it, you perv. Bending over and taking it up the ass from a girl, and a bird at that. You slut,' she caws, nipping at your shoulder with her beak as she grinds her feathered hips hard against you, pressing the dildo [if cocks of player > 0]against your prostate[else]deep inside you[end if]. You can't help but agree, feeling like quite the slut for having allowed a bird/woman to fuck you in the ass with a strap-on. The thought of you being so horny you'd settle for being screwed with a dildo becomes exciting in and of itself, enhancing your pleasure. And that's on top of the raven's clear experience with the role. Yours is by no means the first ass she's filled, working that phallus with practised skill and ease to sexually satisfy you both with a powerful orgasm. You cry out with much-needed release as the bird caws in orgasmic delight through your mutual climaxes. Finished, she rises off of you and slips the sex toy out of your tingling anus with a wet slurp";
-		if "Kinky" is listed in feats of player or "Submissive" is listed in feats of player:
+		if player is kinky or player is submissive:
 			say ". After wiping it across each ass cheek, she wipes it clean and stores it back in the box with the others.";
 		else:
 			say ". Removing it, she cleans it with a wet wipe and stores it back in the box with the others.";
@@ -295,7 +320,7 @@ to say yolandasex02_b:	[bondage anal]
 		say "     'Ah-ah-ah!' she teases with another feathery touch while grabbing your ass with one taloned foot. 'No backing out now. Though I do think I'd rather keep you all to myself.'  And with that, she moves atop you with a caw. Her soft feathers brush across your back as the hard dildo pushes into you, causing you to moan in dual pleasure. Returning to a more avian posture, she rests herself atop her captured lover and starts rocking her hips. She takes slow thrusts initially, allowing your crinkled hole to adjust to the penetration, but soon picks up the pace and is eventually pounding away at you hard and fast.";
 		say "     'Yeah, take it, you perv. Bending over and taking it up the ass from a girl, and a bird at that. You slut,' she caws, nipping at your shoulder with her beak as she grinds her feathered hips hard against you, pressing the dildo [if cocks of player > 0]against your prostate[else]deep inside you[end if]. You can't help but agree, feeling like quite the slut for having allowed a bird/woman to tie you up and then fuck you in the ass with a strap-on. This turns you on all the more and you try to push back into her thrusts, but your bonds don't allow it, giving you an additional reminder of your kinky predicament. This leaves the bird to set the pace, drawing it out for her own amusement. The raven's clearly had plenty of experience with the role, pausing when needed to keep you from coming. Yours is by no means the first ass she's filled, working that phallus with practised skill and ease to keep you on sexual edge while she savours her prize before finally bringing it to a head with a powerful orgasm from both of you. You cry out with much-needed release as the bird caws in orgasmic delight through your mutual climaxes.";
 		say "     Finished, she rises off of you and slips the sex toy out of your tingling anus with a wet slurp";
-		if "Kinky" is listed in feats of player or "Submissive" is listed in feats of player:
+		if player is kinky or player is submissive:
 			say ". After wiping it across each ass cheek, she wipes it clean and stores it back in the box with the others.";
 		else:
 			say ". Removing it, she cleans it with a wet wipe and stores it back in the box with the others.";
@@ -305,7 +330,7 @@ to say yolandasex02_b:	[bondage anal]
 		say "     The raven moves atop you with a caw, gliding the lubed toy between your upturned cheeks. Her soft feathers brush across your back as the hard dildo pushes into you, causing you to moan in dual pleasure. Returning to a more avian posture, she rests herself atop her captured lover and starts rocking her hips. She takes slow thrusts initially, allowing your crinkled hole to adjust to the penetration, but soon picks up the pace and is eventually pounding away at you hard and fast.";
 		say "     'Yeah, take it, you perv. Letting yourself get tied up and fucked up the ass by a mutant bird girl. Such a kinky slut,' she caws, nipping at your shoulder with her beak as she grinds her feathered hips hard against you, pressing the dildo [if cocks of player > 0]against your prostate[else]deep inside you[end if]. You can't help but agree, feeling like quite the slut for having allowed a bird/woman to tie you up and then fuck you in the ass with a strap-on. This turns you on all the more and you try to push back into her thrusts, but your bonds don't allow it, giving you an additional reminder of your kinky predicament. This leaves the bird to set the pace, drawing it out for her own amusement. She draws it out by alternating between thrusting into you, fondling your junk and pausing for light, feathery caresses - all geared towards keeping you on the edge of release while she has her fun with her tied up [']toy['].";
 		say "     After a long, drawn out session, she pounds you vigorously with the strap-on while masturbating you to a powerful orgasm. You cry out with much-needed release as the bird caws in orgasmic delight through your mutual climaxes. Finished, she rises off of you and slips the sex toy out of your tingling anus with a wet slurp";
-		if "Kinky" is listed in feats of player or "Submissive" is listed in feats of player:
+		if player is kinky or player is submissive:
 			say ". After wiping it across each ass cheek, she wipes it clean and stores it back in the box with the others";
 		else:
 			say ". Removing it, she cleans it with a wet wipe and stores it back in the box with the others";
@@ -487,7 +512,7 @@ to say yolanda+domicarus01:
 	say "     '[if avpred is true]Is our subby predator looking for a proper fucking?' he asks teasingly. Rather than wait for a response, he grinds his hard cock against you and nips down hard on your neck. 'Time for you to show us what a slutty hen you are again.'  With that, he shoves you over onto all fours and moves to mount you[else]Is our subby plaything looking for a proper fucking?' he asks teasingly. Rather than wait for a response, he grinds his hard cock against you and gives your shoulder a nip. 'Time for you to show us what a slutty hen you can be.'  With that, he guides you over onto all fours and moves to mount you[end if]. As he thrusts into your [if cunts of player > 0]juicy cunny[else]tight ass[end if], Yolanda is there to guide the passarine's cock into you while watching eagerly. And once in, the horny songbird fucks you gently at first.";
 	say "     This self-restraint is only short-lived, as he is only holding back long enough for Yolanda to enclose your hands in leather mitts shaped like hooves and to strap a harness and reins onto your head. Tugging firmly on those reins, she pulls your head into her crotch, pressing your face to her cloacal pussy. Getting a nod from her, Icarus lets himself pound away at you hard and fast, nipping [if avpred is true]firmly [end if]at your shoulder as he does. That initial hard thrust drives you all the harder against the raven's loins and causes you to moan, resulting in some of her juices wetting your lips and running into your mouth. Having gotten a taste of her, you dive in for more, your tongue working across and past those quivering folds to lap up her juices in an effort to please the dominant femme.";
 	say "     Between the mitts enclosing your hands, the harness holding your head in place and the bird pounding you from behind, you can do little else. Not that it isn't enjoyable; having no control in the situation is actually quite arousing. The feel of Icarus's stiff cock pushing into you, spreading your inner walls while Yolanda's juices fills your sense of smell and taste has you moaning for more. You push your hips back as best you can and work your [if cunts of player > 0]vaginal[else]anal[end if] muscles around that throbbing prick. He calls you a slut again and you can't help but feel he's right given how much you want to feel the birdie's hot seed in you.";
-	say "     This intense session goes on for some time, the passarine atop you holding back as long as he can to draw it out. Yolanda's in the throws of her second orgasm from your overeager tonguework by the time the songbird [if avpred is true]bites down onto your shoulder hard again[else]gives out a musical cry[end if] moments before he cums. He pumps a larger than normal load of sticky bird semen into your [if cunts of player > 0]sopping cunny in an effort to breed you[else]quivering asshole, painting your prostate[end if]. He continues to pound into you, maybe even harder than before, as he drains his balls into you. Your well-used hole is left gaping and dripping with white goo by the time he pulls out. He pushes your worn body aside and you roll over onto the padded nest while he moves past you to share a beak nuzzle and lick with the raven before leaving as quickly as he came.[ovichance]";
+	say "     This intense session goes on for some time, the passarine atop you holding back as long as he can to draw it out. Yolanda's in the throes of her second orgasm from your overeager tonguework by the time the songbird [if avpred is true]bites down onto your shoulder hard again[else]gives out a musical cry[end if] moments before he cums. He pumps a larger than normal load of sticky bird semen into your [if cunts of player > 0]sopping cunny in an effort to breed you[else]quivering asshole, painting your prostate[end if]. He continues to pound into you, maybe even harder than before, as he drains his balls into you. Your well-used hole is left gaping and dripping with white goo by the time he pulls out. He pushes your worn body aside and you roll over onto the padded nest while he moves past you to share a beak nuzzle and lick with the raven before leaving as quickly as he came.[ovichance]";
 	now lastfuck of Icarus is turns;
 
 
@@ -570,14 +595,14 @@ Instead of resolving a Raven Key Fob:
 
 Section 5 - Yolanda and Icarus
 
-instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Library and HP of Icarus >= 3 and HP of Icarus < 50 ) and ( Yolanda is in Grey Abbey 2F and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 ):
+instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Library and HP of Icarus >= 3 and HP of Icarus < 50 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 ):
 	say "     As you're coming up the stairs, you can hear the excited caws of Yolanda. Curious, you go to check on her and find her in lustful play with Icarus. Sitting atop him in avian posture, she's got your passarine pet tied up with his tail raised and her strap-on buried in his ass. She's even put something akin to a combination bird hood and ball gag onto him. Seeing you there, her first response is to give a few hard thrusts into this feathery bottom, drawing out some muffled chirps from his muzzled beak.";
 	say "     [bold type]Giving him a firm nip on the neck, she pauses, as if waiting to see if you'll come join them or leave.[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Join them.";
 	say "     ([link]N[as]n[end link]) - Leave.";
 	if the player consents:
-		move player to Grey Abbey 2F;
+		move player to Darkened Alcove;
 		let avpred be false;
 		if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
 			now avpred is true;
@@ -595,7 +620,7 @@ instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Libr
 		now HP of Yolanda is 8;
 
 an everyturn rule:
-	if player is in Grey Abbey Library and ( Icarus is in Grey Abbey Library and HP of Icarus >= 51 ) and ( Yolanda is in Grey Abbey 2F and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 or cunts of player > 0 ) and skipturnblocker is 0:
+	if player is in Grey Abbey Library and ( Icarus is in Grey Abbey Library and HP of Icarus >= 51 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 or cunts of player > 0 ) and skipturnblocker is 0:
 		let avpred be false;
 		if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
 			now avpred is true;
@@ -639,30 +664,6 @@ an everyturn rule:
 			move player to Bunker;
 			now HP of Yolanda is 8;
 
-
-[ HP of Yolanda                      ]
-[ 0 = Nothing                        ]
-[ 1 = Talked w/her                   ]
-[   + Raven Key Fob unresolved       ]
-[ 2 = Had sex - no bondage           ]
-[ 3 = Had sex - bondage              ]
-[ 4 = Did not offer move             ]
-[ 5 = Unsuccessfully offered move    ]
-[ 6 = Successfully moved             ]
-[ 7 = Talked/fucked since moved      ]
-[ 8 = No pairing w/Icarus            ]
-[ 9 = Paired w/Icarus                ]
-[ 100 = lost                         ]
-
-[ jbfound  = Jewelry Box             ]
-[ 0 = Not found                      ]
-[ 1 = -nothing-                      ]
-[ 2 = Jewelry box found              ]
-[ 3 = Jewelry box given to Yolanda   ]
-
-[ yolandaqytat = Yolanda gave Qy'tat hint ]
-[ yolandajb = Yolanda gave Jewelry Box hint ]
-[ yolandatreasure = Gave Yolanda pirate gold ]
 
 [ Notes:
 other shinnies:

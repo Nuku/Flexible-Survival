@@ -63,7 +63,7 @@ When Play begins:
 	now tail entry is "You have a long, horse-like tail swaying behind you, almost reaching to the ground. Its long strands of coarse hair cover your ass completely as it flicks this way and that seemingly on its own.";
 	now cock entry is "[one of]equine[or]horse-like[or]blunt[or]powerful[at random]";
 	now face change entry is "your mouth stretches forward, your nose flattening as it merges with your equine muzzle. You find yourself groaning slightly as your forehead flattens and your eyes shift their position to the sides slightly. Meanwhile your ears lengthen into larger and pointed horse-like ears, which come to rest atop your equine face"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your muscles seem to shift around underneath your skin, making you stumble around trying to keep your balance for a moment. Looking down, you see that you new have powerful digitigrade legs ending in a pair of hooves. The rest of your body finishes changing as well, your hands having acquired rather hoof-like nails, and your chest and torso pretty broad and more equine looking. Also, your crotch seems to have acquired a pair of small, perky breasts sitting a bit above and to the sides of your genitals"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now body change entry is "your muscles seem to shift around underneath your skin, making you stumble around while trying to keep your balance for a moment. Looking down, you see that you now have powerful digitigrade legs ending in a pair of hooves. The rest of your body finishes changing as well, your hands having acquired rather hoof-like nails, and your chest and torso pretty broad and more equine looking. Also, your crotch seems to have acquired a pair of small, perky breasts sitting a bit above and to the sides of your genitals"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "soft cow-fur begins to push its way out of your flesh, the black and white pattern forming into several rather interesting dappled shapes as it finishes covering your body completely."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "it seems to tighten into a rather broader and flatter ass, long strands of thick equine hair beginning to sprout from the base of your spine, quickly growing out to form a long and handsome equine tail which hangs down past your knees and seems to flick from side to side as if it had a mind of its own"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it grows erect and aroused, before beginning to shift and change. Its tip becomes pretty broad and flattens into a rather blunt equine shape, while a proper sheath forms around the base, and a ribbed ring forms about halfway up your changed member"; [ cock change text. format as "Your cock feels funny as (your text)" ]
@@ -77,7 +77,7 @@ When Play begins:
 	now HP entry is 35;                 [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 4;                 [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 6;                [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Nowhere";        [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Nowhere";        [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;         [ Length infection will make cock grow to if cocks]
 	now cock width entry is 0;          [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
@@ -111,7 +111,7 @@ the usedesc of cowboy milk is "[cowboy milk use]";
 
 to say cowboy milk use:
 	say "Screwing the cap of the plastic bottle, you put it to your lips and drink its contents with deep swallows of the fresh and tasty milk.";
-	decrease thirst of the player by 10;
+	decrease thirst of player by 10;
 
 cowboy milk is infectious. The strain of cowboy milk is "Cowboy Cuntboy".
 

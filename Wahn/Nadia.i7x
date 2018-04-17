@@ -1,5 +1,6 @@
 Version 1 of Nadia by Wahn begins here.
 [Version 1: Npc setup as commissioned by Watcher]
+[Version 1.1 - Character relocation - Luneth]
 
 "Adds an NPC named Nadia to the Flexible Survival game"
 
@@ -131,7 +132,7 @@ to say npcNadiaintUpdate:
 
 to say NadiaEggBirth:   [time to give birth]
 	now NadiaPregCounter1 is 0;          [empty place for an egg]
-	if player is in Grey Abbey 2F:
+	if player is in Garden View:
 		if NadiaPregCounter2 is 0:
 			if NadiaDescription is 1 or NadiaDescription is 2:
 				say "     [NadiaMaidenBirthingText]";
@@ -560,7 +561,7 @@ Instead of resolving a Bird Troubles:
 	say "     These must be the back entrances to the labs, though which bulky materiel is loaded. Perhaps there's something useful remaining inside - after all, the city has been full of surprises so far. Most of the loading bays are shuttered and locked, but there's a door in the back which has been blocked by a fallen length of thick steel piping that's caught between two others to form a bar of sorts, wedging shut the outward-opening door. It's thick, riddled with claw marks and slightly bent, but isn't too heavy to lift and you're in before too long.";
 	WaitLineBreak;
 	say "     Behind the door is a long corridor doors leading to individual laboratories on either side, a draft carrying air in from the small windows set high into the walls. Looking through the glass windows separating them from the corridors proper, most of the specimens have died from thirst and starvation in the cages, an unhappy end even for lab animals. Yet in one of them, the cages have been thrown open - not forced, but thrown - and there's someone collapsed on the ground inside! Carefully, you ease open the door and peer inside, holding your breath.";
-	say "     Face-down on the ground is a bird-woman, her figure thin and scrawny, her hands and feet now talons. Her feathers are a dull, muted shade of various colours, her crimson hair is messy and unkempt, and her tail-feathers are long and sweeping, reaching down to her calves. The wings that jut from between her shoulderblades bent at entirely unnatural angles, much like pictures of pigeon roadkill you've seen. Perhaps in a different time and place she could have been truly beautiful, but right now that beauty is just broken, not unlike a cracked mirror.";
+	say "     Face-down on the ground is a bird-woman, her figure thin and scrawny, her hands and feet now talons. Her feathers are a dull, muted shade of various colours, her crimson hair is messy and unkempt, and her tail-feathers are long and sweeping, reaching down to her calves. The wings that jut from between her shoulder blades are bent at entirely unnatural angles, much like pictures of pigeon roadkill you've seen. Perhaps in a different time and place she could have been truly beautiful, but right now that beauty is just broken, not unlike a cracked mirror.";
 	WaitLineBreak;
 	say "     Roused by your footsteps as you approach, she raises her head and scrambles to her feet, whimpering and shielding herself with her hands until she realises you're not a threat - and you're equally relieved that she isn't one, either.";
 	say "     'Someone came,' the bird-woman says, slumping her shoulders. 'Someone finally came. Who knows how long I spent trying to break down that door, that and the front entrance - I was beginning to wonder this was how I would die, trapped and alone...I watched the animals die one by one from hunger in their cages, but I didn't dare to let them go...wondering if I would end up like them...'";
@@ -577,8 +578,8 @@ Instead of resolving a Bird Troubles:
 		WaitLineBreak;
 		say "     With that, Nadia finishes her story and looks about the library, her gaze falling on the staircase to the second floor. Drawn by some invisible force, she heads upstairs with you following, and after looking about the library's second floor, begins pulling cushions off the sofa and arranging them in a circular pattern on an empty spot on the floor. You watch her for a few moments before finally realising that she's building a nest thanks to her avian instincts, a suspicion that's confirmed by her flopping straight into the middle of the small pile and nestling down with no small satisfaction.";
 		say "     'Thank you for letting me stay here,' she chirps. 'It's the first time since this mess started that anything's happened to give me hope. I was watching, waiting for so long, afraid to call for help yet desperately hoping someone would come before I died... and you did. Again, thank you so much.'";
-		move Nadia to Grey Abbey 2F;
-		move player to Grey Abbey 2F;
+		move Nadia to Garden View;
+		move player to Garden View;
 		now HP of Nadia is 1;
 		now npcNadiaint is "0000000000000B";
 		now Char-A of Nadia is "0";
@@ -643,7 +644,7 @@ to say LostChickFight:
 			else if fightoutcome >= 10 and fightoutcome <= 19:        [won]
 				say "     With a yowl, the last of the feline gymnasts turns tail and flees, allowing Vera to flutter down and embrace you by way of thanks. Your daughter feels almost as warm and good as Nadia does, and it's probably only a matter of time until she's as beautiful as her mother. Thankfully, the trip back to the library is uneventful, and Vera has the good graces to remain silent, too. You're about a couple blocks away from the library when the sound of Nadia's singing echoes off the derelict buildings to your ears, and you take your daughter by the hand and quicken your pace. Just how long has she been calling and waiting?";
 				LineBreak;
-				move player to Grey Abbey 2F;
+				move player to Garden View;
 				LineBreak;
 				say "     Upon seeing you return with Vera in tow, Nadia rises, gives Vera a hug, and then proceeds to sit the chick in her nest and give her a good scolding, her voice rising to the occasional angry chirrup. '...And there is a reason, young lady, that I always ask that you stick in pairs when you go out. Did it have to take something like this to happen and your father having to go out and rescue you before the lesson is driven home? I don't think...'";
 				WaitLineBreak;
@@ -707,39 +708,39 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 	else:
 		say "     Nadia whimpers, tears gathering in her large, black eyes, but sinks back into the soft confines of her nest. It's a little hard not to feel a twinge of pity for her, but you do have your reasons.";
 
-instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and Exotic Bird is tamed and companion of player is Exotic Bird and Char-H of Nadia is "0"):
-	move player to Grey Abbey 2F;
-	say "     Seeing the exotic bird on your shoulder, Nadia lets out a girlish trill of sheer delight. 'It's so pretty!' She warbles a few notes and the bird obediently flaps over to her, landing on her wrist, and she takes it back into her nest to fuss over it as if it were her very own child. The exotic bird is only more than happy to be in Nadia's presence, cosying up to the bird-woman and preening her feathers. As Nadia pets and coos at the exotic bird, you notice the similarity in their colourful plumage and can't help but wonder if the birds that she'd been caring for while trapped were similar, if not of the same species as the one that's now your pet. She did say they'd been on loan from the zoo, after all...";
-	say "     It's a while before Nadia is done with her little affectionate display, and she sings another few notes before throwing the exotic bird off her wrist, your pet flapping through the air to return to your shoulder. Thoroughly content and a lot happier than she was a few moments ago, Nadia gives you a small, shy smile before retreating back into the confines of her nest.";
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Exotic Bird is tamed and companion of player is Exotic Bird and Char-H of Nadia is "0"):
+	move player to Garden View;
+	say "     Seeing the exotic bird on your shoulder, Nadia lets out a girlish trill of sheer delight. 'It's so pretty!' She warbles a few notes and the bird obediently flaps over to her, landing on her wrist, and she takes it back into her nest to fuss over it as if it were her very own child. Chirpy is only more than happy to be in Nadia's presence, cosying up to the bird-woman and preening her feathers. As Nadia pets and coos at the exotic bird, you notice the similarity in their colourful plumage and can't help but wonder if the birds that she'd been caring for while trapped were similar, if not of the same species as the one that's now your pet. She did say they'd been on loan from the zoo, after all...";
+	say "     It's a while before Nadia is done with her little affectionate display, and she sings another few notes before throwing Chirpy off her wrist, your pet flapping through the air to return to your shoulder. Thoroughly content and a lot happier than she was a few moments ago, Nadia gives you a small, shy smile before retreating back into the confines of her nest.";
 	now Char-H of Nadia is "1";
 	say "[npcNadiaintUpdate]";
 
-instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and Gryphoness is tamed and companion of player is Gryphoness) and (Char-A of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
-	move player to Grey Abbey 2F;
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Gryphoness is tamed and companion of player is Gryphoness) and (Char-A of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
+	move player to Garden View;
 	say "     As you enter the library's second floor, you leave Denise a little way away as you go and check in with Nadia to make sure she's all right, while the gryphoness passes the time by leaning against one of the second storey railings and singing to herself.";
 	say "     At the sound of Denise's singing, Nadia perks up from within her nest and eyes the gryphoness, her interest clearly sparked by the gryphoness's talents. Seeing that introductions are in order, you invite Denise over and introduce the two of them. The two quickly launch into an animated discussion over music and singing in particular, with the two of them comparing their tastes in music. The two are quite similar, although Nadia prefers soothing or upbeat tunes as opposed to Denise's lonely, haunting songs, and dislikes much of contemporary music, finding much of it too jarring for her tastes.";
 	say "     The conversation mostly stays on topic at first, although you catch Nadia giving Denise's cock the occasional embarrassed glance as they discuss the possibility of a recital and perhaps singing a duet some time in the future. Inevitably, though, the discussion slowly turns from music to their experiences of being fucked and bred by you. As with their vocal talents, although the two avians are in general consensus, they don't quite agree on the finer points, with Denise preferring the former and Nadia favouring the latter. Still, with all the talk on the details of your exploits with each of them and the two avian breeders giggling as they compare notes, you decide it's probably best to leave them be for now and come back a little later when they're done.";
 	now Char-A of Nadia is "1";
 	say "[npcNadiaintUpdate]";
 
-instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and Icarus is in Grey Abbey Library and HP of Icarus < 50 and HP of Icarus > 0 and NadiaDescription > 3 and Char-B of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
-	move player to Grey Abbey 2F;
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Icarus is in Grey Abbey Library and HP of Icarus < 50 and HP of Icarus > 0 and NadiaDescription > 3 and Char-B of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
+	move player to Garden View;
 	say "     As you walk up to the library's second floor, you're treated to a curious sight. Icarus isn't in his usual place in the rafters - instead, your little bird-slut is in Nadia's nest, a spot of blue amongst red, and he's suckling from her, the sight of a full-grown adult doing just that a little odd even in these times, especially when Nadia usually reserves her generous bounty for her own. Nadia, on the other hand, doesn't seem to mind, mothering the chaffinch and cradling him in her lap as if he were just a big baby. Neither of them seem to notice you as you step closer, and it's not until you're close enough to hear Nadia's soft murmurings that you realise what this is all about.";
 	say "     'Pain is not necessarily bad,' she whispers to Icarus as the chaffinch continues to nurse from her ample breasts. 'Each and every one of my brood was brought into the world with pain... and I love them all. At first, there was pain in the breeding, pain in the birthing, and now...I don't regret a single moment of it. Suffering changes us... sometimes for the better.'";
 	say "     Swallowing hard, you wonder if she knows how he got some of his scars, and if she'd be so calm if she did. It seems like you're not going to get much out of them for the moment, and you decide to leave them be until they're done.";
 	now Char-B of Nadia is "1";
 	say "[npcNadiaintUpdate]";
 
-instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and HP of Nadia is 1 and NadiaChickCounter > 9):
-	move player to Grey Abbey 2F;
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and HP of Nadia is 1 and NadiaChickCounter > 9):
+	move player to Garden View;
 	say "     Stepping up to the library's second floor, you're greeted by the familiar sight of Nadia's nest - and the unfamiliar sight of her not in it. Instead, she's leaning against one of the open windows, singing a few notes every now and then into the city, her voice carrying out amongst the buildings. It's as if she's looking for something, but although she hurriedly waves you over the moment she sees you, you're clearly not the source of her agitation.";
 	say "     'Have you seen Vera while out in the city?' she asks you worriedly. 'Silly girl went out to check one of the older stores down by the campus, and hasn't come back yet. I told her not to go, especially all on her own, but I suppose she was curious about how her mother used to live. Her wings aren't strong enough for her to fly very much yet, so I'm worried that she can't make it back safely and may be stuck out there...'";
 	say "     Admittedly, it's a little hard to remember just which of Nadia's chicks is which, especially when the broody bird keeps on adding to their number, but it shouldn't be too hard to find one of them when avians, especially ones as colourful as birds of paradise, aren't exactly a common sight on the campus. You agree to keep an eye out for her lost chick when you're in the area; Nadia nods and turns back to the window, calling out every now and then in the hope that her lost daughter will return to her.";
 	now Lost Chick is unresolved;[event open now]
 	now HP of Nadia is 2;   [quest given]
 
-instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and NadiaDescription is 6 and NadiaPregVisibility is 5 and NadiaChickCounter > 19 and HP of Nadia is 4):
-	move player to Grey Abbey 2F;
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and NadiaDescription is 6 and NadiaPregVisibility is 5 and NadiaChickCounter > 19 and HP of Nadia is 4):
+	move player to Garden View;
 	say "     As you climb up the stairs to the library's second floor, Nadia waves you over, and leaves her nest to meet you halfway. Her enormously pregnant state weighs her down considerably and she's huffing and out of breath by the time she standing in front of you, but she still manages a smile and presents you with a soft, colourful bundle, which when unfolded turns out to be a feathered cloak, glimmering faintly with a rainbow sheen of colours as it catches the light of the library.";
 	say "     'I sewed my own feathers into it,' Nadia says shyly. 'I had some spare time and the children brought me something useful, so I didn't want the material to go to waste. Besides, I wanted to thank you for saving Vera. Try it on, won't you?'";
 	say "     It's hard to deny Nadia when she's looking so bright and hopeful, and you pull on the cloak about your body - it fits you perfectly, and you feel all warm and protected as it hangs about your shoulders, like a mother's embrace. All in all, it's very well-made, and she's obviously worked on this for a while.";
@@ -754,7 +755,7 @@ instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and
 	increase carried of feathered cloak by 1;
 	now HP of Nadia is 5;
 
-instead of navigating Grey Abbey Library while (Nadia is in Grey Abbey 2F and NadiaChickCounter > 1 and Char-J of Nadia is "0"):
+instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaChickCounter > 1 and Char-J of Nadia is "0"):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -781,7 +782,7 @@ instead of navigating Grey Abbey Library while (Char-J of Nadia is "1" and (Gree
 	now Char-J of Nadia is "2";
 	say "[npcNadiaintUpdate]";
 
-instead of navigating Grey Abbey Library while (Nadia is in Grey Abbey 2F and NadiaDescription > 3 and NadiaChickCounter > 9 and Char-J of Nadia is "2"):
+instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaDescription > 3 and NadiaChickCounter > 9 and Char-J of Nadia is "2"):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

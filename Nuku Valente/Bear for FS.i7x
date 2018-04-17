@@ -116,7 +116,7 @@ When Play begins:
 	now HP entry is 60; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Park"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Park"; [ Current options are 'Outside' and 'Mall' Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 12; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
@@ -156,7 +156,7 @@ the usedesc of honeycomb is "[honeycombuse]";
 
 to say honeycombuse:
 	say " You just are overcome with the need for sweetness. The sticky goodness of the honeycomb makes you drool as you shove it into your suddenly hungry mouth.";
-	decrease the hunger of the player by 6;
+	decrease hunger of player by 6;
 	if hunger of player < 0, now hunger of player is 0;
 	increase thirst of player by 1;
 

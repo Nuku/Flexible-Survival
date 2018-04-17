@@ -1,5 +1,5 @@
 Version 3 of RexxyEvent by AGentlemanCalledB begins here.
-"Adds a Adds an Alpha Retriever NPC and associated scenarios to the Flexible Survival game"
+"Adds an Alpha Retriever NPC and associated scenarios to the Flexible Survival game"
 [Version 3 - Overhaul of code for saving and future content.]
 
 Section 1 - Event
@@ -125,7 +125,7 @@ Rex is in Rex's Place.
 Karen is in Rex's Place.
 Treat Jar is in Rex's Place.
 
-The description of Treat Jar is "     Sitting on the table next to Rex's seat is a large glass jar full of bone-shaped cookies. You find your mouth watering and stomach growling as you stare at the doggy treats. Rex spots you eyeing them longingly and a canine smile crosses his muzzle, 'If you want a treat, you're going to have to beg like a good little sexpet,' he informs you.".
+The description of Treat Jar is "     Sitting on the table next to Rex's seat is a large glass jar full of bone-shaped cookies. You find your mouth watering and stomach growling as you stare at the doggy treats. Rex spots you eyeing them longingly and a canine smile crosses his muzzle. 'If you want a treat, you're going to have to beg like a good little sexpet,' he informs you.".
 the scent of Treat Jar is "Between the smell of canine sex pervading Rex's small house and the thick glass, you can't even catch a whiff of the scent from the jar full of doggy treats.".
 
 treatbegging is an action applying to nothing.
@@ -136,7 +136,7 @@ Understand "treat beg" as treatbegging.
 Understand "beg for treat" as treatbegging.
 
 Check Treatbegging:
-	If Treat jar is not visible, say "eh?" instead;
+	If Treat Jar is not visible, say "eh?" instead;
 
 Carry out Treatbegging:
 	say "     Unable to deny your hunger for the bone-shaped treats any longer, you quickly find yourself on all fours in front of Rex, whimpering and begging for one of the small cookies. He smiles intently as he pulls one of the treats from the jar, telling you to sit like a good doggy. As you sit patiently in front of him, Rex reaches out and places the treat on the end of your nose, the delicious scent of it making your mouth water even more. When Rex finally signals you to eat the treat, you drop it to the floor and pounce on it instantly, eating the entire thing in one bite. As you lick the final crumbs from your chops, you begin to think how much you'd like another, even as you realize how much of yourself you are losing to the happy retriever sexpet Rex is training you to be.";
@@ -280,7 +280,7 @@ Instead of fucking the Rex:
 				say "     Eventually you find the energy to rise from your rest, but you find the that this time the lust induced fog in your mind never fully clears, the last of your concerns in the city beginning to fade away, lost in this haze. Finally you realize everything you could ever want is here, in your home, with your loving master Rex. Why did you ever want to continue wandering that city to begin with?";
 			else:
 				say "     As you begin to rise, you see Rex has left that damned blue collar laying out on a nearby counter for you to see again, but this time something clicks inside you. His 'training' seeming to finally have taken hold, you reach out and pick up the collar, fastening it around your neck without a second thought.";
-				say "     All your other concerns seem to drain away as the retriever infection takes full control of your mind and body, shaping you into another perfect sexpet for you new owner. Eagerly you return to him, finding him waiting for you on his couch at the back of the room, the broad smile on his face as he see you in the collar filling you with pride. He motions for you to join him laying on the couch, and you happily snuggle up against him. You begin to drift off to sleep as he scratches your ears, telling you that you made the right decision, and you can't help but agree as you drift off into slumber, dreaming off all the wonderful times in your new life ahead of you.";
+				say "     All your other concerns seem to drain away as the retriever infection takes full control of your mind and body, shaping you into another perfect sexpet for your new owner. Eagerly you return to him, finding him waiting for you on his couch at the back of the room, the broad smile on his face as he see you in the collar filling you with pride. He motions for you to join him laying on the couch, and you happily snuggle up against him. You begin to drift off to sleep as he scratches your ears, telling you that you made the right decision, and you can't help but agree as you drift off into slumber, dreaming off all the wonderful times in your new life ahead of you.";
 				now HP of Rex is 10;
 			wait for any key;
 			say "[fullRetrieverTF]";

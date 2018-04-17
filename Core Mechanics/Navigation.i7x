@@ -126,6 +126,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Agency[close bracket][as]nav Agency[end link] ";
 		if Alex's Condo is known:
 			say "| [link][bracket]Alex's Condo[close bracket][as]nav Alex's Condo[end link] ";
+		if Argos Antiques is known:
+			say "| [link][bracket]Argos Antiques[close bracket][as]nav Argos Antiques[end link] ";
 		if Bone-Appetit is known:
 			say "| [link][bracket]Bone-Appetit[close bracket][as]nav Bone-Appetit[end link] ";
 		if Butterfly Grove is known:

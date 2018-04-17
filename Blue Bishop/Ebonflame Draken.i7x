@@ -23,7 +23,7 @@ to say ebdrakenvic:
 		say "     '[one of]No amount of suffering will suffice[or]So soft, you're hardly worth the energy[or]Hmpf, I should toss you to the whelps[at random]";
 	say "!' She continues to harshly threaten you until your rear is glowing red with her constant abuse. Every time you think she might be satisfied, she lashes you again, just to watch you writhe.";
 	say "     The dragon does eventually get bored of punishing you in this manner and starts to prepare you for something else, allowing you to take the small comfort of her brief relent...";
-	if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
+	if anallevel > 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
 		say "     Her plans become clear when you feel the tip one of her talons caress along the crevice of your sore behind, teasing you before the razor sharp thing forces its way through your anal ring. She cackles as you tremble against her digit so casually shaming you.";
 		say "     '[one of]Such a soft hole, I'm going to take great joy in ravaging it[or]I'm going to love tearing you in half[or]Oh, don't worry, you're not going to feel a thing... After I'm done with you[at random]!' Finally pulling the talon free, it's apparent she wanted to humiliate you more than prepare, [if scalevalue of player > 3]climbing on top of[else]positioning herself behind[end if] you before the pointed tip of the reptile's savage dick briefly presses against you quivering hole. Immediately, she plunges the massive thing as far in as she can, grunting as she forces what remains with successive thrusts. Not only is it apparent that she doesn't care to prepare you, but she actively enjoys hearing you howl in pain as her sharp barbs dig into your supple flesh, laughing and mocking you all along the way.";
 		say "     The rod must be as hard as steel, since she has no problem shifting her weight all over the place, as if trying to pry your hole wider. You'd think she's hardly interested in fucking you if not for occasionally being wracked by the searing pain of her molten precum. You're dizzied by how intense the sensation is, until you eventually get somewhat numb to it.";
@@ -143,13 +143,13 @@ Section 3 - Miscellaneous
 when play ends:
 	if bodyname of player is "Ebonflame Draken":
 		if humanity of player < 10:
-			say "     Overcome by your powerful, draconic infection, you're pulled inexorably towards the your kin, informed by your dark, fiery strain on how you must act";
+			say "     Overcome by your powerful, draconic infection, you're pulled inexorably towards your kin, informed by your dark, fiery strain on how you must act";
 			if player is submissive:
 				say ". However, you are twisted by your submissive inclinations to serve your sisters as their plaything, often abused when there's no proper victim to take your place. You take a deep thrill in being subjugated by your own kind.";
 			else:
 				say ". You are forced to fight with your sisters until you prove your worth, soon joining them afterwards to sate your need on the many remaining victims in the city.";
 			say "     There is a terrible need to move forward, as if to flee from your more feral kin. Dark whispers seem to compel your actions, but eventually there is only silence, punctuated by the cries of ecstasy.";
-			if player is submissive and "Kinky" is listed in feats of player:
+			if player is submissive and player is kinky:
 				say "     Your final, distinctive memories are that of no longer finding satisfaction in your sisters, instead turning inward to embrace to the more wild, virile influence of the terrible beasts that follow in your wake, more than eager to make your future eternally filled with a blur of constantly breeding...";
 			else:
 				say "     Eventually, everything blurs into a haze of constant sex, you're never even learn what dark powers compelled you, or if they achieved whatever it was that they sought...";

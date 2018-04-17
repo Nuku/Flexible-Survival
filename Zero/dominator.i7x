@@ -180,7 +180,7 @@ When Play begins:
 	now HP entry is 70;
 	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
-	now area entry is "Outside"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Outside"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku]
@@ -217,7 +217,7 @@ to say MaleDomheat:
 to say Domheat: []
 	if libido of player < 96, increase libido of player by 5;
 	if (libido of player > 90) and (location of player is fasttravel ) and (slutfucked > 8):
-		say "the desire to dominate grows to strong to for you to control and you begine searching for anything that you fuck. you and immediately upon catching one by surprise begine to dominate them";
+		say "The desire to dominate grows to strong to for you to control and you begin searching for anything that you fuck. You are immediately catch one by surprise and begin to dominate them";
 		now slutfucked is 0;
 		let hmonlist be a list of numbers;
 		repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear "outside" ]

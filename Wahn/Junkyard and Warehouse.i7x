@@ -184,8 +184,8 @@ To say Steven flattery:
 	if the player is bodily human:
 		if the player is skintone human:
 			if tailname is not "human":
-				if the breast size of player < 4:
-					if the Cock Length of player < 12 or the cock width of player < 12:
+				if breast size of player < 4:
+					if cock length of player < 12 or the cock width of player < 12:
 						say "You seem pretty reasonably human. Glad the disaster didn't take a hit out of you, eh?";
 					else:
 						say "Congratulations on that, um... package of yours.";
@@ -448,9 +448,9 @@ StevenFuckcount is a number that varies.
 to say Stevensuck:
 	say "     After stroking the equine man till he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out. Leaning further forward, you slip the tip into your mouth, gently sucking on it. Groaning, you feel Steven placing his hand on your head, pushing you further down on his shaft, the thick length filling up your mouth. You gulp around the length, stroking the base of it as you begin bobbing your mouth up and down.";
 	say "     Your mouth is too much for the poor equine man to take and you feel the head of his cock flare up as he climaxes, pumping his thick cum down your throat. You gulp down as much as you can, but much of it squirts out around his shaft. When he finally empties his balls you slip his length out of your mouth and take a long needed breath. Panting hard you lick your lips and get about cleaning yourself off, but not before you move up and give Steven a good long kiss. He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.";
-	if ( "Submissive" is listed in feats of player or ( "MPreg" is listed in feats of player and cunts of player is 0 ) ) and a random chance of 2 in 5 succeeds:
+	if ( player is submissive or ( player is mpreg_ok and cunts of player is 0 ) ) and a random chance of 2 in 5 succeeds:
 		say "     Steven smiles down at you and strokes your head. 'Mmm... I can tell what you're really after,' he nickers before moving around behind you. He pushes you forward onto all fours and runs his hands over your [bodydesc of player] body. 'You're really wanting the big stallion to mount you, aren't you?' he says. He runs his hand between your legs to tease your [if cunts of player > 0]pussy[else]pucker[end if] while grinding his cock against your backside, leaking the last few dribbles of his previous load onto your ass. 'How about I take you like a mare, huh?' he asks, rubbing a pair of fingers over into your needy hole. Your ";
-		if "Submissive" is listed in feats of player:
+		if player is submissive:
 			say "submissive urges, already fired up from sucking off the virile male, have ";
 		else:
 			say "breedable backside, already aching to be filled after having sucked off the virile male, has ";
@@ -469,7 +469,7 @@ to say Stevenanal:
 
 
 to say Stevenonbottom:
-	say "     Stroking his equine shaft in both hands, you lean in and give him a kiss. As your tongues fence with one another, you let one hand slip down to his ballsac briefly before continuing south. Before he knows it, you've got a finger lightly probing at his pucker. This surprises him and he breaks the kiss.";
+	say "     Stroking his equine shaft in both hands, you lean in and give him a kiss. As your tongues fence with one another, you let one hand slip down to his ballsack briefly before continuing south. Before he knows it, you've got a finger lightly probing at his pucker. This surprises him and he breaks the kiss.";
 	if Stevenmm is 2:
 		say "     'What do you think you're doing? I don't know if I'm ready for that sor- Uhh... I mean, I'm not really interested in that,' he says, trying to sound firm though with that same repressed desire you've heard from him before";
 	else:
@@ -618,7 +618,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "crowbar"	"A big, heavy crowbar. It's not sharp, but it's heavy enough to strike a good blow."	3	crowbar
 "mallet"	"A heavy mallet. If you swung it hard enough, you could easily crack someone's head open."	5	mallet
-"iron pipe"	"A piece of iron pipe. It might make a adequate blunt weapon."	3	iron pipe
+"iron pipe"	"A piece of iron pipe. It might make an adequate blunt weapon."	3	iron pipe
 
 crowbar is a armament. It is a part of the player. It has a weapon "your crowbar". The weapon damage of crowbar is 6. The weapon type of crowbar is "Melee". It is not temporary.
 mallet is a armament. It is a part of the player. It has a weapon "your mallet". The weapon damage of mallet is 7. The weapon type of mallet is "Melee". It is not temporary.

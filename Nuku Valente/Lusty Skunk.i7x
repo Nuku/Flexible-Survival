@@ -42,7 +42,7 @@ To Skunkform:
 		now scalevalue of player is 4;
 		now bodydesc of player is "tauric";
 		now bodytype of player is "[one of]mephit[or]skunk-like[or]mustelid[at random]";
-		now the daycycle of player is 0;
+		now daycycle of player is 0;
 
 
 Instead of Resolving a Lusty Skunk:

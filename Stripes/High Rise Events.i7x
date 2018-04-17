@@ -355,7 +355,7 @@ to say vetsearch:
 			say "     You obtain the equivalent of 2 food.";
 			increase carried of food by 2;
 			increase score by 3;
-		else if hunger of the player > 49:		[starving]
+		else if hunger of player > 49:		[starving]
 			say "     You look at the cans of pet food for a moment and your stomach rumbles. Despite being pet food, you are very hungry and need something to eat. As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat. Resigned to your fate, you take one of the cans and add it to your supply. You then quickly head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
 			say "     You obtain the equivalent of 1 food.";
 			increase carried of food by 1;

@@ -20,7 +20,7 @@ to say goovictory:
 		say "     Losing the will to fight, you fall to your knees, allowing the creature to move in closer, clearly giddy over defeating you.";
 		say "     '[one of]Hmpf[or]Ha[or]Oh[at random], [one of]that'll show you[or]I hope you like to play[or]this'll be fun[at random]!' ";
 	say "Wrapping her undulating arms around your[if scalevalue of player < 2] smaller,[else if scalevalue of player > 3] larger,[end if] [bodydesc of player] form, her transparent appendages carefully worm around, fondling around lewdly and easily prying away any obstruction in her way.";
-	if cocks of player > 0 and (a random chance of 1 in 2 succeeds or (cunts of player is 0 and anallevel is not 3)):
+	if cocks of player > 0 and (a random chance of 1 in 2 succeeds or (cunts of player is 0 and anallevel < 3)):
 		say "     [if HP of player < 1 and player is not submissive]Forcing[else]Bringing[end if] you to lay on your back, she writhes her way on top of you, crotch enveloped in her amorphous base. Positioned such that her crotch meets yours, your [cock size desc of player] dick[if cocks of player > 1]s are[else] is[end if] visibly trapped within her transparent torso[if cock length of player > 14 and cocks of player is 1], visibly bulging to contain it[else if cock length of player > 10 and cocks of player > 1], visibly bulging to contain them[end if]. Her gelatinous form eagerly kneading the whole of your length[smn], it's no effort for her to drive you to full arousal.";
 		say "     '[one of]I think somebody likes that[or]We're just getting started here[or]You should see the look on your face[at random]!' Teasing you, [if cunts of player > 1]you feel her malleable mass flood your cunts, further stimulating[else if cunts of player is 1]you feel her malleable mass flood your cunt, further stimulating[else if anallevel is 3]you feel her malleable mass flood your ass, further stimulating[else]she caresses your [bodytype of player] form, offering gentle affection to[end if] you. Dark sewers filled with the wet sounds of her writhing body against your [bodydesc of player] frame, you're made to watch on as she grins at you, taking a certain joy in seeing you squirm against her overwhelming touch.";
 		say "     It doesn't take long before you finally cry out in bliss, firing off your [cum load size of player] load into her torso, where you might see it fill her. [if cock width of player > 19]Moaning weakly, she visibly bulges to contain your load, she's nonetheless stretchy enough to contain your impressive release, milking you completely dry[else]Moaning softly, her body eagerly milks you dry of every last drop you have to offer[end if]. She continues to stimulate you for a while longer until it's clear you can offer her no more.";
@@ -118,9 +118,9 @@ When Play begins:
 	now per entry is 10;
 	now int entry is 10;
 	now cha entry is 5;
-	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 30;
-	now lev entry is 2; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 2; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 3; [ Monster's average damage when attacking. ]
 	now area entry is "Mall"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -133,7 +133,7 @@ When Play begins:
 	now cunt length entry is 20; [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 20; [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 40; [ Target libido the infection will rise towards. ]
-	now loot entry is "glob of goo"; [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "glob of goo"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 100; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]mutated[or]flowing[or]altered[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]

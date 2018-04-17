@@ -2,8 +2,43 @@ Version 3 of Hadiya by Stripes begins here.
 [Version 3.2 - Post-quest threesomes w/Hadiya & Gobby - Stripes]
 [- Originally Authored By: Kaxin -]
 [Expanded sex scenes and quest by Stripes.]
+[Version 3.3 - Minor maintenance and character relocation - Luneth]
 
 "Adds a situation to Flexible Survival with a very annoyed Hyena woman."
+
+[ HP of Hadiya                                                                 ]
+[  0 = not met                                                                 ]
+[  1 = met                                                                     ]
+[  2 = talked to her                                                           ]
+[  3 = had sex (oral)                                                          ]
+[  4 = got fucked                                                              ]
+[  5 = player came early                                                       ]
+[  6 = came on ass                                                             ]
+[ 7-50 regular hyena infect                                                    ]
+[  7 = regular infect set                                                      ]
+[  8 = told about guitar                                                       ]
+[  9 = found goblin thief                                                      ]
+[ 10 = found item for goblin                                                   ]
+[ 11 = goblin getting guitar                                                   ]
+[ 12 = goblin late                                                             ]
+[ 13 = both moved to bunker?                                                   ]
+[ 14 = talked at bunker?                                                       ]
+
+[ 50+ = male bitch infection                                                   ]
+[ 50-56 = <nothing>                                                            ]
+[ 57 = male hyena bitch set                                                    ]
+[ 58 = told about guitar                                                       ]
+[ 59 = found goblin thief                                                      ]
+[ 60 = found item for goblin                                                   ]
+[ 61 = goblin getting guitar                                                   ]
+[ 62 = goblin late                                                             ]
+[ 63 = both moved to bunker?                                                   ]
+[ 64 = talked at bunker?                                                       ]
+
+[        HP of Gobby                                                           ]
+[  0 = not met/talked                                                          ]
+[  1 = talked to him                                                           ]
+[  2 = sexed him up                                                            ]
 
 Section 1 - The Situation
 
@@ -222,7 +257,7 @@ to say sexwithHadiya:
 to say hadiya_gobby_3somes:
 	say "     'Mmm... get over here Gobby. I want the two of you going to town on this,' she says, giving her heavy cock a meaningful stroke. As her goblin servant comes over, she pushes you down to your knees and slaps her manmeat across your face. You give a soft whimper, mostly for show, and obediently start licking at the herm's drippy shaft. With the goblin at the other side, the two of you start slathering your tongues across the hyena dick.";
 	say "     Hadiya releases an excited growl and puts a paw on each of your heads, guiding you both towards the tip of her cock. Meeting there, the two of you kiss. She gives a laugh and presses your faces together all the more. 'That's so sweet. It's good to see my sluts getting along so well,' she says, grinding her cock against your faces while your tongues slide against one another's. The two of you kiss for about half a minute before breaking it off before the aggressive hyena gets demanding for attention to her penis again. Besides, the kiss has made you even more eager to get at that cock.";
-	say "     Gobby lets you go at it first, ducking a little lower so he can slather attention upon the herm's hefty ballsac. You take the opportunity to take Hadiya's erection into your mouth. You suck down on her throbbing member while your tongue slides across it. That red pillar twitches and throbs in your mouth, drooling pre down your throat as you suck on it, the flow encouraged by the goblin's determined licking across her sac and swelling knot.";
+	say "     Gobby lets you go at it first, ducking a little lower so he can slather attention upon the herm's hefty ballsack. You take the opportunity to take Hadiya's erection into your mouth. You suck down on her throbbing member while your tongue slides across it. That red pillar twitches and throbs in your mouth, drooling pre down your throat as you suck on it, the flow encouraged by the goblin's determined licking across her sac and swelling knot.";
 	say "     Eventually she pushes you back, letting the goblin have a turn sucking her while you swap to her scrotum. Gobby struggles a bit with taking all of the hyena's cock into his maw, but he does his best for his beastly mistress, though having her paw forcing him onto her prick certainly accounts for how much of it's been shoved in. Even with the thorough cleaning the goblin's tongue gave them, her arousing scent is strong and musky off of her balls. The hyena's scent fills your senses as you press up against that furry sac and get to licking.";
 	say "     You and the goblin swap positions like this a few times, taking turns sucking her cock and occasionally both licking it together. The flow of precum from it picks up as you pleasure the hyena and eventually she climaxes with a lustful growl";
 	if a random chance of 1 in 3 succeeds:
@@ -304,9 +339,9 @@ Instead of resolving Goblin Thief:
 		say "     'Hey! Where do you think you're going, bitch?  You're the one that roped this little guy into all this. And it's not like I can stay here either if the other goblins are going to be harassing me to get my guitar back. Not that I have any reason to stick around any longer in this hellhole.' She's advanced on you by this point, poking you firmly with a furry finger. 'You're going to take us back to your place now. It'll be nice to get out of here... and I'll be able to show you my appreciation properly,' she adds with a toothy grin[if cocks of player > 0] and a molesting grope of your ass[end if].";
 		say "     For a moment there, it looked like you might have been able to avoid sheltering the goblin thief at the bunker, but instead you've found yourself with two dirty guests now. As her bitch and cock slut, you're in no position to disagree with Hadiya - she'd just fuck you until you gave in anyhow. Well, at least you should be able to enjoy her rough attention more often, if that's what you're in the mood for.";
 		WaitLineBreak;
-		move Hadiya to Grey Abbey 2F;
-		move Gobby to Grey Abbey 2F;
-		move player to Grey Abbey 2F;
+		move Hadiya to Sitting Area;
+		move Gobby to Sitting Area;
+		move player to Sitting Area;
 		WaitLineBreak;
 		say "     Arriving at the library, you quickly show the hyena around, the goblin following along with an amp he's been made to carry on his back[if the number of booked people + the number of bunkered people > 0]. After some introductions, kept brief due to the lingering odour of the junkyard on them[else]. After the tour[end if], the red-furred hyena picks a side room on the upstairs level as her living space. Gobby happily drops his burden and the Hadiya tosses down her guitar and the small pack she brought. Aside from some supplies and a dirty sleeping bag, she doesn't have much. The hyena grabs the little guy, pressing his face into her crotch so she might introduce him to his other duties.";
 		now the icon of Hadiya is Figure of Hadiya_icon;
@@ -355,7 +390,7 @@ to say sexwithGobby:
 		say "DEBUG (Gobby) -> HP: [HP of Gobby], lastfuck: [lastfuck of Gobby] <- DEBUG[line break]";
 	if HP of Gobby is 0:
 		say "You should check up on the little guy first.";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "You'll need at least some genitals for the goblin to play with if you're going to lure him away from his mistress for some fun.";
 	else if lastfuck of Gobby - turns < 6:
 		say "Gobby seems a little preoccupied with his hyena mistress at the moment.";
@@ -423,41 +458,5 @@ Section 10 - Character Notes
 - He may also, at Hadiya's prompting, swipe some minor thing from another resident to get them to come up and see her. She uses the opportunity to offer to sex them up. Gobby's 'punishment' for his thieving is more fun with his mistress.
 ]
 
-
-Section 11 - Variables
-
-[        HP of Hadiya        ]
-[  0 = not met               ]
-[  1 = met                   ]
-[  2 = talked to her         ]
-[  3 = had sex (oral)        ]
-[  4 = got fucked            ]
-[  5 = player came early     ]
-[  6 = came on ass           ]
-[ 7-50 regular hyena infect  ]
-[  7 = regular infect set    ]
-[  8 = told about guitar     ]
-[  9 = found goblin thief    ]
-[ 10 = found item for goblin ]
-[ 11 = goblin getting guitar ]
-[ 12 = goblin late           ]
-[ 13 = both moved to bunker? ]
-[ 14 = talked at bunker?     ]
-[ ...                       ]
-[ 50+ = male bitch infection ]
-[ 50-56 = <nothing>          ]
-[ 57 = male hyena bitch set  ]
-[ 58 = told about guitar     ]
-[ 59 = found goblin thief    ]
-[ 60 = found item for goblin ]
-[ 61 = goblin getting guitar ]
-[ 62 = goblin late           ]
-[ 63 = both moved to bunker? ]
-[ 64 = talked at bunker?     ]
-
-[        HP of Gobby         ]
-[  0 = not met/talked        ]
-[  1 = talked to him         ]
-[  2 = sexed him up          ]
 
 Hadiya ends here.

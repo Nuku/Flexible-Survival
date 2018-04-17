@@ -7,16 +7,7 @@ Version 1 of Mall Expansion by Wahn begins here.
 
 
 lastMallInteriorScene is a number that varies. lastMallInteriorScene is usually 10000.
-FullLitterVar is a number that varies.
 BullTerrierSiblingsVar is a number that varies.
-
-instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 0 and FullLitterVar is 0 and a random chance of 1 in 3 succeeds):
-	move player to Mall Atrium;
-	if debugactive is 1:
-		say "     DEBUG: Walk-in Event around the mall - Misc atmosphere setting[line break]";
-	say "     As you move through the food court into the atrium, you pass by a rare sight - a fully human woman. She is wearing a thin white top and a long, red skirt that ends just below her knees. She is conversing with another woman, a canine with bushy looking tan fur and small pointed ears. The human woman is cradling her swollen chest. 'Oh my gosh, Linda, you're pregnant! I'm so happy for you!' the canine cheers, embracing the human in a hug. 'Thank you so much, I'm so happy my husband and I finally did it!' Linda replies, looking softly at her bulging stomach. 'So, what are you carrying in there?' the canine asks, giving a soft poke at the woman's stomach. Linda looks up excitedly, replying 'A full litter of puppies! We're so happy to have this many kids!' The two happily embrace again, as your path leads you past them and you soon leave them behind you. It seems like even a species difference won't stop a mother from loving her children, and the thought brings a warm smile to your face.";
-	now FullLitterVar is 1; [did the event once]
-	now lastMallInteriorScene is turns;
 
 instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 0 and gshep is companion of player and gsd_pet >= 60 and BullTerrierSiblingsVar is 0 and a random chance of 1 in 3 succeeds):
 	move player to Mall Atrium;

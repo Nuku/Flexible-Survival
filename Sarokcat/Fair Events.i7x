@@ -58,9 +58,11 @@ Salty taffy is a scavevent.
 The sarea of Salty taffy is "Midway".
 
 Instead of Resolving a Salty taffy:
-	say "Wandering through the cheerful midway of the fair, you come across a stand selling old fashioned salt water taffy, the fresh sticky stuff set up on the counter with a sign next to them saying 'free samples'. Deciding to take a chance, you help yourself to one of the pieces of sticky candy, chewing and chewing as you go on your way, you find the salty and sweet treat to be a wonderful accompaniment to the fair itself. Unfortunately though, the sticky stuff gums up your mouth and dries it out as you chew, and the salty part of the taste seems to make you even thirstier than before.";
+	say "Wandering through the cheerful midway of the fair, you come across a stand selling old fashioned salt water taffy, the fresh sticky stuff set up on the counter with a sign next to them saying 'free samples'. Deciding to take a chance, you help yourself to one of the pieces of sticky candy. Chewing it as you go on your way, you find the salty and sweet treat to be a wonderful accompaniment to the fair itself. Unfortunately, though, the sticky stuff gums up your mouth and dries it out as you chew, and the salty part of the taste seems to make you even thirstier than before.";
 	PlayerEat 6;
-	PlayerDrink 20;
+	LineBreak;
+	say "[bold type]Your thirst is increased by 20![roman type][line break]";
+	increase thirst of player by 20;
 	Now Salty taffy is resolved;
 
 Section 7- Prize winning toss

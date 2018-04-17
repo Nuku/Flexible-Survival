@@ -22,7 +22,7 @@ to say stop wyvern:
 		say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "[line break] You drink away your thirst.";
-		now thirst of the player is 0;
+		now thirst of player is 0;
 	else:
 		say "You watch silently as the first wyvern overpowers the second, and begins to stroke. This is your last chance to intervene. Do you?";
 		if the player consents:
@@ -47,7 +47,7 @@ instead of resolving a pure pool:
 	if purpol is 0:
 		say "You smell in the air a slight difference, seeming cleaner, more pure. You look around for the source.";
 		say "You come across a pool of water in the park. Unlike the puddles in the city, this one is clean and clear, and you can see the red stones at the bottom. You take a small drink, and feel less thirsty.";
-		decrease thirst of the player by 10;
+		decrease thirst of player by 10;
 		increase purpol by 1;
 	else if purpol is 1:
 		say "Exploring the park, you hear an echoing scream. It sounds like a wyvern, but what are those doing in the park?";
@@ -63,7 +63,7 @@ instead of resolving a pure pool:
 							say "They begin stroking as well, rushing to come before you.";
 						else:
 							say "They watch as you continue, stunned that someone would have the precocity to subvert their efforts.";
-						say "You blow your load into the pool, thick streams of seed coming from your [cock length of player] inch long [cock of player] [if the cocks of player > 1][one of]cock[or]penise[or]shaft[or]malenesse[at random]s[else][one of]cock[or]penis[or]shaft[or]maleness[at random][end if] and scream as well. The seed sprays into the pool, making the water murky and infecting the whole thing. The water becomes cloudy and the clean smell in the air disappears.";
+						say "You blow your load into the pool, thick streams of seed coming from your [cock length of player] inch long [cock of player] [if cocks of player > 1][one of]cock[or]penise[or]shaft[or]malenesse[at random]s[else][one of]cock[or]penis[or]shaft[or]maleness[at random][end if] and scream as well. The seed sprays into the pool, making the water murky and infecting the whole thing. The water becomes cloudy and the clean smell in the air disappears.";
 						now purpol is 4;
 						now purpolu is 1;
 				else:
@@ -82,7 +82,7 @@ instead of resolving a pure pool:
 			infect "Wyvern";
 			infect "Wyvern";
 			infect "Wyvern";
-			now the thirst of the player is 0;
+			now thirst of player is 0;
 		else:
 			say "You keep clear of the infected water.";
 

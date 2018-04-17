@@ -42,7 +42,7 @@ to say losetoplatypus:
 			say "     After a few moments of prodding, he finally has enough lubrication to push his cock into you slowly, letting out a moan of relief. 'You're such a nice lay after so long...' He grunts as he starts thrusting with vigor, grabbing your legs for extra leverage. His belly pressed against yours, he starts to thrust in deeper. His heavy womb presses down on your belly.";
 			say "     The rythmic rocking pleasure builds into a small eternity. He tenses up, holding your hips to his, twitching as he cums into you. With each twitch of his cock, you feel his warm seed begin to flood you. The heat of his potent seed sends you over the edge, your hips twitching and your hands grasping at the sand beneath you.";
 			say "     Giving into bliss, you hit orgasm, your sphincter squeezing his shaft tightly, holding onto as much hot cum as you can. The platypus flops onto his back, pulling his cock out of your tight sphincter. 'Wow. I haven't had sex like that in days. I'll have to find you again sometime.' He grunts and stands, staggering a moment with the weight of his egg-filled belly, then starts walking off into the ocean to clean off his fur. [ovichance]";
-	if bodyname of player is "Platypus" and player is pure and "MPreg" is not listed in feats of player and cocks of player > 0 and cunts of player is 0:
+	if bodyname of player is "Platypus" and player is pure and player is not mpreg_ok and cocks of player > 0 and cunts of player is 0:
 		LineBreak;
 		say "     You feel something tingling in your belly as it grows warm and put your hands on it in concern. Then a thought clicks suddenly into your head: You can now become pregnant through anal sex, much like the platypus who did this to you. [line break]     [']MPreg['] has been added to your list of feats.";
 		add "MPreg" to feats of player;
@@ -103,9 +103,9 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 13;
 	now cha entry is 16;
-	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 37;
-	now lev entry is 2; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 2; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
 	now area entry is "Beach"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -118,7 +118,7 @@ When Play begins:
 	now cunt length entry is 0; [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0; [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 45; [ Target libido the infection will rise towards. ]
-	now loot entry is ""; [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]chubby[or]curvy[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
