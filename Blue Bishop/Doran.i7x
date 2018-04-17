@@ -3914,7 +3914,7 @@ to say DoranRP_DragonsPetMenu: [Doran RP: A Dragon's Pet Menu]
 					now DoranRP_var2 is 0; [Sets RP to anal]
 				else: [Vaginal]
 					say "     Doran nods as you clarify, an eager, predatory grin creasing his muzzle. 'So it shall be!'";
-					now DoranRP_var2 is 1; [Sets RP to vaginal
+					now DoranRP_var2 is 1; [Sets RP to vaginal]
 			else:
 				say "'With that sorted, I'll be ready to start as soon as you are!'";
 				now DoranRP_var2 is 0; [anal by default]
@@ -4146,6 +4146,7 @@ to say dorrptks:
 
 to say DoranRP_DragonsPet:
 	say "     For a brief moment, Doran almost seems giddy, a broad smile appearing on [ghis] face before fading into a dark, predatory smirk. The [gdragon] steps closer to [if scalevalue of player > 4]leer at you[else]loom over you[end if], [ghis] sudden closeness both intimidating and exciting you. With [ghim] this close, you can smell that subtle [gmasculine] musk wafting gently through the air as [ghe] chuckles darkly. 'My pet, you really have no idea what you've gotten yourself into, now do you?'";
+	if 
 
 
 Chapter 5 - Miscellaneous
