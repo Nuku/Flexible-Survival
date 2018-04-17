@@ -25,7 +25,7 @@ to say hawkmandesc:
 		now sex entry is "Female";
 	if inasituation is true:
 		stop the action; [details are taken care of at the event source]
-	say "     As you wander through the city streets, you hear a whistling sound from above, and look up to see a powerful avian form swooping down towards you. You jump back as it lands right in front of you, and get a closer look at the creature's raptor body as it stalks towards you on taloned feet. The strange bird-man has large hawk-like wings stretching out from his back and his rather taloned hands stretch towards you eagerly. All the rest of his body is covered in rather soft and beautiful looking brown patterned feathers. The obviously male creature is half erect as he cocks his avian head to the side appraisingly, and you can swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";
+	say "     As you wander through the city streets, you hear a whistling sound from above and look up to see a powerful avian form swooping down towards you. You jump back as it lands right in front of you and get a closer look at the anthro raptor's body as he stalks towards you on taloned feet. The strange bird-man has large, hawk-like wings stretching out from his back, clearly flight-ready given the creature's aerial approach. He is covered in a rather soft and beautiful looking plumage of brown, layered feathers with ivory-white countershading. The obviously male creature is half-erect as he cocks his avian head to the side appraisingly, and you swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";
 
 to say Hawkman wins:
 	if inasituation is true:
