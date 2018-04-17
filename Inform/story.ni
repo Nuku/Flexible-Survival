@@ -33,7 +33,7 @@ Use Scoring.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 64.
+The release number is 65.
 The story creation year is 2010.
 The maximum score is 2500.
 
