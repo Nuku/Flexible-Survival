@@ -20,15 +20,6 @@ Version 1 of Skarnoth by Wahn begins here.
 [  20: player took him as a slave and moved him into the library                           ]
 
 
-Half-Renovated Room is a room.
-North of Grey Abbey Library is Half-Renovated Room.
-Half-Renovated Room is sleepsafe.
-The description of Half-Renovated Room is "[LibrarySideRoomDesc]";
-
-to say LibrarySideRoomDesc:
-	say "     This large room of the Grey Abbey Library seems to be where most of the furniture of the old abbey ended up when the building was converted to its new purpose. With its high ceiling, ample floor-space and even a big fireplace, it could have been a dining hall or something in the past. Now it is mostly filled with numerous pieces of furniture, some stacked quite high and partially covered in white sheets. The two still accessible walls are covered in scaffolding and show signs of recent work on them - looks like workers were in the progress of refurbishing the room for library use when the nanite outbreak began. Due west you can make out a room with tables strewn about and plenty of counterspace, of course you could always head back south to the main area of the library.";
-	if Skarnoth is in Half-Renovated Room:
-		say "     Since you brought the demon prince Skarnoth here and securely attached the long chain on his collar to the scaffolding, the imprisoned predator has done his best to improve his comfort of his prison. A soft (if somewhat threadbare and stained) couch has been dragged to stand against the back wall and shows signs of being used as a bed. He even found a high-backed armchair somewhere, which is now set up next to the fireplace. Sitting in it, the demon awaits you, wearing an arrogant expression as if he was a king awaiting supplicants.";
 
 Section 1 - Description
 
