@@ -107,7 +107,7 @@ to say flotfuck:
 				say "     Some part of you questions the sanity of going through with this, by this point, but you go ahead with it regardless.";
 				say "     Just as you descend into the waters the dolphin seems to tear itself apart and lurch its open seam straight at you, wrapping itself around your [bodytype of player] form and near-instantly enveloping you entirely. [if scalevalue of player > 3]Tightly wrapped around you as it gradually expands to accommodate your impressive size[else]Wrapped around you[end if], ";
 				if cocks of player > 0:
-					say "your partially-aroused, [cock size desc of player] cock[if cocks of player > 1]s are[else] is[end if] firmly plunged within its vinyl depths,";
+					say "your partially-aroused, [cock size desc of player] cock[if cocks of player > 1]s are[else] is[end if] firmly plunged within its vinyl depths";
 					if anallevel > 1:
 						say ". Moreover, you feel the tainted material flood your [if cunts of player > 0]cunt[sfn] and ass, pounding your holes with a writhing series of tapered, worming tendrils[else]your ass, pounding your hole with a writhing series of tapered, worming tendrils[end if]";
 					else if cunts of player > 0:
@@ -117,8 +117,8 @@ to say flotfuck:
 						say "you feel the tainted material flood your [if cunts of player > 0]cunt[sfn] and ass, pounding your holes with a writhing series of tapered, worming tendrils[else]your ass, pounding your hole with a writhing series of tapered, worming tendrils[end if]";
 					else:
 						say "you feel the tainted material flood your cunt[sfn], pounding your hole[sfn] with a writhing series of tapered, worming tendrils";
-					say ". Finally, a tendril moves to force its way past your lips, plunging deep down your gullet and forcing you to breathe in an intoxicating, synthetic gas.";
-					say "     Completely encased in the slippery dolphin, there's no indication of your occupancy, your groans and lustful writhing masked by the motion and the sound of the waves. This wasn't the wisest thing to do, and you imagine it'll take a lot of work to escape this predicament, if it's even possible by this point...";
+				say ". Finally, a tendril moves to force its way past your lips, plunging deep down your gullet and forcing you to breathe in an intoxicating, synthetic gas.";
+				say "     Completely encased in the slippery dolphin, there's no indication of your occupancy, your groans and lustful writhing masked by the motion and the sound of the waves. This wasn't the wisest thing to do, and you imagine it'll take a lot of work to escape this predicament, if it's even possible by this point...";
 			WaitLineBreak;
 			flotbind;
 			now lastfuck of Discarded Dolphin is turns;
@@ -434,8 +434,8 @@ to say flotstrugglebar:
 
 when play ends:
 	if bodyname of player is "Flotted":
-		say "     Cool ocean water the only balm against the intense heat of your perpetual enslavement, you're barely able to descern what the dolphin is actually doing, seemingly content to swim around playfully, meeting various creatures and peoples -- all of whom appear wholly unaware of your ultimate fate, even as you moan out loudly with each thrust of the vinyl toy's tendrils.";
-		say "     On occasion, the creature even seems inclined to have fun with some of those it encounters, often [if cocks of player > 0 and anallevel < 3 and cunts of player is 0]used to ride[else]made to be riden by[end if] them. You're unsure if inflatable toy particularly enjoys this, or if it likes to surpise you from time to time.";
+		say "     Cool ocean water the only balm against the intense heat of your perpetual enslavement, you're barely able to discern what the dolphin is actually doing, seemingly content to swim around playfully, meeting various creatures and peoples -- all of whom appear wholly unaware of your ultimate fate, even as you moan out loudly with each thrust of the vinyl toy's tendrils.";
+		say "     On occasion, the creature even seems inclined to have fun with some of those it encounters, often [if cocks of player > 0 and anallevel < 3 and cunts of player is 0]used to ride[else]made to be ridden by[end if] them. You're unsure if inflatable toy particularly enjoys this, or if it likes to surprise you from time to time.";
 		say "     No doubt content to milk you until the end of days, your memories blur into a haze of constant orgasms. Writhing against your tight, slippery prison with each motion against the waters, it's eventually all you can think of...";
 
 
