@@ -69,7 +69,7 @@ Instead of resolving a Overrun Garden:
 	else:
 		LineBreak;
 		say "     Deciding not to risk it, you are drawn to continue watching. As she's pulled closer, you watch [if HP of Joanna >= 90]Joanna[else]her[end if] arch her back in climax as the plant creature cums inside her, pumping her full of fluids from all directions. Her belly swells up as more of the sticky white sap is sprayed onto her body while her freshly made balls drain their cum to feed the hungry flowers milking at her new cocks. As she's lowered into the flower, she only starts to realize what's happening as the large tentacles withdraw, but by then, the smaller tendrils are all around her, holding her bloated body inside the flower as it starts closing around her. She tries to hold the petals open, but her strength wanes quickly and soon she's tightly enclosed. There is a brief struggle, then the big flower is still and the tentacles, fruits and flowers move back into their positions, waiting to lure in their next victim. You are quite certain there'll be nothing left of [if HP of Joanna >= 90]Joanna[else]the girl[end if] but another of these parasitic plants to set root nearby. You move on, ";
-		if "Kinky" is listed in feats of player:
+		if player is kinky:
 			say "your kinky urges pleased and greatly aroused by the scene you just witnessed.";
 			increase morale of player by 3;
 			increase libido of player by 25;
@@ -480,7 +480,7 @@ to say joannasex4:
 	Waitlinebreak;
 	say "     Running your hands along her hips, you caress her as she lowers herself down onto your [if cocks of player > 1]cocks, taking them into her wet pussies[else]cock, taking them into her wet pussy[end if]. She chirrs in delight at the sensation of having you inside her needy body and rides you slowly at first, savouring the pleasure [if player is plantcocked and lust of joanna > 0 and cocks of player > 1]of having your green tendrils inside her[else if player is plantcocked and lust of Joanna > 0]of having your green tendril inside [else if cocks of player > 1]of having your cocks inside of her[else]of having your manhood inside her[end if]. From the way she's nibbling her lip and the twitches of her flowery folds and writhing cocks, it's clear it's taking some effort to hold back her urges. Deciding to help her along, you take a pair of her slick tendrils in each hand and stroke them. She tilts her head back and moans loudly, spreading her arms wide into the sun and rides you faster.";
 	Waitlinebreak;
-	say "     Her altered body, craving your semen, milks and squeezes at your cock[if cocks of player > 1]s[end if] until you can finally take no more and cum hard into her. You[if cock width of player > 12]r oversized balls blast a giant[else] pump your[end if] load of sticky cum into her puss[if cocks of player > 1]ies[else]y[end if], making her moan in satisfaction. As you bounce the green kinkajou girl in your lap while cumming, you keep working her cocks until she climaxes as well, spraying her sticky, sweet-scented semen onto you both, one pair blasting you and the other her. Sliding off your spent shaft, she moans and leans over, flopping out on the grass and chirring softly as she soaks up the sun while her body absorbs the nutrient-rich cum it desires.";
+	say "     Her altered body, craving your semen, milks and squeezes at your cock[smn] until you can finally take no more and cum hard into her. You[if cock width of player > 12]r oversized balls blast a giant[else] pump your[end if] load of sticky cum into her puss[if cocks of player > 1]ies[else]y[end if], making her moan in satisfaction. As you bounce the green kinkajou girl in your lap while cumming, you keep working her cocks until she climaxes as well, spraying her sticky, sweet-scented semen onto you both, one pair blasting you and the other her. Sliding off your spent shaft, she moans and leans over, flopping out on the grass and chirring softly as she soaks up the sun while her body absorbs the nutrient-rich cum it desires.";
 
 
 to say joannasex5:
@@ -629,7 +629,7 @@ Definition: a person is planttailed:
 [ 4 = more sex                    ] lust = 0
 [ 5 = more sex                    ]
 [ 6 = refused her seed on initial offer ] = joannaoffernum = 1  //  lust of joanna is 3+
-[ 7 = accepted her seed ]  =  lust of joanna is 3+
+[ 7 = accepted her seed ] = lust of joanna is 3+
 
 [ 90 = helped w/dogs          ]  Dog Chase resolved, joannadogsaved is true, Palomino is known
 [ 91 = asked Harold about her ]

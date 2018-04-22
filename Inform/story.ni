@@ -33,7 +33,7 @@ Use Scoring.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 64.
+The release number is 65.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -308,6 +308,12 @@ A person can be dominant. A person is usually not dominant.
 
 Definition: A person (called x) is dominant:
 	if "Dominant" is listed in feats of x, yes;
+	no;
+
+A person can be kinky. A person is usually not kinky.
+
+Definition: A person (called x) is kinky:
+	if "Kinky" is listed in feats of x, yes;
 	no;
 
 A person can be twistcapped. A person is usually not twistcapped.
@@ -1192,7 +1198,7 @@ carry out hunting:
 					if scorefound is 0:
 						if printed name of z exactly matches the text topic understood, case insensitively:
 							now scorefound is 1;
-				if printed name of z  matches the text topic understood, case insensitively:
+				if printed name of z matches the text topic understood, case insensitively:
 					say "It should be somewhere...";
 					now found is 1;
 					let dice be a random number from 1 to 20;
@@ -1478,7 +1484,7 @@ carry out Inventorying:
 		say "(You may see your collection of video tapes using [link][bold type]tape inventory[roman type][end link] or [link][bold type]tinv[roman type][end link] for short.)";
 	now invlinklistfilled is one;
 
-[used to speed up link command lookup inbetween clears on the hyperlink list, because we know something about the list:
+[used to speed up link command lookup in between clears on the hyperlink list, because we know something about the list:
  the order of items is in all likelihood the same that we are now creating links in
 ]
 lastinvfoundindex is a number that varies.
@@ -2186,7 +2192,7 @@ To AttemptToWaitAndClearHyper: [use where you want a wait and clear. Much like A
 Section Waithate
 
 [creates (and sets) flag for skipping many wait for any key;]
-[i had difficulty setting it so that the player could directly toggle this, as well as have other chunks of code do the same thing. made a command, which is for when the player types it out, and a function, which is for when code calls it. the command just calls the code. i'm sure there is a better way to do this, but it seems to work properly.]
+[i had difficulty setting it so that the player could directly toggle this, as well as have other chunks of code do the same thing. made a command, which is for when the player types it out, and a function, which is for when code calls it. the command just calls the code. I'm sure there is a better way to do this, but it seems to work properly.]
 waiterhater is a number that varies.
 
 WaitHateFunction is an action applying to nothing.
@@ -2543,10 +2549,10 @@ This is the sex change rule:
 	if cocks of player < cocks entry and ( the sex entry is "Male" or the sex entry is "Both" ) and "Female Preferred" is not listed in feats of player:
 		let prevcock be cocks of player;
 		if cocks of player is 0:
-			increase the cocks of player by 1;
-			now the cock length of player is 1;
+			increase cocks of player by 1;
+			now cock length of player is 1;
 			now the cock width of player is 1;
-			increase the cock length of player by ( cock length entry ) divided by 3;
+			increase cock length of player by ( cock length entry ) divided by 3;
 			increase the cock width of player by ( cock width entry ) divided by 3;
 			if skipcockchange is false:
 				now cockname of player is name entry;
@@ -2583,7 +2589,7 @@ This is the sex change rule:
 			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if cocks of player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[else][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins[end if] to shrink. [if cocks of player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr] while[if player is internal] you imagine[end if] your [one of]balls[or]testes[or]nuts[or]gonads[at random] become [ball size]. ";
 			if cock length of player < 1 or cock width of player < 1:
 				say "You barely have time to give a whimper as you cease to be a male.";
-				now the cocks of the player is 0;
+				now cocks of player is 0;
 			else:
 				say "[line break]";
 		if cocks of player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of player:
@@ -2635,17 +2641,17 @@ This is the sex change rule:
 	if cunts of player < cunts entry and ( the sex entry is "Female" or the sex entry is "Both" ) and "Male Preferred" is not listed in feats of player:
 		let prevcunt be cunts of player;
 		if cunts of player is 0 or cunt length of player is 0 or cunt width of player is 0:
-			increase the cunts of player by 1;
-			now the cunt length of player is 1;
-			now the cunt width of player is 1;
-			increase the cunt length of player by ( cunt length entry ) divided by 3;
-			increase the cunt width of player by ( cunt width entry ) divided by 3;
+			increase cunts of player by 1;
+			now cunt length of player is 1;
+			now cunt width of player is 1;
+			increase cunt length of player by ( cunt length entry ) divided by 3;
+			increase cunt width of player by ( cunt width entry ) divided by 3;
 			if "Modest Organs" is listed in feats of player and cunt length of player > 8:
 				now cunt length of player is 8;
 			if "Modest Organs" is listed in feats of player and cunt width of player > 5:
 				now cunt width of player is 5;
 		else if a random chance of 2 in 3 succeeds and "Just One" is not listed in feats of player:	[2nd+ cunt at 67%]
-			increase the cunts of player by 1;
+			increase cunts of player by 1;
 		if singlesexadjust is 2 and sex entry is "Both":	[male remains male if herm infection]
 			now cunts of player is 0;
 			now cunt length of player is 0;
@@ -2672,7 +2678,7 @@ This is the sex change rule:
 			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if cunts of player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin to shrink. They dwindle[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to shrink. It dwindles[end if] in size, becoming [descr]. ";
 			if cunt length of player < 1 or cunt width of player < 1:
 				say "With a sickening noise, you cease to be female all together.";
-				now the cunts of the player is 0;
+				now cunts of player is 0;
 			else:
 				say "[line break]";
 		if cunts of player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of player:
@@ -3048,7 +3054,7 @@ To Infect:
 			if Charisma of player < Cha entry:
 				say "You feel your social sense swelling with [name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
 				increase Charisma of player by 1;
-	if the libido of the player < libido entry:
+	if libido of player < libido entry:
 [		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";]
 		let oldlib be libido of player;
 		increase libido of player by 1;
@@ -3092,11 +3098,11 @@ to attributeinfect:		[sets the player values from the new attributes]
 		now bodytype of player is name entry;
 	if there is a nocturnal in row monster of the table of random critters:
 		if nocturnal entry is true:
-			now the daycycle of player is 2;		[night-preferred]
+			now daycycle of player is 2;		[night-preferred]
 		if nocturnal entry is false:
-			now the daycycle of player is 1;		[day-preferred]
+			now daycycle of player is 1;		[day-preferred]
 	else:
-		now the daycycle of player is 0;			[standard]
+		now daycycle of player is 0;			[standard]
 
 To attributeinfect (x - text):
 	repeat with y running from 1 to number of filled rows in table of random critters:
@@ -3688,8 +3694,8 @@ This is the turnpass rule:
 		say "You now have trouble thinking of anything but sexual satisfaction![no line break][if cocks of player is 1]  Your cock is fully erect constantly and drools precum steadily.[no line break][else if cocks of player > 1]  Your cocks are fully erect constantly and drool precum steadily.[no line break][end if][if cunts of player is 1]  Your cunt overflows with hot juices that run down your thighs.[no line break][else if cunts of player > 1]  Your cunts overflow with hot juices that run down your thighs.[no line break][end if][line break]";
 	else if oldlib < 50 and libido of player > 49:
 		say "Your thoughts have sunk to almost constant depravity![no line break][if cocks of player is 1]  Your cock remains perpetually hard and leaking precum.[no line break][else if cocks of player > 1]  Your cocks remain perpetually hard and leaking precum.[no line break][end if][if cunts of player is 1]  Your cunt is hot and dripping juices as your arousal builds.[no line break][else if cunts of player > 1]  Your cunts are hot and dripping juices as your arousal builds.[no line break][end if][line break]";
-	if the hunger of player < 0, now the hunger of player is 0;
-	if the thirst of player < 0, now the thirst of player is 0;
+	if hunger of player < 0, now hunger of player is 0;
+	if thirst of player < 0, now thirst of player is 0;
 	if the HP of the player < the maxHP of the player and nohealmode is false:
 		increase the HP of the player by the stamina of the player divided by 2;
 		if carried of First Aid Manual > 0, increase HP of player by 1;
@@ -3854,7 +3860,7 @@ This is the turnpass rule:
 		else if hunger of player > 3:
 			say "You feel a little hungry.";
 		if hunger of player > 30:
-			decrease the morale of the player by ( hunger of the player minus 30 ) divided by 5;
+			decrease the morale of the player by ( hunger of player minus 30 ) divided by 5;
 		if hunger of player > 99:
 			now HP of player is -9999;
 			end the story saying "You have died of hunger.";
@@ -3867,7 +3873,7 @@ This is the turnpass rule:
 		else if thirst of player > 12:
 			say "You feel a little thirsty.";
 		if thirst of player > 30:
-			decrease the morale of the player by ( thirst of the player minus 30 ) divided by 5;
+			decrease the morale of the player by ( thirst of player minus 30 ) divided by 5;
 		if thirst of player > 99:
 			now HP of player is -9999;
 			end the story saying "You have died of thirst.";
@@ -4220,16 +4226,16 @@ This is the self examine rule:
 	[ Genital Descriptions Below     ]
 	let cocktext be "";
 	follow the cock descr rule;
-	if the cocks of the player > 0:
-		if the cocks of the player > 1:
-			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
+	if cocks of player > 0:
+		if cocks of player > 1:
+			now cocktext is "have [cocks of player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
 		else:
 			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
 	let cunttext be "";
 	follow the cunt descr rule;
-	if the cunts of the player > 0:
-		if the cunts of the player > 1:
-			now cunttext is " have [cunts of the player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
+	if cunts of player > 0:
+		if cunts of player > 1:
+			now cunttext is " have [cunts of player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 		else:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. It is [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 	if cocktext is not empty:
@@ -4422,11 +4428,11 @@ This is the final stats rule:
 	rule succeeds;
 
 This is the male choice rule:
-	now the cocks of the player is 1;
-	now the cock length of the player is 6;
+	now cocks of player is 1;
+	now cock length of player is 6;
 	now the cock width of the player is 4;
-	now the breasts of the player is 2;
-	now the breast size of the player is 0;
+	now breasts of player is 2;
+	now breast size of player is 0;
 	now the current menu is table of Basic Actions;
 	say "You are a man.";
 	wait for any key;
@@ -4434,11 +4440,11 @@ This is the male choice rule:
 	rule succeeds;
 
 This is the female choice rule:
-	now the cunts of the player is 1;
-	now the cunt length of the player is 6;
-	now the cunt width of the player is 4;
-	now the breasts of the player is 2;
-	now the breast size of the player is 2;
+	now cunts of player is 1;
+	now cunt length of player is 6;
+	now cunt width of player is 4;
+	now breasts of player is 2;
+	now breast size of player is 2;
 	now the current menu is table of Basic Actions;
 	say "You are a woman.";
 	wait for any key;
@@ -5063,7 +5069,7 @@ Include Storage Locker for FS by Core Mechanics.
 Include Story Skipper by Core Mechanics.
 Include Sugar Feud by AGentlemanCalledB.
 Include Tidepool Event by FwuffyMouse.
-Include Toy Store by Hellerhound.
+Include Toy Store by Song.
 Include Underground Events by Wahn.
 Include Walkinmall by Ssely.
 Include Warehouse District by Kaleem Mcintyre.
@@ -5214,7 +5220,7 @@ Include Junkman For FS by Stripes.
 Include Kangaroo by Guest Writers.
 Include Killer Whale For Fs by Stripes.
 Include Knight for FS by Stripes.
-Include Koballoon by Stripes.
+Include Koballoon by Song.
 Include Kobold Gang by Closerhenry.
 Include Komodo Dragon for FS by Stripes.
 Include Latex Ermine for FS by Stripes.
@@ -5286,7 +5292,7 @@ Include Retriever by AGentlemanCalledB.
 Include Rhino For Fs by Stripes.
 Include Robed Cultist by Wahn.
 Include Rodeo Clown For Fs by Stripes.
-Include Rubber Drake by Stripes.
+Include Rubber Drake by Song.
 Include Rubber Tigress by Sarokcat.
 Include Saber Kitty by Blaydrex.
 Include Sabretooth by Sarokcat.
@@ -5647,53 +5653,53 @@ To startgenderlockshift:
 			genderlockmenu;
 	if gsgl is:
 		-- 3:	[male]
-			now the cocks of the player is 1;
-			now the cock length of the player is 6;
+			now cocks of player is 1;
+			now cock length of player is 6;
 			now the cock width of the player is 4;
-			now the breast size of the player is 0;
+			now breast size of player is 0;
 		-- 4:		[female]
-			now the cunts of the player is 1;
-			now the cunt length of the player is 6;
-			now the cunt width of the player is 4;
-			now the breast size of the player is 2;
+			now cunts of player is 1;
+			now cunt length of player is 6;
+			now cunt width of player is 4;
+			now breast size of player is 2;
 		-- 5:		[shemale]
-			now the cocks of the player is 1;
-			now the cock length of the player is 6;
+			now cocks of player is 1;
+			now cock length of player is 6;
 			now the cock width of the player is 4;
-			now the breast size of the player is 2;
+			now breast size of player is 2;
 		-- 6: [cuntboy]
-			now the cunts of the player is 1;
-			now the cunt length of the player is 6;
-			now the cunt width of the player is 4;
-			now the breast size of the player is 0;
+			now cunts of player is 1;
+			now cunt length of player is 6;
+			now cunt width of player is 4;
+			now breast size of player is 0;
 		-- 7: [male herm]
-			now the cocks of the player is 1;
-			now the cock length of the player is 6;
+			now cocks of player is 1;
+			now cock length of player is 6;
 			now the cock width of the player is 4;
-			now the cunts of the player is 1;
-			now the cunt length of the player is 6;
-			now the cunt width of the player is 4;
-			now the breast size of the player is 0;
+			now cunts of player is 1;
+			now cunt length of player is 6;
+			now cunt width of player is 4;
+			now breast size of player is 0;
 		-- 8: [herm]
-			now the cocks of the player is 1;
-			now the cock length of the player is 6;
+			now cocks of player is 1;
+			now cock length of player is 6;
 			now the cock width of the player is 4;
-			now the cunts of the player is 1;
-			now the cunt length of the player is 6;
-			now the cunt width of the player is 4;
-			now the breast size of the player is 2;
+			now cunts of player is 1;
+			now cunt length of player is 6;
+			now cunt width of player is 4;
+			now breast size of player is 2;
 		-- 9: [always cocky]
-			now the cocks of the player is 1;
-			now the cock length of the player is 6;
+			now cocks of player is 1;
+			now cock length of player is 6;
 			now the cock width of the player is 4;
 		-- 10: [always a pussy]
-			now the cunts of the player is 1;
-			now the cunt length of the player is 6;
-			now the cunt width of the player is 4;
+			now cunts of player is 1;
+			now cunt length of player is 6;
+			now cunt width of player is 4;
 		-- 12: [flat chested]
-			now the breast size of the player is 0;
+			now breast size of player is 0;
 		-- 13: [simplified masculine]
-			now the breast size of the player is 0;
+			now breast size of player is 0;
 
 To startFeatget: [alternate featget used for start] [Checkpoint-]
 	say "Select a basic feat. This represents a skill or innate ability you have.";
@@ -6212,17 +6218,17 @@ to say gsopt_4:
 to say gsopt_start:
 	now started is 1;
 	if gspg is 1:	[male]
-		now the cocks of the player is 1;
-		now the cock length of the player is 6;
+		now cocks of player is 1;
+		now cock length of player is 6;
 		now the cock width of the player is 4;
-		now the breasts of the player is 2;
-		now the breast size of the player is 0;
+		now breasts of player is 2;
+		now breast size of player is 0;
 	else:		[defaults to female]
-		now the cunts of the player is 1;
-		now the cunt length of the player is 6;
-		now the cunt width of the player is 4;
-		now the breasts of the player is 2;
-		now the breast size of the player is 2;
+		now cunts of player is 1;
+		now cunt length of player is 6;
+		now cunt width of player is 4;
+		now breasts of player is 2;
+		now breast size of player is 2;
 	if glstart is 1:
 		startgenderlockshift;
 	gs_stats;
@@ -6362,17 +6368,17 @@ to say silent_start:
 	WaitLineBreak;
 	now started is 1;
 	if gspg is 1:	[male]
-		now the cocks of the player is 1;
-		now the cock length of the player is 6;
+		now cocks of player is 1;
+		now cock length of player is 6;
 		now the cock width of the player is 4;
-		now the breasts of the player is 2;
-		now the breast size of the player is 0;
+		now breasts of player is 2;
+		now breast size of player is 0;
 	else:		[defaults to female]
-		now the cunts of the player is 1;
-		now the cunt length of the player is 6;
-		now the cunt width of the player is 4;
-		now the breasts of the player is 2;
-		now the breast size of the player is 2;
+		now cunts of player is 1;
+		now cunt length of player is 6;
+		now cunt width of player is 4;
+		now breasts of player is 2;
+		now breast size of player is 2;
 	if glstart is 1:
 		startgenderlockshift;
 	gs_stats;

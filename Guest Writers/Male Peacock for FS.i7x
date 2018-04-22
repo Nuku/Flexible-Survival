@@ -55,7 +55,7 @@ to say peacockvictory:
 		say "     Once drained, the peacock's shaft withdraws and he gently raises your head back up to look at him and his colourful tail. He gives it a mesmerizing wave and your mind rapidly drifts away. 'It will be better for both of us if you don't remember this... Forget... Forget...' he says softly. You slump over, passing out. When you awaken, you find yourself in an alleyway with no memories of how you'd gotten there, the encounter entirely forgotten.";
 		decrease XP of player by lev entry / 2; [no XP from forgotten encounter]
 		if ktspeciesbonus > 0, decrease the XP of the player by 1;
-		if "Submissive" is listed in feats of the player and HP of player > 0, decrease the XP of the player by ( ( 2 + lev entry ) / 5 );
+		if player is submissive and HP of player > 0, decrease the XP of the player by ( ( 2 + lev entry ) / 5 );
 
 Section 2 - Monster Insertion
 

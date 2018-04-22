@@ -16,7 +16,7 @@ to say darkelfdesc:
 
 to say losetodarkelf:
 	say "     After pulling off your clothes and gear, the ebon skinned elf looks you over and ";
-	if cocks of player is 0 and cunts of player is 0 and breast size of player is 0:
+	if player is neuter and breast size of player is 0:
 		say "snarls. 'You are WORTHLESS to me. In every way.' As you lie defeated before her, she spits in your face, and then kicks you in your head, knocking you out.";
 	else:
 		say "smiles. It is not a nice smile. 'You'll do, pet.' She leans over and kisses you on the lips, and you feel and unwilling arousal flood through you.";
@@ -38,7 +38,7 @@ to say losetodarkelf:
 			else:
 				say "[darkelfF]";
 		else if cocks of player > 0:				[male]
-			if "Less Anal" is not listed in feats of player and ( a random chance of 1 in 4 succeeds or ( "More Anal" is listed in feats of player and a random chance of 1 in 4 succeeds ) ):
+			if ( anallevel > 1 and a random chance of 1 in 4 succeeds ) or ( anallevel is 3 and a random chance of 1 in 4 succeeds ): [Might seem redundant at first, but the second half of this conditional increases the chance of anal occurring at anallevel 3]
 				say "[darkelfM]";
 			else:
 				say "[darkelfF]";

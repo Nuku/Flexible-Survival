@@ -379,7 +379,7 @@ to say sexwithSidney:
 		now HP of Sidney is 0;
 		remove Sidney from play;
 		if girl is not banned and furry is not banned, now Meeting Sidney is unresolved;
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     You should settle on a gender of your own before trying to sex up the gender-shifted soldier.";
 	else if lastfuck of Sidney - turns < 6:
 		say "     'I'm still getting used to all this. It's been wonderful, but I think I could use a bit of a break.'";

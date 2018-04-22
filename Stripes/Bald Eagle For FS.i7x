@@ -22,13 +22,13 @@ to say eagledesc:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
-	say "     Your searching is interrupted by a sharp screech from overhead and you spot a large avian swooping down at you, talons grabbing for you. You barely dodge this first swipe as the eagle man screeches in again, this time in anger at missing. '[one of]I'll get you,' he crie[or]You won't get away,' he crie[or]You'll be mine, prey,' he snap[at random]s as he swoops around for another pass at you. This humanoid avian has a bald eagle, with dark brown feathers over his body and wings and a bright white over his head and neck. His wings are long and broad, formed into part of his arms. His small, taloned hands are at the midpoint of his wings['] leading edge, able to be used when the not fully extended. His feet end in the bird feet with sharp claws. His beak also looks quite sharp and dangerous.";
+	say "     Your searching is interrupted by a sharp screech from overhead and you spot a large avian swooping down at you, talons grabbing for you. You barely dodge this first swipe as the eagle man screeches in again, this time in anger at missing. '[one of]I'll get you,' he cries[or]You won't get away,' he cries[or]You'll be mine, prey,' he snaps[at random] as he swoops around for another pass at you. This humanoid avian has a bald eagle, with dark brown feathers over his body and wings and a bright white over his head and neck. His wings are long and broad, formed into part of his arms. His small, taloned hands are at the midpoint of his wings['] leading edge, able to be used when the not fully extended. His feet end in the bird feet with sharp claws. His beak also looks quite sharp and dangerous.";
 
 to say losetoeagle:
 	now noeaglesex is 0;
 	let T be 1;
-	if "Submissive" is listed in feats of player, increase T by 1;
-	if "MPreg" is listed in feats of player, increase T by 1;
+	if player is submissive, increase T by 1;
+	if player is mpreg_ok, increase T by 1;
 	if anallevel is 3, increase T by 1;
 	if anallevel is 1, now T is 0;
 	say "     Having defeated you, the eagle releases a triumph call and pushes you down. His cock, poking from his soft feathers, is dripping with pre and eager for use on his captured prey. ";
@@ -46,7 +46,7 @@ to say losetoeagle:
 to say beattheeagle:
 	if noeaglesex > 2:
 		say "     Defeated, the eagle shrieks angrily and soars off to nurse his wounds. You make no effort to stop it, same as you've done with the others of its kind recently.";
-	else if eagledefeatnum < 3 or ( cocks of player is 0 and cunts of player is 0 ) or noeaglesex > 2:
+	else if eagledefeatnum < 3 or ( player is neuter ) or noeaglesex > 2:
 		say "     Defeated, the eagle shrieks angrily and soars off to nurse his wounds.";
 		increase eagledefeatnum by 1;
 	else:

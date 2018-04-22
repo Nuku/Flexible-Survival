@@ -180,7 +180,7 @@ to say cheetahwomaninheat:
 				infect;
 				decrease score by 5;
 				decrease morale of player by 3;
-				if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
+				if player is kinky, increase the morale of the player by 6;
 			else:
 				say "As your feline heat courses through you, you sniff the air, trying to catch the scent of a nearby feline, but are unsuccessful[if cmonlist is empty]. Perhaps you'd best head somewhere you know there are more kitties to play with, your heat-filled mind decides[end if].";
 				increase slutfucked by 1;

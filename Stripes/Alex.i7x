@@ -268,13 +268,13 @@ to say alexsexytimes1:
 	[WaitLineBreak]
 	say "     Alex runs his hands over your body, stroking it sensually as he nuzzles your cheek. Soon he's moving down to your neck, licking and nibbling as he softly chirrs. His whiskered face moves do to your nipples, teasing them with a few licks before continuing down your body. His tongue plays across your [bodyname of player] body as it goes slowly lower and lower. His tongue eventually reaches your groin and starts licking over your tender, sensitive flesh.";
 	if cocks of player > 0 and cunts of player > 0:		[HERM]
-		say "     The ferret runs his fingers over your cock[if cocks of player > 1]s, holding them[else], holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of player] cock[if cocks of player > 1]s[end if] slowly, working over every square centimeter of [if cocks of player > 1]them[else]it[end if] and your balls to pleasure you.";
+		say "     The ferret runs his fingers over your cock[if cocks of player > 1]s, holding them[else], holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of player] cock[smn] slowly, working over every square centimeter of [if cocks of player > 1]them[else]it[end if] and your balls to pleasure you.";
 		say "     After tending to your male genitals, he nuzzles under your balls to give your pussy some attention. The ferret runs is fingers over your wet lips, the spreads them as he teasingly brushes his tongue across them. He works his tongue across your pussy again and again, nibbling your folds from time to time. Once he's tended to every square centimeter of your lips and gotten you drippingly wet, he dives his tongue into you and starts licking and lapping with considerable zeal.";
 		say "     Having gotten you quite worked up, when he finally plunges his mouth down over your cock and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [ball size] to slip a finger into your pussy while the other strokes his animalistic member.";
 		[WaitLineBreak]
 		say "     His nimble fingers and artful muzzle tease your [cockname of player] shaft and [cunt size desc of player] pussy until you can hold back no longer and shoot your hot load down the ferrety man's throat. He sucks it all down with soft moans until your balls are drained. His muzzle pulls back and he slides his slinky body up yours to kiss you. As your tongue dives between his lips, you can feel the mustelid's cum spraying across your body.";
 	else if cocks of player > 0:				[MALE]
-		say "     The ferret runs his fingers over your cock[if cocks of player > 1]s, holding them[else], holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of player] cock[if cocks of player > 1]s[end if] slowly, working over every square centimeter of [if cocks of player > 1]them[else]it[end if] and your balls to pleasure you[if anallevel is 3]. He continues lower, sliding his tongue across your tight pucker in several slow licks. His tongue wriggles against your back entrance and eases its way into your rectum as he eagerly rims you for increased pleasure[end if]. Having gotten you quite worked up, when he finally plunges his mouth down over your [cockname of player] penis and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [short ball size] balls while the other strokes his animalistic member.";
+		say "     The ferret runs his fingers over your cock[if cocks of player > 1]s, holding them[else], holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of player] cock[smn] slowly, working over every square centimeter of [if cocks of player > 1]them[else]it[end if] and your balls to pleasure you[if anallevel is 3]. He continues lower, sliding his tongue across your tight pucker in several slow licks. His tongue wriggles against your back entrance and eases its way into your rectum as he eagerly rims you for increased pleasure[end if]. Having gotten you quite worked up, when he finally plunges his mouth down over your [cockname of player] penis and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [short ball size] balls while the other strokes his animalistic member.";
 		[WaitLineBreak]
 		say "     His nimble fingers and artful muzzle tease your [cockname of player] shaft until you can hold back no longer and shoot your hot load down the ferrety man's throat. He sucks it all down with soft moans until your balls are drained. His muzzle pulls back and he slides his slinky body up yours to kiss you. As your tongue dives between his lips, you can feel the mustelid's cum spraying across your body.";
 	else:								[FEMALE]
@@ -403,7 +403,7 @@ to say brunchtimechange:
 		now scalevalue of player is 3;
 		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
-		now the daycycle of player is 0;
+		now daycycle of player is 0;
 [
 		say "[bold type]Your dexterity has increased by 2![roman type][line break]";
 		say "[bold type]Your stamina has dropped by 1![roman type][line break]";
@@ -432,7 +432,7 @@ to say alexbodyreset:
 		now scalevalue of player is 3;
 		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
-		now the daycycle of player is 0;
+		now daycycle of player is 0;
 	if alexbrunch > 3 and cockname of player is not "Ferret":
 		say ". Rubbing his stiff cock against your loins, his precum leaks onto you. You can feel pleasant tingles as they are restored to their mustelid nature";
 		now cockname of player is "Ferret";
@@ -494,9 +494,9 @@ when play ends:
 			if humanity of player > 49 and intelligence of player > 15 and charisma of player > 15:	[BEST ENDING ADD-ON]
 				say "     In your later years, you end up being instrumental in dealing with the growing problem of the hyena gangs. The improvements to TF rights you've brought about keep the situation from escalating beyond control. Without a mass of disaffected youth to call upon, their influence was already dwindling. When you finally are called to step in and negotiate with the leaders, you are able to curb the violence and end the coming crisis.";
 				if coonstatus is 101:				[coon pet]
-					say "     You watch as the first tf presidential candidate is announced while you and Alex snuggle with breakfast in bed. Lorenda and Lee, in the mood to make a show of playing frisky maids with your pink coontoy, are there with you to see it. You all smile and agree he won't win, but you don't care. You know you will when you run in a few years' time.";
+					say "     You watch as the first tf presidential candidate is announced while you and Alex snuggle with breakfast in bed. Lorenda and Lee, in the mood to make a show of playing frisky maids with your pink coontoy, are there with you to see it. You all smile and agree he won't win, but you don't care. You know you will when you run in a few years['] time.";
 				else:
-					say "     You watch as the first tf presidential candidate is announced while you and Alex snuggle with breakfast in bed. Lorenda and Lee, in the mood to play frisky maids that day, are there with you to see it. You all smile and agree he won't win, but you don't care. You know you will when you run in a few years' time.";
+					say "     You watch as the first tf presidential candidate is announced while you and Alex snuggle with breakfast in bed. Lorenda and Lee, in the mood to play frisky maids that day, are there with you to see it. You all smile and agree he won't win, but you don't care. You know you will when you run in a few years['] time.";
 
 
 Alex ends here.

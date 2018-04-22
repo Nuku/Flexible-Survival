@@ -74,7 +74,7 @@ an everyturn rule:
 			if player is in Brookstone Books:
 				say "     As the morning progresses, teenagers of varied species and apparent ages gravitate into the bookstore, gathering around Jay. He smiles and greets each of them by name, then leads what is soon a dozen kids to a quiet corner of the store, where a narrow blackboard has been set up. An improvised, yet quite interesting and funny lesson for the young people plays out, at the end of which Jay sends his students off with the words, 'See you tomorrow.' After that, the elf himself leaves too, waving to Beverly as he goes.";
 			if player is in Mall Foodcourt:
-				say "    Jay the Christmas Elf comes walking into the food court from the north, making a beeline for one of the stores. After a short and amicable conversation with the mall rat server on duty, he gets a tablet with a fairly nice lunch handed to him and goes over to a group of tables to eat, then stays sitting there to chat with people passing by.";
+				say "     Jay the Christmas Elf comes walking into the food court from the north, making a beeline for one of the stores. After a short and amicable conversation with the mall rat server on duty, he gets a tablet with a fairly nice lunch handed to him and goes over to a group of tables to eat, then stays sitting there to chat with people passing by.";
 			move Jay to Mall Foodcourt;
 		[else if TimekeepingVar is 4 or TimekeepingVar is -4:] [mid afternoon - Jay hangs out at the food court]
 		[else if TimekeepingVar is 3 or TimekeepingVar is -5:] [evening - Jay hangs out at the food court]
@@ -257,8 +257,8 @@ instead of fucking the Jay:
 			say "     Looking you up and down and letting his gaze rest on your crotch for a few seconds, Jay clears his throat and looks up at your face, 'That's an interesting offer, my friend. Mark and me only really do things together as a couple, with maybe an odd threesome from time to time. Although there might be exceptions for good friends that we both really like.' The sexy wink that Jay gives you after saying this makes you wonder about ways to get on that select list of people. Likely it wouldn't be easy, but quite rewarding indeed.";
 		else:
 			say "     <WIP: Sorry, sexing up either Jay or Mark isn't quite done yet>";
-	
-[	
+
+[
 	if (lastfuck of Jay - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     <Reason why Jay doesn't feel like having sex right now. Exhaustion, duty, or otherwise>";
 	else: [ready for sex]

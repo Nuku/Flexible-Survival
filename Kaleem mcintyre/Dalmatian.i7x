@@ -4,7 +4,7 @@ Section 1 - Monster Responses
 
 when play begins:
 [These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
-[Delete the lines with unneeded flags and replace 'Dalmatian' with your creature's name entry.  Case sensitive.]
+[Delete the lines with unneeded flags and replace 'Dalmatian' with your creature's name entry. Case sensitive.]
 	add { "Dalmatian" } to infections of guy;
 	add { "Dalmatian" } to infections of furry;
 
@@ -48,8 +48,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Dalmatian"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The Dalmatian attacks you in some abstract manner![or]The Dalmatian leaves you greater understanding, thereby lowering your resistance to it![or]The Dalmatian batters you with examples![or]The Dalmatian firmly makes its point![at random]"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheDalmatian]"; [ Text when monster loses.  Change 'Dalmatian' as above. ]
-	now victory entry is "[losetoDalmatian]"; [ Text when monster wins.  Change 'Dalmatian' as above. ]
+	now defeated entry is "[beattheDalmatian]"; [ Text when monster loses. Change 'Dalmatian' as above. ]
+	now victory entry is "[losetoDalmatian]"; [ Text when monster wins. Change 'Dalmatian' as above. ]
 	now desc entry is "[Dalmatiandesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "covered with black spots while long floppy ears hang down the side of your regal-looking head. Your impressive jowls come with a fat red tongue, while the eyes with which you see the world in newfound sharpness are hazel in color. A black button-nose at the end of your long muzzle completes the image of an anthro Dalmatian's head.";
 	now body entry is "lean and limber with hidden muscles as your canine body hides what strength you have[if player is dalskinned] underneath the pale wisps of black spotted fur covering your body[end if].  All across your arms, legs, thighs, chest, and torso you have almost unseen muscles cropped along your wiry body as your cano-mutant form is now more suited for maximizing your newfound dexterity with extreme running, jumping, bounding and leaping rather than fighting with what strength you do possess, what with you now possessing digitigrade feet instead of the normal plantigrade ones that other mutants boast";
@@ -67,9 +67,9 @@ When Play begins:
 	now per entry is 22;
 	now int entry is 16;
 	now cha entry is 20;
-	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 66; [ The monster's starting HP. ]
-	now lev entry is 1; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 15; [ Monster's average damage when attacking. ]
 	now area entry is "None"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -82,7 +82,7 @@ When Play begins:
 	now cunt length entry is 9; [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 55; [ Target libido the infection will rise towards. ]
-	now loot entry is ""; [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]

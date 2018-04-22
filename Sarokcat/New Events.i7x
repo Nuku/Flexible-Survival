@@ -178,7 +178,7 @@ Broken fountain is a situation.
 The sarea of Broken fountain is "Park".
 
 Instead of Resolving a Broken fountain:
-	Say "While wandering through the park trail you hear a soft trickling noise, like water softly running over stone. following the noise you come to a busted water fountain, apparently destroyed by several of the creatures fighting (or doing other things) in the area. Glancing around you manage to find an empty container to put some of the water in, before heading on your way.";
+	Say "While wandering through the park trail you hear a soft trickling noise, like water softly running over stone. Following the noise you come to a busted water fountain, apparently destroyed by several of the creatures fighting (or doing other things) in the area. Glancing around you manage to find an empty container to put some of the water in, before heading on your way.";
 	increase carried of dirty water by 1;
 	Now Broken fountain is resolved;
 

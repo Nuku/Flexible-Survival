@@ -85,8 +85,8 @@ an everyturn rule:
 		decrease fertiletime by 3;
 		if fertiletime > 0:
 			say "You feel ready for a mate, and a mental pressure urging for sex distracts you.";
-			if the libido of the player < 96:
-				increase the libido of the player by 5;
+			if libido of player < 96:
+				increase libido of player by 5;
 		else:
 			say "Your mating desire fades, and you realize the fertility pill has worn off.";
 			if wassterile is 1:

@@ -39,7 +39,7 @@ to say losetofruitbat:
 
 to say beatthefruitbat:
 	increase frbatbeaten by 1;
-	if frbatbeaten < 2 or ( cocks of player is 0 and cunts of player is 0 ):
+	if frbatbeaten < 2 or ( player is neuter ):
 		say "     Your continued resistance proves to be more than the bat wants to endure in his search for fun. He moves away from you and flaps higher into the air. '[one of]Oh, with an attitude like that, I'm sure you're sour[or]Hey, don't bruise the fruit[or]You are one bad apple[or]You're missing out on some really big, sweet plums[or]You must be rotten to the core to want to spoil my fun[at random],' he says in disgust before banking away and flying off.";
 	else:
 		say "     Your continued resistance proves to be more than the bat wants to endure in his search for fun. But this time you're ready for him and tackle him as he starts to take to the air. Unable to support the weight of both of you, he tumbles [if showlocale is true]onto the sandy beach[else]to the ground[end if] and is pinned beneath you. But you'd reacted without considering why, or even if, you want him at all. Now that you've caught the bat, what shall you do?";

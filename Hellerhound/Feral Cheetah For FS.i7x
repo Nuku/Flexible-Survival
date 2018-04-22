@@ -14,7 +14,7 @@ when play begins:
 
 To say cheetah defeat:
 	if cheetahmate is 0:
-		increase the libido of the player by 20;
+		increase libido of player by 20;
 		say "     You notice an enticing scent in the air around the fallen cheetah that's starting to arouse you quite a bit. The spotted male's body starts looking better and better to you. If you don't want to succumb to the heady pheromone-laden musk, you really should go - NOW! Do you do so?";
 		if player consents:
 			say "     Shaking off the effect of the cheetah's scent, you walk away, taking deep breaths of fresh air.";
@@ -142,7 +142,7 @@ When Play begins:
 	now HP entry is 90;
 	now lev entry is 18; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you lose ]
 	now wdam entry is 18; [ Amount of Damage monster Does when attacking.]
-	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
@@ -209,12 +209,12 @@ when play ends:
 	if the bodyname of the player is "Feral Cheetah":
 		if cheetahmate is 0:
 			if the humanity of the player < 10:
-				if the cunts of the player > 0:
+				if cunts of player > 0:
 					say "You join the growing band of converts and soon take your place as the pack leader's proud mate. Your group manages to keep away the human forces with sheer speed and cunning, maintaining control of the zoo and some of the surrounding area even as the rest of the city is pacified.";
 				else:
 					say "You form the cheetahs of the zoo into a large, spotted band of conquerors and hold the humans off with sheer speed and cunning. One day, as you oversee and participate in the defense, you smell someone sweet, and entice her to choose you as her mate. While the military manages to pacify the rest of the city, the zoo and its surrounding area remains firmly under your pack's control, abandoned as too difficult to reclaim.";
 			else:
-				if the cunts of the player > 0:
+				if cunts of player > 0:
 					say "You choose a mate from the transformed and after escaping those hunting for you in the city bear him many children over the following years. Time goes by quickly with the sweet smell of freedom, love, and your mate to accompany you, until eventually humankind returns its grasp on the world and you prepare to teach them a lesson...";
 				else:
 					say "You wait Main Path 1, and, in the few days that the humans take to recapture and purify the city, a cheetah chooses you as her mate. The two of you flee the city together, stopping only when you are both on a remote plain, grass stretching as far as the eye can see. She bears you many children in your wild home, and the sweet smell of freedom, love, and your mate carry you outwards.";

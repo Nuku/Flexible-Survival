@@ -109,16 +109,16 @@ to say sexwithGarrett:
 		if ( bodyname of player is "Hermaphrodite Gryphon" or bodyname of player is "Feral Gryphon" ) and player is pure:
 			now player_puregryph is true;
 		if player_puregryph is true:
-			if ( HP of Garrett >= 3 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
+			if ( HP of Garrett >= 3 and a random chance of anallevel in 5 succeeds ) and anallevel > 1:
 				say "[garrett_analtop_2]";
-			else if ( HP of Garrett >= 4 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
+			else if ( HP of Garrett >= 4 and a random chance of anallevel in 5 succeeds ) and anallevel > 1:
 				say "[garrett_analbottom_2]";
 			else:
 				say "[garrett_handjob_2]";
 		else:
-			if ( HP of Garrett >= 3 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
+			if ( HP of Garrett >= 3 and a random chance of anallevel in 5 succeeds ) and anallevel > 1:
 				say "[garrett_analtop_1]";
-			else if ( HP of Garrett >= 4 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
+			else if ( HP of Garrett >= 4 and a random chance of anallevel in 5 succeeds ) and anallevel > 1:
 				say "[garrett_analbottom_1]";
 			else:
 				say "[garrett_handjob_1]";

@@ -132,7 +132,7 @@ to say sexwithBuster:
 		say "ERROR-Buster-[HP of Buster]F: You should be able to find me yet.";
 	else if lastfuck of Buster - turns < 6:
 		say "     'While that sounds like fun, the others on the squad also need me.'";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     You're ill-equipped to play with him right now.";
 	else if HP of Buster is 0:
 		say "[bustersex00]";

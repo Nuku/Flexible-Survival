@@ -213,22 +213,22 @@ to say losetodobie3:		[high-lust player loss]
 	if cunts of player > 0 and cocks of player > 0:
 		if a random chance of 3 in 5 succeeds:
 			say "[dobieride]";
-		else if "More Anal" is listed in feats of player and a random chance of 1 in 4 succeeds:
+		else if anallevel is 3 and a random chance of 1 in 4 succeeds:
 			say "[dobiensanal]";
 		else:
 			say "[dobiensvag]";
 	else if cocks of player > 0:
-		if "More Anal" is listed in feats of player and a random chance of 1 in 3 succeeds:
+		if anallevel is 3 and a random chance of 1 in 3 succeeds:
 			say "[dobiensanal]";
 		else:
 			say "[dobieride]";
 	else if cunts of player > 0:
-		if "More Anal" is listed in feats of player and a random chance of 1 in 4 succeeds:
+		if anallevel is 3 and a random chance of 1 in 4 succeeds:
 			say "[dobiensanal]";
 		else:
 			say "[dobiensvag]";
 	else:
-		if "More Anal" is listed in feats of player and a random chance of 1 in 3 succeeds:
+		if anallevel is 3 and a random chance of 1 in 3 succeeds:
 			say "[dobiensanal]";
 		else:
 			decrease HP of player by wdam entry * 2;
@@ -578,7 +578,7 @@ when play ends:
 			if cocks of player > 0:							[MALE/HERM]
 				say "Tyr doesn't try to hide it as he knows what you want and how you want it. Being that he's overseen both your training and the unit you're working for you feel almost indebted to the other man during the times when he lays you down on top of your bed and then gently strips you out of your evening attire. Of course, the other always reminds you that you owe him nothing, but you still feel that you do, especially when he lifts up your legs, rubs his meaty hands across your cock and balls, and then buries his face in between your legs to give you the most mind blowing blowjob in the world.";
 				say "The fact that he makes sure that you don't cum in his muzzle makes things all the more exciting as the bigger Doberman leaves you right on the edge before making his next move. Holding your hips up for him you watch and wait as Tyr prepares himself to take your tight tailhole, forever using his precum instead of lube, before wincing and hissing in slight pain as the Dobie takes you hard. Never like a bitch though, both you and he know that your [']relationship['] with each other is worth more than that. However, that does not stop him from hammering into your ass, driving across your prostate like mad, which then leaves you babbling and begging for more, as the bigger Dobie drives you to the edge of orgasm while knotting you good and tight.";
-				say "He finishes fast on the first of your trysts, he always does, but during the second, third, fourth and fifth, Tyr makes sure to make long and passionate love with you as he fills you to the brim with his canine spunk. By the time he's through and his knot finally pops out of you your ass is leaking so much that the other [']generously['] offers to lick you clean in order not to make a mess on your bed. As of to date, you've never told him no before.";
+				say "He finishes fast on the first of your trysts, he always does, but during the second, third, fourth and fifth, Tyr makes sure to make long and passionate love with you as he fills you to the brim with his canine spunk. By the time he's through and his knot finally pops out of you, your ass is leaking so much that the other [']generously['] offers to lick you clean in order not to make a mess on your bed. As of to date, you've never told him no before.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "Having Tyr as your secret lover becomes less of a secret when your stomach swells with his brood. You never complain though when you mysteriously find yourself on desk duty instead of working out in the field. Your teammates, many of them mutants, some of them even females like yourself, are happy to congratulate you on your luck at finding companionship given these weird times. None of them ask who the father is. All of them know by both the scent that always travels along your fur when you return from your time off and by the fact that an unfamiliar Doberman is constantly seen hanging around the places where you are working who the lucky male is.";
 				say "One day during your pregnancy you find yourself scared out of your wits when someone comes up from behind you while you are in the break room to force you down onto a nearby table with your rump pushed high up into the air. Growling and cursing that someone could be strong enough to hold you down against your will you find yourself all but melting when a familiar voice chuckles inside of your cropped ear. Freezing when a hole is torn into your cargo pants by wickedly sharp claws, you spread your legs wide and hunch upwards as a thick Dobie shaft is stuffed up into your cunt with gentle, but forceful thrusts.";
