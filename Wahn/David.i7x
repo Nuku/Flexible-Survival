@@ -1744,8 +1744,7 @@ instead of going down from the Grey Abbey Library while (David is in Bunker and 
 	now RyouseiDavidInteraction is 1;
 	now lastRyouseiDavidInteraction is turns;
 
-instead of going inside from Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction < 2 and companion of player is royal tiger and (lastRyouseiDavidInteraction - turns > 6)):
-	move player to Bunker;
+after going down from Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction < 2 and companion of player is royal tiger and (lastRyouseiDavidInteraction - turns > 6)):
 	if RyouseiDavidInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: David & Ryousei Scene; RyouseiDavidInteraction: [RyouseiDavidInteraction][line break]";

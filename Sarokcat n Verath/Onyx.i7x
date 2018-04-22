@@ -3,6 +3,169 @@ Version 4 of Onyx by Sarokcat n Verath begins here.
 
 "Adds an NPC to Flexible Survival with a variety of responses and goals..."
 
+[
+[ XP of Onyx = consolidated quest content ]
+[ 0 = not met ]
+[ 1 = talked (keys available) ]
+[ 2 = got keys ]
+[ 3 = unlocked cage but confused ]
+[ 4 = talked to Daisy, plan to free Onyx (locket available) ]
+[ 5 = found locket ]
+[ 6 = shown locket, moved to Library ]
+[ 7 = talked at Library, still uncertain]
+[ 8 = gave blow job to calm nerves (not stallion locked) ]
+[ 10-19 = Freed stallion - Dom]
+[ cock length ~ 20? ]
+[ 10 = gave oral again (random - stallion locked) ]
+[ ... ]
+[ 10-29 = Freed stallion - Sub]
+[ cock length ~ 16? ]
+[ 20 = made to give oral (stallion sub locked) ]
+[ 21 = sex w/sub stallion (vag or anal) ]
+[ ... ]
+[ 30-49 = Freed mare (Palomino) ]
+[ 31 = Fucked mare ]
+[ 32 = Received lap dance ]
+[ ... ]
+[ 50 = talked to Daisy, plan to have Onyx stay ]
+[ 51 = talked to Onyx about staying - fuck to lock him in ]
+[ 60-79 = Stabled stallion ]
+[ 60 = fucked, Onyx locked as stallion ]
+[ ... ]
+[ 80-99 = Stabled mare ]
+[ 80 = fucked, Onyx locked as mare ]
+[ ... ]
+[ 100 = ban locked ]
+
+***Previous variable system expanded out - for revision/testing - to be removed when proven functional***
+
+	XP of onyx is 0
+All 0's - not met
+
+	XP of onyx is 1
+met, keys unlocked
+onyxtalk = 1
+onyxkeys = 1
+equineguardpost unresolved
+
+	XP of onyx is 2
+got keys
+onyxkeys = 2
+equineguardpost resolved
+
+	XP of onyx is 3
+just freed
+onyxtalk = 2
+onyxquest = 1
+
+
+	Path B - opt to make him leave
+	XP of onyx is 4
+talked to Daisy - opt to make him leave
+onyxkeys = 3
+Stablestoreroom is unresolved
+
+	XP of onyx is 5
+got locket
+onyxkeys = 4
+Stablestoreroom is resolved
+
+	XP of onyx is 6
+show locket (move to Library)
+onyxquest = 2
+move Onyx to Back Of The Library
+now the vmusings of Onyx is "[onyxmusing]";
+(HP of Onyx is 0)
+
+	XP of onyx is 7
+talked at library
+HP of Onyx = 1
+
+	XP of onyx is 8
+gave oral sex (not Stallion locked)
+HP of Onyx = 2
+
+		Path B1 - Onyx stallion (free)
+	XP of onyx is 10 (10 - 29)
+gave oral again (may prompt this transition)
+HP of Onyx = 3
+onyxquest = 4 (stallion-locked)
+		END PATH B1
+
+
+		Path B2 - Onyx mare (free)
+	XP of onyx is 30 (30 - 49)
+Path does not exist yet, but slot should be prepared
+
+
+
+	Path A - opt to make him stay
+
+	XP of onyx is 50:
+talked to Daisy - opt to make him stay
+onyxkeys = 5
+
+	XP of onyx is 51
+convince to stay (not yet sexed)
+onyxtalk = 4
+
+		Path A1 - Onyx stallion (Stables)
+
+	XP of onyx is 60 (60 - 79)
+sex w/Onyx (stallion)
+onyxquest = 6
+{ Onyxmareslut or Onyxboislut = 1+ )
+		END PATH A1 (except for slut variables - independent and unchanged)
+
+		Path A2 - Onyx mare (Stables)
+
+	XP of onyx is 80 (80 - 99)
+sex w/Onyx (mare)
+onyxquest = 5
+		END PATH A2
+
+	END PATH A
+
+
+
+
+
+	XP of onyx is 100
+Ban locked - cleared and reset upon reloading (for fresh reminder)
+
+[ Onyxtalk ]
+[ 0 = not met ]
+[ 1 = talked (keys avail.) ]
+[ 2 = just freed ]
+[ ... ]
+[ 100 = Ban locked ]
+
+
+[ Onyxquest ]
+[ 0 = trapped ]
+[ 1 = freed - undecided ]
+[ 2 = library in limbo ]
+[ 3 = F Palomino dancer - unused at present ]
+[ 4 = M Dommy at Library ]
+[ 5 = F at Stables ]
+[ 6 = M at Stables ]
+
+[ HP of Onyx ]
+
+[ Onyxkeys ]
+[ 0 = not talked ]
+[ 1 = keys avail. (talked once) ]
+[ 2 = got keys ]
+
+
+[ Onyxfucked ]
+[ onyxdma ]
+[ onyxdfa]
+[ onyxhappytalk ]
+[ Onyxmareslut ]
+[ Onyxboislut ]
+]
+
 section 1 - Onyx
 
 onyxdma is a number that varies.	[rescued Onyx / dom male / anal on player]
@@ -103,8 +266,8 @@ instead of conversing the Onyx:
 		say "     Sighing, Onyx admits that he is pretty sure that he can't actually bring himself to fight any of the more dominant equines right now, and with some persuasion agrees to follow you out of the Stables. It takes a bit of work for you to distract the two guards outside, but you manage to keep their attention long enough for Onyx to slip out unnoticed. Once free of the Stables, you lead your new and slightly unhappy new equine companion back to the safest place you know if in this crazy city, breathing a soft sigh of relief as the library comes into sight and you can both rest and relax for a bit.";
 		now XP of Onyx is 6;
 		now the vmusings of Onyx is "[onyxmusing]";
-		now Onyx is in Grey Abbey Library;
-		move player to Grey Abbey Library;
+		now Onyx is in Back Of The Library;
+		move player to Back Of The Library;
 	else if XP of Onyx is 6:
 		say "     'Hey thanks again for your help,' the mostly changed equine teenager says with a soft smile as you approach him. 'I know I am going to keep changing, but at least I'm here with you instead of trapped with those crazies back at the Stables,' he says with a soft smile, before sighing slightly. 'I still wish I knew how to fit in properly though now. Everything is just so confusing, and I still am not sure if I am going to end up a stallion or a mare when all this is over with...' Onyx says with a sigh, before giving you a shy grin and a shrug. 'Heck I don't even feel sure about which one I want to end up as. Both ideas seem so sexy and appealing to me sometimes...'";
 		say "     He looks off into the distance with a smile on his face for a second, before shrugging and poking at the books in front of him again. Looking at the books yourself, you find yourself grinning as you note he has all sorts of books about horses spread out in front of him, with pictures of both mares and stallions spread out on the table. Glancing up at your new equine acquaintance, you find yourself wondering if maybe you can't find something, or someone out there, to help you finish transforming him into either a sexy stud, or a slutty mare for you to play with... to solve his personal dilemma, of course.";
@@ -999,168 +1162,5 @@ when play ends:
 	else if Onyxboislut is 3:
 		say "     Your time at the Stables has been surprisingly pleasant, once you stopped fighting your purpose and your captivity, you came to really enjoy being bound and helpless for all the stallions to use. And use you they did! You had many visitors at first from among the stallions, though your favorite was the big black stallion who captured you in the first place. It wasn't long before you begin responding to your new name, 'Obsidian', and loving your equally sexy new black furred stallionboi body. And once the training was over and you are finally released from the training stall, you make sure to thank Onyx very personally for his help in making you such a sexy little manwhorse. So much so that you have trouble walking for several days afterwards, much to the amusement of his fellow stallions. Eventually though, you settle down to your new life as a rather girly and sex-hungry stallionboi. And with your enhanced submissiveness, you find you have a real strong client base among those who like to dominate their male partners and tie them up. Of course, eventually you are shifted over to work with many of the other stallionbois and eagerly take your position as one of the most sub among them, letting them play at being studs by fucking you until you pass out, overflowing with the cum from all your loving friends. Your big, handsome young stallion still visits you often to remind you that you still belong to him. At these times more than any other, you recall how glad you are that you convinced him to stay in the Stables like a good horsey, and how glad you are that he did the same to you as well!";
 
-
-[
-[ XP of Onyx = consolidated quest content ]
-[ 0 = not met ]
-[ 1 = talked (keys available) ]
-[ 2 = got keys ]
-[ 3 = unlocked cage but confused ]
-[ 4 = talked to Daisy, plan to free Onyx (locket available) ]
-[ 5 = found locket ]
-[ 6 = shown locket, moved to Library ]
-[ 7 = talked at Library, still uncertain]
-[ 8 = gave blow job to calm nerves (not stallion locked) ]
-[ 10-19 = Freed stallion - Dom]
-[ cock length ~ 20? ]
-[ 10 = gave oral again (random - stallion locked) ]
-[ ... ]
-[ 10-29 = Freed stallion - Sub]
-[ cock length ~ 16? ]
-[ 20 = made to give oral (stallion sub locked) ]
-[ 21 = sex w/sub stallion (vag or anal) ]
-[ ... ]
-[ 30-49 = Freed mare (Palomino) ]
-[ 31 = Fucked mare ]
-[ 32 = Received lap dance ]
-[ ... ]
-[ 50 = talked to Daisy, plan to have Onyx stay ]
-[ 51 = talked to Onyx about staying - fuck to lock him in ]
-[ 60-79 = Stabled stallion ]
-[ 60 = fucked, Onyx locked as stallion ]
-[ ... ]
-[ 80-99 = Stabled mare ]
-[ 80 = fucked, Onyx locked as mare ]
-[ ... ]
-[ 100 = ban locked ]
-
-***Previous variable system expanded out - for revision/testing - to be removed when proven functional***
-
-	XP of onyx is 0
-All 0's - not met
-
-	XP of onyx is 1
-met, keys unlocked
-onyxtalk = 1
-onyxkeys = 1
-equineguardpost unresolved
-
-	XP of onyx is 2
-got keys
-onyxkeys = 2
-equineguardpost resolved
-
-	XP of onyx is 3
-just freed
-onyxtalk = 2
-onyxquest = 1
-
-
-	Path B - opt to make him leave
-	XP of onyx is 4
-talked to Daisy - opt to make him leave
-onyxkeys = 3
-Stablestoreroom is unresolved
-
-	XP of onyx is 5
-got locket
-onyxkeys = 4
-Stablestoreroom is resolved
-
-	XP of onyx is 6
-show locket (move to Library)
-onyxquest = 2
-move Onyx to Grey Abbey Library
-now the vmusings of Onyx is "[onyxmusing]";
-(HP of Onyx is 0)
-
-	XP of onyx is 7
-talked at library
-HP of Onyx = 1
-
-	XP of onyx is 8
-gave oral sex (not Stallion locked)
-HP of Onyx = 2
-
-		Path B1 - Onyx stallion (free)
-	XP of onyx is 10 (10 - 29)
-gave oral again (may prompt this transition)
-HP of Onyx = 3
-onyxquest = 4 (stallion-locked)
-		END PATH B1
-
-
-		Path B2 - Onyx mare (free)
-	XP of onyx is 30 (30 - 49)
-Path does not exist yet, but slot should be prepared
-
-
-
-	Path A - opt to make him stay
-
-	XP of onyx is 50:
-talked to Daisy - opt to make him stay
-onyxkeys = 5
-
-	XP of onyx is 51
-convince to stay (not yet sexed)
-onyxtalk = 4
-
-		Path A1 - Onyx stallion (Stables)
-
-	XP of onyx is 60 (60 - 79)
-sex w/Onyx (stallion)
-onyxquest = 6
-{ Onyxmareslut or Onyxboislut = 1+ )
-		END PATH A1 (except for slut variables - independent and unchanged)
-
-		Path A2 - Onyx mare (Stables)
-
-	XP of onyx is 80 (80 - 99)
-sex w/Onyx (mare)
-onyxquest = 5
-		END PATH A2
-
-	END PATH A
-
-
-
-
-
-	XP of onyx is 100
-Ban locked - cleared and reset upon reloading (for fresh reminder)
-
-[ Onyxtalk ]
-[ 0 = not met ]
-[ 1 = talked (keys avail.) ]
-[ 2 = just freed ]
-[ ... ]
-[ 100 = Ban locked ]
-
-
-[ Onyxquest ]
-[ 0 = trapped ]
-[ 1 = freed - undecided ]
-[ 2 = library in limbo ]
-[ 3 = F Palomino dancer - unused at present ]
-[ 4 = M Dommy at Library ]
-[ 5 = F at Stables ]
-[ 6 = M at Stables ]
-
-[ HP of Onyx ]
-
-[ Onyxkeys ]
-[ 0 = not talked ]
-[ 1 = keys avail. (talked once) ]
-[ 2 = got keys ]
-
-
-[ Onyxfucked ]
-[ onyxdma ]
-[ onyxdfa]
-[ onyxhappytalk ]
-[ Onyxmareslut ]
-[ Onyxboislut ]
-]
 
 Onyx ends here.

@@ -1,8 +1,14 @@
 Version 5 of Hungry Boar Man by Closerhenry begins here.
-[Version 5.0 - Wrestling Overhaul]
-[- Originally Authored By: Hiccup and Stripes -]
+[Version 5.0 - Wrestling Overhaul - Closerhenry]
+[Version 5.1 - Minor maintenance and character relocation - Luneth]
+[Originally Authored By: Hiccup and Stripes]
 
 "Adds an encounter to Flexible Survival with a hungry boar man."
+
+[ HP of philip - threesome w/Sandra                                            ]
+[ 0 = nothing yet                                                              ]
+[ 1 = no pairing w/Sandra                                                      ]
+[ 2 = pairing w/Sandra                                                         ]
 
 PlayerPigBodied is a truth state that varies.
 PhilipMudWrestleCount is a number that varies.
@@ -43,13 +49,13 @@ Pigfucked is a number that varies. Pigfucked is usually 0.
 lust of philip is 255.
 
 Philip is a man.
-The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet. He is extremely fat with a bald head, floppy ears, and an upturned nose. Flies are constantly buzzing around him, enticed by his foul odour. He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm. Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Bunker]. He's made a mudhole of his own in one corner of the bunker by breaking a hole in the wall and cracking a pipe. He spends much of his time lounging in it[end if]. Looking at all the mud, the idea of [bold type]wrestling[roman type] with Philip in it just springs to your mind all of its own.".
+The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet. He is extremely fat with a bald head, floppy ears, and an upturned nose. Flies are constantly buzzing around him, enticed by his foul odour. He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm. Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Large Shed]. He's made a mudhole of his own in one corner of the large shed by breaking a hole in the wall and cracking a pipe. He spends much of his time lounging in it[end if]. Looking at all the mud, the idea of [bold type]wrestling[roman type] with Philip in it just springs to your mind all of its own.".
 Philip is in Pig Pen.
 The conversation of Philip is { "Oink!" }.
 
 instead of conversing Philip:
 	if piginitiation is 2:
-		if player is in bunker:
+		if player is in large shed:
 			say "     Deciding to give it a shot, you ask Philip if he knows anything about the Phi Iota Gamma fraternity you encountered. 'Ahhh, the mighty Phi Iota Gamma... *oink* *snort* ...those were the days. I was the frat's mud wrestling champ. How do you think I got to be good? Mmm... I miss the ole mudhole. We had some really good parties. I wonder how the place is doing these days...' he muses, rubbing his roly-poly belly.";
 			say "     Seeing your opportunity, you tell him that it seems to be doing really well, just having had a really wild party the other day. Plenty of beer, lots of horny sows, all still there and having a good time. You add that you'd wanted to check it out, but they'd said it was for frat brothers only.";
 			say "     He nods at this. 'Yeah, them's the rules,' he mutters, clearly already thinking of the prospect of beer and sows. 'Ain't nothing saying I can't go though. You can be my guest and we can get you initiated into the mighty Phi Iota Gamma.'  He wraps his big arm around you and hugs you to his muddy body, grinning merrily and oinking up a storm as the requisite response.";
@@ -60,7 +66,7 @@ instead of conversing Philip:
 			say "     Deciding to give it a shot, you ask Philip if he knows anything about the Phi Iota Gamma fraternity you encountered. 'Ahhh, the mighty Phi Iota Gamma... *oink* *snort* ...those were the days. I was the frat's mud wrestling champ. How do you think I got to be good?'  He rolls over in the mud a few times, thinking back on those times.";
 			say "     You try to suggest that he sponsor you to join the frat, but he just rubs his tummy. 'Now, I don't know... you've not really proven yourself to be Phi Iota Gamma material. Besides, I've got some food worries to deal with. Why just you just focus [bold type]FEED[roman type]ing me until I'm satisfied and we'll see if you're ready for the mighty Phi Iota Gamma?'  He chuckles, unleashing another wave of oinks and squeals.";
 			now piginitiation is 3;
-	else if piginitiation is 3 and a random chance of 1 in 3 succeeds and philip is in the bunker and ( cocks of player > 0 or cunts of player > 0 ):
+	else if piginitiation is 3 and a random chance of 1 in 3 succeeds and philip is in the large shed and ( cocks of player > 0 or cunts of player > 0 ):
 		say "     Deciding to bring up his old fraternity again now that he's fed and safe, you get a much better response from the big piggy. 'Those were some good times back with the guys at the mighty Phi Iota Gamma,' he says with a series of loud oinking at the end. 'Mmm... I miss the ole mudhole. We had some really good parties. I wonder how the place is doing these days...' he muses, rubbing his roly-poly belly.";
 		say "     Seeing your opportunity, you tell him that it seems to be doing really well, just having had a really wild party the other day. Plenty of beer, lots of horny sows, all still there and having a good time. You add that you'd wanted to check it out, but they'd said it was for frat brothers only.";
 		say "     He nods at this. 'Yeah, them's the rules,' he mutters, clearly already thinking of the prospect of beer and sows. 'Ain't nothing saying I can't go though. You can be my guest and we can get you initiated into the mighty Phi Iota Gamma.'  He wraps his big arm around you and hugs you to his muddy body, grinning merrily and oinking up a storm as the requisite response.";
@@ -165,12 +171,12 @@ To pigfeed:
 				attributeinfect;
 				say "     Do you let him?";
 				if player consents:
-					add "water bottle" to invent of bunker;
-					add "water bottle" to invent of bunker;
-					move philip to Bunker;
-					move player to bunker;
+					add "water bottle" to invent of large shed;
+					add "water bottle" to invent of large shed;
+					move philip to large shed;
+					move player to large shed;
 					now pigfed is 3;
-					say "     'Thank you!' he snorts and then follows you back to the bunker. When you arrive, he quickly makes himself at home, i.e., the bunker starts to smell as bad as he does. He does at least add two bottles of water to your bunker supplies.";
+					say "     'Thank you!' he snorts and then follows you back to the library. When you arrive, he quickly makes himself at home, eventually deciding on making his new home inside the large shed behind the library. The shed starts to smell as bad as he does. He does at least add two bottles of water for the supply stash.";
 					say "     After he settles in, he approaches you and smiles a little as he says, 'You know, you've been so nice to me that I've realized that you must want to be more than friends. You want to become my piggy lover, don't you? Let's rut like pigs in heat!'";
 					increase score by 5;
 					now lust of philip is turns;	[starts availability counter on Philip + Sandra]
@@ -593,7 +599,7 @@ to say sexwithphilip:
 				now breasts of player is 8;
 		say ". He gets you to suck the messy cum from his spent shaft before rolling over in the muck and taking a nap.";
 	else:
-		say "     Philip pushes you down into the mud again and squeals that he's going to make you his sow again. He grabs your fat ass and grinds his cock against it, moaning softly as his greasy pre leaks down between your cheeks. He spreads the pre against your tailhole, then thrusts into you, making you squeal. You groan as he presses his heavy body down over yours, forcing you down into the mud as he fucks you hard and fast. His throbbing meat pounds away at you and the bunker is filled with the squeals and oinks of a rutting pair of hogs. When his cum floods into your bowels, it feels so good, you can't help but cum also. He gets off you slowly, teasingly calling you his sow as he fondles your messy bottom.[mimpregchance]";
+		say "     Philip pushes you down into the mud again and squeals that he's going to make you his sow again. He grabs your fat ass and grinds his cock against it, moaning softly as his greasy pre leaks down between your cheeks. He spreads the pre against your tailhole, then thrusts into you, making you squeal. You groan as he presses his heavy body down over yours, forcing you down into the mud as he fucks you hard and fast. His throbbing meat pounds away at you and the shed is filled with the squeals and oinks of a rutting pair of hogs. When his cum floods into your bowels, it feels so good, you can't help but cum also. He gets off you slowly, teasingly calling you his sow as he fondles your messy bottom.[mimpregchance]";
 		if breasts of player < 8:
 			if "Male Preferred" is not listed in feats of player and "One Pair" is not listed in feats of player:
 				say "     As you pull your body from the mud, you find that you've once again gained a full set of eight piggish nipples down your front.";
@@ -613,17 +619,11 @@ to say sexwithphilip:
 	now lastfuck of Philip is turns;
 
 
-[ HP of philip - threesome w/Sandra ]
-[ 0 = nothing yet ]
-[ 1 = no pairing w/Sandra ]
-[ 2 = pairing w/Sandra ]
-
-
 Section 6 - Ending the Piggy
 
 When play ends:
 	if bodyname of player is not "Messy Pig" and bodyname of player is not "Piggy":
-		if Philip is in the Bunker:
+		if Philip is in the Large Shed:
 			if humanity of the player < 10:
 				say "     Despite your loss of humanity, Philip vows to care for you. But one day, he gets hungry and wanders off. Leaving you free to rape any unfortunate human that crosses your path.";
 			else if pigfucked > 0:
@@ -649,18 +649,18 @@ When play ends:
 		if humanity of player < 10:
 			if pigfucked > 0:
 				if cunts of player > 0:
-					say "     As time wears on, you can't hold back against your growing urges. Your identity falls apart, leaving only your base needs for food and sex. Heading back to the bunker, you join Philip in a long and messy romp on the dirty floor, letting the sweat and the juices of your combined fluids add to the muck you both roll around in. The boar gets dirtier, smellier and all the more attractive to you. And more lustful as he joins you in succumbing to the infection. Together, happily filled with his seed, you head back to the [if restaurantpig is 1]posh restaurant[else]sewers below the mall[end if] to seek out the lovely sow there. Philip charges over and mounts you both in turn, rutting you over and over again in a marathon of sex. Together, the three of you set up a messy sty filled with the sounds of sows, sex and piglets. He adds several other sows to his sty as well, filling them with piglets as he ruts them in the muck.";
+					say "     As time wears on, you can't hold back against your growing urges. Your identity falls apart, leaving only your base needs for food and sex. Heading back to the shed, you join Philip in a long and messy romp on the dirty floor, letting the sweat and the juices of your combined fluids add to the muck you both roll around in. The boar gets dirtier, smellier and all the more attractive to you. And more lustful as he joins you in succumbing to the infection. Together, happily filled with his seed, you head back to the [if restaurantpig is 1]posh restaurant[else]sewers below the mall[end if] to seek out the lovely sow there. Philip charges over and mounts you both in turn, rutting you over and over again in a marathon of sex. Together, the three of you set up a messy sty filled with the sounds of sows, sex and piglets. He adds several other sows to his sty as well, filling them with piglets as he ruts them in the muck.";
 				else if pigfucked > 2:
-					say "     As time wears on, you can't hold back against your growing urges. Your identity falls apart, leaving only your base needs for food and sex. Heading back to the bunker, you join Philip in a long and messy romp on the dirty floor, mounting you and taking you like his sow again and again. Your combined sweat and semen add to the muck you both roll around in. The boar gets dirtier, smellier and all the more attractive to you. And more lustful as he joins you in succumbing to the infection. Quite sticky and messy, with your boar's cum leaking from your well-used tailhole, you head together to the [if restaurantpig is 1]posh restaurant[else]sewers below the mall[end if] to seek out the lovely sow there. Together, the three of you set up a messy sty. Philip is a good boar to you both, filling you with assloads of cum and her with piglets. He adds several other sows to his sty as well, filling them with piglets as he ruts them in the muck.";
+					say "     As time wears on, you can't hold back against your growing urges. Your identity falls apart, leaving only your base needs for food and sex. Heading back to the shed, you join Philip in a long and messy romp on the dirty floor, mounting you and taking you like his sow again and again. Your combined sweat and semen add to the muck you both roll around in. The boar gets dirtier, smellier and all the more attractive to you. And more lustful as he joins you in succumbing to the infection. Quite sticky and messy, with your boar's cum leaking from your well-used tailhole, you head together to the [if restaurantpig is 1]posh restaurant[else]sewers below the mall[end if] to seek out the lovely sow there. Together, the three of you set up a messy sty. Philip is a good boar to you both, filling you with assloads of cum and her with piglets. He adds several other sows to his sty as well, filling them with piglets as he ruts them in the muck.";
 				else:
-					say "     As time wears on, you can't hold back against your growing urges. Your identity falls apart, leaving only your base needs for food and sex. Heading back to the bunker, you join Philip in a long and messy romp on the dirty floor, cumming on one another again and again. Your combined sweat and semen add to the muck you both roll around in. The boar gets dirtier, smellier and all the more attractive to you. And more lustful as he joins you in succumbing to the infection. Quite sticky and messy, you head together to the [if restaurantpig is 1]posh restaurant[else]sewers below the mall[end if] to seek out the lovely sow there. Together, the three of you set up a messy sty filled with the sounds of sows, sex and piglets. You and Philip take turns mounting her and the others who are fortunate enough to be caught and made into sows for you as well.";
+					say "     As time wears on, you can't hold back against your growing urges. Your identity falls apart, leaving only your base needs for food and sex. Heading back to the shed, you join Philip in a long and messy romp on the dirty floor, cumming on one another again and again. Your combined sweat and semen add to the muck you both roll around in. The boar gets dirtier, smellier and all the more attractive to you. And more lustful as he joins you in succumbing to the infection. Quite sticky and messy, you head together to the [if restaurantpig is 1]posh restaurant[else]sewers below the mall[end if] to seek out the lovely sow there. Together, the three of you set up a messy sty filled with the sounds of sows, sex and piglets. You and Philip take turns mounting her and the others who are fortunate enough to be caught and made into sows for you as well.";
 				if piginitiation >= 4:
 					say "     You and Philip return periodically to Phi Iota Gamma, always making a big impression as he puts the current round of piglet through their initiation. The tales of Philip's exploits only grow and grow from year to year as your sexy hog remains undefeated in the mud pit. You don't mind sharing him with his frat brothers and their sow girlfriends during these visits, as you get to play around with a lot of them as well. And before he leaves after each visit, he makes a big show of selecting members to go out and form another chapter of the fraternity at another college, ensuring the mighty Phi Iota Gamma... *oink* *snort* *grunt* ...will spread plump, piggy sexiness all across the country.";
-			else if Philip is in the Bunker:
+			else if Philip is in the Large Shed:
 				if cocks of player > 0:
-					say "     As time wears on, you can't hold back against your growing urges. Your identity falls apart, leaving only your base needs for food and sex. After wandering back to the bunker, you are joined by Philip who follows you off into the city, drawn by your heavy scent. You head together to the [if restaurantpig is 1]posh restaurant[else]sewers below the mall[end if] to seek out the lovely sow there. As you rut the pig, squealing loudly as you do, he looks on lustfully before heading off. Some time later, as you both are resting after your marathon of sex, he returns with a semi-transformed sow of his own. He tosses her into the mess made by you both and mounts her, taking her roughly until her transformation is complete. You and Philip set up a nice, big sty for your growing harem of sows and their piglets.";
+					say "     As time wears on, you can't hold back against your growing urges. Your identity falls apart, leaving only your base needs for food and sex. After wandering back to the shed, you are joined by Philip who follows you off into the city, drawn by your heavy scent. You head together to the [if restaurantpig is 1]posh restaurant[else]sewers below the mall[end if] to seek out the lovely sow there. As you rut the pig, squealing loudly as you do, he looks on lustfully before heading off. Some time later, as you both are resting after your marathon of sex, he returns with a semi-transformed sow of his own. He tosses her into the mess made by you both and mounts her, taking her roughly until her transformation is complete. You and Philip set up a nice, big sty for your growing harem of sows and their piglets.";
 				else:
-					say "     As time wears on, you can't hold back against your growing urges. Your identity falls apart, leaving only your base needs for food and sex. After wandering back to the bunker, you are joined by Philip who follows you off into the city, drawn by your heavy scent. You head together to the [if restaurantpig is 1]posh restaurant[else]sewers below the mall[end if] to seek out the lovely sow there. As you and her grope and fondle one another lustfully, it gets to be too much for the boar. He charges over and mounts you both in turn, rutting you over and over again in a marathon of sex. The sweat and the juices of your combined fluids add to the muck you both roll around in. The boar gets dirtier, smellier and all the more attractive to you both. Together, the three of you set up a messy sty filled with the sounds of sows, sex and piglets.";
+					say "     As time wears on, you can't hold back against your growing urges. Your identity falls apart, leaving only your base needs for food and sex. After wandering back to the shed, you are joined by Philip who follows you off into the city, drawn by your heavy scent. You head together to the [if restaurantpig is 1]posh restaurant[else]sewers below the mall[end if] to seek out the lovely sow there. As you and her grope and fondle one another lustfully, it gets to be too much for the boar. He charges over and mounts you both in turn, rutting you over and over again in a marathon of sex. The sweat and the juices of your combined fluids add to the muck you both roll around in. The boar gets dirtier, smellier and all the more attractive to you both. Together, the three of you set up a messy sty filled with the sounds of sows, sex and piglets.";
 				if piginitiation >= 4:
 					say "     You and Philip return periodically to Phi Iota Gamma, always making a big impression as he puts the current round of piglet through their initiation. The tales of Philip's exploits only grow and grow from year to year as your sexy hog remains undefeated in the mud pit. You don't mind the attention he gets from his frat brothers and their sow girlfriends during these visits, as you get to play around with a lot of them as well. And before he leaves after each visit, he makes a big show of selecting members to go out and form another chapter of the fraternity at another college, ensuring the mighty Phi Iota Gamma... *oink* *snort* *grunt* ...will spread plump, piggy sexiness all across the country.";
 			else:
@@ -681,7 +681,7 @@ When play ends:
 					say "     The time in the military's quarantine area is quite unpleasant, as most people tend to avoid you for some reason. But at least it ends up being brief, as they don't seem to want to keep you around long either. You have such a full figure with luscious curves and a rich scent; you feel that you are a lovely and attractive boar. Only Philip really goes out of his way to spend time with you, though the guards won't give you a chance to show the boar how much you appreciate his affection.";
 					say "     But once you get cleared, oh then you are on your knees for him, sucking his cock in thanks for his kindness. After so long without satisfaction, big boar while you stroke yourself off to make a sticky mess on his hooves.";
 					say "     You work odd jobs from time to time, never really staying very long at anything as your strong scent is too much for most other people. Philip sets himself up with a small pig farm and eventually invites you out to join him. You both have an enjoyable life of running the farm and rutting the sows.";
-			else if Philip is in the Bunker:
+			else if Philip is in the Large Shed:
 				if cunts of player > 0:
 					say "     The time in the military's quarantine area is quite unpleasant, as most people tend to avoid you for some reason. But at least it ends up being brief, as they don't seem to want to keep you around long either. You have such a full figure with luscious curves and a rich scent; you feel that you are a lovely and attractive woman. Only Philip really goes out of his way to spend time with you, making the wait tolerable at least.";
 					say "     After your eventual release, Philip visits often, bringing small chocolates or other treats for you. He is friendly and talks to you about how busy he is with his new pig farm, though he always seems to have time to visit you. You have trouble making new friends for some reason, despite your lovely, chubby figure and fragrant scent, but the boar keeps you company.";
@@ -698,7 +698,7 @@ When play ends:
 					say "     The time in the military's quarantine area is quite unpleasant, as most people tend to avoid you for some reason. But at least it ends up being brief, as they don't seem to want to keep you around long either. You have such a full figure with luscious curves and a rich scent; you feel that you are a lovely and attractive woman, but no one else you meet seems to realize this.";
 					say "     After your eventual release, you have difficulty finding steady work. No one seems to appreciate your rich fragrance. You only manage to get odd jobs for quite a while before eventually becoming a garbage woman. The prevalent scent of your work keeps your coworkers from complaining about your scent and some part of you always enjoys getting dirtier and smellier from a day's work.";
 					say "     One day while working the bulldozer at the far end of the landfill, a friendly coworker calls you over. When you climb out to join the seagull, he presses you down into the trash and mounts you. You try your best to muffle your squeals of delight, not wanting to get into trouble, but loving the nasty feeling of being fucked at work on a messy pile of trash. After filling you, he invites you to join him at his place after work for more. That night is a wild romp that soon becomes more and more nights of the same. You move into his love nest and bear him clutch after clutch of eggs filled with winged piggies, loving your messy, dirty bird.";
-			if ( pigfucked > 0 ) or ( cunts of player > 0 and Philip is in Bunker ):	[Philip farm endings]
+			if ( pigfucked > 0 ) or ( cunts of player > 0 and Philip is in Large Shed ):	[Philip farm endings]
 				if Sandra is in the Bunker:
 					if Snow is in the Grey Abbey Library:
 						say "     Sandra and Snow join you and Philip at the pig farm. The four of you spend your days having extremely wild and passionate orgies. Sandra and Snow are soon expecting their own litters of piglets. Philip feels like the luckiest pig in world now that he has his own personal harem.";
@@ -706,7 +706,7 @@ When play ends:
 						say "     Sandra joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Sandra is soon expecting her own litter of piglets.";
 				else if Snow is in the Grey Abbey Library:
 					say "     Snow joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Snow is soon expecting her own litter of piglets.";
-			if Philip is in Bunker:										[any farm ending]
+			if Philip is in Large Shed:										[any farm ending]
 				if sarahslut is 4:
 					say "     Sarah's numerous pups make fine farm dogs. You set up a nice kennel to breed them on the farm as well. They guard the farm and make for fine playthings when you're not enjoying messy, piggy sex.";
 
