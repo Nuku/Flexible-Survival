@@ -38,7 +38,7 @@ Version 1 of Alexandra Cuckolding by Wahn begins here.
 [ 0 = not preggers                                    ]
 [ 1-12 = lightly preggers                             ]
 [ 13-24 = plumply preggers                            ]
-[ if ( HP of Alexandra is 3 and lust of Alexandra > 12 ) or HP of Alexandra > 3  =  bigger breasts ]
+[ if ( HP of Alexandra is 3 and lust of Alexandra > 12 ) or HP of Alexandra > 3 = bigger breasts ]
 
 [ libido of Alexandra                                 ]
 [ number of offspring                                 ]

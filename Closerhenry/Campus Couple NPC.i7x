@@ -279,7 +279,7 @@ to say CampusCoupleSex1:
 	now lastfuck of Jadako is turns;
 
 to say CampusCoupleSex2:
-	say "     You ask Joseph if he would be okay with sharing his boy toy, Jadako. He murmers his approval, asking which side you want to take.";
+	say "     You ask Joseph if he would be okay with sharing his boy toy, Jadako. He murmurs his approval, asking which side you want to take.";
 	say "     [bold type]Which side of Jadako do you take?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Give Jadako a good old face-fuck.";

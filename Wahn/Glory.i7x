@@ -1,7 +1,7 @@
 Version 1 of Glory by Wahn begins here.
 [Version 1 - New Character]
 
-[ GloryFate                                                ] 
+[ GloryFate                                                ]
 [   0: not met yet                                         ]
 [   1: player tried to talk, she ran off                   ]
 [   2: player found her in the storeroom, didn't get in    ]
@@ -48,7 +48,7 @@ Instead of resolving a Refugee Mare:
 		say "     ([link]N[as]n[end link]) - Leave her alone.";
 		if player consents:
 			say "[GloryDoorApproach]";
-		else: 
+		else:
 			say "     With a shrug, you walk out of the store, leaving the frightened refugee behind.";
 			now GloryFate is 2; [player didn't get in]
 	else if GloryFate is 2:
@@ -59,14 +59,14 @@ Instead of resolving a Refugee Mare:
 		say "     ([link]N[as]n[end link]) - Leave her alone.";
 		if player consents:
 			say "[GloryDoorApproach]";
-		else: 
+		else:
 			say "     With a shrug, you walk out of the store, leaving the frightened refugee behind.";
-			
+
 to say GloryDoorApproach:
 	if bodyname of player is listed in infections of Equinelist or facename of player is listed in infections of Equinelist:
-		say "    Remembering the woman's reaction to just bumping into a horseman before, you look at yourself and decide that you shouldn't try to approach her looking like you currently are. Maybe you should come back when you have a form that is less threatening to her...";
-	else:	
-		LineBreak;				
+		say "     Remembering the woman's reaction to just bumping into a horseman before, you look at yourself and decide that you shouldn't try to approach her looking like you currently are. Maybe you should come back when you have a form that is less threatening to her...";
+	else:
+		LineBreak;
 		let bonus be (( charisma of player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
@@ -76,12 +76,12 @@ to say GloryDoorApproach:
 			WaitLineBreak;
 			say "     Having arrived at that part of the story, Glory wraps her arms around herself and rocks back and forth a little, then eventually says in a halting voice, 'On the morning of the second day, I was woken up by someone pushing into me! A second later, he was thrusting away inside me, and yet somehow I didn't mind! I just felt my body react to him, and even... enjoyed it in that moment! Even though he wasn't even human, but something half horse - and worse, I recognized Isaac in that stallion humping away at me and I still didn't care! The sex continued till we both had come a bunch of times and were really exhausted, then dozed off. But when I came back to, everything that had happened came into focus and I realized what he - what we - had done!' Stomping the floor with one hoof, she looks down at herself, frowning at the hybrid body she now has.";
 			say "     'I'm sure we'll both go to hell for it. And my shame is obvious for everyone to see too! While that beast was still asleep, I fled out into the city. I didn't want to talk to him, because what fucked me that day wasn't my brother anymore. It can't have been!' Glory's despair audibly built back up during the last few sentences, and she is sobbing openly as she continues, 'Everything since has just been further horror! The things that go on out there! I eventually heard that the mall was supposed to be safe, but with that guy at the entrance there and horsemen on the inside, I've got my doubts about that too!' Tears start running down Glory's cheeks as she sobs out, 'I don't think I can deal with this much longer - the constant danger and running from monsters in the streets, then even my own body betraying me to become a constant reminder of my sin! I just want it to end! Can't the police or someone - anyone - just protect us?'";
-			say "[GloryChoices]";	
-		else:		
+			say "[GloryChoices]";
+		else:
 			say "     Moving closer and gently knocking on the door, you try to explain that you don't want to hurt her and just talk. It doesn't work, with the door staying shut and no reply coming from the other side. You eventually try the doorknob, but something seems to be blocking the door from the other side. Nothing more to do here right now, you eventually shrug and walk out of the store, leaving the frightened refugee behind.";
 			now GloryFate is 2; [player didn't get in]
-	
-	
+
+
 to say GloryChoices:
 	LineBreak;
 	say "     What do you want to do now?";
@@ -173,10 +173,10 @@ to say GloryChoice3:
 	WaitlineBreak;
 	say "     Glancing over to Glory, Moreau follows her eager activity for a few seconds, then half-turns his head to you. 'I didn't change too much, if you're worried about that. Just softened the raw and jagged bits to make her whole again. It was good of you to bring the lovely girl to me, you have no idea what she was ready to do if this hadn't worked out. You won't have to worry about that anymore now.' With that said, the naga shopkeeper changes topics and directs your attention to his newer mannequins instead, happily offering you to buy what parts interest you.";
 	now GloryFate is 20; [brought to Moreau]
-	
+
 to say GloryChoice4:
 	say "     As you tell Glory that you know someone who should be able to help her, the young woman is rather suspicious at first, but as you point out that he's quite nearby in the food court, she lets you lead her out of the storeroom and to where Tobias is sitting at a table. As you introduce the two of them to one another, the doberman looks Glory up and down, then nods to you and says, 'So, what brings you to me?' Quietly detailing the things that Glory went through and her desire for protection as well as a way to forget about the living nightmare that her life has become.' Tobias nods and gestures for Glory to come a bit closer, then looks her straight in the eye and says in an earnest tone, 'I can give you what you want. You'll be safe with me, no one's gonna lay a hand on you, including myself. I don't force myself on people. But don't misunderstand - it's not gonna be lazing about either. You've got to obey me, completely, and I'll train you to be a proper companion and pet.'";
 	say "     Glory looks wide-eyed at Tobias and opens her mouth to reply, but he goes on before she can do so, 'I noticed that you seem uncomfortable in that part-equine skin of yours, which is understandable. So this should be a little bonus: If you come with me, you're gonna be a dobie fairly soon. And I'll give you other things to think about than being raped by big bro.' That last sentence makes Glory gasp and close her mouth with a plop. 'The choice is yours. It's a good offer, honest. Security, peace of mind, food, and a new body. Definitively better than the alternative, with the danger of falling prey to some creature out there - or in here.' He gives a nod to the entrance, where the wolverine guard that slapped Glory's ass is leaning against the wall, munching on some fast food. Glory looks to you in indecision, desperation written on her features, and you give a tiny nod. It was your idea to bring her to Tobias after all. Letting out a sigh, she agrees to the doberman's terms, readily accepting a leather collar that he pulls from one of his pockets, then fastens it around her neck.";
 	now GloryFate is 30; [brought to Tobias]
-	
+
 Glory ends here.

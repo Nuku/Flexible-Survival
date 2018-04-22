@@ -10,7 +10,7 @@ Section 1 - Monster Responses
 
 when play begins:
 [These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
-[Delete the lines with unneeded flags and replace 'Great Dane Rouge' with your creature's name entry.  Case sensitive.]
+[Delete the lines with unneeded flags and replace 'Great Dane Rouge' with your creature's name entry. Case sensitive.]
 	add { "Great Dane Rouge" } to infections of girl;
 	add { "Great Dane Rouge" } to infections of furry;
 	add { "Great Dane Rouge" } to infections of Caninelist;
@@ -97,8 +97,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Great Dane Rouge"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The Great Dane Rouge attacks with a blinding series of punches![or]The Great Dane Rouge kicks you hard enough that spit flies free from your [facename of player] mouth![or]The Great Dane Rouge uppercuts you with enough strength that you are actually lifted up off the ground![or]The Great Dane Rouge sends a right hook firmly across your jaw![or]The Great Dane Rouge slams her knuckles into your chest sending you falling back onto your back onto the floor![or]The Great Dane Rouge kick you in the chest forcing air to gush out from your lungs![at random]"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheGreat Dane Rouge]"; [ Text when monster loses.  Change 'Great Dane Rouge' as above. ]
-	now victory entry is "[losetoGreat Dane Rouge]"; [ Text when monster wins.  Change 'Great Dane Rouge' as above. ]
+	now defeated entry is "[beattheGreat Dane Rouge]"; [ Text when monster loses. Change 'Great Dane Rouge' as above. ]
+	now victory entry is "[losetoGreat Dane Rouge]"; [ Text when monster wins. Change 'Great Dane Rouge' as above. ]
 	now desc entry is "[Great Dane Rougedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "somewhat rectangular shaped as you have a flat muzzle, square jaw, and strong canine chin jutting out from your face. With dark [one of]green[or]brown[or]azure[at random]coloured eyes the Great Dane face you now possess is something to be feared, especially as you wrinkle your overly droopy lips from over your impressive fangs. Oddly, or maybe cutely enough, your nose is pink in colour and your ears are sticking up onto your head in a puppy-like manner"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "muscular and toned to perfection enough to rival that of a pro boxer. With your biceps literally bulging as you curl your arms together you look something like a walking wet dream or a furry porn star as your body has lost almost every trace of fat that could be found to supplement the strength behind your new form. Your torso possesses a firm six pack, while your chest looks about though it's been cut from the finest marble and yet your most striking feature is the black spot on your chest where your heart would be. This spot, by the way, is dark grey, almost black for some reason"; [ Body Description, format as the text "Your body is (your text)." ]
@@ -116,9 +116,9 @@ When Play begins:
 	now per entry is 16;
 	now int entry is 17;
 	now cha entry is 18;
-	now sex entry is "Female"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 118; [ The monster's starting HP. ]
-	now lev entry is 13; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 13; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 20; [ Monster's average damage when attacking. ]
 	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -131,7 +131,7 @@ When Play begins:
 	now cunt length entry is 10; [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 8; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 56; [ Target libido the infection will rise towards. ]
-	now loot entry is "bandage"; [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "bandage"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 35; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]brawny[or]beefy[or]sturdy[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]

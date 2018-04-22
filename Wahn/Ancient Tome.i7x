@@ -85,7 +85,7 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and TomeFound is 2 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Eric gets tentacled - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
-	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As let your gaze sweep over the room, you spot Eric, lying in his bed under a thin blanket. He is sleeping, yet from the looks of it it seems a bit fitful as he moves around, his head lolling back and forth slowly as he pants visibly.";
+	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As let your gaze sweep over the room, you spot Eric, lying in his bed under a thin blanket. He is sleeping, yet from the looks of it, it seems a bit fitful as he moves around, his head lolling back and forth slowly as he pants visibly.";
 	say "     [bold type]Maybe you should check on him...[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Walk over and wake him if he is having a nightmare or something.";

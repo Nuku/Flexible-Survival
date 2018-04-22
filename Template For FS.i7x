@@ -7,11 +7,11 @@ Version 1 of Template For FS by YourName begins here.
 
 Section 1 - Monster Responses
 
-[ Use 'to say xxxxx' for overlong text boxes or complex situations, using '[xxxxx]' (in square brackets) within a say statement to execute them.  Typically, these are needed if there are a lot of cock/species/cunt checks. ]
+[ Use 'to say xxxxx' for overlong text boxes or complex situations, using '[xxxxx]' (in square brackets) within a say statement to execute them. Typically, these are needed if there are a lot of cock/species/cunt checks. ]
 
 when play begins:
 [These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
-[Delete the lines with unneeded flags and replace 'Template' with your creature's name entry.  Case sensitive.]
+[Delete the lines with unneeded flags and replace 'Template' with your creature's name entry. Case sensitive.]
 	add { "Template" } to infections of girl;
 	add { "Template" } to infections of guy;
 	add { "Template" } to infections of hermaphrodite;
@@ -50,15 +50,15 @@ to say losetotemplate:
 to say beatthetemplate:
 	say "     You were victorious over the creature.";
 	if libido of player > 40:
-		say "     Additional paragraph for a player with a libido greater than 40.  Do they want sex?";
+		say "     Additional paragraph for a player with a libido greater than 40. Do they want sex?";
 		if the player consents:
-			say "     The player agreed to sex.  Fun times begin.";
+			say "     The player agreed to sex. Fun times begin.";
 			if cunts of player > 0:
 				say "     The player is female/herm, so sex goes like this for her.";
 			else:
 				say "     The player must be male, so sex goes like this for him.";
 		else:
-			say "     Awww!  The player refused the sex.  Party pooper.";
+			say "     Awww! The player refused the sex. Party pooper.";
 
 
 to say templatedesc:
@@ -77,12 +77,12 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Template";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthetemplate]";				[ Text when monster loses.  Change 'template' as above. ]
-	now victory entry is "[losetotemplate]";					[ Text when monster wins.  Change 'template' as above. ]
+	now defeated entry is "[beatthetemplate]";				[ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetotemplate]";					[ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[templatedesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "now a head described by this text";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a well-described new form put here";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "fur/scales/patterns that now cover your";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now skin entry is "fur/scales/patterns that now cover your";	[ Skin desc., format as the text "Your body is covered in (your text) skin." Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "Your tail gets a full sentence ending in a period.";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "thesaurian";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "your head changes in some descriptive manner";	[ Face TF text, format as "Your face feels funny as (your text)." ]
@@ -96,9 +96,9 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 24;			[ The monster's starting HP. ]
-	now lev entry is 1;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 1;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 3;			[ Monster's average damage when attacking. ]
 	now area entry is "Outside";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -111,11 +111,11 @@ When Play begins:
 	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "erudite";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "erudite";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "conceptual";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]

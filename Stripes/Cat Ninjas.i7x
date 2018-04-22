@@ -108,7 +108,7 @@ When Play begins:
    now cock entry is "softly barbed cock"; [ Cock Description, format as you have a 'size' (your text) cock]
    now face change entry is "it shifts into a feline muzzle. Your ears become pointed and cat-like and your eyes become green with slit pupils for seeing in the dark"; [ face change text. format as "Your face feels funny as (your text)." ]
    now body change entry is "it becomes flexible and feline in form. Your arms end in dexterous paws with sharp, retractable claws and your feet are silent cat paws"; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "it grows a coat of tabby cat fur. This fur is a orange in colour, with lighter areas at your chest and muzzle with brown stripes all over"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+   now skin change entry is "it grows a coat of tabby cat fur. This fur is orange in colour, with lighter areas at your chest and muzzle with brown stripes all over"; [ skin change text. format as "Your skin feels funny as (your text)." ]
    now ass change entry is "a slender, feline tail with orange tabby markings extends from your spine"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
    now cock change entry is "it gains small, soft spines, but is otherwise quite human in form"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 14;

@@ -26,11 +26,11 @@ to say losetogiraffe:
 	say "     You can't help but moan into this kiss as her agile tongue squirms inside you, sending shivers of delight through your body. In a daze after the kiss, she pushes you down into a nearby room, onto a bed and leaps atop you.";
 	let raffesex be 0;
 	let mchance be 4;
-	if "Submissive" is listed in feats of player, increase mchance by 2;
-	if "More Anal" is listed in feats of player, increase mchance by 2;
-	if "MPreg" is listed in feats of player, increase mchance by 2;
-	if "Less Anal" is listed in feats of player, now mchance is 0;
-	if ( cunts of player is 0 and a random chance of mchance in 12 succeeds ) or (cunts of player is 0 and cocks of player is 0):
+	if player is submissive, increase mchance by 2;
+	if anallevel is 3, increase mchance by 2;
+	if player is mpreg_ok, increase mchance by 2;
+	if anallevel is 1, now mchance is 0;
+	if ( cunts of player is 0 and a random chance of mchance in 12 succeeds ) or (player is neuter):
 		say "     You are pushed over onto your stomach and something warm and moist prods against your anus. You brace yourself for a pounding from the crazed mutant, but instead what penetrates you moves about inside of you, hitting every little point of pleasure it can find. You dare a look behind you to see the giraffe's muzzle pushed between your legs, her tongue working wonders inside you as it plumbs your very depths. After a while, she pulls her head back, sliding her body up along your backside as a different heat replaces the last one. And as the giraffe's long neck rubs against yours, you realize this is the one you expected before, her massive cock pushing into you and stretching your asshole wide now that she's gotten you ready with her tongue.";
 		say "     With her tongue having prepared you, there's little discomfort and even that fades quickly as she pounds away at you. With a heavy thrust, she spears you on her cock. Vigorous thrusting brings both you and the giraffe quickly to an orgasm. You feel her hot seed spreading throughout your bowels, a gush of fluid from your overstuffed asshole soaking your thighs. Her large output leaves your belly plump and rounded[if cocks of player > 0]. Your cock gives a twitch as it sprays the bedding beneath you with ropey streams of your own cum[end if]. Done with you, the giraffe pulls out, a gush of her seed flowing from your distended anus as she strides off in search of more amusement, leaving you behind to recover as best you can.[mimpregchance]";
 	else if cunts of player > 0 and ( cocks of player is 0 or a random chance of 2 in 3 succeeds ):
@@ -94,7 +94,7 @@ When Play begins:
 	now HP entry is 55; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Stables"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Stables"; [ Current options are 'Outside' and 'Mall' Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 24; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 20; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]

@@ -161,7 +161,7 @@ to say leodenscene4:
 		infect "Feline";
 	else:
 		felinebodyshift;
-	if cocks of player is 0 and cunts of player is 0, follow the sex change rule;
+	if player is neuter, follow the sex change rule;
 	WaitLineBreak;
 	say "     Given Raven's eagerness, you don't linger any longer and move quickly into the bedroom area of the den. There you find her heaving a heavy duffel bag onto the bed. At her prompting, you open it up to find a bulletproof vest inside. Surprised by the unexpectedly functional gift, you turn to look at her.";
 	say "     'It took us some work to get it, but when the girls and I saw it,' she exclaims, 'we knew it was just what you needed. We know you're strong and smart - that's why you're our matron now - but it's not a safe place to be on your own. We've been so worried about you running around in the city like you have been. You don't have to do that any more - there's plenty you can do here for the pride - but you still don't stay. So until you get this urge to wander out of your system, we want you to be safe,' she says with a bit of a quaver in her voice, the corners of her eyes wet with emotion. She puts her arms around you, hugging you tight.";

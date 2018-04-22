@@ -271,7 +271,7 @@ to say beatthewereraptor:
 				else:
 					say "     With the female pinned beneath you, you turn around and grind your hips down onto her face, pressing your wet pussy into her face. She starts licking it right away, drawing a hiss of pleasure from you. Not wanting to miss out on such a treat, you bury your own head between her muscled legs and dive your tongue into her snatch. This excites her further and drives her to lick you even more excitedly. You lap up each other's heated juices. You both finally roar in pleasure as your wild and primitive lusts drive you both to lick until you both have cum.";
 			else:
-				if cocks of player > 0 and cunts of player > 0 and "Less Anal" is not listed in feats of player:
+				if cocks of player > 0 and cunts of player > 0 and anallevel > 1:
 					say "     Your dual-gendered nature has you at odds on how to satisfy your lusts. Shall you [link]ride (1)[as]1[end link] the male's cock, show your dominance and [link]mount him (2)[as]2[end link] or [link]blow one another (3)[as]3[end link]?";
 					now calcnumber is 0;
 					while calcnumber < 1 or calcnumber > 3:
@@ -291,7 +291,7 @@ to say beatthewereraptor:
 						say "[wrvict1]";
 					else:
 						say "[wrvict3]";
-				else if cocks of player > 0 and "Less Anal" is not listed in feats of player:
+				else if cocks of player > 0 and anallevel > 1:
 					say "     As your loosen the reins on your wereraptor lusts, shall you show your dominance and [link]mount him (Y)[as]y[end link] or [link]blow one another (N)[as]n[end link]?";
 					if the player consents:
 						say "[wrvict2]";

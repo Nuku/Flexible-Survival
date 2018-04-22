@@ -114,7 +114,7 @@ to say KorvinTalk:
 	if gsd_pet < 16:
 		say "     [one of]'What do you want?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, oh wise and powerful Alpha?' he asks, rolling his eyes. A glare from you gets him to stop and hang his head.[or]'I can't wait for our next scrap, [if cunts of player > 0]Mistress[else]Master[end if]. It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[at random]";
 	else if gsd_pet is 16:
-		if cocks of player is 0 and cunts of player is 0:
+		if player is neuter:
 			say "     You consider giving Korvin his new collar, but without a gender of your own, you won't really be able to [']enjoy['] the moment.";
 		else:
 			say "[gsd_collar_scene]";
@@ -139,7 +139,7 @@ to say masterormistress:
 Section 2 - Sexy Times
 
 to say korvinsexmenu:
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     Given your lack of gender, you don't see much point in that.";
 	else if lastfuck of gshep - turns < 6:
 		say "     You fooled around not too long ago with the German Shepherd. Perhaps you should give him a bit of a break before having sex with him again.";

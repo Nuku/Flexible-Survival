@@ -37,7 +37,7 @@ to say drmousedesc:
 	let debit be 0;
 	setmongender 3;
 	if hospfight is 1:
-		say "     Dr Mouse, barely four feet tall, intends to fight you. With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak. But the musine doctor snarls angrily and charges at you, tiny paws clenched into fists. You ready to strike, prepared to deal with the mad doctor once and for all.";
+		say "     Dr Mouse, barely four feet tall, intends to fight you. With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak. But the murine doctor snarls angrily and charges at you, tiny paws clenched into fists. You ready to strike, prepared to deal with the mad doctor once and for all.";
 		if hardmode is true and level of player > 4, let debit be level of player - 4;
 		now HP entry is 30 + ( debit * 2 );
 		now monsterHP is 30 + ( debit * 2 );
@@ -80,7 +80,7 @@ When Play begins:
 	now face entry is "mouse-like head with large ears and cute whiskers on your muzzle"; [ Face description, format as the text "Your face is (your text)."]
 	now body entry is "small and mouse-like, with pink paws for hands and feet"; [ Body Description, format as the text "Your Body is (your text)."]
 	now skin entry is "pure white fur over your"; [ skin Description, format as the text "your body is covered in (your text) skin."]
-	now tail entry is "You have a long, musine tail."; [ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a long, murine tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "pink"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it deforms and reshapes itself into something more rodent-like. You gain large ears and whiskers around your muzzle. Your eyes turn a blood-red"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it becomes that of an anthropomorphic mouse. At only about four feet tall, your stature matches your species. Your hands are replaced with pink paws with nimble digits"; [ body change text. format as "Your body feels funny as (your text)." ]
@@ -112,7 +112,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 1; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "slender"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender" Use [one of] to vary ]
-	now type entry is "musine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "murine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;

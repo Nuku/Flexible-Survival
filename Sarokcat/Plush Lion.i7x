@@ -87,7 +87,7 @@ to plushlionvored:
 
 To say Plush Lion loss:
 	increase plionvic by 1;
-	if plionvic < 3 or ( cunts of player is 0 and cocks of player is 0 ):
+	if plionvic < 3 or ( player is neuter ):
 		say "     The strange plush lion is knocked back on its furry haunches by your attacks, before turning and sauntering off down the midway, pretending with feline arrogance that it was intending to leave anyways. It hurries away before you can catch up though, its arrogant pretense somewhat spoiled by the small trail of stuffing it leaves behind it as it slips away.";
 	else if noplionsex > 2 and the remainder after dividing noplionsex by 5 is not 1:
 		say "     The strange plush lion is knocked back on its furry haunches by your attacks, before turning and sauntering off down the midway. It pretends with feline arrogance that it was intending to leave anyways. As with the others of its kind, you don't give pursuit, instead watching it head off. You can clearly see a torn seam and the leaking stuffing it leaves behind as it slips away.";

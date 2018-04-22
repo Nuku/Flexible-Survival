@@ -50,8 +50,8 @@ instead of going southeast from College Walkway East while (Campus Thunder is no
 	ThunderboltEncounter2;
 
 to ThunderboltEncounter2:
-	say "     Once again wandering the college property, you hear from behind some buildings the loud and unmistakable 'neigh!' of a horse. Peeking from behind a corner you gasp slightly as you spot the horse mascot Thunderbolt. He's hitched to a post in a make-shift stable surrounded by hay and a nearby trough full of water. But what really draws your eye is his raging equine erection, fully hardened and pulsing slightly. Turning to look your way he whinnies and starts to trot closer, only to be stopped by his leash tied to the post. The large stallion rears up and whinnies again in frustration. Its abundantly clear this impressive beast is in rut. He looks to you with pleading eyes, shakes his well-groomed mane and then turns to his side showing off a truly impressive musculature and nearly two feet of erect horse cock. Almost seems like... he's trying to seduce you by flaunting his equine body.";
-	say "     [bold type]what do you want to do now?[roman type][line break]";
+	say "     Once again wandering the college property, you hear from behind some buildings the loud and unmistakable 'neigh!' of a horse. Peeking from behind a corner you gasp slightly as you spot the horse mascot Thunderbolt. He's hitched to a post in a make-shift stable surrounded by hay and a nearby trough full of water. But what really draws your eye is his raging equine erection, fully hardened and pulsing slightly. Turning to look your way he whinnies and starts to trot closer, only to be stopped by his leash tied to the post. The large stallion rears up and whinnies again in frustration. It's abundantly clear this impressive beast is in rut. He looks to you with pleading eyes, shakes his well-groomed mane and then turns to his side showing off a truly impressive musculature and nearly two feet of erect horse cock. Almost seems like... he's trying to seduce you by flaunting his equine body.";
+	say "     [bold type]What do you want to do now?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Mate with Thunderbolt?!";
 	say "     ([link]N[as]n[end link]) - Just... no. Walk away right now!";
@@ -96,7 +96,7 @@ instead of going to Thunderbolt's Stable:
 	say "     Walking between a familiar set of campus buildings, you find your way back to Thunderbolt's stable. You see your large equine mate resting in a [if daytimer is day]particularly sunny[else]moonlit[end if] part of his pen, and as you enter he looks up to meet your eye.";
 	if Ariana is in Thunderbolt's Stable:
 		say "     The two lioness sisters are here as well, stroking their mascot's mane and talking amongst themselves. When they too spot you they wave you over and Ariana, the older of the two stands up. 'Hey friend! Good to see you back, glad Bolt here didn't scare you off,' she says with a wink. You can see behind her Eres giving you a shy smile and wave.";
-		
+
 An everyturn rule:
 	if daytimer is night:
 		remove Ariana from play;
@@ -140,7 +140,7 @@ instead of fucking Thunderbolt:
 	now title entry is "Get fucked (ass)";
 	now sortorder entry is 3;
 	now description entry is "Take on that giant horsecock";
-	[]	
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

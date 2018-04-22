@@ -90,7 +90,7 @@ to say huskyheat:  	[Husky stays in heat permanently. Let's make an interesting 
 		infect;
 		decrease the score by 5;
 		decrease the morale of the player by 3;
-		if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
+		if player is kinky, increase the morale of the player by 6;
 	else if libido of player > 90:
 		increase slutfucked by 1;
 		if heatlevel is 3:

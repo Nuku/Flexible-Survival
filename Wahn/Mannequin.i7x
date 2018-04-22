@@ -210,8 +210,8 @@ to say nullpowderuse:
 						if cunt width of player > 29:
 							decrease cunt width of player by 6;
 						else if cunt width of player > 18:
-							decrease the cunt width of player by 4;
-						else if the cunt width of player > 3:
+							decrease cunt width of player by 4;
+						else if cunt width of player > 3:
 							decrease cunt width of player by 2;
 						follow the cunt descr rule;
 						say "     You apply the powder to your portals. After a while, they shrink down to the point where they're now [cunt size desc of player] in size.";
@@ -241,8 +241,8 @@ to say nullpowderuse:
 					else if cunt length of player > 4:
 						decrease cunt length of player by 2;
 					if cunt width of player > 18:
-						decrease the cunt width of player by 4;
-					else if the cunt width of player > 4:
+						decrease cunt width of player by 4;
+					else if cunt width of player > 4:
 						decrease cunt width of player by 2;
 					follow the cunt descr rule;
 					say "     You apply the powder to your portal. After a while, it shrinks down to the point where it's now [cunt size desc of player] in size.";

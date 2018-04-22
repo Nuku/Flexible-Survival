@@ -6,7 +6,7 @@ When play begins:
 
 Book - Dem Blues
 
-blueprints is a object. "A large sheet of dark-blue paper with thin, light blue lining upon the broad face of it. With a little ingenuity one could consider this a invaluable tool for [bold type]building[roman type]".
+blueprints is a object. "A large sheet of dark-blue paper with thin, light blue lining upon the broad face of it. With a little ingenuity one could consider this an invaluable tool for [bold type]building[roman type]".
 blueprints is in Village center.
 
 After examining the blueprints:

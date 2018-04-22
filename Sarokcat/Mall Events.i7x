@@ -15,7 +15,7 @@ Instead of resolving Tight space:
 		if T is 1:
 			say "It looks like the glint was just some leftover iridescent paint someone smeared here.";
 		else if T is 2:
-			say "You find a unopened bottle of water that must have rolled in here!";
+			say "You find an unopened bottle of water that must have rolled in here!";
 			increase carried of water bottle by 1;
 		else if T is 3:
 			say "You get stuck in the tight space. Panicking, you struggle and fight to get out, eventually managing to tear your way free, leaving a good portion of skin behind though... damn that hurts!";
@@ -159,7 +159,7 @@ Instead of resolving a Old rail system:
 		say "Unfortunately, the noise seems to have alerted something to your location!";
 		fight;
 		say "Recovering from the unexpected encounter, you continue through the now open door.";
-	Say "Inside the door you find a large mostly sealed off area, the remains of what appears to be an old rail station, with part of a old rail truck still sitting there on the turning section. You look around in amazement at this abandoned bit of history, and at a few of the still open rail tunnels, the partially rusted rails leading farther off into the darkness. Sadly the place is so old you don't think you will find much of use here for your current situation, but it could be fun to return and explore further sometime.";
+	Say "Inside the door you find a large mostly sealed off area, the remains of what appears to be an old rail station, with part of an old rail truck still sitting there on the turning section. You look around in amazement at this abandoned bit of history, and at a few of the still open rail tunnels, the partially rusted rails leading farther off into the darkness. Sadly the place is so old you don't think you will find much of use here for your current situation, but it could be fun to return and explore further sometime.";
 	Now Old rail system is resolved;
 
 

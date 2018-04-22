@@ -93,7 +93,7 @@ Instead of fucking the Tyr:
 				say "[TyrWon_Training]";
 			else if cunts of player > 0:
 				say "[TyrWon_Vaginal]";
-			else if cocks of player > 0 and cunts of player is 0 and ( a random chance of 2 in 5 succeeds or ( "More Anal" is listed in feats of player and a random chance of 1 in 3 succeeds ) ):
+			else if cocks of player > 0 and cunts of player is 0 and ( a random chance of 2 in 5 succeeds or ( anallevel is 3 and a random chance of 1 in 3 succeeds ) ):
 				say "[TyrWon_AnalPlay]";
 			else:
 				say "[TyrWon_NoSex]";
@@ -156,7 +156,7 @@ to tyrsexmenu:
 			now title entry is "Lose: Anal play + hand job";
 			now sortorder entry is 16;
 			now description entry is "let him win and jerk you off.";
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "Win: Neuter player";
 		now sortorder entry is 10;
@@ -347,7 +347,7 @@ to say TyrLost_GiveOral:	[only available through multiple victory menu]
 	say "     ([link]N[as]n[end link]) - Pull off.";
 	if the player consents:
 		LineBreak;
-		say "     Gripping his knot firmly in one hand, you rub and squeeze it while sucking down firmly on his manhood.  His canine instincts, feeling the [']tie['], drive him to hump your face in short, fast thrusts.  He cums with a howl of pleasure soon after, the first of several powerful blasts of cum shooting down your throat and into your belly.  As he continues to cum, your belly is filled with his seed and his semen overflows from your mouth as you can't swallow it down fast enough.  The taste is strong, musky and distinctly canine - and quite delicious to your sex-addled mind.  Wanting more and more of it, you keep nursing at his cock and rubbing his ballsac until the last dribbles of cum finally end.";
+		say "     Gripping his knot firmly in one hand, you rub and squeeze it while sucking down firmly on his manhood.  His canine instincts, feeling the [']tie['], drive him to hump your face in short, fast thrusts.  He cums with a howl of pleasure soon after, the first of several powerful blasts of cum shooting down your throat and into your belly.  As he continues to cum, your belly is filled with his seed and his semen overflows from your mouth as you can't swallow it down fast enough.  The taste is strong, musky and distinctly canine - and quite delicious to your sex-addled mind.  Wanting more and more of it, you keep nursing at his cock and rubbing his ballsack until the last dribbles of cum finally end.";
 		say "     Once his cock's done feeding you its seed, you ease it from your lips.  You lick and kiss along that impressive rod, getting the last dregs of that tasty load from it.  With his cock cleaned, Tyr chuckles and rubs your head, thanking you for remembering to do the clean-up.  You get back on your feet, wipe the overflowed cum from your face and suck it from your fingers in a teasing show, grinning at the lustful look the big dog gives you.";
 	else:
 		LineBreak;
@@ -422,7 +422,7 @@ to say TyrWon_Cunnilingus:
 	say "'I think I smell something I like so I'm going to have some fun with my well won prize.' Tyr sneers sexually at you before turning the both of you around and then pushing you bodily into the wall of the cage. A grunt surges free from your lips as your [bodyname of player] body hits the unforgiving barrier, but you have little time to be discomforted by this move because soon the Doberman has your pants unzipped and his nose buried into the outer folds of your pussy. When a cold nose brushes up against your clitoris you shiver as rapt pleasure runs across your spine, but when a warm tongue rolls across the inside of your labia you can only gasp as your hands reach down to caress the top of Tyr's floppy-eared head.[line break]";
 	say "You think you hear the other say something about [italic type]naughty bitch[roman type], but you're not sure because when next the Dobie's tongue moves the organ heads up to caresses into the inside of your cervix. At that point you momentarily go deaf. When Tyr pushes you back further into the cage you vision whites out as the Doberman nibbles across the outer folds of your nether lips and then scoops his tongue	throughout the depths of your cunt. A hand reaching up to play across the line of your rump makes another shudder run throughout your spine.[line break]";
 	say "Tyr lifts you up by your legs soon after he's widened the inner sanctum of your pussy, something that catches you by mild surprise, and then slowly begins to bob his head back and forth as though fucking you with his tongue. Not knowing how to handle the mind-blowing feel of the Dobie's fur tickling your crotch while his tongue washes your insides down with his warm drool you howl up to the sky as your nethers flex around the Doberman's nose. From the slow rocking motions to the firm and unrelenting hands holding you in a controlled grasp you find yourself getting the oral of a lifetime as Tyr savors the taste of your cunt across his tongue.[line break]";
-	say "With this kind of stimulation it doesn't take long for your back to arch and then your mind to explode as something reminiscent of a elephant's trumpet goes off throughout your head. A howl and tightening of your pussy a second later and Tyr is drinking down your warm nectar as you liberally flood the Dobie maw with your warmth. Tyr doesn't seem to mind, actually he seems to enjoy your climax the same as you as he buries his tongue further up into your drooling nethers while lavishing the outer edges of your cunt in unrestrained adulation. It takes some time, maybe about five minutes, but when you come down from off of your impressive sexual high you find that your pants have been corrected back onto your waist and Tyr is nowhere in sight.";
+	say "With this kind of stimulation it doesn't take long for your back to arch and then your mind to explode as something reminiscent of an elephant's trumpet goes off throughout your head. A howl and tightening of your pussy a second later and Tyr is drinking down your warm nectar as you liberally flood the Dobie maw with your warmth. Tyr doesn't seem to mind, actually he seems to enjoy your climax the same as you as he buries his tongue further up into your drooling nethers while lavishing the outer edges of your cunt in unrestrained adulation. It takes some time, maybe about five minutes, but when you come down from off of your impressive sexual high you find that your pants have been corrected back onto your waist and Tyr is nowhere in sight.";
 
 to say TyrWon_Training:
 	say "Falling down onto your back in defeat Tyr doesn't bother to brag about his victory as he looks to you with focused jade eyes. 'Good fight warrior. Needs some improvement here and there, but I commend you for your effort. As he walks over to give you a hand up you chuckle at the [']compliment['] before gasping as you find yourself being bodily brought into the Doberman's hold. Looking up at Tyr in confusion you are suddenly reminded of his rules of your fight as he grumbles lustfully into the side of your neck.";

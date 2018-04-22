@@ -551,7 +551,7 @@ to say sexwithKristen:
 		say "     That's awfully forward of you. Perhaps you should talk to her a little first.";
 	else if lastfuck of Kristen - turns < 6:
 		say "     'I need a little more time to recover, hon.'";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     You're ill-equipped to play with her right now.";
 	else if HP of Kristen < 12:
 		say "[bracket]***Sorry, sex as human content not present at this time. - The Mgmt[close bracket][line break]";
@@ -669,7 +669,7 @@ to say kristentfsex02:
 		say "     Kristen takes your [cock of player] cock in hand, pausing to admire her mate's tool before getting on her knees. She lavishes your [cock size desc of player] manhood with licks and nuzzles, letting your pre mark her fur before taking it eagerly into her warm muzzle. Her tongue slides along your shaft as she bobs her muzzle over your pulsing rod. You caress her cheek and rub her ears affectionately as you savour the pleasure her muzzle brings";
 	else:
 		say "     Kristen takes your [cock of player] cock in hand, pausing to admire her favourite lover's tool before getting on her knees. She cannot restrain her eagerness with your [cock size desc of player] manhood offered up before her, taking it into her warm muzzle right away. Her tongue slides along your shaft as she bobs her muzzle over your pulsing rod. You grip your fingers in her hair so you can thrust firmly int the slutty vixen's muzzle";
-	say "[if cunts of player > 0]. She even slips a few fingers into your juicy cunny, pushing into your feminine depths each time she sucks down hard[else if cockname of player is not listed in infections of internallist]. She rubs a paw over your ballsac, kneading and caressing your orbs, longing for their contents[end if].";
+	say "[if cunts of player > 0]. She even slips a few fingers into your juicy cunny, pushing into your feminine depths each time she sucks down hard[else if cockname of player is not listed in infections of internallist]. She rubs a paw over your ballsack, kneading and caressing your orbs, longing for their contents[end if].";
 	say "     After enjoying the blow job for several minutes, you feel yourself getting close[if a random chance of libido of Kristen in 6 succeeds]. With your balls churning with imminent release, you pull your cock from her muzzle and stroke it vigorously. With a loud groan, you empty your [cum load size of player] load across the sexy vixen's face while her tongue hangs out to catch what she can. She's left sticky but looking quite pleased, wiping up dollops of semen with a finger and then licking them up, all with a playful grin[else]. Groaning that you're about to blow, Kristen sucks down on you all the harder, moaning around your meat as you cum with a loud groan. You empty your [cum load size of player] load into her muzzle for her to swallow down. Releasing your spent shaft, she squeezes out the last few droplets, licking them from your glans with a playful grin[end if].";
 
 

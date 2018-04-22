@@ -17,7 +17,7 @@ to say WildMustangWins:
 	if cunts of player > 0:
 		say "     A moment later, you feel a sudden weight move atop you, pinning you to the ground on your hands and knees. Next comes the touch of something long and hard sliding along your back - Lucifer's erect cock, laying hot against your skin. This hugely hung stallion does indeed fully intend to mount you[if cunt width of player < 6]. You can feel his enlarged, flared glans pressing at your pussy, trying to spread open your hole for him until it finally gives and allows him entry, making you moan loudly as it pushes in[end if][if cunt length of player < 28]. With one thrust that sends shivers of lustful delight, he drives as much of his huge cock inside you as he can[else]. With a single thrust, he buries his huge cock completely inside your enormous pussy, sending shivers of lustful delight through you and making him whinny excitedly at finding a mare big enough to take him[end if]. He moves in and out of you, snorting and grunting in a purely bestial manner as that gigantic rod pounds your pussy hard and deep.";
 		say "     After being speared on the mustang's shaft again and again for you don't know how long, eventually Lucifer gives a loud and lusty neigh, then drives deep inside you and cums powerfully, filling you with copious amounts of mustang spunk. His huge balls throb and expel cup after cup of virile, equine seed into you until finally you are left bloated and panting on the ground when he finally withdraws and trots off proudly.[impregchance]";
-	else if "Less Anal" is not listed in feats of player:
+	else if anallevel > 1:
 		say "     The feral mustang snorts in frustration as he sniffs you and doesn't find a pussy for him to fill, but nevertheless moves into position atop of you, pinning you to the ground on your hands and knees. Next comes the touch of something long and hard sliding along your back - Lucifer's erect cock, laying hot against your skin. Stomping his hooves on the ground around you, the large horse bucks a few times with his hips, making that big piece of horseflesh rub against your body, then slap against your rear a few times as he lines himself up correctly. Now in the perfect breeding stance, the mustang grinds his cock against your crack for a moment, then thrusts into you with a whinny of pleasure. You groan as the feral beast's horse cock is driven deep, its flat glans spreading you wide as he starts plowing into you.";
 		say "     Gripping handfuls of grass tight enough to rip them out of the ground, you moan loudly beneath Lucifer as he uses you as his mare. He thrusts in and out of you, snorting and grunting in a purely bestial manner as that gigantic rod pounds into you over and over. With a loud and lusty neigh, he eventually drives deep inside you and cums powerfully, filling you with copious amounts of mustang spunk. His huge balls throb and expel cup after cup of virile, equine seed into you until finally you are left bloated and panting on the ground when he finally withdraws and trots off proudly.[mimpregchance]";
 	else:
@@ -262,7 +262,7 @@ to say LuciferSex7:    [player strapped under Lucifer with his cock inside them]
 	say "     The feral mustang turns a little to give you a suspicious look as you mention straps, but then snorts in amusement as he realizes you're serious and don't want to trick him into some sort of harness to break him to your will. A loud whinny follows, which you interpret as assent, as it is followed by a nod of his large head. Looking around, you spot Lee casually leaning against the fence not too far off, the bundled-up harness resting next to his hooves. With a wave, you indicate him to join you. After swinging himself over the wooden fence, the horseman pulls in the harness and picks it up, then strolls over to you. 'Time to get some stallion action, huh buddy? Sure thing, I can hook you up. You do have the payment I hope? A strand of hairs from a centaur mare for a ride-out with your stud, as I told you.'";
 	if carried of centaur hair > 0:
 		LineBreak;
-		say "     [bold type]You already have the centaur air on hand. What do you want to do now?[roman type][line break]";	
+		say "     [bold type]You already have the centaur air on hand. What do you want to do now?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Trade it to Lee?";
 		say "     ([link]N[as]n[end link]) - Change your mind.";
@@ -347,7 +347,7 @@ When Play begins:
 	now HP entry is 100;               [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 14;               [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 18;              [ Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Nowhere";       [ Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Nowhere";       [ Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0;              [ number of cocks if sex is 'Male' or 'Both' ]
 	now cock length entry is 18;
 	now cock width entry is 25;        [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
