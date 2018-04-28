@@ -24,7 +24,7 @@ Instead of resolving a Captivating Plumage:
 		say "     Managing to wrench your gaze away from the bird, you focus on the dazed wolverine instead. Without a doubt, something the peacock did put the guard out of commission, so you prepare to be wary towards the avian. As if to address this, the resplendent peafowl states, 'I was simply walking down the street and got too close to this store when the guard started to attack me.' Skeptically, you raise an eyebrow - something about the location of the guard and the empty display cases poke holes in his testimony. But after a couple of waves of his tail feathers, somehow... you just want to let him continue... 'I don't mean you any harm. Let me prove it to you. I can give a dynamite massage,' the sleek male says in a calming and inviting tone. With all the chaos going in the city, it might be good for him to help you relax a little bit... Wait! Some small, analytical part of your mind feels very wary of his intentions. Are you really going to allow him to work his magic on you?";
 		WaitLineBreak;
 		say "     [bold type]Something about the way the avian moves seems incredibly inviting... yet also potentially dangerous. Will you allow the stunning peacock to help you relax, or will you warn the fowl to back off and not try anything funny?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let the bird give you a soothing massage.";
 		say "     ([link]N[as]n[end link]) - Tell the bird off and walk away.";
 		if player consents:
@@ -187,18 +187,18 @@ to say DmitriSexMenu:
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the captivating bird";
-		now sortorder entry is 4;
+		now sortorder entry is 3;
 		now description entry is "Take Dmitri's ass for a ride";
 	[]
 	if player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Dmitri's shaft in your pussy";
-		now sortorder entry is 5;
+		now sortorder entry is 4;
 		now description entry is "Offer sex to the entrancing anthro bird";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Take Dmitri's shaft in your ass";
-	now sortorder entry is 6;
+	now sortorder entry is 5;
 	now description entry is "Offer your butt to the lusty peacock";
 	[]
 	sort the table of fucking options in sortorder order;

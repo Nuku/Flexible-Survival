@@ -108,7 +108,7 @@ to say MelanieTalk3: [ask to meet Mr. B]
 			say "     Stepping up to the office doors, you knock and hear a deep voice say the words, 'Come in.' Beyond lies a spacious office, as well-appointed as the rest of the place you've seen so far - granite-tiled floor and light grey walls framing a glass and steel desk in front of an all-glass back wall, a giant window overlooking the city. Behind the desk is a quite large executive chair - clearly custom-made to fit its occupant, as Mr. Branson is both an anthro crocodile and at least 8 feet tall, with a muscle-packed physique to match his size. What makes him stand out from being 'merely' as physically imposing as any number of sex-hungry infected out on the streets is the fact that he is calmly having a look at you while wearing a dark blue shirt tailored to his broad frame, as well as a blood-red tie.";
 			WaitLineBreak;
 			say "     The croc indicates one of the two chairs set up in front of his desk and says in a quite dominant tone, 'Sit.' You can feel his gaze rest upon you, yellow slitted eyes full of cunning evaluating every movement as you ";
-			if "Submissive" is listed in feats of player:   [sub players]
+			if player is submissive:   [sub players]
 				say "scurry forward quickly, planting your ass on one of the visitor's chairs. A grin spreads along the tooth-filled maw of the businessman. ";
 			else if "Dominant" is listed in feats of player:   [dom players]
 				say "calmly walk towards him, then come to stand in front of his desk, implicitly ignoring the offered chairs. The businessman raises one eyebrow a little at this, and you can see the end of his tail twitching slightly. ";

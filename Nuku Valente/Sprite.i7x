@@ -25,7 +25,7 @@ to say Sprite attack:
 	if a random chance of 1 in 2 succeeds and cunts of player > 0:
 		say "You look down to see [(cunt length of player divided by 4) plus one] sprites working their way into you, one after the other. Despite their forms, they slip in smoothly, wings buzzing inside of you, exciting your tunnel and clit and sensing pleasure pulsing through your form as they slowly penetrate with their tiny forms, making their way towards your waiting womb.[impregchance]";
 		wait for any key;
-	else if "MPreg" is listed in feats of player and cunts of player is 0 and a random chance of 1 in 2 succeeds:
+	else if player is mpreg_ok and cunts of player is 0 and a random chance of 1 in 2 succeeds:
 		say "One of the sprites caresses your rear, nuzzling and kissing at it.  'Mmm... there's something special about this spritely boy, girls.  There's a nice, warm womb in him,' she giggles.  That said, she starts rubbing at your back passage, working your anus open.  You moan softly as she starts squirming her way inside.  She's followed by [if scalevalue of player is 1]another[else][scalevalue of player]others[end if].  They slip in smoothly, wings buzzing[if cocks of player > 0] and fluttering against your prostate[end if] as they slowly penetrate with their tiny forms, making their way towards your waiting womb.[mimpregchance]";
 	if a random chance of 1 in 2 succeeds:
 		say "Your body is swarmed with the cloud, lifted up into the air and caressed from all sides. It's like sleeping on a cloud as they hold you up with hundreds of tiny hands while another hundred work on rubbing your every erogenous zone in alternating waves that has you paralyzed with pleasure.";
@@ -97,7 +97,7 @@ When Play begins:
 	now HP entry is 26;
 	now lev entry is 2; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
-	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku]

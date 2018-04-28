@@ -39,7 +39,7 @@ to say losetofennec:
 			say "[fennecoral]";
 	else if cocks of player > 0:
 		say "fondles your cock and balls before stroking along your maleness, eliciting a moan in response.";
-		if ( "Less Anal" is not listed in feats of player and a random chance of 1 in 3 succeeds ) or ( "More Anal" is listed in feats of player and a random chance of 1 in 3 succeeds ):
+		if ( anallevel > 1 and a random chance of 1 in 3 succeeds ) or ( anallevel is 3 and a random chance of 1 in 3 succeeds ):
 			say "[fennecanal]";
 		else if a random chance of 3 in 5 succeeds and scalevalue of player < 4:
 			say "[fennec69]";

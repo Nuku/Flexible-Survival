@@ -333,13 +333,13 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if anallevel is not 1:
+		if anallevel > 1:
 			choose a blank row from table of fucking options;
 			now title entry is "Fuck Vent's ass";
 			now sortorder entry is 1;
 			now description entry is "Use the fox's hole for your own pleasure";
 		[]
-		if anallevel is not 1 and VentFoxContentLevel > 0 and scalevalue of player <= 3:
+		if anallevel > 1 and VentFoxContentLevel > 0 and scalevalue of player <= 3:
 			choose a blank row from table of fucking options;
 			now title entry is "Get fucked by Vent";
 			now sortorder entry is 2;
@@ -357,7 +357,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			now sortorder entry is 6;
 			now description entry is "Have Vent use his more dexterous organ to thoroughly rim you";
 		[]
-		if anallevel > 2 and VentFoxContentLevel > 2 and "Kinky" is listed in feats of player:
+		if anallevel > 2 and VentFoxContentLevel > 2 and player is kinky:
 			choose a blank row from table of fucking options;
 			now title entry is "Get tongue-fucked by Vent";
 			now sortorder entry is 7;
@@ -570,7 +570,7 @@ to say WSLevelMenu:[Menu for setting WS amount of Vent.]
 
 to say OviLevelMenu:[Menu for setting Oviposition amount of Vent.]
 	clear the screen and hyperlink list;
-	if "Kinky" is listed in feats of player:
+	if player is kinky:
 		say "     With his excellent control over his own body, Vent is capable of putting sterile gooey eggs inside you. How do you want this to be done?";
 		say "     [link](0)[as]0[end link] - No egging.";
 		say "     [link](1)[as]1[end link] - No egging unless requested.";
@@ -714,7 +714,7 @@ Chapter 2 - Sex Scenes
 to say FuckVentFoxAss:[Player fucks the fox's ass.]
 	if VentSubSize is 3:
 		if cockname of player is listed in infections of Knotlist:
-			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. ";
+			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own [if cocks of player > 1]cocks to harden them[else]cock to harden it[end if], before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. ";
 			if cock length of player < 10:
 				say "After a bit of pushing, you manage to bottom out to your growing knot, the fox taking your length without any problem.";
 			else if cock length of player < 20:
@@ -724,7 +724,7 @@ to say FuckVentFoxAss:[Player fucks the fox's ass.]
 			else if cock length of player > 30:
 				say "As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your knot is brushing against his entrance, his stomach forming to the shape of your [cock of player] cock, showing just how elastic he actually is.";
 		else:
-			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. ";
+			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own [if cocks of player > 1]cocks to harden them[else]cock to harden it[end if], before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. ";
 			if cock length of player < 10:
 				say "After a bit of pushing, you manage to bottom out, brushing your hips against him, the fox taking your length without any problem.";
 			else if cock length of player < 20:
@@ -757,7 +757,7 @@ to say FuckVentFoxAss:[Player fucks the fox's ass.]
 		say "     Rope after rope of cum fills his bowels, and he climaxes again from the feeling of being filled. Eventually, your orgasm abates[if cockname of player is listed in infections of Knotlist] and your knot shrinks[end if]. You pull out of your foxy friend, giving him a friendly pat before redressing and moving on.";
 	else if VentSubSize is 2:
 		if cockname of player is listed in infections of Knotlist:
-			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. ";
+			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own [if cocks of player > 1]cocks to harden them[else]cock to harden it[end if], before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. ";
 			if cock length of player < 10:
 				say "After a bit of pushing, you manage to bottom out to your growing knot, the fox taking your length without any issue, his stomach bulging outward slightly.";
 			else if cock length of player < 20:
@@ -767,7 +767,7 @@ to say FuckVentFoxAss:[Player fucks the fox's ass.]
 			else if cock length of player > 30:
 				say "As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your knot is brushing against his entrance, his stomach forming to the shape of your [cock of player] cock, showing just how elastic he actually is.";
 		else:
-			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. ";
+			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own [if cocks of player > 1]cocks to harden them[else]cock to harden it[end if], before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. ";
 			if cock length of player < 10:
 				say "After a bit of pushing, you manage to bottom out, brushing your hips against him, the fox taking your length without any problem, his stomach stretching out slightly.";
 			else if cock length of player < 20:

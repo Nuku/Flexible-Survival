@@ -179,7 +179,7 @@ when play ends:
 				let randomnumber be a random number from 1 to 2;
 				if "Dominant" is listed in feats of player:
 					now randomnumber is 2;
-				else if "Submissive" is listed in feats of player:
+				else if player is submissive:
 					now randomnumber is 1;
 				if randomnumber is:
 					-- 1: [sub]

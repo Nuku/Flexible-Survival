@@ -152,7 +152,7 @@ When Play begins:
 	now cha entry is 15;
 	now sex entry is "Both";
 	now HP entry is 60;
-	now lev entry is 10; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -165,7 +165,7 @@ When Play begins:
 	now cunt length entry is 9; [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 5; [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 75; [ Target libido the infection will rise towards. ]
-	now loot entry is ""; [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lithe"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
@@ -200,7 +200,7 @@ to say beatWukongThugs:
 		now title entry is "Use a cock";
 		now sortorder entry is 2;
 		now description entry is "You feel like using a cock.";
-		if "kinky" is listed in feats of player:
+		if player is kinky:
 			choose a blank row in table of fucking options;
 			now title entry is "Worship";
 			now sortorder entry is 3;
@@ -261,11 +261,11 @@ to say beatWukongThugs_useAHole:
 				if cocks of player > 1:
 					say "     Once you feel yourself ready, you pull his face away from your groin and have him straddle you, [if cocks of player is 2]your two cocks[else]two of your cocks[end if] pointing at his orifices. His struggles are pathetically weak now, and he barely offers any resistance as you slam his crotch down on your lap. The thug howls in pleasure as he feels herself being stretched from both sides. You begin to hump inside of him, making her body do small jumps on your hips, followed by small cries of pleasure which are music to your ears. You play him like a living instrument, pinching his nipples to go into the higher notes. By the time you have gotten the action going, the rest of the group has gotten themselves together. They look at you fucking their comrade, now your sexual hostage, unsure of what to do. 'D-don't look at me like that,' he says, noticing their gaze. You threaten the group to not look away instead.";
 					WaitLineBreak;
-					say "     Eventually, you get a satisfying orgasm, and pump the monkey cunt-boi's holes full of seed. You wonder if he has climaxed too; his half-closed eyes and his heavy panting suggest he did, but you do not care anyway. You push him off from your lap, letting him fall to the ground, your cum escaping from his [if cock length of player > 8]gaping [end if]holes. The rest of the band lets you go, too intimidated and injured to do something against you, and go to tend on your victim instead.";
+					say "     Eventually, you get a satisfying orgasm, and pump the monkey cuntboy's holes full of seed. You wonder if he has climaxed too; his half-closed eyes and his heavy panting suggest he did, but you do not care anyway. You push him off from your lap, letting him fall to the ground, your cum escaping from his [if cock length of player > 8]gaping [end if]holes. The rest of the band lets you go, too intimidated and injured to do something against you, and go to tend on your victim instead.";
 				else:
 					say "     Once you feel yourself ready, you pull his face away from your groin and have him straddle you, your cock grazing his pussy. His struggles are pathetically weak now, and he barely offers any resistance as you slam his crotch down on your lap. The thug howls in pleasure as he feels himself being stretched. You begin to hump inside of him, making his body do small jumps on your hips, followed by small cries of pleasure which are music to your ears. You play him like a living instrument, pinching her nipples to go into the higher notes. By the time you have gotten the action going, the rest of the group has gotten themselves together. They look at you fucking their comrade, now your sexual hostage, unsure of what to do. 'D-don't look at me like that,' he says, noticing their gaze. You threaten the group to not look away instead.";
 					WaitLineBreak;
-					say "     Eventually, you get a satisfying orgasm, and pump the monkey cuntboi's womb full of seed. You wonder if he has climaxed too; his half-closed eyes and his heavy panting suggest he did, but you do not care anyway. You push him off from your lap, letting her fall to the ground, your cum escaping from his [if cock length of player > 8]gaping [end if]hole. The rest of the band lets you go, too intimidated and injured to do something against you, and go to tend on your victim instead.";
+					say "     Eventually, you get a satisfying orgasm, and pump the monkey cuntboy's womb full of seed. You wonder if he has climaxed too; his half-closed eyes and his heavy panting suggest he did, but you do not care anyway. You push him off from your lap, letting her fall to the ground, your cum escaping from his [if cock length of player > 8]gaping [end if]hole. The rest of the band lets you go, too intimidated and injured to do something against you, and go to tend on your victim instead.";
 			else: [trans-female]
 				say "     You need to blow your frustrations out of your system. Literally. You pick up the nearest monkey. She looks like a girl, but is geared like a boy down there. It does not matter. She begins to protest meekly as you pull her by the tail. You sit on a nearby bench, forcing her to kneel in front of you. She tries to protest, but you waste no time shutting her down by pushing her face down on your cock. 'What do you think you're dmmmg! Ggkk!' Before she has a chance to fight back, you warn her that you would not want to harm her pretty face more, so she whimpers, trying to find a comfortable position. But you do not care. She will follow [italic type]your[roman type] rhythm, not the other way around. You facefuck the trans-female thug, enjoying the messy sounds escaping from her throat as he tries to fit your [cock size desc of player] cock inside her mouth. You leave her no pause[if cocks of player > 1], switching between your cocks once you want her to give more attention to the rest of the package[end if].";
 				say "     Once you feel yourself ready, you pull her face away from your groin and have her straddle you, [if cocks of player is 1]your cock[else]one of your cocks[end if] poking at her ass. Her struggles are pathetically weak now, and she barely offers any resistance as you slam her ass down on your lap. The thug howls in pleasure as she feels herself being stretched. You begin to hump inside of her, making her body do small jumps on your hips, followed by small cries of pleasure which are music to your ears. You play her like a living instrument, groping her [one of]petite[or]average[or]generous[or]enormous[at random] breasts and pinching her nipples to go into the higher notes. By the time you have gotten the action going, the rest of the group has gotten themselves together. They look at you fucking their comrade, now your sexual hostage, unsure of what to do. 'D-don't look at me like that,' she says, noticing their gaze. You threaten the group to not look away instead.";
@@ -315,14 +315,14 @@ to say losetoWukongThugs:
 	else:
 		say "     You try to protest, but one of monkeys take the opportunity to plant his legs around your head and press her crotch against your mouth. You groan as she smothers you and grinds her pussy against your face, wetting your tongue with her vaginal fluids.";
 	WaitLineBreak;
-	if anallevel is not 1:
+	if anallevel > 1:
 		say "     Your ass is suddenly stretched, as the monkey under you pushed his member inside your ass and does not waste time slapping his pelvis against your butt with short, fast thrusts.";
 		WaitLineBreak;
 	if cunts of player > 0:
 		let randomnumber be a random number between 1 and 3;
 		if randomnumber is 1:
 			say "     Another monkey takes advantage of the confusion and plunges his shaft inside your [cunt size desc of player] pussy, jackhammering your cervix with his member. ";
-		else if randomnumber is 2 and "kinky" is listed in feats of player:
+		else if randomnumber is 2 and player is kinky:
 			say "     Another monkey takes advantage of the confusion and slams a pair of fingers down your [cunt size desc of player] pussy. Two quickly become three, then four, until the primate eventually manages to slip the five fingers inside, and form a fist inside of you.";
 		else:
 			say "     Another monkey takes advantage of the confusion and dives head-first on your [cunt size desc of player] pussy, nibbling on your clit and licking inside, making a game to get as far as possible.";

@@ -760,7 +760,7 @@ Instead of resolving Trip to the Water Tower:
 			say "[WaterTowerFailure]";
 	else:
 		LineBreak;
-		say "     Brennan shrugs as you tell him that you can't join him right now as you have other things to do. 'Good luck on your endeavour then,' the bearded man adds with a smile and pats the side of your arm. 'And if you find that the water everywhere suddenly is running again, you know whom to thank. See ya!' With that, he sets off on his own.";
+		say "     Brennan shrugs as you tell him that you can't join him right now as you have other things to do. 'Good luck on your endeavor then,' the bearded man adds with a smile and pats the side of your arm. 'And if you find that the water everywhere suddenly is running again, you know whom to thank. See ya!' With that, he sets off on his own.";
 		now GooColossusProgress is 100; [Brennan couldn't accidentally release him on his own]
 	now Trip to the Water Tower is resolved;
 

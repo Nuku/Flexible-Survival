@@ -25,13 +25,13 @@ to say hawkmandesc:
 		now sex entry is "Female";
 	if inasituation is true:
 		stop the action; [details are taken care of at the event source]
-	say "     As you wander through the city streets, you hear a whistling sound from above, and look up to see a powerful avian form swooping down towards you. You jump back as it lands right in front of you, and get a closer look at the creature's raptor body as it stalks towards you on taloned feet. The strange bird-man has large hawk-like wings stretching out from his back and his rather taloned hands stretch towards you eagerly. All the rest of his body is covered in rather soft and beautiful looking brown patterned feathers. The obviously male creature is half erect as he cocks his avian head to the side appraisingly, and you can swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";
+	say "     As you wander through the city streets, you hear a whistling sound from above and look up to see a powerful avian form swooping down towards you. You jump back as it lands right in front of you and get a closer look at the anthro raptor's body as he stalks towards you on taloned feet. The strange bird-man has large, hawk-like wings stretching out from his back, clearly flight-ready given the creature's aerial approach. He is covered in a rather soft and beautiful looking plumage of brown, layered feathers with ivory-white countershading. The obviously male creature is half-erect as he cocks his avian head to the side appraisingly, and you swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";
 
 to say Hawkman wins:
 	if inasituation is true:
 		stop the action; [details are taken care of at the event source]
 	now nohawkmansex is 0;
-	if cunts of player > 0 or ( "More Anal" is listed in feats of player and a random chance of 2 in 5 succeeds ) or ( "MPreg" is listed in feats of player and a random chance of 2 in 5 succeeds ):
+	if cunts of player > 0 or ( anallevel is 3 and a random chance of 2 in 5 succeeds ) or ( player is mpreg_ok and a random chance of 2 in 5 succeeds ):
 		if cunts of player is 0 and a random chance of 3 in 5 succeeds:
 			if HP of player > 0:
 				say "     The hawkman grins wide when you give into him and he wastes no time in leaping forward, knocking your unresisting form to the ground. He chuckles happily as he rubs his feathered form against your [bodydesc of player] body while divesting you of your gear. Groping you between the legs as he does, he gives a cawing laugh. 'Well, you're nothing but a big hen, ain't you?' he says teasingly, nipping at your neck while grinding his stiffened member against your rear and fondling your [if cocks of player > 0]manhood as it reacts[else]your bare groin[end if].";
@@ -52,7 +52,7 @@ to say Hawkman wins:
 
 To say Hawkman loses:
 	if inasituation is true:
-		stop the action; [details are taken care of at the event source]	
+		stop the action; [details are taken care of at the event source]
 	if hawkmanbeaten < 3 or cocks of player is 0:
 		say "     With one last vicious blow, you knock the hawkman back, the creature seemingly surprisingly fragile for all its striking power, and as it hops back and takes to the sky again to flee, you wonder if its bones are just as delicate as most birds... Sighing you turn to continue on your way, though you resolve to keep a better eye on the sky above just in case more of those surprisingly sexy hawkmen are in the area.";
 	else if nohawkmansex > 2:

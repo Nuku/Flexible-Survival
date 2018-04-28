@@ -43,7 +43,7 @@ to say sexwithLindsey:
 			break;
 	if lastfuck of Lindsey - turns < 6:
 		say "     'Sorry there my horny little bitch,' Lindsey says with a soft chuckle, 'but I have to check on my other bitch and make sure she is properly taken care of too, so I need to save a bit of energy for that. Why don't you come back in a little bit and I can make you even more into a proper little bitch, just like you want,' the masculine wolftaur says with lupine grin, the mingled musk of male wolftaur and your recent sex filling the air.";
-	else if cunts of player is 0 and cocks of player is 0:
+	else if player is neuter:
 		say "     You are ill-equipped to play with the alluring and masculine wolftaur before you.";
 	else if level of Lindsey > 3:
 		if bodyname of player is "Wolftaur":
@@ -83,7 +83,7 @@ to say sexwithLindsey:
 					now lastfuck of Lindsey is turns;
 					increase level of Lindsey by 1;
 					decrease humanity of player by 5;
-				else if "MPreg" is listed in feats of player:
+				else if player is mpreg_ok:
 					if LindseyMPregDetected is false:
 						say "     'Another male wolftaur?' Lindsay says with an amused look on his canine face as he examines your own wolftaur body. 'Well, since you obviously want to be my bitch so badly even as a male, who am I to say no?' the strong wolftaur says as he stalks around you in a predatory manner. His hands slowly stroke across your skin as his powerful dominant musk fills the small space and makes your head swim. 'And I can tell you're proper bitch deep down, like you should be, so I can still enjoy using you like one,' the dominant beast says, rubbing a paw over your lower belly in a way that fills it with a warm, aching need.";
 						say "     Your head spins with lust as you try to grasp his meaning, only to feel his weight settle onto your back. You gasp as you brace your lower legs to support the larger wolf's weight while he positions himself on you, his powerful arms wrapping around your upper body as his cock begins to rub up against your own canine rear. You moan as your head begins to cloud over with pleasure, and he settles his canine chin on your shoulder, unable to even think about resistance with his powerful male body on top of your own. He licks your ear and whispers, 'That's right, I can smell that womb of yours, even over the stink of this place. I'm going to enjoy putting my pups in you.'";
@@ -155,7 +155,7 @@ to say sexwithLindsey:
 				now lastfuck of Lindsey is turns;
 				increase level of Lindsey by 1;
 				decrease humanity of player by 3;
-			else if "MPreg" is listed in feats of player:
+			else if player is mpreg_ok:
 				if LindseyMPregDetected is false:
 					say "     'Another male taur?' Lindsey says with an amused look on his canine face, as he examines your own [bodydesc of player] body. 'And I can tell you're proper bitch deep-down, like you should be, so I can still enjoy using you like one,' the dominant beast says, rubbing a paw over your lower belly in a way that fills it with a warm, aching need. Your head spins with lust as you try to grasp his meaning, only to feel his weight settle onto your back. You gasp as you brace your lower legs to support the larger wolf's weight as he positions himself on you, his powerful arms wrapping around your upper body as his cock begins to rub up against your hindquarters. You moan as your head begins to cloud over with pleasure, and he settles his canine chin on your shoulder, unable to even think about resistance with his powerful male body on top of your own. He licks your ear and whispers 'That's right, I can smell that womb of yours, even over the stink of this place. I'm going to enjoy putting my pups in you.'";
 					now LindseyMPregDetected is true;

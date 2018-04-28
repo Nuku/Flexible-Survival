@@ -102,7 +102,7 @@ to say alpha huskypack lost:
 
 to say alpha huskypack victory:
 	choose row monster from table of random critters;
-	if "Submissive" is not listed in feats of player:
+	if player is not submissive:
 		say "     You stand victorious as the huskies whimper in defeat. They know who the one in charge is, for now at least. One of the downed dogs rolls over in front of you, paws in the air and wagging his tail. The others join in with soft yelps and whines, endeavoring to win your favor.";
 		if humanity of player > 60 or libido of player < 50:
 			say "     You have little interest in playing with dogs though. There are better things to be doing, and you leave them behind.";
@@ -128,7 +128,7 @@ to say alpha huskypack victory:
 			else:
 				say "     When you awaken, the pack has already moved on. Taking the cue, you rise and gather your things before moving to safer places.";
 	else:
-		say "     Your victory feels odd, almost wrong. The huskies circle you a moment before the leader of them suddenly darts forward and plants a sloppy dog kiss against you, 'Little bitch, you fight hard. When will you join us forever?' The words bring a hot blush to your [facename of player] cheeks as some part of you wants to roll over and do just as he said. Would it really be that bad?";
+		say "     Your victory feels odd, almost wrong. The huskies circle you a moment before the leader of them suddenly darts forward and plants a sloppy dog kiss against you. 'Little bitch, you fight hard. When will you join us forever?' The words bring a hot blush to your [facename of player] cheeks as some part of you wants to roll over and do just as he said. Would it really be that bad?";
 		decrease humanity of player by 10;
 		if humanity of player < 10:
 			say "[alpha pack submissive victory ending]";

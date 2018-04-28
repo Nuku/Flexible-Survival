@@ -167,7 +167,7 @@ Instead of resolving a potential resources:
 						add y to invent of player;
 						say " and even manage to haggle a second one from them";
 				say ".";
-				if "Submissive" is listed in feats of player or "Kinky" is listed in feats of player:
+				if player is submissive or player is kinky:
 					say "     Despite, or perhaps even in part because, of how dirty you feel for what you've done, you can't help but be a little pleased with yourself and quite turned on by what you've done.";
 					increase libido of player by 10;
 					increase morale of player by 1;
@@ -194,7 +194,7 @@ Instead of resolving a potential resources:
 						add y to invent of player;
 						say " and even manage to haggle a second one from them";
 				say ".";
-				if "Submissive" is listed in feats of player or "Kinky" is listed in feats of player:
+				if player is submissive or player is kinky:
 					say "     Despite, or perhaps even in part because, of how dirty you feel for what you've done, you can't help but be a little pleased with yourself and quite turned on by what you've done.";
 					increase libido of player by 10;
 					increase morale of player by 1;

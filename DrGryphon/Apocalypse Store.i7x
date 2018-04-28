@@ -7,7 +7,7 @@ Clothing Store is a scavevent.  The sarea of Clothing Store is "Outside".
 
 instead of resolving Clothing Store:
 	say "While walking through one of the older parts the city, you come across an old used clothing store. The place looks like a bomb went off inside, with windows and doors that are blown out, along with a torn apart interior and debris littered around the floor.";
-	say "Despite the stores destroyed appearance, you decide to have a look around inside anyway.";
+	say "Despite the store's destroyed appearance, you decide to have a look around inside anyway.";
 	increase carried of Apocalypse Skirt by 1;
 	increase carried of Apocalypse Shorts by 1;
 	increase carried of Apocalypse Hoodie by 1;

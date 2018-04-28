@@ -79,7 +79,7 @@ To say dryad attack:
 		infect "Dryad";
 		say "The dryad unceremoniously drops your cum-and-milk-covered form to the ground and leaves. As you clean yourself off, you collect the cum on you and place it into an empty water bottle. Maybe there is a use for it?";
 		increase carried of dryad cum by 1;
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "She looks at you with horror. 'Nothing? Nothing for me to play with?' She exclaims. Well, you will just have to fix that and come back later. She turns toward the trees with a huff, leaving you to pick yourself up.";
 		infect "Dryad";
 
@@ -113,7 +113,7 @@ When Play begins:
 	now HP entry is 45;
 	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you lose ]
 	now wdam entry is 13; [Amount of Damage monster Does when attacking.]
-	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 6; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]

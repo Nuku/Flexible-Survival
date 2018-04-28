@@ -95,7 +95,7 @@ to say sexwithJimmy:
 		say "     You should probably try talking to him some more first.";
 	else if lastfuck of Jimmy - turns < 6:
 		say "     You'd played around with the cute corgi recently. Maybe you should give him a bit more of a break before getting back to it.";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     There's not much point in playing with him given your lack of genitals.";
 	else:
 		if HP of Jimmy >= 5 and cocks of player > 0 and a random chance of anallevel in 7 succeeds:

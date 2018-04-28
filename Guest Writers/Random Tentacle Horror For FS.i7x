@@ -35,7 +35,7 @@ to say horror victory:
 	else:
 		now cuntsmall is 0;
 	let mpregpath be 0;
-	if cunts of player is 0 and "MPreg" is listed in feats of player, now mpregpath is 1;
+	if cunts of player is 0 and player is mpreg_ok, now mpregpath is 1;
 	if ( "Male Preferred" is listed in feats of player and mpregpath is 0) or "Sterile" is listed in feats of player:
 		say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
 	else if gestation of child > 0:
@@ -45,7 +45,7 @@ to say horror victory:
 		else:
 			say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
 			now lasttentaclebattleoutcome is 5;
-	else if cunts of player is 0 and "MPreg" is listed in feats of player:
+	else if cunts of player is 0 and player is mpreg_ok:
 		if tentaclerape is 0:
 			if tentsubmit is 1:
 				say "As you lie down in a clear sign of submission, the creature excitedly approaches you, extending its many tentacles towards you as it does so. The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. A slimy tentacle probes over your body as the creature draws you closer. As the tendril glides between your ass cheeks, the tentacled monstrosity releases a gurgle of surprised delight upon detecting the secret hidden within your derriere.";
@@ -194,7 +194,7 @@ to say horror victory:
 			else:
 				now lasttentaclebattleoutcome is 2;
 		else:
-			if cunts of player is 0 and cocks of player is 0: [implanted and genderless!? ZOMG!]
+			if player is neuter: [implanted and genderless!? ZOMG!]
 				if tentsubmit is 0: [did not submit]
 					say "The tentacles sense that you can't continue the struggle any longer and surge forward around you, slithering in and through your clothing, searching your body for certain characteristics... Rubbing across your groin and finding it devoid of any sort of genitals it drops you unceremoniously and starts to drag itself away from you, back into the shadows. Having already attempted to lay its offspring inside of you once, it sees no reason why it should attempt to stimulate you to a climax that would never come... All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
 					now lasttentaclebattleoutcome is 5;

@@ -464,7 +464,7 @@ This is the player attack rule:
 				increase dammy by a random number between 0 and 2;
 				say "[line break]Your tailcock swings in to [one of]smack[or]swat[or]slap[or]ejaculate[or]cum[purely at random] at your enemy, splattering a spray of your [one of]seed[or]semen[at random] onto them, for [special-style-2][dammy][roman type] additional damage!";
 			else:
-				say "[line break]You give [one of]your opponent[or]your enemy[or]the [name entry in lower case][purely at random] a [one of]hard swat[or]fleshy smack[or]wet slap[or]firm jab[purely at random] with your [cock size desc of player] [one of]wang[or]cock[or]prick[purely at random][if cocks of player > 1]s[end if] for [special-style-2][dammy][roman type] additional damage!";
+				say "[line break]You give [one of]your opponent[or]your enemy[or]the [name entry in lower case][purely at random] a [one of]hard swat[or]fleshy smack[or]wet slap[or]firm jab[purely at random] with your [cock size desc of player] [one of]wang[or]cock[or]prick[purely at random][smn] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
 		if a random chance of specattchance in 20 succeeds and "Ball Crush" is listed in feats of player and cock width of player >= 16 and bonusattacks < 2 and player is not internal:
 			increase bonusattack by 1;
@@ -634,8 +634,8 @@ This is the submit rule:
 	let temp be the HP of the player;
 	now fightoutcome is 22;
 	Lose;
-	if "Submissive" is listed in feats of the player, increase the XP of the player by ( ( 2 + lev entry ) / 5 );
-	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
+	if player is submissive, increase the XP of the player by ( ( 2 + lev entry ) / 5 );
+	if player is kinky, increase the morale of the player by 6;
 
 
 Chapter 5 - Flee

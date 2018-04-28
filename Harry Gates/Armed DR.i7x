@@ -287,7 +287,7 @@ Report stabbing something (called the target) with something(called the pigstick
 		if the target is dead begin;
 			say "With one final thrust of your [pigsticker], [printed name of the target] drops to the ground, dead." instead;
 		end if;
-	say "You stab [the target] with your [pigsticker]. [The target] yells out in pain.  ([The target][']s health: [present health of the target])[line break]";
+	say "You stab [the target] with your [pigsticker]. [The target] yells out in pain. ([The target][']s health: [present health of the target])[line break]";
 	end if.
 
 Report stabbing something (called the target) with something(called the pigsticker) (this is the report stabbing non-people rule):
@@ -387,7 +387,7 @@ Report clubbing something (called the target) with something(called the cudgel) 
 		if the target is dead begin;
 			say "With one final hit of your [cudgel], [printed name of the target] drops to the ground, dead." instead;
 		end if;
-	say "You club [the target] with your [cudgel]. [The target] yells out in pain.  ([The target][']s health: [present health of the target])[line break]";
+	say "You club [the target] with your [cudgel]. [The target] yells out in pain. ([The target][']s health: [present health of the target])[line break]";
 	end if.
 
 Report clubbing something (called the target) with something(called the cudgel) (this is the report clubbing non-people rule):

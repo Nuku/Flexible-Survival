@@ -256,7 +256,7 @@ understand "add kinky" as AddRemoveKinky.
 understand "remove kinky" as AddRemoveKinky.
 
 carry out AddRemoveKinky:
-	if "Kinky" is listed in feats of player:
+	if player is kinky:
 		remove "Kinky" from feats of player;
 	else:
 		add "Kinky" to feats of player;

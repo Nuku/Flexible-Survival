@@ -69,7 +69,7 @@ Down Under Pub is a room. "[down under pub scene]". It is unknown. It is fasttra
 to say down under pub scene:
 	if bodyname of player is not "Red Kangaroo":
 		say "     It probably would not be safe to approach the Aussie pub if you're not a roo like them, even if you've been there before[if HP of Gillian >= 4]. And you'd likely get spotted trying to sneak up to Gillian's flat, so that's out[end if]. You could find yourself spread out on a table and shared until there's nothing but roo in you. Mmmm... No! As nice as that sounds, you need to hold on to your sanity.";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     Lacking any proper equipment, somehow you just don't feel the same urge to return to the pub as you once had and decide to pass on visiting it for the moment. Besides, perhaps tending to your poor, neutered groin is a higher priority than a night of drinking.";
 	else if Down Under Pub is not open:			[visits allowed from noon to midnight]
 		if HP of Gillian >= 4:

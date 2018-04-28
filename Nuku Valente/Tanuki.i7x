@@ -233,7 +233,7 @@ When Play begins:
 	now HP entry is 64; [- How many HP has the monster got? -]
 	now lev entry is 5; [- Level of the Monster, you get this much HP if you win, or this much HP halved if you loose -]
 	now wdam entry is 10; [-Amount of Damage monster Does when attacking.-]
-	now area entry is "Nowhere"; [- Current options are "Outside" and "Mall"  Case sensitive-]
+	now area entry is "Nowhere"; [- Current options are "Outside" and "Mall". Case sensitive-]
 	now cocks entry is 0; [- How many cocks will the infection try and cause if sex is "Male" or "Both"-]
 	now cock length entry is 0; [- Length infection will make cock grow to if cocks-]
 	now cock width entry is 0; [- Size of balls apparently ;) sneaky Nuku-]
@@ -269,7 +269,7 @@ name	desc	weight	object
 "tanuki coin"	"[tancoindesc]"	1	tanuki coin
 
 to say tancoindesc:
-	say "     A strange, solid gold coin. It's fairly heavy and quite worn. On one side there appears to be a leaf, while on the other an eastern dragon, which circles around the outer edge of its face, with its tail curving at the bottem to go straight up and occupy the center. It's warm to the touch, but doesn't feel particularly infectious.";
+	say "     A strange, solid gold coin. It's fairly heavy and quite worn. On one side there appears to be a leaf, while on the other an eastern dragon, which circles around the outer edge of its face, with its tail curving at the bottom to go straight up and occupy the center. It's warm to the touch, but doesn't feel particularly infectious.";
 
 the scent of tanuki coin is "It has a benign, metallic smell about it.";
 

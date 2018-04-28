@@ -188,8 +188,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Reptaur"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The Reptaur hefts you up into the air with one arm and then powerfully drives you into the ground![or]The Reptaur charges into at top speed![or]The Reptaur unsheathes its claws and then swipes at your face and chest![or]The Reptaur run around to your backside and then bowls you over with a fierce kick of its rear legs![or]The Reptaur launches you into the air with a sharp uppercut![or]The Reptaur coils its long tail around your throat and then slams you back and forth onto the ground![at random]"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheReptaur]"; [ Text when monster loses.  Change 'Reptaur' as above. ]
-	now victory entry is "[losetoReptaur]"; [ Text when monster wins.  Change 'Reptaur' as above. ]
+	now defeated entry is "[beattheReptaur]"; [ Text when monster loses. Change 'Reptaur' as above. ]
+	now victory entry is "[losetoReptaur]"; [ Text when monster wins. Change 'Reptaur' as above. ]
 	now desc entry is "[Reptaurdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "smooth and blunted with a somewhat rounded muzzle making up the end of your face. The shape of said muzzle just so happens to hinder you from smelling much of anything. However, your new serpentine tongue takes care of that small detail by [italic type]tasting[roman type] all the scents in the air around you"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "strangely mixed between that of an ungulate, a serpent, and a man. Like the centaurs of old you have the lower body of a horse, but instead of your lower end being lightly furred its smooth all over while your feet end with four digitigrade paws fitted with sharp claws instead of hooves. Your upper body is mixed between that or a serpent's and a man's as you possess two strong, but smooth arms, with muscles for days covering both your chest and back"; [ Body Description, format as the text "Your body is (your text)." ]
@@ -207,9 +207,9 @@ When Play begins:
 	now per entry is 16;
 	now int entry is 18;
 	now cha entry is 23;
-	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 89; [ The monster's starting HP. ]
-	now lev entry is 15; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 15; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 15; [ Monster's average damage when attacking. ]
 	now area entry is "Park"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 2; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -222,7 +222,7 @@ When Play begins:
 	now cunt length entry is 12; [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 55; [ Target libido the infection will rise towards. ]
-	now loot entry is ""; [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]sexy[or]deadly[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]

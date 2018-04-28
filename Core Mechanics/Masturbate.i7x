@@ -26,7 +26,7 @@ Section 2 - Masturbation
 
 
 instead of using porn collection:
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     Lacking any real gender of your own, you find the magazines rather unsatisfying and put them away.";
 	else if libido of player < 25:
 		say "     You're not that turned on and really should focus on more important things right now.";

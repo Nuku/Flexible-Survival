@@ -240,8 +240,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Pink Gel";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The Pink Gel tries to suffocate you with her enormous boobs![or]The Pink Gel strikes you in the jaw with surprising force![or]The Pink Gel lands a swift kick to your gut, knocking the wind out of you![or]The Pink Gel squeezes you in a tight hug, making it hard for you to breath![at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthepinkgel]";				[ Text when monster loses.  Change 'template' as above. ]
-	now victory entry is "[losetopinkgel]";					[ Text when monster wins.  Change 'template' as above. ]
+	now defeated entry is "[beatthepinkgel]";				[ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetopinkgel]";					[ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[pinkgeldesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "a pretty human face with long [one of]partially fluid[or]flexible semi-solid[or]jellied[at random] hair hanging almost to your ass";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "surprisingly perfect, your muscles and curves nicely defined, your long eye-catching legs perfect for showing off, and your soft hands are just made for stroking and petting the opposite sex";	[ Body Description, format as the text "Your body is (your text)." ]
@@ -259,9 +259,9 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 15;
-	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 48;			[ The monster's starting HP. ]
-	now lev entry is 6;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 6;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 7;			[ Monster's average damage when attacking. ]
 	now area entry is "Red";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -274,7 +274,7 @@ When Play begins:
 	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 3;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "pink gel";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "pink gel";			[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -295,8 +295,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Blue Gel";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The Blue Gel slaps you with his footlong cock![or]The Blue Gel strikes you in the jaw with surprising force![or]The Blue Gel lands a swift kick to your gut, knocking the wind out of you![or]The Blue Gel crushes you in a tight hug, making it hard for you to breath![at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthebluegel]";				[ Text when monster loses.  Change 'template' as above. ]
-	now victory entry is "[losetobluegel]";					[ Text when monster wins.  Change 'template' as above. ]
+	now defeated entry is "[beatthebluegel]";				[ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetobluegel]";					[ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[bluegeldesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "a masculine human face with short [one of]partially fluid[or]flexibly semi-solid[or]jellied[at random] hair ";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a handsome and attractive human being, jiggly but strong";	[ Body Description, format as the text "Your body is (your text)." ]
@@ -314,9 +314,9 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 15;
-	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 48;			[ The monster's starting HP. ]
-	now lev entry is 6;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 6;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 9;			[ Monster's average damage when attacking. ]
 	now area entry is "Red";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -329,7 +329,7 @@ When Play begins:
 	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "blue gel";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "blue gel";			[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -350,8 +350,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Purple Gel";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The Purple Gel tries to suffocate you with her enormous boobs![or]The Purple Gel slaps you with her footlong cock![or]The Purple Gel strikes you in the jaw with surprising force![or]The Purple Gel lands a swift kick to your gut, knocking the wind out of you![or]The Purple Gel squeezes you in a tight hug, making it hard for you to breath![at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthepurplegel]";				[ Text when monster loses.  Change 'template' as above. ]
-	now victory entry is "[losetopurplegel]";					[ Text when monster wins.  Change 'template' as above. ]
+	now defeated entry is "[beatthepurplegel]";				[ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetopurplegel]";					[ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[purplegeldesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "a pretty human face with long [one of]partially fluid[or]flexibly semi-solid[or]jellied[at random] hair hanging almost to your ass";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "surprisingly perfect, your muscles and curves nicely defined, your long eye-catching legs perfect for showing off, and your soft hands are just made for stroking and petting the opposite sex";	[ Body Description, format as the text "Your body is (your text)." ]
@@ -369,9 +369,9 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 15;
-	now sex entry is "Both";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Both";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 48;			[ The monster's starting HP. ]
-	now lev entry is 6;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 6;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 8;			[ Monster's average damage when attacking. ]
 	now area entry is "Red";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -384,7 +384,7 @@ When Play begins:
 	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 3;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "purple gel";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "purple gel";			[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

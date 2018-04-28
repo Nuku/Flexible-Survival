@@ -28,7 +28,7 @@ to say losetolatexmistress:
 				now face of player is face entry;
 		else:
 			say "     Getting whipped for the delay, you groan and start lapping across her clit. You run your tongue up and down those quivering lips and delve into her dark tunnel. As you eat her out, you get struck several more times and ordered to go faster, slower or deeper, or to suck her clit, or any other thing she desires of you. And you obey, moaning softly as the pain and pleasure blur. Eventually, your obedient licking pays off, your mistress flogging you hard as she cries out in orgasmic bliss. When she pushes you away, you tumble onto the ground, too sore from the whipping to rise. She grinds her heel down onto your shoulder, calling you a good slave. You can't help but smile before passing out, having been complimented by your dark mistress.";
-	else if "Less Anal" is listed in feats of player:
+	else if anallevel is 1:
 		say "     Having beaten you, this latex mistress pushes you roughly over [one of]some rubble[or]the back of a car[or]over a fallen garbage can[or]over a nearby bench[at random] and whips you several more times. Through this, she often humps against you, grinding her latex-clad body and exposed pussy against you. Having been slapped and whipped across it repeatedly, the flow of her hot juices across your thigh is delightfully soothing. As the line between pleasure and pain begins to blur, she continues whipping you with sadistic glee. She ignores your cries and continues until you eventually pass out from the pain. When you wake up later, you feel sore all over from her harsh discipline and especially so across your back and backside.";
 		now HP of player is HP of player / 2;
 	else:
@@ -39,7 +39,7 @@ to say losetolatexmistress:
 to say beatthelatexmistress:
 	let ltxmscene be 0;
 	say "     Your final blow knocks the latex mistress to her knees and causes her to drop her dark whip. She moans softly as you grab onto her by the shoulder and ";
-	if libido of player < 25 or ( cocks of player is 0 and cunts of player is 0 ):
+	if libido of player < 25 or ( player is neuter ):
 		say "push her to the ground. With your foot pressed between this latex woman's shoulders, you growl at her to not mess with you in the future or you'll punish her more severely. You only let her rise once she moans that she's learned her lesson. When you release her, she grabs her latex whip, which was already starting to melt away, and runs off in search of easier prey to dominate.";
 	else:
 		say "consider your options. It might be fun to dominate the would-be dominatrix. Shall you ";

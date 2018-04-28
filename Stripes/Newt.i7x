@@ -31,7 +31,7 @@ to say sexwithNewt:
 	if HP of Newt < 4:
 		say "ERROR-Newt-[HP of Newt]T: You should not be here. Poof!";
 		remove Newt from play;
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     Lacking a gender, there's no fun to be had with Newt yet.";
 	else if lastfuck of Newt - turns < 6:
 		say "     As fun as I've had with you both, I could use a short break to recover.";

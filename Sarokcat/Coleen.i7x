@@ -383,7 +383,7 @@ Section 5 - Sex with Coleen
 the fuckscene of coleen is "[sexwithcoleen]".
 
 to say sexwithcoleen:
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     Now's not a good time to go looking for sex from Coleen, seeing how you're genderless at the moment.";
 	else if lastfuck of Coleen - turns < 4:
 		if ColeenAlpha > 0:

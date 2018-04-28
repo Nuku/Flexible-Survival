@@ -41,7 +41,7 @@ the fuckscene of Master Mind is "[sexwithmastermind]".
 to say sexwithmastermind:
 	if HP of Master Mind is 0:
 		say "     Shouldn't you be more focused on questioning the prisoner before thinking about doing something like that. [']Rather[']. You meant [']rather['] than doing something like that, didn't you?";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     At present, you have even less of a gender than you'd expect the android you're thinking of making out with should have. Perhaps it'd be best to resolve that before trying to play around with the prisoner.";
 	else if lastfuck of Master Mind - turns < 6:
 		say "     You should probably give it a rest for a little while. You don't want to get caught fooling around with the prisoner.";

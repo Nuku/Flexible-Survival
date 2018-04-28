@@ -101,7 +101,7 @@ instead of fucking Valerie:
 	if Riddlewin > 2:
 		if lastfuck of Valerie - turns < 6:
 			say "     'Mmm sorry hun, unlike some people I still need some recovery time,' she says with a sly wink. 'Why don't you come back later and we can play?'";
-		else if cocks of player is 0 and cunts of player is 0:
+		else if player is neuter:
 			say "     Lacking any gender of your own, you have little to offer the sphinx as a sexual partner right now.";
 		else if cocks of player > 0:
 			now lastfuck of Valerie is turns;

@@ -125,7 +125,7 @@ Rex is in Rex's Place.
 Karen is in Rex's Place.
 Treat Jar is in Rex's Place.
 
-The description of Treat Jar is "     Sitting on the table next to Rex's seat is a large glass jar full of bone-shaped cookies. You find your mouth watering and stomach growling as you stare at the doggy treats. Rex spots you eyeing them longingly and a canine smile crosses his muzzle, 'If you want a treat, you're going to have to beg like a good little sexpet,' he informs you.".
+The description of Treat Jar is "     Sitting on the table next to Rex's seat is a large glass jar full of bone-shaped cookies. You find your mouth watering and stomach growling as you stare at the doggy treats. Rex spots you eyeing them longingly and a canine smile crosses his muzzle. 'If you want a treat, you're going to have to beg like a good little sexpet,' he informs you.".
 the scent of Treat Jar is "Between the smell of canine sex pervading Rex's small house and the thick glass, you can't even catch a whiff of the scent from the jar full of doggy treats.".
 
 treatbegging is an action applying to nothing.
@@ -136,7 +136,7 @@ Understand "treat beg" as treatbegging.
 Understand "beg for treat" as treatbegging.
 
 Check Treatbegging:
-	If Treat jar is not visible, say "eh?" instead;
+	If Treat Jar is not visible, say "eh?" instead;
 
 Carry out Treatbegging:
 	say "     Unable to deny your hunger for the bone-shaped treats any longer, you quickly find yourself on all fours in front of Rex, whimpering and begging for one of the small cookies. He smiles intently as he pulls one of the treats from the jar, telling you to sit like a good doggy. As you sit patiently in front of him, Rex reaches out and places the treat on the end of your nose, the delicious scent of it making your mouth water even more. When Rex finally signals you to eat the treat, you drop it to the floor and pounce on it instantly, eating the entire thing in one bite. As you lick the final crumbs from your chops, you begin to think how much you'd like another, even as you realize how much of yourself you are losing to the happy retriever sexpet Rex is training you to be.";

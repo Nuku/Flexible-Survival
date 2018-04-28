@@ -37,7 +37,7 @@ to say losetogiant:
 				now battleground is "void";
 			else:
 				say "can only lay there in the mess he's made as his excess semen leaks out of you. 'Thanks for sharing your break with me. We should do this again sometime,' he adds, lumbering to his feet and spotting another critter to chase after.[fimpregchance]";
-		else if cunts of player is 0 and "Less Anal" is not listed in feats of player and a random chance of anallevel in 5 succeeds:
+		else if cunts of player is 0 and anallevel > 1 and a random chance of anallevel in 5 succeeds:
 			say "     Forced to move onto all fours, the bigger giant moves over you, getting his earth-shaking cock lined up with your (relatively) small ass. He smears some thick precum across it before he pushes a saliva-slick finger into your hole to get you prepared, squirming the big digit around inside you roughly. Despite the large size of your body, it is unquestionably a tight fit when he starts pushing his cock into you, but he makes a game effort of it. While somewhat uncomfortable at first, you soon start to moan and squirm beneath him as at first your anus and then your body starts to stretch to accommodate his massive girth. And while he's only able to get part of it in you, even that much feels wonderful inside you, making you moan and pant beneath him. And when he cums, he unleashes a veritable torrent of cum into your bowels, flooding your insides as your belly swells and bulges to accommodate it all.";
 			say "     Grinning, he pulls out of you with a wet plop, unleashing the flood gates and causing a massive flow of his seed to leak out of you and pool on the ground between your splayed legs. Your giant body does manage to keep a surprising amount of it inside as well. Too weak to get up, you ";
 			if a random chance of 1 in 3 succeeds and inasituation is false:
@@ -141,7 +141,7 @@ When Play begins:
 	now HP entry is 99; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 22; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall' Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 45; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 40; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]

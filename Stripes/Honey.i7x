@@ -418,7 +418,7 @@ the fuckscene of bee girl is "[sexwithHoney]".
 to say sexwithHoney:
 	if lastfuck of bee girl - turns < 4:
 		say "     You've had some fun with the bee girl quite recently. Perhaps you should give her a break for a little longer?";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "[beesexhoneypot]";
 		if HP of bee girl >= 5, infect "Queen Bee";
 		now lastfuck of bee girl is turns;

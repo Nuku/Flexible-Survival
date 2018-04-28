@@ -448,9 +448,9 @@ StevenFuckcount is a number that varies.
 to say Stevensuck:
 	say "     After stroking the equine man till he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out. Leaning further forward, you slip the tip into your mouth, gently sucking on it. Groaning, you feel Steven placing his hand on your head, pushing you further down on his shaft, the thick length filling up your mouth. You gulp around the length, stroking the base of it as you begin bobbing your mouth up and down.";
 	say "     Your mouth is too much for the poor equine man to take and you feel the head of his cock flare up as he climaxes, pumping his thick cum down your throat. You gulp down as much as you can, but much of it squirts out around his shaft. When he finally empties his balls you slip his length out of your mouth and take a long needed breath. Panting hard you lick your lips and get about cleaning yourself off, but not before you move up and give Steven a good long kiss. He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.";
-	if ( "Submissive" is listed in feats of player or ( "MPreg" is listed in feats of player and cunts of player is 0 ) ) and a random chance of 2 in 5 succeeds:
+	if ( player is submissive or ( player is mpreg_ok and cunts of player is 0 ) ) and a random chance of 2 in 5 succeeds:
 		say "     Steven smiles down at you and strokes your head. 'Mmm... I can tell what you're really after,' he nickers before moving around behind you. He pushes you forward onto all fours and runs his hands over your [bodydesc of player] body. 'You're really wanting the big stallion to mount you, aren't you?' he says. He runs his hand between your legs to tease your [if cunts of player > 0]pussy[else]pucker[end if] while grinding his cock against your backside, leaking the last few dribbles of his previous load onto your ass. 'How about I take you like a mare, huh?' he asks, rubbing a pair of fingers over into your needy hole. Your ";
-		if "Submissive" is listed in feats of player:
+		if player is submissive:
 			say "submissive urges, already fired up from sucking off the virile male, have ";
 		else:
 			say "breedable backside, already aching to be filled after having sucked off the virile male, has ";

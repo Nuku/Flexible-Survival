@@ -1606,7 +1606,7 @@ to say hospquestpt11:
 		if number of fasttravel rooms > ( number of known fasttravel rooms * 2 ):
 			say "     You fill Dr Mouse in on what you've been able to learn about the city and the safer paths to travel through it. 'Based on the information you've been able to provide me, you only have about [ ( number of known fasttravel rooms * 100 ) / ( number of fasttravel rooms )]% of the city covered. The associates I'm dealing with are requesting information on at least 50% of these locations.'";
 		else:
-			say "     You fill Dr Mouse in on what you've been able to learn about the city and the safer paths to travel through it. 'Based on the information you've been able to provide me, you have roughly [ ( number of known fasttravel rooms * 100 ) / ( number of fasttravel rooms )]% of the city covered. That should greatly assist those interested parties with their endeavours.'";
+			say "     You fill Dr Mouse in on what you've been able to learn about the city and the safer paths to travel through it. 'Based on the information you've been able to provide me, you have roughly [ ( number of known fasttravel rooms * 100 ) / ( number of fasttravel rooms )]% of the city covered. That should greatly assist those interested parties with their endeavors.'";
 			now tempnum is 100 + ( 4 * number of known fasttravel rooms);
 			increase freecred by tempnum;
 			increase score by (number of known fasttravel rooms) * 2;

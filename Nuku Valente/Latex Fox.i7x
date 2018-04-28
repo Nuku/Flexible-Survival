@@ -21,34 +21,33 @@ to say latexfoxdesc:
 	say "     You run into [one of]what appears to be a fox made entirely of latex[or]a latex fox[stopping]. Humanoid in build, its distinctly reddish and white, rubbery skin glistens in the [if daytimer is day]day[else]dim[end if] light. Loudly squeaking and creaking as the creature approaches, he appears very eager to see you, his blatant arousal exposed against the open air.";
 
 to say latexfoxvictory:
-	if toystoreoverride is false:
-		if HP of player > 0:
-			say "     Choosing to surrender to the monster, he immediately pounces";
+	if HP of player > 0:
+		say "     Choosing to surrender to the monster, he immediately pounces";
+	else:
+		say "     Too exhausted to fight any longer, the monster exploits this by suddenly pouncing";
+	say " your [if scalevalue of player < 3]smaller, [bodytype of player] form, easily pinning you to the ground[else if scalevalue of player > 3]larger, [bodytype of player] form, bringing you to your knees, though he cannot properly pin you down[else][bodytype of player] form, pinning you to the ground[end if]. Yipping victoriously, he nips at his[if HP of player > 0] compliant[end if] [if scalevalue of player < 4]little[else]'little'[end if] toy, rubbery maw squeaking loudly with each bite.";
+	if anallevel > 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 3 succeeds or (anallevel is 3 and a random chance of 1 in 2 succeeds)):
+		say "     The latex fox barely checks to see if there's anything obstructing his access before thrusting his tainted, precum-slicked dick between your cheeks, audibly squeaking as it's forced through your anal ring, causing you to squirm and writhe under his[if scalevalue of player > 3] diminutive[end if] weight.";
+		say "     Barely needing any time to get warmed up, the creature eagerly pounds your ass, air filled with the sound of his smooth form's creaking and squeaking, matched only by his incessant yipping. Unable to restrain yourself, your [if cocks of player > 0]own, unattended dick[smn] ache[smv] against the ground[else if cunts of player > 0]unattended cunt[sfn] ache[sfv] against the open air[else]genderless body aches with an insatiable need[end if].";
+		say "     The monster doesn't need long before his motion reaches a fever pitch[if scalevalue of player < 4], body visibly rocking against each motion[end if]. With one final thrust, he forces his thick knot through your hole, loudly yipping as your bowels are pumped full with the twisted fox's rubbery seed";
+		if libido of player > 20 and (cocks of player > 0 or cunts of player > 0):
+			say ". More than enough to set you off as well, you [if cocks of player > 0]waste your [cum load size of player] load impotently against the ground[else if cunts of player > 1]stain the ground with your neglected pussies' honey[else]stain the ground with your neglected pussy's honey[end if].";
 		else:
-			say "     Too exhausted to fight any longer, the monster exploits this by suddenly pouncing";
-		say " your [if scalevalue of player < 3]smaller, [bodytype of player] form, easily pinning you to the ground[else if scalevalue of player > 3]larger, [bodytype of player] form, bringing you to your knees, though he cannot properly pin you down[else][bodytype of player] form, pinning you to the ground[end if]. Yipping victoriously, he nips at his[if HP of player > 0] compliant[end if] [if scalevalue of player < 4]little[else]'little'[end if] toy, rubbery maw squeaking loudly with each bite.";
-		if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 3 succeeds or (anallevel is 3 and a random chance of 1 in 2 succeeds)):
-			say "     The latex fox barely checks to see if there's anything obstructing his access before thrusting his tainted, precum-slicked dick between your cheeks, audibly squeaking as it's forced through your anal ring, causing you to squirm and writhe under his[if scalevalue of player > 3] diminutive[end if] weight.";
-			say "     Barely needing any time to get warmed up, the creature eagerly pounds your ass, air filled with the sound of his smooth form's creaking and squeaking, matched only by his incessant yipping. Unable to restrain yourself, your [if cocks of player > 0]own, unattended dick[smn] ache[smv] against the ground[else if cunts of player > 0]unattended cunt[sfn] ache[sfv] against the open air[else]genderless body aches with an insatiable need[end if].";
-			say "     The monster doesn't need long before his motion reaches a fever pitch[if scalevalue of player < 4], body visibly rocking against each motion[end if]. With one final thrust, he forces his thick knot through your hole, loudly yipping as your bowels are pumped full with the twisted fox's rubbery seed";
-			if libido of player > 20 and (cocks of player > 0 or cunts of player > 0):
-				say ". More than enough to set you off as well, you [if cocks of player > 0]waste your [cum load size of player] load impotently against the ground[else if cunts of player > 1]stain the ground with your neglected pussies' honey[else]stain the ground with your neglected pussy's honey[end if].";
-			else:
-				say ". Writhing in a lust-fuelled haze, his bliss isn't enough to set you off as well, with the fox showing little interest in helping you.";
-			say "     Apparently satisfied, the monster pulls free of you and runs off, yipping happily. It takes you a while to recover from being used by the tainted creature and, eventually, you go about your business once more.[mimpregchance]";
-		else if cunts of player > 0 and a random chance of 1 in 2 succeeds:
-			say "     The latex fox barely checks to see if there's anything obstructing his access before thrusting his tainted, precum-slicked dick between your cheeks, audibly squeaking as it's forced through[if cunts of player > 1] one of[end if] your cunt[sfn], causing you to squirm and writhe under his[if scalevalue of player > 3] diminutive[end if] weight.";
-			say "     Barely needing any time to get warmed up, the creature eagerly pounds your hole, air filled with the sound of his smooth form's creaking and squeaking, matched only by his incessant yipping. Unable to restrain yourself, your [if cocks of player > 0]own, unattended dick[smn] ache[smv] against the ground[else]stuffed cunt squeezes against the supple and very yielding intrusion[end if].";
-			say "     The monster doesn't need long before his motion reaches a fever pitch[if scalevalue of player < 4], body visibly rocking against each motion[end if]. With one final thrust, he forces his thick knot through your supple folds, loudly yipping as your womb is pumped full with the twisted fox's rubbery seed. More than enough to set you off as well, you[if cocks of player > 0] waste your [cum load size of player] load impotently against the ground[else]r tied pussy oozes with its honey[end if].";
-			say "     Apparently satisfied, the monster pulls free of you and runs off, yipping happily. It takes you a while to recover from being used by the tainted creature and, eventually, you go about your business once more.[impregchance]";
-		else:
-			say "     Almost immediately, your face is assaulted by the latex fox's red, oozing dick. [if HP of player > 0 or player is submissive]Instinctively, you allow it to be[else]Not intent on obliging the monster, he nips and claws at you until you are, tool eventually[end if] forced between your lips, taste awash in the latex flavour of his tainted organ and its precum. The creature only seems to regard fucking your face as far as it being a hole for him to do so, caring little for what you have to offer in favour of thrusting against you in a blind fervour.";
-			say "     Tongue made to caress the rubbery cock, you feel its supple, yielding texture, his body loudly squeaking and creaking with each relentless motion. Body aching with a rising need, your [if cocks of player > 0]own, unattended dick[smn] ache[smv] against the ground[else if cunts of player > 0]unattended cunt[sfn] ache[sfv] against the open air[else]genderless body aches with an insatiable lust[end if].";
-			say "     It doesn't take long before the latex fox goes rigid, forcing his knot in and yipping loudly as his dick sputters its rubbery load down your throat, pinning his crotch firm against your lips and forcing you to swallow down the tainted fluid. After the flood dies down, the creature finally pulls free of you, a string of his latex seed following in its wake.";
-			say "     Apparently satisfied, the monster runs off and leaves you, yipping happily. It takes you a while to recover from being used and your lingering, unsated lust. Eventually, you go about your business once more.";
+			say ". Writhing in a lust-fuelled haze, his bliss isn't enough to set you off as well, with the fox showing little interest in helping you.";
+		say "     Apparently satisfied, the monster pulls free of you and runs off, yipping happily. It takes you a while to recover from being used by the tainted creature and, eventually, you go about your business once more.[mimpregchance]";
+	else if cunts of player > 0 and a random chance of 1 in 2 succeeds:
+		say "     The latex fox barely checks to see if there's anything obstructing his access before thrusting his tainted, precum-slicked dick between your cheeks, audibly squeaking as it's forced through[if cunts of player > 1] one of[end if] your cunt[sfn], causing you to squirm and writhe under his[if scalevalue of player > 3] diminutive[end if] weight.";
+		say "     Barely needing any time to get warmed up, the creature eagerly pounds your hole, air filled with the sound of his smooth form's creaking and squeaking, matched only by his incessant yipping. Unable to restrain yourself, your [if cocks of player > 0]own, unattended dick[smn] ache[smv] against the ground[else]stuffed cunt squeezes against the supple and very yielding intrusion[end if].";
+		say "     The monster doesn't need long before his motion reaches a fever pitch[if scalevalue of player < 4], body visibly rocking against each motion[end if]. With one final thrust, he forces his thick knot through your supple folds, loudly yipping as your womb is pumped full with the twisted fox's rubbery seed. More than enough to set you off as well, you[if cocks of player > 0] waste your [cum load size of player] load impotently against the ground[else]r tied pussy oozes with its honey[end if].";
+		say "     Apparently satisfied, the monster pulls free of you and runs off, yipping happily. It takes you a while to recover from being used by the tainted creature and, eventually, you go about your business once more.[impregchance]";
+	else:
+		say "     Almost immediately, your face is assaulted by the latex fox's red, oozing dick. [if HP of player > 0 or player is submissive]Instinctively, you allow it to be[else]Not intent on obliging the monster, he nips and claws at you until you are, tool eventually[end if] forced between your lips, taste awash in the latex flavour of his tainted organ and its precum. The creature only seems to regard fucking your face as far as it being a hole for him to do so, caring little for what you have to offer in favour of thrusting against you in a blind fervour.";
+		say "     Tongue made to caress the rubbery cock, you feel its supple, yielding texture, his body loudly squeaking and creaking with each relentless motion. Body aching with a rising need, your [if cocks of player > 0]own, unattended dick[smn] ache[smv] against the ground[else if cunts of player > 0]unattended cunt[sfn] ache[sfv] against the open air[else]genderless body aches with an insatiable lust[end if].";
+		say "     It doesn't take long before the latex fox goes rigid, forcing his knot in and yipping loudly as his dick sputters its rubbery load down your throat, pinning his crotch firm against your lips and forcing you to swallow down the tainted fluid. After the flood dies down, the creature finally pulls free of you, a string of his latex seed following in its wake.";
+		say "     Apparently satisfied, the monster runs off and leaves you, yipping happily. It takes you a while to recover from being used and your lingering, unsated lust. Eventually, you go about your business once more.";
 
 to say latexfoxdefeat:
-	if (libido of player > 30 or "Dominant" is listed in feats of player) and (cunts of player > 0 or (cocks of player > 0 and anallevel is not 1)):
+	if (libido of player > 30 or "Dominant" is listed in feats of player) and (cunts of player > 0 or (cocks of player > 0 and anallevel > 1)):
 		say "     Having subdued to the fox, perhaps you should use him to sate your need?";
 		if player consents:
 			latexfoxdefeatsex;
@@ -95,8 +94,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Latex Fox"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "The [one of]latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so[or]fox leaps on you, raking several bloody lines with its claws[or]fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth[at random].";
-	now defeated entry is "[latexfoxdefeat]";
-	now victory entry is "[latexfoxvictory]";
+	now defeated entry is "[if toystoreoverride is false][latexfoxdefeat][end if]";
+	now victory entry is "[if toystoreoverride is false][latexfoxvictory][end if]";
 	now desc entry is "[latexfoxdesc]";
 	now face entry is "a mixture of a vulpine and human, in a perpetual sneer of exposed teeth, making for an interesting combination"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous"; [ Body Description, format as the text "Your body is (your text)." ]
@@ -114,9 +113,9 @@ When Play begins:
 	now per entry is 10;
 	now int entry is 6;
 	now cha entry is 6;
-	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 15;
-	now lev entry is 1; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
 	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -129,7 +128,7 @@ When Play begins:
 	now cunt length entry is 8; [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6; [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 20; [ Target libido the infection will rise towards. ]
-	now loot entry is ""; [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]altered[or]animalistic[or]vulpine[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"  Use [one of] to vary ]
@@ -152,7 +151,7 @@ when play ends:
 				say ". In time, you find plenty to play with, getting lots of practice with your knotted dick as you tie with them and they become another yapping fox beneath you";
 			if cunts of player > 0:
 				say ". A strange pain paralyzes you a few days later and you squat. A small rubbery ball escapes your distended vulva, rapidly growing into another fox being. Driven mad with jealousy, you give the young thing a nip, and it flees off to find its own victims";
-			say ". You set up a den at an adult toy manufacturing plant.  The stores of latex are wonderfully tasty and you drink some down every day, making you extra [if cocks of player > 0]vir[else]fert[end if]ile, increasing the number of other latex foxes you are able to create.  The large collection of unshipped products are quite enjoyable as well, both as snacks and as playthings.  Despite being relatively weak, the surge in numbers help the latex foxes survive and spread.  And while you have little urge to leave your new den, you're quite certain many of your offspring have escaped to spread beyond the city and create dens of their own.";
+			say ". You set up a den at an adult toy manufacturing plant.  The stores of latex are wonderfully tasty and you drink some down every day, making you extra [if cocks of player > 0]virile[else]fertile[end if], increasing the number of other latex foxes you are able to create.  The large collection of unshipped products are quite enjoyable as well, both as snacks and as playthings.  Despite being relatively weak, the surge in numbers help the latex foxes survive and spread.  And while you have little urge to leave your new den, you're quite certain many of your offspring have escaped to spread beyond the city and create dens of their own.";
 		else:
 			say "     Your vulpine body draws little concern from the military, classified as a weak and inoffensive form. Despite it making your processing much simpler, this does rankle you a little for some reason.  After your release, you find work at a toy factory and save some money, eventually opening your own toy manufacturing business - an adult toy company.  Running it out of your basement at first, you design and create a variety of molds and toys for the needs of a new, altered customer base among the infected.  You get several other transformed individuals to act as models for some of your toys, which is a fun and enjoyable process for all concerned.  You also enjoy testing each and every design on yourself, often multiple times, to make sure that it meets your approval.  Your small business does well and grows quickly, soon hiring several other latex foxes to help your fledgling enterprise grow to meet the enormous demand for toys of all shapes, sizes and species.";
 

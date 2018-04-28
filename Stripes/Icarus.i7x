@@ -116,7 +116,7 @@ to say sexwithIcarus:
 		say "ERROR-Icarus-[HP of Icarus]F: You should not be able to find me!";
 	else if HP of Icarus is 1:
 		say "     How about you talk to him first before fucking the little songbird again?";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     Lacking any gender of your own, you feel there's little point in going to Icarus for sex.";
 	else if lastfuck of Icarus - turns < 6:
 		if HP of Icarus < 50:

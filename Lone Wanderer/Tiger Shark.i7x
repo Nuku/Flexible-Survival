@@ -143,7 +143,7 @@ to say Tiger Shark wins:
 				say "'You are pathetic! You walk around the beach and probably hope to find another one of these dragons, hunting for prey";
 			say ". I think you need to be taught a lesson, before I send you back.'";
 		say "     The brawler is now on top of you, stroking along your belly. You can't say that you were expecting this, but find yourself calming down a bit as he does nothing else but feel along you. He grins at you as he feels your tension leaving your body. His hands trace down from your chest towards your crotch. ";
-		if anallevel is not 1:
+		if anallevel > 1:
 			say "You meekly let out a protesting squeal as he pushes your legs apart and probes your asshole, spreading it with two fingers. ";
 			if tsw_fsd > 0:
 				say "Raising your long neck, you take a look at your partner to find ";

@@ -390,7 +390,7 @@ to say sexwithGobby:
 		say "DEBUG (Gobby) -> HP: [HP of Gobby], lastfuck: [lastfuck of Gobby] <- DEBUG[line break]";
 	if HP of Gobby is 0:
 		say "You should check up on the little guy first.";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "You'll need at least some genitals for the goblin to play with if you're going to lure him away from his mistress for some fun.";
 	else if lastfuck of Gobby - turns < 6:
 		say "Gobby seems a little preoccupied with his hyena mistress at the moment.";

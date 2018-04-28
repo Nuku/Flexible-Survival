@@ -2887,7 +2887,7 @@ to restorepart2:	[values 60 - 161]
 		if guy is not banned and girl is not banned and furry is not banned:
 			now Leather Wolves is unresolved;
 	if HP of Zigor >= 8:
-		if "Twisted Capacity" is not listed in feats of player, add "Twisted Capacity" to feats of player;
+		if player is not twistcapped, add "Twisted Capacity" to feats of player;
 [161: [thirst of Amy]]
 
 [ ---------------------------------------------------------- ]

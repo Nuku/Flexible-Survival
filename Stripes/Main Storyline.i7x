@@ -461,7 +461,7 @@ to monitor:
 		now heatname is infect name entry;
 		if "Sterile" is listed in feats of player:
 			say "Pregnancy Status: Sterile[line break]";
-		else if cunts of player is 0 and "MPreg" is not listed in feats of player:
+		else if cunts of player is 0 and player is not mpreg_ok:
 			now score is score;
 		else if player is impreg_now:
 			say "Pregnancy Status: Pregnant     ";

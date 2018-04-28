@@ -149,7 +149,7 @@ ramtraining is a number that varies.
 rambjvirg is a truth state that varies. rambjvirg is usually true.
 
 to ramtrainingshift:
-	if "Submissive" is listed in feats of player:
+	if player is submissive:
 		now ramtraining is 0;
 	else if ramtraining < 5:
 		increase ramtraining by 1;

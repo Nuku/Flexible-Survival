@@ -132,7 +132,7 @@ to say WYVVIC:
 		else:
 			say "     Tired of your impudence, the massive beast strikes you down one last time, bringing you to your knees before [ghe] pins you to the earth with [ghis] adhesive fluid, any further struggles ultimately proving wholly impotent";
 	if WYVGEN is 0: [male]
-		if "Touched by Madness" is listed in feats of player and "MPreg" is listed in feats of player and (a random chance of 1 in 3 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds) or (ublevel is 3 and a random chance of 1 in 4 succeeds)) and scalevalue of player < 4 and boundstate is false:
+		if "Touched by Madness" is listed in feats of player and player is mpreg_ok and (a random chance of 1 in 3 succeeds or (player is kinky and a random chance of 1 in 3 succeeds) or (ublevel is 3 and a random chance of 1 in 4 succeeds)) and scalevalue of player < 4 and boundstate is false:
 			say ". The monster circles around you for a moment, intent on asserting his dominance by screeching at you as he eyes you over, sizing you up with a rather peculiar expression.";
 			say "     Approaching you, his tongue briefly assesses your [bodytype of player] form, its slick, writhing affection bathing you in his heated breath and saliva. Afflicted with a twisted compulsion, he pulls away before he begins to make a loud, deliberate hacking sound, his maw quickly flooding with the strange fluid, scaled lips clenched only slightly to let it ooze down over you.";
 			say "     Thick, warm goo slowly beginning to envelope you, [if HP of player < 1 and player is not submissive]you're instinctively driven to try and pull yourself free with little success[else]compelling you to writhe and twist against its touch[end if], acrid substance soon clinging to your every inch before you feel it gradually harden, encasing you entirely. Your confines are quickly pulled upright and moved around, the wyvern apparently fussing over its shape before he relents. Muffled, bestial groans emitted from your captor, you're forced to watch through your translucent prison as the [if daytimer is day]daylight[else]night's lights[end if] becomes eclipsed by utter darkness, an overwhelming heat enveloping you before you black out.";
@@ -141,21 +141,21 @@ to say WYVVIC:
 			if a random chance of wyvorgyroll in 6 succeeds:
 				wyvorgy;
 				now wyvorgyroll is 1;
-				if "Kinky" is listed in feats of player, increase wyvorgyroll by 1;
+				if player is kinky, increase wyvorgyroll by 1;
 			else:
 				say "     You eventually come to, still encased in your all-too-familiar prison. Having regained your strength, it takes little effort to break free of these now-brittle confines, exposing you to the open air once more. Observing your surroundings, you can find your prior captor off in the distance, watching on as he confines a similar victim, egg-shaped capsule positioned between the beast's powerful thighs before slowly disappearing within the depths of his bestial hole.";
 				say "     [if HP of player < 1 and player is not submissive]You shudder to think of the poor fellow who must now share your fate before you quickly retreat, lest you find yourself at the beast's mercy once more[else]You're forced to ponder these implications, the infectious influence of this twisted 'matron' perhaps getting the better of you, before you decide to depart[end if].";
 				increase wyvorgyroll by 1;
 		else if scalevalue of player < 4 and vorelevel is not 1 and (A random chance of 2 in 3 succeeds or vorelevel is 3) and boundstate is false:
 			say "[wyvorescene]";
-			[say "     The beast approaches his new captive, thick tongue exposed by his gaping maw; hungry look in his eye, it's very clear what fate it has in store for you. Slick organ moving to caress your exposed body, [if HP of player < 1 and player is not submissive]you endeavour to free yourself once more of your primal bindings, to little avail[else]accepting your troubling circumstance, you're forced to gaze into the fleshy abyss before you, massive portal begging that you might abide it[end if]. Showered by his hot, acrid breath, his saliva appears to dissolve the peculiar material, but this liberation is a false one, as it's quickly traded with his scaled lips.";
+			[say "     The beast approaches his new captive, thick tongue exposed by his gaping maw; hungry look in his eye, it's very clear what fate it has in store for you. Slick organ moving to caress your exposed body, [if HP of player < 1 and player is not submissive]you endeavor to free yourself once more of your primal bindings, to little avail[else]accepting your troubling circumstance, you're forced to gaze into the fleshy abyss before you, massive portal begging that you might abide it[end if]. Showered by his hot, acrid breath, his saliva appears to dissolve the peculiar material, but this liberation is a false one, as it's quickly traded with his scaled lips.";
 			say "     Light slitted through his only slightly agape mouth, it's closure prevented by your lower, engulfed half, he offers you the smallest mercy by not subjecting you to his savage teeth, for what good it might merit. You must contend with the embrace of these slick walls; such fleshy confines eager to accept your imposed occupancy, he merely raises his head, letting gravity set your destination, until only slick heat and darkness remains.";
 			say "     Descent hastened by this slippery prison, you are eventually pushed into the belly of this beast. [if HP of player < 1 and player is not submissive]Desperate struggles lost in the wake of your fading consciousness[else]As your vision begins to fade[end if], you can feel yourself tussled about, the wyvern no doubt taking flight again, satisfied with its [if scalevalue of player is 3]meal[else]snack[end if].";
 			if waiterhater is 0, wait for any key;
 			say "     Eventually you come to, finding yourself back outside, in the city, covered in a mess of saliva and goop. Though your captor's intent might have been more infectious, you can't help but feel considerably drained by the encounter. You eventually clean yourself off and find where you are exactly before returning from whence you came.";
 			increase hunger of player by 7;
 			increase thirst of player by 5;]
-		else if cunt length of player > 15 and ((anallevel is not 3 and a random chance of 1 in 2 succeeds) or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
+		else if cunt length of player > 15 and ((anallevel < 3 and a random chance of 1 in 2 succeeds) or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
 			if boundstate is false:
 				say ". The monster circles around you for a moment, intent on asserting his dominance by screeching at you as he eyes you over.";
 			say "     [if scalevalue of player is 5]Climbing on top of[else]Moving over[end if] you, you're exposed to the wyvern's chitinous underside, scaled crotch -- once devoid of any significant feature -- parting as the beast's massive dick spills out from it. Intent on mounting you as you're pinned, the monster barely checks to see if his entry point is free of any obstruction, blunt cockhead testing [if cunts of player > 1]one of your vulnerable cunts[else]your vulnerable cunt[end if].";
@@ -181,7 +181,7 @@ to say WYVVIC:
 				if wyvkinocc > 0, increase wyvkin4lib by 5;
 			else:
 				say "     Suddenly, and with barely any restraint, the massive reptile wrenches its dick from of you, a flood of seed oozing from your gaping hole in its wake, before billowing you with a gust of wind as it takes to the air again, abandoning your still-bound form and only appearing marginally satisfied. The whole ordeal probably scared off any locals, because you're given a fair amount of time to recover and slowly pull the goop free of you, getting back up and slowly limping off.[impregchance][line break]";
-		else if anallevel is not 1 and (scalevalue of player > 3 or (scalevalue of player is 3 and player is twistcapped)) and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
+		else if anallevel > 1 and (scalevalue of player > 3 or (scalevalue of player is 3 and player is twistcapped)) and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
 			if boundstate is false:
 				say ". The monster circles around you for a moment, intent on asserting his dominance by screeching at you as he eyes you over.";
 			say "     [if scalevalue of player is 5]Climbing on top of[else]Moving over[end if] you, you're exposed to the wyvern's chitinous underside, scaled crotch -- once devoid of any significant feature -- parting as the beast's massive dick spills out from you. Intent on mounting you as you're pinned, the monster barely checks to see if his entry point is free of any obstruction, blunt cockhead testing your vulnerable ass.";
@@ -224,10 +224,10 @@ to say WYVVIC:
 			else:
 				say "     With little ceremony or care, you watch as the beast's dick retreats back from whence it hid before he pulls away, taking to the sky once more. It takes you several moments to figure out up from down after the whole ordeal before you start pulling yourself free of your primitive bondage. Once free, it takes quite a while to clean yourself off and just as long to not feel completely sore all over.";
 	else: [female]
-		if "Touched by Madness" is listed in feats of player and ((scalevalue of player is 3 and "Twisted Capacity" is listed in feats of player) or scalevalue of player > 3) and (("Kinky" is listed in feats of player and a random chance of 1 in 2 succeeds) or ("Kinky" is not listed in feats of player and a random chance of 1 in 4 succeeds)) and boundstate is false:
+		if "Touched by Madness" is listed in feats of player and ((scalevalue of player is 3 and player is twistcapped) or scalevalue of player > 3) and ((player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 4 succeeds)) and boundstate is false:
 			say ". The monster circles around your for a moment, intent on asserting her dominance by screeching at you as she eyes you over, sizing you up with a rather peculiar expression...";
-			say "     Her eventual approach reveals she is already heavy with eggs, making you wonder [if scalevalue of player is 3]how she'd exactly intends to fit you in there[else]why she'd bother dealing with you in the first place[end if]. [if scalevalue of player is 3]Moving over[else]Climbing on top of[end if] you, Bestial vent poised against [if cunts of player > 1 and cunt length of player > 14 and anallevel is not 3]one of your exposed cunts[else if cunts of player > 0 and cunt length of player > 14 and anallevel is not 3]your exposed cunt[else]anal ring[end if], her pained low grunts elucidate on her twisted intent.";
-			if cunts of player > 0 and cunt length of player > 14 and "More Anal" is not listed in feats of player:
+			say "     Her eventual approach reveals she is already heavy with eggs, making you wonder [if scalevalue of player is 3]how she'd exactly intends to fit you in there[else]why she'd bother dealing with you in the first place[end if]. [if scalevalue of player is 3]Moving over[else]Climbing on top of[end if] you, Bestial vent poised against [if cunts of player > 1 and cunt length of player > 14 and anallevel < 3]one of your exposed cunts[else if cunts of player > 0 and cunt length of player > 14 and anallevel < 3]your exposed cunt[else]anal ring[end if], her pained low grunts elucidate on her twisted intent.";
+			if cunts of player > 0 and cunt length of player > 14 and anallevel < 3:
 				say "     Hardened surface of her emergent shell pushing against the [cunt size desc of player] hole, you find yourself quickly strained to abide to rapidly growing intrusion as it's slowly plunged into your depths. Scaled, rough frame trembling against yours, the wyvern is very intent on forcing you to abide every rough bump and imperfection of the makeshift prison she would have you carry.";
 				if scalevalue of player is 5 and cunt length of player > 20:
 					say "     You could wager that the worst is over, tapered conclusion of the egg inviting your stuffed portal to pull the remainder in your depths. However, it's soon made clear that the beast isn't done with you yet, and you quickly find yourself contending with a second, no doubt intent on exploiting your higher capacity. This second assault is certainly easier for you to engulf, but that is little reassurance to the fact that you are now encumbered with two of the massive things, their oppressive occupancy visibly bloating you.";
@@ -235,23 +235,23 @@ to say WYVVIC:
 					say "     Thankfully, you can be safe in assuming that the worst is over, tapered conclusion of the egg inviting your stuffed portal to pull the remainder in your depths. The beast isn't quite satisfied yet, and thrusts her tail upon your stuffed hole, pushing your occupant until it penetrates your cervix, insinuating that you are her egg's twisted mother. [if scalevalue of player is 3]By this point you're practically immobile with the thing, substantially [else]You struggle to retain clarity as you contend with your now-bulging frame,[end if] bloated by this occupant.";
 			else:
 				say "     Hardened surface of her emergent shell pushing against your tailpipe, you find yourself quickly strained to abide to rapidly growing intrusion as it's slowly plunged into your depths. Scaled, rough frame trembling against yours, the wyvern is very intent on forcing you to abide every rough bump and imperfection of the makeshift prison she would have you carry.";
-				if scalevalue of player is 5 and "Twisted Capacity" is listed in feats of player:
+				if scalevalue of player is 5 and player is twistcapped:
 					say "     You could wager that the worst is over, tapered conclusion of the egg inviting your stuffed hole to pull the remainder into your bowels. However, it's soon made clear that the beast isn't done with you yet, and you quickly find yourself contending with a second, no doubt intent on exploiting your higher capacity. This second assault is certainly easier for you to engulf, but that is little reassurance to the fact that you are now encumbered with two of the massive things, their oppressive occupancy visibly bloating you.";
 				else:
 					say "     Thankfully, you can be safe in assuming that the worst is over, tapered conclusion of the egg inviting your stuffed hole to pull the remainder into your bowels. The beast isn't quite satisfied yet, and thrusts her tail upon your stuffed ring, pushing the object further down your labyrinth, intent on making its removal even more difficult for you. [if scalevalue of player is 3]By this point you're practically immobile with the thing, substantially [else]You struggle to retain clarity as you contend with your now-bulging frame,[end if] bloated by this occupant.";
 			say "     Wholly satisfied with what she has wrought, she pulls off of you, departing into the air once more. Freeing yourself of your bindings is one matter, the tainted burden you bear is another. Squatted down in the open area, to at odds with your circumstance to find embarrassment for them, you do manage to";
-			if cunts of player > 0 and cunt length of player > 14 and "More Anal" is not listed in feats of player:
+			if cunts of player > 0 and cunt length of player > 14 and anallevel < 3:
 				if scalevalue of player is 5 and cunt length of player > 20:
 					say "lay both of the eggs after some";
 				else:
 					say "lay the egg after [if scalevalue of player is 3]a substantial amount of[else]some[end if]";
 			else:
-				if scalevalue of player is 5 and "Twisted Capacity" is listed in feats of player:
+				if scalevalue of player is 5 and player is twistcapped:
 					say "'lay' both of the eggs after some";
 				else:
 					say "'lay' the egg after [if scalevalue of player is 3]a substantial amount of[else]some[end if]";
-			say "effort, [if scalevalue of player is 3]brutally[else]very[end if] sore after the whole endeavour. Looking at them now, they appear to be stirring, no doubt roused by this particular ritual, and you set yourself to hobble off before you must contend with them as well, no doubt quite aroused by the whole venture[if HP of player < 1 and player is not submissive], much in spite your better judgment[end if].";
-		if vorelevel is 3 and (a random chance of 1 in 4 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds)) and boundstate is false:
+			say "effort, [if scalevalue of player is 3]brutally[else]very[end if] sore after the whole endeavor. Looking at them now, they appear to be stirring, no doubt roused by this particular ritual, and you set yourself to hobble off before you must contend with them as well, no doubt quite aroused by the whole venture[if HP of player < 1 and player is not submissive], much in spite your better judgment[end if].";
+		if vorelevel is 3 and (a random chance of 1 in 4 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)) and boundstate is false:
 			say "[wyvorescene]";
 		else if scalevalue of player < 4 and ublevel is not 1 and (A random chance of 2 in 3 succeeds or ublevel is 3) and boundstate is false:
 			say ". The monster circles around you for a moment, intent on asserting her dominance by screeching at you as she eyes you over.";
@@ -262,7 +262,7 @@ to say WYVVIC:
 			if a random chance of wyvorgyroll in 6 succeeds:
 				wyvorgy;
 				now wyvorgyroll is 1;
-				if "Kinky" is listed in feats of player, increase wyvorgyroll by 1;
+				if player is kinky, increase wyvorgyroll by 1;
 			else:
 				say "     You eventually come to, still encased in your all-too-familiar prison. Having regained your strength, it takes little effort to break free of these now-brittle confines, exposing you to the open air once more. Observing your surroundings, you can find your prior captor off in the distance, watching on as she confines a similar victim, egg-shaped capsule positioned between the beast's powerful thighs before slowly disappearing within the depths of her bestial vent.";
 				say "     [if HP of player < 1 and player is not submissive]You shudder to think of the poor fellow who must now share your fate before you quickly retreat, lest you find yourself at the beast's mercy once more[else]You're forced to ponder these implications, the infectious influence of this twisted matron perhaps getting the better of you, before you decide to depart[end if].";
@@ -518,7 +518,7 @@ to say wyvgen_3: [Oral Receiving Cunt]
 	say "     Satisfied, you leave the wyvern, who you can clear see is lost in the throes of [ghis] own lust, having made a rather embarrassing, sticky mess of the ground [ghe]'s relegated [ghim]self to grinding against.";
 
 to say wyvmale_1: [Cunt Catching]
-	say "     [if scalevalue of player < 5]Perhaps the hardest part of this task is to roll the wyvern onto his back, the exhausted beast eventually complying with your endeavour[else]It takes a little work, but you manage to roll the wyvern onto his back, the exhausted beast offering little in the way of any protest[end if]. Chitinous undercarriage exposed before you, your curious hands fondle his otherwise unmarked crotch until the affection is enough to bring him to attention, scales parting to gradually expose his massive, draconic dick before you. Shall you engage in a bit of foreplay? Otherwise, you'll skip straight to the fun part.";
+	say "     [if scalevalue of player < 5]Perhaps the hardest part of this task is to roll the wyvern onto his back, the exhausted beast eventually complying with your endeavor[else]It takes a little work, but you manage to roll the wyvern onto his back, the exhausted beast offering little in the way of any protest[end if]. Chitinous undercarriage exposed before you, your curious hands fondle his otherwise unmarked crotch until the affection is enough to bring him to attention, scales parting to gradually expose his massive, draconic dick before you. Shall you engage in a bit of foreplay? Otherwise, you'll skip straight to the fun part.";
 	if player consents:
 		say "     [if scalevalue of player < 4]Difficult for you to grip[else]Firmly gripping[end if] around the girth of the wyvern's hardening dick, your kneading attendance invites the monster to growl lowly, overtaken by his wanton need, precum oozing from the tip of its blunt head. Compelled to taste his emergent sexual fluids, your head lowers, tongue teasing along his leaking cockhead, taste awash in his heady, masculine aura.";
 		say "     You continue this ritual for a fair length of time, bestial tool[if scalevalue of player > 3] quickly[end if] slick with a mix of sexual fluids and saliva, before you feel you should get to the task at hand.";
@@ -541,7 +541,7 @@ to say wyvmale_1: [Cunt Catching]
 	say "     Taking a moment to catch your breath, you eventually pull yourself free of the wyvern and his tool, its audible departure from your ass loudly echoing through the air. You set him off with a smack, though his lingering exhaustion makes him slow to comply. Satisfied, you go on your merry way... Though now perhaps a little sore from the whole affair[if tempnum is 1], to say nothing of being a cum-drenched mess[end if].";
 
 to say wyvmale_2: [Anal Catching]
-	say "     [if scalevalue of player < 5]Perhaps the hardest part of this task is to roll the wyvern onto his back, the exhausted beast eventually complying with your endeavour[else]It takes a little work, but you manage to roll the wyvern onto his back, the exhausted beast offering little in the way of any protest[end if]. Chitinous undercarriage exposed before you, your curious hands fondle his otherwise unmarked crotch until the affection is enough to bring him to attention, scales parting to gradually expose his massive, draconic dick before you. Shall you engage in a bit of foreplay? Otherwise, you'll skip straight to the fun part.";
+	say "     [if scalevalue of player < 5]Perhaps the hardest part of this task is to roll the wyvern onto his back, the exhausted beast eventually complying with your endeavor[else]It takes a little work, but you manage to roll the wyvern onto his back, the exhausted beast offering little in the way of any protest[end if]. Chitinous undercarriage exposed before you, your curious hands fondle his otherwise unmarked crotch until the affection is enough to bring him to attention, scales parting to gradually expose his massive, draconic dick before you. Shall you engage in a bit of foreplay? Otherwise, you'll skip straight to the fun part.";
 	if player consents:
 		say "     [if scalevalue of player < 4]Difficult for you to grip[else]Firmly gripping[end if] around the girth of the wyvern's hardening dick, your kneading attendance invites the monster to growl lowly, overtaken by his wanton need, precum oozing from the tip of its blunt head. Compelled to taste his emergent sexual fluids, your head lowers, tongue teasing along his leaking cockhead, taste awash in his heady, masculine aura.";
 		say "     You continue this ritual for a fair length of time, bestial tool[if scalevalue of player > 3] quickly[end if] slick with a mix of sexual fluids and saliva, before you feel you should get to the task at hand.";
@@ -783,7 +783,7 @@ to wyvore:
 						wyvhumanityroll;
 						wait for any key;
 					else:
-						say "     Fighting with the wyvern's endeavour for what seems like forever, [ghe] just gets fed up with your protests, throat's muscles -- once pulling you further in -- now push you back out, the wyvern hacking you out until you fall onto the ground, landing in a puddle of [ghis] saliva. Screeching down at you, you still manage to get to your feet and dive over to someplace where you can hide.";
+						say "     Fighting with the wyvern's endeavor for what seems like forever, [ghe] just gets fed up with your protests, throat's muscles -- once pulling you further in -- now push you back out, the wyvern hacking you out until you fall onto the ground, landing in a puddle of [ghis] saliva. Screeching down at you, you still manage to get to your feet and dive over to someplace where you can hide.";
 						say "     [if WYVGEN is 1]She[else]He[end if] only pursues you briefly, trying to retrieve you once more, but [ghe]'s clearly frustrated enough with you that [ghe] eventually just gives up, turning off and taking flight once more to find easier prey. Catching your breath for a moment, you eventually, cautiously step out from hiding, going back to your own business once it's clear you're in no immediate danger.";
 						cleanboundmemory;
 						now pewtergenitalcap is 0;
@@ -1113,7 +1113,7 @@ to wyvorgy:
 				say "[line break]";
 				increase struggleatt by 1;
 				if struggleatt < 4:
-					say "     You struggle to free yourself of the wyvern kin atop you, [if struggleatt is 1]getting pretty much nowhere with the endeavour[else if struggleatt is 2]getting slight leverage, though not enough to free yourself just yet,[else]almost completely free of their hold[end if] and causing the wyverns to screech and nip at you, not quite intent on letting you go.";
+					say "     You struggle to free yourself of the wyvern kin atop you, [if struggleatt is 1]getting pretty much nowhere with the endeavor[else if struggleatt is 2]getting slight leverage, though not enough to free yourself just yet,[else]almost completely free of their hold[end if] and causing the wyverns to screech and nip at you, not quite intent on letting you go.";
 					now tempnum is 0;
 					wyverndisengage;
 					wyvernmatron;
@@ -1855,7 +1855,7 @@ when play ends:
 			else if boundstate is true:
 				say "     Mind completely lost in a haze of lust, you succumb to your fate in the wyvern's nest. You never quite grow to the same scale as your captor-turned-parent, and your time in this nest has driven you to remain within, forever the beast's tainted offspring.";
 				say "     Not being particularly bright, the wyvern [ghim]self doesn't notice that you remain when your kin eventually fly off on their own and are replaced, eager to feed and play with you whenever free. Your siblings, as they come and go, also have plenty of time to play with their eager ";
-				if "Submissive" is listed in feats of player:
+				if player is submissive:
 					say "little fucktoy...";
 				else:
 					say "companion...";
@@ -1880,11 +1880,10 @@ when play ends:
 						say ", your life is soon filled with the sounds and sensations of constant breeding, offering up countless eggs in the wake of your new mate's wanton need.";
 					else:
 						say ", it never crosses the beast's thick skull that--as a [if cocks of player > 0]male[else]neuter[end if]--you might be completely incapable of offering him offspring; he fucks you all the same";
-						if "MPreg" is listed in feats of player:
-							say ", and when you do eventually offer him offspring this comes at no surprise to him.";
-						else:
-							say ".";
-					if "Submissive" is listed in feats of player:
+						if player is mpreg_ok:
+							say ", and when you do eventually offer him offspring this comes at no surprise to him";
+						say ".";
+					if player is submissive:
 						say "     So inclined to be this beast's little cum dumpster, you find that this behavior is inevitably rewarded when you quickly find that you are subject to a great number of additional mates, all eager to fill your hole. By your feral reasoning, you only find great joy in being used so frequently.";
 				else if WYVSF is 3:
 					say ". You happen upon a female wyvern, no doubt requiring a moment to understand your pleas to be her mate. More than eager to oblige";

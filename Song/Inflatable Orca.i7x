@@ -293,7 +293,7 @@ to orcabindorgasm: [Orgasm description. Progresses to next bound segment.]
 		else if cocks of player > 0:
 			say "You fill the orca's depths with gout after gout of thick, sticky seed, only to tense all over again and stuff that rippling cetacean snatch with a double-dose of cum. Any form of refractory period withers away, and your happy, bestial trills fill the orca's maw. Pushing down against you, she milks you again and again, cementing your new lease in life as her favorite toy and plaything.";
 		else:
-			say "You eventually sag down beneath the orca, breathing weakly of the gas she continuously feeds you[if cunts of player > 0] while grinding her tailfin across your aching cunt[end if][if cunts of player > 1]s[end if]. The heat, scent, and taste of the cetacean's sex becoming your whole world, your mind empties of all but pleasing this attractive orca, wanting nothing more than to indulge her every wanton whim";
+			say "You eventually sag down beneath the orca, breathing weakly of the gas she continuously feeds you[if cunts of player > 0] while grinding her tailfin across your aching cunt[sfn][end if]. The heat, scent, and taste of the cetacean's sex becoming your whole world, your mind empties of all but pleasing this attractive orca, wanting nothing more than to indulge her every wanton whim";
 
 to orcaprogress: [Displays once when entering the next bound segment. 1 does not need to be checked since the bind starts at that value.]
 	if orcaintense is 2:
@@ -395,7 +395,7 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Inflatable Orca";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The playful cetacean bumps you every which way, making you stumble on the unsteady footing of the padded floor[or]The orca knocks you off your feet with a mighty swing of its tail[or]Trilling playfully, the orca rears up and rubs its synthetic body against your side, making you stumble[or]The large inflatable jumps at you and attempts to pin you down. You quickly weasel out from under it before it can do much else[or]The giant orca slams the ground with it tail, bouncing you up into the air before landing harmlessly on the padded floor again[or]The cetacean makes a point of rubbing against you suggestively. You strumble in your efforts to push it away[at random].";
-	now defeated entry is "[beattheinflatableorca]";				[ Text when monster loses.  Change 'template' as above. ]
+	now defeated entry is "[beattheinflatableorca]";				[ Text when monster loses. Change 'template' as above. ]
 	now victory entry is "[losetoinflatableorca]"; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "     You find yourself at odds with the large, inflatable orca. The two-tone cetacean regards you as little more than a toy for its amusement, trilling playfully as it bounces around with seemingly boundless energy."; [ Description of the creature when you encounter it. ]
 	now face entry is "impossible"; [ Face Description, format as the text "Your face is (your text)." ]

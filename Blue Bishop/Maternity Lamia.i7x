@@ -136,7 +136,7 @@ to say mlamiavsex03:
 to say mlamiavsex04:
 	say "     Feeling thirsty after the fight, you feel she should be the one the slake your thirst.  You stride over to the serpent woman as she slithers away and grab her breasts from behind.  She releases a moan in surprise, but doesn't resist the groping beyond her initial surprise.  '[one of]Oh, so now you want them.  Make up your mind[or]Such a naughty [if cocks of player > 0]boy[else if cunts of player > 0]girl[else]thing[end if][or]If you just wanted a drink, you should have just said so[or]Alright then, if you insist[or]Don't!  That's for the babies... Well, I guess there's enough to go around[at random],' she says teasingly as you press her back to a wall.";
 	say "     You start by groping and fondling her many tits, getting the white-skinned lamia good and worked up.  She's so full with milk that it dribbles from her perky nipples constantly and squirts out when you squeeze them.  She hisses and moans happily as you play with her heavy breasts, her satisfied sounds growing stronger when you wrap your lips around one of those big nipples and start suckling.  Her rich cream is warm and flavourful, making you want more.  At first, you swap from nipple to nipple the moment the flow from one starts to wane, but eventually the soothing caresses and her lovely milk help relax you.  In the end, you settle down to nursing from one fat nipple.";
-	say "     Feeling you settling down, the wet nurse moves to slide her coils around you.  But rather than let her ensnare you, you push your arms down to her scaled lower body.  Finding a trio of juicy cunts waiting there, you stuff your fingers into a pair of them to keep her from coiling around you.  Thus remaining in charge of the situation, you finger-fuck the maternal lamia to a moaning, hissing orgasm that brings an added surge to her milk flow while she's in the throws of her release.  Your sexy drink finished, you wipe your lips and end up sucking her femme cum from your fingers as you leave her to slither off back to her duties.  You feel the infectious milk in your belly spread its warmth through you.";
+	say "     Feeling you settling down, the wet nurse moves to slide her coils around you.  But rather than let her ensnare you, you push your arms down to her scaled lower body.  Finding a trio of juicy cunts waiting there, you stuff your fingers into a pair of them to keep her from coiling around you.  Thus remaining in charge of the situation, you finger-fuck the maternal lamia to a moaning, hissing orgasm that brings an added surge to her milk flow while she's in the throes of her release.  Your sexy drink finished, you wipe your lips and end up sucking her femme cum from your fingers as you leave her to slither off back to her duties.  You feel the infectious milk in your belly spread its warmth through you.";
 	PlayerDrink 12;
 	PlayerEat 3;
 	decrease humanity of player by 5;
@@ -156,8 +156,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Lamia";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The lamia[or]The altered nurse[or]The creature[or]She[at random] [one of]tries to wrap around you[if scalevalue of player > 4]r larger form[end if] and pin you into the submission, forcing you to struggle free and put some distance between you and her[or]lashes you firmly with the tail end of her serpentine body[or]attempts to grip at and overpower you, forcing you to pry yourself free of her hold[at random].";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthelamia]";				[ Text when monster loses.  Change 'template' as above. ]
-	now victory entry is "[losetolamia]";					[ Text when monster wins.  Change 'template' as above. ]
+	now defeated entry is "[beatthelamia]";				[ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetolamia]";					[ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[lamiadesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "rather attractive and human-looking, though sporting reptilian eyes and a snake's tongue";        [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "a slender human's down to the waist, with the lower half being that of a snake's, long and scaly";    [ Body Description, format as the text "Your body is (your text)." ]
@@ -175,9 +175,9 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 13;
 	now cha entry is 16;
-	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 85;			[ The monster's starting HP. ]
-	now lev entry is 12;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 12;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 11;			[ Monster's average damage when attacking. ]
 	now area entry is "Hospital";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -190,7 +190,7 @@ When Play begins:
 	now cunt length entry is 16;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 12;		[ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 40;			[ Target libido the infection will rise towards. ]
-	now loot entry is "fertile pill";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "fertile pill";			[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 30;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -332,7 +332,7 @@ when play ends:
 			say "     Eventually taken in by the military and processed, you're brought through with relatively little difficult, in spite of your rather strange state.";
 			say "     Finding a job as an infected that doesn't involve the sex trade is particularly difficult, especially when you're a giant snake-person.  Your strain compels you to work in a maternity ward, but social stigmas mean you'd never be hired for an uninfected ward, and the infected don't produced offspring in such a way that there's ever any need for one.";
 			say "     You eventually concede to a more scandalous job of merely 'playing' one for particularly deviant suitors, infected or otherwise";
-			if "Horny Bastard" is listed in feats of player or "Kinky" is listed in feats of player:
+			if "Horny Bastard" is listed in feats of player or player is kinky:
 				say ".  It pays well, and you find yourself rather fond of these twisted games...";
 			else:
 				say ".  As well as it pays, you feel the whole thing to be somewhat beneath your dignity...";

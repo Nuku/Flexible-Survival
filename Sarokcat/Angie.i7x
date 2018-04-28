@@ -128,7 +128,7 @@ feline porn is a grab object. It is part of the player. It is not temporary.
 the scent of the feline porn is "The bundle of pornographic texts and photos have a lingering scent of sex to them.".
 
 instead of using feline porn:
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     Lacking any real gender of your own, you find the photos and stories rather unsatisfying and put them away.";
 	else if libido of player < 25:
 		say "     You're not that turned on and really should focus on more important things right now.";
@@ -429,7 +429,7 @@ Instead of fucking the Angie:
 		say "[AngiePTFun]";
 	else if bodyname of player is "Rubber tigress" and player is pure and AngieAroused is 50:
 		say "[AngieRTFun]";
-	else if cunts of player is 0 and cocks of player is 0:
+	else if player is neuter:
 		say "     Seems like you're currently not quite equipped to have sex with anyone. Maybe try this again when you've got a cock or pussy...";
 	else:
 		say "[AngieSexMenu]";

@@ -1575,7 +1575,7 @@ To reciting2:
 						if guy is not banned and girl is not banned and furry is not banned:
 							now Leather Wolves is unresolved;
 					if HP of Zigor >= 8:
-						if "Twisted Capacity" is not listed in feats of player, add "Twisted Capacity" to feats of player;
+						if player is not twistcapped, add "Twisted Capacity" to feats of player;
 			-- 161: [thirst of Amy]
 				if the player's command matches "[number]":
 					now thirst of Amy is the number understood;
@@ -3665,7 +3665,7 @@ Carry out reciting:
 						if guy is not banned and girl is not banned and furry is not banned:
 							now Leather Wolves is unresolved;
 					if HP of Zigor >= 8:
-						if "Twisted Capacity" is not listed in feats of player, add "Twisted Capacity" to feats of player;
+						if player is not twistcapped, add "Twisted Capacity" to feats of player;
 			-- 161: [thirst of Amy]
 				if the player's command matches "[number]":
 					now thirst of Amy is the number understood;

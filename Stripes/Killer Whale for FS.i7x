@@ -30,7 +30,7 @@ to say losetoorca:
 	else:
 		say "     You look reluctant to comply with such an order, and--perceiving this immediately--the orcaman grabs you by your head, carefully prying your [bodytype of player] maw loose so that he may so occupy this new void with his emergent cock, forcing you to taste his writhing, thick meat.";
 	if cunts of player > 0:
-		if "More Anal" is listed in feats of player and a random chance of 1 in 5 succeeds:
+		if anallevel is 3 and a random chance of 1 in 5 succeeds:
 			say "[orcadefeatsex1]";
 		else if a random chance of 3 in 5 succeeds:
 			say "[orcadefeatsex2]";
@@ -39,7 +39,7 @@ to say losetoorca:
 		else:
 			say "[orcadefeatsex4]";
 	else:
-		if "Less Anal" is not listed in feats of player and a random chance of 1 in 3 succeeds:
+		if anallevel > 1 and a random chance of 1 in 3 succeeds:
 			say "[orcadefeatsex1]";
 		else:
 			say "[orcadefeatsex4]";
@@ -78,7 +78,7 @@ to say orcadefeatsex4:		[oral sex]
 
 to say beattheorca:
 	if ( libido of player - humanity of player > 15 ) and bodyname of player is "Killer Whale" and ( cocks of player > 0 or cunts of player > 0 ):
-		if cocks of player > 0 and cunts of player > 0 and "Less Anal" is not listed in feats of player:
+		if cocks of player > 0 and cunts of player > 0 and anallevel > 1:
 			say "     Having beaten your foe, the heat of battle has gotten your blood pumping and your lustful orca instincts come to the fore.";
 			say "     [bold type] Being dual-gendered, does your male or female aspect take over to dominate this fallen male?[roman type][line break]";
 			LineBreak;
@@ -88,7 +88,7 @@ to say beattheorca:
 				say "[orcavicsex1]";
 			else:
 				say "[orcavicsex2]";
-		else if cocks of player > 0 and "Less Anal" is not listed in feats of player:
+		else if cocks of player > 0 and anallevel > 1:
 			say "[orcavicsex1]";
 		else if cunts of player > 0:
 			say "[orcavicsex2]";
@@ -145,7 +145,7 @@ When Play begins:
 	now HP entry is 45; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 7; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall' Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 25; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]

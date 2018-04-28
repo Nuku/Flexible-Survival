@@ -99,7 +99,7 @@ to say sexwithdaisy:
 		say "     You should at least feign interest in the mare you're planning on fucking. Try talking to her first.";
 	else if lastfuck of Daisy - turns < 6:
 		say "     You've made use of this mare fairly recently. You decide to wait rather than risk getting bored of her too soon.";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     It might not be prudent for the Stablemaster to display that they have no genitals at this time.";
 	else if Daisy is in Master's Office:
 		quietrestorenightmareform;

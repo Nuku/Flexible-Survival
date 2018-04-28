@@ -253,7 +253,7 @@ Section 6 - Sexy Times with Circe
 
 to say sexwithcirce:
 	cindycheck;
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     Being genderless at the moment, you don't see much point in trying to engage Circe in sexual antics.";
 		[***future note - maybe she 'helps' with this.]
 	else if lastfuck of Circe - turns < 6:

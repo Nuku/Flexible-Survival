@@ -34,8 +34,8 @@ to say losetoflaminglynx:
 	else if cocks of player > 0 and cunts of player > 0:		[Herm - fellatio/unwanted]
 		say "     The flaming lynx sniffs down your [bodydesc of player] body [if cocks of player > 0]and gives a faint rumble of pleasure as he finds your cock [end if]before growling in disdain upon noticing your cunt moments later. ";
 		let fllynxanal be 0;
-		if "More Anal" is listed in feats of player, increase fllynxanal by 2;
-		if "MPreg" is listed in feats of player, increase fllynxanal by 2;
+		if anallevel is 3, increase fllynxanal by 2;
+		if player is mpreg_ok, increase fllynxanal by 2;
 		if a random chance of fllynxanal in 7 succeeds:
 			let lynxfun be 1;
 		else if a random chance of 2 in 5 succeeds:	[40% force oral]
@@ -51,9 +51,9 @@ to say losetoflaminglynx:
 	else if cocks of player > 0:						[Male]
 		say "     The flaming lynx sniffs down your [bodydesc of player] body and purrs in pleasure as he finds your cock. Another wave of colours washing across his fiery back";
 		let fllynxanal be 3;
-		if "More Anal" is listed in feats of player, increase fllynxanal by 1;
-		if "MPreg" is listed in feats of player, increase fllynxanal by 1;
-		if "Less Anal" is listed in feats of player, decrease fllynxanal by 2;
+		if anallevel is 3, increase fllynxanal by 1;
+		if player is mpreg_ok, increase fllynxanal by 1;
+		if anallevel is 1, decrease fllynxanal by 2;
 		if a random chance of fllynxanal in 7 succeeds:
 			let lynxfun be 1;
 		else if a random chance of 1 in 2 succeeds:
@@ -63,9 +63,9 @@ to say losetoflaminglynx:
 	else:										[Neuter - confused]
 		say "     The flaming lynx sniffs down your [bodydesc of player] body and mewls in confusion upon reaching your bare groin. ";
 		let fllynxanal be 3;
-		if "More Anal" is listed in feats of player, increase fllynxanal by 1;
-		if "MPreg" is listed in feats of player, increase fllynxanal by 1;
-		if "Less Anal" is listed in feats of player, decrease fllynxanal by 2;
+		if anallevel is 3, increase fllynxanal by 1;
+		if player is mpreg_ok, increase fllynxanal by 1;
+		if anallevel is 1, decrease fllynxanal by 2;
 		if a random chance of fllynxanal in 7 succeeds:
 			let lynxfun be 1;
 		else if a random chance of 3 in 5 succeeds:

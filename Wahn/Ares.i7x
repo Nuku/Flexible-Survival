@@ -149,7 +149,7 @@ to say AresParkMounting:
 	if HP of Ares < 3:  [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around on you, proving that this was just what he planned - by mounting you from the back and starting to hump against you. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, though obviously the concept of clothing being in the way did escape Ares.";
 		LineBreak;
-		if "Submissive" is listed in feats of player:
+		if player is submissive:
 			say "     Feeling his hard shaft rub against your butt, a sudden shiver of arousal runs through you. With this man-like animal man trying to take you when he wants to, your submissive nature aches to... just let him do it. [bold type]Will you push down your pants and let Ares fuck you right here and now?[roman type][line break]";
 		else:
 			say "     Feeling his hard shaft rub against your butt, a sudden shiver of arousal runs through you. With this man-like animal trying to take you when he wants to, some submissive part of you brings up the idea of... just letting him do it. [bold type]Will you push down your pants and let Ares fuck you right here and now?[roman type][line break]";

@@ -37,7 +37,7 @@ to say Naiad Wins:
 to say Naiad Loses:
 	say "     With a wince and rather shocked expression on her face, the naiad falls on her shapely butt. 'Ow,' she says as she rubs her bruises, continuing with a sulky expression 'This isn't how it's supposed to be - mortals should be easier to control. Why do you resist? I just wanted to have some fun.'";
 	wait for any key;
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     Not bothering to explain that you don't even have a gender right now and couldn't do much with her, you turn away and walk off, leaving a rather surprised and disappointed naiad behind.";
 	else:
 		say "[NaiadSexMenu]";

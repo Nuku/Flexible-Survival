@@ -140,7 +140,7 @@ to say mrevent03:
 Chapter 4 - Bedroom Sex
 
 to say mrevent04:
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "[mrevent01]"; [save for later if neuter]
 	else:
 		if mre04 is false:
@@ -313,7 +313,7 @@ to say mrevent07:
 Chapter 8 - Lubricating the Gears
 
 to say mrevent08:
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "[mrevent02]"; [save for later if neuter]
 	else:
 		say "     As you prepare to head off with Valerie, she gestures to a two-gallon barrel of oil with one of her paws. 'I'd arranged a trade with another visitor to get that, but I'm a little ill-equipped to carry it. Would you be so kind as to bring it along?' You start to ask what it's for, but she's already begun to pad away. With a grunt, you heft up the large drum [if strength of player > 18]with ease[else if strength of player > 14]with a little effort[else]with some strain[end if] and follow after her. While leading you through the museum, she discusses several of the exhibits and seems to take a long, rambling path despite (or perhaps even because of) your heavy load. You try to ask her about it a few times, but are always interrupted by another lecture about some new wing or exhibit.";

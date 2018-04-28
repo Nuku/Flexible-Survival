@@ -24,10 +24,10 @@ to say losetoxeno:
 		say "     After the ovipositor is withdrawn and you're released, you stumble away as best you can being so laden down with eggs. Feeling your belly squirm and seeing the eggs already writhing and shifting inside you, you find somewhere secluded and deposit them, hoping you've managed to get them all out.[ovichance]";
 	else:
 		let mchance be 4;
-		if "Submissive" is listed in feats of player, increase mchance by 2;
-		if "More Anal" is listed in feats of player, increase mchance by 2;
-		if "MPreg" is listed in feats of player, increase mchance by 2;
-		if "Less Anal" is listed in feats of player, now mchance is 0;
+		if player is submissive, increase mchance by 2;
+		if anallevel is 3, increase mchance by 2;
+		if player is mpreg_ok, increase mchance by 2;
+		if anallevel is 1, now mchance is 0;
 		if cocks of player is 0 or a random chance of mchance in 12 succeeds:
 			say "     The xenomorphic creature, as if scenting what it wants, pushes onto all fours with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe into you, pushing into your ass and sliding into your bowels. The black flesh pulses and shoots a thick, green goo into your ass, making it slick and easy to penetrate. Its tendrils squirm and rub, teasing your [if cocks of player > 0]prostate[else]inner walls[end if] and exciting you despite the horrifying situation. But it doesn't thrust into you, instead staying buried deep inside you and stimulating you from within. As it does so, you feel a much thicker bulge pressing into you as an egg starts to travel up the ovipositor and into you to be deposited into your belly. More eggs follow after the first as your belly is stuffed with as many of the fleshy orbs as you can take[if cocks of player > 0]. As these push past your prostate, you can't help but cum, moaning loudly as the alien creature violates you[end if].";
 			say "     After the ovipositor is withdrawn and you're released, you stumble away as best you can being so laden down with eggs. Feeling your belly squirm and seeing the eggs already writhing and shifting inside you, you find somewhere secluded and deposit them, hoping you've managed to get them all out.[movichance]";
@@ -43,7 +43,7 @@ to say beatthexeno:
 		say "     Seeing your prey fallen before you, your alien cock throbs and its tendrils squirm. Following your infected cock's compulsion to mate, you pin the xenomorph beneath you and press your strange cock to its. Your tendrils entwine with one another briefly before your cock is able to pull its into your wet, vaginal hole. Your ovipositor squeeze and sucks at the cock inside it, milking at the black creature until it cums again and again, draining its internal balls into you to feed and fertilize the Xeno eggs inside you.";
 		say "     Overcome with instinct, you keep the Xeno pinned down, hissing in pleasure as these eggs start to travel out of your ovipositor. You have what feels like climax after climax as you release these eggs into the alien creature below, stuffing its egg chamber with your offspring until its carapace is stretched and bloated with your many swollen eggs added to her own. With a twisted sense of pride and accomplishment, you release the creature's ovipositor cock and send it off to find somewhere else to deposit the many eggs it now bears inside it.";
 		infect;
-	else if cockname of player is "Xeno" and cocks of player > 0 and "MPreg" is listed in feats of player:
+	else if cockname of player is "Xeno" and cocks of player > 0 and player is mpreg_ok:
 		say "     Seeing your prey fallen before you, your alien cock throbs and its tendrils squirm. You also feel a shifting inside your hidden male womb. Following your infected cock's compulsion to mate, you pin the xenomorph beneath you and press your strange cock to its. Your tendrils entwine with one another briefly before your cock is able to push its way into the creature's vaginal opening, intent on fertilizing its eggs with your tainted seed. Its ovipositor squeezes and sucks at your cock inside it, milking you for all the slimy cum you can give it. This is pumped deep inside the creature's egg chamber, fertilizing her young and starting them to swell.";
 		say "     Once you're done, you pull out and shift your hips, bringing your black ring to its ovipositor. The creature hisses beneath you, but you feel its tendrils pry open your anal ring and the ovipositor push into your anus. There it presses against your prostate and massages at it before moving further back. Squeezing and milking at it, you get it to spurt its thick, gooey slime into you, preparing you for the coming eggs.";
 		say "     Finding the hidden entrance to your male womb, the tendrils tease open this passage and press into it, bringing you considerable pleasure even before its eggs start to push your back passage open and make their way into your hidden womb. You hiss in pleasure as these start sliding into you, each one moving past your prostate sending you to orgasm before it presses its way into your waiting egg chamber. You take as many of the creature's eggs into you as you can until your belly is full and bloated with the growing, swelling, squirming ovoids. Having what your body wants from the creature, you release it and drive it off while you look around for someone suitable to deposit your eggs. As each one slides out of you, you cum again in ecstasy. Once they're lain, you find yourself wondering, even hoping, that one or a few may still remain inside you.[ovichance]";
@@ -91,7 +91,7 @@ When Play begins:
 	now HP entry is 80; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 15; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Capitol"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Capitol"; [ Current options are 'Outside' and 'Mall' Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
@@ -169,7 +169,7 @@ when play ends:
 			say "     You succumb to your horrific infection, feeling its silent power and revelling in it. You head out into the city to seek your prey, eager to breed and spread your kind to satisfy your lustful instincts. ";
 			if cunts of player > 0 and cocks of player > 0:
 				say "     Finding others of your kind, you breed with them. But unlike before, you are no longer restrained by your humanity and seek out victims to mount and fill with your eggs, corrupting them even as you turn them into incubators and carriers for your offspring.";
-			else if cocks of player > 0 and "MPreg" is listed in feats of player:
+			else if cocks of player > 0 and player is mpreg_ok:
 				say "     Finding others of your kind, you breed with them. You sire eggs in them, often taking those eggs into yourself and carrying them. No longer restrained by your humanity, you seek out places near other potential victims for your offspring so they might find hosts and incubators of their own to use, breed and corrupt into more of your kind.";
 			else if cocks of player > 0:
 				say "     Finding others of your kind, you breed with them. You sire eggs in them. No longer restrained by your humanity, you also seek out other potential victims so they might be brought before your mates and then implanted with those eggs to be incubators and carriers for your offspring even as they are themselves corrupted.";
