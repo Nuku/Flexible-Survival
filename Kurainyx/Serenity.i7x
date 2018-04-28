@@ -437,7 +437,7 @@ to SerenityBind:
 	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
-		if HP of player > 0 or humanity of player < 50:
+		if humanity of player < 50:
 			now obliging is true;
 		checkboundrecover;
 		if clearnomore is 0, clear the screen;
