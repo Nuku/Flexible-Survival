@@ -266,7 +266,7 @@ to GatorBind:
 	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
-		if HP of player > 0 or humanity of player < 50:
+		if humanity of player < 50:
 			now obliging is true;
 		checkboundrecover;
 		if clearnomore is 0, clear the screen;
@@ -282,7 +282,7 @@ to GatorBind:
 				decrease humanity of player by 15 + (psycheadjust * 5);
 				if struggleatt > 0, decrease struggleatt by 1;
 		now enduring is false;
-		say "     Resting inside of the gator's stomach, you try to assess your situation. [one of]It's hard to think with all of the liquid and smells affecting your mind[or]The belly sways around as the herm chases after more prey in the sewers[or]Your space jostles around while the gator takes a swim[or]The place rumbles and shakes with you inside, the walls pushing against you[or]Your mind distorts and reminds you of what will happen if you don't get out of here[or]Your body tingles from all the stomach juices splashing onto you[or]The air is heavy and acrid with the smell of stomach juices everywhere[at random]. Your only options are to [bold type]S[roman type]truggle [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if][if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if].[line break]";
+		say "     Resting inside of the gator's stomach, you try to assess your situation. [one of]It's hard to think with all of the liquid and smells affecting your mind[or]The belly sways around as the herm chases after more prey in the sewers[or]Your space jostles around while the gator takes a swim[or]The place rumbles and shakes with you inside, the walls pushing against you[or]Your mind distorts and reminds you of what will happen if you don't get out of here[or]Your body tingles from all the stomach juices splashing onto you[or]The air is heavy and acrid with the smell of stomach juices everywhere[at random]. Your only options are to [bold type]S[roman type]truggle [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if].[line break]";
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
