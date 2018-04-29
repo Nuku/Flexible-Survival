@@ -1,5 +1,6 @@
 Version 1 of Hyena Hideout by Stripes begins here.
 [ Version 1.4 - Hyena Gang WS scene for gang bitch ]
+[Version 2 - Small adjustment to Gina for Matriarch Vore scenes]
 [- Originally Authored By: Sarokcat -]
 
 "Adds an Hyena den to Flexible Survival with a dominance challenge and some smexing."
@@ -135,6 +136,8 @@ instead of conversing the Gina:
 				if matriarchowned is 1:
 					say "[hyenamat_victorytf]";
 					say "     Gina pads over to you carefully after the orgy is finished, picking her way through the piles of collapsed bodies and pools of sexual fluids that cover the floor. Reaching down she gives you a hand up as you survey your new subjects, you think you can see a new glint of respect and admiration for you in her eyes. 'That was amazing,' Gina says as she leads you back to your new quarters, leaving the former matriarch lying forgotten on the floor behind you. 'I knew you were special when I found ya, but I had no idea know just how tough you were,' she says with awe as she shows you the matriarchs chambers, a larger section of the warehouse with even more comfortable looking chairs and furniture... and your new home. 'If you ever need any help with running this place or anything, you know where to find me,' Gina finishes before she helps you settle in for a much-needed rest after the hard fight, and fuck afterwards.";
+				else if HyenaMatVore is true:
+					move Matriarch to Hyena Hideout;
 				else:
 					say "     Gina comes over to you as you recover from your exhausting ordeal, cum and other fluids covering you and leaking out of you as she drags you over to help clean you off. 'Can't say I didn't warn you,' Gina mutters as she helps you settle down for a much-needed rest. 'Though it definitely looked like you submitted pretty willingly there at the end. Guess you don't have to pretend to be a dominant anymore, it's pretty obvious how much you like being on the bottom instead,' Gina says with a smirk as you find yourself nodding almost automatically, an even stronger desire rising up in you to please the more dominant hyena by agreeing with whatever she wants.";
 					move Matriarch to Hyena Hideout;

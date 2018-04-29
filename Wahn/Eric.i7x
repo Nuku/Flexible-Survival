@@ -165,8 +165,7 @@ to say lroomdesc:
 	else if (HP of Eric is 100): [Eric never came back from Stacy's dorm]
 		say "     This is the men's lockerroom of the sports arena in the Tenvale campus. Looks like someone has made camp here - you see an improvised bed out of lots and lots of towels and empty bottles and wrappers of energy drinks and bars. Not a bad defensive spot either - the few existing windows are high up on the walls and pushing one of the lockers in front of the door should keep out all but the most determined intruders.";
 
-instead of going down from the Grey Abbey Library while (libido of Eric is 0 and bodyname of player is "Furling"):
-	move player to Bunker;
+after going down from the Grey Abbey Library while (libido of Eric is 0 and bodyname of player is "Furling"):
 	if debugactive is 1:
 		say "     DEBUG: ERIC FURLING FRIGHT WALKIN [line break]";
 	say "     As you enter the bunker and come into Eric's sight he gets pale, saying 'Aaah! It's one of - wait a minute, it's you isn't it? Don't frighten me like that - you look like one of my buddies at the college after they transformed.'";
@@ -1879,8 +1878,7 @@ instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and 
 		say "     The animalistic coupling of the felinoid and his entranced partner is quite a show, driving your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Eric's pussy relentlessly, until finally the cuntboy's moans and noises rise up to a climactic shout, announcing his orgasm to anyone in hearing range. Visibly satisfied in making him come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat throws himself on the floor right at that spot to lounge in satisfaction, taking Eric with him, still impaled on the feline's shaft and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Eric is turns;
 
-instead of going inside from Grey Abbey Library while (Level of Eric > 0 and Level of Eric < 4 and Eric is in Bunker and HP of Eric < 99):
-	move player to Bunker;
+after going down from Grey Abbey Library while (Level of Eric > 0 and Level of Eric < 4 and Eric is in Bunker and HP of Eric < 99):
 	if debugactive is 1:
 		say "     DEBUG: ERIC POST-FELINOID-SEX WALKIN [line break]";
 	if HP of Eric < 99:
@@ -1903,8 +1901,7 @@ instead of going inside from Grey Abbey Library while (Level of Eric > 0 and Lev
 		say "     Putting your arms around Eric and holding him, you console him with calm words, explaining to him that you're not angry or anything. After all, it's partly your fault for bringing the felinoid here with you (and letting him fuck Eric, but he doesn't need to know that). Telling Eric just not to fall for the felinoid's charms and arousing musk again, you give the visibly relieved athlete a kiss on the cheek and leave him to get back to his bunk.";
 		now Level of Eric is 99;
 
-instead of going inside from Grey Abbey Library while (Level of Eric is 4 and Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
-	move player to Bunker;
+after going down from Grey Abbey Library while (Level of Eric is 4 and Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: ERIC BUNKER-FELINOID-SEX WALKIN (CBOY ERIC ONLY SO FAR)[line break]";
 	say "     As you come down the stairs into the bunker, you hear gasped moans and loud purring growls come from somewhere over in the rows of beds. Letting your gaze wander over the large room, it is easy to spot where the noise is coming from, as the pale-skinned form of Eric with his bright red hair is hard to miss. Looks like he's really taken to the felinoid after your encouragement for him to do so - the young trans-male has spread out several blankets on the floor beside his own bed for the big cat. Currently, the felinoid is lying on that comfy pile, sprawled out on his back and purring like an idling motor as Eric rubs his belly-fur while bouncing his hips against the big cat's crotch. Clearly, he's got the feral beast's feline shaft deep in his pussy, stimulating his inner walls with the many nubby spines along the shaft of the felinoid's erection.";

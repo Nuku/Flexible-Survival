@@ -191,7 +191,7 @@ Figure of Fancy_icon is the file "FSTF_Fancy_ig.jpg".
 Figure of Felix_icon is the file "Felix.jpg".
 Figure of Felix_face_icon is the file "Felix_face.jpg".
 Figure of Francois_icon is the file "Francois_ig.jpg".
-Figure of Frank_icon is the file "Frank_paw_ig.jpg".
+Figure of Frank_icon is the file "Frank.jpg".
 Figure of Gabriel_icon is the file "Gabriel.jpg".
 Figure of Garrett_icon is the file "garrett_ig.jpg".
 Figure of Gillian_icon is the file "Gillian_ig.jpg".
