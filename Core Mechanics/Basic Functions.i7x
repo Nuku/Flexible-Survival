@@ -142,4 +142,29 @@ to FindHighestPlayerStat:
 		now CurrentStat is Perception of player;
 		now HighestPlayerStat is "perception";
 
+
+understand "teststripcrotch" as StripCrotch.
+
+StripCrotch is an action applying to one topic.
+
+carry out StripCrotch:
+	say "[StripCrotchAction]";
+
+to say StripCrotchAction:
+	let WaistItem be a grab object;
+	let CrotchItem be a grab object;
+	repeat with z running through equipped equipment:
+		if slot of z is "waist":
+			now WaistItem is z;
+	repeat with z running through equipped equipment:
+		if slot of z is "crotch":
+			now CrotchItem is z;
+	if WaistItem is "nothing" and CrotchItem is "nothing": [already naked]
+		say "strokes over your bare crotch";
+	else if WaistItem is "nothing" and CrotchItem is not "nothing":
+		say "pulls down your [CrotchItem] and bares your crotch";
+	else if WaistItem is not "nothing" and CrotchItem is not "nothing":
+		say "pulls down your [Waistitem] and [CrotchItem], baring your crotch";
+
+
 Basic Functions ends here.
