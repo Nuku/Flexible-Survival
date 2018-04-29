@@ -68,7 +68,7 @@ carry out tapeing:
 		-- "Pizza Delivery Dash Cam Vid":
 			say "[PizzaCarDashcamVid]";
 		-- "Dressing Room Spycam Vid":
-			say "[DressingRoomSpycamVid";
+			say "[DressingRoomSpycamVid]";
 		-- "Traffic Drone #006 Footage":
 			say "[TrafficDrone#006Vid]";
 [Template - see below the end of file]
