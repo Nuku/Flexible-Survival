@@ -17,9 +17,11 @@ Version 1 of Blue by Wahn begins here.
 [   1: female persona                                        ]
 [   2: male persona                                          ]
 
+BlueDesignator is a text that varies.
+
 Section 1 - Location
 
-Goo Refuge is North of Haven Community Center.
+North of Haven Community Center is Goo Refuge.
 The description of Goo Refuge is "[GooRefugeDesc]".
 Goo Refuge is sleepsafe.
 
@@ -47,11 +49,11 @@ when play begins:
 to say Blue SpeakerDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Blue Speaker] <- DEBUG[line break]";
-	if HP of Blue Speaker is 0:
+	if HP of Blue Speaker is 0: [neuter]
 		say "     Blue is a humanoid goo person that usually stands about five feet tall. It has a totally androgynous appearance, making it impossible to tell if Blue is a male or female - though maybe there isn't really a difference when you body consists of malleable, semisolid goop. Never really straying far from you, it seems that this being is the designated person to talk to.";
-	else if HP of Blue Speaker is 1:
+	else if HP of Blue Speaker is 1: [male]
 		say "     Blue is a humanoid goo person that usually stands about five feet tall. He has taken on a more masculine appearance, with a handsome face, shoulder-length hair and actual abs molded out of the transparent aquamarine goop that forms his body. This being is certainly eager and ready to make his visitors comfortable, up to and including molding his body to match a specific form. Never really straying far from you, it seems that he is the designated person to talk to among his kind.";
-	else if HP of Blue Speaker is 2:
+	else if HP of Blue Speaker is 2: [female]
 		say "     Blue is a humanoid goo person that usually stands about five feet tall. She has taken on a more feminine appearance, with a pretty face, shoulder-length hair and nice, perky breasts molded out of the transparent aquamarine goop that forms her body. This being is certainly eager and ready to make her visitors comfortable, up to and including molding her body to match a specific form. Never really straying far from you, it seems that she is the designated person to talk to among her kind.";
 
 instead of conversing the Blue Speaker:
@@ -151,21 +153,24 @@ to say BlueTalk_Background:
 	say "     'Living as Blue is nothing like we were before. All the voices talk in us, and those who decide to do something together form a shape. The Blue Guardian, for example,' Blue says with a nod towards the entrance door. 'They worry about infecting others and bringing possibly dissonant voices into the Blue. The Blue Tinkerer loves to craft things, and so on.' Looking around, you realize that most of the goo people wandering about are focused on a single task, giving that their full attention. 'And I am the Blue Speaker, here just for you and other contacts.'";
 
 to say BlueTalk_Speaker:
-	say "     As you ask about [ObjectPro of Blue Speaker] personally, Blue smiles and says, 'I am the collective eagerness to meet new people and talk. I am part of...' Blue scrunches [PosAdj of Blue Speaker] brow, mulling it over for a few seconds, then continues to say, 'Rafael, Josh, Jo, Cheryl, Clint, Lucia and Glenn. All of me love to chat. Which is why the others prefer to let me do it.' Giving a good-natured chuckle, Blue shrugs and looks around to the various goo people, then leans in conspiratorially. 'Clint, Jo and Rafael also like to do ']other['] things with special friends that I meet, which is why the Blue Guardian prefers me to stay inside. And I do, for the most part. We're all Blue, after all, and we have to live with each other.' Crossing [PosAdj of Blue Speaker] arms, Blue then gives you a wink and adds, 'By the way, if you'd prefer to see me in another shape, just let me know. The goo is nothing if not shapeable...' With that, Blue morphs [PosAdj of Blue Speaker] body through several variants of masculinity, femininity and genderlessness before returning to the shape you know.";
+	say "     As you ask about [ObjectPro of Blue Speaker] personally, Blue smiles and says, 'I am the collective eagerness to meet new people and talk. I am part of...' Blue scrunches [PosAdj of Blue Speaker] brow, mulling it over for a few seconds, then continues to say, 'Rafael, Josh, Jo, Cheryl, Clint, Lucia and Glenn. All of me love to chat. Which is why the others prefer to let me do it.' Giving a good-natured chuckle, Blue shrugs and looks around to the various goo people, then leans in conspiratorially. 'Clint, Jo and Rafael also like to do [']other['] things with special friends that I meet, which is why the Blue Guardian prefers me to stay inside. And I do, for the most part. We're all Blue, after all, and we have to live with each other.' Crossing [PosAdj of Blue Speaker] arms, Blue then gives you a wink and adds, 'By the way, if you'd prefer to see me in another shape, just let me know. The goo is nothing if not shapeable...' With that, Blue morphs [PosAdj of Blue Speaker] body through several variants of masculinity, femininity and genderlessness before returning to the shape you know.";
 
 to say BlueTalk_MaleForm:
 	say "     'My pleasure,' Blue replies, instantly reshaping [PosAdj of Blue Speaker] body to appear broad-shouldered and muscular, featuring a chiseled face and shoulder-length hair. He checks himself out for a little moment, making sure he didn't forget anything, then playfully flexes the bulges of his goo biceps.";
 	SetMalePronouns for Blue Speaker;
+	now BlueDesignator is "man";
 	now libido of Blue Speaker is 2;
 
 to say BlueTalk_FemaleForm:
 	say "     'My pleasure,' Blue replies, instantly reshaping [PosAdj of Blue Speaker] body to appear more curvaceous, with a set of perky breasts and shapely buns that form an hourglass figure. She has a rather pretty face and shoulder-length hair, too. Checking herself out for a little moment, Blue makes sure she didn't forget anything, then smiles at you and wiggles her breasts to jiggle left and right.";
 	SetFemalePronouns for Blue Speaker;
+	now BlueDesignator is "woman";
 	now libido of Blue Speaker is 1;
 
 to say BlueTalk_NeuterForm:
 	say "     'If that's what you prefer,' Blue replies, instantly reshaping [PosAdj of Blue Speaker] body to appear in a genderless humanoid form. With the arms, legs and torso appearing relatively undefined, the goo person can barely be differentiated from the various others in the room.";
-	SetNeuterPronouns for Blue Speaker;
+	SetNeutralPronouns for Blue Speaker;
+	now BlueDesignator is "being";
 	now libido of Blue Speaker is 0;
 
 to say BlueTalk_Office:
@@ -262,22 +267,76 @@ to say BlueSpeakerSexMenu:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
-to say BlueSex1:
+to say BlueSex1: [jerk off on Blue]
+	say "     As you tell Blue that you want to 'donate' some of your cum to sustain [ObjectPro of Blue Speaker] and [PosAdj of Blue Speaker] people, the aquamarine goo person smiles eagerly at you and raises a hand to [PosAdj of Blue Speaker] chest. 'I had so hoped you'd say that. It's so much better fresh from an eager partner,' Blue tells you with a naughty wink, tracing one blue finger over ";
+	if HP of Blue Speaker is 2: [female]
+		say "the pleasantly round swell of her breasts, making them wiggle just for you. ";
+	else if HP of Blue Speaker is 1: [male]
+		say "the valleys and bumps of his flawless abs, before slapping one of his pecs and making it wiggle a little bit. ";
+	else: [neuter]
+		say "the flat front of its vaguely human torso, creating a streak of ripples through the goo. ";
+	say "'Ooh yeah, give it to me[if player is not defaultnamed] [name of player][end if]! I know you don't just want to cum in a cup and give it to the Blue. You wouldn't have come here just for that.' With that said, the smiling goo [BlueDesignator] kneels in front of you, taking a quite enticing position. ";
+	if HP of Blue Speaker is 2: [female]
+		say "Blue cups the pair of her full breasts and squeezes them as she looks up at you, opening her mouth to wiggle a tongue made from blue goo. ";
+	else if HP of Blue Speaker is 1: [male]
+		say "Blue thumps his pecs with a fist, then pinches his nipples enticingly while he looks up at you, opening his mouth to wiggle a tongue made from blue goo. ";
+	else: [neuter]
+		say "Blue pinches its prodruding nipples enticingly while it looks up at you, opening its mouth to wiggle a tongue made from blue goo. ";
+	say "Given such a show, you happily [SelfStripCrotch], then wrap your hand around your [cock of player] shaft.";
+	say "     'What a nice piece of man-meat you have there[if player is not defaultnamed] [name of player][else] my friend[end if],' Blue says in a yearning tone, seemingly ready to engulf your cock at a moment's notice. The sound of a throat being cleared, coming from the Blue Guardian, seems the only thing that holds the thirsty goo [BlueDesignator] back, instead making [ObjectPro of Blue Speaker] settle on [ObjectPro of Blue Speaker] haunches to wait. Stroking the length of your [cock of player] erection, you step a little closer to Blue and play around a little with [ObjectPro of Blue Speaker], enjoying the way that your eager partner follows every little movement of your dickhead with [PosAdj of Blue Speaker] gaze. When the first drop of pre forms at the tip of your cock, [SubjectPro of Blue Speaker] even licks [PosAdj of Blue Speaker] lips in a show of anticipation, really boosting your enjoyment of jerking off by having an adoring watcher. The fires of arousal intensify to burn hotly inside you, pushing you to speed up your hand movements and get ever closer to the inevitable orgasm.";
+	WaitLineBreak;
+	say "     'Yeah, that's it baby. You want to - you need to - shoot that load you've got building. I want you to come all over me,' Blue gasps out in a eager and breathless voice, leaning forward to almost touch you. 'Oh yeah, do it!' the goo [BlueDesignator] calls out as [SubjectPro of Blue Speaker] sees in your eyes that you are about to cum, then opens [PosAdj of Blue Speaker] mouth and stretches a blue tongue out as far as [SubjectPro of Blue Speaker] can, ready to receive your seed. A first splash of white cum streaks over [PosAdj of Blue Speaker] blue face as climax breaks over you moments later, spoiling your aim in the moment of passion. Blue reacts right away, getting [PosAdj of Blue Speaker] head properly aligned again to catch the next splash in [PosAdj of Blue Speaker] open mouth, humming contently as [SubjectPro of Blue Speaker] swallows the creamy layer of cum on [PosAdj of Blue Speaker] tongue. While you are still jerking and shooting more cum to be caught in Blue's open mouth, you are strangely fascinated by seeing what happens to each swallowed glob of cum inside [ObjectPro of Blue Speaker].";
+	say "     The splashes of your seed are white and milky in the goo [BlueDesignator]'s interior, staying bunched up for a little while before their edges get more and more diffuse. The blue goo of your friend takes on some of the opaqueness that the cum brings with it, before eventually becoming fully transparent again, and at the same time much more intensely blue. As [SubjectPro of Blue Speaker] swallows more and more of your 'donation', Blue almost seems to glow from the inside out, so intense gets the color of [PosAdj of Blue Speaker] infused goo. 'Mmmh, you taste amazing,' [SubjectPro of Blue Speaker] says with an ecstatic smile on ";
+	if HP of Blue Speaker is 2: [female]
+		say "her feminine face, smacking her full lips contently. 'Thank you, this is just what I needed. Oooh, I almost feel giddy from all the cum you gave me. I really must share this with the rest of the Blue!' With that said, she stands up and blows you a kiss, then saunters over to the goo-filled office, strolling right into the aquamarine mass and merging with it.";
+	else if HP of Blue Speaker is 1: [male]
+		say "his masculine face, smacking his lips contently and giving you a broad grin. 'Thank you, this is just what I needed. Oooh, I almost feel giddy from all the cum you gave me. I really must share this with the rest of the Blue!' With that said, he stands up and thumps his chest in a kind of salute, then struts over to the goo-filled office, walking right into the aquamarine mass and merging with it.";
+	else: [neuter]
+		say "its androgynous face, smacking its lips in satisfaction. 'Thank you, this is just what I needed. Oooh, I almost feel giddy from all the cum you gave me. I really must share this with the rest of the Blue!' With that said, it stands up and gives you a thumbs up before strolling over to the goo-filled office and walking right into the aquamarine mass to merge with it.";
+	WaitLineBreak;
+	say "     Satisfied about having both gotten your rocks off and also helping the goo people, you watch Blue go and join with the collective of [PosAdj of Blue Speaker] people. Streaks of more vibrant blue start diffusing through the large mass of blue goo in the office, spreading the nourishment of your seed throughout their unity. You can't help but grin as you [SelfDressCrotch], then stroll to the entrance of the goo people's refuge. The Blue Guardian lets you pass without commment, apparently distracted by his desire to join the others for their communion.";
+
+to say BlueSex2: [mouth fuck for Blue]
+	say "     As you tell Blue that you want to 'donate' some of your cum to sustain [ObjectPro of Blue Speaker] and [PosAdj of Blue Speaker] people, the aquamarine goo person smiles eagerly at you and raises a hand to [PosAdj of Blue Speaker] chest. 'I had so hoped you'd say that. It's so much better fresh from an eager partner,' Blue tells you with a naughty wink, tracing one blue finger over ";
+	if HP of Blue Speaker is 2: [female]
+		say "the pleasantly round swell of her breasts, making them wiggle just for you. ";
+	else if HP of Blue Speaker is 1: [male]
+		say "the valleys and bumps of his flawless abs, before slapping one of his pecs and making it wiggle a little bit. ";
+	else: [neuter]
+		say "the flat front of its vaguely human torso, creating a streak of ripples through the goo. ";
+	say "'Ooh yeah, give it to me[if player is not defaultnamed] [name of player][end if]! I know you don't just want to cum in a cup and give it to the Blue. You wouldn't have come here just for that.' With that said, the smiling goo [BlueDesignator] kneels in front of you, taking a quite enticing position. ";
+	if HP of Blue Speaker is 2: [female]
+		say "Blue cups the pair of her full breasts and squeezes them as she looks up at you, opening her mouth to wiggle a tongue made from blue goo. ";
+	else if HP of Blue Speaker is 1: [male]
+		say "Blue thumps his pecs with a fist, then pinches his nipples enticingly while he looks up at you, opening his mouth to wiggle a tongue made from blue goo. ";
+	else: [neuter]
+		say "Blue pinches its prodruding nipples enticingly while it looks up at you, opening its mouth to wiggle a tongue made from blue goo. ";
+	say "Given such a show, you happily [SelfStripCrotch], then wrap your hand around your [cock of player] shaft.";
+	say "     'What a nice piece of man-meat you have there[if player is not defaultnamed] [name of player][else] my friend[end if],' Blue says in a yearning tone, seemingly ready to engulf your cock at a moment's notice. The sound of a throat being cleared, coming from the Blue Guardian, holds the thirsty goo [BlueDesignator] back - but you're having none of that and quickly grab [ObjectPro of Blue Speaker] by the back of the neck to ram [PosAdj of Blue Speaker] your [cock of player] rod into [PosAdj of Blue Speaker] mouth. Given the suddenness of your thrust, Blue doesn't actually have the time to form a throat or anything from [PosAdj of Blue Speaker] gooey mass, meaning that you're literally just fucking the wet and squishy innards of [PosAdj of Blue Speaker] head for a little while until [SubjectPro of Blue Speaker] can adjust to give you a more human-like experience.";
+	WaitLineBreak;
+	say "     The shape of a tight and gripping throat forms around your hard shaft. It looks odd, but also fascinating, to literally see the cavity inside Blue's body, extending just far enough to take your deepest thrusts. Your partner is definitively quite resourceful with that morphable body of [PosAdj of Blue Speaker]. Eager sounds come from Blue as [SubjectPro of Blue Speaker] takes your face-fucking with obvious joy and even wraps [PosAdj of Blue Speaker] arms around your hips to pull you in for deeper thrusts. Ramming into [ObjectPro of Blue Speaker] again and again, you are so concentrated on the pleasure of the fuck that it takes a while for you to remember that cocksuckers need to breathe. Or maybe they just usually do, as Blue shows no sign of needing even the shortest break from serving as your private cock-sheath.";
+	say "     The pleasure of having what amounts to be a completely insatiable cum-slut as a partner drives you to make the most of it, really pounding Blue's throat deep in one moment, then resting your hard length inside the tight confines of [PosAdj of Blue Speaker] neck for longer than a normal human could have let you. All in all, face-fucking Blue is an amazing experience, pushing your arousal to new heights in short order. It doesn't take long before a familiar tingle builds in your balls, and you put both hands on Blue's head to ram your whole length into [PosAdj of player] mouth. Balls slapping against the goo [BlueDesignator]'s chin, you let out a grunt and start to unload into Blue, with spurt after spurt of creamy cum jetting into the aquamarine mass of [PosAdj of Blue Speaker] body. While you are still humping back and forth and shooting more cum into the depths of Blue's throat, you are strangely fascinated by seeing what happens to each swallowed glob of cum inside [ObjectPro of Blue Speaker].";
+	say "     The splashes of your seed are white and milky in the goo [BlueDesignator]'s interior, staying bunched up for a little while before their edges get more and more diffuse. The blue goo of your friend takes on some of the opaqueness that the cum brings with it, before eventually becoming fully transparent again, and at the same time much more intensely blue. As more and more of your 'donation' is pumped into [ObjectPro of Blue Speaker], Blue almost seems to glow from the inside out, so intense gets the color of [PosAdj of Blue Speaker] infused goo. 'Mmmh, you taste amazing,' [SubjectPro of Blue Speaker] says with an ecstatic smile on ";
+	if HP of Blue Speaker is 2: [female]
+		say "her feminine face, smacking her full lips contently after finally pulling off your shaft. 'Thank you, this is just what I needed. Oooh, I almost feel giddy from all the cum you gave me. I really must share this with the rest of the Blue!' With that said, she stands up and blows you a kiss, then saunters over to the goo-filled office, strolling right into the aquamarine mass and merging with it.";
+	else if HP of Blue Speaker is 1: [male]
+		say "his masculine face, smacking his lips contently and giving you a broad grin after finally pulling off your shaft. 'Thank you, this is just what I needed. Oooh, I almost feel giddy from all the cum you gave me. I really must share this with the rest of the Blue!' With that said, he stands up and thumps his chest in a kind of salute, then struts over to the goo-filled office, walking right into the aquamarine mass and merging with it.";
+	else: [neuter]
+		say "its androgynous face, smacking its lips in satisfaction after finally pulling off your shaft. 'Thank you, this is just what I needed. Oooh, I almost feel giddy from all the cum you gave me. I really must share this with the rest of the Blue!' With that said, it stands up and gives you a thumbs up before strolling over to the goo-filled office and walking right into the aquamarine mass to merge with it.";
+	WaitLineBreak;
+	say "     Satisfied about having both gotten your rocks off and also helping the goo people, you watch Blue go and join with the collective of [PosAdj of Blue Speaker] people. Streaks of more vibrant blue start diffusing through the large mass of blue goo in the office, spreading the nourishment of your seed throughout their unity. You can't help but grin as you [SelfDressCrotch], then stroll to the entrance of the goo people's refuge. The Blue Guardian lets you pass without commment, apparently distracted by his desire to join the others for their communion.";
+	infect "Blue Goo";
+
+to say BlueSex3: [pussy fuck for Blue]
 	say "     ...";
 
-to say BlueSex2:
+to say BlueSex4: [ass fuck for Blue]
 	say "     ...";
 
-to say BlueSex3:
+to say BlueSex5: [ass fucked by Blue]
 	say "     ...";
 
-to say BlueSex4:
-	say "     ...";
-
-to say BlueSex5:
-	say "     ...";
-
-to say BlueSex6:
+to say BlueSex6: [pussy fucked by Blue]
 	say "     ...";
 
 Blue ends here.
