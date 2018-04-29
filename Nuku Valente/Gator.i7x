@@ -118,7 +118,7 @@ When Play begins:
 	now HP entry is 45;
 	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking.]
-	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku]
@@ -144,9 +144,9 @@ when play ends:
 	if bodyname of player is "Sewer Gator":
 		if voreloss is true:
 			if gator den is known:
-				say "     Having spent too long in the predator's stomach, you become too tired to do anything. The gator snorts in amusement when she feels your struggles come to an end. 'Oops, looks like I forgot about you being in there,' she says mockingly while she pats her stomach. 'Sucks that I'm down a lover now, but I guess that if you couldn't survive my stomach, you weren't going to be much of a mate down the line.' With you becoming no more than a layer of pudge for the predator, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, 'Don't worry, I'm sure that you'll make my lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
+				say "     Having spent too long in the predator's stomach, you become too tired to do anything. The gator snorts in amusement when she feels your struggles come to an end. 'Oops, looks like I forgot about you being in there,' she says mockingly while she pats her stomach. 'Sucks that I'm down a lover now, but I guess that if you couldn't survive my stomach, you weren't going to be much of a mate down the line.' With you becoming no more than a layer of pudge for the predator, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, ‘Don't worry, I'm sure that you'll make my lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
 			else:
-				say "     Bested by the predator's overwhelming strength, you are too tired to struggle anymore, let alone escape the twisted confines. Your body goes limp as your consciousness fades. The gator chuckles when she feels your struggles come to an end. Patting her stomach, she taunts, 'You might not have been good enough to be my fuckbuddy, but at least you were good for a snack.' With you becoming no more than a layer of pudge for the reptile, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, 'Don't worry, I'm sure that you'll make my lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
+				say "     Bested by the predator's overwhelming strength, you are too tired to struggle anymore, let alone escape the twisted confines. Your body goes limp as your consciousness fades. The gator chuckles when she feels your struggles come to an end. Patting her stomach, she taunts, 'You might not have been good enough to be my fuckbuddy, but at least you were good for a snack.' With you becoming no more than a layer of pudge for the reptile, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, ‘Don't worry, I'm sure that you'll make my lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
 		else if humanity of player < 10:
 			if gatorconsent is 1:
 				say "     You settle down with that gator, your mind ensnared by her enchanting voice. She welcomes you with open arms and conditions you with love and affection, soon making you a perfectly obedient little pet for her.";
@@ -198,7 +198,7 @@ to say gator den scene:
 		decrease the humanity of the player by a random number from 5 to 20;
 	else: [ Sex]
 		if a random chance of 1 in 2 succeeds and cocks of player > 0: [ She wants to be fucked]
-			say "     She rolls over and raises her thick tail over her back, exposing the pinkened lips nestled between her large thighs. 'Come show me just how much a stud you are,' she invites. Your [cock size desc of player] [cock of player] cock[smn] rise[if cocks of player is 1]s[end if] to attention quickly, and you scramble up to accept the offer, perhaps faster than you normally would. Something about her round rump just seems to call to you, and you heed the call, slamming home into her.";
+			say "     She rolls over and raises her thick tail over her back, exposing the pinkened lips nestled between her large thighs. 'Come show me just how much a stud you are,' she invites. Your [cock size desc of player] [cock of player] cock[if cocks of player > 1]s[end if] rise[if cocks of player is 1]s[end if] to attention quickly, and you scramble up to accept the offer, perhaps faster than you normally would. Something about her round rump just seems to call to you, and you heed the call, slamming home into her.";
 			if cock length of player < 4:
 				say "     She gets an odd expression when you sink into her, then looks over her shoulder. 'Mi amor, you need help,' she croons, curling her tail around you and squeezing. The warmth returns to you, filling you with hot tingles that slowly sink into your groin as things begin to change down there, swelling up inside of the gator as she gasps and coos. The pleasure of changing while sheathed in the fertile female burns at your mind, eroding your human sensibilities.";
 				follow the sex change rule;
