@@ -5132,6 +5132,7 @@ Include Dalmatian by Kaleem mcintyre.
 Include Dark Elf for FS by Stripes.
 Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
+Include Dire Wolf by Qazarar.
 Include Doberman for FS by Stripes.
 Include Donkeyman by Sarokcat n Verath.
 Include Donkeywoman by Sarokcat n Verath.
