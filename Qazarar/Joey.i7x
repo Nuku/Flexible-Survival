@@ -345,4 +345,5 @@ to say MinotaurTraining:
 			increase hp of Joey by 1;
 			now libido of Joey is 1;
 [}]
+
 Joey ends here.
