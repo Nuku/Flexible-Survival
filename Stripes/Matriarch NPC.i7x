@@ -220,7 +220,7 @@ to say HyenaMatVoreIntro:
 	say "     [HyenaMatVoreFirst]";
 
 to say HyenaMatVoreIntroAlt:
-	say "     'You know, there's still the matter of that blunder of an uprising you foolishly tried to pull off,' the matriarch rumbles while she continues to grope you. You whimper, both out of fear of displeasing the dominant herm as well as your need to be bred by her. The hyena leader continues, 'I think that you need to be punished for being so full of yourself, you little shit, and I know just what to do with a pathetic bitch like you. You’re being demoted to 'food' status.' Before you can even register what she means, the matriarch drags you over to the center of the warehouse and promptly calls the attention of the entire gang.";
+	say "     'You know, there's still the matter of that blunder of an uprising you foolishly tried to pull off,' the matriarch rumbles while she continues to grope you. You whimper, both out of fear of displeasing the dominant herm as well as your need to be bred by her. The hyena leader continues, 'I think that you need to be punished for being so full of yourself, you little shit, and I know just what to do with a pathetic bitch like you. You're being demoted to 'food' status.' Before you can even register what she means, the matriarch drags you over to the center of the warehouse and promptly calls the attention of the entire gang.";
 	say "     'Listen up! I'm sure that we all remember our newest breeder bitch!' the hyena leader shouts while she pats your head condescendingly and keeping a firm grip on you with the other arm. 'But that's not all this slut is. Since this troublemaker had the gall to even think of challenging me, they have the honor of being something even lower than a bitch.' The matriarch eyes you hungrily and licks her lips, striking you with a mix of fear and submissive need to please your mistress. More than a few gang members gasp when the dominant herm suddenly shoves your head into her maw. Even though the hyena leader's strength is more than enough to keep you restrained, your struggles are weakened by a part of you just wanting to oblige the commanding predator as she works on devouring the rest of your squirming body.";
 	say "     [HyenaMatVoreFirst]";
 
@@ -307,7 +307,7 @@ to HyenaMatBind:
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
 				LineBreak;
 				increase struggleatt by 1;
-				if struggleatt < 4:
+				if struggleatt < 3:
 					say "     [one of]You push against the squirming walls to try and get yourself coughed up.[or]'Good. I like my sluts to at least have a bit of fight in them before I break them in,' the matriarch taunts while you try to escape.[or]'That's it,' Gina coos, feeling your squirms from inside of the matriarch. 'We'll set you up with a good fucking if you get out of there.'[or]Gina rubs the matriarch's belly and then giggles when your struggles push back.[at random]";
 					increase lustatt by 7 + (lustadjust * 2);
 					wyvhumanityroll;
@@ -361,15 +361,15 @@ to HyenaMatBoundSex:
 		say "     The hyena cock inside of you drags against your inner walls, sending flares of pleasure as it is slowly pulled out, and you whimper in need when only the tip remains inside of you. The matriarch swiftly remedies that by thrusting right back into you. You occasionally wince in pain as the matriarch roughly fucks you, but it is heavily overshadowed by the ecstacy of having her thick rod fill you. As you continue to get railed, each thrust sending you into a blissful haze, you almost forget about the other hyena until Gina bends down in front of your face with a devilish grin. 'You look adorable with our matriarch's dick inside of you, but I think that you'll look even better if you took mine as well.' The matriarch snorts derisively when Gina lifts your upper half with her arms, but she still helps the small hyena hoist you off of the floor, all the while continuing to pound you without missing a beat.";
 		say "     Held aloft by the two strong hyenas, you are put at eye-level with Gina's own hardened cock as she presses it against your lips. Already lost in the lustful haze from the matriarch's fucking, you eagerly take Gina's twitching rod into your mouth, reveling in the taste of delectable hyena precum and heady musk. Your efforts to suckle and lick Gina's cock is sloppy at best with the matriarch pounding you from behind, but the recruiter doesn't seem to mind as she thrusts in and out of your mouth. There is no rhythm or coordination between the two hyenas on either end of you, each focusing on their own pleasure as they use your body, but somehow, they reach their climaxes at nearly the same time. The matriarch laughs gleefully as she drives herself up to the hilt inside of you and pumps you full of her cum while Gina yowls in pleasure as she spurts her own load into your mouth, her spunk dribbling down your face as you try to gulp down as much as you can.";
 		say "     Eventually, the two hyenas pull their spent cocks out of your cum-bloated form, but they still keep you suspended between them. Exhausted and dripping with hyena seed from both ends, you hardly budge as the matriarch inserts your feet into her hungry maw with Gina helping to push you into the dark depths. As your head is fed through the matriarch's mouth, Gina gives you a wink before the jaws snap shut, sending you back into the stomach of the gang leader.";
-		now bsextimer is 2;
+		now bsextimer is 1;
 		now struggleatt is 0;
-		if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
+		if libido of player > 10, decrease libido of player by (libido of player / 10) + 1;
 		now lustatt is libido of player;
 		decrease humanity of player by 3 + psycheadjust;
 	else:
 		increase bsextimer by 2;
 
 to say HyenaMatStruggle:
-	say "[bracket]-[if struggleatt > 2][bold type]X[roman type][else]-[end if][if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket][line break][run paragraph on]";
+	say "[bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket][line break][run paragraph on]";
 
 Matriarch NPC ends here.
