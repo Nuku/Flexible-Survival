@@ -197,7 +197,7 @@ instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRe
 	now lust of Miyuki is 1; [Carambola quest started]
 	now Carambola Tree is not resolved;
 	
-Carambola Tree is a situation.
+Carambola Tree is a situation. Carambola Tree is resolved.
 The sarea of Carambola Tree is "Zoo".
 
 instead of resolving a Carambola Tree:

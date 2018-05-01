@@ -107,10 +107,19 @@ to say JeromeTalkMenu:
 				if (nam is "Ask him about the price for entry again"):
 					say "[JeromeTalk2]";
 				if (nam is "Pay for entry with a bottle of clean water"):
+					LineBreak;
+					say "[bold type]You lose 1 water bottle![roman type][line break]";
+					decrease carried of water bottle by 1;
 					say "[JeromeTalk3]";
 				if (nam is "Pay for entry with some food"):
+					LineBreak;
+					say "[bold type]You lose 1 food![roman type][line break]";
+					decrease carried of food by 1;
 					say "[JeromeTalk3]";
 				if (nam is "Pay for entry with a bottle of orc cum"):
+					LineBreak;
+					say "[bold type]You lose 1 orc cum![roman type][line break]";
+					decrease carried of orc cum by 1;
 					say "[JeromeTalk4]";
 				if (nam is "Inquire about getting a lifetime membership"):
 					say "[JeromeTalk5]";
@@ -352,6 +361,11 @@ to say ShagShackSexMenu:
 	now sortorder entry is 22;
 	now description entry is "Enjoy some music and a 'show'";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Have fun with Gus, a male stork";
+	now sortorder entry is 23;
+	now description entry is "Spend some time with a slender avian";
+	[]	
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -411,7 +425,9 @@ to say ShagShackSexMenu:
 					-- "Spend Time with Alyona, a herm feline war veteran":
 						say "[ShagShackSex21]"; [by Shay]
 					-- "Experience Cassandra, a Muse with unconventional techniques":
-						say "[ShagShackSex22]"; [by Christmas Empress]
+						say "[ShagShackSex22]"; [by Hierophant]
+					-- "Have fun with Gus, a male stork":
+						say "[ShagShackSex23]"; [by Hyliad]
 				wait for any key;
 		else if calcnumber is 100:
 			say "Change your mind after all and go out?";
@@ -433,8 +449,7 @@ to say ShagShackSex1: [Eliza]
 		say "     Stepping forward and freeing your own manhood, your gaze is locked upon her well-bred pussy, you are momentarily interrupted by Jerome's slender tomcat flunky moving up to her and pouring a tiny bottle full of a creamy white substance down her throat, which she eagerly swallows. He is about to move away again when you grab his arm and have a look at what he just gave the woman. His little bottle has a handwritten tag on the side, reading 'Refresher'. The feline guy is a bit flustered at you becoming physical and says, 'Hey - let me go. This is orc cum, just microwaved for a few seconds and diluted. Has some amazing regenerative capabilities, among other things. Eliza is very popular just the way she is and we don't want her to stretch out from all the fucking.' With that said, he winds himself out of your grip and dashes off.";
 	WaitLineBreak;
 	say "     Stepping up behind the human woman, you put your hands on the very well-rounded buns of her black ass, squeezing those soft cheeks appreciatively. Never having left her ass-up position with both arms behind her back, the ebony-skinned beauty moans into the mattress, lost in the arousal and sensations of a constant string of sex acts she is put through. Thinking back, you don't think you've actually ever seen her not being used by someone for more than five minutes in the time you've been in here. And why wouldn't any guy slide his dick into such a sexy goddess? You're certainly going to do so, lining your cock up with her slightly gaping hole right this very moment!";
-	say "     Slick with the cum of who knows how many other men and herms, it is easy to sink your manhood into Eliza's pussy, which is still surprisingly tight for one of the most popular whores in here. Her inner passage is nice and snug around your [cock of player]
- shaft and the black woman trembles in arousal, giving a loud moan as you penetrate deeply. She has been fucked so much today that someone's creamy load starts to squelch out around your shaft when you're all the way inside her snatch. That's one hot, sloppy hole on Eliza!";
+	say "     Slick with the cum of who knows how many other men and herms, it is easy to sink your manhood into Eliza's pussy, which is still surprisingly tight for one of the most popular whores in here. Her inner passage is nice and snug around your [cock of player] shaft and the black woman trembles in arousal, giving a loud moan as you penetrate deeply. She has been fucked so much today that someone's creamy load starts to squelch out around your shaft when you're all the way inside her snatch. That's one hot, sloppy hole on Eliza!";
 	WaitLineBreak;
 	say "     Pulling back out to start fucking the dark-skinned whore for real, you look down at your erection, covered in the frothy white cum that her last suitor freshly churned up. You wrap your hand around its length and feel how slippery it is covered in this very special kind of lube, then thrust right back into Eliza's welcoming depths. Something about her is just made to be taken hard - maybe it's the generous curves of her butt wobbling so nicely each time your hips meet, the woman's very enthusiastic moans or your own ambition to surpass all those that fucked her before. No matter which, you really pound into the ebony-skinned beauty with a rapid rhythm of thrusts.";
 	say "     Sheathing yourself in her trembling body, you drive Eliza wild every time you bottom out, her gasps of pleasure steadily rising. Soon, they culminate in an orgasmic shout that is loud even half-muffled by the mattress her face is pressed against - and in that moment, you learn why no one can resist to cum in her amazing pussy! Tight as she felt before, now her inner muscles flex and squeeze your cock even more, as if jerking you off right in her squelching pussy! It feels so great that you even stop moving your hips, instead just grinding hard against the woman's ass in an effort to get more of your cock in there.";
@@ -965,8 +980,8 @@ to say ShagShackSex16: [Small otter dominatrix, by Fwuffymouse]
 	say "     'Stop staring, runt!' barks the mustelid. Gaze snapping downward, you stammer an apology. She snarls again, demanding that you kneel before her. As you comply, the sleek domme brings the crop down across your arm. The otter is poised above you, suddenly seeming much bigger than you remember. The commanding, little woman growls again, ordering you to apologise again, properly. [if player is submissive]'I'm sorry, mistress, forgive me!' you cry, letting your submissive instincts take over. She seems satisfied, bringing the crop down to your cheek and gently tapping it against your face[else]'I'm sorry, mistress,' you mutter, and you get a quick, sharp slap of leather against your other arm.[end if]";
 	say "     [bold type]the slinky little dominatrix scoots on the barstool and presents you with one of her paws. [bold type]Give her a foot-worship?[roman type][line break]";
 	say "     [line break]";
-	say "     ([link]Y[as]y[end link]) - Kiss her feet";
-	say "     ([link]N[as]n[end link]) - Politely decline";
+	say "     ([link]Y[as]y[end link]) - Kiss her feet.";
+	say "     ([link]N[as]n[end link]) - Politely decline.";
 	if player consents:
 		say "     [line break]";
 		say "     Taking the otteress's largest toe up into your mouth, you get a whiff of her foot scent. It's not an unpleasant smell, just a bit musty. You let your tongue roll about her largest toe for a while before pulling back and moving down the line, cleaning off each of the four tiny toes on the small domme's paw. She pulls it out of your mouth and plants the other on your face, forcefully rubbing that little paw about your face and softly growling at you to do a better job on this one. You take it into your mouth and start licking over the creases and between the soft pads. Again, you pay attention to the toes, slurping greedily at them and making certain to get every spot.";
@@ -1306,5 +1321,10 @@ to say ShagShackSex22: [by Hierophant]
 		else:
 			say "     'How've things been out there?' she asks, plucking out a few practice notes. 'Must be dangerous. You've been keeping out of trouble? Making friends, influencing people, not getting your ass violated by assorted psychos? I worry 'bout you sometimes, y'know!!!' she says, her cheeks puffing out a bit. But she begins playing a tune, and you let the warmth of her enchanted music fill you. You feel content and happy as she plays, her voice rising as she begins to sing to her own song. It feels near divine, the power of her music on you, a happiness you'd never thought you'd experience in a place like this filling your soul, slowly, but surely. You lean back onto the bed, relaxing, letting her work her magic on you. The moment you share is almost better than sex, stretching on, just the two of you and the music.";
 			say "     It goes on for a while like this, and if you're being entirely honest with yourself, you'd probably be pretty content if it went on forever, her words and song filling your heart and soul... but then there's a quiet, but firm, knocking at the door. 'Uh, sorry, but Jerome says time's up, Cass!' Kaden says, his voice slightly muffled by the walls. Cass sighs, plucking out one last note. 'Well, you heard the twink. You don't have to go home, but you can't stay here,' she says, rolling her eyes. You prepare to leave, Cass tuning her guitar again as you head for the door. 'Thanks for letting me practice my Enochian, by the way. Surprised you weren't weirded out by it. Most folks think it's me speaking in tongues,' she jokes. 'You know where to find me, right? I'll see you soon, hopefully.'";
+			
+[
+to say ShagShackSex23: [by Hyliad]
+-> see file Hyliad/Gus.i7x
+]
 
 Shag Shack ends here.

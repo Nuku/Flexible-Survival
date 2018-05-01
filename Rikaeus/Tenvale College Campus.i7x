@@ -94,7 +94,7 @@ to say dormstreetdesc:
 [Room Declaration]
 Second Floor Male Dorms is a room.
 Second Floor Male Dorms is above Tenvale College Male Dorms.
-The description of Second Floor Male Dorms is "Upon looking around you notice that the second floor of the male dorms looks pretty much the same as the first floor, at least aesthetically. There is another notice board on the wall but this one has sign up sheets for, surprisingly, the spartans on the campus. It is by then that you realize that there are a quite a few of them wandering around on this floor, making you muse that perhaps this is where they stay. Thankfully, at least for the atmosphere, the soldier-like college students aren't the only ones up here. Like below there are other students wandering around from room to room hanging out with their friends or just studying.".
+The description of Second Floor Male Dorms is "Upon looking around you notice that the second floor of the male dorms looks pretty much the same as the first floor, at least aesthetically. There is another notice board on the wall but this one has sign up sheets for, surprisingly, the spartans on the campus. It is by then that you realize that there are a quite a few of them wandering around on this floor, making you muse that perhaps this is where they stay. Thankfully, at least for the atmosphere, the soldier-like college students aren[']t the only ones up here. Like below there are other students wandering around from room to room hanging out with their friends or just studying.".
 
 [Room Declaration]
 East of Dorm Street is Tenvale College Male Dorms.
@@ -115,6 +115,13 @@ The description of Richard's Room is "[richardroomdesc]".
 
 to say richardroomdesc:
 	say "     The satyr boy's room is what you expect of a college student. Plastered all over the walls are lewd pictures of naked women and men, however upon closer examination you spot posters of male couples fucking that look to be recent acquisitions. You muse that Richard's recent goat changes appear to have enhanced his various desires. Turning your attention from the posters you notice there's various items on the floor from a football to stray jock straps to even a stray dildo. Out of the entire mess the only things that look to be neat are his bed which is covered in dark blue bedsheets and blankets and his computer area which is clean of junk.";
+
+[Room Declaration]
+Pericles' Room is a room.
+The description of Pericles' Room is "[periclesroomdesc]".
+
+to say periclesroomdesc:
+	say "     The strong male[']s room is the complete opposite of what one would define as a Spartan room. He has posters of various fictional books lining the wall as well as various weapons, both meticulously taken care of. On top of that, there is a large bookshelf filled with various books that match the posters. Beyond that he has a simple bed with red sheets, a computer sitting in the corner for his homework, and a window looking over the entire campus. The Spartan-Helot himself is wandering between throughout the room doing various things from looking at paperwork to looking out upon the campus.";
 
 [Room Declaration]
 North of College Campus Entrance is College Fountain.
