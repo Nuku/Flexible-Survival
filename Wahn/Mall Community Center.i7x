@@ -36,6 +36,7 @@ to FreeHandoutsEvent:
 	say "      Noticing your interest, one of the three women steps out from behind the desk and approaches you, a friendly smile on her face. 'You're welcome to join the line, too. We're open for anyone to get what they need, even if you don't live in the mall,' she says and looks down the lone line of people waiting, seeming pleased with the turn-out. You introduce yourself [if player is not defaultnamed]as [name of player] [end if]and tell her that you came over to see what all the commotion was about. She puts a hand to her chest and chuckles, then says, 'Oh, sorry. I guess I've gotten used to everyone knowing about us at the mall. My name is Florence, and these are my sisters, Marie and Olivia. We run the Haven Community Center, doing initiatives like this handout right now, as well as several others. Please let me know if you have any more questions.'";
 	WaitLineBreak;
 	FlorenceTalkMenu;
+	say "     Getting back to handing out condoms to the people standing in line, Florence and her sisters take care that everyone gets what they need, then eventually call it a day and move back into the former Travel Agency to the west.";
 	if HP of Florence is 0:
 		now HP of Florence is 1;
 	now Free Handouts is resolved;
@@ -51,7 +52,7 @@ to say HavenCCRoomDesc:
 
 Section 3 - Florence
 
-Florence is a woman.
+Florence is a woman. Florence is in Haven Community Center.
 The description of Florence is "[FlorenceDesc]".
 The conversation of Florence is { "<This is nothing but a placeholder!>" }.
 The scent of Florence is "     Florence smells of clean fur, with undertones that make you think of the endless expanse of the Savannah, grass swaying in the wind as it blows over the land.".
@@ -204,6 +205,7 @@ to say FlorenceTalk_Projects:
 
 to say FlorenceTalk_GooIntroduction:
 	say "     The anthro antelope smiles as you tell her that you want to meet the goo people. 'You want to meet them? That's nice - it'll do Blue good to talk to someone new. But I have to warn you. They are quite infective, and therefore do their best to keep their distance, ever since... some unfortunate incidents. Please don't go into their refuge if you're not ready to deal with that. They are still people, despite the strange appearance, and being stared at like freaks hurts them.' Nodding to Florence, you reply that you know how to behave yourself, after which she [if player is in Haven Community Center]goes have a quiet word with the goo person guarding the entrance to their refuge[else]goes into the community center and has a quiet word with a goo-person guarding a door in the back[end if]. Coming back after a little while, she nods to you and says, 'You can go and talk to them now. I've convinced Blue to let you in.'";
+	now HP of Florence is 3;
 
 to say FlorenceTalk_FluidDonation:
 	say "     Secure in the knowledge that your balls are ready for a sizable 'donation' of fresh cum, you give Florence a confident smile and tell her that you want to help out in supplying their goo people. She raises her eyebrows at how direct you are in this matter, then glances down to your crotch and gives a little giggle as she sees the growing bulge of your cock. 'Oh dear. Someone definitively is ready to make good of [PosAdj of player] offers. Um, how did you want to do this?'";

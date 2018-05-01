@@ -32,8 +32,8 @@ to say DireWolfVictorySex:
 		say "     You watch the dire wolf crash to the ground in defeat, slumped over on his side. You can see that the massive creature is still very hard, his cocks dripping with pre. You realize that this dire wolf is completely at your mercy.";
 	say "     [bold type]You could easily have your way with him if you want.[roman type][line break]";
 	LineBreak;
-	say "     ([link]Y[as]y[end link]) - Have fun with the dire wolf";
-	say "     ([link]N[as]n[end link]) - Leave it be";
+	say "     ([link]Y[as]y[end link]) - Have fun with the dire wolf.";
+	say "     ([link]N[as]n[end link]) - Leave it be.";
 	if the player consents:
 		if cocks of player > 0:
 			say "     Deciding to have some fun with this poor wolf, you stop and think about how exactly you want to use him. You could easily roll him over and ride[if cunts of player < 1] one of[end if] his pair of thick canine shafts, or you could mount that tight little ass of his. (Y=Ride, N=Fuck)";

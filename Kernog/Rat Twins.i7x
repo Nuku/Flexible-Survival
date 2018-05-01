@@ -25,6 +25,7 @@ Erin is a person.
 the description of Erin is "[ErinDesc]".
 
 to say ErinDesc:
+	project the figure of Erin_face_icon;
 	say "     Erin is one half of the pair of adventuring rats whom you saved from the pirate sharks. He looks fairly young, eighteen if you had to guess, and shares a lean and energetic build with his sister. His youthful face seems always alert for some mischief, azure eyes scanning the surroundings and throwing longing looks at his sister whenever their eyes meet. Like his false twin, his fur is mostly snow white, like his hair, with dark grey patches here and there. He wears a pair of army pants but no top, giving him a bad boy look. The backside of his pants have been cut open with scissors, to let his hairless tail wiggle freely behind him. Noticing that you look at him, Erin leans on a table and winks at you while he takes the pose";
 instead of sniffing Erin:
 	say "     Erin's fur retains the salty smell coming from the ocean. The rat looks at you quizzically. 'Why are you sniffing like this? Am I smelling?' he asks, a concerned look on his face.";
@@ -32,6 +33,7 @@ instead of sniffing Erin:
 Part B - Dialogue
 
 instead of conversing Erin:
+	project the figure of Erin_face_icon;
 	let randomnumber be a random number from 1 to 4;
 	if randomnumber is:
 		-- 1:
@@ -207,13 +209,16 @@ Violet is a person.
 the description of Violet is "[VioletDesc]".
 
 to say VioletDesc:
+	project the figure of Violet_face_icon;
 	say "     Violet is one half of the pair of adventuring rats whom you saved from the pirate sharks. She looks fairly young, maybe eighteen if you had to guess, and shares a lean and energetic build with her brother. Her youthful face seems always alert for some mischief, azure eyes scanning the surroundings and throwing longing looks at her brother whenever their eyes meet. Like his false twin, his fur is mostly snow white, like her hair, with dark grey patches here and there. Her hair is made up in unruly dreadlocks, dyed in several neon colors, although the color looks worn out, hair dyes must be rare in these times. Violet wears a black bra and a pair of used denims. She seems also fond of leather accessories: she wears a choker, a spiked wristband, and adorned her tail with bangles made of old leather belts. Noticing that you look at her, Violet grins, then flashes her breasts at you: 'Izzat what you want to see? Ha ha... Perv['].' She winks at you and pulls up her bra.";
+	
 instead of sniffing Violet:
 	say "     Violet's fur smells of sea salt, despite visibly taking great care of her fur. 'I smell of salt, right?' she asks, guessing your thoughts. 'Goddammit. And I keep taking showers, though.";
 
 Part B - Dialogue
 
 instead of conversing Violet:
+	project the figure of Violet_face_icon;
 	let randomnumber be a random number from 1 to 5;
 	if randomnumber is:
 		-- 1:

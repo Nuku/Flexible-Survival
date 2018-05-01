@@ -186,6 +186,7 @@ Figure of Eric_clothed_icon is the file "Eric_clothed.jpg".
 Figure of Eric_face_icon is the file "Eric_face.jpg".
 Figure of Eric_naked_icon is the file "Eric_naked.jpg".
 Figure of Eric_sofa_icon is the file "Eric1.jpg".
+Figure of Erin_face_icon is the file "Erin_face.jpg".
 Figure of Fiona_icon is the file "Fiona.jpg".
 Figure of Fancy_icon is the file "FSTF_Fancy_ig.jpg".
 Figure of Felix_icon is the file "Felix.jpg".
@@ -295,6 +296,7 @@ Figure of Urik_clothed_icon is the file "Urik_clothed.jpg".
 Figure of Urik_face_icon is the file "Urik_face.jpg".
 Figure of Urik_naked_icon is the file "Urik_naked.jpg".
 Figure of Valerie_icon is the file "Valerie.jpg".
+Figure of Violet_face_icon is the file "Violet_face.jpg".
 Figure of Yatur_clothed_icon is the file "Yatur_clothed.jpg".
 Figure of Yolanda_icon is the file "Yolanda_ig.jpg".
 Figure of Zigor_icon is the file "Zigor_ig.jpg".
@@ -576,10 +578,11 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Elijah_good_naked"	Figure of Elijah_good_naked_icon	"Banni"	g-black	"normal"
 "Elven Hunter"	Figure of ElvenHunter_icon	"Aosuka"	g-black	"normal"
 "Eric_clothed"	Figure of Eric_clothed_icon	"Kupo Klein"	g-black	"normal"
-"Eric_face"	Figure of Eric_face_icon	"Kupo Klein"	g-black	"normal"
+"Eric_face"	Figure of Eric_face_icon	"Sinealas"	g-black	"normal"
 "Eric_naked"	Figure of Eric_naked_icon	"Kupo Klein"	g-black	"normal"
 "Eric_sofa"	Figure of Eric_sofa_icon	"Bludwing"	g-black	"normal"
 "Eric & Urik Naked"	Figure of Eric_Urik_naked_icon	"Kupo Klein"	g-black	"normal"
+"Erin_face"	Figure of Erin_face_icon	"Sinealas"	g-black	"normal"
 "Ewe"	Figure of Ewe_icon	"Anymouse1968"	g-black	"normal"
 "Fancy"	Figure of Fancy_icon	"Anymouse1968"	g-black	"normal"
 "Feline_F1"	Figure of Feline_F1_icon	"Anymouse1968"	g-black	"normal"	[shows one of these two for female Feline]
@@ -755,9 +758,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Tristian"	Figure of Tristian_icon	"Enaya-TheWhiteWolfen"	g-black	"normal"
 "Urik_ass"	Figure of Urik_ass_icon	"Kupo Klein"	g-black	"normal"
 "Urik_clothed"	Figure of Urik_clothed_icon	"Kupo Klein"	g-black	"normal"
-"Urik_face"	Figure of Urik_face_icon	"Kupo Klein"	g-black	"normal"
+"Urik_face"	Figure of Urik_face_icon	"Sinealas"	g-black	"normal"
 "Urik_naked"	Figure of Urik_naked_icon	"Kupo Klein"	g-black	"normal"
 "Valerie"	Figure of Valerie_icon	"Sususmiles"	g-black	"normal"
+"Violet_face"	Figure of Violet_face_icon	"Sinealas"	g-black	"normal"
 "Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-black	"normal"
 "Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-black	"normal"
 "Werewolf (female)"	Figure of Werewolf_female_icon	"Watsup"	g-white	"normal"
@@ -930,8 +934,10 @@ carry out artistcredits:
 	say "     Dr. Mouse by JaxxBlackFox @ furaffinity.net[line break]";
 	say "     Doran by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Elijah by Banni @ https://www.furaffinity.net/user/banniart/[line break]";
+	say "     Eric Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Eric (on sofa) by Bludwing @ http://bludwingart.tumblr.com[line break]";
 	say "     Eric by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Erin Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Fancy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     François by Xenotropos @ furaffinity.net[line break]";
 	say "     Frank by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
@@ -973,6 +979,7 @@ carry out artistcredits:
 	say "     Orthas by The_Negative @ furaffinity.net[line break]";
 	say "     Paula by Kikeri-arts @ deviantart.com[line break]";
 	say "     Rachel by o-kemono @ furaffinity.net[line break]";
+	say "     Rane Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Rod by The_Negative @ furaffinity.net[line break]";
 	say "     Ronda (Slut Rat) by uniformvixen @ furaffinity.net[line break]";
 	say "     Ryousei by ValdericBlackstag @ https://www.furaffinity.net/user/valdericblackstag/[line break]";
@@ -992,8 +999,10 @@ carry out artistcredits:
 	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
 	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Tristian by Enaya-TheWhiteWolfen @ https://www.furaffinity.net/user/enaya-thewhitewolfen/";
+	say "     Urik Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Urik by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Valerie by Sususmiles @ furaffinity.net[line break]";
+	say "     Violet Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Yatur by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Yolanda by SandySchreiber @ furaffinity.net[line break]";
 	say "     Zigor by AugurMew @ furaffinity.net[line break]";
