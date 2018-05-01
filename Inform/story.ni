@@ -4944,6 +4944,7 @@ Include Hospital For Fs by Stripes.
 Include Hyena Hideout by Stripes.
 Include Junkyard and Warehouse by Wahn.
 Include Kitsune Hide Away by Kaleem mcintyre.
+Include Mall Community Center by Wahn.
 Include Mall Residents by Rikaeus.
 Include Medical Checkups by Stripes.
 Include Museum by Sarokcat.
@@ -5021,6 +5022,7 @@ Include Leonard Events by Stripes.
 Include Little Old Woman by Kaleem mcintyre.
 Include Lizard Parlor by Kaleem Mcintyre.
 Include Main Storyline by Stripes.
+Include Male Dorm Events by Rikaeus.
 Include Mall Events by Sarokcat.
 Include Mall Expansion by Wahn.
 Include Misc 10 by Kaleem mcintyre.
@@ -5048,6 +5050,7 @@ Include Pet Shop Event by Stripes.
 Include Pursuit of Science by Kaleem Mcintyre.
 Include Qytat Shifters by Hellerhound.
 Include Random Events by Hiccup.
+Include Rane Events by KorekaBii.
 Include Recordings by Wahn.
 Include Red Events by Stripes.
 Include Researcher Studio by Kaleem Mcintyre.
@@ -5132,6 +5135,7 @@ Include Dalmatian by Kaleem mcintyre.
 Include Dark Elf for FS by Stripes.
 Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
+Include Dire Wolf by Qazarar.
 Include Doberman for FS by Stripes.
 Include Donkeyman by Sarokcat n Verath.
 Include Donkeywoman by Sarokcat n Verath.
@@ -5370,6 +5374,7 @@ Include Bastet by Wahn.
 Include Bjorn by Rikaeus.
 Include Blake by Ssely.
 Include Blanche by Stripes.
+Include Blue by Wahn.
 Include Boghrim by Wahn.
 Include Bradford by Stripes.
 Include Brennan by Wahn. [WIP]
@@ -5382,6 +5387,7 @@ Include Chris by Wahn.
 Include Cindy by Stripes.
 Include Coleen by Sarokcat.
 Include Corbin by Wahn.
+Include Coura by Wahn.
 Include Daisy by Sarokcat n Verath.
 Include Danny by Wahn.
 Include David by Wahn.
@@ -5406,11 +5412,12 @@ Include Felix by Wahn.
 Include Finn by Wahn.
 Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
+Include G-Shep Squad by Rikaeus.
 Include Garrett by Stripes.
 Include Gerty by Qazarar.
 Include Glory by Wahn.
 Include Gordon by Rikaeus.
-Include G-Shep Squad by Rikaeus.
+Include Gus by Hyliad.
 Include Gwen by Stripes.
 Include Hadiya by Stripes.
 Include Hanu by Kernog.
@@ -5513,15 +5520,14 @@ Include Zigor by Stripes.
 [Pets]
 Include Artemis by Stripes.
 Include Aurora by Stripes.
+Include Baby Pets by Luneth.
 Include Felinoid Companion by Sarokcat.
 Include Feral Pets by Luneth.
 Include Gryphon Companion by Sarokcat.
 Include Honey by Stripes.
 Include Korvin by Stripes.
-Include Little Fox by Sarokcat.
 Include Rachel Mouse by Stripes.
 Include Ryousei by Wahn.
-Include Skunk Pet by Sarokcat.
 
 When play ends:
 	say "----------[line break]";

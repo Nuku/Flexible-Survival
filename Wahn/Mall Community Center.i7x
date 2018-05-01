@@ -107,13 +107,13 @@ to FlorenceTalkMenu:
 		now title entry is "Offer to donate some fluids";
 		now sortorder entry is 7;
 		now description entry is "If they need cum, you could help them out";
-	[]
+	[
 	if libido of Florence > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Volunteer at the clinic";
 		now sortorder entry is 8;
 		now description entry is "Help out where you can";
-	[]
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

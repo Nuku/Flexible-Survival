@@ -5,6 +5,8 @@ Version 1 of Male Dorm Events by Rikaeus begins here.
 [   0: Hasnt met                                           ]
 [   1: Has seen sucking off/riding males in the male dorm  ]
 
+JustinRelationship is a number that varies.
+
 instead of going to Tenvale College Male Dorms while (a random chance of 2 in 3 succeeds): [66% chance for some event]
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the mall lockerroom (random).[line break]";

@@ -668,13 +668,13 @@ to say mister:
 	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
 		say "mister";
 	else:
-		say "missy";
+		say "miss";
 
 to say Mister:
 	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
 		say "Mister";
 	else:
-		say "Missy";
+		say "Miss";
 
 to say Sir:
 	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
