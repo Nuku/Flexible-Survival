@@ -271,7 +271,7 @@ to say orthasfuck:
 			say "     ([link]N[as]n[end link]) - Don't break.";
 			if the player consents:
 				let oraltemp be 1;
-				if "MPreg" is listed in feats of player:
+				if player is mpreg_ok:
 					say "     You are about to start stroking and licking her cock-like ovipositor when you feel a stirring in your lower belly, causing you to moan. Remembering your hidden womb, you could take her egg in another manner. Shall you ride her and get that egg deposited inside you?";
 					if the player consents:
 						now oraltemp is 0;
@@ -389,7 +389,7 @@ to say orthasfuck:
 					impregnate with "Dragon";
 					now pregtype is 1;
 					if HP of Orthas < 4, now HP of Orthas is 4;
-			else if "MPreg" is listed in feats of player:
+			else if player is mpreg_ok:
 				LineBreak;
 				if HP of Orthas >= 7 and a random chance of 1 in 2 succeeds and bodyname of player is not listed in infections of TaurList:
 					say "     Sitting on the edge of her desk, Orthas pulls you up into her lap, readying to drive that phallic tendril of hers into you. With your hand to guide it, you aim it towards your back door and moan as it wriggles into you. It worms its way into your rectum with delightful pulses. Soon it's squirmed deep inside you and is nudging at that hidden second entrance to your womb. At this point, you're far too lustfully excited by the prospect of what is to come to think better of it. You start riding that undulating ovipositor for all you're worth while it works to tease that final barrier loose. With her tentacle [']cock['] rubbing along your sensitive rectal walls and pulsing against your prostate, she's able to drive you to another orgasm just as her egg is nudging its way past your anal ring. Travelling through her rippling [']member['], it passes through your spasming tunnel and - with a few mind-numbingly pleasurable pushes - pops past your secondary cervix to be deposited in your womb. This sends a kinky thrill through you and you masturbate yourself, both cock and pussy, until you're fully spent from your orgasm.";

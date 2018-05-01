@@ -75,7 +75,7 @@ Instead of resolving a Apartment 319:
 						if fightoutcome >= 10 and fightoutcome <= 19:
 							challenge "Demon Brute";
 							if fightoutcome >= 10 and fightoutcome <= 19:
-								say "'Alright, now I'm really impressed. You've definitely got some spunk about you. Think you can make it pass the final round though?' The unknown mutant snaps his fingers and instantly you are looking into the face of a incubus.";
+								say "'Alright, now I'm really impressed. You've definitely got some spunk about you. Think you can make it pass the final round though?' The unknown mutant snaps his fingers and instantly you are looking into the face of an incubus.";
 								challenge "Incubus";
 								if fightoutcome >= 10 and fightoutcome <= 19:
 									say "'Hmmm, well...this is...startling. I didn't know that Dagaz had such powerful friends. Huh, well...' The unknown mutant seems to silently ponder over something while slyly narrowing his eyes at you. When you take a step towards the other he is quick to back away from you. 'C-calm down.' A quick wave of a hand has you stopping your forward pursuit towards the other. 'I think it's about time that I ended this contract with Dagaz anyway. It's almost expired and he hasn't made a move to renew it as of yet.' The well dressed mutant sighs before snapping his fingers which then causes the assembled creatures you just defeated to spring up and then head for the door. Didn't you just beat them into submission not more than ten minutes ago?";

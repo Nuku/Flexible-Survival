@@ -234,7 +234,7 @@ to say dominick_sexmenu:
 	now sortorder entry is 9;
 	now description entry is "lavish that doggy cock with attention";
 	if HP of Dominick >= 5 and HP of Dominick < 10 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ):
-		if "Submissive" is not listed in feats of player and level of player > 3:
+		if player is not submissive and level of player > 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Beta training";
 			now sortorder entry is 98;
@@ -729,7 +729,7 @@ to say ForcedSubToDomSex2:
 		now lastfuck of Dominick is turns;
 
 to say ForcedSubtoDomSex3:
-	say "     Dom gives you a long look before speaking, 'I've been thinking about our first meeting, pet. At first I thought you were trying to take advantage of the situation, to assert your dominance but I see now that wasn't it. You practically threw yourself at me, knowing you couldn't possibly win. You were looking for something you needed and I think what you need, slut, is to be made into a proper bitch. We could take it slow, but we both know you need this now.' Dom stands up and orders you to strip naked. He then guides you to his desk, directing you to support yourself on it. [if scalevalue of player < 3]Seeing that you're not at the right height for what's to come, Dom finds a sturdy stool for you to stand on.[end if] Your master leans over and growls in your ear, 'I'm going to give you what you need, my desperate bitch. You'll never have to go without again.'";
+	say "     Dom gives you a long look before speaking, 'I've been thinking about our first meeting, pet. At first I thought you were trying to take advantage of the situation, to assert your dominance but I see now that wasn't it. You practically threw yourself at me, knowing you couldn't possibly win. You were looking for something you needed and I think what you need, slut, is to be made into a proper bitch. We could take it slow, but we both know you need this now.' Dom stands up and orders you to strip naked. He then guides you to his desk, directing you to support yourself on it. [if scalevalue of player < 3]Seeing that you're not at the right height for what's to come, Dom finds a sturdy stool for you to stand on. [end if]Your master leans over and growls in your ear, 'I'm going to give you what you need, my desperate bitch. You'll never have to go without again.'";
 	if HP of Dominick is 31:
 		if gsgl is 6 or gsgl is 12 or gsgl is 13:			[No breasts please.]
 			say "     'You're a woman now but I'm going to make you a real bitch.' With no more warning than that, Dom thrusts into your cunt, all the way up to his knot. [if cunt length of player < 16]You cry out as you're stuffed by your master's massive cock. He holds himself there for a few minutes, giving you ample time to get somewhat used to the feeling of fullness[else]You grunt as your master enters you roughly, less from its size than the suddeness, though Dom's cock certainly makes its presence known. Dom holds himself still briefly, giving you a moment to catch your breath[end if]. Sensing your readiness, Dom begins fucking you hard, each pump of his hips slamming his knot against your cleft. You pant in lust, the feeling of fullness your master's dick gives you driving you wild. You can't even think of pleasuring yourself, however, as you need both arms to brace yourself against Dom's pleasurable assault.";

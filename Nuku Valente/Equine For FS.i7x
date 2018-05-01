@@ -31,7 +31,7 @@ to say equine attack:
 
 to say beattheequinoid:
 	if cocks of player > 0 and cock length of player > 5 and a random number between 40 and 140 > libido of player:
-		say "     The black furred equine sinks to the ground, then slumps over, panting and defeated.  The battle, having gotten your blood pumping, has left your [cock size desc of player] [cock of player] cock engorged and throbbing.  Before you even think otherwise, you jump atop her and pin down her shoulders.  She groans softly and reaches up to push you off, but ends up wrapping her arms around you instead.  Even as you bring your hard rod into position, she spreads her legs for you and whinnies softly in anticipation, moaning as your glans slips in under her ballsac and presses into her wet pussy[if cock length of player < 12].  Her equinoid pussy is very accommodating, letting your penis in easily, but still grips you rather nicely as she clenches down around it in need of being filled[else if cock length of player < 20].  Her equinoid pussy is very accommodating, taking in your large penis easily, but still grips you rather nicely in her need to be filled[else].  Her equinoid pussy stretches a little to take your huge member, but is quite accommodating.  She moans and grips you even harder, her pussy cumming once even as you're stuffing her so full[end if].";
+		say "     The black furred equine sinks to the ground, then slumps over, panting and defeated.  The battle, having gotten your blood pumping, has left your [cock size desc of player] [cock of player] cock engorged and throbbing.  Before you even think otherwise, you jump atop her and pin down her shoulders.  She groans softly and reaches up to push you off, but ends up wrapping her arms around you instead.  Even as you bring your hard rod into position, she spreads her legs for you and whinnies softly in anticipation, moaning as your glans slips in under her ballsack and presses into her wet pussy[if cock length of player < 12].  Her equinoid pussy is very accommodating, letting your penis in easily, but still grips you rather nicely as she clenches down around it in need of being filled[else if cock length of player < 20].  Her equinoid pussy is very accommodating, taking in your large penis easily, but still grips you rather nicely in her need to be filled[else].  Her equinoid pussy stretches a little to take your huge member, but is quite accommodating.  She moans and grips you even harder, her pussy cumming once even as you're stuffing her so full[end if].";
 		say "     Her long, equine cock rests across her body, twitching as you pound into her.  It spits precum across the underside of her huge breasts of the large horse herm.  Having gotten quite aroused by the lovely show of this strong warrior now reduced to a horny slut beneath you, as well as her delicious cunt around you soon pushes you over the edge and you drive hard into her, blasting your hot seed into her pussy.  She arches her back and cums hard as well, painting her body with equine seed as you fill her.  '[one of]Oh yes, breed me you great warrior[or]Fill me with your seed[or]Put your strong colt in me[or]Breed me like your mare[or]Oh, breed me you powerful stud[at random]!' she whinnies loudly.  You do your best to fill her request, draining your balls into her before withdrawing.  As you get up, she moans softly and lays there, rubbing her tummy with a smile on her face.  You can't help but grin as you walk off, knowing another of her tribe will have to replace her on patrol if you've just knocked her up.";
 		now equinoiddefeat is 0;
 		decrease libido of player by libido of player / 5;
@@ -72,9 +72,9 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 10;
-	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 45;
-	now lev entry is 4; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 7; [ Monster's average damage when attacking. ]
 	now area entry is "Park"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -87,7 +87,7 @@ When Play begins:
 	now cunt length entry is 15; [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 10; [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 30; [ Target libido the infection will rise towards. ]
-	now loot entry is "lucky horseshoe"; [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "lucky horseshoe"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 30; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "muscular"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]

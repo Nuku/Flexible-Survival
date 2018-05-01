@@ -12,6 +12,7 @@ Version 1 of Ancient Tome by Wahn begins here.
 [  22: player told Eric he doesn't have the book                                       ]
 [  23: player told Eric the truth about him being tentacle fucked                      ]
 [  24: player told Eric he doesn't have the book (after tentacle fucking)              ]
+[  96: player gave Eric the book back after he got tentacle-fucked                     ]
 [  97: player gave Eric the book back after he got almost tentacle-fucked              ]
 [  98: player took the book after Eric was tentacle fucked (unknown to the player)     ]
 [  99: player took the book after Eric had a read                                      ]
@@ -55,8 +56,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and HP of Eric
 		now TomeFound is 1; [Eric got the book]
 		now lastTomeInteraction is turns;
 
-instead of going inside from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 99 and TomeFound is 1 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
-	move player to Bunker;
+after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 99 and TomeFound is 1 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Eric reads the book - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
 	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As let your gaze sweep over the room, you spot Eric, lying stretched out on his bed and reading - but not just any book but that old tome he found not long ago. Elbows braced on the mattress, his head is bent over the book and he seems to be studying with an intent gaze. Curious, you wander over to the college student and glance over his shoulder. The page he is looking at is filled with strange curving squiggles, following no script you can really recognize. Clearing your throat, you manage to draw Eric's attention away from the book after a few seconds and he looks up at you with a curious expression.";
@@ -82,11 +82,10 @@ instead of going inside from Grey Abbey Library while (Eric is in Bunker and HP 
 		now TomeFound is 2; [Eric is reading the book]
 		now lastTomeInteraction is turns;
 
-instead of going inside from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and TomeFound is 2 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
-	move player to Bunker;
+after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and TomeFound is 2 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Eric gets tentacled - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
-	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As let your gaze sweep over the room, you spot Eric, lying in his bed under a thin blanket. He is sleeping, yet from the looks of it it seems a bit fitful as he moves around, his head lolling back and forth slowly as he pants visibly.";
+	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As let your gaze sweep over the room, you spot Eric, lying in his bed under a thin blanket. He is sleeping, yet from the looks of it, it seems a bit fitful as he moves around, his head lolling back and forth slowly as he pants visibly.";
 	say "     [bold type]Maybe you should check on him...[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Walk over and wake him if he is having a nightmare or something.";
@@ -206,6 +205,5 @@ instead of trading the ancient tome when the current action involves the Eric:
 		now TomeFound is 1; [Eric got the book now]
 	else if TomeFound is 101: [Eric is afraid of the book and was offered it back before]
 		say "     You shouldn't tease Eric with the tome any further. He was genuinely afraid the last time. Confronting him with the book would just be cruel after that.";
-
 
 Ancient Tome ends here.

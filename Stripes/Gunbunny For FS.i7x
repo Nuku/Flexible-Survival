@@ -66,7 +66,7 @@ to say losetogunbunny:
 Section 4 - Player Victory
 
 to say beatthegunbunny:
-	if ( nogunbunnysex > 2 and ( the remainder after dividing nogunbunnysex by 5 is not 0 ) ) or ( cocks of player is 0 and cunts of player is 0 ):
+	if ( nogunbunnysex > 2 and ( the remainder after dividing nogunbunnysex by 5 is not 0 ) ) or ( player is neuter ):
 		say "     Your last blow knocks her [if gb_gun > 3]gun[else]guns[end if] skittering away and sends the bunny girl to the ground. She struggles once or twice to get up, but is too weakened. Tired from the near-constant [if gb_gun is 6]blaster fire[else]gunfire[end if] you were trying to avoid, you are just happy it's over and just leave the exhausted girl behind. Before you go, you look around for [if gb_gun > 3]it, but you cannot find her weapon[else]them, but you cannot find her guns[end if].";
 		increase nogunbunnysex by 1;
 	else if cocks of player > 0:

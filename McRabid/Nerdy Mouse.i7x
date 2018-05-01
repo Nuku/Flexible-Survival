@@ -34,7 +34,7 @@ to say beatthenerdymouse:
 	say "     [one of]You grin widely as you wrap the nerd up in a headlock and give him a brutal noogie. 'Stoppiiiiiiit noooo!' the puny mouse squeaks[or]You wrap your arm over the little guy's shoulders and noisily slurp your finger before jabbing it into one of his big, round ears.  'Aaaah noooo! Wet willie!' the puny mouse squeaks[or]Acting like you're leaving, you walk past him before quickly grabbing the waistband of his underwear and yanking it upwards.  'AAGH!'  The mouse gives a high pitched squeak before falling over from your wedgie[at random]. Satisfied with adding insult to injury you wander away from the humiliated nerd.";
 
 [
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say ".";
 		say "     [one of]You grin widely as you wrap the nerd up in a headlock and give him a brutal noogie. 'Stoppiiiiiiit noooo!' the puny mouse squeaks[or]You wrap your arm over the little guy's shoulders and noisily slurp your finger before jabbing it into one of his big, round ears.  'Aaaah noooo! Wet willie!' the puny mouse squeaks[or]Acting like you're leaving, you walk past him before quickly grabbing the waistband of his underwear and yanking it upwards.  'AAGH!'  The mouse gives a high pitched squeak before falling over from your wedgie[at random]. Satisfied with adding insult to injury you wander away from the humiliated nerd.";
 	else:
@@ -91,9 +91,9 @@ When Play begins:
 	now per entry is 9;
 	now int entry is 17;
 	now cha entry is 11;
-	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 32;
-	now lev entry is 3; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
 	now area entry is "Campus"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -106,11 +106,11 @@ When Play begins:
 	now cunt length entry is 0; [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0; [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 30; [ Target libido the infection will rise towards. ]
-	now loot entry is "soda"; 	[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "soda"; 	[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 20; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lanky[or]skinny[or]lithe[or]short[at random]";
-	now type entry is "[one of]rodent[or]musine[or]mousey[as decreasingly likely outcomes]";
+	now type entry is "[one of]rodent[or]murine[or]mousey[as decreasingly likely outcomes]";
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]

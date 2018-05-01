@@ -142,7 +142,7 @@ the fuckscene of Larissa is "[sexwithLarissa]".
 to say sexwithLarissa:
 	if lastfuck of Larissa - turns < 8:
 		say "     'We'll have to put that on hold, hon. I'm not due to get another break for a while yet.'";
-	else if cocks of player is 0 and cunts of player is 0:
+	else if player is neuter:
 		say "     You're ill-equipped to consider fooling around with [objpro of Larissa] at the moment.";
 	else if HP of Larissa is 0:
 		say "     Larissa pulls a spritz bottle out of a drawer under the counter, spraying you with diluted vinegar. You are driven back. 'Is everyone a horny freak now?  Why can't they just all leave me alone so I can work in peace?' she grumbles.";

@@ -260,7 +260,7 @@ to say reindeerbreastheat:
 	else:
 		say "You moan lustfully and fondle your chest, teasing your nipples. Your heat is quite unbearable, with your sweet juices running down your legs and filling the air with the scent of your arousal. As you continue to play with yourself, your nipples start to leak milk, rich and scented like brandy egg nog. Delighted at this, you continue to milk yourself until this surge of lust passes.";
 		[copied entirely from the 'milk me' section]
-		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
+		repeat with T running from one to ( ( breasts of player ) / 2 ):
 			increase carried of egg nog by 1;
 		increase libido of player by a random number from 3 to 8;
 		increase libido of player by a random number from 3 to 8;

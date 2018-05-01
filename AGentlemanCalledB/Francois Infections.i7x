@@ -42,8 +42,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Cheesecake";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";				[ Text when monster loses.  Change 'Cheesecake' as above. ]
-	now victory entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";					[ Text when monster wins.  Change 'Cheesecake' as above. ]
+	now defeated entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";				[ Text when monster loses. Change 'Cheesecake' as above. ]
+	now victory entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";					[ Text when monster wins. Change 'Cheesecake' as above. ]
 	now desc entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";						[ Description of the creature when you encounter it. ]
 	now face entry is "soft and delicate, with plump strawberry red lips and whipped cream hair";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "[CheesecakeBodyDesc]";	[ Body Description, format as the text "Your body is (your text)." ]
@@ -61,9 +61,9 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 24;			[ The monster's starting HP. ]
-	now lev entry is 1;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 1;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 3;			[ Monster's average damage when attacking. ]
 	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -76,7 +76,7 @@ When Play begins:
 	now cunt length entry is 18;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6;		[ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 55;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -96,8 +96,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Gingerbread";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";				[ Text when monster loses.  Change 'Gingerbread' as above. ]
-	now victory entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";					[ Text when monster wins.  Change 'Gingerbread' as above. ]
+	now defeated entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";				[ Text when monster loses. Change 'Gingerbread' as above. ]
+	now victory entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";					[ Text when monster wins. Change 'Gingerbread' as above. ]
 	now desc entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";						[ Description of the creature when you encounter it. ]
 	now face entry is "devoid of any human features save for your nose and eyes, which seem to be fully functional despite appearing to be drawn on with [if cocks of player is 0 and cunts of player > 0]pink[else]blue[end if] icing";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a gingerbread [if cocks of player > 0]man[else if cunts of player > 0]woman[else]person[end if]. Your entire form is strangely flat, with no discernible joints, though you are still able to move around normally, if a little stiffly";	[ Body Description, format as the text "Your body is (your text)." ]
@@ -115,9 +115,9 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 24;			[ The monster's starting HP. ]
-	now lev entry is 1;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 1;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 3;			[ Monster's average damage when attacking. ]
 	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -130,7 +130,7 @@ When Play begins:
 	now cunt length entry is 12;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 4;		[ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 55;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

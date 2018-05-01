@@ -123,7 +123,7 @@ Instead of resolving a Thankful Soldier:
 			if player consents: [just talking]
 				LineBreak;
 				say "     You chat a bit with David about life before the nanite plague and now and what's going on in the city. Speaking to a regular human about these things calms your mind and strengthens your human self-image a bit. After a while, you say your goodbyes and he goes on walking his patrol. Maybe you'll see him again the next time he comes through here...";
-				increase humanity of player by 10;
+				SanBoost 10;
 			else: [sex]
 				LineBreak;
 				if thirst of David is 0:
@@ -1744,8 +1744,7 @@ instead of going down from the Grey Abbey Library while (David is in Bunker and 
 	now RyouseiDavidInteraction is 1;
 	now lastRyouseiDavidInteraction is turns;
 
-instead of going inside from Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction < 2 and companion of player is royal tiger and (lastRyouseiDavidInteraction - turns > 6)):
-	move player to Bunker;
+after going down from Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction < 2 and companion of player is royal tiger and (lastRyouseiDavidInteraction - turns > 6)):
 	if RyouseiDavidInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: David & Ryousei Scene; RyouseiDavidInteraction: [RyouseiDavidInteraction][line break]";

@@ -58,7 +58,7 @@ to say SnipsScent:
 	say "     The crab's smell is faintly reminiscent of the beach.";
 
 to say Snipsdesc:
-	say "     It's so cute! It has huge eyes that seem to stare into your soul and big pincers that go clackity clack.";
+	say "     It's so cute! He has huge eyes that seem to stare into your soul and big pincers that go clackity clack. The little crab has a reddish-yellow shell, while the tips of its claws are a soft pearly-white. His huge eyes stand on slender stalks that seem to follow you wherever you go. The long spindly legs coming out of his small abdomen carry it side to side, however his steps are clumsy, causing him to fall down on occasion.";
 
 instead of conversing the Snips:
 	if player is in Computer Lab and Snips is in Computer Lab:
@@ -146,7 +146,7 @@ to say SnipsTalk2:
 		say "     You settle yourself down on the floor next to Snips cubicle and gently thump the soft dirt until your little crab comes running to see what is going on. He quickly makes a grab for one of your fingers, holding it firmly in one of his pincers. You can tell that the crustacean is being playful, seeing as his grip isn't causing the pain that you know it's capable of delivering.";
 		if Char-H of Elijah is "2":
 			say "     Eventually he loosens his grip, instead scuttling back to his home and grabbing his toy crab friend, reminding you of a toddler grabbing its favorite stuffed animal. As the two of them continue to play around in the dirt, you notice the remains of past meal in the dirt, mostly some sort of plant life. Snatching up a piece, you place it closer to Snips, wondering if he is hungry or not. Afterwards he doesn't seem particularly interested in it, that is until you look away. He has crept closer to the food you placed on the dirt and brought his little friend with him. It end up becoming a game, with you looking away and glancing back quickly to see if you can catch him, every time you act like you haven't noticed. When Snips is right on top of the food you look away for a few seconds and are able to hear his munching. Quickly turning your attention back to him you see the little bit of food is now missing.";
-			say "     Raising an eyebrow at your cute little crab, he quickly point one claw at the toy Elijah gave him. You can't help but burst out laughing at once again being reminded of a child, you can almost hear his internal voice say ‘It was them, not me!’ Coming down from your laughing fit, Snips blows a few bubbles at you before grabbing his toy and scuttling home. You watch as he cuddles up close to the friend he just accused of eating the food, making you smile once again. You say goodnight before getting back to your feet, you ready yourself to head back out to the task at hand.";
+			say "     Raising an eyebrow at your cute little crab, he quickly point one claw at the toy Elijah gave him. You can't help but burst out laughing at once again being reminded of a child, you can almost hear his internal voice say 'It was them, not me!' Coming down from your laughing fit, Snips blows a few bubbles at you before grabbing his toy and scuttling home. You watch as he cuddles up close to the friend he just accused of eating the food, making you smile once again. You say goodnight before getting back to your feet, you ready yourself to head back out to the task at hand.";
 			increase humanity of player by 10;
 		else:
 			say "     Eventually he loosens his grip, instead deciding it would be more fun to play in the sand. Picking up a small pebble in the dirt, you hold it out to Snips who eagerly grabs it from your fingers. The begins to do a strange sort of scuttling dance with the pebble held high like a trophy. You can't help but laugh at bit at the cute little guys antics, your laughing though gives the crustacean pause. Looking up at you with those huge eyes, it almost feels like he is looking deep inside your soul, well it would if not even a second later he scuttles quickly back to his home and gently places the pebble you gave him right next to opening. Deciding he has had enough of playtime, Snips turns to face you before raising up a single claw almost to say goodbye. He makes his way back into his little tunnel, obviously tuckered out. You say goodnight before getting back to your feet, you ready yourself to head back out to the task at hand.";
@@ -163,7 +163,7 @@ Instead of resolving lost crab:
 		say "     The crab scuttles towards you and reaches out to poke lightly at where the food is stored. Do you want to give it some?";
 		if the player consents:
 			delete food;
-			say "     The crab munches quite happily at the food, blowing a few bubbles inbetween bites to show its appreciation. Laying down next to the crab, you can't help but laugh a little bit at how happy it looks just nibbling away at its food. Without a second thought you reach out and stroke the smooth shell, causing the crab to stop eating and just stare at you with its abnormally huge eyes. From somewhere further down the beach you make can hear a loud roar echo out. The little crab doesn't hesitate to scuttle closer to you seeking shelter. Wrapping an arm around the frightened crustacean, you continue to play protector while it finishes its meal. Once it is finished eating you get up to carry on with your exploration of the area, glancing back down at the crab to say goodbye you are met with those huge eyes that almost look back at you imploringly.";
+			say "     The crab munches quite happily at the food, blowing a few bubbles in between bites to show its appreciation. Laying down next to the crab, you can't help but laugh a little bit at how happy it looks just nibbling away at its food. Without a second thought you reach out and stroke the smooth shell, causing the crab to stop eating and just stare at you with its abnormally huge eyes. From somewhere further down the beach you make can hear a loud roar echo out. The little crab doesn't hesitate to scuttle closer to you seeking shelter. Wrapping an arm around the frightened crustacean, you continue to play protector while it finishes its meal. Once it is finished eating you get up to carry on with your exploration of the area, glancing back down at the crab to say goodbye you are met with those huge eyes that almost look back at you imploringly.";
 			say "     The crab raises its pincers in an act that on a human would almost look like being asked to be picked up. A little leary of the sharp claws you lean down scooping up the crab, thankfully you interpreted the action correctly as the crab seems content to now come with you. Deciding that if this little guy… errr girl… whatever it is, is going to join you it needs a name. Thinking to yourself a bit, your eyes immediately are drawn to the sizable claws its sporting. A name pops into your head, Snips! The name goes with the claws while at the same time is perfect for a cute little crab. Informing your companion of their new name all that you receive in response is a few bubbles blown at you. That decided, you go back to the exploration of the beach.";
 			now cute crab is tamed;
 			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing [link]pet cute crab[as]pet cute crab[end link]. You can see all the pets you have tamed with the [link]pet[as]pet[end link] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [link]pet dismiss[as]pet dismiss[end link], or just [link]dismiss[as]dismiss[end link])[roman type]";
@@ -190,7 +190,7 @@ the fuckscene of house cat is "With all the sex-crazed people out there, you're 
 to say SummonDinah:
 	remove Dinah from play;
 	if player is in Computer Lab and Dinah is in Computer Lab: [summoning while standing next to her]
-		say "     ...";
+		say "     You call Dinah over to you, watching as she stalks over to your side, walking like a Predator on the prowl.";
 	else: [regular summoning]
 		say "     You begin to call out for Dinah, only to stop in embarrassment as you realize she is already washing her paws nearby, watching you, obviously amused at your antics.";
 
@@ -199,7 +199,7 @@ to say DismissDinah:
 	if player is not in Computer Lab: [regular dismiss]
 		say "     You begin to tell Dinah that she can head on home, only to find a pair of glowing eyes watching you from the shadows, right before they fade away completely.";
 	else: [dismissing her in the computer lab]
-		say "     ...";
+		say "     Reaching down to stroke Dinah's soft fur, you tell her that she can rest for now. Rubbing up against your leg, she then begins to make her way back to her cubicle to laze the day away.";
 
 Dinah is a woman.
 The description of Dinah is "[DinahDesc]".
@@ -214,12 +214,74 @@ to say DinahScent:
 	say "     Your little kitty smells like a normal cat.";
 
 to say DinahDesc:
-	say "     The house cat is covered in soft calico fur, and seems to be happy enough to just follow you along and see what happens, and perhaps take care of any extra milk you might come across. Her whiskers twitch as she smells the area for anything of interest.";
+	say "     Dinah is covered in soft calico fur, and seems to be happy enough to just follow you along and see what happens, and perhaps take care of any extra milk you might come across. The pink rhinestone collar she has around her neck seems to sparkle with every move she makes. Her whiskers twitch as she smells the area for anything of interest.";
 
 instead of sniffing house cat:
 	say "     Your little kitty smells like a normal cat.";
 
+instead of conversing the Dinah:
+	if player is in Computer Lab and Dinah is in Computer Lab:
+		say "[DinahTalkMenu]";
+	else if companion of player is house cat:
+		say "[DinahTalkMenu]";
+	else:
+		say "     Dinah isn't here.";
+
+instead of conversing house cat:
+	if house cat is not tamed:
+		say "     Who?";
+	else:
+		if player is in Computer Lab and Dinah is in Computer Lab:
+			say "[DinahTalkMenu]";
+		else if companion of player is house cat:
+			say "[DinahTalkMenu]";
+		else:
+			say "     Dinah isn't here.";
+
 Section 2.2 - House Cat Menu
+
+to say DinahTalkMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Watch Dinah";
+	now sortorder entry is 1;
+	now description entry is "Sit back and just watch how Dinah goes about her day";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Watch Dinah"):
+					say "[DinahTalk1]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You back away from the house cat, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
+
+to say DinahTalk1:
+	say "     You decide to watch Dinah for a bit out of curiosity, just to see how she spends her time. After a few minutes you are already bored out of your mind. She hasnt moved at all, well other than her tail flicking back and forth. The cat's eyes never seem to leave you though, her expression is both curious and disinterested all at the same time, must be a cat thing you guess. Just as you are about to get up to leave you are forced to do a double take, your whole body frozen as you match her gaze, the little cat almost seems amused more than anything. Shaking your head a bit you continue to make your way back out into the library. You feel a little better once you are out of the computer lab, but you can't seem to get one thing out of your head. Was it just you or were Dinah's eyes just... glowing?";
+
 
 Section 2.3 - House Cat Event
 
@@ -306,16 +368,16 @@ The fuckscene of exotic bird is "The exotic bird is too small for that sort of t
 to say SummonChirpy:
 	remove Chirpy from play;
 	if player is in Computer Lab and Chirpy is in Computer Lab: [summoning while standing next to her]
-		say "     ...";
+		say "     Reaching out, you lightly pet Chirpy's brightly colored feathers. With a tip of your head she instantly flutters over, landing softly on your shoulder.";
 	else: [regular summoning]
 		say "     Hearing you whistle, Chirpy flaps over and takes up position overhead, keeping an eye out for any threats.";
 
 to say DismissChirpy:
 	move Chirpy to Computer Lab;
 	if player is not in Computer Lab: [regular dismiss]
-		say "     ...";
+		say "     you let out a loud high pitch whistle, followed by a swish of your arm. Chirpy glances down at you from the air, knowing the meaning and begins to fly back to the library.";
 	else: [dismissing her in the computer lab]
-		say "     ...";
+		say "     Walking over to the little birds cubicle, Chirpy happily flutters over to the desk to find ways to amuse herself till you have need of her again.";
 
 Chirpy is a woman.
 The description of Chirpy is "[ChirpyDesc]".
@@ -330,12 +392,73 @@ to say ChirpyScent:
 	say "     Your little kitty smells like a normal cat.";
 
 to say ChirpyDesc:
-	say "     This exotic bird is nice and happy now! You aren't sure just what kind of exotic bird your new friend is, but it has brilliantly coloured feathers, and lovely plumage on the back of its head. The bird is only slightly larger then a parrot, but it seems to have taken a liking to you, and will occasionally stop and rest on your shoulder, though the rest of the time it is flying nearby.";
+	say "     This exotic bird is nice and happy now! You aren't sure just what kind of exotic bird Chirpy is, but she has brilliantly coloured feathers, and lovely plumage on the back of her head. The bird is only slightly larger then a parrot, but she seems to have taken a liking to you, and will occasionally stop and rest on your shoulder, though the rest of the time she is flying nearby.";
 
 instead of sniffing Exotic Bird:
 	say "     It smells like an exotic bird with a faint, tropical scent to it.";
 
+instead of conversing the Chirpy:
+	if player is in Computer Lab and Chirpy is in Computer Lab:
+		say "[ChirpyTalkMenu]";
+	else if companion of player is Exotic Bird:
+		say "[ChirpyTalkMenu]";
+	else:
+		say "     Chirpy isn't here.";
+
+instead of conversing Exotic Bird:
+	if Exotic Bird is not tamed:
+		say "     Who?";
+	else:
+		if player is in Computer Lab and Chirpy is in Computer Lab:
+			say "[ChirpyTalkMenu]";
+		else if companion of player is Exotic Bird:
+			say "[ChirpyTalkMenu]";
+		else:
+			say "     Chirpy isn't here.";
+
 Section 3.2 - Exotic Bird Menu
+
+to say ChirpyTalkMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Watch Chirpy";
+	now sortorder entry is 1;
+	now description entry is "Sit back and just watch how Chirpy goes about her day";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Watch Chirpy"):
+					say "[ChirpyTalk1]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You back away from the exotic bird, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
+
+to say ChirpyTalk1:
+	say "     WIP";
 
 Section 3.3 - Exotic Bird Event
 
@@ -390,16 +513,16 @@ the fuckscene of helper dog is "You make the offer to your canine companion, but
 to say SummonHobo:
 	remove Hobo from play;
 	if player is in Computer Lab and Hobo is in Computer Lab: [summoning while standing next to him]
-		say "     ...";
+		say "     Leaning down you ruffle one of Hobo's ears, telling him it's time to get back out into the city. He happily wags his tail as he begins to trail you.[hoboreset]";
 	else: [regular summoning]
 		say "     Coming obediently to your call, Hobo moves to your side, ready and eager to assist you.[hoboreset]";
 
 to say DismissHobo:
 	move Hobo to Computer Lab;
 	if player is not in Computer Lab: [regular dismiss]
-		say "     ...";
+		say "     Softly patting Hobo's flank you tell him it's time to head home. He happily starts to run off but stops when he notices you not following. With a curt nod to him, he tilts his head then resumes his run back to the library.";
 	else: [dismissing him in the Computer Lab]
-		say "     ...";
+		say "     Walking over to the cubicle Hobo has made into his own little house, you lean down, giving the faithful dog a tight hug. With a final ear rub that leaves Hobo's tail wagging, you tell him to take it easy at home for awhile.";
 
 Hobo is a man.
 The description of Hobo is "[HoboDesc]".
@@ -416,8 +539,69 @@ to say HoboScent:
 to say Hobodesc:
 	say "     Hobo is a black and white shepherd with soulful and intelligent brown eyes. He will follow you and loyally assist you with your troubles.";
 
+instead of conversing the Hobo:
+	if player is in Computer Lab and Hobo is in Computer Lab:
+		say "[HoboTalkMenu]";
+	else if companion of player is helper dog:
+		say "[HoboTalkMenu]";
+	else:
+		say "     Hobo isn't here.";
+
+instead of conversing helper dog:
+	if helper dog is not tamed:
+		say "     Who?";
+	else:
+		if player is in Computer Lab and Hobo is in Computer Lab:
+			say "[HoboTalkMenu]";
+		else if companion of player is helper dog:
+			say "[HoboTalkMenu]";
+		else:
+			say "     Hobo isn't here.";
+
 
 Section 4.2 - Helper Dog Menu
+
+to say HoboTalkMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Watch Hobo";
+	now sortorder entry is 1;
+	now description entry is "Sit back and just watch how Hobo goes about his day";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Watch Hobo"):
+					say "[HoboTalk1]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You back away from the helper dog, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
+
+to say HoboTalk1:
+	say "     WIP";
 
 Section 4.3 - Helper Dog Event
 

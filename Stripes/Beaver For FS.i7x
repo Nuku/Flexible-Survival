@@ -27,11 +27,11 @@ to say randomcanadiancity:
 to say losetobeaver:
 	now nobeaversex is 0;
 	let analchance be 5;
-	if "More Anal" is listed in feats of player, increase analchance by 1;
-	if "MPreg" is listed in feats of player, increase analchance by 1;
-	if the player is mpreg_able, increase analchance by 1;
-	if cunts of player is 0 and cocks of player is 0, increase analchance by 1;
-	if "Less Anal" is listed in feats of player, now analchance is analchance / 2;
+	if anallevel is 3, increase analchance by 1;
+	if player is mpreg_ok, increase analchance by 1;
+	if player is mpreg_able, increase analchance by 1;
+	if player is neuter, increase analchance by 1;
+	if anallevel is 1, now analchance is analchance / 2;
 	if HP of player > 0:
 		say "     Giving into the cheerful beaver's advances, you are pushed to the ground. 'See, that's much better. No need for a big kerfuffle. Now let's get cozy, eh?' he says, giving you a kiss while letting his paw slide down to grope you. ";
 	else:
@@ -52,7 +52,7 @@ to say losetobeaver:
 		say "     His paw finds its way to your ass and teases at your tight pucker. You squirm for a moment, but find yourself quickly growing excited and you're soon helping him to pull off your gear and clothes. Once you're naked, you let the amorous fellow roll you over onto all fours.";
 		if scalevalue of player < 4 and a random chance of 1 in 4 succeeds:
 			say "     'You know what they say aboot Canada, eh?  We're bigger and we're on top,' he quips as he climbs atop you and thrusts his thick meat into your tight hole. You groan a little at this rough intrusion, but also feel a rush of pleasure as his thick meat rubs across your sensitive inner walls.";
-		else if "More Anal" is listed in feats of player and a random chance of 3 in 5 succeeds:
+		else if anallevel is 3 and a random chance of 3 in 5 succeeds:
 			say "     'Here, this should help you get your motor runnin['],' he says, nuzzling his fuzzy face against your ass. After a few gentle nipples with his sharp teeth, he presses his wedge-shaped head between your cheeks and starts licking at your pucker. His tongue moves gently across your crinkled flesh, teasing and rubbing at it, coaxing it to relax and open in preparation for what's to come. After making a few final thrusts of his tongue into your hole to make sure you're open for business (which cause you to moan in pleasure), he pulls away. Climbing atop you, he sinks his chubby shaft into your slick hole with relative ease, feeling a rush of pleasure as his thick meat rubs across your sensitive inner walls.";
 		else:
 			say "     Gently spreading your legs, he gets his throbbing cock lined up with your back entrance and brushes his glans across it a few times. Wanting to be filled, your ass pushes back, pushing his tip into you. Grinning down at you, he slowly sinks the rest of the way in. The penetration is slow at first, but he doesn't force it, giving your hole the time to accept the chubby intruder. While there's a bit of initial discomfort, that quickly gives way to a rush of pleasure as his thick meat rubs across your sensitive inner walls.";
@@ -210,7 +210,7 @@ when play ends:
 		else:
 			say "     Managing to hold out until the military come, you are extracted with the others sane enough to be potentially saved. While your time in the processing facility is tedious and boring, you keep a happy disposition and are always polite to both the staff and the others there. When tempers flare, you do your best to mediate and calm people down before things get out of hand. It doesn't always work, but at least you try. Because of all this, you end up rather well liked by most everyone and you're processed through a little faster by those who get to know you and feel that you must still be safe and sane, since you're such a nice, helpful guy.";
 			say "     Once out, you have a little trouble fitting into society as it tries to cope with this changing world. Oh, the transformation and the sex and everything you can cope with. It's stranger, little things that just seem off. You find the weather reports confusing, driving always has you going too slow and beer just doesn't taste good any more. You try to settle down, but you just don't feel comfortable until you take a job posting from Zephyr up north. Crossing the border, you settle into a semi-civilized community a little into the extensive nanite zone over most of the Great Lakes and things start all making sense again. Better food, better beer, cheap coffee, tastier donuts, the metric system and much more. Feeling you've ended up where you belong, you become one of Zephyr's few operatives in Canada, doing your best to report back to them on the activity north of the border. This mainly deals with trying to catalogue the unique blend of infections native to the Great Lakes Bubble and keeping them abreast of the political climate as the civil war there begins to escalate.";
-			if cocks of player > 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ):
+			if cocks of player > 0 and ( anallevel is 3 or player is mpreg_ok ):
 				say "     You end up hooking up with an energetic Pride Bunny while in downtown Toronto and, after several months of visits when your work takes you into that area, you manage to convince him to move out of the city and into your place. You have a lot of fun living with the sexy guy, his boundless energy makes for lots of great sex and you know he'll have plenty of fun boinking or bending over for the male neighbours while you're away[if player is mpreg_ok]. You end up having a few mixed litters of bunnies and beaver kits with him as well[end if].";
 			else if cocks of player > 0 and cunts of player > 0:
 				say "     You end up hooking up with a slender herm Sun Spot, a yellow-spotted dalmatian who loves the sunshine, and move in together. She ends up joining you in your work, using her sunny powers to dazzle ferals when things start to get out of hand. Her sunny disposition also helps keep your spirits up on long missions and when celebrating after getting home. She has a few pups of her own [if player is impreg_ok]and you some beaver kits [end if]over the course of your happy relationship together.";

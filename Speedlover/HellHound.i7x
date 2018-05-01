@@ -67,7 +67,7 @@ to say meetHellhound:
 				now hellHoundLevel is 1;
 				Hellhound infect female;
 			else if cunts of player > 0 and cocks of player > 0: [ Herm ]
-				say "     The hellhound seems to let out a indecisive 'hrrm,' sitting back on his haunches. 'Well, this causes something of a dilemma, which of your sexes do I make use of?' The beast cocks his head sideways. 'You would probably rather be a male, yes?'"; [Prompt cock or pussy]
+				say "     The hellhound seems to let out a, indecisive 'hrrm,' sitting back on his haunches. 'Well, this causes something of a dilemma. Which of your sexes do I make use of?' The beast cocks his head sideways. 'You would probably rather be a male, yes?'"; [Prompt cock or pussy]
 				if player consents:
 					now isHellhound is true;
 					now maleHound is True;
@@ -116,13 +116,13 @@ to Hellhound infect female:
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
 	now bodytype of player is "human";
-	now the daycycle of player is 0;
-	now the cunts of the player is 1;
-	now the cunt length of the player is 6;
-	now the cunt width of the player is 4;
-	now the breasts of the player is 2;
-	now the breast size of the player is 2;
-	now the libido of player is 100;
+	now daycycle of player is 0;
+	now cunts of player is 1;
+	now cunt length of player is 6;
+	now cunt width of player is 4;
+	now breasts of player is 2;
+	now breast size of player is 2;
+	now libido of player is 100;
 	now hellHoundLevel is 1;
 	move the player to Bunker, without printing a room description;
 	follow turnpass rule;
@@ -150,13 +150,13 @@ to Hellhound infect male:
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
 	now bodytype of player is "human";
-	now the daycycle of player is 0;
-	now the cocks of the player is 1;
-	now the cock length of the player is 6;
+	now daycycle of player is 0;
+	now cocks of player is 1;
+	now cock length of player is 6;
 	now the cock width of the player is 4;
-	now the breasts of the player is 2;
-	now the breast size of the player is 0;
-	now the libido of player is 100;
+	now breasts of player is 2;
+	now breast size of player is 0;
+	now libido of player is 100;
 	now hellHoundLevel is 1;
 	move the player to Bunker, without printing a room description;
 	follow turnpass rule;
@@ -237,13 +237,13 @@ every turn (This is the check Hellhound rule):
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
 					now bodytype of player is "human";
-					now the daycycle of player is 0;
+					now daycycle of player is 0;
 				else:
 					now body of player is "appears perfectly human at first. But on your belly there are six nipples, and between your legs rests a swollen, permanently in-heat Hellhound twat";
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
 					now bodytype of player is "human";
-					now the daycycle of player is 0;
+					now daycycle of player is 0;
 				say "     Your body doubles over, not in pain, but simply as muscles spasm and reshape. Your form returns to the human body you were born with, plus the additions you sport due to the Hellhound's [']gift['].";
 			if maleHound is True:
 				if cunts of player > 0:
@@ -251,22 +251,22 @@ every turn (This is the check Hellhound rule):
 					say "     Your newly-formed sex throbs, then rapidly ceases to be as the Hellhound's [']gift['] restores you to normal.";
 				now cunts of player is 0;
 				now cocks of player is 1;
-				now the cock length of the player is 6;
+				now cock length of player is 6;
 				now the cock width of the player is 4;
-				now the cunt length of the player is 0;
-				now the cunt width of the player is 0;
-				now the breasts of the player is 2;
-				now the breast size of the player is 0;
+				now cunt length of player is 0;
+				now cunt width of player is 0;
+				now breasts of player is 2;
+				now breast size of player is 0;
 			else:
 				if cocks of player > 0:
 					LineBreak;
 					say "     Your newly-formed shaft throbs, then rapidly ceases to be as the Hellhound's [']gift['] restores you to normal.";
 				now cocks of player is 0;
 				now cunts of player is 1;
-				now the cunt length of the player is 6;
-				now the cunt width of the player is 4;
-				now the breasts of the player is 2;
-				now the breast size of the player is 2;
+				now cunt length of player is 6;
+				now cunt width of player is 4;
+				now breasts of player is 2;
+				now breast size of player is 2;
 			if libido of player < 90, now libido of player is 90;
 		else if humanity of the player > 15:	[Bipedal Hellhound]
 			if hellHoundLevel < 2:
@@ -297,13 +297,13 @@ every turn (This is the check Hellhound rule):
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]bipedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of player is "[one of]canine[or]dog-like[at random]";
-					now the daycycle of player is 0;
+					now daycycle of player is 0;
 				else:
 					now body of player is "that of a bipedal dog, paw-like feet, and stubby-fingered hands with pawpads and dull black claws.";
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]bipedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of player is "[one of]canine[or]dog-like[at random]";
-					now the daycycle of player is 0;
+					now daycycle of player is 0;
 				say "     Your body doubles over, not in pain but simply because you can't remain upright as muscles spasm and reshape, your body reforming into a bipedal version of the infernal mutt you submitted to.";
 			if maleHound is True:
 				if cunts of player > 0:
@@ -311,22 +311,22 @@ every turn (This is the check Hellhound rule):
 					say "     Your newly-formed sex throbs, then rapidly ceases to be as the Hellhound's [']gift['] removes the female organs the nanites attempted to inflict upon you.";
 				now cunts of player is 0;
 				now cocks of player is 1;
-				now the cock length of the player is 6;
+				now cock length of player is 6;
 				now the cock width of the player is 4;
-				now the cunt length of the player is 0;
-				now the cunt width of the player is 0;
-				now the breasts of the player is 2;
-				now the breast size of the player is 0;
+				now cunt length of player is 0;
+				now cunt width of player is 0;
+				now breasts of player is 2;
+				now breast size of player is 0;
 			else:
 				if cocks of player > 0:
 					LineBreak;
 					say "     Your newly-formed shaft throbs, then rapidly ceases to be as the Hellhound's [']gift['] restores you to your cursed, hellhound state.";
 				now cocks of player is 0;
 				now cunts of player is 1;
-				now the cunt length of the player is 6;
-				now the cunt width of the player is 4;
-				now the breasts of the player is 8;
-				now the breast size of the player is 4;
+				now cunt length of player is 6;
+				now cunt width of player is 4;
+				now breasts of player is 8;
+				now breast size of player is 4;
 		else: [quad Hell Doggy ^.^]
 			if hellHoundLevel < 3:
 				now hellHoundLevel is 3;
@@ -351,17 +351,17 @@ every turn (This is the check Hellhound rule):
 				LineBreak;
 				now bodyname of player is "Hellhound";
 				if maleHound is True:
-					now body of player is "that of a uncommon mutt, four paw-like feet with wicked black claws, and no hands";
+					now body of player is "that of an uncommon mutt, four paw-like feet with wicked black claws, and no hands";
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]quadrapedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of player is "[one of]canine[or]dog-like[at random]";
-					now the daycycle of player is 2;
+					now daycycle of player is 2;
 				else:
-					now body of player is "that of a uncommon mutt, four paw-like feet with wicked black claws, and no hands";
+					now body of player is "that of an uncommon mutt, four paw-like feet with wicked black claws, and no hands";
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]quadrapedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of player is "[one of]canine[or]dog-like[at random]";
-					now the daycycle of player is 2;
+					now daycycle of player is 2;
 				say "     Your bones seem to heat and grow soft, the action making you collapse onto the ground as they no longer seem to be able to bear your weight. You are forced to lie there for a few minutes as muscles shift and joints pop. Eventually, the changes seem to complete and you're able to pull yourself to your feet, all four feet. You now wear the form of the foul demonic hound that tainted you.";
 			if maleHound is True:
 				if cunts of player > 0:
@@ -369,22 +369,22 @@ every turn (This is the check Hellhound rule):
 					say "     Your newly-formed sex throbs, then rapidly ceases to be as the Hellhound's [']gift['] removes the female organs the nanites attempted to inflict upon you.";
 				now cunts of player is 0;
 				now cocks of player is 1;
-				now the cock length of the player is 6;
+				now cock length of player is 6;
 				now the cock width of the player is 4;
-				now the cunt length of the player is 0;
-				now the cunt width of the player is 0;
-				now the breasts of the player is 2;
-				now the breast size of the player is 0;
+				now cunt length of player is 0;
+				now cunt width of player is 0;
+				now breasts of player is 2;
+				now breast size of player is 0;
 			else:
 				if cocks of player > 0:
 					LineBreak;
 					say "     Your newly-formed shaft throbs, then rapidly ceases to be as the Hellhound's [']gift['] restores you to your cursed, hellhound state.";
 				now cocks of player is 0;
 				now cunts of player is 1;
-				now the cunt length of the player is 6;
-				now the cunt width of the player is 4;
-				now the breasts of the player is 8;
-				now the breast size of the player is 4;
+				now cunt length of player is 6;
+				now cunt width of player is 4;
+				now breasts of player is 8;
+				now breast size of player is 4;
 		if libido of player < 90, now libido of player is 90;
 
 

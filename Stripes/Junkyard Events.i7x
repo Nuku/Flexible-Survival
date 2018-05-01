@@ -67,7 +67,7 @@ Instead of resolving a Raiding Party:
 								break;
 						say "[losetotigress]";
 						now junknum is 0;
-						say "     Your romp with the feline over, shi gives gives you one last kiss before telling you shi needs to get back to work. Shi points off towards the seedier part of town and tells you of a route leading you there, should you want to find hir and hir sisters for more fun.";
+						say "     Your romp with the feline over, shi gives you one last kiss before telling you shi needs to get back to work. Shi points off towards the seedier part of town and tells you of a route leading you there, should you want to find hir and hir sisters for more fun.";
 						now Entrance to the Red Light District is known;
 						increase score by 10;
 					else:

@@ -255,7 +255,7 @@ Report stabbing something (called the target) with something(called the pigstick
 		if the target is dead begin;
 			say "With one final thrust of your [pigsticker], [printed name of the target] drops to the ground, dead." instead;
 		end if;
-	say "You stab [the target] with your [the pigsticker]. [The target] yells out in pain.  ([The target][']s health: [present health of the target])[line break]";
+	say "You stab [the target] with your [the pigsticker]. [The target] yells out in pain. ([The target][']s health: [present health of the target])[line break]";
 	end if.
 
 Report stabbing something (called the target) with something(called the pigsticker) (this is the report stabbing non-people rule):

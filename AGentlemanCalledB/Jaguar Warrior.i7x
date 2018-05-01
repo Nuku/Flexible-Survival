@@ -30,11 +30,11 @@ hoodequipped is a number that varies.
 
 to say losetoJaguarWarrior:
 	say "     [if HP of player > 0]Unable to resist[else]Beaten by[end if] the jaguar warrior, you are helpless as he strips you of your gear. [run paragraph on]";
-	if "more anal" is listed in feats of player and a random chance of 1 in 3 succeeds:
+	if anallevel is 3 and a random chance of 1 in 3 succeeds:
 		say "[JagWarVic_Anal][mimpregchance]";
 	else if cunts of player > 0 and a random chance of 2 in 3 succeeds:
 		say "[JagWarVic_Vag][impregchance]";
-	else if "less anal" is not listed in feats of player and a random chance of 1 in 4 succeeds:
+	else if anallevel > 1 and a random chance of 1 in 4 succeeds:
 		say "[JagWarVic_Anal][mimpregchance]";
 	else:
 		say "[JagWarVic_Oral]";
@@ -172,8 +172,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Jaguar Warrior";                   [ The creature's name as displayed and used in naming descriptions]
 	now attack entry is "The jaguar warrior [one of]raises his shield and charges forward, knocking you off balance as he smashes it into your chest[or]strikes at you with his obsidian-edged sword[or]knocks your feet out from under you with a sweeping low kick[or]knocks you off balance with his shield before following up with a quick sword strike[at random]!";                      [ Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheJaguarWarrior]";       [ Text when monster loses.  Change 'Jaguar' as above. ]
-	now victory entry is "[losetoJaguarWarrior]";         [ Text when monster wins.  Change 'Jaguar' as above. ]
+	now defeated entry is "[beattheJaguarWarrior]";       [ Text when monster loses. Change 'Jaguar' as above. ]
+	now victory entry is "[losetoJaguarWarrior]";         [ Text when monster wins. Change 'Jaguar' as above. ]
 	now desc entry is "[JaguarWarriorDesc]";              [ Description of the creature when you encounter it. ]
 	now face entry is "that of an attractive feline";     [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "[JagBodyDesc]";                    [ Body Description, format as the text "Your body is (your text)." ]
@@ -191,9 +191,9 @@ When Play begins:
 	now per entry is 15;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Female";            [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female";            [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 95;                   [ The monster's starting HP. ]
-	now lev entry is 13;                  [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 13;                  [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 15;                 [ Monster's average damage when attacking. ]
 	now area entry is "Museum";           [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;                 [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -206,7 +206,7 @@ When Play begins:
 	now cunt length entry is 10;          [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6;            [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 70;               [ Target libido the infection will rise towards. ]
-	now loot entry is "";                 [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "";                 [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;            [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -234,13 +234,16 @@ Section 3 - Jaguar Headdress
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Jaguar Headdress"	"A golden yellow hood and shawl, covered in the exotic rosettes and spots of a Jaguar."	4	Jaguar Headdress
+"Jaguar Headdress"	"A golden yellow hood and shawl, covered in the exotic rosettes and spots of a Jaguar."	2	Jaguar Headdress
 
 Jaguar Headdress is equipment.
 It is not temporary.
+The plural of Jaguar Headdress is false.
+The taur-compatible of Jaguar Headdress is true.
+The size of Jaguar Headdress is 0.
 The AC of Jaguar Headdress is 12.
 The effectiveness of Jaguar Headdress is 35.
-The placement of Jaguar Headdress is "face".
+The placement of Jaguar Headdress is "head".
 The descmod of Jaguar Headdress is "A golden yellow furred hood and shawl with black rosettes and spots is draped over your head.".
 The slot of Jaguar Headdress is "head".
 The damagebonus of Jaguar Headdress is 1.

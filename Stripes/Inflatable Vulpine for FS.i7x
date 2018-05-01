@@ -61,7 +61,7 @@ When Play begins:
 	now cock entry is "[one of]inflatable[or]latex[or]orange latex[or]knotted[or]balloony[at random]";
 	now face change entry is "it quickly becomes hard to concentrate. Your head feels increasingly lighter and your worries drift away as air causes your changing head to inflate. A vulpine muzzle and cartoonishly foxish ears pop from your face as it turns into a balloon-like head[infvulp_reset]";
 	now body change entry is "[infvulpbodychange][infvulp_reset]"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it becomes glossy and shifts like liquid plastic. You turn a bright orange in colour, though areas of black and white start to distinguish themselves as well. These sections divide off into patches joined together by melted seams as your skin becomes a thin layer of colourful latex";
+	now skin change entry is "it becomes glossy and shifts like liquid plastic. You turn a bright orange in color, though areas of black and white start to distinguish themselves as well. These sections divide off into patches joined together by melted seams as your skin becomes a thin layer of colorful latex";
 	now ass change entry is "a sense of pressure grows there. This feeling builds up until finally, with a cartoonish 'Pop!' you suddenly gain a balloon-like fox tail";
 	now cock change entry is "it feels like its swelling up, though no change in size is occurring. While pleasurable, this mysterious feeling continues until finally the pressure releases in a blast of spooge. Your [cock size desc of player] penis becomes a balloon version of a cock, vulpine in shape with an inflatable knot at the base. It even comes with a sheath of white latex skin to house it when deflated";
 	now str entry is 8; [ These are now the creature's stats... ]
@@ -99,15 +99,15 @@ When Play begins:
 
 to say infvulpbody:
 	if infvulpstate <= 2:
-		say "empty, filled only with air like a balloon. You've got a very sexy figure, with [if cunts of player is 0]a slender physique[else]lovely curves and a narrow waist[end if]. Your arms and legs end in paw-like hands with pads of textured latex";
+		say "empty, filled only with air like a balloon. You've got a very sexy figure, with [if player is female]lovely curves and a narrow waist[else]a slender physique[end if]. Your arms and legs end in paw-like hands with pads of textured latex";
 	else:
 		say "empty, filled only with air like a balloon. You've got a rounded and full figure thanks to your increased inflation level, making you adorably plump and huggable";
 
 to say infvulpbodychange:
 	if infvulpstate <= 2:
-		say "it grows lighter and you giggle merrily for no reason. As your insides are replaced with air, you gain [if cunts of player is 0]a slender physique[else]lovely curves and a narrow waist[end if]. Your hands change, puffing up into cute paws and soon your feet do the same. By the time it's over, your body is that of some kind of inflatable balloon creature";
+		say "it grows lighter and you giggle merrily for no reason. As your insides are replaced with air, you gain [if player is female]a lovely curves and a narrow waist[else]slender physique[end if]. Your hands change, puffing up into cute paws, and soon your feet do the same. By the time it's over, your body is that of some kind of inflatable balloon creature";
 	else:
-		say "it grows lighter and you giggle merrily for no reason. As your insides are replaced with air, you gain a rounded and full figure as you keep inflating until you're adorably plump and huggable. Your hands change, puffing up into cute paws and soon your feet do the same. By the time it's over, your body is that of some kind of inflatable balloon creature";
+		say "it grows lighter and you giggle merrily for no reason. As your insides are replaced with air, you gain a rounded and full figure as you keep inflating until you're adorably plump and huggable. Your hands change, puffing up into cute paws, and soon your feet do the same. By the time it's over, your body is that of some kind of inflatable balloon creature";
 
 to say infvulp_reset:
 	now last_infvulp_airhead is turns;
@@ -120,11 +120,11 @@ an everyturn rule:
 	increase tempnum by humanity of player / 10;
 	decrease tempnum by libido of player / 10;
 	if a random chance of 5 in tempnum succeeds and last_infvulp_airhead - 2 > turns:
-		if facename of player is "Inflatable Vupline" or bodyname of player is "Inflatable Vulpine":
+		if facename of player is "Inflatable Vulpine" or bodyname of player is "Inflatable Vulpine":
 			now last_infvulp_airhead is turns;
 			let T be a random number between 1 and 3;
 			if T is 1:
-				say "     [one of]Overcome with a fit of giddiness, you giggle happily for no reason.[or]You bounce around happily, an empty-headed cheeriness filling you.[or]You're briefly distracted as a colourful scrap of paper blows by and you end up chasing it.[or]The vapid chorus to some silly pop song come to mind and soon you're humming along happily. As you try to sing along to the song in your head, you try to remember the rest of the lyrics, but keep substituting sexual words throughout without even realizing it.[in random order]";
+				say "     [one of]Overcome with a fit of giddiness, you giggle happily for no reason.[or]You bounce around happily, an empty-headed cheeriness filling you.[or]You're briefly distracted as a colorful scrap of paper blows by and you end up chasing it.[or]The vapid chorus to some silly pop song come to mind and soon you're humming along happily. As you try to sing along to the song in your head, you try to remember the rest of the lyrics, but keep substituting sexual words throughout without even realizing it.[in random order]";
 				if morale of player < ( charisma of player + perception of player ) / 2:
 					increase morale of player by 1; [half of 'maxmorale']
 			else if T is 2:

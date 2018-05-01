@@ -153,7 +153,7 @@ Instead of resolving a Boar Encounter:
 		WaitLineBreak;
 		say "     Bottomed out inside you, the boar looks around the small clearing around the two of you, almost daring anyone to watch him claim another [if player is female]woman[else]man[end if] for himself. 'Don't think I'm gonna go easy on you,' the strong male grunts in a good-natured tone and a throb of his cock inside you almost seems to underline his words. After giving you this short - and only - warning, he begins to rapidly thrust in and out of your hole. The force of him pistoning in and out of your body actually pushes you forward and down, and before you can really react in your aroused state you're pinned on the mossy ground with Garth rutting on top of you. His large hand grasps your shoulder to keep you from sliding away further from his hardest thrusts";
 		say "     'Take it slut,' the anthro boar almost roars, really letting out his wild side as he gets more and more into fucking you. ";
-		if "Submissive" is listed in feats of player:   [sub players]
+		if player is submissive:   [sub players]
 			say "Immensely turned on by his rough treatment, you loudly moan that he should use you hard, satisfy his lust and breed you like the bitch you are. The submissive posturing earns you a satisfied grunt from the strong male, followed by an extra hard thrust with his thick cock. ";
 		else:   [normal players]
 			say "Almost despite yourself, you can't help but be turned on by his rough treatment. There's something primal about serving as a furry male's partner and allowing him to satisfy his lust with you. ";
@@ -373,7 +373,7 @@ to say BoarAlphaChoice:
 		WaitLineBreak;
 		say "     Bottomed out inside you, the boar looks around the small clearing around the two of you, almost daring anyone to watch him claim another [if player is female]woman[else]man[end if] for himself. 'Don't think I'm gonna go easy on you,' the strong male grunts in a good-natured tone and a throb of his cock inside you almost seems to underline his words. After giving you this short - and only - warning, he begins to rapidly thrust in and out of your hole. The force of him pistoning in and out of your body actually pushes you forward and down, and before you can really react in your aroused state you're pinned on the mossy ground with Garth rutting on top of you. His large hand grasps your shoulder to keep you from sliding away further from his hardest thrusts";
 		say "     'Take it slut,' the anthro boar almost roars, really letting out his wild side as he gets more and more into fucking you. ";
-		if "Submissive" is listed in feats of player:   [sub players]
+		if player is submissive:   [sub players]
 			say "Immensely turned on by his rough treatment, you loudly moan that he should use you hard, satisfy his lust and breed you like the bitch you are. The submissive posturing earns you a satisfied grunt from the strong male, followed by an extra hard thrust with his thick cock. ";
 		else:   [normal players]
 			say "Almost despite yourself, you can't help but be turned on by his rough treatment. There's something primal about serving as a furry male's partner and allowing him to satisfy his lust with you. ";

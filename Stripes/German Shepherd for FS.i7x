@@ -307,7 +307,7 @@ to say losetogsd:
 			else if gsd_attack is true:	[fought then submitted]
 				say "     The German Shepherd growls and pushes you back into a wall as you surrender, bearing his teeth and making sure you know he's in control. Slowly his hackles drop and he stops growling, though he continues to hold you up against the wall.";
 				now gsd_slut is true;
-				if cunts of the player is 0: [male/neuter player submits]
+				if cunts of player is 0: [male/neuter player submits]
 					say "     'Rrrrrf, not stupid at least; you're willing to give in when you can't win. Seems like you might learn your place and accept that I'm the top dog around here.'";
 					say "     He seems to consider you carefully for a moment, then makes a decision. Keeping you pinned against the wall, he begins to firmly lick at your injuries, causing a slight burning sensation to spread from them before fading. The licking is soothing and you relax, letting the dog do as he wishes. After tending to a few of your superficial injuries, he steps back from the wall, a large grin on his scarred muzzle and his tail wagging.";
 					say "     'You'll make a good pack-mate to run with, or will soon at least.'";
@@ -321,7 +321,7 @@ to say losetogsd:
 				say "     The German Shepherd wuffs and eagerly approaches as you signal your submission. His arms slip around you as he hugs you close, licking at your face, nuzzling at your neck, his paw-like hands sliding down, rubbing and squeezing provocatively.";
 				say "     'Ooooh, such a good little bitch. It's much nicer if you just say yes, isn't it? So much more enjoyable for both of us.'";
 				now gsd_slut is true;
-				if cunts of the player is 0 and "Male Preferred" is not listed in feats of player:	[male/neuter and player can become female]
+				if cunts of player is 0 and "Male Preferred" is not listed in feats of player:	[male/neuter and player can become female]
 					say "     He gives an extra little sniff, taking in your [if cocks of player > 0]male [end if]scent, then chuckles as he licks your cheek.";
 					say "     'Mmm, bitch in spirit and mind, but not in body, it seems. Don't worry, I can help solve that for you, make you into what you really are.'";
 					say "     He slowly breaks off the hug, turning you around and pushing your shoulders down to make you get on all fours, then moves behind you.";

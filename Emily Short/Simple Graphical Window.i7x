@@ -161,7 +161,7 @@ Include (-
 [ TotalFillGraphicsWindows cur_pic result graph_width graph_height
 		img_width img_height;
 
-	if (FollowRulebook( (+glulx picture selection rules+) ) ) { cur_pic =  ResourceIDsOfFigures-->(+ internally selected picture +); }
+	if (FollowRulebook( (+glulx picture selection rules+) ) ) { cur_pic = ResourceIDsOfFigures-->(+ internally selected picture +); }
 	if (cur_pic == 0) rtrue;
 
       if (gg_picwin) {

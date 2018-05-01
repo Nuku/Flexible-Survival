@@ -29,9 +29,9 @@ to say PinkPoodledesc:
 		now poodleapproved is 0;
 	say "     As you wander through the high rise district, a figure steps out of a [one of]designer clothing store[or]high end shop[or]salon[at random] into view just ahead of you. She is an elegant-looking poodle girl with bright pink fur. The pink fluff does little to conceal the presence of her ample breasts, and her shaven lower half exposes her shapely torso and wet canine cunt. Her fashionable appearance is completed by large fluffy pompons covering your forearms and calves as well as the tip of her tail.[run paragraph on]";
 	if poodleapproved is 1:
-		say "  As she returns your inspection, a sultry smile creeps across her muzzle. [one of]'Your place or mine?' she says with a refined French accent before striding forward confidently. 'How about right here?'[or]'Ah, mon cher,' she says with a refined French accent before striding forward confidently. 'Looking for some company?'[or]'Ah, my lonely one,' she says with a refined French accent before striding forward confidently. 'You look like you could use some company.'[at random]";
+		say " As she returns your inspection, a sultry smile creeps across her muzzle. [one of]'Your place or mine?' she says with a refined French accent before striding forward confidently. 'How about right here?'[or]'Ah, mon cher,' she says with a refined French accent before striding forward confidently. 'Looking for some company?'[or]'Ah, my lonely one,' she says with a refined French accent before striding forward confidently. 'You look like you could use some company.'[at random]";
 	else:
-		say "  As she returns your inspection she scoffs, turning up her nose at you. [one of]'Such riff-raff you find around here these days!'[or]'Another uncouth beast,'[or]'Such a boorish creature!'[at random] she says with a refined French accent before striding forward confidently. 'I suppose I shall have to deal with you before you put my clients off.'";
+		say " As she returns your inspection she scoffs, turning up her nose at you. [one of]'Such riff-raff you find around here these days!'[or]'Another uncouth beast,'[or]'Such a boorish creature!'[at random] she says with a refined French accent before striding forward confidently. 'I suppose I shall have to deal with you before you put my clients off.'";
 
 to say losetoPinkPoodle:
 	now nopoodlesex is 0;
@@ -40,7 +40,7 @@ to say losetoPinkPoodle:
 	else:
 		if HP of player > 0:
 			say "     Unable or unwilling to resist the pretty pink poodle any longer, you raise your hands and signal your submission. ";
-			say "'I knew you would come around, darling. Now let's get down to business,' she says in her refined french accent as she gently pushes you to the ground.";
+			say "     'I knew you would come around, darling. Now let's get down to business,' she says in her refined french accent as she gently pushes you to the ground.";
 			if cocks of player > 0 and a random chance of 2 in 3 succeeds:
 				say "[pinkpoodledefeatsex]";
 			else if cunts of player > 0 and a random chance of 2 in 3 succeeds:
@@ -49,7 +49,7 @@ to say losetoPinkPoodle:
 				say "[pinkpoodledefeatoral]";
 		else:
 			say "     Unable to fend off the aggressive pink poodle, you stumble and fall to the ground. ";
-			say "'Mmm, so you like to play rough? Usually that costs extra darling, but I suppose you could make up for it some other way,' she says in her refined french accent as she steps over your supine form.";
+			say "     'Mmm, so you like to play rough? Usually that costs extra darling, but I suppose you could make up for it some other way,' she says in her refined french accent as she steps over your supine form.";
 			if cocks of player > 0 and a random chance of 2 in 3 succeeds:
 				say "[pinkpoodledefeatsex]";
 			else:
@@ -159,15 +159,15 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Pink Poodle";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "The pink poodle [one of]strikes you sharply across the face with an open paw[or]squeezes her large breasts together tantalizingly, distracting you just long enough to get in a quick hit[or]scratches you with her well-manicured claws[or]teases you playfully as she strikes a sultry pose[at random]!";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthePinkPoodle]";				[ Text when monster loses.  Change 'Pink Poodle' as above. ]
-	now victory entry is "[losetoPinkPoodle]";					[ Text when monster wins.  Change 'Pink Poodle' as above. ]
+	now defeated entry is "[beatthePinkPoodle]";				[ Text when monster loses. Change 'Pink Poodle' as above. ]
+	now victory entry is "[losetoPinkPoodle]";					[ Text when monster wins. Change 'Pink Poodle' as above. ]
 	now desc entry is "[PinkPoodledesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "a slim and attractive canine muzzle, tipped with a bright pink nose, but the most striking feature is the puffy pink bouffant atop your canine head, which blends into your long, fluffy poodle ears";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "elegant and well proportioned, with an attractive canine figure and sharp features. Your paw-like hands and feet are accentuated by pink paw pads and short matching claws";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "thick curly pink fur, styled neatly around your shoulders and chest, as well as large fluffy pompons on your forearms and lower legs that create an appearance not unlike thick-furred high fashion boots and arm warmers. The rest of your body is almost hairless as if recently shaven, exposing your pale";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have a thin shaven poodle tail, with a large pink pompon at its tip.";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]bright pink[or]knotted[or]canine[or]pointed[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "a bout of dizziness comes over you. You try to shake your head clear but quickly stop when something pink and fluffy strikes you in the face. As you gently stroke you new pink poodle ears you watch a slim canine muzzle form before your eyes, while the thick pink fur spreads from your ears up your head, forming a large bouffant hairstyle";	[ Face TF text, format as "Your face feels funny as (your text)." ]
+	now face change entry is "a bout of dizziness comes over you. You try to shake your head clear but quickly stop when something pink and fluffy strikes you in the face. As you gently stroke your new pink poodle ears, you watch a slim canine muzzle form before your eyes, while the thick pink fur spreads from your ears up your head, forming a large bouffant hairstyle";	[ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "changes begin to roll through you. You watch with fascination as your hand shifts to a dainty, paw-like form, with bright pink paw pads and matching claws. As the changes move up your limbs and into your body, you develop an elegant and well-proportioned canine figure.";	[ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "your chest grows tight. A thick coat of curly pink fur forms over your shoulders and chest, forming a large puff-ball over your upper torso. Meanwhile similar tufts of fur form on your arms and legs, leaving you with large, fashionable pompons covering your forearms and calves";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you feel a pulling sensation at your spine. Doing your best to see what's going on behind you, you watch as a short, hairless canine tail forms, wagging expressively as a large pink pompon forms at its tip";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
@@ -178,9 +178,9 @@ When Play begins:
 	now per entry is 13;
 	now int entry is 12;
 	now cha entry is 17;
-	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 60;			[ The monster's starting HP. ]
-	now lev entry is 9;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 9;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 8;			[ Monster's average damage when attacking. ]
 	now area entry is "High";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -193,7 +193,7 @@ When Play begins:
 	now cunt length entry is 10;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6;		[ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 80;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -297,7 +297,7 @@ to say PoodleHeatSuccumb:
 	infect "Pink Poodle";
 	decrease the score by 5;
 	decrease the morale of the player by 3;
-	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
+	if player is kinky, increase the morale of the player by 6;
 
 Section 4 - Endings
 

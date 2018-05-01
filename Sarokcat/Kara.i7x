@@ -86,7 +86,7 @@ to say sexwithkara:
 		say "[karasex1]";
 		infect "Herm Hyena";
 		now lastfuck of Kara is turns;
-[	else if "Submissive" is listed in feats of the player:
+[	else if player is submissive:
 		say "(---  Content currently incomplete. No sex for you. :(  ---)";
 		infect "Herm Hyena";
 		now lastfuck of Kara is turns;									]

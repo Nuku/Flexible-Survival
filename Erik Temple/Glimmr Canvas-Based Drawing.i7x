@@ -2330,7 +2330,7 @@ This section presents a list of the properties associated with all primitive ele
 
 	origin - the x and y coordinates where the element's drawing will be completed. These coordinates refer to the coordinate system of the canvas and usually indicate where the lower right corner of the element will be drawn. In the case of line primitives, the origin and endpoint are more or less interchangeable, neither has priority. The endpoint coordinates are expressed as a list of exactly two numbers in brace notation. Default value: {0, 0}
 
-	tint - a glulx color value (see the Glulx Text Effects extension) that defines the color of the primitive; in the case of the stroked rectangle primitive, this represents the color of the fill fo the rectangle. Default value: g-White
+	tint - a glulx color value (see the Glulx Text Effects extension) that defines the color of the primitive; in the case of the stroked rectangle primitive, this represents the color of the fill of the rectangle. Default value: g-White
 
 	end-x** - represents the x-coordinate of the primitive's origin AFTER it has been scaled according to the window's scaling factor; i.e., it refers to the position of the endpoint in the window's coordinate system, not the canvas's. Default value: 0
 

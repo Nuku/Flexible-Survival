@@ -8,7 +8,7 @@ The sarea of Clotho is "Red".
 Atropis is resolved;
 
 Instead of resolving a Clotho:
-	Say "'Hold on! Don't move! Just stay right where you are!' It's the volume of the words being spoken that stops you more than the words themselves. Not knowing what's happening though you look around, after freezing in place, to see what the hoopla is on about. What you find is a very... unusual human looking woman coming over to you and then trying to pull you out of your clothes. Not really understanding you wave the woman, who is less [']human['] than you had thought as she possesses two fluffy cat ears atop her head and a silver chain with a emblem of some kind of cat insignia embroidered into the front of a pendant hanging onto the chain itself, off as best you can. 'Oh will you stop moving around so much? I'm trying to get you out of these clothes so I can take your measurements.'";
+	Say "'Hold on! Don't move! Just stay right where you are!' It's the volume of the words being spoken that stops you more than the words themselves. Not knowing what's happening though you look around, after freezing in place, to see what the hoopla is on about. What you find is a very... unusual human looking woman coming over to you and then trying to pull you out of your clothes. Not really understanding you wave the woman, who is less [']human['] than you had thought as she possesses two fluffy cat ears atop her head and a silver chain with an emblem of some kind of cat insignia embroidered into the front of a pendant hanging onto the chain itself, off as best you can. 'Oh will you stop moving around so much? I'm trying to get you out of these clothes so I can take your measurements.'";
 	WaitLineBreak;
 	Say "Asking the other woman who she is nets you a grumpy growl from the other. 'My name's not as important as the fact that I have something I need to make for you. Now hold still.' Not sure you find yourself letting the other woman do as she pleases, which ultimately nets you being stripped, measured, fondled in certain places you really don't want to be, and finally allowed to put back on your clothes after about an hour's time. 'As I thought, you are exactly what I need. [bold type]Atropis[roman type] back at our [bold type]high rise[roman type] condo is going to be so stoked about this!' The feline eared woman squeals and then rushes off like a shot leaving you thoroughly confused.";
 	Increase score by 1;
@@ -36,15 +36,15 @@ Instead of resolving Atropis:
 	Now Atropis is resolved;
 
 
-Section 4 - The Cap
+Section 4 - The Magic Cap
 
-The Cap is a situation. The level of The Cap is 5.
-The sarea of The Cap is "Museum".
+The Magic Cap is a situation. The level of The Magic Cap is 5.
+The sarea of The Magic Cap is "Museum".
 When play begins:
-	Add The Cap to badspots of furry;
-	Add The Cap to badspots of hermaphrodite;
+	Add The Magic Cap to badspots of furry;
+	Add The Magic Cap to badspots of hermaphrodite;
 
-Instead of resolving a The Cap:
+Instead of resolving a The Magic Cap:
 	Say "Feeling as though something is drawing you inside of the museum you find yourself walking into the Egyptian exhibit area of the once prominent edifice without exactly knowing why. Looking around to make sure that nothing dangerous is lurking throughout the hallways, as something usually is given the craziness happening with the city, you find that luck is with you today as there is no one around. Breathing a sigh of relief you continue following this dogged sensation tugging at you all the way until you come to an ornamental Egyptian glass case... which just so happens to be open.";
 	WaitLineBreak;
 	Say "Not knowing why you reach a hand inside of the case for one of the statues and then pick it up. Looking over the falcon headed artifact you find yourself gaping at it in awe. Though you're not really an expert at hieroglyphs or anything, the characters wrapped around the statue seem... somewhat familiar to you. A growl from behind you has you whipping around just in time to see a large Cerberus Herm baring three sets of ivory fangs into your direction.";
@@ -55,7 +55,7 @@ Instead of resolving a The Cap:
 	say "     ([link]N[as]n[end link]) - No.";
 	If player consents:
 		LineBreak;
-		Say "Telling the Cerberus that you were just browsing you chuckle nervously before slowly setting the statue back into the case. Seeing that you're not here to steal the Cerberus comes over, hefts you up by your collar and then casually walks you out of the Museum. When the beast tosses you out onto your head you get the feeling that would-be thieves are not wanted inside of the Museum. You make a mental note to yourself that you're going to avoid that particular case for now on. Right after you get an ice pack for the headache growing inside of your noggin'.";
+		Say "Telling the Cerberus that you were just browsing, you chuckle nervously before slowly setting the statue back into the case. Seeing that you're not here to steal, the Cerberus comes over, hefts you up by your collar, and then casually walks you out of the Museum. When the beast tosses you out onto your hea,d you get the feeling that would-be thieves are not wanted inside of the Museum. You make a mental note to yourself that you're going to avoid that particular case for now on - right after you get an ice pack for the headache growing inside of your noggin['].";
 		Decrease HP of player by 6;
 		If HP of player < 1, now HP of player is 1;
 	else:
@@ -88,7 +88,7 @@ Instead of resolving a The Cap:
 					Say "Losing to the Cerberus Herms you wind up getting the statue taken from you by one of the creatures while the other kicks you out of the Museum. Whatever might have been up with the statue you're not sure, but now you have a feeling that you'll never know.";
 			else:
 				Say "Losing to the Cerberus Herms you wind up getting the statue taken from you by one of the creatures while the other kicks you out of the Museum. Whatever might have been up with the statue you're not sure, but now you have a feeling that you'll never know.";
-	now The Cap is resolved;
+	now The Magic Cap is resolved;
 
 
 Section 5 - Fashion Statement

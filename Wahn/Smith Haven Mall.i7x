@@ -102,6 +102,7 @@ to say Map_Smith_Haven_Mall_Desc:
 Section 6 - Mall Foyer
 
 The description of Mall Foyer is "[mallfoyer]".
+Mall Foyer is sleepsafe.
 earea of Mall Foyer is "Smith Haven".
 
 To say mallfoyer:
@@ -120,6 +121,7 @@ the scent of Mall Foyer is "The foyer smells heavily of male musk due to the wol
 Section 7 - Mall Atrium
 
 The description of Mall Atrium is "[mallatrium]".
+Mall Atrium is sleepsafe.
 earea of Mall Atrium is "Smith Haven".
 
 To say mallatrium:
@@ -140,6 +142,7 @@ West of Mall Atrium is Mall West Wing.
 Section 8 - Mall East Wing
 
 The description of Mall East Wing is "[malleastwing]".
+Mall East Wing is sleepsafe.
 earea of Mall East Wing is "Smith Haven".
 
 To say malleastwing:
@@ -160,6 +163,7 @@ the scent of Mall East Wing is "It smells like the mallrats.".
 Section 9 - Mall Foodcourt
 
 The description of Mall Foodcourt is "[mfcourt]".
+Mall Foodcourt is sleepsafe.
 earea of Mall Foodcourt is "Smith Haven".
 
 To say mfcourt:
@@ -175,22 +179,25 @@ To say mfcourt:
 
 
 East of Mall Foodcourt is Mall Restroom.
+The earea of Mall Restroom is "Mall".
+Mall Restroom is not sleepsafe.
 
-the scent of the Mall Foodcourt is "It smells a little like old, rotting food.".
+The scent of the Mall Foodcourt is "It smells a little like old, rotting food.".
 
 The invent of Mall FoodCourt is { "chair", "food" }.
 
 Section 10 - Mall West Wing
 
 The description of Mall West Wing is "[mallwestwing]".
+Mall West Wing is sleepsafe.
 earea of Mall West Wing is "Smith Haven".
 
 To say mallwestwing:
 	If findwires is 2 and fixedgens is 2:
-		say "     Most of the lights are on throughout the west wing and you can hear the soft tones of muzak playing. The air is less stuffy and stale with the HVAC system now working. Various planters, spaced evenly apart and continuing the theme of ancient Greece line the middle of the walkway all the way to the end of the west wing. Vendor kiosks, selling everything from sunglasses to cell phone covers, occupy most of the spaces between the planters.";
-		say "     With power having returned to the mall, some of the less infected have made their way to it to take refuge. The mall remains safe, for the most part, due to the diligence of the wolverine guards, though on occasion a feral manages to slip in. Usually they are ejected fairly quickly once they can't control their lust and run wild, humping someone at the first opportunity. While walking along, you see mallrats and other infected conversing while relaxing on the various planters, playing handheld games on various systems and smartphones, or milling about in the various shops.";
+		say "     Most of the lights are on throughout the west wing and you can hear the soft tones of muzak playing. The air is less stuffy and stale with the HVAC system now working. Various planters, spaced evenly apart and continuing the theme of ancient Greece line the middle of the walkway all the way to the end of the west wing. Vendor kiosks, selling everything from sunglasses to cell phone covers, occupy most of the spaces between the planters. To the west lies a former travel agency, its colorful pictures of tropical beaches and serene mountains now under a banner that reads 'Haven Community Center'.";
+		say "     With power having returned to the mall, some of the less infected have made their way to it to take refuge. The mall remains safe, for the most part, due to the diligence of the wolverine guards, though on occasion a feral manages to slip in. Usually they are ejected fairly quickly once they can't control their lust and run wild, humping someone at the first opportunity. While walking along, you see mallrats and many, many other infected conversing while relaxing on the various planters, playing handheld games on various systems and smartphones, or milling about in the various shops.";
 	else if daytimer is day:
-		say "     Sunlight streams into the west wing of the mall through the skylights. You're surprised that they are still intact considering all the flying creatures that now roam the city. Various planters, spaced evenly apart and continuing the theme of ancient Greece line the middle of the walkway all the way to the end of the west wing. Vendor kiosks, selling everything from sunglasses to cell phone covers, occupy most of the spaces between the planters.";
+		say "     Sunlight streams into the west wing of the mall through the skylights. You're surprised that they are still intact considering all the flying creatures that now roam the city. Various planters, spaced evenly apart and continuing the theme of ancient Greece line the middle of the walkway all the way to the end of the west wing. Vendor kiosks, selling everything from sunglasses to cell phone covers, occupy most of the spaces between the planters. To the west lies a former travel agency, its colorful pictures of tropical beaches and serene mountains now under a banner that reads 'Haven Community Center'.";
 		say "     While walking along, you see several of the mallrats conversing while relaxing on a bench here or there, and also milling about in the various shops that, surprisingly, still have some merchandise in them. Some are just playing games on the rare intact smartphones a few of the rats have.";
 	else:
 		say "     With it currently dark outside, the only source of illumination in the mall is from the various candles and lanterns spread about. The warm glow of the lights, while not cheery, is far from being gloomy. But even with the low light it's still hard to see very far into the wing. As you carefully walk along, you can see the mallrats either sleeping, cuddling, gathered around some of the lanterns playing varied board and card games, or playing games on the tablets some of the rats have.";
@@ -200,7 +207,7 @@ the scent of Mall West Wing is "It smells like the mallrats milling about.".
 
 Section 11 - Mall Restroom
 
-Before going from Mall Foodcourt to Mall Restroom, say "     A wolverine sitting on a chair outside of the restroom facility looks up at you when you approach, his hackles standing on end. When you show him you're no harm, he calms and settles back into his seat. [one of]'I would suggest that you don't go in there. Part of the floor gave way and opened up into the utility tunnels and sewers. Now we need to stand guard against anything coming up out of there and getting into the mall. If you're still determined to go looking around in there, I won't stop you.' When you tell him you're still going in, he shrugs and hands you a lantern. 'Go ahead and take this then and be careful.'[or]'It's a right mess in thar. Part of tha['] floor opened up to the sew'rs so we hafta watch fer anythin['] poppin['] up from them. Ya'll sure you wanna go scurryin['] about in thar?' When you nod your head, he shrugs then hands you a lantern. 'Don't say ah didn['] warn ya...'[at random] Taking the lantern, you head into the restroom and find that it's in shambles. It seems a portion of it has been destroyed, what were once walls are now just piles of rubble. From some of the broken faucets, water dribbles down the pipes and drips to the floor, forming small puddles. Curiosity driving you, you carefully make your way deeper inside until finding a fairly large hole in the floor.";
+Before going from Mall Foodcourt to Mall Restroom, say "     A wolverine sitting on a chair outside of the restroom facility looks up at you when you approach, his hackles standing on end. When you show him you're no harm, he calms and settles back into his seat. [one of]'I would suggest that you keep an eye out if you go in there. Part of the floor gave way and opened up into the utility tunnels and sewers. Now we need to stand guard against anything coming up out of there and getting into the mall. Doesn't make it a comfortable place to relieve yourself, but it's what we got. Better be quick.' When you tell him you're going in, he shrugs and hands you a lantern. 'Go ahead and take this then. And be careful.'[or]'It's a right mess in thar. Part of tha['] floor opened up to the sew'rs so we hafta watch fer anythin['] poppin['] up from them. Ya'll sure you wanna go scurryin['] about in thar?' When you nod your head, he shrugs then hands you a lantern. 'Don't say ah didn['] warn ya...'[at random] Taking the lantern, you head into the restroom and find that it's in shambles. Curiosity driving you, you carefully make your way deeper inside until you spot a fairly large hole in the floor.";
 
 Before going from Mall Restroom to Sewers A7, say "You peek through the hole into the sewers to see if there is anything waiting for you. Seeing nothing, you climb down into the hole.";
 
@@ -212,9 +219,9 @@ The description of Mall Restroom is "[mallrestroom]".
 
 To say mallrestroom:
 	If findwires is 2 and fixedgens is 2:
-		say "     It's still fairly dark in the restroom, the few working lights left randomly flickering off and on. Not particularly feeling the urge for some electric shock therapy, you make sure to avoid any puddles of standing water in case they are electrified. You occasionally hear [one of]soft growls[or]the scraping of something hard on concrete[or]what sounds like passionate squeaking[or]loud growling and several splashes[or]the squeaking of rusty hinges[at random] coming from the depths of the hole. Who knows what's down there...";
+		say "     It's still fairly dark in the restroom, the few working lights left randomly flickering off and on. Not particularly feeling the urge for some electric shock therapy, you make sure to avoid any puddles of standing water in case they are electrified. While there are a number of working stalls in the front, a portion in the back of the room has been destroyed. What were once walls there are now just piles of rubble now, surrounding a large hole in the floor. From some of the broken faucets, water dribbles down the pipes and drips to the floor, forming small puddles. You occasionally hear [one of]soft growls[or]the scraping of something hard on concrete[or]what sounds like passionate squeaking[or]loud growling and several splashes[or]the squeaking of rusty hinges[at random] coming from the depths of the hole. Who knows what's down there...";
 	else:
-		say "     With just the light of you lantern, it's hard to see very far around you, and it's hard to shake the feeling that you are not alone in the dark. You occasionally hear [one of]soft growls[or]the scraping of something hard on concrete[or]what sounds like passionate squeaking[or]loud growling and several splashes[or]the squeaking of rusty hinges[at random] coming from the depths of the hole. Who knows what's down there...";
+		say "     With just the light of you lantern, it's hard to see very far around you, and it's hard to shake the feeling that you are not alone in the dark. While there are a number of working stalls in the front, a portion in the back of the room has been destroyed. What were once walls there are now just piles of rubble now, surrounding a large hole in the floor. You occasionally hear [one of]soft growls[or]the scraping of something hard on concrete[or]what sounds like passionate squeaking[or]loud growling and several splashes[or]the squeaking of rusty hinges[at random] coming from the depths of the hole. Who knows what's down there...";
 
 
 the scent of Mall Restroom is "It smells kind of bad in here with the open hole to the sewers.".
@@ -222,6 +229,7 @@ the scent of Mall Restroom is "It smells kind of bad in here with the open hole 
 Section 12 - Shag Shack
 
 Northeast of Smith Haven Mall Lot East is Shag Shack Entrance.
+Shag Shack Entrance is sleepsafe.
 The description of Shag Shack Entrance is "[ShagShackEntranceDesc]".
 
 To say ShagShackEntranceDesc:

@@ -38,14 +38,11 @@ Every turn when the player is in Grey Abbey Library and Fang is visible:
 		follow the turnpass rule;
 	else:
 		continue the action;
-		
+
 to say FangPlayerLust:
 	say "Aching with need, you look around for Fang. He's laying by the door, watching the room with his usual alertness. As you walk towards him, he sits up on his haunches. When you reach for him, he lightly nips at your hand and chuffs disapproval. He remains seated, watching you penetratingly as you consider how to approach. A second reach to pat him gets another nip, then he suddenly rears up and knocks you over backwards flat. The oversized wolf clambers up on top of you, his shaggy coat rubbing against your belly as he takes the superior position. He licks your throat twice as he parts your legs and gets into comfortable position.";
-	let anal be 1;
-	if cunt length of player > 0 and cunts of player > 0:
-		if a random chance of 2 in 3 succeeds or "Less Anal" is not listed in feats of player, now anal is 0;
-	if anal is 0:
-		say "He rolls his hips forward, pressing the pointed tip of his large wolf cock to your [cunt size desc of player] nethers, then sinking in with a long smooth thrust. His paws pull you down against his thrust as he bites into your throat, holding you still. He begins to rock, driving his slick red member through the wet hot tunnel, pushing in with easy and vigorous rocking. Above, his tail lifts and wags lightly at the end of every movement, growling around your throat as he breeds you as his bitch.";
+	if cunt length of player > 0 and cunts of player > 0 and (a random chance of 2 in 3 succeeds or anallevel is 1):
+		say "He rolls his hips forward, pressing the pointed tip of his large wolf cock to your [cunt size desc of player] nethers, then sinking in with a long, smooth thrust. His paws pull you down against his thrust as he bites into your throat, holding you still. He begins to rock, driving his slick red member through the wet hot tunnel, pushing in with easy and vigorous rocking. Above, his tail lifts and wags lightly at the end of every movement, growling around your throat as he breeds you as his bitch.";
 		say "You raise your hands to his powerful sides, feeling the play of his muscles as he ruts into you with feral intensity. Your sounds of delight mix with his eager growls as his claws scrape against the library floor. His oversized knot is forced into you and he hunches against you. Liquid heat spreads through your [bodydesc of player] body as you're filled with his virile thick cream. The sensation is enough to send your cunt into spasms of release, clamping wetly around the twitching member. He sags against you, spent and content, and as the haze lifts, you realise the raging heat inside of you has ebbed a little, leaving you clear headed and thankful to your alpha.[impregchance]";
 	else:
 		say "He hunkers down and nudges forward, pressing the point of his large shaft to your pucker, easing his way into your back door carefully. You can feel that canine member spreading you and can't hold back a groan of pleasure at it as he gets more than half way in. He licks over your throat again, then presses forward, losing another inch to the heat of your [bodydesc of player] body as he rocks his way forward bit by bit, burying his sword into your eager flesh. You lift your [bodyname of player] legs as high as you can to raise your ass into better position, allowing Fang to move more easily as he builds up to a soft pounding.";
@@ -64,10 +61,10 @@ to say FangRapePlayer:
 	say "He reaches around and removes any barrier to your bottom, tossing it aside for later with a soft, eager, growl. Though you weren't very aroused when you walked in, his intense scent sends warm tingles through your form now, making you pant as you begin to warm up. [run paragraph on]";
 	let anal be 1;
 	if cock length of player > 0 and cocks of player > 0:
-		say "Your cock[if cocks of player > 1]s[end if] swell[if cocks of player > 1]s[end if], [cock of player] flesh throbbing, dangling in the air and dripping pre to the ground. [run paragraph on]";
+		say "Your cock[smn] swell[smv], [cock of player] flesh throbbing, dangling in the air and dripping pre to the ground. [run paragraph on]";
 	if cunt length of player > 0 and cunts of player > 0:
-		if a random chance of 2 in 3 succeeds, now anal is 0;
 		say "You feel warmth seeping through your feminine lips as you moisten with readiness and increasing anticipation. The thought of your alpha taking you was becoming more delicious by the moment. [run paragraph on]";
+		if a random chance of 2 in 3 succeeds or anallevel is 1, now anal is 0;
 	if anal is 0:
 		say "His pointed cock is felt against your [cock of player] cunt before sinking in to the hilt in a smooth motion. He leans in over you, biting at your shoulders as he grabs and pulls you back roughly. With powerful strokes, he claims you, filling you with his bright red shaft. Each deep thrust is met with a wet squelch and the brushing of his bloated, furry balls against your [tailname of player] ass. Your cunt spasms wildly, climax locking you in place with trembles of heat. He sinks into the clenching tunnel, his oversized knot swelling in your lips, locking you to him as warmth before to fire in thick shots into your waiting womb.[impregchance]";
 	else:
@@ -84,9 +81,9 @@ to say FangRapePlayer:
 
 to say FangMutualLust:
 	say "You feel something nuzzling at your groin and look down to see Fang looking back up at you. Bright red of his canine shaft dangles between his hind legs. The sight and smell of him sets your already needy body on fire with desire. [run paragraph on]";
-	if cocks of player > 0 and cock length of player > one:
+	if cocks of player > 0 and cock length of player > 1:
 		say "You feel hot splashes of pre pouring from yourself as you grow more lustful by the moment. [if cock width of player > 0]Your [ball size] ache with the need to release. [end if][run paragraph on]";
-	if cunts of player > 0 and cunt length of player > one:
+	if cunts of player > 0 and cunt length of player > 1:
 		say "Your nethers grow damp as you begin to feel like a bitch in heat. The large wolf gives you a pointed look as one of your [bodyname of player] hands wander towards your thighs. A light nip wards your hand away. [run paragraph on]";
 	say "Unable to hold back further, you are soon beside Fang, pushing against him. You manage to get him onto his back, paws in the air, and grind your belly to his with a soft groan matched with his needful whine. [run paragraph on]";
 	if cunts of player > 0 and cunt length of player > 0:

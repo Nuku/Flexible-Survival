@@ -471,7 +471,7 @@ to say BTchangeover:
 		now scalevalue of player is 4;
 		now bodydesc of player is "powerful";
 		now bodytype of player is "feline";
-		now the daycycle of player is 0;
+		now daycycle of player is 0;
 		now tail of player is "From your muscled rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with excitement.";
 		now face of player is "a feminine tiger face and long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your steely-blue eyes";
 		now skin of player is "ivory white fur streaked with tiger stripes that covers your";
@@ -486,7 +486,7 @@ to say BTchangeover:
 		now scalevalue of player is 4;
 		now bodydesc of player is "powerful";
 		now bodytype of player is "feline";
-		now the daycycle of player is 0;
+		now daycycle of player is 0;
 		now tail of player is "From your muscled rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with excitement.";
 		now face of player is "a male tiger head with a strong jaw and a predatory gaze. With a fully feline head, you have fur, stripes and whiskers cover your stern muzzle";
 		now skin of player is "ivory white fur streaked with tiger stripes that covers your";
@@ -545,7 +545,7 @@ to say losetotigercop:
 		else:
 			say "     'Well, I'll teach you a lesson you won't soon forget,' he says as he slides his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of the nightstick at your asshole, making you shiver. He teases you with it briefly and you try your best to relax it before he sinks it into you, using only a little spit for lubrication. He pounds you hard and fast with it, making your body shudder until you finally climax. He sprays his cum across your ass, and then removes the weapon from your aching hole. He picks you up roughly and gives you a hard shove. 'Get your dumb ass out of here. And if I catch you again, you'll get the real thing.'";
 	else:
-		if a random chance of 1 in 3 succeeds and ( cunts of player > 0 or "Less Anal" is not listed in feats of player ):
+		if a random chance of 1 in 3 succeeds and ( cunts of player > 0 or anallevel > 1 ):
 			say "     'It looks like you need another lesson in why you shouldn't mess with me,' he says as he grabs you roughly and shoves you face down onto a mound of rubble. 'Punks like you are nothin['] but trouble. Should've gotten a good, hard spankin['] from your dad to beat some respect into you.' With you pinned down, the tiger holds you down with one paw and bares your ass with the other.";
 			if cunts of player > 0:
 				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain. After another stinging slap, he runs his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of his nightstick against your pussy, making you shiver. He works it across your folds, sliding it back and forth, getting you wet despite yourself. Shifting its position, he thrusts it into your cunt, making you groan at the sudden, hard intrusion. The tiger cop pounds you hard and fast with it, making your [bodydesc of player] body shudder until you finally cum. Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching pussy.";
@@ -566,10 +566,10 @@ to say losetotigercop:
 			say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
 		else:
 			let mchance be 4;
-			if "Submissive" is listed in feats of player, increase mchance by 2;
-			if "More Anal" is listed in feats of player, increase mchance by 2;
-			if "MPreg" is listed in feats of player, increase mchance by 2;
-			if "Less Anal" is listed in feats of player, now mchance is 0;
+			if player is submissive, increase mchance by 2;
+			if anallevel is 3, increase mchance by 2;
+			if player is mpreg_ok, increase mchance by 2;
+			if anallevel is 1, now mchance is 0;
 			if a random chance of mchance in 12 succeeds:
 				say "     The victorious tiger grabs you roughly and tosses you to the ground at his feet. He puts a heavy paw at your shoulder, pushing you to the ground. 'I warned you what would happen if I caught you,' he rumbles. Above you, you can hear the sound of him unzipping his pants.";
 				say "     Reaching down, he grabs you with his paws and pushes you onto all fours. One paw then holds you firmly by the neck while the other bares your bottom to him";
@@ -584,7 +584,7 @@ to say losetotigercop:
 				say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down to your knees. He wraps his strong paw around your jaw, holding you there while he growls down at you. 'I warned you what would happen if I caught you,' he rumbles.";
 				say "     As you watch, his other paw opens his uniform pants and pull out his large, hard cock. His shaft is a full foot long and human-like in form, though a deeper red in colour. Holding your head firmly, he strokes his cock against your face until its fully hard and leaking pre onto you.";
 				say "     Soon you are licking at that throbbing shaft, then taking it into your eager mouth. You lick and suck on it, moaning around the tiger's large cock. With a firm hold on you, he fucks your face hard and fast, pushing his throbbing cock down your throat again and again.";
-				say "     You start to moan and fondle his ballsac as the powerful male fucks you, losing yourself in the sex. 'That's a good slut,' he rumbles. 'Take it, you whore.' Your lips slide over his thick, foot-long member until he finally unleashes his hot seed into your mouth and flooding your throat with his sperm.";
+				say "     You start to moan and fondle his ballsack as the powerful male fucks you, losing yourself in the sex. 'That's a good slut,' he rumbles. 'Take it, you whore.' Your lips slide over his thick, foot-long member until he finally unleashes his hot seed into your mouth and flooding your throat with his sperm.";
 				say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
 	infect "Tigress Hooker";
 
@@ -626,7 +626,7 @@ When Play begins:
 	now body change entry is "it shifts, growing tighter here, wider there. Your limbs and body stretch with feline flexibility as they move become those of a sexy tiger. Delicate, hand-like paws replace your current hands. They are nimble and you feel the urge to please someone with their touch. They also hide sheathed claws, waiting to sink into those who displease you. Your body starts giving off a subtle scent, like that of expensive perfume"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft fur spreads across your body. It is a white as pure as driven snow and sensually soft and silky to the touch. Even as you start to examine it, deep black stripes start to spread through it, leaving you covered in tiger-striped fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is " shivers of delight run down your spine. You can feel it growing, extending out into a long tiger-like tail. As it does, your bottom shifts and tightens into a cute, firm bubble-butt. As you rub your hand over it, you feel the urge to find a nice cock to fill it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes dark, almost black in colour. Shifting shape, it grows soft, stimulating barbs and a tapered glans. As you watch, your new shaft is bundled up in a softly-furred sheath which spreads down to cover your ballsac as well. You look forward to putting this new piece of meat to work"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it becomes dark, almost black in colour. Shifting shape, it grows soft, stimulating barbs and a tapered glans. As you watch, your new shaft is bundled up in a softly-furred sheath which spreads down to cover your ballsack as well. You look forward to putting this new piece of meat to work"; [ cock change text. format as "Your cock feels funny as (your text)" ]
    now str entry is 14;
    now dex entry is 20;
    now sta entry is 14;

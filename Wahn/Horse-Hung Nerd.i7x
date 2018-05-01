@@ -15,7 +15,7 @@ to say HHNerd wins:
 	setmonster "Horseman";
 	choose row monster from the table of random critters;
 	if HP of player > 0: [player submits]
-		if anallevel is 0 or (cocks of player is 0): [blowjob for females, neuters and those who don't like anal]
+		if anallevel is 1 or (cocks of player is 0): [blowjob for females, neuters and those who don't like anal]
 			say "     As you submit and fall to your knees, Clyde grins down at you and says, 'So you do know how to treat your betters after all. This is how it should be - with the smartest people at the top, not the most violent. Good that you've seen the light.' Chuckling, he grabs hold of his cock, jerking its long shaft with both hands. As it quickly gets fully hard, Clyde steps up to you and says 'Now open wide...'";
 			say "     [HHNerd Sucking]";
 		else: [random fuck/suck]
@@ -28,7 +28,7 @@ to say HHNerd wins:
 		LineBreak;
 		infect "Horseman";
 	else: [player loses]
-		if anallevel is 0 or (cocks of player is 0): [blowjob for females, neuters and those who don't like anal]
+		if anallevel is 1 or (cocks of player is 0): [blowjob for females, neuters and those who don't like anal]
 			say "     As you fall to your knees in front of him in exhaustion, Clyde grins down at you and says, 'See - I'm superior in every way. Mentally, as well as physically. Let this be a lesson how to treat your betters. This is how it should be - with the smartest people at the top.' Chuckling, he grabs hold of his cock, jerking its long shaft with both hands. As it quickly gets fully hard, Clyde steps up to you and says 'Now open wide...'";
 			say "     [HHNerd Sucking]";
 		else: [random fuck/suck]
@@ -42,7 +42,7 @@ to say HHNerd wins:
 		infect "Horseman";
 
 to say HHNerd Sucking:
-	if "Submissive" is listed in feats of player: [sub players]
+	if player is submissive: [sub players]
 		say "     Feeling a shiver of arousal run down your spine as you're ordered around, you open your mouth and obediently await Clyde's cock. Grinning widely at your eagerness to serve, the horse-hung nerd rubs the flared tip of his horsecock against your face first, smearing it with precum. Then he holds it out for you, at which point you happily slide your lips over his shaft and start sucking. 'Oh yeah,' the young man grunts as you bob up and down on his shaft, 'Just like that. That's a good [if cunts of player > 0]girl[else]boy[end if].'";
 		say "     With you using your hands to jerk your master's cock and fondle his balls while you suck him, Clyde gets treated to a very nice and stimulating blowjob. It's quite clear that he likes your lips and tongue working on his shaft - a lot - judging from all the moans and grunts he's making. In fact, you seem to have such a strong effect on his arousal that it doesn't take all that long to drive him over the edge. Grabbing your head in a hasty and sudden movement, he pulls you down on his shaft as far as you can take, grunting deeply as the first blast of cum is pumped directly into your stomach. Another and another thick pulse of his seed follows, giving you a pretty full feeling. Soon you feel that you just can't take much more and push against Clyde's hips to show him to pull out. As he does so, one last big spurt of cum shoots directly into your mouth and covers your tonsils, with everything afterwards just splattering your face and chest with horse-cum.";
 		WaitLineBreak;
@@ -54,7 +54,7 @@ to say HHNerd Sucking:
 		say "     When Clyde's orgasm finally starts to ebb and the amount of cum in each new spurt diminishes until they cease, the young man looks down on your cum-splattered form with a grin. He says 'Rub it in, all over your face and chest.' - which you do after a little shrug. He's fed you quite a bit of his cum, so what's a bit rubbed into your skin after that. 'Remember this for next time, so you know what to do and how to please me,' Clyde says while pushing his still cum-dripping horsecock down the [one of]left[or]right[at random] leg of his pants, then he zips up and struts off with a spring in is step.";
 
 to say HHNerd Fucking:
-	if "Submissive" is listed in feats of player: [sub players]
+	if player is submissive: [sub players]
 		say "     Feeling a shiver of arousal run down your spine as you're ordered around, you quickly strip and layer your clothes on the ground as an improvised pad to lie on. Obediently following Clyde's wishes, you get down on the ground, spreading and holding your legs open to present your asshole to him, just waiting to be taken. Grinning widely at your eagerness to serve, Clyde kneels and rubs his horsecock against your ass before aligning it with your pucker. You feel wetness against your skin as the horse-hung nerd milks a copious amount of pre-cum out of his cock, smearing it over your hole and pushing it in with two fingers of his other hand. Moaning at feeling your master's probing fingers inside your hole, you relax for him as best as you can.";
 		WaitLineBreak;
 		say "     After loosening you up with his fingers, adding first one more, then another, Clyde groans 'Time for you to feel me inside you. Get ready.' With that, he nudges your back door with the flared tip of his equine cock, then steadily presses in, stretching your insides around his invading member. You can see on the slender young man's face how he savours every moment, not just because of the sensations being inside you gives him, but also because of having power over another being and seeing his demands fulfilled. He gives sudden little thrusts in between the slow and smooth push into you, enjoying the gasps and pants he can draw out of you with that.";

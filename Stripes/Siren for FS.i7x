@@ -49,7 +49,7 @@ to say sirendesc:
 		else:
 			say "     With that lovely song filling your mind, you head out into the water towards the rocky outcropping in the sea, heedless of the danger. As you start swimming out, the siren swoops down from the air to attack you, catching its entranced prey by surprise. You take [special-style-2]8[roman type] damage before you can struggle to land to fight the siren.";
 			decrease HP of player by 8;
-		say "     He has a mostly-human body with lovely, feminine features and beautiful, smooth skin. His eyes are sharp and menacing, as are his pointed teeth. Attached to his back are a pair of white, feathered wings and his feet end in bird-like talons. This well-endowed male has a pair of giant cocks and a huge ballsac to go with them. From the way those pricks are growing hard, it's clear he intends to use them on you.";
+		say "     He has a mostly-human body with lovely, feminine features and beautiful, smooth skin. His eyes are sharp and menacing, as are his pointed teeth. Attached to his back are a pair of white, feathered wings and his feet end in bird-like talons. This well-endowed male has a pair of giant cocks and a huge ballsack to go with them. From the way those pricks are growing hard, it's clear he intends to use them on you.";
 
 
 to say losetosiren:

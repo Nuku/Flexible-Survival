@@ -1,5 +1,6 @@
 Version 1 of Hyena Hideout by Stripes begins here.
 [ Version 1.4 - Hyena Gang WS scene for gang bitch ]
+[Version 2 - Small adjustment to Gina for Matriarch Vore scenes]
 [- Originally Authored By: Sarokcat -]
 
 "Adds an Hyena den to Flexible Survival with a dominance challenge and some smexing."
@@ -39,7 +40,7 @@ instead of fucking the gang members:
 	if lastfuck of Gang Members - turns < 4:
 		say "     While several of the hyena gang members seem interested in what your offering, it seems most of the ones still hanging out here in the den are still recovering from their last romp, perhaps you should try to excite them later.";
 	if matriarchowned is 1:
-		if cunts of player is 0 and cocks of player is 0:
+		if player is neuter:
 			say "     There's little point in finding a partner among the gang while you have no proper gender of your own. While several of the gang have become aware of this, being blatant about it might entice one of the more ambitious members to try deposing you. Without anything to offer, you would be deposed without a contest of dominance.";
 		else if the player is submissive and a random chance of 3 in 5 succeeds:
 			now lastfuck of Gang Members is turns;
@@ -85,9 +86,9 @@ instead of fucking the gang members:
 			hyenaify;
 			now lastfuck of Gang Members is turns;
 		else:
-			If cocks of the player > 0:
+			If cocks of player > 0:
 				say "     Your cock dangles uselessly underneath you as they use your all to willing body, spurting its worthless submissive seed on the ground beneath you, as you are thoroughly used like the happy little breeding slut you know deep down you really are.";
-				if cunts of the player > 0:
+				if cunts of player > 0:
 					say "     At some point several of the gang members thrust themselves into your willing cunt, causing you to groan in pleasure as your breeding hole is filled, knowing you will soon be fulfilling your true purpose as a breeding hyena and being filled with loads of wonderful cub making batter. You find yourself sandwiched between them as you are taken from both ends, their thrusting moving you helplessly between them as you moan wantonly. As soon as one of them shoots their load into you, another hard cock is right there to take its place in whichever hole is open, you soon lose track of the number of loads shot into your eager mouth or your horny pussy, and find yourself only caring about the next cock you can cram into yourself. Eventually you pass out, your body still being used by several of the gang members. Only to wake up later, stuffed with their fertile cum, and the taste of their delicious seed coating your tongue.[impregchance][impregchance]";
 				else:
 					say "     At some point one of the gang members discovers your empty asshole, and takes care to remedy the situation by filling it with his hard cock. You find yourself sandwiched between them as you are taken from both ends, their thrusting moving you helplessly between them as you moan wantonly. As soon as one of them shoots their load into you, another hard cock is right there to take its place in whichever hole is open, you soon lose track of the number of loads shot into your eager mouth or your aching ass and eventually find yourself not even caring. Eventually you pass out, your body still being used by several of the gang members. Only to wake up later, coated in dried cum, and the taste of their seed in your mouth.[mimpregchance][mimpregchance]";
@@ -99,7 +100,7 @@ instead of fucking the gang members:
 		say "     Several of the gang members pause as you approach, hyena grins spreading across their muzzles as they scent your obvious need, soon you are surrounded by amorous hyenas. You open your mouth to speak, only to have one of them grab you from behind and shove you down onto your hands and knees. You stare around in surprise as you find yourself suddenly at crotch level, and it is obvious just how excited the hyenas around you are, before you can do anything one of the gang members has taken advantage of your open mouth to shove his hard rod in. The thick wonderful tasting hyena meat causes you to gag slightly for a second, before your throat adapts to his large cock, you consider biting down, but something about the situation makes you so very horny. He begins to thrust himself into your mouth, and the amazing taste of his meat coating your tongue, sends you wild, licking and working his cock as best you can. You can feel the hands of the other members on your body as they begin to play with you as well, but you find it hard to focus on anything more than the cock in front of you. Soon enough his cock explodes its salty deliciousness into your mouth, forcing you to swallow as fast as you can, some still dribbling out the edge of your mouth. The first gang member pulls himself out of your mouth and steps back, but before you can miss him, another cock is shoved in front of your mouth, and you find yourself opening wide for your next treat.";
 		if cocks of player > 0:
 			say "     Your cock dangles uselessly underneath you as they use your all to willing body, spurting its worthless submissive seed on the ground beneath you, as you are thoroughly used by the more dominant hyenas.";
-			if cunts of the player > 0:
+			if cunts of player > 0:
 				say "     At some point several of the gang members thrust themselves into your willing cunt, causing you to groan in pleasure as both of your holes are filled at once. You find yourself sandwiched between them as you are taken from both ends, their thrusting moving you helplessly between them as you moan wantonly. As soon as one of them shoots their load into you, another hard cock is right there to take its place in whichever hole is open, you soon lose track of the number of loads shot into your eager mouth or your horny pussy, and find yourself not even caring. Eventually you pass out, your body still being used by several of the gang members. Only to wake up later, with cum leaking out of your pussy, and the taste of their seed coating your tongue.[impregchance][impregchance]";
 			else:
 				say "     At some point one of the gang members discovers your empty asshole, and takes care to remedy the situation by filling it with his hard cock. You find yourself sandwiched between them as you are taken from both ends, their thrusting moving you helplessly between them as you moan wantonly. As soon as one of them shoots their load into you, another hard cock is right there to take its place in whichever hole is open, you soon lose track of the number of loads shot into your eager mouth or your aching ass and eventually find yourself not even caring. Eventually you pass out, your body still being used by several of the gang members. Only to wake up later, coated in dried cum, and the taste of their seed in your mouth.[mimpregchance][mimpregchance]";
@@ -135,6 +136,8 @@ instead of conversing the Gina:
 				if matriarchowned is 1:
 					say "[hyenamat_victorytf]";
 					say "     Gina pads over to you carefully after the orgy is finished, picking her way through the piles of collapsed bodies and pools of sexual fluids that cover the floor. Reaching down she gives you a hand up as you survey your new subjects, you think you can see a new glint of respect and admiration for you in her eyes. 'That was amazing,' Gina says as she leads you back to your new quarters, leaving the former matriarch lying forgotten on the floor behind you. 'I knew you were special when I found ya, but I had no idea know just how tough you were,' she says with awe as she shows you the matriarchs chambers, a larger section of the warehouse with even more comfortable looking chairs and furniture... and your new home. 'If you ever need any help with running this place or anything, you know where to find me,' Gina finishes before she helps you settle in for a much-needed rest after the hard fight, and fuck afterwards.";
+				else if HyenaMatVore is true:
+					move Matriarch to Hyena Hideout;
 				else:
 					say "     Gina comes over to you as you recover from your exhausting ordeal, cum and other fluids covering you and leaking out of you as she drags you over to help clean you off. 'Can't say I didn't warn you,' Gina mutters as she helps you settle down for a much-needed rest. 'Though it definitely looked like you submitted pretty willingly there at the end. Guess you don't have to pretend to be a dominant anymore, it's pretty obvious how much you like being on the bottom instead,' Gina says with a smirk as you find yourself nodding almost automatically, an even stronger desire rising up in you to please the more dominant hyena by agreeing with whatever she wants.";
 					move Matriarch to Hyena Hideout;

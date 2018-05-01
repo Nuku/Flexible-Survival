@@ -105,7 +105,7 @@ to say losetosquire:
 			say "     His last blow is followed by a solid punch to the side of the head, dazing you to the point of falling to your knees. And while the hardworking nanites quickly seal the wounds, you're still quite hurt and unable to keep fighting. The victorious lad pants to catch his breath before standing tall and approaching you. '[one of]My master will be so proud of me when he hears that I've defeated you, brigand,' the squire says[or]And so the young squire defeated the rowdy bandit,' the lad narrates as he raises his sword proudly[or]You don't compare to the foes my lord knight has defeated, bandit,' the squire proclaims[or]At this rate, I shall surely prove myself worthy to my knightly master,' the squire states[at random].";
 		WaitLineBreak;
 		let analchance be 40 + ( anallevel * 10 );
-		if "MPreg" is listed in feats of player, increase analchance by 10;
+		if player is mpreg_ok, increase analchance by 10;
 		if anallevel is 1, now analchance is analchance / 2;
 		if cocks of player > 0 and ( a random chance of anallevel in 100 succeeds or cunts of player is 0 ):
 			say "[squirewins_ride]";
@@ -120,7 +120,7 @@ to say losetosquire:
 			say "     His last blow knocks you on the side of the head, dazing you to the point of falling to your knees. And while the hardworking nanites quickly seal the wounds, you're still quite hurt and unable to keep fighting. The victorious lad pants to catch his breath before standing tall and approaching you. '[one of]My master will be so proud of me when he hears that I've defeated you, creature,' the squire says[or]And so the young squire defeated the foul beast,' the lad narrates as he raises his sword proudly[or]You don't compare to the beasts my lord knight has defeated, creature,' the squire proclaims[or]At this rate, I shall surely prove myself worthy to my knightly master,' the squire states[at random].";
 		WaitLineBreak;
 		let analchance be 40 + ( anallevel * 10 );
-		if "MPreg" is listed in feats of player, increase analchance by 10;
+		if player is mpreg_ok, increase analchance by 10;
 		if anallevel is 1, now analchance is analchance / 2;
 		if cocks of player > 0 and ( a random chance of anallevel in 100 succeeds or cunts of player is 0 ):
 			say "[squirewins_ride]";
@@ -174,7 +174,7 @@ to say squirewins_vaginal_shift:
 
 to say squirewins_anal_shift:
 	choose row monster from the table of random critters;
-	if cocks of player is 0 and cunts of player is 0:
+	if player is neuter:
 		say "     The smaller guy gets you down on your back and slides your ass up into his lap. Your genderless crotch gives him momentary pause and he's drawn to rub across your nullpatch. 'What kind of knight has neither sword nor scabbard?  No wonder you're unworthy to be a knight and [if HP of player > 0]surrendered so easily[else]lost[end if]. You're clearly undeserving of your title,' he says before pushing a few spit-slick fingers into your asshole to stretch you out. After this brief preparation, he gets his erection lined up with your asshole and pushes his dribbling cock into your rear with one confident motion.";
 	else:
 		say "     The smaller guy gets you down on your back and slides your ass up into his lap. 'What kind of a knight cannot stand up to a squire?  You're clearly unworthy to be a knight for [if HP of player > 0]surrendering so easily[else]losing[end if] to a squire. You're clearly undeserving of your title,' he says before pushing a few spit-slick fingers into your asshole to stretch you out. After this brief preparation, he gets his erection lined up with your asshole and pushes his dribbling cock into your rear with one confident motion.";
@@ -284,12 +284,12 @@ When Play begins:
 	now defeated entry is "[beatthesquire]"; [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is "[losetosquire]"; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[squiredesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "thankfully human in appearance - that of [if ( cocks of player > 0 and cunts of player > 0 ) or ( cocks of player is 0 and cunts of player is 0) ]a younger and more androgynous[else if cocks of player > 0]yourself, but as a young man[else]yourself, but as a tomboyish girl[end if]. Your expression is often one of youthful eagerness and optimism, regardless of how you're feeling at that moment";
+	now face entry is "thankfully human in appearance - that of [if ( cocks of player > 0 and cunts of player > 0 ) or ( player is neuter) ]a younger and more androgynous[else if cocks of player > 0]yourself, but as a young man[else]yourself, but as a tomboyish girl[end if]. Your expression is often one of youthful eagerness and optimism, regardless of how you're feeling at that moment";
 	now body entry is "that of a young [if cunts of player > 0]woman[else]man[end if]. Your body shows some muscle tone from exercise, speaking of a strength yet to come. Across your torso is a loose-fitting tabard with an emblem stitched into it of [stateplayercrest]";
 	now skin entry is "smooth, lightly-tanned";
 	now tail entry is "";
 	now cock entry is "human";
-	now face change entry is "the bones of your head shift with the occasional pop or crack that makes you wince. As these changes progress, your face becomes similar to your old one, but younger and [if ( cocks of player > 0 and cunts of player > 0 ) or ( cocks of player is 0 and cunts of player is 0) ]androgynous[else if cocks of player > 0]more like that of a young man[else]more like that of a tomboyish girl[end if]";
+	now face change entry is "the bones of your head shift with the occasional pop or crack that makes you wince. As these changes progress, your face becomes similar to your old one, but younger and [if ( cocks of player > 0 and cunts of player > 0 ) or ( player is neuter) ]androgynous[else if cocks of player > 0]more like that of a young man[else]more like that of a tomboyish girl[end if]";
 	now body change entry is "changes spread through it. Your muscles tense and flex and your body reshapes itself, in time becoming that of a maturing [if cunts of player > 0]tomboy[else]young man[end if]. Your body shows some muscle as if you'd recently started physical training. As you look down at your chest, a tabard that is slightly too big for you forms across your torso. In bright colours, its bears the crest of [stateplayercrest] at its centre. Any attempt to cover or remove this has it return in short order";
 	now skin change entry is "exciting tingles run all over your [bodydesc of player] body. Your flesh shifts and changes, subtly at first, until eventually becoming smooth, lightly tanned and quite human in appearance. There's the start of some callouses on your right hand from learning to wield something heavy, which your hand feel somehow empty without it";
 	now ass change entry is "your buttocks muscles firm up, forming a cute bubble-butt made for fucking. You feel an empty craving to have something buried in your asshole";

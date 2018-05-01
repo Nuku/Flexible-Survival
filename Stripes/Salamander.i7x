@@ -19,7 +19,7 @@ to say salamanderdesc:
 	say "     Her smooth skin is a rich red colour with yellow and black speckling, predominantly across her breasts and extremities. A shimmer of intense heat radiates from it intensely enough to make the air ripple around her. It seems the nanites have jumbled the old myths of salamanders with its amphibian nature, making this creature into one suitable for two environments, on land and in lava.";
 
 to say losetosalamander:
-	if vorelevel is 3 and scalevalue of player < 4 and (a random chance of 1 in 4 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds)):
+	if vorelevel is 3 and scalevalue of player < 4 and (a random chance of 1 in 4 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)):
 		if HP of player > 0:
 			say "     When you submit to the red amphibian she exploits the opening by lashing you from afar with her elongated tongue. The hot, sticky thing clinging against your [bodytype of player] form, the creature reels you in close, wrapping the appendage around you, loop by loop, as it gets some slack from your approach.";
 			say "     Limbs bound by her tongue, her wide maw savours your compliance by doting on you, kissing and nuzzling your face. It's quickly apparent that she seems to be sizing you up, hot breath washing over you as you're given a glimpse into her crimson abyss of a maw. If you don't try to break free, it looks like you'll end up as a meal for salamander!";

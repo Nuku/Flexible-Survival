@@ -125,15 +125,24 @@ instead of fucking the Zeke:
 		LineBreak;
 		if player consents:
 			say "     'Alright then, time to see who's the better player.' Zeke quickly sets up for your competition, turning on the various parts of his gaming hub, and choosing a game. In no time at all, you're both seated comfortably in front of the television, controllers in hand, ready to go.";
-			let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
-			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Intelligence Check):[line break]";
-			increase diceroll by bonus;
-			if diceroll > 15:
-				say "     Both of you play your hardest, and though the matches are close, in the end you pull out more wins, your superior skills and strategy bringing you the victory. As the winner, it becomes your right to choose how to play with your newly earned prize.";
-				say "[ZekeSexMenu2]";
+			say "     [bold type]Do you want to play your hardest, or throw the match?[roman type][line break]";
+			WaitLineBreak;
+			say "     ([link]Y[as]y[end link]) - Do your best.";
+			say "     ([link]N[as]n[end link]) - Lose and get dominated.";
+			LineBreak;
+			if player consents:
+				let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+				let diceroll be a random number from 1 to 20;
+				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Intelligence Check):[line break]";
+				increase diceroll by bonus;
+				if diceroll > 15:
+					say "     Both of you play your hardest, and though the matches are close, in the end you pull out more wins, your superior skills and strategy bringing you the victory. As the winner, it becomes your right to choose how to play with your newly earned prize.";
+					say "[ZekeSexMenu2]";
+				else:
+					say "     You do your best to defeat Zeke in the digital arena, but your skills aren't quite up to the task. Your playing wasn't a total failure, but it just wasn't enough to beat his practiced skills at the game. As a result, the fox is the victor, and it's up to him what to do with you.";
+					say "[ZekeSexMenu3]";
 			else:
-				say "     You do your best to defeat Zeke in the digital arena, but your skills aren't quite up to the task. Your playing wasn't a total failure, but it just wasn't enough to beat his practiced skills at the game. As a result, the fox is the victor, and it's up to him what to do with you.";
+				say "     You give the impression of playing to your best abilities, but let the games turn in Zeke's favor, knowing what will come after you lose and looking forward to it. Soon enough he wins, and is able to decide how he'll play with you.";
 				say "[ZekeSexMenu3]";
 		else:
 			LineBreak;

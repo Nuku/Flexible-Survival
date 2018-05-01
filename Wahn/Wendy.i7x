@@ -60,7 +60,10 @@ Instead of resolving a Missing Cow:
 	say "     Roaming through the plains, you suddenly hear loud mooing coming from somewhere and as you look around, you spot an... interesting scene a moderate distance away. Looks like a cow - a regular, non-transformed one - who's just being fucked by a pretty large gryphon. The winged predator is holding the bovine only lightly with his taloned paws as he ruts her from behind and it doesn't look like she minds getting fucked by him - in fact, the sounds she makes seem rather pleased.";
 	say "     This must be Wendy, the missing cow Corbin told you about. There's that reward waiting for you if you manage to bring her back to the McDermott Farm. What do you want to do about her now? You could just... wait, hoping the gryphon might fly off after he got his rocks off - on the other hand, there's no guarantee that the feral beast won't just want a quick snack after sex and could eat her.";
 	LineBreak;
-	say "     So - wait ([link]Y[as]y[end link]) or attack now ([link]N[as]n[end link])?";
+	say "     [bold type]What do want to do?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Wait and watch.";
+	say "     ([link]N[as]n[end link]) - Attack the gryphon.";
 	if player consents:
 		LineBreak;
 		say "     You decide to just wait the gryphon out, keeping your distance - at first - and finding a good spot from which you can observe them. Lustful moos and gryphon shrieks sound out across the plains as the cow is fucked by the winged lion, both of them oblivious to anything around them. As you watch the unequal partners' coupling, you find yourself walking slowly towards them, eager to get a better view. Soon you're pretty close - close enough to hear the squelching noises as the gryphon thrusts in and see the wetness of the cow's fur on her backside and hind legs. This obviously has been going on for quite a while, with more than one load of the mythical beast leaking out around his shaft as he pounds into Wendy.";
@@ -86,7 +89,12 @@ Instead of resolving a Missing Cow:
 to say WendyGryphonAftermath:
 	WaitLineBreak;
 	if cocks of player > 0:
-		say "     Seeing the thoroughly bred cunt of this large and docile creature right in front of you, the thought comes into your mind that you could just... try her out yourself. It's not like one more load would make much of a difference now, would it? Do you follow through with this idea ([link]Y[as]y[end link]), or just bring the cow back to the McDermott Farm right now ([link]N[as]n[end link])?";
+		say "     Seeing the thoroughly bred cunt of this large and docile creature right in front of you, the thought comes into your mind that you could just... try her out yourself. It's not like one more load would make much of a difference now, would it?";
+		LineBreak;
+		say "     [bold type]What now?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Take a turn fucking Wendy.";
+		say "     ([link]N[as]n[end link]) - Just bring the cow back to the McDermott Farm right now.";
 		if player consents:
 			LineBreak;
 			if scalevalue of player < 3:

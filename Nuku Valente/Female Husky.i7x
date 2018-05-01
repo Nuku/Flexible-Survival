@@ -66,7 +66,7 @@ to say fhuskybeaten:
 	now title entry is "Lick her cunt";
 	now sortorder entry is 9;
 	let luststuck be 0;
-	if the libido of player > humanity of player and the libido of the player > 75, now luststuck is 1;
+	if libido of player > humanity of player and libido of player > 75, now luststuck is 1;
 	now description entry is "eat out that juicy canine muff";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -96,7 +96,7 @@ to say fhuskybeaten:
 		else if calcnumber is 0:
 			say "Let her go: Shall you send poor creature on her way?";
 			if the player consents:
-				if the libido of player > humanity of player:
+				if libido of player > humanity of player:
 					say "You want to let go but can't!";
 					now luststuck is 1;
 				else:
@@ -170,9 +170,9 @@ When Play begins:
 	now per entry is 6;
 	now int entry is 2;
 	now cha entry is 16;
-	now sex entry is "Female"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 15;
-	now lev entry is 1; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 3; [ Monster's average damage when attacking. ]
 	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -185,7 +185,7 @@ When Play begins:
 	now cunt length entry is 10; [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 90; [ Target libido the infection will rise towards. ]
-	now loot entry is ""; [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if latexhuskymode is true][one of]quadrupedal[or]altered[or]animalistic[at random][else]girly[end if]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]

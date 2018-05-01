@@ -206,6 +206,12 @@ to say SarahTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Talk about finding a way to suppress those slutty husky impulses";
 	[]
+	if SarahCured > 3:
+		choose a blank row in table of fucking options;
+		now title entry is "Theories on the outbreak";
+		now sortorder entry is 4;
+		now description entry is "Talk about what she thinks caused the infection";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -227,6 +233,8 @@ to say SarahTalkMenu:
 					say "[SarahTalk2]";
 				if (nam is "Managing her urges"):
 					say "[SarahTalk3]";
+				if (nam is "Theories on the outbreak"):
+					say "[SarahTalk4]";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -342,6 +350,9 @@ to say SarahTalk3:
 				say "     'Ah,' the young woman says with a little bit of a sigh, having gotten her hopes up. Then she catches herself and gives you a friendly smile, 'Here I am - starting to mope because my hero doesn't bring me everything I need right away. Silly, hm? Especially since I have so much to be thankful about already.' Leaning in to plant a peck on your cheek, she wags her tail happily as she adds, 'Still... if you got the time to scavenge in the hospital sometime, I'd be forever in your debt.'";
 	else if SarahCured > 3: [Sarah is "cured" - or in treatment at least]
 		say "     As you approach Sarah about the topic of managing her urges, the husky hybrid's tail wags excitedly and Sarah bounces over to you on her slender paws. 'It works! With the bigger stash I have now thanks to you, I experimented a little and found just the right dosage. Thank you, thank you, thank you!' Without any hesitation, she wraps her arms around your chest and even gives you a kiss on the cheek. Staying up close to you and with her fluffy tail still wagging up a storm, she gives you a confident smile. 'I feel like a real woman again - not a feral slut that will spread her legs for anyone who asks. You've been an amazing friend through all this.' With that said, she rubs the side of her lightly furred cheek against yours, then steps away and gets back to what she was doing before.";
+
+to say SarahTalk4:
+	say "     As you bring up the infection as a topic and the fact that you think it is nanites that are responsible, Sarah gives a nod in agreement. 'Yeah, that certainly fits the bill. I mean, I read in some current papers in medical science papers that people were working on medical use for such things. Nothing this drastic of course, but who knows what gets developed in secret labs and never reported to the world. Whoever might have cooked them up is one mystery, and the next one is why and how they got spread. I mean, they're certainly doing a bang-up job of healing wounds for some people, but others melted into puddles of goo. And the sudden species shifting makes no sense at all.' Running her fingers through her hair, Sarah glances down at her own muzzle and makes a grimace in frustration. 'All of this can't have been the intended purpose, can it? There are easier ways of bringing civilization to its knees, besides this total chaos. No, I think it must have been a mistake. Some sort of accidental spread of untested tech.'";
 
 instead of fucking Sarah:
 	say "[SarahFucking]";
@@ -509,7 +520,7 @@ to say SarahFucking:
 					say "     Your pet looks up in anticipation as you approach, her pussy leaking wetly onto the floor even as she lies back to give you a better view of her eager body. The sight of this once intelligent young woman now reduced to such a needy canine bitch causes your cock to stiffen even as your own pussy grows damp as well. Deciding to enjoy this time with your eager little pet to its fullest, you slowly begin stroking and petting her as you work your way up her body, starting out with soft stroking of her feet-paws and moving up as your hands massage and stroke the soft fur of her inner thighs. Sarah throws her head back and lets loose a desperate moan as you ever so slowly work your way up to her needy pussy.";
 					say "     Sarah groans as you tease her sensitive folds with your fingers for a minute, rubbing and stroking before continuing to brush against her curvy form on the way up her chest and sides. She quickly becomes quite excited and lost in the pleasure of your touch - so much so that she bucks in a sudden orgasm almost as soon as you begin to massage her soft breasts. The husky girl's antics make you chuckle slightly as she pants and shudders underneath your touch while you continue to rub and caress her breasts. Once Sarah's orgasm has faded somewhat, you slowly allow the tip of your cock to begin to trace the edges of her swollen lips, making the husky bitch gasp and look up at you, her eyes widening as she realizes you haven't even begun to truly play with her body yet.";
 					WaitLineBreak;
-					say "     A smile tugs at the corners of your mouth as you slowly sink yourself into Sarah's well-lubricated passage, groaning at the feel of her vaginal muscles quivering around your [cock of player] rod as you sheath yourself in her body. The young woman moans and throws her head back as she cries out in pleasure at finally being filled by your erect member. Writhing helplessly underneath you as you continue to rub yourself up against her soft furred body, Sarah pants like a bitch in heat as your hips begin to move purposefully up against her.";
+					say "     A smile tugs at the corners of your mouth as you slowly sink yourself into Sarah's well-lubricated passage, groaning at the feel of her vaginal muscles quivering around your [cock of player] rod as you sheathe yourself in her body. The young woman moans and throws her head back as she cries out in pleasure at finally being filled by your erect member. Writhing helplessly underneath you as you continue to rub yourself up against her soft furred body, Sarah pants like a bitch in heat as your hips begin to move purposefully up against her.";
 					say "     You grin as she curls her legs up against your body, her hind-paws rubbing up against the backs of your legs, even as her thighs grip you to her tightly, encouraging you to go faster. Sarah's hips rock in tandem with your own as your pussy leaks its own juice out over the area where your cock joins the two of you together. You moan in pleasure as you lower your chest down against your pet's, breasts rubbing together in an amazing sensation as you run your hands through her soft fur. It doesn't take much longer before you can feel your balls churning and your rod stiffening even further.";
 					WaitLineBreak;
 					say "     Groaning loudly, you feel your cock pressing up against the entrance to Sarah's fertile womb - just in time for a powerful orgasm to rock you to your very core. You start to pump your seed into the fertile husky's eager and receptive body, spurt after spurt of cum ensuring her belly will soon be swelling with your pups. The feel of her womb being invaded by your strong blasts of sperm triggers another orgasm in your fine husky bitch, causing her to shudder and gasp underneath you, her eyes rolling back in her head as you bring her to her second earth shattering orgasm in mere minutes.";
@@ -886,8 +897,7 @@ An everyturn rule:
 		if "Proud Parent" is listed in feats of player and a random chance of 1 in 3 succeeds and SarahPregnant > 1:
 			decrease SarahPregnant by 1;
 
-instead of going inside from Grey Abbey Library while (Sarah is in Bunker and SarahCured is 7):
-	move player to Bunker;
+after going down from Grey Abbey Library while (Sarah is in Bunker and SarahCured is 7):
 	if debugactive is 1:
 		say "     DEBUG: SARAH OFFERS ANAL - SaraCured: [SarahCured][line break]";
 	say "     As you enter the bunker, ";
@@ -901,8 +911,7 @@ to say SarahOffersAnal:
 
 [ Shower Scenes]
 
-instead of going inside from Grey Abbey Library while (Sarah is in Bunker and SarahCured > 3 and SarahShower is 0 and library computer is powered):
-	move player to Bunker;
+after going down from Grey Abbey Library while (Sarah is in Bunker and SarahCured > 3 and SarahShower is 0 and library computer is powered):
 	if debugactive is 1:
 		say "     DEBUG: Sarah thanks the player for the showers working - SaraCured: [SarahCured][line break]";
 	project the Figure of Sarah_clothed_icon;
@@ -1056,7 +1065,7 @@ instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl i
 	if CarlSarahSex is 2:
 		say "[SarahCarlOral2F]";
 
-instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Coleen is in Bunker and ColeenSarahInteraction < 2 and SarahCured > 1 and (lastColeenSarahInteraction - turns > 6)):
+after going down from Grey Abbey Library while (Sarah is in Bunker and Coleen is in Bunker and ColeenSarahInteraction < 2 and SarahCured > 1 and (lastColeenSarahInteraction - turns > 6)):
 	move player to Bunker;
 	if ColeenSarahInteraction is 0:
 		if debugactive is 1:
@@ -1077,7 +1086,7 @@ to say SarahColeenScene2:
 	now ColeenSarahInteraction is 2;
 	now lastColeenSarahInteraction is turns;
 
-instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Alexandra is in library and AlexandraSarahInteraction is 0 and SarahCured > 1): [initial Alexandra / Sarah meet]
+after going down from Grey Abbey Library while (Sarah is in Bunker and Alexandra is in library and AlexandraSarahInteraction is 0 and SarahCured > 1): [initial Alexandra / Sarah meet]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG -> Alexandra & SARAH MEET - AlexandraSarahInteraction: [AlexandraSarahInteraction] <- DEBUG[line break]";
@@ -1096,8 +1105,7 @@ instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Al
 	say "     'So - you're Alexandra's... boss?' the young husky woman asks you, still rather disturbed about the confrontation. Clearing your throat, you do explain how you took in Alexandra after she succumbed to her infection (wisely leaving out that you were the one who pushed her that far). She pretty much declared herself the top bitch of your pack after that. Nodding thoughtfully, Sarah says, 'I'll do my best to keep my distance and not to trigger her. Thank god that you helped me before I was as far gone as that!' After giving you a hug, the young woman walks over to her bed and pulls out a notebook, adding more observations to her ongoing report about what the nanite infection can do.";
 	now AlexandraSarahInteraction is 1;
 
-instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and HP of Eric < 90 and EricSarahInteraction < 3 and SarahCured > 1 and (lastEricSarahInteraction - turns > 6)):
-	move player to Bunker;
+after going down from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and HP of Eric < 90 and EricSarahInteraction < 3 and SarahCured > 1 and (lastEricSarahInteraction - turns > 6)):
 	if EricSarahInteraction is 0:
 		if debugactive is 1:
 			say "     DEBUG -> Eric & SARAH SPEND TIME TOGETHER 1 - EricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
@@ -1161,8 +1169,7 @@ to say SarahCboyEricScene0:
 	now cboyEricSarahInteraction is 1; [Sarah knows about Eric and has talked with him about it]
 	now lastEricSarahInteraction is turns;
 
-instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction > 0 and cboyEricSarahInteraction < 2 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)):
-	move player to Bunker;
+after going down from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction > 0 and cboyEricSarahInteraction < 2 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)):
 	if cboyEricSarahInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG -> Trans Eric & SARAH SPEND TIME TOGETHER 1 - cboyEricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
@@ -1246,8 +1253,7 @@ instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is i
 	now FangSarahInteraction is 1;
 	now lastFangSarahInteraction is turns;
 
-instead of going inside from Grey Abbey Library while (Sarah is in Bunker and David is in Bunker and DavidSarahInteraction < 1 and SarahCured > 1 and (lastDavidSarahInteraction - turns > 6)):
-	move player to Bunker;
+after going down from Grey Abbey Library while (Sarah is in Bunker and David is in Bunker and DavidSarahInteraction < 1 and SarahCured > 1 and (lastDavidSarahInteraction - turns > 6)):
 	if DavidSarahInteraction is 0:
 		if debugactive is 1:
 			say "     DEBUG -> David & SARAH SPEND TIME TOGETHER 1 - DavidSarahInteraction: [DavidSarahInteraction] <- DEBUG[line break]";
