@@ -10,10 +10,10 @@ name	desc	weight	object
 old boombox is a grab object. It is part of the player. It is not temporary.
 
 instead of sniffing old boombox:
- say "The faint scent of good old times seems to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";
+ say "     The faint scent of good old times seems to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";
 
 Instead of using the old boombox:
-	say "Looking over the old styled machine you find yourself wondering what flavor of music would be good to listen to right now. There are several switches, all with certain types of music on them, so you have options.";
+	say "     Looking over the old styled machine you find yourself wondering what flavor of music would be good to listen to right now. There are several switches, all with certain types of music on them, so you have options.";
 	say "[musicsession][line break]"; 	]
 
 
@@ -24,55 +24,55 @@ Old Record Store is a situation.
 The sarea of Old Record Store is "Outside".
 
 Instead of Resolving a Old Record Store:
-	say "Walking along and scouting for danger around every other turn, you find your steps taking you to someplace that you aren't particularly familiar with. Surprised by the fact that your body has suddenly gained an awareness all its own, you don't think to stop yourself as you follow an unseen path to an old music store that looks as though it has seen much, much better days. Even before the so-called apocalypse, you don't actually remember having seen a music shop in the neighborhood where you lived, not even in the big city really.";
-	say "After ipods, cell phones and the likes started to come out and the internet became a hospice for people pirating bootleg music via unsecure web links, music stores like this one had become a relic of a past no one remembered or cared about.";
+	say "     Walking along and scouting for danger around every other turn, you find your steps taking you to someplace that you aren't particularly familiar with. Surprised by the fact that your body has suddenly gained an awareness all its own, you don't think to stop yourself as you follow an unseen path to an old music store that looks as though it has seen much, much better days. Even before the so-called apocalypse, you don't actually remember having seen a music shop in the neighborhood where you lived, not even in the big city really.";
+	say "     After ipods, cell phones and the likes started to come out and the internet became a hospice for people pirating bootleg music via unsecure web links, music stores like this one had become a relic of a past no one remembered or cared about.";
 	WaitLineBreak;
-	say "A queer smile slips across your [facename of player] face as you make your way over to the window of the shop. Trying to peek to the best of your ability, you can't really get a good look of what's inside of the building, despite having restored power to the city. Grunting and then shrugging, you prepare to turn away from the music store when you hear the telltale -click- of the front door being opened. Hastily, you crouch down to get on your guard and wonder if this is about to turn into some kind of devious mutant trick.";
-	say "When nothing happens after several seconds, you feel your nerves start to calm and your muscles unclench as a sense of safety washes over you. Not knowing what's going on here, you find yourself wondering if you should take a chance and go into the darkened storefront.";
+	say "     A queer smile slips across your [facename of player] face as you make your way over to the window of the shop. Trying to peek to the best of your ability, you can't really get a good look of what's inside of the building, despite having restored power to the city. Grunting and then shrugging, you prepare to turn away from the music store when you hear the telltale -click- of the front door being opened. Hastily, you crouch down to get on your guard and wonder if this is about to turn into some kind of devious mutant trick.";
+	say "     When nothing happens after several seconds, you feel your nerves start to calm and your muscles unclench as a sense of safety washes over you. Not knowing what's going on here, you find yourself wondering if you should take a chance and go into the darkened storefront.";
 	say "     [bold type]Should you go in?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		LineBreak;
-		say "'Nothing ventured, nothing gained', someone once told you, and you can't help but think that said person might have been right for once. Taking a deep breath to draw up some confidence, you make your way over to the opened door, pull the barrier open, and then take a few timid steps inside. You instantly find yourself swarmed with the sounds of a weird style of music playing -- a strange mix of bluegrass and acid jazz that somehow seems to work -- as well as whispered words from unseen people having some sort of important discussion. At least you would guess the argument is significant by the tone of the utterances.";
+		say "     'Nothing ventured, nothing gained', someone once told you, and you can't help but think that said person might have been right for once. Taking a deep breath to draw up some confidence, you make your way over to the opened door, pull the barrier open, and then take a few timid steps inside. You instantly find yourself swarmed with the sounds of a weird style of music playing -- a strange mix of bluegrass and acid jazz that somehow seems to work -- as well as whispered words from unseen people having some sort of important discussion. At least you would guess the argument is significant by the tone of the utterances.";
 		WaitLineBreak;
-		say "Eyes swiftly tracking the area of the store from left to right and then up to down, you find yourself growing very confused when you don't actually see anybody. The lights are flicking on above you, illuminating the surrounding area, yet this is kinda confusing since it didn't look like this was so from the outside. A trick of the light perhaps?";
-		Say "Despite this, however, the whispers seem to grow somewhat quieter around you, as if your presence has become an inquiry to those unseen. Not believing in ghosts, since no such things could possibly exist, you wonder if this is some kind of strange mutant ploy. That's when the screech of a record needle scratching across a vinyl surface causes you to hiss in pain.";
-		say "Grunting in annoyance, you shake your head, wanting desperately to forget that noise ever happened, before you see a flicker from the back room that draws your attention. Not knowing what to do, you find yourself at the crossroads of yet another decision.";
+		say "     Eyes swiftly tracking the area of the store from left to right and then up to down, you find yourself growing very confused when you don't actually see anybody. The lights are flicking on above you, illuminating the surrounding area, yet this is kinda confusing since it didn't look like this was so from the outside. A trick of the light perhaps?";
+		say "     Despite this, however, the whispers seem to grow somewhat quieter around you, as if your presence has become an inquiry to those unseen. Not believing in ghosts, since no such things could possibly exist, you wonder if this is some kind of strange mutant ploy. That's when the screech of a record needle scratching across a vinyl surface causes you to hiss in pain.";
+		say "     Grunting in annoyance, you shake your head, wanting desperately to forget that noise ever happened, before you see a flicker from the back room that draws your attention. Not knowing what to do, you find yourself at the crossroads of yet another decision.";
 		say "     [bold type]Should you go in or should you turn tail and flee?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Go in.";
 		say "     ([link]N[as]n[end link]) - Turn tail and flee.";
 		if player consents:
 			LineBreak;
-			say "Deciding to bite the bullet just one more time, you go for the backroom to check to see if someone is in there. There's no way this place can be totally empty; that would defy the most basic form of logic there is -- cause and effect -- as somebody had to have opened the front door to the store for you to get in here. Marching forward, with your shoulders pushed out in front of you and your chest puffed up like a preening bird, you convince yourself that you're going to straighten out whatever practical joker is trying to be funny with you! What you find when you shoulder the door to the backroom open is... nothing.";
+			say "     Deciding to bite the bullet just one more time, you go for the backroom to check to see if someone is in there. There's no way this place can be totally empty; that would defy the most basic form of logic there is -- cause and effect -- as somebody had to have opened the front door to the store for you to get in here. Marching forward, with your shoulders pushed out in front of you and your chest puffed up like a preening bird, you convince yourself that you're going to straighten out whatever practical joker is trying to be funny with you! What you find when you shoulder the door to the backroom open is... nothing.";
  			WaitLineBreak;
-			say "Well not exactly nothing, per say. Taking a look around the room, your eyes see that the surrounding area is littered with albums and CD's and... lo and behold... tapes! You don't think you've actually seen a cassette tape in the last five or ten years! Your eyes nearly bulge out of your head as you realize the treasure trove that you've stumbled upon. Whoever has left this place unattended is really doing himself a disservice as s/he's got so much to steal in here that it barely makes any sense.";
-			say "Shutting the door behind you and then walking around in awe, your mind slowly begins to ramble through your somewhat foggy memories as you try and recall all of the hit artists that are collected here in this place. Most have long since faded from stardom, but more than a few continue to shine brightly, even in the dimly lit room with the fifty watt bulb flickering on above you.";
-			say "The whispers, which you can still hear, despite them being somewhat muffled by the closed door, slowly grow louder as you place your fingers over and across the casings of many of the cassettes. Not really sure why you do it, you find your fingers tracing over two cassettes out of the hundreds present. Both tapes bear the vocals of a particular male and female artist, respectively, that you remembered being enamored with a long time ago.";
+			say "     Well not exactly nothing, per say. Taking a look around the room, your eyes see that the surrounding area is littered with albums and CD's and... lo and behold... tapes! You don't think you've actually seen a cassette tape in the last five or ten years! Your eyes nearly bulge out of your head as you realize the treasure trove that you've stumbled upon. Whoever has left this place unattended is really doing himself a disservice as s/he's got so much to steal in here that it barely makes any sense.";
+			say "     Shutting the door behind you and then walking around in awe, your mind slowly begins to ramble through your somewhat foggy memories as you try and recall all of the hit artists that are collected here in this place. Most have long since faded from stardom, but more than a few continue to shine brightly, even in the dimly lit room with the fifty watt bulb flickering on above you.";
+			say "     The whispers, which you can still hear, despite them being somewhat muffled by the closed door, slowly grow louder as you place your fingers over and across the casings of many of the cassettes. Not really sure why you do it, you find your fingers tracing over two cassettes out of the hundreds present. Both tapes bear the vocals of a particular male and female artist, respectively, that you remembered being enamored with a long time ago.";
 			WaitLineBreak;
-			say "Taking the tapes and then flipping them around onto the back to read the songs, just to see if you remember them all correctly, your eyes jump when you hear a radio come on all of a sudden. It is putting out what you can tell should be the local news, but you know there's been no radio broadcasts since this whole madness started. The weather and time seem accurate, making you scan around the room to again search for whoever is behind all this. Casting your sights around to see where the voice is coming from, you find your gaze narrowing down to a small table hidden from view off into the left corner of the room.";
-			say "Again, you find yourself confused as you wonder what the hell is going on here. First the spooky shop with the self opening door, the whispers, the music and now the news. Had you not known any better you could almost swear that someone is trying to get your attention. Laughter bubbles up out of your throat as you find the hilarity of the situation too much to stand. The slight crackle of fear and insanity colouring your hilarity must be in your head, you reason, as you are NOT afraid right now. Nope. No sir. Calming your laughs down into giggles and then into quiet chuckles, you pull yourself over the table to have a look-see at what's making all the ruckus.";
+			say "     Taking the tapes and then flipping them around onto the back to read the songs, just to see if you remember them all correctly, your eyes jump when you hear a radio come on all of a sudden. It is putting out what you can tell should be the local news, but you know there's been no radio broadcasts since this whole madness started. The weather and time seem accurate, making you scan around the room to again search for whoever is behind all this. Casting your sights around to see where the voice is coming from, you find your gaze narrowing down to a small table hidden from view off into the left corner of the room.";
+			say "     Again, you find yourself confused as you wonder what the hell is going on here. First the spooky shop with the self opening door, the whispers, the music and now the news. Had you not known any better you could almost swear that someone is trying to get your attention. Laughter bubbles up out of your throat as you find the hilarity of the situation too much to stand. The slight crackle of fear and insanity colouring your hilarity must be in your head, you reason, as you are NOT afraid right now. Nope. No sir. Calming your laughs down into giggles and then into quiet chuckles, you pull yourself over the table to have a look-see at what's making all the ruckus.";
 			WaitLineBreak;
-			say "What you find is an old boombox staring up at you, almost as if in longing for your presence. The old fashioned machine is big and clunky, though nothing compared to your bedroll, with switches and knobs and the likes which signal its age. However, you do happen to note that the thing has a CD player attached to the top of it, so the machine can't be all that old. You shake your head as you turn away from the music maker, but soon you have to look back as you could have just sworn that you heard your name coming from the thing.";
-			say "Listening very hard, you almost have to strain to hear anything as the volume on the old boombox quickly silences itself. Pulling back to tilt your head in befuddlement, a scowl soon covers your [facename of player] face as you promise that you're going to make whoever is pulling this joke off on you pay when you find them. Whirling away from the jam machine, you head back over to the other side of the room to replace the cassettes that you have in hand. Just as you are about to set the twin tapes back, the boombox suddenly pumps up the volume loud enough that you nearly jump up onto the ceiling.";
+			say "     What you find is an old boombox staring up at you, almost as if in longing for your presence. The old fashioned machine is big and clunky, though nothing compared to your bedroll, with switches and knobs and the likes which signal its age. However, you do happen to note that the thing has a CD player attached to the top of it, so the machine can't be all that old. You shake your head as you turn away from the music maker, but soon you have to look back as you could have just sworn that you heard your name coming from the thing.";
+			say "     Listening very hard, you almost have to strain to hear anything as the volume on the old boombox quickly silences itself. Pulling back to tilt your head in befuddlement, a scowl soon covers your [facename of player] face as you promise that you're going to make whoever is pulling this joke off on you pay when you find them. Whirling away from the jam machine, you head back over to the other side of the room to replace the cassettes that you have in hand. Just as you are about to set the twin tapes back, the boombox suddenly pumps up the volume loud enough that you nearly jump up onto the ceiling.";
 			WaitLineBreak;
-			say "Gritting your teeth, once you come back down to earth, you figure that enough is enough! Walking over to the old boombox and then snatching the machine up, you switch it off and stomp your way out into the front and then shout for someone... ANYONE... to come out and get this little joke over with. Silence answers you. Not even the whispers from before can be heard as you look around desperately for a store clerk, manager or somebody to come and tell you what's going on.";
-			say "No one ever does.";
+			say "     Gritting your teeth, once you come back down to earth, you figure that enough is enough! Walking over to the old boombox and then snatching the machine up, you switch it off and stomp your way out into the front and then shout for someone... ANYONE... to come out and get this little joke over with. Silence answers you. Not even the whispers from before can be heard as you look around desperately for a store clerk, manager or somebody to come and tell you what's going on.";
+			say "     No one ever does.";
 			WaitLineBreak;
-			say "Not knowing what's going on, but not liking this craziness anymore, you decide to split while the getting's good. Rushing out of the front door, the old boombox in hand, you make your way down the street and back to the bunker at top speeds. Behind you, the door to the music shops quietly shuts and then locks itself, but only after the figure of an old man walks by the window. Obviously, you've just been become the butt of someone's elaborate prank... right?";
+			say "     Not knowing what's going on, but not liking this craziness anymore, you decide to split while the getting's good. Rushing out of the front door, the old boombox in hand, you make your way down the street and back to the bunker at top speeds. Behind you, the door to the music shops quietly shuts and then locks itself, but only after the figure of an old man walks by the window. Obviously, you've just been become the butt of someone's elaborate prank... right?";
 			now BoomBox is in the Bunker;
 			now battleground is "void";
 			move the player to the Bunker;
 			now Old Record Store is resolved;
 		else:
 			LineBreak;
-			say "You get the creeps from this place and decide to go back home, or to the bunker at least. The whispers around you seem somewhat saddened by your departure and the music playing in the background slows down until it finally falls silent. You don't notice any of this as you're out the door and down the street before the local mutants can spot your dust trail. Not that you're scared of course. Behind you the door to the music shop closes with an audible click.";
+			say "     You get the creeps from this place and decide to go back home, or to the bunker at least. The whispers around you seem somewhat saddened by your departure and the music playing in the background slows down until it finally falls silent. You don't notice any of this as you're out the door and down the street before the local mutants can spot your dust trail. Not that you're scared of course. Behind you the door to the music shop closes with an audible click.";
 			now Old Record Store is resolved;
 	else:
 		LineBreak;
-		say "Deciding to err on the side of caution, you spin on your heel and then march straightaway from the creepy music store. And though you don't notice it during your posthaste retreat, another -click- resounds throughout the air, the building's door having shut tight once again.";
+		say "     Deciding to err on the side of caution, you spin on your heel and then march straightaway from the creepy music store. And though you don't notice it during your posthaste retreat, another -click- resounds throughout the air, the building's door having shut tight once again.";
 		now Old Record Store is resolved;
 
 
@@ -85,7 +85,7 @@ It is fixed in place.
 The description of BoomBox is "An old jam machine that looks as though it had once been something very popular. Strangely enough, and despite the age of the machine, there is little wear and tear on the outside covering of the device. Perhaps whoever owned it kept the machine in a secure place so as to make sure that it wouldn't get damaged? Even more strange, the music player works... without power. Maybe if you pressed [bold type]play[roman type] the machine might start to work?".
 
 instead of sniffing BoomBox:
- say "The faint scent of good old times seem to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";
+ say "     The faint scent of good old times seem to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";
 
 Instead of using BoomBox:
 	say "[bold type]Play[roman type]";
@@ -97,17 +97,17 @@ Understand "music" as BoomBoxPlay.
 Understand "turn on" as BoomBoxPlay.
 
 Check BoomBoxPlay:
-	if BoomBox is in the bunker and the BoomBox is not visible, say "Want music, go to the Bunker! :D" instead;
-	if BoomBox is not in the bunker, say "You have nothing to play." instead;
+	if BoomBox is in the bunker and the BoomBox is not visible, say "     Want music, go to the Bunker! :D" instead;
+	if BoomBox is not in the bunker, say "     You have nothing to play." instead;
 
 Carry out BoomBoxPlay:
-	say "Looking over the old styled machine you find yourself wondering what flavor of music would be good to listen to right now. There are several switches, all with certain types of music on them, so you have options.";
+	say "     Looking over the old styled machine you find yourself wondering what flavor of music would be good to listen to right now. There are several switches, all with certain types of music on them, so you have options.";
 	say "[musicsession][line break]";
 
 musicmessage is a text that varies.
 
 to say musicsession:
-	say "Today you feel like some...";
+	say "     Today you feel like some...";
 	wait for any key;
 	sort the table of Music Selection in sortorder order;
 	change the current menu to table of Music Selection;
@@ -173,11 +173,11 @@ To say jazzfriends:
 		else:
 			say "     Fang, not use to hearing music too often, seems a little intrigued by the noise coming from the boombox. Slowly, the feral wolf comes over and then lays down beside your cot to listen to the soft sounds coming from the unfamiliar machine.";
 	if skunk kit is tamed:
-		say "     The little skunk kit is somewhat amused by the noise as it comes over and then plops down to listen to the smooth jazz.";
+		say "     Peppy is somewhat amused by the noise as he comes over and then plops down to listen to the smooth jazz.";
 	if helper dog is tamed:
 		say "     Hobo seems to appreciate your taste in music as it comes over to lay across your lap. Maybe one of the people it once helped liked this kind of melody? The slight bob of the canine's head seems to give greater validation to this theory.";
 	if little fox is tamed:
-		say "     The cute little fox you found seems to like the jazz music as it comes over to yip at the jam box while cocking its head from side to side, likely wondering who's making the pleasant noise. You are tempted to grab the cute thing to nuzzle it, but you decide not to bother the vulpine as the other is just having too much fun to disturb right now, especially as it starts to roll around while yipping adorably in front of the boom box.";
+		say "     Dash seems to like the jazz music as he comes over to yip at the jam box while cocking his head from side to side, likely wondering who's making the pleasant noise. You are tempted to grab the cute thing to nuzzle it, but you decide not to bother the vulpine as he is just having too much fun to disturb right now, especially as he starts to roll around while yipping adorably in front of the boom box.";
 	if Elijah is in the Bunker:
 		If HP of Elijah is 3 or HP of Elijah is 4:
 			say "     Elijah seems to enjoy the smooth melody playing on the boombox and soon begins to hum a tune that is unfamiliar to you. In fact, as you listen a little more closely, Elijah's humming almost sounds... otherworldly.";
@@ -197,9 +197,9 @@ to say tangofriends:
 		if HP of Sven < 30:
 			say "     Without asking his permission, you go over to the shy snowmeow and take his paw, pulling him up to join you in dancing. He's timid and shy at first, but moves with considerable grace. With such a graceful partner, you pick up the pace, going for fancier and bolder moves. The kitty follows your lead, allowing you to perform a very energetic and sensual dance with him. Once you're done, you leave him on his bunk, blushing behind his tail and looking quite happy and excited.";
 [		else:
-			say "***confident Sven.";]
+			say "     ***confident Sven.";]
 	if felinoid companion is tamed:
-		 say "     Your felinoid companion seems to enjoy the music as he bobs his head while shaking his tail playfully around in the air. Seeing this, you try not to laugh as you find yourself dancing around your felinoid companion. The rhythm your feet make you move to quickly has both you and your feline partner dancing together in time with the melody of the music. This lasts for several minutes, even as the particular song changes, before the felinoid soon tires and then goes off to rest.";
+		 say "     Klauz seems to enjoy the music as he bobs his head while shaking his tail playfully around in the air. Seeing this, you try not to laugh as you find yourself dancing around your felinoid companion. The rhythm your feet make you move to quickly has both you and your feline partner dancing together in time with the melody of the music. This lasts for several minutes, even as the particular song changes, before Klauz soon tires and then goes off to rest.";
 	if Candy is in the bunker:
 		say "     Candy seems to enjoy the tango music and soon begins to bounce around the bunker like a rubber ball, despite the melody not having the right rhythm for such energetic movements. This, however, does not stop Candy from doing as he wishes, especially when you join in with him, though more for trying to calm him down than anything else.";
 	if Alexandra is booked:
@@ -225,13 +225,13 @@ to say R&Bfriends:
 			if sarahpups > 0:
 				say "     Sarah's pups all come around to lay by their mother while yawning and yipping tiredly before falling right asleep.";
 	if little fox is tamed:
-		say "     Your little fox companion comes over to nuzzle up against your leg and you smile somewhat reassuringly to the vulpine as you stare down at it warmly. The small kit yips at you before jumping up onto the cot you're sitting on to nuzzle your side. The little fox is soon asleep and snoring at you with its fluff tail wrapped around its masked face. You reach out to stroke the canid's diminutive body as you continue to listen to the music.";
+		say "     Dash comes over to nuzzle up against your leg and you smile somewhat reassuringly to the vulpine as you stare down at him warmly. The small kit yips at you before jumping up onto the cot you're sitting on to nuzzle your side. The little fox is soon asleep and snoring at you with his fluffy tail wrapped around his masked face. You reach out to stroke the vulpines diminutive body as you continue to listen to the music.";
 	if house cat is tamed:
 		say "     The small house cat comes up to rub around your legs twice before going on to sit by the boom box. You watch her carefully and then smile as the feline purrs quietly while rocking its head in time with the melody.";
 	if Gryphoness is tamed:
 		say "     Denise seems somewhat perturbed by this form of music which seems to rival her own voice. However, upon listening to the tunes for a longer period of time and growing accustomed to them, Denise seems to calm down and then quietly whispers in time with the melody. Soon enough, the gryphoness is almost mimicking the melody perfectly as she closes her eyes while singing in time with song coming from out of the boom box. You realize that you actually like the blue female's voice just a little more than the music as Denise seems to possess a strange, if not haunting echo to her warbling voice.";
 	if skunk kit is tamed:
-		say "     The little skunk you saved earlier comes over to you and quickly curls itself up by your leg before falling asleep due to the music. Obviously, the intensity of the music is too much for the mind of the young mephit. You snicker somewhat as you watch the little skunk whimper and then kick around in its sleep. Young or not though, you see that something is getting through that skull of the young one.";
+		say "     The little skunk you saved earlier comes over to you and quickly curls himself up by your leg before falling asleep due to the music. Obviously, the intensity of the music is too much for the mind of the young mephit. You snicker somewhat as you watch Peppy whimper and then kick around in his sleep. Young or not though, you see that something is getting through that skull of the young one.";
 	if Candy is in the bunker:
 		say "     Candy seems somewhat put off by this music as he snorts and then goes off somewhere to go bounce up and down in peace.";
 	if bee girl is tamed:
@@ -259,7 +259,7 @@ to say RockandRollfriends:
 		if HP of Fang is 3 or HP of Fang is 4:
 			say "     Fang seems to have woken up from his inopportune nap as the wolf rises onto his feet and then pads over into your direction. Seeing that he's not quite happy about being so rudely interrupted by the annoying sounds, you have to block the other off from the boom box as you can clearly see the other wanting to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this. After all, a win is a win in your book by any accounts.";
 		else:
-			say "Fang doesn't seem to care for this particular type of music as he pops his head into the Bunker and then pops himself back out to return to his post.";
+			say "     Fang doesn't seem to care for this particular type of music as he pops his head into the Bunker and then pops himself back out to return to his post.";
 	if Alexandra is booked:
 		say "     Coming in to investigate the noise[if fang is booked] when Fang exists the bunker angrily[end if], Alexandra pokes her head inside. Hearing the energetic, frenetic rock and roll music, she throws herself into dancing. Clearly not much of a dancer, she makes up for it with energy and wild abandon, throwing herself most of all into the songs about wild youth, sex and rebellion. It seems to get her quite worked up and she's got a hungry look in her eyes by the end of it.";
 		now lastfuck of Alexandra is turns + 8;
@@ -267,7 +267,7 @@ to say RockandRollfriends:
 		if HP of Sven < 30:
 			say "     You pull Sven up from his seat to get him to join in for a while. He's a little shy about it, but dances very well, moving with feline grace. Soon he's rocking his hips, swaying his tail and dancing up a storm. In the excitement, he reaches over and gives your rump a pinch. Surprised at his own boldness, he blushes brightly and dashes back to his bunk, to hide behind his tail. But despite that, you can tell he's had a really fun time.";
 [		else:
-			say "***confident Sven.";]
+			say "     ***confident Sven.";]
 	if Candy is in the bunker:
 		say "     Feeling the rhythm getting to him, Candy moves around like a spring as the beat of the song coming from the jam box makes him somewhat of a loose cannon. Well, more than he already is as he spins around while skipping and then bobbing and weaving at the same time[if cocks of player > 0]. He even grinds himself back against your lap with a girlish giggle during one song[end if].";
 		say "     Nothing about his movements can be considered normal, but at the same time that gives the other an appearance of true freedom as he lets his effeminate body just roll around as it wishes. You chuckle some as the raccoon comes over to you to circle you twice before bumping up into you and then moving off again. Truly a carefree spirit if there ever was one to be found, you think silently before going back to your own dancing.";
@@ -300,18 +300,18 @@ to say Oceanfriends:
 	if the cute crab is tamed:
 		say "     The small crustacean seems to utterly adore this music as he scurries itself back and forth around while [']smiling['] merrily.";
 	if felinoid is tamed:
-		say "     Your felinoid companion is quick to go over and curl up at the small of your back. Purring distinctively inside of your ears, you chuckle some as its whiskers tickle you softly.";
+		say "     Klauz is quick to go over and curl up at the small of your back. Purring distinctively inside of your ears, you chuckle some as its whiskers tickle you softly.";
 	if Candy is in bunker:
 		say "     Candy seems to be somewhat offset by this kind of soothing music as the other seems to slink away out of the room. Maybe he doesn't feel like taking a nap?";
 	if Sven is in bunker:
 		if HP of Sven < 30:
-			say "     The snow leopard seems put off by this music but can't stop from yawning as the ocean sounds have caught him good. He steps closer [if felinoid is tamed]and moves your felinoid companion over to settle himself at your back alongside the other feline[else]and just plops down at your back[end if]. Sven nuzzles up to you and then goes right to sleep. His arms do come around you to hold you somewhat close/possessively though.";
+			say "     The snow leopard seems put off by this music but can't stop from yawning as the ocean sounds have caught him good. He steps closer [if felinoid is tamed]and moves Klauz over to settle himself at your back alongside the other feline[else]and just plops down at your back[end if]. Sven nuzzles up to you and then goes right to sleep. His arms do come around you to hold you somewhat close/possessively though.";
 [		else:
-			say "***confident Sven.";]
+			say "     ***confident Sven.";]
 	if little fox is tamed:
 		say "     The cute little vulpine swiftly bounds over to you and then curls himself up at the underside of your chin[if Fang is in the Grey Abbey Library]. Fang moves the fox over to lay it next to him however, the other growling somewhat fatherly at the little kit when the vulpine tries to move away[end if].";
 	if skunk kit is tamed:
-		say "     The little skunk goes to rest on top of your stomach and you can only laugh as you reach up to scratch at the other's black and white furred body.";
+		say "     Peppy goes to rest on top of your stomach and you can only laugh as you reach up to scratch at the other's black and white furred body.";
 	if helper dog is tamed:
 		say "     Hobo makes his way over to you and then settles himself at your feet. Wagging its tail leisurely, you listen to the other yawn as he goes right to sleep, though his ears always remain perked.";
 	if Gryphoness is tamed:
