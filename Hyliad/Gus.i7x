@@ -125,7 +125,7 @@ to say GusSexMenu:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Talk"):
+				if (nam is "Talk a bit before sex"):
 					say "[GusTalk]";
 				if (nam is "Give Gus a blowjob"):
 					say "[GusSex1]";
