@@ -10,6 +10,7 @@ Version 1 of Gus by Hyliad begins here.
 [   5: ...                                            ]
 
 GusTalkProgress is a number that varies.
+HadGusBackgroundTalk is a truth state that varies. HadGusBackgroundTalk is usually false.
 
 to say ShagShackSex23: [Gus]
 	if GusTalkProgress is 0: [first encounter]
@@ -23,6 +24,7 @@ to say ShagShackSex23: [Gus]
 		say "     The stork smiles warmly, waiting for your order. Obviously,he's eager to spend some time with you, but how should you spend it?";
 	else:[talked at least four times]
 		say "     Knowing exactly where to find the stork by now, you quickly make your way to his mattress where you see him lying with, big surprise, a comic book in his hands. He notices you quickly and brightens up, waving at you enthusiastically as you reach him. 'Hello, [sir]. It's always a pleasure to see you,' he says with a sincere smile. After the comic book disappears under the bed, no doubt to join a pile of similar comics stashed in there, the stork gets up and gives you a hug and a kiss. Soon enough, more kisses follow, and before you even realize it, the two of you are making out lustfully as the bird caresses your [if cocks of player < 1 and cunts of player < 1]ass[else]crotch[end if] with his wing. 'So,' he says with a lustful look, 'what can I do for one of my favorite clients today?'";
+	now HadGusBackgroundTalk is false;
 	say "[GusSexMenu]";
 
 to say GusTalk:
@@ -59,17 +61,20 @@ to say GusTalk:
 				say "     As you say you're in the mood for some talking, Gus giggles. 'Why am I not surprised?' The stork then starts asking you questions about your past and who you were before it all started. He is very curious about you, and you end up so involved in your reminiscence that at first you don't even notice how he starts caressing your crotch, clearly excited about getting physical with you.";
 			-- 2:
 				say "     Gus says, 'So tell me [sir], what happened to you recently?' As you tell Gus of your latest adventures (and misadventures), the stork shows great interest; he is sometimes impressed, sometimes excited, sometimes freaked out a bit, but always happy to learn more about your daily life. 'Listening to you really reminds me why I enjoy it here. Everything is so complicated outside. I'd rather just fuck!' he says with a giggle. Speaking of, the avian start caressing your crotch with his wing, clearly eager for something more physical.";
+	now HadGusBackgroundTalk is true;
+	say "[GusSexMenu]";
 
 to say GusSexMenu:
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Talk";
-	now sortorder entry is 1;
-	now description entry is "Start with a discussion first";
-		[]
+	if HadGusBackgroundTalk is false:
+		choose a blank row in table of fucking options;
+		now title entry is "Talk a bit before sex";
+		now sortorder entry is 1;
+		now description entry is "Start with a discussion first";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Give Gus a blowjob";
 	now sortorder entry is 2;
@@ -134,17 +139,16 @@ to say GusSexMenu:
 					say "[GusSex5]";
 				if (nam is "Receive anal"):
 					say "[GusSex6]";
-				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     The storks blinks. 'Is it something wrong with me?' he asks with a worried look, but you assure him that you just had a change of heart and don't feel like having sex at the moment. Gus doesn't seem completely convinced, but nods. 'Well, I wouldn't want you to do anything you don't wish for. Maybe next time, then.' He smiles as he wishes you farewell, but you look back at the stork resuming his reading, you can see a slightly frustrated look on his face.";
-				wait for any key;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say GusSex1: [give blowjob]

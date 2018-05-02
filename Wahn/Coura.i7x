@@ -103,19 +103,19 @@ to say MTFRatSexMenu:
 		now sortorder entry is 2;
 		now description entry is "Be serviced by Coura's mouth";
 	[]
-[
+	[
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "She'll give you a blowjob";
 		now sortorder entry is 3;
 		now description entry is "Be serviced by Coura's mouth";
-	[]
+	]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "You'll fuck her pussy yourself";
 		now sortorder entry is 4;
 		now description entry is "Pound Coura's pussy";
-	[]
+	[
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "You'll fuck her ass yourself";
@@ -132,7 +132,7 @@ to say MTFRatSexMenu:
 	now sortorder entry is 7;
 	now description entry is "Let some random person fuck Coura";
 	[]
-]
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

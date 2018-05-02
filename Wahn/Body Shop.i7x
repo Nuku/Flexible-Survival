@@ -22,12 +22,6 @@ to say BodyShopDesc:
 	say "     This room seems to have been a clothing boutique before the chaos started - at least judging by the wide-open floorspace, the row of changing booths in the back and numerous mannequins standing around motionlessly. Interestingly, none of the dolls actually wears a shred of clothing, with all of the former merchandise and the stands they were offered on pushed into an untidy heap in one corner of the store. No, what is being presented now instead are the mannequins themselves... on a second look, you see that they often vary from the 'typical' stature of sexless store mannequins. A row of them at the shop windows sports impressive erections - equine, canine, feline and human, to name just a few, while other little groups have a variety of facial features and body plans. Further in the back are several that one might believe customers at first - fully formed anthros with life-like skin, feathers or otherwise - if they didn't stand quite so motionless and still...";
 
 
-after going to Body Shop while (HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
-	if debugactive is 1:
-		say "     DEBUG: Moreau and Customer Scene[line break]";
-	say "     ...";
-
-
 Section 2 - NPC
 
 Moreau is a man.

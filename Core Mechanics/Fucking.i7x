@@ -42,7 +42,7 @@ instead of fucking Doctor Matt:
 Table of fucking options
 title	sortorder	subtable	description	toggle
 "Nothing"	1	--	"Nothing here."	sexytable rule
-with 20 blank rows.
+with 40 blank rows.
 
 This is the sexytable rule:
 	say "I'm a placeholder! :)";
