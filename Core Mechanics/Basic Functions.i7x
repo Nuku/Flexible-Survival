@@ -98,6 +98,20 @@ to SanBoost (N - number):
 	increase humanity of player by N;
 	if humanity of player > 100:
 		now humanity of player is 100;
+		
+to LibidoLoss (N - number):
+	LineBreak;
+	say "[bold type]Your libido has decreased by [N]![roman type][line break]";
+	decrease libido of player by N;
+	if libido of player < 0:
+		now libido of player is 0;
+
+to LibidoBoost (N - number):
+	LineBreak;
+	say "[bold type]Your libido has increased by [N]![roman type][line break]";
+	increase libido of player by N;
+	if libido of player > 100:
+		now libido of player is 100;
 
 to ScoreLoss (N - number):
 	LineBreak;
