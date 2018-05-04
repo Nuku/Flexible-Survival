@@ -65,7 +65,7 @@ When Play begins:
 	now defeated entry is "[Horseman loses]";
 	now victory entry is "[Horseman wins]";
 	now desc entry is "[HorsemanDesc]";
-	now face entry is "broad equine muzzle, with large round blue eyes, and rather expressive horse-like ears, sitting atop your new face";[ Face description, format as the text "Your face is (your text)."]
+	now face entry is "dominated by a broad equine muzzle, with large round blue eyes, and rather expressive horse-like ears, sitting atop your new face";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "large and muscular, with strong digitigrade equine legs ending in powerful hooves supporting, your muscular form, your strong hands seem to be slightly hoof-like as well, the ends of your fingers tipped with little hooflet like nails";
 	now skin entry is "[one of]horse-like[or]dappled[or]brown and white patterned[or]softly furred[or]short fur covered[at random]";
 	now tail entry is "You have a long, thick, horse-like tail swaying behind you, almost reaching to the ground. Its long strands of coarse hair cover your ass completely as it flicks this way and that seemingly on its own.";[ Tail description, write a whole Sentence or leave blank. ]

@@ -944,7 +944,7 @@ to say EricSexMenu:
 	else if HP of Eric is 31 or HP of Eric is 32:
 		setmonster "Satyr";
 		choose row monster from the table of random critters;
-	if HP of Eric > 19 and HP of Eric < 30:
+	if HP of Eric < 20:
 		project the Figure of Eric_naked_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

@@ -192,7 +192,7 @@ to say centaurgrowtorso:
 	say "you tip forwards, face first as a pair of new legs grows out from your behind, and an equine torso follows";
 	if the skinname of the player is "Mutant Centaur":
 		say ", covered with black fur, newly grown muscles rippling underneath.";
-	else if the skinname of the player is "human":
+	else if the skinname of the player is "Human":
 		say ", the human skin contorting and stretching, leaving pink streaks as it expands to support the required muscles.";
 	increase hunger of player by 10;
 	say "You feel hungry, the energy being sapped out of you by the new growth.";

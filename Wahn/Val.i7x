@@ -126,15 +126,15 @@ An everyturn rule:
 					now the Cell Door 1 is closed;
 					now the Cell Door 1 is locked;
 					now battleground is "void";
-					move player to Grey Abbey 2F;
-					move Chris to Grey Abbey 2F;
+					move player to Sitting Area;
+					move Chris to Sitting Area;
 					now HP of Chris is 1;
 				else:
 					say "     Val moves over to the cell door, holding it open for you. As you leave the cell, the door automatically falls shut again when Val lets go of it, pushed by a spring at the top. The breeder slave gives you a wave, being too tamed and dependent on orc cum to want to escape himself, then sits down on his cot. Well, if he doesn't want to leave himself, there's nothing much you can do about that, so you just make your way out and down the corridor with Chris, silently escaping the orc lair. The young orc is a natural at stealthy movement, no doubt thanks to the skills inherited from his father, and you make your way to the library with ease after that.";
 					now the Cell Door 1 is closed;
 					now battleground is "void";
-					move player to Grey Abbey 2F;
-					move Chris to Grey Abbey 2F;
+					move player to Sitting Area;
+					move Chris to Sitting Area;
 					now HP of Chris is 1;
 			else:
 				LineBreak;

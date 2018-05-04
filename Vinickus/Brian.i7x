@@ -68,7 +68,7 @@ Instead of conversing the Brian:
 		say "     'Huh?' The large rhino man stops staring at the wall for a minute, his eyes darting around until they finally focus on you. 'Oh, hey. Not a good idea to go and sneak up on a guy like that,' he says, pushing a fist into the palm of his other hand, the action releasing several audible cracks before he mirrors the movement with his off hand, drawing out more sounds of knuckles cracking. He then precedes to look back at the cracked area of the wall a second later. 'The name is Brian, and you can, I'm sure, plainly see that I had a bit of a run-in with a rather unique mutant....well, I guess he more ran into me,' Brian chuckles lightly, his grey skin seeming to flush red in embarrassment, a jerking movement causing you to flick an eye to his groin.";
 		WaitLineBreak;
 		say "     'I'm sure a person of your ";
-		if bodyname of player is "human" and player is pure:
+		if bodyname of player is "Human" and player is pure:
 			say "resistance, ";
 		else:
 			say "curiosity, ";

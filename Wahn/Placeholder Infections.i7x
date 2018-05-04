@@ -1,5 +1,5 @@
-Version 1 of Human Infections by Wahn begins here.
-[Version 1.1 - Tweaked description stuff]
+Version 1 of Placeholder Infections by Wahn begins here.
+[Version 1]
 
 Section 1 - Monster Insertion [Human]
 
@@ -9,16 +9,16 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Human";
-	now attack entry is "[one of]The human slaps you.[or]You get hit by a balled fist.[at random]";
+	now name entry is "Anthro Fox";
+	now attack entry is "[one of]Fight Text 1.[or]Fight Text 1.[at random]";
 	now defeated entry is " ";
 	now victory entry is " ";
 	now desc entry is "     This isn't supposed to be an actual infection, just a stand-in - please report how you saw this.";
-	now face entry is "charmingly human";
-	now body entry is "charmingly human";
-	now skin entry is "smooth";
-	now tail entry is "";
-	now cock entry is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
+	now face entry is "foxy";
+	now body entry is "foxy";
+	now skin entry is "red, furry";
+	now tail entry is "You have a long bushy fox tail.";
+	now cock entry is "foxy";
 	now face change entry is "";
 	now body change entry is "";
 	now skin change entry is "";
@@ -48,8 +48,8 @@ When Play begins:
 	now loot entry is "";              [ Loot monster drops, ]
 	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "human";
-	now type entry is "human";
+	now body descriptor entry is "foxy";
+	now type entry is "foxy";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
@@ -104,7 +104,7 @@ When Play begins:
 	now lootchance entry is 0;            [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]average[or]normal[or]unchanged[at random]";
-	now type entry is "human";
+	now type entry is "Human";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;

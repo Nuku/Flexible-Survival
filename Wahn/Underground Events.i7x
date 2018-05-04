@@ -371,7 +371,7 @@ to say Inside Cell Four:
 	say "     [CellFourSex]";
 
 to say CellFourSex:
-	setmonster "herm human";
+	setmonster "Herm Human";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
