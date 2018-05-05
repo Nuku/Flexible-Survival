@@ -834,7 +834,7 @@ the CrotchItemsList is {ragged loincloth, simple loincloth, boxer briefs, white 
 
 to say GiveRandomCrotchItem:
 	now RandomItemPick is a random number from 1 to the number of entries in CrotchItemsList;
-	increase carried of entry RandomItemPick of WaistItemsList by 1;
+	increase carried of entry RandomItemPick of CrotchItemsList by 1;
 	say "[bold type]You gain [if plural of entry RandomItemPick of CrotchItemsList is true][entry RandomItemPick of CrotchItemsList][else]a [entry RandomItemPick of CrotchItemsList][end if]![roman type][line break]";
 
 Scavevents ends here.

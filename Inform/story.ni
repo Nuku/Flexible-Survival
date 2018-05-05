@@ -179,16 +179,16 @@ The player has a text called Cock. Cock is usually "[one of]normal[or]flesh-tone
 The player has a text called face. Face is usually "charmingly human".
 The player has a text called tail. tail is usually "".
 The player has a text called body. Body is usually "charmingly human".
-The player has a text called bodyname. Bodyname is usually "human".
-The player has a text called facename. Facename is usually "human".
-The player has a text called skinname. Skinname is usually "human".
-The player has a text called cockname. cockname is usually "human".
-The player has a text called tailname. Tailname is usually "human".
-The child has a text called bodyname. Bodyname is usually "human".
-The child has a text called facename. Facename is usually "human".
-The child has a text called skinname. Skinname is usually "human".
-The child has a text called cockname. cockname is usually "human".
-The child has a text called tailname. Tailname is usually "human".
+The player has a text called bodyname. Bodyname is usually "Human".
+The player has a text called facename. Facename is usually "Human".
+The player has a text called skinname. Skinname is usually "Human".
+The player has a text called cockname. cockname is usually "Human".
+The player has a text called tailname. Tailname is usually "Human".
+The child has a text called bodyname. Bodyname is usually "Human".
+The child has a text called facename. Facename is usually "Human".
+The child has a text called skinname. Skinname is usually "Human".
+The child has a text called cockname. cockname is usually "Human".
+The child has a text called tailname. Tailname is usually "Human".
 The player has text called Cock Size Desc.
 The player has text called Cunt Size Desc.
 The player has text called Breast Size Desc.
@@ -5278,6 +5278,7 @@ Include Piggy by Stripes.
 Include Pink Poodle by AGentlemanCalledB.
 Include Pirate Shark by Sarokcat.
 Include Pit Bull For FS by Guest Writers.
+Include Placeholder Infections by Wahn.
 Include Plush Lion by Sarokcat.
 Include Prairie Dog For Fs by Stripes.
 Include Psycho Weasel For Fs by Stripes.

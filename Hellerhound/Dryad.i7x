@@ -125,7 +125,7 @@ When Play begins:
 	now cunt width entry is 4; [ Width of female sex infection will try and give you ]
 	now libido entry is 60; [ Amount player Libido will go up if defeated ]
 	now loot entry is "dryad cum";
-	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]feminine[or]sultry[or]slender[at random]";
 	now type entry is "[one of]dryad[or]plant[at random]";
