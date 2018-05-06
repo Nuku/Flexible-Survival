@@ -417,7 +417,7 @@ instead of fucking the Chase:
 		say "     Just walking up to a guy and dragging him into bed seems a bit forward. At least talk to Chase first! You're not feral (yet) after all.";
 	else if HP of Chase is 3: [player has not talked to dominant Chase yet]
 		say "     You haven't even talked to Chase since agreeing to be his mate. Amazing sex is one thing, but your relationship will now be quite different, so it might be best to talk about that with your dominant top first.";
-	else if HP of Chase is 4: [player has not chosen a dominant form]
+	else if HP of Chase is 4 and Dexterity of Chase is 0: [player has not chosen a dominant form]
 		say "     'Before we [italic type]celebrate[roman type] I still think there is some things we need to discuss...'";
 	else if cunts of player is 0 and lust of Chase is 0:
 		if "MPreg" is not listed in feats of player:
