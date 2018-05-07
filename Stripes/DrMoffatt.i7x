@@ -1,35 +1,31 @@
-Version 2 of DrMoffatt by Stripes begins here.
+Version 3 of DrMoffatt by Stripes begins here.
 [Version 2.2 - More Wereraptor responses]
+[Version 3 - Hypnosis path]
 "Adds a Skunk Shemale NPC named Doctor Moffatt to the Flexible Survival game"
 
 Section 0 - Hypnosis variables
 
-hypnosisStep is a number that varies.
-hypnosisWeaning is a number that varies.
-
-bonusType is a number that varies.
-[0 - Inactive
-1 - Strength
-2 - Dexterity
-3 - Stamina
-4 - Perception
-5 - Charisma
-6 - Intelligence]
-
-[XP of doctor Moffat chooses questline
+[XP of doctor Moffatt chooses questline
 0 - not commited
 1 - skunk TF
 2 - hypnosis
 ]
 
 [HP of Moffatt
+1 - Met the doctor (Another Doctor resolved)
 2 - Sample quest accepted
 ]
 
-[Charisma of Moffat makes the drawing dialogue advances
-
-]
-
+[Level of Doctor Moffatt indicates the level of hypnosis (from 0 to 5)]
+[Lust of Doctor Moffatt indicates the weaning level]
+[Dexterity of Doctor Moffatt indicates the type of stat bonus chosen
+0 - Inactive
+1 - Strength
+2 - Dexterity
+3 - Stamina
+4 - Perception
+5 - Charisma
+6 - Intelligence]
 
 Section 1 - Event
 
@@ -71,6 +67,7 @@ Section 2 - Psych Department
 
 Psych Department is a room. It is fasttravel. It is private.
 The description of Psych Department is "[psychdesc]".
+earea of Psych Department is "Hospital".
 
 to say psychdesc:
 	say "     The office of Dr. Moffatt in the Psychology department has been kept rather tidy though you're quite certain it's changed since the outbreak. Aside from the usual desk, filing cabinet and assorted accoutrements, there are a few straight jackets left strewn around, a colourful array of sex toys standing upright on her desk and the remains of sticky stains on the floor and walls. Speaking of the walls, there are several colourful crayon drawings of what must be the mephit doctor over the white paint. Were it not for the clear emphasis on the skunk's giant assets, you'd think them drawn by a child. There are a few ornamental skunks on her desk as well, though of a more mundane form than the hypersexualized scrawls.";
@@ -78,19 +75,22 @@ to say psychdesc:
 		say "[line break][psychfirstarrival]";
 
 to say psychfirstarrival:
-	if XP of Doctor Moffatt is 2: [If the player met Moffat as a skunk or a permanent infection]
+	if XP of Doctor Moffatt is 2: [If the player met Moffatt as a skunk or a permanent infection]
 		say "     The doctor smiles at you as you arrive. 'Excellent. I was just thinking about you,' she says as she gets up, showing that her cock's actually mostly hard right now, raising up the front of her skirt to give an even better view of her maleness. 'I hope this means you've decided to help me with my little experiment. I simply want to observe the effects of the infection and transformation to one's psyche over time. As you seem more coherent and sane than most, you should be able to better articulate what's happening to you. Most who become infected change rather rapidly and become rather fixed in their newly obtained form.'";
 		say "     'Considering the fact that your latest physical transformations make you unsuitable for my main work, I want to work with you through hypnosis,' the doctor explains. 'I would like to put you under trance, and watch the effects of implemented suggestions on a nanite infected body. Do you feel up to the task? Just ask me about [bold type]hypnosis[roman type] when you are ready to start,' she says, as she passes you a bottle of water. 'The water's for you. My way of saying thanks for helping me out,' she says with a smile.";
+		increase carried of water bottle by 1;
 	else:
 		say "     The doctor smiles at you as you arrive. 'Excellent. I was just thinking about you,' she says as she gets up, showing that her cock's actually mostly hard right now, raising up the front of her skirt to give an even better view of her maleness. 'I hope this means you've decided to help me with my little experiment. I simply want to observe the effects of the infection and transformation to one's psyche over time. As you seem more coherent and sane than most, you should be able to better articulate what's happening to you. Most who become infected change rather rapidly and become rather fixed in their newly obtained form.'";
 		if skunkbeaststatus is 1:
 			say "     'But it seems now that you've since become too tainted by those rather mundane forest skunks. You are no longer a suitable candidate for my testing.' She sighs and teases one of her nipples. 'You could provide help in another form, though. Hypnosis.' You look at the doctor with intrigued eyes. 'I would like to put you under trance, and watch the effects of implemented suggestions on a nanite infected body. Do you feel up to the task? Just ask me about [bold type]hypnosis[roman type] when you are ready to start,' she says, as she passes you a bottle of water. 'The water's for you. My way of saying thanks for helping me out,' she says with a smile.";
 			now XP of doctor moffatt is 2;
 			now HP of doctor moffatt is 2;
+			increase carried of water bottle by 1;
 		else if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
 			say "     'But it seems you've gone and become too tainted by some strangely persistent infection since I last saw you. It keeps you from being a suitable candidate at all.' She sighs and teases one of her nipples. 'You could provide help in another form, though. Hypnosis.' You look at the doctor with intrigued eyes. 'I would like to put you under trance, and watch the effects of implemented suggestions on a nanite infected body. Do you feel up to the task? Just ask me about [bold type]hypnosis[roman type] when you are ready to start,' she says, as she passes you a bottle of water. 'The water's for you. My way of saying thanks for helping me out,' she says with a smile.";
 			now XP of doctor moffatt is 2;
 			now HP of doctor moffatt is 2;
+			increase carried of water bottle by 1;
 		else:
 			say "     'It seems there's at least some psychological component to how nanite infection manifests itself. Or, at least, it can be a contributing factor in some cases. Take myself for instance,' she says, running her gloved paws over her breasts and cock with clear pleasure. 'My infection seems to have imprinted on my skunk decorations and a few of my own personal kinks. Yet others find their minds and sexual desires changed utterly by the infection instead.'";
 			if wrcursestatus >= 3 and wrcursestatus < 7:
@@ -103,16 +103,15 @@ to say psychfirstarrival:
 			say "     ([link]N[as]Hypnosis[end link]) I am curious about this hypnosis thing.";
 			if player consents:
 				say "     'Excellent. Here you go,' she says, passing you a glass sample jar and a bottle of water. 'Before we can get started, I'd like you to collect a sample from one of those skunk girls in the [bold type]forest[roman type]. They shouldn't be much trouble for you, I'm sure,' she says with a smile. 'And the water's for you. My way of saying thanks for helping me out,' she says with a smile.";
+				increase carried of water bottle by 1;
 				now XP of Doctor Moffatt is 1;
 				now HP of doctor moffatt is 2;
 			else:
 				say "     'Excellent. Just ask me about [bold type]hypnosis[roman type] when you are ready to start,' she says, as she passes you a bottle of water. 'The water's for you. My way of saying thanks for helping me out,' she says with a smile.";
+				increase carried of water bottle by 1;
 				now XP of Doctor Moffatt is 2;
 				now HP of doctor moffatt is 2;
-	LineBreak;
-	say "[bold type]You gain 1 water bottle![roman type][line break]";
-	increase carried of water bottle by 1;				
-	now battleground is "void";
+		now battleground is "void";
 
 
 the scent of Psych Department is "The room smells strongly of its sexy skunk occupant, though there's traces of the scents of others, mainly mustelids, having been in here as well.".
@@ -126,23 +125,23 @@ The conversation of Doctor Moffatt is { "..." }.
 The icon of Doctor Moffatt is figure of DrMoffatt2_icon.
 wrcurseMoffatt is a number that varies.
 
-the scent of Doctor Moffatt is "[if hypnosisStep <= 4]She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger. She also has a pleasant, perfumed scent beneath that.[else]The mistress smells heavenly, as usual. Her perfumed scent fills the room, and makes you smile blissfully.[end if]".
+the scent of Doctor Moffatt is "[if level of Doctor Moffatt <= 4]She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger. She also has a pleasant, perfumed scent beneath that.[else]The mistress smells heavenly, as usual. Her perfumed scent fills the room, and makes you smile blissfully.[end if]".
 
 to say drmoffattdesc:
-	if hypnosisStep is 0:
+	if level of Doctor Moffatt is 0:
 		say "     Doctor Moffatt, the shemale skunk, has a very striking appearance. Her pretty face has a slightly masculine look to it, but her lips are full, luscious and black in colour like her nose and hair. Her fur is a mix of grays, dark and light, instead of the starker contrast of black and white you'd expect on a skunk. She has a huge, fluffy tail, as long as she is tall and as wide as her hips. And those hips are quite wide indeed. The skunk's hips and ass are quite wide and womanly, continuing down to her thick thighs.";
 		say "     But as things go, those aren't the most striking features on the grayscale skunk. Her breasts are quite huge, each the size of a small watermelon. They have large, oversized nipples with areolae about three inches across. And to match their size are the huge globes of her balls, each roughly just as big as her breasts and with a giant missile of a cock to go along with them. While she wears a doctor's coat and a short skirt, they can do nothing to contain or conceal this skunk woman's hypersexualized body. She also has a pair of white gloves she wears over her hand-like paws.";
 		say "     Seeing you looking at her, she playfully [one of]leans across her desk, pushing her breasts out with her arms[or]runs a paw casually around one nipple[or]rubs her gloved paws down her very wide hips[or]gives her fluffy tail a swish[or]bends down to pick something up, flashing her rear and exposing her lack of pussy behind those huge balls[or]slowly runs a fingertip along the gray flesh of her cock[at random].";
-	else if hypnosisStep <= 3:
+	else if level of Doctor Moffatt >= 1 and level of Doctor Moffatt <= 3:
 		say "     Doctor Moffatt, your new friend, has a very striking appearance. Her pretty face has a slightly masculine look to it, but her lips are full, luscious and black in colour like her nose and hair. Her fur is a mix of grays, dark and light, instead of the starker contrast of black and white you'd expect on a skunk. She has a huge, fluffy tail, as long as she is tall and as wide as her hips. You feel the odd urge to pet and plunge your face into it. And those hips are quite wide indeed. The skunk's hips and ass are quite wide and womanly, continuing down to her thick thighs. They would feel so right against your [if male]hips[else]crotch[end if].";
 		say "     But as things go, those aren't the sexiest features on the grayscale skunk. Her breasts are quite huge, each the size of a small watermelon. They have large, oversized nipples with areolae about three inches across, inviting you to play with them. And to match their size are the huge globes of her balls, each roughly just as big as her breasts and with a giant missile of a cock to go along with them; your mouth waters at the sight. While she wears a doctor's coat and a short skirt, they can do nothing to contain or conceal this skunk woman's hypersexualized body. She also has a pair of white gloves she wears over her hand-like paws.";
 		say "     Seeing you looking at her, she playfully [one of]leans across her desk, pushing her breasts out with her arms[or]runs a paw casually around one nipple[or]rubs her gloved paws down her very wide hips[or]gives her fluffy tail a swish[or]bends down to pick something up, flashing her rear and exposing her lack of pussy behind those huge balls[or]slowly runs a fingertip along the gray flesh of her cock[at random]. You give back a smile, the display having quite the effect on you.";
-		LibidoBoost 5;
+		increase libido of player by 5;
 	else:
 		say "     Mistress Moffatt, your best friend, has a very striking appearance. Her pretty face has a slightly masculine look to it, but her lips, from which come her magnetic and irresistible voice, are full, luscious and black in colour like her nose and hair. Her fur is a mix of grays, dark and light, instead of the starker contrast of black and white you'd expect on a skunk. She has a huge, fluffy tail, as long as she is tall and as wide as her hips. One that you would pet for her for entire days, if she asked. And those hips are quite wide indeed. The skunk's hips and ass are quite wide and womanly, continuing down to her thick thighs. You want to plunge between them and let her squeeze them around you, as you service her.";
 		say "     But as things go, those aren't the sexiest features on the grayscale skunk. Her breasts are quite huge, each the size of a small watermelon. They have large, oversized nipples with areolae about three inches across, inviting you to suckle on them like a child. And to match their size are the huge globes of her cum-filled balls, each roughly just as big as her breasts and with a giant missile of a cock to go along with them; and you know that your only place is with this gigantic rod inside your [if anallevel is 3 or cunts of player is 0]ass[else]pussy[end if]. While she wears a doctor's coat and a short skirt, they can do nothing to contain or conceal this skunk woman's hypersexualized body. She also has a pair of white gloves she wears over her hand-like paws.";
 		say "     Seeing you looking at her, she playfully [one of]leans across her desk, pushing her breasts out with her arms[or]runs a paw casually around one nipple[or]rubs her gloved paws down her very wide hips[or]gives her fluffy tail a swish[or]bends down to pick something up, flashing her rear and exposing her lack of pussy behind those huge balls[or]slowly runs a fingertip along the gray flesh of her cock[at random]. You smile warmly, waiting for an order, any order, coming from her.";
-		LibidoBoost 10;
+		increase libido of player by 10;
 
 
 Instead of conversing the Doctor Moffatt:
@@ -160,15 +159,17 @@ Instead of conversing the Doctor Moffatt:
 		say "[hypnoPathDialogue]";
 
 to say hypnoPathDialogue:
-	if hypnosisStep is 5:
+	if level of Doctor Moffatt is 5:
 		say "     'Tut tut,' the doctor interrupts you as you open your mouth. '[italic type]Clothes off and on your knees on the sofa. Now.[roman type]' Your body enters in a trance-like state, and before you know it, you are on Doctor Moffat's leather sofa, showing your [bodyname of player] ass at her.";
 		say "[MoffatHypnosisFullSex]";
-	else if hypnosisStep is 0:
-		say "     'Hello, [if player is not defaultnamed][name of player][else]my dear patient[end if].' Would you be interested in a hypnosis session? Ask me about [bold type]hypnosis[roman type] later. By the way...";
-	else if hypnosisStep <= 2:
-		say "     'Welcome back, [if player is not defaultnamed][name of player][else]my dear patient[end if].' My experiments in hypnosis with you are rather fun. Remind me about doing another [bold type]hypnosis[roman type] session later. By the way...";
-	else:
+	else if level of Doctor Moffatt is 3 or level of Doctor Moffatt is 4:
 		say "     'Ah, my sweet little toy.' Upon hearing Doctor Moffat's expression, your legs start to feel weak, and you are compelled to get on your knees. 'Are you here for another [bold type]hypnosis[roman type] session? Or perhaps you are simply here to let your mistress get some time off? Anyway...'";
+	else if level of Doctor Moffatt is 1 or level of Doctor Moffatt is 2:
+		say "     'Welcome back, [if player is not defaultnamed][name of player][else]my dear patient[end if].' My experiments in hypnosis with you are rather fun. Remind me about doing another [bold type]hypnosis[roman type] session later. By the way...";
+	else if level of Doctor Moffatt is 0:
+		say "     'Hello, [if player is not defaultnamed][name of player][else]my dear patient[end if].' Would you be interested in a hypnosis session? Ask me about [bold type]hypnosis[roman type] later. By the way...";
+	else:
+		say "     'Hmm, you seem to be even more addicted to my hypnosis than I anticipated. Maybe you should [bold type]tell Kernog in the bugs report channel about it[roman type].";
 	if a random chance of 7 in 8 succeeds:
 		say "     [one of]'Do you like the drawings?  One of the weasels I've been treating's taken a fancy to me and did this while I was out of the room. I think it's kind of sweet,' she says, pointing to one of her resting her footpaw on smaller, supplicant form. Given the rough art, you must assume it is a weasel in a straightjacket with several red hearts floating nearby.[or]'I must say, this new me is quite enjoyable. It's been very liberating,' she says with a grin and a swish of her floofy tail.[or]'I'd resigned my kinks as fantasy in my old life. I must say being able to fulfill them for real has been quite enjoyable,' she confesses with a wink and a paw running down the front of her skirt over her ill-concealed maleness.[or]Taking the seat on the corner of her desk, she motions for you to sit on the couch. 'Please tell me about your experiences outside. How has all this been making you feel?  How are your sexual urges manifesting themselves?' She asks her questions in a clinical manner, but also has a paw casually stroking one of her ample balls.[or]'Here's a picture of the old me,' she says, holding up a photo of a stern but beautiful woman. 'Aren't I much sexier now,' she asks, running her paws over her oversized breasts and teasing her nipples.[or]'Do you like my collection?' she purrs, brushing a paw lightly across her myriad selection of dildos and sex toys, setting several of them to swaying. None, even the biggest of them, come close to even her flaccid cock.[or]She rubs a paw over the front of her dress, lightly squeezing around her semi-hard cock. 'I should go check on the patients soon. Make sure they've been getting their meds.'[in random order]";
 	else:	[too long, separated]
@@ -289,13 +290,13 @@ to say sexwithDrMoffatt:
 		say "[sexwithDrMoffattHypnoPath]";
 
 to say sexwithDrMoffattHypnoPath:
-	if hypnosisStep > 4:
+	if level of Doctor Moffatt > 4:
 		if lastfuck of Doctor Moffatt - turns < 4:
 			say "     'Again? Oh my, I hope that I did not break you or anything. Come back a little later, [italic type]my sweet little toy[roman type], I am not in the mood yet.'";
 		else:
 			say "     'Great timing,' the doctor gives you a predatory smile. 'I was starting to miss you, my sweet little toy. [italic type]Clothes off, on the couch. Now.[roman type]' Your body enters in a trance-like state, and before you know it, you are on Doctor Moffat's leather sofa, showing her your [bodyname of player] ass at her.";
 			say "[MoffatHypnosisFullSex]";
-	else if hypnosisStep is 3:
+	else if level of Doctor Moffatt is 3:
 		if lastfuck of Doctor Moffatt - turns < 4:
 			say "     'Again? It seems that I made someone [italic type]too[roman type] eager. Come back a little later, [italic type]my sweet little toy[roman type], I am not in the mood yet.'";
 		else:
@@ -492,8 +493,9 @@ to say sexwithDrMoffattSkunkPath:
 			say "     As she motions you towards the couch, you hop onto it quickly, eager to start telling your sexy shrink about all the fun you've been getting up to out in the city";
 			if wrcurseMoffatt > 0 and a random chance of 1 in 4 succeeds:
 				say "[one of]. 'Now let's talk some more about this wild, primitive side of you. What do you feel when the changes are overtaking you?  Do you find yourself longing for the wild abandon of giving into your lusts?' she asks, taking notes on your responses and helping you focus on the lustful urges over the violent ones.[or]. 'Tell me more about this wild, primitive creature living within you. Describe its wants and desires to me. What does it seek?  What are its lustful passions?  Are they so different from your normal, daily ones?' she asks, intrigued by your answers.[or]. 'Let's take a moment to delve into your id and seek out this primitive beast lurking within you. Where does it draw its strength?  What fuels its wild rage?' she asks, helping you deal with your curse a little better.[in random order]";
-				LibidoLoss 2;
-				SanBoost 5;
+				increase libido of player by 2;
+				increase humanity of player by 5;
+				if humanity of player > 100, now humanity of player is 100;
 			else:
 				say "[one of]. 'Now tell me about some of these creatures you've been seeing. How has their appearance been affecting you?  What features about them spark your interest?' she asks, enjoying your description of those sexy beasts.[or]. 'Let's talk some more about these creatures you've been seeing. Are there any you particularly enjoy running into?  What about them makes them so special?' she asks, nodding as she notes down your responses while her own cock twitches[or]. 'And what about these others you see out in the city?  Which have been exciting you of most of late?'[or]. 'Have you been helping others out in the city and making new friends?  It's important for you to make friends. Difficult times are easier to get through with friends to help you out.' While this sounds like normal psychologist talk, the lewd way her cock throbs makes it pretty clear how she thinks you and your friends in the city should help each other out[or]. 'And what do you find sexy now that you didn't before the outbreak?  What have your sexual fantasies and desires been like over the last few days?  Do you remember how you would have reacted to that before changing?' she asks. And while you have trouble remembering what you may have been like this all started, how could you not have lusted for all the sexy things you see around you?  She smiles and nods at your responses, making more notes[or]. 'Now tell me about your new, sexy [bodytype of player] body. What do you like about it the most?' she asks, her cock throbbing as you describe how your new body turns you on and what feels best about it[or][if ( cocks of player > 0 and cunts of player > 0 and a random chance of 1 in 2 succeeds ) or ( cocks of player > 0 and cunts of player is 0 )]. 'Now tell me about this [cock of player] cock of yours. Have you been wanting to have intercourse with the creatures you've been seeing with it?  Which ones in particular get a rise out of you?' she asks, stroking her heavy balls as you start listing off the people and things you'd like to fuck[else if cunts of player > 0]. 'Now tell me about that [cunt size desc of player] pussy of yours. How often have you been wanting intercourse lately?  Are there any people you've met or creatures you've seen you'd like to have stuff that juicy hole of yours?' You can't help but start fingering yourself as you list off several well-hung cocks you've seen lately all while the skunk strokes her own twitching penis[else]. 'And how have you been responding to your sexual desires while being a genderless individual?  What gender do you want to try being next?' she asks with interest, playing with her own nipples as she listens to your response[end if][in random order]";
 			say ". The session goes on for a while with her asking more questions which make you increasingly aroused as you talk about all the sexy things you've been seeing and doing, enjoying how the skunk strokes and caresses herself, clearly turned on by hearing all your sexual desires. You hold nothing back from your shrink, also telling her how she turns you on and how much you want her as well.";
@@ -543,7 +545,6 @@ to say thirstdecrease:
 	PlayerDrink 10;
 
 to say MoffatHypnosisFullSex:
-	setmonster "Skunk";
 	say "     'Such a nice [if player is female]girl[else]boy[end if],' the psychologist giggles. Stuck in a trance state, the skunk's voice feels as if it was inside your head with your own mind. She circles around the couch while you look down, your body locked in place. Eventually, she stops near your face. ";
 	if a random chance of 1 in 2 succeeds:
 		say "She slaps her flaccid cock against your cheeks a couple of times, before pressing it against your lips. 'Suck.' As soon as the word escaped her lips, your raise your head and, like an automaton, begin to bob your mouth up and down her shaft. It quickly hardens and thickens, until it stretches your lips and reaches down your throat; but you do not stop a single moment. With your gag reflex suppressed by the hypnosis, your lips slide down to the base of Doctor Moffat's shaft, before going back to its crown, in a metronomic rhythm.";
@@ -555,15 +556,15 @@ to say MoffatHypnosisFullSex:
 	[Pussy, default for females and herms if anal level is 1]
 	if player is female and (a random chance of 1 in 2 succeeds or anallevel is 1):
 		say "     Doctor Moffatt walks around you, and positions herself behind you. 'Such a good girl. I did not even have to order you to prepare yourself this time.' She softly guides your right hand fingers out of your pussy, and put your hand back on the sofa. Trapped in the hypnosis, you simply stare in front of you, your cunt quivering from the sudden removal of your digits. They are quickly replaced by the doctor's cock. It pushes inside you, stretching you nice and good until she bottoms out. 'Hnnn. Yesss.' Moffatt begins to pump her hips against your butt. Slap, slap, slap. Each time her balls slam into your groin, a small electric shock runs through your spine. Eventually, as you are about to cum, the trance begins to wear off, and your consciousness suddenly realizes where you are and what is happening. The sensory backlash has you cum hard.";
-		say "     You let out a long, loud bellow as your pussy squeezes the skunk's shaft like a vice and femcum splashes on the fur of her thighs[if cocks of player > 0]. Your male bits let out ropes of cum on the leathery furniture, that the doctor had fortunately protected with a towel beforehand[end if]. Doctor Moffatt cums not long after, and your tired brain feels her torrent of cum rush down your womb. You hear her raspy pants behind you as she slides out of you slowly, letting her deflating cock flop along your thigh, a trail of cum painting your leg white.[fimpregchance][fimpregchance]";
+		say "     You let out a long, loud bellow as your pussy squeezes the skunk's shaft like a vice and femcum splashes on the fur of her thighs[if cocks of player > 0]. Your male bits let out ropes of cum on the leathery furniture, that the doctor had fortunately protected with a towel beforehand[end if]. Doctor Moffatt cums not long after, and your tired brain feels her torrent of cum rush down your womb. You hear her raspy pants behind you as she slides out of you slowly, letting her deflating cock flop along your thigh, a trail of cum painting your leg white.";
 	[Cock, default for males if anal level is 1]
 	else if player is male and (a random chance of 1 in 2 succeeds or anallevel is 1):
 		say "     Doctor Moffatt walks around you, and snaps her fingers. 'Turn'. You instantly lay on your back on the couch, exposing your erect cock for her, one of your hands relentlessly pumping it. 'Such a good boy. I did not even have to order you to prepare yourself this time.' She softly guides your fingers off your dick, and straddles your pelvis. Trapped in the hypnosis, you simply stare at the ceiling, your penis squirming in expectation. Moffatt wastes no time slamming her pussy down on your shaft. She accommodates your [cock size desc of player] easily. 'Hnnn. Yesss,' she purrs, massaging her belly before stroking her cock, and rocking on your own shaft. Slap, slap, slap. Each time she bottoms out her pussy with your rod, a small electric shock runs through your spine. Eventually, as you are about to cum, the trance begins to wear off, and your consciousness suddenly realizes where you are and what is happening. The sensory backlash has you cum hard.";
-		say "     You let out a long, loud bellow as your fists clench the leathery furniture, and your empty your balls into the good doctor in a succession of long, thick ropes of sperm. Doctor Moffatt cums not long after, and while she squeezes your over-sensitive cock with her vagina, she strokes her cock with fast, powerful strokes until it sprays fresh cum all over your [bodyname of player] body, up to your face and into your open mouth. You hear her raspy pants behind you as she slides off you slowly, letting her deflating cock flop along your stomach.[mimpregchance][mimpregchance]";
+		say "     You let out a long, loud bellow as your fists clench the leathery furniture, and your empty your balls into the good doctor in a succession of long, thick ropes of sperm. Doctor Moffatt cums not long after, and while she squeezes your over-sensitive cock with her vagina, she strokes her cock with fast, powerful strokes until it sprays fresh cum all over your [bodyname of player] body, up to your face and into your open mouth. You hear her raspy pants behind you as she slides off you slowly, letting her deflating cock flop along your stomach.";
 	[Ass]
 	else:
 		say "     Doctor Moffatt walks around you, and positions herself behind you. 'Such a good toy. I did not even have to order you to prepare yourself this time.' She softly guides your right hand fingers out of your ass, and put your hand back on the sofa. Trapped in the hypnosis, you simply stare in front of you, your ass quivering from the sudden removal of your digits. They are quickly replaced by the doctor's cock. It pushes inside you, stretching you nice and good until she bottoms out. 'Hnnn. Yesss.' Moffatt begins to pump her hips against your butt. Slap, slap, slap. Each time her balls slam into your groin, a small electric shock runs through your spine. Eventually, as you are about to cum, the trance begins to wear off, and your consciousness suddenly realizes where you are and what is happening. The sensory backlash has you cum hard.";
-		say "     You let out a long, loud bellow as your ass squeezes the skunk's shaft like a vice[if cocks of player > 0]. Your male bits let out ropes of cum on the leathery furniture, that the doctor had fortunately protected with a towel beforehand[end if]. Doctor Moffatt cums not long after, and your tired brain feels her torrent of cum rush down your innards. You hear her raspy pants behind you as she slides out of you slowly, letting her deflating cock flop along your thigh, a trail of cum painting your leg white.[mimpregchance][mimpregchance]";
+		say "     You let out a long, loud bellow as your ass squeezes the skunk's shaft like a vice[if cocks of player > 0]. Your male bits let out ropes of cum on the leathery furniture, that the doctor had fortunately protected with a towel beforehand[end if]. Doctor Moffatt cums not long after, and your tired brain feels her torrent of cum rush down your innards. You hear her raspy pants behind you as she slides out of you slowly, letting her deflating cock flop along your thigh, a trail of cum painting your leg white.";
 	say "     Panting heavily, the doctor sits down on her desk chair, and fetches some tissues to wipe herself. '[one of]I was quite skeptical when we began these hypnosis sessions, but in the end, I don't regret it one bit[or]I can't get enough of this, really. Maybe I should plan some [']therapy sessions['] with that weasel. What do your think?[stopping].'";
 
 to say MoffatHypnosisPartialSex:
@@ -602,7 +603,7 @@ an everyturn rule:
 		else if lastfuck of Doctor Moffatt - turns is 12:
 			say "     You feel a small twinge inside you, a growing longing to see Doctor Moffatt again as you start to miss her, lusting for the sight of her curvy body.";
 			decrease morale of player by 1;
-			LibidoBoost 8;
+			increase libido of player by 8;
 		else if lastfuck of Doctor Moffatt - turns < 32:
 			decrease morale of player by ( lastfuck of Doctor Moffatt - turns ) / 5;
 			if morale of player < 0, decrease humanity of player by a random number between 0 and 3;
@@ -623,7 +624,8 @@ an everyturn rule:
 			now HP of Doctor Moffatt is 97;
 		else if bodyname of player is "Hyperskunk" and player is not pure:
 			say "     You moan softly as shivers of delight run through your mephit body. Your paws move up to your [if breast size of player > 0]breasts and tease your nipples[else]nipples[end if]pinching and tweaking them. Soon they respond by leaking milk that dribbles down your [one of][bodydesc of player][or][bodytype of player][purely at random] body. You are left panting with pleasure as you lick the traces of milk from your dainty fingers even as you feel the milk starting to take effect.";
-			LibidoBoost 10;
+			increase libido of player by 10;
+			if libido of player > 100, now libido of player is 100;
 			hyperskunkdose;
 
 
@@ -639,31 +641,42 @@ to hyperskunkdose:
 	now non-infectious entry is true;
 
 an everyturn rule:
-	if hypnosisStep > 0:
-		decrease hypnosisWeaning by 1;
+	if level of Doctor Moffatt > 0:
+		decrease lust of Doctor Moffatt by 1;
 		[with 8 days remaining, the bonus on stats goes down, the player is compelled to return consult Dr Moffatt]
-		if hypnosisWeaning is 8:
-			if bonusType is:
-			-- 1:
-				decrease strength of player by hypnosisStep;
-				say "     A big wave of fatigue washes over your body. Did the effect of Doctor Moffat's hypnosis end? ";
-			-- 2:
-				decrease dexterity of player by hypnosisStep;
-				say "     You feel as if your hands suddenly went numb. Did the effect of Doctor Moffat's hypnosis end? ";
-			-- 3:
-				decrease stamina of player by hypnosisStep;
+		if lust of Doctor Moffatt is 8:
+			if dexterity of Doctor Moffatt is 1:
+				decrease strength of player by level of Doctor Moffatt;
+				if strength of player < 1, now strength of player is 1;
+				say "     A big wave of fatigue washes over your body. Did the effect of Doctor Moffat's hypnosis end?";
+				say "[bold type]The bonus in strength brought by your hypnosis session has ended.[roman type]";
+			else if dexterity of Doctor Moffatt is 2:
+				decrease dexterity of player by level of Doctor Moffatt;
+				if dexterity of player < 1, now dexterity of player is 1;
+				say "     You feel as if your hands suddenly went numb. Did the effect of Doctor Moffat's hypnosis end?";
+				say "[bold type]The bonus in dexterity brought by your hypnosis session has ended.[roman type]";
+			else if dexterity of Doctor Moffatt is 3:
+				decrease stamina of player by level of Doctor Moffatt;
+				if stamina of player < 1, now stamina of player is 1;
 				say "     You start panting, and feel the need to take a break. Did the effect of Doctor Moffat's hypnosis end? ";
-			-- 4:
-				decrease perception of player by hypnosisStep;
-				say "     Your vision becomes more blurry, and the world becomes more numb around you. Did the effect of Doctor Moffat's hypnosis end? ";
-			-- 5:
-				decrease charisma of player by hypnosisStep;
-				say "     You begin to feel bad into your own body, and your posture becomes less assured. Did the effect of Doctor Moffat's hypnosis end? ";
-			-- 6:
-				decrease intelligence of player by hypnosisStep;
-				say "     Your head starts hurting, and you realize that you forgot what you were heading to. Did the effect of Doctor Moffat's hypnosis end? ";
-			now bonusType is 0;
-			if hypnosisStep is:
+				say "[bold type]The bonus in stamina brought by your hypnosis session has ended.[roman type]";
+			else if dexterity of Doctor Moffatt is 4:
+				decrease perception of player by level of Doctor Moffatt;
+				if perception of player < 1, now perception of player is 1;
+				say "     Your vision becomes more blurry, and the world becomes more numb around you. Did the effect of Doctor Moffat's hypnosis end?";
+				say "[bold type]The bonus in perception brought by your hypnosis session has ended.[roman type]";
+			else if dexterity of Doctor Moffatt is 5:
+				decrease charisma of player by level of Doctor Moffatt;
+				if charisma of player < 1, now charisma of player is 1;
+				say "     You begin to feel bad into your own body, and your posture becomes less assured. Did the effect of Doctor Moffat's hypnosis end?";
+				say "[bold type]The bonus in charisma brought by your hypnosis session has ended.[roman type]";
+			else if dexterity of Doctor Moffatt is 6:
+				decrease intelligence of player by level of Doctor Moffatt;
+				if intelligence of player < 1, now intelligence of player is 1;
+				say "     Your head starts hurting, and you realize that you forgot what you were heading to. Did the effect of Doctor Moffat's hypnosis end?";
+				say "[bold type]The bonus in intelligence brought by your hypnosis session has ended.[roman type]";
+			now dexterity of Doctor Moffatt is 0;
+			if level of Doctor Moffatt is:
 			-- 1:
 				say "[bold type]You should return to Doctor Moffatt, and undertake another hypnosis session.[roman type]";
 			-- 2:
@@ -677,9 +690,9 @@ an everyturn rule:
 				say "[bold type]As if your mind blanked out, you find yourself in front of Mistress Moffat's office, a blissful smile on your face.[roman type]";
 				move player to Psych Department;
 		[Once the weaning period has passed, the hypnosis effect goes one step back]
-		if hypnosisWeaning is 0:
-			decrease hypnosisStep by 1;
-			now hypnosisWeaning is 7;
+		if lust of Doctor Moffatt is 0:
+			decrease level of Doctor Moffatt by 1;
+			now lust of Doctor Moffatt is 7;
 
 Section 5 - Endings
 
@@ -695,15 +708,18 @@ understand "hypnosis" as hypnoSession.
 hypnoSession is an action applying to nothing.
 
 Check hypnoSession:
-	if bonusType is not 0, say "Sorry, but I don't think it would be good for your mental health to as many sessions in such a short time. Come back a little later, once you feel the effects of the previous session have faded." instead;
+	if dexterity of Doctor Moffatt is not 0, say "Sorry, but I don't think it would be good for your mental health to as many sessions in such a short time. Come back a little later, once you feel the effects of the previous session have faded." instead;
 
-[Reminder:
-	1 - Strength
-	2 - Dexterity
-	3 - Stamina
-	4 - Perception
-	5 - Charisma
-	6 - Intelligence]
+[Level of Doctor Moffatt indicates the level of hypnosis (from 0 to 5)]
+[Lust of Doctor Moffatt indicates the weaning level]
+[Dexterity of Doctor Moffatt indicates the type of stat bonus chosen
+0 - Inactive
+1 - Strength
+2 - Dexterity
+3 - Stamina
+4 - Perception
+5 - Charisma
+6 - Intelligence]
 carry out hypnoSession:
 	say "     'Okay,' Doctor Moffatt says. [bold type]What aspect of your being to you want to work on, today?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - You want to feel stronger.";
@@ -729,28 +745,48 @@ carry out hypnoSession:
 		-- 4: say "[hypnoScene4]";
 		-- 5: say "[hypnoScene5]";
 		-- 6: say "[hypnoScene6]";
-	now hypnosisWeaning is 16;
-	if hypnosisStep < 5:
-		increase hypnosisStep by 1;
-		if hypnosisStep is:
+	now lust of Doctor Moffatt is 16;
+	if level of Doctor Moffatt < 5:
+		increase level of Doctor Moffatt by 1;
+		if level of Doctor Moffatt is:
 			-- 1: say "[hypnoCatch1]";
 			-- 2: say "[hypnoCatch2]";
 			-- 3: say "[hypnoCatch3]";
 			-- 4: say "[hypnoCatch4]";
 			-- 5: say "[hypnoCatch5]";
+	if dexterity of Doctor Moffatt is:
+		-- 1: 
+			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			increase strength of player by level of Doctor Moffatt;
+		-- 2: 
+			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			increase dexterity of player by level of Doctor Moffatt;
+		-- 3:
+			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			increase stamina of player by level of Doctor Moffatt;
+		-- 4: 
+			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			increase perception of player by level of Doctor Moffatt;
+		-- 5: 
+			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			increase charisma of player by level of Doctor Moffatt;
+		-- 6:
+			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			increase intelligence of player by level of Doctor Moffatt;
+													
 
 to say hypnoScene1: [Raising strength]
 	say "     Dr Moffatt has you lying down on the couch. She asks you to lie down and gives you some instructions. 'Now, it is important that, during the session, you focus on my words, but most importantly, you must relax. Don't try to force things, or else it will not work. Put these on.' The doctor gives you a pair of headphones. A relaxing white noise begins to fill your head. 'Breathe slowly. Empty your mind. Let the noise help you,' the skunk asks. After several minutes of relaxation, you hear the doctor again.";
 	say "     'You are in a dark, dangerous forest. Something has been following you ever since you walked in. Something big, dangerous. You feel oppressed. Then, all of sudden, here it is. Big, bad, nasty. Do you see it?' Your mind pictures the dark beast, lunging towards you. 'You fight. You fight. You punch, you kick, you struggle.' Lost in your dream, your body begins to shuffle by itself on the chair, moving your arms and legs in an imaginary display of martial arts. 'Yes. You're doing great. It is larger than you, but it is no match for you. You are strong. You are stronger. The beast whines in pain. It submits, crawling on the ground in front of you. You feel satisfied. Proud.'";
 	say "     You cannot help but break a smile as you picture your enemy, prowled at your feet, asking for mercy. 'Then, the beast turns around you. It raises its tail. You can see that [']it['] is a [']he[']. He wags his tail, as he offers his body to his new master.'";
-	now bonusType is 1;
+	now dexterity of Doctor Moffatt is 1;
 
 
 to say hypnoScene2: [Raising dexterity]
 	say "     Dr Moffatt has you lying down on the couch. She asks you to lie down and gives you some instructions. 'Now, it is important that, during the session, you focus on my words, but most importantly, you must relax. Don't try to force things, or else it will not work. Put these on.' The doctor gives you a pair of headphones. A relaxing white noise begins to fill your head. 'Breathe slowly. Empty your mind. Let the noise help you,' the skunk asks. After several minutes of relaxation, you hear the doctor again.";
 	say "     'You are sailing on the sea, in your little boat. You are having a good time. Suddenly, there is a large ship approaching from starboard. They raise a flag. Pirates! A small crew begins to board your beloved ship, swords in hand. You defend yourself fiercely.' Enthralled by the hypnosis, your body begins to wiggle in the chair, mimicking your actions in your story. 'They are no match for you. Their swords cut thin air as you roll and summersault your way through the pirates. Eventually, you reach the captain and, in a dexterous swipe, cut her pants open. The pirates, out of respect, surrender to you. You feel strong, proud.'";
 	say "     You cannot help but break a smile as you picture the pirates surrendering to you. 'Then, the captain approaches. It seems that you impressed her. She proposes to join her in her cabin for... Parleys.'";
-	now bonusType is 2;
+	now dexterity of Doctor Moffatt is 2;
 
 to say hypnoScene3: [Raising stamina]
 	say "     Dr Moffatt has you lying down on the couch. She asks you to lie down and gives you some instructions. 'Now, it is important that, during the session, you focus on my words, but most importantly, you must relax. Don't try to force things, or else it will not work. Put these on.' The doctor gives you a pair of headphones. A relaxing white noise begins to fill your head. 'Breathe slowly. Empty your mind. Let the noise help you,' the skunk asks. After several minutes of relaxation, you hear the doctor again.";
@@ -760,25 +796,25 @@ to say hypnoScene3: [Raising stamina]
 	else:
 		say "     'You hear an enormous crowd cheer and applause around you. You are on a running track. This is the Summer Olympics, the final of the 800m. You look to your left, then to your right, gauging your competition. You see this large woman next to you. Her body is muscular, built for running fast, and for a long time. But you smile, because you know, deep inside, that she is no match for you.' Your face breaks into a smile in the real world as well. 'The race starts. You run, and run. Everyone but this woman is far behind you, turning the race into a duel. She is as fast as you, so the result will be decided by your stamina. 500 meters, 600, 700; you arrive at the last stretch. You feel the burn on your muscles as you push for the final sprint. Your rival is audibly panting, more strongly with each passing meter. Suddenly, in the final ten meters, she abruptly falls behind. You won, with at least half a second.'";
 		say "     'As you exit the stadium', right after receiving your medal, you head straight for the showers. The woman is there. He pats you on the back, congratulating you on your victory, on your extraordinary endurance. Then, getting closer to you, he whispers that he is curious as to how good is your stamina for... Other things.'";
-	now bonusType is 3;
+	now dexterity of Doctor Moffatt is 3;
 
 to say hypnoScene4: [Raising perception]
 	say "     Dr Moffatt has you lying down on the couch. She asks you to lie down and gives you some instructions. 'Now, it is important that, during the session, you focus on my words, but most importantly, you must relax. Don't try to force things, or else it will not work. Put these on.' The doctor gives you a pair of headphones. A relaxing white noise begins to fill your head. 'Breathe slowly. Empty your mind. Let the noise help you,' the skunk asks. After several minutes of relaxation, you hear the doctor again.";
 	say "     'The police sirens are blaring. You and your crew have just completed the heist of the century, and now it is your job to drive them to safety. The race car swallows the road, and the surrounding traffic is a blur as you slalom past it. Car on the left, then car on the right. Turn. Traffic light, watch out. Eventually, you reach the entrance of a small side alley. There is barely the space for the car, you cannot miss, and with the police on your tail you cannot slow down. You trust your eyes and delicately align your vehicle. The alley gets closer, and closer. Then, with the terrible noise of metal scraping against the brick wall, your car goes through. Everyone cheers in the car, as the car that was chasing you crashes in the waste bins by the street corner.'";
 	say "     'A couple hours later, you are back at the hideout. While the rest of the team starts counting the money, you isolate yourself with one of your accomplices. The gorgeous woman unzips her catsuit, and lets her jet black air flow freely out of the leather top. 'That was some impressive driving,' she says, making you proud of yourself. She leans closer to you and whispers to your ear. 'You earned your share well enough. How about I give you a bonus?'";
-	now bonusType is 4;
+	now dexterity of Doctor Moffatt is 4;
 
 to say hypnoScene5: [Raising charisma]
 	say "     Dr Moffatt has you lying down on the couch. She asks you to lie down and gives you some instructions. 'Now, it is important that, during the session, you focus on my words, but most importantly, you must relax. Don't try to force things, or else it will not work. Put these on.' The doctor gives you a pair of headphones. A relaxing white noise begins to fill your head. 'Breathe slowly. Empty your mind. Let the noise help you,' the skunk asks. After several minutes of relaxation, you hear the doctor again.";
 	say "     This is the homecoming party of your school. You are here, wearing your nicest clothes, with one goal in mind: asking out the prettiest, most popular girl. There she is, in her beautiful dress. It is now or never. Anybody would be anxious, would self-doubt. But not you. A charming smile on your face, you invite the girl for a dance. She agrees heartily. Everyone makes space on the dancefloor for the two of you, and you start dancing. One, two, three, four; one, two, three, four. Your pair swirls around the ballroom as the songs play, one after the other.";
 	say "     'Minutes, then hours pass in a flash. Nobody is able to resist your charm. The girl of your dream is the first among them. [']How I wish this night would never end,['] she tells you. Then, she slowly leans her mouth to your ear. [']I know a quiet place, one where we could do another kind of dance. Follow me?...[']'";
-	now bonusType is 5;
+	now dexterity of Doctor Moffatt is 5;
 
 to say hypnoScene6: [Raising intelligence]
 	say "     Dr Moffatt has you lying down on the couch. She asks you to lie down and gives you some instructions. 'Now, it is important that, during the session, you focus on my words, but most importantly, you must relax. Don't try to force things, or else it will not work. Put these on.' The doctor gives you a pair of headphones. A relaxing white noise begins to fill your head. 'Breathe slowly. Empty your mind. Let the noise help you,' the skunk asks. After several minutes of relaxation, you hear the doctor again.";
 	say "     'You are in a small, cosy living room, sitting on a chair in front of a chessboard. In front of you is one of the best chess players in the world. The situation is tense. This is the final game, and you are at a tie. You want to win. You [italic type]have[roman type] to win. You focus intensely, then play a move. Then another, then another. As you play, you begin to feel different. You start to see patterns in your opponent's moves, and you are able to plan several moves in advance. You take less and less time to take your turns, without visibly struggling. You feel confident, smart. Eventually, you see it. The last move, the key to victory. Checkmate.' Unconsciously, you repeat the last word.";
 	say "     'You won, fair and square. The other player looks at you, surprised and humbled. You shake hands with him, when you feel him keeping your hand in his. [']My brilliant friend, how about we take a last drink, in front of the fireplace?['] You see in his eyes that he has something else in mind, and smile in turn.'";
-	now bonusType is 6;
+	now dexterity of Doctor Moffatt is 6;
 
 
 to say hypnoCatch1:
@@ -794,7 +830,7 @@ to say hypnoCatch3:
 	say "     'How do you feel?' she asks. You sense the newfound strength inside your body, and look back at her. You barely prevent yourself from jumping on her on the spot, but [if player is male]your raging boner[else]your wet crotch[end if] betrays your intentions. The skunk grins. 'Good. Come back soon, then. We will have another session.'";
 
 to say hypnoCatch4:
-	say "     [one of]As you mumble, taken by the doctor's racy suggestions, the skunk grins, and resumes her other training. 'You cannot help but feel that you owe everything to doctor Moffatt. The nice doctor Moffatt. When she calls you [']my sweet toy['], you feel obliged to help her in every way. Even now, your body starts to freeze as you hear the wind whisper these words: [']my sweet toy['].' You groan as the psychiatrist repeats the same idea several times to your ears. Eventually, she snaps her fingers to your ear, bringing you back to reality[or]Doctor Moffatt takes the opportunity to reinforce a keyword to have you obey her commands.[stopping].";
+	say "     [one of]As you mumble, taken by the doctor's racy suggestions, the skunk grins, and resumes her other training. 'You cannot help but feel that you owe everything to doctor Moffatt. To your [italic type]mistress[roman type]Moffatt. When she calls you [']my sweet toy['], you feel obliged to help her in every way. Even now, your body starts to freeze as you hear the wind whisper these words: [']my sweet toy['].' You groan as the psychiatrist repeats the same idea several times to your ears, and ensures you are conditioned to think of her as your mistress from now on. Eventually, she snaps her fingers to your ear, bringing you back to reality[or]Doctor Moffatt takes the opportunity to reinforce a keyword to have you obey her commands.[stopping].";
 	say "     'How do you feel, my sweet toy?' she asks. 'Good,' you reply instantly, surprising even yourself. The skunk grins and walks to you, giving your cheek a small kiss. 'Good. Come back soon, then. We will have another session.'";
 
 to say hypnoCatch5:

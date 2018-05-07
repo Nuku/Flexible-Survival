@@ -460,7 +460,7 @@ Instead of resolving a contract hyenegotiation:
 				now inasituation is true;
 				if HyenaPitFightCounter is 0:
 					challenge "Wolftaur";
-				else 
+				else:
 					challenge "Leopardman";
 				increase HyenaPitFightCounter by 1;
 			now inasituation is false; [reset]

@@ -22,6 +22,7 @@ This is the zephyrad rule:
 	now zephyr lobby is known;
 
 Zephyr Lobby is a room. "[zephyrlobbydesc]". It is fasttravel. It is private.
+earea of Zephyr Lobby is "High".
 
 sblzephyr is a truth state that varies. sblzephyr is usually false.
 

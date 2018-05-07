@@ -329,22 +329,13 @@ to say salastrugglebar:
 Section 4 - Endings
 
 when play ends:
-	if bodyname of player is "Salamander" and voreloss is true and humanity of player < 10: [Needs to be corrected if standard endings are added]
-		say "     Doomed to be a plaything for the Salamander, she often enjoys your company both inside and outside of her. Having completely lost your sanity you can only eagerly oblige your fiery new mistress and attend to her every need. You memory soon becomes nothing more than a blur of your seemingly eternal attendance and the warm feel of her soft, inner flesh...";
-
-[
-when play ends:
-	if bodyname of player is "Salamander":
-		if humanity of player < 10:
-			say "     You succumb to your template infection.";
+	if bodyname of player is "Salamander": [Needs to be corrected if standard endings are added]
+		if voreloss is true and humanity of player < 10:
+			say "     Doomed to be a plaything for the Salamander, she often enjoys your company both inside and outside of her. Having completely lost your sanity you can only eagerly oblige your fiery new mistress and attend to her every need. You memory soon becomes nothing more than a blur of your seemingly eternal attendance and the warm feel of her soft, inner flesh...";
+		[
 		else:
-			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
-				say "     Additional text for a male/herm survivor.";
-			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
-				say "     Additional text for a female survivor who can become preggers.";
-			else:									[F-STERILE]
-				say "     Additional text for a female survivor who cannot become preggers.";
-]
+			say "<sane ending>";
+		]
+
 
 Salamander ends here.

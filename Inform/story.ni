@@ -3375,7 +3375,7 @@ To fight:
 				if tailname of player is name entry, add x to Q;
 				if cockname of player is name entry, add x to Q;
 	if the number of entries in Q is 0 and debugactive is 1:
-		say "     DEBUG: No Possible Monsters Found![line break]";:
+		say "     DEBUG: No Possible Monsters Found![line break]";
 	if the number of entries in Q is not 0:
 		sort Q in random order;
 		repeat with Z running through Q:
@@ -4227,6 +4227,8 @@ This is the self examine rule:
 		say "Thin lines of healed claw-marks run down your back, marking you as Angie's mate. ";
 	if "Boghrim's Mark" is listed in feats of player:
 		say "Two small scars from Boghrim's tusks mark your shoulder, a reminder of the first time the big orc fucked you. ";
+	if "Top Dog" is listed in feats of player:
+		say "Your back still bears the scars left by Alexandra's claws during a bout of intense mating, a reminder of your dominance over her and your status as 'Top Dog'. ";
 	if tail of player is empty:
 		say "";
 	else:
@@ -5674,21 +5676,29 @@ To startgenderlockshift:
 			now cock length of player is 6;
 			now the cock width of the player is 4;
 			now breast size of player is 0;
+			now cunts of player is 0;
+			now cunt length of player is 0;
 		-- 4:		[female]
 			now cunts of player is 1;
 			now cunt length of player is 6;
 			now cunt width of player is 4;
 			now breast size of player is 2;
+			now cocks of player is 0;
+			now cock length of player is 0;
 		-- 5:		[shemale]
 			now cocks of player is 1;
 			now cock length of player is 6;
 			now the cock width of the player is 4;
 			now breast size of player is 2;
+			now cunts of player is 0;
+			now cunt length of player is 0;
 		-- 6: [cuntboy]
 			now cunts of player is 1;
 			now cunt length of player is 6;
 			now cunt width of player is 4;
 			now breast size of player is 0;
+			now cocks of player is 0;
+			now cock length of player is 0;			
 		-- 7: [male herm]
 			now cocks of player is 1;
 			now cock length of player is 6;
@@ -6579,7 +6589,9 @@ to say promptsay:
 	say "Exits: ";
 	repeat with nam running through valid directions:
 		say "[link][printed name of nam][end link] ";
-	if location of player is fasttravel:
+	if location of player is fasttravel and earea of location of player is "void":
+		say "[bracket][link]nav[end link][close bracket]";
+	else if location of player is fasttravel:
 		say "[bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket]";
 	else if earea of location of player is not "void":
 		say "[bracket][link]scavenge[end link], [link]explore[end link][close bracket]";

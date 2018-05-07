@@ -21,6 +21,7 @@ Section 2 - Rooms
 
 Approaching the Capitol Building is a Room. The description of Approaching the Capitol Building is "[app_cap_bldg_desc]".
 The Approaching the Capitol Building is fasttravel.
+earea of Approaching the Capitol Building is "Outside".
 [  The Approaching the Capitol Building is private.	]
 
 to say app_cap_bldg_desc:
