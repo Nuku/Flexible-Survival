@@ -471,14 +471,14 @@ to say PlayerWatchesGryphonPlot1: [player observes the gryphons]
 			decrease carried of water bottle by 2;
 		else:
 			say "     Waking up a few hours later, you are sticky all over with dried cum, but you shrug it off in good spirits. After all, you had a lot of fun in your time with the gryphons...";
-			LineBreak;
-			say "[bold type]Your morale increases by 10![roman type][line break]";
-			increase morale of player by 10;
-			fimpregchance; [4 chances - it was a really long gangbang after all]
-			fimpregchance;
-			mimpregchance;
-			mimpregchance;
-			now GryphPlotTracking is 40; [player watched the gryphons do their thing and joined in for the submission]
+		LineBreak;
+		say "[bold type]Your morale increases by 10![roman type][line break]";
+		increase morale of player by 10;
+		fimpregchance; [4 chances - it was a really long gangbang after all]
+		fimpregchance;
+		mimpregchance;
+		mimpregchance;
+		now GryphPlotTracking is 40; [player watched the gryphons do their thing and joined in for the submission]
 	else:
 		say "     Deciding not to risk it, you silently get up from your hiding place and start to make your way to a safe distance from the scene. You can still hear the sounds of the gryphons['] orgy, as you continue along your way through the ruins of the infested city...";
 		now GryphPlotTracking is 30; [player watched the gryphons do their thing]
