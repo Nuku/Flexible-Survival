@@ -253,6 +253,7 @@ To say butterfly defeat:
 			now ButterflyPregnant is False;
 			say "You suddenly feel a strange feeling of achievement in your [ball size].";
 		follow the ButterflyTummyDesc rule;
+		
 To say butterfly attack:
 	let ButterflyCanGetPregnant be False;
 	let cocktext be "";

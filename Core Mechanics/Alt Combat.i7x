@@ -1307,6 +1307,7 @@ to win:
 		if gshep_postfight is 0 and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ):	[checks on Korvin's post-fight 'feedback']
 			if gshep_fights > 2 and inasituation is false and lastscene of gshep - turns >= 4:
 				say "[gshep_postfightargue]";
+	follow the ngraphics_blank rule;
 	rule succeeds;
 
 To lose:
@@ -1335,6 +1336,7 @@ To lose:
 	decrease the score by 1;
 	decrease the morale of the player by 3;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
+	follow the ngraphics_blank rule;
 
 
 Section 5 - Critter Combat

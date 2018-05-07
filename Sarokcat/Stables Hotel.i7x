@@ -58,38 +58,34 @@ Instead of Resolving a A Stabled Situation:
 Section 2 - The Stables Hotel
 
 Stables Hotel is a room. It is fasttravel. It is private.
-Stable is a room.
-Stalls is a room.
+Hotel Stable is a room.
+Hotel Stalls is a room.
 
 The description of Stables Hotel is "     The lobby of this large sprawling building seems to be in surprisingly good repair. The room is lit by fashionable oil lamps lining the walls, filling the room with a warm light and illuminating the reception area. The reception desk is currently empty, although someone has set up an obviously handwritten sign that welcomes new visitors to 'The Stables' and asks that they ring the bell for service. Unfortunately there doesn't appear to be a bell here to ring right now. A smaller sign is set on the other edge of the desk, advising all customers to please have payment ready when they enter the area.".
 
 
-Northeast of Stables Hotel is Stalls.
+Northeast of Stables Hotel is Hotel Stalls.
 West of Stables Hotel is Employee Access.
 
 The invent of The Stables Hotel is { "lucky horseshoe" , "lucky horseshoe" }.
 
-[This part creates a hunting area for your location, feel free to ignore it or remove it if the area does NOT have a random encounter zone.]
-Stable entry is a door. "The lobby trails off to the north where a series of elevators and large double doors can be seen.". It is dangerous.
+Stable Entry is a door. "The lobby trails off to the north where a series of elevators and large double doors can be seen.". It is dangerous.
 
-North of Stable entry is Stable.
-North of The Stables Hotel is Stable entry.
+North of Stable Entry is Hotel Stable.
+North of The Stables Hotel is Stable Entry.
 
-The marea of Stable entry is "Stable".
+The marea of Stable Entry is "Stable".
 
 instead of sniffing Stables Hotel:
 	say "The air here is thick with the scents of many equines. Arousal and sex is strong in the air as well.";
 
-instead of sniffing Stalls:
+instead of sniffing Hotel Stalls:
 	say "This lobby area smells strongly of equine sex coming from the nearby rooms.";
 
+The description of Hotel Stalls is "     This room appears to be the small lobby to one of the guest wings, and while it looks like the main part of the building is still mostly boarded up, this part appears to have been repaired recently, and halls to the north and south appear to have been refurbished for use. Strangely enough, someone seems to have hung a sign in this area, labeling this particular area 'The Stalls'.".
 
-[Additional rooms are easy as well]
-
-The description of Stalls is "     This room appears to be the small lobby to one of the guest wings, and while it looks like the main part of the building is still mostly boarded up, this part appears to have been repaired recently, and halls to the north and south appear to have been refurbished for use. Strangely enough, someone seems to have hung a sign in this area, labeling this particular area 'The Stalls'.".
-
-North of Stalls is Mares Quarters.
-South of Stalls is Holding Pens.
+North of Hotel Stalls is Mares Quarters.
+South of Hotel Stalls is Holding Pens.
 
 
 Mares Quarters is a room.

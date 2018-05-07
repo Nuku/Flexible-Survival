@@ -770,6 +770,7 @@ A flag has a list of text called infections.
 A flag has a list of situations called badspots.
 A flag can be banned. A flag is usually not banned.
 A flag can be warded. A flag is usually not warded.
+Cockvore is a flag.
 Furry is a flag.
 Guy is a flag.
 Girl is a flag.
@@ -781,6 +782,7 @@ Transgender is a flag.
 Incest is a flag.
 Noncon is a flag.
 Mindcontrol is a flag.
+Vore is a flag.
 
 when play begins:
 	add { "Awesome tree", "Bottlenose Toy", "Cock Cannon", "Quilled Tousky" } to infections of humorous;
@@ -1482,6 +1484,7 @@ carry out Inventorying:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
 	if the number of entries in tapes of player > 0:
 		say "(You may see your collection of video tapes using [link][bold type]tape inventory[roman type][end link] or [link][bold type]tinv[roman type][end link] for short.)";
+	say "(You can adjust the number of inventory columns with the command [link]set columns[end link].)";
 	now invlinklistfilled is one;
 
 [used to speed up link command lookup in between clears on the hyperlink list, because we know something about the list:
@@ -3305,6 +3308,8 @@ To level up:
 Before combat is a number that varies.
 
 To fight:
+	if debugactive is 1:
+		say "     DEBUG: Random Monster Choosing Started[line break]";
 	now monster is a random number from 1 to number of filled rows in the table of random critters;
 	let Q be a list of numbers;
 	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not tamed:		[hunted by the mouse collective]
@@ -3347,11 +3352,11 @@ To fight:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night), next;
 			add x to q;
 			if "Like Attracts Like" is listed in the feats of the player:
-				if bodyname of player is name entry, add x to q;
-				if facename of player is name entry, add x to q;
-				if skinname of player is name entry, add x to q;
-				if tailname of player is name entry, add x to q;
-				if cockname of player is name entry, add x to q;	]
+				if bodyname of player is name entry, add x to Q;
+				if facename of player is name entry, add x to Q;
+				if skinname of player is name entry, add x to Q;
+				if tailname of player is name entry, add x to Q;
+				if cockname of player is name entry, add x to Q;	]
 		if area entry matches the text battleground:
 			if there is a nocturnal in row X of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
@@ -3364,14 +3369,16 @@ To fight:
 			if skipit is 1, next;
 			add x to q;
 			if "Like Attracts Like" is listed in the feats of the player:
-				if bodyname of player is name entry, add x to q;
-				if facename of player is name entry, add x to q;
-				if skinname of player is name entry, add x to q;
-				if tailname of player is name entry, add x to q;
-				if cockname of player is name entry, add x to q;
-	if the number of entries in q is not 0:
+				if bodyname of player is name entry, add x to Q;
+				if facename of player is name entry, add x to Q;
+				if skinname of player is name entry, add x to Q;
+				if tailname of player is name entry, add x to Q;
+				if cockname of player is name entry, add x to Q;
+	if the number of entries in Q is 0 and debugactive is 1:
+		say "     DEBUG: No Possible Monsters Found![line break]";:
+	if the number of entries in Q is not 0:
 		sort Q in random order;
-		repeat with Z running through q:
+		repeat with Z running through Q:
 			now monster is Z;
 			break;
 		choose row monster from the table of random critters;
@@ -3424,6 +3431,8 @@ To fight:
 			now needed is ( level of companion of player ) times 6;
 		if XP of companion of player >= needed and level of companion of player < level of player and humanity of player > 0 and player is not lonely:
 			pet level up;
+	if debugactive is 1:
+		say "     DEBUG: Random Monster Choosing Ended[line break]";
 	rule succeeds;
 
 To challenge:
@@ -4938,6 +4947,7 @@ Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
 Include Equinoid Camp For FS by Stripes.
 Include Farm by Wahn.
+Include Gloryhole by SgtPepper234.
 Include High Rise District by Guest Writers.
 Include Hitching Post by SgtPepper234.
 Include Hospital For Fs by Stripes.
@@ -4988,7 +4998,7 @@ Include Chase by Luneth.
 Include Chance Meetings by Kernog.
 Include Combat Helmet by Nuku Valente.
 Include Control Pills by Hellerhound.
-[Include Disorganization by Kaleem mcintyre.] [excluded till review/flagging]
+[Include Disorganization by Kaleem mcintyre.] [Disabled till review]
 Include Dmitri the Peacock by Aureas Gigas.
 Include Dry Plains Events by Stripes.
 Include Endings by Darthan.
@@ -5136,7 +5146,7 @@ Include Dark Elf for FS by Stripes.
 Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
 Include Dire Wolf by Qazarar.
-Include Doberman for FS by Stripes.
+Include Doberman Cop by Stripes.
 Include Donkeyman by Sarokcat n Verath.
 Include Donkeywoman by Sarokcat n Verath.
 Include Dracovixentaur for FS by Stripes.
@@ -6025,8 +6035,10 @@ to playernaming:
 	now name of player is playerinput;
 
 to say menuwardlist:
-	if furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded:
+	if cockvore is warded or furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded or incest is warded or transgender is warded or noncon is warded:
 		say "[bold type]Warded: [bracket] ";
+		if cockvore is warded:
+			say "Cockvore ";
 		if feral is warded:
 			say "Feral ";
 		if furry is warded:
@@ -6054,8 +6066,10 @@ to say menuwardlist:
 		say "[bold type]None Warded[roman type]";
 
 to say menubanlist:
-	if furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned or hermaphrodite is banned:
+	if cockvore is banned or furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned or hermaphrodite is banned or incest is banned or transgender is banned or noncon is banned:
 		say "[bold type]Banned: [bracket] ";
+		if cockvore is banned:
+			say "Cockvore ";
 		if feral is banned:
 			say "Feral ";
 		if furry is banned:

@@ -43,6 +43,7 @@ check TestMode:
 	if TestingActive is true, say "You're already in testing mode." instead;
 
 carry out TestMode:
+	add "Automatic Survival" to feats of player;
 	add "Bestial Power" to feats of player;
 	add "Black Belt" to feats of player;
 	add "Breeding True" to feats of player;
@@ -85,6 +86,7 @@ carry out TestMode:
 	add "Survivalist" to feats of player;
 	add "The Horde" to feats of player;
 	add "Toughened" to feats of player;
+	add "Unerring Hunter" to feats of player;
 	add "Vampiric" to feats of player;
 	now vampiric is true;
 	add "Wary Watcher" to feats of player;
