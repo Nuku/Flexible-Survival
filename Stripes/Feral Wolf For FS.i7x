@@ -131,7 +131,7 @@ to say FeralWolfVictorySex:
 	if the player consents:
 		if cocks of player > 0:
 			if cunts of player > 0:
-				WaitLineBreak;
+				LineBreak;
 				say "     Deciding to have some fun with this poor wolf, you stop and think about how exactly you want to use him. Being a herm, you could easily roll him over and ride his thick canine shaft, or you could mount that tight little ass of his. (Y=Ride, N=Fuck)";
 				if the player consents:
 					say "     You lick your lips and smile, striding over to the wolf, your cock[smn] getting nice and hard, your cunt[sfn] slick with fem juices. You push the wolf over onto his back and straddle him, grinding [if cunts of player > 1]one of your cunts[else]your cunt[end if] up and down his thick length, making him squirm and moan.";
@@ -145,12 +145,12 @@ to say FeralWolfVictorySex:
 					say "     The feral creature sinks to the ground, then slumps over, panting and defeated. You look at him and smile, walking over to him to roll him over onto his chest. The wolf looks back at you and whimpers, quickly understanding what you plan to do. He closes his eyes and shivers before raising his rump up into the air, tail up high and showing off his ass. You laugh and climb on top of the wolf, pressing the tip of your shaft against his tight ring and teasing it lightly. The wolf below you groans and claws at the ground, pushing back against your length, obviously eager to be fucked. You waste no time after such an open invitation and spread his tail hole wide open, gasping out and moaning at how tight the wolf is. You take hold of his hips and begin slamming your length into the big canine's ass, his back arching as he moans loudly, enjoying the good fucking you're giving him.";
 					say "     Soon you are panting hard and climaxing hard, filling the formerly dominant wolf with your thick cum. Once you finish, you pull out of the wolf and walk around front to present your shaft to him for cleaning[if HP of Fang is 0]. Smiling to yourself, you think of how much fun it would be to have a wolf like this for a pet[end if].";
 			else:
-				WaitLineBreak;
+				LineBreak;
 				say "     The feral creature sinks to the ground, then slumps over, panting and defeated. You look at him and smile, walking over to him to roll him over onto his chest. The wolf looks back at you and whimpers, quickly understanding what you plan to do. He closes his eyes and shivers before raising his rump up into the air, tail up high and showing off his ass. You laugh and climb on top of the wolf, pressing the tip of your shaft against his tight ring and teasing it lightly. The wolf below you groans and claws at the ground, pushing back against your length, obviously eager to be fucked. You waste no time after such an open invitation and spread his tail hole wide open, gasping out and moaning at how tight the wolf is. You take hold of his hips and begin slamming your length into the big canine's ass, his back arching as he moans loudly, enjoying the good fucking you're giving him.";
 				say "     Soon you are panting hard and climaxing hard, filling the formerly dominant wolf with your thick cum. Once you finish, you pull out of the wolf and walk around front to present your shaft to him for cleaning[if HP of Fang is 0]. Smiling to yourself, you think of how much fun it would be to have a wolf like this for a pet[end if].";
 		else:
 			if cunts of player > 0:
-				WaitLineBreak;
+				LineBreak;
 				say "     You lick your lips and smile, striding over to the wolf, your cunt[sfn] slick with fem juices. You push the wolf over onto his back and straddle him, grinding [if cunts of player > 1]one of your cunts[else]your cunt[end if] up and down his thick length, making him squirm and moan.";
 				say "     After a few minutes of teasing the poor wolf you take hold of his throbbing cock and line it up with [if cunts of player > 1]one of your cunts[else]your cunt[end if] before sliding down onto it. As you do so, you gasp and moan in pleasure, arching your back as it slides in, your hands gripping the wolf's chest fur.";
 				say "     You start to ride his canine cock, slowly at first but quickly picking up speed. By now the wolf has gained some of his strength back and is eagerly bucking up into your snatch, his cock throbbing and spurting pre into your depths. You shiver and groan, looking down at the wolf beneath you, seeing that he clearly isn't going to last much longer, and you don't think you will either.";
@@ -159,7 +159,7 @@ to say FeralWolfVictorySex:
 				say "     This last act pushes the wolf over the edge and he erupts into an orgasm, his knot swelling up so much that it ties you together and makes a tight seal inside your cunt, making sure not a single drop of the wolf's cum slips out. His orgasm, in turn, sets off your own, your cunt quivering around his shaft and milking it for all it's got, your belly slightly distending from all the cum that's being pumped inside you.[impregchance]";
 				say "     You lie there for a while, waiting for his knot to deflate, your cunt nice and full of wolf cum. When his knot finally does deflate, you make sure to hold your cunt closed as best as you can when you slide of his length, managing to keep all that wonderful cum inside you. Before you leave, you glance back at the wolf and smile, part of you hoping you'll meet him again so he can fill you up again.";
 			else:
-				WaitLineBreak;
+				LineBreak;
 				say "     Before you can do anything though, you realize you lack any proper equipment to use on the wolf. You sigh and sadly walk away.";
 	else:
 		WaitLineBreak;

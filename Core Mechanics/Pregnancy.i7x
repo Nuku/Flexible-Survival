@@ -272,10 +272,10 @@ To Birth:
 			increase ChrisPlayerOffspring by 1;
 			remove "Chris's Breeder Slut" from feats of player;
 		else if "Human Carrier" is listed in feats of player:
-			now skinname of child is "human";
-			now bodyname of child is "human";
-			now tailname of child is "human";
-			now facename of child is "human";
+			now skinname of child is "Human";
+			now bodyname of child is "Human";
+			now tailname of child is "Human";
+			now facename of child is "Human";
 			remove "Human Carrier" from feats of player;
 		else if "Cheerbreeder" is listed in feats of player:
 			now skinname of child is "Football Wolfman";
@@ -404,10 +404,10 @@ To impregnate with (x - text):
 			else:
 				say "You choose not to accept the seed.";
 				stop the action;
-			now skinname of child is "human";
-			now bodyname of child is "human";
-			now tailname of child is "human";
-			now facename of child is "human";
+			now skinname of child is "Human";
+			now bodyname of child is "Human";
+			now tailname of child is "Human";
+			now facename of child is "Human";
 	else:
 		if "Selective Mother" is listed in feats of player:
 			say "Do you wish to be impregnated with a/an [x] child?";

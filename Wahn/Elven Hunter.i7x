@@ -112,7 +112,7 @@ to say elfdesc:
 		say "     He snarls 'Go back to the stinking pit you call home - demon', before gracefully pulling an arrow from the quiver on his back. With the comment 'I'll show you why you shouldn't try to spread your infestation on elven hunting grounds.' he lets it fly, purposefully missing your head by less an inch.";
 	else if bodyname of player is "Elf" or bodyname of player is "Elven Hunter":
 		say "     He sighs, saying 'A lookalike? The human obsession to become something different than they are truly is amazing.' Gracefully pulling an arrow from the quiver on his back, he continues, 'Let's see if you're worthy of the shape you wear...'";
-	else if (bodyname of player is "human" or bodyname of player is "herm human") and player is pure:
+	else if (bodyname of player is "Human" or bodyname of player is "Herm Human") and player is pure:
 		say "     He sighs, saying 'A human - how droll. Still, some of you are rather inventive...' Gracefully pulling an arrow from the quiver on his back, he continues, 'Let's see if you might be worth hunting. Start running and be a bit of a challenge, will you?'";
 	else if ( bodyname of player is listed in infections of Reptilelist and skinname of player is listed in infections of Reptilelist ):
 		say "     He sighs, saying to himself 'It's scaly and looks a bit like the big lizards of the past - but will it be a worthy heir to their legacy of cunning and strength? Only one way to find out...' Gracefully pulling an arrow from the quiver on his back, he addresses you, 'Start running and be a bit of a challenge, will you?'";

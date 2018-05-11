@@ -28,7 +28,7 @@ Instead of resolving FindingKristen:
 				challenge "Ewe";
 				if fightoutcome >= 10 and fightoutcome <= 19:
 					say "     After your victory, you turn to check on the woman only to find the mound of crushed boxes empty. Looking up, you can see her atop the wooden wall, looking down at you. ";
-					if ( bodyname of player is "human" or bodyname of player is "herm human" ) and player is pure and ( breast size of player < 10 and cock length of player < 12 and cock width of player < 16 ) and breasts of player <= 2 and ( breast size of player < 2 or ( cock length of player < 7 and cock width of player < 7 ) ):
+					if ( bodyname of player is "Human" or bodyname of player is "Herm Human" ) and player is pure and ( breast size of player < 10 and cock length of player < 12 and cock width of player < 16 ) and breasts of player <= 2 and ( breast size of player < 2 or ( cock length of player < 7 and cock width of player < 7 ) ):
 						say "     Without further hesitation, she reaches out to grab your hand to help a fellow human. Helping you up and over the well, you run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
 					else if player is bodily human and player is facially human and player is skintone human and tail of player is "":
 						say "     She hesitates momentarily, you looking human enough at first glance, but your altered sexuality causing her to pause briefly. It lasts only a moment though before she reaches out with her hand to help you up and over the wooden wall to make your escape with her. You run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
@@ -206,7 +206,7 @@ to say kristentf_phase1:	[denial/anger]
 		say "     Knowing now is not the time to be thinking of yourself, you try to just calm her down so you can help her. At first she's still too angry about everything to really listen, but you finally get her to stop and listen when you remind her that she needs to be quiet or she'll attract undo attention to her hideout and make things worse. She huffs angrily and thumps herself back down in the chair. After screaming into a cushion for a bit, she sits arms crossed and ears back.";
 		say "     Reassuring her that she can get through this, you tell her to take a minute to take a deep breath. She closes her eyes and takes a few takes a few slow, deep breaths. As she does, her ears rise up a little. Once she opens her eyes, she's a little calmer, though is still glaring around the room. 'This sucks,' she grumbles.";
 		attempttowait;
-		if bodyname of player is "human" and player is pure:
+		if bodyname of player is "Human" and player is pure:
 			say "     You start by telling her that you've met several others who've managed to maintain control despite changing. And she's only changed a little and hasn't been forcibly sexed into transforming, so it should be easier for her to stay sane. 'That's easy for you to say; you're still human,' she snaps.";
 			say "     'I am for now, but I know that could easily change,' you tell her. 'You knew this was a possibility you might have to face. But it doesn't mean you have to become one of those wild creatures out there. If you can stay calm and focused, I know you can get through this.'";
 		else:
@@ -221,7 +221,7 @@ to say kristentf_phase1:	[denial/anger]
 		say "     Knowing you'll need to be subtle and not rush things with her, especially with her in such a state, you try to calm her down. At first, she's still too angry about everything to really listen, but you finally get her to stop when you take her hands in yours and reassure her that you don't care if she's got a pair of cute foxy ears and neither should she. Her ears, hearing they're cute, perk up for a moment before dropping back again, though not quite so much. She huffs angrily and thumps herself back down into the chair. After screaming into a cushion for a bit, she sits arms crossed and ears back.";
 		say "     Reassuring her that you can help her get through this, you take a seat beside her and gently caress her cheek. She closes her eyes and rests her head against your shoulder for a few moments, eyes closed. As she does, her ears rise up a little. Once she opens her eyes again, she's a little calmer, though still glares at her reflection in the mirror. 'This sucks,' she grumbles.";
 		attempttowait;
-		if bodyname of player is "human" and player is pure:
+		if bodyname of player is "Human" and player is pure:
 			say "     You start by telling her that things could be much worse. She's still mostly human and that the vixen infection's actually quite lovely in its own way. There are a lot of others out there with more radical and even disgusting forms. 'That's easy for you to say; you're still human,' she snaps.";
 			say "     'That may be the case for now, but that could easily change,' you tell her. 'And then my only choice would be to find some infection I could live with. You knew this was a possibility you might have to face, and being a sexy vixen might not be so bad. I'm sure you'll be prettier than even Janice,' you add, giving her an endearing smile.";
 		else:

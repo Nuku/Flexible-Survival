@@ -16,11 +16,11 @@ to say StealthHelotTransformation:
 	now skinname of player is "Helot";
 	now skin of player is "smooth, sun-bronzed";
 	now cockname of player is "Helot";
-	now cock of player is "You have a tight, firmly muscled butt.";
+	now cock of player is "human";
 	now facename of player is "Helot";
 	now face of player is "a handsome young man's, still smooth and beardless. Shaggy black hair falls down to your shoulders";
 	now tailname of player is "Helot";
-	now tail of player is "human";
+	now tail of player is "You have a tight, firmly muscled butt.";
 
 to say Helot wins:
 	if HP of player > 0: [player submits]

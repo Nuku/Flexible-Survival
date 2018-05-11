@@ -5,7 +5,7 @@ Version 1 of Endings by Darthan begins here.
 Section 1 Human Ending
 
 when play ends:
-	if bodyname of player is "human":
+	if bodyname of player is "Human":
 		if the player is pure:
 			say "[purehumanend]";
 		else if the player is facially human and the player is skintone human and the tail of the player is "" and breast size of player <= 6 and cock length of player <= 18 and cock width of player <= 12 and breasts of player <= 2: [The player appears human to casual scrutiny and does not have hugely oversized junk that cannot be hidden.]

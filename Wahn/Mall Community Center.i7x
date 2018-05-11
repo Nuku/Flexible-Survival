@@ -36,13 +36,14 @@ to FreeHandoutsEvent:
 	say "      Noticing your interest, one of the three women steps out from behind the desk and approaches you, a friendly smile on her face. 'You're welcome to join the line, too. We're open for anyone to get what they need, even if you don't live in the mall,' she says and looks down the lone line of people waiting, seeming pleased with the turn-out. You introduce yourself [if player is not defaultnamed]as [name of player] [end if]and tell her that you came over to see what all the commotion was about. She puts a hand to her chest and chuckles, then says, 'Oh, sorry. I guess I've gotten used to everyone knowing about us at the mall. My name is Florence, and these are my sisters, Marie and Olivia. We run the Haven Community Center, doing initiatives like this handout right now, as well as several others. Please let me know if you have any more questions.'";
 	WaitLineBreak;
 	FlorenceTalkMenu;
+	say "     Getting back to handing out condoms to the people standing in line, Florence and her sisters take care that everyone gets what they need, then eventually call it a day and move back into the former Travel Agency to the west.";
 	if HP of Florence is 0:
 		now HP of Florence is 1;
 	now Free Handouts is resolved;
 	
 Section 2 - Locations
 
-Haven Community Center is West of Mall West Wing.
+West of Mall West Wing is Haven Community Center.
 The description of Haven Community Center is "[HavenCCRoomDesc]".
 Haven Community Center is sleepsafe.
 
@@ -51,7 +52,7 @@ to say HavenCCRoomDesc:
 
 Section 3 - Florence
 
-Florence is a woman.
+Florence is a woman. Florence is in Haven Community Center.
 The description of Florence is "[FlorenceDesc]".
 The conversation of Florence is { "<This is nothing but a placeholder!>" }.
 The scent of Florence is "     Florence smells of clean fur, with undertones that make you think of the endless expanse of the Savannah, grass swaying in the wind as it blows over the land.".
@@ -107,13 +108,13 @@ to FlorenceTalkMenu:
 		now title entry is "Offer to donate some fluids";
 		now sortorder entry is 7;
 		now description entry is "If they need cum, you could help them out";
-	[]
+	[
 	if libido of Florence > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Volunteer at the clinic";
 		now sortorder entry is 8;
 		now description entry is "Help out where you can";
-	[]
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -163,8 +164,8 @@ to say FlorenceTalk_Background:
 	say "     Florence scrunches up her muzzle in disgust, then says, 'He chuckled about his luck at getting four bitches in one go, then pointed out the order in which he was gonna fuck us. Mom hit him in the face with a long burst from a deodorant spray, and we ran like hell, but he quickly got on our tail. It was clear that he'd run us down, so she... she split off from us to lead him another way. Everything to let her little girls escape. And that's the last we've seen from her since.' After another deep sigh that speaks of her longing to be reunited with the mother she only briefly knew, the petite antelope shakes off her glum mood by focusing on her surroundings again, resting her gaze on a colorful image of a tropical beach. 'We've been doing our best to make use of the gifts that mom passed on to us. Drinking up a vet's experience with your mother's milk definitively came to our advantage here in the Mall.'";
 
 to say FlorenceTalk_Condoms:
-	say "     Florence listens to your question and nods, then indicates the desk for the condom handouts[if player is in Mall Community Center] outside[end if]. 'If you want to know the reason for that, just look around you as you walk through the Mall, and the streets outside. This world, the world that me and my sisters have been born into and that shocks people from the before-time so much, it plays by hard and fast rules. Actions have consequences, and where once some stupid youngsters might perhaps have had to face the reality of a pregnancy months later, now they can fill an apartment complex with one weekend of humping.' Brushing a steak of hair out of her face and shaking her head at such foolishness, the antelope draws her lips into a line, then takes a deep breath before she adds, 'I've got a question for you: Where do you think all the ferals out there come from?'";
-	say "     Looking at her a little puzzled, you start to say that they're those who transformed and succumbed, but the pretty antelope in front of you shakes her head with a sad expression. 'People tend to underestimate just how many humans simply died when the outbreak started, and how harsh life on the outside really is. Only through the unrestrained breeding going on everywhere is the population of ferals being upheld - and the newly born are often only feral in the first place because they are abandoned as soon as they are weaned.' [if player is in Mall Community Center]Glancing at the desk outside and seemingly imagining the long line of people who regularly flock to it, [else]Looking at the long line of people waiting to get their condoms, [end if]Florence nods to herself, an expression of conviction that she and her sisters are changing the world for the better on her face.";
+	say "     Florence listens to your question and nods, then indicates the desk for the condom handouts[if player is in Haven Community Center] outside[end if]. 'If you want to know the reason for that, just look around you as you walk through the Mall, and the streets outside. This world, the world that me and my sisters have been born into and that shocks people from the before-time so much, it plays by hard and fast rules. Actions have consequences, and where once some stupid youngsters might perhaps have had to face the reality of a pregnancy months later, now they can fill an apartment complex with one weekend of humping.' Brushing a steak of hair out of her face and shaking her head at such foolishness, the antelope draws her lips into a line, then takes a deep breath before she adds, 'I've got a question for you: Where do you think all the ferals out there come from?'";
+	say "     Looking at her a little puzzled, you start to say that they're those who transformed and succumbed, but the pretty antelope in front of you shakes her head with a sad expression. 'People tend to underestimate just how many humans simply died when the outbreak started, and how harsh life on the outside really is. Only through the unrestrained breeding going on everywhere is the population of ferals being upheld - and the newly born are often only feral in the first place because they are abandoned as soon as they are weaned.' [if player is in Haven Community Center]Glancing at the desk outside and seemingly imagining the long line of people who regularly flock to it, [else]Looking at the long line of people waiting to get their condoms, [end if]Florence nods to herself, an expression of conviction that she and her sisters are changing the world for the better on her face.";
 	WaitLineBreak;
 	say "     Shaking herself out of her thoughts, the antelope focuses on you again and adds, 'And the second reason for doing this, besides saving beings from abandonment and a feral fate, is more pragmatic. It's simple sustainability, to be honest. No one knows for certain why many pregnancies rush to their conclusion within hours or days at best, and others have a traditional progression, but this definitively is a fact of life these days. And we simply cannot afford the risk that the first type of pregnancy holds for the Smith Haven Mall as a whole. The place is packed as it is, and unrestrained growth of the population could spell out doom for all of us.'";
 
@@ -198,12 +199,13 @@ to say FlorenceTalk_Pregnancies:
 
 to say FlorenceTalk_Projects:
 	say "     Florence smiles at your interest and says, 'We've got a few more projects and initiatives going on right now. For example, there are lessons for younger residents - both those who grow at human rates, as well as the adult sized ones. Just because your parent passes on a bunch of knowledge doesn't mean that you know everything you need in life. Your mom or dad might have been totally disinterested in something critical. And the transfer isn't always complete, either. For example, Marie got a lot more medical knowledge than either Olivia or myself. That's why she leads the tiny [']clinic['] that we run to help people. Thankfully, the transformed do not stay hurt for long from most things that can happen to them. Still, humans and hybrids keep her busy, as well as people who are having problems with their new bodies.'";
-	say "     With that said, Florence glances over to an anthro parakeet with patchy feathers [if player is in Mall Community Center]just coming in for a check-up[else]standing in line for some condoms[end if]. Looks like hasn't quite figured out how to properly care for himself and is going through molting right now. Another thing that Florence points out next is an unobtrusive cooler box standing beside the condom handout desk. It bears the sign [']Returns['], and from time to time people come up to the box and quietly drops something inside. Looking closer the next time that this happens, you can make out that they are dropping in used condoms, filled with often quite significant deposits and tied together at the top. 'A number of our residents are quite extraordinary and do require special sustenance. Since they are wary of passing on an infection that makes people into humanoid blobs of goo, we've worked out this method of gathering the required fluids...'";
+	say "     With that said, Florence glances over to an anthro parakeet with patchy feathers [if player is in Haven Community Center]just coming in for a check-up[else]standing in line for some condoms[end if]. Looks like hasn't quite figured out how to properly care for himself and is going through molting right now. Another thing that Florence points out next is an unobtrusive cooler box standing beside the condom handout desk. It bears the sign [']Returns['], and from time to time people come up to the box and quietly drops something inside. Looking closer the next time that this happens, you can make out that they are dropping in used condoms, filled with often quite significant deposits and tied together at the top. 'A number of our residents are quite extraordinary and do require special sustenance. Since they are wary of passing on an infection that makes people into humanoid blobs of goo, we've worked out this method of gathering the required fluids...'";
 	if HP of Florence is 1:
 		now HP of Florence is 2;
 
 to say FlorenceTalk_GooIntroduction:
-	say "     The anthro antelope smiles as you tell her that you want to meet the goo people. 'You want to meet them? That's nice - it'll do Blue good to talk to someone new. But I have to warn you. They are quite infective, and therefore do their best to keep their distance, ever since... some unfortunate incidents. Please don't go into their refuge if you're not ready to deal with that. They are still people, despite the strange appearance, and being stared at like freaks hurts them.' Nodding to Florence, you reply that you know how to behave yourself, after which she [if player is in Mall Community Center]goes have a quiet word with the goo person guarding the entrance to their refuge[else]goes into the community center and has a quiet word with a goo-person guarding a door in the back[end if]. Coming back after a little while, she nods to you and says, 'You can go and talk to them now. I've convinced Blue to let you in.'";
+	say "     The anthro antelope smiles as you tell her that you want to meet the goo people. 'You want to meet them? That's nice - it'll do Blue good to talk to someone new. But I have to warn you. They are quite infective, and therefore do their best to keep their distance, ever since... some unfortunate incidents. Please don't go into their refuge if you're not ready to deal with that. They are still people, despite the strange appearance, and being stared at like freaks hurts them.' Nodding to Florence, you reply that you know how to behave yourself, after which she [if player is in Haven Community Center]goes have a quiet word with the goo person guarding the entrance to their refuge[else]goes into the community center and has a quiet word with a goo-person guarding a door in the back[end if]. Coming back after a little while, she nods to you and says, 'You can go and talk to them now. I've convinced Blue to let you in.'";
+	now HP of Florence is 3;
 
 to say FlorenceTalk_FluidDonation:
 	say "     Secure in the knowledge that your balls are ready for a sizable 'donation' of fresh cum, you give Florence a confident smile and tell her that you want to help out in supplying their goo people. She raises her eyebrows at how direct you are in this matter, then glances down to your crotch and gives a little giggle as she sees the growing bulge of your cock. 'Oh dear. Someone definitively is ready to make good of [PosAdj of player] offers. Um, how did you want to do this?'";
@@ -242,7 +244,7 @@ to say FlorenceTalk_FluidDonation:
 	else: 
 		LineBreak;
 		if HP of Florence < 3:
-			say "     As you tell her that you want to give the goo people your fluid donation in person, Florence looks at you with a raised eyebrow. 'I'll have to warn you. They are quite infective, and therefore do their best to keep their distance, ever since... some unfortunate incidents. Please don't go into their refuge if you're not ready to deal with that. They are still people, in their own way, and being stared at like freaks hurts them.' Nodding to Florence, you reply that you know how to behave yourself, after which she [if player is in Mall Community Center]goes have a quiet word with the goo person guarding the entrance to their refuge[else]goes into the community center and has a quiet word with a goo-person guarding a door in the back[end if]. Coming back after a little while, she nods to you and says, 'You can go and talk to them now.'";
+			say "     As you tell her that you want to give the goo people your fluid donation in person, Florence looks at you with a raised eyebrow. 'I'll have to warn you. They are quite infective, and therefore do their best to keep their distance, ever since... some unfortunate incidents. Please don't go into their refuge if you're not ready to deal with that. They are still people, in their own way, and being stared at like freaks hurts them.' Nodding to Florence, you reply that you know how to behave yourself, after which she [if player is in Haven Community Center]goes have a quiet word with the goo person guarding the entrance to their refuge[else]goes into the community center and has a quiet word with a goo-person guarding a door in the back[end if]. Coming back after a little while, she nods to you and says, 'You can go and talk to them now.'";
 			now HP of Florence is 3;
 		else:
 			say "     As you tell her that you want to give the goo people your fluid donation in person, Florence looks at you with a raised eyebrow, then nods. 'Just remember, they are quite infective by touch. But if you still want to do it, go into the back room in the community center. It'll be good for Blue to talk to someone.'";
@@ -251,11 +253,10 @@ to say FlorenceTalk_ClinicVolunteer:
 	say "     ...";
 	
 instead of fucking the Florence:
-		say "     As you offer to have sex with her, Florence looks at you wide-eyed before quickly collecting herself again and replying, 'I - um, that's certainly an interesting offer, ";
-		if XP of Florence < 6: [player doesn't know her well enough]
-			say "but I'll have to pass. Sorry about it. You're a good-looking [guygal] and sex sure is fun, but somehow it feels 'cheap' if you just have it with anyone that is horny and walks up to you. Don't you want to have your encounters mean something and be with people you actually know and like?'";
-		else:
-			say "";
-
+	say "     As you offer to have sex with her, Florence looks at you wide-eyed before quickly collecting herself again and replying, 'I - um, that's certainly an interesting offer, ";
+	if XP of Florence < 6: [player doesn't know her well enough]
+		say "but I'll have to pass. Sorry about it. You're a good-looking [guygal] and sex sure is fun, but somehow it feels 'cheap' if you just have it with anyone that is horny and walks up to you. Don't you want to have your encounters mean something and be with people you actually know and like?'";
+	else:
+		say "";
 
 Mall Community Center ends here.
